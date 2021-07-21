@@ -24,16 +24,18 @@
 namespace APP\journal;
 
 use APP\i18n\AppLocale;
+
 use PKP\context\Context;
 use PKP\core\DAORegistry;
 use PKP\plugins\PluginRegistry;
-
-define('PUBLISHING_MODE_OPEN', 0);
-define('PUBLISHING_MODE_SUBSCRIPTION', 1);
-define('PUBLISHING_MODE_NONE', 2);
+use PKP\statistics\PKPStatisticsHelper;
 
 class Journal extends Context
 {
+    public const PUBLISHING_MODE_OPEN = 0;
+    public const PUBLISHING_MODE_SUBSCRIPTION = 1;
+    public const PUBLISHING_MODE_NONE = 2;
+
     /**
      * Get "localized" journal page title (if applicable).
      *
@@ -172,7 +174,7 @@ class Journal extends Context
     public function getMetrics($metricType = null, $columns = [], $filter = [], $orderBy = [], $range = null)
     {
         // Add a journal filter and run the report.
-        $filter[STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
+        $filter[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
         $application = Application::get();
         return $application->getMetrics($metricType, $columns, $filter, $orderBy, $range);
     }
@@ -180,4 +182,11 @@ class Journal extends Context
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\journal\Journal', '\Journal');
+    foreach ([
+        'PUBLISHING_MODE_OPEN',
+        'PUBLISHING_MODE_SUBSCRIPTION',
+        'PUBLISHING_MODE_NONE',
+    ] as $constantName) {
+        define($constantName, constant('\Journal::' . $constantName));
+    }
 }

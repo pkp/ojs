@@ -13,12 +13,12 @@
  * @brief Annoucement Feed plugin class
  */
 
-use PKP\linkAction\LinkAction;
-use PKP\plugins\GenericPlugin;
-use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
-
 use APP\template\TemplateManager;
+use PKP\core\JSONMessage;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
+use PKP\plugins\GenericPlugin;
 
 class AnnouncementFeedPlugin extends GenericPlugin
 {

@@ -17,6 +17,7 @@
 import('lib.pkp.controllers.api.file.PKPManageFileApiHandler');
 
 use PKP\core\JSONMessage;
+use PKP\security\Role;
 
 class ManageFileApiHandler extends PKPManageFileApiHandler
 {
@@ -27,7 +28,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT, Role::ROLE_ID_REVIEWER, Role::ROLE_ID_AUTHOR],
             ['identifiers', 'updateIdentifiers', 'clearPubId',]
         );
     }

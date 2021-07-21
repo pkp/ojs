@@ -20,13 +20,20 @@
  * @brief Class for Issue.
  */
 
-define('ISSUE_ACCESS_OPEN', 1);
-define('ISSUE_ACCESS_SUBSCRIPTION', 2);
+namespace APP\issue;
 
-use \APP\file\PublicFileManager;
+use APP\file\PublicFileManager;
+use APP\i18n\AppLocale;
+use PKP\core\Core;
+
+use PKP\db\DAORegistry;
+use PKP\i18n\PKPLocale;
 
 class Issue extends \PKP\core\DataObject
 {
+    public const ISSUE_ACCESS_OPEN = 1;
+    public const ISSUE_ACCESS_SUBSCRIPTION = 2;
+
     /**
      * get journal id
      *
@@ -676,5 +683,14 @@ class Issue extends \PKP\core\DataObject
     public function getUIDisplayString()
     {
         return __('plugins.importexport.issue.cli.display', ['issueId' => $this->getId(), 'issueIdentification' => $this->getIssueIdentification()]);
+    }
+}
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\Issue', '\Issue');
+    foreach ([
+        'ISSUE_ACCESS_OPEN',
+        'ISSUE_ACCESS_SUBSCRIPTION',
+    ] as $constantName) {
+        define($constantName, constant('\Issue::' . $constantName));
     }
 }

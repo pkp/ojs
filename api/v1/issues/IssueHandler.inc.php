@@ -14,13 +14,16 @@
  *
  */
 
-use PKP\handler\APIHandler;
-use PKP\security\authorization\ContextRequiredPolicy;
-use PKP\security\authorization\ContextAccessPolicy;
-
+use APP\core\Services;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-use APP\core\Services;
+use PKP\db\DAORegistry;
+
+use PKP\handler\APIHandler;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\authorization\ContextRequiredPolicy;
+
+use PKP\security\Role;
 
 class IssueHandler extends APIHandler
 {
@@ -30,7 +33,7 @@ class IssueHandler extends APIHandler
     public function __construct()
     {
         $this->_handlerPath = 'issues';
-        $roles = [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR];
+        $roles = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT, Role::ROLE_ID_REVIEWER, Role::ROLE_ID_AUTHOR];
         $this->_endpoints = [
             'GET' => [
                 [
@@ -167,7 +170,7 @@ class IssueHandler extends APIHandler
         \HookRegistry::call('API::issues::params', [&$params, $slimRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
-        $isAdmin = $currentUser->hasRole([ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([ROLE_ID_SITE_ADMIN], CONTEXT_SITE);
+        $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], \PKP\core\PKPApplication::CONTEXT_SITE);
         if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
             return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
         } elseif (!$isAdmin) {
@@ -206,16 +209,20 @@ class IssueHandler extends APIHandler
         $request = $this->getRequest();
         $context = $request->getContext();
 
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+        $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
         $issue = $issueDao->getCurrent($context->getId());
 
         if (!$issue) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
+        $userGroups = $userGroupDao->getByContextId($context->getId());
+
         $data = Services::get('issue')->getFullProperties($issue, [
             'request' => $request,
             'slimRequest' => $slimRequest,
+            'userGroups' => $userGroups,
         ]);
 
         return $response->withJson($data, 200);
@@ -239,9 +246,13 @@ class IssueHandler extends APIHandler
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
+        $userGroups = $userGroupDao->getByContextId($request->getContext()->getId());
+
         $data = Services::get('issue')->getFullProperties($issue, [
             'request' => $request,
             'slimRequest' => $slimRequest,
+            'userGroups' => $userGroups,
         ]);
 
         return $response->withJson($data, 200);

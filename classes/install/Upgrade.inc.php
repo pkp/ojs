@@ -15,17 +15,24 @@
 
 namespace APP\install;
 
+use APP\core\Application;
+
+use APP\core\Application;
+use APP\facades\Repo;
+use APP\file\PublicFileManager;
+use APP\file\PublicFileManager;
+
+use APP\template\TemplateManager;
+use APP\template\TemplateManager;
 use Illuminate\Support\Facades\DB;
+use PKP\db\DAORegistry;
+use PKP\db\DAORegistry;
+use PKP\file\FileManager;
 
 use PKP\identity\Identity;
-use PKP\submission\SubmissionFile;
-use PKP\file\FileManager;
 use PKP\install\Installer;
-use PKP\db\DAORegistry;
-
-use APP\file\PublicFileManager;
-use APP\core\Application;
-use APP\template\TemplateManager;
+use PKP\security\Role;
+use PKP\submission\SubmissionFile;
 
 class Upgrade extends Installer
 {
@@ -93,7 +100,7 @@ class Upgrade extends Installer
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
         $journalIterator = $journalDao->getAll();
         while ($journal = $journalIterator->next()) {
-            $managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_MANAGER);
+            $managerUserGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), Role::ROLE_ID_MANAGER);
             $managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $journal->getId());
             $creatorUserId = $managerUsers->next()->getId();
             switch (Config::getVar('database', 'driver')) {
@@ -123,15 +130,15 @@ class Upgrade extends Installer
     public function setFileName()
     {
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
 
         $contexts = $journalDao->getAll();
         while ($context = $contexts->next()) {
-            $submissions = $submissionDao->getByContextId($context->getId());
-            while ($submission = $submissions->next()) {
+            $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
+            $submissionIds = Repo::submission()->getIds($collector);
+            foreach ($submissionIds as $submissionId) {
                 $submissionFilesIterator = Services::get('submissionFile')->getMany([
-                    'submissionIds' => [$submission->getId()],
+                    'submissionIds' => [$submissionId],
                     'includeDependentFiles' => true,
                 ]);
                 foreach ($submissionFilesIterator as $submissionFile) {
@@ -159,15 +166,12 @@ class Upgrade extends Installer
      */
     public function convertCommentsToEditor()
     {
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
         $queryDao = DAORegistry::getDAO('QueryDAO'); /* @var $queryDao QueryDAO */
         $noteDao = DAORegistry::getDAO('NoteDAO'); /* @var $noteDao NoteDAO */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
 
-        import('lib.pkp.classes.security.Role'); // ROLE_ID_...
-
-        $commentsResult = $submissionDao->retrieve(
+        $commentsResult = Repo::submission()->dao->deprecatedDao->retrieve(
             'SELECT s.submission_id, s.context_id, s.comments_to_ed, s.date_submitted
 			FROM submissions_tmp s
 			WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != \'\''
@@ -176,12 +180,12 @@ class Upgrade extends Installer
             $commentsToEd = PKPString::stripUnsafeHtml($row->comments_to_ed);
             if ($commentsToEd != '') {
                 $userId = null;
-                $authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row->submission_id, ROLE_ID_AUTHOR);
+                $authorAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($row->submission_id, Role::ROLE_ID_AUTHOR);
                 if ($authorAssignment = $authorAssignments->next()) {
                     // We assume the results are ordered by stage_assignment_id i.e. first author assignment is first
                     $userId = $authorAssignment->getUserId();
                 } else {
-                    $managerUserGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_MANAGER);
+                    $managerUserGroup = $userGroupDao->getDefaultByRoleId($row->context_id, Role::ROLE_ID_MANAGER);
                     $managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row->context_id);
                     $userId = $managerUsers->next()->getId();
                 }
@@ -212,7 +216,7 @@ class Upgrade extends Installer
         }
 
         // remove temporary table
-        $submissionDao->update('DROP TABLE submissions_tmp');
+        Repo::submission()->dao->deprecatedDao->update('DROP TABLE submissions_tmp');
 
         return true;
     }
@@ -316,17 +320,17 @@ class Upgrade extends Installer
      */
     public function localizeArticleCoverImages()
     {
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+        $deprecatedDao = Repo::submission()->dao->deprecatedDao;
         $publicFileManager = new PublicFileManager();
         // remove strange old cover images with array values in the DB - from 3.alpha or 3.beta?
-        $submissionDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND setting_type = \'object\'');
+        $deprecatedDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND setting_type = \'object\'');
 
         // remove empty 3.0 cover images
-        $submissionDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND locale = \'\' AND setting_value = \'\'');
-        $submissionDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImageAltText\' AND locale = \'\' AND setting_value = \'\'');
+        $deprecatedDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImage\' AND locale = \'\' AND setting_value = \'\'');
+        $deprecatedDao->update('DELETE FROM submission_settings WHERE setting_name = \'coverImageAltText\' AND locale = \'\' AND setting_value = \'\'');
 
         // get cover image duplicates, from 2.4.x and 3.0
-        $result = $submissionDao->retrieve(
+        $result = $deprecatedDao->retrieve(
             'SELECT DISTINCT ss1.submission_id, ss1.setting_value, s.context_id
 			FROM submission_settings ss1
 			LEFT JOIN submissions s ON (s.submission_id = ss1.submission_id)
@@ -340,11 +344,11 @@ class Upgrade extends Installer
             if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath($row->context_id) . '/' . $oldFileName)) {
                 $publicFileManager->removeContextFile($row->journal_id, $oldFileName);
             }
-            $submissionDao->update('DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = \'fileName\' AND setting_value = ?', [(int) $submissionId, $oldFileName]);
+            $deprecatedDao->update('DELETE FROM submission_settings WHERE submission_id = ? AND setting_name = \'fileName\' AND setting_value = ?', [(int) $submissionId, $oldFileName]);
         }
 
         // retrieve names for unlocalized article cover images
-        $result = $submissionDao->retrieve(
+        $result = $deprecatedDao->retrieve(
             'SELECT ss.submission_id, ss.setting_value, j.journal_id, j.primary_locale
 			FROM submission_settings ss, submissions s, journals j
 			WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\'
@@ -365,13 +369,13 @@ class Upgrade extends Installer
             case 'mysql':
             case 'mysqli':
                 // Update cover image names in the submission_settings table
-                $submissionDao->update(
+                $deprecatedDao->update(
                     'UPDATE submission_settings ss, submissions s, journals j
 					SET ss.locale = j.primary_locale, ss.setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
 					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
                 );
                 // Update cover image alt texts in the submission_settings table
-                $submissionDao->update(
+                $deprecatedDao->update(
                     'UPDATE submission_settings ss, submissions s, journals j
 					SET ss.locale = j.primary_locale
 					WHERE ss.setting_name = \'coverImageAltText\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
@@ -383,14 +387,14 @@ class Upgrade extends Installer
             case 'postgres8':
             case 'postgres9':
                 // Update cover image names in the submission_settings table
-                $submissionDao->update(
+                $deprecatedDao->update(
                     'UPDATE submission_settings
 					SET locale = j.primary_locale, setting_value = REGEXP_REPLACE(submission_settings.setting_value, \'[\.]\', CONCAT(\'_\', j.primary_locale, \'.\'))
 					FROM submissions s, journals j
 					WHERE submission_settings.setting_name = \'coverImage\' AND submission_settings.locale = \'\' AND s.submission_id = submission_settings.submission_id AND j.journal_id = s.context_id'
                 );
                 // Update cover image alt texts in the submission_settings table
-                $submissionDao->update(
+                $deprecatedDao->update(
                     'UPDATE submission_settings
 					SET locale = j.primary_locale
 					FROM submissions s, journals j
@@ -399,7 +403,7 @@ class Upgrade extends Installer
                 break;
             default: fatalError('Unknown database type!');
         }
-        $submissionDao->flushCache();
+        $deprecatedDao->flushCache();
         return true;
     }
 
@@ -417,7 +421,7 @@ class Upgrade extends Installer
             'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
         );
         foreach ($result as $row) {
-            $authorGroup = $userGroupDao->getDefaultByRoleId($row->context_id, ROLE_ID_AUTHOR);
+            $authorGroup = $userGroupDao->getDefaultByRoleId($row->context_id, Role::ROLE_ID_AUTHOR);
             if ($authorGroup) {
                 $userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE author_id = ?', [(int) $authorGroup->getId(), $row->author_id]);
             }
@@ -512,7 +516,7 @@ class Upgrade extends Installer
     public function repairImageAssociations()
     {
         $genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
+        $deprecatedDao = Repo::submission()->dao->deprecatedDao;
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
         $result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
         foreach ($result as $row) {
@@ -522,7 +526,7 @@ class Upgrade extends Installer
                     continue;
                 } // SUBMISSION_FILE_PUBLIC
 
-                $submission = $submissionDao->getById($submissionFile->getData('submissionId'));
+                $submission = Repo::submission()->get($submissionFile->getData('submissionId'));
                 $imageGenre = $genreDao->getByKey('IMAGE', $submission->getContextId());
 
                 $submissionFile->setFileStage(SubmissionFile::SUBMISSION_FILE_DEPENDENT);
@@ -532,7 +536,7 @@ class Upgrade extends Installer
                 $submissionFileDao->updateObject($submissionFile);
             }
         }
-        $submissionDao->update('DROP TABLE submission_html_galley_images');
+        $deprecatedDao->update('DROP TABLE submission_html_galley_images');
         return true;
     }
 
@@ -661,17 +665,17 @@ class Upgrade extends Installer
     {
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
         $genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
 
         $contexts = $journalDao->getAll();
         while ($context = $contexts->next()) {
             $styleGenre = $genreDao->getByKey('STYLE', $context->getId());
-            $submissions = $submissionDao->getByContextId($context->getId());
-            while ($submission = $submissions->next()) {
-                $submissionDir = Services::get('submissionFile')->getSubmissionDir($context->getId(), $submission->getId());
+            $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
+            $submissionIds = Repo::submission()->getIds($collector);
+            foreach ($submissionIds as $submissionId) {
+                $submissionDir = Services::get('submissionFile')->getSubmissionDir($context->getId(), $submissionId);
                 $fileManager = new FileManager();
                 $rows = DB::table('submission_files')
-                    ->where('submission_id', '=', $submission->getId())
+                    ->where('submission_id', '=', $submissionId)
                     ->get([
                         'file_id',
                         'revision',
@@ -700,7 +704,7 @@ class Upgrade extends Installer
 
                         $targetFilename = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $generatedNewFilename;
                         $timestamp = date('Ymd', strtotime($row->date_uploaded));
-                        $wrongFileName = $submission->getId() . '-' . '1' . '-' . $row->file_id . '-' . $row->revision . '-' . $row->file_stage . '-' . $timestamp . '.' . strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name));
+                        $wrongFileName = $submissionId . '-' . '1' . '-' . $row->file_id . '-' . $row->revision . '-' . $row->file_stage . '-' . $timestamp . '.' . strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name));
                         $sourceFilename = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $wrongFileName;
                         if (Services::get('file')->fs->has($targetFilename)) {
                             continue;
@@ -1204,8 +1208,8 @@ class Upgrade extends Installer
     {
         $coverImagesBySubmission = [];
 
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $result = $submissionDao->retrieve(
+        $deprecatedDao = Repo::submission()->dao->deprecatedDao;
+        $result = $deprecatedDao->retrieve(
             'SELECT * from submission_settings WHERE setting_name=\'coverImage\' OR setting_name=\'coverImageAltText\''
         );
         foreach ($result as $row) {
@@ -1222,7 +1226,7 @@ class Upgrade extends Installer
         }
 
         foreach ($coverImagesBySubmission as $submissionId => $coverImagesBySubmission) {
-            $submissionDao->update(
+            $deprecatedDao->update(
                 'UPDATE submission_settings
 					SET setting_value = ?
 					WHERE submission_id = ? AND setting_name = ?',

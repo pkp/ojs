@@ -73,7 +73,7 @@
 						{translate|escape key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getLocalizedCopyrightHolder()}
 						{$article->getLicenseURL()|escape}
 					</dc:rights>
-					{if ($publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN || ($publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_ISSUE_DEFAULT && $issue->getAccessStatus() == $smarty.const.ISSUE_ACCESS_OPEN)) && $article->isCCLicense()}
+					{if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN || ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_ISSUE_DEFAULT && $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN)) && $article->isCCLicense()}
 						<cc:license rdf:resource="{$article->getLicenseURL()|escape}" />
 					{else}
 						<cc:license></cc:license>

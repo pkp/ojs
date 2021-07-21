@@ -16,9 +16,7 @@
 import('lib.pkp.plugins.importexport.native.filter.NativeImportFilter');
 
 use APP\file\IssueFileManager;
-
-// FIXME: Add namespacing
-// use Issue;
+use APP\issue\Issue;
 
 class NativeXmlIssueGalleyFilter extends NativeImportFilter
 {

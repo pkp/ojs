@@ -29,7 +29,7 @@
 		<em><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">{$journal->getLocalizedName()|escape} {$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a> - {$section->getLocalizedTitle()|escape}</em><br />
 		{$article->getLocalizedTitle()|strip_unsafe_html}<br/>
 		<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()}" class="file">{if $article->getCurrentPublication()->getData('abstract')}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
-		{if (!$issueUnavailable || $article->getCurrentPublication()->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN)}
+		{if (!$issueUnavailable || $article->getCurrentPublication()->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN)}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
 			&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|to_array:$galley->getBestGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 		{/foreach}

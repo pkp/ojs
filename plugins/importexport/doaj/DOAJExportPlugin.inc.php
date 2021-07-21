@@ -23,9 +23,9 @@ define('DOAJ_API_URL', 'https://doaj.org/api/v2/');
 define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v2/');
 define('DOAJ_API_OPERATION', 'articles');
 
-use PKP\notification\PKPNotification;
-
 use APP\template\TemplateManager;
+
+use PKP\notification\PKPNotification;
 
 class DOAJExportPlugin extends PubObjectsExportPlugin
 {

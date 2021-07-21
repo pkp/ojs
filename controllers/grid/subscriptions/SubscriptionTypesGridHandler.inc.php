@@ -13,18 +13,19 @@
  * @brief Handle subscription type grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-
 import('controllers.grid.subscriptions.SubscriptionTypesGridCellProvider');
 import('controllers.grid.subscriptions.SubscriptionTypesGridRow');
 import('controllers.grid.subscriptions.SubscriptionTypeForm');
 
+use APP\notification\NotificationManager;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
 use PKP\notification\PKPNotification;
 
-use APP\notification\NotificationManager;
+use PKP\security\Role;
 
 class SubscriptionTypesGridHandler extends GridHandler
 {
@@ -36,7 +37,7 @@ class SubscriptionTypesGridHandler extends GridHandler
         parent::__construct();
         $this->addRoleAssignment(
             [
-                ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'editSubscriptionType', 'updateSubscriptionType',
                 'deleteSubscriptionType', 'addSubscriptionType']
         );

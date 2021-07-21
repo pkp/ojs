@@ -500,12 +500,6 @@ msgstr ""
 "समीक्षकों को अपने द्वारा प्रस्तुत प्रत्येक सहकर्मी समीक्षा के साथ एक सीआई बया"
 "न दर्ज करने की आवश्यकता होती है।"
 
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
-msgid "manager.setup.historyDescription"
-msgstr "यह पाठ जर्नल वेबसाइट के \ "About \" अनुभाग में दिखाई देगा और इसका उपयोग शीर्षक, संपादकीय बोर्ड और जर्नल के प्रकाशन इतिहास की प्रासंगिकता के अन्य मदों में परिवर्तन का वर्णन करने के लिए किया जा सकता है।."
-
 # (pofilter) endpunc: Different punctuation at the end
 msgid "manager.setup.contact.success"
 msgstr "इस जर्नल के लिए संपर्क विवरण अपडेट किया गया है."
@@ -990,20 +984,6 @@ msgstr "नेविगेशन बार"
 # (pofilter) endpunc: Different punctuation at the end
 msgid "manager.setup.navigationBarDescription"
 msgstr "अतिरिक्त नेविगेशन बार आइटम जोड़ें या निकालें।"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
-# (pofilter) startcaps: Different capitalization at the start
-# (pofilter) urls: Different URLs
-msgid "manager.setup.navItemIsAbsolute"
-msgstr "URL साइट के सापेक्ष पथ के बजाय एक पूर्ण URL (उदा।, \ "Http: //www.example.com \") है (जैसे,\"/manager/setup\"")"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\', '\')
-msgid "manager.setup.navItemIsLiteral"
-msgstr "लेबल मान एक स्थानीयकरण संदेश कुंजी के बजाय एक शाब्दिक स्ट्रिंग (उदा।, \ "जर्नल सेटअप \") है (जैसे, \ "manager.setup \"")"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "manager.setup.noImageFileUploaded"

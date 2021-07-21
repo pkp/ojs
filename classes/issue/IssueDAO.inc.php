@@ -15,13 +15,17 @@
  * @brief Operations for retrieving and modifying Issue objects.
  */
 
+namespace APP\issue;
+
+use APP\file\IssueFileManager;
+use APP\file\PublicFileManager;
+use PKP\cache\CacheManager;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
+use PKP\plugins\HookRegistry;
+
+use PKP\plugins\PKPPubIdPluginDAO;
 use PKP\submission\PKPSubmission;
-
-use \APP\file\PublicFileManager;
-use \APP\file\IssueFileManager;
-
-import('classes.issue.Issue');
-import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
 class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
 {
@@ -986,4 +990,8 @@ class IssueDAO extends \PKP\db\DAO implements PKPPubIdPluginDAO
         $this->_getCache('issues')->flush();
         $this->_getCache('current')->flush();
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\IssueDAO', '\IssueDAO');
 }

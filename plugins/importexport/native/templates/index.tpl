@@ -119,7 +119,7 @@
 		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssuesBounce"}" method="post">
 			{csrf}
 			{fbvFormArea id="issuesXmlForm"}
-				{capture assign="issuesListGridUrl"}{url router=PKPApplication::ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
+				{capture assign="issuesListGridUrl"}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 
 				{fbvFormButtons submitText="plugins.importexport.native.exportIssues" hideCancel="true"}

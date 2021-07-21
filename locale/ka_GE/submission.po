@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-11 09:34+0000\n"
+"PO-Revision-Date: 2021-05-14 09:42+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ka_GE/>\n"
@@ -82,7 +82,7 @@ msgstr "გალერეა გამოჩნდა გამოცემა�
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"ჟურნალს ეცნობა თქვენი მასალის გამოგზავნის შესხებ, დამადასტურებელი წერილი "
+"ჟურნალს ეცნობა თქვენი მასალის გამოგზავნის შესახებ, დამადასტურებელი წერილი "
 "გამოიგზავნა ელფოსტაზე. როგორც კი რედაქტორი ნახავს თქვენს მასალას, ჩვენ "
 "დაგიკავშირდებით."
 

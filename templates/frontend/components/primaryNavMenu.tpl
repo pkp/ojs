@@ -11,7 +11,7 @@
 
 	{if $enableAnnouncements}
 		<li>
-			<a href="{url router=PKPApplication::ROUTE_PAGE page="announcement"}">
+			<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="announcement"}">
 				{translate key="announcement.announcements"}
 			</a>
 		</li>
@@ -19,44 +19,44 @@
 
 	{if $currentJournal}
 
-		{if $currentJournal->getData('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+		{if $currentJournal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE}
 			<li>
-				<a href="{url router=PKPApplication::ROUTE_PAGE page="issue" op="current"}">
+				<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="current"}">
 					{translate key="navigation.current"}
 				</a>
 			</li>
 			<li>
-				<a href="{url router=PKPApplication::ROUTE_PAGE page="issue" op="archive"}">
+				<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}">
 					{translate key="navigation.archives"}
 				</a>
 			</li>
 		{/if}
 
 		<li>
-			<a href="{url router=PKPApplication::ROUTE_PAGE page="about"}">
+			<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about"}">
 				{translate key="navigation.about"}
 			</a>
 			<ul>
 				<li>
-					<a href="{url router=PKPApplication::ROUTE_PAGE page="about"}">
+					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about"}">
 						{translate key="about.aboutContext"}
 					</a>
 				</li>
 				{if $currentJournal->getLocalizedData('editorialTeam')}
 					<li>
-						<a href="{url router=PKPApplication::ROUTE_PAGE page="about" op="editorialTeam"}">
+						<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about" op="editorialTeam"}">
 							{translate key="about.editorialTeam"}
 						</a>
 					</li>
 				{/if}
 				<li>
-					<a href="{url router=PKPApplication::ROUTE_PAGE page="about" op="submissions"}">
+					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about" op="submissions"}">
 						{translate key="about.submissions"}
 					</a>
 				</li>
 				{if $currentJournal->getData('mailingAddress') || $currentJournal->getData('contactName')}
 					<li>
-						<a href="{url router=PKPApplication::ROUTE_PAGE page="about" op="contact"}">
+						<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about" op="contact"}">
 							{translate key="about.contact"}
 						</a>
 					</li>

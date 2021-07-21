@@ -13,18 +13,20 @@
  * @brief Handle issues grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.issueGalleys.IssueGalleyGridRow');
-
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxModal;
+use APP\file\IssueFileManager;
+use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
+use APP\security\authorization\OjsIssueRequiredPolicy;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
-use PKP\security\authorization\ContextAccessPolicy;
-use PKP\security\authorization\OjsIssueGalleyRequiredPolicy;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 
-use APP\security\authorization\OjsIssueRequiredPolicy;
-use APP\file\IssueFileManager;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
+
+import('controllers.grid.issueGalleys.IssueGalleyGridRow');
 
 class IssueGalleyGridHandler extends GridHandler
 {
@@ -35,7 +37,7 @@ class IssueGalleyGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             [
                 'fetchGrid', 'fetchRow', 'saveSequence',
                 'add', 'edit', 'upload', 'download', 'update', 'delete'

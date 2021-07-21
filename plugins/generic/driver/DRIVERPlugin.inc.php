@@ -13,13 +13,17 @@
  * @brief DRIVER plugin class
  */
 
+use APP\facades\Repo;
+
 define('DRIVER_ACCESS_OPEN', 0);
 define('DRIVER_ACCESS_CLOSED', 1);
 define('DRIVER_ACCESS_EMBARGOED', 2);
 define('DRIVER_ACCESS_DELAYED', 3);
 define('DRIVER_ACCESS_RESTRICTED', 4);
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\db\DAORegistry;
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\HookRegistry;
 
 class DRIVERPlugin extends GenericPlugin
 {
@@ -146,23 +150,23 @@ class DRIVERPlugin extends GenericPlugin
             $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
             $journal = $journalDao->getById($row['journal_id']);
-            $submission = Services::get('submission')->get($row['submission_id']);
+            $submission = Repo::submission()->get($row['submission_id']);
             $publication = $submission->getCurrentPublication();
             $issue = $issueDao->getById($publication->getData('issueId'));
 
             // is open access
             $status = '';
-            if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
+            if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
-            } elseif ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-                if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
+            } elseif ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
+                if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
                     $status = DRIVER_ACCESS_OPEN;
-                } elseif ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-                    if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
+                } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
+                    if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN) {
                         $status = DRIVER_ACCESS_OPEN;
-                    } elseif ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
+                    } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
                         $status = DRIVER_ACCESS_EMBARGOED;
-                    } elseif ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
+                    } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
                         $status = DRIVER_ACCESS_CLOSED;
                     }
                 }
@@ -199,23 +203,23 @@ class DRIVERPlugin extends GenericPlugin
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
         $journal = $journalDao->getById($journalId);
-        $submission = Services::get('submission')->get($articleId);
+        $submission = Repo::submission()->get($articleId);
         $publication = $submission->getCurrentPublication();
         $issue = $issueDao->getById($publication->getData('issueId'));
 
         // is open access
         $status = '';
-        if ($journal->getData('publishingMode') == PUBLISHING_MODE_OPEN) {
+        if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN) {
             $status = DRIVER_ACCESS_OPEN;
-        } elseif ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
-            if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN) {
+        } elseif ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
+            if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
-            } elseif ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
-                if ($publication->getData('accessStatus') == ARTICLE_ACCESS_OPEN) {
+            } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
+                if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN) {
                     $status = DRIVER_ACCESS_OPEN;
-                } elseif ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
+                } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
                     $status = DRIVER_ACCESS_EMBARGOED;
-                } elseif ($issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
+                } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
                     $status = DRIVER_ACCESS_CLOSED;
                 }
             }

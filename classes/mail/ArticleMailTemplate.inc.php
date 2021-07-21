@@ -17,8 +17,8 @@
 
 namespace APP\mail;
 
-use PKP\mail\SubmissionMailTemplate;
 use PKP\db\DAORegistry;
+use PKP\mail\SubmissionMailTemplate;
 
 class ArticleMailTemplate extends SubmissionMailTemplate
 {

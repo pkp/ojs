@@ -15,8 +15,8 @@
 
 namespace APP\file;
 
-use PKP\file\PKPPublicFileManager;
 use PKP\config\Config;
+use PKP\file\PKPPublicFileManager;
 
 class PublicFileManager extends PKPPublicFileManager
 {

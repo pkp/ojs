@@ -13,13 +13,14 @@
  * @brief Handle subscription grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
 
 import('controllers.grid.subscriptions.SubscriptionsGridRow');
 import('controllers.grid.subscriptions.SubscriptionsGridCellProvider');
 
+use PKP\controllers\grid\GridHandler;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\security\Role;
 
 abstract class SubscriptionsGridHandler extends GridHandler
 {
@@ -31,7 +32,7 @@ abstract class SubscriptionsGridHandler extends GridHandler
         parent::__construct();
         $this->addRoleAssignment(
             [
-                ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'editSubscription', 'updateSubscription',
                 'deleteSubscription', 'addSubscription', 'renewSubscription']
         );

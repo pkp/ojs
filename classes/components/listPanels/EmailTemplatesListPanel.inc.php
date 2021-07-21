@@ -15,6 +15,7 @@
 namespace APP\components\listPanels;
 
 use PKP\components\listPanels\PKPEmailTemplatesListPanel;
+use PKP\security\Role;
 
 class EmailTemplatesListPanel extends PKPEmailTemplatesListPanel
 {
@@ -27,7 +28,7 @@ class EmailTemplatesListPanel extends PKPEmailTemplatesListPanel
         $config['filters'][count($config['filters']) - 2]['filters'][] = [
             'param' => 'toRoleIds',
             'title' => __('default.groups.name.subscriptionManager'),
-            'value' => ROLE_ID_SUBSCRIPTION_MANAGER,
+            'value' => Role::ROLE_ID_SUBSCRIPTION_MANAGER,
         ];
         return $config;
     }

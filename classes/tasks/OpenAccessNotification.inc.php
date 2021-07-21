@@ -13,10 +13,16 @@
  * @brief Class to perform automated email notifications when an issue becomes open access.
  */
 
-use PKP\scheduledTask\ScheduledTask;
-use PKP\mail\MailTemplate;
+namespace APP\tasks;
+
+use APP\core\Application;
+use APP\facades\Repo;
 
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+use PKP\mail\MailTemplate;
+
+use PKP\scheduledTask\ScheduledTask;
 
 class OpenAccessNotification extends ScheduledTask
 {
@@ -53,7 +59,7 @@ class OpenAccessNotification extends ScheduledTask
             ];
             $email->assignParams($paramArray);
 
-            $submissions = Services::get('submission')->getInSections($issue->getId());
+            $submissions = Repo::submission()->getInSections($issue->getId(), $issue->getJournalId());
             $mimeBoundary = '==boundary_' . md5(microtime());
 
             $templateMgr = TemplateManager::getManager();
@@ -85,7 +91,7 @@ class OpenAccessNotification extends ScheduledTask
     public function sendNotifications($journal, $curDate)
     {
         // Only send notifications if subscriptions and open access notifications are enabled
-        if ($journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $journal->getData('enableOpenAccessNotification')) {
+        if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION && $journal->getData('enableOpenAccessNotification')) {
             $curYear = $curDate['year'];
             $curMonth = $curDate['month'];
             $curDay = $curDate['day'];
@@ -98,7 +104,7 @@ class OpenAccessNotification extends ScheduledTask
                 $accessStatus = $issue->getAccessStatus();
                 $openAccessDate = $issue->getOpenAccessDate();
 
-                if ($accessStatus == ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0, 0, 0, $curMonth, $curDay, $curYear)) {
+                if ($accessStatus == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0, 0, 0, $curMonth, $curDay, $curYear)) {
                     // Notify all users who have open access notification set for this journal
                     $userSettingsDao = DAORegistry::getDAO('UserSettingsDAO'); /* @var $userSettingsDao UserSettingsDAO */
                     $users = $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getId());
@@ -176,4 +182,8 @@ class OpenAccessNotification extends ScheduledTask
         }
         return true;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\tasks\OpenAccessNotification', '\OpenAccessNotification');
 }

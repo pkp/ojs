@@ -17,14 +17,14 @@
 
 namespace APP\submission\reviewer;
 
+use APP\facades\Repo;
+use APP\i18n\AppLocale;
+use PKP\db\DAO;
 use PKP\db\DAORegistry;
+
 use PKP\plugins\HookRegistry;
 
-use APP\submission\SubmissionDAO;
-use APP\submission\reviewer\ReviewerSubmission;
-use APP\i18n\AppLocale;
-
-class ReviewerSubmissionDAO extends SubmissionDAO
+class ReviewerSubmissionDAO extends DAO
 {
     public $authorDao;
     public $userDao;
@@ -101,7 +101,9 @@ class ReviewerSubmissionDAO extends SubmissionDAO
     public function _fromRow($row)
     {
         // Get the ReviewerSubmission object, populated with submission data
-        $reviewerSubmission = parent::_fromRow($row);
+        $submission = Repo::submission()->dao->fromRow((object) $row);
+        $reviewerSubmission = $this->newDataObject();
+        $reviewerSubmission->setAllData($submission->getAllData());
         $reviewer = $this->userDao->getById($row['reviewer_id']);
 
         // Editor Decisions

@@ -13,9 +13,10 @@
  * @brief Form for journal managers to create/edit subscription types.
  */
 
-use PKP\form\Form;
+use APP\subscription\SubscriptionType;
 
 use APP\template\TemplateManager;
+use PKP\form\Form;
 
 class SubscriptionTypeForm extends Form
 {
@@ -42,11 +43,10 @@ class SubscriptionTypeForm extends Form
     {
         $this->journalId = $journalId;
 
-        import('classes.subscription.SubscriptionType');
         $this->validFormats = [
-            SUBSCRIPTION_TYPE_FORMAT_ONLINE => __('subscriptionTypes.format.online'),
-            SUBSCRIPTION_TYPE_FORMAT_PRINT => __('subscriptionTypes.format.print'),
-            SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
+            SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE => __('subscriptionTypes.format.online'),
+            SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT => __('subscriptionTypes.format.print'),
+            SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
         ];
 
         $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();

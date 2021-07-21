@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-12 18:38+0000\n"
+"PO-Revision-Date: 2021-05-14 09:41+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ka_GE/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"დამკაბადონებელი მოამზადებს ამ ფაილებს ყოველი გალერეისათვის, ხოლო შემდეგ "
+"დამკაბადონებელი მოამზადებს ამ ფაილებს ყოველი სვეტისათვის, ხოლო შემდეგ "
 "ატვირთავს შესაბამის სექციაში <span class=\"pkp_help_title\">კორექტურა</span>"
 ", კორექტურისათვის."
 
@@ -40,10 +40,10 @@ msgstr ""
 "განყოფილებაში <span class=\"pkp_help_title\">Copyediting</span>."
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "გალერეის ფაილების არჩევა"
+msgstr "სვეტის ფაილების არჩევა"
 
 msgid "editor.issues.editIssueGalley"
-msgstr "გამოცემის გალერეის ჩასწორება"
+msgstr "გამოცემის სვეტის ჩასწორება"
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "წვდომის თარიღი არასწორია."
@@ -136,7 +136,7 @@ msgid "grid.action.setCurrentIssue"
 msgstr "მიმდინარე გამოცემის შექმნა"
 
 msgid "grid.action.addIssueGalley"
-msgstr "გამოცემის გალერეის შექმნა"
+msgstr "გამოცემის სვეტის შექმნა"
 
 msgid "grid.action.previewIssue"
 msgstr "წინასწარი დათვალიერება"
@@ -151,7 +151,7 @@ msgid "grid.action.publish"
 msgstr "გამოცემის გამოქვეყნება"
 
 msgid "grid.action.addGalley"
-msgstr "გალერეის დამატება"
+msgstr "სვეტის დამატება"
 
 msgid "editor.navigation.futureIssues"
 msgstr "მომავალი გამოცემები"
@@ -160,34 +160,34 @@ msgid "editor.issues.identifiers"
 msgstr "იდენტიფიკატორები"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "დარწმუნებული ხართ, რომ გსურთ ამ გამოცემის გალერეის წაშლა?"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ამ გამოცემის სვეტის წაშლა?"
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "უკან, გამოცემის გალერეებზე"
+msgstr "უკან, გამოცემის სვეტებზე"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "გამოცემის გალერეის ღია იდენტიფიკაცია უკვე არსებობს."
+msgstr "გამოცემის სვეტის ღია იდენტიფიკაცია უკვე არსებობს."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "გამოცემის გალერეის ენა სავალდებულოა."
+msgstr "გამოცემის სვეტის ენა სავალდებულოა."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "გამოცემის გალერეის ჭდე სავალდებულოა."
+msgstr "გამოცემის სვეტის ჭდე სავალდებულოა."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "არ არის გამოცემის გამოქვეყნებული გალერეები."
+msgstr "არ არის გამოცემის გამოქვეყნებული სვეტები."
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "გალერეის გამოქვეყნება გამოცემის სრული შიგთავსით."
+msgstr "სვეტის გამოქვეყნება გამოცემის სრული შიგთავსით."
 
 msgid "editor.issues.viewingGalley"
-msgstr "გამოცემის გალერეის ნახვა"
+msgstr "გამოცემის სვეტის ნახვა"
 
 msgid "editor.issues.galley"
-msgstr "გამოცემის გალერეა"
+msgstr "გამოცემის სვეტი"
 
 msgid "editor.issues.galleys"
-msgstr "გამოცემის გალერეები"
+msgstr "გამოცემის სვეტები"
 
 msgid "editor.issues.pages"
 msgstr "გვერდები"
@@ -444,7 +444,7 @@ msgstr "არ არის მასალები არქივში."
 msgid "editor.publicIdentificationExists"
 msgstr ""
 "ღია იდენტიფიკატორი „{$publicIdentifier}“ უკვე გამოიყენება სხვა ობიექტისათვის "
-"(გამოცემა, სტატია, გალერეა, ან დამატებითი ფაილი). გთხოვთ, აირჩიეთ უნიკალური "
+"(გამოცემა, სტატია, სვეტი, ან დამატებითი ფაილი). გთხოვთ, აირჩიეთ უნიკალური "
 "იდენტიფიკატორი ჟურნალის ფარგლებში."
 
 msgid "editor.me"

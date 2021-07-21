@@ -43,12 +43,12 @@
 		</tab>
 		<tab id="sections" label="{translate key="section.sections"}">
 			{help file="settings/journal-settings" section="sections" class="pkp_help_tab"}
-			{capture assign=sectionsGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="fetchGrid" escape=false}{/capture}
+			{capture assign=sectionsGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="fetchGrid" escape=false}{/capture}
 			{load_url_in_div id="sectionsGridContainer" url=$sectionsGridUrl}
 		</tab>
 		<tab id="categories" label="{translate key="grid.category.categories"}">
 			{help file="settings/journal-settings" section="categories" class="pkp_help_tab"}
-			{capture assign=categoriesUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.settings.category.CategoryCategoryGridHandler" op="fetchGrid" escape=false}{/capture}
+			{capture assign=categoriesUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.settings.category.CategoryCategoryGridHandler" op="fetchGrid" escape=false}{/capture}
 			{load_url_in_div id="categoriesContainer" url=$categoriesUrl}
 		</tab>
 	</tabs>

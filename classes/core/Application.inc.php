@@ -20,6 +20,7 @@ namespace APP\core;
 
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\security\Role;
 
 define('REQUIRES_XSL', false);
 
@@ -112,24 +113,23 @@ class Application extends PKPApplication
     public function getDAOMap()
     {
         return array_merge(parent::getDAOMap(), [
-            'SubmissionDAO' => 'classes.submission.SubmissionDAO',
-            'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
-            'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
-            'AuthorDAO' => 'classes.article.AuthorDAO',
-            'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
-            'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
-            'IssueDAO' => 'classes.issue.IssueDAO',
-            'IssueGalleyDAO' => 'classes.issue.IssueGalleyDAO',
-            'IssueFileDAO' => 'classes.issue.IssueFileDAO',
-            'JournalDAO' => 'classes.journal.JournalDAO',
-            'JournalSettingsDAO' => 'classes.journal.JournalSettingsDAO',
-            'MetricsDAO' => 'classes.statistics.MetricsDAO',
-            'OAIDAO' => 'classes.oai.ojs.OAIDAO',
-            'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
-            'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
-            'SectionDAO' => 'classes.journal.SectionDAO',
-            'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
-            'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
+            'ArticleGalleyDAO' => 'APP\article\ArticleGalleyDAO',
+            'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
+            'AuthorDAO' => 'APP\article\AuthorDAO',
+            'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
+            'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
+            'IssueDAO' => 'APP\issue\IssueDAO',
+            'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',
+            'IssueFileDAO' => 'APP\issue\IssueFileDAO',
+            'JournalDAO' => 'APP\journal\JournalDAO',
+            'JournalSettingsDAO' => 'APP\journal\JournalSettingsDAO',
+            'MetricsDAO' => 'APP\statistics\MetricsDAO',
+            'OAIDAO' => 'APP\oai\ojs\OAIDAO',
+            'OJSCompletedPaymentDAO' => 'APP\payment\ojs\OJSCompletedPaymentDAO',
+            'ReviewerSubmissionDAO' => 'APP\submission\reviewer\ReviewerSubmissionDAO',
+            'SectionDAO' => 'APP\journal\SectionDAO',
+            'SubscriptionDAO' => 'APP\subscription\SubscriptionDAO',
+            'SubscriptionTypeDAO' => 'APP\subscription\SubscriptionTypeDAO',
         ]);
     }
 
@@ -171,18 +171,6 @@ class Application extends PKPApplication
     }
 
     /**
-     * Get the submission DAO.
-     *
-     * @deprecated Just get the DAO directly.
-     *
-     * @return SubmissionDAO
-     */
-    public static function getSubmissionDAO()
-    {
-        return DAORegistry::getDAO('SubmissionDAO');
-    }
-
-    /**
      * Get the section DAO.
      *
      * @return SectionDAO
@@ -207,8 +195,7 @@ class Application extends PKPApplication
      */
     public static function getSubmissionSearchIndex()
     {
-        import('classes.search.ArticleSearchIndex');
-        return new \ArticleSearchIndex();
+        return new \APP\search\ArticleSearchIndex();
     }
 
     /**
@@ -261,8 +248,8 @@ class Application extends PKPApplication
     public static function getRoleNames($contextOnly = false, $roleIds = null)
     {
         $roleNames = parent::getRoleNames($contextOnly, $roleIds);
-        if (!$roleIds || in_array(ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
-            $roleNames[ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
+        if (!$roleIds || in_array(Role::ROLE_ID_SUBSCRIPTION_MANAGER, $roleIds)) {
+            $roleNames[Role::ROLE_ID_SUBSCRIPTION_MANAGER] = 'user.role.subscriptionManager';
         }
         return $roleNames;
     }
@@ -276,7 +263,6 @@ class Application extends PKPApplication
      */
     public static function getPaymentManager($context)
     {
-        import('classes.payment.ojs.OJSPaymentManager');
-        return new \OJSPaymentManager($context);
+        return new \APP\payment\ojs\OJSPaymentManager($context);
     }
 }

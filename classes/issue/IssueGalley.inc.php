@@ -20,7 +20,12 @@
  * @brief A galley is a final presentation version of the full-text of an issue.
  */
 
-import('classes.issue.IssueFile');
+namespace APP\issue;
+
+use APP\core\Application;
+
+use APP\i18n\AppLocale;
+use PKP\core\DAORegistry;
 
 class IssueGalley extends IssueFile
 {
@@ -208,4 +213,8 @@ class IssueGalley extends IssueFile
         }
         return $this->_issueFile;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\IssueGalley', '\IssueGalley');
 }

@@ -17,12 +17,15 @@ import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 
 import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
-use PKP\identity\Identity;
-use PKP\core\JSONMessage;
-use PKP\user\UserDAO;
-use PKP\notification\PKPNotification;
-
 use APP\notification\NotificationManager;
+use APP\subscription\InstitutionalSubscriptionDAO;
+use APP\subscription\SubscriptionDAO;
+use PKP\controllers\grid\GridColumn;
+use PKP\core\JSONMessage;
+
+use PKP\identity\Identity;
+use PKP\notification\PKPNotification;
+use PKP\user\UserDAO;
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 {
@@ -108,22 +111,18 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
      */
     public function renderFilter($request, $filterData = [])
     {
-        // Import field constants.
-        import('lib.pkp.classes.user.UserDAO');
-        import('classes.subscription.InstitutionalSubscriptionDAO');
-
         $filterData = array_merge($filterData, [
             'fieldOptions' => [
                 Identity::IDENTITY_SETTING_GIVENNAME => 'user.givenName',
                 Identity::IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
                 UserDAO::USER_FIELD_USERNAME => 'user.username',
                 UserDAO::USER_FIELD_EMAIL => 'user.email',
-                SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
-                SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
-                SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',
-                SUBSCRIPTION_INSTITUTION_NAME => 'manager.subscriptions.form.institutionName',
-                SUBSCRIPTION_DOMAIN => 'manager.subscriptions.form.domain',
-                SUBSCRIPTION_IP_RANGE => 'manager.subscriptions.form.ipRange',
+                SubscriptionDAO::SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
+                SubscriptionDAO::SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
+                SubscriptionDAO::SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',
+                InstitutionalSubscriptionDAO::SUBSCRIPTION_INSTITUTION_NAME => 'manager.subscriptions.form.institutionName',
+                InstitutionalSubscriptionDAO::SUBSCRIPTION_DOMAIN => 'manager.subscriptions.form.domain',
+                InstitutionalSubscriptionDAO::SUBSCRIPTION_IP_RANGE => 'manager.subscriptions.form.ipRange',
             ],
             'matchOptions' => [
                 'contains' => 'form.contains',

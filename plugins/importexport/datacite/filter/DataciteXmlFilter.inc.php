@@ -13,6 +13,12 @@
  * @brief Class that converts an Issue to a DataCite XML document.
  */
 
+use APP\article\ArticleGalley;
+use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\submission\Submission;
+use APP\workflow\EditorDecisionActionsManager;
+
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');
 define('DATACITE_TITLETYPE_ALTERNATIVE', 'AlternativeTitle');
@@ -45,13 +51,6 @@ define('DATACITE_DESCTYPE_TOC', 'TableOfContents');
 define('DATACITE_DESCTYPE_OTHER', 'Other');
 
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
-
-use APP\submission\Submission;
-use APP\workflow\EditorDecisionActionsManager;
-
-// FIXME: Add namespacing
-// use Issue;
-// use ArticleGalley;
 
 class DataciteXmlFilter extends NativeExportFilter
 {
@@ -113,11 +112,11 @@ class DataciteXmlFilter extends NativeExportFilter
         } elseif ($pubObject instanceof ArticleGalley) {
             $galley = $pubObject;
             $galleyFile = $galley->getFile();
-            $publication = Services::get('publication')->get($galley->getData('publicationId'));
+            $publication = Repo::publication()->get($galley->getData('publicationId'));
             if ($cache->isCached('articles', $publication->getData('submissionId'))) {
                 $article = $cache->get('articles', $publication->getData('submissionId'));
             } else {
-                $article = Services::get('submission')->get($publication->getData('submissionId'));
+                $article = Repo::submission()->get($publication->getData('submissionId'));
                 if ($article) {
                     $cache->add($article, null);
                 }
@@ -183,15 +182,20 @@ class DataciteXmlFilter extends NativeExportFilter
         // Publication Year (mandatory)
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
         // Subjects
-        $subject = null;
+        $subjects = [];
         if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
-            $subject = $this->getPrimaryTranslation($galleyFile->getSubject(null), $objectLocalePrecedence);
+            $subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
         } elseif (!empty($article) && !empty($publication)) {
-            $subject = $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence);
+            $subjects = array_merge(
+                $this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
+                $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
+            );
         }
-        if (!empty($subject)) {
+        if (!empty($subjects)) {
             $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
-            $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+            foreach ($subjects as $subject) {
+                $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
+            }
             $rootNode->appendChild($subjectsNode);
         }
         // Dates
@@ -280,7 +284,7 @@ class DataciteXmlFilter extends NativeExportFilter
         switch (true) {
             case (isset($galleyFile) && ($genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
                 // Check whether we have a supp file creator set...
-                $creator = $this->getPrimaryTranslation($galleyFile->getCreator(null), $objectLocalePrecedence);
+                $creator = $this->getPrimaryTranslation($galleyFile->getData('creator'), $objectLocalePrecedence);
                 if (!empty($creator)) {
                     $creators[] = $creator;
                     break;
@@ -382,7 +386,7 @@ class DataciteXmlFilter extends NativeExportFilter
                 $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
                     // Created date (for supp files only): supp file date created.
-                    $createdDate = $galleyFile->getDateCreated();
+                    $createdDate = $galleyFile->getData('dateCreated');
                     if (!empty($createdDate)) {
                         $dates[DATACITE_DATE_CREATED] = $createdDate;
                     }
@@ -585,11 +589,13 @@ class DataciteXmlFilter extends NativeExportFilter
                 break;
             case isset($issue):
                 // Parts: articles in this issue.
-                $submissionsIterator = Services::get('submission')->getMany([
-                    'contextId' => $issue->getJournalId(),
-                    'issueIds' => $issue->getId(),
-                ]);
-                foreach ($submissionsIterator as $relatedArticle) {
+                $submissions = Repo::submission()->getMany(
+                    Repo::submission()
+                        ->getCollector()
+                        ->filterByContextIds([$issue->getJournalId()])
+                        ->filterByIssueIds([$issue->getId()])
+                );
+                foreach ($submissions as $relatedArticle) {
                     $doi = $relatedArticle->getStoredPubId('doi');
                     if (!empty($doi)) {
                         $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
@@ -683,7 +689,7 @@ class DataciteXmlFilter extends NativeExportFilter
             case isset($galley):
                 $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
-                    $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getDescription(null), $objectLocalePrecedence);
+                    $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
                     if (!empty($suppFileDesc)) {
                         $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
                     }
@@ -897,12 +903,14 @@ class DataciteXmlFilter extends NativeExportFilter
      */
     public function getIssueToc($issue, $objectLocalePrecedence)
     {
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $issue->getJournalId(),
-            'issueIds' => $issue->getId(),
-        ]);
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+        );
         $toc = '';
-        foreach ($submissionsIterator as $submissionInIssue) {
+        foreach ($submissions as $submissionInIssue) {
             $currentEntry = $this->getPrimaryTranslation($submissionInIssue->getTitle(null), $objectLocalePrecedence);
             assert(!empty($currentEntry));
             $pages = $submissionInIssue->getPages();

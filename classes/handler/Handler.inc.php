@@ -15,7 +15,7 @@
 
 namespace APP\handler;
 
-use \PKP\handler\PKPHandler;
+use PKP\handler\PKPHandler;
 
 class Handler extends PKPHandler
 {

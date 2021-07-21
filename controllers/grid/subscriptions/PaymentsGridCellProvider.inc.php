@@ -13,7 +13,8 @@
  * @brief Class for a cell provider to display information about payments
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
 
 class PaymentsGridCellProvider extends GridCellProvider
 {
@@ -39,7 +40,7 @@ class PaymentsGridCellProvider extends GridCellProvider
      * Extracts variables for a given column from a data element
      * so that they may be assigned to template before rendering.
      *
-     * @param $row GridRow
+     * @param $row \PKP\controllers\grid\GridRow
      * @param $column GridColumn
      *
      * @return array

@@ -15,7 +15,8 @@
 
 use APP\handler\Handler;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+use PKP\security\Role;
 
 class ManageIssuesHandler extends Handler
 {
@@ -32,7 +33,7 @@ class ManageIssuesHandler extends Handler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             [
                 'index',
             ]

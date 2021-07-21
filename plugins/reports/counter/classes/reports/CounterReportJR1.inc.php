@@ -12,6 +12,8 @@
  * @brief Journal Report 1
  */
 
+use PKP\statistics\PKPStatisticsHelper;
+
 import('plugins.reports.counter.classes.CounterReport');
 
 class CounterReportJR1 extends CounterReport
@@ -40,29 +42,29 @@ class CounterReportJR1 extends CounterReport
         $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
 
         // Columns are fixed for this report
-        $defaultColumns = [STATISTICS_DIMENSION_MONTH, STATISTICS_DIMENSION_FILE_TYPE, STATISTICS_DIMENSION_CONTEXT_ID];
+        $defaultColumns = [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH, PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE, PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID];
         if ($columns && array_diff($columns, $defaultColumns)) {
             $this->setError(new Exception(__('plugins.reports.counter.exception.column'), COUNTER_EXCEPTION_WARNING | COUNTER_EXCEPTION_BAD_COLUMNS));
         }
         // Check filters for correct context(s)
         $validFilters = $this->filterForContext($filters);
         // Filters defaults to last month, but can be provided by month or by day
-        if (!isset($filters[STATISTICS_DIMENSION_MONTH]) && !isset($filters[STATISTICS_DIMENSION_DAY])) {
-            $validFilters[STATISTICS_DIMENSION_MONTH] = [
+        if (!isset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH]) && !isset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_DAY])) {
+            $validFilters[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH] = [
                 'from' => date_format(date_create('first day of previous month'), 'Ymd'),
                 'to' => date_format(date_create('last day of previous month'), 'Ymd')
             ];
-        } elseif (isset($filters[STATISTICS_DIMENSION_MONTH])) {
-            $validFilters[STATISTICS_DIMENSION_MONTH] = $filters[STATISTICS_DIMENSION_MONTH];
-            unset($filters[STATISTICS_DIMENSION_MONTH]);
-        } elseif (isset($filters[STATISTICS_DIMENSION_DAY])) {
-            $validFilters[STATISTICS_DIMENSION_DAY] = $filters[STATISTICS_DIMENSION_DAY];
-            unset($filters[STATISTICS_DIMENSION_DAY]);
+        } elseif (isset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH])) {
+            $validFilters[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH] = $filters[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH];
+            unset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH]);
+        } elseif (isset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_DAY])) {
+            $validFilters[PKPStatisticsHelper::STATISTICS_DIMENSION_DAY] = $filters[PKPStatisticsHelper::STATISTICS_DIMENSION_DAY];
+            unset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_DAY]);
         }
-        if (!isset($filters[STATISTICS_DIMENSION_ASSOC_TYPE])) {
-            $validFilters[STATISTICS_DIMENSION_ASSOC_TYPE] = ASSOC_TYPE_SUBMISSION_FILE;
-            unset($filters[STATISTICS_DIMENSION_ASSOC_TYPE]);
-        } elseif ($filters[STATISTICS_DIMENSION_ASSOC_TYPE] != ASSOC_TYPE_SUBMISSION_FILE) {
+        if (!isset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE])) {
+            $validFilters[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE] = ASSOC_TYPE_SUBMISSION_FILE;
+            unset($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE]);
+        } elseif ($filters[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE] != ASSOC_TYPE_SUBMISSION_FILE) {
             $this->setError(new Exception(__('plugins.reports.counter.exception.filter'), COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_BAD_FILTERS));
         }
         // Any further filters aren't recognized (at this time, at least)
@@ -72,7 +74,7 @@ class CounterReportJR1 extends CounterReport
         // Metric type is ojs::counter
         $metricType = METRIC_TYPE_COUNTER;
         // Ordering must be by Journal (ReportItem), and by Month (ItemPerformance) for JR1
-        $validOrder = [STATISTICS_DIMENSION_CONTEXT_ID => STATISTICS_ORDER_DESC, STATISTICS_DIMENSION_MONTH => STATISTICS_ORDER_ASC];
+        $validOrder = [PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID => PKPStatisticsHelper::STATISTICS_ORDER_DESC, PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH => PKPStatisticsHelper::STATISTICS_ORDER_ASC];
         // TODO: range
         $results = $metricsDao->getMetrics($metricType, $defaultColumns, $validFilters, $validOrder);
         $reportItems = [];
@@ -85,18 +87,18 @@ class CounterReportJR1 extends CounterReport
             $lastJournal = 0;
             foreach ($results as $rs) {
                 // Identify the type of request
-                $metricTypeKey = $this->getKeyForFiletype($rs[STATISTICS_DIMENSION_FILE_TYPE]);
+                $metricTypeKey = $this->getKeyForFiletype($rs[PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE]);
                 // Period changes or greater trigger a new ItemPerformace metric
-                if ($lastPeriod != $rs[STATISTICS_DIMENSION_MONTH] || $lastJournal != $rs[STATISTICS_DIMENSION_CONTEXT_ID]) {
+                if ($lastPeriod != $rs[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH] || $lastJournal != $rs[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID]) {
                     if ($lastPeriod != 0) {
                         $metrics[] = $this->createMetricByMonth($lastPeriod, $counters);
                         $counters = [];
                     }
                 }
-                $lastPeriod = $rs[STATISTICS_DIMENSION_MONTH];
-                $counters[] = new COUNTER\PerformanceCounter($metricTypeKey, $rs[STATISTICS_METRIC]);
+                $lastPeriod = $rs[PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH];
+                $counters[] = new COUNTER\PerformanceCounter($metricTypeKey, $rs[PKPStatisticsHelper::STATISTICS_METRIC]);
                 // Journal changes trigger a new ReportItem
-                if ($lastJournal != $rs[STATISTICS_DIMENSION_CONTEXT_ID]) {
+                if ($lastJournal != $rs[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID]) {
                     if ($lastJournal != 0 && $metrics) {
                         $item = $this->_createReportItem($lastJournal, $metrics);
                         if ($item) {
@@ -107,7 +109,7 @@ class CounterReportJR1 extends CounterReport
                         $metrics = [];
                     }
                 }
-                $lastJournal = $rs[STATISTICS_DIMENSION_CONTEXT_ID];
+                $lastJournal = $rs[PKPStatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID];
             }
             // Capture the last unprocessed ItemPerformance and ReportItem entries, if applicable
             if ($counters) {

@@ -15,7 +15,9 @@
  * @brief Describes basic section properties.
  */
 
-import('lib.pkp.classes.context.PKPSection');
+namespace APP\journal;
+
+use PKP\context\PKPSection;
 
 class Section extends PKPSection
 {
@@ -249,4 +251,8 @@ class Section extends PKPSection
     {
         $this->setData('isInactive', $isInactive);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\journal\Section', '\Section');
 }

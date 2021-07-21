@@ -13,9 +13,10 @@
  * @brief Plugin to recommend articles from the same author.
  */
 
-use \PKP\submission\PKPSubmission;
-
-import('lib.pkp.classes.plugins.GenericPlugin');
+use APP\facades\Repo;
+use PKP\plugins\GenericPlugin;
+use PKP\statistics\PKPStatisticsHelper;
+use PKP\submission\PKPSubmission;
 
 define('RECOMMEND_BY_AUTHOR_PLUGIN_COUNT', 10);
 
@@ -90,7 +91,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
                 $publicationIds[] = $thisAuthor->getData('publicationId');
             }
             $submissionIds = array_map(function ($publicationId) {
-                $publication = Services::get('publication')->get($publicationId);
+                $publication = Repo::publication()->get($publicationId);
                 return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
             }, array_unique($publicationIds));
             $foundArticles = array_unique(array_merge($foundArticles, $submissionIds));
@@ -109,12 +110,12 @@ class RecommendByAuthorPlugin extends GenericPlugin
         if (empty($metricType)) {
             $smarty->assign('noMetricSelected', true);
         }
-        $column = STATISTICS_DIMENSION_SUBMISSION_ID;
+        $column = PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID;
         $filter = [
-            STATISTICS_DIMENSION_ASSOC_TYPE => [ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION],
-            STATISTICS_DIMENSION_SUBMISSION_ID => [$results]
+            PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => [ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION],
+            PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID => [$results]
         ];
-        $orderBy = [STATISTICS_METRIC => STATISTICS_ORDER_DESC];
+        $orderBy = [PKPStatisticsHelper::STATISTICS_METRIC => PKPStatisticsHelper::STATISTICS_ORDER_DESC];
         $statsReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
         $orderedResults = [];
         foreach ((array) $statsReport as $reportRow) {

@@ -13,6 +13,10 @@
  * @brief Handle issues grid requests.
  */
 
+use PKP\controllers\grid\feature\OrderGridItemsFeature;
+use PKP\controllers\grid\GridColumn;
+use PKP\security\Role;
+
 import('classes.controllers.grid.issues.IssueGridHandler');
 
 class BackIssueGridHandler extends IssueGridHandler
@@ -24,7 +28,7 @@ class BackIssueGridHandler extends IssueGridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             ['saveSequence']
         );
     }
@@ -96,7 +100,6 @@ class BackIssueGridHandler extends IssueGridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
         return [new OrderGridItemsFeature()];
     }
 

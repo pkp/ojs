@@ -13,9 +13,14 @@
  * @brief DataCite export/registration plugin.
  */
 
-import('classes.plugins.DOIPubIdExportPlugin');
+use APP\facades\Repo;
+use APP\plugins\DOIPubIdExportPlugin;
 
+use APP\submission\Submission;
+use APP\article\ArticleGalley;
+use APP\issue\Issue;
 use PKP\file\FileManager;
+
 use PKP\notification\PKPNotification;
 
 // DataCite API
@@ -26,12 +31,6 @@ define('DATACITE_API_URL_TEST', 'https://mds.test.datacite.org/');
 // Export file types.
 define('DATACITE_EXPORT_FILE_XML', 0x01);
 define('DATACITE_EXPORT_FILE_TAR', 0x02);
-
-use APP\submission\Submission;
-
-// FIXME: Add namespacing
-// use ArticleGalley;
-// use Issue;
 
 class DataciteExportPlugin extends DOIPubIdExportPlugin
 {
@@ -422,13 +421,13 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         $router = $request->getRouter();
         // Retrieve the article of article files.
         if ($object instanceof ArticleGalley) {
-            $publication = Services::get('publication')->get($object->getData('publicationId'));
+            $publication = Repo::publication()->get($object->getData('publicationId'));
             $articleId = $publication->getData('submissionId');
             $cache = $this->getCache();
             if ($cache->isCached('articles', $articleId)) {
                 $article = $cache->get('articles', $articleId);
             } else {
-                $article = Services::get('submission')->get($articleId);
+                $article = Repo::submission()->get($articleId);
             }
             assert($article instanceof Submission);
         }

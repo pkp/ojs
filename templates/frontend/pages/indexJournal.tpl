@@ -54,7 +54,7 @@
 				{else}
 					<article class="obj_announcement_summary">
 						<h4>
-							<a href="{url router=PKPApplication::ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
+							<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
 								{$announcement->getLocalizedTitle()|escape}
 							</a>
 						</h4>
@@ -79,7 +79,7 @@
 				{$issue->getIssueIdentification()|strip_unsafe_html}
 			</div>
 			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
-			<a href="{url router=PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+			<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">
 				{translate key="journal.viewAllIssues"}
 			</a>
 		</section>

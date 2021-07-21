@@ -15,11 +15,12 @@
  * @brief Operations for retrieving and modifying ArticleGalley objects.
  */
 
-import('classes.article.ArticleGalley');
-import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
+namespace APP\article;
 
+use PKP\db\DAOResultFactory;
 use PKP\db\SchemaDAO;
 use PKP\identity\Identity;
+use PKP\plugins\PKPPubIdPluginDAO;
 use PKP\services\PKPSchemaService;
 use PKP\submission\PKPSubmission;
 
@@ -358,4 +359,8 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
 
         return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\article\ArticleGalleyDAO', '\ArticleGalleyDAO');
 }

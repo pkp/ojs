@@ -18,10 +18,15 @@
 
 namespace APP\payment\ojs;
 
-use PKP\payment\QueuedPayment;
-use PKP\payment\PaymentManager;
+use APP\facades\Repo;
+
 use PKP\payment\CompletedPayment;
+use PKP\payment\PaymentManager;
+use PKP\payment\QueuedPayment;
 use PKP\plugins\PluginRegistry;
+
+use APP\subscription\SubscriptionAction;
+use APP\subscription\Subscription;
 
 class OJSPaymentManager extends PaymentManager
 {
@@ -82,8 +87,7 @@ class OJSPaymentManager extends PaymentManager
                 $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'user', 'subscriptions'));
                 break;
             case self::PAYMENT_TYPE_PUBLICATION:
-                $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-                $submission = $submissionDao->getById($assocId);
+                $submission = Repo::submission()->get($assocId);
                 if ($submission->getSubmissionProgress() != 0) {
                     $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), ['submissionId' => $assocId]));
                 } else {
@@ -252,8 +256,7 @@ class OJSPaymentManager extends PaymentManager
                 // Update subscription end date now that payment is completed
                 if ($institutional) {
                     // Still requires approval from JM/SM since includes domain and IP ranges
-                    import('classes.subscription.InstitutionalSubscription');
-                    $subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
+                    $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
                     if ($subscription->isNonExpiring()) {
                         $institutionalSubscriptionDao->updateObject($subscription);
                     } else {
@@ -262,12 +265,10 @@ class OJSPaymentManager extends PaymentManager
 
                     // Notify JM/SM of completed online purchase
                     if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
-                        import('classes.subscription.SubscriptionAction');
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
                     }
                 } else {
-                    import('classes.subscription.IndividualSubscription');
-                    $subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
+                    $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_ACTIVE);
                     if ($subscription->isNonExpiring()) {
                         $individualSubscriptionDao->updateObject($subscription);
                     } else {

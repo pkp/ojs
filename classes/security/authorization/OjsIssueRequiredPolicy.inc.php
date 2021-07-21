@@ -17,9 +17,9 @@ namespace APP\security\authorization;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\authorization\DataObjectRequiredPolicy;
+use PKP\security\Role;
 
-// FIXME: Add namespacing
-use \Issue;
+use APP\issue\Issue;
 
 class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 {
@@ -66,10 +66,10 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
         if (!$issue->getPublished() && count(array_intersect(
             $userRoles,
             [
-                ROLE_ID_SITE_ADMIN,
-                ROLE_ID_MANAGER,
-                ROLE_ID_SUB_EDITOR,
-                ROLE_ID_ASSISTANT,
+                Role::ROLE_ID_SITE_ADMIN,
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_ASSISTANT,
             ]
         )) == 0) {
             return AuthorizationPolicy::AUTHORIZATION_DENY;

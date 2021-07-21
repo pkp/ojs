@@ -11,7 +11,7 @@
 	{include file="authorDashboard/submissionEmails.tpl" submissionEmails=$productionEmails}
 
 	<!-- Display queries grid -->
-	{capture assign=queriesGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.queries.QueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}{/capture}
+	{capture assign=queriesGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.queries.QueriesGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}{/capture}
 	{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
 {else}
 	{translate key="submission.stageNotInitiated"}

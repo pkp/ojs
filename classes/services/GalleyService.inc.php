@@ -15,16 +15,18 @@
 
 namespace APP\services;
 
+use APP\core\Services;
+use APP\facades\Repo;
+use APP\services\queryBuilders\GalleyQueryBuilder;
+use APP\submission\Submission;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
+use PKP\plugins\HookRegistry;
 use PKP\services\interfaces\EntityPropertyInterface;
 use PKP\services\interfaces\EntityReadInterface;
-use PKP\validation\ValidatorFactory;
 use PKP\services\interfaces\EntityWriteInterface;
 use PKP\services\PKPSchemaService;
-
-use APP\core\Services;
-use APP\services\queryBuilders\GalleyQueryBuilder;
+use PKP\validation\ValidatorFactory;
 
 class GalleyService implements EntityReadInterface, EntityWriteInterface, EntityPropertyInterface
 {
@@ -95,7 +97,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
             $galleyQB->filterByPublicationIds($args['publicationIds']);
         }
 
-        \HookRegistry::call('Galley::getMany::queryBuilder', [&$galleyQB, $args]);
+        HookRegistry::call('Galley::getMany::queryBuilder', [&$galleyQB, $args]);
 
         return $galleyQB;
     }
@@ -114,11 +116,11 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         if (is_a($galley, 'ArticleGalley')) {
             $publication = !empty($args['publication'])
                 ? $args['publication']
-                : $args['publication'] = Services::get('publication')->get($galley->getData('publicationId'));
+                : $args['publication'] = Repo::publication()->get($galley->getData('publicationId'));
 
             $submission = !empty($args['submission'])
                 ? $args['submission']
-                : $args['submission'] = Services::get('submission')->get($publication->getData('submissionId'));
+                : $args['submission'] = Repo::submission()->get($publication->getData('submissionId'));
         }
 
 
@@ -176,7 +178,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 
         $values = Services::get('schema')->addMissingMultilingualValues(PKPSchemaService::SCHEMA_GALLEY, $values, $context->getSupportedSubmissionLocales());
 
-        \HookRegistry::call('Galley::getProperties::values', [&$values, $galley, $props, $args]);
+        HookRegistry::call('Galley::getProperties::values', [&$values, $galley, $props, $args]);
 
         ksort($values);
 
@@ -239,10 +241,10 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         // The publicationId must match an existing publication that is not yet published
         $validator->after(function ($validator) use ($props) {
             if (isset($props['publicationId']) && !$validator->errors()->get('publicationId')) {
-                $publication = Services::get('publication')->get($props['publicationId']);
+                $publication = Repo::publication()->get($props['publicationId']);
                 if (!$publication) {
                     $validator->errors()->add('publicationId', __('galley.publicationNotFound'));
-                } elseif (Services::get('publication')->isPublished($publication)) {
+                } elseif (in_array($publication->getData('status'), [Submission::STATUS_PUBLISHED, Submission::STATUS_SCHEDULED])) {
                     $validator->errors()->add('publicationId', __('galley.editPublishedDisabled'));
                 }
             }
@@ -252,7 +254,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
             $errors = $schemaService->formatValidationErrors($validator->errors(), $schemaService->get(PKPSchemaService::SCHEMA_GALLEY), $allowedLocales);
         }
 
-        \HookRegistry::call('Galley::validate', [&$errors, $action, $props, $allowedLocales, $primaryLocale]);
+        HookRegistry::call('Galley::validate', [&$errors, $action, $props, $allowedLocales, $primaryLocale]);
 
         return $errors;
     }
@@ -266,7 +268,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         $galleyId = $articleGalleyDao->insertObject($galley);
         $galley = $this->get($galleyId);
 
-        \HookRegistry::call('Galley::add', [&$galley, $request]);
+        HookRegistry::call('Galley::add', [&$galley, $request]);
 
         return $galley;
     }
@@ -281,7 +283,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         $newGalley = $galleyDao->newDataObject();
         $newGalley->_data = array_merge($galley->_data, $params);
 
-        \HookRegistry::call('Galley::edit', [&$newGalley, $galley, $params, $request]);
+        HookRegistry::call('Galley::edit', [&$newGalley, $galley, $params, $request]);
 
         $galleyDao->updateObject($newGalley);
         $newGalley = $this->get($newGalley->getId());
@@ -294,7 +296,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function delete($galley)
     {
-        \HookRegistry::call('Galley::delete::before', [&$galley]);
+        HookRegistry::call('Galley::delete::before', [&$galley]);
 
         $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
         $articleGalleyDao->deleteObject($galley);
@@ -308,6 +310,6 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
             Services::get('submissionFile')->delete($submissionFile);
         }
 
-        \HookRegistry::call('Galley::delete', [&$galley]);
+        HookRegistry::call('Galley::delete', [&$galley]);
     }
 }

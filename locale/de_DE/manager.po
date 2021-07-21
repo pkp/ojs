@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2020-12-15 09:06+0000\n"
-"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"PO-Revision-Date: 2021-06-02 18:24+0000\n"
+"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "de_DE/>\n"
 "Language: de_DE\n"
@@ -799,8 +799,9 @@ msgstr "Begutachtungsrichtlinien"
 msgid "manager.setup.reviewOptions"
 msgstr "Optionen für die Begutachtung"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Automatische Erinnerung der Gutachter/innen per E-Mail (aus den OJS-Standard-E-Mails) kann an zwei Stellen erfolgen. Die Redakteurin/der Redakteur kann hingegen den Gutachter/innen zu jeder Zeit direkt eine E-Mail schicken"
+msgstr "Automatische E-Mail-Erinnerung"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
@@ -809,8 +810,9 @@ msgstr ""
 "Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können "
 "erforderlich sein, siehe OJS-Dokumentation."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Vorgesehener Zeitaufwand für eine Begutachtung"
+msgstr "Vorgesehener Zeitaufwand (in Wochen) für eine Begutachtung"
 
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr "Redakteur/innen bewerten die Gutachter/innen nach jeder Begutachtung auf einer fünfstufigen Skala."
@@ -1839,3 +1841,30 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Mindestens eine Rubrik muss aktiv sein. Gehen Sie zu Workflow-Einstellungen, "
 "um alle Einreichungen für diese Zeitschrift zu deaktivieren."
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Fehler beim Parsen der Ausgabefahnen"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+#, fuzzy
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Ausgaben exportieren Ergebnisse"
+
+#, fuzzy
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Für diese Zeitschrift wurde kein Hauptkontakt definiert. Sie können einen "
+"Hauptkonto in den <a href=\"{$url}\">Zeitschrifteneinstellungen</a> einfügen."
+
+#, fuzzy
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Senden Sie eine Kopie der E-Mail mit der Bestätigung der Einreichung an den "
+"Hauptkontakt dieser Zeitschrift."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Wählen Sie das Land, in dem diese Zeitschrift beheimatet ist, oder das Land "
+"der Postanschrift der Zeitschrift oder des Verlags."

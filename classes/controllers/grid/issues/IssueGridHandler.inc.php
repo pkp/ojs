@@ -18,18 +18,23 @@
  * @brief Handle issues grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('controllers.grid.issues.IssueGridRow');
+use APP\facades\Repo;
 
-use PKP\core\JSONMessage;
-use PKP\submission\PKPSubmission;
-use PKP\file\TemporaryFileManager;
-use PKP\security\authorization\ContextAccessPolicy;
-
-use APP\security\authorization\OjsIssueRequiredPolicy;
-use APP\template\TemplateManager;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
+use APP\publication\Publication;
+use APP\security\authorization\OjsIssueRequiredPolicy;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+
+use PKP\core\JSONMessage;
+use PKP\file\TemporaryFileManager;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
+
+import('controllers.grid.issues.IssueGridRow');
 
 class IssueGridHandler extends GridHandler
 {
@@ -40,7 +45,7 @@ class IssueGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             [
                 'fetchGrid', 'fetchRow',
                 'addIssue', 'editIssue', 'editIssueData', 'updateIssue',
@@ -345,20 +350,24 @@ class IssueGridHandler extends GridHandler
 
         $journal = $request->getJournal();
 
+        if ($issue->getJournalId() != $journal->getId()) {
+            return new JSONMessage(false);
+        }
+
         // remove all published submissions and return original articles to editing queue
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $issue->getJournalId(),
-            'issueIds' => $issue->getId(),
-        ]);
-        foreach ($submissionsIterator as $submission) {
+        $collector = Repo::submission()
+            ->getCollector()
+            ->filterByIssueIds([$issue->getId()]);
+        $submissions = Repo::submission()->getMany($collector);
+        foreach ($submissions as $submission) {
             $publications = (array) $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
-                    $publication = Services::get('publication')->edit($publication, ['issueId' => '', 'status' => PKPSubmission::STATUS_QUEUED], $request);
+                    Repo::publication()->edit($publication, ['issueId' => '', 'status' => Submission::STATUS_QUEUED]);
                 }
             }
-            $newSubmission = Services::get('submission')->get($submission->getId());
-            Services::get('submission')->updateStatus($newSubmission);
+            $newSubmission = Repo::submission()->get($submission->getId());
+            Repo::submission()->updateStatus($newSubmission);
         }
 
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
@@ -534,7 +543,7 @@ class IssueGridHandler extends GridHandler
 
         // If subscriptions with delayed open access are enabled then
         // update open access date according to open access delay policy
-        if ($context->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $context->getData('delayedOpenAccessDuration'))) {
+        if ($context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $context->getData('delayedOpenAccessDuration'))) {
             $delayYears = (int)floor($delayDuration / 12);
             $delayMonths = (int)fmod($delayDuration, 12);
 
@@ -545,7 +554,7 @@ class IssueGridHandler extends GridHandler
             $delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth + $delayMonths) / 12);
             $delayOpenAccessMonth = (int)fmod($curMonth + $delayMonths, 12);
 
-            $issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
+            $issue->setAccessStatus(\APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION);
             $issue->setOpenAccessDate(date('Y-m-d H:i:s', mktime(0, 0, 0, $delayOpenAccessMonth, $curDay, $delayOpenAccessYear)));
         }
 
@@ -556,25 +565,27 @@ class IssueGridHandler extends GridHandler
 
         if (!$wasPublished) {
             // Publish all related publications
-            $submissionsIterator = Services::get('submission')->getMany([
-                'contextId' => $issue->getJournalId(),
-                'issueIds' => $issue->getId(),
-                'status' => PKPSubmission::STATUS_SCHEDULED,
-            ]);
+            $submissions = Repo::submission()->getMany(
+                Repo::submission()
+                    ->getCollector()
+                    ->filterByContextIds([$issue->getJournalId()])
+                    ->filterByIssueIds([$issue->getId()])
+                    ->filterByStatus([Submission::STATUS_SCHEDULED])
+            );
 
-            foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
+            foreach ($submissions as $submission) { /** @var Submission $submission */
                 $publications = $submission->getData('publications');
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
-                    if ($publication->getData('status') === PKPSubmission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
-                        $publication = Services::get('publication')->publish($publication);
+                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+                        Repo::publication()->publish($publication);
                     }
                 }
             }
         }
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
-        if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != PUBLISHING_MODE_NONE) {
+        if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $notificationManager = new NotificationManager();
             $notificationUsers = [];
             $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
@@ -627,25 +638,26 @@ class IssueGridHandler extends GridHandler
         $issueDao->updateObject($issue);
 
         // insert article tombstones for all articles
-        $submissionsIterator = Services::get('submission')->getMany([
-            'contextId' => $issue->getJournalId(),
-            'issueIds' => $issue->getId(),
-        ]);
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+        );
 
-        foreach ($submissionsIterator as $submission) { /** @var Submission $submission */
+        foreach ($submissions as $submission) { /** @var Submission $submission */
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) { /** @var Publication $publication */
-                if ($publication->getData('status') === PKPSubmission::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+                if ($publication->getData('status') === Submission::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
                     // Republish the publication in the issue, now that it's status has changed,
-                    // to ensure the publication's status is restored to PKPSubmission::STATUS_SCHEDULED
-                    // rather than PKPSubmission::STATUS_QUEUED
-                    $publication = Services::get('publication')->unpublish($publication);
-                    $publication = Services::get('publication')->publish($publication);
+                    // to ensure the publication's status is restored to Submission::STATUS_SCHEDULED
+                    // rather than Submission::STATUS_QUEUED
+                    Repo::publication()->unpublish($publication);
+                    Repo::publication()->publish($publication);
                 }
             }
         }
 
-        $dispatcher = $request->getDispatcher();
         $json = DAO::getDataChangedEvent($issue->getId());
         $json->setGlobalEvent('issueUnpublished', ['id' => $issue->getId()]);
         return $json;

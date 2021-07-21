@@ -197,13 +197,6 @@ msgstr ""
 "हमारे काम में निरंतर रुचि के लिए धन्यवाद,<br />\n"
 "{$editorialContactSignature}"
 
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.publishNotify.description"
-msgstr "यह ईमेल पंजीकृत पाठकों को संपादक के उपयोगकर्ता के घर में "उपयोगकर्ता सूचित करें" लिंक के माध्यम से भेजा जाता है। यह एक नए मुद्दे के पाठकों को सूचित करता है और उन्हें एक आपूर्ति किए गए URL पर जर्नल देखने के लिए आमंत्रित करता है."
-
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
 msgid "emails.lockssExistingArchive.subject"
@@ -885,11 +878,6 @@ msgstr ""
 "<br />\n"
 "हमारा निर्णय है: सबमिशन को स्वीकार करना"
 
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-msgid "emails.editorDecisionAccept.description"
-msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप से "सबमिशन स्वीकार" करने का निर्णय देता है."
-
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$submissionTitle}, {$submissionUrl}, {$authorName}, {$contextName}
@@ -940,31 +928,6 @@ msgstr ""
 "<br />\n"
 "Our decision is: Revisions Required"
 
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
-msgid "emails.editorDecisionRevisions.description"
-msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप देने के बारे में सूचित करता है, जो उनके प्रस्तुतिकरण के संबंध में आवश्यक \ "संशोधन” है."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$contextName}
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authorName}:<br />\n"
-"<br />\n"
-"आपके द्वारा सबमिट किए जाने के संबंध में हम एक निर्णय पर पहुंच गए हैं {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"हमारा निर्णय है: समीक्षा के लिए पुन: सबमिट करें"
-
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
-msgid "emails.editorDecisionResubmit.description"
-msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \ "पुनर्निमित \" निर्णय के बारे में सूचित करता है."
-
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$submissionTitle}, {$contextName}
@@ -978,13 +941,6 @@ msgstr ""
 "<br />\n"
 "हमारा निर्णय है: सबमिशन को अस्वीकार करना"
 
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
-msgid "emails.editorDecisionDecline.description"
-msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \ "गिरावट \" निर्णय के बारे में सूचित करता है."
-
-# (pofilter) simplecaps: Different capitalization
 msgid "emails.editorRecommendation.subject"
 msgstr "संपादक की सिफारिश"
 

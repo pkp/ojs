@@ -15,13 +15,16 @@
  * @brief Operations for retrieving and modifying Author objects.
  */
 
-import('classes.article.Author');
+namespace APP\article;
 
-use PKP\submission\PKPAuthorDAO;
+use APP\i18n\AppLocale;
+use PKP\core\PKPString;
+use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
 use PKP\identity\Identity;
-use PKP\submission\PKPSubmission;
+use PKP\submission\PKPAuthorDAO;
 
-use APP\submission\Submission;
+use PKP\submission\PKPSubmission;
 
 class AuthorDAO extends PKPAuthorDAO
 {
@@ -151,5 +154,8 @@ class AuthorDAO extends PKPAuthorDAO
     {
         return new Author();
     }
+}
 
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\article\AuthorDAO', '\AuthorDAO');
 }

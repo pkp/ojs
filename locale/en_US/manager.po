@@ -901,7 +901,7 @@ msgid "manager.setup.submissions.description"
 msgstr "Author guidelines, copyright, and indexing (including registration)."
 
 msgid "manager.setup.disableSubmissions.description"
-msgstr "Prevent users from submitting new articles to the journal. Submissions can be disabled for individual journal sections on the <a href="{$url}">journal sections</a> settings page."
+msgstr "Prevent users from submitting new articles to the journal. Submissions can be disabled for individual journal sections on the <a href=\"{$url}\">journal sections</a> settings page."
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr "This journal is not accepting submissions at this time. Visit the workflow settings to allow submissions."
@@ -1710,7 +1710,7 @@ msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr "Send a copy of the submission acknowledgement email to this journal's primary contact."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
-msgstr "No primary contact has been defined for this journal. You can enter a primary contact in the <a href="{$url}">journal settings</a>."
+msgstr "No primary contact has been defined for this journal. You can enter a primary contact in the <a href=\"{$url}\">journal settings</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
 msgstr "Export Issues Results"

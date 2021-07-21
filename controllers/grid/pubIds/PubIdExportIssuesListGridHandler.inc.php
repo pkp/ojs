@@ -13,10 +13,12 @@
  * @brief Handle exportable issues with pub ids list grid requests.
  */
 
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
+use PKP\security\Role;
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.pubIds.PubIdExportIssuesListGridCellProvider');
 
 class PubIdExportIssuesListGridHandler extends GridHandler
@@ -31,7 +33,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             ['fetchGrid', 'fetchRow']
         );
     }
@@ -90,7 +92,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
                 null,
                 $cellProvider,
                 ['html' => true,
-                    'alignment' => COLUMN_ALIGNMENT_LEFT]
+                    'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT]
             )
         );
         $this->addColumn(
@@ -101,7 +103,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
                 null,
                 $cellProvider,
                 ['html' => true,
-                    'alignment' => COLUMN_ALIGNMENT_LEFT]
+                    'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT]
             )
         );
         $this->addColumn(
@@ -111,7 +113,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
                 $this->_plugin->getPubIdDisplayType(),
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 15]
             )
         );
@@ -122,7 +124,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 10]
             )
         );

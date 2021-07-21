@@ -13,9 +13,10 @@
  * @brief Handle requests for reviewer functions.
  */
 
+use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 use PKP\security\authorization\SubmissionAccessPolicy;
 
-use APP\submission\reviewer\form\ReviewerReviewStep3Form;
+use PKP\security\Role;
 
 // FIXME: Add namespacing
 import('lib.pkp.pages.reviewer.PKPReviewerHandler');
@@ -29,7 +30,7 @@ class ReviewerHandler extends PKPReviewerHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            ROLE_ID_REVIEWER,
+            Role::ROLE_ID_REVIEWER,
             [
                 'submission', 'step', 'saveStep',
                 'showDeclineReview', 'saveDeclineReview', 'downloadFile'

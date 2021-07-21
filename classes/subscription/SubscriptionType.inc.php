@@ -15,16 +15,17 @@
  * @brief Basic class describing a subscription type.
  */
 
-/**
- * Subscription type formats
- */
-define('SUBSCRIPTION_TYPE_FORMAT_ONLINE', 0x01);
-define('SUBSCRIPTION_TYPE_FORMAT_PRINT', 0x10);
-define('SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE', 0x11);
+namespace APP\subscription;
 
+use PKP\db\DAORegistry;
 
 class SubscriptionType extends \PKP\core\DataObject
 {
+    // Subscription type formats
+    public const SUBSCRIPTION_TYPE_FORMAT_ONLINE = 1;
+    public const SUBSCRIPTION_TYPE_FORMAT_PRINT = 16;
+    public const SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE = 17;
+
     //
     // Get/set methods
     //
@@ -271,11 +272,11 @@ class SubscriptionType extends \PKP\core\DataObject
     public function getFormatString()
     {
         switch ($this->getData('format')) {
-            case SUBSCRIPTION_TYPE_FORMAT_ONLINE:
+            case self::SUBSCRIPTION_TYPE_FORMAT_ONLINE:
                 return 'subscriptionTypes.format.online';
-            case SUBSCRIPTION_TYPE_FORMAT_PRINT:
+            case self::SUBSCRIPTION_TYPE_FORMAT_PRINT:
                 return 'subscriptionTypes.format.print';
-            case SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE:
+            case self::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE:
                 return 'subscriptionTypes.format.printOnline';
             default:
                 return 'subscriptionTypes.format';
@@ -371,5 +372,16 @@ class SubscriptionType extends \PKP\core\DataObject
     {
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
         return $this->getLocalizedName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
+    }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\SubscriptionType', '\SubscriptionType');
+    foreach ([
+        'SUBSCRIPTION_TYPE_FORMAT_ONLINE',
+        'SUBSCRIPTION_TYPE_FORMAT_PRINT',
+        'SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE',
+    ] as $constantName) {
+        define($constantName, constant('\SubscriptionType::' . $constantName));
     }
 }

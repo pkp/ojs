@@ -15,13 +15,11 @@
  */
 
 
+use APP\workflow\EditorDecisionActionsManager;
+use PKP\controllers\modals\editorDecision\form\EditorDecisionForm;
+
 use PKP\submission\action\EditorAction;
 use PKP\submission\reviewRound\ReviewRound;
-
-use APP\workflow\EditorDecisionActionsManager;
-
-// FIXME: Add namespacing
-import('lib.pkp.classes.controllers.modals.editorDecision.form.EditorDecisionForm');
 
 class InitiateExternalReviewForm extends EditorDecisionForm
 {
@@ -60,7 +58,7 @@ class InitiateExternalReviewForm extends EditorDecisionForm
         $editorAction->recordDecision($request, $submission, $this->_decision, $actionLabels);
 
         // Move to the internal review stage.
-        $editorAction->incrementWorkflowStage($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, $request);
+        $editorAction->incrementWorkflowStage($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
 
         // Create an initial internal review round.
         $this->_initiateReviewRound($submission, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, $request, ReviewRound::REVIEW_ROUND_STATUS_PENDING_REVIEWERS);

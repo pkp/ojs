@@ -13,17 +13,17 @@
  * @brief Handle article galley grid requests.
  */
 
-// import grid base classes
-import('lib.pkp.classes.controllers.grid.GridHandler');
-
+use APP\notification\NotificationManager;
+use APP\template\TemplateManager;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
-use PKP\submission\PKPSubmission;
 use PKP\notification\PKPNotification;
 
-use APP\template\TemplateManager;
-use APP\notification\NotificationManager;
+use PKP\security\Role;
+use PKP\submission\PKPSubmission;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
@@ -37,11 +37,11 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT],
+            [Role::ROLE_ID_AUTHOR, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT],
             ['fetchGrid', 'fetchRow']
         );
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT],
             ['addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence']
         );
     }

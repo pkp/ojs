@@ -1,7 +1,28 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(__DIR__);
+    ->in(__DIR__)
+    ->name('*.php')
+    ->name('_ide_helper')
+    ->notName('*.blade.php')
+    ->ignoreDotFiles(true)
+    ->ignoreVCS(true)
+    ->notPath([
+        'cache',
+        'cypress',
+        'dbscripts',
+        'docs',
+        'js',
+        'lib/pkp',
+        'lib/ui-library',
+        'locale',
+        'node_modules',
+        'public',
+        'registry',
+        'schemas',
+        'styles',
+        'templates',
+    ]);
 
 // Apply formatting to all plugins that are not git submodules
 $pluginsDir = __DIR__ . DIRECTORY_SEPARATOR . 'plugins';
@@ -13,35 +34,12 @@ foreach ($files as $file) {
         foreach ($pluginDirs as $pluginDir) {
             $fullPluginPath = join(DIRECTORY_SEPARATOR, [$categoryDir, $pluginDir]);
             $gitPath = join(DIRECTORY_SEPARATOR, [$fullPluginPath, '.git']);
-            if (!in_array($pluginDir, ['.', '..']) && is_dir($fullPluginPath) && !file_exists($gitPath)) {
-                $finder->in($fullPluginPath);
+            if (!in_array($pluginDir, ['.', '..']) && is_dir($fullPluginPath) && file_exists($gitPath)) {
+                $finder->notPath(str_replace(__DIR__ . '/', '', $fullPluginPath));
             }
         }
     }
 }
-
-$finder->exclude([
-    'cache',
-    'cypress',
-    'dbscripts',
-    'docs',
-    'js',
-    'lib/pkp',
-    'lib/ui-library',
-    'locale',
-    'node_modules',
-    'public',
-    'plugins',
-    'registry',
-    'schemas',
-    'styles',
-    'templates',
-])
-    ->name('*.php')
-    ->name('_ide_helper')
-    ->notName('*.blade.php')
-    ->ignoreDotFiles(true)
-    ->ignoreVCS(true);
 
 $rules = include './lib/pkp/.php_cs_rules';
 

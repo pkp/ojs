@@ -15,5 +15,5 @@
 	{rdelim});
 </script>
 
-{capture assign=issueTocGridUrl}{url router=PKPApplication::ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId() escape=false}{/capture}
+{capture assign=issueTocGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId() escape=false}{/capture}
 {load_url_in_div id="issueTocGridContainer" url=$issueTocGridUrl}

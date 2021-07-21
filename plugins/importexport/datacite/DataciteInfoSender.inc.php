@@ -13,9 +13,9 @@
  * @brief Scheduled task to send deposits to DataCite.
  */
 
+use PKP\file\FileManager;
 use PKP\scheduledTask\ScheduledTask;
 use PKP\scheduledTask\ScheduledTaskHelper;
-use PKP\file\FileManager;
 
 class DataciteInfoSender extends ScheduledTask
 {

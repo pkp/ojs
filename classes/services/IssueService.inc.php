@@ -15,16 +15,19 @@
 
 namespace APP\services;
 
+use APP\core\Services;
+use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\journal\Journal;
+use APP\services\queryBuilders\IssueQueryBuilder;
+use APP\submission\Submission;
+
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\services\interfaces\EntityPropertyInterface;
 use PKP\services\interfaces\EntityReadInterface;
 use PKP\services\PKPSchemaService;
-
-use APP\core\Services;
-use APP\journal\Journal;
-use APP\services\queryBuilders\IssueQueryBuilder;
 
 class IssueService implements EntityPropertyInterface, EntityReadInterface
 {
@@ -118,7 +121,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
     public function getQueryBuilder($args = [])
     {
         $defaultArgs = [
-            'contextId' => CONTEXT_ID_NONE,
+            'contextId' => \PKP\core\PKPApplication::CONTEXT_ID_NONE,
             'orderBy' => 'datePublished',
             'orderDirection' => 'DESC',
             'isPublished' => null,
@@ -168,7 +171,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
         $subscribedUser = $issueAction->subscribedUser($journal, $issue);
         $subscribedDomain = $issueAction->subscribedDomain($journal, $issue);
 
-        return !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain;
+        return !$subscriptionRequired || $issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain;
     }
 
     /**
@@ -184,13 +187,13 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
         $accessStatus = null;
 
         switch ($journal->getData('publishingMode')) {
-            case PUBLISHING_MODE_SUBSCRIPTION:
-            case PUBLISHING_MODE_NONE:
-                $accessStatus = ISSUE_ACCESS_SUBSCRIPTION;
+            case \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION:
+            case \APP\journal\Journal::PUBLISHING_MODE_NONE:
+                $accessStatus = Issue::ISSUE_ACCESS_SUBSCRIPTION;
                 break;
-            case PUBLISHING_MODE_OPEN:
+            case \APP\journal\Journal::PUBLISHING_MODE_OPEN:
             default:
-                $accessStatus = ISSUE_ACCESS_OPEN;
+                $accessStatus = Issue::ISSUE_ACCESS_OPEN;
                 break;
         }
 
@@ -274,18 +277,19 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
                     break;
                 case 'articles':
                     $values[$prop] = [];
-                    $submissionsIterator = Services::get('submission')->getMany([
-                        'contextId' => $issue->getJournalId(),
-                        'issueIds' => $issue->getId(),
-                        'count' => 1000, // large upper limit
-                    ]);
-                    foreach ($submissionsIterator as $submission) {
-                        $values[$prop][] = \Services::get('submission')->getSummaryProperties($submission, $args);
+                    $submissions = Repo::submission()->getMany(
+                        Repo::submission()
+                            ->getCollector()
+                            ->filterByContextIds([$issue->getJournalId()])
+                            ->filterByIssueIds([Submission::STATUS_PUBLISHED])
+                    );
+                    foreach ($submissions as $submission) {
+                        $values[$prop][] = Repo::submission()->getSchemaMap()->summarize($submission, $args['userGroups']);
                     }
                     break;
                 case 'sections':
                     $values[$prop] = [];
-                    $sectionDao = \DAORegistry::getDAO('SectionDAO');
+                    $sectionDao = DAORegistry::getDAO('SectionDAO');
                     $sections = $sectionDao->getByIssueId($issue->getId());
                     if (!empty($sections)) {
                         foreach ($sections as $section) {

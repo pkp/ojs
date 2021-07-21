@@ -13,12 +13,12 @@
  * @brief Representation of an article galley grid row.
  */
 
-use PKP\submission\SubmissionFile;
+use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
-
-import('lib.pkp.classes.controllers.grid.GridRow');
+use PKP\security\Role;
+use PKP\submission\SubmissionFile;
 
 class ArticleGalleyGridRow extends GridRow
 {
@@ -87,7 +87,7 @@ class ArticleGalleyGridRow extends GridRow
                         $request,
                         $this->getSubmission()->getId(),
                         WORKFLOW_STAGE_ID_PRODUCTION,
-                        [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT],
+                        [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT],
                         SubmissionFile::SUBMISSION_FILE_PROOF,
                         ASSOC_TYPE_REPRESENTATION,
                         $rowId,

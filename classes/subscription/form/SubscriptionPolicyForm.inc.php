@@ -22,10 +22,9 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MAX', '12');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
-use PKP\form\Form;
-
 use APP\template\TemplateManager;
 
+use PKP\form\Form;
 
 class SubscriptionPolicyForm extends Form
 {

@@ -26,7 +26,7 @@
 			{fbvElement type="checkbox" name="sendIssueNotification" id="sendIssueNotification" checked=true label="notification.sendNotificationConfirmation" inline=true}
 		{/fbvFormSection}		
 {elseif $pubObject instanceof Article}
-	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url router=PKPApplication::ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" op="assignPubIds" escape=false}">
+	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" op="assignPubIds" escape=false}">
 		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
 		<input type="hidden" name="stageId" value="{$formParams.stageId|escape}" />
 		{assign var=hideCancel value=true}

@@ -294,7 +294,7 @@
 					</h2>
 					<div class="value">
 						{* If this is the original version *}
-						{if $firstPublication->getID() === $publication->getId()}
+						{if $firstPublication->getId() === $publication->getId()}
 							<span>{$firstPublication->getData('datePublished')|date_format:$dateFormatShort}</span>
 						{* If this is an updated version *}
 						{else}
@@ -414,7 +414,7 @@
 							<div class="value">
 								<ul class="categories">
 									{foreach from=$categories item=category}
-										<li><a href="{url router=PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+										<li><a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
 									{/foreach}
 								</ul>
 							</div>

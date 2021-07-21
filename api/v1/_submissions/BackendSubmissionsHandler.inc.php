@@ -15,6 +15,8 @@
  */
 
 use APP\payment\ojs\OJSPaymentManager;
+use APP\submission\Collector;
+use PKP\security\Role;
 
 import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
 
@@ -25,17 +27,15 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
      */
     public function __construct()
     {
-        \HookRegistry::register('API::_submissions::params', [$this, 'addAppSubmissionsParams']);
-
         $this->_endpoints = array_merge_recursive($this->_endpoints, [
             'PUT' => [
                 [
                     'pattern' => '/{contextPath}/api/{version}/_submissions/{submissionId:\d+}/payment',
                     'handler' => [$this, 'payment'],
                     'roles' => [
-                        ROLE_ID_SUB_EDITOR,
-                        ROLE_ID_MANAGER,
-                        ROLE_ID_ASSISTANT,
+                        Role::ROLE_ID_SUB_EDITOR,
+                        Role::ROLE_ID_MANAGER,
+                        Role::ROLE_ID_ASSISTANT,
                     ],
                 ],
             ],
@@ -57,33 +57,6 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
         }
 
         return parent::authorize($request, $args, $roleAssignments);
-    }
-
-    /**
-     * Add ojs-specific parameters to the getMany request
-     *
-     * @param $hookName string
-     * @param $args array [
-     * 		@option $params array
-     * 		@option $slimRequest Request Slim request object
-     * 		@option $response Response object
-     * ]
-     */
-    public function addAppSubmissionsParams($hookName, $args)
-    {
-        $params = & $args[0];
-        $slimRequest = $args[1];
-        $response = $args[2];
-
-        $originalParams = $slimRequest->getQueryParams();
-
-        if (!empty($originalParams['sectionIds'])) {
-            if (is_array($originalParams['sectionIds'])) {
-                $params['sectionIds'] = array_map('intval', $originalParams['sectionIds']);
-            } else {
-                $params['sectionIds'] = [(int) $originalParams['sectionIds']];
-            }
-        }
     }
 
     /**
@@ -159,7 +132,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
 
                 // Record a fulfilled payment.
                 $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
-                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR);
+                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR);
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(
                     $request,
@@ -184,5 +157,25 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
         }
 
         return $response->withJson(true);
+    }
+
+    /** @copydoc PKPSubmissionHandler::getSubmissionCollector() */
+    protected function getSubmissionCollector(array $queryParams): Collector
+    {
+        $collector = parent::getSubmissionCollector($queryParams);
+
+        if (isset($queryParams['issueIds'])) {
+            $collector->filterByIssueIds(
+                array_map('intval', $this->paramToArray($queryParams['issueIds']))
+            );
+        }
+
+        if (isset($queryParams['sectionIds'])) {
+            $collector->filterBySectionIds(
+                array_map('intval', $this->paramToArray($queryParams['sectionIds']))
+            );
+        }
+
+        return $collector;
     }
 }

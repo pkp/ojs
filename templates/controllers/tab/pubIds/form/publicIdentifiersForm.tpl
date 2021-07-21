@@ -18,7 +18,7 @@
 	{rdelim});
 </script>
 {if $pubObject instanceof Article}
-	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=PKPApplication::ROUTE_COMPONENT op="updateIdentifiers"}">
+	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT op="updateIdentifiers"}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationIdentifiersFormFieldsNotification"}
 		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
 		<input type="hidden" name="stageId" value="{$stageId|escape}" />
@@ -32,7 +32,7 @@
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url component="api.file.ManageFileApiHandler" op="updateIdentifiers" fileId=$pubObject->getId() submissionId=$pubObject->getData('submissionId') stageId=$stageId fileStageId=$pubObject->getFileStage() escape=false}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="fileIdentifiersFormFieldsNotification"}
 {else} {* $pubObject instanceof Issue *}
-	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=PKPApplication::ROUTE_COMPONENT op="updateIdentifiers" issueId=$pubObject->getId()}">
+	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT op="updateIdentifiers" issueId=$pubObject->getId()}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueIdentifiersFormFieldsNotification"}
 {/if}
 {csrf}

@@ -13,7 +13,15 @@
  * @brief Class defining basic operations for article tombstones.
  */
 
-use PKP\submission\PKPSubmission;
+namespace APP\article;
+
+use APP\facades\Repo;
+use APP\submission\Submission;
+use PKP\config\Config;
+
+use PKP\context\Context;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 
 class ArticleTombstoneManager
 {
@@ -58,8 +66,13 @@ class ArticleTombstoneManager
      */
     public function insertTombstonesByContext(Context $context)
     {
-        $submissionsIterator = Services::get('submission')->getMany(['contextId' => $context->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED]);
-        foreach ($submissionsIterator as $submission) {
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$context->getId()])
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
+        );
+        foreach ($submissions as $submission) {
             $this->insertArticleTombstone($submission, $context);
         }
     }
@@ -70,9 +83,18 @@ class ArticleTombstoneManager
     public function deleteTombstonesByContextId(int $contextId)
     {
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
-        $submissionsIterator = Services::get('submission')->getMany(['contextId' => $contextId, 'status' => PKPSubmission::STATUS_PUBLISHED]);
-        foreach ($submissionsIterator as $submission) {
+        $submissions = Repo::submission()->getMany(
+            Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$contextId])
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
+        );
+        foreach ($submissions as $submission) {
             $tombstoneDao->deleteByDataObjectId($submission->getId());
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\article\ArticleTombstoneManager', '\ArticleTombstoneManager');
 }

@@ -13,17 +13,22 @@
  * @brief Handle requests for issue functions.
  */
 
-import('classes.issue.IssueAction');
+use APP\core\Application;
+use APP\core\Services;
+use APP\facades\Repo;
 
-use PKP\submission\PKPSubmission;
-use PKP\security\authorization\ContextRequiredPolicy;
-
-use APP\security\authorization\OjsJournalMustPublishPolicy;
-use APP\security\authorization\OjsIssueRequiredPolicy;
-use APP\handler\Handler;
-use APP\template\TemplateManager;
 use APP\file\IssueFileManager;
+use APP\handler\Handler;
+use APP\i18n\AppLocale;
+use APP\issue\IssueAction;
+
 use APP\payment\ojs\OJSPaymentManager;
+use APP\security\authorization\OjsIssueRequiredPolicy;
+use APP\security\authorization\OjsJournalMustPublishPolicy;
+use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
 {
@@ -216,7 +221,6 @@ class IssueHandler extends Handler
      */
     public function userCanViewGalley($request)
     {
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
 
         $journal = $request->getJournal();
@@ -340,14 +344,14 @@ class IssueHandler extends Handler
             $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
 
-        $issueSubmissions = iterator_to_array(Services::get('submission')->getMany([
-            'contextId' => $journal->getId(),
-            'issueIds' => [$issue->getId()],
-            'status' => $allowedStatuses,
-            'orderBy' => 'seq',
-            'orderDirection' => 'ASC',
-        ]));
-
+        $collector = Repo::submission()->getCollector();
+        $issueSubmissions = Repo::submission()->getMany(
+            $collector
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+                ->filterByStatus($allowedStatuses)
+                ->orderBy($collector::ORDERBY_SEQUENCE, $collector::ORDER_DIR_ASC)
+        );
         $sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];
         foreach ($sections as $section) {
@@ -372,7 +376,6 @@ class IssueHandler extends Handler
         ]);
 
         // Subscription Access
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
         $subscribedUser = $issueAction->subscribedUser($user, $journal);
@@ -403,7 +406,7 @@ class IssueHandler extends Handler
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
         $templateMgr->assign([
             'hasAccess' => !$subscriptionRequired ||
-                $issue->getAccessStatus() == ISSUE_ACCESS_OPEN ||
+                $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN ||
                 $subscribedUser || $subscribedDomain ||
                 ($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
         ]);

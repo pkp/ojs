@@ -15,21 +15,21 @@
 		<ul>
 			{if !empty($forReaders)}
 				<li>
-					<a href="{url router=PKPApplication::ROUTE_PAGE page="information" op="readers"}">
+					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="information" op="readers"}">
 						{translate key="navigation.infoForReaders"}
 					</a>
 				</li>
 			{/if}
 			{if !empty($forAuthors)}
 				<li>
-					<a href="{url router=PKPApplication::ROUTE_PAGE page="information" op="authors"}">
+					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="information" op="authors"}">
 						{translate key="navigation.infoForAuthors"}
 					</a>
 				</li>
 			{/if}
 			{if !empty($forLibrarians)}
 				<li>
-					<a href="{url router=PKPApplication::ROUTE_PAGE page="information" op="librarians"}">
+					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="information" op="librarians"}">
 						{translate key="navigation.infoForLibrarians"}
 					</a>
 				</li>

@@ -13,10 +13,12 @@
  * @brief Handle exportable representations with pub ids list grid requests.
  */
 
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
+use PKP\security\Role;
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
 import('controllers.grid.pubIds.PubIdExportRepresentationsListGridCellProvider');
 
 class PubIdExportRepresentationsListGridHandler extends GridHandler
@@ -31,7 +33,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             ['fetchGrid', 'fetchRow']
         );
     }
@@ -91,7 +93,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
                 __('common.id'),
                 'controllers/grid/gridCell.tpl',
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 10]
             )
         );
@@ -103,7 +105,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
                 null,
                 $cellProvider,
                 ['html' => true,
-                    'alignment' => COLUMN_ALIGNMENT_LEFT]
+                    'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT]
             )
         );
         $this->addColumn(
@@ -113,7 +115,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 20]
             )
         );
@@ -124,7 +126,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 20]
             )
         );
@@ -135,7 +137,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
                 $this->_plugin->getPubIdDisplayType(),
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 15]
             )
         );
@@ -146,7 +148,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 10]
             )
         );

@@ -16,9 +16,9 @@ namespace APP\security\authorization;
 
 use PKP\security\authorization\DataObjectRequiredPolicy;
 use PKP\security\authorization\AuthorizationPolicy;
+use PKP\db\DAORegistry;
 
-// FIXME: Add namespacing
-use \IssueGalley;
+use APP\issue\IssueGalley;
 
 class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
 {

@@ -13,10 +13,11 @@
  * @brief Form class for user purchase of individual subscription.
  */
 
-use PKP\form\Form;
-
-use APP\template\TemplateManager;
 use APP\payment\ojs\OJSPaymentManager;
+
+use APP\subscription\Subscription;
+use APP\template\TemplateManager;
+use PKP\form\Form;
 
 class UserIndividualSubscriptionForm extends Form
 {
@@ -172,9 +173,9 @@ class UserIndividualSubscriptionForm extends Form
         $paymentPlugin = $paymentManager->getPaymentPlugin();
 
         if ($paymentPlugin->getName() == 'ManualPayment') {
-            $subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
+            $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
         } else {
-            $subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
+            $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
         }
 
         $subscription->setTypeId($typeId);

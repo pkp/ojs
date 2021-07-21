@@ -15,7 +15,9 @@
 
 import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
+
+use PKP\security\Role;
 
 class SectionForm extends PKPSectionForm
 {
@@ -72,7 +74,7 @@ class SectionForm extends PKPSectionForm
                 'wordCount' => $section->getAbstractWordCount(),
                 'assignedSubeditors' => Services::get('user')->getIds([
                     'contextId' => Application::get()->getRequest()->getContext()->getId(),
-                    'roleIds' => ROLE_ID_SUB_EDITOR,
+                    'roleIds' => Role::ROLE_ID_SUB_EDITOR,
                     'assignedToSection' => (int) $this->getSectionId(),
                 ]),
             ]);
@@ -168,7 +170,6 @@ class SectionForm extends PKPSectionForm
         if ($this->getSectionId()) {
             $section = $sectionDao->getById($this->getSectionId(), $journal->getId());
         } else {
-            import('classes.journal.Section');
             $section = $sectionDao->newDataObject();
             $section->setJournalId($journal->getId());
         }

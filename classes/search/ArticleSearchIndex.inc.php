@@ -13,12 +13,19 @@
  * @brief Class to maintain the article search index.
  */
 
-use \PKP\search\SubmissionSearchIndex;
-use \PKP\search\SubmissionSearch;
-use \PKP\submission\SubmissionFile;
-use \PKP\search\SearchFileParser;
+namespace APP\search;
 
-use \APP\i18n\AppLocale;
+use APP\core\Services;
+use APP\facades\Repo;
+use APP\i18n\AppLocale;
+use PKP\config\Config;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+use PKP\search\SearchFileParser;
+
+use PKP\search\SubmissionSearch;
+use PKP\search\SubmissionSearchIndex;
+use PKP\submission\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -53,7 +60,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         }
 
         // Update search index
-        import('classes.search.ArticleSearch');
         $submissionId = $submission->getId();
         $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_AUTHOR, $authorText);
         $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_TITLE, $publication->getFullTitles());
@@ -303,8 +309,12 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     echo __('search.cli.rebuildIndex.indexing', ['journalName' => $journal->getLocalizedName()]) . ' ... ';
                 }
 
-                $submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId()]);
-                foreach ($submissionsIterator as $submission) {
+                $submissions = Repo::submission()->getMany(
+                    Repo::submission()
+                        ->getCollector()
+                        ->filterByContextIds([$journal->getId()])
+                );
+                foreach ($submissions as $submission) {
                     if ($submission->getSubmissionProgress() == 0) { // Not incomplete
                         $this->submissionMetadataChanged($submission);
                         $this->submissionFilesChanged($submission);
@@ -376,4 +386,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         }
         return $flattenedArray;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\search\ArticleSearchIndex', '\ArticleSearchIndex');
 }

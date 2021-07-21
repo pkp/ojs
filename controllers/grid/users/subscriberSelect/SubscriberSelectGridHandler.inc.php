@@ -13,10 +13,12 @@
  * @brief Handle subscriber selector grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
-import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
+use PKP\security\Role;
+use PKP\user\UserDAO;
 
-use \PKP\user\UserDAO;
+import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
 class SubscriberSelectGridHandler extends GridHandler
 {
@@ -30,7 +32,7 @@ class SubscriberSelectGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRows']
         );
     }
@@ -97,7 +99,7 @@ class SubscriberSelectGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => COLUMN_ALIGNMENT_LEFT,
+                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 30
                 ]
             )

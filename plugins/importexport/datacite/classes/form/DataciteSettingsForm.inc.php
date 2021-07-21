@@ -15,8 +15,8 @@
 
 use PKP\form\Form;
 use PKP\form\validation\FormValidator;
-use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 
 class DataciteSettingsForm extends Form
 {

@@ -15,8 +15,10 @@
  * @brief Operations for retrieving and modifying IssueFile objects.
  */
 
-import('lib.pkp.classes.db.DAO');
-import('classes.issue.IssueFile');
+namespace APP\issue;
+
+use PKP\db\DAO;
+use PKP\plugins\HookRegistry;
 
 class IssueFileDAO extends DAO
 {
@@ -211,4 +213,8 @@ class IssueFileDAO extends DAO
     {
         return $this->_getInsertId('issue_files', 'file_id');
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\IssueFileDAO', '\IssueFileDAO');
 }

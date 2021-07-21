@@ -15,11 +15,10 @@
  * @brief Form to edit an issue's access settings
  */
 
-use PKP\form\Form;
+use APP\issue\Issue;
 
 use APP\template\TemplateManager;
-
-import('classes.issue.Issue'); // Bring in constants
+use PKP\form\Form;
 
 class IssueAccessForm extends Form
 {
@@ -49,8 +48,8 @@ class IssueAccessForm extends Form
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([
             'accessOptions' => [
-                ISSUE_ACCESS_OPEN => 'editor.issues.openAccess',
-                ISSUE_ACCESS_SUBSCRIPTION => 'editor.issues.subscription',
+                Issue::ISSUE_ACCESS_OPEN => 'editor.issues.openAccess',
+                Issue::ISSUE_ACCESS_SUBSCRIPTION => 'editor.issues.subscription',
             ],
             'issueId' => $this->_issue->getId(),
         ]);
@@ -90,7 +89,7 @@ class IssueAccessForm extends Form
         $journal = Application::get()->getRequest()->getJournal();
 
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN);
+        $this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : Issue::ISSUE_ACCESS_OPEN);
         if ($openAccessDate = $this->getData('openAccessDate')) {
             $this->_issue->setOpenAccessDate($openAccessDate);
         } else {

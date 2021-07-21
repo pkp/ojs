@@ -14,11 +14,11 @@
  */
 
 use APP\handler\Handler;
-
-use PKP\core\JSONMessage;
+use APP\notification\NotificationManager;
 
 use APP\template\TemplateManager;
-use APP\notification\NotificationManager;
+use PKP\core\JSONMessage;
+use PKP\security\Role;
 
 class PaymentsHandler extends Handler
 {
@@ -32,7 +32,7 @@ class PaymentsHandler extends Handler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['index', 'subscriptions', 'subscriptionTypes', 'subscriptionPolicies', 'saveSubscriptionPolicies', 'paymentTypes', 'savePaymentTypes', 'payments']
         );
     }

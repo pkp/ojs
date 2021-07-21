@@ -16,8 +16,8 @@
 
 namespace APP\submission;
 
-use PKP\submission\PKPSubmissionMetadataFormImplementation;
 use PKP\db\DAORegistry;
+use PKP\submission\PKPSubmissionMetadataFormImplementation;
 
 class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImplementation
 {

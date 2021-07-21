@@ -17,12 +17,10 @@
 
 namespace APP\journal;
 
+use APP\core\Application;
+use APP\facades\Repo;
 use PKP\context\ContextDAO;
-
-import('lib.pkp.classes.metadata.MetadataTypeDescription');
-
-define('JOURNAL_FIELD_TITLE', 1);
-define('JOURNAL_FIELD_SEQUENCE', 2);
+use PKP\metadata\MetadataTypeDescription;
 
 class JournalDAO extends ContextDAO
 {
@@ -82,13 +80,15 @@ class JournalDAO extends ContextDAO
      */
     public function deleteAllPubIds($journalId, $pubIdType)
     {
-        $pubObjectDaos = ['IssueDAO', 'PublicationDAO', 'ArticleGalleyDAO'];
+        $pubObjectDaos = ['IssueDAO', 'ArticleGalleyDAO'];
         foreach ($pubObjectDaos as $daoName) {
             $dao = DAORegistry::getDAO($daoName);
             $dao->deleteAllPubIds($journalId, $pubIdType);
         }
         $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
         $submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
+
+        Repo::publication()->dao->deleteAllPubIds($journalId, $pubIdType);
     }
 
     /**
@@ -111,13 +111,13 @@ class JournalDAO extends ContextDAO
         $journalId,
         $pubIdType,
         $pubId,
-        $assocType = ASSOC_TYPE_ANY,
+        $assocType = MetadataTypeDescription::ASSOC_TYPE_ANY,
         $assocId = 0,
         $forSameType = false
     ) {
         $pubObjectDaos = [
             ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
-            ASSOC_TYPE_SUBMISSION => DAORegistry::getDAO('SubmissionDAO'),
+            ASSOC_TYPE_PUBLICATION => Repo::publication()->dao,
             ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
             ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
             ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')

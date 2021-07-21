@@ -13,9 +13,10 @@
  * @brief Default theme
  */
 
-import('lib.pkp.classes.plugins.ThemePlugin');
+use APP\core\Application;
+use APP\i18n\AppLocale;
 
-class DefaultThemePlugin extends ThemePlugin
+class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 {
     /**
      * @copydoc ThemePlugin::isActive()

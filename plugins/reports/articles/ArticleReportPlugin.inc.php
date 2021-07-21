@@ -13,11 +13,12 @@
  * @brief Article report plugin
  */
 
-use PKP\plugins\ReportPlugin;
-use PKP\submission\PKPSubmission;
-use PKP\db\DAORegistry;
-
 use APP\workflow\EditorDecisionActionsManager;
+use PKP\db\DAORegistry;
+use PKP\plugins\ReportPlugin;
+use PKP\security\Role;
+
+use PKP\submission\PKPSubmission;
 
 class ArticleReportPlugin extends ReportPlugin
 {
@@ -75,7 +76,6 @@ class ArticleReportPlugin extends ReportPlugin
         // Add BOM (byte order mark) to fix UTF-8 in Excel
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
@@ -89,7 +89,7 @@ class ArticleReportPlugin extends ReportPlugin
         $editorUserGroupIds = array_map(function ($userGroup) {
             return $userGroup->getId();
         }, array_filter($userGroupDao->getByContextId($journal->getId())->toArray(), function ($userGroup) {
-            return in_array($userGroup->getRoleId(), [ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR]);
+            return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
         AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
@@ -98,7 +98,8 @@ class ArticleReportPlugin extends ReportPlugin
         // (This must be stored before display because we won't know the data
         // dimensions until it has all been loaded.)
         $results = $sectionTitles = [];
-        $submissions = $submissionDao->getByContextId($journal->getId());
+        $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
+        $submissions = Repo::submission()->getMany($collector);
         $maxAuthors = $maxEditors = $maxDecisions = 0;
         while ($submission = $submissions->next()) {
             $publication = $submission->getCurrentPublication();

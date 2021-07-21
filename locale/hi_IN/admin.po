@@ -35,19 +35,6 @@ msgstr "साइट की जानकारी को सफलतापू�
 msgid "admin.settings.redirectInstructions"
 msgstr "मुख्य साइट के अनुरोधों को इस जर्नल में पुनर्निर्देशित किया जाएगा। यह उपयोगी हो सकता है यदि साइट केवल एक ही जर्नल की होस्टिंग कर रही है, उदाहरण के लिए।"
 
-# (pofilter) endwhitespace: Different whitespace at the end
-# (pofilter) startwhitespace: Different whitespace at the start
-# (pofilter) newlines: Different line endings
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
-# (pofilter) tabs: Different tabs
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tआपका OJS इंस्टॉलेशन एक से अधिक उपयोग मीट्रिक रिकॉर्ड करने के लिए कॉन्फ़िगर किया गया है। उपयोग के आँकड़े कई संदर्भों में प्रदर्शित किए जाएंगे।\n"
-"\t\tऐसे मामले हैं जहां एकल उपयोग सांख्यिकीय का उपयोग किया जाना चाहिए, उदा। सबसे अधिक उपयोग किए जाने वाले लेखों या रैंक करने के लिए एक आदेशित सूची प्रदर्शित करना\n"
-"\t\tखोज परिणाम। कृपया डिफ़ॉल्ट के रूप में कॉन्फ़िगर किए गए मीट्रिक में से एक का चयन करें।\n"
-"\t"
-
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
@@ -184,13 +171,6 @@ msgstr "{$name} सफलतापूर्वक संपादित कि�
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.contexts.contextDescription"
 msgstr "जर्नल विवरण"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) doublequoting: Different quotation marks
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
-msgid "admin.journal.pathImportInstructions"
-msgstr "मौजूदा जर्नल पथ या पथ बनाने के लिए (जैसे, \ "ojs \")।"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.journals.importSubscriptions"

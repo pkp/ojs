@@ -16,9 +16,17 @@
  *
  */
 
-use PKP\submission\PKPSubmission;
+namespace APP\search;
 
-use \PKP\search\SubmissionSearch;
+use APP\core\Application;
+use APP\facades\Repo;
+use APP\i18n\AppLocale;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+
+use PKP\search\SubmissionSearch;
+use PKP\statistics\PKPStatisticsHelper;
+use PKP\submission\PKPSubmission;
 
 class ArticleSearch extends SubmissionSearch
 {
@@ -45,8 +53,6 @@ class ArticleSearch extends SubmissionSearch
         // slicing it. So this seems to be the most appropriate place, although we
         // may have to retrieve some objects again when formatting results.
         $orderedResults = [];
-        $authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
         $contextDao = Application::getContextDAO();
         $contextTitles = [];
         if ($orderBy == 'popularityAll' || $orderBy == 'popularityMonth') {
@@ -57,15 +63,15 @@ class ArticleSearch extends SubmissionSearch
                 $orderBy = 'score';
             } else {
                 // Retrieve a metrics report for all submissions.
-                $column = STATISTICS_DIMENSION_SUBMISSION_ID;
+                $column = PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID;
                 $filter = [
-                    STATISTICS_DIMENSION_ASSOC_TYPE => [ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION],
-                    STATISTICS_DIMENSION_SUBMISSION_ID => [array_keys($unorderedResults)]
+                    PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => [ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION],
+                    PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID => [array_keys($unorderedResults)]
                 ];
                 if ($orderBy == 'popularityMonth') {
                     $oneMonthAgo = date('Ymd', strtotime('-1 month'));
                     $today = date('Ymd');
-                    $filter[STATISTICS_DIMENSION_DAY] = ['from' => $oneMonthAgo, 'to' => $today];
+                    $filter[PKPStatisticsHelper::STATISTICS_DIMENSION_DAY] = ['from' => $oneMonthAgo, 'to' => $today];
                 }
                 $rawReport = $application->getMetrics($metricType, $column, $filter);
                 foreach ($rawReport as $row) {
@@ -83,12 +89,12 @@ class ArticleSearch extends SubmissionSearch
 
             switch ($orderBy) {
                 case 'authors':
-                    $submission = $submissionDao->getById($submissionId);
+                    $submission = Repo::submission()->get($submissionId);
                     $orderKey = $submission->getAuthorString();
                     break;
 
                 case 'title':
-                    $submission = $submissionDao->getById($submissionId);
+                    $submission = Repo::submission()->get($submissionId);
                     $orderKey = '';
                     if (!empty($submission->getCurrentPublication())) {
                         $orderKey = $submission->getCurrentPublication()->getLocalizedData('title');
@@ -262,7 +268,7 @@ class ArticleSearch extends SubmissionSearch
         foreach ($results as $articleId) {
             // Get the article, storing in cache if necessary.
             if (!isset($articleCache[$articleId])) {
-                $submission = Services::get('submission')->get($articleId);
+                $submission = Repo::submission()->get($articleId);
                 $publishedSubmissionCache[$articleId] = $submission;
                 $articleCache[$articleId] = $submission;
             }
@@ -328,7 +334,7 @@ class ArticleSearch extends SubmissionSearch
         // of the submission for a similarity search.
         if ($result === false) {
             // Retrieve the article.
-            $article = Services::get('submission')->get($submissionId);
+            $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
                 $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */
@@ -412,4 +418,8 @@ class ArticleSearch extends SubmissionSearch
     {
         return DAORegistry::getDAO('ArticleSearchDAO');
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\search\ArticleSearch', '\ArticleSearch');
 }

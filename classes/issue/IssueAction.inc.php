@@ -15,6 +15,14 @@
  * @brief IssueAction class.
  */
 
+namespace APP\issue;
+
+use APP\facades\Repo;
+use APP\subscription\Subscription;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+use PKP\security\Role;
+
 use PKP\submission\PKPSubmission;
 
 class IssueAction
@@ -27,19 +35,19 @@ class IssueAction
      * Checks if subscription is required for viewing the issue
      *
      * @param $issue Issue
-     * @param $journal Journal
+     * @param $journal \APP\journal\Journal
      *
      * @return bool
      */
     public function subscriptionRequired($issue, $journal)
     {
-        assert(is_a($issue, 'Issue'));
-        assert(is_a($journal, 'Journal'));
+        assert($issue instanceof \APP\issue\Issue);
+        assert($journal instanceof \APP\journal\Journal);
         assert($journal->getId() == $issue->getJournalId());
 
         // Check subscription state.
-        $result = $journal->getData('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
-            $issue->getAccessStatus() != ISSUE_ACCESS_OPEN && (
+        $result = $journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION &&
+            $issue->getAccessStatus() != \APP\issue\Issue::ISSUE_ACCESS_OPEN && (
                 is_null($issue->getOpenAccessDate()) ||
                 strtotime($issue->getOpenAccessDate()) > time()
             );
@@ -51,9 +59,9 @@ class IssueAction
      * Checks if this user is granted reader access to pre-publication articles
      * based on their roles in the journal (i.e. Manager, Editor, etc).
      *
-     * @param $journal Journal
-     * @param $submission Submission
-     * @param $user User
+     * @param $journal \APP\journal\Journal
+     * @param $submission \APP\submission\Submission
+     * @param $user \PKP\user\User
      *
      * @return bool
      */
@@ -73,7 +81,7 @@ class IssueAction
             $userId = $user->getId();
 
             $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
-            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR, null, $userId);
+            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR, null, $userId);
             $stageAssignment = $stageAssignments->next();
             if ($stageAssignment) {
                 return true;
@@ -86,7 +94,7 @@ class IssueAction
      * Checks if this user is granted access to pre-publication issue galleys
      * based on their roles in the journal (i.e. Manager, Editor, etc).
      *
-     * @param $journal object
+     * @param $journal \APP\journal\Journal
      *
      * @return bool
      */
@@ -98,8 +106,8 @@ class IssueAction
     /**
      * Checks if user has subscription
      *
-     * @param $user User
-     * @param $journal Journal
+     * @param $user \PKP\user\User
+     * @param $journal \APP\journal\Journal
      * @param $issueId int Issue ID (optional)
      * @param $articleId int Article ID (optional)
      *
@@ -108,8 +116,7 @@ class IssueAction
     public function subscribedUser($user, $journal, $issueId = null, $articleId = null)
     {
         $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
-        $submissionDao = DAORegistry::getDAO('SubmissionDAO'); /* @var $submissionDao SubmissionDAO */
-        $submission = $submissionDao->getById($articleId);
+        $submission = Repo::submission()->get((int) $articleId);
         $result = false;
         if (isset($user) && isset($journal)) {
             if ($submission && $this->allowedPrePublicationAccess($journal, $submission, $user)) {
@@ -123,9 +130,8 @@ class IssueAction
             // publications
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
                 if (isset($submission) && !empty($submission->getData('publications'))) {
-                    import('classes.subscription.SubscriptionDAO');
                     foreach ($submission->getData('publications') as $publication) {
-                        if ($subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $publication->getData('datePublished'))) {
+                        if ($subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $publication->getData('datePublished'))) {
                             $result = true;
                             break;
                         }
@@ -134,8 +140,7 @@ class IssueAction
                     $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
                     $issue = $issueDao->getById($issueId);
                     if (isset($issue) && $issue->getPublished()) {
-                        import('classes.subscription.SubscriptionDAO');
-                        $result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
+                        $result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $issue->getDatePublished());
                     }
                 }
             }
@@ -147,8 +152,8 @@ class IssueAction
     /**
      * Checks if remote client domain or ip is allowed
      *
-     * @param $request PKPRequest
-     * @param $journal Journal
+     * @param $request \PKP\core\PKPRequest
+     * @param $journal \APP\journal\Journal
      * @param $issueId int Issue ID (optional)
      * @param $articleId int Article ID (optional)
      *
@@ -165,17 +170,15 @@ class IssueAction
             // that was valid during publication date of requested content
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
                 if (isset($articleId)) {
-                    $submission = Services::get('submission')->get($articleId);
+                    $submission = Repo::submission()->get($articleId);
                     if ($submission->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
-                        import('classes.subscription.SubscriptionDAO');
-                        $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $submission->getDatePublished());
+                        $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $submission->getDatePublished());
                     }
                 } elseif (isset($issueId)) {
                     $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
                     $issue = $issueDao->getById($issueId);
                     if (isset($issue) && $issue->getPublished()) {
-                        import('classes.subscription.SubscriptionDAO');
-                        $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), SUBSCRIPTION_DATE_END, $issue->getDatePublished());
+                        $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $issue->getDatePublished());
                     }
                 }
             }
@@ -188,8 +191,8 @@ class IssueAction
      * Checks if this user is granted access to pre-publication galleys based on role
      * based on their roles in the journal (i.e. Manager, Editor, etc).
      *
-     * @param $journal Journal
-     * @param $user User
+     * @param $journal \APP\journal\Journal
+     * @param $user \PKP\user\User
      *
      * @return bool
      */
@@ -200,10 +203,10 @@ class IssueAction
             $journalId = $journal->getId();
             $userId = $user->getId();
             $subscriptionAssumedRoles = [
-                ROLE_ID_MANAGER,
-                ROLE_ID_SUB_EDITOR,
-                ROLE_ID_ASSISTANT,
-                ROLE_ID_SUBSCRIPTION_MANAGER
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_ASSISTANT,
+                Role::ROLE_ID_SUBSCRIPTION_MANAGER
             ];
 
             $roles = $roleDao->getByUserId($userId, $journalId);
@@ -215,4 +218,8 @@ class IssueAction
         }
         return false;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\issue\IssueAction', '\IssueAction');
 }

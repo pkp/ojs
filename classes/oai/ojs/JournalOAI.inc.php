@@ -17,11 +17,16 @@
  * (based on where the request is directed).
  */
 
+namespace APP\oai\ojs;
+
 use PKP\oai\OAI;
 use PKP\oai\OAIRepository;
+use PKP\oai\OAIResumptionToken;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 
-// FIXME: Add namespacing
-import('classes.oai.ojs.OAIDAO');
+use APP\oai\ojs\OAIDAO;
+use APP\core\Application;
 
 class JournalOAI extends OAI
 {
@@ -254,4 +259,8 @@ class JournalOAI extends OAI
         $this->dao->insertToken($token);
         return $token;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\oai\ojs\JournalOAI', '\JournalOAI');
 }

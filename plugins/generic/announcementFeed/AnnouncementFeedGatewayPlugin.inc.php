@@ -16,9 +16,9 @@
 
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
-use PKP\db\DBResultRange;
+use APP\facades\Repo;
 
-use \APP\template\TemplateManager;
+use APP\template\TemplateManager;
 
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin
 {
@@ -126,16 +126,12 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
         }
 
         // Get limit setting, if any
+        $collector = Repo::announcement()->getCollector()->filterByContextIds([$journal->getId()]);
         $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
-
-        $announcementDao = DAORegistry::getDAO('AnnouncementDAO'); /* @var $announcementDao AnnouncementDAO */
-        $journalId = $journal->getId();
         if ($recentItems > 0) {
-            $rangeInfo = new DBResultRange($recentItems, 1);
-            $announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId, $rangeInfo)->toArray();
-        } else {
-            $announcements = $announcementDao->getAnnouncementsNotExpiredByAssocId(ASSOC_TYPE_JOURNAL, $journalId)->toArray();
+            $collector->limit($recentItems);
         }
+        $announcements = Repo::announcement()->getMany($collector);
 
         // Get date of most recent announcement
         $lastDateUpdated = $this->_parentPlugin->getSetting($journal->getId(), 'dateUpdated');
@@ -147,8 +143,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
                 $dateUpdated = $lastDateUpdated;
             }
         } else {
-            $mostRecentAnnouncement = $announcementDao->getMostRecentAnnouncementByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
-            $dateUpdated = $mostRecentAnnouncement->getDatetimePosted();
+            $dateUpdated = $announcements->first()->getDatetimePosted();
             if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) {
                 $this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
             }

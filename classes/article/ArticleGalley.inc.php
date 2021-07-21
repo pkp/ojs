@@ -15,6 +15,12 @@
  * @brief A galley is a final presentation version of the full-text of an article.
  */
 
+namespace APP\article;
+
+use APP\core\Application;
+
+use APP\core\Services;
+use APP\i18n\AppLocale;
 use PKP\submission\Representation;
 
 class ArticleGalley extends Representation
@@ -198,4 +204,8 @@ class ArticleGalley extends Representation
     {
         return $this->getLabel();
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\article\ArticleGalley', '\ArticleGalley');
 }

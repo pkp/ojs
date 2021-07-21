@@ -15,9 +15,9 @@
 
 import('classes.subscription.form.SubscriptionForm');
 
-use PKP\notification\PKPNotification;
-
 use APP\notification\NotificationManager;
+
+use PKP\notification\PKPNotification;
 
 class IndividualSubscriptionForm extends SubscriptionForm
 {

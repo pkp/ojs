@@ -13,18 +13,17 @@
  * @brief URN plugin class
  */
 
-use PKP\services\interfaces\EntityWriteInterface;
-use PKP\linkAction\request\RemoteActionConfirmationModal;
-use PKP\linkAction\LinkAction;
 
+use APP\article\ArticleGalley;
+use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\issue\IssueGalley;
 use APP\plugins\PubIdPlugin;
-use APP\template\TemplateManager;
 use APP\publication\Publication;
 
-// FIXME: Use namespacing
-//use \Issue;
-//use \IssueGalley;
-//use \ArticleGalley;
+use APP\template\TemplateManager;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
 
 class URNPubIdPlugin extends PubIdPlugin
 {
@@ -345,18 +344,18 @@ class URNPubIdPlugin extends PubIdPlugin
     public function validatePublicationUrn($hookName, $args)
     {
         $errors = & $args[0];
-        $action = $args[1];
+        $object = $args[1];
         $props = & $args[2];
 
         if (empty($props['pub-id::other::urn'])) {
             return;
         }
 
-        if ($action === EntityWriteInterface::VALIDATE_ACTION_ADD) {
-            $submission = Services::get('submission')->get($props['submissionId']);
+        if (is_null($object)) {
+            $submission = Repo::submission()->get($props['submissionId']);
         } else {
-            $publication = Services::get('publication')->get($props['id']);
-            $submission = Services::get('submission')->get($publication->getData('submissionId'));
+            $publication = Repo::publication()->get($props['id']);
+            $submission = Repo::submission()->get($publication->getData('submissionId'));
         }
 
         $contextId = $submission->getData('contextId');
@@ -460,7 +459,7 @@ class URNPubIdPlugin extends PubIdPlugin
             return;
         }
 
-        $submission = Services::get('submission')->get($form->publication->getData('submissionId'));
+        $submission = Repo::submission()->get($form->publication->getData('submissionId'));
         $publicationUrnEnabled = $this->getSetting($submission->getData('contextId'), 'enablePublicationURN');
         $galleyUrnEnabled = $this->getSetting($submission->getData('contextId'), 'enableRepresentationURN');
         $warningIconHtml = '<span class="fa fa-exclamation-triangle pkpIcon--inline"></span>';

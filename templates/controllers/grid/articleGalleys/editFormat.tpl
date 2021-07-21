@@ -15,9 +15,9 @@
 </script>
 <div id="editArticleGalleyMetadataTabs">
 	<ul>
-		<li><a href="{url router=PKPApplication::ROUTE_COMPONENT op="editGalleyTab" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">{translate key="grid.action.editMetadata"}</a></li>
+		<li><a href="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT op="editGalleyTab" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">{translate key="grid.action.editMetadata"}</a></li>
 		{if $enableIdentifiers}
-			<li><a href="{url router=PKPApplication::ROUTE_COMPONENT op="identifiers" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">{translate key="submission.identifiers"}</a></li>
+			<li><a href="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT op="identifiers" submissionId=$submissionId publicationId=$publicationId representationId=$representationId}">{translate key="submission.identifiers"}</a></li>
 		{/if}
 	</ul>
 </div>

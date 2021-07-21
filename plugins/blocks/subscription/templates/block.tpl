@@ -29,9 +29,9 @@
 			{if $individualSubscription->getMembership()}
 				<p class="subscription_membership">({$individualSubscription->getMembership()|escape})</p>
 			{/if}
-			{if $paymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
+			{if $paymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == \APP\subscription\Subscription::SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 				<p class="subscription_disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</p>
-			{elseif $paymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+			{elseif $paymentsEnabled && $acceptSubscriptionPayments && $subscriptionStatus == \APP\subscription\Subscription::SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
 				<p class="subscription_disabled">{translate key="subscriptions.status.awaitingManualPayment"}</p>
 			{elseif $individualSubscription->isNonExpiring()}
 				<p class="subscription_active">{translate key="subscriptionTypes.nonExpiring"}</p>

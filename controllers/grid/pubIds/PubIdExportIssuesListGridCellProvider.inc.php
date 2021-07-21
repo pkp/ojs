@@ -13,11 +13,11 @@
  * @brief Class for a cell provider that can retrieve labels from issues with pub ids
  */
 
-import('lib.pkp.classes.controllers.grid.DataObjectGridCellProvider');
-
+use PKP\controllers\grid\DataObjectGridCellProvider;
+use PKP\controllers\grid\GridHandler;
 use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\RedirectAction;
 use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RedirectAction;
 
 class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
 {
@@ -46,7 +46,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
      *
      * @copydoc GridCellProvider::getCellActions()
      */
-    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    public function getCellActions($request, $row, $column, $position = GridHandler::GRID_ACTION_POSITION_DEFAULT)
     {
         $publishedIssue = $row->getData();
         $columnId = $column->getId();

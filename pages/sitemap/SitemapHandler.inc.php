@@ -15,7 +15,8 @@
 
 import('lib.pkp.pages.sitemap.PKPSitemapHandler');
 
-use \PKP\submission\PKPSubmission;
+use APP\facades\Repo;
+use APP\submission\Submission;
 
 class SitemapHandler extends PKPSitemapHandler
 {
@@ -35,19 +36,21 @@ class SitemapHandler extends PKPSitemapHandler
         // Issues
         $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-        if ($journal->getData('publishingMode') != PUBLISHING_MODE_NONE) {
+        if ($journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'current')));
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'archive')));
             $publishedIssues = $issueDao->getPublishedIssues($journalId);
             while ($issue = $publishedIssues->next()) {
                 $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
                 // Articles for issue
-                $submissionsIterator = Services::get('submission')->getMany([
-                    'issueIds' => [$issue->getId()],
-                    'contextId' => $journal->getId(),
-                    'status' => PKPSubmission::STATUS_PUBLISHED,
-                ]);
-                foreach ($submissionsIterator as $submission) {
+                $submissions = Repo::submission()->getMany(
+                    Repo::submission()
+                        ->getCollector()
+                        ->filterByContextIds([$journal->getId()])
+                        ->filterByIssueIds([$issue->getId()])
+                        ->filterByStatus([Submission::STATUS_PUBLISHED])
+                );
+                foreach ($submissions as $submission) {
                     // Abstract
                     $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId()])));
                     // Galley files

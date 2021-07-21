@@ -12,9 +12,10 @@
 * @brief Grid cell provider for section grid
  */
 
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 use PKP\linkAction\LinkAction;
-
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
 class SectionGridCellProvider extends GridCellProvider
 {
@@ -22,7 +23,7 @@ class SectionGridCellProvider extends GridCellProvider
      * Extracts variables for a given column from a data element
      * so that they may be assigned to template before rendering.
      *
-     * @param $row GridRow
+     * @param $row \PKP\controllers\grid\GridRow
      * @param $column GridColumn
      *
      * @return array
@@ -41,7 +42,7 @@ class SectionGridCellProvider extends GridCellProvider
     /**
      * @see GridCellProvider::getCellActions()
      */
-    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    public function getCellActions($request, $row, $column, $position = GridHandler::GRID_ACTION_POSITION_DEFAULT)
     {
         switch ($column->getId()) {
             case 'inactive':

@@ -18,11 +18,13 @@
 
 namespace APP\file;
 
-use PKP\file\FileManager;
+use APP\issue\IssueFile;
+use PKP\config\Config;
+use PKP\core\Core;
 use PKP\db\DAORegistry;
+use PKP\file\FileManager;
 
-// FIXME: add namespacing
-import('classes.issue.IssueFile');
+use PKP\plugins\HookRegistry;
 
 class IssueFileManager extends FileManager
 {
@@ -151,7 +153,7 @@ class IssueFileManager extends FileManager
     public function contentTypeToPath($contentType)
     {
         switch ($contentType) {
-            case ISSUE_FILE_PUBLIC: return 'public';
+            case IssueFile::ISSUE_FILE_PUBLIC: return 'public';
         }
     }
 
@@ -165,7 +167,7 @@ class IssueFileManager extends FileManager
     public function contentTypeToAbbrev($contentType)
     {
         switch ($contentType) {
-            case ISSUE_FILE_PUBLIC: return 'PB';
+            case IssueFile::ISSUE_FILE_PUBLIC: return 'PB';
         }
     }
 
@@ -177,7 +179,7 @@ class IssueFileManager extends FileManager
      *
      * @return IssueFile|false the resulting issue file
      */
-    public function fromTemporaryFile($temporaryFile, $contentType = ISSUE_FILE_PUBLIC)
+    public function fromTemporaryFile($temporaryFile, $contentType = IssueFile::ISSUE_FILE_PUBLIC)
     {
         $result = null;
         if (HookRegistry::call('IssueFileManager::fromTemporaryFile', [&$temporaryFile, &$contentType, &$result])) {

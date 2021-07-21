@@ -17,8 +17,8 @@
 
 namespace APP\user;
 
-use \PKP\user\PKPUserAction;
-use \PKP\db\DAORegistry;
+use PKP\db\DAORegistry;
+use PKP\user\PKPUserAction;
 
 class UserAction extends PKPUserAction
 {

@@ -14,13 +14,11 @@
  *
  */
 
-import('lib.pkp.classes.plugins.GatewayPlugin');
+use APP\facades\Repo;
+use APP\template\TemplateManager;
+use PKP\submission\PKPSubmission;
 
-use \PKP\submission\PKPSubmission;
-
-use \APP\template\TemplateManager;
-
-class WebFeedGatewayPlugin extends GatewayPlugin
+class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
 {
     /** @var WebFeedPlugin Parent plugin */
     protected $_parentPlugin;
@@ -139,13 +137,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin
         $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
         if ($displayItems == 'recent' && $recentItems > 0) {
-            $submissionsIterator = Services::get('submission')->getMany(['contextId' => $journal->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED, 'count' => $recentItems]);
+            $submissionsIterator = Repo::submission()->getMany(['contextId' => $journal->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED, 'count' => $recentItems]);
             $submissionsInSections = [];
             foreach ($submissionsIterator as $submission) {
                 $submissionsInSections[]['articles'][] = $submission;
             }
         } else {
-            $submissionsInSections = Services::get('submission')->getInSections($issue->getId(), $journal->getId());
+            $submissionsInSections = Repo::submission()->getInSections($issue->getId(), $journal->getId());
         }
 
         $versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
