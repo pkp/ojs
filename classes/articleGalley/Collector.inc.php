@@ -23,14 +23,23 @@ class Collector implements CollectorInterface
 {
     /** @var DAO */
     public $dao;
+
     /** @var array|null */
     public $publicationIds = null;
+
+    /**  @var array|null */
+    public $contextIds = null;
 
     public function __construct(DAO $dao)
     {
         $this->dao = $dao;
     }
 
+    /**
+     *  Filter galleys by publicationIds
+     *
+     * @param $publicationIds
+     */
     /**
      * Filter article galleys by one or more publication ids
      */
@@ -40,6 +49,22 @@ class Collector implements CollectorInterface
         return $this;
     }
 
+    public function filterByContextIds(array $contextIds)
+    {
+        $this->contextIds = $contextIds;
+        return $this;
+    }
+
+
+    public function changePubId($pubObjectId, $pubIdType, $pubId)
+    {
+        DB::table('publication_galley_settings')
+            ->where('galley_id', (int) $pubObjectId)
+            ->update(['setting_value' => (string) $pubId]);
+        return $this;
+    }
+
+
     /**
      * @copydoc CollectorInterface::getQueryBuilder()
      */
@@ -48,6 +73,11 @@ class Collector implements CollectorInterface
         $qb = DB::table($this->dao->table . ' as g');
         if (!is_null($this->publicationIds)) {
             $qb->whereIn('g.publication_id', $this->publicationIds);
+        }
+        if (!is_null($this->contextIds)) {
+            $qb->join('publications as p', 'p.publication_id', '=', 'g.publication_id')
+                ->leftJoin('submissions as s', 's.submission_id', '=', 'p.submission_id')
+                ->whereIn('s.context_id', $this->contextIds);
         }
         $qb->orderBy('g.seq', 'asc');        // Add app-specific query statements
         HookRegistry::call('Galley::Collector', [&$qb, $this]);

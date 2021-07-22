@@ -15,6 +15,7 @@ namespace APP\articleGalley;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
 use PKP\core\EntityDAO;
 use stdClass;
@@ -100,6 +101,22 @@ class DAO extends EntityDAO
                 yield $this->fromRow($row);
             }
         });
+    }
+
+    /**
+     * Retrieve all galleys of a journal.
+     *
+     * @param $journalId
+     */
+    public function getByContextId($journalId)
+    {
+        $q = DB::table($this->dao->table . ' as g')
+            ->join('publications as p', 'p.publication_id', '=', 'g.publication_id')
+            ->leftJoin('submissions as s', 's.submission_id', '=', 'p.submission_id')
+            ->leftJoin('submission_files as sf', 'sg.submission_file_id', '=', 'sf.submission_file_id')
+            ->where('s.context_id', '= ?', (int)$journalId);
+
+        return $q;
     }
 
     /**
