@@ -72,12 +72,12 @@ class SectionForm extends PKPSectionForm
                 'hideAuthor' => $section->getHideAuthor(),
                 'policy' => $section->getPolicy(null), // Localized
                 'wordCount' => $section->getAbstractWordCount(),
-                'assignedSubeditors' => Repo::user()->getIds(
+                'assignedSubeditors' => iterator_to_array(Repo::user()->getIds(
                     Repo::user()->getCollector()
                         ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
                         ->filterByRoleIds([Role::ROLE_ID_SUB_EDITOR])
                         ->filterByAssignedSectionIds([$this->getSectionId()])
-                ),
+                )),
             ]);
         } else {
             $this->setData([
