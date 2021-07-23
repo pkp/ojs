@@ -1258,7 +1258,7 @@ class Upgrade extends Installer
         ];
 
         if (!isset($fileStagePathMap[$fileStage])) {
-            throw new Exception('A file assigned to the file stage ' . $fileStage . ' could not be migrated.');
+            throw new \Exception('A file assigned to the file stage ' . $fileStage . ' could not be migrated.');
         }
 
         return $fileStagePathMap[$fileStage];

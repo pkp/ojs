@@ -13,7 +13,7 @@
  * @brief Article report plugin
  */
 
-use APP\facade\Repo;
+use APP\facades\Repo;
 use APP\workflow\EditorDecisionActionsManager;
 use PKP\db\DAORegistry;
 use PKP\plugins\ReportPlugin;

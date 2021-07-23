@@ -17,6 +17,7 @@
 
 namespace APP\subscription;
 
+use APP\facades\Repo;
 use PKP\db\DAORegistry;
 use PKP\identity\Identity;
 use PKP\plugins\HookRegistry;
