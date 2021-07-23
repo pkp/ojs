@@ -87,7 +87,7 @@ class Subscription extends \PKP\core\DataObject
      */
     public function getUserFullName()
     {
-        return Repo::user()->get($this->getData('userId'))->getLocalizedFullName();
+        return Repo::user()->get($this->getData('userId'))->getFullName();
     }
 
     /**
