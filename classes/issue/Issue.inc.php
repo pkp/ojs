@@ -22,6 +22,7 @@
 
 namespace APP\issue;
 
+use APP\core\Application;
 use APP\file\PublicFileManager;
 use APP\i18n\AppLocale;
 use PKP\core\Core;
