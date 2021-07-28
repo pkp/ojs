@@ -194,6 +194,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     public function getUnregisteredGalleys($context)
     {
         // Retrieve all galleys that have not yet been registered.
+        //TODO GalleyDAO help
         $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
         $galleys = $galleyDao->getExportable(
             $context ? $context->getId() : null,
@@ -256,14 +257,19 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      */
     public function getArticleGalleys($galleyIds)
     {
+        //TODO GalleyDAO review
+
         $galleys = [];
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        //$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+
         foreach ($galleyIds as $galleyId) {
-            $articleGalley = $articleGalleyDao->getById($galleyId);
+            //$articleGalley = $articleGalleyDao->getById($galleyId);
+            $articleGalley = Repo::articleGalley()->get($galleyId);
             if ($articleGalley && $articleGalley->getStoredPubId('doi')) {
                 $galleys[] = $articleGalley;
             }
         }
+
         return $galleys;
     }
 }

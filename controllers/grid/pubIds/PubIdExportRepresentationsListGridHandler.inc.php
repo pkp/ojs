@@ -250,7 +250,8 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        //TODO GalleyDAO help
+        //$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
         $context = $request->getContext();
         [$search, $column, $issueId, $statusId] = $this->getFilterValues($filter);
         $title = $author = null;

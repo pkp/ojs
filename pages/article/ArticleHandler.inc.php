@@ -408,8 +408,16 @@ class ArticleHandler extends Handler
         ]);
         foreach ($submissionFilesIterator as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
-                $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-                $articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
+                //TODO GalleyDAO review
+
+                //$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+                //$articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
+
+                $articleGalleys = Repo::articleGalley()->getMany(
+                    Repo::articleGalley()
+                        ->getCollector()
+                        ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+                );
                 while ($articleGalley = $articleGalleys->next()) {
                     $galleyFile = $articleGalley->getFile();
                     if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getId()) {

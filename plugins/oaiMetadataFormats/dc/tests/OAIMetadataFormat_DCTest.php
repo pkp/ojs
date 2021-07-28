@@ -193,6 +193,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
         // Create a mocked ArticleGalleyDAO that returns our test data.
+        //TODO GalleyDAO  help what to do with test classes
         import('classes.article.ArticleGalleyDAO');
         $articleGalleyDao = $this->getMockBuilder(ArticleGalleyDAO::class)
             ->setMethods(['getBySubmissionId'])

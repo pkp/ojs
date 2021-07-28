@@ -302,6 +302,7 @@ class Submission extends PKPSubmission
                 }
             }
             if (!empty($galleys)) {
+                //TODO GalleyDAO help . getLocalizedGalleys does not seem to be used
                 HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', [&$galleys]);
                 return $galleys;
             }

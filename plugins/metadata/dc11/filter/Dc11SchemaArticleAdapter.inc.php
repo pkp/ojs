@@ -145,8 +145,14 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Format
         if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-            $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
+            //TODO GalleyDAO review
+            //$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+            //$galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+            );
             $formats = [];
             while ($galley = $galleys->next()) {
                 $dc11Description->addStatement('dc:format', $galley->getFileType());
@@ -183,10 +189,22 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Get galleys and supp files.
+        //TODO GalleyDAO review
+        /**
         $galleys = [];
         if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+
+            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
             $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
+        }
+        */
+        if ($article instanceof Submission) { //TODO GalleyDAO is it needed anymore ??
+
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+            );
         }
 
         // Language

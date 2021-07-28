@@ -17,6 +17,7 @@
 
 use APP\template\TemplateManager;
 
+use PKP\facades\Repo;
 use PKP\form\Form;
 
 class ArticleGalleyForm extends Form
@@ -158,7 +159,8 @@ class ArticleGalleyForm extends Form
     public function execute(...$functionArgs)
     {
         $articleGalley = $this->_articleGalley;
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        //TODO GalleyDAO review
+        //$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
 
         if ($articleGalley) {
             $articleGalley->setLabel($this->getData('label'));
@@ -167,10 +169,12 @@ class ArticleGalleyForm extends Form
             $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
             // Update galley in the db
-            $articleGalleyDao->updateObject($articleGalley);
+            //$articleGalleyDao->updateObject($articleGalley);
+            Repo::articleGalley()->update($articleGalley);
         } else {
             // Create a new galley
-            $articleGalley = $articleGalleyDao->newDataObject();
+            //$articleGalley = $articleGalleyDao->newDataObject();
+            $articleGalley = Repo::articleGalley()->newDataObject();
             $articleGalley->setData('publicationId', $this->_publication->getId());
             $articleGalley->setLabel($this->getData('label'));
             $articleGalley->setLocale($this->getData('galleyLocale'));
@@ -178,7 +182,8 @@ class ArticleGalleyForm extends Form
             $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
             // Insert new galley into the db
-            $articleGalleyDao->insertObject($articleGalley);
+            //$articleGalleyDao->insertObject($articleGalley);
+            Repo::articleGalley()->insert($articleGalley);
             $this->_articleGalley = $articleGalley;
         }
 

@@ -19,10 +19,10 @@ namespace APP\oai\ojs;
 
 use APP\facades\Repo;
 use Illuminate\Support\Facades\DB;
-use PKP\oai\PKPOAIDAO;
-use PKP\oai\OAISet;
-use PKP\plugins\HookRegistry;
 use PKP\db\DAORegistry;
+use PKP\oai\OAISet;
+use PKP\oai\PKPOAIDAO;
+use PKP\plugins\HookRegistry;
 
 use PKP\submission\PKPSubmission;
 
@@ -208,7 +208,13 @@ class OAIDAO extends PKPOAIDAO
         if ($isRecord) {
             $submission = Repo::submission()->get($articleId);
             $issue = $this->getIssue($row['issue_id']);
-            $galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
+            //TODO GalleyDAO review
+            //$galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds([$submission->getCurrentPublication()->getId()])
+            );
 
             $record->setData('article', $submission);
             $record->setData('journal', $journal);
@@ -222,6 +228,8 @@ class OAIDAO extends PKPOAIDAO
 
     /**
      * @copydoc PKPOAIDAO::_getRecordsRecordSet
+     *
+     * @param null|mixed $submissionId
      */
     public function _getRecordsRecordSetQuery($setIds, $from, $until, $set, $submissionId = null, $orderBy = 'journal_id, submission_id')
     {
@@ -252,7 +260,7 @@ class OAIDAO extends PKPOAIDAO
                 's.section_id AS section_id',
             ])
             ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
-            ->join('publication_settings AS psissue', function($join) {
+            ->join('publication_settings AS psissue', function ($join) {
                 $join->on('psissue.publication_id', '=', 'p.publication_id');
                 $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
                 $join->where('psissue.locale', '=', DB::raw('\'\''));
@@ -263,67 +271,67 @@ class OAIDAO extends PKPOAIDAO
             ->where('i.published', '=', 1)
             ->where('j.enabled', '=', 1)
             ->where('a.status', '=', PKPSubmission::STATUS_PUBLISHED)
-            ->when($excludeJournals, function($query, $excludeJournals) {
+            ->when($excludeJournals, function ($query, $excludeJournals) {
                 return $query->whereNotIn('j.journal_id', $excludeJournals);
             })
-            ->when(isset($journalId), function($query) use ($journalId) {
+            ->when(isset($journalId), function ($query) use ($journalId) {
                 return $query->where('j.journal_id', '=', (int) $journalId);
             })
-            ->when(isset($sectionId), function($query) use ($sectionId) {
+            ->when(isset($sectionId), function ($query) use ($sectionId) {
                 return $query->where('p.section_id', '=', (int) $sectionId);
             })
-            ->when($from, function($query, $from) {
+            ->when($from, function ($query, $from) {
                 return $query->where('GREATEST(a.last_modified, i.last_modified)', '>=', $from);
             })
-            ->when($until, function($query, $until) {
+            ->when($until, function ($query, $until) {
                 return $query->where('GREATEST(a.last_modified, i.last_modified)', '<=', $until);
             })
-            ->when($submissionId, function($query, $submissionId) {
+            ->when($submissionId, function ($query, $submissionId) {
                 return $query->where('a.submission_id', '=', (int) $submissionId);
             })
             ->union(
                 DB::table('data_object_tombstones AS dot')
-                ->select([
+                    ->select([
                         'dot.date_deleted AS last_modified',
                         'dot.data_object_id AS submission_id',
                         DB::raw('NULL AS issue_id'),
                         'dot.tombstone_id',
                         'dot.set_spec',
                         'dot.oai_identifier'
-                ])
-                ->when(isset($journalId), function($query, $journalId) {
-                    return $query->join('data_object_tombstone_oai_set_objects AS tsoj', function($join) use ($journalId) {
-                          $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
-                          $join->where('tsoj.assoc_type', '=', ASSOC_TYPE_JOURNAL);
-                          $join->where('tsoj.assoc_id', '=', (int) $journalId);
-                        })->addSelect(['tsoj.assoc_id']);
-                    }, function($query) {
-                        return $query->addSelect([DB::raw('NULL AS assoc_id')]);
+                    ])
+                    ->when(isset($journalId), function ($query, $journalId) {
+                    return $query->join('data_object_tombstone_oai_set_objects AS tsoj', function ($join) use ($journalId) {
+                        $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
+                        $join->where('tsoj.assoc_type', '=', ASSOC_TYPE_JOURNAL);
+                        $join->where('tsoj.assoc_id', '=', (int) $journalId);
+                    })->addSelect(['tsoj.assoc_id']);
+                }, function ($query) {
+                    return $query->addSelect([DB::raw('NULL AS assoc_id')]);
                 })
-                ->when(isset($sectionId), function($query) use ($sectionId) {
-                    return $query->join('data_object_tombstone_oai_set_objects AS tsos', function($join) use ($sectionId) {
+                    ->when(isset($sectionId), function ($query) use ($sectionId) {
+                    return $query->join('data_object_tombstone_oai_set_objects AS tsos', function ($join) use ($sectionId) {
                         $join->on('tsos.tombstone_id', '=', 'dot.tombstone_id');
                         $join->where('tsos.assoc_type', '=', ASSOC_TYPE_SECTION);
                         $join->where('tsos.assoc_id', '=', (int) $sectionId);
                     })->addSelect(['tsos.assoc_id']);
-                }, function($query) {
+                }, function ($query) {
                     return $query->addSelect([DB::raw('NULL AS assoc_id')]);
                 })
-                ->when(isset($set), function($query) use ($set) {
+                    ->when(isset($set), function ($query) use ($set) {
                     return $query->where('dot.set_spec', '=', $set)
                         ->orWhere('dot.set_spec', 'like', $set . ':%');
                 })
-                ->when($from, function($query, $from) {
+                    ->when($from, function ($query, $from) {
                     return $query->where('dot.date_deleted', '>=', $from);
                 })
-                ->when($until, function($query, $until) {
+                    ->when($until, function ($query, $until) {
                     return $query->where('dot.date_deleted', '<=', $until);
                 })
-                ->when($submissionId, function($query, $submissionId) {
+                    ->when($submissionId, function ($query, $submissionId) {
                     return $query->where('dot.data_object_id', '=', (int) $submissionId);
                 })
             )
-        ->orderBy(DB::raw($orderBy));
+            ->orderBy(DB::raw($orderBy));
     }
 }
 

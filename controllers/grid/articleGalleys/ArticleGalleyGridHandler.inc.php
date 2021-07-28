@@ -18,6 +18,7 @@ use APP\template\TemplateManager;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
+use PKP\facades\Repo;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
@@ -186,10 +187,14 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-        $galley = $galleyDao->getById($rowId);
-        $galley->setSequence($newSequence);
-        $galleyDao->updateObject($galley);
+        //TODO GalleyDAO review
+        //$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        //$galley = $galleyDao->getById($rowId);
+        $galley = Repo::articleGalley()->get($rowId);
+        //$galley->setSequence($newSequence);
+        $galley->setData('sequence', $newSequence);
+        //$galleyDao->updateObject($galley);
+        Repo::articleGalley()->update($galley);
     }
 
     //
