@@ -15,6 +15,7 @@
 
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
+use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
@@ -485,7 +486,7 @@ class ArticleGalleyGridHandler extends GridHandler
     public function canEdit()
     {
         return $this->getPublication()->getData('status') !== PKPSubmission::STATUS_PUBLISHED &&
-            Services::get('user')->canUserAccessStage(
+            Repo::user()->canUserAccessStage(
                 WORKFLOW_STAGE_ID_PRODUCTION,
                 PKPApplication::WORKFLOW_TYPE_EDITORIAL,
                 $this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
