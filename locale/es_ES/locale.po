@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2020-11-30 15:32+0000\n"
+"PO-Revision-Date: 2021-08-04 12:04+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "es_ES/>\n"
@@ -2060,3 +2061,17 @@ msgstr "No se ha podido encontrar la galerada solicitada."
 
 msgid "category.category"
 msgstr "Categorías"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Si está actualizando una instalación ya existente de OJS, haga <a href=\""
+"{$upgradeUrl}\">clic aquí</a> para continuar."
+
+msgid "payment.waived"
+msgstr "No exigido"
+
+msgid "payment.unpaid"
+msgstr "No pagado"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Esta revista no publica sus contenidos en línea."
