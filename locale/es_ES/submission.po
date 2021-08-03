@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2020-11-30 15:32+0000\n"
+"PO-Revision-Date: 2021-08-04 12:04+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "es_ES/>\n"
@@ -356,3 +357,10 @@ msgstr "Detalles de publicación de la versión {$version}"
 msgid "submission.queries.production"
 msgstr "Discusiones de producción"
 
+msgid "publication.changeIssue"
+msgstr "Cambiar número"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Se ha asignado a <a href=\"{$issueUrl}\">{$issueName}</a> pero aún no se ha "
+"programado para publicarse."
