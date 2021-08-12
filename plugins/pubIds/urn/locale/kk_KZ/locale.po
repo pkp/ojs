@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-12 04:35+0000\n"
+"PO-Revision-Date: 2021-08-12 04:36+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "kk_KZ/>\n"
@@ -169,8 +169,8 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
 msgstr ""
-"мәселелер бойынша% j.v% vi% i <br />% j.v% vi% i.% a мақалалар үшін <br />% "
-"j.v% vi% i.% a.g% g галереялар үшін."
+"журнал басылымдары бойынша% j.v%vi%i <br />%j.v%vi%i.%a мақалалар үшін <br "
+"/>%j.v%vi%i.% a.g%g мақалалардың электрондық жазбасы үшін."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
 msgstr "Негізгі үлгілерді қолданыңыз."
