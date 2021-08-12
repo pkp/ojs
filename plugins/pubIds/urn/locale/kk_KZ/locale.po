@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-12 04:36+0000\n"
+"PO-Revision-Date: 2021-08-12 09:51+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "kk_KZ/>\n"
@@ -27,112 +27,117 @@ msgid "plugins.pubIds.urn.editor.preview.objects"
 msgstr "Элемент"
 
 msgid "plugins.pubIds.urn.editor.preview.galleys"
-msgstr "Гранка: {$galleyLabel}"
+msgstr "Электронды жазба: {$galleyLabel}"
 
 msgid "plugins.pubIds.urn.editor.preview.publication.none"
 msgstr "URN бұл басылымға тағайындалмаған."
 
 msgid "plugins.pubIds.urn.editor.preview.publication"
-msgstr "Бұл хабарламаның URN нөмірі {$ urn} болады."
+msgstr "Бұл мақаланың URN нөмірі {$urn}."
 
 msgid "plugins.pubIds.urn.editor.missingPrefix"
-msgstr "URN {$ urnPrefix} -тен басталуы керек."
+msgstr "URN тіркесәһі {$urnPrefix} -тен басталуы керек."
 
 msgid "plugins.pubIds.urn.editor.missingParts"
 msgstr ""
-"Сіз URN жасай алмайсыз, себебі URN үлгісінің бір немесе бірнеше бөліктері "
-"үшін деректер жеткіліксіз. Басылымды белгілі бір мәселеге тағайындау, "
-"баспаның идентификаторын орнату немесе бет нөмірлерін енгізу қажет болуы "
-"мүмкін."
+"URN тіркесін тағайындау мүмкін емес, себебі URN тіркесі үлгісінің деректері "
+"жеткіліксіз. Мақаланы белгілі бір журнал басылымына тағайындау, баспаның "
+"идентификаторын орнату немесе мақала беттерінің нөмірлерін енгізу қажет "
+"болуы мүмкін."
 
 msgid "plugins.pubIds.urn.editor.missingIssue"
-msgstr "Бұл пост белгілі бір шығарылымға тағайындалмайынша URN жасай алмайсыз."
+msgstr ""
+"Бұл мақала белгілі бір журнал басылымына тағайындалмайынша URN тіркесін "
+"мақалаға тағайындай алмайсыз."
 
 msgid "plugins.pubIds.urn.editor.urn.assignUrn"
 msgstr "Тағайындау"
 
 msgid "plugins.pubIds.urn.editor.urn.description"
-msgstr "URN {$ префиксінен басталуы керек."
+msgstr "URN тіркесі {$prefix} префиксінен басталуы керек."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Бақылау нөмірі жоқ."
 
 msgid "plugins.pubIds.urn.editor.assignURN.assigned"
-msgstr "URN {$ pubId} тағайындалды."
+msgstr "{$pubId} URN тіркесі тағайындалды."
 
 msgid "plugins.pubIds.urn.editor.assignURN.pattern"
 msgstr ""
-"URN {$ pubId} тағайындау мүмкін емес, себебі онда ауыстырылмаған үлгі бар."
+"URN тіркесін {$pubId} тағайындау мүмкін емес, себебі онда ауыстырылмаған "
+"үлгі бар."
 
 msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
-msgstr "URN тағайындау мүмкін емес, себебі реттелетін жұрнақ жоқ."
+msgstr "URN тіркесін тағайындау мүмкін емес, себебі реттелетін жұрнақ жоқ."
 
 msgid "plugins.pubIds.urn.editor.assignURN"
-msgstr "URN {$ pubId} {$ pubObjectType} тағайындаңыз"
+msgstr "URN {$pubId} тіркесін {$pubObjectType} нысанына тағайындаңыз"
 
 msgid "plugins.pubIds.urn.editor.addCheckNo"
-msgstr "Тексеру цифрын қосыңыз"
+msgstr "Тексеру санын қосыңыз"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
 msgstr ""
-"Осы нұсқада қазіргі уақытта жариялануы жоспарланған барлық объектілердің ("
-"мақалалар мен асханалардың) URN жою үшін осы опцияны қолданыңыз."
+"Жариялануға жоспарланған барлық объектілердің (мақалалар мен электрондық "
+"жазбалар) URN тіркесін жою үшін осы нұсқаны қолданыңыз."
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
-msgstr "Шығатын объектілерден бар URN жойғыңыз келетініне сенімдісіз бе?"
+msgstr ""
+"Журнал басылымындағы нысандардың URN тіркесін жойғыңыз келетініне сенімдісіз "
+"бе?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
-msgstr "URN шығаратын объектілерден алып тастаңыз"
+msgstr "URN-ді журнал басылымының нысандарынан алып тастаңыз"
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
-msgstr "Қолданыстағы URN жойғыңыз келетініне сенімдісіз бе?"
+msgstr "Қолданыстағы URN-ді жойғыңыз келетініне сенімдісіз бе?"
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN"
 msgstr "Жою"
 
 msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
 msgstr ""
-"Көрсетілген URN суффиксі басқа жарияланған элемент үшін бұрыннан қолданыста. "
-"Әр элемент үшін бірегей URN жұрнағын енгізіңіз."
+"Көрсетілген URN жұрнағы қолданыста. URN жұрнағы әр нысан үшін бірыңғай болуы "
+"тиіс."
 
 msgid "plugins.pubIds.urn.editor.assigned"
-msgstr "URN {$ pubObjectType} тағайындалды."
+msgstr "URN {$pubObjectType}-ке тағайындалды."
 
 msgid "plugins.pubIds.urn.editor.canBeAssigned"
 msgstr ""
-"Сіз URN қалай болатынын көре аласыз. Құсбелгіні қойыңыз және URN тағайындау "
+"Сіз URN-ді алдын-ала көре аласыз. Белгіні таңдаңыз және URN-ді тағайындау "
 "формасын сақтаңыз."
 
 msgid "plugins.pubIds.urn.editor.patternNotResolved"
-msgstr "URN тағайындау мүмкін емес, себебі онда ауыстырылмаған үлгі бар."
+msgstr "URN-ді тағайындау мүмкін емес, себебі онда ауыстырылмаған үлгі бар."
 
 msgid "plugins.pubIds.urn.editor.customSuffixMissing"
-msgstr "URN тағайындау мүмкін емес, себебі реттелетін жұрнақ жоқ."
+msgstr "URN-ді тағайындау мүмкін емес, себебі реттелетін жұрнақ жоқ."
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
-msgstr "филиалдар"
+msgstr "электрондық жазба"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
 msgstr "мақала"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
-msgstr "босату"
+msgstr "басылым"
 
 msgid "plugins.pubIds.urn.editor.urn"
 msgstr "URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
-msgstr "Барлық қолданыстағы URN жойғыңыз келетініне сенімдісіз бе?"
+msgstr "Барлық қолданыстағы URN-дерді жойғыңыз келетініне сенімдісіз бе?"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
 msgstr ""
-"Егер сіз URN конфигурациясын өзгертсеңіз, ол бұрын тағайындалған URN -ге "
-"әсер етпейді. URN конфигурациясын сақтағаннан кейін, жаңа батырманың бар "
-"объектілерге әсер етуі үшін осы қолданыстағы барлық URN жою үшін осы түймені "
-"пайдаланыңыз."
+"Егер сіз URN конфигурациясын өзгертсеңіз, ол бұрын тағайындалған URN-ге әсер "
+"етпейді. URN конфигурациясын сақтағаннан кейін, жаңа батырманың бар "
+"объектілерге әсер етуі үшін осы қолданыстағы барлық URN жою үшін осы "
+"батырманы пайдаланыңыз."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign"
-msgstr "URN қайта тағайындау"
+msgstr "URN-ді қайта тағайындау"
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
 msgstr "Конвертердің URL мекенжайын енгізіңіз."
@@ -141,18 +146,18 @@ msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
 msgstr "(мысалы, http://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver"
-msgstr "Түрлендіргіш url"
+msgstr "Түрлендіргіш URL-і"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.description"
 msgstr ""
-"Әдетте тіркеу үшін тұрақты аттар кеңістігінің идентификаторы қажет (мысалы, "
-"Германия Ұлттық кітапханасында)."
+"Әдетте тіркелу үшін тұрақты атаулар кеңістігінің идентификаторы қажет ("
+"мысалы, Германия Ұлттық кітапханасында)."
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
 msgstr "Таңдау"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace"
-msgstr "Аттар кеңістігі"
+msgstr "Атаулар кеңістігі"
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
 msgstr ""
@@ -164,8 +169,8 @@ msgstr "Нөмірді тексеру"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr ""
-"Әрбір жарияланған элемент үшін жеке URN жұрнағын енгізіңіз. Әрбір элемент "
-"үшін метадеректер бетінде қосымша URN енгізу өрісін көресіз."
+"Әрбір жарияланған элемент үшін жеке URN жұрнағын енгізіңіз. Метадеректер "
+"бетінде қосымша URN енгізу жолағын көресіз."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
 msgstr ""
@@ -240,4 +245,4 @@ msgstr "Журнал мазмұны"
 
 msgid "plugins.pubIds.urn.manager.settings.description"
 msgstr ""
-"«URN» модулін OJS -те URN -ді пайдалану және басқару үшін конфигурациялаңыз."
+"«URN» модулін OJS -те URN -ді пайдалану және басқару үшін конфигурациялаңыз:"
