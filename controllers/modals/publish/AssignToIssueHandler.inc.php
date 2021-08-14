@@ -80,7 +80,6 @@ class AssignToIssueHandler extends Handler
      */
     public function assign($args, $request)
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION, LOCALE_COMPONENT_PKP_EDITOR, LOCALE_COMPONENT_APP_EDITOR);
         $templateMgr = TemplateManager::getManager($request);
 
         $submissionContext = $request->getContext();

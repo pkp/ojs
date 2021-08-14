@@ -74,8 +74,6 @@ class TocGridHandler extends CategoryGridHandler
     {
         parent::initialize($request, $args);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
-
         //
         // Grid columns.
         //

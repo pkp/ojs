@@ -88,7 +88,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             return false;
         }
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
         $this->addLocaleData();
 
         HookRegistry::register('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
@@ -663,8 +662,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function executeCLI($scriptName, &$args)
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-
         $command = array_shift($args);
         if (!in_array($command, ['export', 'register'])) {
             $this->usage($scriptName);

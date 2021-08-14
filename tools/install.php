@@ -24,7 +24,6 @@ class OJSInstallTool extends \PKP\cliTool\InstallTool
      */
     public function readParams()
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_INSTALLER, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
         printf("%s\n", __('installer.appInstallation'));
 
         parent::readParams();

@@ -583,7 +583,6 @@ class Issue extends \PKP\core\DataObject
             $locale = Locale::getLocale();
         }
 
-        AppLocale::requireComponents([LOCALE_COMPONENT_APP_COMMON], $locale);
         $volLabel = __('issue.vol', [], $locale);
         $numLabel = __('issue.no', [], $locale);
 

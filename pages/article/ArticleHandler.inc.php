@@ -61,7 +61,6 @@ class ArticleHandler extends Handler
             if (strcasecmp($bearer, 'Bearer') == 0 && !empty($jwt)) {
                 $secret = Config::getVar('security', 'api_key_secret', '');
                 if (!$secret) {
-                    AppLocale::requireComponents(LOCALE_COMPONENT_PKP_API);
                     $templateMgr = TemplateManager::getManager($request);
                     $templateMgr->assign('message', 'api.500.apiSecretKeyMissing');
                     return $templateMgr->display('frontend/pages/message.tpl');
@@ -75,7 +74,6 @@ class ArticleHandler extends Handler
                     }
                     $this->setApiToken($apiToken);
                 } catch (Exception $e) {
-                    AppLocale::requireComponents(LOCALE_COMPONENT_PKP_API);
                     $templateMgr = TemplateManager::getManager($request);
                     $templateMgr->assign('message', 'api.400.invalidApiToken');
                     return $templateMgr->display('frontend/pages/message.tpl');
@@ -584,16 +582,5 @@ class ArticleHandler extends Handler
             $request->redirect(null, 'search');
         }
         return true;
-    }
-
-    /**
-     * Set up the template. (Load required locale components.)
-     *
-     * @param PKPRequest $request
-     */
-    public function setupTemplate($request)
-    {
-        parent::setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
     }
 }

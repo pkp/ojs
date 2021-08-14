@@ -22,15 +22,6 @@ use PKP\oai\OAIMetadataFormat;
 class OAIMetadataFormat_MARC extends OAIMetadataFormat
 {
     /**
-     * Constructor.
-     */
-    public function __construct($prefix, $schema, $namespace)
-    {
-        parent::__construct($prefix, $schema, $namespace);
-        PKPLocale::requireComponents([LOCALE_COMPONENT_PKP_SUBMISSION]); // submission.copyrightStatement
-    }
-
-    /**
      * @see OAIMetadataFormat#toXml
      *
      * @param null|mixed $format

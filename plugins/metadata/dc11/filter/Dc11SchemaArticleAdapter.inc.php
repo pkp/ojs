@@ -66,8 +66,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     {
         assert($article instanceof Submission);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_SUBMISSION);
-
         // Retrieve data that belongs to the article.
         // FIXME: Retrieve this data from the respective entity DAOs rather than
         // from the OAIDAO once we've migrated all OAI providers to the

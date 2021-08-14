@@ -124,14 +124,6 @@ class ArticleGalleyGridHandler extends GridHandler
         parent::initialize($request, $args);
         $this->setTitle('submission.layout.galleys');
 
-        // Load pkp-lib translations
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_PKP_SUBMISSION,
-            LOCALE_COMPONENT_PKP_USER,
-            LOCALE_COMPONENT_PKP_EDITOR,
-            LOCALE_COMPONENT_APP_EDITOR
-        );
-
         import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
         $cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
 

@@ -54,14 +54,6 @@ class SectionGridHandler extends SetupGridHandler
         parent::initialize($request, $args);
         $journal = $request->getJournal();
 
-        // FIXME are these all required?
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_MANAGER,
-            LOCALE_COMPONENT_PKP_COMMON,
-            LOCALE_COMPONENT_PKP_USER,
-            LOCALE_COMPONENT_APP_COMMON
-        );
-
         // Set the grid title.
         $this->setTitle('section.sections');
 
@@ -271,7 +263,6 @@ class SectionGridHandler extends SetupGridHandler
         }
 
         // Validate if it can be deleted
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
         $sectionEmpty = $sectionDao->sectionEmpty($request->getUserVar('sectionId'), $journal->getId());
         if (!$sectionEmpty) {
             return new JSONMessage(false, __('manager.sections.alertDelete'));

@@ -55,7 +55,6 @@ class StatisticsHelper extends PKPStatisticsHelper
     protected function getReportObjectTypesArray()
     {
         $objectTypes = parent::getReportObjectTypesArray();
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
         $objectTypes = $objectTypes + [
             ASSOC_TYPE_JOURNAL => __('context.context'),
             ASSOC_TYPE_SECTION => __('section.section'),

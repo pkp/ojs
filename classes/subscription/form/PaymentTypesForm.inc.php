@@ -31,8 +31,6 @@ class PaymentTypesForm extends Form
     {
         parent::__construct('payments/paymentTypesForm.tpl');
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-
         $this->settings = [
             'publicationFee' => 'float',
             'purchaseArticleFeeEnabled' => 'bool',

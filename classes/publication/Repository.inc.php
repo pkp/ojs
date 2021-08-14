@@ -62,7 +62,6 @@ class Repository extends \PKP\publication\Repository
                         if (!isset($errors['abstract'])) {
                             $errors['abstract'] = [];
                         };
-                        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
                         $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
                     }
                 }

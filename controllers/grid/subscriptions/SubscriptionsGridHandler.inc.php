@@ -62,12 +62,6 @@ abstract class SubscriptionsGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        // Load user-related translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_MANAGER,
-            LOCALE_COMPONENT_PKP_USER
-        );
-
         // Grid actions.
         $router = $request->getRouter();
 

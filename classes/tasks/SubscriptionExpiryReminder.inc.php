@@ -55,9 +55,6 @@ class SubscriptionExpiryReminder extends ScheduledTask
         $subscriptionMailingAddress = $journal->getData('subscriptionMailingAddress');
 
         $subscriptionContactSignature = $subscriptionName;
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_COMMON);
-
         if ($subscriptionMailingAddress != '') {
             $subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
         }

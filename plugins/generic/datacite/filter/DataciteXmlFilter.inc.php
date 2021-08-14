@@ -657,7 +657,6 @@ class DataciteXmlFilter extends NativeExportFilter
                 assert(false);
         }
         if (!empty($pages)) {
-            AppLocale::requireComponents([LOCALE_COMPONENT_APP_EDITOR]);
             $sizes[] = $pages . ' ' . __('editor.issues.pages');
         }
         $sizesNode = null;

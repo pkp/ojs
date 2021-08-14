@@ -94,10 +94,6 @@ class IssueGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-        // Load submission-specific translations
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
-
         // Grid columns.
         import('controllers.grid.issues.IssueGridCellProvider');
         $issueGridCellProvider = new \IssueGridCellProvider();

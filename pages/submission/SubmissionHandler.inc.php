@@ -32,21 +32,6 @@ class SubmissionHandler extends PKPSubmissionHandler
         );
     }
 
-
-    //
-    // Protected helper methods
-    //
-    /**
-     * Setup common template variables.
-     *
-     * @param Request $request
-     */
-    public function setupTemplate($request)
-    {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
-        return parent::setupTemplate($request);
-    }
-
     /**
      * Get the step numbers and their corresponding title locale keys.
      *

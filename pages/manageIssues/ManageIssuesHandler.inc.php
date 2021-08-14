@@ -60,7 +60,6 @@ class ManageIssuesHandler extends Handler
     public function index($args, $request)
     {
         $this->setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([

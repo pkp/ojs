@@ -35,8 +35,6 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
      */
     public function init()
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
-
         // Register theme options
         $this->addOption('typography', 'FieldOptions', [
             'type' => 'radio',

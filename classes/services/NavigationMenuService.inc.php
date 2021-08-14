@@ -47,8 +47,6 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     {
         $types = & $args[0];
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
-
         $ojsTypes = [
             self::NMI_TYPE_CURRENT => [
                 'title' => __('editor.issues.currentIssue'),

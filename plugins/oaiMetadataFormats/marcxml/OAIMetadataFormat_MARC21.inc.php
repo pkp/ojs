@@ -23,15 +23,6 @@ use PKP\i18n\LocaleConversion;
 class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
 {
     /**
-     * Constructor.
-     */
-    public function __construct($prefix, $schema, $namespace)
-    {
-        parent::__construct($prefix, $schema, $namespace);
-        PKPLocale::requireComponents([LOCALE_COMPONENT_PKP_SUBMISSION]); // submission.copyrightStatement
-    }
-
-    /**
      * @see OAIMetadataFormat#toXml
      *
      * @param null|mixed $format
