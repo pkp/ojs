@@ -32,7 +32,7 @@ class ArticleTombstoneManager
     {
     }
 
-    public function insertArticleTombstone(&$article, &$journal)
+    public function insertArticleTombstone($article, $journal)
     {
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
