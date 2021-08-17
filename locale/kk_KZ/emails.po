@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-16 16:05+0000\n"
+"PO-Revision-Date: 2021-08-18 04:05+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/emails/kk_KZ/"
 ">\n"
@@ -141,7 +141,10 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "«{$siteTitle}» сайтынан жаңа хабарлама"
+msgstr ""
+"«{$ SiteTitle}» сайтынан жаңа хабарландыру«{$ SiteTitle}» сайтынан жаңа "
+"хабарландыру«{$siteTitle}» сайтынан жаңа хабарлама«{$ SiteTitle}» сайтынан "
+"жаңа хабарландыру"
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрация в качестве рецензента в журнале «{$contextName}»"
