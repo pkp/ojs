@@ -26,7 +26,6 @@ namespace APP\submission;
 use APP\core\Application;
 use APP\core\Services;
 
-use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 
@@ -284,32 +283,6 @@ class Submission extends PKPSubmission
         return $galleys;
     }
 
-    /**
-     * Get the localized galleys for an article.
-     *
-     * @return array ArticleGalley
-     *
-     * @deprecated 3.2.0.0
-     */
-    public function getLocalizedGalleys()
-    {
-        $allGalleys = $this->getData('galleys');
-        $galleys = [];
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $tryLocale) {
-            foreach (array_keys($allGalleys) as $key) {
-                if ($allGalleys[$key]->getLocale() == $tryLocale) {
-                    $galleys[] = $allGalleys[$key];
-                }
-            }
-            if (!empty($galleys)) {
-                //TODO GalleyDAO help . getLocalizedGalleys does not seem to be used
-                HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', [&$galleys]);
-                return $galleys;
-            }
-        }
-
-        return $galleys;
-    }
 
     /**
      * Return option selection indicating if author should be hidden in issue ToC.

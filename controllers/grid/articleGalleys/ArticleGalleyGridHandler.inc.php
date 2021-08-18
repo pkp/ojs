@@ -187,14 +187,10 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        //TODO GalleyDAO review
-        //$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-        //$galley = $galleyDao->getById($rowId);
-        $galley = Repo::articleGalley()->get($rowId);
-        //$galley->setSequence($newSequence);
-        $galley->setData('sequence', $newSequence);
-        //$galleyDao->updateObject($galley);
-        Repo::articleGalley()->update($galley);
+        //TODO GalleyDAO review ok
+        $galley = Repo::articleGalley()->get((int) $rowId);
+        $galley->setData('seq', $newSequence);
+        Repo::articleGalley()->dao->update($galley);
     }
 
     //

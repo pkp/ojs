@@ -11,7 +11,7 @@
  * @brief A repository to find and manage articleGalleys.
  */
 
-namespace PKP\articleGalley;
+namespace APP\articleGalley;
 
 use APP\core\Request;
 use APP\core\Services;

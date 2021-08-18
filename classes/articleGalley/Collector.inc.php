@@ -12,7 +12,7 @@
  * @brief A helper class to configure a Query Builder to get a collection of article galleys
  */
 
-namespace PKP\articleGalley;
+namespace APP\articleGalley;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
