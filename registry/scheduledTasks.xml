@@ -43,4 +43,12 @@
 		<descr>Automatically deposit any outstanding DOIs to the configured registration agency.</descr>
 		<frequency hour="0" />
 	</task>
+	<task class="lib.pkp.classes.task.UpdateIPGeoDB">
+		<descr>Update the DB-IP city lite database automatically.</descr>
+		<frequency dayofmonth="2"/>
+	</task>
+	<task class="classes.tasks.UsageStatsLoader">
+		<descr>Process the usage stats logs and load the numbers into the DB tables.</descr>
+		<frequency day="0"/>
+	</task>
 </scheduled_tasks>
