@@ -166,18 +166,17 @@ class SubscriberSelectGridHandler extends GridHandler
     {
         // If we're editing an existing subscription, use the filter form to ensure that
         // the already-selected user is chosen.
-        if (($userId = $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
-            $userDao = Repo::user()->dao;
+        if (($userId = (int) $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
             return [
                 'userGroup' => null,
-                'searchField' => $userDao::USER_FIELD_USERNAME,
+                'searchField' => Repo::user()->dao::USER_FIELD_USERNAME,
                 'searchMatch' => 'is',
-                'search' => $userDao->get($userId)->getUsername(),
+                'search' => Repo::user()->get($userId)->getUsername(),
             ];
         }
 
         return [
-            'userGroup' => $request->getUserVar('userGroup') ? (int)$request->getUserVar('userGroup') : null,
+            'userGroup' => $request->getUserVar('userGroup') ? (int) $request->getUserVar('userGroup') : null,
             'searchField' => $request->getUserVar('searchField'),
             'searchMatch' => $request->getUserVar('searchMatch'),
             'search' => (string) $request->getUserVar('search'),

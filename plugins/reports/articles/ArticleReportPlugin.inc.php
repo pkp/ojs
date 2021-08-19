@@ -80,7 +80,6 @@ class ArticleReportPlugin extends ReportPlugin
         $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
-        $userDao = Repo::user()->dao;
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
@@ -128,7 +127,7 @@ class ArticleReportPlugin extends ReportPlugin
                     continue;
                 }
                 if (!isset($editorsById[$userId])) {
-                    $editor = $userDao->get($userId);
+                    $editor = Repo::user()->get($userId);
                     $editorsById[$userId] = [
                         $editor->getLocalizedGivenName(),
                         $editor->getLocalizedFamilyName(),
