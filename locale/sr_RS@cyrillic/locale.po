@@ -1,15 +1,20 @@
+# Biljana Cubrovic <biljana.cubrovic@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
+"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"Last-Translator: Biljana Cubrovic <biljana.cubrovic@gmail.com>\n"
+"Language-Team: Serbian (cyrillic) <http://translate.pkp.sfu.ca/projects/ojs/"
+"locale/sr_Cyrl/>\n"
+"Language: sr_RS@cyrillic\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:33+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "common.software"
 msgstr "Open Journal Systems"
@@ -18,7 +23,7 @@ msgid "navigation.journalHelp"
 msgstr "Помоћ"
 
 msgid "navigation.current"
-msgstr "Тренутни број"
+msgstr "Најновији број"
 
 msgid "navigation.otherJournals"
 msgstr "Остали часописи"
@@ -78,13 +83,13 @@ msgid "common.queue.short.completed"
 msgstr "Архива"
 
 msgid "section.section"
-msgstr "Секција"
+msgstr "Рубрика"
 
 msgid "section.sections"
-msgstr "Секције часописа"
+msgstr "Рубрике часописа"
 
 msgid "section.title"
-msgstr "Наслов секције"
+msgstr "Наслов рубрике"
 
 msgid "section.abbreviation"
 msgstr "Скраћеница"
@@ -135,7 +140,7 @@ msgid "article.suppFilesAbbrev"
 msgstr "Дод. фајл"
 
 msgid "article.discipline"
-msgstr "Академска дициплина и под-дисциплине"
+msgstr "Академска дициплина и поддисциплине"
 
 msgid "article.subject"
 msgstr "Кључне речи"
@@ -162,7 +167,7 @@ msgid "article.submissions"
 msgstr "Послати чланци"
 
 msgid "article.abstract"
-msgstr "Сажетак"
+msgstr "Апстракт"
 
 msgid "article.details"
 msgstr "Детаљи"
@@ -273,7 +278,7 @@ msgid "submissions.proofreadingComplete"
 msgstr "Кориговано"
 
 msgid "journal.currentIssue"
-msgstr "Тренутни број"
+msgstr "Најновији број"
 
 msgid "context.contexts"
 msgstr "Часописи"
@@ -297,22 +302,23 @@ msgid "user.role.manager"
 msgstr "Главни уредник"
 
 msgid "user.role.subEditor"
-msgstr "Уредник секције"
+msgstr "Уредник рубрике"
 
 msgid "user.role.subscriptionManager"
-msgstr "Менаджер претплата"
+msgstr "Менаџер претплата"
 
+#, fuzzy
 msgid "user.role.managers"
 msgstr "Главни уредници"
 
 msgid "user.role.subscriptionManagers"
-msgstr "Менаджери претплата"
+msgstr "Менаџери претплата"
 
 msgid "issue.issue"
-msgstr "Bрој часописа"
+msgstr "Број часописа"
 
 msgid "issue.issues"
-msgstr "Bројеви часописа"
+msgstr "Бројеви часописа"
 
 msgid "issue.title"
 msgstr "Наслов"
@@ -342,7 +348,7 @@ msgid "issue.abstract"
 msgstr "Aпстракт"
 
 msgid "submission.event.general.defaultEvent"
-msgstr "Дешавања приликом предајe"
+msgstr "Промена статуса прилога"
 
 msgid "submission.event.general.issueScheduled"
 msgstr "Рад је стављен у ред чекања у распореду часописа"
@@ -356,11 +362,12 @@ msgstr "Чланак објављен"
 msgid "submission.event.author.authorRevision"
 msgstr "Пријављена је ауторова ревизија"
 
+#, fuzzy
 msgid "submission.event.general.authorRevision"
 msgstr "Aуторов ревизијски фајл је ажуриран"
 
 msgid "submission.event.editor.editorAssigned"
-msgstr "Уреднику је додијељена пријава"
+msgstr "Уреднику је додељен прилог"
 
 msgid "submission.event.editor.editorUnassigned"
 msgstr "Уредник је уклоњен са предатог радa"
@@ -378,9 +385,7 @@ msgid "submission.event.editor.submissionRestored"
 msgstr "Пријављени рад је повучен из архиве"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr ""
-"Лектору\n"
-" је додијељен рад"
+msgstr "Лектору је додељен рад"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
 msgstr "Лектор је повучен са пријављеног рада"
@@ -401,11 +406,12 @@ msgid "submission.event.copyedit.copyeditSetFile"
 msgstr "Фајл лектуре је ажуриран"
 
 msgid "submission.event.proofread.proofreaderAssigned"
-msgstr "Коректору је додијељен пријављени чланак"
+msgstr "Коректору је дојељен пријављени чланак"
 
 msgid "submission.event.proofread.proofreaderUnassigned"
-msgstr "Коректор је повучен са пријављеног раda"
+msgstr "Коректор је повучен са пријављеног рада"
 
+#, fuzzy
 msgid "submission.event.proofread.proofreadInitiated"
 msgstr "Покренута је додела корекције"
 
@@ -620,7 +626,10 @@ msgid "reviewer.article.automatic"
 msgstr "(Аутоматски)"
 
 msgid "reviewer.article.selectRecommendation"
-msgstr "Одаберите препоруку из менија. Препоруку можете одабрати тек након што сте приложили текст рецензије или фај са рецензијом. Тиме завршавате поступак рецензије и више не можете допуњавати рецензију."
+msgstr ""
+"Одаберите препоруку из менија. Препоруку можете одабрати тек након што сте "
+"приложили текст рецензије или фајл са рецензијом. Тиме завршавате поступак "
+"рецензије и више не можете допуњавати рецензију."
 
 msgid "reviewer.article.recommendation"
 msgstr "Препорука"
@@ -632,7 +641,7 @@ msgid "reviewer.article.reviewerComments"
 msgstr "Коментари"
 
 msgid "reviewer.article.uploadedFile"
-msgstr "Доставјени фајлови"
+msgstr "Достављени фајлови"
 
 msgid "reviewer.article.reviewersAnnotatedVersion"
 msgstr "Верзију је поставио рецензент"
@@ -905,7 +914,7 @@ msgid "site.journalRegister"
 msgstr "Регистрација"
 
 msgid "site.journalCurrent"
-msgstr "Тренутни број часописa"
+msgstr "Најновији број часописa"
 
 msgid "current.current"
 msgstr "Тренутни"
@@ -1282,7 +1291,9 @@ msgid "reviewer.article.notifyEditorB"
 msgstr "да ли ћете преузети рецензију овог прилога."
 
 msgid "reviewer.article.consultGuidelines"
-msgstr "Уколико сте пристали на израду рецензије, молимо Вас да консултујете смернице за рецензенте које се налазе при дну странице."
+msgstr ""
+"Уколико сте пристали на израду рецензије, молимо Вас да консултујете "
+"Смернице за рецензенте које се налазе при дну странице."
 
 msgid "reviewer.article.downloadSubmission"
 msgstr "Кликните на име фајла како бисте преузели рукопис ове пријаве."
@@ -1296,7 +1307,9 @@ msgid "reviewer.competingInterests"
 msgstr "Сукоб  интереса"
 
 msgid "reviewer.article.enterReviewA"
-msgstr "Кликните на икону да би унели или копирали текст ваше рецензије везан за ову пријаву."
+msgstr ""
+"Кликните на иконицу да бисте унели или копирали текст Ваше рецензије везан "
+"за овај рад."
 
 msgid "reviewer.article.uploadFile"
 msgstr "Такође, можете приложити и фајл за уредника и/или аутора."
@@ -1407,13 +1420,13 @@ msgid "log.editor.decision"
 msgstr "{$editorName} је евидентирао уредничку одлуку ({$decision}) за чланак {$submissionId}."
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "Кликните на икону и испуните образац за реценцзију."
+msgstr "Кликните на иконицу и испуните образац за реценцзију."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Испуните обавезана поља."
 
 msgid "common.homePageHeader.altText"
-msgstr "Заглавље наслове стране"
+msgstr "Заглавље насловне стране"
 
 msgid "common.journalHomepageImage.altText"
 msgstr "Слика насловне стране часописа"
@@ -1437,7 +1450,7 @@ msgid "article.comments.enable"
 msgstr "Омогући"
 
 msgid "article.fontSize"
-msgstr "Величине фонта"
+msgstr "Величина фонта"
 
 msgid "article.fontSize.small.altText"
 msgstr "Мали"
@@ -1454,6 +1467,7 @@ msgstr "Ваш кориснички налог тренутно није пов�
 msgid "user.noRoles.noRolesForJournal"
 msgstr "Ваш кориснички налог тренутно није повезан ни са једном улогом у овом часопису. Молимо одаберите једно од следећег:"
 
+#, fuzzy
 msgid "user.noRoles.submitArticle"
 msgstr "Пријавите предлог"
 
@@ -1767,7 +1781,7 @@ msgid "user.profile.profileImage"
 msgstr "Слика профила"
 
 msgid "issue.fullIssue"
-msgstr "Пуно издање"
+msgstr "Цео број"
 
 msgid "issue.nonpdf.title"
 msgstr "Преузми издање"
@@ -1811,7 +1825,7 @@ msgid "payment.type.purchaseIssue"
 msgstr "Цена куповине издања"
 
 msgid "context.current"
-msgstr "Тренутни чаопис:"
+msgstr "Актуелни часопис:"
 
 msgid "context.select"
 msgstr "Пребаци се на други часопис:"
@@ -1880,7 +1894,7 @@ msgid "article.return"
 msgstr "Повратак на детаље чланка"
 
 msgid "user.role.subEditors"
-msgstr "Уредници секција/рубрика"
+msgstr "Уредници рубрика"
 
 msgid "user.role.journalAssistant"
 msgstr "Асистент часописа"
@@ -1898,10 +1912,10 @@ msgid "issue.return"
 msgstr "Врати се на детаље броја"
 
 msgid "submission.event.submissionSubmitted"
-msgstr "Чланак пријављен"
+msgstr "Чланак предат"
 
 msgid "search.results.orderBy"
-msgstr "Поредај резултате по"
+msgstr "Поређај резултате по"
 
 msgid "search.results.orderBy.article"
 msgstr "Наслов чланка"
@@ -1919,7 +1933,7 @@ msgid "search.results.orderBy.journal"
 msgstr "Наслов часописа"
 
 msgid "search.results.orderBy.popularityAll"
-msgstr "Популарност (сво време)"
+msgstr "Популарност (све време)"
 
 msgid "search.results.orderBy.popularityMonth"
 msgstr "Популарност (последњи месец)"
@@ -1934,7 +1948,7 @@ msgid "search.results.orderDir.desc"
 msgstr "Опадајући"
 
 msgid "search.results.similarDocuments"
-msgstr "слични документи"
+msgstr "слична документа"
 
 msgid "plugins.categories.viewableFiles"
 msgstr "Додатак за пробне копије чланка"
@@ -2039,3 +2053,18 @@ msgstr "Чека се одобрење."
 
 msgid "about.editorialPOLICY"
 msgstr "Уређивачка политика"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Да, желим да ме контактирате за рецензије радова у овом часопису."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Тражени комплетан број није пронађен."
+
+msgid "navigation.skip.issue"
+msgstr "Прескочи до Најновијег броја"
+
+msgid "navigation.skip.about"
+msgstr "Прескочи до одељка О часопису"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Овај часопис не објављује садржај онлајн."

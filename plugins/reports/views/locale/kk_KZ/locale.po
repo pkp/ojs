@@ -1,0 +1,36 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-14 06:04+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-views/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.views.galleyViews"
+msgstr "Барлық электрондық жазбаларды қарау"
+
+msgid "plugins.reports.views.abstractViews"
+msgstr "Аңдатпаны қарау"
+
+msgid "plugins.reports.views.datePublished"
+msgstr "Жарияланған күні"
+
+msgid "plugins.reports.views.articleTitle"
+msgstr "Мақаланың атауы"
+
+msgid "plugins.reports.views.articleId"
+msgstr "Мақаланың ID-і"
+
+msgid "plugins.reports.views.description"
+msgstr ""
+"Әр мақалаға оқырманның қызығушылығын сипаттайтын CSV форматындағы есепті "
+"жүзеге асырады."
+
+msgid "plugins.reports.views.displayName"
+msgstr "\"Қарау есебі\" модулі"

@@ -1,0 +1,118 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-18 04:05+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Журнал туралы есеп 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Мақалалар туралы есеп 1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Барлық сатып алушылар"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Төмендегі сілтемелер COUNTER дайын емес ескі плагиннің деректерін пайдаланып "
+"ескі есептерді шығарады. Егер сіз жаңа OJS COUNTER көрсеткіштерінің "
+"көмегімен ағымдағы COUNTER есептерін жасағыңыз келсе, жоғарыдағы "
+"сілтемелерді қолданыңыз."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "жасырын түрде"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Барлық журналдар үшін барлығы"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD (барлығы)"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN онлайн нұсқалары"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN баспа нұсқасы"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Платформа"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Баспа"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Басталу күні:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Толық мәтінді мақалаларға ай бойынша және журнал бойынша табысты сұраныстар "
+"саны (жыл {$ year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Журнал есебі 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Журнал есебі 1 (R3): Айлар мен журналдар бойынша толық мәтінді мақалаларға "
+"сұраныстар"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER журналы туралы есеп 1 (R3): ай мен журнал бойынша толық мәтінді "
+"мақалаларды сұрайды"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML-версия"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER JR1 (R3) есебі"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Бұл сілтемелер бұрынғы шығарылым 3.0 негізінде COUNTER дайын есептерді "
+"шығарады. Бұл есеп сайттағы барлық журналдарды қамтиды. Мүмкін болса, "
+"кейінгі нұсқаны қолданыңыз."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Нәтижелерді XML пішімдеу мүмкін емес."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Бұл есеп бойынша нәтиже табылмады."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Жарамсыз есеп сұрауы."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Есеп параметрлері қате."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Сайттың ескірген есептері"
+
+msgid "plugins.reports.counter.release"
+msgstr "Версия COUNTER Release"
+
+msgid "plugins.reports.counter"
+msgstr "«COUNTER есептері» плагині"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"COUNTER плагині <a href=\"http://www.projectcounter.org\"> COUNTER "
+"стандартын </a> қолдана отырып, журнал әрекеті туралы есептер шығаруға "
+"мүмкіндік береді. Бұл есептер журналды COUNTER-ге сәйкес келтірмейді. "
+"Журналды осы стандартқа сәйкестендіру үшін COUNTER жобасының сайтындағы "
+"талаптарды қарап шығыңыз."

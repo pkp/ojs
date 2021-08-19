@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2020-12-01 11:47+0000\n"
+"PO-Revision-Date: 2021-08-03 09:36+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ca_ES/>\n"
@@ -1743,7 +1744,6 @@ msgstr ""
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir l'accés a l'arxiu"
 
-
 msgid "manager.setup.privacyStatement.success"
 msgstr "S'ha actualitzat la declaració de privacitat."
 
@@ -1883,3 +1883,27 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Ha d'estar activa com a mínim una secció. Visiteu la configuració del flux "
 "de treball per deshabilitar totes les trameses a la revista."
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "El procés ha fallat en analitzar les galerades del número"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Exportar els resultats dels números"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"No s'ha definit el contacte principal d'aquesta revista. Podeu introduir-lo "
+"en la <a href=\"{$url}\">configuració de la revista</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Enviar una còpia del correu electrònic d'agraïment per la tramesa al "
+"contacte principal de la revista."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Seleccioneu el país en què s'ubica la revista o el país de l'adreça postal "
+"de la revista o de l'editorial."

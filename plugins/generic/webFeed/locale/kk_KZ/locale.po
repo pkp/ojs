@@ -1,0 +1,56 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-12 13:40+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2 логотипі"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1 логотипі"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom логотипі"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr ""
+"Соңғы жарияланған мақалалардың белгіленген санын көрсету үшін оң сан "
+"енгізіңіз."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Экранда көрсетілетін соңғы жарияланған мақалалар саны"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Соңғы жарияланған мақалалардың белгіленген санын көрсету."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Жаңа жарияланған журнал басылымында мақалалардың тізімін көрсету."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Журналдың барлық беттерінде тізімге сілтемелерді көрсетіңіз."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Тізімге сілтемелерді тек басты бетте және журнал басылым беттерінде "
+"көрсетіңіз."
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Журналдың басылымдар бетінде тізімге сілтемелерді көрсетіңіз."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Параметрлер"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Журнал хабарландырулары үшін RSS/Atom пішімінде тізім жасайды."
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "\"Басылымның Жаңалықтар тізімі\" модулі"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-05 18:02+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-06-10 11:44+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -2445,3 +2445,6 @@ msgstr "Отфрлено"
 
 msgid "payment.unpaid"
 msgstr "Неплатено"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Ова списание не објавува онлајн содржина."

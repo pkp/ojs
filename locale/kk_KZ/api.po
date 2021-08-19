@@ -1,0 +1,70 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-12 13:40+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/api/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Файлды бұл қадамда электронды қолжазбамен байланыстыру мүмкін емес."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Сіз сұраған мақала бұл журналға тиесілі емес."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Сіз сұраған мақала бұл журналға тиесілі емес."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Сіз таңдаған төлем әдісімен жалғастыру мүмкін емес."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Сізге бұл электронды хабарлама үлгісін басқа журналға көшіруге рұқсат "
+"берілмеген."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Сіз сұраған журнал жүйеден табылмады."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Сізге бұл журналды өшіруге рұқсат берілмеген."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Сізге бұл журналды өңдеуге рұқсат берілмеген."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Сіз бұл журналды веб-сайттың API-ы арқылы өңдей алмайсыз."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Журналдың API-не сұраныс жібермей бұл журналды қарай немесе өңдей алмайсыз."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Сізге бұл журналды қарауға рұқсат берілмеген."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Сіз тек қарауға рұқсат берілген журналдарды ғана көре аласыз."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Материалды жинақтау немесе өңдеу үшін журналдың API нүктесіне сұраныс жіберу "
+"қажет."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Жарияланбаған журнал шығарылымдарын қарау рұқсат етілмеген."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Сіз жіберілген материалға бекітілген журналды өзгерте алмайсыз."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"Электрондық поштамен хабарламар жіберу мүмкіндігі бұл журнал үшін "
+"орнатылмаған."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Сұраныс жіберілген хабарландыру бұл журналға тиесілі емес."

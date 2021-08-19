@@ -1,6 +1,7 @@
+# Nguyen Xuan Giao <giaonxb@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-03 17:44+0000\n"
+"PO-Revision-Date: 2021-08-06 16:04+0000\n"
 "Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "vi_VN/>\n"
@@ -233,7 +234,7 @@ msgid "author.submit.comments"
 msgstr "Nhập văn bản (tùy chọn)"
 
 msgid "submission.submit.coverNote"
-msgstr "Bình luận cho Biên tập viên"
+msgstr "Lời nhắn gửi Tổng biên tập"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
