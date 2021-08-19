@@ -76,7 +76,7 @@ class SectionForm extends PKPSectionForm
                     Repo::user()->getCollector()
                         ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
                         ->filterByRoleIds([Role::ROLE_ID_SUB_EDITOR])
-                        ->filterByAssignedSectionIds([$this->getSectionId()])
+                        ->assignedToSectionIds([$this->getSectionId()])
                 )),
             ]);
         } else {
