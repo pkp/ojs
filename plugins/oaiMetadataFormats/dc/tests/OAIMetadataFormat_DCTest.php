@@ -193,15 +193,13 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
         // Create a mocked ArticleGalleyDAO that returns our test data.
-        //TODO GalleyDAO  help
-        import('classes.article.ArticleGalleyDAO');
-        $articleGalleyDao = $this->getMockBuilder(ArticleGalleyDAO::class)
-            ->setMethods(['getBySubmissionId'])
-            ->getMock();
-        $articleGalleyDao->expects($this->any())
-            ->method('getBySubmissionId')
-            ->will($this->returnValue($galleys));
-        DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
+        App::instance(\APP\articleGalley\DAO::class, \Mockery::mock(\APP\articleGalley\DAO::class, function ($mock) use ($expectMethodCall, $galleys) {
+            if ($expectMethodCall) {
+                $mock->shouldReceive('getBySubmissionId')->andReturn($galleys);
+            } else {
+                $mock->shouldNotReceive('getBySubmissionId');
+            }
+        }));
         // FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 
         //
