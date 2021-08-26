@@ -53,6 +53,8 @@ class DOAJInfoSender extends ScheduledTask {
 		$journals = $this->_getJournals();
 
 		foreach ($journals as $journal) {
+			// load pubIds for this journal
+			PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 			// Get unregistered articles
 			$unregisteredArticles = $plugin->getUnregisteredArticles($journal);
 			// If there are articles to be deposited
