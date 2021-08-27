@@ -968,13 +968,12 @@ class Upgrade extends Installer
      */
     public function migrateUserAndAuthorNames()
     {
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
         // the user names will be saved in the site's primary locale
-        $userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.first_name, 'string' FROM users_tmp u, site s", [Identity::IDENTITY_SETTING_GIVENNAME]);
-        $userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.last_name, 'string' FROM users_tmp u, site s", [Identity::IDENTITY_SETTING_FAMILYNAME]);
+        DB::insert("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.first_name, 'string' FROM users_tmp u, site s", [Identity::IDENTITY_SETTING_GIVENNAME]);
+        DB::insert("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.last_name, 'string' FROM users_tmp u, site s", [Identity::IDENTITY_SETTING_FAMILYNAME]);
         // the author names will be saved in the submission's primary locale
-        $userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.first_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", [Identity::IDENTITY_SETTING_GIVENNAME]);
-        $userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.last_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", [Identity::IDENTITY_SETTING_FAMILYNAME]);
+        DB::insert("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.first_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", [Identity::IDENTITY_SETTING_GIVENNAME]);
+        DB::insert("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.last_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", [Identity::IDENTITY_SETTING_FAMILYNAME]);
 
         // middle name will be migrated to the given name
         // note that given names are already migrated to the settings table
@@ -982,16 +981,16 @@ class Upgrade extends Installer
             case 'mysql':
             case 'mysqli':
                 // the alias for _settings table cannot be used for some reason -- syntax error
-                $userDao->update("UPDATE user_settings, users_tmp u SET user_settings.setting_value = CONCAT(user_settings.setting_value, ' ', u.middle_name) WHERE user_settings.setting_name = ? AND u.user_id = user_settings.user_id AND u.middle_name IS NOT NULL AND u.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
-                $userDao->update("UPDATE author_settings, authors_tmp a SET author_settings.setting_value = CONCAT(author_settings.setting_value, ' ', a.middle_name) WHERE author_settings.setting_name = ? AND a.author_id = author_settings.author_id AND a.middle_name IS NOT NULL AND a.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
+                DB::update("UPDATE user_settings, users_tmp u SET user_settings.setting_value = CONCAT(user_settings.setting_value, ' ', u.middle_name) WHERE user_settings.setting_name = ? AND u.user_id = user_settings.user_id AND u.middle_name IS NOT NULL AND u.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
+                DB::update("UPDATE author_settings, authors_tmp a SET author_settings.setting_value = CONCAT(author_settings.setting_value, ' ', a.middle_name) WHERE author_settings.setting_name = ? AND a.author_id = author_settings.author_id AND a.middle_name IS NOT NULL AND a.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
                 break;
             case 'postgres':
             case 'postgres64':
             case 'postgres7':
             case 'postgres8':
             case 'postgres9':
-                $userDao->update("UPDATE user_settings SET setting_value = CONCAT(setting_value, ' ', u.middle_name) FROM users_tmp u WHERE user_settings.setting_name = ? AND u.user_id = user_settings.user_id AND u.middle_name IS NOT NULL AND u.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
-                $userDao->update("UPDATE author_settings SET setting_value = CONCAT(setting_value, ' ', a.middle_name) FROM authors_tmp a WHERE author_settings.setting_name = ? AND a.author_id = author_settings.author_id AND a.middle_name IS NOT NULL AND a.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
+                DB::update("UPDATE user_settings SET setting_value = CONCAT(setting_value, ' ', u.middle_name) FROM users_tmp u WHERE user_settings.setting_name = ? AND u.user_id = user_settings.user_id AND u.middle_name IS NOT NULL AND u.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
+                DB::update("UPDATE author_settings SET setting_value = CONCAT(setting_value, ' ', a.middle_name) FROM authors_tmp a WHERE author_settings.setting_name = ? AND a.author_id = author_settings.author_id AND a.middle_name IS NOT NULL AND a.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
                 break;
             default: fatalError('Unknown database type!');
         }
@@ -1001,7 +1000,7 @@ class Upgrade extends Installer
         $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
         $site = $siteDao->getSite();
         $supportedLocales = $site->getSupportedLocales();
-        $userResult = $userDao->retrieve(
+        $userResult = DB::select(
             "SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users_tmp
 			WHERE (salutation IS NOT NULL AND salutation <> '') OR
 			(suffix IS NOT NULL AND suffix <> '')"
@@ -1018,7 +1017,7 @@ class Upgrade extends Installer
                 if (AppLocale::isLocaleWithFamilyFirst($siteLocale)) {
                     $preferredPublicName = "${lastName}, " . ($salutation != '' ? "${salutation} " : '') . $firstName . ($middleName != '' ? " ${middleName}" : '');
                 }
-                $userDao->update(
+                DB::insert(
                     "INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')",
                     [(int) $userId, $siteLocale, $preferredPublicName]
                 );
@@ -1035,7 +1034,7 @@ class Upgrade extends Installer
             $journalsSupportedLocales[$journal->getId()] = $journal->getSupportedLocales();
         }
         // get all authors with a suffix
-        $authorResult = $userDao->retrieve(
+        $authorResult = DB::select(
             "SELECT a.author_id, a.first_name, a.last_name, a.middle_name, a.suffix, j.journal_id FROM authors_tmp a
 			LEFT JOIN submissions s ON (s.submission_id = a.submission_id)
 			LEFT JOIN journals j ON (j.journal_id = s.context_id)
@@ -1054,7 +1053,7 @@ class Upgrade extends Installer
                 if (AppLocale::isLocaleWithFamilyFirst($locale)) {
                     $preferredPublicName = "${lastName}, " . $firstName . ($middleName != '' ? " ${middleName}" : '');
                 }
-                $userDao->update(
+                DB::insert(
                     "INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')",
                     [(int) $authorId, $locale, $preferredPublicName]
                 );
@@ -1259,7 +1258,7 @@ class Upgrade extends Installer
         ];
 
         if (!isset($fileStagePathMap[$fileStage])) {
-            throw new Exception('A file assigned to the file stage ' . $fileStage . ' could not be migrated.');
+            throw new \Exception('A file assigned to the file stage ' . $fileStage . ' could not be migrated.');
         }
 
         return $fileStagePathMap[$fileStage];

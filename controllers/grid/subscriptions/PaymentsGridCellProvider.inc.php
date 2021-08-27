@@ -13,6 +13,7 @@
  * @brief Class for a cell provider to display information about payments
  */
 
+use APP\facades\Repo;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 
@@ -51,8 +52,7 @@ class PaymentsGridCellProvider extends GridCellProvider
 
         switch ($column->getId()) {
             case 'name':
-                $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-                $user = $userDao->getById($payment->getUserId());
+                $user = Repo::user()->get($payment->getUserId());
                 return ['label' => $user ? $user->getFullName() : __('common.user.nonexistent')]; // If no $user, returns "[Nonexistent user]" to avoid null user
             case 'type':
                 $paymentManager = Application::getPaymentManager($this->_request->getJournal());

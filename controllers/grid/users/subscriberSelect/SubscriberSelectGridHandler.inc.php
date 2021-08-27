@@ -13,10 +13,10 @@
  * @brief Handle subscriber selector grid requests.
  */
 
+use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\Role;
-use PKP\user\UserDAO;
 
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
@@ -166,19 +166,17 @@ class SubscriberSelectGridHandler extends GridHandler
     {
         // If we're editing an existing subscription, use the filter form to ensure that
         // the already-selected user is chosen.
-        if (($userId = $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
-            $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-            $user = $userDao->getById($userId);
+        if (($userId = (int) $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
             return [
                 'userGroup' => null,
-                'searchField' => UserDAO::USER_FIELD_USERNAME,
+                'searchField' => Repo::user()->dao::USER_FIELD_USERNAME,
                 'searchMatch' => 'is',
-                'search' => $user->getUsername(),
+                'search' => Repo::user()->get($userId)->getUsername(),
             ];
         }
 
         return [
-            'userGroup' => $request->getUserVar('userGroup') ? (int)$request->getUserVar('userGroup') : null,
+            'userGroup' => $request->getUserVar('userGroup') ? (int) $request->getUserVar('userGroup') : null,
             'searchField' => $request->getUserVar('searchField'),
             'searchMatch' => $request->getUserVar('searchMatch'),
             'search' => (string) $request->getUserVar('search'),

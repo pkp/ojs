@@ -20,12 +20,11 @@ import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 use APP\notification\NotificationManager;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\SubscriptionDAO;
+use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
-
 use PKP\identity\Identity;
 use PKP\notification\PKPNotification;
-use PKP\user\UserDAO;
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 {
@@ -111,12 +110,13 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
      */
     public function renderFilter($request, $filterData = [])
     {
+        $userDao = Repo::user()->dao;
         $filterData = array_merge($filterData, [
             'fieldOptions' => [
                 Identity::IDENTITY_SETTING_GIVENNAME => 'user.givenName',
                 Identity::IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
-                UserDAO::USER_FIELD_USERNAME => 'user.username',
-                UserDAO::USER_FIELD_EMAIL => 'user.email',
+                $userDao::USER_FIELD_USERNAME => 'user.username',
+                $userDao::USER_FIELD_EMAIL => 'user.email',
                 SubscriptionDAO::SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
                 SubscriptionDAO::SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
                 SubscriptionDAO::SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',

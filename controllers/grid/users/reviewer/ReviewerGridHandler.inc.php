@@ -15,6 +15,9 @@
 
 import('lib.pkp.classes.controllers.grid.users.reviewer.PKPReviewerGridHandler');
 
+use APP\log\SubmissionEventLogEntry;
+use APP\facades\Repo;
+
 class ReviewerGridHandler extends PKPReviewerGridHandler
 {
     /**
@@ -32,14 +35,11 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $reviewAssignment->setRecommendation($newRecommendation);
 
             // Add log entry
-            import('lib.pkp.classes.log.SubmissionLog');
-            import('classes.log.SubmissionEventLogEntry');
             $submission = $this->getSubmission();
-            $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-            $reviewer = $userDao->getById($reviewAssignment->getReviewerId());
+            $reviewer = Repo::user()->get($reviewAssignment->getReviewerId());
             $user = $request->getUser();
             AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);
-            SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
+            SubmissionLog::logEvent($request, $submission, SubmissionEventLogEntry::SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
         }
         return parent::reviewRead($args, $request);
     }

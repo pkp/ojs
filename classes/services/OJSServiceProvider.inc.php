@@ -22,7 +22,6 @@ use PKP\services\PKPEmailTemplateService;
 use PKP\services\PKPFileService;
 use PKP\services\PKPSchemaService;
 use PKP\services\PKPSiteService;
-use PKP\services\PKPUserService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface
 {
@@ -61,11 +60,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         // Galley service
         $pimple['galley'] = function () {
             return new GalleyService();
-        };
-
-        // User service
-        $pimple['user'] = function () {
-            return new PKPUserService();
         };
 
         // Context service

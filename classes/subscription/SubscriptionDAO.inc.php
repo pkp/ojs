@@ -17,10 +17,10 @@
 
 namespace APP\subscription;
 
+use APP\facades\Repo;
 use PKP\db\DAORegistry;
 use PKP\identity\Identity;
 use PKP\plugins\HookRegistry;
-use PKP\user\UserDAO;
 
 abstract class SubscriptionDAO extends \PKP\db\DAO
 {
@@ -233,7 +233,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     protected function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params = null)
     {
         $searchSql = '';
-
+        $userDao = Repo::user()->dao;
         if (!empty($search)) {
             switch ($searchField) {
             case Identity::IDENTITY_SETTING_GIVENNAME:
@@ -260,7 +260,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case UserDAO::USER_FIELD_USERNAME:
+            case $userDao::USER_FIELD_USERNAME:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(u.username) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
@@ -272,7 +272,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
                 }
                 $params[] = $search;
                 break;
-            case UserDAO::USER_FIELD_EMAIL:
+            case $userDao::USER_FIELD_EMAIL:
                 if ($searchMatch === 'is') {
                     $searchSql = ' AND LOWER(u.email) = LOWER(?)';
                 } elseif ($searchMatch === 'contains') {
