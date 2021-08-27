@@ -221,7 +221,7 @@ class OJSPaymentManager extends PaymentManager
         if ($queuedPayment) {
             switch ($queuedPayment->getType()) {
             case self::PAYMENT_TYPE_MEMBERSHIP:
-                $user = Repo::user()->get($queuedPayment->getUserId());
+                $user = Repo::user()->get($queuedPayment->getUserId(), true);
                 $dateEnd = $user->getSetting('dateEndMembership', 0);
                 if (!$dateEnd) {
                     $dateEnd = 0;

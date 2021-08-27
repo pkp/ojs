@@ -102,7 +102,7 @@ class ReviewerSubmissionDAO extends DAO
         $submission = Repo::submission()->dao->fromRow((object) $row);
         $reviewerSubmission = $this->newDataObject();
         $reviewerSubmission->setAllData($submission->getAllData());
-        $reviewer = Repo::user()->get($row['reviewer_id']);
+        $reviewer = Repo::user()->get($row['reviewer_id'], true);
 
         // Editor Decisions
         $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */

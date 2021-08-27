@@ -127,7 +127,7 @@ class ArticleReportPlugin extends ReportPlugin
                     continue;
                 }
                 if (!isset($editorsById[$userId])) {
-                    $editor = Repo::user()->get($userId);
+                    $editor = Repo::user()->get($userId, true);
                     $editorsById[$userId] = [
                         $editor->getLocalizedGivenName(),
                         $editor->getLocalizedFamilyName(),

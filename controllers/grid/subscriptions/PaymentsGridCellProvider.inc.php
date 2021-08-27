@@ -52,7 +52,7 @@ class PaymentsGridCellProvider extends GridCellProvider
 
         switch ($column->getId()) {
             case 'name':
-                $user = Repo::user()->get($payment->getUserId());
+                $user = Repo::user()->get($payment->getUserId(), true);
                 return ['label' => $user ? $user->getFullName() : __('common.user.nonexistent')]; // If no $user, returns "[Nonexistent user]" to avoid null user
             case 'type':
                 $paymentManager = Application::getPaymentManager($this->_request->getJournal());
