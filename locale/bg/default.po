@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-28 07:11+0000\n"
+"PO-Revision-Date: 2021-08-28 07:17+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "bg/>\n"
@@ -129,9 +129,59 @@ msgstr "Текст на статията"
 msgid "section.default.policy"
 msgstr "Политика за раздела по подразбиране"
 
-#, fuzzy
 msgid "section.default.abbrev"
-msgstr "съкр."
+msgstr "АБРЕВ"
 
 msgid "section.default.title"
 msgstr "Статии"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рец."
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецензенти"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.genres.sourceTexts"
+msgstr "Източници"
+
+msgid "default.genres.dataSet"
+msgstr "Набор от данни"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Анализ на данни"
+
+msgid "default.genres.transcripts"
+msgstr "Преписи"
+
+msgid "default.genres.researchResults"
+msgstr "Изследователски резултати"
+
+msgid "default.genres.researchMaterials"
+msgstr "Изследователски материали"
+
+msgid "default.genres.researchInstrument"
+msgstr "Инструмент за научни изследвания"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "отг. абон."
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Отговорници за абонаменти"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Отговорник за абонаменти"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ред. за раздела"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Редактори за раздела"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Редактор за раздела"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "гост ред."
