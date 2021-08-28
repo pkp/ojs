@@ -1,8 +1,70 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-08-28 12:11+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/api/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Не можете да свържете файл на този етап с типография."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Публикацията, която търсите, не е част от тези изпратени материали."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Публикацията, която търсите, не е част от това списание."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Избраният метод за плащане не се поддържа."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Нямате права да премествате този шаблон за имейли към друго списание."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Списанието, което търсите не е намерено."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Нямате права да изтриете това списание."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Нямате права да редактирате това списание."
+
+msgid "api.contexts.403.requiresContext"
+msgstr ""
+"Не можете да редактирате това списание чрез програмния интерфейс (API) за "
+"целия сайт."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Не можете да преглеждате или редактирате това списание, освен ако не "
+"направите коректна заявка към програмния интерфейс (API) на списанието или "
+"коректна заявка към програмния интерфейс (API) на сайта."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Нямате права да разглеждате това списание."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Можете да разглеждате само списания, които са активирани."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"За да направите или редактирате изпращане на материали, трябва да направите "
+"заявка към крайната точка на програмния интерфейс (API) на списанието."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Нямате права да преглеждате непубликувани броеве."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Не можете да променяте дневника на подаване на материали."
+
+msgid "api.emails.403.disabled"
+msgstr "Функцията за известяване по имейл не е активирана за това списание."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Търсеният текст не е част от това списание."
