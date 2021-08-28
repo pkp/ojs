@@ -1,29 +1,24 @@
 <?php
-
 /**
- * @file classes/user/UserAction.inc.php
+ * @file classes/user/Repository.inc.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class UserAction
- * @ingroup user
+ * @class Repository
  *
- * @see User
- *
- * @brief UserAction class.
+ * @brief A repository to find and manage users.
  */
 
 namespace APP\user;
 
 use PKP\db\DAORegistry;
-use PKP\user\PKPUserAction;
 
-class UserAction extends PKPUserAction
+class Repository extends \PKP\user\Repository
 {
     /**
-     * @copydoc PKPUserAction::mergeUsers()
+     * @copydoc \PKP\user\Repository::mergeUsers()
      */
     public function mergeUsers($oldUserId, $newUserId)
     {
