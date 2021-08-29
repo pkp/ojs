@@ -1,8 +1,237 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-08-29 20:59+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-doi/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Елемент"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Типография: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI не е присвоен на тази публикация."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI за тази публикация ще бъде {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI трябва да започва с {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId}  е присвоен."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} не може да бъде присвоен, защото съдържа грешка в шаблона."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI не може да бъде присвоен, защото персонализираният суфикс липсва."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Присвоява DOI {$pubId} към {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Използвайте следната опция, за да изчистите DOI от всички обекти (статии и "
+"типографии), планирани за този брой."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Сигурни ли сте, че искате да изтриете съществуващите DOI обекти в броя?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Изчиства DOI обектите в броя"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Сигурни ли сте, че искате да изтриете съществуващия DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Изчисти"
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Даденият суфикс DOI вече се използва за друг публикуван елемент. Моля, "
+"въведете уникален DOI суфикс за всеки елемент."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI е присвоен за {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"Това, което виждате, е визуализация на DOI. Поставете отметка в квадратчето "
+"и запазете формуляра, за да присвоите DOI."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr ""
+"DOI не може да бъде присвоен, защото съдържа неизвестни при попълването на "
+"шаблона."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Не можете да генерирате DOI, защото за една или повече части от DOI шаблона "
+"липсват данни. Може да се наложи да присвоите публикацията в конкретен брой "
+"на списанието, да зададете идентификатор на издател или да въведете номера "
+"на страници."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Не можете да генерирате DOI, докато тази публикация не бъде добавена в "
+"конкретен брой на списанието."
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI не може да бъде присвоен, защото персонализираният суфикс липсва."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "типография"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "статия"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "брой"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Присвояване"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI трябва да започва с {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Сигурни ли сте, че искате да присвоите DOI на всички публикувани обекти, на "
+"които не са присвоени DOI?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Присвояване на DOI на всички публикувани обекти на списания, които не са "
+"назначени DOI. Това действие не може да се използва с индивидуалната "
+"конфигурация на суфикса. Ако сте променили горната конфигурация на DOI, "
+"моля, запазете промените си, преди да започнете това действие. Присвояването "
+"на DOI може да отнеме много време, в зависимост от броя на публикуваните "
+"обекти в списанието."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Присвояване на DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Сигурни ли сте, че искате да изтриете всички съществуващи DOI?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr ""
+"Ако промените вашата DOI конфигурация, DOI, които вече са назначени, няма да "
+"бъдат засегнати. След като конфигурацията на DOI бъде записана, използвайте "
+"този бутон, за да изчистите всички съществуващи DOI, така че новите "
+"настройки да влязат в сила със съществуващите обекти."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Преназначаване на DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Моля, въведете модела на суфикс DOI за типографии."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Моля, въведете модела на суфикс DOI за статии."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Моля, въведете модела на суфикс DOI за броеве."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Въведете отделен DOI суфикс за всеки публикуван елемент. Ще намерите "
+"допълнително поле за въвеждане на DOI на страницата с метаданни за всеки "
+"елемент."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i за броеве<br />%j.v%vi%i.%a за статии<br />%j.v%vi%i.%a.g%g за "
+"типографии."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Използване на шаблони по подразбиране."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "за типографии"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "за статии"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "за издание/списание"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "Например, vol%viss%ipp%p може да създаде DOI като 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Използвайте шаблона, въведен по -долу, за да генерирате DOI суфикси. "
+"Използвайте %j за инициали на дневника, %v за номера на тома, %i за номера "
+"на изданието/списанието, %Y за годината, %a за идентификатора на статията в "
+"OJS, %g за идентификатора на OJS типографията, %f за идентификатора на файла "
+"OJS , %p за номера на страницата и %x за \"Персонализиран идентификатор\"."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Суфиксът DOI може да има всякаква форма, но трябва да е уникален сред всички "
+"обекти на публикуване със същия префикс DOI:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Суфикс DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "Префиксът DOI е задължителен и трябва да бъде във формат 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Префиксът DOI се определя от регистрационните агенции за DOI  (например <a "
+"href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) е във формат "
+"10.xxxx (например 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "DOI Префикс"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Типографии"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Статии"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Броеве"
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr ""
+"Моля, изберете обектите за публикуване, на които ще бъдат присвоени "
+"идентификатори на цифрови обекти Digital Object Identifiers (DOI):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Моля, изберете обектите, на които трябва да бъдат присвоени DOI."
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Съдържание на списанието (DOI обекти)"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr ""
+"Моля, конфигурирайте DOI плъгина, за да може да се управлява и използва DOI "
+"в OJS:"
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI модул"
+
+msgid "plugins.pubIds.doi.description"
+msgstr ""
+"Тази приставка позволява присвояването на идентификаторите на цифрови обекти "
+"към броеве, статии и типографии в OJS."
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI модул"
