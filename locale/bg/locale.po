@@ -1,8 +1,735 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-08-30 09:07+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/bg/"
+">\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Коректурата е завършена"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Файлът с редакция на коректора на изпратените материали е актуализиран"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Започната е процедурата за коректура на изпратените материали"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Премахната асоцииация за коректор за изпратените материали"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Коректор е асоцииран за изпратените материали"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Файлът на стиловия редактор за изпратените материали е актуализиран"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Окончателната стилова редакция е завършена"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Първоначалната стилова редакция е завършена"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr ""
+"Файлът с редакция на стиловия редактор за изпратените материали е "
+"актуализиран"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Започната е процедурата за стилова редакция за изпратените материали"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Премахната асоцииация за стилов редактор за изпратените материали"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Стилов редактор е асоцииран за изпратените материали"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Материалите са възстановени от архив"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Материалите са изпратени в архив"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Редакторският файл е актуализиран"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Редакторското решение е изпратено"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Премахната асоцииация на редактор за изпратените материали"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Асоцииран е редактор за изпратените материали"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Актуализиран е файлът с редакция от автора"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Подадена е редакция от автора"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Статията е публикувана"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Материалите са асоциирани към  конкретен брой на списанието"
+
+msgid "submission.event.general.issueScheduled"
+msgstr ""
+"Материалите са изпратени в опашката за планиране и публикуване на следващ "
+"брой"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Статията е изпратена"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Събитие при подаване на информация"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Бележка:</strong>Институционалните абонаменти, закупени онлайн, "
+"изискват одобрение на домейна и IP адресите, от които ще бъде достъпвано "
+"съдържанието, преди абонаментът да бъде активиран."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Институционалните абонаменти не изискват вход. Домейнът и/или IP адресът на "
+"потребителя се използва за осигуряване на достъп до абонаментно съдържание."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Отделните (лични, а не институционални) абонаменти изискват вход за достъп "
+"до съдържанието на абонамента."
+
+msgid "subscriptions.status.other"
+msgstr "Други, вижте забележките"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Нямате активен абонамент."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Очаква автоматично (онлайн) плащане"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Изчаква ръчно плащане"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Трябва одобрение"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Трябва допълнителна информация"
+
+msgid "subscriptions.status.active"
+msgstr "Активен"
+
+msgid "subscriptions.status"
+msgstr "Статус"
+
+msgid "subscriptions.inactive"
+msgstr "Неактивен"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Печатен и Онлайн"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Печатен"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Онлайн"
+
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Безсрочен"
+
+msgid "subscriptionTypes.months"
+msgstr "месеци"
+
+msgid "subscriptionTypes.month"
+msgstr "месец"
+
+msgid "subscriptionTypes.years"
+msgstr "години"
+
+msgid "subscriptionTypes.year"
+msgstr "година"
+
+msgid "subscriptionTypes.currency"
+msgstr "Валута"
+
+msgid "issue.return"
+msgstr "Обратно към подробностите за броя"
+
+msgid "issue.viewIssue"
+msgstr "Виж броя"
+
+msgid "issue.nonpdf.title"
+msgstr "Свали броя"
+
+msgid "issue.fullIssue"
+msgstr "Целият брой на списанието"
+
+msgid "issue.coverPage.altText"
+msgstr "Заглавна страница (обложка)"
+
+msgid "issue.abstract"
+msgstr "Абстракт"
+
+msgid "issue.toc"
+msgstr "Съдържание"
+
+msgid "issue.noIssues"
+msgstr "Няма броеве"
+
+msgid "issue.year"
+msgstr "Година"
+
+msgid "issue.no"
+msgstr "Бр."
+
+msgid "issue.vol"
+msgstr "Т."
+
+msgid "issue.number"
+msgstr "Брой (номер)"
+
+msgid "issue.volume"
+msgstr "Том"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Преглед {$identification}"
+
+msgid "issue.title"
+msgstr "Заглавие"
+
+msgid "issue.issues"
+msgstr "Броеве"
+
+msgid "issue.issue"
+msgstr "Брой"
+
+msgid "user.role.journalAssistants"
+msgstr "Асистенти на списанието"
+
+msgid "user.role.journalAssistant"
+msgstr "Асистент на списанието"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Отговорници за абонаментите"
+
+msgid "user.role.subEditors"
+msgstr "Редактори на раздели"
+
+msgid "user.role.managers"
+msgstr "Раководители на списанието"
+
+msgid "user.role.subscriptionManager"
+msgstr "Отговорник за абонаментите"
+
+msgid "user.role.subEditor"
+msgstr "Редактор на раздела (секцията)"
+
+msgid "user.role.manager"
+msgstr "Раководител (мединжър) на списанието"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Регистрация като рецензент: Регистрацията на рецензенти понастоящем е "
+"деактивирана."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Регистрация като рецензент"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Изпращане на статия: Регистрацията на автори в момента е деактивирана."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Подайте предложение"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Понастоящем вашият акаунт няма асоциирани никакви роли за това списание. "
+"Моля, изберете от действията по -долу:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Понастоящем вашият акаунт не е свързан с никакви списания. Моля, изберете "
+"списание:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Управление на абонаментите"
+
+msgid "user.myJournals"
+msgstr "Моите списания"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Ако сте поискали да бъдете рецензент на някое списание, моля, въведете "
+"интересите си."
+
+msgid "user.register.otherContextRoles"
+msgstr "Искане за следните роли."
+
+msgid "user.register.contextsPrompt"
+msgstr "В кои списания на този сайт бихте искали да се регистрирате?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Да, бих могъл да отговоря и можете да се свържете с мен за преглед на "
+"изпращани материали в това списание."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Да, заявете ролята {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr ""
+"Можете ли да прегледате за рецензия изпратените материали в това списание?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Регистрация за други списания"
+
+msgid "user.showAllJournals"
+msgstr "Показва моите списания"
+
+msgid "user.profile.profileImage"
+msgstr "Изображение на профила"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Включване на потребители без назначени роли в това списание."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Търсената типография не можа да бъде намерена."
+
+msgid "journal.viewAllIssues"
+msgstr "Виж всички броеве"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Списание"
+
+msgid "journal.path"
+msgstr "Път"
+
+msgid "context.contexts"
+msgstr "Списания"
+
+msgid "journal.currentIssue"
+msgstr "Текущ брой"
+
+msgid "submission.search"
+msgstr "Търсене на статия"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Коректурата е преминала"
+
+msgid "submissions.layoutComplete"
+msgstr "Оформлението е редактирано"
+
+msgid "submissions.copyeditComplete"
+msgstr "Преминал стилово редактиране"
+
+msgid "submission.eventLog"
+msgstr "Дневник на събитията (Event Log)"
+
+msgid "submissions.editorRuling"
+msgstr "Решение на редактора"
+
+msgid "submissions.editorDecision"
+msgstr "Решение на редактора"
+
+msgid "submissions.proof"
+msgstr "Кор"
+
+msgid "submissions.reviewRound"
+msgstr "Кръг (цикъл) на рецензиране"
+
+msgid "submissions.postAuthor"
+msgstr "След автора"
+
+msgid "submissions.initialProof"
+msgstr "Начална коректура"
+
+msgid "submissions.proofread"
+msgstr "Коректура"
+
+msgid "submissions.initial"
+msgstr "Начално"
+
+msgid "submissions.published"
+msgstr "Публикуван"
+
+msgid "submissions.queuedReview"
+msgstr "В процес на рецензия"
+
+msgid "submissions.step3"
+msgstr "Стъпка 3"
+
+msgid "submissions.step1"
+msgstr "Стъпка 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "Ще бъде планирано по-късно"
+
+msgid "submission.scheduledIn"
+msgstr "Планирано за публикуване в {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Планиране"
+
+msgid "submission.proofreading"
+msgstr "Коректура"
+
+msgid "submission.copyedit"
+msgstr "Лит.Ред"
+
+msgid "submission.copyediting"
+msgstr "Стилово редактиране"
+
+msgid "submission.authorVersion"
+msgstr "Версия на автора"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Преработена версия на файла от страна на автора"
+
+msgid "submission.editorVersion"
+msgstr "Версия на редактора"
+
+msgid "submission.postReviewVersion"
+msgstr "Версия на файла след рецензия"
+
+msgid "submission.reviewersVersion"
+msgstr "Анотирана версия на файла на рецензента"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Редактор/Автор имейл кореспонденция"
+
+msgid "submission.notifyEditor"
+msgstr "Уведомяване на редактора"
+
+msgid "submission.notifyAuthor"
+msgstr "Уведомяване на автора"
+
+msgid "submission.editorReview"
+msgstr "Рецензия/Мнение на редактора"
+
+msgid "submission.round"
+msgstr "Кръг (цикъл)&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Решение на редактора"
+
+msgid "submission.sent"
+msgstr "Изпратено"
+
+msgid "submission.changeSection"
+msgstr "Промени на"
+
+msgid "submission.submissionEditing"
+msgstr "Редактиране на изпратения материал"
+
+msgid "category.category"
+msgstr "Категории"
+
+msgid "article.return"
+msgstr "Връщане към подробностите за статията"
+
+msgid "article.fontSize.large.altText"
+msgstr "Голям"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Среден"
+
+msgid "article.fontSize.small.altText"
+msgstr "Малък"
+
+msgid "article.fontSize"
+msgstr "Размер на шрифта"
+
+msgid "article.comments.enable"
+msgstr "Активиране (включване)"
+
+msgid "article.comments.disable"
+msgstr "Деактивиране (изключване)"
+
+msgid "article.comments.sectionDefault"
+msgstr "По подразбиране"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ограничен достъп"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Отворен достъп"
+
+msgid "article.coverPage.altText"
+msgstr "Изображение на обложката"
+
+msgid "article.abstract"
+msgstr "Абстракт"
+
+msgid "article.details"
+msgstr "Детайли"
+
+msgid "article.submissions"
+msgstr "Изпратени материали"
+
+msgid "article.submission"
+msgstr "Изпратен материал"
+
+msgid "article.commentsToEditor"
+msgstr "Авторски коментари"
+
+msgid "article.sectionEditor"
+msgstr "РР"
+
+msgid "article.language"
+msgstr "Език"
+
+msgid "article.type"
+msgstr "Тип, метод или подход"
+
+msgid "article.coverage"
+msgstr "Обхват"
+
+msgid "article.subject"
+msgstr "Ключови думи"
+
+msgid "article.discipline"
+msgstr "Академична дисциплина и поддисциплини"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Доп. файлове"
+
+msgid "article.suppFiles"
+msgstr "Допълнителни файлове"
+
+msgid "article.suppFile"
+msgstr "Допълнителен файл"
+
+msgid "article.file"
+msgstr "Файл"
+
+msgid "article.journalSection"
+msgstr "Раздел на списанието"
+
+msgid "article.metadata"
+msgstr "Метаданни"
+
+msgid "article.indexingInformation"
+msgstr "Информация за индексиране"
+
+msgid "article.authors"
+msgstr "Автори"
+
+msgid "article.title"
+msgstr "Заглавие"
+
+msgid "article.submissionId"
+msgstr "ID на изпратен материал"
+
+msgid "common.publications"
+msgstr "Статии"
+
+msgid "common.publication"
+msgstr "Статия"
+
+msgid "article.articles"
+msgstr "Статии"
+
+msgid "article.article"
+msgstr "Статия"
+
+msgid "section.policy"
+msgstr "Правила на раздела"
+
+msgid "section.abbreviation.example"
+msgstr "(Например, Статии=СТА)"
+
+msgid "section.abbreviation"
+msgstr "Абревиатура на раздела"
+
+msgid "section.title"
+msgstr "Заглавие на раздела"
+
+msgid "section.sections"
+msgstr "Раздели (Секции)"
+
+msgid "section.section"
+msgstr "Раздел (Секция)"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Назначени редактори"
+
+msgid "common.queue.short.completed"
+msgstr "Архив"
+
+msgid "common.queue.long.completed"
+msgstr "Архив"
+
+msgid "common.queue.short.active"
+msgstr "Активни"
+
+msgid "common.queue.long.active"
+msgstr "Активни"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архиви"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архиви"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "В рецензиране"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Материали в процес на рецензиране"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "В редакция"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Материали в процес на редакция"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Не е присвоено"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Не е присвоено"
+
+msgid "navigation.skip.issue"
+msgstr "Преминаване към текущия брой"
+
+msgid "navigation.skip.about"
+msgstr "Преминаване към информацията за списанието"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Информация за библиотекари"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Информация за автори"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Ръководство за полълване на Декларация за конфликт на интереси"
+
+msgid "navigation.infoForLibrarians"
+msgstr "За библиотекари"
+
+msgid "navigation.infoForAuthors"
+msgstr "За автори"
+
+msgid "navigation.browseByAuthor"
+msgstr "По автор"
+
+msgid "navigation.browseByIssue"
+msgstr "По брой"
+
+msgid "navigation.otherJournals"
+msgstr "Други списания"
+
+msgid "navigation.current"
+msgstr "Текущ"
+
+msgid "navigation.journalHelp"
+msgstr "Помощна информация към списанието"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Изображение на началната страница на списанието"
+
+msgid "common.homePageHeader.altText"
+msgstr "Заглавие на началната страница"
+
+msgid "common.payments"
+msgstr "Плащания"
+
+msgid "common.payment"
+msgstr "Плащане"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Наистина ли искате да маркирате тази задача като завършена? Възможно е след "
+"това да не успеете да направите промени."
+
+msgid "common.software"
+msgstr "Системи за отворени списания (Open Journal Systems)"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Моля, попълнете задължителните полета."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Щракнете върху иконата, за да попълните формуляра за рецензия."
+
+msgid "navigation.categories.browse"
+msgstr "Преглед"
+
+msgid "navigation.categories"
+msgstr "Категории"
+
+msgid "context.select"
+msgstr "Превключване към друго списание:"
+
+msgid "context.current"
+msgstr "Текущо списание:"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Това списание не публикува съдържанието си онлайн."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS Версия {$version}</h4>\n"
+"\n"
+"<p>Благодарим ви, че изтеглихте Public Knowledge Project's <strong>Open "
+"Journal Systems</strong>. Преди да продължите, моля, прочетете <a href=\""
+"{$baseUrl}/docs/README.md\">README</a> файлът , включен в този софтуер. За "
+"повече информация относно Проекта за обществени знания (Public Knowledge "
+"Project) и неговите софтуерни проекти, моля, посетете <a href=\""
+"http://pkp.sfu.ca/\" target=\"_blank\">сайта на PKP</a>. Ако имате отчети за "
+"грешки (bugs) или запитвания за техническа поддръжка относно Open Journal "
+"Systems, вижте <a href=\"http://forum.pkp.sfu.ca\" target=\"_blank\">форум "
+"за поддръжка</a> или посетете PKP's online <a href=\"https://github.com/pkp/"
+"pkp-lib#issues\" target=\"_blank\">системата за рапортуване на грешки</a>. "
+"Въпреки че форумът за поддръжка е предпочитаният метод за контакт, можете "
+"също да изпратите имейл до екипа на адрес <a href=\"mailto:pkp.contact@gmail."
+"com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Препоръчителни системни изисквания </h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; в момента използвате PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
+" 9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x или Microsoft IIS 6</li>\n"
+"\t<li>Операционна система: Всяка операционна система, която поддържа горния "
+"софтуер, включително  <a href=\"http://www.linux.org/\" target=\"_blank\""
+">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a "
+"href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\""
+"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"http://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Тъй като PKP няма ресурси да тества всяка възможна комбинация от "
+"софтуерни версии и платформи, не се предполага никаква гаранция за правилна "
+"работа или поддръжка.</p>\n"
+"\n"
+"<p>Промените в тези настройки могат да бъдат направени след инсталиране чрез "
+"редактиране на файла <tt>config.inc.php</tt> в базовата директория OJS или "
+"чрез уеб интерфейса за администриране на сайта.</p>\n"
+"\n"
+"<h4>Поддържани системи за бази данни</h4>\n"
+"\n"
+"<p>OJS в момента е тестван само на MySQL и PostgreSQL, въпреки че други "
+"системи за управление на бази данни се поддържат от <a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> може да работи ("
+"изцяло или частично). Доклади за съвместимост и/или кодови корекции за "
+"алтернативни СУБД могат да се изпращат на екипа на OJS. </p>\n"
