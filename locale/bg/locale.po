@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-30 11:06+0000\n"
+"PO-Revision-Date: 2021-08-30 20:56+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/bg/"
 ">\n"
@@ -925,3 +925,425 @@ msgstr ""
 
 msgid "submission.event.layout.layoutEditorAssigned"
 msgstr "Редактор на оформлението е асоцииран за изпратените материали"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Няма (Качете окончателната стилово коригирана версия като версия за оформяне "
+"преди изпращане на заявка)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Инструкции за стилова редакция"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Коментари към стиловата редакция"
+
+msgid "submission.copyedit.useFile"
+msgstr "Използване на файл"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Асоцииране на стилов редактор"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Версия за стилово редактиране"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Окончателно стилово редактиране"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Стилово редактиране на автора"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Стилово редактиране на редактора"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Първоначално стилово редактиране"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Имейлът с искане не може да бъде изпратен, докато не бъде качен файлът за "
+"стилово редактиране."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Имейл с искане не може да бъде изпратен, докато не бъде избран файл за "
+"стилово редактиране в раздел \"Решение на редактора\" от страницата \""
+"Рецензиране\"."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Имейлът с искане не може да бъде изпратен, докато не е добавен файл с "
+"резензирана версия."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>За да качите ръкопис в това списание, изпълнете следните стъпки.</p>\n"
+"<ol>\n"
+"<li>На тази страница щракнете върху Преглед (Browse) (или Избор на файл("
+"Choose File)), който отваря прозорец \"Избор на файл за локализиране на "
+"файла на твърдия диск на вашия компютър\". </li>\n"
+"<li>Намерете файла, който искате да изпратите, и го маркирайте .</li>\n"
+"<li>Щракнете върху Отвори (Open) в прозореца \"Избор на файл\", който "
+"поставя името на файла на тази страница .</li>\n"
+"<li>Щракнете върху Качване (Upload) на тази страница, което качва файла от "
+"компютъра ви на уебсайта на списанието и го преименува, следвайки "
+"конвенциите на списанието. </li>\n"
+"<li>След като качването е изпратено, щракнете върху Запазване и продължаване "
+"(Save and Continue) в долната част на тази страница. </li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Няма задачи за коректор"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Файл на стилистичния редактор"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Файл на стилистичния редактор"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Файл за стилистично редактиране"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"След като сте записали вашето решение, вече няма да можете да правите "
+"промени. Сигурни ли сте, че искате да продължите?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Не е избрана препоръка. Трябва да изберете препоръка, която да изпратите."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Задайте или коригирайте препоръката на рецензента."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Изберете препоръка и изпратете резензията, за да завършите процеса. Трябва "
+"да въведете рецензията или да качите файл, преди да изберете препоръка."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Освен това можете да качвате файлове, с които редакторът и/или авторът да се "
+"консултират."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Щракнете върху иконата, за да въведете (или поставите) своята рецензия на "
+"предоставения материал."
+
+msgid "reviewer.competingInterests"
+msgstr "Конкурентни интереси"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Декларирайте дали имате конкурентни интереси по отношение на това "
+"изследване  (see <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Ръководство за попълване на Декларация "
+"за конфликт на интереси</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Кликнете върху имената на файловете, за да изтеглите и прегледате (на екрана "
+"или чрез отпечатване) файловете, свързани с този материал."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Ако ще правите рецензия, моля, консултирайте се с Насоките за рецензенти "
+"по-долу."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "ще прегледате и съответно изготвите рецензия."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Известяване на редактора на изпратения материал"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Насоките/Ръководството за рецензиране ще предоставят на рецензентите "
+"критерии за преценка на годността на даден материал за публикуване в "
+"списанието и могат да включват всякакви специални инструкции за изготвяне на "
+"ефективна и полезна рецензия. При провеждането на рецензията рецензентите се "
+"представят с две отворени текстови полета, първото „за автор и редактор“, а "
+"второто „за редактор“. Като алтернатива, мениджърът на списанието може да "
+"създаде формуляр за резинзии под \"Форми за резензии\". Във всички случаи "
+"редакторите ще имат възможност да включат рецензиите в кореспонденцията си с "
+"автора."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Ръководство за рецензенти"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Стъпки за рецензиране"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "График за рецензиране"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Изпратеният материал следва да се рецензира"
+
+msgid "reviewer.article.schedule"
+msgstr "Разписание"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Виж коментарите"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Отказ за публикуване на изпратените материали"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Повторно изпращане на друго място"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Повторно изпращане за рецензия"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Необходима е доработка и ревизия"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Приемане на изпратените материали"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Срок за рецензия"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Рецензията е изпратена"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Вашият отговор"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Молба на редактора"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Ако искате да анотирате файла, за редактора, запишете на вашия твърд диск и "
+"използвайте Browse/Upload.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Версия, качена от рецензента"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Качени файлове"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Коментари"
+
+msgid "reviewer.article.submitReview"
+msgstr "Изпраща рецензията към редактора"
+
+msgid "reviewer.article.recommendation"
+msgstr "Препоръка"
+
+msgid "reviewer.article.automatic"
+msgstr "(Автоматичен)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Изпраща подсещане"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "За редакция"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Въведете или поставете рецензионните коментари тук"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Редактор на изпратения материал"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Подаването на материали ще бъде достъпно, ако и когато рецензентът се "
+"съгласи да извърши преглед"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Нямам възможност да направя рецензията"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Съгласявам се да направя рецензията"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Уведоми редактора"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Файл, който трябва да се рецензира"
+
+msgid "reviewer.averageQuality"
+msgstr "Оценка"
+
+msgid "reviewer.completedReviews"
+msgstr "Завършено"
+
+msgid "reviewer.pendingReviews"
+msgstr "Материали очакващи рецензия"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL адрес на отдалечено хоствано съдържание"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Това оформление ще бъде достъпно като отделен уебсайт."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Невалиден формат на изображението. Допустимите формати са .gif, .jpg и .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Качване на допълнителен файл"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Замяна на файл"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Качване на типографски формат"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Активни задания за редактор на оформлението"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Няма активни редакционни задания (асоциации с редактор)."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Завършени редакционни задания (асоциации с редактор)"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Активни редакционни задания (асоциации с редактор)"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Създаване на нов рецензент"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Регистриране на съществуващ потребител като рецензент"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Резултат"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Отказ"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Отказ на рецензента и отмяна"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Редакторско решение, Етап {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Рецензиране, Етап {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Преглед на рецензензионен отказ, отмяна и по-ранни етапи на редакция"
+
+msgid "sectionEditor.regrets"
+msgstr "Отказ"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Рецензензионен отказ, отмяна и по-ранни етапи на редакция"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Отказ"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Новото уведомяване на коректора ще рестартира заданието му. Сигурни ли сте, "
+"че искате да направите това?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Новото уведомяване на редактор на оформление ще рестартира заданието му. "
+"Сигурни ли сте, че искате да направите това?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Новото уведомяване на автора ще рестартира заданието му. Сигурни ли сте, че "
+"искате да направите това?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Новото уведомяване на стиловия редактор ще рестартира заданието му. Сигурни "
+"ли сте, че искате да направите това?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Няма асоциирани материали."
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Завършени редакционни задачи"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Активни редакционни задачи"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Маркираните елементи показват, че е необходимо действие от редактор, "
+"обозначен както следва :\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Изисква се действие на етапа на "
+"стилова редакция</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Изисква се действие на етапа на "
+"редакция на оформление</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Изисква се действие на етапа на "
+"коректура</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Маркираните елементи показват, че е необходимо действие от редактор, "
+"обозначен както следва :\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Рецензент е асоцииран, но "
+"не е уведомен по имейл </li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Всички рецензенти са върнали "
+"коментарите си, но не е записано решение </li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Авторът е качил преработен "
+"ръкопис</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Рецензентът е "
+"закъснял да потвърди поканата да направи рецензия</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Рецензентът е "
+"закъснял да завърши рецензията</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>„Срок“ се попълва, когато рецензентът приеме искането да направи "
+"рецензия; показва броя на седмиците за преразглеждане или (-) седмици, "
+"когато е просрочен. </li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"За съжаление нямате административни права над този потребител. Това може да "
+"се дължи на:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Потребителят е администратор на сайта </li>\n"
+"\t\t\t<li>Потребителят е активен в списания, които не управлявате </li>\n"
+"\t\t</ul>\n"
+"\tТази задача трябва да бъде изпълнена от администратора на сайта.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Деактивиране на този потребител? Това ще попречи на потребителя да влезе в "
+"системата.\n"
+"\n"
+"По желание можете да предоставите на потребителя причина за деактивиране на "
+"неговия акаунт."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>За да се даде възможност на читателите да намерят онлайн версии на "
+"произведението, цитирани от съответния автор, са налични следните опции. </p>"
+"\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Добавяне на инструмент за четене </strong><p>Мениджърът на "
+"списанието може да добави \"Търсене на референции\" като допълнителен "
+"инструмент в инструментите за четене, които придружават публикуваните "
+"статии, което позволява на читателите да поставят заглавието на референцията "
+"като препратка и след това да търсят в предварително избрани научни бази "
+"данни за цитираната работа. </p></li>\n"
+"\t<li><strong>Вграждане на връзки в препратките </strong><p>Редакторът на "
+"оформлението може да добави връзка към препратки, които могат да бъдат "
+"намерени онлайн, като се използват следните инструкции (които могат да бъдат "
+"редактирани).</p></li>\n"
+"</ol>"
