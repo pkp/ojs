@@ -1,9 +1,10 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
+"PO-Revision-Date: 2021-08-31 10:33+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "tr_TR/>\n"
@@ -433,3 +434,9 @@ msgstr "Yayın Sürümü"
 
 msgid "issues.submissions.issueIds"
 msgstr "Atanan Sayı"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Silmek istediğiniz kapak resmi, farklı bir derginin sayısıyla eşleşiyor. "
+"Lütfen doğru dergi için çalıştığınızdan ve doğru sayıyı seçtiğinizden emin "
+"olun ve tekrar deneyin."
