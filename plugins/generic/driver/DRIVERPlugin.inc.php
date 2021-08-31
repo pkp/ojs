@@ -147,12 +147,11 @@ class DRIVERPlugin extends GenericPlugin
         // if the article is alive
         if (!isset($row['tombstone_id'])) {
             $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
             $journal = $journalDao->getById($row['journal_id']);
             $submission = Repo::submission()->get($row['submission_id']);
             $publication = $submission->getCurrentPublication();
-            $issue = $issueDao->getById($publication->getData('issueId'));
+            $issue = Repo::issue()->get($publication->getData('issueId'));
 
             // is open access
             $status = '';
@@ -200,12 +199,11 @@ class DRIVERPlugin extends GenericPlugin
     public function isDRIVERArticle($journalId, $articleId)
     {
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
 
         $journal = $journalDao->getById($journalId);
         $submission = Repo::submission()->get($articleId);
         $publication = $submission->getCurrentPublication();
-        $issue = $issueDao->getById($publication->getData('issueId'));
+        $issue = Repo::issue()->get($publication->getData('issueId'));
 
         // is open access
         $status = '';

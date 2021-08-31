@@ -118,7 +118,6 @@ class Application extends PKPApplication
             'AuthorDAO' => 'APP\article\AuthorDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
             'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
-            'IssueDAO' => 'APP\issue\IssueDAO',
             'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',
             'IssueFileDAO' => 'APP\issue\IssueFileDAO',
             'JournalDAO' => 'APP\journal\JournalDAO',

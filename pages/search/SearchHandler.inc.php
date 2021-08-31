@@ -258,7 +258,6 @@ class SearchHandler extends Handler
             $sections = [];
             $issuesUnavailable = [];
 
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
             $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
             $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
@@ -273,7 +272,7 @@ class SearchHandler extends Handler
                 }
                 if (!isset($issues[$issueId])) {
                     import('classes.issue.IssueAction');
-                    $issue = $issueDao->getById($issueId);
+                    $issue = Repo::issue()->get($issueId);
                     $issues[$issueId] = $issue;
                     $issueAction = new IssueAction();
                     $issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue, $journals[$journalId]) && (!$issueAction->subscribedUser($user, $journals[$journalId], $issueId, $articleId) && !$issueAction->subscribedDomain($request, $journals[$journalId], $issueId, $articleId));

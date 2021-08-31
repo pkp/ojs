@@ -16,6 +16,7 @@
 
 namespace APP\components\forms\publication;
 
+use APP\facades\Repo;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
 
@@ -55,7 +56,7 @@ class PublishForm extends FormComponent
             $msg = __('publication.publish.confirmation');
             $submitLabel = __('publication.publish');
             if ($publication->getData('issueId')) {
-                $issue = \Services::get('issue')->get($publication->getData('issueId'));
+                $issue = Repo::issue()->get($publication->getData('issueId'));
                 if ($issue) {
                     if ($issue->getData('published')) {
                         $msg = __('publication.publish.confirmation.backIssue', ['issue' => $issue->getIssueIdentification()]);

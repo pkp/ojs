@@ -26,8 +26,8 @@ namespace APP\submission;
 use APP\core\Application;
 use APP\core\Services;
 
+use APP\facades\Repo;
 use APP\i18n\AppLocale;
-use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 
 class Submission extends PKPSubmission
@@ -93,8 +93,7 @@ class Submission extends PKPSubmission
                         case 'issue':
                             if ($publication->getData('issueId')) {
                                 // override to the issue's year if published as issue-based
-                                $issueDao = & DAORegistry::getDAO('IssueDAO');
-                                $issue = $issueDao->getBySubmissionId($this->getId());
+                                $issue = Repo::issue()->get($publication->getData('issueId'));
                                 if ($issue && $issue->getDatePublished()) {
                                     $fieldValue = date('Y', strtotime($issue->getDatePublished()));
                                 }

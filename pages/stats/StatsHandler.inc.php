@@ -15,6 +15,7 @@
 
 import('lib.pkp.pages.stats.PKPStatsHandler');
 
+use APP\facades\Repo;
 use APP\statistics\StatisticsHelper;
 use APP\template\TemplateManager;
 
@@ -92,8 +93,7 @@ class StatsHandler extends PKPStatsHandler
 
         switch ($assocType) {
             case ASSOC_TYPE_ISSUE:
-                $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                $issue = $issueDao->getById($assocId);
+                $issue = Repo::issue()->get($assocId);
                 if ($issue) {
                     $objectTitle = $issue->getIssueIdentification();
                 }

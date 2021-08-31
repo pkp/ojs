@@ -15,6 +15,7 @@
  * @brief Form to edit an issue's access settings
  */
 
+use APP\facades\Repo;
 use APP\issue\Issue;
 
 use APP\template\TemplateManager;
@@ -88,7 +89,6 @@ class IssueAccessForm extends Form
     {
         $journal = Application::get()->getRequest()->getJournal();
 
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : Issue::ISSUE_ACCESS_OPEN);
         if ($openAccessDate = $this->getData('openAccessDate')) {
             $this->_issue->setOpenAccessDate($openAccessDate);
@@ -97,7 +97,7 @@ class IssueAccessForm extends Form
         }
 
         HookRegistry::call('IssueAccessForm::execute', [$this, $this->_issue]);
-        $issueDao->updateObject($this->_issue);
+        Repo::issue()->edit($this->_issue, []);
         parent::execute(...$functionArgs);
     }
 }

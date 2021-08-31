@@ -253,7 +253,6 @@ class ArticleSearch extends SubmissionSearch
      */
     public function formatResults($results, $user = null)
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $contextDao = Application::getContextDAO();
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
 
@@ -290,7 +289,7 @@ class ArticleSearch extends SubmissionSearch
                 // Get the issue, storing in cache if necessary.
                 $issueId = $publishedSubmission->getCurrentPublication()->getData('issueId');
                 if (!isset($issueCache[$issueId])) {
-                    $issue = $issueDao->getById($issueId);
+                    $issue = Repo::issue()->get($issueId);
                     $issueCache[$issueId] = $issue;
                     import('classes.issue.IssueAction');
                     $issueAction = new IssueAction();

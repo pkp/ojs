@@ -418,7 +418,7 @@ class URNPubIdPlugin extends PubIdPlugin
                 $fieldData['pages'] = $form->publication->getData('pages');
             }
             if ($form->publication->getData('issueId')) {
-                $issue = Services::get('issue')->get($form->publication->getData('issueId'));
+                $issue = Repo::issue()->get($form->publication->getData('issueId'));
                 if ($issue) {
                     $fieldData['issueNumber'] = $issue->getNumber() ?? '';
                     $fieldData['issueVolume'] = $issue->getVolume() ?? '';

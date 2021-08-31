@@ -13,6 +13,8 @@
  * @brief Handle exportable representations with pub ids list grid requests.
  */
 
+use APP\facades\Repo;
+use APP\issue\Collector;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
@@ -206,9 +208,11 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
     public function renderFilter($request, $filterData = [])
     {
         $context = $request->getContext();
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issuesIterator = $issueDao->getPublishedIssues($context->getId());
-        $issues = $issuesIterator->toArray();
+        $publishedIssuesCollector = Repo::issue()->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByPublished(true)
+            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+        $issues = Repo::issue()->getMany($publishedIssuesCollector);
         foreach ($issues as $issue) {
             $issueOptions[$issue->getId()] = $issue->getIssueIdentification();
         }

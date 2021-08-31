@@ -14,19 +14,25 @@
  *
  */
 
-use APP\core\Services;
+use APP\facades\Repo;
+use APP\issue\Collector;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-use PKP\db\DAORegistry;
 
 use PKP\handler\APIHandler;
+use PKP\plugins\HookRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
-
 use PKP\security\Role;
 
 class IssueHandler extends APIHandler
 {
+    /** @var int The default number of issues to return in one request */
+    public const DEFAULT_COUNT = 20;
+
+    /** @var int The maximum number of issues to return in one request */
+    public const MAX_COUNT = 100;
+
     /**
      * Constructor
      */
@@ -93,6 +99,10 @@ class IssueHandler extends APIHandler
      */
     public function getMany($slimRequest, $response, $args)
     {
+        $collector = Repo::issue()->getCollector()
+            ->limit(self::DEFAULT_COUNT)
+            ->offset(0);
+
         $request = $this->getRequest();
         $currentUser = $request->getUser();
         $context = $request->getContext();
@@ -101,37 +111,24 @@ class IssueHandler extends APIHandler
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $defaultParams = [
-            'count' => 20,
-            'offset' => 0,
-        ];
-
-        $requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
-
-        $params = [];
-
         // Process query params to format incoming data as needed
-        foreach ($requestParams as $param => $val) {
+        foreach ($slimRequest->getQueryParams() as $param => $val) {
             switch ($param) {
 
                 case 'orderBy':
-                    if (in_array($val, ['datePublished', 'lastModified', 'seq'])) {
-                        $params[$param] = $val;
+                    if (in_array($val, [Collector::ORDERBY_DATE_PUBLISHED, Collector::ORDERBY_LAST_MODIFIED, Collector::ORDERBY_SEQUENCE])) {
+                        $collector->orderBy($val);
                     }
-                    break;
-
-                case 'orderDirection':
-                    $params[$param] = $val === 'ASC' ? $val : 'DESC';
                     break;
 
                 // Enforce a maximum count to prevent the API from crippling the
                 // server
                 case 'count':
-                    $params[$param] = min(100, (int) $val);
+                    $collector->limit(min((int) $val, self::MAX_COUNT));
                     break;
 
                 case 'offset':
-                    $params[$param] = (int) $val;
+                    $collector->offset((int) $val);
                     break;
 
                 // Always convert volume, number and year values to array
@@ -152,47 +149,50 @@ class IssueHandler extends APIHandler
                     } elseif (!is_array($val)) {
                         $val = [$val];
                     }
-                    $params[$param] = array_map('intval', $val);
+                    $values = array_map('intval', $val);
+                    switch ($param) {
+                        case 'volumes':
+                            $collector->filterByVolumes($values);
+                            break;
+                        case 'numbers':
+                            $collector->filterByNumbers($values);
+                            break;
+                        case 'years':
+                            $collector->filterByYears($values);
+                            break;
+                    }
+
                     break;
 
                 case 'isPublished':
-                    $params[$param] = $val ? true : false;
+                    $collector->filterByPublished((bool) $val);
                     break;
 
                 case 'searchPhrase':
-                    $params[$param] = $val;
+                    $collector->searchPhrase($val);
                     break;
             }
         }
 
-        $params['contextId'] = $context->getId();
+        $collector->filterByContextIds([$context->getId()]);
 
-        \HookRegistry::call('API::issues::params', [&$params, $slimRequest]);
+        HookRegistry::call('API::issues::params', [&$collector, $slimRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
         $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], \PKP\core\PKPApplication::CONTEXT_SITE);
-        if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
+        if (isset($collector->isPublished) && !$collector->isPublished && !$isAdmin) {
             return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
         } elseif (!$isAdmin) {
-            $params['isPublished'] = true;
+            $collector->filterByPublished(true);
         }
 
-        $items = [];
-        $issuesIterator = Services::get('issue')->getMany($params);
-        $propertyArgs = [
-            'request' => $request,
-            'slimRequest' => $slimRequest,
-        ];
-        foreach ($issuesIterator as $issue) {
-            $items[] = Services::get('issue')->getSummaryProperties($issue, $propertyArgs);
-        }
 
-        $data = [
-            'itemsMax' => Services::get('issue')->getMax($params),
-            'items' => $items,
-        ];
+        $issues = Repo::issue()->getMany($collector);
 
-        return $response->withJson($data, 200);
+        return $response->withJson([
+            'items' => Repo::issue()->getSchemaMap()->summarizeMany($issues),
+            'itemsMax' => Repo::issue()->getCount($collector->limit(null)->offset(null)),
+        ], 200);
     }
 
     /**
@@ -209,21 +209,12 @@ class IssueHandler extends APIHandler
         $request = $this->getRequest();
         $context = $request->getContext();
 
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
-        $issue = $issueDao->getCurrent($context->getId());
+        $issue = Repo::issue()->getCurrent($context->getId());
 
         if (!$issue) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
-
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        $userGroups = $userGroupDao->getByContextId($context->getId());
-
-        $data = Services::get('issue')->getFullProperties($issue, [
-            'request' => $request,
-            'slimRequest' => $slimRequest,
-            'userGroups' => $userGroups,
-        ]);
+        $data = Repo::issue()->getSchemaMap()->map($issue);
 
         return $response->withJson($data, 200);
     }
@@ -246,14 +237,7 @@ class IssueHandler extends APIHandler
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        $userGroups = $userGroupDao->getByContextId($request->getContext()->getId());
-
-        $data = Services::get('issue')->getFullProperties($issue, [
-            'request' => $request,
-            'slimRequest' => $slimRequest,
-            'userGroups' => $userGroups,
-        ]);
+        $data = Repo::issue()->getSchemaMap()->map($issue);
 
         return $response->withJson($data, 200);
     }

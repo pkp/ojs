@@ -18,6 +18,7 @@ namespace APP\plugins;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
+use APP\issue\Collector;
 use APP\issue\Issue;
 use APP\notification\NotificationManager;
 
@@ -53,13 +54,16 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                     $submissionEnabled = $this->isObjectTypeEnabled('Publication', $context->getId());
                     $representationEnabled = $this->isObjectTypeEnabled('Representation', $context->getId());
                     if ($issueEnabled) {
-                        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-                        $issues = $issueDao->getPublishedIssues($context->getId());
-                        while ($issue = $issues->next()) {
+                        $publishedIssuesCollector = Repo::issue()->getCollector()
+                            ->filterByContextIds([$context->getId()])
+                            ->filterByPublished(true)
+                            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+                        $issues = Repo::issue()->getMany($publishedIssuesCollector);
+                        foreach ($issues as $issue) {
                             $issuePubId = $issue->getStoredPubId($this->getPubIdType());
                             if (empty($issuePubId)) {
                                 $issuePubId = $this->getPubId($issue);
-                                $issueDao->changePubId($issue->getId(), $this->getPubIdType(), $issuePubId);
+                                Repo::issue()->dao->changePubId($issue->getId(), $this->getPubIdType(), $issuePubId);
                             }
                         }
                     }
@@ -121,11 +125,10 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
      */
     public function checkDuplicate($pubId, $pubObjectType, $excludeId, $contextId)
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         foreach ($this->getPubObjectTypes() as $type => $fqcn) {
             if ($type === 'Issue') {
                 $excludeTypeId = $type === $pubObjectType ? $excludeId : null;
-                if ($issueDao->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
+                if (Repo::issue()->dao->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
                     return false;
                 }
             }
@@ -185,8 +188,8 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         // Retrieve the issue.
         if (!$pubObject instanceof Issue) {
             assert(!is_null($submission));
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-            $issue = $issueDao->getBySubmissionId($submission->getId(), $contextId);
+            $issue = Repo::issue()->getBySubmissionId($submission->getId());
+            $issue = $issue->getJournalId() == $contextId ? $issue : null;
         }
         if ($issue && $contextId != $issue->getJournalId()) {
             return null;
@@ -341,7 +344,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
      */
     public function getDAOs()
     {
-        return array_merge(parent::getDAOs(), [DAORegistry::getDAO('IssueDAO')]);
+        return array_merge(parent::getDAOs(), [Repo::issue()->dao]);
     }
 }
 

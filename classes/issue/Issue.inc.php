@@ -15,7 +15,7 @@
  * @class Issue
  * @ingroup issue
  *
- * @see IssueDAO
+ * @see \APP\issue\DAO
  *
  * @brief Class for Issue.
  */
@@ -23,12 +23,13 @@
 namespace APP\issue;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\i18n\AppLocale;
 use PKP\core\Core;
 
-use PKP\db\DAORegistry;
 use PKP\i18n\PKPLocale;
+use PKP\submission\PKPSubmission;
 
 class Issue extends \PKP\core\DataObject
 {
@@ -166,26 +167,6 @@ class Issue extends \PKP\core\DataObject
     public function setPublished($published)
     {
         return $this->setData('published', $published);
-    }
-
-    /**
-     * get current
-     *
-     * @return int
-     */
-    public function getCurrent()
-    {
-        return $this->getData('current');
-    }
-
-    /**
-     * set current
-     *
-     * @param $current int
-     */
-    public function setCurrent($current)
-    {
-        return $this->setData('current', $current);
     }
 
     /**
@@ -640,8 +621,11 @@ class Issue extends \PKP\core\DataObject
      */
     public function getNumArticles()
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
-        return $issueDao->getNumArticles($this->getId());
+        $collector = Repo::submission()->getCollector()
+            ->filterByContextIds([$this->getData('journalId')])
+            ->filterByIssueIds([$this->getId()])
+            ->filterByStatus([PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED]);
+        return Repo::submission()->getCount($collector);
     }
 
     /**
@@ -671,9 +655,9 @@ class Issue extends \PKP\core\DataObject
     /**
      * @copydoc \PKP\core\DataObject::getDAO()
      */
-    public function getDAO()
+    public function getDAO(): DAO
     {
-        return DAORegistry::getDAO('IssueDAO');
+        return Repo::issue()->dao;
     }
 
     /**

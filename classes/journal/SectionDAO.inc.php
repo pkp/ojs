@@ -17,7 +17,6 @@
 
 namespace APP\journal;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use PKP\cache\CacheManager;
 use PKP\context\PKPSectionDAO;
@@ -392,7 +391,7 @@ class SectionDAO extends PKPSectionDAO
      */
     public function getByIssueId($issueId)
     {
-        $issue = Services::get('issue')->get($issueId);
+        $issue = Repo::issue()->get($issueId);
         $allowedStatuses = [PKPSubmission::STATUS_PUBLISHED];
         if (!$issue->getPublished()) {
             $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
