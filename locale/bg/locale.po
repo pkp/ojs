@@ -1,10 +1,10 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-31 10:33+0000\n"
+"PO-Revision-Date: 2021-09-01 01:52+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
-"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/bg/"
-">\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"bg_BG/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1460,3 +1460,493 @@ msgstr "Асоцииране на редактор на оформлението
 
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Публичния идентификатор на типографията вече съществува."
+
+msgid "payment.type.publication"
+msgstr "Такса за публикация"
+
+msgid "payment.type.submission"
+msgstr "Такса за изпращане на материали"
+
+msgid "payment.authorFees"
+msgstr "Авторски такси"
+
+msgid "payment.paymentSent"
+msgstr "Плащането вече е изпратено"
+
+msgid "payment.paymentReceived"
+msgstr "Плащането е получено"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Изберете това поле, ако вече сте изпратили плащането си до списанието, за да "
+"завършите процеса на подаване на материали. Изпратеното няма да бъде "
+"разгледано, докато не пристигне плащането. Кликнете \"Платете сега\" по-"
+"горе, за да видите инструкциите за плащане."
+
+msgid "payment.payNow"
+msgstr "Платете сега"
+
+msgid "payment.alreadyPaid"
+msgstr "Вече е платено"
+
+msgid "payment.waive"
+msgstr "Отмени плащане"
+
+msgid "payment.waived"
+msgstr "Отменено"
+
+msgid "payment.unpaid"
+msgstr "Неплатено"
+
+msgid "payment.paid"
+msgstr "Платено"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Трябва да сте влезли в системата, за да направите дарение."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"За достъп до тази статия е необходим абонамент или покупка на отделна "
+"статия. За да проверите абонамента, да получите достъп до предишната покупка "
+"или да закупите отделна статия, влезте в системата на списанието."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"За достъп до тази статия е необходим абонамент или покупка на отделна "
+"статия. За да проверите абонамента, да получите достъп до предишната покупка "
+"или да закупите отделна статия, влезте в системата на списанието."
+
+msgid "payment.loginRequired"
+msgstr "Трябва да сте влезли в системата, за да извършите плащане."
+
+msgid "donations.thankYouMessage"
+msgstr "Благодарим ви за вашия принос. Високо ценим вашата поддръжка."
+
+msgid "donations.thankYou"
+msgstr "Благодарим ви"
+
+msgid "help.goToEditPage"
+msgstr "Редактиране {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Връщане към резултатите от търсенето"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Помощ на OJS"
+
+msgid "help.ojsHelp"
+msgstr "Помощна информация на Open Journal Systems"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Това списание използва Open Journal Systems {$ojsVersion}, което "
+"представлява софтуер за управление и публикуване на списания с отворен код, "
+"разработен, поддържан и свободно разпространен от Public Knowledge Project "
+"под GNU General Public License. Посетете уебсайта на PKP, за да <a href=\""
+"http://pkp.sfu.ca/\"> научите повече за софтуера </a>. Моля, свържете се "
+"директно с сайта с въпроси относно публикуваните списания и и възможностите "
+"за изпращане на материали за публикация в отделните списания."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Това списание използва Open Journal Systems {$ojsVersion}, което "
+"представлява софтуер за управление и публикуване на списания с отворен код, "
+"разработен, поддържан и свободно разпространен от Public Knowledge Project "
+"под GNU General Public License. Посетете уебсайта на PKP, за да <a href=\""
+"http://pkp.sfu.ca/\"> научите повече за софтуера </a>. Моля,  <a href=\""
+"{$contactUrl}\">свържете се със списанието</a> директно с въпроси относно "
+"това списание и възможностите за изпращане на материали за публикация."
+
+msgid "about.aboutSoftware"
+msgstr "За Open Journal Systems"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS Редакционен и издателски процес"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Повече информация за издателската система, платформата и работния процес от "
+"OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Членства"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Видове абонаменти"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Цена"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Продължителност"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Име"
+
+msgid "about.subscriptionsContact"
+msgstr "Отговорник за абонаментите"
+
+msgid "about.subscriptions.institutional"
+msgstr "Институционални абонаменти"
+
+msgid "about.subscriptions.individual"
+msgstr "Индивидуални (лични) абонаменти"
+
+msgid "about.subscriptions"
+msgstr "Абонаменти"
+
+msgid "about.archiving"
+msgstr "Архивиране"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "месец(и) след публикуването на брой."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Съдържанието на това списание ще бъде достъпно във формат с отворен достъп"
+
+msgid "about.delayedOpenAccess"
+msgstr "Отложен отворен достъп"
+
+msgid "about.openAccessPolicy"
+msgstr "Политика за отворен достъп"
+
+msgid "about.publicationFrequency"
+msgstr "Честота на публикуване"
+
+msgid "about.peerReviewProcess"
+msgstr "Процес на рецензиране (Peer Review)"
+
+msgid "about.authorFeesMessage"
+msgstr "Това списание начислява следните авторски такси."
+
+msgid "about.authorFees"
+msgstr "Авторски такси"
+
+msgid "about.privacyStatement"
+msgstr "Декларация за поверителност"
+
+msgid "about.copyrightNotice"
+msgstr "Съобщение за авторски права"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Като част от процеса на изпращане, авторите са длъжни да проверят дали са "
+"спазени указанията за автори с посочени по-долу точки, а материалите могат "
+"да бъдат върнати на автори, които не спазват тези указания."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Контролен списък за подготовка на подаване на материали"
+
+msgid "about.authorGuidelines"
+msgstr "Насоки за авторите"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "преглеждане на вашите чакащи материали"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Ново изпращане на материали"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Ново изпращане на материали към раздел <a href=\"{$url}\">{$name}</a> ."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} или {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Изберете {$login} или {$register} за да можете да изпратите материали."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Регистрация"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Вход"
+
+msgid "about.submissions"
+msgstr "Изпращане на материали"
+
+msgid "about.sectionPolicies"
+msgstr "Правила на разделите на списанието"
+
+msgid "about.focusAndScope"
+msgstr "Фокус и обхват на списанието"
+
+msgid "about.editorialPolicies"
+msgstr "Редакционна политика"
+
+msgid "about.editorialTeam.biography"
+msgstr "Биография"
+
+msgid "about.editorialTeam"
+msgstr "Редакционен екип"
+
+msgid "about.history"
+msgstr "История на списанието"
+
+msgid "about.aboutContext"
+msgstr "За списанието"
+
+msgid "about.contact"
+msgstr "Контакт"
+
+msgid "about.statistics"
+msgstr "Статистики"
+
+msgid "archive.issueUnavailable"
+msgstr "Броят не е достъпен"
+
+msgid "archive.browse"
+msgstr "Разглеждане на по-стари броеве"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архиви - Стр. {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Архиви"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Това списание не е публикувало нито един брой."
+
+msgid "current.noCurrentIssue"
+msgstr "Няма текущ брой"
+
+msgid "current.current"
+msgstr "Текущ"
+
+msgid "site.noJournals"
+msgstr "Няма налични списания."
+
+msgid "site.journalCurrent"
+msgstr "Текущ брой"
+
+msgid "site.journalRegister"
+msgstr "Регистрация"
+
+msgid "site.journalView"
+msgstr "Преглед на списанието"
+
+msgid "site.journalsHosted"
+msgstr "Списания, хоствани (разположени) на този сайт"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Избраният от вас файл трябва да започне да се изтегля автоматично. Ако това "
+"не стане, щракнете върху връзката по-долу. Имайте предвид, че този файл може "
+"да изисква специален софтуер или приставка за преглед. <br /> <br /> Ако "
+"файлът не се изтегли автоматично, <a href=\"{$url}\"> щракнете тук </a>."
+
+msgid "article.nonpdf.title"
+msgstr "Свали статията"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p> Избраният от вас PDF файл трябва да се зареди тук, ако вашият уеб "
+"браузър има инсталирана приставка за четене на PDF файлове (например "
+"скорошна версия на <a href=\"https://get.adobe.com/reader/\"> Adobe Acrobat "
+"четец </a>). </p>"
+
+msgid "article.download"
+msgstr "Свали този PDF файл"
+
+msgid "article.pdf.title"
+msgstr "Преносим формат на документи (Portable Document Format, PDF)"
+
+msgid "article.pageTitle"
+msgstr "Преглед на {$title}"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Съвети за търсене: <ul>\n"
+"<li> Думите за търсене не са чувствителни към регистъра на клавиатурата "
+"(главни/малки букви имат значение) </li>\n"
+"<li> Общите думи се игнорират </li>\n"
+"<li> По подразбиране се връщат само статии, съдържащи <em> всички </em> "
+"термини в заявката (т.е. се подразбира логическо <em> И (AND) </em>) </li>\n"
+"<li> Комбинирайте няколко думи с <em> ИЛИ  (OR) </em>, за да намерите "
+"статии, съдържащи всеки термин; напр. <em> образование ИЛИ (OR) проучване "
+"</em> </li>\n"
+"<li> Използвайте скоби, за да създавате по -сложни заявки; напр. <em> архив "
+"((списание ИЛИ  (OR) конференция) НЕ (NOT) тези) </em> </li>\n"
+"<li> Търсете точна фраза, като я поставите в кавички; напр. <em> \""
+"публикуване с отворен достъп\" </em> </li>\n"
+"<li> Изключете дума, като я поставите с префикс с <strong>-</strong> или <em>"
+" НЕ (NOT)  </em>; напр. <em> онлайн -политика </em> или <em> онлайн НЕ (NOT) "
+"политика </em> </li>\n"
+"<li> Използвайте <strong>*</strong> в термин като заместващ знак, за да "
+"съответства на всяка последователност от знаци; напр. <em> soci* морал </em> "
+"би съответствал на документи, съдържащи „социологически“ или „обществени“ "
+"</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "Информация за автора"
+
+msgid "search.authorIndex"
+msgstr "Преглед на индекса на авторите"
+
+msgid "search.allJournals"
+msgstr "във всички списания"
+
+msgid "search.withinJournal"
+msgstr "в списанието"
+
+msgid "search.searchFor"
+msgstr "Търсене в статиите за"
+
+msgid "search.browseAuthorIndex"
+msgstr "Преглед на индекса на авторите"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Добави"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Изтрий"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Моля, въведете валиден диапазон от IP адреси."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ако IP диапазоните са въведени тук, домейнът е незадължителен. <br /> "
+"Валидните стойности включват IP адрес (напр. 142.58.103.1), диапазон от IP "
+"адреси (напр. 142.58.103.1 - 142.58.103.4), диапазон от IP адреси с "
+"заместващ знак '*' ( например 142.58.*.*) и диапазон от IP адреси с CIDR ("
+"напр. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Диапазон от IP адреси"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Моля, въведете валиден домейн."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Избраният тип абонамент изисква домейн и/или IP диапазон за удостоверяване "
+"на абонамента."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Ако тук е въведен домейн, IP диапазоните не са задължителни. <br /> "
+"Валидните стойности са имена на домейни (напр. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Домейн"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Пощенски адрес"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Изисква се име на институция (организация)."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Име на институцията (организацията)"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Информация за членство, ако се изисква за избрания тип абонамент."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Този потребителски акаунт вече има индивидуален (личен) абонамент."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Моля, изберете валиден тип абонамент."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Избраният тип абонамент изисква информация за членство."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Тип абонамент"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Преглед на наличните типове абонаменти"
+
+msgid "user.subscriptions.expired"
+msgstr "Изтекъл на: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Изтича на: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Покупка на институционален абонамент"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Покупка на индивидуален (личен) абонамент"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Покупка на нов абонамент"
+
+msgid "user.subscriptions.purchase"
+msgstr "Покупка"
+
+msgid "user.subscriptions.renew"
+msgstr "Подновяване"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Институционални абонаменти"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Индивидуален абонамент"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Онлайн плащане е инициирано, но е отменено или не е завършено"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Ръчното плащане е инициирано, но все още не е получено"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Абонаментът трябва да бъде прегледан, преди да бъде активиран"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+"Необходима е допълнителна информация, преди да можете да активирате "
+"абонамента"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Описание"
+
+msgid "user.subscriptions.status"
+msgstr "Статус"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Активните и изтекли абонаменти са показани по -долу заедно с датата им на "
+"изтичане. В допълнение, следната информация може да бъде включена към всеки "
+"абонамент."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Статус на абонаментите"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Моите абонаменти"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Трябва да приемете декларацията за поверителност на този сайт."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Трябва да се съгласите с декларацията за поверителност за всяко списание, в "
+"който се регистрирате."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Да, съгласен съм моите данни да се събират и съхраняват съгласно  <a href=\""
+"{$privacyUrl}\" target=\"_blank\">декларацията за поверителност </a> на това "
+"списание."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Да, бих искал да получавам известия за нови публикации и съобщения за всички "
+"списания, в които съм се регистрирал."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Идентифицирайте интересите за рецензиране (основни области и методи на "
+"изследване):"
