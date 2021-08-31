@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-30 20:56+0000\n"
+"PO-Revision-Date: 2021-08-31 10:33+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/bg/"
 ">\n"
@@ -1347,3 +1347,116 @@ msgstr ""
 "намерени онлайн, като се използват следните инструкции (които могат да бъдат "
 "редактирани).</p></li>\n"
 "</ol>"
+
+msgid "user.register.reviewerDescription"
+msgstr ""
+"Може да извършва рецензии на изпратени материали към всички списания в сайта."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Може да извършва рецензии на изпратени материали към списанието."
+
+msgid "user.register.authorDescription"
+msgstr "Може да изпраща материали към списанието."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Уведомява по имейл, когато броя на списанието стане с отворен достъп."
+
+msgid "user.register.readerDescription"
+msgstr "Уведомява по имейл за публикуване на брой на списанието."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Въведената от вас парола не е достатъчно дълга."
+
+msgid "user.register.registrationDisabled"
+msgstr "Това списание понастоящем не приема потребителски регистрации."
+
+msgid "user.register.privacyStatement"
+msgstr "Декларация за поверителност"
+
+msgid "user.register.noJournals"
+msgstr "Няма списание, в което да се регистрирате на този сайт."
+
+msgid "user.register.selectContext"
+msgstr "Изберете списание, в което да се регистрирате:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Запис и пращане по имейл на редактора"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Запис и пращане по имейл на автора"
+
+msgid "submission.comments.forEditor"
+msgstr "За редактор"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "За автор и редактор"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"След изпращане представете редактируемо BCC (Blind Carbon Copy, получателят "
+"не знае кой друг е получил същото копие) копие за изпращане на рецензент."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "За редактор"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "За автор и редактор"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Тези коментари могат да бъдат споделени с автора. <br />\n"
+"(След запазването могат да се добавят допълнителни коментари.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Коментари към стиловата редакция"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Кореспонденция Редактор/Автор"
+
+msgid "submission.logType.proofread"
+msgstr "Коректура"
+
+msgid "submission.logType.layout"
+msgstr "Оформление"
+
+msgid "submission.logType.copyedit"
+msgstr "Стилова редакция"
+
+msgid "submission.logType.review"
+msgstr "Рецензия"
+
+msgid "submission.logType.editor"
+msgstr "Редактор"
+
+msgid "submission.logType.author"
+msgstr "Автор"
+
+msgid "submission.logType.article"
+msgstr "Статия"
+
+msgid "submission.proofread.instructions"
+msgstr "Коректура - инструкции"
+
+msgid "submission.proofread.corrections"
+msgstr "Коректура - корекции"
+
+msgid "submission.proofreadingComments"
+msgstr "Коректура - коментари"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Поставяне на връзки към референции"
+
+msgid "submission.layout.instructions"
+msgstr "Инструкции за оформлението"
+
+msgid "submission.layout.layoutComments"
+msgstr "Коментари към оформлението"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Заместване на редактор на оформлението"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Асоцииране на редактор на оформлението"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Публичния идентификатор на типографията вече съществува."
