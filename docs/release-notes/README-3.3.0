@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-7
+Git tag: 3_3_0-8
 
-Release date: June 23, 2021
-===========================
+Release date: August 30, 2021
+=============================
 
 Configuration Changes
 ---------------------
@@ -25,6 +25,18 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientid
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
+
+3.3.0-8 Build
+-------------
+	#7240: Cancelling a discussion sometimes leaves an empty placeholder
+	#7232: Link to report broken in report plugins
+	#7214: OAI resumption token empty after first page of results
+	#7194: ImportExportPlugins do not export PubIds via ScheduledTaskTool
+	#7181: Provide OJS/OMP/OPS version number when requesting plugin gallery list
+	#7174: ReCAPTCHA proxy is misconfigured
+	#7152: Journal path of "files" has unexpected behaviour
+	#7138: OJS don't replace the galley postfix in the url
+	#6986: HTML entities displayed in journal title by citationStyleLanguage plugin
 
 3.3.0-7 Build
 -------------
