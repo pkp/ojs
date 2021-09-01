@@ -110,7 +110,6 @@ class OpenAccessNotification extends ScheduledTask
 
                 if ($accessStatus == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0, 0, 0, $curMonth, $curDay, $curYear)) {
                     // Notify all users who have open access notification set for this journal
-                    $userSettingsDao = DAORegistry::getDAO('UserSettingsDAO'); /* @var $userSettingsDao UserSettingsDAO */
                     $users = Repo::user()->getMany(
                         Repo::user()->getCollector()
                             ->filterByContextIds([$journal->getId()])
