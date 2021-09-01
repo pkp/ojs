@@ -13,6 +13,7 @@
 
 namespace APP\migration\upgrade;
 
+use APP\core\Application;
 use APP\core\Services;
 use Exception;
 use Illuminate\Database\Migrations\Migration;
@@ -90,8 +91,13 @@ class OJSv3_3_0UpgradeMigration extends Migration
             \APP\submission\DAO::class
         ];
         $processedTables = [];
+        $application = Application::get();
         foreach ($schemaDAOs as $daoName) {
-            $dao = DAORegistry::getDAO($daoName);
+            $dao = null;
+            if ($application->getQualifiedDAOName($daoName)) {
+                $dao = DAORegistry::getDAO($daoName);
+            }
+
             // Account for new EntityDAOs
             if (!$dao) {
                 $dao = App::make($daoName);
