@@ -248,8 +248,10 @@ class Repository
         if ($newCurrentIssue) {
             $journal->setData('currentIssueId', $newCurrentIssue->getId());
             $this->edit($newCurrentIssue, []);
+            $journalDao->updateObject($journal);
+        } else {
+            $journalDao->removeCurrentIssue($journal->getId());
         }
-        $journalDao->updateObject($journal);
     }
 
     /**
