@@ -224,8 +224,6 @@ class SearchHandler extends Handler
         $journal = $request->getJournal();
         $user = $request->getUser();
 
-        $authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
-
         if (isset($args[0]) && $args[0] == 'view') {
             // View a specific author
             $authorName = $request->getUserVar('authorName');
@@ -234,23 +232,26 @@ class SearchHandler extends Handler
             $affiliation = $request->getUserVar('affiliation');
             $country = $request->getUserVar('country');
 
-            $authorRecords = iterator_to_array(Services::get('author')->getMany([
-                'contextIds' => $journal ? [$journal->getId()] : [],
-                'givenName' => $givenName,
-                'familyName' => $familyName,
-                'affiliation' => $affiliation,
-                'country' => $country,
-            ]));
-            $publicationIds = array_map(function ($author) {
-                return $author->getData('publicationId');
-            }, $authorRecords);
-            $submissionIds = array_filter(array_map(function ($publicationId) {
-                $publication = Repo::publication()->get($publicationId);
-                return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
-            }, array_unique($publicationIds)));
-            $submissions = array_map(function ($submissionId) {
-                return Repo::submission()->get($submissionId);
-            }, array_unique($submissionIds));
+            $submissions = Repo::author()
+                ->getMany(
+                    Repo::author()
+                        ->getCollector()
+                        ->filterByContextIds($journal ? [$journal->getId()] : [])
+                        ->filterByName($givenName, $familyName)
+                        ->filterByAffiliation($affiliation)
+                        ->filterByCountry($country)
+                )
+                ->map(function($author) {
+                    return $author->getData('publicationId');
+                })
+                ->unique()
+                ->map(function($publicationId) {
+                    return Repo::publication()->get($publicationId)->getData('submissionId');
+                })
+                ->unique()
+                ->map(function($submissionId) {
+                    return Repo::submission()->get($submissionId);
+                });
 
             // Load information associated with each article.
             $journals = [];
@@ -310,7 +311,7 @@ class SearchHandler extends Handler
             $searchInitial = $request->getUserVar('searchInitial');
             $rangeInfo = $this->getRangeInfo($request, 'authors');
 
-            $authors = $authorDao->getAuthorsAlphabetizedByJournal(
+            $authors = Repo::author()->dao->getAuthorsAlphabetizedByJournal(
                 isset($journal) ? $journal->getId() : null,
                 $searchInitial,
                 $rangeInfo

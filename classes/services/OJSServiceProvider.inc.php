@@ -17,7 +17,6 @@ namespace APP\services;
 
 use Pimple\Container;
 
-use PKP\services\PKPAuthorService;
 use PKP\services\PKPEmailTemplateService;
 use PKP\services\PKPFileService;
 use PKP\services\PKPSchemaService;
@@ -31,12 +30,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
      */
     public function register(Container $pimple)
     {
-
-        // Author service
-        $pimple['author'] = function () {
-            return new PKPAuthorService();
-        };
-
         // File service
         $pimple['file'] = function () {
             return new PKPFileService();
