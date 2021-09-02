@@ -177,6 +177,16 @@ class ArticleSearchIndexTest extends PKPTestCase
         // Make sure that no hook is being called.
         HookRegistry::clear('ArticleSearchIndex::articleMetadataChanged');
 
+        // FIXME: getAuthors function removed
+        // Mock an article so that the authors are not
+        // being retrieved from the database.
+        $article = $this->getMockBuilder(Article::class)
+            ->setMethods(['getAuthors'])
+            ->getMock();
+        $article->expects($this->any())
+            ->method('getAuthors')
+            ->will($this->returnValue([]));
+
         // Test indexing an article with a mock environment.
         $articleSearchIndex = $this->getMockArticleSearchIndex($this->atLeastOnce());
         $articleSearchIndex->submissionMetadataChanged($article);
