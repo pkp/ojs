@@ -18,7 +18,7 @@
 				{assign var=issue value=$articleBySimilarity.issue}
 				{assign var=journal value=$articleBySimilarity.journal}
 				<li>
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$article->getCurrentPublication()->getData('authors') item=author}
 						{$author->getFullName()|escape},
 					{/foreach}
 					<a href="{url journal=$journal->getPath() page="article" op="view" path=$submission->getBestId()}">

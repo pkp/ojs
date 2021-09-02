@@ -115,7 +115,6 @@ class Application extends PKPApplication
         return array_merge(parent::getDAOMap(), [
             'ArticleGalleyDAO' => 'APP\article\ArticleGalleyDAO',
             'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
-            'AuthorDAO' => 'APP\article\AuthorDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
             'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
             'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',

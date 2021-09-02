@@ -62,7 +62,7 @@
 
 				{* recommended elements *}
 
-				{foreach from=$article->getAuthors() item=author name=authorList}
+				{foreach from=$article->getCurrentPublication()->getData('authors') item=author name=authorList}
 					<author>
 						<name>{$author->getFullName(false)|strip|escape:"html"}</name>
 						{if $author->getEmail()}

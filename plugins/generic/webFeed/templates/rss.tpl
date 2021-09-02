@@ -80,7 +80,7 @@
 				<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 			{/if}
 
-			{foreach from=$article->getAuthors() item=author name=authorList}
+			{foreach from=$article->getCurrentPublication()->getData('authors') item=author name=authorList}
 				<dc:creator>{$author->getFullName(false)|strip|escape:"html"}</dc:creator>
 			{/foreach}
 

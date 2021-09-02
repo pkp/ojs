@@ -18,6 +18,7 @@ use APP\template\TemplateManager;
 
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
+use APP\facades\Repo;
 
 class DublinCoreMetaPlugin extends GenericPlugin
 {
@@ -89,7 +90,8 @@ class DublinCoreMetaPlugin extends GenericPlugin
         }
 
         $i = 0;
-        foreach ($article->getAuthors(true) as $author) {
+        $authors = Repo::author()->getSubmissionAuthors($article, true);
+        foreach ($authors as $author) {
             $templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
         }
 

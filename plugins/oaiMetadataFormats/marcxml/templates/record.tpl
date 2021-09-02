@@ -32,7 +32,7 @@
 		<subfield code="a">{$article->getTitle($journal->getPrimaryLocale())|escape}</subfield>
 	</datafield>
 
-	{assign var=authors value=$article->getAuthors()}
+	{assign var=authors value=$article->getCurrentPublication()->getData('authors')}
 	{foreach from=$authors item=author}
 		<datafield tag="{if $authors|@count==1}100{else}720{/if}" ind1="1" ind2=" ">
 			<subfield code="a">{$author->getFullName(false, true)|escape}</subfield>

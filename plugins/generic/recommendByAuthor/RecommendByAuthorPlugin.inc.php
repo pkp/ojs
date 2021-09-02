@@ -73,7 +73,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
 
         // Find articles of the same author(s).
         $displayedArticle = $smarty->getTemplateVars('article');
-        $authors = $displayedArticle->getAuthors();
+        $authors = Repo::author()->getSubmissionAuthors($displayedArticle);
         $foundArticles = [];
         foreach ($authors as $author) { /* @var $author Author */
             // The following article search is by name only as authors are
@@ -81,11 +81,13 @@ class RecommendByAuthorPlugin extends GenericPlugin
             // false positives or miss some entries. But there's no other way
             // until OJS allows users to consistently normalize authors (via name,
             // email, ORCID, whatever).
-            $authorsIterator = Services::get('author')->getMany([
-                'contextIds' => $displayedArticle->getData('contextId'),
-                'givenName' => $author->getLocalizedGivenName(),
-                'familyName' => $author->getLocalizedFamilyName(),
-            ]);
+            $authorsIterator = Repo::author()->getMany(
+                Repo::author()
+                    ->getCollector()
+                    ->filterByContextIds([$displayedArticle->getData('contextId')])
+                    ->filterByName($author->getLocalizedGivenName(), $author->getLocalizedFamilyName())
+            );
+
             $publicationIds = [];
             foreach ($authorsIterator as $thisAuthor) {
                 $publicationIds[] = $thisAuthor->getData('publicationId');
