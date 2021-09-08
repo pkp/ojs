@@ -103,7 +103,7 @@
 			"description": "An optional path to use in the URL instead of the ID.",
 			"validation": [
 				"nullable",
-				"regex:/^[-_a-z0-9]*$/"
+				"regex:/^[a-zA-Z0-9]+([\\.\\-_][a-zA-Z0-9]+)*$/"
 			]
 		},
 		"volume": {
