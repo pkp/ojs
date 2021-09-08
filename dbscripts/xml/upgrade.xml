@@ -205,12 +205,9 @@
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.3.0.9">
-		<migration class="classes.migration.upgrade.OJSv3_3_1_i6872_UrlPathMigration" />
-		<note file="docs/release-notes/README-3.3.1" />
-	</upgrade>
-
 	<upgrade minversion="3.0.0.0" maxversion="3.3.9.9">
+		<migration class="classes.migration.upgrade.OJSv3_3_1_i6872_UrlPathMigration" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I6093_AddForeignKeys" />
 		<migration class="lib.pkp.classes.migration.upgrade.PKPv3_4_0UpgradeMigration" />
 		<migration class="lib.pkp.classes.migration.upgrade.v3_4_0.I4904_UsageStatsTemporaryRecords" />
 		<migration class="classes.migration.upgrade.v3_4_0.I6807_SetLastModified" />
