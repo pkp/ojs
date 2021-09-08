@@ -16,7 +16,6 @@
 	<code function="createDirectories"/>
 
 	<!-- PKP schema components -->
-	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
 	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
 	<migration class="lib.pkp.classes.migration.CommonMigration" />
 	<migration class="lib.pkp.classes.migration.ControlledVocabMigration" />
@@ -41,6 +40,8 @@
 
 	<!-- OJS schema -->
 	<migration class="classes.migration.OJSMigration" />
+
+	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
