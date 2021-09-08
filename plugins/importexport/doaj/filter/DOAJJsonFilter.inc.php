@@ -1,5 +1,4 @@
 <?php
-use APP\facades\Repo;
 
 /**
  * @file plugins/importexport/doaj/filter/DOAJJsonFilter.inc.php
