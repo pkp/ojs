@@ -1,7 +1,8 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-19 14:27+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2021-09-09 11:05+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/default/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -45,3 +46,142 @@ msgstr "ST"
 
 msgid "section.default.title"
 msgstr "Stati"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Taqrizchilar"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Taqrizchi"
+
+msgid "default.genres.sourceTexts"
+msgstr "Manba matnlari"
+
+msgid "default.genres.dataSet"
+msgstr "Ma'lumotlar to'plami"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Ma'lumotlar tahlili"
+
+msgid "default.genres.transcripts"
+msgstr "Transkriptlar"
+
+msgid "default.genres.researchResults"
+msgstr "Tadqiqot natijalari"
+
+msgid "default.genres.researchMaterials"
+msgstr "Tadqiqot materiallari"
+
+msgid "default.genres.researchInstrument"
+msgstr "Tadqiqot vositasi"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Obuna menejerlari"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Obuna menejeri"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Bo'lim muharrirlari"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Bo'lim muharriri"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Mehmon muharrirlar"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Mehmon muharriri"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "Jurnal muharrirlari"
+
+msgid "default.groups.name.editor"
+msgstr "Jurnal muharriri"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "Jurnal menejerlari"
+
+msgid "default.groups.name.manager"
+msgstr "Jurnal menejeri"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Bu jurnal qatnashuvchi kutubxonalar o'rtasida taqsimlangan arxiv tizimini "
+"yaratish uchun CLOCKSS tizimidan foydalanadi va bu kutubxonalarga jurnalning "
+"doimiy arxivlarini saqlash va tiklash maqsadida yaratishga ruxsat beradi. "
+"<ahref=\"http://clockss.org/\"> Batafsil ... </a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Bu jurnal LOCKSS tizimidan ishtirokchi kutubxonalar o'rtasida taqsimlangan "
+"arxiv tizimini yaratish uchun foydalanadi va bu kutubxonalarga saqlash va "
+"tiklash maqsadida jurnalning doimiy arxivlarini yaratishga ruxsat beradi. "
+"<ahref=\"http://www.lockss.org/\"> Batafsil ... </a>"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Biz tadqiqot kutubxonachilarini ushbu jurnalni o'z kutubxonasining elektron "
+"jurnallar fondiga kiritishni taklif qilamiz. Shuni ham ta'kidlash joizki, "
+"ushbu jurnalning ochiq manbali nashriyot tizimi kutubxonalarga o'z "
+"o'qituvchilarini tahrir qilishda qatnashadigan jurnallarda foydalanishga mos "
+"keladi (qarang <a href = \"http://pkp.sfu.ca /ojs \"> Ochiq jurnal tizimlari "
+"</a>)."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Ushbu jurnalni topshirishni xohlaysizmi? Jurnal bo'limlari siyosati uchun "
+"<ahref=\"{$indexUrl}/{$contextPath}/about\"> Jurnal haqida </a> sahifasini, "
+"shuningdek <a href = \"{$ indexUrl }/{$ contextPath}/about/Submissions#"
+"authorGuidelines \"> Muallif ko'rsatmalari </a>. Mualliflar jo'natishdan "
+"oldin <ahref=\"{$indexUrl}/{$contextPath}/user/register\"> ro'yxatdan "
+"o'tishlari kerak </a> yoki agar ro'yxatdan o'tgan bo'lsa, <a href = \"{$ "
+"indexUrl }/index/login \"> tizimga kiring </a> va besh bosqichli jarayonni "
+"boshlang."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Biz o'quvchilarni ushbu jurnal uchun nashriyot xabarnomalari xizmatiga a'zo "
+"bo'lishga undaymiz. Jurnal uchun bosh sahifaning yuqori qismidagi <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\"> Ro'yxatdan o'tish </a> "
+"havolasidan foydalaning. Bu ro'yxatga olish natijasida o'quvchi jurnalning "
+"har bir yangi soni uchun elektron pochta orqali Mundarija oladi. Bu ro'yxat, "
+"shuningdek, jurnalga ma'lum darajada qo'llab -quvvatlash yoki o'quvchi "
+"auditoriyasini talab qilish imkonini beradi. Jurnalning <ahref=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\"> Maxfiylik "
+"bayonnomasiga </a> qarang, bu o'quvchilarga ularning nomi va elektron pochta "
+"manzili boshqa maqsadlarda ishlatilmasligiga ishonch hosil qiladi."
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Ushbu jurnal tadqiqotlarni ommaga erkin taqdim etish global bilim "
+"almashishni qo'llab -quvvatlaydi degan tamoyil asosida o'z tarkibiga darhol "
+"ochiq kirishni ta'minlaydi."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p> Ushbu jurnal saytiga kiritilgan ismlar va elektron pochta manzillari "
+"faqat ushbu jurnalda ko'rsatilgan maqsadlar uchun ishlatiladi va boshqa "
+"maqsadlarda yoki boshqa tomonlarga berilmaydi. </p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Matn Muallif ko'rsatmalarida ko'rsatilgan uslubiy va bibliografik talablarga "
+"javob beradi."
