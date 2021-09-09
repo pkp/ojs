@@ -408,7 +408,6 @@ class ArticleHandler extends Handler
         ]);
         foreach ($submissionFilesIterator as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
-                //TODO GalleyDAO review ok
 
                 $articleGalleys = Repo::articleGalley()->getMany(
                     Repo::articleGalley()

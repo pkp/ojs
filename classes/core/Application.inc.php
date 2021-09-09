@@ -113,7 +113,6 @@ class Application extends PKPApplication
     public function getDAOMap()
     {
         return array_merge(parent::getDAOMap(), [
-            'ArticleGalleyDAO' => 'APP\article\ArticleGalleyDAO',
             'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
             'AuthorDAO' => 'APP\article\AuthorDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
@@ -187,7 +186,7 @@ class Application extends PKPApplication
      */
     public static function getRepresentationDAO()
     {
-        return DAORegistry::getDAO('ArticleGalleyDAO');
+        return Repo::articleGalley()->dao;
     }
 
     /**

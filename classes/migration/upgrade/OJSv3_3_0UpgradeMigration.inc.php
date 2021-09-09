@@ -83,7 +83,7 @@ class OJSv3_3_0UpgradeMigration extends Migration
             'SiteDAO',
             \PKP\announcement\DAO::class,
             'AuthorDAO',
-            'ArticleGalleyDAO',
+			\PKP\articleGalley\DAO::class,
             'JournalDAO',
             'EmailTemplateDAO',
             \APP\publication\DAO::class,

@@ -317,7 +317,7 @@ class IssueService implements EntityPropertyInterface, EntityReadInterface
                         $galleyArgs = array_merge($args, ['issue' => $issue]);
                         foreach ($galleys as $galley) {
                             $data[] = ($prop === 'galleys')
-                                ? \Services::get('galley')->getFullProperties($galley, $galleyArgs)
+                                ? \Services::get('galley')->getFullProperties($galley, $galleyArgs) //TODO ask Alec about the issueGalley in PR
                                 : \Services::get('galley')->getSummaryProperties($galley, $galleyArgs);
                         }
                     }

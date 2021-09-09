@@ -47,8 +47,7 @@ class SubmissionFileService extends \PKP\services\PKPSubmissionFileService
 
         // Remove galley associations and update search index
         if ($submissionFile->getData('assocType') == ASSOC_TYPE_REPRESENTATION) {
-            //TODO GalleyDAO review ok
-            $galley = Repo::articleGalley()->get($submissionFile->getData('assocId'));
+                        $galley = Repo::articleGalley()->get($submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
                 Repo::articleGalley()->dao->update($galley);

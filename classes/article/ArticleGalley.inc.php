@@ -10,7 +10,7 @@
  * @class ArticleGalley
  * @ingroup article
  *
- * @see ArticleGalleyDAO
+ * @see PKP\articleGalley\DAO
  *
  * @brief A galley is a final presentation version of the full-text of an article.
  */

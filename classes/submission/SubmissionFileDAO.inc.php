@@ -30,7 +30,6 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO
         parent::insertObject($submissionFile);
 
         if ($submissionFile->getData('assocType') === ASSOC_TYPE_REPRESENTATION) {
-            //TODO GalleyDAO review ok
 
             $galley = Repo::articleGalley()->get($submissionFile->getData('assocId'));
             if (!$galley) {

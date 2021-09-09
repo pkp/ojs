@@ -159,7 +159,6 @@ class ArticleGalleyForm extends Form
     public function execute(...$functionArgs)
     {
         $articleGalley = $this->_articleGalley;
-        //TODO GalleyDAO review ok
 
         if ($articleGalley) {
 

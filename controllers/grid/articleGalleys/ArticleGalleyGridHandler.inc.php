@@ -18,7 +18,7 @@ use APP\template\TemplateManager;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
-use PKP\facades\Repo;
+use APP\facades\Repo;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
@@ -187,8 +187,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        //TODO GalleyDAO review ok
-        $galley = Repo::articleGalley()->get((int) $rowId);
+                $galley = Repo::articleGalley()->get((int) $rowId);
         $galley->setData('seq', $newSequence);
         Repo::articleGalley()->dao->update($galley);
     }
@@ -232,15 +231,10 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function loadData($request, $filter = null)
     {
-        $galleyIterator = Services::get('galley')->getMany([
-            'publicationIds' => [$this->getPublication()->getId()],
-        ]);
-        // ArticleGalleyGridRow::initialize expects the array
-        // key to match the galley id
-        $galleys = [];
-        foreach ($galleyIterator as $galley) {
-            $galleys[$galley->getId()] = $galley;
-        }
+		$collector = Repo::articleGalley()->getCollector();
+		$collector->filterByPublicationIds([$this->getPublication()->getId()]);
+		$galleys = Repo::articleGalley()->getMany($collector);
+
         return $galleys;
     }
 
@@ -341,12 +335,12 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function deleteGalley($args, $request)
     {
+		/** @var ArticleGalley $galley */
         $galley = $this->getGalley();
         if (!$galley || !$request->checkCSRF()) {
             return new JSONMessage(false);
         }
-
-        Services::get('galley')->delete($galley);
+		Repo::articleGalley()->delete($galley);
 
         $notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
         $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());

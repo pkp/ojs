@@ -16,6 +16,7 @@ namespace APP\articleGalley;
 use APP\core\Request;
 use APP\core\Services;
 use APP\facades\Repo;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
@@ -86,13 +87,22 @@ class Repository
         return App::make(Collector::class);
     }
 
-    /**
-     * Get an instance of the map class for mapping
-     * articleGalleys to their schema
-     */
-    public function getSchemaMap(): maps\Schema
+	/**
+	 * Get an instance of the map class for mapping
+	 * articleGalleys to their schema
+	 * @param Submission $submission
+	 * @param Publication $publication
+	 * @return maps\Schema
+	 */
+    public function getSchemaMap(Submission $submission, Publication $publication): maps\Schema
     {
-        return app('maps')->withExtensions($this->schemaMap);
+        return app('maps')->withExtensions(
+        	$this->schemaMap,
+			[
+				'submission' => $submission,
+				'publication'=> $publication
+			]
+		);
     }
 
     /**

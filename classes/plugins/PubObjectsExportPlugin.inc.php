@@ -785,8 +785,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function getArticleGalleys($galleyIds)
     {
         $galleys = [];
-        //TODO GalleyDAO review ok
-        foreach ($galleyIds as $galleyId) {
+                foreach ($galleyIds as $galleyId) {
             $articleGalley = Repo::articleGalley()->get((int) $galleyId);
             if ($articleGalley) {
                 $galleys[] = $articleGalley;

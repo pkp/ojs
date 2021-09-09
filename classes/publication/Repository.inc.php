@@ -15,6 +15,7 @@ namespace APP\publication;
 
 use APP\core\Application;
 use APP\core\Services;
+use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
@@ -132,7 +133,7 @@ class Repository extends \PKP\publication\Repository
                 $newGalley = clone $galley;
                 $newGalley->setData('id', null);
                 $newGalley->setData('publicationId', $newId);
-                Services::get('galley')->add($newGalley, $this->request);
+                Repo::articleGalley()->add($newGalley);
             }
         }
 
@@ -163,11 +164,14 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc \PKP\publication\Repository::delete() */
     public function delete(Publication $publication)
     {
-        $galleysIterator = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
-        foreach ($galleysIterator as $galley) {
-            Services::get('galley')->delete($galley);
-        }
+		$collector = Repo::articleGalley()->getCollector();
+		$collector->filterByPublicationIds([$publication->getId()]);
+		$galleys = Repo::articleGalley()->getMany($collector);
 
-        parent::delete($publication);
+		foreach ($galleys as $galley) {
+			Repo::articleGalley()->delete($galley);
+		}
+
+		parent::delete($publication);
     }
 }

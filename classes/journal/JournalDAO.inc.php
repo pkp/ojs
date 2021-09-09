@@ -80,13 +80,15 @@ class JournalDAO extends ContextDAO
      */
     public function deleteAllPubIds($journalId, $pubIdType)
     {
-        $pubObjectDaos = ['IssueDAO', 'ArticleGalleyDAO'];
-        foreach ($pubObjectDaos as $daoName) {
-            $dao = DAORegistry::getDAO($daoName);
-            $dao->deleteAllPubIds($journalId, $pubIdType);
-        }
-        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-        $submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
+
+		$dao = DAORegistry::getDAO('IssueDAO');
+		$dao->deleteAllPubIds($journalId, $pubIdType);
+
+		$dao = Repo::articleGalley()->dao;
+		$dao->deleteAllPubIds($journalId, $pubIdType);
+
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
 
         Repo::publication()->dao->deleteAllPubIds($journalId, $pubIdType);
     }

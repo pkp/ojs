@@ -29,7 +29,6 @@ class DAO extends \PKP\submission\DAO
         $publicationCollector = Repo::publication()->getCollector()->filterBySubmissionIds([$id]);
         $publicationIds = Repo::publication()->getIds($publicationCollector);
 
-        //TODO GalleyDAO review ok.
 
         $galleys = Repo::articleGalley()->getMany(
             Repo::articleGalley()
