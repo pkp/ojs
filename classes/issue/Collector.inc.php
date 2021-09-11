@@ -355,7 +355,7 @@ class Collector implements CollectorInterface
                         $q->select('iss_t.issue_id')
                             ->from($this->dao->settingsTable, 'iss_t')
                             ->where('iss_t.setting_name', '=', 'title')
-                            ->where(DB::raw('lower(iss_t.setting_value'), 'LIKE', $likePattern)->addBinding($word);
+                            ->where(DB::raw('lower(iss_t.setting_value)'), 'LIKE', $likePattern)->addBinding($word);
                     })
                         ->orWhereIn('i.issue_id', function (Builder $q) use ($likePattern, $word) {
                             $q->select('iss_d.issue_id')

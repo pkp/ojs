@@ -637,7 +637,6 @@ class IssueGridHandler extends GridHandler
         // NB: Data set via params because setData('datePublished', null)
         // removes the entry into _data rather than updating 'datePublished' to null.
         $updateParams = [
-            'current' => 0,
             'published' => 0,
             'datePublished' => null
         ];
@@ -645,6 +644,7 @@ class IssueGridHandler extends GridHandler
         HookRegistry::call('IssueGridHandler::unpublishIssue', [&$issue]);
 
         Repo::issue()->edit($issue, $updateParams);
+        Repo::issue()->updateCurrent($request->getContext()->getId());
 
         // insert article tombstones for all articles
         $submissions = Repo::submission()->getMany(
