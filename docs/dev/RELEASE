@@ -5,9 +5,7 @@ The following steps (subject to change) are typically performed to prepare a new
 OJS release:
 
 
-1. Ensure that the "complete" flags in registry/locales.xml are accurate. Use
-    the tools/genEmailUpdates.php script to generate email template update
-    SQL for subjects and bodies whose defaults have changed.
+1. Ensure that the "complete" flags in registry/locales.xml are accurate.
 
 
 2. Update version, installation, and upgrade descriptor files:
@@ -20,7 +18,7 @@ OJS release:
     Commands that may be helpful in determining what bugs have been closed
     since the last release (whose tag is specified in place of <last-tag>:
 
-	git log --pretty=oneline <last-tag>..HEAD # Generate a log from the last release
+    git log --pretty=oneline <last-tag>..HEAD # Generate a log from the last release
         | egrep -o "(#|\*)([0-9]+)(#|\*)"     # Look for bug IDs in the commit notes
         | sed -r "s/(#|\*)//g"                # Remove the octothorpes
         | sort -nu                            # Get a unique sorted list

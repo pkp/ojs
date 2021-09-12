@@ -363,9 +363,6 @@ class Upgrade extends Installer
             $suffix = $row->suffix;
             foreach ($supportedLocales as $siteLocale) {
                 $preferredPublicName = ($salutation != '' ? "${salutation} " : '') . "${firstName} " . ($middleName != '' ? "${middleName} " : '') . $lastName . ($suffix != '' ? ", ${suffix}" : '');
-                if (AppLocale::isLocaleWithFamilyFirst($siteLocale)) {
-                    $preferredPublicName = "${lastName}, " . ($salutation != '' ? "${salutation} " : '') . $firstName . ($middleName != '' ? " ${middleName}" : '');
-                }
                 DB::insert(
                     "INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')",
                     [(int) $userId, $siteLocale, $preferredPublicName]
@@ -399,9 +396,6 @@ class Upgrade extends Installer
             $supportedLocales = $journalsSupportedLocales[$journalId];
             foreach ($supportedLocales as $locale) {
                 $preferredPublicName = "${firstName} " . ($middleName != '' ? "${middleName} " : '') . $lastName . ($suffix != '' ? ", ${suffix}" : '');
-                if (AppLocale::isLocaleWithFamilyFirst($locale)) {
-                    $preferredPublicName = "${lastName}, " . $firstName . ($middleName != '' ? " ${middleName}" : '');
-                }
                 DB::insert(
                     "INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')",
                     [(int) $authorId, $locale, $preferredPublicName]

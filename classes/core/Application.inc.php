@@ -20,6 +20,7 @@ namespace APP\core;
 
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\security\Role;
 
 define('REQUIRES_XSL', false);
@@ -32,9 +33,6 @@ define('ASSOC_TYPE_ISSUE', 0x0000103);
 define('ASSOC_TYPE_ISSUE_GALLEY', 0x0000105);
 
 define('CONTEXT_JOURNAL', 1);
-
-define('LANGUAGE_PACK_DESCRIPTOR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/locales.xml');
-define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');
 
 define('METRIC_TYPE_COUNTER', 'ojs::counter');
 
@@ -49,6 +47,9 @@ class Application extends PKPApplication
         if (!PKP_STRICT_MODE && !class_exists('\Application')) {
             class_alias('\APP\core\Application', '\Application');
         }
+
+        // Add application locales
+        Locale::registerFolder(BASE_SYS_DIR . '/locale');
     }
 
     /**
