@@ -168,20 +168,6 @@ class OJSMigration extends Migration
             $table->unique(['issue_id', 'section_id'], 'custom_section_orders_pkey');
         });
 
-        // Archived, removed from TOC, unscheduled or unpublished journal articles.
-        Schema::create('submission_tombstones', function (Blueprint $table) {
-            $table->bigInteger('tombstone_id')->autoIncrement();
-            $table->bigInteger('submission_id');
-            $table->datetime('date_deleted');
-            $table->bigInteger('journal_id');
-            $table->bigInteger('section_id');
-            $table->string('set_spec', 255);
-            $table->string('set_name', 255);
-            $table->string('oai_identifier', 255);
-            $table->index(['journal_id'], 'submission_tombstones_journal_id');
-            $table->index(['submission_id'], 'submission_tombstones_submission_id');
-        });
-
         // Publications
         Schema::create('publications', function (Blueprint $table) {
             $table->bigInteger('publication_id')->autoIncrement();
@@ -338,7 +324,6 @@ class OJSMigration extends Migration
         Schema::drop('publication_galley_settings');
         Schema::drop('publication_galleys');
         Schema::drop('publications');
-        Schema::drop('submission_tombstones');
         Schema::drop('custom_section_orders');
         Schema::drop('custom_issue_orders');
         Schema::drop('issue_files');
