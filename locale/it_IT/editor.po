@@ -1,9 +1,10 @@
+# Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2020-12-07 11:32+0000\n"
+"PO-Revision-Date: 2021-09-13 14:34+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "it_IT/>\n"
@@ -654,3 +655,9 @@ msgstr "Mostra pubblicazione programmata"
 
 msgid "issues.submissions.issueIds"
 msgstr "Assegnato all'uscita"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"L'immagine di copertina che desideri eliminare è utilizzata in un'altra "
+"rivista. Controlla di essere in fase di modifica per la rivista corretta, "
+"con l'ID corretto, e riprova."
