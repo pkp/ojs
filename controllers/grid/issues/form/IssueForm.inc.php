@@ -53,7 +53,7 @@ class IssueForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'showTitle', 'optional', 'editor.issues.titleRequired', function ($showTitle) use ($form) {
             return !$showTitle || implode('', $form->getData('title')) != '' ? true : false;
         }));
-        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash', '/^[-_a-z0-9]*$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash_period', '/^[a-zA-Z0-9]+([\\.\\-_][a-zA-Z0-9]+)*$/'));
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
         $this->issue = $issue;
