@@ -59,7 +59,7 @@
 			symbolic="author=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.article.Author[]"
+			inputType="class::classes.author.Author[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Native XML author input -->
 		<filterGroup
@@ -67,7 +67,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.article.Author[]" />
+			outputType="class::classes.author.Author[]" />
 		<!-- Article file native XML output -->
 		<filterGroup
 			symbolic="SubmissionFile=>native-xml"
