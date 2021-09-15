@@ -36,8 +36,8 @@ class DAO extends \PKP\author\DAO
      * as well as country and email (otional), they are considered to be the same.
      *
      * @param $journalId int Optional journal ID to restrict results to
-     * @param $initial An initial a family name must begin with, "-" for authors with no family names
-     * @param $rangeInfo Range information
+     * @param $initial string An initial a family name must begin with, "-" for authors with no family names
+     * @param $rangeInfo Object Range information
      * @param $includeEmail boolean Whether or not to include the email in the select distinct
      *
      * @return DAOResultFactory Authors ordered by last name, given name
