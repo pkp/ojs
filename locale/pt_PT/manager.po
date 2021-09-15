@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2021-09-15 11:43+0000\n"
+"PO-Revision-Date: 2021-09-16 00:34+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -1887,3 +1887,18 @@ msgstr "O URL da página de início da revista"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "O título da revista"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nome do website quando tiver alojada mais do que uma revista"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "A moeda do valor do pagamento, tal como EUR"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "O valor do pagamento"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "O nome do tipo de pagamento"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "O endereço de e-mail do contacto principal da revista"
