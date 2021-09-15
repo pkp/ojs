@@ -87,22 +87,19 @@ class Repository
         return App::make(Collector::class);
     }
 
-	/**
-	 * Get an instance of the map class for mapping
-	 * articleGalleys to their schema
-	 * @param Submission $submission
-	 * @param Publication $publication
-	 * @return maps\Schema
-	 */
+    /**
+     * Get an instance of the map class for mapping
+     * articleGalleys to their schema
+     */
     public function getSchemaMap(Submission $submission, Publication $publication): maps\Schema
     {
         return app('maps')->withExtensions(
-        	$this->schemaMap,
-			[
-				'submission' => $submission,
-				'publication'=> $publication
-			]
-		);
+            $this->schemaMap,
+            [
+                'submission' => $submission,
+                'publication' => $publication
+            ]
+        );
     }
 
     /**
@@ -165,7 +162,7 @@ class Repository
     }
 
     /** @copydoc DAO::insert() */
-    public function add(\ArticleGalley $articleGalley): int
+    public function add(ArticleGalley $articleGalley): int
     {
         $id = $this->dao->insert($articleGalley);
         HookRegistry::call('ArticleGalley::add', [$articleGalley]);

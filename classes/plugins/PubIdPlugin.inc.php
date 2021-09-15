@@ -84,11 +84,17 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                             }
                             if ($representationEnabled) {
                                 foreach ($publications as $publication) {
-                                    $representations = $representationDao->getByPublicationId($publication->getId(), $context->getId());
+                                    $representations = Repo::articleGalley()->getMany(
+                                        Repo::articleGalley()
+                                            ->getCollector()
+                                            ->filterByPublicationIds([$publication->getId()])
+                                    );
+
                                     while ($representation = $representations->next()) {
                                         $representationPubId = $representation->getStoredPubId($this->getPubIdType());
                                         if (empty($representationPubId)) {
                                             $representationPubId = $this->getPubId($representation);
+                                            //TODO galleyDAO
                                             $representationDao->changePubId($representation->getId(), $this->getPubIdType(), $representationPubId);
                                         }
                                     }

@@ -18,6 +18,7 @@
  *  a Submission object.
  */
 
+use APP\facades\Repo;
 use APP\submission\Submission;
 use PKP\metadata\MetadataDataObjectAdapter;
 
@@ -145,9 +146,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Format
         if ($article instanceof Submission) {
-            //TODO GalleyDAO review todo
-            //$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
-            //$galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
             $galleys = Repo::articleGalley()->getMany(
                 Repo::articleGalley()
                     ->getCollector()
@@ -189,7 +187,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Get galleys and supp files.
-        //TODO GalleyDAO review ok
 
         $galleys = [];
         if ($article instanceof Submission) {

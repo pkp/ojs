@@ -13,10 +13,11 @@
 
 namespace APP\articleGalley\maps;
 
+use APP\articleGalley\ArticleGalley;
+use APP\core\Request;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\Enumerable;
-use APP\articleGalley\ArticleGalley;
 use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\services\PKPSchemaService;
@@ -26,23 +27,22 @@ class Schema extends \PKP\core\maps\Schema
     /** @var Enumerable */
     public $collection;
 
-	/** @var Submission */
-	public $submission;
+    /** @var Submission */
+    public $submission;
 
-	/** @var Publication */
-	public $publication;
+    /** @var Publication */
+    public $publication;
 
 
-	/** @var string */
+    /** @var string */
     public $schema = PKPSchemaService::SCHEMA_GALLEY;
 
-	public function __construct(Submission $submission,  Publication  $publication, Request $request, Context $context, PKPSchemaService $schemaService)
-	{
-		parent::__construct($request, $context, $schemaService);
-		$this->publication = $publication;
-		$this->submission = $submission;
-
-	}
+    public function __construct(Submission $submission, Publication  $publication, Request $request, Context $context, PKPSchemaService $schemaService)
+    {
+        parent::__construct($request, $context, $schemaService);
+        $this->publication = $publication;
+        $this->submission = $submission;
+    }
     /**
      * Map an articleGalley
      *
@@ -94,30 +94,30 @@ class Schema extends \PKP\core\maps\Schema
      */
     protected function mapByProperties(array $props, ArticleGalley $item): array
     {
-		$output = [];
-		foreach ($props as $prop) {
-			switch ($prop) {
-				case 'urlPublished':
+        $output = [];
+        foreach ($props as $prop) {
+            switch ($prop) {
+                case 'urlPublished':
 
-					$output['urlPublished'] = $this->request->getDispatcher()->url(
-						$this->request,
-						PKPApplication::ROUTE_PAGE,
-						$this->context->getData('urlPath'),
-						'article',
-						'view',
-						[
-							$this->submission->getBestId(),
-							'version',
-							$this->publication->getId(),
-							$item->getBestGalleyId()
-						]
-					);
-					break;
-				default:
-					$output[$prop] = $item->getData($prop);
-					break;
-			}
-		}
+                    $output['urlPublished'] = $this->request->getDispatcher()->url(
+                        $this->request,
+                        PKPApplication::ROUTE_PAGE,
+                        $this->context->getData('urlPath'),
+                        'article',
+                        'view',
+                        [
+                            $this->submission->getBestId(),
+                            'version',
+                            $this->publication->getId(),
+                            $item->getBestGalleyId()
+                        ]
+                    );
+                    break;
+                default:
+                    $output[$prop] = $item->getData($prop);
+                    break;
+            }
+        }
 
         $output = $this->schemaService->addMissingMultilingualValues($this->schema, $output, $this->context->getSupportedFormLocales());
 
