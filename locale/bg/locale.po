@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-16 11:27+0000\n"
+"PO-Revision-Date: 2021-09-16 20:53+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/bg/>\n"
@@ -2277,4 +2277,95 @@ msgstr ""
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Рецензентът {$reviewerName} отказа етапа {$round} за рецензия на изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Създадено е ново съобщение."
+
+msgid "notification.type.issuePublished"
+msgstr "Броят беше публикуван."
+
+msgid "notification.type.galleyModified"
+msgstr "Типографията беше променена за \"{$title}.\""
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Оставен е коментар към решението на редактора за \"{$title}.\""
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Нова статия, \"{$title},\" беше изпратена."
+
+msgid "notification.type.editing"
+msgstr "Събития във връзка с редактирането"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Рецензирана статия"
+
+msgid "log.imported"
+msgstr "{$userName} импортира статия {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr ""
+"{$proofreaderName} изпрати материали с идентификатор {$submissionId} за "
+"насрочване за публикация."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} асоциира {$proofreaderName} за коректор на изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} беше асоцииран като редактор за изпратените материали с "
+"идентификатор {$submissionId}."
+
+msgid "log.editor.restored"
+msgstr ""
+"Изпратените материали с идентификатор {$submissionId} бяха възстановени в "
+"опашката."
+
+msgid "log.editor.archived"
+msgstr "Изпратените материали с идентификатор {$submissionId} бяха архивирани."
+
+msgid "log.editor.editorFile"
+msgstr "Редакторска версия на файла с изпратените материали беше качена."
+
+msgid "log.editor.metadataModified"
+msgstr "Метаданните за тази статия са променени от {$editorName}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} завърши редактирането на оформлението за изпратените материали "
+"с идентификатор {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} беше отменен като редактор на оформлението за изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} беше асоцииран за редактор на оформлението за изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"Версия на файл със стилово редактиране на изпратените материали беше качена "
+"от автора."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Качен е файл с версия със стилово редактиране."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} беше асоцииран за стилово редактиране за изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} завърши окончателното стилово редактиране за изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} завърши началното стилово редактиране за изпратените "
 "материали с идентификатор {$submissionId}."
