@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-16 20:53+0000\n"
+"PO-Revision-Date: 2021-09-16 21:10+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/bg/>\n"
@@ -2369,3 +2369,125 @@ msgid "log.copyedit.initialEditComplete"
 msgstr ""
 "{$copyeditorName} завърши началното стилово редактиране за изпратените "
 "материали с идентификатор {$submissionId}."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Изберете как да сортирате статиите в тази категория."
+
+msgid "catalog.sortBy"
+msgstr "Сортиране на статиите"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} е предприел процеса на редактиране на статията {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Абонаменти"
+
+msgid "editor.issues.futureIssues"
+msgstr "Следващи броеве"
+
+msgid "editor.issues.backIssues"
+msgstr "Предишни броеве"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Даденият път на списанието \"{$journalPath}\" не може да бъде разрешен или "
+"открит към това списание."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Тази реализация на търсене не позволява повторно индексиране за всяко "
+"списание."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Индексиране на \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Премахване на одобрението на тази типография.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Одобраване на тази типография за публикация.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Одобрение на типография"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Чака одобрение"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Одобрено"
+
+msgid "article.view.interstitial"
+msgstr "Моля, изберете файл със статия, който да изтеглите."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Скриване на други списания"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Регистрирайте се в други списания"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Чака одобрение."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Това изпращане на материали в момента чака одобрение, преди да се появи в "
+"изданието."
+
+msgid "editor.navigation.issues"
+msgstr "Броеве"
+
+msgid "grid.action.createContext"
+msgstr "Създаване на ново списание"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Невалидно подаване на коректура или не е поискано подаване на коректура!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Иска се невалиден брой!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr ""
+"Опитвате се да получите достъп до статия, която не е част от вашия раздел."
+
+msgid "user.authorization.noContext"
+msgstr "Няма списание в контекст!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Отказан достъп! Не сте назначени като коректор на тази статия."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Чакащи типографии."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Назначете потребител да създава типографии, като използвате връзката "
+"Присвояване(Assign) в списъка с участници (Participants)."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Подадена е нова статия, към която трябва да се назначи редактор."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Метаданните за публикация на броя са запазени."
+
+msgid "notification.type.public"
+msgstr "Публични съобщения"
+
+msgid "notification.type.userComment"
+msgstr "Читател направи коментар за \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "Събития във връзка с изпращането на материали"
+
+msgid "notification.type.submissionComment"
+msgstr "Редактор направи коментар за \"{$title}.\""
+
+msgid "notification.type.site"
+msgstr "Събития във връзка със сайта"
+
+msgid "notification.type.reviewing"
+msgstr "Събития във връзка с рецензирането"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Подадена е преглед на формуляра за рецензия за \"{$title}.\""
