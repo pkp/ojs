@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-15 21:32+0000\n"
+"PO-Revision-Date: 2021-09-16 11:27+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/bg/>\n"
@@ -2229,3 +2229,52 @@ msgstr ""
 "<p>2. Трябва да се създаде директория за съхраняване на качени файлове и да "
 "може да се записва в нея (с права за запис) - (вижте \"Настройки на файла\" "
 "по-долу) .</p>"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Стандартното стилово оформление беше избрано."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Стилово редактиране за изпратените материали с идентификатор {$submissionId} "
+"беше започнато от {$copyeditorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Препоръка на редактора ({$decision}) за изпратените материали с "
+"идентификатор {$submissionId} беше записано от {$editorName}."
+
+msgid "log.editor.decision"
+msgstr ""
+"Решение на редактора ({$decision}) за изпратените материали с идентификатор "
+"{$submissionId} беше записано от  {$editorName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Файлът на рецензента е качен."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Редакторът, {$userName} качи файл за резензия за етапа {$round} за рецензия "
+"на изпратените материали с идентификатор {$submissionId} от името на "
+"рецензент {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"Потребителят {$userName} прие етапа {$round} за рецензия на изпратените "
+"материали с идентификатор {$submissionId} от името на рецензент "
+"{$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"Потребителят {$userName} отказа етапа {$round} за рецензия на изпратените "
+"материали с идентификатор {$submissionId} от името на рецензент "
+"{$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"Рецензентът {$reviewerName} прие етапа {$round} за рецензия на изпратените "
+"материали с идентификатор {$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"Рецензентът {$reviewerName} отказа етапа {$round} за рецензия на изпратените "
+"материали с идентификатор {$submissionId}."
