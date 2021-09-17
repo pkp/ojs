@@ -1,10 +1,10 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-30 09:07+0000\n"
+"PO-Revision-Date: 2021-09-17 06:26+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
-"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/emails/bg/"
-">\n"
+"Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
+"emails/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -478,3 +478,116 @@ msgstr ""
 " Рецензии) и достъпът на рецензент с едно щракване е деактивиран. "
 "Планираните задачи трябва да бъдат активирани и конфигурирани (вижте "
 "конфигурационния файл на сайта)."
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "Редакторска активност за {$month}, {$year}"
+
+msgid "emails.statisticsReportNotification.description"
+msgstr ""
+"Този имейл се изпраща автоматично месечно до редактори и мениджъри на "
+"списания, за да им предостави общ преглед на състоянието на системата."
+
+msgid "emails.announcement.body"
+msgstr ""
+"<b>{$title}</b><br />\n"
+"<br />\n"
+"{$summary}<br />\n"
+"<br />\n"
+"Посетете нашия уебсайт, за да прочетете <a href=\"{$url}\"> пълното "
+"съобщение </a>."
+
+msgid "emails.announcement.subject"
+msgstr "заглавие {$title}"
+
+msgid "emails.announcement.description"
+msgstr "Този имейл се изпраща, когато се създаде ново съобщение."
+
+msgid "emails.editorDecisionInitialDecline.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "Качена е коригирана версия"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "Подновяване на абонамент: институционален"
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "Подновяване на абонамент: индивидуален"
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "Покупка на абонамент: институционален"
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "Покупка на абонамент: индивидуален"
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "Абонаментът е изтекъл - последно напомняне"
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "Абонаментът е изтекъл"
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "Уведомление за изтичане на абонамента"
+
+msgid "emails.openAccessNotify.subject"
+msgstr "Броят вече е с отворен достъп"
+
+msgid "emails.subscriptionNotify.subject"
+msgstr "Уведомление за абонамент"
+
+msgid "emails.emailLink.subject"
+msgstr "Тази статия вероятно би ви заинтересувала"
+
+msgid "emails.layoutComplete.subject"
+msgstr "Типографското оформление е завършено"
+
+msgid "emails.layoutRequest.subject"
+msgstr "Искане за типография"
+
+msgid "emails.editorRecommendation.subject"
+msgstr "Препоръка на редактора"
+
+msgid "emails.editorDecisionDecline.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.editorDecisionResubmit.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.editorDecisionSendToProduction.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.editorDecisionRevisions.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.editorDecisionSendToExternal.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "Решение на редактора"
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "Автоматично напомняне за рецензия на изпратени материали"
+
+msgid "emails.reviewRemind.subject"
+msgstr "Напомняне за рецензия на изпратени материали"
+
+msgid "emails.reviewAck.subject"
+msgstr "Признание за рецензия на статия"
+
+msgid "emails.reviewDecline.subject"
+msgstr "Не мога да дам рецензия"
+
+msgid "emails.reviewReinstate.subject"
+msgstr "Заявката за рецензиране на статия е възобновена"
+
+msgid "emails.reviewCancel.subject"
+msgstr "Заявката за рецензиране на статия е отменена"
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr "Заявка за рецензиране на статия"
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr "Заявка за рецензиране на статия"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "Заявка за рецензиране на статия"
