@@ -17,7 +17,7 @@
 
 namespace APP\submission;
 
-use PKP\facades\Repo;
+use APP\facades\Repo;
 use PKP\submission\PKPSubmissionFileDAO;
 
 class SubmissionFileDAO extends PKPSubmissionFileDAO
@@ -30,7 +30,6 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO
         parent::insertObject($submissionFile);
 
         if ($submissionFile->getData('assocType') === ASSOC_TYPE_REPRESENTATION) {
-
             $galley = Repo::articleGalley()->get($submissionFile->getData('assocId'));
             if (!$galley) {
                 throw new Exception('Galley not found when adding submission file.');

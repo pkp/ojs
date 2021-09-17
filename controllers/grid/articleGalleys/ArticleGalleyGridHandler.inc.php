@@ -233,8 +233,11 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         $collector = Repo::articleGalley()->getCollector();
         $collector->filterByPublicationIds([$this->getPublication()->getId()]);
-        $galleys = Repo::articleGalley()->getMany($collector);
-
+        $galleyIterator = Repo::articleGalley()->getMany($collector);
+        $galleys = [];
+        foreach ($galleyIterator as $galley) {
+            $galleys[$galley->getId()] = $galley;
+        }
         return $galleys;
     }
 
