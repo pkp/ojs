@@ -160,6 +160,10 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
                 case 'file':
                     $values[$prop] = null;
                     if (is_a($galley, 'ArticleGalley')) {
+                        if (!$galley->getData('submissionFileId')) {
+                            break;
+                        }
+
                         $submissionFile = Repo::submissionFiles()->get($galley->getData('submissionFileId'));
 
                         if (empty($submissionFile)) {
