@@ -13,17 +13,16 @@
 
 namespace APP\migration\install;
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class OJSMigration extends Migration
+class OJSMigration extends \PKP\migration\Migration
 {
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         // Journals and basic journal settings.
         Schema::create('journals', function (Blueprint $table) {
@@ -312,7 +311,7 @@ class OJSMigration extends Migration
     /**
      * Reverse the migration.
      */
-    public function down()
+    public function down(): void
     {
         Schema::drop('completed_payments');
         Schema::drop('queued_payments');

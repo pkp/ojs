@@ -13,17 +13,16 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class I7129_IssueEntityDAORefactor extends Migration
+class I7129_IssueEntityDAORefactor extends \PKP\migration\Migration
 {
     /**
      * Run the migration.
      */
-    public function up()
+    public function up(): void
     {
         // Remove deprecated setting_type requirement
         Schema::table('issue_settings', function (Blueprint $table) {
@@ -44,7 +43,7 @@ class I7129_IssueEntityDAORefactor extends Migration
     /**
      * Reverse the downgrades
      */
-    public function down()
+    public function down(): void
     {
         // Restore deprecated setting_type requirement
         Schema::table('issue_settings', function (Blueprint $table) {
