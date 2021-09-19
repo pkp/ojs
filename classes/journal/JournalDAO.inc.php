@@ -20,6 +20,7 @@ namespace APP\journal;
 use APP\core\Application;
 use APP\facades\Repo;
 use PKP\context\ContextDAO;
+use PKP\db\DAORegistry;
 use PKP\metadata\MetadataTypeDescription;
 
 class JournalDAO extends ContextDAO
@@ -43,6 +44,7 @@ class JournalDAO extends ContextDAO
         'enabled' => 'enabled',
         'seq' => 'seq',
         'primaryLocale' => 'primary_locale',
+        'currentIssueId' => 'current_issue_id'
     ];
 
     /**
@@ -80,16 +82,15 @@ class JournalDAO extends ContextDAO
      */
     public function deleteAllPubIds($journalId, $pubIdType)
     {
+        $pubObjectDaos = ['ArticleGalleyDAO'];
+        foreach ($pubObjectDaos as $daoName) {
+            $dao = DAORegistry::getDAO($daoName);
+            $dao->deleteAllPubIds($journalId, $pubIdType);
+        }
+        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+        $submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
 
-		$dao = DAORegistry::getDAO('IssueDAO');
-		$dao->deleteAllPubIds($journalId, $pubIdType);
-
-		$dao = Repo::articleGalley()->dao;
-		$dao->deleteAllPubIds($journalId, $pubIdType);
-
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
-
+        Repo::issue()->dao->deleteAllPubIds($journalId, $pubIdType);
         Repo::publication()->dao->deleteAllPubIds($journalId, $pubIdType);
     }
 
@@ -118,7 +119,7 @@ class JournalDAO extends ContextDAO
         $forSameType = false
     ) {
         $pubObjectDaos = [
-            ASSOC_TYPE_ISSUE => DAORegistry::getDAO('IssueDAO'),
+            ASSOC_TYPE_ISSUE => Repo::issue()->dao,
             ASSOC_TYPE_PUBLICATION => Repo::publication()->dao,
             ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
             ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
@@ -143,6 +144,22 @@ class JournalDAO extends ContextDAO
             }
         }
         return false;
+    }
+
+    /**
+     * Sets current_issue_id for context to null.
+     * This is necessary because current_issue_id should explicitly be set to null rather than unset.
+     *
+     * @param $contextId
+     *
+     * @return int
+     */
+    public function removeCurrentIssue($contextId)
+    {
+        return $this->update(
+            "UPDATE {$this->tableName} SET current_issue_id = null WHERE {$this->primaryKeyColumn} = ?",
+            [(int) $contextId]
+        );
     }
 }
 
