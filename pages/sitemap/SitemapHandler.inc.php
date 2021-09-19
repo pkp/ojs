@@ -16,6 +16,7 @@
 import('lib.pkp.pages.sitemap.PKPSitemapHandler');
 
 use APP\facades\Repo;
+use APP\issue\Collector;
 use APP\submission\Submission;
 
 class SitemapHandler extends PKPSitemapHandler
@@ -34,13 +35,16 @@ class SitemapHandler extends PKPSitemapHandler
         // Search
         $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'search')));
         // Issues
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
         if ($journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'current')));
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'archive')));
-            $publishedIssues = $issueDao->getPublishedIssues($journalId);
-            while ($issue = $publishedIssues->next()) {
+            $publishedIssuesCollector = Repo::issue()->getCollector()
+                ->filterByContextIds([$journalId])
+                ->filterByPublished(true)
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+            $publishedIssues = Repo::issue()->getMany($publishedIssuesCollector);
+            foreach ($publishedIssues as $issue) {
                 $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
                 // Articles for issue
                 $submissions = Repo::submission()->getMany(
@@ -54,12 +58,8 @@ class SitemapHandler extends PKPSitemapHandler
                     // Abstract
                     $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId()])));
                     // Galley files
-                    $galleys = Repo::articleGalley()->getMany(
-                        Repo::articleGalley()
-                            ->getCollector()
-                            ->filterByPublicationIds([$submission->getCurrentPublication()->getId()])
-                    );
-                    foreach ($galleys as  $galley) {
+                    $galleys = $galleyDao->getByPublicationId($submission->getCurrentPublication()->getId());
+                    while ($galley = $galleys->next()) {
                         $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId(), $galley->getBestGalleyId()])));
                     }
                 }
