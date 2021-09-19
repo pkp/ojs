@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-16 21:29+0000\n"
+"PO-Revision-Date: 2021-09-19 20:38+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/bg/>\n"
@@ -14,3 +14,118 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Достъп"
+
+msgid "manager.payment.editSubscription"
+msgstr "Редактиране на абонамент"
+
+msgid "manager.payment.details"
+msgstr "Детайли"
+
+msgid "manager.payment.description"
+msgstr "Описание"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS не извършва никакви конверсии на валута. Ако приемате плащания за "
+"абонаменти, трябва да се уверите, че абонаментната валута съвпада с "
+"посочената тук."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Въведете сумите на таксите по-долу, за да активирате таксите за обработка на "
+"автора."
+
+msgid "manager.payment.authorFees"
+msgstr "Авторски такси"
+
+msgid "manager.payment.amount"
+msgstr "Сума"
+
+msgid "manager.payment.addPayment"
+msgstr "Добави плащане"
+
+msgid "manager.payment.action"
+msgstr "Действие"
+
+msgid "manager.managementPages"
+msgstr "Страници за управление"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Това ще бъде езикът по подразбиране за сайта на списанието."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"За съжаление не са налични допълнителни езици. Свържете се с администратора "
+"на вашия сайт, ако искате да използвате допълнителни езици с това списание."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS може да бъде предоставен на потребителите на всеки от няколко поддържани "
+"езика. Освен това OJS може да работи като многоезична система, предоставяща "
+"на потребителите възможност да превключват между езици на всяка страница и "
+"позволява да се въвеждат определени данни на няколко допълнителни езика. <br "
+"/> <br/> Ако език, поддържан от OJS не е посочен по-долу, помолете "
+"администратора на вашия сайт да инсталира езика от интерфейса за "
+"администриране на сайта. За инструкции относно добавянето на поддръжка за "
+"нови езици, моля, вижте документацията на OJS."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Това ще замени всички специфични езикови настройки на списанието, които "
+"направили за този език"
+
+msgid "manager.language.forms"
+msgstr "Форми"
+
+msgid "manager.language.submissions"
+msgstr "Изпратени материали"
+
+msgid "manager.language.ui"
+msgstr "ПИ (Потребителски интерфейс) - UI"
+
+msgid "manager.journalManagement"
+msgstr "Управление на списание"
+
+msgid "manager.files.note"
+msgstr ""
+"Забележка: Браузърът на файлове е усъвършенствана функция, която позволява "
+"директно преглеждане и манипулиране на файловете и директориите, свързани с "
+"това списание."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Сигурни ли сте, че искате да нулирате всички шаблони за имейли в това "
+"списание? Ще загубите всички персонализации, които сте направили."
+
+msgid "manager.website.archiving"
+msgstr "Архивиране"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Списанието ще изисква абонаменти за достъп до част или цялото му съдържание."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Списанието ще предоставя отворен достъп до съдържанието му."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS няма да се използва за публикуване на съдържанието на списанието онлайн."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Режим на публикуване"
+
+msgid "manager.distribution.publication"
+msgstr "Публикация"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Използвайте датата на публикуване на статията"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Използвайте датата на публикуване на броя на изданието"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Изберете как дадена дата за авторски права е избрана по подразбиране за "
+"дадена статия. Това подразбиране може да бъде отменено за всеки отделен "
+"случай. Ако „публикувате в крачка“ (\"publish as you go\"), не използвайте "
+"датата на публикуване на изданието."
