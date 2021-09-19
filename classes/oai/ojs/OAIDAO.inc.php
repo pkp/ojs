@@ -32,8 +32,6 @@ class OAIDAO extends PKPOAIDAO
     public $journalDao;
     public $sectionDao;
     public $articleGalleyDao;
-    public $issueDao;
-    public $authorDao;
 
     public $journalCache;
     public $sectionCache;
@@ -47,9 +45,7 @@ class OAIDAO extends PKPOAIDAO
         parent::__construct();
         $this->journalDao = DAORegistry::getDAO('JournalDAO');
         $this->sectionDao = DAORegistry::getDAO('SectionDAO');
-        $this->articleGalleyDao = Repo::articleGalley()->dao;
-        $this->issueDao = DAORegistry::getDAO('IssueDAO');
-        $this->authorDao = DAORegistry::getDAO('AuthorDAO');
+        $this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 
         $this->journalCache = [];
         $this->sectionCache = [];
@@ -87,7 +83,7 @@ class OAIDAO extends PKPOAIDAO
     public function &getIssue($issueId)
     {
         if (!isset($this->issueCache[$issueId])) {
-            $this->issueCache[$issueId] = $this->issueDao->getById($issueId);
+            $this->issueCache[$issueId] = Repo::issue()->get($issueId);
         }
         return $this->issueCache[$issueId];
     }
@@ -208,17 +204,13 @@ class OAIDAO extends PKPOAIDAO
         if ($isRecord) {
             $submission = Repo::submission()->get($articleId);
             $issue = $this->getIssue($row['issue_id']);
-                        $galleys = Repo::articleGalley()->getMany(
-                Repo::articleGalley()
-                    ->getCollector()
-                    ->filterByPublicationIds([$submission->getCurrentPublication()->getId()])
-            );
+            $galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
 
             $record->setData('article', $submission);
             $record->setData('journal', $journal);
             $record->setData('section', $section);
             $record->setData('issue', $issue);
-            $record->setData('galleys', $galleys->toArray());
+            $record->setData('galleys', $galleys);
         }
 
         return $record;
