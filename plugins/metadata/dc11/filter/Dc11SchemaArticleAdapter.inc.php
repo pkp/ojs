@@ -152,7 +152,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
                     ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
             );
             $formats = [];
-            while ($galley = $galleys->next()) {
+            foreach ($galleys as $galley) {
                 $dc11Description->addStatement('dc:format', $galley->getFileType());
             }
         }
