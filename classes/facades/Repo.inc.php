@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\App;
 
 class Repo extends \PKP\facades\Repo
 {
+    public static function issue(): \APP\issue\Repository
+    {
+        return App::make(\APP\issue\Repository::class);
+    }
     public static function publication(): \APP\publication\Repository
     {
         return App::make(\APP\publication\Repository::class);
@@ -27,9 +31,8 @@ class Repo extends \PKP\facades\Repo
     {
         return App::make(\APP\submission\Repository::class);
     }
-
-    public static function articleGalley(): \APP\articleGalley\Repository
+    public static function user(): \APP\user\Repository
     {
-        return App::make(\APP\articleGalley\Repository::class);
+        return App::make(\APP\user\Repository::class);
     }
 }
