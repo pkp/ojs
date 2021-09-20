@@ -42,7 +42,7 @@ existsFork () {
         exit 2;
     fi;
 
-    result=$(git ls-remote --quiet --exit-code -h git@github.com:${username}/${repository}.git ${branch});
+    result=$(git ls-remote --quiet --exit-code -h https://github.com/${username}/${repository} ${branch});
 
     if [ ! -z "$result" ]
      then
