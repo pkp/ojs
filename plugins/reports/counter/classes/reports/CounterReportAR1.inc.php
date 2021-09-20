@@ -12,6 +12,7 @@
  * @brief Article Report 1
  */
 
+use APP\facades\Repo;
 use APP\statistics\StatisticsHelper;
 
 use PKP\statistics\PKPStatisticsHelper;
