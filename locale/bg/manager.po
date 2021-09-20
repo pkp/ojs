@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-19 20:38+0000\n"
+"PO-Revision-Date: 2021-09-20 23:47+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/bg/>\n"
@@ -129,3 +129,70 @@ msgstr ""
 "дадена статия. Това подразбиране може да бъде отменено за всеки отделен "
 "случай. Ако „публикувате в крачка“ (\"publish as you go\"), не използвайте "
 "датата на публикуване на изданието."
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Покупка на брой"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Покупка на статия"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Такса за обработка на статия"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Ограничете само достъпа до PDF версии на издания и статии"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Членство в Асоциация (Сдружение)"
+
+msgid "manager.payment.options.feeName"
+msgstr "Заглавие на такса"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Описание на такса"
+
+msgid "manager.payment.options.fee"
+msgstr "Такса"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Плащанията ще бъдат разрешени за това списание. Имайте предвид, че "
+"потребителите ще трябва да влязат в системата, за да извършват плащания."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Наистина ли искате да изтриете този абонамент?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Това ще активира плащанията за абонаменти, където типовете, цената, "
+"продължителността и абонаментите се управляват от мениджъра на списанието "
+"или абонаментите."
+
+msgid "manager.payment.options"
+msgstr "Опции (параметри)"
+
+msgid "manager.payment.notFound"
+msgstr "Не е намерено"
+
+msgid "manager.payment.noPayments"
+msgstr "Няма плащания"
+
+msgid "manager.payment.generalOptions"
+msgstr "Общи параметри"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Членството в Асоциацията ще се появи в „За списанието“ под „Политики“."
+
+msgid "manager.payment.generalFees"
+msgstr "Общи такси"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Всички разходи трябва да са положителни числови стойности (допускат се "
+"десетични точки)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Опции за плащане на такси"
+
+msgid "manager.payment.enable"
+msgstr "Включи"
