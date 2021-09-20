@@ -411,9 +411,12 @@ class ArticleHandler extends Handler
         $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
-                $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
-                $articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
-                while ($articleGalley = $articleGalleys->next()) {
+                $articleGalleys = Repo::articleGalley()->getMany(
+                    Repo::articleGalley()
+                        ->getCollector()
+                        ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+                );
+                foreach ($articleGalleys as $articleGalley) {
                     $galleyFile = $articleGalley->getFile();
                     if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getId()) {
                         header('HTTP/1.1 301 Moved Permanently');

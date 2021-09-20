@@ -14,8 +14,8 @@
 
 namespace APP\facades;
 
-use APP\doi\Repository as DoiRepository;
 use APP\decision\Repository as DecisionRepository;
+use APP\doi\Repository as DoiRepository;
 use APP\issue\Repository as IssueRepository;
 use APP\publication\Repository as PublicationRepository;
 use APP\submission\Repository as SubmissionRepository;
@@ -59,5 +59,9 @@ class Repo extends BaseRepo
     public static function user(): UserRepository
     {
         return app(UserRepository::class);
+    }
+    public function articleGalley(): \APP\articleGalley\Repository
+    {
+        return App::make(\APP\articleGalley\Repository::class);
     }
 }

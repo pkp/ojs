@@ -13,19 +13,19 @@
  * @brief Handle article galley grid requests.
  */
 
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
-use APP\facades\Repo;
+use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
-use PKP\controllers\grid\feature\OrderGridItemsFeature;
-use PKP\security\authorization\WorkflowStageAccessPolicy;
-use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\internal\RepresentationRequiredPolicy;
+use PKP\security\authorization\PublicationAccessPolicy;
+use PKP\security\authorization\WorkflowStageAccessPolicy;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
 
@@ -103,11 +103,14 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         $this->_request = $request;
 
+        import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
         $this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
 
+        import('lib.pkp.classes.security.authorization.PublicationAccessPolicy');
         $this->addPolicy(new PublicationAccessPolicy($request, $args, $roleAssignments));
 
         if ($request->getUserVar('representationId')) {
+            import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
             $this->addPolicy(new RepresentationRequiredPolicy($request, $args));
         }
 
@@ -123,6 +126,14 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
         $this->setTitle('submission.layout.galleys');
+
+        // Load pkp-lib translations
+        AppLocale::requireComponents(
+            LOCALE_COMPONENT_PKP_SUBMISSION,
+            LOCALE_COMPONENT_PKP_USER,
+            LOCALE_COMPONENT_PKP_EDITOR,
+            LOCALE_COMPONENT_APP_EDITOR
+        );
 
         import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
         $cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
@@ -159,6 +170,7 @@ class ArticleGalleyGridHandler extends GridHandler
     public function initFeatures($request, $args)
     {
         if ($this->canEdit()) {
+            import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
             return [new OrderGridItemsFeature()];
         }
 
@@ -178,10 +190,9 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
-        $galley = $galleyDao->getById($rowId);
-        $galley->setSequence($newSequence);
-        $galleyDao->updateObject($galley);
+        $galley = Repo::articleGalley()->get((int) $rowId);
+        $galley->setData('seq', $newSequence);
+        Repo::articleGalley()->dao->update($galley);
     }
 
     //
@@ -248,8 +259,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function identifiers($args, $request)
     {
-        $representationDao = Application::getRepresentationDAO();
-        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        $representation = Repo::articleGalley()->get($request->getUserVar('representationId'));
         import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($representation);
         $form->initData();
@@ -336,8 +346,7 @@ class ArticleGalleyGridHandler extends GridHandler
         if (!$galley || !$request->checkCSRF()) {
             return new JSONMessage(false);
         }
-
-        Services::get('galley')->delete($galley);
+        Repo::articleGalley()->delete($galley);
 
         $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
         $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());

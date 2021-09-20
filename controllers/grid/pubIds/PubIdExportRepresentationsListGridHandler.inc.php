@@ -15,13 +15,13 @@
 
 use APP\facades\Repo;
 use APP\issue\Collector;
+use PKP\controllers\grid\feature\PagingFeature;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
 use PKP\security\Role;
-use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
-use PKP\controllers\grid\feature\PagingFeature;
 
 import('controllers.grid.pubIds.PubIdExportRepresentationsListGridCellProvider');
 
@@ -247,7 +247,6 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         $context = $request->getContext();
         [$search, $column, $issueId, $statusId] = $this->getFilterValues($filter);
         $title = $author = null;
@@ -260,7 +259,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
         if ($statusId) {
             $pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
         }
-        return $articleGalleyDao->getExportable(
+        return Repo::articleGalley()->dao->getExportable(
             $context->getId(),
             $this->_plugin->getPubIdType(),
             $title,
