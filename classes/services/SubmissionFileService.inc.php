@@ -16,7 +16,7 @@
 namespace APP\services;
 
 use APP\core\Application;
-use PKP\db\DAORegistry;
+use APP\facades\Repo;
 use PKP\plugins\HookRegistry;
 
 use PKP\search\SubmissionSearch;
@@ -47,11 +47,10 @@ class SubmissionFileService extends \PKP\services\PKPSubmissionFileService
 
         // Remove galley associations and update search index
         if ($submissionFile->getData('assocType') == ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-            $galley = $galleyDao->getById($submissionFile->getData('assocId'));
+            $galley = Repo::articleGalley()->get($submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
-                $galleyDao->updateObject($galley);
+                Repo::articleGalley()->dao->update($galley);
             }
             $articleSearchIndex = Application::getSubmissionSearchIndex();
             $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());

@@ -15,7 +15,7 @@
  * @brief A galley is a final presentation version of the full-text of an article.
  */
 
-namespace APP\article;
+namespace APP\articleGalley;
 
 use APP\core\Application;
 
