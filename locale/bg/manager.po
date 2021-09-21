@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-20 23:47+0000\n"
+"PO-Revision-Date: 2021-09-22 08:45+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/bg/>\n"
@@ -196,3 +196,175 @@ msgstr "Опции за плащане на такси"
 
 msgid "manager.payment.enable"
 msgstr "Включи"
+
+msgid "manager.sections.open"
+msgstr "Отворен за изпращане на материали"
+
+msgid "manager.sections.noneCreated"
+msgstr "Не са създадени раздели."
+
+msgid "manager.sections.indexed"
+msgstr "Индексирани"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Например „Рецензирана статия“, „Преглед на книги без рецензия“, „Поканен "
+"коментар“ и др.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Идентифицирайте елементите, публикувани в този раздел като (n)"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Изберете заглавието на раздела от съдържанието на броя."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Изберете имената на авторите за материали в раздела от съдържанието на броя."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Заглавието е задължително за раздела."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Моля, уверете се, че сте избрали валиден формуляр за преглед/рецензия."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Моля, уверете се, че е поставено поне едно квадратче за отметка за всяко "
+"задание на редактора на секции."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "За раздела се изисква съкратено заглавие"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Поне един раздел трябва да е активен. Посетете настройките на работния "
+"поток, за да деактивирате всички изпращания на материали в това списание."
+
+msgid "manager.sections.editors"
+msgstr "Редактори на раздели"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Елементите могат да се подават само от редактори и редактори на раздели."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Добавете редактор на секции към този раздел, за да получавате автоматично "
+"подадените документи към редактора на секции. (В противен случай редакторите "
+"на раздели могат да бъдат назначени ръчно, след като пристигне изпратено "
+"съобщение.) Ако е добавено, редакторът на секции може автоматично да бъде "
+"назначен да контролира РЕЦЕНЗИЯТА (peer review) и/или РЕДАКТИРАНЕТО ("
+"копиране, оформление и корекция) на изпратените материали до този раздел. "
+"Редакторите на секции се създават, като щракнете върху Редактори на секции "
+"под Роли в управлението на списания."
+
+msgid "manager.sections.create"
+msgstr "Създаване на раздел"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Преди този раздел да може да бъде изтрит, трябва да преместите статиите, "
+"добавени в него, в други раздели."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Наистина ли искате да изтриете този раздел за постоянно?"
+
+msgid "manager.sections.assigned"
+msgstr "Редактори на този раздел"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Все още няма редактори на раздели. Добавете тази роля към поне един "
+"потребител чрез Управление> Настройки> Потребители &amp; Първо роли."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Не се  изискват резюмета"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Синхронизирането на записване (асоцииране) ще включи всички потребители, "
+"записани в посочената роля в посоченото списание, в една и съща роля в този "
+"дневник. Тази функция позволява да се синхронизира общ набор от потребители ("
+"например рецензенти) между списанията."
+
+msgid "manager.people.roleEnrollment"
+msgstr "е асоциирана роля {$role}"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Изберете потребител, на когото да приписвате авторските права на предишните "
+"потребители, редактирането на задания и т.н."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Изберете потребител (или няколко), за да ги слеете с друг потребителски "
+"акаунт (например, когато някой има два потребителски акаунта). Профилът (ите)"
+", избран (и) първо, ще бъдат изтрити и всички заявки, задания и т.н. ще "
+"бъдат приписани на втория акаунт."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "със списание"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Запишете съществуващ потребител"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Изберете шаблон"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Да се премахне ли този потребител от това списание? Това действие ще отпише "
+"потребителя от всички роли в това списание."
+
+msgid "manager.people.allUsers"
+msgstr "Всички записани потребители"
+
+msgid "manager.people.showNoRole"
+msgstr "Покажи потребителите без роли"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Запишете потребител от този сайт в това списание"
+
+msgid "manager.people.allJournals"
+msgstr "Всички списания"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Потребители, записани в това списание"
+
+msgid "manager.payment.userName"
+msgstr "Идентификатор на плащането"
+
+msgid "manager.paymentTypes"
+msgstr "Видове плащания"
+
+msgid "manager.payment.records"
+msgstr "Записи"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Избраните опции, заедно с техните описания и такси (които могат да бъдат "
+"редактирани по -долу), ще се появят в „За списанието“ в „Политики“, както и "
+"в точки, където се изисква плащане."
+
+msgid "manager.payment.readerFees"
+msgstr "Такси за читатели"
+
+msgid "manager.payment.paymentType"
+msgstr "Тип плащане"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Начини (методи) за плащане на такси"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Можете да конфигурирате някоя от следните приставки за начини на плащане от "
+"този екран."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Метод на плащане"
+
+msgid "manager.payment.paymentId"
+msgstr "Идентификатор на плащането"
+
+msgid "manager.payment.options.text"
+msgstr "Описание на метода за плащане"
