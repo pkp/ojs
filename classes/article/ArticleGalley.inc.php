@@ -230,7 +230,3 @@ class ArticleGalley extends Representation
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\article\ArticleGalley', '\ArticleGalley');
-}
