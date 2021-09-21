@@ -205,7 +205,3 @@ class ArticleGalley extends Representation
         return $this->getLabel();
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\article\ArticleGalley', '\ArticleGalley');
-}
