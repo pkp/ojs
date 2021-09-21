@@ -414,21 +414,16 @@ class ArticleSearchIndexTest extends PKPTestCase
     private function registerFileDAOs($expectMethodCall)
     {
         // Mock file DAOs.
-        $articleGalleyDao = $this->getMockBuilder(ArticleGalleyDAO::class)
-            ->setMethods(['getBySubmissionId'])
-            ->getMock();
+        App::instance(\APP\articleGalley\DAO::class, \Mockery::mock(\APP\articleGalley\DAO::class, function ($mock) use ($expectMethodCall) {
+            if ($expectMethodCall) {
+                $mock->shouldReceive('getBySubmissionId')->andReturn([]);
+            } else {
+                $mock->shouldNotReceive('getBySubmissionId');
+            }
+        }));
 
-        // Make sure that the DAOs are being called.
-        if ($expectMethodCall) {
-            $expectation = $this->atLeastOnce();
-        } else {
-            $expectation = $this->never();
-        }
-        $articleGalleyDao->expects($expectation)
-            ->method('getBySubmissionId')
-            ->will($this->returnValue([]));
+
         // FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
-        DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
     }
 
     /**
