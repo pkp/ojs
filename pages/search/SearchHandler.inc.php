@@ -21,8 +21,6 @@ use APP\handler\Handler;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 
-use PKP\submission\PKPSubmission;
-
 class SearchHandler extends Handler
 {
     /**
@@ -109,11 +107,11 @@ class SearchHandler extends Handler
         }
 
         // Assign the year range.
-        $yearRange = Repo::publication()->getDateBoundaries(
-            Repo::publication()
-                ->getCollector()
-                ->filterByContextIds([(int) $journalId])
-        );
+        $collector = Repo::publication()->getCollector();
+        if ($journalId) {
+            $collector->filterByContextIds([(int) $journalId]);
+        }
+        $yearRange = Repo::publication()->getDateBoundaries($collector);
         $yearStart = substr($yearRange->min_date_published, 0, 4);
         $yearEnd = substr($yearRange->max_date_published, 0, 4);
         $templateMgr->assign([
@@ -241,15 +239,15 @@ class SearchHandler extends Handler
                         ->filterByAffiliation($affiliation)
                         ->filterByCountry($country)
                 )
-                ->map(function($author) {
+                ->map(function ($author) {
                     return $author->getData('publicationId');
                 })
                 ->unique()
-                ->map(function($publicationId) {
+                ->map(function ($publicationId) {
                     return Repo::publication()->get($publicationId)->getData('submissionId');
                 })
                 ->unique()
-                ->map(function($submissionId) {
+                ->map(function ($submissionId) {
                     return Repo::submission()->get($submissionId);
                 });
 
