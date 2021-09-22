@@ -571,12 +571,16 @@ class IssueGridHandler extends GridHandler
 
         if (!$wasPublished) {
             // Publish all related publications
+            // Include published submissions in order to support cases where two
+            // versions of the same submission are published in distinct issues. In
+            // such cases, the submission will be STATUS_PUBLISHED but the
+            // publication will be STATUS_SCHEDULED.
             $submissions = Repo::submission()->getMany(
                 Repo::submission()
                     ->getCollector()
                     ->filterByContextIds([$issue->getJournalId()])
                     ->filterByIssueIds([$issue->getId()])
-                    ->filterByStatus([Submission::STATUS_SCHEDULED])
+                    ->filterByStatus([Submission::STATUS_SCHEDULED, Submission::STATUS_PUBLISHED])
             );
 
             foreach ($submissions as $submission) { /** @var Submission $submission */
