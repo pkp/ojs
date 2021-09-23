@@ -29,7 +29,7 @@
 	<migration class="PKP\migration\install\NavigationMenusMigration" />
 	<migration class="PKP\migration\install\NotesMigration" />
 	<migration class="PKP\migration\install\ReviewFormsMigration" />
-	<migration class="PKP\migration\install\SubmissionFilesMigration" /><!-- before ReviewsMigration so that foreign keys can be defined-->
+	<migration class="PKP\migration\install\SubmissionFilesMigration" />
 	<migration class="PKP\migration\install\RolesAndUserGroupsMigration" />
 	<migration class="PKP\migration\install\ScheduledTasksMigration" />
 	<migration class="PKP\migration\install\SubmissionsMigration" />
