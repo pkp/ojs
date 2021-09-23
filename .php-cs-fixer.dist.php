@@ -41,7 +41,7 @@ foreach ($files as $file) {
     }
 }
 
-$rules = include './lib/pkp/.php_cs_rules';
+$rules = include './lib/pkp/.php-cs-rules.php';
 
 $config = new PhpCsFixer\Config();
 return $config->setRules($rules)
