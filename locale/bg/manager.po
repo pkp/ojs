@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-22 08:45+0000\n"
+"PO-Revision-Date: 2021-09-24 07:47+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/bg/>\n"
@@ -368,3 +368,321 @@ msgstr "Идентификатор на плащането"
 
 msgid "manager.payment.options.text"
 msgstr "Описание на метода за плащане"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Ограничете броя на елементите (например заявки, потребители или задания за "
+"редактиране), които да се показват в списък, преди да показвате следващите "
+"елементи на друга страница."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Елементи на страница"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Елементите от лентата за навигация могат да бъдат добавени към текущия набор "
+"(Начало, Информация, Потребителска начална страница и т.н.), които се "
+"появяват в горната част на страницата."
+
+msgid "manager.setup.institution"
+msgstr "Организация"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"В зависимост от избрания формат, идентифицирайте изданието, тома и/или "
+"годината на първия брой, който ще бъде публикуван с OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Първи брой"
+
+msgid "manager.setup.information.forReaders"
+msgstr "За читатели"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "За библиотекари"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "За автори"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Кратки описания на списанието за библиотекари и бъдещи автори и читатели. Те "
+"са достъпни в страничната лента на сайта, когато е добавен информационният "
+"блок."
+
+msgid "manager.setup.information"
+msgstr "Информация"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"За списания, които предлагат незабавен или забавен отворен достъп, включете "
+"лиценз Creative Commons с всички публикувани произведения в подходящия "
+"момент."
+
+msgid "manager.setup.identity"
+msgstr "Идентичност на списанието"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Стъпка 3. Ръководство за подаване на материали"
+
+msgid "manager.setup.guidelines"
+msgstr "Ръководство"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Стъпка 1. Получаване на подробности"
+
+msgid "manager.setup.generalInformation"
+msgstr "Обща информация"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Изисква се име на лице за поддръжка."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Изисква се имейл за поддръжка."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Изисква се брой на рецензентите за едно изпращане на материали."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Изисква се заглавие на списанието."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Изисква се инициали на списанието."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Изисква се основно име за контакт."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Изисква се основeн имейл за контакт."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Посоченият ISSN не е валиден."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS се придържа към <a href=\"http://www.openarchives.org/\" target=\""
+"_blank\"> инициативата за отворени архиви </a> протокол за събиране на "
+"метаданни, който е нововъзникващия стандарт за осигуряване на добре "
+"индексиран достъп до електронни изследователски ресурси в световен мащаб. "
+"Авторите ще използват подобен шаблон, за да предоставят метаданни за "
+"изпращането си. Мениджърът на списанието трябва да избере категориите за "
+"индексиране и да представи авторите със съответните примери, за да им "
+"помогне при индексирането на тяхната работа."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "За авторите да индексират работата си"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Опишете на автори, читатели и библиотекари обхвата на статиите и други "
+"материали, които списанието ще публикува."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Фокус и обхват"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Посетителите могат да регистрират потребителски акаунт в списанието."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Колко съобщения да се показват на началната страница. Оставете това празно, "
+"за да не се показва нищо."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Покажи на началната страница"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Съобщения могат да бъдат публикувани за информиране на читателите за новини "
+"и събития в списанието. Публикуваните съобщения ще се показват на страницата "
+"със съобщения."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Включване на съобщения"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Подготвените имейли, изпратени от системата от името на списанието, ще имат "
+"следния подпис, добавен в края."
+
+msgid "manager.setup.emailSignature"
+msgstr "Подпис"
+
+msgid "manager.setup.emails"
+msgstr "Идентификация на имейли"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"За да изпраща имейли, които не могат да се доставят, до \"адрес за грешки\", "
+"администраторът на сайта трябва да активира опцията <code> "
+"allow_envelope_sender </code> в конфигурационния файл на сайта. Може да се "
+"наложи конфигурация на сървъра, както е посочено в документацията на OJS."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Всички имейли, които не могат да се доставят, ще доведат до съобщение за "
+"грешка на този адрес."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Адрес за грешки (при връщане на имейл)"
+
+msgid "manager.setup.editorDecision"
+msgstr "Решение на редактора"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Добавете съдържанието на текущия брой (ако има такъв)."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Дайте примери за съответните академични дисциплини за това списание"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Напр. История; Образование; Социология; Психология; Културология; Право)"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Полезно, когато списанието преминава дисциплинарните граници и/или авторите "
+"представят мултидисциплинарни статии."
+
+msgid "manager.setup.discipline"
+msgstr "Академична дисциплина и поддисциплини"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Мениджърът на списание ще регистрира всички потребителски акаунти. "
+"Редакторите или редакторите на раздели могат да регистрират потребителски "
+"акаунти за рецензенти."
+
+msgid "manager.setup.details.description"
+msgstr "Име на списание, ISSN, контакти, спонсори и търсачки."
+
+msgid "manager.setup.details"
+msgstr "Детайли"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Стъпка 5. Персонализиране на външния вид"
+
+msgid "manager.setup.currentIssue"
+msgstr "Текущ брой"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Този текст ще се появи в раздела „Информация“ на уебсайта на списанието и "
+"може да се използва за описване на промените в заглавията, редакционния "
+"съвет и други елементи от значение за историята на публикациите на "
+"списанието."
+
+msgid "manager.setup.history"
+msgstr "История на списанието"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Изисквайте от рецензентите да подадат декларация за конкурентни интереси (CI)"
+" с всяка представена от тях рецензия."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Изисквайте подаването на авторите да подадат декларация за конкурентни "
+"интереси (CI) с тяхното подаване на материали."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Да се появи в \"За списанието\") "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Въведете всяка информация, която искате да се показва на страницата с "
+"съобщения."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Въведение"
+
+msgid "manager.setup.announcements"
+msgstr "Съобщения"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Алтернативно, вместо заглавие и лого, в текстовото поле по-долу може да се "
+"вмъкне HTML версия на заглавката. Оставете текстовото поле празно, ако не се "
+"изисква."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Алтернативно заглавие"
+
+msgid "manager.setup.addSponsor"
+msgstr "Добавяне на спонсорираща организация"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Добавяне на нова връзка към базата данни"
+
+msgid "manager.setup.addNavItem"
+msgstr "Добавяне на елемент"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Добавяне на елемент, който да се появи в „За списанието“"
+
+msgid "manager.setup.addItem"
+msgstr "Добавяне на елемент"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Добавяне на елемент от контролнен списък"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Добавяне на \"информация за списанието\""
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Съдържание"
+
+msgid "manager.setup.pageHeader"
+msgstr "Горен колонтитул (заглавие на страницата) за списанието"
+
+msgid "manager.setup.contextName"
+msgstr "Име на списание"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Таблица със стилове на списание"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Началната страница на списанието се състои от навигационни връзки по "
+"подразбиране. Допълнително съдържание на началната страница може да бъде "
+"добавено чрез използване на една или всички от следните опции, които ще се "
+"появят в показания ред."
+
+msgid "manager.setup.homepageContent"
+msgstr "Съдържание на заглавната страница на списанието"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Редакторски екип"
+
+msgid "manager.setup.masthead"
+msgstr "Входни данни"
+
+msgid "manager.setup"
+msgstr "Настройки за списание"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Ограничете броя на абстрактните думи за този раздел (0 без ограничение)"
+
+msgid "manager.sections.wordCount"
+msgstr "Брой думи"
+
+msgid "manager.sections.unassigned"
+msgstr "Достъпни редактори на раздели"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Материали, изпратени в този раздел на списанието"
+
+msgid "manager.sections.submissionReview"
+msgstr "Няма да бъде рецензиран"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Няма да бъде включено в индексирането на списанието"
+
+msgid "manager.sections.reviewed"
+msgstr "Рецензиран"
+
+msgid "manager.sections.readingTools"
+msgstr "Инструменти за читателя"
+
+msgid "manager.sections.policy"
+msgstr "Правила на раздела"
