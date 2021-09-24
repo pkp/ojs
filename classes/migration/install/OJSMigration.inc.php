@@ -336,7 +336,3 @@ class OJSMigration extends \PKP\migration\Migration
         Schema::drop('journals');
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\migration\OJSMigration', '\OJSMigration');
-}
