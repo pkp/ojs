@@ -855,7 +855,7 @@ class Upgrade extends Installer
 
         $oldLocaleStringLength = 's:5';
 
-        $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
+        $journalSettingsDao = new \PKP\db\DAO();
 
         // Check if the sr_SR is used, and if not do not run further
         $srExistResult = $journalSettingsDao->retrieve('SELECT COUNT(*) AS row_count FROM site WHERE installed_locales LIKE ?', ['%' . $oldLocale . '%']);

@@ -120,7 +120,6 @@ class Application extends PKPApplication
             'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',
             'IssueFileDAO' => 'APP\issue\IssueFileDAO',
             'JournalDAO' => 'APP\journal\JournalDAO',
-            'JournalSettingsDAO' => 'APP\journal\JournalSettingsDAO',
             'MetricsDAO' => 'APP\statistics\MetricsDAO',
             'OAIDAO' => 'APP\oai\ojs\OAIDAO',
             'OJSCompletedPaymentDAO' => 'APP\payment\ojs\OJSCompletedPaymentDAO',
