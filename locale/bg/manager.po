@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-24 07:47+0000\n"
+"PO-Revision-Date: 2021-09-24 20:23+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/bg/>\n"
@@ -686,3 +686,479 @@ msgstr "Инструменти за читателя"
 
 msgid "manager.sections.policy"
 msgstr "Правила на раздела"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Тип (метод/подход)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(Напр. Историческо проучване; квази-експериментален; литературен анализ; "
+"анкета/интервю)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Предоставете метаданни на услуги за индексиране на трети страни чрез <a href="
+"\"https://www.openarchives.org/\">OAI - инициативата за отворени архиви </a>."
+
+msgid "manager.setup.enableOai"
+msgstr "Включване на OAI"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Понастоящем това списание не приема материали. Посетете настройките на "
+"работния поток, за да разрешите подаването на материали."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Не позволявайте на потребителите да изпращат нови статии в списанието. "
+"Изпращанията на материали могат да бъдат деактивирани за отделни раздели на "
+"списанието на страницата с настройки на <a href=\"{$url}\"> Раздели на "
+"списания </a>."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Авторски указания, авторски права и индексиране (включително регистрация)."
+
+msgid "manager.setup.submissions"
+msgstr "Изпращане на материали"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"При подаване на материали към списанието авторите първо се приканват да "
+"проверят всеки елемент от контролния списък за подготовка за подаване на "
+"материали, преди да продължат. Контролният списък също се появява в Насоките "
+"за авторите, под „За списанието“. Списъкът може да бъде редактиран по-долу, "
+"но всички елементи в списъка ще изискват отметка, преди авторите да могат да "
+"продължат с изпращането си."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Контролен списък за изпращане на материали"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Ръководство за изпращане на материали"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Дайте примери за ключови думи или теми като ръководство за авторите"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Ключови думи"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(Например фотосинтеза; черни дупки; проблем с четирицветна карта; байесова "
+"теория)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Пет стъпки към уеб сайт на списанието"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Преглед на съдържанието на статията"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Достъп до сайта"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Винаги показвайте връзки към типография и посочете ограничен достъп."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Разделът на списанието, за който ще бъде разгледан материалът."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Редакторът на списанието, който ще го види през редакционния процес."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"За да създадете или промените раздели за списанието (например статии, "
+"рецензии и т.н.), отидете на Управление на секции. <br /> <br /> Авторите, "
+"изпращащи статии в списанието, ще посочат ..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ако разделите не са добавени, тогава елементите се изпращат в секцията "
+"Статии по подразбиране.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Раздели и редактори на раздели"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Предоставете кратко описание (50-300 знака) на списанието, което търсачките "
+"могат да покажат при включване на списанието в резултатите от търсенето."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Помогнете на търсачките като Google да открият и покажат вашия сайт. "
+"Насърчаваме ви да изпратите своята <a href=\"{$sitemapUrl}\" target=\""
+"_blank\">карта на сайта</a>."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Индексиране на търсенето"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Политика/правила за рецензия"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Напомняния на рецензента"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Оценки на рецензента"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Включете защитена връзка в поканата по имейл до рецензенти."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"На рецензентите може да бъде изпратена защитена връзка в поканата по имейл, "
+"която ще им позволи достъп до рецензията, без да влизат в системата. "
+"Достъпът до други страници изисква от тях да влязат в системата."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Директен (one-click) достъп на рецензент"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Достъп на рецензент"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Рецензентите няма да получат достъп до изпратените материали, докато не се "
+"съгласят да направят рецензия."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Ограничаване на достъпа до файлове"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Редакторите ще оценяват рецензентите по петстепенна скала за качество след "
+"всяка рецензия."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Седмици, разрешени за завършване на рецензия"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"За да изпраща автоматични напомняния по имейл, администраторът на сайта "
+"трябва да активира опцията <tt>schedule_tasks</tt> в конфигурационния файл "
+"на OJS. Може да се наложи допълнителна конфигурация на сървъра, както е "
+"посочено в документацията на OJS."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Автоматични напомняния по имейл"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Опции за рецензенти"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Ръководство за рецензенти"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Потребителите трябва да бъдат регистрирани и да влязат, за да видят сайта на "
+"списанието."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Потребителите трябва да бъдат регистрирани и да влизат в системата, за да "
+"видят съдържание с отворен достъп."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Референтни връзки"
+
+msgid "manager.setup.publisher"
+msgstr "Издател"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Идентификация на съдържанието на списанието"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Планиране на графика за публикуване"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Елементите от списанието могат да бъдат публикувани колективно като част от "
+"брой със собствено съдържание. Като алтернатива, отделни елементи могат да "
+"бъдат публикувани веднага щом са готови, като ги добавите към съдържанието "
+"на \"текущия\" том. Осигурете на читателите в „За списанието“ изявление "
+"относно системата, която това списание ще използва, и очакваната честота на "
+"публикуване."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "График за публикуване"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Инструкциите за корекция ще бъдат достъпни за коректорите, авторите, "
+"редакторите на оформления и редакторите на секции на етапа на редактиране на "
+"изпратените материали. По-долу е показан набор от инструкции по подразбиране "
+"в HTML, който може да бъде редактиран или заменен от мениджъра на списанието "
+"по всяко време (в HTML или обикновен текст)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Ръководство за коректури"
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN за печатно издание"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Фокус, рецензиране, раздели, поверителност, сигурност и допълнителна "
+"информация за елементите."
+
+msgid "manager.setup.policies"
+msgstr "Правила"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Настройка за номерацията на страници"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN  за онлайн версия на списание"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ограничете броя на връзките за показване до следващи страници в списък."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Връзки със страница"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong> Забележка: </strong> Имейлът за потвърждение на изпратените "
+"материали понастоящем е деактивиран. За да използвате тази функция, "
+"активирайте имейла „Submission Ack“ в раздел Имейли."
+
+msgid "manager.setup.note"
+msgstr "Забележка"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Не е качена таблица със стилове."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Не е качен графичен файл."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Стойността на етикета е буквален низ (напр. „Настройка на списанието“), а не "
+"ключ за съобщение за локализация (напр. „manager.setup“)"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL адресът е абсолютен URL адрес (напр. „Http://www.example.com“), а не път "
+"спрямо сайта (напр. „/manager/setup“)"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Добавете или премахнете допълнителни елементи от лентата за навигация."
+
+msgid "manager.setup.navigationBar"
+msgstr "Навигационна лента"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Стъпка 4. Управление на списанието"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Управление и настройки за публикуване"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Управление на основните редакционни стъпки"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Достъп и сигурност, планиране, съобщения, копиране, оформление и корекция."
+
+msgid "manager.setup.management"
+msgstr "Управление"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Заглавка на начална страница, съдържание, заглавка списанието, долен "
+"колонтитул, лента за навигация и таблица със стилове."
+
+msgid "manager.setup.look"
+msgstr "Външен вид на списанието"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Регистрирайте се за услугата CLOCKSS, като посетите <a href=\"http://clockss."
+"org/\" target=\"_blank\"> уебсайта на CLOCKSS </a>."
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Определете 6-10 библиотеки, които ще регистрират и кешират списанието. "
+"Например, обърнете се към институции, в които работят редактори или членове "
+"на борда и/или институции, които вече участват в LOCKSS. Вижте <a href=\""
+"http://www.lockss.org/community/\" target=\"_blank\"> общността LOCKSS </a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Лиценз CLOCKSS ще се появи в „За списанието“ под „Архивиране“:<a href=\""
+"http://clockss.org/\" target=\"_blank\">CLOCKSS лиценз</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Активирайте DLOCKSS да съхранява и разпространява съдържание на списания в "
+"участващите библиотеки чрез страницата CLOCKSS <a href=\"{$clockssUrl}\" "
+"target=\"_blank\">Издателски манифест</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Описание на CLOCKSS лиценза"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Описание на LOCKSS лиценза"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Лиценз LOCKSS ще се появи в „За списанието“ под „Архивиране“: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS лиценз</a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Активирайте LOCKSS да съхранява и разпространява съдържание на списания в "
+"участващите библиотеки чрез страницата LOCKSS <a href=\"{$lockssUrl}\" "
+"target=\"_blank\">Издателски манифест</a>."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS и CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) предоставя безплатни услуги за съхранение на "
+"всяко списание на OJS, което отговаря на няколко основни критерия. PKP PN "
+"плъгинът за OJS 3 в момента се разработва и скоро ще бъде достъпен в "
+"галерията с плъгини."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "Архивиране в мрежата PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Прегледайте <button>настройките на плъгина</button>, за да приемете "
+"условията за ползване на PKP PN."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) предоставя безплатни услуги за съхранение на "
+"всяко списание на OJS, което отговаря на няколко основни критерия."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Включване на PKP PN добавка"
+
+msgid "manager.setup.lists"
+msgstr "Списъци"
+
+msgid "manager.setup.labelName"
+msgstr "Име на етикета"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Предоставете кратко описание на вашето списание и посочете редактори, "
+"управляващи директори и други членове на вашия редакторски екип."
+
+msgid "manager.setup.keyInfo"
+msgstr "Ключова информация"
+
+msgid "manager.setup.contextTitle"
+msgstr "Заглавие на списанието"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Малко лого или представяне на списанието, което може да се използва в "
+"списъци на списания."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Миниатюра (иконка) на списанието"
+
+msgid "manager.setup.journalTheme"
+msgstr "Оформителска тема (шаблон) на списанието"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Неправилен формат на стилове за това списание. Приема се .css формат."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Настройката на вашето списание е актуализирана."
+
+msgid "manager.setup.journalSetup"
+msgstr "Настройка на списание"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Стъпка 2. Правила и политики на списанието"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Това е долният колонтитул на вашето списание. За да промените или "
+"актуализирате долния колонтитул, поставете HTML кода в текстовото поле по -"
+"долу. Примери могат да бъдат друга лента за навигация, брояч и т.н. Този "
+"долен колонтитул ще се показва на всяка страница."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Долен колонтитул (footer) на страниците на списанието"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Лого на списанието (алт.текст)"
+
+msgid "manager.setup.journalLogo"
+msgstr "Лого на списанието"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Изберете тема на дневник и изберете компонентите на оформлението тук. Може "
+"да се качи и таблица със стилове на списание, която може да се използва за "
+"замяна на стиловите данни в общосистемните таблици със стилове и таблицата "
+"със стилове на темата (ако е избрана тема)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Макет на оформлението на списанието"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Изберете държавата, в която се намира това списание, или държавата на "
+"пощенския адрес на списанието или издателя."
+
+msgid "manager.setup.contextInitials"
+msgstr "Абревиатура на списанието"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Графична версия на заглавието и логото на списанието (като .gif, .jpg или "
+".png файл) може да бъде качена за началната страница, която ще замени "
+"текстовата версия, която се появява, ако не е избрана графична версия."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Заглавие на на началната страница на списанието (алт. текст)"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Заглавие на началната страница на списанието"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"По подразбиране началната страница се състои от навигационни връзки. "
+"Допълнително съдържание на началната страница може да бъде добавено чрез "
+"използване на една или всички от следните опции, които ще се появят в "
+"показания ред. Обърнете внимание, че текущият брой винаги е достъпен чрез "
+"връзката Текущ брой в лентата за навигация."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Съдържание на началната страница на списанието"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Включете всяка информация за вашето списание, която може да представлява "
+"интерес за читатели, автори или рецензенти. Това може да включва вашата "
+"политика на отворен достъп, фокуса и обхвата на списанието, известие за "
+"авторски права, разкриване на спонсорство, история на списанието, декларация "
+"за поверителност и включване във всяка архивна система LOCKSS или CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "За списанието"
+
+msgid "manager.setup.contextSummary"
+msgstr "Резюме на списанието"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Архивиране на списанието"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Абревиатура на списанието"
