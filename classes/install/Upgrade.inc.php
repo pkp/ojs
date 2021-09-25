@@ -18,13 +18,17 @@ namespace APP\install;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\i18n\AppLocale;
 use APP\template\TemplateManager;
 use Illuminate\Support\Facades\DB;
+use PKP\config\Config;
+use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 use PKP\identity\Identity;
 use PKP\install\Installer;
 use PKP\security\Role;
+use PKP\security\UserGroupDAO;
 use PKP\submission\SubmissionFile;
 
 class Upgrade extends Installer
@@ -851,7 +855,7 @@ class Upgrade extends Installer
 
         $oldLocaleStringLength = 's:5';
 
-        $journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO'); /* @var $journalSettingsDao JournalSettingsDAO */
+        $journalSettingsDao = new \PKP\db\DAO();
 
         // Check if the sr_SR is used, and if not do not run further
         $srExistResult = $journalSettingsDao->retrieve('SELECT COUNT(*) AS row_count FROM site WHERE installed_locales LIKE ?', ['%' . $oldLocale . '%']);
