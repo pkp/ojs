@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-25 15:22+0000\n"
+"PO-Revision-Date: 2021-09-25 15:26+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-views/bg_BG/>\n"
@@ -28,9 +28,9 @@ msgid "plugins.reports.views.articleId"
 msgstr "ID на статия"
 
 msgid "plugins.reports.views.displayName"
-msgstr "Модул Доклад за читаталите"
+msgstr "Отчет за читаталите"
 
 msgid "plugins.reports.views.description"
 msgstr ""
-"Тази добавка (плъгин) реализира CSV доклад, описващ читателската аудитория "
-"за всяка статия."
+"Тази добавка (плъгин) реализира CSV отчет, описващ читателската аудитория за "
+"всяка статия."
