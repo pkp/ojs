@@ -18,7 +18,7 @@ use APP\facades\Repo;
 
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use APP\issue\Collector;
 use APP\issue\IssueAction;
 
@@ -322,7 +322,7 @@ class IssueHandler extends Handler
             'issueSeries' => $issue->getIssueIdentification(['showTitle' => false]),
         ]);
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
 
         $templateMgr->assign([
             'locale' => $locale,

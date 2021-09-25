@@ -23,7 +23,7 @@
 
 namespace APP\journal;
 
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 
 use PKP\context\Context;
 use PKP\core\DAORegistry;
@@ -46,9 +46,8 @@ class Journal extends Context
     public function getLocalizedPageHeaderTitle()
     {
         $titleArray = $this->getData('name');
-        $title = null;
 
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $locale) {
+        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $locale) {
             if (isset($titleArray[$locale])) {
                 return $titleArray[$locale];
             }
@@ -66,7 +65,7 @@ class Journal extends Context
     public function getLocalizedPageHeaderLogo()
     {
         $logoArray = $this->getData('pageHeaderLogoImage');
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $locale) {
+        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $locale) {
             if (isset($logoArray[$locale])) {
                 return $logoArray[$locale];
             }

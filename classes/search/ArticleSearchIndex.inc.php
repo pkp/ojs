@@ -16,7 +16,6 @@
 namespace APP\search;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;

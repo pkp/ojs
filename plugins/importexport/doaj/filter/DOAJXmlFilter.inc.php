@@ -17,6 +17,8 @@ use APP\facades\Repo;
 
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
+use PKP\i18n\LocaleConversion;
+
 class DOAJXmlFilter extends NativeExportFilter
 {
     /**
@@ -83,7 +85,7 @@ class DOAJXmlFilter extends NativeExportFilter
             $recordNode = $doc->createElement('record');
             $rootNode->appendChild($recordNode);
             // Language
-            $language = AppLocale::get3LetterIsoFromLocale($publication->getData('locale'));
+            $language = LocaleConversion::get3LetterIsoFromLocale($publication->getData('locale'));
             if (!empty($language)) {
                 $recordNode->appendChild($node = $doc->createElement('language', $language));
             }
@@ -151,7 +153,7 @@ class DOAJXmlFilter extends NativeExportFilter
             foreach ($articleTitles as $locale => $title) {
                 if (!empty($title)) {
                     $recordNode->appendChild($node = $doc->createElement('title', htmlspecialchars($title, ENT_COMPAT, 'UTF-8')));
-                    $node->setAttribute('language', AppLocale::get3LetterIsoFromLocale($locale));
+                    $node->setAttribute('language', LocaleConversion::get3LetterIsoFromLocale($locale));
                 }
             }
             // Authors and affiliations
@@ -179,7 +181,7 @@ class DOAJXmlFilter extends NativeExportFilter
             foreach ($articleAbstracts as $locale => $abstract) {
                 if (!empty($abstract)) {
                     $recordNode->appendChild($node = $doc->createElement('abstract', htmlspecialchars(PKPString::html2text($abstract), ENT_COMPAT, 'UTF-8')));
-                    $node->setAttribute('language', AppLocale::get3LetterIsoFromLocale($locale));
+                    $node->setAttribute('language', LocaleConversion::get3LetterIsoFromLocale($locale));
                 }
             }
             // FullText URL
@@ -187,7 +189,7 @@ class DOAJXmlFilter extends NativeExportFilter
             $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->url(null, 'article', 'view', $pubObject->getId()), ENT_COMPAT, 'UTF-8')));
             $node->setAttribute('format', 'html');
             // Keywords
-            $supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
+            $supportedLocales = array_keys($context->getSupportedFormLocaleNames());
             $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
             $articleKeywords = $dao->getKeywords($publication->getId(), $supportedLocales);
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
@@ -197,7 +199,7 @@ class DOAJXmlFilter extends NativeExportFilter
             }
             foreach ($articleKeywords as $locale => $keywords) {
                 $keywordsNode = $doc->createElement('keywords');
-                $keywordsNode->setAttribute('language', AppLocale::get3LetterIsoFromLocale($locale));
+                $keywordsNode->setAttribute('language', LocaleConversion::get3LetterIsoFromLocale($locale));
                 $recordNode->appendChild($keywordsNode);
                 foreach ($keywords as $keyword) {
                     if (!empty($keyword)) {

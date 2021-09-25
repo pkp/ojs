@@ -18,6 +18,7 @@ import('lib.pkp.pages.management.ManagementHandler');
 
 use APP\template\TemplateManager;
 
+use PKP\facades\Locale;
 use PKP\security\Role;
 
 class SettingsHandler extends ManagementHandler
@@ -74,7 +75,7 @@ class SettingsHandler extends ManagementHandler
         $clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
 
         $supportedFormLocales = $context->getSupportedFormLocales();
-        $localeNames = AppLocale::getAllLocales();
+        $localeNames = Locale::getAllLocales();
         $locales = array_map(function ($localeKey) use ($localeNames) {
             return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
         }, $supportedFormLocales);

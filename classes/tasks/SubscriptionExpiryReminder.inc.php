@@ -16,7 +16,6 @@
 namespace APP\tasks;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
 use PKP\scheduledTask\ScheduledTask;

@@ -15,6 +15,8 @@
 
 use PKP\plugins\BlockPlugin;
 
+use PKP\facades\Locale;
+
 class LanguageToggleBlockPlugin extends BlockPlugin
 {
     /**
@@ -73,7 +75,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin
                 $locales = $site->getSupportedLocaleNames();
             }
         } else {
-            $locales = AppLocale::getAllLocales();
+            $locales = Locale::getAllLocales();
             $templateMgr->assign('languageToggleNoUser', true);
         }
 

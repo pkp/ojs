@@ -18,7 +18,6 @@ namespace APP\subscription\form;
 use PKP\form\Form;
 use PKP\db\DAORegistry;
 use APP\core\Application;
-use APP\i18n\AppLocale;
 
 class PaymentTypesForm extends Form
 {

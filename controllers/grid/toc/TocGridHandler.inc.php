@@ -18,7 +18,6 @@ import('controllers.grid.toc.TocGridRow');
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use PKP\controllers\grid\CategoryGridHandler;

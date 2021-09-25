@@ -62,7 +62,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         }
 
         // Subject
-        $supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
+        $supportedLocales = array_keys($journal->getSupportedFormLocaleNames());
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $subjects = array_merge_recursive(

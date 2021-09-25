@@ -17,6 +17,7 @@ use APP\facades\Repo;
 use APP\submission\Submission;
 
 use APP\template\TemplateManager;
+use PKP\facades\Locale;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
 
@@ -155,7 +156,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $templateMgr->addHeader('dublinCoreSourceUri', '<meta name="DC.Source.URI" content="' . $request->url($journal->getPath()) . '"/>');
 
         $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-        $keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), [AppLocale::getLocale()]);
+        $keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale()]);
         foreach ($keywords as $locale => $localeKeywords) {
             foreach ($localeKeywords as $i => $keyword) {
                 $templateMgr->addHeader('dublinCoreSubject' . $locale . $i, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');

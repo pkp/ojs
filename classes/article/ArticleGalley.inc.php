@@ -20,7 +20,7 @@ namespace APP\article;
 use APP\core\Application;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\submission\Representation;
 
 class ArticleGalley extends Representation
@@ -173,8 +173,8 @@ class ArticleGalley extends Representation
     public function getGalleyLabel()
     {
         $label = $this->getLabel();
-        if ($this->getLocale() != AppLocale::getLocale()) {
-            $locales = AppLocale::getAllLocales();
+        if ($this->getLocale() != Locale::getLocale()) {
+            $locales = Locale::getAllLocales();
             $label .= ' (' . $locales[$this->getLocale()] . ')';
         }
         return $label;

@@ -20,8 +20,8 @@ namespace APP\search;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use PKP\facades\Locale;
 use APP\issue\IssueAction;
-use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 
@@ -337,7 +337,7 @@ class ArticleSearch extends SubmissionSearch
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
                 $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionSubjectDao */
-                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale()]));
+                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale(), $article->getLocale(), Locale::getPrimaryLocale()]));
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;
                 }

@@ -16,7 +16,7 @@
  */
 
 use APP\template\TemplateManager;
-
+use PKP\i18n\LocaleConversion;
 use PKP\oai\OAIMetadataFormat;
 
 class OAIMetadataFormat_MARC extends OAIMetadataFormat
@@ -56,7 +56,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat
         $templateMgr->assign([
             'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
             'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
-            'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
+            'language' => LocaleConversion::get3LetterIsoFromLocale($article->getLocale())
         ]);
 
         $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC');

@@ -31,7 +31,6 @@ define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\issue\Issue;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;

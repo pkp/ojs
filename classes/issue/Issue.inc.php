@@ -25,10 +25,8 @@ namespace APP\issue;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\core\Core;
-
-use PKP\i18n\PKPLocale;
 use PKP\submission\PKPSubmission;
 
 class Issue extends \PKP\core\DataObject
@@ -582,12 +580,12 @@ class Issue extends \PKP\core\DataObject
 
         $displayOptions = array_merge($displayOptions, $force);
         if (is_null($locale)) {
-            $locale = AppLocale::getLocale();
+            $locale = Locale::getLocale();
         }
 
         AppLocale::requireComponents([LOCALE_COMPONENT_APP_COMMON], $locale);
-        $volLabel = PKPLocale::translate('issue.vol', [], $locale);
-        $numLabel = PKPLocale::translate('issue.no', [], $locale);
+        $volLabel = __('issue.vol', [], $locale);
+        $numLabel = __('issue.no', [], $locale);
 
         $vol = $this->getData('volume');
         $num = $this->getData('number');

@@ -19,6 +19,9 @@ use APP\issue\Issue;
 use APP\submission\Submission;
 use APP\workflow\EditorDecisionActionsManager;
 
+use PKP\facades\Locale;
+use PKP\i18n\LocaleConversion;
+
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');
 define('DATACITE_TITLETYPE_ALTERNATIVE', 'AlternativeTitle');
@@ -201,7 +204,7 @@ class DataciteXmlFilter extends NativeExportFilter
         // Dates
         $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galley, $galleyFile, $publicationDate));
         // Language
-        $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', AppLocale::getIso1FromLocale($objectLocalePrecedence[0])));
+        $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', LocaleConversion::getIso1FromLocale($objectLocalePrecedence[0])));
         // Resource Type
         $resourceTypeNode = $this->createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile);
         if ($resourceTypeNode) {
@@ -744,7 +747,7 @@ class DataciteXmlFilter extends NativeExportFilter
     public function getObjectLocalePrecedence($context, $article, $publication, $galley)
     {
         $locales = [];
-        if ($galley instanceof ArticleGalley && AppLocale::isLocaleValid($galley->getLocale())) {
+        if ($galley instanceof ArticleGalley && Locale::isLocaleValid($galley->getLocale())) {
             $locales[] = $galley->getLocale();
         }
         if ($article instanceof Submission) {
@@ -780,12 +783,12 @@ class DataciteXmlFilter extends NativeExportFilter
     {
         $locale = null;
         if (strlen($language) == 2) {
-            $language = AppLocale::get3LetterFrom2LetterIsoLanguage($language);
+            $language = LocaleConversion::get3LetterFrom2LetterIsoLanguage($language);
         }
         if (strlen($language) == 3) {
-            $language = AppLocale::getLocaleFrom3LetterIso($language);
+            $language = LocaleConversion::getLocaleFrom3LetterIso($language);
         }
-        if (AppLocale::isLocaleValid($language)) {
+        if (Locale::isLocaleValid($language)) {
             $locale = $language;
         }
         return $locale;

@@ -16,7 +16,6 @@ namespace APP\publication;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
 use PKP\core\Core;

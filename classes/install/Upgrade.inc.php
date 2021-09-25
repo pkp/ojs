@@ -18,7 +18,6 @@ namespace APP\install;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
-use APP\i18n\AppLocale;
 use APP\template\TemplateManager;
 use Illuminate\Support\Facades\DB;
 use PKP\config\Config;
