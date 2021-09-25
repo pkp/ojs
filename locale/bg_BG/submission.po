@@ -1,8 +1,150 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-09-25 14:18+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/bg_BG/>\n"
 "Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Трябва да прочетете и да потвърдите, че сте изпълнили изискванията по-долу, "
+"преди да продължите."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Контролен списък за изпращаните материали"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Моля, изберете език за изпращаните материали."
+
+msgid "submission.incomplete"
+msgstr "Чака одобрение"
+
+msgid "submission.complete"
+msgstr "Одобрено"
+
+msgid "submission.upload.fileContents"
+msgstr "Компонент на статия"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метаданните за изданието са актуализирани."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Пращане за рецензия"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензия"
+
+msgid "submission.confirmSubmit"
+msgstr "Сигурни ли сте, че искате да изпратите тази статия към списанието?"
+
+msgid "submission.pageProofs"
+msgstr "Коректура"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Качете файлове, свързани с това изпращане на материали, включително "
+"статията, мултимедията, наборите от данни, произведения на изкуството и др."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Заглавие и резюме"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Тази чернова е одобрена за включване в типография."
+
+msgid "grid.action.approveProof"
+msgstr "Одобрете тази чернова за включване в типография."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Редакторът на оформлението качва готовите за публикуване файлове, които са "
+"подготвени за публикуване тук. Използвайте <em>Присвояване на одитор</em>, "
+"за да посочите автори и други за корекция на типографиите, като коригираните "
+"файлове се качват за одобрение преди публикуването."
+
+msgid "submission.galleyFiles"
+msgstr "Типографски файлове"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Направете тази типография достъпна"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p> Тази типография <em>вече ще бъде достъпна</em> за читателите. </p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p> Тази типография <em>вече няма да бъде достъпна</em> за читателите. </p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Одобрение на формата"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Публичните идентификатори на подаването на материали са актуализирани."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Типографията за статии \"{$galleyFormatName}\" е недостъпна."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Типографията за статии \"{$galleyFormatName}\" е достъпна."
+
+msgid "grid.action.issueEntry"
+msgstr "Вижте метаданните на тези изпратени материали"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Типография се появява в изданието"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Списанието е уведомено за вашето подаване на материали и сте получили "
+"потвърждение за получаването по имейл. След като редакторът прегледа "
+"изпратеното, той ще се свърже с вас."
+
+msgid "submission.issueEntry"
+msgstr "Метаданни"
+
+msgid "submission.submit.noContext"
+msgstr "Изпратените материали се отнасят към списание, което не е намерено."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Резюмето трябва да съдържа {$wordCount} думи или по -малко."
+
+msgid "grid.action.workflow"
+msgstr "Процес на изпращане на материали"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Ново изпращане на материали"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Започване на ново изпращане на материали в"
+
+msgid "submission.title.tip"
+msgstr ""
+"Типът на подаване на материалите обикновено е един вид -  „изображения“, "
+"„текст“ или други типове мултимедия, включително „софтуер“ или „интерактивен“"
+". Моля, изберете този, който е най-подходящ за вашето подаване на материали "
+"за статия. Примери могат да бъдат намерени на <a target=\"_blank\" href=\""
+"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\"> "
+"http://dublincore.org/documents/ 2001/04/12/useguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Заглавие на статията"
+
+msgid "submission.upload.selectComponent"
+msgstr "Изберете компонент от статията"
+
+msgid "submission.submit.userGroupDescription"
+msgstr ""
+"Изберете ролята (в качеството си на какъв/а), при който изпращате тази "
+"статия."
+
+msgid "submission.submit.userGroup"
+msgstr "Изпращане в ролята ми на..."
+
+msgid "submission.submit.title"
+msgstr "Изпращане на статия"
