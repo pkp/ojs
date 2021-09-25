@@ -1,6 +1,7 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-16 22:10+0000\n"
+"PO-Revision-Date: 2021-08-03 09:36+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/ca_ES/>\n"
@@ -103,7 +104,7 @@ msgid "plugins.inportexport.native.uploadFile"
 msgstr "Carregueu un arxiu en l'apartat \"Importar\" per continuar."
 
 msgid "plugins.importexport.native.results"
-msgstr "Resultats"
+msgstr "Importar resultats"
 
 msgid "plugins.importexport.native.exportIssues"
 msgstr "Exportar números"

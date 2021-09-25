@@ -13,9 +13,9 @@
 
 namespace APP\migration\upgrade;
 
+use APP\core\Application;
 use APP\core\Services;
 use Exception;
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
 use Illuminate\Support\Facades\App;
@@ -26,12 +26,12 @@ use PKP\core\EntityDAO;
 use PKP\db\DAORegistry;
 use PKP\services\PKPSchemaService;
 
-class OJSv3_3_0UpgradeMigration extends Migration
+class OJSv3_3_0UpgradeMigration extends \PKP\migration\Migration
 {
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('journal_settings', function (Blueprint $table) {
             // pkp/pkp-lib#6096 DB field type TEXT is cutting off long content
@@ -65,7 +65,7 @@ class OJSv3_3_0UpgradeMigration extends Migration
     /**
      * Reverse the downgrades
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('journal_settings', function (Blueprint $table) {
             // pkp/pkp-lib#6096 DB field type TEXT is cutting off long content
@@ -82,7 +82,7 @@ class OJSv3_3_0UpgradeMigration extends Migration
         $schemaDAOs = [
             'SiteDAO',
             \PKP\announcement\DAO::class,
-            'AuthorDAO',
+            \APP\author\DAO::class,
             'ArticleGalleyDAO',
             'JournalDAO',
             'EmailTemplateDAO',
@@ -90,8 +90,13 @@ class OJSv3_3_0UpgradeMigration extends Migration
             \APP\submission\DAO::class
         ];
         $processedTables = [];
+        $application = Application::get();
         foreach ($schemaDAOs as $daoName) {
-            $dao = DAORegistry::getDAO($daoName);
+            $dao = null;
+            if ($application->getQualifiedDAOName($daoName)) {
+                $dao = DAORegistry::getDAO($daoName);
+            }
+
             // Account for new EntityDAOs
             if (!$dao) {
                 $dao = App::make($daoName);

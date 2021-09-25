@@ -17,6 +17,7 @@
 
 namespace APP\subscription;
 
+use APP\facades\Repo;
 use PKP\db\DAORegistry;
 
 class Subscription extends \PKP\core\DataObject
@@ -86,8 +87,7 @@ class Subscription extends \PKP\core\DataObject
      */
     public function getUserFullName()
     {
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-        return $userDao->getUserFullName($this->getData('userId'));
+        return Repo::user()->get($this->getData('userId'), true)->getFullName();
     }
 
     /**
@@ -97,8 +97,7 @@ class Subscription extends \PKP\core\DataObject
      */
     public function getUserEmail()
     {
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-        return $userDao->getUserEmail($this->getData('userId'));
+        return Repo::user()->get($this->getData('userId'), true)->getEmail();
     }
 
     /**

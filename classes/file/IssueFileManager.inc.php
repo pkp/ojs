@@ -18,6 +18,7 @@
 
 namespace APP\file;
 
+use APP\facades\Repo;
 use APP\issue\IssueFile;
 use PKP\config\Config;
 use PKP\core\Core;
@@ -42,8 +43,7 @@ class IssueFileManager extends FileManager
      */
     public function __construct($issueId)
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issue = $issueDao->getById($issueId);
+        $issue = Repo::issue()->get($issueId);
         assert(isset($issue));
 
         $this->setIssueId($issueId);

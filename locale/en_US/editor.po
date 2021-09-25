@@ -170,6 +170,9 @@ msgstr "Proofed"
 msgid "editor.issues.removeCoverPage"
 msgstr "Remove cover page image?"
 
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr "The cover image cover image you requested to delete matches an issue for a different journal. Please ensure you are working with the correct journal, you are using the correct issue ID, and try again."
+
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr "The cover image you requested to delete did not match the cover image for this issue. Please reload the page and try again."
 

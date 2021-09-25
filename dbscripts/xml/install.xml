@@ -16,31 +16,32 @@
 	<code function="createDirectories"/>
 
 	<!-- PKP schema components -->
-	<migration class="lib.pkp.classes.migration.AnnouncementsMigration" />
-	<migration class="lib.pkp.classes.migration.CategoriesMigration" />
-	<migration class="lib.pkp.classes.migration.CommonMigration" />
-	<migration class="lib.pkp.classes.migration.ControlledVocabMigration" />
-	<migration class="lib.pkp.classes.migration.FilesMigration" />
-	<migration class="lib.pkp.classes.migration.GenresMigration" />
-	<migration class="lib.pkp.classes.migration.JobsMigration" />
-	<migration class="lib.pkp.classes.migration.LibraryFilesMigration" />
-	<migration class="lib.pkp.classes.migration.LogMigration" />
-	<migration class="lib.pkp.classes.migration.MetadataMigration" />
-	<migration class="lib.pkp.classes.migration.MetricsMigration" />
-	<migration class="lib.pkp.classes.migration.NavigationMenusMigration" />
-	<migration class="lib.pkp.classes.migration.NotesMigration" />
-	<migration class="lib.pkp.classes.migration.ReviewFormsMigration" />
-	<migration class="lib.pkp.classes.migration.SubmissionFilesMigration" /><!-- before ReviewsMigration so that foreign keys can be defined-->
-	<migration class="lib.pkp.classes.migration.RolesAndUserGroupsMigration" />
-	<migration class="lib.pkp.classes.migration.ScheduledTasksMigration" />
-	<migration class="lib.pkp.classes.migration.SubmissionsMigration" />
-	<migration class="lib.pkp.classes.migration.ReviewsMigration" />
-	<migration class="lib.pkp.classes.migration.TemporaryFilesMigration" />
-	<migration class="lib.pkp.classes.migration.TombstoneMigration" />
-	<migration class="lib.pkp.classes.migration.ViewsMigration" />
+	<migration class="PKP\migration\install\CategoriesMigration" />
+	<migration class="PKP\migration\install\CommonMigration" />
+	<migration class="PKP\migration\install\ControlledVocabMigration" />
+	<migration class="PKP\migration\install\FilesMigration" />
+	<migration class="PKP\migration\install\GenresMigration" />
+	<migration class="PKP\migration\install\JobsMigration" />
+	<migration class="PKP\migration\install\LibraryFilesMigration" />
+	<migration class="PKP\migration\install\LogMigration" />
+	<migration class="PKP\migration\install\MetadataMigration" />
+	<migration class="PKP\migration\install\MetricsMigration" />
+	<migration class="PKP\migration\install\NavigationMenusMigration" />
+	<migration class="PKP\migration\install\NotesMigration" />
+	<migration class="PKP\migration\install\ReviewFormsMigration" />
+	<migration class="PKP\migration\install\SubmissionFilesMigration" />
+	<migration class="PKP\migration\install\RolesAndUserGroupsMigration" />
+	<migration class="PKP\migration\install\ScheduledTasksMigration" />
+	<migration class="PKP\migration\install\SubmissionsMigration" />
+	<migration class="PKP\migration\install\ReviewsMigration" />
+	<migration class="PKP\migration\install\TemporaryFilesMigration" />
+	<migration class="PKP\migration\install\TombstoneMigration" />
+	<migration class="PKP\migration\install\ViewsMigration" />
 
 	<!-- OJS schema -->
-	<migration class="classes.migration.OJSMigration" />
+	<migration class="APP\migration\install\OJSMigration" />
+
+	<migration class="PKP\migration\install\AnnouncementsMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>

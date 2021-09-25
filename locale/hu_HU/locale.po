@@ -1,10 +1,11 @@
+# Molnár Tamás <molnart@bibl.u-szeged.hu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-27 15:39+0000\n"
-"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/locale/hu/"
 ">\n"
 "Language: hu_HU\n"
@@ -1572,9 +1573,16 @@ msgstr "A kiadói rendszerről"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS szerkesztői és kiadási folyamat"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Ez a folyóirat Open Journal Systems {$ojsVersion} verziót használ, amely egy nyílt forráskódú folyóirat menedzselő és kiadói szoftver, a <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> által támogatott és szabadon terjeszthető a GNU General Public License alatt."
+msgstr ""
+"Ez a folyóirat Open Journal Systems {$ojsVersion} verziót használ, amely egy "
+"nyílt forráskódú folyóirat kezelő és kiadói szoftver, a <a href=\""
+"http://pkp.sfu.ca/\">Public Knowledge Project</a> által támogatott és "
+"szabadon terjeszthető a GNU General Public License alatt. Látogassa meg a  "
+"PKP webhelyét <a href=\"http://pkp.sfu.ca/\"> további információért erről a "
+"szoftverről</a>. A folyóirattal <a href=\"{$contactUrl}\">itt tud "
+"közvetlenül kapcsolatba lépni</a>, ha kérdései vannak a a folyóiratról vagy "
+"a kéziratok beküldésével kapcsolatban."
 
 #, fuzzy
 msgid "about.aboutOJSSite"

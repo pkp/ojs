@@ -13,9 +13,11 @@
  * @brief Handle external gateway requests.
  */
 
+use APP\facades\Repo;
 use APP\handler\Handler;
 
 use APP\template\TemplateManager;
+use Illuminate\Support\LazyCollection;
 
 class GatewayHandler extends Handler
 {
@@ -73,57 +75,36 @@ class GatewayHandler extends Handler
             if (!$journal->getData('enableLockss')) {
                 $request->redirect(null, 'index');
             }
-
-            $year = $request->getUserVar('year');
-
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+            $yearsIssuesPublished = Repo::issue()->getYearsIssuesPublished($journal->getId())->values();
 
             // FIXME Should probably go in IssueDAO or a subclass
-            if (isset($year)) {
-                $year = (int)$year;
-                $result = $issueDao->retrieve(
-                    'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-                    [$journal->getId(), $year]
-                );
-                if (!$result->current()) {
-                    unset($year);
-                }
-            }
+            $year = $yearsIssuesPublished->contains((int) $request->getUserVar('year'))
+                ? (int) $request->getUserVar('year')
+                : null;
 
             if (!isset($year)) {
-                $result = $issueDao->retrieve(
-                    'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1',
-                    [$journal->getId()]
-                );
-                $row = $result->current();
-                $year = $row ? $row->max_year : null;
+                $year = $yearsIssuesPublished->max();
                 $templateMgr->assign('showInfo', true);
             }
 
             $prevYear = $nextYear = null;
             if (isset($year)) {
-                $result = $issueDao->retrieve(
-                    'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
-                    [$journal->getId(), $year]
-                );
-                $row = $result->current();
-                $prevYear = $row ? $row->max_year : null;
-
-                $result = $issueDao->retrieve(
-                    'SELECT MIN(year) AS min_year FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
-                    [$journal->getId(), $year]
-                );
-                $row = $result->current();
-                $nextYear = $row ? $row->min_year : null;
+                $key = $yearsIssuesPublished->search(function ($i) use ($year) {
+                    return $i === $year;
+                });
+                if (isset($key)) {
+                    $prevYear = $yearsIssuesPublished->get($key - 1);
+                    $nextYear = $yearsIssuesPublished->get($key + 1);
+                }
             }
 
-            $issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
+            $issues = $this->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
             $templateMgr->assign([
                 'journal' => $journal,
                 'year' => $year,
                 'prevYear' => $prevYear,
                 'nextYear' => $nextYear,
-                'issues' => $issues,
+                'issues' => $issues->toArray(),
             ]);
 
             $locales = $journal->getSupportedLocaleNames();
@@ -161,61 +142,41 @@ class GatewayHandler extends Handler
                 $request->redirect(null, 'index');
             }
 
-            $year = $request->getUserVar('year');
+            $yearsIssuesPublished = Repo::issue()->getYearsIssuesPublished($journal->getId())->values();
 
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
+            // FIXME Should probably go in Issue DAO or a subclass
+            $year = $yearsIssuesPublished->contains((int) $request->getUserVar('year'))
+                ? (int) $request->getUserVar('year')
+                : null;
 
-            // FIXME Should probably go in IssueDAO or a subclass
-            if (isset($year)) {
-                $year = (int)$year;
-                $result = $issueDao->retrieve(
-                    'SELECT * FROM issues WHERE journal_id = ? AND year = ? AND published = 1 ORDER BY current DESC, year ASC, volume ASC, number ASC',
-                    [$journal->getId(), $year]
-                );
-                $row = $result->current();
-                if (!$row) {
-                    unset($year);
-                }
-            }
 
             if (!isset($year)) {
-                $result = $issueDao->retrieve(
-                    'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1',
-                    [$journal->getId()]
-                );
-                $row = $result->current();
-                $year = $row ? $row->max_year : null;
-                $issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
+                $year = $yearsIssuesPublished->max();
+                $issues = $this->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
                 $templateMgr->assign([
-                    'issues' => $issues,
+                    'issues' => $issues->toArray(),
                     'showInfo' => true,
                 ]);
             }
 
             $prevYear = $nextYear = null;
             if (isset($year)) {
-                $result = $issueDao->retrieve(
-                    'SELECT MAX(year) AS max_year FROM issues WHERE journal_id = ? AND published = 1 AND year < ?',
-                    [$journal->getId(), $year]
-                );
-                $row = $result->current();
-                $prevYear = $row ? $row->max_year : null;
-
-                $result = $issueDao->retrieve(
-                    'SELECT MIN(year) AS min_year FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
-                    [$journal->getId(), $year]
-                );
-                $row = $result->current();
-                $nextYear = $row ? $row->min_year : null;
+                $key = $yearsIssuesPublished->search(function ($i) use ($year) {
+                    return $i === $year;
+                });
+                if (isset($key)) {
+                    $prevYear = $yearsIssuesPublished->get($key - 1);
+                    $nextYear = $yearsIssuesPublished->get($key + 1);
+                }
             }
 
-            $issues = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
+            $issues = $this->getPublishedIssuesByNumber($journal->getId(), null, null, $year);
             $templateMgr->assign([
                 'journal' => $journal,
                 'year' => $year,
                 'prevYear' => $prevYear,
                 'nextYear' => $nextYear,
-                'issues' => $issues,
+                'issues' => $issues->toArray(),
             ]);
 
             $locales = $journal->getSupportedLocaleNames();
@@ -250,5 +211,29 @@ class GatewayHandler extends Handler
         } else {
             $request->redirect(null, 'index');
         }
+    }
+
+    /**
+     * Retrieve Issue by some combination of volume, number, and year
+     *
+     */
+    protected function getPublishedIssuesByNumber(int $contextId, ?int $volume = null, ?int $number = null, ?int $year = null): LazyCollection
+    {
+        $collector = Repo::issue()->getCollector()
+            ->filterByContextIds([$contextId]);
+
+        if ($volume !== null) {
+            $collector->filterByVolumes([$volume]);
+        }
+
+        if ($number !== null) {
+            $collector->filterByNumbers([$number]);
+        }
+
+        if ($year !== null) {
+            $collector->filterByYears([$year]);
+        }
+
+        return Repo::issue()->getMany($collector);
     }
 }

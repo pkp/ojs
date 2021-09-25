@@ -13,6 +13,8 @@
  * @brief Class that converts a Native XML document to a set of articles.
  */
 
+use APP\facades\Repo;
+
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlPKPPublicationFilter');
 
 class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
@@ -43,7 +45,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
             $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
             $section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
             if (!$section) {
-                $deployment->addError(ASSOC_TYPE_SUBMISSION, null, __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
+                $deployment->addError(Application::ASSOC_TYPE_SUBMISSION, null, __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
             } else {
                 return parent::handleElement($node);
             }
@@ -68,7 +70,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
             $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
             $section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
             if (!$section) {
-                $deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
+                $deployment->addError(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
             } else {
                 $publication->setData('sectionId', $section->getId());
             }
@@ -79,7 +81,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
         $issue_identification = $node->getElementsByTagName('issue_identification');
         if (!$datePublished && ($issue || $issue_identification->length)) {
             $titleNodes = $node->getElementsByTagName('title');
-            $deployment->addWarning(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', ['articleTitle' => $titleNodes->item(0)->textContent]));
+            $deployment->addWarning(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', ['articleTitle' => $titleNodes->item(0)->textContent]));
         }
 
         $this->populatePublishedPublication($publication, $node);
@@ -132,7 +134,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
                 break;
             default:
                 $importClass = null; // Suppress scrutinizer warn
-                $deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $elementName]));
+                $deployment->addWarning(Application::ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $elementName]));
         }
         // Caps on class name for consistency with imports, whose filter
         // group names are generated implicitly.
@@ -171,7 +173,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
 
             if ($issueIdentificationNodes->length != 1) {
                 $titleNodes = $node->getElementsByTagName('title');
-                $deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMissing', ['articleTitle' => $titleNodes->item(0)->textContent]));
+                $deployment->addError(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMissing', ['articleTitle' => $titleNodes->item(0)->textContent]));
             } else {
                 $issueIdentificationNode = $issueIdentificationNodes->item(0);
                 $issue = $this->parseIssueIdentification($publication, $issueIdentificationNode);
@@ -219,22 +221,36 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
                         $titles[$locale] = $value;
                         break;
                     default:
-                        $deployment->addWarning(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+                        $deployment->addWarning(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
                 }
             }
         }
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
         $issue = null;
-        $issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles)->toArray();
 
-        if (count($issuesByIdentification) != 1) {
-            $deployment->addError(ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', ['issueIdentification' => $node->ownerDocument->saveXML($node)]));
+        $collector = Repo::issue()->getCollector()
+            ->filterByContextIds([$context->getId()]);
+        if ($vol !== null) {
+            $collector->filterByVolumes([$vol]);
+        }
+        if ($num !== null) {
+            $collector->filterByNumbers([$num]);
+        }
+        if ($year !== null) {
+            $collector->filterByYears([$year]);
+        }
+        if (!empty($titles)) {
+            $collector->filterByTitles($titles);
+        }
+        $issuesIdsByIdentification = Repo::issue()->getIds($collector);
+
+        if ($issuesIdsByIdentification->count() != 1) {
+            $deployment->addError(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', ['issueIdentification' => $node->ownerDocument->saveXML($node)]));
         } else {
-            $issue = $issuesByIdentification[0];
+            $issue = Repo::issue()->get($issuesIdsByIdentification->first());
         }
 
         if (!isset($issue)) {
-            $issue = $issueDao->newDataObject();
+            $issue = Repo::issue()->newDataObject();
 
             $issue->setVolume($vol);
             $issue->setNumber($num);
@@ -243,13 +259,12 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
             $issue->setShowNumber(1);
             $issue->setShowYear(1);
             $issue->setShowTitle(0);
-            $issue->setCurrent(0);
             $issue->setPublished(0);
             $issue->setAccessStatus(0);
             $issue->setJournalId($context->getId());
             $issue->setTitle($titles, null);
 
-            $issueId = $issueDao->insertObject($issue);
+            $issueId = Repo::issue()->add($issue);
 
             $issue->setId($issueId);
         }

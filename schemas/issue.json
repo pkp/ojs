@@ -7,6 +7,9 @@
 			"readOnly": true,
 			"apiSummary": true
 		},
+		"accessStatus": {
+			"type": "integer"
+		},
 		"articles": {
 			"type": "array",
 			"readOnly": true,
@@ -65,9 +68,9 @@
 			"readOnly": true,
 			"apiSummary": true
 		},
-		"isCurrent": {
-			"type": "boolean",
-			"readOnly": true
+		"journalId": {
+			"type": "integer",
+			"apiSummary": true
 		},
 		"lastModified": {
 			"type": "string",
@@ -77,6 +80,19 @@
 		},
 		"number": {
 			"type": "string",
+			"apiSummary": true
+		},
+		"openAccessDate": {
+			"type": "string",
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
+		},
+		"originalStyleFileName": {
+		  "type": "string"
+		},
+		"published": {
+			"type": "boolean",
 			"apiSummary": true
 		},
 		"publishedUrl": {
@@ -93,6 +109,21 @@
 				"$ref": "#/definitions/SectionSummary"
 			}
 		},
+		"showNumber": {
+		  "type": "boolean"
+		},
+		"showTitle": {
+		  	"type": "boolean"
+		},
+		"showVolume": {
+			"type": "boolean"
+		},
+		"showYear": {
+			"type": "boolean"
+		},
+		"styleFileName": {
+			"type": "string"
+		},
 		"title": {
 			"type": "string",
 			"multilingual": "true",
@@ -103,7 +134,7 @@
 			"description": "An optional path to use in the URL instead of the ID.",
 			"validation": [
 				"nullable",
-				"regex:/^[-_a-z0-9]*$/"
+				"regex:/^[a-zA-Z0-9]+([\\.\\-_][a-zA-Z0-9]+)*$/"
 			]
 		},
 		"volume": {

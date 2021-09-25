@@ -1,6 +1,7 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-05 06:30+0000\n"
+"PO-Revision-Date: 2021-08-06 16:04+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/api/ca_ES/>"
 "\n"
@@ -54,10 +55,10 @@ msgstr ""
 "API de la revista."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "No teniu permís per veure els números retirats de publicació."
+msgstr "No teniu permís per veure els números no publicats."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "No podeu canviar un article de revista."
+msgstr "No podeu canviar la revista d'un article."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Des d'aquesta fase no podeu associar un arxiu amb una galerada."

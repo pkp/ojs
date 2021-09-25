@@ -15,6 +15,8 @@
 
 import('lib.pkp.classes.plugins.ReportPlugin');
 
+use APP\facades\Repo;
+
 class SubscriptionReportPlugin extends ReportPlugin
 {
     /**
@@ -67,7 +69,6 @@ class SubscriptionReportPlugin extends ReportPlugin
     {
         $journal = $request->getJournal();
         $journalId = $journal->getId();
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
         $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
         $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
@@ -112,7 +113,7 @@ class SubscriptionReportPlugin extends ReportPlugin
         // Iterate over individual subscriptions and write out each to file
         $individualSubscriptions = $individualSubscriptionDao->getByJournalId($journalId);
         while ($subscription = $individualSubscriptions->next()) {
-            $user = $userDao->getById($subscription->getUserId());
+            $user = Repo::user()->get($subscription->getUserId(), true);
             $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
             foreach ($columns as $index => $junk) {
@@ -195,7 +196,7 @@ class SubscriptionReportPlugin extends ReportPlugin
         // Iterate over institutional subscriptions and write out each to file
         $institutionalSubscriptions = $institutionalSubscriptionDao->getByJournalId($journalId);
         while ($subscription = $institutionalSubscriptions->next()) {
-            $user = $userDao->getById($subscription->getUserId());
+            $user = Repo::user()->get($subscription->getUserId(), true);
             $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
             foreach ($columns as $index => $junk) {

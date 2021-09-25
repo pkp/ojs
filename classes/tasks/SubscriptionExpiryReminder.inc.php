@@ -16,9 +16,9 @@
 namespace APP\tasks;
 
 use APP\i18n\AppLocale;
+use APP\facades\Repo;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
-
 use PKP\scheduledTask\ScheduledTask;
 
 class SubscriptionExpiryReminder extends ScheduledTask
@@ -40,11 +40,10 @@ class SubscriptionExpiryReminder extends ScheduledTask
      */
     protected function sendReminder($subscription, $journal, $emailKey)
     {
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 
         $journalName = $journal->getLocalizedName();
-        $user = $userDao->getById($subscription->getUserId());
+        $user = Repo::user()->get($subscription->getUserId());
         if (!isset($user)) {
             return false;
         }

@@ -1,15 +1,20 @@
+# Biljana Cubrovic <biljana.cubrovic@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
+"PO-Revision-Date: 2021-07-08 13:00+0000\n"
+"Last-Translator: Biljana Cubrovic <biljana.cubrovic@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"locale/sr_Latn/>\n"
+"Language: sr_RS@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "common.software"
 msgstr "Open Journal Systems"
@@ -18,7 +23,7 @@ msgid "navigation.journalHelp"
 msgstr "Pomoć"
 
 msgid "navigation.current"
-msgstr "Trenutni broj"
+msgstr "Najnoviji broj"
 
 msgid "navigation.otherJournals"
 msgstr "Ostali časopisi"
@@ -78,13 +83,13 @@ msgid "common.queue.short.completed"
 msgstr "Arhiva"
 
 msgid "section.section"
-msgstr "Sekcija"
+msgstr "Rubrika"
 
 msgid "section.sections"
-msgstr "Sekcije časopisa"
+msgstr "Rubrike časopisa"
 
 msgid "section.title"
-msgstr "Naslov sekcije"
+msgstr "Naslov rubrike"
 
 msgid "section.abbreviation"
 msgstr "Skraćenica"
@@ -120,7 +125,7 @@ msgid "article.metadata"
 msgstr "Metapodaci"
 
 msgid "article.journalSection"
-msgstr "Sekcija/Rubrika časopisa"
+msgstr "Rubrika časopisa"
 
 msgid "article.file"
 msgstr "Fajl"
@@ -135,7 +140,7 @@ msgid "article.suppFilesAbbrev"
 msgstr "Dod. fajl"
 
 msgid "article.discipline"
-msgstr "Akademska diciplina i pod-discipline"
+msgstr "Akademska diciplina i poddiscipline"
 
 msgid "article.subject"
 msgstr "Ključne reči"
@@ -273,7 +278,7 @@ msgid "submissions.proofreadingComplete"
 msgstr "Korigovano"
 
 msgid "journal.currentIssue"
-msgstr "Trenutni broj"
+msgstr "Najnoviji broj"
 
 msgid "context.contexts"
 msgstr "Časopisi"
@@ -297,10 +302,10 @@ msgid "user.role.manager"
 msgstr "Glavni urednik"
 
 msgid "user.role.subEditor"
-msgstr "Urednik sekcije"
+msgstr "Urednik rubrike"
 
 msgid "user.role.subscriptionManager"
-msgstr "Upravnik za pretplatae"
+msgstr "Menadžer pretplata"
 
 msgid "user.role.managers"
 msgstr "Glavni urednici"
@@ -342,7 +347,7 @@ msgid "issue.abstract"
 msgstr "Apstrakt"
 
 msgid "submission.event.general.defaultEvent"
-msgstr "Dešavanja prilikom predaje"
+msgstr "Promena statusa priloga"
 
 msgid "submission.event.general.issueScheduled"
 msgstr "Rad je stavljen u red čekanja u rasporedu časopisa"
@@ -360,7 +365,7 @@ msgid "submission.event.general.authorRevision"
 msgstr "Autorov revizijski fajl je ažuriran"
 
 msgid "submission.event.editor.editorAssigned"
-msgstr "Uredniku je dodijeljena prijava"
+msgstr "Uredniku je dodeljen prilog"
 
 msgid "submission.event.editor.editorUnassigned"
 msgstr "Urednik je uklonjen sa predatog rada"
@@ -449,10 +454,13 @@ msgstr ""
 " <li>Ako korisnik pokuša registrovati novi korisnički nalog na ovom sajtu sa korisničkim imenom koje postoji na izvoru autentifikacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je priložena lozinka ispravna za taj korisnički nalog.</li>\n"
 "</ul>"
 
+#, fuzzy
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>NAPOMENA!</h4>\n"
-"<p>Sistem ne može automatski izvršiti prepisivanje konfiguracionog fajla. Da biste izvršili izmene fajl  <tt>config.inc.php</tt> mora imati perm. mod 777.</p>"
+"<p>Sistem ne može automatski izvršiti prepisivanje konfiguracionog fajla. Da "
+"biste izvršili izmene fajl  <tt>config.inc.php</tt> mora imati perm. mod "
+"777.</p>"
 
 msgid "subscriptionManager.subscriptionManagement"
 msgstr "Upravljanje pretplatama"
@@ -604,7 +612,10 @@ msgid "reviewer.article.automatic"
 msgstr "(Automatski)"
 
 msgid "reviewer.article.selectRecommendation"
-msgstr "Odaberite preporuku iz menija. Preporuku možete odabrati tek nakon što ste priložili tekst recenzije ili faj sa recenzijom. Time završavate postupak recenzije i više ne možete dopunjavati recenziju."
+msgstr ""
+"Odaberite preporuku iz menija. Preporuku možete odabrati tek nakon što ste "
+"priložili tekst recenzije ili fajl sa recenzijom. Time završavate postupak "
+"recenzije i više ne možete dopunjavati recenziju."
 
 msgid "reviewer.article.recommendation"
 msgstr "Preporuka"
@@ -672,8 +683,11 @@ msgstr "Smernice za recenzente"
 msgid "reviewer.article.mustSelectDecision"
 msgstr "Nema odabrane preporuke. Da biste predali fajl ili recenziju morate odabrati preporuku."
 
+#, fuzzy
 msgid "reviewer.article.confirmDecision"
-msgstr "Kada ste jednom zapisali odluku, nećete više moći napraviti nikakve promene na ovoj recenziji. Da li ste sigurni da želite da nastavite?"
+msgstr ""
+"Kada ste jednom zapisali odluku, nećete više moći napraviti nikakve promene "
+"na ovoj recenziji. Da li ste sigurni da želite da nastavite?"
 
 msgid "copyeditor.article.fileToCopyedit"
 msgstr "Fajl za lektorisanje"
@@ -887,7 +901,7 @@ msgid "site.journalRegister"
 msgstr "Registracija"
 
 msgid "site.journalCurrent"
-msgstr "Trenutni broj časopisa"
+msgstr "Najnoviji broj časopisa"
 
 msgid "current.current"
 msgstr "Trenutni"
@@ -1255,7 +1269,9 @@ msgid "reviewer.article.notifyEditorB"
 msgstr "da li ćete preuzeti recenziju ovog priloga."
 
 msgid "reviewer.article.consultGuidelines"
-msgstr "Ukoliko ste pristali na izradu recenzije, molimo Vas da konsultujete smernice za recenzente koje se nalaze pri dnu stranice."
+msgstr ""
+"Ukoliko ste pristali na izradu recenzije, molimo Vas da konsultujete "
+"Smernice za recenzente koje se nalaze pri dnu stranice."
 
 msgid "reviewer.article.downloadSubmission"
 msgstr "Kliknite na ime fajla kako biste preuzeli rukopis ove prijave."
@@ -1269,7 +1285,9 @@ msgid "reviewer.competingInterests"
 msgstr "Sukob  interesa"
 
 msgid "reviewer.article.enterReviewA"
-msgstr "Kliknite na ikonu da bi uneli ili kopirali tekst vaše recenzije vezan za ovu prijavu."
+msgstr ""
+"Kliknite na ikonicu da biste uneli ili kopirali tekst Vaše recenzije vezan "
+"za ovaj rad."
 
 msgid "reviewer.article.uploadFile"
 msgstr "Takođe, možete priložiti i fajl za urednika i/ili autora."
@@ -1380,13 +1398,13 @@ msgid "log.editor.decision"
 msgstr "{$editorName} je evidentirao uredničku odluku ({$decision}) za članak {$submissionId}."
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "Kliknite na ikonu i ispunite obrazac za recencziju."
+msgstr "Kliknite na ikonicu i ispunite obrazac za recencziju."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Ispunite obavezana polja."
 
 msgid "common.homePageHeader.altText"
-msgstr "Zaglavlje naslove strane"
+msgstr "Zaglavlje naslovne strane"
 
 msgid "common.journalHomepageImage.altText"
 msgstr "Slika naslovne strane časopisa"
@@ -1410,7 +1428,7 @@ msgid "article.comments.enable"
 msgstr "Omogući"
 
 msgid "article.fontSize"
-msgstr "Veličine fonta"
+msgstr "Veličinа fonta"
 
 msgid "article.fontSize.small.altText"
 msgstr "Mali"
@@ -1499,6 +1517,7 @@ msgstr "Status"
 msgid "subscriptions.status.active"
 msgstr "Aktivno"
 
+#, fuzzy
 msgid "subscriptions.status.needsInformation"
 msgstr "Treba informacije"
 
@@ -1737,7 +1756,7 @@ msgid "user.profile.profileImage"
 msgstr "Slika profila"
 
 msgid "issue.fullIssue"
-msgstr "Puno izdanje"
+msgstr "Ceo broj"
 
 msgid "issue.nonpdf.title"
 msgstr "Preuzmi izdanje"
@@ -1781,7 +1800,7 @@ msgid "payment.type.purchaseIssue"
 msgstr "Cena kupovine izdanja"
 
 msgid "context.current"
-msgstr "Trenutni časopis:"
+msgstr "Aktuelni časopis:"
 
 msgid "context.select"
 msgstr "Pređi na drugi časopis:"
@@ -1850,7 +1869,7 @@ msgid "article.return"
 msgstr "Povratak na detalje članka"
 
 msgid "user.role.subEditors"
-msgstr "Urednici sekcija/rubrika"
+msgstr "Urednici rubrika"
 
 msgid "user.role.journalAssistant"
 msgstr "Asistent časopisa"
@@ -1868,10 +1887,10 @@ msgid "issue.return"
 msgstr "Vrati se na detalje broja"
 
 msgid "submission.event.submissionSubmitted"
-msgstr "Članak prijavljen"
+msgstr "Članak predat"
 
 msgid "search.results.orderBy"
-msgstr "Poredaj rezultate po"
+msgstr "Poređaj rezultate po"
 
 msgid "search.results.orderBy.article"
 msgstr "Naslov članka"
@@ -1889,7 +1908,7 @@ msgid "search.results.orderBy.journal"
 msgstr "Naslov časopisa"
 
 msgid "search.results.orderBy.popularityAll"
-msgstr "Popularnost (svo vreme)"
+msgstr "Popularnost (sve vreme)"
 
 msgid "search.results.orderBy.popularityMonth"
 msgstr "Popularnost (poslednji mesec)"
@@ -1904,7 +1923,7 @@ msgid "search.results.orderDir.desc"
 msgstr "Opadajući"
 
 msgid "search.results.similarDocuments"
-msgstr "slični dokumenti"
+msgstr "sličnа dokumentа"
 
 msgid "plugins.categories.viewableFiles"
 msgstr "Dodatak za probne kopije članka"
@@ -2004,3 +2023,15 @@ msgstr "Data putanja časopisa \"{$journalPath}\" nije mogla da se spoji sa čas
 
 msgid "notification.type.approveSubmissionTitle"
 msgstr "Čeka se odobrenje."
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Nemate aktivnu pretplatu"
+
+msgid "submission.search"
+msgstr "Претрага чланка"
+
+msgid "category.category"
+msgstr "Категорије"
+
+msgid "section.policy"
+msgstr "Pravila rubrike"

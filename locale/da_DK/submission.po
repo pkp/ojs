@@ -1,9 +1,10 @@
+# Niels Erik Frederiksen <nef@kb.dk>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2021-01-18 14:40+0000\n"
+"PO-Revision-Date: 2021-07-02 11:03+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "da_DK/>\n"
@@ -245,8 +246,8 @@ msgstr ""
 
 msgid "submission.viewingPreview"
 msgstr ""
-"Dette er en forhåndsvisning, der endnu ikke blevet offentliggjort. <a href=\""
-"{$url}\">Se indsendelse</a>"
+"Dette er en forhåndsvisning, der endnu ikke er blevet offentliggjort. <a "
+"href=\"{$url}\">Se indsendelse</a>"
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inaktiv)"

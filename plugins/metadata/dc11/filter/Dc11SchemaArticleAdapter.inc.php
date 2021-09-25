@@ -22,6 +22,7 @@ use APP\submission\Submission;
 use PKP\metadata\MetadataDataObjectAdapter;
 
 use PKP\metadata\MetadataDescription;
+use APP\facades\Repo;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -86,7 +87,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $this->_addLocalizedElements($dc11Description, 'dc:title', $article->getFullTitle(null));
 
         // Creator
-        $authors = $article->getAuthors();
+        $authors = Repo::author()->getSubmissionAuthors($article);
         foreach ($authors as $author) {
             $dc11Description->addStatement('dc:creator', $author->getFullName(false, true));
         }

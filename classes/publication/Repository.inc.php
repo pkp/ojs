@@ -15,6 +15,7 @@ namespace APP\publication;
 
 use APP\core\Application;
 use APP\core\Services;
+use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
@@ -86,7 +87,7 @@ class Repository extends \PKP\publication\Repository
 
         // Ensure that the issueId exists
         if (isset($props['issueId']) && empty($errors['issueId'])) {
-            $issue = Services::get('issue')->get($props['issueId']);
+            $issue = Repo::issue()->get($props['issueId']);
             if (!$issue) {
                 $errors['issueId'] = [__('publication.invalidIssue')];
             }
@@ -101,7 +102,7 @@ class Repository extends \PKP\publication\Repository
         $errors = parent::validatePublish($publication, $submission, $allowedLocales, $primaryLocale);
 
         // Every publication must be scheduled in an issue
-        if (!$publication->getData('issueId') || !Services::get('issue')->get($publication->getData('issueId'))) {
+        if (!$publication->getData('issueId') || !Repo::issue()->get($publication->getData('issueId'))) {
             $errors['issueId'] = __('publication.required.issue');
         }
 
@@ -148,7 +149,7 @@ class Repository extends \PKP\publication\Repository
         //
         // If there is no assigned issue, the journal may be using a continuous
         // publishing model in which articles are published right away.
-        $issue = Services::get('issue')->get($publication->getData('issueId'));
+        $issue = Repo::issue()->get($publication->getData('issueId'));
         if ($issue && !$issue->getData('published')) {
             $publication->setData('datePublished', null);
             $publication->setData('status', Submission::STATUS_SCHEDULED);

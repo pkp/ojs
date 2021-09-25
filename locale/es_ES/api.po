@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2020-11-30 15:32+0000\n"
+"PO-Revision-Date: 2021-08-06 16:04+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/api/es_ES/>"
 "\n"
@@ -99,13 +100,18 @@ msgstr ""
 "la revista."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "No tiene permiso para ver los números retirados de publicación."
+msgstr "No tiene permiso para ver los números no publicados."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "No puede cambiar la revista de un envío."
+msgstr "No puede cambiar la revista de un artículo."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Desde esta fase no puede asociar un archivo con una galerada."
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "El aviso que ha solicitado no forma parte de esta revista."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"La funcionalidad de notificación por correo electrónico no se ha activado en "
+"esta revista."

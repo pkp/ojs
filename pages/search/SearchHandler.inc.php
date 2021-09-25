@@ -21,8 +21,6 @@ use APP\handler\Handler;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 
-use PKP\submission\PKPSubmission;
-
 class SearchHandler extends Handler
 {
     /**
@@ -109,11 +107,11 @@ class SearchHandler extends Handler
         }
 
         // Assign the year range.
-        $yearRange = Repo::publication()->getDateBoundaries(
-            Repo::publication()
-                ->getCollector()
-                ->filterByContextIds([(int) $journalId])
-        );
+        $collector = Repo::publication()->getCollector();
+        if ($journalId) {
+            $collector->filterByContextIds([(int) $journalId]);
+        }
+        $yearRange = Repo::publication()->getDateBoundaries($collector);
         $yearStart = substr($yearRange->min_date_published, 0, 4);
         $yearEnd = substr($yearRange->max_date_published, 0, 4);
         $templateMgr->assign([
@@ -224,8 +222,6 @@ class SearchHandler extends Handler
         $journal = $request->getJournal();
         $user = $request->getUser();
 
-        $authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
-
         if (isset($args[0]) && $args[0] == 'view') {
             // View a specific author
             $authorName = $request->getUserVar('authorName');
@@ -234,23 +230,26 @@ class SearchHandler extends Handler
             $affiliation = $request->getUserVar('affiliation');
             $country = $request->getUserVar('country');
 
-            $authorRecords = iterator_to_array(Services::get('author')->getMany([
-                'contextIds' => $journal ? [$journal->getId()] : [],
-                'givenName' => $givenName,
-                'familyName' => $familyName,
-                'affiliation' => $affiliation,
-                'country' => $country,
-            ]));
-            $publicationIds = array_map(function ($author) {
-                return $author->getData('publicationId');
-            }, $authorRecords);
-            $submissionIds = array_filter(array_map(function ($publicationId) {
-                $publication = Repo::publication()->get($publicationId);
-                return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
-            }, array_unique($publicationIds)));
-            $submissions = array_map(function ($submissionId) {
-                return Repo::submission()->get($submissionId);
-            }, array_unique($submissionIds));
+            $submissions = Repo::author()
+                ->getMany(
+                    Repo::author()
+                        ->getCollector()
+                        ->filterByContextIds($journal ? [$journal->getId()] : [])
+                        ->filterByName($givenName, $familyName)
+                        ->filterByAffiliation($affiliation)
+                        ->filterByCountry($country)
+                )
+                ->map(function ($author) {
+                    return $author->getData('publicationId');
+                })
+                ->unique()
+                ->map(function ($publicationId) {
+                    return Repo::publication()->get($publicationId)->getData('submissionId');
+                })
+                ->unique()
+                ->map(function ($submissionId) {
+                    return Repo::submission()->get($submissionId);
+                });
 
             // Load information associated with each article.
             $journals = [];
@@ -258,7 +257,6 @@ class SearchHandler extends Handler
             $sections = [];
             $issuesUnavailable = [];
 
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
             $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
             $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
@@ -273,7 +271,7 @@ class SearchHandler extends Handler
                 }
                 if (!isset($issues[$issueId])) {
                     import('classes.issue.IssueAction');
-                    $issue = $issueDao->getById($issueId);
+                    $issue = Repo::issue()->get($issueId);
                     $issues[$issueId] = $issue;
                     $issueAction = new IssueAction();
                     $issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue, $journals[$journalId]) && (!$issueAction->subscribedUser($user, $journals[$journalId], $issueId, $articleId) && !$issueAction->subscribedDomain($request, $journals[$journalId], $issueId, $articleId));
@@ -311,7 +309,7 @@ class SearchHandler extends Handler
             $searchInitial = $request->getUserVar('searchInitial');
             $rangeInfo = $this->getRangeInfo($request, 'authors');
 
-            $authors = $authorDao->getAuthorsAlphabetizedByJournal(
+            $authors = Repo::author()->dao->getAuthorsAlphabetizedByJournal(
                 isset($journal) ? $journal->getId() : null,
                 $searchInitial,
                 $rangeInfo

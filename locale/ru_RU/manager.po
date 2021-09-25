@@ -1,9 +1,10 @@
+# Pavel Pisklakov <ppv1979@mail.ru>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
-"PO-Revision-Date: 2021-01-17 14:53+0000\n"
+"PO-Revision-Date: 2021-06-27 04:03+0000\n"
 "Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
 "Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ru_RU/>\n"
@@ -1701,3 +1702,27 @@ msgstr "Аннотации"
 
 msgid "stats.publications.galleys"
 msgstr "Файлы"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Процесс разбора гранок выпуска завершился с ошибкой"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "«{$issueId}» — «{$issueIdentification}»"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Результаты экспорта выпусков"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Основное контактное лицо для этого журнала не указано. Вы можете ввести "
+"основное контактное лицо в <a href=\"{$url}\">настройках журнала</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Отправить копию письма-подтверждения отправки материала на адрес основного "
+"контактного лица журнала."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Выберите страну, в которой располагается данный журнал, или страну почтового "
+"адреса журнала или издателя."

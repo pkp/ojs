@@ -15,6 +15,7 @@
 
 import('lib.pkp.plugins.importexport.native.PKPNativeImportExportPlugin');
 
+use APP\facades\Repo;
 use APP\template\TemplateManager;
 
 class NativeImportExportPlugin extends PKPNativeImportExportPlugin
@@ -66,10 +67,10 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin
      */
     public function getExportIssuesDeployment($issueIds, &$deployment, $opts = [])
     {
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /** @var IssueDAO $issueDao */
         $issues = [];
         foreach ($issueIds as $issueId) {
-            $issue = $issueDao->getById($issueId, $deployment->getContext()->getId());
+            $issue = Repo::issue()->get($issueId);
+            $issue = $issue->getJournalId() == $deployment->getContext()->getId() ? $issue : null;
             if ($issue) {
                 $issues[] = $issue;
             }

@@ -13,6 +13,7 @@
  * @brief Handle requests for reviewer functions.
  */
 
+use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 use PKP\security\authorization\SubmissionAccessPolicy;
 
@@ -101,8 +102,7 @@ class ReviewerHandler extends PKPReviewerHandler
         }
 
         // Get the reviewer user object
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-        $user = $userDao->getById($accessKey->getUserId());
+        $user = Repo::user()->get($accessKey->getUserId());
         if (!$user) {
             return;
         }

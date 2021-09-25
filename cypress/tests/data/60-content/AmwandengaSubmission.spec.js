@@ -100,7 +100,7 @@ describe('Data suite tests', function() {
 		cy.get('#issue [name="urlPath"]').type('mwandenga-signalling-theory space error');
 		cy.get('#issue button').contains('Save').click();
 
-		cy.get('#issue [id*="urlPath-error"]').contains('This may only contain letters, numbers, dashes and underscores.');
+		cy.get('#issue [id*="urlPath-error"]').contains('This may only contain letters, numbers, dashes, underscores and periods.');
 		cy.get('#issue [name="urlPath"]').clear().type('mwandenga-signalling-theory');
 		cy.get('#issue button').contains('Save').click();
 		cy.get('#issue [role="status"]').contains('Saved');

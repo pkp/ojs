@@ -13,15 +13,14 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
-class I6807_SetLastModified extends Migration
+class I6807_SetLastModified extends \PKP\migration\Migration
 {
     /**
      * Run the migration.
      */
-    public function up()
+    public function up(): void
     {
         // pkp/pkp-lib#6807 Make sure all submission/issue last modification dates are set
         DB::statement('UPDATE issues SET last_modified = date_published WHERE last_modified IS NULL');
@@ -31,7 +30,7 @@ class I6807_SetLastModified extends Migration
     /**
      * Reverse the downgrades
      */
-    public function down()
+    public function down(): void
     {
         // We don't have the data to downgrade and downgrades are unwanted here anyway.
     }

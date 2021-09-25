@@ -18,6 +18,7 @@ namespace APP\tasks;
 use APP\core\Application;
 use APP\facades\Repo;
 
+use APP\issue\Collector;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
@@ -97,18 +98,24 @@ class OpenAccessNotification extends ScheduledTask
             $curDay = $curDate['day'];
 
             // Check if the current date corresponds to the open access date of any issues
-            $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-            $issues = $issueDao->getPublishedIssues($journal->getId());
+            $publishedIssuesCollector = Repo::issue()->getCollector()
+                ->filterByContextIds([$journal->getId()])
+                ->filterByPublished(true)
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
+            $issues = Repo::issue()->getMany($publishedIssuesCollector);
 
-            while ($issue = $issues->next()) {
+            foreach ($issues as $issue) {
                 $accessStatus = $issue->getAccessStatus();
                 $openAccessDate = $issue->getOpenAccessDate();
 
                 if ($accessStatus == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0, 0, 0, $curMonth, $curDay, $curYear)) {
                     // Notify all users who have open access notification set for this journal
-                    $userSettingsDao = DAORegistry::getDAO('UserSettingsDAO'); /* @var $userSettingsDao UserSettingsDAO */
-                    $users = $userSettingsDao->getUsersBySetting('openAccessNotification', true, 'bool', $journal->getId());
-                    $this->sendNotification($users, $journal, $issue);
+                    $users = Repo::user()->getMany(
+                        Repo::user()->getCollector()
+                            ->filterByContextIds([$journal->getId()])
+                            ->filterBySettings(['openAccessNotification' => 1])
+                    );
+                    $this->sendNotification(iterator_to_array($users), $journal, $issue);
                 }
             }
         }

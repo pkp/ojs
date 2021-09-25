@@ -1,0 +1,31 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-12 13:40+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"Ерекшелігі: бұл модуль кем дегенде бір статистика/есеп модулін қосуды талап "
+"етеді. Егер сіздің статистика модульдеріңіз бірнеше метрикамен байланысты "
+"болса, онда андминистратор параметрлері бетінде және/немесе журнал "
+"менеджерінің параметрлер беттерінде негізгі метриканы таңдаңыз."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Осы автордың (немесе авторлардың) ең көп оқылатын мақалалары"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Автор мақалаларының тізімін мақаланың аңдатпа орналасқан бетіне "
+"орналастырады."
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "\"Автор ұсынған мақалалар\" модулі"

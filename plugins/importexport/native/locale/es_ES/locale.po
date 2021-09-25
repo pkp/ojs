@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:43+00:00\n"
-"PO-Revision-Date: 2020-06-16 22:10+0000\n"
+"PO-Revision-Date: 2021-08-04 12:04+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/es_ES/>\n"
@@ -30,7 +31,7 @@ msgid "plugins.importexport.native.export"
 msgstr "Exportar"
 
 msgid "plugins.importexport.native.results"
-msgstr "Resultados"
+msgstr "Importar resultados"
 
 msgid "plugins.inportexport.native.uploadFile"
 msgstr "Cargue un archivo en el apartado \"Importar\" para continuar."

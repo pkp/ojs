@@ -14,12 +14,12 @@
  */
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
 use APP\i18n\AppLocale;
+use APP\issue\Collector;
 use APP\issue\IssueAction;
 
 use APP\payment\ojs\OJSPaymentManager;
@@ -88,8 +88,7 @@ class IssueHandler extends Handler
     public function current($args, $request)
     {
         $journal = $request->getJournal();
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issue = $issueDao->getCurrent($journal->getId(), true);
+        $issue = Repo::issue()->getCurrent($journal->getId(), true);
 
         if ($issue != null) {
             $request->redirect(null, 'issue', 'view', $issue->getBestIssueId());
@@ -147,16 +146,15 @@ class IssueHandler extends Handler
         $count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
         $offset = $page > 1 ? ($page - 1) * $count : 0;
 
-        $params = [
-            'contextId' => $context->getId(),
-            'orderBy' => 'seq',
-            'orderDirection' => 'ASC',
-            'count' => $count,
-            'offset' => $offset,
-            'isPublished' => true,
-        ];
-        $issues = iterator_to_array(Services::get('issue')->getMany($params));
-        $total = Services::get('issue')->getMax($params);
+        $collector = Repo::issue()->getCollector()
+            ->limit($count)
+            ->offset($offset)
+            ->filterByContextIds([$context->getId()])
+            ->orderBy(Collector::ORDERBY_SEQUENCE)
+            ->filterByPublished(true);
+
+        $issues = Repo::issue()->getMany($collector)->toArray();
+        $total = Repo::issue()->getCount($collector->limit(null)->offset(null));
 
         $showingStart = $offset + 1;
         $showingEnd = min($offset + $count, $offset + count($issues));

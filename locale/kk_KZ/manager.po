@@ -1,0 +1,187 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-18 11:39+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.distribution.access"
+msgstr "Қол жеткізу"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Платеж за обработку статьи"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Ограничить доступ только PDF-версиями выпусков и статей"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Ассоциированное членство"
+
+msgid "manager.payment.options.feeName"
+msgstr "Название платежа"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Описание платежа"
+
+msgid "manager.payment.options.fee"
+msgstr "Платеж"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Платежи будут включены для этого журнала. Обратите внимание, что для "
+"осуществления платежей пользователи должны будут войти на сайт под своей "
+"учетной записью."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Вы уверены, что хотите удалить эту подписку?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость "
+"и продолжительность управляются менеджером по подписке данного журнала."
+
+msgid "manager.payment.options"
+msgstr "Параметры"
+
+msgid "manager.payment.notFound"
+msgstr "Не найдено"
+
+msgid "manager.payment.noPayments"
+msgstr "Нет платежей"
+
+msgid "manager.payment.generalOptions"
+msgstr "Общие параметры"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"The Association Membership will appear in About the Journal under Policies."
+
+msgid "manager.payment.generalFees"
+msgstr "Жалпы төлемдер"
+
+msgid "manager.payment.form.numeric"
+msgstr "Барлық бағалар оң сандар болуы керек (бөлшек мәндерді қолдануға болады)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Төлем параметрлері"
+
+msgid "manager.payment.enable"
+msgstr "Қосу"
+
+msgid "manager.payment.editSubscription"
+msgstr "Жазылымды өңдеу"
+
+msgid "manager.payment.details"
+msgstr "Егжей"
+
+msgid "manager.payment.description"
+msgstr "Сипаттама"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS валюталық айырбастауды жүзеге асырмайды. Егер сіз жазылым үшін "
+"төлемдерді қабылдайтын болсаңыз, жазылым үшін төлем валютасы осы жерде "
+"көрсетілген валютаға сәйкес келетініне көз жеткізіңіз."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Авторлық төлемдерді қосу үшін төмендегі төлем сомаларын енгізіңіз."
+
+msgid "manager.payment.authorFees"
+msgstr "Авторлық төлемдер"
+
+msgid "manager.payment.amount"
+msgstr "Сомасы"
+
+msgid "manager.payment.addPayment"
+msgstr "Төлемді қосыңыз"
+
+msgid "manager.payment.action"
+msgstr "Әрекет"
+
+msgid "manager.managementPages"
+msgstr "Басқару беттері"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Бұл тіл журнал сайты үшін әдепкі тіл болады."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Кешіріңіз, қосымша тілдер жоқ. Егер сіз осы журналға қосымша тілдерді "
+"қосқыңыз келсе, сайт әкімшісіне хабарласыңыз."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS пайдаланушыларға жүйе қолдайтын кез келген тілде қол жетімді болуы "
+"мүмкін. Сонымен қатар, OJS көп тілді жүйе ретінде әрекет ете алады, бұл "
+"пайдаланушыларға әр беттегі тілдер арасында ауысуға және бірнеше қосымша "
+"тілдерде нақты деректерді енгізуге мүмкіндік береді. <br /> <br /> Егер "
+"қолдау көрсетілетін OJS төменде көрсетілмесе, сайт әкімшісінен сайтты "
+"басқару интерфейсінен тіл орнатуды сұраңыз. Жаңа тілдерді қолдауды қосу "
+"бойынша нұсқауларды OJS құжаттамасынан қараңыз."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Бұл сол тіл үшін жасаған тілге қатысты журнал параметрлерін жоққа шығарады"
+
+msgid "manager.language.forms"
+msgstr "Пішіндер"
+
+msgid "manager.language.submissions"
+msgstr "Өтініштер"
+
+msgid "manager.language.ui"
+msgstr "Қолданушы интерфейсі"
+
+msgid "manager.journalManagement"
+msgstr "Журналды басқару"
+
+msgid "manager.files.note"
+msgstr ""
+"Ескерту: Файл менеджері - бұл журналға байланысты файлдар мен каталогтарды "
+"тікелей қарауға және басқаруға мүмкіндік беретін қосымша мүмкіндік."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Осы журналдың барлық электрондық пошта үлгілерін әдепкі үлгілермен "
+"ауыстырғыңыз келетініне сенімдісіз бе? Сіз жасаған барлық өзгерістерді "
+"жоғалтасыз."
+
+msgid "manager.website.archiving"
+msgstr "Мұрағатталуда"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Журнал өзінің мазмұнына немесе оның мазмұнына қол жеткізу үшін жазылуды "
+"қажет етеді."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Журнал оның мазмұнына ашық қол жеткізуді қамтамасыз етеді."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS журнал мазмұнын желіде жариялау үшін қолданылмайды."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Жариялау режимі"
+
+msgid "manager.distribution.publication"
+msgstr "Басылым"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Мақаланың жарияланған күнін қолданыңыз"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Использовать дату публикации выпуска"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Выберите способ определения по умолчанию даты копирайта для статьи. Это "
+"значение по умолчанию может быть изменено в каждом конкретном случае. Если "
+"вы публикуете статьи «по ходу поступления», не используйте дату публикации "
+"выпуска."

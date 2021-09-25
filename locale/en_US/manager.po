@@ -1720,3 +1720,30 @@ msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Process failed to parse issue galleys"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "The journal's name"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "The URL to the journal's homepage"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "The name of the journal's primary contact"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "The journal's email signature for automated emails"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "The email address of the journal's primary contact"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "The name of the type of payment"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "The payment amount"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "The currency of the payment amount, such as USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Name of the website when more than one journal is hosted"

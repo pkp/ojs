@@ -1,6 +1,7 @@
+# Nguyen Xuan Giao <giaonxb@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-14 15:14+0000\n"
+"PO-Revision-Date: 2021-08-01 12:04+0000\n"
 "Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -398,8 +399,8 @@ msgstr "Các biên tập viên của chuyên mục này"
 
 msgid "manager.section.noSectionEditors"
 msgstr ""
-"Không có biên tập viên chuyên mục nào.  Thêm vai trò này cho ít nhất một "
-"người dùng thông qua Quản lý > Cài đặt > Người dùng &amp; Vai trò đầu tiên."
+"Không có biên tập viên chuyên mục nào.  Trước tiên, thêm vai trò này cho ít "
+"nhất một người dùng thông qua Quản lý > Cài đặt > Người dùng & Vai trò."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Không yêu cầu tóm tắt"

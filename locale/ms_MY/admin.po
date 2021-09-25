@@ -1,0 +1,41 @@
+# Mohd Raheemmi Mohd Yasin <raheemmiyasin@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-10 04:03+0000\n"
+"Last-Translator: Mohd Raheemmi Mohd Yasin <raheemmiyasin@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/admin/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tPemasangan OJS anda dikonfigurasi untuk mencatat lebih daripada satu "
+"metrik penggunaan. Statistik penggunaan akan dipaparkan dalam beberapa "
+"konteks.\n"
+"\t\tTerdapat kes di mana statistik penggunaan tunggal mesti digunakan, mis. "
+"untuk memaparkan senarai artikel yang paling kerap digunakan atau peringkat\n"
+"\t\tKeputusan Carian. Pilih salah satu metrik yang dikonfigurasi sebagai "
+"lalai.\n"
+"\t"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Permintaan ke laman utama akan dialihkan ke jurnal ini. Ini mungkin berguna "
+"jika laman ini hanya mengehoskan satu jurnal sahaja."
+
+msgid "admin.settings.redirect"
+msgstr "Ubah hala jurnal"
+
+msgid "admin.hostedContexts"
+msgstr "Jurnal yang Dihoskan"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Pemberitahuan Akses Terbuka"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Peringatan Ulasan"

@@ -14,12 +14,12 @@
 
 namespace APP\security\authorization;
 
-use PKP\db\DAORegistry;
+use APP\facades\Repo;
+use APP\issue\Issue;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\authorization\DataObjectRequiredPolicy;
-use PKP\security\Role;
 
-use APP\issue\Issue;
+use PKP\security\Role;
 
 class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 {
@@ -53,8 +53,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
         }
 
         // Make sure the issue belongs to the journal.
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $issue = $issueDao->getByBestId($issueId, $this->journal->getId());
+        $issue = Repo::issue()->getByBestId($issueId, $this->journal->getId());
 
         if (!$issue instanceof Issue) {
             return AuthorizationPolicy::AUTHORIZATION_DENY;

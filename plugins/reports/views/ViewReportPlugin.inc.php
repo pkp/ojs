@@ -78,7 +78,6 @@ class ViewReportPlugin extends ReportPlugin
         $articleTitles = [];
         $articleIssueIdentificationMap = [];
 
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $submissions = Repo::submission()->getMany(
             Repo::submission()
                 ->getCollector()
@@ -95,7 +94,7 @@ class ViewReportPlugin extends ReportPlugin
             // Make sure we get the issue identification
             $articleIssueIdentificationMap[$articleId] = $issueId;
             if (!isset($issueIdentifications[$issueId])) {
-                $issue = $issueDao->getById($issueId);
+                $issue = Repo::issue()->get($issueId);
                 $issueIdentifications[$issueId] = $issue->getIssueIdentification();
                 $issueDatesPublished[$issueId] = $issue->getDatePublished();
                 unset($issue);

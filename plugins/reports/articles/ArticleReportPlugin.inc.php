@@ -13,6 +13,7 @@
  * @brief Article report plugin
  */
 
+use APP\facades\Repo;
 use APP\workflow\EditorDecisionActionsManager;
 use PKP\db\DAORegistry;
 use PKP\plugins\ReportPlugin;
@@ -79,7 +80,6 @@ class ArticleReportPlugin extends ReportPlugin
         $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
@@ -127,7 +127,7 @@ class ArticleReportPlugin extends ReportPlugin
                     continue;
                 }
                 if (!isset($editorsById[$userId])) {
-                    $editor = $userDao->getById($userId);
+                    $editor = Repo::user()->get($userId, true);
                     $editorsById[$userId] = [
                         $editor->getLocalizedGivenName(),
                         $editor->getLocalizedFamilyName(),

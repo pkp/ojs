@@ -15,7 +15,7 @@
 
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;
-
+use APP\facades\Repo;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
 
@@ -64,8 +64,7 @@ class SubscriptionForm extends Form
         // User is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function ($userId) {
-            $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
-            return $userDao->userExistsById($userId);
+            return (boolean) Repo::user()->get($userId);
         }));
 
         // Subscription status is provided and valid
@@ -228,13 +227,12 @@ class SubscriptionForm extends Form
      */
     protected function _prepareNotificationEmail($mailTemplateKey)
     {
-        $userDao = DAORegistry::getDAO('UserDAO'); /* @var $userDao UserDAO */
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
 
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
         $journalName = $journal->getLocalizedTitle();
-        $user = $userDao->getById($this->subscription->getUserId());
+        $user = Repo::user()->get($this->subscription->getUserId());
         $subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId());
 
         $subscriptionName = $journal->getData('subscriptionName');

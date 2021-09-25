@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-08 06:06+0000\n"
+"PO-Revision-Date: 2021-06-19 03:25+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "gl_ES/>\n"
@@ -981,7 +981,7 @@ msgstr ""
 "tarefa asignada. Está seguro/a de que quere facelo?"
 
 msgid "sectionEditor.noneAssigned"
-msgstr "Non se asignou ningún envío"
+msgstr "Non se asignou ningún envío."
 
 msgid "sectionEditor.completedEditorialAssignments"
 msgstr "Tarefas editoriais completadas"
@@ -1284,3 +1284,1121 @@ msgid "submission.review.mustUploadFileForReview"
 msgstr ""
 "Non se pode enviar unha mensaxe de solicitude por correo electrónico mentres "
 "non haxa unha versión de revisión."
+
+msgid "user.register.noJournals"
+msgstr "Este sitio web non contén ningunha revista na que se poida rexistrar."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "O contrasinal que introduciu non é longo abondo."
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Descrición"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "A subscrición ten que ser revisada antes de poder activala"
+
+msgid "submission.comments.forEditor"
+msgstr "Para o editor/a"
+
+msgid "user.register.registrationDisabled"
+msgstr "Neste momento esta revista non acepta rexistros de usuarios/as."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Si, acepto que os meus datos sexan recollidos e almacenados consonte a <a "
+"href=\"{$privacyUrl}\" target=\"_blank\">declaración de privacidade</a> "
+"desta revista."
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Para o autor/a e o editor/a"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"As subscricións activas e caducadas móstranse abaixo onda a data de "
+"vencemento. Ademais, a seguinte información sobre o estado pode ser incluída "
+"en cada subscrición."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Estado da subscrición"
+
+msgid "user.register.reviewerDescription"
+msgstr "Estou disposto a realizar a avaliación por pares dos envíos ao sitio."
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Despois do envío, presente unha copia CCO editable para mandárllela aos "
+"revisores/as."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "As miñas subscricións"
+
+msgid "user.register.authorDescription"
+msgstr "Pode enviar artigos á revista."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Si, gustariame que me informasen das novas publicacións e noticias de todas "
+"as revistas en que me rexistrei."
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Estes comentarios pódense compartir co autor/a.<br /> (Logo de gardalos, "
+"pódense engadir máis comentarios.)"
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Debe aceptar a declaración de privacidade de todas as revistas en que se "
+"rexistre."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Recibirá unha notificación por correo electrónico cando un número da revista "
+"ofreza acceso libre."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Indique os seus intereses de revisión (áreas de coñecemento e métodos de "
+"investigación):"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Quero realizar avaliacións por pares dos artigos da revista."
+
+msgid "user.register.readerDescription"
+msgstr ""
+"Recibirá unha notificación por correo electrónico cando se publique un novo "
+"número da revista."
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Gardar e enviar por correo electrónico ao editor/a"
+
+msgid "user.subscriptions.status"
+msgstr "Estado"
+
+msgid "user.register.privacyStatement"
+msgstr "Declaración de privacidade"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Para o editor/a"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Debe aceptar a declaración de privacidade deste sitio."
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "É necesaria información adicional antes de activar a subscrición"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Gardar e enviar por correo electrónico ao autor/a"
+
+msgid "user.register.selectContext"
+msgstr "Seleccione unha revista para rexistrarse:"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Para o autor/a e o editor/a"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Esta revista non publica os seus contidos en liña."
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Consellos de busca: <ul>\n"
+"<li>Os termos de busca non distinguen entre maiúsculas e minúsculas</li>\n"
+"<li>As palabras comúns ignóranse</li>\n"
+"<li>Por defecte só se devolven os artigos que conteñen <em>todos</em> os "
+"termos da consulta (p. ex., <em>I</em> está implícito)</li>\n"
+"<li>Combine múltiples palabras con with <em>OU</em> para atopar artigos que "
+"conteñan un ou outro termo; p. ex., <em>educación OU investigación</em></li>"
+"\n"
+"<li>Utilice parénteses para crear consultas máis complexas; p. ex., <em>"
+"arquivo ((revista OU conferencia) NON teses)</em></li>\n"
+"<li>Pode buscar unha frase exacta poñéndoa entre comiñas; p. ex., <em>\""
+"publicacións de acceso libre\"</em></li>\n"
+"<li>Pode excluír unha palabra poñendo o prefixo <strong>-</strong> ou "
+"<em>NON</em>; p. ex. <em>en liña -políticas</em> ou <em>en liña NON "
+"políticas</em></li>\n"
+"<li>Utilice <strong>*</strong> nun termo como comodín para atopar todas as "
+"secuencias de caracteres que coincidan; p. ex., <em>soci* moralidade</em> "
+"faría aparecer documentos que contivesen \"sociolóxico\" ou \"social\"</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "Detalles do autor/a"
+
+msgid "search.authorIndex"
+msgstr "Navegar polo índice de autores/as"
+
+msgid "search.allJournals"
+msgstr "Todas as revistas"
+
+msgid "search.withinJournal"
+msgstr "Dentro de"
+
+msgid "search.searchFor"
+msgstr "Buscar artigos por"
+
+msgid "search.browseAuthorIndex"
+msgstr "Explorar o índice de autores/as"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Engadir"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Eliminar"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Introduza un intervalo IP válido."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Se se introducen intervalos IP aquí, o dominio é opcional.<br />Os valores "
+"válidos inclúen un enderezo IP (p. ex., 142.58.103.1), un intervalo IP (p. "
+"ex., 142.58.103.1 - 142.58.103.4), un intervalo IP con comodín '*' (p. ex., "
+"142.58.*.*), e un intervalo IP con CIDR (p. ex., 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Intervalos IP"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Introduza un dominio válido."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"O tipo de subscrición seleccionado require un dominio e/ou un intervalo IP "
+"para a autenticación da subscrición."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Se introduce un dominio aquí, os intervalos IP serán opcionais.<br />Os "
+"valores válidos son nomes de dominio (p. ex., lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Dominio"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Enderezo postal"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Ten que introducir o nome da institución."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Nome da institución"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Información sobre a afiliación, no caso de ser necesaria para o tipo de "
+"subscrición seleccionado."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Esta conta de usuario/a xa ten unha subscrición individual."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Seleccione un tipo de subscrición válido."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr ""
+"O tipo de subscrición seleccionado require información sobre a afiliación."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Afiliación"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tipo de subscrición"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Ver os tipos de subscripcións dispoñibles"
+
+msgid "user.subscriptions.expired"
+msgstr "Vencida:  {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Vencemento: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Comprar unha subscrición institucional"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Comprar unha subscrición individual"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Comprar unha nova subscrición"
+
+msgid "user.subscriptions.purchase"
+msgstr "Comprar"
+
+msgid "user.subscriptions.renew"
+msgstr "Renovar"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Subscricions institucionais"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Subscrición individual"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Iniciouse un pagamento en liña, pero cancelouse ou non se completou"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Iniciouse o pagamento manual, pero aínda non se recibiu"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Listaxe de verificación para preparar envíos"
+
+msgid "about.authorGuidelines"
+msgstr "Directrices para o autor/a"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Ver os seus envíos pendentes"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Realizar un novo envío"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Efectuar un novo envío á sección <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} ou {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Necesita {$login} ou {$register} para realizar un envío."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Rexistrarse"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Ir ao inicio de sesión"
+
+msgid "about.submissions"
+msgstr "Envíos"
+
+msgid "about.sectionPolicies"
+msgstr "Políticas de seccións"
+
+msgid "about.focusAndScope"
+msgstr "Enfoque e alcance"
+
+msgid "about.editorialPolicies"
+msgstr "Políticas editoriais"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografía"
+
+msgid "about.editorialTeam"
+msgstr "Equipo editorial"
+
+msgid "about.history"
+msgstr "Historia da revista"
+
+msgid "about.aboutContext"
+msgstr "Sobre a revista"
+
+msgid "about.contact"
+msgstr "Contacto"
+
+msgid "about.statistics"
+msgstr "Estatísticas"
+
+msgid "archive.issueUnavailable"
+msgstr "O número non está dispoñible"
+
+msgid "archive.browse"
+msgstr "Navegar polos números anteriores"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arquivos - Páxina {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Arquivos"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Esta revista non publicou ningún número."
+
+msgid "current.noCurrentIssue"
+msgstr "Non hai ningún número actual"
+
+msgid "current.current"
+msgstr "Último número"
+
+msgid "site.noJournals"
+msgstr "Non hai revistas dispoñibles."
+
+msgid "site.journalCurrent"
+msgstr "Número actual"
+
+msgid "site.journalRegister"
+msgstr "Rexistrarse"
+
+msgid "site.journalView"
+msgstr "Acceder á revista"
+
+msgid "site.journalsHosted"
+msgstr "Revistas aloxadas neste sitio web"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"O arquivo seleccionado comezará a descargarse automaticamente. De non ser "
+"así, faga clic no seguinte enlace. Teña en conta que pode necesitar un "
+"visualizador ou un complemento especial para este arquivo.<br /><br />Se non "
+"se descarga automaticamente, <a href=\"{$url}\">faga clic aquí</a>."
+
+msgid "article.nonpdf.title"
+msgstr "Descargar o artigo"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>O arquivo PDF que seleccionou debería cargarse aquí se o seu navegador "
+"ten instalado un complemento de lectura de PDF  (por exemplo, unha versión "
+"recente de <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>).</p>"
+
+msgid "article.download"
+msgstr "Descargar este arquivo PDF"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "Vista de {$title}"
+
+msgid "about.aboutSoftware"
+msgstr "Acerca de Open Journal Systems"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Proceso editorial e de publicación de l’OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Máis información acerca do sistema de publicación, da plataforma e do fluxo "
+"de traballo de OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Afiliacións"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tipos de subscricións"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Prezo"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Duración"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nome"
+
+msgid "about.subscriptionsContact"
+msgstr "Contacto para as subscricións"
+
+msgid "about.subscriptions.institutional"
+msgstr "Subscricións institucionais"
+
+msgid "about.subscriptions.individual"
+msgstr "Subscricións individuais"
+
+msgid "about.subscriptions"
+msgstr "Subscricións"
+
+msgid "about.archiving"
+msgstr "Arquivamento"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mes/es despois da publicación dun número."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Os contidos desta revista estarán dispoñibles en formato de acceso libre"
+
+msgid "about.delayedOpenAccess"
+msgstr "Acceso libre diferido"
+
+msgid "about.openAccessPolicy"
+msgstr "Política de acceso libre"
+
+msgid "about.publicationFrequency"
+msgstr "Frecuencia de publicación"
+
+msgid "about.peerReviewProcess"
+msgstr "Proceso de avaliación por pares"
+
+msgid "about.authorFeesMessage"
+msgstr "Esta revista aplícalles aos autores/as as cotas seguintes."
+
+msgid "about.authorFees"
+msgstr "Cotas dos autores/as"
+
+msgid "about.privacyStatement"
+msgstr "Declaración de privacidade"
+
+msgid "about.copyrightNotice"
+msgstr "Aviso de dereitos de autor/a"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Como parte integrante do proceso de envío, os autores/as teñen que "
+"asegurarse de que o seu envío cumpra todas as condicións que veñen a "
+"continuación.  No caso de non se seguiren estas directrices, os envíos "
+"poderanse devolver aos autores/as."
+
+msgid "payment.alreadyPaid"
+msgstr "Xa pagado"
+
+msgid "payment.waive"
+msgstr "Exención"
+
+msgid "payment.payNow"
+msgstr "Pagar agora"
+
+msgid "payment.waived"
+msgstr "Non esixido"
+
+msgid "payment.unpaid"
+msgstr "Non pagado"
+
+msgid "payment.paid"
+msgstr "Pagado"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Debe iniciar a sesión para realizar unha doazón."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Para acceder a este artigo debe facer a subscrición ou efectuar o pagamento "
+"do número correspondente. Inicie a sesión na revista para verificar a "
+"subscrición, acceder a unha compra anterior ou adquirir un número."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Para acceder a este elemento requírese facer a subscrición ou o pagamento do "
+"artigo. Inicie a sesión na revista para verificar a subscrición, acceder a "
+"unha compra anterior ou adquirir un artigo."
+
+msgid "payment.loginRequired"
+msgstr "Debe iniciar a sesión para poder efectuar un pagamento."
+
+msgid "donations.thankYouMessage"
+msgstr "Grazas pola súa contribución, é moi valiosa."
+
+msgid "donations.thankYou"
+msgstr "Grazas"
+
+msgid "help.goToEditPage"
+msgstr "Editar {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Volver aos resultados da busca"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Axuda de OJS"
+
+msgid "help.ojsHelp"
+msgstr "Axuda de Open Journal Systems"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Este sitio utiliza Open Journal Systems {$ojsVersion}, un software de código "
+"aberto para a xestión e a publicación de revistas que foi desenvolvido, "
+"impulsado e distribuído libremente polo <a href=\"http://pkp.sfu.ca/\">"
+"Public Knowledge Project</a> baixo a Licenza Pública Xeral GNU."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Esta revista utiliza Open Journal Systems {$ojsVersion}, un software de "
+"xestión e publicación de revistas de código aberto que foi desenvolvido, "
+"impulsado e distribuído de forma gratuíta por Public Knowledge Project baixo "
+"unha licenza pública xeral GNU. Visite a páxina web de PKP para <a href=\""
+"http://pkp.sfu.ca/\">obter máis información sobre o software</a>. Por favor, "
+"<a href=\"{$contactUrl}\">contacte coa revista</a> directamente para "
+"calquera pregunta acerca dela e os envíos."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Versión OJS {$version}</h4>\n"
+"\n"
+"<p>Grazas por descargar <strong>Open Journal Systems</strong> de Public "
+"Knowledge Project. Antes de continuar, lea o arquivo <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> incluído neste software. Para obter máis "
+"información sobre Public Knowledge Project e os seus proxectos de software, "
+"visite o <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">lloc web de PKP</a>"
+". Se quere informar dalgún erro ou ten preguntas sobre asistencia técnica de "
+"Open Journal Systems, consulte o <a href=\"http://forum.pkp.sfu.ca\" target="
+"\"_blank\">foro de soporte</a> ou visite o <a href=\"https://github.com/pkp/"
+"pkp-lib#issues\" target=\"_blank\">sistema de rexistro de erros</a> en liña "
+"de PKP. Aínda que o foro de soporte é o método de contacto prioritario, "
+"tamén pode enviar un correo electrónico ao noso equipo ao enderezo <a href=\""
+"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<h4>Actualizacións</h4>\n"
+"\n"
+"<p>Estase actualizando unha instalación xa existente de OJS <a href=\""
+"{$upgradeUrl}\">faga clic aquí</a> para continuar.</p>\n"
+"\n"
+"<h4>Requisitos do sistema recomendados</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; está utilizando actualmente PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 o "
+"<a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= "
+"9.1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x o >= 2.0.4x o Microsoft IIS 6</li>\n"
+"\t<li>Sistema operativo: calquera compatible co software anterior, incluídos "
+"<a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\""
+"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle."
+"com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Dado que PKP non dispón de recursos para probar todas as combinacións "
+"posibles de versións de software e plataformas, non garante que o sistema "
+"funcione correctamente.</p>\n"
+"\n"
+"<p>Una vez feita a instalación, Pódelle facer cambios a esta configuración "
+"editando o arquivo <tt>config.inc.php</tt> no directorio base de OJS ou "
+"utilizando a interface web da administración do sitio.</p>\n"
+"\n"
+"<h4>Sistemas de bases de datos compatibles</h4>\n"
+"\n"
+"<p>Actualmente, OJS só se probou en MySQL e PostgreSQL, aínda que outros "
+"sistemas de xestión de bases de datos aceptados por <a href=\""
+"http://adodb.sourceforge.net/\" target=\"_blank\">ADOdb</a> poderían "
+"funcionar (de forma completa ou parcial). Pode enviar ao equipo de OJS "
+"informes de compatibilidade e/ou parches de código para DBMSs alternativos "
+"ao equipo de OJS.</p>\n"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Estase actualizando unha instalación de OJS xa existente, faga clic <a href="
+"\"{$upgradeUrl}\">aquí</a> para continuar."
+
+msgid "installer.ojsUpgrade"
+msgstr "Actualización de OJS"
+
+msgid "installer.appInstallation"
+msgstr "Instalación de OJS"
+
+msgid "payment.subscription.expires"
+msgstr "Vencemento"
+
+msgid "payment.subscription.renew"
+msgstr "Renovar a subscrición"
+
+msgid "payment.subscription.purchase"
+msgstr "Comprar unha subscrición"
+
+msgid "payment.membership.ends"
+msgstr "Finaliza"
+
+msgid "payment.membership.renewMembership"
+msgstr "Renovar a afiliación individual"
+
+msgid "payment.membership.buyMembership"
+msgstr "Comprar unha afiliación individual"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Cota de publicación pagada"
+
+msgid "payment.publication.payPublication"
+msgstr "Pagar por publicar"
+
+msgid "payment.submission.paySubmission"
+msgstr "Pagar a cota de envío"
+
+msgid "payment.donation.makeDonation"
+msgstr "Facer unha doazón"
+
+msgid "payment.notFound"
+msgstr ""
+"Solicitouse un pagamento, pero a solicitude expirou. Contacte co "
+"administrador/a da revista para máis detalles."
+
+msgid "payment.requestPublicationFee"
+msgstr "Solicitar a taxa de publicación ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Doazóns"
+
+msgid "payment.type.subscription"
+msgstr "Cota de subscrición"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Cota por comprar números"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Cota por compra de artigos"
+
+msgid "payment.type.membership"
+msgstr "Cota de afiliación individual"
+
+msgid "payment.type.fastTrack"
+msgstr "Cota de revisión rápida"
+
+msgid "payment.type.publication.required"
+msgstr "A taxa de publicación está pendente de pagamento."
+
+msgid "payment.type.publication"
+msgstr "Cota de publicación"
+
+msgid "payment.type.submission"
+msgstr "Cota de envío"
+
+msgid "payment.authorFees"
+msgstr "Cotas dos autores/as"
+
+msgid "payment.paymentSent"
+msgstr "Xa se enviou o pagamento"
+
+msgid "payment.paymentReceived"
+msgstr "Pagamento recibido"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Active esta opción se xa mandou o pagamento á revista para finalizar o "
+"proceso de envío. O envío non se revisará ata a recepción do pagamento. Faga "
+"clic en \"Pagar agora\" para ver as instrucións de pagamento."
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Aviso:</strong> En caso de fallo durante o proceso de instalación da "
+"base de datos, é posible que teña que suprimir a base de datos de OJS ou as "
+"táboas de bases de datos antes de proceder á súa reinstalación."
+
+msgid "installer.upgradeApplication"
+msgstr "Actualizar Open Journal Systems"
+
+msgid "installer.installApplication"
+msgstr "Instalar Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS debe ter acceso a unha base de datos SQL para almacenar os seus datos. "
+"Vexa os requisitos do sistema para obter unha listaxe de bases de datos "
+"admitidas. Nos campos seguintes, introduza a configuración que utilizará "
+"para conectarse á base de datos."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Introduza a ruta completa dun directorio existente onde se deban gardar os "
+"arquivos cargados. Este directorio non debe ser directamente accesible a "
+"través da web. <strong>Asegúrese de que este directorio existe e de que ten "
+"permiso de escritura antes de proceder á instalación.</strong> Os nomes de "
+"ruta de acceso de Windows teñen que utilizar barras oblicuas, por exemplo: \""
+"C:/amiñarevista/arquivos\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Seleccione as linguas adicionais que queira utilizar neste sistema. Estas "
+"linguas estarán dispoñibles para o seu uso nas revistas aloxadas no sitio "
+"web. Tamén pode instalar linguas adicionais desde a interface de "
+"administración do sitio web en calquera momento."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Lingua principal para este sistema. Consulte a documentación de OJS se "
+"necesita utilizar algunha lingua non listada."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"O seu servidor actualmente admite cargas de arquivos cunha medida máxima de: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"O seu servidor actualmente admite cargas de arquivos: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Seleccione UTF-8 para todas as configuracións de conxunto de caracteres para "
+"unha compatibilidade completa con Unicode UTF-8. Esta compatibilidade "
+"actualmente necesita un servidor de base de datos MySQL &gt;= 4.1.1 o "
+"PostgreSQL &gt;= 7.1. Para unha funcionalidade correcta de Unicode, debe ter "
+"PHP &gt;= 4.3.0 compilado con compatibilidade para a biblioteca <a href=\""
+"http://www.php.net/mbstring\" target=\"_blank\">mbstring</a> (habilitada por "
+"defecto na maioría de instalacións PHP recentes). Se o seu servidor non "
+"reúne estes requisitos, pode ter problemas cos conxuntos de caracteres "
+"extensos.<br /><br /> Actualmente, o seu servidor admite mbstring: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>Versión OJS {$version}</h4> <p>Grazas por descargar <strong>Open Journal "
+"Systems</strong> do Public Knowledge Project. Antes de seguir, lea os "
+"arquivos <a href=\"{$baseUrl}/docs/README.md\">README</a> e <a href=\""
+"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> incluídos  neste software. Para "
+"máis información acerca do Public Knowledge Project e os seus proxectos de "
+"software, visite o sitio web <a href=\"http://pkp.sfu.ca/\" target=\"_blank\""
+">de PKP</a>. Se quere enviar informes de erro ou peticións de soporte "
+"técnico sobre o Open Journal Systems, vexa o <a href=\"http://forum.pkp.sfu."
+"ca\" target=\"_blank\">foro de soporte</a> ou visite o <a href=\""
+"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">sistema de "
+"información de erros </a> en liña de PKP. Aínda que o foro de soporte é o "
+"método preferido de contacto, tamén pode enviar un correo electrónico ao "
+"equipo ao enderezo <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p> <p>É moi<strong>importante</strong> que faga "
+"copias de seguridade da súa base de datos, directorio de arquivos e do "
+"directorio de instalación de OJS antes de continuar.</p> <p>Se está "
+"utilizando <a href=\"http://www.php.net/features.safe-mode\" target=\""
+"_blank\">Modo de seguridade de PHP</a>, asegúrese de que a directiva "
+"max_execution_time do seu arquivo de configuración php.ini está ao máximo "
+"nivel. Se se acada este ou otro límite de tempo (p. ex. a directiva \""
+"Timeout\" de Apache) e o proceso de actualización se interrompe, será "
+"necesario intervir manualmente.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Pasos para a preinstalación</h4>\n"
+"\n"
+"\n"
+"<p>1. Os seguintes arquivos e directorios (e os seus contidos) deben ser "
+"editables:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> é editable (opcional): {$writable_config}</li>"
+"\n"
+"\t<li><tt>public/</tt> é editable: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> é editable: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> é editable: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> é editable: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> é editable: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Cómpre crear un directorio editable para almacenar os arquivos "
+"cargados (ver \"Configuración de arquivo\" máis abaixo).</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Hai unha nova versión de OJS dispoñible! Está utilizando a versión de OJS "
+"{$currentVersion}. A versión máis recente é OJS {$latestVersion}. Visite <a "
+"href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">esta páxina</a> para "
+"descargar a versión máis recente e obter as instrucións para a actualización."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>A actualización de OJS para a versión {$version} completouse "
+"correctamente.</p> <p>Non esqueza modificar o parámetro \"instalado\" no seu "
+"arquivo de configuración config.inc.php, cambiándoo a <em>On</em>.</p> <p>Se "
+"aínda non se rexistrou e quere recibir noticias e actualizacións, <strong>"
+"rexístrese en <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\""
+">http://pkp.sfu.ca/ojs/register</a>.</strong> Para calquera pregunta ou "
+"comentario, visite o <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">"
+"foro de soporte</a>.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>A instalación de OJS completouse correctamente.</p>\n"
+"<p>Para comezar a utilizar o sistema, <a href=\"{$loginUrl}\">inicie "
+"sesión</a> co nome de usuario/a e o contrasinal que introduciu na páxina "
+"anterior.</p>\n"
+"<p>Se quere formar parte da comunidade PKP, pode:</p>\n"
+"<ol>\n"
+"\t<li>Ler o <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">blog de PKP "
+"</a> e seguir o <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">"
+"canle de contidos RSS</a> para recibir noticias e actualizacións.</li>\n"
+"\t<li>Visitar o <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">foro de "
+"soporte</a> se ten preguntas ou comentarios.</li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>IMPORTANTE!</h4> <p>O instalador non puido sobrescribir automaticamente "
+"o arquivo de configuración. Antes de intentar utilizar o sistema, abra o "
+"arquivo <tt>config.inc.php</tt> nun editor de textos axeitado e substitúa os "
+"contidos polos datos que aparecen no campo de texto seguinte.</p>"
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} foi asignado/a para o envío de corrección de orixinais "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} rematou a corrección de orixinais final do envío "
+"{$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} concluíu a corrección de orixinais inicial do envío "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Seleccionouse o arquivo de corrección de orixinais por defecto."
+
+msgid "log.copyedit.initiate"
+msgstr "{$copyeditorName} comezou a revisión do envío {$submissionId}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$editorName} rexistrou unha recomendación editorial para o artigo "
+"{$submissionId}: ({$decision})."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$editorName} rexistrou unha decisión do editor/a ({$decision}) para o "
+"artigo {$submissionId}."
+
+msgid "log.review.reviewerFile"
+msgstr "Cargouse un arquivo do revisor/a."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"O editor/a {$userName} cargou un arquivo de revisión para a rolda {$round} "
+"do envío {$submissionId} en nome do revisor/a, {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} aceptou en nome de {$reviewerName} a rolda {$round} de revisión "
+"para o envío {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} rexeitou en nome de {$reviewerName} a rolda {$round} de revisión "
+"para o envío {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} aceptou a rolda {$round} de revisión para o envío "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} rexeitou a rolda {$round} de revisión para o envío "
+"{$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "O envío {$submissionId} volveuse mandar para a súa revisión."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"En nome do revisor/a, {$reviewerName}, o editor/a {$editorName} determinou a "
+"recomendación para a rolda {$round} de revisión do envío {$submissionId}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Definiuse a recomendación para a rolda {$round} de revisión do envío "
+"{$submissionId} por {$reviewerName}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Determinouse a data de vencemento para a rolda {$round} de revisión do envío "
+"{$submissionId} asignada a {$reviewerName}: {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} foi clasificado para a rolda {$round} de revisión do envío "
+"{$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Iniciouse a rolda {$round} de revisión asignada a {$reviewerName} para o "
+"envío {$submissionId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"A {$reviewerName} non se lle asignou a revisión do envío {$submissionId} "
+"para a rolda de revisión {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} revisou o artigo {$submissionId}. O novo identificador do "
+"arquivo é {$fileId}."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Hai unha nova versión de OJS dispoñible! Actualmente está utilizando OJS "
+"{$currentVersion}. A versión máis recente é OJS {$latestVersion}. Contacte "
+"co administrador/a do sitio web ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) para notificarlle a nova "
+"versión. Poderá atopar máis información <a href=\"http://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">aquí</a>."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} foi asignado como responsable da maquetaxe do envío "
+"{$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr "Cargouse unha versión do arquivo do envío corrixida polo autor/a."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr ""
+"Cargouse unha versión do corrector/a de orixinais para o arquivo do envío."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Esperando galeradas."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Asignar un usuario/a para crear galeradas utilizando o enlace \"Engadir\" da "
+"listaxe de participantes."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Enviouse un novo artigo e cómpre asignarlle un editor/a."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Gardáronse os metadatos de publicación do número."
+
+msgid "notification.type.public"
+msgstr "Anuncios públicos"
+
+msgid "notification.type.userComment"
+msgstr "Un lector/a fixo un comentario sobre \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "Eventos relacionados cos envíos"
+
+msgid "notification.type.submissionComment"
+msgstr "Un editor/a fixo un comentario sobre \"{$title}\"."
+
+msgid "notification.type.site"
+msgstr "Eventos do sitio"
+
+msgid "notification.type.reviewing"
+msgstr "Eventos de revisión"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Enviouse a revisión do formulario de avaliación para \"{$title}\"."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Creouse un novo anuncio."
+
+msgid "notification.type.issuePublished"
+msgstr "Publicouse un número."
+
+msgid "notification.type.galleyModified"
+msgstr "Modificouse unha galerada para \"{$title}\"."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Deixouse un comentario relativo á decisión editorial para \"{$title}\"."
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Enviouse un novo artigo: \"{$title}\"."
+
+msgid "notification.type.editing"
+msgstr "Eventos editoriais"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Artigo revisado por pares"
+
+msgid "log.imported"
+msgstr "{$userName} importou o artigo {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} enviou {$submissionId} para a planificación."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} asignou {$proofreaderName} para a corrección de probas do "
+"envío {$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} foi asignado como editor/a do envío {$submissionId}."
+
+msgid "log.editor.restored"
+msgstr "O envío {$submissionId} foi recolocado na fila de espera."
+
+msgid "log.editor.archived"
+msgstr "Arquivouse o envío {$submissionId}."
+
+msgid "log.editor.editorFile"
+msgstr "Cargouse unha versión do editor/a para este arquivo de envío."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} modificou os metadatos deste artigo."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} finalizou a maquetaxe para o envío {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} non foi asignado como responsable da maquetaxe do envío "
+"{$submissionId}."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Solicitude de número non válida!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Intenta acceder a un artigo que non pertence á súa sección."
+
+msgid "user.authorization.noContext"
+msgstr "Non hai revistas neste contexto!"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Acceso denegado! Non foi asignado como corrector/a de orixinais para este "
+"artigo."
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Cancelar a aceptación desta galerada.</p>"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Escolla a maneira de ordenar os artigos nesta categoría."
+
+msgid "catalog.sortBy"
+msgstr "Orde dos artigos"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} farase cargo do proceso de edición do artigo {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Subscricións"
+
+msgid "editor.issues.futureIssues"
+msgstr "Próximos números"
+
+msgid "editor.issues.backIssues"
+msgstr "Números anteriores"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "A ruta proporcionada \"{$journalPath}\" non conduce a ningunha revista."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "A implementación da busca non permite a reindexación por revista."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexando \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Aceptar esta galerada para a publicación.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Aprobación da galerada"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Á espera de aprobación"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Aprobado"
+
+msgid "article.view.interstitial"
+msgstr "Escolla un arquivo para descargar."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Ocultar outras revistas"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Rexistrarse noutras revistas"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Á espera de aprobación."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Este envío está actualmente esperando a aprobación antes de que apareza no "
+"número."
+
+msgid "editor.navigation.issues"
+msgstr "Números"
+
+msgid "grid.action.createContext"
+msgstr "Crear unha nova revista"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Envío do corrector/a de orixinais non válido ou non solicitado!"

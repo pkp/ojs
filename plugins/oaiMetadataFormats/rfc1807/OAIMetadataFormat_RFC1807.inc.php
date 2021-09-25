@@ -16,6 +16,7 @@
  */
 
 use PKP\oai\OAIMetadataFormat;
+use APP\facades\Repo;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
@@ -48,10 +49,11 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Format creators
         $creators = [];
-        $authors = $article->getAuthors();
-        for ($i = 0, $num = count($authors); $i < $num; $i++) {
-            $authorName = $authors[$i]->getFullName(false, true);
-            $affiliation = $authors[$i]->getLocalizedAffiliation();
+        $authors = Repo::author()->getSubmissionAuthors($article);
+        foreach ($authors as $author)
+        {
+            $authorName = $author->getFullName(false, true);
+            $affiliation = $author->getLocalizedAffiliation();
             if (!empty($affiliation)) {
                 $authorName .= '; ' . $affiliation;
             }

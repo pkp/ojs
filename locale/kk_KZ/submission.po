@@ -1,0 +1,254 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-19 20:09+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Мақаланы жариялауға қойылатын барлық талаптар орындалды. Бұл мақаланы "
+"жариялау керек пе?"
+
+msgid "publication.invalidIssue"
+msgstr "Бұл мақаланың қай журнал басылымында жарияланғанын табу мүмкін емес."
+
+msgid "publication.inactiveSection"
+msgstr "\"{$section} \" (мақаланы редакцияға жіберу мүмкіндігі сөндірулі)"
+
+msgid "publication.invalidSection"
+msgstr "Бұл мақаланың жарияланған журнал бөлімін табу мүмкін емес."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Журнал басылымы жарияланған кезде жариялау күні автоматты түрде орнатылады. "
+"Мақала бұрын жарияланған жағдайларды қоспағанда, жариялау күнін өз "
+"бетіңізбен енгізбеңіз."
+
+msgid "publication.changeIssue"
+msgstr "Журнал басылымын өзгерту"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Бұл мақала <a href=\"{$issueUrl}\">«{$issueName}»</a> журнал басылымына "
+"тағайындалды, бірақ мақаланы жариялау әлі жоспарланған жоқ."
+
+msgid "publication.assignToissue"
+msgstr "Журнал басылымына жоспарлау"
+
+msgid "galley.publicationNotFound"
+msgstr "Электрондық жазбаның мақаласы табылған жоқ."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Бұл мақаланың электрондық жазбасын өңдеуге болмайды, себебі жарияланған "
+"мақаланы өзгертуге болмайды."
+
+msgid "catalog.category.heading"
+msgstr "Барлық категориялар"
+
+msgid "catalog.browseTitles"
+msgstr "Атаулар саны: {$numTitles}"
+
+msgid "submission.sectionOptions"
+msgstr "Бөлім параметрлері"
+
+msgid "section.any"
+msgstr "Кез-келген бөлім"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Бұл алдын-ала қарау режимі, мақала әлі жарияланған жоқ. <a href= \"{$url}\"> "
+"Материалды қарау</a>"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Бұл ерекшеліктер Dublin Core метадеректер жиынтығына негізделген. Dublin "
+"Core - журнал мазмұнын сипаттау үшін қолданылатын халықаралық стандарт."
+
+msgid "submission.citationFormat.notFound"
+msgstr ""
+"Библиографиялық сілтемелерді рәсімдеудің сұралған форматын алу мүмкін емес."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Жіберушінің рөлін таңдаңыз."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Сіз енгізген мақала аннотациясы тым үлкен. Оны осы бөлім үшін келісілген "
+"сөздердің санына дейін қысқартыңыз."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Мақаланың аңдатпасын енгізіңіз."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Мақаланың атауын енгізіңіз."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+"Әрбір автор үшін аты-жөнін және электрондық пошта мекенжайын көрсету қажет."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Кем дегенде бір авторды көрсету қажет."
+
+msgid "submission.submit.contributorRole"
+msgstr "Жіберушінің рөлі"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Құпиялылық туралы мәлімдеме"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Сіз мақаланы редакцияға жібермес бұрын, төменде көрсетілген барлық "
+"талаптарды орындағаныңызды тексеріп, растауыңыз керек."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Мақаланы редакцияға жіберудің бақылау тізімі"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Жіберілген материалдың тілін таңдаңыз."
+
+msgid "submission.incomplete"
+msgstr "Мақұлдауды күтуде"
+
+msgid "submission.complete"
+msgstr "Мақұлданды"
+
+msgid "submission.upload.fileContents"
+msgstr "Мақала компоненті"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Материалға арналған метадеректер жаңартылды."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Рецензиға жіберу"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензиялау"
+
+msgid "submission.confirmSubmit"
+msgstr "Сіз бұл мақаланы журналға жібергіңіз келетініне сенімдісіз бе?"
+
+msgid "submission.pageProofs"
+msgstr "Корректура"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Осы материалға қатысты файлдарды жүктеңіз: мақала, медиа, деректер жиынтығы, "
+"өнер туындылары және т. б."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Атауы және аңдатпа"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Бұл жоба электрондық жазбаға қосу үшін мақұлданды."
+
+msgid "grid.action.approveProof"
+msgstr "Бұл жобаны электрондық жазбаға қосу үшін мақұлдаңыз."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Сайт редакторлары жариялауға  дайын файлдарды осы жерге жүктейді. Авторларды "
+"және басқа қолданушыларды электрондық жазбаның корректы етіп тағайындау және "
+"түзетілген файлдарды жүктеу үшін <em>Аудитор тағайындау </em> мүмуіншілігін "
+"пайдаланыңыз."
+
+msgid "submission.galleyFiles"
+msgstr "Электрондық жазба файлдары"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Электрондық жазбаны қол жетімді ету"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr ""
+"<p>Бұл электрондық жазбаны оқырмандарға <em>көрінетіндей етуге</em> "
+"болады.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Бұл электрондық жазбаны оқырмандар <em>көре алмайды</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Пішімді растау"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Жіберілген материалдың ашық идентификаторлары жаңартылды."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr ""
+"\"{$galleyFormatName}\" электрондық жазбасын журнал оқырмандары көре алмайды."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr ""
+"\"{$galleyFormatName}\" электрондық жазбасын барлық журнал оқырмандары көре "
+"алады."
+
+msgid "grid.action.issueEntry"
+msgstr "Бұл материал үшін метадеректерді көрсету"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Журнал басылымында жаңа электрондық жазба енгізілді"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Журнал редакциясы сіз жіберген материал туралы хабарланды, жазбаны растау "
+"хабарламасы сіздің электрондық поштаңызға жіберілді. Редактор сіздің "
+"материалыңызды қабылдағаннан кейін сізге кейін хабарласады."
+
+msgid "submission.issueEntry"
+msgstr "Метадеректер"
+
+msgid "submission.submit.noContext"
+msgstr "Бұл материалдың қай журналға тиесілі екенін табу мүмкін емес."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Аңдатпаның сөз саны {$wordCount} аспауы тиіс."
+
+msgid "grid.action.workflow"
+msgstr "Жіберу процессі"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Жаңа материал"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Жаңа материалды жіберуді бастаңыз"
+
+msgid "submission.title.tip"
+msgstr ""
+"Материал сурет, мәтін, бағдарламалық жасақтама немесе өзге де мультимедиялық "
+"типте болуы мүмкін. Сәйкес келетін материалдың типін таңдауыңызды сұраймыз. "
+"Ұқсас мысалдарды келесі сілтемеге өтіп қарай аласыз <a target=\"_blank\" "
+"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#"
+"type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Мақаланың атауы"
+
+msgid "submission.upload.selectComponent"
+msgstr "Мақала компонентін таңдаңыз"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Мақаланы жіберуде қандай рөл атқаратыныңызды көрсетіңіз."
+
+msgid "submission.submit.userGroup"
+msgstr "Менің топтғы рөлімді ескере отырып жіберу."
+
+msgid "submission.submit.title"
+msgstr "Мақаланы редакцияға жіберу"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Жариялауға қойылатын барлық талаптар орындалды. Материал дәл қазір \"{$issue}"
+" \" басылымында жарияланады. Жалғастыру керек пе?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Мақаланы жариялауға қойылатын барлық талаптар орындалды. Мақала \"{$issue}\" "
+"басылымның бірге жарияланады. Сіз бұл мақаланы жариялауға жоспарлау керек пе?"

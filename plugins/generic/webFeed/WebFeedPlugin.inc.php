@@ -14,6 +14,7 @@
  */
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
@@ -93,8 +94,7 @@ class WebFeedPlugin extends GenericPlugin
         if (is_null($currentJournal)) {
             return;
         }
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-        $currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
+        $currentIssue = Repo::issue()->getCurrent($currentJournal->getId(), true);
 
         if (!$currentIssue) {
             return;

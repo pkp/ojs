@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2021-03-05 06:30+0000\n"
+"PO-Revision-Date: 2021-08-06 16:04+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ca_ES/>\n"
@@ -273,7 +274,7 @@ msgid "submission.authorVersion"
 msgstr "Versió de l’autor/a"
 
 msgid "submission.copyediting"
-msgstr "Correcció"
+msgstr "Edició"
 
 msgid "submission.copyedit"
 msgstr "Correcció d'originals"
@@ -2084,3 +2085,6 @@ msgstr "No exigit"
 
 msgid "payment.unpaid"
 msgstr "No pagat"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Aquesta revista no publica el seu contingut en línia."

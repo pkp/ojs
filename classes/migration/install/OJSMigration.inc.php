@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/OJSMigration.inc.php
+ * @file classes/migration/install/OJSMigration.inc.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -11,19 +11,18 @@
  * @brief Describe database table structures.
  */
 
-namespace APP\migration;
+namespace APP\migration\install;
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class OJSMigration extends Migration
+class OJSMigration extends \PKP\migration\Migration
 {
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         // Journals and basic journal settings.
         Schema::create('journals', function (Blueprint $table) {
@@ -33,6 +32,7 @@ class OJSMigration extends Migration
             $table->string('primary_locale', 14);
             $table->smallInteger('enabled')->default(1)->comment('Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)');
             $table->unique(['path'], 'journals_path');
+            $table->bigInteger('current_issue_id')->nullable()->default(null);
         });
 
         // Journal settings.
@@ -82,7 +82,6 @@ class OJSMigration extends Migration
             $table->string('number', 40)->nullable();
             $table->smallInteger('year')->nullable();
             $table->smallInteger('published')->default(0);
-            $table->smallInteger('current')->default(0);
             $table->datetime('date_published')->nullable();
             $table->datetime('date_notified')->nullable();
             $table->datetime('last_modified')->nullable();
@@ -105,7 +104,7 @@ class OJSMigration extends Migration
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
             $table->text('setting_value')->nullable();
-            $table->string('setting_type', 6);
+            $table->string('setting_type', 6)->nullable();
             $table->index(['issue_id'], 'issue_settings_issue_id');
             $table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_pkey');
         });
@@ -166,20 +165,6 @@ class OJSMigration extends Migration
             $table->bigInteger('section_id');
             $table->float('seq', 8, 2)->default(0);
             $table->unique(['issue_id', 'section_id'], 'custom_section_orders_pkey');
-        });
-
-        // Archived, removed from TOC, unscheduled or unpublished journal articles.
-        Schema::create('submission_tombstones', function (Blueprint $table) {
-            $table->bigInteger('tombstone_id')->autoIncrement();
-            $table->bigInteger('submission_id');
-            $table->datetime('date_deleted');
-            $table->bigInteger('journal_id');
-            $table->bigInteger('section_id');
-            $table->string('set_spec', 255);
-            $table->string('set_name', 255);
-            $table->string('oai_identifier', 255);
-            $table->index(['journal_id'], 'submission_tombstones_journal_id');
-            $table->index(['submission_id'], 'submission_tombstones_submission_id');
         });
 
         // Publications
@@ -316,12 +301,17 @@ class OJSMigration extends Migration
             $table->string('currency_code_alpha', 3)->nullable();
             $table->string('payment_method_plugin_name', 80)->nullable();
         });
+
+        // Add additional foreign key constraints once all tables have been created
+        Schema::table('journals', function (Blueprint $table) {
+            $table->foreign('current_issue_id')->references('issue_id')->on('issues');
+        });
     }
 
     /**
      * Reverse the migration.
      */
-    public function down()
+    public function down(): void
     {
         Schema::drop('completed_payments');
         Schema::drop('queued_payments');
@@ -333,7 +323,6 @@ class OJSMigration extends Migration
         Schema::drop('publication_galley_settings');
         Schema::drop('publication_galleys');
         Schema::drop('publications');
-        Schema::drop('submission_tombstones');
         Schema::drop('custom_section_orders');
         Schema::drop('custom_issue_orders');
         Schema::drop('issue_files');
@@ -346,8 +335,4 @@ class OJSMigration extends Migration
         Schema::drop('journal_settings');
         Schema::drop('journals');
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\migration\OJSMigration', '\OJSMigration');
 }

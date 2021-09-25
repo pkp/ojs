@@ -13,6 +13,7 @@
  * @brief Class that converts a Article to a PubMed XML document.
  */
 
+use APP\facades\Repo;
 use APP\workflow\EditorDecisionActionsManager;
 
 use PKP\filter\PersistableFilter;
@@ -63,7 +64,6 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
 
-        $issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
         $journal = null;
 
@@ -73,7 +73,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             if (!$journal || $journal->getId() != $submission->getContextId()) {
                 $journal = $journalDao->getById($submission->getContextId());
             }
-            $issue = $issueDao->getBySubmissionId($submission->getId(), $journal->getId());
+            $issue = Repo::issue()->getBySubmissionId($submission->getId());
+            $issue = $issue->getJournalId() == $journal->getId() ? $issue : null;
 
             $articleNode = $doc->createElement('Article');
             $articleNode->appendChild($this->createJournalNode($doc, $journal, $issue, $submission));

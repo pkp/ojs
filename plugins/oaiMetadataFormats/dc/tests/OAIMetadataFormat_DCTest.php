@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @defgroup plugins_oaiMetadataFormats_dc_tests Dublin Core OAI Plugin
  */
@@ -24,6 +23,7 @@ require_mock_env('env2');
 import('lib.pkp.tests.PKPTestCase');
 
 use PKP\oai\OAIRecord;
+use Illuminate\Support\Facades\App;
 
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormat_DC');
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormatPlugin_DC');
@@ -37,7 +37,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
      */
     protected function getMockedDAOs()
     {
-        return ['AuthorDAO', 'OAIDAO', 'ArticleGalleyDAO'];
+        return ['OAIDAO', 'ArticleGalleyDAO'];
     }
 
     /**
@@ -69,7 +69,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableRepresentationyDoi', 1);
 
         // Author
-        import('classes.article.Author');
         $author = new Author();
         $author->setGivenName('author-firstname', 'en_US');
         $author->setFamilyName('author-lastname', 'en_US');
@@ -166,7 +165,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         // Create mock DAOs
         //
 
-        // Create a mocked AuthorDAO that returns our test author.
+        // FIXME getBySubmissionId should use the publication id now.
         import('classes.article.AuthorDAO');
         $authorDao = $this->getMockBuilder(AuthorDAO::class)
             ->setMethods(['getBySubmissionId'])
@@ -272,5 +271,13 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
     public function routerUrl($request, $newContext = null, $handler = null, $op = null, $path = null)
     {
         return $handler . '-' . $op . '-' . implode('-', $path);
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        // See: http://docs.mockery.io/en/latest/reference/phpunit_integration.html
+        \Mockery::close();
     }
 }

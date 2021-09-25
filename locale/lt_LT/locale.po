@@ -1,0 +1,261 @@
+# Gintautas <gintautas@charivari.lt>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-06-29 07:43+0000\n"
+"Last-Translator: Gintautas <gintautas@charivari.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.backIssues"
+msgstr "Ankstesni"
+
+msgid "search.browseAuthorIndex"
+msgstr "Autorių sąrašas"
+
+msgid "navigation.current"
+msgstr "Einamasis"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Žurnalo titulinis paveikslėlis"
+
+msgid "common.payments"
+msgstr "Apmokėjimai"
+
+msgid "common.payment"
+msgstr "Apmokėjimas"
+
+msgid "context.select"
+msgstr "Perjungti į kitą žurnalą:"
+
+msgid "context.current"
+msgstr ""
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr ""
+
+msgid "navigation.browseByIssue"
+msgstr "Pagal numerį"
+
+msgid "navigation.journalHelp"
+msgstr "Žurnalo pagalba"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Užpildykite būtinus laukus."
+
+msgid "subscriptionTypes.months"
+msgstr "mėnesiai"
+
+msgid "subscriptionTypes.month"
+msgstr "mėnuo"
+
+msgid "subscriptionTypes.years"
+msgstr "metai"
+
+msgid "subscriptionTypes.year"
+msgstr "metai"
+
+msgid "subscriptionTypes.currency"
+msgstr "Valiuta"
+
+msgid "issue.viewIssue"
+msgstr "Peržiūrėti numerį"
+
+msgid "issue.nonpdf.title"
+msgstr "Atsisiųsti numerį"
+
+msgid "issue.fullIssue"
+msgstr "Visas numeris"
+
+msgid "issue.coverPage.altText"
+msgstr "Viršelis"
+
+msgid "issue.abstract"
+msgstr "Santrauka"
+
+msgid "issue.year"
+msgstr "Metai"
+
+msgid "issue.no"
+msgstr "Nr."
+
+msgid "issue.number"
+msgstr "Numeris"
+
+msgid "issue.title"
+msgstr "Antraštė"
+
+msgid "issue.issue"
+msgstr "Numeris"
+
+msgid "user.myJournals"
+msgstr "Mano žurnalai"
+
+msgid "user.register.otherContextRoles"
+msgstr "Pasirinkite pageidaujamus vaidmenis žurnale."
+
+msgid "user.register.contextsPrompt"
+msgstr "Kuriuose žurnaluose norėtumėte užsiregistruoti?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "Taip, aš norėčiau būti šio žurnalo recenzentu."
+
+msgid "user.showAllJournals"
+msgstr "Rodyti mano žurnalus"
+
+msgid "user.profile.profileImage"
+msgstr "Profilio nuotrauka"
+
+msgid "journal.viewAllIssues"
+msgstr "Peržiūrėti visus numerius"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Žurnalas"
+
+msgid "context.contexts"
+msgstr "Žurnalai"
+
+msgid "journal.currentIssue"
+msgstr "Naujausias numeris"
+
+msgid "submissions.published"
+msgstr "Publikuota"
+
+msgid "submissions.queuedReview"
+msgstr "Recenzuojama"
+
+msgid "submissions.step3"
+msgstr "Žingsnis 3"
+
+msgid "submissions.step1"
+msgstr "Žingsnis 1"
+
+msgid "submission.notifyEditor"
+msgstr "Informuoti redaktorių"
+
+msgid "submission.notifyAuthor"
+msgstr "Informuoti autorių"
+
+msgid "submission.round"
+msgstr "Etapas&nbsp;{$round}"
+
+msgid "submission.sent"
+msgstr "Išsiųsta"
+
+msgid "submission.changeSection"
+msgstr "Keisti"
+
+msgid "submission.submissionEditing"
+msgstr "Pateikties redagavimas"
+
+msgid "category.category"
+msgstr "Kategorijos"
+
+msgid "article.abstract"
+msgstr "Santrauka"
+
+msgid "article.submissions"
+msgstr "Pateiktys"
+
+msgid "article.submission"
+msgstr "Pateiktis"
+
+msgid "article.commentsToEditor"
+msgstr "Autoriaus komentarai"
+
+msgid "article.subject"
+msgstr "Reikšminiai žodžiai"
+
+msgid "article.file"
+msgstr "Failas"
+
+msgid "article.metadata"
+msgstr "Metaduomenys"
+
+msgid "article.authors"
+msgstr "Autoriai"
+
+msgid "article.title"
+msgstr "Antraštė"
+
+msgid "article.submissionId"
+msgstr "Pateikties ID"
+
+msgid "common.publications"
+msgstr "Straipsniai"
+
+msgid "common.publication"
+msgstr "Straipsnis"
+
+msgid "article.articles"
+msgstr "Straipsniai"
+
+msgid "article.article"
+msgstr "Straipsnis"
+
+msgid "section.policy"
+msgstr "Skyriaus politika"
+
+msgid "section.abbreviation.example"
+msgstr "(Pavyzdžiui, Straipsniai=STR)"
+
+msgid "section.abbreviation"
+msgstr "Abreviatūra"
+
+msgid "section.title"
+msgstr "Skyriaus antraštė"
+
+msgid "section.sections"
+msgstr "Skyriai"
+
+msgid "section.section"
+msgstr "Skyrius"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Priskirti redaktoriai"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archyvai"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archyvai"
+
+msgid "navigation.browseByAuthor"
+msgstr "Pagal autorių"
+
+msgid "navigation.otherJournals"
+msgstr "Kiti žurnalai"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Redaguojama"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informacija bibliotekininkams"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informacija autoriams"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Bibliotekininkams"
+
+msgid "navigation.infoForAuthors"
+msgstr "Autoriams"
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "navigation.categories.browse"
+msgstr "Naršyti"
+
+msgid "navigation.categories"
+msgstr "Kategorijos"
