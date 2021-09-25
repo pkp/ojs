@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-24 20:23+0000\n"
+"PO-Revision-Date: 2021-09-25 20:42+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/bg/>\n"
@@ -1162,3 +1162,995 @@ msgstr "Архивиране на списанието"
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Абревиатура на списанието"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" — \"{$issueIdentification}\""
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Име на уебсайта, когато се хоства повече от едно списание"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Валутата на сумата на плащането,  например USD"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Сумата на плащането"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Името на вида плащане"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Имейл адресът на основния контакт на списанието"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Имейл подпис на списанието за автоматизирани имейли"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Име на основния контакт на списанието"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL адресът на началната страница на списанието"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Име на списанието"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Процесът не успя да анализира и прикачи типографиите за издаване"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Резултати експорта на броеве"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"За това списание не е дефиниран основен контакт. Можете да въведете основен "
+"контакт в <a href=\"{$url}\"> настройките на списанието </a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Изпратете копие от имейла за потвърждение на изпращането на материали до "
+"основния контакт на това списание."
+
+msgid "stats.publications.galleys"
+msgstr "Файлове"
+
+msgid "stats.publications.abstracts"
+msgstr "Резюмета"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} от {$total} статии"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Общо прегледи на файлове по дата"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Общо прегледи на резюмета по дата"
+
+msgid "stats.publications.none"
+msgstr ""
+"Не бяха намерени статии със статистически данни за употребата, съответстващи "
+"на тези параметри."
+
+msgid "stats.publications.details"
+msgstr "Детайли за статия"
+
+msgid "stats.publicationStats"
+msgstr "Статистика по статии"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Изпратете копие на основния контакт, посочен в настройките на списанието."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Посочените обекти не могат да бъдат намерени."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Префиксът DOI липсва за списанието с път {$path}."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Валидирането не бе успешно."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Валидирането е успешно!"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Успешна регистрация!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Регистрацията не беше успешна! Сървърът за регистрация на DOI върна грешка: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Входният файл {$param} не може да се чете."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Изходният файл {$param} не може да се записва."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Невалиден XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Избраните обекти не можаха да бъдат преобразувани."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Не са избрани обекти."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Проверете XML преди експортирането и регистрацията."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Регистриране"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Маркирай като регистриран"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Експорт"
+
+msgid "plugins.importexport.common.action"
+msgstr "Действие"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Регистриран"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Маркиран като регистриран"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Не е депозиран"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Произволен статус"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Произволен брой"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Моля, обърнете внимание, че паролата ще бъде запазена като обикновен текст, "
+"т.е. не е криптирана."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Парола"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Не са избрани обекти за публикуване за присвояване на DOI в плъгинът за "
+"публичен идентификатор на DOI, така че няма възможност за депозиране или "
+"експортиране в този плъгин."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Плъгинът не е напълно настроен."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"За да използвате този плъгин, моля, отидете в категорията „Public Identifier“"
+" плъгин, активирайте и конфигурирайте приставката DOI и посочете там валиден "
+"DOI префикс."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Изискванията към плъгина не са изпълнени"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Типографии"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Броеве"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Статии"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Настройки да DOI модула/плъгина"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Настройки"
+
+msgid "grid.genres.description"
+msgstr ""
+"Тези компоненти се използват за имена на файлове и са представени в падащо "
+"меню за качване на файлове. Определените жанрове ## позволяват на "
+"потребителя да свърже файла или с цялото представяне 99Z, или с определен "
+"компонент по номер (например 02)."
+
+msgid "grid.genres.title"
+msgstr "Компоненти на статията"
+
+msgid "grid.genres.title.short"
+msgstr "Компоненти"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Разрешенията за статии бяха успешно нулирани."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Премахнете декларацията за авторски права и информацията за лиценза за всяка "
+"публикувана статия, като ги върнете към текущите настройки на списанието по "
+"подразбиране. Това ще премахне завинаги цялата предишна информация за "
+"авторски права и лицензиране, приложена към статиите. В някои случаи може да "
+"нямате законово разрешение да прелицензирате работа, публикувана под друг "
+"лиценз. Моля, бъдете внимателни, когато използвате този инструмент и се "
+"консултирайте с юридически експерти, ако не сте сигурни какви права имате "
+"върху статиите, публикувани във вашето списание."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Наистина ли искате да нулирате данните за разрешенията за всички статии? "
+"Това действие не може да бъде отменено."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Нулиране на разрешенията за статии"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"Брой: Годината по подразбиране ще бъде изтеглена от датата на публикуване на "
+"изданието."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Статия: Годината по подразбиране ще бъде изтеглена от датата на публикуване "
+"на статията, както е посочено в „публикуване в крачка“."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Базирайте годината на авторското право на новата статия на"
+
+msgid "manager.publication.library"
+msgstr "Библиотека на издателите"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Ролите са групи от потребители в списанието, на които се предоставя достъп "
+"до различни нива на разрешения и свързани работни процеси в списанието. Има "
+"пет различни нива на разрешения: Мениджърите на списания имат достъп до "
+"всичко в дневника (цялото съдържание и настройките); Редакторите на секции/"
+"раздели имат пълен достъп до цялото зададено съдържание; Асистентите на "
+"списанието имат ограничен достъп до всички материали, които са им изрично "
+"възложени от редактор; Рецензентите могат да видят и обработват "
+"представените им изпратени материали, които са им възложени за рецензия; и "
+"Авторите могат да виждат и взаимодействат с ограничено количество информация "
+"за собствените си изпратени материали. Освен това има пет различни сценични "
+"задания, до които ролите могат да получат достъп: Подаване на материла, "
+"Вътрешен преглед, Рецензиране, Редакционен процес и Производствен процес."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Статиите в публикуваните издания на списание са организирани в раздели, "
+"обикновено по тема или тип съдържание (напр. Рецензирани статии, изследвания "
+"и т.н.)."
+
+msgid "grid.action.addSection"
+msgstr "Добави раздел"
+
+msgid "grid.category.path"
+msgstr "Път"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Изберете най-подходящите категории от изброените по-горе набори. Читателите "
+"ще могат да разглеждат по категории от пълния набор от списания."
+
+msgid "manager.setup.categories"
+msgstr "Категории"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Тази връзка ще се показва само когато посетител е влязъл в системата."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Връзка към страница, описваща текущите и минали абонаменти на посетителя."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Връзка към страница, описваща абонаментите, които предлагате."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Типът на абонамента е създаден успешно."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Не са създадени типове абонаменти."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Тип абонамент"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Изисква се име на тип абонамент."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Тип абонамент с това име вече съществува."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Име на типа"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Запишете и създайте друг"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Моля, използвайте предоставеното квадратче за отметка."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Не правете този тип абонамент публично достъпен или видим на уебсайта."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Опции"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Моля, използвайте предоставеното квадратче за отметка."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Абонаментите изискват информация за членство (например за асоциация, "
+"организация, консорциум и др.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Моля, използвайте предоставените опции."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Институционален (потребителите се потвърждават чрез домейн или IP адрес)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Индивидуално (потребителите се потвърждават чрез вход в системата)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Абонаменти"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Моля, изберете валиден формат на типа абонамент."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Изисква се формат на тип абонамент."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Формат"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Изисква се отбелязана продължителност."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Продължителността трябва да бъде положителна, цифрова стойност."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Броят месеци, в които абонаментът продължава (напр. 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Времетраене"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Моля, използвайте предоставените опции."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Никога не изтича"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "месеци (напр. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Изтича след"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Описание"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Моля, изберете валидна валута."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Изисква се валута."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Валута"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Изисква се цена."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Цената трябва да бъде положителна, цифрова стойност."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Въведете числова стойност (напр. 40 или 40,00) без символ (напр. $)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Цена"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Редактиране"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Редактиране на типа абонамент"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Времетраене"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Създай"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Създайте нов тип абонамент"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Институционален"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Индивидуален"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Абонаменти"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Цена"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Внимание! Всички абонаменти с този тип абонамент също ще бъдат изтрити. "
+"Наистина ли искате да продължите и да изтриете този тип абонамент?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Видове/типове абонаменти"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Име на институция"
+
+msgid "manager.subscriptions.contact"
+msgstr "Име за контакт"
+
+msgid "manager.subscriptions.user"
+msgstr "Потребител"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Тип абонамент"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Абонаментът е създаден успешно."
+
+msgid "manager.subscriptions.select"
+msgstr "Изберете"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Привилегиите за достъп до абонамент автоматично се предоставят на "
+"мениджърите на списанието, редакторите, редакторите на секции, редакторите "
+"на оформления, техническите редактори и коректорите."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Изберете потребител"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Изберете контакт за абонамент"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Няма абонаменти"
+
+msgid "manager.subscriptions.notes"
+msgstr "Бележки"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Номер за справка (референтен номер)"
+
+msgid "manager.subscriptions.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP диапазон"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Трябва да се създаде тип абонамент, преди да могат да се правят нови "
+"абонаменти."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Този потребител вече има абонамент за това списание."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"За да изпратите на потребителя имейл с известие, името за контакт за "
+"абонамент и имейл адресът трябва да бъдат посочени в настройката на "
+"списанието."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Запишете и създайте друг"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Добави"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Изтрий"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Моля, въведете валиден IP диапазон."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ако IP диапазоните са въведени тук, домейнът не е задължителен. <br /> "
+"Валидните стойности включват IP адрес (напр. 142.58.103.1), IP диапазон ("
+"напр. 142.58.103.1 - 142.58.103.4), IP диапазон с заместващ знак '*' ( "
+"например 142.58.*.*) и IP диапазон с CIDR (напр. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP диапазони"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Моля, въведете валиден домейн."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Избраният тип абонамент изисква домейн и/или IP диапазон за удостоверяване "
+"на абонамента."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Ако тук е въведен домейн, IP диапазоните не са задължителни. <br /> "
+"Валидните стойности са имена на домейни (напр. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Пощенски адрес"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Изисква се име на институция."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Име на институция/организация"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Домейн"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Бележки"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Избраният тип абонамент изисква информация за членство."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Въведете информация за членство, ако типът на абонамента изисква абонатите "
+"да принадлежат към асоциация или организация."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Номер за справка (референтен номер)"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Моля, използвайте предоставеното квадратче за отметка."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Изпратете на потребителя имейл с неговото потребителско име и данни за "
+"абонамента."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Моля, изберете валидна държава."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Моля, изберете валиден потребител."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Изисква се потребител."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Контакт"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Потребител"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Забележка: Всички промени по-долу са в профила на потребителя в цялата "
+"система."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Моля, изберете валидна крайна дата на абонамента."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Това е непрекъснат (неизтичащ) тип абонамент; моля не посочвайте начална "
+"дата."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Това е непрекъснат (неизтичащ) тип абонамент; моля не посочвайте крайна дата."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Изисква се крайна дата на абонамента."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Крайна дата"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Моля, изберете валидна начална дата на абонамента."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Изисква се начална дата на абонамента."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Начална дата"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Моля, изберете валиден тип абонамент."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Изисква се тип абонамент."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Тип абонамент"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Моля, изберете валиден статус на абонамента."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Изисква се статус на абонамент."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Статус"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Всички"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Със статус"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Редактиране"
+
+msgid "manager.subscriptions.edit"
+msgstr "Редактиране на абонамент"
+
+msgid "manager.subscriptions.domain"
+msgstr "Домейн"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Начална дата"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Начало"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Крайна дата"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Край"
+
+msgid "manager.subscriptions.renew"
+msgstr "Поднови"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Създай"
+
+msgid "manager.subscriptions.create"
+msgstr "Създайте нов абонамент"
+
+msgid "manager.subscriptions.summary"
+msgstr "Резюме на абонаментите"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Наистина ли искате да изтриете този абонамент?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Наистина ли искате да подновите този абонамент?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Институционални абонаменти"
+
+msgid "manager.individualSubscriptions"
+msgstr "Индивидуални абонаменти"
+
+msgid "manager.subscriptions"
+msgstr "Абонаменти"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Моля, въведете валиден имейл."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Тези данни за контакт ще бъдат посочени на страницата за абонамент за "
+"клиенти с въпроси, свързани с абонаменти."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Мениджър на абонаментите"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Видовете абонаменти и структурата на таксите ще бъдат показани на страницата "
+"за абонаменти, заедно с името и информацията за контакт за Мениджъра на "
+"абонаменти. Тук може да се добави допълнителна информация за абонаменти, "
+"като начини на плащане или поддръжка за абонати в развиващите се страни."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Информация за абонамента"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Абонаментните списания могат да осигурят „забавен отворен достъп“ до тяхното "
+"публикувано съдържание, както и да позволят „автоархивиране на автора“ (и "
+"двете увеличават читателската аудитория и цитирането на съдържанието)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Опции за отворен достъп за абонаментни списания"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Забележка:</strong> За да активирате тези опции, мениджърът на "
+"списанието трябва да активира модула за онлайн плащания, включително онлайн "
+"плащания за абонаменти, в раздел Такси за четене."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Забележка:</strong> Институционалните абонаменти, закупени онлайн, "
+"изискват одобрение на предоставения домейн и IP диапазони и активиране на "
+"абонамента от Мениджъра на абонаменти."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Уведомете мениджъра на абонаменти по имейл при онлайн подновяване на "
+"институционален абонамент."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Уведомете мениджъра на абонаменти по имейл при онлайн подновяване на "
+"индивидуален абонамент."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Уведомете мениджъра на абонаменти по имейл при онлайн покупка на "
+"институционален абонамент (препоръчително)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Уведомете мениджъра на абонаменти по имейл при онлайн покупка на "
+"индивидуален абонамент."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Автоматичните известия по имейл (достъпни за редактиране от мениджърите на "
+"списания в имейлите на OJS) могат да бъдат изпращани до мениджъра на "
+"абонаменти след приключване на абонаментните онлайн плащания."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Известия за онлайн плащане"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Забележка:</strong> За да активира тази опция, администраторът на "
+"сайта трябва да активира опцията <tt>scheduled_tasks</tt> в конфигурационния "
+"файл на OJS. Може да се наложи допълнителна конфигурация на сървъра, за да "
+"поддържа тази функция (което може да не е възможно на всички сървъри), както "
+"е посочено в документацията на OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Регистрираните читатели ще имат възможност да получат съдържанието по имейл, "
+"когато броят на списанието стане с отворен достъп."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Моля, изберете валидна стойност за броя седмици преди изтичане на абонамента."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Моля, изберете валидна стойност за броя седмици след изтичане на абонамента."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Моля, изберете валидна стойност за броя месеци преди изтичане на абонамента."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Моля, изберете валидна стойност за броя месеци след изтичане на абонамента."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML може да се използва в текстово поле (за размер на шрифта, цвят и т.н.), "
+"като „връщанията“ се третират като <tt>&lt;br&gt;</tt>; HTML редакторът "
+"работи с браузъри Firefox."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Изберете едно от следните:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Забележка:</strong> За да активира тези опции, администраторът на "
+"сайта трябва да активира опцията <tt>scheduled_tasks</tt> в конфигурационния "
+"файл на OJS. Може да се наложи допълнителна конфигурация на сървъра, за да "
+"поддържа тази функция (което може да не е възможно на всички сървъри), както "
+"е посочено в документацията на OJS."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Автоматичните напомняния по имейл (достъпни за редактиране от мениджърите на "
+"списания в имейлите на OJS) могат да се изпращат до абонати както преди, "
+"така и след изтичане на абонамента."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Напомняния за изтичане на абонамент"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Уведомете абонатите по имейл преди изтичане на абонамента (седмици)."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Уведомете абонатите по имейл преди изтичане на абонамента (месеци)."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Уведомете абонатите по имейл след изтичане на абонамента (седмици)."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Уведомете абонатите по имейл след изтичане на абонамента (месеци)"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} седмици"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} месеци"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"На читателите е отказан достъп до наскоро публикувано абонаментно "
+"съдържание, но запазват достъпа си до съдържанието на абонамента, "
+"публикувано преди датата на изтичане на абонамента."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Частично изтичане на абонамента"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"На читателите е отказан достъп до цялото съдържание на абонамента след "
+"изтичане на срока на абонамента."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Цялостно изтичане на абонамента"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"След изтичане на абонамента на читателите може да бъде отказан достъп до "
+"цялото съдържание на абонамента или да продължат да имат достъп до "
+"съдържанието на абонамента, публикувано преди датата на изтичане на "
+"абонамента."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Изтичане на абонамента"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Моля, използвайте предоставеното квадратче за отметка."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Отложен отворен достъп"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Правила за абонамент"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Филтриране на резултати по тип обект (списание, брой, статия, типове файлове)"
+" и/или по един или повече идентификатори на обекти."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Филтриране на резултати по контекст (броеве и/или статия)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Прегледи на таблицата със съдържанието на списанието"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Показвания на главната страница на списанието"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Прегледи на резюмета на статии и сваляния"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Прегледи на резюмета на статии"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Файлове на статията за сваляне"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Абонаменти"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Изберете разделите за изчисляване на рецензирана статистика на това списание."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Брой рецензии"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Оценка на редактора"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Рецензенти"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Брой материали с асоциирани рецензенти"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Регистрирани читатели"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Рецензирани"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Общо изпратени материали"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Публикувани броеве"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Забележка: Процентите за изпратените за рецензиране материали може да не "
+"достигнат до 100%, тъй като повторно изпратените елементи се приемат, "
+"отхвърлят или все още са в процес на обработка."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Проверете елементите, които ще бъдат достъпни за читателите в страницата „За "
+"списанието“."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Публикувани материали"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS изчислява следната статистика за всяко списание. „Дните за рецензиране“ "
+"се изчисляват от датата на подаване (или определяне на версията за рецензия) "
+"до първоначалното решение на редактора, докато „Дните до публикуване“ се "
+"измерват за приетите материали от първоначалното им качване до публикацията."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Дни до публикуване"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Дни за рецензиране"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Повторно изпращане"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Отказано"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Прието"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Брой прегледи на статии (само за автори)"
+
+msgid "manager.statistics.statistics"
+msgstr "Статистики за списанието"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tВашето списание е конфигурирано да записва повече от един показател за "
+"използване. Статистическите данни за употребата ще се показват в няколко "
+"контекста.\n"
+"\t\tИма случаи, когато трябва да се използва единна статистика за употреба, "
+"напр. за показване на подреден списък на най-използваните статии или за "
+"класиране\n"
+"\t\tна резултати от търсенето. Моля, изберете един от конфигурираните "
+"показатели по подразбиране.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Текст на заглавието"
+
+msgid "manager.setup.userRegistration"
+msgstr "Регистрация на потребители"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Текст към изображението"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Миниатюра (икона)"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Списанието ще използва редакционен/рецензионен съвет."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Статиите и броевете могат да бъдат маркирани с идентификационен номер или "
+"низ, като се използва система за регистрация като системата за идентификация "
+"на цифрови обекти (DOI, Digital Object Identifier System)."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Уникален идентификатор"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Дайте примери за подходящи видове изследвания, методи и подходи за тази "
+"област"
