@@ -106,7 +106,8 @@ class ArticleGalleyForm extends Form
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
-                $articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
+                //TODO remove $articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
+                $articleGalley = Application::get()->getRepresentationDAO()->getById($this->_publication->getId());
                 if ($articleGalley &&
                     (!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
                 ) {
