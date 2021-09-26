@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2021-07-14 06:03+0000\n"
+"PO-Revision-Date: 2021-09-27 05:55+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "id_ID/>\n"
@@ -1841,3 +1841,30 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Pilih negara di mana jurnal berada, atau negara alamat korespondensi jurnal "
 "atau penerbit."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nama website bila terdapat lebih dari satu jurnal yang dikelola"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Mata uang pembayaran, misalnya Rupiah"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Jumlah pembayaran"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Nama jenis pembayaran"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Alamat email narahubung utama jurnal"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Tanta tanfan email jurnal untuk email otomatis"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Nama narahubung utama jurnal"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL yang mengarak ke halaman beranda jurnal"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Nama Jurnal"
