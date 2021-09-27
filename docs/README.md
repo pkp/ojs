@@ -28,7 +28,7 @@ improvements or bug fixes to the software.
 
 Recommended server requirements:
 
-* PHP >= 7.3
+* PHP >= 7.3 (with php-mbstring and php-xml support [1])
 * MySQL >= 4.1 or PostgreSQL >= 9.5
 * Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 * Operating system: Any OS that supports the above software, including
@@ -169,6 +169,10 @@ interpreter installed on your server.
 
 
 ## Third-party Libraries
+
+* In non debian stacks, additional libraries and php modules could be required and need to be
+	manually installed. For a detailed list, check the docker release of your version:
+	[1]: https://github.com/pkp/docker-ojs/blob/main/versions/3_3_0-8/alpine/apache/php73/Dockerfile#L27
 
 * See [lib/pkp/lib/libraries.txt](../lib/pkp/lib/libraries.txt) for a list of third-party libraries
 	used by OJS.
