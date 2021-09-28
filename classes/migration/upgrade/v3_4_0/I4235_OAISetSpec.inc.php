@@ -24,7 +24,7 @@ class I4235_OAISetSpec extends \PKP\migration\Migration
     {
         // pkp/pkp-lib/issues/4235 Improve OAI-PMH set spec compliance
         // Convert stored setSpec strings to valid format
-        $setSpecs = DB::table('data_object_tombstones')->select('set_spec')->get()->toArray();
+        $setSpecs = DB::table('data_object_tombstones')->select('set_spec')->distinct()->get()->toArray();
         foreach ($setSpecs as $row) {
             $a = preg_split('/:/', $row->set_spec);
             if (count($a) == 2) {
