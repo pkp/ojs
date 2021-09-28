@@ -21,6 +21,7 @@ use APP\facades\Repo;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
 use PKP\oai\OAISet;
+use PKP\oai\OAIUtils;
 use PKP\oai\PKPOAIDAO;
 use PKP\plugins\HookRegistry;
 
@@ -129,18 +130,18 @@ class OAIDAO extends PKPOAIDAO
         $sets = [];
         foreach ($journals as $journal) {
             $title = $journal->getLocalizedName();
-            $abbrev = $journal->getPath();
-            array_push($sets, new OAISet(urlencode($abbrev), $title, ''));
+            array_push($sets, new OAISet(self::setSpec($journal), $title, ''));
 
             $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
             $articleTombstoneSets = $tombstoneDao->getSets(ASSOC_TYPE_JOURNAL, $journal->getId());
 
             $sections = $this->sectionDao->getByJournalId($journal->getId());
             foreach ($sections->toArray() as $section) {
-                if (array_key_exists(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $articleTombstoneSets)) {
-                    unset($articleTombstoneSets[urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev())]);
+                $setSpec = self::setSpec($journal, $section);
+                if (array_key_exists($setSpec, $articleTombstoneSets)) {
+                    unset($articleTombstoneSets[$setSpec]);
                 }
-                array_push($sets, new OAISet(urlencode($abbrev) . ':' . urlencode($section->getLocalizedAbbrev()), $section->getLocalizedTitle(), ''));
+                array_push($sets, new OAISet($setSpec, $section->getLocalizedTitle(), ''));
             }
             foreach ($articleTombstoneSets as $articleTombstoneSetSpec => $articleTombstoneSetName) {
                 array_push($sets, new OAISet($articleTombstoneSetSpec, $articleTombstoneSetName, ''));
@@ -172,18 +173,28 @@ class OAIDAO extends PKPOAIDAO
         }
 
         $journalId = $journal->getId();
-        $sectionId = null;
+        $sectionId = 0;
 
         if (isset($sectionSpec)) {
-            $section = $this->sectionDao->getByAbbrev($sectionSpec, $journal->getId());
-            if (isset($section)) {
-                $sectionId = $section->getId();
-            } else {
-                $sectionId = 0;
+            $sectionIterator = $this->sectionDao->getByJournalId($journalId);
+
+            while ($section = $sectionIterator->next()) {
+                if ($sectionSpec == $this->toValidSetSpec($section->getLocalizedAbbrev())) {
+                    $sectionId = $section->getId();
+                    break;
+                }
             }
         }
 
         return [$journalId, $sectionId];
+    }
+
+    public static function setSpec($journal, $section = null): string
+    {
+        // journal path is already restricted to ascii alphanumeric, '-' and '_'
+        return isset($section)
+            ? $journal->getPath() . ':' . OAIUtils::toValidSetSpec($section->getLocalizedAbbrev())
+            : $journal->getPath();
     }
 
     //
@@ -199,7 +210,7 @@ class OAIDAO extends PKPOAIDAO
         $articleId = $row['submission_id'];
 
         $record->identifier = $this->oai->articleIdToIdentifier($articleId);
-        $record->sets = [urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev())];
+        $record->sets = [self::setSpec($journal, $section)];
 
         if ($isRecord) {
             $submission = Repo::submission()->get($articleId);

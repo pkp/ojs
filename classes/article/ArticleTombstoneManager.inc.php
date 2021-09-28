@@ -16,6 +16,7 @@
 namespace APP\article;
 
 use APP\facades\Repo;
+use APP\oai\ojs\OAIDAO;
 use APP\submission\Submission;
 use PKP\config\Config;
 
@@ -40,7 +41,7 @@ class ArticleTombstoneManager
         $tombstoneDao->deleteByDataObjectId($article->getId());
         // insert article tombstone
         $section = $sectionDao->getById($article->getSectionId());
-        $setSpec = urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev());
+        $setSpec = OAIDAO::setSpec($journal, $section);
         $oaiIdentifier = 'oai:' . Config::getVar('oai', 'repository_id') . ':' . 'article/' . $article->getId();
         $OAISetObjectsIds = [
             ASSOC_TYPE_JOURNAL => $journal->getId(),
