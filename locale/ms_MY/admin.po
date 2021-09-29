@@ -1,10 +1,11 @@
 # Mohd Raheemmi Mohd Yasin <raheemmiyasin@gmail.com>, 2021.
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-10 04:03+0000\n"
-"Last-Translator: Mohd Raheemmi Mohd Yasin <raheemmiyasin@gmail.com>\n"
+"PO-Revision-Date: 2021-09-29 08:02+0000\n"
+"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/admin/ms/>\n"
-"Language: ms\n"
+"Language: ms_MY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,3 +40,202 @@ msgstr "Pemberitahuan Akses Terbuka"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Peringatan Ulasan"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Pilih semua bahasa untuk disokong di laman web ini. Bahasa yang dipilih akan "
+"tersedia untuk digunakan oleh semua jurnal yang dihoskan di laman web ini , "
+"dan dipaparkan dalam menu bahasa di setiap halaman laman web(yang boleh "
+"digantikan pada halaman khusus jurnal). Sekiranya beberapa bahasa tidak "
+"dipilih, menu togol bahasa tidak akan terpaparkan dan tetapan lanjutan "
+"bahasa tidak akan tersedia untuk jurnal."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Ciri e-mel pukal telah dilumpuhkan untuk jurnal ini. Aktifkan ciri ini di <a "
+"href=\"{$siteSettingsUrl}\"> Pentadbir> Tetapan Tapak </a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Pengurus jurnal tidak akan dapat menghantar e-mel pukal ke mana-mana peranan "
+"yang dipilih di bawah. Gunakan tetapan ini untuk membatasi penyalahgunaan "
+"ciri pemberitahuan e-mel. Sebagai contoh, mungkin lebih selamat untuk "
+"mematikan e-mel pukal kepada pembaca, pengarang, atau kumpulan pengguna "
+"besar lain yang tidak bersetuju untuk menerima e-mel seperti itu. <br> <br> "
+"Ciri e-mel pukal dapat dinyahaktifkan sepenuhnya untuk jurnal ini di <a href "
+"= \"{$ siteSettingsUrl}\"> Pentadbir> Tetapan Tapak </a>."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Pilih jurnal yang dihoskan yang dibenarkan untuk menghantar e-mel pukal. "
+"Apabila fitur ini diaktifkan, pengurus jurnal akan dapat mengirim e-mel "
+"kepada semua pengguna yang terdaftar dengan jurnal mereka. <br> <br> "
+"Penyalahgunaan ciri ini untuk menghantar e-mel yang tidak sepatutnya mungkin "
+"akan melanggar undang-undang anti-spam berberapa jurisdiksi dan boleh "
+"mengakibatkan e-mel pelayan anda disekat sebagai spam. Dapatkan nasihat "
+"teknikal sebelum mengaktifkan fitur ini dan pertimbangkan untuk "
+"berkonsultasi dengan pengurus jurnal untuk memastikannya digunakan dengan "
+"betul. <br> <br> Sekatan lebih lanjut mengenai ciri ini dapat diaktifkan "
+"untuk setiap jurnal dengan mengunjungi wizard tetapan dalam senarai <a href ="
+" \"{$ hostContextsUrl}\"> Jurnal Dihoskan </a>."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Peringatan Tamat Tempoh Langganan"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Tidak ada pengguna yang mendaftar."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Adakah anda pasti mahu menggabungkan {$ oldAccountCount} akaun yang dipilih "
+"ke dalam akaun dengan nama pengguna \"{$ newUsername}\"? Akaun {$ "
+"oldAccountCount} yang dipilih tidak akan wujud selepas itu. Tindakan ini "
+"tidak boleh diterbalikkan."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Semua Pengguna Yang Daftarkan"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Pilih pengguna (atau beberapa) untuk bergabung ke akaun pengguna lain ("
+"misalnya, Apabila seseorang mempunyai dua akaun pengguna). Akaun yang "
+"dipilih terlebih dahulu akan dihapus dan setiap penyerahan, tugasan, dan "
+"lain-lain akan dikaitkan dengan akaun kedua."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Pilih pengguna yang akan mempunyai hak penulisan pengguna sebelumnya, "
+"seperti penyuntingan tugas, dll."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Gabungkan Pengguna"
+
+msgid "admin.mergeUsers"
+msgstr "Gabungkan Pengguna"
+
+msgid "admin.journals.importErrors"
+msgstr "Pengimportan gagal diselesaikan dengan jayanya"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Laluan import diperlukan."
+
+msgid "admin.journals.redirect"
+msgstr "Hasilkan kod untuk memetakan URL OJS 1 ke URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Metadata artikel transkod dari ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Import langganan"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Laluan jurnal yang sudah ada atau laluan yang hendak dibuat (contoh: \"ojs\""
+")."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Penerangan jurnal"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Dayakan jurnal ini untuk muncul secara terbuka di laman web ini"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Bahasa utama mestilah bahasa yang disokong oleh jurnal."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Laluan yang anda berikan sudah digunakan oleh jurnal lain."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Laluan hanya boleh merangkumi huruf, angka dan watak _ dan -. Ia mesti "
+"bermula dan diakhiri dengan huruf atau angka."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Laluan diperlukan."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Tajuk diperlukan."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Ini mestilah satu kata pendek atau akronim yang mengenal pasti jurnal. URL "
+"jurnal adalah {$ sampleUrl}."
+
+msgid "admin.contexts.create"
+msgstr "Buat Jurnal"
+
+msgid "admin.journals.noneCreated"
+msgstr "Tidak ada jurnal yang dibuat."
+
+msgid "admin.journals.journalSettings"
+msgstr "Tetapan Jurnal"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Anda secara automatik akan didaftarkan sebagai pengurus jurnal ini. Setelah "
+"membuat jurnal baru, anda akan diarahkan ke wizard tetapan, untuk "
+"menyelesaikan penyiapan jurnal awal."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Tetapan konfigurasi OJS dari <tt> config.inc.php </tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurasi OJS"
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+"Dayakan pembuatan pengguna (jika disokong oleh plugin pengesahan). Pengguna "
+"yang dibuat dalam OJS dengan sumber pengesahan ini akan ditambahkan secara "
+"automatik ke sumber pengesahan luar jika mereka belum ada. Selain itu, jika "
+"sumber ini adalah sumber pengesahan lalai, akaun OJS yang dibuat melalui "
+"pendaftaran pengguna juga akan ditambahkan ke sumber pengesahan jauh."
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+"Dayakan pengubahsuaian kata laluan pengguna (jika disokong oleh plugin "
+"pengesahan). Mengaktifkan pilihan ini membolehkan pengguna mengubah kata "
+"laluan mereka dari dalam OJS dan menggunakan ciri \"kata laluan yang hilang\""
+" OJS untuk menetapkan semula kata laluan yang dilupakan. Fungsi-fungsi ini "
+"tidak akan tersedia bagi pengguna dengan sumber pengesahan ini jika pilihan "
+"ini tidak diaktifkan."
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+"Dayakan penyegerakan profil pengguna (jika disokong oleh plugin pengesahan "
+"ini). Maklumat profil pengguna akan dikemas kini secara automatik dari "
+"sumber luar ketika pengguna log masuk, dan semua perubahan profil (termasuk "
+"perubahan kata laluan) yang dibuat dalam OJS akan turut dikemaskini secara "
+"automatik pada sumber luar juga. Sekiranya pilihan ini tidak diaktifkan, "
+"maklumat profil OJS akan disimpan secara berasingan dari maklumat profil "
+"sumber luar."
+
+msgid "admin.systemVersion"
+msgstr "OJS Versi"
+
+msgid "admin.auth.ojs"
+msgstr "Pangkalan Data Pengguna OJS"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Pilih mana-mana bahasa tambahan untuk memasang sokongan dalam sistem ini. "
+"Bahasa mesti dipasang sebelum dapat digunakan oleh jurnal yang dihoskan. "
+"Lihat dokumentasi OJS untuk maklumat mengenai penambahan sokongan untuk "
+"bahasa baru."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Adakah anda pasti mahu menyahpasang  bahasa ini? Ini boleh mempengaruhi mana-"
+"mana jurnal yang dihoskan menggunakan bahasa tempatan."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Bahasa yang ditandakan mungkin tidak lengkap."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Bahasa ini akan menjadi bahasa lalai untuk laman web dan semua jurnal yang "
+"dihoskan."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Adakah anda pasti mahu menyahaktifkan bahasa ini? Ini boleh mempengaruhi "
+"mana-mana jurnal yang  menggunakan bahasa ini."
