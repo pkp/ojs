@@ -173,13 +173,14 @@ class OAIDAO extends PKPOAIDAO
         }
 
         $journalId = $journal->getId();
-        $sectionId = 0;
+        $sectionId = null;
 
         if (isset($sectionSpec)) {
+            $sectionId = 0;
             $sectionIterator = $this->sectionDao->getByJournalId($journalId);
 
             while ($section = $sectionIterator->next()) {
-                if ($sectionSpec == $this->toValidSetSpec($section->getLocalizedAbbrev())) {
+                if ($sectionSpec == OAIUtils::toValidSetSpec($section->getLocalizedAbbrev())) {
                     $sectionId = $section->getId();
                     break;
                 }
