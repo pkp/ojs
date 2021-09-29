@@ -1,0 +1,8 @@
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+msgid ""
+msgstr ""
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
