@@ -43,7 +43,3 @@ class I4235_OAISetSpec extends \PKP\migration\Migration
         // The old format is not recoverable since some characters might have been stripped
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\migration\upgrade\v3_4_0\I4235_OAISetSpec', '\I4235_OAISetSpec');
-}
