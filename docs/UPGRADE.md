@@ -158,12 +158,11 @@ web-based script. To do so:
 
 ### Update Javascript libraries and build.js
 
-The official .tar.gz releases, and the stable branches in git (e.g.
-`ojs-stable-3_1_1`), contain precompiled javascript. If you are installing
-OJS using either of those and have not modified your Javascript, you do not
-need to compile Javascript.
+The official .tar.gz releases contain precompiled javascript. If you are installing
+OJS using this method, you do not need to compile Javascript.
 
-If you are using the git `master` branch, or have made changes to your
+If you are using the git `main` branch, or any of the stable branches (e.g.
+`stable-3_3_0`), or have made changes to your
 Javascript code, you will need to recompile it following these instructions.
 
 To update the Javascript libraries and rebuild the build.js you have to run
