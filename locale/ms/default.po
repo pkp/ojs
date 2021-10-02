@@ -1,8 +1,9 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-10-02 19:58+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/default/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -22,3 +23,43 @@ msgstr "ART"
 
 msgid "section.default.title"
 msgstr "Artikel"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Jurnal ini menyediakan akses terbuka serta-merta kepada kandungannya "
+"mengenai prinsip yang menjadikan penyelidikan tersedia secara bebas kepada "
+"orang ramai menyokong pertukaran pengetahuan global yang lebih besar."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Nama dan alamat e-mel yang dimasukkan dalam laman jurnal ini akan "
+"digunakan secara eksklusif untuk tujuan yang dinyatakan dalam jurnal ini dan "
+"tidak akan disediakan untuk sebarang tujuan lain atau kepada mana-mana pihak "
+"lain.</p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Teks ini mematuhi keperluan gaya dan bibliografi yang digariskan dalam Garis "
+"Panduan Pengarang."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Sekiranya ada, URL untuk rujukan telah disediakan."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Fail penyerahan dalam format fail dokumen OpenOffice, Microsoft Word, atau "
+"RTF."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Penyerahan ini belum pernah diterbitkan sebelumnya, atau sebelum jurnal lain "
+"untuk dipertimbangkan (atau penjelasan telah diberikan dalam Komen kepada "
+"Penyunting)."
+
+#, fuzzy
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Teksnya mempunyai jarak tunggal; menggunakan fon 12 ; menggunakan italics, "
+"bukannya garis di bawah (kecuali dengan alamat URL); dan semua ilustrasi, "
+"angka, dan jadual diletakkan di dalam teks pada titik-titik yang sesuai, "
+"bukannya di akhir."
