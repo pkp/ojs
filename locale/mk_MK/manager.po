@@ -1,7 +1,8 @@
+# Mirko Spiroski <mspiroski@id-press.eu>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-20 13:23+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -2138,3 +2139,30 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Изберете ја земјата во која се наоѓа списанието, или земјата на поштенската "
 "адреса на списанието или издавачката куќа."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Име на веб страница кога има хостирано повеќе од едно списание"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Вид на уплатен износ, како УСД"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Износ за плаќање"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Име на видот плаќање"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "И-мејл адреса од примарен контакт на списание"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Потпис од и-мејл на списание за автоматска пошта"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Име на примарен контакт од списание"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "УРЛ на страницата од списание"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Име на списание"
