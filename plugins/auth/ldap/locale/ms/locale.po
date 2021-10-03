@@ -1,8 +1,9 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-29 13:25+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/ms/>"
 "\n"
 "Language: ms\n"
@@ -43,30 +44,30 @@ msgstr "Penyulitan kata laluan"
 
 msgid "plugins.auth.ldap.settings.uid.description"
 msgstr ""
-"Atribut yang nilainya mengenali objek pengguna secara unik, seperti uid atau "
-"cn atau sAMAccountName."
+"Atribut yang nilainya mengenal pasti objek pengguna secara unik, seperti uid "
+"atau cn atau sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.uid"
 msgstr "Atribut nama akaun"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
 msgstr ""
-"DN dan kata laluan pengurus hanya diperlukan jika pilihan penyegerakan "
-"profil / kata laluan pengguna atau pilihan pengguna diaktifkan. Sekiranya "
-"LDAP hanya akan digunakan untuk pengesahan maka pilihan ini dapat "
+"Pengurus DN dan kata laluan pengurus hanya diperlukan jika pilihan "
+"penyegerakan profil/kata laluan pengguna atau pilihan pengguna didayakan. "
+"Sekiranya LDAP hanya akan digunakan untuk pengesahan maka pilihan ini dapat "
 "dihilangkan."
 
 msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Kata laluan pengurus"
 
 msgid "plugins.auth.ldap.settings.managerdn.description"
-msgstr "Cth, \"cn = Pengurus, dc = contoh, dc = com\""
+msgstr "Cth, \"cn=Pengurus,dc=contoh,dc=com\""
 
 msgid "plugins.auth.ldap.settings.managerdn"
 msgstr "Pengurus DN"
 
 msgid "plugins.auth.ldap.settings.basedn.description"
-msgstr "Cth, \"ou = orang, dc = contoh, dc = com\""
+msgstr "Cth, \"ou=orang,dc=contoh,dc=com\""
 
 msgid "plugins.auth.ldap.settings.basedn"
 msgstr "Pangkalan DN"
@@ -91,7 +92,7 @@ msgstr "Tetapan LDAP"
 msgid "plugins.auth.ldap.description"
 msgstr ""
 "Plugin ini membenarkan pengesahan dan penyegerakan akaun pengguna terhadap "
-"sumber data LDAP luaran."
+"sumber luaran data LDAP."
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
