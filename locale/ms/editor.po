@@ -2,7 +2,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-03 15:03+0000\n"
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
 "Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
@@ -15,6 +15,7 @@ msgstr ""
 msgid "editor.issues.issueData"
 msgstr "Data Isu"
 
+#, fuzzy
 msgid "editor.article.coverImage"
 msgstr "Imej Halaman"
 
@@ -32,6 +33,7 @@ msgstr "Buang"
 msgid "grid.action.removeArticle"
 msgstr "Buang Artikel Daripada Isu"
 
+#, fuzzy
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
 "Imej halaman depan yang anda minta untuk padam tidak dijumpai. Ianya mungkin "
@@ -411,11 +413,9 @@ msgstr "Tetapkan semula"
 msgid "editor.home"
 msgstr "Laman Utama Penyunting"
 
-#, fuzzy
 msgid "editor.issues.galley"
 msgstr "Isu Galley"
 
-#, fuzzy
 msgid "editor.issues.galleys"
 msgstr "Isu Galley"
 
@@ -448,3 +448,43 @@ msgstr ""
 
 msgid "editor.issues.volumeRequired"
 msgstr "Isipadu diperlukan dan mestilah nilai positif, berangka."
+
+#, fuzzy
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi yang "
+"disalin, dimuat naik di bawah <span class=\"pkp_help_title\""
+">Penyalinan</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Pilih Fail Galley"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Susun atur penyunting menyediakan fail ini untuk setiap galley dan kemudian "
+"memuat naik ke <span class=\"pkp_help_title\">Bukti</span> yang sesuai untuk "
+"pembacaan bukti."
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Adakah anda pasti mahu memadam isu galley ini?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Kembali ke isu galley"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Pengenalpastian isu galley awam sudah ada."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Bahasa isu galley diperlukan."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Label isu galley diperlukan."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Tiada penerbitan isu galley."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Terbitkan galley dengan keseluruhan isi isu."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Melihat Isu Galley"
