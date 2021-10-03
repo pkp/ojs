@@ -1,9 +1,10 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 # Studiorimau <studiorimau@gmail.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-02 19:58+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/author/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -24,27 +25,27 @@ msgstr "Langkah 1. Memulakan Penyerahan"
 msgid "author.submit.startHereLink"
 msgstr ""
 "<a href=\"{$submitUrl}\" class=\"action\"> Klik di sini </a> untuk pergi ke "
-"langkah pertama dari proses penyerahan lima langkah."
+"langkah pertama dari proses lima langkah penyerahan."
 
 msgid "author.submit.startHereTitle"
-msgstr "Mulakan Penyerahan Baru"
+msgstr "Mulakan Penyerahan Baharu"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Lima Langkah Pengiriman"
+msgstr "Lima Langkah Untuk Penyerahan"
 
 msgid "author.submit.submitArticle"
-msgstr "Kirim Artikel"
+msgstr "Serah Artikel"
 
 msgid "author.competingInterests"
 msgstr ""
-"Konflik kepentingan <a target=\"_new\" class=\"action\" href=\""
+"Kepentingan bersaing <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\"> Polisi CI </a>"
 
 msgid "author.track"
 msgstr "Penyerahan Aktif"
 
 msgid "author.submit"
-msgstr "Penyerahan Baru"
+msgstr "Penyerahan Baharu"
 
 msgid "author.submit.step4"
 msgstr "Langkah 4. Memuat Naik Fail Tambahan"
@@ -52,7 +53,7 @@ msgstr "Langkah 4. Memuat Naik Fail Tambahan"
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
 "Akaun pengguna diperlukan untuk menghantar ke jurnal ini. Ini membolehkan "
-"penyunting kami untuk melacak kiriman anda dan menghubungi anda apabila "
+"penyunting kami untuk jejak penyerahan anda dan menghubungi anda apabila "
 "status penyerahan anda berubah, atau sekiranya maklumat tambahan diperlukan "
 "dari anda."
 
@@ -60,15 +61,15 @@ msgid "author.article.authorRevisedFile"
 msgstr "Fail Pengarang"
 
 msgid "author.article.copyeditedFile"
-msgstr "Fail Copyedit"
+msgstr "Fail Copyedited"
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "Muat naik Versi Pengarang"
 
 msgid "author.submit.submissionComplete"
 msgstr ""
-"Penyerahan selesai. Terima kasih kerana berminat untuk menerbitkan dengan {$ "
-"journalTitle}."
+"Penyerahan selesai. Terima kasih kerana berminat untuk menerbitkan dengan "
+"{$journalTitle}."
 
 msgid "author.submit.finishSubmission"
 msgstr "Selesaikan Penyerahan"
@@ -77,24 +78,24 @@ msgid "author.submit.filesSummary"
 msgstr "Ringkasan Fail"
 
 msgid "author.submit.noFiles"
-msgstr "Tidak ada fail yang dilampirkan pada penyerahan ini."
+msgstr "Tiada fail yang dilampirkan pada penyerahan ini."
 
 msgid "author.submit.confirmationDescription"
 msgstr ""
-"Untuk menghantar manuskrip anda ke {$ journalTitle} klik Selesaikan "
+"Untuk menghantar manuskrip anda ke {$journalTitle} klik Selesaikan "
 "Penyerahan. Kontak utama penyerahan akan menerima pengakuan melalui e-mel "
-"dan dapat melihat status penyerahan melalui proses editorial dengan melog "
+"dan dapat melihat status penyerahan melalui proses editorial dengan log "
 "masuk ke laman web jurnal. Terima kasih kerana berminat untuk menerbitkan "
-"dengan {$ journalTitle}."
+"dengan {$journalTitle}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Identifier awam fail tambahan"
+msgstr "Pengenalpasti fail awam tambahan"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "Identifikasi awam fail tambahan sudah ada."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "Sila masukkan keterangan."
+msgstr "Sila masukkan butiran."
 
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "Sila masukkan subjek."
@@ -103,13 +104,13 @@ msgid "author.submit.suppFile.form.titleRequired"
 msgstr "Sila masukkan tajuk fail tambahan ini."
 
 msgid "author.submit.suppFile.noFile"
-msgstr "Fail tidak dimuat naik."
+msgstr "Tiada fail dimuat naik."
 
 msgid "author.submit.suppFile.specifyOtherType"
-msgstr "Tentukan lain"
+msgstr "Nyatakan yang lain"
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "Nama kajian atau tempat asal lain."
+msgstr "Nama kajian atau sumber asal lain."
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Tarikh apabila data dikumpulkan atau instrumen dibuat."
@@ -119,20 +120,20 @@ msgstr "Hanya gunakan dengan bahan yang diterbitkan secara rasmi."
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Bentangkan fail kepada pengulas (tanpa metadata), kerana tidak akan "
+"Kemukakan fail kepada pengulas (tanpa metadata), kerana tidak akan "
 "menjejaskan ulasan tanpa nama."
 
 msgid "author.submit.suppFile.briefDescription"
-msgstr "Penerangan ringkas"
+msgstr "Butiran ringkas"
 
 msgid "author.submit.suppFile.sourceText"
-msgstr "Teks Sumber"
+msgstr "Sumber Teks"
 
 msgid "author.submit.suppFile.dataSet"
 msgstr "Set Data"
 
 msgid "author.submit.suppFile.dataAnalysis"
-msgstr "Analisis data"
+msgstr "Analisis Data"
 
 msgid "author.submit.suppFile.transcripts"
 msgstr "Transkrip"
@@ -147,7 +148,7 @@ msgid "author.submit.suppFile.researchInstrument"
 msgstr "Instrumen Penyelidikan"
 
 msgid "author.submit.suppFile.createrOrOwner"
-msgstr "Pembuat (atau pemilik) fail"
+msgstr "Pencipta (atau pemilik) fail"
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Fail Tambahan"
@@ -161,22 +162,22 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Metadata Fail Tambahan"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "Edit Fail Tambahan"
+msgstr "Ubahsuai Fail Tambahan"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr "Tambahkan Fail Tambahan"
+msgstr "Tambah Fail Tambahan"
 
 msgid "author.submit.uploadSuppFile"
 msgstr "Muat naik fail tambahan"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "Adakah anda pasti mahu memadamkan fail tambahan ini?"
+msgstr "Adakah anda pasti mahu memadam fail tambahan ini?"
 
 msgid "author.submit.backToSupplementaryFiles"
 msgstr "Kembali ke Fail Tambahan"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr "Tidak ada fail tambahan yang ditambahkan pada penyerahan ini."
+msgstr "Tiada fail tambahan yang ditambahkan pada penyerahan ini."
 
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr ""
@@ -192,8 +193,8 @@ msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
 "Langkah pilihan ini membolehkan anda menambahkan fail tambahan pada "
 "penyerahan. Fail-fail ini, dalam format apa pun, boleh merangkumi (a) alat "
-"penyelidikan; (b) kumpulan data yang mematuhi syarat yang ditetapkan oleh "
-"kajian etika penyelidikan; (c) sumber yang tidak tersedia untuk pembaca, (d) "
+"penyelidikan, (b) kumpulan data yang mematuhi syarat yang ditetapkan oleh "
+"etika kajian penyelidikan, (c) sumber yang tidak tersedia untuk pembaca, (d) "
 "angka dan jadual yang tidak dapat disatukan ke dalam teks atau bahan lain "
 "yang ditambahkan pada sumbangan karya."
 
@@ -230,22 +231,21 @@ msgstr "Diperlukan sekurang-kurangnya satu pengarang."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"Bahasa Inggeris = en; Perancis = fr; Sepanyol = es. <a href=\"http://www.loc."
-"gov/standards/iso639-2/php/code_list.php\" target=\"_blank\"> Kod tambahan "
-"</a>."
+"Bahasa Inggeris=en; Perancis=fr; Sepanyol=es. <a href=\"http://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\"> Kod tambahan </a>."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
-"Merujuk kepada lokasi geo-spasial, liputan kronologi atau sejarah, dan / "
-"atau ciri sampel kajian."
+"Merujuk kepada lokasi geo-spatial, liputan kronologi atau sejarah, dan/atau "
+"ciri sampel kajian."
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Berikan syarat untuk mengindeks penyerahan; asingkan istilah dengan titik "
-"koma (term1; term2; term3)."
+"Berikan syarat untuk mengindeks penyerahan; asingkan istilah dengan semi-"
+"kolon (term1;term2;term3)."
 
 msgid "author.submit.deleteAuthor"
-msgstr "Padamkan Pengarang"
+msgstr "Padam Pengarang"
 
 msgid "author.submit.addAuthor"
 msgstr "Tambah Pengarang"
@@ -258,7 +258,7 @@ msgstr "Susun semula nama pengarang"
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
-"Menyusun nama pengarang sehingga tertera mengikut urutan ia diterbitkan."
+"Susun semula nama pengarang sehingga tertera mengikut urutan ia diterbitkan."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Penyataan Privasi Jurnal"
@@ -267,33 +267,33 @@ msgid "author.submit.form.localeRequired"
 msgstr "Sila pilih bahasa penyerahan."
 
 msgid "author.submit.form.sectionRequired"
-msgstr "Sila pilih bahagian jurnal yang sesuai untuk penyerahan ini."
+msgstr "Sila pilih seksyen jurnal yang bersesuaian untuk penyerahan ini."
 
 msgid "author.submit.comments"
 msgstr "Masukkan teks (pilihan)"
 
 msgid "submission.submit.coverNote"
-msgstr "Komen untuk Editor"
+msgstr "Komen untuk Penyunting"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Anda mesti bersetuju dengan syarat Notis Hak Cipta sebelum meneruskan."
 
 msgid "author.submit.copyrightNoticeAgree"
 msgstr ""
-"Penulis bersetuju dengan syarat Notis Hak Cipta ini, yang akan digunakan "
+"Pengarang bersetuju dengan syarat Notis Hak Cipta ini, yang akan digunakan "
 "untuk penyerahan mereka jika dan bila ia diterbitkan oleh jurnal ini (komen "
-"untuk editor dapat ditambahkan di bawah)."
+"untuk penyunting dapat ditambah di bawah)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
-"Sebelum meneruskan, anda mesti memastikan bahawa semua syarat dalam senarai "
-"semak dipenuhi."
+"Anda mesti memastikan semua item dalam senarai semak penyerahan dipenuhi "
+"sebelum meneruskan."
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Artikel mesti dihantar ke salah satu bahagian jurnal."
+msgstr "Artikel mesti dihantar ke salah satu seksyen jurnal."
 
 msgid "author.submit.journalSection"
-msgstr "Bahagian Jurnal"
+msgstr "Seksyen Jurnal"
 
 msgid "author.submissions.noSubmissions"
 msgstr "Tiada penyerahan."
@@ -302,13 +302,13 @@ msgid "author.submissions.viewStatus"
 msgstr "Lihat Status"
 
 msgid "author.submissions.confirmDelete"
-msgstr "Adakah anda pasti mahu memadamkan penyerahan yang tidak lengkap ini?"
+msgstr "Adakah anda pasti mahu memadam penyerahan yang tidak lengkap ini?"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "Pembetulan Proofreading"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Muat naik Versi Pasca-Copyedit"
+msgstr "Muat naik Versi Copyedited"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "Dalam Penyuntingan: Proofread Diminta"
@@ -320,7 +320,7 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "Dalam Ulasan: Semakan Diperlukan"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Dalam pusingan penilaian {$ round}"
+msgstr "Dalam Pusingan Penilaian {$round}"
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
@@ -334,7 +334,7 @@ msgstr ""
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
-"Pertimbangkan untuk dikecualikan dari Biaya Penyerahan Artikel untuk artikel "
+"Pertimbangkan untuk dikecualikan dari Yuran Penyerahan Artikel untuk artikel "
 "ini"
 
 msgid "author.submit.requestWaiver"
@@ -349,7 +349,7 @@ msgstr ""
 "Penyerahan Aktif dari laman utama Pengarang."
 
 msgid "author.submit.nextSteps"
-msgstr "Langkah seterusnya"
+msgstr "Langkah Seterusnya"
 
 msgid "author.submit.confirmation"
 msgstr "Pengesahan"
