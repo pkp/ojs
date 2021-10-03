@@ -1,8 +1,9 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-02 19:58+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-information/ms/>\n"
 "Language: ms\n"
@@ -16,7 +17,7 @@ msgid "plugins.block.information.link"
 msgstr "Maklumat"
 
 msgid "plugins.block.information.description"
-msgstr "Plugin ini memberikan pautan maklumat sidebar ."
+msgstr "Plugin ini memberikan pautan maklumat bar sisi."
 
 msgid "plugins.block.information.displayName"
 msgstr "Blok Maklumat"
