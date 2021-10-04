@@ -1,12 +1,13 @@
+# Molnár Tamás <molnart@bibl.u-szeged.hu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-28 19:36+0000\n"
-"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"PO-Revision-Date: 2021-09-22 08:45+0000\n"
+"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"hu/>\n"
+"hu_HU/>\n"
 "Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,9 +101,10 @@ msgstr "Egy ajándék előfizetési link fog megjelenni a Folyóiratról szóló
 msgid "manager.payment.generalFees"
 msgstr "Általános költségek"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Az Egyesületi Tagság megjelenik a Folyóiratról oldal Irányelvek részében, és egy támogatói link a jobb oldali blokk keresés funkciója felett."
+msgstr ""
+"Az Egyesületi tagság meg fog jelenni a Folyóiratról menü oldalán, az "
+"Irányelveknél."
 
 msgid "manager.payment.generalOptions"
 msgstr "Általános beállítások"
@@ -1999,3 +2001,13 @@ msgid "manager.setup.keyInfo.description"
 msgstr ""
 "Mutassa be röviden a folyóiratát, a szerkesztőket és a szerkesztői csapat "
 "többi tagját."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Válassza ki azt az országot, ahol a folyóirat található, vagy azt az "
+"országot, ahol a folyóirat vagy a kiadó levelezési címe van."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Legalább egy szakasznak aktívnak kell lennie. Keresse fel a munkafolyamat "
+"beállításait, hogy letiltsa a kéziratbeadást ehhez a folyóirathoz."

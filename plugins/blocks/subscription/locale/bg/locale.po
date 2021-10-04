@@ -1,0 +1,43 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-29 06:27+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Научете повече"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "За достъп до някои информационни ресурси се нуждаете от абонамент."
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Влезте в системата за да имате достъп до абонаментите."
+
+msgid "plugins.block.subscription.about"
+msgstr "Абонаменти"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Достъп от: {$ip}"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Достъп осигурен от: {$institutionName}"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Изтича на"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Абонамент"
+
+msgid "plugins.block.subscription.description"
+msgstr "Този плъгин предоставя странична лента с информация за абонамент."
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Блок за абонамент"

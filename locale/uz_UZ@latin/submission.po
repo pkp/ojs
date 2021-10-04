@@ -1,7 +1,8 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-19 14:26+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2021-09-09 11:05+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -136,3 +137,232 @@ msgstr ""
 
 msgid "submission.issueEntry"
 msgstr "Metadata"
+
+msgid "publication.version.details"
+msgstr "{$ Version} versiyasi uchun nashr tafsilotlari"
+
+msgid "publication.unschedule.confirm"
+msgstr "Ishonchingiz komilki, bu nashrga chiqarilishini xohlamaysizmi?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Ishonchingiz komilki, siz buni nashr qilishni xohlamaysizmi?"
+
+msgid "publication.unpublish"
+msgstr "Nashrdan chiqarish"
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Quyidagi partiyaga e'lon qilingan materiallar uchun mualliflik huquqini "
+"bering."
+
+msgid "submission.copyrightHolder.description"
+msgstr "Mualliflik huquqi avtomatik ravishda {$ copyright} ga yuklanadi."
+
+msgid "submission.license.description"
+msgstr ""
+"Bu chop etilgach, litsenziya avtomatik ravishda <ahref='{$licenseUrl}' "
+"target='_blank'> {$ licenseName} </a> ga o'rnatiladi."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Arizani nashr etishdan oldin nusxa ko'chirish yoki ishlab chiqarish "
+"bosqichida bo'lishi kerak."
+
+msgid "publication.required.declined"
+msgstr "Rad etilgan arizani e'lon qilib bo'lmaydi."
+
+msgid "publication.publish.requirements"
+msgstr "Buni nashr qilishdan oldin quyidagi talablar bajarilishi kerak."
+
+msgid "publication.publish"
+msgstr "Nashr qilish"
+
+msgid "publication.invalidSubmission"
+msgstr "Bu nashrga ariza topilmadi."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Bir versiya nashrdan olib tashlandi."
+
+msgid "publication.event.versionScheduled"
+msgstr "Yangi versiya nashrga chiqarilishi rejalashtirilgan edi."
+
+msgid "publication.event.versionPublished"
+msgstr "Yangi versiya nashr etildi."
+
+msgid "publication.event.unpublished"
+msgstr "Taqdimot e'lon qilinmadi."
+
+msgid "publication.event.scheduled"
+msgstr "Taqdimot chop etilishi rejalashtirilgan edi."
+
+msgid "publication.event.published"
+msgstr "Taqdimot e'lon qilindi."
+
+msgid "publication.editDisabled"
+msgstr "Bu versiya chop etilgan va uni tahrir qilib bo'lmaydi."
+
+msgid "publication.datePublished"
+msgstr "Chop etilgan sana"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Mualliflik huquqi yili avtomatik ravishda nashr qilingan sanaga qarab "
+"belgilanadi."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Mualliflik huquqi yili bu nashrda chop etilganda avtomatik ravishda "
+"o'rnatiladi."
+
+msgid "submission.publications"
+msgstr "Nashrlar"
+
+msgid "publication.status.unscheduled"
+msgstr "Rejadan tashqari"
+
+msgid "submission.status.scheduled"
+msgstr "Rejalashtirilgan"
+
+msgid "publication.status.published"
+msgstr "Nashr qilingan"
+
+msgid "submission.publication"
+msgstr "Nashr"
+
+msgid "publication.selectIssue"
+msgstr "Nashr qilishni rejalashtirish uchun muammoni tanlang"
+
+msgid "publication.unscheduledIn"
+msgstr "Bu nashrda chop etilishi rejalashtirilmagan."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<ahref=\"{$issueUrl}\"> {$ issueName} </a> da nashr qilish rejalashtirilgan."
+
+msgid "publication.publishedIn"
+msgstr "<ahref=\"{$issueUrl}\"> {$ issueName} </a> da nashr etilgan."
+
+msgid "publication.required.issue"
+msgstr "Nashrni nashr etishdan oldin uni nashr qilish kerak."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Nashrning barcha talablari bajarildi. Bu darhol e'lon qilinadi, chunki nashr "
+"qilingan sana {$ datePublished} qilib belgilandi. Haqiqatan ham buni nashr "
+"qilmoqchimisiz?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Nashrning barcha talablari bajarildi. Bu darhol {$ issue} da e'lon qilinadi. "
+"Haqiqatan ham buni nashr qilmoqchimisiz?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Nashrning barcha talablari bajarildi. Bu {$ issue} nashr qilinganida e'lon "
+"qilinadi. Haqiqatan ham buni nashrga rejalashtirmoqchimisiz?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Nashrning barcha talablari bajarildi. Haqiqatan ham buni nashr "
+"qilmoqchimisiz?"
+
+msgid "publication.invalidIssue"
+msgstr "Bu nashr uchun muammo topilmadi."
+
+msgid "publication.inactiveSection"
+msgstr "{$ section} (faol emas)"
+
+msgid "publication.invalidSection"
+msgstr "Bu nashr uchun bo'lim topilmadi."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Chiqarilish sanasi chop etilgandan so'ng avtomatik ravishda o'rnatiladi. "
+"Maqola ilgari boshqa joyda chop etilmaguncha va uni kechiktirish kerak "
+"bo'lmaguncha, nashr qilinadigan sanani kiritmang."
+
+msgid "publication.changeIssue"
+msgstr "Muammoni o'zgartirish"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Bu <ahref=\"{$issueUrl}\"> {$ issueName} </a> ga tayinlangan, lekin uni "
+"nashr qilish rejalashtirilmagan."
+
+msgid "publication.assignToissue"
+msgstr "Chiqarishni tayinlash"
+
+msgid "galley.publicationNotFound"
+msgstr "Bu oshxona uchun nashr topilmadi."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Bu nashrning galereyalarini tahrir qilib bo'lmaydi, chunki u allaqachon "
+"nashr etilgan."
+
+msgid "catalog.category.heading"
+msgstr "Barcha narsalar"
+
+msgid "catalog.browseTitles"
+msgstr "{$ numTitles} elementlar"
+
+msgid "submission.sectionOptions"
+msgstr "Bo'lim variantlari"
+
+msgid "section.any"
+msgstr "Har qanday bo'lim"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Bu oldindan ko‘rish va chop etilmagan. <ahref=\"{$url}\"> yuborishni ko‘rish "
+"</a>"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Bu spetsifikatsiyalar Dublin Core metadata to'plamiga asoslangan bo'lib, u "
+"jurnal tarkibini tavsiflash uchun ishlatiladi."
+
+msgid "submission.citationFormat.notFound"
+msgstr "So'ralgan iqtibos formatini olib bo'lmadi."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Iltimos, ishtirokchining rolini tanlang."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstraktingiz juda uzun. Iltimos, ushbu bo'lim uchun ko'rsatilgan so'z "
+"chegarasidan kamroqqa qisqartiring."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Iltimos, maqolangizning konspektini kiriting."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Iltimos, maqolangiz sarlavhasini kiriting."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+"Har bir muallifning ismi, familiyasi va elektron pochta manzili talab "
+"qilinadi."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Hech bo'lmaganda bitta muallif kerak."
+
+msgid "submission.submit.contributorRole"
+msgstr "Ishtirokchining roli"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Maxfiylik bayonoti"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Davom etishdan oldin siz quyida keltirilgan talablarni bajarganingizni "
+"o'qishingiz va tan olishingiz kerak."
+
+msgid "submission.queries.production"
+msgstr "Ishlab chiqarish muhokamalari"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Taqdim etish ro'yxati"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Iltimos, yuborish tilini tanlang."

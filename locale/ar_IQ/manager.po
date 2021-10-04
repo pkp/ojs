@@ -1,9 +1,10 @@
+# M. Ali <vorteem@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-05-14 18:57+0000\n"
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -676,7 +677,11 @@ msgid "manager.setup.lockssLicenseLabel"
 msgstr "وصف رخصة LOCKSS"
 
 msgid "manager.setup.lockssRegister"
-msgstr "حدد 6 - 10 مكتبات من تلك التي ستقوم بتسجيل وتخزين محتوى مجلتك. على سبيل المثال، حول عملك إلى المؤسسات التي يكون فيها المحررون أو أعضاء مجلس الإدارة مشتركين مسبقاً في LOCKSS. أنظر <a href=\"http://www.lockss.org/community/\" target=\"_blank\">مجتمع LOCKSS</a>. استعمل الدعوات المعدة لغرض (أ) <a href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">المكتبات المشتركة في  LOCKSS</a> أو (ب) <a href=\"{$lockssNewArchiveUrl}\" target=\"_blank\">المكتبات غير المشتركة بعد في LOCKSS</a>."
+msgstr ""
+"حدد 6 - 10 مكتبات من تلك التي ستقوم بتسجيل وتخزين محتوى مجلتك. على سبيل "
+"المثال، حول عملك إلى المؤسسات التي يكون فيها المحررون أو أعضاء مجلس الإدارة "
+"مشتركين مسبقاً في LOCKSS. أنظر <a href=\"http://www.lockss.org/community/\" "
+"target=\"_blank\">مجتمع LOCKSS</a>."
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
@@ -1741,3 +1746,30 @@ msgstr ""
 
 msgid "manager.setup.publicIdentifier"
 msgstr "تعريف بمحتوى المجلة"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "اسم الموقع عندما تكون هناك أكثر من مجلة مستضافة"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "عملة المبلغ المدفوع، الدولار الأمريكي مثلاً"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "المبلغ المدفوع"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "اسم نوع الدفع المالي"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "عنوان البريد الالكتروني لجهة الاتصال الرئيسية في المجلة"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "توقيع المجلة على رسائل البريد الالكتروني المؤتمتة"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "اسم جهة الاتصال الرئيسية في المجلة"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "الرابط المؤدي إلى الصفحة الرئيسية للمجلة"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "اسم المجلة"
