@@ -242,10 +242,10 @@ class IssueForm extends Form
             $issue->setDatePublished($this->getData('datePublished'));
         }
         $issue->setDescription($this->getData('description'), null); // Localized
-        $issue->setShowVolume($this->getData('showVolume'));
-        $issue->setShowNumber($this->getData('showNumber'));
-        $issue->setShowYear($this->getData('showYear'));
-        $issue->setShowTitle($this->getData('showTitle'));
+        $issue->setShowVolume((int) $this->getData('showVolume'));
+        $issue->setShowNumber((int) $this->getData('showNumber'));
+        $issue->setShowYear((int) $this->getData('showYear'));
+        $issue->setShowTitle((int) $this->getData('showTitle'));
         $issue->setData('urlPath', $this->getData('urlPath'));
 
         // If it is a new issue, first insert it, then update the cover
