@@ -240,7 +240,7 @@ class OAIDAO extends PKPOAIDAO
 
         return DB::table('submissions AS a')
             ->select([
-                DB::raw('GREATEST(a.last_modified, i.last_modified) AS last_modified'),
+                DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified) AS last_modified'),
                 'a.submission_id AS submission_id',
                 'i.issue_id',
                 DB::raw('NULL AS tombstone_id'),
@@ -271,10 +271,10 @@ class OAIDAO extends PKPOAIDAO
                 return $query->where('p.section_id', '=', (int) $sectionId);
             })
             ->when($from, function ($query, $from) {
-                return $query->where('GREATEST(a.last_modified, i.last_modified)', '>=', $from);
+                return $query->where('GREATEST(a.last_modified, i.last_modified, p.last_modified)', '>=', $from);
             })
             ->when($until, function ($query, $until) {
-                return $query->where('GREATEST(a.last_modified, i.last_modified)', '<=', $until);
+                return $query->where('GREATEST(a.last_modified, i.last_modified, p.last_modified)', '<=', $until);
             })
             ->when($submissionId, function ($query, $submissionId) {
                 return $query->where('a.submission_id', '=', (int) $submissionId);
