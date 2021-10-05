@@ -1,9 +1,10 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-05 15:20+0000\n"
+"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -15,9 +16,8 @@ msgstr ""
 msgid "editor.issues.issueData"
 msgstr "Data Isu"
 
-#, fuzzy
 msgid "editor.article.coverImage"
-msgstr "Imej Halaman"
+msgstr "Gambar muka depan"
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Tarikh capaian tidak sah."
@@ -33,11 +33,10 @@ msgstr "Buang"
 msgid "grid.action.removeArticle"
 msgstr "Buang Artikel Daripada Isu"
 
-#, fuzzy
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
-"Imej halaman depan yang anda minta untuk padam tidak dijumpai. Ianya mungkin "
-"telah dihapuskan. Cuba muat semula halaman."
+"Gambar muka depan yang anda minta untuk dihapus tidak dapat dijumpai. Ia "
+"mungkin telah dipadam. Cuba muatkan semula halaman tersebut."
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
@@ -204,9 +203,8 @@ msgstr "Buka capaian"
 msgid "editor.issues.coverPageDisplay"
 msgstr "Paparan"
 
-#, fuzzy
 msgid "editor.issues.showCoverPage"
-msgstr "Cipta penutup untuk isu ini dengan unsur berikut."
+msgstr "Cipta muka depan untuk isu ini dengan unsur berikut."
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Buang lembaran gaya?"
@@ -220,36 +218,30 @@ msgstr ""
 msgid "editor.issues.styleFile"
 msgstr "Lembaran Gaya"
 
-#, fuzzy
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr ""
-"Format imej halaman depan tidak sah. Format yang diterima adalah .gif, .jpg "
+"Format halaman muka depan tidak sah. Format yang diterima ialah .gif, .jpg, "
 "atau .png."
 
-#, fuzzy
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
 "Imej gambar muka depan yang anda minta untuk memadam padanan isu untuk "
 "jurnal yang berbeza. Sila pastikan anda bekerja dengan jurnal yang betul, "
 "anda menggunakan ID isu yang betul, dan cuba lagi."
 
-#, fuzzy
 msgid "editor.issues.coverPage"
 msgstr "Gambar muka depan"
 
-#, fuzzy
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
 "Imej gambar muka depan yang anda minta untuk padam tidak dijumpai. Ianya "
 "mungkin telah dihapuskan. Cuba muat semula halaman."
 
-#, fuzzy
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
 "Imej gambar muka depan yang anda minta untuk padam tidak sepadan dengan imej "
 "halaman  untuk isu ini. Sila muat semula halaman dan cuba lagi."
 
-#, fuzzy
 msgid "editor.issues.removeCoverPage"
 msgstr "Buang halaman gambar muka depan?"
 
@@ -449,7 +441,6 @@ msgstr ""
 msgid "editor.issues.volumeRequired"
 msgstr "Isipadu diperlukan dan mestilah nilai positif, berangka."
 
-#, fuzzy
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
 "Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi yang "
@@ -488,3 +479,9 @@ msgstr "Terbitkan galley dengan keseluruhan isi isu."
 
 msgid "editor.issues.viewingGalley"
 msgstr "Melihat Isu Galley"
+
+msgid "editor.issues.cover"
+msgstr "Muka depan"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Kapsyen muka depan"
