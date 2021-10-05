@@ -1,8 +1,9 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-05 15:20+0000\n"
+"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/emails/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -148,3 +149,80 @@ msgstr ""
 
 msgid "emails.notification.subject"
 msgstr "Notifikasi baharu dari {$siteTitle}"
+
+msgid "emails.reviewRequest.description"
+msgstr ""
+"E-mel ini dari Editor Bahagian kepada Pengulas meminta agar pengulas "
+"menerima atau menolak tugas menyemak penyerahan. Ini memberikan maklumat "
+"mengenai penyerahan seperti tajuk dan abstrak, tarikh akhir tinjauan, dan "
+"cara mengakses kiriman itu sendiri. Mesej ini digunakan apabila Proses "
+"Peninjauan Standard dipilih dalam Pengurusan> Tetapan> Alur Kerja> Ulasan. ("
+"Jika tidak, lihat REVIEW_REQUEST_ATTACHED.)"
+
+msgid "emails.reviewRequest.subject"
+msgstr "Permintaan Ulasan Artikel"
+
+msgid "emails.editorAssign.description"
+msgstr ""
+"E-mel ini memberitahu Penyuting Seksyen bahawa Editor telah memberikan "
+"mereka tugas untuk mengawasi penyerahan melalui proses penyuntingan. Ini "
+"memberikan maklumat mengenai penyerahan dan cara mengakses laman jurnal."
+
+msgid "emails.editorAssign.subject"
+msgstr "Tugasan Editorial"
+
+msgid "emails.submissionAckNotUser.description"
+msgstr ""
+"E-mel ini, apabila didayakan, secara automatik dihantar kepada pengarang "
+"lain yang bukan pengguna dalam OJS yang ditentukan semasa proses penyerahan."
+
+msgid "emails.submissionAckNotUser.subject"
+msgstr "Pengakuan Penyerahan"
+
+msgid "emails.submissionAck.description"
+msgstr ""
+"E-mel ini, apabila didayakan, secara otomatis dikirimkan kepada pengarang "
+"apabila mereka menyelesaikan proses pengiriman manuskrip ke jurnal. Ini "
+"memberikan maklumat tentang mengesan penyerahan melalui proses dan terima "
+"kasih pengarang atas penyerahannya."
+
+msgid "emails.submissionAck.subject"
+msgstr "Ucapan Terima Kasih"
+
+msgid "emails.lockssNewArchive.description"
+msgstr ""
+"E-mel ini mendorong penerima untuk mengambil bahagian dalam inisiatif LOCKSS "
+"dan memasukkan jurnal ini dalam arkib. Ia memberikan maklumat mengenai "
+"inisiatif LOCKSS dan cara untuk terlibat."
+
+msgid "emails.lockssNewArchive.subject"
+msgstr "Permintaan Mengarkibkan untuk {$contextName}"
+
+msgid "emails.lockssExistingArchive.description"
+msgstr ""
+"E-mel ini meminta penjaga arkib LOCKSS mempertimbangkan untuk memasukkan "
+"jurnal ini dalam arkib mereka. Ia memberikan URL ke LOCKSS Publisher "
+"Manifest jurnal."
+
+msgid "emails.lockssExistingArchive.subject"
+msgstr "Permintaan Mengarkibkan untuk {$contextName}"
+
+msgid "emails.publishNotify.description"
+msgstr ""
+"E-mel ini dihantar kepada pembaca yang berdaftar melalui pautan \"Beritahu "
+"Pengguna\" di Laman Pengguna Penyunting. Ini memberitahu pembaca tentang isu "
+"baru dan mengajak mereka untuk mengunjungi jurnal di URL yang disediakan."
+
+msgid "emails.publishNotify.body"
+msgstr ""
+"Pembaca: <br />\n"
+"<br />\n"
+"{$contextName} baru sahaja menerbitkan isu terbarunya di {$contextUrl}. Kami "
+"menjemput anda untuk melihat Isi Kandungan di sini dan kemudian mengunjungi "
+"laman web kami untuk meninjau artikel dan item yang menarik. <br />\n"
+"<br />\n"
+"Terima kasih atas minat berterusan dalam kerja kami, <br />\n"
+"{$editorialContactSignature}"
+
+msgid "emails.publishNotify.subject"
+msgstr "Isu Baru Diterbitkan"
