@@ -160,7 +160,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $collector = Repo::submissionFiles()
             ->getCollector()
             ->filterByAssoc(
-                [ASSOC_TYPE_SUBMISSION_FILE],
+                ASSOC_TYPE_SUBMISSION_FILE,
                 [$submissionFile->getId()]
             )
             ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
