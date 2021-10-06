@@ -139,10 +139,6 @@ class ArticleGalley extends Representation
                 ->get($this->getData('submissionFileId'));
         }
 
-        if ($this->getData('submissionFileId') === null) {
-            return Repo::submissionFiles()->newDataObject();
-        }
-
         return $this->_submissionFile;
     }
 
