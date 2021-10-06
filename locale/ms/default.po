@@ -3,8 +3,8 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-05 15:20+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"PO-Revision-Date: 2021-10-07 03:06+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/default/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -59,9 +59,9 @@ msgstr ""
 
 msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr ""
-"Teksnya mempunyai jarak tunggal; menggunakan fon mata -12 ; menggunakan "
-"italics, bukannya garis di bawah (kecuali dengan alamat URL); dan semua "
-"ilustrasi, angka, dan jadual diletakkan di dalam teks pada titik-titik yang "
+"Teksnya mempunyai jarak tunggal; menggunakan fon 12 ; menggunakan italics, "
+"bukannya garis di bawah (kecuali dengan alamat URL); dan semua ilustrasi, "
+"angka, dan jadual diletakkan di dalam teks pada titik-titik yang "
 "bersesuaian, bukannya di akhir."
 
 msgid "default.contextSettings.forAuthors"
