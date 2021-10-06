@@ -3,8 +3,8 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-05 15:20+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"PO-Revision-Date: 2021-10-07 03:06+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgid "editor.article.coverImage"
 msgstr "Gambar muka depan"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "Tarikh capaian tidak sah."
+msgstr "Tarikh akses tidak sah."
 
 msgid "editor.article.remove.confirm"
 msgstr ""
@@ -41,13 +41,13 @@ msgstr ""
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
 "Yuran Penerbitan tidak dibayar. Untuk menjadualkan item untuk penerbitan "
-"beritahu pengarang untuk membayar yuran atau mengetepikan yuran."
+"beritahu pengarang untuk membayar yuran atau pengecualian yuran."
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "Untuk Diperuntukkan"
+msgstr "Untuk Ditugaskan"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "Jadual untuk diterbitkan"
+msgstr "Jadual untuk diterbitkan di"
 
 msgid "editor.article.editMetadata"
 msgstr "Sunting Versi Metadata"
@@ -59,16 +59,16 @@ msgid "editor.article.publishVersion"
 msgstr "Versi Penerbitan"
 
 msgid "editor.article.showPublicationVersion"
-msgstr "Tunjuk Penerbitan Berjadual"
+msgstr "Tunjukkan Penerbitan yang Dijadualkan"
 
 msgid "editor.submissions.inSection"
-msgstr "Dalam Bahagian"
+msgstr "Dalam Seksyen"
 
 msgid "issues.submissions.issueIds"
-msgstr "Diperuntukkan kepada Isu"
+msgstr "Ditugaskan kepada Isu"
 
 msgid "editor.submissions.assignedTo"
-msgstr "Diperuntukkan kepada Penyunting"
+msgstr "Ditugaskan kepada Penyunting"
 
 msgid "editor.submissions.lastCompleted"
 msgstr "Lengkap Terakhir"
@@ -170,16 +170,16 @@ msgid "editor.issues.default"
 msgstr "Lalai"
 
 msgid "editor.issues.saveChanges"
-msgstr "Simpan perubahan pada jadual kandungan?"
+msgstr "Simpan perubahan pada isi kandungan?"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"Isu ini menggunakan susunan seksyen tersuai. <a href=\"{$url}\" class=\""
+"Isu ini menggunakan susunan seksyen custom. <a href=\"{$url}\" class=\""
 "action\">Set semula kepada lalai</a>"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
-"Jurnal ini menggunakan susunan isu tersuai. <a href=\"{$url}\" class=\""
+"Jurnal ini menggunakan susunan isu custom. <a href=\"{$url}\" class=\""
 "action\">Set semula kepada lalai</a>"
 
 msgid "editor.issues.confirmIssueDelete"
@@ -192,13 +192,13 @@ msgid "editor.issues.access"
 msgstr "Akses"
 
 msgid "editor.issues.identification"
-msgstr "Pengenalan"
+msgstr "Pengenalpastian"
 
 msgid "editor.issues.subscription"
 msgstr "Langganan"
 
 msgid "editor.issues.openAccess"
-msgstr "Buka capaian"
+msgstr "Buka akses"
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Paparan"
@@ -246,7 +246,7 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Buang halaman gambar muka depan?"
 
 msgid "editor.issues.proofed"
-msgstr "Bukti"
+msgstr "Terbukti"
 
 msgid "editor.issues.remove"
 msgstr "Buang"
@@ -258,10 +258,10 @@ msgid "editor.issues.coverPageInstructions"
 msgstr "(Format yang dibenarkan: .gif, .jpg atau .png)"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "Dayakan capaian terbuka tertangguh"
+msgstr "Dayakan penundaan akses terbuka"
 
 msgid "editor.issues.accessDate"
-msgstr "Buka tarikh capaian"
+msgstr "Buka tarikh akses"
 
 msgid "editor.issues.accessStatus"
 msgstr "Status akses"
@@ -273,12 +273,12 @@ msgid "editor.issues.publicIssueIdentifier"
 msgstr "Pengenalpasti isu awam"
 
 msgid "editor.issues.issueIdentification"
-msgstr "Pengenalan isu"
+msgstr "Pengenalanpastian isu"
 
 msgid "editor.issues.issueIdentificationRequired"
 msgstr ""
-"Pengenalan isu diperlukan. Sila pilih sekurang-kurangnya satu daripada "
-"pilihan pengenalan isu."
+"Pengenalpastian isu diperlukan. Sila pilih sekurang-kurangnya satu daripada "
+"pilihan pengenalpasti isu."
 
 msgid "editor.issues.titleRequired"
 msgstr "Tajuk diperlukan untuk isu ini."
@@ -320,12 +320,12 @@ msgid "editor.editorAdministration"
 msgstr "Pentadbiran Penyunting"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "Sertakan jadual kandungan daripada isu ini:"
+msgstr "Sertakan isi kandungan daripada isu ini:"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
 "Hantar mesej ini kepada pengguna yang berkaitan dengan jurnal ini yang telah "
-"menunjukkan bahawa mereka ingin menerima pengemaskinian ({$count} pengguna)"
+"menunjukkan bahawa mereka ingin menerima berita baru ({$count} pengguna)"
 
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
@@ -345,7 +345,7 @@ msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Semua pelanggan individu ({$count} pengguna)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "Semua pengarang diterbitkan ({$count} pengguna)"
+msgstr "Semua pengarang yang menerbitkan ({$count} pengguna)"
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "Semua pembaca ({$count} pengguna)"
@@ -434,18 +434,18 @@ msgstr ""
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
 "Sebarang fail yang telah dimuat naik ke mana-mana peringkat penyerahan boleh "
-"ditambah ke penyenaraian Bacaan Bukti dengan menyemak kotak semak Sertakan "
+"ditambah ke penyenaraian Proofreading dengan menyemak kotak semak Sertakan "
 "di bawah dan menekan Carian: semua fail yang ada akan disenaraikan dan boleh "
 "dipilih untuk dimasukkan."
 
 msgid "editor.issues.volumeRequired"
-msgstr "Isipadu diperlukan dan mestilah nilai positif, berangka."
+msgstr "Volume diperlukan dan mestilah nilai positif, berangka."
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi yang "
-"disalin, dimuat naik di bawah <span class=\"pkp_help_title\""
-">Penyalinan</span>."
+"Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi "
+"copyedited, dimuat naik di bawah <span class=\"pkp_help_title\""
+">Copyediting</span>."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Pilih Fail Galley"
@@ -454,7 +454,7 @@ msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
 "Susun atur penyunting menyediakan fail ini untuk setiap galley dan kemudian "
 "memuat naik ke <span class=\"pkp_help_title\">Bukti</span> yang sesuai untuk "
-"pembacaan bukti."
+"proofreading."
 
 msgid "editor.issues.confirmDeleteGalley"
 msgstr "Adakah anda pasti mahu memadam isu galley ini?"
@@ -475,7 +475,7 @@ msgid "editor.issues.noneIssueGalleys"
 msgstr "Tiada penerbitan isu galley."
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Terbitkan galley dengan keseluruhan isi isu."
+msgstr "Terbitkan galley dengan keseluruhan isi kandungan isu."
 
 msgid "editor.issues.viewingGalley"
 msgstr "Melihat Isu Galley"
