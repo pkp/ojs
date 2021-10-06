@@ -1,8 +1,72 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-07 03:06+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Untuk Pustakawan"
+
+msgid "navigation.infoForAuthors"
+msgstr "Untuk Pengarang"
+
+msgid "navigation.browseByAuthor"
+msgstr "Berdasarkan Pengarang"
+
+msgid "navigation.browseByIssue"
+msgstr "Berdasarkan Isu"
+
+msgid "navigation.otherJournals"
+msgstr "Jurnal Lain"
+
+msgid "navigation.current"
+msgstr "Semasa"
+
+msgid "navigation.journalHelp"
+msgstr "Bantuan Jurnal"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Gambar Laman web Jurnal"
+
+msgid "common.homePageHeader.altText"
+msgstr "Header Laman web"
+
+msgid "common.payments"
+msgstr "Bayaran"
+
+msgid "common.payment"
+msgstr "Bayaran"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Adakah anda pasti mahu menandakan tugas ini sebagai selesai? Anda mungkin "
+"tidak dapat membuat perubahan selepas itu."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Sila isi medan yang diperlukan."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klik pada ikon untuk mengisi borang ulasan."
+
+msgid "navigation.categories"
+msgstr "Kategori"
+
+msgid "context.select"
+msgstr "Tukar ke jurnal lain:"
+
+msgid "context.current"
+msgstr "Jurnal Semasa:"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Jurnal ini tidak menerbitkan isi kandungannya dalam talian."
