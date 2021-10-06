@@ -309,7 +309,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         $submissionFileCollector = Repo::submissionFiles()
             ->getCollector()
             ->filterByAssoc(
-                [ASSOC_TYPE_GALLEY],
+                ASSOC_TYPE_GALLEY,
                 [$galley->getId()]
             );
         // Delete related submission files

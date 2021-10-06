@@ -25,7 +25,6 @@ use APP\submission\Submission;
 use PKP\core\JSONMessage;
 
 use PKP\core\PKPString;
-use PKP\db\DAORegistry;
 use PKP\submissionFile\SubmissionFile;
 
 // FIXME: Add namespacing
@@ -326,7 +325,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                             $collector = Repo::submissionFiles()
                                 ->getCollector()
                                 ->filterByAssoc(
-                                    [ASSOC_TYPE_REPRESENTATION],
+                                    ASSOC_TYPE_REPRESENTATION,
                                     [$representation->getId()]
                                 )->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
 

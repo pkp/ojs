@@ -173,7 +173,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 $innerCollector = Repo::submissionFiles()
                     ->getCollector()
                     ->filterByAssoc(
-                        [PKPApplication::ASSOC_TYPE_SUBMISSION_FILE],
+                        PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
                         [$submissionFile->getId()]
                     )
                     ->filterBySubmissionIds([$article->getId()])

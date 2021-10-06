@@ -456,7 +456,7 @@ class ArticleHandler extends Handler
                 $collector = Repo::submissionFiles()
                     ->getCollector()
                     ->filterByAssoc(
-                        [ASSOC_TYPE_SUBMISSION_FILE],
+                        ASSOC_TYPE_SUBMISSION_FILE,
                         [$this->galley->getFileId()]
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
