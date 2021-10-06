@@ -85,7 +85,6 @@ class Upgrade extends Installer
         return true;
     }
 
-
     /**
      * For 3.1.0 upgrade (#2467): In multi-journal upgrades from OJS 2.x, the
      * user_group_id column in the authors table may be updated to point to
