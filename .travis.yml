@@ -59,9 +59,6 @@ before_install:
     if [[ "$TEST" != "validation" ]]; then
       # Prepare for unit and integration tests.
 
-      # Creating and mounting database entrypoint as tmpfs volume
-      bash ./lib/pkp/tools/travis/database-tmpfs.sh
-
       # Prepare the server environment
       ./lib/pkp/tools/travis/prepare-webserver.sh
 
