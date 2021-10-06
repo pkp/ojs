@@ -9,7 +9,7 @@
 | 3.2.x   | :white_check_mark: Security only                      |               |
 | 3.1.x   | :white_check_mark: Security only; upgrade recommended |               |
 | 3.0.x   | :white_check_mark: Security only; upgrade recommended |               |
-| 2.x     | :white_check_mark:                                    | 2021          |
+| 2.x     | :x: Not supported                                     | 2021          |
 | 1.x     | :x: Not supported                                     | 2005 (approx) |
 
 ## Reporting a Vulnerability
