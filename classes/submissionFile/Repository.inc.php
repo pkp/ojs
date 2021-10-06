@@ -13,9 +13,10 @@
 
 namespace APP\submissionFile;
 
+use APP\core\Application;
 use Exception;
-use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\search\SubmissionSearch;
 use PKP\submissionFile\Repository as BaseRepository;
 use PKP\submissionFile\SubmissionFile;
 
@@ -25,7 +26,7 @@ class Repository extends BaseRepository
     {
         $submissionId = parent::add($submissionFile);
 
-        if ($submissionFile->getData('assocType') === PKPApplication::ASSOC_TYPE_REPRESENTATION) {
+        if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
             $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
             $galley = $galleyDao->getById($submissionFile->getData('assocId'));
             if (!$galley) {
@@ -36,5 +37,30 @@ class Repository extends BaseRepository
         }
 
         return $submissionId;
+    }
+
+    public function delete(SubmissionFile $submissionFile): void
+    {
+        $this->deleteRelatedSubmissionFileObjects($submissionFile);
+        parent::delete($submissionFile);
+    }
+
+    /**
+     * Delete related objects when a submission file is deleted
+     */
+    public function deleteRelatedSubmissionFileObjects(SubmissionFile $submissionFile): void
+    {
+        // Remove galley associations and update search index
+        if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galley = $galleyDao->getById($submissionFile->getData('assocId'));
+            if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
+                $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
+                $galleyDao->updateObject($galley);
+            }
+            // To-Do: Implement 4622 job cleaning here
+            $articleSearchIndex = Application::getSubmissionSearchIndex();
+            $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
+        }
     }
 }
