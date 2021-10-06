@@ -1,8 +1,9 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-05 15:20+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"PO-Revision-Date: 2021-10-07 03:06+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -25,3 +26,192 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Akses"
+
+msgid "manager.payment.readerFees"
+msgstr "Bayaran Pembaca"
+
+msgid "manager.payment.paymentType"
+msgstr "Jenis pembayaran"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Kaedah Pembayaran Yuran"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Anda boleh mengkonfigurasi mana-mana Plugin Kaedah Pembayaran berikut dari "
+"skrin ini."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Kaedah Pembayaran"
+
+msgid "manager.payment.paymentId"
+msgstr "ID Bayaran"
+
+msgid "manager.payment.options.text"
+msgstr "Butiran Kaedah Pembayaran"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Pembelian Isu"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Pembelian Artikel"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Caj Pemprosesan Artikel"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Akses terhad ke isu dan artikel versi PDF sahaja"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Keahlian Persatuan"
+
+msgid "manager.payment.options.feeName"
+msgstr "Nama Yuran"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Butiran Yuran"
+
+msgid "manager.payment.options.fee"
+msgstr "Yuran"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Pembayaran akan didayakan untuk jurnal ini. Catatan: pengguna akan diminta "
+"untuk log masuk untuk membuat pembayaran."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Adakah anda pasti mahu memadamkan langganan ini?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Ini akan mengaktifkan pembayaran untuk Langganan, di mana jenis, kos, tempoh "
+"dan langganan dikendalikan oleh Pengurus Jurnal (Langganan)."
+
+msgid "manager.payment.options"
+msgstr "Pilihan"
+
+msgid "manager.payment.notFound"
+msgstr "Tidak Dijumpai"
+
+msgid "manager.payment.noPayments"
+msgstr "Tiada Pembayaran"
+
+msgid "manager.payment.generalOptions"
+msgstr "Pilihan Umum"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Keahlian Persatuan akan muncul di Tentang Jurnal di bawah Polisi."
+
+msgid "manager.payment.generalFees"
+msgstr "Bayaran Am"
+
+msgid "manager.payment.form.numeric"
+msgstr "Semua kos mestilah nilai numerik positif (titik perpuluhan dibenarkan)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Pilihan Bayaran Yuran"
+
+msgid "manager.payment.enable"
+msgstr "Dayakan"
+
+msgid "manager.payment.editSubscription"
+msgstr "Sunting Langganan"
+
+msgid "manager.payment.details"
+msgstr "Perincian"
+
+msgid "manager.payment.description"
+msgstr "Butiran"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS tidak melakukan penukaran mata wang apa pun. Sekiranya menerima "
+"pembayaran untuk langganan, anda mesti memastikan bahawa mata wang langganan "
+"sepadan dengan yang ditentukan di sini."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Masukkan jumlah yuran di bawah untuk membolehkan caj pemprosesan pengarang."
+
+msgid "manager.payment.authorFees"
+msgstr "Yuran Pegarang"
+
+msgid "manager.payment.amount"
+msgstr "Jumlah"
+
+msgid "manager.payment.addPayment"
+msgstr "Tambah Pembayaran"
+
+msgid "manager.payment.action"
+msgstr "Tindakan"
+
+msgid "manager.managementPages"
+msgstr "Halaman Pengurusan"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Ini akan menjadi bahasa lalai untuk laman jurnal."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Maaf, tidak ada bahasa tambahan yang tersedia. Hubungi pentadbir laman web "
+"anda jika anda ingin menggunakan bahasa tambahan dengan jurnal ini."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS dapat disediakan untuk pengguna dalam beberapa bahasa yang disokong. "
+"Juga, OJS dapat beroperasi sebagai sistem multibahasa, menyediakan kemampuan "
+"pengguna untuk beralih antara bahasa di setiap halaman, dan memungkinkan "
+"data tertentu dimasukkan dalam beberapa bahasa tambahan. <br /> <br/> Jika "
+"bahasa yang disokong oleh OJS tidak disenaraikan di bawah, minta pentadbir "
+"laman web anda memasang bahasa dari antara muka pentadbiran laman web. Untuk "
+"arahan mengenai menambah sokongan untuk bahasa baru, sila rujuk dokumentasi "
+"OJS."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Ini akan menggantikan tetapan jurnal khusus bahasa yang anda miliki untuk "
+"bahasa ini"
+
+msgid "manager.language.forms"
+msgstr "Borang"
+
+msgid "manager.language.submissions"
+msgstr "Penyerahan"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.journalManagement"
+msgstr "Pengurusan Jurnal"
+
+msgid "manager.files.note"
+msgstr ""
+"Catatan: Pelayar Fail adalah ciri lanjutan yang membolehkan fail dan "
+"direktori yang berkaitan dengan jurnal dapat dilihat dan dimanipulasi secara "
+"langsung."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Adakah anda pasti mahu menetapkan semula semua templat e-mel dalam jurnal "
+"ini? Anda akan kehilangan penyesuaian yang telah anda buat."
+
+msgid "manager.website.archiving"
+msgstr "Pengarkiban"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Jurnal memerlukan langganan untuk mengakses sebahagian atau semua "
+"kandungannya."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Jurnal ini akan memberi akses terbuka untuk isi kandungan."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS tidak akan digunakan untuk menerbitkan isi kandungan jurnal dalam talian."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Mod Penerbitan"
+
+msgid "manager.distribution.publication"
+msgstr "Penerbitan"
