@@ -1,9 +1,10 @@
+# Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2021-05-10 23:12+0000\n"
+"PO-Revision-Date: 2021-10-08 00:19+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "it_IT/>\n"
@@ -1857,3 +1858,30 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Selezionare lo stato in cui questa rivista viene pubblicata, o lo stato in "
 "cui ha sede la rivista o il publisher."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nome del sito, nel caso sia ospitata più di una rivista"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Valuta per il pagamento (es. USD)"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Importo del pagamento"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Nome per la tipologia di pagamento"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Indirizzo email del contatto principale della rivista"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Firma per email automatiche"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Nome del contatto principale"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Indirizzo URL della rivista"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Nome della rivista"
