@@ -3,8 +3,8 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-08 00:19+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/author/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Serah Artikel"
 
 msgid "author.competingInterests"
 msgstr ""
-"Kepentingan bersaing <a target=\"_new\" class=\"action\" href=\""
+"Konflik kepentingan <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\"> Polisi CI </a>"
 
 msgid "author.track"
@@ -92,7 +92,7 @@ msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Pengenalpasti fail awam tambahan"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "Identifikasi awam fail tambahan sudah ada."
+msgstr "Pengenalpastian awam fail tambahan sudah ada."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
 msgstr "Sila masukkan butiran."
@@ -320,7 +320,7 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "Dalam Ulasan: Semakan Diperlukan"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Dalam Pusingan Penilaian {$round}"
+msgstr "Dalam Pusingan Ulasan {$round}"
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
