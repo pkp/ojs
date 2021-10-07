@@ -2,7 +2,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-07 03:06+0000\n"
+"PO-Revision-Date: 2021-10-08 00:19+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
@@ -70,3 +70,563 @@ msgstr "Jurnal Semasa:"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Jurnal ini tidak menerbitkan isi kandungannya dalam talian."
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Penyerahan dihantar ke arkib"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Fail penyunting dikemas kini"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Keputusan penyunting diserahkan"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Penyunting tidak ditugaskan daripada penyerahan"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Penyunting ditugaskan untuk penyerahan"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Fail semakan pengarang dikemas kini"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Penyemakan pengarang diserahkan"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikel diterbitkan"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Penyerahan ditugaskan untuk isu"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Penyerahan dihantar untuk mengeluarkan giliran penjadualan"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikel diserahkan"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Penyerahan naskah"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong> Catatan: </strong> Langganan institusi yang dibeli dalam talian "
+"memerlukan kelulusan domain dan julat IP sebelum langganan diaktifkan."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Langganan institusi tidak memerlukan log masuk. Domain dan/atau alamat IP "
+"pengguna digunakan untuk memberikan akses ke kandungan langganan."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Langganan individu memerlukan log masuk untuk mengakses kandungan langganan."
+
+msgid "subscriptions.status.other"
+msgstr "Lain-lain, Lihat Nota"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Anda tidak mempunyai langganan aktif."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Menunggu Pembayaran Dalam Talian"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Menunggu Pembayaran Manual"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Perlu Kelulusan"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Memerlukan Maklumat"
+
+msgid "subscriptions.status.active"
+msgstr "Aktif"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.inactive"
+msgstr "Tidak aktif"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Cetak dan Dalam Talian"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Cetak"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Dalam talian"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Tiada luput"
+
+msgid "subscriptionTypes.months"
+msgstr "bulan"
+
+msgid "subscriptionTypes.month"
+msgstr "bulan"
+
+msgid "subscriptionTypes.years"
+msgstr "tahun"
+
+msgid "subscriptionTypes.year"
+msgstr "tahun"
+
+msgid "subscriptionTypes.currency"
+msgstr "Mata Wang"
+
+msgid "issue.return"
+msgstr "Kembali ke Butiran Isu"
+
+msgid "issue.viewIssue"
+msgstr "Lihat Isu"
+
+msgid "issue.nonpdf.title"
+msgstr "Muat turun Isu"
+
+msgid "issue.fullIssue"
+msgstr "Isu Penuh"
+
+msgid "issue.coverPage.altText"
+msgstr "Muka hadapan"
+
+msgid "issue.abstract"
+msgstr "Abstrak"
+
+msgid "issue.toc"
+msgstr "Isi Kandungan"
+
+msgid "issue.vol"
+msgstr "Jil."
+
+msgid "issue.noIssues"
+msgstr "Tiada isu"
+
+msgid "issue.year"
+msgstr "Tahun"
+
+msgid "issue.no"
+msgstr "No."
+
+msgid "issue.number"
+msgstr "Nombor"
+
+msgid "issue.volume"
+msgstr "Jilid"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Lihat {$identification}"
+
+msgid "issue.title"
+msgstr "Tajuk"
+
+msgid "issue.issues"
+msgstr "Isu"
+
+msgid "issue.issue"
+msgstr "Isu"
+
+msgid "user.role.journalAssistants"
+msgstr "Pembantu Jurnal"
+
+msgid "user.role.journalAssistant"
+msgstr "Pembantu Jurnal"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Pengurus Langganan"
+
+msgid "user.role.subEditors"
+msgstr "Penyunting Seksyen"
+
+msgid "user.role.managers"
+msgstr "Pengurus Jurnal"
+
+msgid "user.role.subscriptionManager"
+msgstr "Pengurus Langganan"
+
+msgid "user.role.subEditor"
+msgstr "Penyunting Seksyen"
+
+msgid "user.role.manager"
+msgstr "Pengurus Jurnal"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Daftar sebagai Pengulas: Pendaftaran pengulas dinyahdayakan."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Daftar sebagai Pengulas"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Serah Artikel: Pendaftaran pengarang dinyahdayakan."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Serah Cadangan"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Akaun anda pada masa ini tidak mempunyai peranan untuk jurnal ini. Sila "
+"pilih dari tindakan di bawah:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Akaun anda tidak dikaitkan dengan mana-mana jurnal. Sila pilih jurnal:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Urus Langganan Saya"
+
+msgid "user.myJournals"
+msgstr "Jurnal Saya"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Sekiranya anda meminta untuk menjadi pengulas di mana-mana jurnal, sila "
+"masukkan minat subjek anda."
+
+msgid "user.register.otherContextRoles"
+msgstr "Minta peranan berikut."
+
+msgid "user.register.contextsPrompt"
+msgstr "Jurnal mana di laman web ini yang ingin anda daftarkan?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Ya, saya ingin dihubungi dengan permintaan untuk mengulas penyerahan ke "
+"jurnal ini."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ya, minta peranan {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Adakah anda bersedia untuk mengulas penyerahan ke jurnal ini?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Daftar untuk Jurnal Lain"
+
+msgid "user.showAllJournals"
+msgstr "Tunjukkan Jurnal Saya"
+
+msgid "user.profile.profileImage"
+msgstr "Gambar Profil"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Sertakan pengguna tanpa peranan dalam jurnal ini."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Galley yang diminta tidak dapat dijumpai."
+
+msgid "journal.viewAllIssues"
+msgstr "Lihat Semua Isu"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Jurnal"
+
+msgid "journal.path"
+msgstr "Laluan URL"
+
+msgid "context.contexts"
+msgstr "Jurnal"
+
+msgid "journal.currentIssue"
+msgstr "Isu Semasa"
+
+msgid "submission.search"
+msgstr "Pencarian Artikel"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Proofread"
+
+msgid "submissions.layoutComplete"
+msgstr "Susun atur diubah suai"
+
+msgid "submissions.copyeditComplete"
+msgstr "Copyedited"
+
+msgid "submission.eventLog"
+msgstr "Log Kejadian"
+
+msgid "submissions.editorRuling"
+msgstr "Ketetapan Editor"
+
+msgid "submissions.editorDecision"
+msgstr "Keputusan Penyunting"
+
+msgid "submissions.proof"
+msgstr "Bukti"
+
+msgid "submissions.reviewRound"
+msgstr "Pusingan Ulasan"
+
+msgid "submissions.postAuthor"
+msgstr "Pasca Pengarang"
+
+msgid "submissions.initialProof"
+msgstr "Bukti Awal"
+
+msgid "submissions.proofread"
+msgstr "Proofread"
+
+msgid "submissions.initial"
+msgstr "Awal"
+
+msgid "submissions.published"
+msgstr "Diterbitkan"
+
+msgid "submissions.queuedReview"
+msgstr "Dalam Ulasan"
+
+msgid "submissions.step3"
+msgstr "Langkah 3"
+
+msgid "submissions.step1"
+msgstr "Langkah 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Dijadualkan untuk penerbitan di {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Penjadualan"
+
+msgid "submission.proofreading"
+msgstr "Proofreading"
+
+msgid "submission.copyedit"
+msgstr "Copyedit"
+
+msgid "submission.copyediting"
+msgstr "Proses Copyediting"
+
+msgid "submission.authorVersion"
+msgstr "Versi Pengarang"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Versi fail yang disemak pengarang"
+
+msgid "submission.editorVersion"
+msgstr "Versi Penyunting"
+
+msgid "submission.postReviewVersion"
+msgstr "Versi fail pasca ulasan"
+
+msgid "submission.reviewersVersion"
+msgstr "Versi fail yang dianotasi oleh pengulas"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Rekod E-mel Editor/Pengarang"
+
+msgid "submission.notifyEditor"
+msgstr "Maklumkan kepada Editor"
+
+msgid "submission.notifyAuthor"
+msgstr "Maklumkan kepada Pengarang"
+
+msgid "submission.editorReview"
+msgstr "Ulasan Penyunting"
+
+msgid "submission.round"
+msgstr "Pusingan&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Keputusan Penyunting"
+
+msgid "submission.sent"
+msgstr "Dihantar"
+
+msgid "submission.changeSection"
+msgstr "Bertukar kepada"
+
+msgid "submission.submissionEditing"
+msgstr "Penyuntingan Penyerahan"
+
+msgid "category.category"
+msgstr "Kategori"
+
+msgid "article.return"
+msgstr "Kembali ke Butiran Artikel"
+
+msgid "article.fontSize.large.altText"
+msgstr "Besar"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Medium"
+
+msgid "article.fontSize.small.altText"
+msgstr "Kecil"
+
+msgid "article.fontSize"
+msgstr "Saiz Fon"
+
+msgid "article.comments.enable"
+msgstr "Dayakan"
+
+msgid "article.comments.disable"
+msgstr "Nyahdayakan"
+
+msgid "article.comments.sectionDefault"
+msgstr "Lalai"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Akses Terhad"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Akses Terbuka"
+
+msgid "article.coverPage.altText"
+msgstr "Gambar muka depan"
+
+msgid "article.abstract"
+msgstr "Abstrak"
+
+msgid "article.details"
+msgstr "Butiran"
+
+msgid "article.submissions"
+msgstr "Penyerahan"
+
+msgid "article.submission"
+msgstr "Penyerahan"
+
+msgid "article.commentsToEditor"
+msgstr "Komen pengarang"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Bahasa"
+
+msgid "article.type"
+msgstr "Jenis, kaedah atau pendekatan"
+
+msgid "article.coverage"
+msgstr "Liputan"
+
+msgid "article.subject"
+msgstr "Kata kunci"
+
+msgid "article.discipline"
+msgstr "Disiplin akademik dan sub-disiplin"
+
+msgid "article.suppFilesAbbrev"
+msgstr "File Tambahan"
+
+msgid "article.suppFiles"
+msgstr "Fail Tambahan"
+
+msgid "article.suppFile"
+msgstr "Fail Tambahan"
+
+msgid "article.file"
+msgstr "Fail"
+
+msgid "article.journalSection"
+msgstr "Seksyen Jurnal"
+
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.indexingInformation"
+msgstr "Maklumat Pengindeksan"
+
+msgid "article.authors"
+msgstr "Pengarang"
+
+msgid "article.title"
+msgstr "Tajuk"
+
+msgid "article.submissionId"
+msgstr "ID Penyerahan"
+
+msgid "common.publications"
+msgstr "Artikel"
+
+msgid "common.publication"
+msgstr "Artikel"
+
+msgid "article.articles"
+msgstr "Artikel"
+
+msgid "article.article"
+msgstr "Artikel"
+
+msgid "section.policy"
+msgstr "Polisi Seksyen"
+
+msgid "section.abbreviation.example"
+msgstr "(Contohnya, Artikel=ART )"
+
+msgid "section.abbreviation"
+msgstr "Singkatan"
+
+msgid "section.title"
+msgstr "Tajuk Seksyen"
+
+msgid "section.sections"
+msgstr "Seksyen"
+
+msgid "section.section"
+msgstr "Seksyen"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Penyunting yang ditugaskan"
+
+msgid "common.queue.short.completed"
+msgstr "Arkib"
+
+msgid "common.queue.long.completed"
+msgstr "Arkib"
+
+msgid "common.queue.short.active"
+msgstr "Aktif"
+
+msgid "common.queue.long.active"
+msgstr "Aktif"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arkib"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arkib"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Dalam Ulasan"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Penyerahan dalam Ulasan"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Dalam Penyuntingan"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Penyerahan dalam Penyuntingan"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Tidak ditugaskan"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Tidak ditugaskan"
+
+msgid "navigation.skip.issue"
+msgstr "Langkau ke isu semasa"
+
+msgid "navigation.skip.about"
+msgstr "Langkau ke jurnal"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Maklumat Untuk Pustakawan"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Maklumat Untuk Pengarang"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Garis Panduan Konflik Kepentingan"
+
+msgid "navigation.categories.browse"
+msgstr "Layari"
