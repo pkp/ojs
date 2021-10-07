@@ -3,7 +3,7 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-07 03:06+0000\n"
+"PO-Revision-Date: 2021-10-08 00:19+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
 "Yuran Penerbitan tidak dibayar. Untuk menjadualkan item untuk penerbitan "
-"beritahu pengarang untuk membayar yuran atau pengecualian yuran."
+"maklumkan pengarang untuk membayar yuran atau pengecualian yuran."
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Untuk Ditugaskan"
@@ -101,10 +101,10 @@ msgid "editor.article.decision"
 msgstr "Keputusan"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "Tandakan fail asal sebagai Versi Semak Semula"
+msgstr "Tandakan fail asal sebagai Versi Ulasan Semula"
 
 msgid "editor.navigation.issueArchive"
-msgstr "Isu-isu Belakang"
+msgstr "Isu Terdahulu"
 
 msgid "grid.action.setCurrentIssue"
 msgstr "Tetapkan Isu Semasa"
@@ -122,7 +122,7 @@ msgid "grid.action.publish"
 msgstr "Terbitkan Isu"
 
 msgid "editor.navigation.futureIssues"
-msgstr "Isu-isu Masa Depan"
+msgstr "Isu Akan Datang"
 
 msgid "editor.issues.identifiers"
 msgstr "Pengenalpasti"
@@ -134,7 +134,7 @@ msgid "editor.issues.open"
 msgstr "Buka"
 
 msgid "editor.issues.noLiveIssues"
-msgstr "Tiada Isu Langsung"
+msgstr "Tiada Isu Terbaru"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Tidak dapat menyimpan id awam untuk artikel:"
@@ -198,7 +198,7 @@ msgid "editor.issues.subscription"
 msgstr "Langganan"
 
 msgid "editor.issues.openAccess"
-msgstr "Buka akses"
+msgstr "Akses Terbuka"
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Paparan"
@@ -439,7 +439,7 @@ msgstr ""
 "dipilih untuk dimasukkan."
 
 msgid "editor.issues.volumeRequired"
-msgstr "Volume diperlukan dan mestilah nilai positif, berangka."
+msgstr "Jilid diperlukan dan mestilah nilai positif, berangka."
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
