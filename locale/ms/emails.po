@@ -1,9 +1,10 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-05 15:20+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"PO-Revision-Date: 2021-10-08 00:19+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/emails/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -226,3 +227,41 @@ msgstr ""
 
 msgid "emails.publishNotify.subject"
 msgstr "Isu Baru Diterbitkan"
+
+msgid "emails.reviewRequestAttached.subject"
+msgstr "Permintaan Ulasan Artikel"
+
+msgid "emails.reviewRequestRemindAutoOneclick.description"
+msgstr ""
+"E-mel ini dihantar secara automatik apabila tarikh akhir pengesahan pengulas "
+"berlalu (lihat Pilihan Ulasan di bawah Tetapan> Alur Kerja> Ulasan) dan "
+"akses one-click pengulas didayakan. Tugas berjadual mesti didayakan dan "
+"dikonfigurasi (lihat fail konfigurasi laman web)."
+
+msgid "emails.reviewRequestRemindAutoOneclick.subject"
+msgstr "Permintaan Ulasan Artikel"
+
+msgid "emails.reviewRequestOneclick.description"
+msgstr ""
+"E-mel ini dari Pengarang Seksyen kepada Pengulas meminta agar pengulas "
+"menerima atau menolak tugas untuk menyemak penyerahan. Ini memberikan "
+"maklumat mengenai penyerahan seperti tajuk dan abstrak, tarikh akhir "
+"tinjauan, dan cara mengakses kiriman itu sendiri. Mesej ini digunakan "
+"apabila Proses Ulasan Standard dipilih dalam Pengurusan> Tetapan> Alur Kerja>"
+" Ulasan, dan akses one-click pengulas didayakan."
+
+msgid "emails.reviewRequestOneclick.subject"
+msgstr "Permintaan Ulasan Artikel"
+
+msgid "emails.reviewRequestRemindAuto.description"
+msgstr ""
+"E-mel ini dihantar secara automatik apabila tarikh akhir pengesahan pengulas "
+"berlalu (lihat Pilihan Ulasan di bawah Tetapan> Alur Kerja> Ulasan) dan "
+"akses pengulas satu klik dilumpuhkan. Tugas berjadual mesti diaktifkan dan "
+"dikonfigurasi (lihat fail konfigurasi laman web)."
+
+msgid "emails.reviewRequestRemindAuto.subject"
+msgstr "Peringatan Permintaan Ulasan Artikel"
+
+msgid "emails.lockssExistingArchive.body"
+msgstr ""
