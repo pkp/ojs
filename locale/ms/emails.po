@@ -3,7 +3,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-08 16:24+0000\n"
+"PO-Revision-Date: 2021-10-08 16:38+0000\n"
 "Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/emails/ms/>\n"
 "Language: ms\n"
@@ -151,6 +151,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Notifikasi baharu dari {$siteTitle}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "E-mel ini dari Editor Bahagian kepada Pengulas meminta agar pengulas "
@@ -241,6 +242,7 @@ msgstr ""
 msgid "emails.reviewRequestRemindAutoOneclick.subject"
 msgstr "Permintaan Ulasan Artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestOneclick.description"
 msgstr ""
 "E-mel ini dari Pengarang Seksyen kepada Pengulas meminta agar pengulas "
@@ -387,3 +389,15 @@ msgstr ""
 "kasih kerana mempertimbangkan jurnal ini sebagai tempat kerja anda. <br />\n"
 "<br />\n"
 "{$editorialContactSignature}"
+
+msgid "emails.reviewCancel.subject"
+msgstr "Permintaan Ulasan Dibatalkan"
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr "Permintaan Ulasan Artikel"
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr "Permintaan Ulasan Artikel"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "Permintaan Ulasan Artikel"
