@@ -2,7 +2,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-08 00:19+0000\n"
+"PO-Revision-Date: 2021-10-08 14:18+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
@@ -630,3 +630,808 @@ msgstr "Garis Panduan Konflik Kepentingan"
 
 msgid "navigation.categories.browse"
 msgstr "Layari"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Sila masukkan julat IP yang sah."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Julat IP"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Sila masukkan domain yang sah."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Jenis langganan yang dipilih memerlukan domain dan/atau julat IP untuk "
+"pengesahan langganan."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Sekiranya domain dimasukkan di sini, julat IP adalah pilihan. <br /> Nilai "
+"yang sah adalah nama domain (mis. Lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Alamat surat menyurat"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Nama institusi diperlukan."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Nama Institusi"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Maklumat keahlian jika diperlukan untuk jenis langganan yang dipilih."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Akaun pengguna ini sudah mempunyai langganan individu."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Sila pilih jenis langganan yang sah."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Jenis langganan yang dipilih memerlukan maklumat keahlian."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Keahlian"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Jenis Langganan"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Lihat Jenis Langganan Yang Tersedia"
+
+msgid "user.subscriptions.expired"
+msgstr "Tamat tempoh: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Tamat tempoh: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Pembelian Langganan Institusi"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Pembelian Langganan Individu"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Pembelian Langganan Baru"
+
+msgid "user.subscriptions.purchase"
+msgstr "Pembelian"
+
+msgid "user.subscriptions.renew"
+msgstr "Perbaharui"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Langganan Institusi"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Langganan Individu"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"Pembayaran dalam talian telah dimulakan tetapi dibatalkan atau tidak selesai"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Pembayaran manual telah dimulakan tetapi belum diterima"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Langganan mesti disemak sebelum dapat diaktifkan"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Maklumat tambahan diperlukan sebelum langganan dapat diaktifkan"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Butiran"
+
+msgid "user.subscriptions.status"
+msgstr "Status"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Langganan aktif dan tamat tempoh ditunjukkan di bawah bersama dengan tarikh "
+"luputnya. Sebagai tambahan, maklumat status berikut dapat disertakan dengan "
+"setiap langganan."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Status Langganan"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Langganan Saya"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Anda mesti bersetuju dengan pernyataan privasi laman web ini."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Anda mesti menyetujui pernyataan privasi untuk jurnal yang anda daftarkan."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Ya, saya bersetuju agar data saya dikumpulkan dan disimpan mengikut jurnal "
+"ini <a href=\"{$privacyUrl}\" target=\"_blank\"> pernyataan privasi </a>."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Ya, saya ingin diberitahu tentang penerbitan dan pengumuman baru untuk semua "
+"jurnal yang saya daftarkan."
+
+msgid "user.register.reviewerInterests"
+msgstr "Kenal pasti bidang ulasan (bidang substantif dan kaedah penyelidikan):"
+
+msgid "user.register.reviewerDescription"
+msgstr "Bersedia melakukan ulasan sejawat serahan untuk penerbit."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Bersedia melakukan ulasan sejawat untuk serahan ke jurnal."
+
+msgid "user.register.authorDescription"
+msgstr "Mampu menyerahkan item ke jurnal."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Dimaklumkan melalui e-mel apabila isu jurnal dibuat akses terbuka."
+
+msgid "user.register.readerDescription"
+msgstr "Dimaklumkan melalui e-mel mengenai penerbitan isu jurnal."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Kata laluan yang anda masukkan tidak cukup panjang."
+
+msgid "user.register.registrationDisabled"
+msgstr "Jurnal pada masa ini tidak menerima pendaftaran pengguna."
+
+msgid "user.register.privacyStatement"
+msgstr "Kenyataan Privasi"
+
+msgid "user.register.noJournals"
+msgstr "Tidak ada jurnal yang boleh anda daftarkan di laman web ini."
+
+msgid "user.register.selectContext"
+msgstr "Pilih jurnal untuk mendaftar dengan:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Simpan dan Editor E-mel"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Simpan dan E-mel Pengarang"
+
+msgid "submission.comments.forEditor"
+msgstr "Untuk editor"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Untuk pengarang dan editor"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Setelah menghantar, kemukakan salinan BCC yang dapat diedit untuk dihantar "
+"kepada pengulas."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Untuk editor"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Untuk pengarang dan editor"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Komen ini boleh dikongsi dengan pengarang. <br />\n"
+"(Setelah menyimpan, komen selanjutnya dapat ditambahkan.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Komen Copyedit"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Surat-menyurat Editor/Pengarang"
+
+msgid "submission.logType.proofread"
+msgstr "Proofread"
+
+msgid "submission.logType.layout"
+msgstr "Susun atur"
+
+msgid "submission.logType.copyedit"
+msgstr "Copyedit"
+
+msgid "submission.logType.review"
+msgstr "Ulasan"
+
+msgid "submission.logType.editor"
+msgstr "Editor"
+
+msgid "submission.logType.author"
+msgstr "Pengarang"
+
+msgid "submission.logType.article"
+msgstr "Artikel"
+
+msgid "submission.proofread.instructions"
+msgstr "Arahan Proofing"
+
+msgid "submission.proofread.corrections"
+msgstr "Pembetulan Proofreading"
+
+msgid "submission.proofreadingComments"
+msgstr "Komen Proofreading"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Pautan Rujukan"
+
+msgid "submission.layout.instructions"
+msgstr "Arahan Susun atur"
+
+msgid "submission.layout.layoutComments"
+msgstr "Komen Susun atur"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Ganti Editor Susun atur"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Tugaskan Editor Susun atur"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Pengenalpastian galley umum sudah wujud."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Tidak ada (Muat naik versi copyedit akhir sebagai Versi Susun Atur sebelum "
+"mengirim permintaan)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Arahan Copyedit"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Komen Copyedit"
+
+msgid "submission.copyedit.useFile"
+msgstr "Gunakan Fail"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Tugaskan Copyeditor"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versi C/E"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Copyedit Akhir"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Pengarang Copyedit"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Copyedit Editor"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Copyedit Awal"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Permintaan e-mel tidak dapat dikirim sehingga fail dimuat naik untuk "
+"copyediting."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Permintaan e-mel tidak dapat dikirim sampai fail dipilih untuk copyediting "
+"dalam halaman Keputusan Editor, Ulasan."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Permintaan e-mel tidak dapat dihantar sehingga Versi Ulasan disediakan."
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Tiada Tugasan Proofreading"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Fail Copyeditor"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Fail Copyeditor"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fail untuk C/E"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Setelah membuat keputusan, anda tidak lagi dapat membuat perubahan pada "
+"ulasan ini. Adakah anda pasti mahu meneruskan?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Tiada cadangan yang dipilih. Anda mesti memilih cadangan untuk diserahkan."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Tetapkan atau sesuaikan cadangan pengulas."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Pilih cadangan dan serahkan ulasan untuk menyelesaikan prosesnya. Anda mesti "
+"memasukkan ulasan atau memuat naik fail sebelum memilih cadangan."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Di samping itu, anda boleh memuat naik fail untuk dirujuk oleh editor dan/"
+"atau pengarang."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Klik pada ikon untuk memasukkan (atau menampal) ulasan anda mengenai "
+"penyerahan ini."
+
+msgid "reviewer.competingInterests"
+msgstr "Konflik Kepentingan"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Nyatakan sama ada anda mempunyai konflik kepentingan dalam penyelidikan ini "
+"atau tidak (lihat <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\"> CI&nbsp; Polisi </a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Klik pada nama fail untuk memuat turun dan mengulas (di skrin atau dengan "
+"mencetak) fail yang berkaitan dengan penyerahan ini."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Sekiranya anda akan melakukan ulasan, rujuk Garis Panduan Pengulas di bawah."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "apakah Anda akan melakukan ulasan."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Beritahu editor penyerahan"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Garis Panduan Ulasan akan memberikan pengulas dengan kriteria untuk menilai "
+"kesesuaian penyerahan untuk diterbitkan di jurnal, dan dapat menyertakan "
+"arahan khusus untuk menyiapkan ulasan yang efektif dan bermanfaat. Dalam "
+"menjalankan ulasan, pengulas diberi dua kotak teks terbuka, yang pertama \""
+"untuk pengarang dan editor,\" dan yang kedua \"untuk editor.\" Sebagai "
+"alternatif, Pengurus Jurnal boleh mencipta borang ulasan sejawat di bawah "
+"Borang Ulasan. Dalam semua kes, editor akan mempunyai pilihan untuk "
+"memasukkan ulasan sesuai dengan pengarang."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Garis Panduan Pengulas"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Langkah-langkah Mengulas"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Jadual Ulasan"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Penyerahan Untuk Diulas"
+
+msgid "reviewer.article.schedule"
+msgstr "Jadual"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Lihat Komen"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Tolak Penyerahan"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Serah semula ke tempat lain"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Serah semula untuk Ulasan"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Semakan Diperlukan"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Terima Penyerahan"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Ulasan Tamat Tempoh"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Ulasan Diserahkan"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Respons anda"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Permintaan Editor"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Sekiranya anda ingin memberi anotasi pada fail, untuk editor, simpan di "
+"cakera keras anda dan gunakan Layari/Muat naik.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versi dimuat naik oleh pengulas"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Fail yang dimuat naik"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Komen"
+
+msgid "reviewer.article.submitReview"
+msgstr "Serah Ulasan kepada Editor"
+
+msgid "reviewer.article.recommendation"
+msgstr "Syor"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Hantar Peringatan"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor Untuk Dimasukkan"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Taip atau tampal di komen ulasan di sini"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor Penyerahan"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Penyerahan akan disediakan, jika dan ketika pengulas bersetuju untuk "
+"melakukan ulasan"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Tidak dapat membuat ulasan"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Akan melakukan ulasan"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Maklumkan kepada Editor"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fail akan diulas"
+
+msgid "reviewer.averageQuality"
+msgstr "Penarafan"
+
+msgid "reviewer.completedReviews"
+msgstr "Selesai"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artikel Menunggu Ulasan"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL kandungan yang dihoskan dari jarak jauh"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Galey ini akan tersedia di laman web yang berasingan."
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Format gambar tidak sah. Format yang diterima adalah .gif, .jpg, dan .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Muat naik fail tambahan"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Ganti Fail"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Muat naik format galley"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Tugasan Penyuntingan Susun atur"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Tiada tugasan editorial yang aktif."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Tugasan Editorial Selesai"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Tugasan Editorial Aktif"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Cipta Pengulas Baharu"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Daftarkan Pengguna Sedia Ada Sebagai Pengulas"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Hasil"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Penyesalan"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Penyesalan & Pembatalan Pengulas"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Keputusan Editor, Pusingan {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Ulasan Sejawat, Pusingan {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Lihat Penyesalan, Pembatalan, Pusingan Sebelumnya"
+
+msgid "sectionEditor.regrets"
+msgstr "Penyesalan"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Penyesalan Pengulas, Pembatalan & Pusingan Terdahulu"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Penyesalan"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Memaklumkan proofreader ini akan memulakan semula tugas mereka. Adakah anda "
+"pasti mahu melakukan ini?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Memaklumkan editor susun atur ini akan memulakan semula tugas mereka. Adakah "
+"anda pasti mahu melakukan ini?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Memaklumkan kepada pengarang ini akan memulakan semula tugas mereka. Adakah "
+"anda pasti mahu melakukan ini?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Memaklumkan editor salinan ini  akan memulakan semula tugas mereka. Adakah "
+"anda pasti mahu melakukan ini?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Tidak ada penyerahan yang ditugaskan."
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Tugasan Editorial Selesai"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Tugasan Editorial Aktif"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Maaf, anda tidak mempunyai hak pentadbiran terhadap pengguna ini. Ini "
+"mungkin kerana:\n"
+"\t\t<ul>\n"
+"\t\t\t<li> Pengguna adalah pentadbir laman web </li>\n"
+"\t\t\t<li> Pengguna aktif dalam jurnal yang tidak anda uruskan </li>\n"
+"\t\t</ul>\n"
+"\tTugas ini mesti dilaksanakan oleh pentadbir laman web.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Nyahdayakan pengguna ini? Ini akan mengelakkan pengguna masuk ke dalam "
+"sistem.\n"
+"\n"
+"Anda mempunyai pilihan untuk memberi alasan kepada pengguna untuk "
+"menyahdayakan akaun mereka."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Langkah: Barisan Penyerahan &gt;  Ulasan Penyerahan &gt; Penyuntingan "
+"Penyerahan &gt; Isi Kandungan. <br /> <br />\n"
+"Pilih model untuk menangani aspek-aspek proses penyuntingan ini. (Untuk "
+"menetapkan Editor Pengurus dan Editor Bahagian, pergi ke Editor dalam "
+"Pengurusan Jurnal.)"
+
+#, fuzzy
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3> Notis Hak Cipta Creative Commons yang dicadangkan </h3>\n"
+"<h4> 1. Polisi Cadanganuntuk Jurnal yang Menawarkan Akses Terbuka </h4>\n"
+"Pengarang yang menerbitkan dengan jurnal ini bersetuju dengan syarat berikut:"
+"\n"
+"<ol type = \"a\">\n"
+"\t<li> Pengarang mempertahankan hak cipta dan memberikan hak jurnal "
+"penerbitan pertama dengan karya yang dilesenkan secara serentak di bawah <a "
+"target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\"> "
+"Atribusi Creative Commons Lesen </a> yang membolehkan orang lain berkongsi "
+"karya dengan pengakuan kepengarangan karya dan penerbitan awal dalam jurnal "
+"ini. </li>\n"
+"\t<li> Pengarang dapat membuat perjanjian kontrak tambahan yang terpisah "
+"untuk pengedaran tidak eksklusif versi karya jurnal yang diterbitkan ("
+"contohnya, hantarkan ke repositori institusi atau terbitkan dalam buku), "
+"dengan pengakuan bahawa penerbitan awal dalam jurnal ini. </li>\n"
+"\t<li> Pengarang dibenarkan dan digalakkan untuk menghantar karya mereka "
+"secara dalam talian (contohnya, di repositori institusi atau di laman web "
+"mereka) sebelum dan semasa proses penyerahan, kerana dapat menyebabkan "
+"pertukaran produktif, serta petikan karya yang diterbitkan lebih awal dan "
+"lebih besar (Lihat <a target=\"_new\" href=\"http://opcit.eprints.org/"
+"oacitation-biblio.html\"> Kesan Akses Terbuka </a>). </li>\n"
+"</ol>\n"
+"\n"
+"<h4> 2. Cadangan Dasar untuk Jurnal yang Menawarkan Akses Terbuka Tertunda "
+"</h4>\n"
+"Pengarang yang menerbitkan dengan jurnal ini bersetuju dengan syarat berikut:"
+"\n"
+"<ol type = \"a\">\n"
+"<li> Pengarang mempunyai hak cipta dan memberikan hak jurnal penerbitan "
+"pertama, dengan karya [TEMPOH KHUSUS MASA] setelah penerbitan dilesenkan "
+"secara serentak di bawah <a target = \"_ new\" href = \""
+"http://creativecommons.org/licenses/ oleh / 3.0 / \"> Lesen Atribusi "
+"Creative Commons </a> yang membolehkan orang lain untuk berkongsi karya "
+"dengan pengakuan kepengarangan karya dan penerbitan awal dalam jurnal ini. "
+"</li>\n"
+"<li> Pengarang dapat membuat perjanjian kontrak tambahan yang terpisah untuk "
+"pengedaran tidak eksklusif versi karya jurnal yang diterbitkan (contohnya, "
+"hantarkan ke repositori institusi atau terbitkan dalam buku), dengan "
+"pengakuan bahawa penerbitan awal dalam jurnal ini. </li>\n"
+"<li> Pengarang dibenarkan dan digalakkan untuk menghantar karya mereka "
+"secara dalam talian (contohnya, di repositori institusi atau di laman web "
+"mereka) sebelum dan semasa proses penyerahan, kerana dapat menyebabkan "
+"pertukaran produktif, serta petikan karya yang diterbitkan lebih awal dan "
+"lebih besar (Lihat <a target=\"_new\" href=\"http://opcit.eprints.org/"
+"oacitation-biblio.html\"> Kesan Akses Terbuka </a>). </li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Plugin Generik digunakan untuk memperluas Open Journal Systems dengan "
+"pelbagai cara yang tidak disokong oleh kategori plugin yang lain."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Plugin Pengesahan membenarkan Open Journal Systems menyerahkan tugas "
+"pengesahan pengguna ke sistem lain, seperti pelayan LDAP."
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Artikel Galley Plugin menambah sokongan untuk menampilkan berbagai jenis "
+"dokumen sebagai artikel galley."
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Artikel Plugin Galley"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Jenis Langganan"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Langganan Institusi"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Langganan Individu"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Pengurusan Langganan"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4> CATATAN! </h4>\n"
+"<p> Sistem tidak dapat menimpa fail konfigurasi secara automatik. Untuk "
+"menerapkan perubahan konfigurasi anda, anda mesti membuka <tt> "
+"config.inc.php </tt> dalam penyunting teks yang sesuai dan menggantinya "
+"dengan isi bidang teks di bawah. </p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p> Menentukan sumber pengesahan lalai selain OJS mempunyai kesan berikut: "
+"</p>\n"
+"<ul>\n"
+"\t<li> Sekiranya pengguna cuba mendaftarkan akaun baru dengan laman web ini "
+"dengan nama pengguna yang terdapat pada sumber pengesahan (tetapi tidak "
+"terdapat dalam pangkalan data OJS), percubaan pendaftaran hanya dibenarkan "
+"jika kata laluan yang diberikan sah untuk akaun pengguna tersebut. </li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "dokumen serupa"
+
+msgid "search.results.orderDir.desc"
+msgstr "Menurun"
+
+msgid "search.results.orderDir.asc"
+msgstr "Menaik"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Kerelevanan"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Populariti (Bulan Lalu)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Populariti (Sepanjang Masa)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Tajuk Jurnal"
+
+msgid "search.results.orderBy.issue"
+msgstr "Isu"
+
+msgid "search.results.orderBy.date"
+msgstr "Tarikh penerbitan"
+
+msgid "search.results.orderBy.author"
+msgstr "Pengarang"
+
+msgid "search.results.orderBy.article"
+msgstr "Tajuk Artikel"
+
+msgid "search.results.orderBy"
+msgstr "Susunan hasil carian mengikut"
+
+msgid "comments.authenticated"
+msgstr "oleh <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komen mengenai artikel ini"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Memerlukan Langganan atau Yuran"
+
+msgid "reader.subscriptionAccess"
+msgstr "Memerlukan Langganan"
+
+msgid "reader.openAccess"
+msgstr "Akses Terbuka"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Langganan diperlukan untuk mengakses item. Untuk mengesahkan langganan, log "
+"masuk ke jurnal."
+
+msgid "reader.subscribersOnly"
+msgstr "Pelanggan Sahaja"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Tugasan susun atur selesai"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Susun atur galley dikemas kini"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Tugasan susun atur dimulakan"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Editor susun atur tidak ditugaskan untuk penyerahan"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Editor susun atur ditugaskan untuk penyerahan"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Tugasan Proofread selesai"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Fail semakan Proofreader dikemas kini"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Tugasan Proofread dimulakan"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Proofreader tidak ditugaskan untuk penyerahan"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Proofreader ditugaskan untuk penyerahan"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Fail Copyedit dikemas kini"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Copyedit akhir selesai"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Copyedit awal selesai"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Fail semakan copyeditor dikemas kini"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Tugasan copyedit dimulakan"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Copyeditor tidak ditugaskan untuk penyerahan"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Copyeditor ditugaskan untuk penyerahan"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Penyerahan dipulihkan dari arkib"
