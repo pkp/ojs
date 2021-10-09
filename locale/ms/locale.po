@@ -1,9 +1,10 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 # Studiorimau <studiorimau@gmail.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-08 14:18+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"PO-Revision-Date: 2021-10-09 14:11+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -34,10 +35,10 @@ msgid "navigation.journalHelp"
 msgstr "Bantuan Jurnal"
 
 msgid "common.journalHomepageImage.altText"
-msgstr "Gambar Laman web Jurnal"
+msgstr "Imej Laman Utama Jurnal"
 
 msgid "common.homePageHeader.altText"
-msgstr "Header Laman web"
+msgstr "Tajuk Laman Web"
 
 msgid "common.payments"
 msgstr "Bayaran"
@@ -75,22 +76,22 @@ msgid "submission.event.editor.submissionArchived"
 msgstr "Penyerahan dihantar ke arkib"
 
 msgid "submission.event.editor.editorFile"
-msgstr "Fail penyunting dikemas kini"
+msgstr "Fail Editor dikemas kini"
 
 msgid "submission.event.editor.editorDecision"
-msgstr "Keputusan penyunting diserahkan"
+msgstr "Keputusan Editor diserahkan"
 
 msgid "submission.event.editor.editorUnassigned"
-msgstr "Penyunting tidak ditugaskan daripada penyerahan"
+msgstr "Editor tidak ditugaskan daripada penyerahan"
 
 msgid "submission.event.editor.editorAssigned"
-msgstr "Penyunting ditugaskan untuk penyerahan"
+msgstr "Editor ditugaskan untuk penyerahan"
 
 msgid "submission.event.general.authorRevision"
 msgstr "Fail semakan pengarang dikemas kini"
 
 msgid "submission.event.author.authorRevision"
-msgstr "Penyemakan pengarang diserahkan"
+msgstr "Semakan pengarang diserahkan"
 
 msgid "submission.event.general.articlePublished"
 msgstr "Artikel diterbitkan"
@@ -105,11 +106,11 @@ msgid "submission.event.submissionSubmitted"
 msgstr "Artikel diserahkan"
 
 msgid "submission.event.general.defaultEvent"
-msgstr "Penyerahan naskah"
+msgstr "Peristiwa penyerahan"
 
 msgid "subscriptions.institutionalOnlinePaymentDescription"
 msgstr ""
-"<strong> Catatan: </strong> Langganan institusi yang dibeli dalam talian "
+"<strong>Catatan: </strong> Langganan institusi yang dibeli dalam talian "
 "memerlukan kelulusan domain dan julat IP sebelum langganan diaktifkan."
 
 msgid "subscriptions.institutionalDescription"
@@ -239,7 +240,7 @@ msgid "user.role.subscriptionManagers"
 msgstr "Pengurus Langganan"
 
 msgid "user.role.subEditors"
-msgstr "Penyunting Seksyen"
+msgstr "Bahagian Editor"
 
 msgid "user.role.managers"
 msgstr "Pengurus Jurnal"
@@ -248,7 +249,7 @@ msgid "user.role.subscriptionManager"
 msgstr "Pengurus Langganan"
 
 msgid "user.role.subEditor"
-msgstr "Penyunting Seksyen"
+msgstr "Bahagian Editor"
 
 msgid "user.role.manager"
 msgstr "Pengurus Jurnal"
@@ -341,19 +342,19 @@ msgid "submissions.proofreadingComplete"
 msgstr "Proofread"
 
 msgid "submissions.layoutComplete"
-msgstr "Susun atur diubah suai"
+msgstr "Susun atur disunting"
 
 msgid "submissions.copyeditComplete"
 msgstr "Copyedited"
 
 msgid "submission.eventLog"
-msgstr "Log Kejadian"
+msgstr "Log Peristiwa"
 
 msgid "submissions.editorRuling"
 msgstr "Ketetapan Editor"
 
 msgid "submissions.editorDecision"
-msgstr "Keputusan Penyunting"
+msgstr "Keputusan Editor"
 
 msgid "submissions.proof"
 msgstr "Bukti"
@@ -401,7 +402,7 @@ msgid "submission.copyedit"
 msgstr "Copyedit"
 
 msgid "submission.copyediting"
-msgstr "Proses Copyediting"
+msgstr "Copyediting"
 
 msgid "submission.authorVersion"
 msgstr "Versi Pengarang"
@@ -410,7 +411,7 @@ msgid "submission.authorsRevisedVersion"
 msgstr "Versi fail yang disemak pengarang"
 
 msgid "submission.editorVersion"
-msgstr "Versi Penyunting"
+msgstr "Versi Editor"
 
 msgid "submission.postReviewVersion"
 msgstr "Versi fail pasca ulasan"
@@ -428,13 +429,13 @@ msgid "submission.notifyAuthor"
 msgstr "Maklumkan kepada Pengarang"
 
 msgid "submission.editorReview"
-msgstr "Ulasan Penyunting"
+msgstr "Ulasan Editor"
 
 msgid "submission.round"
 msgstr "Pusingan&nbsp;{$round}"
 
 msgid "submission.editorDecision"
-msgstr "Keputusan Penyunting"
+msgstr "Keputusan Editor"
 
 msgid "submission.sent"
 msgstr "Dihantar"
@@ -527,7 +528,7 @@ msgid "article.file"
 msgstr "Fail"
 
 msgid "article.journalSection"
-msgstr "Seksyen Jurnal"
+msgstr "Bahagian Jurnal"
 
 msgid "article.metadata"
 msgstr "Metadata"
@@ -557,7 +558,7 @@ msgid "article.article"
 msgstr "Artikel"
 
 msgid "section.policy"
-msgstr "Polisi Seksyen"
+msgstr "Bahagian Polisi"
 
 msgid "section.abbreviation.example"
 msgstr "(Contohnya, Artikel=ART )"
@@ -566,13 +567,13 @@ msgid "section.abbreviation"
 msgstr "Singkatan"
 
 msgid "section.title"
-msgstr "Tajuk Seksyen"
+msgstr "Tajuk bahagian"
 
 msgid "section.sections"
-msgstr "Seksyen"
+msgstr "Bahagian"
 
 msgid "section.section"
-msgstr "Seksyen"
+msgstr "Bahagian"
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "Penyunting yang ditugaskan"
@@ -626,7 +627,7 @@ msgid "navigation.infoForAuthors.long"
 msgstr "Maklumat Untuk Pengarang"
 
 msgid "navigation.competingInterestGuidelines"
-msgstr "Garis Panduan Konflik Kepentingan"
+msgstr "Garis Panduan Kepentingan Bersaing"
 
 msgid "navigation.categories.browse"
 msgstr "Layari"
@@ -795,7 +796,7 @@ msgid "user.register.selectContext"
 msgstr "Pilih jurnal untuk mendaftar dengan:"
 
 msgid "submission.comments.saveAndEmailEditor"
-msgstr "Simpan dan Editor E-mel"
+msgstr "Simpan dan E-mel Editor"
 
 msgid "submission.comments.saveAndEmailAuthor"
 msgstr "Simpan dan E-mel Pengarang"
@@ -808,8 +809,8 @@ msgstr "Untuk pengarang dan editor"
 
 msgid "submission.comments.blindCcReviewers"
 msgstr ""
-"Setelah menghantar, kemukakan salinan BCC yang dapat diedit untuk dihantar "
-"kepada pengulas."
+"Setelah menghantar, kemukakan salinan BCC yang dapat disunting untuk "
+"dihantar kepada pengulas."
 
 msgid "submission.comments.cannotShareWithAuthor"
 msgstr "Untuk editor"
@@ -878,8 +879,8 @@ msgstr "Pengenalpastian galley umum sudah wujud."
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
-"Tidak ada (Muat naik versi copyedit akhir sebagai Versi Susun Atur sebelum "
-"mengirim permintaan)"
+"Tidak ada (Muat naik versi copyedit akhir sebagai Versi Susun atur sebelum "
+"menghantar permintaan)"
 
 msgid "submission.copyedit.instructions"
 msgstr "Arahan Copyedit"
@@ -900,7 +901,7 @@ msgid "submission.copyedit.finalCopyedit"
 msgstr "Copyedit Akhir"
 
 msgid "submission.copyedit.editorAuthorReview"
-msgstr "Pengarang Copyedit"
+msgstr "Copyedit Pengarang"
 
 msgid "submission.copyedit.editorsCopyedit"
 msgstr "Copyedit Editor"
@@ -915,7 +916,7 @@ msgstr ""
 
 msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
 msgstr ""
-"Permintaan e-mel tidak dapat dikirim sampai fail dipilih untuk copyediting "
+"Permintaan e-mel tidak dapat dikirim sehingga fail dipilih untuk copyediting "
 "dalam halaman Keputusan Editor, Ulasan."
 
 msgid "submission.review.mustUploadFileForReview"
@@ -931,7 +932,7 @@ msgid "copyeditor.article.copyeditorFile"
 msgstr "Fail Copyeditor"
 
 msgid "copyeditor.article.fileToCopyedit"
-msgstr "Fail untuk C/E"
+msgstr "Fail Untuk C/E"
 
 msgid "reviewer.article.confirmDecision"
 msgstr ""
@@ -947,7 +948,7 @@ msgstr "Tetapkan atau sesuaikan cadangan pengulas."
 
 msgid "reviewer.article.selectRecommendation"
 msgstr ""
-"Pilih cadangan dan serahkan ulasan untuk menyelesaikan prosesnya. Anda mesti "
+"Pilih cadangan dan serahkan ulasan untuk melengkapkan proses. Anda mesti "
 "memasukkan ulasan atau memuat naik fail sebelum memilih cadangan."
 
 msgid "reviewer.article.uploadFile"
@@ -961,13 +962,13 @@ msgstr ""
 "penyerahan ini."
 
 msgid "reviewer.competingInterests"
-msgstr "Konflik Kepentingan"
+msgstr "Kepentingan Bersaing"
 
 msgid "reviewer.article.enterCompetingInterests"
 msgstr ""
-"Nyatakan sama ada anda mempunyai konflik kepentingan dalam penyelidikan ini "
-"atau tidak (lihat <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\"> CI&nbsp; Polisi </a>)."
+"Isytihar sama ada anda mempunyai kepentingan bersaing berkenaan dengan "
+"penyelidikan ini (lihat <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Dasar</a>)."
 
 msgid "reviewer.article.downloadSubmission"
 msgstr ""
@@ -979,10 +980,10 @@ msgstr ""
 "Sekiranya anda akan melakukan ulasan, rujuk Garis Panduan Pengulas di bawah."
 
 msgid "reviewer.article.notifyEditorB"
-msgstr "apakah Anda akan melakukan ulasan."
+msgstr "apakah anda akan melakukan ulasan."
 
 msgid "reviewer.article.notifyEditorA"
-msgstr "Beritahu editor penyerahan"
+msgstr "Maklumkan kepada editor penyerahan"
 
 msgid "reviewer.article.reviewGuidelinesDescription"
 msgstr ""
@@ -991,7 +992,7 @@ msgstr ""
 "arahan khusus untuk menyiapkan ulasan yang efektif dan bermanfaat. Dalam "
 "menjalankan ulasan, pengulas diberi dua kotak teks terbuka, yang pertama \""
 "untuk pengarang dan editor,\" dan yang kedua \"untuk editor.\" Sebagai "
-"alternatif, Pengurus Jurnal boleh mencipta borang ulasan sejawat di bawah "
+"alternatif, Pengurus Jurnal boleh mencipta borang ulasan rakan di bawah "
 "Borang Ulasan. Dalam semua kes, editor akan mempunyai pilihan untuk "
 "memasukkan ulasan sesuai dengan pengarang."
 
@@ -999,10 +1000,10 @@ msgid "reviewer.article.reviewerGuidelines"
 msgstr "Garis Panduan Pengulas"
 
 msgid "reviewer.article.reviewSteps"
-msgstr "Langkah-langkah Mengulas"
+msgstr "Semak semula Langkah"
 
 msgid "reviewer.article.reviewSchedule"
-msgstr "Jadual Ulasan"
+msgstr "Semak semula Jadual"
 
 msgid "reviewer.article.submissionToBeReviewed"
 msgstr "Penyerahan Untuk Diulas"
@@ -1035,7 +1036,7 @@ msgid "reviewer.article.schedule.submitted"
 msgstr "Ulasan Diserahkan"
 
 msgid "reviewer.article.schedule.response"
-msgstr "Respons anda"
+msgstr "Maklum balas anda"
 
 msgid "reviewer.article.schedule.request"
 msgstr "Permintaan Editor"
@@ -1058,7 +1059,7 @@ msgid "reviewer.article.submitReview"
 msgstr "Serah Ulasan kepada Editor"
 
 msgid "reviewer.article.recommendation"
-msgstr "Syor"
+msgstr "Pengesyoran"
 
 msgid "reviewer.article.automatic"
 msgstr "(Auto)"
@@ -1105,7 +1106,7 @@ msgid "submission.layout.galley.remoteURL"
 msgstr "URL kandungan yang dihoskan dari jarak jauh"
 
 msgid "submission.layout.galley.remotelyHostedContent"
-msgstr "Galey ini akan tersedia di laman web yang berasingan."
+msgstr "Galley ini akan tersedia di laman web yang berasingan."
 
 msgid "submission.layout.imageInvalid"
 msgstr ""
@@ -1124,13 +1125,13 @@ msgid "layoutEditor.layoutEditingAssignments"
 msgstr "Tugasan Penyuntingan Susun atur"
 
 msgid "layoutEditor.noActiveAssignments"
-msgstr "Tiada tugasan editorial yang aktif."
+msgstr "Tiada tugasan aktif editorial."
 
 msgid "layoutEditor.completedEditorialAssignments"
-msgstr "Tugasan Editorial Selesai"
+msgstr "Tugasan Selesai Editorial"
 
 msgid "layoutEditor.activeEditorialAssignments"
-msgstr "Tugasan Editorial Aktif"
+msgstr "Tugasan Aktif Editorial"
 
 msgid "sectionEditor.review.createReviewer"
 msgstr "Cipta Pengulas Baharu"
@@ -1151,7 +1152,7 @@ msgid "sectionEditor.regrets.decisionRound"
 msgstr "Keputusan Editor, Pusingan {$round}"
 
 msgid "sectionEditor.regrets.reviewRound"
-msgstr "Ulasan Sejawat, Pusingan {$round}"
+msgstr "Ulasan Rakan, Pusingan {$round}"
 
 msgid "sectionEditor.regrets.link"
 msgstr "Lihat Penyesalan, Pembatalan, Pusingan Sebelumnya"
@@ -1172,7 +1173,7 @@ msgstr ""
 
 msgid "sectionEditor.layout.confirmRenotify"
 msgstr ""
-"Memaklumkan editor susun atur ini akan memulakan semula tugas mereka. Adakah "
+"Memaklumkan susun atur editor ini akan memulakan semula tugas mereka. Adakah "
 "anda pasti mahu melakukan ini?"
 
 msgid "sectionEditor.author.confirmRenotify"
@@ -1180,19 +1181,20 @@ msgstr ""
 "Memaklumkan kepada pengarang ini akan memulakan semula tugas mereka. Adakah "
 "anda pasti mahu melakukan ini?"
 
+#, fuzzy
 msgid "sectionEditor.copyedit.confirmRenotify"
 msgstr ""
 "Memaklumkan editor salinan ini  akan memulakan semula tugas mereka. Adakah "
 "anda pasti mahu melakukan ini?"
 
 msgid "sectionEditor.noneAssigned"
-msgstr "Tidak ada penyerahan yang ditugaskan."
+msgstr "Tiada penyerahan yang ditugaskan."
 
 msgid "sectionEditor.completedEditorialAssignments"
-msgstr "Tugasan Editorial Selesai"
+msgstr "Tugasan Selesai Editorial"
 
 msgid "sectionEditor.activeEditorialAssignments"
-msgstr "Tugasan Editorial Aktif"
+msgstr "Tugasan Aktif Editorial"
 
 msgid "manager.people.noAdministrativeRights"
 msgstr ""
@@ -1207,12 +1209,13 @@ msgstr ""
 
 msgid "manager.people.confirmDisable"
 msgstr ""
-"Nyahdayakan pengguna ini? Ini akan mengelakkan pengguna masuk ke dalam "
+"Nyahdayakan pengguna ini? Ini akan mengelakkan pengguna log masuk ke dalam "
 "sistem.\n"
 "\n"
 "Anda mempunyai pilihan untuk memberi alasan kepada pengguna untuk "
 "menyahdayakan akaun mereka."
 
+#, fuzzy
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "Langkah: Barisan Penyerahan &gt;  Ulasan Penyerahan &gt; Penyuntingan "
@@ -1225,7 +1228,7 @@ msgstr ""
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
 "<h3> Notis Hak Cipta Creative Commons yang dicadangkan </h3>\n"
-"<h4> 1. Polisi Cadanganuntuk Jurnal yang Menawarkan Akses Terbuka </h4>\n"
+"<h4> 1. Polisi Cadangan untuk Jurnal yang Menawarkan Akses Terbuka </h4>\n"
 "Pengarang yang menerbitkan dengan jurnal ini bersetuju dengan syarat berikut:"
 "\n"
 "<ol type = \"a\">\n"
@@ -1303,11 +1306,11 @@ msgstr "Pengurusan Langganan"
 
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
-"<h4> CATATAN! </h4>\n"
-"<p> Sistem tidak dapat menimpa fail konfigurasi secara automatik. Untuk "
-"menerapkan perubahan konfigurasi anda, anda mesti membuka <tt> "
-"config.inc.php </tt> dalam penyunting teks yang sesuai dan menggantinya "
-"dengan isi bidang teks di bawah. </p>"
+"<h4>CATATAN!</h4>\n"
+"<p>Sistem tidak dapat menimpa fail konfigurasi secara automatik. Untuk "
+"menerapkan perubahan konfigurasi anda, anda mesti membuka "
+"<tt>config.inc.php</tt> dalam penyunting teks yang sesuai dan menggantinya "
+"dengan isi bidang teks di bawah.</p>"
 
 msgid "admin.auth.defaultSourceDescription"
 msgstr ""
@@ -1330,7 +1333,7 @@ msgid "search.results.orderDir.asc"
 msgstr "Menaik"
 
 msgid "search.results.orderBy.relevance"
-msgstr "Kerelevanan"
+msgstr "Perkaitan"
 
 msgid "search.results.orderBy.popularityMonth"
 msgstr "Populariti (Bulan Lalu)"
@@ -1354,7 +1357,7 @@ msgid "search.results.orderBy.article"
 msgstr "Tajuk Artikel"
 
 msgid "search.results.orderBy"
-msgstr "Susunan hasil carian mengikut"
+msgstr "Susun hasil carian mengikut"
 
 msgid "comments.authenticated"
 msgstr "oleh <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
@@ -1392,10 +1395,10 @@ msgid "submission.event.layout.layoutInitiated"
 msgstr "Tugasan susun atur dimulakan"
 
 msgid "submission.event.layout.layoutEditorUnassigned"
-msgstr "Editor susun atur tidak ditugaskan untuk penyerahan"
+msgstr "Susun atur Editor tidak ditugaskan untuk penyerahan"
 
 msgid "submission.event.layout.layoutEditorAssigned"
-msgstr "Editor susun atur ditugaskan untuk penyerahan"
+msgstr "Susun atur Editor ditugaskan untuk penyerahan"
 
 msgid "submission.event.proofread.proofreadCompleted"
 msgstr "Tugasan Proofread selesai"
@@ -1422,7 +1425,7 @@ msgid "submission.event.copyedit.copyeditInitialCompleted"
 msgstr "Copyedit awal selesai"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Fail semakan copyeditor dikemas kini"
+msgstr "Fail semakan Copyeditor dikemas kini"
 
 msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Tugasan copyedit dimulakan"
@@ -1435,3 +1438,20 @@ msgstr "Copyeditor ditugaskan untuk penyerahan"
 
 msgid "submission.event.editor.submissionRestored"
 msgstr "Penyerahan dipulihkan dari arkib"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Item yang diserlahkan menunjukkan tindakan diperlukan oleh editor, "
+"dilabelkan seperti berikut:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Tindakan diperlukan dalam peringkat "
+"copyediting</li></li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Tindakan diperlukan dalam "
+"peringkat susun atur penyuntingan</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Tindakan diperlukan di peringkat "
+"bacaan proofreading</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
