@@ -3,8 +3,8 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-08 00:19+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"PO-Revision-Date: 2021-10-10 06:06+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -62,16 +62,16 @@ msgid "editor.article.showPublicationVersion"
 msgstr "Tunjukkan Penerbitan yang Dijadualkan"
 
 msgid "editor.submissions.inSection"
-msgstr "Dalam Seksyen"
+msgstr "Dalam Bahagian"
 
 msgid "issues.submissions.issueIds"
 msgstr "Ditugaskan kepada Isu"
 
 msgid "editor.submissions.assignedTo"
-msgstr "Ditugaskan kepada Penyunting"
+msgstr "Ditugaskan kepada Editor"
 
 msgid "editor.submissions.lastCompleted"
-msgstr "Lengkap Terakhir"
+msgstr "Terakhir Lengkap"
 
 msgid "editor.submissions.averageTime"
 msgstr "Minggu"
@@ -143,7 +143,7 @@ msgid "editor.issues.confirmSetCurrentIssue"
 msgstr "Adakah anda pasti hendak menetapkan isu ini sebagai semasa?"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Adakah anda pasti hendak menyahterbitkan isu yang diterbitkan ini?"
+msgstr "Adakah anda pasti hendak tidak menerbitkan isu yang diterbitkan ini?"
 
 msgid "editor.issues.confirmPublish"
 msgstr "Adakah anda pasti hendak menerbitkan isu baharu?"
@@ -174,7 +174,7 @@ msgstr "Simpan perubahan pada isi kandungan?"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"Isu ini menggunakan susunan seksyen custom. <a href=\"{$url}\" class=\""
+"Isu ini menggunakan susunan bahagian custom. <a href=\"{$url}\" class=\""
 "action\">Set semula kepada lalai</a>"
 
 msgid "editor.issues.resetIssueOrder"
@@ -317,7 +317,7 @@ msgid "editor.issues.createIssue"
 msgstr "Cipta Isu"
 
 msgid "editor.editorAdministration"
-msgstr "Pentadbiran Penyunting"
+msgstr "Pentadbiran Editor"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Sertakan isi kandungan daripada isu ini:"
@@ -379,10 +379,10 @@ msgid "editor.me"
 msgstr "Saya"
 
 msgid "editor.allEditors"
-msgstr "Semua Penyunting"
+msgstr "Semua Editor"
 
 msgid "editor.allSections"
-msgstr "Semua Seksyen"
+msgstr "Semua Bahagian"
 
 msgid "editor.publishedIssues"
 msgstr "Isu Penerbitan"
@@ -403,7 +403,7 @@ msgid "editor.reassign"
 msgstr "Tetapkan semula"
 
 msgid "editor.home"
-msgstr "Laman Utama Penyunting"
+msgstr "Laman Utama Editor"
 
 msgid "editor.issues.galley"
 msgstr "Isu Galley"
@@ -452,7 +452,7 @@ msgstr "Pilih Fail Galley"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"Susun atur penyunting menyediakan fail ini untuk setiap galley dan kemudian "
+"Susun atur editor menyediakan fail ini untuk setiap galley dan kemudian "
 "memuat naik ke <span class=\"pkp_help_title\">Bukti</span> yang sesuai untuk "
 "proofreading."
 
@@ -463,7 +463,7 @@ msgid "editor.issues.backToIssueGalleys"
 msgstr "Kembali ke isu galley"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Pengenalpastian isu galley awam sudah ada."
+msgstr "Pengenalpastian isu galley awam sudah wujud."
 
 msgid "editor.issues.galleyLocaleRequired"
 msgstr "Bahasa isu galley diperlukan."
