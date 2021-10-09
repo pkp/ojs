@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-10-10 06:06+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -658,7 +658,7 @@ msgid "user.subscriptions.form.domain"
 msgstr "Domain"
 
 msgid "user.subscriptions.form.institutionMailingAddress"
-msgstr "Alamat surat menyurat"
+msgstr "Alamat surat-menyurat"
 
 msgid "user.subscriptions.form.institutionNameRequired"
 msgstr "Nama institusi diperlukan."
@@ -706,7 +706,7 @@ msgid "user.subscriptions.purchase"
 msgstr "Pembelian"
 
 msgid "user.subscriptions.renew"
-msgstr "Perbaharui"
+msgstr "Memperbaharui"
 
 msgid "user.subscriptions.institutionalSubscriptions"
 msgstr "Langganan Institusi"
@@ -746,30 +746,31 @@ msgid "user.subscriptions.mySubscriptions"
 msgstr "Langganan Saya"
 
 msgid "user.register.form.missingSiteConsent"
-msgstr "Anda mesti bersetuju dengan pernyataan privasi laman web ini."
+msgstr "Anda mesti bersetuju dengan kenyataan privasi laman web ini."
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
-"Anda mesti menyetujui pernyataan privasi untuk jurnal yang anda daftarkan."
+"Anda mesti bersetuju dengan kenyataan privasi untuk mana-mana jurnal yang "
+"anda mendaftar."
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
 "Ya, saya bersetuju agar data saya dikumpulkan dan disimpan mengikut jurnal "
-"ini <a href=\"{$privacyUrl}\" target=\"_blank\"> pernyataan privasi </a>."
+"ini <a href=\"{$privacyUrl}\" target=\"_blank\">kenyataan privasi</a>."
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr ""
-"Ya, saya ingin diberitahu tentang penerbitan dan pengumuman baru untuk semua "
-"jurnal yang saya daftarkan."
+"Ya, saya ingin dimaklumkan tentang penerbitan dan pengumuman baharu untuk "
+"semua jurnal yang saya daftarkan."
 
 msgid "user.register.reviewerInterests"
 msgstr "Kenal pasti bidang ulasan (bidang substantif dan kaedah penyelidikan):"
 
 msgid "user.register.reviewerDescription"
-msgstr "Bersedia melakukan ulasan sejawat serahan untuk penerbit."
+msgstr "Bersedia melakukan ulasan rakan untuk penyerahan ke laman web ini."
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Bersedia melakukan ulasan sejawat untuk serahan ke jurnal."
+msgstr "Bersedia melakukan ulasan rakan untuk penyerahan ke jurnal."
 
 msgid "user.register.authorDescription"
 msgstr "Mampu menyerahkan item ke jurnal."
@@ -1509,3 +1510,439 @@ msgstr ""
 "atur dapat menambahkan pautan ke rujukan yang boleh didapati dalam talian "
 "dengan menggunakan petunjuk berikut (yang boleh diedit). </p> </ li>\n"
 "</ol>"
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} telah menyemak semula artikel {$submissionId}. ID fail baru "
+"ialah {$fileId}."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>PENTING!</h4>\n"
+"<p> Pemasang tidak dapat menimpa fail konfigurasi secara automatik. Sebelum "
+"cuba menggunakan sistem, sila buka <tt>config.inc.php</tt> penyunting teks "
+"yang sesuai dan gantikan kandungannya dengan kandungan medan teks di "
+"bawah.</p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Amaran:</strong> Jika pemasangan gagal sebahagian jalan melalui "
+"pemasangan pangkalan data, anda mungkin perlu menggugurkan pangkalan data "
+"OJS atau jadual pangkalan data anda sebelum cuba memasang semula pangkalan "
+"data."
+
+msgid "installer.upgradeApplication"
+msgstr "Naik taraf Open Journal Systems"
+
+msgid "installer.installApplication"
+msgstr "Pasang Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS memerlukan akses kepada pangkalan data SQL untuk menyimpan datanya. "
+"Lihat keperluan sistem di atas untuk senarai pangkalan data yang disokong. "
+"Dalam medan di bawah, sediakan tetapan yang akan digunakan untuk sambung ke "
+"pangkalan data."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Masukkan nama laluan penuh ke direktori sedia ada yang mana fail yang dimuat "
+"naik akan disimpan. Direktori ini tidak boleh diakses secara langsung web. "
+"<strong>Sila pastikan direktori ini wujud dan boleh ditulis sebelum "
+"pemasangan.</strong> Nama laluan Windows patut menggunakan garis condong "
+"hadapan, cth. \"C:/myjournal/files\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Pilih sebarang bahasa tambahan untuk disokong dalam sistem ini. Bahasa ini "
+"boleh digunakan oleh jurnal yang dihoskan di laman web ini. Bahasa tambahan "
+"juga boleh dipasang pada bila-bila masa dari antara muka pentadbiran laman "
+"web."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Bahasa utama yang digunakan untuk sistem ini. Sila rujuk dokumentasi OJS "
+"jika anda berminat untuk menyokong bahasa yang tidak disenaraikan di sini."
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Pelayan anda kini membenarkan saiz muat naik fail maksimum: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Pelayan anda membenarkan muat naik fail buat masa ini: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Jika anda menaik taraf pemasangan OJS sedia ada, <a href=\"{$upgradeUrl}\">"
+"klik di sini</a> untuk meneruskan."
+
+msgid "installer.ojsUpgrade"
+msgstr "Naik taraf OJS"
+
+msgid "installer.appInstallation"
+msgstr "Pemasangan OJS"
+
+msgid "payment.subscription.expires"
+msgstr "Tamat tempoh"
+
+msgid "payment.subscription.renew"
+msgstr "Perbaharui Langganan"
+
+msgid "payment.subscription.purchase"
+msgstr "Beli Langganan"
+
+msgid "payment.membership.ends"
+msgstr "Tamat"
+
+msgid "payment.membership.renewMembership"
+msgstr "Memperbaharui Keahlian Individu"
+
+msgid "payment.membership.buyMembership"
+msgstr "Beli Keahlian Individu"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Yuran Penerbitan Dibayar"
+
+msgid "payment.publication.payPublication"
+msgstr "Bayar untuk Penerbitan"
+
+msgid "payment.submission.paySubmission"
+msgstr "Bayar Yuran Penyerahan"
+
+msgid "payment.donation.makeDonation"
+msgstr "Buat sumbangan"
+
+msgid "payment.notFound"
+msgstr ""
+"Bayaran telah diminta, tetapi permintaan telah tamat tempoh. Hubungi "
+"Pengurus Jurnal untuk maklumat lanjut."
+
+msgid "payment.requestPublicationFee"
+msgstr "Meminta yuran penerbitan ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Sumbangan"
+
+msgid "payment.type.subscription"
+msgstr "Yuran Langganan"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Pembelian Yuran Isu"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Pembelian Yuran Artikel"
+
+msgid "payment.type.membership"
+msgstr "Yuran Keahlian Individu"
+
+msgid "payment.type.fastTrack"
+msgstr "Yuran Semakan Trek Pantas"
+
+msgid "payment.type.publication.required"
+msgstr "Yuran penerbitan perlu dibayar untuk pembayaran."
+
+msgid "payment.type.publication"
+msgstr "Yuran Penerbitan"
+
+msgid "payment.type.submission"
+msgstr "Yuran Penyerahan"
+
+msgid "payment.authorFees"
+msgstr "Yuran Pengarang"
+
+msgid "payment.paymentSent"
+msgstr "Bayaran telah dihantar"
+
+msgid "payment.paymentReceived"
+msgstr "Bayaran Diterima"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Pilih kotak ini jika anda telah menghantar pembayaran anda ke jurnal untuk "
+"menyelesaikan proses penyerahan.  Penyerahan tidak akan disemak sehingga "
+"pembayaran tiba.  Klik BAYAR SEKARANG di atas untuk melihat arahan "
+"pembayaran."
+
+msgid "payment.alreadyPaid"
+msgstr "Sudah Dibayar"
+
+msgid "payment.waive"
+msgstr "Mengetepikan"
+
+msgid "payment.payNow"
+msgstr "Bayar Sekarang"
+
+msgid "payment.waived"
+msgstr "Dikecualikan"
+
+msgid "payment.unpaid"
+msgstr "Belum dibayar"
+
+msgid "payment.paid"
+msgstr "Dibayar"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Anda mesti log masuk untuk membuat sumbangan."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Langganan atau pembelian isu yang diperlukan untuk mengakses item. Untuk "
+"mengesahkan langganan, akses pembelian terdahulu atau isu pembelian, log "
+"masuk ke jurnal."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Langganan atau pembelian artikel yang diperlukan untuk mengakses item. Untuk "
+"mengesahkan langganan, akses pembelian terdahulu atau artikel pembelian, log "
+"masuk ke jurnal."
+
+msgid "payment.loginRequired"
+msgstr "Anda mesti log masuk untuk membuat pembayaran."
+
+msgid "donations.thankYouMessage"
+msgstr ""
+"Terima kasih kerana memberi sumbangan.  Sumbangan anda amatlah dihargai."
+
+msgid "donations.thankYou"
+msgstr "Terima Kasih"
+
+msgid "help.goToEditPage"
+msgstr "Sunting {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Kembali ke Hasil Carian"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Bantuan OJS"
+
+msgid "help.ojsHelp"
+msgstr ""
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Laman ini menggunakan Open Journal Systems {$ojsVersion}, iaitu pengurusan "
+"jurnal sumber terbuka dan perisian penerbitan yang dibangunkan, disokong dan "
+"diedarkan secara bebas oleh Public Knowledge Project di bawah Pelesenan Awam "
+"Am GNU. Layari laman web PKP untuk <a href=\"http://pkp.sfu.ca/\">ketahui "
+"lebih lanjut mengenai perisian</a>. Sila hubungi laman web ini secara "
+"langsung dengan soalan mengenai jurnal dan penyerahannya kepada jurnalnya."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Jurnal ini menggunakan Open Journal Systems {$ojsVersion}, iaitu pengurusan "
+"jurnal sumber terbuka dan perisian penerbitan yang dibangunkan, disokong dan "
+"diedarkan secara bebas oleh Public Knowledge Project di bawah Pelesenan Awam "
+"Am GNU. Layari laman web PKP untuk <a href=\"http://pkp.sfu.ca/\">ketahui "
+"lebih lanjut mengenai perisian</a>. Sila <a href=\"{$contactUrl}\">hubungi "
+"jurnal</a> secara langsung dengan soalan mengenai jurnal dan penyerahan "
+"kepada jurnal."
+
+msgid "about.aboutSoftware"
+msgstr "Perihal Sistem Jurnal Terbuka"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Proses Editorial dan Penerbitan OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Maklumat lanjut tentang sistem penerbitan, Platform dan Aliran Kerja oleh "
+"OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Keahlian"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Jenis Langganan"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kos"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Tempoh"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nama"
+
+msgid "about.subscriptionsContact"
+msgstr "Kenalan Langganan"
+
+msgid "about.subscriptions.institutional"
+msgstr "Langganan Institusi"
+
+msgid "about.subscriptions.individual"
+msgstr "Langganan Individu"
+
+msgid "about.subscriptions"
+msgstr "Langganan"
+
+msgid "about.archiving"
+msgstr "Pengarkiban"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "bulan selepas sesuatu isu diterbitkan."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Kandungan jurnal ini boleh didapati dalam format akses terbuka"
+
+msgid "about.delayedOpenAccess"
+msgstr "Akses Terbuka Tertangguh"
+
+msgid "about.openAccessPolicy"
+msgstr "Dasar Akses Terbuka"
+
+msgid "about.publicationFrequency"
+msgstr "Kekerapan Penerbitan"
+
+msgid "about.peerReviewProcess"
+msgstr "Proses Ulasan Rakan"
+
+msgid "about.authorFeesMessage"
+msgstr "Jurnal ini mengenakan yuran pengarang berikut."
+
+msgid "about.authorFees"
+msgstr "Yuran Pengarang"
+
+msgid "about.privacyStatement"
+msgstr "Kenyataan Privasi"
+
+msgid "about.copyrightNotice"
+msgstr "Notis Hak Cipta"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Sebagai sebahagian daripada proses penyerahan, pengarang dikehendaki "
+"menyemak pematuhan penyerahan mereka dengan semua perkara berikut, dan "
+"penyerahan boleh dikembalikan kepada pengarang yang tidak mematuhi garis "
+"panduan ini."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Senarai Semak Penyediaan Penyerahan"
+
+msgid "about.authorGuidelines"
+msgstr "Garis Panduan Pengarang"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Lihat penyerahan belum selesai anda"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Buat penyerahan baharu"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Buat penyerahan baharu ke bahagian <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} atau {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} atau {$register} untuk membuat penyerahan."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Daftar"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Log masuk"
+
+msgid "about.submissions"
+msgstr "Penyerahan"
+
+msgid "about.focusAndScope"
+msgstr "Fokus dan Skop"
+
+msgid "about.editorialPolicies"
+msgstr "Dasar Editorial"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografi"
+
+msgid "about.editorialTeam"
+msgstr "Pasukan Editorial"
+
+msgid "about.history"
+msgstr "Sejarah Jurnal"
+
+msgid "about.aboutContext"
+msgstr "Mengenai Jurnal"
+
+msgid "about.contact"
+msgstr "Kenalan"
+
+msgid "about.statistics"
+msgstr "Statistik"
+
+msgid "archive.issueUnavailable"
+msgstr "Isu Tidak Tersedia"
+
+msgid "archive.browse"
+msgstr "Layar isu lama"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arkib - Halaman {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Arkib"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Jurnal ini tidak menerbitkan sebarang isu."
+
+msgid "current.noCurrentIssue"
+msgstr "Tiada Isu Semasa"
+
+msgid "current.current"
+msgstr "Semasa"
+
+msgid "site.noJournals"
+msgstr "Tiada jurnal yang boleh didapati."
+
+msgid "site.journalCurrent"
+msgstr "Isu Semasa"
+
+msgid "site.journalRegister"
+msgstr "Daftar"
+
+msgid "site.journalView"
+msgstr "Lihat Jurnal"
+
+msgid "site.journalsHosted"
+msgstr "Jurnal yang dihoskan di laman web ini"
+
+msgid "article.nonpdf.title"
+msgstr "Muat turun Artikel"
+
+msgid "article.download"
+msgstr "Muat turun fail PDF ini"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "Paparan {$title}"
+
+msgid "search.authorDetails"
+msgstr "Perincian Pengarang"
+
+msgid "search.authorIndex"
+msgstr "Layar Indeks Pengarang"
+
+msgid "search.allJournals"
+msgstr "Semua Jurnal"
+
+msgid "search.withinJournal"
+msgstr "Dalam"
+
+msgid "search.searchFor"
+msgstr "Cari artikel untuk"
+
+msgid "search.browseAuthorIndex"
+msgstr "Layar Indeks Pengarang"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Tambah"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Padam"
