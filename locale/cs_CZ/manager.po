@@ -1,9 +1,10 @@
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2021-05-07 08:53+0000\n"
+"PO-Revision-Date: 2021-09-15 01:27+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -1862,3 +1863,30 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Vyberte zemi, kde se tento časopis nachází, nebo zemi ve které má časopis či "
 "jeho vydavatel oficiální adresu."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Název webové stránky, pokud je hostován více než jeden časopis"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Měna částky platby, například USD"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Výše platby"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Název typu platby"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "E-mailová adresa hlavního kontaktu časopisu"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "E-mailový podpis časopisu pro automatické e-maily"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Jméno hlavního kontaktu časopisu"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Adresa URL domovské stránky časopisu"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Název časopisu"

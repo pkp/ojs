@@ -1,7 +1,8 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-29 14:59+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2021-09-10 21:21+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -84,3 +85,2058 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Kirish"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Rad etish"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Qabul qiling"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Maqolalarni ko'rish soni (faqat mualliflar uchun)"
+
+msgid "manager.statistics.statistics"
+msgstr "Jurnal statistikasi"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tSizning jurnalingiz bir nechta foydalanish ko'rsatkichlarini yozish "
+"uchun tuzilgan. Foydalanish statistikasi bir nechta kontekstda ko'rsatiladi."
+"\n"
+"Bitta foydalanish statistikasidan foydalanish kerak bo'lgan holatlar mavjud, "
+"masalan. eng ko'p ishlatiladigan maqolalarning tartiblangan ro'yxatini "
+"ko'rsatish yoki tartiblashtirish\n"
+"Qidiruv natijalari. Iltimos, sozlangan o'lchovlardan birini sukut bo'yicha "
+"tanlang.\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Sarlavha matni"
+
+msgid "manager.setup.userRegistration"
+msgstr "Foydalanuvchilarni ro'yxatga olish"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Sarlavha tasviri"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Eskiz"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Jurnalda tahririyat/ko'rib chiqish kengashi ishlatiladi."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Maqolalar va sonlar identifikatsiya raqami yoki satr bilan belgilanishi "
+"mumkin, bunda raqamli ob'ekt identifikatori tizimi (DOI) kabi ro'yxatga "
+"olish tizimi qo'llaniladi."
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Noyob identifikator"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Bu sohaga tegishli tadqiqot turlari, usullari va yondashuvlariga misollar "
+"keltiring"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Turi (usuli/yondashuvi)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(Masalan, tarixiy tergov; yarim tajriba; adabiy tahlil; so'rov/intervyu)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"<a href=\"https://www.openarchives.org/\"> Ochiq arxiv tashabbusi </a> "
+"orqali uchinchi tomon indekslash xizmatlariga metadata bering."
+
+msgid "manager.setup.enableOai"
+msgstr "OAIni yoqish"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Bu jurnal hozircha arizalarni qabul qilmaydi. Yuborishga ruxsat berish uchun "
+"ish oqimi sozlamalariga o'ting."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Foydalanuvchilarning jurnalga yangi maqolalar kiritishiga to'sqinlik qiling. "
+"<ahref=\"{$url}\"> jurnal bo'limlari </a> sozlamalari sahifasida alohida "
+"jurnal bo'limlari uchun yuborishni o'chirib qo'yish mumkin."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Muallif ko'rsatmalari, mualliflik huquqi va indekslash (shu jumladan "
+"ro'yxatga olish)."
+
+msgid "manager.setup.submissions"
+msgstr "Taqdimotlar"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"Jurnalga topshirish paytida, mualliflardan oldin, ishni davom ettirishdan "
+"oldin, topshirishni tayyorlash ro'yxatidagi har bir bandni "
+"to'ldirilganligini tekshirish talab qilinadi. Tekshirish ro'yxati, "
+"shuningdek, \"Muallif ko'rsatmalari\" jurnalida joylashgan. Ro'yxatni quyida "
+"tahrir qilish mumkin, lekin mualliflar topshirishni davom ettirishdan oldin "
+"ro'yxatdagi barcha elementlarga belgi qo'yish kerak bo'ladi."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Arizalarni tayyorlashga tayyorgarlik ro'yxati"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Arizalarni topshirish bo'yicha ko'rsatmalar"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+"Mualliflar uchun qo'llanma sifatida kalit so'zlar yoki mavzularga misollar "
+"keltiring"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Kalit so'zlar"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(Masalan, fotosintez; Qora tuynuklar; To'rt rangli xarita muammosi; Bayes "
+"nazariyasi)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Jurnal veb -saytiga beshta qadam"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Maqola tarkibini ko'rish"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Saytga kirish"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+"Har doim oshxona havolalarini ko'rsating va cheklangan kirishni bildiring."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Maqola ko'rib chiqiladigan jurnal bo'limi."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Buni jurnal tahrirlovchisi ko'radi."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Jurnal uchun bo'limlar yaratish yoki o'zgartirish uchun (masalan, maqolalar, "
+"kitoblarga sharhlar va boshqalar) bo'lim boshqaruvi bo'limiga o'ting. <br/> <"
+"br/> Maqolalarni jurnalga yuborish uchun mualliflar ..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Agar bo'limlar qo'shilmasa, elementlar sukut bo'yicha Maqolalar bo'limiga "
+"yuboriladi.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Bo'limlar va bo'lim muharrirlari"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Qidiruv tizimlari jurnalni qidiruv natijalarida ko'rsatganda ko'rsatishi "
+"mumkin bo'lgan jurnalning qisqacha tavsifini (50-300 belgidan) bering."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Google kabi qidiruv tizimlariga saytingizni topishga va ko'rsatishga yordam "
+"bering. Sizga <ahref=\"{$sitemapUrl}\" target=\"_blank\"> sayt xaritasini "
+"</a> yuborish tavsiya etiladi."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Qidiruv indekslari"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Ko'rib chiqish siyosati"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Tekshiruvchi eslatmalari"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Tekshiruvchi reytinglari"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Tekshiruvchilarga yuborilgan elektron pochta taklifiga xavfsiz havolani "
+"kiriting."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Sharhlovchilarga elektron pochta taklifnomasida xavfsiz havola yuborilishi "
+"mumkin, bu ularga kirishga ruxsat bermasdan ko'rib chiqishga ruxsat beradi. "
+"Boshqa sahifalarga kirish uchun ular tizimga kirishni talab qiladi."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Sharhlovchiga bir marta bosish"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Sharhlovchiga kirish"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Taqrizchilar hujjatni ko'rib chiqishga rozi bo'lmaguncha, ularga ruxsat "
+"berilmaydi."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Faylga kirishni cheklash"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Tahrirlovchilar har bir ko'rib chiqishdan so'ng sharhlovchilarni besh balli "
+"sifat shkalasida baholaydilar."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Haftalar tekshirishni yakunlashga ruxsat berdi"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Avtomatik elektron pochta eslatmalarini yuborish uchun sayt ma'muri OJS "
+"konfiguratsiya faylidagi <tt> rejalashtirilgan_tasketlar </tt> parametrini "
+"yoqishi kerak. OJS hujjatlarida ko'rsatilganidek, qo'shimcha server "
+"konfiguratsiyasi talab qilinishi mumkin."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Avtomatik elektron pochta eslatmalari"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Ko'rib chiqish imkoniyatlari"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Ko'rib chiqish ko'rsatmalari"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Foydalanuvchilar jurnal saytini ko'rish uchun ro'yxatdan o'tishi va tizimga "
+"kirishi kerak."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Foydalanuvchilar ochiq kirish tarkibini ko'rish uchun ro'yxatdan o'tishlari "
+"va tizimga kirishlari kerak."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Malumot havolasi"
+
+msgid "manager.setup.publisher"
+msgstr "Nashriyotchi"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Jurnal tarkibini aniqlash"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Nashrlarni rejalashtirish"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Jurnal maqolalari o'z tarkibiga ega bo'lgan nashrning bir qismi sifatida "
+"nashr etilishi mumkin. Shu bilan bir qatorda, alohida maqolalar tayyor "
+"bo'lgach, ularni \"joriy\" jildning Mundarijasiga qo'shib chop etish mumkin. "
+"O'quvchilarga \"Jurnal haqida\" bo'limida ushbu jurnal foydalanadigan tizim "
+"va kutilayotgan nashr chastotasi to'g'risida bayonot bering."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Nashr qilish jadvali"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Tekshirish bo'yicha yo'riqnoma \"Tahrirlovchilar\", \"Mualliflar\", \"Jadval "
+"tahrirchilari\" va \"Bo'lim muharrirlari\" ni \"Takliflarni tahrir qilish\" "
+"bosqichida taqdim etiladi. Quyida HTML -da ko'rsatuvlar to'plami mavjud "
+"bo'lib, ularni jurnal menejeri xohlagan vaqtda o'zgartirishi yoki "
+"o'zgartirishi mumkin (HTML yoki oddiy matnda)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Tasdiqlash bo'yicha ko'rsatmalar"
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN -ni chop etish"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"E'tibor, tengdoshlarni ko'rib chiqish, bo'limlar, maxfiylik, xavfsizlik va "
+"narsalar haqida qo'shimcha ma'lumot."
+
+msgid "manager.setup.policies"
+msgstr "Siyosatlar"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Sahifa raqami opsiyasi"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Internetda ISSN"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Ro'yxatdagi keyingi sahifalarga ko'rsatiladigan havolalar sonini cheklang."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Sahifalarga havolalar"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong> Eslatma: </strong> Hozirgi vaqtda elektron pochta xabari "
+"o'chirilgan. Bu xususiyatdan foydalanish uchun elektron pochtadagi \""
+"Submission Ack\" elektron pochtasini yoqing."
+
+msgid "manager.setup.note"
+msgstr "Eslatma"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Hech qanday uslublar jadvali yuklanmagan."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Hech qanday rasm fayli yuklanmagan."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Yorliq qiymati mahalliylashtirish xabari kaliti emas, balki oddiy satr ("
+"masalan, \"Jurnal sozlamalari\") (masalan, \"manager.setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL - bu saytga nisbatan yo'l emas, balki mutlaq URL (masalan, \""
+"http://www.example.com\") (masalan, \"/manager/setup\")"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr ""
+"Navigatsiya paneliga qo'shimcha elementlarni qo'shish yoki olib tashlash."
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigatsiya paneli"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Qadam 4. Jurnalni boshqarish"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Boshqaruv va nashriyotni sozlash"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Tahririyatning asosiy bosqichlarini boshqarish"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Kirish va xavfsizlik, rejalashtirish, e'lonlar, nusxa ko'chirish, tartib va "
+"tahrir."
+
+msgid "manager.setup.management"
+msgstr "Boshqaruv"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Bosh sahifa sarlavhasi, kontent, jurnal sarlavhasi, altbilgi, navigatsiya "
+"paneli va uslublar jadvali."
+
+msgid "manager.setup.look"
+msgstr "Tashqi ko'rinish"
+
+msgid "manager.setup.clockssTitle"
+msgstr "SAAT"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"<ahref=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS veb -saytiga </a> "
+"tashrif buyurib, CLOCKSS xizmatiga yoziling."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS litsenziyasining tavsifi"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS litsenziyasi \"Arxivlash\" jurnali haqida: <a href=\"http://clockss."
+"org/\" target=\"_blank\"> CLOCKSS litsenziyasi </a> da paydo bo'ladi."
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"CLOCKSS <ahref=\"{$clockssUrl}\" target=\"_blank\"> Publisher Manifest </a> "
+"sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
+"tarqatish uchun CLOCKSS -ni yoqing."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Jurnalni ro'yxatdan o'tkazadigan va keshlaydigan 6-10 kutubxonani aniqlang. "
+"Masalan, muharrirlar yoki Kengash a'zolari ishlaydigan muassasalarga va/yoki "
+"LOCKSSda ishtirok etayotgan muassasalarga murojaat qiling. <ahref=\""
+"http://www.lockss.org/community/\" target=\"_blank\"> LOCKSS hamjamiyatiga "
+"</a> qarang."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS litsenziyasining tavsifi"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS litsenziyasi \"Arxivlash\" jurnali haqida paydo bo'ladi: <ahref=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> "
+"LOCKSS litsenziyasi </a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"LOCKSS <ahref=\"{$lockssUrl}\" target=\"_blank\"> Publisher Manifest </a> "
+"sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
+"tarqatish uchun LOCKSS -ni yoqing."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS va CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP saqlash tarmog'i (PN) har qanday OJS jurnali uchun bir necha asosiy "
+"mezonlarga javob beradigan bepul konservatsiya xizmatlarini taqdim etadi. "
+"OJS 3 uchun PKP PN plagini hozirda ishlab chiqilmoqda va tez orada plaginlar "
+"galereyasida bo'ladi."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP saqlash tarmog'i (ON)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"PKP PN dan foydalanish shartlarini qabul qilish uchun <tugma> plagin "
+"sozlamalari </button> ni ko'ring."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP saqlash tarmog'i (PN) har qanday OJS jurnali uchun bir necha asosiy "
+"mezonlarga javob beradigan bepul konservatsiya xizmatlarini taqdim etadi."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN plaginini yoqing"
+
+msgid "manager.setup.lists"
+msgstr "Ro'yxatlar"
+
+msgid "manager.setup.labelName"
+msgstr "Yorliq nomi"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Jurnalingizning qisqacha tavsifini bering va muharrirlarni, boshqaruvchi "
+"direktorlarni va tahririyat guruhining boshqa a'zolarini aniqlang."
+
+msgid "manager.setup.keyInfo"
+msgstr "Asosiy ma'lumotlar"
+
+msgid "manager.setup.contextTitle"
+msgstr "Jurnal nomi"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Jurnallar ro'yxatida ishlatilishi mumkin bo'lgan kichik logotip yoki "
+"jurnalning tasviri."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Jurnal eskizi"
+
+msgid "manager.setup.journalTheme"
+msgstr "Jurnal mavzusi"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Jurnal uslubi jadvalining yaroqsiz shakli. Qabul qilingan format .css."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Jurnal sozlamalari yangilandi."
+
+msgid "manager.setup.journalSetup"
+msgstr "Jurnalni sozlash"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Qadam 2. Jurnal siyosati"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Bu sizning jurnalingizning pastki qismi. Altbilgini o'zgartirish yoki "
+"yangilash uchun HTML kodini quyidagi matn qutisiga joylashtiring. Misollar "
+"boshqa navigatsiya paneli, hisoblagich va boshqalar bo'lishi mumkin. Bu "
+"altbilgi har bir sahifada paydo bo'ladi."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Jurnal sahifasining pastki qismi"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Jurnal logotipi"
+
+msgid "manager.setup.journalLogo"
+msgstr "Jurnal logotipi"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Jurnal mavzusini tanlang va bu erda tartib komponentlarini tanlang. Jurnal "
+"uslublar jadvalini ham yuklash mumkin, bu tizim uslublari jadvallari va "
+"mavzular uslublar jadvalidagi uslub ma'lumotlarini bekor qilish uchun "
+"ishlatilishi mumkin (agar mavzu tanlangan bo'lsa)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Jurnal tartibi"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Jurnal joylashgan mamlakatni yoki jurnal yoki nashriyotning pochta manzilini "
+"tanlang."
+
+msgid "manager.setup.contextInitials"
+msgstr "Jurnal bosh harflari"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Jurnal sarlavhasi va logotipining grafik versiyasini (.gif, .jpg yoki .png "
+"fayli sifatida) bosh sahifaga yuklash mumkin, bu esa aks holda paydo "
+"bo'ladigan matn versiyasini almashtiradi."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Jurnal bosh sahifasi sarlavhasi"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Jurnal bosh sahifasi sarlavhasi"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Odatiy bo'lib, bosh sahifa navigatsiya havolalaridan iborat. Qo'shimcha bosh "
+"sahifa tarkibiga ko'rsatilgan tartibda ko'rsatiladigan quyidagi "
+"variantlardan birini yoki barchasini qo'shish mumkin. E'tibor bering, joriy "
+"songa har doim navigatsiya panelidagi joriy havola orqali kirish mumkin."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Jurnal bosh sahifasining tarkibi"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"O'quvchilar, mualliflar yoki sharhlovchilarni qiziqtirishi mumkin bo'lgan "
+"jurnalingiz haqidagi har qanday ma'lumotlarni qo'shing. Bu sizning ochiq "
+"kirish siyosatingiz, jurnalning yo'nalishi va ko'lami, mualliflik huquqi "
+"to'g'risidagi bildirishnoma, homiylik haqidagi ma'lumot, jurnal tarixi, "
+"maxfiylik to'g'risidagi bayonot va LOCKSS yoki CLOCKSS har qanday arxiv "
+"tizimiga kiritishni o'z ichiga olishi mumkin."
+
+msgid "manager.setup.contextAbout"
+msgstr "Jurnal haqida"
+
+msgid "manager.setup.contextSummary"
+msgstr "Jurnal xulosasi"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Jurnalni arxivlash"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Jurnal qisqartmasi"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Keyingi elementlarni boshqa sahifada ko'rsatishdan oldin ro'yxatda "
+"ko'rsatiladigan elementlar sonini (masalan, topshirishlar, foydalanuvchilar "
+"yoki tahrirlash topshiriqlari) cheklang."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Har bir sahifadagi elementlar"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Sahifaning yuqori qismida joylashgan joriy majmuaga (Bosh sahifa, Haqida, "
+"Foydalanuvchi uyi va boshqalar) navigatsiya paneli elementlari qo'shilishi "
+"mumkin."
+
+msgid "manager.setup.institution"
+msgstr "Institut"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Tanlangan formatga qarab, OJSda nashr qilinadigan son, son va/yoki yilni "
+"aniqlang:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Dastlabki masala"
+
+msgid "manager.setup.information.forReaders"
+msgstr "O'quvchilar uchun"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Kutubxonachilar uchun"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Mualliflar uchun"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Kutubxonachilar va bo'lajak mualliflar va o'quvchilar uchun jurnalning "
+"qisqacha tavsifi. Axborot bloki qo'shilganda, ular sayt yon panelida mavjud "
+"bo'ladi."
+
+msgid "manager.setup.information"
+msgstr "Ma `lumot"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Ochiq kirishni zudlik bilan yoki kechiktiradigan jurnallar uchun Creative "
+"Commons litsenziyasini o'z vaqtida nashr etilgan barcha ishlarni o'z ichiga "
+"oladi."
+
+msgid "manager.setup.identity"
+msgstr "Jurnal identifikatori"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Qadam3. Yo'llanma ko'rsatmalari"
+
+msgid "manager.setup.guidelines"
+msgstr "Ko'rsatmalar"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Qadam 1. Tafsilotlarni olish"
+
+msgid "manager.setup.generalInformation"
+msgstr "Umumiy ma'lumot"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Qo'llab -quvvatlash nomi kerak."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Qo'llab -quvvatlash elektron pochtasi talab qilinadi."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Har bir topshiriq uchun ko'rib chiquvchilar soni talab qilinadi."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Jurnal nomi kerak."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Jurnalning bosh harflari talab qilinadi."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Kontaktning asosiy nomi talab qilinadi."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Asosiy elektron pochta manzili talab qilinadi."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Belgilangan ISSN haqiqiy emas."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS meta-ma'lumot yig'ish uchun <a href=\"http://www.openarchives.org/\" "
+"target=\"_blank\"> ochiq arxivlar tashabbusi </a> protokoliga amal qiladi, "
+"bu yaxshi indekslangan kirishni ta'minlashning yangi standarti. global "
+"miqyosda elektron tadqiqot manbalari. Mualliflar ularni yuborish uchun "
+"metadata berish uchun xuddi shunday shablondan foydalanadilar. Jurnal "
+"menejeri indekslash uchun toifalarni tanlashi va mualliflarga o'z ishlarini "
+"indeksatsiyalashda yordam berish uchun tegishli misollar keltirishi kerak."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Mualliflar o'z ishlarini indekslashlari uchun"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Mualliflarga, o'quvchilarga va kutubxonachilarga jurnalda chop etiladigan "
+"maqolalar va boshqa maqolalar turlarini aytib bering."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Fokus va ko'lam"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Mehmonlar jurnalda foydalanuvchi hisobini ro'yxatdan o'tkazishi mumkin."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Bosh sahifada qancha e'lonlar ko'rsatiladi. Hech kim ko'rsatilmasligi uchun "
+"bo'sh qoldiring."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Bosh sahifada ko'rsatish"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"O'quvchilarni jurnal yangiliklari va voqealari to'g'risida xabardor qilish "
+"uchun e'lonlar e'lon qilinishi mumkin. E'lonlar sahifasida e'lon qilingan "
+"e'lonlar paydo bo'ladi."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "E'lonlarni yoqish"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Jurnal nomidan tizim tomonidan yuborilgan tayyorlangan elektron pochta "
+"xabarlari oxiriga quyidagi imzo qo'yiladi."
+
+msgid "manager.setup.emailSignature"
+msgstr "Imzo"
+
+msgid "manager.setup.emails"
+msgstr "Elektron pochta identifikatori"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Yetkazib berilmaydigan elektron pochta xabarlarini yuboriladigan manzilga "
+"yuborish uchun sayt ma'muri sayt konfiguratsiya faylidagi <code> "
+"allow_envelope_sender </code> parametrini yoqishi kerak. OJS hujjatlarida "
+"ko'rsatilganidek, server konfiguratsiyasi talab qilinishi mumkin."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Yetkazib berilmaydigan har qanday elektron pochta xabarlari, bu manzilga "
+"xato xabari keladi."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Chiqish manzili"
+
+msgid "manager.setup.editorDecision"
+msgstr "Tahririyat qarori"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Joriy son uchun tarkib jadvalini qo'shing (agar mavjud bo'lsa)."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Ushbu jurnal uchun tegishli ilmiy fanlarga misollar keltiring"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Masalan, Tarix; Ta'lim; Sotsiologiya; Psixologiya; Madaniyatshunoslik; "
+"Huquq)"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Jurnal intizom chegaralarini kesib o'tganda va/yoki mualliflar ko'p tarmoqli "
+"narsalarni topshirganda foydali bo'ladi."
+
+msgid "manager.setup.discipline"
+msgstr "Akademik intizom va kichik fanlar"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Jurnal menejeri barcha foydalanuvchi hisoblarini ro'yxatdan o'tkazadi. "
+"Tahrirlovchilar yoki bo'lim muharrirlari sharhlovchilar uchun foydalanuvchi "
+"hisoblarini ro'yxatdan o'tkazishi mumkin."
+
+msgid "manager.setup.details.description"
+msgstr "Jurnal nomi, ISSN, kontaktlar, homiylar va qidiruv tizimlari."
+
+msgid "manager.setup.details"
+msgstr "Tafsilotlar"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Qadam 5. Tashqi ko'rinishni sozlash"
+
+msgid "manager.setup.currentIssue"
+msgstr "Hozirgi masala"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Bu matn jurnal veb -saytining \"Haqida\" bo'limida paydo bo'ladi va undan "
+"sarlavhalar, tahririyat kengashi va jurnalning nashriyot tarixi bilan "
+"bog'liq boshqa narsalarni o'zgartirish uchun foydalanish mumkin."
+
+msgid "manager.setup.history"
+msgstr "Jurnal tarixi"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Taqdimotchilardan har bir tengdosh tekshiruvi bilan CI bayonotini "
+"topshirishni talab qiling."
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Mualliflardan raqobatbardosh qiziqish (CI) to'g'risidagi bayonotni taqdim "
+"etishni talab qiling."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Jurnal haqida) "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "E'lonlar sahifasida paydo bo'lishni istagan ma'lumotlarni kiriting."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Kirish"
+
+msgid "manager.setup.announcements"
+msgstr "E'lonlar"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Shu bilan bir qatorda, sarlavha va logotip o'rniga, sarlavhaning HTML "
+"versiyasini quyidagi matn maydoniga kiritish mumkin. Agar kerak bo'lmasa, "
+"matn qutisini bo'sh qoldiring."
+
+msgid "manager.setup.alternateHeader"
+msgstr "Boshqa sarlavha"
+
+msgid "manager.setup.addSponsor"
+msgstr "Homiylik tashkilotini qo'shing"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Yangi ma'lumotlar bazasi havolasini qo'shing"
+
+msgid "manager.setup.addNavItem"
+msgstr "Element qo'shish"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"Jurnal haqida\" bo'limida paydo bo'ladigan narsalarni qo'shing."
+
+msgid "manager.setup.addItem"
+msgstr "Element qo'shish"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Tekshirish ro'yxati elementini qo'shing"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Element haqida qo'shish"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Tarkib"
+
+msgid "manager.setup.pageHeader"
+msgstr "Jurnal sahifasi sarlavhasi"
+
+msgid "manager.setup.contextName"
+msgstr "Jurnal nomi"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Jurnal uslubi jadvali"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Jurnalning bosh sahifasi sukut bo'yicha navigatsiya havolalaridan iborat. "
+"Qo'shimcha bosh sahifa tarkibiga ko'rsatilgan tartibda ko'rsatiladigan "
+"quyidagi variantlardan birini yoki barchasini qo'shish mumkin."
+
+msgid "manager.setup.homepageContent"
+msgstr "Jurnal bosh sahifasining tarkibi"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Tahririyat jamoasi"
+
+msgid "manager.setup.masthead"
+msgstr "Sarlavha (Asosiy)"
+
+msgid "manager.setup"
+msgstr "Jurnal sozlamalari"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Bu bo'lim uchun mavhum so'zlar sonini cheklash (cheklovsiz 0)"
+
+msgid "manager.sections.wordCount"
+msgstr "So'zlar soni"
+
+msgid "manager.sections.unassigned"
+msgstr "Mavjud bo'lim muharrirlari"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Jurnalning ushbu bo'limiga yuborilgan materiallar"
+
+msgid "manager.sections.submissionReview"
+msgstr "Tekshiruv o'tkazilmaydi"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Jurnal indeksatsiyasiga kiritilmaydi"
+
+msgid "manager.sections.reviewed"
+msgstr "Hamkasblar ko'rib chiqdi"
+
+msgid "manager.sections.readingTools"
+msgstr "O'qish vositalari"
+
+msgid "manager.sections.policy"
+msgstr "Bo'lim siyosati"
+
+msgid "manager.sections.open"
+msgstr "Arizalarni ochish"
+
+msgid "manager.sections.noneCreated"
+msgstr "Hech qanday bo'lim yaratilmagan."
+
+msgid "manager.sections.indexed"
+msgstr "Indekslangan"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Masalan, \"Hamma tomonidan ko'rib chiqilgan maqola\", \"Hakam bo'lmagan "
+"kitoblar sharhi\", \"Taklif etilgan sharh\" va boshqalar)"
+
+msgid "manager.sections.identifyType"
+msgstr "Ushbu bo'limda nashr etilgan narsalarni (n) belgilang"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Muammolar jadvalidan ushbu bo'limning sarlavhasini o'tkazib yubormang."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Bo'lim elementlari uchun mualliflarning nomlarini sonlar tarkibidan chiqarib "
+"tashlang."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Bo'lim uchun sarlavha kerak."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr ""
+"Iltimos, to'g'ri ko'rib chiqish shaklini tanlaganingizga ishonch hosil "
+"qiling."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Bo'lim muharririning har bir topshirig'i uchun kamida bitta katakchani "
+"belgilab qo'yganingizga ishonch hosil qiling."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Bo'lim uchun qisqartirilgan sarlavha kerak"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Hech bo'lmaganda bitta bo'lim faol bo'lishi kerak. Ushbu jurnalga yuborilgan "
+"barcha xabarlarni o'chirish uchun ish oqimi sozlamalariga o'ting."
+
+msgid "manager.sections.editors"
+msgstr "Bo'lim muharrirlari"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Elementlar faqat muharrirlar va bo'lim muharrirlari tomonidan yuborilishi "
+"mumkin."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Bo'lim tahrirlovchisiga avtomatik tarzda topshirish uchun ushbu bo'limga "
+"bo'lim muharriri qo'shing. (Aks holda, bo'lim muharrirlari qo'lda "
+"tayinlanishi mumkin, yuborilganidan keyin.) Agar qo'shilsa, bo'lim muharriri "
+"avtomatik ravishda yuborilgan materiallarning REVIEW (peer review) va/yoki "
+"EDITING (copyediting, layout and proofreading) ni nazorat qilish uchun "
+"tayinlanishi mumkin. bu bo'lim. Bo'lim muharrirlari \"Jurnallarni "
+"boshqarishda rollar\" bo'limidagi bo'lim muharrirlarini bosish orqali "
+"yaratiladi."
+
+msgid "manager.sections.create"
+msgstr "Bo'lim yaratish"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Bu bo'lim o'chirilishidan oldin, unga yuborilgan maqolalarni boshqa "
+"bo'limlarga ko'chirish kerak."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Haqiqatan ham bu bo'limni butunlay o'chirib tashlamoqchimisiz?"
+
+msgid "manager.sections.assigned"
+msgstr "Bu bo'lim muharrirlari"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Hali bo'lim muharrirlari yo'q. Bu rolni hech bo'lmaganda bitta "
+"foydalanuvchiga Boshqaruv> Sozlamalar> Foydalanuvchilar & amp; Avval rollar."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Tezislarni talab qilmang"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Ro'yxatga olish sinxronizatsiyasi ushbu jurnalda ko'rsatilgan rolda "
+"ro'yxatdan o'tgan barcha foydalanuvchilarni ushbu jurnaldagi rolga kiritadi. "
+"Bu funksiya foydalanuvchilarning umumiy guruhini (masalan, sharhlovchilar) "
+"jurnallar o'rtasida sinxronlashtirishga imkon beradi."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$ role} Ro'yxatdan o'tish"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Oldingi foydalanuvchilarning mualliflik huquqlari, tahrirlash topshiriqlari "
+"va boshqalarni tegishli qiladigan foydalanuvchini tanlang."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Boshqa foydalanuvchi hisobiga qo'shilish uchun foydalanuvchini (yoki bir "
+"nechta) tanlang (masalan, kimdir ikkita foydalanuvchi hisobiga ega bo'lsa). "
+"Birinchi tanlangan hisob (lar) o'chiriladi va har qanday topshiriqlar, "
+"topshiriqlar va boshqalar ikkinchi hisobga tegishli bo'ladi."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Jurnal bilan"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Mavjud foydalanuvchini ro'yxatdan o'tkazish"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Shablonni tanlang"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Bu foydalanuvchi ushbu jurnaldan olib tashlansinmi? Bu harakat "
+"foydalanuvchini jurnaldagi barcha rollardan o'chiradi."
+
+msgid "manager.people.allUsers"
+msgstr "Barcha ro'yxatdan o'tgan foydalanuvchilar"
+
+msgid "manager.people.showNoRole"
+msgstr "Hech qanday roli bo'lmagan foydalanuvchilarga ko'rsatish"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Foydalanuvchini ushbu jurnalda ro'yxatdan o'tkazing"
+
+msgid "manager.people.allJournals"
+msgstr "Barcha jurnallar"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Ushbu jurnalda ro'yxatdan o'tgan foydalanuvchilar"
+
+msgid "manager.payment.userName"
+msgstr "To'lov identifikatori"
+
+msgid "manager.paymentTypes"
+msgstr "To'lov turlari"
+
+msgid "manager.payment.records"
+msgstr "Yozilganlar"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Tanlangan variantlar, ularning tavsiflari va to'lovlari bilan birga (quyida "
+"tahrir qilish mumkin) \"Siyosat to'g'risida\" jurnalida, shuningdek, to'lov "
+"talab qilinadigan joylarda paydo bo'ladi."
+
+msgid "manager.payment.readerFees"
+msgstr "O'quvchi to'lovlari"
+
+msgid "manager.payment.paymentType"
+msgstr "To'lov turi"
+
+msgid "manager.payment.paymentMethods"
+msgstr "To'lovni to'lash usullari"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Siz ushbu ekrandan quyidagi to'lov usuli plaginlaridan birini sozlashingiz "
+"mumkin."
+
+msgid "manager.payment.paymentMethod"
+msgstr "To'lov usuli"
+
+msgid "manager.payment.paymentId"
+msgstr "To'lov identifikatori"
+
+msgid "manager.payment.options.text"
+msgstr "To'lov usulining tavsifi"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Sotib olish muammosi"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Maqola sotib olish"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Maqolani qayta ishlash uchun to'lov"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Nashr va maqolalarning PDF versiyasiga kirishni cheklang"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Uyushma a'zoligi"
+
+msgid "manager.payment.options.feeName"
+msgstr "To'lov nomi"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "To'lov tavsifi"
+
+msgid "manager.payment.options.fee"
+msgstr "Haq"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Bu jurnal uchun to'lovlar yoqiladi. E'tibor bering, to'lovlarni amalga "
+"oshirish uchun foydalanuvchilar tizimga kirishi kerak bo'ladi."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Bu obunani o‘chirib tashlamoqchimisiz?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Bu obunalar uchun to'lovlarni faollashtiradi, bu erda turlari, narxi, "
+"davomiyligi va obunalari Jurnal (obuna) menejeri tomonidan boshqariladi."
+
+msgid "manager.payment.options"
+msgstr "Variantlar"
+
+msgid "manager.payment.notFound"
+msgstr "Topilmadi"
+
+msgid "manager.payment.noPayments"
+msgstr "To'lovlar yo'q"
+
+msgid "manager.payment.generalOptions"
+msgstr "Umumiy variantlar"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Assotsiatsiyaga a'zolik \"Siyosat to'g'risida\" jurnalida paydo bo'ladi."
+
+msgid "manager.payment.generalFees"
+msgstr "Umumiy to'lovlar"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Barcha xarajatlar ijobiy raqamli bo'lishi kerak (kasrli nuqtalarga ruxsat "
+"berilgan)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "To'lovni to'lash imkoniyatlari"
+
+msgid "manager.payment.enable"
+msgstr "Yoqish"
+
+msgid "manager.payment.editSubscription"
+msgstr "Obunani tahrirlash"
+
+msgid "manager.payment.details"
+msgstr "Tafsilotlar"
+
+msgid "manager.payment.description"
+msgstr "Tavsif"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS hech qanday valyuta konvertatsiyasini amalga oshirmaydi. Agar obunalar "
+"uchun to'lovlarni qabul qilsangiz, obuna valyutasi bu erda ko'rsatilgan "
+"valyutaga mos kelishiga ishonch hosil qilishingiz kerak."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Muallifga ishlov berish uchun to'lovlarni kiritish uchun to'lov miqdorini "
+"kiriting."
+
+msgid "manager.payment.authorFees"
+msgstr "Mualliflik to'lovlari"
+
+msgid "manager.payment.amount"
+msgstr "Miqdori"
+
+msgid "manager.payment.addPayment"
+msgstr "To'lov qo'shish"
+
+msgid "manager.payment.action"
+msgstr "Harakat"
+
+msgid "manager.managementPages"
+msgstr "Boshqaruv sahifalari"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Bu jurnal sayti uchun standart til bo'ladi."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Kechirasiz, boshqa tillar mavjud emas. Agar siz ushbu jurnalda qo'shimcha "
+"tillardan foydalanmoqchi bo'lsangiz, sayt ma'muriga murojaat qiling."
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$ count} ta maqoladan {$ count}"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Muammo galereyalarni ajratib bo'lmadi"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$ issueId}\" - \"{$ issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Eksport muammolari natijalari"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Ushbu jurnal uchun asosiy aloqa aniqlanmagan. <ahref=\"{$url}\"> jurnal "
+"sozlamalariga </a> asosiy kontaktni kiritishingiz mumkin."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Maqolani tasdiqlovchi elektron pochta nusxasini ushbu jurnalning asosiy "
+"kontaktiga yuboring."
+
+msgid "stats.publications.galleys"
+msgstr "Fayllar"
+
+msgid "stats.publications.abstracts"
+msgstr "Tezislar"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Sana bo'yicha fayllarning umumiy ko'rinishi"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Sana bo'yicha jami mavhum qarashlar"
+
+msgid "stats.publications.none"
+msgstr ""
+"Ushbu parametrlarga mos keladigan foydalanish statistikasi bilan hech qanday "
+"maqola topilmadi."
+
+msgid "stats.publications.details"
+msgstr "Maqola tafsilotlari"
+
+msgid "stats.publicationStats"
+msgstr "Maqola statistikasi"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Jurnal sozlamalarida ko'rsatilgan asosiy kontaktga nusxasini yuboring."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Belgilangan ob'ektlarni topib bo'lmadi."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "{$ Path} yo'lli jurnal uchun DOI prefiksi yo'q."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Tasdiqlanmadi."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Tasdiqlash muvaffaqiyatli o'tdi!"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Hech qanday ob'ekt tanlanmagan."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Eksport va ro'yxatdan o'tishdan oldin XML -ni tasdiqlang."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Ro'yxatdan o'tish"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Mark ro'yxatdan o'tgan"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Eksport qilish"
+
+msgid "plugins.importexport.common.action"
+msgstr "Harakat"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Ro'yxatga olingan"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Belgilangan ro'yxatga olingan"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Omonatga kiritilmagan"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Har qanday status"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Har qanday muammo"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"E'tibor bering, parol oddiy matn sifatida saqlanadi, ya'ni shifrlanmagan."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Parol"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI umumiy identifikator plaginida DOI tayinlash uchun hech qanday nashr "
+"ob'ektlari tanlanmagan, shuning uchun bu plaginda depozit yoki eksport "
+"qilish imkoniyati yo'q."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Plagin to'liq sozlanmagan."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Ushbu plaginni ishlatish uchun \"Public Identifier\" plaginlari toifasiga "
+"o'ting, DOI plaginini yoqing va sozlang va u erda to'g'ri DOI prefiksini "
+"ko'rsating."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Plagin talablari bajarilmagan"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galleylar"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Muammolar"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Maqolalar"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI plagin sozlamalari"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Sozlamalar"
+
+msgid "grid.genres.description"
+msgstr ""
+"Bu komponentlar fayllarni nomlash uchun ishlatiladi va fayllarni yuklash "
+"menyusida ko'rsatiladi. ## Belgilangan janrlar foydalanuvchiga faylni 99Z "
+"yoki barcha komponentlar bilan bog'lash imkonini beradi (masalan, 02)."
+
+msgid "grid.genres.title"
+msgstr "Maqola komponentlari"
+
+msgid "grid.genres.title.short"
+msgstr "Komponentlar"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Maqola ruxsatnomalari muvaffaqiyatli tiklandi."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Har bir nashr etilgan maqola uchun mualliflik huquqi to'g'risidagi bayonot "
+"va litsenziya ma'lumotlarini olib tashlang, ularni jurnalning joriy standart "
+"sozlamalariga qaytaring. Maqolalarga ilova qilingan barcha oldingi "
+"mualliflik huquqi va litsenziyalash ma'lumotlari butunlay o'chirib "
+"tashlanadi. Ayrim hollarda, sizga boshqa litsenziya ostida chop etilgan "
+"ishni qayta litsenziyalashga qonuniy ruxsat berilmasligi mumkin. Iltimos, "
+"ushbu vositadan foydalanganda ehtiyot bo'ling va jurnalingizda chop etilgan "
+"maqolalarga qanday huquqlarga egaligingizga ishonchingiz komil bo'lmasa, "
+"yuridik ekspertiza bilan bog'laning."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Haqiqatan ham barcha maqolalar uchun ruxsat ma'lumotlarini qayta "
+"tiklamoqchimisiz? Bu amalni ortga qaytarib bo'lmaydi."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Maqola ruxsatnomalarini tiklash"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Muammo: standart yil nashr etilgan kundan boshlab hisoblanadi."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Maqola: standart yil, maqolaning e'lon qilingan sanasidan boshlab, \""
+"ketayotganda nashr etilgandek\" bo'ladi."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Yangi maqolaning mualliflik huquqi yiliga asoslash"
+
+msgid "manager.publication.library"
+msgstr "Nashriyot kutubxonasi"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Rollar - bu jurnaldagi foydalanuvchilarning turli darajalari va ularga "
+"tegishli ish oqimlariga kirish huquqi berilgan guruhlar. Besh xil ruxsat "
+"darajasi mavjud: Jurnal menejerlari jurnaldagi hamma narsaga kirish huquqiga "
+"ega (barcha tarkib va sozlamalar); Bo'lim muharrirlari barcha tayinlangan "
+"tarkibga to'liq kirish huquqiga ega; Jurnal yordamchilari muharrir tomonidan "
+"aniq berilgan barcha topshiriqlarga kirish imkoniyati cheklangan; "
+"Taqrizchilar ko'rib chiqish uchun topshirilgan topshiriqlarni ko'rishi va "
+"bajarishi mumkin; va mualliflar cheklangan miqdordagi ma'lumotlarni o'z "
+"taqdimotlarida ko'rishlari va ular bilan muloqot qilishlari mumkin. Bundan "
+"tashqari, rollarga kirish huquqi berilishi mumkin bo'lgan besh xil bosqichli "
+"topshiriqlar mavjud: Yuborish, Ichki ko'rib chiqish, Sharh, Tahririyat va "
+"Ishlab chiqarish."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Jurnalning nashr etilgan sonlaridagi maqolalar bo'limlarda, odatda mavzu "
+"yoki kontent turiga ko'ra tartibga solinadi (masalan, maqolalarni ko'rib "
+"chiqish, tadqiqotlar va boshqalar)."
+
+msgid "grid.action.addSection"
+msgstr "Bo'lim qo'shish"
+
+msgid "grid.category.path"
+msgstr "Yo'l"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Yuqorida sanab o'tilgan to'plamdan eng mos toifalarni tanlang. O'quvchilar "
+"jurnallar to'plamidan toifalar bo'yicha ko'rishlari mumkin bo'ladi."
+
+msgid "manager.setup.categories"
+msgstr "Kategoriyalar"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Bu havola faqat mehmon kirganida ko'rsatiladi."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Tashrif buyuruvchining joriy va o'tmishdagi obunalari tasvirlangan sahifaga "
+"havola."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Siz taklif qilayotgan obunalarni tasvirlaydigan sahifaga havola."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Obuna turi muvaffaqiyatli yaratildi."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Hech qanday obuna turlari yaratilmagan."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Obuna turi"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Obuna turining nomi talab qilinadi."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Bunday nomdagi obuna turi allaqachon mavjud."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Turi nomi"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Saqlash va boshqasini yaratish"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Iltimos, ko'rsatilgan katakchadan foydalaning."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Bu obuna turini hammaga ochiq yoki veb -saytda ko'rinmasin."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Variantlar"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Iltimos, ko'rsatilgan katakchadan foydalaning."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Obunalar a'zolik ma'lumotlarini talab qiladi (masalan, uyushma, tashkilot, "
+"konsortsium va boshqalar)."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Iltimos, taqdim etilgan variantlardan foydalaning."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Institutsional (foydalanuvchilar domen yoki IP -manzil orqali tasdiqlangan)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Shaxsiy (foydalanuvchilar login orqali tasdiqlanadi)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Obunalar"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Iltimos, obuna turining yaroqli formatini tanlang."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Obuna turining formati talab qilinadi."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Vaqt talab qilinadi."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Vaqt ijobiy, raqamli qiymat bo'lishi kerak."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Obuna davom etadigan oylar soni (masalan, 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Davomiyligi"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Iltimos, taqdim etilgan variantlardan foydalaning."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Hech qachon tugamaydi"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "oy (masalan, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Muddati tugaydi"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Tavsif"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Iltimos, to'g'ri valyutani tanlang."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Valyuta kerak."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valyuta"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Xarajat talab qilinadi."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Narx ijobiy, raqamli bo'lishi kerak."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Belgisiz (masalan, $) raqamli qiymatni kiriting (masalan, 40 yoki 40.00)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Narx"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Tahrirlash"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Obuna turini tahrirlash"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Davomiyligi"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Yaratmoq"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Yangi obuna turini yarating"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institutsional"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individual"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Obunalar"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Narx"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Ogohlantirish! Bu turdagi barcha obunalar ham o'chiriladi. Haqiqatan ham "
+"ushbu obuna turini davom ettirmoqchimisiz va yo'q qilmoqchimisiz?"
+
+msgid "manager.subscriptionTypes"
+msgstr "Obuna turlari"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Tashkilot nomi"
+
+msgid "manager.subscriptions.contact"
+msgstr "Aloqa nomi"
+
+msgid "manager.subscriptions.user"
+msgstr "Foydalanuvchi"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Obuna turi"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Obuna muvaffaqiyatli yaratildi."
+
+msgid "manager.subscriptions.select"
+msgstr "Tanlang"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Jurnal menejerlari, muharrirlari, bo'lim muharrirlari, tartib muharrirlari, "
+"nusxa ko'chiruvchilar va tuzatuvchilarga obuna bo'lish huquqi avtomatik "
+"ravishda beriladi."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Foydalanuvchi -ni tanlang"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Kontaktga obuna bo'lishni tanlang"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Obunalar yo'q"
+
+msgid "manager.subscriptions.notes"
+msgstr "Eslatmalar"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Malumot raqami"
+
+msgid "manager.subscriptions.membership"
+msgstr "A'zolik"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP diapazoni"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Yangi obuna bo'lishdan oldin obuna turi yaratilishi kerak."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Bu foydalanuvchi allaqachon ushbu jurnalga obuna bo'lgan."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Foydalanuvchiga elektron pochta xabarini yuborish uchun \"Obuna\" jurnalida "
+"obunaning kontakt nomi va elektron pochta manzili ko'rsatilishi kerak."
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Saqlash va boshqasini yaratish"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Qo'shish"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "O'chirish"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Iltimos, to'g'ri IP diapazonini kiriting."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Agar IP -diapazonlari bu erga kiritilsa, bu ixtiyoriy. <br/> To'g'ri "
+"qiymatlarga IP -manzil (masalan, 142.58.103.1), IP -diapazoni (masalan, "
+"142.58.103.1 - 142.58.103.4), IP -diapazoni '*' ( masalan, 142.58.*.*) va "
+"CIDR bilan IP diapazoni (masalan, 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP diapazoni"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Iltimos, haqiqiy domen kiriting."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Tanlangan obuna turiga obuna autentifikatsiyasi uchun domen va/yoki IP "
+"diapazoni kerak."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Agar bu erda domen kiritilsa, IP diapazonlari ixtiyoriydir. <br/> To'g'ri "
+"qiymatlar domen nomlari (masalan, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Pochta manzili"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Tashkilot nomi talab qilinadi."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Tashkilot nomi"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domen"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Eslatmalar"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Tanlangan obuna turi a'zolik ma'lumotlarini talab qiladi."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Agar obuna turi obunachilar uyushma yoki tashkilotga tegishli bo'lishini "
+"talab qilsa, a'zolik ma'lumotlarini kiriting."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Malumot raqami"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "A'zolik"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Iltimos, ko'rsatilgan katakchadan foydalaning."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Foydalanuvchiga foydalanuvchi nomi va obuna tafsilotlari ko'rsatilgan "
+"elektron pochta xabarini yuboring."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Iltimos, to'g'ri mamlakatni tanlang."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Iltimos, to'g'ri foydalanuvchini tanlang."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Foydalanuvchi talab qilinadi."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Aloqa"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Foydalanuvchi"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Eslatma: Quyidagi barcha o'zgarishlar foydalanuvchi tizimidagi profilga "
+"tegishli."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Iltimos, obunaning tugash sanasini tanlang."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Bu obuna muddati tugamaydigan; Iltimos, tugash sanasini ko'rsatmang."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Bu obuna muddati tugamaydigan; Iltimos, boshlanish sanasini ko'rsatmang."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Obunaning tugash sanasi talab qilinadi."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Tugash sanasi"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Iltimos, obunaning to'g'ri boshlanish sanasini tanlang."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Obunaning boshlanish sanasi talab qilinadi."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Boshlanish vaqti"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Iltimos, obuna turini tanlang."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Obuna turi talab qilinadi."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Obuna turi"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Iltimos, to'g'ri obuna holatini tanlang."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Obuna holati talab qilinadi."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Holat"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Hammasi"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Status bilan"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Tahrirlash"
+
+msgid "manager.subscriptions.edit"
+msgstr "Obunani tahrirlash"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domen"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Boshlanish vaqti"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Boshlash"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Tugash sanasi"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Oxiri"
+
+msgid "manager.subscriptions.renew"
+msgstr "Yangilash"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Yaratmoq"
+
+msgid "manager.subscriptions.create"
+msgstr "Yangi obuna yaratish"
+
+msgid "manager.subscriptions.summary"
+msgstr "Obunalar haqida qisqacha ma'lumot"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Bu obunani o‘chirib tashlamoqchimisiz?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Haqiqatan ham bu obunani yangilamoqchimisiz?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institutsional obunalar"
+
+msgid "manager.individualSubscriptions"
+msgstr "Shaxsiy obunalar"
+
+msgid "manager.subscriptions"
+msgstr "Obunalar"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "E -pochta manzilini kiriting."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Bu aloqa ma'lumotlari obunalar bilan bog'liq savollarga ega bo'lgan mijozlar "
+"uchun obuna sahifasida ko'rsatiladi."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Obuna menejeri"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Obuna turlari va to'lovlar tarkibi obunalar sahifasida, obuna menejerining "
+"nomi va aloqa ma'lumotlari bilan birga ko'rsatiladi. Rivojlanayotgan "
+"mamlakatlardagi obunachilar uchun to'lov usullari yoki qo'llab -quvvatlash "
+"kabi obunalar haqida qo'shimcha ma'lumotlarni bu erga qo'shish mumkin."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Obuna haqida ma'lumot"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Obuna jurnallari nashr etilgan tarkibga \"kechiktirilgan ochiq kirishni\" "
+"ta'minlashi mumkin, shuningdek \"muallifni o'z-o'zini arxivlashga\" ruxsat "
+"berishlari mumkin (bu ikkalasi ham o'quvchilar sonini ko'paytiradi va "
+"tarkibga havola qiladi)."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Obuna jurnallari uchun kirish imkoniyatlarini oching"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong> Eslatma: </strong> Bu variantlarni yoqish uchun, jurnal menejeri "
+"o'quvchi to'lovlari ostida, onlayn to'lovlar modulini, shu jumladan obunalar "
+"uchun onlayn to'lovlarni yoqishi kerak."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong> Eslatma: </strong> Internetda sotib olingan institutsional "
+"obunalar, taqdim etilgan domen va IP diapazonlarini tasdiqlashni va obunani "
+"boshqaruvchi tomonidan obunani faollashtirishni talab qiladi."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Obuna menejeriga elektron pochta orqali elektron pochta orqali xabardor "
+"qiling."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Shaxsiy obunani onlayn yangilash to'g'risida elektron pochta orqali obuna "
+"menejeriga xabar bering."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Obuna menejeriga elektron pochta orqali Institutsional obunani sotib olish "
+"to'g'risida xabar bering (tavsiya etiladi)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Shaxsiy obunani onlayn xarid qilishda elektron pochta orqali obuna "
+"menejeriga xabar bering."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Avtomatik elektron xabarnomalar (OJS elektron pochtalarida jurnal "
+"menejerlari tomonidan tahrir qilish mumkin), obuna onlayn to'lovlari "
+"tugagandan so'ng, obuna menejeriga yuborilishi mumkin."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Onlayn to'lov haqida bildirishnomalar"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong> Eslatma: </strong> Ushbu parametrni faollashtirish uchun sayt "
+"ma'muri OJS konfiguratsiya faylidagi <tt> rejalashtirilgan_tasbatlar </tt> "
+"parametrini yoqishi kerak. Ushbu funktsiyani qo'llab -quvvatlash uchun "
+"qo'shimcha server konfiguratsiyasi talab qilinishi mumkin (bu barcha "
+"serverlarda bo'lmasligi mumkin), OJS hujjatlarida ko'rsatilgan."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Ro'yxatdan o'tgan o'quvchilar, muammo ochiq bo'lganda, elektron pochta "
+"orqali tarkibni olish imkoniyatiga ega bo'ladilar."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Iltimos, obuna muddati tugashidan bir necha hafta oldin to'g'ri qiymatni "
+"tanlang."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Iltimos, obuna muddati tugaganidan keyin bir necha hafta uchun to'g'ri "
+"qiymatni tanlang."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Iltimos, obuna muddati tugashidan bir necha oy oldin to'g'ri qiymatni "
+"tanlang."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Iltimos, obuna muddati tugaganidan keyingi oylar uchun to'g'ri qiymatni "
+"tanlang."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML matn maydonlarida ishlatilishi mumkin (shrift o'lchami, rangi va h.k. "
+"uchun), \"qaytish\" lar <tt> & lt; br & gt; </tt>; HTML muharriri Firefox "
+"brauzerlari bilan ishlaydi."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Quyidagilardan birini tanlang:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong> Eslatma: </strong> Bu variantlarni faollashtirish uchun sayt "
+"ma'muri OJS konfiguratsiya faylidagi <tt> rejalashtirilgan_tasbatlar </tt> "
+"parametrini yoqishi kerak. Ushbu funktsiyani qo'llab -quvvatlash uchun "
+"qo'shimcha server konfiguratsiyasi talab qilinishi mumkin (bu barcha "
+"serverlarda bo'lmasligi mumkin), OJS hujjatlarida ko'rsatilgan."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Avtomatik elektron pochta eslatmalari (OJS elektron pochtalarida jurnal "
+"menejerlari tomonidan tahrir qilish mumkin) obunachilarga obuna muddati "
+"tugagunga qadar ham, keyin ham yuborilishi mumkin."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Obuna muddati tugashi haqida eslatmalar"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Obuna muddati tugashidan oldin abonentlarni elektron pochta orqali xabardor "
+"qiling."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Obuna muddati tugashidan oldin abonentlarni elektron pochta orqali xabardor "
+"qiling."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Obuna muddati tugagandan so'ng abonentlarni elektron pochta orqali xabardor "
+"qiling."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+"Obuna muddati tugagandan so'ng abonentlarni elektron pochta orqali xabardor "
+"qiling"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$ x} hafta"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$ x} oy"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"O'quvchilar yaqinda e'lon qilingan obuna tarkibiga kirishni rad etishadi, "
+"lekin obuna muddati tugashidan oldin e'lon qilingan obuna tarkibiga kirishni "
+"saqlab qolishadi."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Qisman amal qilish muddati"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"O'quvchilarga obuna muddati tugashi bilan barcha obuna tarkibiga kirish "
+"taqiqlanadi."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "To'liq amal qilish muddati"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Obuna muddati tugagandan so'ng, o'quvchilar obuna tarkibiga kirishni rad "
+"etishlari yoki obuna muddati tugashidan oldin e'lon qilingan obuna tarkibiga "
+"kirishni davom ettirishi mumkin."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Obuna muddati tugadi"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Iltimos, ko'rsatilgan katakchadan foydalaning."
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Kechiktirilgan ochiq kirish"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Obuna siyosati"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Ob'ektlar turi (jurnal, son, maqola, fayl turlari) va/yoki bir yoki bir "
+"nechta ob'ekt identifikatorlari bo'yicha tor natijalar."
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Kontekst bo'yicha tor natijalar (muammolar va/yoki maqola)."
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Muammolar jadvali sahifalarini ko'rish"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Jurnalning asosiy sahifalarini ko'rish"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Maqolaning mavhum sahifalarini ko'rish va yuklab olish"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Maqolaning mavhum sahifalarini ko'rish"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Maqola faylini yuklab olish"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Obunalar"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Ushbu jurnalning ekspertlar tomonidan ko'rib chiqilgan statistikasini "
+"hisoblash uchun bo'limlarni tanlang."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Sharhlar soni"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Tahrirchi reytingi"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Sharhlovchilar"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "No tayinlangan"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Ro'yxatdan o'tgan o'quvchilar"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Tengdoshlar ko'rib chiqishdi"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Taqdimotlarning umumiy soni"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Nashr qilingan muammolar"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"E'tibor bering: qayta ko'rib chiqilgan materiallarning foizlari 100%ni "
+"tashkil etmasligi mumkin, chunki qayta topshirilgan narsalar qabul qilinadi, "
+"rad etiladi yoki haligacha bajarilmoqda."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"O'quvchilarga \"Jurnal haqida\" bo'limida taqdim etiladigan narsalarni "
+"tekshiring."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "E'lon qilingan narsalar"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS har bir jurnal uchun quyidagi statistikani hisoblab chiqadi. \"Ko'rib "
+"chiqish kunlari\" muharrirning dastlabki qaroriga qadar (yoki ko'rib chiqish "
+"versiyasini belgilash) sanadan boshlab hisoblab chiqiladi, \"e'lon qilingan "
+"kunlar\" esa asl yuklashdan nashrga qadar qabul qilingan arizalar uchun "
+"o'lchanadi."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Nashr qilinadigan kunlar"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Ko'rib chiqish kunlari"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Qayta topshirish"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Ro'yxatdan o'tish muvaffaqiyatli o'tdi!"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Ro'yxatdan o'tish muvaffaqiyatli bo'lmadi! DOI ro'yxatga olish serveri \"{$ "
+"param}\" xatosini qaytardi."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "{$ Param} kirish fayli o'qilmaydi."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "{$ Param} chiqish fayli yozilmaydi."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Noto'g'ri XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Tanlangan obyektlarni o'zgartirib bo'lmadi."

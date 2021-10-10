@@ -1,7 +1,7 @@
 # Nguyen Xuan Giao <giaonxb@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-01 12:04+0000\n"
+"PO-Revision-Date: 2021-09-09 11:05+0000\n"
 "Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
@@ -2069,3 +2069,6 @@ msgstr ""
 
 msgid "manager.setup.useImageTitle"
 msgstr "Tiêu đề ảnh"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Quá trình không thể phân tích cú pháp các bản trình bày của số"

@@ -1,6 +1,7 @@
+# Mirko Spiroski <mspiroski@id-press.eu>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-06 10:52+0000\n"
+"PO-Revision-Date: 2021-09-01 01:52+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "mk_MK/>\n"
@@ -481,3 +482,9 @@ msgstr "Прераспредели"
 
 msgid "editor.home"
 msgstr "Насловна страна за уредници"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Насловната страница што барате да се избрише одговара на број од различно "
+"списание. Молам бидете сигурни дека работите со вистинското списание, "
+"користите коректен ИД на бројот и обидете се повторно."

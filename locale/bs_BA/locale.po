@@ -1,6 +1,7 @@
+# Udruženje ilmijje Islamske zajednice u BiH <web@ilmijja.ba>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-15 09:56+0000\n"
+"PO-Revision-Date: 2021-08-29 05:20+0000\n"
 "Last-Translator: Udruženje ilmijje Islamske zajednice u BiH <web@ilmijja.ba>"
 "\n"
 "Language-Team: Bosnian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
@@ -2429,7 +2430,7 @@ msgid "context.current"
 msgstr "Trenutni časopis:"
 
 msgid "user.authorization.representationNotFound"
-msgstr "Galley ne može biti pronađena"
+msgstr "Zahtjevana galerija ne može biti pronađena."
 
 msgid "category.category"
 msgstr "Kategorije"

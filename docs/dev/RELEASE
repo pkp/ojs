@@ -42,6 +42,7 @@ OJS release:
 
     docs/README.md
     docs/release-notes/README-<VERSION>
+    SECURITY.md
 
 
 4. Copy the current release notes to docs/:

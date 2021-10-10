@@ -1,9 +1,10 @@
+# Niels Erik Frederiksen <nef@kb.dk>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-11-30 11:43+0000\n"
+"PO-Revision-Date: 2021-09-06 15:04+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/editor/da_DK/"
 ">\n"
@@ -442,3 +443,10 @@ msgstr "Vis planlagt publikation"
 
 msgid "issues.submissions.issueIds"
 msgstr "Tildelt nummer"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Forsidebilledet, du ønskede at slette, svarer til forsidebilledet på et "
+"nummer fra et andet tidsskrift. Du skal være sikker på, at du arbejder med "
+"det korrekte tidsskrift, og at du anvender det korrekte nummer-id. Prøv "
+"derefter igen."

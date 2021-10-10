@@ -1,8 +1,9 @@
 # Irina Lobzhanidze <irina_lobzhanidze@iliauni.edu.ge>, 2021.
+# Vakhtang Tebidze <vtebidze@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-04 12:04+0000\n"
-"Last-Translator: Irina Lobzhanidze <irina_lobzhanidze@iliauni.edu.ge>\n"
+"PO-Revision-Date: 2021-10-01 02:07+0000\n"
+"Last-Translator: Vakhtang Tebidze <vtebidze@gmail.com>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ka_GE/>\n"
 "Language: ka_GE\n"
@@ -93,13 +94,11 @@ msgstr "ხუთი ნაბიჯი გაგზავნისათვი�
 msgid "author.submit.submitArticle"
 msgstr "სტატიის გაგზავნა"
 
-#, fuzzy
 msgid "author.track"
 msgstr "აქტიური შენატანები"
 
-#, fuzzy
 msgid "author.submit"
-msgstr "ახალი შენატანი"
+msgstr "ახალი მასალა"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""

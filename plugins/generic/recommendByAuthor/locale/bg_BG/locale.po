@@ -1,0 +1,32 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-29 15:31+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"Особеност: Този плъгин изисква поне една статистика/отчет за плъгин, за да "
+"бъде активиран. Ако вашите приставки за статистика предоставят повече от "
+"един показател, моля, изберете също така основен показател на страницата с "
+"настройки на сайта на администратора и/или на страниците с настройки на "
+"мениджъра/директора на списанието."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Най-четените статии от същия автор(и)"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Този плъгин вмъква списък със статии от същия автор на страницата с резюме "
+"на статията."
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Препоръчани статии от автор"

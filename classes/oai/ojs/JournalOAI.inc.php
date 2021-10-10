@@ -19,14 +19,13 @@
 
 namespace APP\oai\ojs;
 
+use APP\core\Application;
+use PKP\db\DAORegistry;
 use PKP\oai\OAI;
 use PKP\oai\OAIRepository;
 use PKP\oai\OAIResumptionToken;
-use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
 
-use APP\oai\ojs\OAIDAO;
-use APP\core\Application;
+use PKP\plugins\HookRegistry;
 
 class JournalOAI extends OAI
 {
@@ -109,12 +108,9 @@ class JournalOAI extends OAI
         $tmpArray = preg_split('/:/', $setSpec);
         if (count($tmpArray) == 1) {
             [$journalSpec] = $tmpArray;
-            $journalSpec = urldecode($journalSpec);
             $sectionSpec = null;
         } elseif (count($tmpArray) == 2) {
             [$journalSpec, $sectionSpec] = $tmpArray;
-            $journalSpec = urldecode($journalSpec);
-            $sectionSpec = urldecode($sectionSpec);
         } else {
             return [0, 0];
         }

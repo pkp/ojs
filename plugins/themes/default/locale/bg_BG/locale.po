@@ -1,0 +1,76 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-31 20:53+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr ""
+"Показване на изображението на началната страница като фон на заглавката "
+"(header)."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Когато е качено изображение на начална страница, покажете го във фонов режим "
+"на заглавката вместо обичайната му позиция на началната страница."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Изберете фоново изображение за заглавката (header)"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Покажете кратка информация за списанието на началната страница."
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Изберете цвят за заглавката (header)."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Цвят"
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Допълващо се сдвояване на серифни заглавия и безсерифен "
+"основен текст."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Широко разположен серифен шрифт, подходящ за четене онлайн."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Популярен модерен безсерифен шрифт."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Допълващо се сдвояване на серифни заглавия и "
+"безсерифен основен текст."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Допълващо се сдвояване на безсерифни заглавия и "
+"серифен основен текст."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Серифен вариант на дигиталния шрифт на Google."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Дигитален безсерифен шрифт, създаден от Google за обширна езикова "
+"поддръжка."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Изберете комбинация от шрифтове, която подхожда за това списание."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Типография"
+
+msgid "plugins.themes.default.description"
+msgstr "Това е оформлението на темата по подразбиране."
+
+msgid "plugins.themes.default.name"
+msgstr "Оформление на темата по подразбиране"
