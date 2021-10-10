@@ -3,8 +3,8 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 06:06+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-10 11:39+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -261,7 +261,7 @@ msgid "editor.issues.enableOpenAccessDate"
 msgstr "Dayakan penundaan akses terbuka"
 
 msgid "editor.issues.accessDate"
-msgstr "Buka tarikh akses"
+msgstr "Tarikh akses terbuka"
 
 msgid "editor.issues.accessStatus"
 msgstr "Status akses"
