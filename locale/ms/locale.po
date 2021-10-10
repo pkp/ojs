@@ -3,7 +3,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 10:43+0000\n"
+"PO-Revision-Date: 2021-10-10 10:56+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
@@ -2217,7 +2217,7 @@ msgid "notification.type.editing"
 msgstr "Menyunting Peristiwa"
 
 msgid "metadata.pkp.peerReviewed"
-msgstr "Artikel yang diulas oleh rakan"
+msgstr "Artikel yang diulas oleh rakan sejawat"
 
 msgid "log.imported"
 msgstr "{$userName} telah mengimport artikel {$submissionId}."
@@ -2254,12 +2254,12 @@ msgstr ""
 
 msgid "log.layout.layoutEditorUnassigned"
 msgstr ""
-"{$editorName} telah ditugaskan sebagai susun atur editor untuk penyerahan "
+"{$editorName} telah ditugaskan sebagai editor susun atur untuk penyerahan "
 "{$submissionId}."
 
 msgid "log.layout.layoutEditorAssigned"
 msgstr ""
-"{$editorName} telah ditetapkan sebagai susun atur editor untuk penyerahan "
+"{$editorName} telah ditetapkan sebagai editor susun atur untuk penyerahan "
 "{$submissionId}."
 
 msgid "log.copyedit.authorFile"
@@ -2348,8 +2348,8 @@ msgstr ""
 
 msgid "log.review.reviewerUnassigned"
 msgstr ""
-"{$reviewerName} telah tidak ditugaskan untuk mengulas penyerahan {$ "
-"submissionId} untuk pusingan ulasan {$ round}."
+"{$reviewerName} telah tidak ditugaskan untuk mengulas penyerahan "
+"{$submissionId} untuk pusingan ulasan {$round}."
 
 msgid "installer.upgradeInstructions"
 msgstr ""
