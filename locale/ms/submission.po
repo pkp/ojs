@@ -1,8 +1,9 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-05 15:20+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
+"PO-Revision-Date: 2021-10-10 11:39+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/submission/ms/"
 ">\n"
 "Language: ms\n"
@@ -155,7 +156,7 @@ msgid "publication.inactiveSection"
 msgstr "{$section} (Tidak aktif)"
 
 msgid "publication.invalidSection"
-msgstr "Seksyen untuk penerbitan ini tidak dapat dijumpai."
+msgstr "Bahagian untuk penerbitan ini tidak dapat dijumpai."
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -178,7 +179,7 @@ msgid "galley.publicationNotFound"
 msgstr "Penerbitan untuk galley ini tidak dapat dijumpai."
 
 msgid "galley.editPublishedDisabled"
-msgstr "Galley penerbitan ini tidak dapat diedit kerana sudah diterbitkan."
+msgstr "Galley penerbitan ini tidak dapat disunting kerana sudah diterbitkan."
 
 msgid "catalog.category.heading"
 msgstr "Semua Item"
@@ -187,10 +188,10 @@ msgid "catalog.browseTitles"
 msgstr "{$numTitles} Item"
 
 msgid "submission.sectionOptions"
-msgstr "Pilihan Seksyen"
+msgstr "Pilihan Bahagian"
 
 msgid "section.any"
-msgstr "Mana-mana Seksyen"
+msgstr "Mana-mana Bahagian"
 
 msgid "submission.viewingPreview"
 msgstr ""
@@ -211,7 +212,7 @@ msgstr "Sila pilih peranan penyumbang."
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
 "Abstrak anda terlalu panjang. Silakan dipendekkan ke bawah had perkataan "
-"yang ditunjukkan untuk seksyen ini."
+"yang ditunjukkan untuk bahagian ini."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Sila masukkan abstrak artikel anda."
