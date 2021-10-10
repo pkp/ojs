@@ -2,7 +2,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 06:06+0000\n"
+"PO-Revision-Date: 2021-10-10 08:58+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms/>\n"
 "Language: ms\n"
@@ -1152,3 +1152,521 @@ msgstr ""
 "Pilihan yang dipilih, bersama dengan butiran dan yurannya (yang dapat diedit "
 "di bawah), akan muncul di Tentang Jurnal di bawah Polisi, dan juga pada "
 "titik di mana pembayaran diperlukan."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Fail input {$param} tidak dapat dibaca."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Fail keluaran {$param} tidak boleh ditulis."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML tidak sah:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Tidak dapat menukar objek yang dipilih."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Tiada objek yang dipilih."
+
+msgid "plugins.importexport.common.validation"
+msgstr "Sahkan XML sebelum eksport dan pendaftaran."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Daftar"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Tanda didaftarkan"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Eksport"
+
+msgid "plugins.importexport.common.action"
+msgstr "Tindakan"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Berdaftar"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Ditanda berdaftar"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Tidak Didepositkan"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Semua Status"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Semua Isu"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Harap perhatikan bahawa kata laluan akan disimpan sebagai teks biasa, iaitu "
+"tidak disulitkan."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Kata Laluan"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Plugin tidak disiapkan sepenuhnya."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Keperluan plugin tidak dipenuhi"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galley"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Isu"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artikel"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Tetapan Plugin DOI"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Tetapan"
+
+msgid "grid.genres.title"
+msgstr "Komponen Artikel"
+
+msgid "grid.genres.title.short"
+msgstr "Komponen"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Kebenaran artikel berjaya ditetapkan semula."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Berdasarkan tahun hak cipta artikel baru"
+
+msgid "manager.publication.library"
+msgstr "Pustaka Penerbit"
+
+msgid "grid.action.addSection"
+msgstr "Tambah Bahagian"
+
+msgid "grid.category.path"
+msgstr "Laluan URL"
+
+msgid "manager.setup.categories"
+msgstr "Kategori"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Pautan ini hanya akan dipaparkan semasa pelawat masuk."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Pautan ke halaman yang menerangkan langganan pelawat semasa dan masa lalu."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Pautan ke halaman yang menerangkan langganan yang anda tawarkan."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Jenis langganan berjaya dibuat."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Tiada jenis langganan dibuat."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Jenis langganan"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Nama jenis langganan diperlukan."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Jenis langganan dengan nama ini sudah wujud."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Nama Jenis"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Simpan dan Cipta Yang Lain"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Sila gunakan kotak pilihan yang disediakan."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Jangan jadikan jenis langganan ini tersedia untuk umum atau kelihatan di "
+"laman web."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Pilihan"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Sila gunakan kotak pilihan yang disediakan."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Langganan memerlukan maklumat keahlian (mis. Persatuan, organisasi, "
+"konsortium, dll.)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Sila gunakan pilihan yang disediakan."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institusi (pengguna disahkan melalui domain atau alamat IP)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individu (pengguna disahkan melalui log masuk)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Sila pilih format jenis langganan yang sah."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Format jenis langganan diperlukan."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Tempoh diperlukan."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Tempohnya mestilah positif, nilai berangka."
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Jumlah bulan berlangganan (mis. 12)."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Tempoh"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Sila gunakan pilihan yang disediakan."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Tidak pernah luput"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "bulan (mis. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Tamat selepas"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Butiran"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Sila pilih mata wang yang sah."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Mata wang diperlukan."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Mata Wang"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Kos diperlukan."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Kos mestilah nilai positif dan berangka."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Masukkan nilai berangka (mis. 40 atau 40.00) tanpa simbol (mis., $)."
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Kos"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Sunting"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Sunting Jenis Langganan"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Tempoh"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Cipta"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Cipta Jenis Langganan Baru"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institusi"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individu"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Kos"
+
+msgid "manager.subscriptionTypes"
+msgstr "Jenis Langganan"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Nama Institusi"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nama Perhubungan"
+
+msgid "manager.subscriptions.user"
+msgstr "Pengguna"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Jenis Langganan"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Langganan berjaya dicipta."
+
+msgid "manager.subscriptions.select"
+msgstr "Pilih"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Pilih Pengguna"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Pilih Hubungan Langganan"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Tiada langganan"
+
+msgid "manager.subscriptions.notes"
+msgstr "Catatan"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Nombor rujukan"
+
+msgid "manager.subscriptions.membership"
+msgstr "Keahlian"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Julat IP"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Simpan dan Cipta Yang Lain"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Tambah"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Padam"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Sila masukkan julat IP yang sah."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Julat IP"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Sila masukkan domain yang sah."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Jenis langganan yang dipilih memerlukan domain dan/atau julat IP untuk "
+"pengesahan langganan."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Sekiranya domain dimasukkan di sini, julat IP adalah pilihan. <br /> Nilai "
+"yang sah adalah nama domain (mis. Lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Alamat surat-menyurat"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Nama institusi diperlukan."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Nama Institusi"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Catatan"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Nombor rujukan"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Keahlian"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Sila gunakan kotak pilihan yang disediakan."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Hantarkan e-mel kepada pengguna dengan nama pengguna dan maklumat langganan "
+"mereka."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Sila pilih pengguna yang sah."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Sila pilih pengguna yang sah."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Seorang pengguna diperlukan."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Hubungi"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Pengguna"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Catatan: Semua perubahan di bawah adalah untuk profil seluruh sistem "
+"pengguna."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Sila pilih tarikh akhir langganan yang sah."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Ini adalah jenis langganan yang tidak tamat tempoh; jangan nyatakan tarikh "
+"akhir."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Ini adalah jenis langganan yang tidak tamat tempoh; jangan nyatakan tarikh "
+"mula."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Tarikh akhir langganan diperlukan."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Tarikh tamat"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Sila pilih tarikh mula langganan yang sah."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Tarikh mula langganan diperlukan."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Tarikh mula"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Sila pilih jenis langganan yang sah."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Jenis langganan diperlukan."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Jenis langganan"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Sila pilih status langganan yang sah."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Status langganan diperlukan."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Status"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Semua"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Dengan Status"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Sunting"
+
+msgid "manager.subscriptions.edit"
+msgstr "Sunting Langganan"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domain"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Tarikh Mula"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Mula"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Tarikh Tamat"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Tamat"
+
+msgid "manager.subscriptions.renew"
+msgstr "Perbaharui"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Cipta"
+
+msgid "manager.subscriptions.create"
+msgstr "Cipta Langganan Baru"
+
+msgid "manager.subscriptions.summary"
+msgstr "Ringkasan Langganan"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Adakah anda pasti mahu memadamkan langganan ini?"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Adakah anda pasti mahu memperbaharui langganan ini?"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Langganan Institusi"
+
+msgid "manager.individualSubscriptions"
+msgstr "Langganan Individu"
+
+msgid "manager.subscriptions"
+msgstr "Langganan"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Sila masukkan e-mel yang sah."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Pengurus Langganan"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Maklumat Langganan"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Pilihan Akses Terbuka Untuk Jurnal Langganan"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Maklumkan Pengurus Langganan melalui e-mel semasa pembaharuan langganan "
+"Institusi dalam talian."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Maklumkan Pengurus Langganan melalui e-mel semasa pembaharuan langganan "
+"Individu dalam talian."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Maklumkan Pengurus Langganan melalui e-mel semasa pembelian dalam talian "
+"langganan Institusi (disyorkan)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Maklumkan Pengurus Langganan melalui e-mel semasa pembelian dalam talian "
+"mengenai langganan Individu."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Notifikasi Pembayaran Dalam Talian"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Pembaca yang berdaftar akan mempunyai pilihan untuk menerima senarai isi "
+"kandungan melalui e-mel apabila isi mempunyai akses terbuka."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Pilih nilai yang sah untuk bilangan minggu sebelum tamat tempoh langganan."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Pilih nilai yang sah untuk bilangan minggu setelah tamat tempoh langganan."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Pilih nilai yang sah untuk bilangan bulan sebelum tamat tempoh langganan."
