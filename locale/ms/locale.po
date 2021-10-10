@@ -3,7 +3,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 10:16+0000\n"
+"PO-Revision-Date: 2021-10-10 10:29+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
@@ -767,10 +767,10 @@ msgid "user.register.reviewerInterests"
 msgstr "Kenal pasti bidang ulasan (bidang substantif dan kaedah penyelidikan):"
 
 msgid "user.register.reviewerDescription"
-msgstr "Bersedia melakukan ulasan rakan untuk penyerahan ke laman web ini."
+msgstr "Bersedia melakukan ulasan sejawat untuk penyerahan ke laman web ini."
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Bersedia melakukan ulasan rakan untuk penyerahan ke jurnal."
+msgstr "Bersedia melakukan ulasan sejawat untuk serahan ke jurnal."
 
 msgid "user.register.authorDescription"
 msgstr "Mampu menyerahkan item ke jurnal."
@@ -1669,7 +1669,7 @@ msgid "payment.alreadyPaid"
 msgstr "Sudah Dibayar"
 
 msgid "payment.waive"
-msgstr "Mengetepikan"
+msgstr "Pengecualian"
 
 msgid "payment.payNow"
 msgstr "Bayar Sekarang"
@@ -1689,7 +1689,7 @@ msgstr "Anda mesti log masuk untuk membuat sumbangan."
 msgid "payment.loginRequired.forIssue"
 msgstr ""
 "Langganan atau pembelian isu yang diperlukan untuk mengakses item. Untuk "
-"mengesahkan langganan, akses pembelian terdahulu atau isu pembelian, log "
+"mengesahkan langganan, akses pembelian terdahulu atau pembelian isu, log "
 "masuk ke jurnal."
 
 msgid "payment.loginRequired.forArticle"
@@ -1740,7 +1740,7 @@ msgstr ""
 "kepada jurnal."
 
 msgid "about.aboutSoftware"
-msgstr "Perihal Sistem Jurnal Terbuka"
+msgstr "Mengenai Open Journal Systems"
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Proses Editorial dan Penerbitan OJS"
@@ -1854,13 +1854,13 @@ msgid "about.focusAndScope"
 msgstr "Fokus dan Skop"
 
 msgid "about.editorialPolicies"
-msgstr "Dasar Editorial"
+msgstr "Polisi Editorial"
 
 msgid "about.editorialTeam.biography"
 msgstr "Biografi"
 
 msgid "about.editorialTeam"
-msgstr "Pasukan Editorial"
+msgstr "Kumpulan Editorial"
 
 msgid "about.history"
 msgstr "Sejarah Jurnal"
@@ -1878,7 +1878,7 @@ msgid "archive.issueUnavailable"
 msgstr "Isu Tidak Tersedia"
 
 msgid "archive.browse"
-msgstr "Layar isu lama"
+msgstr "Layari isu lama"
 
 msgid "archive.archivesPageNumber"
 msgstr "Arkib - Halaman {$pageNumber}"
@@ -1938,7 +1938,7 @@ msgid "search.searchFor"
 msgstr "Cari artikel untuk"
 
 msgid "search.browseAuthorIndex"
-msgstr "Layar Indeks Pengarang"
+msgstr "Layari Indeks Pengarang"
 
 msgid "user.subscriptions.form.addIpRange"
 msgstr "Tambah"
