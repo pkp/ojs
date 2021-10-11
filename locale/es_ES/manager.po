@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2021-10-05 15:20+0000\n"
+"PO-Revision-Date: 2021-10-12 12:06+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "es_ES/>\n"
@@ -1847,3 +1847,12 @@ msgstr "URL a la página de inicio de la revista"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "El nombre de la revista"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nombre del sitio web cuando se aloja más de una revista"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "La moneda del importe del pago, por ejemplo USD"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "La firma para los correos electrónicos automatizados de la revista"
