@@ -2,7 +2,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 11:39+0000\n"
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/submission/ms/"
 ">\n"
@@ -99,7 +99,7 @@ msgstr ""
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Tahun hak cipta akan ditetapkan secara automatik apabila naskah ini "
-"diterbitkan dalam isu terbitan."
+"diterbitkan dalam terbitan."
 
 msgid "submission.publications"
 msgstr "Penerbitan"
@@ -117,10 +117,10 @@ msgid "submission.publication"
 msgstr "Penerbitan"
 
 msgid "publication.selectIssue"
-msgstr "Pilih isu yang akan dijadualkan untuk diterbitkan"
+msgstr "Pilih terbitan yang akan dijadualkan untuk diterbitkan"
 
 msgid "publication.unscheduledIn"
-msgstr "Naskah ini belum dijadualkan untuk diterbitkan dalam satu isu."
+msgstr "Naskah ini belum dijadualkan untuk diterbitkan dalam satu terbitan."
 
 msgid "publication.scheduledIn"
 msgstr ""
@@ -130,7 +130,7 @@ msgid "publication.publishedIn"
 msgstr "Diterbitkan dalam <a href=\"{$issueUrl}\"> {$issueName} </a>."
 
 msgid "publication.required.issue"
-msgstr "Penerbitan mesti ditugaskan kepada isu sebelum dapat diterbitkan."
+msgstr "Penerbitan mesti ditugaskan kepada terbitan sebelum dapat diterbitkan."
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -150,7 +150,7 @@ msgstr ""
 "penerbitan?"
 
 msgid "publication.invalidIssue"
-msgstr "Isu untuk penerbitan ini tidak dapat dijumpai."
+msgstr "Terbitan untuk penerbitan ini tidak dapat dijumpai."
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Tidak aktif)"
@@ -160,12 +160,12 @@ msgstr "Bahagian untuk penerbitan ini tidak dapat dijumpai."
 
 msgid "publication.datePublished.description"
 msgstr ""
-"Tarikh penerbitan akan ditetapkan secara automatik apabila isu itu "
+"Tarikh penerbitan akan ditetapkan secara automatik apabila terbitan itu "
 "diterbitkan. Jangan masukkan tarikh penerbitan melainkan artikel itu "
 "sebelumnya diterbitkan di tempat lain dan anda perlu mengundurkannya."
 
 msgid "publication.changeIssue"
-msgstr "Tukar Isu"
+msgstr "Tukar Terbitan"
 
 msgid "publication.assignedToIssue"
 msgstr ""
@@ -173,7 +173,7 @@ msgstr ""
 "tetapi belum dijadualkan untuk diterbitkan."
 
 msgid "publication.assignToissue"
-msgstr "Tugaskan ke Isu"
+msgstr "Tugaskan ke Terbitan"
 
 msgid "galley.publicationNotFound"
 msgstr "Penerbitan untuk galley ini tidak dapat dijumpai."
@@ -315,7 +315,7 @@ msgid "grid.action.issueEntry"
 msgstr "Lihat metadata penyerahan ini"
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Galley muncul dalam entri isu"
+msgstr "Galley muncul dalam entri terbitan"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
