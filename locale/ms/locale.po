@@ -3,7 +3,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 11:10+0000\n"
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/locale/ms/>\n"
 "Language: ms\n"
@@ -23,7 +23,7 @@ msgid "navigation.browseByAuthor"
 msgstr "Berdasarkan Pengarang"
 
 msgid "navigation.browseByIssue"
-msgstr "Berdasarkan Isu"
+msgstr "Berdasarkan Terbitan"
 
 msgid "navigation.otherJournals"
 msgstr "Jurnal Lain"
@@ -97,7 +97,7 @@ msgid "submission.event.general.articlePublished"
 msgstr "Artikel diterbitkan"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Penyerahan ditugaskan untuk isu"
+msgstr "Penyerahan ditugaskan untuk terbitan"
 
 msgid "submission.event.general.issueScheduled"
 msgstr "Penyerahan dihantar untuk mengeluarkan giliran penjadualan"
@@ -180,16 +180,16 @@ msgid "subscriptionTypes.currency"
 msgstr "Mata Wang"
 
 msgid "issue.return"
-msgstr "Kembali ke Butiran Isu"
+msgstr "Kembali ke Butiran Terbitan"
 
 msgid "issue.viewIssue"
-msgstr "Lihat Isu"
+msgstr "Lihat Terbitan"
 
 msgid "issue.nonpdf.title"
-msgstr "Muat turun Isu"
+msgstr "Muat turun Terbitan"
 
 msgid "issue.fullIssue"
-msgstr "Isu Penuh"
+msgstr "Terbitan Penuh"
 
 msgid "issue.coverPage.altText"
 msgstr "Muka hadapan"
@@ -204,7 +204,7 @@ msgid "issue.vol"
 msgstr "Jil."
 
 msgid "issue.noIssues"
-msgstr "Tiada isu"
+msgstr "Tiada terbitan"
 
 msgid "issue.year"
 msgstr "Tahun"
@@ -225,10 +225,10 @@ msgid "issue.title"
 msgstr "Tajuk"
 
 msgid "issue.issues"
-msgstr "Isu"
+msgstr "Terbitan"
 
 msgid "issue.issue"
-msgstr "Isu"
+msgstr "Terbitan"
 
 msgid "user.role.journalAssistants"
 msgstr "Pembantu Jurnal"
@@ -318,7 +318,7 @@ msgid "user.authorization.representationNotFound"
 msgstr "Galley yang diminta tidak dapat dijumpai."
 
 msgid "journal.viewAllIssues"
-msgstr "Lihat Semua Isu"
+msgstr "Lihat Semua Terbitan"
 
 msgid "journal.issn"
 msgstr "ISSN"
@@ -333,7 +333,7 @@ msgid "context.contexts"
 msgstr "Jurnal"
 
 msgid "journal.currentIssue"
-msgstr "Isu Semasa"
+msgstr "Terbitan Semasa"
 
 msgid "submission.search"
 msgstr "Pencarian Artikel"
@@ -615,7 +615,7 @@ msgid "common.queue.long.submissionsUnassigned"
 msgstr "Tidak ditugaskan"
 
 msgid "navigation.skip.issue"
-msgstr "Langkau ke isu semasa"
+msgstr "Langkau ke terbitan terkini"
 
 msgid "navigation.skip.about"
 msgstr "Langkau ke jurnal"
@@ -776,10 +776,10 @@ msgid "user.register.authorDescription"
 msgstr "Mampu menyerahkan item ke jurnal."
 
 msgid "user.register.openAccessNotificationDescription"
-msgstr "Dimaklumkan melalui e-mel apabila isu jurnal dibuat akses terbuka."
+msgstr "Dimaklumkan melalui e-mel apabila terbitan jurnal dibuat akses terbuka."
 
 msgid "user.register.readerDescription"
-msgstr "Dimaklumkan melalui e-mel mengenai penerbitan isu jurnal."
+msgstr "Dimaklumkan melalui e-mel mengenai penerbitan terbitan jurnal."
 
 msgid "user.register.form.passwordLengthTooShort"
 msgstr "Kata laluan yang anda masukkan tidak cukup panjang."
@@ -1342,7 +1342,7 @@ msgid "search.results.orderBy.journal"
 msgstr "Tajuk Jurnal"
 
 msgid "search.results.orderBy.issue"
-msgstr "Isu"
+msgstr "Terbitan"
 
 msgid "search.results.orderBy.date"
 msgstr "Tarikh penerbitan"
@@ -1629,7 +1629,7 @@ msgid "payment.type.subscription"
 msgstr "Yuran Langganan"
 
 msgid "payment.type.purchaseIssue"
-msgstr "Pembelian Yuran Isu"
+msgstr "Pembelian Yuran Terbitan"
 
 msgid "payment.type.purchaseArticle"
 msgstr "Pembelian Yuran Artikel"
@@ -1688,9 +1688,9 @@ msgstr "Anda mesti log masuk untuk membuat sumbangan."
 
 msgid "payment.loginRequired.forIssue"
 msgstr ""
-"Langganan atau pembelian isu yang diperlukan untuk mengakses item. Untuk "
-"mengesahkan langganan, akses pembelian terdahulu atau pembelian isu, log "
-"masuk ke jurnal."
+"Langganan atau pembelian terbitan yang diperlukan untuk mengakses item. "
+"Untuk mengesahkan langganan, akses pembelian terdahulu atau pembelian "
+"terbitan, log masuk ke jurnal."
 
 msgid "payment.loginRequired.forArticle"
 msgstr ""
@@ -1784,7 +1784,7 @@ msgid "about.archiving"
 msgstr "Pengarkiban"
 
 msgid "about.delayedOpenAccessDescription2"
-msgstr "bulan selepas sesuatu isu diterbitkan."
+msgstr "bulan selepas sesuatu terbitan diterbitkan."
 
 msgid "about.delayedOpenAccessDescription1"
 msgstr "Kandungan jurnal ini boleh didapati dalam format akses terbuka"
@@ -1875,10 +1875,10 @@ msgid "about.statistics"
 msgstr "Statistik"
 
 msgid "archive.issueUnavailable"
-msgstr "Isu Tidak Tersedia"
+msgstr "Terbitan Tidak Tersedia"
 
 msgid "archive.browse"
-msgstr "Layari isu lama"
+msgstr "Layari terbitan lama"
 
 msgid "archive.archivesPageNumber"
 msgstr "Arkib - Halaman {$pageNumber}"
@@ -1887,10 +1887,10 @@ msgid "archive.archives"
 msgstr "Arkib"
 
 msgid "current.noCurrentIssueDesc"
-msgstr "Jurnal ini tidak menerbitkan sebarang isu."
+msgstr "Jurnal ini tidak menerbitkan sebarang terbitan."
 
 msgid "current.noCurrentIssue"
-msgstr "Tiada Isu Semasa"
+msgstr "Tiada Terbitan Semasa"
 
 msgid "current.current"
 msgstr "Semasa"
@@ -1899,7 +1899,7 @@ msgid "site.noJournals"
 msgstr "Tiada jurnal yang boleh didapati."
 
 msgid "site.journalCurrent"
-msgstr "Isu Semasa"
+msgstr "Terbitan Semasa"
 
 msgid "site.journalRegister"
 msgstr "Daftar"
@@ -2093,10 +2093,10 @@ msgid "navigation.subscriptions"
 msgstr "Langganan"
 
 msgid "editor.issues.futureIssues"
-msgstr "Isu Akan Datang"
+msgstr "Terbitan Akan Datang"
 
 msgid "editor.issues.backIssues"
-msgstr "Isu Terdahulu"
+msgstr "Terbitan Terdahulu"
 
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
@@ -2139,10 +2139,11 @@ msgstr "Menunggu kelulusan."
 
 msgid "notification.type.approveSubmission"
 msgstr ""
-"Penyerahan ini sedang menunggu kelulusan sebelum akan muncul dalam isu ini."
+"Penyerahan ini sedang menunggu kelulusan sebelum akan muncul dalam terbitan "
+"ini."
 
 msgid "editor.navigation.issues"
-msgstr "Isu"
+msgstr "Terbitan"
 
 msgid "grid.action.createContext"
 msgstr "Cipta Jurnal Baru"
@@ -2152,7 +2153,7 @@ msgstr ""
 "Penyerahan copyeditor tidak sah atau permintaan copyeditor tidak diminta!"
 
 msgid "user.authorization.invalidIssue"
-msgstr "Isu tidak sah diminta!"
+msgstr "Terbitan tidak sah diminta!"
 
 msgid "user.authorization.sectionAssignment"
 msgstr "Anda cuba mengakses artikel yang bukan bahagian dari bahagian anda."
@@ -2175,7 +2176,7 @@ msgid "notification.type.editorAssignmentTask"
 msgstr "Artikel baharu telah diserahkan yang perlu ditugaskan kepada editor."
 
 msgid "notification.savedIssueMetadata"
-msgstr "Isu metadata penerbitan disimpan."
+msgstr "Metadata terbitan disimpan."
 
 msgid "notification.type.public"
 msgstr "Pengumuman Umum"
@@ -2202,7 +2203,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Pengumuman baharu telah dicipta."
 
 msgid "notification.type.issuePublished"
-msgstr "Satu isu telah diterbitkan."
+msgstr "Sebuah terbitan telah diterbitkan."
 
 msgid "notification.type.galleyModified"
 msgstr "Sebuah galley telah diubah suai untuk \"{$title}.\""
