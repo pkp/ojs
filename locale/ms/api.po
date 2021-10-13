@@ -3,7 +3,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 11:10+0000\n"
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/api/ms/>\n"
 "Language: ms\n"
@@ -60,8 +60,7 @@ msgstr ""
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr ""
-"Anda tidak mempunyai kebenaran untuk melihat isu terbitan yang belum "
-"diterbitkan."
+"Anda tidak mempunyai kebenaran untuk melihat terbitan yang belum diterbitkan."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Anda tidak boleh mengubah jurnal yang diserahkan."
