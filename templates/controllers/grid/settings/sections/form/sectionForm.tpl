@@ -65,7 +65,7 @@
 	{fbvFormSection list=true title="user.role.subEditors"}
 		{if count($subeditors)}
 			{foreach from=$subeditors item="subeditor" key="id"}
-				{fbvElement type="checkbox" id="subEditors[]" value=$id checked=in_array($id, $assignedSubeditors) label=$subeditor translate=false}
+				{fbvElement type="checkbox" id="subEditors[]" value=$id checked=in_array($id, $assignedSubeditors) label=$subeditor|escape translate=false}
 			{/foreach}
 		{else}
 			<span class="pkp_form_error"><p>{translate key="manager.section.noSectionEditors"}</p></span>
