@@ -284,7 +284,7 @@ class Repository
 
         if (!$issue && (is_int($idOrUrlPath) || ctype_digit($idOrUrlPath))) {
             $issue = $this->get((int) $idOrUrlPath);
-            $issue = $issue->getJournalId() == $contextId ? $issue : null;
+            $issue = (isset($issue) && $issue->getJournalId() == $contextId) ? $issue : null;
         }
 
         return $issue ?? null;
