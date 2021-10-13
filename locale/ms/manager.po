@@ -3,7 +3,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-11 01:48+0000\n"
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms/>\n"
 "Language: ms\n"
@@ -17,13 +17,13 @@ msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Gunakan tarikh penerbitan artikel"
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Gunakan tarikh penerbitan isu"
+msgstr "Gunakan tarikh penerbitan terbitan"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
 "Pilih bagaimana tarikh hak cipta lalai dipilih untuk artikel. Lalai ini "
-"dapat diganti berdasarkan kes demi kes. Sekiranya anda \"terbitkan semasa "
-"anda pergi\",jangan gunakan tarikh penerbitan isu."
+"dapat diganti berdasarkan kes demi kes. Sekiranya anda \"publish as you go\""
+",jangan gunakan tarikh penerbitan terbitan."
 
 msgid "manager.distribution.access"
 msgstr "Akses"
@@ -52,7 +52,7 @@ msgid "manager.payment.options.text"
 msgstr "Butiran Kaedah Pembayaran"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "Pembelian Isu"
+msgstr "Pembelian Terbitan"
 
 msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Pembelian Artikel"
@@ -61,7 +61,7 @@ msgid "manager.payment.options.publicationFee"
 msgstr "Caj Pemprosesan Artikel"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "Akses terhad ke isu dan artikel versi PDF sahaja"
+msgstr "Hanya Terhad Akses ke versi terbitan dan artikel versi PDF"
 
 msgid "manager.payment.options.membershipFee"
 msgstr "Keahlian Persatuan"
@@ -274,10 +274,10 @@ msgstr ""
 " dan/atau oleh satu atau lebih id objek."
 
 msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Hasil yang tipis mengikut konteks (isu dan/atau artikel)."
+msgstr "Hasil yang tipis mengikut konteks (terbitan dan/atau artikel)."
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Isu paparan halaman isi kandungan"
+msgstr "Terbitan paparan halaman isi kandungan"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Paparan halaman utama jurnal"
@@ -319,7 +319,7 @@ msgid "manager.statistics.statistics.numSubmissions"
 msgstr "Jumlah penyerahan"
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr "Isu yang diterbitkan"
+msgstr "Terbitan yang diterbitkan"
 
 msgid "manager.statistics.statistics.makePublic"
 msgstr "Periksa item untuk disediakan kepada pembaca di Mengenai Jurnal."
@@ -714,11 +714,11 @@ msgstr "Institusi"
 
 msgid "manager.setup.initialIssueDescription"
 msgstr ""
-"Bergantung pada format yang dipilih, kenal pasti isu, jilid, dan/atau tahun "
-"terbitan pertama yang akan diterbitkan dengan OJS:"
+"Bergantung pada format yang dipilih, kenal pasti terbitan, jilid, dan/atau "
+"tahun terbitan pertama yang akan diterbitkan dengan OJS:"
 
 msgid "manager.setup.initialIssue"
-msgstr "Isu awal"
+msgstr "Terbitan awal"
 
 msgid "manager.setup.information.forReaders"
 msgstr "Untuk Pembaca"
@@ -892,7 +892,7 @@ msgid "manager.setup.editorDecision"
 msgstr "Keputusan Editor"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr "Tambahkan senarai isi kandungan untuk isu semasa (jika ada)."
+msgstr "Tambahkan senarai isi kandungan untuk terbitan semasa (jika ada)."
 
 msgid "manager.setup.disciplineProvideExamples"
 msgstr "Berikan contoh disiplin akademik yang relevan untuk jurnal ini"
@@ -915,7 +915,7 @@ msgid "manager.setup.customizingTheLook"
 msgstr "Langkah 5. Mengubahsuai Pandangan"
 
 msgid "manager.setup.currentIssue"
-msgstr "Isu semasa"
+msgstr "Terbitan semasa"
 
 msgid "manager.setup.history"
 msgstr "Sejarah Jurnal"
@@ -1025,10 +1025,12 @@ msgid "manager.sections.identifyType"
 msgstr "Kenalpasti item yang diterbitkan di bahagian ini sebagai sebuah"
 
 msgid "manager.sections.hideTocTitle"
-msgstr "Hilangkan tajuk bahagian ini dari senarai isi kandungan isu."
+msgstr "Hilangkan tajuk bahagian ini dari senarai isi kandungan terbitan."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Tinggalkan nama pengarang untuk item bahagian dari senarai isi isu."
+msgstr ""
+"Tinggalkan nama pengarang untuk item bahagian dari senarai isi kandungan "
+"terbitan."
 
 msgid "manager.sections.form.titleRequired"
 msgstr "Tajuk diperlukan untuk bahagian tersebut."
@@ -1197,7 +1199,7 @@ msgid "plugins.importexport.common.status.any"
 msgstr "Sebarang Status"
 
 msgid "plugins.importexport.common.filter.issue"
-msgstr "Sebarang Isu"
+msgstr "Sebarang Terbitan"
 
 msgid "plugins.importexport.common.settings.form.password.description"
 msgstr ""
@@ -1217,7 +1219,7 @@ msgid "plugins.importexport.common.export.representations"
 msgstr "Galley"
 
 msgid "plugins.importexport.common.export.issues"
-msgstr "Isu"
+msgstr "Terbitan"
 
 msgid "plugins.importexport.common.export.articles"
 msgstr "Artikel"
@@ -1782,13 +1784,13 @@ msgid "emailTemplate.variable.context.contextName"
 msgstr "Nama jurnal"
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "Proses gagal menghuraikan isu galley"
+msgstr "Proses gagal menghuraikan terbitan galley"
 
 msgid "plugins.importexport.issue.cli.display"
 msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr "Hasil Isu Eksport"
+msgstr "Hasil Eksport Terbitan"
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
 msgstr ""
@@ -1887,7 +1889,7 @@ msgid "manager.setup.resetPermissions"
 msgstr "Tetapkan Semula Kebenaran Artikel"
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "Isu: tahun lalai akan diambil dari tarikh penerbitan terbitan."
+msgstr "Terbitan: tahun lalai akan diambil dari tarikh penerbitan terbitan."
 
 msgid "manager.setup.copyrightYearBasis.article"
 msgstr ""
@@ -2058,7 +2060,7 @@ msgstr ""
 
 msgid "manager.setup.uniqueIdentifierDescription"
 msgstr ""
-"Artikel dan isu dapat ditandai dengan nombor pengenalan atau string, "
+"Artikel dan terbitan dapat ditandai dengan nombor pengenalan atau string, "
 "menggunakan sistem pendaftaran seperti Digital Object Identifier System "
 "(DOI)."
 
@@ -2105,10 +2107,10 @@ msgstr ""
 msgid "manager.setup.publicationScheduleDescription"
 msgstr ""
 "Item jurnal boleh diterbitkan secara kolektif, sebagai sebahagian daripada "
-"isu dengan Isi Kandungannya sendiri. Sebagai alternatif, setiap item boleh "
-"diterbitkan sebaik sahaja siap, dengan menambahkannya ke dalam Isi Kandungan "
-"\"semasa\". Berikan pembaca, dalam Mengenai Jurnal, kenyataan mengenai "
-"sistem yang akan digunakan jurnal ini dan kekerapan penerbitan yang "
+"terbitan dengan Isi Kandungannya sendiri. Sebagai alternatif, setiap item "
+"boleh diterbitkan sebaik sahaja siap, dengan menambahkannya ke dalam Isi "
+"Kandungan \"semasa\". Berikan pembaca, dalam Mengenai Jurnal, kenyataan "
+"mengenai sistem yang akan digunakan jurnal ini dan kekerapan penerbitan yang "
 "diharapkan."
 
 msgid "manager.setup.proofingInstructionsDescription"
