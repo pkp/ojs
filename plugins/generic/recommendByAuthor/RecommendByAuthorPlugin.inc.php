@@ -14,17 +14,20 @@
  */
 
 use APP\core\Application;
+use APP\core\Services;
 use APP\facades\Repo;
-use PKP\plugins\GenericPlugin;
-use PKP\statistics\PKPStatisticsHelper;
-use PKP\submission\PKPSubmission;
+use APP\handler\Handler;
 use APP\search\ArticleSearch;
+use APP\statistics\StatisticsHelper;
 use PKP\core\VirtualArrayIterator;
-
-define('RECOMMEND_BY_AUTHOR_PLUGIN_COUNT', 10);
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\HookRegistry;
+use PKP\submission\PKPSubmission;
 
 class RecommendByAuthorPlugin extends GenericPlugin
 {
+    public const RECOMMEND_BY_AUTHOR_PLUGIN_COUNT = 10;
+
     //
     // Implement template methods from Plugin.
     //
@@ -47,7 +50,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
     }
 
     /**
-     * @see Plugin::getDisplayName()
+     * @copydoc Plugin::getDisplayName()
      */
     public function getDisplayName()
     {
@@ -55,7 +58,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
     }
 
     /**
-     * @see Plugin::getDescription()
+     * @copydoc Plugin::getDescription()
      */
     public function getDescription()
     {
@@ -67,7 +70,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
     // View level hook implementations.
     //
     /**
-     * @see templates/article/footer.tpl
+     * @copydoc templates/article/footer.tpl
      */
     public function callbackTemplateArticlePageFooter($hookName, $params)
     {
@@ -110,21 +113,16 @@ class RecommendByAuthorPlugin extends GenericPlugin
         });
 
         // Order results by metric.
-        $application = Application::get();
-        $metricType = $application->getDefaultMetricType();
-        if (empty($metricType)) {
-            $smarty->assign('noMetricSelected', true);
-        }
-        $column = PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID;
-        $filter = [
-            PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => [ASSOC_TYPE_GALLEY, ASSOC_TYPE_SUBMISSION],
-            PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID => [$results]
+        $filters = [
+            'contextIds' => [$displayedArticle->getData('contextId')],
+            'submissionIds' => $results,
+            'assocTypes' => [Application::ASSOC_TYPE_SUBMISSION, Application::ASSOC_TYPE_SUBMISSION_FILE]
         ];
-        $orderBy = [PKPStatisticsHelper::STATISTICS_METRIC => PKPStatisticsHelper::STATISTICS_ORDER_DESC];
-        $statsReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
+        $statsReport = Services::get('publicationStats')->getTotals($filters);
+
         $orderedResults = [];
-        foreach ((array) $statsReport as $reportRow) {
-            $orderedResults[] = $reportRow['submission_id'];
+        foreach ($statsReport as $reportRow) {
+            $orderedResults[] = $reportRow->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
         }
         // Make sure we even get results that have no statistics (yet) and that
         // we get them in some consistent order for paging.
@@ -141,7 +139,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
             $page = 1;
         }
         $totalResults = count($orderedResults);
-        $itemsPerPage = RECOMMEND_BY_AUTHOR_PLUGIN_COUNT;
+        $itemsPerPage = self::RECOMMEND_BY_AUTHOR_PLUGIN_COUNT;
         $offset = $itemsPerPage * ($page - 1);
         $length = max($totalResults - $offset, 0);
         $length = min($itemsPerPage, $length);
