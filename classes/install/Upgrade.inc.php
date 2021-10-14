@@ -415,11 +415,8 @@ class Upgrade extends Installer
     */
     public function updateSuppFileMetrics()
     {
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
         // Copy 531 assoc_type data to temp table
-        $metricsDao->update(
-            'CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)'
-        );
+        DB::statement('CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)');
         // Fetch submission_file data with old-supp-id
         $result = DB::select(
             'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
@@ -428,19 +425,16 @@ class Upgrade extends Installer
         // Loop through the data and save to temp table
         foreach ($result as $row) {
             // Use assoc_type 2531 to prevent collisions between old assoc_id and new assoc_id
-            $metricsDao->update(
-                'UPDATE metrics_supp SET assoc_id = ?, assoc_type = ? WHERE assoc_type = ? AND assoc_id = ?',
-                [(int) $row->file_id, 2531, 531, (int) $row->setting_value]
-            );
+            DB::update('UPDATE metrics_supp SET assoc_id = ?, assoc_type = ? WHERE assoc_type = ? AND assoc_id = ?', [(int) $row->file_id, 2531, 531, (int) $row->setting_value]);
         }
         // update temprorary 2531 values to 531 values
-        $metricsDao->update('UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?', [531, 2531]);
+        DB::update('UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?', [531, 2531]);
         // delete all existing 531 values from the actual metrics table
-        $metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
+        DB::statement('DELETE FROM metrics WHERE assoc_type = 531');
         // copy updated 531 values from metrics_supp to metrics table
-        $metricsDao->update('INSERT INTO metrics SELECT * FROM metrics_supp');
+        DB::insert('INSERT INTO metrics SELECT * FROM metrics_supp');
         // Drop metrics_supp table
-        $metricsDao->update('DROP TABLE metrics_supp');
+        DB::statement('DROP TABLE metrics_supp');
         return true;
     }
 
