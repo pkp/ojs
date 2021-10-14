@@ -13,7 +13,7 @@
 <version>
 	<application>recommendByAuthor</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.0</release>
+	<release>1.0.0.1</release>
 	<date>2013-04-30</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>1</sitewide>
