@@ -84,7 +84,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             return false;
         }
 
-        if (!Config::getVar('general', 'installed')) {
+        if (!Application::isReady()) {
             return false;
         }
 
