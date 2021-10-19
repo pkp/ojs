@@ -1,7 +1,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-19 04:07+0000\n"
+"PO-Revision-Date: 2021-10-19 21:41+0000\n"
 "Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
 "gateways-resolver/ms/>\n"
@@ -22,7 +22,8 @@ msgstr ""
 "entiti dalam penggunaan OJS ini."
 
 msgid "plugins.gateways.resolver.description"
-msgstr "Plugin ini menyelesaikan isu dan artikel berdasarkan petikan maklumat ."
+msgstr ""
+"Plugin ini menyelesaikan terbitan dan artikel berdasarkan petikan maklumat ."
 
 msgid "plugins.gateways.resolver.displayName"
 msgstr "Plugin Penyelesaian"
