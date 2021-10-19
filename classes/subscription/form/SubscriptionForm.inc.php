@@ -18,6 +18,7 @@ use APP\subscription\Subscription;
 use APP\template\TemplateManager;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionForm extends Form
 {
