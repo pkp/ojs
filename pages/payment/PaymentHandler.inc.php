@@ -16,7 +16,7 @@
 import('classes.handler.Handler');
 
 class PaymentHandler extends Handler {
-		 
+
 	/**
 	 * Pass request to plugin.
 	 * @param $args array
@@ -53,8 +53,8 @@ class PaymentHandler extends Handler {
 		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
 		if (!$queuedPayment) {
 			$templateMgr->assign(array(
-				'pageTitle' => 'common.payment',
-				'message' => 'payment.notFound',
+				'pageTitle' => __('common.payment'),
+				'message' => __('payment.notFound'),
 			));
 			$templateMgr->display('frontend/pages/message.tpl');
 			return;
