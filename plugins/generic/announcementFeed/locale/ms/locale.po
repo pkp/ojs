@@ -1,7 +1,7 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-19 04:07+0000\n"
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
 "Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-announcementFeed/ms/>\n"
@@ -25,7 +25,7 @@ msgid "plugins.generic.announcementfeed.atom.altText"
 msgstr "Logo Atom"
 
 msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
-msgstr "Sila masukkan bilangan bulat positif untuk pengumuman terkini ini."
+msgstr "Sila masukkan nombor bulat positif untuk pengumuman terkini ini."
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
 msgstr "pengumuman terkini."
