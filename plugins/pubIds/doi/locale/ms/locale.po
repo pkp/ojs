@@ -1,8 +1,236 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/ms/"
+">\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "galley"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Tetapkan DOI ke semua objek jurnal yang diterbitkan yang belum ditetapkan "
+"DOI. Tindakan ini tidak dapat digunakan dengan konfigurasi akhiran individu. "
+"Sekiranya anda telah mengubah konfigurasi DOI di atas, simpan perubahan anda "
+"sebelum memulakan tindakan ini. Menetapkan DOI mungkin memerlukan masa yang "
+"lama, bergantung pada jumlah objek yang diterbitkan dalam jurnal."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr ""
+"Sekiranya anda mengubah konfigurasi DOI anda, DOI yang telah ditetapkan "
+"tidak akan terjejas. Setelah konfigurasi DOI disimpan, gunakan butang ini "
+"untuk mengosongkan semua DOI yang ada sehingga tetapan baru akan berlaku "
+"dengan objek yang wujud."
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Item"
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "DOI belum ditugaskan untuk penerbitan ini."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "DOI untuk penerbitan ini adalah {$doi}."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "DOI mesti bermula dengan {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} telah ditetapkan."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId} tidak dapat ditetapkan kerana mengandungi corak yang tidak "
+"dapat diselesaikan."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "DOI tidak dapat ditetapkan kerana custom akhiran hilang."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Tugaskan DOI {$pubId} kepada {$pubObjectType} ini"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Gunakan pilihan berikut untuk mengosongkan DOI dari semua objek (artikel dan "
+"galley) yang dijadualkan untuk terbitan ini."
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Adakah anda pasti mahu menghapus objek terbitan DOI yang wujud?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Kosongkan Objek Terbitan DOI"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Adakah anda pasti mahu menghapus DOI yang wujud?"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Kosongkan"
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Akhiran DOI yang diberikan sudah digunakan untuk item lain yang diterbitkan. "
+"Sila masukkan akhiran DOI yang unik untuk setiap item."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI ditugaskan kepada {$pubObjectType} ini."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr ""
+"Apa yang anda lihat ialah pratonton DOI. Pilih kotak pilihan dan simpan "
+"borang untuk menetapkan DOI."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr ""
+"DOI tidak dapat ditetapkan kerana mengandungi corak yang tidak dapat "
+"diselesaikan."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr ""
+"Anda tidak dapat menghasilkan DOI kerana satu atau lebih bahagian corak DOI "
+"kekurangan data. Anda mungkin perlu menetapkan penerbitan untuk terbitan, "
+"menetapkan ID penerbit atau memasukkan nombor halaman."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr ""
+"Anda tidak dapat menghasilkan DOI sehingga penerbitan ini ditugaskan kepada "
+"terbitan."
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "DOI tidak dapat ditetapkan kerana custom akhiran hilang."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "terbitan"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Tugaskan"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "DOI mesti bermula dengan {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Adakah anda pasti mahu menetapkan DOI ke semua objek yang diterbitkan yang "
+"belum ditetapkan DOI?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Tetapkan DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Adakah anda pasti mahu menghapus semua DOI yang wujud?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Tetapkan semula DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Sila masukkan corak akhiran DOI untuk galley."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Sila masukkan corak akhiran DOI untuk artikel."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Sila masukkan corak akhiran DOI untuk terbitan."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Masukkan akhiran DOI individu untuk setiap item yang diterbitkan. Anda akan "
+"menemui medan input DOI tambahan pada halaman meta data setiap item."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%"
+"g untuk galley."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Gunakan corak lalai."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "untuk galley"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "untuk artikel"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "untuk terbitan"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Contohnya, vol%viss%ipp%p dapat membuat DOI seperti 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Gunakan corak yang dimasukkan di bawah untuk menghasilkan akhiran DOI. "
+"Gunakan %j untuk awal jurnal, %v untuk nombor jilid, %i untuk nombor "
+"terbitan, %Y untuk tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %"
+"f untuk ID fail OJS , %p untuk nombor halaman dan %x untuk \"Custom "
+"Identifier\"."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Akhiran DOI boleh berbentuk apa pun, tetapi mesti unik di antara semua objek "
+"penerbitan dengan awalan DOI yang sama yang ditugaskan:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Akhiran DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "Awalan DOI adalah wajib dan mestilah dalam bentuk 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Awalan DOI ditugaskan oleh agensi pendaftaran (mis. <a href=\""
+"http://www.crossref.org\" target=\"_new\"> Crossref </a>) dan dalam format "
+"10.xxxx (mis. 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "Awalan DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Galley"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Artikel"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Terbitan"
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr ""
+"Pilih objek penerbitan yang akan ditugaskan Digital Object Identifiers (DOI):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Sila pilih objek yang harus ditugaskan oleh DOI."
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Kandungan Jurnal"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr ""
+"Sila konfigurasikan plugin DOI agar dapat mengurus dan menggunakan DOI di "
+"OJS:"
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.description"
+msgstr ""
+"Plugin ini mendayakan penugasan Digital Object Identifiers untuk terbitan, "
+"artikel dan galley di OJS."
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
