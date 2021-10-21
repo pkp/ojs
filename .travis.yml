@@ -1,3 +1,9 @@
+env:
+  global:
+  # Used for saving generated test datasets. See Notion for details.
+  - secure: FTT6C4vhk88L1RKHmUnbTdXdTyjkhoAhtXwYGAvkrrTngU1uJMZeoFeHLqVf/uxQuNssOrEJsQWGrka5OEd1FAAxUuqTmytxRMuz9A6Z4qp5DiMIDyCB9WF5AdY1cb3XQw5GiPc2BWrmBxxRIKporkaND0UBRmyeHDvppjn0uME=
+  - APPLICATION=ojs
+
 # Configure the build matrix
 matrix:
   include:
@@ -9,14 +15,18 @@ matrix:
     php: 7.2
   - env: TEST=pgsql
     php: 7.3
-  - env: TEST=pgsql
+  - env:
+    - TEST: pgsql
+    - SAVE_BUILD: true
     php: 7.4
   # MySQL / various PHP
   - env: TEST=mysql
     php: 7.2
   - env: TEST=mysql
     php: 7.3
-  - env: TEST=mysql
+  - env:
+    - TEST: mysql
+    - SAVE_BUILD: true
     php: 7.4
   # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
   # - env: TEST=mysql DISABLE_PATH_INFO=1
