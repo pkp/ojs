@@ -1,10 +1,11 @@
+# Huang Feilong <hfl@nominsang.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-12-29 11:53+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2021-10-22 04:22+0000\n"
+"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/editor/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -460,3 +461,6 @@ msgstr "增加校对"
 
 msgid "issues.submissions.issueIds"
 msgstr "指派给刊期"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr "您请求删除的封面图片与其他期刊的一期相符。  请确保您使用的是正确的期刊，使用的是正确的期刊 ID，然后重试。"
