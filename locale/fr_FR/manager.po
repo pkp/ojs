@@ -1,10 +1,11 @@
+# Simon Mathdoc <karacaca38@outlook.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2021-05-26 09:50+0000\n"
-"Last-Translator: Rudy Hahusseau <rudy.hahusseau@univ-lorraine.fr>\n"
+"PO-Revision-Date: 2021-10-22 04:23+0000\n"
+"Last-Translator: Simon Mathdoc <karacaca38@outlook.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "fr_FR/>\n"
 "Language: fr_FR\n"
@@ -1957,3 +1958,49 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Sélectionnez le pays où est domiciliée cette revue, ou le pays correspondant "
 "à l'adresse postale de la revue ou de son éditeur."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Résultats de l'export des numéros"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nom du site web pour une installation multi revue"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Monnaie du montant dû, par exemple EUR"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Montant dû"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Nom du type de paiement"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Adresse mail du contact principal de la revue"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "La signature mail de la revue pour les mails automatiques"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Le nom du contact principal de la revue"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "L'URL de la page d'accueil de la revue"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Le nom de la revue"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "L'analyse des épreuves des numéros a échoué"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Aucun contact principal n'a été défini pour cette revue. Vous pouvez le "
+"faire dans <a href=\"{$url}\">les paramètres de la revue</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Envoyer une copie au contact principal, identifié dans les paramètres de la "
+"revue."
