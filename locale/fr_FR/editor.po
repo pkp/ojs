@@ -1,10 +1,11 @@
+# Simon Mathdoc <karacaca38@outlook.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2021-02-04 16:47+0000\n"
-"Last-Translator: François Théron <francois.theron@uvsq.fr>\n"
+"PO-Revision-Date: 2021-10-22 04:23+0000\n"
+"Last-Translator: Simon Mathdoc <karacaca38@outlook.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/editor/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -727,3 +728,9 @@ msgstr "Afficher la publication planifiée"
 
 msgid "issues.submissions.issueIds"
 msgstr "Assigné au numéro"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"L'image de la page de couverture à supprimer correspond à un numéro d'une "
+"autre revue. Merci de vérifier que vous êtes dans la bonne revue, que vous "
+"avez le bon ID de numéro et essayez à nouveau."
