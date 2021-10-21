@@ -1,8 +1,9 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-20 21:23+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-21 09:17+0000\n"
+"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/ms/"
 ">\n"
 "Language: ms\n"
@@ -13,7 +14,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo"
-msgstr ""
+msgstr "Nombor Semakan"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
 msgstr ""
@@ -228,3 +229,22 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Nombor semakan hilang."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Tambah Nombor Semakan"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Ruang nama pengenalpasti berterusan biasanya diperlukan untuk pendaftaran ("
+"mis. Di Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Ruang Nama"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Nombor semakan akan secara otomatik terkira dan ditambahkan di akhir, "
+"sebagai digit terakhir URN."
