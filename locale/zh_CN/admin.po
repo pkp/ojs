@@ -1,10 +1,11 @@
+# Huang Feilong <hfl@nominsang.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2020-12-29 11:53+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2021-10-22 04:23+0000\n"
+"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -153,3 +154,22 @@ msgstr "开放获取提醒"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "评审提醒"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "首选语言必须是期刊支持的语言"
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"期刊主管将无法向下面选择的任何角色发送批量电子邮件。  使用此设置来限制滥用电子邮件通知功能。  "
+"例如，对未同意接收此类电子邮件的读者、作者或其他大型用户组禁用批量电子邮件可能更安全。<br><br>可以在<a href=\""
+"{$siteSettingsUrl}\">管理 > 网站设置</a>中完全禁用此期刊的批量发送电子邮件功能。"
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"选择允许批量发送电子邮件的托管期刊。  启用此功能后，期刊管理员将能够向所有在其期刊上注册的用户发送电子邮件。<br><br>滥用此功能发送未经请求的电子"
+"邮件可能会违反某些司法管辖区的反垃圾邮件法律，并可能导致在您服务器的电子邮件中被阻止为垃圾邮件。  "
+"在启用此功能之前寻求技术建议，并考虑咨询期刊主管以确保其正确使用。<br><br>可以通过访问列表中的设置向导为每个期刊启用对此功能的进一步限制<a "
+"href=\"{$hostedContextsUrl}\">托管期刊</a>。"
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr "此期刊已禁用批量发送电子邮件功能。在<a href=\"{$siteSettingsUrl}\">管理 > 站点设置</a> 中启用此功能。"
