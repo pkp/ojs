@@ -1,7 +1,8 @@
+# Huang Feilong <hfl@nominsang.org>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-29 11:53+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2021-10-22 04:23+0000\n"
+"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -295,3 +296,27 @@ msgstr "{$section}(不活跃)"
 
 msgid "submission.viewingPreview"
 msgstr "这仅是预览，并没有被发布。<a href=\"{$url}\">查看提交</a>"
+
+msgid "submission.queries.production"
+msgstr "发布讨论"
+
+msgid "publication.version.details"
+msgstr "发布版本{$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "您确定不希望此计划发布吗？"
+
+msgid "publication.unpublish.confirm"
+msgstr "您确定不希望发布此内容吗？"
+
+msgid "publication.unpublish"
+msgstr "取消发布"
+
+msgid "submission.copyrightOther.description"
+msgstr "已将发布提交的版权分配给以下一方。"
+
+msgid "publication.changeIssue"
+msgstr "换期"
+
+msgid "publication.assignedToIssue"
+msgstr "这已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
