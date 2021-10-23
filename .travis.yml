@@ -4,6 +4,9 @@ env:
   - secure: FTT6C4vhk88L1RKHmUnbTdXdTyjkhoAhtXwYGAvkrrTngU1uJMZeoFeHLqVf/uxQuNssOrEJsQWGrka5OEd1FAAxUuqTmytxRMuz9A6Z4qp5DiMIDyCB9WF5AdY1cb3XQw5GiPc2BWrmBxxRIKporkaND0UBRmyeHDvppjn0uME=
   - APPLICATION=ojs
 
+# Attempt to work around Travis certificate failure problem
+dist: bionic
+
 # Configure the build matrix
 matrix:
   include:
@@ -40,6 +43,7 @@ cache:
     - $HOME/.cache
 addons:
   chrome: beta
+  postgresql: "9.5"
   apt:
     update: true
     packages:
