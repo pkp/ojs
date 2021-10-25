@@ -94,7 +94,7 @@ if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
             submodulesArr[$submodule]=$(parseRepositoryName $rawUrl)
         done;
 
-        rootOJSDir=$(pwd)
+        rootDir=$(pwd)
         currentSubmoduleIteration=1
 
         for submoduleName in ${!submodulesArr[@]};
@@ -113,7 +113,7 @@ if [ \( -n "$libModuleHash" \) -a \( "$strLength" -eq 40 \) ]; then
                     git remote add "$gitUser" git://github.com/"$gitUser"/"$submoduleUrlBasename"
                     git reset --hard HEAD
                     git pull --rebase "$gitUser" "$branch"
-                    cd ${rootOJSDir}
+                    cd ${rootDir}
                     ((currentSubmoduleIteration=currentSubmoduleIteration+1))
             fi;
         done
