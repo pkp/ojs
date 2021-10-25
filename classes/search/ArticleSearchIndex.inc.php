@@ -170,18 +170,18 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 ->getMany($collector);
             foreach ($submissionFilesIterator as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
-                $innerCollector = Repo::submissionFiles()
-                    ->getCollector()
-                    ->filterByAssoc(
-                        PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
-                        [$submissionFile->getId()]
-                    )
-                    ->filterBySubmissionIds([$article->getId()])
-                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
-                    ->includeDependentFiles();
-
                 $dependentFiles = Repo::submissionFiles()
-                    ->getMany($innerCollector);
+                    ->getMany(
+                        Repo::submissionFiles()
+                            ->getCollector()
+                            ->filterByAssoc(
+                                PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
+                                [$submissionFile->getId()]
+                            )
+                            ->filterBySubmissionIds([$article->getId()])
+                            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                            ->includeDependentFiles()
+                    );
                 foreach ($dependentFiles as $dependentFile) {
                     $this->submissionFileChanged(
                         $article->getId(),
