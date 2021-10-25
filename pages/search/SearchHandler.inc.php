@@ -21,8 +21,6 @@ use APP\handler\Handler;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 
-use Sokil\IsoCodes\IsoCodesFactory;
-
 class SearchHandler extends Handler
 {
     /**
