@@ -461,7 +461,7 @@ class ArticleHandler extends Handler
                         [$this->galley->getFileId()]
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
-                    ->filterByIncludeDependentFiles(true);
+                    ->includeDependentFiles();
                 $dependentFileIds = Repo::submissionFiles()
                     ->getIds($collector)
                     ->toArray();
