@@ -180,9 +180,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
                     ->includeDependentFiles();
 
-                $dependentFilesIterator = Repo::submissionFiles()
+                $dependentFiles = Repo::submissionFiles()
                     ->getMany($innerCollector);
-                foreach ($dependentFilesIterator as $dependentFile) {
+                foreach ($dependentFiles as $dependentFile) {
                     $this->submissionFileChanged(
                         $article->getId(),
                         SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
