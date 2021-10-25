@@ -165,8 +165,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             )
             ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
             ->includeDependentFiles();
-        $embeddableFilesIterator = Repo::submissionFiles()->getMany($collector);
-        $embeddableFiles = iterator_to_array($embeddableFilesIterator);
+        $embeddableFiles = Repo::submissionFiles()->getMany($collector);
 
         $referredArticle = null;
         foreach ($embeddableFiles as $embeddableFile) {
