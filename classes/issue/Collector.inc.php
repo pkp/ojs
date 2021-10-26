@@ -228,7 +228,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function searchPhrase(string $phrase): self
+    public function searchPhrase(?string $phrase): self
     {
         $this->searchPhrase = $phrase;
         return $this;
