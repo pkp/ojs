@@ -123,9 +123,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
                 $objectId = $searchDao->insertObject($articleId, $type, $submissionFile->getId());
 
-                $position = 0;
                 while (($text = $parser->read()) !== false) {
-                    $this->_indexObjectKeywords($objectId, $text, $position);
+                    $this->_indexObjectKeywords($objectId, $text);
                 }
                 $parser->close();
             }
@@ -338,18 +337,13 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * Index a block of text for an object.
      *
      * @param $objectId int
-     * @param $text string
-     * @param $position int
+     * @param $text string|array
      */
-    protected function _indexObjectKeywords($objectId, $text, &$position)
+    protected function _indexObjectKeywords($objectId, $text)
     {
         $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
         $keywords = $this->filterKeywords($text);
-        for ($i = 0, $count = count($keywords); $i < $count; $i++) {
-            if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
-                ++$position;
-            }
-        }
+        $searchDao->insertObjectKeywords($objectId, $keywords);
     }
 
     /**
@@ -364,8 +358,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     {
         $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
         $objectId = $searchDao->insertObject($articleId, $type, $assocId);
-        $position = 0;
-        $this->_indexObjectKeywords($objectId, $text, $position);
+        $this->_indexObjectKeywords($objectId, $text);
     }
 
     /**
