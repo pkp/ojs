@@ -97,6 +97,7 @@ class ResolverPlugin extends GatewayPlugin {
 
 				$submissionsIterator = Services::get('submission')->getMany([
 					'issueIds' => $issue->getId(),
+					'contextId' => $journal->getId()
 				]);
 				foreach ($submissionsIterator as $submission) {
 					// Look for the correct page in the list of articles.
