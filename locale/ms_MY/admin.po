@@ -4,7 +4,7 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-10 11:10+0000\n"
+"PO-Revision-Date: 2021-10-28 13:30+0000\n"
 "Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/admin/ms/>\n"
 "Language: ms_MY\n"
@@ -90,7 +90,7 @@ msgstr "Tiada pengguna yang berdaftar."
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
-"Adakah anda pasti mahu menggabungkan {$ oldAccountCount} akaun yang dipilih "
+"Adakah anda pasti mahu menggabungkan {$oldAccountCount} akaun yang dipilih "
 "ke dalam akaun dengan nama pengguna \"{$newUsername}\"? Akaun "
 "{$oldAccountCount} yang dipilih tidak akan wujud selepas itu. Tindakan ini "
 "tidak boleh diterbalikkan."
