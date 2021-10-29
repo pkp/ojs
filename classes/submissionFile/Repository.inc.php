@@ -24,8 +24,6 @@ class Repository extends BaseRepository
 {
     public function add(SubmissionFile $submissionFile): int
     {
-        $submissionId = parent::add($submissionFile);
-
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
             $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
             $galley = $galleyDao->getById($submissionFile->getData('assocId'));
@@ -35,6 +33,8 @@ class Repository extends BaseRepository
             $galley->setFileId($submissionFile->getId());
             $galleyDao->updateObject($galley);
         }
+
+        $submissionId = parent::add($submissionFile);
 
         return $submissionId;
     }
@@ -58,7 +58,6 @@ class Repository extends BaseRepository
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
                 $galleyDao->updateObject($galley);
             }
-            // To-Do: Implement 4622 job cleaning here
             $articleSearchIndex = Application::getSubmissionSearchIndex();
             $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
         }
