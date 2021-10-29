@@ -20,28 +20,28 @@ use APP\submission\Repository as SubmissionRepository;
 use APP\submissionFile\Repository as SubmissionFileRepository;
 use APP\user\Repository as UserRepository;
 
-use Illuminate\Support\Facades\App;
+use PKP\facades\Repo as BaseRepo;
 
-class Repo extends \PKP\facades\Repo
+class Repo extends BaseRepo
 {
     public static function issue(): IssueRepository
     {
-        return App::make(IssueRepository::class);
+        return app()->make(IssueRepository::class);
     }
 
     public static function publication(): PublicationRepository
     {
-        return App::make(PublicationRepository::class);
+        return app()->make(PublicationRepository::class);
     }
 
     public static function submission(): SubmissionRepository
     {
-        return App::make(SubmissionRepository::class);
+        return app()->make(SubmissionRepository::class);
     }
 
     public static function user(): UserRepository
     {
-        return App::make(UserRepository::class);
+        return app()->make(UserRepository::class);
     }
 
     public static function submissionFiles(): SubmissionFileRepository
