@@ -24,22 +24,5 @@
 				</li>
 			{/foreach}
 		</ul>
-
-		{if $showLegacy}
-		<h2>{translate key="plugins.reports.counter.olderReports"}</h2>
-		<p>{translate key="plugins.reports.counter.1a.introduction"}</p>
-		<ul>
-			<li>{translate key="plugins.reports.counter.1a.title"}{foreach from=$years item=year}&nbsp;&nbsp;<a href="{url op="reports" path="report" pluginName=$pluginName type="report" year=$year}">{$year|escape}</a>{/foreach}</li>
-			<li>{translate key="plugins.reports.counter.1a.xml"} {foreach from=$years item=year}&nbsp;&nbsp;<a href="{url op="reports" path="report" pluginName=$pluginName type="reportxml" year=$year}">{$year|escape}</a>{/foreach}</li>
-		</ul>
-
-		{if $legacyYears}
-			<p>{translate key="plugins.reports.counter.legacyStats"}</p>
-			<ul>
-				<li>{translate key="plugins.reports.counter.1a.title"}{foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url op="reports" path="report" pluginName=$pluginName type="report" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
-				<li>{translate key="plugins.reports.counter.1a.xml"} {foreach from=$legacyYears item=year}&nbsp;&nbsp;<a href="{url op="reports" path="report" pluginName=$pluginName type="reportxml" year=$year useOldCounterStats=true}">{$year|escape}</a>{/foreach}</li>
-			</ul>
-		{/if}
-		{/if}
 	</div>
 {/block}
