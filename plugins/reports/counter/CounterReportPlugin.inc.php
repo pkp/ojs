@@ -19,12 +19,13 @@ define('COUNTER_CLASS_SUFFIX', '.inc.php');
 
 import('plugins.reports.counter.classes.CounterReport');
 
+use APP\core\Application;
+use APP\core\Services;
 use APP\notification\NotificationManager;
+use APP\statistics\StatisticsHelper;
 use APP\template\TemplateManager;
 use PKP\notification\PKPNotification;
-
 use PKP\plugins\ReportPlugin;
-use PKP\statistics\PKPStatisticsHelper;
 
 class CounterReportPlugin extends ReportPlugin
 {
@@ -152,17 +153,6 @@ class CounterReportPlugin extends ReportPlugin
             $type = (string) $request->getUserVar('type');
             $errormessage = '';
             switch ($type) {
-                case 'report':
-                case 'reportxml':
-                    // Legacy COUNTER Release 3
-                    if (!Validation::isSiteAdmin()) {
-                        // Legacy reports are site-wide
-                        Validation::redirectLogin();
-                    }
-                    import('plugins.reports.counter.classes.LegacyJR1');
-                    $r3jr1 = new LegacyJR1($this);
-                    $r3jr1->display($request);
-                    return;
                 case 'fetch':
                     // Modern COUNTER Releases
                     // must provide a release, report, and year parameter
@@ -176,7 +166,7 @@ class CounterReportPlugin extends ReportPlugin
                             $reporter = $this->getReporter($report, $release);
                             if ($reporter) {
                                 // default report parameters with a yearlong range
-                                $reportItems = $reporter->getReportItems([], [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH => ['from' => $year . '01', 'to' => $year . '12']]);
+                                $reportItems = $reporter->getReportItems([], ['dateStart' => $year . '-01-01', 'dateEnd' => $year . '-12-31']);
                                 if ($reportItems) {
                                     $xmlResult = $reporter->createXML($reportItems);
                                     if ($xmlResult) {
@@ -207,18 +197,12 @@ class CounterReportPlugin extends ReportPlugin
                     $notificationManager->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => $errormessage]);
             }
         }
-        $legacyYears = $this->_getYears(true);
         $templateManager = TemplateManager::getManager();
         krsort($available);
         $templateManager->assign('pluginName', $this->getName());
         $templateManager->assign('available', $available);
         $templateManager->assign('release', $this->getCurrentRelease());
         $templateManager->assign('years', $years);
-        // legacy reports are site-wide, so only site admins have access
-        $templateManager->assign('showLegacy', Validation::isSiteAdmin());
-        if (!empty($legacyYears)) {
-            $templateManager->assign('legacyYears', $legacyYears);
-        }
         $templateManager->assign([
             'breadcrumbs' => [
                 [
@@ -239,29 +223,23 @@ class CounterReportPlugin extends ReportPlugin
     /**
     * Get the years for which log entries exist in the DB.
     *
-    * @param bool $useLegacyStats Use the old counter plugin data.
-    *
     * @return array
     */
-    public function _getYears($useLegacyStats = false)
+    public function _getYears()
     {
-        if ($useLegacyStats) {
-            $metricType = OJS_METRIC_TYPE_LEGACY_COUNTER;
-            $filter = [];
-        } else {
-            $metricType = METRIC_TYPE_COUNTER;
-            $filter = [PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE];
-        }
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
-        $results = $metricsDao->getMetrics($metricType, [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH], $filter);
-        $years = [];
-        foreach ($results as $record) {
-            $year = substr($record['month'], 0, 4);
-            if (in_array($year, $years)) {
-                continue;
-            }
-            $years[] = $year;
-        }
+        $filters = [
+            'dateStart' => StatisticsHelper::STATISTICS_EARLIEST_DATE,
+            'dateEnd' => date('Y-m-d', strtotime('yesterday')),
+            'contextIds' => [Application::get()->getRequest()->getContext()->getId()],
+            'assocTypes' => [Application::ASSOC_TYPE_SUBMISSION_FILE]
+        ];
+        $metricsQB = Services::get('publicationStats')->getQueryBuilder($filters);
+        $metricsQB = $metricsQB->getSum([StatisticsHelper::STATISTICS_DIMENSION_YEAR]);
+        $metricsQB->orderBy(StatisticsHelper::STATISTICS_DIMENSION_YEAR, StatisticsHelper::STATISTICS_ORDER_ASC);
+        $results = $metricsQB->get()->toArray();
+        $years = array_map(function ($n) {
+            return substr($n, 0, 4);
+        }, array_column($results, 'year'));
         return $years;
     }
 }
