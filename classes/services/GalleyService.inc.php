@@ -313,9 +313,9 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
                 [$galley->getId()]
             );
         // Delete related submission files
-        $submissionFilesIterator = Repo::submissionFiles()
+        $submissionFiles = Repo::submissionFiles()
             ->getMany($submissionFileCollector);
-        foreach ($submissionFilesIterator as $submissionFile) {
+        foreach ($submissionFiles as $submissionFile) {
             Repo::submissionFiles()
                 ->delete($submissionFile);
         }
