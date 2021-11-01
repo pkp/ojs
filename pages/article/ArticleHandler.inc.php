@@ -245,6 +245,7 @@ class ArticleHandler extends Handler
 
         // Get galleys sorted into primary and supplementary groups
         $galleys = $publication->getData('galleys');
+
         $primaryGalleys = [];
         $supplementaryGalleys = [];
         if ($galleys) {
@@ -411,8 +412,8 @@ class ArticleHandler extends Handler
             ->getCollector()
             ->filterBySubmissionIds([$articleId->getId()]);
 
-        $submissionFilesIterator = Repo::submissionFiles()->getMany($collector);
-        foreach ($submissionFilesIterator as $submissionFile) {
+        $submissionFiles = Repo::submissionFiles()->getMany($collector);
+        foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
                 $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
                 $articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());

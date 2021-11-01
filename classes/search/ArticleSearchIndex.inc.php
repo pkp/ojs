@@ -166,9 +166,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 ->getCollector()
                 ->filterBySubmissionIds([$article->getId()])
                 ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
-            $submissionFilesIterator = Repo::submissionFiles()
+            $submissionFiles = Repo::submissionFiles()
                 ->getMany($collector);
-            foreach ($submissionFilesIterator as $submissionFile) {
+            foreach ($submissionFiles as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
                 $dependentFiles = Repo::submissionFiles()
                     ->getMany(
