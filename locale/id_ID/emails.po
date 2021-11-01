@@ -1080,7 +1080,7 @@ msgstr ""
 "untuk menyediakan pratinjau kestabilan sistem."
 
 msgid "emails.statisticsReportNotification.subject"
-msgstr "Kagiatan redaksi selama {$month}, {$year}"
+msgstr "Kegiatan redaksi selama {$month}, {$year}"
 
 msgid "emails.announcement.subject"
 msgstr "{$title}"
