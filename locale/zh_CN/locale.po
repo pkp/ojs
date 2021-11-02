@@ -1,11 +1,12 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
+# Yukari Chiba <Charles@nia.ac.cn>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-10-23 23:29+0000\n"
-"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"PO-Revision-Date: 2021-11-02 22:18+0000\n"
+"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -1334,9 +1335,12 @@ msgstr "有关此发布系统平台和工作流的更多信息由 OJS / PKP 提�
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "OJS编审与出版流程"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。"
+msgstr ""
+"本期刊使用开放期刊系统（{$ojsVersion}）,本系统是由<a href=\"http://pkp.sfu.ca/\">Public "
+"Knowledge Project</a>研发与支持的一个开源的期刊管理与出版软件，另外，系统基于GNU通用公共许可证，因此可以自由的分发。访问 PKP "
+"的网站以<a href=\"http://pkp.sfu.ca/\">了解有关该软件的更多信息</a>。 询问有关期刊和向期刊投稿的问题请直接<a "
+"href=\"{$contactUrl}\">联系期刊</a>。"
 
 msgid "help.ojsHelp"
 msgstr "开放期刊系统帮助"
@@ -1752,7 +1756,10 @@ msgid "installer.maxFileUploadSize"
 msgstr "您的服务器目前支持的最大上传文件大小: <strong>{$maxFileUploadSize}</strong>"
 
 msgid "site.upgradeAvailable.admin"
-msgstr "有新版本的OJS可用。您目前使用OJS版本{$currentVersion}. 最新的版本为OJS {$latestVersion}. 请访问<a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\"页面 </a> 下载最新的版本并找到升级说明。"
+msgstr ""
+"有新版本的 OJS 可用。您目前使用 OJS 版本{$currentVersion}. 最新的版本为 OJS {$latestVersion}. 请访问<"
+"a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">此页面 "
+"</a>下载最新的版本并找到升级说明。"
 
 msgid "site.upgradeAvailable.manager"
 msgstr "有新版本的OJS可用。您目前使用OJS版本{$currentVersion}.最新的版本为OJS {$latestVersion}. 请联系您的网站管理员 ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>)通知他们最新版本已发布。更多详情可以在 <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">here</a>上看到。"
