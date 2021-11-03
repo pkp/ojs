@@ -1,7 +1,7 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-22 04:23+0000\n"
+"PO-Revision-Date: 2021-11-03 09:43+0000\n"
 "Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_CN/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "submission.submit.title"
-msgstr "提交稿件"
+msgstr "提交一篇文章"
 
 msgid "submission.title.tip"
 msgstr ""
@@ -56,7 +56,7 @@ msgid "submission.upload.selectComponent"
 msgstr "选择文章组件"
 
 msgid "submission.submit.userGroup"
-msgstr "以下列角色提交..."
+msgstr "以下列角色提交……"
 
 msgid "publication.selectIssue"
 msgstr "选择一个期次安排出版"
@@ -68,7 +68,7 @@ msgid "publication.unscheduledIn"
 msgstr "尚未计划将其发布在某一期中。"
 
 msgid "publication.scheduledIn"
-msgstr "出版物已安排于第 <a href=\"{$issueUrl}\">{$issueName}</a> 期次。"
+msgstr "安排于 <a href=\"{$issueUrl}\">{$issueName}</a> 。"
 
 msgid "publication.publishedIn"
 msgstr "发布在 <a href=\"{$issueUrl}\">{$issueName}</a>。"
@@ -77,16 +77,16 @@ msgid "publication.required.issue"
 msgstr "在发布之前，必须先将该文章分配一个期次。"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
-msgstr "已满足所有发布要求。由于发布日期已设置为{$ datePublished}。您确定要发布吗？"
+msgstr "已符合所有发布标准。本文将发布在{$ datePublished}的期刊。您确定要发布吗？"
 
 msgid "publication.publish.confirmation.backIssue"
-msgstr "已满足所有发布要求。这将发布在{$ issue}中。您确定要发布吗？"
+msgstr "已符合所有发布标准。将发布在{$ issue}。您确定要发布吗？"
 
 msgid "publication.publish.confirmation.futureIssue"
-msgstr "已满足所有发布要求。这将在{$ issue}发布时发布。您确定要安排发布吗？"
+msgstr "已符合所有发布标准。这将在{$ issue}发布。您确定要发布吗？"
 
 msgid "publication.publish.confirmation"
-msgstr "已满足所有发布要求。您确定要发布吗？"
+msgstr "已符合所有发布标准。您要发布吗？"
 
 msgid "publication.issue.success"
 msgstr "出版物的期次细节已更新。"
@@ -101,7 +101,7 @@ msgid "publication.datePublished.description"
 msgstr "出版日期会在期刊发行时自动设定。除非文章以前发表过或者在做回溯数据，否则不要人为设定。"
 
 msgid "galley.publicationNotFound"
-msgstr "未发现此校样的正氏出版物。"
+msgstr "未发现此校样的正式出版物。"
 
 msgid "galley.editPublishedDisabled"
 msgstr "此出版物已出版，所以校样已经不能编辑。"
@@ -207,7 +207,7 @@ msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p>此校样读者 <em>可用</em>。</p>"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>此校样对读者 <em>不可用e</em>。</p>"
+msgstr "<p>此校样对读者 <em>不可用</em>。</p>"
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "格式合格"
@@ -225,44 +225,44 @@ msgid "submission.submit.userGroupDescription"
 msgstr "选择提交稿件的身份。"
 
 msgid "submission.copyrightHolder.description"
-msgstr "版权将在发布后自动分配给{$copyright}。"
+msgstr "版权将在期刊出版后自动设定为{$copyright}。"
 
 msgid "submission.license.description"
 msgstr ""
-"许可证在发布后将被自动设置为 <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a>。"
+"许可证在文章发表后将被自动设置为 <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a>。"
 
 msgid "publication.required.reviewStage"
-msgstr "提交必须处于审稿或生产阶段才能发布。"
+msgstr "稿件必须处于文稿编辑或出版阶段才能出版。"
 
 msgid "publication.required.declined"
-msgstr "被拒绝的提交无法被发布。"
+msgstr "被退稿的稿件无法出版。"
 
 msgid "publication.publish.requirements"
-msgstr "在发布之前，必须满足以下要求。"
+msgstr "在出版之前，必须满足以下标准。"
 
 msgid "publication.publish"
-msgstr "发布"
+msgstr "出版"
 
 msgid "publication.invalidSubmission"
-msgstr "找不到此出版的提交。"
+msgstr "找不到此出版物的稿件。"
 
 msgid "publication.event.versionUnpublished"
-msgstr "版本已从发布中删除。"
+msgstr "版本已从出版物中删除。"
 
 msgid "publication.event.versionScheduled"
-msgstr "新的版本已被计划发布。"
+msgstr "新的版本已被计划出版。"
 
 msgid "publication.event.versionPublished"
-msgstr "新的版本被发布。"
+msgstr "新的版本被出版。"
 
 msgid "publication.event.unpublished"
-msgstr "提交尚未被发布。"
+msgstr "稿件尚未被出版。"
 
 msgid "publication.event.scheduled"
-msgstr "提交已被计划发布。"
+msgstr "稿件已安排出版。"
 
 msgid "publication.event.published"
-msgstr "该提交已发布。"
+msgstr "该稿件已发布。"
 
 msgid "publication.editDisabled"
 msgstr "此版本已发布，无法编辑。"
@@ -274,7 +274,7 @@ msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "版权年份将根据发布日期自动设置。"
 
 msgid "publication.copyrightYearBasis.issueDescription"
-msgstr "在某个刊期发布后，它的版权年份将被自动设置。"
+msgstr "在某个刊期发布后，它的版权年份将自动设置。"
 
 msgid "submission.publications"
 msgstr "出版物"
@@ -289,34 +289,34 @@ msgid "publication.status.published"
 msgstr "已出版"
 
 msgid "submission.publication"
-msgstr "发布"
+msgstr "出版物"
 
 msgid "publication.inactiveSection"
-msgstr "{$section}(不活跃)"
+msgstr "{$section}（不活跃）"
 
 msgid "submission.viewingPreview"
-msgstr "这仅是预览，并没有被发布。<a href=\"{$url}\">查看提交</a>"
+msgstr "这仅是预览，文章尚未发布。<a href=\"{$url}\">查看稿件</a>"
 
 msgid "submission.queries.production"
-msgstr "发布讨论"
+msgstr "出版讨论"
 
 msgid "publication.version.details"
-msgstr "发布版本{$version}"
+msgstr "出版物版本{$version}"
 
 msgid "publication.unschedule.confirm"
-msgstr "您确定不希望此计划发布吗？"
+msgstr "您确定不希望此计划出版吗？"
 
 msgid "publication.unpublish.confirm"
-msgstr "您确定不希望发布此内容吗？"
+msgstr "您确定不希望出版此内容吗？"
 
 msgid "publication.unpublish"
-msgstr "取消发布"
+msgstr "取消出版"
 
 msgid "submission.copyrightOther.description"
-msgstr "已将发布提交的版权分配给以下一方。"
+msgstr "已将发表文章的版权分配给以下各方。"
 
 msgid "publication.changeIssue"
 msgstr "换期"
 
 msgid "publication.assignedToIssue"
-msgstr "这已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
+msgstr "此文章已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
