@@ -24,7 +24,7 @@ class Repository extends BaseRepository
 {
     public function add(SubmissionFile $submissionFile): int
     {
-        $submissionId = parent::add($submissionFile);
+        $galley = null;
 
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
             $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
@@ -32,11 +32,16 @@ class Repository extends BaseRepository
             if (!$galley) {
                 throw new Exception('Galley not found when adding submission file.');
             }
+        }
+
+        $submissionFileId = parent::add($submissionFile);
+
+        if ($galley) {
             $galley->setFileId($submissionFile->getId());
             $galleyDao->updateObject($galley);
         }
 
-        return $submissionId;
+        return $submissionFileId;
     }
 
     public function delete(SubmissionFile $submissionFile): void
