@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-11-02 22:18+0000\n"
-"Last-Translator: Yukari Chiba <Charles@nia.ac.cn>\n"
+"PO-Revision-Date: 2021-11-03 09:43+0000\n"
+"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "点击图标以填写审查表。"
+msgstr "点击图标以填写审核表。"
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "请填写必填项目。"
@@ -35,7 +35,7 @@ msgid "common.payments"
 msgstr "支付"
 
 msgid "common.homePageHeader.altText"
-msgstr "主页头部"
+msgstr "主页标头"
 
 msgid "common.journalHomepageImage.altText"
 msgstr "期刊主页图片"
@@ -47,7 +47,7 @@ msgid "navigation.current"
 msgstr "最新一期"
 
 msgid "navigation.otherJournals"
-msgstr "其他杂志"
+msgstr "其他期刊"
 
 msgid "navigation.browseByIssue"
 msgstr "通过刊期"
@@ -56,10 +56,10 @@ msgid "navigation.browseByAuthor"
 msgstr "通过作者"
 
 msgid "navigation.infoForAuthors"
-msgstr "作者"
+msgstr "对于作者"
 
 msgid "navigation.infoForLibrarians"
-msgstr "图书管理员"
+msgstr "对于图书馆员"
 
 msgid "navigation.competingInterestGuidelines"
 msgstr "利益冲突向导"
@@ -68,7 +68,7 @@ msgid "navigation.infoForAuthors.long"
 msgstr "作者须知"
 
 msgid "navigation.infoForLibrarians.long"
-msgstr "图书管理员须知"
+msgstr "图书馆员须知"
 
 msgid "common.queue.long.submissionsUnassigned"
 msgstr "未指派"
@@ -77,13 +77,13 @@ msgid "common.queue.short.submissionsUnassigned"
 msgstr "未指派"
 
 msgid "common.queue.long.submissionsInEditing"
-msgstr "投稿编辑中"
+msgstr "稿件编辑中"
 
 msgid "common.queue.short.submissionsInEditing"
 msgstr "编辑中"
 
 msgid "common.queue.long.submissionsInReview"
-msgstr "投稿审阅中"
+msgstr "稿件审阅中"
 
 msgid "common.queue.short.submissionsInReview"
 msgstr "审稿中"
@@ -95,10 +95,10 @@ msgid "common.queue.short.submissionsArchives"
 msgstr "存档"
 
 msgid "common.queue.long.active"
-msgstr "活动中的投稿"
+msgstr "活跃"
 
 msgid "common.queue.short.active"
-msgstr "活动中"
+msgstr "活跃"
 
 msgid "common.queue.long.completed"
 msgstr "存档"
@@ -134,7 +134,7 @@ msgid "common.publications"
 msgstr "文章"
 
 msgid "article.submissionId"
-msgstr "投稿ID"
+msgstr "稿件 ID"
 
 msgid "article.title"
 msgstr "标题"
@@ -146,7 +146,7 @@ msgid "article.indexingInformation"
 msgstr "索引信息"
 
 msgid "article.metadata"
-msgstr "源数据"
+msgstr "元数据"
 
 msgid "article.journalSection"
 msgstr "期刊栏目"
@@ -164,13 +164,13 @@ msgid "article.suppFilesAbbrev"
 msgstr "补充文件"
 
 msgid "article.discipline"
-msgstr "学科和分学科"
+msgstr "学科和分支学科"
 
 msgid "article.subject"
 msgstr "关键词"
 
 msgid "article.coverage"
-msgstr "覆盖"
+msgstr "覆盖范围"
 
 msgid "article.type"
 msgstr "形式，方法或途径"
@@ -185,13 +185,13 @@ msgid "article.commentsToEditor"
 msgstr "作者评论"
 
 msgid "article.submission"
-msgstr "投稿"
+msgstr "稿件"
 
 msgid "article.submissions"
-msgstr "投稿"
+msgstr "稿件"
 
 msgid "article.details"
-msgstr "详细"
+msgstr "细节"
 
 msgid "article.abstract"
 msgstr "摘要"
@@ -203,7 +203,7 @@ msgid "article.accessLogoOpen.altText"
 msgstr "开放存取"
 
 msgid "article.accessLogoRestricted.altText"
-msgstr "受限制的访问"
+msgstr "受限访问"
 
 msgid "article.comments.sectionDefault"
 msgstr "默认"
@@ -218,7 +218,7 @@ msgid "article.fontSize"
 msgstr "字体大小"
 
 msgid "submission.submissionEditing"
-msgstr "投稿编辑中"
+msgstr "稿件编辑中"
 
 msgid "submission.changeSection"
 msgstr "更改为"
@@ -227,10 +227,10 @@ msgid "submission.sent"
 msgstr "发送"
 
 msgid "submission.editorDecision"
-msgstr "编辑决策"
+msgstr "编辑决定"
 
 msgid "submission.round"
-msgstr "回合&nbsp;{$round}"
+msgstr "轮&nbsp;{$round}"
 
 msgid "submission.editorReview"
 msgstr "编辑审阅"
@@ -245,34 +245,34 @@ msgid "submission.editorAuthorRecord"
 msgstr "编辑/作者电子邮件记录"
 
 msgid "submission.reviewersVersion"
-msgstr "审稿人的注释版本的文件"
+msgstr "审稿人的审核文件"
 
 msgid "submission.postReviewVersion"
-msgstr "后审阅文件的版本"
+msgstr "复审文件"
 
 msgid "submission.editorVersion"
 msgstr "编辑版本"
 
 msgid "submission.authorsRevisedVersion"
-msgstr "作者修订文件的版本"
+msgstr "作者修订文件"
 
 msgid "submission.authorVersion"
 msgstr "作者版本"
 
 msgid "submission.copyediting"
-msgstr "文字编辑中"
+msgstr "文案编辑中"
 
 msgid "submission.copyedit"
-msgstr "文字编辑"
+msgstr "文案编辑"
 
 msgid "submission.proofreading"
 msgstr "校对中"
 
 msgid "submission.scheduling"
-msgstr "计划（Scheduling）"
+msgstr "计划"
 
 msgid "submission.scheduledIn"
-msgstr "在出版计划的 {$issueName}."
+msgstr "在计划出版的 {$issueName}。"
 
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
@@ -296,7 +296,7 @@ msgid "submissions.proofread"
 msgstr "校对"
 
 msgid "submissions.initialProof"
-msgstr "初步证明"
+msgstr "初步校对"
 
 msgid "submissions.postAuthor"
 msgstr "Post-Author"
@@ -305,7 +305,7 @@ msgid "submissions.reviewRound"
 msgstr "审稿回合"
 
 msgid "submissions.proof"
-msgstr "证明"
+msgstr "校对"
 
 msgid "submissions.editorDecision"
 msgstr "编辑决定"
@@ -317,13 +317,13 @@ msgid "submission.eventLog"
 msgstr "事件日志"
 
 msgid "submissions.copyeditComplete"
-msgstr "文字编辑完的"
+msgstr "文案编辑完成"
 
 msgid "submissions.layoutComplete"
-msgstr "排版完的"
+msgstr "排版完成"
 
 msgid "submissions.proofreadingComplete"
-msgstr "校对完的"
+msgstr "校对完成"
 
 msgid "journal.currentIssue"
 msgstr "最新一期"
@@ -350,16 +350,16 @@ msgid "user.myJournals"
 msgstr "我的期刊"
 
 msgid "user.manageMySubscriptions"
-msgstr "管理我的期刊"
+msgstr "管理我的订阅"
 
 msgid "user.noRoles.chooseJournal"
-msgstr "您的帐户当前未与任何期刊进行关联，请进行选择："
+msgstr "您的帐户未与任何期刊进行关联，请选择："
 
 msgid "user.noRoles.noRolesForJournal"
-msgstr "您的庄户在这本期刊里没有任何角色，请从以下活动中选择:"
+msgstr "您的账户在这种期刊里没有任何角色，请从以下操作中选择:"
 
 msgid "user.noRoles.submitArticle"
-msgstr "提交提案"
+msgstr "提交建议"
 
 msgid "user.noRoles.submitArticleRegClosed"
 msgstr "投稿：作者注册当前处于关闭状态。"
@@ -1792,25 +1792,25 @@ msgid "user.role.subEditors"
 msgstr "栏目编辑"
 
 msgid "user.register.noContextReviewerInterests"
-msgstr "如果您请求成为期刊的审稿人，请输入您的主题兴趣。"
+msgstr "如果您申请成为期刊的审稿人，请输入您的学科兴趣。"
 
 msgid "user.register.otherContextRoles"
-msgstr "请求以下角色。"
+msgstr "申请以下角色。"
 
 msgid "user.register.contextsPrompt"
-msgstr "您想在该网站上注册哪些期刊？"
+msgstr "您想在该网站上注册到哪些期刊？"
 
 msgid "user.reviewerPrompt.optin"
-msgstr "是的，我希望收到有关审阅该期刊投稿的请求。"
+msgstr "是的，我希望收到有关审阅该期刊稿件的申请。"
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "是的，请求 {$userGroup} 角色。"
 
 msgid "user.reviewerPrompt"
-msgstr "您愿意审查该期刊的投稿吗？"
+msgstr "您愿意审核该期刊的稿件吗？"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
-msgstr "包含在该期刊中没有角色的用户。"
+msgstr "该期刊中无角色用户。"
 
 msgid "journal.viewAllIssues"
 msgstr "显示所有刊期"
@@ -2124,10 +2124,10 @@ msgid "about.aboutSoftware"
 msgstr "关于开放期刊系统（OJS）"
 
 msgid "user.authorization.representationNotFound"
-msgstr "请求的库不存在。"
+msgstr "校样未找到。"
 
 msgid "category.category"
 msgstr "分类"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr "此期刊未发布在线内容。"
+msgstr "此期刊没有发布在线内容。"
