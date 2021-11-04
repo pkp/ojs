@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-11-03 15:25+0000\n"
+"PO-Revision-Date: 2021-11-04 14:06+0000\n"
 "Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_CN/>\n"
@@ -162,7 +162,7 @@ msgid "author.submit.reorder"
 msgstr "重新排序作者姓名"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "主要联系人."
+msgstr "主要联系人。"
 
 msgid "author.submit.addAuthor"
 msgstr "添加作者"
@@ -177,7 +177,9 @@ msgid "author.submit.coverageInstructions"
 msgstr "地理空间位置、年代或历史涵盖范围，和/或研究样本的特色。"
 
 msgid "author.submit.languageInstructions"
-msgstr "English=en; French=fr; 中文=zh<a href=\"http://www.loc.gov/standards/iso639-2/langcodes.html\" target=\"_blank\">其他代码</a>."
+msgstr ""
+"English=en；French=fr；中文=zh <a href=\"http://www.loc.gov/standards/iso639-2/"
+"langcodes.html\" target=\"_blank\">其他代码</a>。"
 
 msgid "author.submit.form.authorRequired"
 msgstr "至少需要一个作者。"
@@ -192,7 +194,7 @@ msgid "author.submit.form.abstractRequired"
 msgstr "请输入文章摘要。"
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "您已经超出了这个栏目摘要的最大单词限制。"
+msgstr "您已经超出了这个栏目摘要的最多字数。"
 
 msgid "author.submit.submissionFile"
 msgstr "稿件文件"
@@ -201,7 +203,7 @@ msgid "author.submit.uploadSubmissionFile"
 msgstr "上传稿件文件"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "替换稿件文件"
+msgstr "更换稿件文件"
 
 msgid "author.submit.noSubmissionFile"
 msgstr "没有稿件文件上传。"
@@ -210,22 +212,26 @@ msgid "author.submit.noSubmissionConfirm"
 msgstr "你确定要继续而不提交的投稿的相关文件?"
 
 msgid "author.submit.supplementaryFilesInstructions"
-msgstr "这个在投稿流程中选择性的步骤，让作者可以增加文件到稿件上，加强稿件所拥有的影响力。「补充文件」可以包括(a)研究设备或方法；(b) 资料或数据组，依循研究工作的研究伦理审核； (c) 资料来源；无法提供给读者的来源不算；(d) 无法纳入文章本文之中的图片或表格。这些文件也会由作者编目索引，指明它们与稿件之间的关系，以及文件和文件之间的关系。「补充文件」可以用任一种文件格式上传，并且可以用原本的格式让读者取得。如果无损匿名审稿原则的话，也可以和审稿人共用这些文件."
+msgstr ""
+"这个在投稿流程中选择性的步骤，让作者可以增加文件到稿件上，加强稿件所拥有的影响力。「补充文件」可以包括(a)研究设备或方法；(b) "
+"资料或数据组，依循研究工作的研究伦理审核； (c) 资料来源；无法提供给读者的来源不算；(d) 无法纳入文章本文之中的图片或表格。这些文件也会由作者编目索"
+"引，指明它们与稿件之间的关系，以及文件和文件之间的关系。「补充文件」可以用任一种文件格式上传，并且可以用原本的格式让读者取得。如果无损匿名审稿原则的话，也"
+"可以和审稿人共用这些文件。"
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr "点击保存上传文件 (其他文件被上传之后)."
+msgstr "点击保存上传文件 (其他文件被上传之后)。"
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "您确定要继续而不上传已经选择的补充文件?"
+msgstr "您确定要不上传已经选择的补充文件而继续？"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr "没有附件被添加到这个投稿."
+msgstr "这个稿件没有添加附件。"
 
 msgid "author.submit.backToSupplementaryFiles"
 msgstr "备份附件"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "您确认删除这个附件?"
+msgstr "您确认删除这个附件？"
 
 msgid "author.submit.uploadSuppFile"
 msgstr "上传附件"
@@ -237,10 +243,10 @@ msgid "author.submit.editSupplementaryFile"
 msgstr "编辑一个附件"
 
 msgid "author.submit.supplementaryFileData"
-msgstr "附件源数据"
+msgstr "附件元数据"
 
 msgid "author.submit.supplementaryFileDataDescription"
-msgstr "要索引这份补充材料，请为上传的补充文件输入下列的元数据。"
+msgstr "要索引这份补充材料，请为上传的补充文件输入下列元数据。"
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "附件"
@@ -270,47 +276,48 @@ msgid "author.submit.suppFile.sourceText"
 msgstr "源文本"
 
 msgid "author.submit.suppFile.briefDescription"
-msgstr "摘要描述"
+msgstr "摘要"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "给审稿人的当前文件 (没有元数据), 因为它不会妥协盲审."
+msgstr "给审稿人的当前文件（没有元数据）不会送审。"
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr "只使用形式上已出版的资料."
+msgstr "只使用已出版的资料。"
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "资料搜集或者建立方法的日期."
+msgstr "数据搜集或者仪器购置的日期。"
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "研究的名称或其他来源点."
+msgstr "研究的名称或其他来源点。"
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "指定其他"
 
 msgid "author.submit.suppFile.noFile"
-msgstr "没有上传的文件."
+msgstr "没有上传的文件。"
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "请输入本补充文件的标题."
+msgstr "请输入补充文件的标题。"
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr "请输入主题."
+msgstr "请输入主题。"
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "请输入说明."
+msgstr "请输入说明。"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "公共附件标识符已经存在."
+msgstr "公共附件标识符已经存在。"
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "公共附件标识符"
 
 msgid "author.submit.confirmationDescription"
-msgstr "完成了之前投稿流程的四个步骤，点击「完成投稿」以将您的初稿送交给{$journalTitle}。您会收到一封电子邮件确认信，并且在登入期刊网站后能够查看您的稿件正经历哪些编辑过程。感谢您愿意在{$journalTitle}出版您的文章."
+msgstr ""
+"完成了之前投稿流程的四个步骤，点击「完成投稿」以将您的初稿送交给 {$journalTitle} "
+"。您会收到一封电子邮件确认信，并且在登录期刊网站后能够查看您的稿件正经历哪些编辑过程。感谢您愿意在 {$journalTitle} 出版您的文章。"
 
 msgid "author.submit.noFiles"
-msgstr "这个投稿没有已经添加的文件."
+msgstr "这个稿件没有添加文件。"
 
 msgid "author.submit.filesSummary"
 msgstr "文件摘要"
@@ -319,7 +326,7 @@ msgid "author.submit.finishSubmission"
 msgstr "完成投稿"
 
 msgid "author.submit.submissionComplete"
-msgstr "投稿完成.感谢您对出版于 {$journalTitle}有兴趣."
+msgstr "投稿完成。感谢您关注 {$journalTitle} 。"
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "上传作者版本"
@@ -331,7 +338,7 @@ msgid "author.article.authorRevisedFile"
 msgstr "作者文件"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "投稿要求有一个本期刊的用户帐户.这个帐户用于编辑跟踪您的投稿，当投稿的状态改变的时候通知你，或者编辑需要您的相信信息 ."
+msgstr "投稿需要有一个本期刊的帐户。这个帐户用于编辑跟踪您的稿件，当稿件的状态改变的时候通知您，或者编辑需要您提供的相关信息。"
 
 msgid "author.submit.form.localeRequired"
 msgstr "请选择一种稿件语言。"
