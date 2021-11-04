@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-10-22 04:22+0000\n"
+"PO-Revision-Date: 2021-11-04 14:06+0000\n"
 "Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_CN/>\n"
@@ -46,16 +46,16 @@ msgid "manager.managementPages"
 msgstr "网页管理"
 
 msgid "manager.payment.action"
-msgstr "支付动作"
+msgstr "操作"
 
 msgid "manager.payment.addPayment"
-msgstr "添加支付"
+msgstr "新支付"
 
 msgid "manager.payment.amount"
 msgstr "数额"
 
 msgid "manager.payment.authorFees"
-msgstr "作者费用管理"
+msgstr "作者费"
 
 msgid "manager.payment.authorFeesDescription"
 msgstr "选择的选项，连同它们的说明和费用(可以在下面进行编辑),将出现在投稿流程的第一步和投稿下面的关于期刊,以及在哪里需要支付点."
@@ -100,7 +100,7 @@ msgid "manager.payment.options"
 msgstr "支付选项管理"
 
 msgid "manager.payment.options.enablePayments"
-msgstr "点击这里启用支付模块.你必须填写下面的支付配置表单  注意：用户必须登录到付款."
+msgstr "此期刊启用支付。注意：用户必须登录才能付款。"
 
 msgid "manager.payment.options.fee"
 msgstr "费用"
@@ -744,7 +744,7 @@ msgid "manager.setup.submissions.description"
 msgstr "作者指引、版权和索引(包括注册)。"
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr ">这份期刊需要订阅之后才能阅读某些或所有的内容。"
+msgstr "这份期刊需要订阅之后才能阅读某些或所有的内容。"
 
 msgid "manager.setup.typeExamples"
 msgstr "(例如，历史研究、类实验、文学分析、调查/访谈等等)"
@@ -1273,7 +1273,7 @@ msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "成功建立订阅类型。"
 
 msgid "manager.language.submissions"
-msgstr "投稿"
+msgstr "稿件"
 
 msgid "manager.payment.options.purchaseIssueFee"
 msgstr "购买事项"
