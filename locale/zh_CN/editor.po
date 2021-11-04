@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-10-22 04:22+0000\n"
+"PO-Revision-Date: 2021-11-04 14:06+0000\n"
 "Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/editor/zh_CN/>\n"
@@ -19,19 +19,19 @@ msgid "editor.home"
 msgstr "编辑首页"
 
 msgid "editor.submissionsAndPublishing"
-msgstr "投稿与出版"
+msgstr "稿件与出版"
 
 msgid "editor.submissionQueue"
-msgstr "投稿队列"
+msgstr "稿件队列"
 
 msgid "editor.submissionArchive"
-msgstr "投稿存档"
+msgstr "稿件存档"
 
 msgid "editor.publishing"
 msgstr "出版"
 
 msgid "editor.publishedIssues"
-msgstr "已经出版的刊期"
+msgstr "已经出版的期次"
 
 msgid "editor.allSections"
 msgstr "所有栏目"
@@ -43,43 +43,43 @@ msgid "editor.me"
 msgstr "我"
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "存档中没有投稿."
+msgstr "存档中没有稿件。"
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "将更改保存到归档的投稿? 标记为删除的投稿将永久从系统中删除."
+msgstr "将更改保存到归档的稿件？标记为删除的稿件将永久从系统中删除。"
 
 msgid "editor.submissionReview.confirmDecision"
-msgstr "你确定要记录这一决定?"
+msgstr "你确定要记录这一决定？"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "无论是发出作者通知邮件或者选择跳过Email按钮，投稿都将被归档."
+msgstr "无论是发出作者通知邮件或者选择跳过 Email 按钮，稿件都将被归档。"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "在你发送稿件给文本编辑之前，你必须确认稿件已经修改，还有已经点击上面的”通知作者“的链接."
+msgstr "在你发送稿件给文本编辑之前，你必须确认稿件已经修改，然后点击上面的“通知作者”链接。"
 
 msgid "editor.notifyUsers"
 msgstr "通知用户"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "通知用户中..."
+msgstr "通知用户中……"
 
 msgid "editor.usersNotified"
-msgstr "已经通知的用户"
+msgstr "已通知用户"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "给这个期刊的所有用户({$count}个用户)发送这个消息"
+msgstr "给这个期刊的所有用户（ {$count} 人）发送这个消息"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "给这个期刊的所有同意接受更新的用户({$count}个用户)发送这个消息"
+msgstr "给这个期刊的所有同意接收更新的用户（ {$count} 人）发送这个消息"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "包含这个刊期的目录:"
+msgstr "包含这个期次的目录："
 
 msgid "editor.editorAdministration"
 msgstr "编辑管理"
 
 msgid "editor.issues.createIssue"
-msgstr "创建刊期"
+msgstr "创建期次"
 
 msgid "editor.issues.backIssues"
 msgstr "过刊"
@@ -94,10 +94,10 @@ msgid "editor.issues.numArticles"
 msgstr "项目"
 
 msgid "editor.issues.noArticles"
-msgstr "当前没有项目被安排在该刊期内."
+msgstr "当前期次没有安排项目。"
 
 msgid "editor.issues.confirmDelete"
-msgstr "您确认要永久删除这个刊期?"
+msgstr "您确认要永久删除这个期次？"
 
 msgid "editor.issues.published"
 msgstr "已出版"
@@ -106,25 +106,25 @@ msgid "editor.issues.unpublished"
 msgstr "未出版"
 
 msgid "editor.issues.volumeRequired"
-msgstr "卷数必须指定，并且为整数值."
+msgstr "卷数必须指定，并且为整数值。"
 
 msgid "editor.issues.numberRequired"
-msgstr "期数必须指定，并且为整数值."
+msgstr "期数必须指定，并且为整数值。"
 
 msgid "editor.issues.yearRequired"
-msgstr "年数必须指定，并且为整数值."
+msgstr "年数必须指定，并且为整数值。"
 
 msgid "editor.issues.titleRequired"
-msgstr "刊期的标题是必须的."
+msgstr "期次的标题为必填项。"
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "刊期标识是必须的，请从刊期标识选项中至少一个."
+msgstr "期次标识为必填项，请从期次标识选项中至少一个。"
 
 msgid "editor.issues.issueIdentification"
-msgstr "刊期标识"
+msgstr "期次标识"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "公共刊期标识"
+msgstr "公开期次标识"
 
 msgid "editor.issues.description"
 msgstr "描述"
@@ -142,7 +142,7 @@ msgid "editor.issues.coverPage"
 msgstr "封面图片"
 
 msgid "editor.issues.coverPageInstructions"
-msgstr "(允许的格式: .gif, .jpg, or .png )"
+msgstr "（允许的格式: .gif，.jpg，或 .png）"
 
 msgid "editor.issues.uploaded"
 msgstr "已上传的"
@@ -151,28 +151,28 @@ msgid "editor.issues.remove"
 msgstr "删除"
 
 msgid "editor.issues.proofed"
-msgstr "已经校对的"
+msgstr "已校对的"
 
 msgid "editor.issues.removeCoverPage"
-msgstr "删除封面图片?"
+msgstr "删除封面图片？"
 
 msgid "editor.issues.invalidCoverPageFormat"
 msgstr "无效的封面图片格式.允许的格式 .gif, .jpg, or .png."
 
 msgid "editor.issues.styleFile"
-msgstr "样式"
+msgstr "样式表"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "无效地样式表格式. 请确认提交的文件是有效的CSS格式. (注意在文件的头部如果有注释，提交将被拒绝.)"
+msgstr "无效地样式表格式。请确认提交的文件是有效的 CSS 格式。（注意在文件的头部如果有注释，提交将被拒。）"
 
 msgid "editor.issues.removeStyleFile"
-msgstr "删除样式表?"
+msgstr "删除样式表？"
 
 msgid "editor.issues.coverPageCaption"
 msgstr "封面标题"
 
 msgid "editor.issues.showCoverPage"
-msgstr "使用下面的元素为这个刊期创建一个封面."
+msgstr "使用下面的元素为这个期次创建一个封面。"
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "显示"
@@ -190,7 +190,7 @@ msgid "editor.issues.subscription"
 msgstr "订阅"
 
 msgid "editor.issues.identification"
-msgstr "识别"
+msgstr "识别号"
 
 msgid "editor.issues.access"
 msgstr "存取"
@@ -199,19 +199,19 @@ msgid "editor.issues.cover"
 msgstr "封面"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "所有的文章将被退回到编辑队列，并且所有相关的文件将永久地被删除. 您确认将删除该期?"
+msgstr "所有的文章将被退回到编辑队列，并且所有相关的文件将永久地被删除。您确认将删除该期次？"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "这个期刊使用定制的刊期顺序. <a href=\"{$url}\" class=\"action\">重置到默认</a>"
+msgstr "本期刊使用定制的期次顺序。<a href=\"{$url}\" class=\"action\">重置为默认</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "这个刊期使用定制的栏目顺序. <a href=\"{$url}\" class=\"action\">重置到默认</a>"
+msgstr "本期次使用定制的栏目顺序。 <a href=\"{$url}\" class=\"action\">重置为默认</a>"
 
 msgid "editor.issues.issueData"
-msgstr "刊期日期"
+msgstr "期次日期"
 
 msgid "editor.issues.saveChanges"
-msgstr "保存对目录的修改?"
+msgstr "保存对目录的修改？"
 
 msgid "editor.issues.default"
 msgstr "默认"
@@ -220,31 +220,31 @@ msgid "editor.issues.order"
 msgstr "顺序"
 
 msgid "editor.issues.publicId"
-msgstr "公共Id"
+msgstr "公共 Id"
 
 msgid "editor.issues.publishIssue"
-msgstr "出版刊期"
+msgstr "出版期次"
 
 msgid "editor.issues.unpublishIssue"
-msgstr "非出版刊期"
+msgstr "非出版期次"
 
 msgid "editor.issues.previewIssue"
-msgstr "预览刊期"
+msgstr "预览期次"
 
 msgid "editor.issues.preview"
-msgstr "(预览)"
+msgstr "预览"
 
 msgid "editor.issues.confirmPublish"
-msgstr "您确认出版这个刊期?"
+msgstr "您确认出版这个期次？"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "您确认想撤销这个已经出版的刊期?"
+msgstr "您确认想撤销这个已经出版的期次？"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "不能给文章保存公共ID:"
+msgstr "不能为文章保存公共 ID："
 
 msgid "editor.issues.noLiveIssues"
-msgstr "没有活动的刊期"
+msgstr "没有活跃的期次"
 
 msgid "editor.issues.open"
 msgstr "开放"
@@ -253,7 +253,7 @@ msgid "editor.issues.pages"
 msgstr "页"
 
 msgid "editor.navigation.futureIssues"
-msgstr "计划中刊期"
+msgstr "计划中期次"
 
 msgid "editor.navigation.issueArchive"
 msgstr "过刊"
@@ -262,7 +262,7 @@ msgid "editor.article.designateReviewVersion"
 msgstr "指定原始文件作为审阅版本"
 
 msgid "editor.article.decision"
-msgstr "决策"
+msgstr "决定"
 
 msgid "editor.submissions.showBy"
 msgstr "显示方式"
@@ -271,7 +271,7 @@ msgid "editor.submissions.submitMMDD"
 msgstr "提交 MM-DD"
 
 msgid "editor.submissions.activeAssignments"
-msgstr "活动中的任务"
+msgstr "活跃任务"
 
 msgid "editor.submissions.invite"
 msgstr "邀请"
@@ -280,7 +280,7 @@ msgid "editor.submissions.accept"
 msgstr "接受"
 
 msgid "editor.submissions.noSubmissions"
-msgstr "没有投稿"
+msgstr "没有稿件"
 
 msgid "editor.submissions.lastAssigned"
 msgstr "最后的"
@@ -292,7 +292,7 @@ msgid "editor.submissions.lastCompleted"
 msgstr "最后完成"
 
 msgid "editor.submissions.assignedTo"
-msgstr "指派给编辑"
+msgstr "分配给编辑"
 
 msgid "editor.submissions.inSection"
 msgstr "在栏目里"
@@ -301,10 +301,10 @@ msgid "editor.article.scheduleForPublication"
 msgstr "出版计划中"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "被指派的"
+msgstr "被分配的"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "出版费未支付，便于列入出版计划,需要通知作者支付或者提交免费申请."
+msgstr "出版费未支付，通知作者支付或者提交免费申请，然后计划出版。"
 
 msgid "editor.article.showCoverPage"
 msgstr "为这篇文章创建一个包含下面内容的封面."
@@ -319,58 +319,58 @@ msgid "editor.article.remove"
 msgstr "删除"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "读取的数据无效."
+msgstr "读取的数据无效。"
 
 msgid "editor.submissionReview.sendToCopyediting"
 msgstr "发送给文字编辑"
 
 msgid "editor.notifyUsers.allReaders"
-msgstr "所有读者（{$count}人）"
+msgstr "所有读者（共 {$count} 人）"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "所有已出版作者（{$count}人）"
+msgstr "所有已出版作品作者（共 {$count} 人）"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "所有的个人订户（{$count}订户）"
+msgstr "所有个人订阅（共 {$count} 人）"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "所有的机构订户（{$count}订户）"
+msgstr "所有机构订阅（共 {$count} 户）"
 
 msgid "editor.reassign"
-msgstr "重新指派"
+msgstr "重新分配"
 
 msgid "editor.publicIdentificationExists"
-msgstr "公共标识符 '{$publicIdentifier}' 已经在别处（期、文章、校样或附件）存在。请选择您的期刊中独有的标识符。"
+msgstr "公共标识符 '{$publicIdentifier}' 已经在别处（期次、文章、校样或附件）存在。请选择您的期刊中独有的标识符。"
 
 msgid "editor.issues.galleys"
-msgstr "期目校样"
+msgstr "期次校样"
 
 msgid "editor.issues.galley"
-msgstr "期目校样"
+msgstr "期次校样"
 
 msgid "editor.issues.viewingGalley"
-msgstr "查看期目校样"
+msgstr "查看期次校样"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "将校样连同全部期目内容一起发表。"
+msgstr "将校样连同全部期次内容一起出版。"
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "没有期目校样已被发表过。"
+msgstr "没有发表过的期次校样。"
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "要求期目校样标签。"
+msgstr "期次校样标签为必填项。"
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "要求期目校样位置。"
+msgstr "期次校样本地化语言设置为必填项。"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "公共期目校样确认已经存在。"
+msgstr "公共期次校样已存在。"
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "返回期目校样"
+msgstr "返回期次校样"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "您确定要删除该期目校样吗？"
+msgstr "您确定要删除该期次校样吗？"
 
 msgid "editor.article.coverImage"
 msgstr "封面图片"
@@ -379,13 +379,13 @@ msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr "相同类型的另一个对象的公共标识符 '{$publicIdentifier}' 已经存在。 请为期刊中相同类型的对象选择唯一的标识符。"
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "通过选中下面的“包含”复选框并单击“搜索”，可以将所有已经上传到任何提交阶段的文件添加到“校对”列表中：所有可用文件将被列出，并被选择包含。"
+msgstr "通过选中下面的“包含”复选框并单击“搜索”，可以将所有已经上传到任何稿件阶段的文件添加到“校对”列表中：所有可用文件将被列出，并被选择包含。"
 
 msgid "editor.article.remove.confirm"
-msgstr "您确定要从刊期中删除此文章吗？ 该文章将在另一期中进行安排。"
+msgstr "您确定要从该期次中删除此文章吗？ 该文章将安排在另一期中。"
 
 msgid "grid.action.removeArticle"
-msgstr "从刊期中删除文章"
+msgstr "从期次中删除文章"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "找不到您要删除的封面图片。 它可能已被删除。 尝试重新加载页面。"
@@ -397,13 +397,13 @@ msgid "editor.article.viewMetadata"
 msgstr "查看版本元数据"
 
 msgid "editor.article.publishVersion"
-msgstr "发布版本"
+msgstr "出版版本"
 
 msgid "editor.article.showPublicationVersion"
-msgstr "显示预定的发布"
+msgstr "显示计划出版"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "设置当前刊期"
+msgstr "设置当前期次"
 
 msgid "grid.action.previewIssue"
 msgstr "预览"
@@ -412,16 +412,16 @@ msgid "grid.action.viewIssue"
 msgstr "查看"
 
 msgid "grid.action.addIssue"
-msgstr "创建刊期"
+msgstr "创建期次"
 
 msgid "grid.action.publish"
-msgstr "发布刊期"
+msgstr "发布期次"
 
 msgid "editor.issues.identifiers"
-msgstr "标识"
+msgstr "标识号"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "您确定要将此刊期设置为当前刊期吗？"
+msgstr "您确定要将此期次设置为最新期次吗？"
 
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr "无效的封面格式。 可接受的格式为.gif，.jpg或.png。"
@@ -436,31 +436,29 @@ msgid "editor.issues.datePublished"
 msgstr "出版日期"
 
 msgid "editor.issues.editIssue"
-msgstr "刊期管理: {$issueIdentification}"
+msgstr "期次管理： {$issueIdentification}"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"此列表中的最终草稿文件由Copyeditor转换为复制编辑的版本，并在下面的<span class=\" pkp_help_title\""
-">复制编辑</span>下上传。"
+"此列表中的终稿文件由文本编辑转换为文本编辑版本，并上传到后面的<span class=\" pkp_help_title\">文本编辑</span>名下。"
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "选择样稿文件"
+msgstr "选择校样文件"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr ""
-"布局编辑器为每个校对样稿准备这些文件，然后上传到相应的<span class=\"pkp_help_title\">校对</span>进行校对。"
+msgstr "版面编辑为每个校样准备这些文件，然后上传给相应的<span class=\"pkp_help_title\">校对编辑</span>进行校对。"
 
 msgid "editor.issues.editIssueGalley"
-msgstr "编辑刊期样稿"
+msgstr "编辑期次校样"
 
 msgid "grid.action.addIssueGalley"
-msgstr "创建刊期样稿"
+msgstr "创建期次校样"
 
 msgid "grid.action.addGalley"
-msgstr "增加校对"
+msgstr "增加校样"
 
 msgid "issues.submissions.issueIds"
-msgstr "指派给刊期"
+msgstr "分配给期次"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
-msgstr "您请求删除的封面图片与其他期刊的一期相符。  请确保您使用的是正确的期刊，使用的是正确的期刊 ID，然后重试。"
+msgstr "您要删除的封面图片与其他期刊的某期相符。请确保您操作的期刊正确，使用期刊 ID 也正确，然后重试。"
