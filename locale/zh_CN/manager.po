@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-11-04 14:06+0000\n"
+"PO-Revision-Date: 2021-11-05 10:18+0000\n"
 "Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_CN/>\n"
@@ -16,10 +16,10 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.emails.confirmResetAll"
-msgstr "您确定您要重设这份期刊中所有的电子邮件模板为预设值？您将会失去您曾自订过的所有配置。"
+msgstr "您确定要重置这份期刊中所有的电子邮件模板吗？如果重置您将会失去曾定制的所有配置。"
 
 msgid "manager.files.note"
-msgstr "请注意：文件浏览器是一项高阶的功能，它允许一个期刊内的文件和目录直接被浏览和作。"
+msgstr "注意：文件浏览器是一项高级功能，它允许对一个期刊内的文件和目录直接浏览和操作。"
 
 msgid "manager.journalManagement"
 msgstr "期刊管理"
@@ -31,16 +31,19 @@ msgid "manager.language.forms"
 msgstr "表单"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr "这将替换在此区域下您已经设定的任何指定区域的期刊设置"
+msgstr "这将替换期刊的本地化设置"
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS可以让用户使用几种受到支持的语言介面。同时，OJS可以当作一个部分多语化的系统，让用户在每个页面中可以切换语言，并允许某些资料以额外的两种语言进行输入。<br /><br />如果一个受到OJS支持的语言没有列在下表，请您的网站管理员从网站管理介面来安装该项语系。新增支持新语系的指引说明，请见OJS的文件。"
+msgstr ""
+"OJS 可以提供用户使用任何本系统支持的语言介面。同时，OJS "
+"可以当做一个多语言的系统，使用户在每个页面都可以切换语言，并允许某些资料以附加的语言进行输入。<br /><br />如果一个 OJS "
+"支持的语言没有列出，请联系您的网站管理员从网站管理介面安装该语系。新增系统支持语系的说明，参见 OJS 文档。"
 
 msgid "manager.languages.noneAvailable"
-msgstr "抱歉，没有额外的语言可供使用。如果您希望在这份期刊中使用额外的语系，请联系您的网站管理者。"
+msgstr "抱歉，没有附加语言可供使用。如果您希望在这份期刊中使用附加语系，请联系您的网站管理员。"
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "这将会是期刊网站的预设语言。"
+msgstr "这将会是本期刊网站的默认语言。"
 
 msgid "manager.managementPages"
 msgstr "网页管理"
@@ -58,16 +61,16 @@ msgid "manager.payment.authorFees"
 msgstr "作者费"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "选择的选项，连同它们的说明和费用(可以在下面进行编辑),将出现在投稿流程的第一步和投稿下面的关于期刊,以及在哪里需要支付点."
+msgstr "在下方输入金额以启用作者处理费用。"
 
 msgid "manager.payment.currencymessage"
-msgstr "OJS不执行任何货币转换.  如果接受付款订阅, 你必须确定订阅货币与这里指定的一个匹配."
+msgstr "OJS 不执行任何货币转换。 如果接受付款订阅，您必须确定订阅货币与这里指定的相匹配。"
 
 msgid "manager.payment.description"
 msgstr "描述"
 
 msgid "manager.payment.details"
-msgstr "详细"
+msgstr "详细信息"
 
 msgid "manager.payment.editSubscription"
 msgstr "编辑订阅"
@@ -76,16 +79,16 @@ msgid "manager.payment.enable"
 msgstr "激活"
 
 msgid "manager.payment.feePaymentOptions"
-msgstr "费用支付选项管理"
+msgstr "支付选项"
 
 msgid "manager.payment.form.numeric"
-msgstr "所有费用必须是正的数字值 (允许小数点)"
+msgstr "所有费用必须是正的数字 (允许小数)"
 
 msgid "manager.payment.generalFees"
 msgstr "一般费用"
 
 msgid "manager.payment.generalFeesDescription"
-msgstr "协会会员资格将出现在“关于期刊”的“政策”下。"
+msgstr "会员资格将出现在“政策”下的“关于期刊”中。"
 
 msgid "manager.payment.generalOptions"
 msgstr "支付一般设置"
@@ -94,7 +97,7 @@ msgid "manager.payment.noPayments"
 msgstr "无支付记录"
 
 msgid "manager.payment.notFound"
-msgstr "没有找到"
+msgstr "未找到"
 
 msgid "manager.payment.options"
 msgstr "支付选项管理"
@@ -124,16 +127,16 @@ msgid "manager.payment.options.purchaseArticleFee"
 msgstr "购买文章费用"
 
 msgid "manager.payment.options.text"
-msgstr "支付方法描述"
+msgstr "支付方法简介"
 
 msgid "manager.payment.paymentId"
-msgstr "支付ID"
+msgstr "支付 ID"
 
 msgid "manager.payment.paymentMethod"
 msgstr "支付方法"
 
 msgid "manager.payment.paymentMethod.description"
-msgstr "系统提供了如下支付方法插件供您选择。"
+msgstr "您可以配置下面的任意支付插件用于支付。"
 
 msgid "manager.payment.paymentMethods"
 msgstr "支付方法管理"
@@ -148,7 +151,7 @@ msgid "manager.payment.records"
 msgstr "支付记录"
 
 msgid "manager.payment.userName"
-msgstr "支付ID"
+msgstr "支付 ID"
 
 msgid "manager.people.allEnrolledUsers"
 msgstr "全部注册用户"
@@ -166,43 +169,46 @@ msgid "manager.people.allUsers"
 msgstr "所有用户"
 
 msgid "manager.people.confirmRemove"
-msgstr "您要把这个用户移出这份期刊中？这个动作将会取消这个用户在这份期刊中所拥有的所有角色。"
+msgstr "您要把这个用户移出这份期刊？这个操作将取消这个用户在这份期刊中所拥有的所有角色。"
 
 msgid "manager.people.emailUsers.selectTemplate"
-msgstr "选择一个模板"
+msgstr "选择模板"
 
 msgid "manager.people.enrollExistingUser"
-msgstr ">指派角色给已存在的用户"
+msgstr "分配角色给用户"
 
 msgid "manager.people.enrollSyncJournal"
 msgstr "与期刊"
 
 msgid "manager.people.mergeUsers.from.description"
-msgstr "选择一个用户以合并到其他的用户帐号（例如，当某个人有两个用户帐号时）。一开始所选的帐号会被删除，而此帐号的投稿、指派工作...等等，会被归属给第二个帐号。"
+msgstr ""
+"选择一个用户（或几个）并到其他的用户帐号（例如，当某个人有两个帐号时）。开始所选的帐号会被删除，而此帐号名下的的稿件、任务等会被并入第二个帐号。"
 
 msgid "manager.people.mergeUsers.into.description"
-msgstr "选择一个用户，将之前所选之用户的权限、编辑指派工作等等重新归属给他。"
+msgstr "选择一个用户将之前所选用户的权限、编辑任务等并入给他。"
 
 msgid "manager.people.roleEnrollment"
 msgstr "{$role}注册"
 
 msgid "manager.people.syncUserDescription"
-msgstr "角色同步化会在这份期刊中指派「在特定期刊中已经有特定角色的用户」同样的角色。这个功能允许一组常见的用户（例如，审稿人）在期刊之间进行同步化。"
+msgstr "注册同步会将在某个期刊中已经有特定角色的用户在这个期刊中注册同样的角色。这个功能允许一组常见的用户（例如，审稿人）在期刊之间进行同步化。"
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "不要求文章摘要"
 
 msgid "manager.sections.assigned"
-msgstr "此栏目的编辑"
+msgstr "此栏目编辑"
 
 msgid "manager.sections.create"
 msgstr "新增栏目"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "添加一个栏目编辑到这个栏目用于投稿自动指派. (另外，栏目编辑也可以在投稿到来后被手动指派.)当添加后，栏目编辑可以自动指派有监督审稿和（或）编辑该栏目内的投稿，栏目编辑可以通过点击期刊管理的角色来创建."
+msgstr ""
+"给栏目添加一个可以自动分配稿件的栏目编辑。（另外，栏目编辑也可以在有稿件后手动分配。）如果添加栏目编辑后，栏目编辑可以自动分配监督稿件的审稿和（或）其他编"
+"辑操作（文本编辑、排版和校对）。栏目编辑可以通过点击“期刊管理”的“角色”来创建。"
 
 msgid "manager.sections.editorRestriction"
-msgstr "只有编辑和栏目编辑可以发送项目。"
+msgstr "只有编辑和栏目编辑可以提交项目。"
 
 msgid "manager.sections.editors"
 msgstr "栏目编辑"
@@ -211,7 +217,7 @@ msgid "manager.sections.form.abbrevRequired"
 msgstr "此栏目需要一个缩写的标题"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "请确认至少有一个选项已经选取以便于栏目编辑指派。"
+msgstr "请确认至少有一个选项已经选取以便栏目编辑分配任务。"
 
 msgid "manager.sections.form.reviewFormId"
 msgstr "请确认您已经选择一个有效的审稿表单。"
@@ -603,7 +609,7 @@ msgid "manager.setup.onlineIssn"
 msgstr "在线 ISSN"
 
 msgid "manager.distribution.publishingMode.openAccess"
-msgstr "期刊内容将开放阅读。"
+msgstr "期刊内容将开放获取。"
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "页码选项"
@@ -744,7 +750,7 @@ msgid "manager.setup.submissions.description"
 msgstr "作者指引、版权和索引(包括注册)。"
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "这份期刊需要订阅之后才能阅读某些或所有的内容。"
+msgstr "这份期刊需要订阅之后才能获取某些或所有的内容。"
 
 msgid "manager.setup.typeExamples"
 msgstr "(例如，历史研究、类实验、文学分析、调查/访谈等等)"
@@ -1276,14 +1282,13 @@ msgid "manager.language.submissions"
 msgstr "稿件"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "购买事项"
+msgstr "购买期次费用"
 
 msgid "manager.sections.confirmDelete"
 msgstr "您确定要永久删除该栏目吗？"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。"
+msgstr "在该栏目被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。"
 
 msgid "manager.setup.journalThumbnail"
 msgstr "期刊缩略图"
@@ -1451,40 +1456,40 @@ msgid "manager.setup.masthead"
 msgstr "刊头"
 
 msgid "manager.section.noSectionEditors"
-msgstr "还没有栏目编辑。 请通过 管理 > 设置 > 用户&amp;角色 将此角色添加到至少一个用户。"
+msgstr "还没有栏目编辑。 请通过 管理 > 设置 > 用户 &amp; 角色 将此角色添加到至少一个用户。"
 
 msgid "manager.paymentTypes"
 msgstr "付款方式"
 
 msgid "manager.payment.readerFeesDescription"
-msgstr "选定的选项以及它们的描述和费用（可在下面进行编辑），将显示在“政策”下的“关于期刊”中以及需要付款的地方。"
+msgstr "选定的选项以及它们的简介和费用（可在下面进行编辑），将显示在“政策”下的“关于期刊”中以及需要付款的地方。"
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "您确定要删除此订阅吗？"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
-msgstr "这将激活订阅的支付功能，其中类型，成本，期限和订阅由期刊（订阅）管理器管理。"
+msgstr "这将激活订阅支付——期刊（订阅）管理员管理类型、成本、期限和订阅等。"
 
 msgid "manager.website.archiving"
-msgstr "存档"
+msgstr "存档中"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "OJS 将不会用于在线发布该期刊的内容。"
+msgstr "OJS 将不会在线发布该期刊内容。"
 
 msgid "manager.distribution.publishingMode"
-msgstr "发布方式"
+msgstr "出版模式"
 
 msgid "manager.distribution.publication"
-msgstr "发布"
+msgstr "出版"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "使用文章的发布日期"
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "使用刊期的发布日期"
+msgstr "使用期次的出版日期"
 
 msgid "manager.distribution.copyrightYearBasis.description"
-msgstr "选择文章如何设置默认的版权日期。 可以逐个覆盖此默认值。 如果您“随时发布”，请不要使用此刊期的发布日期。"
+msgstr "如何为文章选择默认版权日期。此默认值可覆盖。 如果您是“随时发布”，请不要使用此期次的发布日期。"
 
 msgid "manager.distribution.access"
 msgstr "存取"
@@ -1827,4 +1832,4 @@ msgid "manager.setup.selectCountry"
 msgstr "选择该期刊所在的国家/地区，或该期刊或出版商的邮寄地址所在的国家/地区。"
 
 msgid "manager.sections.confirmDeactivateSection.error"
-msgstr "至少有一个部分必须处于活动状态。访问工作流程设置以禁用向该期刊提交的所有内容。"
+msgstr "至少有一个栏目必须处于活跃状态。访问工作流程设置以禁用向该期刊的所有稿件。"
