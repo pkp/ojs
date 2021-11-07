@@ -22,7 +22,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin
     /**
      * Constructor
      *
-     * @param $parentPlugin AnnouncementFeedPlugin
+     * @param AnnouncementFeedPlugin $parentPlugin
      */
     public function __construct($parentPlugin)
     {
@@ -42,7 +42,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -52,7 +52,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String
+     * @return string
      */
     public function getDisplayName()
     {

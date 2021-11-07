@@ -61,7 +61,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
     /**
      * Handle a submission element
      *
-     * @param $node DOMElement
+     * @param DOMElement $node
      *
      * @return array Array of ArticleGalley objects
      */

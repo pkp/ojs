@@ -44,7 +44,7 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form
     {
         $templateMgr = TemplateManager::getManager($request);
         // get word count of the section
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $section = $sectionDao->getById($this->submission->getCurrentPublication()->getData('sectionId'));
         $wordCount = $section->getAbstractWordCount();
         $templateMgr->assign('wordCount', $wordCount);

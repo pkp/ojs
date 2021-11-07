@@ -34,8 +34,8 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter
     /**
      * Create and return a submission node.
      *
-     * @param $doc DOMDocument
-     * @param $submission Submission
+     * @param DOMDocument $doc
+     * @param Submission $submission
      *
      * @return DOMElement
      */

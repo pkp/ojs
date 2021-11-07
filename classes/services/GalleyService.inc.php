@@ -35,7 +35,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function get($galleyId)
     {
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         return $articleGalleyDao->getById($galleyId);
     }
 
@@ -68,7 +68,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
     public function getMany($args = [])
     {
         $galleyQO = $this->getQueryBuilder($args)->getQuery();
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
         $result = $galleyDao->retrieveRange($galleyQO->toSql(), $galleyQO->getBindings());
         $queryResults = new DAOResultFactory($result, $galleyDao, '_fromRow');
 
@@ -269,7 +269,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function add($galley, $request)
     {
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         $galleyId = $articleGalleyDao->insertObject($galley);
         $galley = $this->get($galleyId);
 
@@ -283,7 +283,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function edit($galley, $params, $request)
     {
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
 
         $newGalley = $galleyDao->newDataObject();
         $newGalley->_data = array_merge($galley->_data, $params);
@@ -303,7 +303,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
     {
         HookRegistry::call('Galley::delete::before', [&$galley]);
 
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         $articleGalleyDao->deleteObject($galley);
 
         $submissionFileCollector = Repo::submissionFile()

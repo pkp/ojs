@@ -34,9 +34,9 @@ class Install extends PKPInstall
      *
      * @see install.form.InstallForm for the expected parameters
      *
-     * @param $params array installer parameters
-     * @param $descriptor string descriptor path
-     * @param $isPlugin boolean true iff a plugin is being installed
+     * @param array $params installer parameters
+     * @param string $descriptor descriptor path
+     * @param bool $isPlugin true iff a plugin is being installed
      */
     public function __construct($params, $descriptor = 'install.xml', $isPlugin = false)
     {

@@ -35,10 +35,10 @@ class DAO extends \PKP\author\DAO
      * If authors have the same given names, first names and affiliations in all journal locales,
      * as well as country and email (otional), they are considered to be the same.
      *
-     * @param $journalId int Optional journal ID to restrict results to
-     * @param $initial string An initial a family name must begin with, "-" for authors with no family names
-     * @param $rangeInfo Object Range information
-     * @param $includeEmail boolean Whether or not to include the email in the select distinct
+     * @param int $journalId Optional journal ID to restrict results to
+     * @param string $initial An initial a family name must begin with, "-" for authors with no family names
+     * @param object $rangeInfo Range information
+     * @param bool $includeEmail Whether or not to include the email in the select distinct
      *
      * @return DAOResultFactory Authors ordered by last name, given name
      *
@@ -61,7 +61,7 @@ class DAO extends \PKP\author\DAO
 
         $supportedLocales = [];
         if ($journalId !== null) {
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var $journalDao \APP\journal\JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var \APP\journal\JournalDAO $journalDao */
             $journal = $journalDao->getById($journalId);
             $supportedLocales = $journal->getSupportedLocales();
         } else {

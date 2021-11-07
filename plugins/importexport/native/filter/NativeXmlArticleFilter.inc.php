@@ -31,7 +31,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter
     /**
      * Get the import filter for a given element.
      *
-     * @param $elementName string Name of XML element
+     * @param string $elementName Name of XML element
      *
      * @return Filter
      */

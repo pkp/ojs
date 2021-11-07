@@ -29,8 +29,8 @@ class IndexHandler extends PKPIndexHandler
      * If no journal is selected, display list of journals.
      * Otherwise, display the index page for the selected journal.
      *
-     * @param $args array
-     * @param $request Request
+     * @param array $args
+     * @param Request $request
      */
     public function index($args, $request)
     {
@@ -73,7 +73,7 @@ class IndexHandler extends PKPIndexHandler
 
             $templateMgr->display('frontend/pages/indexJournal.tpl');
         } else {
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
             $site = $request->getSite();
 
             if ($site->getRedirect() && ($journal = $journalDao->getById($site->getRedirect())) != null) {

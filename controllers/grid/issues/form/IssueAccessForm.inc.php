@@ -29,7 +29,7 @@ class IssueAccessForm extends Form
     /**
      * Constructor.
      *
-     * @param $issue Issue
+     * @param Issue $issue
      */
     public function __construct($issue)
     {

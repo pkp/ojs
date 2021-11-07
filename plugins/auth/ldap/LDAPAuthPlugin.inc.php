@@ -80,8 +80,8 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Returns an instance of the authentication plugin
      *
-     * @param $settings array settings specific to this instance.
-     * @param $authId int identifier for this instance
+     * @param array $settings settings specific to this instance.
+     * @param int $authId identifier for this instance
      *
      * @return LDAPuthPlugin
      */
@@ -93,10 +93,10 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Authenticate a username and password.
      *
-     * @param $username string
-     * @param $password string
+     * @param string $username
+     * @param string $password
      *
-     * @return boolean true if authentication is successful
+     * @return bool true if authentication is successful
      */
     public function authenticate($username, $password)
     {
@@ -123,9 +123,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Check if a username exists.
      *
-     * @param $username string
+     * @param string $username
      *
-     * @return boolean
+     * @return bool
      */
     public function userExists($username)
     {
@@ -143,9 +143,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Retrieve user profile information from the LDAP server.
      *
-     * @param $user User to update
+     * @param User $user User to update
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function getUserInfo($user)
     {
@@ -164,9 +164,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Store user profile information on the LDAP server.
      *
-     * @param $user User to store
+     * @param User $user User to store
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function setUserInfo($user)
     {
@@ -188,10 +188,10 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Change a user's password on the LDAP server.
      *
-     * @param $username string user to update
-     * @param $password string the new password
+     * @param string $username user to update
+     * @param string $password the new password
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function setUserPassword($username, $password)
     {
@@ -210,9 +210,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Create a user on the LDAP server.
      *
-     * @param $user User to create
+     * @param User $user User to create
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function createUser($user)
     {
@@ -238,9 +238,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Delete a user from the LDAP server.
      *
-     * @param $username string user to delete
+     * @param string $username user to delete
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function deleteUser($username)
     {
@@ -301,7 +301,7 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Lookup a user entry in the directory.
      *
-     * @param $username string
+     * @param string $username
      */
     public function getUserEntry($username)
     {
@@ -321,12 +321,12 @@ class LDAPAuthPlugin extends AuthPlugin
      * For now must be subclassed for other schemas.
      * TODO How to deal with deleted fields.
      *
-     * @param $user User
-     * @param $uattr array
+     * @param User $user
+     * @param array $uattr
      */
     public function userFromAttr(&$user, &$uattr)
     {
-        $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+        $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
         $site = $siteDao->getSite();
 
         $attr = array_change_key_case($uattr, CASE_LOWER); // Note:  array_change_key_case requires PHP >= 4.2.0
@@ -382,12 +382,12 @@ class LDAPAuthPlugin extends AuthPlugin
      * Update entry attributes from User object.
      * TODO How to deal with deleted fields.
      *
-     * @param $user User
-     * @param $attr array
+     * @param User $user
+     * @param array $attr
      */
     public function userToAttr(&$user, &$attr)
     {
-        $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+        $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
         $site = $siteDao->getSite();
         // FIXME empty strings for unset fields?
         if ($user->getFullName()) {
@@ -416,7 +416,7 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Encode password for the 'userPassword' field using the specified hash.
      *
-     * @param $password string
+     * @param string $password
      *
      * @return string hashed string (with prefix).
      */

@@ -22,8 +22,8 @@ class AboutHandler extends AboutContextHandler
     /**
      * Display about page.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function subscriptions($args, $request)
     {

@@ -30,11 +30,11 @@ class ArchivingLockssForm extends FormComponent
     /**
      * Constructor
      *
-     * @param $action string URL to submit the form to
-     * @param $locales array Supported locales
-     * @param $context Context Journal or Press to change settings for
-     * @param $lockssUrl string URL to the publisher manifest page for LOCKSS
-     * @param $clockssUrl string URL to the publisher manifest page for CLOCKSS
+     * @param string $action URL to submit the form to
+     * @param array $locales Supported locales
+     * @param Context $context Journal or Press to change settings for
+     * @param string $lockssUrl URL to the publisher manifest page for LOCKSS
+     * @param string $clockssUrl URL to the publisher manifest page for CLOCKSS
      */
     public function __construct($action, $locales, $context, $lockssUrl, $clockssUrl)
     {

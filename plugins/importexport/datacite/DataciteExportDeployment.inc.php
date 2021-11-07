@@ -44,8 +44,8 @@ class DataciteExportDeployment
     /**
      * Constructor
      *
-     * @param $context Context
-     * @param $plugin DOIPubIdExportPlugin
+     * @param Context $context
+     * @param DOIPubIdExportPlugin $plugin
      */
     public function __construct($context, $plugin)
     {
@@ -122,7 +122,7 @@ class DataciteExportDeployment
     /**
      * Set the import/export context.
      *
-     * @param $context Context
+     * @param Context $context
      */
     public function setContext($context)
     {
@@ -142,7 +142,7 @@ class DataciteExportDeployment
     /**
      * Set the import/export plugin.
      *
-     * @param $plugin ImportExportPlugin
+     * @param ImportExportPlugin $plugin
      */
     public function setPlugin($plugin)
     {

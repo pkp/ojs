@@ -31,8 +31,8 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Retrieve a CompletedPayment by its ID.
      *
-     * @param $completedPaymentId int
-     * @param $contextId int optional
+     * @param int $completedPaymentId
+     * @param int $contextId optional
      *
      * @return CompletedPayment
      */
@@ -54,7 +54,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Insert a new completed payment.
      *
-     * @param $completedPayment CompletedPayment
+     * @param CompletedPayment $completedPayment
      */
     public function insertObject($completedPayment)
     {
@@ -83,7 +83,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Update an existing completed payment.
      *
-     * @param $completedPayment CompletedPayment
+     * @param CompletedPayment $completedPayment
      */
     public function updateObject($completedPayment)
     {
@@ -118,7 +118,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Delete a completed payment.
      *
-     * @param $completedPaymentId int
+     * @param int $completedPaymentId
      */
     public function deleteById($completedPaymentId)
     {
@@ -140,9 +140,9 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Get a payment by assoc info
      *
-     * @param $userId int?
-     * @param $paymentType int PAYMENT_TYPE_...
-     * @param $assocId int
+     * @param int? $userId
+     * @param int $paymentType PAYMENT_TYPE_...
+     * @param int $assocId
      *
      * @return CompletedPayment|null
      */
@@ -172,8 +172,8 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Look for a completed PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
      *
-     * @param $userId int?
-     * @param $articleId int
+     * @param int? $userId
+     * @param int $articleId
      */
     public function hasPaidPurchaseArticle($userId, $articleId)
     {
@@ -183,8 +183,8 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Look for a completed PAYMENT_TYPE_PURCHASE_ISSUE payment matching the user and issue IDs
      *
-     * @param $userId int?
-     * @param $issueId int
+     * @param int? $userId
+     * @param int $issueId
      */
     public function hasPaidPurchaseIssue($userId, $issueId)
     {
@@ -205,7 +205,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Retrieve an array of payments for a particular context ID.
      *
-     * @param $contextId int
+     * @param int $contextId
      * @param null|mixed $rangeInfo
      *
      * @return array Matching payments
@@ -229,8 +229,8 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Retrieve CompletedPayments by user ID
      *
-     * @param $userId int User ID
-     * @param $rangeInfo DBResultRange Optional
+     * @param int $userId User ID
+     * @param DBResultRange $rangeInfo Optional
      *
      * @return object DAOResultFactory containing matching CompletedPayment objects
      */
@@ -258,7 +258,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Internal function to return a CompletedPayment object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return CompletedPayment
      */

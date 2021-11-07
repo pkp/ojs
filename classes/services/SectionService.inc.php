@@ -27,14 +27,14 @@ class SectionService implements EntityPropertyInterface
      * Get array of sections
      *
      * @param int $contextId
-     * @param boolean $activeOnly Exclude inactive sections
+     * @param bool $activeOnly Exclude inactive sections
      * 	from the section list that is returned
      *
      * @return array
      */
     public function getSectionList($contextId, $activeOnly = false)
     {
-        $sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
+        $sectionDao = \DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionIterator = $sectionDao->getByContextId($contextId);
 
         $sections = [];
@@ -122,14 +122,14 @@ class SectionService implements EntityPropertyInterface
      * This does not check if the user is authorized to add a section, or
      * validate or sanitize this section.
      *
-     * @param $section Section
-     * @param $context Journal
+     * @param Section $section
+     * @param Journal $context
      *
      * @return Section
      */
     public function addSection($section, $context)
     {
-        $sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
+        $sectionDao = \DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
 
         // Don't allow sections to be added to any other context
         $section->setJournalId($context->getId());

@@ -20,7 +20,7 @@ class DRIVERDAO extends OAIDAO
     /**
      * Set parent OAI object.
      *
-     * @param JournalOAI
+     * @param JournalOAI $oai
      */
     public function setOAI($oai)
     {
@@ -34,13 +34,13 @@ class DRIVERDAO extends OAIDAO
     /**
      * Return set of OAI records matching specified parameters.
      *
-     * @param $setIds array Objects ids that specify an OAI set, in this case only journal ID.
-     * @param $from int timestamp
-     * @param $until int timestamp
-     * @param $offset int
-     * @param $limit int
-     * @param $total int
-     * @param $funcName string
+     * @param array $setIds Objects ids that specify an OAI set, in this case only journal ID.
+     * @param int $from timestamp
+     * @param int $until timestamp
+     * @param int $offset
+     * @param int $limit
+     * @param int $total
+     * @param string $funcName
      *
      * @return array OAIRecord
      */

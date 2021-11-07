@@ -32,7 +32,7 @@ class Collector implements CollectorInterface
     /** @var array|null order and direction pairing for queries */
     public ?array $resultOrderings = null;
 
-    /** @var boolean|null return published issues */
+    /** @var bool|null return published issues */
     public ?bool $isPublished = null;
 
     /** @var array|null return issues in volume(s) */

@@ -26,9 +26,9 @@ class SubscriptionAction
     /**
      * Send notification email to Subscription Manager when online payment is completed.
      *
-     * @param $request PKPRequest
-     * @param $subscription Subscription
-     * @param $mailTemplateKey string
+     * @param PKPRequest $request
+     * @param Subscription $subscription
+     * @param string $mailTemplateKey
      */
     public function sendOnlinePaymentNotificationEmail($request, $subscription, $mailTemplateKey)
     {
@@ -59,7 +59,7 @@ class SubscriptionAction
 
         $user = Repo::user()->get($subscription->getUserId());
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
 
         $paramArray = [

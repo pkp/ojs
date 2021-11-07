@@ -52,10 +52,10 @@ class DublinCoreMetaPlugin extends GenericPlugin
     /**
      * Inject Dublin Core metadata into article view
      *
-     * @param $hookName string
-     * @param $args array
+     * @param string $hookName
+     * @param array $args
      *
-     * @return boolean
+     * @return bool
      */
     public function articleView($hookName, $args)
     {
@@ -181,7 +181,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
 
         $publication = $article->getCurrentPublication();
         if ($publication) {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
             $section = $sectionDao->getById($publication->getData('sectionId'));
             $templateMgr->addHeader('dublinCoreArticleType', '<meta name="DC.Type.articleType" content="' . htmlspecialchars($section->getTitle($journal->getPrimaryLocale())) . '"/>');
         }

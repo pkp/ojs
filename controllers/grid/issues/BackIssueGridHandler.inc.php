@@ -54,7 +54,7 @@ class BackIssueGridHandler extends IssueGridHandler
     /**
      * Private function to add central columns to the grid.
      *
-     * @param $issueGridCellProvider IssueGridCellProvider
+     * @param IssueGridCellProvider $issueGridCellProvider
      */
     protected function _addCenterColumns($issueGridCellProvider)
     {

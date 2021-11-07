@@ -77,7 +77,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
         $displayedArticle = $smarty->getTemplateVars('article');
         $authors = Repo::author()->getSubmissionAuthors($displayedArticle);
         $foundArticles = [];
-        foreach ($authors as $author) { /* @var $author Author */
+        foreach ($authors as $author) { /** @var Author $author */
             // The following article search is by name only as authors are
             // not normalized in OJS. This is rather crude and may produce
             // false positives or miss some entries. But there's no other way

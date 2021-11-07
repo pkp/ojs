@@ -43,7 +43,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set the journal ID of the subscription type.
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function setJournalId($journalId)
     {
@@ -63,7 +63,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Get subscription type name.
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -75,8 +75,8 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type name.
      *
-     * @param $name string
-     * @param $locale string
+     * @param string $name
+     * @param string $locale
      */
     public function setName($name, $locale)
     {
@@ -96,7 +96,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Get subscription type description.
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -108,8 +108,8 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type description.
      *
-     * @param $description string
-     * @param $locale string
+     * @param string $description
+     * @param string $locale
      */
     public function setDescription($description, $locale)
     {
@@ -129,7 +129,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type cost.
      *
-     * @param $cost float
+     * @param float $cost
      */
     public function setCost($cost)
     {
@@ -149,7 +149,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type currency code.
      *
-     * @param $currencyCodeAlpha string
+     * @param string $currencyCodeAlpha
      */
     public function setCurrencyCodeAlpha($currencyCodeAlpha)
     {
@@ -183,7 +183,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Get subscription type nonExpiring.
      *
-     * @return boolean
+     * @return bool
      */
     public function getNonExpiring()
     {
@@ -203,7 +203,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type duration.
      *
-     * @param $duration int
+     * @param int $duration
      */
     public function setDuration($duration)
     {
@@ -213,7 +213,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Get subscription type duration in years and months.
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -257,7 +257,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type format.
      *
-     * @param $format int
+     * @param int $format
      */
     public function setFormat($format)
     {
@@ -286,7 +286,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Check if this subscription type is for an institution.
      *
-     * @return boolean
+     * @return bool
      */
     public function getInstitutional()
     {
@@ -296,7 +296,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set whether or not this subscription type is for an institution.
      *
-     * @param $institutional boolean
+     * @param bool $institutional
      */
     public function setInstitutional($institutional)
     {
@@ -306,7 +306,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Check if this subscription type requires a membership.
      *
-     * @return boolean
+     * @return bool
      */
     public function getMembership()
     {
@@ -316,7 +316,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set whether or not this subscription type requires a membership.
      *
-     * @param $membership boolean
+     * @param bool $membership
      */
     public function setMembership($membership)
     {
@@ -326,7 +326,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Check if this subscription type should be publicly visible.
      *
-     * @return boolean
+     * @return bool
      */
     public function getDisablePublicDisplay()
     {
@@ -336,7 +336,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set whether or not this subscription type should be publicly visible.
      *
-     * @param $disablePublicDisplay boolean
+     * @param bool $disablePublicDisplay
      */
     public function setDisablePublicDisplay($disablePublicDisplay)
     {
@@ -356,7 +356,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Set subscription type display sequence.
      *
-     * @param $sequence float
+     * @param float $sequence
      */
     public function setSequence($sequence)
     {
@@ -370,7 +370,7 @@ class SubscriptionType extends \PKP\core\DataObject
      */
     public function getSummaryString()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         return $this->getLocalizedName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
     }
 }

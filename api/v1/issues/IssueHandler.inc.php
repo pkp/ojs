@@ -91,8 +91,8 @@ class IssueHandler extends APIHandler
     /**
      * Get a collection of issues
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response
@@ -198,8 +198,8 @@ class IssueHandler extends APIHandler
     /**
      * Get the current issue
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response
@@ -222,8 +222,8 @@ class IssueHandler extends APIHandler
     /**
      * Get a single issue
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response

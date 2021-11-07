@@ -183,14 +183,14 @@ class Repository
         $issueId = $issue->getId();
 
         // Delete issue-specific ordering if it exists.
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionDao->deleteCustomSectionOrdering($issueId);
 
         // Delete published issue galleys and issue files
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         $issueGalleyDao->deleteByIssueId($issueId);
 
-        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFileDao->deleteByIssueId($issueId);
 
         $issueFileManager = new IssueFileManager($issueId);
@@ -215,7 +215,7 @@ class Repository
     /**
      * Retrieve current issue
      *
-     * @param $contextId int
+     * @param int $contextId
      * @param bool $useCache TODO: Not currently implemented. Adding to preserved desired cache usage in future
      */
     public function getCurrent(int $contextId, bool $useCache = false): ?Issue

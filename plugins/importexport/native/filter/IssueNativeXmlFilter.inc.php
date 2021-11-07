@@ -22,7 +22,7 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -49,7 +49,7 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * @see Filter::process()
      *
-     * @param $issues array Array of issues
+     * @param array $issues Array of issues
      *
      * @return DOMDocument
      */
@@ -84,8 +84,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and return an issue node.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
+     * @param DOMDocument $doc
+     * @param Issue $issue
      *
      * @return DOMElement
      */
@@ -131,9 +131,9 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add identifier nodes to an issue node.
      *
-     * @param $doc DOMDocument
-     * @param $issueNode DOMElement
-     * @param $issue Issue
+     * @param DOMDocument $doc
+     * @param DOMElement $issueNode
+     * @param Issue $issue
      */
     public function addIdentifiers($doc, $issueNode, $issue)
     {
@@ -161,10 +161,10 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Add a single pub ID element for a given plugin to the document.
      *
-     * @param $doc DOMDocument
-     * @param $issueNode DOMElement
-     * @param $issue Issue
-     * @param $pubIdPlugin PubIdPlugin
+     * @param DOMDocument $doc
+     * @param DOMElement $issueNode
+     * @param Issue $issue
+     * @param PubIdPlugin $pubIdPlugin
      *
      * @return DOMElement|null
      */
@@ -184,9 +184,9 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add various date nodes to an issue node.
      *
-     * @param $doc DOMDocument
-     * @param $issueNode DOMElement
-     * @param $issue Issue
+     * @param DOMDocument $doc
+     * @param DOMElement $issueNode
+     * @param Issue $issue
      */
     public function addDates($doc, $issueNode, $issue)
     {
@@ -212,9 +212,9 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add articles to an issue node.
      *
-     * @param $doc DOMDocument
-     * @param $issueNode DOMElement
-     * @param $issue Issue
+     * @param DOMDocument $doc
+     * @param DOMElement $issueNode
+     * @param Issue $issue
      */
     public function addArticles($doc, $issueNode, $issue)
     {
@@ -238,9 +238,9 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add issue galleys to an issue node.
      *
-     * @param $doc DOMDocument
-     * @param $issueNode DOMElement
-     * @param $issue Issue
+     * @param DOMDocument $doc
+     * @param DOMElement $issueNode
+     * @param Issue $issue
      */
     public function addIssueGalleys($doc, $issueNode, $issue)
     {
@@ -264,13 +264,13 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Add the sections to the Issue DOM element.
      *
-     * @param $doc DOMDocument
-     * @param $issueNode DOMElement
-     * @param $issue Issue
+     * @param DOMDocument $doc
+     * @param DOMElement $issueNode
+     * @param Issue $issue
      */
     public function addSections($doc, $issueNode, $issue)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sections = $sectionDao->getByIssueId($issue->getId());
         $deployment = $this->getDeployment();
         $journal = $deployment->getContext();

@@ -252,8 +252,8 @@ class TocGridHandler extends CategoryGridHandler
     /**
      * Remove an article from the issue.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -292,8 +292,8 @@ class TocGridHandler extends CategoryGridHandler
     /**
      * Set access status on an article.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */

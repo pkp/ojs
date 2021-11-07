@@ -31,8 +31,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve an institutional subscription by subscription ID.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $journalId int Journal ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $journalId Journal ID
      *
      * @return InstitutionalSubscription
      */
@@ -59,7 +59,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions by user ID.
      *
-     * @param $userId int
+     * @param int $userId
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
@@ -82,9 +82,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions by user ID and journal ID.
      *
-     * @param $userId int
-     * @param $journalId int
-     * @param $rangeInfo RangeInfo
+     * @param int $userId
+     * @param int $journalId
+     * @param RangeInfo $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
      */
@@ -107,10 +107,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions by institution name.
      *
-     * @param $institutionName string Institution name
-     * @param $journalId int Journal ID
-     * @param $exactMatch boolean True iff the match on institution name should be exact
-     * @param $rangeInfo RangeInfo
+     * @param string $institutionName Institution name
+     * @param int $journalId Journal ID
+     * @param bool $exactMatch True iff the match on institution name should be exact
+     * @param RangeInfo $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
      */
@@ -134,7 +134,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Return number of institutional subscriptions with given status for journal.
      *
-     * @param status int
+     * @param int $journalId
      * @param null|mixed $status
      *
      * @return int
@@ -161,7 +161,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Get the number of institutional subscriptions for a particular journal.
      *
-     * @param $journalId int
+     * @param int $journalId
      *
      * @return int
      */
@@ -173,10 +173,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given subscriptionId.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $journalId int Optional journal ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $journalId Optional journal ID
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExists($subscriptionId, $journalId = null)
     {
@@ -200,10 +200,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given user.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $userId int User ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $userId User ID
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByUser($subscriptionId, $userId)
     {
@@ -223,10 +223,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given user and journal.
      *
-     * @param $userId int
-     * @param $journalId int
+     * @param int $userId
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByUserForJournal($userId, $journalId)
     {
@@ -246,11 +246,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given institution name and journal.
      *
-     * @param $institutionName string
-     * @param $journalId int
-     * @param $exactMatch boolean
+     * @param string $institutionName
+     * @param int $journalId
+     * @param bool $exactMatch
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByInstitutionName($institutionName, $journalId, $exactMatch = true)
     {
@@ -272,7 +272,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Insert a new institutional subscription.
      *
-     * @param $institutionalSubscription InstitutionalSubscription
+     * @param InstitutionalSubscription $institutionalSubscription
      *
      * @return int
      */
@@ -304,9 +304,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Update an existing institutional subscription.
      *
-     * @param $institutionalSubscription InstitutionalSubscription
+     * @param InstitutionalSubscription $institutionalSubscription
      *
-     * @return boolean
+     * @return bool
      */
     public function updateObject($institutionalSubscription)
     {
@@ -333,7 +333,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete an institutional subscription by subscription ID.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      * @param null|mixed $journalId
      */
     public function deleteById($subscriptionId, $journalId = null)
@@ -350,7 +350,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete institutional subscriptions by journal ID.
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function deleteByJournalId($journalId)
     {
@@ -363,7 +363,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete institutional subscriptions by user ID.
      *
-     * @param $userId int
+     * @param int $userId
      */
     public function deleteByUserId($userId)
     {
@@ -376,8 +376,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete institutional subscriptions by user ID and journal ID.
      *
-     * @param $userId int User ID
-     * @param $journalId int Journal ID
+     * @param int $userId User ID
+     * @param int $journalId Journal ID
      */
     public function deleteByUserIdForJournal($userId, $journalId)
     {
@@ -390,7 +390,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete all institutional subscriptions by subscription type ID.
      *
-     * @param $subscriptionTypeId int Subscription type ID
+     * @param int $subscriptionTypeId Subscription type ID
      */
     public function deleteByTypeId($subscriptionTypeId)
     {
@@ -425,14 +425,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions matching a particular journal ID.
      *
-     * @param $journalId int
-     * @param $status int
-     * @param $searchField int
-     * @param $searchMatch string "is" or "contains" or "startsWith"
-     * @param $search String to look in $searchField for
-     * @param $dateField int
-     * @param $dateFrom String date to search from
-     * @param $dateTo String date to search to
+     * @param int $journalId
+     * @param int $status
+     * @param int $searchField
+     * @param string $searchMatch "is" or "contains" or "startsWith"
+     * @param string $search to look in $searchField for
+     * @param int $dateField
+     * @param string $dateFrom date to search from
+     * @param string $dateTo date to search to
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching Subscriptions
@@ -508,11 +508,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check whether there is a valid institutional subscription for a given journal.
      *
-     * @param $domain string
-     * @param $IP string
-     * @param $journalId int
-     * @param $check int Test using either start date, end date, or both (default)
-     * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
+     * @param string $domain
+     * @param string $IP
+     * @param int $journalId
+     * @param int $check Test using either start date, end date, or both (default)
+     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
      * @return int|false Found subscription ID, or false for none.
      */
@@ -604,8 +604,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve active institutional subscriptions matching a particular end date and journal ID.
      *
-     * @param $dateEnd date (YYYY-MM-DD)
-     * @param $journalId int
+     * @param date $dateEnd (YYYY-MM-DD)
+     * @param int $journalId
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
@@ -642,9 +642,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      * Renew an institutional subscription by dateEnd + duration of subscription type
      * if the institutional subscription is expired, renew to current date + duration
      *
-     * @param $institutionalSubscription InstitutionalSubscription
+     * @param InstitutionalSubscription $institutionalSubscription
      *
-     * @return boolean
+     * @return bool
      */
     public function renewSubscription($institutionalSubscription)
     {
@@ -664,7 +664,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to return an InstitutionalSubscription object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return InstitutionalSubscription
      */
@@ -698,10 +698,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to insert institutional subscription IP ranges.
      *
-     * @param $subscriptionId int
-     * @param $ipRanges array
+     * @param int $subscriptionId
+     * @param array $ipRanges
      *
-     * @return boolean
+     * @return bool
      */
     public function _insertSubscriptionIPRanges($subscriptionId, $ipRanges)
     {
@@ -787,9 +787,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to delete subscription ip ranges by subscription ID.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      *
-     * @return boolean
+     * @return bool
      */
     public function _deleteSubscriptionIPRanges($subscriptionId)
     {

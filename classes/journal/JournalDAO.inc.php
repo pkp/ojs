@@ -75,8 +75,8 @@ class JournalDAO extends ContextDAO
     /**
      * Delete the public IDs of all publishing objects in a journal.
      *
-     * @param $journalId int
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param int $journalId
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
      */
@@ -99,17 +99,17 @@ class JournalDAO extends ContextDAO
      * Check whether the given public ID exists for any publishing
      * object in a journal.
      *
-     * @param $journalId int
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param int $journalId
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param $pubId string
-     * @param $assocType int The object type of an object to be excluded from
+     * @param string $pubId
+     * @param int $assocType The object type of an object to be excluded from
      *  the search. Identified by one of the ASSOC_TYPE_* constants.
-     * @param $assocId int The id of an object to be excluded from the search.
-     * @param $forSameType boolean Whether only the same objects should be considered.
+     * @param int $assocId The id of an object to be excluded from the search.
+     * @param bool $forSameType Whether only the same objects should be considered.
      *
-     * @return boolean
+     * @return bool
      */
     public function anyPubIdExists(
         $journalId,
@@ -151,7 +151,7 @@ class JournalDAO extends ContextDAO
      * Sets current_issue_id for context to null.
      * This is necessary because current_issue_id should explicitly be set to null rather than unset.
      *
-     * @param $contextId
+     * @param int $contextId
      *
      * @return int
      */

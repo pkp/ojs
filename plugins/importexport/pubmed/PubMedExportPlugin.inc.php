@@ -36,7 +36,7 @@ class PubMedExportPlugin extends ImportExportPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -66,8 +66,8 @@ class PubMedExportPlugin extends ImportExportPlugin
     /**
      * Display the plugin.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function display($args, $request)
     {
@@ -141,7 +141,7 @@ class PubMedExportPlugin extends ImportExportPlugin
 
     public function exportSubmissions($submissionIds, $context, $user)
     {
-        $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+        $filterDao = DAORegistry::getDAO('FilterDAO'); /** @var FilterDAO $filterDao */
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
@@ -167,15 +167,15 @@ class PubMedExportPlugin extends ImportExportPlugin
     /**
      * Get the XML for a set of issues.
      *
-     * @param $issueIds array Array of issue IDs
-     * @param $context Context
-     * @param $user User
+     * @param array $issueIds Array of issue IDs
+     * @param Context $context
+     * @param User $user
      *
      * @return string XML contents representing the supplied issue IDs.
      */
     public function exportIssues($issueIds, $context, $user)
     {
-        $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+        $filterDao = DAORegistry::getDAO('FilterDAO'); /** @var FilterDAO $filterDao */
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
@@ -200,7 +200,7 @@ class PubMedExportPlugin extends ImportExportPlugin
     /**
      * Execute import/export tasks using the command-line interface.
      *
-     * @param $args Parameters to the plugin
+     * @param array $args Parameters to the plugin
      */
     public function executeCLI($scriptName, &$args)
     {
@@ -208,7 +208,7 @@ class PubMedExportPlugin extends ImportExportPlugin
         $xmlFile = array_shift($args);
         $journalPath = array_shift($args);
 
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
 
         $journal = $journalDao->getByPath($journalPath);
 

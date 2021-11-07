@@ -23,8 +23,8 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
     /**
      * Constructor
      *
-     * @param $context Context
-     * @param $user User
+     * @param Context $context
+     * @param User $user
      */
     public function __construct($context, $user)
     {
@@ -75,7 +75,7 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
     /**
      * Set the import/export issue.
      *
-     * @param $issue Issue
+     * @param Issue $issue
      */
     public function setIssue($issue)
     {

@@ -28,7 +28,7 @@ class DataciteInfoSender extends ScheduledTask
     public function __construct($args)
     {
         PluginRegistry::loadCategory('importexport');
-        $plugin = PluginRegistry::getPlugin('importexport', 'DataciteExportPlugin'); /* @var $plugin DataciteExportPlugin */
+        $plugin = PluginRegistry::getPlugin('importexport', 'DataciteExportPlugin'); /** @var DataciteExportPlugin $plugin */
         $this->_plugin = $plugin;
 
         if (is_a($plugin, 'DataciteExportPlugin')) {
@@ -101,7 +101,7 @@ class DataciteInfoSender extends ScheduledTask
     public function _getJournals()
     {
         $plugin = $this->_plugin;
-        $contextDao = Application::getContextDAO(); /* @var $contextDao JournalDAO */
+        $contextDao = Application::getContextDAO(); /** @var JournalDAO $contextDao */
         $journalFactory = $contextDao->getAll(true);
 
         $journals = [];
@@ -134,10 +134,10 @@ class DataciteInfoSender extends ScheduledTask
     /**
      * Register objects
      *
-     * @param $objects array
-     * @param $filter string
-     * @param $journal Journal
-     * @param $objectsFileNamePart string
+     * @param array $objects
+     * @param string $filter
+     * @param Journal $journal
+     * @param string $objectsFileNamePart
      */
     public function _registerObjects($objects, $filter, $journal, $objectsFileNamePart)
     {
@@ -164,7 +164,7 @@ class DataciteInfoSender extends ScheduledTask
     /**
      * Add execution log entry
      *
-     * @param $result array
+     * @param array $result
      */
     public function _addLogEntry($result)
     {

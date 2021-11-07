@@ -63,8 +63,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Subject
         $supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
+        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
+        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $subjects = array_merge_recursive(
             (array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
             (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
@@ -108,8 +108,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
     /**
      * Format XML for single RFC 1807 element.
      *
-     * @param $name string
-     * @param $value mixed
+     * @param string $name
+     * @param mixed $value
      */
     public function formatElement($name, $value)
     {

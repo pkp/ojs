@@ -47,9 +47,9 @@ class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm
     /**
      * return app-specific mail template.
      *
-     * @param $submission Submission
-     * @param $templateKey string
-     * @param $includeSignature boolean optional
+     * @param Submission $submission
+     * @param string $templateKey
+     * @param bool $includeSignature optional
      *
      * @return ArticleMailTemplate
      */

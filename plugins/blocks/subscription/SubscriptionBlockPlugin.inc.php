@@ -31,7 +31,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String
+     * @return string
      */
     public function getDisplayName()
     {
@@ -49,8 +49,8 @@ class SubscriptionBlockPlugin extends BlockPlugin
     /**
      * Get the HTML contents for this block.
      *
-     * @param $templateMgr object
-     * @param $request PKPRequest
+     * @param object $templateMgr
+     * @param PKPRequest $request
      *
      * @return $string
      */
@@ -70,7 +70,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
         $templateMgr->assign('userLoggedIn', isset($userId) ? true : false);
 
         if (isset($userId)) {
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
             $individualSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journal->getId());
             $templateMgr->assign('individualSubscription', $individualSubscription);
         }
@@ -79,7 +79,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
         if (!isset($individualSubscription) || !$individualSubscription->isValid()) {
             $ip = $request->getRemoteAddr();
             $domain = $request->getRemoteDomain();
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
             $subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journal->getId());
             if ($subscriptionId) {
                 $institutionalSubscription = $subscriptionDao->getById($subscriptionId);

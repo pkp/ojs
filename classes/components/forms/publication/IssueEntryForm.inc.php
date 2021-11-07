@@ -36,12 +36,12 @@ class IssueEntryForm extends FormComponent
     /**
      * Constructor
      *
-     * @param $action string URL to submit the form to
-     * @param $locales array Supported locales
-     * @param $publication \Publication The publication to change settings for
-     * @param $publicationContext \Context The context of the publication
-     * @param $baseUrl string Site's base URL. Used for image previews.
-     * @param $temporaryFileApiUrl string URL to upload files to
+     * @param string $action URL to submit the form to
+     * @param array $locales Supported locales
+     * @param \Publication $publication The publication to change settings for
+     * @param \Context $publicationContext The context of the publication
+     * @param string $baseUrl Site's base URL. Used for image previews.
+     * @param string $temporaryFileApiUrl URL to upload files to
      */
     public function __construct($action, $locales, $publication, $publicationContext, $baseUrl, $temporaryFileApiUrl)
     {

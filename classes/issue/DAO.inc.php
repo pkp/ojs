@@ -425,12 +425,12 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      *
      * From legacy IssueDAO
      *
-     * @param $contextId integer optional
-     * @param $pubIdType string
-     * @param $pubIdSettingName string optional
+     * @param int $contextId optional
+     * @param string $pubIdType
+     * @param string $pubIdSettingName optional
      * (e.g. crossref::registeredDoi)
-     * @param $pubIdSettingValue string optional
-     * @param $rangeInfo DBResultRange optional
+     * @param string $pubIdSettingValue optional
+     * @param DBResultRange $rangeInfo optional
      *
      * @return DAOResultFactory
      */

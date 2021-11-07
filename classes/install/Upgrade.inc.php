@@ -36,9 +36,9 @@ class Upgrade extends Installer
     /**
      * Constructor.
      *
-     * @param $params array upgrade parameters
-     * @param $installFile string Name of XML descriptor to install
-     * @param $isPlugin boolean True iff the installer is for a plugin.
+     * @param array $params upgrade parameters
+     * @param string $installFile Name of XML descriptor to install
+     * @param bool $isPlugin True iff the installer is for a plugin.
      */
     public function __construct($params, $installFile = 'upgrade.xml', $isPlugin = false)
     {
@@ -49,7 +49,7 @@ class Upgrade extends Installer
     /**
      * Returns true iff this is an upgrade process.
      *
-     * @return boolean
+     * @return bool
      */
     public function isUpgrade()
     {
@@ -63,7 +63,7 @@ class Upgrade extends Installer
     /**
      * Rebuild the search index.
      *
-     * @return boolean
+     * @return bool
      */
     public function rebuildSearchIndex()
     {
@@ -75,7 +75,7 @@ class Upgrade extends Installer
     /**
      * Clear the CSS cache files (needed when changing LESS files)
      *
-     * @return boolean
+     * @return bool
      */
     public function clearCssCache()
     {
@@ -90,11 +90,11 @@ class Upgrade extends Installer
      * user_group_id column in the authors table may be updated to point to
      * user groups in other journals.
      *
-     * @return boolean
+     * @return bool
      */
     public function fixAuthorGroup()
     {
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $result = $userGroupDao->retrieve(
             'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
         );
@@ -110,7 +110,7 @@ class Upgrade extends Installer
     /**
      * For 3.0.x - 3.1.1 upgrade: repair the migration of the supp files.
      *
-     * @return boolean True indicates success.
+     * @return bool True indicates success.
      */
     public function repairSuppFilesFilestage()
     {
@@ -163,13 +163,13 @@ class Upgrade extends Installer
     /**
      * If StaticPages table exists we should port the data as NMIs
      *
-     * @return boolean
+     * @return bool
      */
     public function migrateStaticPagesToNavigationMenuItems()
     {
         if ($this->tableExists('static_pages')) {
             $contextDao = Application::getContextDAO();
-            $navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO'); /* @var $navigationMenuItemDao NavigationMenuItemDAO */
+            $navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO'); /** @var NavigationMenuItemDAO $navigationMenuItemDao */
 
             import('plugins.generic.staticPages.classes.StaticPagesDAO');
 
@@ -195,7 +195,7 @@ class Upgrade extends Installer
     /**
      * Migrate sr_SR locale to the new sr_RS@latin.
      *
-     * @return boolean
+     * @return bool
      */
     public function migrateSRLocale()
     {
@@ -299,7 +299,7 @@ class Upgrade extends Installer
         // plugin_settings
         // Consider array setting values from the setting names:
         // blockContent (from a custom block plugin), additionalInformation (from objects for review plugin)
-        $pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+        $pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /** @var PluginSettingsDAO $pluginSettingsDao */
         $settingNames = "('blockContent', 'additionalInformation')";
         $settingValueResult = $pluginSettingsDao->retrieve('SELECT * FROM plugin_settings WHERE setting_name IN ' . $settingNames . ' AND setting_value LIKE ?', ['%' . $oldLocaleStringLength . ':"' . $oldLocale . '%']);
         foreach ($settingValueResult as $row) {
@@ -315,7 +315,7 @@ class Upgrade extends Installer
     /**
      * Migrate first and last user names as multilingual into the DB table user_settings.
      *
-     * @return boolean
+     * @return bool
      */
     public function migrateUserAndAuthorNames()
     {
@@ -348,7 +348,7 @@ class Upgrade extends Installer
 
         // salutation and suffix will be migrated to the preferred public name
         // user preferred public names will be inserted for each supported site locales
-        $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+        $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
         $site = $siteDao->getSite();
         $supportedLocales = $site->getSupportedLocales();
         $userResult = DB::select(
@@ -378,7 +378,7 @@ class Upgrade extends Installer
         // author suffix will be migrated to the author preferred public name
         // author preferred public names will be inserted for each journal supported locale
         // get supported locales for all journals
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journals = $journalDao->getAll();
         $journalsSupportedLocales = [];
         while ($journal = $journals->next()) {
@@ -420,11 +420,11 @@ class Upgrade extends Installer
     /**
     * Update assoc_id for assoc_type ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531
     *
-    * @return boolean True indicates success.
+    * @return bool True indicates success.
     */
     public function updateSuppFileMetrics()
     {
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
         // Copy 531 assoc_type data to temp table
         $metricsDao->update(
             'CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)'
@@ -459,7 +459,7 @@ class Upgrade extends Installer
      */
     public function migrateSiteStylesheet()
     {
-        $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+        $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
 
         $publicFileManager = new PublicFileManager();
 
@@ -507,7 +507,7 @@ class Upgrade extends Installer
     /**
      * Update permit_metadata_edit and can_change_metadata for user_groups and stage_assignments tables.
      *
-     * @return boolean True indicates success.
+     * @return bool True indicates success.
      */
     public function changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit()
     {
