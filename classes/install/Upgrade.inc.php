@@ -29,7 +29,7 @@ use PKP\identity\Identity;
 use PKP\install\Installer;
 use PKP\security\Role;
 use PKP\security\UserGroupDAO;
-use PKP\submission\SubmissionFile;
+use PKP\submissionFile\SubmissionFile;
 
 class Upgrade extends Installer
 {
@@ -85,7 +85,6 @@ class Upgrade extends Installer
         return true;
     }
 
-
     /**
      * For 3.1.0 upgrade (#2467): In multi-journal upgrades from OJS 2.x, the
      * user_group_id column in the authors table may be updated to point to
@@ -108,7 +107,6 @@ class Upgrade extends Installer
         return true;
     }
 
-
     /**
      * For 3.0.x - 3.1.1 upgrade: repair the migration of the supp files.
      *
@@ -116,7 +114,6 @@ class Upgrade extends Installer
      */
     public function repairSuppFilesFilestage()
     {
-        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
         $fileManager = new FileManager();
 
         $rows = DB::table('submission_supplementary_files as ssf')
@@ -128,7 +125,8 @@ class Upgrade extends Installer
             ->get();
 
         foreach ($rows as $row) {
-            $submissionDir = Services::get('submissionFile')->getSubmissionDir($row->context_id, $row->submission_id);
+            $submissionDir = Repo::submissionFiles()
+                ->getSubmissionDir($row->context_id, $row->submission_id);
             $generatedOldFilename = sprintf(
                 '%d-%s-%d-%d-%d-%s.%s',
                 $row->submission_id,
@@ -426,14 +424,13 @@ class Upgrade extends Installer
     */
     public function updateSuppFileMetrics()
     {
-        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
         $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
         // Copy 531 assoc_type data to temp table
         $metricsDao->update(
             'CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)'
         );
         // Fetch submission_file data with old-supp-id
-        $result = $submissionFileDao->retrieve(
+        $result = DB::statement(
             'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
             ['old-supp-id']
         );

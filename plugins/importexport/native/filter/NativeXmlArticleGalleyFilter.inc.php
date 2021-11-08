@@ -15,6 +15,7 @@
 
 import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter');
 
+use APP\facades\Repo;
 use APP\submission\Submission;
 
 // FIXME: Add namespacing
@@ -107,14 +108,13 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
 
         if ($addSubmissionFile) {
             // Update the submission file.
-            $submissionFile = Services::get('submissionFile')->get($newSubmissionFileId);
-            $submissionFile = Services::get('submissionFile')->edit(
+            $submissionFile = Repo::submissionFiles()->get($newSubmissionFileId);
+            Repo::submissionFiles()->edit(
                 $submissionFile,
                 [
                     'assocType' => ASSOC_TYPE_REPRESENTATION,
                     'assocId' => $representation->getId(),
-                ],
-                Application::get()->getRequest()
+                ]
             );
         }
 

@@ -15,17 +15,17 @@
 
 namespace APP\search;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use PKP\config\Config;
+use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 use PKP\search\SearchFileParser;
 
 use PKP\search\SubmissionSearch;
 use PKP\search\SubmissionSearchIndex;
-use PKP\submission\SubmissionFile;
+use PKP\submissionFile\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -162,21 +162,32 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            $submissionFilesIterator = Services::get('submissionFile')->getMany([
-                'submissionIds' => [$article->getId()],
-                'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
-            ]);
-            foreach ($submissionFilesIterator as $submissionFile) {
+            $collector = Repo::submissionFiles()
+                ->getCollector()
+                ->filterBySubmissionIds([$article->getId()])
+                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
+            $submissionFiles = Repo::submissionFiles()
+                ->getMany($collector);
+            foreach ($submissionFiles as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
-                $dependentFilesIterator = Services::get('submissionFile')->getMany([
-                    'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
-                    'assocIds' => [$submissionFile->getId()],
-                    'submissionIds' => [$article->getId()],
-                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
-                    'includeDependentFiles' => true,
-                ]);
-                foreach ($dependentFilesIterator as $dependentFile) {
-                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
+                $dependentFiles = Repo::submissionFiles()
+                    ->getMany(
+                        Repo::submissionFiles()
+                            ->getCollector()
+                            ->filterByAssoc(
+                                PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
+                                [$submissionFile->getId()]
+                            )
+                            ->filterBySubmissionIds([$article->getId()])
+                            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                            ->includeDependentFiles()
+                    );
+                foreach ($dependentFiles as $dependentFile) {
+                    $this->submissionFileChanged(
+                        $article->getId(),
+                        SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
+                        $dependentFile
+                    );
                 }
             }
         }
