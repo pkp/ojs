@@ -1,7 +1,7 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-03 09:43+0000\n"
+"PO-Revision-Date: 2021-11-09 12:41+0000\n"
 "Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_CN/>\n"
@@ -62,7 +62,7 @@ msgid "publication.selectIssue"
 msgstr "选择一个期次安排出版"
 
 msgid "publication.assignToissue"
-msgstr "分配给期次"
+msgstr "分配期次"
 
 msgid "publication.unscheduledIn"
 msgstr "尚未计划将其发布在某一期中。"
@@ -104,7 +104,7 @@ msgid "galley.publicationNotFound"
 msgstr "未发现此校样的正式出版物。"
 
 msgid "galley.editPublishedDisabled"
-msgstr "此出版物已出版，所以校样已经不能编辑。"
+msgstr "此出版物已出版，所以校样已不能编辑。"
 
 msgid "catalog.category.heading"
 msgstr "所有项"
@@ -232,7 +232,7 @@ msgstr ""
 "许可证在文章发表后将被自动设置为 <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a>。"
 
 msgid "publication.required.reviewStage"
-msgstr "稿件必须处于文稿编辑或出版阶段才能出版。"
+msgstr "稿件必须处于文本编辑或出版阶段才能出版。"
 
 msgid "publication.required.declined"
 msgstr "被退稿的稿件无法出版。"
@@ -250,13 +250,13 @@ msgid "publication.event.versionUnpublished"
 msgstr "版本已从出版物中删除。"
 
 msgid "publication.event.versionScheduled"
-msgstr "新的版本已被计划出版。"
+msgstr "新的版本已计划出版。"
 
 msgid "publication.event.versionPublished"
-msgstr "新的版本被出版。"
+msgstr "新的版本已出版。"
 
 msgid "publication.event.unpublished"
-msgstr "稿件尚未被出版。"
+msgstr "稿件尚未出版。"
 
 msgid "publication.event.scheduled"
 msgstr "稿件已安排出版。"
@@ -274,7 +274,7 @@ msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "版权年份将根据发布日期自动设置。"
 
 msgid "publication.copyrightYearBasis.issueDescription"
-msgstr "在某个刊期发布后，它的版权年份将自动设置。"
+msgstr "在某个期次发布后，它的版权年份将自动设置。"
 
 msgid "submission.publications"
 msgstr "出版物"
@@ -316,7 +316,7 @@ msgid "submission.copyrightOther.description"
 msgstr "已将发表文章的版权分配给以下各方。"
 
 msgid "publication.changeIssue"
-msgstr "换期"
+msgstr "更换期次"
 
 msgid "publication.assignedToIssue"
 msgstr "此文章已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
