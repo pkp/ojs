@@ -70,6 +70,7 @@ class ReviewerHandler extends PKPReviewerHandler {
 		import('lib.pkp.classes.security.AccessKeyManager');
 		$reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
 		$reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
+		if (!$reviewerSubmission) return; // e.g. deleted review assignment
 
 		// Validate the access key
 		$context = $request->getContext();
@@ -101,9 +102,9 @@ class ReviewerHandler extends PKPReviewerHandler {
 	 */
 	public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment) {
 	    switch ($step) {
-	        case 3: 
-	        	import('classes.submission.reviewer.form.ReviewerReviewStep3Form');
-	        	return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
+		case 3:
+			import('classes.submission.reviewer.form.ReviewerReviewStep3Form');
+			return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
 	    }
 	    return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
 	}

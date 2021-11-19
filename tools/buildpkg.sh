@@ -50,7 +50,9 @@ lib/pkp/lib/vendor/oyejorge/less.php/test						\
 lib/pkp/lib/vendor/swiftmailer/swiftmailer/tests					\
 lib/pkp/lib/vendor/dragonmantank/cron-expression/tests/					\
 lib/pkp/lib/vendor/cweagans/composer-patches/tests					\
+lib/pkp/lib/vendor/moxiecode/plupload/examples/						\
 lib/pkp/tools/travis									\
+plugins/paymethod/paypal/vendor/clue/stream-filter/examples				\
 plugins/paymethod/paypal/vendor/omnipay/common/tests/					\
 plugins/paymethod/paypal/vendor/omnipay/paypal/tests/					\
 plugins/paymethod/paypal/vendor/guzzle/guzzle/docs/					\
@@ -77,6 +79,7 @@ plugins/generic/citationStyleLanguage/lib/vendor/satooshi/php-coveralls/tests/		
 plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/seboettg/collection/tests/		\
 plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/tests/		\
+plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/example/		\
 lib/pkp/lib/vendor/nikic/fast-route/test/						\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/tests/						\
 lib/pkp/lib/vendor/ezyang/htmlpurifier/smoketests/					\

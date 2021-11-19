@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-4
+Git tag: 3_3_0-8
 
-Release date: 
-==============================
+Release date: August 30, 2021
+=============================
 
 Configuration Changes
 ---------------------
@@ -25,6 +25,103 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientid
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
+
+3.3.0-8 Build
+-------------
+	#7240: Cancelling a discussion sometimes leaves an empty placeholder
+	#7232: Link to report broken in report plugins
+	#7214: OAI resumption token empty after first page of results
+	#7194: ImportExportPlugins do not export PubIds via ScheduledTaskTool
+	#7181: Provide OJS/OMP/OPS version number when requesting plugin gallery list
+	#7174: ReCAPTCHA proxy is misconfigured
+	#7152: Journal path of "files" has unexpected behaviour
+	#7138: OJS don't replace the galley postfix in the url
+	#6986: HTML entities displayed in journal title by citationStyleLanguage plugin
+
+3.3.0-7 Build
+-------------
+	#7121: Call to undefined function create_function
+	#7109: Use keywords (and subjects) in DataCite export
+	#7108: The pubIds plugins not loaded for CLI in ImportExportPlugins
+	#7102: Language parameter user.authorization.journalDoesNotPublish does not exist.
+	#7098: Custom email templates lost upon changing language configuration
+	#7093: Error in XML Schema for Import/Export
+	#7090: Warning in administration interface about latestVersionInfo
+	#7078: Dropzone.js causes upload timeouts on large files
+	#7076: ReviewFormElement::getMultipleResponsesElementTypes() cannot be called statically
+	#7071: PostgreSQL error upgrade from 3.1.2 to 3.3.0-6
+	#7015: PayPal payment fails for amounts greater than 999
+	#7004: Document the REST API endpoints for announcements
+	#6944: User search phrases should match against the user's preferred name field
+	#6898: Diacritics are stripped from filenames when downloading
+	#6747: List of journals inside the Dashboard in unsorted
+	#6469: Exporting users "Slim application error"
+	#5971: Medra Issue export does not validate against XSD
+
+3.3.0-6 Build
+-------------
+	#6986: HTML entities displayed in journal title by citationStyleLanguage plugin
+	#6979: [OJS 3.3.0.3] Unassigned submission list not working
+	#6962: OAI resumption tokens never delivered
+	#6956: mEDRA Export: PHP Fatal error after upgrade
+	#6953: Replace getCCLicenseBadge static calls with instance calls
+	#6952: Remove file naming test from the shared library
+	#6949: Issues can be served by ID in the wrong journal
+	#6938: Email templates can not be saved because of data from disabled locales
+	#6931: Clear issue object DOIs does not delete publication DOIs
+	#6909: mEDRA: the calculation of the file size is different for issue and article galleys
+	#6898: Diacritics are stripped from filenames when downloading
+	#6887: Crossref status check errors in 3.3.0-x
+	#6772: Upgrade from 3.2 to 3.3, All Journal custom block become same from last journal custom block
+	#6683: Ordering of sidebar blocks changed upon visiting the settings form
+
+3.3.0-5 Build
+-------------
+	#6910: Use proper identification when issuing HTTP requests
+	#6892: View more accessible button label is broken in 3.3
+	#6888: Ensure Composer dependency test/example code is safe
+	#6886: crossrefReferenceLinking plugin: consider all references settings
+	#6879: Site settings not visible for usage statistics plugin when only one context exists
+	#6873: Saving the Website - Appearance - Setup form auto-focuses on Homepage Image Alt Text field
+	#6872: Article links broken after update to 3.3.0-4
+	#6871: Session destruction (and duplicate) warnings in the PHP error log
+	#6870: SQL logic error in upgrade when using PostgreSQL
+	#6862: Author name is not localized in How-to-Cite citation
+	#6757: Supported form locales can be serialized as associative array
+
+3.3.0-4 Build
+-------------
+	#6860: Make submission deletion more accepting of missing files
+	#6857: Add error handling for nonexistent reviewer access
+	#6852: [OJS 3.3] Crossref export fails with unexpected ORCID error
+	#6847: Call to undefined method SubEditorsDAO::getBySectionId() in Series.inc.php:271
+	#6844: Bump pdf.js to v2.6.347
+	#6824: TinyMCE can overwrite public images in other contexts
+	#6808: Untranslated locale key notification.type.submissionNewVersion in new version notification email
+	#6803 #6807: OAI "earliest datestamp" is always now
+	#6801: Links to dependent files referenced in HTML/JATS XML galleys are broken
+	#6800: Backend Favicon defaults to PKP logo Hosting
+	#6798: Fatal error when removing announcement types
+	#6793: Updates to a customised journal stylesheet (css file) are not reflected in the HTML source
+	#6784: Crossref validation error when the author only has a given name
+	#6780: Wrong nesting in pkp-lib/templates/frontend/pages/navigationMenuItemViewContent.tpl
+	#6768: Access denied when clicking on "Administration" menu
+	#6762: Access denied for journal editor when adding new file in Request revisions dialog
+	#6761: Non-HTTP(S) links entered into rich editor fields become page-relative
+	#6753: Force validation of "https://" for ORCID IDs in user profile.
+	#6752: Incompatibility with PHP 8.0: mb_substitute_character() no longer supports passing empty string
+	#6751: Upgrade failure with PHP 8.0: conflicts with XMLParser class
+	#6750: Plugin search in gallery misbehaving
+	#6748: Cannot create Announcements: General error: 1364 Field 'setting_type' doesn't have a default value
+	#6743: Review files pointing to non-existing submission file may break upgrade to 3.3
+	#6741: Validation errors are not displayed when uploading files during submission
+	#6731: Failed assert warning in Section settings page
+	#6703: Unable to upgrade 3.3.0.2: Call to a member function getConnection() on null
+	#6663: HTML galley does not pick up the dependent CSS
+	#6563: Authorization header with JWT can cause fatal error
+	#5844: Enable rich text in site-wide "About" field
+	#5365: OAuth for Gmail Access
+	#4834: Re-add "blind copy reviewers on editor decision" feature
 
 3.3.0-3 Build
 -------------

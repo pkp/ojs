@@ -233,7 +233,7 @@ class OAIDAO extends PKPOAIDAO {
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
 		return $this->retrieve(
-			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
+			'SELECT	GREATEST(a.last_modified, i.last_modified, p.last_modified) AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
 				s.section_id AS section_id,
@@ -252,8 +252,8 @@ class OAIDAO extends PKPOAIDAO {
 				' . ($excludeJournals ?' AND j.journal_id NOT IN ('.implode(',', $excludeJournals).')':'') . '
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND p.section_id = ?':'') . '
-				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
-				' . ($until?' AND GREATEST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
+				' . ($from?' AND GREATEST(a.last_modified, i.last_modified, p.last_modified) >= ' . $this->datetimeToDB($from):'') . '
+				' . ($until?' AND GREATEST(a.last_modified, i.last_modified, p.last_modified) <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND a.submission_id = ?':'') . '
 			UNION
 			SELECT	dot.date_deleted AS last_modified,
