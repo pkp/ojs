@@ -237,9 +237,10 @@ class ArticleHandler extends Handler
             fatalError('Cannot view galley.');
         }
 
-        $categoryDao = DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
         $templateMgr->assign([
-            'categories' => $categoryDao->getByPublicationId($publication->getId())->toArray()
+            'categories' => iterator_to_array(Repo::category()->getMany(
+                Repo::category()->getCollector()
+                ->filterByPublicationIds([$publication->getId()])))
         ]);
 
         // Get galleys sorted into primary and supplementary groups

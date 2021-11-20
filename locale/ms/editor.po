@@ -1,0 +1,490 @@
+# Studiorimau <studiorimau@gmail.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.issues.issueData"
+msgstr "Data Isu"
+
+#, fuzzy
+msgid "editor.article.coverImage"
+msgstr "Imej Halaman"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Tarikh capaian tidak sah."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Adakah anda pasti ingin buang artikel ini daripada isu ini? Artikel ini akan "
+"tersedia untuk penjadualan dalam isu lain."
+
+msgid "editor.article.remove"
+msgstr "Buang"
+
+msgid "grid.action.removeArticle"
+msgstr "Buang Artikel Daripada Isu"
+
+#, fuzzy
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Imej halaman depan yang anda minta untuk padam tidak dijumpai. Ianya mungkin "
+"telah dihapuskan. Cuba muat semula halaman."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Yuran Penerbitan tidak dibayar. Untuk menjadualkan item untuk penerbitan "
+"beritahu pengarang untuk membayar yuran atau mengetepikan yuran."
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Untuk Diperuntukkan"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Jadual untuk diterbitkan"
+
+msgid "editor.article.editMetadata"
+msgstr "Sunting Versi Metadata"
+
+msgid "editor.article.viewMetadata"
+msgstr "Lihat Versi Metadata"
+
+msgid "editor.article.publishVersion"
+msgstr "Versi Penerbitan"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Tunjuk Penerbitan Berjadual"
+
+msgid "editor.submissions.inSection"
+msgstr "Dalam Bahagian"
+
+msgid "issues.submissions.issueIds"
+msgstr "Diperuntukkan kepada Isu"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Diperuntukkan kepada Penyunting"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Lengkap Terakhir"
+
+msgid "editor.submissions.averageTime"
+msgstr "Minggu"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Terkini"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Tiada Penyerahan"
+
+msgid "editor.submissions.accept"
+msgstr "Terima"
+
+msgid "editor.submissions.invite"
+msgstr "Jemput"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Tugasan Aktif"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Hantar MM-DD"
+
+msgid "editor.submissions.showBy"
+msgstr "Tunjuk Mengikut"
+
+msgid "editor.article.decision"
+msgstr "Keputusan"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Tandakan fail asal sebagai Versi Semak Semula"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Isu-isu Belakang"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Tetapkan Isu Semasa"
+
+msgid "grid.action.previewIssue"
+msgstr "Pratonton"
+
+msgid "grid.action.viewIssue"
+msgstr "Lihat"
+
+msgid "grid.action.addIssue"
+msgstr "Cipta Isu"
+
+msgid "grid.action.publish"
+msgstr "Terbitkan Isu"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Isu-isu Masa Depan"
+
+msgid "editor.issues.identifiers"
+msgstr "Pengenalpasti"
+
+msgid "editor.issues.pages"
+msgstr "Muka surat"
+
+msgid "editor.issues.open"
+msgstr "Buka"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Tiada Isu Langsung"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Tidak dapat menyimpan id awam untuk artikel:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Adakah anda pasti hendak menetapkan isu ini sebagai semasa?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Adakah anda pasti hendak menyahterbitkan isu yang diterbitkan ini?"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Adakah anda pasti hendak menerbitkan isu baharu?"
+
+msgid "editor.issues.preview"
+msgstr "Pratonton"
+
+msgid "editor.issues.previewIssue"
+msgstr "Pratonton Isu"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Isu Tidak Diterbitkan"
+
+msgid "editor.issues.publishIssue"
+msgstr "Terbitkan Isu"
+
+msgid "editor.issues.publicId"
+msgstr "Id Awam"
+
+msgid "editor.issues.order"
+msgstr "Susunan"
+
+msgid "editor.issues.default"
+msgstr "Lalai"
+
+msgid "editor.issues.saveChanges"
+msgstr "Simpan perubahan pada jadual kandungan?"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Isu ini menggunakan susunan seksyen tersuai. <a href=\"{$url}\" class=\""
+"action\">Set semula kepada lalai</a>"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Jurnal ini menggunakan susunan isu tersuai. <a href=\"{$url}\" class=\""
+"action\">Set semula kepada lalai</a>"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Semua artikel akan dikembalikan ke senarai susunan penyuntingan dan semua "
+"fail yang berkaitan akan dipadam secara kekal.  Adakah anda pasti mahu buang "
+"isu ini?"
+
+msgid "editor.issues.access"
+msgstr "Akses"
+
+msgid "editor.issues.identification"
+msgstr "Pengenalan"
+
+msgid "editor.issues.subscription"
+msgstr "Langganan"
+
+msgid "editor.issues.openAccess"
+msgstr "Buka capaian"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Paparan"
+
+#, fuzzy
+msgid "editor.issues.showCoverPage"
+msgstr "Cipta penutup untuk isu ini dengan unsur berikut."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Buang lembaran gaya?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Format lembaran gaya tidak sah. Pastikan fail yang dihantar adalah CSS yang "
+"sah. (Ambil perhatian bahawa lembaran gaya dengan komen pada mulanya mungkin "
+"ditolak.)"
+
+msgid "editor.issues.styleFile"
+msgstr "Lembaran Gaya"
+
+#, fuzzy
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Format imej halaman depan tidak sah. Format yang diterima adalah .gif, .jpg "
+"atau .png."
+
+#, fuzzy
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Imej gambar muka depan yang anda minta untuk memadam padanan isu untuk "
+"jurnal yang berbeza. Sila pastikan anda bekerja dengan jurnal yang betul, "
+"anda menggunakan ID isu yang betul, dan cuba lagi."
+
+#, fuzzy
+msgid "editor.issues.coverPage"
+msgstr "Gambar muka depan"
+
+#, fuzzy
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Imej gambar muka depan yang anda minta untuk padam tidak dijumpai. Ianya "
+"mungkin telah dihapuskan. Cuba muat semula halaman."
+
+#, fuzzy
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Imej gambar muka depan yang anda minta untuk padam tidak sepadan dengan imej "
+"halaman  untuk isu ini. Sila muat semula halaman dan cuba lagi."
+
+#, fuzzy
+msgid "editor.issues.removeCoverPage"
+msgstr "Buang halaman gambar muka depan?"
+
+msgid "editor.issues.proofed"
+msgstr "Bukti"
+
+msgid "editor.issues.remove"
+msgstr "Buang"
+
+msgid "editor.issues.uploaded"
+msgstr "Sudah muat naik"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Format yang dibenarkan: .gif, .jpg atau .png)"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Dayakan capaian terbuka tertangguh"
+
+msgid "editor.issues.accessDate"
+msgstr "Buka tarikh capaian"
+
+msgid "editor.issues.accessStatus"
+msgstr "Status akses"
+
+msgid "editor.issues.description"
+msgstr "Butiran"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Pengenalpasti isu awam"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Pengenalan isu"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Pengenalan isu diperlukan. Sila pilih sekurang-kurangnya satu daripada "
+"pilihan pengenalan isu."
+
+msgid "editor.issues.titleRequired"
+msgstr "Tajuk diperlukan untuk isu ini."
+
+msgid "editor.issues.yearRequired"
+msgstr "Tahun diperlukan dan mestilah nilai positif, berangka."
+
+msgid "editor.issues.numberRequired"
+msgstr "Nombor diperlukan dan mestilah nilai positif, berangka."
+
+msgid "editor.issues.datePublished"
+msgstr "Tarikh Diterbitkan"
+
+msgid "editor.issues.unpublished"
+msgstr "Tidak diterbitkan"
+
+msgid "editor.issues.published"
+msgstr "Diterbitkan"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Adakah anda pasti hendak menghapuskan isu ini secara kekal?"
+
+msgid "editor.issues.noArticles"
+msgstr "Tiada item dijadualkan untuk isu buat masa ini."
+
+msgid "editor.issues.numArticles"
+msgstr "Item"
+
+msgid "editor.issues.currentIssue"
+msgstr "Isu Semasa"
+
+msgid "editor.issues.editIssue"
+msgstr "Pengurusan Isu: {$issueIdentification}"
+
+msgid "editor.issues.createIssue"
+msgstr "Cipta Isu"
+
+msgid "editor.editorAdministration"
+msgstr "Pentadbiran Penyunting"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Sertakan jadual kandungan daripada isu ini:"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Hantar mesej ini kepada pengguna yang berkaitan dengan jurnal ini yang telah "
+"menunjukkan bahawa mereka ingin menerima pengemaskinian ({$count} pengguna)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Hantar mesej ini kepada semua pengguna yang berkaitan dengan jurnal ini "
+"({$count} pengguna)"
+
+msgid "editor.usersNotified"
+msgstr "Pengguna Dimaklumkan"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Memaklumkan pengguna..."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Semua pelanggan institusi ({$count} pengguna)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Semua pelanggan individu ({$count} pengguna)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Semua pengarang diterbitkan ({$count} pengguna)"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Semua pembaca ({$count} pengguna)"
+
+msgid "editor.notifyUsers"
+msgstr "Maklumkan Pengguna"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Sebelum menghantar penyerahan kepada Copyediting, gunakan pautan Maklumkan "
+"Pengarang untuk memaklumkan keputusan pengarang dan pilih versi untuk "
+"dihantar."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Penyerahan ini akan disimpan di arkib setelah mendapat notifiikasi e-mel "
+"pengarang dihantar atau butang langkau e-mel ditekan."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Adakah anda mahu simpan keputusan ini?"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Simpan perubahan pada penyerahan arkib? Penyerahan yang ditandakan "
+"penghapusan akan dihapuskan secara kekal daripada sistem."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Tiada penyerahan dalam arkib."
+
+msgid "editor.me"
+msgstr "Saya"
+
+msgid "editor.allEditors"
+msgstr "Semua Penyunting"
+
+msgid "editor.allSections"
+msgstr "Semua Seksyen"
+
+msgid "editor.publishedIssues"
+msgstr "Isu Penerbitan"
+
+msgid "editor.publishing"
+msgstr "Penerbitan"
+
+msgid "editor.submissionArchive"
+msgstr "Arkib Penyerahan"
+
+msgid "editor.submissionQueue"
+msgstr "Senarai susunan Penyerahan"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Penyerahan dan Penerbitan"
+
+msgid "editor.reassign"
+msgstr "Tetapkan semula"
+
+msgid "editor.home"
+msgstr "Laman Utama Penyunting"
+
+msgid "editor.issues.galley"
+msgstr "Isu Galley"
+
+msgid "editor.issues.galleys"
+msgstr "Isu Galley"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Sunting Isu Galley"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Cipta Isu Galley"
+
+msgid "grid.action.addGalley"
+msgstr "Tambah galley"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Pengenalpasti awam '{$publicIdentifier}' sudah wujud untuk objek lain (isu, "
+"artikel, galley atau fail). Sila pilih pengenalpasti unik dalam jurnal anda."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Pengenalpasti awam '{$publicIdentifier}' sudah wujud untuk objek lain dari "
+"jenis yang sama. Sila pilih pengenalpasti unik untuk objek bagi jenis yang "
+"sama dalam jurnal anda."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Sebarang fail yang telah dimuat naik ke mana-mana peringkat penyerahan boleh "
+"ditambah ke penyenaraian Bacaan Bukti dengan menyemak kotak semak Sertakan "
+"di bawah dan menekan Carian: semua fail yang ada akan disenaraikan dan boleh "
+"dipilih untuk dimasukkan."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Isipadu diperlukan dan mestilah nilai positif, berangka."
+
+#, fuzzy
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi yang "
+"disalin, dimuat naik di bawah <span class=\"pkp_help_title\""
+">Penyalinan</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Pilih Fail Galley"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Susun atur penyunting menyediakan fail ini untuk setiap galley dan kemudian "
+"memuat naik ke <span class=\"pkp_help_title\">Bukti</span> yang sesuai untuk "
+"pembacaan bukti."
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Adakah anda pasti mahu memadam isu galley ini?"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Kembali ke isu galley"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Pengenalpastian isu galley awam sudah ada."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Bahasa isu galley diperlukan."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Label isu galley diperlukan."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Tiada penerbitan isu galley."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Terbitkan galley dengan keseluruhan isi isu."
+
+msgid "editor.issues.viewingGalley"
+msgstr "Melihat Isu Galley"

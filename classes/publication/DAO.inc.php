@@ -14,6 +14,7 @@
 namespace APP\publication;
 
 use APP\core\Services;
+use APP\facades\Repo;
 use stdClass;
 
 class DAO extends \PKP\publication\DAO
@@ -42,6 +43,8 @@ class DAO extends \PKP\publication\DAO
         $publication->setData('galleys', iterator_to_array(
             Services::get('galley')->getMany(['publicationIds' => $publication->getId()])
         ));
+        $publication->setData('categoryIds', iterator_to_array(Repo::category()->getIds(Repo::category()->getCollector()
+            ->filterByPublicationIds([$publication->getId()]))));
         return $publication;
     }
 }

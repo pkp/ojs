@@ -1,0 +1,31 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-08-29 15:35+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "стартирайте разширено търсене за подобни статии"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr ""
+"Можете също да прегледате {$advancedSearchLink} във връзка с тази статия."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Подобни статии"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Този плъгин добавя списък с подобни статии към страницата с резюме на "
+"статията."
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Препоръчване на подобни статии"

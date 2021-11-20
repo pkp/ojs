@@ -1,0 +1,117 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-26 10:54+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: bg (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Отчет по списания 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Отчет по статии 1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Всички клиенти"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Връзките по-долу генерират остарели отчети, използвайки старите данни за "
+"плъгини, които не са готови за COUNTER. Ако искате да генерирате текущи "
+"отчети COUNTER, използвайки новия тип показател OJS COUNTER, използвайте "
+"връзките по-горе."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "анонимен"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Общо за всички списания"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Общо"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN на онлайн версия"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN на печатна версия"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Платформа"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Издател"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Дата на изпълнение на отчета:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Брой успешни заявки за статии в пълен текст по месец и списание (година "
+"{$year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Journal Report 1 (R3) - Отчет"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Journal Report 1 (R3): Заявки за статии в пълен текст по месец и списание"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER Journal Report 1 (R3): Пълнотекстови заявки за статии по месец и "
+"списание"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML версия"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Отчет JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Тези връзки генерират готови отчети, базирани на остарялата версия 3.0. Този "
+"отчет обхваща всички списания на сайта. Вместо това използвайте последната "
+"версия, когато е възможно."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Резултатите не могат да бъдат форматирани като XML."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Не бяха намерени резултати за този отчет."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Заявката за отчет е невалидна."
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Параметрите на отчета бяха невалидни."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "По-стари отчети за сайта"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER  Версия"
+
+msgid "plugins.reports.counter"
+msgstr "Отчет COUNTER"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Плъгинът COUNTER позволява отчитане на дейността на списанието, използвайки <"
+"a href=\"http://www.projectcounter.org\">стандарта COUNTER</a>. Само тези "
+"доклади не правят списанието съвместимо с COUNTER. За да предложите "
+"съответствие с COUNTER, прегледайте изискванията на уебсайта на Project "
+"COUNTER."

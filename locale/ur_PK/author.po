@@ -1,7 +1,8 @@
+# Muhammad Anees ur Rehman <h.m.anees@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-08 02:37+0000\n"
-"Last-Translator: Sheikh Adnan Ahmed Usmani <a2usmani@gmail.com>\n"
+"PO-Revision-Date: 2021-10-02 19:58+0000\n"
+"Last-Translator: Muhammad Anees ur Rehman <h.m.anees@gmail.com>\n"
 "Language-Team: Urdu (Pakistan) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/ur_PK/>\n"
 "Language: ur_PK\n"
@@ -75,15 +76,13 @@ msgstr "دوسرا مرحلہ: مقالہ اپ لوڈ کریں"
 msgid "author.submit.step1"
 msgstr "پہلا مرحلہ: مقالہ ارسال کرنا شروع کریں"
 
-#, fuzzy
 msgid "author.submit.startHereLink"
 msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">یہاں کلک کریں</a> پانچ مرحلاتی "
-"مقالہ ارسال کرنے کے عمل کے پہلے مرحلے کو شروع کرنے کے لیے."
+"<a href=\"{$submitUrl}\" class=\"action\">کلک کریں</a> پانچ مراحل میں مقالہ "
+"ارسال کرنے کا پہلا مرحلہ شروع کریں."
 
-#, fuzzy
 msgid "author.submit.startHereTitle"
-msgstr "نیا مقالہ ارسال کریں"
+msgstr "نیا مقالہ بھیجیں"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "مقالہ ارسال کرنے کے پانچ مراحل"
@@ -91,11 +90,10 @@ msgstr "مقالہ ارسال کرنے کے پانچ مراحل"
 msgid "author.submit.submitArticle"
 msgstr "مقالہ ارسال کریں"
 
-#, fuzzy
 msgid "author.competingInterests"
 msgstr ""
-"مقابلاتی مفادات <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">مقابلاتی مفادات پالیسی</a>"
+"تقابلی مفادات <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">تقابلی مفادات پالیسی</a>"
 
 msgid "author.track"
 msgstr "ارشال شدہ مقالات"

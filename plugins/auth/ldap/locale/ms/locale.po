@@ -1,0 +1,98 @@
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/ms/>"
+"\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Ciri keselamatan SASL"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Memerlukan ID Pengesahan"
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Domain"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Cth, \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mekanisme SASL"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Gunakan SASL dan bukannya pengesahan mudah"
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Tetapan SASL (pilihan)"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Format Hash untuk kata laluan yang disimpan ke pelayan. SSHA adalah "
+"disyorkan."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Penyulitan kata laluan"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Atribut yang nilainya mengenal pasti objek pengguna secara unik, seperti uid "
+"atau cn atau sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atribut nama akaun"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr ""
+"Pengurus DN dan kata laluan pengurus hanya diperlukan jika pilihan "
+"penyegerakan profil/kata laluan pengguna atau pilihan pengguna didayakan. "
+"Sekiranya LDAP hanya akan digunakan untuk pengesahan maka pilihan ini dapat "
+"dihilangkan."
+
+msgid "plugins.auth.ldap.settings.managerpwd"
+msgstr "Kata laluan pengurus"
+
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "Cth, \"cn=Pengurus,dc=contoh,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Pengurus DN"
+
+msgid "plugins.auth.ldap.settings.basedn.description"
+msgstr "Cth, \"ou=orang,dc=contoh,dc=com\""
+
+msgid "plugins.auth.ldap.settings.basedn"
+msgstr "Pangkalan DN"
+
+msgid "plugins.auth.ldap.settings.port.description"
+msgstr "Pilihan. Lalai ke 389 (LDAP) atau 636 (LDAP melalui SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Port pelayan"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"Cth, \"ldap.example.com\", atau \"ldaps: //ldap.example.com\" (untuk "
+"menggunakan SSL)"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Nama hos pelayan"
+
+msgid "plugins.auth.ldap.settings"
+msgstr "Tetapan LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Plugin ini membenarkan pengesahan dan penyegerakan akaun pengguna terhadap "
+"sumber luaran data LDAP."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"

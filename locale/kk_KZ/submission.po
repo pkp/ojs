@@ -1,7 +1,7 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-19 20:09+0000\n"
+"PO-Revision-Date: 2021-08-19 18:19+0000\n"
 "Last-Translator: Madi <nmdbzk@gmail.com>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "kk_KZ/>\n"
@@ -238,7 +238,7 @@ msgid "submission.submit.userGroupDescription"
 msgstr "Мақаланы жіберуде қандай рөл атқаратыныңызды көрсетіңіз."
 
 msgid "submission.submit.userGroup"
-msgstr "Менің топтғы рөлімді ескере отырып жіберу."
+msgstr "Менің топтағы рөлімді ескере отырып жіберу."
 
 msgid "submission.submit.title"
 msgstr "Мақаланы редакцияға жіберу"
@@ -252,3 +252,115 @@ msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
 "Мақаланы жариялауға қойылатын барлық талаптар орындалды. Мақала \"{$issue}\" "
 "басылымның бірге жарияланады. Сіз бұл мақаланы жариялауға жоспарлау керек пе?"
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\"> {$issueUrl} </a> жарияланды."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Жарияланымның барлық талаптары орындалды. Мақала дәл қазір жарияланады, "
+"себебі жариялану күні {$datePublished} болып орнатылған. Бұл материалды "
+"шынымен жариялағыңыз келе ме?"
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName} </a> сайтында жариялануы жоспарланған."
+
+msgid "submission.license.description"
+msgstr ""
+"Автоматты түрде, жарияланғаннан кейін <a href='{$licenseUrl}' "
+"target='_blank'> {$licenseName} </a> лицензиясы тағайындалады."
+
+msgid "submission.queries.production"
+msgstr "Басылым туралы пікірталастар"
+
+msgid "publication.version.details"
+msgstr "{$version} нұсқасы үшін ақпарат жариялануда"
+
+msgid "publication.unschedule.confirm"
+msgstr "Сіз бұл жазбаны жариялауды жоспарлағыңыз келмейтініне сенімдісіз бе?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Бұл материалды жариялағыңыз келмейтініне сенімдісіз бе?"
+
+msgid "publication.unpublish"
+msgstr "Жариялаудан бас тарту"
+
+msgid "submission.copyrightOther.description"
+msgstr "Жарияланған материалға авторлық құқықты келесі тұжырыммен бекітіңіз."
+
+msgid "submission.copyrightHolder.description"
+msgstr "Авторлық құқық {$copyright} жарияланғаннан кейін бекітіледі."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Материал жарияланар алдында «Әдеби редакциялау» немесе «Баспа ісі» сатысында "
+"болуы керек."
+
+msgid "publication.required.declined"
+msgstr "Қабылданбаған материалды жариялау мүмкін емес."
+
+msgid "publication.publish.requirements"
+msgstr "Жарияламас бұрын келесі талаптарды орындау қажет."
+
+msgid "publication.publish"
+msgstr "Жариялау"
+
+msgid "publication.invalidSubmission"
+msgstr "Бұл басылымға арналған материал табылмады."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Нұсқа жариялаудан алынып тасталды."
+
+msgid "publication.event.versionScheduled"
+msgstr "Жаңа нұсқа жариялауға жоспарланған."
+
+msgid "publication.event.versionPublished"
+msgstr "Жаңа нұсқа жарияланды."
+
+msgid "publication.event.unpublished"
+msgstr "Материал басылымнан алынып тасталды."
+
+msgid "publication.event.scheduled"
+msgstr "Материалды жариялау жоспарланған."
+
+msgid "publication.event.published"
+msgstr "Материал жарияланды."
+
+msgid "publication.editDisabled"
+msgstr "Бұл нұсқа жарияланды және оны өңдеу мүмкін емес."
+
+msgid "publication.datePublished"
+msgstr "Жарияланған күні"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Авторлық құқық жылы жариялану күніне байланысты автоматты түрде орнатылады."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Басылым жарияланған кезде авторлық құқық жылы автоматты түрде орнатылады."
+
+msgid "submission.publications"
+msgstr "Басылымдар"
+
+msgid "publication.status.unscheduled"
+msgstr "Жоспардан алынды"
+
+msgid "submission.status.scheduled"
+msgstr "Жоспарланған"
+
+msgid "publication.status.published"
+msgstr "Жариялаған"
+
+msgid "submission.publication"
+msgstr "Басылым"
+
+msgid "publication.selectIssue"
+msgstr "Жариялауды жоспарлау үшін журнал басылымын таңдаңыз"
+
+msgid "publication.unscheduledIn"
+msgstr "Бұл нөмірде жариялануы жоспарланбаған."
+
+msgid "publication.required.issue"
+msgstr "Мақала шығарылмастан бұрын басылымға тағайындалуы керек."

@@ -1,7 +1,8 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-19 14:27+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2021-09-10 08:46+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -61,3 +62,57 @@ msgstr ""
 "yaratishga imkon beradi. Ushbu hisobotlar o'z-o'zidan jurnalni COUNTER-ga "
 "mos kelmaydi. Jurnalni ushbu standartga mos kelishi uchun, COUNTER loyihasi "
 "saytidagi talablarni ko'rib chiqing."
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Jurnal hisoboti 1"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Maqola hisoboti 1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Barcha mijozlar"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Quyidagi havolalar eski plagin ma'lumotlari yordamida eskirgan hisobotlarni "
+"yaratadi, ular COUNTERga tayyor emas. Agar siz yangi OJS COUNTER metrik "
+"turidan foydalanib, hozirgi COUNTER hisobotlarini yaratmoqchi bo'lsangiz, "
+"yuqoridagi havolalardan foydalaning."
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonim"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Barcha jurnallar uchun jami"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Jami"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "Internetda ISSN"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN -ni chop etish"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Platforma"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Nashriyotchi"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Yugurish sanasi:"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Oy va jurnal bo'yicha muvaffaqiyatli to'liq matnli maqola so'rovlari soni ("
+"Yil {$ year})"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Jurnal hisoboti 1 (R3)"

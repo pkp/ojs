@@ -1,9 +1,10 @@
+# Viveka Svensson <viveka.svensson@lnu.se>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2021-03-24 09:31+0000\n"
+"PO-Revision-Date: 2021-08-25 12:05+0000\n"
 "Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "sv_SE/>\n"
@@ -2148,3 +2149,6 @@ msgstr "Avfärdad"
 
 msgid "payment.unpaid"
 msgstr "Obetalad"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Tidskriften publiceras inte online."

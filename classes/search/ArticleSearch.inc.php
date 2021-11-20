@@ -20,6 +20,7 @@ namespace APP\search;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\issue\IssueAction;
 use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
@@ -291,7 +292,6 @@ class ArticleSearch extends SubmissionSearch
                 if (!isset($issueCache[$issueId])) {
                     $issue = Repo::issue()->get($issueId);
                     $issueCache[$issueId] = $issue;
-                    import('classes.issue.IssueAction');
                     $issueAction = new IssueAction();
                     $issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $contextCache[$contextId]) || $issueAction->subscribedUser($user, $contextCache[$contextId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::get()->getRequest(), $contextCache[$contextId], $issueId, $articleId);
                 }
@@ -337,7 +337,7 @@ class ArticleSearch extends SubmissionSearch
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
                 $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */
-                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getId(), [AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale()]));
+                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale()]));
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;
                 }

@@ -13,8 +13,8 @@
  * @brief Plugin to recommend similar articles.
  */
 
-
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\plugins\GenericPlugin;
+use APP\search\ArticleSearch;
 
 define('RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT', 10);
 
@@ -72,7 +72,6 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         // Identify similarity terms for the given article.
         $displayedArticle = $smarty->getTemplateVars('article');
         $articleId = $displayedArticle->getId();
-        import('classes.search.ArticleSearch');
         $articleSearch = new ArticleSearch();
         $searchTerms = $articleSearch->getSimilarityTerms($articleId);
         if (empty($searchTerms)) {

@@ -1,9 +1,10 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2021-05-07 22:05+0000\n"
+"PO-Revision-Date: 2021-09-15 11:43+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -2033,3 +2034,30 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Bu derginin bulunduğu ülkeyi veya dergi ya da yayıncının posta adresinin "
 "bulunduğu ülkeyi seçin."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Birden fazla derginin barındırıldığı web sitesinin adı"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Ödeme tutarının para birimi, örn; USD"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Ödeme tutarı"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Ödeme türünün adı"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Derginin birincil irtibat kişisinin e-posta adresi"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Otomatik e-postalar için derginin e-posta imzası"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Derginin birincil irtibat kişisinin adı"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Derginin ana sayfasının URL'si"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Derginin adı"

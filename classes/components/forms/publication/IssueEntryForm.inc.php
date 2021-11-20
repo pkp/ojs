@@ -104,8 +104,9 @@ class IssueEntryForm extends FormComponent
 
         // Categories
         $categoryOptions = [];
-        $categoryDao = \DAORegistry::getDAO('CategoryDAO'); /* @var $categoryDao CategoryDAO */
-        $categories = $categoryDao->getByContextId($publicationContext->getId())->toAssociativeArray();
+        $categories = iterator_to_array(Repo::category()->getMany(
+            Repo::category()->getCollector()
+            ->filterByContextIds([$publicationContext->getId()])));
         foreach ($categories as $category) {
             $label = $category->getLocalizedTitle();
             if ($category->getParentId()) {

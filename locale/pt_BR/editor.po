@@ -1,9 +1,10 @@
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2020-11-30 11:43+0000\n"
+"PO-Revision-Date: 2021-09-03 19:20+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/pt_BR/>\n"
@@ -471,3 +472,9 @@ msgstr "Reatribuir"
 
 msgid "issues.submissions.issueIds"
 msgstr "Atribuído a Edição"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"A imagem da capa, que você solicitou a exclusão, corresponde a um fascículo "
+"de outro periódico. Verifique se você está trabalhando com a revista "
+"correta, se está usando o ID de edição correto e tente novamente."

@@ -43,7 +43,7 @@
 		},
 		"pub-id::publisher-id": {
 			"type": "string",
-			"description": "A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.",
+			"description": "A unique ID provided by the publisher. This is often used to record the ID of this galley in an external database, in cases where the publisher maintains separate records.",
 			"apiSummary": true
 		},
 		"publicationId": {

@@ -87,6 +87,7 @@ class DataciteSettingsForm extends Form
         // The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.
         $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'username', FormValidator::FORM_VALIDATOR_OPTIONAL_VALUE, 'plugins.importexport.datacite.settings.form.usernameRequired', '/^[^:]+$/'));
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
 

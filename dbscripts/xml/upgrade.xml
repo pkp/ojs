@@ -14,31 +14,20 @@
 <install version="3.4.0.0">
 	<code function="checkPhpVersion" />
 
-	<upgrade minversion="2.0.0.0" maxversion="2.9.9.9">
-		<!-- OJS < 3.0.0 upgrade unsupported -->
-		<!-- OJS 3.0 alpha or beta to 3.0 upgrade unsupported -->
+	<upgrade minversion="2.0.0.0" maxversion="3.0.9.9">
+		<!-- OJS < 3.1.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
-		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
-		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_review_assignments.xml" condition="return $installer->columnExists('review_assignments', 'cancelled');" />
-		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_notes.xml" condition="return $installer->columnExists('notes', 'file_id');" />
-		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_payments.xml" condition="return $installer->columnExists('completed_payments', 'journal_id');" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
 		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.1.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.1.9">
 		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
 		<code function="migrateSubmissionCoverImages" />
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning_articleGalleySettings.xml" condition="return $installer->tableExists('article_galley_settings');"/>
@@ -46,7 +35,7 @@
 		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_last_activity.xml" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
 		<!-- Old schema syncs: These are deprecated! -->
 		<schema file="lib/pkp/xml/schema/common.xml" />
 		<schema file="lib/pkp/xml/schema/log.xml" />
@@ -75,97 +64,41 @@
 	<code function="installDefaultNavigationMenus" />
 	<code function="migrateStaticPagesToNavigationMenuItems" />
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.1.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.1.9">
 		<code function="migrateSRLocale" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
 		<!-- migrateUserAndAuthorNames should be after migrateSRLocale -->
 		<code function="migrateUserAndAuthorNames" condition="return $installer->tableExists('users_tmp');" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
-		<code function="setFileUploader" />
-		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
-		<code function="localizeIssueCoverImages" />
-		<code function="localizeArticleCoverImages" />
-		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
-		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,es_ES,fr_CA,pt_BR" />
-		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_stage_assignments.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
-		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
-		<note file="docs/release-notes/README-3.0.1" />
-	</upgrade>
-
-	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">
-		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_stage_assignments.xml" />
-		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
-		<code function="clearCssCache" />
-		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
-		<data file="dbscripts/xml/upgrade/3.0.2_update.xml" />
-		<note file="docs/release-notes/README-3.0.2" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
-		<code function="installEmailTemplate" key="PASSWORD_RESET" locales="ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,eu_ES,fi_FI,fr_CA,hr_HR,id_ID,it_IT,nb_NO,nl_NL,pt_BR,pt_PT,ru_RU,sv_SE,tr_TR,uk_UA,zh_CN" />
-		<data file="dbscripts/xml/upgrade/3.1.0_update_a.xml" />
-		<code function="fixGenreIdInFileNames" />
-		<code function="repairKeywordsAndSubjects" />
-		<code function="enabledSitePlugins" />
-		<code function="moveCSSFiles" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
-		<!--  the order of the next two lines is important -->
-		<code function="moveReviewerFiles" />
-		<code function="fixAuthorGroup" />
-		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
-		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
-		<data file="dbscripts/xml/upgrade/3.1.0_notifications.xml" />
-		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
-		<data file="dbscripts/xml/upgrade/3.1.0_galley_settings.xml" condition="return $installer->tableExists('article_galley_settings');" />
-		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
-		<code function="repairImageAssociations" condition="return $installer->tableExists('submission_html_galley_images');" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_INITIAL_DECLINE" locales="en_US,ar_IQ,cs_CZ,da_DK,de_DE,el_GR,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,it_IT,nl_NL,pl_PL,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR" />
-		<code function="installEmailTemplate" key="EDITOR_RECOMMENDATION" locales="en_US,ar_IQ,cs_CZ,da_DK,de_DE,el_GR,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,it_IT,nl_NL,pl_PL,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR" />
-
-		<note file="docs/release-notes/README-3.1.0" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
 		<data file="dbscripts/xml/upgrade/3.1.1_update.xml" />
 		<code function="updateSuppFileMetrics" />
 		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="ar_IQ,da_DK,en_US,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,id_ID,pt_PT,ru_RU,sv_SE" />
 		<code function="clearDataCache" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
 		<code function="repairSuppFilesFilestage" />
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
 		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.1.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.1.9">
 		<data file="dbscripts/xml/upgrade/3.1.2_update.xml" />
 		<note file="docs/release-notes/README-3.1.2" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.1.4">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.1.4">
 		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
 		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
@@ -187,25 +120,20 @@
 		<note file="docs/release-notes/README-3.2.0" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
-		<!-- This appears intentionally late to give time for the versioning introduction. -->
-		<code function="setFileName" />
-	</upgrade>
-
-	<upgrade minversion="3.0.0.0" maxversion="3.2.0.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.2.0.9">
 		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
 		<code function="installEmailTemplate" key="ANNOUNCEMENT" locales="ca_ES,cs_CZ,ar_IQ,da_DK,en_US,es_ES,fr_CA,id_ID,it_IT,pt_BR,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR,vi_VN,zh_CN" />
 		<migration class="PKP\migration\upgrade\PKPv3_2_1SubeditorCategoriesMigration" />
 		<note file="docs/release-notes/README-3.2.1" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.2.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.2.9.9">
 		<migration class="PKP\migration\upgrade\PKPv3_3_0UpgradeMigration" />
 		<migration class="APP\migration\upgrade\OJSv3_3_0UpgradeMigration" />
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.3.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.3.9.9">
 		<migration class="PKP\migration\upgrade\v3_4_0\PreflightCheckMigration" fallback="3.3.9.9" />
 		<migration class="APP\migration\upgrade\v3_4_0\I7129_IssueEntityDAORefactor" />
 		<migration class="APP\migration\upgrade\OJSv3_3_1_i6872_UrlPathMigration" />
@@ -213,6 +141,7 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\UpgradeMigration" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I4904_UsageStatsTemporaryRecords" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6807_SetLastModified" />
+		<migration class="APP\migration\upgrade\v3_4_0\I4235_OAISetSpec" />
 		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
