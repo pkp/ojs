@@ -14,11 +14,11 @@ use PKP\services\PKPSchemaService;
 
 class Schema extends \PKP\core\maps\Schema
 {
-    /** @var Enumerable */
-    public $collection;
+    /** @copydoc \PKP\core\maps\Schema::$collection */
+    public Enumerable $collection;
 
-    /** @var string */
-    public $schema = PKPSchemaService::SCHEMA_ISSUE;
+    /** @copydoc \PKP\core\maps\Schema::$schema */
+    public string $schema = PKPSchemaService::SCHEMA_ISSUE;
 
     private ?array $userGroups = null;
 

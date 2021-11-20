@@ -85,7 +85,7 @@ class OJSv3_3_0UpgradeMigration extends \PKP\migration\Migration
             \APP\author\DAO::class,
             'ArticleGalleyDAO',
             'JournalDAO',
-            'EmailTemplateDAO',
+            \PKP\emailTemplate\DAO::class,
             \APP\publication\DAO::class,
             \APP\submission\DAO::class
         ];

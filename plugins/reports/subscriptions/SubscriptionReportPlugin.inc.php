@@ -16,6 +16,7 @@
 import('lib.pkp.classes.plugins.ReportPlugin');
 
 use APP\facades\Repo;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionReportPlugin extends ReportPlugin
 {
@@ -72,7 +73,7 @@ class SubscriptionReportPlugin extends ReportPlugin
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
         $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
         $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
-        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $isoCodes = app(IsoCodesFactory::class);
         $countries = $isoCodes->getCountries();
 
         header('content-type: text/comma-separated-values');

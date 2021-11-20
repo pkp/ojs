@@ -1747,3 +1747,9 @@ msgstr "The currency of the payment amount, such as USD"
 
 msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Name of the website when more than one journal is hosted"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validate Email (Journal Registration)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr "This email is automatically sent to a new user when they register with the journal when the settings require the email address to be validated."
