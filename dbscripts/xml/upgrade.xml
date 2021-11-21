@@ -140,7 +140,6 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I6093_AddForeignKeys" />
 		<migration class="PKP\migration\upgrade\v3_4_0\FailedJobsMigration" />
 		<migration class="PKP\migration\upgrade\v3_4_0\UpgradeMigration" />
-		<migration class="PKP\migration\upgrade\v3_4_0\I4904_UsageStatsTemporaryRecords" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6807_SetLastModified" />
 		<migration class="APP\migration\upgrade\v3_4_0\I4235_OAISetSpec" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7167_RemoveDuplicatedUserSettingsAndDeprecatedFields" />
