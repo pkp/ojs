@@ -134,6 +134,7 @@
 
 	<upgrade minversion="3.1.0.0" maxversion="3.3.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\PreflightCheckMigration" fallback="3.3.9.9" />
+		<migration class="APP\migration\upgrade\v3_4_0\PreflightCheckStatsMigration" fallback="3.3.9.9" />
 		<migration class="APP\migration\upgrade\v3_4_0\I7129_IssueEntityDAORefactor" />
 		<migration class="APP\migration\upgrade\OJSv3_3_1_i6872_UrlPathMigration" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6093_AddForeignKeys" />
