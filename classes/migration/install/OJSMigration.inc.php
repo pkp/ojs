@@ -173,7 +173,6 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('access_status')->default(0)->nullable();
             $table->date('date_published')->nullable();
             $table->datetime('last_modified')->nullable();
-            $table->string('locale', 14)->nullable();
             $table->bigInteger('primary_contact_id')->nullable();
             $table->bigInteger('section_id')->nullable();
             $table->float('seq', 8, 2)->default(0);
