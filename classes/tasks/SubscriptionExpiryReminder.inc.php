@@ -15,8 +15,8 @@
 
 namespace APP\tasks;
 
-use APP\i18n\AppLocale;
 use APP\facades\Repo;
+use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
 use PKP\scheduledTask\ScheduledTask;
@@ -69,12 +69,12 @@ class SubscriptionExpiryReminder extends ScheduledTask
         $subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
 
         $paramArray = [
-            'subscriberName' => $user->getFullName(),
+            'recipientName' => $user->getFullName(),
             'journalName' => $journalName,
             'subscriptionType' => $subscriptionType->getSummaryString(),
             'expiryDate' => $subscription->getDateEnd(),
-            'username' => $user->getUsername(),
-            'subscriptionContactSignature' => $subscriptionContactSignature
+            'recipientUsername' => $user->getUsername(),
+            'signature' => $subscriptionContactSignature
         ];
 
         $mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), $journal, false);
