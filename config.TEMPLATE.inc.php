@@ -51,7 +51,7 @@ session_lifetime = 30
 scheduled_tasks = Off
 
 ; Site time zone
-; Please refer to https://www.php.net/manual/en/timezones.php for a full list of supported
+; Please refer to https://www.php.net/timezones for a full list of supported
 ; time zones.
 ; I.e.: "Europe/Amsterdam"
 ; time_zone="Europe/Amsterdam"

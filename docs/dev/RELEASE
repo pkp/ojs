@@ -5,10 +5,7 @@ The following steps (subject to change) are typically performed to prepare a new
 OJS release:
 
 
-1. Ensure that the "complete" flags in registry/locales.xml are accurate.
-
-
-2. Update version, installation, and upgrade descriptor files:
+1. Update version, installation, and upgrade descriptor files:
 
     dbscripts/xml/version.xml
     dbscripts/xml/install.xml
@@ -27,7 +24,7 @@ OJS release:
     The titles of these bugs can be fetched as follows:
 
     for id in `cat bug_ids.txt`; do
-        wget -O - "http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=$id"
+        wget -O - "https://github.com/pkp/pkp-lib/issues/$id"
         | grep -o -e "<title>.*<\/title>"
     ; done
 
@@ -36,19 +33,19 @@ OJS release:
     release notes.
 
 
-3. Update release documentation:
+2. Update release documentation:
 
     docs/README.md
     docs/release-notes/README-<VERSION>
     SECURITY.md
 
 
-4. Copy the current release notes to docs/:
+3. Copy the current release notes to docs/:
 
     cp docs/release-notes/README-<VERSION> docs/RELEASE
 
 
-5. After committing any pending modifications, tag the release in git (both the
+4. After committing any pending modifications, tag the release in git (both the
 OJS codebase and the PKP library to be distributed with it). DO NOT FORGET TO
 COMMIT THE lib/pkp HASH FIRST.
 
@@ -63,7 +60,7 @@ config.TEMPLATE.inc.php and compile and commit the latest JS before tagging!
     git push --tags
 
 
-6. Build the OJS package and patch files:
+5. Build the OJS package and patch files:
 
 WARNING: If working on a stable branch, the latest `js/build.js` file will be
 compiled when `tools/buildpkg.sh` is run. Remove js/build.js from the .gitignore
@@ -72,21 +69,21 @@ file and commit it to the new stable branch.
     sh tools/buildpkg.sh <VERSION> <TAG>-<BRANCH> <PATCH_DIR>
 
     (<PATCH_DIR> is the path to a directory containing previous OJS release
-     packages against which to build patches)
+    packages against which to build patches)
 
 
-7. Place the new package, patches, version descriptor, and Doxygen docs on the
-   OJS web site:
+6. Place the new package, patches, version descriptor, and Doxygen docs on the
+    OJS web site:
 
-    http://pkp.sfu.ca/ojs/download/
-    http://pkp.sfu.ca/ojs/download/patch/
-    http://pkp.sfu.ca/ojs/xml/ojs-version.xml
-    http://pkp.sfu.ca/ojs/doxygen
+    https://pkp.sfu.ca/ojs/ojs_download/
+    https://pkp.sfu.ca/ojs/download/patch/
+    https://pkp.sfu.ca/ojs/xml/ojs-version.xml
+    https://pkp.sfu.ca/ojs/doxygen/master/html/
 
-8. Place the release notes, upgrade instructions, readme, and any relevant DTDs
-   on the OJS website:
+7. Place the release notes, upgrade instructions, readme, and any relevant DTDs
+    on the OJS website:
 
-	http://pkp.sfu.ca/ojs/README-<VERSION>
-	http://pkp.sfu.ca/ojs/RELEASE-<VERSION>
-	http://pkp.sfu.ca/ojs/UPGRADE-<VERSION>
-	http://pkp.sfu.ca/ojs/dtds
+    https://pkp.sfu.ca/ojs/README-<VERSION>
+    https://pkp.sfu.ca/ojs/RELEASE-<VERSION>
+    https://pkp.sfu.ca/ojs/UPGRADE-<VERSION>
+    https://pkp.sfu.ca/ojs/dtds
