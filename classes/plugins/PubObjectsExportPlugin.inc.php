@@ -848,7 +848,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     {
         static $notificationManager = null;
         $notificationManager ??= new NotificationManager();
-        $params = is_null($param) ? null : ['param' => $param];
+        $params = is_null($param) ? [] : ['param' => $param];
         $notificationManager->createTrivialNotification(
             $user->getId(),
             $notificationType,

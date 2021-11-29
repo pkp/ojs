@@ -377,7 +377,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                     foreach ($resultErrors as $errors) {
                         foreach ($errors as $error) {
                             assert(is_array($error) && count($error) >= 1);
-                            $errorMessage = __($error[0], ['param' => ($error[1] ?? null)]);
+                            $errorMessage = __($error[0], ['param' => $error[1] ?? null]);
                             echo "*** ${errorMessage}\n";
                         }
                     }
