@@ -52,7 +52,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI-præfiks"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "DOI-præfikset tildeles af registreringsorganisationer (f.eks. <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) og er i formatet 10.xxxx (f.eks. 10.1234):"
+msgstr "DOI-præfikset tildeles af registreringsorganisationer (f.eks. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) og er i formatet 10.xxxx (f.eks. 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "DOI-præfikset er obligatorisk og skal være i formatet 10.xxxx."

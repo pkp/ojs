@@ -42,7 +42,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "Prefixo DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "O prefixo DOI é atribuído pelas agências de registo (ex: <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) e é definido no formato 10.xxxx (ex. 10.1234):"
+msgstr "O prefixo DOI é atribuído pelas agências de registo (ex: <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) e é definido no formato 10.xxxx (ex. 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "O prefixo DOI é obrigatório e deve ser definido no formato 10.xxxx."

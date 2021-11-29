@@ -22,7 +22,11 @@ define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
 use APP\facades\Repo;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
+use Context;
+use Doi;
+use Illuminate\Support\LazyCollection;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 
@@ -49,11 +53,11 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
                 $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
                 if (isset($pubIdPlugins['doipubidplugin'])) {
                     $doiPlugin = $pubIdPlugins['doipubidplugin'];
-                    $doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());
+                    $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
                     $templateMgr->assign([
-                        'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enablePublicationDoi'),
-                        'exportIssues' => $doiPlugin->getSetting($context->getId(), 'enableIssueDoi'),
-                        'exportRepresentations' => $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi'),
+                        'exportArticles' => $context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION),
+                        'exportIssues' => $context->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE),
+                        'exportRepresentations' => $context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION),
                     ]);
                 }
                 if (empty($doiPrefix)) {
@@ -93,8 +97,11 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     public function markRegistered($context, $objects)
     {
         foreach ($objects as $object) {
-            $object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_MARKEDREGISTERED);
-            $this->saveRegisteredDoi($context, $object);
+            $doiId = $object->getData('doiId');
+
+            if ($doiId != null) {
+                Repo::doi()->markRegistered($doiId);
+            }
         }
     }
 
@@ -140,20 +147,24 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      *
      * @return array
      */
-    public function getUnregisteredArticles($context)
+    public function getUnregisteredArticles($context): LazyCollection
     {
-        // Retrieve all published submissions that have not yet been registered.
-        $articles = Repo::submission()->dao->getExportable(
-            $context->getId(),
-            $this->getPubIdType(),
-            null,
-            null,
-            null,
-            $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI,
-            null,
-            null
-        );
-        return $articles->toArray();
+        // TODO: #doi #current Flag for deletion/deprecation after handling Datacite
+        // Get unregistered articles
+        $collector = Repo::submission()->getCollector();
+        $collector
+            ->filterByContextIds([$context->getId()])
+            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->filterByPublicationDoiStatus(
+                [
+                    \PKP\doi\Doi::STATUS_UNREGISTERED,
+                    Doi::STATUS_ERROR,
+                    Doi::STATUS_STALE
+                ],
+                true
+            );
+
+        return Repo::submission()->getMany($collector)->toArray();
     }
 
     /**
@@ -165,46 +176,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      */
     public function getUnregisteredIssues($context)
     {
-        // Retrieve all issues that have not yet been registered.
-        $issuesFactory = Repo::issue()->dao->getExportable(
-            $context->getId(),
-            $this->getPubIdType(),
-            $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI,
-            null,
-            null
-        );
-        $issues = $issuesFactory->toArray();
-        // Cache issues.
-        $cache = $this->getCache();
-        foreach ($issues as $issue) {
-            $cache->add($issue, null);
-            unset($issue);
-        }
-        return $issues;
-    }
-
-    /**
-     * Retrieve all unregistered galleys.
-     *
-     * @param $context Context
-     *
-     * @return array
-     */
-    public function getUnregisteredGalleys($context)
-    {
-        // Retrieve all galleys that have not yet been registered.
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
-        $galleys = $galleyDao->getExportable(
-            $context ? $context->getId() : null,
-            $this->getPubIdType(),
-            null,
-            null,
-            null,
-            $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI,
-            null,
-            null
-        );
-        return $galleys->toArray();
+        return Repo::doi()->getUnregisteredIssues($context)->toArray();
     }
 
     /**
@@ -221,7 +193,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
             return Repo::submission()->get($submissionId);
         }, $submissionIds);
         return array_filter($submissions, function ($submission) {
-            return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED && !!$submission->getStoredPubId('doi');
+            return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED;
         });
     }
 

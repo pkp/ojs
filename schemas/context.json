@@ -42,6 +42,43 @@
 				"nullable"
 			]
 		},
+			"enableDois": {
+				"type": "boolean",
+				"default": false,
+				"validation": [
+					"nullable"
+				]
+			},
+			"enabledDoiTypes": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"validation": [
+						"in:publication,representation,issue"
+					]
+				}
+			},
+			"doiPrefix": {
+				"type": "string",
+				"validation": [
+					"regex:/^10\\.[0-9]{4,7}$/"
+				]
+			},
+			"useDefaultDoiSuffix": {
+				"type": "boolean",
+				"default": true
+			},
+			"customDoiSuffixType": {
+					"type": "string"
+			},
+			"registrationAgency": {
+				"type": "string",
+				"default": "none"
+			},
+		"doiCreationTime": {
+			"type": "string",
+			"default": "copyEditCreationTime"
+		},
 		"enableOpenAccessNotification": {
 			"type": "boolean",
 			"validation": [

@@ -45,7 +45,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "پیشوند DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "پیشوند DOI توسط مراجع ثبت کننده اختصاص داده می شود (برای مثال <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) و فرمت آن به صورت 10.xxxx می باشد (مانند 10.1234)"
+msgstr "پیشوند DOI توسط مراجع ثبت کننده اختصاص داده می شود (برای مثال <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) و فرمت آن به صورت 10.xxxx می باشد (مانند 10.1234)"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "شناسه DOI باید به فرمت 10.xxxx باشد."

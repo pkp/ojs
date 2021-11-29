@@ -311,7 +311,25 @@ class Issue extends \PKP\core\DataObject
     }
 
     /**
+     * Returns current DOI
+     *
+     */
+    public function getDoi(): ?string
+    {
+        $doiObject = $this->getData('doiObject');
+
+        if (empty($doiObject)) {
+            return null;
+        } else {
+            return $doiObject->getData('doi');
+        }
+    }
+
+    /**
      * Get stored public ID of the issue.
+     *
+     * This helper function is required by PKPPubIdPlugins.
+     * NB: To maintain backwards compatability, getDoi() is called from here
      *
      * @param $pubIdType string One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
@@ -321,7 +339,11 @@ class Issue extends \PKP\core\DataObject
      */
     public function getStoredPubId($pubIdType)
     {
-        return $this->getData('pub-id::' . $pubIdType);
+        if ($pubIdType == 'doi') {
+            return $this->getDoi();
+        } else {
+            return $this->getData('pub-id::' . $pubIdType);
+        }
     }
 
     /**
@@ -334,7 +356,22 @@ class Issue extends \PKP\core\DataObject
      */
     public function setStoredPubId($pubIdType, $pubId)
     {
-        return $this->setData('pub-id::' . $pubIdType, $pubId);
+        if ($pubIdType == 'doi') {
+            if ($doiObject = $this->getData('doiObject')) {
+                Repo::doi()->edit($doiObject, ['doi' => $pubId]);
+            } else {
+                $newDoiObject = Repo::doi()->newDataObject(
+                    [
+                        'doi' => $pubId,
+                        'contextId' => $this->getJournalId()
+                    ]
+                );
+                $doiId = Repo::doi()->add($newDoiObject);
+                Repo::issue()->edit($this, ['doiId' => $doiId]);
+            }
+        } else {
+            $this->setData('pub-id::' . $pubIdType, $pubId);
+        }
     }
 
     /**
@@ -650,6 +687,21 @@ class Issue extends \PKP\core\DataObject
     {
         $description = $this->getLocalizedDescription();
         return !empty($description);
+    }
+
+    /**
+     * Checks whether issue had DOI assigned to it
+     *
+     */
+    public function hasDoi(): bool
+    {
+        $retVal = false;
+
+        if ($this->getData('doiObject')) {
+            $retVal = true;
+        }
+
+        return $retVal;
     }
 
     /**

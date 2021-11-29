@@ -78,7 +78,7 @@ class ResolverPlugin extends GatewayPlugin
         switch ($scheme) {
             case 'doi':
                 $doi = implode('/', $args);
-                $article = Repo::submission()->getByPubId('doi', $doi, $request->getJournal());
+                $article = Repo::submission()->getByDoi($doi, $request->getJournal()->getId());
                 if ($article) {
                     $request->redirect(null, 'article', 'view', $article->getBestId());
                 }

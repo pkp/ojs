@@ -45,7 +45,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "Awalan DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) dan dalam format 10.xxxx (contoh 10.1234):"
+msgstr "Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) dan dalam format 10.xxxx (contoh 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "Awalan DOI wajib dan harus format 10.xxxx."

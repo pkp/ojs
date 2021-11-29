@@ -20,6 +20,9 @@ msgstr "This plugin enables the assignment of the Digital Object Identifiers to 
 msgid "plugins.pubIds.doi.readerDisplayName"
 msgstr "DOI"
 
+msgid "plugins.pubIds.doi.manager.displayName"
+msgstr "DOIs"
+
 msgid "plugins.pubIds.doi.manager.settings.description"
 msgstr "Please configure the DOI plugin to be able to manage and use DOIs in OJS:"
 
@@ -107,6 +110,15 @@ msgstr "Assign DOIs to all published journal objects that have not been assigned
 msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Are you sure you wish to assign DOIs to all published objects that have not been assigned DOIs?"
 
+msgid "plugins.pubIds.doi.manager.settings.registrationAgency"
+msgstr "Registration Agency"
+
+msgid "plugins.pubIds.doi.manager.settings.registrationAgency.description"
+msgstr "Please select the registration agency you would like to use when depositing DOIs."
+
+msgid "plugins.pubIds.doi.manager.settings.registrationAgency.none"
+msgstr "None"
+
 msgid "plugins.pubIds.doi.editor.doi"
 msgstr "DOI"
 
@@ -171,7 +183,10 @@ msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
 msgstr "The DOI {$pubId} cannot be assigned because it contains an unresolved pattern."
 
 msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
-msgstr "The DOI {$pubId} has been assigned."
+msgstr "The DOI {$pubId} has been assigned. To edit the DOI, visit the <a href=\"{$doiManagementLink}\">DOI Management page</a>."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.toBeAssigned"
+msgstr "The DOI {$pubId} will be assigned on publication."
 
 msgid "plugins.pubIds.doi.editor.missingPrefix"
 msgstr "The DOI must begin with {$doiPrefix}."
@@ -187,3 +202,24 @@ msgstr "Galley: {$galleyLabel}"
 
 msgid "plugins.pubIds.doi.editor.preview.objects"
 msgstr "Item"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "The galley that you requested is not part of this publication."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Only DOIs can be edited after a publication/galley has been published"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "The submitted DOI is not valid"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Only DOIs can be edited after a publication has been published"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "The issues you requested were not found"
+
+msgid "plugins.pubIds.doi.manager.articleDois"
+msgstr "Article DOIs"
+
+msgid "plugins.pubIds.doi.manager.issueDois"
+msgstr "Issue DOIs"

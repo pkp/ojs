@@ -50,6 +50,15 @@ msgstr "Homepage Header"
 msgid "common.journalHomepageImage.altText"
 msgstr "Journal Homepage Image"
 
+msgid "doi.submit.noContext"
+msgstr "This submission's journal could not be found."
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Items with DOIs"
+
+msgid "doi.manager.settings.publications"
+msgstr "Articles"
+
 msgid "navigation.journalHelp"
 msgstr "Journal Help"
 

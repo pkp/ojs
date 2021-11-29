@@ -48,7 +48,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "Prefix DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "Prefix DOI je přidělován registračními agenturami (např. <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) a je ve formátu 10.xxxx (např. 10.1234):"
+msgstr "Prefix DOI je přidělován registračními agenturami (např. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) a je ve formátu 10.xxxx (např. 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "Prefix DOI je povinný a musí být ve formátu 10.xxxx."

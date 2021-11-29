@@ -7,108 +7,101 @@
  *
  */
 
-describe('DOI/Crossref tests', function() {
+describe('DOI tests', function() {
 	const issueDescription = "Vol. 1 No. 2 (2014)";
-	const submissionId = 1;
+	const issueId = 1;
+	const submissionId = 17;
+	const publicationId = 18;
+	const galleyId = 3;
 
 	it('Check DOI Configuration', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
-		cy.get('a:contains("Website")').click();
+		cy.get('a:contains("Distribution")').click();
 
-		cy.waitJQuery();
-		cy.get('button#plugins-button').click();
+		cy.get('button#dois-button').click();
 
 		// DOI is or can be enabled
-		cy.get('input[id^=select-cell-doipubidplugin]').check();
-		cy.get('input[id^=select-cell-doipubidplugin]').should('be.checked');
-
-		// Go to DOI settings
-		cy.get('tr#component-grid-settings-plugins-settingsplugingrid-category-pubIds-row-doipubidplugin a.show_extras').click();
-		cy.get('a[id^=component-grid-settings-plugins-settingsplugingrid-category-pubIds-row-doipubidplugin-settings-button]').click();
+		cy.get('input[name="enableDois"]').check();
+		cy.get('input[name="enableDois"]').should('be.checked');
 
 		// Check all content
-		cy.get('input#enableIssueDoi').check();
-		cy.get('input#enablePublicationDoi').check();
-		cy.get('input#enableRepresentationDoi').check();
-		
+		cy.get('input[name="enabledDoiTypes"][value="publication"]').check();
+		cy.get('input[name="enabledDoiTypes"][value="issue"]').check();
+		cy.get('input[name="enabledDoiTypes"][value="representation"]').check();
+
 		// Declare DOI Prefix
 		cy.get('input[name=doiPrefix]').focus().clear().type('10.1234');
 
+		// Select automatic DOI creation time
+		cy.get('select[name="doiCreationTime"]').select('copyEditCreationTime');
+
+		// Select DOI suffix pattern type
+		cy.get('input[name="customDoiSuffixType"][value="issueBased"]')
+
 		// Save
-		cy.get('form#doiSettingsForm button:contains("Save")').click();
-		cy.get('div:contains("Your changes have been saved.")');
+		cy.get('#doisSetup button').contains('Save').click();
+		cy.get('#doisSetup [role="status"]').contains('Saved');
 	});
 
-	it('Check Issue DOI Configuration', function() {
+	it('Check Issue DOI Assignment', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
-		cy.get('a:contains("Issues")').click();
+		cy.get('a:contains("##plugins.pubIds.doi.manager.displayName##")').click(); // TODO: Change to DOIs
+		cy.get('button#issue-doi-management-button').click();
 
-		cy.waitJQuery();
-		cy.get('button#back-button').click();
+		// Select the first issue
+		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
 
-		// Select an issue
-		cy.get('a:contains("' + issueDescription + '")').click();
-		cy.get('div#editIssueTabs a').contains('Identifiers').click();
+		// Select assign DOIs from bulk actions
+		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
+		cy.get('button#openBulkAssign').click();
 
-		// Check Save DOI
-		cy.get('form#publicIdentifiersForm button:contains("Save")').click();
-		cy.waitJQuery();
-		
-		// Go to see if the DOI is assigned
-		cy.get('a:contains("' + issueDescription + '")').click();
-		cy.get('div#editIssueTabs a').contains('Identifiers').click();
+		// Confirm assignment
+		cy.get('div[data-modal="bulkActions"] button:contains("Assign DOIs")').click();
+		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout:20000});
 
-		cy.get('fieldset#pubIdDOIFormArea p').contains('The DOI is assigned to this issue.');
+		cy.get(`#list-item-issue-${issueId} button.expander`).click();
+		cy.get(`input#${issueId}-issue`).should('have.value', '10.9876/jpkjpk.v1i2');
 	});
 
-	it('Check Issue DOI Visible', function() {
-		cy.visit('');
-		cy.get('a:contains("Archives")').click();
-		cy.get('a:contains("' + issueDescription + '")').click();
-		cy.get('div.pub_id').should('have.class', 'doi');
-		cy.get('div.doi span.id a').contains('https://doi.org/10.1234/')
-	});
-
-	it('Check Submission DOI Configuration', function() {
+	it('Check Issue DOI visible', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
-		cy.visit('/index.php/publicknowledge/workflow/access/' + submissionId);	
-		
-		cy.get('button#publication-button').click();
-		cy.get('button#identifiers-button').click();
-		
-		cy.get('input[name="pub-id::doi"]')
-			.invoke('val')
-			.then(sometext => {
-				if (sometext == null || sometext.trim() == '') {
-					cy.get('input[name="pub-id::doi"]')
-						.parent()
-						.find('button').contains('Assign').click();
+		cy.get('a:contains("##plugins.pubIds.doi.manager.displayName##")').click(); // TODO: Change to DOIs
+		cy.get('button#issue-doi-management-button').click();
 
-					cy.get('div#identifiers')
-						.find('button:contains("Save")').click();	
-
-					cy.get('span').contains('Saved')
-				} else {
-					expect(sometext).to.contain('10.1234');
-				}
-			});
-
-		cy.visit('/index.php/publicknowledge/workflow/access/' + submissionId);	
-		cy.get('button#publication-button').click();
-
-		cy.get("body").then($body => {
-			if ($body.find("button.pkpButton:contains('Publish')").length > 0) {
-				cy.get('button.pkpButton').contains('Publish').click();
-				cy.contains('All publication requirements have been met.');
-					cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
-			}
-		});
+		// View issue with assigned DOI
+			cy.visit('');
+			cy.get('a:contains("Archives")').click();
+			cy.get('a:contains("' + issueDescription + '")').click();
+			cy.get('div.pub_id').should('have.class', 'doi');
+			cy.get('div.doi span.id a').contains('https://doi.org/10.1234/')
 	});
 
-	it('Check Submission DOI Visible', function() {
+	it('Check Publication/Galley DOI Assignments', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("##plugins.pubIds.doi.manager.displayName##")').click(); // TODO: Change to DOIs
+		cy.get('button#article-doi-management-button').click();
+
+		// Select the first article
+		cy.get(`input[name="submission[]"][value=${submissionId}]`).check()
+
+		// Select assign DOIs from bulk actions
+		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
+		cy.get('button#openBulkAssign').click();
+
+		// Confirm assignment
+		cy.get('div[data-modal="bulkActions"] button:contains("Assign DOIs")').click();
+		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout:20000});
+
+		cy.get(`#list-item-submission-${submissionId} button.expander`).click();
+		cy.get(`input#${submissionId}-article-${publicationId}`).should('have.value', '10.1234/jpkjpk.v1i2.17');
+		cy.get(`input#${submissionId}-galley-${galleyId}`).should('have.value', '10.1234/jpkjpk.v1i2.17.g3');
+	});
+
+	it('Check Publication/Galley DOI visible', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		// Select a submission
@@ -118,27 +111,106 @@ describe('DOI/Crossref tests', function() {
 			.find('span.value').contains('https://doi.org/10.1234/');
 	});
 
-	it('Check Submission Crossref Export', function() {
+	it('Check Issue Marked Registered', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
-		cy.visit('/index.php/publicknowledge/management/importexport/plugin/CrossRefExportPlugin');
+		cy.get('a:contains("##plugins.pubIds.doi.manager.displayName##")').click(); // TODO: Change to DOIs
+		cy.get('button#issue-doi-management-button').click();
+
+		// Select the first issue
+		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
+
+		// Select mark registered from bulk actions
+		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
+		cy.get('button#openBulkMarkRegistered').click();
+
+		// Confirm assignment
+		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs registered")').click();
+		cy.get('.app__notifications').contains('Items successfully marked registered', {timeout:20000});
+
+		cy.get(`#list-item-issue-${issueId} .pkpBadge`).contains('Registered');
+	});
+
+	it('Check Publication/Galley Marked Registered', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("##plugins.pubIds.doi.manager.displayName##")').click(); // TODO: Change to DOIs
+		cy.get('button#article-doi-management-button').click();
+
+		// Select the first article
+		cy.get(`input[name="submission[]"][value=${submissionId}]`).check()
+
+		// Select mark registered from bulk actions
+		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
+		cy.get('button#openBulkMarkRegistered').click();
+
+		// Confirm assignment
+		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs registered")').click();
+		cy.get('.app__notifications').contains('Items successfully marked registered', {timeout:20000});
+
+		cy.get(`#list-item-submission-${submissionId} .pkpBadge`).contains('Registered');
+	});
+});
+
+describe('Crossref tests', function () {
+	const submissionId = 17;
+
+	it('Check Crossref Configuration', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("Website")').click();
+
 		cy.waitJQuery();
+		cy.get('button#plugins-button').click();
+
+		// Crossref plugin is or can be enabled
+		cy.get('input[id^=select-cell-crossrefplugin]').check();
+		cy.get('input[id^=select-cell-crossrefplugin]').should('be.checked');
+
+		// Crossref is enabled as DOI registration agency.
+		cy.get('a:contains("Distribution")').click();
+		cy.get('button#dois-button').click();
+		cy.get('button#doisRegistration-button').click()
+
+		cy.get('select#doiRegistrationSettings-registrationAgency-control').select('crossrefplugin');
+
+		// Save
+		cy.get('#doisRegistration button').contains('Save').click();
+		cy.get('#doisRegistration [role="status"]').contains('Saved');
+		cy.get('select#doiRegistrationSettings-registrationAgency-control').should('have.value', 'crossrefplugin');
+
+		// Configure Crossref settings
+		cy.get('a:contains("##plugins.pubIds.doi.manager.displayName##")').click(); // TODO: Change to DOIs
+		cy.get('button#crossref-settings-button').click();
 
 		cy.get('input[name=depositorName]').focus().clear().type('admin');
 		cy.get('input[name=depositorEmail]').focus().clear().type('pkpadmin@mailinator.com');
-
 		cy.get('form#crossrefSettingsForm button:contains("Save")').click();
 		cy.get('div:contains("Your changes have been saved.")');
-
-		cy.reload();
-
-		cy.get('a#ui-id-2').click();
-		cy.get('input#select-1').check();
-		cy.get('input#validation').check();
-		cy.get('input#onlyValidateExport').check();
-		cy.get('button#export').click();
-
-		cy.contains('Validation successful!');
 	});
-	
-})
+
+	it('Check Crossref Export', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		// Submit export submission DOI XML request
+		cy.window()
+		.then((win) => {
+			const csrfToken = win.pkp.currentUser.csrfToken;
+			cy.request({
+					url: '/index.php/publicknowledge/api/v1/dois/submissions/export',
+					method: 'POST',
+					headers: {
+						'X-Csrf-Token': csrfToken
+					},
+					body: {
+						ids: [submissionId]
+					}
+				})
+		})
+		.then((response) => {
+			expect(response.status).to.equal(200);
+			expect(response.body).to.haveOwnProperty('tempFileId');
+			expect(response.body.tempFileId).to.be.a('number');
+		});
+	});
+});

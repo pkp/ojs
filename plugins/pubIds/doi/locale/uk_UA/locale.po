@@ -49,7 +49,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "Префікс DOI"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "Префікс DOI призначається виданню реєстраційною агенцією (наприклад, <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>), його формат 10.xxxx (наприклад, 10.1234):"
+msgstr "Префікс DOI призначається виданню реєстраційною агенцією (наприклад, <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>), його формат 10.xxxx (наприклад, 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "Префікс є обов'язковим елементом DOI, він має бути у формі 10.xxxx."

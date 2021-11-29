@@ -47,7 +47,7 @@ msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
 msgstr "DOI Ön Eki"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
-msgstr "DOI Ön Ekleri kayıt ajansları (Örneğin; <a href=\"http://www.crossref.org\" target=\"_new\">CrossRef</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):"
+msgstr "DOI Ön Ekleri kayıt ajansları (Örneğin; <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):"
 
 msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
 msgstr "DOI ön eki zorunludur ve 10.xxxx biçiminde olmalıdır."

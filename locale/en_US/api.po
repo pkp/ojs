@@ -47,6 +47,33 @@ msgstr "You do not have permission to delete this journal."
 msgid "api.contexts.404.contextNotFound"
 msgstr "The journal you requested was not found."
 
+msgid "api.dois.400.contextsNotMatched"
+msgstr "The DOI you requested is not part of this journal."
+
+msgid "api.dois.404.doiNotFound"
+msgstr "The DOI you requested was not found."
+
+msgid "api.dois.400.noUnpublishedItems"
+msgstr "Unpublished items cannot be exported/deposited. Please deselect unpublished items and try again."
+
+msgid "api.dois.400.creationFailed"
+msgstr "An error occurred and the DOI object could not be created."
+
+msgid "api.dois.400.xmlExportFailed"
+msgstr "An XML validation error occurred and the XML could not be exported."
+
+msgid "api.dois.400.markRegisteredFailed"
+msgstr "An error occurred and some of the submitted items were not marked registered."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "No DOI registration agency has been configured for this journal."
+
+msgid "api.dois.404.noPubObjectIncluded"
+msgstr "No valid publication objects were included with the request."
+
+msgid "api.dois.400.depositFailed"
+msgstr "Some items were not deposited successfully. Please check the individual items for their specific error messages."
+
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "You do not have permission to move this email template to another journal."
 
