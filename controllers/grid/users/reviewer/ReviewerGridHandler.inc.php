@@ -15,8 +15,8 @@
 
 import('lib.pkp.classes.controllers.grid.users.reviewer.PKPReviewerGridHandler');
 
-use APP\log\SubmissionEventLogEntry;
 use APP\facades\Repo;
+use PKP\log\SubmissionLog;
 
 class ReviewerGridHandler extends PKPReviewerGridHandler
 {
@@ -39,7 +39,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
             $user = $request->getUser();
             AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);
-            SubmissionLog::logEvent($request, $submission, SubmissionEventLogEntry::SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
+            SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
         }
         return parent::reviewRead($args, $request);
     }
