@@ -174,8 +174,7 @@ class ArticleGalley extends Representation
     {
         $label = $this->getLabel();
         if ($this->getLocale() != Locale::getLocale()) {
-            $locales = Locale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')';
+            $label .= ' (' . Locale::getMetadata($this->getLocale())->getDisplayName() . ')';
         }
         return $label;
     }

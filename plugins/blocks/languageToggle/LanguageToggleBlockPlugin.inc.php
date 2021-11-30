@@ -13,10 +13,10 @@
  * @brief Class for language selector block plugin
  */
 
-use PKP\plugins\BlockPlugin;
-
-use PKP\session\SessionManager;
 use PKP\facades\Locale;
+use PKP\i18n\LocaleMetadata;
+use PKP\plugins\BlockPlugin;
+use PKP\session\SessionManager;
 
 class LanguageToggleBlockPlugin extends BlockPlugin
 {
@@ -76,11 +76,11 @@ class LanguageToggleBlockPlugin extends BlockPlugin
                 $locales = $site->getSupportedLocaleNames();
             }
         } else {
-            $locales = Locale::getAllLocales();
+            $locales = array_map(fn (LocaleMetadata $locale) => $locale->getDisplayName(), Locale::getLocales());
             $templateMgr->assign('languageToggleNoUser', true);
         }
 
-        if (isset($locales) && count($locales) > 1) {
+        if (!empty($locales)) {
             $templateMgr->assign('enableLanguageToggle', true);
             $templateMgr->assign('languageToggleLocales', $locales);
         }

@@ -17,8 +17,8 @@
 import('lib.pkp.pages.management.ManagementHandler');
 
 use APP\template\TemplateManager;
-
-use PKP\facades\Locale;
+use PKP\core\PKPApplication;
+use PKP\plugins\PluginRegistry;
 use PKP\security\Role;
 
 class SettingsHandler extends ManagementHandler
@@ -74,11 +74,8 @@ class SettingsHandler extends ManagementHandler
         $lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
         $clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
 
-        $supportedFormLocales = $context->getSupportedFormLocales();
-        $localeNames = Locale::getAllLocales();
-        $locales = array_map(function ($localeKey) use ($localeNames) {
-            return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
-        }, $supportedFormLocales);
+        $locales = $context->getSupportedFormLocaleNames();
+        $locales = array_map(fn (string $locale, string $name) => ['key' => $locale, 'label' => $name], array_keys($locales), $locales);
 
         $accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
         $archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
@@ -88,7 +85,7 @@ class SettingsHandler extends ManagementHandler
         // not need to be submitted. It's a dirty hack, but we can change this once
         // an API is in place for plugins and plugin settings.
         $plnPlugin = PluginRegistry::getPlugin('generic', 'plnplugin');
-        $archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', $supportedFormLocales);
+        $archivePnForm = new \PKP\components\forms\FormComponent('archivePn', 'PUT', 'dummy', $locales);
         $archivePnForm->addPage([
             'id' => 'default',
             'submitButton' => null,

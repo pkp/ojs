@@ -195,9 +195,6 @@ web_cache_hours = 1
 ; Default locale
 locale = en_US
 
-; Client output/input character set
-client_charset = utf-8
-
 ; Database connection character set
 connection_charset = utf8
 

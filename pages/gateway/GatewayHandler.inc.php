@@ -17,8 +17,9 @@ use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use Illuminate\Support\LazyCollection;
-
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
+use PKP\plugins\PluginRegistry;
 
 class GatewayHandler extends Handler
 {
@@ -110,9 +111,8 @@ class GatewayHandler extends Handler
 
             $locales = $journal->getSupportedLocaleNames();
             if (!isset($locales) || empty($locales)) {
-                $localeNames = Locale::getAllLocales();
                 $primaryLocale = Locale::getPrimaryLocale();
-                $locales = [$primaryLocale => $localeNames[$primaryLocale]];
+                $locales = [$primaryLocale => Locale::getMetadata($primaryLocale)->getDisplayName()];
             }
             $templateMgr->assign('locales', $locales);
         } else {
@@ -182,9 +182,8 @@ class GatewayHandler extends Handler
 
             $locales = $journal->getSupportedLocaleNames();
             if (!isset($locales) || empty($locales)) {
-                $localeNames = Locale::getAllLocales();
                 $primaryLocale = Locale::getPrimaryLocale();
-                $locales = [$primaryLocale => $localeNames[$primaryLocale]];
+                $locales = [$primaryLocale => Locale::getMetadata($primaryLocale)->getDisplayName()];
             }
             $templateMgr->assign('locales', $locales);
         } else {

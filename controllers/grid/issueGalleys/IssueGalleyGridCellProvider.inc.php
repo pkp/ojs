@@ -37,9 +37,7 @@ class IssueGalleyGridCellProvider extends GridCellProvider
 
         switch ($columnId) {
             case 'label': return ['label' => $issueGalley->getLabel()];
-            case 'locale':
-                $allLocales = Locale::getAllLocales();
-                return ['label' => $allLocales[$issueGalley->getLocale()]];
+            case 'locale': return ['label' => Locale::getMetadata($issueGalley->getLocale())->getDisplayName()];
             case 'publicGalleyId': return ['label' => $issueGalley->getStoredPubId('publisher-id')];
             default: assert(false); break;
         }
