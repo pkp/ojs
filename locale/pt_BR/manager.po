@@ -1,11 +1,13 @@
 # EDMILSON JOSE BOREGAS <ejsboregas@fgv.br>, 2021.
+# Flavio Chaffin <flavio.chaffin@gmail.com>, 2021.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2021-09-20 20:19+0000\n"
-"Last-Translator: EDMILSON JOSE BOREGAS <ejsboregas@fgv.br>\n"
+"PO-Revision-Date: 2021-11-22 17:39+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -707,8 +709,8 @@ msgstr "Opções Alternativas de Arquivo (LOCKSS e CLOCKSS)"
 msgid "manager.setup.lockssEnable"
 msgstr ""
 "Habilitar o LOCKSS para armazenar e distribuir o conteúdo do periódico nas "
-"bibliotecas participantes por meio de uma página LOCKSS <a href=\"$lockssUrl}"
-"\" target=\"_blank\">Manifesto do Publicador</a>."
+"bibliotecas participantes por meio de uma página LOCKSS <a href=\""
+"{$lockssUrl}\" target=\"_blank\">Manifesto do Publicador</a>."
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr "Uma licença LOCKSS aparecerá na seção Sobre a Revista sob Arquivamento: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> Licença  LOCKSS </a>"
@@ -1934,3 +1936,12 @@ msgstr "URL da página da revista"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Nome da revista"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Este e-mail é enviado automaticamente para um novo usuário quando ele se "
+"registra na revista, quando as configurações exigem que o endereço de e-mail "
+"seja validado."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validar e-mail (registro de revista)"

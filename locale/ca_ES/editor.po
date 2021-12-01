@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2020-12-01 11:47+0000\n"
+"PO-Revision-Date: 2021-10-12 12:06+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ca_ES/>\n"
@@ -454,3 +455,9 @@ msgstr "Mostrar publicació programada"
 
 msgid "issues.submissions.issueIds"
 msgstr "Assignat a un número"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"La imatge de portada que voleu eliminar coincideix amb la d'un número d'una "
+"altra revista. Assegureu-vos que esteu treballant en la revista correcta i "
+"que utilitzeu l'ID de número adequat i torneu a provar-ho."

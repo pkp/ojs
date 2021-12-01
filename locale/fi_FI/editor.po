@@ -1,9 +1,10 @@
+# Antti-Jussi Nygård <ajnyga@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2020-12-09 14:51+0000\n"
+"PO-Revision-Date: 2021-11-24 19:48+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "fi_FI/>\n"
@@ -270,10 +271,10 @@ msgid "editor.issues.pages"
 msgstr "Sivut"
 
 msgid "editor.issues.galleys"
-msgstr "Numeron julkaistavat tiedostot"
+msgstr "Tiedostot"
 
 msgid "editor.issues.galley"
-msgstr "Numeron julkaistava tiedosto"
+msgstr "Tiedosto"
 
 msgid "editor.issues.viewingGalley"
 msgstr "Numeron julkaistavan tiedoston katselu"

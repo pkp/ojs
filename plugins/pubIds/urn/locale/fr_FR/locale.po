@@ -1,9 +1,10 @@
+# Simon Mathdoc <karacaca38@outlook.fr>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-08 13:50+0000\n"
-"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
+"PO-Revision-Date: 2021-10-22 04:23+0000\n"
+"Last-Translator: Simon Mathdoc <karacaca38@outlook.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
-"fr/>\n"
+"fr_FR/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,3 +27,27 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"Le préfixe URN est la partie fixe, qui ne change jamais (exemple "
+":urn:nbn:de:0000-)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Préfixe URN"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Épreuves"
+
+#, fuzzy
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Articles"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Numéros"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Sélectionner les objets publiés auxquels des URN seront attribués :"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Veuillez choisir les objets auxquels des URN doivent être attribués."

@@ -1,7 +1,7 @@
 # Real Academia Galega <reacagal@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-25 12:42+0000\n"
+"PO-Revision-Date: 2021-10-13 15:26+0000\n"
 "Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "gl_ES/>\n"
@@ -2158,3 +2158,30 @@ msgstr ""
 "sistema. É posible que se requira unha configuración adicional do servidor "
 "para que o programa admita esta función, tal como se indica na documentación "
 "de OJS."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nome do sitio web cando se aloxa máis dunha revista"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "A moeda do importe do pagamento, por exemplo EUR"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Importe do pagamento"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Nome do tipo de pagamento"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "O enderezo de correo electrónico do contacto principal da revista"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "A sinatura para os correos electrónicos automatizados da revista"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "O nome do contacto principal da revista"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL da páxina de inicio da revista"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "O nome da revista"

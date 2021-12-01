@@ -1,0 +1,64 @@
+# Huang Feilong <hfl@nominsang.org>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-11-04 14:06+0000\n"
+"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
+"ojs/api/zh_CN/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "您无权删除此期刊。"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "您不能将此备用阶段文件与此文件关联。"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "您请求的出版物不是本稿件的一部分。"
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "您请求的出版物不属于该期刊。"
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "您选择的付款方式未支持。"
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "您无权将此电子邮件模板移至其他期刊。"
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "未找到您请求的期刊。"
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "您无权编辑此期刊。"
+
+msgid "api.contexts.403.requiresContext"
+msgstr "您无法在站点范围的 API 编辑此期刊。"
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "除非您向期刊的 API 或站点范围的 API 提出请求，否则您无法查看或编辑此期刊。"
+
+msgid "api.contexts.403.notAllowed"
+msgstr "您无权查看此期刊。"
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "您只能查看已公开的期刊。"
+
+msgid "api.submissions.403.contextRequired"
+msgstr "要提交或编辑稿件，您必须向期刊的 API 端点发送请求。"
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "您无权查看未发布的期刊。"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "您不能更改提交的稿件。"
+
+msgid "api.emails.403.disabled"
+msgstr "此期刊尚未启用电子邮件通知功能。"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "您请求的公告不属于本期刊。"

@@ -1,0 +1,42 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-paypal/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"Ralat transaksi berlaku. Sila hubungi pengurus jurnal untuk maklumat lebih "
+"lanjut."
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Rahsia"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "ID Pelanggan"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Nama Akaun"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Mod Uji"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Tetapan Pembayaran Paypal"
+
+msgid "plugins.paymethod.paypal"
+msgstr "Bayaran Yuran Paypal"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "Pembayaran akan diproses menggunakan perkhidmatan PayPal."
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Bayaran Yuran Paypal"
