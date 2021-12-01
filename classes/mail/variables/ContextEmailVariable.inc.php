@@ -42,7 +42,7 @@ class ContextEmailVariable extends PKPContextEmailVariable
     public function values(string $locale): array
     {
         return array_merge(
-            parent::description(),
+            parent::values($locale),
             [
                 self::CONTEXT_NAME => $this->context->getLocalizedData('name', $locale),
                 self::CONTEXT_URL => $this->getContextUrl(),
