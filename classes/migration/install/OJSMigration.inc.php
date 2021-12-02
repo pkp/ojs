@@ -120,7 +120,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->string('locale', 14)->nullable();
             $table->bigInteger('issue_id');
             $table->bigInteger('file_id');
-            $table->string('label', 32)->nullable();
+            $table->string('label', 255)->nullable();
             $table->float('seq', 8, 2)->default(0);
             $table->string('url_path', 64)->nullable();
             $table->index(['issue_id'], 'issue_galleys_issue_id');
