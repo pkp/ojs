@@ -75,10 +75,10 @@ msgstr ""
 "ないでください。"
 
 msgid "galley.publicationNotFound"
-msgstr "このガレ刷りの出版物は見つかりませんでした。"
+msgstr "このゲラ刷りの出版物は見つかりませんでした。"
 
 msgid "galley.editPublishedDisabled"
-msgstr "本書のガレ刷りは既刊のため、編集できません。"
+msgstr "本書のゲラ刷りは既刊のため、編集できません。"
 
 msgid "catalog.category.heading"
 msgstr "全項目"
@@ -165,15 +165,15 @@ msgid "submission.submit.titleAndSummary"
 msgstr "タイトルと要旨"
 
 msgid "grid.action.pageProofApproved"
-msgstr "本校正はガレ刷りのための承認を得ました。"
+msgstr "本校正はゲラ刷りのための承認を得ました。"
 
 msgid "grid.action.approveProof"
-msgstr "ガレ刷りのために、この校正を承認する。"
+msgstr "ゲラ刷りのために、この校正を承認する。"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
 "レイアウト編集者は、出版のために準備された制作準備済みのファイルをここにアップロードします。「監査役の任命」を使用して、出版前に承認のためにアップロードさ"
-"れた改訂済みのファイルを使って、著者やその他の人がガレ刷りの校正を行うように指定します。"
+"れた改訂済みのファイルを使って、著者やその他の人がゲラ刷りの校正を行うように指定します。"
 
 msgid "submission.galleyFiles"
 msgstr "ゲラファイル"
