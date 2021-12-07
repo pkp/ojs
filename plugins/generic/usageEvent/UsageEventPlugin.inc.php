@@ -15,6 +15,7 @@
 
 import('lib.pkp.plugins.generic.usageEvent.PKPUsageEventPlugin');
 
+use APP\facades\Repo;
 use APP\submission\Submission;
 
 class UsageEventPlugin extends PKPUsageEventPlugin
@@ -153,7 +154,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin
                     $canonicalUrlParams = [$article->getId(), $galley->getId(), $submissionFileId];
                     $idParams = ['a' . $article->getId(), 'g' . $galley->getId(), 'f' . $submissionFileId];
                     $downloadSuccess = false;
-                    $pubObject = Services::get('submissionFile')->get($submissionFileId);
+                    $pubObject = Repo::submissionFiles()->get($submissionFileId);
                     break;
                 default:
                     // Why are we called from an unknown hook?
