@@ -1110,7 +1110,7 @@ msgstr ""
 "{$subscriptionContactSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
-msgstr "読期間終了（最終案内）"
+msgstr "購読期間終了（最終案内）"
 
 msgid "emails.subscriptionAfterExpiry.description"
 msgstr "このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"

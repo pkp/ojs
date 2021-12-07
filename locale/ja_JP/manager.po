@@ -1,15 +1,1796 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 01:41+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
-"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"ja_JP/>\n"
+"Last-Translator: Takashi Imagire <imagire@gmail.com>\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.publication.submissionStage"
+msgstr "投稿"
+
+msgid "manager.publication.reviewStage"
+msgstr "査読"
+
+msgid "manager.publication.productionStage"
+msgstr "制作"
+
+msgid "manager.website"
+msgstr "ウェブサイト"
+
+msgid "manager.workflow"
+msgstr "ワークフロー"
+
+msgid "manager.distribution"
+msgstr "流通"
+
+msgid "manager.statistics.reports.description"
+msgstr "このシステムでは、一定期間のサイト利用や投稿に関連する詳細を追跡するレポートが生成されます。レポートはCSV形式で作成されるため、閲覧には表計算ソフトが必要となります。"
+
+msgid "manager.statistics.reports.generateReport"
+msgstr "カスタムレポートの生成"
+
+msgid "manager.statistics.reports"
+msgstr "レポート"
+
+msgid "manager.roles"
+msgstr "ロール"
+
+msgid "manager.siteAccessOptions.siteAccessOptions"
+msgstr "サイトアクセスオプション"
+
+msgid "manager.statistics.statistics.registeredUsers"
+msgstr "登録ユーザー"
+
+msgid "manager.users"
+msgstr "ユーザー"
+
+msgid "manager.setup.publishingDescription"
+msgstr "これらの詳細は、第三者のアーカイブ機関に提供されるメタデータに含まれることがあります。"
+
+msgid "manager.setup.publishing"
+msgstr "出版の詳細"
+
+msgid "manager.setup.privacyStatement"
+msgstr "個人情報の取り扱いについて"
+
+msgid "manager.distribution.access"
+msgstr "アクセス"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "記事のデフォルトの著作権日をどのように選択するかを選択します。このデフォルトは、ケースバイケースで上書きすることができます。\"publish as you go\" の場合は、その巻号の発行日は使用しません。"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "その巻号の発行日を使う"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "記事の公開日を使う"
+
+msgid "manager.distribution.publication"
+msgstr "出版物"
+
+msgid "manager.distribution.publishingMode"
+msgstr "出版モード"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS はジャーナルのコンテンツをオンラインで公開するために使用されるものではありません。"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "このジャーナルは、その内容をオープンアクセスで提供します。"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "このジャーナルは、コンテンツの一部または全部にアクセスするためには購読料が必要となります。"
+
+msgid "manager.website.archiving"
+msgstr "アーカイブする"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "このジャーナルのすべてのメールテンプレートをリセットしてよろしいですか？これまでに行ったカスタマイズは失われてしまいます。"
+
+msgid "manager.files.note"
+msgstr "注：「ファイルブラウザ」は、ジャーナルに関連するファイルやディレクトリを直接表示・操作できる高度な機能です。"
+
+msgid "manager.journalManagement"
+msgstr "ジャーナル管理"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "投稿物"
+
+msgid "manager.language.forms"
+msgstr "フォーム"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "これにより、このロケールに固有のジャーナル設定がすべて置き換えられます。"
+
+msgid "manager.languages.languageInstructions"
+msgstr "OJSはいくつかのサポートされた言語のいずれかでユーザーに提供することができます。また、OJSは多言語システムとしても動作し、各ページで言語を切り替えたり、特定のデータを複数の言語で入力したりすることができます。<br /><br/>OJSがサポートする言語が以下に記載されていない場合は、サイト管理者に頼んで、サイト管理インターフェイスから言語をインストールしてください。新しい言語のサポートを追加する手順は、OJSのドキュメントを参照してください。"
+
+msgid "manager.languages.noneAvailable"
+msgstr "申し訳ありませんが、追加の言語はありません。このジャーナルで追加の言語を使用したい場合は、サイト管理者にお問い合わせください。"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "これがジャーナル・サイトのデフォルト言語になります。"
+
+msgid "manager.managementPages"
+msgstr "管理ページ"
+
+msgid "manager.payment.action"
+msgstr "アクション"
+
+msgid "manager.payment.addPayment"
+msgstr "支払いの追加"
+
+msgid "manager.payment.amount"
+msgstr "金額"
+
+msgid "manager.payment.authorFees"
+msgstr "著者の料金"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "著者の処理料金を有効にするために、以下の料金を入力してください。"
+
+msgid "manager.payment.currencymessage"
+msgstr "OJSはいかなる通貨変換も行いません。 購読料の支払いを受け付ける場合は、購読料の通貨がここで指定したものと一致するようにする必要があります。"
+
+msgid "manager.payment.description"
+msgstr "概要"
+
+msgid "manager.payment.details"
+msgstr "詳細"
+
+msgid "manager.payment.editSubscription"
+msgstr "購読の編集"
+
+msgid "manager.payment.enable"
+msgstr "有効"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "料金支払い方法"
+
+msgid "manager.payment.form.numeric"
+msgstr "すべてのコストは正の数値でなければなりません（小数点以下も可）。"
+
+msgid "manager.payment.generalFees"
+msgstr "一般料金"
+
+#, fuzzy
+msgid "manager.payment.generalFeesDescription"
+msgstr "アソシエーションメンバーシップは「ジャーナルについて」の「ポリシー」に表示されます。"
+
+msgid "manager.payment.generalOptions"
+msgstr "一般的なオプション"
+
+msgid "manager.payment.noPayments"
+msgstr "支払いなし"
+
+msgid "manager.payment.notFound"
+msgstr "見つかりません"
+
+msgid "manager.payment.options"
+msgstr "オプション"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "これにより、購読料の支払いが有効になります。購読料の種類、コスト、期間、および購読料はジャーナル (購読) マネージャーで管理されます。"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "この購読を削除してよろしいですか？"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "このジャーナルの支払いが可能になります。なお、支払いにはログインが必要となります。"
+
+msgid "manager.payment.options.fee"
+msgstr "料金"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "料金説明"
+
+msgid "manager.payment.options.feeName"
+msgstr "料金名称"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "アソシエーションメンバーシップ"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "発行物や記事のPDF版へのアクセスのみ制限します。"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "記事作成料"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Purchase Article"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "記事の購入"
+
+msgid "manager.payment.options.text"
+msgstr "決済方法の説明"
+
+msgid "manager.payment.paymentId"
+msgstr "支払ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "支払方法"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "この画面では、以下の支払方法プラグインのいずれかを設定できます。"
+
+msgid "manager.payment.paymentMethods"
+msgstr "料金の支払い方法"
+
+msgid "manager.payment.paymentType"
+msgstr "支払タイプ"
+
+msgid "manager.payment.readerFees"
+msgstr "読者の料金"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "選択されたオプションは、その説明と料金（以下で編集可能）とともに、「ポリシー」の「ジャーナルについて」に表示され、支払いが必要な箇所にも表示されます。"
+
+msgid "manager.payment.records"
+msgstr "記録"
+
+msgid "manager.paymentTypes"
+msgstr "支払タイプ"
+
+msgid "manager.payment.userName"
+msgstr "支払ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "このジャーナルに登録されているユーザー"
+
+msgid "manager.people.allJournals"
+msgstr "全ジャーナル"
+
+msgid "manager.people.allSiteUsers"
+msgstr "本サイトのユーザーを本誌に登録する"
+
+msgid "manager.people.showNoRole"
+msgstr "ロールを持たないユーザーの表示"
+
+msgid "manager.people.allUsers"
+msgstr "すべての登録ユーザー"
+
+msgid "manager.people.confirmRemove"
+msgstr "このユーザーをこのジャーナルから削除しますか？このアクションでは、このジャーナル内のすべてのロールからユーザーの登録が解除されます。"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "テンプレートの選択"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "既存のユーザーを登録する"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "ジャーナル付き"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "別のユーザーアカウントに統合するユーザー（複数可）を選択します（例：誰かが2つのユーザーアカウントを持っている場合など）。最初に選択したアカウントは削除され、投稿や査読割り当てなどはすべて2番目のアカウントに帰属します。"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "前のユーザーの著者権限や査読者アサインなどを帰属させるユーザーを選択します。"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} 登録"
+
+msgid "manager.people.syncUserDescription"
+msgstr "登録同期では、指定されたジャーナルで指定されたロールに登録されているすべてのユーザーを、このジャーナルで同じロールに登録します。この機能により、ジャーナル間で共通のユーザー・セット（査読者など）を同期させることができます。"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "アブストラクトは不要"
+
+msgid "manager.section.noSectionEditors"
+msgstr "まだセクションエディターはいません。まず、「管理」→「設定」→「ユーザー＆役割」で、少なくとも1人のユーザーにこの役割を追加してください。"
+
+msgid "manager.sections.assigned"
+msgstr "このセクションの編集者"
+
+msgid "manager.sections.confirmDelete"
+msgstr "このセクションを永久に削除してよろしいですか？"
+
+msgid "manager.sections.alertDelete"
+msgstr "このセクションを削除する前に、このセクションに投稿された記事を他のセクションに移動する必要があります。"
+
+msgid "manager.sections.create"
+msgstr "セクションの作成"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr "このセクションにセクション編集者を追加すると、投稿が自動的にセクション編集者に割り当てられます。(セクション編集者を追加しない場合は、投稿後に手動で割り当てることができます）。セクション編集者が追加されると、このセクションへの投稿のREVIEW（査読）やEDITING（コピー、レイアウト、校正）を監督するように自動的に割り当てられます。セクション編集者は、ジャーナル管理のロールでセクション編集者をクリックして作成します。"
+
+msgid "manager.sections.editorRestriction"
+msgstr "アイテムの投稿は、編集者およびセクション編集者のみが行うことができます。"
+
+msgid "manager.sections.editors"
+msgstr "セクション編集者"
+
+#, fuzzy
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"少なくとも1つのセクションがアクティブになっている必要があります。"
+"このジャーナルへのすべての投稿を無効にするには、ワークフロー設定をご覧ください。"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "セクションには略式のタイトルが必要です。"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "各セクションエディターの割り当てには、少なくとも1つのチェックボックスがチェックされていることを確認してください。"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "有効なレビューフォームが選択されていることを確認してください。"
+
+msgid "manager.sections.form.titleRequired"
+msgstr "セクションにはタイトルが必要です。"
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "発行物の目次からセクションアイテムの著者名を省略する。"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "巻号の目次から、このセクションのタイトルを削除します。"
+
+msgid "manager.sections.identifyType"
+msgstr "このセクションに掲載されているアイテムを、次のように特定する："
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(例えば、\"ピアレビュー原稿\", \"非査読のブックレビュー\", \"招待記事\" など)"
+
+msgid "manager.sections.indexed"
+msgstr "インデックス済み"
+
+msgid "manager.sections.noneCreated"
+msgstr "セクションが作成されていません。"
+
+msgid "manager.sections.open"
+msgstr "オープンサブミッション"
+
+msgid "manager.sections.policy"
+msgstr "セクションポリシー"
+
+msgid "manager.sections.readingTools"
+msgstr "リーディングツール"
+
+msgid "manager.sections.reviewed"
+msgstr "査読付き"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "ジャーナルの索引には掲載されません。"
+
+msgid "manager.sections.submissionReview"
+msgstr "査読されません"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "ジャーナルのこのセクションに投稿されたもの"
+
+msgid "manager.sections.unassigned"
+msgstr "セクションエディターの募集"
+
+msgid "manager.sections.wordCount"
+msgstr "ワード数"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "このセクションのアブストラクトの単語数の制限（制限なしの場合は0）"
+
+msgid "manager.setup"
+msgstr "ジャーナル設定"
+
+msgid "manager.setup.masthead"
+msgstr "マストヘッド"
+
+msgid "manager.setup.editorialTeam"
+msgstr "編集委員会"
+
+msgid "manager.setup.homepageContent"
+msgstr "ジャーナルのホームページのコンテンツ"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "ジャーナルのホームページは、デフォルトではナビゲーションリンクで構成されています。以下のオプションを使用して、ホームページのコンテンツを追加することができ、順番に表示されます。"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "ジャーナルスタイルシート"
+
+msgid "manager.setup.contextName"
+msgstr "ジャーナル名"
+
+msgid "manager.setup.pageHeader"
+msgstr "ジャーナルページヘッダー"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "コンテンツ"
+
+msgid "manager.setup.addAboutItem"
+msgstr "アバウトアイテムを追加"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "チェックリストアイテムを追加"
+
+msgid "manager.setup.addItem"
+msgstr "アイテムを追加"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"ジャーナルについて\"に掲載されるアイテムを追加"
+
+msgid "manager.setup.addNavItem"
+msgstr "アイテムを追加"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "新しいデータベースリンクを追加"
+
+msgid "manager.setup.addSponsor"
+msgstr "スポンサー組織の追加"
+
+msgid "manager.setup.alternateHeader"
+msgstr "代替ヘッダー"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "また、タイトルやロゴの代わりに、ヘッダーのHTMLバージョンを下のテキストボックスに挿入することもできます。必要のない場合は、テキストボックスを空白にしてください。"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "導入"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "アナウンスページに表示したい情報を入力してください。"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(ジャーナルについてに掲載されます。) "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "投稿する著者に、投稿時に競合する利益（CI）に関する声明を提出するよう求める。"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "査読者が提出する各ピアレビューにCIステートメントを提出することを義務付ける。"
+
+msgid "manager.setup.history"
+msgstr "ジャーナルの歴史"
+
+msgid "manager.setup.historyDescription"
+msgstr "このテキストは、ジャーナルウェブサイトの \"アバウト\"セクションに表示され、タイトルや編集委員会、その他ジャーナルの出版履歴に関連する項目の変更を説明するために使用することができます。"
+
+msgid "manager.setup.currentIssue"
+msgstr "最新巻号"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "ステップ 5. 見た目のカスタマイズ"
+
+msgid "manager.setup.details"
+msgstr "詳細"
+
+msgid "manager.setup.details.description"
+msgstr "ジャーナル名、ISSN、連絡先、スポンサー、検索エンジンなど。"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "雑誌管理者がすべてのユーザーアカウントを登録します。編集者やセクション編集者は、査読者のユーザーアカウントを登録することができます。"
+
+msgid "manager.setup.discipline"
+msgstr "学問分野とサブ分野"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "ジャーナルが分野の垣根を越えている場合や、著者が複数の分野の原稿を提出する場合に有効です。"
+
+msgid "manager.setup.disciplineExamples"
+msgstr "(例えば、歴史、教育、社会学、心理学、カルチュラル・スタディーズ、法学)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "このジャーナルに関連する学術分野の例を示してください。"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "現行巻号の目次を追加する（ある場合）。"
+
+msgid "manager.setup.editorDecision"
+msgstr "編集方針"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "バウンスアドレス"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "不達のメールは、このアドレスにエラーメッセージがだされます。"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr "バウンスアドレスに不達メールを送信するためには、サイト管理者がサイト設定ファイルで<code>allow_envelope_sender</code>オプションを有効にする必要があります。OJSのドキュメントに示されているように、サーバーの設定が必要な場合もあります。"
+
+msgid "manager.setup.emails"
+msgstr "メールアドレスの識別"
+
+msgid "manager.setup.emailSignature"
+msgstr "署名"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "システムがジャーナルに代わって送信する準備された電子メールには、末尾に以下の署名が追加されます。"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "アナウンスの有効化"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "ジャーナルのニュースやイベントを読者に通知するために、お知らせを発行することがあります。掲載されたお知らせは、お知らせページに掲載されます。"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "ホームページに表示"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "トップページに表示するお知らせの数です。何も表示しない場合は、この項目を空にします。"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "訪問者はジャーナルにユーザーアカウントを登録することができます。"
+
+msgid "manager.setup.focusAndScope"
+msgstr "対象と範囲"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "著者、読者、図書館員に対して、ジャーナルが発行する論文などの範囲を説明する。"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "著者が論文の索引を作るために"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr "OJSはメータデータハーベスティングの<a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> プロトコルに準拠しており、これは世界規模で電子研究資源へのインデックス付きアクセスを提供するための新たな標準となっています。著者は類似のテンプレートを使用して投稿用のメタデータを提供します。雑誌管理者は，索引のためのカテゴリーを選択し，著者に関連する例を提示して，索引付けを支援する必要があります。"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "指定されたISSNは有効ではありません。"
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "主たる連絡先の電子メールは必須です。"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "主たる連絡先の氏名は必須です。"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "ジャーナルの頭字語は必要です。"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "ジャーナル名は必要です。"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "投稿ごとの査読者数が必要です。"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "サポートメールが必要です。"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "サポート名は必須です。"
+
+msgid "manager.setup.generalInformation"
+msgstr "基本情報"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "ステップ1. ディテールにこだわる"
+
+msgid "manager.setup.guidelines"
+msgstr "ガイドライン"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "ステップ3. 投稿の手引き"
+
+msgid "manager.setup.identity"
+msgstr "ジャーナル・アイデンティティ"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "即時または遅延オープンアクセスを提供するジャーナルでは、適切な時期にすべての出版物にクリエイティブ・コモンズ・ライセンスを添付する。"
+
+msgid "manager.setup.information"
+msgstr "情報"
+
+msgid "manager.setup.information.description"
+msgstr "図書館員や著者・読者候補の方に向けたジャーナルの簡単な説明です。これらは、情報ブロックが追加されると、サイトのサイドバーで利用できるようになります。"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "著者の方へ"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "図書館員の方へ"
+
+msgid "manager.setup.information.forReaders"
+msgstr "読者の皆様へ"
+
+msgid "manager.setup.initialIssue"
+msgstr "初回発行"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "選択したフォーマットに応じて、OJSで最初に発行された号、巻、年を特定してください:"
+
+msgid "manager.setup.institution"
+msgstr "発行機関"
+
+msgid "manager.setup.itemsDescription"
+msgstr "ナビゲーションバーの項目は、ページの上部に表示される現在のセット（ホーム、アバウト、ユーザーホームなど）に追加することができます。"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "ページあたりの項目"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "別のページで後続のアイテムを表示する前に、リストに表示するアイテム（投稿、ユーザー、割り当ての編集など）の数を制限することができます。"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "ジャーナル名の略称"
+
+msgid "manager.setup.journalArchiving"
+msgstr "ジャーナルのアーカイブ"
+
+msgid "manager.setup.contextSummary"
+msgstr "ジャーナルの概要"
+
+msgid "manager.setup.contextAbout"
+msgstr "ジャーナルについて"
+
+msgid "manager.setup.contextAbout.description"
+msgstr "読者、著者、査読者が興味を持ちそうな、あなたのジャーナルに関する情報を記載してください。これには、オープンアクセスポリシー、ジャーナルの対象と範囲、著作権表示、スポンサーの開示、ジャーナルの歴史、プライバシーステートメント、LOCKSSやCLOCKSSのアーカイブシステムへの掲載などが含まれます。"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "ジャーナルのホームページのコンテンツ"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "デフォルトでは、ホームページはナビゲーションリンクで構成されています。以下のオプションの1つまたはすべてを使用して、ホームページのコンテンツを追加することができ、順番に表示されます。なお、ナビゲーションバーの「Current」リンクからは常に最新巻号にアクセスできます。"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "ジャーナルのホームページのヘッダー"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "ジャーナルのホームページのヘッダー"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "ジャーナルのタイトルとロゴのグラフィックバージョン（.gif、.jpg、または.pngファイル）をホームページ用にアップロードすることができ、テキストバージョンの代わりに表示されます。"
+
+msgid "manager.setup.contextInitials"
+msgstr "ジャーナルの頭字語"
+
+msgid "manager.setup.selectCountry"
+msgstr "ジャーナルが置かれている国、またはジャーナルや出版社の郵送先住所の国を選択してください。"
+
+msgid "manager.setup.journalLayout"
+msgstr "ジャーナルのレイアウト"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr "ここでは、ジャーナル・テーマを選択し、レイアウト・コンポーネントを選択します。ジャーナル・スタイルシートをアップロードすると、システム全体のスタイルシートやテーマ・スタイルシート（テーマが選択されている場合）のスタイルデータを上書きすることができます。"
+
+msgid "manager.setup.journalLogo"
+msgstr "ジャーナルのロゴ"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "ジャーナルのロゴ"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "ジャーナルページのフッター"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "これはジャーナルのフッターです。フッターを変更・更新するには、下のテキストボックスにHTMLコードを貼り付けてください。例としては、別のナビゲーションバーやカウンターなどが考えられます。このフッターはすべてのページに表示されます。"
+
+msgid "manager.setup.journalPolicies"
+msgstr "ステップ2. ジャーナルポリシー"
+
+msgid "manager.setup.journalSetup"
+msgstr "ジャーナルの設定"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "ジャーナルの設定が更新されました。"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "無効なジャーナルスタイルシート形式です。使用可能なフォーマットは.cssです。"
+
+msgid "manager.setup.journalTheme"
+msgstr "ジャーナルテーマ"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "ジャーナルサムネイル"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "ジャーナルのリストに使用できる、ジャーナルの小さなロゴまたは表現です。"
+
+msgid "manager.setup.contextTitle"
+msgstr "ジャーナルタイトル"
+
+msgid "manager.setup.keyInfo"
+msgstr "重要な情報"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "ジャーナルの簡単な説明と、エディター、マネージング・ディレクター、その他の編集チームのメンバーを記入してください。"
+
+msgid "manager.setup.labelName"
+msgstr "ラベル名"
+
+msgid "manager.setup.lists"
+msgstr "リスト"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PNプラグインの有効化"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKPプリザベーション・ネットワーク（PN）は、いくつかの基本的な条件を満たすOJSジャーナルに対して、無料の保存サービスを提供しています。"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "PKP PNの使用条件に同意するには、<button>plugin settings</button>を見てください。"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP プリザベーション・ネットワーク (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PKPプリザベーション・ネットワーク（PN）は、いくつかの基本的な基準を満たすOJSジャーナルに対して、無料で保存サービスを提供しています。OJS 3用のPKP PNプラグインは現在開発中で、近日中にプラグインギャラリーで公開される予定です。"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS と CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr "LOCKSSの<a href=\"{$lockssUrl}\" target=\"_blank\">出版社マニフェスト</a>ページを利用して、参加図書館での雑誌コンテンツの保存・配信を可能にする。
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr "LOCKSSライセンスは、ジャーナルについてに掲載されます：<a href="http://www.lockss.org/community/publishers-titles-gln/\">LOCKSS ライセンス</a>をご覧下さい"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS ライセンスの説明"
+
+msgid "manager.setup.lockssRegister"
+msgstr "ジャーナルを登録・キャッシュしてくれる図書館を6〜10館特定する。例えば、編集者やボードメンバーが勤務している機関や、既にLOCKSSに参加している機関などが考えられます。<a href=\"http://www.lockss.org/community/\" target=\"_blank\">the LOCKSS コミュニティ</a>をご覧ください。"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr "CLOCKSSを有効にして、CLOCKSSの<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher マニフェスト</a>ページ経由で参加図書館からジャーナルコンテンツを保存・配信する。"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr "CLOCKSSライセンスは「ジャーナルについて」に掲載されます。<a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>をご覧ください。"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS ライセンスの説明"
+
+msgid "manager.setup.clockssRegister"
+msgstr "CLOCKSSサービスへのお申し込みは、<a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSSウェブサイト</a>をご覧ください。"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "見た目"
+
+msgid "manager.setup.look.description"
+msgstr "ホームページのヘッダー、コンテンツ、ジャーナルのヘッダー、フッター、ナビゲーションバー、スタイルシート。"
+
+msgid "manager.setup.management"
+msgstr "管理"
+
+msgid "manager.setup.management.description"
+msgstr "アクセスとセキュリティ、スケジュール管理、アナウンス、コピー、レイアウト、校正。"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "基本的な編集ステップの管理"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "管理・公開設定"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "ステップ4. ジャーナルの管理"
+
+msgid "manager.setup.navigationBar"
+msgstr "ナビゲーションバー"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "ナビゲーションバーの項目を追加・削除することができます。"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "URLは、サイトへの相対パス(例えば、 \"/manager/setup\")ではなく、絶対URL(例えば、 \"http://www.example.com\")であること"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr "ラベルの値は、ローカリゼーションメッセージキー(例えば、\"manager.setup\")ではなく、リテラル文字列(例えば、 \"Journal Setup\")です"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "画像ファイルがアップロードされていません。"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "スタイルシートがアップロードされていません。"
+
+msgid "manager.setup.note"
+msgstr "注意"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>注:</strong> 投稿確認メールは現在無効になっています。この機能を使用するには、「メール」の中の\"投稿 応答\"メールを有効にしてください。"
+
+msgid "manager.setup.numPageLinks"
+msgstr "ページリンク"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "リスト内の後続ページに表示するリンクの数を制限する。"
+
+msgid "manager.setup.onlineIssn"
+msgstr "オンライン ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "ページ番号オプション"
+
+msgid "manager.setup.policies"
+msgstr "ポリシー"
+
+msgid "manager.setup.policies.description"
+msgstr "フォーカス、ピアレビュー、セクション、プライバシー、セキュリティ、および追加の項目について。"
+
+msgid "manager.setup.printIssn"
+msgstr "ISSNの印刷"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "校正手順"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr "校正指示書は、投稿編集の段階で、校正者、著者、レイアウト編集者、セクション編集者が利用できるようになります。以下はHTML形式のデフォルトの指示書で、雑誌編集者が任意の時点で編集または置換することができます（HTML形式またはプレーンテキスト）。"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "出版スケジュール"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr "ジャーナルアイテムは、巻号の一部として目次付きでまとめて出版できます。また、個々のアイテムは準備が整い次第、\"現在\"のボリュームの目次を付与して発行することも可能です。ジャーナルについてで、本誌が使用するシステムと発行頻度の予定について読者に説明します。"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "出版のスケジュール"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "ジャーナルコンテンツの識別"
+
+msgid "manager.setup.publisher"
+msgstr "出版社"
+
+msgid "manager.setup.referenceLinking"
+msgstr "参考リンク集"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "オープンアクセスコンテンツの閲覧には、ユーザー登録とログインが必要です。"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "ジャーナルサイトの閲覧にはユーザー登録とログインが必要です。"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "査読ガイドライン"
+
+msgid "manager.setup.reviewOptions"
+msgstr "査読オプション"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "自動メールリマインダー"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr "自動化された電子メールによるリマインダーを送信するには、サイト管理者がOJSの設定ファイルで<tt>スケジュールされたタスク</tt>オプションを有効にする必要があります。OJSのドキュメントに示されているように、追加のサーバー設定が必要な場合もあります。"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "レビュー完了までの期間"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "編集者は各査読の後、査読者を5段階の品質評価で評価します。"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "ファイルアクセスの制限"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "査読者には、査読に同意するまで投稿ファイルへのアクセス権が与えられません。"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "査読者アクセス"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "1クリック査読者アクセス"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "査読者には、招待メールの中に安全なリンクを送り、ログインせずにレビューにアクセスできるようにすることができます。他のページにアクセスするには、ログインが必要となります。"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "査読者への招待メールに、安全なリンクを記載する。"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "査読の評価"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "査読リマインダー"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "査読ポリシー"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "検索インデックス"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr "Googleなどの検索エンジンがあなたのサイトを発見・表示するのに役立ちます。<a href=\"{$sitemapUrl}\" target=\"_blank\">サイトマップ</a>を送信することをお勧めします。"
+
+msgid "manager.setup.searchDescription.description"
+msgstr "検索エンジンがジャーナルを検索結果に表示する際に表示できるよう、ジャーナルの簡単な説明（50～300文字）を記入してください。"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "セクションとセクションエディター"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(セクションが追加されていない場合は、デフォルトで「記事」セクションに投稿されます。）"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "ジャーナルのセクション（論文、ブックレビューなど）を作成・変更するには、セクション管理に進みます。<br /><br />ジャーナルにアイテムを投稿する際、著者が指定するのは..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "編集プロセスを見守ってくれる雑誌編集者。"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "そのアイテムが検討されるジャーナルセクション。"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "常にゲラ刷りへのリンクを表示し、アクセス制限を示す。"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "サイトアクセス"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "記事コンテンツを見る"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "ジャーナル・ウェブ・サイトのための5つのステップ"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(例：光合成、ブラックホール、4色地図問題、ベイズ理論）"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "キーワード"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "キーワードやトピックの例を著者へのガイドとして提供する"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "投稿規定"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "提出準備チェックリスト"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr "本誌への投稿の際には，まず投稿準備チェックリストの各項目が完了していることを確認した上で，投稿を進めてください。このチェックリストは，「ジャーナルについて」の「著者ガイドライン」にも掲載されています。チェックリストは以下で編集可能ですが，すべての項目にチェックが入っていないと投稿できません。"
+
+msgid "manager.setup.submissions"
+msgstr "投稿内容"
+
+msgid "manager.setup.submissions.description"
+msgstr "著者ガイドライン、著作権、索引（登録を含む）などの情報です。"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "ユーザーがジャーナルに新しい記事を投稿できないようにする。投稿を無効にするには、<a href=\"{$url}\">ジャーナルセクション</a>の設定ページでジャーナルセクションごとに設定できます。"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "このジャーナルは現在、投稿を受け付けていません。投稿を許可するには、ワークフローの設定をご覧ください。"
+
+msgid "manager.setup.enableOai"
+msgstr "OAIの有効化"
+
+msgid "manager.setup.enableOai.description"
+msgstr "<a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>による第三者のインデックスサービスへのメタデータの提供。"
+
+msgid "manager.setup.typeExamples"
+msgstr "(例：歴史的調査、疑似実験、文学的分析、調査・インタビューなど）"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "タイプ（手法・アプローチ）"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "この分野に関連する研究の種類、方法、およびアプローチの例を示す"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "固有の識別子"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "DOI（Digital Object Identifier System）のような登録システムを利用して、記事や巻・号に識別番号や文字列を付けることができます。"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "ジャーナルでは、編集・審査委員会が使用されます。"
+
+msgid "manager.setup.useThumbnail"
+msgstr "サムネイル"
+
+msgid "manager.setup.useImageTitle"
+msgstr "タイトル画像"
+
+msgid "manager.setup.userRegistration"
+msgstr "ユーザー登録"
+
+msgid "manager.setup.useTextTitle"
+msgstr "タイトル文字"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tジャーナルは、複数の使用状況を記録するように構成されています。使用状況の統計は、いくつかのコンテキストで表示されます。\n"
+"\t\t最も利用された記事の順序付きリストを表示したり、検索結果をランク付けするなど、単一の利用統計を使用しなければならない場合があります。\n"
+"\t\t設定されたメトリクスの1つをデフォルトとして選択してください。\n"
+"\t"
+
+msgid "manager.statistics.statistics"
+msgstr "ジャーナル統計"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "記事閲覧数（著者のみ）"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "採録"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "返戻"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "再投稿"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "レビューまでの日数"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "掲載までの日数"
+
+msgid "manager.statistics.statistics.description"
+msgstr "OJSでは、ジャーナルごとに以下の統計情報を算出しています。\"レビューまでの日数\"は投稿（またはレビューバージョンの指定）から最初の編集者判断まで、\"掲載までの日数\" は受理された投稿のアップロードから出版までの日数を表しています。"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "公開されたアイテム"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "ジャーナルについてで読者に公開される項目を確認します。"
+
+msgid "manager.statistics.statistics.note"
+msgstr "注: 再提出されたアイテムが受理されたか、辞退されたか、またはまだ処理中であるため、査読付き投稿の割合は100％にならないことがあります。"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "発行された巻・号"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "投稿総数"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "査読付き"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "登録読者"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "未割り当て"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "査読者"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "編集者スコア"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "レビュー数"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "このジャーナルの査読付き統計を計算するセクションを選択します。"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "購読"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "記事ファイルのダウンロード"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "記事アブストラクトのページビュー"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "記事要約のページビューとダウンロード"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "ジャーナルのメインページビュー"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "発行巻号の目次のページビュー"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "コンテキスト（巻号数や記事）で絞り込みます。"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr "オブジェクトタイプ（ジャーナル、巻号、記事、ファイルタイプ）や1つ以上のオブジェクトIDで結果を絞り込めます。"
+
+msgid "manager.subscriptionPolicies"
+msgstr "購読ポリシー"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "遅延オープンアクセス"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "チェックボックスをご利用ください。"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "購読期間終了"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "購読期間が終了すると、読者はすべての購読コンテンツへのアクセスを拒否される場合もあれば、購読の有効期限内に発行された購読コンテンツへのアクセスを継続する場合もあります。"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "全失効"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "読者は、購読期間が終了すると、すべての購読コンテンツへのアクセスができなくなります。"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "部分失効"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "読者は、最近発行された購読コンテンツへのアクセスを拒否されますが、購読の有効期限内前に発行された購読コンテンツへのアクセスは維持されます。"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} 月"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} 週"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "購読者には、購読期間終了後にメールで通知。"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "購読者には、購読期間終了後にメールで通知。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "購読者には、購読期間終了前にメールで通知。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "購読者には、購読期間終了前にメールで通知。"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "購読期間満了のお知らせ"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "自動化されたリマインダーメール（ジャーナル管理者がOJSの「メール」で編集可能）を、購読期限が切れる前と後の両方で購読者に送ることができます。"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr "<strong>注:</strong> これらのオプションを有効にするには、サイト管理者がOJS設定ファイルの<tt>スケジュールタスク</tt>オプションを有効にする必要があります。この機能をサポートするためには、OJSのドキュメントに示されているように、追加のサーバー設定が必要な場合があります（すべてのサーバーで可能とは限りません）。"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "いずれかを選択:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr "HTMLは、テキストエリア（フォントサイズ、色など）で使用でき、\"改行\"は<tt>&lt;br&gt;</tt>として扱われ、HTMLエディタはFirefoxブラウザで動作します。"
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "購読期限後の月数に有効な値を選択してください。"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "購読期限までの月数に有効な値を選択してください。"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "購読期限後の週数に有効な値を選択してください。."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "購読期限までの週数に有効な値を選択してください。"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "読者登録された方は、その巻号がオープンアクセスになった際に、電子メールで目次を受け取ることができます。"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr "<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルで<tt>スケジュールタスク</tt>のオプションを有効にする必要があります。この機能のサポートには、OJSのドキュメントに示されているように、追加のサーバー設定が必要な場合があります（すべてのサーバーで可能とは限りません）。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "オンライン決済のお知らせ"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "購読料のオンライン決済が完了した際に、自動メール通知（ジャーナル管理者がOJSの「メール」で編集可能）を購読管理者に送信することができます。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "個人購読がオンラインで購入されると、購読管理者にメールで通知されます。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "機関購読がオンラインで購入されると、購読管理者にメールで通知されます(推奨)。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "個人購読のオンライン更新時に、購読管理者に電子メールで通知します。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "機関購読のオンライン更新時に、購読管理者に電子メールで通知します。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>注:</strong> オンラインで購入した機関購読では、提供されたドメインおよびIPアドレス範囲の承認と、購読管理者による購読の有効化が必要です。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>注:</strong> これらのオプションを有効にするには、雑誌管理者が「読者料金」で、購読料のオンライン決済を含むオンライン決済モジュールを有効にする必要があります。"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "購読ジャーナルのオープンアクセスオプション"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "購読ジャーナルは、出版されたコンテンツへの\"遅延オープンアクセス\"を提供することができ、また、\"著者による自己アーカイブ\"を許可することができます（どちらも、読者数とコンテンツの引用数を増加させます）。"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "購読情報"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr "購読種別と料金体系が購読ページに表示され、購読管理者の名前と連絡先が表示されます。支払い方法や発展途上国の加入者へのサポートなど、サブスクリプションに関する追加情報をここに追加することができます。"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "購読管理者"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "これらの連絡先は、購読に関連するお問い合わせをされるお客様のために、購読者ページに記載されます。"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "有効なメールを入力してください。"
+
+msgid "manager.subscriptions"
+msgstr "購読種別"
+
+msgid "manager.individualSubscriptions"
+msgstr "個人購読"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "機関購読"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "購読を更新してよろしいですか?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "購読を削除してよろしいですか?"
+
+msgid "manager.subscriptions.summary"
+msgstr "購読の概要"
+
+msgid "manager.subscriptions.create"
+msgstr "新規購読"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "作成"
+
+msgid "manager.subscriptions.renew"
+msgstr "更新"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "終了"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "終了日"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "開始"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "開始日"
+
+msgid "manager.subscriptions.domain"
+msgstr "ドメイン"
+
+msgid "manager.subscriptions.edit"
+msgstr "購読の編集"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "編集"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "ステータス付き"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "全て"
+
+msgid "manager.subscriptions.form.status"
+msgstr "状態"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "購読の状態が必要です。"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "有効な購読ステータスを選択してください。"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "購読種別"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "購読種別が必要です。"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "有効な購読種別を選択してください。"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "開始日"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "購読開始日が必要です。"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "有効な購読開始日を選択してください。"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "終了日"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "購読終了日が必要です。"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "この種類の購読は有効期限がないため、開始日を指定しないでください。"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "この種類の購読は有効期限がないため、終了日を指定しないでください。"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "有効な購読終了日を選択してください。"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "注: 以下の変更はすべて、ユーザーのシステム全体のプロファイルに対するものです。"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "ユーザー"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "連絡先"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "ユーザーが必要です。"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "有効なユーザーを選択してください。"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "有効な国を選択してください。"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "ユーザーに、ユーザー名と購読の詳細を記載したメールを送信します。"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "チェックボックスをご利用ください。"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "会員情報"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "会員番号"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "購読種別で、購読者が協会や組織に所属することが必要な場合、会員情報を入力します。"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "選択した購読種別には、会員情報が必要です。"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "備考"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "ドメイン"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "機関名"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "機関名が必要です。"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "メールアドレス"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "ここにドメインを入力する場合、IPアドレス範囲は任意です。<br />有効な値はドメイン名です（例：lib.sfu.ca）。"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "選択した購読種別では、購読の認証にドメインやIPアドレス範囲が必要です。"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "有効なドメインを入力してください。"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IPアドレス範囲"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr "ここでIPアドレス範囲を入力する場合、ドメインは任意です。<br />有効な値としては、IPアドレス（例：142.58.103.1）、IPアドレス範囲（例：142.58.103.1 - 142.58.103.4）、ワイルドカード「*」を使用したIPアドレス範囲（例：142.58.*.*）、CIDRを使用したIPアドレス範囲（例：142.58.100.0/24）があります。"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "有効なIPアドレスを入力してください。"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "削除"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "追加"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "保存して別のものを作成"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "ユーザーに通知メールを送信するには、ジャーナルの設定で購読者の連絡先名とメールアドレスを指定する必要があります。"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "このユーザーはすでに本ジャーナルの購読権を持っています。"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "新しい購読を作成する前に、購読種別を作成する必要があります。"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IPアドレス範囲"
+
+msgid "manager.subscriptions.membership"
+msgstr "会員情報"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "会員番号"
+
+msgid "manager.subscriptions.notes"
+msgstr "備考"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "購読なし"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "購読連絡先を選択"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "ユーザー選択"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "購読のアクセス権は、ジャーナルの雑誌管理者、編集者、セクション編集者、レイアウトエディタ、コピーエディタ、校正担当者に自動的に付与されます。"
+
+msgid "manager.subscriptions.select"
+msgstr "選択"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "購読の作成に成功しました。"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "購読種別"
+
+msgid "manager.subscriptions.user"
+msgstr "ユーザー"
+
+msgid "manager.subscriptions.contact"
+msgstr "担当者名"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "組織名"
+
+msgid "manager.subscriptionTypes"
+msgstr "購読種別"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "警告! この購読種別を持つすべての購読情報も削除されます。この購読種別をこのまま削除してもよろしいですか？"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "料金"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "購読種別"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "個人購読"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "機関購読"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "新しい購読種別の生成"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "生成"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "期間"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "購読種別の編集"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "編集"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "料金"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "記号（$など）を含まない数値（40または40.00など）を入力します。"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "料金は、正の数値でなければなりません。"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "料金が必要です。"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "通貨"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "通貨が必要です。"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "有効な通貨を選択してください。"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "説明"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "有効期限"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "月数 (例えば 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "有効期限なし"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "用意された選択肢をご利用ください。"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "契約期間"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "契約期間の月数（例：12）。"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "期間は正の数値でなければなりません。"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "期間が必要です。"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "フォーマット"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "購読種別のフォーマットが必要です。"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "有効な購読タイプのフォーマットを選択してください。"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "購読"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "個人（ユーザーはログイン時に認証されます）"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "組織（ユーザーはドメインまたはIPアドレスで認証される）
+Institutional (users are validated via domain or IP address)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "用意された選択肢をご利用ください。"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "購読には会員情報が必要です（例：企業、団体、コンソーシアムなど）。"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "チェックボックスをご利用ください。"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "オプション"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "この購読種別をウェブサイト上で公開したり、表示したりしないでください。"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "チェックボックスをご利用ください。"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "保存して別のものを作成"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "タイプ名"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "この名前の購読種別はすでに存在しています。"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "購読種別名が必要です。"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "購読種別"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "購読種別が作成されていません。"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "購読種別の作成に成功しました。"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "あなたが提供する購読を説明するページへのリンク。"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "訪問者の現在および過去の購読内容を記載したページへのリンク。"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "このリンクは、訪問者がログインしているときにのみ表示されます。"
+
+msgid "manager.setup.categories"
+msgstr "カテゴリー"
+
+msgid "manager.setup.categories.description"
+msgstr "上記のリストから最適なカテゴリーを選択してください。読者はジャーナルセットの中からカテゴリー別に閲覧することができます。"
+
+msgid "grid.category.path"
+msgstr "パス"
+
+msgid "grid.action.addSection"
+msgstr "セクションの追加"
+
+msgid "manager.setup.section.description"
+msgstr "ジャーナルの発行された巻号に掲載された記事は、通常、テーマや内容の種類（レビュー論文、研究など）ごとにセクションで構成されています。"
+
+msgid "settings.roles.gridDescription"
+msgstr "ロールとは、ジャーナル内で異なる権限レベルと関連するワークフローへのアクセスを与えられたユーザーのグループです。権限レベルには5つの種類があります。雑誌管理者はジャーナルのすべて（すべてのコンテンツと設定）にアクセスでき、セクション編集者は割り当てられたすべてのコンテンツに完全にアクセスでき、ジャーナルアシスタントは編集者から明示的に割り当てられたすべての投稿に限定的にアクセスでき、査読者はレビューするよう割り当てられた投稿を見たり実行したりでき、著者は自分の投稿に関する限られた情報を見たり操作したりできます。さらに、ロールにアクセス権が与えられるステージアサインメントは5種類あります。「投稿」、「内部レビュー」、「レビュー」、「編集」、「制作」です。"
+
+msgid "manager.publication.library"
+msgstr "出版社ライブラリ"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "新しい記事の著作権年の基本"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "記事：デフォルトの年は、\"publish-as-you-go\"のように、記事の公開日から引き出されます。"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "発行：デフォルトの巻・号年は、その巻・号の発行日から引かれます。"
+
+msgid "manager.setup.resetPermissions"
+msgstr "記事の権限のリセット"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "すべての記事のパーミッションデータをリセットしてよろしいですか？この操作は元に戻すことができません。"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr "出版されたすべての論文の著作権やライセンス情報を削除し、ジャーナルの現在のデフォルト設定に戻します。これにより、記事に添付されていた過去の著作権やライセンス情報がすべて永久に削除されます。場合によっては、異なるライセンスで公開されている作品を再許諾することが法的に認められないこともあります。このツールを使用する際には注意を払い、自分のジャーナルに掲載された記事に対してどのような権利を持っているか不明な場合は、法律の専門家に相談してください。"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "記事の権限のリセットに成功しました。"
+
+msgid "grid.genres.title.short"
+msgstr "コンポーネント"
+
+msgid "grid.genres.title"
+msgstr "記事の構成"
+
+msgid "grid.genres.description"
+msgstr "これらのコンポーネントは、ファイル名を付けるために使用され、ファイルのアップロード時にプルダウンメニューで表示されます。##と書かれた分類は、ユーザーが投稿全体のファイルを99Zで、または特定のコンポーネントを番号（例：02）で関連付けることができます。"
+
+msgid "plugins.importexport.common.settings"
+msgstr "設定"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOIプラグインの設定"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "記事"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "巻号"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "ゲラ"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "プラグインの要件が満たされていない"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "このプラグインをご利用いただくには、プラグインのカテゴリである\"公開識別子\"にアクセスし、DOIプラグインを有効にして設定し、有効なDOIプレフィックスを指定してください。"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "プラグインの設定が完了していません。"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "DOI公開識別子プラグインでは、DOI割り当てのためのパブリッシングオブジェクトが選択されていないため、このプラグインではデポジットやエクスポートはできません。"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "パスワード"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "なお、パスワードは暗号化されずにプレーンテキストで保存されますので、ご注意ください。"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "任意の巻号"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "任意のステータス"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "未預託"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "マーク登録済み"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "登録済み"
+
+msgid "plugins.importexport.common.action"
+msgstr "アクション"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "エクスポート"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "マークが登録されました"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "登録"
+
+msgid "plugins.importexport.common.validation"
+msgstr "エクスポートや登録の前にXMLを検証します。"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "選択されたオブジェクトはありません。"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "選択したオブジェクトを変換できませんでした。"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "無効なXML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "出力ファイル {$param} が読めません。"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "入力ファイル {$param} が読めません。"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "登録がうまくいきませんでした! DOI登録サーバーからエラーが返されました: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "登録完了!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "検証に成功しました!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "検証に失敗しました。"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "パス {$path} を持つジャーナルのDOIプレフィックスが欠けています。"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "指定されたオブジェクトが見つかりませんでした。"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "ジャーナル設定で指定された主な連絡先にコピーを送信します。"
+
+msgid "stats.publicationStats"
+msgstr "記事の統計"
+
+msgid "stats.publications.details"
+msgstr "記事の詳細"
+
+msgid "stats.publications.none"
+msgstr "これらのパラメータに一致する利用統計を持つ記事は見つかりませんでした。"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "日付ごとの総アブストラクト閲覧数"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "日付ごとの総ファイル閲覧数"
+
+msgid "stats.publications.countOfTotal"
+msgstr " {$total} 記事中の {$count} "
+
+msgid "stats.publications.abstracts"
+msgstr "アブストラクト"
+
+msgid "stats.publications.galleys"
+msgstr "ファイル"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "投稿確認メールのコピーを本ジャーナルの主連絡先に送る。"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "このジャーナルには主な連絡先が定義されていません。<a href=\"{$url}\">ジャーナル設定</a>から主な連絡先が入力できます。"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "エクスポートした巻号の結果"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "ゲラの発行の解析に失敗したプロセス"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "ジャーナル名"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "ジャーナルのホームページのURL"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "ジャーナルの主な連絡先の氏名"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "自動送信メールのジャーナルのメール署名"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "ジャーナルの主な連絡先の電子メールアドレス"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "決済の種類の名称"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "支払い金額"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "支払い金額の通貨（USDなど）"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "複数のジャーナルが掲載されている場合のウェブサイト名"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "電子メールの確認（ジャーナル登録）"
+
+msgid "mailable.validateEmailContext.description"
+msgstr "このメールは、新規ユーザーがジャーナルに登録する際、設定によりメールアドレスの認証が必要な場合に自動的に送信されます。"
 
 msgid "manager.setup.announcements"
 msgstr "お知らせ"
