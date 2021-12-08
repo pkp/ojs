@@ -16,7 +16,6 @@
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
-use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
 use PKP\submissionFile\SubmissionFile;
 
@@ -154,7 +153,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $contents = Services::get('file')->fs->read($submissionFile->getData('path'));
 
         // Replace media file references
-        $collector = Repo::submissionFiles()
+        $collector = Repo::submissionFile()
             ->getCollector()
             ->filterByAssoc(
                 ASSOC_TYPE_SUBMISSION_FILE,
@@ -162,7 +161,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             )
             ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
             ->includeDependentFiles();
-        $embeddableFiles = Repo::submissionFiles()->getMany($collector);
+        $embeddableFiles = Repo::submissionFile()->getMany($collector);
 
         $referredArticle = null;
         foreach ($embeddableFiles as $embeddableFile) {

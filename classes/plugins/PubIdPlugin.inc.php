@@ -322,17 +322,17 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                             Application::getRepresentationDAO()->deletePubId($representation->getId(), $pubIdType);
                         }
                         if ($filePubIdEnabled) { // Does this option have to be enabled here for?
-                            $collector = Repo::submissionFiles()
+                            $collector = Repo::submissionFile()
                                 ->getCollector()
                                 ->filterByAssoc(
                                     ASSOC_TYPE_REPRESENTATION,
                                     [$representation->getId()]
                                 )->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
 
-                            $articleProofFileIds = Repo::submissionFiles()
+                            $articleProofFileIds = Repo::submissionFile()
                                 ->getIds($collector);
                             foreach ($articleProofFileIds as $articleProofFileId) {
-                                Repo::submissionFiles()->dao->deletePubId($articleProofFileId, $pubIdType);
+                                Repo::submissionFile()->dao->deletePubId($articleProofFileId, $pubIdType);
                             }
                         }
                     }

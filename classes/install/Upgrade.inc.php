@@ -125,7 +125,7 @@ class Upgrade extends Installer
             ->get();
 
         foreach ($rows as $row) {
-            $submissionDir = Repo::submissionFiles()
+            $submissionDir = Repo::submissionFile()
                 ->getSubmissionDir($row->context_id, $row->submission_id);
             $generatedOldFilename = sprintf(
                 '%d-%s-%d-%d-%d-%s.%s',

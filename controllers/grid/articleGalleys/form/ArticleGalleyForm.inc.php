@@ -81,7 +81,7 @@ class ArticleGalleyForm extends Form
                 'representationId' => $this->_articleGalley->getId(),
                 'articleGalley' => $this->_articleGalley,
                 'articleGalleyFile' => $articleGalleyFile,
-                'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFiles()->supportsDependentFiles($articleGalleyFile) : null,
+                'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFile()->supportsDependentFiles($articleGalleyFile) : null,
             ]);
         }
         $context = $request->getContext();
