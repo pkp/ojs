@@ -18,6 +18,7 @@
 import('lib.pkp.plugins.metadata.dc11.schema.PKPDc11Schema');
 
 use PKP\metadata\MetadataTypeDescription;
+use PKP\core\PKPApplication;
 
 class Dc11Schema extends PKPDc11Schema
 {
@@ -27,6 +28,6 @@ class Dc11Schema extends PKPDc11Schema
     public function __construct()
     {
         // Configure the DC schema.
-        parent::__construct([ASSOC_TYPE_SUBMISSION, ASSOC_TYPE_ANY]);
+        parent::__construct([PKPApplication::ASSOC_TYPE_SUBMISSION, MetadataTypeDescription::ASSOC_TYPE_ANY]);
     }
 }
