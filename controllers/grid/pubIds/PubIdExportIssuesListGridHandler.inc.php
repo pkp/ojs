@@ -13,6 +13,8 @@
  * @brief Handle exportable issues with pub ids list grid requests.
  */
 
+use PKP\controllers\grid\feature\PagingFeature;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
@@ -139,8 +141,6 @@ class PubIdExportIssuesListGridHandler extends GridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
-        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
         return [new SelectableItemsFeature(), new PagingFeature()];
     }
 

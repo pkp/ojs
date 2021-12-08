@@ -14,8 +14,8 @@
  */
 
 use APP\handler\Handler;
-
 use APP\template\TemplateManager;
+use PKP\security\authorization\PKPSiteAccessPolicy;
 use PKP\security\Role;
 
 class ManageIssuesHandler extends Handler
@@ -45,7 +45,6 @@ class ManageIssuesHandler extends Handler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
         $this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }

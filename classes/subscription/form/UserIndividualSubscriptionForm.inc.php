@@ -13,8 +13,9 @@
  * @brief Form class for user purchase of individual subscription.
  */
 
-use APP\payment\ojs\OJSPaymentManager;
+namespace APP\subscription\form;
 
+use APP\payment\ojs\OJSPaymentManager;
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;
 use PKP\form\Form;
@@ -195,4 +196,8 @@ class UserIndividualSubscriptionForm extends Form
         $paymentForm = $paymentManager->getPaymentForm($queuedPayment);
         $paymentForm->display($this->request);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\form\UserIndividualSubscriptionForm', '\UserIndividualSubscriptionForm');
 }

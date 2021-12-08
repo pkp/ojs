@@ -54,19 +54,21 @@ class Collector extends \PKP\submission\Collector
         $q = parent::getQueryBuilder();
 
         if (is_array($this->issueIds)) {
-            $issueIds = $this->issueIds;
-            $q->leftJoin('publications as issue_p', 'issue_p.submission_id', '=', 's.submission_id')
-                ->leftJoin('publication_settings as issue_ps', 'issue_p.publication_id', '=', 'issue_ps.publication_id')
-                ->where(function ($q) use ($issueIds) {
-                    $q->where('issue_ps.setting_name', '=', 'issueId');
-                    $q->whereIn('issue_ps.setting_value', $issueIds);
-                });
+            $q->whereIn('s.submission_id', function ($query) {
+                $query->select('issue_p.submission_id')
+                    ->from('publications AS issue_p')
+                    ->join('publication_settings as issue_ps', 'issue_p.publication_id', '=', 'issue_ps.publication_id')
+                    ->where('issue_ps.setting_name', '=', 'issueId')
+                    ->whereIn('issue_ps.setting_value', array_map('strval', $this->issueIds));
+            });
         }
 
         if (is_array($this->sectionIds)) {
-            $sectionIds = $this->sectionIds;
-            $q->leftJoin('publications as section_p', 'section_p.submission_id', '=', 's.submission_id')
-                ->whereIn('section_p.section_id', $sectionIds);
+            $q->whereIn('s.submission_id', function ($query) {
+                $query->select('section_p.submission_id')
+                    ->from('publications AS section_p')
+                    ->whereIn('section_p.section_id', $this->sectionIds);
+            });
         }
 
         return $q;

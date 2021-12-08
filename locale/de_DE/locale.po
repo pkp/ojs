@@ -1,10 +1,11 @@
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2021-06-15 11:02+0000\n"
-"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/locale/de_DE/"
 ">\n"
 "Language: de_DE\n"
@@ -1987,9 +1988,8 @@ msgstr "{$proofreaderName} hat Beitrag {$submissionId} auf den Zeitplan gesetzt.
 msgid "log.imported"
 msgstr "{$userName} hat Beitrag {$submissionId} importiert."
 
-#, fuzzy
 msgid "metadata.pkp.peerReviewed"
-msgstr "Begutachteter Beitrag"
+msgstr "Im Peer Review begutachteter Artikel"
 
 msgid "notification.type.editing"
 msgstr "Redaktionelle Ereignisse"
@@ -2149,11 +2149,9 @@ msgstr ""
 "Wenn Sie eine bestehede OJS-Installation upgraden wollen, klicken Sie  <a "
 "href=\"{$upgradeUrl}\">hier</a>, um fortzufahren."
 
-#, fuzzy
 msgid "payment.waived"
 msgstr "Auf Gebühr verzichtet"
 
-#, fuzzy
 msgid "payment.unpaid"
 msgstr "Nicht bezahlt"
 

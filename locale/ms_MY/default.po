@@ -1,0 +1,186 @@
+# Studiorimau <studiorimau@gmail.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-10 11:39+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/default/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "default.genres.article"
+msgstr "Teks Artikel"
+
+msgid "section.default.policy"
+msgstr "Bahagian polisi lalai"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.title"
+msgstr "Artikel"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Jurnal ini menyediakan akses terbuka serta-merta kepada kandungannya dengan "
+"prinsip untuk menjadikan penyelidikan tersedia secara bebas kepada orang "
+"ramai menyokong pertukaran pengetahuan global yang lebih besar."
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Nama dan alamat e-mel yang dimasukkan dalam laman jurnal ini akan "
+"digunakan secara eksklusif untuk tujuan yang dinyatakan dalam jurnal ini dan "
+"tidak akan disediakan untuk sebarang tujuan lain atau kepada mana-mana pihak "
+"lain.</p>"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Teks ini mematuhi keperluan gaya dan bibliografi yang digariskan dalam Garis "
+"Panduan Pengarang."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Sekiranya ada, URL untuk rujukan telah disediakan."
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Fail penyerahan dalam format fail dokumen OpenOffice, Microsoft Word, atau "
+"RTF."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Penyerahan ini belum pernah diterbitkan sebelumnya, atau sebelum jurnal lain "
+"untuk dipertimbangkan (atau penjelasan telah diberikan dalam Komen kepada "
+"Editor)."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Teksnya mempunyai jarak tunggal; menggunakan fon 12 ; menggunakan italics, "
+"bukannya garis di bawah (kecuali dengan alamat URL); dan semua ilustrasi, "
+"angka, dan jadual diletakkan di dalam teks pada titik-titik yang "
+"bersesuaian, bukannya di akhir."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Berminat untuk menghantar ke jurnal ini? Kami mengesyorkan agar anda "
+"menyemak halaman di <a href=\"{$indexUrl}/{$contextPath}/about\">Tentang "
+"Jurnal</a> untuk bahagian polisi jurnal, serta <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Garis "
+"Panduan Pengarang</a>. Pengarang perlu <a href=\"{$indexUrl}/{$contextPath}/"
+"user/register\">mendaftar</a> dengan jurnal sebelum serah atau, jika sudah "
+"didaftarkan, pergi ke <a href=\"{$indexUrl}/index/login\">log masuk</a> dan "
+"mulakan proses lima langkah."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Kami mendorong pustakawan penyelidikan untuk menyenaraikan jurnal ini di "
+"antara jurnal elektronik perpustakaan mereka. Juga, perlu diperhatikan "
+"bahawa sistem penerbitan sumber terbuka jurnal ini sesuai untuk dijadikan "
+"perpustakaan untuk dihoskan oleh ahli fakulti mereka dengan jurnal yang "
+"mereka terlibat dalam penyuntingan (lihat <a href=\"http://pkp.sfu.ca/ojs\">"
+"Open Journal Systems</a>)."
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Pengulas"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Pengulas"
+
+msgid "default.genres.sourceTexts"
+msgstr "Sumber Teks"
+
+msgid "default.genres.dataSet"
+msgstr "Set Data"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Analisis Data"
+
+msgid "default.genres.transcripts"
+msgstr "Transkrip"
+
+msgid "default.genres.researchResults"
+msgstr "Hasil Penyelidikan"
+
+msgid "default.genres.researchMaterials"
+msgstr "Bahan Penyelidikan"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumen Penyelidikan"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "MLang"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Pengurus Langganan"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Pengurus Langganan"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "EdBag"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Bahagian Editor"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Bahagian Editor"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editor Tetamu"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor Tetamu"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "Editor Jurnal"
+
+msgid "default.groups.name.editor"
+msgstr "Editor Jurnal"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "Pengurus Jurnal"
+
+msgid "default.groups.name.manager"
+msgstr "Pengurus Jurnal"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Jurnal ini menggunakan sistem CLOCKSS untuk mencipta sistem pengarkiban yang "
+"diedarkan di antara perpustakaan yang mengambil bahagian dan membenarkan "
+"perpustakaan tersebut untuk membuat arkib tetap jurnal untuk tujuan "
+"pemeliharaan dan pemulihan. <a href=\"http://clockss.org/\">Lagi ...</a>"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Jurnal ini menggunakan sistem LOCKSS untuk mencipta sistem pengarkiban yang "
+"diedarkan di antara perpustakaan yang mengambil bahagian dan membenarkan "
+"perpustakaan tersebut untuk membuat arkib tetap jurnal untuk tujuan "
+"pemeliharaan dan pemulihan. <a href=\"http://www.lockss.org/\">Lagi ...</a>"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Kami mendorong pembaca untuk mendaftar ke perkhidmatan notifikasi penerbitan "
+"untuk jurnal ini. Gunakan pautan <a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\"> Daftar </a> di bahagian atas halaman utama jurnal. Pendaftaran "
+"ini akan menyebabkan pembaca menerima Isi Kandungan melalui e-mel untuk "
+"setiap terbitan jurnal baru. Senarai ini juga membolehkan jurnal menuntut "
+"tahap sokongan atau pembaca. Lihat <a href=\"{$indexUrl}/{$contextPath}/"
+"about/submissions#privacyStatement\"> Kenyataan Privasi </a> jurnal, yang "
+"memberi jaminan kepada pembaca bahawa nama dan alamat e-mel mereka tidak "
+"akan digunakan untuk tujuan lain."

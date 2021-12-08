@@ -13,6 +13,7 @@
  * @brief Base class for a cell provider for article galleys.
  */
 
+use APP\facades\Repo;
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
 
@@ -89,7 +90,8 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
                     break;
                 }
 
-                $submissionFile = Services::get('submissionFile')->get($element->getData('submissionFileId'));
+                $submissionFile = Repo::submissionFiles()
+                    ->get($element->getData('submissionFileId'));
                 import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
                 return [new DownloadFileLinkAction($request, $submissionFile, WORKFLOW_STAGE_ID_PRODUCTION, $element->getLabel())];
         }

@@ -27,7 +27,6 @@ use PKP\plugins\HookRegistry;
 class ReviewerSubmissionDAO extends DAO
 {
     public $reviewAssignmentDao;
-    public $submissionFileDao;
     public $submissionCommentDao;
 
     /**
@@ -37,7 +36,6 @@ class ReviewerSubmissionDAO extends DAO
     {
         parent::__construct();
         $this->reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
-        $this->submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
         $this->submissionCommentDao = DAORegistry::getDAO('SubmissionCommentDAO');
     }
 

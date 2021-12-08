@@ -282,6 +282,10 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 
 [email]
 
+; Default method to send emails
+; Available options: sendmail, smtp, log
+default = sendmail
+
 ; Path to the sendmail, -bs argument is for using SMTP protocol
 sendmail_path = "/usr/sbin/sendmail -bs"
 

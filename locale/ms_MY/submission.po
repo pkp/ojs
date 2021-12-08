@@ -1,0 +1,367 @@
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Studiorimau <studiorimau@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/submission/ms/"
+">\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Semua syarat penerbitan telah dipenuhi. Adakah anda pasti mahu menerbitkan "
+"naskah ini?"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p> Galley ini <em> tidak akan tersedia lagi </em> kepada pembaca. </p>"
+
+msgid "submission.queries.production"
+msgstr "Perbincangan Produksi"
+
+msgid "publication.version.details"
+msgstr "Maklumat penerbitan untuk versi {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Adakah anda pasti tidak mahu naskah ini dijadualkan untuk diterbitkan?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Adakah anda pasti tidak mahu naskah ini diterbitkan?"
+
+msgid "publication.unpublish"
+msgstr "Tidak diterbitkan"
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Berikan hak cipta untuk penyerahan yang diterbitkan kepada pihak berikut."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Hak cipta akan diberikan secara automatik kepada {$copyright} apabila "
+"diterbitkan."
+
+msgid "submission.license.description"
+msgstr ""
+"Lesen akan ditetapkan secara automatik ke <a href='{$licenseUrl}' "
+"target='_blank'> {$licenseName} </a> apabila ini diterbitkan."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Penyerahan mestilah dalam peringkat Copyediting atau Produksi sebelum dapat "
+"diterbitkan."
+
+msgid "publication.required.declined"
+msgstr "Penyerahan yang ditolak tidak dapat diterbitkan."
+
+msgid "publication.publish.requirements"
+msgstr "Keperluan berikut mesti dipenuhi sebelum ini dapat diterbitkan."
+
+msgid "publication.publish"
+msgstr "Terbitkan"
+
+msgid "publication.invalidSubmission"
+msgstr "Penyerahan untuk penerbitan ini tidak dapat dijumpai."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Versi dihapuskan dari penerbitan."
+
+msgid "publication.event.versionScheduled"
+msgstr "Versi baru dijadualkan untuk diterbitkan."
+
+msgid "publication.event.versionPublished"
+msgstr "Versi baru telah diterbitkan."
+
+msgid "publication.event.unpublished"
+msgstr "Penyerahan tidak diterbitkan."
+
+msgid "publication.event.scheduled"
+msgstr "Penyerahan dijadualkan untuk diterbitkan."
+
+msgid "publication.event.published"
+msgstr "Penyerahan telah diterbitkan."
+
+msgid "publication.editDisabled"
+msgstr "Versi ini telah diterbitkan dan tidak dapat disunting."
+
+msgid "publication.datePublished"
+msgstr "Tarikh Diterbitkan"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Tahun hak cipta akan ditetapkan secara automatik berdasarkan tarikh "
+"penerbitan."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Tahun hak cipta akan ditetapkan secara automatik apabila naskah ini "
+"diterbitkan dalam terbitan."
+
+msgid "submission.publications"
+msgstr "Penerbitan"
+
+msgid "publication.status.unscheduled"
+msgstr "Tidak dijadualkan"
+
+msgid "submission.status.scheduled"
+msgstr "Dijadualkan"
+
+msgid "publication.status.published"
+msgstr "Diterbitkan"
+
+msgid "submission.publication"
+msgstr "Penerbitan"
+
+msgid "publication.selectIssue"
+msgstr "Pilih terbitan yang akan dijadualkan untuk diterbitkan"
+
+msgid "publication.unscheduledIn"
+msgstr "Naskah ini belum dijadualkan untuk diterbitkan dalam satu terbitan."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Dijadualkan untuk penerbitan di <a href=\"{$issueUrl}\">{$issueName} </a>."
+
+msgid "publication.publishedIn"
+msgstr "Diterbitkan dalam <a href=\"{$issueUrl}\"> {$issueName} </a>."
+
+msgid "publication.required.issue"
+msgstr "Penerbitan mesti ditugaskan kepada terbitan sebelum dapat diterbitkan."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Semua syarat penerbitan telah dipenuhi. Naskah Ini akan diterbitkan dengan "
+"segera kerana tarikh penerbitan telah ditetapkan ke {$datePublished}. Adakah "
+"anda pasti mahu menerbitkan?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Semua syarat penerbitan telah dipenuhi. Naskah ini akan segera diterbitkan "
+"dalam {$issue}. Adakah anda pasti mahu menerbitkan ini?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Semua syarat penerbitan telah dipenuhi. Naskah ini akan diterbitkan apabila "
+"{$issue} diterbitkan. Adakah anda pasti mahu menjadualkan ini untuk "
+"penerbitan?"
+
+msgid "publication.invalidIssue"
+msgstr "Terbitan untuk penerbitan ini tidak dapat dijumpai."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Tidak aktif)"
+
+msgid "publication.invalidSection"
+msgstr "Bahagian untuk penerbitan ini tidak dapat dijumpai."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Tarikh penerbitan akan ditetapkan secara automatik apabila terbitan itu "
+"diterbitkan. Jangan masukkan tarikh penerbitan melainkan artikel itu "
+"sebelumnya diterbitkan di tempat lain dan anda perlu mengundurkannya."
+
+msgid "publication.changeIssue"
+msgstr "Tukar Terbitan"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Naskah ini telah diberikan kepada <a href=\"{$issueUrl}\">{$ issueName}</a> "
+"tetapi belum dijadualkan untuk diterbitkan."
+
+msgid "publication.assignToissue"
+msgstr "Tugaskan ke Terbitan"
+
+msgid "galley.publicationNotFound"
+msgstr "Penerbitan untuk galley ini tidak dapat dijumpai."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Galley penerbitan ini tidak dapat disunting kerana sudah diterbitkan."
+
+msgid "catalog.category.heading"
+msgstr "Semua Item"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Item"
+
+msgid "submission.sectionOptions"
+msgstr "Pilihan Bahagian"
+
+msgid "section.any"
+msgstr "Mana-mana Bahagian"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Ini adalah pratonton dan belum diterbitkan. <a href=\"{$url}\"> Lihat "
+"penyerahan </a>"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Spesifikasi ini berdasarkan set metadata Dublin Core, standard antarabangsa "
+"yang digunakan untuk menjelaskan kandungan jurnal."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Format petikan yang diminta tidak dapat diperoleh."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Sila pilih peranan penyumbang."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstrak anda terlalu panjang. Silakan dipendekkan ke bawah had perkataan "
+"yang ditunjukkan untuk bahagian ini."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Sila masukkan abstrak artikel anda."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Sila masukkan tajuk artikel anda."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+"Nama pertama, nama terakhir, dan alamat e-mel setiap pengarang diperlukan."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Diperlukan sekurang-kurangnya satu pengarang."
+
+msgid "submission.submit.contributorRole"
+msgstr "Peranan penyumbang"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Kenyataan Privasi"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Anda mesti membaca dan mengakui bahawa anda telah memenuhi syarat di bawah "
+"sebelum meneruskan."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Senarai Semak Penyerahan"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Sila pilih bahasa penyerahan."
+
+msgid "submission.incomplete"
+msgstr "Menunggu Kelulusan"
+
+msgid "submission.complete"
+msgstr "Diluluskan"
+
+msgid "submission.upload.fileContents"
+msgstr "Komponen Artikel"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadata terbitan penyerahan telah dikemas kini."
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Hantar ke Ulasan"
+
+msgid "workflow.review.externalReview"
+msgstr "Ulasan"
+
+msgid "submission.confirmSubmit"
+msgstr "Adakah anda pasti mahu menghantar artikel ini ke jurnal?"
+
+msgid "submission.pageProofs"
+msgstr "Proofreading"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Muat naik fail yang berkaitan dengan penyerahan ini, termasuk artikel, "
+"multimedia, set data, karya seni, dll."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Tajuk dan Abstrak"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Bukti ini telah diluluskan untuk dimasukkan ke dalam galley."
+
+msgid "grid.action.approveProof"
+msgstr "Luluskan bukti ini untuk disertakan dalam galley."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Editor susun atur memuat naik fail siap pengeluaran yang telah disiapkan "
+"untuk diterbitkan di sini. Gunakan <em> Tugaskan Juruaudit </em> untuk "
+"menugaskan pengarang dan yang lain untuk membuat proofread terhadap galley, "
+"dengan fail yang diperbaiki dimuat naik untuk persetujuan sebelum "
+"diterbitkan."
+
+msgid "submission.galleyFiles"
+msgstr "Fail Galley"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Buat galley ini tersedia"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p> Galley ini <em> akan tersedia </em> kepada pembaca. </p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Kelulusan Format"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Pengenalpasti awam penyerahan dikemas kini."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Artikel galley \"{$galleyFormatName}\" dibuat tidak tersedia."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Artikel galley \"{$galleyFormatName}\" telah tersedia."
+
+msgid "grid.action.issueEntry"
+msgstr "Lihat metadata penyerahan ini"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galley muncul dalam entri terbitan"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Jurnal telah diberitahu mengenai penyerahan anda, dan e-mel pengesahan untuk "
+"rekod anda telah dihanter ke e-mel anda. Setelah editor menyemak penyerahan, "
+"mereka akan menghubungi anda."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.noContext"
+msgstr "Jurnal penyerahan ini tidak dijumpai."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstrak mestilah {$wordCount} perkataan atau kurang."
+
+msgid "grid.action.workflow"
+msgstr "Aliran Kerja Penyerahan"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Penyerahan Baru"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Mulakan Penyerahan Baru di"
+
+msgid "submission.title.tip"
+msgstr ""
+"Jenis penyerahan biasanya salah satu 'gambar', 'teks', atau jenis multimedia "
+"lain termasuk 'perisian' atau 'interaktif'. Pilih yang paling relevan untuk "
+"penghantaran anda. Contohnya boleh didapati di \n"
+"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\"> http://dublincore.org/documents/2001/04/12/"
+"useguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Tajuk Artikel"
+
+msgid "submission.upload.selectComponent"
+msgstr "Pilih komponen artikel"
+
+msgid "submission.submit.userGroupDescription"
+msgstr ""
+"Sila pilih peranan yang akan anda gunakan dalam menyerahkan artikel ini."
+
+msgid "submission.submit.userGroup"
+msgstr "Serahkan dalam peranan saya sebagai ..."
+
+msgid "submission.submit.title"
+msgstr "Serah Artikel"

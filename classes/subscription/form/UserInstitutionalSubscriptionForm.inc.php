@@ -13,8 +13,9 @@
  * @brief Form class for user purchase of institutional subscription.
  */
 
-use APP\payment\ojs\OJSPaymentManager;
+namespace APP\subscription\form;
 
+use APP\payment\ojs\OJSPaymentManager;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;
@@ -152,8 +153,6 @@ class UserInstitutionalSubscriptionForm extends Form
 
         // If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
         if ($ipRangeProvided) {
-            import('classes.subscription.InstitutionalSubscription');
-
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'ipRanges', 'required', 'manager.subscriptions.form.ipRangeValid', function ($ipRanges) {
                 foreach (PKPString::regexp_split('/\s+/', trim($ipRanges)) as $ipRange) {
                     if (!PKPString::regexp_match(
@@ -227,4 +226,8 @@ class UserInstitutionalSubscriptionForm extends Form
         $paymentForm->display($this->request);
         parent::execute(...$functionArgs);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\form\UserInstitutionalSubscriptionForm', '\UserInstitutionalSubscriptionForm');
 }

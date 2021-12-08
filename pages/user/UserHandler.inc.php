@@ -17,6 +17,8 @@ import('lib.pkp.pages.user.PKPUserHandler');
 
 use APP\journal\Journal;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\subscription\form\UserIndividualSubscriptionForm;
+use APP\subscription\form\UserInstitutionalSubscriptionForm;
 use APP\template\TemplateManager;
 
 class UserHandler extends PKPUserHandler
@@ -140,11 +142,9 @@ class UserHandler extends PKPUserHandler
 
         if ($institutional == 'institutional') {
             $institutional = true;
-            import('classes.subscription.form.UserInstitutionalSubscriptionForm');
             $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
         } else {
             $institutional = false;
-            import('classes.subscription.form.UserIndividualSubscriptionForm');
             $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
         }
 
@@ -226,11 +226,9 @@ class UserHandler extends PKPUserHandler
 
         if ($institutional == 'institutional') {
             $institutional = true;
-            import('classes.subscription.form.UserInstitutionalSubscriptionForm');
             $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
         } else {
             $institutional = false;
-            import('classes.subscription.form.UserIndividualSubscriptionForm');
             $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
         }
 

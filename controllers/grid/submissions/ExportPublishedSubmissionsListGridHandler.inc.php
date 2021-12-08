@@ -15,6 +15,8 @@
 
 use APP\facades\Repo;
 use APP\issue\Collector;
+use PKP\controllers\grid\feature\PagingFeature;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
@@ -141,8 +143,6 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
-        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
         return [new SelectableItemsFeature(), new PagingFeature()];
     }
 

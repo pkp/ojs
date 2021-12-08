@@ -13,11 +13,10 @@
  * @brief Handle section grid row requests.
  */
 
+use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
-
-import('lib.pkp.classes.controllers.grid.GridRow');
 
 class SectionGridRow extends GridRow
 {

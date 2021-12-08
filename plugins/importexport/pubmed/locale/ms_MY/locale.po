@@ -1,0 +1,56 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Penggunaan:\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artikel [articleId1]"
+" [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] terbitan [issueId]\n"
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr ""
+"Tidak ada artikel yang sesuai dengan ID artikel yang ditentukan \""
+"{$articleId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr ""
+"Tidak ada terbitan yang sepadan dengan ID terbitan yang ditentukan \""
+"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "RALAT:"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Pilih Artikel untuk dieksport."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Eksport Artikel"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Pilih terbitan untuk dieksport."
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Eksport Terbitan"
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Eksport Data"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr ""
+"Eksport metadata artikel dalam format XML PubMed untuk pengindeksan dalam "
+"MEDLINE."
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "Plugin Eksport PubMed XML"

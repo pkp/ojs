@@ -15,10 +15,8 @@
 
 use APP\template\TemplateManager;
 use PKP\form\Form;
-
 use PKP\mail\MailTemplate;
-
-import('lib.pkp.classes.plugins.PaymethodPlugin');
+use PKP\plugins\PaymethodPlugin;
 
 class ManualPaymentPlugin extends PaymethodPlugin
 {

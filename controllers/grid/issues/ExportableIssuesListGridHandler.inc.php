@@ -13,9 +13,10 @@
  * @brief Handle exportable issues grid requests.
  */
 
+use APP\controllers\grid\issues\IssueGridHandler;
 use APP\facades\Repo;
-
-import('classes.controllers.grid.issues.IssueGridHandler');
+use PKP\controllers\grid\feature\PagingFeature;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 
 class ExportableIssuesListGridHandler extends IssueGridHandler
 {
@@ -64,8 +65,6 @@ class ExportableIssuesListGridHandler extends IssueGridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
-        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
         return [new SelectableItemsFeature(), new PagingFeature()];
     }
 

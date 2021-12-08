@@ -1,0 +1,72 @@
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Studiorimau <studiorimau@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/api/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Anda tidak dapat mengaitkan fail ini dari tahap fail dengan galley."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Penerbitan yang anda minta bukan sebahagian daripada penyerahan ini."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Penerbitan yang anda minta bukan sebahagian daripada jurnal ini."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Kaedah pembayaran yang anda pilih tidak disokong."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Anda tidak mempunyai kebenaran untuk memindahkan templat e-mel ini ke jurnal "
+"lain."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Jurnal yang anda minta tidak dijumpai."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Anda tidak mempunyai kebenaran untuk menghapuskan jurnal ini."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Anda tidak mempunyai kebenaran untuk ubahsuai jurnal ini."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Anda tidak dapat ubahsuai jurnal ini dari site-wide API."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Anda tidak dapat melihat atau ubahsuai jurnal ini kecuali anda membuat "
+"permintaan ke jurnal API atau site-wide API."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Anda tidak mempunyai kebenaran untuk melihat jurnal ini."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Anda hanya dapat melihat jurnal yang telah didayakan."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Untuk membuat atau ubahsuai penyerahan, anda mesti membuat permintaan ke "
+"titik akhir API jurnal."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr ""
+"Anda tidak mempunyai kebenaran untuk melihat terbitan yang belum diterbitkan."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Anda tidak boleh mengubah jurnal yang diserahkan."
+
+msgid "api.emails.403.disabled"
+msgstr "Ciri notifikasi e-mel belum diaktifkan untuk jurnal ini."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Pengumuman yang anda minta bukan sebahagian daripada jurnal ini."

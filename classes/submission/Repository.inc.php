@@ -13,6 +13,7 @@
 
 namespace APP\submission;
 
+use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
@@ -74,8 +75,7 @@ class Repository extends \PKP\submission\Repository
             } else {
                 $context = Services::get('context')->get($submission->getData('contextId'));
             }
-            import('classes.article.ArticleTombstoneManager');
-            $articleTombstoneManager = new \ArticleTombstoneManager();
+            $articleTombstoneManager = new ArticleTombstoneManager();
             $articleTombstoneManager->insertArticleTombstone($submission, $context);
         }
     }

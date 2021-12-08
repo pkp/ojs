@@ -13,11 +13,9 @@
  * @brief View report plugin
  */
 
-
-import('lib.pkp.classes.plugins.ReportPlugin');
-
 use APP\facades\Repo;
 use APP\submission\Submission;
+use PKP\plugins\ReportPlugin;
 
 class ViewReportPlugin extends ReportPlugin
 {

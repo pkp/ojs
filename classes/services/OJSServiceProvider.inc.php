@@ -17,7 +17,6 @@ namespace APP\services;
 
 use Pimple\Container;
 
-use PKP\services\PKPEmailTemplateService;
 use PKP\services\PKPFileService;
 use PKP\services\PKPSchemaService;
 use PKP\services\PKPSiteService;
@@ -33,11 +32,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         // File service
         $pimple['file'] = function () {
             return new PKPFileService();
-        };
-
-        // Issue service
-        $pimple['issue'] = function () {
-            return new IssueService();
         };
 
         // Section service
@@ -63,16 +57,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         // Site service
         $pimple['site'] = function () {
             return new PKPSiteService();
-        };
-
-        // Submission file service
-        $pimple['submissionFile'] = function () {
-            return new SubmissionFileService();
-        };
-
-        // Email Templates service
-        $pimple['emailTemplate'] = function () {
-            return new PKPEmailTemplateService();
         };
 
         // Schema service

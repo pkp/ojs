@@ -16,6 +16,7 @@
 use APP\file\IssueFileManager;
 use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
 use APP\security\authorization\OjsIssueRequiredPolicy;
+use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
@@ -89,7 +90,6 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
         return [new OrderGridItemsFeature()];
     }
 

@@ -15,8 +15,9 @@
  * @brief OAI metadata format class -- RFC 1807.
  */
 
-use PKP\oai\OAIMetadataFormat;
 use APP\facades\Repo;
+use APP\issue\IssueAction;
+use PKP\oai\OAIMetadataFormat;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
@@ -50,8 +51,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         // Format creators
         $creators = [];
         $authors = Repo::author()->getSubmissionAuthors($article);
-        foreach ($authors as $author)
-        {
+        foreach ($authors as $author) {
             $authorName = $author->getFullName(false, true);
             $affiliation = $author->getLocalizedAffiliation();
             if (!empty($affiliation)) {
@@ -73,7 +73,6 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         // Coverage
         $coverage = $article->getCoverage($article->getData('locale'));
 
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $url = $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]);

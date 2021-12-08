@@ -16,7 +16,6 @@
 	<code function="createDirectories"/>
 
 	<!-- PKP schema components -->
-	<migration class="PKP\migration\install\CategoriesMigration" />
 	<migration class="PKP\migration\install\CommonMigration" />
 	<migration class="PKP\migration\install\ControlledVocabMigration" />
 	<migration class="PKP\migration\install\FilesMigration" />
@@ -42,6 +41,7 @@
 	<migration class="APP\migration\install\OJSMigration" />
 
 	<migration class="PKP\migration\install\AnnouncementsMigration" />
+	<migration class="PKP\migration\install\CategoriesMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>

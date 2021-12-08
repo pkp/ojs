@@ -20,13 +20,13 @@ namespace APP\payment\ojs;
 
 use APP\facades\Repo;
 
+use APP\subscription\Subscription;
+use APP\subscription\SubscriptionAction;
 use PKP\payment\CompletedPayment;
 use PKP\payment\PaymentManager;
+
 use PKP\payment\QueuedPayment;
 use PKP\plugins\PluginRegistry;
-
-use APP\subscription\SubscriptionAction;
-use APP\subscription\Subscription;
 
 class OJSPaymentManager extends PaymentManager
 {
@@ -275,7 +275,6 @@ class OJSPaymentManager extends PaymentManager
                     }
                     // Notify JM/SM of completed online purchase
                     if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
-                        import('classes.subscription.SubscriptionAction');
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INDL');
                     }
                 }
@@ -300,7 +299,6 @@ class OJSPaymentManager extends PaymentManager
 
                     // Notify JM/SM of completed online purchase
                     if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
-                        import('classes.subscription.SubscriptionAction');
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INSTL');
                     }
                 } else {
@@ -308,7 +306,6 @@ class OJSPaymentManager extends PaymentManager
 
                     // Notify JM/SM of completed online purchase
                     if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
-                        import('classes.subscription.SubscriptionAction');
                         SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INDL');
                     }
                 }

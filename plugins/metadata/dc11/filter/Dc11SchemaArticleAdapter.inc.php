@@ -18,11 +18,11 @@
  *  a Submission object.
  */
 
+use APP\facades\Repo;
+use APP\issue\IssueAction;
 use APP\submission\Submission;
 use PKP\metadata\MetadataDataObjectAdapter;
-
 use PKP\metadata\MetadataDescription;
-use APP\facades\Repo;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -155,7 +155,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Identifier: URL
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $includeUrls = $journal->getSetting('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());

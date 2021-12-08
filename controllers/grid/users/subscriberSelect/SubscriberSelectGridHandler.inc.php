@@ -14,8 +14,11 @@
  */
 
 use APP\facades\Repo;
+use PKP\controllers\grid\feature\CollapsibleGridFeature;
+use PKP\controllers\grid\feature\InfiniteScrollingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
+use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
@@ -45,7 +48,6 @@ class SubscriberSelectGridHandler extends GridHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -115,8 +117,6 @@ class SubscriberSelectGridHandler extends GridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.InfiniteScrollingFeature');
-        import('lib.pkp.classes.controllers.grid.feature.CollapsibleGridFeature');
         return [new InfiniteScrollingFeature('infiniteScrolling', $this->getItemsNumber()), new CollapsibleGridFeature()];
     }
 

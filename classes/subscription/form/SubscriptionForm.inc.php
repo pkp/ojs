@@ -13,11 +13,17 @@
  * @brief Base form class for subscription create/edits.
  */
 
-use APP\subscription\Subscription;
-use APP\template\TemplateManager;
+namespace APP\subscription\form;
+
+use APP\core\Application;
 use APP\facades\Repo;
+use APP\subscription\Subscription;
+use APP\subscription\SubscriptionDAO;
+use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionForm extends Form
 {
@@ -51,10 +57,9 @@ class SubscriptionForm extends Form
         $this->subscription = null;
         $this->subscriptionTypes = null;
 
-        import('classes.subscription.SubscriptionDAO');
         $this->validStatus = SubscriptionDAO::getStatusOptions();
 
-        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $isoCodes = app(IsoCodesFactory::class);
         $this->validCountries = [];
         foreach ($isoCodes->getCountries() as $country) {
             $this->validCountries[$country->getAlpha2()] = $country->getLocalName();
@@ -64,7 +69,7 @@ class SubscriptionForm extends Form
         // User is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function ($userId) {
-            return (boolean) Repo::user()->get($userId);
+            return (bool) Repo::user()->get($userId);
         }));
 
         // Subscription status is provided and valid
@@ -267,4 +272,8 @@ class SubscriptionForm extends Form
 
         return $mail;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\form\SubscriptionForm', '\SubscriptionForm');
 }

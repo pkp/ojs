@@ -15,9 +15,11 @@
 
 use APP\handler\Handler;
 use APP\notification\NotificationManager;
-
+use APP\subscription\form\PaymentTypesForm;
+use APP\subscription\form\SubscriptionPolicyForm;
 use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
+use PKP\security\authorization\PKPSiteAccessPolicy;
 use PKP\security\Role;
 
 class PaymentsHandler extends Handler
@@ -59,7 +61,6 @@ class PaymentsHandler extends Handler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.PKPSiteAccessPolicy');
         $this->addPolicy(new PKPSiteAccessPolicy($request, null, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -134,8 +135,6 @@ class PaymentsHandler extends Handler
         $this->validate();
         $this->setupTemplate($request);
 
-        import('classes.subscription.form.SubscriptionPolicyForm');
-
         $templateMgr = TemplateManager::getManager($request);
 
         if (Config::getVar('general', 'scheduled_tasks')) {
@@ -161,7 +160,6 @@ class PaymentsHandler extends Handler
         $this->validate();
         $this->setupTemplate($request);
 
-        import('classes.subscription.form.SubscriptionPolicyForm');
         $subscriptionPolicyForm = new SubscriptionPolicyForm();
         $subscriptionPolicyForm->readInputData();
         if ($subscriptionPolicyForm->validate()) {
@@ -185,7 +183,6 @@ class PaymentsHandler extends Handler
         $this->validate();
         $this->setupTemplate($request);
 
-        import('classes.subscription.form.PaymentTypesForm');
 
         $paymentTypesForm = new PaymentTypesForm();
         $paymentTypesForm->initData();
@@ -203,7 +200,6 @@ class PaymentsHandler extends Handler
         $this->validate();
         $this->setupTemplate($request);
 
-        import('classes.subscription.form.PaymentTypesForm');
         $paymentTypesForm = new PaymentTypesForm();
         $paymentTypesForm->readInputData();
         if ($paymentTypesForm->validate()) {

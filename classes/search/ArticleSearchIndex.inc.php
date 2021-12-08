@@ -15,17 +15,17 @@
 
 namespace APP\search;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\i18n\AppLocale;
 use PKP\config\Config;
+use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 use PKP\search\SearchFileParser;
 
 use PKP\search\SubmissionSearch;
 use PKP\search\SubmissionSearchIndex;
-use PKP\submission\SubmissionFile;
+use PKP\submissionFile\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
@@ -123,9 +123,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
                 $objectId = $searchDao->insertObject($articleId, $type, $submissionFile->getId());
 
-                $position = 0;
                 while (($text = $parser->read()) !== false) {
-                    $this->_indexObjectKeywords($objectId, $text, $position);
+                    $this->_indexObjectKeywords($objectId, $text);
                 }
                 $parser->close();
             }
@@ -163,21 +162,32 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            $submissionFilesIterator = Services::get('submissionFile')->getMany([
-                'submissionIds' => [$article->getId()],
-                'fileStages' => [SubmissionFile::SUBMISSION_FILE_PROOF],
-            ]);
-            foreach ($submissionFilesIterator as $submissionFile) {
+            $collector = Repo::submissionFiles()
+                ->getCollector()
+                ->filterBySubmissionIds([$article->getId()])
+                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
+            $submissionFiles = Repo::submissionFiles()
+                ->getMany($collector);
+            foreach ($submissionFiles as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
-                $dependentFilesIterator = Services::get('submissionFile')->getMany([
-                    'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
-                    'assocIds' => [$submissionFile->getId()],
-                    'submissionIds' => [$article->getId()],
-                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
-                    'includeDependentFiles' => true,
-                ]);
-                foreach ($dependentFilesIterator as $dependentFile) {
-                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
+                $dependentFiles = Repo::submissionFiles()
+                    ->getMany(
+                        Repo::submissionFiles()
+                            ->getCollector()
+                            ->filterByAssoc(
+                                PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
+                                [$submissionFile->getId()]
+                            )
+                            ->filterBySubmissionIds([$article->getId()])
+                            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                            ->includeDependentFiles()
+                    );
+                foreach ($dependentFiles as $dependentFile) {
+                    $this->submissionFileChanged(
+                        $article->getId(),
+                        SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
+                        $dependentFile
+                    );
                 }
             }
         }
@@ -338,18 +348,13 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * Index a block of text for an object.
      *
      * @param $objectId int
-     * @param $text string
-     * @param $position int
+     * @param $text string|array
      */
-    protected function _indexObjectKeywords($objectId, $text, &$position)
+    protected function _indexObjectKeywords($objectId, $text)
     {
         $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
         $keywords = $this->filterKeywords($text);
-        for ($i = 0, $count = count($keywords); $i < $count; $i++) {
-            if ($searchDao->insertObjectKeyword($objectId, $keywords[$i], $position) !== null) {
-                ++$position;
-            }
-        }
+        $searchDao->insertObjectKeywords($objectId, $keywords);
     }
 
     /**
@@ -364,8 +369,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     {
         $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
         $objectId = $searchDao->insertObject($articleId, $type, $assocId);
-        $position = 0;
-        $this->_indexObjectKeywords($objectId, $text, $position);
+        $this->_indexObjectKeywords($objectId, $text);
     }
 
     /**

@@ -15,9 +15,10 @@
 
 use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
+use PKP\security\AccessKeyManager;
 use PKP\security\authorization\SubmissionAccessPolicy;
-
 use PKP\security\Role;
+use PKP\security\Validation;
 
 // FIXME: Add namespacing
 import('lib.pkp.pages.reviewer.PKPReviewerHandler');
@@ -81,7 +82,6 @@ class ReviewerHandler extends PKPReviewerHandler
             return;
         }
 
-        import('lib.pkp.classes.security.AccessKeyManager');
         $reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
         $reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
         if (!$reviewerSubmission) {
@@ -108,7 +108,6 @@ class ReviewerHandler extends PKPReviewerHandler
         }
 
         // Register the user object in the session
-        import('lib.pkp.classes.security.Validation');
         $reason = null;
         if (Validation::registerUserSession($user, $reason)) {
             $this->submission = $reviewerSubmission;

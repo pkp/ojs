@@ -15,7 +15,5 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('lib.pkp.classes.cliTool.MergeUsersTool');
-
 $tool = new \PKP\cliTool\MergeUsersTool($argv ?? []);
 $tool->execute();

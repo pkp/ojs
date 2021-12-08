@@ -19,10 +19,11 @@
  */
 
 import('lib.pkp.tests.PKPTestCase');
-import('classes/issue/Issue');
-import('classes/article/Submission');
-import('classes/article/ArticleGalley');
 import('plugins.importexport.medra.classes.PubObjectCache');
+
+use APP\article\ArticleGalley;
+use APP\issue\Issue;
+use PKP\submission\Submission;
 
 class PubObjectCacheTest extends PKPTestCase
 {

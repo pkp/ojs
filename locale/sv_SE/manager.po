@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2021-08-25 12:05+0000\n"
+"PO-Revision-Date: 2021-10-08 00:19+0000\n"
 "Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sv_SE/>\n"
@@ -1809,3 +1809,30 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Välj landet där tidskriften har sitt säte, eller tidskriftens eller "
 "utgivarens postadress."
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Namnet på webbplatsen när den innehåller mer än en tidskrift"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Betalningsbeloppets valuta, till exempel SEK"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Betalningsbelopp"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Namn på betalningstypen"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "E-postadress till tidskriftens primära kontaktperson"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Tidskriftens signatur för automatiskt genererad e-post"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Namn på tidskriftens primära kontaktperson"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL till tidskriftens webbplats"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Tidskriftens namn"

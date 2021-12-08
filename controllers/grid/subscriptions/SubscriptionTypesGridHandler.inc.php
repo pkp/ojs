@@ -18,13 +18,14 @@ import('controllers.grid.subscriptions.SubscriptionTypesGridRow');
 import('controllers.grid.subscriptions.SubscriptionTypeForm');
 
 use APP\notification\NotificationManager;
+use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
-
+use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
 class SubscriptionTypesGridHandler extends GridHandler
@@ -52,7 +53,6 @@ class SubscriptionTypesGridHandler extends GridHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -153,7 +153,6 @@ class SubscriptionTypesGridHandler extends GridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
         return [new PagingFeature()];
     }
 
