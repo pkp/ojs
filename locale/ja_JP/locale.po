@@ -1,7 +1,8 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 01:40+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"PO-Revision-Date: 2021-12-09 08:29+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
 "Language: ja_JP\n"
@@ -2336,3 +2337,15 @@ msgstr "参加者リストの「任命」リンクを使用して、ゲラを作
 
 msgid "notification.type.editorAssignmentTask"
 msgstr "編集者の任命が必要な論文が投稿されました。"
+
+msgid "payment.waived"
+msgstr "免除"
+
+msgid "payment.unpaid"
+msgstr "未払い"
+
+msgid "installer.updatingInstructions"
+msgstr "既存のOJSをアップグレードする場合は、<a href=\"{$upgradeUrl}\">ここをクリック</a>して進んでください。"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "本誌はオンラインでの公開はしていません。"
