@@ -1,10 +1,16 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"Last-Translator: Takashi Imagire <imagire@gmail.com>\n"
+"PO-Revision-Date: 2021-12-09 08:29+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"ja_JP/>\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.publication.submissionStage"
 msgstr "投稿"
@@ -707,7 +713,7 @@ msgid "manager.setup.otherLockss"
 msgstr "LOCKSS と CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
-msgstr "LOCKSSの<a href=\"{$lockssUrl}\" target=\"_blank\">出版社マニフェスト</a>ページを利用して、参加図書館での雑誌コンテンツの保存・配信を可能にする。
+msgstr "LOCKSSの<a href=\"{$lockssUrl}\" target=\"_blank\"
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr "LOCKSSライセンスは、ジャーナルについてに掲載されます：<a href="http://www.lockss.org/community/publishers-titles-gln/\">LOCKSS ライセンス</a>をご覧下さい"
@@ -1519,278 +1525,290 @@ msgid "manager.subscriptionTypes.form.individual"
 msgstr "個人（ユーザーはログイン時に認証されます）"
 
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr "組織（ユーザーはドメインまたはIPアドレスで認証される）
-Institutional (users are validated via domain or IP address)"
+msgstr "組織（ユーザーはドメインまたはIPアドレスで認証される）"
 
-msgid "manager.subscriptionTypes.form.institutionalValid"
-msgstr "用意された選択肢をご利用ください。"
+msgid "mailable.validateEmailContext.description"
+msgstr "このメールは、設定によって、新規ユーザーがジャーナルに登録する際にメールアドレスの認証が必要であれば自動的に送信されます。"
 
-msgid "manager.subscriptionTypes.form.membership"
-msgstr "購読には会員情報が必要です（例：企業、団体、コンソーシアムなど）。"
+msgid "mailable.validateEmailContext.name"
+msgstr "電子メールの検証（ジャーナル登録）"
 
-msgid "manager.subscriptionTypes.form.membershipValid"
-msgstr "チェックボックスをご利用ください。"
-
-msgid "manager.subscriptionTypes.form.options"
-msgstr "オプション"
-
-msgid "manager.subscriptionTypes.form.public"
-msgstr "この購読種別をウェブサイト上で公開したり、表示したりしないでください。"
-
-msgid "manager.subscriptionTypes.form.publicValid"
-msgstr "チェックボックスをご利用ください。"
-
-msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
-msgstr "保存して別のものを作成"
-
-msgid "manager.subscriptionTypes.form.typeName"
-msgstr "タイプ名"
-
-msgid "manager.subscriptionTypes.form.typeNameExists"
-msgstr "この名前の購読種別はすでに存在しています。"
-
-msgid "manager.subscriptionTypes.form.typeNameRequired"
-msgstr "購読種別名が必要です。"
-
-msgid "manager.subscriptionTypes.name"
-msgstr "購読種別"
-
-msgid "manager.subscriptionTypes.noneCreated"
-msgstr "購読種別が作成されていません。"
-
-msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
-msgstr "購読種別の作成に成功しました。"
-
-msgid "manager.navigationMenus.subscriptions.description"
-msgstr "あなたが提供する購読を説明するページへのリンク。"
-
-msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr "訪問者の現在および過去の購読内容を記載したページへのリンク。"
-
-msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "このリンクは、訪問者がログインしているときにのみ表示されます。"
-
-msgid "manager.setup.categories"
-msgstr "カテゴリー"
-
-msgid "manager.setup.categories.description"
-msgstr "上記のリストから最適なカテゴリーを選択してください。読者はジャーナルセットの中からカテゴリー別に閲覧することができます。"
-
-msgid "grid.category.path"
-msgstr "パス"
-
-msgid "grid.action.addSection"
-msgstr "セクションの追加"
-
-msgid "manager.setup.section.description"
-msgstr "ジャーナルの発行された巻号に掲載された記事は、通常、テーマや内容の種類（レビュー論文、研究など）ごとにセクションで構成されています。"
-
-msgid "settings.roles.gridDescription"
-msgstr "ロールとは、ジャーナル内で異なる権限レベルと関連するワークフローへのアクセスを与えられたユーザーのグループです。権限レベルには5つの種類があります。雑誌管理者はジャーナルのすべて（すべてのコンテンツと設定）にアクセスでき、セクション編集者は割り当てられたすべてのコンテンツに完全にアクセスでき、ジャーナルアシスタントは編集者から明示的に割り当てられたすべての投稿に限定的にアクセスでき、査読者はレビューするよう割り当てられた投稿を見たり実行したりでき、著者は自分の投稿に関する限られた情報を見たり操作したりできます。さらに、ロールにアクセス権が与えられるステージアサインメントは5種類あります。「投稿」、「内部レビュー」、「レビュー」、「編集」、「制作」です。"
-
-msgid "manager.publication.library"
-msgstr "出版社ライブラリ"
-
-msgid "manager.setup.copyrightYearBasis"
-msgstr "新しい記事の著作権年の基本"
-
-msgid "manager.setup.copyrightYearBasis.article"
-msgstr "記事：デフォルトの年は、\"publish-as-you-go\"のように、記事の公開日から引き出されます。"
-
-msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "発行：デフォルトの巻・号年は、その巻・号の発行日から引かれます。"
-
-msgid "manager.setup.resetPermissions"
-msgstr "記事の権限のリセット"
-
-msgid "manager.setup.resetPermissions.confirm"
-msgstr "すべての記事のパーミッションデータをリセットしてよろしいですか？この操作は元に戻すことができません。"
-
-msgid "manager.setup.resetPermissions.description"
-msgstr "出版されたすべての論文の著作権やライセンス情報を削除し、ジャーナルの現在のデフォルト設定に戻します。これにより、記事に添付されていた過去の著作権やライセンス情報がすべて永久に削除されます。場合によっては、異なるライセンスで公開されている作品を再許諾することが法的に認められないこともあります。このツールを使用する際には注意を払い、自分のジャーナルに掲載された記事に対してどのような権利を持っているか不明な場合は、法律の専門家に相談してください。"
-
-msgid "manager.setup.resetPermissions.success"
-msgstr "記事の権限のリセットに成功しました。"
-
-msgid "grid.genres.title.short"
-msgstr "コンポーネント"
-
-msgid "grid.genres.title"
-msgstr "記事の構成"
-
-msgid "grid.genres.description"
-msgstr "これらのコンポーネントは、ファイル名を付けるために使用され、ファイルのアップロード時にプルダウンメニューで表示されます。##と書かれた分類は、ユーザーが投稿全体のファイルを99Zで、または特定のコンポーネントを番号（例：02）で関連付けることができます。"
-
-msgid "plugins.importexport.common.settings"
-msgstr "設定"
-
-msgid "plugins.importexport.common.settings.DOIPluginSettings"
-msgstr "DOIプラグインの設定"
-
-msgid "plugins.importexport.common.export.articles"
-msgstr "記事"
-
-msgid "plugins.importexport.common.export.issues"
-msgstr "巻号"
-
-msgid "plugins.importexport.common.export.representations"
-msgstr "ゲラ"
-
-msgid "plugins.importexport.common.missingRequirements"
-msgstr "プラグインの要件が満たされていない"
-
-msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "このプラグインをご利用いただくには、プラグインのカテゴリである\"公開識別子\"にアクセスし、DOIプラグインを有効にして設定し、有効なDOIプレフィックスを指定してください。"
-
-msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "プラグインの設定が完了していません。"
-
-msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "DOI公開識別子プラグインでは、DOI割り当てのためのパブリッシングオブジェクトが選択されていないため、このプラグインではデポジットやエクスポートはできません。"
-
-msgid "plugins.importexport.common.settings.form.password"
-msgstr "パスワード"
-
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "なお、パスワードは暗号化されずにプレーンテキストで保存されますので、ご注意ください。"
-
-msgid "plugins.importexport.common.filter.issue"
-msgstr "任意の巻号"
-
-msgid "plugins.importexport.common.status.any"
-msgstr "任意のステータス"
-
-msgid "plugins.importexport.common.status.notDeposited"
-msgstr "未預託"
-
-msgid "plugins.importexport.common.status.markedRegistered"
-msgstr "マーク登録済み"
-
-msgid "plugins.importexport.common.status.registered"
-msgstr "登録済み"
-
-msgid "plugins.importexport.common.action"
-msgstr "アクション"
-
-msgid "plugins.importexport.common.action.export"
-msgstr "エクスポート"
-
-msgid "plugins.importexport.common.action.markRegistered"
-msgstr "マークが登録されました"
-
-msgid "plugins.importexport.common.action.register"
-msgstr "登録"
-
-msgid "plugins.importexport.common.validation"
-msgstr "エクスポートや登録の前にXMLを検証します。"
-
-msgid "plugins.importexport.common.error.noObjectsSelected"
-msgstr "選択されたオブジェクトはありません。"
-
-msgid "plugins.importexport.common.error.validation"
-msgstr "選択したオブジェクトを変換できませんでした。"
-
-msgid "plugins.importexport.common.invalidXML"
-msgstr "無効なXML:"
-
-msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "出力ファイル {$param} が読めません。"
-
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "入力ファイル {$param} が読めません。"
-
-msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "登録がうまくいきませんでした! DOI登録サーバーからエラーが返されました: '{$param}'."
-
-msgid "plugins.importexport.common.register.success"
-msgstr "登録完了!"
-
-msgid "plugins.importexport.common.validation.success"
-msgstr "検証に成功しました!"
-
-msgid "plugins.importexport.common.validation.fail"
-msgstr "検証に失敗しました。"
-
-msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
-msgstr "パス {$path} を持つジャーナルのDOIプレフィックスが欠けています。"
-
-msgid "plugins.importexport.common.error.unknownObjects"
-msgstr "指定されたオブジェクトが見つかりませんでした。"
-
-msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "ジャーナル設定で指定された主な連絡先にコピーを送信します。"
-
-msgid "stats.publicationStats"
-msgstr "記事の統計"
-
-msgid "stats.publications.details"
-msgstr "記事の詳細"
-
-msgid "stats.publications.none"
-msgstr "これらのパラメータに一致する利用統計を持つ記事は見つかりませんでした。"
-
-msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr "日付ごとの総アブストラクト閲覧数"
-
-msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr "日付ごとの総ファイル閲覧数"
-
-msgid "stats.publications.countOfTotal"
-msgstr " {$total} 記事中の {$count} "
-
-msgid "stats.publications.abstracts"
-msgstr "アブストラクト"
-
-msgid "stats.publications.galleys"
-msgstr "ファイル"
-
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
-msgstr "投稿確認メールのコピーを本ジャーナルの主連絡先に送る。"
-
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
-msgstr "このジャーナルには主な連絡先が定義されていません。<a href=\"{$url}\">ジャーナル設定</a>から主な連絡先が入力できます。"
-
-msgid "plugins.importexport.native.export.issues.results"
-msgstr "エクスポートした巻号の結果"
-
-msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
-
-msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "ゲラの発行の解析に失敗したプロセス"
-
-msgid "emailTemplate.variable.context.contextName"
-msgstr "ジャーナル名"
-
-msgid "emailTemplate.variable.context.contextUrl"
-msgstr "ジャーナルのホームページのURL"
-
-msgid "emailTemplate.variable.context.contactName"
-msgstr "ジャーナルの主な連絡先の氏名"
-
-msgid "emailTemplate.variable.context.principalContactSignature"
-msgstr "自動送信メールのジャーナルのメール署名"
-
-msgid "emailTemplate.variable.context.contactEmail"
-msgstr "ジャーナルの主な連絡先の電子メールアドレス"
-
-msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr "決済の種類の名称"
-
-msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr "支払い金額"
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "複数のジャーナルがホストされている場合のWebサイト名"
 
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
 msgstr "支払い金額の通貨（USDなど）"
 
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "複数のジャーナルが掲載されている場合のウェブサイト名"
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "支払い金額"
 
-msgid "mailable.validateEmailContext.name"
-msgstr "電子メールの確認（ジャーナル登録）"
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "決済の種類の名称"
 
-msgid "mailable.validateEmailContext.description"
-msgstr "このメールは、新規ユーザーがジャーナルに登録する際、設定によりメールアドレスの認証が必要な場合に自動的に送信されます。"
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "ジャーナルの主な連絡先の電子メールアドレス"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "ジャーナルの自動送信メールのメール署名"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "ジャーナルの主な連絡先の名前"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "ジャーナルのホームページのURL"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "ジャーナル名"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "刊行ゲラの解析に失敗したプロセス"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "刊行結果のエクスポート"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "本誌には「主な連絡先」が定義されていません。「<a href=\"{$url}\">ジャーナル設定</a>」から入力できます。"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "投稿確認メールのコピーを本誌の主な連絡先に送る。"
+
+msgid "stats.publications.galleys"
+msgstr "ファイル"
+
+msgid "stats.publications.abstracts"
+msgstr "アブストラクト"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} 記事中 {$count} 記事"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "日付ごとのアブストラクトの総閲覧数"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "日付ごとのファイルの総閲覧数"
+
+msgid "stats.publications.none"
+msgstr "これらのパラメータに一致する利用統計を持つ記事は見つかりませんでした。"
+
+msgid "stats.publications.details"
+msgstr "記事の詳細"
+
+msgid "stats.publicationStats"
+msgstr "記事の統計情報"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "「ジャーナル設定」で指定された「主な連絡先」にコピーを送信します。"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "指定されたオブジェクトが見つかりませんでした。"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "パス {$path} のジャーナルに DOI プレフィックスがありません。"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "検証に失敗しました。"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "検証に成功しました！"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "登録が完了しました！"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "登録が成功しませんでした。DOI登録サーバーがエラー「'{$param}'」を返しました。"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "入力ファイル{$param}は読み込み可能ではありません。"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "出力ファイル {$param} は書き込み可能ではありません。"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "無効なXML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "選択したオブジェクトを変換できませんでした。"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "選択されたオブジェクトはありません。"
+
+msgid "plugins.importexport.common.validation"
+msgstr "エクスポートや登録の前にXMLを検証します。"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "登録"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "マークが登録されました"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "エクスポート"
+
+msgid "plugins.importexport.common.action"
+msgstr "アクション"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "登録済み"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "マークは登録済み"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "未預託"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "任意の状態"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "任意の巻号"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "パスワードはプレーンテキストとして保存される、つまり暗号化されないので、ご注意ください。"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "パスワード"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI公開識別子プラグインでは、DOI割り当て用に公開オブジェクトが選択されていないため、このプラグインではデポジットやエクスポートはできません。"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "プラグインの設定が完了していません。"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"このプラグインを使用するには、「公開識別子」プラグインのカテゴリに移動し、DOIプラグインを有効にして設定し、正当なDOIプレフィックスを指定してください"
+"。"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "プラグインの要件を満たしていない"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "ゲラ"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "巻号"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "記事"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOIプラグインの設定"
+
+msgid "plugins.importexport.common.settings"
+msgstr "設定"
+
+msgid "grid.genres.description"
+msgstr ""
+"これらの要素は、ファイル名を付けるために使用され、ファイルのアップロード時にプルダウンメニューに表示されます。##と書かれた形式では、ユーザーはファイルを"
+"投稿作品全体（99Z）や特定の要素に番号（例：02）で関連付けることができます。"
+
+msgid "grid.genres.title"
+msgstr "記事の要素"
+
+msgid "grid.genres.title.short"
+msgstr "要素"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "記事の権限は正常にリセットされました。"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"出版されたすべての論文の著作権表示とライセンス情報を削除し、ジャーナルの現在のデフォルト設定に戻します。これにより、記事に添付されていた以前の著作権やライ"
+"センス情報がすべて完全に削除されます。場合によっては、異なるライセンスで出版された作品を再ライセンスすることが法的に認められないこともあります。このツール"
+"の使用には十分注意を払い、ジャーナルに掲載された論文に対してどのような権利を持っているかわからない場合は、法律の専門家に相談してください。"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "すべての記事のパーミッションデータをリセットしてよろしいですか？この操作は元に戻すことができません。"
+
+msgid "manager.setup.resetPermissions"
+msgstr "記事の権限のリセット"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "巻号：デフォルトの年は、その巻号の発行日から取得されます。"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "記事：デフォルトの年は、「publish-as-you-go」のように、記事の公開日から取得されます。"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "新しい記事の著作権年"
+
+msgid "manager.publication.library"
+msgstr "出版者ライブラリ"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"ロールとは、ジャーナル内のさまざまな権限レベルおよび関連するワークフローへのアクセス権が付与されているジャーナル内のユーザーのグループです。 5つの異なる"
+"権限レベルがあります。雑誌管理者は、ジャーナル内のすべて（すべてのコンテンツと設定）にアクセスできます。セクション編集者は、任命されたすべてのコンテンツに"
+"完全にアクセスできます。ジャーナルアシスタントは、編集者によって明示的に任命されたすべての投稿のみとアクセスが制限されています。査読者は、査読を任命された"
+"投稿を見たり実行できます。著者は、自分の投稿に関する限られた情報を見たり操作できます。さらに、ロールにアクセス権が与えられる異なる5つのステージ割当があり"
+"ます。投稿、内部査読、査読、編集、制作です。"
+
+msgid "manager.setup.section.description"
+msgstr "ジャーナルの発行された巻号に掲載された記事は、通常、テーマやコンテンツの種類（レビュー論文、研究論文など）ごとのセクションで編成されます。"
+
+msgid "grid.action.addSection"
+msgstr "セクションの追加"
+
+msgid "grid.category.path"
+msgstr "パス"
+
+msgid "manager.setup.categories.description"
+msgstr "上記のリストから最適な分野を選択してください。読者は一連のジャーナルの中から分野別に閲覧することができます。"
+
+msgid "manager.setup.categories"
+msgstr "分野"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "このリンクは、訪問者がログインしている場合にのみ表示されます。"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "訪問者の現在および過去の購読情報を記載したページへのリンク。"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "提供する購読について説明するページへのリンク。"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "購読種別の作成に成功しました。"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "購読種別が作成されていません。"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "購読種別"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "購読種別名が必要です。"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "この名前の購読種別はすでに存在しています。"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "種別名"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "保存してさらに追加"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "チェックボックスをご利用ください。"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "購読種別をウェブサイト上で公開したり閲覧可能にしないでください。"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "オプション"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "チェックボックスをご利用ください。"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "購読には会員情報が必要です（例：協会、団体、コンソーシアムなど）"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "用意されている選択肢をご利用ください。"
 
 msgid "manager.setup.announcements"
 msgstr "お知らせ"
