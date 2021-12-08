@@ -39,6 +39,7 @@ use PKP\db\DAO;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
 use PKP\plugins\HookRegistry;
+use PKP\plugins\PluginRegistry;
 
 import('controllers.grid.issues.IssueGridRow');
 
