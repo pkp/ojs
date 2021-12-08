@@ -13,7 +13,7 @@
  * @brief Class for block component of announcement feed plugin
  */
 
-import('lib.pkp.classes.plugins.BlockPlugin');
+use PKP\plugins\BlockPlugin;
 
 class AnnouncementFeedBlockPlugin extends BlockPlugin
 {

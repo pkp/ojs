@@ -15,7 +15,7 @@
 
 use APP\handler\Handler;
 use PKP\controllers\tab\workflow\PKPReviewRoundTabHandler;
-
+use PKP\security\authorization\WorkflowStageAccessPolicy;
 use PKP\security\Role;
 
 class ReviewRoundTabHandler extends PKPReviewRoundTabHandler
@@ -43,7 +43,6 @@ class ReviewRoundTabHandler extends PKPReviewRoundTabHandler
     {
         $stageId = (int) $request->getUserVar('stageId'); // This is validated in WorkflowStageAccessPolicy.
 
-        import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
         $this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
 
         return parent::authorize($request, $args, $roleAssignments);

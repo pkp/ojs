@@ -15,9 +15,9 @@
  * @brief OJS-specific implementation of the Dc11Schema.
  */
 
-
 import('lib.pkp.plugins.metadata.dc11.schema.PKPDc11Schema');
-import('lib.pkp.classes.metadata.MetadataTypeDescription');
+
+use PKP\metadata\MetadataTypeDescription;
 
 class Dc11Schema extends PKPDc11Schema
 {

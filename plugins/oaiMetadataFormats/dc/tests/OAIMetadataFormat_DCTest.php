@@ -22,13 +22,21 @@ require_mock_env('env2');
 
 import('lib.pkp.tests.PKPTestCase');
 
+use APP\article\ArticleGalley;
+use APP\article\AuthorDAO;
+use APP\article\ArticleGalleyDAO;
+use APP\oai\ojs\OAIDAO;
+use APP\core\Request;
+use APP\issue\Issue;
+use APP\journal\Journal;
+use APP\journal\Section;
+use PKP\core\PKPRouter;
+use PKP\submission\Submission;
 use PKP\oai\OAIRecord;
 use Illuminate\Support\Facades\App;
 
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormat_DC');
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormatPlugin_DC');
-
-import('lib.pkp.classes.services.PKPSchemaService'); // Constants
 
 class OAIMetadataFormat_DCTest extends PKPTestCase
 {
@@ -76,7 +84,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $author->setEmail('someone@example.com');
 
         // Article
-        import('classes.submission.Submission');
         $article = $this->getMockBuilder(Submission::class)
             ->setMethods(['getBestId'])
             ->getMock();
@@ -98,14 +105,12 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $article->setLanguage('en_US');
 
         // Galleys
-        import('classes.article.ArticleGalley');
         $galley = new ArticleGalley();
         $galley->setId(98);
         $galley->setStoredPubId('doi', 'galley-doi');
         $galleys = [$galley];
 
         // Journal
-        import('classes.journal.Journal');
         $journal = $this->getMockBuilder(Journal::class)
             ->setMethods(['getSetting'])
             ->getMock();
@@ -117,12 +122,10 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $journal->setId($journalId);
 
         // Section
-        import('classes.journal.Section');
         $section = new Section();
         $section->setIdentifyType('section-identify-type', 'en_US');
 
         // Issue
-        import('classes.issue.Issue');
         $issue = $this->getMockBuilder(Issue::class)
             ->setMethods(['getIssueIdentification'])
             ->getMock();
@@ -140,7 +143,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         //
 
         // Router
-        import('lib.pkp.classes.core.PKPRouter');
         $router = $this->getMockBuilder(PKPRouter::class)
             ->setMethods(['url'])
             ->getMock();
@@ -151,7 +153,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->will($this->returnCallback([$this, 'routerUrl']));
 
         // Request
-        import('classes.core.Request');
         $request = $this->getMockBuilder(Request::class)
             ->setMethods(['getRouter'])
             ->getMock();
@@ -166,7 +167,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         //
 
         // FIXME getBySubmissionId should use the publication id now.
-        import('classes.article.AuthorDAO');
         $authorDao = $this->getMockBuilder(AuthorDAO::class)
             ->setMethods(['getBySubmissionId'])
             ->getMock();
@@ -176,7 +176,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         DAORegistry::registerDAO('AuthorDAO', $authorDao);
 
         // Create a mocked OAIDAO that returns our test data.
-        import('classes.oai.ojs.OAIDAO');
         $oaiDao = $this->getMockBuilder(OAIDAO::class)
             ->setMethods(['getJournal', 'getSection', 'getIssue'])
             ->getMock();
@@ -192,7 +191,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
         // Create a mocked ArticleGalleyDAO that returns our test data.
-        import('classes.article.ArticleGalleyDAO');
         $articleGalleyDao = $this->getMockBuilder(ArticleGalleyDAO::class)
             ->setMethods(['getBySubmissionId'])
             ->getMock();

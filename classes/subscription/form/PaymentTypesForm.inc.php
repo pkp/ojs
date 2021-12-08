@@ -13,7 +13,12 @@
  * @brief Permit configuration of the various payment types.
  */
 
+namespace APP\subscription\form;
+
 use PKP\form\Form;
+use PKP\db\DAORegistry;
+use APP\core\Application;
+use APP\i18n\AppLocale;
 
 class PaymentTypesForm extends Form
 {
@@ -86,3 +91,8 @@ class PaymentTypesForm extends Form
         $journalDao->updateObject($journal);
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\form\PaymentTypesForm', '\PaymentTypesForm');
+}
+

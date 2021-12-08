@@ -15,12 +15,9 @@
 
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
-
-import('lib.pkp.classes.plugins.GenericPlugin');
-
 use APP\template\TemplateManager;
+use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
-
 use PKP\submissionFile\SubmissionFile;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin

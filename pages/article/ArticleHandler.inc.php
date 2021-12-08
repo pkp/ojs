@@ -18,13 +18,12 @@ use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-
+use APP\issue\IssueAction;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
-
 use PKP\submissionFile\SubmissionFile;
 
 class ArticleHandler extends Handler
@@ -111,7 +110,6 @@ class ArticleHandler extends Handler
             }
         }
 
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $context = $request->getContext();
         $user = $request->getUser();
@@ -314,7 +312,6 @@ class ArticleHandler extends Handler
 
             // Get the subscription status if displaying the abstract;
             // if access is open, we can display links to the full text.
-            import('classes.issue.IssueAction');
 
             // The issue may not exist, if this is an editorial user
             // and scheduling hasn't been completed yet for the article.
@@ -499,7 +496,6 @@ class ArticleHandler extends Handler
      */
     public function userCanViewGalley($request, $articleId, $galleyId = null)
     {
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
 
         $context = $request->getContext();

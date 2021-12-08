@@ -19,8 +19,8 @@
  */
 
 use APP\submission\Submission;
+use APP\issue\IssueAction;
 use PKP\metadata\MetadataDataObjectAdapter;
-
 use PKP\metadata\MetadataDescription;
 use APP\facades\Repo;
 
@@ -155,7 +155,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Identifier: URL
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $includeUrls = $journal->getSetting('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());

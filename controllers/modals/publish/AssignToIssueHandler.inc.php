@@ -16,9 +16,10 @@
 
 use APP\handler\Handler;
 use APP\template\TemplateManager;
-
 use PKP\core\JSONMessage;
 use PKP\security\Role;
+use PKP\security\authorization\SubmissionAccessPolicy;
+use PKP\security\authorization\PublicationAccessPolicy;
 
 class AssignToIssueHandler extends Handler
 {
@@ -60,9 +61,7 @@ class AssignToIssueHandler extends Handler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
         $this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
-        import('lib.pkp.classes.security.authorization.PublicationAccessPolicy');
         $this->addPolicy(new PublicationAccessPolicy($request, $args, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }

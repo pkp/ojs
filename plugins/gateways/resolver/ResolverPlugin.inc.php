@@ -13,8 +13,7 @@
  * @brief Simple resolver gateway plugin
  */
 
-import('lib.pkp.classes.plugins.GatewayPlugin');
-
+use PKP\plugins\GatewayPlugin;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\template\TemplateManager;

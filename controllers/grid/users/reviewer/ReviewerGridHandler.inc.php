@@ -13,9 +13,8 @@
  * @brief Handle reviewer grid requests.
  */
 
-import('lib.pkp.classes.controllers.grid.users.reviewer.PKPReviewerGridHandler');
-
 use APP\facades\Repo;
+use PKP\controllers\grid\users\reviewer\PKPReviewerGridHandler;
 use PKP\log\SubmissionLog;
 
 class ReviewerGridHandler extends PKPReviewerGridHandler

@@ -13,11 +13,10 @@
  * @brief Form class for individual subscription create/edits.
  */
 
-import('classes.subscription.form.SubscriptionForm');
-
+use APP\subscription\form\SubscriptionForm;
 use APP\notification\NotificationManager;
-
 use PKP\notification\PKPNotification;
+use APP\subscription\IndividualSubscription;
 
 class IndividualSubscriptionForm extends SubscriptionForm
 {
@@ -79,7 +78,6 @@ class IndividualSubscriptionForm extends SubscriptionForm
     {
         $insert = false;
         if (!isset($this->subscription)) {
-            import('classes.subscription.IndividualSubscription');
             $this->subscription = new IndividualSubscription();
             $insert = true;
         }

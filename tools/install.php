@@ -15,20 +15,8 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('lib.pkp.classes.cliTool.InstallTool');
-
 class OJSInstallTool extends \PKP\cliTool\InstallTool
 {
-    /**
-     * Constructor.
-     *
-     * @param $argv array command-line arguments
-     */
-    public function __construct($argv = [])
-    {
-        parent::__construct($argv);
-    }
-
     /**
      * Read installation parameters from stdin.
      * FIXME: May want to implement an abstract "CLIForm" class handling input/validation.

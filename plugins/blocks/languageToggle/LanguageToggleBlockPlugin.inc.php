@@ -13,7 +13,7 @@
  * @brief Class for language selector block plugin
  */
 
-import('lib.pkp.classes.plugins.BlockPlugin');
+use PKP\plugins\BlockPlugin;
 
 class LanguageToggleBlockPlugin extends BlockPlugin
 {
