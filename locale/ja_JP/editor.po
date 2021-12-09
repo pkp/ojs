@@ -1,7 +1,8 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-16 05:57+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"PO-Revision-Date: 2021-12-10 01:07+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ja_JP/>\n"
 "Language: ja_JP\n"
@@ -439,3 +440,8 @@ msgstr "受領"
 
 msgid "editor.submissions.invite"
 msgstr "依頼"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"削除を依頼したカバーイメージは、別のジャーナルの巻号と一致しています。正しいジャーナルを使用しているか、正しい巻・号IDを使用しているかを確認し、再度お試"
+"しください。"
