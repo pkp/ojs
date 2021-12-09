@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-09 08:29+0000\n"
+"PO-Revision-Date: 2021-12-10 01:07+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ja_JP/>\n"
@@ -109,7 +109,7 @@ msgid "manager.language.forms"
 msgstr "フォーム"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr "これにより、このロケールに固有のジャーナル設定がすべて置き換えられます。"
+msgstr "これは本言語に固有のジャーナル設定がすべて置き換えられます"
 
 msgid "manager.languages.languageInstructions"
 msgstr "OJSはいくつかのサポートされた言語のいずれかでユーザーに提供することができます。また、OJSは多言語システムとしても動作し、各ページで言語を切り替えたり、特定のデータを複数の言語で入力したりすることができます。<br /><br/>OJSがサポートする言語が以下に記載されていない場合は、サイト管理者に頼んで、サイト管理インターフェイスから言語をインストールしてください。新しい言語のサポートを追加する手順は、OJSのドキュメントを参照してください。"
@@ -133,10 +133,10 @@ msgid "manager.payment.amount"
 msgstr "金額"
 
 msgid "manager.payment.authorFees"
-msgstr "著者の料金"
+msgstr "論文掲載料"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "著者の処理料金を有効にするために、以下の料金を入力してください。"
+msgstr "著者へ処理費用を請求できるようにするのに、以下に料金を入力してください。"
 
 msgid "manager.payment.currencymessage"
 msgstr "OJSはいかなる通貨変換も行いません。 購読料の支払いを受け付ける場合は、購読料の通貨がここで指定したものと一致するようにする必要があります。"
@@ -157,14 +157,13 @@ msgid "manager.payment.feePaymentOptions"
 msgstr "料金支払い方法"
 
 msgid "manager.payment.form.numeric"
-msgstr "すべてのコストは正の数値でなければなりません（小数点以下も可）。"
+msgstr "すべての料金は正の数値でなければなりません（小数点以下も可）"
 
 msgid "manager.payment.generalFees"
 msgstr "一般料金"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "アソシエーションメンバーシップは「ジャーナルについて」の「ポリシー」に表示されます。"
+msgstr "組織会員は「ジャーナルについて」の「ポリシー」に表示されます。"
 
 msgid "manager.payment.generalOptions"
 msgstr "一般的なオプション"
@@ -200,16 +199,16 @@ msgid "manager.payment.options.membershipFee"
 msgstr "アソシエーションメンバーシップ"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "発行物や記事のPDF版へのアクセスのみ制限します。"
+msgstr "巻号や記事のPDF版へのアクセスだけに制限"
 
 msgid "manager.payment.options.publicationFee"
 msgstr "記事作成料"
 
 msgid "manager.payment.options.purchaseArticleFee"
-msgstr "Purchase Article"
+msgstr "記事の購入"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "記事の購入"
+msgstr "巻号の購入"
 
 msgid "manager.payment.options.text"
 msgstr "決済方法の説明"
@@ -310,14 +309,11 @@ msgstr "アイテムの投稿は、編集者およびセクション編集者の
 msgid "manager.sections.editors"
 msgstr "セクション編集者"
 
-#, fuzzy
 msgid "manager.sections.confirmDeactivateSection.error"
-msgstr ""
-"少なくとも1つのセクションがアクティブになっている必要があります。"
-"このジャーナルへのすべての投稿を無効にするには、ワークフロー設定をご覧ください。"
+msgstr "少なくとも1つのセクションが有効になっていなければなりません。このジャーナルへのすべての投稿を無効にするには、ワークフロー設定をご覧ください。"
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "セクションには略式のタイトルが必要です。"
+msgstr "セクションには略式のタイトルが必要"
 
 msgid "manager.sections.form.mustAllowPermission"
 msgstr "各セクションエディターの割り当てには、少なくとも1つのチェックボックスがチェックされていることを確認してください。"
@@ -359,7 +355,7 @@ msgid "manager.sections.reviewed"
 msgstr "査読付き"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "ジャーナルの索引には掲載されません。"
+msgstr "ジャーナルの索引には掲載されない"
 
 msgid "manager.sections.submissionReview"
 msgstr "査読されません"
@@ -476,7 +472,7 @@ msgid "manager.setup.disciplineExamples"
 msgstr "(例えば、歴史、教育、社会学、心理学、カルチュラル・スタディーズ、法学)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "このジャーナルに関連する学術分野の例を示してください。"
+msgstr "このジャーナルに関連する学術分野の例を示す"
 
 msgid "manager.setup.displayCurrentIssue"
 msgstr "現行巻号の目次を追加する（ある場合）。"
@@ -713,10 +709,14 @@ msgid "manager.setup.otherLockss"
 msgstr "LOCKSS と CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
-msgstr "LOCKSSの<a href=\"{$lockssUrl}\" target=\"_blank\"
+msgstr ""
+"LOCKSSに参加している図書館での雑誌コンテンツの保存・配信を、LOCKSS<a href=\"{$lockssUrl}\" target=\""
+"_blank\">発行者マニフェスト</a>ページを介して可能にします。"
 
 msgid "manager.setup.lockssLicenseDescription"
-msgstr "LOCKSSライセンスは、ジャーナルについてに掲載されます：<a href="http://www.lockss.org/community/publishers-titles-gln/\">LOCKSS ライセンス</a>をご覧下さい"
+msgstr ""
+"LOCKSSライセンスは、「ジャーナルについて」に掲載されます：<a href=\"http://www.lockss.org/community/"
+"publishers-titles-gln/\" target=\"_blank\">LOCKSS ライセンス</a>をご覧下さい"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS ライセンスの説明"
@@ -731,7 +731,9 @@ msgid "manager.setup.clockssEnable"
 msgstr "CLOCKSSを有効にして、CLOCKSSの<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher マニフェスト</a>ページ経由で参加図書館からジャーナルコンテンツを保存・配信する。"
 
 msgid "manager.setup.clockssLicenseDescription"
-msgstr "CLOCKSSライセンスは「ジャーナルについて」に掲載されます。<a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>をご覧ください。"
+msgstr ""
+"CLOCKSSライセンスは「ジャーナルについて」に掲載されます。<a href=\"http://clockss.org/\" target=\""
+"_blank\">CLOCKSS ライセンス</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS ライセンスの説明"
@@ -1111,7 +1113,7 @@ msgid "manager.subscriptionPolicies.xWeeks"
 msgstr "{$x} 週"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "購読者には、購読期間終了後にメールで通知。"
+msgstr "購読者には、購読期間終了後にメールで通知"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
 msgstr "購読者には、購読期間終了後にメールで通知。"
@@ -1366,7 +1368,7 @@ msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr "ここでIPアドレス範囲を入力する場合、ドメインは任意です。<br />有効な値としては、IPアドレス（例：142.58.103.1）、IPアドレス範囲（例：142.58.103.1 - 142.58.103.4）、ワイルドカード「*」を使用したIPアドレス範囲（例：142.58.*.*）、CIDRを使用したIPアドレス範囲（例：142.58.100.0/24）があります。"
 
 msgid "manager.subscriptions.form.ipRangeValid"
-msgstr "有効なIPアドレスを入力してください。"
+msgstr "有効なIPアドレス範囲を入力してください。"
 
 msgid "manager.subscriptions.form.deleteIpRange"
 msgstr "削除"
@@ -1757,10 +1759,10 @@ msgid "grid.category.path"
 msgstr "パス"
 
 msgid "manager.setup.categories.description"
-msgstr "上記のリストから最適な分野を選択してください。読者は一連のジャーナルの中から分野別に閲覧することができます。"
+msgstr "上記のリストから最適なカテゴリーを選択してください。読者は一連のジャーナルの中からカテゴリー別に閲覧することができます。"
 
 msgid "manager.setup.categories"
-msgstr "分野"
+msgstr "カテゴリー"
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
 msgstr "このリンクは、訪問者がログインしている場合にのみ表示されます。"
