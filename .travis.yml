@@ -71,12 +71,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -85,12 +84,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -99,12 +97,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -113,12 +110,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -127,12 +123,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -141,15 +136,13 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
-
 
 script:
   - source ./lib/pkp/tools/travis/prepare-tests.sh
