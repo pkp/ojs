@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-10 05:41+0000\n"
+"PO-Revision-Date: 2021-12-10 18:54+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
@@ -222,10 +222,10 @@ msgid "grid.action.workflow"
 msgstr "投稿ワークフロー"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "新投稿"
+msgstr "新規投稿"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "へ新投稿"
+msgstr "新規投稿の開始："
 
 msgid "submission.title.tip"
 msgstr ""
