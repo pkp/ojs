@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-10 01:07+0000\n"
+"PO-Revision-Date: 2021-12-10 18:54+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -996,10 +996,10 @@ msgid "about.onlineSubmissions.viewSubmissions"
 msgstr "保留中の投稿の閲覧"
 
 msgid "about.onlineSubmissions.newSubmission"
-msgstr "新投稿"
+msgstr "新規投稿"
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr "<a href=\"{$url}\">{$name}</a> へ新投稿をする。"
+msgstr "<a href=\"{$url}\">{$name}</a> へ新規投稿をする。"
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission}または{$viewSubmissions}。"
