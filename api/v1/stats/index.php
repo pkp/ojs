@@ -34,4 +34,7 @@ if (strpos($requestPath, '/stats/publications')) {
 } elseif (strpos($requestPath, '/stats/contexts')) {
     import('lib.pkp.api.v1.stats.contexts.PKPStatsContextHandler');
     return new PKPStatsContextHandler();
+} elseif (strpos($requestPath, '/stats/sushi')) {
+    import('api.v1.stats.sushi.StatsSushiHandler');
+    return new StatsSushiHandler();
 }
