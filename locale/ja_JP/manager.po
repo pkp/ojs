@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-10 01:07+0000\n"
+"PO-Revision-Date: 2021-12-10 18:54+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ja_JP/>\n"
@@ -1548,13 +1548,13 @@ msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "決済の種類の名称"
 
 msgid "emailTemplate.variable.context.contactEmail"
-msgstr "ジャーナルの主な連絡先の電子メールアドレス"
+msgstr "ジャーナルの連絡責任者の電子メールアドレス"
 
 msgid "emailTemplate.variable.context.principalContactSignature"
 msgstr "ジャーナルの自動送信メールのメール署名"
 
 msgid "emailTemplate.variable.context.contactName"
-msgstr "ジャーナルの主な連絡先の名前"
+msgstr "ジャーナルの連絡責任者の名前"
 
 msgid "emailTemplate.variable.context.contextUrl"
 msgstr "ジャーナルのホームページのURL"
@@ -1572,10 +1572,10 @@ msgid "plugins.importexport.native.export.issues.results"
 msgstr "刊行結果のエクスポート"
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
-msgstr "本誌には「主な連絡先」が定義されていません。「<a href=\"{$url}\">ジャーナル設定</a>」から入力できます。"
+msgstr "本誌には「連絡責任者」が定義されていません。「<a href=\"{$url}\">ジャーナル設定</a>」から入力できます。"
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
-msgstr "投稿確認メールのコピーを本誌の主な連絡先に送る。"
+msgstr "投稿確認メールのコピーを本誌の連絡責任者に送る。"
 
 msgid "stats.publications.galleys"
 msgstr "ファイル"
@@ -1602,7 +1602,7 @@ msgid "stats.publicationStats"
 msgstr "記事の統計情報"
 
 msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "「ジャーナル設定」で指定された「主な連絡先」にコピーを送信します。"
+msgstr "「ジャーナル設定」で指定された「連絡責任者」にコピーを送信します。"
 
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "指定されたオブジェクトが見つかりませんでした。"
