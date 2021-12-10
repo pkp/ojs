@@ -121,7 +121,7 @@ class Upgrade extends Installer
             ->leftJoin('submissions as s', 's.submission_id', '=', 'sf.submission_id')
             ->where('sf.file_stage', '=', SubmissionFile::SUBMISSION_FILE_SUBMISSION)
             ->where('sf.assoc_type', '=', ASSOC_TYPE_REPRESENTATION)
-            ->where('sf.revision', '=', 'ssf.revision')
+            ->where('sf.revision', '=', DB::raw('ssf.revision'))
             ->get();
 
         foreach ($rows as $row) {
