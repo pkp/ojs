@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-10 18:54+0000\n"
+"PO-Revision-Date: 2021-12-11 08:32+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -308,7 +308,7 @@ msgid "user.showAllJournals"
 msgstr "全てのジャーナルの表示"
 
 msgid "user.profile.profileImage"
-msgstr "プロファイル画像"
+msgstr "プロフィール画像"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "この雑誌では役割が与えられていないユーザーを含む。"
