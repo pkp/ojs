@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-11 08:32+0000\n"
+"PO-Revision-Date: 2021-12-12 11:16+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
@@ -245,7 +245,7 @@ msgid "user.role.subscriptionManagers"
 msgstr "購読管理者"
 
 msgid "user.role.subEditors"
-msgstr "セクションエディタ"
+msgstr "セクション編集者"
 
 msgid "user.role.managers"
 msgstr "雑誌管理者"
@@ -254,7 +254,7 @@ msgid "user.role.subscriptionManager"
 msgstr "購読管理者"
 
 msgid "user.role.subEditor"
-msgstr "セクションエディタ"
+msgstr "セクション編集者"
 
 msgid "user.role.manager"
 msgstr "雑誌管理者"
@@ -617,7 +617,7 @@ msgid "navigation.skip.issue"
 msgstr "最新号へスキップ"
 
 msgid "navigation.skip.about"
-msgstr "本雑誌についてへスキップ"
+msgstr "本誌についてへスキップ"
 
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName} が投稿物 {$submissionId} の{$round}回目の査読を受諾した。"
@@ -955,7 +955,7 @@ msgid "about.delayedOpenAccessDescription2"
 msgstr "ヵ月からオープンアクセスで公開されます。"
 
 msgid "about.delayedOpenAccessDescription1"
-msgstr "本雑誌のコンテンツは、出版後"
+msgstr "本誌のコンテンツは、出版後"
 
 msgid "about.delayedOpenAccess"
 msgstr "エンバーゴ付きオープンアクセス"
@@ -1035,7 +1035,7 @@ msgid "about.history"
 msgstr "雑誌の歴史"
 
 msgid "about.aboutContext"
-msgstr "本雑誌について"
+msgstr "本誌について"
 
 msgid "about.contact"
 msgstr "雑誌の連絡先"
@@ -1472,7 +1472,7 @@ msgid "reviewer.article.mustSelectDecision"
 msgstr "審査結果が選択されていません。審査結果を選択する必要があります。"
 
 msgid "reviewer.article.selectRecommendation.byEditor"
-msgstr "査読者の推薦を設定または調整します。"
+msgstr "査読者の査読結果を設定または調整します。"
 
 msgid "reviewer.article.selectRecommendation"
 msgstr ""
@@ -1741,7 +1741,7 @@ msgstr ""
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "ステップ: 投稿キュー &gt; 投稿査読 &gt; 投稿編集 &gt; 目次。<br /><br />\n"
-"編集作業のこれらの側面を処理するためのモデルを選択してください。(編集長とセクションエディターを指定するには、雑誌設定で編集者に移動してください。)"
+"編集作業のこれらの側面を処理するためのモデルを選択してください。(編集長とセクション編集者を任命するには、雑誌設定で編集者に移動してください。)"
 
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
