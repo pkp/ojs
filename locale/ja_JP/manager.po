@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-11 08:32+0000\n"
+"PO-Revision-Date: 2021-12-12 11:16+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ja_JP/>\n"
@@ -286,7 +286,7 @@ msgid "manager.sections.abstractsNotRequired"
 msgstr "アブストラクトは不要"
 
 msgid "manager.section.noSectionEditors"
-msgstr "まだセクションエディターはいません。まず、「管理」→「設定」→「ユーザー＆役割」で、少なくとも1人のユーザーにこの役割を追加してください。"
+msgstr "まだセクション編集者はいません。まず、「管理」→「設定」→「ユーザー＆役割」で、少なくとも1人のユーザーにこの役割を追加してください。"
 
 msgid "manager.sections.assigned"
 msgstr "このセクションの編集者"
@@ -316,7 +316,7 @@ msgid "manager.sections.form.abbrevRequired"
 msgstr "セクションには略式のタイトルが必要"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "各セクションエディターの割り当てには、少なくとも1つのチェックボックスがチェックされていることを確認してください。"
+msgstr "各セクション編集者の任命には、少なくとも1つのチェックボックスがチェックされていることを確認してください。"
 
 msgid "manager.sections.form.reviewFormId"
 msgstr "有効なレビューフォームが選択されていることを確認してください。"
@@ -364,7 +364,7 @@ msgid "manager.section.submissionsToThisSection"
 msgstr "ジャーナルのこのセクションに投稿されたもの"
 
 msgid "manager.sections.unassigned"
-msgstr "セクションエディターの募集"
+msgstr "セクション編集者の募集"
 
 msgid "manager.sections.wordCount"
 msgstr "ワード数"
@@ -895,7 +895,7 @@ msgid "manager.setup.searchDescription.description"
 msgstr "検索エンジンがジャーナルを検索結果に表示する際に表示できるよう、ジャーナルの簡単な説明（50～300文字）を記入してください。"
 
 msgid "manager.setup.sectionsAndSectionEditors"
-msgstr "セクションとセクションエディター"
+msgstr "セクションとセクション編集者"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
 msgstr "(セクションが追加されていない場合は、デフォルトで「記事」セクションに投稿されます。）"
