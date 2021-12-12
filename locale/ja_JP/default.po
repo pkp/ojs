@@ -1,7 +1,8 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-04 11:25+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"PO-Revision-Date: 2021-12-12 11:15+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "ja_JP/>\n"
 "Language: ja_JP\n"
@@ -127,12 +128,12 @@ msgstr ""
 
 msgid "default.contextSettings.openAccessPolicy"
 msgstr ""
-"本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。"
+"本誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。"
 
 msgid "default.contextSettings.privacyStatement"
 msgstr ""
-"<p>本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありませ"
-"ん。</p>"
+"<p>本誌サイトに入力された名前およびメールアドレスは、本誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。"
+"</p>"
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
 msgstr "テキストは、執筆要項で示された書式要件および書誌記述要件を順守している。"
