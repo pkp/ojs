@@ -14,8 +14,9 @@
  */
 
 use APP\facades\Repo;
-
-import('classes.controllers.grid.issues.IssueGridHandler');
+use APP\controllers\grid\issues\IssueGridHandler;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
+use PKP\controllers\grid\feature\PagingFeature;
 
 class ExportableIssuesListGridHandler extends IssueGridHandler
 {
@@ -64,8 +65,6 @@ class ExportableIssuesListGridHandler extends IssueGridHandler
      */
     public function initFeatures($request, $args)
     {
-        import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
-        import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
         return [new SelectableItemsFeature(), new PagingFeature()];
     }
 

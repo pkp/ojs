@@ -13,10 +13,10 @@
  * @brief Paypal payment plugin class
  */
 
-import('lib.pkp.classes.plugins.PaymethodPlugin');
-require_once(dirname(__FILE__) . '/vendor/autoload.php');
-
 use APP\template\TemplateManager;
+use PKP\plugins\PaymethodPlugin;
+
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
 
 class PaypalPaymentPlugin extends PaymethodPlugin
 {

@@ -1,9 +1,10 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-13 05:54+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/editor/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -13,42 +14,40 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.issues.issueData"
-msgstr "Data Isu"
+msgstr "Data Terbitan"
 
-#, fuzzy
 msgid "editor.article.coverImage"
-msgstr "Imej Halaman"
+msgstr "Gambar muka depan"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "Tarikh capaian tidak sah."
+msgstr "Tarikh akses tidak sah."
 
 msgid "editor.article.remove.confirm"
 msgstr ""
-"Adakah anda pasti ingin buang artikel ini daripada isu ini? Artikel ini akan "
-"tersedia untuk penjadualan dalam isu lain."
+"Adakah anda pasti ingin buang artikel ini daripada terbitan ini? Artikel ini "
+"akan tersedia untuk penjadualan dalam terbitan lain."
 
 msgid "editor.article.remove"
 msgstr "Buang"
 
 msgid "grid.action.removeArticle"
-msgstr "Buang Artikel Daripada Isu"
+msgstr "Buang Artikel Daripada Terbitan"
 
-#, fuzzy
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
-"Imej halaman depan yang anda minta untuk padam tidak dijumpai. Ianya mungkin "
-"telah dihapuskan. Cuba muat semula halaman."
+"Gambar muka depan yang anda minta untuk dihapus tidak dapat dijumpai. Ia "
+"mungkin telah dipadam. Cuba muatkan semula halaman tersebut."
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
 "Yuran Penerbitan tidak dibayar. Untuk menjadualkan item untuk penerbitan "
-"beritahu pengarang untuk membayar yuran atau mengetepikan yuran."
+"maklumkan pengarang untuk membayar yuran atau pengecualian yuran."
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "Untuk Diperuntukkan"
+msgstr "Untuk Ditugaskan"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "Jadual untuk diterbitkan"
+msgstr "Jadual untuk diterbitkan di"
 
 msgid "editor.article.editMetadata"
 msgstr "Sunting Versi Metadata"
@@ -60,19 +59,19 @@ msgid "editor.article.publishVersion"
 msgstr "Versi Penerbitan"
 
 msgid "editor.article.showPublicationVersion"
-msgstr "Tunjuk Penerbitan Berjadual"
+msgstr "Tunjukkan Penerbitan yang Dijadualkan"
 
 msgid "editor.submissions.inSection"
 msgstr "Dalam Bahagian"
 
 msgid "issues.submissions.issueIds"
-msgstr "Diperuntukkan kepada Isu"
+msgstr "Ditugaskan kepada Terbitan"
 
 msgid "editor.submissions.assignedTo"
-msgstr "Diperuntukkan kepada Penyunting"
+msgstr "Ditugaskan kepada Editor"
 
 msgid "editor.submissions.lastCompleted"
-msgstr "Lengkap Terakhir"
+msgstr "Terakhir Lengkap"
 
 msgid "editor.submissions.averageTime"
 msgstr "Minggu"
@@ -102,13 +101,13 @@ msgid "editor.article.decision"
 msgstr "Keputusan"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "Tandakan fail asal sebagai Versi Semak Semula"
+msgstr "Tandakan fail asal sebagai Versi Ulasan Semula"
 
 msgid "editor.navigation.issueArchive"
-msgstr "Isu-isu Belakang"
+msgstr "Terbitan Terdahulu"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Tetapkan Isu Semasa"
+msgstr "Tetapkan Terbitan Semasa"
 
 msgid "grid.action.previewIssue"
 msgstr "Pratonton"
@@ -117,13 +116,13 @@ msgid "grid.action.viewIssue"
 msgstr "Lihat"
 
 msgid "grid.action.addIssue"
-msgstr "Cipta Isu"
+msgstr "Cipta Terbitan"
 
 msgid "grid.action.publish"
-msgstr "Terbitkan Isu"
+msgstr "Terbitkan"
 
 msgid "editor.navigation.futureIssues"
-msgstr "Isu-isu Masa Depan"
+msgstr "Terbitan Akan Datang"
 
 msgid "editor.issues.identifiers"
 msgstr "Pengenalpasti"
@@ -135,31 +134,32 @@ msgid "editor.issues.open"
 msgstr "Buka"
 
 msgid "editor.issues.noLiveIssues"
-msgstr "Tiada Isu Langsung"
+msgstr "Tiada Terbitan Terbaru"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Tidak dapat menyimpan id awam untuk artikel:"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Adakah anda pasti hendak menetapkan isu ini sebagai semasa?"
+msgstr "Adakah anda pasti hendak menetapkan terbitan ini sebagai semasa?"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Adakah anda pasti hendak menyahterbitkan isu yang diterbitkan ini?"
+msgstr ""
+"Adakah anda pasti hendak tidak menerbitkan terbitan yang diterbitkan ini?"
 
 msgid "editor.issues.confirmPublish"
-msgstr "Adakah anda pasti hendak menerbitkan isu baharu?"
+msgstr "Adakah anda pasti hendak menerbitkan terbitan baharu?"
 
 msgid "editor.issues.preview"
 msgstr "Pratonton"
 
 msgid "editor.issues.previewIssue"
-msgstr "Pratonton Isu"
+msgstr "Pratonton Terbitan"
 
 msgid "editor.issues.unpublishIssue"
-msgstr "Isu Tidak Diterbitkan"
+msgstr "Terbitan Tidak Diterbitkan"
 
 msgid "editor.issues.publishIssue"
-msgstr "Terbitkan Isu"
+msgstr "Terbitkan"
 
 msgid "editor.issues.publicId"
 msgstr "Id Awam"
@@ -171,42 +171,41 @@ msgid "editor.issues.default"
 msgstr "Lalai"
 
 msgid "editor.issues.saveChanges"
-msgstr "Simpan perubahan pada jadual kandungan?"
+msgstr "Simpan perubahan pada isi kandungan?"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"Isu ini menggunakan susunan seksyen tersuai. <a href=\"{$url}\" class=\""
+"Terbitan ini menggunakan susunan bahagian custom. <a href=\"{$url}\" class=\""
 "action\">Set semula kepada lalai</a>"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
-"Jurnal ini menggunakan susunan isu tersuai. <a href=\"{$url}\" class=\""
+"Jurnal ini menggunakan susunan terbitan custom. <a href=\"{$url}\" class=\""
 "action\">Set semula kepada lalai</a>"
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
 "Semua artikel akan dikembalikan ke senarai susunan penyuntingan dan semua "
 "fail yang berkaitan akan dipadam secara kekal.  Adakah anda pasti mahu buang "
-"isu ini?"
+"terbitan ini?"
 
 msgid "editor.issues.access"
 msgstr "Akses"
 
 msgid "editor.issues.identification"
-msgstr "Pengenalan"
+msgstr "Pengenalpastian"
 
 msgid "editor.issues.subscription"
 msgstr "Langganan"
 
 msgid "editor.issues.openAccess"
-msgstr "Buka capaian"
+msgstr "Akses Terbuka"
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Paparan"
 
-#, fuzzy
 msgid "editor.issues.showCoverPage"
-msgstr "Cipta penutup untuk isu ini dengan unsur berikut."
+msgstr "Cipta muka depan untuk terbitan ini dengan unsur berikut."
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Buang lembaran gaya?"
@@ -220,41 +219,35 @@ msgstr ""
 msgid "editor.issues.styleFile"
 msgstr "Lembaran Gaya"
 
-#, fuzzy
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr ""
-"Format imej halaman depan tidak sah. Format yang diterima adalah .gif, .jpg "
+"Format halaman muka depan tidak sah. Format yang diterima ialah .gif, .jpg, "
 "atau .png."
 
-#, fuzzy
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"Imej gambar muka depan yang anda minta untuk memadam padanan isu untuk "
+"Imej gambar muka depan yang anda minta untuk memadam padanan terbitan untuk "
 "jurnal yang berbeza. Sila pastikan anda bekerja dengan jurnal yang betul, "
-"anda menggunakan ID isu yang betul, dan cuba lagi."
+"anda menggunakan ID terbitan yang betul, dan cuba lagi."
 
-#, fuzzy
 msgid "editor.issues.coverPage"
 msgstr "Gambar muka depan"
 
-#, fuzzy
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
 "Imej gambar muka depan yang anda minta untuk padam tidak dijumpai. Ianya "
 "mungkin telah dihapuskan. Cuba muat semula halaman."
 
-#, fuzzy
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
 "Imej gambar muka depan yang anda minta untuk padam tidak sepadan dengan imej "
-"halaman  untuk isu ini. Sila muat semula halaman dan cuba lagi."
+"halaman  untuk terbitan ini. Sila muat semula halaman dan cuba lagi."
 
-#, fuzzy
 msgid "editor.issues.removeCoverPage"
 msgstr "Buang halaman gambar muka depan?"
 
 msgid "editor.issues.proofed"
-msgstr "Bukti"
+msgstr "Terbukti"
 
 msgid "editor.issues.remove"
 msgstr "Buang"
@@ -266,10 +259,10 @@ msgid "editor.issues.coverPageInstructions"
 msgstr "(Format yang dibenarkan: .gif, .jpg atau .png)"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "Dayakan capaian terbuka tertangguh"
+msgstr "Dayakan penundaan akses terbuka"
 
 msgid "editor.issues.accessDate"
-msgstr "Buka tarikh capaian"
+msgstr "Tarikh akses terbuka"
 
 msgid "editor.issues.accessStatus"
 msgstr "Status akses"
@@ -278,18 +271,18 @@ msgid "editor.issues.description"
 msgstr "Butiran"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "Pengenalpasti isu awam"
+msgstr "Pengenalpasti terbitan awam"
 
 msgid "editor.issues.issueIdentification"
-msgstr "Pengenalan isu"
+msgstr "Pengenalanpastian terbitan"
 
 msgid "editor.issues.issueIdentificationRequired"
 msgstr ""
-"Pengenalan isu diperlukan. Sila pilih sekurang-kurangnya satu daripada "
-"pilihan pengenalan isu."
+"Pengenalpastian terbitan diperlukan. Sila pilih sekurang-kurangnya satu "
+"daripada pilihan pengenalpasti terbitan."
 
 msgid "editor.issues.titleRequired"
-msgstr "Tajuk diperlukan untuk isu ini."
+msgstr "Tajuk diperlukan untuk terbitan ini."
 
 msgid "editor.issues.yearRequired"
 msgstr "Tahun diperlukan dan mestilah nilai positif, berangka."
@@ -307,33 +300,33 @@ msgid "editor.issues.published"
 msgstr "Diterbitkan"
 
 msgid "editor.issues.confirmDelete"
-msgstr "Adakah anda pasti hendak menghapuskan isu ini secara kekal?"
+msgstr "Adakah anda pasti hendak menghapuskan terbitan ini secara kekal?"
 
 msgid "editor.issues.noArticles"
-msgstr "Tiada item dijadualkan untuk isu buat masa ini."
+msgstr "Tiada item dijadualkan untuk terbitan buat masa ini."
 
 msgid "editor.issues.numArticles"
 msgstr "Item"
 
 msgid "editor.issues.currentIssue"
-msgstr "Isu Semasa"
+msgstr "Terbitan Semasa"
 
 msgid "editor.issues.editIssue"
-msgstr "Pengurusan Isu: {$issueIdentification}"
+msgstr "Pengurusan Terbitan: {$issueIdentification}"
 
 msgid "editor.issues.createIssue"
-msgstr "Cipta Isu"
+msgstr "Cipta Terbitan"
 
 msgid "editor.editorAdministration"
-msgstr "Pentadbiran Penyunting"
+msgstr "Pentadbiran Editor"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "Sertakan jadual kandungan daripada isu ini:"
+msgstr "Sertakan isi kandungan daripada terbitan ini:"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
 "Hantar mesej ini kepada pengguna yang berkaitan dengan jurnal ini yang telah "
-"menunjukkan bahawa mereka ingin menerima pengemaskinian ({$count} pengguna)"
+"menunjukkan bahawa mereka ingin menerima berita baru ({$count} pengguna)"
 
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
@@ -353,7 +346,7 @@ msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Semua pelanggan individu ({$count} pengguna)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "Semua pengarang diterbitkan ({$count} pengguna)"
+msgstr "Semua pengarang yang menerbitkan ({$count} pengguna)"
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "Semua pembaca ({$count} pengguna)"
@@ -387,13 +380,13 @@ msgid "editor.me"
 msgstr "Saya"
 
 msgid "editor.allEditors"
-msgstr "Semua Penyunting"
+msgstr "Semua Editor"
 
 msgid "editor.allSections"
-msgstr "Semua Seksyen"
+msgstr "Semua Bahagian"
 
 msgid "editor.publishedIssues"
-msgstr "Isu Penerbitan"
+msgstr "Terbitan Terdahulu"
 
 msgid "editor.publishing"
 msgstr "Penerbitan"
@@ -411,27 +404,28 @@ msgid "editor.reassign"
 msgstr "Tetapkan semula"
 
 msgid "editor.home"
-msgstr "Laman Utama Penyunting"
+msgstr "Laman Utama Editor"
 
 msgid "editor.issues.galley"
-msgstr "Isu Galley"
+msgstr "Galley Terbitan"
 
 msgid "editor.issues.galleys"
-msgstr "Isu Galley"
+msgstr "Galley Terbitan"
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Sunting Isu Galley"
+msgstr "Sunting Galley Terbitan"
 
 msgid "grid.action.addIssueGalley"
-msgstr "Cipta Isu Galley"
+msgstr "Cipta Galley Terbitan"
 
 msgid "grid.action.addGalley"
 msgstr "Tambah galley"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"Pengenalpasti awam '{$publicIdentifier}' sudah wujud untuk objek lain (isu, "
-"artikel, galley atau fail). Sila pilih pengenalpasti unik dalam jurnal anda."
+"Pengenalpasti awam '{$publicIdentifier}' sudah wujud untuk objek lain ("
+"terbitan, artikel, galley atau fail). Sila pilih pengenalpasti unik dalam "
+"jurnal anda."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
@@ -442,49 +436,54 @@ msgstr ""
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
 "Sebarang fail yang telah dimuat naik ke mana-mana peringkat penyerahan boleh "
-"ditambah ke penyenaraian Bacaan Bukti dengan menyemak kotak semak Sertakan "
+"ditambah ke penyenaraian Proofreading dengan menyemak kotak semak Sertakan "
 "di bawah dan menekan Carian: semua fail yang ada akan disenaraikan dan boleh "
 "dipilih untuk dimasukkan."
 
 msgid "editor.issues.volumeRequired"
-msgstr "Isipadu diperlukan dan mestilah nilai positif, berangka."
+msgstr "Jilid diperlukan dan mestilah nilai positif, berangka."
 
-#, fuzzy
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi yang "
-"disalin, dimuat naik di bawah <span class=\"pkp_help_title\""
-">Penyalinan</span>."
+"Fail draf akhir dalam senarai ini diubah oleh Copyeditor menjadi versi "
+"copyedited, dimuat naik di bawah <span class=\"pkp_help_title\""
+">Copyediting</span>."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Pilih Fail Galley"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"Susun atur penyunting menyediakan fail ini untuk setiap galley dan kemudian "
+"Susun atur editor menyediakan fail ini untuk setiap galley dan kemudian "
 "memuat naik ke <span class=\"pkp_help_title\">Bukti</span> yang sesuai untuk "
-"pembacaan bukti."
+"proofreading."
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Adakah anda pasti mahu memadam isu galley ini?"
+msgstr "Adakah anda pasti mahu memadam galley terbitan ini?"
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Kembali ke isu galley"
+msgstr "Kembali ke galley terbitan"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Pengenalpastian isu galley awam sudah ada."
+msgstr "Pengenalpastian galley terbitan awam sudah wujud."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Bahasa isu galley diperlukan."
+msgstr "Bahasa galley terbitan diperlukan."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Label isu galley diperlukan."
+msgstr "Label galley terbitan diperlukan."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Tiada penerbitan isu galley."
+msgstr "Tiada penerbitan galley."
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Terbitkan galley dengan keseluruhan isi isu."
+msgstr "Terbitkan galley dengan keseluruhan kandungan terbitan."
 
 msgid "editor.issues.viewingGalley"
-msgstr "Melihat Isu Galley"
+msgstr "Melihat Galley Terbitan"
+
+msgid "editor.issues.cover"
+msgstr "Muka depan"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Kapsyen muka depan"

@@ -13,10 +13,8 @@
  * @brief Handle site index requests.
  */
 
-import('classes.search.ArticleSearch');
-
+use APP\search\ArticleSearch;
 use APP\facades\Repo;
-
 use APP\handler\Handler;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;

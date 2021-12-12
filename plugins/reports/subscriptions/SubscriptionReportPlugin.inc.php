@@ -13,8 +13,7 @@
  * @brief Subscription report plugin
  */
 
-import('lib.pkp.classes.plugins.ReportPlugin');
-
+use PKP\plugins\ReportPlugin;
 use APP\facades\Repo;
 use Sokil\IsoCodes\IsoCodesFactory;
 

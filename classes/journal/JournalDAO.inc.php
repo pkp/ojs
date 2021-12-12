@@ -87,8 +87,9 @@ class JournalDAO extends ContextDAO
             $dao = DAORegistry::getDAO($daoName);
             $dao->deleteAllPubIds($journalId, $pubIdType);
         }
-        $submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-        $submissionFileDao->deleteAllPubIds($journalId, $pubIdType);
+        Repo::submissionFiles()
+            ->dao
+            ->deleteAllPubIds($journalId, $pubIdType);
 
         Repo::issue()->dao->deleteAllPubIds($journalId, $pubIdType);
         Repo::publication()->dao->deleteAllPubIds($journalId, $pubIdType);
@@ -123,7 +124,7 @@ class JournalDAO extends ContextDAO
             ASSOC_TYPE_PUBLICATION => Repo::publication()->dao,
             ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
             ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
-            ASSOC_TYPE_SUBMISSION_FILE => DAORegistry::getDAO('SubmissionFileDAO')
+            ASSOC_TYPE_SUBMISSION_FILE => Repo::submissionFiles()->dao,
         ];
         if ($forSameType) {
             $dao = $pubObjectDaos[$assocType];

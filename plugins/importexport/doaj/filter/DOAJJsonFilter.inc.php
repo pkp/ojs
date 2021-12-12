@@ -14,9 +14,7 @@
  */
 
 use APP\facades\Repo;
-
-import('lib.pkp.classes.plugins.importexport.PKPImportExportFilter');
-
+use PKP\plugins\importexport\PKPImportExportFilter;
 
 class DOAJJsonFilter extends PKPImportExportFilter
 {

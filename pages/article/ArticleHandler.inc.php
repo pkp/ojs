@@ -18,14 +18,13 @@ use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-
+use APP\issue\IssueAction;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
-
-use PKP\submission\SubmissionFile;
+use PKP\submissionFile\SubmissionFile;
 
 class ArticleHandler extends Handler
 {
@@ -111,7 +110,6 @@ class ArticleHandler extends Handler
             }
         }
 
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $context = $request->getContext();
         $user = $request->getUser();
@@ -245,6 +243,7 @@ class ArticleHandler extends Handler
 
         // Get galleys sorted into primary and supplementary groups
         $galleys = $publication->getData('galleys');
+
         $primaryGalleys = [];
         $supplementaryGalleys = [];
         if ($galleys) {
@@ -313,7 +312,6 @@ class ArticleHandler extends Handler
 
             // Get the subscription status if displaying the abstract;
             // if access is open, we can display links to the full text.
-            import('classes.issue.IssueAction');
 
             // The issue may not exist, if this is an editorial user
             // and scheduling hasn't been completed yet for the article.
@@ -406,10 +404,13 @@ class ArticleHandler extends Handler
             $dispatcher->handle404();
         }
         $suppId = $args[1] ?? 0;
-        $submissionFilesIterator = Services::get('submissionFile')->getMany([
-            'submissionIds' => [$articleId->getId()],
-        ]);
-        foreach ($submissionFilesIterator as $submissionFile) {
+
+        $collector = Repo::submissionFiles()
+            ->getCollector()
+            ->filterBySubmissionIds([$articleId->getId()]);
+
+        $submissionFiles = Repo::submissionFiles()->getMany($collector);
+        foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
                 $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
                 $articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
@@ -451,19 +452,24 @@ class ArticleHandler extends Handler
 
             // If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
             if ($this->fileId != $this->galley->getData('submissionFileId')) {
-                $dependentFileIds = Services::get('submissionFile')->getIds([
-                    'assocTypes' => [ASSOC_TYPE_SUBMISSION_FILE],
-                    'assocIds' => [$this->galley->getFileId()],
-                    'fileStages' => [SubmissionFile::SUBMISSION_FILE_DEPENDENT],
-                    'includeDependentFiles' => true,
-                ]);
+                $collector = Repo::submissionFiles()
+                    ->getCollector()
+                    ->filterByAssoc(
+                        ASSOC_TYPE_SUBMISSION_FILE,
+                        [$this->galley->getFileId()]
+                    )
+                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                    ->includeDependentFiles();
+                $dependentFileIds = Repo::submissionFiles()
+                    ->getIds($collector)
+                    ->toArray();
                 if (!in_array($this->fileId, $dependentFileIds)) {
                     $request->getDispatcher()->handle404();
                 }
             }
 
             if (!HookRegistry::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
-                $submissionFile = Services::get('submissionFile')->get($this->fileId);
+                $submissionFile = Repo::submissionFiles()->get($this->fileId);
 
                 if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
                     $request->getDispatcher()->handle404();
@@ -490,7 +496,6 @@ class ArticleHandler extends Handler
      */
     public function userCanViewGalley($request, $articleId, $galleyId = null)
     {
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
 
         $context = $request->getContext();

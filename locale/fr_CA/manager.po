@@ -1,10 +1,11 @@
+# Jean-Hugues Roy <roy.jean-hugues@uqam.ca>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2021-06-17 09:48+0000\n"
-"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
+"PO-Revision-Date: 2021-12-01 01:39+0000\n"
+"Last-Translator: Jean-Hugues Roy <roy.jean-hugues@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -1774,3 +1775,39 @@ msgid "manager.setup.selectCountry"
 msgstr ""
 "Sélectionner le pays où se trouve cette revue, ou le pays de l'adresse "
 "postale du journal ou de l'éditeur."
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Ce courriel est envoyé automatiquement à un nouveau membre de la revue "
+"lorsque les paramètres exigent que l'adresse courriel des nouveaux membres "
+"soit validée."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validez l'adresse courriel (enregistrement de la revue)"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nom du site pour l'installation de plus d'une revue"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Devise du montant dû (CAD, par exemple)"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Montant dû"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Le nom du mode de paiement"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "L'adresse de courriel du contact principal de la revue"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "La signature des courriels automatisés de la revue"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Le nom du contact principal de la revue"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "L'URL de la page d'accueil de la revue"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Le nom de la revue"

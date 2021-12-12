@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"PO-Revision-Date: 2021-12-04 03:23+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -1773,3 +1773,11 @@ msgstr "الرابط المؤدي إلى الصفحة الرئيسية للمج�
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "اسم المجلة"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"هذا البريد الالكتروني يُرسل تلقائيًا إلى المستخدم الجديد عند تسجيله في "
+"المجلة في حالة كون الإعدادات تتطلب التحقق من بريده الالكتروني."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "التحقق من البريد الالكتروني (التسجيل في المجلة)"

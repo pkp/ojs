@@ -13,11 +13,16 @@
  * @brief Base form class for subscription create/edits.
  */
 
+namespace APP\subscription\form;
+
 use APP\facades\Repo;
 use APP\subscription\Subscription;
+use APP\subscription\SubscriptionDAO;
 use APP\template\TemplateManager;
+use APP\core\Application;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
+use PKP\db\DAORegistry;
 use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionForm extends Form
@@ -52,7 +57,6 @@ class SubscriptionForm extends Form
         $this->subscription = null;
         $this->subscriptionTypes = null;
 
-        import('classes.subscription.SubscriptionDAO');
         $this->validStatus = SubscriptionDAO::getStatusOptions();
 
         $isoCodes = app(IsoCodesFactory::class);
@@ -268,4 +272,8 @@ class SubscriptionForm extends Form
 
         return $mail;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\form\SubscriptionForm', '\SubscriptionForm');
 }

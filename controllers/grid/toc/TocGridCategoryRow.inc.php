@@ -13,7 +13,7 @@
  * @brief System Info grid category row definition
  */
 
-import('lib.pkp.classes.controllers.grid.GridCategoryRow');
+use PKP\controllers\grid\GridCategoryRow;
 
 class TocGridCategoryRow extends GridCategoryRow
 {

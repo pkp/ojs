@@ -18,8 +18,9 @@
 import('classes.i18n.AppLocale'); // Causes mocked AppLocale class to be loaded
 
 import('lib.pkp.tests.PKPTestCase');
-import('classes.submission.Submission');
 
+use APP\submission\Submission;
+use PKP\submissionFile\SubmissionFile;
 use PKP\core\ArrayItemIterator;
 use PKP\db\DAORegistry;
 
@@ -72,7 +73,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         HookRegistry::register('ArticleSearchIndex::submissionFileChanged', [$this, 'callbackUpdateFileIndex']);
 
         // Simulate updating an article file via hook.
-        import('lib.pkp.classes.submission.SubmissionFile');
         $submissionFile = new SubmissionFile();
         $submissionFile->setId(2);
         $articleSearchIndex = Application::getSubmissionSearchIndex();

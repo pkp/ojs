@@ -13,8 +13,7 @@
  * @brief Handle issues grid requests.
  */
 
-import('classes.controllers.grid.issues.IssueGridHandler');
-
+use APP\controllers\grid\issues\IssueGridHandler;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use PKP\linkAction\LinkAction;

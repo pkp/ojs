@@ -17,6 +17,8 @@ use APP\facades\Repo;
 use PKP\plugins\GenericPlugin;
 use PKP\statistics\PKPStatisticsHelper;
 use PKP\submission\PKPSubmission;
+use APP\search\ArticleSearch;
+use PKP\core\VirtualArrayIterator;
 
 define('RECOMMEND_BY_AUTHOR_PLUGIN_COUNT', 10);
 
@@ -153,10 +155,8 @@ class RecommendByAuthorPlugin extends GenericPlugin
         }
 
         // Visualization.
-        import('classes.search.ArticleSearch');
         $articleSearch = new ArticleSearch();
         $pagedResults = $articleSearch->formatResults($pagedResults);
-        import('lib.pkp.classes.core.VirtualArrayIterator');
         $returner = new VirtualArrayIterator($pagedResults, $totalResults, $page, $itemsPerPage);
         $smarty->assign('articlesBySameAuthor', $returner);
         $output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));

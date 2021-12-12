@@ -13,10 +13,8 @@
  * @brief Form class for institutional subscription create/edits.
  */
 
-import('classes.subscription.form.SubscriptionForm');
-
+use APP\subscription\form\SubscriptionForm;
 use APP\notification\NotificationManager;
-
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\SubscriptionType;
 use PKP\notification\PKPNotification;

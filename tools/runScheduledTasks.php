@@ -15,9 +15,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-import('lib.pkp.classes.cliTool.ScheduledTaskTool');
-
-class runScheduledTasks extends ScheduledTaskTool
+class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
 {
 }
 

@@ -3,8 +3,8 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2021-10-10 11:39+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/author/ms/>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Serah Artikel"
 
 msgid "author.competingInterests"
 msgstr ""
-"Kepentingan bersaing <a target=\"_new\" class=\"action\" href=\""
+"Konflik kepentingan <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\"> Polisi CI </a>"
 
 msgid "author.track"
@@ -53,9 +53,9 @@ msgstr "Langkah 4. Memuat Naik Fail Tambahan"
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
 "Akaun pengguna diperlukan untuk menghantar ke jurnal ini. Ini membolehkan "
-"penyunting kami untuk jejak penyerahan anda dan menghubungi anda apabila "
-"status penyerahan anda berubah, atau sekiranya maklumat tambahan diperlukan "
-"dari anda."
+"editor kami untuk jejak penyerahan anda dan menghubungi anda apabila status "
+"penyerahan anda berubah, atau sekiranya maklumat tambahan diperlukan dari "
+"anda."
 
 msgid "author.article.authorRevisedFile"
 msgstr "Fail Pengarang"
@@ -92,7 +92,7 @@ msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Pengenalpasti fail awam tambahan"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "Identifikasi awam fail tambahan sudah ada."
+msgstr "Pengenalpastian awam fail tambahan sudah ada."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
 msgstr "Sila masukkan butiran."
@@ -162,7 +162,7 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Metadata Fail Tambahan"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "Ubahsuai Fail Tambahan"
+msgstr "Sunting Fail Tambahan"
 
 msgid "author.submit.addSupplementaryFile"
 msgstr "Tambah Fail Tambahan"
@@ -261,19 +261,19 @@ msgstr ""
 "Susun semula nama pengarang sehingga tertera mengikut urutan ia diterbitkan."
 
 msgid "submission.submit.privacyStatement"
-msgstr "Penyataan Privasi Jurnal"
+msgstr "Kenyataan Privasi Jurnal"
 
 msgid "author.submit.form.localeRequired"
 msgstr "Sila pilih bahasa penyerahan."
 
 msgid "author.submit.form.sectionRequired"
-msgstr "Sila pilih seksyen jurnal yang bersesuaian untuk penyerahan ini."
+msgstr "Sila pilih bahagian jurnal yang bersesuaian untuk penyerahan ini."
 
 msgid "author.submit.comments"
 msgstr "Masukkan teks (pilihan)"
 
 msgid "submission.submit.coverNote"
-msgstr "Komen untuk Penyunting"
+msgstr "Komen untuk Editor"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Anda mesti bersetuju dengan syarat Notis Hak Cipta sebelum meneruskan."
@@ -282,7 +282,7 @@ msgid "author.submit.copyrightNoticeAgree"
 msgstr ""
 "Pengarang bersetuju dengan syarat Notis Hak Cipta ini, yang akan digunakan "
 "untuk penyerahan mereka jika dan bila ia diterbitkan oleh jurnal ini (komen "
-"untuk penyunting dapat ditambah di bawah)."
+"untuk editor dapat ditambah di bawah)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -290,10 +290,10 @@ msgstr ""
 "sebelum meneruskan."
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Artikel mesti dihantar ke salah satu seksyen jurnal."
+msgstr "Artikel mesti dihantar ke salah satu bahagian jurnal."
 
 msgid "author.submit.journalSection"
-msgstr "Seksyen Jurnal"
+msgstr "Bahagian Jurnal"
 
 msgid "author.submissions.noSubmissions"
 msgstr "Tiada penyerahan."
@@ -320,7 +320,7 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "Dalam Ulasan: Semakan Diperlukan"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Dalam Pusingan Penilaian {$round}"
+msgstr "Dalam Pusingan Ulasan {$round}"
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""

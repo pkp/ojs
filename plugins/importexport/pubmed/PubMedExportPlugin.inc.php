@@ -13,11 +13,9 @@
  * @brief PubMed/MEDLINE XML metadata export plugin
  */
 
-import('lib.pkp.classes.plugins.ImportExportPlugin');
-
 use APP\facades\Repo;
 use APP\template\TemplateManager;
-
+use PKP\plugins\ImportExportPlugin;
 use PKP\file\FileManager;
 
 class PubMedExportPlugin extends ImportExportPlugin

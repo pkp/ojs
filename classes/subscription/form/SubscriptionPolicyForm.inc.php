@@ -13,6 +13,8 @@
  * @brief Form for managers to setup subscription policies.
  */
 
+namespace APP\subscription\form;
+
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX', '12');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MIN', '1');
@@ -23,7 +25,10 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
 use APP\template\TemplateManager;
-
+use APP\i18n\AppLocale;
+use APP\core\Application;
+use PKP\config\Config;
+use PKP\db\DAORegistry;
 use PKP\form\Form;
 
 class SubscriptionPolicyForm extends Form
@@ -181,4 +186,8 @@ class SubscriptionPolicyForm extends Form
         $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
         $journalDao->updateObject($journal);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\subscription\form\SubscriptionPolicyForm', '\SubscriptionPolicyForm');
 }

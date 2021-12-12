@@ -17,6 +17,7 @@
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
 use PKP\security\Role;
+use PKP\security\authorization\SubmissionAccessPolicy;
 
 import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
 
@@ -52,7 +53,6 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
         $routeName = $this->getSlimRequest()->getAttribute('route')->getName();
 
         if ($routeName === 'payment') {
-            import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
             $this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
         }
 

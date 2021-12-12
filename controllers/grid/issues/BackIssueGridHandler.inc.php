@@ -18,8 +18,7 @@ use APP\issue\Collector;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\security\Role;
-
-import('classes.controllers.grid.issues.IssueGridHandler');
+use APP\controllers\grid\issues\IssueGridHandler;
 
 class BackIssueGridHandler extends IssueGridHandler
 {

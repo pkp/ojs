@@ -14,10 +14,8 @@
  *
  */
 
-import('lib.pkp.classes.plugins.GatewayPlugin');
-
+use PKP\plugins\GatewayPlugin;
 use APP\facades\Repo;
-
 use APP\template\TemplateManager;
 
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin

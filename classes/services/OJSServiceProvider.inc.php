@@ -34,11 +34,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
             return new PKPFileService();
         };
 
-        // Issue service
-        $pimple['issue'] = function () {
-            return new IssueService();
-        };
-
         // Section service
         $pimple['section'] = function () {
             return new SectionService();
@@ -62,11 +57,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         // Site service
         $pimple['site'] = function () {
             return new PKPSiteService();
-        };
-
-        // Submission file service
-        $pimple['submissionFile'] = function () {
-            return new SubmissionFileService();
         };
 
         // Schema service

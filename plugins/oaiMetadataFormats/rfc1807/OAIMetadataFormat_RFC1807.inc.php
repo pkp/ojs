@@ -17,6 +17,7 @@
 
 use PKP\oai\OAIMetadataFormat;
 use APP\facades\Repo;
+use APP\issue\IssueAction;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
@@ -73,7 +74,6 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         // Coverage
         $coverage = $article->getCoverage($article->getData('locale'));
 
-        import('classes.issue.IssueAction');
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $url = $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]);

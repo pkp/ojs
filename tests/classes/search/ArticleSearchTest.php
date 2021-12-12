@@ -18,13 +18,12 @@
 require_mock_env('env1');
 
 import('lib.pkp.tests.PKPTestCase');
-import('classes.search.ArticleSearch');
 
 define('SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE', 1);
 define('SUBMISSION_SEARCH_TEST_ARTICLE_FROM_PLUGIN', 2);
 
 use APP\journal\Journal;
-
+use APP\search\ArticleSearch;
 use Illuminate\Support\Facades\App;
 use PKP\core\PKPRouter;
 

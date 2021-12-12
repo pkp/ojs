@@ -14,7 +14,7 @@
  *
  */
 
-import('lib.pkp.classes.plugins.BlockPlugin');
+use PKP\plugins\BlockPlugin;
 
 class SubscriptionBlockPlugin extends BlockPlugin
 {

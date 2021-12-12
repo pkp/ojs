@@ -1,9 +1,10 @@
+# Huang Feilong <hfl@nominsang.org>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-11 14:08+0000\n"
-"Last-Translator: Huang Feilong <hfl@huangfeilong.com>\n"
+"PO-Revision-Date: 2021-10-23 23:29+0000\n"
+"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/themes-default/zh_Hans/>\n"
+"ojs/themes-default/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,19 +40,19 @@ msgid "plugins.themes.default.option.typography.lato"
 msgstr "Lato：一种流行的现代无衬线字体。"
 
 msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
-msgstr "Noto Sans / Noto Serif：与sans-serif标题和衬线体文本的完美组合。"
+msgstr "Noto Sans / Noto Serif：与 sans-serif 标题和衬线体文本的完美组合。"
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
 msgstr "Noto Serif / Noto Sans：与衬线标题和无衬线正文文本互补的完美组合。"
 
 msgid "plugins.themes.default.option.typography.notoSerif"
-msgstr "Noto Serif：Google数字原生字体的serif变体。"
+msgstr "Noto Serif：Google数字原生字体的 serif 变体。"
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr "Noto Sans：由Google设计的数字原生字体，可提供广泛的语言支持。"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr "选择适合次期刊的字体组合。"
+msgstr "选择适合此期刊的字体组合。"
 
 msgid "plugins.themes.default.option.typography.label"
 msgstr "排版"
