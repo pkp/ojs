@@ -135,7 +135,7 @@ class ArticleGalley extends Representation
     public function getFile()
     {
         if (!isset($this->_submissionFile) && $this->getData('submissionFileId') != null) {
-            $this->_submissionFile = Repo::submissionFiles()
+            $this->_submissionFile = Repo::submissionFile()
                 ->get($this->getData('submissionFileId'));
         }
 

@@ -61,7 +61,7 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
     {
         $galleyFiles = [];
         if ($representation->getFileId()) {
-            $galleyFiles = [Repo::submissionFiles()->get($representation->getFileId())];
+            $galleyFiles = [Repo::submissionFile()->get($representation->getFileId())];
         }
         return $galleyFiles;
     }

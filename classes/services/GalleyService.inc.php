@@ -164,13 +164,13 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
                             break;
                         }
 
-                        $submissionFile = Repo::submissionFiles()->get($galley->getData('submissionFileId'));
+                        $submissionFile = Repo::submissionFile()->get($galley->getData('submissionFileId'));
 
                         if (empty($submissionFile)) {
                             break;
                         }
 
-                        $values[$prop] = Repo::submissionFiles()
+                        $values[$prop] = Repo::submissionFile()
                             ->getSchemaMap()
                             ->map($submissionFile);
                     }
@@ -306,17 +306,17 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
         $articleGalleyDao->deleteObject($galley);
 
-        $submissionFileCollector = Repo::submissionFiles()
+        $submissionFileCollector = Repo::submissionFile()
             ->getCollector()
             ->filterByAssoc(
                 ASSOC_TYPE_GALLEY,
                 [$galley->getId()]
             );
         // Delete related submission files
-        $submissionFiles = Repo::submissionFiles()
+        $submissionFiles = Repo::submissionFile()
             ->getMany($submissionFileCollector);
         foreach ($submissionFiles as $submissionFile) {
-            Repo::submissionFiles()
+            Repo::submissionFile()
                 ->delete($submissionFile);
         }
 

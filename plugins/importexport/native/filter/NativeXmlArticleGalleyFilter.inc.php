@@ -108,8 +108,8 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
 
         if ($addSubmissionFile) {
             // Update the submission file.
-            $submissionFile = Repo::submissionFiles()->get($newSubmissionFileId);
-            Repo::submissionFiles()->edit(
+            $submissionFile = Repo::submissionFile()->get($newSubmissionFileId);
+            Repo::submissionFile()->edit(
                 $submissionFile,
                 [
                     'assocType' => ASSOC_TYPE_REPRESENTATION,

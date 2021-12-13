@@ -16,9 +16,9 @@
 
 use APP\facades\Repo;
 use APP\handler\Handler;
+use APP\issue\IssueAction;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-use APP\issue\IssueAction;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
@@ -238,7 +238,8 @@ class ArticleHandler extends Handler
         $templateMgr->assign([
             'categories' => iterator_to_array(Repo::category()->getMany(
                 Repo::category()->getCollector()
-                ->filterByPublicationIds([$publication->getId()])))
+                    ->filterByPublicationIds([$publication->getId()])
+            ))
         ]);
 
         // Get galleys sorted into primary and supplementary groups
@@ -405,11 +406,11 @@ class ArticleHandler extends Handler
         }
         $suppId = $args[1] ?? 0;
 
-        $collector = Repo::submissionFiles()
+        $collector = Repo::submissionFile()
             ->getCollector()
             ->filterBySubmissionIds([$articleId->getId()]);
 
-        $submissionFiles = Repo::submissionFiles()->getMany($collector);
+        $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
                 $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
@@ -452,7 +453,7 @@ class ArticleHandler extends Handler
 
             // If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
             if ($this->fileId != $this->galley->getData('submissionFileId')) {
-                $collector = Repo::submissionFiles()
+                $collector = Repo::submissionFile()
                     ->getCollector()
                     ->filterByAssoc(
                         ASSOC_TYPE_SUBMISSION_FILE,
@@ -460,7 +461,7 @@ class ArticleHandler extends Handler
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
                     ->includeDependentFiles();
-                $dependentFileIds = Repo::submissionFiles()
+                $dependentFileIds = Repo::submissionFile()
                     ->getIds($collector)
                     ->toArray();
                 if (!in_array($this->fileId, $dependentFileIds)) {
@@ -469,7 +470,7 @@ class ArticleHandler extends Handler
             }
 
             if (!HookRegistry::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
-                $submissionFile = Repo::submissionFiles()->get($this->fileId);
+                $submissionFile = Repo::submissionFile()->get($this->fileId);
 
                 if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
                     $request->getDispatcher()->handle404();
