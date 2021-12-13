@@ -40,7 +40,7 @@ class DAO extends \PKP\submission\DAO
         $articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO  $articleSearchDao */
         $articleSearchDao->deleteSubmissionKeywords($id);
 
-        event(new SubmissionDeleted($submissionId));
+        event(new SubmissionDeleted($this->get($id)));
 
         parent::deleteById($id);
     }
