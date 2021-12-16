@@ -408,7 +408,7 @@ class ArticleHandler extends Handler
 
         $collector = Repo::submissionFile()
             ->getCollector()
-            ->filterBySubmissionIds([$articleId->getId()]);
+            ->filterBySubmissionIds([$article->getId()]);
 
         $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
