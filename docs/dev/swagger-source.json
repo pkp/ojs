@@ -30,6 +30,9 @@
 			"name": "Submissions / Publications"
 		},
 		{
+			"name": "Submissions / Publications / Contributors"
+		},
+		{
 			"name": "Issues"
 		},
 		{
@@ -161,6 +164,7 @@
 				}
 			}
 		},
+		"Contributor": "author",
 		"ReviewRound": "reviewRound",
 		"ReviewerSummary": {
 			"type": "object",
@@ -1273,6 +1277,346 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "A 403 response means that the publication you want to version does not belong to this submission or that the publication is already unpublished.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/contributors": {
+			"get": {
+				"tags": [
+					"Submissions / Publications / Contributors"
+				],
+				"summary": "Get a publication's contributors.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of contributors for this publication.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Contributor"
+							}
+						}
+					},
+					"404": {
+						"x-summary": "Publication Not Found",
+						"description": "The requested publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Publication invalid",
+						"description": "The requested publication is not part of the requested submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions / Publications / Contributors"
+				],
+				"summary": "Create a contributor.",
+				"description": "Create a new contributor for a publication.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "Details about the contributor that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/ContributorEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the contributor that was just added.",
+						"schema": {
+							"$ref": "#/definitions/Contributor"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Publication Not Found",
+						"description": "The requested publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Publication invalid",
+						"description": "The requested publication is not part of the requested submission. It could be also because the publication is not editable by the requested user",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/contributors/{contributorId}": {
+			"get": {
+				"tags": [
+					"Submissions / Publications / Contributors"
+				],
+				"summary": "Get a contributor.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "contributorId",
+						"in": "path",
+						"description": "Contributor ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The contributor details",
+						"schema": {
+							"$ref": "#/definitions/Contributor"
+						}
+					},
+					"403": {
+						"x-summary": "Publication invalid",
+						"description": "The requested publication is not part of the requested submission. It could be also because the publication is not editable by the requested user",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission or publication or author could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Submissions / Publications / Contributors"
+				],
+				"summary": "Edit a Contributor.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "contributorId",
+						"in": "path",
+						"description": "Contributor ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The details about the contributor that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/ContributorEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The contributor that was just edited with the new values after the update has occurred.",
+						"schema": {
+							"$ref": "#/definitions/Contributor"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "This error indicates one of the following:\n* This contributor is assigned to a publication that does not belong to this submission.\n* This contributor is assigned to a publication that has already been published. You must create a new version of the publication to modify contributor details.\n* You do not have permission to edit contributors for this publication.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission or publication or author could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Submissions / Publications / Contributors"
+				],
+				"summary": "Delete a contributor.",
+				"description": "Only journal managers and subeditors can make a request to this endpoint.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "contributorId",
+						"in": "path",
+						"description": "Contributor ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The contributor that was just deleted.",
+						"schema": {
+							"$ref": "#/definitions/Contributor"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "This may mean one of the following:\n* You are not allowed to edit the contributors for this publication.\n* This contributor is assigned to a publication that is not part of the requested submission.\n* This contributor is assigned to a published publication and can not be edited.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission or publication or author could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/contributors/saveOrder": {
+			"put": {
+				"tags": [
+					"Submissions / Publications / Contributors"
+				],
+				"summary": "Reorder publication's contributors",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The 'sortedAuthors' param is an array containing the new order of the contributors for the given publication",
+						"in": "body",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Contributor"
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the publication that it's contributors were just reordered.",
+						"schema": {
+							"$ref": "#/definitions/Publication"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "This may mean one of the following:\n* You are not allowed to edit the contributors for this publication.\n* This contributor is assigned to a publication that is not part of the requested submission.\n* This contributor is assigned to a published publication and can not be edited.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
