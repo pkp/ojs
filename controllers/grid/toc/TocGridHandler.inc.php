@@ -187,7 +187,11 @@ class TocGridHandler extends CategoryGridHandler {
 		if (!$sectionDao->customSectionOrderingExists($issue->getId())) {
 			$sectionDao->setDefaultCustomSectionOrders($issue->getId());
 		}
-		$sectionDao->updateCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
+		if ($sectionDao->getCustomSectionOrder($issue->getId(), $sectionId)) {
+			$sectionDao->updateCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
+		} else {
+			$sectionDao->insertCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
+		}
 	}
 
 	/**
