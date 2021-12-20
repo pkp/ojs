@@ -1,7 +1,7 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-09 08:29+0000\n"
+"PO-Revision-Date: 2021-12-11 08:32+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "ja_JP/>\n"
@@ -54,7 +54,10 @@ msgid "admin.languages.availableLocales"
 msgstr "有効な言語"
 
 msgid "admin.auth.enableSyncProfiles"
-msgstr "ユーザープロファイルの同期を有効にします（この認証プラグインでサポートされている場合）。ユーザーがログインすると、リモートソースからユーザーのプロファイル情報が自動的に更新され、OJS内で行われたプロファイルの変更（パスワードの変更を含む）がリモートソースに自動的に更新されます。このオプションを有効にしないと、OJSのプロファイル情報は、リモートソースのプロファイル情報とは別に保持されます。"
+msgstr ""
+"ユーザープロフィールの同期を有効にします（この認証プラグインでサポートされている場合）。ユーザーがログインすると、リモートソースからユーザーのプロフィール"
+"情報が自動的に更新され、OJS内で行われたプロフィールの変更（パスワードの変更を含む）がリモートソースに自動的に更新されます。このオプションを有効にしない"
+"と、OJSのプロフィール情報は、リモートソースのプロフィール情報とは別に保持されます。"
 
 msgid "admin.auth.enableSyncPasswords"
 msgstr "ユーザーのパスワード変更を有効にします（この認証プラグインでサポートされている場合）。このオプションを有効にすると、ユーザーがOJS内でパスワードを変更したり、OJSの \"lost password\" 機能を使って忘れたパスワードをリセットしたりできます。このオプションを有効にしないと、この認証ソースのユーザーはこれらの機能を利用できません。"

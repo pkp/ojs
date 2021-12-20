@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
-"PO-Revision-Date: 2021-12-09 08:29+0000\n"
+"PO-Revision-Date: 2021-12-10 01:07+0000\n"
 "Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/ja_JP/>\n"
@@ -63,13 +63,11 @@ msgstr "全雑誌の合計"
 msgid "plugins.reports.counter.migrate"
 msgstr "ログファイルを移行する。"
 
-#, fuzzy
 msgid "plugins.reports.counter.error.noXML"
-msgstr "結果をXML形式にフォーマットできませんでした。"
+msgstr "結果をXML形式に整形できませんでした。"
 
-#, fuzzy
 msgid "plugins.reports.counter.error.noResults"
-msgstr "レポートの条件に一致する結果が見つかりませんでした。"
+msgstr "レポート内に条件に一致する結果が見つかりませんでした。"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "レポートのパラメーターが無効です。"
@@ -83,15 +81,13 @@ msgstr "ジャーナルレポート１ (JR1)"
 msgid "plugins.reports.counter.ar1.title"
 msgstr "論文レポート１ (AR1)"
 
-#, fuzzy
 msgid "plugins.reports.counter.allCustomers"
-msgstr "全クライアント"
+msgstr "全顧客"
 
-#, fuzzy
 msgid "plugins.reports.counter.legacyStats"
 msgstr ""
-"下記のリンクでプラグインの旧データに基づいてレポートを生成できます。OJSの新COUNTER手法で最新バージョン用COUNTERレポートを生成したい場合、"
-"上記のリンクをご利用ください。"
+"下記のリンクは、COUNTERに対応していない古いプラグインデータを使用した旧式のレポートを生成します。新COUNTER手法で最新のCOUNTERレポート"
+"を生成したい場合は、上記のリンクを使用してください。"
 
 msgid "plugins.reports.counter.1a.anonymous"
 msgstr "無名"
