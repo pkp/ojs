@@ -15,8 +15,8 @@
 
 namespace APP\subscription;
 
-use APP\notification\NotificationManager;
 use APP\facades\Repo;
+use APP\notification\NotificationManager;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
 use PKP\notification\PKPNotification;
@@ -64,7 +64,7 @@ class SubscriptionAction
 
         $paramArray = [
             'subscriptionType' => $subscriptionType->getSummaryString(),
-            'userDetails' => $user->getContactSignature(),
+            'subscriberDetails' => $user->getContactSignature(),
             'membership' => $subscription->getMembership()
         ];
 

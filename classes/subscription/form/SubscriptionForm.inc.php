@@ -256,11 +256,11 @@ class SubscriptionForm extends Form
         $subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
 
         $paramArray = [
-            'subscriberName' => $user->getFullName(),
+            'recipientName' => $user->getFullName(),
             'journalName' => $journalName,
             'subscriptionType' => $subscriptionType->getSummaryString(),
-            'username' => $user->getUsername(),
-            'subscriptionContactSignature' => $subscriptionContactSignature
+            'recipientUsername' => $user->getUsername(),
+            'signature' => $subscriptionContactSignature
         ];
 
         $mail = new MailTemplate($mailTemplateKey);
