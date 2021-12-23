@@ -1,11 +1,12 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2021.
+# Felipe Geremia Nievinski <fgnievinski@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2021-12-23 22:26+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2021-12-24 03:20+0000\n"
+"Last-Translator: Felipe Geremia Nievinski <fgnievinski@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -245,6 +246,7 @@ msgstr ""
 msgid "emails.submissionAck.subject"
 msgstr "Obrigado pela submissão para {$contextName}"
 
+#, fuzzy
 msgid "emails.submissionAck.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p>\n"
@@ -272,6 +274,7 @@ msgstr ""
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Confirmação de submissão"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Olá,<br />\n"
@@ -293,6 +296,7 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Você foi designado como editor em uma submissão a {$contextName}"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "Prezado(a){$recipientName},<br />\n"
@@ -358,7 +362,7 @@ msgstr "A revista {$contextName} solicita avaliação de artigo"
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "Prezado(a) {$recipientName}, <br />\n"
-"este é apenas um lembrete amigável do nosso pedido de avaliação da "
+"este é apenas um lembrete automático sobre o nosso pedido de avaliação da "
 "submissão, &quot;{$submissionTitle},&quot; ao periódico {$contextName}. "
 "Esperávamos ter recebido sua resposta até {$responseDueDate}, assim este "
 "email foi gerado e enviado automaticamente com o passar dessa data.\n"
@@ -509,6 +513,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Solicitação de avaliação de artigo"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -825,6 +830,7 @@ msgstr "Mensagem enviada automaticamente ao avaliador quando a data de conclusã
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Sua submissão foi aceita para {$contextName}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -865,7 +871,7 @@ msgstr ""
 "{$authors}:<br />\n"
 "<br />\n"
 "A edição de texto da sua submissão, &quot;{$submissionTitle},&quot; está "
-"completa. Agora ela está sendo enviada para  editoração.<br />\n"
+"completa. Agora ela está sendo enviada para diagramação.<br />\n"
 "<br />\n"
 "URL da submissão: {$submissionUrl}"
 
@@ -875,6 +881,7 @@ msgstr "Este e-mail do Editor ou Editor de Seção para um Autor notifica-os de 
 msgid "emails.editorDecisionRevisions.subject"
 msgstr "Sua submissão foi avaliada e nós o encorajamos a enviar revisões"
 
+#, fuzzy
 msgid "emails.editorDecisionRevisions.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -892,6 +899,7 @@ msgstr ""
 msgid "emails.editorDecisionResubmit.subject"
 msgstr "Sua submissão foi avaliada - por favor, revise e reenvie"
 
+#, fuzzy
 msgid "emails.editorDecisionResubmit.body"
 msgstr ""
 "{$authors}:<br />\n"
