@@ -1,8 +1,9 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-10 08:45+0000\n"
-"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"PO-Revision-Date: 2021-12-27 05:03+0000\n"
+"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/pubIds-doi/"
 "uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -26,7 +27,7 @@ msgstr ""
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
 msgstr ""
-"%j.v%vi%i masalalar uchun <br />%j.v%vi%i.%a maqolalar uchun <br "
+"%j.v%vi%i sonlar uchun <br />%j.v%vi%i.%a maqolalar uchun <br "
 "/>%j.v%vi%i.%a.g%g."
 
 msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
