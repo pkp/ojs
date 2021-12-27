@@ -1,7 +1,8 @@
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-29 14:59+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2021-12-27 05:03+0000\n"
+"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/editor/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -295,8 +296,8 @@ msgstr ""
 
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
-"Siz o‘chirishni so‘ragan muqovadagi rasm topilmadi. U allaqachon o‘chirilgan "
-"bo‘lishi mumkin. Sahifani qayta yuklashga harakat qilib ko‘ring"
+"Siz oʻchirishni soʻragan muqova rasmini topib boʻlmadi. U allaqachon "
+"o'chirilgan bo'lishi mumkin. Sahifani qayta yuklashga harakat qiling."
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
@@ -480,3 +481,10 @@ msgstr "Qayta tayinlangan"
 
 msgid "editor.home"
 msgstr "Bosh sahifa tahrirchisi"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Siz oʻchirishni soʻragan muqova rasmi boshqa jurnalning soniga mos keladi. "
+"Iltimos, to'g'ri jurnal bilan ishlayotganingizga, to'g'ri nashr "
+"identifikatoridan foydalanayotganingizga ishonch hosil qiling va qayta "
+"urinib ko'ring."
