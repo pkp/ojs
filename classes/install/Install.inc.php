@@ -23,10 +23,6 @@ namespace APP\install;
 
 use PKP\install\PKPInstall;
 
-// Default installation data
-define('INSTALLER_DEFAULT_SITE_TITLE', 'common.software');
-define('INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH', 6);
-
 class Install extends PKPInstall
 {
     /**

@@ -172,15 +172,6 @@ class DOAJJsonFilter extends PKPImportExportFilter
             $article['bibjson']['keywords'] = $allowedNoOfKeywords;
         }
 
-        /* not needed here:
-        // Language
-        $language = AppLocale::get3LetterIsoFromLocale($pubObject->getLocale());
-        // publisherRecordId
-        $publisherRecordId = $pubObject->getId();
-        // documentType
-        $type = $pubObject->getType($pubObject->getLocale());
-        */
-
         $json = json_encode($article);
         return $json;
     }
