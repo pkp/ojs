@@ -17,7 +17,6 @@ namespace APP\issue;
 
 use APP\facades\Repo;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
 use PKP\cache\CacheManager;
@@ -106,7 +105,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      */
     public function newDataObject(): Issue
     {
-        return App::make(Issue::class);
+        return app(Issue::class);
     }
 
     /**
