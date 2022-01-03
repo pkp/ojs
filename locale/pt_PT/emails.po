@@ -1,9 +1,10 @@
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2020-12-22 20:48+0000\n"
+"PO-Revision-Date: 2022-01-03 16:36+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/emails/pt_PT/>\n"
@@ -1122,16 +1123,16 @@ msgstr "Mensagem de boas-vindas enviada a novo revisor registado no sistema, com
 msgid "emails.notification.subject"
 msgstr "Nova notificação de {$siteTitle}"
 
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Você possui uma nova notificação de {$siteTitle}:<br />\n"
+"Possui uma nova notificação de {$siteTitle}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$signature}\n"
+"<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.description"
 msgstr ""
