@@ -1,7 +1,7 @@
-# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2021.
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-27 05:03+0000\n"
+"PO-Revision-Date: 2022-01-03 08:14+0000\n"
 "Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/editor/uz_UZ@"
 "latin/>\n"
@@ -170,13 +170,13 @@ msgid "editor.issues.galleyPublicIdentificationExists"
 msgstr "Ochiq to‘plam identifikatsiyasi allaqachon mavjud."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "To‘plam tilini ko‘rsatish zarur"
+msgstr "To‘plam tilini ko‘rsatish zarur."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "To‘plam yorlig‘i talab etiladi"
+msgstr "To‘plam yorlig‘i talab etiladi."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Nashr qilingan to‘plamlar yo‘q"
+msgstr "Nashr qilingan to‘plamlar yo‘q."
 
 msgid "editor.issues.issueGalleysDescription"
 msgstr "Butun to‘plam tarkibni nashr eting."
@@ -302,7 +302,7 @@ msgstr ""
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
 "Siz o‘chirishni so‘ragan muqovadagi rasm ushbu nashr uchun muqova rasmiga "
-"mos kelmadi. Iltimos, sahifani qayta yuklang va qaytadan urining"
+"mos kelmadi. Iltimos, sahifani qayta yuklang va qaytadan urining."
 
 msgid "editor.issues.removeCoverPage"
 msgstr "Muqovadagi rasm olib tashlansinmi?"
@@ -346,19 +346,20 @@ msgstr ""
 "identifikatsiyalash variantlaridan kamida bittasini tanlang."
 
 msgid "editor.issues.titleRequired"
-msgstr "Nashr uchun sarlavha talab qilinadi"
+msgstr "Nashr uchun sarlavha talab qilinadi."
 
 msgid "editor.issues.yearRequired"
 msgstr ""
-"Har bir nashr yili ko‘rsatilishi va sonlar natural ko‘rinishda bo‘lishi kerak"
+"Har bir nashr yili ko‘rsatilishi va sonlar natural ko‘rinishda bo‘lishi "
+"kerak."
 
 msgid "editor.issues.numberRequired"
 msgstr ""
 "Har bir nashr raqamlanishi va ular natural ko‘rinishdagi sonlardan iborat bo‘"
-"lishi kerak"
+"lishi kerak."
 
 msgid "editor.issues.volumeRequired"
-msgstr "Har bir tom natural son bilan raqamlanishi kerak"
+msgstr "Har bir tom natural son bilan raqamlanishi kerak."
 
 msgid "editor.issues.datePublished"
 msgstr "Nashr qilingan sana"
@@ -373,7 +374,7 @@ msgid "editor.issues.confirmDelete"
 msgstr "Ushbu nashrni butunlay o‘chirib tashlashga ishonchingiz komilmi?"
 
 msgid "editor.issues.noArticles"
-msgstr "Joriy nashr uchun rejalashtirilgan maqolalar yo‘q"
+msgstr "Joriy nashr uchun rejalashtirilgan maqolalar yo‘q."
 
 msgid "editor.issues.numArticles"
 msgstr "Maqolalar miqdori"
@@ -444,7 +445,7 @@ msgstr ""
 "uchun belgilangan yozuvlar tizimdan butunlay o‘chiriladi."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Arxivda hech qanday materiallar yo‘q"
+msgstr "Arxivda hech qanday materiallar yo‘q."
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
