@@ -179,7 +179,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     }
 
     /** @copydoc EntityDAO::fromRow() */
-    public function fromRow(\stdClass $row): Issue
+    public function fromRow(object $row): Issue
     {
         return parent::fromRow($row);
     }
