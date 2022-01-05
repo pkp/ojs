@@ -1,10 +1,10 @@
-# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021.
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2021-09-27 05:55+0000\n"
+"PO-Revision-Date: 2022-01-03 16:36+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "id_ID/>\n"
@@ -461,6 +461,6 @@ msgstr "Dimasukkan ke Terbitan"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"Gambar sampul yang ingin dihapus cocok dengan nomor terbitan pada sebuah "
-"jurnal lain. Pastikan Anda mengelola jurnal yang benar, menggunakan ID "
-"terbitan yang benar, dan silakan ulangin."
+"Gambar sampul yang ingin dihapus digunakan pada nomor terbitan oleh jurnal "
+"lain. Pastikan Anda mengelola jurnal yang benar, menggunakan ID terbitan "
+"yang benar, dan silakan ulangi."

@@ -1,8 +1,9 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-10 21:21+0000\n"
-"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"PO-Revision-Date: 2022-01-03 08:14+0000\n"
+"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -437,7 +438,7 @@ msgstr "SAAT"
 
 msgid "manager.setup.clockssRegister"
 msgstr ""
-"<ahref=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS veb -saytiga </a> "
+"<a href=\"http://clockss.org/\" target=\"_blank\">the CLOCKSS website</a> "
 "tashrif buyurib, CLOCKSS xizmatiga yoziling."
 
 msgid "manager.setup.clockssLicenseLabel"
@@ -446,11 +447,11 @@ msgstr "CLOCKSS litsenziyasining tavsifi"
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 "CLOCKSS litsenziyasi \"Arxivlash\" jurnali haqida: <a href=\"http://clockss."
-"org/\" target=\"_blank\"> CLOCKSS litsenziyasi </a> da paydo bo'ladi."
+"org/\" target=\"_blank\">CLOCKSS License</a> da paydo bo'ladi"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
-"CLOCKSS <ahref=\"{$clockssUrl}\" target=\"_blank\"> Publisher Manifest </a> "
+"CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest </a> "
 "sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
 "tarqatish uchun CLOCKSS -ni yoqing."
 
@@ -461,24 +462,24 @@ msgid "manager.setup.lockssRegister"
 msgstr ""
 "Jurnalni ro'yxatdan o'tkazadigan va keshlaydigan 6-10 kutubxonani aniqlang. "
 "Masalan, muharrirlar yoki Kengash a'zolari ishlaydigan muassasalarga va/yoki "
-"LOCKSSda ishtirok etayotgan muassasalarga murojaat qiling. <ahref=\""
-"http://www.lockss.org/community/\" target=\"_blank\"> LOCKSS hamjamiyatiga "
-"</a> qarang."
+"LOCKSSda ishtirok etayotgan muassasalarga murojaat qiling. <a href=\""
+"http://www.lockss.org/community/\" target=\"_blank\"> the LOCKSS "
+"community</a> qarang."
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS litsenziyasining tavsifi"
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
-"LOCKSS litsenziyasi \"Arxivlash\" jurnali haqida paydo bo'ladi: <ahref=\""
-"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> "
-"LOCKSS litsenziyasi </a>"
+"LOCKSS litsenziyasi \"Arxivlash\" jurnali haqida paydo bo'ladi: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS License</a>"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
-"LOCKSS <ahref=\"{$lockssUrl}\" target=\"_blank\"> Publisher Manifest </a> "
-"sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
-"tarqatish uchun LOCKSS -ni yoqing."
+"LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> "
+"sahifasi orqali ishtirokchi kutubxonalarda jurnal mazmunini saqlash va "
+"tarqatish uchun LOCKSS-ni yoqing."
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS va CLOCKSS"
@@ -495,7 +496,7 @@ msgstr "PKP saqlash tarmog'i (ON)"
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"PKP PN dan foydalanish shartlarini qabul qilish uchun <tugma> plagin "
+"PKP PN dan foydalanish shartlarini qabul qilish uchun <button> plagin "
 "sozlamalari </button> ni ko'ring."
 
 msgid "manager.setup.plnDescription"
@@ -2140,3 +2141,39 @@ msgstr "Noto'g'ri XML:"
 
 msgid "plugins.importexport.common.error.validation"
 msgstr "Tanlangan obyektlarni o'zgartirib bo'lmadi."
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Sozlamalar elektron pochta manzilini tasdiqlashni talab qilganda, jurnalda "
+"ro'yxatdan o'tganda, bu elektron pochta avtomatik ravishda yangi "
+"foydalanuvchiga yuboriladi."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Elektron pochtani tasdiqlash (Jurnalni ro'yxatdan o'tkazish)"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Bir nechta jurnal joylashtirilganda veb-sayt nomi"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "To'lov summasining valyutasi, masalan, USD"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "To'lov miqdori"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "To'lov turining nomi"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Jurnal asosiy kontaktining elektron pochta manzili"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Avtomatlashtirilgan elektron pochta uchun jurnalning elektron imzosi"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Jurnal asosiy kontaktining nomi"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Jurnal bosh sahifasining URL manzili"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Jurnal nomi"
