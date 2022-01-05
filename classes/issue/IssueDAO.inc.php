@@ -696,7 +696,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 					'journal_id' => (int) $journalId,
 					'seq' => $i
 				],
-				['issue_id', 'journal_id']
+				['issue_id']
 			);
 			$result->next();
 		}
