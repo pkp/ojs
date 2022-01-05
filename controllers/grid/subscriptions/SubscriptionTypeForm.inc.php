@@ -17,6 +17,7 @@ use APP\subscription\SubscriptionType;
 
 use APP\template\TemplateManager;
 use PKP\form\Form;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionTypeForm extends Form
 {
@@ -49,7 +50,7 @@ class SubscriptionTypeForm extends Form
             SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
         ];
 
-        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $isoCodes = app(IsoCodesFactory::class);
         $this->validCurrencies = [];
         foreach ($isoCodes->getCurrencies() as $currency) {
             $this->validCurrencies[$currency->getLetterCode()] = $currency->getLocalName() . ' (' . $currency->getLetterCode() . ')';

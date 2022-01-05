@@ -14,6 +14,7 @@
  */
 
 use PKP\security\Role;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 import('lib.pkp.pages.submission.PKPSubmissionHandler');
 
@@ -50,9 +51,9 @@ class SubmissionHandler extends PKPSubmissionHandler
         }
         switch ($request->getUserVar('list')) {
             case 'languages':
-                $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory(\Sokil\IsoCodes\IsoCodesFactory::OPTIMISATION_IO);
+                $isoCodes = app(IsoCodesFactory::class);
                 $matches = [];
-                foreach ($isoCodes->getLanguages() as $language) {
+                foreach ($isoCodes->getLanguages(IsoCodesFactory::OPTIMISATION_IO) as $language) {
                     if (!$language->getAlpha2() || $language->getType() != 'L' || $language->getScope() != 'I') {
                         continue;
                     }

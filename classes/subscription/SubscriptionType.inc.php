@@ -18,6 +18,7 @@
 namespace APP\subscription;
 
 use PKP\db\DAORegistry;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionType extends \PKP\core\DataObject
 {
@@ -163,7 +164,7 @@ class SubscriptionType extends \PKP\core\DataObject
      */
     public function getCurrencyString()
     {
-        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $isoCodes = app(IsoCodesFactory::class);
         $currency = $isoCodes->getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
         return $currency ? $currency->getLocalName() : 'subscriptionTypes.currency';
     }
@@ -175,7 +176,7 @@ class SubscriptionType extends \PKP\core\DataObject
      */
     public function getCurrencyStringShort()
     {
-        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $isoCodes = app(IsoCodesFactory::class);
         $currency = $isoCodes->getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
         return $currency ? $currency->getLetterCode() : 'subscriptionTypes.currency';
     }
