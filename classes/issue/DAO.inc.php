@@ -247,7 +247,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
                 ->updateOrInsert(
                     [
                         'issue_id' => $item->issue_id,
-                        'journal_id' => (int) $contextId,
                     ],
                     [
                         'issue_id' => $item->issue_id,
