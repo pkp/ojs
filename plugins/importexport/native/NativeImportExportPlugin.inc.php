@@ -61,9 +61,9 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin
     /**
      * Get the issues and proceed to the export
      *
-     * @param $issueIds array Array of issueIds to export
-     * @param $deployment PKPNativeImportExportDeployment
-     * @param $opts array
+     * @param array $issueIds Array of issueIds to export
+     * @param PKPNativeImportExportDeployment $deployment
+     * @param array $opts
      */
     public function getExportIssuesDeployment($issueIds, &$deployment, $opts = [])
     {
@@ -82,10 +82,10 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin
     /**
      * Get the XML for a set of issues.
      *
-     * @param $issueIds array
-     * @param $context Context
-     * @param $user User
-     * @param $opts array
+     * @param array $issueIds
+     * @param Context $context
+     * @param User $user
+     * @param array $opts
      *
      * @return string XML contents representing the supplied issue IDs.
      */

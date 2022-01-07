@@ -20,7 +20,7 @@ use PKP\security\authorization\PKPSiteAccessPolicy;
 
 class ManageIssuesHandler extends Handler
 {
-    /** issue associated with the request **/
+    /** @var Issue Issue associated with the request */
     public $issue;
 
     /** @copydoc PKPHandler::_isBackendPage */
@@ -52,8 +52,8 @@ class ManageIssuesHandler extends Handler
     /**
      * Displays the issue listings in a tabbed interface.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Response contents.
      */

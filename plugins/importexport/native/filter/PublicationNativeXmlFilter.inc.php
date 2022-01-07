@@ -50,8 +50,8 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
     /**
      * Create and return a publication node.
      *
-     * @param $doc DOMDocument
-     * @param $entity Publication
+     * @param DOMDocument $doc
+     * @param Publication $entity
      *
      * @return DOMElement
      */

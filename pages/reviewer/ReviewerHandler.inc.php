@@ -65,7 +65,7 @@ class ReviewerHandler extends PKPReviewerHandler
      * Tests if the request contains a valid access token. If this is the case
      * the regular login process will be skipped
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     protected function _validateAccessKey($request)
     {
@@ -82,7 +82,7 @@ class ReviewerHandler extends PKPReviewerHandler
             return;
         }
 
-        $reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /* @var $reviewerSubmissionDao ReviewerSubmissionDAO */
+        $reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /** @var ReviewerSubmissionDAO $reviewerSubmissionDao */
         $reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
         if (!$reviewerSubmission) {
             return;

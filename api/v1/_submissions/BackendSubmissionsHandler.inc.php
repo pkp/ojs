@@ -62,8 +62,8 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
     /**
      * Change the status of submission payments.
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response
@@ -92,7 +92,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
             ], 400);
         }
 
-        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
         switch ($params['publicationFeeStatus']) {
@@ -131,7 +131,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
                 }
 
                 // Record a fulfilled payment.
-                $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
+                $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
                 $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR);
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(

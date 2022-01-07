@@ -40,7 +40,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String
+     * @return string
      */
     public function getDisplayName()
     {
@@ -58,8 +58,8 @@ class LanguageToggleBlockPlugin extends BlockPlugin
     /**
      * Get the HTML contents for this block.
      *
-     * @param $templateMgr object
-     * @param $request PKPRequest
+     * @param object $templateMgr
+     * @param PKPRequest $request
      */
     public function getContents($templateMgr, $request = null)
     {

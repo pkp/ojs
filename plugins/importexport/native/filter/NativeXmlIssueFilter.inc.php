@@ -22,7 +22,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -69,7 +69,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Handle a singular element import.
      *
-     * @param $node DOMElement
+     * @param DOMElement $node
      *
      * @return Issue
      */
@@ -117,9 +117,9 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Handle an element whose parent is the issue element.
      *
-     * @param $n DOMElement
-     * @param $issue Issue
-     * @param $processOnlyChildren boolean Do not modify the issue itself, only generate child objects
+     * @param DOMElement $n
+     * @param Issue $issue
+     * @param bool $processOnlyChildren Do not modify the issue itself, only generate child objects
      */
     public function handleChildElement($n, $issue, $processOnlyChildren)
     {
@@ -188,8 +188,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an identifier node and set up the issue object accordingly
      *
-     * @param $element DOMElement
-     * @param $issue Issue
+     * @param DOMElement $element
+     * @param Issue $issue
      */
     public function parseIdentifier($element, $issue)
     {
@@ -217,8 +217,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an articles element
      *
-     * @param $node DOMElement
-     * @param $issue Issue
+     * @param DOMElement $node
+     * @param Issue $issue
      */
     public function parseIssueGalleys($node, $issue)
     {
@@ -239,8 +239,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an issue galley and add it to the issue.
      *
-     * @param $n DOMElement
-     * @param $issue Issue
+     * @param DOMElement $n
+     * @param Issue $issue
      */
     public function parseIssueGalley($n, $issue)
     {
@@ -253,8 +253,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an articles element
      *
-     * @param $node DOMElement
-     * @param $issue Issue
+     * @param DOMElement $node
+     * @param Issue $issue
      */
     public function parseArticles($node, $issue)
     {
@@ -275,8 +275,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an article and add it to the issue.
      *
-     * @param $n DOMElement
-     * @param $issue Issue
+     * @param DOMElement $n
+     * @param Issue $issue
      */
     public function parseArticle($n, $issue)
     {
@@ -289,8 +289,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse a submission file and add it to the submission.
      *
-     * @param $node DOMElement
-     * @param $issue Issue
+     * @param DOMElement $node
+     * @param Issue $issue
      */
     public function parseSections($node, $issue)
     {
@@ -311,7 +311,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse a section stored in an issue.
      *
-     * @param $node DOMElement
+     * @param DOMElement $node
      */
     public function parseSection($node)
     {
@@ -319,7 +319,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
         $context = $deployment->getContext();
 
         // Create the data object
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $section = $sectionDao->newDataObject();
         $section->setContextId($context->getId());
         $section->setReviewFormId($node->getAttribute('review_form_id'));
@@ -382,9 +382,9 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse out the issue identification and store it in an issue.
      *
-     * @param $node DOMElement
-     * @param $issue Issue
-     * @param $allowWarnings boolean Warnings should be suppressed if this function is not being used to populate a new issue
+     * @param DOMElement $node
+     * @param Issue $issue
+     * @param bool $allowWarnings Warnings should be suppressed if this function is not being used to populate a new issue
      */
     public function parseIssueIdentification($node, $issue, $allowWarnings = true)
     {
@@ -455,7 +455,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Check if the issue already exists.
      *
-     * @param $node DOMNode issue node
+     * @param DOMNode $node issue node
      * return Issue|null matching issue, or null if no match
      */
     public function _issueExists($node)
@@ -493,9 +493,9 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Check if the section already exists.
      *
-     * @param $importSection Section New created section
+     * @param Section $importSection New created section
      *
-     * @return boolean
+     * @return bool
      */
     public function _sectionExist($importSection)
     {

@@ -36,7 +36,7 @@ class LegacyJR1
     /**
      * Display the JR1 (R3) report
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function display($request)
     {
@@ -56,9 +56,9 @@ class LegacyJR1
     /**
      * Generate a report file.
      *
-     * @param $request PKPRequest
-     * @param $year string
-     * @param $useLegacyStats boolean Use the old counter plugin data.
+     * @param PKPRequest $request
+     * @param string $year
+     * @param bool $useLegacyStats Use the old counter plugin data.
      */
     public function _report($request, $year, $useLegacyStats)
     {
@@ -106,7 +106,7 @@ class LegacyJR1
         fputcsv($fp, $cols);
 
         // Get statistics from the log.
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journalIds = $this->_getJournalIds($useLegacyStats);
         foreach ($journalIds as $journalId) {
             $journal = $journalDao->getById($journalId);
@@ -132,8 +132,8 @@ class LegacyJR1
     /**
     * Internal function to form some of the CSV columns
     *
-     * @param $cols array() by reference
-     * @param $entries array()
+     * @param array $cols by reference
+     * @param array $entries
      * $cols will be modified
      */
     public function _formColumns(&$cols, $entries)
@@ -167,17 +167,17 @@ class LegacyJR1
     /**
      * Internal function to assign information for the Counter part of a report
      *
-     * @param $request PKPRequest
-     * @param $templateManager PKPTemplateManager
-     * @param $begin string
-     * @param $end string
-     * @param $useLegacyStats boolean
+     * @param PKPRequest $request
+     * @param PKPTemplateManager $templateManager
+     * @param string $begin
+     * @param string $end
+     * @param bool $useLegacyStats
      */
     public function _assignTemplateCounterXML($request, $templateManager, $begin, $end = '', $useLegacyStats)
     {
         $journal = $request->getContext();
 
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journalIds = $this->_getJournalIds($useLegacyStats);
 
         $site = $request->getSite();
@@ -233,7 +233,7 @@ class LegacyJR1
     /**
     * Internal function to collect structures for output
     *
-     * @param $entries array()
+     * @param array $entries
      */
     public function _arrangeEntries($entries)
     {
@@ -285,7 +285,7 @@ class LegacyJR1
      * Return the begin and end dates
      * based on the passed year.
      *
-     * @param $year string
+     * @param string $year
      *
      * @return array
      */
@@ -300,13 +300,13 @@ class LegacyJR1
     /**
      * Get the valid journal IDs for which log entries exist in the DB.
      *
-     * @param $useLegacyStats boolean Use the old counter plugin data.
+     * @param bool $useLegacyStats Use the old counter plugin data.
      *
      * @return array
      */
     public function _getJournalIds($useLegacyStats = false)
     {
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
         if ($useLegacyStats) {
             $results = $metricsDao->getMetrics(OJS_METRIC_TYPE_LEGACY_COUNTER, [PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_ID]);
             $fieldId = PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_ID;
@@ -325,10 +325,10 @@ class LegacyJR1
     /**
      * Retrieve a monthly log entry range.
      *
-     * @param $journalId int
-     * @param $begin
-     * @param $end
-     * @param $useLegacyStats boolean Use the old counter plugin data.
+     * @param int $journalId
+     * @param string $begin
+     * @param string $end
+     * @param bool $useLegacyStats Use the old counter plugin data.
      *
      * @return 2D array
      */
@@ -337,7 +337,7 @@ class LegacyJR1
         $begin = date('Ym', strtotime($begin));
         $end = date('Ym', strtotime($end));
 
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
         $columns = [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH, PKPStatisticsHelper::STATISTICS_DIMENSION_FILE_TYPE];
         $filter = [
             PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH => ['from' => $begin, 'to' => $end]
@@ -364,9 +364,9 @@ class LegacyJR1
     /**
      * Retrieve a monthly log entry range.
      *
-     * @param $begin
-     * @param $end
-     * @param $useLegacyStats boolean Use the old counter plugin data.
+     * @param string $begin
+     * @param string $end
+     * @param bool $useLegacyStats Use the old counter plugin data.
      *
      * @return 2D array
      */
@@ -379,9 +379,9 @@ class LegacyJR1
      *
      * Counter report in XML
      *
-     * @param $request PKPRequest
-     * @param $year string
-     * @param $useLegacyStats boolean
+     * @param PKPRequest $request
+     * @param string $year
+     * @param bool $useLegacyStats
      */
     public function _reportXML($request, $year, $useLegacyStats)
     {

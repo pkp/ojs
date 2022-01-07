@@ -53,7 +53,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set the journal ID of the subscription.
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function setJournalId($journalId)
     {
@@ -73,7 +73,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set the user ID of the subscription.
      *
-     * @param $userId int
+     * @param int $userId
      */
     public function setUserId($userId)
     {
@@ -113,7 +113,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set the subscription type ID of the subscription.
      *
-     * @param $typeId int
+     * @param int $typeId
      */
     public function setTypeId($typeId)
     {
@@ -127,7 +127,7 @@ class Subscription extends \PKP\core\DataObject
      */
     public function getSubscriptionTypeName()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         return $subscriptionTypeDao->getSubscriptionTypeName($this->getData('typeId'));
     }
 
@@ -138,7 +138,7 @@ class Subscription extends \PKP\core\DataObject
      */
     public function getSubscriptionTypeSummaryString()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
         return $subscriptionType->getSummaryString();
     }
@@ -146,22 +146,22 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Get the subscription type institutional flag for the subscription.
      *
-     * @return boolean
+     * @return bool
      */
     public function getSubscriptionTypeInstitutional()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         return $subscriptionTypeDao->getSubscriptionTypeInstitutional($this->getData('typeId'));
     }
 
     /**
      * Check whether the subscription type is non-expiring for the subscription.
      *
-     * @return boolean
+     * @return bool
      */
     public function isNonExpiring()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($this->getTypeId());
         return $subscriptionType->getNonExpiring();
     }
@@ -179,7 +179,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription start date.
      *
-     * @param $dateStart date (YYYY-MM-DD)
+     * @param date $dateStart (YYYY-MM-DD)
      */
     public function setDateStart($dateStart)
     {
@@ -199,7 +199,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription end date.
      *
-     * @param $dateEnd date (YYYY-MM-DD)
+     * @param date $dateEnd (YYYY-MM-DD)
      */
     public function setDateEnd($dateEnd)
     {
@@ -219,7 +219,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription status.
      *
-     * @param $status int SUBSCRIPTION_STATUS_...
+     * @param int $status SUBSCRIPTION_STATUS_...
      */
     public function setStatus($status)
     {
@@ -264,7 +264,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription membership.
      *
-     * @param $membership string
+     * @param string $membership
      */
     public function setMembership($membership)
     {
@@ -284,7 +284,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription reference number.
      *
-     * @param $referenceNumber string
+     * @param string $referenceNumber
      */
     public function setReferenceNumber($referenceNumber)
     {
@@ -304,7 +304,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription notes.
      *
-     * @param $notes string
+     * @param string $notes
      */
     public function setNotes($notes)
     {
@@ -314,7 +314,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Check whether subscription is expired
      *
-     * @return boolean
+     * @return bool
      */
     public function isExpired()
     {

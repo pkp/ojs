@@ -22,7 +22,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -49,7 +49,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * @see Filter::process()
      *
-     * @param $issueGalleys array Array of issue galleys
+     * @param array $issueGalleys Array of issue galleys
      *
      * @return DOMDocument
      */
@@ -79,8 +79,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Create and return an issueGalley node.
      *
-     * @param $doc DOMDocument
-     * @param $issueGalley IssueGalley
+     * @param DOMDocument $doc
+     * @param IssueGalley $issueGalley
      *
      * @return DOMElement
      */
@@ -102,13 +102,13 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Add the issue file to its DOM element.
      *
-     * @param $doc DOMDocument
-     * @param $issueGalleyNode DOMElement
-     * @param $issueGalley IssueGalley
+     * @param DOMDocument $doc
+     * @param DOMElement $issueGalleyNode
+     * @param IssueGalley $issueGalley
      */
     public function addFile($doc, $issueGalleyNode, $issueGalley)
     {
-        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
         if ($issueFile) {
@@ -136,9 +136,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add identifier nodes to an issue galley node.
      *
-     * @param $doc DOMDocument
-     * @param $issueGalleyNode DOMElement
-     * @param $issueGalley IssueGalley
+     * @param DOMDocument $doc
+     * @param DOMElement $issueGalleyNode
+     * @param IssueGalley $issueGalley
      */
     public function addIdentifiers($doc, $issueGalleyNode, $issueGalley)
     {

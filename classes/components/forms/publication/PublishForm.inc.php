@@ -39,10 +39,10 @@ class PublishForm extends FormComponent
     /**
      * Constructor
      *
-     * @param $action string URL to submit the form to
-     * @param $publication Publication The publication to change settings for
-     * @param $submissionContext \Context journal or press
-     * @param $requirementErrors array A list of pre-publication requirements that are not met.
+     * @param string $action URL to submit the form to
+     * @param Publication $publication The publication to change settings for
+     * @param \Context $submissionContext journal or press
+     * @param array $requirementErrors A list of pre-publication requirements that are not met.
      */
     public function __construct($action, $publication, $submissionContext, $requirementErrors)
     {

@@ -42,9 +42,9 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
     /**
      * Get decision actions labels.
      *
-     * @param $context Context
-     * @param $stageId int
-     * @param $decisions array
+     * @param Context $context
+     * @param int $stageId
+     * @param array $decisions
      *
      * @return array
      */
@@ -70,15 +70,15 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
     /**
      * Check for editor decisions in the review round.
      *
-     * @param $context \PKP\context\Context
-     * @param $reviewRound \PKP\submission\reviewRound\ReviewRound
-     * @param $decisions array
+     * @param \PKP\context\Context $context
+     * @param \PKP\submission\reviewRound\ReviewRound $reviewRound
+     * @param array $decisions
      *
-     * @return boolean
+     * @return bool
      */
     public function getEditorTakenActionInReviewRound($context, $reviewRound, $decisions = [])
     {
-        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
+        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
         $editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
         if (empty($decisions)) {
@@ -101,8 +101,8 @@ class EditorDecisionActionsManager extends PKPEditorDecisionActionsManager
      * If the user cannot make decisions i.e. if it is a recommendOnly user,
      * there will be no decisions options in the review stage.
      *
-     * @param $context Context
-     * @param $makeDecision boolean If the user can make decisions
+     * @param Context $context
+     * @param bool $makeDecision If the user can make decisions
      *
      * @return array
      */

@@ -42,8 +42,8 @@ class DOAJExportDeployment
     /**
      * Constructor
      *
-     * @param $context Context
-     * @param $plugin PubObjectsPubIdExportPlugin
+     * @param Context $context
+     * @param PubObjectsPubIdExportPlugin $plugin
      */
     public function __construct($context, $plugin)
     {
@@ -100,7 +100,7 @@ class DOAJExportDeployment
     /**
      * Set the import/export context.
      *
-     * @param $context Context
+     * @param Context $context
      */
     public function setContext($context)
     {
@@ -120,7 +120,7 @@ class DOAJExportDeployment
     /**
      * Set the import/export plugin.
      *
-     * @param $plugin ImportExportPlugin
+     * @param ImportExportPlugin $plugin
      */
     public function setPlugin($plugin)
     {

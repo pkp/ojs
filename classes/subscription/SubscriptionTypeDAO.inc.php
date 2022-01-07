@@ -40,8 +40,8 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve a subscription type by ID.
      *
-     * @param $typeId int
-     * @param $journalId int optional
+     * @param int $typeId
+     * @param int $journalId optional
      *
      * @return SubscriptionType
      */
@@ -64,7 +64,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve subscription type name by ID.
      *
-     * @param $typeId int
+     * @param int $typeId
      *
      * @return string?
      */
@@ -84,9 +84,9 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve institutional flag by ID.
      *
-     * @param $typeId int
+     * @param int $typeId
      *
-     * @return boolean
+     * @return bool
      */
     public function getSubscriptionTypeInstitutional($typeId)
     {
@@ -101,9 +101,9 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve membership flag by ID.
      *
-     * @param $typeId int
+     * @param int $typeId
      *
-     * @return boolean
+     * @return bool
      */
     public function getSubscriptionTypeMembership($typeId)
     {
@@ -118,9 +118,9 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve public display flag by ID.
      *
-     * @param $typeId int
+     * @param int $typeId
      *
-     * @return boolean
+     * @return bool
      */
     public function getSubscriptionTypeDisablePublicDisplay($typeId)
     {
@@ -135,10 +135,10 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Check if a subscription type exists with the given type id for a journal.
      *
-     * @param $typeId int
-     * @param $journalId int
+     * @param int $typeId
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionTypeExistsByTypeId($typeId, $journalId)
     {
@@ -156,7 +156,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Internal function to return a SubscriptionType object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return SubscriptionType
      */
@@ -194,7 +194,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Update the localized settings for this object
      *
-     * @param $subscriptionType object
+     * @param object $subscriptionType
      */
     public function updateLocaleFields($subscriptionType)
     {
@@ -206,7 +206,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Insert a new SubscriptionType.
      *
-     * @param $subscriptionType SubscriptionType
+     * @param SubscriptionType $subscriptionType
      *
      * @return int Inserted subscription type ID
      */
@@ -238,7 +238,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Update an existing subscription type.
      *
-     * @param $subscriptionType SubscriptionType
+     * @param SubscriptionType $subscriptionType
      */
     public function updateObject($subscriptionType)
     {
@@ -275,8 +275,8 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      * Delete a subscription type by ID. Note that all subscriptions with this
      * type ID are also deleted.
      *
-     * @param $typeId int Subscription type ID
-     * @param $journalId int Optional journal ID
+     * @param int $typeId Subscription type ID
+     * @param int $journalId Optional journal ID
      */
     public function deleteById($typeId, $journalId = null)
     {
@@ -293,7 +293,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      * Delete subscription types by journal ID. Note that all subscriptions with
      * corresponding types are also deleted.
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function deleteByJournal($journalId)
     {
@@ -312,7 +312,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve subscription types matching a particular journal ID.
      *
-     * @param $journalId int
+     * @param int $journalId
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching SubscriptionTypes
@@ -330,9 +330,9 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Retrieve subscription types matching a particular journal ID and institutional flag.
      *
-     * @param $journalId int
-     * @param $institutional bool
-     * @param $disablePublicDisplay bool|null
+     * @param int $journalId
+     * @param bool $institutional
+     * @param bool|null $disablePublicDisplay
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching SubscriptionTypes
@@ -357,10 +357,10 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Check if at least one subscription type exists for a given journal by institutional flag.
      *
-     * @param $journalId int
-     * @param $institutional bool
+     * @param int $journalId
+     * @param bool $institutional
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionTypesExistByInstitutional($journalId, $institutional = false)
     {

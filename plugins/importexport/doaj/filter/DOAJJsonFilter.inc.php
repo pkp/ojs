@@ -21,7 +21,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -46,7 +46,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * @see Filter::process()
      *
-     * @param $pubObject Submission
+     * @param Submission $pubObject
      *
      * @return JSON string
      */
@@ -188,7 +188,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * Format a date by Y-F format.
      *
-     * @param $date string
+     * @param string $date
      *
      * @return string
      */

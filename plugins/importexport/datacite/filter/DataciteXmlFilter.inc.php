@@ -57,7 +57,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -82,7 +82,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * @see Filter::process()
      *
-     * @param $pubObject Issue|Submission|ArticleGalley
+     * @param Issue|Submission|ArticleGalley $pubObject
      *
      * @return DOMDocument
      */
@@ -251,7 +251,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create and return the root node.
      *
-     * @param $doc DOMDocument
+     * @param DOMDocument $doc
      *
      * @return DOMElement
      */
@@ -267,13 +267,13 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create creators node.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $publication Publication
-     * @param $galley ArticleGalley
-     * @param $galleyFile SubmissionFile
-     * @param $publisher string
-     * @param $objectLocalePrecedence array
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Publication $publication
+     * @param ArticleGalley $galley
+     * @param SubmissionFile $galleyFile
+     * @param string $publisher
+     * @param array $objectLocalePrecedence
      *
      * @return DOMElement
      */
@@ -296,7 +296,7 @@ class DataciteXmlFilter extends NativeExportFilter
                 // Retrieve the publication authors.
                 $authors = $publication->getData('authors');
                 assert(!empty($authors));
-                foreach ($authors as $author) { /* @var $author Author */
+                foreach ($authors as $author) { /** @var Author $author */
                     $creators[] = $author->getFullName(false, true);
                 }
                 break;
@@ -317,12 +317,12 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create titles node.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $publication Publication
-     * @param $galley ArticleGalley
-     * @param $galleyFile SubmissionFile
-     * @param $objectLocalePrecedence array
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Publication $publication
+     * @param ArticleGalley $galley
+     * @param SubmissionFile $galleyFile
+     * @param array $objectLocalePrecedence
      *
      * @return DOMElement
      */
@@ -367,13 +367,13 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create a date node list.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $article Submission
-     * @param $publication Publication
-     * @param $galley ArticleGalley
-     * @param $galleyFile SubmissionFile
-     * @param $publicationDate string
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Submission $article
+     * @param Publication $publication
+     * @param ArticleGalley $galley
+     * @param SubmissionFile $galleyFile
+     * @param string $publicationDate
      *
      * @return DOMElement
      */
@@ -409,7 +409,7 @@ class DataciteXmlFilter extends NativeExportFilter
                     $dates[DATACITE_DATE_SUBMITTED] = $submittedDate;
                 }
                 // Accepted date: the last editor accept decision date
-                $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
+                $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
                 $editDecisions = $editDecisionDao->getEditorDecisions($article->getId());
                 foreach (array_reverse($editDecisions) as $editDecision) {
                     if ($editDecision['decision'] == EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT) {
@@ -451,11 +451,11 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create a resource type node.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $article Submission
-     * @param $galley ArticleGalley
-     * @param $galleyFile SubmissionFile
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Submission $article
+     * @param ArticleGalley $galley
+     * @param SubmissionFile $galleyFile
      *
      * @return DOMElement
      */
@@ -498,10 +498,10 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Generate alternate identifiers node list.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $article Submission
-     * @param $galley ArticleGalley
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Submission $article
+     * @param ArticleGalley $galley
      *
      * @return DOMElement
      */
@@ -542,11 +542,11 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Generate related identifiers node list.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $article Submission
-     * @param $publication Publication
-     * @param $galley ArticleGalley
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Submission $article
+     * @param Publication $publication
+     * @param ArticleGalley $galley
      *
      * @return DOMElement|null
      */
@@ -616,12 +616,12 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create a sizes node list.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $article Submission
-     * @param $publication Publication
-     * @param $galley ArticleGalley
-     * @param $galleyFile SubmissionFile
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Submission $article
+     * @param Publication $publication
+     * @param ArticleGalley $galley
+     * @param SubmissionFile $galleyFile
      *
      * @return DOMElement|null Can be null if a size
      *  cannot be identified for the given object.
@@ -642,7 +642,7 @@ class DataciteXmlFilter extends NativeExportFilter
                 $pages = $publication->getData('pages');
                 break;
             case isset($issue):
-                $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+                $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
                 $issueGalleyFiles = $issueGalleyDao->getByIssueId($issue->getId());
                 foreach ($issueGalleyFiles as $issueGalleyFile) {
                     if ($issueGalleyFile) {
@@ -670,13 +670,13 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create descriptions node list.
      *
-     * @param $doc DOMDocument
-     * @param $issue Issue
-     * @param $article Submission
-     * @param $publication Publication
-     * @param $galley Alley
-     * @param $galleyFile SubmissionFile
-     * @param $objectLocalePrecedence array
+     * @param DOMDocument $doc
+     * @param Issue $issue
+     * @param Submission $article
+     * @param Publication $publication
+     * @param Galley $galley
+     * @param SubmissionFile $galleyFile
+     * @param array $objectLocalePrecedence
      *
      * @return DOMElement|null Can be null if a size
      *  cannot be identified for the given object.
@@ -733,10 +733,10 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Identify the locale precedence for this export.
      *
-     * @param $context Context
-     * @param $article Submission
-     * @param $publication Publication
-     * @param $galley ArticleGalley
+     * @param Context $context
+     * @param Submission $article
+     * @param Publication $publication
+     * @param ArticleGalley $galley
      *
      * @return array A list of valid PKP locales in descending
      *  order of priority.
@@ -771,7 +771,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Try to translate an ISO language code to an OJS locale.
      *
-     * @param $language string 2- or 3-letter ISO language code
+     * @param string $language 2- or 3-letter ISO language code
      *
      * @return string|null An OJS locale or null if no matching
      *  locale could be found.
@@ -795,9 +795,9 @@ class DataciteXmlFilter extends NativeExportFilter
      * Identify the primary translation from an array of
      * localized data.
      *
-     * @param $localizedData array An array of localized
+     * @param array $localizedData An array of localized
      *  data (key: locale, value: localized data).
-     * @param $localePrecedence array An array of locales
+     * @param array $localePrecedence An array of locales
      *  by descending priority.
      *
      * @return mixed|null The value of the primary locale
@@ -830,9 +830,9 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Re-order localized data by locale precedence.
      *
-     * @param $localizedData array An array of localized
+     * @param array $localizedData An array of localized
      *  data (key: locale, value: localized data).
-     * @param $localePrecedence array An array of locales
+     * @param array $localePrecedence An array of locales
      *  by descending priority.
      *
      * @return array Re-ordered localized data.
@@ -866,8 +866,8 @@ class DataciteXmlFilter extends NativeExportFilter
      * Construct an issue title from the journal title
      * and the issue identification.
      *
-     * @param $issue Issue
-     * @param $objectLocalePrecedence array
+     * @param Issue $issue
+     * @param array $objectLocalePrecedence
      *
      * @return array|string An array of localized issue titles
      *  or a string if a locale has been given.
@@ -896,8 +896,8 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Construct a table of content for an issue.
      *
-     * @param $issue Issue
-     * @param $objectLocalePrecedence array
+     * @param Issue $issue
+     * @param array $objectLocalePrecedence
      *
      * @return string
      */

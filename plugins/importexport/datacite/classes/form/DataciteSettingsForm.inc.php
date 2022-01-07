@@ -23,13 +23,13 @@ class DataciteSettingsForm extends Form
     //
     // Private properties
     //
-    /** @var integer */
+    /** @var int */
     public $_contextId;
 
     /**
      * Get the context ID.
      *
-     * @return integer
+     * @return int
      */
     public function _getContextId()
     {
@@ -55,8 +55,8 @@ class DataciteSettingsForm extends Form
     /**
      * Constructor
      *
-     * @param $plugin DataciteExportPlugin
-     * @param $contextId integer
+     * @param DataciteExportPlugin $plugin
+     * @param int $contextId
      */
     public function __construct($plugin, $contextId)
     {
@@ -174,9 +174,9 @@ class DataciteSettingsForm extends Form
     /**
      * Is the form field optional
      *
-     * @param $settingName string
+     * @param string $settingName
      *
-     * @return boolean
+     * @return bool
      */
     public function isOptional($settingName)
     {

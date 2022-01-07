@@ -80,7 +80,7 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         $gridDataElement->setSequence($newSequence);
         $issueGalleyDao->updateObject($gridDataElement);
     }
@@ -199,8 +199,8 @@ class IssueGalleyGridHandler extends GridHandler
     /**
      * An action to add a new issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function add($args, $request)
     {
@@ -212,8 +212,8 @@ class IssueGalleyGridHandler extends GridHandler
     /**
      * An action to edit a issue galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -231,8 +231,8 @@ class IssueGalleyGridHandler extends GridHandler
     /**
      * An action to upload an issue galley file.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -256,8 +256,8 @@ class IssueGalleyGridHandler extends GridHandler
     /**
      * An action to download an issue galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Serialized JSON object
      */
@@ -272,8 +272,8 @@ class IssueGalleyGridHandler extends GridHandler
     /**
      * Update a issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -296,12 +296,12 @@ class IssueGalleyGridHandler extends GridHandler
     /**
      * Removes an issue galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function delete($args, $request)
     {
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
         if ($issueGalley && $request->checkCSRF()) {
             $issueGalleyDao->deleteObject($issueGalley);
@@ -316,7 +316,7 @@ class IssueGalleyGridHandler extends GridHandler
     protected function loadData($request, $filter)
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         return $issueGalleyDao->getByIssueId($issue->getId());
     }
 }

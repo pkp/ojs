@@ -114,8 +114,8 @@ class CounterReportPlugin extends ReportPlugin
      * Get a COUNTER Reporter Object
      * Must exist in the report path as {Report}_r{release}.inc.php
      *
-     * @param $report string Report name
-     * @param $release string release identifier
+     * @param string $report Report name
+     * @param string $release release identifier
      *
      * @return object
      */
@@ -254,7 +254,7 @@ class CounterReportPlugin extends ReportPlugin
     /**
     * Get the years for which log entries exist in the DB.
     *
-    * @param $useLegacyStats boolean Use the old counter plugin data.
+    * @param bool $useLegacyStats Use the old counter plugin data.
     *
     * @return array
     */
@@ -267,7 +267,7 @@ class CounterReportPlugin extends ReportPlugin
             $metricType = METRIC_TYPE_COUNTER;
             $filter = [PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE];
         }
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
         $results = $metricsDao->getMetrics($metricType, [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH], $filter);
         $years = [];
         foreach ($results as $record) {

@@ -51,7 +51,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String
+     * @return string
      */
     public function getDisplayName()
     {
@@ -141,8 +141,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
      * Return string containing the contents of the HTML file.
      * This function performs any necessary filtering, like image URL replacement.
      *
-     * @param $request PKPRequest
-     * @param $galley ArticleGalley
+     * @param PKPRequest $request
+     * @param ArticleGalley $galley
      *
      * @return string
      */

@@ -35,8 +35,8 @@ class ArticleTombstoneManager
 
     public function insertArticleTombstone($article, $journal)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
+        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
         // delete article tombstone -- to ensure that there aren't more than one tombstone for this article
         $tombstoneDao->deleteByDataObjectId($article->getId());
         // insert article tombstone
@@ -83,7 +83,7 @@ class ArticleTombstoneManager
      */
     public function deleteTombstonesByContextId(int $contextId)
     {
-        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
+        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
         $submissions = Repo::submission()->getMany(
             Repo::submission()
                 ->getCollector()

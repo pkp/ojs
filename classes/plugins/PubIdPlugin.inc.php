@@ -287,7 +287,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     /**
      * Clear pubIds of all issue objects.
      *
-     * @param $issue Issue
+     * @param Issue $issue
      */
     public function clearIssueObjectsPubIds($issue)
     {

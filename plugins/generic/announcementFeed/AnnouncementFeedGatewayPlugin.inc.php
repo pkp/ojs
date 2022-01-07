@@ -25,7 +25,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
     /**
      * Constructor
      *
-     * @param $parentPlugin AnnouncementFeedPlugin
+     * @param AnnouncementFeedPlugin $parentPlugin
      */
     public function __construct($parentPlugin)
     {
@@ -37,7 +37,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -80,7 +80,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
      * Get whether or not this plugin is enabled. (Should always return true, as the
      * parent plugin will take care of loading this one when needed)
      *
-     * @return boolean
+     * @return bool
      */
     public function getEnabled()
     {
@@ -90,8 +90,8 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
     /**
      * Handle fetch requests for this plugin.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function fetch($args, $request)
     {
@@ -147,7 +147,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
             }
         }
 
-        $versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
+        $versionDao = DAORegistry::getDAO('VersionDAO'); /** @var VersionDAO $versionDao */
         $version = $versionDao->getCurrentVersion();
 
         $templateMgr = TemplateManager::getManager($request);

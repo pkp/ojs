@@ -28,7 +28,7 @@ class IndividualSubscription extends Subscription
      */
     public function isValid($check = self::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
-        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         return $subscriptionDao->isValidIndividualSubscription($this->getData('userId'), $this->getData('journalId'), $check, $checkDate);
     }
 }

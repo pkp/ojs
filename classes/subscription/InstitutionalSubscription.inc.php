@@ -46,7 +46,7 @@ class InstitutionalSubscription extends Subscription
     /**
      * Set the institution name of the institutionalSubscription.
      *
-     * @param $institutionName string
+     * @param string $institutionName
      */
     public function setInstitutionName($institutionName)
     {
@@ -66,7 +66,7 @@ class InstitutionalSubscription extends Subscription
     /**
      * Set the mailing address of the institutionalSubscription.
      *
-     * @param $mailingAddress string
+     * @param string $mailingAddress
      */
     public function setInstitutionMailingAddress($mailingAddress)
     {
@@ -86,7 +86,7 @@ class InstitutionalSubscription extends Subscription
     /**
      * Set institutionalSubscription domain string.
      *
-     * @param $domain string
+     * @param string $domain
      */
     public function setDomain($domain)
     {
@@ -127,7 +127,7 @@ class InstitutionalSubscription extends Subscription
     /**
      * Set institutionalSubscription ip ranges.
      *
-     * @param ipRanges array
+     * @param array $ipRanges
      */
     public function setIPRanges($ipRanges)
     {
@@ -137,16 +137,16 @@ class InstitutionalSubscription extends Subscription
     /**
      * Check whether subscription is valid
      *
-     * @param $domain string
-     * @param $IP string
-     * @param $check int SUBSCRIPTION_DATE_... Test using either start date, end date, or both (default)
-     * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
+     * @param string $domain
+     * @param string $IP
+     * @param int $check SUBSCRIPTION_DATE_... Test using either start date, end date, or both (default)
+     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
      * @return int|false Found subscription ID, or false for none.
      */
     public function isValid($domain, $IP, $check = self::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
-        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         return $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $this->getData('journalId'), $check, $checkDate);
     }
 }

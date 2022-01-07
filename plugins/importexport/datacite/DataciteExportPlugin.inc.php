@@ -364,7 +364,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * Test whether the tar binary is available.
      *
-     * @return boolean|array Boolean true if available otherwise
+     * @return bool|array Boolean true if available otherwise
      *  an array with an error message.
      */
     public function _checkForTar()
@@ -383,9 +383,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * Create a tar archive.
      *
-     * @param $targetPath string
-     * @param $targetFile string
-     * @param $sourceFiles array
+     * @param string $targetPath
+     * @param string $targetFile
+     * @param array $sourceFiles
      */
     public function _tarFiles($targetPath, $targetFile, $sourceFiles)
     {
@@ -412,9 +412,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * Get the canonical URL of an object.
      *
-     * @param $request Request
-     * @param $context Context
-     * @param $object Issue|Submission|ArticleGalley
+     * @param Request $request
+     * @param Context $context
+     * @param Issue|Submission|ArticleGalley $object
      */
     public function _getObjectUrl($request, $context, $object)
     {

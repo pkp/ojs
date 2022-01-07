@@ -27,11 +27,11 @@ class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm
     /**
      * Constructor.
      *
-     * @param $template string Form template
-     * @param $pubObject object
-     * @param $approval boolean
-     * @param $confirmationText string
-     * @param $formParams array
+     * @param string $template Form template
+     * @param object $pubObject
+     * @param bool $approval
+     * @param string $confirmationText
+     * @param array $formParams
      */
     public function __construct($template, $pubObject, $approval, $confirmationText, $formParams = null)
     {

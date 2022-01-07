@@ -22,13 +22,13 @@ class DOISettingsForm extends Form
     //
     // Private properties
     //
-    /** @var integer */
+    /** @var int */
     public $_contextId;
 
     /**
      * Get the context ID.
      *
-     * @return integer
+     * @return int
      */
     public function _getContextId()
     {
@@ -55,8 +55,8 @@ class DOISettingsForm extends Form
     /**
      * Constructor
      *
-     * @param $plugin DOIPubIdPlugin
-     * @param $contextId integer
+     * @param DOIPubIdPlugin $plugin
+     * @param int $contextId
      */
     public function __construct($plugin, $contextId)
     {

@@ -70,7 +70,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $journalId = 1;
 
         // Enable the DOI plugin.
-        $pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /* @var $pluginSettingsDao PluginSettingsDAO */
+        $pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO'); /** @var PluginSettingsDAO $pluginSettingsDao */
         $pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enabled', 1);
         $pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enableIssueDoi', 1);
         $pluginSettingsDao->updateSetting($journalId, 'doipubidplugin', 'enablePublicationDoi', 1);
@@ -229,7 +229,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
     /**
      * Callback for journal settings.
      *
-     * @param $settingName string
+     * @param string $settingName
      */
     public function getJournalSetting($settingName)
     {

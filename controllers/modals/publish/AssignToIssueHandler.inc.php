@@ -23,10 +23,10 @@ use PKP\security\authorization\PublicationAccessPolicy;
 
 class AssignToIssueHandler extends Handler
 {
-    /** @var Submission **/
+    /** @var Submission */
     public $submission;
 
-    /** @var Publication **/
+    /** @var Publication */
     public $publication;
 
     /**
@@ -73,8 +73,8 @@ class AssignToIssueHandler extends Handler
     /**
      * Display a form to assign an issue to a publication
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */

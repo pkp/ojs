@@ -62,8 +62,8 @@ class ManualPaymentPlugin extends PaymethodPlugin
     /**
      * Add settings to the payments form
      *
-     * @param $hookName string
-     * @param $form FormComponent
+     * @param string $hookName
+     * @param FormComponent $form
      */
     public function addSettings($hookName, $form)
     {
@@ -142,8 +142,8 @@ class ManualPaymentPlugin extends PaymethodPlugin
     /**
      * Handle incoming requests/notifications
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function handle($args, $request)
     {
@@ -153,7 +153,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
         $op = $args[0] ?? null;
         $queuedPaymentId = isset($args[1]) ? ((int) $args[1]) : 0;
 
-        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
+        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
         $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId);
         $paymentManager = Application::getPaymentManager($context);
         // if the queued payment doesn't exist, redirect away from payments

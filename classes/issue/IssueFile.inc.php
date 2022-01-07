@@ -19,7 +19,7 @@ use PKP\file\PKPFile;
 
 class IssueFile extends PKPFile
 {
-    /* File content type IDs */
+    /** @var int File content type IDs */
     public const ISSUE_FILE_PUBLIC = 1;
 
     //
@@ -39,7 +39,7 @@ class IssueFile extends PKPFile
     /**
      * set ID of issue.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function setIssueId($issueId)
     {
@@ -49,7 +49,7 @@ class IssueFile extends PKPFile
     /**
      * Get content type of the file.
      *
-     * @ return string
+     * @return string
      */
     public function getContentType()
     {
@@ -77,7 +77,7 @@ class IssueFile extends PKPFile
     /**
      * set modified date of file.
      *
-     * @param $dateModified date
+     * @param date $dateModified
      */
     public function setDateModified($dateModified)
     {

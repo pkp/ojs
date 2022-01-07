@@ -23,7 +23,7 @@ class AppLocale extends PKPLocale
     /**
      * Make a map of components to their respective files.
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return array
      */

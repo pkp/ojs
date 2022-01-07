@@ -19,10 +19,10 @@ use PKP\controllers\grid\GridHandler;
 
 class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
 {
-    /** @var Submission **/
+    /** @var Submission */
     public $_submission;
 
-    /** @var Publication **/
+    /** @var Publication */
     public $_publication;
 
     public $_isEditable;
@@ -30,7 +30,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
     /**
      * Constructor
      *
-     * @param $submission Submission
+     * @param Submission $submission
      */
     public function __construct($submission, $publication, $isEditable)
     {
@@ -66,7 +66,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
     /**
      * Get request arguments.
      *
-     * @param $row \PKP\controllers\grid\GridRow
+     * @param \PKP\controllers\grid\GridRow $row
      *
      * @return array
      */

@@ -88,7 +88,7 @@ class ReviewerSubmissionDAO extends DAO
     /**
      * Internal function to return a ReviewerSubmission object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return ReviewerSubmission
      */
@@ -101,7 +101,7 @@ class ReviewerSubmissionDAO extends DAO
         $reviewer = Repo::user()->get($row['reviewer_id'], true);
 
         // Editor Decisions
-        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
+        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
         $decisions = $editDecisionDao->getEditorDecisions($row['submission_id']);
         $reviewerSubmission->setDecisions($decisions);
 

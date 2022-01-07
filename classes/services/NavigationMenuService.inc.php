@@ -24,7 +24,7 @@ use PKP\security\Validation;
 
 class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
 {
-    /** types for all ojs default navigationMenuItems */
+    // Types for all ojs default navigationMenuItems
     public const NMI_TYPE_SUBSCRIPTIONS = 'NMI_TYPE_SUBSCRIPTIONS';
     public const NMI_TYPE_MY_SUBSCRIPTIONS = 'NMI_TYPE_MY_SUBSCRIPTIONS';
     public const NMI_TYPE_CURRENT = 'NMI_TYPE_CURRENT';
@@ -42,8 +42,8 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     /**
      * Return all default navigationMenuItemTypes.
      *
-     * @param $hookName string
-     * @param $args array of arguments passed
+     * @param string $hookName
+     * @param array $args of arguments passed
      */
     public function getMenuItemTypesCallback($hookName, $args)
     {
@@ -78,8 +78,8 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     /**
      * Callback for display menu item functionallity
      *
-     * @param $hookName string
-     * @param $args array of arguments passed
+     * @param string $hookName
+     * @param array $args of arguments passed
      */
     public function getDisplayStatusCallback($hookName, $args)
     {

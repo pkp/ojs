@@ -27,7 +27,7 @@ class Repository extends BaseRepository
         $galley = null;
 
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
             $galley = $galleyDao->getById($submissionFile->getData('assocId'));
             if (!$galley) {
                 throw new Exception('Galley not found when adding submission file.');
@@ -57,7 +57,7 @@ class Repository extends BaseRepository
     {
         // Remove galley associations and update search index
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
             $galley = $galleyDao->getById($submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740

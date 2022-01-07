@@ -20,10 +20,10 @@ use PKP\components\listPanels\PKPSubmissionsListPanel;
 
 class SubmissionsListPanel extends PKPSubmissionsListPanel
 {
-    /** @var boolean Whether to show inactive section filters */
+    /** @var bool Whether to show inactive section filters */
     public $includeActiveSectionFiltersOnly = false;
 
-    /** @var boolean Whether to show issue filters */
+    /** @var bool Whether to show issue filters */
     public $includeIssuesFilter = false;
 
     /**
@@ -94,7 +94,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel
     /**
      * Compile the sections for passing as filters
      *
-     * @param $activeOnly boolean show inactive section filters or not
+     * @param bool $activeOnly show inactive section filters or not
      *
      * @return array
      */

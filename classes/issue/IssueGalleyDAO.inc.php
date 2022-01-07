@@ -26,8 +26,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Retrieve a galley by ID.
      *
-     * @param $galleyId int
-     * @param $issueId int optional
+     * @param int $galleyId
+     * @param int $issueId optional
      *
      * @return IssueGalley
      */
@@ -67,14 +67,14 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * Checks if public identifier exists (other than for the specified
      * galley ID, which is treated as an exception).
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param $pubId string
-     * @param $galleyId int An ID to be excluded from the search.
-     * @param $journalId int
+     * @param string $pubId
+     * @param int $galleyId An ID to be excluded from the search.
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function pubIdExists($pubIdType, $pubId, $galleyId, $journalId)
     {
@@ -98,11 +98,11 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Retrieve a galley by ID.
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param $pubId string
-     * @param $issueId int
+     * @param string $pubId
+     * @param int $issueId
      *
      * @return IssueGalley
      */
@@ -139,7 +139,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Retrieve all galleys for an issue.
      *
-     * @param $issueId int
+     * @param int $issueId
      *
      * @return array IssueGalleys
      */
@@ -174,8 +174,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * Retrieve issue galley by urlPath or, failing that,
      * internal galley ID; urlPath takes precedence.
      *
-     * @param $galleyId string
-     * @param $issueId int
+     * @param string $galleyId
+     * @param int $issueId
      *
      * @return IssueGalley object
      */
@@ -233,7 +233,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Update the localized fields for this galley.
      *
-     * @param $galley
+     * @param ArticleGalley $galley
      */
     public function updateLocaleFields($galley)
     {
@@ -255,7 +255,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Internal function to return an IssueGalley object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return IssueGalley
      */
@@ -290,7 +290,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Insert a new IssueGalley.
      *
-     * @param $galley IssueGalley
+     * @param IssueGalley $galley
      */
     public function insertObject($galley)
     {
@@ -324,7 +324,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Update an existing IssueGalley.
      *
-     * @param $galley IssueGalley
+     * @param IssueGalley $galley
      */
     public function updateObject($galley)
     {
@@ -352,7 +352,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Delete an IssueGalley.
      *
-     * @param $galley IssueGalley
+     * @param IssueGalley $galley
      */
     public function deleteObject($galley)
     {
@@ -362,8 +362,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Delete a galley by ID.
      *
-     * @param $galleyId int
-     * @param $issueId int optional
+     * @param int $galleyId
+     * @param int $issueId optional
      */
     public function deleteById($galleyId, $issueId = null)
     {
@@ -394,7 +394,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * Delete galleys by issue.
      * NOTE that this will not delete issue_file entities or the respective files.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function deleteByIssueId($issueId)
     {
@@ -407,7 +407,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Sequentially renumber galleys for an issue in their sequence order.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function resequence($issueId)
     {
@@ -421,7 +421,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Get the the next sequence number for an issue's galleys (i.e., current max + 1).
      *
-     * @param $issueId int
+     * @param int $issueId
      *
      * @return int
      */

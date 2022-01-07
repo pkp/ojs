@@ -254,7 +254,7 @@ class Application extends PKPApplication
     /**
      * Get the payment manager.
      *
-     * @param $context Context
+     * @param Context $context
      *
      * @return OJSPaymentManager
      */

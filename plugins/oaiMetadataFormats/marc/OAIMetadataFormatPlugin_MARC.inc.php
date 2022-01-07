@@ -23,7 +23,7 @@ class OAIMetadataFormatPlugin_MARC extends OAIMetadataFormatPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {

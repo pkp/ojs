@@ -64,11 +64,11 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
     /**
      * Retrieve a galley by ID.
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param $pubId string
-     * @param $publicationId int
+     * @param string $pubId
+     * @param int $publicationId
      *
      * @return ArticleGalley
      */
@@ -81,10 +81,10 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
     /**
      * Find galleys by querying galley settings.
      *
-     * @param $settingName string
-     * @param $settingValue mixed
-     * @param $publicationId int optional
-     * @param $journalId int optional
+     * @param string $settingName
+     * @param mixed $settingValue
+     * @param int $publicationId optional
+     * @param int $journalId optional
      *
      * @return DAOResultFactory The factory for galleys identified by setting.
      */
@@ -150,7 +150,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
     /**
      * Retrieve all galleys of a journal.
      *
-     * @param $journalId int
+     * @param int $journalId
      *
      * @return DAOResultFactory
      */
@@ -190,8 +190,8 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
      * Retrieve publication galley by urlPath or, failing that,
      * internal galley ID; urlPath takes precedence.
      *
-     * @param $galleyId string
-     * @param $publicationId int
+     * @param string $galleyId
+     * @param int $publicationId
      *
      * @return ArticleGalley object
      */
@@ -290,15 +290,15 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
     /**
      * Get all published submission galleys (eventually with a pubId assigned and) matching the specified settings.
      *
-     * @param $contextId integer optional
-     * @param $pubIdType string
-     * @param $title string optional
-     * @param $author string optional
-     * @param $issueId integer optional
-     * @param $pubIdSettingName string optional
+     * @param int $contextId optional
+     * @param string $pubIdType
+     * @param string $title optional
+     * @param string $author optional
+     * @param int $issueId optional
+     * @param string $pubIdSettingName optional
      * (e.g. medra::status or medra::registeredDoi)
-     * @param $pubIdSettingValue string optional
-     * @param $rangeInfo DBResultRange optional
+     * @param string $pubIdSettingValue optional
+     * @param DBResultRange $rangeInfo optional
      *
      * @return DAOResultFactory
      */

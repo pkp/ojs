@@ -66,10 +66,10 @@ class AnnouncementFeedPlugin extends GenericPlugin
     /**
      * Add links to the feeds.
      *
-     * @param $hookName string
-     * @param $args array
+     * @param string $hookName
+     * @param array $args
      *
-     * @return boolean Hook processing status
+     * @return bool Hook processing status
      */
     public function callbackAddLinks($hookName, $args)
     {

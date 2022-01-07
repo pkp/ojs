@@ -186,7 +186,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
         $galley = $galleyDao->getById($rowId);
         $galley->setSequence($newSequence);
         $galleyDao->updateObject($galley);
@@ -249,8 +249,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Edit article galley pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -267,8 +267,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Update article galley pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -290,8 +290,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Clear galley pub id
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -313,8 +313,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Add a galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -333,8 +333,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Delete a galley.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -347,7 +347,7 @@ class ArticleGalleyGridHandler extends GridHandler
 
         Services::get('galley')->delete($galley);
 
-        $notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
+        $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
         $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
         if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
@@ -368,8 +368,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Edit a galley metadata modal
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -402,8 +402,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Edit a galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -424,8 +424,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Save a galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -480,7 +480,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * If the user is not assigned, they can edit if they are an editor
      * or admin.
      *
-     * @return boolean
+     * @return bool
      */
     public function canEdit()
     {
