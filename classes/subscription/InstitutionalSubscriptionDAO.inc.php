@@ -579,7 +579,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 					AND s.journal_id = ?
 					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
-					AND ((st.duration IS NULL OR (' . $dateSql . '))
+					AND (st.duration IS NULL OR (' . $dateSql . '))
 					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 						OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
 					OR  (isip.ip_end IS NULL
