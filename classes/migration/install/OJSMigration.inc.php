@@ -222,7 +222,6 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('journal_id');
             $table->float('cost', 8, 2);
             $table->string('currency_code_alpha', 3);
-            $table->smallInteger('non_expiring')->default(0);
             $table->smallInteger('duration')->nullable();
             $table->smallInteger('format');
             $table->smallInteger('institutional')->default(0);

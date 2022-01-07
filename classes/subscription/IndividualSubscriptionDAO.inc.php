@@ -466,7 +466,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
 				AND s.journal_id = ?
 				AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
-				AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
+				AND (st.duration IS NULL OR (' . $dateSql . '))
 				AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 				OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
             [(int) $userId, (int) $journalId]
