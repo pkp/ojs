@@ -479,7 +479,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					AND s.journal_id = ?
 					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
-					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
+					AND (st.duration IS NULL OR (' . $dateSql . '))
 					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 				[$domain, $domain, (int) $journalId]
@@ -502,7 +502,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					AND s.journal_id = ?
 					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
-					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
+					AND (st.duration IS NULL OR (' . $dateSql . '))
 					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 						OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
 					OR  (isip.ip_end IS NULL
@@ -510,7 +510,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 					AND s.journal_id = ?
 					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
 					AND st.institutional = 1
-					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
+					AND (st.duration IS NULL OR (' . $dateSql . '))
 					AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 					OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
 				[$IP, $IP, (int) $journalId, $IP, (int) $journalId]
