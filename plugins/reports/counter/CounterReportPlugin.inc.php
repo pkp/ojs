@@ -197,7 +197,7 @@ class CounterReportPlugin extends ReportPlugin
                                     if ($xmlResult) {
                                         header('content-type: text/xml');
                                         header('content-disposition: attachment; filename=counter-' . $release . '-' . $report . '-' . date('Ymd') . '.xml');
-                                        print $xmlResult;
+                                        echo $xmlResult;
                                         return;
                                     } else {
                                         $errormessage = __('plugins.reports.counter.error.noXML');
