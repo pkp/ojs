@@ -310,7 +310,7 @@ class ArticleSearch extends SubmissionSearch {
 			if ($article->getData('status') === STATUS_PUBLISHED) {
 				// Retrieve keywords (if any).
 				$submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */
-				$allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getId(), array(AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale())));
+				$allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), array(AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale())));
 				foreach ($allSearchTerms as $locale => $localeSearchTerms) {
 					$searchTerms += $localeSearchTerms;
 				}
