@@ -156,6 +156,14 @@
 				FROM submission_galley_settings as tsgs
 				WHERE tsgs.galley_id IS NOT NULL
 		</query>
+		<!--
+			Necessary to correctly set correct starting auto-increment value after sequence setting in temp_submission_galleys
+			to allow for carrying over supplementary files (pkp/pkp-lib#7096). Otherwise, auto-increment sequence would start
+			over at 1 instead of the next correct value based on data already in the table.
+		-->
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">
+			SELECT setval('publication_galleys_galley_id_seq', (SELECT MAX(galley_id) from publication_galleys))
+		</query>
 
 		<!-- connect controlled vocab metadata to publications, 1048585 = ASSOC_TYPE_SUBMISSION, 1048588 = ASSOC_TYPE_PUBLICATION -->
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">

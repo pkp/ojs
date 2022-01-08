@@ -58,6 +58,15 @@
 		<!-- article_galleys to submission_galleys -->
 		<rename table="article_galleys" column="article_id" to="submission_id" />
 		<rename table="article_galleys" to="submission_galleys" />
+
+		<!--
+			Necessary to allow longer supplementary files titles to be added as a label when
+			they are converted to public galleys. This happens with previous upgrades from 2.4.x
+			to other versions of OJS 3, but does not otherwise happen with the 2.4.x to 3.2.x upgrade.
+		-->
+		<query driver="mysql,mysqli">ALTER TABLE submission_galleys MODIFY COLUMN label VARCHAR(255)</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE submission_galleys ALTER COLUMN label TYPE varchar(255)</query>
+
 		<!-- article_search_objects to submission_search_objects -->
 		<rename table="article_search_objects" column="article_id" to="submission_id" />
 		<rename table="article_search_objects" to="submission_search_objects" />

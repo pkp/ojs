@@ -17,7 +17,7 @@
 	</sql>
 	<sql><!-- pkp/pkp-lib#4573 Enable OAI interface by default -->
 		<!-- PostgreSQL ADODB driver does not seem to properly support dropping constraints -->
-		<query driver="postgres7">ALTER TABLE journal_settings ALTER COLUMN setting_type DROP NOT NULL</query>
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE journal_settings ALTER COLUMN setting_type DROP NOT NULL</query>
 		<query>INSERT INTO journal_settings (setting_name, setting_value, journal_id) SELECT 'enableOai', '1', j.journal_id FROM journals j WHERE NOT EXISTS (SELECT js.setting_name FROM journal_settings js WHERE js.setting_name = 'enableOai' AND js.journal_id = j.journal_id)</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#5445 Use new setting name for LicenseUrl -->
