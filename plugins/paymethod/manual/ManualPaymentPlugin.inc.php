@@ -187,7 +187,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
                     'backLinkLabel' => 'common.continue'
                 ]);
                 $templateMgr->display('frontend/pages/message.tpl');
-                exit();
+                exit;
         }
         parent::handle($args, $request); // Don't know what to do with it
     }

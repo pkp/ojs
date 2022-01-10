@@ -15,7 +15,6 @@ namespace APP\publication;
 
 use APP\core\Services;
 use APP\facades\Repo;
-use stdClass;
 
 class DAO extends \PKP\publication\DAO
 {
@@ -37,7 +36,7 @@ class DAO extends \PKP\publication\DAO
     /**
      * @copydoc SchemaDAO::_fromRow()
      */
-    public function fromRow(stdClass $primaryRow): Publication
+    public function fromRow(object $primaryRow): Publication
     {
         $publication = parent::fromRow($primaryRow);
         $publication->setData('galleys', iterator_to_array(

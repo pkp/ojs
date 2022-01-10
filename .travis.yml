@@ -191,3 +191,6 @@ after_failure:
   - tail -n 200 error.log
   - sudo apt-get install sharutils
   - tar cz cypress/screenshots | uuencode /dev/stdout
+
+after_success:
+  - tail -n 200 error.log

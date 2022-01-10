@@ -295,7 +295,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             // Check that no journal was given as we do
             // not support journal-specific re-indexing.
             if (is_a($journal, 'Journal')) {
-                die(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
+                exit(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
             }
 
             // Clear index

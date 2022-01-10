@@ -11,7 +11,7 @@
  *
  * @brief A COUNTER report, base class
  */
-require_once(dirname(dirname(__FILE__)) . '/classes/COUNTER/COUNTER.php');
+require_once(dirname(__FILE__, 2) . '/classes/COUNTER/COUNTER.php');
 
 define('COUNTER_EXCEPTION_WARNING', 0);
 define('COUNTER_EXCEPTION_ERROR', 1);
