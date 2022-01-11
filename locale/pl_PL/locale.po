@@ -1,9 +1,10 @@
+# rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:22+00:00\n"
-"PO-Revision-Date: 2020-12-09 14:52+0000\n"
+"PO-Revision-Date: 2022-01-11 07:22+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/locale/pl_PL/"
 ">\n"
@@ -2307,3 +2308,17 @@ msgstr "Nie znaleziono zażądanej korekty."
 
 msgid "about.aboutSoftware"
 msgstr "O systemie otwartego czasopisma"
+
+msgid "payment.unpaid"
+msgstr "Niezapłacone"
+
+msgid "payment.waived"
+msgstr "Umorzone"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Czasopismo nie publikuje treści w Internecie."
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Jeśli instalujesz nową wersję OJS (upgrade) kliknij tutaj aby  <a href=\""
+"{$upgradeUrl}\">kontynuować</a>."
