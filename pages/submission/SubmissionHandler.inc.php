@@ -44,9 +44,9 @@ class SubmissionHandler extends PKPSubmissionHandler {
 		}
 		switch ($request->getUserVar('list')) {
 			case 'languages':
-				$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory(\Sokil\IsoCodes\IsoCodesFactory::OPTIMISATION_IO);
+				$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
 				$matches = array();
-				foreach ($isoCodes->getLanguages() as $language) {
+				foreach ($isoCodes->getLanguages(\Sokil\IsoCodes\IsoCodesFactory::OPTIMISATION_IO) as $language) {
 					if (!$language->getAlpha2() || $language->getType() != 'L' || $language->getScope() != 'I') continue;
 					if (stristr($language->getLocalName(), $term)) $matches[$language->getAlpha3()] = $language->getLocalName();
 				};
