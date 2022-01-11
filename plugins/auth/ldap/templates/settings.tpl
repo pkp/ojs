@@ -104,6 +104,12 @@
 		</td>
 	</tr>
 	<tr>
+		<td class="label">{fieldLabel name="saslauthcid" key="plugins.auth.ldap.settings.saslauthcid"}</td>
+		<td class="value">
+			<input type="text" id="saslauthcid" name="settings[saslauthcid]" value="{$settings.saslauthcid|escape}" size="30" maxlength="255" class="textField" />
+		</td>
+	</tr>
+	<tr>
 		<td class="label">{fieldLabel name="saslauthzid" key="plugins.auth.ldap.settings.saslauthzid"}</td>
 		<td class="value">
 			<input type="text" id="saslauthzid" name="settings[saslauthzid]" value="{$settings.saslauthzid|escape}" size="30" maxlength="255" class="textField" />

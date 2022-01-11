@@ -36,7 +36,7 @@ class LDAPAuthPlugin extends AuthPlugin
     // - managerdn
     // - managerpwd
     // - pwhash
-    // - SASL: sasl, saslmech, saslrealm, saslauthzid, saslprop
+    // - SASL: sasl, saslmech, saslrealm, saslauthcid, saslauthzid, saslprop
 
     /** @var resource the LDAP connection */
     public $conn;
@@ -292,8 +292,8 @@ class LDAPAuthPlugin extends AuthPlugin
     public function bind($binddn = null, $password = null)
     {
         if (isset($this->settings['sasl'])) {
-            // FIXME ldap_sasl_bind requires PHP5, haven't tested this
-            return @ldap_sasl_bind($this->conn, $binddn, $password, $this->settings['saslmech'], $this->settings['saslrealm'], $this->settings['saslauthzid'], $this->settings['saslprop']);
+            // Not well tested
+            return @ldap_sasl_bind($this->conn, $binddn, $password, $this->settings['saslmech'], $this->settings['saslrealm'], $this->settings['saslauthcid'], $this->settings['saslauthzid'], $this->settings['saslprop']);
         }
         return @ldap_bind($this->conn, $binddn, $password);
     }
@@ -329,7 +329,7 @@ class LDAPAuthPlugin extends AuthPlugin
         $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
         $site = $siteDao->getSite();
 
-        $attr = array_change_key_case($uattr, CASE_LOWER); // Note:  array_change_key_case requires PHP >= 4.2.0
+        $attr = array_change_key_case($uattr, CASE_LOWER);
         $givenName = @$attr['givenname'][0];
         $familyName = @$attr['sn'][0];
         if (!isset($familyName)) {
@@ -429,7 +429,7 @@ class LDAPAuthPlugin extends AuthPlugin
                 $salt = pack('C*', mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand());
                 return '{SMD5}' . base64_encode(pack('H*', md5($password . $salt)) . $salt);
             case 'sha':
-                return '{SHA}' . base64_encode(pack('H*', sha1($password))); // Note: sha1 requres PHP >= 4.3.0
+                return '{SHA}' . base64_encode(pack('H*', sha1($password)));
             case 'ssha':
                 $salt = pack('C*', mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand());
                 return '{SSHA}' . base64_encode(pack('H*', sha1($password . $salt)) . $salt);
