@@ -65,7 +65,7 @@ class Submission extends PKPSubmission
             case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
                 switch ($context->getData('copyrightHolderType')) {
                     case 'author':
-                        $fieldValue = [$context->getPrimaryLocale() => $this->getAuthorString()];
+                        $fieldValue = [$context->getPrimaryLocale() => $this->getCurrentPublication()->getAuthorString()];
                         break;
                     case 'context':
                     case null:
