@@ -77,7 +77,7 @@ class ArticleSearch extends SubmissionSearch {
 			switch ($orderBy) {
 				case 'authors':
 					$submission = $submissionDao->getById($submissionId);
-					$orderKey = $submission->getAuthorString();
+					$orderKey = $submission->getCurrentPublication()->getAuthorString();
 					break;
 
 				case 'title':
