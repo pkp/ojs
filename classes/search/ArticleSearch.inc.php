@@ -91,7 +91,7 @@ class ArticleSearch extends SubmissionSearch
             switch ($orderBy) {
                 case 'authors':
                     $submission = Repo::submission()->get($submissionId);
-                    $orderKey = $submission->getCurrentPublication()->getAuthorString();
+                    $orderKey = $submission->getCurrentPublication()->getAuthorString(null, true, true);
                     break;
 
                 case 'title':
