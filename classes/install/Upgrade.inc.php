@@ -171,9 +171,7 @@ class Upgrade extends Installer
             $contextDao = Application::getContextDAO();
             $navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO'); /** @var NavigationMenuItemDAO $navigationMenuItemDao */
 
-            import('plugins.generic.staticPages.classes.StaticPagesDAO');
-
-            $staticPagesDao = new \StaticPagesDAO();
+            $staticPagesDao = new \APP\plugins\generic\staticPages\classes\StaticPagesDAO();
 
             $contexts = $contextDao->getAll();
             while ($context = $contexts->next()) {
