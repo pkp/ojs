@@ -20,7 +20,6 @@ switch ($op) {
 	case 'step':
 	case 'saveStep':
 	case 'index':
-	case 'fetchChoices':
 		import('pages.submission.SubmissionHandler');
 		define('HANDLER_CLASS', 'SubmissionHandler');
 		break;
