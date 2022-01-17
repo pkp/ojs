@@ -20,8 +20,8 @@ namespace APP\search;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\issue\IssueAction;
 use APP\i18n\AppLocale;
+use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 
@@ -91,7 +91,7 @@ class ArticleSearch extends SubmissionSearch
             switch ($orderBy) {
                 case 'authors':
                     $submission = Repo::submission()->get($submissionId);
-                    $orderKey = $submission->getAuthorString();
+                    $orderKey = $submission->getCurrentPublication()->getAuthorString(null, true, true);
                     break;
 
                 case 'title':

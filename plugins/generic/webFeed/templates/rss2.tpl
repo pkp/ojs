@@ -64,7 +64,7 @@
 
 					{* optional elements *}
 					{* <author/> *}
-					<dc:creator>{$article->getAuthorString(false)|escape:"html"}</dc:creator>
+					<dc:creator>{$article->getCurrentPublication()->getAuthorString(null, false, true)|escape:"html"}</dc:creator>
 					{* <category/> *}
 					{* <comments/> *}
 					{* <source/> *}
