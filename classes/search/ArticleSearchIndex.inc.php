@@ -242,14 +242,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     }
 
     /**
-     * @copydoc SubmissionSearchIndex::deleteSubmission()
-     */
-    public function deleteSubmission(int $articleId)
-    {
-        $this->articleDeleted($articleId);
-    }
-
-    /**
      * @copydoc SubmissionSearchIndex::submissionChangesFinished()
      */
     public function submissionChangesFinished()
