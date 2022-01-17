@@ -340,7 +340,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         }
     }
 
-
     //
     // Private helper methods
     //

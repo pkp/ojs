@@ -17,6 +17,8 @@
 
 namespace APP\core;
 
+use APP\services\OJSServiceProvider;
+
 class Services extends \PKP\core\PKPServices
 {
     /**
@@ -24,7 +26,7 @@ class Services extends \PKP\core\PKPServices
      */
     protected function init()
     {
-        $this->container->register(new \APP\services\OJSServiceProvider());
+        $this->container->register(new OJSServiceProvider());
     }
 }
 
