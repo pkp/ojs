@@ -507,15 +507,20 @@ log_web_service_info = Off
 ; cainfo = ""
 
 
-;;;;;;;;;;;;;;;;;;;
-; Queues Settings ;
-;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+; Job Queues Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;
 
 [queues]
 
-; Default queue driver to be used
+; Default queue driver
 default_connection = "database"
-; Default queue to be used if someone forgot to associate a queue during Queue::push();
+
+; Default queue to use when a job is added to the queue
 default_queue = "queue"
-; Flag to disable the jobs to run at php shutdown
+
+; Do not run jobs on shutdown
+; By default, jobs in the queue will be run during PHP's shutdown
+; function. Disable this if you want to run jobs through a separate
+; cron job or workers.
 disable_jobs_run_at_shutdown = Off
