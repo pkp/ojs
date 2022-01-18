@@ -1771,7 +1771,7 @@ msgstr "Nama jenis pembayaran"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Alamat e-mel kenalan utama jurnal"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Tandatangan e-mel jurnal untuk e-mel automatik"
 
 msgid "emailTemplate.variable.context.contactName"

@@ -2166,7 +2166,7 @@ msgstr "To'lov turining nomi"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Jurnal asosiy kontaktining elektron pochta manzili"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Avtomatlashtirilgan elektron pochta uchun jurnalning elektron imzosi"
 
 msgid "emailTemplate.variable.context.contactName"

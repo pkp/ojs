@@ -1855,7 +1855,7 @@ msgstr "Nombre del sitio web cuando se aloja más de una revista"
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
 msgstr "La moneda del importe del pago, por ejemplo USD"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "La firma para los correos electrónicos automatizados de la revista"
 
 msgid "mailable.validateEmailContext.description"

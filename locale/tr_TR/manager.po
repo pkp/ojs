@@ -2050,7 +2050,7 @@ msgstr "Ödeme türünün adı"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Derginin birincil irtibat kişisinin e-posta adresi"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Otomatik e-postalar için derginin e-posta imzası"
 
 msgid "emailTemplate.variable.context.contactName"

@@ -1910,7 +1910,7 @@ msgstr "Navnet på betalingstypen"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-mail-adressen på tidsskriftets primære kontaktperson"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Tidsskriftets e-mailsignatur til automatiserede e-mails"
 
 msgid "emailTemplate.variable.context.contactName"

@@ -1740,7 +1740,7 @@ msgstr "The URL to the journal's homepage"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "The name of the journal's primary contact"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "The journal's email signature for automated emails"
 
 msgid "emailTemplate.variable.context.contactEmail"
