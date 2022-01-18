@@ -46,9 +46,6 @@ msgstr "אין לך הרשאה לצפות בכתב עת הזה."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "אתה יכול לצפות רק בכתבי עת שהופעלו."
 
-msgid "api.submissions.403.contextRequired"
-msgstr "כדי להגיש או לערוך הגשה עליך להגיש בקשה לממשק ה-API של כתב העת."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "אין לך הרשאה לצפות בגליונות שלא פורסמו."
 

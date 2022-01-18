@@ -49,11 +49,6 @@ msgstr ""
 "Ezt a folyóiratot nem tudod szerkeszteni a teljes oldalra vonatkozó API-n "
 "keresztül."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Beküldés létrehozásához vagy szerkesztéshez igényt szükséges kezdeméynezni  "
-"a folyóirat API végpontjához."
-
 msgid "api.contexts.403.notAllowed"
 msgstr "Nincs jogosultsága megtekinteni ezt a folyóiratot."
 

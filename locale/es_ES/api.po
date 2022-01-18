@@ -94,11 +94,6 @@ msgstr "No tiene permiso para ver esta revista."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Solo puede ver revistas que hayan sido habilitadas."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Para hacer o editar un envío debe realizar una solicitud al terminal API de "
-"la revista."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "No tiene permiso para ver los números no publicados."
 

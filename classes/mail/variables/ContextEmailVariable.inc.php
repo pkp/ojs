@@ -23,12 +23,12 @@ class ContextEmailVariable extends PKPContextEmailVariable
     public const CONTEXT_URL = 'journalUrl';
 
     /**
-     * @copydoc Variable::description()
+     * @copydoc Variable::descriptions()
      */
-    protected static function description(): array
+    public static function descriptions(): array
     {
         return array_merge(
-            parent::description(),
+            parent::descriptions(),
             [
                 self::CONTEXT_NAME => __('emailTemplate.variable.context.contextName'),
                 self::CONTEXT_URL => __('emailTemplate.variable.context.contextUrl'),

@@ -16,11 +16,28 @@
 import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
 use APP\core\Application;
+use APP\core\Services;
 use APP\file\PublicFileManager;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
-use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\decision\types\Accept;
+use PKP\decision\types\BackToCopyediting;
+use PKP\decision\types\BackToReview;
+use PKP\decision\types\BackToSubmissionFromCopyediting;
+use PKP\decision\types\Decline;
+use PKP\decision\types\InitialDecline;
+use PKP\decision\types\RecommendAccept;
+use PKP\decision\types\RecommendDecline;
+use PKP\decision\types\RecommendRevisions;
+use PKP\decision\types\RequestRevisions;
+use PKP\decision\types\RevertDecline;
+use PKP\decision\types\RevertInitialDecline;
+use PKP\decision\types\SendExternalReview;
+use PKP\decision\types\SendToProduction;
+use PKP\decision\types\SkipReview;
 use PKP\notification\PKPNotification;
+use PKP\plugins\HookRegistry;
 use PKP\security\Role;
 
 class WorkflowHandler extends PKPWorkflowHandler
@@ -56,7 +73,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         parent::setupIndex($request);
 
         $templateMgr = TemplateManager::getManager($request);
-        $submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+        $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
 
         $submissionContext = $request->getContext();
         if ($submission->getContextId() !== $submissionContext->getId()) {
@@ -68,9 +85,9 @@ class WorkflowHandler extends PKPWorkflowHandler
 
         $latestPublication = $submission->getLatestPublication();
 
-        $latestPublicationApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
-        $temporaryFileApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
-        $issueApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
+        $latestPublicationApiUrl = $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
+        $temporaryFileApiUrl = $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
+        $issueApiUrl = $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getData('urlPath'), 'issues/__issueId__');
 
         $publicFileManager = new PublicFileManager();
         $baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($submissionContext->getId());
@@ -102,7 +119,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         ]);
         if ($paymentManager->publicationEnabled()) {
             $submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
-                $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
+                $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
                 $submission,
                 $request->getContext()
             );
@@ -126,7 +143,7 @@ class WorkflowHandler extends PKPWorkflowHandler
 
         $assignToIssueUrl = $request->getDispatcher()->url(
             $request,
-            PKPApplication::ROUTE_COMPONENT,
+            Application::ROUTE_COMPONENT,
             null,
             'modals.publish.AssignToIssueHandler',
             'assign',
@@ -183,7 +200,7 @@ class WorkflowHandler extends PKPWorkflowHandler
     {
         return $request->getDispatcher()->url(
             $request,
-            PKPApplication::ROUTE_COMPONENT,
+            Application::ROUTE_COMPONENT,
             null,
             'grid.articleGalleys.ArticleGalleyGridHandler',
             'fetchGrid',
@@ -193,5 +210,95 @@ class WorkflowHandler extends PKPWorkflowHandler
                 'publicationId' => '__publicationId__',
             ]
         );
+    }
+
+    /** @copydoc parent::getStageDecisionTypes() */
+    protected function getStageDecisionTypes(int $stageId): array
+    {
+        $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
+        switch ($stageId) {
+            case WORKFLOW_STAGE_ID_SUBMISSION:
+                $types = [
+                    new SendExternalReview(),
+                    new SkipReview(),
+                ];
+                if ($submission->getData('status') === Submission::STATUS_DECLINED) {
+                    $types[] = new RevertInitialDecline();
+                } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
+                    $types[] = new InitialDecline();
+                }
+                break;
+            case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
+                $types = [
+                    new RequestRevisions(),
+                    new Accept(),
+                ];
+                if ($submission->getData('status') === Submission::STATUS_DECLINED) {
+                    $types[] = new RevertDecline();
+                } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
+                    $types[] = new Decline();
+                }
+                break;
+            case WORKFLOW_STAGE_ID_EDITING:
+                /** @var ReviewRoundDAO $reviewRoundDao */
+                $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+                $hasReviewRound = $reviewRoundDao->submissionHasReviewRound($submission->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+                $types = [
+                    new SendToProduction(),
+                    $hasReviewRound
+                        ? new BackToReview()
+                        : new BackToSubmissionFromCopyediting()
+                ];
+                break;
+            case WORKFLOW_STAGE_ID_PRODUCTION:
+                $types = [
+                    new BackToCopyediting(),
+                ];
+                break;
+        }
+
+        HookRegistry::call('Workflow::Decisions', [&$types, $stageId]);
+
+        return $types;
+    }
+
+    /** @copydoc parent::getStageRecommendationTypes() */
+    protected function getStageRecommendationTypes(int $stageId): array
+    {
+        switch ($stageId) {
+            case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
+                $types = [
+                    new RecommendRevisions(),
+                    new RecommendAccept(),
+                    new RecommendDecline(),
+                ];
+                break;
+            default:
+                $types = [];
+        }
+
+
+        HookRegistry::call('Workflow::Recommendations', [$types, $stageId]);
+
+        return $types;
+    }
+
+    /** @copydoc parent::getPrimaryDecisionTypes() */
+    protected function getPrimaryDecisionTypes(): array
+    {
+        return [
+            SendExternalReview::class,
+            Accept::class,
+            SendToProduction::class,
+        ];
+    }
+
+    /** @copydoc parent::getWarnableDecisionTypes() */
+    protected function getWarnableDecisionTypes(): array
+    {
+        return [
+            InitialDecline::class,
+            Decline::class,
+        ];
     }
 }

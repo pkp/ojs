@@ -48,11 +48,6 @@ msgstr "Nu aveți permisiunea de a vizualiza acest jurnal."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Puteți vedea doar jurnale care au fost activate."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Pentru a genera sau a edita o înregistrare de manuscris, trebuie să faceți o "
-"solicitare la punctul final al API-ului jurnalului."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nu aveți permisiunea de a vedea numere de revistă nepublicate."
 

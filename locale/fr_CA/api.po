@@ -21,9 +21,6 @@ msgstr "Vous ne pouvez pas changer la revue d'une soumission."
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Vous n'êtes pas autorisé-e à faire afficher les numéros non publiés."
 
-msgid "api.submissions.403.contextRequired"
-msgstr "Pour effectuer ou modifier une soumission, vous devez effectuer une requête par suffixe URL à l'API de la revue."
-
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Vous ne pouvez faire afficher que les revues qui ont été activées."
 

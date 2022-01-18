@@ -15,11 +15,6 @@ msgstr ""
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Оголошення, яке Ви запросили, не є частиною цього журнала."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Щоб зробити або відредагувати подання, потрібно зробити запит до кінцевої "
-"точки API журналу."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "У вас немає дозволу на перегляд неопублікованих випусків."
 

@@ -47,11 +47,6 @@ msgstr "Anda tidak memiliki izin untuk melihat jurnal ini."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Anda hanya dapat melihat jurnal yang telah diaktifkan."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Untuk mengirim atau mengedit naskah, Anda harus membuat permintaan bagian "
-"akhir API jurnal."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr ""
 "Anda tidak memiliki hak untuk melihat nomor terbitan yang tidak "

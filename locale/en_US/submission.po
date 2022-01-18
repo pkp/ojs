@@ -104,9 +104,6 @@ msgstr "Are you sure you wish to submit this article to the journal?"
 msgid "workflow.review.externalReview"
 msgstr "Review"
 
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Send to Review"
-
 msgid "submission.event.issueMetadataUpdated"
 msgstr "The submission's issue metadata was updated."
 
@@ -338,3 +335,26 @@ msgstr "Publication details for version {$version}"
 msgid "submission.queries.production"
 msgstr "Production Discussions"
 
+msgid "editor.submission.decision.backToReview"
+msgstr "Back to Review"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Revert the decision to accept this submission and send it back to the review stage."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr "{$editorName} reverted the decision to accept this submission and sent it back to the review stage."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Sent Back to Review"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "The submission, {$title}, was sent back to the review stage."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr "Send an email to the authors to let them know that their submission is being sent back to the review stage. Explain why this decision was made and inform the author of what further review will be undertaken."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr "Send an email to the authors to let them know that this submission will be sent for peer review. If possible, give the authors some indication of how long the peer review process might take and when they should expect to hear from the editors again."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Select files that should be sent to the review stage."

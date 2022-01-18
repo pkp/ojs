@@ -52,11 +52,6 @@ msgstr "Sinulla ei ole lupaa katsoa tätä julkaisua."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Voit katsoa vain julkisia julkaisuja."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Käsikirjoituksen luomiseksi tai muokkaamiseksi pitää tehdä kysely julkaisun "
-"rajapintaan."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Et voi vaihtaa käsikirjoitukseen liittyvää julkaisua."
 

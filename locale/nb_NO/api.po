@@ -47,11 +47,6 @@ msgstr "Du har ikke rettigheter til å se dette tidsskriftet."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Du kan bare se tidsskrift som har blitt aktivert."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"For å redigere en innlevering må du sende en forespørsel til tidsskriftets "
-"API endepunkt."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Du har ikke tillatelse til å se upubliserte utgaver."
 

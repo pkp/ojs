@@ -54,10 +54,5 @@ msgstr "Δεν έχετε άδεια προβολής αυτού του περι
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Μπορείτε να δείτε μόνο περιοδικά που έχουν ενεργοποιηθεί."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Για να υποβάλετε ή να επεξεργαστείτε μια υποβολή, πρέπει να κάνετε αίτημα "
-"στο τελικό σημείο API του περιοδικού."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Δεν μπορείτε να αλλάξετε το περιοδικό στο οποίο έγινε μια υποβολή."
