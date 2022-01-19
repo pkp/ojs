@@ -13,12 +13,12 @@
  * @brief Inject Dublin Core meta tags into article views to facilitate indexing.
  */
 
+use APP\facades\Repo;
 use APP\submission\Submission;
-use APP\template\TemplateManager;
 
+use APP\template\TemplateManager;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
-use APP\facades\Repo;
 
 class DublinCoreMetaPlugin extends GenericPlugin
 {
@@ -157,8 +157,8 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
         $keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), [AppLocale::getLocale()]);
         foreach ($keywords as $locale => $localeKeywords) {
-            foreach ($localeKeywords as $keyword) {
-                $templateMgr->addHeader('dublinCoreSubject' . $locale, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
+            foreach ($localeKeywords as $i => $keyword) {
+                $templateMgr->addHeader('dublinCoreSubject' . $locale . $i, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
             }
         }
 
