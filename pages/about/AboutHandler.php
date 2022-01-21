@@ -13,17 +13,18 @@
  * @brief Handle requests for journal about functions.
  */
 
-import('lib.pkp.pages.about.AboutContextHandler');
+namespace APP\pages\about;
 
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 
-class AboutHandler extends AboutContextHandler
+class AboutHandler extends \PKP\pages\about\AboutContextHandler
 {
     /**
-     * Display about page.
+     * Display about subscriptions page.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function subscriptions($args, $request)
     {
