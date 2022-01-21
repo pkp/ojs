@@ -732,7 +732,7 @@ class Upgrade extends Installer {
 			->leftJoin('submissions as s', 's.submission_id', '=', 'sf.submission_id')
 			->where('sf.file_stage', '=', SUBMISSION_FILE_SUBMISSION)
 			->where('sf.assoc_type', '=', ASSOC_TYPE_REPRESENTATION)
-			->where('sf.revision', '=', DB::raw('ssf.revision'))
+			->whereColumn('sf.revision', '=', 'ssf.revision')
 			->get();
 
 		foreach ($rows as $row) {
@@ -757,8 +757,8 @@ class Upgrade extends Installer {
 				date('Ymd', strtotime($row->date_uploaded)),
 				strtolower_codesafe($fileManager->parseFileExtension($row->original_file_name))
 			);
-			$oldFileName = $submissionDir . '/' . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
-			$newFileName = $submissionDir . '/' . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
+			$oldFileName = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $generatedOldFilename;
+			$newFileName = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $generatedNewFilename;
 			if (!Services::get('file')->fs->rename($oldFileName, $newFileName)) {
 				error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
 			}
