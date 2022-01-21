@@ -24,14 +24,6 @@ use PKP\linkAction\request\AjaxAction;
 class TocGridCellProvider extends GridCellProvider
 {
     /**
-     * Constructor
-     */
-    public function __construct($translate = false)
-    {
-        parent::__construct();
-    }
-
-    /**
      * Extracts variables for a given column from a data element
      * so that they may be assigned to template before rendering.
      *
