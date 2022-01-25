@@ -2,7 +2,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-20 21:25+0000\n"
+"PO-Revision-Date: 2022-01-25 15:24+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "is_IS/>\n"
@@ -15,3 +15,6 @@ msgstr ""
 
 msgid "admin.hostedContexts"
 msgstr "Tengd tímarit"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Þýðingu er mögulega ekki lokið fyrir tugumál merkt með *."
