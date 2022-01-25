@@ -218,32 +218,32 @@ class WorkflowHandler extends PKPWorkflowHandler
         $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
         switch ($stageId) {
             case WORKFLOW_STAGE_ID_SUBMISSION:
-                $types = [
+                $decisionTypes = [
                     new SendExternalReview(),
                     new SkipReview(),
                 ];
                 if ($submission->getData('status') === Submission::STATUS_DECLINED) {
-                    $types[] = new RevertInitialDecline();
+                    $decisionTypes[] = new RevertInitialDecline();
                 } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
-                    $types[] = new InitialDecline();
+                    $decisionTypes[] = new InitialDecline();
                 }
                 break;
             case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-                $types = [
+                $decisionTypes = [
                     new RequestRevisions(),
                     new Accept(),
                 ];
                 if ($submission->getData('status') === Submission::STATUS_DECLINED) {
-                    $types[] = new RevertDecline();
+                    $decisionTypes[] = new RevertDecline();
                 } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
-                    $types[] = new Decline();
+                    $decisionTypes[] = new Decline();
                 }
                 break;
             case WORKFLOW_STAGE_ID_EDITING:
                 /** @var ReviewRoundDAO $reviewRoundDao */
                 $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
                 $hasReviewRound = $reviewRoundDao->submissionHasReviewRound($submission->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
-                $types = [
+                $decisionTypes = [
                     new SendToProduction(),
                     $hasReviewRound
                         ? new BackToReview()
@@ -251,15 +251,15 @@ class WorkflowHandler extends PKPWorkflowHandler
                 ];
                 break;
             case WORKFLOW_STAGE_ID_PRODUCTION:
-                $types = [
+                $decisionTypes = [
                     new BackToCopyediting(),
                 ];
                 break;
         }
 
-        HookRegistry::call('Workflow::Decisions', [&$types, $stageId]);
+        HookRegistry::call('Workflow::Decisions', [&$decisionTypes, $stageId]);
 
-        return $types;
+        return $decisionTypes;
     }
 
     /** @copydoc parent::getStageRecommendationTypes() */
@@ -267,20 +267,20 @@ class WorkflowHandler extends PKPWorkflowHandler
     {
         switch ($stageId) {
             case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-                $types = [
+                $decisionTypes = [
                     new RecommendRevisions(),
                     new RecommendAccept(),
                     new RecommendDecline(),
                 ];
                 break;
             default:
-                $types = [];
+                $decisionTypes = [];
         }
 
 
-        HookRegistry::call('Workflow::Recommendations', [$types, $stageId]);
+        HookRegistry::call('Workflow::Recommendations', [$decisionTypes, $stageId]);
 
-        return $types;
+        return $decisionTypes;
     }
 
     /** @copydoc parent::getPrimaryDecisionTypes() */

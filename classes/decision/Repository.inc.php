@@ -2,8 +2,8 @@
 /**
  * @file classes/decision/Repository.inc.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class decision
@@ -38,13 +38,12 @@ use PKP\plugins\HookRegistry;
 class Repository extends \PKP\decision\Repository
 {
     /** The valid decision types */
-    protected ?Collection $types;
+    protected ?Collection $decisionTypes;
 
-    /** @copydoc \PKP\decision\Repository::getTypes */
-    public function getTypes(): Collection
+    public function getDecisionTypes(): Collection
     {
-        if (!isset($this->types)) {
-            $types = new Collection([
+        if (!isset($this->decisionTypes)) {
+            $decisionTypes = new Collection([
                 new Accept(),
                 new BackToCopyediting(),
                 new BackToReview(),
@@ -64,11 +63,11 @@ class Repository extends \PKP\decision\Repository
                 new SendToProduction(),
                 new SkipReview(),
             ]);
-            HookRegistry::call('Decision::types', [$types]);
-            $this->types = $types;
+            HookRegistry::call('Decision::types', [$decisionTypes]);
+            $this->decisionTypes = $decisionTypes;
         }
 
-        return $this->types;
+        return $this->decisionTypes;
     }
 
     protected function getReviewNotificationTypes(): array

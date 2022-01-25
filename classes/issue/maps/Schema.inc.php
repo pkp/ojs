@@ -10,7 +10,9 @@ use APP\issue\IssueGalleyDAO;
 use APP\journal\SectionDAO;
 use Illuminate\Support\Enumerable;
 use PKP\db\DAORegistry;
+use PKP\security\UserGroup;
 use PKP\services\PKPSchemaService;
+use PKP\submission\Genre;
 
 class Schema extends \PKP\core\maps\Schema
 {
@@ -20,16 +22,24 @@ class Schema extends \PKP\core\maps\Schema
     /** @copydoc \PKP\core\maps\Schema::$schema */
     public string $schema = PKPSchemaService::SCHEMA_ISSUE;
 
-    private ?array $userGroups = null;
+    /** @var UserGroup[] The user groups for this context. */
+    public array $userGroups;
+
+    /** @var Genre[] The genres for this context. */
+    public array $genres;
 
     /**
      * Map an Issue
      *
      * Includes all properties in the Issue schema
      *
+     * @param UserGroup[] $userGroups The user groups of this content
+     * @param Genre[] $genres The genres of this context
      */
-    public function map(Issue $item): array
+    public function map(Issue $item, array $userGroups, array $genres): array
     {
+        $this->userGroups = $userGroups;
+        $this->genres = $genres;
         return $this->mapByProperties($this->getProps(), $item);
     }
 
@@ -49,12 +59,14 @@ class Schema extends \PKP\core\maps\Schema
      *
      * @see self::map
      *
+     * @param UserGroup[] $userGroups The user groups of this content
+     * @param Genre[] $genres The genres of this context
      */
-    public function mapMany(Enumerable $collection): Enumerable
+    public function mapMany(Enumerable $collection, array $userGroups, array $genres): Enumerable
     {
         $this->collection = $collection;
-        return $collection->map(function ($item) {
-            return $this->map($item);
+        return $collection->map(function ($item, $userGroups, $genres) {
+            return $this->map($item, $userGroups, $genres);
         });
     }
 
@@ -62,7 +74,6 @@ class Schema extends \PKP\core\maps\Schema
      * Summarize a collection of Issues
      *
      * @see self::summarize
-     *
      */
     public function summarizeMany(Enumerable $collection): Enumerable
     {
@@ -96,7 +107,7 @@ class Schema extends \PKP\core\maps\Schema
                     );
 
                     foreach ($submissions as $submission) {
-                        $data[] = Repo::submission()->getSchemaMap()->summarize($submission, $this->getUserGroups());
+                        $data[] = Repo::submission()->getSchemaMap()->summarize($submission, $this->userGroups, $this->genres);
                     }
 
                     $output[$prop] = $data;
@@ -167,15 +178,5 @@ class Schema extends \PKP\core\maps\Schema
         }
 
         return $output;
-    }
-
-    private function getUserGroups()
-    {
-        if (!isset($this->userGroups)) {
-            $userGroupsDao = DAORegistry::getDAO('UserGroupDAO');
-            $userGroups = $userGroupsDao->getByContextId($this->context->getId());
-            $this->userGroups = $userGroups->toArray();
-        }
-        return $this->userGroups;
     }
 }

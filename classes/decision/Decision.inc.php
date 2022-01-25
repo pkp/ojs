@@ -7,8 +7,8 @@
 /**
  * @file classes/decision/Decision.inc.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Decision
@@ -34,10 +34,10 @@ class Decision extends BaseDecision
 }
 
 if (!PKP_STRICT_MODE) {
-    define('EXTERNAL_REVIEW', Decision::EXTERNAL_REVIEW);
-    define('ACCEPT', Decision::ACCEPT);
-    define('DECLINE', Decision::DECLINE);
-    define('PENDING_REVISIONS', Decision::PENDING_REVISIONS);
-    define('RESUBMIT', Decision::RESUBMIT);
-    define('NEW_ROUND', Decision::NEW_ROUND);
+    define('SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW', Decision::EXTERNAL_REVIEW);
+    define('SUBMISSION_EDITOR_DECISION_ACCEPT', Decision::ACCEPT);
+    define('SUBMISSION_EDITOR_DECISION_DECLINE', Decision::DECLINE);
+    define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', Decision::PENDING_REVISIONS);
+    define('SUBMISSION_EDITOR_DECISION_RESUBMIT', Decision::RESUBMIT);
+    define('SUBMISSION_EDITOR_DECISION_NEW_ROUND', Decision::NEW_ROUND);
 }
