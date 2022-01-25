@@ -20,16 +20,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
 {
     public $_issue;
 
-    /**
-     * Constructor
-     *
-     * @param Context $context
-     * @param User $user
-     */
-    public function __construct($context, $user)
-    {
-        parent::__construct($context, $user);
-    }
 
     //
     // Deploymenturation items for subclasses to override

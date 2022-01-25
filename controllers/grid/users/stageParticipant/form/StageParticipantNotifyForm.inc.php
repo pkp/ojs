@@ -20,16 +20,6 @@ import('lib.pkp.controllers.grid.users.stageParticipant.form.PKPStageParticipant
 class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm
 {
     /**
-     * Constructor.
-     *
-     * @param null|mixed $template
-     */
-    public function __construct($itemId, $itemType, $stageId, $template = null)
-    {
-        parent::__construct($itemId, $itemType, $stageId, $template);
-    }
-
-    /**
      * Return app-specific stage templates.
      *
      * @return array
