@@ -125,6 +125,9 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
 		$version = $versionDao->getCurrentVersion();
 
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+		$userGroups = $userGroupDao->getByContextId($journal->getId())->toArray();
+
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
 			'ojsVersion' => $version->getVersionString(),
@@ -132,6 +135,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			'journal' => $journal,
 			'issue' => $issue,
 			'showToc' => true,
+			'userGroups' => $userGroups,
+
 		));
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.copyrightStatement

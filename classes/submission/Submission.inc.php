@@ -54,7 +54,9 @@ class Submission extends PKPSubmission {
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
 				switch($context->getData('copyrightHolderType')) {
 					case 'author':
-						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString());
+						$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+						$userGroups = $userGroupDao->getByContextId($context->getId())->toArray();
+						$fieldValue = array($context->getPrimaryLocale() => $this->getCurrentPublication()->getAuthorString($userGroups));
 						break;
 					case 'context':
 					case null:

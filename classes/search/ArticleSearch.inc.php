@@ -69,6 +69,9 @@ class ArticleSearch extends SubmissionSearch {
 			}
 		}
 
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+		$userGroupsByContextId = [];
+
 		$i=0; // Used to prevent ties from clobbering each other
 		foreach ($unorderedResults as $submissionId => $data) {
 			// Exclude unwanted IDs.
@@ -77,7 +80,11 @@ class ArticleSearch extends SubmissionSearch {
 			switch ($orderBy) {
 				case 'authors':
 					$submission = $submissionDao->getById($submissionId);
-					$orderKey = $submission->getAuthorString();
+					$contextId = $submission->getContextId();
+					if (!isset($userGroupsByContextId[$contextId])) {
+						$userGroupsByContextId[$contextId] = $userGroupDao->getByContextId($contextId)->toArray();
+					}
+					$orderKey = $submission->getCurrentPublication()->getAuthorString($userGroupsByContextId[$contextId], true, true);
 					break;
 
 				case 'title':
