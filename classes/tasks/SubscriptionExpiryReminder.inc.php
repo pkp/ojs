@@ -70,7 +70,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
             'subscriptionType' => $subscriptionType->getSummaryString(),
             'expiryDate' => $subscription->getDateEnd(),
             'recipientUsername' => $user->getUsername(),
-            'signature' => $subscriptionContactSignature
+            'subscriptionSignature' => $subscriptionContactSignature
         ];
 
         $mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), $journal, false);

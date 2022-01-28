@@ -1758,6 +1758,24 @@ msgstr "The currency of the payment amount, such as USD"
 msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Name of the website when more than one journal is hosted"
 
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Information about a subscriber, including user full name, affiliation, phone number and email"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Contact details of the subscription manager"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "The link to the subscription page"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "The end date of the subscription"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "subscription type summary, containing name, duration and cost"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "subscription membership information"
+
 msgid "mailable.validateEmailContext.name"
 msgstr "Validate Email (Journal Registration)"
 
