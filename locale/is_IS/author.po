@@ -1,8 +1,371 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-02-02 01:43+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"is_IS/>\n"
 "Language: is_IS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Það þarf að skrá sig sem notanda til þess að geta sent inn gein til "
+"tímaritsins.  Skráning gerir ritstjórum okkar kleyft að flygjast með "
+"framvinndu innsendingarinnar og vera í sambandi við þig þegar staða "
+"innsendingar breytist eða ef viðbótar upplýsinga er þörf."
+
+msgid "author.article.authorRevisedFile"
+msgstr "Höfunda skrá"
+
+msgid "author.article.copyeditedFile"
+msgstr "Yfirfarin skrá"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Hlaða upp útgáfu höfundar"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Innsendingu lokið. Við þökum fyrir áhuga þinn á að birta grein hjá "
+"{$journalTitle}."
+
+msgid "author.submit.finishSubmission"
+msgstr "Ljúka innsendingu"
+
+msgid "author.submit.filesSummary"
+msgstr "Skrá - samantekt"
+
+msgid "author.submit.noFiles"
+msgstr "Engar skrár hafa verið tengdar við þessa innsendingu."
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+"Til að senda inn handritið þitt á tímaritið: {$journalTitle} smelltu þá á "
+"Ljúka innsendingu. Aðaltengiliður innsendingarinnar mun fá staðfestingu í "
+"tövlupósti og getur fylgst með framvinndu í gegnum ritstjórnarferlið með því "
+"að skrá sig inn á vefsíðu tímaritsins.  Við þökkum fyrir áhuga þinn á að "
+"birta grein í {$journalTitle}."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Opinbert kenni viðbótarskrár"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Opnbert kenni viðbótarskrár er til fyrir."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Vinsamlega sláðu inn lýsingu."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Vinsamlega sláðu inn efni."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Vinsamlega sláðu inn titil á þessa viðbótar skrá."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Engri skrá hlaðið inn."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Tilgreindu annað"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Nafn könnunar eða annar uppruni."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Dagsetning þegar gagna var aflað eða verkfæri búið til."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Nota bara með formlega útgefnu efni."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Sýna ritrýnum skrána (án lýsigagna), þar sem það mun ekki setja nafnlausa "
+"ritrýni í hættu."
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Stutt lýsing"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Frumtexti"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Gagnasett"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Gagnagreining"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Afrit"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Rannsóknarniðurstöður"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Rannsóknarefni"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Rannsóknarverkfæri"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Stofnandi (eða eigandi) skrár"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Viðbótarskrá"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Til að lykkla þetta viðbótar efni, sláðu inn eftirfarandi lýsigögn fyrir "
+"viðbótarskránna."
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Lýsigögn fyrir viðbótarskrá"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Breyta viðbótarskrá"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Bæta við viðbótarskrá"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Hlaða upp viðbótarskrá"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Ertu viss um að þú viljir eyða þessari viðbótarskrá?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Til baka í viðbótarskrár"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Engum viðbótarskrám hefur verið bætt við þessa innsendingu."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Ertu viss um að þú viljir halda áfram án þess að hlaða inn viðbótarskránni "
+"sem þú ert búinn að velja?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Smelltu á vista til að hlaða upp skrá ( Í kjölfarið er hægt ða bæta við "
+"viðbótar skrám)."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Þetta valkvæða skref leyfir að viðbótar stuðnings skrám sé bætt við "
+"innsendinguna. Skrárnar, sem geta verið með hvaða sniði sem er, geta "
+"innihaldið  (a) rannsóknar verkfæri, (b) gagna sett, í samræmi við "
+"siðareglur rannsóknarinnar, (c) auðlindir sem annars væru óaðgengilegar "
+"lesendum, (d) tölur og töflur sem ekki er hægt að flétta inn í texta "
+"greinarinnar eða annað efni sem bætir einhverju við verkið."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr ""
+"Ertu viss um að þú viljir halda áfram án þess að hlaða upp innsendingar skrá?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Engin insendinarskrá  hlaðin upp."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Skipta út innsendingar skrá"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Hlaða upp insendingar skrá"
+
+msgid "author.submit.submissionFile"
+msgstr "Innsendingar skrá"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Þú ert komin(n) fram yfir hámarks orðafjölda fyrir útdrætti í þessum hluta "
+"tímaritsins."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Vinsamlega sláðu inn útdrátt fyrir greinina."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Vinsamlega sláðu inn titil greinarinnar."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Fornafn, eftirnafn og netfang hvers höfundar er áskilið."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Það þarf að vera a.m.k. einn höfundur."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Enska=en; Franska=fr; Spænska=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Viðbótar tungumálakóðar</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Vísar í landræðilega staðsentingu, tímaröð eða sögulegt umfang og /eða "
+"eiginleika rannsóknar úrtaks."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Setja inn hugtök fyrir lyklun innsendingar; aðgreindu hlugtök með semíkommu "
+"(hugtak1; hugtak2; hugtak3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Eyða höfundi"
+
+msgid "author.submit.addAuthor"
+msgstr "Bæta við höfundi"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Aðal tengiliður fyrir samskipti við ritstjórn."
+
+msgid "author.submit.reorder"
+msgstr "Endurraða nafni höfundar"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Endurraða höfundum í þá röð sem þeir eiga að birtast í á útgefnu efni."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Persónuvernd"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Vinsamlega veldu tungumál innsendingar."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Vinsamlega veldu viðeigand kafla í tímaritinu fyrir þessa innsendingu."
+
+msgid "author.submit.comments"
+msgstr "Sláðu inn texta (valkvætt)"
+
+msgid "submission.submit.coverNote"
+msgstr "Athugasemdir til ritstjóra"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Þú verður að samþykkja höfundaréttarskilmála áður en þú heldur áfram."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Höfundur samþykkir höfundaréttarskilmálana sem eiga við þessa innsendingu ef "
+"og þegar greinin birtist í tímaritinu (hægt er að bæta við athugasemdum til "
+"ritstjóra fyrir neðan)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Þú verður að ganga úr skugga um að öll atriðin á minnislista höfundar séu "
+"uppfyllt áður en þú heldur áfram."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Það þarf að senda inn greinar á einn af köflunum í tímaritinu."
+
+msgid "author.submit.journalSection"
+msgstr "Kafli tímarits"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Engar innsendingar."
+
+msgid "author.submissions.viewStatus"
+msgstr "Skoða stöðu"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ertu viss um að þú viljir eyða þessari ókláruðu innsendingu?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Leiðréttingar úr prófarkalestri"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Hlaða upp yfirfarinni útgáfu"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "í ritstýringu: Beðið um prófarkalestur"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Í ritstýringu: Beðið um yfirferð (Copyedit)"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Í Ritrýni: Beðið um endurskoðun"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Í ritrýni umferð {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Ef þú ert að sækja um undanþágu, verður þú að gefa upp ástæðu á svæðinu sem "
+"er ætlað í það."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Vinsamlega notið athugasemda svæðið fyrir neðan til að skýra afhverju ætti "
+"að gefa undanþágu frá gjaldi."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Vinsamlega skoðið að gefa þessari grein undanþágu frá gjaldi"
+
+msgid "author.submit.requestWaiver"
+msgstr "Biðja um undanþágu"
+
+msgid "author.submit.notAccepting"
+msgstr "Þetta tímarit tekur ekki á móti innsendingum sem stendur."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Þú getur klárað þessa innsendingu síðar með því að velja \"Virkar "
+"innsendingar\" á upphafssíðu höfundar."
+
+msgid "author.submit.nextSteps"
+msgstr "Næstu skref"
+
+msgid "author.submit.confirmation"
+msgstr "Staðfesting"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Hlaða upp viðbótarskrám"
+
+msgid "author.submit.metadata"
+msgstr "Slá inn lýsigögn"
+
+msgid "author.submit.upload"
+msgstr "Hlaða upp innsendingu"
+
+msgid "author.submit.start"
+msgstr "Byrja"
+
+msgid "author.submit.step5"
+msgstr "Skref 5. Staðfesta innsendinguna"
+
+msgid "author.submit.step4a"
+msgstr "Skref 4a. Bæta við viðbótarskrá"
+
+msgid "author.submit.step4"
+msgstr "Skref 4. Hlaða upp viðbótarskrám"
+
+msgid "author.submit.step3"
+msgstr "Skref 3. Slá inn lýsigögn innsendingar"
+
+msgid "author.submit.step2"
+msgstr "Skref 2. Hlaða upp innsendingu"
+
+msgid "author.submit.step1"
+msgstr "Skref 1. Hefja innsendingu"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Click here</a> fara á skerf eitt í "
+"fimmskrefa ferlinu fyrir insendingu."
+
+msgid "author.submit.startHereTitle"
+msgstr "Hefja nýja innsendingu"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Fimm skref til að senda inn"
+
+msgid "author.submit.submitArticle"
+msgstr "Senda inn grein"
+
+msgid "author.competingInterests"
+msgstr ""
+"Hagsmunaárekstrar <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Stefna um hagsmunaárekstra</a>"
+
+msgid "author.track"
+msgstr "Virkar innsendingar"
+
+msgid "author.submit"
+msgstr "Ný innsending"
