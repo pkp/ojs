@@ -428,7 +428,7 @@ class Upgrade extends Installer
             'CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)'
         );
         // Fetch submission_file data with old-supp-id
-        $result = DB::statement(
+        $result = DB::select(
             'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
             ['old-supp-id']
         );
