@@ -17,8 +17,8 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class I7596_RemoveNonExpiring extends \PKP\migration\Migration
 {
@@ -27,9 +27,13 @@ class I7596_RemoveNonExpiring extends \PKP\migration\Migration
      */
     public function up(): void
     {
-        Schema::table('subscription_types', function (Blueprint $table) {
-            $table->dropColumn('non_expiring');
-        });
+        // Installations that began with OJS 3.3.0 will not have this column.
+        // Older installations will.
+        if (Schema::hasColumn('subscription_types', 'non_expiring')) {
+            Schema::table('subscription_types', function (Blueprint $table) {
+                $table->dropColumn('non_expiring');
+            });
+        }
     }
 
     /**
@@ -37,8 +41,7 @@ class I7596_RemoveNonExpiring extends \PKP\migration\Migration
      */
     public function down(): void
     {
-        Schema::table('subscription_types', function (Blueprint $table) {
-            $table->smallInteger('non_expiring')->default(0);
-        });
+        // Regardless of whether the column existed before the migration was
+        // executed, OJS 3.3.x did not use it and it should not be re-added.
     }
 }
