@@ -15,8 +15,8 @@
 
 use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
-use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\AccessKeyManager;
+use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
 use PKP\security\Validation;
 
@@ -118,8 +118,12 @@ class ReviewerHandler extends PKPReviewerHandler
     /**
      * @copydoc PKPReviewerHandler::getReviewForm()
      */
-    public function getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment)
-    {
+    public function getReviewForm(
+        int $step,
+        PKPRequest $request,
+        ReviewerSubmission $reviewerSubmission,
+        ReviewAssignment $reviewAssignment
+    ): ReviewerReviewForm {
         switch ($step) {
         case 3:
             return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
