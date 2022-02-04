@@ -61,3 +61,24 @@ msgstr "When a homepage image has been uploaded, display it in the background of
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Show the homepage image as the header background."
+
+msgid "plugins.themes.default.option.usageStatsDisplay.label"
+msgstr "Usage statistics display options"
+
+msgid "plugins.themes.default.option.usageStatsDisplay.none"
+msgstr "Do not display submission usage statistics chart for reader."
+
+msgid "plugins.themes.default.option.usageStatsDisplay.bar"
+msgstr "Use bar type of the chart for usage statistics display."
+
+msgid "plugins.themes.default.option.usageStatsDisplay.line"
+msgstr "Use line type of the chart for usage statistics display."
+
+msgid "plugins.themes.default.usageStatsDisplay.monthInitials"
+msgstr "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+
+msgid "plugins.themes.default.usageStatsDisplay.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.default.usageStatsDisplay.noStats"
+msgstr "Download data is not yet available."
