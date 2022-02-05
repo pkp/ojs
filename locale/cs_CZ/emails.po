@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2021-12-26 09:24+0000\n"
+"PO-Revision-Date: 2022-02-05 23:06+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/emails/cs_CZ/>"
 "\n"
@@ -100,7 +100,7 @@ msgid "emails.reviewerRegister.description"
 msgstr "Tento email je zaslán nově registrovanému recenzentovi jako přivítání do systému a poskytne mu doklad o jeho uživatelském jménu a heslu."
 
 msgid "emails.issuePublishNotify.subject"
-msgstr "Vydání nového čísla"
+msgstr "Nové číslo bylo vydáno: {$issueIdentification}"
 
 msgid "emails.issuePublishNotify.body"
 msgstr ""
