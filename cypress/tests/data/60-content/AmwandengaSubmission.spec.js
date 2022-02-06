@@ -267,7 +267,7 @@ describe('Data suite tests', function() {
 		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
 		cy.get('#articleGalleyForm button').contains('Save').click();
 		cy.wait(1500);
-		cy.get('#representations-grid [id*="downloadFile-button"').contains('PDF Version 2');
+		cy.get('#representations-grid [id*="downloadFile-button"]:contains("PDF Version 2")');
 
 		// Edit url path
 		cy.get('#issue-button').click();
