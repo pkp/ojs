@@ -1,8 +1,73 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-doi/is_IS/>\n"
 "Language: is_IS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "Búið er að tengja DOI {$pubId}."
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Hreinsa"
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "DOI er tengt við {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "galley - lokapróförk"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "grein"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "tölublað"
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Tengja"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Tengja DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "Fyrir Galley - lokaprófarkir"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "Fyrir greinar"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "Fyrir tölublöð"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "DOI Prefix"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Galley - Lokaprófarkir"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Grein"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Tölublað"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Vinsamlega veldu hlutinn sem á að tengja DOI við."
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Innihald tímarits"
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
