@@ -10,6 +10,9 @@ Configuration Changes
 See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
+- An allowed_hosts option was added to protect against HOST injection attacks.
+  We recommend configuring this setting! See "Recommended Configuration" in
+  docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
 - The proxy configuration settings have changed. Please review the [proxy]
   section in config.TEMPLATE.inc.php and adapt your settings in config.inc.php
   as needed.
