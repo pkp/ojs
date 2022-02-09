@@ -99,8 +99,8 @@
   },
   "lint-staged": {
     "**/*.php": [
-      "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php_cs --allow-risky=yes",
-      "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php_cs --allow-risky=yes --dry-run"
+      "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --allow-risky=yes",
+      "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --allow-risky=yes --dry-run"
     ]
   }
 }
