@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-07 04:51+0000\n"
+"PO-Revision-Date: 2022-02-10 00:38+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "is_IS/>\n"
@@ -39,7 +39,7 @@ msgstr "Veldur galley skrár"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"Umbrotshönnuður undirbýr þessar skrár fyrir hvert galley og hleður síðan upp "
+"Setjari undirbýr þessar skrár fyrir hvert galley og hleður síðan upp "
 "viðeigandi  <span class=\"pkp_help_title\">próförkum</span> fyrir "
 "prófarkalestur."
 
