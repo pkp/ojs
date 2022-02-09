@@ -10,6 +10,9 @@ Configuration Changes
 See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
+- An allowed_hosts option was added to protect against HOST injection attacks.
+  We recommend configuring this setting! See "Recommended Configuration" in
+  docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
 - The captcha.captcha_on_login option for displaying a captcha challenge in
   the login interface has been added (default: on)
 
