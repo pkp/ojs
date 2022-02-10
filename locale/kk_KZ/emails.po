@@ -1,8 +1,9 @@
 # Madi <nmdbzk@gmail.com>, 2021.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-18 04:05+0000\n"
-"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"PO-Revision-Date: 2022-02-08 03:38+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/emails/kk_KZ/"
 ">\n"
 "Language: kk_KZ\n"
@@ -1908,3 +1909,6 @@ msgstr ""
 "қол жеткізуге болатыны туралы ақпарат бар. Бұл хабар Басқару> Параметрлер> "
 "Жұмыс үрдісі> Қарау тармағында стандартты қарау процесі таңдалған кезде "
 "пайдаланылады және сілтеме арқылы шолушының тікелей қатынасы қосылады."
+
+msgid "emails.userValidateSite.subject"
+msgstr "Есептік жазбаңызды растаңыз"

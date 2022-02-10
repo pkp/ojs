@@ -1,12 +1,13 @@
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
-"PO-Revision-Date: 2020-02-08 03:27+0000\n"
-"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
-"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/da/"
-">\n"
+"PO-Revision-Date: 2022-01-12 06:39+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
+"da_DK/>\n"
 "Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,7 +78,7 @@ msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Realm"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "Krævet godkendelses ID"
+msgstr "Anmodet proxy autorisations ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL sikkerhedsoplysninger"
@@ -87,3 +88,6 @@ msgstr "Brug SASL i stedet for simpel godkendelse"
 
 msgid "plugins.auth.ldap.settings.pwhash.description"
 msgstr "Hash-format til adgangskoder, der er gemt på serveren. SSHA anbefales."
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "Anmodet autorisations ID"

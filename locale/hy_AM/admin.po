@@ -1,7 +1,8 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-05 12:44+0000\n"
-"Last-Translator: Liana Arustamyan <lianaarustamyan33@gmail.com>\n"
+"PO-Revision-Date: 2022-01-23 13:32+0000\n"
+"Last-Translator: Artashes Mirzoyan <amirzoyan@sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "hy_AM/>\n"
 "Language: hy_AM\n"
@@ -234,7 +235,7 @@ msgstr ""
 "հասանելի չեն լինի։"
 
 msgid "admin.journals.transcode"
-msgstr "Transcode article metadata from ISO8859-1"
+msgstr "Վերակոդավորել հոդվածների մետատվյալները ISO8859-1֊ից"
 
 msgid "admin.auth.enableSyncProfiles"
 msgstr ""
@@ -249,7 +250,7 @@ msgid "admin.journals.form.importPathRequired"
 msgstr "Ներբեռնման ճանապարհը պարտադիր է։"
 
 msgid "admin.journals.redirect"
-msgstr "Generate code to map OJS 1 URLs to OJS 2 URLs"
+msgstr "Գեներացնել կոդ` OJS 1 հասցեները OJS 2 հասցեներին վերանշանակելու համար"
 
 msgid "admin.settings.defaultMetricDescription"
 msgstr ""
