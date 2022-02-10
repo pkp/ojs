@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-20 21:25+0000\n"
+"PO-Revision-Date: 2022-02-10 14:07+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "bg_BG/>\n"
@@ -206,7 +206,7 @@ msgstr ""
 "интерес.</p><p>С уважение,</p>{$signature}"
 
 msgid "emails.issuePublishNotify.subject"
-msgstr "Публикуван е нов брой"
+msgstr "Публикуван е нов брой: {$issueIdentification}"
 
 msgid "emails.reviewerRegister.description"
 msgstr ""
