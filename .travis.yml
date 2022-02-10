@@ -19,6 +19,8 @@ matrix:
     - TEST: pgsql
     - SAVE_BUILD: true
     php: 8.0
+  - env: TEST=pgsql
+    php: 8.1
   # MySQL / various PHP
   - env: TEST=mysql
     php: 7.3
@@ -28,6 +30,8 @@ matrix:
     - TEST: mysql
     - SAVE_BUILD: true
     php: 8.0
+  - env: TEST=mysql
+    php: 8.1
   # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
   # - env: TEST=mysql DISABLE_PATH_INFO=1
   #   php: 7.2
