@@ -142,7 +142,7 @@ class URNPubIdPlugin extends PubIdPlugin
     {
         $templateMgr->addJavaScript(
             'urnCheckNo',
-            $request->getBaseUrl() . DIRECTORY_SEPARATOR . $this->getPluginPath() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'checkNumber.js',
+            "{$request->getBaseUrl()}/{$this->getPluginPath()}/js/checkNumber.js",
             [
                 'inline' => false,
                 'contexts' => ['publicIdentifiersForm', 'backend'],
