@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-05 23:06+0000\n"
+"PO-Revision-Date: 2022-02-14 11:26+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "is_IS/>\n"
@@ -66,10 +66,10 @@ msgid "default.groups.abbrev.sectionEditor"
 msgstr "Kaf.Rstj"
 
 msgid "default.groups.plural.sectionEditor"
-msgstr "Kafla ritstjórar"
+msgstr "Kaflaritstjórar"
 
 msgid "default.groups.name.sectionEditor"
-msgstr "Kafla ritstjóri"
+msgstr "Kaflaritstjóri"
 
 msgid "default.groups.abbrev.guestEditor"
 msgstr "GR"
