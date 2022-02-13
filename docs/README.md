@@ -11,7 +11,7 @@
 
 Open Journal Systems (OJS) has been developed by the Public Knowledge Project.
 For general information about OJS and other open research systems, visit the
-PKP web site at <https://pkp.sfu.ca/>.s
+PKP web site at <https://pkp.sfu.ca/>.
 
 
 ## License
