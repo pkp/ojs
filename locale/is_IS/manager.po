@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-14 11:26+0000\n"
+"PO-Revision-Date: 2022-02-14 18:30+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "is_IS/>\n"
@@ -470,3 +470,434 @@ msgstr ""
 
 msgid "manager.distribution.access"
 msgstr "Aðgangur"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(T.d.,"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Lykilorð"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Fimm skref fyrir vefsíðu tímarits"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Skoða grein"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Aðgangur síðu"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Sína alltaf galley tengla og gefa til kynna takmarkaðann aðgang."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Kafli tímaritsins sem atriði verður skoðað fyrir."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Ristjóri sem hefur umsjón með efninu í gengum ritstjórnarferlið."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Til að búa til eða breyta köflum fyrir tímaritið (t.d., Ritrýndar greinar, "
+"Bóka gagnrýni, o.s.frv.), farðu í umsjón með köflum.<br /><br />Höfundar á "
+"innsendu efni muni velja..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ef engum köflum er bætt við, þá er allt efni sjálkrafa sent inn í "
+"geinakaflann.)"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Kaflar og kaflaritstjórar"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Skráðu stutta lýsingu (50-300 stafir) á tímaritinu sem leitarvélar geta sýnt "
+"þegar síðan kemur upp í leitarniðurstöðum."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Hjálpaðu leitarvélum eins og Google að finna og sýna síðuna þína. Við "
+"hvetjum þig til að senda inn <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">vefsíðutré</a>."
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Lyklun fyrir leit"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Ritrýnistefna"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Áminningar til ritrýna"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Einkunnagjöf á Ritrýni"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Bæta við öruggum tengli í tölvupóst til ritrýna."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Hægt er að senda ritrýnum öruggan tengil í tölvupósti, sem gerir þeim kleyft "
+"að fá aðgang að ritrýni án þess að skrá sig inn.  Fyrir aðgang að öðrum "
+"síðum þarf að skrá sig inn."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Eins smells aðgangur fyrir ritrýna"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Aðgangur rirtrýna"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Ritrýnar fá ekki aðgang að innsendu efni fyrr en þeir hafa samþykkt að "
+"ritrýna það."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Takmarka aðgang að skrám"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Ritsjtóar gefa ritrýnum einkunn á fimm punkta skala eftir hverja ritrýni."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Vikur til að ljúka ritrýni"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Til að senda sjálfvirkar áminningar í tövuósti þarf umsjónamaður síðurnnar "
+"að virkja <tt>scheduled_tasks</tt> valkostinn  config skrá OJS. Það gæti "
+"verið þörf á viðbótar þjóni eins og kemur fram í OJS skjöluninni."
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Sjálfvirkar áminningar í tölvupósti"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Ritrýni valkostir"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Leiðbeiningar um ritrýni"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Notendur verða að vera skráðir og skrá sig inn til að skoða vefsíðu "
+"tímaritsins."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Notendur verða að vera skráðir og innská sig til að skoða  innihald í opnum "
+"aðgangi."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Tengla í heimildir"
+
+msgid "manager.setup.publisher"
+msgstr "Útgefandi"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Auðkenna innihald tímarits"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Útgáfu verkröð"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Efnsatriði tímaritsins má gefa út saman, sem hluta af tölublaði með sitt "
+"eigið efnisyfirlit. Sem valkost er hægt að gefa út efni  jafnóðum og það er "
+"tilbúið með því að bæta þeim í \"Nýjasta\" efnisyfirlit bindis.  Upplýsið "
+"lesendur í \"Um tímaritið\", með setningu um hvaða kerfið þetta tímarit "
+"notar og áætlaðan fjölda útgáfa."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Útgáfu verkröð"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Leiðbeiningar um prófarkalestur eru aðgengilegaar prófarkalesurum, höfundum, "
+"setjurum og kaflaritstjórum  við undirbúning útgáfu á innsendu efni.  Fyrir "
+"neðan eru sjálfgefnar leiðbeiningar í HTML, sem má breyta eða skipta út "
+"hvenær sem er (Í HTML eða sem texta)."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Leiðbeiningar um prófarkalestur"
+
+msgid "manager.setup.printIssn"
+msgstr "Prent ISSN"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Áherslur, ritrýni, kaflar, persónuvernd, öryggi og önnnur viðbótar atriði í "
+"Um tímaritið."
+
+msgid "manager.setup.policies"
+msgstr "Stefnur"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Val fyrir blaðsíðu númer"
+
+msgid "manager.setup.onlineIssn"
+msgstr "eISSN"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>ATH:</strong> Staðfesting á innsendingu í tölvupósti er óvirk.  Til "
+"að nota þessa virkni þarf að virkj  \"Submission Ack\" tölvupóst í "
+"tölvupóstar."
+
+msgid "manager.setup.note"
+msgstr "Til minnis"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Engu stílsniði hefur veirð hlaðið upp"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Engri mynnd hefur veirð hlaðið upp."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL is an full vefslóð  (t.d., \"http://www.example.com\") frekar en hluti "
+"af inn úr vefsíðunni (t.d., \"/manager/setup\")"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Bæta við eða fjarlægja atrið á valmynd"
+
+msgid "manager.setup.navigationBar"
+msgstr "Valmynd"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Skref 4. Umsjón með tímaritinu"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Umsjón og uppsetning útgáfu"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Umsjón með grunn ristjórnar skrefum."
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Aðgangur og öryggi, verkraðir, tilkynningar, yfirferð á texta, umbrot og "
+"prófarkalestur."
+
+msgid "manager.setup.management"
+msgstr "Umsjón"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Forsíðu haus, innihald, haus tímarits, síðufótur, valmyndir og stílsnið."
+
+msgid "manager.setup.look"
+msgstr "Útlit"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Lýsing á CLOCKSS leyfi"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Lýsing á LOCKSS leyfi"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS og CLOCKSS"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Skoða <button>Stillingar á viðbótum</button> til að samþykkja skilmála fyrir "
+"notkun á PKP PN."
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Virkja PKP PN viðbótina"
+
+msgid "manager.setup.lists"
+msgstr "Listar"
+
+msgid "manager.setup.labelName"
+msgstr "Nafn merkimiða"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Skráðu stutta lýsingu af tímaritinu og hvernir eru ritstjórar, "
+"framkvæmdastjórar og aðra í ritstjórnarteyminu."
+
+msgid "manager.setup.keyInfo"
+msgstr "Lykilupplýsigar"
+
+msgid "manager.setup.contextTitle"
+msgstr "Titill tímarits"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Lítið merki eða tákn fyrir tímaritið sem hægt er að nota á lista yfir "
+"tímarit."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Smámynd tímarits"
+
+msgid "manager.setup.journalTheme"
+msgstr "Þema tímarits"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Ógilt snið á stílsniði.  Gilt snið er .css."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Uppsentingarnar fyrir tímaritið hafa verið uppfærðar."
+
+msgid "manager.setup.journalSetup"
+msgstr "Uppsetning á tímariti"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Skref 2. Stefnur tímartitsins"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"þetta birtist í síðufót tímaritsins. Til að breyta eða uppfæra síðufótinn, "
+"afritaðu hingað HTML kóðann í textaboxinu fyrir neðan.  Dæmi gætu verið "
+"önnur valstika, teljari o.s.frv.  Síðufóturinn birtist á öllum síðum."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Síðufótur"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Merki tímarits"
+
+msgid "manager.setup.journalLogo"
+msgstr "Merki tímarits"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Veldu þema og útlitsatriði hér. Hægt er að hlaða upp stílsniði sem má nota "
+"til að yfirskrifa sjálfgefin stílgögn í kerfinu og stílsnið þema (ef þema er "
+"valið)."
+
+msgid "manager.setup.journalLayout"
+msgstr "Útlit tímrits"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Veldu landið þar sem tímaritið er staðsett, eða landið þar sem útgefandi eða "
+"tímartitið er með póstfang."
+
+msgid "manager.setup.contextInitials"
+msgstr "Upphafsstafir tímarits"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Hægt er að hlaða upp myndrænni útgáfu fyrir titil tímarits ásamt merki (sem "
+".gif, .jpg eða .png skrá), sem kemur i staðin fyrir texta útgáfuna sem "
+"annars birrtist."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Haus á forsíðu"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Haus á forsíðu"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Forsíðan samanstendur af valmyndum. Viðbótar innihaldi á frosíðu er hægt að "
+"bæta við með því að nota einhvern aða alla af eftirfarandi valkostum. Þeir "
+"birtast í þeirri röð sem þeir eru í.  ATH að nýjasta tölublaðið er alltaf "
+"aðgengilegt í gengum tengilinn fyrir það á valstikunni."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Innihald á forsíðu tímarits"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Skráðu allar upplýsingar um tímritið sem gætu skipt máli fyrir lesendur, "
+"höfunda eða ritrýna.   Þetta getur m.a. falið í sér stefnu um opinn aðgang, "
+"áherslur og efnissvið tímaritsins, höfundaréttur, stuðningsaðila, sögu "
+"tímaritisins, persónuvernd og þátttaka í geymslukerfum eins og LOCKSS eða "
+"CLOCKSS."
+
+msgid "manager.setup.contextAbout"
+msgstr "Um tímaritið"
+
+msgid "manager.setup.contextSummary"
+msgstr "Samantekt"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Útgefið efni"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Skamstöfun á heiti tímrits."
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Takmarka fjölda atriðia (t.d. innsendingar, notendur eða ritstjórnar "
+"úthlutanir) sem sjást á lista áður en eftirfarandi atriði eru sýnd á annari "
+"blaðsíðu."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Atriði per síðu"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Hægt er að bæta við atriðum á valmynd í þessu setti  sem byrtit efst á "
+"síðunni(Forsíða, Um tímaritið, Forsíða notanda, o.s.frv.) ."
+
+msgid "manager.setup.institution"
+msgstr "Stofnun"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Eftir því hvaða snið er valið, skilgreindu tölublað, bindi og/eða ár fyrsta "
+"tölublaðsins sem er gefið út með OJS:"
+
+msgid "manager.setup.initialIssue"
+msgstr "Upphafs tölublað"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Fyrir lesendur"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Fyrir ritrýna"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Fyrir höfunda"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Stutt lýsing á tímaritinu fyrir ritrýna, bókasafnsfræðinga, mögulega höfunda "
+"og lesendur. Þetta er gert aðgengilegt á hliðartiku þegar uppýsinga "
+"blokkinni hefur verið bætt við."
+
+msgid "manager.setup.information"
+msgstr "Upplýsingar"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Fyrir tímarit sem veita strax, eða seinkaðan, opinn aðgang, bættu við "
+"Creative Commons leyfi fyrir öll útgefin verk á viðeigandi tíma punkti."
+
+msgid "manager.setup.identity"
+msgstr "Kenni tímarits"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Skref 3. Leiðbeina varðandi innsendingar"
+
+msgid "manager.setup.guidelines"
+msgstr "Leiðbeiningar"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Skref 1.  Fara yfir smáatriðin"
+
+msgid "manager.setup.generalInformation"
+msgstr "Almennar upplýsingar"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Nafn aðstoðar aðila er áskilið."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Netfang fyrir aðstoð er áskilið."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Fjöldi ritrýna per innsendingu er áskilinn."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Titill tímartisins er áskilinn."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Upphafsstafir tímaritsins eru áskildir."
