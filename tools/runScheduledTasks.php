@@ -21,11 +21,7 @@ class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
 {
 }
 
-try {
-    app('pkpQueue')->runQueuedJobs();
+app('pkpQueue')->runQueuedJob();
 
-    $tool = new runScheduledTasks($argv ?? []);
-    $tool->execute();
-} catch (\Exception $e) {
-    error_log($e->getTraceAsString());
-}
+$tool = new runScheduledTasks($argv ?? []);
+$tool->execute();
