@@ -1,9 +1,9 @@
 	===================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 3.3.0
-	=== GIT tag: 3_3_0-2
-	=== Release date: February 1, 2021
+	=== Version: 3.4.0
+	=== GIT tag: 3_4_0-0
+	=== Release date: 
 	===================================
 
 
@@ -28,7 +28,7 @@ improvements or bug fixes to the software.
 
 Recommended server requirements:
 
-* PHP >= 7.3 (with php-mbstring, php-xml and php-intl support [1])
+* PHP >= 8.0 (with php-mbstring, php-xml and php-intl support [1])
 * MySQL >= 4.1 or PostgreSQL >= 9.5
 * Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 * Operating system: Any OS that supports the above software, including
@@ -112,7 +112,7 @@ See [docs/UPGRADE.md](UPGRADE.md) for information on upgrading from previous OJS
 
 ## Localization
 
-To add support for other languages, the following sets of XML files must be
+To add support for other languages, the following sets of PO files must be
 localized and placed in an appropriately named directory (using ISO locale 
 codes, e.g. `fr_FR`, is recommended):
 

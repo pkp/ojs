@@ -41,12 +41,8 @@ stages:
 jobs:
   include:
     - stage: test
-      env: TEST=pgsql
-      php: 7.4
-    - env: TEST=pgsql SAVE_BUILD=true
+      env: TEST=pgsql SAVE_BUILD=true
       php: 8.0
-    - env: TEST=mysql
-      php: 7.4
     - env: TEST=mysql SAVE_BUILD=true
       php: 8.0
     # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
