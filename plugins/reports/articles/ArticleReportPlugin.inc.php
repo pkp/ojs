@@ -67,8 +67,8 @@ class ArticleReportPlugin extends ReportPlugin
      */
     public function display($args, $request)
     {
-        $journal = $request->getJournal();
-        $acronym = PKPString::regexp_replace('/[^A-Za-z0-9 ]/', '', $journal->getLocalizedAcronym());
+        $context = $request->getContext();
+        $acronym = PKPString::regexp_replace('/[^A-Za-z0-9 ]/', '', $context->getLocalizedAcronym());
 
         // Prepare for UTF8-encoded CSV output.
         header('content-type: text/comma-separated-values');
@@ -88,7 +88,7 @@ class ArticleReportPlugin extends ReportPlugin
 
         $editorUserGroupIds = array_map(function ($userGroup) {
             return $userGroup->getId();
-        }, array_filter($userGroupDao->getByContextId($journal->getId())->toArray(), function ($userGroup) {
+        }, array_filter($userGroupDao->getByContextId($context->getId())->toArray(), function ($userGroup) {
             return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
@@ -101,7 +101,7 @@ class ArticleReportPlugin extends ReportPlugin
         $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
         $submissions = Repo::submission()->getMany($collector);
         $maxAuthors = $maxEditors = $maxDecisions = 0;
-        while ($submission = $submissions->next()) {
+        foreach ($submissions as $submission) {
             $publication = $submission->getCurrentPublication();
             $maxAuthors = max($maxAuthors, count($publication->getData('authors')));
             $editDecisions = $editDecisionDao->getEditorDecisions($submission->getId());

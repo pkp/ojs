@@ -13,9 +13,9 @@
  * @brief View report plugin
  */
 
-use PKP\plugins\ReportPlugin;
 use APP\facades\Repo;
 use APP\submission\Submission;
+use PKP\plugins\ReportPlugin;
 
 class ViewReportPlugin extends ReportPlugin
 {
@@ -80,7 +80,7 @@ class ViewReportPlugin extends ReportPlugin
             Repo::submission()
                 ->getCollector()
                 ->filterByContextIds([$context->getId()])
-                ->filterByStageIds([Submission::STATUS_PUBLISHED])
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
         );
         foreach ($submissions as $submission) {
             $articleId = $submission->getId();
