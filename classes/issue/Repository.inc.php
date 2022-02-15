@@ -214,7 +214,6 @@ class Repository
     /**
      * Retrieve current issue
      *
-     * @param int $contextId
      * @param bool $useCache TODO: Not currently implemented. Adding to preserved desired cache usage in future
      */
     public function getCurrent(int $contextId, bool $useCache = false): ?Issue
@@ -320,5 +319,23 @@ class Repository
     {
         $collector = $this->getCollector()->filterByContextIds([$contextId]);
         Repo::issue()->deleteMany($collector);
+    }
+
+    /**
+     * Creates a DOI for the given issue
+     */
+    public function createDoi(Issue $issue)
+    {
+        /** @var JournalDAO $contextDao */
+        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $context = $contextDao->getById($issue->getData('journalId'));
+
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE) && empty($issue->getData('doiId'))) {
+            $doiId = Repo::doi()->mintIssueDoi($issue);
+            if ($doiId !== null) {
+                $issue->setData('doiId', $doiId);
+                $this->dao->update($issue);
+            }
+        }
     }
 }

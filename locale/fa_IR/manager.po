@@ -1581,3 +1581,153 @@ msgstr "داده مورد نظر یافت نشد"
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "ارسال یک کپی به آدرس اطلاعات تماس اصلی مجله که در مرحله اول نصب مجله وارد شده است"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "این افزونه امکان اضافه کردن شناسه برای مقالات، شماره ها و کلیشه های چاپی را فراهم می سازد."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI:"
+
+msgid "doi.manager.settings.description"
+msgstr "برای استفاده و مدیریت شناسه DOI لطفاً تنظیمات آن را پیکربندی نمایید:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "محتوای مجله"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "لطفاً مواردی که بایستی شنایه DOI دریافت کنند را مشخص منید."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "لطفاً مواردی از محتویات چاپی که باید به آنها شناسه DOI اختصاص داده شود انتخاب کنید:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "شماره ها"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "مقالات"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "کلیشه های چاپی"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "پیشوند DOI"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "پیشوند DOI توسط مراجع ثبت کننده اختصاص داده می شود (برای مثال <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) و فرمت آن به صورت 10.xxxx می باشد (مانند 10.1234)"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "شناسه DOI باید به فرمت 10.xxxx باشد."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "پسوند DOI"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "پشوند DOI میتواند در هر فرمتی باشد فقط باید توجه شود که به ازای یک پیشوند اختصاص داده شده DOI، این پسوندها منحصر به فرد باشد"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "برای تولید پسوندهای DOI از الگوی زیر استفاده کنید. %j برای مجله، %v برای دوره، %i برای شماره، %Y برای سال، %a برای شناسه مقاله، %g برای شناسه کلیشه چاپی، %f برای شناسه فایل، %p برای شماره صفحه و %x برای شناسه سفارشی"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "برای مثال از الگوی, vol%viss%ipp%p شناسه DOI هایی به صورت 10.1234/vol3iss2pp230 تولید می شود."
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "برای شماره ها"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "برای مقالات"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "برای کلیشه های چاپی"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "استفاده از الگوی پیشفرض"
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i برای شماره ها<br />%j.v%vi%i.%a برای مقالات<br />%j.v%vi%i.%a.g%g برای کلیشه های چاپی."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "یک پسوند DOI منحصر به فرد برای هر مورد منتشر شده وارد کنید. یک فیلد DOI در صفحه فراداده های هر مورد مشاهده خواهید کرد."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "لطفاً الگوی پسوند شناسه DOI برای شماره ها را وارد کنید"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "لطفاً الگوی پسوند شناسه DOI برای مقالات را وارد کنید"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "لطفاً الگوی پسوند شناسه DOI برای کلیشه های چاپی را وارد کنید"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "اختصاص مجدد شناسه هاس DOI"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "اگر شما پیکربندی DOI خود را تغییر دهید، DOI هایی که قبلا تعیین شده اند تحت تاثیر قرار نمی گیرند. هنگامی که پیکربندی DOI ذخیره می شود، از این دکمه برای پاک کردن تمام DOI های موجود استفاده کنید تا تنظیمات جدید به تمامی موارد موجود نیز اعمال شود."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "آیا مطمئنید که می خواهید تمامی شناسه های DOI موجود را حذف کنید؟"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "اختصاص DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "اختصاص شناسه DOI به تمامی مقالات و داده‌های منتشر شده‌ای که DOI دریافت نکرده‌اند. این عملیات با پیکربندی پسوند فردی قابل انجام نیست. اگر در بالا تنظیمات DOI را تغییر داده‌اید قبل از هر کاری آن‌ها را ذخیره کنید. اختصاص DOI ممکن است مدت‌زمانی به طول بیانجامد که وابسته به تعداد مقالات و داده‌های منتشر شده است."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "آیا مطمئنید که می‌خواهید به تمامی مقالات و داده‌های منتشر شده‌ای که DOI دریافت نکرده‌اند این شناسه را اختصاص دهید."
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "شماره"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "مقاله"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "کلیشه چاپی"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه DOI  قابل انجام نیست."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص شناسه DOI قابل انجام نیست."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "چیزی که هم اکنون مشاهده می کنید یک پیش نمایش است، برای اختصاص شناسه DOI چک باکس را تیک زده و فرم را ذخیره کنید."
+
+msgid "doi.editor.assigned"
+msgstr "شناسه DOI به {$pubObjectType} اختصاص داده شد."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "این پسوند از پیش استفاده شده است. لطفاً برای هر مورد یک پسوند منحصر به فرد اختصاص دهید."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "پاک کردن شناسه DOI"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "آیا مطمئنید که می خواهید شناسه DOI موجود را حذف کنید؟"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "پاک کردن شناسه DOI شماره"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "آیا مطمئنید که می خواهید تمامی شناسه های DOI این شماره را حذف نمایید؟"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "برای پاک کردن شناسه DOI تمامی موارد (مقالات و کلیشه های چاپی) این شماره، از گزینه زیر استفاده نمایید."
+
+msgid "doi.editor.assignDoi"
+msgstr "اختصاص شناسه {$pubId} به {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه DOI  قابل انجام نیست."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص شناسه {$pubId} قابل انجام نیست."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "شنایه {$pubId} اختصاص داده شد."

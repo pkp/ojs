@@ -1836,3 +1836,186 @@ msgstr "URL till tidskriftens webbplats"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Tidskriftens namn"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "Detta plugin möjliggör tilldelning av Digital Object Identifiers för nummer, artiklar och publiceringsversioner i OJS."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Konfigurera DOI-pluginet för att kunna administrera och använda DOI:er i OJS:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Tidskriftens innehåll"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Välj de objekt som ska tilldelas DOI:er."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Välj de publiceringsobjekt som kommer att få Digital Object Identifiers (DOI:er) tilldelade sig:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Nummer"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "Artiklar"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Publiceringsversioner"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI-prefix"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "DOI-prefix delas ut av t.ex. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a> och är i formatet 10.xxxx (t.ex. 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI-prefixet är obligatoriskt och måste vara i formatet 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI-suffix"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "Ett DOI-suffix kan ha vilket format som helst, men måste vara unikt bland de publiceringsobjekt som tilldelats samma DOI-prefix:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "Använd mönstret som fyllts i nedan för att generera DOI-suffix. Använd %j för tidskriftens initialer, %v för volymn, %i för nummer, %Y för år, %a för OJS artikel-ID, %g för OJS publiceringsversions-ID, %f för OJS fil-ID, %p för sidnummer och %x för \"Custom Identifier\"."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Exempelvis skulle vol%viss%ipp%p kunna generera följande DOI: 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "för nummer"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "för artiklar"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "för publiceringsversioner"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Använd default-mönster."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i för nummer<br />%j.v%vi%i.%a för artiklar<br />%j.v%vi%i.%a.g%g för publiceringsversioner."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Fyll i ett individuellt DOI-suffix för varje publicerat objekt. Ytterligare fält för DOI finns på varje objekts metadata-sida."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Fyll i DOI-suffixmönstret för nummer."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Fyll i  DOI-suffixmönstret för artiklar."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Fyll i  DOI-suffixmönstret för publiceringsversioner."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Tilldela DOI igen"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "Om du ändrar din DOI-konfiguration kommer DOI:er som redan tilldelats inte att ändras. När DOI-konfigurationen sparats, använd denna knapp för att rensa alla befintliga DOI:er så att de nya inställningarna träder i kraft för befintliga objekt."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Är du säker på att du vill ta bort alla befintliga DOI:er?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Tilldela DOI:er"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Tilldela DOI:er för alla publicerade tidskrifters objekt som inte tilldelats DOI:er. Denna åtgärd kan inte användas tillsammans med individuella suffix. Om du har ändrat DOI-konfigurationen ovan, spara dina ändringar innan du påbörjar den här åtgärden. Tilldelning av DOI:er kan ta lång tid, beroende på antalet publicerade objekt i tidskriften."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Är du säker på att du vill tilldela DOI:er till alla publicerade objekt som inte har tilldelats DOI?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "nummer"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "publiceringsversion"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI kan inte tilldelas eftersom ett anpassat suffix saknas."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI kan inte tilldelas eftersom det innehåller ett ofullständigt mönster."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "Det du ser är en förhandsgranskning av DOI:t. Kryssa i rutan och spara formuläret för att tilldela DOI:t."
+
+msgid "doi.editor.assigned"
+msgstr "DOI är tilldelat till {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Angivet DOI-suffix används redan för ett annat publicerat objekt. Fyll i ett unikt DOI-suffix för varje objekt."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Rensa DOI"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Är du säker på att du vill ta bort befintlig DOI?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Rensa DOI:er för objekt i nummer"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Är du säker på att du vill ta bort befintliga DOI:er för objekt i nummer?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Använd följande för att rensa alla DOI:er för alla objekt (artiklar och publiceringsversioner) som ska publiceras i detta nummer."
+
+msgid "doi.editor.assignDoi"
+msgstr "Tilldela DOI:t {$pubId} till {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI:t kan inte tilldelas eftersom ett anpassat suffix saknas."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI:t {$pubId} kan inte tilldelas eftersom det innehåller ett ofullständigt mönster."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI:t {$pubId} har tilldelats."
+
+msgid "doi.editor.preview.objects"
+msgstr "Objekt"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Tilldela"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI måste börja med {$prefix}."
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Artiklar"
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Du kan inte generera ett DOI eftersom en eller flera delar av DOI-mönstret "
+"saknas. Du kanske behöver tilldela bidraget ett nummer, ange ett utgivar-ID "
+"eller lägga till sidnummer."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Publiceringsversion: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI har inte tilldelats publikationen."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI för publikationen kommer att vara {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI måste börja med {$doiPrefix}."
+
+msgid "doi.editor.missingIssue"
+msgstr "Du kan inte generera ett DOI innan bidraget har tilldelats ett nummer."

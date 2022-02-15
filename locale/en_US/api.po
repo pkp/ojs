@@ -47,6 +47,14 @@ msgstr "You do not have permission to delete this journal."
 msgid "api.contexts.404.contextNotFound"
 msgstr "The journal you requested was not found."
 
+msgid "api.dois.400.contextsNotMatched"
+msgstr "The DOI you requested is not part of this journal."
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "No DOI registration agency has been configured for this journal."
+
+msgid "api.dois.400.depositFailed"
+msgstr "Some items were not deposited successfully. Please check the individual items for their specific error messages."
+
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "You do not have permission to move this email template to another journal."
 

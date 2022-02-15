@@ -1970,3 +1970,186 @@ msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Potrdi email (registracija pri reviji)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "Vtičnik omogoča dodelitev DOI-jev številkam, prispevkom in prelomom v OJS."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Za upravljanje in uporabo DOI-jev prosimo nastavite DOI vtičnik:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Vsebina revije"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Številke"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "Prispevki"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Prelomi"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI predpona"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "DOI predpono dodeli registracijska agencija (npr. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) in je oblike 10.xxxx (npr. 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI predpona je obvezna in mora biti oblike 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI pripona"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "DOI pripona je poljubne oblike, pomembno je, da je unikatna med vsemi objavljenimi objekti, ki so bili izdani znotraj ene DOI predpone:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "Uporabi vpisani vzorec spodaj za kreiranje DOI pripone. Uporabite %j za inicilake  revije, %v za številko zvezka, %i za številko revije, %Y za leto, %a za OJS ID prispevka, %g za OJS ID preloma, %f za OJS ID datoteke, %p za številko strani in %x za \"Identifikator po meri\"."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "na primer, vol%viss%ipp%p lahko kreira naslednji DOI: 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "za številke"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "za prispevke"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "za prelome"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Uporabi privzet vzorec."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i za številke<br />%j.v%vi%i.%a za prispevke<br />%j.v%vi%i.%a.g%g za prelome."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Za vsak izdan objekt vnesite svojo DOI priponko. Pri metapodatkih vsakega objekta boste našli DOI vnosno polje."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Prosimo vnesite vzorec za DOI pripono za številke."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Prosimo vnesite vzorec za DOI pripono za članke."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Prosimo vnesite vzorec za DOI pripono za prelome."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Ponastavi DOI-je"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "Če spremenite DOI nastavitve, se že dodeljeni DOI-ji ne bodo spremenili. Ko je DOI nastavitev shranjena, uporabite ta gumb, da odstranite vse obstoječe DOI-je, tako da bodo nove nastavitve vplivale na obstoječe objekte."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Ste prepričani, da želite odstraniti vse obstoječe DOI-je?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Dodeli DOI-je"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Dodeli DOI-je vsem izdanim objektom, ki še nimajo dodeljenega DOI-ja. Akcija ne bo uporabljena v primeru nastavitve identifikatorjev po meri. Če ste zgoraj spremenili DOI nastavitve, morate spremembe pred uporabo najprej shraniti. Dodeljevanje DOI-jev lahko traja dalj časa, odvisno od števila objavljenih objektov."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Ste prepričani, da želite dodeliti DOI-je vsem izdanim objektom, ki še nimajo dodeljenega DOI-ja?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "številka"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "prispevek"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "prelom"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI-ja ni mogoče dodeliti, ker manjka pripona za identifikator po meri."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI ne more biti dodeljen, ker vsebuje vzorec, ki ga ni mogoče razrešiti."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "Vidite predogled DOI-ja. Izberite potrditveno polje in shranite obrazec, da dodelite DOI."
+
+msgid "doi.editor.assigned"
+msgstr "DOI je dodeljen {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Vnešena DOI pripona je že uporabljena pri drugem objektu. Prosimo, vnesite unikatno DOI pripono za vsak objekt."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Odstrani DOI"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Ste prepričani, da želite odstraniti obstoječi DOI?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Odstrani DOI-je iz vseh objektov te številke"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Ste prepričani, da želite odstraniti obstoječe DOI-je objektom iz te številke?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Spodnjo možnost uporabite, da odstranite DOI-je vsem objektom (prispevki in prelomi), ki so trenutno razporejeni v to številko."
+
+msgid "doi.editor.assignDoi"
+msgstr "Dodeli DOI {$pubId} objektu {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI-ja ni mogoče dodeliti, ker manjka pripona za identifikator po meri."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} ne more biti dodeljen, ker vsebuje vzorec, ki ga ni mogoče razrešiti."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} je bil dodeljen."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"DOI oznake ne morete določiti, ker manjka eden ali več podatkov uporabljenih "
+"v vzorcu za določanje oznake. Običajno morate dodeliti članek v številko "
+"revije, določiti ID izdajatelja ali številke strani."
+
+msgid "doi.editor.missingIssue"
+msgstr "DOI ne morete zgenerirati, dokler članek ni dodeljen številki revije."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Dodeli"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI se mora začeti z {$prefix}."
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Članki"
+
+msgid "doi.editor.preview.objects"
+msgstr "Postavka"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Prelom: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI še ni bil dodeljen za ta članek."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI za ta članek bo {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI se mora začeti z {$doiPrefix}."

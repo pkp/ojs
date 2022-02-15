@@ -39,4 +39,8 @@
 		<descr>Send automated reminders about subscription expiry.</descr>
 		<frequency day="1"/>
 	</task>
+	<task class="lib.pkp.classes.task.DepositDois">
+		<descr>Automatically deposit any outstanding DOIs to the configured registration agency.</descr>
+		<frequency hour="0" />
+	</task>
 </scheduled_tasks>

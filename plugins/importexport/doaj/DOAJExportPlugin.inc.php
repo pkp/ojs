@@ -151,7 +151,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
      *
      * @param null|mixed $noValidation
      */
-    public function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null)
+    public function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null, $shouldRedirect = true)
     {
         $context = $request->getContext();
         $path = ['plugin', $this->getName()];

@@ -206,6 +206,30 @@ class ArticleGalley extends Representation
     {
         return $this->getLabel();
     }
+
+    /**
+     * @copydoc \PKP\submission\Representation::setStoredPubId()
+     */
+    public function setStoredPubId($pubIdType, $pubId)
+    {
+        if ($pubIdType == 'doi') {
+            if ($doiObject = $this->getData('doiObject')) {
+                Repo::doi()->edit($doiObject, ['doi' => $pubId]);
+            } else {
+                $newDoiObject = Repo::doi()->newDataObject(
+                    [
+                        'doi' => $pubId,
+                        'contextId' => $this->getContextId()
+                    ]
+                );
+                $doiId = Repo::doi()->add($newDoiObject);
+
+                $this->setData('doiId', $doiId);
+            }
+        } else {
+            parent::setStoredPubId($pubIdType, $pubId);
+        }
+    }
 }
 
 if (!PKP_STRICT_MODE) {
