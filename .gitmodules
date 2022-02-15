@@ -52,4 +52,4 @@
 	url = https://github.com/pkp/googleScholar
 [submodule "plugins/generic/crossref"]
 	path = plugins/generic/crossref
-	url = https://github.com/pkp/crossref-ojs.git
+	url = https://github.com/pkp/crossref-ojs
