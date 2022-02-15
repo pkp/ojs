@@ -548,28 +548,6 @@ msgstr ""
 "revisão em curso. Este e-mail é usado quando um editor envia manualmente um "
 "lembrete ao revisor"
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Lembrete de pedido de revisão"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Esta mensagem é apenas um lembrete relativamente ao pedido de revisão da "
-"submissão &quot;{$submissionTitle}&quot; a {$contextName}. Esperávamos "
-"receber a revisão até {$reviewDueDate}, e aguardamos a sua receção assim que "
-"for possível.<br />\n"
-"<br />\n"
-"URL da submissão: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Confirme a sua disponibilidade para concluir esta tarefa e agradecemos o "
-"contributo para a qualidade desta revista. Aguardamos notícias suas!<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Este e-mail é enviado por um Editor de Secção para lembrar o revisor sobre o prazo de revisão."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Lembrete de conclusão de revisão"

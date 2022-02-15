@@ -546,25 +546,6 @@ msgstr ""
 "هذه الرسالة يُذكر بها المحرر محكماً قد استوجب إكمال تقييمه لمؤلَّف ما. هذه "
 "الرسالة تُستعمل عندما يرسل المحرر تذكيرًا يدويًا إلى المحكم"
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "تذكير لتحكيم طلب نشر"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}.  نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}، ونرجو أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />\n"
-"<br />\n"
-"رابط الطلب: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "هذه الرسالة يذكر بها محرر القسم محكماً باستيجاب مهلة تقييمه لمؤلَّف ما."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "تذكير يلتمس إكمال تحكيمك"
 

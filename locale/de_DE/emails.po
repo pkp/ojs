@@ -526,24 +526,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Erinnerung an die Fälligkeit eines Gutachtens"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.<br />\n"
-"<br />\n"
-"URL des Beitrags: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatische Erinnerung an die Fälligkeit eines Gutachtens"

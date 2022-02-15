@@ -372,26 +372,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Podsjetnik za predaju Recenzije"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka, &quot;{$submissionTitle},&quot; za časopis {$contextName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.<br />\n"
-"<br />\n"
-"Podsjećamo da do priloga možete doći izravno prateći ovu kodiranu pozivnicu:<br />\n"
-"{$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Ovu e-poštu je poslao urednik rubrike da podsjeti recenzenta da je njegova recenzija dospjela."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatski podsjetnik za predaju recenzije"
 

@@ -580,24 +580,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Este correo es enviado por el/la Editor/a de Sección para recordar a un/a revisor/a que ya debe entregar su revisión."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Recordatorio de envío de revisión"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Le recordamos nuestra petición de revisión del envío &quot;{$submissionTitle},&quot; para {$contextName}. Esperábamos su revisión antes del {$reviewDueDate}, esperamos nos la mande en cuanto la tenga lista.<br />\n"
-"<br />\n"
-"URL del envío: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Este correo es enviado por el/la Editor/a de Sección para recordar a un/a revisor/a que ya debe entregar su revisión."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Recordatorio automático de revisión de envío"

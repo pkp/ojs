@@ -528,24 +528,6 @@ msgstr ""
 "reviewnya telah habis. Email ini digunakan ketika editor secara manual "
 "mengirimkan pengingat kepada reviewer"
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Pengingat Review Naskah"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami mengharapkan telah menerima review ini pada {$reviewDueDate}, dan akan sangat berbahagia untuk dapat menerimanya segera setelah Anda menyelesaikannya.<br />\n"
-"<br />\n"
-"URL Naskah: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Email ini dikirimkan Editor Bagian untuk mengingatkan reviewer bahwa review telah mencapai tenggat."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Pengingat untuk menyelesaikan review Anda"

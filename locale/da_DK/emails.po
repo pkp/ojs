@@ -472,24 +472,6 @@ msgstr ""
 "om, at bedømmelsen skal afleveres. Denne e-mail bruges, når redaktøren "
 "manuelt vil sende en påmindelse til bedømmeren"
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Påmindelse om bedømmelse af manuskript"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.<br />\n"
-"<br />\n"
-"Manuskriptets URL-adresse: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag til tidsskriftets arbejde. Jeg ser frem til at høre fra dig.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Denne e-mail sendes af sektionsredaktøren til en bedømmer for at minde vedkommende om, at bedømmelsen skulle have været afleveret."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Påmindelse om at bedømmelse af manuskriptet bedes færdiggøres"

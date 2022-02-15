@@ -417,24 +417,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazioa egiteko epea pasatu dela gogorarazteko."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Artikulua ebaluatzeko oroigarria"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. {$reviewDueDate} egunerako espero genuen zure ebaluazio-txostena, eta prestatuta daukazunean lehenbailehen bidaltzea eskertuko genizuke.<br />\n"
-"<br />\n"
-"Artikuluaren URLa: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazioa egiteko epea pasatu dela gogorarazteko."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Artikulua ebaluatzeko oroigarri automatizatua"

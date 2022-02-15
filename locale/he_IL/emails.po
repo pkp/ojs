@@ -422,25 +422,6 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "תזכורת הגשת ביקורת אוטומטית"
 
-msgid "emails.reviewRemindOneclick.description"
-msgstr "דוא\"ל זה נשלח על ידי עורך מדור להזכיר מבקר שהביקורת שלהם נובעת."
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"זוהי תזכורת לבקשתנו לחוות דעתך על ההגשה \"{$submissionTitle} ל{$contextName}"
-". קוינו לקבל את חוות הדעת עד {revewDueDate$}, ונשמח לקבל את זה בהקדם.<br />\n"
-"<br />\n"
-"אתר הגשה: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"נא לאשר הסכמתך לסקור את המאמר ולהגיש חוות דעת. מחכים לשמוע ממך.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "תזכורת הגשת חוות דעת"
-
 #, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "דוא\"ל זה נשלח על ידי עורך מדור להזכיר מבקר שהביקורת שלהם נובעת."

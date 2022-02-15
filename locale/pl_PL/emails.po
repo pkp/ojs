@@ -524,27 +524,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera przypomnienie o terminie wykonania recenzji."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Przypomnienie o terminie przygotowania recenzji"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"Szanowna Pani / Szanowny Panie,<br />\n"
-"<br />\n"
-"przypominamy, że w dniu {$reviewDueDate} mija termin przygotowania recenzji "
-"artykułu &quot;\"{$submissionTitle}\"&quot; zgłoszonego do czasopisma "
-"{$contextName}. Prosimy o nadesłanie do tego czasu gotowej recenzji.<br />\n"
-"<br />\n"
-"WWW artykułu: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Będziemy wdzięczni za potwierdzenie gotowości do wykonania recenzji.<br />\n"
-"<br />\n"
-"Z wyrazami szacunku,\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Wiadomość wysyłana przez redaktora prowadzącego do recenzenta celem przypomnienia o terminie wykonania recenzji. Wysyłane do recenzenta mającego trudności z obsługą OJS."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatyczne przypomnienie o upłynięciu terminu wykonania recenzji"

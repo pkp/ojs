@@ -510,24 +510,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Ενότητας στον Αξιολογητή, ως υπενθύμιση ότι η αξιολόγηση εκκρεμεί."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Υπενθύμιση αξιολόγησης υποβολής"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Το παρόν μήνυμα αποτελεί υπενθύμιση του αιτήματός μας για αξιολόγηση της υποβολής, &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Ελπίζουμε να έχουμε αυτή την αξιολόγηση μέχρι τις {$reviewDueDate} και θα σας είμαστε ευγνώμονες αν τη λάβουμε το συντομότερο δυνατό.<br />\n"
-"<br />\n"
-"Σύνδεσμος υποβολής: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Παρακαλούμε επιβεβαιώστε τη δυνατότητά σας να ολοκληρώσετε την αξιολόγηση. Ελπίζουμε να λάβουμε σύντομα την απάντησή σας.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Ενότητας στον Αξιολογητή, ως υπενθύμιση ότι η αξιολόγηση εκκρεμεί."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Αυτοματοποιημένη υπενθύμιση αξιολόγησης υποβολής"

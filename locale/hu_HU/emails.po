@@ -535,26 +535,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Ezt az emailt a Rovatszerkesztő küldi a Szakmai Lektornak, hogy emlékeztesse a lektorálási határidőre."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Emlékeztető cikk szakmai lektorálásáról"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"Tisztelt {$recipientName}!<br />\n"
-"<br />\n"
-"Értesítjük, hogy a(z) {$contextName} folyóirat &quot;{$submissionTitle},&quot; című cikkének lektorálási határideje ({$reviewDueDate}) lejárt.<br />\n"
-"Kérjük mielőbb készítse el szakmai bírálatát.<br />\n"
-"<br />\n"
-"Kézirat URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Kérjük, határidő módosításának ügyében vegye fel a kapcsolatot a szerkesztőséggel!<br />\n"
-"<br />\n"
-"Üdvözlettel,<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Ezt az emailt a Rovatszerkesztő küldi a Szakmai Lektornak, hogy emlékeztesse a lektorálási határidőre."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatikus emlékeztető cikk szakmai lektorálásáról"

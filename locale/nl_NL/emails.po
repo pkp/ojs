@@ -532,26 +532,6 @@ msgstr ""
 "Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te "
 "herinneren dat de afgesproken reviewperiode verstreken is."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Herinnering review"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"We willen u vriendelijk herinneren aan ons verzoek om de inzending &quot;{$submissionTitle}&quot; voor {$contextName} te reviewen. We verwachtten uw review op {$reviewDueDate}. We stellen het zeer op prijs om de review te ontvangen zodra u in de gelegenheid bent om die uit te voeren.<br />\n"
-"<br />\n"
-"URL inzending: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr ""
-"Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te "
-"herinneren dat de afgesproken reviewperiode verstreken is."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Geautomatiseerde review herinnering"

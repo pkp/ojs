@@ -753,29 +753,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक समीक्षक को याद दिलाने के लिए भेजा जाता है कि उनकी समीक्षा होने वाली है."
 
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$ reviewDueDate}, {$signature}, {$submissionTitle}, {$reviewAssignmentUrl}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस समीक्षा की उम्मीद कर रहे थे, और जैसे ही आप इसे तैयार करने वाले हैं, इसे प्राप्त करके प्रसन्न होंगे.<br />\n"
-"<br />\n"
-"Submission URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"कृपया जर्नल के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
-"<br />\n"
-"{$signature}"
-
-# (pofilter) endpunc: Different punctuation at the end
-msgid "emails.reviewRemindOneclick.description"
-msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक समीक्षक को याद दिलाने के लिए भेजा जाता है कि उनकी समीक्षा होने वाली है."
-
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
@@ -1323,9 +1300,6 @@ msgstr "ऑटोमेटेड सबमिशन रिव्यू रिम
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
-
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "सबमिशन समीक्षा रिमाइंडर"
 
 msgid "emails.reviewRequestAttachedSubsequent.subject"
 msgstr "लेख समीक्षा का अनुरोध"

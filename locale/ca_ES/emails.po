@@ -530,25 +530,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a un revisor per a recordar-li que ha superat la data de venciment per a lliurar la revisió."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Recordatori de revisió de la tramesa"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"Benvolgut/uda {$recipientName},<br />\n"
-"<br />\n"
-"Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.<br />\n"
-"<br />\n"
-"URL de la tramesa: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a un revisor per a recordar-li que ha superat la data de venciment per a lliurar la revisió."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Recordatori automàtic de revisió de la tramesa"
 

@@ -412,24 +412,6 @@ msgstr ""
 msgid "emails.reviewRemind.description"
 msgstr "Questa email viene mandata da un section editor per ricordare al revisore che è attesa la revisione."
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "Promemoria revisione in attesa"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"Gentile {$recipientName},<br />\n"
-"<br />\n"
-"Ti ricordo la richiesta di revisione della submission, &quot;{$submissionTitle},&quot; per {$contextName}. La data di scadenza prevista è {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Submission URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Ti chiedo la cortesia di confermare al più presto la tua disponibilità a portare a termine l'incarico o meno.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "Questa email viene mandata da un section editor per ricordare al revisore che è attesa la revisione."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Promemoria automatico revisione in attesa"

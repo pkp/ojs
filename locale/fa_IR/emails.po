@@ -319,25 +319,6 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخش برای اطلاع از عدم پذیرش انجام داوری"
 
-msgid "emails.reviewRemindOneclick.subject"
-msgstr "یادآوری برای کارشناسی مقاله"
-
-msgid "emails.reviewRemindOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$submissionTitle},&quot; برای {$contextName}<br />\n"
-"منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.<br />\n"
-"<br />\n"
-"آدزس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
-"<br />\n"
-"در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.reviewRemindOneclick.description"
-msgstr "This email is sent by a Section Editor to remind a reviewer that their review is due."
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "یادآوری اتوماتیک برای کارشناسی مقاله ارسالی"
