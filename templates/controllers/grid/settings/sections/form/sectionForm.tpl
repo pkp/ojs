@@ -17,7 +17,7 @@
 
 <form class="pkp_form" id="sectionForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="updateSection" sectionId=$sectionId}">
 	{csrf}
-	<input type="hidden" name="sectionId" value="{$sectionId|escape}"/>
+	<input type="hidden" name="sectionId" value="{$sectionId|default:""|escape}"/>
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="sectionFormNotification"}
 
