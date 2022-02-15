@@ -17,6 +17,7 @@
 
 namespace APP\article;
 
+use APP\facades\Repo;
 use PKP\db\DAOResultFactory;
 use PKP\db\SchemaDAO;
 use PKP\identity\Identity;
@@ -49,6 +50,7 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
         'seq' => 'seq',
         'urlPath' => 'url_path',
         'urlRemote' => 'remote_url',
+        'doiId' => 'doi_id',
     ];
 
     /**
@@ -59,6 +61,15 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
     public function newDataObject()
     {
         return new ArticleGalley();
+    }
+
+    public function _fromRow($primaryRow)
+    {
+        $galley = parent::_fromRow($primaryRow);
+
+        $this->setDoiObject($galley);
+
+        return $galley;
     }
 
     /**
@@ -82,7 +93,6 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
      * Find galleys by querying galley settings.
      *
      * @param string $settingName
-     * @param mixed $settingValue
      * @param int $publicationId optional
      * @param int $journalId optional
      *
@@ -358,6 +368,17 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO
         );
 
         return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
+    }
+
+    /**
+     * Set the DOI object
+     *
+     */
+    private function setDoiObject(ArticleGalley $galley)
+    {
+        if (!empty($galley->getData('doiId'))) {
+            $galley->setData('doiObject', Repo::doi()->get($galley->getData('doiId')));
+        }
     }
 }
 

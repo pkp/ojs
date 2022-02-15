@@ -13,10 +13,13 @@
 
 namespace APP\submission;
 
-use APP\core\Application;
+use APP\article\ArticleGalleyDAO;
 use APP\article\ArticleTombstoneManager;
+use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
+use PKP\context\Context;
 use PKP\db\DAORegistry;
 
 class Repository extends \PKP\submission\Repository
@@ -77,6 +80,48 @@ class Repository extends \PKP\submission\Repository
             }
             $articleTombstoneManager = new ArticleTombstoneManager();
             $articleTombstoneManager->insertArticleTombstone($submission, $context);
+        }
+    }
+
+    /**
+     * Creates and assigns DOIs to all sub-objects if:
+     * 1) the suffix pattern can currently be created, and
+     * 2) it does not already exist.
+     *
+     *
+     * @throws \Exception
+     */
+    public function createDois(Submission $submission): void
+    {
+        /** @var JournalDAO $contextDao */
+        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        /** @var Context $context */
+        $context = $contextDao->getById($submission->getData('contextId'));
+
+        // Article
+        $publication = $submission->getCurrentPublication();
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION) && empty($publication->getData('doiId'))) {
+            $doiId = Repo::doi()->mintPublicationDoi($publication, $submission, $context);
+            if ($doiId !== null) {
+                Repo::publication()->edit($publication, ['doiId' => $doiId]);
+            }
+        }
+
+        // Galleys
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION)) {
+            // For each galley
+            $galleys = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
+            /** @var ArticleGalleyDAO $galleyDao */
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+            foreach ($galleys as $galley) {
+                if (empty($galley->getData('doiId'))) {
+                    $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
+                    if ($doiId !== null) {
+                        $galley->setData('doiId', $doiId);
+                        $galleyDao->updateObject($galley);
+                    }
+                }
+            }
         }
     }
 }

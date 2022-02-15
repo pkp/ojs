@@ -171,6 +171,8 @@ class IssueHandler extends APIHandler
                 case 'searchPhrase':
                     $collector->searchPhrase($val);
                     break;
+                case 'doiStatus':
+                    $collector->filterByDoiStatuses(array_map('intval', $this->paramToArray($val)));
             }
         }
 
@@ -190,7 +192,7 @@ class IssueHandler extends APIHandler
         $issues = Repo::issue()->getMany($collector);
 
         return $response->withJson([
-            'items' => Repo::issue()->getSchemaMap()->summarizeMany($issues),
+            'items' => iterator_to_array(Repo::issue()->getSchemaMap()->summarizeMany($issues), false),
             'itemsMax' => Repo::issue()->getCount($collector->limit(null)->offset(null)),
         ], 200);
     }

@@ -6,6 +6,7 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\core\interfaces\CollectorInterface;
 use PKP\core\PKPApplication;
+use PKP\doi\Doi;
 use PKP\plugins\HookRegistry;
 
 class Collector implements CollectorInterface
@@ -46,6 +47,11 @@ class Collector implements CollectorInterface
 
     /** @var array|null return issues that match a title */
     public ?array $titles = null;
+
+    public ?array $doiStatuses = null;
+
+    /** @var bool Whether null/empty values should count when considering Doi::STATUS_UNREGISTERED */
+    public bool $strictDoiStatusFilter = false;
 
     /** @var string|null Returns Issue by URL path  */
     public ?string $urlPath = null;
@@ -223,6 +229,13 @@ class Collector implements CollectorInterface
         return $this;
     }
 
+    public function filterByDoiStatuses(array $doiStatuses, $strict = false): self
+    {
+        $this->doiStatuses = $doiStatuses;
+        $this->strictDoiStatusFilter = $strict;
+        return $this;
+    }
+
     /**
      * Set query search phrase
      *
@@ -306,6 +319,23 @@ class Collector implements CollectorInterface
         // URL path
         $q->when($this->urlPath !== null, function (Builder $q) {
             $q->where('i.url_path', '=', $this->urlPath);
+        });
+
+        // DOI statuses
+        $q->when($this->doiStatuses !== null, function (Builder $q) {
+            $q->whereIn('i.issue_id', function (Builder $q) {
+                $q->select('i.issue_id')
+                    ->from('issues as i')
+                    ->leftJoin('dois as d', 'd.doi_id', '=', 'i.doi_id')
+                    ->whereIn('d.status', $this->doiStatuses);
+
+                $q->when(
+                    (in_array(Doi::STATUS_UNREGISTERED, $this->doiStatuses) && !$this->strictDoiStatusFilter),
+                    function (Builder $q) {
+                        $q->orWhereNull('d.status');
+                    }
+                );
+            });
         });
 
         // Search phrase

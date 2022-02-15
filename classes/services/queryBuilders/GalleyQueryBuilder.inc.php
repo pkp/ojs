@@ -14,6 +14,7 @@
 
 namespace APP\services\queryBuilders;
 
+use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 
 use PKP\plugins\HookRegistry;
@@ -27,6 +28,8 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface
     /** @var array get authors for one or more publications */
     protected $publicationIds = [];
 
+    public ?array $contextIds = null;
+
     /**
      * Set publicationIds filter
      *
@@ -37,6 +40,12 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface
     public function filterByPublicationIds($publicationIds)
     {
         $this->publicationIds = is_array($publicationIds) ? $publicationIds : [$publicationIds];
+        return $this;
+    }
+
+    public function filterByContexts(array $contextIds): self
+    {
+        $this->contextIds = $contextIds;
         return $this;
     }
 
@@ -75,6 +84,17 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface
         if (!empty($this->publicationIds)) {
             $q->whereIn('g.publication_id', $this->publicationIds);
         }
+
+        // Contexts
+        $q->when($this->contextIds !== null, function (Builder $q) {
+            $q->whereIn('g.galley_id', function (Builder $q) {
+                $q->select('g.galley_id')
+                    ->from('publication_galleys as g')
+                    ->leftJoin('publications as p', 'p.publication_id', '=', 'g.publication_id')
+                    ->leftJoin('submissions as s', 's.submission_id', '=', 'p.submission_id')
+                    ->whereIn('s.context_id', $this->contextIds);
+            });
+        });
 
         $q->orderBy('g.seq', 'asc');
 

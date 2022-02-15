@@ -2116,3 +2116,227 @@ msgstr ""
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
 "გაგზავნის დადასტურების ელფოსტის ასლი ამ ჟურნალის პირველადი კონტაქტისთვის."
+
+msgid "doi.editor.preview.objects"
+msgstr "ელემენტი"
+
+msgid "doi.editor.preview.galleys"
+msgstr "გალერეა: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI ვერ მიენიჭა ამ პუბლიკაციას."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI ამ პუბლიკაციისათვის: {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI უნდა დაიწყოს: {$doiPrefix}."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} მინიჭებულია."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId} ვერ იქნება მინიჭებული, ვინაიდან ის შეიცავს გაუმართავ შაბლონს."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI ვერ იქნება მინიჭებული, ვინაიდან არ არის სამომხმარებლო სუფიქსი."
+
+msgid "doi.editor.assignDoi"
+msgstr "DOI-ს მინიჭება {$pubId}: {$pubObjectType}"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"გამოიყენეთ ეს პარამეტრი, DOI-ს ყველა ობიექტიდან (სტატიები და გალერეები) "
+"წასაშლელად, რომელტა გამოქვეყნებაც დაგეგმილია ამ ნომერში."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+"დარწმუნებული ხართ, რომ გსურთ არსებული DOI-ს წაშლა გამოცემის ობიექტებიდან?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "გამოცემის ობიექტებიდან DOI-ს წაშლა"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "დარწმუნებული ხართ, რომ გსურთ არსებული DOI-ს წაშლა?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "გასუფთავება"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"DOI-ს მითითებული სუფიქსი უკვე გამოიყენება სხვა გამოქვეყნებული "
+"ელემენტისათვის. გთხოვთ შეიტანეთ DOI-ს უნიკალური სუფიქსი, ყოველი "
+"ელემენტისათვის."
+
+msgid "doi.editor.assigned"
+msgstr "DOI მინიჭებულია: {$pubObjectType}."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"თქვენ ხედავთ, თუ როგორი იქნება DOI. დასვით თოლია და შეინახეთ ფორმა, DOI-ს "
+"მისანიჭებლად."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI ვერ მიენიჭება, ვინაიდან ის შეიცავს გაუმართავ შაბლონს."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"არ შეგიძლიათ DOI-ს დაგენერირება, ვინაიდან DOI-ს შაბლონის ერთ, ან რამდენიმე "
+"ნაწილს არ ჰყოფნის მონაცემები. ჯერ უნდა მიანიჭოთ კონკრეტული პუბლიკაცია "
+"კონკრეტულ გამოცემაში, მიუთითოთ გამომცემლის ID, ან შეიტანოთ გვერდების ნომრები."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"არ შეგიძლიათ DOI-ს დაგენერირება, სანამ ეს პუბლიკაცია არ მიენიჭება კონკრეტულ "
+"გამოცემას."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI არ შეიძლება მიენიჭოს, ვინაიდან არ არსებობს სამომხმარებლო სუფიქსი."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "გალერეაზე"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "სტატიაზე"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "გამოცემაზე"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "მინიჭება"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI უნდა დაიწყოს {$prefix} პრეფიქსით."
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"დარწმუნებული ხართ, რომ გსურთ DOI-ს მინიჭება ყველა გამოქვეყნებულ ობიექტზე, "
+"რომლებზეც DOI ჯერ არ არის მინიჭებული?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"DOI-ს მინიჭება ჟურნალის ყველა გამოქვეყნებულ ობიექტზე, რომელბზეც ჯერ არ არის "
+"DOI მინიჭებული. არ შეიძლება ამ ქმედების გამოყენება ინდივიდუალური სუფუქსის "
+"მორგებისას. თუ თქვენ ზემოთ უკვე შეცვალეთ DOI-ს კონფიგურაცია, გთხოვთ შეინახეთ "
+"ცვლილებები აღნიშნული მოქმედების გაშვებამდე. ჟურნალში გამოქვეყნებული "
+"ობიექტების რაოდენობიდან გამომდინარე, DOI-ს მინიჭებას შესაძლოა დიდი დრო "
+"დასჭირდეს."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "DOI-ს მინიჭება"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ყველა არსებული DOI-ს წაშლა?"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"თუ შეცვლით DOI-ს კონფიგურაციას, ის არ შეეხება იმ DOI-ს, რომელიც უკვე "
+"მინიჭებულია. DOI-ს კონფიგურაციის შენახვის შემდგომ გამოიყენეთ ეს ღილაკი, რათა "
+"წაშალოთ ყველა არსებული DOI, რომ განახლებულმა პარამეტრებმა იმოქმედოს უკვე "
+"არსებულ ობიექტებზე."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI-ს ამოცვლა"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "გთხოვთ შეიტანოთ DOI-ს სუფიქსი გალერეებისათვის."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "გთხოვთ შეიტანოთ DOI-ს სუფიქსი სტატიებისათვის."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "გთხოვთ შეიტანოთ DOI-ს სუფიქსის შაბლონი ყველა გამოცემისათვის."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"DOI-ს ინდივიდუალური სუფიქსის შეტანა ყოველი გამოქვეყნებული ელემენტისათვის. "
+"თქვენ ნახავთ DOI-ს დამატებით შეტანის ველს ყოველი ელემენტის მეტა-მონაცემების "
+"გვერდზე."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i გამოცემებისათვის<br />%j.v%vi%i.%a სტატიებისათვის<br "
+"/>%j.v%vi%i.%a.g%g გალერეებისათვის."
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "ნაგულისხმევი შაბლონის გამოყენება."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "გალერეებისათვის"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "სტატიებისათვის"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "გამოცემებისათვის"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"მაგალითად, vol%viss%ipp%p შეუძლია შექმნას DOI ასეთი სახით: 10.1234/"
+"vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"გამოიყენეთ ქვენოთ მოცემული შაბლონი, DOI სუფიქსების გენერირებისთვის. "
+"გამოიყენეთ %j ჟურნალის აბრევიატურისათვის, %v ტომის ნომერისათვის, %i "
+"გამოცემისათვის, %Y წლისათვის, %a სტატიის ID-სათვის, %g OJS-ის გალერეასთვის, %"
+"f OJS ფაილის ID-სათვის, %p გვერდის ნომრისათვის და %x, როგორც ინდივიდუალური "
+"სუფიქსი."
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"DOI სუფიქსი შეიძლება იყოს ნებისმიერი ფორმის, მაგრამ უნდა იყოს უნიკალური "
+"ყველა გამოქვეყნებულ ობიექტს შორის, რომლებსაც მინიჭებული აქვთ ერთი და იგივე "
+"DOI პრეფიქსი:"
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI სუფიქსი"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI პრეფიქსი სავალდებულოა და უნდა იყოს 10.xxxx ფორმატში."
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"DOI პრეფიქსი ენიჭება სარეგისტრაციო სააგენტოს მიერ (მაგალითად, <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) და წარმოდგენილია "
+"10.xxxx ფორმატში (მაგალითად, 10.1234):"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI პრეფიქსი"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "გალერეები"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "სტატიები"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "გამოცემები"
+
+msgid "doi.manager.settings.explainDois"
+msgstr "გთხოვთ აირჩიოთ გამოქვეყნებული ობიექტები, რომლებსაც ექნებათ DOI:"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "გთხოვთ აირჩიოთ ობიექტები, რომლებსაც უნდა მიენიჭოს DOI."
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "ჟურნალის შიგთავსი"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"გთხოვთ, მოარგეთ მოდული „DOI“, რათა შესაძლებელი გახდეს მისი გამოყენება OJS-ში:"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"ანიჭებს ციფრული ობიექტების იდენტიფიკატორებს (Digital Object Identifier) "
+"გამოცემებს, სტატიებსა და გალერეებს OJS-ში."
+
+msgid "doi.displayName"
+msgstr "მოდული DOI"

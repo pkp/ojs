@@ -21,6 +21,7 @@
 namespace APP\controllers\grid\issues;
 
 use APP\facades\Repo;
+use APP\i18n\AppLocale;
 use APP\issue\Collector;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
@@ -28,18 +29,17 @@ use APP\publication\Publication;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
-use APP\i18n\AppLocale;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
-use PKP\core\JSONMessage;
-use PKP\file\TemporaryFileManager;
-use PKP\security\authorization\ContextAccessPolicy;
-use PKP\security\Role;
-use PKP\db\DAO;
 use PKP\core\Core;
+use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
+use PKP\db\DAO;
+use PKP\file\TemporaryFileManager;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
 
 import('controllers.grid.issues.IssueGridRow');
 
@@ -546,9 +546,10 @@ class IssueGridHandler extends GridHandler
                 $assignPublicIdentifiersForm->initData();
                 return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
             }
-            // Asign pub ids
+            // Assign pub ids
             $assignPublicIdentifiersForm->readInputData();
             $assignPublicIdentifiersForm->execute();
+            Repo::issue()->createDoi($issue);
         }
 
         $issue->setPublished(1);
@@ -576,6 +577,8 @@ class IssueGridHandler extends GridHandler
         Repo::issue()->updateCurrent($contextId, $issue);
 
         if (!$wasPublished) {
+            Repo::doi()->issueUpdated($issue);
+
             // Publish all related publications
             // Include published submissions in order to support cases where two
             // versions of the same submission are published in distinct issues. In
@@ -655,6 +658,8 @@ class IssueGridHandler extends GridHandler
 
         Repo::issue()->edit($issue, $updateParams);
         Repo::issue()->updateCurrent($request->getContext()->getId());
+
+        Repo::doi()->issueUpdated($issue);
 
         // insert article tombstones for all articles
         $submissions = Repo::submission()->getMany(

@@ -50,6 +50,9 @@ msgstr "Homepage Header"
 msgid "common.journalHomepageImage.altText"
 msgstr "Journal Homepage Image"
 
+msgid "doi.manager.settings.publications"
+msgstr "Articles"
+
 msgid "navigation.journalHelp"
 msgstr "Journal Help"
 

@@ -1582,3 +1582,144 @@ msgstr "Časopisi koji imaju pretplatu mogu da ponude \"odgođeni otvoren pristu
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
 msgstr "Tipovi pretplata i struktura naknada će biti automatski smeštene u delu Pretplate na strani O časopisu zajedno sa imenom i kontaktom Upravnika za pretplate.  Dodatne informacije o pretplatama kao što su metodi plaćanja ili podrška za pretplatnike u zemljama u razvoju može da se ovde doda."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Podesite DOI dodatak kako biste mogli koristiti DOI-e u OJS-u:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Sadržaj časopisa"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Odaberite objekte kojima bi DOI-i trebali biti dodeljeni."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Odaberite objekte kojima će biti dodeljeni Digital Object Identifiers (DOI):"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Jedinica (broj)"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "Članak"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Prikaz"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI prefiks"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "DOI prefiks dodeljuje registraciona agencija (npr. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) i u formatu je 10.xxxx (npr. 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI prefiks je obavezan i mora biti u formi 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI sufiks"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "DOI sufiks može biti u bilo kojoj formi, ali mora biti jedinstven među svim objektima objavljivanja koji koriste isti DOI prefiks:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "Koristite obrazac dole da generišete DOI sufikse. Koristite %j za inicijale časopisa, %v za vol., %i za broj, %Y za godinu, %a za OJS ID članka, %g za OJS ID prikaza, %f za OJS ID fajla i %p za broj stranice."
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "za jedinicu (broj)"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "za članak"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "za prikaz"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Npr. vol%viss%ipp%p može dati DOI kao što je 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Koristite predviđene obrasce."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i za jedinicu (broj)<br />%j.v%vi%i.%a za članak<br />%j.v%vi%i.%a.g%g za prikaz."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Unesite individualni DOI sufiks za svaku objavljenu stavku, nezavisan i drugačiji od \"Custom Identifier\" iz prethodnog opcije. Naći ćete dodatno polje za DOI unos na stranici svake stavlke među metapodacima."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Unesite DOI sufiks obrazac za ovu jedinicu (broj)."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Unesite DOI sufiks obrazac za članak."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Unesite DOI sufiks obrazac za prikaz."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Ponovo dodeli DOI-e"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Da li želite da obrišete sve postojeće DOI-je?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "jedinica (broj)"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "članak"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Dati DOI sufiks je već u upotrebi. Unesite jedinstveni DOI sufiks za svaku stavku."
+
+msgid "doi.description"
+msgstr "Ovaj dodatak omogućuje dodeljivanje DOI-a"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "Ukoliko promenite vašu DOI konfiguraciju, dodeljeni DOI-i neće biti promenjeni. Kada je konfiguracija sačuvana, koristite opciju čišćenja postojećih DOI-a i dodeljivanja novih."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "fajl prikaza"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "Nedostaje prilagođeni sufiks"
+
+msgid "doi.editor.patternNotResolved"
+msgstr "Nečitljiva niska"
+
+msgid "doi.editor.canBeAssigned"
+msgstr "Ovo što vidite je prikaz kako će DOI izgledati. Obeležite polje i sačuvajte formu kako biste ih dodelili."
+
+msgid "doi.editor.assigned"
+msgstr "DOI je dodeljen {$pubObjectType}."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Obriši DOI"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Da li ste sigurni da želite da obrišete?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Obriši DOI za objekte u trenutnoj jedinici"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Da li ste sigurni da želite da obrišete?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Koristite sledeću opciju da obrišete sve dodeljene DOI-je predviđene za trenutnu jedinicu."
+
+msgid "doi.editor.assignDoi"
+msgstr "Dodeli DOI {$pubId} za {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI ne može biti dodeljen pošto nedostaje sufiks."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} ne može biti dodeljen pošto sadrži nečitljivu nisku."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} je dodeljen."

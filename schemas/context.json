@@ -42,6 +42,25 @@
 				"nullable"
 			]
 		},
+		"enabledDoiTypes": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"validation": [
+					"in:publication,representation,issue"
+				]
+			}
+		},
+		"doiCreationTime": {
+			"type": "string",
+			"default": "copyEditCreationTime"
+		},
+		"doiIssueSuffixPattern": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
 		"enableOpenAccessNotification": {
 			"type": "boolean",
 			"validation": [
