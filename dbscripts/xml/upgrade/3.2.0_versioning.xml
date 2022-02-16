@@ -183,6 +183,7 @@
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9"><![CDATA[
 			UPDATE citations SET publication_id = -publication_id WHERE publication_id < 0
 		]]></query>
+		<query driver="mysql,mysqli">ALTER TABLE citations MODIFY publication_id bigint(20) DEFAULT 0</query>
 		<query driver="mysql,mysqli">
 			UPDATE citations as c
 			SET c.publication_id = (
@@ -192,6 +193,11 @@
 				WHERE c.citation_id = tc.citation_id
 			) ORDER BY c.publication_id ASC
 		</query>
+		<query driver="mysql,mysqli">CREATE TEMPORARY TABLE IF NOT EXISTS citations2delete AS ( SELECT citation_id FROM citations WHERE publication_id IS NULL )</query>
+		<query driver="mysql,mysqli">DELETE FROM citation_settings WHERE EXISTS ( SELECT c.citation_id FROM citations2delete c )</query>
+		<query driver="mysql,mysqli">DELETE FROM citations WHERE EXISTS ( SELECT c.citation_id FROM citations2delete c )</query>
+		<query driver="mysql,mysqli">DROP TABLE citations2delete</query>
+		<query driver="mysql,mysqli">ALTER TABLE citations MODIFY publication_id bigint(20) NOT NULL DEFAULT 0</query>
 
 		<!-- update the DOI setting names -->
 		<query>
