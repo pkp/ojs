@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-08 03:38+0000\n"
+"PO-Revision-Date: 2022-02-14 11:26+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "is_IS/>\n"
@@ -345,10 +345,10 @@ msgstr "Boð um ritrýni"
 
 msgid "emails.editorAssign.description"
 msgstr ""
-"Þessi tölvupóstur upplýsir kafla-ritstjóra að ritstjóri hefur úthlutað þeim "
+"Þessi tölvupóstur upplýsir kaflaritstjóra að ritstjóri hefur úthlutað þeim "
 "grein/efni til að hafa umsjón með í gengum ritstjórnarferlið.  Hægt er að "
 "velja þetta sniðmát þegar ritstjóra er úthlutað á innsendingu á þátttakenda "
-"svæðinu. Það ætti að nota þetta sniðmát þegar kafla ritstjóri hefur heimild "
+"svæðinu. Það ætti að nota þetta sniðmát þegar kaflaritstjóri hefur heimild "
 "til að skrá ritstjórnarákvörðun."
 
 msgid "emails.editorAssign.body"
