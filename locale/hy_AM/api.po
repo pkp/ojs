@@ -1,7 +1,8 @@
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-05 12:44+0000\n"
-"Last-Translator: Liana Arustamyan <lianaarustamyan33@gmail.com>\n"
+"PO-Revision-Date: 2022-02-18 09:26+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
 "\n"
 "Language: hy_AM\n"
@@ -68,3 +69,14 @@ msgid "api.submissions.403.contextRequired"
 msgstr ""
 "Նյութ ստեղծելու կամ խմբագրելու համար Դուք պետք է հարցում կատարեք ամսագրի API-"
 "ի վերջնակետին։"
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Որոշ տարրեր հաջողությամբ չեն պահվել: Խնդրում ենք ստուգել առանձին տարրերը "
+"իրենց բնորոշ սխալի հաղորդագրությունների համար:"
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "DOI գրանցման գործակալություն այս ամսագրի համար կազմաձևված չէ:"
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Ձեր պահանջած DOI-ն այս ամսագրի մաս չէ:"
