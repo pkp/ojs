@@ -1,8 +1,9 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-09 11:05+0000\n"
-"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"PO-Revision-Date: 2022-01-03 08:14+0000\n"
+"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -104,7 +105,7 @@ msgid "grid.action.availableArticleGalley"
 msgstr "Ushbu oshxonani tayyorlang"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "p> Ushbu zali <em> o'quvchilarga taqdim etilishi </em> mumkin. </p>"
+msgstr "<p> Ushbu zali <em> o'quvchilarga taqdim etilishi </em> mumkin. </p>"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr ""
@@ -115,10 +116,10 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Formatni tasdiqlash"
 
 msgid "submission.event.publicIdentifiers"
-msgstr "Yuborilgan ochiq identifikatorlar yangilandi"
+msgstr "Yuborilgan ochiq identifikatorlar yangilandi."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "{$ GalleyFormatName}\" maqolasining paneli endi mavjud emas"
+msgstr "\"{$galleyFormatName}\" maqolasining paneli endi mavjud emas."
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "{$ GalleyFormatName}\" maqolasi mavjud."
@@ -160,8 +161,8 @@ msgstr "Mualliflik huquqi avtomatik ravishda {$ copyright} ga yuklanadi."
 
 msgid "submission.license.description"
 msgstr ""
-"Bu chop etilgach, litsenziya avtomatik ravishda <ahref='{$licenseUrl}' "
-"target='_blank'> {$ licenseName} </a> ga o'rnatiladi."
+"Bu chop etilgach, litsenziya avtomatik ravishda <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>ga o'rnatiladi."
 
 msgid "publication.required.reviewStage"
 msgstr ""
@@ -237,10 +238,10 @@ msgstr "Bu nashrda chop etilishi rejalashtirilmagan."
 
 msgid "publication.scheduledIn"
 msgstr ""
-"<ahref=\"{$issueUrl}\"> {$ issueName} </a> da nashr qilish rejalashtirilgan."
+"<a href=\"{$issueUrl}\">{$ issueName}</a>da nashr qilish rejalashtirilgan."
 
 msgid "publication.publishedIn"
-msgstr "<ahref=\"{$issueUrl}\"> {$ issueName} </a> da nashr etilgan."
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> da nashr etilgan."
 
 msgid "publication.required.issue"
 msgstr "Nashrni nashr etishdan oldin uni nashr qilish kerak."
@@ -286,7 +287,7 @@ msgstr "Muammoni o'zgartirish"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Bu <ahref=\"{$issueUrl}\"> {$ issueName} </a> ga tayinlangan, lekin uni "
+"Bu <a href=\"{$issueUrl}\"> {$ issueName} </a> ga tayinlangan, lekin uni "
 "nashr qilish rejalashtirilmagan."
 
 msgid "publication.assignToissue"
@@ -314,8 +315,8 @@ msgstr "Har qanday bo'lim"
 
 msgid "submission.viewingPreview"
 msgstr ""
-"Bu oldindan ko‘rish va chop etilmagan. <ahref=\"{$url}\"> yuborishni ko‘rish "
-"</a>"
+"Bu oldindan ko‘rish va chop etilmagan. <a href=\"{$url}\"> yuborishni ko‘"
+"rish </a>"
 
 msgid "submission.metadataDescription"
 msgstr ""

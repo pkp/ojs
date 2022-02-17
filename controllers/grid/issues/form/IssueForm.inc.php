@@ -30,7 +30,7 @@ class IssueForm extends Form
     /**
      * Constructor.
      *
-     * @param $issue Issue (optional)
+     * @param Issue $issue (optional)
      */
     public function __construct($issue = null)
     {
@@ -111,7 +111,7 @@ class IssueForm extends Form
         if ($temporaryFileId = $this->getData('temporaryFileId')) {
             $request = Application::get()->getRequest();
             $user = $request->getUser();
-            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
+            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /** @var TemporaryFileDAO $temporaryFileDao */
             $temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
             $publicFileManager = new PublicFileManager();
@@ -256,7 +256,7 @@ class IssueForm extends Form
         // Copy an uploaded cover file for the issue, if there is one.
         if ($temporaryFileId = $this->getData('temporaryFileId')) {
             $user = $request->getUser();
-            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
+            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /** @var TemporaryFileDAO $temporaryFileDao */
             $temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
             $publicFileManager = new PublicFileManager();

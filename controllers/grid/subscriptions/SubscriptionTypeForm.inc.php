@@ -17,6 +17,7 @@ use APP\subscription\SubscriptionType;
 
 use APP\template\TemplateManager;
 use PKP\form\Form;
+use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionTypeForm extends Form
 {
@@ -35,8 +36,8 @@ class SubscriptionTypeForm extends Form
     /**
      * Constructor
      *
-     * @param $journalId int Journal ID
-     * @param typeId int leave as default for new subscription type
+     * @param int $journalId Journal ID
+     * @param int $typeId leave as default for new subscription type
      * @param null|mixed $typeId
      */
     public function __construct($journalId, $typeId = null)
@@ -49,7 +50,7 @@ class SubscriptionTypeForm extends Form
             SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE => __('subscriptionTypes.format.printOnline')
         ];
 
-        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+        $isoCodes = app(IsoCodesFactory::class);
         $this->validCurrencies = [];
         foreach ($isoCodes->getCurrencies() as $currency) {
             $this->validCurrencies[$currency->getLetterCode()] = $currency->getLocalName() . ' (' . $currency->getLetterCode() . ')';
@@ -91,7 +92,7 @@ class SubscriptionTypeForm extends Form
      */
     public function getLocaleFieldNames()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         return $subscriptionTypeDao->getLocaleFieldNames();
     }
 
@@ -117,7 +118,7 @@ class SubscriptionTypeForm extends Form
     public function initData()
     {
         if (isset($this->typeId)) {
-            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
             $subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);
 
             if ($subscriptionType != null) {
@@ -155,7 +156,7 @@ class SubscriptionTypeForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
 
         if (isset($this->typeId)) {
             $subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);

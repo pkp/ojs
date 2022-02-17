@@ -28,7 +28,7 @@ class Repository extends \PKP\user\Repository
 
         // Transfer old user's individual subscriptions for each journal if new user
         // does not have a valid individual subscription for a given journal.
-        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
+        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
         $oldUserSubscriptions = $individualSubscriptionDao->getByUserId($oldUserId);
 
         while ($oldUserSubscription = $oldUserSubscriptions->next()) {
@@ -56,7 +56,7 @@ class Repository extends \PKP\user\Repository
 
         // Transfer all old user's institutional subscriptions for each journal to
         // new user. New user now becomes the contact person for these.
-        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
+        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
         $oldUserSubscriptions = $institutionalSubscriptionDao->getByUserId($oldUserId);
 
         while ($oldUserSubscription = $oldUserSubscriptions->next()) {
@@ -65,7 +65,7 @@ class Repository extends \PKP\user\Repository
         }
 
         // Transfer completed payments.
-        $paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $paymentDao OJSCompletedPaymentDAO */
+        $paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $paymentDao */
         $paymentFactory = $paymentDao->getByUserId($oldUserId);
         while ($payment = $paymentFactory->next()) {
             $payment->setUserId($newUserId);

@@ -2121,3 +2121,219 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Musí byť aktívna aspoň jedna sekcia. Ak chcete zakázať všetky príspevky do "
 "tohto časopisu, upravte workflow nastavenie."
+
+msgid "doi.editor.missingIssue"
+msgstr "Kým nebude táto publikácia priradená k číslu, nemôžete vygenerovať DOI."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI sa nedá priradiť, pretože chýba vlastný suffix."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "sadzobnica"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "článok"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "číslo"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Priradiť"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI musí začínať {$prefix}."
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Ste si istý, že chcete prideliť DOI všetkým publikovaným objektom, ktoré "
+"doteraz nemali pridelené DOI?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Priradiť DOI všetkým objektom všetkých publikovaných časopisov, ktoré "
+"doteraz nemali priradené DOI. Táto akcia nemôže byť použitá v prípade "
+"individuálnej konfigurácie prípon. Ak ste zmenili konfiguráciu DOI výššie, "
+"je potrebné pred zahájením tejto akcie uložiť zmeny. Priradenie DOI môže "
+"trvať dlho v závislosti na počte publikovaných objektov v časopise."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Priradiť čísla DOI"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Ste si istý, že chcete zmazať všetky existujúce identifikátory DOI?"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Ak zmeníte konfiguráciu DOI, DOI, ktoré už boli priradené, nebudú "
+"ovplyvnené. Akonáhle je konfigurácia DOI uložená, použite toto tlačítko pre "
+"vymazanie všetkých existujúcich DOI tak, aby sa nové nastavenia prejavili aj "
+"pri existujúcich objektoch."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Znovu prideliť DOI"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Zadajte, prosím, vzor DOI suffixu pre sadzobnice."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Zadajte, prosím, vzor DOI suffixu pre články."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Zadajte, prosím, vzor DOI suffixu pre čísla."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Pre každú publikovanú položku zadajte individuálny suffix DOI. Na stránke "
+"metadát každej položky nájdete ďalšie vstupné pole DOI."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i pre čísla<br />%j.v%vi%i.%a pre články<br />%j.v%vi%i.%a.g%g pre "
+"sadzobnice."
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Použiť predvolené vzory."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "pre sadzobnice"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "pre články"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "pre čísla"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Napríklad, vol%viss%ipp%p vytvorí DOI 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Použite nižšie uvedený vzor pre vytvorenie suffixu DOI. Použite %j pre "
+"iniciály časopisu, %v pre číslo zväzku ,%i pre číslo časopisu, %Y pre rok, %"
+"a pre ID článku v rámci OJS, %g pre ID sadzobnice v rámci OJS, % f pre ID "
+"súbore v rámci OJS , %P pre číslo stránky a %x pre \"Vlastný identifikátor\"."
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Suffix DOI môže mať akúkoľvek formu, ale musí byť jedinečný medzi všetkými "
+"publikovanými objektami s rovnakým prefixom DOI:"
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "Suffix DOI"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Prefix DOI je povinný a musí byť vo formáte 10.xxxx."
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Prefix DOI je pridelovaný registračnými agentúrami (napr. <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) a je vo formáte "
+"10.xxxx (napr. 10.1234):"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Prefix DOI"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Sadzobnica"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Články"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Čísla"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Zvoľte, prosím, publikačné objekty, ktoré majú mať pridelené Digital Object "
+"Identifiers (DOI):"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Zvoľte, prosím, ktoré objekty majú mať pridelené DOI."
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Obsah časopisu"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Nakonfigurujte, prosím, plugin DOI, aby ste mohli spravovať a používať DOI v "
+"OJS:"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Tento plugin umožňuje priradenie identifikátorov digitálnych objektov DOI k "
+"číslam, článkom a sadzobniciam v rámci OJS."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.editor.preview.objects"
+msgstr "Položka"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Sadzobnica: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Do tejto publikácie nebol priradený DOI."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI pre túto publikáciu bude {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI musí začínať {$doiPrefix}."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI  {$pubId} bolo priradené."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} sa nedá priradiť, pretože obsahuje neplatný vzor."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI nemôže byť pridelené, pretože vlastný suffix je prázdny."
+
+msgid "doi.editor.assignDoi"
+msgstr "Priradiť {$pubId} tomuto {$pubObjectType}"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Použite následujúcu možnosť k vymazaniu DOI všetkých objektov (článkov a "
+"sadzobníc), ktoré sú aktuálne naplánované pre toto číslo."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Ste si istý, že chcete vymazať existujúcu DOI objektov čísla?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Vymazať DOI objektov čísla"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Ste si istý, že chcete zmazať existujúcu DOI?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Vymazať DOI"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Uvedený suffix DOI sa už používa pre ďalšiu publikovanú položku. Pre každú "
+"položku zadejte jedinečný suffix DOI."
+
+msgid "doi.editor.assigned"
+msgstr "Tomuto {$pubObjectType} bolo pridelené DOI."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"To, čo vidíte, je náhľad DOI. Vyberte zaškrtávacie políčko a uložte formulár "
+"pre priradenie DOI."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI nemôže byť pridelené, pretože obsahuje neplatný vzorec."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Nedá sa vygenerovať DOI, pretože v jednej alebo viac častiach DOI vzoru "
+"chýbajú dáta. Možno budete musieť publikácii priradiť problém, nastaviť ID "
+"vydavateľa alebo zadať čísla stránok."

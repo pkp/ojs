@@ -13,10 +13,10 @@
  * @brief Simple resolver gateway plugin
  */
 
-use PKP\plugins\GatewayPlugin;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\template\TemplateManager;
+use PKP\plugins\GatewayPlugin;
 
 class ResolverPlugin extends GatewayPlugin
 {
@@ -47,7 +47,7 @@ class ResolverPlugin extends GatewayPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -77,7 +77,7 @@ class ResolverPlugin extends GatewayPlugin
         switch ($scheme) {
             case 'doi':
                 $doi = implode('/', $args);
-                $article = Repo::submission()->getByPubId('doi', $doi, $request->getJournal());
+                $article = Repo::submission()->getByDoi($doi, $request->getJournal()->getId());
                 if ($article) {
                     $request->redirect(null, 'article', 'view', $article->getBestId());
                 }
@@ -169,7 +169,7 @@ class ResolverPlugin extends GatewayPlugin
 
     public function exportHoldings()
     {
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journals = $journalDao->getAll(true);
         $request = Application::get()->getRequest();
         header('content-type: text/plain');

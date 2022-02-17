@@ -1,10 +1,11 @@
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:38+00:00\n"
-"PO-Revision-Date: 2020-06-08 11:54+0000\n"
-"Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
+"PO-Revision-Date: 2022-01-13 11:40+0000\n"
+"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/auth-ldap/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -75,7 +76,7 @@ msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Domínio"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "ID de Autorização Solicitado"
+msgstr "ID de Autorização por proxy Solicitado"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Propriedades de Segurança SASL"
@@ -95,3 +96,6 @@ msgstr ""
 
 msgid "plugins.auth.ldap.settings.sasl"
 msgstr "Use SASL em vez da autenticação simples"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "ID de autorização solicitado"

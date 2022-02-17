@@ -49,7 +49,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set journal id
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function setJournalId($journalId)
     {
@@ -69,7 +69,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * get title
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -81,8 +81,8 @@ class Issue extends \PKP\core\DataObject
     /**
      * set title
      *
-     * @param $title string
-     * @param $locale string
+     * @param string $title
+     * @param string $locale
      */
     public function setTitle($title, $locale)
     {
@@ -102,7 +102,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set volume
      *
-     * @param $volume int
+     * @param int $volume
      */
     public function setVolume($volume)
     {
@@ -122,7 +122,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set number
      *
-     * @param $number string
+     * @param string $number
      */
     public function setNumber($number)
     {
@@ -142,7 +142,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set year
      *
-     * @param $year int
+     * @param int $year
      */
     public function setYear($year)
     {
@@ -162,7 +162,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set published
      *
-     * @param $published int
+     * @param int $published
      */
     public function setPublished($published)
     {
@@ -182,7 +182,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set date published
      *
-     * @param $datePublished date
+     * @param date $datePublished
      */
     public function setDatePublished($datePublished)
     {
@@ -202,7 +202,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set date the users were last notified
      *
-     * @param $dateNotified date
+     * @param date $dateNotified
      */
     public function setDateNotified($dateNotified)
     {
@@ -222,7 +222,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set date the issue was last modified
      *
-     * @param $lastModified date
+     * @param date $lastModified
      */
     public function setLastModified($lastModified)
     {
@@ -250,7 +250,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set access status (ISSUE_ACCESS_...)
      *
-     * @param $accessStatus int
+     * @param int $accessStatus
      */
     public function setAccessStatus($accessStatus)
     {
@@ -270,7 +270,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set open access date
      *
-     * @param $openAccessDate date
+     * @param date $openAccessDate
      */
     public function setOpenAccessDate($openAccessDate)
     {
@@ -290,7 +290,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * get description
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -302,8 +302,8 @@ class Issue extends \PKP\core\DataObject
     /**
      * set description
      *
-     * @param $description string
-     * @param $locale string
+     * @param string $description
+     * @param string $locale
      */
     public function setDescription($description, $locale)
     {
@@ -311,9 +311,27 @@ class Issue extends \PKP\core\DataObject
     }
 
     /**
+     * Returns current DOI
+     *
+     */
+    public function getDoi(): ?string
+    {
+        $doiObject = $this->getData('doiObject');
+
+        if (empty($doiObject)) {
+            return null;
+        } else {
+            return $doiObject->getData('doi');
+        }
+    }
+
+    /**
      * Get stored public ID of the issue.
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * This helper function is required by PKPPubIdPlugins.
+     * NB: To maintain backwards compatability, getDoi() is called from here
+     *
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
      *
@@ -321,20 +339,39 @@ class Issue extends \PKP\core\DataObject
      */
     public function getStoredPubId($pubIdType)
     {
-        return $this->getData('pub-id::' . $pubIdType);
+        if ($pubIdType == 'doi') {
+            return $this->getDoi();
+        } else {
+            return $this->getData('pub-id::' . $pubIdType);
+        }
     }
 
     /**
      * Set stored public issue id.
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param $pubId string
+     * @param string $pubId
      */
     public function setStoredPubId($pubIdType, $pubId)
     {
-        return $this->setData('pub-id::' . $pubIdType, $pubId);
+        if ($pubIdType == 'doi') {
+            if ($doiObject = $this->getData('doiObject')) {
+                Repo::doi()->edit($doiObject, ['doi' => $pubId]);
+            } else {
+                $newDoiObject = Repo::doi()->newDataObject(
+                    [
+                        'doi' => $pubId,
+                        'contextId' => $this->getJournalId()
+                    ]
+                );
+                $doiId = Repo::doi()->add($newDoiObject);
+                $this->setData('doiId', $doiId);
+            }
+        } else {
+            $this->setData('pub-id::' . $pubIdType, $pubId);
+        }
     }
 
     /**
@@ -350,7 +387,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set show issue volume
      *
-     * @param $showVolume int
+     * @param int $showVolume
      */
     public function setShowVolume($showVolume)
     {
@@ -370,7 +407,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set show issue number
      *
-     * @param $showNumber int
+     * @param int $showNumber
      */
     public function setShowNumber($showNumber)
     {
@@ -390,7 +427,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set show issue year
      *
-     * @param $showYear int
+     * @param int $showYear
      */
     public function setShowYear($showYear)
     {
@@ -410,7 +447,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set show issue title
      *
-     * @param $showTitle int
+     * @param int $showTitle
      */
     public function setShowTitle($showTitle)
     {
@@ -430,7 +467,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * Get issue cover image file name
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string|array
      */
@@ -442,8 +479,8 @@ class Issue extends \PKP\core\DataObject
     /**
      * Set issue cover image file name
      *
-     * @param $coverImage string|array
-     * @param $locale string
+     * @param string|array $coverImage
+     * @param string $locale
      */
     public function setCoverImage($coverImage, $locale)
     {
@@ -463,7 +500,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * Get issue cover image alternate text
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -518,8 +555,8 @@ class Issue extends \PKP\core\DataObject
     /**
      * Set issue cover image alternate text
      *
-     * @param $coverImageAltText string
-     * @param $locale string
+     * @param string $coverImageAltText
+     * @param string $locale
      */
     public function setCoverImageAltText($coverImageAltText, $locale)
     {
@@ -529,8 +566,8 @@ class Issue extends \PKP\core\DataObject
     /**
      * Return the string of the issue identification based label format
      *
-     * @param $force array force show/hide of data components
-     * @param $locale string use spcific non-default locale
+     * @param array $force force show/hide of data components
+     * @param string $locale use specific non-default locale
      *
      * @return string
      */
@@ -650,6 +687,15 @@ class Issue extends \PKP\core\DataObject
     {
         $description = $this->getLocalizedDescription();
         return !empty($description);
+    }
+
+    /**
+     * Checks whether issue had DOI assigned to it
+     *
+     */
+    public function hasDoi(): bool
+    {
+        return (bool) $this->getData('doiObject');
     }
 
     /**

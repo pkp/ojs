@@ -10,8 +10,16 @@ Configuration Changes
 See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
+- An allowed_hosts option was added to protect against HOST injection attacks.
+  We recommend configuring this setting! See "Recommended Configuration" in
+  docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
 - The captcha.captcha_on_login option for displaying a captcha challenge in
   the login interface has been added (default: on)
+
+New config.inc.php section for queues is added, with the following parameters:
+    - default_connection (default value: database), being the default queue driver to be used;
+    - default_queue (default value: queue), being the default queue to be used if someone forgot to associate a queue during Queue::push()
+    - disable_jobs_run_at_shutdown (default value: off), being a flag to disable the jobs to run at php shutdown
 
 New Features
 ------------

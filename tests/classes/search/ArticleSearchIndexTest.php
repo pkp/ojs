@@ -439,7 +439,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     private function getMockArticleSearchIndex($expectedCall)
     {
         // Mock ArticleSearchIndex.
-        /* @var $articleSearchIndex ArticleSearchIndex */
+        /** @var ArticleSearchIndex $articleSearchIndex */
         $articleSearchIndex = $this->getMockBuilder(ArticleSearchIndex::class)
             ->setMethods(['_updateTextIndex'])
             ->getMock();

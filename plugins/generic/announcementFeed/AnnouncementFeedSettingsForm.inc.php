@@ -28,8 +28,8 @@ class AnnouncementFeedSettingsForm extends Form
     /**
      * Constructor
      *
-     * @param $plugin object
-     * @param $journalId int
+     * @param object $plugin
+     * @param int $journalId
      */
     public function __construct($plugin, $journalId)
     {

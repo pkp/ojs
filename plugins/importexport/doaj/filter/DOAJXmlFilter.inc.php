@@ -22,7 +22,7 @@ class DOAJXmlFilter extends NativeExportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -47,7 +47,7 @@ class DOAJXmlFilter extends NativeExportFilter
     /**
      * @see Filter::process()
      *
-     * @param $pubObjects array Array of Submissions
+     * @param array $pubObjects Array of Submissions
      *
      * @return DOMDocument
      */
@@ -212,7 +212,7 @@ class DOAJXmlFilter extends NativeExportFilter
     /**
      * Create and return the root node.
      *
-     * @param $doc DOMDocument
+     * @param DOMDocument $doc
      *
      * @return DOMElement
      */
@@ -228,10 +228,10 @@ class DOAJXmlFilter extends NativeExportFilter
     /**
      * Generate the author node.
      *
-     * @param $doc DOMDocument
-     * @param $publication object Article
-     * @param $author object Author
-     * @param $affilList array List of author affiliations
+     * @param DOMDocument $doc
+     * @param object $publication Article
+     * @param object $author Author
+     * @param array $affilList List of author affiliations
      *
      * @return DOMElement
      */
@@ -252,8 +252,8 @@ class DOAJXmlFilter extends NativeExportFilter
     /**
      * Generate a list of affiliations among all authors of an article.
      *
-     * @param $authors object Array of article authors
-     * @param $publication Publication
+     * @param object $authors Array of article authors
+     * @param Publication $publication
      *
      * @return array
      */
@@ -271,7 +271,7 @@ class DOAJXmlFilter extends NativeExportFilter
     /**
      * Format a date by Y-m-d format.
      *
-     * @param $date string
+     * @param string $date
      *
      * @return string
      */

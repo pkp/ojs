@@ -115,11 +115,11 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
     /**
      * @see PubObjectsExportPlugin::depositXML()
      *
-     * @param $objects Submission
-     * @param $context Context
-     * @param $jsonString string Export JSON string
+     * @param Submission $objects
+     * @param Context $context
+     * @param string $jsonString Export JSON string
      *
-     * @return boolean|array Whether the JSON string has been registered
+     * @return bool|array Whether the JSON string has been registered
      */
     public function depositXML($objects, $context, $jsonString)
     {
@@ -151,7 +151,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
      *
      * @param null|mixed $noValidation
      */
-    public function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null)
+    public function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null, $shouldRedirect = true)
     {
         $context = $request->getContext();
         $path = ['plugin', $this->getName()];
@@ -199,15 +199,15 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
     /**
      * Get the JSON for selected objects.
      *
-     * @param $object Submission
-     * @param $filter string
-     * @param $context Context
+     * @param Submission $object
+     * @param string $filter
+     * @param Context $context
      *
      * @return string JSON variable.
      */
     public function exportJSON($object, $filter, $context)
     {
-        $filterDao = DAORegistry::getDAO('FilterDAO'); /* @var $filterDao FilterDAO */
+        $filterDao = DAORegistry::getDAO('FilterDAO'); /** @var FilterDAO $filterDao */
         $exportFilters = $filterDao->getObjectsByGroup($filter);
         assert(count($exportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($exportFilters);

@@ -20,16 +20,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
 {
     public $_issue;
 
-    /**
-     * Constructor
-     *
-     * @param $context Context
-     * @param $user User
-     */
-    public function __construct($context, $user)
-    {
-        parent::__construct($context, $user);
-    }
 
     //
     // Deploymenturation items for subclasses to override
@@ -75,7 +65,7 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
     /**
      * Set the import/export issue.
      *
-     * @param $issue Issue
+     * @param Issue $issue
      */
     public function setIssue($issue)
     {

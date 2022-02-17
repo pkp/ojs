@@ -36,7 +36,7 @@ class IssueGalley extends IssueFile
     /**
      * Check if galley is a PDF galley.
      *
-     * @return boolean
+     * @return bool
      */
     public function isPdfGalley()
     {
@@ -93,7 +93,7 @@ class IssueGalley extends IssueFile
     /**
      * Set label/title.
      *
-     * @param $label string
+     * @param string $label
      */
     public function setLabel($label)
     {
@@ -113,7 +113,7 @@ class IssueGalley extends IssueFile
     /**
      * Set locale.
      *
-     * @param $locale string
+     * @param string $locale
      */
     public function setLocale($locale)
     {
@@ -133,7 +133,7 @@ class IssueGalley extends IssueFile
     /**
      * Set sequence order.
      *
-     * @param $sequence float
+     * @param float $sequence
      */
     public function setSequence($sequence)
     {
@@ -153,7 +153,7 @@ class IssueGalley extends IssueFile
     /**
      * Set file ID.
      *
-     * @param $fileId
+     * @param int $fileId
      */
     public function setFileId($fileId)
     {
@@ -163,7 +163,7 @@ class IssueGalley extends IssueFile
     /**
      * Get stored public ID of the galley.
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
      *
@@ -177,10 +177,10 @@ class IssueGalley extends IssueFile
     /**
      * Set stored public galley id.
      *
-     * @param $pubIdType string One of the NLM pub-id-type values or
+     * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param $pubId string
+     * @param string $pubId
      */
     public function setStoredPubId($pubIdType, $pubId)
     {
@@ -208,7 +208,7 @@ class IssueGalley extends IssueFile
     public function getFile()
     {
         if (!isset($this->_issueFile)) {
-            $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+            $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
             $this->_issueFile = $issueFileDao->getById($this->getFileId());
         }
         return $this->_issueFile;

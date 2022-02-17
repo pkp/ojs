@@ -39,7 +39,7 @@ class IssueFileManager extends FileManager
      * Constructor.
      * Create a manager for handling issue files.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function __construct($issueId)
     {
@@ -65,7 +65,7 @@ class IssueFileManager extends FileManager
     /**
      * Set the issue files directory.
      *
-     * @param $filesDir string
+     * @param string $filesDir
      */
     public function setFilesDir($filesDir)
     {
@@ -85,7 +85,7 @@ class IssueFileManager extends FileManager
     /**
      * Set the issue ID.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function setIssueId($issueId)
     {
@@ -95,13 +95,13 @@ class IssueFileManager extends FileManager
     /**
      * Delete an issue file by ID.
      *
-     * @param $fileId int
+     * @param int $fileId
      *
-     * @return boolean if successful
+     * @return bool if successful
      */
     public function deleteById($fileId)
     {
-        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFile = $issueFileDao->getById($fileId);
 
         if (parent::deleteByPath($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
@@ -123,14 +123,14 @@ class IssueFileManager extends FileManager
     /**
      * Download a file.
      *
-     * @param $fileId int the file id of the file to download
-     * @param $inline boolean print file as inline instead of attachment, optional
+     * @param int $fileId the file id of the file to download
+     * @param bool $inline print file as inline instead of attachment, optional
      *
-     * @return boolean
+     * @return bool
      */
     public function downloadById($fileId, $inline = false)
     {
-        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFile = $issueFileDao->getById($fileId);
 
         if ($issueFile) {
@@ -146,7 +146,7 @@ class IssueFileManager extends FileManager
     /**
      * Return directory path based on issue content type (used for naming files).
      *
-     * @param $contentType int
+     * @param int $contentType
      *
      * @return string
      */
@@ -160,7 +160,7 @@ class IssueFileManager extends FileManager
     /**
      * Return abbreviation based on issue content type (used for naming files).
      *
-     * @param $contentType int
+     * @param int $contentType
      *
      * @return string
      */
@@ -174,8 +174,8 @@ class IssueFileManager extends FileManager
     /**
      * Create an issue galley based on a temporary file.
      *
-     * @param $temporaryFile TemporaryFile
-     * @param $contentType int Issue file content type
+     * @param TemporaryFile $temporaryFile
+     * @param int $contentType Issue file content type
      *
      * @return IssueFile|false the resulting issue file
      */
@@ -187,7 +187,7 @@ class IssueFileManager extends FileManager
         }
 
         $issueId = $this->getIssueId();
-        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
 
         $contentTypePath = $this->contentTypeToPath($contentType);
         $dir = $this->getFilesDir() . $contentTypePath . '/';

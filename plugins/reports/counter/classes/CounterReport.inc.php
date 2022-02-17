@@ -11,7 +11,7 @@
  *
  * @brief A COUNTER report, base class
  */
-require_once(dirname(dirname(__FILE__)) . '/classes/COUNTER/COUNTER.php');
+require_once(dirname(__FILE__, 2) . '/classes/COUNTER/COUNTER.php');
 
 define('COUNTER_EXCEPTION_WARNING', 0);
 define('COUNTER_EXCEPTION_ERROR', 1);
@@ -78,7 +78,7 @@ class CounterReport
     /**
      * Get the COUNTER metric type for an Statistics file type
      *
-     * @param $filetype string
+     * @param string $filetype
      *
      * @return string
      */
@@ -109,13 +109,13 @@ class CounterReport
         assert(false);
     }
 
-    /*
+    /**
      * Convert an OJS metrics request to COUNTER ReportItems
      * Abstract method must be implemented by subclass
-     * @param $columns string|array column (aggregation level) selection
-     * @param $filters array report-level filter selection
-     * @param $orderBy array order criteria
-     * @param $range null|DBResultRange paging specification
+     * @param string|array $columns column (aggregation level) selection
+     * @param array $filters report-level filter selection
+     * @param array $orderBy order criteria
+     * @param null|DBResultRange $range paging specification
      * @see ReportPlugin::getMetrics for more details on parameters
      * @return array COUNTER\ReportItem array
      */
@@ -137,7 +137,7 @@ class CounterReport
     /**
      * Set an errors condition; Proper Exception handling is deferred until the OJS 3.0 Release
      *
-     * @param $error Exception
+     * @param Exception $error
      */
     public function setError($error)
     {
@@ -199,7 +199,7 @@ class CounterReport
     /**
      * Construct a Reports result containing the provided performance metrics
      *
-     * @param $reportItems array COUNTER\ReportItem
+     * @param array $reportItems COUNTER\ReportItem
      *
      * @return string xml
      */
@@ -297,7 +297,7 @@ class CounterReport
     /**
      * Get the Vendor Componet by key
      *
-     * @param $key string
+     * @param string $key
      */
     public function _getVendorComponent($key)
     {

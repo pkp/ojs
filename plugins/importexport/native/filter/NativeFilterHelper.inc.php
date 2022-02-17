@@ -20,9 +20,9 @@ class NativeFilterHelper extends PKPNativeFilterHelper
     /**
      * Create and return an issue identification node.
      *
-     * @param $filter NativeExportFilter
-     * @param $doc DOMDocument
-     * @param $issue Issue
+     * @param NativeExportFilter $filter
+     * @param DOMDocument $doc
+     * @param Issue $issue
      *
      * @return DOMElement
      */
@@ -57,9 +57,9 @@ class NativeFilterHelper extends PKPNativeFilterHelper
     /**
      * Create and return an object covers node.
      *
-     * @param $filter NativeExportFilter
-     * @param $doc DOMDocument
-     * @param $object Issue
+     * @param NativeExportFilter $filter
+     * @param DOMDocument $doc
+     * @param Issue $object
      *
      * @return DOMElement
      */
@@ -90,9 +90,9 @@ class NativeFilterHelper extends PKPNativeFilterHelper
     /**
      * Parse out the object covers.
      *
-     * @param $filter NativeExportFilter
-     * @param $node DOMElement
-     * @param $object Issue
+     * @param NativeExportFilter $filter
+     * @param DOMElement $node
+     * @param Issue $object
      */
     public function parseIssueCovers($filter, $node, $object)
     {
@@ -113,9 +113,9 @@ class NativeFilterHelper extends PKPNativeFilterHelper
     /**
      * Parse out the cover and store it in the object.
      *
-     * @param $filter NativeExportFilter
-     * @param $node DOMElement
-     * @param $object Issue
+     * @param NativeExportFilter $filter
+     * @param DOMElement $node
+     * @param Issue $object
      */
     public function parseIssueCover($filter, $node, $object)
     {

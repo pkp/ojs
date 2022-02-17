@@ -17,7 +17,6 @@ namespace APP\issue;
 
 use APP\facades\Repo;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
 use PKP\cache\CacheManager;
@@ -62,7 +61,8 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
         'showTitle' => 'show_title',
         'styleFileName' => 'style_file_name',
         'originalStyleFileName' => 'original_style_file_name',
-        'urlPath' => 'url_path'
+        'urlPath' => 'url_path',
+        'doiId' => 'doi_id'
     ];
 
     /**
@@ -106,7 +106,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      */
     public function newDataObject(): Issue
     {
-        return App::make(Issue::class);
+        return app(Issue::class);
     }
 
     /**
@@ -180,9 +180,12 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     }
 
     /** @copydoc EntityDAO::fromRow() */
-    public function fromRow(\stdClass $row): Issue
+    public function fromRow(object $row): Issue
     {
-        return parent::fromRow($row);
+        $issue = parent::fromRow($row);
+        $this->setDoiObject($issue);
+
+        return $issue;
     }
 
     /** @copydoc EntityDAO::_insert() */
@@ -247,7 +250,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
                 ->updateOrInsert(
                     [
                         'issue_id' => $item->issue_id,
-                        'journal_id' => (int) $contextId,
                     ],
                     [
                         'issue_id' => $item->issue_id,
@@ -426,12 +428,12 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      *
      * From legacy IssueDAO
      *
-     * @param $contextId integer optional
-     * @param $pubIdType string
-     * @param $pubIdSettingName string optional
+     * @param int $contextId optional
+     * @param string $pubIdType
+     * @param string $pubIdSettingName optional
      * (e.g. crossref::registeredDoi)
-     * @param $pubIdSettingValue string optional
-     * @param $rangeInfo DBResultRange optional
+     * @param string $pubIdSettingValue optional
+     * @param DBResultRange $rangeInfo optional
      *
      * @return DAOResultFactory
      */
@@ -480,5 +482,16 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         $this->_getCache('issues')->flush();
         $this->_getCache('current')->flush();
+    }
+
+    /**
+     * Set the DOI object
+     *
+     */
+    protected function setDoiObject(Issue $issue)
+    {
+        if (!empty($issue->getData('doiId'))) {
+            $issue->setData('doiObject', Repo::doi()->get($issue->getData('doiId')));
+        }
     }
 }

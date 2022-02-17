@@ -49,7 +49,7 @@ class Section extends PKPSection
     /**
      * Set ID of journal.
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function setJournalId($journalId)
     {
@@ -59,7 +59,7 @@ class Section extends PKPSection
     /**
      * Get section title abbreviation.
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -71,8 +71,8 @@ class Section extends PKPSection
     /**
      * Set section title abbreviation.
      *
-     * @param $abbrev string
-     * @param $locale string
+     * @param string $abbrev
+     * @param string $locale
      */
     public function setAbbrev($abbrev, $locale)
     {
@@ -92,7 +92,7 @@ class Section extends PKPSection
     /**
      * Set abstract word count limit.
      *
-     * @param $wordCount int
+     * @param int $wordCount
      */
     public function setAbstractWordCount($wordCount)
     {
@@ -102,7 +102,7 @@ class Section extends PKPSection
     /**
      * Get "will/will not be indexed" setting of section.
      *
-     * @return boolean
+     * @return bool
      */
     public function getMetaIndexed()
     {
@@ -112,7 +112,7 @@ class Section extends PKPSection
     /**
      * Set "will/will not be indexed" setting of section.
      *
-     * @param $metaIndexed boolean
+     * @param bool $metaIndexed
      */
     public function setMetaIndexed($metaIndexed)
     {
@@ -122,7 +122,7 @@ class Section extends PKPSection
     /**
      * Get peer-reviewed setting of section.
      *
-     * @return boolean
+     * @return bool
      */
     public function getMetaReviewed()
     {
@@ -132,7 +132,7 @@ class Section extends PKPSection
     /**
      * Set peer-reviewed setting of section.
      *
-     * @param $metaReviewed boolean
+     * @param bool $metaReviewed
      */
     public function setMetaReviewed($metaReviewed)
     {
@@ -142,7 +142,7 @@ class Section extends PKPSection
     /**
      * Get boolean indicating whether abstracts are required
      *
-     * @return boolean
+     * @return bool
      */
     public function getAbstractsNotRequired()
     {
@@ -152,7 +152,7 @@ class Section extends PKPSection
     /**
      * Set boolean indicating whether abstracts are required
      *
-     * @param $abstractsNotRequired boolean
+     * @param bool $abstractsNotRequired
      */
     public function setAbstractsNotRequired($abstractsNotRequired)
     {
@@ -172,7 +172,7 @@ class Section extends PKPSection
     /**
      * Get string identifying type of items in this section.
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      */
@@ -184,8 +184,8 @@ class Section extends PKPSection
     /**
      * Set string identifying type of items in this section.
      *
-     * @param $identifyType string
-     * @param $locale string
+     * @param string $identifyType
+     * @param string $locale
      */
     public function setIdentifyType($identifyType, $locale)
     {
@@ -195,7 +195,7 @@ class Section extends PKPSection
     /**
      * Return boolean indicating if title should be hidden in issue ToC.
      *
-     * @return boolean
+     * @return bool
      */
     public function getHideTitle()
     {
@@ -205,7 +205,7 @@ class Section extends PKPSection
     /**
      * Set if title should be hidden in issue ToC.
      *
-     * @param $hideTitle boolean
+     * @param bool $hideTitle
      */
     public function setHideTitle($hideTitle)
     {
@@ -215,7 +215,7 @@ class Section extends PKPSection
     /**
      * Return boolean indicating if author should be hidden in issue ToC.
      *
-     * @return boolean
+     * @return bool
      */
     public function getHideAuthor()
     {
@@ -225,7 +225,7 @@ class Section extends PKPSection
     /**
      * Set if author should be hidden in issue ToC.
      *
-     * @param $hideAuthor boolean
+     * @param bool $hideAuthor
      */
     public function setHideAuthor($hideAuthor)
     {
@@ -245,7 +245,7 @@ class Section extends PKPSection
     /**
      * Set if section should be inactivated.
      *
-     * @param $isInactive int
+     * @param int $isInactive
      */
     public function setIsInactive($isInactive)
     {

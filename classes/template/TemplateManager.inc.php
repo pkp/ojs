@@ -27,7 +27,7 @@ class TemplateManager extends PKPTemplateManager
     /**
      * Initialize template engine and assign basic template variables.
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function initialize($request)
     {
@@ -125,12 +125,12 @@ class TemplateManager extends PKPTemplateManager
             ];
 
             $index = array_search('submissions', array_keys($menu));
-            if ($index === false || count($menu) <= ($index + 1)) {
+            if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
             } else {
-                $menu = array_slice($menu, 0, $index + 1, true) +
-                        ['issues' => $issuesLink] +
-                        array_slice($menu, $index + 1, null, true);
+                $menu = array_slice($menu, 0, $index + 1, true)
+                    + ['issues' => $issuesLink]
+                    + array_slice($menu, $index + 1, null, true);
             }
         }
 

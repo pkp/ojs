@@ -33,16 +33,16 @@ use PKP\form\Form;
 
 class SubscriptionPolicyForm extends Form
 {
-    /** @var validNumMonthsBeforeExpiry array keys are valid expiry reminder months */
+    /** @var array keys are valid expiry reminder months */
     public $validNumMonthsBeforeExpiry;
 
-    /** @var validNumWeeksBeforeExpiry array keys are valid expiry reminder weeks */
+    /** @var array keys are valid expiry reminder weeks */
     public $validNumWeeksBeforeExpiry;
 
-    /** @var validNumMonthsAfterExpiry array keys are valid expiry reminder months */
+    /** @var array keys are valid expiry reminder months */
     public $validNumMonthsAfterExpiry;
 
-    /** @var validNumWeeksAfterExpiry array keys are valid expiry reminder weeks */
+    /** @var array keys are valid expiry reminder weeks */
     public $validNumWeeksAfterExpiry;
 
     /**
@@ -183,7 +183,7 @@ class SubscriptionPolicyForm extends Form
 
         parent::execute(...$functionArgs);
 
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journalDao->updateObject($journal);
     }
 }

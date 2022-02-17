@@ -29,7 +29,7 @@ use PKP\submission\PKPSubmission;
 
 class OAIDAO extends PKPOAIDAO
 {
-    /** Helper DAOs */
+    // Helper DAOs
     public $journalDao;
     public $sectionDao;
     public $articleGalleyDao;
@@ -62,7 +62,7 @@ class OAIDAO extends PKPOAIDAO
     /**
      * Cached function to get a journal
      *
-     * @param $journalId int
+     * @param int $journalId
      *
      * @return object
      */
@@ -77,7 +77,7 @@ class OAIDAO extends PKPOAIDAO
     /**
      * Cached function to get an issue
      *
-     * @param $issueId int
+     * @param int $issueId
      *
      * @return object
      */
@@ -92,7 +92,7 @@ class OAIDAO extends PKPOAIDAO
     /**
      * Cached function to get a journal section
      *
-     * @param $sectionId int
+     * @param int $sectionId
      *
      * @return object
      */
@@ -111,9 +111,9 @@ class OAIDAO extends PKPOAIDAO
     /**
      * Return hierarchy of OAI sets (journals plus journal sections).
      *
-     * @param $journalId int
-     * @param $offset int
-     * @param $total int
+     * @param int $journalId
+     * @param int $offset
+     * @param int $total
      *
      * @return array OAISet
      */
@@ -132,7 +132,7 @@ class OAIDAO extends PKPOAIDAO
             $title = $journal->getLocalizedName();
             array_push($sets, new OAISet(self::setSpec($journal), $title, ''));
 
-            $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /* @var $tombstoneDao DataObjectTombstoneDAO */
+            $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
             $articleTombstoneSets = $tombstoneDao->getSets(ASSOC_TYPE_JOURNAL, $journal->getId());
 
             $sections = $this->sectionDao->getByJournalId($journal->getId());
@@ -159,9 +159,9 @@ class OAIDAO extends PKPOAIDAO
     /**
      * Return the journal ID and section ID corresponding to a journal/section pairing.
      *
-     * @param $journalSpec string
-     * @param $sectionSpec string
-     * @param $restrictJournalId int
+     * @param string $journalSpec
+     * @param string $sectionSpec
+     * @param int $restrictJournalId
      *
      * @return array (int, int)
      */

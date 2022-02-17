@@ -26,8 +26,8 @@ class SubscriptionsGridCellProvider extends GridCellProvider
      * Extracts variables for a given column from a data element
      * so that they may be assigned to template before rendering.
      *
-     * @param $row \PKP\controllers\grid\GridRow
-     * @param $column GridColumn
+     * @param \PKP\controllers\grid\GridRow $row
+     * @param GridColumn $column
      *
      * @return array
      */

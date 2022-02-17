@@ -38,8 +38,7 @@ class MetricsDAO extends PKPMetricsDAO
                 $parameter[PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE] = ASSOC_TYPE_ISSUE;
             }
 
-            $key = array_search(StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID, $parameter);
-            if ($key !== false) {
+            if (in_array(StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID, $parameter)) {
                 $parameter[] = PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_OBJECT_TYPE;
             }
             unset($parameter);
@@ -63,7 +62,7 @@ class MetricsDAO extends PKPMetricsDAO
         if (!$contextId) {
             switch ($assocType) {
                 case ASSOC_TYPE_ISSUE_GALLEY:
-                    $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+                    $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
                     $issueGalley = $issueGalleyDao->getById($assocId);
                     if (!$issueGalley) {
                         throw new Exception('Cannot load record: invalid issue galley id.');

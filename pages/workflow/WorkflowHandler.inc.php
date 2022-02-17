@@ -47,7 +47,7 @@ class WorkflowHandler extends PKPWorkflowHandler
     /**
      * Setup variables for the template
      *
-     * @param $request Request
+     * @param Request $request
      */
     public function setupIndex($request)
     {
@@ -79,7 +79,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         $issueEntryForm = new APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
         $sectionWordLimits = [];
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionIterator = $sectionDao->getByContextId($submissionContext->getId());
         while ($section = $sectionIterator->next()) {
             $sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
@@ -158,7 +158,7 @@ class WorkflowHandler extends PKPWorkflowHandler
     /**
      * Return the editor assignment notification type based on stage id.
      *
-     * @param $stageId int
+     * @param int $stageId
      *
      * @return int
      */

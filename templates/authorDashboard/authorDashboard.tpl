@@ -90,7 +90,7 @@
 							<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unpublished"}</span>
 						</span>
 							<span v-if="publicationList.length > 1" class="pkpPublication__version">
-								<strong tabindex="0">{{ versionLabel }}</strong> {{ workingPublication.id }}
+								<strong tabindex="0">{{ versionLabel }}</strong> {{ workingPublication.version }}
 								<dropdown
 									class="pkpPublication__versions"
 									label="{translate key="publication.version.all"}"
@@ -104,7 +104,7 @@
 												:disabled="publication.id === workingPublication.id"
 												@click="setWorkingPublicationById(publication.id)"
 											>
-												{{ publication.id }} /
+												{{ publication.version }} /
 												<template v-if="publication.status === getConstant('STATUS_QUEUED') && publication.id === currentPublication.id">{translate key="publication.status.unscheduled"}</template>
 												<template v-else-if="publication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</template>
 												<template v-else-if="publication.status === getConstant('STATUS_PUBLISHED')">{translate key="publication.status.published"}</template>
@@ -126,9 +126,16 @@
 							<pkp-form v-bind="components.{$smarty.const.FORM_TITLE_ABSTRACT}" @set="set" />
 						</tab>
 						<tab id="contributors" label="{translate key="publication.contributors"}">
-							<div id="contributors-grid" ref="contributors">
-								<spinner></spinner>
-							</div>
+							<contributors-list-panel
+								v-bind="components.contributors"
+								class="pkpWorkflow__contributors"
+								@set="set"
+								:items="workingPublication.authors"
+								:publication="workingPublication"
+								:publication-api-url="submissionApiUrl + '/publications/' + workingPublication.id"
+								@updated:publication="setWorkingPublication"
+								@updated:contributors="setContributors"
+							></contributors-list-panel>
 						</tab>
 						{if $metadataEnabled}
 							<tab id="metadata" label="{translate key="submission.informationCenter.metadata"}">

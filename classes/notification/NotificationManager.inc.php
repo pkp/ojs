@@ -26,15 +26,15 @@ use PKP\plugins\HookRegistry;
 
 class NotificationManager extends PKPNotificationManager
 {
-    /* @var array Cache each user's most privileged role for each submission */
+    /** @var array Cache each user's most privileged role for each submission */
     public $privilegedRoles;
 
 
     /**
      * Construct a URL for the notification based on its type and associated object
      *
-     * @param $request PKPRequest
-     * @param $notification Notification
+     * @param PKPRequest $request
+     * @param Notification $notification
      *
      * @return string
      */
@@ -56,8 +56,8 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Construct the contents for the notification based on its type and associated object
      *
-     * @param $request PKPRequest
-     * @param $notification Notification
+     * @param PKPRequest $request
+     * @param Notification $notification
      *
      * @return string
      */
@@ -101,7 +101,7 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Helper function to get an article title from a notification's associated object
      *
-     * @param $notification
+     * @param Notification $notification
      *
      * @return string
      */
@@ -119,7 +119,7 @@ class NotificationManager extends PKPNotificationManager
     /**
      * get notification style class
      *
-     * @param $notification Notification
+     * @param Notification $notification
      *
      * @return string
      */
@@ -144,7 +144,7 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Return a CSS class containing the icon of this notification type
      *
-     * @param $notification Notification
+     * @param Notification $notification
      *
      * @return string
      */

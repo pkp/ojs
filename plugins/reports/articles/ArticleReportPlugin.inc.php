@@ -39,7 +39,7 @@ class ArticleReportPlugin extends ReportPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -67,8 +67,8 @@ class ArticleReportPlugin extends ReportPlugin
      */
     public function display($args, $request)
     {
-        $journal = $request->getJournal();
-        $acronym = PKPString::regexp_replace('/[^A-Za-z0-9 ]/', '', $journal->getLocalizedAcronym());
+        $context = $request->getContext();
+        $acronym = PKPString::regexp_replace('/[^A-Za-z0-9 ]/', '', $context->getLocalizedAcronym());
 
         // Prepare for UTF8-encoded CSV output.
         header('content-type: text/comma-separated-values');
@@ -77,18 +77,18 @@ class ArticleReportPlugin extends ReportPlugin
         // Add BOM (byte order mark) to fix UTF-8 in Excel
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
-        $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /* @var $stageAssignmentDao StageAssignmentDAO */
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
-        $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /* @var $submissionDisciplineDao SubmissionDisciplineDAO */
-        $submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /* @var $submissionAgencyDao SubmissionAgencyDAO */
+        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
+        $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
+        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
+        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
+        $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
+        $submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /** @var SubmissionAgencyDAO $submissionAgencyDao */
 
         $editorUserGroupIds = array_map(function ($userGroup) {
             return $userGroup->getId();
-        }, array_filter($userGroupDao->getByContextId($journal->getId())->toArray(), function ($userGroup) {
+        }, array_filter($userGroupDao->getByContextId($context->getId())->toArray(), function ($userGroup) {
             return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
@@ -101,7 +101,7 @@ class ArticleReportPlugin extends ReportPlugin
         $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
         $submissions = Repo::submission()->getMany($collector);
         $maxAuthors = $maxEditors = $maxDecisions = 0;
-        while ($submission = $submissions->next()) {
+        foreach ($submissions as $submission) {
             $publication = $submission->getCurrentPublication();
             $maxAuthors = max($maxAuthors, count($publication->getData('authors')));
             $editDecisions = $editDecisionDao->getEditorDecisions($submission->getId());
@@ -294,7 +294,7 @@ class ArticleReportPlugin extends ReportPlugin
     /**
      * Get stage label
      *
-     * @param $stageId int WORKFLOW_STAGE_ID_...
+     * @param int $stageId WORKFLOW_STAGE_ID_...
      *
      * @return string
      */
@@ -316,7 +316,7 @@ class ArticleReportPlugin extends ReportPlugin
     /**
      * Get decision message
      *
-     * @param $decision int SUBMISSION_EDITOR_DECISION_... or SUBMISSION_EDITOR_RECOMMEND_...
+     * @param int $decision SUBMISSION_EDITOR_DECISION_... or SUBMISSION_EDITOR_RECOMMEND_...
      *
      * @return string
      */

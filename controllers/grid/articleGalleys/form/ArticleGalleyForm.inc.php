@@ -34,9 +34,9 @@ class ArticleGalleyForm extends Form
     /**
      * Constructor.
      *
-     * @param $submission Submission
-     * @param $publication Publication
-     * @param $articleGalley ArticleGalley (optional)
+     * @param Submission $submission
+     * @param Publication $publication
+     * @param ArticleGalley $articleGalley (optional)
      */
     public function __construct($request, $submission, $publication, $articleGalley = null)
     {
@@ -81,7 +81,7 @@ class ArticleGalleyForm extends Form
                 'representationId' => $this->_articleGalley->getId(),
                 'articleGalley' => $this->_articleGalley,
                 'articleGalleyFile' => $articleGalleyFile,
-                'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFiles()->supportsDependentFiles($articleGalleyFile) : null,
+                'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFile()->supportsDependentFiles($articleGalleyFile) : null,
             ]);
         }
         $context = $request->getContext();
@@ -159,7 +159,7 @@ class ArticleGalleyForm extends Form
     public function execute(...$functionArgs)
     {
         $articleGalley = $this->_articleGalley;
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
 
         if ($articleGalley) {
             $articleGalley->setLabel($this->getData('label'));

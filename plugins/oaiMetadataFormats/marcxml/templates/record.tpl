@@ -17,14 +17,21 @@
 	{/if}
 	{if $journal->getData('onlineIssn')}
 		<datafield tag="022" ind1="#" ind2="#">
-			<subfield code="$a">{$journal->getData('onlineIssn')|escape}</subfield>
+			<subfield code="a">{$journal->getData('onlineIssn')|escape}</subfield>
 		</datafield>
 	{/if}
 	{if $journal->getData('printIssn')}
 		<datafield tag="022" ind1="#" ind2="#">
-			<subfield code="$a">{$journal->getData('printIssn')|escape}</subfield>
+			<subfield code="a">{$journal->getData('printIssn')|escape}</subfield>
 		</datafield>
 	{/if}
+	{if $article->getStoredPubId('doi')}
+	<datafield tag="024" ind1="7" ind2="#">
+		<subfield code="a">{$article->getStoredPubId('doi')|escape}</subfield>
+		<subfield code="2">doi</subfield>
+	</datafield>
+	{/if}
+
 	<datafield tag="042" ind1=" " ind2=" ">
 		<subfield code="a">dc</subfield>
 	</datafield>

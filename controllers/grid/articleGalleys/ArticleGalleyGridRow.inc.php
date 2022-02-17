@@ -22,20 +22,20 @@ use PKP\submissionFile\SubmissionFile;
 
 class ArticleGalleyGridRow extends GridRow
 {
-    /** @var Submission **/
+    /** @var Submission */
     public $_submission;
 
-    /** @var Publication **/
+    /** @var Publication */
     public $_publication;
 
-    /** @var boolean */
+    /** @var bool */
     public $_isEditable;
 
     /**
      * Constructor
      *
-     * @param $submission Submission
-     * @param $isEditable boolean
+     * @param Submission $submission
+     * @param bool $isEditable
      */
     public function __construct($submission, $publication, $isEditable)
     {

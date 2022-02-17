@@ -25,7 +25,7 @@ import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
 class SubscriberSelectGridHandler extends GridHandler
 {
-    /** @var array (user group ID => user group name) **/
+    /** @var array (user group ID => user group name) */
     public $_userGroupOptions;
 
     /**
@@ -70,7 +70,7 @@ class SubscriberSelectGridHandler extends GridHandler
         );
 
         $stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $userGroups = $userGroupDao->getUserGroupsByStage(
             $request->getContext()->getId(),
             $stageId
@@ -125,7 +125,7 @@ class SubscriberSelectGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         return $users = $userGroupDao->getUsersById(
             $filter['userGroup'],
             $request->getContext()->getId(),
@@ -142,7 +142,7 @@ class SubscriberSelectGridHandler extends GridHandler
     public function renderFilter($request, $filterData = [])
     {
         $context = $request->getContext();
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $userGroups = $userGroupDao->getByContextId($context->getId());
         $userGroupOptions = ['' => __('grid.user.allRoles')];
         while ($userGroup = $userGroups->next()) {
@@ -196,7 +196,7 @@ class SubscriberSelectGridHandler extends GridHandler
     /**
      * Determine whether a filter form should be collapsible.
      *
-     * @return boolean
+     * @return bool
      */
     protected function isFilterFormCollapsible()
     {

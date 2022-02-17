@@ -26,8 +26,8 @@ class UserHandler extends PKPUserHandler
     /**
      * Display subscriptions page
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function subscriptions($args, $request)
     {
@@ -40,7 +40,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $individualSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journal->getId(), false);
         $institutionalSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journal->getId(), true);
         if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) {
@@ -50,13 +50,13 @@ class UserHandler extends PKPUserHandler
         // Subscriptions contact and additional information
         // Get subscriptions and options for current journal
         if ($individualSubscriptionTypesExist) {
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
             $userIndividualSubscription = $subscriptionDao->getByUserIdForJournal($user->getId(), $journal->getId());
             $templateMgr->assign('userIndividualSubscription', $userIndividualSubscription);
         }
 
         if ($institutionalSubscriptionTypesExist) {
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
             $userInstitutionalSubscriptions = $subscriptionDao->getByUserIdForJournal($user->getId(), $journal->getId());
             $templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
         }
@@ -83,9 +83,9 @@ class UserHandler extends PKPUserHandler
     /**
      * Determine if the journal's setup has been sufficiently completed.
      *
-     * @param $journal Object
+     * @param object $journal
      *
-     * @return boolean True iff setup is incomplete
+     * @return bool True iff setup is incomplete
      */
     public function _checkIncompleteSetup($journal)
     {
@@ -100,7 +100,7 @@ class UserHandler extends PKPUserHandler
     /**
      * Setup common template variables.
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function setupTemplate($request = null)
     {
@@ -115,8 +115,8 @@ class UserHandler extends PKPUserHandler
     /**
      * Purchase a subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function purchaseSubscription($args, $request)
     {
@@ -142,10 +142,10 @@ class UserHandler extends PKPUserHandler
 
         if ($institutional == 'institutional') {
             $institutional = true;
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         } else {
             $institutional = false;
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         }
 
         if (isset($subscriptionId)) {
@@ -191,8 +191,8 @@ class UserHandler extends PKPUserHandler
     /**
      * Pay for a subscription purchase.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function payPurchaseSubscription($args, $request)
     {
@@ -226,10 +226,10 @@ class UserHandler extends PKPUserHandler
 
         if ($institutional == 'institutional') {
             $institutional = true;
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         } else {
             $institutional = false;
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         }
 
         if (isset($subscriptionId)) {
@@ -299,8 +299,8 @@ class UserHandler extends PKPUserHandler
     /**
      * Complete the purchase subscription process.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function completePurchaseSubscription($args, $request)
     {
@@ -322,9 +322,9 @@ class UserHandler extends PKPUserHandler
         $subscriptionId = (int) array_shift($args);
 
         if ($institutional == 'institutional') {
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         } else {
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         }
 
         if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) {
@@ -339,7 +339,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
         $queuedPayment = $paymentManager->createQueuedPayment($request, OJSPaymentManager::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
@@ -352,8 +352,8 @@ class UserHandler extends PKPUserHandler
     /**
      * Pay the "renew subscription" fee.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function payRenewSubscription($args, $request)
     {
@@ -375,9 +375,9 @@ class UserHandler extends PKPUserHandler
         $subscriptionId = (int) array_shift($args);
 
         if ($institutional == 'institutional') {
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         } else {
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         }
 
         if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) {
@@ -401,7 +401,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
         $queuedPayment = $paymentManager->createQueuedPayment($request, OJSPaymentManager::PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
@@ -414,8 +414,8 @@ class UserHandler extends PKPUserHandler
     /**
      * Pay for a membership.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function payMembership($args, $request)
     {

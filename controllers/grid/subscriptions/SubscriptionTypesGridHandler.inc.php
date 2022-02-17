@@ -164,7 +164,7 @@ class SubscriptionTypesGridHandler extends GridHandler
         // Get the context.
         $journal = $request->getContext();
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
         return $subscriptionTypeDao->getByJournalId($journal->getId(), $rangeInfo);
     }
@@ -176,8 +176,8 @@ class SubscriptionTypesGridHandler extends GridHandler
     /**
      * Add a new subscription type.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function addSubscriptionType($args, $request)
     {
@@ -188,8 +188,8 @@ class SubscriptionTypesGridHandler extends GridHandler
     /**
      * Edit an existing subscription type.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -204,8 +204,8 @@ class SubscriptionTypesGridHandler extends GridHandler
     /**
      * Update an existing subscription type.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -230,8 +230,8 @@ class SubscriptionTypesGridHandler extends GridHandler
     /**
      * Delete a subscription type.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -246,7 +246,7 @@ class SubscriptionTypesGridHandler extends GridHandler
 
         // Identify the subscription type ID.
         $subscriptionTypeId = $request->getUserVar('rowId');
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypeDao->deleteById($subscriptionTypeId, $context->getId());
         return DAO::getDataChangedEvent($subscriptionTypeId);
     }

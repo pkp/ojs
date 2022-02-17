@@ -1,4 +1,4 @@
-; <?php exit(); // DO NOT DELETE?>
+; <?php exit; // DO NOT DELETE?>
 ; DO NOT DELETE THE ABOVE LINE!!!
 ; Doing so will expose this configuration file through your web site!
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -92,6 +92,13 @@ allow_url_fopen = Off
 ; rewrite directive to be enabled in your .htaccess or httpd.conf.
 ; See FAQ for more details.
 restful_urls = Off
+
+; Restrict the list of allowed hosts to prevent HOST header injection.
+; See docs/README.md for more details. The list should be JSON-formatted.
+; An empty string indicates that all hosts should be trusted (not recommended!)
+; Example:
+; allowed_hosts = '["myjournal.tld", "anotherjournal.tld", "mylibrary.tld"]'
+allowed_hosts = ''
 
 ; Allow the X_FORWARDED_FOR header to override the REMOTE_ADDR as the source IP
 ; Set this to "On" if you are behind a reverse proxy and you control the X_FORWARDED_FOR
@@ -505,3 +512,22 @@ log_web_service_info = Off
 ; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file.
 [curl]
 ; cainfo = ""
+
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Job Queues Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+[queues]
+
+; Default queue driver
+default_connection = "database"
+
+; Default queue to use when a job is added to the queue
+default_queue = "queue"
+
+; Do not run jobs on shutdown
+; By default, jobs in the queue will be run during PHP's shutdown
+; function. Disable this if you want to run jobs through a separate
+; cron job or workers.
+disable_jobs_run_at_shutdown = Off

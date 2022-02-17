@@ -21,7 +21,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -46,7 +46,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * @see Filter::process()
      *
-     * @param $pubObject Submission
+     * @param Submission $pubObject
      *
      * @return JSON string
      */
@@ -172,15 +172,6 @@ class DOAJJsonFilter extends PKPImportExportFilter
             $article['bibjson']['keywords'] = $allowedNoOfKeywords;
         }
 
-        /* not needed here:
-        // Language
-        $language = AppLocale::get3LetterIsoFromLocale($pubObject->getLocale());
-        // publisherRecordId
-        $publisherRecordId = $pubObject->getId();
-        // documentType
-        $type = $pubObject->getType($pubObject->getLocale());
-        */
-
         $json = json_encode($article);
         return $json;
     }
@@ -188,7 +179,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * Format a date by Y-F format.
      *
-     * @param $date string
+     * @param string $date
      *
      * @return string
      */

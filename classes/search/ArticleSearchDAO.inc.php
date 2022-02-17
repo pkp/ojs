@@ -25,12 +25,12 @@ class ArticleSearchDAO extends SubmissionSearchDAO
     /**
      * Retrieve the top results for a phrase.
      *
-     * @param $journal Journal
-     * @param $phrase array
-     * @param $publishedFrom int|null Optional start date
-     * @param $publishedTo int|null Optional end date
-     * @param $type int|null ASSOC_TYPE_...
-     * @param $limit int
+     * @param Journal $journal
+     * @param array $phrase
+     * @param int|null $publishedFrom Optional start date
+     * @param int|null $publishedTo Optional end date
+     * @param int|null $type ASSOC_TYPE_...
+     * @param int $limit
      *
      * @return array of results (associative arrays)
      */

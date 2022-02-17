@@ -70,9 +70,9 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
             $mail->bccAssignedSubEditors($submission->getId(), WORKFLOW_STAGE_ID_SUBMISSION);
 
             $mail->assignParams([
-                'authorName' => $user->getFullName(),
-                'authorUsername' => $user->getUsername(),
-                'editorialContactSignature' => $context->getData('contactName'),
+                'recipientName' => $user->getFullName(),
+                'recipientUsername' => $user->getUsername(),
+                'signature' => $context->getData('contactName'),
                 'submissionUrl' => $router->url($request, null, 'authorDashboard', 'submission', $submission->getId()),
             ]);
 
@@ -83,7 +83,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form
 
             $authorMail->assignParams([
                 'submitterName' => $user->getFullName(),
-                'editorialContactSignature' => $context->getData('contactName'),
+                'signature' => $context->getData('contactName'),
             ]);
 
             foreach ($this->emailRecipients as $authorEmailRecipient) {

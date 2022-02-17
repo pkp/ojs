@@ -44,8 +44,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     /**
      * @see MetadataDataObjectAdapter::injectMetadataIntoDataObject()
      *
-     * @param $metadataDescription MetadataDescription
-     * @param $targetDataObject Article
+     * @param MetadataDescription $metadataDescription
+     * @param Article $targetDataObject
      */
     public function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject)
     {
@@ -56,7 +56,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     /**
      * @see MetadataDataObjectAdapter::extractMetadataFromDataObject()
      *
-     * @param $article Article
+     * @param Article $article
      *
      * @return MetadataDescription
      */
@@ -72,10 +72,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // meta-data framework. We're using the OAIDAO here because it
         // contains cached entities and avoids extra database access if this
         // adapter is called from an OAI context.
-        $oaiDao = DAORegistry::getDAO('OAIDAO'); /* @var $oaiDao OAIDAO */
+        $oaiDao = DAORegistry::getDAO('OAIDAO'); /** @var OAIDAO $oaiDao */
         $journal = $oaiDao->getJournal($article->getData('contextId'));
         $section = $oaiDao->getSection($article->getSectionId());
-        if ($article instanceof Submission) { /* @var $article Submission */
+        if ($article instanceof Submission) { /** @var Submission $article */
             $issue = $oaiDao->getIssue($article->getCurrentPublication()->getData('issueId'));
         } else {
             $issue = null;
@@ -93,8 +93,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Subject
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionKeywordDao SubmissionKeywordDAO */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /* @var $submissionSubjectDao SubmissionSubjectDAO */
+        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
+        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
         $subjects = array_merge_recursive(
             (array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
@@ -146,7 +146,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Format
         if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
             $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
             $formats = [];
             while ($galley = $galleys->next()) {
@@ -185,7 +185,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Get galleys and supp files.
         $galleys = [];
         if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
             $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
         }
 
@@ -251,7 +251,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     /**
      * @see MetadataDataObjectAdapter::getDataObjectMetadataFieldNames()
      *
-     * @param $translated boolean
+     * @param bool $translated
      */
     public function getDataObjectMetadataFieldNames($translated = true)
     {
@@ -266,9 +266,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     /**
      * Add an array of localized values to the given description.
      *
-     * @param $description MetadataDescription
-     * @param $propertyName string
-     * @param $localizedValues array
+     * @param MetadataDescription $description
+     * @param string $propertyName
+     * @param array $localizedValues
      */
     public function _addLocalizedElements(&$description, $propertyName, $localizedValues)
     {

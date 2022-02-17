@@ -25,8 +25,8 @@ use PKP\oai\OAIConfig;
 class OAIHandler extends Handler
 {
     /**
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function index($args, $request)
     {

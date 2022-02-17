@@ -39,7 +39,7 @@ class IssueFileDAO extends DAO
     /**
      * Set inlineable file types.
      *
-     * @param $inlineableTypes array
+     * @param array $inlineableTypes
      */
     public function setInlineableTypes($inlineableTypes)
     {
@@ -49,8 +49,8 @@ class IssueFileDAO extends DAO
     /**
      * Retrieve an issue file by ID.
      *
-     * @param $fileId int
-     * @param $issueId int optional
+     * @param int $fileId
+     * @param int $issueId optional
      *
      * @return IssueFile
      */
@@ -84,7 +84,7 @@ class IssueFileDAO extends DAO
     /**
      * Internal function to return an IssueFile object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return IssueFile
      */
@@ -107,7 +107,7 @@ class IssueFileDAO extends DAO
     /**
      * Insert a new IssueFile.
      *
-     * @param $issueFile IssueFile
+     * @param IssueFile $issueFile
      *
      * @return int
      */
@@ -197,7 +197,7 @@ class IssueFileDAO extends DAO
     /**
      * Delete all issue files for an issue.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function deleteByIssueId($issueId)
     {

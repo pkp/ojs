@@ -1,8 +1,9 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-10 21:21+0000\n"
-"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"PO-Revision-Date: 2022-01-03 08:14+0000\n"
+"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -437,7 +438,7 @@ msgstr "SAAT"
 
 msgid "manager.setup.clockssRegister"
 msgstr ""
-"<ahref=\"http://clockss.org/\" target=\"_blank\"> CLOCKSS veb -saytiga </a> "
+"<a href=\"http://clockss.org/\" target=\"_blank\">the CLOCKSS website</a> "
 "tashrif buyurib, CLOCKSS xizmatiga yoziling."
 
 msgid "manager.setup.clockssLicenseLabel"
@@ -446,11 +447,11 @@ msgstr "CLOCKSS litsenziyasining tavsifi"
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 "CLOCKSS litsenziyasi \"Arxivlash\" jurnali haqida: <a href=\"http://clockss."
-"org/\" target=\"_blank\"> CLOCKSS litsenziyasi </a> da paydo bo'ladi."
+"org/\" target=\"_blank\">CLOCKSS License</a> da paydo bo'ladi"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
-"CLOCKSS <ahref=\"{$clockssUrl}\" target=\"_blank\"> Publisher Manifest </a> "
+"CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest </a> "
 "sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
 "tarqatish uchun CLOCKSS -ni yoqing."
 
@@ -461,24 +462,24 @@ msgid "manager.setup.lockssRegister"
 msgstr ""
 "Jurnalni ro'yxatdan o'tkazadigan va keshlaydigan 6-10 kutubxonani aniqlang. "
 "Masalan, muharrirlar yoki Kengash a'zolari ishlaydigan muassasalarga va/yoki "
-"LOCKSSda ishtirok etayotgan muassasalarga murojaat qiling. <ahref=\""
-"http://www.lockss.org/community/\" target=\"_blank\"> LOCKSS hamjamiyatiga "
-"</a> qarang."
+"LOCKSSda ishtirok etayotgan muassasalarga murojaat qiling. <a href=\""
+"http://www.lockss.org/community/\" target=\"_blank\"> the LOCKSS "
+"community</a> qarang."
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS litsenziyasining tavsifi"
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
-"LOCKSS litsenziyasi \"Arxivlash\" jurnali haqida paydo bo'ladi: <ahref=\""
-"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\"> "
-"LOCKSS litsenziyasi </a>"
+"LOCKSS litsenziyasi \"Arxivlash\" jurnali haqida paydo bo'ladi: <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS License</a>"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
-"LOCKSS <ahref=\"{$lockssUrl}\" target=\"_blank\"> Publisher Manifest </a> "
-"sahifasi orqali ishtirokchi kutubxonalarda jurnal tarkibini saqlash va "
-"tarqatish uchun LOCKSS -ni yoqing."
+"LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> "
+"sahifasi orqali ishtirokchi kutubxonalarda jurnal mazmunini saqlash va "
+"tarqatish uchun LOCKSS-ni yoqing."
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS va CLOCKSS"
@@ -495,7 +496,7 @@ msgstr "PKP saqlash tarmog'i (ON)"
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"PKP PN dan foydalanish shartlarini qabul qilish uchun <tugma> plagin "
+"PKP PN dan foydalanish shartlarini qabul qilish uchun <button> plagin "
 "sozlamalari </button> ni ko'ring."
 
 msgid "manager.setup.plnDescription"
@@ -2140,3 +2141,260 @@ msgstr "Noto'g'ri XML:"
 
 msgid "plugins.importexport.common.error.validation"
 msgstr "Tanlangan obyektlarni o'zgartirib bo'lmadi."
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Sozlamalar elektron pochta manzilini tasdiqlashni talab qilganda, jurnalda "
+"ro'yxatdan o'tganda, bu elektron pochta avtomatik ravishda yangi "
+"foydalanuvchiga yuboriladi."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Elektron pochtani tasdiqlash (Jurnalni ro'yxatdan o'tkazish)"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Bir nechta jurnal joylashtirilganda veb-sayt nomi"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "To'lov summasining valyutasi, masalan, USD"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "To'lov miqdori"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "To'lov turining nomi"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Jurnal asosiy kontaktining elektron pochta manzili"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Avtomatlashtirilgan elektron pochta uchun jurnalning elektron imzosi"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Jurnal asosiy kontaktining nomi"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Jurnal bosh sahifasining URL manzili"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Jurnal nomi"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Maqolalar uchun DOI qo'shimchasini kiriting."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Muammolar uchun DOI qo'shimchasini kiriting."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Har bir e'lon qilingan element uchun individual DOI qo'shimchasini kiriting. "
+"Siz har bir elementning meta-ma'lumotlar sahifasida qo'shimcha DOI kiritish "
+"maydonini topasiz."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i sonlar uchun <br />%j.v%vi%i.%a maqolalar uchun <br "
+"/>%j.v%vi%i.%a.g%g."
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Standart naqshlardan foydalaning."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "oshxonalar uchun"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "maqolalar uchun"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "masalalar uchun"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Masalan, vol%viss%ipp%p 10.1234/vol3iss2pp230 kabi DOI yaratishi mumkin."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"DOI qo'shimchalarini yaratish uchun quyida kiritilgan naqshdan foydalaning. "
+"Jurnal bosh harflari uchun %j, jild soni uchun %v, nashr raqami uchun %i, "
+"yil uchun %Y, OJS maqola identifikatori uchun %a, OJS gadjet identifikatori "
+"uchun %g, OJS fayl identifikatori uchun %f dan foydalaning. , sahifa raqami "
+"uchun %p va \"Maxsus identifikator\" uchun %x."
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"DOI qo'shimchasi har qanday shaklda bo'lishi mumkin, lekin bir xil DOI "
+"prefiksi tayinlangan barcha nashriyot ob'ektlari orasida yagona bo'lishi "
+"kerak:"
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI qo'shimchasi"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI prefiksi majburiy bo'lib, 10.xxxx shaklida bo'lishi kerak."
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"DOI prefiksi ro'yxatga olish agentliklari tomonidan tayinlanadi (masalan, "
+"<ahref=\"http://www.crossref.org\" target=\"_new\"> Crossref </a>) va "
+"10.xxxx formatida (masalan, 10.1234):"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI prefiksi"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Galleylar"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Maqolalar"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Muammolar"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Iltimos, raqamli ob'ekt identifikatorlari (DOI) tayinlanadigan nashriyot "
+"ob'ektlarini tanlang:"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Iltimos, DOIlar tayinlanishi kerak bo'lgan ob'ektlarni tanlang."
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Jurnal tarkibi"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Iltimos, DOI plaginini OJSda DOI -ni boshqarish va ishlatish uchun sozlang:"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Ushbu plagin OJSda raqamli ob'ekt identifikatorlarini masalalar, maqolalar "
+"va galereyalarga tayinlash imkonini beradi."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.editor.preview.objects"
+msgstr "Element"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Oshxona: {$ galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI bu nashrga tayinlanmagan."
+
+msgid "doi.editor.preview.publication"
+msgstr "Bu nashr uchun DOI {$ doi} bo'ladi."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI {$ doiPrefix} bilan boshlanishi kerak."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$ pubId} tayinlandi."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$ pubId} tayinlanmaydi, chunki unda hal qilinmagan naqsh mavjud."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI tayinlanishi mumkin emas, chunki maxsus qo'shimchasi yo'q."
+
+msgid "doi.editor.assignDoi"
+msgstr "DOI {$ pubId} ni bu {$ pubObjectType} ga tayinlang"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Ushbu son uchun rejalashtirilgan barcha ob'ektlardan (maqolalar va galleylar)"
+" DOIlarni tozalash uchun quyidagi variantdan foydalaning."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Haqiqatan ham mavjud DOI ob'ektlarini o'chirib tashlamoqchimisiz?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "To'g'ridan -to'g'ri muammo ob'ektlari"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Haqiqatan ham mavjud DOIni o'chirmoqchimisiz?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Ochiq"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Berilgan DOI qo'shimchasi boshqa nashr qilingan element uchun allaqachon "
+"ishlatilgan. Iltimos, har bir element uchun o'ziga xos DOI qo'shimchasini "
+"kiriting."
+
+msgid "doi.editor.assigned"
+msgstr "DOI bu {$ pubObjectType} ga tayinlangan."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Siz ko'rib turgan narsa - DOIning oldindan ko'rilishi. DOI tayinlash uchun "
+"katakchani belgilang va shaklni saqlang."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI tayinlanishi mumkin emas, chunki unda hal qilinmagan naqsh mavjud."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Siz DOI yaratolmaysiz, chunki DOI naqshining bir yoki bir nechta qismida "
+"ma'lumotlar yo'q. Nashrni muammoga qo'yishingiz, nashriyot identifikatorini "
+"o'rnatishingiz yoki sahifa raqamlarini kiritishingiz kerak bo'lishi mumkin."
+
+msgid "doi.editor.missingIssue"
+msgstr "Agar nashr nashrga topshirilmaguncha, siz DOI yaratolmaysiz."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI tayinlanishi mumkin emas, chunki maxsus qo'shimchasi yo'q."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "oshxona"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "maqola"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "nashr"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Belgilang"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI {$ prefiksi} bilan boshlanishi kerak."
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Haqiqatan ham, DOI tayinlanmagan barcha nashr qilingan ob'ektlarga DOI "
+"tayinlashni xohlaysizmi?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"DOI tayinlanmagan barcha nashr qilingan jurnal ob'ektlariga DOI tayinlang. "
+"Bu amalni individual qo'shimchali konfiguratsiya bilan ishlatib bo'lmaydi. "
+"Agar siz yuqoridagi DOI konfiguratsiyasini o'zgartirgan bo'lsangiz, iltimos, "
+"ushbu harakatni boshlashdan oldin, o'zgarishlarni saqlang. DOI -ni tayinlash "
+"jurnalda chop etilgan ob'ektlar soniga qarab ancha vaqt talab qilishi mumkin."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "DOI -ni tayinlang"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Haqiqatan ham barcha mavjud DOIlarni o'chirmoqchimisiz?"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Agar siz DOI konfiguratsiyasini o'zgartirsangiz, allaqachon tayinlangan "
+"DOIlarga ta'sir qilmaydi. DOI konfiguratsiyasi saqlanganidan so'ng, ushbu "
+"tugma yordamida barcha mavjud DOIlarni tozalash kerak, shunda yangi "
+"sozlamalar mavjud ob'ektlar bilan kuchga kiradi."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOIlarni qayta tayinlash"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Iltimos, oshxona uchun DOI qo'shimchasini kiriting."
+

@@ -49,7 +49,7 @@ class CounterReportPlugin extends ReportPlugin
     {
         $localeFilenames = parent::getLocaleFilename($locale);
         // Add dynamic locale keys.
-        foreach (glob($this->getPluginPath() . DIRECTORY_SEPARATOR . 'locale' . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . '*.xml') as $file) {
+        foreach (glob("{$this->getPluginPath()}/locale/$locale/*.xml") as $file) {
             if (!in_array($file, $localeFilenames)) {
                 $localeFilenames[] = $file;
             }
@@ -100,7 +100,7 @@ class CounterReportPlugin extends ReportPlugin
     public function getValidReports()
     {
         $reports = [];
-        $prefix = $this->getReportPath() . DIRECTORY_SEPARATOR . COUNTER_CLASS_PREFIX;
+        $prefix = "{$this->getReportPath()}/" . COUNTER_CLASS_PREFIX;
         $suffix = COUNTER_CLASS_SUFFIX;
         foreach (glob($prefix . '*' . $suffix) as $file) {
             $report_name = substr($file, strlen($prefix), -strlen($suffix));
@@ -114,8 +114,8 @@ class CounterReportPlugin extends ReportPlugin
      * Get a COUNTER Reporter Object
      * Must exist in the report path as {Report}_r{release}.inc.php
      *
-     * @param $report string Report name
-     * @param $release string release identifier
+     * @param string $report Report name
+     * @param string $release release identifier
      *
      * @return object
      */
@@ -123,7 +123,7 @@ class CounterReportPlugin extends ReportPlugin
     {
         $reportClass = COUNTER_CLASS_PREFIX . $report;
         $reportClasspath = 'plugins.reports.counter.classes.reports.';
-        $reportPath = str_replace('.', DIRECTORY_SEPARATOR, $reportClasspath);
+        $reportPath = str_replace('.', '/', $reportClasspath);
         if (file_exists($reportPath . $reportClass . COUNTER_CLASS_SUFFIX)) {
             import($reportPath . $reportClass);
             $reporter = new $reportClass($release);
@@ -139,7 +139,7 @@ class CounterReportPlugin extends ReportPlugin
      */
     public function getClassPath()
     {
-        return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'classes';
+        return "{$this->getPluginPath()}/classes";
     }
 
 
@@ -150,7 +150,7 @@ class CounterReportPlugin extends ReportPlugin
      */
     public function getReportPath()
     {
-        return $this->getClassPath() . DIRECTORY_SEPARATOR . 'reports';
+        return "{$this->getClassPath()}/reports";
     }
 
     /**
@@ -197,7 +197,7 @@ class CounterReportPlugin extends ReportPlugin
                                     if ($xmlResult) {
                                         header('content-type: text/xml');
                                         header('content-disposition: attachment; filename=counter-' . $release . '-' . $report . '-' . date('Ymd') . '.xml');
-                                        print $xmlResult;
+                                        echo $xmlResult;
                                         return;
                                     } else {
                                         $errormessage = __('plugins.reports.counter.error.noXML');
@@ -254,7 +254,7 @@ class CounterReportPlugin extends ReportPlugin
     /**
     * Get the years for which log entries exist in the DB.
     *
-    * @param $useLegacyStats boolean Use the old counter plugin data.
+    * @param bool $useLegacyStats Use the old counter plugin data.
     *
     * @return array
     */
@@ -267,7 +267,7 @@ class CounterReportPlugin extends ReportPlugin
             $metricType = METRIC_TYPE_COUNTER;
             $filter = [PKPStatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE => ASSOC_TYPE_SUBMISSION_FILE];
         }
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
         $results = $metricsDao->getMetrics($metricType, [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH], $filter);
         $years = [];
         foreach ($results as $record) {

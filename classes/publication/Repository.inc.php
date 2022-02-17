@@ -171,4 +171,15 @@ class Repository extends \PKP\publication\Repository
 
         parent::delete($publication);
     }
+
+    /**
+     * Create all DOIs associated with the publication.
+     *
+     * @throws \Exception
+     */
+    protected function createDois(Publication $newPublication): void
+    {
+        $submission = Repo::submission()->get($newPublication->getData('submissionId'));
+        Repo::submission()->createDois($submission);
+    }
 }

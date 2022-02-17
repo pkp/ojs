@@ -87,13 +87,13 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     /**
      * Delete keywords from the search index.
      *
-     * @param $articleId int
-     * @param $type int optional
-     * @param $assocId int optional
+     * @param int $articleId
+     * @param int $type optional
+     * @param int $assocId optional
      */
     public function deleteTextIndex($articleId, $type = null, $assocId = null)
     {
-        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
         return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
     }
 
@@ -103,9 +103,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @see ArticleSearchIndex::submissionMetadataChanged() above for more
      * comments.
      *
-     * @param $articleId int
-     * @param $type int
-     * @param $submissionFile SubmissionFile
+     * @param int $articleId
+     * @param int $type
+     * @param SubmissionFile $submissionFile
      */
     public function submissionFileChanged($articleId, $type, $submissionFile)
     {
@@ -120,7 +120,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         if ($hookResult === false || is_null($hookResult)) {
             $parser = SearchFileParser::fromFile($submissionFile);
             if (isset($parser) && $parser->open()) {
-                $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+                $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
                 $objectId = $searchDao->insertObject($articleId, $type, $submissionFile->getId());
 
                 while (($text = $parser->read()) !== false) {
@@ -134,11 +134,11 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     /**
      * Remove indexed file contents for a submission
      *
-     * @param $submission Submission
+     * @param Submission $submission
      */
     public function clearSubmissionFiles($submission)
     {
-        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
         $searchDao->deleteSubmissionKeywords($submission->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE);
     }
 
@@ -149,7 +149,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @see ArticleSearchIndex::submissionMetadataChanged() above for more
      * comments.
      *
-     * @param $article Article
+     * @param Article $article
      */
     public function submissionFilesChanged($article)
     {
@@ -162,17 +162,17 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            $collector = Repo::submissionFiles()
+            $collector = Repo::submissionFile()
                 ->getCollector()
                 ->filterBySubmissionIds([$article->getId()])
                 ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF]);
-            $submissionFiles = Repo::submissionFiles()
+            $submissionFiles = Repo::submissionFile()
                 ->getMany($collector);
             foreach ($submissionFiles as $submissionFile) {
                 $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
-                $dependentFiles = Repo::submissionFiles()
+                $dependentFiles = Repo::submissionFile()
                     ->getMany(
-                        Repo::submissionFiles()
+                        Repo::submissionFile()
                             ->getCollector()
                             ->filterByAssoc(
                                 PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
@@ -199,9 +199,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @see ArticleSearchIndex::submissionMetadataChanged() above for more
      * comments.
      *
-     * @param $articleId int
-     * @param $type int optional
-     * @param $assocId int optional
+     * @param int $articleId
+     * @param int $type optional
+     * @param int $assocId optional
      */
     public function submissionFileDeleted($articleId, $type = null, $assocId = null)
     {
@@ -214,7 +214,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
             return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
         }
     }
@@ -226,7 +226,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @see ArticleSearchIndex::submissionMetadataChanged() above for more
      * comments.
      *
-     * @param $articleId integer
+     * @param int $articleId
      */
     public function articleDeleted($articleId)
     {
@@ -270,14 +270,14 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     /**
      * Rebuild the search index for one or all journals.
      *
-     * @param $log boolean Whether to display status information
+     * @param bool $log Whether to display status information
      *  to stdout.
-     * @param $journal Journal If given the user wishes to
+     * @param Journal $journal If given the user wishes to
      *  re-index only one journal. Not all search implementations
      *  may be able to do so. Most notably: The default SQL
      *  implementation does not support journal-specific re-indexing
      *  as index data is not partitioned by journal.
-     * @param $switches array Optional index administration switches.
+     * @param array $switches Optional index administration switches.
      */
     public function rebuildIndex($log = false, $journal = null, $switches = [])
     {
@@ -295,21 +295,21 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             // Check that no journal was given as we do
             // not support journal-specific re-indexing.
             if (is_a($journal, 'Journal')) {
-                die(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
+                exit(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
             }
 
             // Clear index
             if ($log) {
                 echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
             }
-            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
             $searchDao->clearIndex();
             if ($log) {
                 echo __('search.cli.rebuildIndex.done') . "\n";
             }
 
             // Build index
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
 
             $journals = $journalDao->getAll();
             while ($journal = $journals->next()) {
@@ -340,19 +340,18 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         }
     }
 
-
     //
     // Private helper methods
     //
     /**
      * Index a block of text for an object.
      *
-     * @param $objectId int
-     * @param $text string|array
+     * @param int $objectId
+     * @param string|array $text
      */
     protected function _indexObjectKeywords($objectId, $text)
     {
-        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
         $keywords = $this->filterKeywords($text);
         $searchDao->insertObjectKeywords($objectId, $keywords);
     }
@@ -360,14 +359,14 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     /**
      * Add a block of text to the search index.
      *
-     * @param $articleId int
-     * @param $type int
-     * @param $text string
-     * @param $assocId int optional
+     * @param int $articleId
+     * @param int $type
+     * @param string $text
+     * @param int $assocId optional
      */
     protected function _updateTextIndex($articleId, $type, $text, $assocId = null)
     {
-        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /* @var $searchDao ArticleSearchDAO */
+        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
         $objectId = $searchDao->insertObject($articleId, $type, $assocId);
         $this->_indexObjectKeywords($objectId, $text);
     }
@@ -375,7 +374,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     /**
      * Flattens array of localized fields to a single, non-associative array of items
      *
-     * @param $arrayWithLocales array Array of localized fields
+     * @param array $arrayWithLocales Array of localized fields
      *
      * @return array
      */

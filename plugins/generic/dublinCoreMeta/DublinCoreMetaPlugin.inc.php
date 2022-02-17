@@ -13,12 +13,12 @@
  * @brief Inject Dublin Core meta tags into article views to facilitate indexing.
  */
 
+use APP\facades\Repo;
 use APP\submission\Submission;
-use APP\template\TemplateManager;
 
+use APP\template\TemplateManager;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;
-use APP\facades\Repo;
 
 class DublinCoreMetaPlugin extends GenericPlugin
 {
@@ -52,10 +52,10 @@ class DublinCoreMetaPlugin extends GenericPlugin
     /**
      * Inject Dublin Core metadata into article view
      *
-     * @param $hookName string
-     * @param $args array
+     * @param string $hookName
+     * @param array $args
      *
-     * @return boolean
+     * @return bool
      */
     public function articleView($hookName, $args)
     {
@@ -157,8 +157,8 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
         $keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), [AppLocale::getLocale()]);
         foreach ($keywords as $locale => $localeKeywords) {
-            foreach ($localeKeywords as $keyword) {
-                $templateMgr->addHeader('dublinCoreSubject' . $locale, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
+            foreach ($localeKeywords as $i => $keyword) {
+                $templateMgr->addHeader('dublinCoreSubject' . $locale . $i, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
             }
         }
 
@@ -181,7 +181,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
 
         $publication = $article->getCurrentPublication();
         if ($publication) {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
             $section = $sectionDao->getById($publication->getData('sectionId'));
             $templateMgr->addHeader('dublinCoreArticleType', '<meta name="DC.Type.articleType" content="' . htmlspecialchars($section->getTitle($journal->getPrimaryLocale())) . '"/>');
         }

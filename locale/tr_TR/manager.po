@@ -2069,3 +2069,192 @@ msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-postayı Doğrula (Dergi kaydı için)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Sistemde DOI'leri kullanmak ve yönetebilmek için lütfen DOI eklentisini "
+"yapılandırın:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Dergi İçeriği"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Lütfen DOI'lerin atanacağı nesneleri seçiniz."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Sayılar"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "Makaleler"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Dizgi Tablaları"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI Ön Eki"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "DOI Ön Ekleri kayıt ajansları (Örneğin; <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI ön eki zorunludur ve 10.xxxx biçiminde olmalıdır."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI Son Eki"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Bir DOI son ek dosyası herhangi bir biçimi alabilir, fakat tüm yayınlanmış "
+"nesneler arasında aynı DOI ön eki almışlar arasında tekil olmalıdır:"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "sayılar için"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "makaleler için"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "dizgi tablaları için"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Örneğin; vol%viss%ipp%p kodlaması, 10.1234/vol3iss2pp230 gibi bir DOI "
+"yaratabilir"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "varsayılan örneği/şablonu kullan."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "Sayılar için %j.v%vi%i<br />makaleler için %j.v%vi%i.%a<br />dizgi tablaları için %j.v%vi%i.%a.g%g."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Lütfen sayılar için örnek/şablon DOI son ekini giriniz."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Lütfen makaleler için örnek/şablon DOI son ekini giriniz."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Lütfen dizgi tablaları için örnek/şablon DOI son ekini gibiniz."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Yayınlanan her bir öğe için ayrı bir DOI soneki girin. Her bir öğenin üst veri sayfasında ek bir DOI giriş alanı bulacaksınız."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI'leri yeniden ata"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Mevcut tüm DOI'leri silmek istediğinizden emin misiniz?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "sayı"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "makale"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Verilen DOI son eki yayınlanmış başka bir öğe için zaten kullanılıyor. Her öğe için benzersiz bir DOI sonek giriniz."
+
+msgid "doi.description"
+msgstr "Bu eklenti, Dijital Nesne Tanımlayıcılarının OJS'deki dizgi tablaları, makaleler ve sayılara atanmasını sağlar."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "DOI eklerini oluşturmak için aşağıda girilen şablonu kullanın. Dergi için %\", cilt numarası için %v, sayı için %i, yıl için %Y, OJS makale ID'si için \"%a\", OJS dizgi tablası ID'si için %g, OJS dosya ID'si için %f, sayfa numarası için %p ve \"Özel Tanımlayıcı\" için %x  kullanın."
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "DOI yapılandırmanızı değiştirirseniz, önceden atanmış DOI'ler bundan etkilenmez. DOI yapılandırması kaydedildikten sonra, mevcut tüm DOI'leri temizlemek için bu düğmeyi kullanın, böylece yeni ayarlar mevcut nesnelerle etkinleşir."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "DOI'leri Ata"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "DOI'leri atanmamış yayınlanmış tüm dergi öğelerine DOI atayın. Bu eylem, bireysel sonek yapılandırmasıyla kullanılamaz. Yukarıdaki DOI yapılandırmasını değiştirdiyseniz, lütfen bu işlemi başlatmadan önce değişikliklerinizi kaydedin. DOI'leri atamak, dergideki yayınlanmış nesnelerin sayısına bağlı olarak uzun sürebilir."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "DOI'leri atanmamış tüm yayınlanmış öğelere DOI atamak istediğinizden emin misiniz?"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "dizgi tablası"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "Özel sonek eksik olduğundan DOI atanamaz."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "Çözümlenemeyen bir şablon içerdiğinden DOI atanamaz."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "Gördüğünüz şey DOI'nin bir ön izlemesi. DOI'yi atamak için onay kutusunu seçin ve formu kaydedin."
+
+msgid "doi.editor.assigned"
+msgstr "DOI, {$pubObjectType} öğesine atanmıştır."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "DOI Temizle"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Mevcut DOI'yi silmek istediğinizden emin misiniz?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Sayı nesneleri DOI'lerini Temizle"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Var olan öğe DOI'lerini silmek istediğinizden emin misiniz?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Bu sayı için şu anda planlanmış tüm öğelerin (makaleler ve dizgi tablaları ) DOI'lerini temizlemek için aşağıdaki seçeneği kullanın."
+
+msgid "doi.editor.assignDoi"
+msgstr "Bu {$pubObjectType} için DOI {$pubId} atayın"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "Özel sonek eksik olduğundan DOI atanamaz."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId}, çözümlenmemiş bir şablon içerdiğinden atanamaz."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} atanmıştır."
+
+msgid "doi.editor.preview.objects"
+msgstr "Öğe"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Dizgi: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Bu yayın için bir DOI numarası atanmadı."
+
+msgid "doi.editor.preview.publication"
+msgstr "Bu yayının DOI numarası {$doi} olarak ayarlanacak."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI {$doiPrefix} öneki ile başlamalıdır."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"DOI şablonunun bir veya daha fazla bölümünde eksik veri olduğu için DOI "
+"oluşturamazsınız. Yayını bir sayıya atamanız, yayıncı ID numarasını "
+"ayarlamanız veya sayfa numarasını girmeniz gereklidir."
+
+msgid "doi.editor.missingIssue"
+msgstr "Bu yayın bir sayıya atanmadan DOI oluşturamazsınız."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Ata"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI {$prefix} öneki ile başlamalıdır."
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Makaleler"

@@ -26,7 +26,7 @@ class TocGridRow extends GridRow
     /**
      * Constructor
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function __construct($issueId)
     {
@@ -37,7 +37,7 @@ class TocGridRow extends GridRow
     //
     // Overridden template methods
     //
-    /*
+    /**
      * @copydoc GridRow::initialize
      */
     public function initialize($request, $template = null)

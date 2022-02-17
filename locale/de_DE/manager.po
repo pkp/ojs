@@ -1901,3 +1901,185 @@ msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-Mail überprüfen (Zeitschrift Registrierung)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "Dieses Plugin ermöglicht die Zuweisung von DOIs (persistent identifiers) zu Ausgaben, Artikeln und Fahnen in OJS."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und benutzen können:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Zeitschrifteninhalt"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Bitte wählen Sie, welchen Objekten DOI zugewiesen werden sollen."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Bitte wählen Sie die Publikationsobjekte, denen Digital Object Identifiers (DOI) zugewiesen werden:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Ausgaben"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Artikel"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Fahnen"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI-Präfix"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "Der DOI-Präfix wird von Registrierungsagenturen (z.B. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) vergeben und hat das Format 10.xxxx (z.B. 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Der DOI-Präfix ist verpflichtend und muss im Format 10.xxxx angegeben werden."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI-Suffix"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "Ein DOI-Suffix kann in beliebiger Form sein, muss aber eindeutig unter allen Publikationsobjekten, denen derselbe DOI-Präfix zugewiesen wird:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die Seitenzahl und %x für die \"benutzerdefinierte Kennung\" (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden)."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "vol%viss%ipp%p würde z.B. einen DOI 10.1234/vol3iss2pp230 erzeugen."
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "für Ausgaben"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "für Artikel"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "für Fahnen"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Die Standardmuster benutzen."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i für Ausgaben<br />%j.v%vi%i.%a für Artikel<br />%j.v%vi%i.%a.g%g für Fahnen."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Geben Sie einen individuellen DOI-Suffix für jedes publizierte Element ein. Sie finden ein zusätzliches DOI-Eingabefeld auf der Metadatenseite jedes Elements."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Bitte geben Sie das DOI-Suffix-Muster für Ausgaben ein."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Bitte geben Sie das DOI-Suffix-Muster für Artikel ein."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Bitte geben Sie das DOI-Suffix-Muster für Fahnen ein."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI neu zuweisen"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "Wenn Sie Ihre DOI-Konfiguration ändern, sind bereits vergebene DOI nicht betroffen. Sobald die DOI-Konfiguration gespeichert wird, nutzen Sie diesen Knopf, um alle existierenden DOI zu löschen, so dass die neuen Einstellungen auch bereits existierende Objekte mit betreffen."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Sind Sie sicher, dass Sie alle existierenden DOI löschen möchten?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "DOI zuweisen"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "DOIs an alle Journalobjekte zuweisen, denen bisher noch keine DOI zugewiesen waren. Diese Aktion kann nicht mit einer individuellen Suffix-Konfiguration genutzt werden. Wenn Sie oben die DOI-Konfiguration verändert haben, speichern Sie bitte Ihre Änderungen, bevor Sie diese Aktion ausführen. DOI zuzuweisen kann eine Weile dauern, abhängig von der Anzahl im Journal publizierter Objekte."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Sind Sie sicher, dass Sie allen veröffentlichten Objekten einen DOI zuweisen möchten, die bisher noch keine DOI zugewiesen bekommen haben?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "Ausgabe"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "Artikel"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "Fahne"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "Es kann kein DOI zugewiesen werden, weil ein ungültiges Muster verwendet wird."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "Sie sehen eine Voransicht des DOI. Wählen Sie die Checkbox und speichern Sie das Formular, um den DOI zuzuweisen."
+
+msgid "doi.editor.assigned"
+msgstr "Der DOI ist diesem Objekt vom Typ {$pubObjectType} zugewiesen."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Der angegebene DOI-Suffix wird bereits für ein anderes veröffentlichtes Element benutzt. Bitte vergeben Sie einen eindeutigen DOI-Suffix für jedes Element."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "DOI entfernen"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Sind Sie sicher, dass Sie den existierenden DOI entfernen möchten?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "DOI für die Objekte der Ausgabe entfernen"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Sind Sie sicher, dass Sie die DOI der existierenden Objekte der Ausgabe entfernen möchten?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Nutzen Sie die folgende Option, um die DOI aller Objekte (Artikel und Fahnen), die momentan dieser Ausgabe zugeordnet sind, zu entfernen."
+
+msgid "doi.editor.assignDoi"
+msgstr "DOI {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster verwendet wird."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} wurde zugewiesen."
+
+msgid "doi.editor.preview.objects"
+msgstr "Element"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Fahne: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Dieser Publikation wurde keine DOI zugeordnet."
+
+msgid "doi.editor.preview.publication"
+msgstr "Die DOI für diese Veröffentlichung wird {$doi} sein."
+
+msgid "doi.editor.missingPrefix"
+msgstr "Die DOI muss mit {$doiprefix} beginnen."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Sie können keine DOI generieren, denn einem oder mehreren Teilen der URN "
+"fehlen Daten. Sie müssen die Veröffentlichung einer Ausgabe zuweisen, eine "
+"Verlags ID angeben oder Seitenzahlen eintragen."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Sie können keine DOI generieren, solange der Beitrag keiner Ausgabe "
+"zugewiesen ist."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Zuweisen"
+
+msgid "doi.editor.doi.description"
+msgstr "Die DOI muss mit {$prefix} beginnen."

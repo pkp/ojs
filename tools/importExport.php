@@ -24,7 +24,7 @@ class importExport extends CommandLineTool
     /**
      * Constructor.
      *
-     * @param $argv array command-line arguments (see usage)
+     * @param array $argv command-line arguments (see usage)
      */
     public function __construct($argv = [])
     {

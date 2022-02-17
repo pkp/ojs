@@ -77,8 +77,11 @@ msgstr "E.g., \"DIGEST-MD5\""
 msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Realm"
 
-msgid "plugins.auth.ldap.settings.saslauthzid"
+msgid "plugins.auth.ldap.settings.saslauthcid"
 msgstr "Requested authorization ID"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Requested proxy authorization ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL security properties"

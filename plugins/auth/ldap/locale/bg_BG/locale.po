@@ -1,11 +1,11 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-28 14:59+0000\n"
+"PO-Revision-Date: 2022-01-20 21:25+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
-"bg/>\n"
-"Language: bg\n"
+"bg_BG/>\n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,7 +16,7 @@ msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL свойства на сигурността"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "Изискван идентификатор (ID) за оторизация"
+msgstr "Изискван прокси идентификатор (ID) за оторизация"
 
 msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Област/Домейн (Realm)"
@@ -92,3 +92,6 @@ msgstr ""
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP модул"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "Заявен оторизационен идентификатор (authorization ID)"
