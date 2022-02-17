@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @file tools/runScheduledTasks.php
  *
@@ -18,6 +20,8 @@ require(dirname(__FILE__) . '/bootstrap.inc.php');
 class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
 {
 }
+
+app('pkpQueue')->runQueuedJob();
 
 $tool = new runScheduledTasks($argv ?? []);
 $tool->execute();
