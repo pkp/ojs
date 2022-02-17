@@ -214,6 +214,6 @@ class PaypalPaymentPlugin extends PaymethodPlugin
      */
     public function getInstallEmailTemplatesFile()
     {
-        return ($this->getPluginPath() . DIRECTORY_SEPARATOR . 'emailTemplates.xml');
+        return "{$this->getPluginPath()}/emailTemplates.xml";
     }
 }

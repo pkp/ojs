@@ -589,7 +589,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     {
         $taskFilesPath = & $args[0];
 
-        $scheduledTasksPath = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+        $scheduledTasksPath = "{$this->getPluginPath()}/scheduledTasks.xml";
 
         if (!file_exists($scheduledTasksPath)) {
             return false;
