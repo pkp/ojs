@@ -15,6 +15,13 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
+class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
+{
+}
+
+$tool = new runScheduledTasks($argv ?? []);
+$tool->execute();
+
 $taskDao = \PKP\db\DAORegistry::getDAO('ScheduledTaskDAO');
 
 $scheduleBag = app(\Illuminate\Console\Scheduling\Schedule::class);
