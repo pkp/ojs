@@ -15,6 +15,7 @@
 
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
+use PKP\facades\Locale;
 
 class IssueGalleyGridCellProvider extends GridCellProvider
 {
@@ -36,9 +37,7 @@ class IssueGalleyGridCellProvider extends GridCellProvider
 
         switch ($columnId) {
             case 'label': return ['label' => $issueGalley->getLabel()];
-            case 'locale':
-                $allLocales = AppLocale::getAllLocales();
-                return ['label' => $allLocales[$issueGalley->getLocale()]];
+            case 'locale': return ['label' => Locale::getMetadata($issueGalley->getLocale())->getDisplayName()];
             case 'publicGalleyId': return ['label' => $issueGalley->getStoredPubId('publisher-id')];
             default: assert(false); break;
         }

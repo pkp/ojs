@@ -14,7 +14,8 @@
  */
 
 use APP\core\Application;
-use APP\i18n\AppLocale;
+use PKP\config\Config;
+use PKP\session\SessionManager;
 
 class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 {
@@ -23,7 +24,7 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
      */
     public function isActive()
     {
-        if (defined('SESSION_DISABLE_INIT')) {
+        if (SessionManager::isDisabled()) {
             return true;
         }
         return parent::isActive();
@@ -36,8 +37,6 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
      */
     public function init()
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_APP_MANAGER);
-
         // Register theme options
         $this->addOption('typography', 'FieldOptions', [
             'type' => 'radio',

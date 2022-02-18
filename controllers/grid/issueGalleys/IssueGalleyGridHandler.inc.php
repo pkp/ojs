@@ -117,8 +117,6 @@ class IssueGalleyGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
-
         // Add action
         $router = $request->getRouter();
         $this->addAction(

@@ -31,7 +31,6 @@ define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\issue\Issue;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
@@ -85,11 +84,10 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             return false;
         }
 
-        if (!Config::getVar('general', 'installed')) {
+        if (Application::isUnderMaintenance()) {
             return false;
         }
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
         $this->addLocaleData();
 
         HookRegistry::register('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
@@ -664,8 +662,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function executeCLI($scriptName, &$args)
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-
         $command = array_shift($args);
         if (!in_array($command, ['export', 'register'])) {
             $this->usage($scriptName);
@@ -851,14 +847,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function _sendNotification($user, $message, $notificationType, $param = null)
     {
         static $notificationManager = null;
-        if (is_null($notificationManager)) {
-            $notificationManager = new NotificationManager();
-        }
-        if (!is_null($param)) {
-            $params = ['param' => $param];
-        } else {
-            $params = null;
-        }
+        $notificationManager ??= new NotificationManager();
+        $params = is_null($param) ? [] : ['param' => $param];
         $notificationManager->createTrivialNotification(
             $user->getId(),
             $notificationType,

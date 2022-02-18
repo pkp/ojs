@@ -211,7 +211,7 @@ class UserInstitutionalSubscriptionForm extends Form
         $subscription->setInstitutionName($this->getData('institutionName'));
         $subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
         $subscription->setDomain($this->getData('domain'));
-        $subscription->setIPRanges(PKPString::regexp_split('/\s+/', $this->getData('ipRanges')));
+        $subscription->setIPRanges(PKPString::regexp_split('/\s+/', trim($this->getData('ipRanges'))));
 
         if ($subscription->getId()) {
             $institutionalSubscriptionDao->updateObject($subscription);

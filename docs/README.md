@@ -11,7 +11,7 @@
 
 Open Journal Systems (OJS) has been developed by the Public Knowledge Project.
 For general information about OJS and other open research systems, visit the
-PKP web site at <http://pkp.sfu.ca/>.
+PKP web site at <https://pkp.sfu.ca/>.
 
 
 ## License
@@ -119,19 +119,13 @@ codes, e.g. `fr_FR`, is recommended):
 * `locale/en_US`
 * `lib/pkp/locale/en_US`
 * `docs/manual/en`
-* `registry/locale/en_US`
 * `plugins/[plugin category]/[plugin name]/locale`, where applicable
 
 The only critical files that need translation for the system to function
-properly are found in `locale/en_US`, `lib/pkp/locale/en_US`, and
-`registry/locale/en_US`.
+properly are found in `locale/en_US`, `lib/pkp/locale/en_US`.
 
-New locales must also be added to the file `registry/locales.xml`, after which
-they can be installed in the system through the site administration web
-interface.
-	
 Translations can be contributed back to PKP for distribution with future
-releases of OJS.
+releases of OJS at https://translate.pkp.sfu.ca/projects/.
 
 
 ## Scheduled Tasks
@@ -188,6 +182,7 @@ interpreter installed on your server.
 	the `plugins/generic/usageStats` directory. A separate license agreement
 	is required for this use of this database. For details, see:
 	https://support.maxmind.com/geolite-legacy-discontinuation-notice/
+
 
 ## Contact/Support
 

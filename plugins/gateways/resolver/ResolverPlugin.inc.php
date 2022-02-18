@@ -156,7 +156,6 @@ class ResolverPlugin extends GatewayPlugin
         // Failure.
         header('HTTP/1.0 404 Not Found');
         $templateMgr = TemplateManager::getManager($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
         $templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
         $templateMgr->display('frontend/pages/message.tpl');
         exit;

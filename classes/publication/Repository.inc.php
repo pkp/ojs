@@ -16,7 +16,6 @@ namespace APP\publication;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
 use PKP\core\Core;
@@ -63,7 +62,6 @@ class Repository extends \PKP\publication\Repository
                         if (!isset($errors['abstract'])) {
                             $errors['abstract'] = [];
                         };
-                        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
                         $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
                     }
                 }

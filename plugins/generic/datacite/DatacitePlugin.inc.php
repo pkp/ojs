@@ -14,10 +14,16 @@
  *
  */
 
+use APP\core\Application;
 use APP\plugins\IDoiRegistrationAgency;
+use PKP\context\Context;
+use PKP\core\JSONMessage;
+use PKP\form\Form;
+use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\HookRegistry;
+use PKP\plugins\PluginRegistry;
 
 class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
 {
@@ -52,7 +58,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             // If the system isn't installed, or is performing an upgrade, don't
             // register hooks. This will prevent DB access attempts before the
             // schema is installed.
-            if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+            if (Application::isUnderMaintenance()) {
                 return true;
             }
 

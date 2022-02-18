@@ -97,17 +97,6 @@ class UserHandler extends PKPUserHandler
         }
     }
 
-    /**
-     * Setup common template variables.
-     *
-     * @param PKPRequest $request
-     */
-    public function setupTemplate($request = null)
-    {
-        parent::setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR, LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_GRID);
-    }
-
 
     //
     // Payments

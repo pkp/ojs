@@ -16,7 +16,6 @@
 namespace APP\tasks;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\mail\MailTemplate;
 use PKP\scheduledTask\ScheduledTask;
@@ -56,9 +55,6 @@ class SubscriptionExpiryReminder extends ScheduledTask
         $subscriptionMailingAddress = $journal->getData('subscriptionMailingAddress');
 
         $subscriptionContactSignature = $subscriptionName;
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_COMMON);
-
         if ($subscriptionMailingAddress != '') {
             $subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
         }

@@ -21,7 +21,6 @@
 namespace APP\controllers\grid\issues;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\issue\Collector;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
@@ -32,6 +31,7 @@ use APP\template\TemplateManager;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\Core;
+use PKP\facades\Locale;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\db\DAO;
@@ -93,10 +93,6 @@ class IssueGridHandler extends GridHandler
     public function initialize($request, $args = null)
     {
         parent::initialize($request, $args);
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-        // Load submission-specific translations
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 
         // Grid columns.
         import('controllers.grid.issues.IssueGridCellProvider');
@@ -252,7 +248,7 @@ class IssueGridHandler extends GridHandler
             return new JSONMessage(false, __('editor.issues.removeCoverImageOnDifferentContextNowAllowed'));
         }
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
         if ($args['coverImage'] != $issue->getCoverImage($locale)) {
             return new JSONMessage(false, __('editor.issues.removeCoverImageFileNameMismatch'));
         }

@@ -17,6 +17,7 @@ use APP\facades\Repo;
 use APP\workflow\EditorDecisionActionsManager;
 
 use PKP\filter\PersistableFilter;
+use PKP\i18n\LocaleConversion;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
 {
@@ -103,7 +104,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 $articleNode->appendChild($doiNode);
             }
 
-            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(AppLocale::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
+            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
 
             $authorListNode = $doc->createElement('AuthorList');
             foreach ((array) $publication->getData('authors') as $author) {

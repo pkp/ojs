@@ -15,15 +15,15 @@
 
 namespace APP\subscription\form;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionDAO;
 use APP\template\TemplateManager;
-use APP\core\Application;
+use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
 use PKP\db\DAORegistry;
-use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionForm extends Form
 {
@@ -59,18 +59,15 @@ class SubscriptionForm extends Form
 
         $this->validStatus = SubscriptionDAO::getStatusOptions();
 
-        $isoCodes = app(IsoCodesFactory::class);
         $this->validCountries = [];
-        foreach ($isoCodes->getCountries() as $country) {
+        foreach (Locale::getCountries() as $country) {
             $this->validCountries[$country->getAlpha2()] = $country->getLocalName();
         }
         asort($this->validCountries);
 
         // User is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function ($userId) {
-            return (bool) Repo::user()->get($userId);
-        }));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', fn($userId) => !!Repo::user()->get($userId)));
 
         // Subscription status is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));

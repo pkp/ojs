@@ -15,6 +15,7 @@
 
 
 use APP\article\ArticleGalley;
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
@@ -35,7 +36,7 @@ class URNPubIdPlugin extends PubIdPlugin
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+        if (Application::isUnderMaintenance()) {
             return $success;
         }
         if ($success && $this->getEnabled($mainContextId)) {

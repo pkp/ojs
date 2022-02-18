@@ -23,6 +23,8 @@ use APP\issue\IssueAction;
 use PKP\metadata\MetadataDataObjectAdapter;
 use PKP\metadata\MetadataDescription;
 use APP\facades\Repo;
+use PKP\facades\Locale;
+use PKP\i18n\LocaleConversion;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -64,8 +66,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     {
         assert($article instanceof Submission);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_SUBMISSION);
-
         // Retrieve data that belongs to the article.
         // FIXME: Retrieve this data from the respective entity DAOs rather than
         // from the OAIDAO once we've migrated all OAI providers to the
@@ -95,7 +95,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Subject
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
-        $supportedLocales = array_keys(AppLocale::getSupportedFormLocales());
+        $supportedLocales = array_keys($journal->getSupportedFormLocaleNames());
         $subjects = array_merge_recursive(
             (array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
             (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
@@ -136,7 +136,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $dc11Description->addStatement('dc:type', $driverType, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         $types = $section->getIdentifyType(null);
         $types = array_merge_recursive(
-            empty($types) ? [AppLocale::getLocale() => __('metadata.pkp.peerReviewed')] : $types,
+            empty($types) ? [Locale::getLocale() => __('metadata.pkp.peerReviewed')] : $types,
             (array) $article->getType(null)
         );
         $this->_addLocalizedElements($dc11Description, 'dc:type', $types);
@@ -196,7 +196,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
                 $galleyLocale = $galley->getLocale();
                 if (!is_null($galleyLocale) && !in_array($galleyLocale, $locales)) {
                     $locales[] = $galleyLocale;
-                    $dc11Description->addStatement('dc:language', AppLocale::getIso3FromLocale($galleyLocale));
+                    $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($galleyLocale));
                 }
             }
         }
