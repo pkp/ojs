@@ -1976,5 +1976,6 @@ msgstr "Article DOIs"
 
 msgid "doi.manager.issueDois"
 msgstr "Issue DOIs"
+
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr "This email notifies the author that their submission is being declined, before the review stage, because the submission does not meet the requirements for publication in the journal."
