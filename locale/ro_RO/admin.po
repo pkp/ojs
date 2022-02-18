@@ -1,7 +1,8 @@
+# Cristina Bleortu <cristina.bleortu@uzh.ch>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-09 15:52+0000\n"
-"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"PO-Revision-Date: 2022-02-18 23:02+0000\n"
+"Last-Translator: Cristina Bleortu <cristina.bleortu@uzh.ch>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "ro_RO/>\n"
 "Language: ro_RO\n"
@@ -256,3 +257,7 @@ msgstr "Setările pentru aspectul site-ului au fost actualizate cu succes."
 
 msgid "admin.hostedContexts"
 msgstr "Reviste găzduite"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Locația principală trebuie să fie una dintre locațiile acceptate de jurnal."
