@@ -1,10 +1,10 @@
-# Pavel Pisklakov <ppv1979@mail.ru>, 2021.
+# Pavel Pisklakov <ppv1979@mail.ru>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2021-12-26 09:24+0000\n"
+"PO-Revision-Date: 2022-02-19 20:21+0000\n"
 "Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
 "Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "ru_RU/>\n"
@@ -120,7 +120,7 @@ msgid "emails.reviewerRegister.description"
 msgstr "Это письмо отправляется вновь зарегистрированному рецензенту, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту."
 
 msgid "emails.issuePublishNotify.subject"
-msgstr "Опубликован новый выпуск"
+msgstr "Новый выпуск уже доступен: {$issueIdentification}"
 
 msgid "emails.issuePublishNotify.body"
 msgstr ""
