@@ -24,7 +24,7 @@ namespace APP\issue;
 
 use APP\core\Application;
 
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\core\DAORegistry;
 
 class IssueGalley extends IssueFile
@@ -73,9 +73,8 @@ class IssueGalley extends IssueFile
     public function getGalleyLabel()
     {
         $label = $this->getLabel();
-        if ($this->getLocale() != AppLocale::getLocale()) {
-            $locales = AppLocale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')';
+        if ($this->getLocale() != Locale::getLocale()) {
+            $label .= ' (' . Locale::getMetadata($this->getLocale())->getDisplayName() . ')';
         }
         return $label;
     }

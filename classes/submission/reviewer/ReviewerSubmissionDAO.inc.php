@@ -18,7 +18,7 @@
 namespace APP\submission\reviewer;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
 
@@ -46,8 +46,8 @@ class ReviewerSubmissionDAO extends DAO
      */
     public function getReviewerSubmission($reviewId)
     {
-        $primaryLocale = AppLocale::getPrimaryLocale();
-        $locale = AppLocale::getLocale();
+        $primaryLocale = Locale::getPrimaryLocale();
+        $locale = Locale::getLocale();
         $result = $this->retrieve(
             'SELECT	a.*,
 				r.*,

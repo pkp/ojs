@@ -64,7 +64,6 @@ class InformationHandler extends Handler
                 $pageTitle = 'navigation.competingInterestGuidelines';
                 break;
             case 'sampleCopyrightWording':
-                AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
                 $content = __('manager.setup.copyrightNotice.sample');
                 $pageTitle = 'manager.setup.copyrightNotice';
                 break;

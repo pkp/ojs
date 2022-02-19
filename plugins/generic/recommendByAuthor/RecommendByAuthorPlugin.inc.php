@@ -13,6 +13,7 @@
  * @brief Plugin to recommend articles from the same author.
  */
 
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\plugins\GenericPlugin;
 use PKP\statistics\PKPStatisticsHelper;
@@ -35,7 +36,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+        if (Application::isUnderMaintenance()) {
             return $success;
         }
 

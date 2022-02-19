@@ -25,7 +25,6 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
 use APP\template\TemplateManager;
-use APP\i18n\AppLocale;
 use APP\core\Application;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
@@ -50,8 +49,6 @@ class SubscriptionPolicyForm extends Form
      */
     public function __construct()
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-
         $this->validNumMonthsBeforeExpiry = [0 => __('common.disabled')];
         for ($i = SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN; $i <= SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX; $i++) {
             $this->validNumMonthsBeforeExpiry[$i] = __('manager.subscriptionPolicies.xMonths', ['x' => $i]);

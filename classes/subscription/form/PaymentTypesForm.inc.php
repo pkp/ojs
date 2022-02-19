@@ -18,7 +18,6 @@ namespace APP\subscription\form;
 use PKP\form\Form;
 use PKP\db\DAORegistry;
 use APP\core\Application;
-use APP\i18n\AppLocale;
 
 class PaymentTypesForm extends Form
 {
@@ -31,8 +30,6 @@ class PaymentTypesForm extends Form
     public function __construct()
     {
         parent::__construct('payments/paymentTypesForm.tpl');
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
         $this->settings = [
             'publicationFee' => 'float',

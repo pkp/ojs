@@ -18,18 +18,10 @@
 use APP\template\TemplateManager;
 
 use PKP\oai\OAIMetadataFormat;
+use PKP\i18n\LocaleConversion;
 
 class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
 {
-    /**
-     * Constructor.
-     */
-    public function __construct($prefix, $schema, $namespace)
-    {
-        parent::__construct($prefix, $schema, $namespace);
-        PKPLocale::requireComponents([LOCALE_COMPONENT_PKP_SUBMISSION]); // submission.copyrightStatement
-    }
-
     /**
      * @see OAIMetadataFormat#toXml
      *
@@ -56,7 +48,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         $templateMgr->assign([
             'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
             'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
-            'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
+            'language' => LocaleConversion::get3LetterIsoFromLocale($article->getLocale())
         ]);
 
         $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC21');

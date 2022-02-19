@@ -13,6 +13,7 @@
  * @brief Handle requests for the submission wizard.
  */
 
+use PKP\facades\Locale;
 use PKP\security\Role;
 
 import('lib.pkp.pages.submission.PKPSubmissionHandler');
@@ -29,21 +30,6 @@ class SubmissionHandler extends PKPSubmissionHandler
             [Role::ROLE_ID_AUTHOR, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER],
             ['index', 'wizard', 'step', 'saveStep']
         );
-    }
-
-
-    //
-    // Protected helper methods
-    //
-    /**
-     * Setup common template variables.
-     *
-     * @param Request $request
-     */
-    public function setupTemplate($request)
-    {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
-        return parent::setupTemplate($request);
     }
 
     /**

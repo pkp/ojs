@@ -18,7 +18,7 @@ use APP\facades\Repo;
 
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use APP\issue\Collector;
 use APP\issue\IssueAction;
 
@@ -291,12 +291,6 @@ class IssueHandler extends Handler
         return true;
     }
 
-    public function setupTemplate($request)
-    {
-        parent::setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_EDITOR);
-    }
-
     /**
      * Given an issue, set up the template with all the required variables for
      * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
@@ -322,7 +316,7 @@ class IssueHandler extends Handler
             'issueSeries' => $issue->getIssueIdentification(['showTitle' => false]),
         ]);
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
 
         $templateMgr->assign([
             'locale' => $locale,

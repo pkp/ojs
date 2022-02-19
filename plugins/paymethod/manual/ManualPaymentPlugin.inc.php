@@ -125,8 +125,6 @@ class ManualPaymentPlugin extends PaymethodPlugin
             return null;
         }
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-
         $paymentForm = new Form($this->getTemplateResource('paymentForm.tpl'));
         $paymentManager = Application::getPaymentManager($context);
         $paymentForm->setData([
@@ -163,7 +161,6 @@ class ManualPaymentPlugin extends PaymethodPlugin
 
         switch ($op) {
             case 'notify':
-                AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
                 $contactName = $context->getData('contactName');
                 $contactEmail = $context->getData('contactEmail');
                 $mail = new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');

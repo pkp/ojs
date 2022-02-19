@@ -70,12 +70,6 @@ class PubIdExportIssuesListGridHandler extends GridHandler
         // Basic grid configuration.
         $this->setTitle('plugins.importexport.common.export.issues');
 
-        // Load submission-specific translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_EDITOR, // date grid column
-            LOCALE_COMPONENT_APP_MANAGER
-        );
-
         $pluginCategory = $request->getUserVar('category');
         $pluginPathName = $request->getUserVar('plugin');
         $this->_plugin = PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);

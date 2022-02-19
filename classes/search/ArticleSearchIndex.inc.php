@@ -16,7 +16,6 @@
 namespace APP\search;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
@@ -290,8 +289,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the
         // default database search implementation.
         if ($hookResult === false || is_null($hookResult)) {
-            AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-
             // Check that no journal was given as we do
             // not support journal-specific re-indexing.
             if (is_a($journal, 'Journal')) {

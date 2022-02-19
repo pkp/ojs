@@ -92,8 +92,6 @@ class ArticleReportPlugin extends ReportPlugin
             return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_PKP_READER);
-
         // Load the data from the database and store it in an array.
         // (This must be stored before display because we won't know the data
         // dimensions until it has all been loaded.)

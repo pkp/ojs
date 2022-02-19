@@ -15,9 +15,11 @@
 
 import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
+use APP\core\Application;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
-
+use PKP\core\PKPApplication;
+use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
 use PKP\security\Role;
 
@@ -61,11 +63,8 @@ class WorkflowHandler extends PKPWorkflowHandler
             $submissionContext = Services::get('context')->get($submission->getContextId());
         }
 
-        $supportedSubmissionLocales = $submissionContext->getSupportedSubmissionLocales();
-        $localeNames = AppLocale::getAllLocales();
-        $locales = array_map(function ($localeKey) use ($localeNames) {
-            return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
-        }, $supportedSubmissionLocales);
+        $locales = $submissionContext->getSupportedSubmissionLocaleNames();
+        $locales = array_map(fn (string $locale, string $name) => ['key' => $locale, 'label' => $name], array_keys($locales), $locales);
 
         $latestPublication = $submission->getLatestPublication();
 
@@ -97,7 +96,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         $components[FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
 
         // Add payments form if enabled
-        $paymentManager = \Application::getPaymentManager($submissionContext);
+        $paymentManager = Application::getPaymentManager($submissionContext);
         $templateMgr->assign([
             'submissionPaymentsEnabled' => $paymentManager->publicationEnabled(),
         ]);

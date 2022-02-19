@@ -15,6 +15,7 @@ configuration parameters.
   docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
 - The captcha.captcha_on_login option for displaying a captcha challenge in
   the login interface has been added (default: on)
+- The setting i18n.client_charset was removed. It used to support two options "ISO-8859-1" (LATIN1) and "UTF-8", now we're UTF-8 only.
 
 New config.inc.php section for queues is added, with the following parameters:
     - default_connection (default value: database), being the default queue driver to be used;

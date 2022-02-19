@@ -73,13 +73,6 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
         // Basic grid configuration.
         $this->setTitle('plugins.importexport.common.export.articles');
 
-        // Load submission-specific translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_SUBMISSION, // title filter
-            LOCALE_COMPONENT_PKP_SUBMISSION, // authors filter
-            LOCALE_COMPONENT_APP_MANAGER
-        );
-
         $pluginCategory = $request->getUserVar('category');
         $pluginPathName = $request->getUserVar('plugin');
         $this->_plugin = PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);

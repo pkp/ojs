@@ -19,6 +19,7 @@ use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
 use PKP\form\Form;
+use PKP\facades\Locale;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 
@@ -71,7 +72,7 @@ class IssueForm extends Form
             ]);
 
             // Cover image delete link action
-            if ($coverImage = $this->issue->getCoverImage(AppLocale::getLocale())) {
+            if ($coverImage = $this->issue->getCoverImage(Locale::getLocale())) {
                 $templateMgr->assign(
                     'deleteCoverImageLinkAction',
                     new LinkAction(
@@ -145,7 +146,7 @@ class IssueForm extends Form
     public function initData()
     {
         if (isset($this->issue)) {
-            $locale = AppLocale::getLocale();
+            $locale = Locale::getLocale();
             $this->_data = [
                 'title' => $this->issue->getTitle(null), // Localized
                 'volume' => $this->issue->getVolume(),
@@ -252,7 +253,7 @@ class IssueForm extends Form
             Repo::issue()->add($issue);
         }
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
         // Copy an uploaded cover file for the issue, if there is one.
         if ($temporaryFileId = $this->getData('temporaryFileId')) {
             $user = $request->getUser();

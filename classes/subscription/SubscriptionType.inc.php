@@ -18,7 +18,7 @@
 namespace APP\subscription;
 
 use PKP\db\DAORegistry;
-use Sokil\IsoCodes\IsoCodesFactory;
+use PKP\facades\Locale;
 
 class SubscriptionType extends \PKP\core\DataObject
 {
@@ -164,8 +164,7 @@ class SubscriptionType extends \PKP\core\DataObject
      */
     public function getCurrencyString()
     {
-        $isoCodes = app(IsoCodesFactory::class);
-        $currency = $isoCodes->getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
+        $currency = Locale::getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
         return $currency ? $currency->getLocalName() : 'subscriptionTypes.currency';
     }
 
@@ -176,8 +175,7 @@ class SubscriptionType extends \PKP\core\DataObject
      */
     public function getCurrencyStringShort()
     {
-        $isoCodes = app(IsoCodesFactory::class);
-        $currency = $isoCodes->getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
+        $currency = Locale::getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
         return $currency ? $currency->getLetterCode() : 'subscriptionTypes.currency';
     }
 
@@ -221,7 +219,7 @@ class SubscriptionType extends \PKP\core\DataObject
     public function getDurationYearsMonths($locale = null)
     {
         if (!$this->getDuration()) {
-            return __('subscriptionTypes.nonExpiring', null, $locale);
+            return __('subscriptionTypes.nonExpiring', [], $locale);
         }
 
         $years = (int)floor($this->getDuration() / 12);
@@ -229,17 +227,17 @@ class SubscriptionType extends \PKP\core\DataObject
         $yearsMonths = '';
 
         if ($years == 1) {
-            $yearsMonths = '1 ' . __('subscriptionTypes.year', null, $locale);
+            $yearsMonths = '1 ' . __('subscriptionTypes.year', [], $locale);
         } elseif ($years > 1) {
-            $yearsMonths = $years . ' ' . __('subscriptionTypes.years', null, $locale);
+            $yearsMonths = $years . ' ' . __('subscriptionTypes.years', [], $locale);
         }
 
         if ($months == 1) {
             $yearsMonths .= $yearsMonths == '' ? '1 ' : ' 1 ';
-            $yearsMonths .= __('subscriptionTypes.month', null, $locale);
+            $yearsMonths .= __('subscriptionTypes.month', [], $locale);
         } elseif ($months > 1) {
             $yearsMonths .= $yearsMonths == '' ? $months . ' ' : ' ' . $months . ' ';
-            $yearsMonths .= __('subscriptionTypes.months', null, $locale);
+            $yearsMonths .= __('subscriptionTypes.months', [], $locale);
         }
 
         return $yearsMonths;

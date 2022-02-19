@@ -17,7 +17,7 @@
 
 namespace APP\author;
 
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
@@ -33,7 +33,7 @@ class DAO extends \PKP\author\DAO
      * Authors will be sorted by (family, given). Note that if journalId is null,
      * alphabetized authors for all enabled journals are returned.
      * If authors have the same given names, first names and affiliations in all journal locales,
-     * as well as country and email (otional), they are considered to be the same.
+     * as well as country and email (optional), they are considered to be the same.
      *
      * @param int $journalId Optional journal ID to restrict results to
      * @param string $initial An initial a family name must begin with, "-" for authors with no family names
@@ -47,7 +47,7 @@ class DAO extends \PKP\author\DAO
      */
     public function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false)
     {
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
         $params = [
             Identity::IDENTITY_SETTING_GIVENNAME, $locale,
             Identity::IDENTITY_SETTING_GIVENNAME,

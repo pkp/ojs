@@ -18,7 +18,6 @@ import('controllers.grid.toc.TocGridRow');
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use PKP\controllers\grid\CategoryGridHandler;
@@ -74,8 +73,6 @@ class TocGridHandler extends CategoryGridHandler
     public function initialize($request, $args = null)
     {
         parent::initialize($request, $args);
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
 
         //
         // Grid columns.

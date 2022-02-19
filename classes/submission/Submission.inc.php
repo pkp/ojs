@@ -26,8 +26,8 @@ namespace APP\submission;
 use APP\core\Application;
 use APP\core\Services;
 
+use PKP\facades\Locale;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use PKP\submission\PKPSubmission;
 
 class Submission extends PKPSubmission
@@ -294,7 +294,7 @@ class Submission extends PKPSubmission
     {
         $allGalleys = $this->getData('galleys');
         $galleys = [];
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $tryLocale) {
+        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $tryLocale) {
             foreach (array_keys($allGalleys) as $key) {
                 if ($allGalleys[$key]->getLocale() == $tryLocale) {
                     $galleys[] = $allGalleys[$key];

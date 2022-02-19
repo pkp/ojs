@@ -66,11 +66,6 @@ class SubscriptionTypesGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        // Load user-related translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_MANAGER
-        );
-
         // Basic grid configuration.
         $this->setTitle('subscriptionManager.subscriptionTypes');
 

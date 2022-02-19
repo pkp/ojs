@@ -15,6 +15,8 @@
 
 use PKP\plugins\AuthPlugin;
 
+use PKP\facades\Locale;
+
 class LDAPAuthPlugin extends AuthPlugin
 {
     /**
@@ -353,13 +355,13 @@ class LDAPAuthPlugin extends AuthPlugin
 
         // Only update fields that exist
         if (isset($givenName)) {
-            $user->setGivenName($givenName, AppLocale::getLocale());
+            $user->setGivenName($givenName, Locale::getLocale());
         }
         if (isset($familyName)) {
-            $user->setFamilyName($familyName, AppLocale::getLocale());
+            $user->setFamilyName($familyName, Locale::getLocale());
         }
         if (isset($affiliation)) {
-            $user->setAffiliation($affiliation, AppLocale::getLocale());
+            $user->setAffiliation($affiliation, Locale::getLocale());
         }
         if (isset($email)) {
             $user->setEmail($email);
@@ -371,10 +373,10 @@ class LDAPAuthPlugin extends AuthPlugin
             $user->setMailingAddress($mailingAddress);
         }
         if (isset($biography)) {
-            $user->setBiography($biography, AppLocale::getLocale());
+            $user->setBiography($biography, Locale::getLocale());
         }
         if (isset($interests)) {
-            $user->setInterests($interests, AppLocale::getLocale());
+            $user->setInterests($interests, Locale::getLocale());
         }
     }
 

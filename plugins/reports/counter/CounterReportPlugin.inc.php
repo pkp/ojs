@@ -43,21 +43,6 @@ class CounterReportPlugin extends ReportPlugin
     }
 
     /**
-     * @see PKPPlugin::getLocaleFilename($locale)
-     */
-    public function getLocaleFilename($locale)
-    {
-        $localeFilenames = parent::getLocaleFilename($locale);
-        // Add dynamic locale keys.
-        foreach (glob("{$this->getPluginPath()}/locale/$locale/*.xml") as $file) {
-            if (!in_array($file, $localeFilenames)) {
-                $localeFilenames[] = $file;
-            }
-        }
-        return $localeFilenames;
-    }
-
-    /**
      * @see PKPPlugin::getName()
      */
     public function getName()

@@ -20,6 +20,7 @@ namespace APP\template;
 use APP\core\Application;
 use APP\file\PublicFileManager;
 use PKP\security\Role;
+use PKP\session\SessionManager;
 use PKP\template\PKPTemplateManager;
 
 class TemplateManager extends PKPTemplateManager
@@ -38,7 +39,7 @@ class TemplateManager extends PKPTemplateManager
             'brandImage' => 'templates/images/ojs_brand.png',
         ]);
 
-        if (!defined('SESSION_DISABLE_INIT')) {
+        if (!SessionManager::isDisabled()) {
             /**
              * Kludge to make sure no code that tries to connect to
              * the database is executed (e.g., when loading
@@ -104,7 +105,7 @@ class TemplateManager extends PKPTemplateManager
         parent::setupBackendPage();
 
         $request = Application::get()->getRequest();
-        if (defined('SESSION_DISABLE_INIT')
+        if (SessionManager::isDisabled()
                 || !$request->getContext()
                 || !$request->getUser()) {
             return;

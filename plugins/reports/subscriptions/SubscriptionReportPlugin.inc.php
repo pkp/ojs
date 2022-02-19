@@ -13,9 +13,11 @@
  * @brief Subscription report plugin
  */
 
-use PKP\plugins\ReportPlugin;
 use APP\facades\Repo;
-use Sokil\IsoCodes\IsoCodesFactory;
+use PKP\core\PKPString;
+use PKP\db\DAORegistry;
+use PKP\facades\Locale;
+use PKP\plugins\ReportPlugin;
 
 class SubscriptionReportPlugin extends ReportPlugin
 {
@@ -72,8 +74,7 @@ class SubscriptionReportPlugin extends ReportPlugin
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
         $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
-        $isoCodes = app(IsoCodesFactory::class);
-        $countries = $isoCodes->getCountries();
+        $countries = Locale::getCountries();
 
         header('content-type: text/comma-separated-values');
         header('content-disposition: attachment; filename=subscriptions-' . date('Ymd') . '.csv');
