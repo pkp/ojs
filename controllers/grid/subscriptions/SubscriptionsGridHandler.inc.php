@@ -62,12 +62,6 @@ abstract class SubscriptionsGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        // Load user-related translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_MANAGER,
-            LOCALE_COMPONENT_PKP_USER
-        );
-
         // Grid actions.
         $router = $request->getRouter();
 
@@ -141,8 +135,8 @@ abstract class SubscriptionsGridHandler extends GridHandler
     /**
      * Add a new subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function addSubscription($args, $request)
     {
@@ -153,8 +147,8 @@ abstract class SubscriptionsGridHandler extends GridHandler
     /**
      * Renew a subscription.
      *
-     * @param $args array first parameter is the ID of the subscription to renew
-     * @param $request PKPRequest
+     * @param array $args first parameter is the ID of the subscription to renew
+     * @param PKPRequest $request
      */
     public function renewSubscription($args, $request)
     {

@@ -31,16 +31,14 @@ class IssueGalleyForm extends Form
     /**
      * Constructor.
      *
-     * @param $issue Issue
-     * @param $issueGalley IssueGalley (optional)
+     * @param Issue $issue
+     * @param IssueGalley $issueGalley (optional)
      */
     public function __construct($request, $issue, $issueGalley = null)
     {
         parent::__construct('controllers/grid/issueGalleys/form/issueGalleyForm.tpl');
         $this->_issue = $issue;
         $this->_issueGalley = $issueGalley;
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
 
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash_period', '/^[a-zA-Z0-9]+([\\.\\-_][a-zA-Z0-9]+)*$/'));
@@ -98,7 +96,7 @@ class IssueGalleyForm extends Form
         // Check if public galley ID is already being used
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
 
         $publicGalleyId = $this->getData('publicGalleyId');
         if ($publicGalleyId) {
@@ -116,7 +114,7 @@ class IssueGalleyForm extends Form
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
-                $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+                $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
                 $issueGalley = $issueGalleyDao->getByBestId($this->getData('urlPath'), $this->_issue->getId());
                 if ($issueGalley &&
                     (!$this->_issueGalley || $this->_issueGalley->getId() !== $issueGalley->getId())
@@ -175,10 +173,10 @@ class IssueGalleyForm extends Form
         $user = $request->getUser();
 
         $issueGalley = $this->_issueGalley;
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
 
         // If a temporary file ID was specified (i.e. an upload occurred), get the file for later.
-        $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
+        $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /** @var TemporaryFileDAO $temporaryFileDao */
         $temporaryFile = $temporaryFileDao->getTemporaryFile($this->getData('temporaryFileId'), $user->getId());
 
         parent::execute(...$functionArgs);

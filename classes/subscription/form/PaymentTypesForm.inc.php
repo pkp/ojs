@@ -16,7 +16,6 @@
 namespace APP\subscription\form;
 
 use APP\core\Application;
-use APP\i18n\AppLocale;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
 
@@ -31,8 +30,6 @@ class PaymentTypesForm extends Form
     public function __construct()
     {
         parent::__construct('payments/paymentTypesForm.tpl');
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
         $this->settings = [
             'publicationFee' => 'float',
@@ -87,7 +84,7 @@ class PaymentTypesForm extends Form
         foreach (array_keys($this->settings) as $settingName) {
             $journal->setData($settingName, $this->getData($settingName));
         }
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journalDao->updateObject($journal);
     }
 }

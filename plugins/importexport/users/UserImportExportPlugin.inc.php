@@ -51,9 +51,7 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin
         $xmlFile = array_shift($args);
         $journalPath = array_shift($args);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
 
         $journal = $journalDao->getByPath($journalPath);
 

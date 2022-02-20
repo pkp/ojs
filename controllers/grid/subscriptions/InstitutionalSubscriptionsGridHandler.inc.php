@@ -17,10 +17,10 @@ import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 
 import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\SubscriptionDAO;
-use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
 use PKP\identity\Identity;
@@ -141,7 +141,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
         // Get the context.
         $journal = $request->getContext();
 
-        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
         return $subscriptionDao->getByJournalId($journal->getId(), null, $filter['searchField'], $filter['searchMatch'], $filter['search'] ? $filter['search'] : null, null, null, null, $rangeInfo);
     }
@@ -153,8 +153,8 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
     /**
      * Edit an existing subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -170,8 +170,8 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
     /**
      * Update an existing subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -196,8 +196,8 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
     /**
      * Delete a subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -212,7 +212,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 
         // Identify the subscription ID.
         $subscriptionId = $request->getUserVar('rowId');
-        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         $subscriptionDao->deleteById($subscriptionId, $context->getId());
         return DAO::getDataChangedEvent();
     }

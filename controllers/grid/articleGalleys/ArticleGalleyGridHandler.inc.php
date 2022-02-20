@@ -124,14 +124,6 @@ class ArticleGalleyGridHandler extends GridHandler
         parent::initialize($request, $args);
         $this->setTitle('submission.layout.galleys');
 
-        // Load pkp-lib translations
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_PKP_SUBMISSION,
-            LOCALE_COMPONENT_PKP_USER,
-            LOCALE_COMPONENT_PKP_EDITOR,
-            LOCALE_COMPONENT_APP_EDITOR
-        );
-
         import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
         $cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
 
@@ -230,9 +222,11 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function loadData($request, $filter = null)
     {
-        $collector = Repo::articleGalley()->getCollector();
-        $collector->filterByPublicationIds([$this->getPublication()->getId()]);
-        $galleyIterator = Repo::articleGalley()->getMany($collector);
+        $galleyIterator = Services::get('galley')->getMany([
+            'publicationIds' => [$this->getPublication()->getId()],
+        ]);
+        // ArticleGalleyGridRow::initialize expects the array
+        // key to match the galley id
         $galleys = [];
         foreach ($galleyIterator as $galley) {
             $galleys[$galley->getId()] = $galley;
@@ -246,8 +240,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Edit article galley pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -263,8 +257,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Update article galley pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -285,8 +279,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Clear galley pub id
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -307,8 +301,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Add a galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -327,8 +321,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Delete a galley.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -341,7 +335,7 @@ class ArticleGalleyGridHandler extends GridHandler
         }
         Repo::articleGalley()->delete($galley);
 
-        $notificationDao = DAORegistry::getDAO('NotificationDAO'); /* @var $notificationDao NotificationDAO */
+        $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
         $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
         if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
@@ -362,8 +356,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Edit a galley metadata modal
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -396,8 +390,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Edit a galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -418,8 +412,8 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Save a galley
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -474,7 +468,7 @@ class ArticleGalleyGridHandler extends GridHandler
      * If the user is not assigned, they can edit if they are an editor
      * or admin.
      *
-     * @return boolean
+     * @return bool
      */
     public function canEdit()
     {

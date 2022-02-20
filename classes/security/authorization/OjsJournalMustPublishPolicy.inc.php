@@ -14,7 +14,6 @@
 
 namespace APP\security\authorization;
 
-use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\Role;
 
@@ -25,7 +24,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
     /**
      * Constructor
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function __construct($request)
     {

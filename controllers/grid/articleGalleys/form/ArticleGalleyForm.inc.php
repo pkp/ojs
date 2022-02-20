@@ -16,7 +16,6 @@
  */
 
 use APP\facades\Repo;
-
 use APP\template\TemplateManager;
 
 use PKP\form\Form;
@@ -82,7 +81,7 @@ class ArticleGalleyForm extends Form
                 'representationId' => $this->_articleGalley->getId(),
                 'articleGalley' => $this->_articleGalley,
                 'articleGalleyFile' => $articleGalleyFile,
-                'supportsDependentFiles' => $articleGalleyFile ? Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile) : null,
+                'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFile()->supportsDependentFiles($articleGalleyFile) : null,
             ]);
         }
         $context = $request->getContext();

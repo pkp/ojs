@@ -37,8 +37,8 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
      * Create and return a representation node. Extend the parent class
      * with publication format specific data.
      *
-     * @param $doc DOMDocument
-     * @param $representation Representation
+     * @param DOMDocument $doc
+     * @param Representation $representation
      *
      * @return DOMElement
      */
@@ -53,7 +53,7 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
     /**
      * Get the available submission files for a representation
      *
-     * @param $representation Representation
+     * @param Representation $representation
      *
      * @return array
      */
@@ -61,7 +61,7 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
     {
         $galleyFiles = [];
         if ($representation->getFileId()) {
-            $galleyFiles = [Repo::submissionFiles()->get($representation->getFileId())];
+            $galleyFiles = [Repo::submissionFile()->get($representation->getFileId())];
         }
         return $galleyFiles;
     }

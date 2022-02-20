@@ -24,13 +24,13 @@ class URNSettingsForm extends Form
     //
     // Private properties
     //
-    /** @var integer */
+    /** @var int */
     public $_contextId;
 
     /**
      * Get the context ID.
      *
-     * @return integer
+     * @return int
      */
     public function _getContextId()
     {
@@ -56,8 +56,8 @@ class URNSettingsForm extends Form
     /**
      * Constructor
      *
-     * @param $plugin URNPubIdPlugin
-     * @param $contextId integer
+     * @param URNPubIdPlugin $plugin
+     * @param int $contextId
      */
     public function __construct($plugin, $contextId)
     {

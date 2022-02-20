@@ -1,10 +1,11 @@
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:32-07:00\n"
-"PO-Revision-Date: 2020-05-05 16:49+0000\n"
-"Last-Translator: Felipe Geremia Nievinski <fgnievinski@gmail.com>\n"
+"PO-Revision-Date: 2022-01-13 11:40+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "auth-ldap/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -71,7 +72,7 @@ msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Domínio"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "ID de Autorização Solicitado"
+msgstr "Código de autorização de proxy solicitado"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Propriedades de segurança SASL"
@@ -87,3 +88,6 @@ msgstr "Formato de hash para senhas armazenadas no servidor. SSHA é recomendado
 
 msgid "plugins.auth.ldap.settings.sasl"
 msgstr "Use SASL em vez de autenticação simples"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "Código de autorização solicitado"

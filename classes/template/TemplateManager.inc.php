@@ -20,6 +20,7 @@ namespace APP\template;
 use APP\core\Application;
 use APP\file\PublicFileManager;
 use PKP\security\Role;
+use PKP\session\SessionManager;
 use PKP\template\PKPTemplateManager;
 
 class TemplateManager extends PKPTemplateManager
@@ -27,7 +28,7 @@ class TemplateManager extends PKPTemplateManager
     /**
      * Initialize template engine and assign basic template variables.
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function initialize($request)
     {
@@ -38,7 +39,7 @@ class TemplateManager extends PKPTemplateManager
             'brandImage' => 'templates/images/ojs_brand.png',
         ]);
 
-        if (!defined('SESSION_DISABLE_INIT')) {
+        if (!SessionManager::isDisabled()) {
             /**
              * Kludge to make sure no code that tries to connect to
              * the database is executed (e.g., when loading
@@ -104,7 +105,7 @@ class TemplateManager extends PKPTemplateManager
         parent::setupBackendPage();
 
         $request = Application::get()->getRequest();
-        if (defined('SESSION_DISABLE_INIT')
+        if (SessionManager::isDisabled()
                 || !$request->getContext()
                 || !$request->getUser()) {
             return;
@@ -125,12 +126,12 @@ class TemplateManager extends PKPTemplateManager
             ];
 
             $index = array_search('submissions', array_keys($menu));
-            if ($index === false || count($menu) <= ($index + 1)) {
+            if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
             } else {
-                $menu = array_slice($menu, 0, $index + 1, true) +
-                        ['issues' => $issuesLink] +
-                        array_slice($menu, $index + 1, null, true);
+                $menu = array_slice($menu, 0, $index + 1, true)
+                    + ['issues' => $issuesLink]
+                    + array_slice($menu, $index + 1, null, true);
             }
         }
 

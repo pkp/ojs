@@ -24,18 +24,6 @@ use APP\template\TemplateManager;
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {
     /**
-     * Constructor.
-     *
-     * @param $pubObject object
-     * @param $stageId integer
-     * @param $formParams array
-     */
-    public function __construct($pubObject, $stageId = null, $formParams = null)
-    {
-        parent::__construct($pubObject, $stageId, $formParams);
-    }
-
-    /**
      * @copydoc Form::fetch()
      *
      * @param null|mixed $template
@@ -68,7 +56,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
     /**
      * Clear issue objects pub ids.
      *
-     * @param $pubIdPlugInClassName string
+     * @param string $pubIdPlugInClassName
      */
     public function clearIssueObjectsPubIds($pubIdPlugInClassName)
     {

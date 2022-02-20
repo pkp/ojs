@@ -28,25 +28,25 @@ use PKP\submissionFile\SubmissionFile;
 
 class ArticleHandler extends Handler
 {
-    /** context associated with the request **/
+    /** @var Context Context associated with the request */
     public $context;
 
-    /** issue associated with the request **/
+    /** @var Issue Issue associated with the request */
     public $issue;
 
-    /** submission associated with the request **/
+    /** @var Submission Submission associated with the request */
     public $article;
 
-    /** category associated with the request **/
+    /** @var Category Category associated with the request */
     public $categories;
 
-    /** publication associated with the request **/
+    /** @var Publication Publication associated with the request */
     public $publication;
 
-    /** galley associated with the request **/
+    /** @var Representation galley associated with the request */
     public $galley;
 
-    /** fileId associated with the request **/
+    /** @var int fileId associated with the request */
     public $fileId;
 
 
@@ -61,7 +61,6 @@ class ArticleHandler extends Handler
             if (strcasecmp($bearer, 'Bearer') == 0 && !empty($jwt)) {
                 $secret = Config::getVar('security', 'api_key_secret', '');
                 if (!$secret) {
-                    AppLocale::requireComponents(LOCALE_COMPONENT_PKP_API);
                     $templateMgr = TemplateManager::getManager($request);
                     $templateMgr->assign('message', 'api.500.apiSecretKeyMissing');
                     return $templateMgr->display('frontend/pages/message.tpl');
@@ -75,7 +74,6 @@ class ArticleHandler extends Handler
                     }
                     $this->setApiToken($apiToken);
                 } catch (Exception $e) {
-                    AppLocale::requireComponents(LOCALE_COMPONENT_PKP_API);
                     $templateMgr = TemplateManager::getManager($request);
                     $templateMgr->assign('message', 'api.400.invalidApiToken');
                     return $templateMgr->display('frontend/pages/message.tpl');
@@ -93,8 +91,8 @@ class ArticleHandler extends Handler
     /**
      * @see PKPHandler::initialize()
      *
-     * @param $request Request
-     * @param $args array Arguments list
+     * @param Request $request
+     * @param array $args Arguments list
      */
     public function initialize($request, $args = [])
     {
@@ -151,15 +149,9 @@ class ArticleHandler extends Handler
         }
 
         if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
-            $galleys = Repo::articleGalley()->getMany(
-                Repo::articleGalley()
-                    ->getCollector()
-                    ->filterByPublicationIds([$this->publication->getId()])
-            );
-
-
+            $galleys = (array) $this->publication->getData('galleys');
             foreach ($galleys as $galley) {
-                if ($galley->getData('id') == $galleyId) {
+                if ($galley->getBestGalleyId() == $galleyId) {
                     $this->galley = $galley;
                     break;
 
@@ -201,8 +193,8 @@ class ArticleHandler extends Handler
     /**
      * View Article. (Either article landing page or galley view.)
      *
-     * @param $args array
-     * @param $request Request
+     * @param array $args
+     * @param Request $request
      */
     public function view($args, $request)
     {
@@ -230,7 +222,7 @@ class ArticleHandler extends Handler
             'firstPublication' => $firstPublication,
         ]);
 
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $templateMgr->assign([
             'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
             'publication' => $publication,
@@ -254,7 +246,7 @@ class ArticleHandler extends Handler
         $primaryGalleys = [];
         $supplementaryGalleys = [];
         if ($galleys) {
-            $genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
+            $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
             $primaryGenres = $genreDao->getPrimaryByContextId($context->getId())->toArray();
             $primaryGenreIds = array_map(function ($genre) {
                 return $genre->getId();
@@ -284,7 +276,7 @@ class ArticleHandler extends Handler
 
         // Citations
         if ($publication->getData('citationsRaw')) {
-            $citationDao = DAORegistry::getDAO('CitationDAO'); /* @var $citationDao CitationDAO */
+            $citationDao = DAORegistry::getDAO('CitationDAO'); /** @var CitationDAO $citationDao */
             $parsedCitations = $citationDao->getByPublicationId($publication->getId());
             $templateMgr->assign([
                 'parsedCitations' => $parsedCitations->toArray(),
@@ -331,7 +323,7 @@ class ArticleHandler extends Handler
             $subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
             $subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
-            $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+            $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
             $templateMgr->assign(
                 'hasAccess',
                 !$subscriptionRequired ||
@@ -383,8 +375,8 @@ class ArticleHandler extends Handler
      * Download an article file
      * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function viewFile($args, $request)
     {
@@ -399,8 +391,8 @@ class ArticleHandler extends Handler
      * Download a supplementary file.
      * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function downloadSuppFile($args, $request)
     {
@@ -412,11 +404,11 @@ class ArticleHandler extends Handler
         }
         $suppId = $args[1] ?? 0;
 
-        $collector = Repo::submissionFiles()
+        $collector = Repo::submissionFile()
             ->getCollector()
-            ->filterBySubmissionIds([$articleId->getId()]);
+            ->filterBySubmissionIds([$article->getId()]);
 
-        $submissionFiles = Repo::submissionFiles()->getMany($collector);
+        $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
                 $articleGalleys = Repo::articleGalley()->getMany(
@@ -462,7 +454,7 @@ class ArticleHandler extends Handler
 
             // If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
             if ($this->fileId != $this->galley->getData('submissionFileId')) {
-                $collector = Repo::submissionFiles()
+                $collector = Repo::submissionFile()
                     ->getCollector()
                     ->filterByAssoc(
                         ASSOC_TYPE_SUBMISSION_FILE,
@@ -470,7 +462,7 @@ class ArticleHandler extends Handler
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
                     ->includeDependentFiles();
-                $dependentFileIds = Repo::submissionFiles()
+                $dependentFileIds = Repo::submissionFile()
                     ->getIds($collector)
                     ->toArray();
                 if (!in_array($this->fileId, $dependentFileIds)) {
@@ -479,7 +471,7 @@ class ArticleHandler extends Handler
             }
 
             if (!HookRegistry::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
-                $submissionFile = Repo::submissionFiles()->get($this->fileId);
+                $submissionFile = Repo::submissionFile()->get($this->fileId);
 
                 if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
                     $request->getDispatcher()->handle404();
@@ -500,9 +492,9 @@ class ArticleHandler extends Handler
     /**
      * Determines whether a user can view this article galley or not.
      *
-     * @param $request Request
-     * @param $articleId string
-     * @param $galleyId int or string
+     * @param Request $request
+     * @param string $articleId
+     * @param int|string $galleyId
      */
     public function userCanViewGalley($request, $articleId, $galleyId = null)
     {
@@ -542,7 +534,7 @@ class ArticleHandler extends Handler
 
                 $purchasedIssue = false;
                 if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
-                    $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+                    $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
                     $purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
                 }
 
@@ -564,7 +556,7 @@ class ArticleHandler extends Handler
 
                         /* if the article has been paid for then forget about everything else
                          * and just let them access the article */
-                        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+                        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
                         $dateEndMembership = $user->getSetting('dateEndMembership', 0);
                         if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $submission->getId())
                             || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
@@ -593,16 +585,5 @@ class ArticleHandler extends Handler
             $request->redirect(null, 'search');
         }
         return true;
-    }
-
-    /**
-     * Set up the template. (Load required locale components.)
-     *
-     * @param $request PKPRequest
-     */
-    public function setupTemplate($request)
-    {
-        parent::setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
     }
 }

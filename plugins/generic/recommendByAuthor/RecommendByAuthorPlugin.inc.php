@@ -13,6 +13,7 @@
  * @brief Plugin to recommend articles from the same author.
  */
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\search\ArticleSearch;
 use PKP\core\VirtualArrayIterator;
@@ -35,7 +36,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+        if (Application::isUnderMaintenance()) {
             return $success;
         }
 
@@ -77,7 +78,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
         $displayedArticle = $smarty->getTemplateVars('article');
         $authors = Repo::author()->getSubmissionAuthors($displayedArticle);
         $foundArticles = [];
-        foreach ($authors as $author) { /* @var $author Author */
+        foreach ($authors as $author) { /** @var Author $author */
             // The following article search is by name only as authors are
             // not normalized in OJS. This is rather crude and may produce
             // false positives or miss some entries. But there's no other way

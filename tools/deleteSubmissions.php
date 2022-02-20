@@ -24,7 +24,7 @@ class SubmissionDeletionTool extends CommandLineTool
     /**
      * Constructor.
      *
-     * @param $argv array command-line arguments
+     * @param array $argv command-line arguments
      */
     public function __construct($argv = [])
     {

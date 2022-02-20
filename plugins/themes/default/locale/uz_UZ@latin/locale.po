@@ -1,7 +1,8 @@
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-29 17:24+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2022-01-03 08:14+0000\n"
+"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -23,7 +24,7 @@ msgid "plugins.themes.default.option.typography.label"
 msgstr "Tipografiya"
 
 msgid "plugins.themes.default.description"
-msgstr "Bu holat standart holatga o‘tkazadi"
+msgstr "Bu holat standart holatga o‘tkazadi."
 
 msgid "plugins.themes.default.name"
 msgstr "Standart holat"

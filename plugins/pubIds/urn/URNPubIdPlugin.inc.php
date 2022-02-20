@@ -15,6 +15,7 @@
 
 
 use APP\article\ArticleGalley;
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
@@ -35,7 +36,7 @@ class URNPubIdPlugin extends PubIdPlugin
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+        if (Application::isUnderMaintenance()) {
             return $success;
         }
         if ($success && $this->getEnabled($mainContextId)) {
@@ -142,7 +143,7 @@ class URNPubIdPlugin extends PubIdPlugin
     {
         $templateMgr->addJavaScript(
             'urnCheckNo',
-            $request->getBaseUrl() . DIRECTORY_SEPARATOR . $this->getPluginPath() . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR . 'checkNumber.js',
+            "{$request->getBaseUrl()}/{$this->getPluginPath()}/js/checkNumber.js",
             [
                 'inline' => false,
                 'contexts' => ['publicIdentifiersForm', 'backend'],
@@ -283,9 +284,9 @@ class URNPubIdPlugin extends PubIdPlugin
     /**
      * Add URN to submission, issue or galley properties
      *
-     * @param $hookName string <Object>::getProperties::summaryProperties or
+     * @param string $hookName <Object>::getProperties::summaryProperties or
      *  <Object>::getProperties::fullProperties
-     * @param $args array [
+     * @param array $args [
      * 		@option $props array Existing properties
      * 		@option $object Submission|Issue|Galley
      * 		@option $args array Request args
@@ -303,8 +304,8 @@ class URNPubIdPlugin extends PubIdPlugin
     /**
      * Add URN submission, issue or galley values
      *
-     * @param $hookName string <Object>::getProperties::values
-     * @param $args array [
+     * @param string $hookName <Object>::getProperties::values
+     * @param array $args [
      * 		@option $values array Key/value store of property values
      * 		@option $object Submission|Issue|Galley
      * 		@option $props array Requested properties
@@ -338,8 +339,8 @@ class URNPubIdPlugin extends PubIdPlugin
     /**
      * Validate a publication's URN against the plugin's settings
      *
-     * @param $hookName string
-     * @param $args array
+     * @param string $hookName
+     * @param array $args
      */
     public function validatePublicationUrn($hookName, $args)
     {
@@ -376,8 +377,8 @@ class URNPubIdPlugin extends PubIdPlugin
     /**
      * Add URN fields to the publication identifiers form
      *
-     * @param $hookName string Form::config::before
-     * @param $form FormComponent The form object
+     * @param string $hookName Form::config::before
+     * @param FormComponent $form The form object
      */
     public function addPublicationFormFields($hookName, $form)
     {
@@ -450,8 +451,8 @@ class URNPubIdPlugin extends PubIdPlugin
     /**
      * Show URN during final publish step
      *
-     * @param $hookName string Form::config::before
-     * @param $form FormComponent The form object
+     * @param string $hookName Form::config::before
+     * @param FormComponent $form The form object
      */
     public function addPublishFormNotice($hookName, $form)
     {

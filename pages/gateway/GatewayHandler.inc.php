@@ -15,9 +15,11 @@
 
 use APP\facades\Repo;
 use APP\handler\Handler;
-
 use APP\template\TemplateManager;
 use Illuminate\Support\LazyCollection;
+use PKP\db\DAORegistry;
+use PKP\facades\Locale;
+use PKP\plugins\PluginRegistry;
 
 class GatewayHandler extends Handler
 {
@@ -26,7 +28,7 @@ class GatewayHandler extends Handler
     /**
      * Constructor
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function __construct($request)
     {
@@ -49,8 +51,8 @@ class GatewayHandler extends Handler
     /**
      * Index handler.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function index($args, $request)
     {
@@ -60,8 +62,8 @@ class GatewayHandler extends Handler
     /**
      * Display the LOCKSS manifest.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function lockss($args, $request)
     {
@@ -109,13 +111,12 @@ class GatewayHandler extends Handler
 
             $locales = $journal->getSupportedLocaleNames();
             if (!isset($locales) || empty($locales)) {
-                $localeNames = AppLocale::getAllLocales();
-                $primaryLocale = AppLocale::getPrimaryLocale();
-                $locales = [$primaryLocale => $localeNames[$primaryLocale]];
+                $primaryLocale = Locale::getPrimaryLocale();
+                $locales = [$primaryLocale => Locale::getMetadata($primaryLocale)->getDisplayName()];
             }
             $templateMgr->assign('locales', $locales);
         } else {
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
             $journals = $journalDao->getAll(true);
             $templateMgr->assign('journals', $journals);
         }
@@ -126,8 +127,8 @@ class GatewayHandler extends Handler
     /**
      * Display the CLOCKSS manifest.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function clockss($args, $request)
     {
@@ -181,13 +182,12 @@ class GatewayHandler extends Handler
 
             $locales = $journal->getSupportedLocaleNames();
             if (!isset($locales) || empty($locales)) {
-                $localeNames = AppLocale::getAllLocales();
-                $primaryLocale = AppLocale::getPrimaryLocale();
-                $locales = [$primaryLocale => $localeNames[$primaryLocale]];
+                $primaryLocale = Locale::getPrimaryLocale();
+                $locales = [$primaryLocale => Locale::getMetadata($primaryLocale)->getDisplayName()];
             }
             $templateMgr->assign('locales', $locales);
         } else {
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
             $journals = $journalDao->getAll(true);
             $templateMgr->assign('journals', $journals);
         }
@@ -198,8 +198,8 @@ class GatewayHandler extends Handler
     /**
      * Handle requests for gateway plugins.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function plugin($args, $request)
     {

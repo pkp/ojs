@@ -15,7 +15,6 @@
 
 use APP\facades\Repo;
 use APP\issue\Collector;
-
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
@@ -73,13 +72,6 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
 
         // Basic grid configuration.
         $this->setTitle('plugins.importexport.common.export.articles');
-
-        // Load submission-specific translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_SUBMISSION, // title filter
-            LOCALE_COMPONENT_PKP_SUBMISSION, // authors filter
-            LOCALE_COMPONENT_APP_MANAGER
-        );
 
         $pluginCategory = $request->getUserVar('category');
         $pluginPathName = $request->getUserVar('plugin');
@@ -255,6 +247,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         $context = $request->getContext();
         [$search, $column, $issueId, $statusId] = $this->getFilterValues($filter);
         $title = $author = null;
@@ -267,7 +260,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
         if ($statusId) {
             $pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
         }
-        return Repo::articleGalley()->dao->getExportable(
+        return $articleGalleyDao->getExportable(
             $context->getId(),
             $this->_plugin->getPubIdType(),
             $title,

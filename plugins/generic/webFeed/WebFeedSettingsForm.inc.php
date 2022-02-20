@@ -28,8 +28,8 @@ class WebFeedSettingsForm extends Form
     /**
      * Constructor
      *
-     * @param $plugin WebFeedPlugin Web feed plugin
-     * @param $contextId int Context ID
+     * @param WebFeedPlugin $plugin Web feed plugin
+     * @param int $contextId Context ID
      */
     public function __construct($plugin, $contextId)
     {

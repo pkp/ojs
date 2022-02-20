@@ -17,6 +17,7 @@ use APP\facades\Repo;
 use APP\workflow\EditorDecisionActionsManager;
 
 use PKP\filter\PersistableFilter;
+use PKP\i18n\LocaleConversion;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
 {
@@ -51,7 +52,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * @see Filter::process()
      *
-     * @param $submissions array Array of submissions
+     * @param array $submissions Array of submissions
      *
      * @return DOMDocument
      */
@@ -64,7 +65,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
 
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journal = null;
 
         $rootNode = $doc->createElement('ArticleSet');
@@ -103,7 +104,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 $articleNode->appendChild($doiNode);
             }
 
-            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(AppLocale::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
+            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
 
             $authorListNode = $doc->createElement('AuthorList');
             foreach ((array) $publication->getData('authors') as $author) {
@@ -124,7 +125,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $historyNode = $doc->createElement('History');
             $historyNode->appendChild($this->generatePubDateDom($doc, $submission->getDateSubmitted(), 'received'));
 
-            $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /* @var $editDecisionDao EditDecisionDAO */
+            $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
             $editDecisions = (array) $editDecisionDao->getEditorDecisions($submission->getId());
             do {
                 $editorDecision = array_pop($editDecisions);
@@ -150,10 +151,10 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Construct and return a Journal element.
      *
-     * @param $doc DOMDocument
-     * @param $journal Journal
-     * @param $issue Issue
-     * @param $submission Submission
+     * @param DOMDocument $doc
+     * @param Journal $journal
+     * @param Issue $issue
+     * @param Submission $submission
      */
     public function createJournalNode($doc, $journal, $issue, $submission)
     {
@@ -205,11 +206,11 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Generate and return an author node representing the supplied author.
      *
-     * @param $doc DOMDocument
-     * @param $journal Journal
-     * @param $issue Issue
-     * @param $submission Submission
-     * @param $author Author
+     * @param DOMDocument $doc
+     * @param Journal $journal
+     * @param Issue $issue
+     * @param Submission $submission
+     * @param Author $author
      *
      * @return DOMElement
      */
@@ -233,9 +234,9 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Generate and return a date element per the PubMed standard.
      *
-     * @param $doc DOMDocument
-     * @param $pubDate string
-     * @param $pubStatus string
+     * @param DOMDocument $doc
+     * @param string $pubDate
+     * @param string $pubStatus
      *
      * @return DOMElement
      */

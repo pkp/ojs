@@ -14,8 +14,10 @@
  */
 
 use APP\facades\Repo;
+use PKP\core\PKPString;
+use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
-use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionReportPlugin extends ReportPlugin
 {
@@ -35,7 +37,7 @@ class SubscriptionReportPlugin extends ReportPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -45,7 +47,7 @@ class SubscriptionReportPlugin extends ReportPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String display name of plugin
+     * @return string display name of plugin
      */
     public function getDisplayName()
     {
@@ -55,7 +57,7 @@ class SubscriptionReportPlugin extends ReportPlugin
     /**
      * Get the description text for this plugin.
      *
-     * @return String description text for this plugin
+     * @return string description text for this plugin
      */
     public function getDescription()
     {
@@ -69,11 +71,10 @@ class SubscriptionReportPlugin extends ReportPlugin
     {
         $journal = $request->getJournal();
         $journalId = $journal->getId();
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
-        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
-        $isoCodes = app(IsoCodesFactory::class);
-        $countries = $isoCodes->getCountries();
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
+        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
+        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+        $countries = Locale::getCountries();
 
         header('content-type: text/comma-separated-values');
         header('content-disposition: attachment; filename=subscriptions-' . date('Ymd') . '.csv');
@@ -270,9 +271,9 @@ class SubscriptionReportPlugin extends ReportPlugin
     /**
      * Pretty format IP ranges, one per line via line feeds.
      *
-     * @param $ipRanges array IP ranges
+     * @param array $ipRanges IP ranges
      *
-     * @return String Text of IP ranges formatted with newlines
+     * @return string Text of IP ranges formatted with newlines
      */
     public function _formatIPRanges($ipRanges)
     {

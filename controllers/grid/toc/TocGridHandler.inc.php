@@ -18,7 +18,6 @@ import('controllers.grid.toc.TocGridRow');
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use PKP\controllers\grid\CategoryGridHandler;
@@ -74,8 +73,6 @@ class TocGridHandler extends CategoryGridHandler
     public function initialize($request, $args = null)
     {
         parent::initialize($request, $args);
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION);
 
         //
         // Grid columns.
@@ -252,8 +249,8 @@ class TocGridHandler extends CategoryGridHandler
     /**
      * Remove an article from the issue.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -292,8 +289,8 @@ class TocGridHandler extends CategoryGridHandler
     /**
      * Set access status on an article.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */

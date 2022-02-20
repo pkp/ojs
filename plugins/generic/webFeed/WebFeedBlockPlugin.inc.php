@@ -21,7 +21,7 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     protected $_parentPlugin;
 
     /**
-     * @param $parentPlugin WebFeedPlugin
+     * @param WebFeedPlugin $parentPlugin
      */
     public function __construct($parentPlugin)
     {
@@ -33,7 +33,7 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -51,7 +51,7 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String
+     * @return string
      */
     public function getDisplayName()
     {
@@ -87,8 +87,8 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     /**
      * Get the HTML contents for this block.
      *
-     * @param $templateMgr object
-     * @param $request PKPRequest
+     * @param object $templateMgr
+     * @param PKPRequest $request
      *
      * @return $string
      */

@@ -10,7 +10,6 @@ use APP\journal\JournalDAO;
 use APP\journal\SectionDAO;
 use APP\publication\Publication;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
@@ -95,7 +94,7 @@ class Repository
     /** @copydoc DAO::getCollector() */
     public function getCollector(): Collector
     {
-        return App::make(Collector::class);
+        return app(Collector::class);
     }
 
     /**
@@ -183,14 +182,14 @@ class Repository
         $issueId = $issue->getId();
 
         // Delete issue-specific ordering if it exists.
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionDao->deleteCustomSectionOrdering($issueId);
 
         // Delete published issue galleys and issue files
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         $issueGalleyDao->deleteByIssueId($issueId);
 
-        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFileDao->deleteByIssueId($issueId);
 
         $issueFileManager = new IssueFileManager($issueId);
@@ -215,7 +214,6 @@ class Repository
     /**
      * Retrieve current issue
      *
-     * @param $contextId int
      * @param bool $useCache TODO: Not currently implemented. Adding to preserved desired cache usage in future
      */
     public function getCurrent(int $contextId, bool $useCache = false): ?Issue
@@ -321,5 +319,23 @@ class Repository
     {
         $collector = $this->getCollector()->filterByContextIds([$contextId]);
         Repo::issue()->deleteMany($collector);
+    }
+
+    /**
+     * Creates a DOI for the given issue
+     */
+    public function createDoi(Issue $issue)
+    {
+        /** @var JournalDAO $contextDao */
+        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $context = $contextDao->getById($issue->getData('journalId'));
+
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE) && empty($issue->getData('doiId'))) {
+            $doiId = Repo::doi()->mintIssueDoi($issue);
+            if ($doiId !== null) {
+                $issue->setData('doiId', $doiId);
+                $this->dao->update($issue);
+            }
+        }
     }
 }

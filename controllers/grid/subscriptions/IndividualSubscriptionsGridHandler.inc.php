@@ -16,9 +16,9 @@
 import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 import('controllers.grid.subscriptions.IndividualSubscriptionForm');
 
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\SubscriptionDAO;
-use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
 use PKP\identity\Identity;
@@ -146,7 +146,7 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler
         // Get the context.
         $journal = $request->getContext();
 
-        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
         return $subscriptionDao->getByJournalId($journal->getId(), null, $filter['searchField'], $filter['searchMatch'], $filter['search'] ? $filter['search'] : null, null, null, null, $rangeInfo);
     }
@@ -158,8 +158,8 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler
     /**
      * Edit an existing subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -175,8 +175,8 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler
     /**
      * Update an existing subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -201,8 +201,8 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler
     /**
      * Delete a subscription.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -217,7 +217,7 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler
 
         // Identify the subscription ID.
         $subscriptionId = $request->getUserVar('rowId');
-        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         $subscriptionDao->deleteById($subscriptionId, $context->getId());
         return DAO::getDataChangedEvent();
     }

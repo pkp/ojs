@@ -18,7 +18,6 @@
 namespace APP\subscription;
 
 use PKP\core\Core;
-use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\plugins\HookRegistry;
 
@@ -27,8 +26,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve an individual subscription by subscription ID.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $journalId int Optional journal ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $journalId Optional journal ID
      *
      * @return IndividualSubscription
      */
@@ -54,8 +53,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve individual subscription by user ID for journal.
      *
-     * @param $userId int
-     * @param $journalId int
+     * @param int $userId
+     * @param int $journalId
      *
      * @return IndividualSubscription
      */
@@ -79,8 +78,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve individual subscriptions by user ID.
      *
-     * @param $userId int
-     * @param $rangeInfo DBResultRange
+     * @param int $userId
+     * @param DBResultRange $rangeInfo
      *
      * @return object DAOResultFactory containing IndividualSubscriptions
      */
@@ -104,8 +103,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Return number of individual subscriptions with given status for journal.
      *
-     * @param $journalId int
-     * @param $status int
+     * @param int $journalId
+     * @param int $status
      *
      * @return int
      */
@@ -133,7 +132,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Get the number of individual subscriptions for a particular journal.
      *
-     * @param $journalId int
+     * @param int $journalId
      *
      * @return int
      */
@@ -145,9 +144,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an individual subscription exists for a given subscriptionId.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExists($subscriptionId)
     {
@@ -168,10 +167,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an individual subscription exists for a given user.
      *
-     * @param $subscriptionId int
-     * @param $userId int
+     * @param int $subscriptionId
+     * @param int $userId
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByUser($subscriptionId, $userId)
     {
@@ -193,10 +192,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an individual subscription exists for a given user and journal.
      *
-     * @param $userId int
-     * @param $journalId int
+     * @param int $userId
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByUserForJournal($userId, $journalId)
     {
@@ -228,7 +227,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to return an IndividualSubscription object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return IndividualSubscription
      */
@@ -243,7 +242,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Insert a new individual subscription.
      *
-     * @param $individualSubscription IndividualSubscription
+     * @param IndividualSubscription $individualSubscription
      *
      * @return int
      */
@@ -255,7 +254,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Update an existing individual subscription.
      *
-     * @param $individualSubscription IndividualSubscription
+     * @param IndividualSubscription $individualSubscription
      */
     public function updateObject($individualSubscription)
     {
@@ -265,8 +264,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete an individual subscription by subscription ID.
      *
-     * @param $subscriptionId int
-     * @param $journalId int
+     * @param int $subscriptionId
+     * @param int $journalId
      */
     public function deleteById($subscriptionId, $journalId = null)
     {
@@ -280,9 +279,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete individual subscriptions by journal ID.
      *
-     * @param $journalId int
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function deleteByJournalId($journalId)
     {
@@ -301,9 +300,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete individual subscriptions by user ID.
      *
-     * @param $userId int
+     * @param int $userId
      *
-     * @return boolean
+     * @return bool
      */
     public function deleteByUserId($userId)
     {
@@ -322,10 +321,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete individual subscription by user ID and journal ID.
      *
-     * @param $userId int
-     * @param $journalId int
+     * @param int $userId
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function deleteByUserIdForJournal($userId, $journalId)
     {
@@ -344,9 +343,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete all individual subscriptions by subscription type ID.
      *
-     * @param $subscriptionTypeId int
+     * @param int $subscriptionTypeId
      *
-     * @return boolean
+     * @return bool
      */
     public function deleteByTypeId($subscriptionTypeId)
     {
@@ -366,7 +365,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve all individual subscriptions.
      *
-     * @param $rangeInfo DBResultRange
+     * @param DBResultRange $rangeInfo
      *
      * @return object DAOResultFactory containing IndividualSubscriptions
      */
@@ -392,14 +391,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve individual subscriptions matching a particular journal ID.
      *
-     * @param $journalId int
-     * @param $status int
-     * @param $searchField int
-     * @param $searchMatch string "is" or "contains" or "startsWith"
-     * @param $search String to look in $searchField for
-     * @param $dateField int
-     * @param $dateFrom String date to search from
-     * @param $dateTo String date to search to
+     * @param int $journalId
+     * @param int $status
+     * @param int $searchField
+     * @param string $searchMatch "is" or "contains" or "startsWith"
+     * @param string $search to look in $searchField for
+     * @param int $dateField
+     * @param string $dateFrom date to search from
+     * @param string $dateTo date to search to
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching IndividualSubscriptions
@@ -425,12 +424,12 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Check whether user with ID has a valid individual subscription for a given journal.
      *
-     * @param $userId int
-     * @param $journalId int
-     * @param $check int Check using either start date, end date, or both (default)
-     * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
+     * @param int $userId
+     * @param int $journalId
+     * @param int $check Check using either start date, end date, or both (default)
+     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
-     * @return boolean
+     * @return bool
      */
     public function isValidIndividualSubscription($userId, $journalId, $check = Subscription::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
     {
@@ -466,7 +465,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
 				AND s.journal_id = ?
 				AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
-				AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
+				AND (st.duration IS NULL OR (' . $dateSql . '))
 				AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 				OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
             [(int) $userId, (int) $journalId]
@@ -478,9 +477,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve active individual subscriptions matching a particular end date and journal ID.
      *
-     * @param $dateEnd string (YYYY-MM-DD)
-     * @param $journalId int
-     * @param $rangeInfo DBResultRange
+     * @param string $dateEnd (YYYY-MM-DD)
+     * @param int $journalId
+     * @param DBResultRange $rangeInfo
      *
      * @return object DAOResultFactory containing matching IndividualSubscriptions
      */
@@ -510,9 +509,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      * Renew an individual subscription by dateEnd + duration of subscription type
      * if the individual subscription is expired, renew to current date + duration
      *
-     * @param $individualSubscription IndividualSubscription
+     * @param IndividualSubscription $individualSubscription
      *
-     * @return boolean
+     * @return bool
      */
     public function renewSubscription($individualSubscription)
     {

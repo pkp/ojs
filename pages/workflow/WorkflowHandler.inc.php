@@ -15,9 +15,11 @@
 
 import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
+use APP\core\Application;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
-
+use PKP\core\PKPApplication;
+use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
 use PKP\security\Role;
 
@@ -47,7 +49,7 @@ class WorkflowHandler extends PKPWorkflowHandler
     /**
      * Setup variables for the template
      *
-     * @param $request Request
+     * @param Request $request
      */
     public function setupIndex($request)
     {
@@ -61,11 +63,8 @@ class WorkflowHandler extends PKPWorkflowHandler
             $submissionContext = Services::get('context')->get($submission->getContextId());
         }
 
-        $supportedSubmissionLocales = $submissionContext->getSupportedSubmissionLocales();
-        $localeNames = AppLocale::getAllLocales();
-        $locales = array_map(function ($localeKey) use ($localeNames) {
-            return ['key' => $localeKey, 'label' => $localeNames[$localeKey]];
-        }, $supportedSubmissionLocales);
+        $locales = $submissionContext->getSupportedSubmissionLocaleNames();
+        $locales = array_map(fn (string $locale, string $name) => ['key' => $locale, 'label' => $name], array_keys($locales), $locales);
 
         $latestPublication = $submission->getLatestPublication();
 
@@ -79,7 +78,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         $issueEntryForm = new APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
         $sectionWordLimits = [];
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionIterator = $sectionDao->getByContextId($submissionContext->getId());
         while ($section = $sectionIterator->next()) {
             $sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
@@ -97,7 +96,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         $components[FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
 
         // Add payments form if enabled
-        $paymentManager = \Application::getPaymentManager($submissionContext);
+        $paymentManager = Application::getPaymentManager($submissionContext);
         $templateMgr->assign([
             'submissionPaymentsEnabled' => $paymentManager->publicationEnabled(),
         ]);
@@ -158,7 +157,7 @@ class WorkflowHandler extends PKPWorkflowHandler
     /**
      * Return the editor assignment notification type based on stage id.
      *
-     * @param $stageId int
+     * @param int $stageId
      *
      * @return int
      */

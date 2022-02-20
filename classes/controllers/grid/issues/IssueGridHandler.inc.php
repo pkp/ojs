@@ -21,7 +21,6 @@
 namespace APP\controllers\grid\issues;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\issue\Collector;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
@@ -35,6 +34,7 @@ use PKP\core\Core;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\db\DAO;
+use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
@@ -94,10 +94,6 @@ class IssueGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-        // Load submission-specific translations
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
-
         // Grid columns.
         import('controllers.grid.issues.IssueGridCellProvider');
         $issueGridCellProvider = new \IssueGridCellProvider();
@@ -131,7 +127,7 @@ class IssueGridHandler extends GridHandler
      * Private function to add central columns to the grid.
      * May be overridden by subclasses.
      *
-     * @param $issueGridCellProvider IssueGridCellProvider
+     * @param IssueGridCellProvider $issueGridCellProvider
      */
     protected function _addCenterColumns($issueGridCellProvider)
     {
@@ -154,8 +150,8 @@ class IssueGridHandler extends GridHandler
     /**
      * An action to add a new issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function addIssue($args, $request)
     {
@@ -167,8 +163,8 @@ class IssueGridHandler extends GridHandler
     /**
      * An action to edit an issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -190,8 +186,8 @@ class IssueGridHandler extends GridHandler
     /**
      * An action to edit an issue's identifying data
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -208,8 +204,8 @@ class IssueGridHandler extends GridHandler
     /**
      * An action to upload an issue file. Used for issue cover images.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -233,10 +229,10 @@ class IssueGridHandler extends GridHandler
     /**
      * Delete an uploaded cover image.
      *
-     * @param $args array
+     * @param array $args
      *   `coverImage` string Filename of the cover image to be deleted.
      *   `issueId` int Id of the issue this cover image is attached to
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -252,7 +248,7 @@ class IssueGridHandler extends GridHandler
             return new JSONMessage(false, __('editor.issues.removeCoverImageOnDifferentContextNowAllowed'));
         }
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
         if ($args['coverImage'] != $issue->getCoverImage($locale)) {
             return new JSONMessage(false, __('editor.issues.removeCoverImageFileNameMismatch'));
         }
@@ -278,8 +274,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Update an issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -304,8 +300,8 @@ class IssueGridHandler extends GridHandler
     /**
      * An action to edit an issue's access settings
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -322,8 +318,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Update an issue's access settings
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -348,8 +344,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Removes an issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function deleteIssue($args, $request)
     {
@@ -400,8 +396,8 @@ class IssueGridHandler extends GridHandler
     /**
      * An action to edit issue pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -417,8 +413,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Update issue pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -439,8 +435,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Clear issue pub id
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -462,8 +458,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Clear issue objects pub ids
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -483,8 +479,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Display the table of contents
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -499,8 +495,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Displays the issue galleys page.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -526,8 +522,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Publish issue
      *
-     * @param $args array
-     * @param $request Request
+     * @param array $args
+     * @param Request $request
      */
     public function publishIssue($args, $request)
     {
@@ -546,9 +542,10 @@ class IssueGridHandler extends GridHandler
                 $assignPublicIdentifiersForm->initData();
                 return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
             }
-            // Asign pub ids
+            // Assign pub ids
             $assignPublicIdentifiersForm->readInputData();
             $assignPublicIdentifiersForm->execute();
+            Repo::issue()->createDoi($issue);
         }
 
         $issue->setPublished(1);
@@ -576,6 +573,8 @@ class IssueGridHandler extends GridHandler
         Repo::issue()->updateCurrent($contextId, $issue);
 
         if (!$wasPublished) {
+            Repo::doi()->issueUpdated($issue);
+
             // Publish all related publications
             // Include published submissions in order to support cases where two
             // versions of the same submission are published in distinct issues. In
@@ -604,7 +603,7 @@ class IssueGridHandler extends GridHandler
         if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $notificationManager = new NotificationManager();
             $notificationUsers = [];
-            $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /* @var $userGroupDao UserGroupDAO */
+            $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
             $allUsers = $userGroupDao->getUsersByContextId($contextId);
             while ($user = $allUsers->next()) {
                 if ($user->getDisabled()) {
@@ -632,8 +631,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Unpublish a previously-published issue
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function unpublishIssue($args, $request)
     {
@@ -655,6 +654,8 @@ class IssueGridHandler extends GridHandler
 
         Repo::issue()->edit($issue, $updateParams);
         Repo::issue()->updateCurrent($request->getContext()->getId());
+
+        Repo::doi()->issueUpdated($issue);
 
         // insert article tombstones for all articles
         $submissions = Repo::submission()->getMany(
@@ -685,8 +686,8 @@ class IssueGridHandler extends GridHandler
     /**
      * Set Issue as current
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function setCurrentIssue($args, $request)
     {

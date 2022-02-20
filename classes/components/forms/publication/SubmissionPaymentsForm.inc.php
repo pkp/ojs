@@ -14,10 +14,10 @@
 
 namespace APP\components\forms\publication;
 
-use PKP\components\forms\FieldRadioInput;
-use PKP\components\forms\FormComponent;
-
 use APP\payment\ojs\OJSPaymentManager;
+use PKP\components\forms\FieldRadioInput;
+
+use PKP\components\forms\FormComponent;
 
 define('FORM_SUBMISSION_PAYMENTS', 'submissionPayments');
 
@@ -32,15 +32,15 @@ class SubmissionPaymentsForm extends FormComponent
     /**
      * Constructor
      *
-     * @param $action string URL to submit the form to
-     * @param $submission \Submission The submission to inspect payment status of
-     * @param $submissionContext \Context The context of the submission
+     * @param string $action URL to submit the form to
+     * @param \Submission $submission The submission to inspect payment status of
+     * @param \Context $submissionContext The context of the submission
      */
     public function __construct($action, $submission, $submissionContext)
     {
         $this->action = $action;
 
-        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
         $this->addField(new FieldRadioInput('publicationFeeStatus', [

@@ -35,7 +35,7 @@ class ViewReportPlugin extends ReportPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -80,7 +80,7 @@ class ViewReportPlugin extends ReportPlugin
             Repo::submission()
                 ->getCollector()
                 ->filterByContextIds([$context->getId()])
-                ->filterByStageIds([Submission::STATUS_PUBLISHED])
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
         );
         foreach ($submissions as $submission) {
             $articleId = $submission->getId();

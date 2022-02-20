@@ -23,7 +23,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
     /**
      * Constructor
      *
-     * @param $filterGroup FilterGroup
+     * @param FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -71,7 +71,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
     /**
      * Handle a submission element
      *
-     * @param $node DOMElement
+     * @param DOMElement $node
      *
      * @return IssueGalley
      */
@@ -83,7 +83,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
         assert($issue instanceof Issue);
 
         // Create the data object
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         $issueGalley = $issueGalleyDao->newDataObject();
         $issueGalley->setIssueId($issue->getId());
         $locale = $node->getAttribute('locale');
@@ -102,7 +102,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
                 break;
             case 'label': $issueGalley->setLabel($n->textContent); break;
             case 'issue_file':
-                $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+                $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
                 $issueFile = $issueFileDao->newDataObject();
                 $issueFile->setIssueId($issue->getId());
 
@@ -138,8 +138,8 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
     /**
      * Parse an identifier node and set up the galley object accordingly
      *
-     * @param $element DOMElement
-     * @param $issue Issue
+     * @param DOMElement $element
+     * @param Issue $issue
      */
     public function parseIdentifier($element, $issue)
     {

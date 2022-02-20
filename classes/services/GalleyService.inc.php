@@ -35,7 +35,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function get($galleyId)
     {
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         return $articleGalleyDao->getById($galleyId);
     }
 
@@ -68,7 +68,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
     public function getMany($args = [])
     {
         $galleyQO = $this->getQueryBuilder($args)->getQuery();
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
         $result = $galleyDao->retrieveRange($galleyQO->toSql(), $galleyQO->getBindings());
         $queryResults = new DAOResultFactory($result, $galleyDao, '_fromRow');
 
@@ -93,6 +93,10 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
     public function getQueryBuilder($args = [])
     {
         $galleyQB = new GalleyQueryBuilder();
+
+        if (!empty($args['contextIds'])) {
+            $galleyQB->filterByContexts($args['contextIds']);
+        }
         if (!empty($args['publicationIds'])) {
             $galleyQB->filterByPublicationIds($args['publicationIds']);
         }
@@ -128,6 +132,14 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 
         foreach ($props as $prop) {
             switch ($prop) {
+                case 'doiObject':
+                    if ($galley->getData('doiObject')) {
+                        $retVal = Repo::doi()->getSchemaMap()->summarize($galley->getData('doiObject'));
+                    } else {
+                        $retVal = null;
+                    }
+                    $values[$prop] = $retVal;
+                    break;
                 case 'urlPublished':
                     if (is_a($galley, 'IssueGalley')) {
                         $values[$prop] = $dispatcher->url(
@@ -164,13 +176,13 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
                             break;
                         }
 
-                        $submissionFile = Repo::submissionFiles()->get($galley->getData('submissionFileId'));
+                        $submissionFile = Repo::submissionFile()->get($galley->getData('submissionFileId'));
 
                         if (empty($submissionFile)) {
                             break;
                         }
 
-                        $values[$prop] = Repo::submissionFiles()
+                        $values[$prop] = Repo::submissionFile()
                             ->getSchemaMap()
                             ->map($submissionFile);
                     }
@@ -269,7 +281,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function add($galley, $request)
     {
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         $galleyId = $articleGalleyDao->insertObject($galley);
         $galley = $this->get($galleyId);
 
@@ -283,7 +295,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
      */
     public function edit($galley, $params, $request)
     {
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
 
         $newGalley = $galleyDao->newDataObject();
         $newGalley->_data = array_merge($galley->_data, $params);
@@ -303,20 +315,20 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
     {
         HookRegistry::call('Galley::delete::before', [&$galley]);
 
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $articleGalleyDao ArticleGalleyDAO */
+        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         $articleGalleyDao->deleteObject($galley);
 
-        $submissionFileCollector = Repo::submissionFiles()
+        $submissionFileCollector = Repo::submissionFile()
             ->getCollector()
             ->filterByAssoc(
                 ASSOC_TYPE_GALLEY,
                 [$galley->getId()]
             );
         // Delete related submission files
-        $submissionFiles = Repo::submissionFiles()
+        $submissionFiles = Repo::submissionFile()
             ->getMany($submissionFileCollector);
         foreach ($submissionFiles as $submissionFile) {
-            Repo::submissionFiles()
+            Repo::submissionFile()
                 ->delete($submissionFile);
         }
 

@@ -18,7 +18,6 @@
 namespace APP\subscription;
 
 use PKP\core\Core;
-use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\plugins\HookRegistry;
 
@@ -31,8 +30,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve an institutional subscription by subscription ID.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $journalId int Journal ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $journalId Journal ID
      *
      * @return InstitutionalSubscription
      */
@@ -43,13 +42,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             $params[] = (int) $journalId;
         }
         $result = $this->retrieve(
-            'SELECT	s.*, iss.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE	st.institutional = 1
-				AND s.subscription_id = ?
-				' . ($journalId ? ' AND s.journal_id = ?' : ''),
+            'SELECT s.*, iss.*
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE
+                st.institutional = 1
+                AND s.subscription_id = ?
+                ' . ($journalId ? ' AND s.journal_id = ?' : ''),
             $params
         );
         $row = $result->current();
@@ -59,7 +59,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions by user ID.
      *
-     * @param $userId int
+     * @param int $userId
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
@@ -67,12 +67,13 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     public function getByUserId($userId, $rangeInfo = null)
     {
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (st.type_id = s.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE	st.institutional = 1
-				AND s.user_id = ?',
+            'SELECT s.*, iss.*
+            FROM subscriptions s
+            JOIN subscription_types st ON st.type_id = s.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE
+                st.institutional = 1
+                AND s.user_id = ?',
             [(int) $userId],
             $rangeInfo
         );
@@ -82,22 +83,23 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions by user ID and journal ID.
      *
-     * @param $userId int
-     * @param $journalId int
-     * @param $rangeInfo RangeInfo
+     * @param int $userId
+     * @param int $journalId
+     * @param RangeInfo $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
      */
     public function getByUserIdForJournal($userId, $journalId, $rangeInfo = null)
     {
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE	st.institutional = 1
-				AND s.user_id = ?
-				AND s.journal_id = ?',
+            'SELECT s.*, iss.*
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE
+                st.institutional = 1
+                AND s.user_id = ?
+                AND s.journal_id = ?',
             [(int) $userId, (int) $journalId],
             $rangeInfo
         );
@@ -107,24 +109,25 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions by institution name.
      *
-     * @param $institutionName string Institution name
-     * @param $journalId int Journal ID
-     * @param $exactMatch boolean True iff the match on institution name should be exact
-     * @param $rangeInfo RangeInfo
+     * @param string $institutionName Institution name
+     * @param int $journalId Journal ID
+     * @param bool $exactMatch True iff the match on institution name should be exact
+     * @param RangeInfo $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
      */
     public function getByInstitutionName($institutionName, $journalId, $exactMatch = true, $rangeInfo = null)
     {
+        $matchType = $exactMatch ? '=' : 'LIKE';
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE AND st.institutional = 1' .
-            $exactMatch ? ' AND LOWER(iss.institution_name) = LOWER(?)'
-            : ' AND LOWER(iss.institution_name) LIKE LOWER(?)'
-            . ' AND s.journal_id = ?',
+            "SELECT s.*, iss.*
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE
+                st.institutional = 1
+                AND LOWER(iss.institution_name) ${matchType} LOWER(?)
+                AND s.journal_id = ?",
             [$institutionName, (int) $journalId],
             $rangeInfo
         );
@@ -134,7 +137,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Return number of institutional subscriptions with given status for journal.
      *
-     * @param status int
+     * @param int $journalId
      * @param null|mixed $status
      *
      * @return int
@@ -146,12 +149,13 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             $params[] = (int) $status;
         }
         $result = $this->retrieve(
-            'SELECT	COUNT(*) AS row_count
-			FROM	subscriptions s,
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-			WHERE	st.institutional = 1 AND
-				s.journal_id = ?
-				' . ($status !== null ? ' AND s.status = ?' : ''),
+            'SELECT COUNT(*) AS row_count
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            WHERE
+                st.institutional = 1
+                AND s.journal_id = ?
+                ' . ($status !== null ? ' AND s.status = ?' : ''),
             $params
         );
         $row = $result->current();
@@ -161,7 +165,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Get the number of institutional subscriptions for a particular journal.
      *
-     * @param $journalId int
+     * @param int $journalId
      *
      * @return int
      */
@@ -173,10 +177,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given subscriptionId.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $journalId int Optional journal ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $journalId Optional journal ID
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExists($subscriptionId, $journalId = null)
     {
@@ -185,12 +189,13 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             $params[] = (int) $journalId;
         }
         $result = $this->retrieve(
-            'SELECT	COUNT(*) AS row_count
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-			WHERE	st.institutional = 1
-				AND s.subscription_id = ?
-				' . ($journalId ? ' AND s.journal_id = ?' : ''),
+            'SELECT COUNT(*) AS row_count
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            WHERE
+                st.institutional = 1
+                AND s.subscription_id = ?
+                ' . ($journalId ? ' AND s.journal_id = ?' : ''),
             $params
         );
         $row = $result->current();
@@ -200,20 +205,21 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given user.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $userId int User ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $userId User ID
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByUser($subscriptionId, $userId)
     {
         $result = $this->retrieve(
             'SELECT COUNT(*) AS row_count
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-			WHERE	st.institutional = 1
-				AND s.subscription_id = ?
-				AND s.user_id = ?',
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            WHERE
+                st.institutional = 1
+                AND s.subscription_id = ?
+                AND s.user_id = ?',
             [(int) $subscriptionId, (int) $userId]
         );
         $row = $result->current();
@@ -223,20 +229,21 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given user and journal.
      *
-     * @param $userId int
-     * @param $journalId int
+     * @param int $userId
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByUserForJournal($userId, $journalId)
     {
         $result = $this->retrieve(
-            'SELECT	COUNT(*) AS row_count
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-			WHERE	st.institutional = 1
-				AND s.user_id = ?
-				AND s.journal_id = ?',
+            'SELECT COUNT(*) AS row_count
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            WHERE
+                st.institutional = 1
+                AND s.user_id = ?
+                AND s.journal_id = ?',
             [(int) $userId, (int) $journalId]
         );
         $row = $result->current();
@@ -246,23 +253,24 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check if an institutional subscription exists for a given institution name and journal.
      *
-     * @param $institutionName string
-     * @param $journalId int
-     * @param $exactMatch boolean
+     * @param string $institutionName
+     * @param int $journalId
+     * @param bool $exactMatch
      *
-     * @return boolean
+     * @return bool
      */
     public function subscriptionExistsByInstitutionName($institutionName, $journalId, $exactMatch = true)
     {
+        $matchType = $exactMatch ? '=' : 'LIKE';
         $result = $this->retrieve(
-            'SELECT	COUNT(*) AS row_count
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE st.institutional = 1' .
-                $exactMatch ? ' AND LOWER(iss.institution_name) = LOWER(?)'
-                : ' AND LOWER(iss.institution_name) LIKE LOWER(?)'
-                . ' AND s.journal_id = ?',
+            "SELECT COUNT(*) AS row_count
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE
+                st.institutional = 1
+                AND LOWER(iss.institution_name) ${matchType} LOWER(?)
+                AND s.journal_id = ?",
             [$institutionName, (int) $journalId]
         );
         $row = $result->current();
@@ -272,7 +280,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Insert a new institutional subscription.
      *
-     * @param $institutionalSubscription InstitutionalSubscription
+     * @param InstitutionalSubscription $institutionalSubscription
      *
      * @return int
      */
@@ -284,9 +292,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
             $this->update(
                 'INSERT INTO institutional_subscriptions
-				(subscription_id, institution_name, mailing_address, domain)
-				VALUES
-				(?, ?, ?, ?)',
+                (subscription_id, institution_name, mailing_address, domain)
+                VALUES
+                (?, ?, ?, ?)',
                 [
                     (int) $subscriptionId,
                     $institutionalSubscription->getInstitutionName(),
@@ -304,20 +312,21 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Update an existing institutional subscription.
      *
-     * @param $institutionalSubscription InstitutionalSubscription
+     * @param InstitutionalSubscription $institutionalSubscription
      *
-     * @return boolean
+     * @return bool
      */
     public function updateObject($institutionalSubscription)
     {
         $this->_updateObject($institutionalSubscription);
 
         $this->update(
-            'UPDATE	institutional_subscriptions
-			SET	institution_name = ?,
-				mailing_address = ?,
-				domain = ?
-			WHERE	subscription_id = ?',
+            'UPDATE institutional_subscriptions
+            SET
+                institution_name = ?,
+                mailing_address = ?,
+                domain = ?
+            WHERE subscription_id = ?',
             [
                 $institutionalSubscription->getInstitutionName(),
                 $institutionalSubscription->getInstitutionMailingAddress(),
@@ -333,7 +342,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete an institutional subscription by subscription ID.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      * @param null|mixed $journalId
      */
     public function deleteById($subscriptionId, $journalId = null)
@@ -350,7 +359,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete institutional subscriptions by journal ID.
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function deleteByJournalId($journalId)
     {
@@ -363,7 +372,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete institutional subscriptions by user ID.
      *
-     * @param $userId int
+     * @param int $userId
      */
     public function deleteByUserId($userId)
     {
@@ -376,8 +385,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete institutional subscriptions by user ID and journal ID.
      *
-     * @param $userId int User ID
-     * @param $journalId int Journal ID
+     * @param int $userId User ID
+     * @param int $journalId Journal ID
      */
     public function deleteByUserIdForJournal($userId, $journalId)
     {
@@ -390,7 +399,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Delete all institutional subscriptions by subscription type ID.
      *
-     * @param $subscriptionTypeId int Subscription type ID
+     * @param int $subscriptionTypeId Subscription type ID
      */
     public function deleteByTypeId($subscriptionTypeId)
     {
@@ -410,12 +419,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     public function getAll($rangeInfo = null)
     {
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE	st.institutional = 1
-			ORDER BY iss.institution_name ASC, s.subscription_id',
+            'SELECT s.*, iss.*
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE st.institutional = 1
+            ORDER BY iss.institution_name ASC, s.subscription_id',
             [],
             $rangeInfo
         );
@@ -425,14 +434,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve institutional subscriptions matching a particular journal ID.
      *
-     * @param $journalId int
-     * @param $status int
-     * @param $searchField int
-     * @param $searchMatch string "is" or "contains" or "startsWith"
-     * @param $search String to look in $searchField for
-     * @param $dateField int
-     * @param $dateFrom String date to search from
-     * @param $dateTo String date to search to
+     * @param int $journalId
+     * @param int $status
+     * @param int $searchField
+     * @param string $searchMatch "is" or "contains" or "startsWith"
+     * @param string $search to look in $searchField for
+     * @param int $dateField
+     * @param string $dateFrom date to search from
+     * @param string $dateTo date to search to
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching Subscriptions
@@ -440,7 +449,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
         $params = [(int) $journalId];
-        $ipRangeSql1 = $ipRangeSql2 = '';
+        $ipRangeSql = '';
         $searchSql = $this->_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
 
         if (!empty($search)) {
@@ -480,24 +489,24 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
                     $search = $search . '%';
                 }
                 $params[] = $search;
-                $ipRangeSql1 = ', institutional_subscription_ip isip' ;
-                $ipRangeSql2 = ' AND s.subscription_id = isip.subscription_id';
+                $ipRangeSql = 'JOIN institutional_subscription_ip isip ON s.subscription_id = isip.subscription_id';
                 break;
-        }
+            }
         }
 
 
         $result = $this->retrieveRange(
-            $sql = 'SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN users u ON (s.user_id = u.user_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-				' . $ipRangeSql1 . '
-			WHERE	st.institutional = 1
-				' . $ipRangeSql2 . '
-				AND s.journal_id = ?
-			' . $searchSql . ' ORDER BY iss.institution_name ASC, s.subscription_id',
+            $sql = "SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN users u ON s.user_id = u.user_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            ${ipRangeSql}
+            WHERE
+                st.institutional = 1
+                AND s.journal_id = ?
+                ${searchSql}
+            ORDER BY iss.institution_name ASC, s.subscription_id",
             $params,
             $rangeInfo
         );
@@ -508,11 +517,11 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Check whether there is a valid institutional subscription for a given journal.
      *
-     * @param $domain string
-     * @param $IP string
-     * @param $journalId int
-     * @param $check int Test using either start date, end date, or both (default)
-     * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
+     * @param string $domain
+     * @param string $IP
+     * @param int $journalId
+     * @param int $check Test using either start date, end date, or both (default)
+     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
      * @return int|false Found subscription ID, or false for none.
      */
@@ -538,25 +547,30 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
                 $dateSql = sprintf('%s <= s.date_end AND %s >= s.date_start', $checkDate, $today);
                 break;
             default:
-                $dateSql = sprintf('%s >= s.date_start AND %s <= s.date_end', $checkDate, $checkDate);
+                $dateSql = sprintf('%s BETWEEN s.date_start AND s.date_end', $checkDate);
         }
 
         // Check if domain match
         if (!empty($domain)) {
             $result = $this->retrieve(
-                '
-				SELECT	iss.subscription_id
-				FROM	institutional_subscriptions iss
-					JOIN subscriptions s ON (iss.subscription_id = s.subscription_id)
-					JOIN subscription_types st ON (s.type_id = st.type_id)
-				WHERE	POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
-					AND iss.domain != \'\'
-					AND s.journal_id = ?
-					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
-					AND st.institutional = 1
-					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-					OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+                'SELECT iss.subscription_id
+                FROM institutional_subscriptions iss
+                JOIN subscriptions s ON iss.subscription_id = s.subscription_id
+                JOIN subscription_types st ON s.type_id = st.type_id
+                WHERE
+                    POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain) + 1, \'.\')) IN UPPER(LPAD(?, LENGTH(?) + 1, \'.\'))) <> 0
+                    AND iss.domain <> \'\'
+                    AND s.journal_id = ?
+                    AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
+                    AND st.institutional = 1
+                    AND (
+                        st.duration IS NULL
+                        OR (' . $dateSql . ')
+                    )
+                    AND (
+                        st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+                        OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '
+                    )',
                 [$domain, $domain, (int) $journalId]
             );
             $row = $result->current();
@@ -570,27 +584,24 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             $IP = sprintf('%u', ip2long($IP));
 
             $result = $this->retrieve(
-                'SELECT	isip.subscription_id
-				FROM	institutional_subscription_ip isip
-					JOIN subscriptions s ON (isip.subscription_id = s.subscription_id)
-					JOIN subscription_types st ON (s.type_id = st.type_id)
-				WHERE	((isip.ip_end IS NOT NULL
-					AND ? >= isip.ip_start AND ? <= isip.ip_end
-					AND s.journal_id = ?
-					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
-					AND st.institutional = 1
-					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-						OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
-					OR  (isip.ip_end IS NULL
-					AND ? = isip.ip_start
-					AND s.journal_id = ?
-					AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
-					AND st.institutional = 1
-					AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-					AND (st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
-					OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
-                [$IP, $IP, (int) $journalId, $IP, (int) $journalId]
+                'SELECT isip.subscription_id
+                FROM institutional_subscription_ip isip
+                JOIN subscriptions s ON isip.subscription_id = s.subscription_id
+                JOIN subscription_types st ON s.type_id = st.type_id
+                WHERE
+                    s.journal_id = ?
+                    AND ? BETWEEN isip.ip_start AND COALESCE(isip.ip_end, isip.ip_start)
+                    AND s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
+                    AND st.institutional = 1
+                    AND (
+                        st.duration IS NULL
+                        OR (' . $dateSql . ')
+                    )
+                    AND (
+                        st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
+                        OR st.format = ' . SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '
+                    )',
+                [(int) $journalId, $IP]
             );
             $row = $result->current();
             if ($row) {
@@ -604,8 +615,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Retrieve active institutional subscriptions matching a particular end date and journal ID.
      *
-     * @param $dateEnd date (YYYY-MM-DD)
-     * @param $journalId int
+     * @param string $dateEnd (YYYY-MM-DD)
+     * @param int $journalId
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching InstitutionalSubscriptions
@@ -613,23 +624,21 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     public function getByDateEnd($dateEnd, $journalId, $rangeInfo = null)
     {
         $dateEnd = explode('-', $dateEnd);
-
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-			WHERE	s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
-				AND st.institutional = 1
-				AND EXTRACT(YEAR FROM s.date_end) = ?
-				AND EXTRACT(MONTH FROM s.date_end) = ?
-				AND EXTRACT(DAY FROM s.date_end) = ?
-				AND s.journal_id = ?
-			ORDER BY iss.institution_name ASC, s.subscription_id',
+            'SELECT s.*, iss.*
+            FROM subscriptions s
+            JOIN subscription_types st ON s.type_id = st.type_id
+            JOIN institutional_subscriptions iss ON s.subscription_id = iss.subscription_id
+            WHERE
+                s.status = ' . Subscription::SUBSCRIPTION_STATUS_ACTIVE . '
+                AND st.institutional = 1
+                AND EXTRACT(YEAR FROM s.date_end) = ?
+                AND EXTRACT(MONTH FROM s.date_end) = ?
+                AND EXTRACT(DAY FROM s.date_end) = ?
+                AND s.journal_id = ?
+            ORDER BY iss.institution_name ASC, s.subscription_id',
             [
-                $dateEnd[0],
-                $dateEnd[1],
-                $dateEnd[2],
+                ...$dateEnd,
                 (int) $journalId
             ],
             $rangeInfo
@@ -642,9 +651,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      * Renew an institutional subscription by dateEnd + duration of subscription type
      * if the institutional subscription is expired, renew to current date + duration
      *
-     * @param $institutionalSubscription InstitutionalSubscription
+     * @param InstitutionalSubscription $institutionalSubscription
      *
-     * @return boolean
+     * @return bool
      */
     public function renewSubscription($institutionalSubscription)
     {
@@ -664,7 +673,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to return an InstitutionalSubscription object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return InstitutionalSubscription
      */
@@ -678,9 +687,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
         $ipResult = $this->retrieve(
             'SELECT ip_string
-			FROM	institutional_subscription_ip
-			WHERE	subscription_id = ?
-			ORDER BY institutional_subscription_ip_id ASC',
+            FROM institutional_subscription_ip
+            WHERE subscription_id = ?
+            ORDER BY institutional_subscription_ip_id ASC',
             [(int) $institutionalSubscription->getId()]
         );
 
@@ -698,10 +707,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to insert institutional subscription IP ranges.
      *
-     * @param $subscriptionId int
-     * @param $ipRanges array
+     * @param int $subscriptionId
+     * @param array $ipRanges
      *
-     * @return boolean
+     * @return bool
      */
     public function _insertSubscriptionIPRanges($subscriptionId, $ipRanges)
     {
@@ -715,7 +724,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
         $returner = true;
 
-        while ([, $curIPString] = each($ipRanges)) {
+        foreach ($ipRanges as $curIPString) {
             $ipStart = null;
             $ipEnd = null;
 
@@ -765,9 +774,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             if ($ipStart != null && $returner) {
                 $returner = (bool) $this->update(
                     'INSERT INTO institutional_subscription_ip
-					(subscription_id, ip_string, ip_start, ip_end)
-					VALUES
-					(?, ?, ?, ?)',
+                    (subscription_id, ip_string, ip_start, ip_end)
+                    VALUES
+                    (?, ?, ?, ?)',
                     [
                         (int) $subscriptionId,
                         $curIPString,
@@ -787,9 +796,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     /**
      * Internal function to delete subscription ip ranges by subscription ID.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      *
-     * @return boolean
+     * @return bool
      */
     public function _deleteSubscriptionIPRanges($subscriptionId)
     {

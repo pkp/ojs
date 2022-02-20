@@ -24,7 +24,7 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
     protected $_parentPlugin;
 
     /**
-     * @param $parentPlugin WebFeedPlugin
+     * @param WebFeedPlugin $parentPlugin
      */
     public function __construct($parentPlugin)
     {
@@ -44,7 +44,7 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -81,9 +81,9 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
      * Get whether or not this plugin is enabled. (Should always return true, as the
      * parent plugin will take care of loading this one when needed)
      *
-     * @param $contextId int Context ID (optional)
+     * @param int $contextId Context ID (optional)
      *
-     * @return boolean
+     * @return bool
      */
     public function getEnabled($contextId = null)
     {
@@ -93,8 +93,8 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
     /**
      * Handle fetch requests for this plugin.
      *
-     * @param $args array Arguments.
-     * @param $request PKPRequest Request object.
+     * @param array $args Arguments.
+     * @param PKPRequest $request Request object.
      */
     public function fetch($args, $request)
     {
@@ -145,7 +145,7 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
             $submissionsInSections = Repo::submission()->getInSections($issue->getId(), $journal->getId());
         }
 
-        $versionDao = DAORegistry::getDAO('VersionDAO'); /* @var $versionDao VersionDAO */
+        $versionDao = DAORegistry::getDAO('VersionDAO'); /** @var VersionDAO $versionDao */
         $version = $versionDao->getCurrentVersion();
 
         $templateMgr = TemplateManager::getManager($request);
@@ -157,10 +157,7 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
             'showToc' => true,
         ]);
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION); // submission.copyrightStatement
-
         $templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
-
         return true;
     }
 }

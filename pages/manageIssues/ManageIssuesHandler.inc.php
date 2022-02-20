@@ -20,7 +20,7 @@ use PKP\security\Role;
 
 class ManageIssuesHandler extends Handler
 {
-    /** issue associated with the request **/
+    /** @var Issue Issue associated with the request */
     public $issue;
 
     /** @copydoc PKPHandler::_isBackendPage */
@@ -52,15 +52,14 @@ class ManageIssuesHandler extends Handler
     /**
      * Displays the issue listings in a tabbed interface.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Response contents.
      */
     public function index($args, $request)
     {
         $this->setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_APP_MANAGER);
 
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([

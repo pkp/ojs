@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"PO-Revision-Date: 2021-12-04 03:23+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -1773,3 +1773,206 @@ msgstr "الرابط المؤدي إلى الصفحة الرئيسية للمج�
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "اسم المجلة"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"هذا البريد الالكتروني يُرسل تلقائيًا إلى المستخدم الجديد عند تسجيله في "
+"المجلة في حالة كون الإعدادات تتطلب التحقق من بريده الالكتروني."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "التحقق من البريد الالكتروني (التسجيل في المجلة)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "هذه الإضافة تقوم بتعيين معرفات المكونات الرقمية للمقالات، الأعداد، الألواح الطباعية، والملفات التكميلية في نظام المجلات المفتوحة."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "لطفاً، قم بتهيئة إضافة DOI لتتمكن من إدارة واستعمال DOI في نظام المجلات المفتوحة:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "محتوى المجلة"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "لطفاً، إختر المكونات التي على DOI أن تتعين لها."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "لطفاً، إختر مكونات النشر التي ستكون لها معرفات للمكونات الرقمية (DOI) معينة لها:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "الأعداد"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "المقالات"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "الألواح الطباعية"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "بادئة DOI"
+
+msgid "doi.manager.settings.doiPrefix.Description"
+msgstr "إن بادئة DOI يتم تعيينها من قبل وكالات التسجيل (مثل: <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) وهي بصيغة 10.xxxx (مثل: 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "إن بادئة DOI هي إجبارية وينبغي أن تكون بصيغة 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "لاحقة DOI"
+
+msgid "doi.manager.settings.doiSuffixDescription"
+msgstr "يمكن للاحقة DOI أن تأخذ أي شكل، لكنها يجب أن تكون فريدة بين كل المكونات المنشورة التي تمتلك نفس بادئة DOI:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr "استعمل النمط المذكور أدناه لتوليد لواحق DOI. استعمل %j لبادئات المجلة، %v لرقم المجلد، %i لرقم العدد، %Y للسنة، %a لرمز تعريف مقالة نظام المجلات المفتوحة، %g لرمز تعريف اللوح الطباعي، %s للرمز التعريفي للملف التكميلي، %p لرقم الصفحة، و %x لـ \"معرفات مخصصة\" (يجب تمكينها في خطوة التهيئة 4.3)."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "على سبيل المثال، vol%viss%ipp%p يمكنك إنشاء DOI مماثل لـ 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "للأعداد"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "للمقالات"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "للألواح الطباعية"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "استعمل الأنماط الافتراضية."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "أدخل لاحقة DOI منفردة لكل فقرة منشورة مستقلة ومختلفة عن \"المعرف المخصص\" المذكور في الخيار السابق. ستجد حقل إدخال DOI إضافي في كل صفحة بيانات وصفية."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة DOI للأعداد."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة DOI للمقالات."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "لطفاً، أدخل نمط لاحقة DOI للألواح الطباعية."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "أعد تعيين DOI"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "إذا قمت بتغيير إعدادات DOI، فإن DOI التي سبق لك تعيينها لن تكون ذات جدوى. بمجرد حفظ إعدادات DOI، استعمل هذا الزر لإزالة كل ما موجود من DOI بحيث يمكن للإعدادات الجديدة أن يظهر مفعولها في المكونات الموجودة سلفاً."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "هل أنت متأكد من رغبتك في إزالة كل ما موجود من DOI؟"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "تعيين معرفات DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr "قم بتعيين معرفات DOI لجميع المكونات المنشورة في المجلة والتي لم يسبق لها أن حصلت على تلك المعرفات. هذا الإجراء لا يمكن استعماله عند تهيئة اللاحقة بشكل منفرد. إن قمت بتعديل إعدادات DOI أعلاه، لطفاً قم بحفظ التغييرات قبل الشروع بهذا الإجراء. تعيين معرفات DOI قد يستغرق وقتاً طويلاً، إعتماداً على عدد المكونات المنشورة في المجلة."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "هل أنت متأكد من رغبتك في تعيين معرفات DOI لكل المكونات المنشورة التي لم يسبق لها الحصول على تلك المعرفات؟"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "عدد"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "مقالة"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "لوح طباعي"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "تعذر تعيين DOI لأن اللاحقة المخصصة مفقودة."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "تعذر تعيين DOI لأنها تتضمن نمطاً غير متوافق."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "ما تشاهده هو معاينة أولية لـ DOI. أشر خانة التأشير واحفظ النموذج لتعيين DOI."
+
+msgid "doi.editor.assigned"
+msgstr "لقد تم تعيين DOI لهذا المكون {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "لاحقة DOI المعطاة قيد الاستعمال حالياً لمكون منشور آخر. لطفاً، أدخل لاحقة DOI فريدة لكل فقرة."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "إزالة DOI"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "هل أنت متأكد من رغبتك في حذف DOI الموجود حالياً؟"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "إزالة مكونات DOI للعدد"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "هل أنت متأكد من رغبتك في حذف مكونات DOI الموجودة لهذا العدد حالياً؟"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "استعمل الخيار الآتي لإزالة DOI من كل المكونات (المقالات وألواحها الطباعية) والتي تمت جدولتها لهذا العدد."
+
+msgid "doi.editor.assignDoi"
+msgstr "عيِّن DOI {$pubId} لهذا {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "تعذر تعيين DOI لأن اللاحقة المخصصة مفقودة."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "تعذر تعيين DOI {$pubId} لأنها تتضمن نمطاً غير متوافق."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "لقد تم تعيين DOI {$pubId}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "معرف المكون الرقمي لا بد له أن يبدأ بـ {$doiPrefix}."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"لا يمكنك توليد معرف المكون الرقمي حتى يتم تعيين هذا المؤلَّف إلى عدد ما."
+
+msgid "doi.editor.doi.description"
+msgstr "معرف المكون الرقمي لا بد أن يبدأ بـ {$prefix}."
+
+msgid "doi.editor.preview.objects"
+msgstr "العنصر"
+
+msgid "doi.editor.preview.galleys"
+msgstr "اللوح الطباعي: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "لم يتم تعيين معرف المكون الرقمي لهذا المنشور بعد."
+
+msgid "doi.editor.preview.publication"
+msgstr "معرف المكون الرقمي لهذا المؤلَّف سيكون {$doi}."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"لا يمكنك توليد معرف المكون الرقمي لأن واحداً أو أكثر من أجزائه يفتقر إلى "
+"المعطيات. قد تكون بحاجة إلى تخصيص المؤلَّف للنشر في أحد الأعداد، وضع رمز "
+"التعريف للناشر أو إدخال أرقام الصفحات."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "تعيين"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"لاحقة معرف المكون الرقمي يمكنها أن تكون بأي تنسيق، لكنها لا بد أن تكون فريدة "
+"ما بين كل المكونات المنشورة المنضوية تحت نفس البادئة."
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"إن معرف المكون الرقمي يتم تعيينه من قبل وكالات التسجيل (كما في <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) وهو بالتنسيق الآتي  "
+"10.xxxx (مثلاً 10.1234):"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "المقالات"

@@ -16,7 +16,7 @@ describe('Data suite tests', function() {
 
 		// Fill in various details
 		cy.wait(1000); // https://github.com/tinymce/tinymce/issues/4355
-		cy.get('div[id=editContext]').find('button[label="Français (Canada)"]').click();
+		cy.get('div[id=editContext]').find('button[label="French (Canada)"]').click();
 		cy.get('input[name="name-fr_CA"]').type(Cypress.env('contextTitles')['fr_CA'], {delay: 0});
 		cy.get('button').contains('Save').click()
 		cy.get('div[id=context-name-error-en_US]').find('span').contains('This field is required.');

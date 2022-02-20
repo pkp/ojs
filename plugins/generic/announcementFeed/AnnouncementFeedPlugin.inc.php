@@ -66,10 +66,10 @@ class AnnouncementFeedPlugin extends GenericPlugin
     /**
      * Add links to the feeds.
      *
-     * @param $hookName string
-     * @param $args array
+     * @param string $hookName
+     * @param array $args
      *
-     * @return boolean Hook processing status
+     * @return bool Hook processing status
      */
     public function callbackAddLinks($hookName, $args)
     {
@@ -149,8 +149,6 @@ class AnnouncementFeedPlugin extends GenericPlugin
         switch ($request->getUserVar('verb')) {
             case 'settings':
                 $context = $request->getContext();
-
-                AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_MANAGER);
                 $templateMgr = TemplateManager::getManager($request);
                 $templateMgr->registerPlugin('function', 'plugin_url', [$this, 'smartyPluginUrl']);
 

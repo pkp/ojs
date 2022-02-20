@@ -37,8 +37,8 @@ class InformationHandler extends Handler
     /**
      * Display the information page for the journal.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function index($args, $request)
     {
@@ -64,7 +64,6 @@ class InformationHandler extends Handler
                 $pageTitle = 'navigation.competingInterestGuidelines';
                 break;
             case 'sampleCopyrightWording':
-                AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
                 $content = __('manager.setup.copyrightNotice.sample');
                 $pageTitle = 'manager.setup.copyrightNotice';
                 break;
@@ -106,7 +105,7 @@ class InformationHandler extends Handler
     /**
      * Initialize the template.
      *
-     * @param $request PKPRequest
+     * @param PKPRequest $request
      */
     public function setupTemplate($request)
     {

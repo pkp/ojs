@@ -14,20 +14,20 @@
 
 namespace APP\security\authorization;
 
-use PKP\security\authorization\DataObjectRequiredPolicy;
-use PKP\security\authorization\AuthorizationPolicy;
-use PKP\db\DAORegistry;
-
 use APP\issue\IssueGalley;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\AuthorizationPolicy;
+
+use PKP\security\authorization\DataObjectRequiredPolicy;
 
 class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
 {
     /**
      * Constructor
      *
-     * @param $request PKPRequest
-     * @param $args array request parameters
-     * @param $operations array
+     * @param PKPRequest $request
+     * @param array $args request parameters
+     * @param array $operations
      */
     public function __construct($request, &$args, $operations = null)
     {
@@ -49,7 +49,7 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
 
         // Make sure the issue galley belongs to the journal.
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         $issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
         if (!$issueGalley instanceof IssueGalley) {
             return AuthorizationPolicy::AUTHORIZATION_DENY;

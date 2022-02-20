@@ -17,6 +17,7 @@
 
 namespace APP\journal;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\cache\CacheManager;
 use PKP\context\PKPSectionDAO;
@@ -68,9 +69,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve a section by ID.
      *
-     * @param $sectionId int
-     * @param $journalId int Journal ID optional
-     * @param $useCache boolean optional
+     * @param int $sectionId
+     * @param int $journalId Journal ID optional
+     * @param bool $useCache optional
      *
      * @return Section?
      */
@@ -102,9 +103,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve a section by abbreviation.
      *
-     * @param $sectionAbbrev string
-     * @param $journalId int Journal ID
-     * @param $locale string optional
+     * @param string $sectionAbbrev
+     * @param int $journalId Journal ID
+     * @param string $locale optional
      *
      * @return Section?
      */
@@ -133,9 +134,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve a section by title.
      *
-     * @param $sectionTitle string
-     * @param $journalId int Journal ID
-     * @param $locale string optional
+     * @param string $sectionTitle
+     * @param int $journalId Journal ID
+     * @param string $locale optional
      *
      * @return Section?
      */
@@ -164,7 +165,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve section a submission is assigned to.
      *
-     * @param $submissionId int Submission id
+     * @param int $submissionId Submission id
      *
      * @return Section
      */
@@ -193,7 +194,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Internal function to return a Section object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return Section
      */
@@ -234,7 +235,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Update the localized fields for this table
      *
-     * @param $section object
+     * @param object $section
      */
     public function updateLocaleFields($section)
     {
@@ -248,7 +249,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Insert a new section.
      *
-     * @param $section Section
+     * @param Section $section
      *
      * @return int new Section ID
      */
@@ -282,7 +283,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Update an existing section.
      *
-     * @param $section Section
+     * @param Section $section
      */
     public function updateObject($section)
     {
@@ -320,19 +321,19 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Delete a section by ID.
      *
-     * @param $sectionId int Section ID
-     * @param $contextId int optional
+     * @param int $sectionId Section ID
+     * @param int $contextId optional
      */
     public function deleteById($sectionId, $contextId = null)
     {
         // No articles should exist in this section
-        $collector = Repo::submission()->getCollector()->filterBySectionIds([(int) $sectionId]);
+        $collector = Repo::submission()->getCollector()->filterBySectionIds([(int) $sectionId])->filterByContextIds([Application::CONTEXT_ID_ALL]);
         $count = Repo::submission()->getCount($collector);
         if ($count) {
             throw new Exception('Tried to delete a section that has one or more submissions assigned to it.');
         }
 
-        $subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /* @var $subEditorsDao SubEditorsDAO */
+        $subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /** @var SubEditorsDAO $subEditorsDao */
         $subEditorsDao->deleteBySubmissionGroupId($sectionId, ASSOC_TYPE_SECTION, $contextId);
 
         if (isset($contextId) && !$this->sectionExists($sectionId, $contextId)) {
@@ -347,7 +348,7 @@ class SectionDAO extends PKPSectionDAO
      * NOTE: This does not delete dependent entries EXCEPT from subeditor_submission_group. It is intended
      * to be called only when deleting a journal.
      *
-     * @param $journalId int Journal ID
+     * @param int $journalId Journal ID
      */
     public function deleteByJournalId($journalId)
     {
@@ -358,7 +359,7 @@ class SectionDAO extends PKPSectionDAO
      * Retrieve an array associating all section editor IDs with
      * arrays containing the sections they edit.
      *
-     * @param $journalId int Journal ID
+     * @param int $journalId Journal ID
      *
      * @return array editorId => array(sections they edit)
      */
@@ -385,7 +386,7 @@ class SectionDAO extends PKPSectionDAO
      * Retrieve all sections in which articles are currently published in
      * the given issue.
      *
-     * @param $issueId int Issue ID
+     * @param int $issueId Issue ID
      *
      * @return array
      */
@@ -430,8 +431,8 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve all sections for a journal.
      *
-     * @param $journalId int Journal ID
-     * @param $rangeInfo DBResultRange optional
+     * @param int $journalId Journal ID
+     * @param DBResultRange $rangeInfo optional
      *
      * @return DAOResultFactory containing Sections ordered by sequence
      */
@@ -444,9 +445,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve all sections for a journal.
      *
-     * @param $journalId int Journal ID
-     * @param $rangeInfo DBResultRange optional
-     * @param $submittableOnly boolean optional. Whether to return only sections
+     * @param int $journalId Journal ID
+     * @param DBResultRange $rangeInfo optional
+     * @param bool $submittableOnly optional. Whether to return only sections
      *  that can be submitted to by anyone.
      *
      * @return DAOResultFactory containing Sections ordered by sequence
@@ -465,7 +466,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Retrieve all sections.
      *
-     * @param $rangeInfo DBResultRange optional
+     * @param DBResultRange $rangeInfo optional
      *
      * @return DAOResultFactory containing Sections ordered by journal ID and sequence
      */
@@ -483,10 +484,10 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Check if the section is empty.
      *
-     * @param $sectionId int Section ID
-     * @param $journalId int Journal ID
+     * @param int $sectionId Section ID
+     * @param int $journalId Journal ID
      *
-     * @return boolean
+     * @return bool
      */
     public function sectionEmpty($sectionId, $journalId)
     {
@@ -501,10 +502,10 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Check if a section exists with the specified ID.
      *
-     * @param $sectionId int Section ID
-     * @param $journalId int Journal ID
+     * @param int $sectionId Section ID
+     * @param int $journalId Journal ID
      *
-     * @return boolean
+     * @return bool
      */
     public function sectionExists($sectionId, $journalId)
     {
@@ -519,7 +520,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Sequentially renumber sections in their sequence order.
      *
-     * @param $journalId int Journal ID
+     * @param int $journalId Journal ID
      */
     public function resequenceSections($journalId)
     {
@@ -544,7 +545,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Delete the custom ordering of an issue's sections.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function deleteCustomSectionOrdering($issueId)
     {
@@ -557,8 +558,8 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Delete a section from the custom section order table.
      *
-     * @param $issueId int
-     * @param $sectionId int
+     * @param int $issueId
+     * @param int $sectionId
      */
     public function deleteCustomSection($issueId, $sectionId)
     {
@@ -579,7 +580,7 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Sequentially renumber custom section orderings in their sequence order.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function resequenceCustomSectionOrders($issueId)
     {
@@ -594,9 +595,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Check if an issue has custom section ordering.
      *
-     * @param $issueId int
+     * @param int $issueId
      *
-     * @return boolean
+     * @return bool
      */
     public function customSectionOrderingExists($issueId)
     {
@@ -608,8 +609,8 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Get the custom section order of a section.
      *
-     * @param $issueId int
-     * @param $sectionId int
+     * @param int $issueId
+     * @param int $sectionId
      *
      * @return int?
      */
@@ -627,7 +628,7 @@ class SectionDAO extends PKPSectionDAO
      * Import the current section orders into the specified issue as custom
      * issue orderings.
      *
-     * @param $issueId int
+     * @param int $issueId
      */
     public function setDefaultCustomSectionOrders($issueId)
     {
@@ -642,9 +643,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * INTERNAL USE ONLY: Insert a custom section ordering
      *
-     * @param $issueId int
-     * @param $sectionId int
-     * @param $seq int
+     * @param int $issueId
+     * @param int $sectionId
+     * @param int $seq
      */
     public function insertCustomSectionOrder($issueId, $sectionId, $seq)
     {
@@ -657,9 +658,9 @@ class SectionDAO extends PKPSectionDAO
     /**
      * Update a custom section ordering
      *
-     * @param $issueId int
-     * @param $sectionId int
-     * @param $seq int
+     * @param int $issueId
+     * @param int $sectionId
+     * @param int $seq
      */
     public function updateCustomSectionOrder($issueId, $sectionId, $seq)
     {

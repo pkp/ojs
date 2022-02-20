@@ -1,10 +1,12 @@
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2021-06-17 09:48+0000\n"
-"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
+"PO-Revision-Date: 2022-02-16 19:13+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -2172,3 +2174,6 @@ msgstr "Renonçé"
 
 msgid "payment.unpaid"
 msgstr "Impayé"
+
+msgid "doi.manager.settings.publications"
+msgstr "Articles"

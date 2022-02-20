@@ -34,7 +34,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
      * Handle an Article import.
      * The Article must have a valid section in order to be imported
      *
-     * @param $node DOMElement
+     * @param DOMElement $node
      */
     public function handleElement($node)
     {
@@ -42,7 +42,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
         $context = $deployment->getContext();
         $sectionAbbrev = $node->getAttribute('section_ref');
         if ($sectionAbbrev !== '') {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
             $section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
             if (!$section) {
                 $deployment->addError(Application::ASSOC_TYPE_SUBMISSION, null, __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
@@ -55,8 +55,8 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
     /**
      * Populate the submission object from the node, checking first for a valid section and published_date/issue relationship
      *
-     * @param $publication Publication
-     * @param $node DOMElement
+     * @param Publication $publication
+     * @param DOMElement $node
      *
      * @return Publication
      */
@@ -67,7 +67,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
 
         $sectionAbbrev = $node->getAttribute('section_ref');
         if ($sectionAbbrev !== '') {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
             $section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
             if (!$section) {
                 $deployment->addError(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
@@ -92,8 +92,8 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
     /**
      * Handle an element whose parent is the submission element.
      *
-     * @param $n DOMElement
-     * @param $publication Publication
+     * @param DOMElement $n
+     * @param Publication $publication
      */
     public function handleChildElement($n, $publication)
     {
@@ -120,7 +120,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
     /**
      * Get the import filter for a given element.
      *
-     * @param $elementName string Name of XML element
+     * @param string $elementName Name of XML element
      *
      * @return Filter
      */
@@ -145,8 +145,8 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
     /**
      * Parse an article galley and add it to the publication.
      *
-     * @param $n DOMElement
-     * @param $publication Publication
+     * @param DOMElement $n
+     * @param Publication $publication
      */
     public function parseArticleGalley($n, $publication)
     {
@@ -156,7 +156,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
     /**
      * Class-specific methods for published publication.
      *
-     * @param $publication Publication
+     * @param Publication $publication
      * @param DOMElement $node
      *
      * @return Publication
@@ -190,7 +190,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
     /**
      * Get the issue from the given identification.
      *
-     * @param $node DOMElement
+     * @param DOMElement $node
      *
      * @return Issue
      */

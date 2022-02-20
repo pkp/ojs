@@ -54,20 +54,12 @@ class SectionGridHandler extends SetupGridHandler
         parent::initialize($request, $args);
         $journal = $request->getJournal();
 
-        // FIXME are these all required?
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_MANAGER,
-            LOCALE_COMPONENT_PKP_COMMON,
-            LOCALE_COMPONENT_PKP_USER,
-            LOCALE_COMPONENT_APP_COMMON
-        );
-
         // Set the grid title.
         $this->setTitle('section.sections');
 
         // Elements to be displayed in the grid
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
-        $subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /* @var $subEditorsDao SubEditorsDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
+        $subEditorsDao = DAORegistry::getDAO('SubEditorsDAO'); /** @var SubEditorsDAO $subEditorsDao */
         $sectionIterator = $sectionDao->getByJournalId($journal->getId());
 
         $gridData = [];
@@ -176,7 +168,7 @@ class SectionGridHandler extends SetupGridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $journal = $request->getJournal();
         $section = $sectionDao->getById($rowId, $journal->getId());
         $section->setSequence($newSequence);
@@ -189,8 +181,8 @@ class SectionGridHandler extends SetupGridHandler
     /**
      * An action to add a new section
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function addSection($args, $request)
     {
@@ -202,8 +194,8 @@ class SectionGridHandler extends SetupGridHandler
     /**
      * An action to edit a section
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Serialized JSON object
      * @return JSONMessage JSON object
@@ -222,8 +214,8 @@ class SectionGridHandler extends SetupGridHandler
     /**
      * Update a section
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -247,8 +239,8 @@ class SectionGridHandler extends SetupGridHandler
     /**
      * Delete a section
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -256,7 +248,7 @@ class SectionGridHandler extends SetupGridHandler
     {
         $journal = $request->getJournal();
 
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $section = $sectionDao->getById(
             $request->getUserVar('sectionId'),
             $journal->getId()
@@ -271,7 +263,6 @@ class SectionGridHandler extends SetupGridHandler
         }
 
         // Validate if it can be deleted
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
         $sectionEmpty = $sectionDao->sectionEmpty($request->getUserVar('sectionId'), $journal->getId());
         if (!$sectionEmpty) {
             return new JSONMessage(false, __('manager.sections.alertDelete'));
@@ -297,8 +288,8 @@ class SectionGridHandler extends SetupGridHandler
     /**
      * Deactivate a section.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -311,7 +302,7 @@ class SectionGridHandler extends SetupGridHandler
         $context = $request->getContext();
 
         // Get section object
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         // Validate if it can be inactive
         $sectionsIterator = $sectionDao->getByContextId($context->getId(), null, false);
         $activeSectionsCount = 0;
@@ -348,8 +339,8 @@ class SectionGridHandler extends SetupGridHandler
     /**
      * Activate a section.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
@@ -363,7 +354,7 @@ class SectionGridHandler extends SetupGridHandler
         $context = $request->getContext();
 
         // Get section object
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $section = $sectionDao->getById($sectionId, $context->getId());
 
         if ($request->checkCSRF() && isset($section) && $section->getIsInactive()) {

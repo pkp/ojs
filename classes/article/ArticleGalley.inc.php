@@ -20,7 +20,7 @@ namespace APP\article;
 use APP\core\Application;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\submission\Representation;
 
 class ArticleGalley extends Representation
@@ -61,7 +61,7 @@ class ArticleGalley extends Representation
     /**
      * Set label/title.
      *
-     * @param $label string
+     * @param string $label
      */
     public function setLabel($label)
     {
@@ -81,7 +81,7 @@ class ArticleGalley extends Representation
     /**
      * Set locale.
      *
-     * @param $locale string
+     * @param string $locale
      */
     public function setLocale($locale)
     {
@@ -106,7 +106,7 @@ class ArticleGalley extends Representation
      *
      * @deprecated 3.3
      *
-     * @param $fileId int
+     * @param int $fileId
      */
     public function setFileId($fileId)
     {
@@ -135,7 +135,7 @@ class ArticleGalley extends Representation
     public function getFile()
     {
         if (!isset($this->_submissionFile) && $this->getData('submissionFileId') != null) {
-            $this->_submissionFile = Repo::submissionFiles()
+            $this->_submissionFile = Repo::submissionFile()
                 ->get($this->getData('submissionFileId'));
         }
 
@@ -158,7 +158,7 @@ class ArticleGalley extends Representation
     /**
      * Determine whether the galley is a PDF.
      *
-     * @return boolean
+     * @return bool
      */
     public function isPdfGalley()
     {
@@ -173,9 +173,8 @@ class ArticleGalley extends Representation
     public function getGalleyLabel()
     {
         $label = $this->getLabel();
-        if ($this->getLocale() != AppLocale::getLocale()) {
-            $locales = AppLocale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')';
+        if ($this->getLocale() != Locale::getLocale()) {
+            $label .= ' (' . Locale::getMetadata($this->getLocale())->getDisplayName() . ')';
         }
         return $label;
     }
@@ -186,7 +185,7 @@ class ArticleGalley extends Representation
      * This override exists to provide a functional getName() in order to make
      * native XML export work correctly.  It is only used in that single instance.
      *
-     * @param $locale string unused, except to match the function prototype in Representation.
+     * @param string $locale unused, except to match the function prototype in Representation.
      *
      * @return array
      */
@@ -205,5 +204,29 @@ class ArticleGalley extends Representation
     public function getLocalizedName()
     {
         return $this->getLabel();
+    }
+
+    /**
+     * @copydoc \PKP\submission\Representation::setStoredPubId()
+     */
+    public function setStoredPubId($pubIdType, $pubId)
+    {
+        if ($pubIdType == 'doi') {
+            if ($doiObject = $this->getData('doiObject')) {
+                Repo::doi()->edit($doiObject, ['doi' => $pubId]);
+            } else {
+                $newDoiObject = Repo::doi()->newDataObject(
+                    [
+                        'doi' => $pubId,
+                        'contextId' => $this->getContextId()
+                    ]
+                );
+                $doiId = Repo::doi()->add($newDoiObject);
+
+                $this->setData('doiId', $doiId);
+            }
+        } else {
+            parent::setStoredPubId($pubIdType, $pubId);
+        }
     }
 }

@@ -37,9 +37,9 @@ class UserIndividualSubscriptionForm extends Form
     /**
      * Constructor
      *
-     * @param $request PKPRequest
-     * @param $userId int
-     * @param $subscriptionId int
+     * @param PKPRequest $request
+     * @param int $userId
+     * @param int $subscriptionId
      */
     public function __construct($request, $userId = null, $subscriptionId = null)
     {
@@ -52,7 +52,7 @@ class UserIndividualSubscriptionForm extends Form
         $subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
         if (isset($subscriptionId)) {
-            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
             if ($subscriptionDao->subscriptionExists($subscriptionId)) {
                 $this->subscription = $subscriptionDao->getById($subscriptionId);
             }
@@ -61,13 +61,13 @@ class UserIndividualSubscriptionForm extends Form
         $journal = $this->request->getJournal();
         $journalId = $journal->getId();
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, false, false);
         $this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
 
         // Ensure subscription type is valid
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function ($typeId) use ($journalId) {
-            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
             return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && !$subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) && !$subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId);
         }));
 
@@ -76,7 +76,7 @@ class UserIndividualSubscriptionForm extends Form
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', [DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'], [$journalId], true));
         } else {
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function ($userId) use ($journalId, $subscriptionId) {
-                $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $subscriptionDao IndividualSubscriptionDAO */
+                $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
                 $checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
                 return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;
             }));
@@ -133,7 +133,7 @@ class UserIndividualSubscriptionForm extends Form
         $this->readUserVars(['typeId', 'membership']);
 
         // If subscription type requires it, membership is provided
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
         if ($needMembership) {
@@ -149,8 +149,8 @@ class UserIndividualSubscriptionForm extends Form
         $journal = $this->request->getJournal();
         $journalId = $journal->getId();
         $typeId = $this->getData('typeId');
-        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /* @var $individualSubscriptionDao IndividualSubscriptionDAO */
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($typeId, $journalId);
         $nonExpiring = $subscriptionType->getNonExpiring();
         $today = date('Y-m-d');

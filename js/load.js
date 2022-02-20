@@ -16,12 +16,14 @@ import Page from '@/components/Container/Page.vue';
 import AccessPage from '@/components/Container/AccessPage.vue';
 import AddContextContainer from '@/components/Container/AddContextContainer.vue';
 import AdminPage from '@/components/Container/AdminPage.vue';
+import DoiPage from "@/components/Container/DoiPageOJS.vue";
 import ImportExportPage from '@/components/Container/ImportExportPage.vue';
 import SettingsPage from '@/components/Container/SettingsPage.vue';
 import StatsEditorialPage from '@/components/Container/StatsEditorialPage.vue';
 import StatsPublicationsPage from '@/components/Container/StatsPublicationsPage.vue';
 import StatsUsersPage from '@/components/Container/StatsUsersPage.vue';
 import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
+import JobsPage from '@/components/Container/JobsPage.vue';
 
 // Required by the URN plugin
 import FieldText from '@/components/Form/fields/FieldText.vue';
@@ -29,12 +31,14 @@ import FieldText from '@/components/Form/fields/FieldText.vue';
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
-		Container,
-		Page,
 		AccessPage,
 		AddContextContainer,
 		AdminPage,
+		Container,
+		DoiPage,
 		ImportExportPage,
+		JobsPage,
+		Page,
 		SettingsPage,
 		StatsEditorialPage,
 		StatsPublicationsPage,

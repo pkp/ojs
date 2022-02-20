@@ -30,18 +30,21 @@ class CounterReportAR1 extends CounterReport
         return __('plugins.reports.counter.ar1.title');
     }
 
-    /*
+    /**
      * Convert an OJS metrics request to a COUNTER ReportItem
-     * @param $columns string|array column (aggregation level) selection
-     * @param $filters array report-level filter selection
-     * @param $orderBy array order criteria
-     * @param $range null|DBResultRange paging specification
+     *
+     * @param string|array $columns column (aggregation level) selection
+     * @param array $filters report-level filter selection
+     * @param array $orderBy order criteria
+     * @param null|DBResultRange $range paging specification
+     *
      * @see ReportPlugin::getMetrics for more details
+     *
      * @return array COUNTER\ReportItem
      */
     public function getReportItems($columns = [], $filters = [], $orderBy = [], $range = null)
     {
-        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /* @var $metricsDao MetricsDAO */
+        $metricsDao = DAORegistry::getDAO('MetricsDAO'); /** @var MetricsDAO $metricsDao */
 
         // Columns are fixed for this report
         $defaultColumns = [PKPStatisticsHelper::STATISTICS_DIMENSION_MONTH, PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID];
@@ -141,7 +144,7 @@ class CounterReportAR1 extends CounterReport
         }
         $title = $article->getLocalizedTitle();
         $journalId = $article->getContextId();
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journal = $journalDao->getById($journalId);
         if (!$journal) {
             return false;

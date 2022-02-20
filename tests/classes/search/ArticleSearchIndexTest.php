@@ -15,7 +15,7 @@
  * @brief Test class for the ArticleSearchIndex class
  */
 
-import('classes.i18n.AppLocale'); // Causes mocked AppLocale class to be loaded
+import('classes.i18n.Locale'); // Causes mocked Locale class to be loaded
 
 import('lib.pkp.tests.PKPTestCase');
 
@@ -434,7 +434,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     private function getMockArticleSearchIndex($expectedCall)
     {
         // Mock ArticleSearchIndex.
-        /* @var $articleSearchIndex ArticleSearchIndex */
+        /** @var ArticleSearchIndex $articleSearchIndex */
         $articleSearchIndex = $this->getMockBuilder(ArticleSearchIndex::class)
             ->setMethods(['_updateTextIndex'])
             ->getMock();

@@ -38,9 +38,9 @@ class UserInstitutionalSubscriptionForm extends Form
     /**
      * Constructor
      *
-     * @param $request PKPRequest
-     * @param $userId int
-     * @param $subscriptionId int
+     * @param PKPRequest $request
+     * @param int $userId
+     * @param int $subscriptionId
      */
     public function __construct($request, $userId = null, $subscriptionId = null)
     {
@@ -53,7 +53,7 @@ class UserInstitutionalSubscriptionForm extends Form
         $subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
         if (isset($subscriptionId)) {
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $subscriptionDao InstitutionalSubscriptionDAO */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
             if ($subscriptionDao->subscriptionExists($subscriptionId)) {
                 $this->subscription = $subscriptionDao->getById($subscriptionId);
             }
@@ -62,13 +62,13 @@ class UserInstitutionalSubscriptionForm extends Form
         $journal = $this->request->getJournal();
         $journalId = $journal->getId();
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, true, false);
         $this->subscriptionTypes = $subscriptionTypes->toArray();
 
         // Ensure subscription type is valid
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function ($typeId) use ($journalId) {
-            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
             return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) && !$subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId);
         }));
 
@@ -129,7 +129,7 @@ class UserInstitutionalSubscriptionForm extends Form
         $this->readUserVars(['typeId', 'membership', 'institutionName', 'institutionMailingAddress', 'domain', 'ipRanges']);
 
         // If subscription type requires it, membership is provided
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
         if ($needMembership) {
@@ -179,8 +179,8 @@ class UserInstitutionalSubscriptionForm extends Form
         $journal = $this->request->getJournal();
         $journalId = $journal->getId();
         $typeId = $this->getData('typeId');
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
-        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
+        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
         $subscriptionType = $subscriptionTypeDao->getById($typeId);
         $nonExpiring = $subscriptionType->getNonExpiring();
         $today = date('Y-m-d');
@@ -211,7 +211,7 @@ class UserInstitutionalSubscriptionForm extends Form
         $subscription->setInstitutionName($this->getData('institutionName'));
         $subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
         $subscription->setDomain($this->getData('domain'));
-        $subscription->setIPRanges(PKPString::regexp_split('/\s+/', $this->getData('ipRanges')));
+        $subscription->setIPRanges(PKPString::regexp_split('/\s+/', trim($this->getData('ipRanges'))));
 
         if ($subscription->getId()) {
             $institutionalSubscriptionDao->updateObject($subscription);

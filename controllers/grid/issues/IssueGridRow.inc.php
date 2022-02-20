@@ -25,8 +25,10 @@ class IssueGridRow extends GridRow
     //
     // Overridden template methods
     //
-    /*
+    /**
      * @copydoc GridRow::initialize
+     *
+     * @param null|mixed $template
      */
     public function initialize($request, $template = null)
     {

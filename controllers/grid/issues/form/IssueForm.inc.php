@@ -18,6 +18,7 @@
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
+use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
@@ -30,7 +31,7 @@ class IssueForm extends Form
     /**
      * Constructor.
      *
-     * @param $issue Issue (optional)
+     * @param Issue $issue (optional)
      */
     public function __construct($issue = null)
     {
@@ -71,7 +72,7 @@ class IssueForm extends Form
             ]);
 
             // Cover image delete link action
-            if ($coverImage = $this->issue->getCoverImage(AppLocale::getLocale())) {
+            if ($coverImage = $this->issue->getCoverImage(Locale::getLocale())) {
                 $templateMgr->assign(
                     'deleteCoverImageLinkAction',
                     new LinkAction(
@@ -111,7 +112,7 @@ class IssueForm extends Form
         if ($temporaryFileId = $this->getData('temporaryFileId')) {
             $request = Application::get()->getRequest();
             $user = $request->getUser();
-            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
+            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /** @var TemporaryFileDAO $temporaryFileDao */
             $temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
             $publicFileManager = new PublicFileManager();
@@ -145,7 +146,7 @@ class IssueForm extends Form
     public function initData()
     {
         if (isset($this->issue)) {
-            $locale = AppLocale::getLocale();
+            $locale = Locale::getLocale();
             $this->_data = [
                 'title' => $this->issue->getTitle(null), // Localized
                 'volume' => $this->issue->getVolume(),
@@ -252,11 +253,11 @@ class IssueForm extends Form
             Repo::issue()->add($issue);
         }
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
         // Copy an uploaded cover file for the issue, if there is one.
         if ($temporaryFileId = $this->getData('temporaryFileId')) {
             $user = $request->getUser();
-            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /* @var $temporaryFileDao TemporaryFileDAO */
+            $temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO'); /** @var TemporaryFileDAO $temporaryFileDao */
             $temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 
             $publicFileManager = new PublicFileManager();

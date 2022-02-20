@@ -25,7 +25,6 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
 use APP\core\Application;
-use APP\i18n\AppLocale;
 use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
@@ -33,16 +32,16 @@ use PKP\form\Form;
 
 class SubscriptionPolicyForm extends Form
 {
-    /** @var validNumMonthsBeforeExpiry array keys are valid expiry reminder months */
+    /** @var array keys are valid expiry reminder months */
     public $validNumMonthsBeforeExpiry;
 
-    /** @var validNumWeeksBeforeExpiry array keys are valid expiry reminder weeks */
+    /** @var array keys are valid expiry reminder weeks */
     public $validNumWeeksBeforeExpiry;
 
-    /** @var validNumMonthsAfterExpiry array keys are valid expiry reminder months */
+    /** @var array keys are valid expiry reminder months */
     public $validNumMonthsAfterExpiry;
 
-    /** @var validNumWeeksAfterExpiry array keys are valid expiry reminder weeks */
+    /** @var array keys are valid expiry reminder weeks */
     public $validNumWeeksAfterExpiry;
 
     /**
@@ -50,8 +49,6 @@ class SubscriptionPolicyForm extends Form
      */
     public function __construct()
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
-
         $this->validNumMonthsBeforeExpiry = [0 => __('common.disabled')];
         for ($i = SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN; $i <= SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX; $i++) {
             $this->validNumMonthsBeforeExpiry[$i] = __('manager.subscriptionPolicies.xMonths', ['x' => $i]);
@@ -183,7 +180,7 @@ class SubscriptionPolicyForm extends Form
 
         parent::execute(...$functionArgs);
 
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journalDao->updateObject($journal);
     }
 }

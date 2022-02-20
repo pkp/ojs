@@ -18,15 +18,15 @@ use APP\facades\Repo;
 
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
-use APP\i18n\AppLocale;
 use APP\issue\Collector;
 use APP\issue\IssueAction;
-
 use APP\payment\ojs\OJSPaymentManager;
+
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
 
@@ -53,7 +53,7 @@ class IssueHandler extends Handler
     /**
      * @see PKPHandler::initialize()
      *
-     * @param $args array Arguments list
+     * @param array $args Arguments list
      */
     public function initialize($request, $args = [])
     {
@@ -61,7 +61,7 @@ class IssueHandler extends Handler
         $galleyId = $args[1] ?? 0;
         if ($galleyId) {
             $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-            $galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $galleyDao IssueGalleyDAO */
+            $galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $galleyDao */
             $journal = $request->getJournal();
             $galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 
@@ -105,8 +105,8 @@ class IssueHandler extends Handler
     /**
      * View an issue.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function view($args, $request)
     {
@@ -133,8 +133,8 @@ class IssueHandler extends Handler
     /**
      * Display the issue archive listings
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function archive($args, $request)
     {
@@ -176,8 +176,8 @@ class IssueHandler extends Handler
     /**
      * Downloads an issue galley file
      *
-     * @param $args array ($issueId, $galleyId)
-     * @param $request Request
+     * @param array $args ($issueId, $galleyId)
+     * @param Request $request
      */
     public function download($args, $request)
     {
@@ -205,7 +205,7 @@ class IssueHandler extends Handler
     /**
      * Set a retrieved issue galley
      *
-     * @param $galley IssueGalley
+     * @param IssueGalley $galley
      */
     public function setGalley($galley)
     {
@@ -215,7 +215,7 @@ class IssueHandler extends Handler
     /**
      * Determines whether or not a user can view an issue galley.
      *
-     * @param $request Request
+     * @param Request $request
      */
     public function userCanViewGalley($request)
     {
@@ -264,7 +264,7 @@ class IssueHandler extends Handler
                         }
 
                         // If the issue galley has been purchased, then allow reader access
-                        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+                        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
                         $dateEndMembership = $user->getSetting('dateEndMembership', 0);
                         if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId()) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
                             return true;
@@ -291,19 +291,13 @@ class IssueHandler extends Handler
         return true;
     }
 
-    public function setupTemplate($request)
-    {
-        parent::setupTemplate($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_APP_EDITOR);
-    }
-
     /**
      * Given an issue, set up the template with all the required variables for
      * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
      * and view issue).
      *
-     * @param $issue object The issue to display
-     * @param $showToc boolean iff false and a custom cover page exists,
+     * @param object $issue The issue to display
+     * @param bool $showToc iff false and a custom cover page exists,
      * 	the cover page will be displayed. Otherwise table of contents
      * 	will be displayed.
      */
@@ -322,15 +316,15 @@ class IssueHandler extends Handler
             'issueSeries' => $issue->getIssueIdentification(['showTitle' => false]),
         ]);
 
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
 
         $templateMgr->assign([
             'locale' => $locale,
         ]);
 
-        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
 
-        $genreDao = DAORegistry::getDAO('GenreDAO'); /* @var $genreDao GenreDAO */
+        $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
         $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
         $primaryGenreIds = array_map(function ($genre) {
             return $genre->getId();
@@ -401,7 +395,7 @@ class IssueHandler extends Handler
             $templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
         }
 
-        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $completedPaymentDao OJSCompletedPaymentDAO */
+        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $templateMgr->assign([
             'hasAccess' => !$subscriptionRequired ||
                 $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN ||

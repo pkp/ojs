@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/facade/Repo.inc.php
+ * @file classes/facades/Repo.inc.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -14,6 +14,7 @@
 
 namespace APP\facades;
 
+use APP\doi\Repository as DoiRepository;
 use APP\issue\Repository as IssueRepository;
 use APP\publication\Repository as PublicationRepository;
 use APP\submission\Repository as SubmissionRepository;
@@ -24,29 +25,34 @@ use PKP\facades\Repo as BaseRepo;
 
 class Repo extends BaseRepo
 {
+    public static function doi(): DoiRepository
+    {
+        return app()->make(DoiRepository::class);
+    }
+
     public static function issue(): IssueRepository
     {
-        return app()->make(IssueRepository::class);
+        return app(IssueRepository::class);
     }
 
     public static function publication(): PublicationRepository
     {
-        return app()->make(PublicationRepository::class);
+        return app(PublicationRepository::class);
     }
 
     public static function submission(): SubmissionRepository
     {
-        return app()->make(SubmissionRepository::class);
+        return app(SubmissionRepository::class);
     }
 
     public static function user(): UserRepository
     {
-        return app()->make(UserRepository::class);
+        return app(UserRepository::class);
     }
 
-    public static function submissionFiles(): SubmissionFileRepository
+    public static function submissionFile(): SubmissionFileRepository
     {
-        return app()->make(SubmissionFileRepository::class);
+        return app(SubmissionFileRepository::class);
     }
     public static function articleGalley(): \APP\articleGalley\Repository
     {

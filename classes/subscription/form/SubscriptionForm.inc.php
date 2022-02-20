@@ -21,9 +21,9 @@ use APP\subscription\Subscription;
 use APP\subscription\SubscriptionDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
-use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionForm extends Form
 {
@@ -45,8 +45,8 @@ class SubscriptionForm extends Form
     /**
      * Constructor
      *
-     * @param $template string? Template to use for form presentation
-     * @param $subscriptionId int The subscription ID for this subscription; null for new subscription
+     * @param string? $template Template to use for form presentation
+     * @param int $subscriptionId The subscription ID for this subscription; null for new subscription
      */
     public function __construct($template, $subscriptionId = null)
     {
@@ -59,18 +59,15 @@ class SubscriptionForm extends Form
 
         $this->validStatus = SubscriptionDAO::getStatusOptions();
 
-        $isoCodes = app(IsoCodesFactory::class);
         $this->validCountries = [];
-        foreach ($isoCodes->getCountries() as $country) {
+        foreach (Locale::getCountries() as $country) {
             $this->validCountries[$country->getAlpha2()] = $country->getLocalName();
         }
         asort($this->validCountries);
 
         // User is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', function ($userId) {
-            return (bool) Repo::user()->get($userId);
-        }));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', fn ($userId) => !!Repo::user()->get($userId)));
 
         // Subscription status is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));
@@ -132,7 +129,7 @@ class SubscriptionForm extends Form
         $this->readUserVars(['status', 'userId', 'typeId', 'membership', 'referenceNumber', 'notes', 'notifyEmail', 'dateStart', 'dateEnd']);
 
         // If subscription type requires it, membership is provided
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
         if ($needMembership) {
@@ -218,7 +215,7 @@ class SubscriptionForm extends Form
         $subscription->setReferenceNumber($this->getData('referenceNumber') ? $this->getData('referenceNumber') : null);
         $subscription->setNotes($this->getData('notes') ? $this->getData('notes') : null);
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
         if (!$subscriptionType->getNonExpiring()) {
             $subscription->setDateStart($this->getData('dateStart'));
@@ -232,7 +229,7 @@ class SubscriptionForm extends Form
      */
     protected function _prepareNotificationEmail($mailTemplateKey)
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
 
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
@@ -256,11 +253,11 @@ class SubscriptionForm extends Form
         $subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
 
         $paramArray = [
-            'subscriberName' => $user->getFullName(),
+            'recipientName' => $user->getFullName(),
             'journalName' => $journalName,
             'subscriptionType' => $subscriptionType->getSummaryString(),
-            'username' => $user->getUsername(),
-            'subscriptionContactSignature' => $subscriptionContactSignature
+            'recipientUsername' => $user->getUsername(),
+            'signature' => $subscriptionContactSignature
         ];
 
         $mail = new MailTemplate($mailTemplateKey);

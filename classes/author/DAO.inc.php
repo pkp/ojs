@@ -17,14 +17,14 @@
 
 namespace APP\author;
 
-use APP\i18n\AppLocale;
+use APP\core\Application;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
-use PKP\identity\Identity;
+use PKP\facades\Locale;
 
+use PKP\identity\Identity;
 use PKP\submission\PKPSubmission;
-use APP\core\Application;
 
 class DAO extends \PKP\author\DAO
 {
@@ -33,12 +33,12 @@ class DAO extends \PKP\author\DAO
      * Authors will be sorted by (family, given). Note that if journalId is null,
      * alphabetized authors for all enabled journals are returned.
      * If authors have the same given names, first names and affiliations in all journal locales,
-     * as well as country and email (otional), they are considered to be the same.
+     * as well as country and email (optional), they are considered to be the same.
      *
-     * @param $journalId int Optional journal ID to restrict results to
-     * @param $initial string An initial a family name must begin with, "-" for authors with no family names
-     * @param $rangeInfo Object Range information
-     * @param $includeEmail boolean Whether or not to include the email in the select distinct
+     * @param int $journalId Optional journal ID to restrict results to
+     * @param string $initial An initial a family name must begin with, "-" for authors with no family names
+     * @param object $rangeInfo Range information
+     * @param bool $includeEmail Whether or not to include the email in the select distinct
      *
      * @return DAOResultFactory Authors ordered by last name, given name
      *
@@ -47,7 +47,7 @@ class DAO extends \PKP\author\DAO
      */
     public function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false)
     {
-        $locale = AppLocale::getLocale();
+        $locale = Locale::getLocale();
         $params = [
             Identity::IDENTITY_SETTING_GIVENNAME, $locale,
             Identity::IDENTITY_SETTING_GIVENNAME,
@@ -61,7 +61,7 @@ class DAO extends \PKP\author\DAO
 
         $supportedLocales = [];
         if ($journalId !== null) {
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var $journalDao \APP\journal\JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var \APP\journal\JournalDAO $journalDao */
             $journal = $journalDao->getById($journalId);
             $supportedLocales = $journal->getSupportedLocales();
         } else {

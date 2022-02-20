@@ -65,7 +65,7 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 
-		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('You must complete this field in English.');
+		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('You must complete this field in English (United States).');
 		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
 		cy.get('#titleAbstract input[name=title-en_US').type(submission.title, {delay: 0});
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
@@ -108,17 +108,16 @@ describe('Data suite tests', function() {
 		// Contributors
 		cy.wait(1500);
 		cy.get('#contributors-button').click();
-		cy.get('[id*="authorgrid-addAuthor-button"]').click();
-		cy.wait(250);
-		cy.get('#editAuthor [name="givenName[en_US]"]').type('Lorem', {delay: 0});
-		cy.get('#editAuthor [name="familyName[en_US]"]').type('Ipsum', {delay: 0});
-		cy.get('#editAuthor [name="email"]').type('lorem@mailinator.com', {delay: 0});
-		cy.get('#editAuthor [name="country"]').select('South Africa');
-		cy.get('#editAuthor label').contains('Author').click();
-		cy.get('#editAuthor [id^="submitFormButton"]').contains('Save').click();
-		cy.contains('Author added.');
+
+		cy.get('#contributors button').contains('Add Contributor').click();
+
+		cy.get('#contributors [name="givenName-en_US"]').type('Lorem', {delay: 0});
+		cy.get('#contributors [name="familyName-en_US"]').type('Ipsum', {delay: 0});
+		cy.get('#contributors [name="email"]').type('lorem@mailinator.com', {delay: 0});
+		cy.get('#contributors [name="country"]').select('South Africa');
+		cy.get('#contributors button').contains('Save').click();
 		cy.wait(500);
-		cy.get('[id*="authorgrid-row"] span').contains('Lorem Ipsum');
+		cy.get('#contributors div').contains('Lorem Ipsum');
 
 		// Create a galley
 		cy.get('button#publication-button').click();
@@ -146,10 +145,10 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
 
-		cy.wait(1500);
 		cy.get('#contributors-button').click();
-		cy.get('[id*="authorgrid-addAuthor-button"]').should('not.exist');
-		cy.get('[id*="editAuthor-button"]').should('not.exist');
+
+		cy.get('#contributors button').contains('Add Contributor').should('not.exist');
+		cy.get('#contributors button').contains('Edit').should('not.exist');
 
 		cy.get('#galleys-button').click();
 		cy.get('[id*="addGalley-button"]').should('not.exist');
@@ -250,15 +249,14 @@ describe('Data suite tests', function() {
 		// Edit Contributor
 		cy.wait(1500);
 		cy.get('#contributors-button').click();
-		cy.contains('Add Contributor');
-		cy.get('#contributors-grid #component-grid-users-author-authorgrid-row-3 .show_extras').click();
-		cy.get('#component-grid-users-author-authorgrid-row-3-control-row [id*="editAuthor-button"]').click();
-		cy.wait(1500); // Wait for the form to settle
-		cy.get('[name="familyName[en_US]"]').type(' Version 2', {delay: 0});
-		cy.get('[id^="submitFormButton"]').contains('Save').click();
-		cy.contains('Author edited.');
+
+		cy.get('#contributors div').contains('Alan Mwandenga').parent().parent().find('button').contains('Edit').click();
+	
+		cy.get('#contributors [name="familyName-en_US"]').type(' Version 2', {delay: 0});
+		cy.get('#contributors button').contains('Save').click();
+		// cy.get('#contributors button').contains('Save').should("not.be.visible");
 		cy.wait(1500); // Wait for the grid to reload
-		cy.get('[id*="authorgrid-row"] span').contains('Alan Mwandenga Version 2');
+		cy.get('#contributors div').contains('Alan Mwandenga Version 2');
 
 		// Edit Galley
 		cy.get('#galleys-button').click();
@@ -269,7 +267,7 @@ describe('Data suite tests', function() {
 		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
 		cy.get('#articleGalleyForm button').contains('Save').click();
 		cy.wait(1500);
-		cy.get('#representations-grid [id*="downloadFile-button"').contains('PDF Version 2');
+		cy.get('#representations-grid [id*="downloadFile-button"]:contains("PDF Version 2")');
 
 		// Edit url path
 		cy.get('#issue-button').click();

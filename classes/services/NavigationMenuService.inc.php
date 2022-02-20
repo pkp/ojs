@@ -16,15 +16,13 @@
 namespace APP\services;
 
 use APP\core\Application;
-use APP\i18n\AppLocale;
-
 use APP\template\TemplateManager;
 use PKP\plugins\HookRegistry;
 use PKP\security\Validation;
 
 class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
 {
-    /** types for all ojs default navigationMenuItems */
+    // Types for all ojs default navigationMenuItems
     public const NMI_TYPE_SUBSCRIPTIONS = 'NMI_TYPE_SUBSCRIPTIONS';
     public const NMI_TYPE_MY_SUBSCRIPTIONS = 'NMI_TYPE_MY_SUBSCRIPTIONS';
     public const NMI_TYPE_CURRENT = 'NMI_TYPE_CURRENT';
@@ -42,14 +40,12 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     /**
      * Return all default navigationMenuItemTypes.
      *
-     * @param $hookName string
-     * @param $args array of arguments passed
+     * @param string $hookName
+     * @param array $args of arguments passed
      */
     public function getMenuItemTypesCallback($hookName, $args)
     {
         $types = & $args[0];
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
 
         $ojsTypes = [
             self::NMI_TYPE_CURRENT => [
@@ -78,8 +74,8 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     /**
      * Callback for display menu item functionallity
      *
-     * @param $hookName string
-     * @param $args array of arguments passed
+     * @param string $hookName
+     * @param array $args of arguments passed
      */
     public function getDisplayStatusCallback($hookName, $args)
     {

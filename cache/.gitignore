@@ -1,6 +1,2 @@
-*.php
-*.html
-*.gz
-*.css
-URI/
-HTML/
+*
+!.gitignore

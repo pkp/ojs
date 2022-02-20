@@ -24,19 +24,11 @@ use PKP\linkAction\request\AjaxAction;
 class TocGridCellProvider extends GridCellProvider
 {
     /**
-     * Constructor
-     */
-    public function __construct($translate = false)
-    {
-        parent::__construct();
-    }
-
-    /**
      * Extracts variables for a given column from a data element
      * so that they may be assigned to template before rendering.
      *
-     * @param $row \PKP\controllers\grid\GridRow
-     * @param $column GridColumn
+     * @param \PKP\controllers\grid\GridRow $row
+     * @param GridColumn $column
      *
      * @return array
      */
@@ -61,7 +53,7 @@ class TocGridCellProvider extends GridCellProvider
     {
         switch ($column->getId()) {
             case 'access':
-                $article = $row->getData(); /* @var $article Submission */
+                $article = $row->getData(); /** @var Submission $article */
                 return [new LinkAction(
                     'disable',
                     new AjaxAction(

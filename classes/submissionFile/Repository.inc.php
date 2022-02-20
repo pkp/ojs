@@ -16,7 +16,7 @@ namespace APP\submissionFile;
 use APP\core\Application;
 use Exception;
 use PKP\db\DAORegistry;
-use PKP\search\SubmissionSearch;
+use PKP\observers\events\SubmissionFileDeleted;
 use PKP\submissionFile\Repository as BaseRepository;
 use PKP\submissionFile\SubmissionFile;
 
@@ -27,7 +27,7 @@ class Repository extends BaseRepository
         $galley = null;
 
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
             $galley = $galleyDao->getById($submissionFile->getData('assocId'));
             if (!$galley) {
                 throw new Exception('Galley not found when adding submission file.');
@@ -57,14 +57,14 @@ class Repository extends BaseRepository
     {
         // Remove galley associations and update search index
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /* @var $galleyDao ArticleGalleyDAO */
+            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
             $galley = $galleyDao->getById($submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
                 $galleyDao->updateObject($galley);
             }
-            $articleSearchIndex = Application::getSubmissionSearchIndex();
-            $articleSearchIndex->deleteTextIndex($submissionFile->getData('submissionId'), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile->getId());
+
+            event(new SubmissionFileDeleted($submissionFile));
         }
     }
 }

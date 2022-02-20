@@ -24,8 +24,8 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
     /**
      * Constructor
      *
-     * @param $request PKPRequest
-     * @param $subscriptionId int leave as default for new subscription
+     * @param PKPRequest $request
+     * @param int $subscriptionId leave as default for new subscription
      */
     public function __construct($request, $subscriptionId = null)
     {
@@ -44,7 +44,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
             }
         }
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypeIterator = $subscriptionTypeDao->getByInstitutional($journalId, true);
         $this->subscriptionTypes = [];
         while ($subscriptionType = $subscriptionTypeIterator->next()) {
@@ -58,7 +58,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
 
         // Ensure subscription type is valid
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdValid', function ($typeId) use ($journalId) {
-            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+            $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
             return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId);
         }));
 
@@ -106,7 +106,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         $ipRanges = $this->getData('ipRanges');
         $ipRangeProvided = !empty(trim($ipRanges));
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
         // If online or print + online, domain or at least one IP range has been provided
@@ -157,7 +157,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         $ipRanges = explode("\r\n", trim($ipRanges));
         $this->subscription->setIPRanges($ipRanges);
 
-        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var $institutionalSubscriptionDao InstitutionalSubscriptionDAO */
+        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
         if ($insert) {
             $institutionalSubscriptionDao->insertObject($this->subscription);
         } else {

@@ -16,9 +16,11 @@
 
 namespace APP\components\forms\publication;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
+use PKP\context\Context;
 
 define('FORM_PUBLISH', 'publish');
 
@@ -39,10 +41,10 @@ class PublishForm extends FormComponent
     /**
      * Constructor
      *
-     * @param $action string URL to submit the form to
-     * @param $publication Publication The publication to change settings for
-     * @param $submissionContext \Context journal or press
-     * @param $requirementErrors array A list of pre-publication requirements that are not met.
+     * @param string $action URL to submit the form to
+     * @param Publication $publication The publication to change settings for
+     * @param \Context $submissionContext journal or press
+     * @param array $requirementErrors A list of pre-publication requirements that are not met.
      */
     public function __construct($action, $publication, $submissionContext, $requirementErrors)
     {
@@ -105,5 +107,92 @@ class PublishForm extends FormComponent
                 'description' => $msg,
                 'groupId' => 'default',
             ]));
+
+        if ($submissionContext->areDoisEnabled()) {
+            $this->addField(new \PKP\components\forms\FieldHTML('doi', [
+                'description' => $this->_getDoiMessage(),
+                'groupId' => 'default',
+            ]));
+        }
+    }
+
+    /**
+     * Assembes message about DOIs and their creation status.
+     */
+    private function _getDoiMessage(): string
+    {
+        $request = Application::get()->getRequest();
+        $context = $request->getContext();
+        $enabledDoiTypes = $context->getData(Context::SETTING_ENABLED_DOI_TYPES);
+
+        $publicationDoiEnabled = in_array(Repo::doi()::TYPE_PUBLICATION, $enabledDoiTypes);
+        $galleyDoiEnabled = in_array(Repo::doi()::TYPE_REPRESENTATION, $enabledDoiTypes);
+        $warningIconHtml = '<span class="fa fa-exclamation-triangle pkpIcon--inline"></span>';
+
+        $returnValue = '';
+
+        if (!$publicationDoiEnabled && ! $galleyDoiEnabled) {
+            $returnValue = '';
+
+        // Use a simplified view when only assigning to the publication
+        } elseif (!$galleyDoiEnabled) {
+            if ($this->publication->getDoi()) {
+                $msg = __('doi.editor.preview.publication', ['doi' => $this->publication->getDoi()]);
+            } else {
+                $assignedDoi = $this->publication->getDoi();
+                if ($assignedDoi != null) {
+                    $msg = __('doi.editor.preview.publication', ['doi' => $assignedDoi]);
+                } else {
+                    $msg = '<div class="pkpNotification pkpNotification--warning">' . $warningIconHtml . __('doi.editor.preview.publication.none') . '</div>';
+                }
+
+                $returnValue = $msg;
+            }
+            // Show a table if more than one DOI is going to be created
+        } else {
+            $doiTableRows = [];
+            if ($publicationDoiEnabled) {
+                if ($this->publication->getDoi()) {
+                    $doiTableRows[] = [$this->publication->getDoi(), 'Publication'];
+                } else {
+                    $assignedDoi = $this->publication->getDoi();
+                    if ($assignedDoi != null) {
+                        $doiTableRows[] = [$assignedDoi, 'Publication'];
+                    } else {
+                        $doiTableRows[] = [$warningIconHtml . __('submission.status.unassigned'), 'Publication'];
+                    }
+                }
+            }
+
+            if ($galleyDoiEnabled) {
+                foreach ((array)$this->publication->getData('galleys') as $galley) {
+                    if ($galley->getDoi()) {
+                        $doiTableRows[] = [$galley->getDoi(), __('doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
+                    } else {
+                        $assignedDoi = $this->publication->getDoi();
+                        if ($assignedDoi != null) {
+                            $doiTableRows[] = [$assignedDoi, __('doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
+                        } else {
+                            $doiTableRows[] = [$warningIconHtml . __('submission.status.unassigned'), __('doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
+                        }
+                    }
+                }
+
+                if (!empty($doiTableRows)) {
+                    $table = '<table class="pkpTable"><thead><tr>' .
+                        '<th>' . __('doi.editor.doi') . '</th>' .
+                        '<th>' . __('doi.editor.preview.objects') . '</th>' .
+                        '</tr></thead><tbody>';
+                    foreach ($doiTableRows as $doiTableRow) {
+                        $table .= '<tr><td>' . $doiTableRow[0] . '</td><td>' . $doiTableRow[1] . '</td></tr>';
+                    }
+                    $table .= '</tbody></table>';
+
+                    $returnValue = $table;
+                }
+            }
+        }
+
+        return $returnValue;
     }
 }

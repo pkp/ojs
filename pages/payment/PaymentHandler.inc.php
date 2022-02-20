@@ -22,8 +22,8 @@ class PaymentHandler extends Handler
     /**
      * Pass request to plugin.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function plugin($args, $request)
     {
@@ -44,8 +44,8 @@ class PaymentHandler extends Handler
     /**
      * Present a landing page from which to fulfill a payment.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function pay($args, $request)
     {
@@ -55,7 +55,7 @@ class PaymentHandler extends Handler
 
         $paymentManager = Application::getPaymentManager($request->getContext());
         $templateMgr = TemplateManager::getManager($request);
-        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /* @var $queuedPaymentDao QueuedPaymentDAO */
+        $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
         $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
         if (!$queuedPayment) {
             $templateMgr->assign([

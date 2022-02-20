@@ -27,7 +27,7 @@ use APP\core\Application;
 use APP\core\Services;
 
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
+use PKP\facades\Locale;
 use PKP\submission\PKPSubmission;
 
 class Submission extends PKPSubmission
@@ -48,9 +48,9 @@ class Submission extends PKPSubmission
     /**
      * Get the value of a license field from the containing context.
      *
-     * @param $locale string Locale code
-     * @param $field PERMISSIONS_FIELD_...
-     * @param $publication Publication
+     * @param string $locale Locale code
+     * @param int $field PERMISSIONS_FIELD_...
+     * @param Publication $publication
      *
      * @return string|array|null
      */
@@ -144,7 +144,7 @@ class Submission extends PKPSubmission
      *
      * @deprecated 3.2.0.0
      *
-     * @param $journalId int
+     * @param int $journalId
      */
     public function setJournalId($journalId)
     {
@@ -168,7 +168,7 @@ class Submission extends PKPSubmission
     /**
      * Set ID of article's section.
      *
-     * @param $sectionId int
+     * @param int $sectionId
      */
     public function setSectionId($sectionId)
     {
@@ -198,7 +198,7 @@ class Submission extends PKPSubmission
     /**
      * get cover page server-side file name
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      *
@@ -234,7 +234,7 @@ class Submission extends PKPSubmission
     /**
      * get cover page alternate text
      *
-     * @param $locale string
+     * @param string $locale
      *
      * @return string
      *
@@ -294,7 +294,7 @@ class Submission extends PKPSubmission
     {
         $allGalleys = $this->getData('galleys');
         $galleys = [];
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $tryLocale) {
+        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $tryLocale) {
             foreach (array_keys($allGalleys) as $key) {
                 if ($allGalleys[$key]->getLocale() == $tryLocale) {
                     $galleys[] = $allGalleys[$key];

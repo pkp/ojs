@@ -20,16 +20,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
 {
     public $_issue;
 
-    /**
-     * Constructor
-     *
-     * @param $context Context
-     * @param $user User
-     */
-    public function __construct($context, $user)
-    {
-        parent::__construct($context, $user);
-    }
 
     //
     // Deploymenturation items for subclasses to override
@@ -75,7 +65,7 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
     /**
      * Set the import/export issue.
      *
-     * @param $issue Issue
+     * @param Issue $issue
      */
     public function setIssue($issue)
     {
@@ -97,16 +87,12 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment
      */
     protected function getObjectTypes()
     {
-        $objectTypes = parent::getObjectTypes();
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-        $objectTypes = $objectTypes + [
+        return parent::getObjectTypes() + [
             ASSOC_TYPE_JOURNAL => __('context.context'),
             ASSOC_TYPE_SECTION => __('section.section'),
             ASSOC_TYPE_ISSUE => __('issue.issue'),
             ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
             ASSOC_TYPE_PUBLICATION => __('common.publication'),
         ];
-
-        return $objectTypes;
     }
 }

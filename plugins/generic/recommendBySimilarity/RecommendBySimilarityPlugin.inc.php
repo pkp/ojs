@@ -13,6 +13,7 @@
  * @brief Plugin to recommend similar articles.
  */
 
+use APP\core\Application;
 use APP\search\ArticleSearch;
 use PKP\plugins\GenericPlugin;
 
@@ -31,7 +32,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
     public function register($category, $path, $mainContextId = null)
     {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+        if (Application::isUnderMaintenance()) {
             return $success;
         }
 

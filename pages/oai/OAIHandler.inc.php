@@ -13,20 +13,20 @@
  * @brief Handle OAI protocol requests.
  */
 
-define('SESSION_DISABLE_INIT', 1); // FIXME?
-
 use APP\handler\Handler;
-
 use APP\oai\ojs\JournalOAI;
 use Firebase\JWT\JWT;
-
 use PKP\oai\OAIConfig;
+use PKP\session\SessionManager;
+
+// Disable initializing the session
+SessionManager::disable();
 
 class OAIHandler extends Handler
 {
     /**
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function index($args, $request)
     {

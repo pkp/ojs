@@ -31,9 +31,9 @@ class AssignToIssueForm extends FormComponent
     /**
      * Constructor
      *
-     * @param $action string URL to submit the form to
-     * @param $publication \Publication The publication to change settings for
-     * @param $publicationContext \Context The context of the publication
+     * @param string $action URL to submit the form to
+     * @param \Publication $publication The publication to change settings for
+     * @param \Context $publicationContext The context of the publication
      */
     public function __construct($action, $publication, $publicationContext)
     {

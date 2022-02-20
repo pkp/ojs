@@ -43,13 +43,13 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form
      */
     public function fetch($request, $template = null, $display = false)
     {
-        $roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
+        $roleDao = DAORegistry::getDAO('RoleDAO'); /** @var RoleDAO $roleDao */
         $user = $request->getUser();
         $canSubmitAll = $roleDao->userHasRole($this->context->getId(), $user->getId(), Role::ROLE_ID_MANAGER) ||
             $roleDao->userHasRole($this->context->getId(), $user->getId(), Role::ROLE_ID_SUB_EDITOR);
 
         // Get section options for this context
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sections = [];
         $sectionsIterator = $sectionDao->getByContextId($this->context->getId(), null, !$canSubmitAll);
         while ($section = $sectionsIterator->next()) {
@@ -126,7 +126,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form
 
         $request = Application::get()->getRequest();
         $context = $request->getContext();
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $section = $sectionDao->getById($this->getData('sectionId'), $context->getId());
 
         // Validate that the section ID is attached to this journal.

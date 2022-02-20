@@ -25,7 +25,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
     public function reviewRead($args, $request)
     {
         // Retrieve review assignment.
-        $reviewAssignment = $this->getAuthorizedContextObject(ASSOC_TYPE_REVIEW_ASSIGNMENT); /* @var $reviewAssignment \PKP\submission\reviewAssignment\ReviewAssignment */
+        $reviewAssignment = $this->getAuthorizedContextObject(ASSOC_TYPE_REVIEW_ASSIGNMENT); /** @var \PKP\submission\reviewAssignment\ReviewAssignment $reviewAssignment */
 
         // Recommendation
         $newRecommendation = $request->getUserVar('recommendation');
@@ -37,7 +37,6 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $submission = $this->getSubmission();
             $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
             $user = $request->getUser();
-            AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_EDITOR);
             SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
         }
         return parent::reviewRead($args, $request);

@@ -15,8 +15,8 @@
 
 import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
 
-use APP\template\TemplateManager;
 use APP\facades\Repo;
+use APP\template\TemplateManager;
 use PKP\security\Role;
 
 class SectionForm extends PKPSectionForm
@@ -24,12 +24,11 @@ class SectionForm extends PKPSectionForm
     /**
      * Constructor.
      *
-     * @param $request Request
-     * @param $sectionId int optional
+     * @param Request $request
+     * @param int $sectionId optional
      */
     public function __construct($request, $sectionId = null)
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION);
         parent::__construct(
             $request,
             'controllers/grid/settings/sections/form/sectionForm.tpl',
@@ -51,7 +50,7 @@ class SectionForm extends PKPSectionForm
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
 
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionId = $this->getSectionId();
         if ($sectionId) {
             $section = $sectionDao->getById($sectionId, $journal->getId());
@@ -99,7 +98,7 @@ class SectionForm extends PKPSectionForm
             $context = $request->getContext();
             $sectionId = $this->getSectionId();
 
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
             $sectionsIterator = $sectionDao->getByContextId($context->getId());
             $activeSectionsCount = 0;
             while ($section = $sectionsIterator->next()) {
@@ -127,7 +126,7 @@ class SectionForm extends PKPSectionForm
 
         $journal = $request->getJournal();
 
-        $reviewFormDao = DAORegistry::getDAO('ReviewFormDAO'); /* @var $reviewFormDao ReviewFormDAO */
+        $reviewFormDao = DAORegistry::getDAO('ReviewFormDAO'); /** @var ReviewFormDAO $reviewFormDao */
         $reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
         $reviewFormOptions = [];
         while ($reviewForm = $reviewForms->next()) {
@@ -154,7 +153,7 @@ class SectionForm extends PKPSectionForm
      */
     public function getLocaleFieldNames()
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         return $sectionDao->getLocaleFieldNames();
     }
 
@@ -163,7 +162,7 @@ class SectionForm extends PKPSectionForm
      */
     public function execute(...$functionArgs)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
 

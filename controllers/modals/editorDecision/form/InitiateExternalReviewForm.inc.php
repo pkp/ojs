@@ -26,13 +26,12 @@ class InitiateExternalReviewForm extends EditorDecisionForm
     /**
      * Constructor.
      *
-     * @param $submission Submission
-     * @param $decision int SUBMISSION_EDITOR_DECISION_...
-     * @param $stageId int WORKFLOW_STAGE_ID_...
+     * @param Submission $submission
+     * @param int $decision SUBMISSION_EDITOR_DECISION_...
+     * @param int $stageId WORKFLOW_STAGE_ID_...
      */
     public function __construct($submission, $decision, $stageId)
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION);
         parent::__construct($submission, $decision, $stageId, 'controllers/modals/editorDecision/form/initiateExternalReviewForm.tpl');
     }
 

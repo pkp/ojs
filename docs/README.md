@@ -1,9 +1,9 @@
 	===================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 3.3.0
-	=== GIT tag: 3_3_0-2
-	=== Release date: February 1, 2021
+	=== Version: 3.4.0
+	=== GIT tag: 3_4_0-0
+	=== Release date: 
 	===================================
 
 
@@ -11,7 +11,7 @@
 
 Open Journal Systems (OJS) has been developed by the Public Knowledge Project.
 For general information about OJS and other open research systems, visit the
-PKP web site at <http://pkp.sfu.ca/>.
+PKP web site at <https://pkp.sfu.ca/>.
 
 
 ## License
@@ -28,7 +28,7 @@ improvements or bug fixes to the software.
 
 Recommended server requirements:
 
-* PHP >= 7.3 (with php-mbstring, php-xml and php-intl support [1])
+* PHP >= 8.0 (with php-mbstring, php-xml and php-intl support [1])
 * MySQL >= 4.1 or PostgreSQL >= 9.5
 * Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 * Operating system: Any OS that supports the above software, including
@@ -60,6 +60,9 @@ A secure deployment can be best achieved by using the following policies:
 	backups of this directory should be roughly synchronized with
 	database backups.
 
+* Configure an "allowed_hosts" setting in config.inc.php in order to prevent
+	HOST header injection attacks. This setting should contain a JSON-
+	formatted list of all hostnames that the server should consider valid.
 
 ## Installation
 
@@ -109,26 +112,20 @@ See [docs/UPGRADE.md](UPGRADE.md) for information on upgrading from previous OJS
 
 ## Localization
 
-To add support for other languages, the following sets of XML files must be
+To add support for other languages, the following sets of PO files must be
 localized and placed in an appropriately named directory (using ISO locale 
 codes, e.g. `fr_FR`, is recommended):
 
 * `locale/en_US`
 * `lib/pkp/locale/en_US`
 * `docs/manual/en`
-* `registry/locale/en_US`
 * `plugins/[plugin category]/[plugin name]/locale`, where applicable
 
 The only critical files that need translation for the system to function
-properly are found in `locale/en_US`, `lib/pkp/locale/en_US`, and
-`registry/locale/en_US`.
+properly are found in `locale/en_US`, `lib/pkp/locale/en_US`.
 
-New locales must also be added to the file `registry/locales.xml`, after which
-they can be installed in the system through the site administration web
-interface.
-	
 Translations can be contributed back to PKP for distribution with future
-releases of OJS.
+releases of OJS at https://translate.pkp.sfu.ca/projects/.
 
 
 ## Scheduled Tasks
@@ -185,6 +182,7 @@ interpreter installed on your server.
 	the `plugins/generic/usageStats` directory. A separate license agreement
 	is required for this use of this database. For details, see:
 	https://support.maxmind.com/geolite-legacy-discontinuation-notice/
+
 
 ## Contact/Support
 

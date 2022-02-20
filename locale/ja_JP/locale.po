@@ -1,7 +1,8 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 01:40+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"PO-Revision-Date: 2021-12-12 11:16+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ja_JP/>\n"
 "Language: ja_JP\n"
@@ -244,7 +245,7 @@ msgid "user.role.subscriptionManagers"
 msgstr "購読管理者"
 
 msgid "user.role.subEditors"
-msgstr "セクションエディタ"
+msgstr "セクション編集者"
 
 msgid "user.role.managers"
 msgstr "雑誌管理者"
@@ -253,7 +254,7 @@ msgid "user.role.subscriptionManager"
 msgstr "購読管理者"
 
 msgid "user.role.subEditor"
-msgstr "セクションエディタ"
+msgstr "セクション編集者"
 
 msgid "user.role.manager"
 msgstr "雑誌管理者"
@@ -307,7 +308,7 @@ msgid "user.showAllJournals"
 msgstr "全てのジャーナルの表示"
 
 msgid "user.profile.profileImage"
-msgstr "プロファイル画像"
+msgstr "プロフィール画像"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "この雑誌では役割が与えられていないユーザーを含む。"
@@ -616,7 +617,7 @@ msgid "navigation.skip.issue"
 msgstr "最新号へスキップ"
 
 msgid "navigation.skip.about"
-msgstr "本雑誌についてへスキップ"
+msgstr "本誌についてへスキップ"
 
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName} が投稿物 {$submissionId} の{$round}回目の査読を受諾した。"
@@ -651,116 +652,84 @@ msgstr "{$reviewerName}が投稿物 {$submissionId} の{$round}回目の査読�
 msgid "log.author.documentRevised"
 msgstr "{$authorName}が論文 {$submissionId} を改訂した。新しいファイルIDは {$fileId} である。"
 
-#, fuzzy
 msgid "site.upgradeAvailable.manager"
 msgstr ""
-"There is a new version of OJS available! You are currently using OJS "
-"{$currentVersion}. The most recent version is OJS {$latestVersion}. Please "
-"contact your Site Administrator ({$siteAdminName}, <a href=\""
-"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) to notify them of this new "
-"release. More information can be found <a href=\"http://pkp.sfu.ca/"
-"ojs_download\" target=\"_new\">here</a>."
+"OJSの新しいバージョンが利用できます。現在、OJS {$currentVersion} を使用しています。最新のバージョンは OJS "
+"{$latestVersion} です。サイト管理者（{$siteAdminName}、<a href=\""
+"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>）に連絡して、この新しいリリースをお知らせください。詳しい情報は、<a href=\""
+"http://pkp.sfu.ca/ojs_download\" target=\"_new\">こちら</a>をご覧ください。"
 
-#, fuzzy
 msgid "site.upgradeAvailable.admin"
 msgstr ""
-"There is a new version of OJS available! You are currently using OJS "
-"{$currentVersion}. The most recent version is OJS {$latestVersion}. Please "
-"visit <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this "
-"page</a> to download the most recent version and find upgrade instructions."
+"OJSの新しいバージョンが利用できます。現在、OJS {$currentVersion} を使用しています。最新のバージョンは OJS "
+"{$latestVersion} です。<a href=\"http://pkp.sfu.ca/ojs_download\" target=\""
+"_new\">このページ</a>をご覧になり、最新バージョンのダウンロードやアップグレード方法をご確認ください。"
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
-"<p>Upgrade of OJS to version {$version} has completed successfully.</p>\n"
-"<p>Don't forget to set the \"installed\" setting in your config.inc.php "
-"configuration file back to <em>On</em>.</p>\n"
-"<p>If you haven't already registered and wish to receive news and updates, "
-"<strong>please register at <a href=\"http://pkp.sfu.ca/ojs/register\" target="
-"\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> If you have questions "
-"or comments, please visit the <a href=\"http://forum.pkp.sfu.ca\" target=\""
-"_new\">support forum</a>.</p>"
+"<p>OJSのバージョン{$version}へのアップグレードが正常に完了しました。</p>\n"
+"<p>設定ファイルconfig.inc.phpの「installed」の設定を「<em>On</em>」に戻すことを忘れないでください。</p>\n"
+"<p>まだ登録されていない方で、ニュースや最新情報の受信を希望される方は、<strong><a href=\"http://pkp.sfu.ca/ojs/"
+"register\" target=\"_new\">http://pkp.sfu.ca/ojs/register</a> "
+"からご登録ください。</strong>ご質問やご意見がございましたら、<a href=\"http://forum.pkp.sfu.ca\" "
+"target=\"_new\">サポートフォーラム</a>をご覧ください。</p>"
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
-"<p>Installation of OJS has completed successfully.</p>\n"
-"<p>To begin using the system, <a href=\"{$loginUrl}\">login</a> with the "
-"username and password entered on the previous page.</p>\n"
-"<p>If you wish to be part of the PKP community, you can:</p>\n"
+"<p>OJSのインストールが正常に完了しました。</p>\n"
+"<p>前ページで入力したユーザー名とパスワードで<a href=\"{$loginUrl}\""
+">ログイン</a>すると、システムの利用を開始できます。</p>\n"
+"<p>PKPコミュニティへの参加を希望される場合は:</p>\n"
 "<ol>\n"
-"\t<li>Read the <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP "
-"blog</a> and follow the <a href=\"http://pkp.sfu.ca/blog/feed\" target=\""
-"_new\">RSS feed</a> for news and updates.</li>\n"
-"\t<li>Visit the <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support "
-"forum</a> if you have questions or comments.</li>\n"
+"\t<li><a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKPブログ</a>を読んだり、<a "
+"href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\""
+">RSSフィード</a>を購読して、ニュースや更新情報を得ることができます。</li>\n"
+"\t<li>質問やコメントがあれば、<a href=\"http://forum.pkp.sfu.ca\" target=\"_new\""
+">サポートフォーラム</a>にアクセスしてください。</li>\n"
 "</ol>"
 
-#, fuzzy
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
-"<h4>IMPORTANT!</h4>\n"
-"<p>The installer could not automatically overwrite the configuration file. "
-"Before attempting to use the system, please open <tt>config.inc.php</tt> in "
-"a suitable text editor and replace its contents with the contents of the "
-"text field below.</p>"
+"<h4>重要!</h4>\n"
+"<p>インストーラーが設定ファイルを自動的に上書きできませんでした。システムの使用を試みる前に、適切なテキストエディターで "
+"<tt>config.inc.php</tt> を開き、その中身を以下のテキストフィールドの内容で置き換えてください。</p>"
 
-#, fuzzy
 msgid "installer.reinstallAfterDatabaseError"
 msgstr ""
-"<strong>Warning:</strong> If installation failed part way through database "
-"installation you may need to drop your OJS database or database tables "
-"before attempting to reinstall the database."
+"<strong>警告:</strong> データベースのインストールの途中でインストールに失敗した場合は、データベースの再インストールを試みる前に、OJS"
+"データベースまたはデータベーステーブルを削除する必要があるかもしれません。"
 
-#, fuzzy
 msgid "installer.upgradeApplication"
-msgstr "Upgrade Open Journal Systems"
+msgstr "Open Journal Systemsのアップグレード"
 
-#, fuzzy
 msgid "installer.installApplication"
-msgstr "Install Open Journal Systems"
+msgstr "Open Journal Systemsのインストール"
 
-#, fuzzy
 msgid "installer.databaseSettingsInstructions"
 msgstr ""
-"OJS requires access to a SQL database to store its data. See the system "
-"requirements above for a list of supported databases. In the fields below, "
-"provide the settings to be used to connect to the database."
+"OJSは、データを保存するためにSQLデータベースへのアクセスを必要とします。サポートされているデータベースのリストは、上記のシステム要件を参照してくださ"
+"い。以下の項目に、データベースへの接続に使用する設定を入力します。"
 
-#, fuzzy
 msgid "installer.filesDirInstructions"
 msgstr ""
-"Enter full pathname to an existing directory where uploaded files are to be "
-"kept. This directory should not be directly web-accessible. <strong>Please "
-"ensure that this directory exists and is writable prior to "
-"installation.</strong> Windows path names should use forward slashes, e.g. \""
-"C:/myjournal/files\"."
+"アップロードされたファイルを保存する既存のディレクトリのフルパス名を入力してください。このディレクトリは直接ウェブにアクセスできないようにしてください。<"
+"strong>インストール前に、このディレクトリが存在し、書き込み可能であることを確認してください。</strong> Windowsのパス名は、「C:/"
+"myjournal/files」のように、フォワードスラッシュを使用してください。"
 
-#, fuzzy
 msgid "installer.additionalLocalesInstructions"
 msgstr ""
-"Select any additional languages to support in this system. These languages "
-"will be available for use by journals hosted on the site. Additional "
-"languages can also be installed at any time from the site administration "
-"interface."
+"このシステムでサポートする追加の言語を選択します。これらの言語は、サイトでホストされているジャーナルで使えます。追加の言語は、サイト管理インターフェイスか"
+"らいつでもインストールすることができます。"
 
-#, fuzzy
 msgid "installer.localeInstructions"
-msgstr ""
-"The primary language to use for this system. Please consult the OJS "
-"documentation if you are interested in support for languages not listed here."
+msgstr "このシステムで主に使用する言語です。ここに記載されていない言語のサポートに興味があれば、OJSのドキュメントを見てください。"
 
-#, fuzzy
 msgid "installer.maxFileUploadSize"
-msgstr ""
-"Your server currently allows a maximum file upload size of: "
-"<strong>{$maxFileUploadSize}</strong>"
+msgstr "このサーバーの現在の最大ファイルアップロードサイズ: <strong>{$maxFileUploadSize}</strong>"
 
-#, fuzzy
 msgid "installer.allowFileUploads"
-msgstr ""
-"Your server currently allows file uploads: "
-"<strong>{$allowFileUploads}</strong>"
+msgstr "このサーバーでは現在、ファイルのアップロードが可能です: <strong>{$allowFileUploads}</strong>"
 
 msgid "installer.localeSettingsInstructions"
 msgstr ""
@@ -814,136 +783,99 @@ msgstr ""
 "<p>2. "
 "アップロードファイルを格納するためのディレクトリを作成して、書き込みができるようにする必要があります（以下の「ファイル設定」を参照してください）。</p>"
 
-#, fuzzy
 msgid "payment.membership.renewMembership"
-msgstr "Renew Individual Membership"
+msgstr "個人会員の更新"
 
-#, fuzzy
 msgid "payment.membership.buyMembership"
-msgstr "Buy Individual Membership"
+msgstr "個人会員の購入"
 
-#, fuzzy
 msgid "payment.publication.publicationPaid"
-msgstr "Publication Fee Paid"
+msgstr "出版費用の支払い"
 
-#, fuzzy
 msgid "payment.publication.payPublication"
-msgstr "Pay to Publish"
+msgstr "出版の支払い"
 
-#, fuzzy
 msgid "payment.submission.paySubmission"
-msgstr "Pay Submission Fee"
+msgstr "投稿料の支払い"
 
-#, fuzzy
 msgid "payment.donation.makeDonation"
-msgstr "Make a donation"
+msgstr "寄付をする"
 
-#, fuzzy
 msgid "payment.notFound"
-msgstr ""
-"A payment has been requested, but the request has expired. Contact the "
-"Journal Manager for details."
+msgstr "支払いの要求をしましたがリクエストが失効しました。詳細は雑誌管理者にお問い合わせください。"
 
-#, fuzzy
 msgid "payment.requestPublicationFee"
-msgstr "Request publication fee ({$feeAmount})"
+msgstr "請求掲載料 ({$feeAmount})"
 
-#, fuzzy
 msgid "payment.type.donation"
-msgstr "Donations"
+msgstr "寄付"
 
-#, fuzzy
 msgid "payment.type.subscription"
-msgstr "Subscription Fee"
+msgstr "購読料金"
 
-#, fuzzy
 msgid "payment.type.purchaseIssue"
-msgstr "Purchase Issue Fee"
+msgstr "巻号購入料金"
 
-#, fuzzy
 msgid "payment.type.purchaseArticle"
-msgstr "Purchase Article Fee"
+msgstr "記事購入料金"
 
-#, fuzzy
 msgid "payment.type.membership"
-msgstr "Individual Membership Fee"
+msgstr "個人会員料金"
 
-#, fuzzy
 msgid "payment.type.fastTrack"
-msgstr "Fast Track Review Fee"
+msgstr "ファスト・トラック審査料"
 
-#, fuzzy
 msgid "payment.type.publication.required"
-msgstr "The publication fee is due for payment."
+msgstr "出版料金のお支払いをお願いします。"
 
-#, fuzzy
 msgid "payment.type.publication"
-msgstr "Publication Fee"
+msgstr "出版料金"
 
-#, fuzzy
 msgid "payment.type.submission"
-msgstr "Submission Fee"
+msgstr "投稿料"
 
-#, fuzzy
 msgid "payment.authorFees"
-msgstr "Author Fees"
+msgstr "論文掲載料"
 
-#, fuzzy
 msgid "payment.paymentSent"
-msgstr "Payment has already been sent"
+msgstr "お支払いはすでに完了しています"
 
-#, fuzzy
 msgid "payment.paymentReceived"
-msgstr "Payment Received"
+msgstr "支払い受領済み"
 
-#, fuzzy
 msgid "payment.alreadyPaidMessage"
 msgstr ""
-"Select this box if you've already sent your payment to the journal in order "
-"to finish the submission process.  The submission will not be reviewed until "
-"the payment arrives.  Click PAY NOW above to see the payment instructions."
+"ジャーナルへの支払いが済んでいるのであれば、チェックボックスを選択して投稿プロセスを完了させてください。 支払いがされるまで投稿は審査されません。 "
+"上の「ここで支払い」をクリックすると、支払い方法が表示されます。"
 
-#, fuzzy
 msgid "payment.alreadyPaid"
-msgstr "Already Paid"
+msgstr "支払い済み"
 
-#, fuzzy
 msgid "payment.waive"
-msgstr "Waive"
+msgstr "免除"
 
-#, fuzzy
 msgid "payment.payNow"
-msgstr "Pay Now"
+msgstr "ここで支払い"
 
-#, fuzzy
 msgid "payment.paid"
-msgstr "Paid"
+msgstr "支払い"
 
-#, fuzzy
 msgid "payment.loginRequired.forDonation"
-msgstr "You must be logged in to make a donation."
+msgstr "寄付にはログインが必要です。"
 
-#, fuzzy
 msgid "payment.loginRequired.forIssue"
 msgstr ""
-"Subscription or issue purchase required to access item. To verify "
-"subscription, access previous purchase, or purchase issue, log in to journal."
+"項目へのアクセスには、購読または巻号の購入が必要です。購読内容の確認、過去の購入履歴へのアクセスや巻号を購入するには、ジャーナルにログインしてください。"
 
-#, fuzzy
 msgid "payment.loginRequired.forArticle"
 msgstr ""
-"Subscription or article purchase required to access item. To verify "
-"subscription, access previous purchase, or purchase article, log in to "
-"journal."
+"項目へのアクセスには、購読または論文の購入が必要です。購読内容の確認、過去の購入履歴へのアクセスや論文を購入するには、ジャーナルにログインしてください。"
 
-#, fuzzy
 msgid "payment.loginRequired"
-msgstr "You must be logged in to make a payment."
+msgstr "決済にはログインが必要です。"
 
-#, fuzzy
 msgid "donations.thankYouMessage"
-msgstr ""
-"Thank you for making a contribution.  Your contribution is much appreciated."
+msgstr "ご貢献いただきありがとうございます。皆様のご協力に感謝いたします。"
 
 msgid "donations.thankYou"
 msgstr "ありがとうございます"
@@ -960,43 +892,34 @@ msgstr "OJSヘルプ"
 msgid "help.ojsHelp"
 msgstr "オープン･ジャーナル･システムのヘルプ"
 
-#, fuzzy
 msgid "about.aboutOJSSite"
 msgstr ""
-"This site uses Open Journal Systems {$ojsVersion}, which is open source "
-"journal management and publishing software developed, supported, and freely "
-"distributed by the Public Knowledge Project under the GNU General Public "
-"License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more "
-"about the software</a>. Please contact the site directly with questions "
-"about its journals and submissions to its journals."
+"本誌はOpen Journal Systems {$ojsVersion}を利用しています。これは、Public Knowledge "
+"ProjectがGNU General Public "
+"Licenseの下で開発、サポート、および自由に配布しているオープンソースのジャーナル管理・出版ソフトウェアです。PKPのウェブサイトでは、<a "
+"href=\"http://pkp.sfu.ca/\""
+">このソフトウェアについての詳細がご覧いただけます</a>。ジャーナルに関する質問やジャーナルへの投稿については、ジャーナルに直接お問い合わせください。"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
 msgstr ""
-"This journal uses Open Journal Systems {$ojsVersion}, which is open source "
-"journal management and publishing software developed, supported, and freely "
-"distributed by the Public Knowledge Project under the GNU General Public "
-"License. Visit PKP's website to <a href=\"http://pkp.sfu.ca/\">learn more "
-"about the software</a>. Please <a href=\"{$contactUrl}\">contact the "
-"journal</a> directly with questions about the journal and submissions to the "
-"journal."
+"本誌はOpen Journal Systems {$ojsVersion}を利用しています。これは、Public Knowledge "
+"ProjectがGNU General Public "
+"Licenseの下で開発、サポート、および自由に配布しているオープンソースのジャーナル管理・出版ソフトウェアです。PKPのウェブサイトでは、<a "
+"href=\"http://pkp.sfu.ca/\""
+">このソフトウェアについての詳細がご覧いただけます</a>。ジャーナルに関する質問やジャーナルへの投稿については、<a href=\""
+"{$contactUrl}\">ジャーナルに直接お問い合わせください</a>。"
 
 msgid "about.aboutSoftware"
 msgstr "オープン・ジャーナル・システムについて"
 
-#, fuzzy
 msgid "about.aboutThisPublishingSystem.altText"
-msgstr "OJS Editorial and Publishing Process"
+msgstr "OJS 編集・出版プロセス"
 
-#, fuzzy
 msgid "about.aboutThisPublishingSystem"
-msgstr ""
-"More information about the publishing system, Platform and Workflow by OJS/"
-"PKP."
+msgstr "OJS/PKPによる出版システム、プラットフォーム、ワークフローについての詳細はこちら。"
 
-#, fuzzy
 msgid "about.memberships"
-msgstr "Memberships"
+msgstr "会員情報"
 
 msgid "about.availableSubscriptionTypes"
 msgstr "購読種別"
@@ -1032,7 +955,7 @@ msgid "about.delayedOpenAccessDescription2"
 msgstr "ヵ月からオープンアクセスで公開されます。"
 
 msgid "about.delayedOpenAccessDescription1"
-msgstr "本雑誌のコンテンツは、出版後"
+msgstr "本誌のコンテンツは、出版後"
 
 msgid "about.delayedOpenAccess"
 msgstr "エンバーゴ付きオープンアクセス"
@@ -1046,9 +969,8 @@ msgstr "出版頻度"
 msgid "about.peerReviewProcess"
 msgstr "査読プロセス"
 
-#, fuzzy
 msgid "about.authorFeesMessage"
-msgstr "This journal charges the following author fees."
+msgstr "本ジャーナルでは、下記の著者料金が発生します。"
 
 msgid "about.authorFees"
 msgstr "論文掲載料"
@@ -1074,10 +996,10 @@ msgid "about.onlineSubmissions.viewSubmissions"
 msgstr "保留中の投稿の閲覧"
 
 msgid "about.onlineSubmissions.newSubmission"
-msgstr "新投稿"
+msgstr "新規投稿"
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr "<a href=\"{$url}\">{$name}</a> へ新投稿をする。"
+msgstr "<a href=\"{$url}\">{$name}</a> へ新規投稿をする。"
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission}または{$viewSubmissions}。"
@@ -1113,7 +1035,7 @@ msgid "about.history"
 msgstr "雑誌の歴史"
 
 msgid "about.aboutContext"
-msgstr "本雑誌について"
+msgstr "本誌について"
 
 msgid "about.contact"
 msgstr "雑誌の連絡先"
@@ -1157,23 +1079,19 @@ msgstr "雑誌の閲覧"
 msgid "site.journalsHosted"
 msgstr "このサイトで提供している雑誌"
 
-#, fuzzy
 msgid "article.nonpdf.note"
 msgstr ""
-"The file you selected should begin downloading automatically. If it does "
-"not, click the link below. Note that this file may require a special viewer "
-"or plugin to view.<br /><br />If the file does not download automatically, <"
-"a href=\"{$url}\">click here</a>."
+"選択したファイルのダウンロードは、自動的に開始します。ダウンロードが始まらない場合は、下のリンクをクリックしてください。このファイルをご覧いただくには、特"
+"別なビューアーやプラグインが必要な場合があります。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href=\"{$url}"
+"\">こちらをクリック</a>してください。"
 
 msgid "article.nonpdf.title"
 msgstr "論文ダウンロード"
 
-#, fuzzy
 msgid "article.pluginMissing"
 msgstr ""
-"<p>The PDF file you selected should load here if your Web browser has a PDF "
-"reader plugin installed (for example, a recent version of <a href=\""
-"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+"<p>選択されたPDFファイルは、ブラウザにPDFリーダーのプラグイン（例えば、最近バージョンの <a href=\"https://get.adobe."
+"com/reader/\">Adobe Acrobat Reader</a>）がインストールされていれば、ここで読み込まれます。</p>"
 
 msgid "article.download"
 msgstr "このPDFファイルをダウンロードする"
@@ -1226,17 +1144,14 @@ msgstr "追加"
 msgid "user.subscriptions.form.deleteIpRange"
 msgstr "削除"
 
-#, fuzzy
 msgid "user.subscriptions.form.ipRangeValid"
-msgstr "Please enter a valid IP range."
+msgstr "有効なIPアドレス範囲を入力してください。"
 
-#, fuzzy
 msgid "user.subscriptions.form.ipRangeInstructions"
 msgstr ""
-"If IP ranges are entered here, the domain is optional.<br />Valid values "
-"include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - "
-"142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range "
-"with CIDR (e.g. 142.58.100.0/24)."
+"IPアドレス範囲をここに入力するならドメインはオプションです。<br />有効な値は、IPアドレス（例：142.58.103.1）、IPアドレス範囲（例："
+"142.58.103.1 - 142.58.103.4）、ワイルドカード「*」を使ったIPアドレス範囲（例：142.58.*.*）、CIDRを使ったIPア"
+"ドレス範囲（例：142.58.100.0/24）です。"
 
 msgid "user.subscriptions.form.ipRangeItem"
 msgstr "&#8226;"
@@ -1244,71 +1159,53 @@ msgstr "&#8226;"
 msgid "user.subscriptions.form.ipRange"
 msgstr "IPアドレス範囲"
 
-#, fuzzy
 msgid "user.subscriptions.form.domainValid"
-msgstr "Please enter a valid domain."
+msgstr "有効なドメインを入力してください。"
 
-#, fuzzy
 msgid "user.subscriptions.form.domainIPRangeRequired"
-msgstr ""
-"The selected subscription type requires a domain and/or an IP range for "
-"subscription authentication."
+msgstr "選択した購読種別では、購読種別の認証にドメインやIPアドレス範囲が必要です。"
 
-#, fuzzy
 msgid "user.subscriptions.form.domainInstructions"
-msgstr ""
-"If a domain is entered here, IP ranges are optional.<br />Valid values are "
-"domain names (e.g. lib.sfu.ca)."
+msgstr "ここにドメインを入力する場合、IPアドレス範囲はオプションです。<br />有効な値はドメイン名です（例：lib.sfu.ca）。"
 
 msgid "user.subscriptions.form.domain"
 msgstr "ドメイン名"
 
-#, fuzzy
 msgid "user.subscriptions.form.institutionMailingAddress"
-msgstr "Mailing address"
+msgstr "送付先"
 
-#, fuzzy
 msgid "user.subscriptions.form.institutionNameRequired"
-msgstr "An institution name is required."
+msgstr "機関名が必要です。"
 
 msgid "user.subscriptions.form.institutionName"
 msgstr "機関名"
 
-#, fuzzy
 msgid "user.subscriptions.form.membershipInstructions"
-msgstr "Membership information if required for the selected subscription type."
+msgstr "選択した購読種別で必要な場合の会員情報。"
 
-#, fuzzy
 msgid "user.subscriptions.form.subscriptionExists"
-msgstr "This user account already has an individual subscription."
+msgstr "このユーザーアカウントは、すでに個人購読をしています。"
 
-#, fuzzy
 msgid "user.subscriptions.form.typeIdValid"
-msgstr "Please select a valid subscription type."
+msgstr "有効な購読種別を選択してください。"
 
-#, fuzzy
 msgid "user.subscriptions.form.membershipRequired"
-msgstr "The selected subscription type requires membership information."
+msgstr "選択した購読種別には、会員情報が必要です。"
 
-#, fuzzy
 msgid "user.subscriptions.form.membership"
-msgstr "Membership"
+msgstr "会員情報"
 
-#, fuzzy
 msgid "user.subscriptions.form.typeId"
-msgstr "Subscription Type"
+msgstr "購読種別"
 
-#, fuzzy
 msgid "user.subscriptions.viewSubscriptionTypes"
-msgstr "View Available Subscription Types"
+msgstr "利用可能な購読種別の表示"
 
-#, fuzzy
 msgid "user.subscriptions.expired"
-msgstr "Expired: {$date}"
+msgstr "購読期限切れ: {$date}"
 
-#, fuzzy
 msgid "user.subscriptions.expires"
-msgstr "Expires: {$date}"
+msgstr "購読期限: {$date}"
 
 msgid "user.subscriptions.purchaseInstitutionalSubscription"
 msgstr "機関購読を購入"
@@ -1331,37 +1228,26 @@ msgstr "機関購読"
 msgid "user.subscriptions.individualSubscriptions"
 msgstr "個人購読"
 
-#, fuzzy
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
-msgstr "An online payment has been initiated but canceled or not completed"
+msgstr "オンライン決済が開始されましたが、キャンセルされたか完了していません"
 
-#, fuzzy
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "Manual payment has been initiated but not yet received"
+msgstr "手動支払いが開始されましたが、まだ受領されていません"
 
-#, fuzzy
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Subscription must be reviewed before it can be activated"
+msgstr "購読の有効に審査が必要でした"
 
-#, fuzzy
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr ""
-"Additional information is needed before the subscription can be activated"
+msgstr "購読の有効に追加の情報が必要でした"
 
-#, fuzzy
 msgid "user.subscriptions.statusDescription"
-msgstr "Description"
+msgstr "解説"
 
-#, fuzzy
 msgid "user.subscriptions.status"
-msgstr "Status"
+msgstr "ステータス"
 
-#, fuzzy
 msgid "user.subscriptions.statusInformation"
-msgstr ""
-"Active and expired subscriptions are displayed below along with their "
-"expiration date. In addition, the following status information may be "
-"included with each subscription."
+msgstr "有効な購読と期限切れの購読は、その購読期限日とともに下に表示されます。また、各購読には、次のステータス情報が含まれる場合があります。"
 
 msgid "user.subscriptions.subscriptionStatus"
 msgstr "購読状況"
@@ -1586,7 +1472,7 @@ msgid "reviewer.article.mustSelectDecision"
 msgstr "審査結果が選択されていません。審査結果を選択する必要があります。"
 
 msgid "reviewer.article.selectRecommendation.byEditor"
-msgstr "査読者の推薦を設定または調整します。"
+msgstr "査読者の査読結果を設定または調整します。"
 
 msgid "reviewer.article.selectRecommendation"
 msgstr ""
@@ -1855,54 +1741,36 @@ msgstr ""
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "ステップ: 投稿キュー &gt; 投稿査読 &gt; 投稿編集 &gt; 目次。<br /><br />\n"
-"編集作業のこれらの側面を処理するためのモデルを選択してください。(編集長とセクションエディターを指定するには、雑誌設定で編集者に移動してください。)"
+"編集作業のこれらの側面を処理するためのモデルを選択してください。(編集長とセクション編集者を任命するには、雑誌設定で編集者に移動してください。)"
 
-#, fuzzy
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
-"<h3>Proposed Creative Commons Copyright Notices</h3>\n"
-"<h4>1. Proposed Policy for Journals That Offer Open Access</h4>\n"
-"Authors who publish with this journal agree to the following terms:\n"
+"<h3>クリエイティブ・コモンズの著作権表示案</h3>\n"
+"<h4>1. オープンアクセスを提供するジャーナルのポリシー案</h4>\n"
+"本誌で出版する著者らは、以下の条件に同意するものとします:\n"
 "<ol type=\"a\">\n"
-"\t<li>Authors retain copyright and grant the journal right of first "
-"publication with the work simultaneously licensed under a <a target=\"_new\" "
-"href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons "
-"Attribution License</a> that allows others to share the work with an "
-"acknowledgement of the work's authorship and initial publication in this "
-"journal.</li>\n"
-"\t<li>Authors are able to enter into separate, additional contractual "
-"arrangements for the non-exclusive distribution of the journal's published "
-"version of the work (e.g., post it to an institutional repository or publish "
-"it in a book), with an acknowledgement of its initial publication in this "
-"journal.</li>\n"
-"\t<li>Authors are permitted and encouraged to post their work online (e.g., "
-"in institutional repositories or on their website) prior to and during the "
-"submission process, as it can lead to productive exchanges, as well as "
-"earlier and greater citation of published work (See <a target=\"_new\" href="
-"\"http://opcit.eprints.org/oacitation-biblio.html\">The Effect of Open "
-"Access</a>).</li>\n"
+"\t<li>著者らは著作権を保持し、本誌に初版権を付与すると同時に、他の人が本作品を共有することを認め、本作品の著者であることと本誌での初版権を認める<"
+"a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3.0/\""
+">クリエイティブ・コモンズ 表示ライセンス</a>に基づいてライセンスされます。</li>\n"
+"\t<li>著者らは、本ジャーナルで最初に出版されたことを明記した上で、本ジャーナルの出版版を非独占的に配布する（機関リポジトリへの投稿や書籍への掲載など"
+"）ための、別途追加の契約を結ぶことができます。</li>\n"
+"\t<li>著者らは、投稿前や投稿中に自分の作品をオンライン（機関リポジトリやウェブサイトなど）で公開することが許可され、奨励されています。これは、生産的"
+"な交流につながるだけでなく、発表された作品がより早く、より多く引用されることにもつながります（「<a target=\"_new\" href=\""
+"http://opcit.eprints.org/oacitation-biblio.html\">オープンアクセスの効果</a>」を参照）。</li>"
+"\n"
 "</ol>\n"
 "\n"
-"<h4>2. Proposed Policy for Journals That Offer Delayed Open Access</h4>\n"
-"Authors who publish with this journal agree to the following terms:\n"
+"<h4>2. 遅延オープンアクセスを提供するジャーナルのポリシー案</h4>\n"
+"本誌で出版する著者らは、以下の条件に同意するものとします:\n"
 "<ol type=\"a\">\n"
-"\t<li>Authors retain copyright and grant the journal right of first "
-"publication, with the work [SPECIFY PERIOD OF TIME] after publication "
-"simultaneously licensed under a <a target=\"_new\" href=\""
-"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
-"License</a> that allows others to share the work with an acknowledgement of "
-"the work's authorship and initial publication in this journal.</li>\n"
-"\t <li>Authors are able to enter into separate, additional contractual "
-"arrangements for the non-exclusive distribution of the journal's published "
-"version of the work (e.g., post it to an institutional repository or publish "
-"it in a book), with an acknowledgement of its initial publication in this "
-"journal.</li>\n"
-"\t <li>Authors are permitted and encouraged to post their work online (e.g., "
-"in institutional repositories or on their website) prior to and during the "
-"submission process, as it can lead to productive exchanges, as well as "
-"earlier and greater citation of published work (See <a target=\"_new\" href="
-"\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open "
-"Access</a>).</li>\n"
+"\t<li>著者らは著作権を保持し、本誌に最初の出版権を付与し、出版後の作品［期間を指定］は、他者が作品を共有することを認め、作品の著者であることと本誌で"
+"の最初の出版を認める<a target=\"_new\" href=\"http://creativecommons.org/licenses/by/3."
+"0/\">クリエイティブ・コモンズ 表示ライセンス</a>の下で同時にライセンスされます。</li>\n"
+"\t<li>著者らは、本ジャーナルで最初に出版されたことを明記した上で、本ジャーナルの出版版を非独占的に配布する（機関リポジトリへの投稿や書籍への掲載など"
+"）ための、別途追加の契約を結ぶことができます。</li>\n"
+"\t<li>著者らは、投稿前や投稿中に自分の作品をオンライン（機関リポジトリやウェブサイトなど）で公開することが許可され、奨励されています。これは、生産的"
+"な交流につながるだけでなく、発表された作品がより早く、より多く引用されることにもつながります（「<a target=\"_new\" href=\""
+"http://opcit.eprints.org/oacitation-biblio.html\">オープンアクセスの効果</a>」参照）。</li>\n"
 "</ol>"
 
 msgid "plugins.categories.generic.description"
@@ -2054,44 +1922,36 @@ msgstr "投稿物のコピーエディタが解除された"
 msgid "submission.event.copyedit.copyeditorAssigned"
 msgstr "投稿物にコピーエディタが任命された"
 
-#, fuzzy
 msgid "installer.installationInstructions"
 msgstr ""
 "<h4>OJS バージョン {$version}</h4>\n"
 "\n"
 "<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうご"
-"ざいました。処理を進める前に、このソフトウェアに添付されている<a href=\"{$baseUrl}/docs/README\""
+"ざいました。処理を進める前に、このソフトウェアに添付されている<a href=\"{$baseUrl}/docs/README.md\""
 ">README</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<"
 "a href=\"http://pkp.sfu.ca/\" target=\"_blank\""
 ">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a "
-"href=\"http://forum.pkp.sfu.ca\">サポートフォーラム</a>、または、PKPのオンライン<a href=\""
-"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\""
-">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href=\""
-"mailto:pkp.contact@gmail.com\""
+"href=\"http://forum.pkp.sfu.ca\" target=\"_blank\""
+">サポートフォーラム</a>、または、PKPのオンライン<a href=\"https://github.com/pkp/pkp-lib#issues\""
+" target=\"_blank\">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a "
+"href=\"mailto:pkp.contact@gmail.com\""
 ">pkp.contact@gmail.com</a>にメールしてくださっても構いません。</p>\n"
-"\n"
-"<h4>バージョンアップ</h4>\n"
-"\n"
-"<p>既存のOJSインストールからバージョンアップする場合は、<a href=\"{$upgradeUrl}\""
-">ここをクリック</a>して作業を進めてください。</p>\n"
 "\n"
 "<h4>推奨するシステム要件</h4>\n"
 "\n"
 "<ul>\n"
 "\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
-"{$phpRequiredVersion}; you are currently using PHP "
-"{$phpVersion}{$wrongPhpText}</li>\n"
-"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
-"or <a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >="
-" 9.1.5</li>\n"
+"{$phpRequiredVersion}; 現在、PHP {$phpVersion}{$wrongPhpText}を使用しています</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 か "
+"<a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= "
+"9.1.5</li>\n"
 "\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
-"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
-"\t<li>Operating system: Any OS that supports the above software, including <"
-"a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\""
-"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www.oracle."
-"com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple.com/\" "
-"target=\"_blank\">Mac OS X</a>, <a href=\"http://www.microsoft.com/\""
-">Windows</a></li>\n"
+"1.3.2x or >= 2.0.4x か Microsoft IIS 6</li>\n"
+"\t<li>オペレーティングシステム: （Linux <a href=\"http://www.linux.org/\" target=\""
+"_blank\">Linux</a>, <a href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>"
+", <a href=\"http://www.oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a "
+"href=\"http://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"http://www.microsoft.com/\">Windows</a>を含む）上記のソフトウェアをサポートするすべてのOS</li>\n"
 "</ul>\n"
 "\n"
 "<p>PKPは、上記のソフトウェアバージョンとプラットフォームの可能なすべての組み合わせについてテストする資源を持っていませんので、正常な動作やサポートを"
@@ -2113,21 +1973,17 @@ msgstr "OJSのバージョンアップ"
 msgid "installer.appInstallation"
 msgstr "OJSのインストール"
 
-#, fuzzy
 msgid "payment.subscription.expires"
-msgstr "Expires"
+msgstr "購読期限"
 
-#, fuzzy
 msgid "payment.subscription.renew"
-msgstr "Renew Subscription"
+msgstr "購読の更新"
 
-#, fuzzy
 msgid "payment.subscription.purchase"
-msgstr "Purchase Subscription"
+msgstr "購読の購入"
 
-#, fuzzy
 msgid "payment.membership.ends"
-msgstr "Ends"
+msgstr "終了"
 
 msgid "notification.savedIssueMetadata"
 msgstr "巻号公開メタデータが保存された。"
@@ -2336,3 +2192,15 @@ msgstr "参加者リストの「任命」リンクを使用して、ゲラを作
 
 msgid "notification.type.editorAssignmentTask"
 msgstr "編集者の任命が必要な論文が投稿されました。"
+
+msgid "payment.waived"
+msgstr "免除"
+
+msgid "payment.unpaid"
+msgstr "未払い"
+
+msgid "installer.updatingInstructions"
+msgstr "既存のOJSをアップグレードする場合は、<a href=\"{$upgradeUrl}\">ここをクリック</a>して進んでください。"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "本誌はオンラインでの公開はしていません。"

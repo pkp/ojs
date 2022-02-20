@@ -91,8 +91,8 @@ class IssueHandler extends APIHandler
     /**
      * Get a collection of issues
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response
@@ -171,6 +171,8 @@ class IssueHandler extends APIHandler
                 case 'searchPhrase':
                     $collector->searchPhrase($val);
                     break;
+                case 'doiStatus':
+                    $collector->filterByDoiStatuses(array_map('intval', $this->paramToArray($val)));
             }
         }
 
@@ -190,7 +192,7 @@ class IssueHandler extends APIHandler
         $issues = Repo::issue()->getMany($collector);
 
         return $response->withJson([
-            'items' => Repo::issue()->getSchemaMap()->summarizeMany($issues),
+            'items' => iterator_to_array(Repo::issue()->getSchemaMap()->summarizeMany($issues), false),
             'itemsMax' => Repo::issue()->getCount($collector->limit(null)->offset(null)),
         ], 200);
     }
@@ -198,8 +200,8 @@ class IssueHandler extends APIHandler
     /**
      * Get the current issue
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response
@@ -222,8 +224,8 @@ class IssueHandler extends APIHandler
     /**
      * Get a single issue
      *
-     * @param $slimRequest Request Slim request object
-     * @param $response Response object
+     * @param Request $slimRequest Slim request object
+     * @param Response $response object
      * @param array $args arguments
      *
      * @return Response

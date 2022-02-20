@@ -13,6 +13,8 @@
  * @brief LDAP authentication plugin.
  */
 
+use PKP\facades\Locale;
+
 use PKP\plugins\AuthPlugin;
 
 class LDAPAuthPlugin extends AuthPlugin
@@ -36,7 +38,7 @@ class LDAPAuthPlugin extends AuthPlugin
     // - managerdn
     // - managerpwd
     // - pwhash
-    // - SASL: sasl, saslmech, saslrealm, saslauthzid, saslprop
+    // - SASL: sasl, saslmech, saslrealm, saslauthcid, saslauthzid, saslprop
 
     /** @var resource the LDAP connection */
     public $conn;
@@ -80,8 +82,8 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Returns an instance of the authentication plugin
      *
-     * @param $settings array settings specific to this instance.
-     * @param $authId int identifier for this instance
+     * @param array $settings settings specific to this instance.
+     * @param int $authId identifier for this instance
      *
      * @return LDAPuthPlugin
      */
@@ -93,10 +95,10 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Authenticate a username and password.
      *
-     * @param $username string
-     * @param $password string
+     * @param string $username
+     * @param string $password
      *
-     * @return boolean true if authentication is successful
+     * @return bool true if authentication is successful
      */
     public function authenticate($username, $password)
     {
@@ -123,9 +125,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Check if a username exists.
      *
-     * @param $username string
+     * @param string $username
      *
-     * @return boolean
+     * @return bool
      */
     public function userExists($username)
     {
@@ -143,9 +145,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Retrieve user profile information from the LDAP server.
      *
-     * @param $user User to update
+     * @param User $user User to update
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function getUserInfo($user)
     {
@@ -164,9 +166,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Store user profile information on the LDAP server.
      *
-     * @param $user User to store
+     * @param User $user User to store
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function setUserInfo($user)
     {
@@ -188,10 +190,10 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Change a user's password on the LDAP server.
      *
-     * @param $username string user to update
-     * @param $password string the new password
+     * @param string $username user to update
+     * @param string $password the new password
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function setUserPassword($username, $password)
     {
@@ -210,9 +212,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Create a user on the LDAP server.
      *
-     * @param $user User to create
+     * @param User $user User to create
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function createUser($user)
     {
@@ -238,9 +240,9 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Delete a user from the LDAP server.
      *
-     * @param $username string user to delete
+     * @param string $username user to delete
      *
-     * @return boolean true if successful
+     * @return bool true if successful
      */
     public function deleteUser($username)
     {
@@ -292,8 +294,8 @@ class LDAPAuthPlugin extends AuthPlugin
     public function bind($binddn = null, $password = null)
     {
         if (isset($this->settings['sasl'])) {
-            // FIXME ldap_sasl_bind requires PHP5, haven't tested this
-            return @ldap_sasl_bind($this->conn, $binddn, $password, $this->settings['saslmech'], $this->settings['saslrealm'], $this->settings['saslauthzid'], $this->settings['saslprop']);
+            // Not well tested
+            return @ldap_sasl_bind($this->conn, $binddn, $password, $this->settings['saslmech'], $this->settings['saslrealm'], $this->settings['saslauthcid'], $this->settings['saslauthzid'], $this->settings['saslprop']);
         }
         return @ldap_bind($this->conn, $binddn, $password);
     }
@@ -301,7 +303,7 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Lookup a user entry in the directory.
      *
-     * @param $username string
+     * @param string $username
      */
     public function getUserEntry($username)
     {
@@ -321,15 +323,15 @@ class LDAPAuthPlugin extends AuthPlugin
      * For now must be subclassed for other schemas.
      * TODO How to deal with deleted fields.
      *
-     * @param $user User
-     * @param $uattr array
+     * @param User $user
+     * @param array $uattr
      */
     public function userFromAttr(&$user, &$uattr)
     {
-        $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+        $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
         $site = $siteDao->getSite();
 
-        $attr = array_change_key_case($uattr, CASE_LOWER); // Note:  array_change_key_case requires PHP >= 4.2.0
+        $attr = array_change_key_case($uattr, CASE_LOWER);
         $givenName = @$attr['givenname'][0];
         $familyName = @$attr['sn'][0];
         if (!isset($familyName)) {
@@ -353,13 +355,13 @@ class LDAPAuthPlugin extends AuthPlugin
 
         // Only update fields that exist
         if (isset($givenName)) {
-            $user->setGivenName($givenName, AppLocale::getLocale());
+            $user->setGivenName($givenName, Locale::getLocale());
         }
         if (isset($familyName)) {
-            $user->setFamilyName($familyName, AppLocale::getLocale());
+            $user->setFamilyName($familyName, Locale::getLocale());
         }
         if (isset($affiliation)) {
-            $user->setAffiliation($affiliation, AppLocale::getLocale());
+            $user->setAffiliation($affiliation, Locale::getLocale());
         }
         if (isset($email)) {
             $user->setEmail($email);
@@ -371,10 +373,10 @@ class LDAPAuthPlugin extends AuthPlugin
             $user->setMailingAddress($mailingAddress);
         }
         if (isset($biography)) {
-            $user->setBiography($biography, AppLocale::getLocale());
+            $user->setBiography($biography, Locale::getLocale());
         }
         if (isset($interests)) {
-            $user->setInterests($interests, AppLocale::getLocale());
+            $user->setInterests($interests, Locale::getLocale());
         }
     }
 
@@ -382,12 +384,12 @@ class LDAPAuthPlugin extends AuthPlugin
      * Update entry attributes from User object.
      * TODO How to deal with deleted fields.
      *
-     * @param $user User
-     * @param $attr array
+     * @param User $user
+     * @param array $attr
      */
     public function userToAttr(&$user, &$attr)
     {
-        $siteDao = DAORegistry::getDAO('SiteDAO'); /* @var $siteDao SiteDAO */
+        $siteDao = DAORegistry::getDAO('SiteDAO'); /** @var SiteDAO $siteDao */
         $site = $siteDao->getSite();
         // FIXME empty strings for unset fields?
         if ($user->getFullName()) {
@@ -416,7 +418,7 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Encode password for the 'userPassword' field using the specified hash.
      *
-     * @param $password string
+     * @param string $password
      *
      * @return string hashed string (with prefix).
      */
@@ -429,7 +431,7 @@ class LDAPAuthPlugin extends AuthPlugin
                 $salt = pack('C*', mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand());
                 return '{SMD5}' . base64_encode(pack('H*', md5($password . $salt)) . $salt);
             case 'sha':
-                return '{SHA}' . base64_encode(pack('H*', sha1($password))); // Note: sha1 requres PHP >= 4.3.0
+                return '{SHA}' . base64_encode(pack('H*', sha1($password)));
             case 'ssha':
                 $salt = pack('C*', mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand(), mt_rand());
                 return '{SSHA}' . base64_encode(pack('H*', sha1($password . $salt)) . $salt);

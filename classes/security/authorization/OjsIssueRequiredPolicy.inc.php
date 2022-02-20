@@ -29,9 +29,9 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
     /**
      * Constructor
      *
-     * @param $request PKPRequest
-     * @param $args array request parameters
-     * @param $operations array
+     * @param PKPRequest $request
+     * @param array $args request parameters
+     * @param array $operations
      */
     public function __construct($request, &$args, $operations = null)
     {

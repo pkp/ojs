@@ -58,13 +58,6 @@ class PaymentsGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
-        // Load user-related translations.
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_APP_MANAGER,
-            LOCALE_COMPONENT_PKP_MANAGER,
-            LOCALE_COMPONENT_PKP_USER
-        );
-
         // Grid actions.
         $router = $request->getRouter();
 
@@ -126,7 +119,7 @@ class PaymentsGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
-        $paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /* @var $paymentDao OJSCompletedPaymentDAO */
+        $paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $paymentDao */
         $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
         return $paymentDao->getByContextId($request->getContext()->getId(), $rangeInfo);
     }
@@ -137,8 +130,8 @@ class PaymentsGridHandler extends GridHandler
     /**
      * View a payment.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function viewPayment($args, $request)
     {

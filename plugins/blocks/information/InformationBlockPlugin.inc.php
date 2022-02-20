@@ -30,7 +30,7 @@ class InformationBlockPlugin extends BlockPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return String
+     * @return string
      */
     public function getDisplayName()
     {

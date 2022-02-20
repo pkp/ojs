@@ -16,13 +16,13 @@ msgstr "تائیدیه دوباره تنظیم کردن رمزعبور"
 
 msgid "emails.passwordResetConfirm.body"
 msgstr ""
-"درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &amp;lt;$siteTitle&amp;gt; به ما رسیده است.<br />\n"
+"درخواستی مبنی بر تنظیم دوباره رمزعبور شما مربوط به وب سایت &amp;lt;{$siteTitle}&amp;gt; به ما رسیده است.<br />\n"
 "<br />\n"
 "لطفا چنانچه شما این درخواست را نفرستاده اید، به این ایمیل توجهی نکنید، در این صورت رمز عبور شما تغییری نخواهد کرد. اگر مایل به تنظیم دوباره رمزعبور خود هستید، برروی پیوند زیر کلیک نمائید.<br />\n"
 "<br />\n"
-"تنظیم مجدد رمز عبور: {$url}<br />\n"
+"تنظیم مجدد رمز عبور: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.passwordResetConfirm.description"
 msgstr "This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password."
@@ -34,10 +34,10 @@ msgid "emails.passwordReset.body"
 msgstr ""
 "رمزعبور شما برای استفاده از وب سایت {$siteTitle}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.<br />\n"
 "<br />\n"
-"نام کاربری شما: {$username}<br />\n"
+"نام کاربری شما: {$recipientUsername}<br />\n"
 "رمز ورود شما: {$password}<br />\n"
 "<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.passwordReset.description"
 msgstr "ایمیلی برای کاربرانی که رمز خود را رست نموده اند"
@@ -49,31 +49,31 @@ msgid "emails.userRegister.body"
 msgstr ""
 "برای ثبت نام در {$contextName} از شما سپاسگزارم. لطفا نام کاربری و رمز عبور خود را که برای ورود به وب سایت این مجله مورد نیاز می باشد به خاطر بسپارید.<br />\n"
 "<br />\n"
-"نام کاربری: {$username}<br />\n"
+"نام کاربری: {$recipientUsername}<br />\n"
 "رمز عبور: {$password}<br />\n"
 "<br />\n"
 "<br />\n"
 "باتشکر<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.userRegister.description"
 msgstr "This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password."
 
-msgid "emails.userValidate.subject"
+msgid "emails.userValidateContext.subject"
 msgstr "حساب کاربری خود را تایید کنید"
 
-msgid "emails.userValidate.body"
+msgid "emails.userValidateContext.body"
 msgstr ""
-"{$userFullName}<br />\n"
+"{$recipientName}<br />\n"
 "<br />\n"
 "حساب کاربری شما برای مجله {$contextName}, ایجاد شد. قبل از استفاده می بایست آن را تایید کنید. برای انجام این کار فقط کافی است که بر روی لینک زیر کلیک کنید:<br />\n"
 "<br />\n"
 "<a href=\"{$activateUrl}\">{$activateUrl}</a><br />\n"
 "<br />\n"
 "با تشکر<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
-msgid "emails.userValidate.description"
+msgid "emails.userValidateContext.description"
 msgstr "This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password."
 
 msgid "emails.reviewerRegister.subject"
@@ -85,28 +85,28 @@ msgstr ""
 "<br />\n"
 "نام کاربری و رمز عبور شما برای سایت مجله که جهت انجام تمام امورات آنلاین با این مجله لازم است در زیر آمده است.<br />\n"
 "<br />\n"
-"نام کاربری: {$username}<br />\n"
+"نام کاربری: {$recipientUsername}<br />\n"
 "رمز عبور: {$password}<br />\n"
 "<br />\n"
 "با تشکر,<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.reviewerRegister.description"
 msgstr "This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password."
 
-msgid "emails.publishNotify.subject"
+msgid "emails.issuePublishNotify.subject"
 msgstr "شماره جدید چاپ شد"
 
-msgid "emails.publishNotify.body"
+msgid "emails.issuePublishNotify.body"
 msgstr ""
 "خوانندگان گرامی:<br />\n"
 "<br />\n"
 "{$contextName}، آخرین شماره خود را به نشانی &amp;lt;<a href=\"{$contextUrl}\">{$contextUrl}</a>&amp;gt; چاپ کرده است. از شما دعوت میشود که پس از ملاحظه فهرست عناوین از وب سایت مجله حاوی مقاله ها و موضوع های مورد علاقه بازدید کنید.<br />\n"
 "<br />\n"
 "از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
-msgid "emails.publishNotify.description"
+msgid "emails.issuePublishNotify.description"
 msgstr "This email is sent to registered readers via the \"Notify Users\" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL."
 
 msgid "emails.lockssNewArchive.subject"
@@ -123,7 +123,7 @@ msgstr ""
 "<br />\n"
 "<br />\n"
 "باتشکر<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.lockssNewArchive.description"
 msgstr "This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved."
@@ -133,16 +133,16 @@ msgstr "قدردانی برای ارسال مقاله"
 
 msgid "emails.submissionAck.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "از ارسال مقاله &quot;{$submissionTitle}&quot; به {$contextName} متشکرم. با استفاده از سامانه الکترونیکی مدیریت مجله، که هم اکنون استفاده می شود، قادر خواهید بود ازطریق وارد شدن به وب سایت مجله، روند پیشرفت بررسی مقاله خود را پیگیری نمائید.<br />\n"
 "<br />\n"
 "آدرس مقاله : {$submissionUrl}<br />\n"
-"نام کاربری: {$authorUsername}<br />\n"
+"نام کاربری: {$recipientUsername}<br />\n"
 "<br />\n"
 "لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.submissionAck.description"
 msgstr "در صورت فعال سازی. این ایمیل به صورت خودکار به نوسنده مقاله پس از تکمیل عملیات ارسال مقاله، فرستاده خواهد شد."
@@ -152,11 +152,11 @@ msgstr "نا مناسب بودن مقاله برای مجله"
 
 msgid "emails.submissionUnsuitable.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "بررسی اولیه انجام شده برروی مقاله &quot;{$submissionTitle}&quot; مشخص نموده است که این مقاله با چهارچوب و حیطه فعالیت {$contextName} مطابقت ندارد. توصیه می کنم که در راهنمای نویسندگان این مجله و همچنین در مقالات شماره اخیر جستجو کنید تا اطلاع بیشتری در مورد مقالات چاپ شده در این مجله کسب کنید.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.submissionUnsuitable.description"
 msgstr ""
@@ -183,7 +183,7 @@ msgstr ""
 "به عنوان یکی از کارشناسان مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، اینجانب نظرات داوری ارسال شده به نویسنده این متن را برای شما ارسال می کنم.<br />\n"
 "باردیگر از شما به خاطر مشارکت فعالتان در این فرایند سپاسگزاری می کنم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "{$comments}"
 
@@ -195,12 +195,12 @@ msgstr "تعیین کارشناس مسئول"
 
 msgid "emails.editorAssign.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "شما به عنوان کارشناس مسئول مقاله ضضض مربوط به {$contextName} انتخاب شده اید تا بر مراحل ویرایش آن نظارت داشته باشید.<br />\n"
 "<br />\n"
 "آدرس مقاله: {$submissionUrl}<br />\n"
-"نام کاربری: {$editorUsername}<br />\n"
+"نام کاربری: {$recipientUsername}<br />\n"
 "<br />\n"
 "متشکرم"
 
@@ -212,7 +212,7 @@ msgstr "درخواست کارشناسی مقاله"
 
 msgid "emails.reviewRequest.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot;که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید<br />\n"
 "<br />\n"
@@ -222,12 +222,12 @@ msgstr ""
 "<br />\n"
 "چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />\n"
 "<br />\n"
-"<a href=\"{$passwordResetUrl}\">{$passwordResetUrl}</a><br />\n"
-"آدرس مقاله : <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"<a href=\"{$passwordLostUrl}\">{$passwordLostUrl}</a><br />\n"
+"آدرس مقاله : <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "از توجه شما به این درخواست سپاسگزاری می کنم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.reviewRequest.description"
 msgstr "This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)"
@@ -237,7 +237,7 @@ msgstr "درخواست داوری مقاله"
 
 msgid "emails.reviewRequestOneclick.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot; که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />\n"
 "<br />\n"
@@ -245,11 +245,11 @@ msgstr ""
 "<br />\n"
 "ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.<br />\n"
 "<br />\n"
-"آدرس مقاله: <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"آدرس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "از توجه شما به این درخواست متشکرم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "<br />\n"
 "--------------------------------<br />\n"
@@ -266,7 +266,7 @@ msgstr "درخواست داوری مقاله"
 
 msgid "emails.reviewRequestAttached.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "شما به عنوان یک داور برای بررسی مقاله &quot;{$submissionTitle}&quot; انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />\n"
 "در ذیل متن راهنمای کارشناسی برای این مجله آمده است و مقاله ارسالی به این ایمیل پیوست شده است. توجه داشته باشید که باید متن کارشناسی و توصیه خود را تا تاریخ {$reviewDueDate} از طریق ایمیل ارسال کنید.<br />\n"
@@ -274,7 +274,7 @@ msgstr ""
 "لطفا با پاسخ دادن به این ایمیل قبل از تاریخ &amp;lt;{$reviewDueDate}&amp;gt; مشخص سازید که آیا قادر به انجام کارشناسی هستید یا خیر؟<br />\n"
 "از توجه شما به این درخواست سپاسگزارم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "راهنمای داوری<br />\n"
 "<br />\n"
@@ -288,7 +288,7 @@ msgstr "درخواست لغو کارشناسی"
 
 msgid "emails.reviewCancel.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$contextName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.<br />\n"
 "<br />\n"
@@ -306,7 +306,7 @@ msgstr ""
 "<br />\n"
 "اینجانب داوری مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} را قبول می نمایم. از توجه شما متشکرم و بررسی آنرا در موعد مقرر ( {$reviewDueDate}) انجام خواهد داد.<br />\n"
 "<br />\n"
-"{$reviewerName}"
+"{$senderName}"
 
 msgid "emails.reviewConfirm.description"
 msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخشبرای اطلاع از پذیرش انجام داوری"
@@ -321,7 +321,7 @@ msgstr ""
 "متاسفانه در حال حاضر قادر به داوری مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} نیستم.<br />\n"
 "از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.<br />\n"
 "<br />\n"
-"{$reviewerName}"
+"{$senderName}"
 
 msgid "emails.reviewDecline.description"
 msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخش برای اطلاع از عدم پذیرش انجام داوری"
@@ -331,7 +331,7 @@ msgstr "قدردانی بخاطر بررسی مقاله"
 
 msgid "emails.reviewAck.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "برای بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم."
 
@@ -343,16 +343,16 @@ msgstr "یادآوری برای کارشناسی مقاله"
 
 msgid "emails.reviewRemindOneclick.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$submissionTitle},&quot; برای {$contextName}<br />\n"
 "منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.<br />\n"
 "<br />\n"
-"آدزس مقاله: <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"آدزس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.reviewRemindOneclick.description"
 msgstr "This email is sent by a Section Editor to remind a reviewer that their review is due."
@@ -362,18 +362,18 @@ msgstr "یادآوری اتوماتیک برای کارشناسی مقاله ا�
 
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "این فقط یک یادآوری درخواست ما از شما جهت بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName} است. امیدوار بودیم که متن کارشناسی شما تا تاریخ &amp;lt;{$reviewDueDate}&amp;gt; دریافت نماییم و به دلیل اتمام فرصت مقرر، این ایمیل به صورت اتوماتیک برای شما فرستاده می شود. بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید نتیجه کارشناسی خود را برایمان ارسال کنید.<br />\n"
 "<br />\n"
 "چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید می توانید از پیوند زیر جهت تنظیم دوباره رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />\n"
 "<br />\n"
 "<a href=\"{$passwordResetUrl}\">{$passwordResetUrl}</a><br />\n"
-"آدرس مقاله: <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"آدرس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.reviewRemindAuto.description"
 msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
@@ -383,16 +383,16 @@ msgstr "یادآوری برای کارشناسی مقاله (اتوماتیک)"
 
 msgid "emails.reviewRemindAutoOneclick.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "با عرض پوزش بدین وسیله یادآوری مینمایم که متعاقب ارسال درخواست اولیه مبنی بر انجام کارشناسی مقاله &quot;{$submissionTitle},&quot; برای {$contextName}<br />\n"
 "منتظر دریافت نظرات کارشناسی جنابعالی میباشیم. امیدواریم که نتیجه کارشناسی جنابعالی تا تاریخ {$reviewDueDate} به دست ما برسد.<br />\n"
 "<br />\n"
-"آدزس مقاله: <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"آدزس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "در صورت امکان با ایمیل اطلاع دهید که آیا مایلید این کارسناسی را انجام دهید.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
@@ -402,7 +402,7 @@ msgstr "درخواست انجام امور ویراستاری"
 
 msgid "emails.copyeditRequest.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "از شما درخواست می شود که امور ویراستاری مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.<br />\n"
 "<br />\n"
@@ -416,7 +416,7 @@ msgstr "اتمام ویراستاری مقاله"
 
 msgid "emails.copyeditComplete.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "هم اکنون ویراستاری مقاله جنابعالی با عنوان &quot;{$submissionTitle}&quot; برای مجله {$contextName} به پایان رسید. برای بررسی نتیجه ویراستاری و پاسخ دادن به سؤالات احتمالی لطفا مراحل زیر را دنبال کنید:<br />\n"
 "<br />\n"
@@ -428,7 +428,7 @@ msgstr ""
 "<br />\n"
 "آدرس مقاله: <a href=\"{$submissionEditingUrl}\">{$submissionEditingUrl}</a><br />\n"
 "<br />\n"
-"{$participantName}"
+"{$recipientName}"
 
 msgid "emails.copyeditComplete.description"
 msgstr ""
@@ -438,15 +438,15 @@ msgstr "بررسی نهایی ویراستاری"
 
 msgid "emails.copyeditFinalRequest.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "مراحل ویراستاری مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} توسط نویسنده و سردبیر مربوطه کامل شده است. هم اکنون نسخه بدون اشکال نهایی آماده انجام امور صفحه آرایی می باشد.<br />\n"
 "<br />\n"
 "آدرس مقاله: <a href=\"{$submissionUrl}\">{$submissionUrl}</a><br />\n"
-"نام کاربری: {$participantUsername}<br />\n"
+"نام کاربری: {$recipientUsername}<br />\n"
 "<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.copyeditFinalRequest.description"
 msgstr "This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process."
@@ -456,11 +456,11 @@ msgstr "بررسی نهایی ویراستاری کامل شد"
 
 msgid "emails.copyeditFinalComplete.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "در حال حاضر، یک نسخه ویراستاری شده ی بدون اشکال از مقاله شما با عنوان {$submissionTitle}مربوط به {$contextName} آماده شده و آماده انجام امور صفحه آرایی و نسخه پیش از چاپ می باشد.<br />\n"
 "<br />\n"
-"{$participantName}"
+"{$recipientName}"
 
 msgid "emails.copyeditFinalComplete.description"
 msgstr "This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin."
@@ -470,12 +470,12 @@ msgstr "نسخه های پیش از چاپ مورد نیاز است"
 
 msgid "emails.layoutRequest.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "از شما درخواست می شود که نسخه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را آماده نمایید.<br />\n"
 "<br />\n"
 "آدرس مقاله: <a href=\"{$submissionUrl}\">{$submissionUrl}</a><br />\n"
-"نام کاربری: {$participantUsername}<br />\n"
+"نام کاربری: {$recipientUsername}<br />\n"
 "<br />\n"
 "چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم."
 
@@ -487,13 +487,13 @@ msgstr "نسخه های پیش از چاپ کامل شده است"
 
 msgid "emails.layoutComplete.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "نسخه های پیش از چاپ مقاله ضضض مربوط به {$contextName} حاضر شده و آماده بررسی نهایی می باشد.<br />\n"
 "لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />\n"
 "<br />\n"
 "<br />\n"
-"{$participantName}"
+"{$senderName}"
 
 msgid "emails.layoutComplete.description"
 msgstr "This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed."
@@ -503,12 +503,12 @@ msgstr "قدردانی بخاطر انجام امور صفحه آرایی"
 
 msgid "emails.layoutAck.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "از اینکه نسخه پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} را آماده نمودید از شما متشکرم. بدیهی است این امر کمک شایانی در روند چاپ خواهد بود.<br />\n"
 "<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.layoutAck.description"
 msgstr "This email from the Section Editor to the Layout Editor acknowledges completion of the layout editing process and thanks the layout editor for their contribution."
@@ -518,7 +518,7 @@ msgstr "درخواست بررسی نهایی از نویسنده"
 
 msgid "emails.proofreadAuthorRequest.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "از شما درخواست می شود که نمونه پیش از چاپ مقاله ارسالی خود را تحت عنوان ضضض مربوط به {$contextName}، مورد بررسی نهایی قراردهید. لطفا برای دیدن نمونه های پیش از چاپ، بوسیله پیوند زیر وارد وب سایت مجله شوید. جهت فقط خواندن موارد غلط های املایی و صفحه آرایی در نسخه ای که چاپ خواهد شد، از پیوند VIEW PROOF استفاده کنید. این غلط ها را در کادر اطلاعات نمونه خوانی ذخیره کرده و طبق دستورالعمل های مربوط به بررسی نهایی (نمونه خوانی) که در وب سایت گنجانده شده است، عمل نمایید.<br />\n"
 "<br />\n"
@@ -528,7 +528,7 @@ msgstr ""
 "<br />\n"
 "<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.proofreadAuthorRequest.description"
 msgstr "This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it."
@@ -547,11 +547,11 @@ msgstr "قدردانی از نویسنده بخاطر بررسی نهایی مق
 
 msgid "emails.proofreadAuthorAck.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "بخاطر بررسی نهایی مقاله خود تحت عنوان &quot;{$submissionTitle}&quot; مربوط به {$contextName} از شما متشکریم. منتظر آن هستیم تا مقاله شما بزودی چاپ گردد. چنانچه مشترک خدمات اطلاع رسانی مجله ما باشید، ایمیلی حاوی فهرست مطالب را دریافت خواهید کرد. لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.proofreadAuthorAck.description"
 msgstr "This email from the Section Editor to the Author acknowledges completion of the initial proofreading process and thanks them for their contribution."
@@ -570,7 +570,7 @@ msgstr ""
 "<br />\n"
 "چنانچه در حال حاضر قادر به انجام موارد فوق نیستید و یا در این رابطه سوالی دارید، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.proofreadRequest.description"
 msgstr "This email from the Section Editor to the Proofreader requests that they perform proofreading of an article's galleys. It provides information about the article and how to access it."
@@ -580,7 +580,7 @@ msgstr "بررسی نهایی کامل شد"
 
 msgid "emails.proofreadComplete.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "درحال حاضر بررسی نهایی مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} را به پایان رسانده ام. هم اکنون نمونه های پیش از چاپ، آماده اعمال تصحیح نهایی توسط صفحه آرا می باشد.<br />\n"
 "<br />\n"
@@ -598,7 +598,7 @@ msgstr ""
 "<br />\n"
 "به خاطر بررسی نمونه پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} از شما متشکرم. بدیهی است این امر کمک شایانی در جهت ارتقاء سطح کیفی این مجله خواهد بود.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.proofreadAck.description"
 msgstr "This email from the Section Editor to the Proofreader confirms completion of the proofreader's proofreading process and thanks them for their contribution."
@@ -608,12 +608,12 @@ msgstr "اتمام بررسی نهایی (از طرف صفحه آرا)"
 
 msgid "emails.proofreadLayoutComplete.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "اصلاح نمونه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} تمام شده است. هم اکنون این قسمت آماده چاپ می باشد.<br />\n"
 "<br />\n"
 "<br />\n"
-"{$participantName}"
+"{$recipientName}"
 
 msgid "emails.proofreadLayoutComplete.description"
 msgstr "This email from the Layout Editor to the Section Editor notifies them that the final stage of proofreading has been completed and the article is now ready to publish."
@@ -623,11 +623,11 @@ msgstr "قدردانی بخاطر بررسی نهایی مقاله (از صفح�
 
 msgid "emails.proofreadLayoutAck.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "به خاطر اصلاح نهایی نمونه های پیش از چاپ مقاله &quot;{$submissionTitle}&quot;مربوط به {$contextName} از شما متشکرم. این امر، کمک شایان توجهی درجهت ارتقاء سطح کیفی مجله می باشد.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.proofreadLayoutAck.description"
 msgstr "This email from the Section Editor to the Layout Editor acknowledges completion of the final stage of proofreading and thanks them for their contribution."
@@ -637,10 +637,10 @@ msgstr "شاید مایل به دیدن این مقاله باشید"
 
 msgid "emails.emailLink.body"
 msgstr ""
-"به نظر می رسد که شما مایل به ملاحظه مقاله {$authorName}تحت عنوان &quot;{$submissionTitle}&quot; باشید. این مقاله در شماره &amp;lt;{$volume}&amp;gt; جلد &amp;lt;$number&amp;gt; سال &amp;lt;{$year}&amp;gt; {$contextName} به چاپ رسیده است.<br />\n"
+"به نظر می رسد که شما مایل به ملاحظه مقاله {$authors}تحت عنوان &quot;{$submissionTitle}&quot; باشید. این مقاله در شماره &amp;lt;{$volume}&amp;gt; جلد &amp;lt;$number&amp;gt; سال &amp;lt;{$year}&amp;gt; {$contextName} به چاپ رسیده است.<br />\n"
 "<br />\n"
 "آدرس مقاله:<br />\n"
-"<a href=\"{$articleUrl}\">{$articleUrl}</a>"
+"<a href=\"{$submissionUrl}\">{$submissionUrl}</a>"
 
 msgid "emails.emailLink.description"
 msgstr "This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page."
@@ -650,19 +650,19 @@ msgstr "اعلام اشتراک مجله"
 
 msgid "emails.subscriptionNotify.body"
 msgstr ""
-"{$subscriberName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "درحال حاضر شما به عنوان مشترک {$contextName}، با ویژگی های اشتراکی زیر در سامانه الکترونیکی مدیریت مجله ی ما ثبت نام شده اید:<br />\n"
 "<br />\n"
 "{$subscriptionType}<br />\n"
 "<br />\n"
-"به منظور دستیابی به محتویات که فقط برای مشترکان در دسترس می باشد، براحتی با استفاده از نام کاربری تان &amp;lt;{$username}&amp;gt; در این سامانه واردشوید.<br />\n"
+"به منظور دستیابی به محتویات که فقط برای مشترکان در دسترس می باشد، براحتی با استفاده از نام کاربری تان &amp;lt;{$recipientUsername}&amp;gt; در این سامانه واردشوید.<br />\n"
 "<br />\n"
 "بلافاصله پس از ورود به این سامانه، می توانید جزئیات اشتراک خود و رمز عبورتان را تغییر بدهید.<br />\n"
 "لطفا توجه کنید درصورتی که دارای اشتراک سازمانی باشید، نیازی به ورود به سیستم ندارید، زیرا این سامانه بصورت اتوماتیک درخواست های اشتراک را تایید می کند.<br />\n"
 "لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$subscriptionContactSignature}"
+"{$signature}"
 
 msgid "emails.subscriptionNotify.description"
 msgstr "This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access."
@@ -680,7 +680,7 @@ msgstr ""
 "<br />\n"
 "آدرس وب سایت مجله: <a href=\"{$contextUrl}\">{$contextUrl}</a><br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.openAccessNotify.description"
 msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."
@@ -690,7 +690,7 @@ msgstr "یادآوری پایان یافتن مدت اشتراک"
 
 msgid "emails.subscriptionBeforeExpiry.body"
 msgstr ""
-"{$subscriberName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "اشتراک {$contextName} برای شما درحال اتمام می باشد.<br />\n"
 "<br />\n"
@@ -701,7 +701,7 @@ msgstr ""
 "<br />\n"
 "لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$subscriptionContactSignature}"
+"{$signature}"
 
 msgid "emails.subscriptionBeforeExpiry.description"
 msgstr "This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access."
@@ -711,7 +711,7 @@ msgstr "مدت اشتراک شما پایان یافته است"
 
 msgid "emails.subscriptionAfterExpiry.body"
 msgstr ""
-"{$subscriberName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "اشتراک {$contextName} برای شما به پایان رسیده است.<br />\n"
 "<br />\n"
@@ -722,7 +722,7 @@ msgstr ""
 "<br />\n"
 "لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$subscriptionContactSignature}"
+"{$signature}"
 
 msgid "emails.subscriptionAfterExpiry.description"
 msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
@@ -732,7 +732,7 @@ msgstr "اشتراک شما پایان یافت-آخرین یادآوری"
 
 msgid "emails.subscriptionAfterExpiryLast.body"
 msgstr ""
-"{$subscriberName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "اشتراک {$contextName} برای شما به پایان رسیده است.لطفا توجه کنید که این آخرین یادآوری است که برای شما ارسال خواهد شد.<br />\n"
 "<br />\n"
@@ -743,7 +743,7 @@ msgstr ""
 "<br />\n"
 "لطفا در صورت وجود سوال در این زمینه، با من تماس بگیرید.<br />\n"
 "<br />\n"
-"{$subscriptionContactSignature}"
+"{$signature}"
 
 msgid "emails.subscriptionAfterExpiryLast.description"
 msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
@@ -753,12 +753,12 @@ msgstr "تشکر بخاطر ویراستاری ({$submissionId})"
 
 msgid "emails.copyeditAck.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "از اینکه زحمت کشیده و مقاله &quot;{$submissionTitle},&quot; را برای مجله {$contextName} ویرایش کردید متشکرم.<br />\n"
 "این اقدام شما به منزله کمک بزرگی در راه ارتقا مجله میباشد.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.copyeditAck.description"
 msgstr "This email is sent by the Section Editor to a submission's Copyeditor to acknowledge that the Copyeditor has successfully completed the copyediting process and thank them for their contribution."
@@ -768,7 +768,7 @@ msgstr "درخواست بررسی مقاله ویرایش شده ({$submissionId
 
 msgid "emails.copyeditAuthorRequest.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "مقاله شما با عنوان<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
@@ -792,7 +792,7 @@ msgstr ""
 "چنانچه در حال حاضر به علت گرفتاری قادر به انجام این کار نیستید و یا هر سؤال دیگری دارید, لطفا مرا در جریان بگذارید.<br />\n"
 "از اینکه با ما همکاری میکنید متشکریم<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.copyeditAuthorRequest.description"
 msgstr "This email is sent by the Section Editor to a submission's Author to request that they proofread the work of the copyeditor. It provides access information for the manuscript and warns that this is the last opportunity the author has to make substantial changes."
@@ -802,7 +802,7 @@ msgstr "بررسی مقاله ویرایش شده به اتمام رسید ({$su
 
 msgid "emails.copyeditAuthorComplete.body"
 msgstr ""
-"{$editorialContactName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "{$contextName}<br />\n"
@@ -810,7 +810,7 @@ msgstr ""
 "هم اکنون بررسی مقاله ویرایش شده را به اتمام رساندم و اعلام میدارم که این مقاله آماده برای آخرین دور ویراستاری و ارسال برای صفحه آرائی میباشد.<br />\n"
 "<br />\n"
 "با تشکر<br />\n"
-"{$authorName}"
+"{$authors}"
 
 msgid "emails.copyeditAuthorComplete.description"
 msgstr "This email is sent by the Author to the Section Editor to notify them that the Author's copyediting process has been completed."
@@ -820,14 +820,14 @@ msgstr "تشکر بخاطر بررسی مقاله ویرایش شده ({$submiss
 
 msgid "emails.copyeditAuthorAck.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "{$contextName}<br />\n"
 "<br />\n"
 "از اینکه مقاله ویرایش شده را بررسی کردید متشکرم. هماکنون مقاله شما برای صفحه آرائی ارسال میشود.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.copyeditAuthorAck.description"
 msgstr "This email is sent by the Section Editor to a submission's Author to confirm completion of the Author's copyediting process and thank them for their contribution."
@@ -837,14 +837,14 @@ msgstr "تشکر بخاطر انجام آخرین مرحله ویراستاری 
 
 msgid "emails.copyeditFinalAck.body"
 msgstr ""
-"{$participantName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "{$contextName}<br />\n"
 "<br />\n"
 "از اینکه آخرین مرحله ویرایش مقاله را انجام دادید متشکرم. این اقدام مرحله ای مهم در روند ادیتوریال میباشد.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.copyeditFinalAck.description"
 msgstr "This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution."
@@ -854,18 +854,18 @@ msgstr "یادآوری داوری مقاله ارسالی"
 
 msgid "emails.reviewRemind.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "این فقط یک یادآوری درخواست {$contextName} از شما جهت بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;است. امیدوار بودیم که متن داوری شما تا تاریخ &amp;lt;{$reviewDueDate}&amp;gt; به مجله ارسال شده باشد و بسیار خوشحال خواهیم شد اگر هرچه زودتر بتوانید آنرا آماده کرده و نسبت به ارسال آن اقدام کنید.<br />\n"
 "<br />\n"
 "چنانچه نام کاربری و رمز عبور خود مربوط به وب سایت این مجله را در دسترس ندارید، می توانید از پیوند زیر جهت دوباره تنظیم کردن رمزعبور خود استفاده کنید (که به همراه نام کاربری برایتان ارسال می گردد).<br />\n"
 "<br />\n"
 "<a href=\"{$passwordResetUrl}\">{$passwordResetUrl}</a><br />\n"
-"آدرس مقاله: <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"آدرس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستیم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.reviewRemind.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای یادآوری انجام داوری"
@@ -886,7 +886,7 @@ msgstr ""
 "<br />\n"
 "از آنجائیکه شما عضو شبکه LOCKSS هستید خواهشمند است مساعدت فرموده و ما را در آرشیو خود ذخیره فرمائید.<br />\n"
 "با تشکر<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.lockssExistingArchive.description"
 msgstr "This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest."
@@ -899,9 +899,9 @@ msgid "emails.notification.body"
 msgstr ""
 "شما یک فرم اطلاع رسانی جدید از {$siteTitle} دارید<br />\n"
 "<br />\n"
-"لینک: {$url}<br />\n"
+"لینک: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$principalContactSignature}"
+"{$signature}"
 
 msgid "emails.notification.description"
 msgstr ""
@@ -911,7 +911,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
 "<br />\n"
@@ -925,7 +925,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionRevisions.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
 "<br />\n"
@@ -939,7 +939,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionResubmit.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
 "<br />\n"
@@ -953,7 +953,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionDecline.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
 "<br />\n"
@@ -973,7 +973,7 @@ msgstr ""
 "{$subscriptionType}<br />\n"
 "<br />\n"
 "کاربر:<br />\n"
-"{$userDetails}<br />\n"
+"{$subscriberDetails}<br />\n"
 "<br />\n"
 "اطلاعات عضویت در صورت موجود بودن:<br />\n"
 "{$membership}<br />\n"
@@ -1006,7 +1006,7 @@ msgstr ""
 "{$ipRanges}<br />\n"
 "<br />\n"
 "مسئول تماس:<br />\n"
-"{$userDetails}<br />\n"
+"{$subscriberDetails}<br />\n"
 "<br />\n"
 "اطلاعات عضویت در صورت وجود:<br />\n"
 "{$membership}<br />\n"
@@ -1029,7 +1029,7 @@ msgstr ""
 "{$subscriptionType}<br />\n"
 "<br />\n"
 "کاربر:<br />\n"
-"{$userDetails}<br />\n"
+"{$subscriberDetails}<br />\n"
 "<br />\n"
 "اطلاعات عضویت در صورت وجود:<br />\n"
 "{$membership}<br />\n"
@@ -1062,7 +1062,7 @@ msgstr ""
 "{$ipRanges}<br />\n"
 "<br />\n"
 "مسؤل تماس:<br />\n"
-"{$userDetails}<br />\n"
+"{$subscriberDetails}<br />\n"
 "<br />\n"
 "اطلاعات عضویت در صورت وجود:<br />\n"
 "{$membership}<br />\n"
@@ -1079,7 +1079,7 @@ msgstr "ویرایش ارجاع"
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""
-"{$authorFirstName},<br />\n"
+"{$recipientName},<br />\n"
 "<br />\n"
 "لطفا ارجاع صحیح برای رفرانس زیر از مقاله شما {$submissionTitle} را مشخص کنید و یا تایید نمائید:<br />\n"
 "<br />\n"
@@ -1087,7 +1087,7 @@ msgstr ""
 "<br />\n"
 "بت تشکر!<br />\n"
 "<br />\n"
-"{$userFirstName}<br />\n"
+"{$senderName}<br />\n"
 "ویراستار, {$contextName}"
 
 msgid "emails.citationEditorAuthorQuery.description"
@@ -1098,7 +1098,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionInitialDecline.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
 "<br />\n"
@@ -1112,7 +1112,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionSendToExternal.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 "در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
 "<br />\n"
@@ -1128,7 +1128,7 @@ msgstr "تصمیم دبیر"
 
 msgid "emails.editorDecisionSendToProduction.body"
 msgstr ""
-"{$authorName}:<br />\n"
+"{$authors}:<br />\n"
 "<br />\n"
 " روند داوری مقاله ارسالی شما (&quot;{$submissionTitle}&quot;)  تکمیل شده و به واحد انتشار ارسال شده است.<br />\n"
 "<br />\n"
@@ -1169,7 +1169,7 @@ msgstr ""
 "<br />\n"
 "در صورت داشتن هر گونه سوالی با من تماس حاصل فرمایید. از اینکه نتیجه پژوهش خود را برای این مجله ارسال نمودید، سپاسگذاریم<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.submissionAckNotUser.description"
 msgstr "در صورت فعال سازی. این ایمیل به صورت خودکار به نوسنده مقاله پس از تکمیل عملیات ارسال مقاله، فرستاده خواهد شد."
@@ -1179,7 +1179,7 @@ msgstr "درخواست داوری مقاله"
 
 msgid "emails.reviewRequestAttachedSubsequent.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "این ایمیل در مورد مقاله &quot;{$submissionTitle},&quot; که به مجله {$contextName} ارسال شده است، می باشد.<br />\n"
 "<br />\n"
@@ -1189,7 +1189,7 @@ msgstr ""
 "<br />\n"
 "لطفاً تا تاریخ {$responseDueDate} برای ما با ایمیل پاسخ دهید که این داوری را می پذیرید یا نه.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "<br />\n"
 "راهنمای داوری<br />\n"
@@ -1204,7 +1204,7 @@ msgstr "درخواست داوری مقاله"
 
 msgid "emails.reviewRequestOneclickSubsequent.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "این ایمیل در مورد مقاله &quot;{$submissionTitle},&quot; که به مجله {$contextName} ارسال شده است، می باشد.<br />\n"
 "<br />\n"
@@ -1214,10 +1214,10 @@ msgstr ""
 "<br />\n"
 "مهلت انجام داوری: {$reviewDueDate}.<br />\n"
 "<br />\n"
-"لینک مقاله: {$submissionReviewUrl}<br />\n"
+"لینک مقاله: {$reviewAssignmentUrl}<br />\n"
 "<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
@@ -1226,12 +1226,12 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
 
-msgid "emails.reviewRequestRemindAuto.subject"
+msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "یادآوری درخواست داوری مقاله"
 
-msgid "emails.reviewRequestRemindAuto.body"
+msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "\n"
 "این ایمیل که به صورت خودکار ارسال شده است، جهت یادآوری درخواست انجام داوری مقاله &quot;{$submissionTitle},&quot; برای مجله {$contextName}. است.\n"
 "<br />\n"
@@ -1242,24 +1242,24 @@ msgstr ""
 "چنانچه رمز ورود خود را فراموش کرده اید م یتوانید از لینک زیر برای بازیابی رمز ورود خود استفاده کنید:\n"
 "{$passwordResetUrl}<br />\n"
 "<br />\n"
-"لینک مقاله: {$submissionReviewUrl}<br />\n"
+"لینک مقاله: {$reviewAssignmentUrl}<br />\n"
 "<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
 
-msgid "emails.reviewRequestRemindAuto.description"
+msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
 
-msgid "emails.reviewRequestRemindAutoOneclick.subject"
+msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "یادآوری درخواست داوری مقاله"
 
-msgid "emails.reviewRequestRemindAutoOneclick.body"
+msgid "emails.reviewResponseOverdueAutoOneclick.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "\n"
 "این ایمیل که به صورت خودکار ارسال شده است، جهت یادآوری درخواست انجام داوری مقاله &quot;{$submissionTitle},&quot; برای مجله {$contextName}. است. امیدواریم که تا تاریخ {$responseDueDate} نسبت به پذیرش یا عدم پذیرش این درخواست داوری به ما اطلاع رسانی نمایید\n"
 "<br />\n"
@@ -1268,16 +1268,16 @@ msgstr ""
 "مهلت انجام داوری: {$reviewDueDate}.<br />\n"
 "\n"
 "<br />\n"
-"لینک مقاله: {$submissionReviewUrl}<br />\n"
+"لینک مقاله: {$reviewAssignmentUrl}<br />\n"
 "<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
 
-msgid "emails.reviewRequestRemindAutoOneclick.description"
+msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
 
 msgid "emails.revisedVersionNotify.subject"
@@ -1287,11 +1287,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "دبیر محترم:<br />\n"
 "<br />\n"
-"نسخه اصلاح شده مقاله &quot;{$submissionTitle}&quot; توسط {$authorName} در سامانه آپلود شد..<br />\n"
+"نسخه اصلاح شده مقاله &quot;{$submissionTitle}&quot; توسط {$authors} در سامانه آپلود شد..<br />\n"
 "<br />\n"
 "لینک مقاله: {$submissionUrl}<br />\n"
 "<br />\n"
-"{$editorialContactSignature}"
+"{$signature}"
 
 msgid "emails.revisedVersionNotify.description"
 msgstr "ایمیلی که خودکار پس از آپلود نسخه اصلاحی توسط نویسنده  برای دبیر ارسال می شود"
@@ -1301,21 +1301,21 @@ msgstr "درخواست داوری مقاله"
 
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
-"{$reviewerName}:<br />\n"
+"{$recipientName}:<br />\n"
 "<br />\n"
 "شما به عنوان یک کارشناس ممتاز برای بررسی مقاله &quot;{$submissionTitle}&quot; که برای {$contextName} ارسال شده است انتخاب شده اید. در ذیل، چکیده مقاله ارسالی برای شما گنجانده شده است و امیدوارم که در این زمینه مایل به همکاری با این مجله باشید.<br />\n"
 "<br />\n"
 "لطفا قبل از تاریخ {$responseDueDate} وارد وب سایت مجله شده و مشخص سازید که آیا مایل به قبول کارشناسی هستید یا خیر؟ همچنین به طور همزمان می توانید به مقاله ارسالی دسترسی پیدا کرده و متن کارشناسی و توصیه های خودرا ذخیره کنید.<br />\n"
 "<br />\n"
-"چنانچه رمز عبور خود را فراموش کرده اید می توانید از لینک زیر به بازیابی رمز خود بپردازید: {$passwordResetUrl}\n"
+"چنانچه رمز عبور خود را فراموش کرده اید می توانید از لینک زیر به بازیابی رمز خود بپردازید: {$passwordLostUrl}\n"
 "<br/>\n"
 "ضمنا آخرین مهلت بررسی این مقاله تا تاریخ {$reviewDueDate} می باشد.<br />\n"
 "<br />\n"
-"آدرس مقاله: <a href=\"{$submissionReviewUrl}\">{$submissionReviewUrl}</a><br />\n"
+"آدرس مقاله: <a href=\"{$reviewAssignmentUrl}\">{$reviewAssignmentUrl}</a><br />\n"
 "<br />\n"
 "از توجه شما به این درخواست متشکرم.<br />\n"
 "<br />\n"
-"{$editorialContactSignature}<br />\n"
+"{$signature}<br />\n"
 "<br />\n"
 "<br />\n"
 "--------------------------------<br />\n"

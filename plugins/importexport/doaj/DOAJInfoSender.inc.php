@@ -27,7 +27,7 @@ class DOAJInfoSender extends ScheduledTask
     public function __construct($args)
     {
         PluginRegistry::loadCategory('importexport');
-        $plugin = PluginRegistry::getPlugin('importexport', 'DOAJExportPlugin'); /* @var $plugin DOAJExportPlugin */
+        $plugin = PluginRegistry::getPlugin('importexport', 'DOAJExportPlugin'); /** @var DOAJExportPlugin $plugin */
         $this->_plugin = $plugin;
 
         if (is_a($plugin, 'DOAJExportPlugin')) {
@@ -79,7 +79,7 @@ class DOAJInfoSender extends ScheduledTask
     public function _getJournals()
     {
         $plugin = $this->_plugin;
-        $contextDao = Application::getContextDAO(); /* @var $contextDao JournalDAO */
+        $contextDao = Application::getContextDAO(); /** @var JournalDAO $contextDao */
         $journalFactory = $contextDao->getAll(true);
 
         $journals = [];
@@ -97,10 +97,10 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * Register objects
      *
-     * @param $objects array
-     * @param $filter string
-     * @param $journal Journal
-     * @param $objectsFileNamePart string
+     * @param array $objects
+     * @param string $filter
+     * @param Journal $journal
+     * @param string $objectsFileNamePart
      */
     public function _registerObjects($objects, $filter, $journal, $objectsFileNamePart)
     {
@@ -119,7 +119,7 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * Add execution log entry
      *
-     * @param $errors array
+     * @param array $errors
      */
     public function _addLogEntry($errors)
     {
@@ -127,7 +127,7 @@ class DOAJInfoSender extends ScheduledTask
             foreach ($errors as $error) {
                 assert(is_array($error) && count($error) >= 1);
                 $this->addExecutionLogEntry(
-                    __($error[0], ['param' => ($error[1] ?? null)]),
+                    __($error[0], ['param' => $error[1] ?? null]),
                     ScheduledTaskHelper::SCHEDULED_TASK_MESSAGE_TYPE_WARNING
                 );
             }

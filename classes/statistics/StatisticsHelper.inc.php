@@ -15,8 +15,6 @@
 
 namespace APP\statistics;
 
-use APP\i18n\AppLocale;
-
 use PKP\statistics\PKPStatisticsHelper;
 
 class StatisticsHelper extends PKPStatisticsHelper
@@ -57,7 +55,6 @@ class StatisticsHelper extends PKPStatisticsHelper
     protected function getReportObjectTypesArray()
     {
         $objectTypes = parent::getReportObjectTypesArray();
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
         $objectTypes = $objectTypes + [
             ASSOC_TYPE_JOURNAL => __('context.context'),
             ASSOC_TYPE_SECTION => __('section.section'),
@@ -73,5 +70,5 @@ class StatisticsHelper extends PKPStatisticsHelper
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\statistics\StatisticsHelper', '\StatisticsHelper');
-    define('STATISTICS_DIMENSION_ISSUE_ID', \StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID);
+    define('STATISTICS_DIMENSION_ISSUE_ID', StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID);
 }

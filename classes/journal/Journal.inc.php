@@ -23,10 +23,10 @@
 
 namespace APP\journal;
 
-use APP\i18n\AppLocale;
-
 use PKP\context\Context;
+
 use PKP\core\DAORegistry;
+use PKP\facades\Locale;
 use PKP\plugins\PluginRegistry;
 use PKP\statistics\PKPStatisticsHelper;
 
@@ -46,9 +46,8 @@ class Journal extends Context
     public function getLocalizedPageHeaderTitle()
     {
         $titleArray = $this->getData('name');
-        $title = null;
 
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $locale) {
+        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $locale) {
             if (isset($titleArray[$locale])) {
                 return $titleArray[$locale];
             }
@@ -66,7 +65,7 @@ class Journal extends Context
     public function getLocalizedPageHeaderLogo()
     {
         $logoArray = $this->getData('pageHeaderLogoImage');
-        foreach ([AppLocale::getLocale(), AppLocale::getPrimaryLocale()] as $locale) {
+        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $locale) {
             if (isset($logoArray[$locale])) {
                 return $logoArray[$locale];
             }
@@ -163,10 +162,10 @@ class Journal extends Context
      * @see <http://pkp.sfu.ca/wiki/index.php/OJSdeStatisticsConcept#Input_and_Output_Formats_.28Aggregation.2C_Filters.2C_Metrics_Data.29>
      * for a full specification of the input and output format of this method.
      *
-     * @param $metricType null|integer|array metrics selection
-     * @param $columns integer|array column (aggregation level) selection
-     * @param $orderBy array order criteria
-     * @param $range null|DBResultRange paging specification
+     * @param null|integer|array $metricType metrics selection
+     * @param int|array $columns column (aggregation level) selection
+     * @param array $orderBy order criteria
+     * @param null|DBResultRange $range paging specification
      *
      * @return null|array The selected data as a simple tabular
      *  result set or null if metrics are not supported by this journal.

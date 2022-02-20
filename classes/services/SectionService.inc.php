@@ -17,6 +17,8 @@ namespace APP\services;
 
 use APP\core\Application;
 use APP\core\Services;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 use PKP\services\interfaces\EntityPropertyInterface;
 
 use PKP\services\PKPSchemaService;
@@ -27,14 +29,14 @@ class SectionService implements EntityPropertyInterface
      * Get array of sections
      *
      * @param int $contextId
-     * @param boolean $activeOnly Exclude inactive sections
+     * @param bool $activeOnly Exclude inactive sections
      * 	from the section list that is returned
      *
      * @return array
      */
     public function getSectionList($contextId, $activeOnly = false)
     {
-        $sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionIterator = $sectionDao->getByContextId($contextId);
 
         $sections = [];
@@ -75,10 +77,11 @@ class SectionService implements EntityPropertyInterface
                     break;
             }
         }
+
         $locales = Application::get()->getRequest()->getContext()->getSupportedFormLocales();
         $values = Services::get('schema')->addMissingMultilingualValues(PKPSchemaService::SCHEMA_GALLEY, $values, $locales);
 
-        \HookRegistry::call('Section::getProperties::values', [&$values, $section, $props, $args]);
+        HookRegistry::call('Section::getProperties::values', [&$values, $section, $props, $args]);
 
         ksort($values);
 
@@ -96,7 +99,7 @@ class SectionService implements EntityPropertyInterface
             'id','abbrev','title','seq',
         ];
 
-        \HookRegistry::call('Section::getProperties::summaryProperties', [&$props, $section, $args]);
+        HookRegistry::call('Section::getProperties::summaryProperties', [&$props, $section, $args]);
 
         return $this->getProperties($section, $props, $args);
     }
@@ -111,7 +114,7 @@ class SectionService implements EntityPropertyInterface
         // No fuller representation of a section is used at this time
         $props = $this->getSummaryProperties($section, $args);
 
-        \HookRegistry::call('Section::getProperties::fullProperties', [&$props, $section, $args]);
+        HookRegistry::call('Section::getProperties::fullProperties', [&$props, $section, $args]);
 
         return $props;
     }
@@ -122,14 +125,14 @@ class SectionService implements EntityPropertyInterface
      * This does not check if the user is authorized to add a section, or
      * validate or sanitize this section.
      *
-     * @param $section Section
-     * @param $context Journal
+     * @param Section $section
+     * @param Journal $context
      *
      * @return Section
      */
     public function addSection($section, $context)
     {
-        $sectionDao = \DAORegistry::getDAO('SectionDAO'); /* $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
 
         // Don't allow sections to be added to any other context
         $section->setJournalId($context->getId());

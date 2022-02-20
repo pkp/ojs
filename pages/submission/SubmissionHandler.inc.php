@@ -13,6 +13,7 @@
  * @brief Handle requests for the submission wizard.
  */
 
+use PKP\facades\Locale;
 use PKP\security\Role;
 
 import('lib.pkp.pages.submission.PKPSubmissionHandler');
@@ -27,60 +28,8 @@ class SubmissionHandler extends PKPSubmissionHandler
         parent::__construct();
         $this->addRoleAssignment(
             [Role::ROLE_ID_AUTHOR, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER],
-            ['index', 'wizard', 'step', 'saveStep', 'fetchChoices']
+            ['index', 'wizard', 'step', 'saveStep']
         );
-    }
-
-
-    //
-    // Public methods
-    //
-    /**
-     * Retrieves a JSON list of available choices for a tagit metadata input field.
-     *
-     * @param $args array
-     * @param $request Request
-     */
-    public function fetchChoices($args, $request)
-    {
-        $term = $request->getUserVar('term');
-        $locale = $request->getUserVar('locale');
-        if (!$locale) {
-            $locale = AppLocale::getLocale();
-        }
-        switch ($request->getUserVar('list')) {
-            case 'languages':
-                $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory(\Sokil\IsoCodes\IsoCodesFactory::OPTIMISATION_IO);
-                $matches = [];
-                foreach ($isoCodes->getLanguages() as $language) {
-                    if (!$language->getAlpha2() || $language->getType() != 'L' || $language->getScope() != 'I') {
-                        continue;
-                    }
-                    if (stristr($language->getLocalName(), $term)) {
-                        $matches[$language->getAlpha3()] = $language->getLocalName();
-                    }
-                };
-                header('Content-Type: text/json');
-                echo json_encode($matches);
-                // no break
-            default:
-                assert(false);
-        }
-    }
-
-
-    //
-    // Protected helper methods
-    //
-    /**
-     * Setup common template variables.
-     *
-     * @param $request Request
-     */
-    public function setupTemplate($request)
-    {
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_AUTHOR);
-        return parent::setupTemplate($request);
     }
 
     /**

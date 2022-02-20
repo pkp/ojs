@@ -1868,3 +1868,218 @@ msgstr "URL yang mengarak ke halaman beranda jurnal"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Nama Jurnal"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam OJS:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Konten Jurnal"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Silahkan pilih objek DOIs yang harus ditugaskan."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Silahkan pilih objek penerbitan yang akan memiliki penugasan Digital Object Identifiers (DOI):"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Terbitan"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "Artikel"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Galai"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Awalan DOI"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) dan dalam format 10.xxxx (contoh 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Awalan DOI wajib dan harus format 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "Akhiran DOI"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Gunakan pola seperti di bawah untuk menciptakan sufiks DOI. Gunakan %j untuk "
+"inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %Y untuk "
+"tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %f untuk ID file "
+"OJS, %p untuk nomor halaman dan %x untuk \"identifikasi kustom\"."
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "untuk terbitan"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "untuk artikel"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "untuk galai"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Gunakan pola default."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%"
+"g untuk galai."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Silahkan masukkan pola akhiran DOI untuk terbitan."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Silahkan masukkan pola akhiran DOI untuk artikel."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Silahkan masukkan pola akhiran DOI untuk galai."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Pemberian DOI kembali"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Anda yakin untuk menghapus semua DOI yang ada?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "terbitan"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "doi.editor.doiObjectTypeGalley"
+msgstr "galley"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Akhiran DOI yang dimasukkan telah digunakan oleh item penerbitan lain. Silahkan masukkan akhiran DOI unik untuk masing-masing item."
+
+msgid "doi.editor.preview.objects"
+msgstr "Butir"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Galai: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI belum diberikan untuk publikasi ini."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI untuk publikasi ini adalah {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI harus diawali dengan {$doiPrefix}."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "DOI {$pubId} telah diberikan."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId} tidak dapat diberikan karena berisi pola yang belum "
+"terselesaikan."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "doi.editor.assignDoi"
+msgstr "Berikan DOI {$pubId} untuk {$pubObjectType} ini"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Gunakan opsi berikut untuk menghapus DOI dari semua objek (artikel dan galai)"
+" yang saat ini dijadwalkan untuk terbitan ini."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Anda yakin ingin menghapus DOI dari objek terbitan yang ada?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Kosongkan Objek Terbitan DOI"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Anda yakin ingin menghapus DOI yang ada?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Kosongkan"
+
+msgid "doi.editor.assigned"
+msgstr "DOI diberikan untuk {$pubObjectType} ini."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Apa yang Anda lihat adalah pratinjau dari DOI. Pilih kotak centang dan "
+"simpan formulir untuk menetapkan DOI."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI tidak dapat diberikan karena berisi pola yang tidak terselesaikan."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Anda tidak dapat membuat DOI karena satu atau lebih bagian dari pola DOI "
+"kehilangan data. Anda mungkin perlu menetapkan publikasi ke terbitan "
+"tertentu, mengatur ID penerbit atau memasukkan nomor halaman."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Anda tidak dapat membuat DOI sampai publikasi ini ditetapkan ke dalam "
+"terbitan tertentu."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "Galai"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Memberikan"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI mesti diawali dengan {$prefix}."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Apakah Anda yakin ingin memberikan DOI ke semua objek yang diterbitkan yang "
+"belum memiliki DOI?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Berikan DOI untuk semua objek jurnal yang  belum diberikan DOI. Tindakan ini "
+"tidak dapat digunakan pada konfigurasi sufiks secara individual. Jika Anda "
+"telah memodifikasi konfigurasi DOI di atas, harap simpan perubahan Anda "
+"sebelum memulai tindakan ini. Pemberian DOI mungkin membutuhkan waktu lama, "
+"tergantung pada jumlah objek yang diterbitkan dalam jurnal."
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Berikan DOI"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Jika Anda mengubah konfigurasi DOI Anda, DOI yang telah diberikan tidak akan "
+"terdampak. Setelah konfigurasi DOI disimpan, gunakan tombol ini untuk "
+"menghapus semua DOI yang ada sehingga pengaturan baru akan diberlakukan pada "
+"objek yang ada."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Masukkan sufiks DOI secara individual untuk setiap butir terbitan. Anda akan "
+"menemukan field masukkan tambahan pada halaman meta-data masing-masing butir."
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Artikel"
+
+msgid "doi.description"
+msgstr ""
+"Plugin ini memampukan pemberian Digital Object Identifiers ke terbitan, "
+"artikel dan galai di OJS."

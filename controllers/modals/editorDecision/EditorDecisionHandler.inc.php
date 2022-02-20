@@ -63,8 +63,8 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
     /**
      * Start a new review round
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage
      */
@@ -72,7 +72,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
     {
         // FIXME: this can probably all be managed somewhere.
         $stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
-        $workflowStageDao = DAORegistry::getDAO('WorkflowStageDAO'); /* @var $workflowStageDao WorkflowStageDAO */
+        $workflowStageDao = DAORegistry::getDAO('WorkflowStageDAO'); /** @var WorkflowStageDAO $workflowStageDao */
         if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) {
             $redirectOp = $workflowStageDao::WORKFLOW_STAGE_PATH_EXTERNAL_REVIEW;
         } else {
@@ -95,7 +95,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
 
         $redirectOp = null;
 
-        $workflowStageDao = DAORegistry::getDAO('WorkflowStageDAO'); /* @var $workflowStageDao WorkflowStageDAO */
+        $workflowStageDao = DAORegistry::getDAO('WorkflowStageDAO'); /** @var WorkflowStageDAO $workflowStageDao */
         if ($decision == EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT) {
             $redirectOp = $workflowStageDao::WORKFLOW_STAGE_PATH_EDITING;
         } elseif ($decision == EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW) {
@@ -117,7 +117,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
     /**
      * Get editor decision notification type and level by decision.
      *
-     * @param $decision int
+     * @param int $decision
      *
      * @return int
      */
@@ -166,7 +166,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler
     /**
      * Get the fully-qualified import name for the given form name.
      *
-     * @param $formName Class name for the desired form.
+     * @param string $formName Class name for the desired form.
      *
      * @return string
      */

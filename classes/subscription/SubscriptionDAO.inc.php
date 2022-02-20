@@ -31,7 +31,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Retrieve subscription by subscription ID.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      *
      * @return Subscription
      */
@@ -40,7 +40,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Retrieve subscription journal ID by subscription ID.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      *
      * @return int|false
      */
@@ -74,7 +74,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Return number of subscriptions with given status.
      *
-     * @param status int
+     * @param int $status
      *
      * @return int
      */
@@ -83,35 +83,35 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Check if subscription exists for a given subscriptionId.
      *
-     * @param $subscriptionId int
+     * @param int $subscriptionId
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function subscriptionExists($subscriptionId);
 
     /**
      * Check if subscription exists given a user.
      *
-     * @param $subscriptionId int
-     * @param $userId int
+     * @param int $subscriptionId
+     * @param int $userId
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function subscriptionExistsByUser($subscriptionId, $userId);
 
     /**
      * Check if subscription exists given a user and journal.
      *
-     * @param $userId int
+     * @param int $userId
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function subscriptionExistsByUserForJournal($userId, $journalId);
 
     /**
      * Insert a subscription.
      *
-     * @param $subscription Subscription
+     * @param Subscription $subscription
      */
     abstract public function insertObject($subscription);
 
@@ -128,44 +128,44 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Update existing subscription.
      *
-     * @param $subscription Subscription
+     * @param Subscription $subscription
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function updateObject($subscription);
 
     /**
      * Delete subscription by subscription ID.
      *
-     * @param $subscriptionId int Subscription ID
-     * @param $journalId int Journal ID
+     * @param int $subscriptionId Subscription ID
+     * @param int $journalId Journal ID
      */
     abstract public function deleteById($subscriptionId, $journalId);
 
     /**
      * Delete subscriptions by journal ID.
      *
-     * @param $journalId int
+     * @param int $journalId
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function deleteByJournalId($journalId);
 
     /**
      * Delete subscriptions by user ID.
      *
-     * @param $userId int
+     * @param int $userId
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function deleteByUserId($userId);
 
     /**
      * Delete all subscriptions by subscription type ID.
      *
-     * @param $subscriptionTypeId int
+     * @param int $subscriptionTypeId
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function deleteByTypeId($subscriptionTypeId);
 
@@ -181,14 +181,14 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Retrieve subscriptions matching a particular journal ID.
      *
-     * @param $journalId int
-     * @param $status int
-     * @param $searchField int
-     * @param $searchMatch string "is" or "contains" or "startsWith"
-     * @param $search String to look in $searchField for
-     * @param $dateField int
-     * @param $dateFrom String date to search from
-     * @param $dateTo String date to search to
+     * @param int $journalId
+     * @param int $status
+     * @param int $searchField
+     * @param string $searchMatch "is" or "contains" or "startsWith"
+     * @param string $search to look in $searchField for
+     * @param int $dateField
+     * @param string $dateFrom date to search from
+     * @param string $dateTo date to search to
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching Subscriptions
@@ -198,8 +198,8 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Retrieve subscriptions matching a particular end date and journal ID.
      *
-     * @param $dateEnd string (YYYY-MM-DD)
-     * @param $journalId int
+     * @param string $dateEnd (YYYY-MM-DD)
+     * @param int $journalId
      * @param null|mixed $rangeInfo
      *
      * @return object DAOResultFactory containing matching Subscriptions
@@ -210,9 +210,9 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * Function to renew a subscription by dateEnd + duration of subscription type
      * if the subscription is expired, renew to current date + duration
      *
-     * @param $subscription Subscription
+     * @param Subscription $subscription
      *
-     * @return boolean
+     * @return bool
      */
     abstract public function renewSubscription($subscription);
 
@@ -361,7 +361,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Internal function to return a Subscription object from a row.
      *
-     * @param $row array
+     * @param array $row
      *
      * @return Subscription
      */
@@ -387,7 +387,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Internal function to insert a new Subscription.
      *
-     * @param $subscription Subscription
+     * @param Subscription $subscription
      *
      * @return int Subscription ID
      */
@@ -424,7 +424,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Internal function to update a Subscription.
      *
-     * @param $subscription Subscription
+     * @param Subscription $subscription
      */
     public function _updateObject($subscription)
     {
@@ -464,9 +464,9 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * Internal function to renew a subscription by dateEnd + duration of subscription type
      * if the subscription is expired, renew to current date + duration
      *
-     * @param $subscription Subscription
+     * @param Subscription $subscription
      *
-     * @return boolean
+     * @return bool
      */
     public function _renewSubscription($subscription)
     {
@@ -474,7 +474,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
             return;
         }
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /* @var $subscriptionTypeDao SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
         $duration = $subscriptionType->getDuration();

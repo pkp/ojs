@@ -1,11 +1,12 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Antonio <elguije.ag@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2021-10-12 12:06+0000\n"
-"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"PO-Revision-Date: 2021-12-16 21:18+0000\n"
+"Last-Translator: Antonio <elguije.ag@gmail.com>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "es_ES/>\n"
 "Language: es_ES\n"
@@ -1856,3 +1857,213 @@ msgstr "La moneda del importe del pago, por ejemplo USD"
 
 msgid "emailTemplate.variable.context.principalContactSignature"
 msgstr "La firma para los correos electrónicos automatizados de la revista"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Este correo se envía automáticamente a un nuevo usuario, cuando se registra "
+"en la revista, cuando la configuración requiere que se valide la dirección "
+"de correo electrónico."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validar correo (Registro en revista)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr "Este módulo permite la asignación del Identificador de Objeto Digital (Digital Object Identifier, DOI) a publicaciones, artículos y galeradas en OJS."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Configure el módulo de DOI para poder administrar y usar DOIs en OJS:"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Contenido de la revista"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Elija los objetos a los cuales los DOIs deben estar asignados."
+
+msgid "doi.manager.settings.explainDois"
+msgstr "Seleccione los objetos de publicación que tendrán Identificadores de Objetos Digitales (Digital Object Identifier, DOI) asignados:"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Números"
+
+msgid "doi.manager.settings.enableSubmissionDoi"
+msgstr "Artículos"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Galeradas"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Prefijo DOI"
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr "El prefijo DOI lo asignan las agencias registradoras (p. ej., <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) y sigue el formato 10.xxxx (p. ej., 10.1234):"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "El prefijo DOI es obligatorio y sigue el formato 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "Sufijo DOI"
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr "El sufijo DOI puede tomar cualquier forma, pero debe ser único entre todos los objetos de publicación con el mismo prefijo DOI asignado:"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Usa el patrón introducido abajo para generar sufijos DOI. Usa %j para "
+"iniciales de revista, %v para el número del volumen, %i para el número de la "
+"publicación, %Y para el año, %a para el ID del artículo de OJS, %g para la "
+"galerada de OJS, %f para el ID del archivo de OJS, %p para el número de "
+"página y %x para \"identificador personalizado\"."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Por ejemplo, vol%viss%ipp%p crearia un DOI del tipo 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "para números"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "para artículos"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "para galeradas"
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Usar patrones por defecto."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para galeradas."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Introduzca un sufijo DOI individual para cada elemento publicado. Encontrará un campo DOI adicional en la página de metadatos de cada elemento."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Introduzca el patrón del sufijo DOI para números."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Introduzca el patrón del sufijo DOI para artículos."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Introduzca el patrón del sufijo DOI para galeradas."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Reasignar DOIs"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "¿Seguro que quiere eliminar todos los DOI existentes?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Asignar DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Asignar DOI a los objetos publicados de la revista que no dispongan ya de "
+"uno. Esta acción no puede ser usada con la configuración de sufijo "
+"individual. Si ha modificado la configuración del DOI (más arriba), por "
+"favor, guarde los cambios antes de realizar esta acción. La asignación de "
+"DOI puede llevar mucho tiempo, dependiendo del número de objetos publicados "
+"en la revista."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"¿Seguro que quiere asignar DOI a todos los objetos publicados que no "
+"dispongan ya de uno?"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "número"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "artículo"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "galerada"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "El DOI no puede ser asignado porque falta el sufijo personalizado."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "El DOI no puede ser asignado porque contiene un patrón irresoluble."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Esto es una previsualización del DOI. Seleccione la casilla de verificación "
+"y guarde el formulario para asignar el DOI."
+
+msgid "doi.editor.assigned"
+msgstr "Se ha asignado un DOI a este {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "El sufijo DOI proporcionado ya está en uso por otro objeto publicado. Introduzca un sufijo DOI único para cada objeto."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Limpiar"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "¿Seguro que quiere eliminar el DOI existente?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Limpiar los DOI de los objetos de publicación"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+"¿Seguro que quiere eliminar los DOI existentes de los objetos del número?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "Use la siguiente opción para borrar los DOIs de todos los objetos (artículos y galeradas) actualmente planificados para esta publicación."
+
+msgid "doi.editor.assignDoi"
+msgstr "Asignar el DOI {$pubId} a este {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "El DOI no puede ser asignado porque falta el sufijo personalizado."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "El DOI {$pubId} no puede ser asignado porque contiene un patrón irresoluble."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr "El DOI {$pubId} ha sido asignado."
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "Si cambia su configuración, los DOIs que ya han sido asignados no se verán afectados. Si lo desea, cuando guarde la configuración del DOI, use este botón para borrar todos los DOIs existentes y que los nuevos ajustes también tengan efecto sobre los identificadores ya asignados."
+
+msgid "doi.editor.preview.objects"
+msgstr "Elemento"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Galerada: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "No se ha asignado ningún DOI a esta publicación."
+
+msgid "doi.editor.preview.publication"
+msgstr "El DOI de esta publicación será {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "El DOI debe empezar con {$doiPrefix}."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"No puede generar un DOI porque una o más partes del patrón DOI no se "
+"encuentran. Sería necesario asignar la publicación a un número, establecer "
+"un identificador editorial o añadir los números de página."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"No puede generar un DOI hasta que esta publicación sea asignada a un número."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Asignar"
+
+msgid "doi.editor.doi.description"
+msgstr "El DOI debe empezar con {$prefix}."
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Artículos"

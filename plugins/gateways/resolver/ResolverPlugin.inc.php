@@ -47,7 +47,7 @@ class ResolverPlugin extends GatewayPlugin
      * Get the name of this plugin. The name must be unique within
      * its category.
      *
-     * @return String name of plugin
+     * @return string name of plugin
      */
     public function getName()
     {
@@ -77,7 +77,7 @@ class ResolverPlugin extends GatewayPlugin
         switch ($scheme) {
             case 'doi':
                 $doi = implode('/', $args);
-                $article = Repo::submission()->getByPubId('doi', $doi, $request->getJournal());
+                $article = Repo::submission()->getByDoi($doi, $request->getJournal()->getId());
                 if ($article) {
                     $request->redirect(null, 'article', 'view', $article->getBestId());
                 }
@@ -156,7 +156,6 @@ class ResolverPlugin extends GatewayPlugin
         // Failure.
         header('HTTP/1.0 404 Not Found');
         $templateMgr = TemplateManager::getManager($request);
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
         $templateMgr->assign('message', 'plugins.gateways.resolver.errors.errorMessage');
         $templateMgr->display('frontend/pages/message.tpl');
         exit;
@@ -169,7 +168,7 @@ class ResolverPlugin extends GatewayPlugin
 
     public function exportHoldings()
     {
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journals = $journalDao->getAll(true);
         $request = Application::get()->getRequest();
         header('content-type: text/plain');

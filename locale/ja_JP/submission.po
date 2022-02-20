@@ -1,7 +1,8 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-22 01:40+0000\n"
-"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"PO-Revision-Date: 2021-12-10 18:54+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja_JP/>\n"
 "Language: ja_JP\n"
@@ -114,7 +115,7 @@ msgid "submission.submit.form.titleRequired"
 msgstr "投稿のタイトルを入力してください。"
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "各著者の姓名、名字、メールアドレスが必要です。"
+msgstr "各著者の名字、名前、メールアドレスが必要です。"
 
 msgid "submission.submit.form.authorRequired"
 msgstr "著者は最低1名必要です。"
@@ -221,10 +222,10 @@ msgid "grid.action.workflow"
 msgstr "投稿ワークフロー"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "新投稿"
+msgstr "新規投稿"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "へ新投稿"
+msgstr "新規投稿の開始："
 
 msgid "submission.title.tip"
 msgstr ""

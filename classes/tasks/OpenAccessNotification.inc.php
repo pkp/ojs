@@ -38,9 +38,9 @@ class OpenAccessNotification extends ScheduledTask
     /**
      * Send a notification for the given users, journal, and issue.
      *
-     * @param $users array
-     * @param $journal Journal
-     * @param $issue Issue
+     * @param array $users
+     * @param Journal $journal
+     * @param Issue $issue
      */
     public function sendNotification($users, $journal, $issue)
     {
@@ -56,7 +56,7 @@ class OpenAccessNotification extends ScheduledTask
             $paramArray = [
                 'journalName' => $journal->getLocalizedName(),
                 'journalUrl' => $request->url($journal->getPath()),
-                'editorialContactSignature' => $journal->getData('contactName') . "\n" . $journal->getLocalizedName(),
+                'signature' => $journal->getData('contactName') . "\n" . $journal->getLocalizedName(),
             ];
             $email->assignParams($paramArray);
 
@@ -86,8 +86,8 @@ class OpenAccessNotification extends ScheduledTask
     /**
      * Send notifications for the specified journal based on the specified date.
      *
-     * @param $journal Journal
-     * @param $curDate array
+     * @param Journal $journal
+     * @param array $curDate
      */
     public function sendNotifications($journal, $curDate)
     {
@@ -126,7 +126,7 @@ class OpenAccessNotification extends ScheduledTask
      */
     protected function executeActions()
     {
-        $journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journals = $journalDao->getAll(true);
 
         $todayDate = [

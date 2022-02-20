@@ -41,14 +41,14 @@ stages:
 jobs:
   include:
     - stage: test
-      env: TEST=pgsql
-      php: 7.4
-    - env: TEST=pgsql SAVE_BUILD=true
+      env: TEST=pgsql SAVE_BUILD=true
       php: 8.0
-    - env: TEST=mysql
-      php: 7.4
+    - env: TEST=pgsql
+      php: 8.1.0
     - env: TEST=mysql SAVE_BUILD=true
       php: 8.0
+    - env: TEST=mysql
+      php: 8.1.0
     # Path info disabled DISABLED pending a fix of pkp/pkp-lib#4414
     # - PHPVERSION=7.4 TEST=mysql DISABLE_PATH_INFO=1
     #   php: 7.2
@@ -71,12 +71,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -85,12 +84,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -99,12 +97,37 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - php tools/upgrade.php check
+        - php tools/upgrade.php upgrade
+
+    - env: DATASET_BRANCH=3.1.1-2 TEST=mysql
+      php: 8.0
+      script:
+        - source ./lib/pkp/tools/travis/prepare-tests.sh
+        - git clone https://github.com/pkp/datasets
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
+        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
+        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - php tools/upgrade.php check
+        - php tools/upgrade.php upgrade
+
+    - env: DATASET_BRANCH=3.1.0 TEST=mysql
+      php: 8.0
+      script:
+        - source ./lib/pkp/tools/travis/prepare-tests.sh
+        - git clone https://github.com/pkp/datasets
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
+        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
+        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -113,12 +136,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh --quiet < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -127,12 +149,11 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh --quiet < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -141,21 +162,35 @@ jobs:
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
-        - cat datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - ./lib/pkp/tools/travis/load-database.sh
+        - ./datasets/tools/dbclient.sh --quiet < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
+    - env: DATASET_BRANCH=3.1.0 TEST=pgsql
+      php: 8.0
+      script:
+        - source ./lib/pkp/tools/travis/prepare-tests.sh
+        - git clone https://github.com/pkp/datasets
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
+        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
+        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
+        - ./datasets/tools/dbclient.sh --quiet < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - php tools/upgrade.php check
+        - php tools/upgrade.php upgrade
 
 script:
   - source ./lib/pkp/tools/travis/prepare-tests.sh
   - ./lib/pkp/tools/travis/run-tests.sh
 
 after_failure:
-  - cat error.log
+  - tail -n 200 error.log
   - sudo apt-get install sharutils
   - tar cz cypress/screenshots | uuencode /dev/stdout
+
+after_success:
+  - tail -n 200 error.log

@@ -26,8 +26,8 @@ class PaypalPaymentForm extends Form
     public $_queuedPayment;
 
     /**
-     * @param $paypalPaymentPlugin PaypalPaymentPlugin
-     * @param $queuedPayment QueuedPayment
+     * @param PaypalPaymentPlugin $paypalPaymentPlugin
+     * @param QueuedPayment $queuedPayment
      */
     public function __construct($paypalPaymentPlugin, $queuedPayment)
     {

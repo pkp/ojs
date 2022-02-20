@@ -23,10 +23,10 @@ use PKP\security\Role;
 
 class AssignToIssueHandler extends Handler
 {
-    /** @var Submission **/
+    /** @var Submission */
     public $submission;
 
-    /** @var Publication **/
+    /** @var Publication */
     public $publication;
 
     /**
@@ -73,14 +73,13 @@ class AssignToIssueHandler extends Handler
     /**
      * Display a form to assign an issue to a publication
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return JSONMessage JSON object
      */
     public function assign($args, $request)
     {
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION, LOCALE_COMPONENT_APP_SUBMISSION, LOCALE_COMPONENT_PKP_EDITOR, LOCALE_COMPONENT_APP_EDITOR);
         $templateMgr = TemplateManager::getManager($request);
 
         $submissionContext = $request->getContext();

@@ -20,9 +20,9 @@ namespace APP\search;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\plugins\HookRegistry;
 
 use PKP\search\SubmissionSearch;
@@ -156,7 +156,7 @@ class ArticleSearch extends SubmissionSearch
     /**
      * Retrieve the search filters from the request.
      *
-     * @param $request Request
+     * @param Request $request
      *
      * @return array All search filters (empty and active)
      */
@@ -222,7 +222,7 @@ class ArticleSearch extends SubmissionSearch
     /**
      * Load the keywords array from a given search filter.
      *
-     * @param $searchFilters array Search filters as returned from
+     * @param array $searchFilters Search filters as returned from
      *  ArticleSearch::getSearchFilters()
      *
      * @return array Keyword array as required by SubmissionSearch::retrieveResults()
@@ -246,8 +246,8 @@ class ArticleSearch extends SubmissionSearch
     /**
      * See SubmissionSearch::formatResults()
      *
-     * @param $results array
-     * @param $user User optional (if availability information is desired)
+     * @param array $results
+     * @param User $user optional (if availability information is desired)
      *
      * @return array An array with the articles, published submissions,
      *  issue, journal, section and the issue availability.
@@ -255,7 +255,7 @@ class ArticleSearch extends SubmissionSearch
     public function formatResults($results, $user = null)
     {
         $contextDao = Application::getContextDAO();
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /* @var $sectionDao SectionDAO */
+        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
 
         $publishedSubmissionCache = [];
         $articleCache = [];
@@ -318,7 +318,7 @@ class ArticleSearch extends SubmissionSearch
     /**
      * Identify similarity terms for a given submission.
      *
-     * @param $submissionId integer
+     * @param int $submissionId
      *
      * @return null|array An array of string keywords or null
      * if some kind of error occurred.
@@ -336,8 +336,8 @@ class ArticleSearch extends SubmissionSearch
             $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
-                $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /* @var $submissionSubjectDao SubmissionKeywordDAO */
-                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [AppLocale::getLocale(), $article->getLocale(), AppLocale::getPrimaryLocale()]));
+                $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionSubjectDao */
+                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale(), $article->getLocale(), Locale::getPrimaryLocale()]));
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;
                 }
