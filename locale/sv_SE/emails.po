@@ -247,7 +247,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequest.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)"
+msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -334,30 +334,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och Granskning utan inloggning är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
-msgid "emails.reviewRequestAttached.subject"
-msgstr "Förfrågan om granskning av artikel"
-
-msgid "emails.reviewRequestAttached.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot; och detta är en förfrågan om du skulle vara villig att ta dig an den här viktiga uppgiften åt oss. Tidskriftens Riktlinjer för granskare bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Vänligen meddela mig genom att svara på det här meddelandet senast {$responseDueDate} om du har möjlighet att åta dig uppdraget eller inte.<br />\n"
-"<br />\n"
-"Tack för att du överväger granskningsuppdraget.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Riktlinjer för granskare:<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-msgid "emails.reviewRequestAttached.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när granskningsprocess med e-postbilaga är valt i > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST.)"
-
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Förfrågan om granskning av artikel"
@@ -389,7 +365,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
+msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning."
 
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "Förfrågan om granskning av artikel"
@@ -418,34 +394,6 @@ msgstr ""
 
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "Det här e-postmeddelandet från sektionsredaktören till en ranskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning och Granskning utan inloggning är aktiverat."
-
-msgid "emails.reviewRequestAttachedSubsequent.subject"
-msgstr "Förfrågan om granskning av artikel"
-
-msgid "emails.reviewRequestAttachedSubsequent.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Detta gäller manuskriptet &quot;{$submissionTitle},&quot;, som är under övervägande hos {$contextName}.<br />\n"
-"<br />\n"
-"Efter granskningen av en tidigare version av manuskriptet har författarna nu skickat in en reviderad version av sin artikel. Vi är glada om du skulle kunna hjälpa oss att utvärdera denna.<br />\n"
-"<br />\n"
-"Riktlinjer för granskare bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Vänligen meddela mig genom att svara på det här meddelandet senast {$responseDueDate} om du har möjlighet att åta dig uppdraget eller inte.<br />\n"
-"<br />\n"
-"Tack för att du överväger granskningsuppdraget.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Riktlinjer för granskare<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-msgid "emails.reviewRequestAttachedSubsequent.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information bidraget som en bifogad fil. Det här e-postmeddelandet används när Granskningsprocess med e-postbilaga är valt i > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST_SUBSEQUENT.)"
 
 msgid "emails.reviewCancel.subject"
 msgstr "Förfrågan om granskning återkallad"

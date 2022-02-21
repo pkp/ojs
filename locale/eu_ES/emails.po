@@ -237,7 +237,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean. (Bestela, ikus REVIEW_REQUEST_ATTACHED)."
+msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Artikulua ebaluatzeko eskaera"
@@ -298,7 +298,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequest.description"
-msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean. (Bestela, ikus REVIEW_REQUEST_ATTACHED)."
+msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean."
 
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "Artikulua ebaluatzeko eskaera"
@@ -327,30 +327,6 @@ msgstr ""
 
 msgid "emails.reviewRequestOneclick.description"
 msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean, eta klik bakarreko ebaluatzaile-sarbidea gaitzen denean."
-
-msgid "emails.reviewRequestAttached.subject"
-msgstr "Artikulua ebaluatzeko eskaera"
-
-msgid "emails.reviewRequestAttached.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Uste dut ebaluatzaile bikaina izango zinatekeela {$submissionTitle} eskuizkribuari buruzko iritzia emateko, eta guretzat lan hori egiteko aukerarik izango ote zenukeen galdetzera natorkizu. Aldizkari honetako Ebaluazioak egiteko gidalerroak behean dituzu, eta artikulua mezu honi erantsita bidaltzen dizut. Artikuluari buruzko ebaluazio-txostena eta zure gomendioa niri bidali beharko zenizkidake posta elektronikoz {$reviewDueDate} aurretik.<br />\n"
-"<br />\n"
-"Erantzun iezadazu posta elektronikoz, mesedez, {$responseDueDate} aurretik, ebaluazioa egiterik daukazun ala ez.<br />\n"
-"<br />\n"
-"Eskerrik asko gure eskaera kontuan hartzeagatik.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Ebaluazioa egiteko gidalerroak<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-msgid "emails.reviewRequestAttached.description"
-msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikulua ere bidaltzen da mezuari erantsita. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean \"Eranskina bidali Ebaluazio-prozesuan\" hautatzen denean. (Bestela, ikus REVIEW_REQUEST)."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Ebaluazio-eskaera bertan behera uztea"
@@ -994,34 +970,6 @@ msgstr ""
 
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean Berrikuspen Estandarraren Prozesua hautatzen denean, eta klik bateko berrikuslearentzako sarbidea gaituko da."
-
-msgid "emails.reviewRequestAttachedSubsequent.subject"
-msgstr "Artikulua berrikusteko eskakizuna"
-
-msgid "emails.reviewRequestAttachedSubsequent.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldizkariak aintzat hartu duena.<br />\n"
-"<br />\n"
-"Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />\n"
-"<br />\n"
-"Aldizkari honetarako Berrikuspen Gidalerroak behean erantsita daude, eta mezuak bidalketa bat du erantsia. Bidalketaren berrikuspena, zure gomendioarekin batera, bidali niri posta elektronikoz {$reviewDueDate} datarako.<br />\n"
-"<br />\n"
-"Mesedez, adierazi mezu baten bidez {$responseDueDate} datarako berrikuspena egiteko gai izango zaren eta egingo duzun.<br />\n"
-"<br />\n"
-"Mila esker eskari hau kontuan hartzeagatik.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"<br />\n"
-"Berrikusi gidalerroak<br />\n"
-"<br />\n"
-"{$reviewGuidelines}"
-
-msgid "emails.reviewRequestAttachedSubsequent.description"
-msgstr "Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean, Berrikuspen Prozesuaren Mezu Erantsia hautatzen denean. (Bestela, ikus BERRIKUSPENA_ESKAKIZUNA_ONDORENGOA.)"
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Bertsio errebisatua gora kargatu da"

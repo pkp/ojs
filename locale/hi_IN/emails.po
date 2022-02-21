@@ -366,7 +366,7 @@ msgstr ""
 "करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत "
 "तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया "
 "जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया "
-"का चयन किया जाता है. (Otherwise see REVIEW_REQUEST_ATTACHED.)"
+"का चयन किया जाता है."
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
@@ -474,37 +474,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब किसी समीक्षक की पुष्टि की नियत तिथि समाप्त हो जाती है (सेटिंग्स के अंतर्गत समीक्षा विकल्प देखें> वर्कफ़्लो> समीक्षा) और एक-क्लिक समीक्षक पहुंच सक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
 
-# (pofilter) endwhitespace: Different whitespace at the end
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$recipientName}, {$signature}, {$reviewDueDate}, {$submissionTitle}, {$reviewGuidelines}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.reviewRequestAttached.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे, &quot;{$submissionTitle},&quot; और मैं पूछ रहा हूं कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार कर रहे हैं। इस जर्नल के लिए समीक्षा दिशानिर्देश नीचे संलग्न हैं, और प्रस्तुत इस ईमेल से जुड़ा हुआ है। प्रस्तुत करने की आपकी समीक्षा, आपकी सिफारिश के साथ, मेरे द्वारा ईमेल की जानी चाहिए {$reviewDueDate}.<br />\n"
-"<br />\n"
-"कृपया {$ responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में सक्षम और इच्छुक हैं।<br />\n"
-"<br />\n"
-"इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Review Guidelines<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
-msgid "emails.reviewRequestAttached.description"
-msgstr "यह ईमेल अनुभाग संपादक द्वारा एक समीक्षक को यह अनुरोध करने के लिए भेजा जाता है कि वे सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करें। इसमें अनुलग्नक के रूप में सबमिशन शामिल है। इस संदेश का उपयोग तब किया जाता है जब ईमेल> अनुलग्नक समीक्षा प्रक्रिया प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में चुनी जाती है। (अन्यथा REVIEW_REQUEST देखें।)"
-
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
@@ -542,7 +511,7 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
-msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है। (अन्यथा REVIEW_REQUEST_ATTACHED_SUBSEQUENT देखें.)"
+msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है।"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
@@ -577,41 +546,6 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है, और एक-क्लिक समीक्षक पहुंच सक्षम होती है."
-
-# (pofilter) endwhitespace: Different whitespace at the end
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$recipientName}, {$ reviewDueDate}, {$signature}, {$submissionTitle}, {$contextName}, {$reviewGuidelines}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.reviewRequestAttachedSubsequent.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"यह पांडुलिपि का संबंध है &quot;{$submissionTitle},&quot; जो विचाराधीन है {$contextName}.<br />\n"
-"<br />\n"
-"पांडुलिपि के पिछले संस्करण की समीक्षा के बाद, लेखकों ने अब अपने पेपर का एक संशोधित संस्करण प्रस्तुत किया है। यदि आप इसका मूल्यांकन करने में मदद कर सकते हैं तो हम इसकी सराहना करेंगे.<br />\n"
-"<br />\n"
-"इस जर्नल के लिए समीक्षा दिशानिर्देश नीचे संलग्न हैं, और प्रस्तुत इस ईमेल से जुड़ा हुआ है। आपकी अनुशंसा के साथ, आपकी सबमिट की समीक्षा, {$ reviewDueDate} द्वारा मुझे ईमेल की जानी चाहिए.<br />\n"
-"<br />\n"
-"कृपया {$ responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में सक्षम और इच्छुक हैं.<br />\n"
-"<br />\n"
-"इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Review Guidelines<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
-msgid "emails.reviewRequestAttachedSubsequent.description"
-msgstr "यह ईमेल अनुभाग संपादक द्वारा एक समीक्षक को यह अनुरोध करने के लिए भेजा जाता है कि वे समीक्षा के दूसरे या अधिक दौर के लिए प्रस्तुत समीक्षा के कार्य को स्वीकार या अस्वीकार करें। इसमें अनुलग्नक के रूप में सबमिशन शामिल है। इस संदेश का उपयोग तब किया जाता है जब ईमेल> अनुलग्नक समीक्षा प्रक्रिया प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में चुनी जाती है। (अन्यथा REVIEW_REQUEST_SUBSEQUENT देखें।)"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.reviewCancel.subject"
@@ -1301,17 +1235,11 @@ msgstr "ऑटोमेटेड सबमिशन रिव्यू रिम
 msgid "emails.reviewRemindAuto.subject"
 msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
 
-msgid "emails.reviewRequestAttachedSubsequent.subject"
-msgstr "लेख समीक्षा का अनुरोध"
-
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "लेख समीक्षा का अनुरोध"
-
-msgid "emails.reviewRequestAttached.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"

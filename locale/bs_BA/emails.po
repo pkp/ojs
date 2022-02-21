@@ -282,28 +282,6 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti ili je prisiljen odbiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji  recenzent može pristupiti članku. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa, a recenzentu je omogućen pristup jednim klikom."
 
-msgid "emails.reviewRequestAttached.subject"
-msgstr "Zamolba za recenziju članka u privitku"
-
-msgid "emails.reviewRequestAttached.body"
-msgstr ""
-"Poštovana/i {$recipientName},<br />\n"
-"<br />\n"
-"s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka &quot;{$submissionTitle}&quot; prijavljenog u naš časopis. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.<br />\n"
-"U nastavku teksta poruke nalaze se upute za recenzente našeg časopisa, a tekst članka nalazi se u prilogu. Od vas očekujemo da nam vašu recenziju članka, zajedno s preporukom dostavite e-poštom zaključno s {$reviewDueDate}.<br />\n"
-"<br />\n"
-"No prije svega, molimo vas da nam u odgovoru na ovu poruku e-poštom zaključno s datumom {$responseDueDate} naznačite da li ste u mogućnosti i da li ste voljni izvršiti recenziju<br />\n"
-"<br />\n"
-"Srdačno,<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"Upute za recenzente<br />\n"
-"<br />\n"
-"{$reviewGuidelines}"
-
-msgid "emails.reviewRequestAttached.description"
-msgstr "Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti ili je prisiljen odbiti zadatak recenziranja članka. Zamolba sadrži i tekst članka u privitku. Ova poruka se koristi kada je u 2. koraku Postavljanja časopisa odabran recenzijski postupak u kojem se prilog šalje recenzentu kao privitak e-pošte. (Ako ne, pogledajte Zamolba za recenziju članka.)"
-
 msgid "emails.reviewCancel.subject"
 msgstr "Povlačenje zamolbe za recenziju"
 

@@ -328,7 +328,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequest.description"
-msgstr "Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi ali zavrne oipravljanje recenzije. Vsebuje informaciej o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, ko je v nastavitvah izbran standarden recnezijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija. (Drugače poglej REVIEW_REQUEST_ATTACHED.)"
+msgstr "Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi ali zavrne oipravljanje recenzije. Vsebuje informaciej o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, ko je v nastavitvah izbran standarden recnezijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -438,30 +438,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Ta email se pošlje avtomatsko, ko recenzent prekorači rok za potrditev opravljanja recenzije (več: Recenzijske nastavitve pri Nastavitve  > Potek dela > Recenzija) in je vključena opcija za recenzentski dostop z enim klikom. Opozorilo: administrator spletišča mora v nastavitveni datoteki spletišča nastaviti \"Scheduled tasks\"."
 
-msgid "emails.reviewRequestAttached.subject"
-msgstr "Prošnja za recenzijo prispevka"
-
-msgid "emails.reviewRequestAttached.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Verjamem, da bi lahko bili odličen recenzent rokopisa, &quot;{$submissionTitle},&quot; in vas prosim, če lahko naredite to nalogo, ki je pomembna za nas. Spodaj so navodila za recenzijo za našo revijo, v priponki pa je prispevek. Vašo recenzijo, skupaj s priporočilom, bi mi morali poslati po e-pošti do {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Prosim, če mi po e-pošti sporočite do {$responseDueDate}, če ste pripravljeni narediti to recenzijo ali ne.<br />\n"
-"<br />\n"
-"Hvala lepa za sprejetje prošnje.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Navodila za recenzijo<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-msgid "emails.reviewRequestAttached.description"
-msgstr "Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi ali zavrne oipravljanje recenzije. Vsebuje prispevek v priponki. Email se uporablja, ko je v nastavitvah izbran \"Email-attached\" recnezijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija). (v nasprotnem primeru glej REVIEW_REQUEST.)"
-
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Prošnja za recenzijo prispevka"
@@ -502,7 +478,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
-msgstr "Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. Vsebuje informacije o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, kadar je uporabljen standardni recenzisjki proces (Upravljanje > Nastavitve > Potek dela > Recenzija). (Drugače glej REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
+msgstr "Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. Vsebuje informacije o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, kadar je uporabljen standardni recenzisjki proces (Upravljanje > Nastavitve > Potek dela > Recenzija)."
 
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "Prošnja za recenzijo prispevka"
@@ -536,34 +512,6 @@ msgstr ""
 
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. Vsebuje informacije o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, kadar je uporabljen standardni recenzijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija) in je vključena opcija za recenzentski dostop z enim klikom."
-
-msgid "emails.reviewRequestAttachedSubsequent.subject"
-msgstr "Prošnja za recenzijo prispevka"
-
-msgid "emails.reviewRequestAttachedSubsequent.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Ta e-pošta se nanaša na rokopis &quot;{$submissionTitle},&quot; , ki je v obravnavi pri reviji {$contextName}.<br />\n"
-"<br />\n"
-"Po pregledu recenzije prejšnje verzije rokopisa, so avtorji oddali dopolnjeno verzijo prispevka. Prosimo vas, če nam lahko pomagate pri ponovni oceni prispevka.<br />\n"
-"<br />\n"
-"Spodaj so navodila za recenzijo za našo revijo, v priponki pa je prispevek. Vašo recenzija, skupaj s priporočilom, bi mi morali poslati po e-pošti do {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Prosim, če mi po e-pošti sporočite do {$responseDueDate}, če ste pripravljeni narediti to recenzijo ali ne.<br />\n"
-"<br />\n"
-"Hvala lepa za sprejetje prošnje.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"<br />\n"
-"Navodila za recenzijo<br />\n"
-"<br />\n"
-"{$reviewGuidelines}<br />\n"
-""
-
-msgid "emails.reviewRequestAttachedSubsequent.description"
-msgstr "Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. V priponki vsebuje prispevek. Email se uporablja, kadar je uporabljen \"Email-attached\" recenzijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija) (Drugače glej REVIEW_REQUEST_SUBSEQUENT.)"
 
 msgid "emails.reviewCancel.subject"
 msgstr "Prošnja za preklic recenzije"
