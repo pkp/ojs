@@ -81,9 +81,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Email ini dikirimkan ke pengguna baru untuk menyambut dan memberikan informasi nama pengguna dan sandi."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Validasi Akun Anda"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -95,6 +97,7 @@ msgstr ""
 "Terimakasih,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Email ini dikirim ke pengguna baru agar melakukan validasi email yang mereka gunakan untuk registrasi."
 
@@ -116,9 +119,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Email ini dikirimkan ke reviewer baru untuk menyambut dan memberikan informasi nama pengguna dan sandi."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Terbitan Baru"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Readers:<br />\n"
@@ -128,6 +133,7 @@ msgstr ""
 "Terimakasih atas perhatian Anda,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Email ini dikirimkan ke pembaca terdaftar melalui tautan \"Beritahu Pengguna\" di Beranda Pengguna Editor. Email ini memberitahu pembaca tentang terbitan baru dan mengundang pembaca untuk mengunjungi jurnal melalui URL yang diberikan."
 
@@ -173,32 +179,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Email ini mendorong penerima untuk berpartisipasi di gerakan LOCKSS dan memasukkan jurnal ini dalam arsip. Email ini memberikan informasi tentang gerakan LOCKSS dan cara untuk bergabung."
 
-msgid "emails.submissionAck.subject"
-msgstr "Terima kasih atas naskah yang Anda kirimkan ke {$contextName}"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Terimakasih telah menyerahkan naskah, &quot;{$submissionTitle}&quot; ke {$contextName}. Dengan sistem manajemenn jurnal online yang kami gunakan, Anda dapat memantau kemajuan proses editorial naskah Anda melalui:<br />\n"
-"<br />\n"
-"URL Naskah: {$submissionUrl}<br />\n"
-"Nama pengguna: {$recipientUsername}<br />\n"
-"<br />\n"
-"Jika ada pertanyaan, silakan hubungi kami. Terimakasih telah mempercayakan publikasi karya Anda di jurnal kami.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Email ini, jika diaktifkan, secara otomatis dikirimkan ke penulis ketika "
-"mereka mengirimkan naskahnya ke jurnal. Email ini berisi informasi tentang "
-"pemantauan naskah melalui proses editorial dan ucaan terima kasih atas "
-"naskah yang dikirimkan."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Konfirmasi pengiriman naskah"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Hello,<br />\n"
@@ -209,14 +194,17 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Email ini, jika diaktifkan, secara otomatis dikirimkan ke semua penulis yang "
 "tertera di dalam naskah yang bukan pengirim naskah langsung."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Anda telah ditugaskan sebagai editor naskah pada {$contextName}"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -228,6 +216,7 @@ msgstr ""
 "<br />\n"
 "Terimakasih."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Email ini memberitahu Editor Bagian bahwa Editor telah menugaskan mereka "
@@ -236,9 +225,11 @@ msgstr ""
 "Partisipan. Template ini sebaiknya digunakan ketika editor bagian diberi "
 "wewenang untuk merekam keputusan editorial."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Undangan Review"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -261,14 +252,17 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Email ini dikirimkan kepada Reviewer oleh Editor Bagian untuk meminta "
 "reviewer apakah menerima atau menolak permohonan review. "
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Pengingat Permintaan Review Artikel"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -292,6 +286,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Email ini dikirim otomatis saat tenggat konfirmasi terlewati (lihat Opsi Review di menu Pengaturan > Alur Kerja > Review) dan akses one-click reviewer dinonaktifkan. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
@@ -372,9 +367,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "Email ini dari Editor Bagian kepada Reviewer untuk meminta reviewer memberitahukan apakah menerima atau menolak permohonan review. Email disertai naskah terlampir bersama email. Pesan ini digunakan saat Proses Review Lampiran Email dipilih di Manajemen > Pengaturan > Alur Kerja > Review. (Selain itu lihat REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Permohonan untuk mereview naskah hasil revisi"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -399,6 +396,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Email ini dikirim oleh Editor Bagian kepada Reviewer untuk meminta reviewer "
@@ -504,21 +502,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Email ini dikirimkan Reviewer kepada Editor Bagian sebagai respon terhadap permohonan review untuk memberitahu Editor Bagian bahwa permohonan review ditolak."
 
-msgid "emails.reviewAck.subject"
-msgstr "Ucapan Terimakasih atas Review Artikel"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Terimakasih telah menyelesaikan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami sangat menghargai kontribusi Anda terhadap kualitas karya yang kami publikasikan."
-
-msgid "emails.reviewAck.description"
-msgstr "Email ini dikirimkan Editor Bagian untuk mengkonfirmasi penerimaan review dan mengucapkan terimakasih atas kontribusinya."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Pengingat untuk menyelesaikan tugas review"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -533,6 +521,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Email ini dikirim oleh Editor untuk mengingatkan reviewer bahwa batas "
@@ -557,9 +546,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Email ini dikirimkan Editor Bagian untuk mengingatkan reviewer bahwa review telah mencapai tenggat."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Pengingat untuk menyelesaikan review Anda"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -574,6 +565,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Email ini dikirimkan otomatis saat tenggat waktu review terlewati (lihat Opsi Review di menu Pengaturan > Alur Kerja > Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
@@ -599,9 +591,11 @@ msgstr ""
 "reviewer diaktifkan. Tugas terjadwal harus diaktifkan dan diatur (lihat file "
 "konfigurasi website)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Naskah Anda telah diterima pada {$contextName}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -610,112 +604,18 @@ msgstr ""
 "<br />\n"
 "Keputusan kami adalah: Naskah Diterima"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Email ini memberitahukan penulis bahwa naskahya telah diterima untuk "
 "diterbitkan."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Keputusan Editor"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Keputusan kami adalah: Dikirimkan ke Reviewer Eksternal<br />\n"
-"<br />\n"
-"URL Naskah: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan bahwa naskah dikirimkan ke reviewer eksternal."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Tahap berikutnya menerbitkan naskah Anda"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Proses editing naskah Anda, &quot;{$submissionTitle},&quot; telah selesai.  Kami sekarang mengirimkannya ke produksi.<br />\n"
-"<br />\n"
-"URL Naskah: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan bahwa naskah dikirim ke produksi."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr ""
-"Naskah Anda telah direview dan kami menyarankan untuk segera mengirimkan "
-"revisinya"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Keputusan kami adalah: Perlu Revisi"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Email dari Editor meminta revisi dari penulis selama proses review."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Naskah Anda telah direview - silakan revisi dan kirim ulang"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Keputusan kami adalah: Kirim Ulang untuk Review"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Email ini dari Editor atau Editor Bagian kepada Penulis memberitahukan bahwa Penulis perlu mengirim ulang naskahnya."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Naskah Anda ditolak"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Keputusan kami adalah: Naskah Ditolak"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Email ini memberitahukan kepada penulis bahwa naskahnya telah ditolak "
-"setelah proses review."
-
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"Naskah {$submissionId} siap masuk ke tahap copyedit untuk {$contextAcronym}"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Kami meminta Anda melakukan copyediting terhadap &quot;{$submissionTitle}&quot; untuk {$contextName} mengikuti langkah-langkah berikut.<br />\n"
-"1. Klik URL Naskah di bawah.<br />\n"
-"2. Buka semua file yang ada di file Draft dan lakukan copyediting, tambahkan Diskusi Copyediting sesuai kebutuhan.<br />\n"
-"3. Simpan file yang telah di-copyedit, dan unggah ke panel Sudah Copyedit.<br />\n"
-"4. Beritahu Editor bahwa semua file telah siap, dan bahwa proses Produksi dapat dimulai.<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"URL Naskah: {$submissionUrl}<br />\n"
-"Nama pengguna: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Email ini dari Editor Bagian ke Copyeditor naskah agar memulai proses copyediting.  Email ini memuat informasi terkait penyerahan naskah dan bagaimana mengaksesnya."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "Naskah {$submissionId} siap masuk ke tahap produksi pada {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -732,12 +632,14 @@ msgstr ""
 "<br />\n"
 "Jika Anda tidak dapat melakukan tugas ini saat ini atau mempunyai pertanyaan, silakan hubungi kami.  Terimakasih atas kontribusi Anda ke jurnal ini."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Email dari Editor Bagian kepada Layout Editor memberitahukan bahwa mereka telah ditugaskan untuk melakukan layout editing terhadap suatu naskah.  Email ini memuat informasi terkait penyerahan naskah dan bagaimana mengaksesnya."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Galley Selesai"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -748,6 +650,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Email Layout Editor kepada Editor Bagian memberitahukan bahwa proses layout "
@@ -1026,40 +929,7 @@ msgstr "Silakan tuliskan pesan Anda."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Pesan default (kosong) yang digunakan di Pengelola Pesan Pusat Notifikasi."
 
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Email ini dikirim kepada penulis jika naskah mereka ditolak oleh editor "
-"lebih awal, sebelum masuk ke tahap review"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"Kami telah sampai pada keputusan mengenai naskah Anda {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Keputusannya adalah: Menolak Naskah"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Naskah Anda ditolak"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Email ini berasal dari Editor atau Editor Bagian kepada Editor pengambilan "
-"keputusan atau Editor Bagian memberi tahu mereka tentang rekomendasi akhir "
-"mengenai naskah tersebut."
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"Rekomendasi berkaitan dengan  naskah {$contextName}, "
-"&quot;{$submissionTitle}&quot; adalah: {$recommendation}"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Rekomendasi Penyunting"
-
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Email ini dikirim oleh Editor Bagian kepada Mitra Bestari ketika review yang "
@@ -1067,6 +937,7 @@ msgstr ""
 "review sebelumnya telah dibatalkan oleh editor, si editor dapat mengaktifkan "
 "kembali tahap review sehingga reviewer dapat melanjutkan proses reviewnya."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1077,6 +948,7 @@ msgstr ""
 "<br />\n"
 "Jika ada pertanyaan, silakan hubungi saya."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Bersediakah Anda mereview lagi pada {$contextName}?"
 

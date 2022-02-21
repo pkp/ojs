@@ -17,11 +17,12 @@ import('lib.pkp.pages.workflow.PKPWorkflowHandler');
 
 use APP\core\Application;
 use APP\core\Services;
+use APP\decision\types\Accept;
+use APP\decision\types\SkipExternalReview;
 use APP\file\PublicFileManager;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
-use PKP\decision\types\Accept;
 use PKP\decision\types\BackToCopyediting;
 use PKP\decision\types\BackToReview;
 use PKP\decision\types\BackToSubmissionFromCopyediting;
@@ -35,7 +36,6 @@ use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
-use PKP\decision\types\SkipReview;
 use PKP\notification\PKPNotification;
 use PKP\plugins\HookRegistry;
 use PKP\security\Role;
@@ -212,7 +212,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         );
     }
 
-    /** @copydoc parent::getStageDecisionTypes() */
     protected function getStageDecisionTypes(int $stageId): array
     {
         $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
@@ -220,7 +219,7 @@ class WorkflowHandler extends PKPWorkflowHandler
             case WORKFLOW_STAGE_ID_SUBMISSION:
                 $decisionTypes = [
                     new SendExternalReview(),
-                    new SkipReview(),
+                    new SkipExternalReview(),
                 ];
                 if ($submission->getData('status') === Submission::STATUS_DECLINED) {
                     $decisionTypes[] = new RevertInitialDecline();
@@ -262,7 +261,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         return $decisionTypes;
     }
 
-    /** @copydoc parent::getStageRecommendationTypes() */
     protected function getStageRecommendationTypes(int $stageId): array
     {
         switch ($stageId) {

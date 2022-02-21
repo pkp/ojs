@@ -13,9 +13,10 @@
 
 namespace APP\decision;
 
+use APP\decision\types\Accept;
+use APP\decision\types\SkipExternalReview;
 use APP\notification\Notification;
 use Illuminate\Database\Eloquent\Collection;
-use PKP\decision\types\Accept;
 use PKP\decision\types\BackToCopyediting;
 use PKP\decision\types\BackToReview;
 use PKP\decision\types\BackToSubmissionFromCopyediting;
@@ -32,7 +33,6 @@ use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
-use PKP\decision\types\SkipReview;
 use PKP\plugins\HookRegistry;
 
 class Repository extends \PKP\decision\Repository
@@ -61,7 +61,7 @@ class Repository extends \PKP\decision\Repository
                 new RevertInitialDecline(),
                 new SendExternalReview(),
                 new SendToProduction(),
-                new SkipReview(),
+                new SkipExternalReview(),
             ]);
             HookRegistry::call('Decision::types', [$decisionTypes]);
             $this->decisionTypes = $decisionTypes;

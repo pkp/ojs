@@ -89,6 +89,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "Yêu cầu đánh giá bài báo"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Email này từ biên tập viên chuyên mục tới phản biện để một yêu cầu người "
@@ -107,9 +108,11 @@ msgstr ""
 "Email này được gửi bởi Biên tập viên chuyên mục tới một phản biện người đang "
 "trong quá trình đánh giá để thông báo cho họ rằng việc đánh giá đã bị hủy."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Khôi phục yêu cầu đánh giá bài báo"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Email này được gửi bởi Biên tập viên chuyên mục tới Người phản biện đang "
@@ -134,17 +137,11 @@ msgstr ""
 "hồi về yêu cầu đánh giá cũng để thông báo cho Biên tập viên chuyên mục biết "
 "rằng yêu cầu đánh giá đã bị từ chối."
 
-msgid "emails.reviewAck.subject"
-msgstr "Lời cảm ơn về việc đánh giá bài báo"
-
-msgid "emails.reviewAck.description"
-msgstr ""
-"Email này được gửi bởi một Biên tập viên chuyên mục để xác nhận đã nhận được "
-"bản đánh giá và cảm ơn người phản biện về những đóng góp của họ."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Nhắc nhở nộp đánh giá"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -165,6 +162,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Email này được gửi bởi một Biên tập viên chuyên mục để nhắc nhở người phản "
@@ -178,9 +176,11 @@ msgstr ""
 "Email này được gửi bởi một Biên tập viên chuyên mục để nhắc nhở người phản "
 "biên rằng rằng đánh giá của họ tới hạn nộp."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Nhắc nhở nộp đánh giá (tự động)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Yêu cầu đánh giá bài báo"
 
@@ -242,6 +242,7 @@ msgstr ""
 "trong Quản lý > Cài đặt > Quy trình làm việc > Phản biện và quyền truy cập "
 "của người đánh giá không cần đăng nhập được bật."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -274,6 +275,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -295,6 +297,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Email này được gửi tự động khi hết hạn đánh giá của người phản biện (xem Tùy "
@@ -312,97 +315,22 @@ msgstr ""
 "cập của người phản biện không cần đăng nhập được bật. Các tác vụ theo lịch "
 "trình phải được bật và định cấu hình (xem tệp cấu hình trang)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Email này từ Biên tập viên hoặc Biên tập viên chuyên mục cho Tác giả thông "
 "báo cho họ về quyết định \"chấp nhận cho đăng\" cuối cùng liên quan đến bài "
 "gửi của họ."
 
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"Kính gửi {$authors},<br />\n"
-"<br />\n"
-"Chúng tôi đã đạt được một quyết định liên quan đến việc bài gửi của bạn "
-"{$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Quyết định của chúng tôi là: Gửi lại để xem xét<br />\n"
-"<br />\n"
-"URL bài gửi: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập chuyên mục cho Tác giả thông báo "
-"cho họ rằng bài gửi của họ đang được gửi đi đánh giá bên ngoài."
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập chuyên mục cho Tác giả thông báo "
-"cho họ rằng bài gửi của họ đang được gửi đến giai đoạn chế bản."
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập viên chuyên mục cho Tác giả thông "
-"báo cho họ về quyết định \"yêu cầu sửa chữa\" cuối cùng liên quan đến bài "
-"gửi của họ."
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Quyết định của Ban biên tập"
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Quyết định của Ban biên tập"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Quyết định của Ban biên tập"
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Quyết định của Ban biên tập"
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Quyết định của Ban biên tập"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"Kính gửi {$authors},<br />\n"
-"<br />\n"
-"Chúng tôi đã đạt được một quyết định liên quan đến việc bài gửi của bạn "
-"{$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Quyết định của chúng tôi là: Gửi lại để xem xét"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập viên chuyên mục cho Tác giả thông "
-"báo cho họ về quyết định \"gửi lại\" cuối cùng liên quan đến bài gửi của họ."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Quyết định của Ban biên tập"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập viên chuyên mục cho Tác giả thông "
-"báo cho họ về quyết định \"từ chối\" cuối cùng liên quan đến bài gửi của họ."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Khuyến nghị của biên tập viên"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập viên chuyên mục tới các Biên tập "
-"viên hoặc Biên tập viên chuyên mục thông báo cho họ quyết định về khuyến "
-"nghị cuối cùng liên quan đến bài gửi."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Yêu cầu biên tập bản thảo"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Email này được gửi bởi một biên tập viên chuyên mục tới biên tập viên bản "
-"thảo rằng họ bắt đầu quá trình biên tập bản thảo. Nó cung cấp thông tin về "
-"bài gửi và làm thế nào để truy cập vào nó."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Yêu cầu bản in"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Email này từ Biên tập viên chuyên mục gửi tới Biên tập viên trình bày thông "
@@ -412,6 +340,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Hoàn thành bản in"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Email này từ Biên tập viên trình bày cho Biên tập viên chuyên mục thông báo "
@@ -478,6 +407,7 @@ msgstr ""
 "Cám ơn sự quan tâm của bạn với các ấn phẩm của chúng tôi,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -498,59 +428,7 @@ msgstr ""
 "Nếu bạn không thể thực hiện công việc này vào lúc này hoặc có bất kỳ câu hỏi "
 "nào, xin vui lòng liên hệ với tôi. Cảm ơn bạn đã đóng góp cho tạp chí này."
 
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"Kính gửi {$recipientName},<br />\n"
-"<br />\n"
-"Tôi muốn yêu cầu bạn thực hiện việc biên tập bản thảo "
-"&quot;{$submissionTitle}&quot; cho {$contextName} bằng cách làm theo các "
-"bước sau.<br />\n"
-"1. Nhấp vào URL gửi dưới đây.<br />\n"
-"2. Mở bất kỳ tập tin có sẵn ở mục Nháp và biên tập bản thảo đó, đồng thời có "
-"thể thảo luận bất kỳ điều gì nếu cần thiết trong mục thảo luận bản thảo.<br "
-"/>\n"
-"3. Lưu (các) tập tin đã biên tập bản thảo và tải lên.<br />\n"
-"4. Thông báo cho các biên tập viên mà tất cả các file đã được chuẩn bị, và "
-"rằng quá trình chế bản có thể bắt đầu.<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"URL bài gửi: {$submissionUrl}<br />\n"
-"Username: {$recipientUsername}"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"Kính gửi {$editors},<br />\n"
-"<br />\n"
-"The recommendation regarding the submission to {$contextName}, "
-"&quot;{$submissionTitle}&quot; is: {$recommendation}"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"Kính gửi {$authors},<br />\n"
-"<br />\n"
-"Chúng tôi đã đạt được một quyết định liên quan đến việc bài gửi của bạn "
-"{$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Quyết định của chúng tôi là: Từ chối"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"Kính gửi {$authors},<br />\n"
-"<br />\n"
-"Chúng tôi đã đạt được một quyết định liên quan đến việc bài gửi của bạn "
-"{$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Quyết định của chúng tôi là: Yêu cầu sửa chữa"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"Kính gửi {$authors},<br />\n"
-"<br />\n"
-"Quá trình biên tập bản thảo của bạn, &quot;{$submissionTitle},&quot; đã hoàn "
-"thành. Chúng tôi đã chuyển nó sang giai đoạn chế bản.<br />\n"
-"<br />\n"
-"URL bài gửi: {$submissionUrl}"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "Kính gửi {$authors},<br />\n"
@@ -593,14 +471,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.reviewAck.body"
-msgstr ""
-"Kính gửi {$recipientName},<br />\n"
-"<br />\n"
-"Cảm ơn bạn đã hoàn thành việc đánh giá bài gửi, "
-"&quot;{$submissionTitle},&quot; cho {$contextName}. Chúng tôi đánh giá cao "
-"sự đóng góp của bạn cho chất lượng ấn phẩm mà chúng tôi xuất bản."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Kính gửi biên tập viên,<br />\n"
@@ -621,6 +491,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -666,6 +537,7 @@ msgstr ""
 "<br />\n"
 "Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với chúng tôi."
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -963,24 +835,6 @@ msgstr ""
 "Thông báo (trống) mặc định được sử dụng trong Trình tạo danh sách thông báo "
 "của Trung tâm thông báo."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Quyết định của ban biên tập"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\tKính gửi {$authors},<br />\n"
-"<br />\n"
-"Chúng tôi đã đạt được một quyết định liên quan đến bài gửi của bạn "
-"{$contextName}, &quot;{$submissionTitle}&quot;.<br />\t\t\n"
-"<br />\n"
-"Quyết định của chúng tôi là: Từ chối"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Email này được gửi cho tác giả nếu biên tập viên từ chối gửi ban đầu, trước "
-"giai đoạn xem xét"
-
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Hoạt động cho {$month}, {$year}"
 
@@ -1014,6 +868,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "Yêu cầu đánh giá bài viết"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Email này được gửi tự động khi hết hạn xác nhận của người phản biện (xem Tùy "
@@ -1021,6 +876,7 @@ msgstr ""
 "cập của người phản biện không cần đăng nhập bị vô hiệu hóa. Các tác vụ theo "
 "lịch trình phải được bật và định cấu hình (xem tập tin cấu hình trang)."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -1053,9 +909,11 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Yều cầu đánh giá bài báo"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Email này từ Biên tập viên chuyên mục tới Người phản biện yêu cầu họ chấp "
@@ -1065,6 +923,7 @@ msgstr ""
 "chuẩn được chọn trong Quản lý> Cài đặt> Quy trình làm việc> Phản biện. (Nếu "
 "không, hãy xem REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -1095,15 +954,18 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Yêu cầu đánh giá bài báo"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Email này thông báo cho Biên tập viên chuyên mục rằng Biên tập viên đã giao "
 "cho họ nhiệm vụ giám sát việc gửi qua quá trình bình duyệt. Nó cung cấp "
 "thông tin về việc nộp và cách truy cập trang tạp chí."
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -1117,14 +979,17 @@ msgstr ""
 "<br />\n"
 "Trân trọng."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Phân công biên tập"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Email này, khi được bật, sẽ tự động được gửi đến các tác giả khác không phải "
 "là người dùng trong OJS được chỉ định trong quá trình gửi."
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Xin chào,<br />\n"
@@ -1137,33 +1002,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "Cảm ơn đã gửi bài"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Email này, khi được bật, sẽ tự động được gửi cho tác giả khi người đó hoàn "
-"thành quá trình gửi bản thảo cho tạp chí. Nó cung cấp thông tin về việc theo "
-"dõi bài gửi qua quy trình và cảm ơn tác giả đã gửi."
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"Kính gửi {$recipientName},<br />\n"
-"<br />\n"
-"Cảm ơn bạn đã gửi bản thảo, &quot;{$submissionTitle}&quot; tới {$contextName}"
-". Với hệ thống quản lý tạp chí trực tuyến mà chúng tôi đang sử dụng, bạn sẽ "
-"có thể theo dõi tiến trình của nó thông qua quy trình biên tập bằng cách "
-"đăng nhập vào trang web của tạp chí:<br />\n"
-"<br />\n"
-"URL của bài gửi: {$submissionUrl}<br />\n"
-"Username: {$recipientUsername}<br />\n"
-"<br />\n"
-"Nếu bạn có bất kỳ câu hỏi, xin vui lòng liên hệ với chúng tôi. Cảm ơn bạn đã "
-"coi tạp chí này là công bố nghiên cứu của bạn.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.subject"
 msgstr "Cảm ơn đã gửi bài"
 
 msgid "emails.lockssNewArchive.description"
@@ -1233,12 +1073,14 @@ msgstr ""
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Yêu cầu lưu trữ cho {$contextName}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "Email này được gửi đến những người đọc đã đăng ký thông qua liên kết \"Thông "
 "báo cho người dùng\" trong Trang chủ của người dùng. Nó thông báo cho độc "
 "giả về một số mới và mời họ ghé thăm tạp chí tại một URL được cung cấp."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Kính gửi quý độc giả:<br />\n"
@@ -1251,6 +1093,7 @@ msgstr ""
 "với các ấn phẩm của chúng tôi,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Số mới được xuất bản"
 
@@ -1282,11 +1125,13 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Đăng ký làm Người phản biện cho {$contextName}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Email này được gửi đến một người dùng mới đăng ký để xác thực tài khoản "
 "email của họ."
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -1300,6 +1145,7 @@ msgstr ""
 "Trân trọng,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Xác thực tài khoản của bạn"
 

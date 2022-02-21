@@ -79,9 +79,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Deze e-mail wordt verstuurd naar alle nieuw geregistreerde gebruikers om ze welkom te heten bij het tijdschrift en om ze te voorzien van een kopie van hun gebruikersnaam en wachtwoord."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Valideer uw account"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -93,6 +95,7 @@ msgstr ""
 "Dank u,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Deze e-mail wordt naar alle nieuwe gebruikers gestuurd om ze welkom te heten bij het systeem en om ze te voorzien van een kopie van hun gebruikersnaam en wachtwoord."
 
@@ -114,9 +117,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Deze e-mail wordt naar iedere nieuwe reviewer gestuurd om ze welkom te heten bij het systeem en ze van een kopie van hun gebruikersnaam en wachtwoord te voorzien."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nieuw nummer gepubliceerd"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Lezers:<br />\n"
@@ -126,6 +131,7 @@ msgstr ""
 "Dank voor uw interesse in ons werk,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Deze e-mail wordt verstuurd naar de geregistreerde gebruikers via de \"Bericht gebruikers\" link op de gebruikerspagina van de redacteur. Het stelt lezers op de hoogte van het verschijnen van een nieuw nummer en nodigt ze uit om het tijdschrift te bezoeken via de bijgevoegde URL."
 
@@ -171,32 +177,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Deze e-mail moedigt de ontvanger aan om deel te nemen in het LOCKSS initiatief en dit tijdschrift in het archief op te nemen. Informatie over het LOCKSS initiatief en manieren om daarbij betrokken te raken worden meegeleverd."
 
-msgid "emails.submissionAck.subject"
-msgstr "Bevestiging van inzending"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Dank u voor het inzenden van het manuscript &quot;{$submissionTitle}&quot; voor {$contextName}. Het online tijdschriftbeheersysteem dat wij gebruiken geeft u de mogelijkheid om de voortgang van het redactieproces te volgen door in te loggen op de website van het tijdschrift:<br />\n"
-"<br />\n"
-"Manuscript URL: {$submissionUrl}<br />\n"
-"Gebruikersnaam: {$recipientUsername}<br />\n"
-"<br />\n"
-"Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van dit tijdschrift als podium voor u werk.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar een auteur "
-"als die de inzendprocedure van een manuscript bij het tijdschrift voltooit. "
-"Het verstrekt informatie over het volgen van de inzending tijdens de "
-"procedure en de auteur wordt bedankt voor de inzending."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Bevestiging van inzending"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Beste,<br />\n"
@@ -207,12 +192,15 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar de andere auteurs die niet geregistreerd zijn als gebruikers van OJS.."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Redactietaak"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -224,15 +212,18 @@ msgstr ""
 "<br />\n"
 "Dank u."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Deze e-mail bericht een sectieredacteur dat de redacteur een inzending heeft "
 "toegewezen om door het redactieproces te leiden. Het geeft informatie over "
 "de inzending en hoe de tijdschrift-website te benaderen."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Artikel review verzoek"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -257,12 +248,15 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. Er wordt informatie meegestuurd over de inzending zoals de titel en de samenvatting, de datum waarop de review gereed moet zijn en instructies voor het benaderen van de inzending. Dit bericht word gebruikt wanneer het standaard reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Verzoek om artikelbeoordeling"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -286,6 +280,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Deze e-mail wordt automatisch verzonden wanneer de datum voor de bevestiging van een reviewopdracht verstreken is (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand)."
 
@@ -373,9 +368,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "Deze e-mail van de sectieredacteur aan een reviewer vraagt aan de reviewer een review te accepteren of te weigeren. De inzending wordt als bijlage meegestuurd. Dit bericht word gebruikt wanneer het e-mail attachment reviewproces is geselecteerd in stap 2 van het inrichten van het tijdschrift (zie verder REVIEW_REQUEST_ATTACHED)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Verzoek tot reviewen van een artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -402,6 +399,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "Deze e-mail van de sectieredacteur aan de reviewer vraagt de reviewer een inzending voor een tweede of latere ronde te reviewen. Het bevat informatie over de inzending zoals titel en samenvatting, de uiterste datum voor de review en de gegevens om de inzending te benaderen. Dit bericht wordt gebruikt bij het standaard review proces, zoals gekozen in instellen, stap 2 (zie verder REVIEW_REQUEST_ATTACHED_SUBSEQUENT)"
 
@@ -509,21 +507,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Deze e-mail wordt door de reviewer verstuurd naar de sectieredacteur als reactie op een reviewverzoek om te laten weten dat het verzoek wordt afgewezen."
 
-msgid "emails.reviewAck.subject"
-msgstr "Artikel review bevestiging"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Dank u voor uw review van de inzending &quot;{$submissionTitle}&quot; voor {$contextName}. We waarderen uw bijdrage aan de kwaliteit van het werk dat wij publiceren."
-
-msgid "emails.reviewAck.description"
-msgstr "Deze e-mail wordt door de sectieredacteur verstuurd om de ontvangst van een review te bevestigen en de reviewer te bedanken voor zijn bijdrage."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Review herinnering"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -538,6 +526,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te "
@@ -563,9 +552,11 @@ msgstr ""
 "Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te "
 "herinneren dat de afgesproken reviewperiode verstreken is."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Geautomatiseerde review herinnering"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -580,6 +571,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Deze e-mail wordt automatisch verstuurd als de afgesproken reviewperiode verstrijkt (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand)."
 
@@ -605,9 +597,11 @@ msgstr ""
 "klik toegang voor de reviewer is ingeschakeld. Geplande taken moeten worden "
 "ingeschakeld en geconfigureerd (zie het siteconfiguratiebestand)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Redacteursbeslissing"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -616,122 +610,15 @@ msgstr ""
 "<br />\n"
 "Onze beslissing is: Accepteer inzending"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt aanvaard."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Redacteursbeslissing"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"We hebben een beslissing genomen over uw inzending voor {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Onze belissing is: Doorsturen aan reviewer<br />\n"
-"<br />\n"
-"URL inzending: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt doorgestuurd aan een reviewer."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Redacteursbeslissing"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"De redactie van uw inzending, &quot;{$submissionTitle},&quot; is afgerond. We geven uw inzending nu in productie.<br />\n"
-"<br />\n"
-"URL inzending: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending in productie wordt gegeven."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Redacteursbeslissing"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Onze beslissing is: Revisies benodigd"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat bijkomende revisies worden verwacht voor een inzending."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Redacteursbeslissing"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"We hebben een beslissing genomen over uw inzending voorv{$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Onze beslissing is: Opnieuw indienen voor review"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending opnieuw moet worden ingediend voor review."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Redacteursbeslissing"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Onze beslissing is: Weiger inzending"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt geweigerd."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Redacteursaanbeveling"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"De aanbeveling voor de inzending voor {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr "Deze e-mail van de aanbevelende redacteur of sectieredacteur brengt de beslissende redacteurs of sectieredacteurs op de hoogte van een aanbeveling over de inzending."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Tekstredactie verzoek"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Ik wil u vragen om de teksredactie uit te voeren voor artikel &quot;{$submissionTitle}&quot; voor {$contextName} door deze stappen te volgen.<br />\n"
-"1. Klik op de inzendings-URL hieronder.<br />\n"
-"2. Log in bij het tijdschrift en klik op het bestand dat verschijnt bij Stap 1.<br />\n"
-"3. Raadpleeg de tekstredactie-instructies die op de webpagina staan.<br />\n"
-"4. Open het gedownloade bestand en doe de tekstredactie. Voeg auteursvragen toe waar nodig.<br />\n"
-"5. Bewaar het bewerkte bestand en laad het bij stap 1 van Tekstredactie.<br />\n"
-"6. Stuur de GEREED e-mail naar de redacteur.<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"URL inzending: {$submissionUrl}<br />\n"
-"Gerbruikersnaam: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Deze e-mail wordt door de sectieredacteur naar de tekstredacteur van een "
-"inzending gestuurd om te vragen het redactieproces te starten. Het bevat "
-"informatie over de inzending en hoe die te benaderen."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Verzoek aanmaken proeven"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -747,6 +634,7 @@ msgstr ""
 "<br />\n"
 "Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Deze e-mail van de sectieredacteur aan de opmaakredacteur meldt de "
@@ -756,6 +644,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Proeven gereed"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -766,6 +655,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Deze e-mail van de opmaakredacteur aan de sectieredacteur bericht dat het opmaakproces is voltooid."
 
@@ -1047,36 +937,21 @@ msgstr "Voeg hier uw boodschap in."
 msgid "emails.notificationCenterDefault.description"
 msgstr "De standaard (lege) berichttekst die wordt gebruikt in het Notification Center Message Listbuilder."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Redacteursbeslissing"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"We hebben een beslissing genomen over uw inzending voor {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Onze beslissing is: Weiger inzending"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Deze e-mail wordt aan een auteur verzonden wanneer de redacteur de inzending "
-"weigert nog voor die aan een reviewer werd bezorgd"
-
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redactionele activiteit voor {$month}, {$year}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Herindienen beoordelingsverzoek"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Deze e-mail wordt door de sectieredacteur naar een reviewer gestuurd die "
 "bezig is met de beoordeling van een inzending teneinde de persoon in kwestie "
 "te laten weten dat de annulering van de beoordeling is teruggedraaid."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"

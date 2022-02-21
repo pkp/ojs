@@ -82,9 +82,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً للترحيب بهم في نظام موقع المجلة، ولتزويدهم باسم الدخول وكلمة المرور الخاصين بالموقع."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "تأكيد صحة حسابك"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -96,6 +98,7 @@ msgstr ""
 "شكراً لك.<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً لتأكيد صحة عناوينهم البريدية."
 
@@ -117,9 +120,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "هذه الرسالة معنونة إلى المحكمين المسجلين حديثاً للترحيب بهم في موقعنا ولتزويدهم بأسماء الدخول وكلمات المرور الخاصين بهم."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "صدر عدد جديد من المجلة"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "القراء الأعزة:<br />\n"
@@ -129,6 +134,7 @@ msgstr ""
 "نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "هذه الرسالة معنونة إلى القراء المسجلين عبر خدمة \"إشعار القراء\" الموجود رابطها في صفحة المحرر الرئيسية. هذه الخدمة تُعلم القراء بصدور العدد الجديد من المجلة وتدعوهم إلى زيارة موقعها على الرابط المرسل لهم."
 
@@ -174,31 +180,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "هذه الرسالة تشجع متلقيها على المبادرة إلى اعتماد العمل بنظام LOCKSS وتضمين هذه المجلة في الأرشيف الخاص به. إنها تتضمن معلومات عن تمهيد نظام LOCKSS وكيفية المشاركة فيه."
 
-msgid "emails.submissionAck.subject"
-msgstr "شكرًا لتقديم طلبك إلى {$contextName}"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"شكراً على تقديمك المؤلَّف &quot;{$submissionTitle}&quot; إلى {$contextName}. عبر نظام إدارة المجلة هذا الذي نستعمله، سيكون بإمكانك متابعة مراحل معالجة طلبك عبر ولوجك إلى موقع المجلة باستعمال الرابط:<br />\n"
-"<br />\n"
-"رابط المؤلَّف: {$submissionUrl}<br />\n"
-"اسم الدخول: {$recipientUsername}<br />\n"
-"<br />\n"
-"إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً للمؤلف عند تقديم طلبه إلى "
-"المجلة. يتعرف المؤلف من خلالها على إمكانية متابعة طلبه عبر موقع المجلة كما "
-"يشكره على تقديم طلبه لها."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "تأكيد طلب التقديم"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "مرحباً، <br />\n"
@@ -209,14 +195,17 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين المذكورين "
 "في طلب التقديم من غير من قام بتسجيل الطلب بنفسه."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "لقد تم تعيينك كمحرر لطلب التقديم الموجه إلى {$contextName}"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -228,6 +217,7 @@ msgstr ""
 "<br />\n"
 "شكراً لك."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "هذه الرسالة تبلغ أحد المحررين في قسم ما من المجلة بإحالة مهمة تحرير أحد "
@@ -235,9 +225,11 @@ msgstr ""
 "عند تعيين محرر ما إلى طلب التقديم من منطقة المساهمين. ينبغي استعمال هذا "
 "القالب عندما تكون لمحرر القسم إمكانية تسجيل قرارات التحرير."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "دعوة لتحكيم مؤلَّف"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -260,14 +252,17 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة "
 "التحكيم أو رفضها. "
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "تذكير إلتماس تحكيم مؤلَّف"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -291,6 +286,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "هذه الرسالة يرسلها النظام آلياً عندما يتباطأ أحد المحكمين عن تقديم إجابة في الموعد المقرر (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) عندما تكون ميزة وصول المحكم بنقرة واحدة معطلة. يجب أن تكون المهام المجدولة ممكنة ومعدة (إنظر ملف إعدادات الموقع)."
 
@@ -371,9 +367,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة التحكيم أو رفضها. وهي مرفقة بطلب النشر بشكل ملف. يتم استعمال هذه الرسالة عندما تكون عمية التحكيم مبنية على أساس التراسل عبر البريد الالكتروني خلال تهيئة إعدادات المجلة. (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم). (بخلاف ذلك، أنظر REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "إلتماس تحكيم مؤلَّف منقح"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -398,6 +396,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "هذه الرسالة يعنونها المحرر إلى المحكم ليلتمس منه قبول أو رفض مهمة تحكيم "
@@ -474,9 +473,11 @@ msgstr ""
 msgid "emails.reviewCancel.description"
 msgstr "هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بانتفاء الحاجة إلى تقييمه."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "هل لا زال بإمكانك تحكيم أي شيء لصالح {$contextName}؟"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -485,6 +486,7 @@ msgstr ""
 "<br />\n"
 "إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي."
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "هذه الرسالة يعنونها المحرر إلى المحكم عند إعادة النظر في عملية تحكيم ملغاة. "
@@ -519,21 +521,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يعتذر فيها عن قبول التحكيم للمؤلَّف المذكور."
 
-msgid "emails.reviewAck.subject"
-msgstr "إشعار تحكيم المؤلَّف"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"نشكر إكمالك لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. إننا نقدر لك مشاركتك في ترصين الأعمال التي تنشرها مجلتنا."
-
-msgid "emails.reviewAck.description"
-msgstr "هذه الرسالة يصدرها محرر القسم لتأكيد استلامه لتقييمات وملاحظات المحكم الكاملة، وليشكره على مساهمته في عملية التحكيم."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "تذكير يلتمس إكمال التحكيم"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -548,6 +540,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "هذه الرسالة يُذكر بها المحرر محكماً قد استوجب إكمال تقييمه لمؤلَّف ما. هذه "
@@ -571,9 +564,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "هذه الرسالة يذكر بها محرر القسم محكماً باستيجاب مهلة تقييمه لمؤلَّف ما."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "تذكير يلتمس إكمال تحكيمك"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -588,6 +583,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "هذه الرسالة يولدها الموقع آلياً عندما لا يُكمل المحكم مهمة التحكيم حتى موعد "
@@ -611,9 +607,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "هذه الرسالة يولدها الموقع آلياً عندما يتم تجاوز موعد تسليم التحكيم من قبل أحد المحكمين (أنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) وعندما يكون خيار الوصول المباشر للمحكم مفعل. المهام المجدول يجب أن تكون مفعلة ومهيئة (أنظر ملف تهيئة الموقع."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "لقد تم قبول طلب تقديمك في {$contextName}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -622,132 +620,17 @@ msgstr ""
 "<br />\n"
 "قرارنا هو: قبول طلب النشر"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "هذه الرسالة تُشعر المؤلف بأن طلب تقديمه مقبول للنشر."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "قرار هيئة التحرير"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"قرارنا هو: إرسال طلبك إلى التحكيم<br />\n"
-"<br />\n"
-"رابط الطلب: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بقرار هيئة التحرير بأن طلبه قد أرسل إلى محكم خارجي."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "الخطوات اللاحقة لنشر طلب تقديمك"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"إن متعلقات تحرير مؤلَّفك الموسوم &quot;{$submissionTitle},&quot; قد اكتملت. نحن الآن نرسله إلى مرحلة الإنتاج.<br />\n"
-"<br />\n"
-"رابط الطلب: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "هذه الرسالة يعنونها مدير التحرير أو محرر القسم إلى المؤلف لإبلاغه بأن عمله قد تم إرساله إلى مرحلة الإنتاج."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "لقد تم تحكيم طلب تقديمك ونحن نشجعك على تقديم التنقيحات"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"قرارنا هو: بعض التنقيحات مطلوبة"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى المؤلف ليلتمس منه القيام بالتنقيحات خلال "
-"مرحلة التحكيم المناظر."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "لقد تم تحكيم طلب تقديمك - يرجى إجراء التنقيحات ثم إعادة التقديم"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"قرارنا هو: إعادة التقديم مجدداً"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"هذه الرسالة يعنونها محرر القسم إلى طالب التقديم يعلمه فيها بقرار \"التنقيح "
-"ثم إعادة التقديم\" لطلبه."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "لقد تم رفض طلب تقديمك"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"قد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"قرارنا هو: الرفض"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "هذه الرسالة تُشعر المؤلف برفض طلب تقديمه بعد إجراء التحكيم عليه."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "توصيات المحرر"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"<p>أعزائي {$editors}،</p><p> بعد الأخذ بنظر الاعتبار ما أفاده المحكمون، أود "
-"إعطاء التوصية الآتية بشأن طلب التقديم {$submissionTitle}.</p><p> توصيتي هي::<"
-"br />{$recommendation}.</p><p>يرجى زيارة <a href=\"{$submissionUrl}\">مجريات "
-"تحرير</a> طلب التقديم للتصرف وفقًا لهذه التوصية.</p><p>لطفًا، لا تترددوا في "
-"التواصل معي بشأن أي استفسارات.</p><p>أطيب التحايا،</p><p>{$senderName}</p>"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"هذه الرسالة الآلية تُشعر المحرر الأقدم أو محرر القسم بوجود توصية بشأن طلب "
-"تقديم معين. هذا القالب يُستعمل عندما تقتصر سماحية المحرر على تقديم توصية "
-"بقرار التحرير ويتطلب الأمر من محرر مخول أن يقوم بتسجيل تلك القرارات. يمكن "
-"تحديد هذا الخيار عند تعيين المساهمين لطلب تقديم معين."
-
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"طلب التقديم {$submissionId} جاهز لمرحلة التدقيق من أجل {$contextAcronym}"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"أود مطالبتك بتوفير نسخة مدققة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; والمرسل إلى {$contextName} عبر اتباع الخطوات الآتية:<br />\n"
-"1. أنقر على رابط طلب النشر أدناه.<br />\n"
-"2. إفتح أي ملفات متوافرة ضمن الملفات المسودة وأجر متطلبات التدقيق مضيفاً أي قرارات أو ملاحظات تتعلق بالتدقيق حسب الحاجة.<br />\n"
-"3. إحفظ الملفات المدققة، ثم إرفعها إلى لوحة المدققات.<br />\n"
-"4. أعلم المحرر بأن جميع الملفات صارت جاهزة، وأن بالإمكان الشروع بعملية الإنتاج.<br />\n"
-"<br />\n"
-"رابط {$contextName}: {$contextUrl}<br />\n"
-"رابط الطلب: {$submissionUrl}<br />\n"
-"اسم الدخول: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى مدقق طلب التقديم مطالباً إياه بالشروع في "
-"عملية معالجة نسخة المؤلَّف قيد التدقيق، وهي توفر له معلومات عن طلب التقديم "
-"وكيفية الوصول إليه."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "طلب التقديم {$submissionId} صار جاهزًا لمرحلة الإنتاج من أجل "
 "{$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -764,6 +647,7 @@ msgstr ""
 "<br />\n"
 "لو تعذر عليك تولي هذه المهمة حالياً أو كان لديك أية أسئلة، لطفاً لا تترد في مراسلتي. نشكر لك مساهمتك في هذه المجلة."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "هذه الرسالة يعنونها المحرر إلى المصمم الطباعي معلماً إياه بتعيينه لمهمة "
@@ -773,6 +657,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "التصميم الطباعي إكتمل"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -783,6 +668,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "هذه الرسالة يعنونها المصمم الطباعي إلى المحرر يعلمه فيها بأن الألواح "
@@ -1060,23 +946,6 @@ msgstr "لطفاً أكتب رسالتك هنا."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "هذه الرسالة الإفتراضية (الخالية) التي يستعملها منشئ الرسائل في مركز إشعارات النظام."
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "لقد تم رفض طلب تقديمك"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"لقد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}، &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"إن قرارنا هو: رفض النشر"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"هذه الرسالة تُعنون إلى المؤلف إذا رفض المحرر طلبه بشكل مبدئي قبل الدخول في "
-"مرحلة التحكيم، لأن طلب التقديم لا يلبي متطلبات النشر في المجلة"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "نشاط هيئة التحرير لشهر {$month}، {$year}"

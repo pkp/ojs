@@ -1999,7 +1999,6 @@ msgstr "Awaiting Galleys."
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Access denied! You have not been assigned as a copyeditor to this article."
 
-#, fuzzy
 msgid "user.authorization.noContext"
 msgstr "No journal was found that matched your request."
 

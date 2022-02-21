@@ -128,7 +128,6 @@ msgstr "All costs must be positive numeric values (decimal points are allowed)"
 msgid "manager.payment.generalFees"
 msgstr "General Fees"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "The Association Membership will appear in About the Journal under Policies."
 
@@ -276,7 +275,6 @@ msgstr "Items can only be submitted by Editors and Section Editors."
 msgid "manager.sections.editors"
 msgstr "Section editors"
 
-#, fuzzy
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "At least one section must be active. Visit the workflow settings to disable "

@@ -102,9 +102,11 @@ msgstr ""
 "fàilte dhan t-siostam orra agus a’ thoirt dhaibh clàr dhen ainm-"
 "chleachdaiche is facal-faire aca."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Dearbhadh a’ chunntais agad"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -118,6 +120,7 @@ msgstr ""
 "Mòran taing,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Thèid am post-d seo a chur gu cleachdaiche a tha air ùr-chlàradh airson an "
@@ -154,9 +157,11 @@ msgstr ""
 "cur fàilte dhan t-siostam orra agus a’ thoirt dhaibh clàr dhen ainm-"
 "chleachdaiche is facal-faire aca."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Iris ùr air fhoillseachadh"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Leughadairean:<br />\n"
@@ -169,6 +174,7 @@ msgstr ""
 "Mòran taing airson sìor ùidh a nochdadh nar n-obair,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "Thèid am post-d seo a chur gu leughadairean clàraichte slighe a’ cheangail “"
@@ -250,37 +256,11 @@ msgstr ""
 "lann. Tha e a’ toirt seachad fiosrachadh mun iomairt LOCKSS agus ag innse "
 "mar as urrainnear pàirt a ghabhail ann."
 
-msgid "emails.submissionAck.subject"
-msgstr "Dearbhadh air tagradh"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Mòran taing airson an sgrìobhainn “{$submissionTitle}” airson {$contextName} "
-"a chur thugainn. Leis an t-siostam air loidhne a chleachdas sinn airson "
-"stiùireadh iris-leabhraichean, is urrainn dhut sùil a chumail air adhartas "
-"tron phròiseas deasachaidh le bhith a’ clàradh a-steach air làrach-lìn an "
-"iris-leabhair:<br />\n"
-"<br />\n"
-"URL an tagraidh: {$submissionUrl}<br />\n"
-"Ainm-cleachdaiche: {$recipientUsername}<br />\n"
-"<br />\n"
-"Ma tha ceist sam bith agad, cuir fios thugam. Mòran taing airson an t-iris-"
-"leabhar seo a thaghadh mar dhòigh foillseachaidh dha d’ obair.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Thèid am post-d seo, ma bhios e an comas, a chur gu fèin-obrachail gu ùghdar "
-"nuair a choileanas iad tagradh le bhith a’ chur sgrìobhainn chun an iris-"
-"leabhair. Tha e ag innse mar as urrainnear an tagradh a thracadh tron "
-"phròiseas agus tha e a’ toirt taing dhan ùghdar airson an tagraidh."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Dearbhadh air tagradh"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Shin thu,<br />\n"
@@ -293,15 +273,18 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Thèid am post-d seo, ma bhios e an comas, a chur gu fèin-obrachail gu na h-"
 "ùghdaran eile a chaidh ainmeachadh rè an tagraidh ach nach eil nan "
 "cleachdaichean am broinn OJS."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Iomruineadh deasachaidh"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -315,6 +298,7 @@ msgstr ""
 "<br />\n"
 "Mòran taing."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Tha am post-d seo ag innse do dheasaiche earrainn gun tug deasaiche obair "
@@ -322,9 +306,11 @@ msgstr ""
 "fiosrachadh mun tagradh agus mar a gheibhear cothrom air làrach an iris-"
 "leabhair."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -356,6 +342,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Tha am post-d seo dheasaiche earrainn gu lèirmheasaiche a’ faighneachd an "
@@ -366,9 +353,11 @@ msgstr ""
 "lèirmheis stannardach fo “Stiùireadh” > “Roghainnean” > “Sruth-obrach” > "
 "“Lèirmheas”. (Air neo faic REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -404,6 +393,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Thèid am post-d seo a chur gu fèin-obrachail nuair a dh’fhalbhas an ùine air "
@@ -528,9 +518,11 @@ msgstr ""
 "puist-d fo “Stiùireadh” > “Roghainnean” > “Sruth-obrach” > “Lèirmheas”. (Air "
 "neo faic REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -564,6 +556,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Tha am post-d seo dheasaiche earrainn gu lèirmheasaiche a’ faighneachd an "
@@ -677,9 +670,11 @@ msgstr ""
 "tagraidh le deasaiche earrainn a dh’innse dhaibh gun deach an lèirmheas a "
 "chur gu neoini."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Iarrtas airson lèirmheas air a chur beò às ùr"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -691,6 +686,7 @@ msgstr ""
 "<br />\n"
 "Ma tha ceist sam bith agad, cuir fios thugam."
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Thèid am post-d seo a chur gu lèirmheasaiche a tha ag obair air lèirmheas "
@@ -738,26 +734,11 @@ msgstr ""
 "fhreagairt air iarrtas airson fios a leigeil gu deasaiche na h-earrainn gun "
 "deach an t-iarrtas a dhiùltadh."
 
-msgid "emails.reviewAck.subject"
-msgstr "Freagairt mu lèirmheas artaigil"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Mòran taing airson an lèirmheas air an tagradh “{$submissionTitle},” airson "
-"{$contextName} a choileanadh. Tha sinn fada nad chomain airson na h-obrach a "
-"nì thu airson na dh’fhoillsicheas sinn a chumail aig ìre àrd."
-
-msgid "emails.reviewAck.description"
-msgstr ""
-"Thèid am post-d seo a chur le deasaiche earrainn a dhearbhadh gun d’fhuair "
-"iad lèirmheas a chaidh a choileanadh agus airson taing a thoirt dhan "
-"lèirmheasaiche airson an cuid com-pàirteachais."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Cuimhneachan mu lèirmheas tagraidh"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -780,6 +761,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Thèid am post-d seo a chur gu lèirmheasaiche le deasaiche earrainn airson "
@@ -810,9 +792,11 @@ msgstr ""
 "Thèid am post-d seo a chur gu lèirmheasaiche le deasaiche earrainn airson "
 "cur na c(h)uimhne gu bheil an lèirmheas aca ri lìbhrigeadh."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Cuimhneachan fèin-obrachail mu lèirmheas tagraidh"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -837,6 +821,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Thèid am post-d seo a chur gu fèin-obrachail nuair a dh’fhalbhas an ùine air "
@@ -877,9 +862,11 @@ msgstr ""
 "sgeidealachadh shaothraichean a bhith an comas agus air a rèiteachadh (faic "
 "faidhle rèiteachadh na làraich)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Co-dhùnadh deasaiche"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -889,151 +876,18 @@ msgstr ""
 "<br />\n"
 "Cho-dhùin sinn Gabh ris an tagradh"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
 "leigeil fios thuca gum b’ e “gabhail ris” an co-dhùnadh deireannach mun "
 "tagradh aca."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Co-dhùnadh deasaiche"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Thàinig sinn gu co-dhùnadh a thaobh an tagraidh agad gu {$contextName}, "
-"“{$submissionTitle}”.<br />\n"
-"<br />\n"
-"Cho-dhùin sinn Cuir airson lèirmheas<br />\n"
-"<br />\n"
-"URL an tagraidh: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gun deach an tagradh aca a chur airson lèirmheas air an "
-"taobh a-muigh."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Co-dhùnadh deasaiche"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Tha obair deasachaidh an tagraidh agad, “{$submissionTitle},” deiseil.  Tha "
-"sinn ga chur chun an sgioba saothrachaidh an-dràsta.<br />\n"
-"<br />\n"
-"URL an tagraidh: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gun deach an tagradh aca a chur chun an sgioba "
-"saothrachaidh."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Co-dhùnadh deasaiche"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Thàinig sinn gu co-dhùnadh a thaobh an tagraidh agad gu {$contextName}, "
-"“{$submissionTitle}”.<br />\n"
-"<br />\n"
-"Cho-dhùin sinn na leanas: Tha feum air ath-dheasachadh"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gum b’ e “feum air ath-dheasachadh” an co-dhùnadh "
-"deireannach mun tagradh aca."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Co-dhùnadh deasaiche"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Thàinig sinn gu co-dhùnadh a thaobh an tagraidh agad gu {$contextName}, "
-"“{$submissionTitle}”.<br />\n"
-"<br />\n"
-"Cho-dhùin sinn Cuir a chùm lèirmheis às ùr"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gum b’ e a ath-thagradh an co-dhùnadh deireannach mun "
-"tagradh aca."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Co-dhùnadh deasaiche"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Thàinig sinn gu co-dhùnadh a thaobh an tagraidh agad gu {$contextName}, "
-"“{$submissionTitle}”.<br />\n"
-"<br />\n"
-"Cho-dhùin sinn an tagradh a dhiùltadh"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gum b’ e a dhiùltadh an co-dhùnadh deireannach mun "
-"tagradh aca."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Moladh an deasaiche"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"’S e seo an co-dhùnadh a thaobh an tagraidh gu {$contextName}, "
-"“{$submissionTitle}”: {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Tha am post-d seo on deasaiche a mhol e no o dheasaiche na h-earrainn chun "
-"nan deasaichean co-dhùnaidh no deasaichean earrainn a’ leigeil fios thuca "
-"mun mholadh deireannach a thaobh an tagraidh."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Iarrtas grinn-deasachaidh"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Bu toil leam iarraidh ort “{$submissionTitle}” airson {$contextName} a "
-"ghrinn-deasachadh a rèir nan ceuman a leanas.<br />\n"
-"1. Briog air URL an tagraidh gu h-ìosal.<br />\n"
-"2. Fosgail faidhle sam bith a tha sna “Dreachdan fhaidhlichean” is dèan "
-"grinn-deasachadh orra agus tòisich deasbadan grinn-deasachaidh ma bhios feum "
-"orra.<br />\n"
-"3. Sàbhail na faidhlichean a rinn thu grinn-deasachadh orra agus luchdaich "
-"suas iad chun na panail “Grinn-deasaichte”.<br />\n"
-"4. Cuir fios chun an deasaiche gun do dhèilig thu ris a h-uile faidhle agus "
-"gum faodar tòiseachadh air an t-saothrachadh.<br />\n"
-"<br />\n"
-"URL {$contextName}: {$contextUrl}<br />\n"
-"URL an tagraidh: {$submissionUrl}<br />\n"
-"Ainm-cleachdaiche: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Thèid am post-d seo a chur grinn-deasaiche tagraidh le deasaiche earrainn "
-"airson iarraidh orra tòiseachadh air a’ ghrinn-deasachadh. Tha e a’ toirt "
-"seachad fiosrachadh mun tagradh agus mar a gheibhear cothrom air."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Iarr na mòr-dhuilleagan"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1057,6 +911,7 @@ msgstr ""
 "bith agad, cuir fios thugam. Mòran taing airson taic a chumail ris an iris-"
 "leabhar seo."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Tha am post-d seo o dheasaiche na h-earrainn gu deasaiche na co-dhealbhachd "
@@ -1067,6 +922,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Tha na mòr-dhuilleagan deiseil"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1079,6 +935,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Tha am post-d seo o dheasaiche na co-dhealbhachd do dheasaiche na h-earrainn "
@@ -1429,24 +1286,6 @@ msgid "emails.notificationCenterDefault.description"
 msgstr ""
 "An teachdaireachd (bhàn) bhunaiteach a thèid a chleachdadh ann an togalaiche "
 "liostaichean theachdaireachdan aig ionad nam brathan."
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Co-dhùnadh deasaiche"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"Thàinig sinn gu co-dhùnadh a thaobh an tagraidh agad gu {$contextName}, "
-"“{$submissionTitle}”.<br />\n"
-"<br />\n"
-"Cho-dhùin sinn an tagradh a dhiùltadh"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Thèid am post-d seo a chur chun an ùghdair ma dhiùltas an deasaiche an "
-"tagradh aca sa chiad dol a-mach, ro ìre an lèirmheis"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Gnìomhachd deasachaidh sa mhìos seo: {$month} {$year}"
