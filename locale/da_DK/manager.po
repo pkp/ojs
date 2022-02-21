@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
 "PO-Revision-Date: 2022-02-21 08:14+0000\n"
-"Last-Translator: Jesper B. Thestrup <jbt@kb.dk>\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
 "Language: da_DK\n"
@@ -2081,7 +2081,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} kan ikke tilføjes, da det indeholder et ikke-kendt format."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} er blevet tilføjet."
+msgstr ""
+"DOI'et {$pubId} er blevet tildelt. For at ændre DOI'et skal du gå ind på <a "
+"href=\"{$doiManagementLink}\">DOI Management siden</a>."
 
 msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "Tildel DOI'er"
@@ -2163,10 +2165,16 @@ msgid "api.galley.403.publicationDidNotMatch"
 msgstr "Publiceringsversionen, du søgte, er ikke del af denne publikation."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr "DOI'en {$pubId} bliver tildelt ved publicering."
+msgstr "DOI'et {$pubId} vil blive tildelt samtidigt med publicering."
 
 msgid "api.issue.404.issuesNotFound"
 msgstr "Numrene du søgte blev ikke fundet"
 
 msgid "api.issue.403.canEditPublishedDoi"
 msgstr "Kun DOI'er kan redigeres efter en publikation er blevet publiceret"
+
+msgid "doi.manager.issueDois"
+msgstr "Numre DOI'er"
+
+msgid "doi.manager.submissionDois"
+msgstr "Artikel DOI'er"
