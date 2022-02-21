@@ -1,12 +1,13 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
 # Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
+# Jesper B. Thestrup <jbt@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
 "PO-Revision-Date: 2022-02-21 08:11+0000\n"
-"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
+"Last-Translator: Jesper B. Thestrup <jbt@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
 "Language: da_DK\n"
@@ -2156,7 +2157,7 @@ msgstr "Det indsendte DOI er ikke gyldigt."
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
 "Kun DOI'er kan redigeres efter en publikation/publiceringsversion er blevet "
-"publiceret."
+"publiceret"
 
 msgid "api.galley.403.publicationDidNotMatch"
 msgstr "Publiceringsversionen, du søgte, er ikke del af denne publikation."
