@@ -1,10 +1,10 @@
-# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2021-12-08 09:26+0000\n"
+"PO-Revision-Date: 2022-02-22 13:09+0000\n"
 "Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "de_DE/>\n"
@@ -2083,3 +2083,57 @@ msgstr "Zuweisen"
 
 msgid "doi.editor.doi.description"
 msgstr "Die DOI muss mit {$prefix} beginnen."
+
+msgid "doi.manager.issueDois"
+msgstr "Heft DOIs"
+
+msgid "doi.manager.submissionDois"
+msgstr "Artikel DOIs"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Die Hefte, nach denen Sie gesucht haben, konnten nicht gefunden werden"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+"Nur DOIs können bearbeitet werden, nachdem eine Publikation veröffentlicht "
+"wurde"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Die vorgeschlagene DOI ist nicht gültig"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Nur DOIs können bearbeitet werden, nachdem eine Publikation/Fahne "
+"veröffentlicht wurde"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Die Fahne, nach der Sie suchen, ist nicht Teil dieser Publikation."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "Die DOI {$pubId} wird bei der Veröffentlichung zugewiesen."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Keine"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Bitte wählen Sie die Registrierungsagentur aus, die Sie verwenden wollen um "
+"DOIs abzuliefern."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registrierungsagentur"
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Im Schritt \"Lektorat\""
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Standard-Patterns verwenden.<br />%j.v%vi%i für Hefte<br />%j.v%vi%i.%a für "
+"Artikel<br />%j.v%vi%i.%a.g%g für Fahnen."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Digital Object Identifier (DOIs) zu Artikeln, Heften, und Fahnen zuweisen."
