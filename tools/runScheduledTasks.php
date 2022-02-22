@@ -15,9 +15,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
-{
-}
+$scheduleBag = app(\Illuminate\Console\Scheduling\Schedule::class);
 
-$tool = new runScheduledTasks($argv ?? []);
-$tool->execute();
+(new \PKP\core\PKPScheduler($scheduleBag))
+    ->run();
