@@ -527,3 +527,12 @@ default_queue = "queue"
 ; function. Disable this if you want to run jobs through a separate
 ; cron job or workers.
 disable_jobs_run_at_shutdown = Off
+
+;;;;;;;;;;;;;;;;;;;;
+; Logging Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[logs]
+
+log_channel = errorlog
+log_level = error
