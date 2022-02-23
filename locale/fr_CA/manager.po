@@ -1,11 +1,13 @@
 # Jean-Hugues Roy <roy.jean-hugues@uqam.ca>, 2021.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2021-12-01 01:39+0000\n"
-"Last-Translator: Jean-Hugues Roy <roy.jean-hugues@uqam.ca>\n"
+"PO-Revision-Date: 2022-02-24 12:23+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
+"helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -1756,14 +1758,14 @@ msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
 msgstr ""
-"Aucune personne-ressource principale n'a été définie pour cette revue. Pour "
-"ce faire, veuillez modifier les  <a href=\"{$url}\">paramètres de la "
-"revue</a>."
+"Aucune personne-ressource principale n'a été définie pour cette revue. Vous "
+"pouvez saisir une personne-ressource principale dans les  <a href=\"{$url}\">"
+"paramètres de la revue</a>."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
-"Envoyer une copie de l'accusé de réception de la soumission à la personne-"
-"ressource principale de la revue."
+"Envoyer une copie de l'accusé de réception de la soumission à l'adresse "
+"courriel de la personne-ressource principale de la revue."
 
 msgid "plugins.importexport.native.export.issues.results"
 msgstr "Exporter les résultats des numéros"
@@ -1977,7 +1979,9 @@ msgstr ""
 "pouvant être résolu."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "Le DOI {$pubId} a été attribué."
+msgstr ""
+"Le DOI {$pubId} a été attribué. Pour modifier le DOI,  veuillez visiter la "
+"page de <a href=\"{$doiManagementLink}\">gestion des DOI</a>."
 
 msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "Attribuer des DOIs"
@@ -2022,3 +2026,16 @@ msgstr "Le DOI pour cette publication sera {$doi}."
 
 msgid "doi.editor.missingPrefix"
 msgstr "Le DOI doit débuter par {$doiPrefix}."
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Utiliser les modèles par défaut.<br />%j.v%vi%i pour les numéros<br "
+"/>%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Assigner des Identificateurs d'objets numériques (DOIs) aux articles, "
+"numéros et épreuves."
