@@ -70,6 +70,14 @@ class Repository extends \PKP\decision\Repository
         return $this->decisionTypes;
     }
 
+    public function getDeclineDecisionTypes(): array
+    {
+        return [
+            new InitialDecline(),
+            new Decline(),
+        ];
+    }
+
     protected function getReviewNotificationTypes(): array
     {
         return [Notification::NOTIFICATION_TYPE_PENDING_EXTERNAL_REVISIONS];
