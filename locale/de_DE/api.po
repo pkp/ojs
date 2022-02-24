@@ -53,11 +53,6 @@ msgstr "Sie haben keine Berechtigung diese Zeitschrift anzusehen."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Sie können nur Zeitschriften ansehen die freigeschaltet sind."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Um eine Einreichung zu erstellen oder zu ändern, müssen Sie eine Anfrage an "
-"den API endpoint der Zeitschrift stellen."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Sie können die Zeitschrift einer Einreichung nicht ändern."
 

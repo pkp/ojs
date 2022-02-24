@@ -13,8 +13,8 @@
  * @brief Class that converts a Article to a PubMed XML document.
  */
 
+use APP\decision\Decision;
 use APP\facades\Repo;
-use APP\workflow\EditorDecisionActionsManager;
 
 use PKP\filter\PersistableFilter;
 use PKP\i18n\LocaleConversion;
@@ -125,14 +125,17 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $historyNode = $doc->createElement('History');
             $historyNode->appendChild($this->generatePubDateDom($doc, $submission->getDateSubmitted(), 'received'));
 
-            $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
-            $editDecisions = (array) $editDecisionDao->getEditorDecisions($submission->getId());
-            do {
-                $editorDecision = array_pop($editDecisions);
-            } while ($editorDecision && $editorDecision['decision'] != EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT);
+            $editDecisions = Repo::decision()->getMany(
+                Repo::decision()
+                    ->getCollector()
+                    ->filterBySubmissionIds([$submission->getId()])
+            );
+            $editorDecision = $editDecisions->first(function (Decision $decision, $key) {
+                return $decision->getData('decision') === Decision::ACCEPT;
+            });
 
             if ($editorDecision) {
-                $historyNode->appendChild($this->generatePubDateDom($doc, $editorDecision['dateDecided'], 'accepted'));
+                $historyNode->appendChild($this->generatePubDateDom($doc, $editorDecision->getData('dateDecided'), 'accepted'));
             }
             $articleNode->appendChild($historyNode);
 

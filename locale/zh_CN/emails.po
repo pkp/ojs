@@ -81,9 +81,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "这封电子邮件会被寄给新注册的用户，欢迎他们加入这个系统，并且提供他们一个用户名称和密码的记录。"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "验证您的账户"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -95,6 +97,7 @@ msgstr ""
 "谢谢您,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "这封电子邮件用来发送给验证电子邮件的新注册用户。"
 
@@ -116,9 +119,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "这封电子邮件发送给新注册的审稿人，欢迎他们的加入并提供关于他们的用户名和密码的记录。"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "新一期期刊已出版"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "亲爱的读者您好：<br />\n"
@@ -128,6 +133,7 @@ msgstr ""
 "感谢您持续地关注我们的作品，<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "这封电子邮件是透过编辑的「用户首页」页面中的「通知用户」链接，寄发给注册用户。此邮件通知读者有新一期的内容并邀请他们以内附的网址查看期刊。"
 
@@ -173,25 +179,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "这封电子邮件鼓励收件人成为洛克斯计划成员，并收录本期刊进入存档。邮件提供了关于洛克斯计划的信息以及如何加入的办法。"
 
-msgid "emails.submissionAck.subject"
-msgstr "投稿致谢函"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"感谢您将稿件 〈{$submissionTitle}〉 投稿至《{$contextName}》。透过我们所使用的期刊管理系统，您将能够登入期刊网站来追踪稿件的编辑进度：<br />\n"
-"<br />\n"
-"稿件网址：{$submissionUrl}<br />\n"
-"用户名称：{$recipientUsername}<br />\n"
-"<br />\n"
-"如果您有任何问题，请与我们联络。再次感谢您考虑本期刊出版您的作品。<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr "这封电子邮件，一旦启用，就会在作者完成投稿一份稿件到期刊的流程之后，会自动地寄发给作者。邮件中提供了有关追踪稿件编辑进度的信息，以及感谢作者的投稿。"
-
 msgid "emails.submissionComment.subject"
 msgstr "稿件评论"
 
@@ -220,9 +207,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "这封电子邮件通知一份稿件的所有审查人，告知审查程序已经完成。邮件包含关于该份文章的信息与做出的决定，并感谢审查人的贡献。"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "指派编辑任务"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -235,12 +224,15 @@ msgstr ""
 "<br />\n"
 "谢谢您。"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "这封电子邮件通知一个区段编辑说，编辑已经指派他们透过编辑流程来审查一份稿件。邮件中含有关于稿件以及如何进入期刊网站的信息。"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "邀请您审查稿件"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}您好：<br />\n"
@@ -266,6 +258,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访"
@@ -299,9 +292,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "这封电子邮件这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项，并且启用「审查人一点即往」的功能，才会用到这份消息。"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "邀请您审查稿件"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}您好：<br />\n"
@@ -330,6 +325,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项时，才会用到这份消息。(否则请见：REVIEW_REQUEST_ATTACHED.)"
 
@@ -425,21 +421,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "这封电子邮件是由一位审查人寄给区段编辑以回复一份审查邀请，并通知区段编辑要婉谢审查邀请。"
 
-msgid "emails.reviewAck.subject"
-msgstr "文章审查感谢函"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"感谢您为《{$contextName}》完成了稿件〈{$submissionTitle}〉的审查工作。我们非常感激您对我们出版文章之品质的重要贡献。"
-
-msgid "emails.reviewAck.description"
-msgstr "这封电子邮件是由一位区段编辑发出，确认收到已完成审查工作的回条，并感谢审查人之贡献。"
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "稿件审查提醒函"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -455,6 +441,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "这封电子邮件是由区段编辑发出，提醒一位审查人他们的审查工作已经到期。"
 
@@ -477,9 +464,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "这封电子邮件是由区段编辑发出，提醒一位审查人他们的审查工作已经到期。"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "自动发出的稿件审查提醒函"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -495,6 +484,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "这封电子邮件在一位审查人的工作期限日已经超过的时候，会自动发出给他（见「期刊设定」之步骤2，「审查选项」），而审查访问一点即入的功能已经停用。必须启用并且设定排程任务（见网站设定）。"
 
@@ -517,9 +507,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "这封电子邮件这封电子邮件在一位审查人的工作期限日已经超过的时候，会自动发出给他（见「期刊设定」之步骤2，「审查选项」），而审查访问一点即入的功能已经启用。必须启用并且设定排程任务（见网站设定档案）。"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "编辑决定"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -527,71 +519,15 @@ msgstr ""
 "<br />\n"
 "我们的决定是：接收该稿件"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "这封电子邮件是由编辑或者区段编辑发送给作者，通知他们关于他们稿件的最后决定。"
 
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "编辑决定"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />\n"
-"<br />\n"
-"我们的决定是："
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "这封电子邮件是由编辑或者区段编辑发送给作者，通知他们关于他们稿件的最后决定。"
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "编辑决定"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />\n"
-"<br />\n"
-"我们的决定是："
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "这封电子邮件是由编辑或者区段编辑发送给作者，通知他们关于他们稿件的最后决定。"
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "编辑决定"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />\n"
-"<br />\n"
-"我们的决定是："
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "这封电子邮件是由编辑或者区段编辑发送给作者，通知他们关于他们稿件的最后决定。"
-
-msgid "emails.copyeditRequest.subject"
-msgstr "编辑要求"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}您好：<br />\n"
-"<br />\n"
-"我想请您为《{$contextName}》担任稿件〈{$submissionTitle}〉的校样编辑。您可以在网站上找到这份稿件，以及校样编辑的工作指引。<br />\n"
-"<br />\n"
-"稿件网址：{$submissionUrl}\"<br />\n"
-"用户名称：{$recipientUsername}<br />\n"
-"<br />\n"
-"如果您目前无法进行这份工作，或者对这项工作有任何的疑问，请直接回信与我联络。非常感谢您同意为这份期刊进行这份重要的工作。"
-
-msgid "emails.copyeditRequest.description"
-msgstr "这封电子邮件是由一位区段编辑寄发给稿件的校样编辑，请他们开始进行校样编辑的工作流程。邮件中含有关于稿件的信息以及如核取得稿件的指引."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "请进行排版工作"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -607,12 +543,14 @@ msgstr ""
 "<br />\n"
 "如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "这封电子邮件是由区段编辑寄发给版面编辑，通知他们要进行一份稿件的版面编辑工作。邮件中含有稿件的信息以及如何取得稿件的指引。"
 
 msgid "emails.layoutComplete.subject"
 msgstr "已完成制版"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -623,6 +561,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "这封电子邮件是由版面编辑寄发给区段编辑，通知他们排版流程已经完成。"
 
@@ -1031,9 +970,11 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "本邮件允许文字编辑向作者要求参考文献的其他信息"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "文章审稿请求"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1060,6 +1001,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
@@ -1136,18 +1078,19 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "当作者上传的修订版的一篇文章后，此邮件将被自动发送到指定的编辑"
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "编辑决策"
-
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr "此邮件由“栏目编辑”发送给正在进行审阅的审阅者，以通知他们先前取消的审阅已经恢复。"
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "恢复审核的请求"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "启用此电子邮件后，它将自动发送给不是提交过程中指定的OJS中用户的其他作者。"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "您好,<br />\n"
@@ -1159,9 +1102,11 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "投稿致谢函"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br/>\n"
@@ -1209,21 +1154,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "编辑持续达 {$year} 年 {$month} 个月"
 
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr "此邮件为编辑初审后拒绝稿件发给投稿人的提醒邮件"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"我们对于稿件 {$contextName}, &quot;{$submissionTitle}&quot; 形成了一个最终共识。<br />\n"
-"<br />\n"
-"我们的决定是：拒绝稿件"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "总编决定"
-
 msgid "emails.notificationCenterDefault.description"
 msgstr "信息提醒中心生成默认信息（通常会是空白）。"
 
@@ -1232,42 +1162,3 @@ msgstr "请输入您的信息。"
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "关于{$contextName} 的信息"
-
-msgid "emails.editorRecommendation.description"
-msgstr "此邮件为总编或者栏目编辑发给编辑或者栏目编辑的关于他们对于稿件的去留建议的提醒邮件。"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"关于稿件 {$contextName}, &quot;{$submissionTitle}&quot; 的建议是： {$recommendation}"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "总编建议"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "此邮件是总编或者栏目编辑发现给投稿人告知稿件安排出版的提醒邮件。"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"您的稿件 &quot;{$submissionTitle}&quot; 修改结束。我们将要安排出版。<br />\n"
-"<br />\n"
-"稿件地址： {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "总编决定"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "此邮件为总编或者栏目编辑发给投稿人告知稿件送审的提醒邮件。"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"我们已经收到您的稿件： {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"我们决定：将您的稿件送去评审<br />\n"
-"<br />\n"
-"稿件的地址：{$submissionUrl}"

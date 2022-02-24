@@ -15,18 +15,8 @@
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions refreshOn="stageStatusUpdated"}
 
 	<div class="pkp_workflow_sidebar">
-		<div class="pkp_tab_actions">
-			<ul class="pkp_workflow_decisions">
-				<li>
-					<button
-						class="pkpButton pkpButton--isPrimary"
-						onClick="pkp.eventBus.$emit('open-tab', 'publication')"
-					>
-						{translate key="editor.submission.schedulePublication"}
-					</button>
-				</li>
-			</ul>
-		</div>
+		{capture assign=productionEditorDecisionsUrl}{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="workflow" op="editorDecisionActions" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
+		{load_url_in_div id="productionEditorDecisionsDiv" url=$productionEditorDecisionsUrl class="editorDecisionActions pkp_tab_actions"}
 		{capture assign=stageParticipantGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.users.stageParticipant.StageParticipantGridHandler" op="fetchGrid" submissionId=$submission->getId() stageId=$stageId escape=false}{/capture}
 		{load_url_in_div id="stageParticipantGridContainer" url=$stageParticipantGridUrl class="pkp_participants_grid"}
 	</div>

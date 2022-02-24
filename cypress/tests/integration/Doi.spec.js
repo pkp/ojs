@@ -58,7 +58,8 @@ describe('DOI tests', function() {
 		cy.get('button#openBulkAssign').click();
 
 		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Assign DOIs")').click();
+		cy.get('.modal__content').contains('assign new DOIs to 1 item(s)');
+		cy.get('.modal__footer button').contains('Assign DOIs').click();
 		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout:20000});
 
 		cy.get(`#list-item-issue-${issueId} button.expander`).click();

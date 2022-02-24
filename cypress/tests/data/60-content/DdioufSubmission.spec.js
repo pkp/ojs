@@ -17,22 +17,28 @@ describe('Data suite tests', function() {
 			'country': 'Egypt',
 		});
 
-		cy.createSubmission({
+		var submission = {
 			'section': 'Articles',
 			'title': 'Genetic transformation of forest trees',
 			'abstract': 'In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.',
-		});
+			'authors': ['Diaga Diouf']
+		};
+		cy.createSubmission(submission);
 
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, 'Diouf');
-		cy.sendToReview();
+		cy.clickDecision('Send for Review');
+		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Paul Hudson');
 		cy.assignReviewer('Adela Gallego');
-		cy.recordEditorialDecision('Accept Submission');
-		cy.get('li.ui-state-active a:contains("Copyediting")');
+		cy.clickDecision('Accept Submission');
+		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Maria Fritz');
-		cy.recordEditorialDecision('Send To Production');
-		cy.get('li.ui-state-active a:contains("Production")');
+		cy.clickDecision('Send To Production');
+		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Graham Cox');
 		cy.assignParticipant('Proofreader', 'Catherine Turner');
 	});

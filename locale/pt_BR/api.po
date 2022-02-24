@@ -20,11 +20,6 @@ msgstr "Não é possível alterar a revista de uma submissão."
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Não é permitido visualizar edições não publicadas."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Para criar ou alterar uma submissão, deve-se fazer uma solicitação ao ponto "
-"de acesso da API na revista."
-
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Pode-se apenas ver as revistas que foram habilitadas."
 

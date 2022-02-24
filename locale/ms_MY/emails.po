@@ -43,11 +43,13 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Pendaftaran sebagai Pengulas dengan {$contextName}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "E-mel ini dihantar kepada pengguna yang baru mendaftar untuk mengesahkan "
 "akaun e-mel mereka."
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName} <br />\n"
@@ -61,6 +63,7 @@ msgstr ""
 "Terima kasih, <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Sahkan Akaun Anda"
 
@@ -151,6 +154,7 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Notifikasi baharu dari {$siteTitle}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "E-mel ini dari Editor Bahagian kepada Pengulas meminta agar pengulas "
@@ -160,34 +164,29 @@ msgstr ""
 "Ulasan dipilih dalam Pengurusan> Tetapan> Alur Kerja> Ulasan. (Jika tidak, "
 "lihat REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Permintaan Ulasan Artikel"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "E-mel ini memberitahu Editor Bahagian bahawa Editor telah memberikan mereka "
 "tugas untuk mengawasi penyerahan melalui proses penyuntingan. Ini memberikan "
 "maklumat mengenai penyerahan dan cara mengakses laman jurnal."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Tugasan Editorial"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "E-mel ini, apabila didayakan, secara automatik dihantar kepada pengarang "
 "lain yang bukan pengguna dalam OJS yang ditentukan semasa proses penyerahan."
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "Ucapan Terima Kasih"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"E-mel ini, apabila didayakan, secara automatik dikirimkan kepada pengarang "
-"apabila mereka menyelesaikan proses penyerahan manuskrip ke jurnal. Ini "
-"memberikan maklumat tentang mengesan penyerahan melalui proses dan berterima "
-"kasih pengarang atas penyerahannya."
-
-msgid "emails.submissionAck.subject"
 msgstr "Ucapan Terima Kasih"
 
 msgid "emails.lockssNewArchive.description"
@@ -208,6 +207,7 @@ msgstr ""
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Permintaan Mengarkibkan untuk {$contextName}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "E-mel ini dihantar kepada pembaca yang berdaftar melalui pautan \"Maklum "
@@ -215,6 +215,7 @@ msgstr ""
 "terbitan baharu dan mengajak mereka untuk mengunjungi jurnal di URL yang "
 "disediakan."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Pembaca: <br />\n"
@@ -227,6 +228,7 @@ msgstr ""
 "Terima kasih atas minat berterusan dalam kerja kami, <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Terbitan Baharu Diterbitkan"
 
@@ -255,6 +257,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "Permintaan Ulasan Artikel"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "E-mel ini dihantar secara automatik apabila tarikh akhir pengesahan pengulas "
@@ -262,6 +265,7 @@ msgstr ""
 "akses pengulas satu klik dinyahdayakan. Tugas berjadual mesti didayakan dan "
 "dikonfigurasi (lihat fail konfigurasi laman web)."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Peringatan Permintaan Ulasan Artikel"
 
@@ -316,6 +320,7 @@ msgstr ""
 "Terima kasih, <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -348,6 +353,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}: <br  />\n"
@@ -361,29 +367,13 @@ msgstr ""
 "<br />\n"
 "Terima kasih.<br />"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Hello, <br />\n"
 "<br />\n"
 "{$submitterName} telah menghantar manuskrip, &quot;{$submissionTitle}&quot; "
 "ke {$contextName}. <br />\n"
-"<br />\n"
-"Sekiranya anda mempunyai sebarang pertanyaan, sila hubungi saya. Terima "
-"kasih kerana mempertimbangkan jurnal ini sebagai tempat kerja anda. <br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}: <br />\n"
-"<br />\n"
-"Terima kasih kerana menghantar manuskrip, &quot;{$submissionTitle}&quot; ke "
-"{$contextName}. Dengan sistem pengurusan jurnal dalam talian yang kami "
-"gunakan, anda dapat melacak kemajuannya melalui proses editorial dengan "
-"masuk ke laman web jurnal: <br />\n"
-"<br />\n"
-"URL Penyerahan: {$submissionUrl} <br />\n"
-"Nama pengguna: {$recipientUsername} <br />\n"
 "<br />\n"
 "Sekiranya anda mempunyai sebarang pertanyaan, sila hubungi saya. Terima "
 "kasih kerana mempertimbangkan jurnal ini sebagai tempat kerja anda. <br />\n"
@@ -399,9 +389,11 @@ msgstr "Permintaan Ulasan Artikel"
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "Permintaan Ulasan Artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Permintaan Ulasan Artikel"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -436,16 +428,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot; <br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}: <br />\n"
-"<br />\n"
-"Kami telah membuat keputusan mengenai penyerahan anda ke {$contextName}, "
-"&quot; {$submissionTitle} &quot ;. <br />\n"
-"<br />\n"
-"Keputusan kami adalah untuk: Menolak Penyerahan"
 
 msgid "emails.subscriptionAfterExpiryLast.body"
 msgstr ""
@@ -503,44 +485,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br />\n"
-"Kami telah membuat keputusan mengenai penyerahan anda ke {$contextName}, "
-"&quot; {$submissionTitle} &quot ;. <br />\n"
-"<br />\n"
-"Keputusan kami adalah untuk: Menolak Penyerahan"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br />\n"
-"Kami telah membuat keputusan mengenai penyerahan anda ke {$contextName}, "
-"&quot; {$submissionTitle} &quot ;. <br />\n"
-"<br />\n"
-"Keputusan kami adalah untuk: Serah semula untuk Ulasan"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$ authorName}: <br />\n"
-"<br />\n"
-"Kami telah membuat keputusan mengenai penyerahan anda ke {$contextName}, "
-"&quot; {$submissionTitle} & quot ;. <br />\n"
-"<br />\n"
-"Keputusan kami adalah: Semakan Diperlukan"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br />\n"
-"Kami telah membuat keputusan mengenai penyerahan anda ke {$contextName}, "
-"&quot; {$ submissionTitle} &quot ;. <br />\n"
-"<br />\n"
-"Keputusan kami adalah untuk: Kirim ke Ulasan <br />\n"
-"<br />\n"
-"URL Penyerahan: {$submissionUrl}"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}: <br />\n"
@@ -621,14 +566,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktiviti editorial untuk {$month}, {$year}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"E-mel ini dihantar kepada pengarang sekiranya editor menolak penyerahan "
-"mereka pada awalnya, sebelum peringkat ulasan"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Keputusan Editor"
 
 msgid "emails.notificationCenterDefault.description"
 msgstr ""
@@ -904,11 +841,13 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "Artikel Menarik"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "E-mel ini dari Editor Susun atur ke Bahagian Editor memberitahu mereka "
 "bahawa proses susun atur telah selesai."
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -923,6 +862,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galley Selesai"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "E-mel ini dari Editor Bahagian ke Editor Susun atur memberitahu mereka "
@@ -930,6 +870,7 @@ msgstr ""
 "pada penyerahan. Ini memberikan maklumat mengenai penyerahan dan cara "
 "mengaksesnya."
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -951,109 +892,18 @@ msgstr ""
 "sebarang pertanyaan, sila hubungi saya. Terima kasih atas sumbangan anda "
 "dalam jurnal ini."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Meminta Galley"
 
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"E-mel ini dikirim oleh Editor Bahagian ke Copyeditor Penyerahan untuk "
-"meminta mereka memulakan proses copyediting. Ini memberikan maklumat "
-"mengenai penyerahan dan cara mengaksesnya."
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}: <br />\n"
-"<br />\n"
-"Saya meminta anda melakukan copyediting &quot; {$submissionTitle} &quot; "
-"untuk {$contextName} dengan mengikuti langkah-langkah ini. <br />\n"
-"1. Klik pada URL Penyerahan di bawah. <br />\n"
-"2. Buka mana-mana fail yang ada di bawah Fail  Draf dan lakukan copyediting "
-"anda, sambil menambahkan Perbincangan Copyediting mengikut keperluan. <br />"
-"\n"
-"3. Simpan fail yang copyedited , dan muat naik ke panel yang Copyedited. <br "
-"/>\n"
-"4. Maklumkan kepada Editor bahawa semua fail telah disiapkan, dan proses "
-"Produksi dapat dimulai. <br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"URL Penyerahan:{$submissionUrl}<br />\n"
-"Nama pengguna: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Permintaan Copyediting"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"E-mel ini dari Editor yang mencadangkan atau Editor Bahagian kepada Editor "
-"yang membuat keputusan atau Editor Bahagian memberitahu mereka tentang "
-"cadangan terakhir mengenai penyerahan."
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editor}: <br />\n"
-"<br />\n"
-"Cadangan mengenai penyerahan kepada {$contextName}, &quot; {$submissionTitle}"
-" &quot; ialah: {$recommendation}"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Cadangan Editor"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
-"mereka tentang keputusan \"penolakan\" terakhir mengenai penyerahan mereka."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Keputusan Editor"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
-"mereka tentang keputusan \"serah semula\" mengenai penyerahan mereka."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Keputusan Editor"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
-"mereka mengenai keputusan \"semakan yang diperlukan\" terakhir mengenai "
-"penyerahannya."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Keputusan Editor"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
-"mereka bahawa penyerahan mereka dihantar ke produksi."
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br />\n"
-"Penyuntingan penyerahan anda, &quot; {$submissionTitle}, &quot; selesai. "
-"Kami sekarang mengirimkannya ke produksi. <br />\n"
-"<br />\n"
-"URL Penyerahan: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Keputusan Editor"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
-"mereka bahawa penyerahan mereka dihantar ke ulasan luaran."
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Keputusan Editor"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
 "mereka tentang keputusan \"terima penyerahan\" terakhir mengenai penyerahan "
 "mereka."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Keputusan Editor"
 
@@ -1092,6 +942,7 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Peringatan Ulasan Penyerahan Automatik"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "E-mel ini dihantar secara automatik apabila tarikh akhir pengulas berlalu ("
@@ -1099,6 +950,7 @@ msgstr ""
 "pengulas satu klik dinyahdayakan. Tugas berjadual mesti didayakan dan "
 "dikonfigurasi (lihat fail konfigurasi laman web)."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -1121,6 +973,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Peringatan Ulasan Penyerahan Automatik"
 
@@ -1148,11 +1001,13 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Peringatan Ulasan Penyerahan"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "E-mel ini dihantar oleh Editor Bahagian untuk mengingatkan pengulas bahawa "
 "ulasan tamat."
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -1174,24 +1029,9 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Peringatan Ulasan Penyerahan"
-
-msgid "emails.reviewAck.description"
-msgstr ""
-"E-mel ini dihantar oleh Editor Bahagian untuk mengesahkan penerimaan ulasan "
-"yang telah selesai dan terima kasih kepada pengulas atas sumbangan mereka."
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}: <br />\n"
-"<br />\n"
-"Terima kasih kerana menyelesaikan ulasan penyerahan, &quot; "
-"{$submissionTitle}, &quot; untuk {$contextName}. Kami menghargai sumbangan "
-"anda terhadap kualiti karya yang kami terbitkan."
-
-msgid "emails.reviewAck.subject"
-msgstr "Ucapan Terima Kasih atas Ulasan Artikel"
 
 msgid "emails.reviewDecline.description"
 msgstr ""
@@ -1233,12 +1073,14 @@ msgstr ""
 msgid "emails.reviewConfirm.subject"
 msgstr "Mampu Mengulas"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "E-mel ini dihantar oleh Editor Bahagian kepada Pengulas yang mempunyai "
 "ulasan penyerahan yang sedang berlangsung untuk memberitahu mereka bahawa "
 "ulasan yang dibatalkan telah dijalankan semula."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -1249,6 +1091,7 @@ msgstr ""
 "<br />\n"
 "Sekiranya anda mempunyai sebarang pertanyaan, sila hubungi saya."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Permintaan Ulasan Dikembalikan"
 
@@ -1335,6 +1178,7 @@ msgstr ""
 "Pengurusan> Tetapan> Aliran Kerja> Ulasan, dan akses pengulas satu klik "
 "didayakan."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "E-mel ini dari Editor Bahagian kepada Pengulas meminta agar pengulas "
@@ -1345,6 +1189,7 @@ msgstr ""
 "Pengurusan> Tetapan> Aliran Kerja> Ulasan. (Jika tidak, lihat "
 "REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}: <br />\n"

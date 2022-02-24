@@ -18,12 +18,13 @@ use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
-
+use PKP\db\DAORegistry;
 use PKP\handler\APIHandler;
 use PKP\plugins\HookRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Role;
+use PKP\security\UserGroupDAO;
 
 class IssueHandler extends APIHandler
 {
@@ -208,15 +209,19 @@ class IssueHandler extends APIHandler
      */
     public function getCurrent($slimRequest, $response, $args)
     {
-        $request = $this->getRequest();
-        $context = $request->getContext();
+        $context = $this->getRequest()->getContext();
 
         $issue = Repo::issue()->getCurrent($context->getId());
 
         if (!$issue) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
-        $data = Repo::issue()->getSchemaMap()->map($issue);
+
+        $data = Repo::issue()->getSchemaMap()->map(
+            $issue,
+            $this->getUserGroups($context->getId()),
+            $this->getGenres($context->getId())
+        );
 
         return $response->withJson($data, 200);
     }
@@ -232,15 +237,34 @@ class IssueHandler extends APIHandler
      */
     public function get($slimRequest, $response, $args)
     {
-        $request = $this->getRequest();
+        $context = $this->getRequest()->getContext();
+
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
         if (!$issue) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $data = Repo::issue()->getSchemaMap()->map($issue);
+        $data = Repo::issue()->getSchemaMap()->map(
+            $issue,
+            $this->getUserGroups($context->getId()),
+            $this->getGenres($context->getId())
+        );
 
         return $response->withJson($data, 200);
+    }
+
+    protected function getUserGroups(int $contextId): array
+    {
+        /** @var UserGroupDAO $userGroupDao */
+        $userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+        return $userGroupDao->getByContextId($contextId)->toArray();
+    }
+
+    protected function getGenres(int $contextId): array
+    {
+        /** @var GenreDAO $genreDao */
+        $genreDao = DAORegistry::getDAO('GenreDAO');
+        return $genreDao->getByContextId($contextId)->toArray();
     }
 }

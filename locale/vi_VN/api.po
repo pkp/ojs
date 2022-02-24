@@ -46,11 +46,6 @@ msgstr "Bạn không có quyền xem tạp chí này."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Bạn chỉ có thể xem các tạp chí đã được kích hoạt."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Để thực hiện hoặc chỉnh sửa nội dung bài nộp, bạn phải gửi yêu cầu đến điểm "
-"cuối API của tạp chí."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Bạn không có quyền xem các số chưa được công bố."
 

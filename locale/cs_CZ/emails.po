@@ -64,9 +64,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Tento email je zaslán nově registrovanému uživateli jako přivítání do systému a poskytne mu doklad o jeho uživatelském jménu a heslu."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Ověření Vašeho účtu"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -78,6 +80,7 @@ msgstr ""
 "Děkujeme,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Tento email je zaslán nově registrovanému uživateli a obsahuje odkaz sloužící k ověření jeho emailové adresy."
 
@@ -99,9 +102,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Tento email je zaslán nově registrovanému recenzentovi jako přivítání do systému a poskytne mu doklad o jeho uživatelském jménu a heslu."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nové číslo bylo vydáno: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Vážení čtenáři/vážená čtenářko,</p><p>{$contextName} s potěšením oznamuje "
@@ -110,6 +115,7 @@ msgstr ""
 "autorům, recenzentům a redaktorům za jejich cenné příspěvky k tomuto dílu a "
 "našim čtenářům za váš trvalý zájem.</p><p>S pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Tento email je zasílán registrovaným čtenářům prostřednictvím odkazu \"Informovat uživatele\" z domácí stránky editora. Informuje čtenáře o novém čísle a zve je k návštěvě časopisu přes poskytnutou URL adresu."
 
@@ -155,29 +161,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Tento email pobízí příjemce, aby se zapojil do LOCKSS iniciativy a zahrnul tento časopis do archivu. Obsahuje informace o LOCKSS iniciativě a způsobu, jak se do ní zapojit."
 
-msgid "emails.submissionAck.subject"
-msgstr "Děkujeme za váš příspěvek pro {$contextName}"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"<p>Vážený/á {$recipientName},</p><p>Díky za váš příspěvek do periodika "
-"{$contextName}. Dostali jsme váš příspěvek {$submissionTitle}, a člen našeho "
-"redakčního týmu ho brzy zpracuje. Po přijetí prvního rozhodnutí vám bude "
-"zaslán e-mail a můžeme vás kontaktovat s požadavky na další informace.</p><p>"
-"Svůj příspěvek si můžete prohlédnout a sledovat jeho průběh v redakčním "
-"procesu na následující stránce:</p><p>Stránka příspěvku: "
-"{$submissionUrl}</p><p>Pokud jste byli odhlášeni, můžete se znovu přihlásit "
-"pod uživatelským jménem {$recipientUsername}</p><p>Pokud máte jakékoli "
-"dotazy, kontaktujte mě prosím ze <a href=\"{$submissionUrl}\">stránky "
-"příspěvku</a>.</p><p>Děkujeme, že jste si naše periodikum vybrali pro váš "
-"příspěvek.</p>{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Pokud je tato možnost povolena, je tento e-mail automaticky odeslán autorovi "
-"při odeslání příspěvku do časopisu. Obsahuje informace o sledování příspěvku "
-"v redakčním procesu a poděkování autorovi za příspěvek."
-
 msgid "emails.submissionUnsuitable.subject"
 msgstr "Nevhodný příspěvek"
 
@@ -220,9 +203,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Tento email oznamuje recenzentům příspěvku, že bylo dokončeno recenzní řízení. Obsahuje informace o článku a konečné rozhodnutí a poděkování recenzentům za jejich práci."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Byl /a jste přiřazen jako editor příspěvku pro {$contextName}"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "<p>Dobrý den {$recipientName},</p><p>Následující příspěvek byl přidělen Vám, "
@@ -234,6 +219,7 @@ msgstr ""
 "příspěvek vhodný pro tento časopis, odmítněte jej, prosím.</p><p>Předem "
 "děkujeme.</p><p>S pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Tento e-mail oznamuje editorovi sekce, že mu editor přidělil úkol dohlížet "
@@ -242,9 +228,11 @@ msgstr ""
 "účastníky. Tato šablona by měla být použita, pokud má editor sekce možnost "
 "zaznamenávat redakční rozhodnutí."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Pozvánka k recenzi"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>Domnívám se, že byste byl vynikajícím "
@@ -261,6 +249,7 @@ msgstr ""
 "ohledně příspěvku nebo recenzního řízení.</p><p>Děkujeme vám za zvážení této "
 "žádosti. Vaší pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Tento email od editora sekce pro recenzenta žádá, aby recenzent přijal nebo "
@@ -368,21 +357,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že recenzi nemůže zpracovat."
 
-msgid "emails.reviewAck.subject"
-msgstr "Poděkování za zpracování recenze článku"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Děkujeme za dokončení recenze příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Vážíme si Vaší práce vedoucí ke zkvalitnění článků, které publikujeme."
-
-msgid "emails.reviewAck.description"
-msgstr "Tento email posílá editor sekce, aby potvrdil přijetí zpracované recenze a poděkoval recenzentovi za jeho práci."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Připomínáme, abyste dokončili svou recenzi"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Vážený/á {$jméno příjemce},</p><p>Dovolujeme si jemně připomenout naši "
@@ -394,6 +373,7 @@ msgstr ""
 "Pokud potřebujete prodloužit lhůtu, kontaktujte nás, prosím. Těším se na "
 "vaši odpověď.</p><p>Předem vám děkujeme a jsme s pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Tento e-mail zasílá editor, aby recenzentovi připomněl, že má dokončit "
@@ -420,9 +400,11 @@ msgstr ""
 "Tento email posílá editor sekce recenzentovi, aby mu připomněl, že vypršel "
 "termín pro zpracování recenze."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Připomínáme, abyste dokončili svou recenzi"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Vážený/á {$recipientName}:</p><p>Tento email je automatickým připomenutím "
@@ -435,6 +417,7 @@ msgstr ""
 "lhůtu, kontaktujte nás, prosím. Těšíme se na vaši odpověď.</p><p>Předem vám "
 "děkujeme a jsme s pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Tento e-mail se automaticky odešle, pokud recenzent nedokončí recenzi do "
@@ -462,35 +445,6 @@ msgstr ""
 "pro zpracování recenze (viz Možnosti recenze v Nastavení časopisu, Krok 2) a "
 "je povolen přístup recenzenta na jedno kliknutí. Musí být povoleny a "
 "nakonfigurovány naplánované úlohy (viz konfigurační soubor stránky)."
-
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"Příspěvek {$submissionId} je připraven k závěrečné editaci pro periodikum "
-"{$contextAcronym}"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Chtěl bych vás požádat, abyste zredigoval článek "
-"&quot;{$submissionTitle}&quot; pro {$contextName} a postupujte přitom prosím "
-"podle následujících kroků:<br />\n"
-"1. Klikněte níže na URL příspěvku.<br />\n"
-"2. Otevřete libovolný soubor v sekci Soubory návrhů a proveďte redakční "
-"editaci, případě využijte diskusi pro editační fázi.<br />\n"
-"3.  Uložte zredigovaný soubor a nahrajte ho v editačním panelu.<br />\n"
-"4 . Upozorněte redaktora, že všechny soubory byly zeditovány a může začít "
-"produkční fáze.<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"URL příspěvku: {$submissionUrl}<br />\n"
-"Uživatelské jméno: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Tento e-mail zasílá editor technickému redaktorovi příspěvku s žádostí o "
-"zahájení závěrečných úprav příspěvku. Poskytuje informace o příspěvku a o "
-"přístupu k němu."
 
 msgid "emails.copyeditComplete.subject"
 msgstr "Redigování dokončeno "
@@ -643,11 +597,13 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "Tento email posílá editor sekce redaktorovi, aby mu poděkoval za dokončení finálního kola redigování a ocenil jeho práci."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "Příspěvek {$submissionId} je připraven do produkční fáze pro periodikum "
 "{$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Vážený/á{$recipientName},</p><p>Nový příspěvek  je připraven k "
@@ -661,6 +617,7 @@ msgstr ""
 "nebo pokud máte jakékoliv dotazy, kontaktujte mne, prosím. Děkujeme za "
 "spolupráci v rámci našeho periodika.</p><p>S pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Tento email posílá editor typografovi, aby mu oznámil, že mu byl přidělen "
@@ -670,6 +627,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Sazebnice dokončeny"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -680,6 +638,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Tento email posílá typograf editorovi, aby mu oznámil, že byly vytvořeny "
@@ -1000,9 +959,11 @@ msgstr ""
 msgid "emails.notificationMaillistWelcome.description"
 msgstr "Tento e-mail je odeslán neregistrovanému uživateli, který se právě zaregistroval do mailového seznamu oznámeními."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Váš příspěvek do periodika {$contextName} byl přijat"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>S potěšením vám oznamuji, že jsme se "
@@ -1020,63 +981,10 @@ msgstr ""
 "nás prosím pomocí redakčního systému <a href=\"{$submissionUrl}\">našeho "
 "periodika</a>.</p><p>S pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Tento e-mail oznamuje autorovi, že jeho příspěvek byl přijat k publikaci."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr ""
-"Vaše příspěvek byl podroben recenznímu řízení a nyní vás vyzýváme k "
-"předložení upravené verze"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Naše rozhodnutí je: požadujeme přepracování"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"V tomto e-mailu editor žádá autora o úpravy příspěvku na základě recenzí."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr ""
-"Váš příspěvek byl podroben recenznímu řízení – upravte ho, prosím, podle "
-"připomínek a podejte ho znovu"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Naše rozhodnutí je: znovu odeslat k recenzi"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Tento e-mail od editora nebo editora sekce autorovi oznamuje rozhodnutí o „"
-"úpravě a opětovném zaslání“ jeho příspěvku."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Váš příspěvek byl odmítnut"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Učinili jsme rozhodnutí ohledně Vašeho příspěvku do {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Naše rozhodnutí je: odmítnout příspěvek"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Tento e-mail oznamuje autorovi, že jeho příspěvek byl po recenzním řízení "
-"odmítnut."
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Zakoupení předplatného: Individuální"
@@ -1231,39 +1139,6 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "Tento e-mail umožňuje redaktorům vyžádat si další informace o referencích od autorů."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Rozhodnutí editora"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"Vážený(á) {$authors}:<br />\n"
-"<br />\n"
-"Dosáhli jsme rozhodnutí, které se týká vašeho příspěvku do {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Naše rozhodnutí je: odeslat k recenzi<br />\n"
-"<br />\n"
-"Webová adresa příspěvku: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Tento email od editora nebo editora sekce autorovi sděluje, že jejich příspěvek je odesílán k externí recenzi."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Další kroky pro zveřejnění vašeho příspěvku"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"<p>Vážený/á {$recipientName},</p><p>Píši vám z redakce periodika "
-"{$contextName} abychom vám dali vědět, že editace vašeho příspěvku "
-"{$submissionTitle} je hotová. Váš příspěvek nyní postoupí do produkční fáze, "
-"ve které budou připraveny finální sazebnice pro vydání. V případě potřeby "
-"další pomoci vás budeme kontaktovat..</p><p>Pokud máte jakékoliv dotazy, "
-"neváhejte nás kontaktovat pomocí redakčního systému  <a href=\""
-"{$submissionUrl}\">našeho periodika</a>.</p><p>S pozdravy,</p>{$signature}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Tento e-mail od editora nebo editora sekce autorovi oznamuje, že jejich podání je odesláno do produkční fáze."
-
 msgid "emails.giftAvailable.subject"
 msgstr "{$giftNoteTitle}"
 
@@ -1380,9 +1255,11 @@ msgstr ""
 msgid "emails.reviewRequestAttachedSubsequent.description"
 msgstr "Tento email je zaslán Editorem sekce recenzentovi, aby ho požádal o přijetí nebo odmítnutí opakované recenze příspěvku v druhém či dalším kole recenzního řízení. Zahrnuje příspěvek jako přílohu. Tato zpráva se používá v případě, že je v části Správa> Nastavení> Pracovní postup> Kontrola vybrána možnost Prověřování příloh emailu. (Jinak viz REVIEW_REQUEST_SUBSEQUENT.)"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Potvrzení příspěvku"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Dobrý den,<br />\n"
@@ -1393,6 +1270,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Pokud je tato funkce povolena, je tento e-mail automaticky zasílán autorům "
@@ -1414,9 +1292,11 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "Tento email je automaticky odeslán příslušnému editorovi článku, pokud autor odešle revidovanou verzi článku."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Požadavek na recenzi upravené verze příspěvku"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1450,6 +1330,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Tento e-mail od editora recenzentovi žádá, aby recenzent přijal nebo odmítl "
@@ -1491,9 +1372,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Tento email je automaticky odeslán, jakmile uplyne datum stanovené pro reakci  recenzenta (viz Možnosti kontroly v sekci Nastavení> Pracovní postup> Kontrola) a je povolen přístup jednoho recenzenta k recenzím. Plánované úlohy musí být povoleny a konfigurovány (viz konfigurační soubor webu)."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Bude nám schopen/schopna udělat recenzi příspěvku?"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>Tento mail dostáváte jako automatické "
@@ -1511,6 +1394,7 @@ msgstr ""
 "se na nás, prosím, obraťte.</p><p>Děkuji za zvážení této žádosti. Vaší "
 "pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Tento email se automaticky odesílá, jakmile uplyne datum splatnosti potvrzení recenzenta (viz Možnosti kontroly v sekci Nastavení> Pracovní postup> Kontrola) a přístup k recenznímu kontrole je zakázán. Plánované úlohy musí být povoleny a konfigurovány (viz konfigurační soubor webu)."
 
@@ -1548,44 +1432,6 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "Tento e-mail od editoru sekce k recenzentovi požaduje, aby recenzent přijal nebo odmítl úlohu přezkoumání příspěvku pro druhé nebo větší kolo recenzí. Poskytuje informace o podání, jako je název a abstrakt, datum splatnosti kontroly a přístup k samotnému podání. Tato zpráva se používá v případě, že je ve Správci> Nastavení> Pracovní postup> Kontrola vybrán proces Standardní kontrola a je povolen přístup jednoho recenzenta k recenzím."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Váš příspěvek byl odmítnut"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"<p>Vážený {$recipientName},</p><p>s lítostí Vám oznamuji, že po přezkoumání "
-"Vašeho příspěvku,  {$submissionTitle}, editor zjistil, že nesplňuje naše "
-"požadavky pro zveřejnění v {$contextName}.</p><p>Přeji Vám úspěch, pokud "
-"budete uvažovat o zaslání práce do jiného časopisu.</p><p>S "
-"pozdravem,</p>{$signature}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Tento e-mail je zaslán autorovi v případě, že editor původně odmítne jeho "
-"příspěvek ještě před recenzním řízením, protože nesplňuje požadavky pro "
-"zveřejnění v časopise"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Doporučení redaktora"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"<p>Vážený/á {$editors},</p><p>Na základě doporučení recenzentů bychom rádi "
-"učinili následující doporučení k příspěvku {$submissionTitle}.</p><p>Naše "
-"doporučení je:<br />{$recommendation}.</p><p>Navštivte, prosím <a href=\""
-"{$submissionUrl}\">navštivte, prosím, redakční stránku příspěvku</a> a zde "
-"pokračujte dle vydaného doporučení.</p><p>V případě jakýchkoli dotazů nás "
-"neváhejte kontaktovat.</p><p>S pozdravy,</p><p>{$senderName}</p>"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Tento automatický e-mail oznamuje hlavnímu redaktorovi nebo redaktorovi "
-"sekce, že bylo vydáno redakční doporučení týkající se předloženého "
-"příspěvku. Tato šablona se používá v případě, že redaktor může pouze "
-"doporučit redakční rozhodnutí a vyžaduje, aby oprávněný redaktor zaznamenal "
-"redakční rozhodnutí. Tuto možnost lze zvolit při přiřazování účastníků k "
-"příspěvku."
-
 msgid "emails.statisticsReportNotification.description"
 msgstr ""
 "Tento e-mail je automaticky zasílán měsíčně měsíčně editorům a správcům "
@@ -1615,12 +1461,14 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktivita redakce pro {$month}, {$year}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Tento e-mail zasílá editor recenzentovi, když je obnovena zrušená recenze. "
 "Pokud recenzent recenzi přijme a následně ji editor zruší, má editor možnost "
 "recenzi obnovit a umožnit tak recenzentovi v recenzi pokračovat."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>Nedávno jsme zrušili naši žádost o "
@@ -1633,6 +1481,7 @@ msgstr ""
 "\n"
 "Translated with www.DeepL.com/Translator (free version)"
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Můžete, prosím, stále ještě udělat recenzi pro časopis  {$contextName}?"
 

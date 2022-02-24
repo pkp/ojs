@@ -53,11 +53,6 @@ msgstr "Du har ikke tilladelse til at se dette tidsskrift."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Du kan kun se tidsskrifter, der er aktiveret."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"For at foretage eller redigere en indsendelse skal du sende en besked til "
-"tidsskriftets API endpoint."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Du kan ikke ændre en indsendelses tidsskrift."
 

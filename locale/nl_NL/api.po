@@ -54,10 +54,5 @@ msgstr ""
 "U heeft geen toestemming om dit e-mailsjabloon naar een ander tijdschrift te "
 "verplaatsen."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Om een inzending te maken of te bewerken, moet u een verzoek indienen bij "
-"het API-eindpunt van het tijdschrift."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "U kunt het tijdschrift van een inzending niet wijzigen."

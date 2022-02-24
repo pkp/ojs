@@ -402,6 +402,9 @@ msgstr "To Be Assigned"
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr "Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee."
 
+msgid "editor.article.payment.requestPayment"
+msgstr "Request Payment"
+
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "The cover image you requested to delete could not be found. It may have already been deleted. Try reloading the page."
 

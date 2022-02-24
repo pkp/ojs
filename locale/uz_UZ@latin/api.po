@@ -51,11 +51,6 @@ msgstr "Ushbu jurnalni ko'rish uchun sizda ruxsat yo'q."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Siz faqat yoqilgan jurnallarni ko'rishingiz mumkin."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Yuborish yoki tahrirlash uchun siz jurnalning API so'nggi nuqtasiga so'rov "
-"yuborishingiz kerak."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Sizda nashr qilinmagan nashrlarni ko'rish uchun ruxsat yo'q."
 

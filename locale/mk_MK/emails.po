@@ -11,6 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Читатели:<br />\n"
@@ -23,6 +24,7 @@ msgstr ""
 "Ви благодариме за непрекината заинтересираност за нашата работа,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Објавено е ново издание"
 
@@ -34,11 +36,13 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрација како рецензент со {$contextName}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Овој и-меил е испратен до новорегистрирани корисници за да ја потврдат "
 "нивната и-меил адреса."
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -52,6 +56,7 @@ msgstr ""
 "Ви благодарам,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Потвредете го вашиот профил"
 
@@ -143,6 +148,7 @@ msgstr "Ново известување од {$siteTitle}"
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Барање за архивирање за {$contextName}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "Овој и-меил е испратен до регистрирани читатели преку линкот „Извести "
@@ -153,6 +159,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "Барање за рецензија на насловот"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Овој и-меил е автоматски испратен кога рокот за достава на потврда на "
@@ -161,9 +168,11 @@ msgstr ""
 "Закажаните задачи мора да се овозможени и прилагодени(видете ја датотеката "
 "за прилагодување на веб-страницата)."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Потсетник за барањето за рецензија на насловот"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Овој и-меил од Секцискиот уредник до Рецензентот бара рецензентот да ја "
@@ -173,9 +182,11 @@ msgstr ""
 "Стандарден процес на рецензија во Раководење > Поставки > Тек на рабоатата > "
 "Рецензија. (Во спротивно погледнете  REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Барање за рецензија на насловот"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Овој и-меил го известува Секцискиот уредник дека уредникот му ја доделил "
@@ -183,6 +194,7 @@ msgstr ""
 "информации за поднесокот и како да се пристапи до веб-страницата на "
 "списанието."
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -196,33 +208,17 @@ msgstr ""
 "<br />\n"
 "Ви благодарам."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Уредувачко задолжение"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Овој и-меил, кога овозможен, автоматски е испратен до останатите автори кои "
 "не се корисници во OJS назначени во текот на процесот на поднесување."
 
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Ви благодариме за поднесувањето на вашиот ракопис, "
-"&quot;{$submissionTitle}&quot; до {$contextName}. Со помош на системот за "
-"онлајн раководење на списанитео кој што го користиме, ќе можете да го "
-"следите неговото напредување низ процесот на уредување со тоа што ќе се "
-"пријавите на веб-страницата:<br />\n"
-"<br />\n"
-"URL-адреса на поднесокот: {$submissionUrl}<br />\n"
-"Корисничко име: {$recipientUsername}<br />\n"
-"<br />\n"
-"Доколку имате било какви прашања, ве молам да ме контактирате. Ви "
-"благодариме што го земавте во предвид ова списание како место за вашата "
-"работа.<br />\n"
-"<br />\n"
-"{$signature}"
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Почитувани,<br />\n"
@@ -236,17 +232,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "Признание на поднесок"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Овој и-меил, кога овозможен, автоматски е испратен до авторот кога ќе го "
-"завршат процесот на поднесување ракопис до списанието. Им обезбедува "
-"информации за следење на поднесокот низ процесот на уредување и изразува "
-"благодарност до авторот за поднесокот."
-
-msgid "emails.submissionAck.subject"
 msgstr "Признание на поднесок"
 
 msgid "emails.lockssNewArchive.description"
@@ -360,6 +347,7 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "Текст од можен интерес"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Овој и-меил од Уредник за распоред до Секциски уредник ги известува дека "
@@ -368,78 +356,24 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Отисоците се завршени"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Овој и-меил од Секциски уредник до Уредник за распоред ги известува дека им "
 "е доделена задачата да извршат уредување на рапоредот на поднесокот. "
 "Обезбедува информации за поднесокот и како да се пристапи до истиот."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Барање за Отисок на труд"
 
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Овој и-меил е испратен од Секциски уредник до Уредник на поднесокот како "
-"барање да го започнат процесот на уредување. Обезбедува информации за "
-"поднесокот и како да се пристапи до истиот."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Барање за уредување"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Овој и-меил од Главен или Секциски уредник кој препорачува до Главен или "
-"Секциски уредник кој носи одлука ги известува за конечната препорака во "
-"однос на поднесокот."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Препорака на уредникот"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Овој и-меил од Главен или Секциски уредник до Автор ги известува за "
-"конечната одлука „одбиено“ во однос на нивниот поднесок."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Одлука на уредникот"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Овој и-меил од Главен или Секциски уредник до Автор ги известува за "
-"конечната одлука „повторно поднеси“ во однос на нивниот поднесок."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Одлука на уредникот"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Овој и-меил од Главен или Секциски уредник до Автор ги известува за "
-"конечната одлука „потребни се исправки“ во однос на нивниот поднесок."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Одлука на уредникот"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Овој и-меил од Главен или Секциски уредник до Автор ги известува дека "
-"нивниот поднесок се испраќа за обработка."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Одлука на уредникот"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Овој и-меил од Главен или Секциски уредник до Автор ги известува дека "
-"нивниот поднесок се испраќа за надворешна рецензија."
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Одлука на уредникот"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Овој и-меил од Главен или Секциски уредник до Автор ги известува за "
 "конечната одлука „прифати поднесок“ за нивиот поднесок."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Одлука на уредникот"
 
@@ -454,6 +388,7 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Автоматски потсетник за рецензија на поднесок"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Овој и-меил е автоматски испратен кога рокот за рецензија на рецензентот е "
@@ -462,6 +397,7 @@ msgstr ""
 "мора да се овозможени и прилагодени(видете ја датотеката за прилагодување на "
 "веб-страницата)."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Автоматски потсетник за рецензија на поднесок"
 
@@ -473,22 +409,15 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Потсетник за поднесување на рецензија"
 
-msgid "emails.reviewAck.description"
-msgstr ""
-"Овој и-меил е испратен од Секциски уредник за да потврди дека изработената "
-"рецензија е примена и да се му заблагодари на рецензентот за неговиот "
-"придонес."
-
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Овој и-меил е испратен од Секциски уредник како потсетник до рецензентот "
 "дека рокот за нивната рецензија е достигнат."
 
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Потсетник за поднесување на рецензија"
-
-msgid "emails.reviewAck.subject"
-msgstr "Потврда за рецензија на наслов"
 
 msgid "emails.reviewDecline.description"
 msgstr ""
@@ -508,11 +437,13 @@ msgstr ""
 msgid "emails.reviewConfirm.subject"
 msgstr "Може да рецензира"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Овој и-меил е испратен од Секциски уредник до Рецензент кој има рецензија во "
 "тек за да ги извести дека откажаната рецензија е обновена."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Барањето за рецензија е обновено"
 
@@ -557,6 +488,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "Барање за рецензија на наслов"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Овој и-меил од Секциски уредник до Рецензент бара рецензентот да ја прифати "
@@ -567,6 +499,7 @@ msgstr ""
 "рецензија во Раководење > Поставки > Тек на рабоатата > Рецензија. (Во "
 "спротивно погледнете REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Барање за рецензија на наслов"
 
@@ -627,6 +560,7 @@ msgstr ""
 "<br />\n"
 "Доколку имате дополнителни прашања, ве молам да не контактирате."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -663,6 +597,7 @@ msgstr ""
 msgid "emails.announcement.description"
 msgstr "Оваа е-пошта се испраќа кога ќе се креира ново соопштение."
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -748,6 +683,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -821,24 +757,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Уредничка активност за {$month}, {$year}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Овој и-меил е испратен до авторот доколку уредникот го одбие нивниот "
-"поднесок на почетокот, пред да биде испратен на рецензија"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"Донесовме одлука во однос на вашиот поднесок до {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Нашата одлука е: Одбиј го поднесок"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Одлука на уредникот"
 
 msgid "emails.notificationCenterDefault.body"
 msgstr "Ве молиме да ја внесете вашата порака."
@@ -1095,26 +1013,7 @@ msgstr ""
 "Ви благодариме за непрекинатиот интерес за нашата работа,<br />\n"
 "{$signature}"
 
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Уредувањето на вашиот поднесок, &quot;{$submissionTitle},&quot; е завршено. "
-"Сега го испраќаме на обработка.<br />\n"
-"<br />\n"
-"URL-адреса на поднесокот: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Донесовме одлука во однос на вашиот поднесок до {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Нашата одлука е: Испрати за корекција<br />\n"
-"<br />\n"
-"URL-адреса на поднесокот: {$submissionUrl}"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -1123,14 +1022,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Нашата одлука е: Прифати го поднесокот"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Ви благодариме што ја завршивте рецензијата на поднесокот, "
-"&quot;{$submissionTitle},&quot; за {$contextName}. Го цениме вашиот придонес "
-"кон квалитетот на трудовите кои ги објавуваме."
 
 msgid "emails.reviewDecline.body"
 msgstr ""
@@ -1153,6 +1044,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1162,40 +1054,6 @@ msgstr ""
 "можете да помогнете со процесот на рецензија на ова списание.<br />\n"
 "<br />\n"
 "Доколку имате дополнителни прашања, ве молам да ме контактирате."
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$уредници}: <br/>\n"
-"<br/>\n"
-"Препораката во врска со поднесувањето до {$textName}, "
-"&quot;{$missionTitle}&quot; е: {$recommendation}"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Донесовме одлука во врска со вашето поднесување до {$textName}, "
-"&quot;{$missionTitle}&quot;.<br />\n"
-"<br />\n"
-"Нашата одлука е: Потребни се ревизии"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Донесовме одлука во врска со вашиот поднесок до {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Нашата одлука е: Одбиен поднесок"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Донесовме одлука во врска со вашиот поднесок до {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Нашата одлука е: Поднеси повторно за рецензија"
 
 msgid "emails.reviewRemindAutoOneclick.body"
 msgstr ""
@@ -1214,6 +1072,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1252,6 +1111,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1365,6 +1225,7 @@ msgstr ""
 "{$missionTitle}&quot; од {$authors} објавено во Vol. {$volume}, бр. "
 "{$number} ({$year}) од {$textName} на &quot;{$submissionUrl}&quot;."
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1376,6 +1237,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1397,26 +1259,6 @@ msgstr ""
 "Доколку не можете да во моментов да ја превземете оваа работа или имате било "
 "какви прашања, ве молам да ме контактирате.  Ви бладариме за вашиот придонес "
 "кон ова списание."
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Би сакал да ве замолам да го превземете уредувањето на "
-"&quot;{$submissionTitle}&quot; за{$contextName} со тоа што ќе ги следите "
-"овие чекори.<br />\n"
-"1. Кликнете на URL-адресата на поднесокот подолу.<br />\n"
-"2. Отворете ги достапните датотеки под Датотеки за нацрт и извршете го "
-"вашето уредување, додека додавате Дискусии за уредување доколку се потребни.<"
-"br />\n"
-"3. Зачувајте ја уредената датотека(и), и прикачете ја на панелот Уредено.<br "
-"/>\n"
-"4. Известете го уредникот дека сите датотеки се подготвени и дека процесот "
-"на обработка може да започне.<br />\n"
-"<br />\n"
-"{$contextName} URL-адреса: {$contextUrl}<br />\n"
-"URL-адреса на поднесокот: {$submissionUrl}<br />\n"
-"Корисничко име: {$recipientUsername}"
 
 msgid "emails.reviewRequestAttached.body"
 msgstr ""

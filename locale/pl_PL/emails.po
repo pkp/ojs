@@ -131,9 +131,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Wiadomość jest wysyłana do nowych użytkowników systemu. Zawiera powitanie i dane do zalogowania."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Potwierdź założenie konta"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie,<br />\n"
@@ -147,6 +149,7 @@ msgstr ""
 "Z wyrazami szacunku, <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Wiadomość jest wysyłana do nowych użytkowników systemu, celem potwierdzenia poprawności adresu e-mail, dla którego zarejestrowano konto."
 
@@ -177,9 +180,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Wiadomość jest wysyłana do nowych recenzentów, celem powitania ich i przesłania danych do logowania."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nowy numer czasopisma"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Szanowni Państwo, <br />\n"
@@ -191,34 +196,9 @@ msgstr ""
 "Dziękujemy za zainteresowanie działalnością czasopisma,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Wiadomość jest wysyłana do zarejestrowanych czytelników. Zawiera informację o nowym numerze czasopisma."
-
-msgid "emails.submissionAck.subject"
-msgstr "Potwierdzenie zgłoszenia tekstu"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"dziękujemy za zgłoszenie tekstu &quot;{$submissionTitle}&quot; do "
-"opublikowania w czasopiśmie {$contextName}. Nasz system umożliwia "
-"sprawdzenie, na jakim etapie znajduje się nadesłany tekst:<br />\n"
-"<br />\n"
-"WWW tekstu: {$submissionUrl} <br />\n"
-"Nazwa użytkownika: {$recipientUsername}<br />\n"
-"<br />\n"
-"W razie dodatkowych pytań proszę o kontakt.<br />\n"
-"<br />\n"
-"Z wyrazami szacunku,\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Wiadomość jest automatycznie wysyłana do autora po zgłoszeniu tekstu do "
-"czasopisma. Dostarcza informacji o możliwości obserwowania procesu "
-"redakcyjnego zgłoszenia oraz podziękowania dla autora za dokonanie "
-"zgłoszenia."
 
 msgid "emails.submissionUnsuitable.subject"
 msgstr "Zgłoszony tekst niezgodny z zakresem czasopisma"
@@ -268,9 +248,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Powiadomienie przesyłane do recenzentów, potwierdzające ukończenie procesu recenzowania."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Przypisanie redaktora"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie,<br />\n"
@@ -282,12 +264,15 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Powiadomienie wysyłane do redaktora prowadzącego (np. redaktora działu) o przypisaniu go do zgłoszenia."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -319,6 +304,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o "
@@ -358,9 +344,11 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.description"
 msgstr "Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o przygotowanie recenzji artykułu, jego tytuł i abstrakt. Przesyłane, jeśli opcja one-click reviewer jest dostępna i jeśli recenzent nie zna dobrze systemu."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -395,6 +383,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Wiadomość od redaktora działu do recenzenta. Zawiera prośbę o przygotowanie recenzji artykułu, jego tytuł i abstrakt, a także zalecenie dot. zresetowania hasła w sytuacji, gdy recenzent nie pamięta danych do logowania. Wysyłana, jeśli recenzent pracować będzie w systemie."
 
@@ -513,24 +502,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Wiadomość wysyłana przez recenzenta do redaktora prowadzącego. Zawiera odrzucenie prośby o wykonanie recenzji."
 
-msgid "emails.reviewAck.subject"
-msgstr "Podziękowanie za wykonanie recenzji"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"dziękujemy za wykonanie recenzji tekstu &quot;\"{$submissionTitle}\"&quot;, "
-"zgłoszonego do czasopisma \"{$contextName}\". Doceniamy Pani/ Pana wkład w "
-"budowanie jakości naszego czasopisma.\n"
-"Z wyrazami szacunku."
-
-msgid "emails.reviewAck.description"
-msgstr "Ta wiadomość jest przesyłana przez redaktora prowadzącego do recenzenta. Zawiera potwierdzenie otrzymania recenzji i podziękowanie za wykonaną pracę."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Przypomnienie o terminie przygotowania recenzji"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie,<br />\n"
@@ -544,6 +520,7 @@ msgstr ""
 "Z wyrazami szacunku, <br />\n"
 "{$signature}<br />"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera przypomnienie o terminie wykonania recenzji."
 
@@ -568,9 +545,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Wiadomość wysyłana przez redaktora prowadzącego do recenzenta celem przypomnienia o terminie wykonania recenzji. Wysyłane do recenzenta mającego trudności z obsługą OJS."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatyczne przypomnienie o upłynięciu terminu wykonania recenzji"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -590,6 +569,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Wiadomość automatycznie wysłana po upłynięciu terminu nadesłania recenzji. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane."
 
@@ -614,9 +594,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Wiadomość automatycznie wysłana po upłynięciu terminu nadesłania recenzji. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Decyzja redakcji"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie,<br />\n"
@@ -626,77 +608,9 @@ msgstr ""
 "<br />\n"
 "Decyzja redakcji: Akceptacja zgłoszonego tekstu"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o decyzji w sprawie zgłoszonego tekstu."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Decyzja redakcji"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"podjęliśmy decyzję w sprawie tekstu \"{$submissionTitle}\", zgłoszonego do "
-"czasopisma \"{$contextName}\".<br />\n"
-"<br />\n"
-"Decyzja redakcji: Wymagane poprawki"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o \"Wymaganych poprawkach\" (drobne poprawki) zgłoszonego tekstu."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Decyzja redakcji"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"podjęliśmy decyzję w sprawie tekstu „{$submissionTitle}”, zgłoszonego do "
-"czasopisma \"{$contextName}\".<br />\n"
-"<br />\n"
-"Decyzja redakcji: Wymagane poprawki i ponowna recenzja"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o \"Wymaganych poprawkach i ponownej recenzji\" (gruntowne poprawki) zgłoszonego tekstu."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Decyzja redakcji"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"podjęliśmy decyzję w sprawie tekstu \"{$submissionTitle}\", zgłoszonego do "
-"czasopisma \"{$contextName}\".<br />\n"
-"<br />\n"
-"Decyzja redakcji: Odrzucenie zgłoszonego tekstu"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o odrzuceniu zgłoszonego tekstu."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Prośba do korektora"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"proszę o wykonanie korekty tekstu &quot;{$submissionTitle}&quot;, "
-"zgłoszonego do czasopisma {$contextName}.\n"
-"Proszę o postępowanie zgodnie z poniższymi krokami. <br />\n"
-"1. Kliknij na link do zgłoszonego tekstu znajdujący się poniżej.<br /> \n"
-"2. Pobierz pliki robocze i wykonaj korektę. Ustal zmiany z autorem używając "
-"narzędzi do dyskusji.<br />\n"
-"3. Zapisz poprawiony plik(i) i prześlij go do systemu.<br />\n"
-"4. Powiadom redaktora o ukończeniu korekty i przekazaniu tekstu do "
-"realizacji.<br />\n"
-"<br />\n"
-"WWW {$contextName}: {$contextUrl}<br />\n"
-"WWW tekstu: {$submissionUrl}<br />\n"
-"Nazwa użytkownika: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Ta wiadomość jest wysyłana przez redaktora prowadzącego do korektora i zawiera prośbę o wykonanie korekty wraz z informacją o lokalizacji plików do korekty."
 
 msgid "emails.copyeditComplete.subject"
 msgstr "Zakończona redakcja techniczna"
@@ -885,9 +799,11 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "Wiadomość od redaktora działu do redaktora technicznego zawierająca podziękowanie za realizację końcowego etapu redakcji technicznej."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Prośba o wykonanie składu"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -907,12 +823,14 @@ msgstr ""
 "Jeśli nie możesz podjąć się tego zadania lub masz jakiekolwiek pytania, "
 "proszę, skontaktuj się ze mną. Dziękujemy za Twój wkład w pracę czasopisma."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Wiadomość jest wysyłana przez redaktora prowadzącego do składacza. Zawiera prośbę o wykonanie składu tekstu."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Ukończony skład"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie {$recipientName},<br />\n"
@@ -924,6 +842,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Wiadomość jest wysyłana przez składacza do redaktora prowadzącego. Zawiera informację o ukończeniu składu."
 
@@ -1177,9 +1096,11 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "Wiadomość od korektora do autora, z prośbą o dodatkowe informacje na temat bibliografii."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1212,6 +1133,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o "
@@ -1306,41 +1228,11 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "Wiadomość automatycznie przesyłana do redaktora prowadzącego, po przesłaniu przez autora poprawionej wersji tekstu."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Decyzja redakcji"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"podjęllśmy decyzję w sprawie tekstu \"{$submissionTitle}\" zgłoszonego do "
-"czasopisma \"{$contextName}\".<br />\n"
-"<br />\n"
-"Decyzja redaktora: Przesłane do recenzji<br />\n"
-"<br />\n"
-"WWW tekstu: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera decyzję o przesłaniu zgłoszonego tekstu do recenzji."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Decyzja redakcji"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie {$authors}<br />\n"
-"<br />\n"
-"korekta tekstu \"{$submissionTitle}\". Tekst został przekazany do składu.<br "
-"/>\n"
-"<br />\n"
-"WWW tekstu: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o ukończeniu korekty i przekazaniu tekstu do etapu realizacji."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Potwierdzenie zgłoszenia tekstu"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Szanowny Panie/Szanowna Pani,<br />\n"
@@ -1351,6 +1243,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "Jeżeli jest włączona, ta wiadomość jest automatycznie wysyłana do innych autorów, którzy nie posiadają kont w OJS."
 
@@ -1362,38 +1255,6 @@ msgstr "Proszę o wpisanie wiadomości."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "Typowe (puste) pole wiadomości."
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Decyzja redakcji"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\tSzanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"podjęliśmy decyzję w sprawie tekstu  &quot;{$submissionTitle}&quot;, "
-"zgłoszonego do czasopisma \"{$contextName}\".<br />\n"
-"<br />\n"
-"Decyzja redakcji: Odrzucenie zgłoszonego tekstu"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. "
-"Zawiera powiadomienie o odrzuceniu zgłoszonego tekstu po ocenie wstępnej ("
-"przed procesem recenzji)"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Rekomendacja redaktora"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"przesyłam rekomendację w sprawie tekstu \"{$submissionTitle}\", zgłoszonego "
-"do czasopisma \"{$contextName}\": {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora przypisanego do tekstu do redaktora czasopisma. Zawiera powiadomienie o rekomendacji w sprawie tekstu."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Prośba o archiwizowanie czasopisma \"{$contextName}\""
@@ -1733,12 +1594,14 @@ msgstr ""
 msgid "emails.subscriptionNotify.subject"
 msgstr "Powiadomienia o subskrypcji"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Ten email jest wysłany przez Redaktora sekcji do recenzenta, który jest w "
 "trakcie recenzowania zgłoszenia, aby powiadomić, że anulowana recenzja "
 "została przywrócona."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1750,5 +1613,6 @@ msgstr ""
 "<br />\n"
 "W razie pytań, proszę się ze mną skontaktować."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Ponowienie prośby o recenzje"

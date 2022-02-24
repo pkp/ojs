@@ -23,13 +23,20 @@ describe('Data suite tests', function() {
 			'abstract': 'None.'
 		});
 
+		let authors = [
+			'Zita Woods',
+		];
+
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, 'Woods');
-		cy.sendToReview();
+		cy.clickDecision('Send for Review');
+		cy.recordDecisionSendToReview('Send for Review', authors, ['Finocchiaro: Arguments About Arguments']);
+		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Paul Hudson');
 		cy.assignReviewer('Aisla McCrae');
-		cy.recordEditorialDecision('Accept Submission');
-		cy.get('li.ui-state-active a:contains("Copyediting")');
+		cy.clickDecision('Accept Submission');
+		cy.recordDecisionAcceptSubmission(authors, [], []);
+		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Sarah Vogt');
 	});
 });

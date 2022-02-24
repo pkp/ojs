@@ -17,14 +17,14 @@ msgstr "The announcement you requested is not part of this journal."
 msgid "api.emails.403.disabled"
 msgstr "The email notification feature has not been enabled for this journal."
 
+msgid "api.submissions.400.wrongContext"
+msgstr "The submission you requested is not in this journal."
+
 msgid "api.submissions.403.cantChangeContext"
 msgstr "You can not change the journal of a submission."
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "You do not have permission to view unpublished issues."
-
-msgid "api.submissions.403.contextRequired"
-msgstr "To make or edit a submission you must make a request to the journal's API endpoint."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "You can only view journals that have been enabled."

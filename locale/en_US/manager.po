@@ -128,7 +128,6 @@ msgstr "All costs must be positive numeric values (decimal points are allowed)"
 msgid "manager.payment.generalFees"
 msgstr "General Fees"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr "The Association Membership will appear in About the Journal under Policies."
 
@@ -276,7 +275,6 @@ msgstr "Items can only be submitted by Editors and Section Editors."
 msgid "manager.sections.editors"
 msgstr "Section editors"
 
-#, fuzzy
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "At least one section must be active. Visit the workflow settings to disable "
@@ -1978,3 +1976,5 @@ msgstr "Article DOIs"
 
 msgid "doi.manager.issueDois"
 msgstr "Issue DOIs"
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr "This email notifies the author that their submission is being declined, before the review stage, because the submission does not meet the requirements for publication in the journal."

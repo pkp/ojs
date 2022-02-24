@@ -62,9 +62,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Ce courriel est envoyé aux utilisateurs nouvellement inscrits pour leur souhaiter la bienvenue à la revue et leur faire connaître leur nom d'utilisateur et leur mot de passe."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Parution du dernier numéro"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Lecteurs:<br />\n"
@@ -74,6 +76,7 @@ msgstr ""
 "Nous vous remercions de l'intérêt que vous portez à notre revue,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Ce courriel est envoyé à tous les lecteurs inscrits, via le lien « Aviser les utilisateurs » sur la page d'accueil du rédacteur. Il avise les lecteurs qu'un nouveau numéro est publié et les invite à visiter la revue en cliquant sur le URL fourni."
 
@@ -143,30 +146,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Ce courriel encourage le destinaire à participer à l'initiative LOCKSS et à inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet."
 
-msgid "emails.submissionAck.subject"
-msgstr "Accusé de réception de la soumission"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Nous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$contextName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition simplement en accédant au site Web de la revue.<br />\n"
-"<br />\n"
-"URL du manuscrit : {$submissionUrl}<br />\n"
-"Nom d'utilisateur : {$recipientUsername}<br />\n"
-"<br />\n"
-"Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Ce courriel, lorsqu'activé, est envoyé automatiquement à un auteur ou une "
-"auteure quand il ou elle a complété le processus de soumission d'un "
-"manuscrit à la revue. Il fournit les informations relatives au suivi de la "
-"soumission à travers le processus éditorial, et remercie l'auteur ou "
-"l'auteure pour sa soumission."
-
 msgid "emails.submissionComment.subject"
 msgstr "Commentaires sur une soumission"
 
@@ -195,9 +174,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Ce courriel avise les rapporteurs d'une soumission que le processus d'évaluation est complété. Il inclut de l'information au sujet de l'article et de la décision prise, et remercie les rapporteurs de leur contribution."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Assignation d'une soumission"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -209,12 +190,15 @@ msgstr ""
 "<br />\n"
 "Merci."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Ce courriel avise un Rédacteur de rubrique que le Rédacteur lui a assigné la tâche de suivre une soumission durant le processus éditorial. Il fournit de l'information sur la soumission, et comment accéder au site Web de la revue."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Demande d'évaluation d'un article"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -237,6 +221,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Ce courriel du Rédacteur de rubrique à un Rapporteur demande que le "
@@ -349,21 +334,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à la demande d'évaluation, pour aviser ce dernier qu'il ne peut effectuer l'évaluation."
 
-msgid "emails.reviewAck.subject"
-msgstr "Accusé de réception de l'évaluation d'une soumission"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Nous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions."
-
-msgid "emails.reviewAck.description"
-msgstr "Ce courriel est envoyé par le Rédacteur de rubrique, pour accuser réception d'une évaluation terminée et remercier le rapporteur de sa contribution."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Rappel d'évaluation d'une soumission"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -378,6 +353,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Ce courriel est envoyé par le Rédacteur de rubrique pour rappeler à un rapporteur que son évaluation est due."
 
@@ -404,9 +380,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Ce courriel est envoyé par le Rédacteur de rubrique à un rapporteur pour lui rappeler que son évaluation est due."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -421,6 +399,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Ce courriel est envoyé automatiquement quand la date due d'un rapporteur est dépassée. (Voir Options d'évaluation à l'Étape 2 de la Configuration de la revue) et que l'accès en « un clic » est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de Configuration du site)."
 
@@ -449,35 +428,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Ce courriel est envoyé automatiquement quand la date d'échéance de l'évaluation est dépassée (voir Options d'évaluation à l'Étape 2 de Configuration de la revue) et que l'accès en « un clic » à un rapporteur est activé. Les Tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site)."
 
-msgid "emails.copyeditRequest.subject"
-msgstr "Demande de révision d'une soumission"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"J'aimerais que vous effectuiez la révision du manuscrit intitulé « "
-"{$submissionTitle} » pour la revue {$contextName} à l'aide des étapes "
-"suivantes.<br />\n"
-"1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n"
-"2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales "
-"et effectuer votre révision, tout en ajoutant des discussions sur la "
-"révision, le cas échéant.<br />\n"
-"3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la "
-"section Version(s) révisée(s).<br />\n"
-"4. Informer le rédacteur ou la rédactrice que tous les fichiers ont été "
-"révisés et que l'étape de production peut débuter.<br />\n"
-"<br />\n"
-"URL de la revue {$contextName} : {$contextUrl}<br />\n"
-"URL de la soumission : {$submissionUrl}<br />\n"
-"Nom d'utilisateur-trice : {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Ce courriel est envoyé par le Rédacteur de rubrique à un Réviseur, pour lui demander de commencer le processus de révision. Il fournit l'information sur la soumission et comment accéder à celle-ci."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Demande de mise en page des épreuves"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -502,12 +457,14 @@ msgstr ""
 "des questions, veuillez communiquer avec moi. Je vous remercie de votre "
 "collaboration."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Ce courriel envoyé par le Rédacteur de rubrique au Responsable de la mise en page, avise ce dernier qu'il a été assigné à la tâche de faire la mise en page de la soumission. Il fournit de l'information sur la soumission et comment y accéder."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Mise en page des épreuves terminée"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -518,6 +475,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Ce courriel du Responsable de la mise en page au Rédacteur de rubrique l'avise que le processus de la mise en page est terminé."
 
@@ -785,9 +743,11 @@ msgstr ""
 msgid "emails.subscriptionAfterExpiryLast.description"
 msgstr "Ce courriel avise un abonné que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Valider votre compte"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -799,6 +759,7 @@ msgstr ""
 "Merci,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et de son mot de passe."
 
@@ -837,9 +798,11 @@ msgstr ""
 msgid "emails.notification.description"
 msgstr "Ce courriel est envoyé aux utilisateurs inscrits qui ont choisi de recevoir par courriel ce type d'avis."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Décision du rédacteur"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -848,54 +811,9 @@ msgstr ""
 "<br />\n"
 "Notre décision est d'accepter votre soumission."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Décision du rédacteur"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"Nous avons pris une décision concernant votre soumission « {$submissionTitle}"
-" » à la revue {$contextName}.<br />\n"
-"<br />\n"
-"Notre décision est de vous demander une nouvelle version de votre soumission."
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «révision requise» concernant leur soumission."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Décision du rédacteur"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"Nous avons pris une décision concernant votre soumission « {$submissionTitle}"
-" » à la revue {$contextName}.<br />\n"
-"<br />\n"
-"Notre décision est de vous demander d'apporter des révisions à votre "
-"soumission et de la soumettre à nouveau."
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission à redéposer» concernant leur soumission."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Décision du rédacteur"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"Nous avons pris une décision concernant votre soumission « {$submissionTitle}"
-" » à la revue {$contextName}.<br />\n"
-"<br />\n"
-"Notre décision est de refuser votre soumission."
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission refusée» concernant leur soumission."
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Souscription à un abonnement individuel"
@@ -1057,41 +975,6 @@ msgstr ""
 "auteures des renseignements supplémentaires à propos des références "
 "bibliographiques."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Décision du rédacteur"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Nous avons pris une décision concernant votre soumission à {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Notre décision est d'envoyer votre soumission en évaluation<br />\n"
-"<br />\n"
-"URL de la soummission : {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie que leur soumission a été envoyé à une source externe pour son évaluation."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Décision du rédacteur"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"L'édition de votre soumission « {$submissionTitle} » est terminée. Nous "
-"l'envoyons maintenant en production.<br />\n"
-"<br />\n"
-"URL de la soumission : {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Ce courriel du rédacteur, de la rédactrice, du rédacteur de rubrique ou de "
-"la rédactrice de rubrique à un auteur ou une auteure l'informe que sa "
-"soumission est envoyée en production."
-
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Un message à propos de {$contextName}"
 
@@ -1152,9 +1035,11 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "Ce courriel est envoyé automatiquement au rédacteur attribué quand un auteur téléverse une version révisée d'un article."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Rappel de demande d'évaluation d'un article"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1187,6 +1072,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un rapporteur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès du rapporteur en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site)."
 
@@ -1227,9 +1113,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un rapporteur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès du rapporteur en un clic est activé. Les tâches planifiées doivent être configurées et activées (voir le fichier de configuration du site)."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Demande d'évaluation d'un article"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -1264,6 +1152,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "Ce courriel du rédacteur de section à un rapporteur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé. (Autrement voir REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
@@ -1302,9 +1191,11 @@ msgstr ""
 msgid "emails.reviewRequestAttachedSubsequent.description"
 msgstr "Ce courriel du responsable de rubrique à un rapporteur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'évaluation et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision avec pièce jointe est sélectionné dans Administration> Paramètres> Flux des travaux> Révision.(Autrement voir REVIEW_REQUEST_SUBSEQUENT.)"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Accusé de réception de la soumission"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Bonjour,<br />\n"
@@ -1315,38 +1206,11 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteurs, i.e. ceux qui ne sont pas l'utilisateur enregistré faisant la soumission."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Décision éditoriale"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors},<br />\n"
-"<br />\n"
-"Nous avons pris une décision concernant votre soumission « {$submissionTitle}"
-" » à la revue {$contextName}.<br />\n"
-"<br />\n"
-"Notre décision est de refuser votre soumission"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr "Ce mail est envoyé à l'auteur si le rédacteur refuse la soumission avant même de la faire évaluer"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Recommandation éditoriale"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors},<br />\n"
-"<br />\n"
-"La recommandation concernant la soumission « {$submissionTitle} » à la revue "
-"{$contextName} est de {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr "Ce courriel du rédacteur en chef ou du rédacteur en chef de la section à l'intention des rédacteurs en chef décideurs ou des rédacteurs en chef de la section les avise d'une recommandation finale concernant la soumission."
-
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Réintégration de la demande d'évaluation"
 
@@ -1397,12 +1261,14 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Activité éditoriale pour {$month} {$year}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Ce courriel est envoyé par le rédacteur ou la rédactrice de la rubrique à un "
 "évaluateur ou une évaluatrice qui a une évaluation en cours pour l'informer "
 "que la demande préalablement annulée à été rétablie."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName},<br />\n"

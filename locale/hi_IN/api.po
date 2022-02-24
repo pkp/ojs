@@ -28,12 +28,6 @@ msgstr "आपके पास अप्रकाशित अंको को �
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
 # (pofilter) simplecaps: Different capitalization
-msgid "api.submissions.403.contextRequired"
-msgstr "सबमिशन बनाने या संपादित करने के लिए आपको जर्नल के एपीआई एंडपॉइंट का अनुरोध करना चाहिए."
-
-# (pofilter) doublespacing: Different use of double spaces
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) numbers: Different numbers
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "आप केवल उन जर्नल को देख सकते हैं जिन्हें सक्षम किया गया है."
 

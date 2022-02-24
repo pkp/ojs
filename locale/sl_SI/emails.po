@@ -118,9 +118,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Email se pošlje novoregistriranemu uporabniku kot dobrodošlica, skupaj z uporabniškim imenom in geslom za prijavo v sistem."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Potrdite svoj račun"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -134,6 +136,7 @@ msgstr ""
 "Hvala lepa,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Email se pošlje novo registiranemu uporabniku, da potrdi svoj email naslov."
 
@@ -155,9 +158,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Email se pošlje novo registriranim recenzentom kot dobrodošlica, skupaj z uporabniškim imenom in geslom za dostop do spletišča revije."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Izid nove številke"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Sptoštovani!<br />\n"
@@ -169,6 +174,7 @@ msgstr ""
 "Hvala za zanimanje za naše delo,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Email se pošlje vsem registriranim bralcem preko urednikove funkcionalnosti \"Obvesti uporabnike\". Email obvesti bralce o novi številki in jih povabi k obisku revije preko spletne povezave."
 
@@ -231,28 +237,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Email vsebuje prošnjo za naslovnika, da se vključi v LOCKSS iniciativo in za vključitev te revije v njihov arhiv. Vsebuje tudi informaciej o LOCKKS iniciativi in načinu vključitve v iniciativo."
 
-msgid "emails.submissionAck.subject"
-msgstr "Potrditev oddaje prispevka"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Hvala za oddajo rokopisa, &quot;{$submissionTitle}&quot; v {$contextName}. S sistemom za spletno urejanje revij, ki ga uporabljamo, lahko spremljate njegov napredek v procesu urejanja, če se prijavite na spletno stran revije:<br />\n"
-"<br />\n"
-"URL povezava do prispevka: {$submissionUrl}<br />\n"
-"Uporabniško ime: {$recipientUsername}<br />\n"
-"<br />\n"
-"Če imate kakršnokoli vprašanje, se lahko obrnete name. Hvala, da ste izbrali našo revijo za objavo vašega dela.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr "Email, če je vključen, se avtomatično pošlje avtorju na koncu oddaje rokopisa v revijo. Vključuje informacijo o sledenju prispevku skozi uredniški postopek in zahvalo za oddan prispevek."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Potrditev oddaje prispevka"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Spoštovani,<br />\n"
@@ -263,6 +252,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "Ta email, če je vključen, se avtomatično pošlje po uspešni oddaji vsem soavtorjem, ki so navedeni kot soavtorji."
 
@@ -280,9 +270,11 @@ msgstr ""
 msgid "emails.submissionUnsuitable.description"
 msgstr ""
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Uredniška zadolžitev"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -294,12 +286,15 @@ msgstr ""
 "<br />\n"
 "Hvala."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Email je obvestilo urendiku rubrike, da je zadolžen za vodenje prispevka skozi urendiški postopek. Vsebuje informacije o prispevku in dostopu do spletne strani revije."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Prošnja za recenzijo prispevka"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -331,12 +326,15 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi ali zavrne oipravljanje recenzije. Vsebuje informaciej o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, ko je v nastavitvah izbran standarden recnezijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija. (Drugače poglej REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Opomnik za recenzijo prispevka"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -371,6 +369,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Ta email se pošlje avtomatsko, ko recenzent prekorači rok za potrditev opravljanja recenzije (več: Recenzijske nastavitve pri Nastavitve  > Potek dela > Recenzija) in je izključena opcija za recenzentski dostop z enim klikom. Opozorilo: administrator spletišča mora v nastavitveni datoteki spletišča nastaviti \"Scheduled tasks\"."
 
@@ -463,9 +462,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi ali zavrne oipravljanje recenzije. Vsebuje prispevek v priponki. Email se uporablja, ko je v nastavitvah izbran \"Email-attached\" recnezijski proces (Upravljanje > Nastavitve > Potek dela > Recenzija). (v nasprotnem primeru glej REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Prošnja za recenzijo prispevka"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -499,6 +500,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. Vsebuje informacije o prispevku kot so naslov in izvleček, datum do dokončanja recenzije ter dostopom do prispevka. Email se uporablja, kadar je uporabljen standardni recenzisjki proces (Upravljanje > Nastavitve > Potek dela > Recenzija). (Drugače glej REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
@@ -605,21 +607,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Ta email pošlje recenzent urendiku rubrike kot odgovor na prošnjo za recenzijo v primeru, ko obvešča urednika rubrike, da recenzijo zavrne."
 
-msgid "emails.reviewAck.subject"
-msgstr "Zahvala za recenzijo prispevka"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Hvala za dokončanje recenzije prispevka, &quot;{$submissionTitle},&quot; za revijo {$contextName}. Zahvaljujemo se za vaš prispevek k kvaliteti del, ki jih objavljamo."
-
-msgid "emails.reviewAck.description"
-msgstr "Ta email pošlje uredenik rubrike recenzentu kot potrditev opravljene recenzije in zahvala zanjo."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Opomnik za recenzijo prispevka"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -641,6 +633,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Ta email pošlje urednik rubrike recenzentu kot opomnik za opravljanje recenzije."
 
@@ -666,9 +659,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Ta email pošlje urednik rubrike recenzentu kot opomnik za opravljanje recenzije."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Avtomatski opomnik za recenzijo prispevka"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -691,6 +686,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Ta email se pošlje recenzentu avtomatično, ko poteče rok za opravljanje recenzije (več v recenzijskih nastavitveh v Nastavitve > Potek dela > Recenzija) in je izključena opcija za recenzentski dostop z enim klikom. Opozorilo: administrator spletišča mora v nastavitveni datoteki spletišča nastaviti \"Scheduled tasks\"."
 
@@ -717,9 +713,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Ta email se pošlje recenzentu avtomatično, ko poteče rok za opravljanje recenzije (več v recenzijskih nastavitveh v Nastavitve > Potek dela > Recenzija) in je vključena opcija za recenzentski dostop z enim klikom. Opozorilo: administrator spletišča mora v nastavitveni datoteki spletišča nastaviti \"Scheduled tasks\"."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Uredniška odločitev"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -728,111 +726,15 @@ msgstr ""
 "<br />\n"
 "Naša odločitev je: Prispevek sprejet"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Ta eamil pošlje urednik avtorju s končno odločitvijo, da je prispevek sprejet uza objavo."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Uredniška odločitev"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />\n"
-"<br />\n"
-"Naša odločitev je: Prispevek se pošlje v recenzijo<br />\n"
-"<br />\n"
-"URL povezava do prispevka: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Ta email pošlje urednik avtorju z obvestilom, da je šel prispevek v recenzijo."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Uredniška odločitev"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Urejanje vašega prispevka, &quot;{$submissionTitle},&quot; je končano. Prispevek bom poslali v produkcijo.<br />\n"
-"<br />\n"
-"URL povezava do prispevka: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Ta email pošlje urednik avtorju z obvestilom, da je šel prispevek v produkcijo."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Uredniška odločitev"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />\n"
-"<br />\n"
-"Naša odločitev je: Potrebni so popravki"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Ta email pošlje urednik avtorju z obvestilom, da so potrebne določene spremembe prispevka."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Uredniška odločitev"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; "
-"za revijo {$contextName}.<br />\n"
-"<br />\n"
-"Naša odločitev je: Potreben je ponoven krog recenzije"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Ta email pošlje urednik avtorju z obvestilom, da je potrebna ponovna recenzija prispevka."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Uredniška odločitev"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Sprejeli smo odločitev glede vašega prispevka &quot;{$submissionTitle}&quot; za revijo {$contextName}.<br />\n"
-"<br />\n"
-"Naša odločitev je: Prispevek se zavrne"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Ta email pošlje urednik avtorju z obvestilom, da je objava prispevka zavrnjena."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Prošnja za lektoriranje"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Rad bi vas prosil, da opravite lektoriranje prispevka "
-"&quot;{$submissionTitle}&quot; za publikacijo {$contextName} po naslednjih "
-"korakih:<br />\n"
-"1. Kliknite na URL povezavo do prispevka spodaj.<br />\n"
-"2. Odprite vse datoteke, ki so na voljo pod Osnutki datotek in opravite "
-"lektroranje ter hkrati dodajte tudi razprave za lektoriranje, kot se vam zdi "
-"potrebno.<br />\n"
-"3. Shranite vse datoteke in jih naložite v razdelek z lektoriranimi "
-"datotekami.<br />\n"
-"4. Obvestite urednika, da so vse datoteke pripravljene in se lahko začne "
-"proces produkcije.<br />\n"
-"<br />\n"
-"Povezava do publikacije {$contextName}: {$contextUrl}<br />\n"
-"Povezava do prispevka: $submissionUrl}<br />\n"
-"Uporabniško ime: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Ta email pošlje urednik rubrike lektorju prispevka s prošnjo za lektoriranje. Vsebuje kratka navodila za lektoranje in dostop do prispevka."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Prošnja za prelom"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -853,12 +755,14 @@ msgstr ""
 "Če v tem trenutku ne morete opraviti tega dela ali imate kakšno vprašanje, "
 "se prosim obrnite name. Hvala za vaš trud za to publikacijo."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Ta email pošlje urednik rubrike grafičnemu uredniku prispevka s prošnjo za pripravo preloma prispevka. Vsebuje kratka navodila za prirpavo preloma in dostop do prispevka."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Prelom končan"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -869,6 +773,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Ta email pošlje grafični urednik uredniku prispevka z obvestilom, da je prelom prispevka končan."
 
@@ -1226,43 +1131,13 @@ msgstr "Prosimo, vnesite vaše sporočilo."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Privzeto (prazno) sporočilo, ki se uporablja v centru za obvestila."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Uredniška odločitev"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"V uredništvu revije {$contextName} smo sprejeli odločitev glede vašega "
-"prispevka &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Naša odločitev je: Prispevek se zavrne"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Email se pošlje avtorju, če se urednik odloči zavrniti prispevek še pred "
-"postopkom recenzije"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Uredniško priporočilo"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"Moje priporočilo glede prispevka &quot;{$submissionTitle}&quot; v reviji {$contextName}, je: {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Email pošlje urednik (rubrike), ki lahko odda le priporočilo, in z njim "
-"obvesti uredništvo o svojem priporočilu glede prispevka."
-
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Email pošlje urednik rubrike recenzentu, ki mu je bila odvzeta zadolžitev za "
 "recenzijo in ponovno dodeljena."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1273,6 +1148,7 @@ msgstr ""
 "<br />\n"
 "Če imate kakršnakoli vprašanja, se lahko obrnete name."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Ponovna prošnja za recenzijo"
 

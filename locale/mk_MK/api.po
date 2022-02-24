@@ -47,11 +47,6 @@ msgstr "Немате дозвола да го гледате ова списан
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Може да гледате само списанија за кои ви е  овозможено."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"За да се направи или корегира поднесок мора да имате барање до крајната "
-"точка од API на списанието."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Немате дозвола за гледање необјавени броеви."
 

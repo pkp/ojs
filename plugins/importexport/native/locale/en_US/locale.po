@@ -41,7 +41,6 @@ msgstr "Please upload a file under \"Import\" in order to continue."
 msgid "plugins.importexport.native.importComplete"
 msgstr "The import completed successfully. The following items were imported:"
 
-#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Usage: {$scriptName} {$pluginName} [command] ...\n"

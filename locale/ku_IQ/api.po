@@ -45,11 +45,6 @@ msgstr "تۆ ڕێگەپێدراو نیت بۆ بینینی ئەم گۆڤارە."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "تۆ تەنیا دەتوانیت ئەو گۆڤارانە ببینیت کە بڵاو کراونەتەوە."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"بۆ پێشکەشکردن یان دەستکاریکردنی پێشکەشکردنەکەت تۆ دەبێت داواکاریی پێشکەشی "
-"گۆڤار بکەیت."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "تۆ ڕێگەپێدراو نیت بۆ بینینی ئەو ژمارانەی بڵاو نەکراونەتەوە."
 

@@ -18,6 +18,8 @@ import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
 
 use APP\notification\Notification;
 use APP\template\TemplateManager;
+use PKP\decision\DecisionType;
+use PKP\decision\types\NewExternalReviewRound;
 use PKP\linkAction\LinkAction;
 
 use PKP\linkAction\request\AjaxModal;
@@ -76,5 +78,11 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler
             ],
             Notification::NOTIFICATION_LEVEL_TRIVIAL => []
         ];
+    }
+
+    protected function getNewReviewRoundDecisionType(int $stageId): DecisionType
+    {
+        // OJS only supports the external review stage
+        return new NewExternalReviewRound();
     }
 }

@@ -13,20 +13,20 @@ describe('Data suite tests', function() {
 	let author;
 
 	before(function() {
-		submission = {
-			section: 'Articles',
-			prefix: '',
-			title: 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran',
-			subtitle: '',
-			abstract: 'The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (>56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.',
-		}
-
 		author = {
 			username: 'vkarbasizaed',
 			givenName: 'Vajiheh',
 			familyName: 'Karbasizaed',
 			affiliation: 'University of Tehran',
 			country: 'Iran, Islamic Republic of',
+		}
+		submission = {
+			section: 'Articles',
+			prefix: '',
+			title: 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran',
+			subtitle: '',
+			abstract: 'The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (>56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.',
+			authors: [author.givenName + ' ' + author.familyName]
 		}
 	});
 
@@ -37,14 +37,18 @@ describe('Data suite tests', function() {
 
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, author.familyName);
-		cy.sendToReview();
+		cy.clickDecision('Send for Review');
+		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Paul Hudson');
-		cy.recordEditorialDecision('Accept Submission');
-		cy.get('li.ui-state-active a:contains("Copyediting")');
+		cy.clickDecision('Accept Submission');
+		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Maria Fritz');
-		cy.recordEditorialDecision('Send To Production');
-		cy.get('li.ui-state-active a:contains("Production")');
+		cy.clickDecision('Send To Production');
+		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Graham Cox');
 		cy.assignParticipant('Proofreader', 'Catherine Turner');
 

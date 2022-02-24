@@ -28,11 +28,6 @@ msgstr "Bu dergiyi görüntüleme yetkiniz bulunmuyor."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Yalnızca izin verilen dergileri görüntüleyebilirsiniz."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Bir gönderi yapmak veya düzenlemek için derginin API adresine bir sorgu "
-"yapmanız gereklidir."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Bir gönderinin dergisini değiştiremezsiniz."
 

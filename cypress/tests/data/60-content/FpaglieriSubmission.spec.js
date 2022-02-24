@@ -17,22 +17,28 @@ describe('Data suite tests', function() {
 			'country': 'Italy',
 		});
 
-		cy.createSubmission({
+		var submission = {
 			'section': 'Reviews',
 			'title': 'Hansen & Pinto: Reason Reclaimed',
 			'abstract': 'None.',
-		});
+			'authors': ['Fabio Paglieri'],
+		};
+		cy.createSubmission(submission);
 
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, 'Paglieri');
-		cy.sendToReview();
+		cy.clickDecision('Send for Review');
+		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Adela Gallego');
-		cy.recordEditorialDecision('Accept Submission');
-		cy.get('li.ui-state-active a:contains("Copyediting")');
+		cy.clickDecision('Accept Submission');
+		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Sarah Vogt');
-		cy.recordEditorialDecision('Send To Production');
-		cy.get('li.ui-state-active a:contains("Production")');
+		cy.clickDecision('Send To Production');
+		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Stephen Hellier');
 		cy.assignParticipant('Proofreader', 'Sabine Kumar');
 	});

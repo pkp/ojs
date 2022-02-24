@@ -22,6 +22,12 @@ use PKP\submissionFile\SubmissionFile;
 
 class Repository extends BaseRepository
 {
+    public array $reviewFileStages = [
+        SubmissionFile::SUBMISSION_FILE_REVIEW_REVISION,
+        SubmissionFile::SUBMISSION_FILE_REVIEW_ATTACHMENT,
+        SubmissionFile::SUBMISSION_FILE_REVIEW_FILE,
+    ];
+
     public function add(SubmissionFile $submissionFile): int
     {
         $galley = null;
