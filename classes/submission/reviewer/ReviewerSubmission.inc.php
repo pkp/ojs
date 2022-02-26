@@ -27,10 +27,6 @@ class ReviewerSubmission extends Submission
     /** @var array SubmissionComments peer review comments of this submission */
     public $peerReviewComments;
 
-    /** @var array the editor decisions of this submission */
-    public $editorDecisions;
-
-
     /**
      * Get/Set Methods.
      */
@@ -113,26 +109,6 @@ class ReviewerSubmission extends Submission
     public function setReviewerFullName($reviewerFullName)
     {
         $this->setData('reviewerFullName', $reviewerFullName);
-    }
-
-    /**
-     * Get editor decisions.
-     *
-     * @return array
-     */
-    public function getDecisions()
-    {
-        return $this->editorDecisions;
-    }
-
-    /**
-     * Set editor decisions.
-     *
-     * @param array $editorDecisions
-     */
-    public function setDecisions($editorDecisions)
-    {
-        return $this->editorDecisions = $editorDecisions;
     }
 
     /**

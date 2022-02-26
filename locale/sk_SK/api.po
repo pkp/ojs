@@ -45,11 +45,6 @@ msgstr "Na prehliadanie tohto časopisu nemáte oprávnenie."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Môžete zobraziť iba povolené časopisy."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Ak chcete odoslať alebo upraviť príspevok, musíte odoslať požiadavku do "
-"koncového bodu API časopisu."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nemáte právo vidieť nepublikované čísla."
 

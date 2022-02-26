@@ -30,6 +30,7 @@ describe('Data suite tests', function() {
 
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, 'Williamson');
-		cy.recordEditorialDecision('Decline Submission');
+		cy.clickDecision('Decline Submission');
+		cy.recordDecisionDecline(['Valerie Williamson']);
 	});
 });

@@ -3896,8 +3896,17 @@
 						"schema": {
 							"type": "object",
 							"properties": {
+								"documentType": {
+									"type": "string"
+								},
 								"id": {
 									"type": "integer"
+								},
+								"mimetype": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
 								}
 							}
 						}

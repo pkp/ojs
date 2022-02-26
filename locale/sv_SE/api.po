@@ -56,11 +56,6 @@ msgstr "Du har inte tillåtelse att visa denna tidskrift."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Du kan bara se tidskrifter som har aktiverats."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"För att skapa eller redigera ett bidrag måste du skicka en förfrågan till "
-"tidskriftens API endpoint."
-
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr ""
 "Du kan inte associera en fil från detta steg till en publiceringsversion."

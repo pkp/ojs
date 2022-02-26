@@ -24,9 +24,6 @@ msgstr "Вы не можете изменить журнал для матери
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "У вас нет прав для просмотра неопубликованных выпусков."
 
-msgid "api.submissions.403.contextRequired"
-msgstr "Чтобы создать или отредактировать материал, вам нужно сделать запрос к конечной точке API журнала."
-
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Вы можете просматривать только журналы, к которым был открыт доступ."
 

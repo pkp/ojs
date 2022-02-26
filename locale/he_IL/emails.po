@@ -42,12 +42,14 @@ msgstr ""
 msgid "emails.lockssExistingArchive.subject"
 msgstr "בקשת ארכיון עבור {$contextName}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "דוא\"ל זה נשלח לקוראים הרשומים באמצעות הקישור \"הודע למשתמשים\" באזור של "
 "העורך. זה מודיע לקוראים על גיליון חדש ומזמין אותם לבקר בכתב העת בכתובת URL "
 "שסופקה."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "קוראים: <br />\n"
@@ -59,6 +61,7 @@ msgstr ""
 "תודה על ההתעניינות המתמשכת בעבודה שלנו, <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "גיליון חדש פורסם"
 
@@ -87,9 +90,11 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "הרשמה כסוקר עם {$contextName}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "דוא\"ל זה נשלח למשתמש שרשום לאחרונה כדי לאמת את חשבון הדוא\"ל שלו."
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}\n"
@@ -103,6 +108,7 @@ msgstr ""
 "תודה,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "אמת את חשבונך"
 
@@ -206,9 +212,11 @@ msgstr ""
 "בתודה,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "בקשה לסקירת מאמר"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "הודעת דוא\"ל זו מעורך המדור לבודק מבקשת שהמבקר יקבל או ידחה את משימת בדיקת "
@@ -216,6 +224,7 @@ msgstr ""
 "לגשת להגשה עצמה. הודעה זו משמשת כאשר נבחר תהליך הבדיקה הרגיל בניהול> הגדרות> "
 "זרימת עבודה> סקירה. (אחרת ראה REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -240,14 +249,17 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "בקשה לביקורת מאמר"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "דוא\"ל זה מודיע לעורך מדורים כי העורך הקצה להם את המשימה לפקח על הגשה "
 "באמצעות תהליך העריכה. הוא מספק מידע על ההגשה וכיצד לגשת לאתר כתב העת."
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -260,14 +272,17 @@ msgstr ""
 "<br />\n"
 "תודה."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "הקצאת עריכה"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "דוא\"ל זה, כאשר הוא פעיל, נשלח אוטומטית למחברים האחרים שאינם משתמשים בתוך "
 "OJS שצוינו במהלך תהליך ההגשה."
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "שלום,<br />\n"
@@ -278,38 +293,16 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "אישור הגשה"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"דוא\"ל זה, כאשר הוא מופעל, נשלח אוטומטית למחבר כאשר הם משלימים את תהליך הגשת "
-"כתב היד לכתב העת. הוא מספק מידע על מעקב אחר ההגשה בתהליך ומודה למחבר על "
-"המסירה."
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"תודה על הגשת המאמר {$submissionTitle} אל {$contextName}. דרך המערכת תוכל "
-"לעקוב אחר התקדמותו בתהליך העריכה על ידי כניסה לאתר כתב העת.<br />\n"
-"<br />\n"
-"כתובת אתר להגשה: {$submissionUrl}<br />\n"
-"שם משתמש: {$recipientUsername}<br />\n"
-"<br />\n"
-"אם יש לך שאלות, אנא צור איתי קשר. תודה ששקלת את כתב העת הזה כמקום לעבודה "
-"שלך.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.subject"
-msgstr "אישור ההגשה"
 
 msgid "emails.lockssNewArchive.description"
 msgstr ""
 "דוא\"ל זה מעודד את המקבל להשתתף ביוזמת LOCKSS ולכלול את כתב העת הזה בארכיון. "
 "הוא מספק מידע על יוזמת LOCKSS ועל דרכים להיות מעורבים."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}: \n"
@@ -318,6 +311,7 @@ msgstr ""
 "<br />\n"
 "החלטה שלנו: קבל הגשה"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "החלטת העורך"
 
@@ -330,20 +324,12 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "תזכורת אוטומטי להגשת חוות דעת"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "דוא\"ל זה נשלח אוטומטית עם חלוף תאריך היעד של הסוקר (ראה אפשרויות סקירה תחת "
 "הגדרות> זרימת עבודה> סקירה) וגישה של בודק בלחיצה אחת מושבתת. יש לאפשר "
 "ולהגדיר משימות מתוזמנות (ראה קובץ תצורת האתר)."
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:\n"
-"\n"
-"<br />\n"
-"\n"
-"תודה על חוות דעתך על ההגשה \"{$submissionTitle} ל{$contextName}. אנו מעריכים "
-"את תרומתך לאיכות העבודה שאנו מפרסמים."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -379,6 +365,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "בקשת סקירת מאמר"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "הודעת דוא\"ל זו מעורך המדור לבודק מבקשת שהמבקר יקבל או ידחה את משימת בדיקת "
@@ -387,6 +374,7 @@ msgstr ""
 "הבדיקה הרגיל בניהול> הגדרות> זרימת עבודה> סקירה. (אחרת ראה "
 "REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "בקשת סקירת מאמר"
 
@@ -430,6 +418,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "תזכורת הגשת ביקורת אוטומטית"
 
@@ -452,9 +441,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "תזכורת הגשת חוות דעת"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "דוא\"ל זה נשלח על ידי עורך מדור להזכיר מבקר שהביקורת שלהם נובעת."
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -471,16 +462,9 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "תזכורת שליחת חוות דעת"
-
-msgid "emails.reviewAck.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי עורך מדור כדי לאשר את קבלת חוות הדעת ולהודות לסוקר על "
-"התרומות שלהם."
-
-msgid "emails.reviewAck.subject"
-msgstr "אישור סקירת מאמר"
 
 msgid "emails.reviewDecline.description"
 msgstr ""
@@ -516,11 +500,13 @@ msgstr ""
 msgid "emails.reviewConfirm.subject"
 msgstr "יכול לבדוק"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "דוא\"ל זה נשלח על ידי עורך המדור לסוקר שעבר בדיקת הגשה כדי להודיע להם כי "
 "הוחזרה ביקורת שבוטלה."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:\n"
@@ -530,6 +516,7 @@ msgstr ""
 "<br />\n"
 "אם יש לך שאלות, אנא צור איתי קשר."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "בקשה לבדיקה חודשה"
 
@@ -562,12 +549,14 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "בקשת סקירת מאמר"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "הודעת דוא\"ל זו נשלחת אוטומטית עם חלוף תאריך היעד של אישור הבודק (ראה "
 "אפשרויות סקירה תחת הגדרות> זרימת עבודה> סקירה) וגישה של בודק בלחיצה אחת "
 "מושבתת. יש לאפשר ולהגדיר משימות מתוזמנות (ראה קובץ תצורת האתר)."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -621,6 +610,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"

@@ -117,6 +117,7 @@ msgid "emails.userRegister.description"
 msgstr "यह ईमेल एक नए पंजीकृत उपयोगकर्ता को सिस्टम में उनका स्वागत करने और उन्हें उनके उपयोगकर्ता नाम और पासवर्ड के रिकॉर्ड के साथ प्रदान करने के लिए भेजा जाता है."
 
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "अपना खाता मान्य करें"
 
@@ -128,6 +129,7 @@ msgstr "अपना खाता मान्य करें"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -141,6 +143,7 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "यह ईमेल एक नए पंजीकृत उपयोगकर्ता को उनके ईमेल खाते को मान्य करने के लिए भेजा जाता है."
 
@@ -176,6 +179,7 @@ msgstr "यह ईमेल एक नए पंजीकृत समीक्�
 
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "नया अंक प्रकाशित"
 
@@ -188,6 +192,7 @@ msgstr "नया अंक प्रकाशित"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Readers:<br />\n"
@@ -262,42 +267,7 @@ msgid "emails.lockssNewArchive.description"
 msgstr "यह ईमेल प्राप्तकर्ता को LOCKSS पहल में भाग लेने और संग्रह में इस जर्नल को शामिल करने के लिए प्रोत्साहित करता है। यह LOCKSS पहल और शामिल होने के तरीकों के बारे में जानकारी प्रदान करता है."
 
 # (pofilter) simplecaps: Different capitalization
-msgid "emails.submissionAck.subject"
-msgstr "सबमिशन स्वीकृति"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$signature}, {$submissionTitle}, {$contextName}, {$authors}, {$submissionUrl}, {$recipientUsername}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"पांडुलिपि प्रस्तुत करने के लिए धन्यवाद, &quot;{$submissionTitle}&quot; to {$contextName}. जिस ऑनलाइन जर्नल प्रबंधन प्रणाली का हम उपयोग कर रहे हैं, आप जर्नल साइट पर लॉग इन करके संपादकीय प्रक्रिया के माध्यम से इसकी प्रगति को ट्रैक कर पाएंगे।:<br />\n"
-"<br />\n"
-"Submission URL: {$submissionUrl}<br />\n"
-"Username: {$recipientUsername}<br />\n"
-"<br />\n"
-"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें। अपने काम के लिए इस जर्नल को एक स्थान के रूप में विचार करने के लिए धन्यवाद.<br />\n"
-"<br />\n"
-"{$signature}"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.submissionAck.description"
-msgstr "सक्षम होने पर, यह ईमेल स्वचालित रूप से एक लेखक को भेजा जाता है, जब वह जर्नल को पांडुलिपि प्रस्तुत करने की प्रक्रिया को पूरा करता है। यह प्रक्रिया के माध्यम से सबमिशन पर नज़र रखने के बारे में जानकारी प्रदान करता है और प्रस्तुत करने के लिए लेखक को धन्यवाद देता है."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$submitterName}, {$signature}, {$submissionTitle}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-# (pofilter) startcaps: Different capitalization at the start
-# (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Hello,<br />\n"
@@ -309,10 +279,12 @@ msgstr ""
 "{$signature}"
 
 # (pofilter) endpunc: Different punctuation at the end
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "यह ईमेल, जब सक्षम किया जाता है, तो स्वचालित रूप से अन्य लेखकों को भेजा जाता है जो प्रस्तुत प्रक्रिया के दौरान निर्दिष्ट OJS के भीतर उपयोगकर्ता नहीं हैं."
 
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "संपादकीय असाइनमेंट"
 
@@ -324,6 +296,7 @@ msgstr "संपादकीय असाइनमेंट"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -338,6 +311,7 @@ msgstr ""
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "यह ईमेल एक अनुभाग संपादक को सूचित करता है कि संपादक ने उन्हें संपादन "
@@ -345,6 +319,7 @@ msgstr ""
 "साइट को एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
 
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
@@ -356,6 +331,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -382,6 +358,7 @@ msgstr ""
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "अनुभाग संपादक से लेकर समीक्षक तक का यह ईमेल अनुरोध करता है कि समीक्षक किसी "
@@ -398,6 +375,7 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -424,6 +402,7 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब किसी समीक्षक की पुष्टि की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच अक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
 
@@ -533,6 +512,7 @@ msgstr "यह ईमेल अनुभाग संपादक द्वा�
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -560,6 +540,7 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है। (अन्यथा REVIEW_REQUEST_ATTACHED_SUBSEQUENT देखें.)"
 
@@ -660,6 +641,7 @@ msgid "emails.reviewCancel.description"
 msgstr "यह ईमेल अनुभाग संपादक द्वारा एक समीक्षक को भेजा जाता है, जिनके पास प्रगति की समीक्षा समीक्षा है ताकि उन्हें सूचित किया जा सके कि समीक्षा रद्द कर दी गई है."
 
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "पुनर्स्थापना के लिए अनुरोध"
 
@@ -672,6 +654,7 @@ msgstr "पुनर्स्थापना के लिए अनुरोध
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -682,6 +665,7 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr "यह ईमेल सेक्शन एडिटर द्वारा एक समीक्षक को भेजा जाता है, जिसके पास प्रगति की समीक्षा में यह सूचित करने के लिए कि रद्द की गई समीक्षा को फिर से बहाल कर दिया गया है."
 
@@ -736,30 +720,7 @@ msgid "emails.reviewDecline.description"
 msgstr "यह ईमेल समीक्षक द्वारा संपादक को खंड संपादक को सूचित करने के लिए समीक्षा अनुरोध के जवाब में भेजा जाता है कि समीक्षा अनुरोध अस्वीकार कर दिया गया है."
 
 # (pofilter) simplecaps: Different capitalization
-msgid "emails.reviewAck.subject"
-msgstr "लेख समीक्षा आभार"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$submissionTitle}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"सबमिशन की समीक्षा को पूरा करने के लिए धन्यवाद, &quot;{$submissionTitle},&quot; for {$contextName}. हम आपके द्वारा प्रकाशित किए जाने वाले कार्य की गुणवत्ता में आपके योगदान की सराहना करते हैं."
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.reviewAck.description"
-msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक पूर्ण समीक्षा की प्राप्ति की पुष्टि करने के लिए भेजा जाता है और समीक्षक को उनके योगदान के लिए धन्यवाद देता है."
-
-# (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "सबमिशन रिव्यू रिमाइंडर"
 
@@ -771,6 +732,7 @@ msgstr "सबमिशन रिव्यू रिमाइंडर"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -787,6 +749,7 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक समीक्षक को याद दिलाने के लिए भेजा जाता है कि उनकी समीक्षा होने वाली है."
 
@@ -820,6 +783,7 @@ msgstr "यह ईमेल एक अनुभाग संपादक द्�
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -837,6 +801,7 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब एक समीक्षक की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच अक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
 
@@ -870,6 +835,7 @@ msgstr "यह ईमेल स्वचालित रूप से तब भ
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}, {$submissionTitle}, {$contextName}
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -883,121 +849,7 @@ msgstr ""
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$submissionTitle}, {$submissionUrl}, {$authors}, {$contextName}
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"हम आपके सबमिशन के बारे में निर्णय ले चुके हैं to {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Our decision is to: Send to Review<br />\n"
-"<br />\n"
-"Submission URL: {$submissionUrl}"
-
-# (pofilter) endpunc: Different punctuation at the end
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें सूचित करता है कि उनका प्रस्तुतिकरण बाहरी समीक्षा के लिए भेजा जा रहा है."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}, {$submissionTitle}, {$submissionUrl}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"आपके सबमिशन का संपादन, &quot;{$submissionTitle},&quot; पूरा है। अब हम इसे उत्पादन के लिए भेज रहे हैं.<br />\n"
-"<br />\n"
-"Submission URL: {$submissionUrl}"
-
-# (pofilter) endpunc: Different punctuation at the end
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें सूचित करता है कि उनका सबमिशन उत्पादन के लिए भेजा जा रहा है."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}, {$submissionTitle}, {$contextName}
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"आपके द्वारा सबमिट किए जाने के संबंध में हम एक निर्णय पर पहुंच गए हैं {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Our decision is: Revisions Required"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}, {$submissionTitle}, {$contextName}
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"आपके द्वारा सबमिट किए जाने के संबंध में हम एक निर्णय पर पहुंच गए हैं {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"हमारा निर्णय है: सबमिशन को अस्वीकार करना"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "संपादक की सिफारिश"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$editors}, {$submissionTitle}, {$recommendation}, {$contextName}
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"को प्रस्तुत करने के संबंध में सिफारिश {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.editorRecommendation.description"
-msgstr "एडिटिंग या सेक्शन एडिटर्स की सिफारिश करने वाले एडिटर या सेक्शन एडिटर की सिफारिश से यह ईमेल उन्हें सबमिट करने से संबंधित अंतिम सिफारिश के बारे में सूचित करता है।."
-
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.copyeditRequest.subject"
-msgstr "प्रतिलिपि अनुरोध"
-
-# (pofilter) brackets: Added '{', '}', '(', ')'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientUsername}, {$contextUrl}, {$submissionTitle}, {$contextName}, {$recipientName}, {$submissionUrl}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) simpleplurals: The original uses plural(s)
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot; for {$contextName} by following these steps.<br />\n"
-"1. नीचे दिए गए सबमिशन यूआरएल पर क्लिक करें.<br />\n"
-"2. ड्राफ्ट फ़ाइलों के तहत उपलब्ध किसी भी फाइल को खोलें और आवश्यकतानुसार अपनी कॉपी की गई चर्चाओं को जोड़ते हुए, अपनी प्रतिलिपि बनाएँ.<br />\n"
-"3. Save copyedited file(s), and upload to Copyedited panel.<br />\n"
-"4. संपादक को सूचित करें कि सभी फाइलें तैयार हो गई हैं, और यह कि उत्पादन प्रक्रिया शुरू हो सकती है.<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"Submission URL: {$submissionUrl}<br />\n"
-"Username: {$recipientUsername}"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"यह ईमेल एक सेक्शन एडिटर द्वारा सबमिशन की कॉपीडिटर को सबमिट करने के लिए भेजा "
-"जाता है ताकि वे कॉपीएडिटिंग  करने की प्रक्रिया शुरू कर सकें। यह सबमिशन और इसे"
-" एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
-
-# (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "अनुरोध गैलीज़"
 
@@ -1010,6 +862,7 @@ msgstr "अनुरोध गैलीज़"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1029,6 +882,7 @@ msgstr ""
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "अनुभाग संपादक से लेआउट संपादक का यह ईमेल उन्हें सूचित करता है कि उन्हें एक सबमिशन पर लेआउट एडिटिंग का कार्य सौंपा गया है। यह सबमिशन और इसे एक्सेस करने के तरीके के बारे में जानकारी प्रदान करता है."
 
@@ -1044,6 +898,7 @@ msgstr "गैलीज़ पूर्ण"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1056,6 +911,7 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "लेआउट संपादक से अनुभाग संपादक का यह ईमेल उन्हें सूचित करता है कि लेआउट प्रक्रिया पूरी हो गई है."
 
@@ -1422,12 +1278,6 @@ msgstr "सूचना केंद्र मैसेज लिस्टबि
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}
 # (pofilter) tabs: Different tabs
 # (pofilter) xmltags: Added XML tags
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-
 msgid "emails.statisticsReportNotification.description"
 msgstr ""
 "यह ईमेल स्वचालित रूप से संपादकों और पत्रिका प्रबंधकों को मासिक रूप से भेजा "
@@ -1435,14 +1285,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$ माह}, {$ वर्ष} के लिए संपादकीय गतिविधि"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"यह ईमेल लेखक को भेजा जाता है अगर संपादक समीक्षा के चरण से पहले शुरू में अपने "
-"प्रस्तुतिकरण को कम कर देता है"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "संपादक का निर्णय"
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "संशोधित संस्करण अपलोड किया गया"
@@ -1471,27 +1313,14 @@ msgstr "सदस्यता समाप्त हो गई"
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "सदस्यता समाप्ति की सूचना"
 
-msgid "emails.editorDecisionDecline.subject"
-msgstr "संपादक का निर्णय"
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "संपादक का निर्णय"
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "संपादक का निर्णय"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "संपादक का निर्णय"
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "संपादक का निर्णय"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "संपादक का निर्णय"
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
 
@@ -1504,6 +1333,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
@@ -1516,9 +1346,11 @@ msgstr "लेख समीक्षा का अनुरोध"
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "सबमिशन स्वीकृति"
 

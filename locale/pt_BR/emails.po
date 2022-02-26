@@ -100,9 +100,11 @@ msgstr ""
 "Esta mensagem é enviada aos usuários recém-cadastrados no sistema, para dar-"
 "lhes as boas-vindas e deixar registrado seu login e senha."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Valide seu Cadastro"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Prezado(a) {$recipientName}<br />\n"
@@ -116,6 +118,7 @@ msgstr ""
 "Atenciosamente,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Esta mensagem é enviada a um novo usuário cadastrado, para validação do "
@@ -148,9 +151,11 @@ msgstr ""
 "Esta mensagem é enviada a um avaliador recém-cadastrado para dar-lhe as boas-"
 "vindas e deixar registrado o seu nome de login e senha."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nova Edição Publicada: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Caro leitor, </p><p>{$contextName} tem o prazer de anunciar a publicação "
@@ -161,6 +166,7 @@ msgstr ""
 "trabalho, e aos nossos leitores por seu interesse "
 "contínuo.</p><p>{$contextUrl}</p><p>Atenciosamente,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "Esta mensagem é enviada para leitores cadastrados através do link \""
@@ -238,31 +244,7 @@ msgstr ""
 "incluir a revista no seu repositório. O e-mail oferece informações iniciais "
 "e sobre como participar na iniciativa LOCKSS e formas de se envolver."
 
-msgid "emails.submissionAck.subject"
-msgstr "Obrigado pela submissão para {$contextName}"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p><p>obrigado por submeter o manuscrito, "
-"&quot;{$submissionTitle}&quot; ao periódico {$contextName}. Um membro de "
-"nossa equipe editorial verá a submissão em breve. Você receberá um e-mail "
-"quando uma decisão inicial for tomada e poderemos entrar em contato com você "
-"para obter mais informações.</p><p>Com o sistema de gerenciamento de "
-"periódicos on-line que estamos usando, você pode visualizar sua submissão e "
-"acompanhar seu progresso do processo editorial efetuando login no site do "
-"periódico:</p ><p>URL da Submissão: {$submissionUrl}</p><p>Usuário: "
-"{$recipientUsername}</p><p>Se você tiver alguma dúvida, entre em contato "
-"conosco em seu <a href=\"{$submissionUrl}\">painel de submissão</a>.</p><p>"
-"Agradecemos por considerar este periódico para publicar o seu "
-"trabalho.</p><p>Atenciosamente,</p>{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Mensagem enviada automaticamente pelo sistema ao autor, quando habilitada, "
-"ao ser concluído o processo de submissão de um manuscrito à revista. Oferece "
-"informações sobre os mecanismos para acompanhamento da submissão durante o "
-"processo editorial, e serve como registro e confirmação da submissão."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Confirmação de submissão"
 
@@ -278,12 +260,14 @@ msgstr ""
 "este periódico para publicar o seu trabalho.</p><br "
 "/><p>Atenciosamente,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Quando habilitada, esta mensagem é enviado automaticamente para os autores "
 "informados durante o processo de submissão, que não seja o autor que está "
 "submetendo o manuscrito."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Você foi designado como editor em uma submissão a {$contextName}"
 
@@ -298,6 +282,7 @@ msgstr ""
 "for apropriada para este periódico, recuse a submissão.</p><p>Agradecemos "
 "antecipadamente.</p> <p>Atenciosamente,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Mensagem notifica o Editor de Seção que uma nova tarefa de acompanhamento de "
@@ -306,9 +291,11 @@ msgstr ""
 "Participantes. Este modelo deve ser usado quando o editor de seção tem a "
 "capacidade de registrar decisões editoriais."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "A revista {$contextName} solicita avaliação de artigo"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName}, </p><p>acredito que você poderia servir como "
@@ -326,14 +313,17 @@ msgstr ""
 "Resumo</p>{$submissionAbstract}<p>Agradeço por considerar esta "
 "solicitação.</p><p>Atenciosamente</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Mensagem do Editor de Seção para solicitar ao Avaliador que indique a "
 "disponibilidade ou não para realizar uma avaliação. "
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "A revista {$contextName} solicita avaliação de artigo"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>este e-mail é apenas um lembrete "
@@ -358,6 +348,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Este e-mail é automaticamente enviando quando o prazo para confirmação de um "
@@ -477,6 +468,7 @@ msgstr ""
 "Avaliação por Anexo de E-mail é selecionado em Gerenciamento > Configurações "
 "> Fluxo de Trabalho > Avaliação. (Alternativamente veja REVIEW_REQUEST)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Solicitação de avaliação de uma submissão revisada"
 
@@ -512,6 +504,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Este e-mail do Editor para um Avaliador, que solicita ao usuário aceitar ou "
@@ -620,9 +613,11 @@ msgstr ""
 msgid "emails.reviewCancel.description"
 msgstr "Mensagem enviada pelo Editor de Seção com um processo de avaliação em andamento, notificando que o processo em questão foi cancelado."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Você ainda pode avaliar algo para {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName}, </p><p>nós gostaríamos de convidá-lo(a) "
@@ -632,6 +627,7 @@ msgstr ""
 "dúvida, por favor, entre em contato comigo.</p><p> Atenciosamente, "
 "</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Este e-mail é enviado pelo Editor a um Avaliador quando uma avaliação "
@@ -674,23 +670,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar sua NÃO disponibilidade para realizar a tarefa, rejeitando a solicitação."
 
-msgid "emails.reviewAck.subject"
-msgstr "Agradecimento pela avaliação"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"Prezado(a) {$recipientName}:<br />\n"
-"<br />\n"
-"Agradeço por enviar o parecer da submissão &quot;{$submissionTitle},&quot; "
-"para o periódico {$contextName}. Nós apreciamos sua contribuição para manter "
-"a qualidade dos trabalhos que publicamos."
-
-msgid "emails.reviewAck.description"
-msgstr "Mensagem enviada pelo Editor de Seção ao Avaliador para confirmar recebimento e agradecer o avaliador pela conclusão da avaliação."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Um lembrete para concluir sua avaliação"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>Este é apenas um lembrete amigável do "
@@ -705,6 +689,7 @@ msgstr ""
 "periódico. Aguardo seu retorno.</p><p>Agradeço antecipadamente e "
 "atentamente, </p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Mensagem enviada pelo Editor ao Avaliador como lembrete da tarefa de "
@@ -735,9 +720,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Mensagem enviada pelo Editor de Seção ao Avaliador como lembrete da tarefa de avaliação em andamento ainda não concluída."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Um lembrete para concluir sua avaliação"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName}:<p/><p>Este é apenas um lembrete amigável do "
@@ -752,6 +739,7 @@ msgstr ""
 "favor, confirme que poderá completar essa contribuição vital ao trabalho do "
 "periódico. Aguardo seu retorno.</p><p>Atenciosamente,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Mensagem enviada automaticamente ao avaliador quando a data de conclusão de "
@@ -782,6 +770,7 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Mensagem enviada automaticamente ao avaliador quando a data de conclusão de avaliação for ultrapassada (veja as Opções de Avaliação no Passo 2 da Configuração da Revista) e o acesso 1-Clique estiver ativado. Tarefas agendadas devem ser habilitadas e configuradas (veja o arquivo de configuração do sistema)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Sua submissão foi aceita para {$contextName}"
 
@@ -802,195 +791,17 @@ msgstr ""
 "seu <a href=\"{$submissionUrl}\">painel de submissão</a>.</p><p "
 ">Atenciosamente,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Este e-mail notifica o autor de que sua submissão foi aceita para publicação."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Decisão do Editor"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"Prezados {$authors}:<br />\n"
-"<br />\n"
-"Nós chegamos a uma decisão referente a sua submissão para o periódico "
-"{$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Nossa decisão é de: Enviar para avaliação<br />\n"
-"<br />\n"
-"URL da submissão: {$submissionUrl}\n"
-"<br/><br/>\n"
-"Atenciosamente,<br/>\n"
-"{$signature}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Este e-mail enviado pelo Editor ou Editor de Seção para um autor serve para "
-"notificar o mesmo de que sua submissão foi enviada para avaliadores externos."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Próximas etapas para publicar sua submissão"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p><p>Estamos escrevendo de {$contextName} "
-"para informar que a \"Edição de Texto\" da sua submissão, {$submissionTitle}"
-", foi concluída. A sua submissão avançará agora para a fase de \"Editoração\""
-", onde serão preparadas as provas finais para publicação. Entraremos em "
-"contato com você se precisarmos de mais assistência.</p><p>Se você tiver "
-"alguma dúvida, entre em contato conosco em seu <a href=\"{$submissionUrl}\">"
-"painel de submissão</a>.</p ><p>Atenciosamente,</p>{$signature}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Este e-mail do Editor ou Editor de Seção para um Autor notifica-os de que seus envios estão sendo enviados para produção."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Sua submissão foi avaliada e nós o encorajamos a enviar revisões"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p><p>Sua submissão, {$submissionTitle}, foi "
-"avaliada e nossa  decisão é que <strong>\"REVISÕES SÃO REQUERIDAS\"</strong> "
-"e gostaríamos de incentivá-lo(a) a enviar revisões que abordem os "
-"comentários dos avaliadores. Um editor revisará essas revisões e, se elas "
-"abordarem as preocupações adequadamente, sua submissão poderá ser aceita "
-"para publicação.</p><p>Os comentários dos avaliadores estão incluídos na "
-"parte inferior deste e-mail. Por favor, responda a cada ponto nos "
-"comentários dos avaliadores e identifique quais mudanças você fez. Se você "
-"achar que algum dos comentários do avaliador é injustificado ou inadequado, "
-"explique sua perspectiva.</p><p>Ao concluir suas revisões, você pode enviar "
-"documentos revisados junto com sua resposta aos comentários dos avaliadores "
-"em seu <a href=\"{$submissionUrl}\">painel de submissão</a>. Se você foi "
-"desconectado, você pode fazer login novamente com o nome de usuário "
-"{$recipientUsername}.</p><p>No campo \"Revisões\", clique em \"Enviar "
-"arquivo\" e localize os arquivos do seu computador. O Editor será notificado "
-"quando suas revisões forem carregadas. Se você precisar se comunicar "
-"diretamente com o editor, poderá usar o painel \"Discussão da avaliação\" na "
-"área de \"Avaliação\".</p><p>Se tiver alguma dúvida, entre em contato "
-"conosco pelo seu <a href=\"{$submissionUrl}\" >painel de "
-"submissão</a>.</p><p>Estamos ansiosos para receber sua submissão "
-"revisada.</p><p>Atenciosamente,</p>{$signature}<hr><p>Os seguintes "
-"comentários foram recebidos dos avaliadores.</p>{$allReviewerComments}"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Esta mensagem é enviada pelo Editor ao Autor, solicitando revisões do autor "
-"durante a avaliação por pares."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Sua submissão foi avaliada - por favor, revise e ressubmeta"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p><p>Após avaliar sua submissão, "
-"{$submissionTitle}, enviada para o periódico, {$contextName}, os avaliadores "
-"recomendaram que sua submissão deve ser <strong>\"REVISADA E RESSUBMETIDA "
-"PARA AVALIAÇÃO\"</strong>, pois a submissão não pode ser aceita para "
-"publicação em sua forma atual. No entanto, gostaríamos de incentivá-lo a "
-"submeter uma versão revisada que aborde os comentários dos avaliadores. Suas "
-"revisões serão revisadas por um editor e poderão ser enviadas para outra "
-"rodada de avaliação por pares.</p><p>Observe que reenviar seu trabalho não "
-"garante que ele seja aceito.</p><p>Os comentários dos avaliadores estão "
-"incluídos na parte inferior deste e-mail. Por favor, responda a cada ponto e "
-"identifique quais mudanças você fez. Se você achar que algum dos comentários "
-"do avaliador é inadequado, explique sua perspectiva. Se você tiver dúvidas "
-"sobre as recomendações em sua avaliação, inclua-as em sua resposta.</p><p>Ao "
-"concluir suas revisões, você pode enviar documentos revisados junto com sua "
-"resposta aos comentários dos avaliadores  no seu <a href= \"{$submissionUrl}"
-"\">painel de submissão</a>. Se você foi desconectado, você pode fazer login "
-"novamente com o nome de usuário {$recipientUsername}.</p><p>No campo \""
-"Revisões\", pressione o botão \"Enviar arquivo\" e localize os arquivos do "
-"seu computador. O editor será notificado quando suas revisões forem "
-"carregadas. Se você precisar se comunicar diretamente com o editor, poderá "
-"usar o painel \"Discussão da avaliação\" abaixo da área \"Revisões\".</p><p>"
-"Se tiver alguma dúvida, entre em contato conosco pelo seu <a href=\""
-"{$submissionUrl}\" >painel de submissão</a>.</p><p>Estamos ansiosos para "
-"receber sua submissão revisada.</p><p>Atenciosamente,</p>{$signature}<hr><p>"
-"Os seguintes comentários foram recebidos dos "
-"avaliadores.</p>{$allReviewerComments}"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Esta mensagem do Editor ao Autor notifica sobre a decisão editorial de \""
-"revisar e ressubmeter\" a respeito de sua submissão."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Sua submissão foi recusada"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p><p>Enquanto agradecemos o recebimento de "
-"sua submissão, infelizmente decidimos <strong>\"rejeitar\"</strong> a "
-"submissão,  {$submissionTitle}, para publicação com base nos comentários dos "
-"avaliadores.</p><p> Os comentários dos avaliadores estão incluídos na parte "
-"inferior deste e-mail.</p><p>Obrigado por submeter para {$contextName}. "
-"Embora seja decepcionante ver uma submissão recusada, espero que você "
-"considere os comentários dos avaliadores construtivos e úteis.</p><p>Agora "
-"você pode submeter o trabalho para outro lugar, se assim desejar.</p "
-"><p>Atenciosamente,</p>{$signature}<hr><p>Os comentários a seguir foram "
-"recebidos dos avaliadores.</p>{$allReviewerComments}"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Este e-mail notifica o autor de que sua submissão foi recusada após a "
-"avaliação por pares."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Recomendação do Editor"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"<p>Prezados {$editors},</p><p>Após considerar os comentários dos "
-"avaliadores, gostaria de fazer a seguinte recomendação em relação à "
-"submissão {$submissionTitle}. </p><p>Minha recomendação é: <br "
-"/><strong>{$recommendation}</strong>.</p><p>Visite o <a href=\""
-"{$submissionUrl}\">fluxo editorial</a> para agir de acordo com esta "
-"recomendação.</p><p>Sinta-se à vontade para entrar em contato comigo em caso "
-"de dúvidas.</p> <p>Atenciosamente,</p><p>{$senderName}</p>"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Este e-mail automatizado notifica um Editor ou Editor de seção que uma "
-"recomendação editorial foi feita em relação a uma submissão. Este modelo é "
-"usado quando um editor tem permissão de apenas para recomendar uma decisão "
-"editorial e requer um editor autorizado para registrar as decisões "
-"editoriais. Esta opção pode ser selecionada ao atribuir participantes para "
-"uma submissão."
-
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"A submissão {$submissionId} está pronto para uma tarefa edição ao Editor de "
-"Texto para {$contextAcronym}"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p><p>Uma nova submissão está pronta na fase "
-"de \"Edição de Texto\", portanto, peço, por gentileza, que você realize a "
-"tarefa de revisão textual:</p><p><a href=\"{$submissionUrl}\">{$submissionId}"
-" - {$submissionTitle} </a><br />{$contextName}</p><p>Siga estas etapas para "
-"concluir esta tarefa:</p><ol><li>Clique na URL de submissão abaixo;</li><li>"
-"Abra todos os arquivos disponíveis em \"Arquivos para edição de texto\" e "
-"faça a revisão textual dos arquivos. Use a área \"Discussão da edição de "
-"texto\" se precisar entrar em contato com o(s) editor(es) ou "
-"autor(es).</li><li>Salve o(s) arquivo(s) editado(s) e carregue-o(s) no "
-"painel \"Texto editado\".</li><li>Use as \"Discussão da edição de texto\" "
-"para notificar o(s) editor(es) de que todos os arquivos foram preparados e "
-"que o processo de \"Editoração\" pode começar.</li></ol><p>Se você não puder "
-"realizar este trabalho neste momento ou tiver qualquer duvida, entre em "
-"contato comigo. Obrigado por sua contribuição para este periódico.</p><p>URL "
-"de {$contextName}: <a href=\"{$contextUrl}\">{$contextUrl}</a></p><p>URL de "
-"Submissão: <a href=\"{$submitUrl}\">{$submitUrl}</a></p><p>Nome de usuário: "
-"{$recipientUsername}</p><p>Atenciosamente,</p>{$signature}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Mensagem enviada pelo Editor solicitando a realização de uma tarefa de "
-"edição ao Editor de Texto, com informações sobre e como acessar o documento."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "A submissão {$submissionId} está pronto para Editoração em {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>A submissão "
@@ -1010,6 +821,7 @@ msgstr ""
 "dúvida, entre em contato comigo.<p>Obrigado por sua contribuição para este "
 "periódico.</p><p>Atenciosamente,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Mensagem enviada pelo Editor ao Editor de Layout, solicitando que sejam "
@@ -1019,6 +831,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Composições concluídas"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>As provas tipográficas já foram "
@@ -1027,6 +840,7 @@ msgstr ""
 "/>{$contextName}</p><p>Se você tiver alguma dúvida, favor entrar em contato "
 "comigo.</p><p>Atenciosamente</p>{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Mensagem enviada pelo Editor de Layout ao Editor, informando sobre a "
@@ -1343,24 +1157,6 @@ msgstr "Insira a sua mensagem por gentileza."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "A mensagem padrão (em branco) usada no Criador de lista de mensagens do Notification Center."
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Sua submissão foi recusada"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName}, </p><p>Lamento informar que, após avaliar "
-"sua submissão,{$submissionTitle}, o editor concluiu que ela não atende aos "
-"nossos requisitos para publicação na {$contextName}.</p><p>Portanto a nossa "
-"decisão é: <strong>\"Recusar a Submissão\"</strong></p><p>Desejo-lhe sucesso "
-"se você considerar submeter o trabalho para outro periódico. "
-"</p><p>Atenciosamente,</p>{$signature}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Este e-mail é enviado ao autor se o editor recusar sua submissão "
-"inicialmente, antes da etapa de avaliação, porque a submissão não atende aos "
-"requisitos para publicação na revista"
 
 msgid "emails.submissionComment.subject"
 msgstr "Comentário sobre a submissão"

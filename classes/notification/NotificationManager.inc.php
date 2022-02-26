@@ -18,7 +18,6 @@
 namespace APP\notification;
 
 use APP\core\Application;
-
 use APP\facades\Repo;
 use APP\notification\managerDelegate\ApproveSubmissionNotificationManager;
 use PKP\notification\PKPNotificationManager;

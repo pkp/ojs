@@ -62,9 +62,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Ovaj se obrazac e-pošte šalje novoregistriranim korisnicima u sustavu i sadrži njihovo korisničko ime i lozinku."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Objavljen novi broj"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Poštovani čitatelji,<br />\n"
@@ -74,6 +76,7 @@ msgstr ""
 "Hvala vam na interesu za naš rad,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Ovaj obrazac e-pošte šalje se registriranim čitateljima kroz opciju \"Obavijesti korisnika\" na početnom urednikovom izborniku. Čitatelji se njome obavještavaju o izlasku novog broja časopisa i pozivaju se da posjete stranice časopisa na priloženom URL-u."
 
@@ -119,26 +122,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Ovaj obrazac e-pošte potiče primatelja na sudjelovanje u LOCKSS inicijativi i uvrštenje ovog časopisa u arhivu. Obrazac pruža osnovne informacije o LOCKSS inicijativi i načinima uključivanja."
 
-msgid "emails.submissionAck.subject"
-msgstr "Prilog zaprimljen"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"Poštovana/i {$recipientName},<br />\n"
-"<br />\n"
-"zahvaljujemo što ste prijavili prilog &quot;{$submissionTitle}&quot; našem časopisu {$contextName}. Pomoću sustava upravljanja časopisom koji koristimo, moći ćete aktivno pratiti kretanje članka kroz postupak uređivanja prijavljujući se na mrežnu stranicu časopisa:<br />\n"
-"<br />\n"
-"URL rukopisa: {$submissionUrl}<br />\n"
-"Korisničko ime: {$recipientUsername}<br />\n"
-"<br />\n"
-"U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.<br />\n"
-"<br />\n"
-"Srdačno,<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr "Ovaj se obrazac e-pošte automatski šalje autoru kada su on ili ona završili postupak prijave priloga časopisu. Poruka daje informacije o tome kako mogu pratiti prilog kroz uređivački postupak."
-
 msgid "emails.submissionComment.subject"
 msgstr "Komentar priloga"
 
@@ -169,9 +152,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Ovim se obrascem e-pošte obavještavaju recenzenti da je recenzijski postupak završen. Poruka sadrži informacije o članku i donesenoj odluci."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Dodjela uredničkog zaduženja"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -183,12 +168,15 @@ msgstr ""
 "<br />\n"
 "Unaprijed hvala."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Ovim obrascem e-pošte glavni urednik obavještava urednika rubrike da mu je dodijeljen zadatak vođenja priloga kroz uređivački postupak. Obrazac pruža i osnovne informacije o prilogu."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Zamolba za recenziju članka"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -210,6 +198,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji se recenzent može prijaviti u sustav. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa (Ako nije, koristi se Zamolba za recenziju članka u privitku)"
 
@@ -238,9 +227,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti ili je prisiljen odbiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji  recenzent može pristupiti članku. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa, a recenzentu je omogućen pristup jednim klikom."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Zamolba za recenziju članka"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -262,6 +253,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji se recenzent može prijaviti u sustav. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa (Ako nije, koristi se Zamolba za recenziju članka u privitku)"
 
@@ -356,23 +348,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Ovim obrascem e-pošte recenzent odgovara uredniku rubrike da ne prihvaća zahtjev za recenzijom."
 
-msgid "emails.reviewAck.subject"
-msgstr "Zaprimljena recenzija članka"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"Poštovana/i {$recipientName},<br />\n"
-"<br />\n"
-"hvala vam što ste izradili recenziju članka &quot;{$submissionTitle}&quot; za časopis {$contextName}. Cijenimo vaš doprinos kvaliteti radova objavljenih u našem časopisu.<br />\n"
-"<br />\n"
-"Srdačno,"
-
-msgid "emails.reviewAck.description"
-msgstr "Ovim obrascem e-pošte  urednik rubrike potvrđuje recenzentu primitak završene recenzije."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Podsjetnik za predaju Recenzije"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -388,6 +368,7 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao."
 
@@ -410,9 +391,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Ovu e-poštu je poslao urednik rubrike da podsjeti recenzenta da je njegova recenzija dospjela."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatski podsjetnik za predaju recenzije"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -428,6 +411,7 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Ovaj se obrazac e-pošte automatski šalje recenzentu kada datum naveden kao rok za izradu recenzije istekao (pogledajte Opcije recenzije unutar Postavljanja časopisa, 2. korak), a recenzentu nije omogućen pristup jednim klikom. Za ovu funkciju Raspoređeni zadaci moraju biti aktivirani i namješteni (pogledajte konfiguracijsku datoteku stranice)."
 
@@ -451,28 +435,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao. Obrazac se koristi ukoliko je recenzentu je omogućen pristup jednim klikom."
 
-msgid "emails.copyeditRequest.subject"
-msgstr "Zamolba za lekturu"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"Poštovana/i {$recipientName},<br />\n"
-"<br />\n"
-"željeli bismo vas zamoliti da prihvatite lekturu rukopisa &quot;{$submissionTitle}&quot; za časopis {$contextName}. Prijavljeni rukopis, kao i upute za lektoriranje možete pronaći na mrežnim stranicama časopisa.<br />\n"
-"<br />\n"
-"URL rukopisa: {$submissionUrl}<br />\n"
-"Korisničko ime: {$recipientUsername}<br />\n"
-"<br />\n"
-"U slučaju da trenutačno niste u mogućnosti preuzeti lekturu ili da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />\n"
-"<br />\n"
-"Srdačno,"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Ovim obrascem e-pošte urednik rubrike šalje lektoru zamolbu da započne s lekturom priloga. Poruka pruža osnovne informacije o prilogu i kako mu pristupiti."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Zamolba za prijelom"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -486,12 +453,14 @@ msgstr ""
 "<br />\n"
 "Srdačno,"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da mu je dodijeljen zadatak  izrade prijeloma priloga."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Napravljen prijelom"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -503,6 +472,7 @@ msgstr ""
 "{$senderName}<br />\n"
 ""
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Ova e-pošta urednika prijeloma uredniku rubrike obaviještava da je proces prijeloma završen."
 
@@ -785,9 +755,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Ova se poruka šalje recenzentima koje registriraju urednici. Njome se novoregistriranom recenzentu želi dobrodošlica te pružaju informacije o korisničkom imenu i lozinki."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Validacija korisničkog računa"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -799,6 +771,7 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Ova se poruka šalje novoregistriranim korisnicima kako bi im se zaželila dobrodošlica na sistem i zatražila potvrda njihove adrese e-pošte."
 

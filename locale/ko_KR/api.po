@@ -10,9 +10,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.submissions.403.contextRequired"
-msgstr "투고를 생성하거나 편집하려면 학술지 API 정보가 필히 있어야 합니다."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "출판되지 않은 권을 볼 수 있는 권한이 없습니다."
 

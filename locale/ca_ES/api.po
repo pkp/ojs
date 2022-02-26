@@ -49,11 +49,6 @@ msgstr "No teniu permís per veure aquesta revista."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Només podeu veure revistes que estiguin actives."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Per fer o editar una tramesa heu de realitzar una sol·licitud al terminal "
-"API de la revista."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "No teniu permís per veure els números no publicats."
 

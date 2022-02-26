@@ -125,6 +125,10 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
             $submission = !empty($args['submission'])
                 ? $args['submission']
                 : $args['submission'] = Repo::submission()->get($publication->getData('submissionId'));
+
+            $genres = !empty($args['genres'])
+                ? $args['genres']
+                : $args['genres'] = DAORegistry::getDAO('GenreDAO')->getByContextId($context->getId())->toArray();
         }
 
 
@@ -184,7 +188,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
 
                         $values[$prop] = Repo::submissionFile()
                             ->getSchemaMap()
-                            ->map($submissionFile);
+                            ->map($submissionFile, $genres);
                     }
                     break;
                 default:
@@ -268,7 +272,7 @@ class GalleyService implements EntityReadInterface, EntityWriteInterface, Entity
         });
 
         if ($validator->fails()) {
-            $errors = $schemaService->formatValidationErrors($validator->errors(), $schemaService->get(PKPSchemaService::SCHEMA_GALLEY), $allowedLocales);
+            $errors = $schemaService->formatValidationErrors($validator->errors());
         }
 
         HookRegistry::call('Galley::validate', [&$errors, $action, $props, $allowedLocales, $primaryLocale]);

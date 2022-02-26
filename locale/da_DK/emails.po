@@ -69,9 +69,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Denne e-mail sendes til netop registrerede brugere for at byde dem velkommen til systemet og for at oplyse dem om deres brugernavn og adgangskode."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Validér din konto"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -85,6 +87,7 @@ msgstr ""
 "Tak. <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Denne e-mail sendes til en nyligt registreret bruger for at få vedkommende "
@@ -118,9 +121,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Denne e-mail sendes til netop registrerede bedømmere for at byde dem velkommen til systemet og for at oplyse dem om deres brugernavn og adgangskode."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nyt nummer er blevet publiceret: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Kære læser.</p><p>{$contextName} har lige publiceret det seneste nummer "
@@ -131,6 +136,7 @@ msgstr ""
 "jeres fortsatte interesse i vores arbejde.</p><p>Med venlig hilsen</p>\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Denne e-mail sendes til registrerede læsere via linket \"Underret brugere\" på redaktørens brugerstartside. Den underretter læsere om en ny udgave og inviterer dem til at besøge tidsskriftet på en angiven URL-adresse."
 
@@ -176,29 +182,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Denne e-mail opfordrer modtageren til at deltage i LOCKSS-initiativet og inkludere dette tidsskrift i arkivet. Den indeholder oplysninger om LOCKSS-initiativet og om måder, hvorpå du kan deltage."
 
-msgid "emails.submissionAck.subject"
-msgstr "Tak for din indsendelse til {$contextName}"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"<p>Kære{$recipientName}.</p><p> Tak, fordi du har fremsendt manuskriptet til "
-"{$contextName}. Vi har modtaget din indsendelse, {$submissionTitle}, og et "
-"medlem af vores redaktion vil se på indsendelsen snarest. Vi sender dig en e-"
-"mail, når der er taget en indledende beslutning, og vi kontakter dig "
-"muligvis for flere oplysninger.</p><p> Du kan se din indsendelse og følge "
-"bedømmelsen her: </p><p>Submission URL: {$submissionUrl}</p><p>. Hvis du er "
-"blevet logget ud, kan du logge ind igen med dit brugernavn  "
-"{$recipientUsername}</p><p> Hvis du har nogle spørgsmål så kontakt mig via <"
-"a href=\"{$submissionUrl}\">submission dashboard</a>.</p><p>Tak fordi du "
-"valgte dette tidsskrift til at udgive din artikel i.</p>{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Når denne e-mail er aktiveret, bliver den automatisk sendt til en forfatter, "
-"når vedkommende har indsendt et manuskript til tidsskriftet. Den indeholder "
-"oplysninger om, hvordan forfatteren kan følge manuskriptet igennem "
-"processen, og den takker forfatteren for manuskriptet."
-
 msgid "emails.submissionUnsuitable.subject"
 msgstr "Uegnet manuskript"
 
@@ -241,9 +224,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Denne e-mail underretter bedømmerne af et manuskript om, at bedømmelsesprocessen er fuldført. Den indeholder oplysninger om artiklen og om den vedtagne beslutning og takker bedømmerne for deres bidrag."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Du er blevet tilmeldt som redaktør på en indsendelse til {$contextName}"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "<p>Kære {$recipientName}.</p><p>Du er blevet tildelt det følgende "
@@ -255,6 +240,7 @@ msgstr ""
 "indsendelsen ikke passer til dette tidsskrift, så afvis indsendelsen.</p><p>"
 "Tak på forhånd.</p><p>Med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Denne e-mail underretter en sektionsredaktør om, at redaktøren har tildelt "
@@ -263,9 +249,11 @@ msgstr ""
 "deltagere for indsendelsen.  Denne template skal bruges, når "
 "sektionsredaktøren kan foretage redaktionelle beslutninger."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Vil du kunne bedømme denne artikel for os?"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Kære {$recipientName}.</p><p>Denne e-mail er en automatisk påmindelse fra "
@@ -284,6 +272,7 @@ msgstr ""
 "bedømmelsesprocessen</p><p>Tak for din overvejelse af denne forespørgsel. "
 "Din hjælp er meget værdsat.</p><p>Med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Denne e-mail sendes automatisk når en bedømmers bekræftelsesdato er overskredet (se bedømmelsesindstillinger under Indstillinger > Workflow > Bedømmelse) og ’Aktiver adgang for bedømmere ved hjælp af ét klik’ er fravalgt. Tidsfrister og påmindelser skal være defineret."
 
@@ -322,9 +311,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Denne e-mail sendes automatisk når en bedømmers bekræftelsesdato er overskredet (se bedømmelsesindstillinger under Indstillinger > Workflow > Bedømmelse) og ’Aktiver adgang for bedømmere ved hjælp af ét klik’ er aktiveret. Tidsfrister og påmindelser skal være defineret."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Forespørgsel om bedømmelse af artikel"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p> Kære {$recipientName}.</p><p>Jeg tror, at du vil være en fremragende "
@@ -341,6 +332,7 @@ msgstr ""
 "takker dig for at overveje denne henvendelse. Din hjælp værdsættes "
 "højt.</p><p>Med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at "
@@ -456,21 +448,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet afvist."
 
-msgid "emails.reviewAck.subject"
-msgstr "Bekræftelse af bedømmelse af artikel"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Tak, fordi du har fuldført bedømmelsen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi påskønner dit bidrag til kvaliteten af de artikler, vi publicerer."
-
-msgid "emails.reviewAck.description"
-msgstr "Denne e-mail sendes af sektionsredaktøren for at bekræfte modtagelsen af en fuldført bedømmelse og takker bedømmeren for sit bidrag."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Påmindelse om at bedømmeren skal afslutte sin bedømmelse"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Kære {$recipientName},</p><p>Dette er blot for at minde dig om vores "
@@ -483,6 +465,7 @@ msgstr ""
 "udsættelse af deadlinen. Jeg ser frem til at høre fra dig.</p><p>På forhånd "
 "tak og med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Denne e-mail sendes af redaktøren til en bedømmer for at minde vedkommende "
@@ -507,9 +490,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Denne e-mail sendes af sektionsredaktøren til en bedømmer for at minde vedkommende om, at bedømmelsen skulle have været afleveret."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Påmindelse om at bedømmelse af manuskriptet bedes færdiggøres"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Kære {$recipientName},</p><p>Dette er en automatisk påmindelse fra "
@@ -522,6 +507,7 @@ msgstr ""
 "for en udsættelse af deadlinen. Jeg ser frem til at høre fra dig.</p><p>På "
 "forhånd tak og med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Denne e-mail sendes automatisk, når en bedømmer ikke har færdigggjort "
@@ -550,38 +536,12 @@ msgstr ""
 "når adgang for bedømmere ved hjælp af ét klik er aktiveret. Planlagte "
 "opgaver skal aktiveres og konfigureres (se webstedets konfigurationsfil)."
 
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"Indsendelsen {$submissionId} er klar til manuskriptredigering til "
-"{$contextAcronym}"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"<p>Kære {$recipientName}.</p><p>Jeg vil bede dig om at foretage "
-"manuskriptredigering af </p><p><a href\"{$submissionUrl}\">{$submissionId} "
-"{$submissionTitle}</a><br />{$contextName}</p><p> ved at følge disse "
-"trin.</p><ol><li>1. Klik på manuskriptets URL-adresse nedenfor.</li><li>2. "
-"Åbn tilgængelig(e) fil(er) under ‘Filer til redigering’ og tilføj, om "
-"nødvendigt, et indlæg under ‘Drøftelser under manuskriptredigering’.</li><li>"
-"3. Gem manuskriptredigeret fil og upload den ud for "
-"‘Manuskriptredigering’.</li><li>4. Giv redaktøren besked, når alle filer er "
-"færdigredigerede og klar til at blive videresendt til "
-"’Produktion’.</li></ol><p> Hvis du ikke har mulighed for at løse denne "
-"opgave på nuværende tidspunkt, eller du har nogle spørgsmål, bedes du "
-"kontakte mig. Tak for dit bidrag til dette tidsskrift.</p><p>Med venlig "
-"hilsen</p>{$signature}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Denne e-mail sendes af en redaktør til manuskriptredaktøren for indsendelsen "
-"og beder vedkommende om at påbegynde manuskriptredigeringsprocessen. Den "
-"indeholder oplysninger om indsendelsen og om, hvordan der opnåes adgang til "
-"det."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "Indsendelsen {$submissionId} er klar til produktion til {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Kære{$recipientName}:</p><p>En ny indsendelse er klar til layout "
@@ -597,6 +557,7 @@ msgstr ""
 "spørgsmål, bedes du kontakte mig. Tak for dit bidrag til dette "
 "tidsskrift.</p><p>Med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Denne e-mail fra en redaktør til layoutredaktøren meddeler vedkommende, at "
@@ -607,6 +568,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversion færdiggjort"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -617,6 +579,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Denne e-mail fra layoutredaktøren til en redaktør underretter vedkommende "
@@ -895,9 +858,11 @@ msgstr ""
 msgid "emails.notification.description"
 msgstr "Denne e-mail er blevet sendt til registrerede brugere, som har valgt at få tilsendt denne type meddelelser."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Din indsendelse er blevet accepteret til {$contextName}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "<p>Kære {$recipientName}.</p><p>Jeg er glad for at kunne meddele dig, at vi "
@@ -915,106 +880,11 @@ msgstr ""
 "kontakte mig via dit <a href=\"{$submissionUrl}\">indsendelses "
 "dashboard</a>.</p><p>Med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Denne e-mail informerer forfatteren om, at deres indsendelse er blevet "
 "accepteret til publicering."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr ""
-"Din indsendelse er blevet bedømt, og vi opfordrer dig til at indsende dine "
-"ændringer"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"<p>Kære {$recipientName}.</p><p>Dit manuskript, {$submissionTitle}, er "
-"blevet bedømt og vi vil bede dig indsende en revideret udgave, der "
-"adresserer kommentarerne fra bedømmerne. En redaktør vil gennemgå disse "
-"revisioner, og hvis de i tilstrækkelig grad adresserer "
-"bedømmelseskommentarerne, vil dit manuskript muligvis blive accepteret til "
-"udgivelse.</p><p>Bedømmernes kommentarer er inkluderet i bunden af denne e-"
-"mail. Vær venlig at svare på hver enkelt kommentar og identificér de "
-"ændringer, du laver. Hvis du vurderer, at en kommentar fra en bedømmer er "
-"ubegrundet eller upassende, bedes du venligst forklare dit perspektiv.</p><p>"
-"Når du har færdiggjort din revision af manuskriptet, kan du uploade det "
-"reviderede dokument(er) sammen med dine svar til bedømmernes kommentarer i "
-"dit <a href=\"{$submissionUrl}\">indsendelses dashboard</a>. Hvis du er "
-"blevet logget ud, kan du logge ind igen med brugernavnet "
-"{$recipientUsername}.</p><p>I panelet markeret \"Revisioner\", kan du trykke "
-"på \"Upload fil\" og finde filen(/rne) på din computer. Redaktøren får "
-"besked, når dit reviderede manuskript er blevet uploadet. Hvis du har brug "
-"for at kommunikere direkte med redaktøren, kan du tilføje et indlæg i "
-"panelet \"Drøftelser under bedømmelse\", som du finder under \"Revisioner\" "
-"panelet.</p><p>Hvis du har nogle spørgsmål, er du velkommen til at kontakte "
-"mig fra dit <a href=\"{$submissionUrl}\">indsendelses dashboard</a>.</p><p>"
-"Vi ser frem til at modtage dit reviderede manuskript.</p><p>Med venlig "
-"hilsen</p>{$signature}<hr><p>De følgende kommentarer er modtaget fra "
-"bedømmerne.</p>{$allReviewerComments}"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Denne e-mail fra redaktøren anmoder forfatteren om ændringer under "
-"fagfællebedømmelsen."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr ""
-"Din indsendelse er blevet bedømt - vær venlig at revidere og indsende igen"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"<p>Kære {$recipientName}.</p><p>Efter modtagelse af dit manuskript, "
-"{$submissionTitle}, har bedømmerne anbefalet, at indsendelsen ikke kan "
-"accepteres til udgivelse i dens nuværende form. Vi vil dog gerne opfordre "
-"dig til at indsende en revideret version, der adresserer bedømmernes "
-"kommentarer. Dine revisioner vil blive gennemgået af en redaktør, og bliver "
-"måske sendt i endnu en runde fagfællebedømmelse.</p><p>Vær opmærksom på, at "
-"indsendelse af et revideret manuskript ikke er en garanti for accept til "
-"publicering.</p><p>Bedømmernes kommentarer er inkluderet i bunden af denne e-"
-"mail. Vær venlig at svare på hver enkelt kommentar og identificér de "
-"ændringer, du laver. Hvis du vurderer, at en kommentar fra en bedømmer er "
-"ubegrundet eller upassende, bedes du venligst forklare dit perspektiv. Hvis "
-"du har nogle spørgsmål til anbefalingerne i din bedømmelse, bedes du "
-"inkludere disse i dit svar.</p><p>Når du har færdiggjort din revision af "
-"manuskriptet, kan du uploade det reviderede dokument(er) sammen med dine "
-"svar til bedømmernes kommentarer i dit <a href=\"{$submissionUrl}\">"
-"indsendelses dashboard</a>. Hvis du er blevet logget ud, kan du logge ind "
-"igen med brugernavnet {$recipientUsername}.</p><p>I panelet markeret \""
-"Revisioner\", kan du trykke på \"Upload fil\" og finde filen(/rne) på din "
-"computer. Redaktøren får besked, når dit reviderede manuskript er blevet "
-"uploadet. Hvis du har brug for at kommunikere direkte med redaktøren, kan du "
-"tilføje et indlæg i panelet \"Drøftelser under bedømmelse\", som du finder "
-"under \"Revisioner\" panelet.</p><p>Hvis du har nogle spørgsmål, er du "
-"velkommen til at kontakte mig fra dit <a href=\"{$submissionUrl}\">"
-"indsendelses dashboard</a>.</p><p>Vi ser frem til at modtage dit reviderede "
-"manuskript.</p><p>Med venlig hilsen</p>{$signature}<hr><p>De følgende "
-"kommentarer er modtaget fra bedømmerne.</p>{$allReviewerComments}"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Denne e-mail fra redaktøren eller sektionsredaktøren til en forfatter "
-"meddeler dem om en beslutning om at revidere og indsende deres bidrag igen."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Din indsendelse er blevet afvist"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"<p>Kære {$recipientName}.</p><p>\n"
-"Vi sætter pris på at have modtaget dit manuskript, men på baggrund af "
-"kommentarer fra bedømmerne, kan vi desværre ikke acceptere dit manuskript, "
-"{$submissionTitle}, til at blive publiceret.</p><p>Kommentarerne fra "
-"bedømmerne er inkluderet i bunden af denne e-mail.</p><p>Tak fordi du valgte "
-"at indsende dit manuskript til {$contextName}. Selvom det er skuffende at få "
-"en afvisning, håber jeg, at du vil finde bedømmernes kommentarer "
-"konstruktive og hjælpsomme.</p><p>Det står dig frit for at indsende dit "
-"manuskript til et andet tidsskrift.</p><p>Med venlig "
-"hilsen</p>{$signature}<hr><p>De følgende kommentarer er modtaget fra "
-"bedømmerne.</p>{$allReviewerComments}"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Denne e-mail meddeler forfatteren, at deres indsendelse er blevet afvist "
-"efter en fagfællebedømmelse."
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Køb af abonnement: Individuelt"
@@ -1157,41 +1027,6 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "Denne e-mail tillader manuskriptredaktører at anmode forfattere om yderligere oplysninger vedrørende referencer."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Redaktørbeslutning"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Vi har besluttet følgende: Fremsendes til bedømmelse<br />\n"
-"<br />\n"
-"Submission URL: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Denne e-mail fra redaktøren eller sektionsredaktøren til forfatteren meddeler at indsendelsen videresendes til ekstern bedømmelse."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Næste trin for publicering af din indsendelse"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"<p>Kære {$recipientName}.</p><p>Jeg skriver til dig fra {$contextName} for "
-"at fortælle dig, at redigeringen af dit manuskript: {$submissionTitle}, er "
-"færdig. Dit manuskript vil nu gå videre til produktionsfasen, hvor det "
-"endelige dokument vil blive forberedt til publicering. Vi kontakter dig, "
-"hvis vi har brug for yderligere assistance fra dig.</p><p>Hvis du har nogle "
-"spørgsmål, er du velkommen til at kontakte mig via dit <a href=\""
-"{$submissionUrl}\">submission dashboard</a>.</p><p>Med venlig "
-"hilsen</p>{$signature}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Denne e-mail fra redaktøren eller sektionsredaktøren til forfatteren "
-"meddeler at indsendelsen nu sendes til publicering."
-
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Besked omhandlende {$contextName}"
 
@@ -1283,9 +1118,11 @@ msgstr ""
 "mailen under Indstillinger > Workflow > Bedømmelse. (Ellers see "
 "REVIEW_REQUEST_SUBSEQUENT.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Forespørgsel om bedømmelse af en revideret artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Kære {$recipientName}.</p><p>Tak for din bedømmelse af <a href=\""
@@ -1304,6 +1141,7 @@ msgstr ""
 "vil takke dig for at overveje denne anmodning. Din hjælp er meget "
 "værdsat.</p><p>Med venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Denne mail sendes af redaktøren til en bedømmer, der bedes oplyse om "
@@ -1328,48 +1166,11 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "Denne e-mail bliver automatisk sendt til udvalgte redaktør når forfatteren uploader en revideret udgave a en artikel."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Din indsendelse er blevet afvist"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"<p>Kære {$recipientName}.</p><p>Jeg beklager at måtte informere dig om, at "
-"redaktøren efter at have vurderet din indsendelse {$submissionTitle}, mener, "
-"at den ikke egner sig til udgivelse i {$contextName}.</p><p>Jeg håber, du "
-"kan få artiklen optaget i et andet tidsskrift.</p><p>Med venlig "
-"hilsen</p>{$signature}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Denne e-mail sendes til forfatteren, hvis redaktøren afviser manuskriptet "
-"indledningsvist, før bedømmelsesfasen, idet indsendelsen ikke lever op til "
-"kravene for publicering i tidsskriftet"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Redaktøranbefaling"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"<p>Kære {$editors},</p><p>Efter at have overvejet bedømmernes feedback vil "
-"jeg komme med følgende anbefaling vedrørende indsendelsen "
-"{$submissionTitle}.</p><p>Min anbefaling er:<br />{$recommendation}.</p><p>"
-"Besøg venligst indsendelsen <a href=\"{$submissionUrl}\">redaktionel "
-"workflow</a> for at handle på denne anbefaling.</p><p>Du er velkommen til at "
-"kontakte mig, hvis der er nogle spørgsmål.</p><p>Med venlig "
-"hilsen</p><p>{$senderName}</p>"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Denne automatiske e-mail meddeler en seniorredaktør eller sektionsredaktør, "
-"at der er givet en redaktionel anbefaling om en indsendelse. Denne skabelon "
-"bruges, når en redaktør kun har tilladelse til at anbefale en redaktionel "
-"beslutning men ikke er autoriseret til at tage den endelige redaktionelle "
-"beslutning. Denne mulighed kan vælges, når rollerne tildeles for "
-"indsendelsen."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Indsendelsesbekræftelse"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "<p>Kære {$recipientName},</p><p>Du er angivet som medforfatter på et "
@@ -1381,11 +1182,13 @@ msgstr ""
 "for at overveje dette tidsskrift til at udgive dit arbejde i.</p><p>Med "
 "venlig hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Når denne e-mail er aktiveret, sendes den automatisk til de øvrige "
 "forfattere, udover indsenderen, angivet under indsendelsesprocessen."
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Denne e-mail er afsendt af redaktøren til en bedømmer for at underrette "
@@ -1394,6 +1197,7 @@ msgstr ""
 "redaktøren senere genindsætte bedømmeren, hvis vedkommende skal fortsætte "
 "sin bedømmelse."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Kære {$recipientName}.</p><p>Vi har for nyligt aflyst vores forespørgsel "
@@ -1405,6 +1209,7 @@ msgstr ""
 "spørgsmål, er du velkommen til at kontakte mig.</p><p>Med venlig "
 "hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Kan du stadig bedømme noget for {$contextName}?"
 

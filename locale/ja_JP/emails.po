@@ -20,9 +20,11 @@ msgstr ""
 "このメールは、登録ユーザーからパスワードを忘れた、または、ログインできない旨の連絡を受けた場合に、登録ユーザーに送信されるものです。このメールではパスワー"
 "ドをリセットするためのURLを提供します。"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "このメールは、新規登録したユーザーに送付され、ユーザー名とパスワードを通知します。"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -35,6 +37,7 @@ msgstr ""
 "ありがとうございました。<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "アカウントの確認"
 
@@ -111,9 +114,11 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "{$siteTitle}からの新しいお知らせ"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "このメールは（設定で有効になっていれば）OJSに登録していない著者がこの雑誌への投稿プロセスを終了した時に、自動的に送信されるものです。"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "拝啓<br />\n"
@@ -124,29 +129,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "投稿のお礼"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"このメールは（設定で有効になっていれば）著者がこの雑誌への投稿プロセスを終了した時に、自動的に送信されるものです。メールでは、投稿物の処理状況を追跡できる"
-"ことを伝える同時に、著者に投稿に対するお礼をしています。"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}様<br />\n"
-"<br />\n"
-"雑誌『{$contextName}』に原稿「{$submissionTitle}」をご投稿いただき、ありがとうございました。本誌が使用しているオンライン雑"
-"誌管理システムでは、雑誌のWebサイトにログインすることにより、編集過程の進捗状況を確認することができます。<br />\n"
-"<br />\n"
-"原稿のURL: {$submissionUrl}<br />\n"
-"ユーザー名: {$recipientUsername}<br />\n"
-"<br />\n"
-"何かご不明な点がございましたら、ご連絡ください。研究成果の発表の場として、本誌をご検討いただき、誠にありがとうございました。<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.subject"
 msgstr "投稿のお礼"
 
 msgid "emails.lockssNewArchive.description"
@@ -206,11 +190,13 @@ msgstr ""
 msgid "emails.lockssExistingArchive.subject"
 msgstr "『{$contextName}』保存のお願い"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "このメールは、編集者のユーザーページにある「利用者への通知」リンクにより、登録ユーザーに送信されるものです。このメールは、最新号の発行を読者に通知し、UR"
 "Lを示して雑誌にアクセスするよう案内します。"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "読者各位:<br />\n"
@@ -223,6 +209,7 @@ msgstr ""
 "引き続きよろしくお願いいたします。<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "最新号の発行案内"
 
@@ -247,11 +234,13 @@ msgstr ""
 "ご協力よろしくお願いいたします。<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "このメールは、査読者の確認期限が過ぎた場合（「設定」>「ワークフロー」>「査読」の「査読オプション」を参照）、査読者のワンクリックアクセスが無効になってい"
 "る場合に自動的に送信されます。スケジュールされたタスクを有効にして設定する必要があります（サイト設定ファイルを参照）。"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -280,15 +269,18 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "リマインダー：論文査読のお願い"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "このメールは、セクション編集者から査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセ"
 "ス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST"
 "_ATTACHEDを参照してください）。"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -315,14 +307,17 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "論文査読のお願い"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "このメールは、編集者からセクション編集者に投稿物の編集プロセスを監督する作業を任命したことを通知するものです。メールには投稿物に関する情報と雑誌サイトへの"
 "アクセス法を示しています。"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -335,14 +330,17 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "セクション編集者任命のお知らせ"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "このメールは、査読者の査読期限日が過ぎ（雑誌設定ステップ2の査読オプションを参照）、査読者ワンクリックアクセスが無効な場合に、自動的に送信されるものです。"
 "定期タスク機能が有効かつ設定されている必要があります（サイト設定ファイルを参照）。"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -362,6 +360,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "論文査読の督促（自動送信）"
 
@@ -371,6 +370,7 @@ msgstr "論文査読の督促"
 msgid "emails.reviewRemindOneclick.description"
 msgstr "このメールは、セクション編集者から査読者に査読期限日が過ぎたことを督促するものです。"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "このメールは、セクション編集者から査読者に査読期限日が過ぎたことを督促するものです。"
 
@@ -392,6 +392,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -410,21 +411,9 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "論文査読の督促"
-
-msgid "emails.reviewAck.description"
-msgstr "このメールは、セクション編集者から査読者に査読が完了したことを確認し、その貢献に感謝するものです。"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}様:<br />\n"
-"<br />\n"
-"雑誌『{$contextName}』への投稿原稿「{$submissionTitle}」の査読をしていただき、ありがとうございました。本誌が発行する論文の"
-"品質向上に対する貴殿の貢献に対し感謝いたします。"
-
-msgid "emails.reviewAck.subject"
-msgstr "論文査読のお礼"
 
 msgid "emails.reviewDecline.description"
 msgstr "このメールは、査読者からセクション編集者に査読依頼を受けることができない旨を通知するものです。"
@@ -542,12 +531,14 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "論文査読のお願い"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "このメールは、セクション編集者から査読者に投稿物の査読の次回目を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へ"
 "のアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQ"
 "UEST_ATTACHED_SUBSEQUENTを参照してください）。"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -575,6 +566,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "論文査読のお願い"
 
@@ -675,11 +667,13 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "論文査読のお願い"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "このメールは、セクション編集者からレイアウトエディタに投稿物に対するレイアウト作業を任命したことを通知するものです。メールでは、投稿物に関する情報とアクセ"
 "ス方法を提供しています。"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -698,123 +692,15 @@ msgstr ""
 "今回、この作業を引き受けていただけない場合、あるいは、何かご不明な点がございましたら、ご連絡ください。この作業を引き受けていただくよう、よろしくお願いいた"
 "します。"
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "ゲラ作成のお願い"
 
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"このメールは、セクション編集者からコピーエディタに原稿整理作業を開始するよう依頼するものです。メールでは、投稿物に関する情報とアクセス方法を提供しています"
-"。"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}様:<br />\n"
-"<br />\n"
-"誌『{$contextName}』への投稿原稿「{$submissionTitle}」の原稿整理作業をお願いいたしたくメールを差し上げました。以下の手順に"
-"従って作業してください。<br />\n"
-"1. 下記の投稿URLをクリックしてください。<br />\n"
-"2. 「原稿ファイル」で利用可能なファイルを開き、必要に応じて「原稿整理 ディスカッション」を追加しながら、原稿整理作業を行います。<br />\n"
-"3. 整理したファイルを保存し、原稿整理 パネルにアップロードします。<br />\n"
-"4. 全てのファイルの準備が完了したことを編集者に通知し、制作プロセスの開始が可能になります。<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"投稿URL: {$submissionUrl}<br />\n"
-"ユーザー名: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.subject"
-msgstr "原稿整理のお願い"
-
-msgid "emails.editorRecommendation.description"
-msgstr "推薦編集者またはセクション編集者から意思決定を行う編集者またはセクション編集者へのこのメールは、投稿に関する最終的な査読結果を通知します。"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"『$contextName}』への投稿「{$submissionTitle}」に関する査読結果は {$recommendation} です。"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "編集者の査読結果"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿に関する最終的な「不採択」の決定を著者に通知するものです。"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}様:<br />\n"
-"<br />\n"
-"下記の投稿について結論に達しましたので、連絡いたします。\n"
-"『{$contextName}』「{$submissionTitle}」<br />\n"
-"<br />\n"
-"結果は: 不採用"
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "編集者の判断"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿に関する最終的な「再投稿」の決定を著者に通知するものです。"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}様:<br />\n"
-"<br />\n"
-"下記の投稿について結論に達しましたので、連絡いたします。\n"
-"『{$contextName}』「{$submissionTitle}」<br />\n"
-"<br />\n"
-"結果は: 査読に再投稿"
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "編集者の判断"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿に関する最終的な「改訂を要求」の決定を著者に通知するものです。"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}様:<br />\n"
-"<br />\n"
-"下記の投稿について結論に達しましたので、連絡いたします。\n"
-"『{$contextName}』「{$submissionTitle}」<br />\n"
-"<br />\n"
-"結果は: 改訂を要求"
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "編集者の判断"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "編集者やセクション編集者から著者へのこのメールは、投稿が制作プロセスに入ることを通知します。"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}様:<br />\n"
-"<br />\n"
-"投稿「{$submissionTitle}」の編集が完了しました。 これから制作プロセスに入ります。<br />\n"
-"<br />\n"
-"投稿物のURL: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "編集者の判断"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿が外部査読に回されることを著者に通知します。"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}様:<br />\n"
-"<br />\n"
-"下記の投稿について結論に達しましたので、連絡いたします。\n"
-"『{$contextName}』「{$submissionTitle}」<br />\n"
-"<br />\n"
-"結果は: 査読に回す<br />\n"
-"<br />\n"
-"投稿物のURL: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "編集者の判断"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿に関する最終的な「投稿の受理」の決定を著者に通知するものです。"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}様:<br />\n"
@@ -824,6 +710,7 @@ msgstr ""
 "<br />\n"
 "結果は: 投稿の受理"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "編集者の判断"
 
@@ -854,9 +741,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "論文査読の督促（自動送信）"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr "このメールは、セクション編集者から投稿査読中の査読者に、キャンセルされた審査が復活したことを通知するために送信されます。"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}様:<br />\n"
@@ -866,6 +755,7 @@ msgstr ""
 "<br />\n"
 "何かご不明な点がございましたら、ご連絡ください。"
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "論文査読のお願いの復活"
 
@@ -907,22 +797,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month}月{$year}年の編集活動"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr "このメールは、査読段階に入る前に編集者が最初から投稿を断った場合、著者に送信されます。"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}様:<br />\n"
-"<br />\n"
-"下記の投稿について結論に達しましたので、連絡いたします。\n"
-"『{$contextName}』「{$submissionTitle}」<br />\n"
-"<br />\n"
-"結果は: 不採用"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "編集者の判断"
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "通知センター メッセージ リストビルダで使用されるデフォルトの (空白の) メッセージです。"
@@ -1223,9 +1097,11 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "論文の紹介"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "このメールは、レイアウトエディタからセクション編集者にレイアウト処理が終了したことを通知するものです。"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}様:<br />\n"
