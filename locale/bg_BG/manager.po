@@ -1,8 +1,9 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-15 21:44+0000\n"
-"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"PO-Revision-Date: 2022-02-28 21:22+0000\n"
+"Last-Translator: Albena Vassileva <albena.ava@gmail.com>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
 "Language: bg_BG\n"
@@ -2162,3 +2163,284 @@ msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Потвърждаване на имейл (регистрация в списание)"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Даденият суфикс на DOI вече е използван за друг публикуван елемент. Моля, "
+"въведете уникален суфикс на DOI за всеки елемент."
+
+msgid "doi.editor.assigned"
+msgstr "DOI е назначен за този обект {$pubObjectType}."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Виждате общ вид на DOI. Изберете опцията и запазете формата, за да назначите "
+"DOI."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI не може да се назначи, защото съдържа неразрешен шаблон."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Не можете да генерирате DOI, защото в една или повече част от шаблона на DOI "
+"липсват данни. Може да се наложи да зададете брой за публикацията, "
+"идентификатор на издател или да въведете номера на страници."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Не можете да генерирате DOI, докато не назначите тази публикация към някой "
+"брой."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI не може да се назначи, защото липсва персонализирания суфикс."
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "брой"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Назначаване"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI трябва да започва с {$prefix}."
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Няма"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Моля, изберете агенция по регистрацията, която бихте искали да използвате за "
+"депозиране на DOI идентификатори."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Агенция по регистрация"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Сигурни ли сте, че искате да назначите DOI на всички публикувани обекти, за "
+"които няма назначени DOI?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Назначете DOI на всички публикувани обекти в списанието, които нямат "
+"назначени DOI. Това действие не може да се използва с индивидуалната "
+"конфигурация на суфикса. Ако сте променили горната конфигурация на DOI, "
+"запазете промените си, преди да предприемете това действие. Назначаването на "
+"DOI може да отнеме известно време, в зависимост от броя публикувани обекти в "
+"списанието."
+
+msgid "doi.manager.issueDois"
+msgstr "DOI на броеве"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI на статии"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Броевете, които поискахте, не бяха намерени"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Само DOI могат да бъдат редактирани след публикуване на публикацията"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Въведеният DOI не е валиден"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Само DOI могат да се редактират след публикуване на публикация/типография"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Типографията, която поискахте, не е част от тази публикация."
+
+msgid "doi.editor.preview.objects"
+msgstr "Елемент"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Типография: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "За тази публикация не е назначен DOI."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI за тази публикация ще бъде {$doi}."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI трябва да започва с {$doiPrefix}."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} ще бъде назначен за публикацията."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} е назначен. За да редактирате DOI, посетете <a href=\""
+"{$doiManagementLink}\">Страница за управление на DOI</a>."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId} не може да бъде назначен, защото съдържа неразрешен шаблон."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI не може да бъде назначен, защото липсва персонализиран суфикс."
+
+msgid "doi.editor.assignDoi"
+msgstr "Назначаване на DOI {$pubId} за този {$pubObjectType}"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Използвайте следната опция за изчистване на DOI на всички обекти (статии и "
+"типографии), които в момента са планирани за този брой."
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+"Сигурни ли сте, че искате да изтриете съществуващите DOI на обекти броеве?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Изчистване на DOI на броеве"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Сигурни ли сте, че искате да изтриете съществуващия DOI?"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Изчистване"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "типография"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "статия"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Назначаване на DOI"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr ""
+"Сигурни ли сте, че искате да изтриете всички съществуващи DOI идентификатори?"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Ако промените конфигурацията на вашия DOI, вече назначените DOI "
+"идентификатори няма да бъдат засегнати. След като конфигурацията на DOI бъде "
+"запазена, използвайте този бутон за изчистване на всички съществуващи DOI "
+"идентификатори, така че новите настройки да влязат в сила за съществуващите "
+"обекти."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Преназначаване на DOI идентификатори"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Моля, въведете шаблон за DOI суфикс за типографии."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Моля, въведете шаблон за DOI суфикс за статии."
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Моля, въведете шаблон за DOI суфикс за броеве."
+
+msgid "doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr ""
+"Въведете уникален DOI суфикс за всеки публикуван обект. В страницата за мета-"
+"данните на всеки обект ще намерите допълнително поле за въвеждане на DOI."
+
+msgid "doi.manager.settings.doiSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i за броеве<br />%j.v%vi%i.%a за статии<br />%j.v%vi%i.%a.g%g за "
+"типографии."
+
+msgid "doi.manager.settings.doiSuffixDefault"
+msgstr "Използвайте стандартни шаблони."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "за типографии"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "за статии"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "за издания"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Например, vol%viss%ipp%p може да създаде DOI като 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Използвайте въведеният по-долу шаблон, за да генерирате суфикси за DOI. "
+"Използвайте %j за инициалите на списанието, %v за номера на тома, %i за "
+"номера на броя, %Y за годината, %a за идентификатор на статия в OJS, %g за "
+"идентификатор на типография в OJS, %f за идентификатор на файл в OJS, %p за "
+"номер на страница и %x за \"Персонален идентификатор\"."
+
+msgid "doi.manager.settings.doiSuffix.description"
+msgstr ""
+"Суфиксът на DOI може да има произволна форма, но трябва да е уникален "
+"измежду всички публикувани обекти с един и същ DOI префикс:"
+
+msgid "doi.manager.settings.doiSuffix"
+msgstr "DOI суфикс"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Префиксът на DOI е задължителен и трябва да е във формата 10.xxxx."
+
+msgid "doi.manager.settings.doiPrefix.description"
+msgstr ""
+"Префиксът на DOI се определя от регистрираща агенция (например,  <a href=\""
+"http://www.crossref.org\" target=\"_new\">Crossref</a>) и е във формата "
+"10.xxxx (например, 10.1234):"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI префикс"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Типографии"
+
+msgid "doi.manager.settings.enablePublicationDoi"
+msgstr "Статии"
+
+msgid "doi.manager.settings.enableIssueDoi"
+msgstr "Издания"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Изберете публикуваните обекти, за които ще се назначава Digital Object "
+"Identifiers (DOI):"
+
+msgid "doi.manager.settings.doiObjects"
+msgstr "Съдържание на списанието"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Моля, конфигурирайте плъгина за DOI, за да можете да управлявате и "
+"използвате DOI идентификатори в OJS:"
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Този плъгин активира назначаването на Digital Object Identifiers на издания, "
+"статии и типографии в OJS."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "На етап редактиране"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Използвайте стандартни шаблони.<br />%j.v%vi%i за издания<br />%j.v%vi%i.%a "
+"за статии<br />%j.v%vi%i.%a.g%g за типографии."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Изберете за кои обекти да се назначи DOI. Повечето списания назначават DOI "
+"на статиите, но може да решите да сложите DOI на всички публикувани "
+"материали."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Назначи Digital Object Identifier (DOI) на статии, издания и типографски "
+"материали."
