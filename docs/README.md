@@ -63,8 +63,6 @@ A secure deployment can be best achieved by using the following policies:
 * Configure an "allowed_hosts" setting in config.inc.php in order to prevent
 	HOST header injection attacks. This setting should contain a JSON-
 	formatted list of all hostnames that the server should consider valid.
-	It is not necessary to list these when using the base_url[xyz]
-	settings; those are trusted implicitly.
 
 ## Installation
 
