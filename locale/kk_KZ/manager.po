@@ -1,8 +1,9 @@
 # Madi <nmdbzk@gmail.com>, 2021.
+# Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-19 18:19+0000\n"
-"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"PO-Revision-Date: 2022-03-02 06:50+0000\n"
+"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
 "Language: kk_KZ\n"
@@ -2367,3 +2368,89 @@ msgstr ""
 
 msgid "doi.displayName"
 msgstr "\"DOI\" модулі"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI беру"
+
+msgid "doi.manager.submissionDois"
+msgstr "Мақала DOI"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Сіз сұраған мәселелер табылған жоқ"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Жарияланым жарияланғаннан кейін тек DOI-ді өңдеуге болады"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Ұсынылған DOI жарамсыз"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Жарияланымнан / галереядан кейін тек DOI-ді өңдеуге болады"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Сіз сұраған Галерея осы жарияланымның бөлігі емес."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "Жариялау кезінде DOI {$pubId} тағайындалады."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ештене"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "DOI енгізу кезінде пайдаланғыңыз келетін тіркеу агенттігін таңдаңыз."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Тіркеу агенттігі"
+
+msgid "doi.manager.displayName"
+msgstr "ДОИ-лар"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Бұл электрондық пошта журналды тіркеу кезінде жаңа пайдаланушыға автоматты "
+"түрде жіберіледі, егер параметрлер электрондық пошта мекенжайын растауды "
+"қажет етсе."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Электрондық поштаны тексеру (журналға тіркеу)"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Егер бірнеше журнал орналастырылса, веб-сайттың атауы"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Төлем сомасының валютасы, мысалы, АҚШ доллары"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Төлем сомасы"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Төлем түрінің атауы"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Журналдың негізгі байланыс тұлғасының электрондық поштасының мекенжайы"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr ""
+"Автоматтандырылған электрондық хаттарға арналған журналдың электрондық қолы"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Журналдың негізгі байланыс тұлғасының аты"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Журналдың басты бетіне сілтеме"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Журнал атауы"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Көшірмені өңдеу кезеңінде"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Әдепкі шаблондарды қолданыңыз.<br />%j.v%vi%i шығарылымдар үшін<br "
+"/>%j.v%vi%i.%a мақалалар үшін<br />%j.v%vi%i.%a.G%G галереялар үшін."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Мақалаларға, шығарылымдарға және галереяларға сандық объект идентификаторын "
+"(DOI) тағайындаңыз."
