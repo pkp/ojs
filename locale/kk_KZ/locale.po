@@ -2,7 +2,7 @@
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 06:38+0000\n"
+"PO-Revision-Date: 2022-03-02 06:50+0000\n"
 "Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/locale/kk_KZ/"
 ">\n"
@@ -2273,7 +2273,7 @@ msgid "notification.type.submissions"
 msgstr "Жіберу процесінің оқиғалары"
 
 msgid "notification.type.submissionComment"
-msgstr "Редактор \"{$title}\"-ге пікір қалдырды."
+msgstr "Редактор \"{$title}\" пікір қалдырды."
 
 msgid "notification.type.site"
 msgstr "Сайт оқиғалары"
@@ -2282,7 +2282,7 @@ msgid "notification.type.reviewing"
 msgstr "Рецензиялау оқиғалары"
 
 msgid "notification.type.reviewerFormComment"
-msgstr "Форма рецензии была отправлена для \"{$title}\"."
+msgstr "Шолу нысаны \"{$title}\" үшін жіберілді."
 
 msgid "notification.type.newAnnouncement"
 msgstr "Жаңа хабарлама."
