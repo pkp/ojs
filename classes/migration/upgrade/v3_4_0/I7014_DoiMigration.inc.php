@@ -756,7 +756,7 @@ class I7014_DoiMigration extends Migration
                     $this->_updateDoi($item->doi_id, $item->context_id, $item->setting_value);
                 }
             }
-        }, 'publication_id');
+        }, 'p.publication_id','publication_id');
 
         // Remove pub-id::doi settings entry
         DB::table('publication_settings')
