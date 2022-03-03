@@ -1,8 +1,9 @@
 # Mirko Spiroski <mspiroski@id-press.eu>, 2021.
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2022-03-03 14:06+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -2390,3 +2391,16 @@ msgstr ""
 
 msgid "doi.displayName"
 msgstr "ДОИ"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Во фаза на уредување"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Користете стандардни обрасци.<br />%j.v%vi%i за изданија<br />%j.v%vi%i.%a "
+"за написи<br />%j.v%vi%i.%a.g%g за отисоци."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Назначете дигитални идентификатори на објекти (ДОИ) на написи, изданија и "
+"отисоци."
