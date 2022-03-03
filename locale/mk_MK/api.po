@@ -1,6 +1,7 @@
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-05 18:02+0000\n"
+"PO-Revision-Date: 2022-03-03 14:05+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/api/"
 "mk_MK/>\n"
@@ -66,3 +67,14 @@ msgstr "Објавата која ја побаравте не е дел од о
 
 msgid "api.emails.403.disabled"
 msgstr "Функцијата за известување преку и-меил не е овозможена за ова списание."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Некои од ставките не беа успешно депонирани. Проверете ги поединечните "
+"ставки за нивните специфични пораки за грешка."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Не е конфигурирана агенција за регистрација на ДОИ за ова списание."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "ДОИ бројот кој го побаравте не е дел од ова списание."
