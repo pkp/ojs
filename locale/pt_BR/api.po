@@ -1,9 +1,10 @@
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:38-07:00\n"
-"PO-Revision-Date: 2021-01-26 15:48+0000\n"
+"PO-Revision-Date: 2022-03-03 14:05+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/pt_BR/>\n"
@@ -70,3 +71,14 @@ msgstr "Não é possível associar um arquivo deste estágio com uma composiçã
 msgid "api.emails.403.disabled"
 msgstr ""
 "O recurso de notificação por e-mail, não foi habilitado para esta revista."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Alguns itens não foram depositados com sucesso. Verifique os itens "
+"individuais para suas mensagens de erro específicas."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Nenhuma agência de registro de DOI foi configurada para esta revista."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "O DOI solicitado não faz parte desta revista."
