@@ -102,7 +102,7 @@ class WorkflowHandler extends PKPWorkflowHandler {
 				$request->getContext()
 			);
 			$components[FORM_SUBMISSION_PAYMENTS] = $submissionPaymentsForm->getConfig();
-			$templateMgr->setConstants([FORM_SUBMISSION_PAYMENTS]);
+			$templateMgr->setConstants(['FORM_SUBMISSION_PAYMENTS']);
 		}
 
 		// Add the word limit to the existing title/abstract form
