@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2021-11-14 23:15+0000\n"
+"PO-Revision-Date: 2022-03-03 10:22+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -2038,7 +2038,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} nelze přiřadit, protože obsahuje neplatný vzor."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI  {$pubId} bylo přiřazeno."
+msgstr ""
+"DOI  {$pubId} bylo přiřazeno.  Chcete-li upravit DOI, navštivte <a href=\""
+"{$doiManagementLink}\">Stránku správy DOI</a>."
 
 msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "Přiřadit čísla DOI"
@@ -2082,3 +2084,52 @@ msgstr "DOI musí začínat {$prefix}."
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Články"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI vydání"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI článku"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Požadované vydání nebylo nalezeno"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Po zveřejnění publikace lze upravovat pouze DOI"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Zadané DOI není platné"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Po zveřejnění publikace/sazebnice lze upravovat pouze DOI"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Vámi požadovaná sazebnice není součástí této publikace."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} bude přiřazeno při zveřejnění."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Žádná"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "Vyberte registrační agenturu, kterou chcete použít při ukládání DOI."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registrační agentura"
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Během copyeditovací fáze"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Použijte výchozí šablony.<br />%j.v%vi%i pro vydání<br />%j.v%vi%i.%a pro "
+"články<br />%j.v%vi%i.%a.g%g pro sazebnice."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Přidělování identifikátorů digitálních objektů (DOI) článkům, vydáním a "
+"sazebnicím."
