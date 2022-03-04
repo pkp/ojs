@@ -1,7 +1,7 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-04 10:31+0000\n"
+"PO-Revision-Date: 2022-03-05 03:55+0000\n"
 "Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
 "Language: lv\n"
@@ -38,3 +38,9 @@ msgstr "OJS Versija"
 
 msgid "admin.auth.ojs"
 msgstr "OJS Lietotāju Datubāze"
+
+msgid "admin.settings.redirect"
+msgstr ""
+
+msgid "admin.hostedContexts"
+msgstr "Izvietotie Žurnāli"
