@@ -1,7 +1,7 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-04 07:52+0000\n"
+"PO-Revision-Date: 2022-03-04 10:31+0000\n"
 "Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgid "admin.contexts.create"
 msgstr "Izveidot Žurnālu"
 
 msgid "admin.journals.noneCreated"
-msgstr "Nav neviena izveidota žurnāla"
+msgstr "Nav neviena izveidota žurnāla."
 
 msgid "admin.journals.journalSettings"
 msgstr "Žurnāla Iestatījumi"
