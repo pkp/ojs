@@ -13,8 +13,8 @@
  * @brief Article report plugin
  */
 
+use APP\decision\Decision;
 use APP\facades\Repo;
-use APP\workflow\EditorDecisionActionsManager;
 use PKP\db\DAORegistry;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
@@ -77,7 +77,6 @@ class ArticleReportPlugin extends ReportPlugin
         // Add BOM (byte order mark) to fix UTF-8 in Excel
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-        $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
         $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
@@ -96,19 +95,23 @@ class ArticleReportPlugin extends ReportPlugin
         // (This must be stored before display because we won't know the data
         // dimensions until it has all been loaded.)
         $results = $sectionTitles = [];
-        $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
+        $collector = Repo::submission()->getCollector()->filterByContextIds([$journal->getId()]);
         $submissions = Repo::submission()->getMany($collector);
         $maxAuthors = $maxEditors = $maxDecisions = 0;
         foreach ($submissions as $submission) {
             $publication = $submission->getCurrentPublication();
             $maxAuthors = max($maxAuthors, count($publication->getData('authors')));
-            $editDecisions = $editDecisionDao->getEditorDecisions($submission->getId());
+            $editDecisions = Repo::decision()->getMany(
+                Repo::decision()
+                    ->getCollector()
+                    ->filterBySubmissionIds([$submission->getId()])
+            );
             $statusMap = $submission->getStatusMap();
 
             // Count the highest number of decisions per editor.
             $editDecisionsPerEditor = [];
             foreach ($editDecisions as $editDecision) {
-                $editorId = $editDecision['editorId'];
+                $editorId = $editDecision->getData('editorId');
                 $editDecisionsPerEditor[$editorId] = ($editDecisionsPerEditor[$editorId] ?? 0) + 1;
                 $maxDecisions = max($maxDecisions, $editDecisionsPerEditor[$editorId]);
             }
@@ -177,7 +180,7 @@ class ArticleReportPlugin extends ReportPlugin
                 'dateSubmitted' => $submission->getDateSubmitted(),
                 'lastModified' => $submission->getLastModified(),
                 'editors' => $editors,
-                'decisions' => $editDecisions,
+                'decisions' => $editDecisions->toArray(),
             ];
         }
 
@@ -265,14 +268,14 @@ class ArticleReportPlugin extends ReportPlugin
                             $latestDecision = $latestDecisionDate = '';
                             $decisionCounter = 0;
                             foreach ($result['decisions'] as $decision) {
-                                if ($decision['editorId'] != $editorId) {
+                                if ($decision->getData('editorId') != $editorId) {
                                     continue;
                                 }
                                 if ($j != $decisionCounter++) {
                                     continue;
                                 }
-                                $latestDecision = $this->getDecisionMessage($decision['decision']);
-                                $latestDecisionDate = $decision['dateDecided'];
+                                $latestDecision = $this->getDecisionMessage($decision->getData('decision'));
+                                $latestDecisionDate = $decision->getData('dateDecided');
                             }
                             $row = array_merge($row, [$latestDecision, $latestDecisionDate]);
                         }
@@ -321,27 +324,27 @@ class ArticleReportPlugin extends ReportPlugin
     public function getDecisionMessage($decision)
     {
         switch ($decision) {
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT:
+            case Decision::ACCEPT:
                 return __('editor.submission.decision.accept');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
+            case Decision::PENDING_REVISIONS:
                 return __('editor.submission.decision.requestRevisions');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_RESUBMIT:
+            case Decision::RESUBMIT:
                 return __('editor.submission.decision.resubmit');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_DECLINE:
+            case Decision::DECLINE:
                 return __('editor.submission.decision.decline');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION:
+            case Decision::SEND_TO_PRODUCTION:
                 return __('editor.submission.decision.sendToProduction');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW:
+            case Decision::EXTERNAL_REVIEW:
                 return __('editor.submission.decision.sendExternalReview');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
+            case Decision::INITIAL_DECLINE:
                 return __('editor.submission.decision.decline');
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_ACCEPT:
+            case Decision::RECOMMEND_ACCEPT:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.accept')]);
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_DECLINE:
+            case Decision::RECOMMEND_DECLINE:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.decline')]);
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS:
+            case Decision::RECOMMEND_PENDING_REVISIONS:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.requestRevisions')]);
-            case EditorDecisionActionsManager::SUBMISSION_EDITOR_RECOMMEND_RESUBMIT:
+            case Decision::RECOMMEND_RESUBMIT:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.resubmit')]);
             default:
                 return '';

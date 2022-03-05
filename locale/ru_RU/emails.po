@@ -82,9 +82,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Это письмо отправляется вновь зарегистрированному пользователю, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Подтвердите свою учетную запись"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Здравствуйте, {$recipientName}!<br />\n"
@@ -96,6 +98,7 @@ msgstr ""
 "С уважением,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Это письмо отправляется вновь зарегистрированному пользователю в журнале для "
@@ -119,9 +122,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Это письмо отправляется вновь зарегистрированному рецензенту, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Опубликован новый выпуск"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Уважаемый читатель!</p><p>Журнал «{$contextName}» рад сообщить,  что "
@@ -131,6 +136,7 @@ msgstr ""
 "неоценимый вклад в эту работу, а наших читателей — за постоянный интерес к "
 "нашей работе.</p><p>С уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Это письмо отправляется зарегистрированным читателям по ссылке «Уведомить пользователей» на главной странице редактора. Оно сообшает читателям о выходе нового выпуска и приглашает их посетить сайт журнала по указанному адресу (URL)."
 
@@ -176,34 +182,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Это письмо предлагает получателю принять участие в инициативе LOCKSS и включить этот журнал в архив. В письме содержится информация об инициативе LOCKSS initiative и способах к ней присоединиться."
 
-msgid "emails.submissionAck.subject"
-msgstr "Благодарим за Ваш материал в журнал «{$contextName}»"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"<p>Здравствуйте, {$recipientName}!</p><p>Благодарим Вас за отправку "
-"материала в «{$contextName}». Мы получили Ваш материал «{$submissionTitle}» "
-"и вскоре один из членов нашей редакции займётся его изучением. Вы получите "
-"письмо, когда первоначальное решение по материалу будет принято, мы также "
-"можем связаться с Вами для получения дополнительной информации.</p><p>Вы "
-"можете видеть свой материал и отслеживать его прохождение через редакционный "
-"процесс по следующей ссылке:</p><p>URL материала: {$submissionUrl}</p><p>"
-"Если Вы вышли из системы, Вы можете снова войти в нее с именем пользователя "
-"{$recipientUsername}</p><p>Если у Вас возникнут какие-то вопросы, "
-"пожалуйста, свяжитесь со мной через <a href=\"{$submissionUrl}\">страницу "
-"Вашего материала</a>.</p><p>Спасибо за выбор нашего журнала для публикации "
-"Вашей работы.</p>{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Это письмо (если эта возможность включена) автоматически отправляется "
-"автору, когда он отправляет материал в журнал. В письме содержится "
-"информация об отслеживании прохождения материала через редакционный процесс "
-"и благодарность автору за присланный материал."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Подтверждение отправки"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Здравствуйте!<br />\n"
@@ -214,15 +197,18 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Это письмо (если эта возможность включена) автоматически отправляется "
 "авторам, которые не являются пользователями OJS, указанным в процессе "
 "отправки материала."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Вы были назначены редактором материала в журнале « {$contextName}»"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Вам поручен контроль прохождения "
@@ -234,6 +220,7 @@ msgstr ""
 "рецензента».</p><p>Если материал не подходит для этого журнала, пожалуйста "
 "отклоните его.</p><p>Заранее благодарю.</p><p>С уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Это письмо уведомляет редактора раздела о том, что редактор поручил ему "
@@ -242,9 +229,11 @@ msgstr ""
 "«Участники». Этот шаблон должен использоваться, когда редактор раздела имеет "
 "право сохранять решения редакции в систему."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Приглашение к рецензированию"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Я полагаю, что Вы могли бы быть "
@@ -262,14 +251,17 @@ msgstr ""
 "рецензирования.</p><p>Благодарю Вас за рассмотрение этой просьбы. Мы высоко "
 "ценим вашу помощь.</p><p>С уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Это письмо редактора раздела, отправляемое рецензенту, с запросом согласия "
 "или отказа от выполнения рецензирования материала. "
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Сможете ли Вы сделать эту рецензию для нас?"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Это письмо — автоматическое "
@@ -287,6 +279,7 @@ msgstr ""
 "процессу рецензирования.</p><p>Благодарю Вас за рассмотрение этой просьбы. "
 "Мы высоко ценим вашу помощь.</p><p>С уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Это письмо отправляется автоматически, когда дата подтверждения рецензентом участия в рецензировании прошла (смотрите Параметры рецензирования в Настройки > Рабочий процесс > Рецензирование) и прямой доступ рецензента по ссылке отключен. Запланированные задачи должны быть включены и настроены (смотрите файл конфигурации сайта)."
 
@@ -367,9 +360,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "Это письмо редактора раздела, отправляемое рецензенту, с запросом согласия или отказа от выполнения рецензирования материала. К письму приложен сам материал для рецензирования. Это сообщение используется, если выбран процесс рецензирования через электронную почту в Управление > Настройки > Рабочий процесс > Рецензирование. (В ином случае, смотрите REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Запрос на рецензирование исправленного материала"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "Здравствуйте, {$recipientName}!<br />\n"
@@ -394,6 +389,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Это письмо от редактора, отправляемое рецензенту, с запросом согласия или "
@@ -472,9 +468,11 @@ msgstr ""
 msgid "emails.reviewCancel.description"
 msgstr "Это письмо редактора раздела, отправляемое рецензенту, который начал рецензировать материал, с уведомлением о том, что рецензирование отменено."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Можете ли Вы ещё отрецензировать кое-что для «{$contextName}»?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Мы недавно отменили наш запрос на "
@@ -486,6 +484,7 @@ msgstr ""
 "Вас есть какие-то вопросы, пожалуйста, свяжитесь со мной.</p><p>С "
 "уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Это письмо редактора, отправляемое рецензенту, когда ранее отмененное "
@@ -522,21 +521,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Это письмо рецензента, отправляемое редактору раздела, в ответ на запрос на рецензирование статьи, чтобы уведомить редактора раздела о том, что запрос на рецензирование отклонен."
 
-msgid "emails.reviewAck.subject"
-msgstr "Подтверждение получения рецензии"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"Здравствуйте, {$recipientName}!<br />\n"
-"<br />\n"
-"Благодарю Вас за рецензию на материал «{$submissionTitle}» для журнала «{$contextName}». Мы ценим Ваш вклад в качество работы, которую мы публикуем."
-
-msgid "emails.reviewAck.description"
-msgstr "Это письмо отправляется редактором раздела в качестве подтверждения получения рецензии на статью и благодарности рецензенту за его вклад."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Напоминание о необходимости завершить рецензирование"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Это напоминание о нашем запросе "
@@ -548,6 +537,7 @@ msgstr ""
 "нужно продлить срок отправки рецензии, пожалуйста, свяжитесь со мной. Жду "
 "вашего ответа.</p><p>Заранее спасибо и с уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Это письмо отправляется редактором, чтобы напомнить рецензенту о том, что "
@@ -572,9 +562,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Это письмо отправляется редактором раздела, чтобы напомнить рецензенту о том, что срок предоставления рецензии уже прошел."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Напоминание о необходимости завершить рецензирование"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Это письмо — автоматическое "
@@ -587,6 +579,7 @@ msgstr ""
 "отправки рецензии, пожалуйста, свяжитесь со мной. Жду вашего ответа.</p><p>"
 "Заранее спасибо и с уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Это письмо отправляется автоматически, когда рецензент не завершил "
@@ -611,9 +604,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Это письмо отправляется автоматически, когда дата предоставления рецензии рецензентом прошла (смотрите Параметры рецензирования в Настройки > Рабочий процесс > Рецензирование) и прямой доступ рецензента по ссылке включен. Запланированные задачи должны быть включены и настроены (смотрите файл конфигурации сайта)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Ваш материал был принят в «{$contextName}»"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p> Хочу Вам с радостью сообщить, что "
@@ -631,144 +626,15 @@ msgstr ""
 "{$submissionUrl}\">страницу Вашего материала</a>.</p><p>С "
 "уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Это письмо уведомляет автора, что его материал был принят к публикации."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Решение редакции"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"Здравствуйте, {$authors}!<br />\n"
-"<br />\n"
-"Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />\n"
-"<br />\n"
-"Наше решение: Отправить на рецензирование<br />\n"
-"<br />\n"
-"URL материала: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об отправке материала на внешнее рецензирование."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Следующие шаги для публикации Вашего материала"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"<p>Здравствуйте, {$recipientName}!</p><p>Пишу Вам от имени журнала "
-"«{$contextName}» и хочу сообщить, что редактирование Вашего материала "
-"«{$submissionTitle}» завершено. Ваш материал далее переходит на этап "
-"публикации, где будут подготовлены финальные гранки Вашего материала. Мы "
-"свяжемся с Вами, если нам потребуется Ваша помощь.</p><p>Если у Вас есть "
-"какие-то вопросы, пожалуйста, свяжитесь со мной через <a href=\""
-"{$submissionUrl}\">страницу Вашего материала</a>.</p><p>С "
-"уважением,</p>{$signature}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его о запуске материала в производство."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr ""
-"Ваш материал был отрецензирован и мы предлагаем Вам внести в него изменения"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"Здравствуйте, {$authors}!<br />\n"
-"<br />\n"
-"Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />\n"
-"<br />\n"
-"Наше решение: Требуется корректировка"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Это письмо редактора, запрашивающего от автора изменение материала в "
-"процессе рецензирования."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr ""
-"Ваш материал был отрецензирован — пожалуйста, внесите изменения и отправьте "
-"заново"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"Здравствуйте, {$authors}!<br />\n"
-"<br />\n"
-"Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />\n"
-"<br />\n"
-"Наше решение: Отправить на рецензирование повторно"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Это письмо редактора или редактора раздела, отправляемое автору, чтобы "
-"уведомить его о решении «Внести изменения и отправить на рецензирование "
-"повторно» относительно присланного материала."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Ваш материал был отклонен"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"Здравствуйте, {$authors}!<br />\n"
-"<br />\n"
-"Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />\n"
-"<br />\n"
-"Наше решение: Отклонить материал"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Это письмо уведомляет автора, что его материал был отклонён после "
-"рецензирования."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Рекомендация редактора"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"<p>Уважаемые {$editors}!</p><p>После рассмотрения рецензий, присланных "
-"рецензентами, я бы хотел дать следующую рекомендацию относительно материала "
-"«{$submissionTitle}».</p><p>Моя рекомендация:<br />{$recommendation}.</p><p>"
-"Пожалуйста, зайдите на страницу <a href=\"{$submissionUrl}\">«Редакционный "
-"процесс»</a> данного материала, чтобы выполнить действия, связанные с этой "
-"рекомендацией.</p><p>Если у вас есть вопросы, пожалуйста, свяжитесь со "
-"мной.</p><p>С уважением,</p><p>{$senderName}</p>"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Это автоматически отправленное письмо уведомляет главного редактора или "
-"редактора раздела, что сделана рекомендация относительно решения по "
-"материалу. Этот шаблон используется, когда редактор может только "
-"рекомендовать решение по материалу, а сохранить его в систему может только "
-"уполномоченный редактор. Эта возможность может быть выбрана при назначении "
-"участников в материал."
-
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"Материал «{$submissionId}» готов к литературному редактированию для "
-"«{$contextAcronym}»"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"Здравствуйте, {$recipientName}!<br />\n"
-"<br />\n"
-"Я хотел бы попросить Вас выполнить литературное редактирование материала «{$submissionTitle}» для журнала «{$contextName}», выполнив следующие шаги.<br />\n"
-"1. Щелкните на URL материала ниже.<br />\n"
-"2. Откройте все файлы, доступные в панели «Черновики», и выполните литературное редактирование, добавляя при необходимости Обсуждения литературного редактирования.<br />\n"
-"3. Сохраните отредактированные файлы и загрузите их в панель «Отредактированные».<br />\n"
-"4. Уведомите редактора о том, что все файлы были подготовлены и можно их запускать в производство.<br />\n"
-"<br />\n"
-"URL журнала «{$contextName}»: {$contextUrl}<br />\n"
-"URL материала: {$submissionUrl}<br />\n"
-"Имя пользователя: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Это письмо редактора, отправляемое литературному редактору материала, с "
-"запросом начала процесса литературного редактирования. В письме содержится "
-"информация о материале и о том, как получить к нему доступ."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Материал «{$submissionId}» готов к верстке в «{$contextAcronym}»"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Новый материал готов для "
@@ -782,6 +648,7 @@ msgstr ""
 "или у Вас есть какие-то вопросы, пожалуйста, свяжитесь со мной. Спасибо за "
 "Ваш вклад в наш журнал.</p><p>С уважением,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Это письмо редактора, отправляемое верстальщику, с уведомлением о том, что "
@@ -791,6 +658,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Гранки сделаны"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "Здравствуйте, {$recipientName}!<br />\n"
@@ -801,6 +669,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Это письмо верстальщика уведомляет редактора, что работа над гранками была "
@@ -1078,24 +947,6 @@ msgstr "Пожалуйста, введите свое сообщение."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "Сообщение по умолчанию (пустое) используется в редакторе списка сообщений Центра уведомлений."
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Ваш материал был отклонен"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"<p>Здравствуйте, {$recipientName}!</p><p> С сожалением вынужден Вам "
-"сообщить, что по результатам рецензирования Вашего материала "
-"«{$submissionTitle}» редактор принял решение, что он не соответствует нашим "
-"требованиям к публикации в журнале «{$contextName}».</p><p>Желаю Вам успеха, "
-"если Вы решите отправить Вашу работу в другой журнал.</p><p>С "
-"уважением,</p>{$signature}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Это письмо отправляется автору, если редактор решает отклонить его материал "
-"на начальной стадии, до этапа рецензирования, так как материал не "
-"соответствует требованиям к публикации в журнале"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Активность журнала за {$month} {$year} года"

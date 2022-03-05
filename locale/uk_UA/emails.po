@@ -87,9 +87,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Цей лист надсилається новому зареєстрованому користувачу для того, щоб привітати його з реєстрацією та надіслати йому його ім'я користувача та пароль."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Підтвердження облікового запису"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Вітаємо, {$recipientName}<br />\n"
@@ -104,6 +106,7 @@ msgstr ""
 "З Повагою,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Цей лист надсилається новому зареєстрованому користувачу для того, щоб привітати його з реєстрацією та надіслати йому його ім'я користувача та пароль."
 
@@ -125,9 +128,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Цей лист надсилається новому зареєстрованому рецензенту для того, щоб повідомити йому про реєстрацію та надіслати його ім'я користувача та пароль."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Опубліковано новий випуск"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Шановні читачі!<br />\n"
@@ -140,6 +145,7 @@ msgstr ""
 "Дякуємо, що продовжуєте цікавитись нашою роботою,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Цей лист надсилається зареєстрованим читачам засобами посилання \"Сповістити користувачів\" у теці редактора. Лист інформує читачів про вихід нового випуску видання та запрошує їх відвідати сайт журналу, скориставшись відповідним URL-посиланням."
 
@@ -207,25 +213,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Цей лист надсилається як пропозиція приєднання адресата до ініціативи LOCKSS та включення цього журналу до архіву. В ньому міститься інформація про ініціативу LOCKSS та шляхи приєднання до неї."
 
-msgid "emails.submissionAck.subject"
-msgstr "Подяка за подання рукопису"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Дякуємо, що надіслали рукопис &quot;{$submissionTitle}&quot; для публікації у виданні &quot;{$contextName}&quot;. Електронна система управління журналом, яку ми використовуємо, дозволяє авторам відслідковувати редакційне опрацювання поданих до друку рукописів. Для цього потрібно увійти на веб-сайт журналу зі своїм іменем користувача:<br />\n"
-"<br />\n"
-"URL рукопису: {$submissionUrl}<br />\n"
-"Ім'я користувача: {$recipientUsername}<br />\n"
-"<br />\n"
-"Якщо Ви маєте запитання, будь ласка, звертайтеся до мене. Дякую за вибір цього журналу як місця публікації своєї роботи.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr "Якщо розсилання таких листів дозволене, цей лист автоматично надсилається автору, коли він або вона завершує процес подання рукопису до журналу. У ньому міститься інформація про відстеження редакційного опрацювання рукопису та подяка автору за подання."
-
 msgid "emails.submissionComment.subject"
 msgstr "Коментар на подання"
 
@@ -254,9 +241,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Цей лист інформує рецензентів подання про закінчення процесу рецензування. У ньому міситься інформація про подання, рішення редактора та подяка рецензенту за його внесок."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Редакційне призначення"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -268,12 +257,15 @@ msgstr ""
 "<br />\n"
 "Дякую."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Цим листом редактор видання повідомляє редактора розділу про доручення йому нагляду за процесом редакційного опрацювання подання. У листі міститься інформація про подання та про те, як отримати доступ до сайту журналу."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Запит на рецензування статті"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -309,6 +301,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Цей лист надсилається автоматично, коли рецензент пропустив дату "
@@ -349,9 +342,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Цим листом редактор розділу просить рецензента відрецензувати подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування та включена опція доступу рецензента \"єдиним натисканням\"."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Запит на рецензування статті"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -383,6 +378,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "Цим листом редактор розділу просить рецензента взятися за виконання рецензії подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування (у іншому випадку див. REVIEW_REQUEST_ATTACHED.)"
 
@@ -484,21 +480,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що відмовляється рецензувати."
 
-msgid "emails.reviewAck.subject"
-msgstr "Подяка за рецензування статті"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Дякую за закінчення рецензування подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ми цінуємо Ваш внесок у контроль якості роботи, поданої нам для публікації."
-
-msgid "emails.reviewAck.description"
-msgstr "Цим листом редактор розділу підтверджує отримання готової рецензії та дякує рецензенту за його внесок."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Нагадування про рецензування"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -519,6 +505,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Цим листом редактор розділу нагадує рецензенту про настання кінцевої дати рецензування."
 
@@ -544,9 +531,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Цим листом редактор розділу нагадує рецензенту про настання кінцевої дати рецензування."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Автоматичне нагадування про рецензування"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -569,6 +558,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Цей лист автоматично надсилається рецензенту, коли настає кінцева дата рецензування (див. розділ \"Налаштування рецензування\" кроку 2 Налаштування журналу) та відключений доступ рецензента \"єдиним натисканням\". Щоб ця функціональність працювала необхідно включити на налаштувати Scheduled tasks (див. файл конфігурації сайту)."
 
@@ -595,9 +585,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Цей лист автоматично надсилається рецензенту, коли настає кінцева дата рецензування (див. розділ \"Налаштування рецензування\" кроку 2 Налаштування журналу) та включений доступ рецензента \"єдиним натисканням\". Щоб ця функціональність працювала необхідно включити на налаштувати Scheduled tasks (див. файл конфігурації сайту)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Рішення редактора"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "Шановний|Шановна {$authors}:<br />\n"
@@ -607,75 +599,9 @@ msgstr ""
 "<br />\n"
 "Наше рішення: Прийняти Подання"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Рішення редактора"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"Шановний|Шановна {$authors}:<br />\n"
-"<br />\n"
-"Ми прийняли рішення стосовно Вашого подання \"{$submissionTitle}\" до "
-"видання \"{$contextName}\".<br />\n"
-"<br />\n"
-"Наше рішення: Необхідні Виправлення"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Рішення редактора"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"Шановний|Шановна {$authors}:<br />\n"
-"<br />\n"
-"Ми прийняли рішення стосовно Вашого подання\"{$submissionTitle}\" до видання "
-"\"{$contextName}\".<br />\n"
-"<br />\n"
-"Наше рішення: Відправити на повторне рецензування"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Рішення редактора"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"Шановний|Шановна {$authors}:<br />\n"
-"<br />\n"
-"Ми прийняли рішення стосовно Вашого подання \"{$submissionTitle}\" до "
-"видання \"{$contextName}\".<br />\n"
-"<br />\n"
-"Наше рішення: Відмовити у поданні"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Запит на літературне редагування"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Я хотів би попросити Вас здійснити літературне редагування тексту &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;, виконавши наступні кроки:<br />\n"
-"1. Натисніть на вказаній нижче адресі URL подання.<br />\n"
-"2. Увійдіть на сайт журналу та натисніть на посиланні &quot;Файл&quot; кроку 1.<br />\n"
-"3. Ознайомтеся з опублікованими на веб-сайті інструкціями з літературного редагування.<br />\n"
-"4. Відкрийте завантажений файл та відредагуйте його, додаючи у текст в разі потреби запити до автора.<br />\n"
-"5. Збережіть відредагований файл та вивантажте його на крок 1 літературного редагування.<br />\n"
-"6. Повідомте листом редактора про закінчення роботи.<br />\n"
-"<br />\n"
-"URL видання &quot;{$contextName}&quot;: <a href=\"{$contextUrl}\">{$contextUrl}</a><br />\n"
-"URL подання: <a href=\"{$submissionUrl}\">{$submissionUrl}</a><br />\n"
-"Ім'я користувача: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Цим листом редактор розділу просить літературного редактора розпочати процес літературного редагування подання. У листі міститься інформація про подання та про те, як отримати доступ до нього."
 
 msgid "emails.copyeditComplete.subject"
 msgstr "Літературне редагування завершено"
@@ -814,9 +740,11 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "Цим листом редактор розділу підтверджує закінчення процесу остаточного літературного редагування та дякує літературного редактора за його внесок."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Запит на верстку"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -832,12 +760,14 @@ msgstr ""
 "<br />\n"
 "Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Цим листом редактор розділу просить редактора верстки розпочати процес верстки подання. У листі міститься інформація про подання та про те, як отримати доступ до нього."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Верстка завершена"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -848,6 +778,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Цим листом редактор верстки повідомляє редактора розділу про закінчення процесу верстки."
 
@@ -1246,9 +1177,11 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "Цей лист дозволяє літературним редакторам уточнювати у авторів інформацію про пристатейну бібліографію."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Запит на рецензування статті"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1282,6 +1215,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "Цим листом редактор розділу просить рецензента взятися за виконання другого раунду рецензування подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування (у іншому випадку див. REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
@@ -1366,6 +1300,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "Цей лист автоматично надсилається призначеному редактору, коли автор вивантажує перероблену версію своєї статті."
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Вітаємо,<br />\n"
@@ -1378,9 +1313,11 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Подяка за подання рукопису"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1391,60 +1328,17 @@ msgstr ""
 "<br />\n"
 "Якщо у вас виникнуть якісь питання, будь ласка, зв'яжіться зі мною."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Запит на відновлення рецензії"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "При ввімкненні цей електронний лист автоматично надсилається іншим авторам, "
 "які не є користувачами OJS, зазначеними у процесі подання рукопису."
 
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"Щодо подання {$submissionTitle}, надісланому до {$contextName}, можу "
-"рекомендувати наступне: {$recommendation}"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Рекомендації Редактора"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Це лист редактора чи редактора розділу, яке повідомляє Автора про запуск "
-"його матеріалу у Виробництво."
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Редагування вашого подання &quot;{$submissionTitle},&quot; завершено. Ми "
-"надсилаємо його на публікацію.<br />\n"
-"<br />\n"
-"URL Подання: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Рішення Редакції"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Це лист редактора чи редактора розділу до автора, з повідомленням про те, що "
-"подання відправлено на зовнішнє рецензування."
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Ми прийняли рішення щодо вашого Подання до {$contextName}, "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Наше рішення: Відправити на Рецензування<br />\n"
-"<br />\n"
-"URL Подання: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Рішення Редакції"
-
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Цей лист надіслано Редактором Розділу до Рецензента, який почав "

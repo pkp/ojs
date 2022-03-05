@@ -14,10 +14,10 @@
  */
 
 use APP\article\ArticleGalley;
+use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\submission\Submission;
-use APP\workflow\EditorDecisionActionsManager;
 
 use PKP\facades\Locale;
 use PKP\i18n\LocaleConversion;
@@ -412,11 +412,14 @@ class DataciteXmlFilter extends NativeExportFilter
                     $dates[DATACITE_DATE_SUBMITTED] = $submittedDate;
                 }
                 // Accepted date: the last editor accept decision date
-                $editDecisionDao = DAORegistry::getDAO('EditDecisionDAO'); /** @var EditDecisionDAO $editDecisionDao */
-                $editDecisions = $editDecisionDao->getEditorDecisions($article->getId());
-                foreach (array_reverse($editDecisions) as $editDecision) {
-                    if ($editDecision['decision'] == EditorDecisionActionsManager::SUBMISSION_EDITOR_DECISION_ACCEPT) {
-                        $dates[DATACITE_DATE_ACCEPTED] = $editDecision['dateDecided'];
+                $editDecisions = Repo::decision()->getMany(
+                    Repo::decision()
+                        ->getCollector()
+                        ->filterBySubmissionIds([$article->getId()])
+                );
+                foreach ($editDecisions->reverse() as $editDecision) {
+                    if ($editDecision->getData('decision') == Decision::ACCEPT) {
+                        $dates[DATACITE_DATE_ACCEPTED] = $editDecision->getData('dateDecided');
                     }
                 }
                 // Last modified date (for articles): last modified date.

@@ -18,11 +18,12 @@ describe('Data suite tests', function() {
 			prefix: '',
 			title: 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence',
 			subtitle: '',
-			abstract: 'The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.'
+			abstract: 'The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.',
+			authors: ['Alan Mwandenga']
 		};
 	});
 
-	it('Create a submission', function() {
+	it('Registers as author and creates a submission', function() {
 		cy.register({
 			'username': 'amwandenga',
 			'givenName': 'Alan',
@@ -30,20 +31,24 @@ describe('Data suite tests', function() {
 			'affiliation': 'University of Cape Town',
 			'country': 'South Africa',
 		});
-
 		cy.createSubmission(submission);
+	});
 
-		cy.logout();
+	it('Sends a submission to review, assigns reviewers, accepts a submission, and sends to production', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, 'Mwandenga');
-		cy.sendToReview();
+		cy.clickDecision('Send for Review');
+		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Aisla McCrae');
 		cy.assignReviewer('Adela Gallego');
-		cy.recordEditorialDecision('Accept Submission');
-		cy.get('li.ui-state-active a:contains("Copyediting")');
+		cy.clickDecision('Accept Submission');
+		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Sarah Vogt');
-		cy.recordEditorialDecision('Send To Production');
-		cy.get('li.ui-state-active a:contains("Production")');
+		cy.clickDecision('Send To Production');
+		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Stephen Hellier');
 		cy.assignParticipant('Proofreader', 'Sabine Kumar');
 	});
@@ -181,7 +186,7 @@ describe('Data suite tests', function() {
 		cy.publish('1', 'Vol. 1 No. 2 (2014)');
 		cy.isInIssue(submission.title, 'Vol. 1 No. 2 (2014)');
 		cy.contains(submission.title).click();
-		cy.get('h1').contains(submission.title);
+		cy.get('h1:contains("' + submission.title + '")');
 		cy.checkViewableGalley('PDF');
 		cy.contains(submission.title).click();
 		cy.contains('Alan Mwandenga');
@@ -197,11 +202,11 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
-		cy.get('.modal button').contains('Unpublish').click();
+		cy.get('.modal__panel button').contains('Unpublish').click();
 		cy.wait(1000);
 		cy.visit('/index.php/publicknowledge/issue/current');
 		cy.contains('Signalling Theory Dividends').should('not.exist');
-                cy.logout();
+		cy.logout();
 		cy.request({
 				url: '/index.php/publicknowledge/article/view/' + submission.id,
 				failOnStatusCode: false
@@ -251,7 +256,6 @@ describe('Data suite tests', function() {
 		cy.get('#contributors-button').click();
 
 		cy.get('#contributors div').contains('Alan Mwandenga').parent().parent().find('button').contains('Edit').click();
-	
 		cy.get('#contributors [name="familyName-en_US"]').type(' Version 2', {delay: 0});
 		cy.get('#contributors button').contains('Save').click();
 		// cy.get('#contributors button').contains('Save').should("not.be.visible");
@@ -302,7 +306,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
-		cy.get('.modal button').contains('Unpublish').click();
+		cy.get('.modal__panel button').contains('Unpublish').click();
 		cy.wait(1000);
 		cy.get('.pkpWorkflow__header a').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');
@@ -312,16 +316,13 @@ describe('Data suite tests', function() {
 	it('Recommend-only editors can not publish, unpublish or create versions', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.get('[id^="component-grid-users-stageparticipant"]').contains('Stephanie Berardo')
-			.closest('td').find('.show_extras').click()
-			.closest('tr').next().find('a').contains('Edit').click();
+		cy.wait(1000);
+		cy.clickStageParticipantButton('Stephanie Berardo', 'Edit');
 		cy.get('[name="recommendOnly"]').check();
 		cy.get('[id^="submitFormButton"]').contains('OK').click();
 		cy.contains('The stage assignment has been changed.');
 		cy.wait(500);
-		cy.get('[id^="component-grid-users-stageparticipant"]').contains('Stephanie Berardo')
-			.closest('td').find('.show_extras').click()
-			.closest('tr').next().find('a').contains('Login As').click();
+		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('.pkpModalConfirmButton').contains('OK').click();
 		cy.get('#publication-button').click();
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Publish")').should('not.exist');
@@ -335,16 +336,12 @@ describe('Data suite tests', function() {
 	it('Section editors can have their permission to edit publication data revoked', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.get('[id^="component-grid-users-stageparticipant"]').contains('Stephanie Berardo')
-			.closest('td').find('.show_extras').click()
-			.closest('tr').next().find('a').contains('Edit').click();
+		cy.clickStageParticipantButton('Stephanie Berardo', 'Edit');
 		cy.get('[name="canChangeMetadata"]').uncheck();
 		cy.get('[id^="submitFormButton"]').contains('OK').click();
 		cy.contains('The stage assignment has been changed.');
 		cy.wait(500);
-		cy.get('[id^="component-grid-users-stageparticipant"]').contains('Stephanie Berardo')
-			.closest('td').find('.show_extras').click()
-			.closest('tr').next().find('a').contains('Login As').click();
+		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('.pkpModalConfirmButton').contains('OK').click();
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');

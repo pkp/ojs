@@ -81,9 +81,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Det här e-postmeddelandet skickas till nyregistrerade användare för att välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Bekräfta ditt användarkonto"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -95,6 +97,7 @@ msgstr ""
 "Vänligen,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Det här e-postmeddelandet skickas till nyregistrerade användare för att bekräfta deras e-post."
 
@@ -116,9 +119,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Det här e-postmeddelandet skickas till nyregistrerade granskare för välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nytt nummer publicerat"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Till registrerade läsare:<br />\n"
@@ -128,6 +133,7 @@ msgstr ""
 "Tack för visat intresse för vårt arbete,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Det här e-postmeddelandet skickas till registrerade läsare via \"Meddela användare\"-länken under redaktörens användarprofil. Det innehåller information om att det publicerats ett nytt nummer och välkomnar dem genom en länk att besöka tidskriften."
 
@@ -173,28 +179,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Det här e-postmeddelandet rekommenderar mottagaren att delta i LOCKSS-initiativet och att inkludera tidskriften i arkivet. Meddelandet innehåller även generell information om LOCKSS och hur man gör för att delta."
 
-msgid "emails.submissionAck.subject"
-msgstr "Bekräftelse på mottaget bidrag"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Tack för att du har skickat in manuskriptet &quot;{$submissionTitle}&quot; till {$contextName}. I det publiceringssystem vi använder har du möjlighet att följa dess väg i den redaktionella processen genom att logga in på tidskriftens webbplats:<br />\n"
-"<br />\n"
-"Bidragets URL: {$submissionUrl}<br />\n"
-"Användarnamn: {$recipientUsername}<br />\n"
-"<br />\n"
-"Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att skicka ditt bidrag till den här tidskriften.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr "Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till författare när de skickar in sina manuskript till tidskriften. Meddelandet innehåller information om hur författaren kan följa bidraget genom redaktionella processen samt ett tack för för inskickat bidrag."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Bekräftelse på mottaget bidrag"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Hej!<br />\n"
@@ -205,12 +194,15 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Redaktionellt uppdrag"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -222,12 +214,15 @@ msgstr ""
 "<br />\n"
 "Tack och med vänliga hälsningar."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Det här e-postmeddelandet meddelar en sektionsredaktör att redaktören utsett hen att ansvara för ett bidrag genom den redaktionella processen. Det innehåller även information om bidraget och hur man loggar in på tidskriftens webbplats."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -250,12 +245,15 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Förfrågan om granskning av artikel. Påminnelse"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -279,6 +277,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och Granskning utan inloggning är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
@@ -359,9 +358,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när granskningsprocess med e-postbilaga är valt i > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Förfrågan om granskning av artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -386,6 +387,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning. (Annars, se REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
@@ -487,21 +489,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren tackar nej till granskningsuppdraget."
 
-msgid "emails.reviewAck.subject"
-msgstr "Bekräftelse på granskning av artikel"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Tack för att du genomfört granskningen av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi uppskattar ditt arbete din roll i att bibehålla tidskriftens kvalitet."
-
-msgid "emails.reviewAck.description"
-msgstr "Det här e-postmeddelandet skickas från en sektionsredaktör för att bekräfta att en färdig granskning inkommit och för att tacka granskaren för utfört arbete."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Påminnelse om granskning av bidrag"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -516,6 +508,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat."
 
@@ -537,9 +530,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatisk påminnelse om granskning av bidrag"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -554,6 +549,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och när Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
@@ -575,9 +571,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och när Granskning utan inloggning är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Redaktörsbeslut"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -586,116 +584,15 @@ msgstr ""
 "<br />\n"
 "Vårt beslut är att: Acceptera bidraget"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet \"Acceptera bidrag\" fattats för hens bidrag."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Redaktörsbeslut"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Vårt beslut är att: Skicka till granskning<br />\n"
-"<br />\n"
-"Bidragets URL: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att hens bidrag skickas till extern granskning."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Redaktörsbeslut"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Redigeringen av ditt bidrag &quot;{$submissionTitle}&quot; är färdig. Vi skickar det nu vidare till produktion.<br />\n"
-"<br />\n"
-"Bidragets URL: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att hens bidrag sänds vidare till produktion."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Redaktörsbeslut"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Vårt beslut är att: Bearbetning krävs"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet \"Bearbetning krävs\" fattats för hens bidrag."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Redaktörsbeslut"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Vårt beslut är att: Skicka in igen för ny granskning"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet \"Skicka in igen för ny granskning\" fattats för hens bidrag."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Redaktörsbeslut"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Vårt beslut är att: Refusera bidrag"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet \"Refusera bidrag\" fattats för hens bidrag."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Redaktörsrekommendation"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"Rekommendationen angående bidraget &quot;{$submissionTitle}&quot; till {$contextName} är: {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr "Det här e-postmeddelandet från den rekommenderande redaktören eller sektionsredaktören till ansvariga redaktörer eller sektionsredaktörer meddelar dem en slutgiltig rekommendation för bidraget."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Förfrågan om manusredigering"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Jag skulle vilja be dig om att genomföra manusredigering av &quot;{$submissionTitle}&quot; för {$contextName} genom att gå igenom följande steg:<br />\n"
-"1. Klicka på Bidragets URL nedan.<br />\n"
-"2. Öppna samtliga filer tillgängliga under Utkastfiler och manusredigera dem. Skriv i Manusredigeringsdiskussioner vid behov.<br />\n"
-"3. Spara manusredigerade filer och ladda upp under Manusredigerade-panelen.<br />\n"
-"4. Meddela Redaktören att samtliga filer har förberetts och att Produktionsprocessen kan påbörjas.<br />\n"
-"<br />\n"
-"{$contextName} URL: {$contextUrl}<br />\n"
-"Bidragets URL: {$submissionUrl}<br />\n"
-"Användarnamn: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Det här e-postmeddelandet skickas från sektionsredaktören till ett bidrags manusredaktör för att be hen att påbörja manusredigeringsprocessen. Det innehåller information om bidraget och hur man får tillgång till det."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Förfrågan om publiceringsversion"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -712,12 +609,14 @@ msgstr ""
 "<br />\n"
 "Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Det här e-postmeddelandet från sektionsredaktören till layoutredaktören för att meddela att hen har blivit tilldelad uppgiften att vara layoutredaktör för ett bidrag. Det innehåller information om bidraget och hur man får tillgång till det."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversioner klara"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -728,6 +627,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Det här e-postmeddelandet från layoutredaktören till sektionsredaktören för att meddela hen att layoutprocessen färdig."
 
@@ -995,23 +895,6 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt till den tilldelade redaktören när författaren laddar upp en reviderad version av sin artikel."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Redaktörsbeslut"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"<p>Hej {$recipientName},</p><p>Vi har fattat ett beslut angående ditt bidrag "
-"{$submissionTitle}. Beslutet är att refusera bidraget, då det inte lever "
-"upp  till kraven för publicering i {$contextName}.</p><p>I wish you success "
-"if you consider submitting work to another journal.</p><p>Vänliga "
-"hälsningar,</p>{$signature}"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Det här e-postmeddelandet skickas till författaren om redaktören refuserar "
-"bidraget direkt, innan granskningssteget, eftersom bidraget inte lever upp "
-"till tidskriftens krav"
-
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Ett meddelande angående {$contextName}"
 
@@ -1021,6 +904,7 @@ msgstr "Skriv in ditt meddelande."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Defaultmeddelande (tomt) att använda i Notification Center Message Listbuilder."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fortfarande möjlighet att granska bidrag till {$contextName}?"
 
@@ -1052,6 +936,7 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redaktionella aktiviteter för {$month}, {$year}"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Detta är ett e-postmeddelande från redaktören till granskare som skickas när "
@@ -1060,6 +945,7 @@ msgstr ""
 "redaktören återuppta granskningen så granskaren tillåts fortsätta "
 "granskningen."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"

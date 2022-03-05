@@ -48,11 +48,6 @@ msgstr "Nie masz pozwolenia do przeglądania tego czasopisma."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Możesz wyświetlać tylko czasopisma, które zostały aktywowane."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Aby stworzyć lub edytować zgłoszenie, wyślij żądanie do węzła końcowego API "
-"tego czasopisma."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nie jesteś uprawniony do podglądu nieopublikowanych wydań."
 

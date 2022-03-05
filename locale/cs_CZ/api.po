@@ -51,11 +51,6 @@ msgstr "K prohlížení tohoto časopisu nemáte oprávnění."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Můžete zobrazit pouze časopisy, které byly povoleny."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Chcete-li odeslat nebo upravit příspěvek, musíte odeslat požadavek do "
-"koncového bodu API časopisu."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Nemůžete změnit záznamy příspěvku."
 

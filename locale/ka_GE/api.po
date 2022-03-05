@@ -49,11 +49,6 @@ msgstr "არ გაქვთ ამ ჟურნალის ნახვი�
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "თქვენ შეგიძლიათ ნახოთ მხოლოდ ჟურნალები, რომლებზეც გაქვთ წვდომა."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"შენატანის შექმნის, ან ჩასწორებისათვის უნდა გააკეთოთ მოთხოვნა ჟურნალის API "
-"საბოლოო წერტილისათვის."
-
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "არ გაქვთ ნახვის უფლება გამოუქვეყნებელი გამოცემისათვის."
 

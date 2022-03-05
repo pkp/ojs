@@ -63,8 +63,3 @@ msgstr "Ձեր կողմից հարցված հայտարարությունը այ
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "You can not associate a file from this file stage with a galley."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Նյութ ստեղծելու կամ խմբագրելու համար Դուք պետք է հարցում կատարեք ամսագրի API-"
-"ի վերջնակետին։"

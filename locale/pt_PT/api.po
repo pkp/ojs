@@ -52,10 +52,6 @@ msgstr "Não tem permissões para visualizar esta revista."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Só consegue visualizar revistas que estejam ativas."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Para enviar ou editar uma submissão deve solicitar a API endpoint da revista."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Não pode alterar a revista de uma submissão."
 

@@ -15,7 +15,6 @@ namespace APP\publication\maps;
 
 use APP\facades\Repo;
 use APP\publication\Publication;
-
 use PKP\core\PKPApplication;
 use PKP\services\PKPSchemaService;
 

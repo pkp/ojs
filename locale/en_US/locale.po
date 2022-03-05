@@ -1685,6 +1685,9 @@ msgstr "Donations"
 msgid "payment.requestPublicationFee"
 msgstr "Request publication fee ({$feeAmount})"
 
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "No publication fee is enabled."
+
 msgid "payment.notFound"
 msgstr "A payment has been requested, but the request has expired. Contact the Journal Manager for details."
 
@@ -1997,7 +2000,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Access denied! You have not been assigned as a copyeditor to this article."
 
 msgid "user.authorization.noContext"
-msgstr "No journal in context!"
+msgstr "No journal was found that matched your request."
 
 msgid "user.authorization.sectionAssignment"
 msgstr "You are trying to access an article that is not part of your section."

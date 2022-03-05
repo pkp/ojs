@@ -59,9 +59,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "حساب کاربری خود را تایید کنید"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -73,6 +75,7 @@ msgstr ""
 "با تشکر<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password."
 
@@ -94,9 +97,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "شماره جدید چاپ شد"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "خوانندگان گرامی:<br />\n"
@@ -106,6 +111,7 @@ msgstr ""
 "از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "This email is sent to registered readers via the \"Notify Users\" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL."
 
@@ -127,25 +133,6 @@ msgstr ""
 
 msgid "emails.lockssNewArchive.description"
 msgstr "This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved."
-
-msgid "emails.submissionAck.subject"
-msgstr "قدردانی برای ارسال مقاله"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"از ارسال مقاله &quot;{$submissionTitle}&quot; به {$contextName} متشکرم. با استفاده از سامانه الکترونیکی مدیریت مجله، که هم اکنون استفاده می شود، قادر خواهید بود ازطریق وارد شدن به وب سایت مجله، روند پیشرفت بررسی مقاله خود را پیگیری نمائید.<br />\n"
-"<br />\n"
-"آدرس مقاله : {$submissionUrl}<br />\n"
-"نام کاربری: {$recipientUsername}<br />\n"
-"<br />\n"
-"لطفا چنانچه سوالی دارید، با من تماس بگیرید.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr "در صورت فعال سازی. این ایمیل به صورت خودکار به نوسنده مقاله پس از تکمیل عملیات ارسال مقاله، فرستاده خواهد شد."
 
 msgid "emails.submissionUnsuitable.subject"
 msgstr "نا مناسب بودن مقاله برای مجله"
@@ -190,9 +177,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "This email notifies the reviewers of a submission that the review process has been completed. It includes information about the article and the decision reached, and thanks the reviewers for their contributions."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "تعیین کارشناس مسئول"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -204,12 +193,15 @@ msgstr ""
 "<br />\n"
 "متشکرم"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "This email notifies a Section Editor that the Editor has assigned them the task of overseeing a submission through the editing process. It provides information about the submission and how to access the journal site."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "درخواست کارشناسی مقاله"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -229,6 +221,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)"
 
@@ -326,18 +319,6 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخش برای اطلاع از عدم پذیرش انجام داوری"
 
-msgid "emails.reviewAck.subject"
-msgstr "قدردانی بخاطر بررسی مقاله"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"برای بررسی مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به {$contextName}، از شما سپاسگزاریم. مساعدت شما را که باعث ارتقاء سطح کیفی مقاله ای که چاپ شد، ارج می نهیم."
-
-msgid "emails.reviewAck.description"
-msgstr "This email is sent by a Section Editor to confirm receipt of a completed review and thank the reviewer for their contributions."
-
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "یادآوری برای کارشناسی مقاله"
 
@@ -357,9 +338,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "This email is sent by a Section Editor to remind a reviewer that their review is due."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "یادآوری اتوماتیک برای کارشناسی مقاله ارسالی"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -375,6 +358,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
@@ -396,20 +380,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "درخواست انجام امور ویراستاری"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"از شما درخواست می شود که امور ویراستاری مقاله &quot;{$submissionTitle}&quot; مربوط به {$contextName} را برعهده بگیرید. شما می توانید فایل مربوطه به همراه مجموعه ای از دستورالعمل های نحوه ویراستاری مقاله را در وب سایت مجله دریافت کنید.<br />\n"
-"<br />\n"
-"چنانچه در حال حاضر قادر به انجام امور مذکور نیستید و یا سوالی در این زمینه دارید، لطفا با من تماس بگیرید. پیشاپیش از قبول انجام امور ویراستاری برای این مجله سپاسگزارم."
-
-msgid "emails.copyeditRequest.description"
-msgstr "This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it."
 
 msgid "emails.copyeditComplete.subject"
 msgstr "اتمام ویراستاری مقاله"
@@ -465,9 +435,11 @@ msgstr ""
 msgid "emails.copyeditFinalComplete.description"
 msgstr "This email from the Copyeditor to the Section Editor notifies them that the final round of copyediting has been completed and that the layout process may now begin."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "نسخه های پیش از چاپ مورد نیاز است"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -479,12 +451,14 @@ msgstr ""
 "<br />\n"
 "چنانچه در حال حاضر قادر به انجام این امور نیستید و یا سوالی در این رابطه دارید با من تماس بگیرید. پیشاپیش از همکاری شما با این مجله سپاسگزارم."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "This email from the Section Editor to the Layout Editor notifies them that they have been assigned the task of performing layout editing on a submission. It provides information about the submission and how to access it."
 
 msgid "emails.layoutComplete.subject"
 msgstr "نسخه های پیش از چاپ کامل شده است"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -495,6 +469,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "This email from the Layout Editor to the Section Editor notifies them that the layout process has been completed."
 
@@ -849,9 +824,11 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "This email from the Section Editor to the Copyeditor acknowledges completion of the final round of copyediting and thanks them for their contribution."
 
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "یادآوری داوری مقاله ارسالی"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -867,6 +844,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای یادآوری انجام داوری"
 
@@ -906,9 +884,11 @@ msgstr ""
 msgid "emails.notification.description"
 msgstr ""
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "تصمیم دبیر"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -917,50 +897,9 @@ msgstr ""
 "<br />\n"
 "تصمیم نهایی: پذیرش مقاله ارسالی"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از پذیرش مقاله"
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "تصمیم دبیر"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
-"<br />\n"
-"تصمیم : مقاله ارسالی نیاز به انجام اصلاحات دارد"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع ازنیازمندی مقاله به اعمال مجموعه ای از اصلاحات"
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "تصمیم دبیر"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
-"<br />\n"
-"تصمیم نهایی: ارسال دوباره برای داوری"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال دوباره مقاله برای داوری"
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "تصمیم دبیر"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
-"<br />\n"
-"تصمیم نهایی: عدم پذیرش مقاله ارسالی"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از عدم پدیرش پذیرش مقاله"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "خرید اشتراک شخصی"
@@ -1093,62 +1032,6 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr ""
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "تصمیم دبیر"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
-"<br />\n"
-"تصمیم نهایی: عدم پذیرش"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr "این پیام زمان یارسال می شود که دبیر مقاله ارسالی را در اغاز رد می کند، بدون انکه وارد مرحله داوری شود"
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "تصمیم دبیر"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />\n"
-"<br />\n"
-"تصمیم : ارسال به داور خارجی<br />\n"
-"<br />\n"
-"مشاهده وضعیت مقاله ارسالی: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال مقاله برای داوری توسط یک داور خارجی"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "تصمیم دبیر"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-" روند داوری مقاله ارسالی شما (&quot;{$submissionTitle}&quot;)  تکمیل شده و به واحد انتشار ارسال شده است.<br />\n"
-"<br />\n"
-"مشاهده وضعیت مقاله ارسالی: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از ارسال مقاله برای چاپ"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "توصیه دبیر"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"توصیه اینجانب در مورد مقاله ارسالی (&quot;{$submissionTitle}&quot;) در {$contextName} ، {$recommendation} می باشد."
-
-msgid "emails.editorRecommendation.description"
-msgstr "ایمیلی از طرف دبیر یا دبیر بخش به دبیر نهایی تصمیم گیرنده برای اطلاع از توصیه برای مقاله ارسالی"
-
 msgid "emails.notificationCenterDefault.subject"
 msgstr "پیامی برای {$contextName}"
 
@@ -1158,9 +1041,11 @@ msgstr "لطفاً پیام خود را وارد کنید"
 msgid "emails.notificationCenterDefault.description"
 msgstr "پیام خالی که در قسمت اطلاع رسانی استفاده می شود"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "قدردانی برای ارسال مقاله"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "با سلام,<br />\n"
@@ -1171,6 +1056,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "در صورت فعال سازی. این ایمیل به صورت خودکار به نوسنده مقاله پس از تکمیل عملیات ارسال مقاله، فرستاده خواهد شد."
 
@@ -1226,9 +1112,11 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "یادآوری درخواست داوری مقاله"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1251,6 +1139,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
 
@@ -1296,9 +1185,11 @@ msgstr ""
 msgid "emails.revisedVersionNotify.description"
 msgstr "ایمیلی که خودکار پس از آپلود نسخه اصلاحی توسط نویسنده  برای دبیر ارسال می شود"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "درخواست داوری مقاله"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1324,5 +1215,6 @@ msgstr ""
 "چکیده:<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"

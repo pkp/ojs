@@ -81,9 +81,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um sie beim System willkommen zu heißen und ihnen Benutzer/innennamen und Passwort zu bestätigen."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Bestätigung Ihres Benutzer/innenkontos"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -95,6 +97,7 @@ msgstr ""
 "Vielen Dank,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um sie "
@@ -118,9 +121,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Diese E-Mail wird an neu registrierte Gutachter/innen gesendet, um sie beim System willkommen zu heißen und ihnen Benutzer/innennamen und Passwort zu bestätigen."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Neue Ausgabe erschienen"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Liebe Leserinnen und Leser,<br />\n"
@@ -130,6 +135,7 @@ msgstr ""
 "Danke für das andauernde Interesse an unserer Arbeit,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Diese E-Mail wird an registrierte Benutzer/innen mittels des \"Benutzer/innen benachrichtigen\"-Links auf der persönlichen Startseite einer Redakteurin/eines Redakteurs gesendet. Sie benachrichtigt Benutzer/innen über eine neue Ausgabe und lädt sie ein, die Zeitschrift unter einer angegebenen URL aufzusuchen."
 
@@ -175,33 +181,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Diese E-Mail ermuntert die Empfängerin/den Empfänger, an der LOCKSS-Initiative teilzunehmen und diese Zeitschrift in das Archiv aufzunehmen. Sie liefert Informationen über die LOCKSS-Initiative und über Wege, daran teilzunehmen."
 
-msgid "emails.submissionAck.subject"
-msgstr "Eingangsbestätigung"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"vielen Dank für die Einreichung Ihres Manuskript &quot;{$submissionTitle}&quot; zur Veröffentlichung in {$contextName}. Das Verwaltungssystem unserer Webzeitschrift erlaubt Ihnen, jederzeit den Lauf Ihres Beitrags im Redaktionsprozess zu beobachten. Sie loggen sich dazu einfach auf unserer Webseite ein:<br />\n"
-"<br />\n"
-"URL des Manuskripts: {$submissionUrl}<br />\n"
-"Benutzer/innenname: {$recipientUsername}<br />\n"
-"<br />\n"
-"Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interesse an einer Veröffentlichung in unserer Zeitschrift.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Diese E-Mail wird, sofern aktiviert, automatisch an eine Autorin/einen Autor "
-"gesendet, wenn sie den Einreichungsprozess eines Manuskripts für die "
-"Zeitschrift abgeschlossen haben. Sie liefert Informationen über das "
-"Verfolgen der Einreichung durch den Prozess hindurch und dankt der Autorin/"
-"dem Autor für die Einreichung."
-
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Eingangsbestätigung"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Liebe/r Autor/in,<br />\n"
@@ -212,12 +196,15 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr "Diese E-Mail wird, sofern aktiviert, automatisch an die weiteren Autor/innen geschickt, die laut Einreichung keine OJS-Benutzeraccounts haben."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Zuweisung an Rubrikredakteur/in"
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -229,12 +216,15 @@ msgstr ""
 "<br />\n"
 "Vielen Dank."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr "Diese E-Mail benachrichtigt eine/n Rubrikredakteur/in, dass die Redakteurin/der Redakteur ihr/ihm die Aufgabe übertragen hat, eine Einreichung durch den Redaktionsprozess hindurch zu betreuen. Sie liefert Informationen zu der Einreichung und darüber, wie auf die Zeitschriftenseite zugegriffen werden kann."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Bitte um ein Gutachten"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -257,12 +247,15 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr "Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED.)"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Erinnerung an Bitte um Begutachtung eines Artikels"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -286,6 +279,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/"
@@ -378,9 +372,11 @@ msgstr ""
 msgid "emails.reviewRequestAttached.description"
 msgstr "Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, um darum zu bitten, dass sie/er die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie enthält die Einreichung als E-Mail-Anhang. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Begutachtungsverfahren über E-Mail-Anhänge ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Bitte um ein Gutachten"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -405,6 +401,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr "Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie übermittelt Informationen über die Einreichung wie den Titel und das Abstract, ein Fälligkeitsdatum für das Gutachten und Informationen, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)"
 
@@ -506,21 +503,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um darüber zu informieren, dass die Anfrage abgelehnt wird."
 
-msgid "emails.reviewAck.subject"
-msgstr "Eingangsbestätigung für ein Gutachten"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"vielen Dank für Ihr Gutachten zum Beitrag &quot;{$submissionTitle}&quot; für {$contextName}. Ihre Stellungnahme ist eine wichtige Unterstützung für unsere Bemühungen um die Qualität der von uns veröffentlichten Arbeiten."
-
-msgid "emails.reviewAck.description"
-msgstr "Diese E-Mail wird von eine/r Rubrikredakteur/in gesendet, um den Empfang eines abgeschlossenen Gutachtens zu bestätigen und um der Gutachterin/dem Gutachter für die Mitwirkung zu danken."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Erinnerung an fälliges Gutachten"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -535,6 +522,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr "Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist."
 
@@ -556,9 +544,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatische Erinnerung an die Fälligkeit eines Gutachtens"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -573,6 +563,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr "Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen deaktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website)."
 
@@ -594,9 +585,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website)."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Entscheidung der Redaktion"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors},<br />\n"
@@ -605,123 +598,15 @@ msgstr ""
 "<br />\n"
 "Unsere Entscheidung lautet: Beitrag annehmen"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr "Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung."
 
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />\n"
-"<br />\n"
-"Wir haben entschieden, ein Gutachten anzufordern.<br />\n"
-"<br />\n"
-"URL des Beitrags: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Diese E-Mail von Redakteur/in oder Rubrikredakteur/in benachrichtigt die/den Autor/in darüber, dass ein externes Gutachten angefordert wird."
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"Das Lektorat Ihrer Einreichung &quot;{$submissionTitle}&quot; ist beendet. Wir leiten den Beitrag jetzt zur Herstellung weiter.<br />\n"
-"<br />\n"
-"URL des Beitrags: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Diese E-Mail von Redakteur/in oder Rubrikredakteur/in informiert die/den Autor/in darüber, dass deren Beitrag in die Herstellung weitergeleitet worden ist."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"wir sind zu einer Entscheidung in Bezug auf Ihren Beitrag für {$contextName}:"
-" &quot;{$submissionTitle}&quot; gekommen.<br />\n"
-"<br />\n"
-"Wir haben entschieden, dass Ihr Beitrag überarbeitet werden muss."
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr "Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für "
-"{$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />\n"
-"<br />\n"
-"Wir haben entschieden, dass Ihr Beitrag überarbeitet werden muss und dann "
-"erneut zum Begutachtung versendet wird."
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr "Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors},<br />\n"
-"<br />\n"
-"wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />\n"
-"<br />\n"
-"Unsere Entscheidung lautet: Beitrag ablehnen"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr "Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}:<br />\n"
-"<br />\n"
-"Die Empfehlung hinsichtlich der Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; ist: {$recommendation}"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Diese E-Mail von der/dem vorschlagenen Redakteur/in oder Rubrikenredakteur/"
-"in an die/den Entscheidungen treffenden Redakteur/in oder Rubrikenredakteur/"
-"in informiert diese/n über die endgültige Empfehlung zur vorliegenden "
-"Einreichung."
-
-msgid "emails.copyeditRequest.subject"
-msgstr "Bitte um ein Lektorat"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"ich bitte Sie, das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} zu lektorieren. Bitte gehen Sie dabei folgendermaßen vor:<br />\n"
-"1. Klicken Sie auf die unten stehende URL des Beitrags.<br />\n"
-"2. Öffnen Sie alle Dateien, die unter Entwurf für Lektorat verfügbar sind, und beginnen Sie Ihr Lektorat. Fügen Sie neue Diskussionen zum Lektorat nach Bedarf hinzu.<br />\n"
-"3. Sichern Sie die lektorierte(n) Dateien und laden Sie sie unter Lektoriert hoch.<br />\n"
-"4. Benachrichtigen Sie die/den Redakteur/in, dass alle Dateien fertig sind und dass der Herstellungsprozess beginnen kann.<br />\n"
-"<br />\n"
-"URL {$contextName}: {$contextUrl}<br />\n"
-"URL des Beitrags: {$submissionUrl}<br />\n"
-"Benutzer/innenname: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.description"
-msgstr "Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Lektor einer Einreichung gesendet, um diese/n zu bitten, mit dem Lektorat zu beginnen. Sie liefert Informationen über die Einreichung und darüber, wie auf sie zuzugreifen ist."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Bitte um Layout"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -738,12 +623,14 @@ msgstr ""
 "<br />\n"
 "Falls Sie zur Zeit nicht in der Lage sein sollten, die Arbeit zu übernehmen, oder Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihre Unterstützung dieser Zeitschrift."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr "Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in benachrichtigt diese/n, dass ihr/ihm die Aufgabe zugewiesen wird, einen Beitrag zu layouten. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Fahnen fertigestellt"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -754,6 +641,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr "Diese E-Mail von der/dem Layouter/in an die/den Rubrikredakteur/in benachrichtigt diese/n, dass der Layoutprozess abgeschlossen worden ist."
 
@@ -1030,29 +918,14 @@ msgstr "Bitte geben Sie Ihre Nachricht ein."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Die (leere) Standardnachricht, die in der Nachrichtenliste des Benachrichtigungscenters angezeigt wird."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Entscheidung der Redaktion"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}:<br />\n"
-"<br />\n"
-"Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />\n"
-"<br />\n"
-"Wir haben entschieden, Ihre Einreichung abzulehnen."
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Diese E-Mail wird an die/den Autor/in gesendet, wenn die/der Redakteur/in "
-"die Einreichung bereits vor dem Begutachtungsprozess ablehnt."
-
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in "
 "gesendet, die an einem Gutachten arbeiten, um sie darüber zu informieren, "
 "dass die zurüchgezogene Anfrage nach einem Gutachten hiermit erneuert wird."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -1064,6 +937,7 @@ msgstr ""
 "<br />\n"
 "Wenn Sie Fragen haben, können Sie sich gern an mich wenden."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Anfrage nach einem Gutachten wiederhergestellt."
 

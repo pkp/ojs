@@ -18,10 +18,6 @@ msgstr ""
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nimate pravice do vpogleda v neobjavljene številke revije."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Za kreiranje ali spreminjanje članka morate narediti zahtevo na API revije."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Članku ne morete spremeniti imena revije."
 

@@ -72,24 +72,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month}, {$year} uchun tahririyat faoliyati"
 
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Agar muharrir ularni ko'rib chiqish bosqichidan oldin rad etsa, bu elektron "
-"pochta muallifiga yuboriladi"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"\n"
-"\t\t\t{$authors}: <br />\n"
-"<br/>\n"
-"Biz sizning {$contextName}, & quot; {$submissionTitle} & quot; ga "
-"yuborishingiz bo'yicha qarorga keldik. <br />\n"
-"<br/>\n"
-"Bizning qarorimiz: Arizani rad etish"
-
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Tahririyat qarori"
-
 msgid "emails.notificationCenterDefault.description"
 msgstr ""
 "Xabarlar markazi xabarlar ro'yxatini tuzish dasturida ishlatiladigan "
@@ -418,11 +400,13 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "Mumkin bo'lgan foizlar haqidagi maqola"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Joylashuv muharriridan bo'lim tahrirchisiga yuborilgan elektron maktub "
 "ularni joylashtirish jarayoni tugallanganligi haqida xabar beradi."
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -437,12 +421,14 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galleylar tugadi"
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Bo'lim muharriridan maket tahrirlovchisiga yuborilgan elektron pochta "
 "xabarida ularga maketni tahrirlash vazifasi yuklatilgani haqida xabar "
 "beriladi. U ariza va unga qanday kirish haqida ma'lumot beradi."
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -464,149 +450,18 @@ msgstr ""
 "iltimos, men bilan bog'laning. Ushbu jurnalga qo'shgan hissangiz uchun "
 "tashakkur."
 
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Galleylarni talab qiling"
 
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Bu elektron pochta bo'limi muharriri tomonidan nusxa ko'chirish jarayonini "
-"boshlashlarini so'rash uchun yuboruvchi nusxa ko'chiruvchisiga yuboriladi. U "
-"ariza va unga qanday kirish haqida ma'lumot beradi."
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"{$recipientName}: <br />\n"
-"<br/>\n"
-"Men sizdan & quot; {$submissionTitle} & quot; {$contextName} uchun quyidagi "
-"amallarni bajaring. <br />\n"
-"1. Quyidagi Yuborish URL manzilini bosing. <br />\n"
-"2. \"Draft Files\" bo'limida mavjud bo'lgan fayllarni oching va nusxa "
-"ko'chiring, kerak bo'lganda nusxa ko'chirish bo'yicha munozaralarni "
-"qo'shing. <br />\n"
-"3. Nusxalangan fayllarni saqlang va Nusxalangan panelga yuklang. <br />\n"
-"4. Tahririyatga barcha fayllar tayyorlangani va ishlab chiqarish jarayoni "
-"boshlanishi haqida xabar bering. <br />\n"
-"<br/>\n"
-"{$ contextName} URL manzili: {$contextUrl} <br />\n"
-"Yuborish URL manzili: {$submissionUrl} <br />\n"
-"Foydalanuvchi nomi: {$recipientUsername}"
-
-msgid "emails.copyeditRequest.subject"
-msgstr "So'rovni nusxalash"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Tavsiya etayotgan muharrir yoki bo'lim muharriridan qaror qabul qilish "
-"muharrirlari yoki bo'lim muharrirlariga yuborilgan elektron pochta xabarlari "
-"ularga topshirish bo'yicha yakuniy tavsiyanoma to'g'risida xabar beradi."
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"{$editors}: <br />\n"
-"<br/>\n"
-"{$contextName}, & quot; {$submissionTitle} & quot; bu: {$recommendation}"
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Tahririyat tavsiyanomasi"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Tahririyat yoki bo'lim muharriridan muallifga yuborilgan elektron pochta "
-"xabarlari ularni yuborish to'g'risida \"rad etish\" to'g'risida yakuniy "
-"qaror haqida xabar beradi."
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br/>\n"
-"Biz sizning {$contextName}, & quot; {$submissionTitle} & quot; ga "
-"yuborishingiz bo'yicha qarorga keldik. <br />\n"
-"<br/>\n"
-"Bizning qarorimiz: Arizani rad etish"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Tahririyat yoki bo'lim muharriridan muallifga yuborilgan ushbu elektron "
-"pochta xabari ularni topshirish to'g'risida yakuniy \"qayta yuborish\" "
-"qarori to'g'risida xabardor qiladi."
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br/>\n"
-"Biz sizning {$contextName}, & quot; {$submissionTitle} & quot; ga "
-"yuborishingiz bo'yicha qarorga keldik. <br />\n"
-"<br/>\n"
-"Bizning qarorimiz: qayta ko'rib chiqish uchun yuborish"
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Tahririyat qarori"
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Tahririyat qarori"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Tahririyat yoki bo'lim muharriridan muallifga yuborilgan elektron pochta "
-"xabarlari ularni yuborish to'g'risida \"tuzatishlar kerak\" degan yakuniy "
-"qaror haqida xabar beradi."
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br/>\n"
-"Biz sizning {$contextName}, & quot; {$submissionTitle} & quot; ga "
-"yuborishingiz bo'yicha qarorga keldik. <br />\n"
-"<br/>\n"
-"Bizning qarorimiz: tuzatishlar talab qilinadi"
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Tahririyat qarori"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr ""
-"Tahrirlovchidan yoki bo'lim muharriridan Muallifga yuborilgan ushbu elektron "
-"pochta xabari, ularning taqdimoti ishlab chiqarishga yuborilayotgani haqida "
-"xabar beradi."
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br/>\n"
-"Sizning topshirig'ingizni tahrirlash, & quot; {$submissionTitle}, & quot; "
-"tugallangan. Hozir uni ishlab chiqarishga jo'natmoqdamiz. <br />\n"
-"<br/>\n"
-"Yuborish URL manzili: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Tahririyat qarori"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Tahrirlovchidan yoki bo'lim muharriridan muallifga yuborilgan elektron "
-"pochta xabarlari ularning taqdimoti tashqi tekshiruvga yuborilayotgani "
-"haqida xabar beradi."
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}: <br />\n"
-"<br/>\n"
-"Biz sizning {$contextName}, & quot; {$submissionTitle} & quot; ga "
-"yuborishingiz bo'yicha qarorga keldik. <br />\n"
-"<br/>\n"
-"Bizning qarorimiz: Ko'rib chiqish uchun yuborish <br />\n"
-"<br/>\n"
-"Yuborish URL manzili: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Tahririyat qarori"
-
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Tahririyat yoki bo'lim muharriridan muallifga yuborilgan elektron pochta "
 "xabarlari ularni yuborish to'g'risida \"yuborishni qabul qilish\" "
 "to'g'risida yakuniy qaror haqida xabar beradi."
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}: <br />\n"
@@ -616,6 +471,7 @@ msgstr ""
 "<br/>\n"
 "Bizning qarorimiz: Arizani qabul qilish"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Tahririyat qarori"
 
@@ -647,6 +503,7 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Avtomatik topshirishni ko'rib chiqish eslatmasi"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Bu elektron pochta xabarini ko'rib chiquvchining muddati tugashi bilan "
@@ -655,6 +512,7 @@ msgstr ""
 "tekshiruvchiga kirish o'chirilgan. Rejalashtirilgan vazifalar yoqilgan va "
 "sozlangan bo'lishi kerak (sayt konfiguratsiya faylini ko'ring)."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -677,6 +535,7 @@ msgstr ""
 "<br/>\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Avtomatik topshirishni ko'rib chiqish eslatmasi"
 
@@ -704,11 +563,13 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Arizani ko'rib chiqish haqida eslatma"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Bu elektron pochta bo'limi muharriri tomonidan sharhlovchiga ko'rib chiqish "
 "muddati tugashini eslatish uchun yuborilgan."
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -730,24 +591,9 @@ msgstr ""
 "<br/>\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Arizani ko'rib chiqish haqida eslatma"
-
-msgid "emails.reviewAck.description"
-msgstr ""
-"Bu xat bo'lim muharriri tomonidan ko'rib chiqilganligini tasdiqlash va "
-"sharhlovchiga o'z hissalari uchun minnatdorchilik bildirish uchun yuboriladi."
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"{$recipientName}: <br />\n"
-"<br/>\n"
-"Taqdimotni ko'rib chiqishni tugatganingiz uchun tashakkur, & quot; {$submissionTitle}, "
-"& quot; {$contextName} uchun. Biz nashr etayotgan asarlar "
-"sifatiga qo'shgan hissangizni qadrlaymiz."
-
-msgid "emails.reviewAck.subject"
-msgstr "Maqolani ko'rib chiqish"
 
 msgid "emails.reviewDecline.description"
 msgstr ""
@@ -787,12 +633,14 @@ msgstr ""
 msgid "emails.reviewConfirm.subject"
 msgstr "Ko'rib chiqish imkoniyati"
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Bu elektron pochta bo'limi tahrirlovchisi tomonidan ko'rib chiqish bekor "
 "qilingan sharh qayta tiklanganligi to'g'risida xabar berish uchun ko'rib "
 "chiquvchiga yuboriladi."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -803,6 +651,7 @@ msgstr ""
 "<br/>\n"
 "Agar sizda biron bir savol bo'lsa, iltimos, men bilan bog'laning."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Tekshirish talabi tiklandi"
 
@@ -907,6 +756,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclickSubsequent.subject"
 msgstr "Maqolani ko'rib chiqish so'rovi"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Bo'lim muharriridan sharhlovchiga yuborilgan bu xat, sharhlovchidan ikkinchi "
@@ -918,6 +768,7 @@ msgstr ""
 "jarayoni tanlanganida ishlatiladi. (Aks holda "
 "REVIEW_REQUEST_ATTACHED_SUBSEQUENT ga qarang.)"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -951,6 +802,7 @@ msgstr ""
 "<br/>\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Maqolani ko'rib chiqish so'rovi"
 
@@ -1065,6 +917,7 @@ msgstr ""
 msgid "emails.reviewRequestOneclick.subject"
 msgstr "Maqolani ko'rib chiqish so'rovi"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr ""
 "Tekshiruvchining tasdiqlash muddati tugagandan so'ng (Sozlamalar> Ish oqimi> "
@@ -1073,6 +926,7 @@ msgstr ""
 "avtomatik ravishda yuboriladi. Rejalashtirilgan vazifalar yoqilgan va "
 "sozlangan bo'lishi kerak (sayt konfiguratsiya faylini ko'ring)."
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -1106,9 +960,11 @@ msgstr ""
 "<br/>\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Maqolani ko'rib chiqish so'rovini eslatish"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Bo'lim muharriridan sharhlovchiga yuborilgan bu xat, sharhlovchidan "
@@ -1119,6 +975,7 @@ msgstr ""
 "standart ko'rib chiqish jarayoni tanlanganida ishlatiladi. (Aks holda "
 "REVIEW_REQUEST_ATTACHED ga qarang.)"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -1149,15 +1006,18 @@ msgstr ""
 "<br/>\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Maqolani ko'rib chiqish so'rovi"
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Bu elektron pochta bo'limi tahrirlovchisiga tahrirlovchining tahrirlash "
 "jarayonida yuborishni nazorat qilish vazifasini yuklaganligi haqida xabar "
 "beradi. U jo'natma va jurnal saytiga qanday kirish haqida ma'lumot beradi."
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -1170,14 +1030,17 @@ msgstr ""
 "<br/>\n"
 "Rahmat."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Tahririyatga topshiriq"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Bu elektron pochta yoqilganda avtomatik ravishda yuborish jarayonida "
 "ko'rsatilgan OJS ichida bo'lmagan boshqa mualliflarga yuboriladi."
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Salom, <br />\n"
@@ -1190,31 +1053,8 @@ msgstr ""
 "<br/>\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "Taqdim etishni tasdiqlash"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Bu elektron pochta, qo'lyozmani jurnalga topshirish jarayonini tugatgandan "
-"so'ng, avtomatik ravishda muallifga yuboriladi. U yuborish jarayonini "
-"kuzatib borish haqida ma'lumot beradi va muallifga rahmat."
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"<p>Hurmatli {$recipientName},</p><p>{$contextName} ga yuborganingiz uchun "
-"tashakkur. {$submissionTitle} degan maʼlumotingizni oldik va tahririyatimiz "
-"aʼzosi uni tez orada koʻradi. Dastlabki qaror qabul qilinganda sizga e-"
-"pochta orqali xat yuboriladi va biz qoʻshimcha maʼlumot olish uchun siz "
-"bilan bogʻlanishimiz mumkin.</p><p>Quyidagi manzilda taqdimotingizni "
-"koʻrishingiz va tahrir jarayoni orqali uning borishini kuzatishingiz "
-"mumkin:</p><p>Yuborish URL manzili: {$submissionUrl}</p><p>Agar tizimdan "
-"chiqqan bo'lsangiz, {$recipientUsername} foydalanuvchi nomi bilan qayta "
-"kirishingiz mumkin</p><p>Agar sizda biron bir savol bo'lsa, <a href=\""
-"{$submissionUrl}\">yuborish paneli< /a>.</p><p> orqali men bilan bog'laning. "
-"Ushbu jurnalni ish joyingiz deb hisoblaganingiz uchun "
-"tashakkur.</p>{$signature}"
-
-msgid "emails.submissionAck.subject"
 msgstr "Taqdim etishni tasdiqlash"
 
 msgid "emails.lockssNewArchive.description"
@@ -1283,6 +1123,7 @@ msgstr ""
 msgid "emails.lockssExistingArchive.subject"
 msgstr "{$contextName} uchun arxivlash so'rovi"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr ""
 "Bu elektron pochta tahrirlovchilar uyidagi \"Foydalanuvchilarni xabardor "
@@ -1290,6 +1131,7 @@ msgstr ""
 "o'quvchilarni yangi son haqida xabardor qiladi va ularni jurnalga taqdim "
 "etilgan URL manziliga tashrif buyurishga taklif qiladi."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Hurmatli o'quvchi,</p><p>{$contextName} so‘nggi sonimiz nashr etilganini "
@@ -1299,6 +1141,7 @@ msgstr ""
 "asarga qo'shgan qimmatli hissalari uchun va doimiy qiziqish uchun "
 "o'quvchilarimizga katta rahmat.</p><p>Sincerely,</p>{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Yangi son nashr qilindi"
 
@@ -1334,11 +1177,13 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} bilan sharhlovchi sifatida ro'yxatdan o'tish"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr ""
 "Bu elektron pochta hisobini tasdiqlash uchun yangi ro'yxatdan o'tgan "
 "foydalanuvchiga yuboriladi."
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName} <br />\n"
@@ -1352,6 +1197,7 @@ msgstr ""
 "Rahmat, <br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Hisobingizni tasdiqlang"
 

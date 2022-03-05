@@ -18,6 +18,7 @@
 
 namespace APP\payment\ojs;
 
+use APP\core\Application;
 use APP\facades\Repo;
 
 use APP\subscription\Subscription;
@@ -75,23 +76,23 @@ class OJSPaymentManager extends PaymentManager
 
         switch ($type) {
             case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
-                $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', $assocId));
+                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'article', 'view', $assocId));
                 break;
             case self::PAYMENT_TYPE_PURCHASE_ISSUE:
-                $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', $assocId));
+                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'issue', 'view', $assocId));
                 break;
             case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
-                $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'current'));
+                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'issue', 'current'));
                 break;
             case self::PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-                $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'user', 'subscriptions'));
+                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'user', 'subscriptions'));
                 break;
             case self::PAYMENT_TYPE_PUBLICATION:
                 $submission = Repo::submission()->get($assocId);
                 if ($submission->getSubmissionProgress() != 0) {
-                    $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), ['submissionId' => $assocId]));
+                    $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), ['submissionId' => $assocId]));
                 } else {
-                    $payment->setRequestUrl($dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
+                    $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
                 }
                 break;
             case self::PAYMENT_TYPE_MEMBERSHIP: // Deprecated

@@ -55,11 +55,6 @@ msgstr "Vous n'avez pas l'autorisation de voir cette revue."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Vous ne pouvez afficher que les revues qui ont été activées."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Pour effectuer ou modifier une soumission, vous devez effectuer une requête "
-"au point d'accès de l'API de la revue."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Vous ne pouvez pas changer la revue d'une soumission."
 

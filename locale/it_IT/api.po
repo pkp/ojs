@@ -54,11 +54,6 @@ msgstr "Non hai i permessi per visualizzare questa testata."
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "E' possibile visualizzare solamente testate abilitate."
 
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Per sottomettere o modificare una proposta è necessario inviare una "
-"richiesta al punto API della testata."
-
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Non è possibile cambiare la testata di sottomissione."
 

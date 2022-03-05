@@ -17,11 +17,18 @@ use APP\core\Application;
 use Exception;
 use PKP\db\DAORegistry;
 use PKP\observers\events\SubmissionFileDeleted;
+use PKP\plugins\HookRegistry;
 use PKP\submissionFile\Repository as BaseRepository;
 use PKP\submissionFile\SubmissionFile;
 
 class Repository extends BaseRepository
 {
+    public array $reviewFileStages = [
+        SubmissionFile::SUBMISSION_FILE_REVIEW_REVISION,
+        SubmissionFile::SUBMISSION_FILE_REVIEW_ATTACHMENT,
+        SubmissionFile::SUBMISSION_FILE_REVIEW_FILE,
+    ];
+
     public function add(SubmissionFile $submissionFile): int
     {
         $galley = null;
@@ -66,5 +73,27 @@ class Repository extends BaseRepository
 
             event(new SubmissionFileDeleted($submissionFile));
         }
+    }
+
+    public function getFileStages(): array
+    {
+        $stages = [
+            SubmissionFile::SUBMISSION_FILE_SUBMISSION,
+            SubmissionFile::SUBMISSION_FILE_NOTE,
+            SubmissionFile::SUBMISSION_FILE_REVIEW_FILE,
+            SubmissionFile::SUBMISSION_FILE_REVIEW_ATTACHMENT,
+            SubmissionFile::SUBMISSION_FILE_FINAL,
+            SubmissionFile::SUBMISSION_FILE_COPYEDIT,
+            SubmissionFile::SUBMISSION_FILE_PROOF,
+            SubmissionFile::SUBMISSION_FILE_PRODUCTION_READY,
+            SubmissionFile::SUBMISSION_FILE_ATTACHMENT,
+            SubmissionFile::SUBMISSION_FILE_REVIEW_REVISION,
+            SubmissionFile::SUBMISSION_FILE_DEPENDENT,
+            SubmissionFile::SUBMISSION_FILE_QUERY,
+        ];
+
+        HookRegistry::call('SubmissionFile::fileStages', [&$stages]);
+
+        return $stages;
     }
 }

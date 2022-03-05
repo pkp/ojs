@@ -77,9 +77,11 @@ msgstr ""
 msgid "emails.userRegister.description"
 msgstr "Bu e-posta yeni kaydolmuş kullanıcıya sisteme kabul edildiğini belirtmek ve kullanıcı adı ile şifresini bildirmek amacı ile gönderilmektedir."
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Yeni sayı yayımlandı: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Sayın Okuyucumuz,<br />\n"
@@ -92,6 +94,7 @@ msgstr ""
 "Dergimize gösterdiğiniz ilgi için teşekkür ederiz.<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.description"
 msgstr "Bu e-posta “Bana Haber Ver” seçeneğini işaretlemiş okuyuculara yeni sayıyı haber vermek ve son sayının adresini vererek okumaya çağrı için kullanılır."
 
@@ -199,35 +202,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Bu e-posta alıcının dergisini LOCKSS arşiv sistemine dahil etmeye yönelik önerme içermektedir. LOCKSS çalşıma biçimi ve katılımcı olma ile ilgili bilgiler sağlamaktadır."
 
-msgid "emails.submissionAck.subject"
-msgstr "{$contextName} için gönderdiğiniz aday makale için teşekkürler"
-
-msgid "emails.submissionAck.body"
-msgstr ""
-"Sayın {$recipientName},<br />\n"
-"<br />\n"
-"{$contextName} adlı dergiye gönderdiğiniz &quot;{$submissionTitle}&quot; "
-"adlı çalışma için teşekkür ederiz. Kullanmakta olduğumuz internet erişimli "
-"dergi yönetim sistemi ile, dergi web sitesine aşağıdaki bilgilerle giriş "
-"yaparak çalışmanızı değerlendirme süreçlerindeki durumunu takip "
-"edebilirsiniz:<br />\n"
-"<br />\n"
-"Erişim adresi: {$submissionUrl}<br />\n"
-"Kullanıcı Adı: {$recipientUsername}<br />\n"
-"<br />\n"
-"Herhangi bir soru veya sorununuz olursa lütfen bizimle iletişime geçiniz. "
-"Emek ürünü çalışmanızı yayınlamak üzere dergimizi tercih ettiğiniz için "
-"teşekkür ederiz.<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAck.description"
-msgstr ""
-"Bu eposta etkinleştirildiğinde, yazar dergiye yazı gönderme işlemini "
-"tamamladığında otomatik olarak bu e-posta gönderilir. Bu e-posta yazara "
-"makale gönderdiği için teşekkür mesajı ve makalenin durumunu takip "
-"edebilmesi için gerekli olan bilgileri içerir."
-
 msgid "emails.submissionComment.subject"
 msgstr "Başvuru ile ilgili yeni yorum"
 
@@ -257,9 +231,11 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Bu eposta gönderinin eleştirmenlerinin değerlendirme sürecini tamamladığını belirtir. Makale hakkında sonucu ve eleştirmenlere yardımları için teşekkür mesajını içerir."
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "{$contextName} için bir aday makaleye editör olarak atandınız."
 
+#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -273,15 +249,18 @@ msgstr ""
 "<br />\n"
 "Teşekkür ederiz."
 
+#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Bu eposta, bir Bölüm Editörüne bir gönderinin yayınlanma sürecinde editör "
 "yetkisi verildiğini bildirir. Aday makale hakkındaki bilgileri ve dergi "
 "internet sitesine girişte gerekli olan bilgileri içerir."
 
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Hakemlik daveti"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -316,6 +295,7 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
 "Bu eposta Bölüm Editöründen bir hakeme bir çalışmanın hakemlik görevine "
@@ -429,21 +409,11 @@ msgstr ""
 msgid "emails.reviewDecline.description"
 msgstr "Bu elektronik posta gözden geçirme talebine cevap olarak, gözden geçirmenin red edildiğini bildirmek amacıyla Bölüm Editörüne gözden geçirmeyi yapan kişi tarafından gönderilir."
 
-msgid "emails.reviewAck.subject"
-msgstr "Değerlendirme İçin Teşekkür"
-
-msgid "emails.reviewAck.body"
-msgstr ""
-"Sayın {$recipientName},<br />\n"
-"<br />\n"
-"{$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirme işlemini tamamladığınız için teşekkür ederiz. Yayınımıza yaptığınız katkıyı takdirle anıyoruz."
-
-msgid "emails.reviewAck.description"
-msgstr "Bu elektronik posta gözden geçirme işlemi bitirilen makalenin alındığını haber vermek ve gözden geçirmeyi yapan kişiye katkılarından dolayı teşekkür etmek için Bölüm Editörü tarafından gönderilmiştir."
-
+#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Hatırlatma: Lütfen değerlendirme sürecini tamamlayınız"
 
+#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -458,6 +428,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "Bu elektronik posta hakemin değerlendirme için belirtilen son tarihin "
@@ -482,9 +453,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Bu elektronik posta hakemler için tek tıklama özelliği açık ise, gözden geçirmeyi yapan kişiye işlemin zamanının dolmakta olduğunu hatırlatmak için Bölüm Editörü tarafından gönderilir."
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Otomatik hatırlatma: Lütfen değerlendirme sürecini tamamlayınız"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -501,6 +474,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "Hakemlik için verilen süre geçtiğinde bu elektronik posta otomatik olarak "
@@ -529,31 +503,11 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Gözden geçirme işlemi için verilen süre geçtiğinde ve hakemler için tek tıklama özelliği açıldığında bu elektronik posta otomatik olarak gönderilir(Derginin Kurulum Bölümü altındaki Gözden Geçirme seçeneklerine bakınız, Adım 2). Zamanlanmış görevler aktif hale getirilmeli ve düzenlenmelidir(alan düzenleme dosyasına bakınız)."
 
-msgid "emails.copyeditRequest.subject"
-msgstr ""
-"{$submissionId} numaralı makalenin {$contextAcronym} için son kopyası "
-"düzenlendi"
-
-msgid "emails.copyeditRequest.body"
-msgstr ""
-"Sayın {$recipientName},<br />\n"
-"<br />\n"
-"{$contextName} ileri sayılarında yayınlanmak üzere kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini tamamlamanızı rica ederim. Dergi sitesinde yazıyı , sayfa düzeni konusundaki özel açıklamalar ile birlikte bulabilirsiniz. <br />\n"
-"<br />\n"
-"Yazı ulaşım adresi: {$submissionUrl}<br />\n"
-"Kullanıcı adı: {$recipientUsername}<br />\n"
-"<br />\n"
-"Lütfen eğer sayfa düzenini yapmanız konusunda bir sorun var ise bana bildiriniz.<br />\n"
-"DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz."
-
-msgid "emails.copyeditRequest.description"
-msgstr ""
-"Yayınlanması için karar verilen makalenin son kopya okuması için  Redaktöre "
-"gönderiminde kullanılır."
-
+#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "{$submissionId} numaralı makale {$contextAcronym} için yayına hazır"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -566,6 +520,7 @@ msgstr ""
 "İşin gerçekleştirilmesi ile ilgili bir soru / sorularınızı yazabilirsiniz.<br />\n"
 "Katkılarınız için teşekkür ederiz."
 
+#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "Bu e-posta Editör tarafından Tasarımcıya makalenin dizgi biçiminin "
@@ -574,6 +529,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Prova dizgi tamamlandı"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -584,6 +540,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
+#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "Bu e-posta Tasarımcının makalenin dizgi biçimini tamamlandığını bildirir."
@@ -862,9 +819,11 @@ msgstr ""
 msgid "emails.notificationMaillistWelcome.description"
 msgstr "Bu e-posta, bildirim postalama listesine yeni kayıt olmuş bir kayıtsız kullanıcıya gönderilir."
 
+#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Hesabınızı Doğrulayın"
 
+#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -878,6 +837,7 @@ msgstr ""
 "Teşekkürler,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.userValidateContext.description"
 msgstr "Bu e-posta, yeni kayıtlı bir kullanıcıya sisteme hoş geldiniz ve kullanıcı adlarını ve şifrelerini kaydetmelerini sağlamak için gönderilir."
 
@@ -906,9 +866,11 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Bu e-posta, yeni kayıt olan bir hakeme, sisteme hoş geldiniz mesajı ile birlikte kullanıcı adı ve şifresini iletmek için gönderilir."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Gözden geçirilmiş bir aday makaleye hakemlik daveti"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -935,6 +897,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
 "Editörden Hakem'e gönderilen bu e-posta, hakemin yeni bir inceleme turu için "
@@ -1006,9 +969,11 @@ msgstr ""
 msgid "emails.reviewRequestAttachedSubsequent.description"
 msgstr "This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Aday makaleniz {$contextName} için kabul edildi"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "Sayın {$authors},<br />\n"
@@ -1019,61 +984,10 @@ msgstr ""
 "<br />\n"
 "Kararımız: Yayın Kabul"
 
+#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "Bu e-posta, yazarlara aday makalelerinin yayınlanmak üzere kabul edildiğini "
-"bildirir."
-
-msgid "emails.editorDecisionRevisions.subject"
-msgstr "Aday makalenizin değerlendirme süreci tamamlandı ve düzeltme talebi"
-
-msgid "emails.editorDecisionRevisions.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"{$contextName} için gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı "
-"çalışmanıza ilişkin değerlendirme süreci sonucu bir karara varılmıştır.<br />"
-"\n"
-"<br />\n"
-"Kararımız: Düzeltme Gerekli"
-
-msgid "emails.editorDecisionRevisions.description"
-msgstr ""
-"Bu e-posta editörün hakem dönüşleri doğrultusunda yazarlardan düzeltme talep "
-"etmesini sağlar."
-
-msgid "emails.editorDecisionResubmit.subject"
-msgstr "Aday makale değerlendirildi - lütfen düzeltmeleri gerçekleştirin"
-
-msgid "emails.editorDecisionResubmit.body"
-msgstr ""
-"Sayın {$authors},<br />\n"
-"<br />\n"
-"{$contextName} için gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı "
-"çalışmanız ile ilgili bir karara varılmıştır.<br />\n"
-"<br />\n"
-"Kararımız: Hakem Değerlendirmesi İçin Tekrar Gönder"
-
-msgid "emails.editorDecisionResubmit.description"
-msgstr ""
-"Bu e-posta, Editörlerin bir yazara makalesi ile ilgili \"majör revizyon\" "
-"şeklindeki nihai kararı bildirmek için gönderilir."
-
-msgid "emails.editorDecisionDecline.subject"
-msgstr "Aday makaleniz reddedildi"
-
-msgid "emails.editorDecisionDecline.body"
-msgstr ""
-"Sayın {$authors},<br />\n"
-"<br />\n"
-"{$contextName} için gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı "
-"çalışmanız ile ilgili bir karara varılmıştır.<br />\n"
-"<br />\n"
-"Kararımız: Makale Reddedildi"
-
-msgid "emails.editorDecisionDecline.description"
-msgstr ""
-"Bu e-posta yazarlara hakem değerlendirmesi sonucu makalenin reddedildiğini "
 "bildirir."
 
 msgid "emails.subscriptionPurchaseIndl.subject"
@@ -1250,21 +1164,6 @@ msgstr ""
 "Bu e-posta, yazar bir makalenin gözden geçirilmiş bir sürümünü yüklediğinde "
 "makaleye atanmış editöre otomatik olarak gönderilir."
 
-msgid "emails.editorDecisionSendToProduction.subject"
-msgstr "Aday makalenizin yayınlanması için sonraki adımlar"
-
-msgid "emails.editorDecisionSendToProduction.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"\n"
-"&quot;{$submissionTitle},&quot; adlı gönderinizin düzenlemesi tamamlandı. Makalenizi basım aşamasına gönderiyoruz.<br />\n"
-"<br />\n"
-"Gönderi URL'si: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToProduction.description"
-msgstr "Editörden veya Bölüm Editörden Yazar'a gönderilen bu e-posta, makalelerin basım aşamasına gönderildiklerini bildirir."
-
 msgid "emails.notificationCenterDefault.subject"
 msgstr "{$contextName} ile ilgili bir mesaj"
 
@@ -1276,61 +1175,11 @@ msgstr ""
 "Bildirim Merkezi Mesaj Listesi Oluşturucusunda kullanılan varsayılan (boş) "
 "mesaj."
 
-msgid "emails.editorDecisionInitialDecline.subject"
-msgstr "Aday makaleniz reddedildi"
-
-msgid "emails.editorDecisionInitialDecline.body"
-msgstr ""
-"Sayın {$authors},<br />\n"
-"<br />\n"
-"{$contextName} için gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı "
-"aday makaleniz ile ilgili değerlendirme süreci tamamlanmıştır.<br />\n"
-"<br />\n"
-"Değerlendirme sonucu karar:  Aday Makale Reddedildi"
-
-msgid "emails.editorDecisionInitialDecline.description"
-msgstr ""
-"Bu e-posta, Editör tarafından ön inceleme aşamasında değerlendirmeye almaya "
-"uygun bulmazsa ve ön inceleme sonucu reddederse yazara gönderilir."
-
-msgid "emails.editorDecisionSendToExternal.subject"
-msgstr "Editör Kararı"
-
-msgid "emails.editorDecisionSendToExternal.body"
-msgstr ""
-"{$authors}:<br />\n"
-"<br />\n"
-"{$contextName}, &quot;{$submissionTitle}&quot; adresine yaptığınız gönderi için bir karara varılmıştır.<br />\n"
-"<br />\n"
-"Karar: Hakeme Gönderilmesi Uygundur<br />\n"
-"<br />\n"
-"Submission URL: {$submissionUrl}"
-
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr "Editörden veya Bölüm Editörden bir Yazar'a gönderilen bu e-posta, gönderinin harici bir hakeme gönderildiğini bildirir."
-
-msgid "emails.editorRecommendation.subject"
-msgstr "Editör Tavsiyesi"
-
-msgid "emails.editorRecommendation.body"
-msgstr ""
-"<p>Sayın {$editors},</p><p>\"{$submissionTitle}\" başlıklı aday makale için "
-"gelen hakem değerlendirmelerini inceledim. Çalışmaya ilişkin tavsiye kararım "
-"aşağıdadır.</p><p>Tavsiye karar:<br />{$recommendation}.</p><p>Tavsiye karar "
-"doğrultusunda işlem gerçekleştirmek için <a href=\"{$submissionUrl}\""
-">tıklayınız</a>.</p><p>Aday makaleye ilişkin bir sorunuz olursa benimle "
-"iletişime geçebilirsiniz.</p><p>Saygılarımla,</p><p>{$senderName}</p>"
-
-msgid "emails.editorRecommendation.description"
-msgstr ""
-"Bu e-posta, Editöre bir aday makaleyle ilgili tavsiye karar verildiğini "
-"bildirir. Bu şablon, bir editörün yalnızca tavsiye karar vermesine izin "
-"verildiğinde ve nihai kararı yetkili editörün vermesi gerektirdiğinde "
-"kullanılır. Bu seçenek, editörlerin makaleye atanması esnasında seçilebilir."
-
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Hakemlik Talebi Hatırlatma"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -1368,6 +1217,7 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.description"
 msgstr "Bu e-posta, bir hakemin onay tarihi geçtiğinde otomatik olarak gönderilir (Ayarlar> İş Akışı> Gözden geçirme altındaki İnceleme Seçenekleri'ne bakın) ve tek tıklatma hakem erişimi devre dışı bırakılır. Zamanlanmış görevler etkinleştirilmeli ve yapılandırılmalıdır (site yapılandırma dosyası bölümüne bakınız)."
 
@@ -1406,9 +1256,11 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Bu e-posta, bir hakemin onay tarihi geçtiğinde otomatik olarak gönderilir (Ayarlar> İş Akışı> Gözden geçirme altındaki İnceleme Seçenekleri'ne bakın) ve tek tıklatma hakem erişimi etkinleştirilir. Zamanlanmış görevler etkinleştirilmeli ve yapılandırılmalıdır (site yapılandırma dosyasına bakın)."
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Başvuru onayı"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Merhaba,<br />\n"
@@ -1422,6 +1274,7 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Bu e-posta etkinleştirildiğinde, aday makale başvurusu sırasında belirtilen "
@@ -1456,14 +1309,17 @@ msgstr ""
 "Bu e-posta editörler ve dergi yöneticilerine sistem durumu ve istatistikler "
 "hakkında genel bir bakış sağlamak için aylık olarak otomatik gönderilir."
 
+#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "Bu e-posta, Bölüm Editör tarafından iptal edilmiş bir hakemliğin eski haline "
 "getirildiğini bildirmek için Hakem'e gönderilir."
 
+#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "{$contextName} için hakemlik yapabilir misiniz?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
