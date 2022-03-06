@@ -128,8 +128,8 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
 		$keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), array(AppLocale::getLocale()));
 		foreach ($keywords as $locale => $localeKeywords) {
-			foreach ($localeKeywords as $keyword) {
-				$templateMgr->addHeader('dublinCoreSubject' . $locale, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
+			foreach ($localeKeywords as $i => $keyword) {
+				$templateMgr->addHeader('dublinCoreSubject' . $locale . $i, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
 			}
 		}
 

@@ -375,7 +375,7 @@ class ArticleHandler extends Handler {
 		}
 		$suppId = isset($args[1]) ? $args[1] : 0;
 		$submissionFilesIterator = Services::get('submissionFile')->getMany([
-			'submissionIds' => [$articleId->getId()],
+			'submissionIds' => [$article->getId()],
 		]);
 		foreach ($submissionFilesIterator as $submissionFile) {
 			if ($submissionFile->getData('old-supp-id') == $suppId) {

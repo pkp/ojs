@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-8
+Git tag: 3_3_0-9
 
-Release date: August 30, 2021
-=============================
+Release date: March 3, 2022
+===========================
 
 Configuration Changes
 ---------------------
@@ -10,6 +10,9 @@ Configuration Changes
 See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
+- An allowed_hosts option was added to protect against HOST injection attacks.
+  We recommend configuring this setting! See "Recommended Configuration" in
+  docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
 - The proxy configuration settings have changed. Please review the [proxy]
   section in config.TEMPLATE.inc.php and adapt your settings in config.inc.php
   as needed.
@@ -25,6 +28,56 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientid
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
+
+3.3.0-9 Build
+-------------
+    #7649: Add support for limiting allowed hosts
+    #7685: Add Authorization header support to API interactions
+    #7580: Fatal error when importing XML article in PHP8
+    #7681: Add Publication object to publication forms so hooks can use it
+    #7664: Fatal error when trying to delete section
+    #7654: admin page does not refresh when removing a context
+    #7613: Keyword auto complete not working while submitting a preprint/book/submission
+    #7471: Upgrade optimizations: submission locales, submission event logs, delete old revisions
+    #7538: Task list is not sorted with most recent tasks at the top
+    #7474: WMV files are downloaded as ASX files in Firefox
+    #7607: Dublin Core subject tag only shows last keyword when more than one keyword entered
+    #7620: DataCite plugin form CSRF error
+    #7506: Unable to Upload/Select Files from Copyediting stage (fix ineffective)
+    #7594: Submitted Competing Interest data can go missing
+    #7605: Submission wizard asks for languages that are not enabled
+    #7371: Add missing CSRF checks
+    #7266: Assigned articles missing from future issues after upgrade to OJS 3.3.0-8
+    #7596: No access granted for non-expiring subscription
+    #7590: Resolve custom issue ordering error with PostgreSQL on publish
+    #7213: No email is sent when creating a new announcement
+    #7549: Author submission dashboard shows wrong version number
+    #7552: Typo in deprecated ArticleHandler::downloadSuppFile()
+    #7534: Cancelling or unassigning a reviewer who is also an editor should restore editor's access to submission
+    #7509: Stage assignments permit metadata to be edited through the API even when permission has been revoked
+    #7510: Possible to publish a submission in the review stage
+    #7284: Missing rights for internal reviewer to download files.
+    #7475: Issue table of contents has extra margins on homepage
+    #6122: Recommend By Similarity Plugin doesn't work as expected
+    #7453: Activity Log fails to load when a file has been uploaded to a discussion message that was deleted
+    #7450: tasks cannot be marked as read/unread or deleted
+    #7419: Retrieving publications in alphabetically ordered category when changing language
+    #6991: Slow queries on the user management page
+    #7407: Error when searching for a keyword in a language not enabled in the UI
+    #7217: Default user search does not include username
+    #7420: Left-to-Right (LTR) languages have UX issue on forms
+    #7378: Resolve reflected XSS issues
+    #7363: Cancelled review assignments included in count of active reviews
+    #7344: CSS file mimetype not correctly recognized
+    #7168: Unable to pick a year in the advanced filters of the search form 
+    #7277: Discussion participants include declined open reviewers
+    #7275: Can't upgrade to 3.2.x on PHP 8 due to use of get_magic_quotes_runtime
+    #7236: Copyright info not published using quicksubmit plugin
+    #7267: Allow period/full-stop in url paths
+    #7281: Redundant and not escaped special characters in locale files
+    #6828: New sections added to an Issue can't be custom ordered if the issue has already been custom ordered
+    #4904: Update log handling to ensure metrics are calculated correctly across versions
+    #5740: "Galleys" section doesn't load
 
 3.3.0-8 Build
 -------------
