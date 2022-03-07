@@ -185,7 +185,7 @@
 					{assign var="hasBiographies" value=$hasBiographies+1}
 				{/if}
 			{/foreach}
-			{if $hasBiographies}
+			{if !$currentContext->getData('hideAuthorBiography') && $hasBiographies}
 				<section class="item author_bios">
 					<h2 class="label">
 						{if $hasBiographies > 1}

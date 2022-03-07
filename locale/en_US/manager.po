@@ -1714,3 +1714,9 @@ msgstr "Abstracts"
 
 msgid "stats.publications.galleys"
 msgstr "Files"
+
+msgid "manager.setup.hideAuthorBiography"
+msgstr "Author Biography"
+
+msgid "manager.setup.hideAuthorBiography.description"
+msgstr "Hide Author Biography"

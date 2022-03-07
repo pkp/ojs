@@ -14,6 +14,7 @@
  */
 namespace APP\components\forms\context;
 use \PKP\components\forms\context\PKPAppearanceSetupForm;
+use \PKP\components\forms\FieldOptions;
 use \PKP\components\forms\FieldUploadImage;
 
 class AppearanceSetupForm extends PKPAppearanceSetupForm {
@@ -34,5 +35,17 @@ class AppearanceSetupForm extends PKPAppearanceSetupForm {
 					'url' => $temporaryFileApiUrl,
 				],
 			]), [FIELD_POSITION_AFTER, 'pageHeaderLogoImage']);
+		$this->addField(new FieldOptions('hideAuthorBiography', [
+				'label' => __('manager.setup.hideAuthorBiography'),
+				'type' => 'checkbox',
+				'value' => $context->getData('hideAuthorBiography'),
+				'options' => [
+					[
+						'value' => true,
+						'label' => __('manager.setup.hideAuthorBiography.description')
+					]
+				],
+				'default' => false,
+			]));
 	}
 }
