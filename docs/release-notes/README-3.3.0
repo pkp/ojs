@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-9
+Git tag: 3_3_0-10
 
-Release date: March 3, 2022
+Release date: March 7, 2022
 ===========================
 
 Configuration Changes
@@ -28,6 +28,11 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientid
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
+
+3.3.0-9 Build
+-------------
+    #7749: Resolve upgrade issue with latest 3.2.x ORCID profile plugin
+    #7739: Add MIME type hint for Javascript files
 
 3.3.0-9 Build
 -------------
