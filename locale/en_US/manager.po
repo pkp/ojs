@@ -1978,3 +1978,9 @@ msgid "doi.manager.issueDois"
 msgstr "Issue DOIs"
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr "This email notifies the author that their submission is being declined, before the review stage, because the submission does not meet the requirements for publication in the journal."
+
+msgid "manager.setup.hideAuthorBiography"
+msgstr "Author Biography"
+
+msgid "manager.setup.hideAuthorBiography.description"
+msgstr "Hide Author Biography"

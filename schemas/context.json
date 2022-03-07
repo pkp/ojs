@@ -107,6 +107,12 @@
 				"nullable"
 			]
 		},
+		"hideAuthorBiography": {
+			"type": "boolean",
+			"validation" : [
+				"nullable"
+			]
+		},
 		"journalThumbnail": {
 			"type": "object",
 			"multilingual": true,
