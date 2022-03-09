@@ -16,6 +16,8 @@
  *
  */
 
+use APP\core\Application;
+
 $requestPath = Application::get()->getRequest()->getRequestPath();
 if (strpos($requestPath, '/stats/publications')) {
     import('api.v1.stats.publications.StatsPublicationHandler');
@@ -26,4 +28,10 @@ if (strpos($requestPath, '/stats/publications')) {
 } elseif (strpos($requestPath, '/stats/users')) {
     import('lib.pkp.api.v1.stats.users.PKPStatsUserHandler');
     return new PKPStatsUserHandler();
+} elseif (strpos($requestPath, '/stats/issues')) {
+    import('api.v1.stats.issues.StatsIssueHandler');
+    return new StatsIssueHandler();
+} elseif (strpos($requestPath, '/stats/contexts')) {
+    import('lib.pkp.api.v1.stats.contexts.PKPStatsContextHandler');
+    return new PKPStatsContextHandler();
 }

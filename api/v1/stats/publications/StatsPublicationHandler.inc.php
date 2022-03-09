@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/stats/PKPStatsHandler.inc.php
+ * @file api/v1/stats/publications/StatsPublicationHandler.inc.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

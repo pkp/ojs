@@ -198,4 +198,18 @@ class Schema extends \PKP\core\maps\Schema
 
         return $output;
     }
+
+    /**
+     * Map an issue with only the issue identification for the stats list
+     */
+    public function mapToStats(Issue $issue): array
+    {
+        $props = $this->mapByProperties([
+            '_href',
+            'id',
+        ], $issue);
+        $props['issueIdentification'] = $issue->getIssueIdentification();
+        return $props;
+    }
+
 }

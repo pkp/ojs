@@ -15,8 +15,6 @@
 
 import('lib.pkp.pages.stats.PKPStatsHandler');
 
-use APP\facades\Repo;
-use APP\statistics\StatisticsHelper;
 use APP\template\TemplateManager;
 
 class StatsHandler extends PKPStatsHandler
@@ -66,40 +64,5 @@ class StatsHandler extends PKPStatsHandler
         $templateMgr->setState([
             'filters' => $filters
         ]);
-    }
-
-    /**
-     * @copydoc PKPStatsHandler::getReportRowValue()
-     */
-    protected function getReportRowValue($key, $record)
-    {
-        $returnValue = parent::getReportRowValue($key, $record);
-
-        if (!$returnValue && $key == StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID) {
-            $assocId = $record[StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID];
-            $assocType = ASSOC_TYPE_ISSUE;
-            $returnValue = $this->getObjectTitle($assocId, $assocType);
-        }
-
-        return $returnValue;
-    }
-
-    /**
-     * @copydoc PKPStatsHandler::getObjectTitle()
-     */
-    protected function getObjectTitle($assocId, $assocType)
-    {
-        $objectTitle = parent::getObjectTitle($assocId, $assocType);
-
-        switch ($assocType) {
-            case ASSOC_TYPE_ISSUE:
-                $issue = Repo::issue()->get($assocId);
-                if ($issue) {
-                    $objectTitle = $issue->getIssueIdentification();
-                }
-                break;
-        }
-
-        return $objectTitle;
     }
 }
