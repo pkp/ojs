@@ -1,9 +1,9 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-28 21:21+0000\n"
-"Last-Translator: Albena Vassileva <albena.ava@gmail.com>\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "bg_BG/>\n"
 "Language: bg_BG\n"
@@ -2453,7 +2453,7 @@ msgstr ""
 "Опитвате се да получите достъп до статия, която не е част от вашия раздел."
 
 msgid "user.authorization.noContext"
-msgstr "Няма списание в контекст!"
+msgstr "Няма намерено списание, съответстващо на заявката."
 
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Отказан достъп! Не сте назначени като коректор на тази статия."
