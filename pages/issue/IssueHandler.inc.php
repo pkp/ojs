@@ -18,15 +18,15 @@ use APP\facades\Repo;
 
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
-use PKP\facades\Locale;
 use APP\issue\Collector;
 use APP\issue\IssueAction;
-
+use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
 
@@ -127,6 +127,10 @@ class IssueHandler extends Handler
             $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
             $templateMgr->assign('pubIdPlugins', $pubIdPlugins);
             $templateMgr->display('frontend/pages/issue.tpl');
+            if ($issue->getPublished() && !$request->isDNTSet()) {
+                event(new UsageEvent(Application::ASSOC_TYPE_ISSUE, $issue->getId(), $journal->getId(), null, null, null, $issue->getId()));
+            }
+            return;
         }
     }
 
@@ -187,7 +191,16 @@ class IssueHandler extends Handler
 
             if (!HookRegistry::call('IssueHandler::download', [&$issue, &$galley])) {
                 $issueFileManager = new IssueFileManager($issue->getId());
-                return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false);
+                if ($issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false)) {
+                    if ($issue->getPublished() && !$request->isDNTSet()) {
+                        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+                        $issueFile = $issueFileDao->getById($galley->getFileId());
+                        $mimetype = $issueFile->getFileType();
+                        event(new UsageEvent(Application::ASSOC_TYPE_ISSUE_GALLEY, $galley->getId(), $issue->getJournalId(), null, null, $mimetype, $issue->getId()));
+                    }
+                    return true;
+                }
+                return false;
             }
         }
     }
