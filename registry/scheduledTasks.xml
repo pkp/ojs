@@ -51,4 +51,12 @@
 		<descr>Send a monthly reminder email to editors about their outstanding tasks</descr>
 		<frequency day="1"/>
 	</task>
+	<task class="lib.pkp.classes.task.UpdateIPGeoDB">
+		<descr>Update the DB-IP city lite database periodically to ensure the geographical stats remain accurate.</descr>
+		<frequency day="10"/>
+	</task>
+	<task class="classes.tasks.UsageStatsLoader">
+		<descr>Process the usage stats logs and load the numbers into the DB tables.</descr>
+		<frequency day="0"/>
+	</task>
 </scheduled_tasks>

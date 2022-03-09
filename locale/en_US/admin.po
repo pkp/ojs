@@ -151,6 +151,15 @@ msgstr "Open Access Notification"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Review Reminder"
 
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Issue ID is not an integer."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Issue galley ID is not an integer."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Issue ID does not match with he assoc ID."
+
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
 "Select the hosted journals that should be allowed to send bulk emails. When this feature is enabled, "

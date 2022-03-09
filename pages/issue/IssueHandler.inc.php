@@ -18,15 +18,15 @@ use APP\facades\Repo;
 
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
-use PKP\facades\Locale;
 use APP\issue\Collector;
 use APP\issue\IssueAction;
-
+use APP\observers\events\Usage;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\submission\PKPSubmission;
 
@@ -127,6 +127,8 @@ class IssueHandler extends Handler
             $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
             $templateMgr->assign('pubIdPlugins', $pubIdPlugins);
             $templateMgr->display('frontend/pages/issue.tpl');
+            event(new Usage(Application::ASSOC_TYPE_ISSUE, $journal, null, null, null, $issue));
+            return;
         }
     }
 
@@ -187,7 +189,11 @@ class IssueHandler extends Handler
 
             if (!HookRegistry::call('IssueHandler::download', [&$issue, &$galley])) {
                 $issueFileManager = new IssueFileManager($issue->getId());
-                return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false);
+                if ($issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false)) {
+                    event(new Usage(Application::ASSOC_TYPE_ISSUE_GALLEY, $request->getContext(), null, null, null, $issue, $galley));
+                    return true;
+                }
+                return false;
             }
         }
     }

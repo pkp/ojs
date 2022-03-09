@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vue-cli-service build --no-clean --watch",
     "build": "vue-cli-service build --no-clean",
-    "lint": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/classes/VueRegistry.js",
-    "fix": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/classes/VueRegistry.js && php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes"
+    "lint": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/usage-stats-chart.js lib/pkp/js/classes/VueRegistry.js",
+    "fix": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/usage-stats-chart.js lib/pkp/js/classes/VueRegistry.js && php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes"
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^3",
