@@ -19,52 +19,26 @@ use PKP\statistics\PKPStatisticsHelper;
 
 class StatisticsHelper extends PKPStatisticsHelper
 {
-    public const STATISTICS_DIMENSION_ISSUE_ID = self::STATISTICS_DIMENSION_ASSOC_OBJECT_ID;
+    public const STATISTICS_DIMENSION_ISSUE_GALLEY_ID = 'issue_galley_id';
+    public const STATISTICS_DIMENSION_ISSUE_ID = 'issue_id';
+
+    // Metrics
+    public const STATISTICS_METRIC_INVESTIGATIONS = 'metric_investigations';
+    public const STATISTICS_METRIC_INVESTIGATIONS_UNIQUE = 'metric_investigations_unique';
+    public const STATISTICS_METRIC_REQUESTS = 'metric_requests';
+    public const STATISTICS_METRIC_REQUESTS_UNIQUE = 'metric_requests_unique';
 
     /**
-     * @see PKPStatisticsHelper::getAppColumnTitle()
+     * Get COUNTER DB tables metrics columns
      */
-    protected function getAppColumnTitle($column)
+    public static function getCounterMetricsColumns(): array
     {
-        switch ($column) {
-            case self::STATISTICS_DIMENSION_SUBMISSION_ID:
-                return __('common.publication');
-            case self::STATISTICS_DIMENSION_PKP_SECTION_ID:
-                return __('section.section');
-            case self::STATISTICS_DIMENSION_CONTEXT_ID:
-                return __('context.context');
-            default:
-                assert(false);
-        }
-    }
-
-    /**
-     * @see PKPStatisticsHelper::getReportColumnsArray()
-     */
-    protected function getReportColumnsArray()
-    {
-        return array_merge(
-            parent::getReportColumnsArray(),
-            [self::STATISTICS_DIMENSION_ISSUE_ID => __('issue.issue')]
-        );
-    }
-
-    /**
-     * @see PKPStatisticsHelper::getReportObjectTypesArray()
-     */
-    protected function getReportObjectTypesArray()
-    {
-        $objectTypes = parent::getReportObjectTypesArray();
-        $objectTypes = $objectTypes + [
-            ASSOC_TYPE_JOURNAL => __('context.context'),
-            ASSOC_TYPE_SECTION => __('section.section'),
-            ASSOC_TYPE_ISSUE => __('issue.issue'),
-            ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
-            ASSOC_TYPE_SUBMISSION => __('common.publication'),
-            ASSOC_TYPE_SUBMISSION_FILE => __('submission.galleyFiles')
+        return [
+            self::STATISTICS_METRIC_INVESTIGATIONS,
+            self::STATISTICS_METRIC_INVESTIGATIONS_UNIQUE,
+            self::STATISTICS_METRIC_REQUESTS,
+            self::STATISTICS_METRIC_REQUESTS_UNIQUE,
         ];
-
-        return $objectTypes;
     }
 }
 

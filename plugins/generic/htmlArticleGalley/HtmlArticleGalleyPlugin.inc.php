@@ -13,8 +13,12 @@
  * @brief Class for HtmlArticleGalley plugin
  */
 
+
+use APP\core\Application;
+use APP\core\Services;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\observers\events\Usage;
 use APP\template\TemplateManager;
 use PKP\plugins\HookRegistry;
 use PKP\submissionFile\SubmissionFile;
@@ -130,6 +134,14 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                 echo $this->_getHTMLContents($request, $galley);
                 $returner = true;
                 HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
+                $publication = Repo::publication()->get($galley->getData('publicationId'));
+                // This part is the same as in ArticleHandler::initialize():
+                if ($publication->getData('issueId')) {
+                    // TODO: Previously fetched issue from cache. Reimplement when caching added.
+                    $issue = Repo::issue()->get($publication->getData('issueId'));
+                    $issue = $issue->getJournalId() == $article->getData('contextId') ? $issue : null;
+                }
+                event(new Usage(Application::ASSOC_TYPE_SUBMISSION_FILE, $request->getContext(), $article, $galley, $submissionFile, $issue));
             }
             return true;
         }
@@ -156,7 +168,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $collector = Repo::submissionFile()
             ->getCollector()
             ->filterByAssoc(
-                ASSOC_TYPE_SUBMISSION_FILE,
+                Application::ASSOC_TYPE_SUBMISSION_FILE,
                 [$submissionFile->getId()]
             )
             ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
