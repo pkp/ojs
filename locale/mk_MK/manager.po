@@ -2,7 +2,7 @@
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-03 14:06+0000\n"
+"PO-Revision-Date: 2022-03-10 20:51+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk_MK/>\n"
@@ -2404,3 +2404,49 @@ msgid "manager.setup.enableDois.description"
 msgstr ""
 "Назначете дигитални идентификатори на објекти (ДОИ) на написи, изданија и "
 "отисоци."
+
+msgid "doi.manager.issueDois"
+msgstr "ДОИ на издание"
+
+msgid "doi.manager.submissionDois"
+msgstr "ДОИ на напис"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Изданијата што ги баравте не беа пронајдени"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Само ДОИ може да се уредуваат по објава на поднесок"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Поднесеното ДОИ не е валидно"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Само ДОИ може да се уредуваат откако ќе се објави публикација/отисокот"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Отисокот кој го побаравте не е дел од оваа публикација."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "ДОИ {$pubId} ќе биде доделен при објавувањето."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Нема"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Ве молиме изберете ја агенцијата за регистрација што сакате да ја користите "
+"при депонирање на ДОИ."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Агенција за регистрација"
+
+msgid "doi.manager.displayName"
+msgstr "ДОИ"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Овој и-меил автоматски се испраќа до нов корисник кога ќе се регистрира во "
+"списанието кога поставките бараат да се валидира и-меил адресата."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Валидирај и-меил (регистрација во списание)"
