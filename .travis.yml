@@ -1,3 +1,5 @@
+dist: bionic
+
 env:
   global:
   # Used for saving generated test datasets. See Notion for details.
