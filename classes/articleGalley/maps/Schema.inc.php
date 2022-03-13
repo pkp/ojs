@@ -24,8 +24,8 @@ use PKP\services\PKPSchemaService;
 
 class Schema extends \PKP\core\maps\Schema
 {
-    /** @var Enumerable */
-    public $collection;
+    /**  */
+    public Enumerable $collection;
 
     /** @var Submission */
     public $submission;
@@ -34,8 +34,8 @@ class Schema extends \PKP\core\maps\Schema
     public $publication;
 
 
-    /** @var string */
-    public $schema = PKPSchemaService::SCHEMA_GALLEY;
+    /** @copydoc EntityDAO::$schema */
+    public string $schema = PKPSchemaService::SCHEMA_GALLEY;
 
     public function __construct(Submission $submission, Publication  $publication, Request $request, Context $context, PKPSchemaService $schemaService)
     {

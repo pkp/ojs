@@ -18,7 +18,6 @@
 
 namespace APP\core;
 
-use APP\facades\Repo;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -115,6 +114,7 @@ class Application extends PKPApplication
     public function getDAOMap()
     {
         return array_merge(parent::getDAOMap(), [
+            'ArticleGalleyDAO' => 'APP\article\ArticleGalleyDAO',
             'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
             'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
@@ -185,7 +185,7 @@ class Application extends PKPApplication
      */
     public static function getRepresentationDAO()
     {
-        return Repo::articleGalley()->dao;
+        return DAORegistry::getDAO('ArticleGalleyDAO');
     }
 
     /**
