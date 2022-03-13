@@ -62,6 +62,6 @@ class Repo extends BaseRepo
     }
     public static function articleGalley(): \APP\articleGalley\Repository
     {
-        return App::make(\APP\articleGalley\Repository::class);
+        return app(Repository::class);
     }
 }
