@@ -737,11 +737,11 @@ msgid "emails.subscriptionAfterExpiryLast.description"
 msgstr "Bu mesaj aboneliği biten abonelere gönderilir. Son mesajdır..."
 
 msgid "emails.notification.subject"
-msgstr "{$siteTitle} Yeni Bildirim"
+msgstr "{$contextName} Yeni Bildirim"
 
 msgid "emails.notification.body"
 msgstr ""
-"{$siteTitle} adlı sisteden yeni bir bildiriminiz var:<br />\n"
+"{$contextName} adlı sisteden yeni bir bildiriminiz var:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

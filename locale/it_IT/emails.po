@@ -783,11 +783,11 @@ msgstr ""
 "la prima volta, inviandogli username e password."
 
 msgid "emails.notification.subject"
-msgstr "Nuova notifica da {$siteTitle}"
+msgstr "Nuova notifica da {$contextName}"
 
 msgid "emails.notification.body"
 msgstr ""
-"Hai ricevuto una nuova notifica da  {$siteTitle}:<br />\n"
+"Hai ricevuto una nuova notifica da  {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

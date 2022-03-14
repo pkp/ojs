@@ -102,7 +102,7 @@ msgstr "このメールは新規に登録された査読者に送付され、ユ
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"{$siteTitle}からの新しいお知らせです。<br />\n"
+"{$contextName}からの新しいお知らせです。<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -112,7 +112,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "{$siteTitle}からの新しいお知らせ"
+msgstr "{$contextName}からの新しいお知らせ"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.description"

@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "emails.notification.subject"
-msgstr "Nova notificação de {$siteTitle}"
+msgstr "Nova notificação de {$contextName}"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Você tem uma nova notificação de {$siteTitle}:<br />\n"
+"Você tem uma nova notificação de {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -1161,11 +1161,11 @@ msgid "emails.proofreadLayoutAck.description"
 msgstr "Mensagem enviada pelo Editor de Seção ao Editor de Layout, agradecendo pela conclusão das composições, após a Leitura de Provas"
 
 msgid "emails.notification.subject"
-msgstr "Nova notificação de {$siteTitle}"
+msgstr "Nova notificação de {$contextName}"
 
 msgid "emails.notification.body"
 msgstr ""
-"Você tem uma nova notificação de {$siteTitle}:<br />\n"
+"Você tem uma nova notificação de {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

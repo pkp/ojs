@@ -789,7 +789,7 @@ msgstr ""
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Máte nové oznámenie od {$siteTitle}:<br />\n"
+"Máte nové oznámenie od {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -798,7 +798,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.notification.subject"
-msgstr "Nové oznámenie od {$siteTitle}"
+msgstr "Nové oznámenie od {$contextName}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Teraz otvorený prístup k číslu"

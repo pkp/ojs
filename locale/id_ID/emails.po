@@ -16,11 +16,11 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "emails.notification.subject"
-msgstr "Notifikasi baru dari {$siteTitle}"
+msgstr "Notifikasi baru dari {$contextName}"
 
 msgid "emails.notification.body"
 msgstr ""
-"Anda memperoleh satu notifikasi baru dari {$siteTitle}:<br />\n"
+"Anda memperoleh satu notifikasi baru dari {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

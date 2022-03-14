@@ -794,11 +794,11 @@ msgid "emails.subscriptionAfterExpiryLast.description"
 msgstr "Denne e-mail underretter en abonnent om, at vedkommendes abonnement er udløbet. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner."
 
 msgid "emails.notification.subject"
-msgstr "Ny meddelelse fra {$siteTitle}"
+msgstr "Ny meddelelse fra {$contextName}"
 
 msgid "emails.notification.body"
 msgstr ""
-"Du har modtaget en ny meddelelse fra {$siteTitle}:<br />\n"
+"Du har modtaget en ny meddelelse fra {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

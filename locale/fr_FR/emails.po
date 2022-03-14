@@ -728,12 +728,12 @@ msgid "emails.reviewerRegister.description"
 msgstr "Ce courriel est envoyé à un rapporteur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et mot de passe."
 
 msgid "emails.notification.subject"
-msgstr "Nouvel avis de {$siteTitle}"
+msgstr "Nouvel avis de {$contextName}"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Vous avez un nouvel avis de {$siteTitle} :<br />\n"
+"Vous avez un nouvel avis de {$contextName} :<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

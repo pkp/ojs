@@ -17,7 +17,7 @@ msgstr "دڵنیابوونەوەی لە دانانەوەی وشەى نهێنى"
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"تۆ ئاگادارکردنەوی نوێت هەیە لە {$siteTitle}:<br />\n"
+"تۆ ئاگادارکردنەوی نوێت هەیە لە {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -26,7 +26,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.notification.subject"
-msgstr "ئاگادارکردنەی نوێ لە {$siteTitle}"
+msgstr "ئاگادارکردنەی نوێ لە {$contextName}"
 
 msgid "emails.notification.description"
 msgstr ""

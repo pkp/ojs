@@ -1205,7 +1205,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"Teniu una notificació nova de {$siteTitle}:<br />\n"
+"Teniu una notificació nova de {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -1215,7 +1215,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Notificació nova de {$siteTitle}"
+msgstr "Notificació nova de {$contextName}"
 
 msgid "emails.announcement.description"
 msgstr "Aquest correu electrònic s'envia quan es crea un avís nou."

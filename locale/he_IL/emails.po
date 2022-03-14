@@ -178,7 +178,7 @@ msgstr "הדוא\"ל נשלח למשתמשים רשומים שבחרו לשלו�
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"יש לך הודעה חדשה מאת {siteTitle$}:<br />\n"
+"יש לך הודעה חדשה מאת {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -187,7 +187,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.notification.subject"
-msgstr "הודעה חדשה מאת {$siteTitle}"
+msgstr "הודעה חדשה מאת {$contextName}"
 
 msgid "emails.lockssNewArchive.body"
 msgstr ""

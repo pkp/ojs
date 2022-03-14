@@ -133,7 +133,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"Имате ново известување од {$siteTitle}:<br />\n"
+"Имате ново известување од {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -143,7 +143,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Ново известување од {$siteTitle}"
+msgstr "Ново известување од {$contextName}"
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Барање за архивирање за {$contextName}"

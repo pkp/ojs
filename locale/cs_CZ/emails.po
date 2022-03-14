@@ -854,11 +854,11 @@ msgid "emails.subscriptionAfterExpiryLast.description"
 msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
 
 msgid "emails.notification.subject"
-msgstr "Nové oznámení od {$siteTitle}"
+msgstr "Nové oznámení od {$contextName}"
 
 msgid "emails.notification.body"
 msgstr ""
-"Máte nové oznámení od {$siteTitle}:<br />\n"
+"Máte nové oznámení od {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

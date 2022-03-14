@@ -108,7 +108,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"თქვენ მიიღეთ ახალი შეტყობინება საიტიდან {$siteTitle}:<br />\n"
+"თქვენ მიიღეთ ახალი შეტყობინება საიტიდან {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -118,7 +118,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "ახალი შეტყობინება საიტიდან {$siteTitle}"
+msgstr "ახალი შეტყობინება საიტიდან {$contextName}"
 
 msgid "emails.lockssNewArchive.subject"
 msgstr "ჟურნალის {$contextName} არქივაციის მოთხოვნა"

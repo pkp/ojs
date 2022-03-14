@@ -168,7 +168,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"Þú átt ný skilaboð frá {$siteTitle}:<br />\n"
+"Þú átt ný skilaboð frá {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -178,7 +178,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Ný skilaboð frá {$siteTitle}"
+msgstr "Ný skilaboð frá {$contextName}"
 
 msgid "emails.editorDecisionSendToProduction.body"
 msgstr ""

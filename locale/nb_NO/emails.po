@@ -936,12 +936,12 @@ msgstr ""
 "til systemet og tildele dem brukernavn og passord."
 
 msgid "emails.notification.subject"
-msgstr "Nytt varsel fra {$siteTitle}"
+msgstr "Nytt varsel fra {$contextName}"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Du har fått et nytt varsel fra {$siteTitle}:<br />\n"
+"Du har fått et nytt varsel fra {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

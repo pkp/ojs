@@ -741,12 +741,12 @@ msgid "emails.subscriptionAfterExpiryLast.description"
 msgstr "Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
 
 msgid "emails.notification.subject"
-msgstr "{$siteTitle} gunearen jakinarazpen berria"
+msgstr "{$contextName} gunearen jakinarazpen berria"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"{$siteTitle} gunearen jakinarazpen berri bat daukazu:<br />\n"
+"{$contextName} gunearen jakinarazpen berri bat daukazu:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

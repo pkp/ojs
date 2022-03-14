@@ -45,7 +45,7 @@ msgstr ""
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Ați primit o notificare nouă de la {$siteTitle}:<br />\n"
+"Ați primit o notificare nouă de la {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -54,7 +54,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.notification.subject"
-msgstr "Notificare nouă din partea {$siteTitle}"
+msgstr "Notificare nouă din partea {$contextName}"
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""

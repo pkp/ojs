@@ -16,12 +16,12 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "emails.notification.subject"
-msgstr "Нове повідомлення від сайту {$siteTitle}"
+msgstr "Нове повідомлення від сайту {$contextName}"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Ви маєте нове повідомлення від сайту {$siteTitle}:<br />\n"
+"Ви маєте нове повідомлення від сайту {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

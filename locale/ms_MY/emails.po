@@ -142,7 +142,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"Anda mempunyai notifikasi baharu dari {$siteTitle}: <br />\n"
+"Anda mempunyai notifikasi baharu dari {$contextName}: <br />\n"
 "<br />\n"
 "{$notificationContents} <br />\n"
 "<br />\n"
@@ -152,7 +152,7 @@ msgstr ""
 "<hr/> {$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Notifikasi baharu dari {$siteTitle}"
+msgstr "Notifikasi baharu dari {$contextName}"
 
 #, fuzzy
 msgid "emails.reviewRequest.description"

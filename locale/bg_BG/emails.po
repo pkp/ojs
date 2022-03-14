@@ -326,7 +326,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"Имате ново известие от {$siteTitle}:<br />\n"
+"Имате ново известие от {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -336,7 +336,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Ново известие от {$siteTitle}"
+msgstr "Ново известие от {$contextName}"
 
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr ""

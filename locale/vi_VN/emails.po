@@ -1148,7 +1148,7 @@ msgstr ""
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Bạn có một thông báo mới từ {$siteTitle}:<br />\n"
+"Bạn có một thông báo mới từ {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -1157,7 +1157,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.notification.subject"
-msgstr "Thông báo mới từ {$siteTitle}"
+msgstr "Thông báo mới từ {$contextName}"
 
 msgid "emails.announcement.description"
 msgstr "Email này được gửi khi một thông báo mới được tạo."

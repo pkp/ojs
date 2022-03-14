@@ -1016,11 +1016,11 @@ msgid "emails.reviewerRegister.description"
 msgstr "Mensagem de boas-vindas enviada a novo revisor registado no sistema, com nome de utilizador e senha para acesso."
 
 msgid "emails.notification.subject"
-msgstr "Nova notificação de {$siteTitle}"
+msgstr "Nova notificação de {$contextName}"
 
 msgid "emails.notification.body"
 msgstr ""
-"Tem uma nova notificação de {$siteTitle}:<br />\n"
+"Tem uma nova notificação de {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

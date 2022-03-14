@@ -18,7 +18,7 @@ msgstr "Parolni tiklashni tasdiqlash"
 
 msgid "emails.notification.body"
 msgstr ""
-"Sizda yangi bildirishnoma bor   {$siteTitle}:<br />\n"
+"Sizda yangi bildirishnoma bor {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -28,7 +28,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Yangi xabarnoma «{$siteTitle}»"
+msgstr "Yangi xabarnoma «{$contextName}»"
 
 msgid "emails.announcement.body"
 msgstr ""

@@ -829,12 +829,12 @@ msgid "emails.lockssExistingArchive.description"
 msgstr "This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest."
 
 msgid "emails.notification.subject"
-msgstr "فرم اطلاع رسانی جدید {$siteTitle}"
+msgstr "فرم اطلاع رسانی جدید {$contextName}"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"شما یک فرم اطلاع رسانی جدید از {$siteTitle} دارید<br />\n"
+"شما یک فرم اطلاع رسانی جدید از {$contextName} دارید<br />\n"
 "<br />\n"
 "لینک: {$notificationUrl}<br />\n"
 "<br />\n"

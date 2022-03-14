@@ -764,7 +764,7 @@ msgstr ""
 
 msgid "emails.notification.body"
 msgstr ""
-"Imate novu obavijest od časopisa {$siteTitle}:<br />\n"
+"Imate novu obavijest od časopisa {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
@@ -774,7 +774,7 @@ msgstr ""
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
-msgstr "Nova obavijest od časopisa {$siteTitle}"
+msgstr "Nova obavijest od časopisa {$contextName}"
 
 msgid "emails.announcement.subject"
 msgstr "{$title}"

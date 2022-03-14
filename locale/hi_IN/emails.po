@@ -17,7 +17,7 @@ msgstr ""
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.notification.subject"
-msgstr "से नई अधिसूचना {$siteTitle}"
+msgstr "से नई अधिसूचना {$contextName}"
 
 #, fuzzy
 # (pofilter) brackets: Added '{', '}'
@@ -27,7 +27,7 @@ msgstr "से नई अधिसूचना {$siteTitle}"
 # (pofilter) xmltags: Added XML tags
 msgid "emails.notification.body"
 msgstr ""
-"आपके पास एक नई सूचना है {$siteTitle}:<br />\n"
+"आपके पास एक नई सूचना है {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

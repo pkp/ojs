@@ -16,12 +16,12 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "emails.notification.subject"
-msgstr "Új értesítés a(z) {$siteTitle} oldaltól"
+msgstr "Új értesítés a(z) {$contextName} oldaltól"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Önnek új értesítése van a(z) {$siteTitle} oldaltól:<br />\n"
+"Önnek új értesítése van a(z) {$contextName} oldaltól:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"
