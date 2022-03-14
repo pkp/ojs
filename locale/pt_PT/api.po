@@ -1,9 +1,10 @@
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2021-01-21 10:30+0000\n"
+"PO-Revision-Date: 2022-03-14 18:03+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/api/pt_PT/>\n"
@@ -69,3 +70,14 @@ msgstr "A divulgação solicitada não faz parte desta revista."
 msgid "api.emails.403.disabled"
 msgstr ""
 "O recurso de envio de e-mails em massa não foi ativado para esta revista."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Alguns itens não foram depositados com sucesso. Verifique os itens "
+"individualmente para ver as mensagens de erro específicas."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Não existe uma agência de registo DOI configurada nesta revista."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "O DOI solicitado não faz parte desta revista."
