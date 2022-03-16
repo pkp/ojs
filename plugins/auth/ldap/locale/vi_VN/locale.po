@@ -1,10 +1,11 @@
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-27 23:09+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
-"auth-ldap/vi/>\n"
-"Language: vi\n"
+"auth-ldap/vi_VN/>\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +16,7 @@ msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Thuộc tính bảo mật của SASL"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "ID ủy quyền được yêu cầu"
+msgstr "ID ủy quyền xác thực được yêu cầu"
 
 msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Lĩnh vực"
@@ -92,3 +93,6 @@ msgstr ""
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "ID xác thực được yêu cầu"
