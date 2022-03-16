@@ -270,23 +270,11 @@ class OJSMigration extends \PKP\migration\Migration
         Schema::create('institutional_subscriptions', function (Blueprint $table) {
             $table->bigInteger('institutional_subscription_id')->autoIncrement();
             $table->bigInteger('subscription_id');
-            $table->string('institution_name', 255);
+            $table->bigInteger('institution_id');
             $table->string('mailing_address', 255)->nullable();
             $table->string('domain', 255)->nullable();
             $table->index(['subscription_id'], 'institutional_subscriptions_subscription_id');
             $table->index(['domain'], 'institutional_subscriptions_domain');
-        });
-
-        // Journal institutional subscription IPs and IP ranges.
-        Schema::create('institutional_subscription_ip', function (Blueprint $table) {
-            $table->bigInteger('institutional_subscription_ip_id')->autoIncrement();
-            $table->bigInteger('subscription_id');
-            $table->string('ip_string', 40);
-            $table->bigInteger('ip_start');
-            $table->bigInteger('ip_end')->nullable();
-            $table->index(['subscription_id'], 'institutional_subscription_ip_subscription_id');
-            $table->index(['ip_start'], 'institutional_subscription_ip_start');
-            $table->index(['ip_end'], 'institutional_subscription_ip_end');
         });
 
         // Logs queued (unfulfilled) payments.

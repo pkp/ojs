@@ -13,14 +13,21 @@
  * @brief Form class for institutional subscription create/edits.
  */
 
-use APP\subscription\form\SubscriptionForm;
+use APP\core\Application;
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
+use APP\subscription\form\SubscriptionForm;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\SubscriptionType;
+use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
 
 class InstitutionalSubscriptionForm extends SubscriptionForm
 {
+    /** @var array of the journal institutions [institutionId => name] */
+    public array $institutions;
+
     /**
      * Constructor
      *
@@ -37,10 +44,13 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         $journal = $request->getJournal();
         $journalId = $journal->getId();
 
+        $subscriptionInstitutionId = null;
+
         if (isset($subscriptionId)) {
             $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
             if ($subscriptionDao->subscriptionExists($subscriptionId)) {
                 $this->subscription = $subscriptionDao->getById($subscriptionId);
+                $subscriptionInstitutionId = $this->subscription->getInstitutionId();
             }
         }
 
@@ -50,10 +60,25 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         while ($subscriptionType = $subscriptionTypeIterator->next()) {
             $this->subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
         }
-
         if (count($this->subscriptionTypes) == 0) {
             $this->addError('typeId', __('manager.subscriptions.form.typeRequired'));
             $this->addErrorField('typeId');
+        }
+
+        $collector = Repo::institution()->getCollector()->filterByContextIds([$journalId]);
+        $institutions = Repo::institution()->getMany($collector);
+        $this->institutions = [];
+        foreach ($institutions as $institution) {
+            $this->institutions[$institution->getId()] = $institution->getLocalizedName();
+        }
+        if (isset($subscriptionInstitutionId) && !array_key_exists($subscriptionInstitutionId, $this->institutions)) {
+            // The institution is soft deleted, add it to the institutions list
+            $subscriptionIinstitution = Repo::institution()->get($subscriptionInstitutionId);
+            $this->institutions[$subscriptionInstitutionId] = $subscriptionIinstitution->getLocalizedName();
+        }
+        if (count($this->institutions) == 0) {
+            $this->addError('institutionId', __('manager.subscriptions.form.institutionRequired'));
+            $this->addErrorField('institutionId');
         }
 
         // Ensure subscription type is valid
@@ -62,8 +87,10 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
             return $subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId);
         }));
 
-        // Ensure institution name is provided
-        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'institutionName', 'required', 'manager.subscriptions.form.institutionNameRequired'));
+        // Ensure institution ID exists
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'institutionId', 'required', 'manager.subscriptions.form.institutionIdValid', function ($institutionId) use ($journalId, $subscriptionInstitutionId) {
+            return ($institutionId == $subscriptionInstitutionId) || Repo::institution()->existsByContextId($institutionId, $journalId);
+        }));
 
         // If provided, domain is valid
         $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'domain', 'optional', 'manager.subscriptions.form.domainValid', '/^' .
@@ -71,6 +98,20 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
                 '\.' .
                 '[A-Z]{2,4}' .
             '$/i'));
+    }
+
+    /**
+     * @copydoc Form::fetch
+     *
+     * @param null|string $template
+     */
+    public function fetch($request, $template = null, $display = false)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'institutions' => $this->institutions,
+        ]);
+        return parent::fetch($request, $template, $display);
     }
 
     /**
@@ -84,10 +125,9 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
             $this->_data = array_merge(
                 $this->_data,
                 [
-                    'institutionName' => $this->subscription->getInstitutionName(),
                     'institutionMailingAddress' => $this->subscription->getInstitutionMailingAddress(),
                     'domain' => $this->subscription->getDomain(),
-                    'ipRanges' => join($this->subscription->getIPRanges(), "\r\n"),
+                    'institutionId' => $this->subscription->getInstitutionId(),
                 ]
             );
         }
@@ -99,41 +139,34 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
     public function readInputData()
     {
         parent::readInputData();
+        $this->readUserVars(['institutionMailingAddress', 'domain', 'institutionId']);
+    }
 
-        $this->readUserVars(['institutionName', 'institutionMailingAddress', 'domain', 'ipRanges']);
-
-        // Check if IP range has been provided
-        $ipRanges = $this->getData('ipRanges');
-        $ipRangeProvided = !empty(trim($ipRanges));
+    /**
+     * @copydoc Form::validate()
+     */
+    public function validate($callHooks = true)
+    {
+        if (!parent::validate()) {
+            return false;
+        }
 
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
-        // If online or print + online, domain or at least one IP range has been provided
-        if ($subscriptionType->getFormat() != SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT) {
-            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'domain', 'optional', 'manager.subscriptions.form.domainIPRangeRequired', function ($domain) use ($ipRangeProvided) {
-                return ($domain != '' || $ipRangeProvided) ? true : false;
-            }));
-        }
+        $institution = Repo::institution()->get($this->getData('institutionId'));
+        $ipRanges = $institution->getIPRanges();
 
-        // If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
-        if ($ipRangeProvided) {
-            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'ipRanges', 'required', 'manager.subscriptions.form.ipRangeValid', function ($ipRanges) {
-                foreach (explode("\r\n", trim($ipRanges)) as $ipRange) {
-                    if (!PKPString::regexp_match(
-                        '/^' .
-                    // IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
-                    '((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
-                    '$/i',
-                        trim($ipRange)
-                    )
-                ) {
-                        return false;
-                    }
-                }
-                return true;
-            }));
+        $domain = $this->getData('domain');
+        // If online or print + online, domain or at least one IP range has to be provided
+        if ($subscriptionType->getFormat() != SubscriptionType::SUBSCRIPTION_TYPE_FORMAT_PRINT) {
+            if (empty($domain) && empty($ipRanges)) {
+                $this->addError('domain', __('manager.subscriptions.form.domainIPRangeRequired'));
+                $this->addErrorField('domain');
+                return false;
+            }
         }
+        return true;
     }
 
     /**
@@ -149,15 +182,11 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
 
         parent::execute(...$functionArgs);
 
-        $this->subscription->setInstitutionName($this->getData('institutionName'));
+        $this->subscription->setInstitutionId($this->getData('institutionId'));
         $this->subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
         $this->subscription->setDomain($this->getData('domain'));
 
-        $ipRanges = $this->getData('ipRanges');
-        $ipRanges = explode("\r\n", trim($ipRanges));
-        $this->subscription->setIPRanges($ipRanges);
-
-        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
         if ($insert) {
             $institutionalSubscriptionDao->insertObject($this->subscription);
         } else {
