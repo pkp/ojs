@@ -1,7 +1,8 @@
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-19 06:58+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -2405,3 +2406,26 @@ msgstr "Sẵn sàng tiến hành đánh giá ngang hàng các bài gửi vào tr
 
 msgid "user.register.reviewerDescriptionNoInterests"
 msgstr "Sẵn sàng tiến hành đánh giá ngang hàng các bài gửi cho tạp chí."
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Nếu bạn đang nâng cấp OJS, <a href=\"{$upgradeUrl}\">nhấn vào đây</a> để xử "
+"lý."
+
+msgid "payment.waived"
+msgstr "Từ chối thanh toán"
+
+msgid "payment.unpaid"
+msgstr "Chưa thanh toán"
+
+msgid "about.aboutSoftware"
+msgstr "Về Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Không tìm thấy dàn trang được yêu cầu."
+
+msgid "doi.manager.settings.publications"
+msgstr "Bài viết"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Tạp chí này không công bố nội dung online."
