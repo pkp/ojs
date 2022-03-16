@@ -20,10 +20,10 @@ use APP\facades\Repo;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionDAO;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
-use PKP\db\DAORegistry;
 
 class SubscriptionForm extends Form
 {
@@ -67,7 +67,7 @@ class SubscriptionForm extends Form
 
         // User is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', fn($userId) => !!Repo::user()->get($userId)));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', fn ($userId) => !!Repo::user()->get($userId)));
 
         // Subscription status is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));
@@ -144,34 +144,34 @@ class SubscriptionForm extends Form
             // Start date is provided and is valid
             $this->addCheck(new \PKP\form\validation\FormValidator($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartRequired'));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
-                $dateStartYear = strftime('%Y', strtotime($dateStart));
+                $dateStartYear = date('Y', strtotime($dateStart));
                 $minYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_PAST;
                 $maxYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_FUTURE;
                 return ($dateStartYear >= $minYear && $dateStartYear <= $maxYear);
             }));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
-                $dateStartMonth = strftime('%m', strtotime($dateStart));
+                $dateStartMonth = date('m', strtotime($dateStart));
                 return ($dateStartMonth >= 1 && $dateStartMonth <= 12);
             }));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateStart', 'required', 'manager.subscriptions.form.dateStartValid', function ($dateStart) {
-                $dateStartDay = strftime('%d', strtotime($dateStart));
+                $dateStartDay = date('d', strtotime($dateStart));
                 return ($dateStartDay >= 1 && $dateStartDay <= 31);
             }));
 
             // End date is provided and is valid
             $this->addCheck(new \PKP\form\validation\FormValidator($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndRequired'));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
-                $dateEndYear = strftime('%Y', strtotime($dateEnd));
+                $dateEndYear = date('Y', strtotime($dateEnd));
                 $minYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_PAST;
                 $maxYear = date('Y') + Subscription::SUBSCRIPTION_YEAR_OFFSET_FUTURE;
                 return ($dateEndYear >= $minYear && $dateEndYear <= $maxYear);
             }));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
-                $dateEndMonth = strftime('%m', strtotime($dateEnd));
+                $dateEndMonth = date('m', strtotime($dateEnd));
                 return ($dateEndMonth >= 1 && $dateEndMonth <= 12);
             }));
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'dateEnd', 'required', 'manager.subscriptions.form.dateEndValid', function ($dateEnd) {
-                $dateEndDay = strftime('%d', strtotime($dateEnd));
+                $dateEndDay = date('d', strtotime($dateEnd));
                 return ($dateEndDay >= 1 && $dateEndDay <= 31);
             }));
         } else {
