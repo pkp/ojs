@@ -37,7 +37,7 @@ describe('DOI tests', function() {
 		cy.get('select[name="doiCreationTime"]').select('copyEditCreationTime');
 
 		// Select DOI suffix pattern type
-		cy.get('input[name="customDoiSuffixType"][value="defaultPattern"]')
+		cy.get('input[name="customDoiSuffixType"][value="defaultPattern"]');
 
 		// Save
 		cy.get('#doisSetup button').contains('Save').click();
@@ -51,7 +51,7 @@ describe('DOI tests', function() {
 		cy.get('button#issue-doi-management-button').click();
 
 		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
+		cy.get(`input[name="issue[]"][value=${issueId}]`).check();
 
 		// Select assign DOIs from bulk actions
 		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
@@ -77,7 +77,7 @@ describe('DOI tests', function() {
 		cy.get('a:contains("Archives")').click();
 		cy.get('a:contains("' + issueDescription + '")').click();
 		cy.get('div.pub_id').should('have.class', 'doi');
-		cy.get('div.doi span.id a').contains('https://doi.org/10.1234/')
+		cy.get('div.doi span.id a').contains('https://doi.org/10.1234/');
 	});
 
 	it('Check Publication/Galley DOI Assignments', function() {
@@ -87,7 +87,7 @@ describe('DOI tests', function() {
 		cy.get('button#article-doi-management-button').click();
 
 		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check()
+		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
 
 		// Select assign DOIs from bulk actions
 		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
@@ -110,6 +110,44 @@ describe('DOI tests', function() {
 
 		cy.get('section.item.doi')
 			.find('span.value').contains('https://doi.org/10.1234/');
+	});
+
+	it('Check Issue Filter Behaviour (pre-deposit)', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("DOIs")').click();
+		cy.get('button#issue-doi-management-button').click();
+
+		// Needs DOI
+		cy.get('#issue-doi-management button:contains("Needs DOI")').click();
+		cy.contains('Vol. 2 No. 1 (2015)');
+
+		// Unpublished
+		cy.get('#issue-doi-management button:contains("Unpublished")').click();
+		cy.get('#issue-doi-management .listPanel__items').contains('No items found.');
+
+		// Unregistered
+		cy.get('#issue-doi-management button:contains("Unregistered")').click();
+		cy.contains('Vol. 1 No. 2 (2014)');
+	});
+
+	it('Check Submission Filter Behaviour (pre-deposit)', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("DOIs")').click();
+		cy.get('button#article-doi-management-button').click();
+
+		// Needs DOI
+		cy.get('#article-doi-management button:contains("Needs DOI")').click();
+		cy.contains('Woods — Finocchiaro: Arguments About Arguments');
+
+		// Unpublished
+		cy.get('#article-doi-management button:contains("Unpublished")').click();
+		cy.get('#article-doi-management .listPanel__items').contains('No items found.');
+
+		// Unregistered
+		cy.get('#article-doi-management button:contains("Unregistered")').click();
+		cy.contains(' Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran ');
 	});
 
 	it('Check Issue Marked Registered', function() {
@@ -139,7 +177,7 @@ describe('DOI tests', function() {
 		cy.get('button#article-doi-management-button').click();
 
 		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check()
+		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
 
 		// Select mark registered from bulk actions
 		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
@@ -150,5 +188,35 @@ describe('DOI tests', function() {
 		cy.get('.app__notifications').contains('Items successfully marked registered', {timeout:20000});
 
 		cy.get(`#list-item-submission-${submissionId} .pkpBadge`).contains('Registered');
+	});
+
+	it('Check Issue Filter Behaviour (post-deposit)', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("DOIs")').click();
+		cy.get('button#issue-doi-management-button').click();
+
+		// Submitted
+		cy.get('#issue-doi-management button:contains("Submitted")').click();
+		cy.get('#issue-doi-management .listPanel__items').contains('No items found.');
+
+		// Registered
+		cy.get('#issue-doi-management button:contains("Registered")').click();
+		cy.contains('Vol. 1 No. 2 (2014)');
+	});
+
+	it('Check Submission Filter Behaviour (post-deposit)', function() {
+		cy.login('dbarnes', null, 'publicknowledge');
+
+		cy.get('a:contains("DOIs")').click();
+		cy.get('button#article-doi-management-button').click();
+
+		// Submitted
+		cy.get('#article-doi-management button:contains("Submitted")').click();
+		cy.get('#article-doi-management .listPanel__items').contains('No items found.');
+
+		// Unregistered
+		cy.get('#article-doi-management button:contains("Registered")').click();
+		cy.contains(' Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran ');
 	});
 });

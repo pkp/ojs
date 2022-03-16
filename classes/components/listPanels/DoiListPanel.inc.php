@@ -19,7 +19,6 @@ use APP\components\forms\FieldSelectIssues;
 use APP\core\Application;
 use PKP\components\listPanels\PKPDoiListPanel;
 use PKP\core\PKPApplication;
-use PKP\submission\PKPSubmission;
 
 class DoiListPanel extends PKPDoiListPanel
 {
@@ -36,37 +35,13 @@ class DoiListPanel extends PKPDoiListPanel
     {
         if ($this->isSubmission) {
             $config['executeActionApiUrl'] = $this->doiApiUrl . '/submissions';
-            $config['filters'][] = [
-                'heading' => __('manager.dois.publicationStatus'),
-                'filters' => [
-                    [
-                        'title' => __('publication.status.published'),
-                        'param' => 'status',
-                        'value' => (string) PKPSubmission::STATUS_PUBLISHED
-                    ],
-                    [
-                        'title' => __('publication.status.unpublished'),
-                        'param' => 'status',
-                        'value' => PKPSubmission::STATUS_QUEUED . ', ' . PKPSubmission::STATUS_SCHEDULED
-                    ]
-                ]
-            ];
         } else {
             $config['executeActionApiUrl'] = $this->doiApiUrl . '/issues';
-            $config['filters'][] = [
-                'heading' => __('manager.dois.publicationStatus'),
-                'filters' => [
-                    [
-                        'title' => __('publication.status.published'),
-                        'param' => 'isPublished',
-                        'value' => '1'
-                    ],
-                    [
-                        'title' => __('publication.status.unpublished'),
-                        'param' => 'isPublished',
-                        'value' => '0'
-                    ],
-                ]
+            // Overwrite default submission published statuses for issue-specific ones
+            $config['publishedStatuses'] = [
+                'name' => 'isPublished',
+                'published' => 1,
+                'unpublished' => 0,
             ];
         }
 

@@ -106,6 +106,7 @@ class IssueHandler extends APIHandler
 
         $request = $this->getRequest();
         $currentUser = $request->getUser();
+        /** @var \PKP\context\Context $context */
         $context = $request->getContext();
 
         if (!$context) {
@@ -174,6 +175,9 @@ class IssueHandler extends APIHandler
                     break;
                 case 'doiStatus':
                     $collector->filterByDoiStatuses(array_map('intval', $this->paramToArray($val)));
+                    break;
+                case 'hasDois':
+                    $collector->filterByHasDois((bool) $val, $context->getEnabledDoiTypes());
             }
         }
 
