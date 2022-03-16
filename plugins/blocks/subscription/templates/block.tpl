@@ -17,7 +17,7 @@
 	<div class="content">
 		{if $institutionalSubscription}
 			<p>
-				{translate key="plugins.block.subscription.providedBy" institutionName=$institutionalSubscription->getInstitutionName()|escape}
+				{translate key="plugins.block.subscription.providedBy" institutionName=$institution->getLocalizedName()|escape}
 			</p>
 			<p>
 				{translate key="plugins.block.subscription.comingFromIP" ip=$userIP|escape}

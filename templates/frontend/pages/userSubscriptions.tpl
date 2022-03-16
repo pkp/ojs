@@ -158,7 +158,7 @@
 					{iterate from=userInstitutionalSubscriptions item=userInstitutionalSubscription}
 						<tr>
 							<td>{$userInstitutionalSubscription->getSubscriptionTypeName()|escape}</td>
-							<td>{$userInstitutionalSubscription->getInstitutionName()|escape}</td>
+							<td>{$institutions[$userInstitutionalSubscription->getId()]->getLocalizedName()|escape}</td>
 							<td>
 								{assign var="subscriptionStatus" value=$userInstitutionalSubscription->getStatus()}
 								{assign var="isNonExpiring" value=$userInstitutionalSubscription->isNonExpiring()}

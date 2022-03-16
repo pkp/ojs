@@ -13,6 +13,7 @@
  * @brief Class for a cell provider to display information about subscriptions
  */
 
+use APP\facades\Repo;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 
@@ -41,7 +42,8 @@ class SubscriptionsGridCellProvider extends GridCellProvider
                     case is_a($subscription, 'IndividualSubscription'):
                         return ['label' => $subscription->getUserFullName()];
                     case is_a($subscription, 'InstitutionalSubscription'):
-                        return ['label' => $subscription->getInstitutionName()];
+                        $institution = Repo::institution()->get($subscription->getInstitutionId());
+                        return ['label' => $institution->getLocalizedName()];
                 }
                 assert(false);
                 break;

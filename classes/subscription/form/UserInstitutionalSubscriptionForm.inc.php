@@ -15,11 +15,15 @@
 
 namespace APP\subscription\form;
 
+use APP\facades\Repo;
 use APP\payment\ojs\OJSPaymentManager;
-use APP\subscription\InstitutionalSubscription;
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;
+use PKP\core\PKPString;
+use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\form\Form;
+use PKP\institution\Institution;
 
 class UserInstitutionalSubscriptionForm extends Form
 {
@@ -93,11 +97,12 @@ class UserInstitutionalSubscriptionForm extends Form
     {
         if (isset($this->subscription)) {
             $subscription = $this->subscription;
+            $institution = Repo::institution()->get($this->subscription->getInstitutionId());
             $this->_data = [
-                'institutionName' => $subscription->getInstitutionName(),
+                'institutionName' => $institution->getLocalizedName(),
                 'institutionMailingAddress' => $subscription->getInstitutionMailingAddress(),
                 'domain' => $subscription->getDomain(),
-                'ipRanges' => $subscription->getIPRangesString()
+                'ipRanges' => $institution->getIPRanges()
             ];
         }
     }
@@ -137,14 +142,8 @@ class UserInstitutionalSubscriptionForm extends Form
         }
 
         // Check if IP range has been provided
-        $ipRanges = PKPString::regexp_split('/\s+/', trim($this->getData('ipRanges')));
-        $ipRangeProvided = false;
-        foreach ($ipRanges as $ipRange) {
-            if ($ipRange != '') {
-                $ipRangeProvided = true;
-                break;
-            }
-        }
+        $ipRanges = $this->getData('ipRanges');
+        $ipRangeProvided = !empty(trim($ipRanges));
 
         // Domain or at least one IP range has been provided
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'domain', 'required', 'user.subscriptions.form.domainIPRangeRequired', function ($domain) use ($ipRangeProvided) {
@@ -154,11 +153,11 @@ class UserInstitutionalSubscriptionForm extends Form
         // If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
         if ($ipRangeProvided) {
             $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'ipRanges', 'required', 'manager.subscriptions.form.ipRangeValid', function ($ipRanges) {
-                foreach (PKPString::regexp_split('/\s+/', trim($ipRanges)) as $ipRange) {
+                foreach (explode("\r\n", trim($ipRanges)) as $ipRange) {
                     if (!PKPString::regexp_match(
                         '/^' .
                     // IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
-                    '((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . InstitutionalSubscription::SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
+                    '((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . Institution::IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . Institution::IP_RANGE_WILDCARD . '])){3}((\s)*[' . Institution::IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . Institution::IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . Institution::IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
                     '$/i',
                         trim($ipRange)
                     )
@@ -208,10 +207,17 @@ class UserInstitutionalSubscriptionForm extends Form
         $subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
         $subscription->setDateStart($nonExpiring ? null : $today);
         $subscription->setDateEnd($nonExpiring ? null : $today);
-        $subscription->setInstitutionName($this->getData('institutionName'));
         $subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
         $subscription->setDomain($this->getData('domain'));
-        $subscription->setIPRanges(PKPString::regexp_split('/\s+/', trim($this->getData('ipRanges'))));
+
+        $institution = Repo::institution()->newDataObject();
+        $institution->setContextId($journalId);
+        $institution->setName($this->getData('institutionName'), Locale::getLocale());
+        $ipRanges = $this->getData('ipRanges');
+        $ipRanges = explode("\r\n", trim($ipRanges));
+        $institution->setIPRanges($ipRanges);
+        $institutionId = Repo::institution()->add($institution);
+        $subscription->setInstitutionId($institutionId);
 
         if ($subscription->getId()) {
             $institutionalSubscriptionDao->updateObject($subscription);

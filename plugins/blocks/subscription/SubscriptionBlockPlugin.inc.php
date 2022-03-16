@@ -14,6 +14,8 @@
  *
  */
 
+use APP\facades\Repo;
+
 use PKP\plugins\BlockPlugin;
 
 class SubscriptionBlockPlugin extends BlockPlugin
@@ -83,8 +85,10 @@ class SubscriptionBlockPlugin extends BlockPlugin
             $subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journal->getId());
             if ($subscriptionId) {
                 $institutionalSubscription = $subscriptionDao->getById($subscriptionId);
+                $institution = Repo::institution()->get($institutionalSubscription->getInstitutionId());
                 $templateMgr->assign([
                     'institutionalSubscription' => $institutionalSubscription,
+                    'institution' => $institution,
                     'userIP' => $ip,
                 ]);
             }

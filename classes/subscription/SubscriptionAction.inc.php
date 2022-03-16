@@ -75,11 +75,12 @@ class SubscriptionAction
                 break;
             case 'SUBSCRIPTION_PURCHASE_INSTL':
             case 'SUBSCRIPTION_RENEW_INSTL':
+                $institution = Repo::institution()->get($subscription->getInstitutionId());
                 $paramArray['subscriptionUrl'] = $request->url($journal->getPath(), 'payments', null, null, null, 'institutional');
-                $paramArray['institutionName'] = $subscription->getInstitutionName();
+                $paramArray['institutionName'] = $institution->getLocalizedName();
                 $paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
                 $paramArray['domain'] = $subscription->getDomain();
-                $paramArray['ipRanges'] = $subscription->getIPRangesString();
+                $paramArray['ipRanges'] = implode(' ', $institution->getIPRanges());
                 break;
         }
 
