@@ -1256,6 +1256,12 @@ msgstr "A subscription type is required."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Please select a valid subscription type."
 
+msgid "manager.subscriptions.form.institution"
+msgstr "Institution"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Please select a valid institution."
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Start date"
 
@@ -1369,6 +1375,9 @@ msgstr "This user already has a subscription for this journal."
 
 msgid "manager.subscriptions.form.typeRequired"
 msgstr "A subscription type must be created before new subscriptions can be made."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "An institution must be created before new subscriptions can be made."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP Range"
@@ -2002,3 +2011,6 @@ msgstr "Issue DOIs"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr "This email notifies the author that their submission is being declined, before the review stage, because the submission does not meet the requirements for publication in the journal."
+
+msgid "manager.institutions.noContext"
+msgstr "This institution's journal could not be found."

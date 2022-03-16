@@ -26,125 +26,67 @@ use PKP\db\DAORegistry;
 
 class InstitutionalSubscription extends Subscription
 {
-    public const SUBSCRIPTION_IP_RANGE_RANGE = '-';
-    public const SUBSCRIPTION_IP_RANGE_WILDCARD = '*';
-
     //
     // Get/set methods
     //
 
     /**
-     * Get the institution name of the institutionalSubscription.
-     *
-     * @return string
+     * Get the institution ID of the subscription.
      */
-    public function getInstitutionName()
+    public function getInstitutionId(): int
     {
-        return $this->getData('institutionName');
+        return $this->getData('institutionId');
     }
 
     /**
-     * Set the institution name of the institutionalSubscription.
-     *
-     * @param string $institutionName
+     * Set the institution ID of the subscription.
      */
-    public function setInstitutionName($institutionName)
+    public function setInstitutionId(int $institutionId): void
     {
-        return $this->setData('institutionName', $institutionName);
+        $this->setData('institutionId', $institutionId);
     }
 
     /**
      * Get the mailing address of the institutionalSubscription.
-     *
-     * @return string
      */
-    public function getInstitutionMailingAddress()
+    public function getInstitutionMailingAddress(): string
     {
         return $this->getData('mailingAddress');
     }
 
     /**
      * Set the mailing address of the institutionalSubscription.
-     *
-     * @param string $mailingAddress
      */
-    public function setInstitutionMailingAddress($mailingAddress)
+    public function setInstitutionMailingAddress(string $mailingAddress): void
     {
-        return $this->setData('mailingAddress', $mailingAddress);
+        $this->setData('mailingAddress', $mailingAddress);
     }
 
     /**
      * Get institutionalSubscription domain string.
-     *
-     * @return string
      */
-    public function getDomain()
+    public function getDomain(): string
     {
         return $this->getData('domain');
     }
 
     /**
      * Set institutionalSubscription domain string.
-     *
-     * @param string $domain
      */
-    public function setDomain($domain)
+    public function setDomain(string $domain): void
     {
-        return $this->setData('domain', $domain);
-    }
-
-    /**
-     * Get institutionalSubscription ip ranges.
-     *
-     * @return array
-     */
-    public function getIPRanges()
-    {
-        return $this->getData('ipRanges');
-    }
-
-    /**
-     * Get institutionalSubscription ip ranges string.
-     *
-     * @return string
-     */
-    public function getIPRangesString()
-    {
-        $ipRanges = $this->getData('ipRanges');
-        $numRanges = count($ipRanges);
-        $ipRangesString = '';
-
-        for ($i = 0; $i < $numRanges; $i++) {
-            $ipRangesString .= $ipRanges[$i];
-            if ($i + 1 < $numRanges) {
-                $ipRangesString .= '\n';
-            }
-        }
-
-        return $ipRangesString;
-    }
-
-    /**
-     * Set institutionalSubscription ip ranges.
-     *
-     * @param array $ipRanges
-     */
-    public function setIPRanges($ipRanges)
-    {
-        return $this->setData('ipRanges', $ipRanges);
+        $this->setData('domain', $domain);
     }
 
     /**
      * Check whether subscription is valid
      *
-     * @param string $domain
-     * @param string $IP
-     * @param int $check SUBSCRIPTION_DATE_... Test using either start date, end date, or both (default)
-     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
+     * @param ?int $check SUBSCRIPTION_DATE_... Test using either start date, end date, or both (default)
+     * @param ?string $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
      * @return int|false Found subscription ID, or false for none.
      */
-    public function isValid($domain, $IP, $check = self::SUBSCRIPTION_DATE_BOTH, $checkDate = null)
+    public function isValid(string $domain, string $IP, ?int $check = self::SUBSCRIPTION_DATE_BOTH, ?string $checkDate = null)
     {
         $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         return $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $this->getData('journalId'), $check, $checkDate);
@@ -153,10 +95,4 @@ class InstitutionalSubscription extends Subscription
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\subscription\InstitutionalSubscription', '\InstitutionalSubscription');
-    foreach ([
-        'SUBSCRIPTION_IP_RANGE_RANGE',
-        'SUBSCRIPTION_IP_RANGE_WILDCARD',
-    ] as $constantName) {
-        define($constantName, constant('\InstitutionalSubscription::' . $constantName));
-    }
 }

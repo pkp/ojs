@@ -148,9 +148,20 @@ class TemplateManager extends PKPTemplateManager
                 $menu['payments'] = $paymentsLink;
             } else {
                 $menu = array_slice($menu, 0, $index, true) +
-                        ['payments' => $paymentsLink] +
-                        array_slice($menu, $index, null, true);
+                    ['payments' => $paymentsLink] +
+                    array_slice($menu, $index, null, true);
             }
+
+            // add institutions menu if needed
+            $institutionsLink = [
+                'name' => __('institution.institutions'),
+                'url' => $router->url($request, null, 'management', 'settings', 'institutions'),
+                'isCurrent' => $request->getRequestedPage() === 'management' && in_array('institutions', (array) $request->getRequestedArgs()),
+            ];
+            $paymentsIndex = array_search('payments', array_keys($menu));
+            $menu = array_slice($menu, 0, $paymentsIndex, true) +
+                ['institutions' => $institutionsLink] +
+                array_slice($menu, $paymentsIndex, null, true);
         }
 
         $this->setState(['menu' => $menu]);

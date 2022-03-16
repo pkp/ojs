@@ -34,14 +34,13 @@
 			{fbvElement type="text" name="dateStart" id="dateStart" value=$dateStart label="manager.subscriptions.form.dateStart" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 			{fbvElement type="text" name="dateEnd" id="dateEnd" value=$dateEnd label="manager.subscriptions.form.dateEnd" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
 		{/fbvFormSection}
-		{fbvElement type="text" label="manager.subscriptions.form.institutionName" required=true name="institutionName" id="institutionName" value=$institutionName size=$fbvStyles.size.MEDIUM}
+
+		{fbvElement type="select" required=true name="institutionId" id="institutionId" selected=$institutionId from=$institutions label="manager.subscriptions.form.institution" size=$fbvStyles.size.MEDIUM inline=true translate=false}
+
 		{fbvElement type="textarea" label="manager.subscriptions.form.institutionMailingAddress" name="institutionMailingAddress" id="institutionMailingAddress" value=$institutionMailingAddress}
 
 		<span class="instructions">{translate key="manager.subscriptions.form.domainInstructions"}</span>
 		{fbvElement type="text" label="manager.subscriptions.form.domain" name="domain" id="domain" value=$domain size=$fbvStyles.size.MEDIUM}
-
-		<span class="instructions">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span>
-		{fbvElement type="textarea" label="manager.subscriptions.form.ipRange" name="ipRanges" id="ipRanges" value=$ipRanges size=$fbvStyles.size.MEDIUM}
 
 		{fbvElement type="text" label="manager.subscriptions.form.referenceNumber" name="referenceNumber" id="referenceNumber" value=$referenceNumber size=$fbvStyles.size.MEDIUM}
 

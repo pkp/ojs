@@ -203,6 +203,7 @@ class SubscriptionReportPlugin extends ReportPlugin
         while ($subscription = $institutionalSubscriptions->next()) {
             $user = Repo::user()->get($subscription->getUserId(), true);
             $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
+            $institution = Repo::institution()->get($subscription->getInstitutionId());
 
             foreach ($columns as $index => $junk) {
                 switch ($index) {
@@ -234,7 +235,7 @@ class SubscriptionReportPlugin extends ReportPlugin
                         $columns[$index] = PKPString::html2text($subscription->getNotes());
                         break;
                     case 'institution_name':
-                        $columns[$index] = $subscription->getInstitutionName();
+                        $columns[$index] = $institution->getLocalizedName();
                         break;
                     case 'institution_mailing_address':
                         $columns[$index] = PKPString::html2text($subscription->getInstitutionMailingAddress());
@@ -243,7 +244,7 @@ class SubscriptionReportPlugin extends ReportPlugin
                         $columns[$index] = $subscription->getDomain();
                         break;
                     case 'ip_ranges':
-                        $columns[$index] = $this->_formatIPRanges($subscription->getIPRanges());
+                        $columns[$index] = $this->_formatIPRanges($institution->getIPRanges());
                         break;
                     case 'contact':
                         $columns[$index] = $user->getFullName();

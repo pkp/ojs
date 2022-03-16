@@ -164,6 +164,7 @@
 		<code function="installEmailTemplate" key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SKIP_REVIEW" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITORIAL_REMINDER" locales="en_US" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6895_Institutions" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 
