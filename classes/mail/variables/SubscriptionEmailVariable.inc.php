@@ -58,19 +58,25 @@ class SubscriptionEmailVariable extends Variable
         $this->subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $this->journal->getId());
     }
 
-    protected static function description(): array
+    /**
+     * @copydoc Variable::descriptions()
+     */
+    public static function descriptions(): array
     {
         return
         [
-            self::SUBSCRIBER_DETAILS => 'emailTemplate.variable.subscription.subscriberDetails',
-            self::SUBSCRIPTION_SIGNATURE => 'emailTemplate.variable.subscription.subscriptionSignature',
-            self::SUBSCRIPTION_URL => 'emailTemplate.variable.subscription.subscriptionUrl',
-            self::EXPIRE_DATE => 'emailTemplate.variable.subscription.expireDate',
-            self::SUBSCRIPTION_TYPE => 'emailTemplate.variable.subscription.subscriptionType',
-            self::MEMBERSHIP => 'emailTemplate.variable.subscription.membership',
+            self::SUBSCRIBER_DETAILS => __('emailTemplate.variable.subscription.subscriberDetails'),
+            self::SUBSCRIPTION_SIGNATURE => __('emailTemplate.variable.subscription.subscriptionSignature'),
+            self::SUBSCRIPTION_URL => __('emailTemplate.variable.subscription.subscriptionUrl'),
+            self::EXPIRE_DATE => __('emailTemplate.variable.subscription.expireDate'),
+            self::SUBSCRIPTION_TYPE => __('emailTemplate.variable.subscription.subscriptionType'),
+            self::MEMBERSHIP => __('emailTemplate.variable.subscription.membership'),
         ];
     }
 
+    /**
+     * @copydoc Variable::values()
+     */
     public function values(string $locale): array
     {
         return
