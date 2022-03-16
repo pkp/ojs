@@ -3,8 +3,8 @@
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 06:38+0000\n"
-"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/emails/kk_KZ/"
 ">\n"
 "Language: kk_KZ\n"
@@ -75,7 +75,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.passwordReset.subject"
-msgstr "Құпия сөзді қалпына келтірілді"
+msgstr "Құпия сөз қалпына келтірілді"
 
 msgid "emails.passwordResetConfirm.description"
 msgstr ""
