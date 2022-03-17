@@ -574,9 +574,6 @@ msgstr "प्रकाशन"
 msgid "editor.submissionsAndPublishing"
 msgstr "सबमिशन्स और प्रकाशन"
 
-msgid "editor.reassign"
-msgstr "पुनः असाइन"
-
 msgid "editor.home"
 msgstr "संपादक का घर"
 

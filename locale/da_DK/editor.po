@@ -351,9 +351,6 @@ msgstr "Tilbage til hele numre"
 msgid "editor.issues.confirmDeleteGalley"
 msgstr "Er du sikker på, at du vil slette dette nummer?"
 
-msgid "editor.reassign"
-msgstr "Overfør"
-
 msgid "editor.publicIdentificationExists"
 msgstr "Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, publiceringsversion eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift."
 

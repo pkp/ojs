@@ -331,9 +331,6 @@ msgstr "Gaia desargitaratu"
 msgid "editor.issues.confirmUnpublish"
 msgstr "Ziur al zaude desargitaratu  egin nahi duzula argitaratu dagoen gai hau?"
 
-msgid "editor.reassign"
-msgstr "Berriro esleitu"
-
 msgid "editor.publicIdentificationExists"
 msgstr "'{$publicIdentifier}' identifikatzaile publikoa jadanik erabiltzen da beste helburu batentzat (alea, artikulua, galera proba edo artxibategi osagarri bat). Mesedez, aukeratu identifikatzaile bakarrak zure aldizkariaren barruan."
 

@@ -201,9 +201,6 @@ msgstr "Подадени материали - списък и опашка"
 msgid "editor.submissionsAndPublishing"
 msgstr "Получени материали и публикуване"
 
-msgid "editor.reassign"
-msgstr "Преразпределяне"
-
 msgid "editor.home"
 msgstr "Редактор - Начало"
 

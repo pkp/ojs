@@ -408,9 +408,6 @@ msgstr "Fronta príspevkov"
 msgid "editor.submissionsAndPublishing"
 msgstr "Príspevky a publikovanie"
 
-msgid "editor.reassign"
-msgstr "Nové pridelenie"
-
 msgid "editor.home"
 msgstr "Domáca stránka editora"
 
