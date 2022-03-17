@@ -475,8 +475,5 @@ msgstr "Innsendinga röð"
 msgid "editor.submissionsAndPublishing"
 msgstr "Innsendingar og útgáfa"
 
-msgid "editor.reassign"
-msgstr "Endurúthluta"
-
 msgid "editor.home"
 msgstr "Ritstjóri - Upphafssíða"

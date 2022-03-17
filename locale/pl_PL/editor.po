@@ -528,9 +528,6 @@ msgstr "Usuń"
 msgid "editor.issues.invalidAccessDate"
 msgstr "Niepoprawna data dostępu."
 
-msgid "editor.reassign"
-msgstr "Przypisz ponownie"
-
 msgid "editor.publicIdentificationExists"
 msgstr "Publiczny ID '{$publicIdentifier}' istnieje dla innego obiektu (numer, artykuł, plik). Wybierz unikatowy ID."
 

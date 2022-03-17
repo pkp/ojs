@@ -364,9 +364,6 @@ msgstr "Povratak na prijelome broja"
 msgid "editor.issues.confirmDeleteGalley"
 msgstr "Jeste li sigurni da želite obrisati ovaj prijelom broja?"
 
-msgid "editor.reassign"
-msgstr "Ponovo dodijeli"
-
 msgid "editor.article.coverImage"
 msgstr "Slika naslovne stranice"
 

@@ -113,9 +113,6 @@ msgstr "ڕیزی نێردراوان"
 msgid "editor.submissionsAndPublishing"
 msgstr "نێردراوەکان و بڵاوکراوەکان"
 
-msgid "editor.reassign"
-msgstr "دووبارە پێسپاردن"
-
 msgid "editor.home"
 msgstr "سەرنووسەری سەرەکی"
 

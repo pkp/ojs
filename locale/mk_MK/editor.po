@@ -477,9 +477,6 @@ msgstr "Ред за поднесоци"
 msgid "editor.submissionsAndPublishing"
 msgstr "Поднесување и објавување"
 
-msgid "editor.reassign"
-msgstr "Прераспредели"
-
 msgid "editor.home"
 msgstr "Насловна страна за уредници"
 

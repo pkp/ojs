@@ -471,8 +471,5 @@ msgstr "Înregistrări în așteptare"
 msgid "editor.submissionsAndPublishing"
 msgstr "Înregistrări și publicare"
 
-msgid "editor.reassign"
-msgstr "Realocați"
-
 msgid "editor.home"
 msgstr "Acasă Editor"

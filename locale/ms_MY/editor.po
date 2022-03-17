@@ -400,9 +400,6 @@ msgstr "Senarai susunan Penyerahan"
 msgid "editor.submissionsAndPublishing"
 msgstr "Penyerahan dan Penerbitan"
 
-msgid "editor.reassign"
-msgstr "Tetapkan semula"
-
 msgid "editor.home"
 msgstr "Laman Utama Editor"
 

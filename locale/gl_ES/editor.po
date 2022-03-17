@@ -146,9 +146,6 @@ msgstr "Cola de envíos"
 msgid "editor.submissionsAndPublishing"
 msgstr "Envíos e publicación"
 
-msgid "editor.reassign"
-msgstr "Reasignar"
-
 msgid "editor.home"
 msgstr "Páxina inicial do editor/a"
 
