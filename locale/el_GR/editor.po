@@ -16,9 +16,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Αρχική σελίδα Επιμελητή περιοδικού"
 
-msgid "editor.reassign"
-msgstr "Aνάθεση εκ νέου"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Υποβολές και δημοσίευση"
 

@@ -455,8 +455,5 @@ msgstr "תור הגשה"
 msgid "editor.submissionsAndPublishing"
 msgstr "הגשות ופרסום"
 
-msgid "editor.reassign"
-msgstr "הקצה מחדש"
-
 msgid "editor.home"
 msgstr "דף הבית של העורך"

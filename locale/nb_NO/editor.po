@@ -498,8 +498,5 @@ msgstr ""
 "Velg en annen unik identifikator, siden «{$publicIdentifier}» eksisterer "
 "allerede for et annet element (utgave, artikkel, oppsett eller fil)."
 
-msgid "editor.reassign"
-msgstr "Oppnevn på nytt"
-
 msgid "issues.submissions.issueIds"
 msgstr "Tildelt nummer"

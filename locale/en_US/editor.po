@@ -18,9 +18,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Editor Home"
 
-msgid "editor.reassign"
-msgstr "Reassign"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Submissions and Publishing"
 

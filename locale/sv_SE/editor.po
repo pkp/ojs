@@ -18,9 +18,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Startsida för redaktör"
 
-msgid "editor.reassign"
-msgstr "Tilldela om"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Bidrag och publicering"
 

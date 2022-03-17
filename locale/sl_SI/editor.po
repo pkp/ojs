@@ -19,9 +19,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Domača stran urednika"
 
-msgid "editor.reassign"
-msgstr "Prerazporeditev"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Oddaja in objava prispevkov"
 

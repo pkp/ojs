@@ -322,9 +322,6 @@ msgstr "Todos os assinantes individuais ({$count} utilizadores)"
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr "Todos os assinantes institucionais ({$count} utilizadores)"
 
-msgid "editor.reassign"
-msgstr "Redesignar"
-
 msgid "editor.publicIdentificationExists"
 msgstr ""
 "O identificador público '{$publicIdentifier}' já existe para outro objecto ("

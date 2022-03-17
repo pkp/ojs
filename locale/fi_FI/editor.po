@@ -18,9 +18,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Toimittajan etusivu"
 
-msgid "editor.reassign"
-msgstr "Osoita uudelleen"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Käsikirjoitukset ja julkaiseminen"
 

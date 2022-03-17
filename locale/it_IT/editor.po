@@ -533,9 +533,6 @@ msgstr "Tutti gli abbonati persona ({$count} utenti)"
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr "Tutti gli abbonati enti ({$count} utenti)"
 
-msgid "editor.reassign"
-msgstr "Riassegna"
-
 msgid "editor.publicIdentificationExists"
 msgstr "L'identificatore pubblico  '{$publicIdentifier}' già esiste per un altro oggetto (fascicoli, articolo o file). Definisci identificatori unici nella rivista."
 
