@@ -24,7 +24,7 @@
 	{fbvFormArea id="sectionInfo"}
 		{fbvFormSection}
 			{fbvElement type="text" multilingual=true id="title" label="section.title" value=$title size=$fbvStyles.size.MEDIUM inline=true required=true}
-			{fbvElement type="text" multilingual=true id="abbrev" label="section.abbreviation" value=$abbrev maxlength="80" size=$fbvStyles.size.SMALL inline=true required=true}
+			{fbvElement type="text" multilingual=true id="abbrev" label="section.abbreviation" value=$abbrev size=$fbvStyles.size.SMALL inline=true required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.sections.policy" for="policy"}
@@ -34,7 +34,7 @@
 
 	{fbvFormArea id="sectionMisc"}
 		{fbvFormSection title="manager.sections.wordCount" for="wordCount" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" id="wordCount" value=$wordCount maxlength="80" label="manager.sections.wordCountInstructions"}
+			{fbvElement type="text" id="wordCount" value=$wordCount maxlength="19" label="manager.sections.wordCountInstructions"}
 		{/fbvFormSection}
 
 		{if count($reviewFormOptions)>0}

@@ -54,7 +54,7 @@
 
 	{fbvFormArea id="identificationArea" title="editor.issues.identification"}
 		{fbvFormSection}
-			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="40" inline=true size=$fbvStyles.size.SMALL}
+			{fbvElement type="text" label="issue.volume" id="volume" value=$volume maxlength="5" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" label="issue.number" id="number" value=$number maxlength="40" inline=true size=$fbvStyles.size.SMALL}
 			{fbvElement type="text" label="issue.year" id="year" value=$year maxlength="4" inline=true size=$fbvStyles.size.SMALL}
 		{/fbvFormSection}
