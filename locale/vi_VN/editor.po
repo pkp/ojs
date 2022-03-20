@@ -101,9 +101,6 @@ msgstr "Các bài gửi đang đợi"
 msgid "editor.submissionsAndPublishing"
 msgstr "Bài gửi và xuất bản"
 
-msgid "editor.reassign"
-msgstr "Phân công lại"
-
 msgid "editor.home"
 msgstr "Trang chủ của biên tập viên"
 

@@ -18,9 +18,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Тека редактора"
 
-msgid "editor.reassign"
-msgstr "Повторно призначити"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Подання та публікація"
 

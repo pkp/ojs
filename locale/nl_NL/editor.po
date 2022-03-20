@@ -16,9 +16,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Homepage Redacteur"
 
-msgid "editor.reassign"
-msgstr "Opnieuw toekennen"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Inzendingen en Publiceren"
 

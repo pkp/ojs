@@ -336,9 +336,6 @@ msgstr "所有个人订阅（共 {$count} 人）"
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr "所有机构订阅（共 {$count} 户）"
 
-msgid "editor.reassign"
-msgstr "重新分配"
-
 msgid "editor.publicIdentificationExists"
 msgstr "公共标识符 '{$publicIdentifier}' 已经在别处（期次、文章、校样或附件）存在。请选择您的期刊中独有的标识符。"
 

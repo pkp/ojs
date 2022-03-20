@@ -18,9 +18,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Pàgina inicial de l’editor/a"
 
-msgid "editor.reassign"
-msgstr "Reassignació"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Trameses i publicació"
 

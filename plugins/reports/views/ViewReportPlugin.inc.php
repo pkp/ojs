@@ -128,13 +128,12 @@ class ViewReportPlugin extends ReportPlugin
         fputcsv($fp, array_merge($columns, $galleyLabels));
 
         ksort($abstractViewCounts);
-        $dateFormatShort = $context->getLocalizedDateFormatShort();
         foreach ($abstractViewCounts as $articleId => $abstractViewCount) {
             $values = [
                 $articleId,
                 $articleTitles[$articleId],
                 $issueIdentifications[$articleIssueIdentificationMap[$articleId]],
-                strftime($dateFormatShort, strtotime($issueDatesPublished[$articleIssueIdentificationMap[$articleId]])),
+                date('Y-m-d', strtotime($issueDatesPublished[$articleIssueIdentificationMap[$articleId]])),
                 $abstractViewCount,
                 $galleyViewTotals[$articleId]
             ];

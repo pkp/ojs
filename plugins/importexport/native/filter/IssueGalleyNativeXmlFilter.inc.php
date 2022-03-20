@@ -119,8 +119,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
             $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
             $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', htmlspecialchars($issueFile->getContentType(), ENT_COMPAT, 'UTF-8')));
             $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', htmlspecialchars($issueFile->getOriginalFileName(), ENT_COMPAT, 'UTF-8')));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
+            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', date('Y-m-d', strtotime($issueFile->getDateUploaded()))));
+            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', date('Y-m-d', strtotime($issueFile->getDateModified()))));
 
             $issueFileManager = new IssueFileManager($issueGalley->getIssueId());
 

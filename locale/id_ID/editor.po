@@ -18,9 +18,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Beranda Editor"
 
-msgid "editor.reassign"
-msgstr "Tugaskan ulang"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Penyerahan Naskah dan Penerbitan"
 

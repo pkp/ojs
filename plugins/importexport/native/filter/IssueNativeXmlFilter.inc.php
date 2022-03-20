@@ -193,19 +193,19 @@ class IssueNativeXmlFilter extends NativeExportFilter
         $deployment = $this->getDeployment();
 
         if ($issue->getDatePublished()) {
-            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_published', strftime('%Y-%m-%d', strtotime($issue->getDatePublished()))));
+            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_published', date('Y-m-d', strtotime($issue->getDatePublished()))));
         }
 
         if ($issue->getDateNotified()) {
-            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_notified', strftime('%Y-%m-%d', strtotime($issue->getDateNotified()))));
+            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_notified', date('Y-m-d', strtotime($issue->getDateNotified()))));
         }
 
         if ($issue->getLastModified()) {
-            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_modified', strftime('%Y-%m-%d', strtotime($issue->getLastModified()))));
+            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_modified', date('Y-m-d', strtotime($issue->getLastModified()))));
         }
 
         if ($issue->getOpenAccessDate()) {
-            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', strftime('%Y-%m-%d', strtotime($issue->getOpenAccessDate()))));
+            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', date('Y-m-d', strtotime($issue->getOpenAccessDate()))));
         }
     }
 

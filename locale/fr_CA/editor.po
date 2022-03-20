@@ -19,9 +19,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Page d'accueil du,de la rédacteur-trice"
 
-msgid "editor.reassign"
-msgstr "Réassigner"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Soumissions et publication"
 

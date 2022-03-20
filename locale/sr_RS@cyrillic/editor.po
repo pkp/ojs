@@ -217,9 +217,6 @@ msgstr "Приступ"
 msgid "editor.issues.cover"
 msgstr "Насловница"
 
-msgid "editor.reassign"
-msgstr "Поново додели"
-
 msgid "editor.publicIdentificationExists"
 msgstr "Овај јавни идентификатор  '{$publicIdentifier}' већ постоји за други објект (издање, чланак, коректурна копија или допунска датотека). Одаберите јединствене идентификаторе вашег часописа."
 

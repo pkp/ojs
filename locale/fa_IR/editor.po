@@ -14,9 +14,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "صفحه دبیر"
 
-msgid "editor.reassign"
-msgstr "انتساب دوباره"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "مقالات ارسالی و چاپ شده"
 
