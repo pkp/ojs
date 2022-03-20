@@ -58,11 +58,11 @@ scheduled_tasks = Off
 time_zone = "UTC"
 
 ; Short and long date formats
-date_format_short = "%Y-%m-%d"
-date_format_long = "%B %e, %Y"
-datetime_format_short = "%Y-%m-%d %I:%M %p"
-datetime_format_long = "%B %e, %Y - %I:%M %p"
-time_format = "%I:%M %p"
+date_format_short = "Y-m-d"
+date_format_long = "F n, Y"
+datetime_format_short = "Y-m-d h:i A"
+datetime_format_long = "F n, Y - h:i A"
+time_format = "h:i A"
 
 ; Use URL parameters instead of CGI PATH_INFO. This is useful for broken server
 ; setups that don't support the PATH_INFO environment variable.

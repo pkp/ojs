@@ -472,8 +472,5 @@ msgstr "შეტანის რიგი"
 msgid "editor.submissionsAndPublishing"
 msgstr "მასალები და პუბლიკაცია"
 
-msgid "editor.reassign"
-msgstr "გადანაწილება"
-
 msgid "editor.home"
 msgstr "რედაქტორის მთავარი გვერდი"

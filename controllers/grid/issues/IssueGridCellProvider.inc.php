@@ -13,9 +13,11 @@
  * @brief Grid cell provider for the issue management grid
  */
 
+use APP\core\Application;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
+use PKP\core\PKPString;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 
@@ -30,7 +32,7 @@ class IssueGridCellProvider extends GridCellProvider
     public function __construct()
     {
         parent::__construct();
-        $this->dateFormatShort = \Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort();
+        $this->dateFormatShort = PKPString::convertStrftimeFormat(Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort());
     }
 
     /**

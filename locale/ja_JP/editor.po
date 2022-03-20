@@ -341,9 +341,6 @@ msgstr "作業待ち投稿物"
 msgid "editor.submissionsAndPublishing"
 msgstr "投稿物と出版"
 
-msgid "editor.reassign"
-msgstr "再任命"
-
 msgid "editor.navigation.futureIssues"
 msgstr "出版予定号"
 

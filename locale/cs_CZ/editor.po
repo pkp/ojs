@@ -516,9 +516,6 @@ msgstr "Jste si jisti, že chcete zrušit vydání tohoto vydaného čísla?"
 msgid "editor.article.archiveSubmission"
 msgstr "Odmítnout a archivovat příspěvek"
 
-msgid "editor.reassign"
-msgstr "Nové přidělení"
-
 msgid "editor.publicIdentificationExists"
 msgstr "Veřejný identifikátor '{$publicIdentifier}' již existuje pro jiný objekt (vydání, článek, sazebnice či doplňkový soubor). Zvolte si, prosím, unikátní edentifikátor v rámci celého časopisu."
 

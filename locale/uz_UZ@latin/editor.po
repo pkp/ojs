@@ -477,9 +477,6 @@ msgstr "Topshirilgan maqolalar navbati"
 msgid "editor.submissionsAndPublishing"
 msgstr "Yuborish va nashr etish"
 
-msgid "editor.reassign"
-msgstr "Qayta tayinlangan"
-
 msgid "editor.home"
 msgstr "Bosh sahifa tahrirchisi"
 

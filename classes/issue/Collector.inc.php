@@ -2,6 +2,7 @@
 
 namespace APP\issue;
 
+use APP\facades\Repo;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\core\interfaces\CollectorInterface;
@@ -50,8 +51,10 @@ class Collector implements CollectorInterface
 
     public ?array $doiStatuses = null;
 
-    /** @var bool Whether null/empty values should count when considering Doi::STATUS_UNREGISTERED */
-    public bool $strictDoiStatusFilter = false;
+    public ?bool $hasDois = null;
+
+    /** @var array Which DOI types should be considered when checking if a submission has DOIs set */
+    public array $enabledDoiTypes = [];
 
     /** @var string|null Returns Issue by URL path  */
     public ?string $urlPath = null;
@@ -229,10 +232,29 @@ class Collector implements CollectorInterface
         return $this;
     }
 
-    public function filterByDoiStatuses(array $doiStatuses, $strict = false): self
+    /**
+     * Limit results to issues with these statuses
+     *
+     * @param array|null $statuses One or more of DOI::STATUS_* constants
+     *
+     */
+    public function filterByDoiStatuses(?array $statuses): self
     {
-        $this->doiStatuses = $doiStatuses;
-        $this->strictDoiStatusFilter = $strict;
+        $this->doiStatuses = $statuses;
+        return $this;
+    }
+
+    /**
+     * Limit results to submissions that do/don't have any DOIs assign to their sub objects
+     *
+     * @param array|null $enabledDoiTypes TYPE_* constants to consider when checking submission has DOIs
+     *
+     * @return $this
+     */
+    public function filterByHasDois(?bool $hasDois, ?array $enabledDoiTypes = null): self
+    {
+        $this->hasDois = $hasDois;
+        $this->enabledDoiTypes = $enabledDoiTypes === null ? [Repo::doi()::TYPE_ISSUE] : $enabledDoiTypes;
         return $this;
     }
 
@@ -328,13 +350,24 @@ class Collector implements CollectorInterface
                     ->from('issues as i')
                     ->leftJoin('dois as d', 'd.doi_id', '=', 'i.doi_id')
                     ->whereIn('d.status', $this->doiStatuses);
+            });
+        });
 
-                $q->when(
-                    (in_array(Doi::STATUS_UNREGISTERED, $this->doiStatuses) && !$this->strictDoiStatusFilter),
-                    function (Builder $q) {
-                        $q->orWhereNull('d.status');
-                    }
-                );
+        // By whether issue has DOI assigned
+        $q->when($this->hasDois !== null, function (Builder $q) {
+            $q->whereIn('i.issue_id', function (Builder $q) {
+                $q->select('current_i.issue_id')
+                    ->from('issues', 'current_i')
+                    ->where(function (Builder $q) {
+                        $q->when(in_array(Repo::doi()::TYPE_ISSUE, $this->enabledDoiTypes), function (Builder $q) {
+                            $q->when($this->hasDois === true, function (Builder $q) {
+                                $q->whereNotNull('current_i.doi_id');
+                            });
+                            $q->when($this->hasDois === false, function (Builder $q) {
+                                $q->whereNull('current_i.doi_id');
+                            });
+                        });
+                    });
             });
         });
 

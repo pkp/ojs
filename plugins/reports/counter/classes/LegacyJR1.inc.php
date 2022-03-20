@@ -73,7 +73,7 @@ class LegacyJR1
         fputcsv($fp, [__('plugins.reports.counter.1a.title2', ['year' => $year])]);
         fputcsv($fp, []); // FIXME: Criteria should be here?
         fputcsv($fp, [__('plugins.reports.counter.1a.dateRun')]);
-        fputcsv($fp, [strftime('%Y-%m-%d')]);
+        fputcsv($fp, [date('Y-m-d')]);
 
         $cols = [
             '',
@@ -84,8 +84,7 @@ class LegacyJR1
         ];
         for ($i = 1; $i <= 12; $i++) {
             $time = strtotime($year . '-' . $i . '-01');
-            strftime('%b', $time);
-            $cols[] = strftime('%b-%Y', $time);
+            $cols[] = date('M-Y', $time);
         }
 
         $cols[] = __('plugins.reports.counter.1a.ytdTotal');

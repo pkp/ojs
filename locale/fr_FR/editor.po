@@ -587,9 +587,6 @@ msgstr "Tous les abonnés individuels ({$count} utilisateurs)"
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr "Tous les abonnés institutionnels ({$count} utilisateurs)"
 
-msgid "editor.reassign"
-msgstr "Réassigner"
-
 msgid "editor.publicIdentificationExists"
 msgstr "L'identifiant public '{$publicIdentifier}' existe déjà pour un autre objet (numéro, article, épreuves ou fichier complémentaire). Veuillez choisir des identifiants uniques au sein de votre revue."
 

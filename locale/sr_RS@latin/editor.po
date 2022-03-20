@@ -214,9 +214,6 @@ msgstr "Pristup"
 msgid "editor.issues.cover"
 msgstr "Naslovnica"
 
-msgid "editor.reassign"
-msgstr "Ponovo dodeli"
-
 msgid "editor.publicIdentificationExists"
 msgstr "Ovaj javni identifikator  '{$publicIdentifier}' već postoji za drugi objekt (izdanje, članak, korekturna kopija ili dopunska datoteka). Odaberite jedinstvene identifikatore vašeg časopisa."
 

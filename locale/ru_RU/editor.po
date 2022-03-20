@@ -19,9 +19,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "Главная страница редактора"
 
-msgid "editor.reassign"
-msgstr "Переназначить"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "Материалы и публикация"
 

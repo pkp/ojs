@@ -19,9 +19,6 @@ msgstr ""
 msgid "editor.home"
 msgstr "صفحة المحرر الرئيسية"
 
-msgid "editor.reassign"
-msgstr "إعادة تعيين"
-
 msgid "editor.submissionsAndPublishing"
 msgstr "الطلبات والنشر"
 

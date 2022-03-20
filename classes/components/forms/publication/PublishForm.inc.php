@@ -21,6 +21,7 @@ use APP\facades\Repo;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
 use PKP\context\Context;
+use PKP\core\PKPString;
 
 define('FORM_PUBLISH', 'publish');
 
@@ -72,11 +73,11 @@ class PublishForm extends FormComponent
             // be published immediately regardless of the issue assignment
             if ($publication->getData('datePublished') && $publication->getData('datePublished') <= \Core::getCurrentDate()) {
                 $timestamp = strtotime($publication->getData('datePublished'));
-                $dateFormatLong = $submissionContext->getLocalizedDateFormatLong();
+                $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
                 $msg = __(
                     'publication.publish.confirmation.datePublishedInPast',
                     [
-                        'datePublished' => strftime($dateFormatLong, $timestamp),
+                        'datePublished' => date($dateFormatLong, $timestamp),
                     ]
                 );
                 $submitLabel = __('publication.publish');

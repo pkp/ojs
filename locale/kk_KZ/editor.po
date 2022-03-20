@@ -70,9 +70,6 @@ msgstr "Материалдар кезегі"
 msgid "editor.submissionsAndPublishing"
 msgstr "Материалдар мен публикациялар"
 
-msgid "editor.reassign"
-msgstr "Қайта тағайындау"
-
 msgid "editor.home"
 msgstr "Редактордың басты беті"
 
