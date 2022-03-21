@@ -15,7 +15,7 @@
  * @brief A galley is a final presentation version of the full-text of an article.
  */
 
-namespace APP\article;
+namespace APP\articleGalley;
 
 use APP\core\Application;
 
@@ -61,7 +61,7 @@ class ArticleGalley extends Representation
     /**
      * Set label/title.
      *
-     * @param string $label
+     * @param $label string
      */
     public function setLabel($label)
     {
@@ -81,7 +81,7 @@ class ArticleGalley extends Representation
     /**
      * Set locale.
      *
-     * @param string $locale
+     * @param $locale string
      */
     public function setLocale($locale)
     {
@@ -106,7 +106,7 @@ class ArticleGalley extends Representation
      *
      * @deprecated 3.3
      *
-     * @param int $fileId
+     * @param $fileId int
      */
     public function setFileId($fileId)
     {
@@ -134,11 +134,9 @@ class ArticleGalley extends Representation
      */
     public function getFile()
     {
-        if (!isset($this->_submissionFile) && $this->getData('submissionFileId') != null) {
-            $this->_submissionFile = Repo::submissionFile()
-                ->get($this->getData('submissionFileId'));
+        if (!isset($this->_submissionFile)) {
+            $this->_submissionFile = Repo::submissionFile()->get($this->getData('submissionFileId'));
         }
-
         return $this->_submissionFile;
     }
 
@@ -158,7 +156,7 @@ class ArticleGalley extends Representation
     /**
      * Determine whether the galley is a PDF.
      *
-     * @return bool
+     * @return boolean
      */
     public function isPdfGalley()
     {
@@ -185,7 +183,7 @@ class ArticleGalley extends Representation
      * This override exists to provide a functional getName() in order to make
      * native XML export work correctly.  It is only used in that single instance.
      *
-     * @param string $locale unused, except to match the function prototype in Representation.
+     * @param $locale string unused, except to match the function prototype in Representation.
      *
      * @return array
      */
@@ -204,29 +202,5 @@ class ArticleGalley extends Representation
     public function getLocalizedName()
     {
         return $this->getLabel();
-    }
-
-    /**
-     * @copydoc \PKP\submission\Representation::setStoredPubId()
-     */
-    public function setStoredPubId($pubIdType, $pubId)
-    {
-        if ($pubIdType == 'doi') {
-            if ($doiObject = $this->getData('doiObject')) {
-                Repo::doi()->edit($doiObject, ['doi' => $pubId]);
-            } else {
-                $newDoiObject = Repo::doi()->newDataObject(
-                    [
-                        'doi' => $pubId,
-                        'contextId' => $this->getContextId()
-                    ]
-                );
-                $doiId = Repo::doi()->add($newDoiObject);
-
-                $this->setData('doiId', $doiId);
-            }
-        } else {
-            parent::setStoredPubId($pubIdType, $pubId);
-        }
     }
 }

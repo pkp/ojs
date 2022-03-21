@@ -34,9 +34,9 @@ class ArticleGalleyForm extends Form
     /**
      * Constructor.
      *
-     * @param Submission $submission
-     * @param Publication $publication
-     * @param ArticleGalley $articleGalley (optional)
+     * @param $submission Submission
+     * @param $publication Publication
+     * @param $articleGalley ArticleGalley (optional)
      */
     public function __construct($request, $submission, $publication, $articleGalley = null)
     {
@@ -80,6 +80,7 @@ class ArticleGalleyForm extends Form
                 'articleGalley' => $this->_articleGalley,
                 'articleGalleyFile' => $articleGalleyFile,
                 'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFile()->supportsDependentFiles($articleGalleyFile) : null,
+
             ]);
         }
         $context = $request->getContext();
@@ -157,27 +158,30 @@ class ArticleGalleyForm extends Form
     public function execute(...$functionArgs)
     {
         $articleGalley = $this->_articleGalley;
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
 
         if ($articleGalley) {
-            $articleGalley->setLabel($this->getData('label'));
-            $articleGalley->setLocale($this->getData('galleyLocale'));
-            $articleGalley->setData('urlPath', $this->getData('urlPath'));
-            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
             // Update galley in the db
-            $articleGalleyDao->updateObject($articleGalley);
+            $newData = [
+                'label' => $this->getData('label'),
+                'galleyLocale' => $this->getData('galleyLocale'),
+                'urlPath' => $this->getData('urlPath'),
+                'urlRemote' => $this->getData('urlRemote')
+            ];
+            Repo::articleGalley()->edit($articleGalley, $newData);
         } else {
             // Create a new galley
-            $articleGalley = $articleGalleyDao->newDataObject();
-            $articleGalley->setData('publicationId', $this->_publication->getId());
-            $articleGalley->setLabel($this->getData('label'));
-            $articleGalley->setLocale($this->getData('galleyLocale'));
-            $articleGalley->setData('urlPath', $this->getData('urlPath'));
-            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
+            $articleGalley = Repo::articleGalley()->newDataObject([
+                'publicationId' => $this->_publication->getId(),
+                'label' => $this->getData('label'),
+                'galleyLocale' => $this->getData('galleyLocale'),
+                'urlPath' => $this->getData('urlPath'),
+                'urlRemote' => $this->getData('urlRemote')
+            ]);
 
-            // Insert new galley into the db
-            $articleGalleyDao->insertObject($articleGalley);
+
+            $galleyId = Repo::articleGalley()->add($articleGalley);
+            $articleGalley = Repo::articleGalley()->get($galleyId);
             $this->_articleGalley = $articleGalley;
         }
 

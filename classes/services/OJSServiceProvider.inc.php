@@ -43,12 +43,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
         $pimple['navigationMenu'] = function () {
             return new NavigationMenuService();
         };
-
-        // Galley service
-        $pimple['galley'] = function () {
-            return new GalleyService();
-        };
-
         // Context service
         $pimple['context'] = function () {
             return new ContextService();
