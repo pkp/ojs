@@ -1,11 +1,12 @@
 # Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2022.
+# Felix Henn <shenn@ub.uni-koeln.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2022-02-22 13:09+0000\n"
-"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"PO-Revision-Date: 2022-03-21 16:54+0000\n"
+"Last-Translator: Felix Henn <shenn@ub.uni-koeln.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "de_DE/>\n"
 "Language: de_DE\n"
@@ -2050,7 +2051,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster verwendet wird."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} wurde zugewiesen."
+msgstr ""
+"DOI {$pubId} wurde zugewiesen. Um die DOI zu bearbeiten, rufen Sie die <a "
+"href=\"{$doiManagementLink}\">DOI Management Seite</a> auf."
 
 msgid "doi.editor.preview.objects"
 msgstr "Element"
