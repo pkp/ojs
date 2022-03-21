@@ -45,8 +45,6 @@ class ArticleGalleyForm extends Form
         $this->_publication = $publication;
         $this->_articleGalley = $articleGalley;
 
-        AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
-
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash_period', '/^[a-zA-Z0-9]+([\\.\\-_][a-zA-Z0-9]+)*$/'));
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
@@ -81,7 +79,8 @@ class ArticleGalleyForm extends Form
                 'representationId' => $this->_articleGalley->getId(),
                 'articleGalley' => $this->_articleGalley,
                 'articleGalleyFile' => $articleGalleyFile,
-                'supportsDependentFiles' => $articleGalleyFile ? Services::get('submissionFile')->supportsDependentFiles($articleGalleyFile) : null,
+                'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFile()->supportsDependentFiles($articleGalleyFile) : null,
+
             ]);
         }
         $context = $request->getContext();
@@ -169,7 +168,7 @@ class ArticleGalleyForm extends Form
                 'urlPath' => $this->getData('urlPath'),
                 'urlRemote' => $this->getData('urlRemote')
             ];
-            Repo::articleGalley($articleGalley, $newData);
+            Repo::articleGalley()->edit($articleGalley, $newData);
         } else {
             // Create a new galley
             $articleGalley = Repo::articleGalley()->newDataObject([

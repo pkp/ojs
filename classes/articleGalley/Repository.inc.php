@@ -14,7 +14,6 @@
 namespace APP\articleGalley;
 
 use APP\core\Request;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\publication\Publication;
 use APP\submission\Submission;
@@ -188,12 +187,15 @@ class Repository
         $this->dao->delete($articleGalley);
 
         // Delete related submission files
-        $submissionFilesIterator = Services::get('submissionFile')->getMany([
-            'assocTypes' => [ASSOC_TYPE_GALLEY],
-            'assocIds' => [$articleGalley->getId()],
-        ]);
+        $submissionFilesCollector = Repo::submissionFile()
+            ->getCollector()
+            ->filterByAssoc(ASSOC_TYPE_GALLEY)
+            ->filterByFileIds([$articleGalley->getId()]);
+        $submissionFilesIterator = Repo::submissionFile()
+            ->getMany($submissionFilesCollector);
+
         foreach ($submissionFilesIterator as $submissionFile) {
-            Services::get('submissionFile')->delete($submissionFile);
+            Repo::submissionFile()->delete($submissionFile);
         }
 
         HookRegistry::call('ArticleGalley::delete', [$articleGalley]);

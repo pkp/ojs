@@ -19,8 +19,8 @@ namespace APP\articleGalley;
 
 use APP\core\Application;
 
-use APP\core\Services;
-use APP\i18n\AppLocale;
+use APP\facades\Repo;
+use PKP\facades\Locale;
 use PKP\submission\Representation;
 
 class ArticleGalley extends Representation
@@ -135,7 +135,7 @@ class ArticleGalley extends Representation
     public function getFile()
     {
         if (!isset($this->_submissionFile)) {
-            $this->_submissionFile = Services::get('submissionFile')->get($this->getData('submissionFileId'));
+            $this->_submissionFile = Repo::submissionFile()->get($this->getData('submissionFileId'));
         }
         return $this->_submissionFile;
     }
@@ -171,9 +171,8 @@ class ArticleGalley extends Representation
     public function getGalleyLabel()
     {
         $label = $this->getLabel();
-        if ($this->getLocale() != AppLocale::getLocale()) {
-            $locales = AppLocale::getAllLocales();
-            $label .= ' (' . $locales[$this->getLocale()] . ')';
+        if ($this->getLocale() != Locale::getLocale()) {
+            $label .= ' (' . Locale::getMetadata($this->getLocale())->getDisplayName() . ')';
         }
         return $label;
     }
@@ -204,8 +203,4 @@ class ArticleGalley extends Representation
     {
         return $this->getLabel();
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\article\ArticleGalley', '\ArticleGalley');
 }

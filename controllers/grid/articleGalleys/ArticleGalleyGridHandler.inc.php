@@ -127,13 +127,6 @@ class ArticleGalleyGridHandler extends GridHandler
         parent::initialize($request, $args);
         $this->setTitle('submission.layout.galleys');
 
-        // Load pkp-lib translations
-        AppLocale::requireComponents(
-            LOCALE_COMPONENT_PKP_SUBMISSION,
-            LOCALE_COMPONENT_PKP_USER,
-            LOCALE_COMPONENT_PKP_EDITOR,
-            LOCALE_COMPONENT_APP_EDITOR
-        );
 
         import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
         $cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
@@ -230,19 +223,16 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * @copydoc GridHandler::loadData()
      *
-     * @param null|mixed $filter
+     * @param \PKP\controllers\grid\PKPRequest $request
+     * @param null $filter
      */
     public function loadData($request, $filter = null)
     {
-        $galleyIterator = Services::get('galley')->getMany([
-            'publicationIds' => [$this->getPublication()->getId()],
-        ]);
-        // ArticleGalleyGridRow::initialize expects the array
-        // key to match the galley id
-        $galleys = [];
-        foreach ($galleyIterator as $galley) {
-            $galleys[$galley->getId()] = $galley;
-        }
+        $galleys = Repo::articleGalley()->getMany(
+            Repo::articleGalley()
+                ->getCollector()
+                ->filterByPublicationIds([$this->getPublication()->getId()])
+        );
         return $galleys;
     }
 
