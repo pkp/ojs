@@ -110,7 +110,7 @@ if [ \( -n "$libModuleHashes" \) -a \( "$strLength" -ge 40 \) ]; then
                 then
                     echo "7 - Updating $submoduleLocalPath with code from $gitUser repository, $branch branch."
                     cd ${submoduleLocalPath}
-                    git remote add "$gitUser" git://github.com/"$gitUser"/"$submoduleUrlBasename"
+                    git remote add "$gitUser" https://github.com/"$gitUser"/"$submoduleUrlBasename"
                     git reset --hard HEAD
                     git pull --rebase "$gitUser" "$branch"
                     cd ${rootDir}
