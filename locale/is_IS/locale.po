@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-14 11:26+0000\n"
+"PO-Revision-Date: 2022-03-21 19:44+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "is_IS/>\n"
@@ -194,7 +194,7 @@ msgid "reviewer.article.reviewerGuidelines"
 msgstr "Leiðbeiningar fyrir ritrýna"
 
 msgid "reviewer.article.reviewSteps"
-msgstr "Ritrýni skref"
+msgstr "Ritrýniskref"
 
 msgid "reviewer.article.reviewSchedule"
 msgstr "Ritrýni verkröð"
@@ -1988,7 +1988,7 @@ msgid "about.editorialPolicies"
 msgstr "Ritstjórnarstefna"
 
 msgid "about.editorialTeam.biography"
-msgstr "Æfiágrip"
+msgstr "Ágrip (bio)"
 
 msgid "about.editorialTeam"
 msgstr "Ritstjórnarteymi"
