@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-15 10:09+0000\n"
+"PO-Revision-Date: 2022-03-21 19:44+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "is_IS/>\n"
@@ -303,9 +303,8 @@ msgstr "Ritstjórar þessa kafla"
 
 msgid "manager.section.noSectionEditors"
 msgstr ""
-"Samstilling skráninga mun skrá alla notendur í tilteknu hlutverki í völdu "
-"tímariti í sama hlutverk í þessu tímariti.   Þessi aðgerð aðgerð mögulegt að "
-"taka ákveðin hóp af notendum (t.d. ritrýna) og samstilla á milli tímarita."
+"Kaflaritstjórn hefur ekki verið úthlutað. Úthlutaðu hlutverkinu til a.m.k. "
+"eins notanda í Umsjón > Stillingar > Notendur &amp;."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Krefst ekki útdráttar"
