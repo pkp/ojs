@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-02 01:43+0000\n"
+"PO-Revision-Date: 2022-03-21 19:44+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "is_IS/>\n"
@@ -347,14 +347,14 @@ msgstr "Skref 1. Hefja innsendingu"
 
 msgid "author.submit.startHereLink"
 msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">Click here</a> fara á skerf eitt í "
-"fimmskrefa ferlinu fyrir insendingu."
+"<a href=\"{$submitUrl}\" class=\"action\">Click here</a> fara á skref eitt "
+"af fimm í innsendingarferli."
 
 msgid "author.submit.startHereTitle"
 msgstr "Hefja nýja innsendingu"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Fimm skref til að senda inn"
+msgstr "Fimm skref innsendingar"
 
 msgid "author.submit.submitArticle"
 msgstr "Senda inn grein"
