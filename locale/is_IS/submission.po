@@ -2,7 +2,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-22 15:04+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/is_IS/>\n"
@@ -15,13 +15,13 @@ msgstr ""
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"Setjari hleður upp hér skrám sem búið er að undirbúa fyrir birtingu. Notaðu  "
+"Setjari hleður hér upp skrám sem búið er að undirbúa fyrir birtingu. Notaðu  "
 "<em>'Úthluta eftirlitsaðila</em> til að tilgreina höfund og aðra til að "
 "prófarkalesa lokaprófarkir í þessu galley, með leiðréttum skrám sem búið er "
 "að hlaða upp til samþykkis fyrir birtingu."
 
 msgid "publication.event.scheduled"
-msgstr "Innsendingin hefur verið sett í birtingaráæltun."
+msgstr "Innsendingin hefur verið sett á birtingaráætlun."
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inactive)"
@@ -34,20 +34,20 @@ msgstr "Það þarf að vera a.m.k. einn höfundur."
 
 msgid "submission.metadataDescription"
 msgstr ""
-"þessar upplýsingar byggjast á Dublin Core lýsigögnum, sem er alþjóðlegur "
+"Þessar upplýsingar byggjast á Dublin Core lýsigögnum, sem er alþjóðlegur "
 "staðll notaður til að lýsa innihaldi tímarits."
 
 msgid "publication.unpublish"
 msgstr "Taka úr birtingu"
 
 msgid "submission.queries.production"
-msgstr "Framleiðslu umræður"
+msgstr "Framleiðsluumræður"
 
 msgid "publication.version.details"
 msgstr "Nánar um útgáfuna fyrir útgáfu {$version}"
 
 msgid "publication.unschedule.confirm"
-msgstr "Ertu viss um að þú viljir ekki sejta þetta í útgáfuáætlun?"
+msgstr "Ertu viss um að þú viljir ekki setja þetta á útgáfuáætlun?"
 
 msgid "publication.unpublish.confirm"
 msgstr "Ert þú viss um að þú viljir taka þetta úr birtingu?"
@@ -66,11 +66,11 @@ msgstr ""
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"Innsendingin þarf að vera  í yfirferð eða á framleiðslu þrepi áður en hægt "
-"erð að birta hana."
+"Innsendingin þarf að vera  í yfirferð eða á framleiðsluþrepi áður en hægt er "
+"að birta hana."
 
 msgid "publication.required.declined"
-msgstr "Ekki er hægt að gefa út handrit sem búið er að hafna."
+msgstr "Ekki er hægt að gefa út handrit sem hefur verið hafnað."
 
 msgid "publication.publish.requirements"
 msgstr "Eftirfarandi kröfur þarf að uppfylla áður en hægt er að birta þetta."
@@ -82,7 +82,7 @@ msgid "publication.invalidSubmission"
 msgstr "Það fannst ekki innsending fyrir þessa birtingu."
 
 msgid "publication.event.versionScheduled"
-msgstr "Ný útgáfa hefur verið sett í birtingaráæltun."
+msgstr "Ný útgáfa hefur verið sett á birtingaráætlun."
 
 msgid "publication.event.versionUnpublished"
 msgstr "Útgáfa var tekin úr birtingu."
@@ -103,7 +103,7 @@ msgid "publication.datePublished"
 msgstr "Útgáfudagur"
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr "Ártal höfundaréttar er sett sjálfkrafa bigt á útgáfudegi."
+msgstr "Ártal höfundaréttar er sett sjálfkrafa og byggist á útgáfudegi."
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
@@ -128,10 +128,10 @@ msgid "publication.selectIssue"
 msgstr "Veldu tölublað til að setja í birtingaráætlun"
 
 msgid "publication.unscheduledIn"
-msgstr "Þetta er ekki búið að setja á birtingaráætlun í tölublaði."
+msgstr "Þetta hefur ekki verið sett á birtingaráætlun í tölublaði."
 
 msgid "publication.scheduledIn"
-msgstr "Á birtingar áætlun fyrir  <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgstr "Á birtingaráætlun fyrir  <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.publishedIn"
 msgstr "Birt í <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -142,17 +142,17 @@ msgstr "Útgáfan verður að vera tengd tölublaði áður en hægt er að birt
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt strax "
-"vegna eþss að útgáfudagsetningin er {$datePublished}. Ertu viss um að þú "
+"vegna þess að útgáfudagsetningin er {$datePublished}. Ertu viss um að þú "
 "viljir birta þetta?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"Búið er að uppfylla allar kröfur varðandi útgáfuna. þetta verður birt strax "
+"Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt strax "
 "í tölublaði {$issue}. Ertu  viss um að þú viljir birta þetta?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður virt þegar "
+"Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt þegar "
 "tölublað: {$issue} er birt. Ertu viss um að þú viljir setja þetta í "
 "birtingaráætlun?"
 
@@ -213,12 +213,12 @@ msgid "submission.citationFormat.notFound"
 msgstr "Ekki var hægt að sækja umbeðið snið á tilvitnunum."
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Vinsamlega veldur hlutverk fyrir þenan framlagsaðila."
+msgstr "Vinsamlega veldur hlutverk fyrir þennan framlagsaðila."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
-"Útdrátturinn er of langur. Vinsamlega styttu hann niður fyrir orða fljöldann "
-"sem er leyfður fyrir þennan hluta."
+"Útdrátturinn er of langur. Vinsamlega styttu hann niður fyrir tilgreindan "
+"leyfilegan orðafjölda."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Vinsamlega settu inn útdrátt fyrir greinina."
@@ -262,27 +262,27 @@ msgid "workflow.review.externalReview"
 msgstr "Ritrýni"
 
 msgid "submission.confirmSubmit"
-msgstr "Ert þú viss um að þú viljir senda þessa grein til tímaritsins?"
+msgstr "Ertu viss um að þú viljir senda þessa grein til tímaritsins?"
 
 msgid "submission.pageProofs"
 msgstr "Prófarkalestur"
 
 msgid "submission.submit.upload.description"
 msgstr ""
-"Hladdu upp skrám sem tengjast þessari innsendingu, þ.á.m. geininni, "
-"margmiðlunarefni, gagna settum, listaverkum o.s.frv."
+"Hladdu upp skrám sem tengjast þessari innsendingu, þ.á.m. greininni, "
+"margmiðlunarefni, gagnasettum, myndum o.s.frv."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Titill og útdráttur"
 
 msgid "grid.action.pageProofApproved"
-msgstr "Búið er að samþykkja þessa próförk fyrir galley-ið."
+msgstr "Búið er að samþykkja þessa próförk fyrir galleyið."
 
 msgid "grid.action.approveProof"
 msgstr "Samþykkja að taka þessa próförk með í galley."
 
 msgid "submission.galleyFiles"
-msgstr "Galley skrár - lokaprófarkir"
+msgstr "Galleyskrár - lokaprófarkir"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Gera þetta galley aðgengilegt"
@@ -314,7 +314,7 @@ msgstr "Galley birtist fremst í tölublaði"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"Tímaritið hefur fengið tilkynningu um innsendinguna frá þér og þú færð "
+"Tímaritið hefur fengið tilkynningu um innsendingu frá þér og þú færð "
 "staðfestingu í tölvupósti.  Þegar ritstjóri hefur farið yfir innsendinguna "
 "verður haft samband við þig."
 
@@ -322,7 +322,7 @@ msgid "submission.issueEntry"
 msgstr "Lýsigögn"
 
 msgid "submission.submit.noContext"
-msgstr "Tímarit innsendingarinnar fannst ekki."
+msgstr "Tímarit innsendingar fannst ekki."
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Útdrátturinn þarf að vera {$wordCount} orð eða minna."
@@ -338,9 +338,9 @@ msgstr "Hefja nýja innsendingu til"
 
 msgid "submission.title.tip"
 msgstr ""
-"Tegund innsendingar eru venjulega eitt af eftirfarandi: \"mynd\", \"texti\", "
-"eða önnur margmiðlunar tegund þar á meðal \"hugbúnaður\" eða \"gangvirkt\". "
-"Vinsamlega veldu það sem passar best við insendinguna þína.  Þú getur fundið "
+"Tegund innsendingar er yfirleitt eitt af eftirfarandi: \"mynd\", \"texti\", "
+"eða önnur margmiðlunartegund, þar á meðal \"hugbúnaður\" eða \"gangvirkt\". "
+"Vinsamlega veldu það sem passar best við þína innsendingu.  Þú getur fundið "
 "dæmi á <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/"
 "12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/"
 "12/usageguide/generic.shtml#type</a>"
@@ -352,7 +352,7 @@ msgid "submission.upload.selectComponent"
 msgstr "Veldu íhlut greinar"
 
 msgid "submission.submit.userGroupDescription"
-msgstr "Veldu í hlutverki hvers þú ert að senda inn þessa grein."
+msgstr "Veldu í hvaða hlutverki þú ætlar að vera sem innsendandi greinar."
 
 msgid "submission.submit.userGroup"
 msgstr "Senda inn í hlutverki mínu sem...."
