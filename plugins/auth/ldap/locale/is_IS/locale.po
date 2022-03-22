@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-02 01:43+0000\n"
+"PO-Revision-Date: 2022-03-22 15:04+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "is_IS/>\n"
@@ -36,7 +36,7 @@ msgstr ""
 "SSL)"
 
 msgid "plugins.auth.ldap.settings.hostname"
-msgstr "Server hostname"
+msgstr "Hýsingarheiti vefþjóns"
 
 msgid "plugins.auth.ldap.settings"
 msgstr "LDAP stillingar"
@@ -44,7 +44,7 @@ msgstr "LDAP stillingar"
 msgid "plugins.auth.ldap.description"
 msgstr ""
 "Þessi viðbót leyfir staðfestingu og samhæfingu á notendareikningum upp á "
-"móti ytri LDAP gagna uppruna."
+"móti ytri LDAP gagnauppruna."
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
