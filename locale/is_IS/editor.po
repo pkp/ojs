@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-22 15:04+0000\n"
+"PO-Revision-Date: 2022-03-22 15:09+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "is_IS/>\n"
@@ -170,25 +170,25 @@ msgid "editor.issues.galleyPublicIdentificationExists"
 msgstr "Auðkenni á tölublaðs galley er til fyrir."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Tungumál útgáfu galley er áskilið."
+msgstr "Tungumál útgáfugalley er áskilið."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Merkimiði/heiti á útgáfu galley er áskilið."
+msgstr "Merkimiði/heiti á útgáfugalley er áskilið."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Engin tölublaða galley hafa verið  gefin út."
+msgstr "Engar lokaprófarkir(galleys) tölublaðs hafa verið  gefin út."
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Gefa út galley með öllu innihaldi tölublaðs."
+msgstr "Gefa út galley (lokapróförk) með öllu innihaldi tölublaðs."
 
 msgid "editor.issues.viewingGalley"
-msgstr "Skoða tölublaðs Galley"
+msgstr "Skoða tölublaðsgalley"
 
 msgid "editor.issues.galley"
-msgstr "Tölublaðs Galley - Lokaprófarkir"
+msgstr "Tölublaðsgalley - Lokaprófarkir"
 
 msgid "editor.issues.galleys"
-msgstr "Tölublaða galley - Lökaprófarkir"
+msgstr "Tölublaðagalley - Lokaprófarkir"
 
 msgid "editor.issues.pages"
 msgstr "Síður"
@@ -200,10 +200,10 @@ msgid "editor.issues.noLiveIssues"
 msgstr "Engin birt tölublöð"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "Get ekki vistað kenni greinar:"
+msgstr "Ekki er hægt að vista kenni greinar:"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Ertu viss um að þú viljir setja þetta tölublað sem það nýjasta?"
+msgstr "Ertu viss um að þú viljir stilla þetta tölublað sem það nýjasta?"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Ertu viss um að þú viljir taka þetta tölublað úr birtingu?"
@@ -250,7 +250,7 @@ msgstr ""
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
-"Allar greinar verða settar aftur í ritstjóra röðina og öllum tengdum skrám "
+"Allar greinar verða settar aftur í ritstjórnaröð og öllum tengdum skrám "
 "veður eytt varanlega.  Ertu viss um að þú viljir fjarlægja þetta tölublað?"
 
 msgid "editor.issues.cover"
@@ -283,27 +283,28 @@ msgstr "Fjarlægja stílblað?"
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
 "Ógilt skrásnið á stílblaðinu. Gakktu úr skugga um að innsend skrá sé gild "
-"CSS. (Athugaðu að stílblaði með komment í upphafi gæti verið hafnað.)"
+"CSS. (Athugaðu að stílblaði sem hefst með athugasemd (komment) gæti verið "
+"hafnað.)"
 
 msgid "editor.issues.styleFile"
 msgstr "Stílblað"
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ógilt skrásnið á forsíðumyndinni. Leyfð snið eru .gif, .jpg, or .png."
+msgstr "Ógilt skrásnið á forsíðumynd. Leyfð snið eru .gif, .jpg, eða .png."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
 "Forsíðumyndin sem þú vilt eyða fannst ekki.  Mögulega er búið að eyða henni. "
-"Prófaðu að fríska skjámyndina."
+"Prófaðu að endurhlaða skjámyndina."
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
 "Forsíðumyndin sem þú vilt eyða passar ekki við forsíðumyndina fyrir þetta "
-"tölublað. Vinsamlega frískaðu skjámyndina og reyndu aftur."
+"tölublað. Vinsamlega endurhladdu skjámyndina og reyndu aftur."
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"Forsíðumyndi sem þú  vilt eyða, er á tölublaði annars tímarits. Vinsamlega "
+"Forsíðumyndi sem þú vilt eyða, er á tölublaði annars tímarits. Vinsamlega "
 "gakktu úr skugga um að þú sért að vinna með rétt tímarit og rétt kenni "
 "tölublaðs, og reyndu aftur."
 
