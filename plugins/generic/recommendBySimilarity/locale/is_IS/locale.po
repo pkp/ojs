@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 14:07+0000\n"
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendBySimilarity/is_IS/>\n"
@@ -13,10 +13,10 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.generic.recommendBySimilarity.advancedSearch"
-msgstr "Hefja ýtarleit að svipuðu"
+msgstr "Hefja ítarlega líkindaleit"
 
 msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
-msgstr "´Þú gætir líka nýtt {$advancedSearchLink} fyrir þessa grein."
+msgstr "Þú gætir nýtt þér {$advancedSearchLink} fyrir þessa grein."
 
 msgid "plugins.generic.recommendBySimilarity.heading"
 msgstr "Svipaðar greinar"
@@ -25,6 +25,4 @@ msgid "plugins.generic.recommendBySimilarity.displayName"
 msgstr "Mæla með svipuðum greinum"
 
 msgid "plugins.generic.recommendBySimilarity.description"
-msgstr ""
-"Þessi viðbót bætir við lista af svipuðum greinum á síðuna með útdrætti "
-"greinar."
+msgstr "Þessi viðbót bætir við lista af svipuðum greinum, á ágripssíðu greinar."
