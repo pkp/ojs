@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/is_IS/>\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 msgid "plugins.reports.counter.description"
 msgstr ""
-"COUNTER (TELJARA) viðbótin gerir kleyft að taka út skýrslur um virkni í "
+"COUNTER (TELJARA) viðbótin gerir kleift að taka út skýrslur um virkni í "
 "tímaritinu, með því að nota <a href=\"http://www.projectcounter.org\">"
-"COUNTER standard</a>.  Þessar skýrslur einar og sér  láta tímaritið ekki "
-"uppfyllar kröfur Conter (\"COUNTER compliant). Tila ð uppfylla kröfur "
-"COUNTER skoðið kröfur á vefsíðu COUNTER (Project COUNTER website)."
+"COUNTER standard</a>.  Þetta þýðir þó ekki að tímaritið uppfylli þar með "
+"kröfur Conter (\"COUNTER compliant). Nánari upplýsingar er að finna á "
+"vefsíðu COUNTER (Project COUNTER website)."
 
 msgid "plugins.reports.counter"
 msgstr "TELJARI skýrslur"
@@ -36,13 +36,13 @@ msgid "plugins.reports.counter.error.badRequest"
 msgstr "Skýrslubeiðnin er ógild."
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr "Engar færslur fundust fyrir þessa skýrslu"
+msgstr "Engar færslur fundust fyrir þessa skýrslu."
 
 msgid "plugins.reports.counter.error.noXML"
-msgstr "Ekki var hægta bretya niðurstöðunum í XML."
+msgstr "Ekki var hægt að birta niðurstöður á XML formi."
 
 msgid "plugins.reports.counter.1a.name"
-msgstr "Teljari skýrsla JR1 (R3)"
+msgstr "TELJARI skýrsla JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.xml"
 msgstr "XML útgáfa"
@@ -62,7 +62,7 @@ msgstr "Tímaritsskýrsla 1 (R3)"
 
 msgid "plugins.reports.counter.1a.title2"
 msgstr ""
-"Fjöldi beiðna um heildar texta greina eftir mánuði og  tímariti (Ár {$year})"
+"Fjöldi beiðna um heildartexta greina eftir mánuði og  tímariti (Ár {$year})"
 
 msgid "plugins.reports.counter.1a.dateRun"
 msgstr "Keyrsludagsetning:"
@@ -77,16 +77,16 @@ msgid "plugins.reports.counter.1a.printIssn"
 msgstr "Prent ISSN"
 
 msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Net ISSN"
+msgstr "eISSN"
 
 msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Dags.dato samtals"
+msgstr "Samtals í ár til þessa"
 
 msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "Dags.dato HTML"
+msgstr "HTML árs til þessa"
 
 msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "Dags.dato PDF"
+msgstr "PDF árs til þessa"
 
 msgid "plugins.reports.counter.1a.totalForAllJournals"
 msgstr "Samtala fyrir öll tímarit"
