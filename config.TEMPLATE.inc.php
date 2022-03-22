@@ -59,9 +59,9 @@ time_zone = "UTC"
 
 ; Short and long date formats
 date_format_short = "Y-m-d"
-date_format_long = "F n, Y"
+date_format_long = "F j, Y"
 datetime_format_short = "Y-m-d h:i A"
-datetime_format_long = "F n, Y - h:i A"
+datetime_format_long = "F j, Y - h:i A"
 time_format = "h:i A"
 
 ; Use URL parameters instead of CGI PATH_INFO. This is useful for broken server
