@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-22 15:04+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "is_IS/>\n"
@@ -304,8 +304,8 @@ msgstr ""
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
 "Forsíðumyndi sem þú  vilt eyða, er á tölublaði annars tímarits. Vinsamlega "
-"gakktu úr skugga um að þú sért að vinna með rétt tímarit, rétt  kenni "
-"tölublaðs og reyndu aftur."
+"gakktu úr skugga um að þú sért að vinna með rétt tímarit og rétt kenni "
+"tölublaðs, og reyndu aftur."
 
 msgid "editor.issues.removeCoverPage"
 msgstr "Fjarlægja forsíðumynd?"
@@ -332,7 +332,7 @@ msgid "editor.issues.accessDate"
 msgstr "Opinn aðgangur dagsetning"
 
 msgid "editor.issues.accessStatus"
-msgstr "Aðgangs staða"
+msgstr "Aðgangsstaða"
 
 msgid "editor.issues.description"
 msgstr "Lýsing"
@@ -370,7 +370,7 @@ msgid "editor.issues.published"
 msgstr "Útgefið"
 
 msgid "editor.issues.confirmDelete"
-msgstr "Ertu viss um að þú viljir eyða varanlega þessu tölublaði?"
+msgstr "Ertu viss um að þú viljir eyða þessu tölublaði varanlega?"
 
 msgid "editor.issues.noArticles"
 msgstr "Engin atriði eru á áætlun fyrir þetta tölublað."
@@ -410,10 +410,10 @@ msgid "editor.notifyUsers.inProgress"
 msgstr "Tilkynning til notenda í gangi..."
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Allir stofnana áskrifendur ({$count} notendur)"
+msgstr "Allir stofnanaáskrifendur ({$count} notendur)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Allir einstaklings áskrifendur ({$count} notendur)"
+msgstr "Allir einstaklingsáskrifendur ({$count} notendur)"
 
 msgid "editor.notifyUsers.allAuthors"
 msgstr "Allir birtir höfundar ({$count} notendur)"
@@ -426,7 +426,7 @@ msgstr "Tilkynning til notenda"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Áður en handrit er sent í yfirferðar, notaðu tengilinn \"Tilkynning til "
+"Áður en handrit er sent til yfirferðar, notaðu tengilinn \"Tilkynning til "
 "höfundar\" til að upplýsa höfund um ákvörðunina, og veldu þá útgáfu sem á að "
 "senda."
 
@@ -441,7 +441,7 @@ msgstr "Ert þú viss um að þú viljir skrá þessa ákvörðun?"
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Á að vista breytingar á geymdri innsendingu?  Innsendingar sem eru merktar "
-"til að eyða er eytt varanlega úr kerfinu."
+"til að eyða verður eytt varanlega úr kerfinu."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Engar innsendingar í safninu."
@@ -461,7 +461,7 @@ msgid "editor.allSections"
 msgstr "Allir kaflar"
 
 msgid "editor.publishedIssues"
-msgstr "útgefin tölublöð"
+msgstr "Útgefin tölublöð"
 
 msgid "editor.publishing"
 msgstr "Útgáfa"
@@ -470,7 +470,7 @@ msgid "editor.submissionArchive"
 msgstr "Safn innsendinga"
 
 msgid "editor.submissionQueue"
-msgstr "Innsendinga röð"
+msgstr "Innsendingaröð"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Innsendingar og útgáfa"
