@@ -1,11 +1,12 @@
 # Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2022.
+# Felix Henn <shenn@ub.uni-koeln.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2022-02-22 13:09+0000\n"
-"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"PO-Revision-Date: 2022-03-22 11:47+0000\n"
+"Last-Translator: Felix Henn <shenn@ub.uni-koeln.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/locale/de_DE/"
 ">\n"
 "Language: de_DE\n"
@@ -181,7 +182,7 @@ msgid "article.discipline"
 msgstr "Akademisches Fachgebiet und Untergebiete"
 
 msgid "article.subject"
-msgstr "Schlagworte"
+msgstr "Schlagwörter"
 
 msgid "article.coverage"
 msgstr "Bereich"
