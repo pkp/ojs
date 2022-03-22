@@ -30,8 +30,8 @@ msgstr ""
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Lokadrög á þessum lista hafa verið lagfærð af textatækni og sett  í "
-"yfirfarnar útgáfur, sem hlaði hefur verið upp undir <span class=\""
+"Lokadrög á þessum lista hafa verið lagfærð af textatækni og sett í "
+"yfirfarnar útgáfur sem hlaðið hefur verið upp undir <span class=\""
 "pkp_help_title\"> Í yfirferð</span>."
 
 msgid "editor.submission.selectGalleyFiles"
