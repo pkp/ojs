@@ -185,7 +185,7 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         $galley = Repo::articleGalley()->get((int) $rowId);
         $galley->setData('seq', $newSequence);
-        Repo::articleGalley()->dao->update($galley);
+        Repo::articleGalley()->edit($galley);
     }
 
     //

@@ -46,7 +46,7 @@ class Repository extends BaseRepository
 
         if ($galley) {
             $galley->setData('submissionFileId', $submissionFile->getId());
-            Repo::articleGalley()->dao->update($galley);
+            Repo::articleGalley()->edit($galley);
         }
 
         return $submissionFileId;

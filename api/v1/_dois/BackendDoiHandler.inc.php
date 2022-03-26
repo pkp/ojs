@@ -56,10 +56,7 @@ class BackendDoiHandler extends PKPBackendDoiHandler
         $request = $this->getRequest();
         $context = $request->getContext();
 
-        /** @var \APP\services\GalleyService $galleyService */
-        $galleyService = Services::get('galley');
-
-        $galley = $galleyService->get($args['galleyId']);
+        $galley = Repo::articleGalley()->get((int)$args['galleyId']);
         if (!$galley) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
