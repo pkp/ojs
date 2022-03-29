@@ -184,8 +184,7 @@ class ArticleGalleyGridHandler extends GridHandler
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
         $galley = Repo::articleGalley()->get((int) $rowId);
-        $galley->setData('seq', $newSequence);
-        Repo::articleGalley()->edit($galley);
+        Repo::articleGalley()->edit($galley, ['seq' => $newSequence]);
     }
 
     //

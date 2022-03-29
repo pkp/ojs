@@ -45,8 +45,7 @@ class Repository extends BaseRepository
         $submissionFileId = parent::add($submissionFile);
 
         if ($galley) {
-            $galley->setData('submissionFileId', $submissionFile->getId());
-            Repo::articleGalley()->edit($galley);
+            Repo::articleGalley()->edit($galley, ['submissionFileId' => $submissionFile->getId()]);
         }
 
         return $submissionFileId;
@@ -68,7 +67,7 @@ class Repository extends BaseRepository
             $galley = Repo::articleGalley()->get((int)$submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
-                Repo::articleGalley()->edit($galley);
+                Repo::articleGalley()->edit($galley, []);
             }
 
             event(new SubmissionFileDeleted($submissionFile));

@@ -17,7 +17,6 @@
 use APP\facades\Repo;
 use PKP\core\APIResponse;
 use PKP\security\Role;
-
 use Slim\Http\Request as SlimRequest;
 
 import('lib.pkp.api.v1._dois.PKPBackendDoiHandler');
@@ -72,10 +71,15 @@ class BackendDoiHandler extends PKPBackendDoiHandler
             return $response->withStatus(404)->withJsonError('api.dois.404.doiNotFound');
         }
 
-        $galley = $galleyService->edit($galley, ['doiId' => $doi->getId()], $request);
-        $galleyProps = $galleyService->getFullProperties($galley, [
-            'request' => $request
-        ]);
+        $galley = Repo::articleGalley()->edit($galley, ['doiId' => $doi->getId()]);
+
+        $publicationId = $galley->getData('publicationId');
+        $publication = Repo::publication()->get((int)$publicationId);
+        $submissionId = $publication->getData('submissionId');
+
+        $submission = Repo::submission()->get((int)$submissionId);
+        $galleyProps = Repo::articleGalley()->getSchemaMap($submission, $publication)->map($galley);
+
         return $response->withJson($galleyProps, 200);
     }
 

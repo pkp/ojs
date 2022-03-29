@@ -117,8 +117,7 @@ class Repository extends \PKP\submission\Repository
                 if (empty($galley->getData('doiId'))) {
                     $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
                     if ($doiId !== null) {
-                        $galley->setData('doiId', $doiId);
-                        Repo::articleGalley()->edit($galley);
+                        Repo::articleGalley()->edit($galley, ['doiId' => $doiId]);
                     }
                 }
             }
