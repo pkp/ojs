@@ -17,7 +17,6 @@
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
-
 use PKP\form\Form;
 
 class ArticleGalleyForm extends Form
@@ -105,12 +104,17 @@ class ArticleGalleyForm extends Form
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
-                $articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
-                if ($articleGalley &&
-                    (!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
-                ) {
-                    $this->addError('urlPath', __('publication.urlPath.duplicate'));
-                    $this->addErrorField('urlPath');
+                $galleys = Repo::articleGalley()->getMany(
+                    Repo::articleGalley()
+                        ->getCollector()
+                        ->filterByPublicationIds(['publicationIds' => $this->_publication->getId()])
+                );
+                foreach ($galleys as $galley) {
+                    $isDuplicateUrl = $this->_articleGalley->getId() !== $galley->getId() && $this->getData('urlPath') === $this->_articleGalley->getData('urlPath');
+                    if ((!$this->_articleGalley || $isDuplicateUrl)) {
+                        $this->addError('urlPath', __('publication.urlPath.duplicate'));
+                        $this->addErrorField('urlPath');
+                    }
                 }
             }
         }

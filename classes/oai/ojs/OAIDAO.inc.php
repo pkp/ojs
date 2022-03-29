@@ -17,6 +17,7 @@
 
 namespace APP\oai\ojs;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
@@ -46,7 +47,7 @@ class OAIDAO extends PKPOAIDAO
         parent::__construct();
         $this->journalDao = DAORegistry::getDAO('JournalDAO');
         $this->sectionDao = DAORegistry::getDAO('SectionDAO');
-        $this->articleGalleyDao = Repo::articleGalley()->dao;
+        $this->articleGalleyDao = Application::getRepresentationDao();
 
         $this->journalCache = [];
         $this->sectionCache = [];
