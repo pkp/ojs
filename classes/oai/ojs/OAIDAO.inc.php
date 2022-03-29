@@ -46,7 +46,7 @@ class OAIDAO extends PKPOAIDAO
         parent::__construct();
         $this->journalDao = DAORegistry::getDAO('JournalDAO');
         $this->sectionDao = DAORegistry::getDAO('SectionDAO');
-        $this->articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+        $this->articleGalleyDao = Repo::articleGalley()->dao;
 
         $this->journalCache = [];
         $this->sectionCache = [];
@@ -216,7 +216,11 @@ class OAIDAO extends PKPOAIDAO
         if ($isRecord) {
             $submission = Repo::submission()->get($articleId);
             $issue = $this->getIssue($row['issue_id']);
-            $galleys = $this->articleGalleyDao->getByPublicationId($submission->getCurrentPublication()->getId())->toArray();
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds([$submission->getCurrentPublication()->getId()])
+            );
 
             $record->setData('article', $submission);
             $record->setData('journal', $journal);
