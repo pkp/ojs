@@ -277,10 +277,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och Granskning utan inloggning är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Förfrågan om granskning av artikel"
 
@@ -366,9 +362,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren accepterar förfrågan om granskning och att hen kommer att färdigställa denna till angiven deadline."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tackar nej till granskningsuppdrag"
 
@@ -379,9 +372,6 @@ msgstr ""
 "Tyvärr har jag inte möjlighet i nuläget att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig och hör gärna av er en annan gång.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren tackar nej till granskningsuppdraget."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -401,10 +391,6 @@ msgstr ""
 "Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Påminnelse om granskning av bidrag"
@@ -442,10 +428,6 @@ msgstr ""
 "Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och när Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatisk påminnelse om granskning av bidrag"

@@ -258,12 +258,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"这封电子邮件是由区段编辑寄发给审查人一份邀请函，询问审查人接受或婉谢一份稿件的审查工作。邮件中含有关于稿件标题和摘要的信息，一个审查工作到期日，以及如何访"
-"问稿件的说明信息。在「期刊设定」之步骤2中选择「标准审查流程」选项时，才会用到这份消息。"
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "审稿请求"
 
@@ -354,9 +348,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "这封电子邮件是由一位审查人寄给区段编辑，回复一份审查邀请，并通知区段编辑说已经接受审查邀请而且会在特定的日期之前完成工作。"
-
 msgid "emails.reviewDecline.subject"
 msgstr "无法进行审查工作"
 
@@ -367,9 +358,6 @@ msgstr ""
 "我恐怕在这个时候无法为《{$contextName}》进行稿件〈{$submissionTitle}〉的审查工作。谢谢您考虑我担任审查人，有机会我仍乐意接受审查工作。<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "这封电子邮件是由一位审查人寄给区段编辑以回复一份审查邀请，并通知区段编辑要婉谢审查邀请。"
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -390,10 +378,6 @@ msgstr ""
 "请确认您能够完成这个对本期刊作品而言非常重要的审稿任务。我们期盼得到您的回复。<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "这封电子邮件是由区段编辑发出，提醒一位审查人他们的审查工作已经到期。"
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "稿件审查提醒函"
@@ -433,10 +417,6 @@ msgstr ""
 "请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "这封电子邮件在一位审查人的工作期限日已经超过的时候，会自动发出给他（见「期刊设定」之步骤2，「审查选项」），而审查访问一点即入的功能已经停用。必须启用并且设定排程任务（见网站设定）。"
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "自动发出的稿件审查提醒函"

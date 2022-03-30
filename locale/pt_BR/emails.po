@@ -348,15 +348,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Este e-mail é automaticamente enviando quando o prazo para confirmação de um "
-"avaliador vence (veja as opções para avaliação em Configurações > Fluxo de "
-"trabalho > Avaliação) e a opção de habilitar acesso 1-clique para o "
-"avaliador está desabilitada. Tarefas agendadas devem ser habilitadas e "
-"configuradas (veja o arquivo de configuração do site)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Solicita avaliação de artigo"
 
@@ -501,9 +492,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar disponibilidade para realizar a tarefa e de que a mesma será concluída no prazo especificado."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Indisponível para realizar avaliação"
 
@@ -516,9 +504,6 @@ msgstr ""
 "fiquem à vontade para me convidar novamente em um outro momento.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar sua NÃO disponibilidade para realizar a tarefa, rejeitando a solicitação."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -540,13 +525,6 @@ msgstr ""
 "atentamente, </p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Mensagem enviada pelo Editor ao Avaliador como lembrete da tarefa de "
-"avaliação em andamento ainda não concluída. Este e-mail é usado quando um "
-"editor envia manualmente um lembrete ao avaliador"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Um lembrete para concluir sua avaliação"
 
@@ -564,13 +542,6 @@ msgstr ""
 "{$passwordResetUrl}</p><p>URL da submissão:{$reviewAssignmentUrl}</p><p>Por "
 "favor, confirme que poderá completar essa contribuição vital ao trabalho do "
 "periódico. Aguardo seu retorno.</p><p>Atenciosamente,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Mensagem enviada automaticamente ao avaliador quando a data de conclusão de "
-"avaliação for ultrapassada. Os lembretes de avaliação automatizados são "
-"ativados nas configurações de avaliação."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Lembrete automático de solicitação de avaliação"

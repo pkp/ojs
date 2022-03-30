@@ -212,14 +212,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Мақаланы қарауды сұраңыз"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Бұл электрондық пошта шолушының қарауды растау күні өткен кезде автоматты "
-"түрде жіберіледі (Параметрлер> Жұмыс үрдісі> Қарау бөліміндегі Қарау "
-"опцияларын қараңыз) және шолушының сілтеме арқылы тікелей қатынасы "
-"өшірілген. Жоспарланған тапсырмалар қосылып, конфигурациялануы керек ("
-"сайттың конфигурация файлын қараңыз)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -938,13 +930,6 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Материалды қарау үшін автоматты еске салғыш"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Егер рецензент белгіленген мерзімде шолуды аяқтамаса, бұл электрондық пошта "
-"автоматты түрде жіберіледі. Тексеру параметрлерінде автоматты тексеру еске "
-"салғыштары бар."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "Сәлем {$recipientName}!<br />\n"
@@ -970,11 +955,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Материалды қарау үшін автоматты еске салғыш"
-
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Бұл хатты бөлім редакторы рецензентке қарау мерзімі өтіп кеткенін еске салу "
-"үшін жібереді."
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -1002,11 +982,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Материалды қарау туралы еске салғыш"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Бұл бөлім редакторына мақаланы қарау сұрауына жауап ретінде бөлім "
-"редакторына қарау сұрауы қабылданбағаны туралы жіберілген рецензент хат."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Құрметті редакторлар!<br />\n"
@@ -1019,12 +994,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Пікір беру мүмкін емес"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Бұл рецензенттің мақаланы қарау сұранысына жауап ретінде бөлім редакторына "
-"қарау сұранысының қабылданғанын және рецензия көрсетілген күнге дейін "
-"жіберілетінін хабарлау үшін жіберілген хат."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""

@@ -505,15 +505,6 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Avtomatik topshirishni ko'rib chiqish eslatmasi"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Bu elektron pochta xabarini ko'rib chiquvchining muddati tugashi bilan "
-"avtomatik tarzda yuboriladi (Sozlamalar> Ish oqimi> Ko'rib chiqish "
-"bo'limidagi Ko'rib chiqish variantlariga qarang) va bir marta bosish bilan "
-"tekshiruvchiga kirish o'chirilgan. Rejalashtirilgan vazifalar yoqilgan va "
-"sozlangan bo'lishi kerak (sayt konfiguratsiya faylini ko'ring)."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -565,12 +556,6 @@ msgid "emails.reviewRemindOneclick.subject"
 msgstr "Arizani ko'rib chiqish haqida eslatma"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Bu elektron pochta bo'limi muharriri tomonidan sharhlovchiga ko'rib chiqish "
-"muddati tugashini eslatish uchun yuborilgan."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -596,12 +581,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Arizani ko'rib chiqish haqida eslatma"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Bu elektron pochta sharhlovchisi bo'lim muharririga ko'rib chiqish so'rovi "
-"rad etilganligi to'g'risida bo'lim muharririga xabar berish so'roviga "
-"javoban bo'lim muharririga yuboriladi."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Tahrirlovchilar: <br />\n"
@@ -614,12 +593,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Tekshirib bo'lmadi"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Bu elektron pochta sharhlovchisi bo'lim muharririga ko'rib chiqish so'rovi "
-"qabul qilinganligi va belgilangan sanaga qadar bajarilishi to'g'risida xabar "
-"berish so'roviga javoban bo'lim muharririga yuboriladi."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""
@@ -762,14 +735,6 @@ msgstr ""
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Maqolani ko'rib chiqish so'rovi"
-
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Tekshiruvchining tasdiqlash muddati tugagandan so'ng (Sozlamalar> Ish oqimi> "
-"Ko'rib chiqish bo'limidagi Ko'rib chiqish variantlariga qarang) va bir marta "
-"bosish bilan tekshiruvchiga kirish o'chirilganida, bu elektron pochta "
-"avtomatik ravishda yuboriladi. Rejalashtirilgan vazifalar yoqilgan va "
-"sozlangan bo'lishi kerak (sayt konfiguratsiya faylini ko'ring)."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"

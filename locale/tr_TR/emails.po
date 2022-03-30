@@ -326,12 +326,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Bu e-posta, Değerlendirme talebinin kabul edildiğini ve belirtilen tarihe "
-"kadar tamamlanacağını Bölüm Editörüne bildirmek üzere yanıt olarak Hakem "
-"tarafından gönderilir."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Değerlendirmeyeceğim"
 
@@ -342,9 +336,6 @@ msgstr ""
 "{$contextName} adlı dergide yayımlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makaleyi şu anda değerlendiremeyeceğim. Beni düşündüğünüz için teşekkür ederim. Başka bir çalışmanın değerlendirmesinde katkı sunmaya çalışacağım.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Bu elektronik posta gözden geçirme talebine cevap olarak, gözden geçirmenin red edildiğini bildirmek amacıyla Bölüm Editörüne gözden geçirmeyi yapan kişi tarafından gönderilir."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -364,13 +355,6 @@ msgstr ""
 "Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. <br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Bu elektronik posta hakemin değerlendirme için belirtilen son tarihin "
-"dolmakta olduğunu hatırlatmak için Bölüm Editörü tarafından hakemlere "
-"gönderilir."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Değerlendirilme Konusunda Hatırlatma"
@@ -410,13 +394,6 @@ msgstr ""
 "Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Hakemlik için verilen süre geçtiğinde bu elektronik posta otomatik olarak "
-"gönderilir. Otomatik hatırlatma için süre ayarlamalarına Değerlendirme "
-"Ayarları kısmından erişebilirsiniz."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Değerlendirilme Konusunda Otomatik Hatırlatma"
@@ -1088,10 +1065,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "Öz: {$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Bu e-posta, bir hakemin onay tarihi geçtiğinde otomatik olarak gönderilir (Ayarlar> İş Akışı> Gözden geçirme altındaki İnceleme Seçenekleri'ne bakın) ve tek tıklatma hakem erişimi devre dışı bırakılır. Zamanlanmış görevler etkinleştirilmeli ve yapılandırılmalıdır (site yapılandırma dosyası bölümüne bakınız)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Hakem Değerlendirmesi Talebi Hatırlatma"

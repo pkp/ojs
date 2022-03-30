@@ -260,9 +260,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à une demande d'évaluation, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Refus d'évaluation"
 
@@ -273,9 +270,6 @@ msgstr ""
 "Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à la demande d'évaluation, pour aviser ce dernier qu'il ne peut effectuer l'évaluation."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -297,10 +291,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Ce courriel est envoyé par le Rédacteur de rubrique pour rappeler à un rapporteur que son évaluation est due."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
 
@@ -318,10 +308,6 @@ msgstr ""
 "Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pour notre revue. J'espère avoir de vos nouvelles très bientôt.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Ce courriel est envoyé automatiquement quand la date due d'un rapporteur est dépassée. (Voir Options d'évaluation à l'Étape 2 de la Configuration de la revue) et que l'accès en « un clic » est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de Configuration du site)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
@@ -957,10 +943,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un rapporteur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès du rapporteur en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Demande d'évaluation d'un article"

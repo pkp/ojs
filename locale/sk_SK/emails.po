@@ -96,15 +96,6 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatické pripomenutie recenzie príspevku"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Tento email je poslaný automaticky, keď recenzentovi vyprší stanovený termín "
-"pre spracovanie recenzie (pozri Možnosti recenzie v Nastavenie časopisu, "
-"Krok 2) a je zakázaný prístup recenzenta na jedno kliknutie. Musia byť "
-"povolené a nakonfigurované naplánované úlohy (pozri konfiguračný súbor "
-"stránky)."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -156,12 +147,6 @@ msgid "emails.reviewRemindOneclick.subject"
 msgstr "Pripomenutie recenzie príspevku"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Tento email posiela editor sekcie recenzentovi, aby mu pripomenul, že "
-"vypršal termín pre spracovanie recenzie."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -186,11 +171,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Pripomenutie recenzie príspevku"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Tento email posiela recenzent editorovi sekcie v odpovedi na žiadosť o "
-"spracovaní recenzie, aby mu oznámil, že recenziu nemôže spracovať."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editori:<br />\n"
@@ -203,12 +183,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Nemôžem spracovať recenziu"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Tento email posiela recenzent editorovi sekcie v odpovedi na žiadosť o "
-"spracovaní recenzie, aby mu oznámil, že žiadosť prijal a spracuje recenziu v "
-"stanovenom termíne."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""
@@ -352,13 +326,6 @@ msgstr ""
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Požiadavka na recenziu článku"
-
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Tento email sa automaticky odosiela, len čo uplynie dátum splatnosti "
-"potvrdenia recenzenta (pozri Možnosti kontroly v sekcii Nastavenia> Pracovný "
-"postup> Kontrola) a prístup k recenznej kontrole je zakázaný. Plánované "
-"úlohy musia byť povolené a konfigurované (pozri konfiguračný súbor webu)."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"

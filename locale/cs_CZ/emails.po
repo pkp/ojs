@@ -280,9 +280,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že žádost přijal a zpracuje recenzi ve stanoveném termínu."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Nemohu zpracovat recenzi"
 
@@ -293,9 +290,6 @@ msgstr ""
 "Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili a neváhejte mě jindy opět kontaktovat.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že recenzi nemůže zpracovat."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -313,13 +307,6 @@ msgstr ""
 "Pokud potřebujete prodloužit lhůtu, kontaktujte nás, prosím. Těším se na "
 "vaši odpověď.</p><p>Předem vám děkujeme a jsme s pozdravem,</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Tento e-mail zasílá editor, aby recenzentovi připomněl, že má dokončit "
-"recenzi příspěvku. Tento e-mail se používá, když editor ručně zašle "
-"recenzentovi upomínku"
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Připomínáme, abyste dokončili svou recenzi"
 
@@ -335,13 +322,6 @@ msgstr ""
 "souborů a zasílání recenzních komentářů.</p><p>Pokud potřebujete prodloužit "
 "lhůtu, kontaktujte nás, prosím. Těšíme se na vaši odpověď.</p><p>Předem vám "
 "děkujeme a jsme s pozdravem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Tento e-mail se automaticky odešle, pokud recenzent nedokončí recenzi do "
-"stanoveného termínu. Automatické připomenutí recenze lze nastavit v "
-"nastavení recenze."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatické připomenutí recenze příspěvku"
@@ -1277,10 +1257,6 @@ msgstr ""
 "V případě jakýchkoli dotazů ,týkajících se příspěvku nebo procesu hodnocení "
 "se na nás, prosím, obraťte.</p><p>Děkuji za zvážení této žádosti. Vaší "
 "pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Tento email se automaticky odesílá, jakmile uplyne datum splatnosti potvrzení recenzenta (viz Možnosti kontroly v sekci Nastavení> Pracovní postup> Kontrola) a přístup k recenznímu kontrole je zakázán. Plánované úlohy musí být povoleny a konfigurovány (viz konfigurační soubor webu)."
 
 msgid "emails.statisticsReportNotification.description"
 msgstr ""

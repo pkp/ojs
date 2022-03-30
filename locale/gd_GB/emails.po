@@ -393,16 +393,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Thèid am post-d seo a chur gu fèin-obrachail nuair a dh’fhalbhas an ùine air "
-"ceann-là freagairt dearbhadh an lèirmheasaiche (faic na roghainnean "
-"lèirmheis fo na “Roghainnean” > “Sruth-obrach” > “Lèirmheas) agus nuair a "
-"bhios inntrigeadh lèirmheasaichean le aon bhriogadh à comas. Feumaidh "
-"sgeidealachadh shaothraichean a bhith an comas agus air a rèiteachadh (faic "
-"faidhle rèiteachadh na làraich)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
 
@@ -551,13 +541,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Thèid am post-d seo a chur gu deasaiche earrainn le lèirmheasaiche mar "
-"fhreagairt air iarrtas airson fios a leigeil gu deasaiche na h-earrainn gun "
-"deach gabhail ris an iarrtas agus gun tèid a choileanadh ron cheann-là a "
-"chaidh a shònrachadh."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Cha bhi e comasach lèirmheas a dhèanamh air"
 
@@ -571,12 +554,6 @@ msgstr ""
 "iarraidh orm uair sam bith.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Thèid am post-d seo a chur gu deasaiche earrainn le lèirmheasaiche mar "
-"fhreagairt air iarrtas airson fios a leigeil gu deasaiche na h-earrainn gun "
-"deach an t-iarrtas a dhiùltadh."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -606,12 +583,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Thèid am post-d seo a chur gu lèirmheasaiche le deasaiche earrainn airson "
-"cur na c(h)uimhne gu bheil an lèirmheas aca ri lìbhrigeadh."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Cuimhneachan fèin-obrachail mu lèirmheas tagraidh"
 
@@ -639,16 +610,6 @@ msgstr ""
 "cluinntinn uat.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Thèid am post-d seo a chur gu fèin-obrachail nuair a dh’fhalbhas an ùine air "
-"a’ cheann-là lìbhrigidh aig lèirmheasaiche (faic na roghainnean lèirmheis fo "
-"na “Roghainnean” > “Sruth-obrach” > “Lèirmheas) agus nuair a bhios "
-"inntrigeadh lèirmheasaichean le aon bhriogadh à comas. Feumaidh "
-"sgeidealachadh shaothraichean a bhith an comas agus air a rèiteachadh (faic "
-"faidhle rèiteachadh na làraich)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Cuimhneachan fèin-obrachail mu lèirmheas tagraidh"

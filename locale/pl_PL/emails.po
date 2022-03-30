@@ -350,10 +350,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Wiadomość od redaktora działu do recenzenta. Zawiera prośbę o przygotowanie recenzji artykułu, jego tytuł i abstrakt, a także zalecenie dot. zresetowania hasła w sytuacji, gdy recenzent nie pamięta danych do logowania. Wysyłana, jeśli recenzent pracować będzie w systemie."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
@@ -419,9 +415,6 @@ msgstr ""
 "Z wyrazami szacunku,\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Wiadomość wysyłana przez recenzenta do redaktora prowadzącego. Zawiera akceptację prośby o wykonanie recenzji."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Odrzucenie prośby o wykonanie recenzji"
 
@@ -434,9 +427,6 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku, \n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Wiadomość wysyłana przez recenzenta do redaktora prowadzącego. Zawiera odrzucenie prośby o wykonanie recenzji."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -455,10 +445,6 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku, <br />\n"
 "{$signature}<br />"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera przypomnienie o terminie wykonania recenzji."
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
@@ -483,10 +469,6 @@ msgstr ""
 "Będziemy wdzięczni za potwierdzenie gotowości do wykonania recenzji.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Wiadomość automatycznie wysłana po upłynięciu terminu nadesłania recenzji. Zaplanowane zadania w systemie muszą zostać na nowo skonfigurowane."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatyczne przypomnienie o upłynięciu terminu wykonania recenzji"

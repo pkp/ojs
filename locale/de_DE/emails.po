@@ -288,16 +288,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/"
-"n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in "
-"Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für "
-"Gutachter/innen deaktiviert ist. Planmäßige Aufgaben (scheduled tasks) "
-"müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der "
-"Website)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Bitte um Begutachtung eines Artikels"
 
@@ -389,9 +379,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um die/den Rubrikredakteur/in darüber zu informieren, dass die Begutachtung übernommen wird und bis zu dem angegebenen Datum abgeschlossen sein wird."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ablehnung der Bitte um ein Gutachten"
 
@@ -402,9 +389,6 @@ msgstr ""
 "leider kann ich gegenwärtig die Begutachtung des Beitrags &quot;{$submissionTitle}&quot; für {$contextName} nicht übernehmen. Ich danke für Ihr Vertrauen. Bei anderer Gelegenheit können Sie sich gerne wieder an mich wenden.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um darüber zu informieren, dass die Anfrage abgelehnt wird."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -426,10 +410,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatische Erinnerung an die Fälligkeit eines Gutachtens"
 
@@ -447,10 +427,6 @@ msgstr ""
 "Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen deaktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatische Erinnerung an Begutachtung"

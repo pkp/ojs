@@ -278,12 +278,6 @@ msgstr ""
 "fyrir að skoða þessa beiðni.  Við kunnum vel að meta alla aðstoð frá þér. "
 "</p><p>Bestu kveðjur,</p>{$signature}"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Þessi tölvupóstur sendist sjálfkrafa þegar komið er fram yfir skiladag "
-"ritrýnis til að bregaðst við beiðni um ritrýni og þegar  beinn aðgangur "
-"ritrýnis er ekki virkur."
-
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Kæri/Kæra {$recipientName},</p><p>Þetta er sjálfvirk áminning frá  "

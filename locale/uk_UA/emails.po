@@ -301,15 +301,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Цей лист надсилається автоматично, коли рецензент пропустив дату "
-"рецензування (Див Налаштування > Робочий процес > Рецензування > "
-"Налаштування Рецензування) і прямий доступ рецензента за посиланням "
-"відключено. Заплановані завдання повинні бути увімкнені та налаштовані (Див. "
-"файл налаштування сайту)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Запит на рецензування статті"
 
@@ -407,9 +398,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що він береться працювати над рецензією та здатний завершити цю роботу до вказаної дати."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Неможливо здійснити рецензування"
 
@@ -420,9 +408,6 @@ msgstr ""
 "Боюся, що зараз я не маю можливості рецензувати подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за довіру, звертайтеся до мене у майбутньому.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що відмовляється рецензувати."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -448,10 +433,6 @@ msgstr ""
 "роботу. З нетерпінням очікую Вашої відповіді.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Цим листом редактор розділу нагадує рецензенту про настання кінцевої дати рецензування."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Нагадування про рецензування"
@@ -501,10 +482,6 @@ msgstr ""
 "роботу. З нетерпінням очікую Вашої відповіді.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Цей лист автоматично надсилається рецензенту, коли настає кінцева дата рецензування (див. розділ \"Налаштування рецензування\" кроку 2 Налаштування журналу) та відключений доступ рецензента \"єдиним натисканням\". Щоб ця функціональність працювала необхідно включити на налаштувати Scheduled tasks (див. файл конфігурації сайту)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Автоматичне нагадування про рецензування"

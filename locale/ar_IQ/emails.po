@@ -286,10 +286,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "هذه الرسالة يرسلها النظام آلياً عندما يتباطأ أحد المحكمين عن تقديم إجابة في الموعد المقرر (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) عندما تكون ميزة وصول المحكم بنقرة واحدة معطلة. يجب أن تكون المهام المجدولة ممكنة ومعدة (إنظر ملف إعدادات الموقع)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "إلتماس تحكيم مؤلَّف"
 
@@ -398,9 +394,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يبلغ المحرر بقبوله للتحكيم المذكور خلال مدة الاستيجاب المطلوبة منه."
-
 msgid "emails.reviewDecline.subject"
 msgstr "غير قادر على التحكيم"
 
@@ -411,9 +404,6 @@ msgstr ""
 "أخشى أنني حالياً غير متفرغ لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. أشكر لكم إعتمادكم عليَّ وأرجو التواصل معي في وقت آخر.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يعتذر فيها عن قبول التحكيم للمؤلَّف المذكور."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -434,12 +424,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"هذه الرسالة يُذكر بها المحرر محكماً قد استوجب إكمال تقييمه لمؤلَّف ما. هذه "
-"الرسالة تُستعمل عندما يرسل المحرر تذكيرًا يدويًا إلى المحكم"
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "تذكير يلتمس إكمال تحكيمك"
 
@@ -457,12 +441,6 @@ msgstr ""
 "لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"هذه الرسالة يولدها الموقع آلياً عندما لا يُكمل المحكم مهمة التحكيم حتى موعد "
-"تسليمها. تمكين تذكيرات التحكيم الآلية يتم من خلال إعدادات التحكيم."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "تذكير تلقائي بتحكيم طلب التقديم"

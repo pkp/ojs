@@ -235,10 +235,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Mezu hau Ataleko editoreak bidaltzen dio Ebaluatzaile bati, artikulu bat ebaluatzea onartuko duen ala ez galdetzeko. Artikuluari buruzko informazioa ematen du, hala nola titulua eta laburpena, ebaluazioa egiteko epea eta artikulua bera hartzeko zer egin behar den. Mezu hau erabiltzen da aldizkariaren Konfigurazioko 2. urratsean Ebaluazio-prozesu estandarra hautatzen denean."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Artikulua ebaluatzeko eskaera"
 
@@ -325,9 +321,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Mezu hau Ebaluatzaileak Ataleko editoreari bidaltzen dio, ebaluazioa egiteko eskaera onartzen duela eta lana garaiz bukatuko duela esateko."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ebaluazioa egin ezina"
 
@@ -338,9 +331,6 @@ msgstr ""
 "Sentitzen dut, baina oraingoan ezingo dut egin {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa. Eskerrik asko nigan pentsatzeagatik, eta espero dut hurrengo batean ere niregana joko duzuela.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Mezu hau Ebaluatzaileak Ataleko editoreari bidaltzen dio, ebaluazioa egiteko eskaerari erantzunez, ezin duela egin esateko."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -362,10 +352,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio, ebaluazioa egiteko epea pasatu dela gogorarazteko."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Artikulua ebaluatzeko oroigarri automatizatua"
 
@@ -383,10 +369,6 @@ msgstr ""
 "Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Mezu hau automatikoki bidaltzen da ebaluatzaile baten epea amaitu eta erantzun ez duenean (ikus Konfigurazioko 2. urratseko Ebaluazio-aukerak) eta klik bakarreko ebaluatzaile-sarbidea desgaituta dagoenean. Programatutako atazak (scheduled_tasks) gaituta eta konfiguratuta egon behar dute (ikus konfigurazio-fitxategia)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Artikulua ebaluatzeko oroigarri automatizatua"

@@ -250,9 +250,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخشبرای اطلاع از پذیرش انجام داوری"
-
 msgid "emails.reviewDecline.subject"
 msgstr "قادر به داوری نمی باشم"
 
@@ -264,9 +261,6 @@ msgstr ""
 "از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخش برای اطلاع از عدم پذیرش انجام داوری"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
@@ -287,10 +281,6 @@ msgstr ""
 "لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "یادآوری برای کارشناسی مقاله (اتوماتیک)"
@@ -774,10 +764,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای یادآوری انجام داوری"
-
 msgid "emails.lockssExistingArchive.subject"
 msgstr "تقاضای آزشیو برای {$contextName}"
 
@@ -1015,10 +1001,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "یادآوری درخواست داوری مقاله"

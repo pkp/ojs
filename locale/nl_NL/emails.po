@@ -280,10 +280,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Deze e-mail wordt automatisch verzonden wanneer de datum voor de bevestiging van een reviewopdracht verstreken is (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Artikel review verzoek"
 
@@ -371,9 +367,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Deze e-mail wordt door een reviewer naar de sectieredacteur gestuurd als reactie op een review-verzoek dat geaccepteerd is en zal worden voltooid voor de gevraagde datum."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Review niet mogelijk"
 
@@ -384,9 +377,6 @@ msgstr ""
 "Ik ben bang dat ik op dit moment niet in staat ben om een review te doen van inzending &quot;{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht heeft en voel u vrij om op een ander moment een beroep op mij te doen.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Deze e-mail wordt door de reviewer verstuurd naar de sectieredacteur als reactie op een reviewverzoek om te laten weten dat het verzoek wordt afgewezen."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -408,12 +398,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Deze e-mail wordt door de sectieredacteur verstuurd om een reviewer eraan te "
-"herinneren dat de afgesproken reviewperiode verstreken is."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Geautomatiseerde review herinnering"
 
@@ -431,10 +415,6 @@ msgstr ""
 "Wilt u uw beschikbaarheid voor het voltooien van deze voor het werk van het tijdschrift vitale taak bevestigen. Ik kijk uit naar uw reactie.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Deze e-mail wordt automatisch verstuurd als de afgesproken reviewperiode verstrijkt (zie Review opties onder Tijdschrift inrichten) en een-klik toegang voor reviewers is uitgeschakeld. Scheduled tasks moet ingeschakeld en geconfigureerd zijn (zie het configuratiebestand)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Geautomatiseerde review herinnering"

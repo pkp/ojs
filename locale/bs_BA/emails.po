@@ -198,10 +198,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji se recenzent može prijaviti u sustav. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa (Ako nije, koristi se Zamolba za recenziju članka u privitku)"
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Zamolba za recenziju članka"
 
@@ -283,9 +279,6 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ovim obrascem e-pošte recenzent potvrđuje uredniku rubrike da prihvaća zahtjev za recenzijom."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Nisam u mogućnosti izvršiti recenziju"
 
@@ -297,9 +290,6 @@ msgstr ""
 "<br />\n"
 "Srdačno,<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ovim obrascem e-pošte recenzent odgovara uredniku rubrike da ne prihvaća zahtjev za recenzijom."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -321,10 +311,6 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao."
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatski podsjetnik za predaju recenzije"
 
@@ -343,10 +329,6 @@ msgstr ""
 "<br />\n"
 "Srdačno,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Ovaj se obrazac e-pošte automatski šalje recenzentu kada datum naveden kao rok za izradu recenzije istekao (pogledajte Opcije recenzije unutar Postavljanja časopisa, 2. korak), a recenzentu nije omogućen pristup jednim klikom. Za ovu funkciju Raspoređeni zadaci moraju biti aktivirani i namješteni (pogledajte konfiguracijsku datoteku stranice)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatski podsjetnik za predaju recenzije"

@@ -332,14 +332,6 @@ msgstr ""
 "Grazas,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Este correo electrónico é enviado automaticamente cando o prazo de "
-"confirmación dun revisor/a expira(vexa as opcións de revisión no paso 2 da "
-"configuración da revista) e desactívase o acceso do revisor/a cun clic. Las "
-"tarefas planificadas deben ser activadas e configuradas (vexa o arquivo de "
-"configuración do sitio)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -493,12 +485,6 @@ msgstr "Solicitude de revisión cancelada"
 msgid "emails.reviewRemind.subject"
 msgstr "Recordatorio de revisión dun envío"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Este correo é enviado por un revisor/a ao editor/a de sección en resposta a "
-"unha solicitude de revisión, para notificarlle a súa indispoñibilidade para "
-"realizar a tarefa."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editores/as:<br />\n"
@@ -512,12 +498,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Rexeitamento da solicitude de revisión"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Este correo é enviado por un revisor/a ao editor/a de sección en resposta a "
-"unha solicitude de revisión, para notificarlle que aceptou encargarse desta "
-"tarefa e que a enviará antes da data indicada."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""
@@ -590,12 +570,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "Recordatorio automático de revisión dun envío"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Este correo electrónico é enviado polo Editor/a de Sección a un revisor/a "
-"para lembrarlle que superou a data de entrega da revisión."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -620,14 +594,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Recordatorio automático de revisión dun envío"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Este correo é enviado automaticamente cando se supera a data de entrega "
-"dunha revisión (vexa as opcións de revisión do paso 2 da configuración da "
-"revista) e o acceso é desactivado nun clic. As tarefas planificadas deben "
-"estar activadas e configuradas (vexa o arquivo de configuración do sitio)."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"

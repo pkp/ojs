@@ -402,18 +402,6 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब किसी समीक्षक की पुष्टि की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच अक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) doublespacing: Different use of double spaces
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$signature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$recipientName}, {$reviewAssignmentUrl}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
 msgid "emails.reviewResponseOverdueAutoOneclick.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -562,11 +550,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.reviewConfirm.description"
-msgstr "यह ईमेल अनुभाग संपादक को समीक्षक द्वारा समीक्षा संपादक के अनुरोध के जवाब में भेजा जाता है कि समीक्षा अनुरोध स्वीकार कर लिया गया है और निर्दिष्ट तिथि तक पूरा हो जाएगा।."
-
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.reviewDecline.subject"
 msgstr "समीक्षा करने में असमर्थ"
@@ -588,10 +571,6 @@ msgstr ""
 "{$senderName}"
 
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.reviewDecline.description"
-msgstr "यह ईमेल समीक्षक द्वारा संपादक को खंड संपादक को सूचित करने के लिए समीक्षा अनुरोध के जवाब में भेजा जाता है कि समीक्षा अनुरोध अस्वीकार कर दिया गया है."
-
 # (pofilter) simplecaps: Different capitalization
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -623,17 +602,6 @@ msgstr ""
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "यह ईमेल एक अनुभाग संपादक द्वारा एक समीक्षक को याद दिलाने के लिए भेजा जाता है कि उनकी समीक्षा होने वाली है."
-
-# (pofilter) brackets: Added '{', '}', '(', ')'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$ reviewDueDate}, {$signature}, {$submissionTitle}, {$reviewAssignmentUrl}, {$contextName}, {$ PasswordResetUrl}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -651,17 +619,6 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब एक समीक्षक की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच अक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$ reviewDueDate}, {$signature}, {$submissionTitle}, {$reviewAssignmentUrl}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
 msgid "emails.reviewRemindAutoOneclick.body"
 msgstr ""
 "{$recipientName}:<br />\n"

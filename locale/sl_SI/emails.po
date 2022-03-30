@@ -337,10 +337,6 @@ msgstr ""
 "lahko obrnete name.</p><p>Zahvaljujemo se vam za sprejetje prošnje in se vam "
 "za vašo pomoč zahvaljujemo.</p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ta email se pošlje avtomatsko, ko recenzent prekorači rok za potrditev opravljanja recenzije (več: Recenzijske nastavitve pri Nastavitve  > Potek dela > Recenzija) in je izključena opcija za recenzentski dostop z enim klikom. Opozorilo: administrator spletišča mora v nastavitveni datoteki spletišča nastaviti \"Scheduled tasks\"."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Prošnja za recenzijo prispevka"
 
@@ -445,9 +441,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ta email pošlje recenzent uredniku rubrike kot odgovor na prošnjo za opravljanje recnezije in ga obvešča, da je sprejel recenzijo in jo namerava opraviti do predvidenega datuma."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ne morem opraviti recenzije"
 
@@ -458,9 +451,6 @@ msgstr ""
 "Žal mi je, vendar v tem trenutku ne morem opraviti recenzije prispevka, &quot;{$submissionTitle},&quot; za revijo {$contextName}. Hvala za povabilo in upam, da me boste še povabili k sodelovanju.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ta email pošlje recenzent urendiku rubrike kot odgovor na prošnjo za recenzijo v primeru, ko obvešča urednika rubrike, da recenzijo zavrne."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -477,12 +467,6 @@ msgstr ""
 "recenzijske datotek in oddali vaše recenzijsko mnenje.</p><p>Če bi želeli "
 "podaljšati rok, se prosim obrnite name. Se že veselim vašega odziva.</p><p>"
 "Hvala lepa že vnaprej in s spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Ta email pošlje urednik recenzentu kot opomnik za opravljanje recenzije. "
-"Uporabi se, ko urednik ročno pošilja opomnik"
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Opomnik za recenzijo prispevka"
@@ -522,13 +506,6 @@ msgstr ""
 "mnenje.</p><p>Če bi želeli podaljšati rok, se prosim obrnite name. Se že "
 "veselim vašega odziva.</p><p>Hvala lepa že vnaprej in s "
 "spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Ta email se pošlje recenzentu avtomatično, ko poteče rok za opravljanje "
-"recenzije. Avtomatski opomnike za recenzije se nastavljajo v nastavitvah "
-"delovnega toka za recenzije."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Avtomatski opomnik za recenzijo prispevka"

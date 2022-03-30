@@ -422,9 +422,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Este e-mail é enviado pelo Revisor ao Editor de Secção, em resposta ao pedido de revisão, para notificar a disponibilidade para realizar a tarefa e de que a mesma será concluída no prazo especificado."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Indisponível para realizar a revisão"
 
@@ -438,12 +435,6 @@ msgstr ""
 "noutra oportunidade.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Este e-mail é enviado pelo Revisor ao Editor de Secção, em resposta ao "
-"pedido de revisão, para notificar da sua inisponibilidade para realizar a "
-"tarefa, rejeitando a revisão."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -472,13 +463,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor ao Revisor como lembrete da tarefa de "
-"revisão em curso. Este e-mail é usado quando um editor envia manualmente um "
-"lembrete ao revisor"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Lembrete de conclusão de revisão"
 
@@ -504,13 +488,6 @@ msgstr ""
 "Aguardando o seu contacto,<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Este e-mail é enviado automaticamente quando o revisor ainda não concluiu a "
-"sua revisão no prazo previsto. Lembretes automáticos de revisão estão ativos "
-"em Configurações de Revisão."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Lembrete automático de pedido de revisão"
@@ -1211,15 +1188,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Este e-mail é enviado automaticamente quando o prazo de confirmação de um "
-"revisor expira (consulte Opções de revisão em Configurações > Fluxo de "
-"trabalho > Revisão) e o acesso com um clique como revisor está desativado. "
-"As tarefas agendadas devem ser ativadas e configuradas (consulte o ficheiro "
-"de configuração do site)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Pedido de revisão de artigo"

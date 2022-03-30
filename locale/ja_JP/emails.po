@@ -235,12 +235,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"このメールは、査読者の確認期限が過ぎた場合（「設定」>「ワークフロー」>「査読」の「査読オプション」を参照）、査読者のワンクリックアクセスが無効になってい"
-"る場合に自動的に送信されます。スケジュールされたタスクを有効にして設定する必要があります（サイト設定ファイルを参照）。"
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -335,12 +329,6 @@ msgid "emails.editorAssign.subject"
 msgstr "セクション編集者任命のお知らせ"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"このメールは、査読者の査読期限日が過ぎ（雑誌設定ステップ2の査読オプションを参照）、査読者ワンクリックアクセスが無効な場合に、自動的に送信されるものです。"
-"定期タスク機能が有効かつ設定されている必要があります（サイト設定ファイルを参照）。"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -365,10 +353,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "論文査読の督促（自動送信）"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "このメールは、セクション編集者から査読者に査読期限日が過ぎたことを督促するものです。"
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -391,9 +375,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "論文査読の督促"
 
-msgid "emails.reviewDecline.description"
-msgstr "このメールは、査読者からセクション編集者に査読依頼を受けることができない旨を通知するものです。"
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "編集部 御中:<br />\n"
@@ -406,9 +387,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "査読依頼の謝絶"
-
-msgid "emails.reviewConfirm.description"
-msgstr "このメールは、査読者からセクション編集者に査読依頼を受諾し、指定された期日までに査読を終了させる意思を伝えるものです。"
 
 msgid "emails.reviewConfirm.body"
 msgstr ""

@@ -247,14 +247,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Denne e-posten sendes automatisk når fagfellens frist for å bekrefte oppdrag "
-"utløper (se Innstillinger > Arbeidsflyt > Fagfellevurdering) og ’Slå på "
-"ettklikks tilgang for fagfellene’ ikke er valgt. Planlagte oppgaver må være "
-"skrudd på og konfigurert (se filen med nettsidekonfigurering)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Forespørsel om fagfellevurdering"
 
@@ -374,13 +366,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Denne e-posten sendes fra en fagfelle til seksjonsredaktøren som svar på «"
-"Forespørsel om fagfellevurdering» for å varsle seksjonsredaktøren om at "
-"forespørselen er mottatt og akseptert, og at fagfellevurderingen vil bli "
-"ferdigstilt innen angitt frist."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Avslå forespørsel om fagfellevurdering"
 
@@ -393,12 +378,6 @@ msgstr ""
 "kontakt ved en senere anledning.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Denne e-posten sendes av en fagfelle til seksjonsredaktøren som svar på en "
-"forespørsel om fagfellevurdering, for å varsle redaktøren om at oppdraget er "
-"avslått."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -424,13 +403,6 @@ msgstr ""
 "vårt? Jeg ser fram til å høre fra deg.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Denne e-posten sendes av en redaktør til en fagfelle for å minne om at "
-"fagfellevurderingen ventes ferdigstilt innen fristen. Denne e-posten sendes "
-"når redaktøren manuelt sender en påminnelse til en fagfelle."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Påminnelse om fagfellevurdering"
@@ -481,13 +453,6 @@ msgstr ""
 "vårt? Jeg ser fram til å høre fra deg.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Denne e-posten sendes automatisk til fagfellen når tidsfristen er "
-"overskredet. Automatiske påminnelser om fagfellevurdering kan aktiveres i "
-"Arbeidsflyt > Fagfellevurdering"
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Påminnelse om fagfellevurdering (automatisk e-post)"

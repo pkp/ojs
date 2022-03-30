@@ -311,10 +311,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Sol·licitud de revisió d'un article"
 
@@ -421,9 +417,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Aquest missatge de correu electrònic té un revisor com a remitent i s'envia a l'editor de secció en resposta a una sol·licitud de revisió per a notificar-li que ha acceptat encarregar-se d'aquesta tasca i que la trametrà abans de la data indicada."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Rebutjo la revisió"
 
@@ -434,9 +427,6 @@ msgstr ""
 "Lamento comunicar-vos que en aquesta ocasió no em podré encarregar de la revisió de la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Us agraeixo que m'hàgiu tingut en compte i confio que ens tornem a posar en contacte en una altra ocasió.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Aquest missatge de correu electrònic té un revisor com a remitent i s'envia a l'editor de secció en resposta a una sol·licitud de revisió per a notificar-li que rebutja encarregar-se d'aquesta tasca."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -457,10 +447,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia a un revisor per a recordar-li que ha superat la data de venciment per a lliurar la revisió."
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Recordatori automàtic de revisió de la tramesa"
 
@@ -478,10 +464,6 @@ msgstr ""
 "Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Aquest missatge de correu electrònic s’envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha inhabilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Recordatori automàtic de revisió de la tramesa"

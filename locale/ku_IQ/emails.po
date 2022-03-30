@@ -135,11 +135,6 @@ msgstr "داواکاریی هەڵسەنگاندنی توێژینەوە"
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "داواکاریی هەڵسەنگاندنی توێژینەوە"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"ئەم ئیمەیڵە بۆ هەڵسەنگێنەرێکی نوێ نێردراوە بۆ بەخێرهێنانیان بۆ سیستەمەکە و "
-"دابینکردنی ناوی بەکارهێنەر و وشەی نهێنییەکەیان."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "داواکاریی هەڵسەنگاندنی توێژینەوە"
@@ -837,14 +832,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"ئەم ئیمەیڵە بە شێوەیەکی تۆماتیکی بۆ هەڵسەنگێنەر نێردراوە بە هۆی کۆتاییهاتنی "
-"وادەی هەڵسەنگاندن (بژاردەکانی هەڵسەنگاندن لێرەوە ببینە ڕێکخستنەکان/ ڕێڕەوی "
-"کار/ هەڵسەنگاندن) و بە کلیکێک دەستپێڕاگەیشتنی هەڵسەنگێنەر ناچالاک دەکریت. "
-"ئەرکە پلان بۆ دانراوەکان دەبێت چالاک کرابن."
-
 msgid "emails.statisticsReportNotification.description"
 msgstr ""
 "ئەم ئیمەیڵە بە شێوەی تۆماتیکی و مانگانە بۆ سەرنوسەر و بەڕێوەبەرانی گۆڤار "
@@ -966,12 +953,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "بیرخەرەوەی تۆماتیکی هەڵسەنگاندنی توێژینەوە"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"ئەم ئیمەیڵە لە لایەن سەرنوسەری بەشەوە بۆ هەڵسەنگێنەر دەنێردرێت وەک "
-"بیرخەرەوەیەکی کاتی هەڵسەنگاندنەکە."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -996,11 +977,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "بیرخەرەوەی هەڵسەنگاندنی توێژینەوە"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"ئەم ئیمەیڵە لە لایەن هەڵسەنگێنەرەوە بۆ سەرنوسەری بەش نێردراوە بۆ "
-"ئاگادارکردنەوەیان لە ڕەتکردنەوەی هەڵسەنگاندنەکە."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "بەڕێزان، سەرنوسەران:<br />\n"
@@ -1013,12 +989,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "هەڵسەنگاندنەکە ناتوانم"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"ئەم ئیمەیڵە لە لایەن هەڵسەنگێنەرەوە بۆ سەرنوسەری بەش نێردراوە لە وەڵامی "
-"سەرنوسەردا بۆ ئاگادارکردنەوەیان لە قبوڵکردنی هەڵسەنگاندنەکە و تەواوکردنی لە "
-"کاتی دیاریکراودا."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""

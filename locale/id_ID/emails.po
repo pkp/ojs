@@ -276,10 +276,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Email ini dikirim otomatis saat tenggat konfirmasi terlewati (lihat Opsi Review di menu Pengaturan > Alur Kerja > Review) dan akses one-click reviewer dinonaktifkan. Scheduled tasks must be enabled and configured (see the site configuration file)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Permohonan Review Artikel"
 
@@ -369,9 +365,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Email ini dikirimkan Reviewer kepada Editor Bagian sebagai respon terhadap permohonan review untuk memberitahu Editor Bagian bahwa permohonan review diterima dan akan diselesaikan pada tanggal yang ditetapkan."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tidak Dapat Melakukan Review"
 
@@ -382,9 +375,6 @@ msgstr ""
 "Mohon maaf saat ini saya tidak dapat melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Terimakasih telah mempercayakann kepada saya, dan lain waktu silakan menghubungi saya lagi.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Email ini dikirimkan Reviewer kepada Editor Bagian sebagai respon terhadap permohonan review untuk memberitahu Editor Bagian bahwa permohonan review ditolak."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -406,13 +396,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Email ini dikirim oleh Editor untuk mengingatkan reviewer bahwa batas "
-"reviewnya telah habis. Email ini digunakan ketika editor secara manual "
-"mengirimkan pengingat kepada reviewer"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Pengingat untuk menyelesaikan review Anda"
 
@@ -430,12 +413,6 @@ msgstr ""
 "Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Email ini dikirimkan secara otomatis apabila mitra bestari belum "
-"menyelesaikan tugas reviewnya sesuai waktu yang ditentukan. Pengaktifan "
-"pengingat review otomatis ini dapat dilakukan pengaturan Review."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Pengingat Review Naskah Otomatis"

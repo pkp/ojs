@@ -288,10 +288,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ezt az emailt a rendszer automatikusan küldi, amikor a szakmai lektorálásra történő felkérésnek elfogadási határideje lejár (lásd Lektorálási beállítások részben a Beállítások > Munkafolyamat > Szakmai lektorálás) és az egykattintásos lektori hozzáférés tiltott. Az ütemezett feladatok futását engedélyezni kell és be kell állítani (lásd az oldal konfigurációs fájlját)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Cikk lektorálás kérése"
 
@@ -378,9 +374,6 @@ msgstr ""
 "Üdvözlettel,<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ezt az emailt a Szakmai Lektor küldi a Rovatszerkesztőnek a lektori felkérésre válaszolva és jelezve, hogy a szakmai lektorálási munkát elvállalja és a megadott határidőig elvégzi."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Lektorálási felkérés elutasítása"
 
@@ -392,9 +385,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ezt az emailt a Szakmai Lektor küldi a Rovatszerkesztőnek a lektori felkérésre válaszolva és jelezve, hogy a lektorálási munkát nem tudja elvállalni."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -419,10 +409,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Ezt az emailt a Rovatszerkesztő küldi a Szakmai Lektornak, hogy emlékeztesse a lektorálási határidőre."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatikus emlékeztető cikk szakmai lektorálásáról"
 
@@ -443,10 +429,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Ez az email automatikusan generált, amikor a lektorálási határidő lejár (lásd a Lektorálási beállításokat a Beállítások > Munkafolyamat > Szakmai lektorálás résznél) és az egykattintásos lektorálási hozzáférés nincs engedélyezve. Az ütemezett feladatokat engedélyezni és konfigurálni kell (lásd az oldal konfigurálást)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatikus emlékeztető cikk szakmai lektorálásáról"

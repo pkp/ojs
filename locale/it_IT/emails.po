@@ -316,9 +316,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Questa email viene mandata dal revisore  al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta è stata accettata e sarà completata alla data specificata."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Rifiuto incarico di revisione"
 
@@ -329,9 +326,6 @@ msgstr ""
 "Sono spiacente di non poter revisionare la proposta, &quot;{$submissionTitle},&quot; per {$contextName}. Spero che ci siano future occasioni di collaborazione.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Questa email viene mandata dal revisore al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta è stata declinata."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -351,13 +345,6 @@ msgstr ""
 "Ti chiedo la cortesia di di confermare la volontà di portare a termine l'incarico.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Questa email viene mandata da un editor per ricordare al revisore che è "
-"attesa la revisione. Questa mail è utilizzata da un editor manualmente per "
-"inviare un reminder al revisore"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
@@ -382,13 +369,6 @@ msgstr ""
 "prendere in carico questo incarico.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Questa email viene inviata automaticamente quando il revisore non completa "
-"la revisione entro la scadenza. I reminder automatici sono attivati nelle "
-"impostazioni di Revisione."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Promemoria automatico revisione in attesa"
@@ -1212,10 +1192,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Questa mail parte automaticamente quanto la data di conferma di un revisore scade (vedi opzioni di revisione sotto Impostazioni > Flusso di lavoro > Revisione) e l'accesso alla revisione 'one-click' è disabilitato. I compiti programmati devono essere abilitati e configurati (vedi il file di configurazione del sito)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Ricordo della richiesta di revisione"

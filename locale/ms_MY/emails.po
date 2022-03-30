@@ -241,13 +241,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Permintaan Ulasan Artikel"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"E-mel ini dihantar secara automatik apabila tarikh akhir pengesahan pengulas "
-"berlalu (lihat Pilihan Ulasan di bawah Tetapan> Alur Kerja> Ulasan) dan "
-"akses pengulas satu klik dinyahdayakan. Tugas berjadual mesti didayakan dan "
-"dikonfigurasi (lihat fail konfigurasi laman web)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Peringatan Permintaan Ulasan Artikel"
@@ -883,14 +876,6 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Peringatan Ulasan Penyerahan Automatik"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"E-mel ini dihantar secara automatik apabila tarikh akhir pengulas berlalu ("
-"lihat Pilihan Ulasan di bawah Tetapan> Aliran Kerja> Ulasan) dan akses "
-"pengulas satu klik dinyahdayakan. Tugas berjadual mesti didayakan dan "
-"dikonfigurasi (lihat fail konfigurasi laman web)."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -918,12 +903,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "Peringatan Ulasan Penyerahan Automatik"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"E-mel ini dihantar oleh Editor Bahagian untuk mengingatkan pengulas bahawa "
-"ulasan tamat."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -949,12 +928,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Peringatan Ulasan Penyerahan"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"E-mel ini dikirim oleh Pengulas ke Editor Bahagian sebagai respon balas "
-"kepada permintaan ulasan untuk memaklumkan Editor Bahagian bahawa permintaan "
-"ulasan telah ditolak."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editor:<br />\n"
@@ -968,12 +941,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Tidak dapat Menyemak"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"E-mel ini dikirim oleh Pengulas ke Editor Bahagian sebagai respon balas "
-"kepada permintaan ulasan untuk memberitahu Editor Bahagian bahawa permintaan "
-"ulasan telah diterima dan akan diselesaikan pada tarikh yang ditentukan."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""

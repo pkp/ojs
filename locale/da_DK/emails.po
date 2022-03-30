@@ -272,10 +272,6 @@ msgstr ""
 "bedømmelsesprocessen</p><p>Tak for din overvejelse af denne forespørgsel. "
 "Din hjælp er meget værdsat.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Denne e-mail sendes automatisk når en bedømmers bekræftelsesdato er overskredet (se bedømmelsesindstillinger under Indstillinger > Workflow > Bedømmelse) og ’Aktiver adgang for bedømmere ved hjælp af ét klik’ er fravalgt. Tidsfrister og påmindelser skal være defineret."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Forespørgsel om bedømmelse af artikel"
 
@@ -363,9 +359,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet accepteret, og at bedømmelsen vil være fuldført til den angivne dato."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Kan ikke foretage bedømmelse"
 
@@ -376,9 +369,6 @@ msgstr ""
 "Jeg beklager, at jeg på nuværende tidspunkt ikke kan bedømme manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Tak, fordi du tænkte på mig, og du er altid velkommen til at kontakte mig en anden gang.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet afvist."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -398,13 +388,6 @@ msgstr ""
 "tak og med venlig hilsen</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Denne e-mail sendes af redaktøren til en bedømmer for at minde vedkommende "
-"om, at bedømmelsen skal afleveres. Denne e-mail bruges, når redaktøren "
-"manuelt vil sende en påmindelse til bedømmeren"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Påmindelse om at bedømmelse af manuskriptet bedes færdiggøres"
 
@@ -420,13 +403,6 @@ msgstr ""
 "dine bedømmelseskommentarer.</p><p>Kontakt mig venligst, hvis du har brug "
 "for en udsættelse af deadlinen. Jeg ser frem til at høre fra dig.</p><p>På "
 "forhånd tak og med venlig hilsen</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Denne e-mail sendes automatisk, når en bedømmer ikke har færdigggjort "
-"bedømmelsen inden forfaldsdatoen. Automatiske påmindelser om bedømmelse kan "
-"slåes til under indstillingerne for Bedømmelse under Workflow."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatisk påmindelse om bedømmelse af manuskript"

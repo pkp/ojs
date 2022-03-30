@@ -281,11 +281,6 @@ msgstr ""
 "<p>Kind regards,</p>"
 "{$signature}"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"This email is automatically sent when the deadline for a reviewer to respond to a review request passes and one-click "
-"reviewer access is disabled."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Article Review Request"
 
@@ -385,9 +380,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Unable to Review"
 
@@ -398,9 +390,6 @@ msgstr ""
 "I am afraid that at this time I am unable to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. Thank you for thinking of me, and another time feel free to call on me.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined."
 
 msgid "emails.reviewRemind.subject"
 msgstr "A reminder to please complete your review"
@@ -417,11 +406,6 @@ msgstr ""
 "<p>Thank you in advance and kind regards,</p>"
 "{$signature}"
 
-msgid "emails.reviewRemind.description"
-msgstr ""
-"This email is sent by an Editor to remind a reviewer that their review is due. "
-"This email is used when an editor manually  sends a reminder to the reviewer"
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "A reminder to please complete your review"
 
@@ -437,11 +421,6 @@ msgstr ""
 "<p>If you need an extension of the deadline, please contact me. I look forward to hearing from you.</p>"
 "<p>Thank you in advance and kind regards,</p>"
 "{$signature}"
-
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"This email is automatically sent when a reviewer has not completed their review by the due date. "
-"Automated review reminders are enabled in the Review settings."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automated Submission Review Reminder"

@@ -316,15 +316,6 @@ msgstr ""
 "autori ai manuscrisului, nu doar autorului înregistrat."
 
 #, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Acest e-mail este trimis automat la expirarea termenului de confirmare a "
-"revizorului (consultați Opțiuni de revizuire în Setări> Flux de lucru> "
-"Revizuire), iar prin apăsarea unui singur clic poate fi dezactivat. "
-"Sarcinile programate trebuie să fie activate și configurate (consultați "
-"fișierul de configurare a site-ului)."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -806,13 +797,6 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Memento automat de revizuire a manuscrisului"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Acest email este trimis automat atunci când un evaluator nu și-a finalizat "
-"evaluarea până la data limită. Memento-urile automate de evaluare sunt "
-"activate în setările de evaluare."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -863,13 +847,6 @@ msgid "emails.reviewRemindOneclick.subject"
 msgstr "Memento de revizuire a trimiterii"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Acest email este trimis de un editor pentru a reaminti evaluatorului că "
-"evaluarea sa trebuia trimisă. Acest email este utilizat atunci când un "
-"editor trimite manual un memento evaluatorului"
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -894,12 +871,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Memento de evaluare a manuscrisului"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Acest e-mail este trimis de un revizor, editorului de secțiune ca răspuns la "
-"o cerere de revizuire pentru a notifica editorul de secțiune că cererea de "
-"revizuire a fost respinsă."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editori:<br />\n"
@@ -912,13 +883,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Nu poate fi revizuit"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Acest e-mail este trimis de către un revizor, editorului de secțiune ca "
-"răspuns la o cerere de revizuire pentru a notifica editorul de secțiune că "
-"cererea de revizuire a fost acceptată și va fi finalizată până la data "
-"specificată."
 
 msgid "emails.subscriptionRenewInstl.description"
 msgstr ""

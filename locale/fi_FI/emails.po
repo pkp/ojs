@@ -346,10 +346,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "This email is automatically sent when a reviewer's confirmation due date elapses (see Review Options under Settings > Workflow > Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Artikkelin arviointipyyntö"
 
@@ -458,9 +454,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Arviointipyynnön hylkääminen"
 
@@ -471,9 +464,6 @@ msgstr ""
 "En valitettavasti voi tällä kertaa suorittaa käsikirjoituksen &quot;{$submissionTitle}&quot; arviointia julkaisulle {$contextName}. Kiitos, että pyysitte minua tähän tehtävään. Toivon, että otatte vastaisuudessakin minuun yhteyttä arviointeja koskien.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been declined."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -502,10 +492,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "This email is sent by a Section Editor to remind a reviewer that their review is due."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automaattinen muistutus käsikirjoituksen arvioinnista"
 
@@ -531,10 +517,6 @@ msgstr ""
 "\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Settings > Workflow > Review) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automaattinen muistutus käsikirjoituksen arvioinnista"
