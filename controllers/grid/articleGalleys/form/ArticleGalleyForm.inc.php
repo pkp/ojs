@@ -104,12 +104,17 @@ class ArticleGalleyForm extends Form
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
-                $articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
-                if ($articleGalley &&
-                    (!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
-                ) {
-                    $this->addError('urlPath', __('publication.urlPath.duplicate'));
-                    $this->addErrorField('urlPath');
+                $galleys = Repo::articleGalley()->getMany(
+                    Repo::articleGalley()
+                        ->getCollector()
+                        ->filterByPublicationIds(['publicationIds' => $this->_publication->getId()])
+                );
+                foreach ($galleys as $galley) {
+                    $isDuplicateUrl = $this->_articleGalley->getId() !== $galley->getId() && $this->getData('urlPath') === $this->_articleGalley->getData('urlPath');
+                    if ((!$this->_articleGalley || $isDuplicateUrl)) {
+                        $this->addError('urlPath', __('publication.urlPath.duplicate'));
+                        $this->addErrorField('urlPath');
+                    }
                 }
             }
         }
@@ -157,27 +162,30 @@ class ArticleGalleyForm extends Form
     public function execute(...$functionArgs)
     {
         $articleGalley = $this->_articleGalley;
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
 
         if ($articleGalley) {
-            $articleGalley->setLabel($this->getData('label'));
-            $articleGalley->setLocale($this->getData('galleyLocale'));
-            $articleGalley->setData('urlPath', $this->getData('urlPath'));
-            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
             // Update galley in the db
-            $articleGalleyDao->updateObject($articleGalley);
+            $newData = [
+                'label' => $this->getData('label'),
+                'galleyLocale' => $this->getData('galleyLocale'),
+                'urlPath' => $this->getData('urlPath'),
+                'urlRemote' => $this->getData('urlRemote')
+            ];
+            Repo::articleGalley()->edit($articleGalley, $newData);
         } else {
             // Create a new galley
-            $articleGalley = $articleGalleyDao->newDataObject();
-            $articleGalley->setData('publicationId', $this->_publication->getId());
-            $articleGalley->setLabel($this->getData('label'));
-            $articleGalley->setLocale($this->getData('galleyLocale'));
-            $articleGalley->setData('urlPath', $this->getData('urlPath'));
-            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
+            $articleGalley = Repo::articleGalley()->newDataObject([
+                'publicationId' => $this->_publication->getId(),
+                'label' => $this->getData('label'),
+                'galleyLocale' => $this->getData('galleyLocale'),
+                'urlPath' => $this->getData('urlPath'),
+                'urlRemote' => $this->getData('urlRemote')
+            ]);
 
-            // Insert new galley into the db
-            $articleGalleyDao->insertObject($articleGalley);
+
+            $galleyId = Repo::articleGalley()->add($articleGalley);
+            $articleGalley = Repo::articleGalley()->get($galleyId);
             $this->_articleGalley = $articleGalley;
         }
 
