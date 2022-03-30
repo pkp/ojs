@@ -760,7 +760,7 @@ class DataciteXmlFilter extends NativeExportFilter
         // Use the journal locale as fallback.
         $locales[] = $context->getPrimaryLocale();
         // Use form locales as fallback.
-        $formLocales = array_keys($context->getSupportedFormLocaleNames());
+        $formLocales = $context->getSupportedFormLocales();
         // Sort form locales alphabetically so that
         // we get a well-defined order.
         sort($formLocales);

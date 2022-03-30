@@ -189,7 +189,7 @@ class DOAJXmlFilter extends NativeExportFilter
             $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->url(null, 'article', 'view', $pubObject->getId()), ENT_COMPAT, 'UTF-8')));
             $node->setAttribute('format', 'html');
             // Keywords
-            $supportedLocales = array_keys($context->getSupportedFormLocaleNames());
+            $supportedLocales = $context->getSupportedFormLocales();
             $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
             $articleKeywords = $dao->getKeywords($publication->getId(), $supportedLocales);
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
