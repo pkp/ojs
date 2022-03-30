@@ -18,13 +18,13 @@
  *  a Submission object.
  */
 
-use APP\submission\Submission;
-use APP\issue\IssueAction;
-use PKP\metadata\MetadataDataObjectAdapter;
-use PKP\metadata\MetadataDescription;
 use APP\facades\Repo;
+use APP\issue\IssueAction;
+use APP\submission\Submission;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleConversion;
+use PKP\metadata\MetadataDataObjectAdapter;
+use PKP\metadata\MetadataDescription;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -146,8 +146,11 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Format
         if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
-            $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+            );
             $formats = [];
             while ($galley = $galleys->next()) {
                 $dc11Description->addStatement('dc:format', $galley->getFileType());
@@ -185,8 +188,11 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Get galleys and supp files.
         $galleys = [];
         if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
-            $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+            );
         }
 
         // Language

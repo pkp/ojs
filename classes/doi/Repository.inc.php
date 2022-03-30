@@ -15,7 +15,6 @@ namespace APP\doi;
 
 use APP\article\ArticleGalley;
 use APP\core\Request;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\Jobs\Doi\DepositIssue;
@@ -169,8 +168,12 @@ class Repository extends \PKP\doi\Repository
             }
 
             // Galleys
-            /** @var ArticleGalley[] $galleys */
-            $galleys = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
+            $galleys = Repo::articleGalley()->getMany(
+                Repo::articleGalley()
+                    ->getCollector()
+                    ->filterByPublicationIds(['publicationIds' => $publication->getId()])
+            );
+
             foreach ($galleys as $galley) {
                 $galleyDoiId = $galley->getData('doiId');
                 if (!empty($galleyDoiId) && $context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {

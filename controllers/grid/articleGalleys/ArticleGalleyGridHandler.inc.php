@@ -13,19 +13,19 @@
  * @brief Handle article galley grid requests.
  */
 
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
-use APP\facades\Repo;
+use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
-use PKP\controllers\grid\feature\OrderGridItemsFeature;
-use PKP\security\authorization\WorkflowStageAccessPolicy;
-use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\internal\RepresentationRequiredPolicy;
+use PKP\security\authorization\PublicationAccessPolicy;
+use PKP\security\authorization\WorkflowStageAccessPolicy;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
 
@@ -178,10 +178,8 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
-        $galley = $galleyDao->getById($rowId);
-        $galley->setSequence($newSequence);
-        $galleyDao->updateObject($galley);
+        $galley = Repo::articleGalley()->get((int) $rowId);
+        Repo::articleGalley()->edit($galley, ['seq' => $newSequence]);
     }
 
     //
@@ -223,15 +221,11 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function loadData($request, $filter = null)
     {
-        $galleyIterator = Services::get('galley')->getMany([
-            'publicationIds' => [$this->getPublication()->getId()],
-        ]);
-        // ArticleGalleyGridRow::initialize expects the array
-        // key to match the galley id
-        $galleys = [];
-        foreach ($galleyIterator as $galley) {
-            $galleys[$galley->getId()] = $galley;
-        }
+        $galleys = Repo::articleGalley()->getMany(
+            Repo::articleGalley()
+                ->getCollector()
+                ->filterByPublicationIds([$this->getPublication()->getId()])
+        );
         return $galleys;
     }
 
@@ -248,8 +242,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function identifiers($args, $request)
     {
-        $representationDao = Application::getRepresentationDAO();
-        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        $representation = Repo::articleGalley()->get($request->getUserVar('representationId'));
         import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($representation);
         $form->initData();
@@ -336,8 +329,7 @@ class ArticleGalleyGridHandler extends GridHandler
         if (!$galley || !$request->checkCSRF()) {
             return new JSONMessage(false);
         }
-
-        Services::get('galley')->delete($galley);
+        Repo::articleGalley()->delete($galley);
 
         $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
         $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
