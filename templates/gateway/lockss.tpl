@@ -27,12 +27,12 @@
 
 <p>{if $prevYear !== null}<a href="{url op="lockss" year=$prevYear}" class="action">&lt;&lt; Previous</a>{else}<span class="disabled heading">&lt;&lt; Previous</span>{/if} | {if $nextYear !== null}<a href="{url op="lockss" year=$nextYear}" class="action">Next &gt;&gt;</a>{else}<span class="disabled heading">Next &gt;&gt;</span>{/if}</p>
 
-<h3>Archive of Published Issues: {$year|escape}</h3>
+<h3>Archive of Published Issues: {$year|default:''|escape}</h3>
 
 <ul>
-{iterate from=issues item=issue}
+{foreach from=$issues item=issue}
 	<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></li>
-{/iterate}
+{/foreach}
 </ul>
 
 
