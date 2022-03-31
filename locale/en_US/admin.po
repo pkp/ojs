@@ -171,3 +171,6 @@ msgstr ""
 
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
 msgstr "The bulk email feature has been disabled for this journal. Enable this feature in <a href=\"{$siteSettingsUrl}\">Admin > Site Settings</a>."
+
+msgid "admin.siteManagement.description"
+msgstr "Add, edit or remove journals from this site and manage site-wide settings."
