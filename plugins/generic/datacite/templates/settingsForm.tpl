@@ -29,6 +29,7 @@
 </div>
 
 <form class="pkp_form" id="dataciteSettingsForm" method="post" action="{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT op="manage" plugin="DataciteExportPlugin" category="importexport" verb="save"}">
+	{csrf}
 	{if $doiPluginSettingsLinkAction}
 		{fbvFormArea id="doiPluginSettingsLink"}
 			{fbvFormSection}
