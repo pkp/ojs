@@ -1,10 +1,10 @@
-# M. Ali <vorteem@gmail.com>, 2021.
+# M. Ali <vorteem@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-12-04 03:23+0000\n"
+"PO-Revision-Date: 2022-04-03 23:36+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -1976,3 +1976,26 @@ msgstr ""
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "المقالات"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"استعمال الأنماط الافتراضية <br />%j.v%vi%i للأعداد<br />%j.v%vi%i.%a "
+"للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية."
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"يرجى تحديد وكالة التسجيل التي ترغب باستعمالها عند إيداع معرفات المكونات "
+"الرقمية."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "وكالة التسجيل"
+
+msgid "doi.manager.displayName"
+msgstr "معرفات المكونات الرقمية"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "في مرحلة التدقيق الإملائي"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"تعيين معرفات المكونات الرقمية (DOI) للمقالات، الأعداد والألواح الطباعية."
