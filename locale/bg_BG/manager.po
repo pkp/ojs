@@ -1,9 +1,9 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-28 21:22+0000\n"
-"Last-Translator: Albena Vassileva <albena.ava@gmail.com>\n"
+"PO-Revision-Date: 2022-04-04 18:28+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
 "Language: bg_BG\n"
@@ -2238,7 +2238,7 @@ msgid "doi.manager.submissionDois"
 msgstr "DOI на статии"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr "Броевете, които поискахте, не бяха намерени"
+msgstr "Броевете, които търсите, не бяха намерени"
 
 msgid "api.issue.403.canEditPublishedDoi"
 msgstr "Само DOI могат да бъдат редактирани след публикуване на публикацията"
@@ -2339,8 +2339,8 @@ msgstr "Моля, въведете шаблон за DOI суфикс за бр�
 
 msgid "doi.manager.settings.doiSuffixCustomIdentifier"
 msgstr ""
-"Въведете уникален DOI суфикс за всеки публикуван обект. В страницата за мета-"
-"данните на всеки обект ще намерите допълнително поле за въвеждане на DOI."
+"Въведете уникален DOI суфикс за всеки публикуван обект. В страницата за "
+"метаданните на всеки обект ще намерите допълнително поле за въвеждане на DOI."
 
 msgid "doi.manager.settings.doiSuffixDefault.description"
 msgstr ""
@@ -2397,7 +2397,7 @@ msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Статии"
 
 msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Издания"
+msgstr "Броеве"
 
 msgid "doi.manager.settings.explainDois"
 msgstr ""
@@ -2405,7 +2405,7 @@ msgstr ""
 "Identifiers (DOI):"
 
 msgid "doi.manager.settings.doiObjects"
-msgstr "Съдържание на списанието"
+msgstr "Съдържание на списание"
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2413,7 +2413,7 @@ msgstr ""
 "използвате DOI идентификатори в OJS:"
 
 msgid "doi.manager.displayName"
-msgstr "DOI"
+msgstr "DOI обекти"
 
 msgid "doi.readerDisplayName"
 msgstr "DOI"
@@ -2432,15 +2432,15 @@ msgstr "На етап редактиране"
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
 "Използвайте стандартни шаблони.<br />%j.v%vi%i за издания<br />%j.v%vi%i.%a "
-"за статии<br />%j.v%vi%i.%a.g%g за типографии."
+"\" \"за статии<br />%j.v%vi%i.%a.g%g за типографии."
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
-"Изберете за кои обекти да се назначи DOI. Повечето списания назначават DOI "
-"на статиите, но може да решите да сложите DOI на всички публикувани "
-"материали."
+"Изберете на кои елементи ще бъде присвоен DOI. Повечето списания присвояват "
+"DOI на статии, но може да пожелаете да присвоите DOI на всички публикувани "
+"елементи."
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
-"Назначи Digital Object Identifier (DOI) на статии, издания и типографски "
-"материали."
+"Присвояване на цифрови идентификатори на обекти (DOI) на статии, броеве и "
+"типографии."
