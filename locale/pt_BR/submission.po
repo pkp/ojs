@@ -1,11 +1,12 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
+# Diego Abadan <diego@lepidus.com.br>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-04-01 19:31+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2022-04-05 08:33+0000\n"
+"Last-Translator: Diego Abadan <diego@lepidus.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -43,7 +44,7 @@ msgid "grid.action.workflow"
 msgstr "Fluxo de trabalho para a submissão"
 
 msgid "submission.abstract.wordCount.description"
-msgstr "O abstract deve ter {$wordCount} palavras ou menos."
+msgstr "O resumo deve ter {$wordCount} palavras ou menos."
 
 msgid "submission.submit.noContext"
 msgstr "Não foi possível encontrar esse envio."
@@ -118,7 +119,7 @@ msgid "editor.submission.decision.sendExternalReview"
 msgstr "Enviar para Avaliação"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "A submissão dos metadados foi realizada."
+msgstr "A submissão dos metadados da edição foi realizada."
 
 msgid "submission.upload.fileContents"
 msgstr "Componentes do artigo"
@@ -157,7 +158,9 @@ msgid "submission.submit.form.abstractRequired"
 msgstr "Por favor, informe o resumo do seu artigo."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Seu abstract é muito longo. Reduza-o para abaixo do limite de palavras indicado para esta seção."
+msgstr ""
+"Seu resumo é muito longo. Reduza-o para abaixo do limite de palavras "
+"indicado para esta seção."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Por favor, selecione o papel do colaborador."
