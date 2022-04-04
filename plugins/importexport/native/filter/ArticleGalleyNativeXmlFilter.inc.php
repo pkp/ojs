@@ -10,7 +10,7 @@
  * @class ArticleGalleyNativeXmlFilter
  * @ingroup plugins_importexport_native
  *
- * @brief Class that converts an ArticleGalley to a Native XML document.
+ * @brief Class that converts an Galley to a Native XML document.
  */
 
 use APP\facades\Repo;

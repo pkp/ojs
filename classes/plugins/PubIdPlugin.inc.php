@@ -102,8 +102,8 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                     }
                     if ($representationEnabled) {
                         foreach ($publications as $publication) {
-                            $representations = Repo::articleGalley()->getMany(
-                                Repo::articleGalley()
+                            $representations = Repo::galley()->getMany(
+                                Repo::galley()
                                     ->getCollector()
                                     ->filterByPublicationIds([$publication->getId()])
                             );
@@ -372,8 +372,8 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
             }
             if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
                 foreach ((array) $submission->getData('publications') as $publication) {
-                    $representations = Application::getRepresentationDAO()->getByPublicationId($publication->getId(), $submission->getData('contextId'));
-                    while ($representation = $representations->next()) {
+                    $representations = Application::getRepresentationDAO()->getByPublicationId($publication->getId());
+                    foreach ($representations as $representation) {
                         if ($representationPubIdEnabled) { // Does this option have to be enabled here for?
                             Application::getRepresentationDAO()->deletePubId($representation->getId(), $pubIdType);
                         }

@@ -77,7 +77,7 @@ class ArticleGalleyGridHandler extends GridHandler
     /**
      * Get the authorized galley.
      *
-     * @return ArticleGalley
+     * @return Galley
      */
     public function getGalley()
     {
@@ -178,8 +178,8 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence)
     {
-        $galley = Repo::articleGalley()->get((int) $rowId);
-        Repo::articleGalley()->edit($galley, ['seq' => $newSequence]);
+        $galley = Repo::galley()->get((int) $rowId);
+        Repo::galley()->edit($galley, ['seq' => $newSequence]);
     }
 
     //
@@ -221,8 +221,8 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function loadData($request, $filter = null)
     {
-        $galleys = Repo::articleGalley()->getMany(
-            Repo::articleGalley()
+        $galleys = Repo::galley()->getMany(
+            Repo::galley()
                 ->getCollector()
                 ->filterByPublicationIds([$this->getPublication()->getId()])
         );
@@ -242,7 +242,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function identifiers($args, $request)
     {
-        $representation = Repo::articleGalley()->get($request->getUserVar('representationId'));
+        $representation = Repo::galley()->get($request->getUserVar('representationId'));
         import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($representation);
         $form->initData();
@@ -329,7 +329,7 @@ class ArticleGalleyGridHandler extends GridHandler
         if (!$galley || !$request->checkCSRF()) {
             return new JSONMessage(false);
         }
-        Repo::articleGalley()->delete($galley);
+        Repo::galley()->delete($galley);
 
         $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
         $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());

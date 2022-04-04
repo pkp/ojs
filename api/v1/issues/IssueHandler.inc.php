@@ -197,7 +197,7 @@ class IssueHandler extends APIHandler
         $issues = Repo::issue()->getMany($collector);
 
         return $response->withJson([
-            'items' => iterator_to_array(Repo::issue()->getSchemaMap()->summarizeMany($issues), false),
+            'items' => iterator_to_array(Repo::issue()->getSchemaMap()->summarizeMany($issues, $context), false),
             'itemsMax' => Repo::issue()->getCount($collector->limit(null)->offset(null)),
         ], 200);
     }
@@ -223,6 +223,7 @@ class IssueHandler extends APIHandler
 
         $data = Repo::issue()->getSchemaMap()->map(
             $issue,
+            $context,
             $this->getUserGroups($context->getId()),
             $this->getGenres($context->getId())
         );
@@ -251,6 +252,7 @@ class IssueHandler extends APIHandler
 
         $data = Repo::issue()->getSchemaMap()->map(
             $issue,
+            $context,
             $this->getUserGroups($context->getId()),
             $this->getGenres($context->getId())
         );

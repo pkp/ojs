@@ -56,7 +56,7 @@ class BackendDoiHandler extends PKPBackendDoiHandler
         $request = $this->getRequest();
         $context = $request->getContext();
 
-        $galley = Repo::articleGalley()->get((int)$args['galleyId']);
+        $galley = Repo::galley()->get((int)$args['galleyId']);
         if (!$galley) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
@@ -72,14 +72,14 @@ class BackendDoiHandler extends PKPBackendDoiHandler
             return $response->withStatus(404)->withJsonError('api.dois.404.doiNotFound');
         }
 
-        $galley = Repo::articleGalley()->edit($galley, ['doiId' => $doi->getId()]);
+        $galley = Repo::galley()->edit($galley, ['doiId' => $doi->getId()]);
 
         $publicationId = $galley->getData('publicationId');
         $publication = Repo::publication()->get((int)$publicationId);
         $submissionId = $publication->getData('submissionId');
 
         $submission = Repo::submission()->get((int)$submissionId);
-        $galleyProps = Repo::articleGalley()->getSchemaMap($submission, $publication)->map($galley);
+        $galleyProps = Repo::galley()->getSchemaMap($submission, $publication)->map($galley);
 
         return $response->withJson($galleyProps, 200);
     }

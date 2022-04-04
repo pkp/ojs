@@ -149,7 +149,7 @@ class ArticleHandler extends Handler
         }
 
         if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
-            $galleys = (array) $this->publication->getData('galleys');
+            $galleys = $this->publication->getData('galleys');
             foreach ($galleys as $galley) {
                 if ($galley->getBestGalleyId() == $galleyId) {
                     $this->galley = $galley;
@@ -167,7 +167,7 @@ class ArticleHandler extends Handler
             if (!$this->galley) {
                 $publications = $submission->getPublishedPublications();
                 foreach ($publications as $publication) {
-                    foreach ((array) $publication->getData('galleys') as $galley) {
+                    foreach ($publication->getData('galleys') as $galley) {
                         if ($galley->getBestGalleyId() == $galleyId) {
                             $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId()]);
                         }
@@ -411,8 +411,8 @@ class ArticleHandler extends Handler
         $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
-                $articleGalleys = Repo::articleGalley()->getMany(
-                    Repo::articleGalley()
+                $articleGalleys = Repo::galley()->getMany(
+                    Repo::galley()
                         ->getCollector()
                         ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
                 );

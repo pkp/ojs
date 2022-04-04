@@ -23,6 +23,7 @@ use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\security\Role;
+use PKP\submission\RepresentationDAOInterface;
 
 define('REQUIRES_XSL', false);
 
@@ -180,12 +181,10 @@ class Application extends PKPApplication
 
     /**
      * Get the representation DAO.
-     *
-     * @return RepresentationDAO
      */
-    public static function getRepresentationDAO()
+    public static function getRepresentationDAO(): RepresentationDAOInterface
     {
-        return Repo::articleGalley()->dao;
+        return Repo::galley()->dao;
     }
 
     /**

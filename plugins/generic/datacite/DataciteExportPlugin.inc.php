@@ -13,10 +13,9 @@
  * @brief DataCite export/registration plugin.
  */
 
-use APP\article\ArticleGalley;
 use APP\facades\Repo;
-
 use APP\issue\Issue;
+
 use APP\plugins\DOIPubIdExportPlugin;
 use APP\submission\Submission;
 use PKP\context\Context;
@@ -24,6 +23,7 @@ use PKP\core\DataObject;
 use PKP\core\PKPString;
 use PKP\doi\Doi;
 use PKP\file\TemporaryFileManager;
+use PKP\galley\Galley;
 use PKP\submission\Representation;
 
 // DataCite API
@@ -441,14 +441,14 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      *
      * @param Request $request
      * @param Context $context
-     * @param Issue|Submission|ArticleGalley $object
+     * @param Issue|Submission|Galley $object
      */
     public function _getObjectUrl($request, $context, $object)
     {
         //Dispatcher needed when  called from CLI
         $dispatcher = $request->getDispatcher();
         // Retrieve the article of article files.
-        if ($object instanceof ArticleGalley) {
+        if ($object instanceof Galley) {
             $publication = Repo::publication()->get($object->getData('publicationId'));
             $articleId = $publication->getData('submissionId');
             $cache = $this->getCache();
@@ -467,7 +467,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             case $object instanceof Submission:
                 $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', $object->getBestId(), null, null, true);
                 break;
-            case $object instanceof ArticleGalley:
+            case $object instanceof Galley:
                 $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true);
                 break;
         }

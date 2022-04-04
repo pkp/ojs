@@ -53,7 +53,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
     {
         $galley = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($galley, 'ArticleGalley') && !empty($columnId));
+        assert(is_a($galley, 'Galley') && !empty($columnId));
 
         $publication = Repo::publication()->get($galley->getData('publicationId'));
         $submission = Repo::submission()->get($publication->getData('submissionId'));
@@ -125,7 +125,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
     {
         $submissionGalley = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($submissionGalley, 'ArticleGAlley') && !empty($columnId));
+        assert(is_a($submissionGalley, 'Galley') && !empty($columnId));
 
         switch ($columnId) {
             case 'id':

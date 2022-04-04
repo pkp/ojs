@@ -29,7 +29,7 @@
 			{fbvElement type="text" label="submission.layout.galleyLabelInstructions" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true required=true}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true required=true}
+			{fbvElement type="select" id="locale" label="common.language" from=$supportedLocales selected=$locale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true required=true}
 		{/fbvFormSection}
 		{fbvFormSection for="remotelyHostedContent" list=true}
 			{fbvElement type="checkbox" label="submission.layout.galley.remotelyHostedContent" id="remotelyHostedContent"}

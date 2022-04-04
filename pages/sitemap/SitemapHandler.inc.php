@@ -60,8 +60,8 @@ class SitemapHandler extends PKPSitemapHandler
 
 
 
-                    $galleys = Repo::articleGalley()->getMany(
-                        Repo::articleGalley()
+                    $galleys = Repo::galley()->getMany(
+                        Repo::galley()
                             ->getCollector()
                             ->filterByPublicationIds([($submission->getCurrentPublication()->getId())])
                     );

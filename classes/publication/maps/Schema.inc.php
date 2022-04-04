@@ -29,7 +29,7 @@ class Schema extends \PKP\publication\maps\Schema
             if ($anonymize) {
                 $output['galleys'] = [];
             } else {
-                $output['galleys'] = Repo::articleGalley()->getSchemaMap($this->submission, $publication)
+                $output['galleys'] = Repo::galley()->getSchemaMap($this->submission, $publication)
                     ->summarizeMany($publication->getData('galleys'));
             }
         }

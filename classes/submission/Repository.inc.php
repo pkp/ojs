@@ -108,8 +108,8 @@ class Repository extends \PKP\submission\Repository
 
         // Galleys
         if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION)) {
-            $galleys = Repo::articleGalley()->getMany(
-                Repo::articleGalley()
+            $galleys = Repo::galley()->getMany(
+                Repo::galley()
                     ->getCollector()
                     ->filterByPublicationIds(['publicationIds' => $publication->getId()])
             );
@@ -117,7 +117,7 @@ class Repository extends \PKP\submission\Repository
                 if (empty($galley->getData('doiId'))) {
                     $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
                     if ($doiId !== null) {
-                        Repo::articleGalley()->edit($galley, ['doiId' => $doiId]);
+                        Repo::galley()->edit($galley, ['doiId' => $doiId]);
                     }
                 }
             }

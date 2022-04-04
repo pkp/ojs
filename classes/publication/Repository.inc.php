@@ -131,7 +131,7 @@ class Repository extends \PKP\publication\Repository
                 $newGalley = clone $galley;
                 $newGalley->setData('id', null);
                 $newGalley->setData('publicationId', $newId);
-                Repo::articleGalley()->add($newGalley);
+                Repo::galley()->add($newGalley);
             }
         }
 
@@ -162,12 +162,12 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc \PKP\publication\Repository::delete() */
     public function delete(Publication $publication)
     {
-        $collector = Repo::articleGalley()->getCollector();
+        $collector = Repo::galley()->getCollector();
         $collector->filterByPublicationIds([$publication->getId()]);
-        $galleys = Repo::articleGalley()->getMany($collector);
+        $galleys = Repo::galley()->getMany($collector);
 
         foreach ($galleys as $galley) {
-            Repo::articleGalley()->delete($galley);
+            Repo::galley()->delete($galley);
         }
 
         parent::delete($publication);

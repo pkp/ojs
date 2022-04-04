@@ -511,7 +511,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Update the given object.
      *
-     * @param Issue|Submission|ArticleGalley $object
+     * @param Issue|Submission|Galley $object
      */
     protected function updateObject($object)
     {
@@ -826,7 +826,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     {
         $galleys = [];
         foreach ($galleyIds as $galleyId) {
-            $articleGalley = Repo::articleGalley()->get((int) $galleyId);
+            $articleGalley = Repo::galley()->get((int) $galleyId);
             if ($articleGalley) {
                 $galleys[] = $articleGalley;
             }

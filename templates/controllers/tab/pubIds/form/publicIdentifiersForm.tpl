@@ -25,7 +25,7 @@
 		<input type="hidden" name="tabPos" value="1" />
 		<input type="hidden" name="displayedInContainer" value="{$formParams.displayedInContainer|escape}" />
 		<input type="hidden" name="tab" value="identifiers" />
-{elseif $pubObject instanceof ArticleGalley}
+{elseif $pubObject instanceof \PKP\galley\Galley}
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url component="grid.articleGalleys.ArticleGalleyGridHandler" op="updateIdentifiers" submissionId=$submissionId publicationId=$pubObject->getData('publicationId') representationId=$pubObject->getId() escape=false}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="representationIdentifiersFormFieldsNotification"}
 {elseif $pubObject instanceof SubmissionFile}

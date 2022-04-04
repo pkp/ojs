@@ -13,17 +13,19 @@
 
 namespace APP\doi;
 
-use APP\article\ArticleGalley;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\Jobs\Doi\DepositIssue;
+use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use PKP\context\Context;
 use PKP\core\DataObject;
+use PKP\db\DAORegistry;
+use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Representation;
 
@@ -37,7 +39,6 @@ class Repository extends \PKP\doi\Repository
     {
         parent::__construct($dao, $request, $schemaService);
     }
-
 
     /**
      * Create a DOI for the given publication.
@@ -66,7 +67,7 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given galley
      */
-    public function mintGalleyDoi(ArticleGalley $galley, Publication $publication, Submission $submission, Context $context): ?int
+    public function mintGalleyDoi(Galley $galley, Publication $publication, Submission $submission, Context $context): ?int
     {
         assert(!is_null($submission));
         $issue = Repo::issue()->getBySubmissionId($submission->getId());
@@ -88,7 +89,8 @@ class Repository extends \PKP\doi\Repository
     public function mintIssueDoi(Issue $issue): ?int
     {
         /** @var JournalDAO $contextDao */
-        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $contextDao = DAORegistry::getDAO('JournalDAO');
+        /** @var Journal $context */
         $context = $contextDao->getById($issue->getData('journalId'));
 
         if ($context->getId() != $issue->getJournalId()) {
@@ -158,7 +160,8 @@ class Repository extends \PKP\doi\Repository
 
 
         /** @var JournalDAO $contextDao */
-        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $contextDao = DAORegistry::getDAO('JournalDAO');
+        /** @var Journal $context */
         $context = $contextDao->getById($submission->getData('contextId'));
 
         foreach ($publications as $publication) {
@@ -168,8 +171,8 @@ class Repository extends \PKP\doi\Repository
             }
 
             // Galleys
-            $galleys = Repo::articleGalley()->getMany(
-                Repo::articleGalley()
+            $galleys = Repo::galley()->getMany(
+                Repo::galley()
                     ->getCollector()
                     ->filterByPublicationIds(['publicationIds' => $publication->getId()])
             );
@@ -201,7 +204,8 @@ class Repository extends \PKP\doi\Repository
         $issueDoiId = $issue->getData('doiId');
 
         /** @var JournalDAO $contextDao */
-        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $contextDao = DAORegistry::getDAO('JournalDAO');
+        /** @var Journal $context */
         $context = $contextDao->getById($issue->getData('journalId'));
 
         if (!empty($issueDoiId)) {

@@ -14,15 +14,15 @@
  */
 
 
-use APP\article\ArticleGalley;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
-
 use APP\template\TemplateManager;
+
+use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 
@@ -326,7 +326,7 @@ class URNPubIdPlugin extends PubIdPlugin
         }
 
         // URNs are already added to property values for Publications and Galleys
-        if ($object instanceof Publication || $object instanceof ArticleGalley) {
+        if ($object instanceof Publication || $object instanceof Galley) {
             return;
         }
 

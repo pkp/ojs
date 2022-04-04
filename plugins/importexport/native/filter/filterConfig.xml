@@ -87,7 +87,7 @@
 			symbolic="article-galley=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.article.ArticleGalley"
+			inputType="class::lib.pkp.classes.galley.Galley"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Article Galley native XML input -->
 		<filterGroup

@@ -26,8 +26,8 @@ namespace APP\submission;
 use APP\core\Application;
 use APP\core\Services;
 
-use PKP\facades\Locale;
 use APP\facades\Repo;
+use PKP\facades\Locale;
 use PKP\submission\PKPSubmission;
 
 class Submission extends PKPSubmission
@@ -269,7 +269,7 @@ class Submission extends PKPSubmission
     /**
      * Get the galleys for an article.
      *
-     * @return array ArticleGalley
+     * @return array Galley
      *
      * @deprecated 3.2.0.0
      */
@@ -277,7 +277,7 @@ class Submission extends PKPSubmission
     {
         $galleys = $this->getData('galleys');
         if (is_null($galleys)) {
-            $this->setData('galleys', Application::get()->getRepresentationDAO()->getByPublicationId($this->getCurrentPublication()->getId(), $this->getData('contextId'))->toArray());
+            $this->setData('galleys', Application::get()->getRepresentationDAO()->getByPublicationId($this->getCurrentPublication()->getId()));
             return $this->getData('galleys');
         }
         return $galleys;
@@ -286,7 +286,7 @@ class Submission extends PKPSubmission
     /**
      * Get the localized galleys for an article.
      *
-     * @return array ArticleGalley
+     * @return array Galley
      *
      * @deprecated 3.2.0.0
      */
@@ -299,10 +299,6 @@ class Submission extends PKPSubmission
                 if ($allGalleys[$key]->getLocale() == $tryLocale) {
                     $galleys[] = $allGalleys[$key];
                 }
-            }
-            if (!empty($galleys)) {
-                HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', [&$galleys]);
-                return $galleys;
             }
         }
 

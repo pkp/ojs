@@ -30,13 +30,13 @@ class DAO extends \PKP\submission\DAO
         $publicationIds = Repo::publication()->getIds($publicationCollector);
 
 
-        $galleys = Repo::articleGalley()->getMany(
-            Repo::articleGalley()
+        $galleys = Repo::galley()->getMany(
+            Repo::galley()
                 ->getCollector()
                 ->filterByPublicationIds($publicationIds)
         );
         foreach ($galleys as $galley) {
-            Repo::articleGalley()->delete($galley);
+            Repo::galley()->delete($galley);
         }
 
 

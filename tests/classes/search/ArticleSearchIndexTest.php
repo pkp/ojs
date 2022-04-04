@@ -20,8 +20,10 @@ import('classes.i18n.Locale'); // Causes mocked Locale class to be loaded
 import('lib.pkp.tests.PKPTestCase');
 
 use APP\submission\Submission;
+use Illuminate\Support\Facades\App;
 use PKP\core\ArrayItemIterator;
 use PKP\db\DAORegistry;
+use PKP\galley\DAO as GalleyDAO;
 use PKP\submissionFile\SubmissionFile;
 
 class ArticleSearchIndexTest extends PKPTestCase
@@ -37,7 +39,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         $mockedDaos = parent::getMockedDAOs();
         $mockedDaos += [
             'ArticleSearchDAO', 'JournalDAO',
-            'ArticleGalleyDAO'
+            'GalleyDAO'
         ];
         return $mockedDaos;
     }
@@ -408,13 +410,13 @@ class ArticleSearchIndexTest extends PKPTestCase
     }
 
     /**
-     * Mock and register an ArticleGalleyDAO as a test back end for
+     * Mock and register a GalleyDAO as a test back end for
      * the ArticleSearchIndex class.
      */
     private function registerFileDAOs($expectMethodCall)
     {
         // Mock file DAOs.
-        App::instance(\APP\articleGalley\DAO::class, \Mockery::mock(\APP\articleGalley\DAO::class, function ($mock) use ($expectMethodCall) {
+        App::instance(GalleyDAO::class, \Mockery::mock(GalleyDAO::class, function ($mock) use ($expectMethodCall) {
             if ($expectMethodCall) {
                 $mock->shouldReceive('getBySubmissionId')->andReturn([]);
             } else {
@@ -423,7 +425,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         }));
 
 
-        // FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
+        // FIXME: GalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
     }
 
     /**

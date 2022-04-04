@@ -146,8 +146,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
         // Format
         if ($article instanceof Submission) {
-            $galleys = Repo::articleGalley()->getMany(
-                Repo::articleGalley()
+            $galleys = Repo::galley()->getMany(
+                Repo::galley()
                     ->getCollector()
                     ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
             );
@@ -188,8 +188,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Get galleys and supp files.
         $galleys = [];
         if ($article instanceof Submission) {
-            $galleys = Repo::articleGalley()->getMany(
-                Repo::articleGalley()
+            $galleys = Repo::galley()->getMany(
+                Repo::galley()
                     ->getCollector()
                     ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
             );
@@ -199,10 +199,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $locales = [];
         if ($article instanceof Submission) {
             foreach ($galleys as $galley) {
-                $galleyLocale = $galley->getLocale();
-                if (!is_null($galleyLocale) && !in_array($galleyLocale, $locales)) {
-                    $locales[] = $galleyLocale;
-                    $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($galleyLocale));
+                $locale = $galley->getLocale();
+                if (!is_null($locale) && !in_array($locale, $locales)) {
+                    $locales[] = $locale;
+                    $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($locale));
                 }
             }
         }

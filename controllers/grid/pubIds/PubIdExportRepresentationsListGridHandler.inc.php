@@ -259,7 +259,7 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
         if ($statusId) {
             $pubIdStatusSettingName = $this->_plugin->getDepositStatusSettingName();
         }
-        return Repo::articleGalley()->dao->getExportable(
+        return Repo::galley()->dao->getExportable(
             $context->getId(),
             $this->_plugin->getPubIdType(),
             $title,

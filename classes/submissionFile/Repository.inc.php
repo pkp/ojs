@@ -34,7 +34,7 @@ class Repository extends BaseRepository
         $galley = null;
 
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galley = Repo::articleGalley()->get($submissionFile->getData('assocId'));
+            $galley = Repo::galley()->get($submissionFile->getData('assocId'));
             if (!$galley) {
                 throw new Exception('Galley not found when adding submission file.');
             }
@@ -43,7 +43,7 @@ class Repository extends BaseRepository
         $submissionFileId = parent::add($submissionFile);
 
         if ($galley) {
-            Repo::articleGalley()->edit($galley, ['submissionFileId' => $submissionFile->getId()]);
+            Repo::galley()->edit($galley, ['submissionFileId' => $submissionFile->getId()]);
         }
 
         return $submissionFileId;
@@ -62,10 +62,10 @@ class Repository extends BaseRepository
     {
         // Remove galley associations and update search index
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galley = Repo::articleGalley()->get((int)$submissionFile->getData('assocId'));
+            $galley = Repo::galley()->get((int)$submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
-                Repo::articleGalley()->edit($galley, []);
+                Repo::galley()->edit($galley, []);
             }
 
             event(new SubmissionFileDeleted($submissionFile));

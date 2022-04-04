@@ -13,13 +13,13 @@
  * @brief Class that converts an Issue to a DataCite XML document.
  */
 
-use APP\article\ArticleGalley;
 use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\submission\Submission;
-
 use PKP\facades\Locale;
+
+use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
 
 // Title types
@@ -85,7 +85,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * @see Filter::process()
      *
-     * @param Issue|Submission|ArticleGalley $pubObject
+     * @param Issue|Submission|Galley $pubObject
      *
      * @return DOMDocument
      */
@@ -112,7 +112,7 @@ class DataciteXmlFilter extends NativeExportFilter
             if (!$cache->isCached('articles', $article->getId())) {
                 $cache->add($article, null);
             }
-        } elseif ($pubObject instanceof ArticleGalley) {
+        } elseif ($pubObject instanceof Galley) {
             $galley = $pubObject;
             $galleyFile = $galley->getFile();
             $publication = Repo::publication()->get($galley->getData('publicationId'));
@@ -273,7 +273,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param DOMDocument $doc
      * @param Issue $issue
      * @param Publication $publication
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      * @param SubmissionFile $galleyFile
      * @param string $publisher
      * @param array $objectLocalePrecedence
@@ -323,7 +323,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param DOMDocument $doc
      * @param Issue $issue
      * @param Publication $publication
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      * @param SubmissionFile $galleyFile
      * @param array $objectLocalePrecedence
      *
@@ -374,7 +374,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      * @param SubmissionFile $galleyFile
      * @param string $publicationDate
      *
@@ -460,7 +460,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      * @param SubmissionFile $galleyFile
      *
      * @return DOMElement
@@ -507,7 +507,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      *
      * @return DOMElement
      */
@@ -552,7 +552,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      *
      * @return DOMElement|null
      */
@@ -626,7 +626,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      * @param SubmissionFile $galleyFile
      *
      * @return DOMElement|null Can be null if a size
@@ -741,7 +741,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param Context $context
      * @param Submission $article
      * @param Publication $publication
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      *
      * @return array A list of valid PKP locales in descending
      *  order of priority.
@@ -749,7 +749,7 @@ class DataciteXmlFilter extends NativeExportFilter
     public function getObjectLocalePrecedence($context, $article, $publication, $galley)
     {
         $locales = [];
-        if ($galley instanceof ArticleGalley && Locale::isLocaleValid($galley->getLocale())) {
+        if ($galley instanceof Galley && Locale::isLocaleValid($galley->getLocale())) {
             $locales[] = $galley->getLocale();
         }
         if ($article instanceof Submission) {
