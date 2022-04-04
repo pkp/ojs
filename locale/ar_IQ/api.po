@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-04-03 06:57+0000\n"
+"PO-Revision-Date: 2022-04-04 16:20+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/api/ar_IQ/>\n"
 "Language: ar_IQ\n"
@@ -71,3 +71,8 @@ msgstr "لم تتم تهيئة أي وكالة تسجيل لمُعرفات ال�
 
 msgid "api.dois.400.contextsNotMatched"
 msgstr "مُعرف المكون الرقمي الذي طلبته ليس جزءًا من هذه المجلة."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"لم يتوفق إيداع بعض العناصر. يرجى التحقق منها بشكل منفرد للوقوف على رسالة "
+"الخطأ الخاصة بكل منها."
