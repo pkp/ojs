@@ -130,7 +130,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
         $submission = $deployment->getSubmission();
         switch ($elementName) {
             case 'article_galley':
-                $importClass = 'Galley';
+                $importClass = 'ArticleGalley';
                 break;
             default:
                 $importClass = null; // Suppress scrutinizer warn

@@ -17,6 +17,7 @@ import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter
 
 use APP\facades\Repo;
 use APP\submission\Submission;
+use PKP\galley\Galley;
 
 // FIXME: Add namespacing
 // use DOMElement;
@@ -82,6 +83,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
                 $addSubmissionFile = true;
             }
         }
+        /** @var Galley $representation */
         $representation = parent::handleElement($node);
 
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
@@ -100,11 +102,10 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
             }
         }
 
-        $representationDao = Application::getRepresentationDAO();
         if ($addSubmissionFile) {
             $representation->setFileId($newSubmissionFileId);
         }
-        $representationDao->insertObject($representation);
+        Repo::galley()->dao->insert($representation);
 
         if ($addSubmissionFile) {
             // Update the submission file.
