@@ -39,7 +39,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         $mockedDaos = parent::getMockedDAOs();
         $mockedDaos += [
             'ArticleSearchDAO', 'JournalDAO',
-            'GalleyDAO'
         ];
         return $mockedDaos;
     }
