@@ -1,9 +1,10 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 06:50+0000\n"
-"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
+"PO-Revision-Date: 2022-04-05 16:18+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
 "Language: kk_KZ\n"
@@ -1465,8 +1466,8 @@ msgstr "Описание лицензии LOCKSS"
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
 "LOCKSS лицензиясы «Журнал туралы» бөлімінде «Журналды мұрағаттау» деген "
-"тақырыпта пайда болады: <a href = «http://www.lockss.org/community/"
-"publishers-titles-gln/» target = «_ blank» > LOCKSS лицензиясы </ a>"
+"тақырыпта пайда болады: <a href=\"http://www.lockss.org/community/"
+"publishers-titles-gln/\" target=\"_blank\">LOCKSS лицензиясы</a>"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
