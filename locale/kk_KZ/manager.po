@@ -3,7 +3,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-05 16:18+0000\n"
+"PO-Revision-Date: 2022-04-06 14:43+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
@@ -15,55 +15,55 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.distribution.access"
-msgstr "Қол жеткізуДоступ"
+msgstr "Қол жеткізу"
 
 msgid "manager.payment.options.publicationFee"
-msgstr "Платеж за обработку статьи"
+msgstr "Мақаланы өңдеу ақысы"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "Ограничить доступ только PDF-версиями выпусков и статей"
+msgstr "Шығарылымдар мен мақалалардың PDF нұсқаларына ғана қол жеткізуді шектеу"
 
 msgid "manager.payment.options.membershipFee"
-msgstr "Ассоциированное членство"
+msgstr "Қауымдастырылған мүшелік"
 
 msgid "manager.payment.options.feeName"
-msgstr "Название платежа"
+msgstr "Төлем атауы"
 
 msgid "manager.payment.options.feeDescription"
-msgstr "Описание платежа"
+msgstr "Төлем сипаттамасы"
 
 msgid "manager.payment.options.fee"
-msgstr "Платеж"
+msgstr "Төлем"
 
 msgid "manager.payment.options.enablePayments"
 msgstr ""
-"Платежи будут включены для этого журнала. Обратите внимание, что для "
-"осуществления платежей пользователи должны будут войти на сайт под своей "
-"учетной записью."
+"Бұл журнал үшін төлемдер қосылады. Төлем жасау үшін пайдаланушылар сайтқа өз "
+"тіркелгісін пайдаланып кіруі керек екенін ескеріңіз."
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Вы уверены, что хотите удалить эту подписку?"
+msgstr "Осы жазылымды жойғыңыз келетініне сенімдісіз бе?"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr ""
-"Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость "
-"и продолжительность управляются менеджером по подписке данного журнала."
+"Бұл жазылым түрлерін, құнын және ұзақтығын журналдың Жазылым менеджері "
+"басқаратын \"Жазылымдар\" бөліміндегі төлемдерді қосады."
 
 msgid "manager.payment.options"
-msgstr "Параметры"
+msgstr "Параметрлер"
 
 msgid "manager.payment.notFound"
-msgstr "Не найдено"
+msgstr "Табылмады"
 
 msgid "manager.payment.noPayments"
-msgstr "Нет платежей"
+msgstr "Төлемдер жоқ"
 
 msgid "manager.payment.generalOptions"
-msgstr "Общие параметры"
+msgstr "Жалпы параметрлер"
 
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
-"The Association Membership will appear in About the Journal under Policies."
+"«Қауымдастырылған мүшелік» сілтемесі «Ережелер» бөліміндегі «Журнал туралы» "
+"бетінде пайда болады."
 
 msgid "manager.payment.generalFees"
 msgstr "Жалпы төлемдер"
@@ -179,14 +179,14 @@ msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Мақаланың жарияланған күнін қолданыңыз"
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Использовать дату публикации выпуска"
+msgstr "Шығарылымның жарияланған күнін қолдану"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
-"Выберите способ определения по умолчанию даты копирайта для статьи. Это "
-"значение по умолчанию может быть изменено в каждом конкретном случае. Если "
-"вы публикуете статьи «по ходу поступления», не используйте дату публикации "
-"выпуска."
+"Мақала үшін әдепкі авторлық құқық күнін қалай анықтағыңыз келетінін "
+"таңдаңыз. Бұл әдепкі мәнді әр жағдайда өзгертуге болады. Егер сіз "
+"мақалаларды «кірген кезде» жарияласаңыз, басылымның жарияланған күнін "
+"пайдаланбаңыз."
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Процесс разбора гранок выпуска завершился с ошибкой"
@@ -1659,7 +1659,7 @@ msgstr ""
 "бүйірлік тақтасында болады."
 
 msgid "manager.setup.information"
-msgstr "ақпарат"
+msgstr "Ақпарат"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
@@ -1917,96 +1917,92 @@ msgid "manager.setup.pageHeader"
 msgstr "Верхний колонтитул страницы журнала"
 
 msgid "manager.setup.contextName"
-msgstr "Название журнала"
+msgstr "Журнал атауы"
 
 msgid "manager.setup.useStyleSheet"
-msgstr "Таблица стилей журнала"
+msgstr "Журнал стильдерінің кестесі"
 
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
-"Главная страница журнала по умолчанию состоит из навигационных ссылок. "
-"Дополнительный контент на главной странице может быть добавлен с помощью "
-"одного или нескольких следующих параметров, которые появятся на странице в "
-"показанном порядке."
+"Әдепкі журналдың басты беті навигациялық сілтемелерден тұрады. Негізгі "
+"беттегі қосымша мазмұнды келесі опциялардың бірін немесе бірнешеуін "
+"пайдаланып қосуға болады, олар бетте көрсетілген ретпен пайда болады."
 
 msgid "manager.setup.homepageContent"
-msgstr "Контент главной страницы журнала"
+msgstr "Журналдың негізгі бетінің мазмұны"
 
 msgid "manager.setup.editorialTeam"
 msgstr "Редакция"
 
 msgid "manager.setup.masthead"
-msgstr "Выходные данные"
+msgstr "Шығыс деректер"
 
 msgid "manager.setup"
-msgstr "Настройки журнала"
+msgstr "Журнал баптаулары"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr ""
-"Ограничить количество слов в аннотации для этого раздела (0 — без "
-"ограничений)"
+msgstr "Осы бөлім үшін аннотациядағы сөздердің санын шектеу (0-шектеусіз)"
 
 msgid "manager.sections.wordCount"
-msgstr "Количество слов"
+msgstr "Сөздер саны"
 
 msgid "manager.sections.unassigned"
-msgstr "Доступные редакторы разделов"
+msgstr "Қолжетімді бөлім редакторлары"
 
 msgid "manager.section.submissionsToThisSection"
-msgstr "Материалы, поданные в этот раздел журнала"
+msgstr "Журналдың осы бөліміне жіберілген материалдар"
 
 msgid "manager.sections.submissionReview"
-msgstr "Не будет рецензироваться"
+msgstr "Рецензияланбайды"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Не будет учитываться при индексировании журнала"
+msgstr "Журналды индекстеу кезінде есепке алынбайды"
 
 msgid "manager.sections.reviewed"
-msgstr "Рецензируется"
+msgstr "Рецензиялануда"
 
 msgid "manager.sections.readingTools"
-msgstr "Инструменты читателя"
+msgstr "Оқырман құралдары"
 
 msgid "manager.sections.policy"
-msgstr "Правила раздела"
+msgstr "Бөлім ережесі"
 
 msgid "manager.sections.open"
-msgstr "Открыт для приема материалов"
+msgstr "Материалдарды қабылдау үшін ашық"
 
 msgid "manager.sections.noneCreated"
-msgstr "Разделы не созданы."
+msgstr "Бөлімдер құрылмаған."
 
 msgid "manager.sections.indexed"
-msgstr "Индексируется"
+msgstr "Индекстелуде"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr ""
-"(Например, «Рецензируемая статья», «Обзор книги», «Комментарий специалиста» "
-"и т. д.)"
+msgstr "(Мысалы, «Рецензияланған мақала», «Кітапқа шолу», «Маман пікірі» т.б.)"
 
 msgid "manager.sections.identifyType"
-msgstr "Обозначать материалы, опубликованные в этом разделе как"
+msgstr "Осы бөлімде жарияланған материалдарды келесідей белгілеңіз"
 
 msgid "manager.sections.hideTocTitle"
-msgstr "Убрать название этого раздела из содержания выпусков."
+msgstr "Мәселелердің мазмұнынан осы бөлімнің тақырыбын алып тастау."
 
 msgid "manager.sections.hideTocAuthor"
 msgstr ""
-"Убрать имена авторов для материалов этого раздела из содержания выпусков."
+"Осы бөлімдегі материалдардың авторларының аты-жөнін шығарылымдар мазмұнынан "
+"алып тастау."
 
 msgid "manager.sections.form.titleRequired"
-msgstr "Требуется название для раздела."
+msgstr "Бөлімге тақырып қажет."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "Пожалуйста, убедитесь, что вы выбрали правильную форму рецензии."
+msgstr "Дұрыс рецензия формасын таңдағаныңызға көз жеткізіңіз."
 
 msgid "manager.sections.form.mustAllowPermission"
 msgstr ""
-"Пожалуйста, убедитесь, что поставлена хотя бы одна галочка для каждого "
-"назначения редактора раздела."
+"Әрбір бөлім өңдегішінің тапсырмасы үшін кемінде бір құсбелгі қойылғанын "
+"тексеріңіз."
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "Требуется аббревиатура названия для раздела"
+msgstr "Бөлім тақырыбының аббревиатурасы қажет"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
@@ -2059,7 +2055,7 @@ msgstr ""
 " синхрондауға мүмкіндік береді."
 
 msgid "manager.people.roleEnrollment"
-msgstr "«{$ Role}» рөлін тағайындау"
+msgstr "{$role} рөлін тағайындау"
 
 msgid "manager.people.mergeUsers.into.description"
 msgstr ""
