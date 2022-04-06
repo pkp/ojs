@@ -17,7 +17,6 @@ namespace APP\mail\variables;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\subscription\Subscription;
@@ -40,7 +39,7 @@ class SubscriptionEmailVariable extends Variable
 
     protected Subscription $subscription;
 
-    protected Journal $journal;
+    protected Journal $context;
 
     protected SubscriptionType $subscriptionType;
 
@@ -50,12 +49,12 @@ class SubscriptionEmailVariable extends Variable
         $this->subscription = $subscription;
 
         /** @var JournalDAO $journalDao */
-        $journalDao = DAORegistry::getDAO('JournalDAO');
-        $this->journal = $journalDao->getById($this->subscription->getData('journalId'));
+        $contextDao = DAORegistry::getDAO('JournalDAO');
+        $this->context = $contextDao->getById($this->subscription->getData('journalId'));
 
         /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-        $this->subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $this->journal->getId());
+        $this->subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $this->context->getId());
     }
 
     /**
@@ -92,18 +91,15 @@ class SubscriptionEmailVariable extends Variable
 
     /**
      * Subscription signature consisting of contact details of the person responsible for subscriptions included in the
-     * journal's Subscription Policies form, Subscription Manager section
+     * context's Subscription Policies form, Subscription Manager section
      */
     protected function getSubscriptionSignature(): string
     {
-        $subscriptionName = $this->journal->getData('subscriptionName');
-        $subscriptionEmail = $this->journal->getData('subscriptionEmail');
-        $subscriptionPhone = $this->journal->getData('subscriptionPhone');
-        $subscriptionMailingAddress = $this->journal->getData('subscriptionMailingAddress');
-
+        $subscriptionName = $this->context->getData('subscriptionName');
+        $subscriptionEmail = $this->context->getData('subscriptionEmail');
+        $subscriptionPhone = $this->context->getData('subscriptionPhone');
+        $subscriptionMailingAddress = $this->context->getData('subscriptionMailingAddress');
         $subscriptionContactSignature = $subscriptionName;
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_COMMON);
 
         if ($subscriptionMailingAddress != '') {
             $subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
@@ -124,7 +120,7 @@ class SubscriptionEmailVariable extends Variable
         return $dispatcher->url(
             $request,
             Application::ROUTE_PAGE,
-            $this->journal->getData('path'),
+            $this->context->getData('path'),
             'payments',
             null,
             null,
