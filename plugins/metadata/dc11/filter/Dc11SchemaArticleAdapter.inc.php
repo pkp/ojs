@@ -95,7 +95,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Subject
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
-        $supportedLocales = array_keys($journal->getSupportedFormLocaleNames());
+        $supportedLocales = $journal->getSupportedFormLocales();
         $subjects = array_merge_recursive(
             (array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
             (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
