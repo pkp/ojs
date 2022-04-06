@@ -1759,22 +1759,22 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Name of the website when more than one journal is hosted"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr "Information about a subscriber, including user full name, affiliation, phone number and email"
+msgstr "The subscriber's name, affiliation, phone number and email address"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr "Contact details of the subscription manager"
+msgstr "The subscription manager's contact details"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr "The link to the subscription page"
+msgstr "The URL to the subscription page"
 
 msgid "emailTemplate.variable.subscription.expireDate"
-msgstr "The end date of the subscription"
+msgstr "The date when the subscription ends"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr "subscription type summary, containing name, duration and cost"
+msgstr "A summary of the subscription's type, name, duration and cost"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr "subscription membership information"
+msgstr "Information about the subscriber's membership"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validate Email (Journal Registration)"
