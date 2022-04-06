@@ -19,6 +19,7 @@ use APP\facades\Repo;
 use APP\template\TemplateManager;
 
 use PKP\form\Form;
+use PKP\galley\Galley;
 
 class ArticleGalleyForm extends Form
 {

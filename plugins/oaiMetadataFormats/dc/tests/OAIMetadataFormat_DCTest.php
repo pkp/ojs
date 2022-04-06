@@ -189,7 +189,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->will($this->returnValue($issue));
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
-        // Create a mocked GallyeyDAO that returns our test data.
+        // Create a mocked GallyeDAO that returns our test data.
         $galleyDao = $this->getMockBuilder(GalleyDAO::class)
             ->setMethods(['getBySubmissionId'])
             ->getMock();

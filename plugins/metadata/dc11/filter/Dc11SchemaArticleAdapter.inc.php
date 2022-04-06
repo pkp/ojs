@@ -144,16 +144,15 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 
 
+        $galleys = Repo::galley()->getMany(
+            Repo::galley()
+                ->getCollector()
+                ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+        );
+
         // Format
-        if ($article instanceof Submission) {
-            $galleys = Repo::galley()->getMany(
-                Repo::galley()
-                    ->getCollector()
-                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
-            );
-            foreach ($galleys as $galley) {
-                $dc11Description->addStatement('dc:format', $galley->getFileType());
-            }
+        foreach ($galleys as $galley) {
+            $dc11Description->addStatement('dc:format', $galley->getFileType());
         }
 
         // Identifier: URL
@@ -182,16 +181,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
         if ($issn = $journal->getData('printIssn')) {
             $dc11Description->addStatement('dc:source', $issn, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
-        }
-
-        // Get galleys and supp files.
-        $galleys = [];
-        if ($article instanceof Submission) {
-            $galleys = Repo::galley()->getMany(
-                Repo::galley()
-                    ->getCollector()
-                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
-            );
         }
 
         // Language

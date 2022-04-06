@@ -23,7 +23,6 @@
 
 namespace APP\submission;
 
-use APP\core\Application;
 use APP\core\Services;
 
 use APP\facades\Repo;
@@ -275,12 +274,20 @@ class Submission extends PKPSubmission
      */
     public function getGalleys()
     {
-        $galleys = $this->getData('galleys');
-        if (is_null($galleys)) {
-            $this->setData('galleys', Application::get()->getRepresentationDAO()->getByPublicationId($this->getCurrentPublication()->getId()));
+        if (!is_null($this->getData('galleys'))) {
             return $this->getData('galleys');
         }
-        return $galleys;
+
+        $this->setData(
+            'galleys',
+            Repo::galley()->getMany(
+                Repo::galley()
+                    ->getCollector()
+                    ->filterByPublicationIds($this->getCurrentPublication()->getId())
+            )->toArray()
+        );
+
+        return $this->getData('galleys');
     }
 
     /**
@@ -292,7 +299,7 @@ class Submission extends PKPSubmission
      */
     public function getLocalizedGalleys()
     {
-        $allGalleys = $this->getData('galleys');
+        $allGalleys = $this->getGalleys();
         $galleys = [];
         foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $tryLocale) {
             foreach (array_keys($allGalleys) as $key) {
