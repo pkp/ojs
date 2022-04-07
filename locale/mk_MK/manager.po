@@ -2155,7 +2155,7 @@ msgstr "Име на видот плаќање"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "И-мејл адреса од примарен контакт на списание"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Потпис од и-мејл на списание за автоматска пошта"
 
 msgid "emailTemplate.variable.context.contactName"

@@ -1742,7 +1742,7 @@ msgstr "Название типа платежа"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Адрес электронной почты основного контактного лица журнала"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr ""
 "Подпись журнала в письмах электронной почты для автоматически отправляемых "
 "писем"

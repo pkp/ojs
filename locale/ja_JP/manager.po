@@ -1550,7 +1550,7 @@ msgstr "決済の種類の名称"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "ジャーナルの連絡責任者の電子メールアドレス"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "ジャーナルの自動送信メールのメール署名"
 
 msgid "emailTemplate.variable.context.contactName"

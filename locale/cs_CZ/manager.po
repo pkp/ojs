@@ -1879,7 +1879,7 @@ msgstr "Název typu platby"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-mailová adresa hlavního kontaktu časopisu"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "E-mailový podpis časopisu pro automatické e-maily"
 
 msgid "emailTemplate.variable.context.contactName"

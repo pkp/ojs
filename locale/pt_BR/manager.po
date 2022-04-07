@@ -1913,7 +1913,7 @@ msgstr ""
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
 msgstr "Moeda do valor do pagamento, por exemplo: R$"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Assinatura dos e-mails automáticos da revista"
 
 msgid "emailTemplate.variable.site.siteTitle"

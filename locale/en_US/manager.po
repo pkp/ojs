@@ -1740,7 +1740,7 @@ msgstr "The URL to the journal's homepage"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "The name of the journal's primary contact"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "The journal's email signature for automated emails"
 
 msgid "emailTemplate.variable.context.contactEmail"
@@ -1757,6 +1757,24 @@ msgstr "The currency of the payment amount, such as USD"
 
 msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Name of the website when more than one journal is hosted"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "The subscriber's name, affiliation, phone number and email address"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "The subscription manager's contact details"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "The URL to the subscription page"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "The date when the subscription ends"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "A summary of the subscription's type, name, duration and cost"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Information about the subscriber's membership"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validate Email (Journal Registration)"

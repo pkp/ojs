@@ -1762,7 +1762,7 @@ msgstr "اسم نوع الدفع المالي"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "عنوان البريد الالكتروني لجهة الاتصال الرئيسية في المجلة"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "توقيع المجلة على رسائل البريد الالكتروني المؤتمتة"
 
 msgid "emailTemplate.variable.context.contactName"

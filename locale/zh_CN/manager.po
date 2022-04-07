@@ -1804,7 +1804,7 @@ msgstr "付款类型名称"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "期刊主要联系人的电子邮件地址"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "用于自动发送电子邮件的期刊电子邮件签名"
 
 msgid "emailTemplate.variable.context.contactName"

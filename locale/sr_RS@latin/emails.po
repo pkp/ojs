@@ -12,12 +12,12 @@ msgstr ""
 "Language: \n"
 
 msgid "emails.notification.subject"
-msgstr "Imate poruku od {$siteTitle}"
+msgstr "Imate poruku od {$contextName}"
 
 #, fuzzy
 msgid "emails.notification.body"
 msgstr ""
-"Imate poruku od {$siteTitle}:<br />\n"
+"Imate poruku od {$contextName}:<br />\n"
 "<br />\n"
 "{$notificationContents}<br />\n"
 "<br />\n"

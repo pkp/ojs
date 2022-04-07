@@ -1923,7 +1923,7 @@ msgstr "El nom del tipus de pagament"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "L'adreça de correu electrònic del contacte principal de la revista"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "La signatura per als correus electrònics automatitzats de la revista"
 
 msgid "emailTemplate.variable.context.contactName"
