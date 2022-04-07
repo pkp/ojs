@@ -3,7 +3,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-07 06:57+0000\n"
+"PO-Revision-Date: 2022-04-07 13:59+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
@@ -45,7 +45,7 @@ msgstr "Осы жазылымды жойғыңыз келетініне сені
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr ""
-"Бұл жазылым түрлерін, құнын және ұзақтығын журналдың Жазылым менеджері "
+"Бұл жазылым түрлерін, құнын және ұзақтығын журналдың \"Жазылым менеджері\" "
 "басқаратын \"Жазылымдар\" бөліміндегі төлемдерді қосады."
 
 msgid "manager.payment.options"
@@ -81,7 +81,7 @@ msgid "manager.payment.editSubscription"
 msgstr "Жазылымды өңдеу"
 
 msgid "manager.payment.details"
-msgstr "Егжей"
+msgstr "Толық мәліметтер"
 
 msgid "manager.payment.description"
 msgstr "Сипаттама"
@@ -102,7 +102,7 @@ msgid "manager.payment.amount"
 msgstr "Сомасы"
 
 msgid "manager.payment.addPayment"
-msgstr "Төлемді қосыңыз"
+msgstr "Төлемді енгізіңіз"
 
 msgid "manager.payment.action"
 msgstr "Әрекет"
@@ -111,7 +111,7 @@ msgid "manager.managementPages"
 msgstr "Басқару беттері"
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "Бұл тіл журнал сайты үшін әдепкі тіл болады."
+msgstr "Бұл тіл журналдың сайты үшін бастапқы тіл болады."
 
 msgid "manager.languages.noneAvailable"
 msgstr ""
@@ -123,20 +123,19 @@ msgstr ""
 "OJS пайдаланушыларға жүйе қолдайтын кез келген тілде қол жетімді болуы "
 "мүмкін. Сонымен қатар, OJS көп тілді жүйе ретінде әрекет ете алады, бұл "
 "пайдаланушыларға әр беттегі тілдер арасында ауысуға және бірнеше қосымша "
-"тілдерде нақты деректерді енгізуге мүмкіндік береді. <br /> <br /> Егер "
+"тілдерді нақты деректерді енгізуге мүмкіндік береді. <br /> <br /> Егер "
 "қолдау көрсетілетін OJS төменде көрсетілмесе, сайт әкімшісінен сайтты "
 "басқару интерфейсінен тіл орнатуды сұраңыз. Жаңа тілдерді қолдауды қосу "
 "бойынша нұсқауларды OJS құжаттамасынан қараңыз."
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr ""
-"Бұл сол тіл үшін жасаған тілге қатысты журнал параметрлерін жоққа шығарады"
+msgstr "Бұл қандай да бір тілге байланысты журнал параметрлерін қайта анықтайды"
 
 msgid "manager.language.forms"
-msgstr "Пішіндер"
+msgstr "Формалар"
 
 msgid "manager.language.submissions"
-msgstr "Өтініштер"
+msgstr "Жіберілген материалдар"
 
 msgid "manager.language.ui"
 msgstr "Қолданушы интерфейсі"
@@ -2089,7 +2088,7 @@ msgid "manager.people.showNoRole"
 msgstr "Рөлі жоқ пайдаланушыларды көрсету"
 
 msgid "manager.people.allSiteUsers"
-msgstr "Осы журналдан осы журналға пайдаланушыны жазыңыз"
+msgstr "Осы сайттан пайдаланушыны осы журналға жазыңыз"
 
 msgid "manager.people.allJournals"
 msgstr "Барлық журналдар"
@@ -2108,9 +2107,9 @@ msgstr "Жазбалар"
 
 msgid "manager.payment.readerFeesDescription"
 msgstr ""
-"Таңдалған опциялар олардың сипаттамасымен және бағасымен бірге (оларды "
-"төменде өзгертуге болады) «Журнал туралы» бетінде «Ережелер» бөлімінде, "
-"сондай -ақ төлем қажет барлық жерлерде пайда болады."
+"Таңдалған түрлеріне байланысты сипаттамасы мен бағалары бірге (төменде "
+"өзгертілуі мүмкін) \"Ережелер\" бөлімінде «Журнал туралы» бетінде, сондай-ақ "
+"төлем қажет болатын барлық жерде пайда болады."
 
 msgid "manager.payment.readerFees"
 msgstr "Оқырман төлемдері"
