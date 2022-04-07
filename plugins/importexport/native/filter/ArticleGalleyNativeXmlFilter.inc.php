@@ -60,8 +60,8 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
     public function getFiles($representation)
     {
         $galleyFiles = [];
-        if ($representation->getFileId()) {
-            $galleyFiles = [Repo::submissionFile()->get($representation->getFileId())];
+        if ($representation->getData('submissionFileId')) {
+            $galleyFiles = [Repo::submissionFile()->get($representation->getData('submissionFileId'))];
         }
         return $galleyFiles;
     }
