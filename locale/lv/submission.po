@@ -1,8 +1,9 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-05 03:55+0000\n"
-"Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
+"PO-Revision-Date: 2022-04-08 17:31+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "lv/>\n"
 "Language: lv\n"
@@ -15,3 +16,346 @@ msgstr ""
 
 msgid "submission.submit.title"
 msgstr "Iesniegt rakstu"
+
+msgid "submission.queries.production"
+msgstr "Ražošanas apspriedes"
+
+msgid "publication.version.details"
+msgstr "Publikācijas informācija par versiju {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Vai tiešām nevēlaties, lai šī publikācija tiktu ieplānota?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Vai tiešām nevēlaties, lai šis materiāls tiktu publicēts?"
+
+msgid "publication.unpublish"
+msgstr "Atcelt publicēšanu"
+
+msgid "submission.copyrightOther.description"
+msgstr "Publicēto materiālu autortiesības nododiet šai pusei."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Autortiesības tiks automātiski piešķirtas {$copyright}, kad materiāls tiks "
+"publicēts."
+
+msgid "submission.license.description"
+msgstr ""
+"Licence tiks automātiski iestatīta uz <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>, kad materiāls tiks publicēts."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Iesniegtajam materiālam jābūt korektūras vai ražošanas posmā, pirms to var "
+"publicēt."
+
+msgid "publication.required.declined"
+msgstr "Noraidītu iesniegto materiālu nevar publicēt."
+
+msgid "publication.publish.requirements"
+msgstr "Pirms publicēšanas ir jāizpilda šādas prasības."
+
+msgid "publication.publish"
+msgstr "Publicēt"
+
+msgid "publication.invalidSubmission"
+msgstr "Šīs publikācijas iesniegto materiālu neizdevās atrast."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Versija tika izņemta no publicēšanas."
+
+msgid "publication.event.versionScheduled"
+msgstr "Tika plānots publicēt jaunu versiju."
+
+msgid "publication.event.versionPublished"
+msgstr "Tika publicēta jauna versija."
+
+msgid "publication.event.unpublished"
+msgstr "Iesniegtais materiāls tika atsaukts no publicēšanas."
+
+msgid "publication.event.scheduled"
+msgstr "Iesniegtais materiāls tika ieplānots publicēšanai."
+
+msgid "publication.event.published"
+msgstr "Iesniegtais materiāls tika publicēts."
+
+msgid "publication.editDisabled"
+msgstr "Šī versija ir publicēta un nav rediģējama."
+
+msgid "publication.datePublished"
+msgstr "Publicēšanas datums"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Autortiesību gads tiks iestatīts automātiski, pamatojoties uz publicēšanas "
+"datumu."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Autortiesību gads tiks iestatīts automātiski, kad tas tiks publicēts žurnāla "
+"numurā."
+
+msgid "submission.publications"
+msgstr "Publikācijas"
+
+msgid "publication.status.unscheduled"
+msgstr "Neplānots"
+
+msgid "submission.status.scheduled"
+msgstr "Ieplānots"
+
+msgid "publication.status.published"
+msgstr "Publicēts"
+
+msgid "submission.publication"
+msgstr "Publicēšana"
+
+msgid "publication.selectIssue"
+msgstr "Izvēlieties žurnāla numuru, lai ieplānotu publicēšanu"
+
+msgid "publication.unscheduledIn"
+msgstr "Tas nav ieplānots publicēšanai kādā no numuriem."
+
+msgid "publication.scheduledIn"
+msgstr "Plānots publicēt <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Publicēts <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "Publikācija jāpievieno žurnāla numuram pirms publicēšanas."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Visas publicēšanas prasības ir izpildītas. Tas tiks publicēts nekavējoties, "
+"jo publicēšanas datums ir iestatīts uz {$datePublished}. Vai tiešām vēlaties "
+"to publicēt?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Visas publicēšanas prasības ir izpildītas. Tas tiks nekavējoties publicēts "
+"šeit: {$issue}. Vai tiešām vēlaties to publicēt?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Visas publicēšanas prasības ir izpildītas. Tas tiks publicēts, kad tiks "
+"publicēts {$issue}. Vai tiešām vēlaties to ieplānot publicēšanai?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Visas publicēšanas prasības ir izpildītas. Vai tiešām vēlaties to publicēt?"
+
+msgid "publication.invalidIssue"
+msgstr "Šīs publikācijas izdevumu neizdevās atrast."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Neaktīvs)"
+
+msgid "publication.invalidSection"
+msgstr "Šīs publikācijas sadaļu neizdevās atrast."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Publicēšanas datums tiks iestatīts automātiski, kad izdevums tiks publicēts. "
+"Neievietot publicēšanas datumu, ja vien raksts iepriekš nav publicēts citur "
+"un jums tas nav jānorāda ar atpakaļejošu datumu."
+
+msgid "publication.changeIssue"
+msgstr "Mainīt izdevumu"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Tas ir piešķirts <a href=\"{$issueUrl}\">{$issueName}</a>, bet tā "
+"publicēšana nav paredzēta."
+
+msgid "publication.assignToissue"
+msgstr "Pievienot izdevumam"
+
+msgid "galley.publicationNotFound"
+msgstr "Šīs gallejas publikāciju neizdevās atrast."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Šīs publikācijas galleju nav iespējams rediģēt, jo tā jau ir publicēta."
+
+msgid "catalog.category.heading"
+msgstr "Visas vienības"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Vienības"
+
+msgid "submission.sectionOptions"
+msgstr "Sadaļas iespējas"
+
+msgid "section.any"
+msgstr "Jebkura sadaļa"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Šis ir priekšskatījums, un tas nav publicēts. <a href=\"{$url}\">Skatīt "
+"iesniegto materiālu</a>"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Šo specifikāciju pamatā ir Dublin Core metadatu kopums - starptautisks "
+"standarts, ko izmanto žurnālu satura aprakstīšanai."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Pieprasīto citēšanas formātu neizdevās iegūt."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Lūdzu, atlasiet līdzstrādnieka lomu."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Kopsavilkums ir pārāk garš. Lūdzu, saīsiniet to, lai tas nepārsniegtu šai "
+"sadaļai norādīto vārdu ierobežojumu."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Lūdzu, ievadiet raksta kopsavilkumu."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Lūdzu, ievadiet raksta virsrakstu."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Jānorāda katra autora vārds, uzvārds un e-pasta adrese."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Jābūt vismaz vienam autoram."
+
+msgid "submission.submit.contributorRole"
+msgstr "Iesniedzēja loma"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Paziņojums par konfidencialitāti"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Pirms turpināšanas jums ir jāizlasa un jāapliecina, ka zemāk minētās "
+"prasības ir izpildītas."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Iesniegšanas kontrolsaraksts"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Lūdzu, izvēlieties iesniegtā materiāla valodu."
+
+msgid "submission.incomplete"
+msgstr "Gaida apstiprināšanu"
+
+msgid "submission.complete"
+msgstr "Apstiprināts"
+
+msgid "submission.upload.fileContents"
+msgstr "Raksta sastāvdaļa"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Iesniegtā materiāla izdošanas metadati ir atjaunināti."
+
+msgid "workflow.review.externalReview"
+msgstr "Recenzēšana"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Nosūtīt recenzēšanai"
+
+msgid "submission.confirmSubmit"
+msgstr "Vai tiešām vēlaties iesniegt šo rakstu žurnālam?"
+
+msgid "submission.pageProofs"
+msgstr "Korektūru veikšana"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Augšupielādējiet ar šo materiālu saistītās datnes, tostarp rakstu, "
+"multivides materiālus, datu kopas, mākslas darbus u. c."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Virsraksts un anotācija"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Šī korektūra ir apstiprināta iekļaušanai gallejā."
+
+msgid "grid.action.approveProof"
+msgstr "Apstipriniet šo korektūru iekļaušanai gallejā."
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Maketēšanas redaktors šeit augšupielādē publicēšanai gatavas datnes. "
+"Izmantojiet <em>Assign Auditor</em> (Piešķirt auditoru), lai izraudzītos "
+"autorus un citas personas, kas pārbaudīs un koriģēs gallejas un pirms "
+"publicēšanas labotās datnes augšupielādēs apstiprināšanai."
+
+msgid "submission.galleyFiles"
+msgstr "Gallejas datne"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Padarīt šo galleju pieejamu"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Šī galleja lasītājiem  <em>būs pieejama.</em> </p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Šī galleja lasītājiem <em>vairs nebūs pieejama.</em> </p>"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Raksta galleja \"{$galleyFormatName}\" ir pieejama."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galleja parādās numura ierakstā"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Raksta galleja \"{$galleyFormatName}\" nav pieejama."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formāta apstiprināšana"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Iesniegtā materiāla publiskie identifikatori ir atjaunināti."
+
+msgid "grid.action.issueEntry"
+msgstr "Skatīt šī iesniegtā materiāla metadatus"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Žurnāls ir informēts par jūsu iesniegto materiālu, un jums pa e-pastu ir "
+"nosūtīts apstiprinājums. Kad redaktors būs izskatījis iesniegto materiālu, "
+"viņš ar jums sazināsies."
+
+msgid "submission.issueEntry"
+msgstr "Metadati"
+
+msgid "submission.submit.noContext"
+msgstr "Šī iesniegtā materiāla žurnāls nav atrasts."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Kopsavilkuma garums ne vairāk kā {$wordCount} vārdi."
+
+msgid "grid.action.workflow"
+msgstr "Materiāla iesniegšanas darbplūsma"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Jauna materiāla iesniegšana"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Uzsākt jauna materiāla iesniegšanu"
+
+msgid "submission.title.tip"
+msgstr ""
+"Iesniedzamā materiāla tips parasti ir 'image' (attēls), 'text' (teksts) vai "
+"cits multivides tips, tai skaitā 'software' (programmatūra) vai "
+"'interactive' (interaktīvs). Lūdzu, izvēlieties visatbilstošāko. Piemēri "
+"atrodami šeit:  <a target=\"_blank\" href=\"http://dublincore.org/documents/"
+"2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/"
+"2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Raksta virsraksts"
+
+msgid "submission.upload.selectComponent"
+msgstr "Izvēlēties raksta sastāvdaļu"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Izvēlēties statusu, kādā iesniedzat šo rakstu."
+
+msgid "submission.submit.userGroup"
+msgstr "Iesniegt manā lomā kā..."
