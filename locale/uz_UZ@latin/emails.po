@@ -1,9 +1,10 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Mironshoh Sattorov <s.mironshoh23@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-03 06:16+0000\n"
-"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
+"PO-Revision-Date: 2022-04-08 01:00+0000\n"
+"Last-Translator: Mironshoh Sattorov <s.mironshoh23@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/emails/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -1171,7 +1172,7 @@ msgstr ""
 "Rahmat."
 
 msgid "emails.editorAssign.subject"
-msgstr "Tahririyatga topshiriq"
+msgstr "Siz {$contextName} ga yuborilgan muharrir sifatida tayinlangansiz"
 
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
@@ -1195,9 +1196,9 @@ msgstr "Taqdim etishni tasdiqlash"
 
 msgid "emails.submissionAck.description"
 msgstr ""
-"Bu elektron pochta, qo'lyozmani jurnalga topshirish jarayonini tugatgandan "
-"so'ng, avtomatik ravishda muallifga yuboriladi. U yuborish jarayonini "
-"kuzatib borish haqida ma'lumot beradi va muallifga rahmat."
+"Ushbu elektron pochta xabari yoqilganda, muallifga jurnal tomonidan xabarlar "
+"avtomatik ravishda yuboriladi. U tahririyatga yuborilgan materialning holati "
+"haqida ma'lumot beradi."
 
 msgid "emails.submissionAck.body"
 msgstr ""
@@ -1215,7 +1216,7 @@ msgstr ""
 "tashakkur.</p>{$signature}"
 
 msgid "emails.submissionAck.subject"
-msgstr "Taqdim etishni tasdiqlash"
+msgstr "{$contextName} ga taqdim etganingiz uchun tashakkur"
 
 msgid "emails.lockssNewArchive.description"
 msgstr ""
@@ -1300,7 +1301,7 @@ msgstr ""
 "o'quvchilarimizga katta rahmat.</p><p>Sincerely,</p>{$signature}"
 
 msgid "emails.issuePublishNotify.subject"
-msgstr "Yangi son nashr qilindi"
+msgstr "Yangi son nashr qilindi: {$issueIdentification}"
 
 msgid "emails.reviewerRegister.description"
 msgstr ""
