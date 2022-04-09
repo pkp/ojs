@@ -1184,7 +1184,7 @@ msgstr "Името на вида плащане"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Имейл адресът на основния контакт на списанието"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Имейл подпис на списанието за автоматизирани имейли"
 
 msgid "emailTemplate.variable.context.contactName"

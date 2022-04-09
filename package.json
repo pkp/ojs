@@ -15,7 +15,7 @@
     "chart.js": "^2.9.4",
     "clone-deep": "^4.0.1",
     "debounce": "^1.2.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "tinymce": "^5.10.0",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.12",

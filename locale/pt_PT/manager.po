@@ -1876,7 +1876,7 @@ msgstr ""
 "Selecione o país onde a revista está localizada, ou o país do endereço da "
 "revista ou da editora."
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "A assinatura de e-mail da revista para e-mails automáticos"
 
 msgid "emailTemplate.variable.context.contactName"

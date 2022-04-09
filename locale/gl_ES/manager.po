@@ -2174,7 +2174,7 @@ msgstr "Nome do tipo de pagamento"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "O enderezo de correo electrónico do contacto principal da revista"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "A sinatura para os correos electrónicos automatizados da revista"
 
 msgid "emailTemplate.variable.context.contactName"

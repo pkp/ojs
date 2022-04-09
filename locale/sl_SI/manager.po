@@ -1951,7 +1951,7 @@ msgstr "Ime spletne strani, če je na njej več kot ena revija"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Email naslov glavnega kontakta revije"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Noga avtomatskih emailov revije"
 
 msgid "emailTemplate.variable.context.contactName"

@@ -88,7 +88,7 @@ class IssueGridCellProvider extends GridCellProvider
                 if ($datePublished) {
                     $datePublished = strtotime($datePublished);
                 }
-                return ['label' => $datePublished ? strftime($this->dateFormatShort, $datePublished) : ''];
+                return ['label' => $datePublished ? date($this->dateFormatShort, $datePublished) : ''];
             case 'numArticles':
                 return ['label' => $issue->getNumArticles()];
             default: assert(false); break;

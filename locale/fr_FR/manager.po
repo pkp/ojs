@@ -1980,7 +1980,7 @@ msgstr "Nom du type de paiement"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Adresse mail du contact principal de la revue"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "La signature mail de la revue pour les mails automatiques"
 
 msgid "emailTemplate.variable.context.contactName"

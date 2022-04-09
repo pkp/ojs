@@ -1881,7 +1881,7 @@ msgstr "Der Name der Bezahlungsart"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Die E-Mail-Adresse des Hauptkontakts der Zeitschrift"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Die E-Mail-Signatur für automatische E-Mails der Zeitschrift"
 
 msgid "emailTemplate.variable.context.contactName"

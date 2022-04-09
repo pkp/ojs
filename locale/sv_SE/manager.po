@@ -1825,7 +1825,7 @@ msgstr "Namn på betalningstypen"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-postadress till tidskriftens primära kontaktperson"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
+msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Tidskriftens signatur för automatiskt genererad e-post"
 
 msgid "emailTemplate.variable.context.contactName"
