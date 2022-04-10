@@ -114,7 +114,6 @@ describe('Data suite tests', function() {
 		cy.get('div[id=contact').find('button').contains('Save').click();
 		cy.get('div[id="contact-contactName-error"]').contains('This field is required.');
 		cy.get('div[id="contact-contactEmail-error"]').contains('This field is required.');
-		cy.get('div[id="contact-mailingAddress-error"]').contains('This field is required.');
 		cy.get('div[id="contact-supportName-error"]').contains('This field is required.');
 		cy.get('div[id="contact-supportEmail-error"]').contains('This field is required.');
 
