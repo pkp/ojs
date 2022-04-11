@@ -1,9 +1,11 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-08 17:31+0000\n"
-"Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
-"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
+"PO-Revision-Date: 2022-04-11 17:40+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv_LV/"
+">\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,9 +41,8 @@ msgstr "OJS Versija"
 msgid "admin.auth.ojs"
 msgstr "OJS Lietotāju Datubāze"
 
-#, fuzzy
 msgid "admin.settings.redirect"
-msgstr "Journal redirect"
+msgstr "Žurnāla pāradresēšana"
 
 msgid "admin.hostedContexts"
 msgstr "Izvietotie Žurnāli"
