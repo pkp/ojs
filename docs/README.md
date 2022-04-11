@@ -28,7 +28,7 @@ improvements or bug fixes to the software.
 
 Recommended server requirements:
 
-* PHP >= 8.0 (with php-mbstring, php-xml and php-intl support [1])
+* PHP >= 8.0.2 (with php-mbstring, php-xml and php-intl support [1])
 * MySQL >= 4.1 or PostgreSQL >= 9.5
 * Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 * Operating system: Any OS that supports the above software, including
