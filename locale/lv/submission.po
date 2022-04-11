@@ -2,10 +2,10 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-08 17:31+0000\n"
+"PO-Revision-Date: 2022-04-11 17:40+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"lv/>\n"
+"lv_LV/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,10 +118,10 @@ msgid "publication.unscheduledIn"
 msgstr "Tas nav ieplānots publicēšanai kādā no numuriem."
 
 msgid "publication.scheduledIn"
-msgstr "Plānots publicēt <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgstr "Plānots publicēt izdevumā <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.publishedIn"
-msgstr "Publicēts <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgstr "Publicēts izdevumā <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.required.issue"
 msgstr "Publikācija jāpievieno žurnāla numuram pirms publicēšanas."
@@ -166,17 +166,18 @@ msgstr "Mainīt izdevumu"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Tas ir piešķirts <a href=\"{$issueUrl}\">{$issueName}</a>, bet tā "
+"Tas ir piešķirts izdevumam <a href=\"{$issueUrl}\">{$issueName}</a>, bet tā "
 "publicēšana nav paredzēta."
 
 msgid "publication.assignToissue"
 msgstr "Pievienot izdevumam"
 
 msgid "galley.publicationNotFound"
-msgstr "Šīs gallejas publikāciju neizdevās atrast."
+msgstr "Šī saliktņa publikāciju neizdevās atrast."
 
 msgid "galley.editPublishedDisabled"
-msgstr "Šīs publikācijas galleju nav iespējams rediģēt, jo tā jau ir publicēta."
+msgstr ""
+"Šīs publikācijas saliktņus nav iespējams rediģēt, jo tā jau ir publicēta."
 
 msgid "catalog.category.heading"
 msgstr "Visas vienības"
@@ -238,7 +239,7 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Iesniegšanas kontrolsaraksts"
 
 msgid "submission.submit.form.localeRequired"
-msgstr "Lūdzu, izvēlieties iesniegtā materiāla valodu."
+msgstr "Lūdzu, izvēlieties iesniedzamā materiāla valodu."
 
 msgid "submission.incomplete"
 msgstr "Gaida apstiprināšanu"
@@ -273,38 +274,38 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Virsraksts un anotācija"
 
 msgid "grid.action.pageProofApproved"
-msgstr "Šī korektūra ir apstiprināta iekļaušanai gallejā."
+msgstr "Šī korektūra ir apstiprināta iekļaušanai saliktnī."
 
 msgid "grid.action.approveProof"
-msgstr "Apstipriniet šo korektūru iekļaušanai gallejā."
+msgstr "Apstipriniet šo korektūru iekļaušanai saliktnī."
 
 msgid "submission.proofReadingDescription"
 msgstr ""
 "Maketēšanas redaktors šeit augšupielādē publicēšanai gatavas datnes. "
 "Izmantojiet <em>Assign Auditor</em> (Piešķirt auditoru), lai izraudzītos "
-"autorus un citas personas, kas pārbaudīs un koriģēs gallejas un pirms "
+"autorus un citas personas, kas pārbaudīs un koriģēs saliktņus, un pirms "
 "publicēšanas labotās datnes augšupielādēs apstiprināšanai."
 
 msgid "submission.galleyFiles"
-msgstr "Gallejas datne"
+msgstr "Saliktņa datnes"
 
 msgid "grid.action.availableArticleGalley"
-msgstr "Padarīt šo galleju pieejamu"
+msgstr "Padarīt šo saliktni pieejamu"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Šī galleja lasītājiem  <em>būs pieejama.</em> </p>"
+msgstr "<p>Šis saliktnis lasītājiem  <em>būs pieejams.</em> </p>"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Šī galleja lasītājiem <em>vairs nebūs pieejama.</em> </p>"
+msgstr "<p>Šis saliktnis lasītājiem <em>vairs nebūs pieejams.</em> </p>"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Raksta galleja \"{$galleyFormatName}\" ir pieejama."
+msgstr "Raksta saliktnis \"{$galleyFormatName}\" ir pieejams."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Galleja parādās numura ierakstā"
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Raksta galleja \"{$galleyFormatName}\" nav pieejama."
+msgstr "Raksta saliktnis \"{$galleyFormatName}\" nav pieejams."
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Formāta apstiprināšana"
