@@ -226,9 +226,9 @@ class IssueNativeXmlFilter extends NativeExportFilter
                 ->getCollector()
                 ->filterByContextIds([$issue->getJournalId()])
                 ->filterByIssueIds([$issue->getId()])
-        );
+        )->toArray();
 
-        $articlesDoc = $currentFilter->execute($submissions->toArray());
+        $articlesDoc = $currentFilter->execute($submissions);
         if ($articlesDoc->documentElement instanceof DOMElement) {
             $clone = $doc->importNode($articlesDoc->documentElement, true);
             $issueNode->appendChild($clone);

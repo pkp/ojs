@@ -22,18 +22,17 @@ require_mock_env('env2');
 
 import('lib.pkp.tests.PKPTestCase');
 
-use APP\article\ArticleGalley;
 use APP\article\AuthorDAO;
-use APP\article\ArticleGalleyDAO;
-use APP\oai\ojs\OAIDAO;
 use APP\core\Request;
+use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\Section;
+use APP\oai\ojs\OAIDAO;
 use PKP\core\PKPRouter;
-use PKP\submission\Submission;
+use PKP\galley\DAO as GalleyDAO;
 use PKP\oai\OAIRecord;
-use Illuminate\Support\Facades\App;
+use PKP\submission\Submission;
 
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormat_DC');
 import('plugins.oaiMetadataFormats.dc.OAIMetadataFormatPlugin_DC');
@@ -45,7 +44,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
      */
     protected function getMockedDAOs()
     {
-        return ['OAIDAO', 'ArticleGalleyDAO'];
+        return ['OAIDAO', 'GalleyDAO'];
     }
 
     /**
@@ -105,7 +104,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $article->setLanguage('en_US');
 
         // Galleys
-        $galley = new ArticleGalley();
+        $galley = Repo::galley()->newDataObject();
         $galley->setId(98);
         $galley->setStoredPubId('doi', 'galley-doi');
         $galleys = [$galley];
@@ -190,15 +189,13 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->will($this->returnValue($issue));
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
-        // Create a mocked ArticleGalleyDAO that returns our test data.
-        $articleGalleyDao = $this->getMockBuilder(ArticleGalleyDAO::class)
+        // Create a mocked GallyeDAO that returns our test data.
+        $galleyDao = $this->getMockBuilder(GalleyDAO::class)
             ->setMethods(['getBySubmissionId'])
             ->getMock();
-        $articleGalleyDao->expects($this->any())
+        $galleyDao->expects($this->any())
             ->method('getBySubmissionId')
             ->will($this->returnValue($galleys));
-        DAORegistry::registerDAO('ArticleGalleyDAO', $articleGalleyDao);
-        // FIXME: ArticleGalleyDAO::getBySubmissionId returns iterator; array expected here. Fix expectations.
 
         //
         // Test

@@ -149,7 +149,7 @@ class ArticleHandler extends Handler
         }
 
         if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
-            $galleys = (array) $this->publication->getData('galleys');
+            $galleys = $this->publication->getData('galleys');
             foreach ($galleys as $galley) {
                 if ($galley->getBestGalleyId() == $galleyId) {
                     $this->galley = $galley;
@@ -167,7 +167,7 @@ class ArticleHandler extends Handler
             if (!$this->galley) {
                 $publications = $submission->getPublishedPublications();
                 foreach ($publications as $publication) {
-                    foreach ((array) $publication->getData('galleys') as $galley) {
+                    foreach ($publication->getData('galleys') as $galley) {
                         if ($galley->getBestGalleyId() == $galleyId) {
                             $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId()]);
                         }
@@ -258,7 +258,7 @@ class ArticleHandler extends Handler
 
             foreach ($galleys as $galley) {
                 $remoteUrl = $galley->getRemoteURL();
-                $file = $galley->getFile();
+                $file = Repo::submissionFile()->get($galley->getData('submissionFileId'));
                 if (!$remoteUrl && !$file) {
                     continue;
                 }
@@ -411,11 +411,14 @@ class ArticleHandler extends Handler
         $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
-                $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
-                $articleGalleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
-                while ($articleGalley = $articleGalleys->next()) {
-                    $galleyFile = $articleGalley->getFile();
-                    if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getId()) {
+                $articleGalleys = Repo::galley()->getMany(
+                    Repo::galley()
+                        ->getCollector()
+                        ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+                );
+                foreach ($articleGalleys as $articleGalley) {
+                    $galleyFile = Repo::submissionFile()->get($articleGalley->getData('submissionFileId'));
+                    if ($galleyFile && $galleyFile->getData('submissionFileId') == $submissionFile->getId()) {
                         header('HTTP/1.1 301 Moved Permanently');
                         $request->redirect(null, null, 'download', [$articleId, $articleGalley->getId(), $submissionFile->getId()]);
                     }
@@ -455,7 +458,7 @@ class ArticleHandler extends Handler
                     ->getCollector()
                     ->filterByAssoc(
                         ASSOC_TYPE_SUBMISSION_FILE,
-                        [$this->galley->getFileId()]
+                        [$this->galley->getData('submissionFileId')]
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
                     ->includeDependentFiles();

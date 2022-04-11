@@ -18,10 +18,12 @@
 
 namespace APP\core;
 
+use APP\facades\Repo;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\security\Role;
+use PKP\submission\RepresentationDAOInterface;
 
 define('REQUIRES_XSL', false);
 
@@ -114,7 +116,6 @@ class Application extends PKPApplication
     public function getDAOMap()
     {
         return array_merge(parent::getDAOMap(), [
-            'ArticleGalleyDAO' => 'APP\article\ArticleGalleyDAO',
             'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
             'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
@@ -180,12 +181,10 @@ class Application extends PKPApplication
 
     /**
      * Get the representation DAO.
-     *
-     * @return RepresentationDAO
      */
-    public static function getRepresentationDAO()
+    public static function getRepresentationDAO(): RepresentationDAOInterface
     {
-        return DAORegistry::getDAO('ArticleGalleyDAO');
+        return Repo::galley()->dao;
     }
 
     /**

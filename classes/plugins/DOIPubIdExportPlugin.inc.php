@@ -27,7 +27,6 @@ use APP\template\TemplateManager;
 use Context;
 use Doi;
 use PKP\core\PKPString;
-use PKP\db\DAORegistry;
 
 use PKP\plugins\PluginRegistry;
 use PKP\submission\PKPSubmission;
@@ -113,7 +112,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * are active at the same time.
      *
      * @param Context $context
-     * @param Issue|Submission|ArticleGalley $object
+     * @param Issue|Submission|Galley $object
      * @param string $testPrefix
      */
     public function saveRegisteredDoi($context, $object, $testPrefix = '10.1234')
@@ -188,9 +187,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     public function getArticleGalleys($galleyIds)
     {
         $galleys = [];
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         foreach ($galleyIds as $galleyId) {
-            $articleGalley = $articleGalleyDao->getById($galleyId);
+            $articleGalley = Repo::galley()->get((int) $galleyId);
             if ($articleGalley && $articleGalley->getStoredPubId('doi')) {
                 $galleys[] = $articleGalley;
             }

@@ -24,8 +24,8 @@ namespace APP\issue;
 
 use APP\core\Application;
 
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
-use PKP\core\DAORegistry;
 
 class IssueGalley extends IssueFile
 {

@@ -34,7 +34,6 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
-use PKP\config\Config;
 use PKP\context\Context;
 use PKP\core\JSONMessage;
 use PKP\db\DAORegistry;
@@ -512,7 +511,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Update the given object.
      *
-     * @param Issue|Submission|ArticleGalley $object
+     * @param Issue|Submission|Galley $object
      */
     protected function updateObject($object)
     {
@@ -826,9 +825,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function getArticleGalleys($galleyIds)
     {
         $galleys = [];
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
         foreach ($galleyIds as $galleyId) {
-            $articleGalley = $articleGalleyDao->getById($galleyId);
+            $articleGalley = Repo::galley()->get((int) $galleyId);
             if ($articleGalley) {
                 $galleys[] = $articleGalley;
             }

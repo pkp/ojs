@@ -13,7 +13,7 @@
 
 namespace APP\publication\maps;
 
-use APP\core\Services;
+use APP\facades\Repo;
 use APP\publication\Publication;
 use PKP\core\PKPApplication;
 use PKP\services\PKPSchemaService;
@@ -29,18 +29,8 @@ class Schema extends \PKP\publication\maps\Schema
             if ($anonymize) {
                 $output['galleys'] = [];
             } else {
-                $galleyArgs = [
-                    'publication' => $publication,
-                    'request' => $this->request,
-                    'submission' => $this->submission,
-                    'genres' => $this->genres,
-                ];
-                $output['galleys'] = array_map(
-                    function ($galley) use ($galleyArgs) {
-                        return Services::get('galley')->getSummaryProperties($galley, $galleyArgs);
-                    },
-                    $publication->getData('galleys')
-                );
+                $output['galleys'] = Repo::galley()->getSchemaMap($this->submission, $publication, $this->genres)
+                    ->summarizeMany($publication->getData('galleys'));
             }
         }
 

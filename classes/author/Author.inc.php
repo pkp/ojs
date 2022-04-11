@@ -19,3 +19,8 @@ namespace APP\author;
 class Author extends \PKP\author\Author
 {
 }
+
+if (!PKP_STRICT_MODE) {
+    // Required for import/export toolset
+    class_alias('\APP\author\Author', '\Author');
+}

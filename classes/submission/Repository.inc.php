@@ -13,7 +13,6 @@
 
 namespace APP\submission;
 
-use APP\article\ArticleGalleyDAO;
 use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
 use APP\core\Services;
@@ -109,16 +108,16 @@ class Repository extends \PKP\submission\Repository
 
         // Galleys
         if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION)) {
-            // For each galley
-            $galleys = Services::get('galley')->getMany(['publicationIds' => $publication->getId()]);
-            /** @var ArticleGalleyDAO $galleyDao */
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+            $galleys = Repo::galley()->getMany(
+                Repo::galley()
+                    ->getCollector()
+                    ->filterByPublicationIds(['publicationIds' => $publication->getId()])
+            );
             foreach ($galleys as $galley) {
                 if (empty($galley->getData('doiId'))) {
                     $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
                     if ($doiId !== null) {
-                        $galley->setData('doiId', $doiId);
-                        $galleyDao->updateObject($galley);
+                        Repo::galley()->edit($galley, ['doiId' => $doiId]);
                     }
                 }
             }
