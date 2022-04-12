@@ -27,7 +27,7 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 		if ($sectionId = $publication->getData('sectionId')) {
 			$sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var $sectionDao SectionDAO */
 			$section = $sectionDao->getById($sectionId);
-			if ($section) $paramArray['sectionName'] = strip_tags($section->getLocalizedTitle());
+			if ($section) $paramArray['sectionName'] = htmlspecialchars($section->getLocalizedTitle());
 		}
 		parent::assignParams($paramArray);
 	}

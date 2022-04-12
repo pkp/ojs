@@ -149,11 +149,11 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 				$mail->setReplyTo(null);
 				$mail->addRecipient($contactEmail, $contactName);
 				$mail->assignParams(array(
-					'contextName' => $context->getLocalizedName(),
-					'userFullName' => $user?$user->getFullName():('(' . __('common.none') . ')'),
-					'userName' => $user?$user->getUsername():('(' . __('common.none') . ')'),
-					'itemName' => $paymentManager->getPaymentName($queuedPayment),
-					'itemCost' => $queuedPayment->getAmount(),
+					'contextName' => htmlspecialchars($context->getLocalizedName()),
+					'userFullName' => htmlspecialchars($user?$user->getFullName():('(' . __('common.none') . ')')),
+					'userName' => htmlspecialchars($user?$user->getUsername():('(' . __('common.none') . ')')),
+					'itemName' => htmlspecialchars($paymentManager->getPaymentName($queuedPayment)),
+					'itemCost' => htmlspecialchars($queuedPayment->getAmount()),
 					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 				));
 				$mail->send();
