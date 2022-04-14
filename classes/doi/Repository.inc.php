@@ -25,6 +25,7 @@ use APP\submission\Submission;
 use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\db\DAORegistry;
+use PKP\doi\exceptions\DoiCreationException;
 use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Representation;
@@ -42,11 +43,11 @@ class Repository extends \PKP\doi\Repository
 
     /**
      * Create a DOI for the given publication.
+     *
+     * @throws DoiCreationException
      */
-    public function mintPublicationDoi(Publication $publication, Submission $submission, Context $context): ?int
+    public function mintPublicationDoi(Publication $publication, Submission $submission, Context $context): int
     {
-        assert(!is_null($submission));
-
         // Default suffix does not rely on any other metadata
         if ($context->getData(Context::SETTING_DOI_SUFFIX_TYPE) === Repo::doi()::SUFFIX_DEFAULT) {
             return $this->mintAndStoreDoi($context, $this->generateDefaultSuffix());
@@ -55,14 +56,26 @@ class Repository extends \PKP\doi\Repository
         // If not using default suffix, additional checks are required
         $issueId = $publication->getData('issueId');
         if ($issueId === null) {
-            return null;
+            throw new DoiCreationException(
+                $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                $publication->getLocalizedFullTitle(),
+                DoiCreationException::PUBLICATION_MISSING_ISSUE
+            );
         }
 
         $issue = Repo::issue()->get($publication->getData('issueId'));
         if ($issue === null) {
-            return null;
+            throw new DoiCreationException(
+                $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                $publication->getLocalizedFullTitle(),
+                DoiCreationException::PUBLICATION_MISSING_ISSUE
+            );
         } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            return null;
+            throw new DoiCreationException(
+                $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                $publication->getLocalizedFullTitle(),
+                DoiCreationException::PUBLICATION_MISSING_ISSUE
+            );
         }
 
         $doiSuffix = $this->generateSuffixPattern($publication, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue, $submission);
@@ -72,11 +85,11 @@ class Repository extends \PKP\doi\Repository
 
     /**
      * Create a DOI for the given galley
+     *
+     * @throws DoiCreationException
      */
-    public function mintGalleyDoi(Galley $galley, Publication $publication, Submission $submission, Context $context): ?int
+    public function mintGalleyDoi(Galley $galley, Publication $publication, Submission $submission, Context $context): int
     {
-        assert(!is_null($submission));
-
         // Default suffix does not rely on any other metadata
         if ($context->getData(Context::SETTING_DOI_SUFFIX_TYPE) === Repo::doi()::SUFFIX_DEFAULT) {
             return $this->mintAndStoreDoi($context, $this->generateDefaultSuffix());
@@ -86,9 +99,17 @@ class Repository extends \PKP\doi\Repository
         $issue = Repo::issue()->getBySubmissionId($submission->getId());
 
         if ($issue === null) {
-            return null;
+            throw new DoiCreationException(
+                $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                $galley->getLabel(),
+                DoiCreationException::REPRESENTATION_MISSING_ISSUE
+            );
         } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            return null;
+            throw new DoiCreationException(
+                $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                $galley->getLabel(),
+                DoiCreationException::REPRESENTATION_MISSING_ISSUE
+            );
         }
 
         $doiSuffix = $this->generateSuffixPattern($galley, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue, $submission, $galley);
@@ -98,11 +119,17 @@ class Repository extends \PKP\doi\Repository
 
     /**
      * Create a DOI for the given Issue
+     *
+     * @throws DoiCreationException
      */
-    public function mintIssueDoi(Issue $issue, Context $context): ?int
+    public function mintIssueDoi(Issue $issue, Context $context): int
     {
         if ($context->getId() != $issue->getJournalId()) {
-            return null;
+            throw new DoiCreationException(
+                $issue->getLocalizedTitle(),
+                $issue->getLocalizedTitle(),
+                DoiCreationException::INCORRECT_ISSUE_CONTEXT
+            );
         }
 
         // Default suffix does not rely on any other metadata

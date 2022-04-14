@@ -358,3 +358,12 @@ msgstr "Send an email to the authors to let them know that this submission will 
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Select files that should be sent to the review stage."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr "Could not create a DOI for the following submission: {$pubObjectTitle}. The submission must be assigned to an issue before a DOI can be generated."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr "Could not create a DOI for the {$pubObjectTitle} galley for the following submission: {$itemTitle}. The submission must be assigned to an issue before a DOI can be generated."
+
+msgid "doi.submission.incorrectContext"
+msgstr "Could not create a DOI for the following submission: {$pubObjectTitle}. It does not exist in the current journal context."
