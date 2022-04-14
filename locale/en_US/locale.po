@@ -515,6 +515,9 @@ msgstr "View Issue"
 msgid "issue.return"
 msgstr "Return to Issue Details"
 
+msgid "doi.issue.incorrectContext"
+msgstr "Could not create a DOI for the following issue: {$itemTitle}. It does not exist in the current journal context."
+
 msgid "subscriptionTypes.currency"
 msgstr "Currency"
 
