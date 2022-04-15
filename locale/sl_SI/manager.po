@@ -1,10 +1,10 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2021.
+# Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2021-11-19 19:11+0000\n"
+"PO-Revision-Date: 2022-04-17 06:41+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl_SI/>\n"
@@ -2119,7 +2119,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} ne more biti dodeljen, ker vsebuje vzorec, ki ga ni mogoče razrešiti."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} je bil dodeljen."
+msgstr ""
+"DOI {$pubId} je bil dodeljen. Za spreminjanje DOI-ja obiščite stran  <a href="
+"\"{$doiManagementLink}\">Upravljanje z DOI</a>."
 
 msgid "doi.editor.missingParts"
 msgstr ""
@@ -2153,3 +2155,61 @@ msgstr "DOI za ta članek bo {$doi}."
 
 msgid "doi.editor.missingPrefix"
 msgstr "DOI se mora začeti z {$doiPrefix}."
+
+msgid "doi.manager.displayName"
+msgstr "DOI-ji"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Valuta zneska plačila, kot je EUR"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI številke"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI prispevka"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Zahtevane številke ni bilo mogoče najti"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Po izdaji revije je možno spreminjati le DOI-je"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Po izdaji revije/preloma je možno spreminjati le DOI-je"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Podani DOI ni veljaven"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Zahtevani prelom ni del te izdaje."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI, ki bo dodeljen ob izdaji: {$pubId}."
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Prosimo izberite registracijsko agencijo, pri kateri želite deponirati DOI-"
+"je."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registracijska agencija"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ne obstaja"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Znesek plačila"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Ime tipa plačila"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "V fazi lektoriranja"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Uporabi privzeti vzorec.<br />%j.v%vi%i za številke<br />%j.v%vi%i.%a za "
+"članke<br />%j.v%vi%i.%a.g%g za prelome."
+
+msgid "manager.setup.enableDois.description"
+msgstr "Dodeli DOI-je člankom, številkam in prelomom."
