@@ -142,6 +142,9 @@ class Application extends PKPApplication
             'SectionDAO' => 'APP\journal\SectionDAO',
             'SubscriptionDAO' => 'APP\subscription\SubscriptionDAO',
             'SubscriptionTypeDAO' => 'APP\subscription\SubscriptionTypeDAO',
+            'UsageStatsTotalTemporaryRecordDAO' => 'APP\statistics\UsageStatsTotalTemporaryRecordDAO',
+            'UsageStatsUniqueItemInvestigationsTemporaryRecordDAO' => 'APP\statistics\UsageStatsUniqueItemInvestigationsTemporaryRecordDAO',
+            'UsageStatsUniqueItemRequestsTemporaryRecordDAO' => 'APP\statistics\UsageStatsUniqueItemRequestsTemporaryRecordDAO',
         ]);
     }
 
