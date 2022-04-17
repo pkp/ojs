@@ -1,0 +1,8 @@
+# Primož Svetek <primoz.svetek@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Language: sl_SI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
