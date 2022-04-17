@@ -15,11 +15,11 @@
 
 import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
 
-use APP\article\ArticleGalley;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\template\TemplateManager;
+use PKP\galley\Galley;
 
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {
@@ -33,7 +33,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
         $templateMgr = TemplateManager::getManager($request);
         $enablePublisherId = (array) $request->getContext()->getData('enablePublisherId');
         $templateMgr->assign([
-            'enablePublisherId' => ($this->getPubObject() instanceof ArticleGalley && in_array('galley', $enablePublisherId)) ||
+            'enablePublisherId' => ($this->getPubObject() instanceof Galley && in_array('galley', $enablePublisherId)) ||
                     ($this->getPubObject() instanceof Issue && in_array('issue', $enablePublisherId)) ||
                     ($this->getPubObject() instanceof IssueGalley && in_array('issueGalley', $enablePublisherId)),
         ]);

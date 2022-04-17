@@ -233,7 +233,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Update the localized fields for this galley.
      *
-     * @param ArticleGalley $galley
+     * @param Galley $galley
      */
     public function updateLocaleFields($galley)
     {

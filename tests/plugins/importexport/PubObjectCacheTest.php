@@ -21,9 +21,9 @@
 import('lib.pkp.tests.PKPTestCase');
 import('plugins.importexport.medra.classes.PubObjectCache');
 
+use APP\facades\Repo;
 use APP\issue\Issue;
 use PKP\submission\Submission;
-use APP\article\ArticleGalley;
 
 class PubObjectCacheTest extends PKPTestCase
 {
@@ -83,7 +83,7 @@ class PubObjectCacheTest extends PKPTestCase
         $article->setId('2');
         $article->setIssueId('1');
 
-        $articleGalley = new ArticleGalley();
+        $articleGalley = Repo::galley()->newDataObject();
         $articleGalley->setId('3');
         $articleGalley->setSubmissionId($article->getId());
 
@@ -122,11 +122,11 @@ class PubObjectCacheTest extends PKPTestCase
         $article->setId('2');
         $article->setIssueId('1');
 
-        $articleGalley1 = new ArticleGalley();
+        $articleGalley1 = Repo::galley()->newDataObject();
         $articleGalley1->setId('3');
         $articleGalley1->setSubmissionId($article->getId());
 
-        $articleGalley2 = new ArticleGalley();
+        $articleGalley2 = Repo::galley()->newDataObject();
         $articleGalley2->setId('4');
         $articleGalley2->setSubmissionId($article->getId());
 

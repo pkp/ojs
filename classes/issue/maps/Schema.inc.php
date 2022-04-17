@@ -7,6 +7,7 @@ use APP\core\Services;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalleyDAO;
+use APP\journal\Journal;
 use APP\journal\SectionDAO;
 use Illuminate\Support\Enumerable;
 use PKP\db\DAORegistry;
@@ -36,7 +37,7 @@ class Schema extends \PKP\core\maps\Schema
      * @param UserGroup[] $userGroups The user groups of this content
      * @param Genre[] $genres The genres of this context
      */
-    public function map(Issue $item, array $userGroups, array $genres): array
+    public function map(Issue $item, Journal $context, array $userGroups, array $genres): array
     {
         $this->userGroups = $userGroups;
         $this->genres = $genres;
@@ -49,8 +50,9 @@ class Schema extends \PKP\core\maps\Schema
      * Includes properties with the apiSummary flag in the Issue schema.
      *
      */
-    public function summarize(Issue $item): array
+    public function summarize(Issue $item, Journal $context): array
     {
+        $this->context = $context;
         return $this->mapByProperties($this->getSummaryProps(), $item);
     }
 
@@ -62,11 +64,11 @@ class Schema extends \PKP\core\maps\Schema
      * @param UserGroup[] $userGroups The user groups of this content
      * @param Genre[] $genres The genres of this context
      */
-    public function mapMany(Enumerable $collection, array $userGroups, array $genres): Enumerable
+    public function mapMany(Enumerable $collection, Journal $context, array $userGroups, array $genres): Enumerable
     {
         $this->collection = $collection;
-        return $collection->map(function ($item, $userGroups, $genres) {
-            return $this->map($item, $userGroups, $genres);
+        return $collection->map(function ($item) use ($context, $userGroups, $genres) {
+            return $this->map($item, $context, $userGroups, $genres);
         });
     }
 
@@ -75,11 +77,11 @@ class Schema extends \PKP\core\maps\Schema
      *
      * @see self::summarize
      */
-    public function summarizeMany(Enumerable $collection): Enumerable
+    public function summarizeMany(Enumerable $collection, Journal $context): Enumerable
     {
         $this->collection = $collection;
-        return $collection->map(function ($item) {
-            return $this->summarize($item);
+        return $collection->map(function ($item) use ($context) {
+            return $this->summarize($item, $context);
         });
     }
 
@@ -131,9 +133,26 @@ class Schema extends \PKP\core\maps\Schema
                     $galleys = $issueGalleyDao->getByIssueId($issue->getId());
                     if (!empty($galleys)) {
                         $request = Application::get()->getRequest();
-                        $galleyArgs = ['issue' => $issue, 'request' => $request];
                         foreach ($galleys as $galley) {
-                            $data[] = Services::get('galley')->getSummaryProperties($galley, $galleyArgs);
+                            $data[] = [
+                                'fileId' => $galley->getData('fileId'),
+                                'label' => $galley->getData('label'),
+                                'locale' => $galley->getData('locale'),
+                                'pub-id::publisher-id' => $galley->getData('pub-id::publisher-id'),
+                                'sequence' => $galley->getData('sequence'),
+                                'urlPublished' => $request->getDispatcher()->url(
+                                    $request,
+                                    Application::ROUTE_PAGE,
+                                    $this->context->getPath(),
+                                    'issue',
+                                    'view',
+                                    [
+                                        $galley->getIssueId(),
+                                        $galley->getId()
+                                    ]
+                                ),
+                                'urlRemote' => $galley->getData('urlRemote'),
+                            ];
                         }
                     }
                     $output[$prop] = $data;

@@ -55,7 +55,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
         switch ($columnId) {
             case 'label':
                 return [
-                    'label' => ($element->getRemoteUrl() == '' && $element->getFileId()) ? '' : $element->getLabel()
+                    'label' => ($element->getRemoteUrl() == '' && $element->getData('submissionFileId')) ? '' : $element->getLabel()
                 ];
                 break;
             default: assert(false);

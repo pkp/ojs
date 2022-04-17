@@ -17,6 +17,7 @@ import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter
 
 use APP\facades\Repo;
 use APP\submission\Submission;
+use PKP\galley\Galley;
 
 // FIXME: Add namespacing
 // use DOMElement;
@@ -63,7 +64,7 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
      *
      * @param DOMElement $node
      *
-     * @return array Array of ArticleGalley objects
+     * @return array Array of Galley objects
      */
     public function handleElement($node)
     {
@@ -82,13 +83,14 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
                 $addSubmissionFile = true;
             }
         }
+        /** @var Galley $representation */
         $representation = parent::handleElement($node);
 
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
             if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
             case 'name':
-                // Labels are not localized in OJS ArticleGalleys, but we use the <name locale="....">...</name> structure.
+                // Labels are not localized in OJS Galleys, but we use the <name locale="....">...</name> structure.
                 $locale = $n->getAttribute('locale');
                 if (empty($locale)) {
                     $locale = $submission->getLocale();
@@ -100,11 +102,10 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
             }
         }
 
-        $representationDao = Application::getRepresentationDAO();
         if ($addSubmissionFile) {
-            $representation->setFileId($newSubmissionFileId);
+            $representation->setData('submissionFileId', $newSubmissionFileId);
         }
-        $representationDao->insertObject($representation);
+        Repo::galley()->dao->insert($representation);
 
         if ($addSubmissionFile) {
             // Update the submission file.

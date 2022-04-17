@@ -10,7 +10,7 @@
  * @class ArticleGalleyForm
  * @ingroup controllers_grid_articleGalleys_form
  *
- * @see ArticleGalley
+ * @see Galley
  *
  * @brief Article galley editing form.
  */
@@ -19,6 +19,7 @@ use APP\facades\Repo;
 use APP\template\TemplateManager;
 
 use PKP\form\Form;
+use PKP\galley\Galley;
 
 class ArticleGalleyForm extends Form
 {
@@ -28,7 +29,7 @@ class ArticleGalleyForm extends Form
     /** @var Publication */
     public $_publication = null;
 
-    /** @var ArticleGalley current galley */
+    /** @var Galley current galley */
     public $_articleGalley = null;
 
     /**
@@ -36,7 +37,7 @@ class ArticleGalleyForm extends Form
      *
      * @param Submission $submission
      * @param Publication $publication
-     * @param ArticleGalley $articleGalley (optional)
+     * @param Galley $articleGalley (optional)
      */
     public function __construct($request, $submission, $publication, $articleGalley = null)
     {
@@ -55,12 +56,12 @@ class ArticleGalleyForm extends Form
         $this->addCheck(
             new \PKP\form\validation\FormValidator(
                 $this,
-                'galleyLocale',
+                'locale',
                 'required',
                 'editor.issues.galleyLocaleRequired'
             ),
-            function ($galleyLocale) use ($journal) {
-                return in_array($galleyLocale, $journal->getSupportedSubmissionLocaleNames());
+            function ($locale) use ($journal) {
+                return in_array($locale, $journal->getSupportedSubmissionLocaleNames());
             }
         );
     }
@@ -97,17 +98,14 @@ class ArticleGalleyForm extends Form
      */
     public function validate($callHooks = true)
     {
-
-        // Check if urlPath is already being used
+        // Validate the urlPath
         if ($this->getData('urlPath')) {
             if (ctype_digit((string) $this->getData('urlPath'))) {
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
-                $articleGalley = Application::get()->getRepresentationDAO()->getByBestGalleyId($this->getData('urlPath'), $this->_publication->getId());
-                if ($articleGalley &&
-                    (!$this->_articleGalley || $this->_articleGalley->getId() !== $articleGalley->getId())
-                ) {
+                $existingGalley = Repo::galley()->getByUrlPath((string) $this->getData('urlPath'), $this->_publication);
+                if ($existingGalley && (!$this->_articleGalley || $this->_articleGalley->getId() !== $existingGalley->getId())) {
                     $this->addError('urlPath', __('publication.urlPath.duplicate'));
                     $this->addErrorField('urlPath');
                 }
@@ -125,7 +123,7 @@ class ArticleGalleyForm extends Form
         if ($this->_articleGalley) {
             $this->_data = [
                 'label' => $this->_articleGalley->getLabel(),
-                'galleyLocale' => $this->_articleGalley->getLocale(),
+                'locale' => $this->_articleGalley->getLocale(),
                 'urlPath' => $this->_articleGalley->getData('urlPath'),
                 'urlRemote' => $this->_articleGalley->getData('urlRemote'),
             ];
@@ -142,7 +140,7 @@ class ArticleGalleyForm extends Form
         $this->readUserVars(
             [
                 'label',
-                'galleyLocale',
+                'locale',
                 'urlPath',
                 'urlRemote',
             ]
@@ -152,32 +150,35 @@ class ArticleGalleyForm extends Form
     /**
      * Save changes to the galley.
      *
-     * @return ArticleGalley The resulting article galley.
+     * @return Galley The resulting article galley.
      */
     public function execute(...$functionArgs)
     {
         $articleGalley = $this->_articleGalley;
-        $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
 
         if ($articleGalley) {
-            $articleGalley->setLabel($this->getData('label'));
-            $articleGalley->setLocale($this->getData('galleyLocale'));
-            $articleGalley->setData('urlPath', $this->getData('urlPath'));
-            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
 
             // Update galley in the db
-            $articleGalleyDao->updateObject($articleGalley);
+            $newData = [
+                'label' => $this->getData('label'),
+                'locale' => $this->getData('locale'),
+                'urlPath' => $this->getData('urlPath'),
+                'urlRemote' => $this->getData('urlRemote')
+            ];
+            Repo::galley()->edit($articleGalley, $newData);
         } else {
             // Create a new galley
-            $articleGalley = $articleGalleyDao->newDataObject();
-            $articleGalley->setData('publicationId', $this->_publication->getId());
-            $articleGalley->setLabel($this->getData('label'));
-            $articleGalley->setLocale($this->getData('galleyLocale'));
-            $articleGalley->setData('urlPath', $this->getData('urlPath'));
-            $articleGalley->setData('urlRemote', $this->getData('urlRemote'));
+            $articleGalley = Repo::galley()->newDataObject([
+                'publicationId' => $this->_publication->getId(),
+                'label' => $this->getData('label'),
+                'locale' => $this->getData('locale'),
+                'urlPath' => $this->getData('urlPath'),
+                'urlRemote' => $this->getData('urlRemote')
+            ]);
 
-            // Insert new galley into the db
-            $articleGalleyDao->insertObject($articleGalley);
+
+            $galleyId = Repo::galley()->add($articleGalley);
+            $articleGalley = Repo::galley()->get($galleyId);
             $this->_articleGalley = $articleGalley;
         }
 

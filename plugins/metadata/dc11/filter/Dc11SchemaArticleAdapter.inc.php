@@ -18,13 +18,13 @@
  *  a Submission object.
  */
 
-use APP\submission\Submission;
-use APP\issue\IssueAction;
-use PKP\metadata\MetadataDataObjectAdapter;
-use PKP\metadata\MetadataDescription;
 use APP\facades\Repo;
+use APP\issue\IssueAction;
+use APP\submission\Submission;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleConversion;
+use PKP\metadata\MetadataDataObjectAdapter;
+use PKP\metadata\MetadataDescription;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -144,14 +144,15 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 
 
+        $galleys = Repo::galley()->getMany(
+            Repo::galley()
+                ->getCollector()
+                ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+        );
+
         // Format
-        if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
-            $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId());
-            $formats = [];
-            while ($galley = $galleys->next()) {
-                $dc11Description->addStatement('dc:format', $galley->getFileType());
-            }
+        foreach ($galleys as $galley) {
+            $dc11Description->addStatement('dc:format', $galley->getFileType());
         }
 
         // Identifier: URL
@@ -182,21 +183,14 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             $dc11Description->addStatement('dc:source', $issn, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         }
 
-        // Get galleys and supp files.
-        $galleys = [];
-        if ($article instanceof Submission) {
-            $articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $articleGalleyDao */
-            $galleys = $articleGalleyDao->getByPublicationId($article->getCurrentPublication()->getId())->toArray();
-        }
-
         // Language
         $locales = [];
         if ($article instanceof Submission) {
             foreach ($galleys as $galley) {
-                $galleyLocale = $galley->getLocale();
-                if (!is_null($galleyLocale) && !in_array($galleyLocale, $locales)) {
-                    $locales[] = $galleyLocale;
-                    $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($galleyLocale));
+                $locale = $galley->getLocale();
+                if (!is_null($locale) && !in_array($locale, $locales)) {
+                    $locales[] = $locale;
+                    $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($locale));
                 }
             }
         }

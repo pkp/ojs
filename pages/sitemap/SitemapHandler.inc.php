@@ -35,7 +35,6 @@ class SitemapHandler extends PKPSitemapHandler
         // Search
         $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'search')));
         // Issues
-        $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
         if ($journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'current')));
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'archive')));
@@ -58,8 +57,15 @@ class SitemapHandler extends PKPSitemapHandler
                     // Abstract
                     $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId()])));
                     // Galley files
-                    $galleys = $galleyDao->getByPublicationId($submission->getCurrentPublication()->getId());
-                    while ($galley = $galleys->next()) {
+
+
+
+                    $galleys = Repo::galley()->getMany(
+                        Repo::galley()
+                            ->getCollector()
+                            ->filterByPublicationIds([($submission->getCurrentPublication()->getId())])
+                    );
+                    foreach ($galleys as $galley) {
                         $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId(), $galley->getBestGalleyId()])));
                     }
                 }

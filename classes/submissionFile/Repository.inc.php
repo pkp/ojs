@@ -14,8 +14,8 @@
 namespace APP\submissionFile;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use Exception;
-use PKP\db\DAORegistry;
 use PKP\observers\events\SubmissionFileDeleted;
 use PKP\plugins\HookRegistry;
 use PKP\submissionFile\Repository as BaseRepository;
@@ -34,8 +34,7 @@ class Repository extends BaseRepository
         $galley = null;
 
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
-            $galley = $galleyDao->getById($submissionFile->getData('assocId'));
+            $galley = Repo::galley()->get($submissionFile->getData('assocId'));
             if (!$galley) {
                 throw new Exception('Galley not found when adding submission file.');
             }
@@ -44,8 +43,7 @@ class Repository extends BaseRepository
         $submissionFileId = parent::add($submissionFile);
 
         if ($galley) {
-            $galley->setFileId($submissionFile->getId());
-            $galleyDao->updateObject($galley);
+            Repo::galley()->edit($galley, ['submissionFileId' => $submissionFile->getId()]);
         }
 
         return $submissionFileId;
@@ -64,11 +62,10 @@ class Repository extends BaseRepository
     {
         // Remove galley associations and update search index
         if ($submissionFile->getData('assocType') === Application::ASSOC_TYPE_REPRESENTATION) {
-            $galleyDao = DAORegistry::getDAO('ArticleGalleyDAO'); /** @var ArticleGalleyDAO $galleyDao */
-            $galley = $galleyDao->getById($submissionFile->getData('assocId'));
+            $galley = Repo::galley()->get((int)$submissionFile->getData('assocId'));
             if ($galley && $galley->getData('submissionFileId') == $submissionFile->getId()) {
                 $galley->_data['submissionFileId'] = null; // Work around pkp/pkp-lib#5740
-                $galleyDao->updateObject($galley);
+                Repo::galley()->edit($galley, []);
             }
 
             event(new SubmissionFileDeleted($submissionFile));
