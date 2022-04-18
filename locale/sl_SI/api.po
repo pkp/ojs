@@ -1,9 +1,10 @@
+# Primož Svetek <primoz.svetek@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2021-03-12 15:57+0000\n"
+"PO-Revision-Date: 2022-04-18 13:53+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/api/sl_SI/"
 ">\n"
@@ -68,3 +69,14 @@ msgstr "Zahtevano obvestilo ni na voljo pri tej reviji."
 
 msgid "api.emails.403.disabled"
 msgstr "Opcija za obveščanje preko emaila ni omogočena za to revijo."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Nekateri elementi niso bili uspešno deponirani. Prosimo preverite vsak "
+"posamezen element za specificno sporočilo o napaki."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Nobena DOI registracijska agencija ni nastavljena za to revijo."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Zahtevani DOI ni del te revije."
