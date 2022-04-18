@@ -80,7 +80,7 @@ class SubscriptionEmailVariable extends Variable
     {
         return
         [
-            self::SUBSCRIBER_DETAILS => $this->subscriber->getContactSignature(),
+            self::SUBSCRIBER_DETAILS => $this->subscriber->getSignature() ?? '',
             self::SUBSCRIPTION_SIGNATURE => $this->getSubscriptionSignature(),
             self::SUBSCRIPTION_URL => $this->getSubscriptionUrl(),
             self::EXPIRE_DATE => $this->subscription->getDateEnd(),
