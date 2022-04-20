@@ -1,9 +1,9 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-01 05:21+0000\n"
-"Last-Translator: Albena Vassileva <albena.ava@gmail.com>\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
 "Language: bg_BG\n"
@@ -369,3 +369,39 @@ msgstr "Роля на изпращача"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Декларация за поверителност"
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Изберете файлове, които трябва да бъдат изпратени на етап рецензиране."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Изпратете имейл до авторите, за да ги уведомите, че това подаване на "
+"материали ще бъде изпратено за рецензиране. Ако е възможно, дайте на "
+"авторите някаква индикация за това колко време може да отнеме процесът на "
+"рецензиране и кога трябва да очакват известие от редакторите."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Изпратете имейл до авторите, за да ги уведомите, че тяхното подаване на "
+"материали се изпраща обратно към етапа на рецензиране. Обяснете защо е взето "
+"това решение и уведомете автора какъв по-нататъшен преглед ще бъде предприет."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+"Подадените материали {$title} бяха изпратени обратно към етап на рецензиране."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Изпратено обратно към етап на рецензиране"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} отмени решението да приеме тези материали и ги изпрати обратно "
+"на етап за рецензиране."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Отмяна на решението за приемане на това подаване на материали и изпращане "
+"обратно към етапа на рецензиране."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Обратно към етап на рецензиране"
