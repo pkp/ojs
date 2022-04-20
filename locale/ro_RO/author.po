@@ -1,7 +1,8 @@
+# Cristina Bleortu <cristina.bleortu@uzh.ch>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-07 15:56+0000\n"
-"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
+"Last-Translator: Cristina Bleortu <cristina.bleortu@uzh.ch>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "ro_RO/>\n"
 "Language: ro_RO\n"
@@ -376,8 +377,7 @@ msgstr ""
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Folosiți numai cu materiale publicate în mod oficial."
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Prezentați fișierul pentru recenzori (fără metadate), deoarece nu va "
-"compromite revizuirea orb."
+"Prezentați fișierul recenzorilor (fără metadate), pentru a nu compromite "
+"revizuirea anonimă."

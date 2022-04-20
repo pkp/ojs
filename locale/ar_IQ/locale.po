@@ -1,10 +1,10 @@
-# M. Ali <vorteem@gmail.com>, 2021.
+# M. Ali <vorteem@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-06-28 09:03+0000\n"
+"PO-Revision-Date: 2022-03-31 23:12+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/locale/ar_IQ/"
 ">\n"
@@ -2019,7 +2019,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "الوصول متعذر! لم يتم تعيينك كمدقق لهذا المؤلَّف."
 
 msgid "user.authorization.noContext"
-msgstr "لا مجلة في هذا السياق!"
+msgstr "لم يتم العثور على أي مجلة في هذا السياق تتطابق مع معايير بحثك."
 
 msgid "user.authorization.sectionAssignment"
 msgstr "أنت تحاول الوصول إلى مؤلَّف ليس ضمن القسم الخاص بك."
@@ -2115,3 +2115,6 @@ msgstr "غير مدفوع"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "هذه المجلة لا تنشر محتوياتها على الإنترنت."
+
+msgid "doi.manager.settings.publications"
+msgstr "المقالات"

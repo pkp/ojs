@@ -1,11 +1,11 @@
+# Eirik Hanssen <eirikh@oslomet.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2021-01-29 12:48+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-"
-"info@journals.uio.no>\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -2530,8 +2530,11 @@ msgstr "DOI for denne publikationen blir {$doi}."
 msgid "doi.editor.missingPrefix"
 msgstr "DOI skal begynne med {$doiPrefix}."
 
+#, fuzzy
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} har blitt tildelt."
+msgstr ""
+"DOI {$pubId} har blitt tildelt. For å endre DOI-en kan du gå til <a href=\""
+"{$doiManagementLink}\">DOI Management siden</a>."
 
 msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} kan ikke tildeles fordi det inneholder et ukjent mønster."
@@ -2678,3 +2681,113 @@ msgstr ""
 "tidsskriftsinitialer, %v for årgang, %i for nummeret i årgangen, %Y for "
 "året, %a for OJS-artikkel-ID, %g for OJS publiseringsversjons-ID, %f for OJS "
 "fil-ID, %p for sidenummer og %x for \"Egendefinert identifikator\"."
+
+msgid "doi.manager.issueDois"
+msgstr "Nummer DOI-er"
+
+msgid "doi.manager.submissionDois"
+msgstr "Artikkel DOI-er"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Numrene du søkte etter ble ikke funnet"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Kun DOI-er kan redigeres etter at en publikasjon er publisert"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Den innsendte DOI-en er ikke gyldig"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Kun DOI-er kan redigeres etter at et oppsett har blitt publisert"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Oppsettet du søkte etter er ikke del av denne publikasjonen."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI-en {$pubId} blir tildelt ved publisering."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ingen"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Velg den registreringsorganisasjonen du ønsker å bruke ved deponering av DOI-"
+"er."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registreringsorganisasjon"
+
+msgid "doi.manager.displayName"
+msgstr "DOI-er"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Denne e-posten sendes automatisk til nye brukere når de registrerer seg i "
+"tidsskriftet og når innstillingene krever at e-postadressen skal valideres."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validér E-post ved registrering i tidsskrift"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nettstedets navn når flere enn ett tidsskrift ligger på plattformen"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Betalingsbeløpets valuta, f.eks NOK"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Betalingsbeløp"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Navn på betalingstypen"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "E-postadressen til tidsskriftets kontaktperson"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Tidsskriftets e-postsignatur til automatiserte e-poster"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Navnet på tidsskriftets kontaktperson"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL til tidsskriftets hjemmeside"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Tidsskriftets navn"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Prosessen kunne ikke  parse nummerets oppsett"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Resultat av eksport"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Ingen kontaktperson er valgt til dette tidsskriftet. Du kan velge "
+"kontaktperson i <a href=\"{$url}\">tidsskriftets innstillinger</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Send en kopi av bekreftelses-eposten i forbindelse med innlevering til dette "
+"tidsskriftets kontakteperson."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Velg landet hvor dette tidsskriftet er lokalisert, eller landet som svarer "
+"til utgiverens postadresse."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "I språkvask-stadiet"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Bruk standardmønstre.<br />%j.v%vi%i til numre<br />%j.v%vi%i.%a til "
+"artikler<br />%j.v%vi%i.%a.g%g til oppsett."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Tildel digitale objekt identifikatorer (DOI-er) til artikler, numre og "
+"oppsett."

@@ -1,7 +1,8 @@
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-05 12:44+0000\n"
-"Last-Translator: Liana Arustamyan <lianaarustamyan33@gmail.com>\n"
+"PO-Revision-Date: 2022-02-18 09:26+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
 "\n"
 "Language: hy_AM\n"

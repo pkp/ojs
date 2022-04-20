@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-05 23:06+0000\n"
+"PO-Revision-Date: 2022-03-23 15:56+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-information/is_IS/>\n"
@@ -16,7 +16,7 @@ msgid "plugins.block.information.link"
 msgstr "Upplýsingar"
 
 msgid "plugins.block.information.description"
-msgstr "Þessi viðbót er með hliðarstiku með upplýsinga tengil."
+msgstr "Þessi viðbót er með hliðarstiku með upplýsingatengli."
 
 msgid "plugins.block.information.displayName"
 msgstr "Upplýsingablokk"

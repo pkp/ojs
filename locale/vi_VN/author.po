@@ -1,8 +1,9 @@
 # Nguyen Xuan Giao <giaonxb@gmail.com>, 2021.
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-06 16:04+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -83,11 +84,10 @@ msgstr "Tên của nghiên cứu hoặc ý tưởng gốc khác."
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Ngày khi dữ liệu được thu thập hoặc công cụ được tạo."
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Tập tin dành cho người phản biện (không có siêu dữ liệu), vì nó sẽ dùng cho "
-"bình duyệt kín."
+"Tập tin dành cho người review (không có siêu dữ liệu), vì nó sẽ dùng cho "
+"review kín."
 
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Mô tả ngắn gọn"

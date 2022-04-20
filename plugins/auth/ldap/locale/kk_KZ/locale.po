@@ -1,8 +1,9 @@
 # Madi <nmdbzk@gmail.com>, 2021.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-12 13:40+0000\n"
-"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"PO-Revision-Date: 2022-03-05 03:55+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "kk_KZ/>\n"
 "Language: kk_KZ\n"
@@ -16,7 +17,7 @@ msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL қауіпсіздігі"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "Сұралып отырған авторизациялу идентификаторы (ID)"
+msgstr "Сұралып отырған авторизациялау идентификаторы (ID)"
 
 msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Облыс (Realm)"
@@ -94,3 +95,6 @@ msgstr ""
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "\"LDAP\"модулі"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "Cұралып отырған ID авторизация"

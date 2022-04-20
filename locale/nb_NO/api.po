@@ -1,7 +1,8 @@
+# Eirik Hanssen <eirikh@oslomet.no>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-28 16:11+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -61,3 +62,16 @@ msgstr "Oppslaget du søkte etter finnes ikke i dette tidsskriftet."
 
 msgid "api.emails.403.disabled"
 msgstr "E-postvarsler er ikke slått på for dette tidsskriftet."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Deponering av noen elementer var ikke vellykket. Vennligst sjekk "
+"individuelle elementer for spesifikke feilmeldinger."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Ingen DOI-registrreringsorganisasjon har blitt konfigurert for dette "
+"tidsskriftet."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "DOI-en du spurte etter tilhører ikke dette tidsskriftet."

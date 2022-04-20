@@ -1,12 +1,12 @@
 # EDMILSON JOSE BOREGAS <ejsboregas@fgv.br>, 2021.
 # Flavio Chaffin <flavio.chaffin@gmail.com>, 2021.
-# Diego José Macêdo <diegojmacedo@gmail.com>, 2021.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2021-11-22 17:39+0000\n"
+"PO-Revision-Date: 2022-03-03 14:05+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
@@ -2089,7 +2089,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "O DOI {$pubId} não pode ser atribuído porque contém um padrão inválido."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "O DOI {$pubId} foi atribuído."
+msgstr ""
+"O DOI {$pubId} foi atribuído. Para editar o DOI, visite a <a href=\""
+"{$doiManagementLink}\">Página de Gerenciamento de DOI</a>."
 
 msgid "doi.manager.settings.doiSuffixCustomIdentifier"
 msgstr "Insira um sufixo DOI individual para cada item publicado. Você encontrará um campo para inserir o DOI na página de meta-dados de cada item."
@@ -2134,3 +2136,53 @@ msgstr "Designar"
 
 msgid "doi.editor.doi.description"
 msgstr "O DOI deve começar com {$prefix}."
+
+msgid "doi.manager.issueDois"
+msgstr "DOIs da edição"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOIs do artigo"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "As edições solicitadas não foram encontradas"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Apenas DOIs podem ser editados após uma publicação ter sido publicada"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "O DOI enviado não é válido"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Apenas DOIs podem ser editados após a publicação de uma publicação/composição"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "A composição solicitada não faz parte desta publicação."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "O DOI {$pubId} será atribuído na publicação."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Nenhuma"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Selecione a agência de registro que você gostaria de usar ao depositar DOIs."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Agência de Registro"
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Na etapa de Edição de Texto"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Use padrões .<br />%j.v%vi%i para edições<br />%j.v%vi%i.%a para artigos<br "
+"/>%j.v%vi%i.%a.g%g para composições."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Atribua Digital Object Identifier (DOIs) a artigos, edições e composições."

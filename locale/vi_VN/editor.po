@@ -1,7 +1,8 @@
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-29 07:38+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -468,3 +469,11 @@ msgstr "Tất cả người đăng ký thuê bao theo tổ chức ({$count} ngư
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Tất cả người đăng ký thuê bao cá nhân ({$count} người dùng)"
+
+msgid "issues.submissions.issueIds"
+msgstr "Được phân công cho ấn bản"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Ảnh bìa bạn yêu cầu xóa có liên quan đến ấn bản của tạp chí khác. Hãy chắc "
+"chắn là bạn đang làm việc với đúng tạp chí, đúng ấn bản và thử lại lần nữa."

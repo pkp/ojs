@@ -1,9 +1,10 @@
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2021-01-20 14:52+0000\n"
+"PO-Revision-Date: 2022-03-03 10:22+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/api/cs_CZ/>\n"
 "Language: cs_CZ\n"
@@ -62,3 +63,15 @@ msgstr "Požadované oznámení není součástí tohoto časopisu."
 
 msgid "api.emails.403.disabled"
 msgstr "Pro tento časopis nebyla zapnuta e-mailová upozornění."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Některé položky nebyly úspěšně uloženy. Podívejte se prosím na konkrétní "
+"chybová hlášení u jednotlivých položek."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Pro tento časopis nebyla nakonfigurována žádná registrační agentura DOI."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Požadované DOI není součástí tohoto časopisu."

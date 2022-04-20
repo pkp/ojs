@@ -1,9 +1,10 @@
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-28 09:51+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2022-03-03 14:05+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
-"auth-ldap/mk/>\n"
+"auth-ldap/mk_MK/>\n"
 "Language: mk_MK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,7 +52,7 @@ msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Realm"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "Побараба е авторизација на ID"
+msgstr "Побарана е авторизација на ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL сигурносни особини"
@@ -92,3 +93,6 @@ msgstr "Име на серверот"
 
 msgid "plugins.auth.ldap.settings"
 msgstr "LDAP подесувања"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "Побарано ИД за овластување"

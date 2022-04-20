@@ -1,6 +1,7 @@
+# Hyongjun Choi <chj2812@dankook.ac.kr>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-11 10:49+0000\n"
+"PO-Revision-Date: 2022-04-17 11:59+0000\n"
 "Last-Translator: Hyongjun Choi <chj2812@dankook.ac.kr>\n"
 "Language-Team: Korean <http://translate.pkp.sfu.ca/projects/ojs/admin/ko_KR/>"
 "\n"
@@ -114,7 +115,7 @@ msgid "admin.contexts.contextDescription"
 msgstr "학술지 설명"
 
 msgid "admin.journals.enableJournalInstructions"
-msgstr "이 학술지를 사이트에서 공개로 설정 허용"
+msgstr "이 학술지를 사이트에서 보이도록 설정"
 
 msgid "admin.contexts.form.edit.success"
 msgstr "{$name}가 성공적으로 수정되었습니다."
@@ -205,3 +206,25 @@ msgstr "이 웹사이트의 환경 설정이 성공적으로 변경되었습니�
 
 msgid "admin.settings.appearance.success"
 msgstr "이 웹사이트의 모양 설정이 성공적으로 변경되었습니다."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"이 저널에 대해 대량 이메일 기능이 비활성화되었습니다. <a href=\"{$siteSettingsUrl}\">관리 > 사이트 설정</a>"
+"에서 이 기능을 활성화하세요."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"저널 관리자는 아래에서 선택한 역할로는 대량 이메일을 보낼 수 없습니다. 이 설정을 사용하여 이메일 알림 기능의 남용을 제한합니다. 예를 "
+"들어, 그러한 이메일 수신에 동의하지 않은 독자, 저자 또는 기타 대규모 사용자 그룹에 대한 대량 이메일을 비활성화하는 것이 더 안전할 "
+"수 있습니다.<br><br><a href=\"{$siteSettingsUrl}\">관리자>사이트 설정</a>."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"광고 이메일을 보낼 수 있도록 허용된 학술지를 선택하시오. 이 기능이 활성화 되면, 학술지 관리자는 학술지에 등록된 모든 회원에게 "
+"이메일을 보낼 수 있게 됩니다.<br><br>원치 않는 이메일을 보내기 위해 이 기능을 오용하면 일부 관할 지역에서는 스팸메일 방지법을 "
+"위반할 수 있으며 서버의 이메일이 스팸으로 차단될 수 있습니다. 이 기능을 활성화하기 전에 기술적인 조언을 구하고 적절하게 사용되도록 "
+"저널 관리자와 상의하십시오.<br><br>이 기능에 대한 추가 제한은 다음의 명령문으로 활성화할 수 있으며, 목록에서 설정 마법사를 "
+"방문하여 각 저널마다 활성화할 수 있습니다. <a href= \"{$hostedContextsUrl}\">호스팅된 저널</a>."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "주 지역(언어)은 학술지가 제공하는 언어 중 하나가 되어야 합니다."

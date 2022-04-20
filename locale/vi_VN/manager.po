@@ -1,8 +1,9 @@
 # Nguyen Xuan Giao <giaonxb@gmail.com>, 2021.
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-09 11:05+0000\n"
-"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -39,12 +40,10 @@ msgstr "Không thanh toán"
 msgid "manager.payment.generalOptions"
 msgstr "Các tùy chọn chung"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
-"Tư cách thành viên Hiệp hội sẽ xuất hiện trong Giới thiệu về Tạp chí theo "
-"Chính sách và liên kết quyên góp sẽ xuất hiện phía trên chức năng tìm kiếm "
-"trong khung bên phải."
+"Tư cách thành viên Hiệp hội sẽ xuất hiện trong Giới thiệu về Tạp chí bên "
+"dưới Chính sách sử dụng."
 
 msgid "manager.payment.generalFees"
 msgstr "Phí chung"
@@ -2287,3 +2286,130 @@ msgstr ""
 
 msgid "doi.displayName"
 msgstr "DOI"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\"  -  \"{$issueIdentification}\""
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI ấn bản"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI bài viết"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Không tìm thấy ấn bản bạn yêu cầu"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Chỉ được sửa DOI sau khi xuất bản đã được công bố"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "DOI được cung cấp không hợp lệ"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Chỉ có thể sửa DOI sau khi đã công bố xuất bản/dàn trang"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Dàn trang mà bạn yêu cầu không thuộc về xuất bản này."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} đã được phân công xuất bản."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Không có"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "Hãy chọn đại lý đăng ký bạn muốn dùng để cung cấp DOI."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Đại lý đăng ký"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Email này được gửi tự động cho người dùng mới khi họ đăng ký với tạp chí và "
+"tạp chí yêu cầu địa chỉ email phải được xác thực."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Xác nhận email (đăng ký tạp chí)"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Tên của website nếu có nhiều tạp chí"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Loại tiền thanh toán, ví dụ VND"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Số lượng thanh toán"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Tên loại thanh toán"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Địa chỉ email của người phụ trách liên lạc chính của tạp chí"
+
+msgid "emailTemplate.variable.context.principalContactSignature"
+msgstr "Chữ ký email của tạp chí trong các email tự động gửi"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Tên người phụ trách chính của tạp chí"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Link đến trang chủ tạp chí"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Tên tạp chí"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Export kết quả ấn bản"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Không có người phụ trách liên lạc nào cho tạp chí này. Có thể nhập thông tin "
+"người phụ trách liên lạc ở <a href=\"{$url}\">thiết lập tạp chí</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Gửi một bản sao email xác nhận bài gửi đến người phụ trách liên lạc của tạp "
+"chí."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Kiểm tra thất bại."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Kiểm tra thành công!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Tạp chí này không chấp nhận các bài nộp tại thời điểm này. Truy cập cài đặt "
+"quy trình làm việc để cho phép gửi."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Ngăn người dùng gửi bài báo mới cho tạp chí. Có thể vô hiệu hóa việc gửi cho "
+"các phần tạp chí riêng lẻ trên <a href=\"{$url}\">mục tạp chí </a> trang cài "
+"đặt."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Chọn quốc gia đặt tạp chí này hoặc quốc gia có địa chỉ gửi thư cho tạp chí "
+"hoặc nhà xuất bản."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Ít nhất một mục phải hoạt động. Truy cập cài đặt quy trình làm việc để tắt "
+"tất cả các lần gửi đến tạp chí này."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Ở giai đoạn biên tập bản thảo"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Sử dụng các mẫu mặc định.<br />%j.v%vi%i cho ấn bản<br />%j.v%vi%i.%a cho "
+"các bài viết<br />%j.v%vi%i.%a.g%g cho dàn trang."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Gán Số nhận dạng đối tượng kỹ thuật số (DOI) cho các bài báo, ấn bản và dàn "
+"trang."

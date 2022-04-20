@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-02 01:43+0000\n"
+"PO-Revision-Date: 2022-03-22 15:04+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/api/is_IS/"
 ">\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Þú getur ekki tengd skrá frá þessu skráaþrepi við galley."
+msgstr "Þú getur ekki tengt skrá frá þessu skráaþrepi við galley."
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Ritverkið sem þú baðst um er ekki hluti af þessari innsendingu."
@@ -39,7 +39,7 @@ msgid "api.contexts.403.notAllowedEdit"
 msgstr "Þú hefur ekki heimild til að breyta þessu tímariti."
 
 msgid "api.contexts.403.requiresContext"
-msgstr "Þú getur ekki breytt þessu tímariti frá Vefsíðu API."
+msgstr "Þú getur ekki breytt þessu tímariti frá vefsíðu API."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
@@ -50,22 +50,21 @@ msgid "api.contexts.403.notAllowed"
 msgstr "Þú hefur ekki heimild til að skoða þetta tímarit."
 
 msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Þú getur bara skoðað tímarit sem búið er að virkja."
+msgstr "Það er eingöngu hægt að skoða tímarit sem hafa verið virkjuð."
 
 msgid "api.submissions.403.contextRequired"
 msgstr ""
-"Til að búa til eða breyta innsendingu verður þú að senda beiðni á API "
+"Til að búa til eða breyta innsendingu verður þú að senda beiðni á API-"
 "endapunkt tímaritsins."
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Þú hefur ekki heimild tl að skoða óbirtar útgáfur."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "Þú getur ekki breytt um tímarit á innsendingu."
+msgstr "Þú getur ekki breytt upplýsingum um tímarit innsendingar."
 
 msgid "api.emails.403.disabled"
-msgstr ""
-"Að senda skilaboð í tölvupósti hefur ekki verið virkjað fyrir þetta tímarit."
+msgstr "Tölvupóstsendingar frá þessu tímariti hafa ekki verið virkjaðar."
 
 msgid "api.announcements.400.contextsNotMatched"
-msgstr "Tilkynningin sem þú baðst um er ekki partur af þessu tímariti."
+msgstr "Tilkynningin sem þú baðst um tengist ekki þessu tímariti."

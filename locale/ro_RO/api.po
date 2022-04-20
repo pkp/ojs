@@ -1,7 +1,8 @@
+# Cristina Bleortu <cristina.bleortu@uzh.ch>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-02 19:48+0000\n"
-"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
+"Last-Translator: Cristina Bleortu <cristina.bleortu@uzh.ch>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/api/ro_RO/>"
 "\n"
 "Language: ro_RO\n"
@@ -53,3 +54,25 @@ msgstr "Nu aveți permisiunea de a vedea numere de revistă nepublicate."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Nu puteți schimba jurnalul pentru un manuscris înregistrat."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Nu puteți asocia un fișier din acest  fișier cu un PDF sau HTML."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Unele elemente nu au fost depozitate cu succes. Vă rugăm să verificați "
+"fiecare articol în parte pentru a vedea mesajele de eroare specifice."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Pentru această revistă nu a fost configurată nicio agenție de înregistrare "
+"DOI."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "DOI-ul pe care l-ați solicitat nu face parte din această revistă."
+
+msgid "api.emails.403.disabled"
+msgstr "Anunțul pe care l-ați solicitat nu face parte din această revistă."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Anunțul pe care l-ați solicitat nu face parte din această revistă."
