@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-20 06:24+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "lv_LV/>\n"
@@ -2399,3 +2399,26 @@ msgstr "Ir iesniegta recenzijas veidlapa par \"{$title}.\""
 
 msgid "notification.type.newAnnouncement"
 msgstr "Ir izveidots jauns paziņojums."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Publicēšanas maksa nav iespējota."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Norādīto žurnāla ceļu “{$journalPath}” nevarēja atrisināt uz žurnālu."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Šī meklēšanas implementācija neļauj veikt katra žurnāla atkārtotu "
+"indeksēšanu."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\" indeksēšana"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Noņemt šī saliktņa apstiprinājumu.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Apstiprināt šo saliktni publicēšanai.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Saliktņa apstiprinājums"
