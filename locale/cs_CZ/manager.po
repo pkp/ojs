@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2022-04-19 06:18+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -2133,3 +2133,26 @@ msgid "manager.setup.enableDois.description"
 msgstr ""
 "Přidělování identifikátorů digitálních objektů (DOI) článkům, vydáním a "
 "sazebnicícm."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Tento e-mail oznamuje autorovi, že jeho příspěvek byl odmítnut ještě před "
+"recenzním řízením, protože nesplňuje požadavky pro zveřejnění v časopise."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informace o členství předplatitele"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Shrnutí typu, názvu, doby trvání a ceny předplatného"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Datum ukončení předplatného"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL adresa stránky s předplatným"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Kontaktní údaje správce předplatného"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Jméno, příslušnost, telefonní číslo a e-mailová adresa předplatitele"
