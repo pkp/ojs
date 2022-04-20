@@ -2,7 +2,7 @@
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-04 18:28+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
@@ -2435,12 +2435,34 @@ msgstr ""
 "\" \"за статии<br />%j.v%vi%i.%a.g%g за типографии."
 
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr ""
-"Изберете на кои елементи ще бъде присвоен DOI. Повечето списания присвояват "
-"DOI на статии, но може да пожелаете да присвоите DOI на всички публикувани "
-"елементи."
+msgstr "Моля, изберете обектите, към които трябва да бъдат присвоени DOI."
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
 "Присвояване на цифрови идентификатори на обекти (DOI) на статии, броеве и "
 "типографии."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Този имейл уведомява автора, че подадените материали се отхвърлят преди "
+"етапа на рецензиране, тъй като не отговарят на изискванията за публикуване в "
+"списанието."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Информация за членството на абоната"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Резюме на типа, името, продължителността и цената на абонамента"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Датата, на която приключва абонамента"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL адресът към страницата за абонамент"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Данни за контакт на мениджъра на абонамента"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Име на абоната, институционална принадлежност, телефонен номер и имейл адрес"
