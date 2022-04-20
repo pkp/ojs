@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-19 16:33+0000\n"
+"PO-Revision-Date: 2022-04-20 06:24+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "lv_LV/>\n"
@@ -2315,3 +2315,87 @@ msgstr ""
 "href=\"http://opcit.eprints.org/oacitation-biblio.html\"> The Effect of Open "
 "Access</a>).</li>\n"
 "</ol>"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Tiek gaidīts apstiprinājums"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Apstiprināts"
+
+msgid "article.view.interstitial"
+msgstr "Lūdzu, izvēlieties rakstu failu, lai to lejupielādētu."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Paslēpt citus žurnālus"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Reģistrēties citos žurnālos"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Tiek gaidīts apstiprinājums."
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Šis iesniegtais materiāls pašlaik gaida apstiprinājumu, pirms tas tiks "
+"publicēts šajā izdevumā."
+
+msgid "editor.navigation.issues"
+msgstr "Žurnāla numuri"
+
+msgid "grid.action.createContext"
+msgstr "Izveidot jaunu žurnālu"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Nederīgs teksta redaktora iesniegums vai nav pieprasīts teksta redaktora "
+"iesniegums!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Pieprasīts nederīgs izdevums!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Jūs mēģināt piekļūt rakstam, kas nav no jūsu sadaļas."
+
+msgid "user.authorization.noContext"
+msgstr "Netika atrasts neviens žurnāls, kas atbilstu jūsu pieprasījumam."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Piekļuve liegta! Jūs neesat piešķirts šim rakstam kā teksta redaktors."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Tiek gaidīti saliktņi."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Piešķirt lietotāju saliktņu izveidei, izmantojot saiti Piešķirt (Assign) "
+"dalībnieku sarakstā."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Ir iesniegts jauns raksts, kuram jāpiešķir redaktors."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Žurnāla numura publicēšanas metadati saglabāti."
+
+msgid "notification.type.public"
+msgstr "Publiskie paziņojumi"
+
+msgid "notification.type.userComment"
+msgstr "Lasītājs ir komentējis \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "Iesniegšanas norises"
+
+msgid "notification.type.submissionComment"
+msgstr "Redaktors ir komentējis \"{$title}.\""
+
+msgid "notification.type.site"
+msgstr "Vietnes norises"
+
+msgid "notification.type.reviewing"
+msgstr "Recenzēšanas norises"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Ir iesniegta recenzijas veidlapa par \"{$title}.\""
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ir izveidots jauns paziņojums."
