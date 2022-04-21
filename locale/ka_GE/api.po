@@ -1,10 +1,11 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-25 10:19+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
-"Language-Team: ka (generated) <http://translate.pkp.sfu.ca/projects/ojs/api/"
-"ka/>\n"
-"Language: ka\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/api/ka_GE/>"
+"\n"
+"Language: ka_GE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -60,3 +61,17 @@ msgstr "ელფოსტით შეტყობინების ფუნ�
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "მოთხოვნილი განცხადება არ არის ამ ჟურნალის ნაწილი."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "თქვენ მიერ მოთხოვნილი DOI არ არის ამ ჟურნალის ნაწილი."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "DOI რეგისტრაციის სააგენტო არ არის კონფიგურირებული ამ ჟურნალისთვის."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"ზოგიერთი ელემენტი წარმატებით არ განთავსდა. გთხოვთ, შეამოწმოთ ცალკეული "
+"ელემენტები მათი კონკრეტული შეცდომის შეტყობინებებისთვის."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "თქვენ მიერ მოთხოვნილი წარდგენა არ არის ამ ჟურნალში."
