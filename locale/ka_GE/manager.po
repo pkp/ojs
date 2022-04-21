@@ -1,6 +1,7 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-14 09:42+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ka_GE/>\n"
@@ -724,8 +725,8 @@ msgstr ""
 
 msgid "manager.statistics.statistics.makePublic"
 msgstr ""
-"შეამოწმეთ ელემენტები, რომლებიც მკითხველებისთვის ხელმისაწვდომი იქნება "
-"ჟურნალის შესახებ."
+"შეამოწმეთ ელემენტები, რომლებიც მკითხველთათვის ხელმისაწვდომი იქნება ჟურნალის "
+"შესახებ."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "გამოქვეყნებული მასალები"
@@ -1209,7 +1210,7 @@ msgid "manager.setup.initialIssue"
 msgstr "პირველი ნომერი"
 
 msgid "manager.setup.information.forReaders"
-msgstr "მკითხველებისთვის"
+msgstr "მკითხველთათვის"
 
 msgid "manager.setup.information.forLibrarians"
 msgstr "ბიბლიოთეკებისთვის"
@@ -1220,8 +1221,8 @@ msgstr "ავტორებისთვის"
 msgid "manager.setup.information.description"
 msgstr ""
 "ჟურნალის მოკლე აღწერილობა ბიბლიოთეკარებისთვის, სავარაუდო ავტორებისა და "
-"მკითხველებისთვის. ეს ხელმისაწვდომია საიტის გვერდით ზოლში, როდესაც "
-"ინფორმაციის ბლოკი დაემატება."
+"მკითხველთათვის. ეს ხელმისაწვდომია საიტის გვერდით ზოლში, როდესაც ინფორმაციის "
+"ბლოკი დაემატება."
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
@@ -1654,7 +1655,7 @@ msgstr ""
 msgid "manager.setup.contextAbout.description"
 msgstr ""
 "ჩართეთ ნებისმიერი ინფორმაცია თქვენი ჟურნალის შესახებ, რომელიც შეიძლება "
-"საინტერესო იყოს მკითხველებისთვის, ავტორებისთვის ან რეცენზენტებისთვის. ეს "
+"საინტერესო იყოს მკითხველთათვის, ავტორებისთვის ან რეცენზენტებისთვის. ეს "
 "შეიძლება შეიცავდეს თქვენი ღია წვდომის პოლიტიკას, ჟურნალის ყურადღების ცენტრს "
 "და მოცულობას, საავტორო უფლებების შეტყობინებას, სპონსორობის გამჟღავნებას, "
 "ჟურნალის ისტორიას, კონფიდენციალურობის დებულებას და ნებისმიერ LOCKSS ან "
@@ -2340,3 +2341,123 @@ msgstr ""
 
 msgid "doi.displayName"
 msgstr "მოდული DOI"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"მიანიჭეთ ციფრული ობიექტების იდენტიფიკატორები (DOI) სტატიებს, საკითხებს და "
+"გალერეებს."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"გამოიყენეთ ნაგულისხმევი შაბლონები.<br /> %j.v%vi%i პრობლემებისთვის<br /> "
+"%j.v%vi%i.%a სტატიებისთვის<br /> %j.v%vi%i.%ag%g გალერებისთვის."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "კოპირების რედაქტირების ეტაპზე"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "ჟურნალის დასახელება"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "ჟურნალის მთავარი გვერდის მისამართი"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "ჟურნალის ძირითადი კონტაქტი"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "ჟურნალის ელფოსტის ხელმოწერა ავტომატური ელფოსტისთვის"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "ჟურნალის ძირითადი კონტაქტის ელექტრონული ფოსტის მისამართი"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "გადახდის ტიპის დასახელება"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "გადახდის თანხა"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "გადახდის თანხის ვალუტა, მაგალითად აშშ დოლარი"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "ვებსაიტის სახელი, როდესაც მასპინძლობს ერთზე მეტი ჟურნალი"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"აბონენტის სახელი, კუთვნილება, ტელეფონის ნომერი და ელექტრონული ფოსტის "
+"მისამართი"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "გამოწერის მენეჯერის საკონტაქტო ინფორმაცია"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "გამოწერის გვერდის მისამართი"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "გამოწერის დასრულების თარიღი"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "გამოწერის ტიპის, დასახელების, ხანგრძლივობისა და ღირებულების შეჯამება"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "ინფორმაცია აბონენტის წევრობის შესახებ"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "ელფოსტის დადასტურება (ჟურნალის რეგისტრაცია)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"ეს ელფოსტა ავტომატურად ეგზავნება ახალ მომხმარებელს, როდესაც ისინი "
+"დარეგისტრირდებიან ჟურნალში, როდესაც პარამეტრები მოითხოვს ელფოსტის მისამართის "
+"დამოწმებას."
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "სარეგისტრაციო სააგენტო"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"გთხოვთ, აირჩიოთ სარეგისტრაციო სააგენტო, რომლის გამოყენებაც გსურთ DOI-ების "
+"დეპონირებისას."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "არაფერი"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} მიენიჭება გამოქვეყნებისას."
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "გალერეა, რომელიც თქვენ მოითხოვეთ, არ არის ამ პუბლიკაციის ნაწილი."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"მხოლოდ DOI-ების რედაქტირება შესაძლებელია პუბლიკაციის/გალერეის გამოქვეყნების "
+"შემდეგ"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "წარმოდგენილი DOI არასწორია"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+"მხოლოდ DOI-ების რედაქტირება შესაძლებელია პუბლიკაციის გამოქვეყნების შემდეგ"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "თქვენ მიერ მოთხოვნილი საკითხები ვერ მოიძებნა"
+
+msgid "doi.manager.submissionDois"
+msgstr "სტატიის DOI"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI-ების გაცემა"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"ეს ელფოსტა აცნობებს ავტორს, რომ მათი გაგზავნა უარყოფილია განხილვის ეტაპამდე, "
+"რადგან წარდგენა არ აკმაყოფილებს ჟურნალში გამოქვეყნების მოთხოვნებს."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"აირჩიეთ ქვეყანა, სადაც ეს ჟურნალი მდებარეობს, ან ჟურნალის ან გამომცემლის "
+"საფოსტო მისამართის ქვეყანა."
