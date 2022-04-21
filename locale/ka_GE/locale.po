@@ -1,6 +1,7 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-02 12:16+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ka_GE/>\n"
@@ -1652,7 +1653,7 @@ msgid "user.authorization.sectionAssignment"
 msgstr "თქვენ ცდილობთ შეხვიდეთ სტატიაში, რომელიც არ არის თქვენი სექციის ნაწილი."
 
 msgid "user.authorization.noContext"
-msgstr "არანაირი ჟურნალი კონტექსტში!"
+msgstr "არცერთი ჟურნალი არ მოიძებნა, რომელიც შეესაბამება თქვენს მოთხოვნას."
 
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr ""
@@ -2427,3 +2428,12 @@ msgstr "გაგზავნილი მასალის ჩასწორ�
 
 msgid "submissionGroup.assignedSubEditors"
 msgstr "დანიშნული რედაქტორები"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "ეს ჟურნალი არ აქვეყნებს მის შინაარსს ონლაინ."
+
+msgid "doi.manager.settings.publications"
+msgstr "სტატიები"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "გამოქვეყნების საფასური არ არის ჩართული."
