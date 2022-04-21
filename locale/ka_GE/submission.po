@@ -1,6 +1,7 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-14 09:42+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ka_GE/>\n"
@@ -365,3 +366,38 @@ msgstr "სტატიის კომპონენტები"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "გამოცემის მეტა-მონაცემები მასალისათვის განახლდა."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "მიმოხილვაში დაბრუნება"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"დააბრუნეთ გადაწყვეტილება ამ წარდგენის მიღების შესახებ და გააგზავნეთ იგი "
+"განხილვის ეტაპზე."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName}-მა დააბრუნა გადაწყვეტილება ამ წარდგენის მიღების შესახებ და "
+"დააბრუნა განხილვის ეტაპზე."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "გაიგზავნა უკან მიმოხილვაზე"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "გაგზავნა, {$title}, დაბრუნდა განხილვის ეტაპზე."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"გაუგზავნეთ ელფოსტა ავტორებს, რათა აცნობონ, რომ მათი წარდგენა იგზავნება "
+"განხილვის ეტაპზე. ახსენით, რატომ იქნა მიღებული ეს გადაწყვეტილება და აცნობეთ "
+"ავტორს შემდგომი განხილვის შესახებ."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"გაუგზავნეთ ელფოსტა ავტორებს, რათა აცნობონ, რომ ეს წარდგენა გაიგზავნება "
+"თანატოლთა განსახილველად. თუ შესაძლებელია, მიეცით ავტორებს გარკვეული მითითება "
+"იმის შესახებ, თუ რამდენ ხანს შეიძლება დასჭირდეს თანატოლთა მიმოხილვის პროცესი "
+"და როდის უნდა ელოდონ მათ ხელახლა მოსმენას რედაქტორებისგან."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "აირჩიეთ ფაილები, რომლებიც უნდა გაიგზავნოს განხილვის ეტაპზე."
