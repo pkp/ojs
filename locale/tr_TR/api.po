@@ -1,9 +1,10 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2021-01-20 14:52+0000\n"
+"PO-Revision-Date: 2022-04-22 07:57+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/api/tr_TR/>"
 "\n"
@@ -64,3 +65,17 @@ msgstr "Talep ettiğiniz duyuru bu dergide yer almamaktadır."
 
 msgid "api.emails.403.disabled"
 msgstr "E-posta bildirim özelliği bu dergi için etkinleştirilmedi."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Bazı ögeler için DOI alınamadı. Lütfen spesifik hata mesajlarını tek tek "
+"kontrol edin."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Bu dergi için herhangi bir DOI ayarı yapılandırılmamış."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "İstediğiniz DOI bu dergide değil."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "İstediğiniz gönderi bu dergide değil."
