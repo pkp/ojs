@@ -1,6 +1,7 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-02 09:15+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/"
 "ka_GE/>\n"
@@ -87,7 +88,10 @@ msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "სამეფო"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "მოითხოვა ავტორიზაციის ID"
+msgstr "პროქსის ავტორიზაციის მოთხოვნილი ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL უსაფრთხოების თვისებები"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "ავტორიზაციის მოთხოვნილი ID"
