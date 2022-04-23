@@ -1,10 +1,10 @@
-# Carla Marques <carla.marques@usdb.uminho.pt>, 2021.
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2021-11-16 20:47+0000\n"
+"PO-Revision-Date: 2022-03-14 18:03+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -2119,3 +2119,52 @@ msgstr "Item"
 
 msgid "doi.editor.preview.galleys"
 msgstr "Ficheiro pronto para publicação: {$galleyLabel}"
+
+msgid "doi.manager.issueDois"
+msgstr "DOIs da edição"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOIs do artigo"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "As edições solicitadas não foram encontradas"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Apenas DOIs podem ser editados após a publicação"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "O DOI submetido não é válido"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Apenas DOIs podem ser editados após a publicação de uma composição/publicação"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "A composição selecionada não faz parte desta publicação."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "O DOI {$pubId} será atribuído na publicação."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Nenhuma"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "Selecione a agência de registo onde pretende depositar os DOIs."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Agência de Registo"
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Na etapa de Edição de Texto"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Use padrões. <br />%j.v%vi%i para números<br />%j.v%vi%i.%a para artigos<br "
+"/>%j.v%vi%i.%a.g%g para composições."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Atribua Digital Object Identifiers (DOIs) a artigos, volumes e composições."

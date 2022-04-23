@@ -1,8 +1,9 @@
 # Madi <nmdbzk@gmail.com>, 2021.
+# Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-12 13:40+0000\n"
-"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"PO-Revision-Date: 2022-03-02 04:50+0000\n"
+"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/api/kk_KZ/>\n"
 "Language: kk_KZ\n"
 "MIME-Version: 1.0\n"
@@ -68,3 +69,14 @@ msgstr ""
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Сұраныс жіберілген хабарландыру бұл журналға тиесілі емес."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Кейбір элементтер сәтті сақталмады. Жеке элементтерді олардың нақты қате "
+"туралы хабарлары үшін тексеріңіз."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Бұл журнал үшін ешбір DOI тіркеу агенттігі конфигурацияланбаған."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Сіз сұраған DOI бұл журналдың бөлігі емес."

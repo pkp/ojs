@@ -1,8 +1,9 @@
 # Madi <nmdbzk@gmail.com>, 2021.
+# Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-10 04:03+0000\n"
-"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"PO-Revision-Date: 2022-03-02 06:38+0000\n"
+"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/editor/kk_KZ/"
 ">\n"
 "Language: kk_KZ\n"
@@ -20,7 +21,7 @@ msgstr "Пайдаланушыларды хабардар ету"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Редакцияның мақаланы Авторлық  кезеңіне өткізу шешімін мақала авторына "
+"Редакцияның мақаланы Авторлық кезеңіне өткізу шешімін мақала авторына "
 "хабарлау үшін «Авторды хабарлау» сілтемесін пайдаланыңыз және редакция "
 "шешімінің керек нұсқасын таңдаңыз."
 
@@ -86,7 +87,7 @@ msgid "editor.issues.editIssue"
 msgstr "Шығарылымды басқару: {$issueIdentification}"
 
 msgid "editor.issues.createIssue"
-msgstr "Жаңа  шығарылым"
+msgstr "Жаңа шығарылым"
 
 msgid "editor.editorAdministration"
 msgstr "Редактор әкімшілігі"
@@ -404,7 +405,7 @@ msgid "editor.issues.styleFile"
 msgstr "Стильдер кестесі"
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Мұқаба пішімі қате. Рұқсат етілген пішімдер  — .gif, .jpg, немесе .png."
+msgstr "Мұқаба пішімі қате. Рұқсат етілген пішімдер — .gif, .jpg, немесе .png."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
@@ -429,7 +430,7 @@ msgid "editor.issues.uploaded"
 msgstr "Жүктелген"
 
 msgid "editor.issues.coverPageInstructions"
-msgstr "(Рұқсат етілген файл пішімдері:.gif, .jpg, немесе .png)"
+msgstr "(Рұқсат етілген файл пішімдері: .gif, .jpg, немесе .png)"
 
 msgid "editor.issues.coverPage"
 msgstr "Мұқабаның суреті"
@@ -477,3 +478,9 @@ msgstr "Жарияланды"
 
 msgid "editor.issues.confirmDelete"
 msgstr "Сіз бұл шығарылымды біржолата жойғыңыз келетініне сенімдісіз бе?"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Жоюды сұраған мұқаба суреті басқа журналдың шығарылымына сәйкес келеді. "
+"Дұрыс журналмен жұмыс істеп жатқаныңызға, дұрыс шығарылым идентификаторын "
+"пайдаланып жатқаныңызға көз жеткізіңіз және әрекетті қайталаңыз."

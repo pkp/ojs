@@ -1,7 +1,8 @@
+# Cristina Bleortu <cristina.bleortu@uzh.ch>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-27 06:48+0000\n"
-"Last-Translator: Mihai-Leonard Duduman <mduduman@gmail.com>\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
+"Last-Translator: Cristina Bleortu <cristina.bleortu@uzh.ch>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/ro_RO/>\n"
 "Language: ro_RO\n"
@@ -103,7 +104,7 @@ msgid "plugins.inportexport.native.uploadFile"
 msgstr "Vă rugăm să încărcați un fișier la „Importați” pentru a continua."
 
 msgid "plugins.importexport.native.results"
-msgstr "Rezultate"
+msgstr "Importarea rezultatelor"
 
 msgid "plugins.importexport.native.exportIssues"
 msgstr "Export Numere"

@@ -1,10 +1,11 @@
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2021-06-18 10:02+0000\n"
-"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"PO-Revision-Date: 2022-04-17 06:41+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "tr_TR/>\n"
 "Language: tr_TR\n"
@@ -204,7 +205,7 @@ msgid "article.details"
 msgstr "Ayrıntılar"
 
 msgid "article.abstract"
-msgstr "Özet"
+msgstr "Öz"
 
 msgid "article.coverPage.altText"
 msgstr "Kapak Görseli"

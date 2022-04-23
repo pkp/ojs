@@ -1,11 +1,12 @@
 # José Carvalho <josekarvalho@gmail.com>, 2022.
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-02-14 18:30+0000\n"
-"Last-Translator: José Carvalho <josekarvalho@gmail.com>\n"
+"PO-Revision-Date: 2022-03-14 18:03+0000\n"
+"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -2338,3 +2339,6 @@ msgstr "Não pago"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Esta revista não publica os seus conteúdos online."
+
+msgid "doi.manager.settings.publications"
+msgstr "Artigos"

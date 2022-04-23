@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendByAuthor/is_IS/>\n"
@@ -13,12 +13,11 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.generic.recommendByAuthor.heading"
-msgstr "Mest lesnu greinar efitr sama höfund(a)"
+msgstr "Mest lesnu greinar eftir sama höfund(a)"
 
 msgid "plugins.generic.recommendByAuthor.description"
 msgstr ""
-"Þessi viðbót setur lista yfir greinar eftir sama höfund á  síðuna með "
-"útdrætti greinar."
+"Þessi viðbót birtir á ágripssíðu greinar, lista yfir greinar sama höfundar."
 
 msgid "plugins.generic.recommendByAuthor.displayName"
 msgstr "Mæla með grein eftir höfund"

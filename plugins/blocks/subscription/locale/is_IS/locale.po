@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-05 23:06+0000\n"
+"PO-Revision-Date: 2022-03-21 19:44+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-subscription/is_IS/>\n"
@@ -13,13 +13,13 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.block.subscription.subscriptionRequired.learnMore"
-msgstr "Læra meira"
+msgstr "Frekari upplýsingar"
 
 msgid "plugins.block.subscription.subscriptionRequired"
-msgstr "Það þarf að vera í áskrift til að fá aðgang að sumum auðlindum."
+msgstr "Það þarf að vera í áskrift til að fá aðgang að ákveðnu efni."
 
 msgid "plugins.block.subscription.loginToVerifySubscription"
-msgstr "Innskráning til að fara í auðlindir bara fyrir áskrifendur."
+msgstr "Innskráning til að fara í efni bara fyrir áskrifendur."
 
 msgid "plugins.block.subscription.about"
 msgstr "Áskriftir"

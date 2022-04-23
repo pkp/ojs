@@ -1,9 +1,11 @@
+# Daniel Kalvø <daniel.kalvo@ub.uio.no>, 2022.
+# Eirik Hanssen <eirikh@oslomet.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2021-03-10 15:53+0000\n"
+"PO-Revision-Date: 2022-03-10 13:56+0000\n"
 "Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/nb_NO/>\n"
@@ -57,10 +59,12 @@ msgstr "Du er nå registrert som bruker"
 
 msgid "emails.userRegister.body"
 msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
 "Takk for at du har registrert deg som bruker av  {$contextName}. Ta godt "
 "vare på brukernavnet og passordet, som du vil trenge hver gang du skal "
-"utføre brukeroppgaver på nettstedet. Du kan når som helst be om å bli "
-"fjernet fra brukerlisten. Ta i tilfelle kontakt med meg. <br />\n"
+"utføre oppgaver i tidsskriftet på nettstedet. Du kan når som helst be om å "
+"bli fjernet fra brukerlisten. Ta i tilfelle kontakt med meg. <br />\n"
 "<br />\n"
 "Brukernavn: {$recipientUsername}<br />\n"
 "Passord: {$password}<br />\n"
@@ -73,7 +77,7 @@ msgstr "Denne e-posten sendes for å ønske nyregistrerte brukere velkommen som 
 
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Ny utgave publisert"
+msgstr "Ny utgave publisert: {$issueIdentification}"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
@@ -180,7 +184,7 @@ msgstr "Denne e-posten varsler fagfellene som har vurdert et manuskript om at de
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Redaksjonelt oppdrag"
+msgstr "Du er satt opp som redaktør på en innlevering til {$contextName}"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -199,8 +203,9 @@ msgid "emails.editorAssign.description"
 msgstr ""
 "Denne e-posten varsler en Seksjonsredaktør om at Ansvarlig redaktør har "
 "oppnevnt vedkommende til å føre et innsendt manuskript gjennom den "
-"redaksjonelle prosessen. E-posten inneholder informasjon om det innsendte "
-"manuskriptet og om tilgang til tidsskriftets nettsted."
+"redaksjonelle prosessen. Denne malen kan velges når en seksjonsredaktør "
+"tildeles en innlevering i \"Deltakere\". Denne malen bør brukes når "
+"seksjonsredaktøren kan ta redaksjonelle beslutninger."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -397,7 +402,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Påminnelse om fagfellevurdering"
+msgstr "En påminnelse om å fullføre fagfellevurderingen din"
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -423,8 +428,9 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
-"Denne e-posten sendes av en seksjonsredaktør til en fagfelle for å minne om "
-"at fagfellevurderingen ventes ferdigstilt innen fristen."
+"Denne e-posten sendes av en redaktør til en fagfelle for å minne om at "
+"fagfellevurderingen ventes ferdigstilt innen fristen. Denne e-posten sendes "
+"når redaktøren manuelt sender en påminnelse til en fagfelle."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Påminnelse om fagfellevurdering"
@@ -452,7 +458,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Påminnelse om fagfellevurdering (automatisk e-post)"
+msgstr "Påminnelse om å fullføre fagfellevurderingen din"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -479,11 +485,9 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
-"Denne e-posten sendes automatisk til fagfellen når tidsfristen for "
-"fagfellevurdering utløper (se: Tid for fagfellevurdering under Innstillinger "
-"> Arbeidsflyt > Fagfellevurdering) og når ettklikks fagfelletilgang er slått "
-"av. Planlagte oppgaver må være slått på og konfiguert (se etter Scheduled "
-"tasks i konfigurasjonsfilen for nettstedet)."
+"Denne e-posten sendes automatisk til fagfellen når tidsfristen er "
+"overskredet. Automatiske påminnelser om fagfellevurdering kan aktiveres i "
+"Arbeidsflyt > Fagfellevurdering"
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Påminnelse om fagfellevurdering (automatisk e-post)"
@@ -514,7 +518,8 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Forespørsel om oppsett"
+msgstr ""
+"Innleveringen {$submissionId} er klar for produksjon til {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -532,7 +537,7 @@ msgstr ""
 "produksjonsdiskusjonen.<br />\n"
 "\n"
 "{$contextName}: {$contextUrl}<br />\n"
-"Innleveringens: {$submissionLayoutUrl}<br />\n"
+"Innleveringens: {$submissionUrl}<br />\n"
 "Brukernavn: {$recipientUsername}<br />\n"
 "<br />\n"
 "Ta kontakt dersom du ikke har anledning til å utføre dette arbeidet, eller "
@@ -541,9 +546,9 @@ msgstr ""
 #, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
-"Denne e-posten fra seksjonsredaktøren til layoutredaktøren bestiller oppsett "
-"for en innlevering. E-posten gir informasjon om innleveringen, og om tilgang "
-"til den."
+"Denne e-posten fra en redaktør til layoutredaktøren bestiller oppsett for en "
+"innlevering. E-posten gir informasjon om innleveringen, og om hvordan man "
+"får tilgang til den."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Oppsett ferdigstilt"
@@ -902,7 +907,6 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Nytt varsel fra {$contextName}"
 
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Du har fått et nytt varsel fra {$contextName}:<br />\n"
@@ -911,7 +915,8 @@ msgstr ""
 "<br />\n"
 "Lenke: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$signature}\n"
+"<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.description"
 msgstr ""
@@ -920,7 +925,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Redaktørens beslutning"
+msgstr "Innleveringen din har blitt akseptert til  {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -935,8 +940,8 @@ msgstr ""
 #, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
-"Denne e-posten fra redaktør eller seksjonsredaktør til en forfatter, "
-"informerer om at manuskriptet ble akseptert."
+"Denne e-posten informerer forfatter om at innleveringen har blitt godkjent "
+"for publisering."
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Abonnementskjøp: Individuelt abonnement"
@@ -1180,7 +1185,7 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
-"{$recipientName}:<br />\n"
+"Redaktører:<br />\n"
 "<br />\n"
 "Forfatteren {$authors} har lastet opp en revidert versjon av "
 "«{$submissionTitle}».<br />\n"
@@ -1214,16 +1219,17 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Redigere referanser"
 
-#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
-"Denne e-posten blir sendt av seksjonsredaktøren til en fagfelle som er i "
-"gang med en vurdering for å informere han eller henne om at en annulert "
-"fagfellevurdering er gjenopptatt."
+"Denne e-posten blir sendt fra en redaøktør til en fagfelle når et kansellert "
+"vurderingsoppdrag gjenopptas. Hvis fagfellen har godtatt forespørselen og "
+"redaktøren etterpå har kansellert vurderingsoppdraget, har redaktøren "
+"muligheten til å starte fagfellevurderingen igjen slik at fagfellen kan "
+"fullføre vurderingsoppdraget."
 
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Forespørsel om fagfellevurdering gjenopptatt"
+msgstr "Har du fremdeles mulighet til å være fagfelle for {$contextName}?"
 
 msgid "emails.reviewRequestSubsequent.description"
 msgstr ""
@@ -1236,14 +1242,35 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Forespørsel om fagfellevurdering"
+msgstr "Forespørsel om fagfellevurdering av revidert innlevering"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Denne e-posten sendes automatisk (dersom den er aktivert) til de andre "
-"forfatterne som ikke er brukere av OJS under innleveringsprosessen."
+"forfatterne som er oppgitt i innleveringen, som ikke har brukerkonto på "
+"plattformen."
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Bekreftelse på innlevering"
+
+msgid "emails.userValidateSite.description"
+msgstr ""
+"Denne e-posten sendes til en nyregistrert bruker for å validere "
+"e-postkontoen."
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Du har oprettet en konto hos {$contextName}, men før du kan bruke den, må du "
+"validere e-postadressen din. Det gjør du ved å følge lenken nedenfor:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Takk. <br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Validér kontoen din"

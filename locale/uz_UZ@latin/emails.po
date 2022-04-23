@@ -1,9 +1,10 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Mironshoh Sattorov <s.mironshoh23@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-03 06:16+0000\n"
-"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
+"PO-Revision-Date: 2022-04-08 01:00+0000\n"
+"Last-Translator: Mironshoh Sattorov <s.mironshoh23@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/emails/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -875,7 +876,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Tahririyatga topshiriq"
+msgstr "Siz {$contextName} ga yuborilgan muharrir sifatida tayinlangansiz"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.description"
@@ -986,7 +987,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Yangi son nashr qilindi"
+msgstr "Yangi son nashr qilindi: {$issueIdentification}"
 
 msgid "emails.reviewerRegister.description"
 msgstr ""

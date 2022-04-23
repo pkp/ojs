@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-22 15:12+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "is_IS/>\n"
@@ -17,25 +17,25 @@ msgstr "Forsíðumynd"
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"Auðkennið '{$publicIdentifier}' er núþegar til fyrir annan hlut af sömu "
+"Auðkennið '{$publicIdentifier}' er nú þegar til fyrir annan hlut af sömu "
 "tegund.  Vinsamlega veldu einkvæm auðkenni fyrir hluti af sömu tegund innan "
 "tímaritsins."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
-"Öllum skrám sem búið er að hlaða upp, á hvaða innsendingar þrepi sem er, er "
-"hægt að bæta á lista fyrir prófarkalestur, með því að haka í taka með "
-"gátboxið fyrir neðan og velja leita: allar aðgengilegar skrár eru listaðar "
-"upp og hægt að velja að taka með."
+"Öllum skrám sem búið er að hlaða upp, á hvaða innsendingarþrepi sem er, er "
+"hægt að bæta á lista fyrir prófarkalestur með því að haka í taka með "
+"gátboxið fyrir neðan og velja \"Leita\": allar aðgengilegar skrár eru "
+"listaðar upp og hægt að velja til að taka með."
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Lokadrög á þessum lista hafa verið lagfærð af textatækni og sett  í "
-"yfirfarnar útgáfur, sem hlaði hefur verið upp undir <span class=\""
+"Lokadrög á þessum lista hafa verið lagfærð af textatækni og sett í "
+"yfirfarnar útgáfur sem hlaðið hefur verið upp undir <span class=\""
 "pkp_help_title\"> Í yfirferð</span>."
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "Veldur galley skrár"
+msgstr "Veldu galleyskrár"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
@@ -44,10 +44,10 @@ msgstr ""
 "prófarkalestur."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Breyta tölublaðs galley"
+msgstr "Breyta tölublaðsgalley"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "Ógild aðgangs dagsetning."
+msgstr "Ógild aðgangsdagsetning."
 
 msgid "editor.article.remove.confirm"
 msgstr ""
@@ -63,7 +63,7 @@ msgstr "Fjarlægja grein úr tölublaði"
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
 "Forsíðumyndin sem þú vilt eyða finnst ekki. Mögulega er búið að eyða henni.  "
-"Prófaðu að fríska skjámyndina."
+"Prófaðu að endurhlaða skjámyndina."
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
@@ -77,7 +77,7 @@ msgid "editor.article.scheduleForPublication"
 msgstr "Setja í útgáfuáætlun í"
 
 msgid "editor.article.editMetadata"
-msgstr "breyta lýsigögnum útgáfu (version)"
+msgstr "Breyta lýsigögnum útgáfu (version)"
 
 msgid "editor.article.viewMetadata"
 msgstr "Skoða lýsigögn útgáfu (version)"
@@ -89,7 +89,7 @@ msgid "editor.article.showPublicationVersion"
 msgstr "Sýna útgáfuáætlun"
 
 msgid "editor.submissions.inSection"
-msgstr "í Kafla"
+msgstr "Í Kafla"
 
 msgid "issues.submissions.issueIds"
 msgstr "Úthlutað í tölublað"
@@ -128,7 +128,7 @@ msgid "editor.article.decision"
 msgstr "Ákvörðun"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "Merkja upphaflega skrá sem ritrýni útgáfuna"
+msgstr "Merkja upphaflega skrá sem ritrýniútgáfu"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Eldri tölublöð"
@@ -137,7 +137,7 @@ msgid "grid.action.setCurrentIssue"
 msgstr "Velja nýjasta tölublað"
 
 msgid "grid.action.addIssueGalley"
-msgstr "Stofna tölublaðs galley"
+msgstr "Stofna tölublaðsgalley"
 
 msgid "grid.action.previewIssue"
 msgstr "Forskoða"
@@ -155,40 +155,40 @@ msgid "grid.action.addGalley"
 msgstr "Bæta við galley"
 
 msgid "editor.navigation.futureIssues"
-msgstr "Framtíðar tölublöð"
+msgstr "Næstu tölublöð"
 
 msgid "editor.issues.identifiers"
 msgstr "Auðkenni"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Ertu viss um að þú viljir eyða þessu tölblaðs galley?"
+msgstr "Ertu viss um að þú viljir eyða galley þessa tölublaðs?"
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Til baka í tölublaðs galley"
+msgstr "Til baka í tölublaðsgalley"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Auðkenni á tölublaðs galley er til fyrir."
+msgstr "Auðkenni galleys þessa tölublaðs er þegar til."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Tungumál útgáfu galley er áskilið."
+msgstr "Tungumál útgáfugalley er áskilið."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Merkimiði/heiti á útgáfu galley er áskilið."
+msgstr "Merkimiði/heiti á útgáfugalley er áskilið."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Engin tölublaða galley hafa verið  gefin út."
+msgstr "Engar lokaprófarkir(galleys) tölublaðs hafa verið  gefin út."
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Gefa út galley með öllu innihaldi tölublaðs."
+msgstr "Gefa út galley (lokapróförk) með öllu innihaldi tölublaðs."
 
 msgid "editor.issues.viewingGalley"
-msgstr "Skoða tölublaðs Galley"
+msgstr "Skoða tölublaðsgalley"
 
 msgid "editor.issues.galley"
-msgstr "Tölublaðs Galley - Lokaprófarkir"
+msgstr "Tölublaðsgalley - Lokaprófarkir"
 
 msgid "editor.issues.galleys"
-msgstr "Tölublaða galley - Lökaprófarkir"
+msgstr "Tölublaðagalley - Lokaprófarkir"
 
 msgid "editor.issues.pages"
 msgstr "Síður"
@@ -200,10 +200,10 @@ msgid "editor.issues.noLiveIssues"
 msgstr "Engin birt tölublöð"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "Get ekki vistað kenni greinar:"
+msgstr "Ekki er hægt að vista kenni greinar:"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Ertu viss um að þú viljir setja þetta tölublað sem það nýjasta?"
+msgstr "Ertu viss um að þú viljir stilla þetta tölublað sem það nýjasta?"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Ertu viss um að þú viljir taka þetta tölublað úr birtingu?"
@@ -250,7 +250,7 @@ msgstr ""
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
-"Allar greinar verða settar aftur í ritstjóra röðina og öllum tengdum skrám "
+"Allar greinar verða settar aftur í ritstjórnaröð og öllum tengdum skrám "
 "veður eytt varanlega.  Ertu viss um að þú viljir fjarlægja þetta tölublað?"
 
 msgid "editor.issues.cover"
@@ -283,29 +283,30 @@ msgstr "Fjarlægja stílblað?"
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
 "Ógilt skrásnið á stílblaðinu. Gakktu úr skugga um að innsend skrá sé gild "
-"CSS. (Athugaðu að stílblaði með komment í upphafi gæti verið hafnað.)"
+"CSS. (Athugaðu að stílblaði sem hefst með athugasemd (komment) gæti verið "
+"hafnað.)"
 
 msgid "editor.issues.styleFile"
 msgstr "Stílblað"
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ógilt skrásnið á forsíðumyndinni. Leyfð snið eru .gif, .jpg, or .png."
+msgstr "Ógilt skrásnið á forsíðumynd. Leyfð snið eru .gif, .jpg, eða .png."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
 "Forsíðumyndin sem þú vilt eyða fannst ekki.  Mögulega er búið að eyða henni. "
-"Prófaðu að fríska skjámyndina."
+"Prófaðu að endurhlaða skjámyndina."
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
 "Forsíðumyndin sem þú vilt eyða passar ekki við forsíðumyndina fyrir þetta "
-"tölublað. Vinsamlega frískaðu skjámyndina og reyndu aftur."
+"tölublað. Vinsamlega endurhladdu skjámyndina og reyndu aftur."
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"Forsíðumyndi sem þú  vilt eyða, er á tölublaði annars tímarits. Vinsamlega "
-"gakktu úr skugga um að þú sért að vinna með rétt tímarit, rétt  kenni "
-"tölublaðs og reyndu aftur."
+"Forsíðumyndi sem þú vilt eyða, er á tölublaði annars tímarits. Vinsamlega "
+"gakktu úr skugga um að þú sért að vinna með rétt tímarit og rétt kenni "
+"tölublaðs, og reyndu aftur."
 
 msgid "editor.issues.removeCoverPage"
 msgstr "Fjarlægja forsíðumynd?"
@@ -332,7 +333,7 @@ msgid "editor.issues.accessDate"
 msgstr "Opinn aðgangur dagsetning"
 
 msgid "editor.issues.accessStatus"
-msgstr "Aðgangs staða"
+msgstr "Aðgangsstaða"
 
 msgid "editor.issues.description"
 msgstr "Lýsing"
@@ -370,7 +371,7 @@ msgid "editor.issues.published"
 msgstr "Útgefið"
 
 msgid "editor.issues.confirmDelete"
-msgstr "Ertu viss um að þú viljir eyða varanlega þessu tölublaði?"
+msgstr "Ertu viss um að þú viljir eyða þessu tölublaði varanlega?"
 
 msgid "editor.issues.noArticles"
 msgstr "Engin atriði eru á áætlun fyrir þetta tölublað."
@@ -410,10 +411,10 @@ msgid "editor.notifyUsers.inProgress"
 msgstr "Tilkynning til notenda í gangi..."
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Allir stofnana áskrifendur ({$count} notendur)"
+msgstr "Allir stofnanaáskrifendur ({$count} notendur)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Allir einstaklings áskrifendur ({$count} notendur)"
+msgstr "Allir einstaklingsáskrifendur ({$count} notendur)"
 
 msgid "editor.notifyUsers.allAuthors"
 msgstr "Allir birtir höfundar ({$count} notendur)"
@@ -426,7 +427,7 @@ msgstr "Tilkynning til notenda"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Áður en handrit er sent í yfirferðar, notaðu tengilinn \"Tilkynning til "
+"Áður en handrit er sent til yfirferðar, notaðu tengilinn \"Tilkynning til "
 "höfundar\" til að upplýsa höfund um ákvörðunina, og veldu þá útgáfu sem á að "
 "senda."
 
@@ -441,7 +442,7 @@ msgstr "Ert þú viss um að þú viljir skrá þessa ákvörðun?"
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Á að vista breytingar á geymdri innsendingu?  Innsendingar sem eru merktar "
-"til að eyða er eytt varanlega úr kerfinu."
+"til að eyða verður eytt varanlega úr kerfinu."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Engar innsendingar í safninu."
@@ -461,7 +462,7 @@ msgid "editor.allSections"
 msgstr "Allir kaflar"
 
 msgid "editor.publishedIssues"
-msgstr "útgefin tölublöð"
+msgstr "Útgefin tölublöð"
 
 msgid "editor.publishing"
 msgstr "Útgáfa"
@@ -470,7 +471,7 @@ msgid "editor.submissionArchive"
 msgstr "Safn innsendinga"
 
 msgid "editor.submissionQueue"
-msgstr "Innsendinga röð"
+msgstr "Innsendingaröð"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Innsendingar og útgáfa"

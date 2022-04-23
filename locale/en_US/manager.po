@@ -44,9 +44,6 @@ msgstr "The journal will require subscriptions to access some or all of its cont
 msgid "manager.setup.enableDois.description"
 msgstr "Assign Digital Object Identifiers (DOIs) to articles, issues and galleys."
 
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Select which items will be assigned a DOI. Most journals assign DOIs to articles, but you may wish to assign DOIs to all of the published items."
-
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr "Use default patterns.<br />%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys."
 

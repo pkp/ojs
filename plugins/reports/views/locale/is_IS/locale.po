@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-views/is_IS/>\n"
@@ -13,10 +13,10 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.views.galleyViews"
-msgstr "Heildar Galley - áhorf"
+msgstr "Heildargalley - skoðanir/flettingar"
 
 msgid "plugins.reports.views.abstractViews"
-msgstr "Útdráttur - áhorf"
+msgstr "Útdráttur - skoðanir/flettingar"
 
 msgid "plugins.reports.views.datePublished"
 msgstr "Útgáfudagur"
@@ -29,8 +29,7 @@ msgstr "Kenni greinar"
 
 msgid "plugins.reports.views.description"
 msgstr ""
-"Þessi viðbót setur upp CSV skýrslu sem lýsir report sem lýsir lesendahóp "
-"hverrar greinar."
+"Þessi viðbót setur upp CSV skýrslu sem lýsir lesendahópi hverrar greinar."
 
 msgid "plugins.reports.views.displayName"
 msgstr "Skoða skýrslu"

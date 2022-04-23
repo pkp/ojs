@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-02-16 19:13+0000\n"
+"PO-Revision-Date: 2022-02-24 12:23+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -205,7 +205,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Ce courriel encourage le ou la destinaire à participer à l'initiative LOCKSS et à inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet."
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Accusé de réception de la soumission"
 

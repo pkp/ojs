@@ -1,10 +1,11 @@
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-27 23:09+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
-"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/api/vi/>"
-"\n"
-"Language: vi\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/api/"
+"vi_VN/>\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,3 +52,23 @@ msgstr "Bạn không có quyền xem các số chưa được công bố."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Bạn không thể thay đổi tạp chí của một bài nộp."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Bạn không thể liên kết một file từ file stage này với một dàn trang."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Một số thành phần không được gửi thành công. Vui lòng kiểm tra từng mục để "
+"biết thông báo lỗi cụ thể của chúng."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Không có cơ quan đăng ký DOI nào được cấu hình cho tạp chí này."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "DOI bạn yêu cầu không phải là một phần của tạp chí này."
+
+msgid "api.emails.403.disabled"
+msgstr "Tính năng thông báo qua email chưa được kích hoạt cho tạp chí này."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Thông báo bạn yêu cầu không phải là một phần của tạp chí này."

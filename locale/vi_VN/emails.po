@@ -1,7 +1,8 @@
+# Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-07 15:39+0000\n"
-"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"PO-Revision-Date: 2022-03-16 18:38+0000\n"
+"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "vi_VN/>\n"
 "Language: vi_VN\n"
@@ -30,14 +31,15 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Khôi phục yêu cầu đánh giá bài báo"
+msgstr "Bạn vẫn còn đang review thêm gì đó cho {$contextName}?"
 
 #, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
-"Email này được gửi bởi Biên tập viên chuyên mục tới Người phản biện đang "
-"tiến hành đánh giá bản thảo để thông báo cho họ rằng đánh giá bị hủy đã được "
-"khôi phục."
+"Email này được gửi bởi Biên tập viên tới Người review khi một review đang bị "
+"ngừng được tiếp tục trở lại. Nếu người review đang review sau đó review bị "
+"ngừng lại, người biên tập có thể chọn lựa tiếp tục review trở lại để cho "
+"phép người review được tiếp tục review tiếp."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Đồng ý đánh giá"
@@ -59,7 +61,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Nhắc nhở nộp đánh giá"
+msgstr "Nhắc việc hoàn thành review"
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -85,8 +87,9 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
-"Email này được gửi bởi một Biên tập viên chuyên mục để nhắc nhở người phản "
-"biện rằng đánh giá của họ đến hạn nộp."
+"Email này được gửi bởi một Biên tập viên để nhắc nhở người review rằng "
+"review của họ đến hạn nộp. Email này được sử dụng khi Biên tập viên gửi nhắc "
+"nhở đến người review một cách thủ công"
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Nhắc nhở nộp đánh giá"
@@ -98,11 +101,11 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Nhắc nhở nộp đánh giá (tự động)"
+msgstr "Nhắc việc hoàn thành review"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Yêu cầu đánh giá bài báo"
+msgstr "Yêu cầu review một bài báo được gửi lại"
 
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr ""
@@ -199,10 +202,9 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
-"Email này được gửi tự động khi hết hạn đánh giá của người phản biện (xem Tùy "
-"chọn đánh giá trong Cài đặt > Quy trình làm việc > Phản biện) và quyền truy "
-"cập của người phản biện không cần đăng nhập bị vô hiệu hóa. Các tác vụ theo "
-"lịch trình phải được bật và định cấu hình (xem tệp cấu hình trang)."
+"Email này được gửi tự động khi người review không hoàn thành việc review "
+"trong hạn thời gian. Việc tự động hóa nhắc nhở được bật ở mục thiết đặt "
+"Review."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Nhắc nhở nộp bài đánh giá (tự động)"
@@ -217,24 +219,23 @@ msgstr ""
 #, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
-"Email này từ Biên tập viên hoặc Biên tập viên chuyên mục cho Tác giả thông "
-"báo cho họ về quyết định \"chấp nhận cho đăng\" cuối cùng liên quan đến bài "
-"gửi của họ."
+"Email này thông báo cho tác giả về việc bài gửi của họ đã được chấp nhận "
+"đăng."
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Quyết định của Ban biên tập"
+msgstr "Bài gửi của bạn đã được chấp nhận cho {$contextName}"
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Yêu cầu bản in"
+msgstr "Bài gửi {$submissionId} đã sẵn sàng xuất bản ở {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
-"Email này từ Biên tập viên chuyên mục gửi tới Biên tập viên trình bày thông "
-"báo cho họ rằng họ đã được giao nhiệm vụ thực hiện chỉnh sửa bố cục của bài "
-"gửi. Nó cung cấp thông tin về bài gửi và làm thế nào để truy cập vào nó."
+"Email này từ Biên tập viên gửi tới Biên tập viên trình bày thông báo cho họ "
+"rằng họ đã được giao nhiệm vụ thực hiện chỉnh sửa bố cục của bài gửi. Nó "
+"cung cấp thông tin về bài gửi và làm thế nào để truy cập vào nó."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Hoàn thành bản in"
@@ -242,8 +243,8 @@ msgstr "Hoàn thành bản in"
 #, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
-"Email này từ Biên tập viên trình bày cho Biên tập viên chuyên mục thông báo "
-"rằng quá trình dàn trang đã được hoàn thành."
+"Email này từ Biên tập viên trình bày thông báo cho Biên tập viên rằng quá "
+"trình dàn trang đã được hoàn thành."
 
 msgid "emails.emailLink.subject"
 msgstr "Bài báo quan tâm"
@@ -802,14 +803,16 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "Yêu cầu đánh giá bài báo"
+msgstr "Mời review bài báo"
 
 #, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Email này thông báo cho Biên tập viên chuyên mục rằng Biên tập viên đã giao "
-"cho họ nhiệm vụ giám sát việc gửi qua quá trình bình duyệt. Nó cung cấp "
-"thông tin về việc nộp và cách truy cập trang tạp chí."
+"cho họ nhiệm vụ giám sát việc gửi bài qua quá trình biên tập. Mẫu email này "
+"có thể được lựa chọn khi biên tập viên được giao cho một bài gửi trong mục "
+"Participants (người tham gia). Mẫu email này nên dùng khi biên tập viên "
+"chuyên mục có thể đưa ra được các quyết định biên tập."
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -827,13 +830,13 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Phân công biên tập"
+msgstr "Bạn đã được chỉ định là người biên tập cho bài gửi {$contextName}"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
-"Email này, khi được bật, sẽ tự động được gửi đến các tác giả khác không phải "
-"là người dùng trong OJS được chỉ định trong quá trình gửi."
+"Email này, khi được bật, sẽ tự động được gửi đến các đồng tác giả khác không "
+"phải là người gửi bài."
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.body"
@@ -850,7 +853,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "Cảm ơn đã gửi bài"
+msgstr "Xác nhận gửi bài"
 
 msgid "emails.lockssNewArchive.description"
 msgstr ""
@@ -941,7 +944,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Số mới được xuất bản"
+msgstr "Số mới được xuất bản: {$issueIdentification}"
 
 msgid "emails.reviewerRegister.description"
 msgstr ""
@@ -1066,7 +1069,6 @@ msgstr ""
 "Email được gửi đến người dùng đã đăng ký đã chọn để gửi kiểu thông báo này "
 "qua email cho họ."
 
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Bạn có một thông báo mới từ {$contextName}:<br />\n"
@@ -1075,7 +1077,8 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$signature}\n"
+"<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
 msgstr "Thông báo mới từ {$contextName}"
@@ -1094,3 +1097,23 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
+
+msgid "emails.userValidateSite.description"
+msgstr ""
+"Email này được gửi cho người dùng đã đăng nhập vào website để xác thực địa "
+"chỉ email."
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Bạn đã tạo 1 tài khoản với {$siteTitle}, nhưng trước khi bắt đầu sử dụng, "
+"bạn cần phải xác nhận email. Để xác nhận, hãy click link dưới đây:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Cảm ơn,<br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Kiểm tra tài khoản của bạn"
