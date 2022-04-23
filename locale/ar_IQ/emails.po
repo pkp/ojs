@@ -253,12 +253,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة "
-"التحكيم أو رفضها. "
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "تذكير إلتماس تحكيم مؤلَّف"
 
@@ -341,13 +335,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى المحكم ليلتمس منه قبول أو رفض مهمة تحكيم "
-"المؤلَّف لجولة أخرى. الرسالة تشير إلى عنوان المؤلَّف وملخصه وتاريخ استيجاب "
-"التحكيم كما تعطي رابط الوصول إلى المؤلَّف في موقع المجلة نفسه."
 
 msgid "emails.reviewCancel.subject"
 msgstr "إلغاء إلتماس التحكيم"

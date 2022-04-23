@@ -343,17 +343,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Tha am post-d seo dheasaiche earrainn gu lèirmheasaiche a’ faighneachd an "
-"gabh iad ri lèirmheas air tagradh no an diùlt iad e. Tha e a’ toirt seachad "
-"fiosrachadh mun tagradh, mar an tiotal is geàrr-chunntas, ceann-là "
-"lìbhrigeadh an lèirmheis agus mar a gheibhear greim air an tagradh e fhèin. "
-"Seo an teachdaireachd a thèid a chleachdadh nuair a thaghar am pròiseas "
-"lèirmheis stannardach fo “Stiùireadh” > “Roghainnean” > “Sruth-obrach” > "
-"“Lèirmheas”."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
 
@@ -471,17 +460,6 @@ msgstr ""
 "“{$submissionTitle}”<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Tha am post-d seo dheasaiche earrainn gu lèirmheasaiche a’ faighneachd an "
-"gabh iad ri lèirmheas air tagradh san dàrna cuairt (no cuairt nas motha) no "
-"an diùlt iad e. Tha e a’ toirt seachad fiosrachadh mun tagradh, mar an "
-"tiotal is geàrr-chunntas, ceann-là lìbhrigeadh an lèirmheis agus mar a "
-"gheibhear greim air an tagradh e fhèin. Seo an teachdaireachd a thèid a "
-"chleachdadh nuair a thaghar am pròiseas lèirmheis stannardach fo “Stiùireadh”"
-" > “Roghainnean” > “Sruth-obrach” > “Lèirmheas”."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Iarrtas airson lèirmheas air a chur gu neoini"

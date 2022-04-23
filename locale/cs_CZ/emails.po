@@ -249,12 +249,6 @@ msgstr ""
 "ohledně příspěvku nebo recenzního řízení.</p><p>Děkujeme vám za zvážení této "
 "žádosti. Vaší pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Tento email od editora sekce pro recenzenta žádá, aby recenzent přijal nebo "
-"odmítl úkol zpracovat recenzi příspěvku. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Žádost o zrušení recenze"
 
@@ -1194,14 +1188,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Tento e-mail od editora recenzentovi žádá, aby recenzent přijal nebo odmítl "
-"úkol posoudit předložený příspěvek v dalším kole recenzního řízení. Obsahuje "
-"informace o příspěvku, jako je název a abstrakt, datum uzávěrky recenze a "
-"způsob přístupu k samotnému příspěvku."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Požadavek na recenzi článku"

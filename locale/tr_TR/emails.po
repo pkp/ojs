@@ -295,12 +295,6 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Bu eposta Bölüm Editöründen bir hakeme bir çalışmanın hakemlik görevine "
-"davet amacı ile iletir. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Değerlendirmenin iptalini rica ederiz"
 
@@ -810,14 +804,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Editörden Hakem'e gönderilen bu e-posta, hakemin yeni bir inceleme turu için "
-"hakemliği kabul etmesini veya reddetmesini ister. Başlık ve özet, "
-"değerlendirme son tarihi ve aday makaleye nasıl erişileceği gibi bilgileri "
-"içerir."
 
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Aday makaleniz {$contextName} için kabul edildi"

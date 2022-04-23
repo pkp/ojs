@@ -322,16 +322,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller "
-"avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir "
-"informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en "
-"forfallsdato for oppdraget, og 3) informasjon om pålogging og tilgang til "
-"manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er "
-"valgt i Tidsskriftoppsett, Trinn 2."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annulering av forespørsel om fagfellevurdering"
 
@@ -1195,15 +1185,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fremdeles mulighet til å være fagfelle for {$contextName}?"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Denne e-posten fra seksjonsredaktør til fagfelle ber fagfelle akseptere "
-"eller avslå ny fagfellevurdering av en innlevering. Det gir informasjon om "
-"innleveringen, som tittel og sammendrag, fristen og tilgang til selve "
-"innleveringen. Denne beskjeden blir brukt når Standard "
-"fagfellevurderingsprosess er valgt under  Innstillinger > Arbeidsflyt > "
-"Fagfellevurdering."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"

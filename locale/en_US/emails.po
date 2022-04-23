@@ -254,11 +254,6 @@ msgstr ""
 "<p>Kind regards,</p>"
 "{$signature}"
 
-msgid "emails.reviewRequest.description"
-msgstr ""
-"This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a "
-"submission. "
-
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Will you be able to review this for us?"
 
@@ -328,12 +323,6 @@ msgstr ""
 "<p>Thank you for considering this request. Your help is much appreciated.</p>"
 "<p>Kind regards,</p>"
 "{$signature}"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"This email from an Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a "
-"submission for an additional round of review. It provides information about the submission such as the title and "
-"abstract, a review due date, and how to access the submission itself."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Request for Review Cancelled"

@@ -328,12 +328,6 @@ msgstr ""
 "takker dig for at overveje denne henvendelse. Din hjælp værdsættes "
 "højt.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at "
-"acceptere eller afvise at bedømme et manuskript. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annullering af forespørgsel om bedømmelse"
 
@@ -949,15 +943,6 @@ msgstr ""
 "bedømmelsesprocessen, er du meget velkommen til at kontakte mig.</p><p>Jeg "
 "vil takke dig for at overveje denne anmodning. Din hjælp er meget "
 "værdsat.</p><p>Med venlig hilsen</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Denne mail sendes af redaktøren til en bedømmer, der bedes oplyse om "
-"vedkommende vil påtage sig at bedømme et indlæg i en yderligere  "
-"bedømmelsesrunde. Det indeholder informationer om indlægget så som titel og "
-"resumé, forfaldsdato for indlevering af bedømmelse samt hvordan man får "
-"adgang til indlægget."
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Revideret udgave uploadet"

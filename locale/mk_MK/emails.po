@@ -159,12 +159,6 @@ msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Дали ќе можете да го рецензирате ова за нас?"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Овој и-меил од Секцискиот уредник до Рецензентот бара рецензентот да ја "
-"прифати или одбие задачата за рецензирање на поднесок. "
-
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Покана за рецензирање"
 
@@ -401,13 +395,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "Барањето за рецензија е откажано"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Овој и-меил од уредник до рецензент бара рецензентот да ја прифати или одбие "
-"задачата за рецензирање на поднесок за дополнителен круг на рецензија. "
-"Обезбедува информации за поднесокот како што се насловот и апстрактот, "
-"датумот на доспевање на рецензијата и како да се пристапи до самиот поднесок."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"

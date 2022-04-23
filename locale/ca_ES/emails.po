@@ -382,16 +382,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Aquest missatge de correu electrònic de l'editor de secció s'adreça a un "
-"revisor/a per sol·licitar-li que accepti o rebutgi la tasca de revisió d'una "
-"tramesa. El correu dona informació sobre la tramesa, com el títol i el "
-"resum, la data límit per fer la revisió i com accedir-hi. Aquest missatge "
-"s'utilitza quan s'ha seleccionat el procés de revisió estàndard a Gestió > "
-"Configuració > Flux de treball > Revisió."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Sol·licitud de revisió cancel·lada"
 
@@ -1058,15 +1048,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Sol·licitud de revisió restaurada"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Aquest correu electrònic de l'editor/a de secció a un revisor/a sol·licita "
-"que el revisor/a accepti o rebutgi la tasca de revisió d'una tramesa per a "
-"una segona, o posterior, ronda de revisió. El correu dona informació sobre "
-"la tramesa, com el títol i el resum, la data límit de revisió i la manera d"
-"'accedir-hi. Aquest missatge s'utilitza quan el procés de revisió estàndard "
-"s'ha seleccionat a Gestió > Configuració > Flux de treball > Revisió."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"

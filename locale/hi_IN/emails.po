@@ -359,23 +359,6 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) simplecaps: Different capitalization
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"अनुभाग संपादक से लेकर समीक्षक तक का यह ईमेल अनुरोध करता है कि समीक्षक किसी "
-"सबमिशन की समीक्षा करने के कार्य को स्वीकार या अस्वीकार करता है। यह प्रस्तुत "
-"करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत "
-"तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया "
-"जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया "
-"का चयन किया जाता है."
-
-# (pofilter) brackets: Added '{', '}', '(', ')'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$contextUrl}, {$signature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$recipientName}, {$reviewAssignmentUrl}, {$contextName}, {$passwordResetUrl}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -464,17 +447,6 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "सेक्शन एडिटर से समीक्षक के लिए यह ईमेल अनुरोध करता है कि समीक्षक समीक्षा प्रस्तुत करने या समीक्षा के दूसरे या अधिक दौर के लिए कार्य को स्वीकार या अस्वीकार कर देता है। यह प्रस्तुत करने के बारे में जानकारी प्रदान करता है जैसे शीर्षक और सार, समीक्षा की नियत तारीख, और प्रस्तुत करने के लिए कैसे उपयोग करें। इस संदेश का उपयोग तब किया जाता है जब प्रबंधन> सेटिंग्स> वर्कफ़्लो> समीक्षा में मानक समीक्षा प्रक्रिया का चयन किया जाता है।"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$signature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$recipientName}, {$reviewAssignmentUrl}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) startpunc: Different punctuation at the start
-# (pofilter) xmltags: Added XML tags
 msgid "emails.reviewCancel.subject"
 msgstr "समीक्षा रद्द करने का अनुरोध"
 

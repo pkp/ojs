@@ -256,10 +256,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr "Ez az emailt a Rovatszerkesztő küldi a Lektornak, megkérve, hogy vállalja el, vagy, ha nem alkalmas, akkor utasítsa el a beküldött anyag lektorálási feladatát. Illetve információt ad a beküldött anyagról, úgymint cím, absztrakt, a lektori vélemény határideje, valamint hogyan lehet hozzáférni magához az anyaghoz. Ezt az üzenetet akkor kell használni, ha az általános lektorálási folyamat van kiválasztva a folyóirat menedzselése részben  > Beállítások > Munkafolyamat > Szakmai lektorálás."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Cikk lektorálás kérése"
 
@@ -342,10 +338,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Ezt az emailt a Rovatszerkesztő küldi a Szakmai Lektornak, megkérve, hogy vállalja el, vagy, ha nem alkalmas, akkor utasítsa el a beküldött anyag lektorálási feladatát a második vagy további lektorálási körökben. Ez információt ad a beküldött anyagról, úgymint cím, absztrakt, a lektorálási határideje, valamint hogyan lehet hozzáférni magához az anyaghoz. Ezt az üzenetet akkor kell használni, ha az általános lektorálási folyamat van kiválasztva a folyóirat menedzselése részben > Beállítások > Munkafolyamat > Szakmai lektorálás."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Lektori felkérés visszavonása"

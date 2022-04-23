@@ -268,13 +268,6 @@ msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "リマインダー：論文査読のお願い"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"このメールは、セクション編集者から査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセ"
-"ス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST"
-"_ATTACHEDを参照してください）。"
-
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -418,12 +411,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "査読依頼取消のお願い"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"このメールは、セクション編集者から査読者に投稿物の査読の次回目を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へ"
-"のアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQ"
-"UEST_ATTACHED_SUBSEQUENTを参照してください）。"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"

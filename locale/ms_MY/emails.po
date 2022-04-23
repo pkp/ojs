@@ -155,15 +155,6 @@ msgid "emails.notification.subject"
 msgstr "Notifikasi baharu dari {$contextName}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"E-mel ini dari Editor Bahagian kepada Pengulas meminta agar pengulas "
-"menerima atau menolak tugas mengulas penyerahan. Ini memberikan maklumat "
-"mengenai penyerahan seperti tajuk dan abstrak, tarikh akhir ulasan, dan cara "
-"mengakses kiriman itu sendiri. Mesej ini digunakan apabila Proses Standard "
-"Ulasan dipilih dalam Pengurusan> Tetapan> Alur Kerja> Ulasan."
-
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Permintaan Ulasan Artikel"
 
@@ -995,15 +986,6 @@ msgstr ""
 "datang. <br />\n"
 "<br />\n"
 "Sekiranya anda mempunyai sebarang pertanyaan, sila hubungi saya."
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"E-mel ini dari Editor Bahagian kepada Pengulas meminta agar pengulas "
-"menerima atau menolak tugas mengulas penyerahan untuk ulasan kedua atau "
-"pusingan seterusnya. Ini memberikan maklumat mengenai penyerahan seperti "
-"tajuk dan abstrak, tarikh akhir ulasan, dan cara mengakses penyerahan itu "
-"sendiri. Mesej ini digunakan apabila Proses Ulansan Standard dipilih dalam "
-"Pengurusan> Tetapan> Aliran Kerja> Ulasan."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"

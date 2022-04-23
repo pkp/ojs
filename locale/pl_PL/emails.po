@@ -304,14 +304,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o "
-"przygotowanie recenzji tekstu, jego tytuł i abstrakt, a także zalecenie dot. "
-"zresetowania hasła w sytuacji, gdy recenzent nie pamięta danych do "
-"logowania. Wysyłana, jeśli recenzent pracować będzie w systemie"
-
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
@@ -1029,14 +1021,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o "
-"przygotowanie recenzji tekstu, jego tytuł i abstrakt oraz informacje o "
-"dostępie do tekstu i formularza recenzji. Wysyłana, jeżeli recenzent "
-"pracować będzie w systemie"
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Poprawiona wersja przesłana do systemu"

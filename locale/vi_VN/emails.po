@@ -12,15 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Email này từ biên tập viên chuyên mục tới phản biện để một yêu cầu người "
-"phản biện chấp nhận hoặc từ chối nhiệm vụ đánh giá bài gửi một vòng thứ hai "
-"hoặc cao hơn. Nó cung cấp thông tin về bài gửi như tiêu đề và tóm tắt, ngày "
-"đến hạn nộp đán giá và cách truy cập bài gửi. Thông báo này được sử dụng khi "
-"Quy trình phản biện tiêu chuẩn được chọn trong Quản lý > Cài đặt > Quy trình "
-"làm việc > Phản biện."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Hủy yêu cầu đánh giá bài báo"
 
@@ -727,15 +718,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Yều cầu đánh giá bài báo"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Email này từ Biên tập viên chuyên mục tới Người phản biện yêu cầu họ chấp "
-"nhận hoặc từ chối nhiệm vụ đánh giá nội dung bài gửi. Nó cung cấp thông tin "
-"về bài gửi như tiêu đề và tóm tắt, ngày đến hạn gửi bài đánh giá và cách "
-"truy cập bài gửi. Thông báo này được sử dụng khi Quy trình phản biện tiêu "
-"chuẩn được chọn trong Quản lý> Cài đặt> Quy trình làm việc> Phản biện."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"

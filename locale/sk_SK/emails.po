@@ -239,15 +239,6 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Žiadosť o zrušenie recenzie"
 
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Tento email od editora sekcie recenzentovi požaduje, aby recenzent prijal "
-"alebo odmietol úlohu preskúmania príspevku pre druhé alebo ďalšie kolo "
-"recenzií. Poskytuje informácie o podaní, ako je názov a abstrakt, dátum "
-"dokončenia recenzie a prístup k samotnému príspevku. Táto správa sa používa "
-"v prípade, že je v časti Správa> Nastavenia> Pracovný postup> Kontrola "
-"vybraná možnosť Štandardná kontrola."
-
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
@@ -365,15 +356,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Požiadavka na recenziu článku"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Tento email od editora sekcie pre recenzenta žiada, aby recenzent prijal "
-"alebo odmietol úlohu spracovať recenziu príspevku. Obsahuje informácie o "
-"príspevku, ako je názov a abstrakt, termín pre spracovanie recenzie a ako sa "
-"dostať k samotnému príspevku. Táto správa je používaná, pokiaľ je zvolené "
-"Štandardné recenzné konanie v druhom kroku  Nastavenie časopisu."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"

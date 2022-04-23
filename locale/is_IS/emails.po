@@ -298,11 +298,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Hefur þú tök á að ritrýna þetta fyrir okkur?"
 
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Þessi tölvupóstur er frá kaflaritstjóra til ritrýnis með óskum um að "
-"viðkomandi samþykki eða hafni beiðni um ritrýni. "
-
 msgid "emails.reviewRequest.subject"
 msgstr "Boð um ritrýni"
 

@@ -371,16 +371,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Recordatorio de solicitude de revisión dun artigo"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Este correo electrónico do editor/a de sección diríxese a un revisor/a para "
-"solicitarlle que acepte ou rexeite a tarefa de revisión dun envío. O correo "
-"proporciona información sobre o envío, como o título e o resumo, a data "
-"límite para facer a revisión e como acceder ao envío. Esta mensaxe utilízase "
-"cando se selecciona o proceso de revisión estándar en Xestión > "
-"Configuración > Fluxo de traballo > Revisión."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr ""
 "Este correo electrónico envíase automaticamente cando expira o prazo de "
@@ -419,16 +409,6 @@ msgstr ""
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Solicitude de revisión dun artigo"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Este correo electrónico do editor/a de sección a un revisor/a solicita que "
-"este/esta acepte ou rexeite a tarefa de revisión dun envío para unha segunda "
-"rolda de revisión ou máis. Tamén proporciona información sobre o envío, como "
-"o título e o resumo, a data límite de entrega da revisión e o modo de "
-"acceder ao propio envío. Esta mensaxe utilízase cando se selecciona o "
-"proceso de revisión estándar en Xestión > Configuración > Fluxo de traballo >"
-" Revisión."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"

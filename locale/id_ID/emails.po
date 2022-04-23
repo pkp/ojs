@@ -243,12 +243,6 @@ msgstr ""
 "hormat,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Email ini dikirimkan kepada Reviewer oleh Editor Bagian untuk meminta "
-"reviewer apakah menerima atau menolak permohonan review. "
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Pengingat Permintaan Review Artikel"
 
@@ -331,14 +325,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Email ini dikirim oleh Editor Bagian kepada Reviewer untuk meminta reviewer "
-"apakah menerima atau menolak permohonan review untuk tahap review tambahan. "
-"Email ini berisi informasi tentang naskah yang mencakup  judul dan abstrak, "
-"tenggat review, dan cara mengakses naskah."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Permohonan Review Dibatalkan"

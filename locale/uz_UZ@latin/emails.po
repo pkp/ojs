@@ -649,16 +649,6 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Tekshirish so'rovi bekor qilindi"
 
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Bo'lim muharriridan sharhlovchiga yuborilgan bu xat, sharhlovchidan ikkinchi "
-"yoki undan ortiq ko'rib chiqish davri uchun topshiriqni ko'rib chiqish "
-"vazifasini qabul qilishni yoki rad etishni so'raydi. Unda sarlavha va "
-"avtoreferat, ko'rib chiqish muddati va taqdimotning o'ziga qanday kirish "
-"mumkinligi haqidagi ma'lumotlar taqdim etiladi. Bu xabar menejment> "
-"sozlamalar> ish oqimi> ko'rib chiqish bo'limida standart ko'rib chiqish "
-"jarayoni tanlanganida ishlatiladi."
-
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
@@ -773,16 +763,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Maqolani ko'rib chiqish so'rovini eslatish"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Bo'lim muharriridan sharhlovchiga yuborilgan bu xat, sharhlovchidan "
-"topshiriqni ko'rib chiqish vazifasini qabul qilish yoki rad etishni "
-"so'raydi. Unda sarlavha va avtoreferat, ko'rib chiqish muddati va "
-"taqdimotning o'ziga qanday kirish mumkinligi haqidagi ma'lumotlar taqdim "
-"etiladi. Bu xabar menejment> sozlamalar> ish oqimi> ko'rib chiqish bo'limida "
-"standart ko'rib chiqish jarayoni tanlanganida ishlatiladi."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"

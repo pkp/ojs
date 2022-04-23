@@ -221,17 +221,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Ce courriel du Rédacteur de rubrique à un Rapporteur demande que le "
-"rapporteur accepte ou refuse la tâche d'évaluation d'une soumission. Il "
-"fournit de l'information sur la soumission, tel son titre et un résumé, la "
-"date d'échéance pour l'évaluation, et comment accéder à la soumission elle-"
-"même. Ce message est utilisé quand « Processus d'évaluation standard » est "
-"sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir «"
-" Demande d'évaluation d'un article en pièce jointe »)."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annulation de la demande d'évaluation"
 
@@ -1019,10 +1008,6 @@ msgstr ""
 "« {$submissionTitle} » <br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Ce courriel du rédacteur de section à un rapporteur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé."
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"

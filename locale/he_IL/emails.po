@@ -217,14 +217,6 @@ msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "בקשה לסקירת מאמר"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"הודעת דוא\"ל זו מעורך המדור לבודק מבקשת שהמבקר יקבל או ידחה את משימת בדיקת "
-"ההגשה. הוא מספק מידע על ההגשה כמו הכותרת והתקציר, תאריך יעד לבדיקה וכיצד "
-"לגשת להגשה עצמה. הודעה זו משמשת כאשר נבחר תהליך הבדיקה הרגיל בניהול> הגדרות> "
-"זרימת עבודה> סקירה."
-
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -336,13 +328,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "ביטול בקשה לסקירה"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"הודעת דוא\"ל זו מעורך המדור לבודק מבקשת שהמבקר יקבל או ידחה את משימת בדיקת "
-"ההגשה לסבב ביקורת שני או יותר. הוא מספק מידע על ההגשה כמו הכותרת והתקציר, "
-"תאריך יעד לבדיקה וכיצד לגשת להגשה עצמה. הודעה זו משמשת כאשר נבחר תהליך "
-"הבדיקה הרגיל בניהול> הגדרות> זרימת עבודה> סקירה. (אחרת ראה "
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"

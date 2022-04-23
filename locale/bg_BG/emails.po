@@ -36,12 +36,6 @@ msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Ще можете ли да прегледате подадените материали към нашето списание?"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Този имейл от редактора на секции до рецензент изисква от рецензента да "
-"приеме или отхвърли задачата за преглед на изпратено материал за статия. "
-
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Уважаеми {$recipientName},</p><p>Вярвам, че бихте били отличен рецензент "
@@ -464,13 +458,6 @@ msgstr "Заявката за рецензиране на статия е отм
 
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Молба за преглед на преработено подаване на ръкопис"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Този имейл от редактор до рецензент изисква от рецензента да приеме или "
-"отхвърли задачата за рецензия на изпратените материали за следващ етап от "
-"редакцията. Той предоставя информация за изпратеното, като заглавието и "
-"резюмето, краен срок за преглед и как да получите достъп до самите материали."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"

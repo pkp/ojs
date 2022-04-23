@@ -387,12 +387,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor de Secção para o Revisor a solicitar que "
-"aceite ou recuse a tarefa de rever um artigo. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Pedido de revisão cancelado"
 
@@ -1263,14 +1257,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor ao Revisor a solicitar que aceite ou "
-"recuse a tarefa de rever um artigo numa ronda de revisão adicional. Fornece "
-"informações sobre a submissão, como o título e resumo, prazo de revisão e "
-"como aceder à própria submissão."
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versão revista enviada"

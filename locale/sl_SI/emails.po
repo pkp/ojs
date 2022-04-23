@@ -312,11 +312,6 @@ msgstr ""
 "lahko obrnete name.</p><p>Zahvaljujemo se vam za sprejetje prošnje in se vam "
 "za vašo pomoč zahvaljujemo.</p><p>S spoštovanjem,</p>{$signature}"
 
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi "
-"ali zavrne opravljanje recenzije. "
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Boste lahko opravili to recenzijo za nas?"
@@ -408,13 +403,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali "
-"zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. Vsebuje "
-"informacije o prispevku kot so naslov in izvleček, datum do dokončanja "
-"recenzije ter dostopom do prispevka."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Prošnja za preklic recenzije"

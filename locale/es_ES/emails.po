@@ -277,16 +277,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Este correo electrónico del editor/a de sección se dirige a un revisor/a "
-"para solicitarle que acepte o rechace la tarea de revisión de un envío. El "
-"correo proporciona información sobre el envío, como el título y el resumen, "
-"el plazo de revisión y cómo acceder al envío propiamente dicho. Este mensaje "
-"se usa cuando se selecciona el proceso de revisión estándar en Gestión > "
-"Ajustes > Flujo de trabajo > Revisión."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Recordatorio de solicitud de revisión de artículo"
 
@@ -369,16 +359,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Este correo electrónico del editor/a de sección a un revisor/a solicita que "
-"el revisor/a acepte o rechace la tarea de revisar un envío para una ronda de "
-"revisión adicional. Además, proporciona información sobre el envío como el "
-"título, el resumen, la fecha de entrega de la revisión y cómo obtener acceso "
-"al propio envío. Este mensaje se usa cuando se selecciona el proceso de "
-"revisión estándar en Gestión > Ajustes > Flujo de trabajo > Revisión."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Petición de revisión cancelada"

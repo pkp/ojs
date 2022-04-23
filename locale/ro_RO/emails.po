@@ -390,16 +390,6 @@ msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Rugăminte revizuire articol"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Acest e-mail de la editorul de secțiuni către un revizor, căruia i se "
-"solicită să accepte sau să refuze sarcina de a examina o trimitere. Oferă "
-"informații despre manuscris, cum ar fi titlul și rezumatul, data limită de "
-"revizuire și modul de accesare a prezentării. Acest mesaj este utilizat "
-"atunci când procesul de revizuire standard este selectat în Management> "
-"Setări> Flux de lucru> Revizuire."
-
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Invitația pentru a evalua un articol"
 
@@ -579,15 +569,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "Cerere de revizuire anulată"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Acest e-mail de la redactorul secțiunii către un revizor, solicită ca acesta "
-"să accepte sau să refuze sarcina de a revizui un manuscris pentru o a doua "
-"sau altă rundă suplimentară de revizuire. Oferă informații despre manuscris, "
-"cum ar fi titlul și rezumatul, data limită de revizuire și modul de accesare "
-"a lucrării. Acest mesaj este utilizat când Procesul de revizuire standard "
-"este selectat în Management> Setări> Flux de lucru> Revizuire."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
