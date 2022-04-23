@@ -45,27 +45,18 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$subscriptionPhone = $journal->getData('subscriptionPhone');
 		$subscriptionMailingAddress = $journal->getData('subscriptionMailingAddress');
 
-		$subscriptionContactSignature = $subscriptionName;
+		$subscriptionContactSignature = htmlspecialchars($subscriptionName);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_COMMON);
 
 		if ($subscriptionMailingAddress != '') {
-			$subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
+			$subscriptionContactSignature .= "\n" . htmlspecialchars($subscriptionMailingAddress);
 		}
 		if ($subscriptionPhone != '') {
-			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . $subscriptionPhone;
+			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . htmlspecialchars($subscriptionPhone);
 		}
 
-		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
-
-		$paramArray = array(
-			'subscriberName' => $user->getFullName(),
-			'journalName' => $journalName,
-			'subscriptionType' => $subscriptionType->getSummaryString(),
-			'expiryDate' => $subscription->getDateEnd(),
-			'username' => $user->getUsername(),
-			'subscriptionContactSignature' => $subscriptionContactSignature
-		);
+		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . htmlspecialchars($subscriptionEmail);
 
 		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($emailKey, $journal->getPrimaryLocale(), $journal, false);
@@ -74,7 +65,14 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
-		$mail->assignParams($paramArray);
+		$mail->assignParams([
+			'subscriberName' => htmlspecialchars($user->getFullName()),
+			'journalName' => htmlspecialchars($journalName),
+			'subscriptionType' => htmlspecialchars($subscriptionType->getSummaryString()),
+			'expiryDate' => $subscription->getDateEnd(),
+			'username' => htmlspecialchars($user->getUsername()),
+			'subscriptionContactSignature' => nl2br($subscriptionContactSignature)
+		]);
 		$mail->send();
 	}
 

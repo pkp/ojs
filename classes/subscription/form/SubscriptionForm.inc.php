@@ -227,24 +227,16 @@ class SubscriptionForm extends Form {
 		$subscriptionEmail = $journal->getData('subscriptionEmail');
 		$subscriptionPhone = $journal->getData('subscriptionPhone');
 		$subscriptionMailingAddress = $journal->getData('subscriptionMailingAddress');
-		$subscriptionContactSignature = $subscriptionName;
+		$subscriptionContactSignature = htmlspecialchars($subscriptionName);
 
 		if ($subscriptionMailingAddress != '') {
-			$subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
+			$subscriptionContactSignature .= "\n" . htmlspecialchars($subscriptionMailingAddress);
 		}
 		if ($subscriptionPhone != '') {
-			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . $subscriptionPhone;
+			$subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . htmlspecialchars($subscriptionPhone);
 		}
 
-		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
-
-		$paramArray = array(
-			'subscriberName' => $user->getFullName(),
-			'journalName' => $journalName,
-			'subscriptionType' => $subscriptionType->getSummaryString(),
-			'username' => $user->getUsername(),
-			'subscriptionContactSignature' => $subscriptionContactSignature
-		);
+		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . htmlspecialchars($subscriptionEmail);
 
 		import('lib.pkp.classes.mail.MailTemplate');
 		$mail = new MailTemplate($mailTemplateKey);
@@ -252,7 +244,14 @@ class SubscriptionForm extends Form {
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
 		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
 		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
-		$mail->assignParams($paramArray);
+		$mail->assignParams([
+			'subscriberName' => htmlspecialchars($user->getFullName()),
+			'journalName' => htmlspecialchars($journalName),
+			'subscriptionType' => htmlspecialchars($subscriptionType->getSummaryString()),
+			'username' => htmlspecialchars($user->getUsername()),
+			'subscriptionContactSignature' => nl2br($subscriptionContactSignature),
+
+		]);
 
 		return $mail;
 	}
