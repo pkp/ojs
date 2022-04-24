@@ -1,10 +1,12 @@
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
+# Diego Abadan <diego@lepidus.com.br>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2021-01-26 15:48+0000\n"
-"Last-Translator: William Costa Rodrigues <webmaster@antsoft.com.br>\n"
+"PO-Revision-Date: 2022-04-05 08:33+0000\n"
+"Last-Translator: Diego Abadan <diego@lepidus.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -42,7 +44,7 @@ msgid "grid.action.workflow"
 msgstr "Fluxo de trabalho para a submissão"
 
 msgid "submission.abstract.wordCount.description"
-msgstr "O abstract deve ter {$wordCount} palavras ou menos."
+msgstr "O resumo deve ter {$wordCount} palavras ou menos."
 
 msgid "submission.submit.noContext"
 msgstr "Não foi possível encontrar esse envio."
@@ -117,7 +119,7 @@ msgid "editor.submission.decision.sendExternalReview"
 msgstr "Enviar para Avaliação"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "A submissão dos metadados foi realizada."
+msgstr "A submissão dos metadados da edição foi realizada."
 
 msgid "submission.upload.fileContents"
 msgstr "Componentes do artigo"
@@ -156,7 +158,9 @@ msgid "submission.submit.form.abstractRequired"
 msgstr "Por favor, informe o resumo do seu artigo."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Seu abstract é muito longo. Reduza-o para abaixo do limite de palavras indicado para esta seção."
+msgstr ""
+"Seu resumo é muito longo. Reduza-o para abaixo do limite de palavras "
+"indicado para esta seção."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Por favor, selecione o papel do colaborador."
@@ -213,7 +217,7 @@ msgid "publication.publish.confirmation.backIssue"
 msgstr "Todos os requisitos de publicação foram atendidos. Isto será publicado imediatamente em {$issue}. Tem certeza de que deseja realizar a publicação?"
 
 msgid "publication.required.issue"
-msgstr "A publicação deve ser agendada a uma edição antes de ser publicada."
+msgstr "O item deve ser agendado em uma edição antes de ser publicado."
 
 msgid "publication.publishedIn"
 msgstr "Publicado em <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -246,13 +250,13 @@ msgid "publication.assignToissue"
 msgstr "Atribuir a Edição"
 
 msgid "publication.unscheduledIn"
-msgstr "Isso não foi programado para a publicação em uma edição."
+msgstr "Não agendado em uma edição."
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
-"Todos os requisitos de publicação foram atendidos. Isso será publicado "
-"imediatamente porque a data da publicação foi definida como {$datePublished}"
-". Tem certeza de que deseja publicar?"
+"Todos os requisitos de publicação foram atendidos. A publicação será "
+"imediatamente porque a data da publicação foi definida para {$datePublished}"
+". Deseja realmente publicar?"
 
 msgid "submission.viewingPreview"
 msgstr ""

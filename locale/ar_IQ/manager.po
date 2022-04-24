@@ -1,10 +1,10 @@
-# M. Ali <vorteem@gmail.com>, 2021.
+# M. Ali <vorteem@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-12-04 03:23+0000\n"
+"PO-Revision-Date: 2022-04-04 16:20+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -1930,7 +1930,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "تعذر تعيين DOI {$pubId} لأنها تتضمن نمطاً غير متوافق."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "لقد تم تعيين DOI {$pubId}."
+msgstr ""
+"لقد تم تعيين معُعرف المكون الرقمي {$pubId}. لتحرير هذا المُعرف، قم بزيارة <a "
+"href=\"{$doiManagementLink}\">صفحة إدارة مُعرفات المكونات الرقمية</a>."
 
 msgid "doi.editor.missingPrefix"
 msgstr "معرف المكون الرقمي لا بد له أن يبدأ بـ {$doiPrefix}."
@@ -1966,7 +1968,7 @@ msgstr "تعيين"
 msgid "doi.manager.settings.doiSuffix.description"
 msgstr ""
 "لاحقة معرف المكون الرقمي يمكنها أن تكون بأي تنسيق، لكنها لا بد أن تكون فريدة "
-"ما بين كل المكونات المنشورة المنضوية تحت نفس البادئة."
+"ما بين كل المكونات المنشورة المنضوية تحت نفس البادئة:"
 
 msgid "doi.manager.settings.doiPrefix.description"
 msgstr ""
@@ -1976,3 +1978,53 @@ msgstr ""
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "المقالات"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"استعمال الأنماط الافتراضية <br />%j.v%vi%i للأعداد<br />%j.v%vi%i.%a "
+"للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية."
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"يرجى تحديد وكالة التسجيل التي ترغب باستعمالها عند إيداع معرفات المكونات "
+"الرقمية."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "وكالة التسجيل"
+
+msgid "doi.manager.displayName"
+msgstr "معرفات المكونات الرقمية"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "في مرحلة التدقيق الإملائي"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"تعيين معرفات المكونات الرقمية (DOI) للمقالات، الأعداد والألواح الطباعية."
+
+msgid "doi.manager.issueDois"
+msgstr "معرفات المكونات الرقمية للعدد"
+
+msgid "doi.manager.submissionDois"
+msgstr "معرفات المكونات الرقمية للمقالة"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "تعذر العثور على الأعداد التي طلبتها"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "يمكن تحرير معرفات المكونات الرقمية فقط بعد نشر المنشور"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "معرف المكون الرقمي المعطى غير صالح"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "يمكن تحرير معرفات المكونات الرقمية فقط بعد نشر اللوح الطباعي/ المنشور"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "اللوح الطباعي الذي طلبته ليس جزءًا من هذا المنشور."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "سيتم تعيين مُعرف المكون الرقمي {$pubId} عند النشر."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "لا أحد"

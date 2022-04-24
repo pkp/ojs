@@ -1,7 +1,7 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
 "Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-subscriptions/is_IS/>\n"
@@ -13,14 +13,14 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.subscriptions.ipRanges"
-msgstr "IP-talnaraðair"
+msgstr "IP-talnaraðir"
 
 msgid "plugins.reports.subscriptions.institutionMailingAddress"
-msgstr "Stofnana póstlisti"
+msgstr "Póstlisti stofnana"
 
 msgid "plugins.reports.subscriptions.description"
 msgstr ""
-"þessi viðbót setur upp CSV skýrslu sem inniheldur lista yfir áskrifendur og "
+"Þessi viðbót setur upp CSV skýrslu sem inniheldur lista yfir áskrifendur og "
 "upplýsingar um þá."
 
 msgid "plugins.reports.subscriptions.displayName"

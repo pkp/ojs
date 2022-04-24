@@ -1,10 +1,10 @@
-# Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
+# Lucia Steele <lucia.steele@aboutscience.eu>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2021-12-29 12:24+0000\n"
+"PO-Revision-Date: 2022-03-07 11:46+0000\n"
 "Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "it_IT/>\n"
@@ -77,7 +77,7 @@ msgstr "Questa email viene mandata agli utenti appena registrati per dar loro il
 
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Pubblicato un nuovo fascicolo"
+msgstr "Nuova uscita disponibile: {$issueIdentification}"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
@@ -241,7 +241,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "Richiesta di revisione di un articolo"
+msgstr "Invito alla revisione"
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -280,7 +280,9 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequest.description"
-msgstr "Questa email dal section editor al revisore richiede che quest'ultimo accetti o rifiuti il compito di revisionare una proposta. Fornisce informazioni sulla submission quali il titolo e l'abstract, una data attesa per la revisione, e su come accedere alla submission stessa. Questo messaggio è usato quando il processo Standard di revisione è selezionato nel Journal Setup, fase 2. (Altrimenti vedi  ALLEGATA_RICHIESTA_REVISIONE.)"
+msgstr ""
+"Questa email dal section editor al revisore richiede che quest'ultimo "
+"accetti o rifiuti il compito di revisionare una proposta. "
 
 msgid "emails.reviewCancel.subject"
 msgstr "Cancellazione richiesta di revisione"
@@ -333,7 +335,7 @@ msgstr "Questa email viene mandata dal revisore al section editor in risposta a 
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Promemoria revisione in attesa"
+msgstr "Reminder: una revisione è in attesa di essere completata"
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -352,11 +354,14 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRemind.description"
-msgstr "Questa email viene mandata da un section editor per ricordare al revisore che è attesa la revisione."
+msgstr ""
+"Questa email viene mandata da un editor per ricordare al revisore che è "
+"attesa la revisione. Questa mail è utilizzata da un editor manualmente per "
+"inviare un reminder al revisore"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Promemoria automatico revisione in attesa"
+msgstr "Reminder automatico: una revisione è in attesa di essere completata"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -380,7 +385,10 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.description"
-msgstr "Questa email viene mandata automaticamente quando una data di revisionee scade (vedi opzioni del revisore nel Impostazioni > Flusso di lavoro > Revisione) e l'accesso one-click del revisore è disattivato. I compiti programmati devono essere abilitati e configurati (vedi il file di configurazione del sito)."
+msgstr ""
+"Questa email viene inviata automaticamente quando il revisore non completa "
+"la revisione entro la scadenza. I reminder automatici sono attivati nelle "
+"impostazioni di Revisione."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Promemoria automatico revisione in attesa"
@@ -404,9 +412,10 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Questa email viene mandata automaticamente quando una data di revisionee scade (vedi opzioni del revisore nel Journal Setup, passo 2) e l'accesso one-click del revisore è attivato. I compiti programmati devono essere abilitati e configurati (vedi il file di configurazione del sito)."
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Richiesta preparazione delle bozze"
+msgstr ""
+"Ms {$submissionId} accettato da  {$contextAcronym} è pronto per la "
+"preparazione delle bozze"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -427,7 +436,10 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.layoutRequest.description"
-msgstr "Questa email dal section editor al layout editor notifica che è stato assegnato loro il compito di curare il layout di una submission. Questa fornisce informazioni sulla submission e su come accedervi."
+msgstr ""
+"Questa email viene inviata dall'editor al compositore/typesetter per "
+"assegnare l'incarico. Fornisce indicazioni specifiche e il link per accedere "
+"al manoscritto."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Bozze pronte"
@@ -445,7 +457,9 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.layoutComplete.description"
-msgstr "Questa email dal layout editor al section editor notifica che il processo di layout è stato completato."
+msgstr ""
+"Questa email notifica all'editor che il processo di produzione delle bozze è "
+"completo."
 
 msgid "emails.layoutAck.subject"
 msgstr "Ringraziamenti layout"
@@ -807,7 +821,7 @@ msgstr "Questo messaggio viene inviato a utenti che si sono appena registrati pe
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Decisione dell'editor"
+msgstr "Il suo manoscritto è stato accettato da {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -821,9 +835,8 @@ msgstr ""
 #, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
-"Questa mail è inviata dall'Editor o Section Editor ad un autore per "
-"avvisarlo che è stata presa la decisione finale di accettare il manoscritto "
-"per la pubblicazione."
+"Questa mail informa l'autore che il manoscritto è stato accettato per la "
+"pubblicazione."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Rinnovo dell'abbonamento istituzionale"
@@ -978,7 +991,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Richiesta di fare una revisione"
+msgstr "Invito alla seconda revisione"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -1005,9 +1018,151 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.description"
-msgstr "Questo messaggio viene inviato dall'editor a un revisore chiedendogli di accettare o rifiutare l'incarico di revisione di una proposta per un secondo o successivo round di revisione. Esso fornisce informazioni come il titolo e l'abstract, una data di scadenza e modalità di accesso alla stessa proposta. Questo messaggio viene utilizzato quando il processo di revisione standard è stato selezionato nel setup."
+msgstr ""
+"Questo messaggio viene inviato dall'editor a un revisore chiedendogli di "
+"accettare o rifiutare l'incarico di revisione di una proposta per un secondo "
+"o successivo round di revisione."
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr "Richiesta di revisione di un articolo"
+
+msgid "emails.reviewRequestOneclickSubsequent.body"
+msgstr ""
+"Gentile {$recipientName}:<br />\n"
+"<br />\n"
+"Ti scrivo riguardo al manoscritto &quot;{$submissionTitle},&quot; in corso "
+"di revisione per eventuale pubblicazione in {$contextName}.<br />\n"
+"<br />\n"
+"L'autore ha inviato una nuova versione, modificata secondo i suggerimenti "
+"ricevuti dai revisori. Tu sarei grato se volessi aiutarci a valutarla.<br />"
+"\n"
+"<br />\n"
+"Ti chiedo di autenticarti al sito {$responseDueDate} per indicarmi se "
+"intendi accettare l'incarico o meno e poi per accedere alla proposta e "
+"registrare il tuo parere.<br />\n"
+"<br />\n"
+"La data di scadenza è il {$reviewDueDate}.<br />\n"
+"<br />\n"
+"Submission URL: {$reviewAssignmentUrl}<br />\n"
+"<br />\n"
+"Ti ringrazio per la disponibilità<br />\n"
+"<br />\n"
+"{$signature}<br />\n"
+"<br />\n"
+"&quot;{$submissionTitle}&quot;<br />\n"
+"<br />\n"
+"{$submissionAbstract}"
+
+msgid "emails.reviewRequestOneclickSubsequent.description"
+msgstr ""
+"Questo messaggio viene inviato dall'editor a un revisore chiedendogli di "
+"accettare o rifiutare l'incarico di revisione di una proposta per un secondo "
+"o successivo ciclo di revisione.Fornisce informazioni come il titolo e "
+"l'abstract, una data di scadenza e modalità di accesso al manoscritto. "
+"Questo messaggio viene utilizzato quando il processo di revisione standard è "
+"stato selezionato nel Setup ed è abilitato l'accesso oneclick."
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr "Richiesta di revisione di un articolo"
+
+msgid "emails.reviewRequestAttachedSubsequent.body"
+msgstr ""
+"Gentile {$recipientName}:<br />\n"
+"<br />\n"
+"Ti scrivo riguardo al manoscritto &quot;{$submissionTitle},&quot; proposto "
+"per la pubblicazione in {$contextName}.<br />\n"
+"<br />\n"
+"Seguendo i suggerimenti ricevuti dai revisori, l'autore ha inviato una nuova "
+"versione modificata. Ti sarei grato se ci aiutassi a valutarla.<br />\n"
+"<br />\n"
+"Più sotto trovi le Linee guida sulla revisione e il file del manoscritto è "
+"in allegato. Puoi inviarmi la revisione e il tuo parere sulla proposta via "
+"email, entro il  {$reviewDueDate}.<br />\n"
+"<br />\n"
+"Perfavore informami entro il {$responseDueDate} se accetti o meno "
+"l'incarico.<br />\n"
+"<br />\n"
+"Grazie della disponibilià<br />\n"
+"{$signature}<br />\n"
+"<br />\n"
+"<br />\n"
+"Linee guida sulla revisione<br />\n"
+"<br />\n"
+"{$reviewGuidelines}<br />\n"
+
+msgid "emails.reviewRequestAttachedSubsequent.description"
+msgstr "Questo messaggio viene inviato dall'editor a un revisore chiedendogli di accettare o rifiutare l'incarico di revisione di una proposta per un secondo o successivo round di revisione. Contiene in allegato il file del manoscritto. Questo messaggio viene utilizzato quando è stato selezionato nel Setup, il processo di revisione con allegati email. (In caso contrario vedi REVIEW_REQUEST_SUBSEQUENT.)"
+
+msgid "emails.editorDecisionInitialDecline.subject"
+msgstr "Il suo manoscritto è stato rifiutato"
+
+msgid "emails.editorDecisionInitialDecline.body"
+msgstr ""
+"\n"
+"\t\t\tGentilissimo {$authors}:<br />\n"
+"<br />\n"
+"Abbiamo preso una decisione in merito al suo manoscritto dal titolo "
+"&quot;{$submissionTitle}&quot; inviato a {$contextName} .<br />\n"
+"<br />\n"
+"Ci rincresce informarla che non ci è possibile accettare il suo contributo"
+
+msgid "emails.editorDecisionInitialDecline.description"
+msgstr ""
+"Questa mail viene mandata all'autore quando l'editor rigetta il manoscritto "
+"prima del processo di revisione, in quanto non rientra nei requisiti minimi "
+"di considerazione della rivista"
+
+msgid "emails.editorDecisionSendToExternal.subject"
+msgstr "Decisione dell'editor"
+
+msgid "emails.editorDecisionSendToExternal.body"
+msgstr ""
+"Gentilissimo {$authors}:<br />\n"
+"<br />\n"
+"Abbiamo preso una decisione circa la tua proposta a {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
+"<br />\n"
+"La nostra decisione: invio a un revisore esterno<br />\n"
+"<br />\n"
+"Submission URL: {$submissionUrl}"
+
+msgid "emails.editorDecisionSendToExternal.description"
+msgstr ""
+"Questa mail è inviata dall'Editor o dal Section Editor all'autore quando il "
+"manoscritto viene assegnato ad un revisore."
+
+msgid "emails.editorDecisionSendToProduction.subject"
+msgstr "I prossimi passaggi per pubblicare il manoscritto"
+
+msgid "emails.editorDecisionSendToProduction.body"
+msgstr ""
+"Gentilissimo {$authors}:<br />\n"
+"<br />\n"
+"La lavorazione editoriale della sua proposta, &quot;{$submissionTitle},&quot; è completa.  Ora viene preparata per l'uscita sulla rivista.<br />\n"
+"<br />\n"
+"URL proposta: {$submissionUrl}"
+
+msgid "emails.editorDecisionSendToProduction.description"
+msgstr "Questa mail è inviata dall'editor o dall'editor di sezione all'autore quando una proposta è stata sistemata dal punto di vista editoriale."
+
+msgid "emails.editorRecommendation.subject"
+msgstr "Raccomandazione dell'editor"
+
+msgid "emails.editorRecommendation.body"
+msgstr ""
+"<p>{$editors},</p><p>Dopo aver valutato I commenti dei revisori, la mia "
+"raccomandazione per questo manoscritto  {$submissionTitle} è: <br "
+"/>{$recommendation}.</p><p>Accedendo al  <a href=\"{$submissionUrl}\">"
+"workflow editoriale</a> sarà possibile procedere.</p><p>A disposizione per "
+"ulteriori  chiarimenti.</p><p>{$senderName}</p>"
+
+msgid "emails.editorRecommendation.description"
+msgstr ""
+"Questa mail viene inviata all'editor per informarlo che un sub-editor ha "
+"preso una decisione in merito ad un manoscritto assegnatogli. Questa mail è "
+"utilizzata nel caso in cui un editor abbia solo il permesso di suggerire una "
+"decisione che deve essere formalizzata da un editor con il permesso. Questa "
+"opzione viene selezionata nel momento in cui viene assegnato un editor."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Un messaggio da  {$contextName}"
@@ -1132,13 +1287,14 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
-"Questa mail è inviata dal Section Editor al revisore con una revisione in "
-"corso per avvisarlo che l'invito alla revisione cancellato è stato "
-"ripristinato."
+"Questa mail è inviata da un Editor al revisore con una revisione in corso "
+"per avvisarlo che l'invito alla revisione cancellato è stato ripristinato. "
+"Consente all'editor che ha cancellato la revisione in corso di ripristinarla "
+"per consentire al revisore di completarla."
 
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Invito alla revisione ripristinato"
+msgstr "Sei ancora disponibile alla revisione per {$contextName}?"
 
 msgid "emails.statisticsReportNotification.description"
 msgstr ""
