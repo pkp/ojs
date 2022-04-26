@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /cache/
+Crawl-delay: 60
