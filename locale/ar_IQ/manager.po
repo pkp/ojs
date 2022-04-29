@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-04-04 16:20+0000\n"
+"PO-Revision-Date: 2022-04-29 09:26+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -1798,7 +1798,7 @@ msgid "doi.manager.settings.doiObjects"
 msgstr "محتوى المجلة"
 
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "لطفاً، إختر المكونات التي على DOI أن تتعين لها."
+msgstr "لطفاً، إختر المكونات التي ينبغي تعيين DOI لها."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "لطفاً، إختر مكونات النشر التي ستكون لها معرفات للمكونات الرقمية (DOI) معينة لها:"
@@ -2028,3 +2028,26 @@ msgstr "سيتم تعيين مُعرف المكون الرقمي {$pubId} عند
 
 msgid "doi.manager.settings.registrationAgency.none"
 msgstr "لا أحد"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"هذا البريد الالكتروني يُشعر المؤلف بأن طلب تقديمه يجري رفضه قبل مرحلة "
+"التحكيم لأنه لا يلبي متطلبات النشر في المجلة."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "معلومات عن عضوية المشترك"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "موجز عن نوع الاشتراك، اسمه، مدته وكلفته"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "تاريخ إنتهاء الاشتراك"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "عنوان رابط صفحة الاشتراك"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "تفاصيل الاتصال بمدير الاشتراكات"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "اسم المشترك، إنتماؤه، رقم هاتفه وبريده الالكتروني"
