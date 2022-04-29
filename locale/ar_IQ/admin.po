@@ -1,9 +1,10 @@
+# M. Ali <vorteem@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:15+00:00\n"
-"PO-Revision-Date: 2021-01-29 12:48+0000\n"
+"PO-Revision-Date: 2022-04-29 09:26+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/admin/ar_IQ/>"
 "\n"
@@ -208,3 +209,8 @@ msgstr ""
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "اللغة الرئيسية ينبغي أن تكون واحدة من اللغات المدعومة في المجلة."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"إضافة المجلات، تعديلها أو إزالتها من هذا الموقع وإدارة الإعدادات على مستوى "
+"عموم الموقع."
