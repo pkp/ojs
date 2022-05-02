@@ -64,7 +64,7 @@ class SubscriptionAction
 
         $paramArray = [
             'subscriptionType' => $subscriptionType->getSummaryString(),
-            'subscriberDetails' => $user->getContactSignature(),
+            'subscriberDetails' => $user->getSignature() ?? '',
             'membership' => $subscription->getMembership()
         ];
 
