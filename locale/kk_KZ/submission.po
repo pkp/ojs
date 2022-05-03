@@ -1,9 +1,10 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 09:01+0000\n"
-"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "kk_KZ/>\n"
 "Language: kk_KZ\n"
@@ -365,3 +366,39 @@ msgstr "Бұл нөмірде жариялануы жоспарланбаған.
 
 msgid "publication.required.issue"
 msgstr "Мақала шығарылмастан бұрын басылымға тағайындалуы керек."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Тексеру кезеңіне жіберілетін файлдарды таңдаңыз."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Авторларға электрондық хат жіберіп, бұл материал рецензенттерге "
+"жіберілетінін хабарлаңыз. Мүмкін болса, авторларға рецензиялау процесі қанша "
+"уақытқа созылатынын және олар редакторлардан қашан хабар күтетінін "
+"көрсетіңіз."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Авторларға олардың материалы қайта қарау кезеңіне жіберілетінін хабарлау "
+"үшін электрондық хат жіберіңіз. Неліктен бұл шешім қабылданғанын "
+"түсіндіріңіз және авторға материалдың әрі қарай өтетін кезеңдері  жайлы "
+"хабарлаңыз."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} атты материалы қайта қарау кезеңіне жіберілді."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Қайта қарауға жіберілді"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} бұл материалды қабылдау шешімін өзгертіп, оны қайта қарау "
+"кезеңіне жіберді."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Бұл материалды қабылдау туралы шешімді өзгертіп, оны тексеру кезеңіне қайта "
+"жіберіңіз."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Шолуға қайта оралу"
