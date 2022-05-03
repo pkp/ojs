@@ -3,7 +3,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-07 13:59+0000\n"
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
@@ -2345,7 +2345,7 @@ msgstr ""
 "таңдаңыз (Digital Object Identifier, DOI) :"
 
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "DOI тағайындалуы керек нысандарды таңдаңыз."
+msgstr "DOI-ы тағайындалуы керек нысандарды таңдаңыз."
 
 msgid "doi.manager.settings.doiObjects"
 msgstr "Журнал мазмұны"
@@ -2449,3 +2449,32 @@ msgid "manager.setup.enableDois.description"
 msgstr ""
 "Сандық нысан идентификаторларын (DOI) мақалаларға, шығарылымдарға және "
 "галлелерге тағайындаңыз."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Бұл электрондық пошта авторға олардың материалының журналдың жариялау "
+"талаптарына сәйкес келмейтіндіктен, қарау кезеңіне дейін жіберілгені туралы "
+"хабарлайды."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Абоненттің мүшелігі туралы мәліметтер"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Жазылым түрі, атауы, ұзақтығы және құны туралы қысқаша мәлімет"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Жазылым аяқталатын күн"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Жазылымның URL мекенжайы"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Жазылым менеджерінің байланыс мәліметтері"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Абоненттің аты, байланысы, телефон нөмірі мен электрондық поштасы"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr ""
+"Автоматтандырылған электрондық пошталарға арналған журналдың электрондық "
+"жауабы"
