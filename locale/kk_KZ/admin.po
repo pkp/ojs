@@ -2,7 +2,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-05 03:55+0000\n"
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/admin/kk_KZ/>"
 "\n"
@@ -233,3 +233,8 @@ msgstr ""
 "Сіз автоматты түрде осы журналдың менеджері ретінде тіркелесіз. Жаңа журнал "
 "жасағаннан кейін, сіз журналды бастапқы орнатуды аяқтау үшін оның шеберіне "
 "қайта бағытталасыз."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Бұл сайт арқылы журналдарды қосу, өңдеу немесе жою және бүкіл сайт "
+"параметрлерін басқару."
