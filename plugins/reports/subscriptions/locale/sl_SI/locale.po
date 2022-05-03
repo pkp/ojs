@@ -1,8 +1,9 @@
 # Primož Svetek <primoz.svetek@gmail.com>, 2022.
+# Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-26 01:11+0000\n"
-"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"Last-Translator: Matevž Rudolf <matevz.rudolf@uni-lj.si>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-subscriptions/sl_SI/>\n"
 "Language: sl_SI\n"
@@ -15,3 +16,8 @@ msgstr ""
 
 msgid "plugins.reports.subscriptions.displayName"
 msgstr "Poročilo o naročninah"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Ta vtičnik pripravi CSV poročilo, ki vsebuje seznam vseh naročnin in njihove "
+"podrobnosti."
