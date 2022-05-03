@@ -1,9 +1,10 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 06:50+0000\n"
-"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/locale/kk_KZ/"
 ">\n"
 "Language: kk_KZ\n"
@@ -343,7 +344,7 @@ msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Міндетті жолақтарды толтырыңыз."
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "Рецензия жолағын толтыру үшін белгішені белгілеңіз."
+msgstr "Рецензиялау жолағын толтыру үшін белгішені белгілеңіз."
 
 msgid "navigation.categories.browse"
 msgstr "Шолу"
@@ -358,9 +359,7 @@ msgid "context.current"
 msgstr "Ағымдағы журнал:"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr ""
-"Этот журнал не публикует свой контент онлайн.Бұл журнал өз мазмұнын "
-"интернетте жарияламайды."
+msgstr "Бұл журнал өз мазмұнын желіде жарияламайды."
 
 msgid "plugins.categories.auth.description"
 msgstr ""
@@ -2242,7 +2241,7 @@ msgstr ""
 "Вы пытаетесь получить доступ к статье, которая не относится к Вашему разделу."
 
 msgid "user.authorization.noContext"
-msgstr "Контексте журнал жоқ!"
+msgstr "Сұрауыңызға сәйкес журнал табылмады."
 
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr ""
@@ -2434,3 +2433,6 @@ msgstr ""
 
 msgid "doi.manager.settings.publications"
 msgstr "Мақалалар"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Жарияланым ақысы қосылмаған."
