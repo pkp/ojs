@@ -1917,17 +1917,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und benutzen können:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Zeitschrifteninhalt"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Bitte wählen Sie, welchen Objekten DOI zugewiesen werden sollen."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Bitte wählen Sie die Publikationsobjekte, denen Digital Object Identifiers (DOI) zugewiesen werden:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Ausgaben"
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artikel"
@@ -1938,17 +1933,8 @@ msgstr "Fahnen"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI-Präfix"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Der DOI-Präfix wird von Registrierungsagenturen (z.B. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) vergeben und hat das Format 10.xxxx (z.B. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Der DOI-Präfix ist verpflichtend und muss im Format 10.xxxx angegeben werden."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI-Suffix"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Ein DOI-Suffix kann in beliebiger Form sein, muss aber eindeutig unter allen Publikationsobjekten, denen derselbe DOI-Präfix zugewiesen wird:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die Seitenzahl und %x für die \"benutzerdefinierte Kennung\" (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden)."
@@ -1964,15 +1950,6 @@ msgstr "für Artikel"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "für Fahnen"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Die Standardmuster benutzen."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i für Ausgaben<br />%j.v%vi%i.%a für Artikel<br />%j.v%vi%i.%a.g%g für Fahnen."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Geben Sie einen individuellen DOI-Suffix für jedes publizierte Element ein. Sie finden ein zusätzliches DOI-Eingabefeld auf der Metadatenseite jedes Elements."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Bitte geben Sie das DOI-Suffix-Muster für Ausgaben ein."

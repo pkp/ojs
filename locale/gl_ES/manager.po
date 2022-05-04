@@ -2316,19 +2316,6 @@ msgstr "Introduza o padrón do sufixo DOI para os artigos."
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Introduza o padrón do sufixo DOI para os números."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Introduza un sufixo DOI individual para cada elemento publicado. Atoparás un "
-"campo de entrada DOI adicional na páxina de metadatos de cada elemento."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i para os números<br />%j.v%vi%i.%a para os artigos<br "
-"/>%j.v%vi%i.%a.g%g para as galeradas."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Usar padróns por defecto."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "para as galeradas"
 
@@ -2350,22 +2337,8 @@ msgstr ""
 "galerada OJS, %f para o ID do arquivo OJS , %p para o número de páxina e %x "
 "para \"Identificador personalizado\"."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Un sufixo DOI pode adoptar calquera forma, pero debe ser único entre todos "
-"os obxectos da publicación co mesmo prefixo DOI asignado:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Sufixo DOI"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "O prefixo DOI é obrigatorio e debe ter a forma 10.xxxx."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"O prefixo DOI é asignado polas axencias de rexistro (por exemplo, <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) e ten o formato "
-"10.xxxx (por exemplo, 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefixo DOI"
@@ -2376,17 +2349,12 @@ msgstr "Galeradas"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artigos"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Números"
-
 msgid "doi.manager.settings.explainDois"
 msgstr "Seleccione os obxectos da publicación que terán asignados DOI:"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Escolla os obxectos aos que se deben asignar os DOIs."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Contido da revista"
 
 msgid "doi.manager.settings.description"
 msgstr "Configure o complemento DOI para poder xestionar e usar os DOIs en OJS:"

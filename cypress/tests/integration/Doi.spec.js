@@ -36,9 +36,6 @@ describe('DOI tests', function() {
 		// Select automatic DOI creation time
 		cy.get('select[name="doiCreationTime"]').select('copyEditCreationTime');
 
-		// Select DOI suffix pattern type
-		cy.get('input[name="customDoiSuffixType"][value="defaultPattern"]');
-
 		// Save
 		cy.get('#doisSetup button').contains('Save').click();
 		cy.get('#doisSetup [role="status"]').contains('Saved');
@@ -63,7 +60,10 @@ describe('DOI tests', function() {
 		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout:20000});
 
 		cy.get(`#list-item-issue-${issueId} button.expander`).click();
-		cy.get(`input#${issueId}-issue`).should('have.value', '10.1234/jpkjpk.v1i2');
+		cy.get(`input#${issueId}-issue`).should(($input) => {
+			const val = $input.val();
+			expect(val).to.match(/10.1234\/[0-9abcdefghjkmnpqrstvwxyz]{4}-[0-9abcdefghjkmnpqrstvwxyz]{2}[0-9]{2}/);
+		});
 	});
 
 	it('Check Issue DOI visible', function() {
@@ -95,11 +95,17 @@ describe('DOI tests', function() {
 
 		// Confirm assignment
 		cy.get('div[data-modal="bulkActions"] button:contains("Assign DOIs")').click();
-		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout:20000});
+		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout: 20000});
 
 		cy.get(`#list-item-submission-${submissionId} button.expander`).click();
-		cy.get(`input#${submissionId}-article-${publicationId}`).should('have.value', '10.1234/jpkjpk.v1i2.17');
-		cy.get(`input#${submissionId}-galley-${galleyId}`).should('have.value', '10.1234/jpkjpk.v1i2.17.g3');
+		cy.get(`input#${submissionId}-article-${publicationId}`).should(($input) => {
+			const val = $input.val();
+			expect(val).to.match(/10.1234\/[0-9abcdefghjkmnpqrstvwxyz]{4}-[0-9abcdefghjkmnpqrstvwxyz]{2}[0-9]{2}/);
+		});
+		cy.get(`input#${submissionId}-galley-${galleyId}`).should(($input) => {
+			const val = $input.val();
+			expect(val).to.match(/10.1234\/[0-9abcdefghjkmnpqrstvwxyz]{4}-[0-9abcdefghjkmnpqrstvwxyz]{2}[0-9]{2}/);
+		});
 	});
 
 	it('Check Publication/Galley DOI visible', function() {

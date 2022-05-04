@@ -2276,19 +2276,6 @@ msgstr "Мақалалар үшін DOI жұрнағының үлгісін ен
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Басылымдар үшін DOI жұрнағының үлгісін енгізіңіз."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Әр жарияланған элемент үшін жеке DOI жұрнағын енгізіңіз. Бұдан кейін әр "
-"элемент үшін метадеректер бетінде қосымша DOI енгізу жолағын көре аласыз."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i журнал басылымдары үшін<br />%j.v%vi%i.%a мақалалар үшін<br "
-"/>%j.v%vi%i.%a.g%g электрондық жазбалар үшін."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Негізгі үлгілерді қолданыңыз."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "электрондық жазба үшін"
 
@@ -2310,22 +2297,8 @@ msgstr ""
 "идентификаторы үшін %f, бет нөмірі үшін %p және \"жеке жұрнақ\"үшін %x "
 "қолданыңыз."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"DOI жұрнағы кез-келген формада болуы мүмкін, бірақ бірдей DOI префиксі "
-"барлық жарияланған нысандар арасында ерекше болуы керек:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI жұрнағы"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI префиксі міндетті және 10.xxxx түрінде болуы керек."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"DOI префиксін тіркеу агенттіктері тағайындайды (мысалы, <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) және 10.xxxx "
-"форматында ұсынылады (мысалы, 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI Префиксі"
@@ -2336,19 +2309,14 @@ msgstr "Электрондық жазба"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Мақалалар"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Басылымдар"
-
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Берілген сандық нысандардың идентификаторлары бар жарияланатын нысандарды "
 "таңдаңыз (Digital Object Identifier, DOI) :"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "DOI-ы тағайындалуы керек нысандарды таңдаңыз."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Журнал мазмұны"
 
 msgid "doi.manager.settings.description"
 msgstr "OJS-те DOI-ді қолдану және басқару үшін \"DOI\" модулін орнатыңыз:"

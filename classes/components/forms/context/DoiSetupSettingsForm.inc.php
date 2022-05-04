@@ -17,6 +17,7 @@ namespace APP\components\forms\context;
 use APP\facades\Repo;
 use PKP\components\forms\context\PKPDoiSetupSettingsForm;
 use PKP\components\forms\FieldOptions;
+use PKP\components\forms\FieldText;
 use PKP\context\Context;
 
 class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
@@ -28,22 +29,27 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
         $this->addField(new FieldOptions(Context::SETTING_ENABLED_DOI_TYPES, [
             'label' => __('doi.manager.settings.doiObjects'),
             'description' => __('doi.manager.settings.doiObjectsRequired'),
+            'groupId' => self::DOI_SETTINGS_GROUP,
             'options' => [
                 [
                     'value' => Repo::doi()::TYPE_PUBLICATION,
-                    'label' => __('doi.manager.settings.enableFor', ['objects' => __('doi.manager.settings.publications')]),
+                    'label' => __('article.articles'),
                 ],
                 [
                     'value' => Repo::doi()::TYPE_ISSUE,
-                    'label' => __('doi.manager.settings.enableFor', ['objects' => __('issue.issues')]),
+                    'label' => __('issue.issues'),
                 ],
                 [
                     'value' => Repo::doi()::TYPE_REPRESENTATION,
-                    'label' => __('doi.manager.settings.enableFor', ['objects' => __('submission.layout.galleys')]),
+                    'label' => __('doi.manager.settings.galleysWithDescription'),
                 ]
             ],
             'value' => $context->getData(Context::SETTING_ENABLED_DOI_TYPES) ? $context->getData(Context::SETTING_ENABLED_DOI_TYPES) : [],
-            'showWhen' => Context::SETTING_ENABLE_DOIS
-        ]));
+        ]), [FIELD_POSITION_BEFORE, Context::SETTING_DOI_PREFIX])
+            ->addField(new FieldText(Repo::doi()::CUSTOM_ISSUE_PATTERN, [
+                'label' => __('issue.issues'),
+                'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
+                'value' => $context->getData(Repo::doi()::CUSTOM_ISSUE_PATTERN),
+            ]));
     }
 }

@@ -18,6 +18,7 @@ namespace APP\components\forms\publication;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use Illuminate\Support\LazyCollection;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
 use PKP\context\Context;
@@ -124,7 +125,7 @@ class PublishForm extends FormComponent
     {
         $request = Application::get()->getRequest();
         $context = $request->getContext();
-        $enabledDoiTypes = $context->getData(Context::SETTING_ENABLED_DOI_TYPES);
+        $enabledDoiTypes = $context->getData(Context::SETTING_ENABLED_DOI_TYPES) ?? [];
 
         $publicationDoiEnabled = in_array(Repo::doi()::TYPE_PUBLICATION, $enabledDoiTypes);
         $galleyDoiEnabled = in_array(Repo::doi()::TYPE_REPRESENTATION, $enabledDoiTypes);
@@ -166,7 +167,10 @@ class PublishForm extends FormComponent
             }
 
             if ($galleyDoiEnabled) {
-                foreach ((array)$this->publication->getData('galleys') as $galley) {
+
+                /** @var LazyCollection $galleys */
+                $galleys = $this->publication->getData('galleys');
+                $galleys->each(function ($galley) use (&$doiTableRows, $warningIconHtml) {
                     if ($galley->getDoi()) {
                         $doiTableRows[] = [$galley->getDoi(), __('doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
                     } else {
@@ -177,7 +181,7 @@ class PublishForm extends FormComponent
                             $doiTableRows[] = [$warningIconHtml . __('submission.status.unassigned'), __('doi.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
                         }
                     }
-                }
+                });
 
                 if (!empty($doiTableRows)) {
                     $table = '<table class="pkpTable"><thead><tr>' .

@@ -2024,9 +2024,7 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Kérjük, állítsa be a DOI plugint DOI-k kezelésére és használatára OJS-ben:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Folyóirat tartalom"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
 "Kérjük, hogy válassza ki azokat az objektumokat, amelyekhez DOI-kat szeretne "
@@ -2034,9 +2032,6 @@ msgstr ""
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Kérjük, hogy válassza ki azokat az megjelentetési objektumokat, amelyekhez DOI-kat fog rendelni:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Számok"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Cikkek"
@@ -2047,17 +2042,8 @@ msgstr "Preprintek"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI Előtag"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "A DOI előtagot regisztrációs ügynökségek (pl. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) osztják ki, ebben a formátumban 10.xxxx (például 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "A DOI előtag kötelező és így kell kinéznie: 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI utótag"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "A DOI utótag bármilyen formátumú lehet, de egyedinek kell lennie minden publikálási objektum esetében, amely ugyanahhoz a DOI előtaghoz tartozik:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Használja az alább begépelt mintát DOI utótag generálásához. Használja a %j -t a folyóirat kezdőbetűkhöz, %v -t a évfolyamszámhoz, %i -t a folyóiratszámhoz, %Y -t az évhez, %a -t az OJS cikkazonosítóhoz, %g -t az OJS preprint azonosítóhoz, %f -t OJS fájlazonosítóhoz, %p -t az oldalszámhoz and %x -et, mint egyéni azonosítót."
@@ -2073,15 +2059,6 @@ msgstr "cikkeknek"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "preprinteknek"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Használja az alapértelmezett mintákat."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i folyóiratszámoknak<br />%j.v%vi%i.%a cikkeknek<br />%j.v%vi%i.%a.g%g for preprinteknek."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Adjon meg egy egyedi DOI-utótagot minden megjelent tételhez. Minden egyes elem metaadat-oldalán további DOI beviteli mezőt talál."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Kérjük, írja be a DOI utótag mintát a folyóiratszámokhoz."

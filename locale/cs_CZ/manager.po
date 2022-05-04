@@ -1911,17 +1911,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Naonfigurujte, prosím, plugin DOI, abyste mohli spravovat a používat DOI v OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Obsah časopisu"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Zvolte, prosím, které objekty mají mít přiděleno DOI."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Zvolte, prosím, publikační objekty, které mají mít přiděleny Digital Object Identifiers (DOI):"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Čísla"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Články"
@@ -1932,17 +1927,8 @@ msgstr "Sazebnice"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefix DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Prefix DOI je přidělován registračními agenturami (např. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) a je ve formátu 10.xxxx (např. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Prefix DOI je povinný a musí být ve formátu 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Suffix DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Suffix DOI může mít jakoukoli formu, ale musí být jedinečný mezi všemi publikovanými objekty se stejným prefixem DOI:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Použijte níže uvedený vzor pro vytvoření suffixu DOI. Použijte %j pro iniciály časopisu, %v pro číslo svazku ,%i pro číslo časopisu, %Y pro rok, %a pro ID článku v rámci OJS, %g pro ID sazebnice v rámci OJS, % f pro ID souboru v rámci OJS , %P pro číslo stránky a %x pro \"Vlastní identifikátor\"."
@@ -1958,15 +1944,6 @@ msgstr "pro články"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "pro sazebnice"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Použít výchozí vzor."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i pro čísla<br />%j.v%vi%i.%a pro články<br />%j.v%vi%i.%a.g%g pro sazebnice."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Pro každou publikovanou položku zadejte individuální suffix DOI. Na stránce metadat dat každé položky naleznete vstupní pole pro zadání přípony DOI."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Zadejte, prosím, vzor DOI suffixu pro čísla."

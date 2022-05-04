@@ -1909,17 +1909,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Seguire il setup per essere in grado di gestire e utilizzare DOI in OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Contenuto della rivista"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Scegli gli oggetti ai quali assegnare DOI."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Seleziona gli oggetti che avranno un DOI:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Fascicoli"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Articoli"
@@ -1930,19 +1925,8 @@ msgstr "File principali degli articoli"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefisso DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Il prefisso DOI è assegnato dalle agenzie di registrazione (es. <a href=\"http://www.medra.org\" target=\"_new\">MeDRA</a>) ed è in formato 10.xxxx (es. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Il prefisso DOI è obbligatorio e deve essere nel formato 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Suffisso DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Il suffisso DOI può avere qualunque forma, ma deve essere uniforme per tutti "
-"gli elementi  pubblicato con lo stesso prefisso DOI:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Usa il pattern inserito sotto per generare suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %Y per l'anno, %a per l'ID OJS degli articoli, %g per gli ID OJS dei file degli articoli, %f per gli ID OJS dei file e %p per il numero di pagina."
@@ -1960,15 +1944,6 @@ msgstr "per gli articoli"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "per i file principali"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Usa i pattern di default."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i for i fascicoli<br />%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per l'impaginato."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Inserisci un suffisso individuale per ogni cosa pubblicata. Troverai un campo addizionale per il DOI in ogni pagina per i metadati."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Inserisci il pattern del suffisso DOI per i fascicoli."

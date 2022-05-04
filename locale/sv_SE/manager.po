@@ -1849,17 +1849,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Konfigurera DOI-pluginet för att kunna administrera och använda DOI:er i OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Tidskriftens innehåll"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Välj de objekt som ska tilldelas DOI:er."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Välj de publiceringsobjekt som kommer att få Digital Object Identifiers (DOI:er) tilldelade sig:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Nummer"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artiklar"
@@ -1870,17 +1865,8 @@ msgstr "Publiceringsversioner"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI-prefix"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "DOI-prefix delas ut av t.ex. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a> och är i formatet 10.xxxx (t.ex. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI-prefixet är obligatoriskt och måste vara i formatet 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI-suffix"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Ett DOI-suffix kan ha vilket format som helst, men måste vara unikt bland de publiceringsobjekt som tilldelats samma DOI-prefix:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Använd mönstret som fyllts i nedan för att generera DOI-suffix. Använd %j för tidskriftens initialer, %v för volymn, %i för nummer, %Y för år, %a för OJS artikel-ID, %g för OJS publiceringsversions-ID, %f för OJS fil-ID, %p för sidnummer och %x för \"Custom Identifier\"."
@@ -1896,15 +1882,6 @@ msgstr "för artiklar"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "för publiceringsversioner"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Använd default-mönster."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i för nummer<br />%j.v%vi%i.%a för artiklar<br />%j.v%vi%i.%a.g%g för publiceringsversioner."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Fyll i ett individuellt DOI-suffix för varje publicerat objekt. Ytterligare fält för DOI finns på varje objekts metadata-sida."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Fyll i DOI-suffixmönstret för nummer."

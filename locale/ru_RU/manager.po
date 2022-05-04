@@ -1777,17 +1777,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Пожалуйста, настройте модуль «DOI», чтобы иметь возможность использовать DOI в OJS и управлять ими:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Контент журнала"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Пожалуйста выберите объекты, которым должны быть присвоены DOI."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Пожалуйста выберите публикуемые объекты, которые будут иметь присвоенные идентификаторы цифровых объектов (Digital Object Identifier, DOI):"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Выпуски"
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Статьи"
@@ -1798,17 +1793,8 @@ msgstr "Гранки"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Префикс DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Префикс DOI назначается регистрационными агентствами (например, <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) и представляется в формате 10.xxxx (например, 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Префикс DOI обязателен и должен быть в форме 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Суффикс DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Суффикс DOI может принимать любую форму, но должен быть уникальным среди всех публикуемых объектов, которым присвоен один и тот же префикс DOI:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Использовать шаблон, введенный ниже, для генерации суффиксов DOI. Используйте %j для аббревиатуры журнала, %v для номера тома, %i для номера выпуска, %Y для года, %a для ID статьи в OJS, %g для ID гранки в OJS, %f для ID файла в OJS, %p для номера страницы и %x для «индивидуального суффикса»."
@@ -1824,15 +1810,6 @@ msgstr "для статей"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "для гранок"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Использовать шаблоны по умолчанию."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i для выпусков<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Ввести индивидуальный суффикс DOI для каждого опубликованного элемента. Вы увидите дополнительное поле ввода DOI на странице метаданных для каждого элемента."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Пожалуйста, введите шаблон суффикса DOI для выпусков."

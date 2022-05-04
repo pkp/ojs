@@ -2300,20 +2300,6 @@ msgstr "Внесете ја шемата за наставки на ДОИ за 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Внесете ја шемата на наставката ДОИ за изданија."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Внесете индивидуален додаток на ДОИ за секоја објавена ставка. Ќе најдете "
-"дополнително поле за внесување DOI на страницата со мета-податоци на секоја "
-"ставка."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i за изданија<br />%j.v%vi%i.%a за написиs<br />%j.v%vi%i.%a.g%g за "
-"отисоци на труд."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Користете стандардни обрасци."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "за отисоците на труд"
 
@@ -2336,22 +2322,8 @@ msgstr ""
 "ID галеријата OJS, %f за ID на датотеката OJS , %p за бројот на страницата и "
 "%x за \"Прилагоден идентификатор\"."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Додаток на ДОИ може да има каква било форма, но мора да биде единствен меѓу "
-"сите објавувачки објекти со ист доделен префикс ДОИ:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Додаток на ДОИ"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Префиксот DOI е задолжителен и мора да биде во форма 10.xxxx."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"Префиксот DOI е доделен од агенциите за регистрација (на пр. <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) и е во формат "
-"10.xxxx (на пример, 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Префикс на ДОИ"
@@ -2362,19 +2334,14 @@ msgstr "Отисоци на труд"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Написи"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Изданија"
-
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Изберете ги објектите за објавување на кои ќе им бидат доделени "
 "идентификатори на дигитални објекти (ДОИ):"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Ве молиме, изберете ги предметите на кои треба да се доделат ДОИ."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Содржина на весник"
 
 msgid "doi.manager.settings.description"
 msgstr ""

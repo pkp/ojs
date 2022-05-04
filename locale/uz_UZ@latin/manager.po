@@ -2184,20 +2184,6 @@ msgstr "Maqolalar uchun DOI qo'shimchasini kiriting."
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Muammolar uchun DOI qo'shimchasini kiriting."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Har bir e'lon qilingan element uchun individual DOI qo'shimchasini kiriting. "
-"Siz har bir elementning meta-ma'lumotlar sahifasida qo'shimcha DOI kiritish "
-"maydonini topasiz."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i sonlar uchun <br />%j.v%vi%i.%a maqolalar uchun <br "
-"/>%j.v%vi%i.%a.g%g."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Standart naqshlardan foydalaning."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "oshxonalar uchun"
 
@@ -2219,23 +2205,8 @@ msgstr ""
 "uchun %g, OJS fayl identifikatori uchun %f dan foydalaning. , sahifa raqami "
 "uchun %p va \"Maxsus identifikator\" uchun %x."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"DOI qo'shimchasi har qanday shaklda bo'lishi mumkin, lekin bir xil DOI "
-"prefiksi tayinlangan barcha nashriyot ob'ektlari orasida yagona bo'lishi "
-"kerak:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI qo'shimchasi"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI prefiksi majburiy bo'lib, 10.xxxx shaklida bo'lishi kerak."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"DOI prefiksi ro'yxatga olish agentliklari tomonidan tayinlanadi (masalan, "
-"<ahref=\"http://www.crossref.org\" target=\"_new\"> Crossref </a>) va "
-"10.xxxx formatida (masalan, 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI prefiksi"
@@ -2246,19 +2217,14 @@ msgstr "Galleylar"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Maqolalar"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Muammolar"
-
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Iltimos, raqamli ob'ekt identifikatorlari (DOI) tayinlanadigan nashriyot "
 "ob'ektlarini tanlang:"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Iltimos, DOIlar tayinlanishi kerak bo'lgan ob'ektlarni tanlang."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Jurnal tarkibi"
 
 msgid "doi.manager.settings.description"
 msgstr ""

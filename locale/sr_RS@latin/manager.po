@@ -1589,17 +1589,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Podesite DOI dodatak kako biste mogli koristiti DOI-e u OJS-u:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Sadržaj časopisa"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Odaberite objekte kojima bi DOI-i trebali biti dodeljeni."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Odaberite objekte kojima će biti dodeljeni Digital Object Identifiers (DOI):"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Jedinica (broj)"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Članak"
@@ -1610,17 +1605,8 @@ msgstr "Prikaz"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI prefiks"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "DOI prefiks dodeljuje registraciona agencija (npr. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) i u formatu je 10.xxxx (npr. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI prefiks je obavezan i mora biti u formi 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI sufiks"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "DOI sufiks može biti u bilo kojoj formi, ali mora biti jedinstven među svim objektima objavljivanja koji koriste isti DOI prefiks:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Koristite obrazac dole da generišete DOI sufikse. Koristite %j za inicijale časopisa, %v za vol., %i za broj, %Y za godinu, %a za OJS ID članka, %g za OJS ID prikaza, %f za OJS ID fajla i %p za broj stranice."
@@ -1636,15 +1622,6 @@ msgstr "za prikaz"
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Npr. vol%viss%ipp%p može dati DOI kao što je 10.1234/vol3iss2pp230"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Koristite predviđene obrasce."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i za jedinicu (broj)<br />%j.v%vi%i.%a za članak<br />%j.v%vi%i.%a.g%g za prikaz."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Unesite individualni DOI sufiks za svaku objavljenu stavku, nezavisan i drugačiji od \"Custom Identifier\" iz prethodnog opcije. Naći ćete dodatno polje za DOI unos na stranici svake stavlke među metapodacima."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Unesite DOI sufiks obrazac za ovu jedinicu (broj)."
