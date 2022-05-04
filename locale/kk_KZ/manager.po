@@ -3,7 +3,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"PO-Revision-Date: 2022-05-05 13:31+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
@@ -2071,24 +2071,24 @@ msgid "manager.people.enrollSyncJournal"
 msgstr "Журналмен"
 
 msgid "manager.people.enrollExistingUser"
-msgstr "Бар пайдаланушыны тіркеу"
+msgstr "Бар қолданушыны тіркеу"
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Үлгіні таңдаңыз"
 
 msgid "manager.people.confirmRemove"
 msgstr ""
-"Бұл пайдаланушы осы журналдан жойылсын ба? Бұл әрекет осы тарихта осы "
-"пайдаланушыға тағайындалған барлық рөлдерді болдырмайды."
+"Бұл қолданушы осы журналдан жойылсын ба? Бұл әрекет осы тарихтағы "
+"қолданушыға тағайындалған барлық рөлдерді болдырмайды."
 
 msgid "manager.people.allUsers"
-msgstr "Барлық тіркелген пайдаланушылар"
+msgstr "Барлық тіркелген қолданушылар"
 
 msgid "manager.people.showNoRole"
-msgstr "Рөлі жоқ пайдаланушыларды көрсету"
+msgstr "Рөлі жоқ қолданушыларды көрсету"
 
 msgid "manager.people.allSiteUsers"
-msgstr "Осы сайттан пайдаланушыны осы журналға жазыңыз"
+msgstr "Осы сайттан пайдаланушыны журналға жазыңыз"
 
 msgid "manager.people.allJournals"
 msgstr "Барлық журналдар"
