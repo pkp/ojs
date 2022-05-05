@@ -128,12 +128,11 @@ enable_beacon = On
 ; as separate Privacy Statements for each journal.
 sitewide_privacy_statement = Off
 
-; Remove all unvalidated and expired users after validation timeout.
-; A user will consider as expired if the the validation is enabled and after the days passed off
-; validation_timeout, the user has not validated. In the scenario when the require_validation has
-; turned off, user will consider expired if has not logged in once past the days of validation_timeout
-; since the day of registration.
-remove_expired_users = Off
+; The number of days a new user has to validate their account
+; A new user account will be expired and removed if this many days have passed since the user registered
+; their account, and they have not validated their account or logged in. If the user_validation_period is set to 
+; 0, unvalidated accounts will never be removed. Use this setting to automatically remove bot registrations.
+user_validation_period = 28
 
 
 ;;;;;;;;;;;;;;;;;;;;;
