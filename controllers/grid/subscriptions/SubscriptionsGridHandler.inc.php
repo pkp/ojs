@@ -17,12 +17,12 @@
 import('controllers.grid.subscriptions.SubscriptionsGridRow');
 import('controllers.grid.subscriptions.SubscriptionsGridCellProvider');
 
+use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridHandler;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\security\Role;
-use PKP\controllers\grid\feature\PagingFeature;
 use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
 
 abstract class SubscriptionsGridHandler extends GridHandler
 {
@@ -33,8 +33,7 @@ abstract class SubscriptionsGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [
-                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'editSubscription', 'updateSubscription',
                 'deleteSubscription', 'addSubscription', 'renewSubscription']
         );
