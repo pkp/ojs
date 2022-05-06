@@ -32,7 +32,7 @@ class SettingsHandler extends ManagementHandler
         $this->addRoleAssignment(
             [Role::ROLE_ID_SITE_ADMIN],
             [
-                'access',
+                'access', 'settings',
             ]
         );
         $this->addRoleAssignment(

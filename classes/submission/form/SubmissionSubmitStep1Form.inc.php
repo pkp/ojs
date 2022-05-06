@@ -46,7 +46,8 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form
         $roleDao = DAORegistry::getDAO('RoleDAO'); /** @var RoleDAO $roleDao */
         $user = $request->getUser();
         $canSubmitAll = $roleDao->userHasRole($this->context->getId(), $user->getId(), Role::ROLE_ID_MANAGER) ||
-            $roleDao->userHasRole($this->context->getId(), $user->getId(), Role::ROLE_ID_SUB_EDITOR);
+            $roleDao->userHasRole($this->context->getId(), $user->getId(), Role::ROLE_ID_SUB_EDITOR) ||
+            $roleDao->userHasRole(Application::CONTEXT_SITE, $user->getId(), Role::ROLE_ID_SITE_ADMIN);
 
         // Get section options for this context
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */

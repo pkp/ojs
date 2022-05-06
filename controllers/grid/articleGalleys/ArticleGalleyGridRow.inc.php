@@ -87,7 +87,7 @@ class ArticleGalleyGridRow extends GridRow
                         $request,
                         $this->getSubmission()->getId(),
                         WORKFLOW_STAGE_ID_PRODUCTION,
-                        [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT],
+                        [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT],
                         SubmissionFile::SUBMISSION_FILE_PROOF,
                         ASSOC_TYPE_REPRESENTATION,
                         $rowId,

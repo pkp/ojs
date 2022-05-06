@@ -35,12 +35,12 @@ class BackendDoiHandler extends PKPBackendDoiHandler
                 [
                     'pattern' => $this->getEndpointPattern() . "/issues/{issueId:\d+}",
                     'handler' => [$this, 'editIssue'],
-                    'roles' => [Role::ROLE_ID_MANAGER],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ],
                 [
                     'pattern' => $this->getEndpointPattern() . "/galleys/{galleyId:\d+}",
                     'handler' => [$this, 'editGalley'],
-                    'roles' => [Role::ROLE_ID_MANAGER],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ]
             ]
         ]);

@@ -37,22 +37,22 @@ class DoiHandler extends PKPDoiHandler
                 [
                     'pattern' => $this->getEndpointPattern() . '/issues/export',
                     'handler' => [$this, 'exportIssues'],
-                    'roles' => [Role::ROLE_ID_MANAGER],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ],
                 [
                     'pattern' => $this->getEndpointPattern() . '/issues/deposit',
                     'handler' => [$this, 'depositIssues'],
-                    'roles' => [Role::ROLE_ID_MANAGER],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ],
                 [
                     'pattern' => $this->getEndpointPattern() . '/issues/markRegistered',
                     'handler' => [$this, 'markIssuesRegistered'],
-                    'roles' => [Role::ROLE_ID_MANAGER],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ],
                 [
                     'pattern' => $this->getEndpointPattern() . '/issues/assignDois',
                     'handler' => [$this, 'assignIssueDois'],
-                    'roles' => [Role::ROLE_ID_MANAGER]
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN]
                 ]
             ]
         ]);
