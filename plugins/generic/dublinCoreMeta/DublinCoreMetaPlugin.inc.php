@@ -134,10 +134,10 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		if ($publication) {
-			$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($publication->getLocalizedTitle()) . '"/>');
-			foreach ($publication->getData('title') as $locale => $title) {
+			$templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($publication->getLocalizedFullTitle()) . '"/>');
+			foreach ($publication->getFullTitles() as $locale => $title) {
 				if (empty($title) || $locale === $publication->getData('locale')) continue;
-				$templateMgr->addHeader('dublinCoreAltTitle' . $locale, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($publication->getLocalizedTitle($locale)) . '"/>');
+				$templateMgr->addHeader('dublinCoreAltTitle' . $locale, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($publication->getLocalizedFullTitle($locale)) . '"/>');
 			}
 		}
 
