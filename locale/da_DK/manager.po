@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-02-22 13:09+0000\n"
+"PO-Revision-Date: 2022-04-25 15:58+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -2181,3 +2181,28 @@ msgstr "Artikel DOI'er"
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
 msgstr "På copy-editing niveau"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Denne e-mail giver forfatteren besked om, at indsendelsen afvises inden "
+"bedømmelsesfasen, fordi indsendelsen ikke opfylder kravene til udgivelse i "
+"tidsskriftet."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Oplysninger om abonnentens medlemskab"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "En oversigt over abonnementets type, navn, varighed og pris"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Datoen, hvor abonnementet ophører"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL'en til abonnementssiden"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Kontaktoplysninger på administratoren af abonnement"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Abonnentens navn, institutionelle tilknytning, telefonnummer og e-mailadresse"

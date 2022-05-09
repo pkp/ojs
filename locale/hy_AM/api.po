@@ -1,7 +1,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-18 09:26+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
 "\n"
@@ -64,3 +64,17 @@ msgstr "Ձեր կողմից հարցված հայտարարությունը այ
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "You can not associate a file from this file stage with a galley."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Որոշ տարրեր հաջողությամբ չեն պահվել: Խնդրում ենք ստուգել առանձին տարրերը "
+"իրենց բնորոշ սխալի հաղորդագրությունների համար:"
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "DOI գրանցման գործակալությունն այս ամսագրի համար կազմաձևված չէ:"
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Ձեր պահանջած DOI-ն այս ամսագրի մաս չէ:"
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Ձեր պահանջած ներկայացումը այս ամսագրում չէ:"

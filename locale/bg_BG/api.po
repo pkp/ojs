@@ -1,9 +1,9 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-28 21:21+0000\n"
-"Last-Translator: Albena Vassileva <albena.ava@gmail.com>\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/api/bg_BG/"
 ">\n"
 "Language: bg_BG\n"
@@ -81,3 +81,6 @@ msgstr "За това списание няма конфигурирана аг�
 
 msgid "api.dois.400.contextsNotMatched"
 msgstr "DOI, който поискахте, не е част от това списание."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Материалите, които търсите, не са в това списание."

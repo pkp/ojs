@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-03-03 14:05+0000\n"
+"PO-Revision-Date: 2022-04-25 15:58+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
@@ -1956,7 +1956,7 @@ msgid "doi.manager.settings.doiObjects"
 msgstr "Conteúdo"
 
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Escolha a quais objetos serão atribuídos DOIs."
+msgstr "Por favor, escolha os objetos aos quais os DOIs devem ser atribuídos."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Escolha os objetos publicados que terão Identificadores de Objeto Digital (DOI) atribuídos:"
@@ -2186,3 +2186,27 @@ msgstr ""
 msgid "manager.setup.enableDois.description"
 msgstr ""
 "Atribua Digital Object Identifier (DOIs) a artigos, edições e composições."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Este e-mail notifica o autor de que sua submissão está sendo recusada, antes "
+"da fase de avaliação, porque a submissão não atende aos requisitos para "
+"publicação na revista."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informações sobre a adesão do assinante"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Um resumo do tipo, nome, duração e custo da assinatura"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "A data em que a assinatura termina"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "A URL para a página de assinatura"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Detalhes de contato do gerente de assinatura"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "O nome, afiliação, número de telefone e endereço de e-mail do assinante"

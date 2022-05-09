@@ -1,9 +1,10 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-02 06:38+0000\n"
-"Last-Translator: Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>\n"
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/editor/kk_KZ/"
 ">\n"
 "Language: kk_KZ\n"
@@ -484,3 +485,6 @@ msgstr ""
 "Жоюды сұраған мұқаба суреті басқа журналдың шығарылымына сәйкес келеді. "
 "Дұрыс журналмен жұмыс істеп жатқаныңызға, дұрыс шығарылым идентификаторын "
 "пайдаланып жатқаныңызға көз жеткізіңіз және әрекетті қайталаңыз."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Төлемді сұрау"

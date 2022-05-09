@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2021-08-31 10:33+0000\n"
+"PO-Revision-Date: 2022-04-22 07:57+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/editor/cs_CZ/>"
 "\n"
@@ -659,3 +659,6 @@ msgstr ""
 "Obrázek na obálku, který jste požadovali odstranit, odpovídá vydání jiného "
 "časopisu. Ujistěte se, že pracujete se správným časopisem, používáte správné "
 "ID vydání a zkuste to znovu."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Požadovat platbu"

@@ -1,10 +1,10 @@
-# M. Ali <vorteem@gmail.com>, 2021.
+# M. Ali <vorteem@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2021-10-04 05:54+0000\n"
+"PO-Revision-Date: 2022-04-29 09:26+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/editor/ar_IQ/"
 ">\n"
@@ -445,3 +445,6 @@ msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
 "صورة الغلاف التي طلبت حذفها تطابق عددًا لمجلة أخرى. رجاءً، تأكد من أنك تعمل "
 "مع المجلة الصحيحة، وأنت تستعمل مُعرَّف العدد الصحيح، ثم حاول مجددًا."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "إلتماس دفع المال"

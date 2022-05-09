@@ -1,8 +1,9 @@
 # Irina Lobzhanidze <irina_lobzhanidze@iliauni.edu.ge>, 2021.
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-04 12:04+0000\n"
-"Last-Translator: Irina Lobzhanidze <irina_lobzhanidze@iliauni.edu.ge>\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "ka_GE/>\n"
 "Language: ka_GE\n"
@@ -474,3 +475,12 @@ msgstr "მასალები და პუბლიკაცია"
 
 msgid "editor.home"
 msgstr "რედაქტორის მთავარი გვერდი"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"ყდის სურათი, რომლის წაშლაც მოითხოვეთ, ემთხვევა სხვა ჟურნალის ნომერს. გთხოვთ, "
+"დარწმუნდით, რომ მუშაობთ სწორ ჟურნალთან, იყენებთ სწორ გამოშვების ID-ს და "
+"სცადეთ ხელახლა."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "გადახდის მოთხოვნა"

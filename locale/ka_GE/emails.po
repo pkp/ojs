@@ -1,6 +1,7 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-12 08:24+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "ka_GE/>\n"
@@ -174,7 +175,6 @@ msgstr ""
 "გმადლობთ, რომ დაინტერესდით ჩვენი ჟურნალით,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "გამოქვეყნებულია ახალი გამოცემა"
 
@@ -204,15 +204,12 @@ msgstr ""
 "გმადლობთ,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "სტატიის რეცენზირების მოთხოვნა"
+msgstr "მოწვევა განხილვისთვის"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "რედაქტორის მიერ დანიშნული"
+msgstr "რედაქტორის მიერ დანიშნული {$contextName}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "გაგზავნის დადასტურება"
 
@@ -779,7 +776,6 @@ msgstr ""
 "გმადლობთ,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "ეს წერილი (თუ ეს შესაძლებლობა ჩართულია) ავტომატურად გაეგზავნება სხვა "
@@ -792,7 +788,6 @@ msgstr ""
 "დაამატოს ეს ჟურნალი არქივში. წერილში მოცემულია ინფორმაცია LOCKSS ინიციატივის "
 "შესახებ და მასთან დაკავშირების წესებზე."
 
-#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "ეს წერილი ატყობინებს განყოფილების რედაქტორს იმის შესახებ, რომ რედაქტორმა "
@@ -831,15 +826,10 @@ msgstr ""
 "პირდაპირი წვდომა მასალებზე. დაგეგმილი ამოცანები უნდა ჩაირთოს და მოერგოს ("
 "იხილეთ საიტის კონფიგურაციის ფაილი)."
 
-#, fuzzy
 msgid "emails.reviewRequest.description"
 msgstr ""
-"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს, "
-"მასალის რეცენზირების მოთხოვნის დადასტურების, ან უარყოფის შესახებ. წერილში "
-"მოცემულია ინფორმაცია მასალის შესახებ, როგორიცაა დასახელება და აბსტრაქტი, "
-"სამუშაოს შესრულების ვადები და წვდომის წესები. ეს შეტყობინება გამოიყენება, თუ "
-"არჩეულია რეცენზირების სტანდარტული პროცესი: მართვა > პარამეტრები > სამუშაო "
-"პროცესი > რეცენზირება."
+"ეს ელფოსტა სექციის რედაქტორისგან მიმომხილველს ითხოვს, რომ მიმომხილველი "
+"დაეთანხმოს ან უარყოს წარდგენის განხილვის დავალება."
 
 msgid "emails.announcement.description"
 msgstr "ეს წერილი იგზავნება ახალი განცხადების შექმნისას."
@@ -965,7 +955,6 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "ეს სტატია თქვენ დაგაინტერესებთ"
 
-#, fuzzy
 msgid "emails.layoutComplete.description"
 msgstr ""
 "ეს წერილი იგზავნება დამკაბადონებლის მიერ განყოფილების რედაქტორთან იმის "
@@ -974,7 +963,6 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "გალერეები შექმნილია"
 
-#, fuzzy
 msgid "emails.layoutRequest.description"
 msgstr ""
 "ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ მასალის გალერეის "
@@ -982,19 +970,16 @@ msgstr ""
 "ინფორმაცია მასალის შესახებ და იმის შესახებაც, თუ როგორ უნდა მიიღოს წვდომა ამ "
 "მასალაზე."
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "გალერეების მოთხოვნა"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.description"
 msgstr ""
 "ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან „მასალის მიღების“ "
 "საბოლოო გადაწყვეტილების შესახებ."
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "რედაქციის გადაწყვეტილება"
+msgstr "რედაქციის გადაწყვეტილება {$contextName}"
 
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr ""
@@ -1006,7 +991,6 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "მასალის რეცენზირების ავტომატური შეხსენება"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.description"
 msgstr ""
 "ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზიის მოწოდების ვადა გავიდა ("
@@ -1014,7 +998,6 @@ msgstr ""
 "წვდომა გამოერთო. დაგეგმილი ამოცანები უნდა ჩაირთოს (იხილეთ საიტის "
 "კონფიგურაციის ფაილი)."
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "მასალის რეცენზირების ავტომატური შეხსენება"
 
@@ -1026,13 +1009,11 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "მასალის რეცენზირების შეხსენება"
 
-#, fuzzy
 msgid "emails.reviewRemind.description"
 msgstr ""
 "ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ რეცენზენტთან იმის შესახებ, "
 "რეცენზიის მოწოდების ვადა უკვე გავიდა."
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "მასალის რეცენზირების შეხსენება"
 
@@ -1053,15 +1034,13 @@ msgstr ""
 msgid "emails.reviewConfirm.subject"
 msgstr "თანხმობა რეცენზირებაზე"
 
-#, fuzzy
 msgid "emails.reviewReinstate.description"
 msgstr ""
 "ეს არის განყოფილების რედაქტორის წერილი, გაგზავნილი რეცენზენტთან, რომელმაც "
 "დაიწყო მასალის რეცენზირება, იმის შესახებ, რომ რეცენზირება განახლებულია."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "რეცენზირების განახლების მოთხოვნა"
+msgstr "რეცენზირების განახლების მოთხოვნა {$contextName}?"
 
 msgid "emails.reviewCancel.description"
 msgstr ""
@@ -1072,10 +1051,92 @@ msgid "emails.reviewCancel.subject"
 msgstr "სტატიის რეცენზირების მოთხოვნა"
 
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "სტატიის რეცენზირების მოთხოვნა"
+msgstr "შესწორებული წარდგენის განხილვის მოთხოვნა"
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "სტატიის რეცენზირების მოთხოვნა"
 
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "სტატიის რეცენზირების მოთხოვნის შეხსენება"
+
+msgid "emails.userValidateSite.subject"
+msgstr "დაადასტურეთ მომხმარებლის ანგარიში"
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"თქვენ შექმენით ანგარიში {$siteTitle}-თან, მაგრამ სანამ დაიწყებთ მის "
+"გამოყენებას, უნდა დაადასტუროთ თქვენი ელფოსტის ანგარიში. ამისათვის უბრალოდ "
+"მიჰყევით ქვემოთ მოცემულ ბმულს:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"გმადლობთ,<br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.description"
+msgstr ""
+"ეს ელფოსტა ეგზავნება ახალ მომხმარებელს, რომელიც დარეგისტრირდა საიტზე, რათა "
+"დაადასტუროს მისი ელფოსტის ანგარიში."
+
+msgid "emails.editorDecisionBackToCopyediting.subject"
+msgstr "თქვენი წარდგენა დაბრუნდა კოპირების რედაქტირებისთვის"
+
+msgid "emails.editorDecisionBackToCopyediting.body"
+msgstr ""
+"<p>ძვირფასო {$recipientName},</p>\n"
+"<p>თქვენი წარდგენა, {$submissionTitle}, დაბრუნდა ასლის რედაქტირების ეტაპზე. "
+"\n"
+"იგი გაივლის შემდგომ ასლის რედაქტირებას და ფორმატირებას, რათა მომზადდეს "
+"გამოსაცემად.</p>\n"
+"<p>თქვენი წარდგენა ჯერ კიდევ მზადაა {$contextName}-ის მომავალ ნომერში. ის "
+"კვლავ გადავიდა ასლების რედაქტირების ეტაპზე, რადგან ჯერ არ არის მზად "
+"გამოსაქვეყნებლად მოსამზადებელი საბოლოო გალერეებისთვის.</p>\n"
+"<p>ჩვენ დაგიკავშირდებით, თუ დაგვჭირდება დამატებითი დახმარება.</p>\n"
+"<p>თუ თქვენ გაქვთ რაიმე შეკითხვები, გთხოვთ დამიკავშირდეთ თქვენი <a href=\""
+"{$authorSubmissionUrl}\">წარდგენის დაფიდან</a>.</p>\n"
+"<p>Კეთილი სურვილებით,</p>\n"
+"<p>{$signature}</p>\n"
+
+msgid "emails.editorDecisionBackToSubmission.subject"
+msgstr "თქვენი წარდგენა დაბრუნდა სარედაქციო განხილვისთვის"
+
+msgid "emails.editorDecisionBackToSubmission.body"
+msgstr ""
+"<p>ძვირფასო {$recipientName},</p>\n"
+"<p>თქვენი წარდგენა, {$submissionTitle}, დაბრუნდა გაგზავნის ეტაპზე. \n"
+"რედაქტორი გადახედავს მას, სანამ ის გაიგზავნება თანატოლთა განსახილველად.</p>\n"
+"<p>ხანდახან, გადაწყვეტილება წარდგენის გაგზავნის შესახებ ჩვენს სისტემაში "
+"შემთხვევით ჩაიწერება და ჩვენ უნდა გავაგზავნოთ იგი გაგზავნის ეტაპზე. ბოდიშს "
+"ვიხდი ნებისმიერი დაბნეულობისთვის, \n"
+"რაც შეიძლება ამან გამოიწვია.</p><p> ჩვენ დაგიკავშირდებით, თუ დაგვჭირდება "
+"დამატებითი დახმარება.</p>\n"
+"<p>თუ თქვენ გაქვთ რაიმე შეკითხვები, გთხოვთ დამიკავშირდეთ თქვენი <a href=\""
+"{$authorSubmissionUrl}\">წარდგენის დაფიდან</a>.</p>\n"
+"<p>კეთილი სურვილებით,</p>\n"
+"<p>{$signature}</p>\n"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "თქვენი წარდგენა გაიგზავნა ასლის რედაქტირებისთვის"
+
+msgid "emails.editorDecisionSkipReview.body"
+msgstr ""
+"<p>ძვირფასო {$recipientName},</p>\n"
+"<p>მოხარული ვარ გაცნობოთ, რომ ჩვენ გადავწყვიტეთ მივიღოთ თქვენი წარდგენა "
+"თანატოლთა განხილვის გარეშე. ჩვენ აღმოვაჩინეთ, რომ თქვენი წარდგენა "
+"{$submissionTitle} აკმაყოფილებდა ჩვენს მოლოდინებს და არ ვითხოვთ, რომ ამ "
+"ტიპის ნამუშევარი გაიაროს თანატოლთა განხილვა. მოხარული ვართ, რომ "
+"გამოვაქვეყნებთ თქვენს ნაშრომს {$contextName}-ში და მადლობას გიხდით ჩვენი "
+"ჟურნალის არჩევისთვის, როგორც თქვენი სამუშაოსთვის.</p>\n"
+"თქვენი წარდგენა ახლა ხელმისაწვდომია {$contextName}-ის მომავალ ნომერში და "
+"შეგიძლიათ შეიტანოთ იგი თქვენს პუბლიკაციების სიაში. ჩვენ ვაღიარებთ "
+"შრომისმოყვარეობას, რომელიც იხარჯება ყველა წარმატებულ წარდგენაში და გვინდა "
+"მოგილოცოთ თქვენი ძალისხმევა.</p>\n"
+"<p>თქვენი წარდგენა ახლა გაივლის ასლის რედაქტირებას და ფორმატირებას, რათა "
+"მომზადდეს გამოსაქვეყნებლად.</p>\n"
+"<p>თქვენ მალე მიიღებთ დამატებით ინსტრუქციებს.</p>\n"
+"<p>თუ თქვენ გაქვთ რაიმე შეკითხვები, გთხოვთ დამიკავშირდეთ თქვენი <a href=\""
+"{$authorSubmissionUrl}\">წარდგენის დაფიდან</a>.</p>\n"
+"<p>კეთილი სურვილებით,</p>\n"
+"<p>{$signature}</p>\n"

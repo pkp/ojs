@@ -1,10 +1,11 @@
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2021-02-01 16:23+0000\n"
-"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"PO-Revision-Date: 2022-04-22 07:57+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/admin/da_DK/>"
 "\n"
 "Language: da_DK\n"
@@ -221,3 +222,8 @@ msgstr ""
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "Det primære sprog skal være et af tidsskriftets understøttede sprog."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Tilføj, rediger eller fjern tidsskrifter fra dette site og rediger site-wide "
+"indstillinger."

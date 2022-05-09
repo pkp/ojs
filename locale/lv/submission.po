@@ -2,10 +2,10 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-11 17:40+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
-"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"lv_LV/>\n"
+"Language-Team: lv (generated) <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -281,10 +281,10 @@ msgstr "Apstipriniet šo korektūru iekļaušanai saliktnī."
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"Maketēšanas redaktors šeit augšupielādē publicēšanai gatavas datnes. "
-"Izmantojiet <em>Assign Auditor</em> (Piešķirt auditoru), lai izraudzītos "
-"autorus un citas personas, kas pārbaudīs un koriģēs saliktņus, un pirms "
-"publicēšanas labotās datnes augšupielādēs apstiprināšanai."
+"Maketētājs šeit augšupielādē publicēšanai gatavas datnes. Izmantojiet <em>"
+"Assign Auditor</em> (Piešķirt auditoru), lai izraudzītos autorus un citas "
+"personas, kas pārbaudīs un koriģēs saliktņus, un pirms publicēšanas labotās "
+"datnes augšupielādēs apstiprināšanai."
 
 msgid "submission.galleyFiles"
 msgstr "Saliktņa datnes"
@@ -360,3 +360,39 @@ msgstr "Izvēlēties statusu, kādā iesniedzat šo rakstu."
 
 msgid "submission.submit.userGroup"
 msgstr "Iesniegt manā lomā kā..."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Atlasiet failus, kas jānosūta uz recenzēšanas posmu."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Nosūtiet e-pasta autoriem, lai informētu, ka šis iesniegtais materiāls tiks "
+"nosūtīts recenzēšanai. Ja iespējams, sniedziet autoriem norādes par to, cik "
+"ilgi recenzēšanas process varētu ilgt un kad redakcija ar viņiem atkal "
+"sazināsies."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Nosūtiet e-pastu autoriem, lai informētu viņus, ka iesniegtais materiāls ir "
+"nosūtīts atpakaļ uz recenzēšanas posmu. Paskaidrojiet, kāpēc tika pieņemts "
+"šāds lēmums, un informējiet autoru par to, kas turpmāk tiks recenzēts."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+"Iesniegtais materiāls {$title} tika nosūtīts atpakaļ uz recenzēšanas posmu."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Nosūtīts atpakaļ uz recenziju"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} atcēla lēmumu par šī iesniegtā materiāla pieņemšanu un "
+"nosūtīja to atpakaļ uz izskatīšanas posmu."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Atcelt lēmumu par šī iesniegtā materiāla pieņemšanu un nosūtīt to atpakaļ uz "
+"izskatīšanas posmu."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Atpakaļ uz recenziju"

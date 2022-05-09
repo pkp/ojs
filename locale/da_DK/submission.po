@@ -1,11 +1,12 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2021-07-02 11:03+0000\n"
-"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"PO-Revision-Date: 2022-04-25 15:58+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "da_DK/>\n"
 "Language: da_DK\n"
@@ -351,3 +352,39 @@ msgstr ""
 
 msgid "publication.changeIssue"
 msgstr "Skift nummer"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Indsendelsen, {$title}, blev sendt tilbage til bedømmelsestrinnet."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} tilbagekaldte beslutningen om at acceptere denne indsendelse "
+"og sendte den tilbage til bedømmelsestrinnet."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Omgør beslutningen om at acceptere denne indsendelse og send den tilbage til "
+"bedømmelsestrinnet."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Vælg filer som skal sendes til bedømmelsestrinnet."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Send en e-mail til forfatterne for at fortælle dem, at denne indsendelse vil "
+"blive sendt til fagfællebedømmelse. Giv om muligt forfatterne en indikation "
+"af, hvor lang tid processen med fagfællebedømmelse kan tage, samt hvornår de "
+"kan forvente at høre fra redaktørerne igen."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Send en e-mail til forfatterne for at fortælle dem, at deres indsendelse "
+"sendes tilbage til bedømmelsestrinnet. Forklar, hvorfor denne beslutning "
+"blev truffet, og informer forfatterne om, hvilken yderligere bedømmelse, der "
+"vil blive foretaget."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Sendt tilbage til bedømmelse"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Tilbage til bedømmelse"
