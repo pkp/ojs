@@ -31,3 +31,81 @@ msgstr "Απέτυχε"
 
 msgid "plugins.importexport.crossref.settings.form.username"
 msgstr "Όνομα χρήστη"
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
+msgstr "Δεν έχει διαμορφωθεί ένας εκδότης περιοδικού! Πρέπει να προσθέσετε ένα ίδρυμα εκδότη στη <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Σελίδα ρυθμίσεων περιοδικού</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr "Δεν έχει διαμορφωθεί ένα ISSN για το περιοδικό! Πρέπει να προσθέσετε ένα ISSN στη <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Σελίδα ρυθμίσεων περιοδικού</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr "Τα άρθρα δεν επιλέγονται για εκχώρηση DOI στο πρόσθετο δημόσιου αναγνωριστικού DOI, επομένως δεν υπάρχει δυνατότητα κατάθεσης ή εξαγωγής σε αυτήν την προσθήκη."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "Τα ακόλουθα στοιχεία απαιτούνται για μια επιτυχημένη κατάθεση στη CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "Όνομα καταθέτη"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "Email καταθέτη"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "Εισαγάγετε το όνομα του καταθέτη."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "Εισαγάγετε το email του καταθέτη."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr "Εάν θέλετε να χρησιμοποιήσετε αυτό το πρόσθετο για την εγγραφή Ψηφιακών Αναγνωριστικών Αντικειμένων (DOI) απευθείας στο CrossRef, θα χρειαστείτε ένα όνομα χρήστη και έναν κωδικό πρόσβασης (διαθέσιμο από το <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>) για να το κάνετε αυτό. Εάν δεν έχετε το δικό σας όνομα χρήστη και κωδικό πρόσβασης, μπορείτε ακόμα να κάνετε εξαγωγή σε μορφή CrossRef XML, αλλά δεν μπορείτε να καταχωρίσετε τα DOI σας στο CrossRef μέσα από το OJS"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "Εισαγάγετε το όνομα χρήστη που πήρατε από το CrossRef."
+
+msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr "Η OJS θα καταθέσει τα εκχωρημένα DOI αυτόματα στο CrossRef. Λάβετε υπόψη ότι ενδέχεται να χρειαστεί λίγος χρόνος μετά τη δημοσίευση για την επεξεργασία (π.χ. ανάλογα με τη διαμόρφωση του cronjob). Μπορείτε να ελέγξετε για όλα τα μη καταχωρημένα DOI."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr "Χρησιμοποιήστε το CrossRef test API (περιβάλλον δοκιμής) για την κατάθεση DOI. Μην ξεχάσετε να αφαιρέσετε αυτήν την επιλογή για την παραγωγή."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr "Επικύρωση XML. Χρησιμοποιήστε αυτήν την επιλογή για τη λήψη XML για τη μη αυτόματη εγγραφή DOI."
+
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr "Επικύρωση μόνο εξαγωγής. Μην κάνετε λήψη του αρχείου."
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr "Σημείωση: Μόνο θέματα (και όχι τα άρθρα τους) θα ληφθούν υπόψη για εξαγωγή/καταχώριση εδώ."
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "Επισημάνθηκε ως ενεργό"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Κατάθεση"
+
+msgid "plugins.importexport.crossref.statusLegend"
+msgstr "\n\t\t<p>Κατάσταση κατάθεσης:</p>\n\t\t<p>\n\t\t- Δεν κατατέθηκε: δεν έχει γίνει καμία προσπάθεια κατάθεσης για αυτό το DOI.<br />\n\t\t- Ενεργό: το DOI έχει κατατεθεί και επιλύεται σωστά.<br />\n\t\t- Απέτυχε: η κατάθεση DOI απέτυχε.<br />\n\t\t- Επισημασμένο ενεργό: το DOI επισημάνθηκε μη αυτόματα ως ενεργό.\n\t\t</p>\n\t\t<p>Εμφανίζεται μόνο η κατάσταση της τελευταίας προσπάθειας κατάθεσης.</p>\n\t\t<p>Εάν μια κατάθεση απέτυχε, λύστε το πρόβλημα και προσπαθήστε να καταχωρήσετε ξανά το DOI.</p>"
+
+msgid "plugins.importexport.crossref.action.export"
+msgstr "Εξαγωγή"
+
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "Επισήμανση ενεργού"
+
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "Εργασία αυτόματης εγγραφής CrossRef"
+
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr "Χρήση:\n{$scriptName} {$pluginName} εξαγωγή [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n{$scriptName} {$pluginName} Κατάθεση [journal_path] articles objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "Η εγγραφή δεν ήταν πλήρως επιτυχής! Ο διακομιστής εγγραφής DOI επέστρεψε ένα σφάλμα."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "Η εγγραφή ήταν επιτυχής, αλλά προέκυψε η ακόλουθη προειδοποίηση: '{$param}'."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "Κανένα πρόβλημα δεν ταιριάζει με το καθορισμένο αναγνωριστικό προβλήματος \"{$issueId}\"."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "Κανένα άρθρο δεν ταιριάζει με το καθορισμένο αναγνωριστικό άρθρου \"{$articleId}\"."

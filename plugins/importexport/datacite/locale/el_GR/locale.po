@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-30T06:56:44-07:00\n"
+"PO-Revision-Date: 2020-12-12 08:51+0000\n"
+"Last-Translator: Weblate Admin <alec@smecher.bc.ca>\n"
+"Language-Team: English (United States) <http://translate.pkp.sfu.ca/projects/"
+"ojs/importexport-datacite/en_US/>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Πρόσθετο εξαγωγής/εγγραφής DataCite"
+
+msgid "plugins.importexport.datacite.description"
+msgstr "Εξαγωγή ή καταχώρηση μεταδεδομένων τεύχους, άρθρου, τυπογραφικού δοκίμιου και συμπληρωματικών αρχείων σε μορφή DataCite."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "Διαμορφώστε το πρόσθετο εξαγωγής DataCite πριν το χρησιμοποιήσετε για πρώτη φορά."
+
+msgid "plugins.importexport.datacite.intro"
+msgstr "\n\t\t Εάν θέλετε να καταχωρήσετε DOI με την DataCite, επικοινωνήστε με τον Διευθύνων Πράκτορα \n\t\t μέσω του <a href=\"https://datacite.org/contact.html\" target=\"_blank\">DataCite\n\t\thomepage</a>, ο οποίος θα σας παραπέμψει στο τοπικό σας μέλος της DataCite. Μόλις έχετε \n\t\t δημιουργήσει μια σχέση με τον οργανισμό Μέλος, θα σας παρασχεθεί\n\t\t πρόσβαση στην υπηρεσία DataCite για την κοπή μόνιμων αναγνωριστικών (DOIs)\n\t\t και καταχώριση συσχετισμένων μεταδεδομένων. Εάν δεν έχετε το δικό σας όνομα χρήστη και\n\t\t κωδικό πρόσβασης, θα εξακολουθείτε να μπορείτε να κάνετε εξαγωγή στη μορφή DataCite XML, αλλά δεν μπορείτε να καταχωρήσετε τα DOI σας στο DataCite από το OJS.\n\ t\t Έχετε υπόψη ότι ο κωδικός πρόσβασης θα αποθηκευτεί ως απλό κείμενο, δηλαδή δεν είναι κρυπτογραφημένος, λόγω\n\t\t των απαιτήσεων της υπηρεσίας εγγραφής DataCite.\n\t"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Όνομα χρήστη (σύμβολο)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr "Εισαγάγετε το όνομα χρήστη (σύμβολο) που πήρατε από το DataCite. Το όνομα χρήστη δεν μπορεί να περιέχει άνω και κάτω τελείες."
+
+msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgstr "Η OJS θα καταθέσει αυτόματα DOI στο DataCite. Λάβετε υπόψη ότι ενδέχεται να χρειαστεί λίγος χρόνος μετά τη δημοσίευση για την επεξεργασία (π.χ. ανάλογα με τη διαμόρφωση του cronjob). Μπορείτε να ελέγξετε για όλα τα μη καταχωρημένα DOIs."
+
+msgid "plugins.importexport.datacite.settings.form.testMode.description"
+msgstr "Χρησιμοποιήστε το δοκιμαστικό πρόθεμα DataCite για εγγραφή DOI. Μην ξεχάσετε να αφαιρέσετε αυτήν την επιλογή για την παραγωγή."
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Test Όνομα χρήστη"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Test Κωδικός πρόσβασης"
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Test Πρόθεμα DOI"
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "Εργασία αυτόματης εγγραφής DataCite"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr "Usage: \n{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...\n"

@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:44-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:44-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Πρόσθετο εξαγωγής DOAJ"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Εξαγωγή περιοδικού για DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Επικοινωνήστε με το DOAJ για συμπερίληψη"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Εάν θέλετε να καταχωρήσετε άρθρα από το OJS, εισαγάγετε το κλειδί API DOAJ. Διαφορετικά, θα εξακολουθείτε να μπορείτε να κάνετε εξαγωγή στη μορφή DOAJ XML, αλλά δεν μπορείτε να καταχωρήσετε τα άρθρα σας στο DOAJ μέσα από το OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API Key"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Θα βρείτε το κλειδί API στη σελίδα χρήστη DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "Η OJS θα καταθέσει άρθρα αυτόματα στο DOAJ. Λάβετε υπόψη ότι ενδέχεται να χρειαστεί λίγος χρόνος μετά τη δημοσίευση για την επεξεργασία (π.χ. ανάλογα με τη διαμόρφωση του cronjob). Μπορείτε να ελέγξετε για όλα τα μη καταχωρημένα άρθρα."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Χρησιμοποιήστε το δοκιμαστικό API DOAJ (περιβάλλον δοκιμής) για την εγγραφή. Μην ξεχάσετε να αφαιρέσετε αυτήν την επιλογή για την παραγωγή."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Εργασία αυτόματης εγγραφής DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Η κατάθεση δεν ήταν επιτυχής! Το DOAJ API επέστρεψε ένα σφάλμα: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr "Usage:\n{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
