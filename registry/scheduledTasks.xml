@@ -43,4 +43,8 @@
 		<descr>Automatically deposit any outstanding DOIs to the configured registration agency.</descr>
 		<frequency hour="0" />
 	</task>
+	<task class="lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers">
+		<descr>Automatically remove unvalidated and expired users.</descr>
+		<frequency day="1"/>
+	</task>
 </scheduled_tasks>
