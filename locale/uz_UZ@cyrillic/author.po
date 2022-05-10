@@ -1,2 +1,146 @@
+# Jurayev Tuychi <jurayevtuychi@gmail.com>, 2022.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2022-05-10 10:56+0000\n"
+"Last-Translator: Jurayev Tuychi <jurayevtuychi@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/author/uz_UZ@"
+"cyrillic/>\n"
+"Language: uz_UZ@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.article.copyeditedFile"
+msgstr "Нусхаланган файл"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Муаллиф файли"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Ушбу журнални топшириш учун фойдаланувчи ҳисоби талаб қилинади. Бу бизнинг "
+"муҳаррирларимизга юборилган хабарларингизни кузатиб бориш ва агар сизнинг "
+"аризангиз ҳолати оʻзгарганда ёки сиздан қоʻшимча маʼлумот талаб этилса, сиз "
+"билан богʻланиш имконини беради."
+
+msgid "submission.submit.coverNote"
+msgstr "Муҳаррир учун шарҳлар"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Давом этишдан олдин Муаллифлик ҳуқуқи эслатмаси шартларига рози бўлишингиз "
+"керак."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Муаллифлар ушбу Муаллифлик ҳуқуқи тўғрисидаги эслатманинг шартларига рози "
+"бўлишади, агар у ушбу журнал томонидан нашр этилган бўлса ва қачон ушбу "
+"тақдимномага тегишли бўлса (муҳаррирга шарҳлар қуйида қўшилиши мумкин)."
+
+msgid "author.submit.journalSection"
+msgstr "Журнал бўлими"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Мақола йўқ"
+
+msgid "author.submissions.viewStatus"
+msgstr "Ҳолатни кўриш"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ҳақиқатан ҳам бу тоʻлиқ боʻлмаган юборишни оʻчириб ташламоқчимисиз?"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Нусхаланган версияни юкланг"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Таҳрирлашда: Текшириш талаб қилинади"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Таҳрирлашда: Нусхалаш сўралган"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Кўриб чиқишда: Таҳрир қилиш керак"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Кўриб чиқиш босқичида"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Агар сиз воз кечиш учун ариза бераётган бўлсангиз, берилган майдонга сабабни "
+"киритишингиз керак."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Илтимос, нима учун тўловлардан воз кечиш кераклигини кўрсатиш учун қуйидаги "
+"шарҳлар майдонидан фойдаланинг."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Илтимос, ушбу мақола учун мақола топшириш тўловидан воз кечишни ўйлаб кўринг"
+
+msgid "author.submit.requestWaiver"
+msgstr "Ўчиришни сўраш"
+
+msgid "author.submit.notAccepting"
+msgstr "Бу журнал ҳозирда мақолаларни қабул қилмаяпти."
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Қўшимча файлларни юклаш"
+
+msgid "author.submit.nextSteps"
+msgstr "Кейинги қадам"
+
+msgid "author.submit.metadata"
+msgstr "Маълумотни киритинг"
+
+msgid "author.submit.upload"
+msgstr "Юклаш"
+
+msgid "author.submit.step5"
+msgstr "5.Қадам. Тасдиқлаш"
+
+msgid "author.submit.step3"
+msgstr "3.Қадам. Мақола маълумотларини киритинг"
+
+msgid "author.submit.step2"
+msgstr "2.Қадам. Юклаш якунланмоқда"
+
+msgid "author.competingInterests"
+msgstr "Рақобатли манфаатлар"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Бешинчи қадам"
+
+msgid "author.track"
+msgstr "Фаол мақолалар"
+
+msgid "author.submit.confirmation"
+msgstr "Тасдиқлаш"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Муаллифлар уйидан Фаол тақдимотларни танлаш орқали ушбу юборишни кейинроқ "
+"бажариши мумкин."
+
+msgid "author.submit.start"
+msgstr "Бошлаш"
+
+msgid "author.submit.step4a"
+msgstr "4.Қадам. Қўшимча файлларни юклаш"
+
+msgid "author.submit.step4"
+msgstr "4.Қадам. Қўшимча файлларни юклаш"
+
+msgid "author.submit.step1"
+msgstr "1.Қадам. Аризани жўнатишни бошланг"
+
+msgid "author.submit.startHereTitle"
+msgstr "Янги тақдимотни бошланг"
+
+msgid "author.submit.submitArticle"
+msgstr "Мақола юборинг"
+
+msgid "author.submit"
+msgstr "Янги ариза юбориш"
