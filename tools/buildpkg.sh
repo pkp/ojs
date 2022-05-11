@@ -13,16 +13,16 @@
 #
 #
 
-GITREP=git://github.com/pkp/ojs.git
+GITREP=${GITREP:-'https://github.com/pkp/ojs.git'}
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> [<tag>-<branch>]";
+	echo "Usage: $0 <version> <tag-or-branch>";
 	exit 1;
 fi
 
 VERSION=$1
 TAG=$2
-PREFIX=ojs
+PREFIX=${PREFIX:-'ojs'}
 BUILD=$PREFIX-$VERSION
 TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 
@@ -39,11 +39,9 @@ plugins/auth/ldap									\
 plugins/importexport/sample								\
 plugins/importexport/duracloud								\
 lib/pkp/tests										\
-.git											\
 .openshift										\
 .scrutinizer.yml									\
 .travis.yml										\
-lib/pkp/.git										\
 lib/pkp/lib/vendor/smarty/smarty/demo							\
 lib/pkp/lib/vendor/sebastian								\
 lib/pkp/lib/vendor/oyejorge/less.php/test						\
@@ -68,7 +66,6 @@ plugins/generic/citationStyleLanguage/lib/vendor/symfony/config/Tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/yaml/Tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/Guzzle/Tests/	\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/config/Tests/			\
-plugins/generic/citationStyleLanguage/lib/vendor/citation-style-language/locales/.git	\
 lib/pkp/lib/vendor/symfony/translation/Tests/						\
 lib/pkp/lib/vendor/symfony/process/Tests/						\
 lib/pkp/lib/vendor/pimple/pimple/src/Pimple/Tests/					\
@@ -108,17 +105,13 @@ git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
 echo "Installing composer dependencies:"
-echo -n " - lib/pkp ... "
-composer.phar --working-dir=lib/pkp install --no-dev
-echo "Done"
-
-echo -n " - plugins/paymethod/paypal ... "
-composer.phar --working-dir=plugins/paymethod/paypal install --no-dev
-echo "Done"
-
-echo -n " - plugins/generic/citationStyleLanguage ... "
-composer.phar --working-dir=plugins/generic/citationStyleLanguage install --no-dev
-echo "Done"
+for i in `find . -name composer.json`
+do
+  COMPOSERWD=`echo $i | sed 's/composer.json//'`
+  echo -n " - $COMPOSERWD ... "
+  composer.phar --working-dir=$COMPOSERWD install --no-dev
+  echo "Done"
+done
 
 echo -n "Installing node dependencies... "
 npm install
@@ -131,6 +124,7 @@ echo "Done"
 echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php
 find . \( -name .gitignore -o -name .gitmodules -o -name .keepme \) -exec rm '{}' \;
+find . -name .git -prune -exec rm -rf '{}' \;
 rm -rf $EXCLUDE
 echo "Done"
 
