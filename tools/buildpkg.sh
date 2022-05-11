@@ -10,14 +10,25 @@
 # Script to create an OJS package for distribution.
 #
 # Usage: buildpkg.sh <version> [<tag>]
+#   Select your own repository with $GITREP
+#   Select your own prefix with $PREFIX
 #
 #
 
 GITREP=${GITREP:-'https://github.com/pkp/ojs.git'}
 
 if [ -z "$1" ]; then
-	echo "Usage: $0 <version> <tag-or-branch>";
-	exit 1;
+	echo "Usage: $0 <version> <tag-or-branch>"
+	echo "	version: an arbitrary version identifier (to become part of the output filename)"
+	echo "	tag-or-branch: a git tag or branch (to be checked out from the repository)"
+	echo ""
+	echo "  This command will checkout the <tag-or-branch> from \$GITREP (default: from PKP)"
+	echo "  and will build the application with git submodules, composer, and npm dependencies"
+	echo "  and then will remove development and testing files (git, node, travis, etc.)"
+	echo "  and then will tar the application as \$PREFIX-<version>.tar.gz in the current directory."
+        echo "  The default \$PREFIX and \$GITREP can be overriden by setting these environment variables."
+        echo "  A temporary directory will be created and removed from the current working directory."
+	exit 1
 fi
 
 VERSION=$1
