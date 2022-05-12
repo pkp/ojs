@@ -37,6 +37,7 @@
 	<locale key="hr_HR" complete="false" name="Hrvatski" iso639-2b="hrv" iso639-3="hrv" />
 	<locale key="hy_AM" complete="false" name="Armenian" iso639-2b="hye" iso639-3="hye" />
 	<locale key="id_ID" complete="true" name="Bahasa Indonesia" iso639-2b="ind" iso639-3="ind" />
+	<locale key="is_IS" complete="false" name="Íslenska" iso639-2b="ice" iso639-3="isl" />
 	<locale key="it_IT" complete="true" name="Italiano" iso639-2b="ita" iso639-3="ita" />
 	<locale key="ja_JP" complete="false" name="日本語" iso639-2b="jpn" iso639-3="jpn" />
 	<locale key="mk_MK" complete="true" name="македонски јазик" iso639-2b="mkd" iso639-3="mkd" />
