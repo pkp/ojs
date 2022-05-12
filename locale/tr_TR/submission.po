@@ -1,9 +1,10 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2021-01-15 08:15+0000\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "tr_TR/>\n"
@@ -359,3 +360,36 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Bu makale, <a href=\"{$issueUrl}\">{$issueName}</a>'e atandı, ancak "
 "yayınlanması planlanmadı."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Değerlendirme aşamasına gönderilmesi gereken dosyaları seçin."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Yazarlara, bu aday makalenin hakem değerlendirmesine gönderileceğini "
+"bildirmek için bir e-posta gönderin. Mümkünse yazarlara, hakem değerlendirme "
+"sürecinin ne kadar sürebileceği ve editörlerden ne zaman haber almayı "
+"beklemeleri gerektiği konusunda bilgi verin."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Aday makalenin değerlendirme aşamasına geri gönderildiğini bildirmek için "
+"yazarlara bir e-posta gönderin. Bu kararın neden verildiğini açıklayın ve "
+"yeniden değerlendirme yapılacağı konusunda yazara bilgi verin."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} başlıklı aday makale değerlendirme aşamasına geri gönderildi."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Değerlendirme için Geri Gönder"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName}, aday makalenin kabul kararını geri aldı ve değerlendirme "
+"aşamasına geri gönderdi."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Kabul kararını geri alın ve değerlendirme aşamasına geri gönderin."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Değerlendirmeye Dön"
