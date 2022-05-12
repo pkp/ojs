@@ -1,0 +1,104 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"COUNTER (TELJARA) viðbótin gerir kleift að taka út skýrslur um virkni í "
+"tímaritinu, með því að nota <a href=\"http://www.projectcounter.org\">"
+"COUNTER standard</a>.  Þetta þýðir þó ekki að tímaritið uppfylli þar með "
+"kröfur Conter (\"COUNTER compliant). Nánari upplýsingar er að finna á "
+"vefsíðu COUNTER (Project COUNTER website)."
+
+msgid "plugins.reports.counter"
+msgstr "TELJARI skýrslur"
+
+msgid "plugins.reports.counter.release"
+msgstr "TELJARI  úgáfa"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Skýrslur eldri vefsíðna"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Breytur skýrslunnar eru ógildar."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Skýrslubeiðnin er ógild."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Engar færslur fundust fyrir þessa skýrslu."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Ekki var hægt að birta niðurstöður á XML formi."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "TELJARI skýrsla JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML útgáfa"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"TELJARI Tímaritsskýrsla 1 (R3): Beiðnir um heildartexta greina eftir mánuði "
+"og tímariti"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Tímaritsskýrsla 1 (R3): Beiðnir um heildartexta greina eftir mánuði og "
+"tímariti"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Tímaritsskýrsla 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Fjöldi beiðna um heildartexta greina eftir mánuði og  tímariti (Ár {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Keyrsludagsetning:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Útgefandi"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Verkvangur"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "Prent ISSN"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "eISSN"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Samtals í ár til þessa"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "HTML árs til þessa"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "PDF árs til þessa"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Samtala fyrir öll tímarit"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "nafnlaust"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Allir viðskiptavinir"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Greinaskýrsla 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Tímaritsskýrsla 1"
