@@ -1,0 +1,2156 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-23 15:57+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.logType.copyedit"
+msgstr "Yfirferð"
+
+msgid "submission.logType.review"
+msgstr "Ritrýni"
+
+msgid "submission.logType.editor"
+msgstr "Ritstjóri"
+
+msgid "submission.logType.author"
+msgstr "Höfundur"
+
+msgid "submission.logType.article"
+msgstr "Grein"
+
+msgid "submission.proofread.instructions"
+msgstr "Leiðbeiningar um prófarkalestur"
+
+msgid "submission.proofread.corrections"
+msgstr "Leiðréttingar prófarkalesara"
+
+msgid "submission.proofreadingComments"
+msgstr "Athugasemdir prófarkalesara"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Tenglar á heimildir"
+
+msgid "submission.layout.instructions"
+msgstr "Umbrotsleiðbeiningar"
+
+msgid "submission.layout.layoutComments"
+msgstr "Umbrotsathugasemdir"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Auðkenni á opinberu galley er þegar til."
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Ekkert (Hladdu upp útgáfu af lokayfirferð sem umbrotsútgáfu áður en þú "
+"sendir beiðni)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Leiðbeiningar um yfirferð"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Athugasemdir textatæknis"
+
+msgid "submission.copyedit.useFile"
+msgstr "Nota skrá"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Úthluta textatækni"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "C/E úgáfa"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Lokayfirferð"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Yfirferð höfundar"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Yfirferð ritstjóra"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Hefja yfirferð"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Ekki er hægt að senda beiðni í tölvupósti fyrr en búið er að hlaða upp skrá "
+"fyrir yfirferð."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Ekki hægt að senda beiðni í tölvupósti fyrr en búið er að velja skrá fyrir "
+"yfirferð í Ákvörðun ritstjóra, á  ritrýni síðu."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Ekki hægt að senda beiðni í tölvupósti fyrr en ritrýniútgáfa er komin á sinn "
+"stað."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Til að hlaða upp handriti fyrir þetta tímarit þarftu að klára "
+"eftirfarandi skref. </p>\n"
+"<ol>\n"
+"<li>Á þessari síðu, smelltu á Vafra (eða veldu skrá) sem opnar glugga til að "
+"velja skrá á tölvunni þinni.</li>\n"
+"<li>Finndu skrána sem þú ætlar að senda inn og ljómaðu hana upp (veldu "
+"skránna).</li>\n"
+"<li>Smelltu á Opna í glugganum til að velja skrá. Við það birtist heiti "
+"skrárinnar á þessari síðu. </li>\n"
+"<li>Smelltu á Hlaða upp á þessari síðu. Við það verður skránni hlaðið upp "
+"frá tölvunni inn á vefsíðu tímaritsins sem endurskýrir hana í samræmi við "
+"reglu tímaritsins.</li>\n"
+"<li>Þegar búið er að hlaða innendingunni upp, smelltu á Vista og Áfram neðst "
+"á síðunni.</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Engar úthlutanir prófarkalesturs"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Skrá textatæknis"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Skrá textatæknis"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Skrá til C/E"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Þegar þú hefur skráð ákvörðun getur þú ekki lengur breytt þessari ritrýni. "
+"Ertu viss um að þú viljir halda áfram?"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Engar ráðleggingar voru valdar.  Þú verður að velja ráðleggingar til að geta "
+"sent inn."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Settu eða lagaðu ráðleggingar ritrýnis."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Veldu ráðleggingar og sendu inn ritrýnina til að klára ferlið.  Þú verðu að "
+"skrá ritrýni eða hlaða upp skrá áður en þú velur ráðleggingar."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Að auki, þá getur þú hlaðið upp skrám fyrir ritstjóra og/eða höfund að skoða."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Smelltu á merkið til að slá inn (eða afrita hingað) ritrýni fyrir þessa "
+"innsendingu."
+
+msgid "reviewer.competingInterests"
+msgstr "Hagsmunaárekstrar"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Yfirlýsing um hvort þú hafir eða hafir ekki einhverja hagsmunaárekstra í "
+"tengslum við þessa rannsókn (sjá <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Smelltu á skráarnöfnin til að hlaða niður og ritrýna (á skjá eða útprenti) "
+"skránum sem eru tengdar þessari innsendingu."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Ef þú ætlar að taka að þér ritrýnina, skoðaðu leiðbeiningar til ritrýna hér "
+"fyrir neðan."
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "um hvort þú getir tekið að þér ritrýnina."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Senda skilaboð á ristjóra innsendingar"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Leiðbeiningar fyrir ritrýna gefa ritrýnum skilyrði til að dæma um hversu "
+"viðeigandi handrit sé fyrir birtingu í tímaritinu. Í þeim geta falist "
+"sérstakar leiðbeiningar til að undirbúa og framkvæma skilvirka og gagnlega "
+"ritrýni. Þegar ritrýnir framkvæmir rýnina fær hann tvö opin textabox. Það "
+"fyrra \"Fyrir höfund og ritstjóra\" og það síðara \"Fyrir ritstjóra\".  Sem "
+"valkost geta stjórnendur tímaritsins búið til ritrýnieyðublað undir \""
+"Ritrýnieyðublöð\".  Í öllum tilfellum hefur ritstjóri val um að taka "
+"ritrýnina með í samskiptum við höfund."
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Leiðbeiningar fyrir ritrýna"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Skref ritrýni"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Verkröð ritrýni"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Innsending á að fara í ritrýni"
+
+msgid "reviewer.article.schedule"
+msgstr "Verkröð"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Sjá athugasemdir"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Hafna innsendingu"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Senda aftur annarstaðar"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Senda aftur í ritrýni"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Þarfnast endurskoðunar"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Samþykkja innsendingu"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Skila ritrýni"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Ritrýni send inn"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Þitt svar"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Beiðni ritstjóra"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"( Ef þú vilt skrifa skýringar til ritstjóra í skrána, vistaðu hana á eigin "
+"tölvu og hladdu svo upp þeirri skrá.)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Útgáfu hlaðið upp af ritrýni"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Hlaða upp skrám"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Athugasemdir"
+
+msgid "reviewer.article.submitReview"
+msgstr "Skila ritrýni til ritstjóra"
+
+msgid "reviewer.article.recommendation"
+msgstr "Ráðleggingar"
+
+msgid "reviewer.article.automatic"
+msgstr "(Sjálfvirkt)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Senda áminningu"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Fyrir ritstjóra að fylla inn"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Skráðu hér eða afritaðu ritrýniathugasemdir"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Ritstjóri innsendingar"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Innsendingin verður gerð aðgengileg, ef og þegar ritrýnir samþykkir að taka "
+"að sér ritrýni"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Getur ekki  framkvæmt ritrýni"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Mun framkvæma ritrýni"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Senda tilkynningu á ritstjóra"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Skrár sem á að ritrýna"
+
+msgid "reviewer.averageQuality"
+msgstr "Stigagjöf"
+
+msgid "reviewer.completedReviews"
+msgstr "Lokið"
+
+msgid "reviewer.pendingReviews"
+msgstr "Greinar sem bíða ritrýni"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Vefslóð á efni í fjarvistun"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Þetta gallay verður aðgengilegt á sér vefsíðu."
+
+msgid "submission.layout.imageInvalid"
+msgstr "Ógilt snið á mynd.  Leyfð snið eru .gif, .jpg og .png."
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Hlaða upp viðbótarskrá"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Stofna nýjan ritrýni"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Skrá notanda sem er til sem ritrýni"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Niðurstaða"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Afþökkun"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Afþakkanir ritrýnis og hætt við"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Ákvörðun rirtjóra, umferð {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Ritrýni, umferð {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Skoða afþakkanir, hætt við, fyrri umferðir"
+
+msgid "sectionEditor.regrets"
+msgstr "Afþökkun"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Afþakkanir ritrýna,  hætt við og fyrri umferðir"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Afþakkanir"
+
+msgid "submissions.postAuthor"
+msgstr "Höfundur innleggs"
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} hefur lokið umbroti fyrir innsendingu {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} hefur verið aftengdur sem setjari fyrir innsendingu "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} hefur verið úthlutað sem setjara á innsendingu {$submissionId}."
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Skipta út setjara"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Úthluta setjara"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Skipta út skrá"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Hlaða upp galleysniði"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Setjaraverkefni"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Engin virk ristjórnarverkefni."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Loknum ritstjórnarverkefnum"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Virk ristjórnarverkefni"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Að senda tilkynningu á þennan prófarkalesara endurræsir verkefni viðkomandi. "
+"Ertu viss um að þú viljir gera það?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Að senda tilkynningu á þennan  setjara endurræsir verkefni viðkomandi. Ertu "
+"viss um að þú viljir gera það?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Að senda tilkynningu á þennan höfund endurræsir verkefni viðkomandi. Ertu "
+"viss um að þú viljir gera það?"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Að senda tilkynningu á þennan textatækni endurræsir verkefni viðkomandi.  "
+"Ertu viss um að þú viljr gera það?"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Engum innsendingum úthlutað."
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Loknum ritstjórnarverkefnum"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Virk ritstjórnarverkefni"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Uppljómuð atriði gefa til kynna aðgerð sem ritstjóri þarf að "
+"framkvæma, merkt sem eftirarandi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Aðgerðar er þörf á "
+"yfirferðarþrepi</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Aðgerðar er þörf á "
+"umbrotsþrepi</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Aðgerðar er þörf á "
+"prófarkalestursþrepi</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Uppljómuð atriði gefa til kynna aðgerð sem ritstjóri þarf að "
+"framkvæma, merkt sem eftirarandi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Búið að úthluta ritrýni, en "
+"ekki senda ritrýni tilkynningu í tölvupósti</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Allir ritrýnar hafa skilað "
+"athugasemdum sínum, en engin ákvörðun hefur verið skráð</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Höfundur hefur hlaðið upp "
+"lagfærðu handriti</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Ritrýnir er kominn "
+"fram yfir skiladag staðfestingar á hvort viðkomandi taki að sér "
+"ritrýnina</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Ritrýnir er kominn "
+"fram yfir skiladag á ritrýni</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Skila\" Er útfyllt þegar ritrýnir samþykkir beiðni um ritrýni. Það "
+"sýnir fjölda vikna til skiladags á ritrýni eða (-)vikur sem komið er fram "
+"yfir skiladag.</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Því miður, Þú hefur ekki réttindi til að hafa umsjón með þessum notanda. "
+"Mögulega vegna þess að:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Notandinn er vefstjóri</li>\n"
+"\t\t\t<li>Notandinn er virkur í tímariti sem þú stýrir ekki</li>\n"
+"\t\t</ul>\n"
+"\tÞetta verk þarf að framkvæma af vefstjóra síðunnar.\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Afvirkja þennan notanda?  Það mun koma í veg fyrir að viðkomandi geti skráð "
+"sig inn í kerfið. \n"
+"\n"
+"Þú getur valið að greina notanda frá ástæðu þess að notendareikningur er "
+"afvirkjaður."
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Til að gera lesendum kleift að finna verk sem vitnað er í á netinu, eru "
+"eftirfarnadi valkostir í boði. </p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Bæta við lestrartóli</strong><p>Umsjónarmaður tímrits getur "
+"bætt \"Finna heimildir\" við lestrartól sem fylgja útgefnum verkum. Það "
+"gerir lesendum mögulegt að afrita titil heimildar og leita eftir viðkomandi "
+"heimild í fyrirfram ákveðnum  gagnagrunnum fyrir fræðirit. </p></li>\n"
+"\t<li><strong>Tenglar í heimildum</strong><p>Setjari getur bætt við tengli í "
+"heimildir þannig að hægt sé að finna heimildina á vefnum með því að nota "
+"eftirfarandi leiðbeiningar (sem hægt er að breyta).</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Skref: Innsendingaröð &gt; Ritrýni &gt; Ritstýring &gt; Efnisyfirlit.<br /><"
+"br />\n"
+"Veldu líkan til að höndla þessi atriði í ritstjórnarferlinu.  (Til að "
+"tilgreina yfirritstjóra/ritstjórn og kaflaritstjóra, farðu í \"Ritstjórn\" í "
+"\"Umsjón með tímariti\".)"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Áskriftarleiðir"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Stofnanaáskriftir"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Einstaklingsáskriftir"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Umsjón með áskriftum"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+
+msgid "search.results.similarDocuments"
+msgstr "svipuð skjöl"
+
+msgid "search.results.orderDir.desc"
+msgstr "Lækkandi"
+
+msgid "search.results.orderDir.asc"
+msgstr "Hækkandi"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Mikilvægi"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Vinsældir (síðasta mánuð)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Vinsældir (allra tíma)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Titill tímarits"
+
+msgid "search.results.orderBy.issue"
+msgstr "Tölublað"
+
+msgid "search.results.orderBy.date"
+msgstr "Útgáfudagur"
+
+msgid "search.results.orderBy.author"
+msgstr "Höfundur"
+
+msgid "search.results.orderBy.article"
+msgstr "Titill greinar"
+
+msgid "search.results.orderBy"
+msgstr "Raða niðurstöðum eftir"
+
+msgid "comments.authenticated"
+msgstr "af <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Athugasemdir við þessa grein"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Krefst áskriftar eða greiðslu"
+
+msgid "reader.subscriptionAccess"
+msgstr "Krefst áskriftar"
+
+msgid "reader.openAccess"
+msgstr "Opinn aðgangur"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Þú þarf að vera í áskrift til að hafa aðgang hér.  Skráðu þig inn til að "
+"staðfesta áskrift."
+
+msgid "reader.subscribersOnly"
+msgstr "Eingöngu áskrifendur"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Umbroti lokið"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Umbrotsgalley uppfært"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Úthlutun í umbrot hafin"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Setjari aftengdur innsendingu"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Setjara úthlutað á innsendingu"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Próarkalestri lokið"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Lagfæringaskrá prófarkalesara uppfærð"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Úthlutun í prófarkalestur hafin"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Prófarkalesari aftengdur innsendingu"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Prófarkalesara úthlutað á innsendingu"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Yfirfarin skrá uppfærð"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Lokayfirferð lokið"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Fyrstu yfirferð lokið"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Lagfæringaskrá textatæknis uppfærð"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Úthlutun á yfirferð texta hafin"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Textatæknir aftengdur innsendingu"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Textatækni úthlutað á innsendingu"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Innsending endurheimt úr skráageymslu"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Prent og á vef"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Prent"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Á vefnum"
+
+msgid "subscriptionTypes.format"
+msgstr "Snið"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Rennur ekki út"
+
+msgid "subscriptionTypes.months"
+msgstr "mánuðir"
+
+msgid "subscriptionTypes.month"
+msgstr "mánuður"
+
+msgid "subscriptionTypes.years"
+msgstr "ár"
+
+msgid "subscriptionTypes.year"
+msgstr "ár"
+
+msgid "subscriptionTypes.currency"
+msgstr "Gjaldmiðill"
+
+msgid "issue.return"
+msgstr "Til baka í tölublað"
+
+msgid "issue.viewIssue"
+msgstr "Skoða tölublað"
+
+msgid "issue.nonpdf.title"
+msgstr "Hlaða niður tölublaði"
+
+msgid "issue.fullIssue"
+msgstr "Allt tölublaðið"
+
+msgid "issue.coverPage.altText"
+msgstr "Forsíða"
+
+msgid "issue.abstract"
+msgstr "Útdráttur/ágrip"
+
+msgid "issue.toc"
+msgstr "Efnisyfirlit"
+
+msgid "issue.noIssues"
+msgstr "Engin tölublöð"
+
+msgid "issue.year"
+msgstr "Ár"
+
+msgid "issue.no"
+msgstr "Nr."
+
+msgid "issue.vol"
+msgstr "Bnd."
+
+msgid "issue.number"
+msgstr "Númer"
+
+msgid "issue.volume"
+msgstr "Bindi"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Skoða {$identification}"
+
+msgid "issue.title"
+msgstr "Titill"
+
+msgid "issue.issues"
+msgstr "Tölublöð"
+
+msgid "issue.issue"
+msgstr "Tölublað"
+
+msgid "user.role.journalAssistants"
+msgstr "Aðstoðarfólk"
+
+msgid "user.role.journalAssistant"
+msgstr "Aðstoðarmanneskja"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Umsjón með áskriftum"
+
+msgid "user.role.subEditors"
+msgstr "Ritstjórar kafla"
+
+msgid "user.role.managers"
+msgstr "Stjórnendur"
+
+msgid "user.role.subscriptionManager"
+msgstr "Umsjón með áskriftum"
+
+msgid "user.role.subEditor"
+msgstr "Ritsjtóri kafla"
+
+msgid "user.role.manager"
+msgstr "Framkvæmdastjóri"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Skráing sem ritrýnir: Skráning ritrýna er óvirk sem stendur."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Skráing sem ritrýnir"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Senda inn grein: Skráning höfunda er óvirk sem stendur."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Senda inn tillögu"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Þú hefur ekki valið neitt hlutverk hjá tímaritinu. Vinsamlega veldu eitthvað "
+"hér fyrir neðan:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Notandareikngur þinn er ekki tengdur við neitt tímarit. Vinsamlega veldu "
+"tímarit:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Umsjón með \"Mínum áskriftum\""
+
+msgid "user.myJournals"
+msgstr "Mín tímarit"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Ef þú hefur beðið um að vera ritrýnir fyrir tímarit, vinsamlega skráðu þá "
+"áhugasvið þitt."
+
+msgid "user.register.otherContextRoles"
+msgstr "Biddu um eftirfarandi hlutverk."
+
+msgid "user.register.contextsPrompt"
+msgstr "Hjá hvaða tímaritum, á þessari síðu, myndir þú vilja skrá þig?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Já, það má hafa samband við mig með beiðni um ritrýni á handritum fyrir "
+"þetta tímarit."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ef já, biddu þá um hlutverkið {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "Myndir þú vilja ritrýna handrit sem send hafa verið á tímaritið?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Skrá sig hjá öðrum tímaritum"
+
+msgid "user.showAllJournals"
+msgstr "Sýna \"Mín tímarit\""
+
+msgid "user.profile.profileImage"
+msgstr "Mynd af notanda"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Taka með notendur án hlutverks í þessu tímariti."
+
+msgid "user.authorization.representationNotFound"
+msgstr "Umbeðið galley fannst ekki."
+
+msgid "journal.viewAllIssues"
+msgstr "Skoða öll tölublöð"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Tímarit"
+
+msgid "journal.path"
+msgstr "Slóð"
+
+msgid "context.contexts"
+msgstr "Tímarit"
+
+msgid "journal.currentIssue"
+msgstr "Nýjasta tölublað"
+
+msgid "submission.search"
+msgstr "Leita að grein"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Prófarkalesa"
+
+msgid "submissions.layoutComplete"
+msgstr "Umbrot/ Útlit ritstýrt"
+
+msgid "submissions.copyeditComplete"
+msgstr "Yfirfarið"
+
+msgid "submission.eventLog"
+msgstr "Atburðaskrá"
+
+msgid "submissions.editorRuling"
+msgstr "Úrskurður ritstjóra"
+
+msgid "submissions.editorDecision"
+msgstr "Ákvörðun ritstjóra"
+
+msgid "submissions.proof"
+msgstr "Próförk"
+
+msgid "submissions.reviewRound"
+msgstr "Ritrýniumferð"
+
+msgid "submissions.initialProof"
+msgstr "Upphafspróförk"
+
+msgid "submissions.proofread"
+msgstr "Prófarkalesa"
+
+msgid "submissions.initial"
+msgstr "Upphafs"
+
+msgid "submissions.published"
+msgstr "Útgefið"
+
+msgid "submissions.queuedReview"
+msgstr "Í ritrýni"
+
+msgid "submissions.step3"
+msgstr "Skref 3"
+
+msgid "submissions.step1"
+msgstr "Skref 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Í verkröð fyrir birtingu í  {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Setja í verkröð"
+
+msgid "submission.proofreading"
+msgstr "Prófarkalestur"
+
+msgid "submission.copyedit"
+msgstr "Fara yfir (textatæknir)"
+
+msgid "submission.copyediting"
+msgstr "Í yfirferð textatæknis"
+
+msgid "submission.authorVersion"
+msgstr "Útgáfa höfundar"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Skrá lagfærð af höfundi"
+
+msgid "submission.editorVersion"
+msgstr "Útgáfa ritstjóra"
+
+msgid "submission.postReviewVersion"
+msgstr "Eftir-rýniútgáfa af skrá"
+
+msgid "submission.reviewersVersion"
+msgstr "Skrá með athugasemdum ritrýnanda"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Tölvupóstar ritstjóra/höfundar"
+
+msgid "submission.notifyEditor"
+msgstr "Tilkynna ritstjóra"
+
+msgid "submission.notifyAuthor"
+msgstr "Tilkynna höfundi"
+
+msgid "submission.editorReview"
+msgstr "Rýni ritstjórnar"
+
+msgid "submission.round"
+msgstr "Umferð&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Ákvörðun ritstjórnar"
+
+msgid "submission.sent"
+msgstr "Sent"
+
+msgid "submission.changeSection"
+msgstr "Breyta í"
+
+msgid "submission.submissionEditing"
+msgstr "Ritstýring innsendingar"
+
+msgid "article.return"
+msgstr "Til baka í \"Nánar um grein\""
+
+msgid "article.fontSize.large.altText"
+msgstr "Stórt"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Meðal"
+
+msgid "article.fontSize.small.altText"
+msgstr "Lítið"
+
+msgid "article.fontSize"
+msgstr "Leturgerð - stærð"
+
+msgid "article.comments.enable"
+msgstr "Virkja"
+
+msgid "article.comments.disable"
+msgstr "Afvirkja"
+
+msgid "article.comments.sectionDefault"
+msgstr "Sjálfgefið"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Takmarkaður aðgangur"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Opinn aðgangur"
+
+msgid "article.coverPage.altText"
+msgstr "Forsíðumynd"
+
+msgid "article.abstract"
+msgstr "Útdráttur"
+
+msgid "article.details"
+msgstr "Nánar"
+
+msgid "article.submissions"
+msgstr "Innsendingar"
+
+msgid "article.submission"
+msgstr "Innsending"
+
+msgid "article.commentsToEditor"
+msgstr "Athugasemdir höfundar"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Tungumál"
+
+msgid "article.type"
+msgstr "Tegund, aðferð eða nálgun"
+
+msgid "article.coverage"
+msgstr "Umfang"
+
+msgid "article.subject"
+msgstr "Lykilorð"
+
+msgid "article.discipline"
+msgstr "Fræðasvið og undirfræðasvið"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Viðb.skrár"
+
+msgid "article.suppFiles"
+msgstr "Viðbótarskrá(r)"
+
+msgid "article.suppFile"
+msgstr "Viðbótarskrá"
+
+msgid "article.file"
+msgstr "Skrá"
+
+msgid "article.journalSection"
+msgstr "Kafli tímarits"
+
+msgid "article.metadata"
+msgstr "Lýsigögn"
+
+msgid "article.indexingInformation"
+msgstr "Upplýsingar um lyklun"
+
+msgid "article.authors"
+msgstr "Höfundar"
+
+msgid "article.title"
+msgstr "Titill"
+
+msgid "article.submissionId"
+msgstr "Kenni innsendingar"
+
+msgid "common.publications"
+msgstr "Greinar"
+
+msgid "common.publication"
+msgstr "Grein"
+
+msgid "article.articles"
+msgstr "Greinar"
+
+msgid "article.article"
+msgstr "Grein"
+
+msgid "section.policy"
+msgstr "Kaflastefna"
+
+msgid "section.abbreviation.example"
+msgstr "(T.d., Greinar = Gr.)"
+
+msgid "section.abbreviation"
+msgstr "Skammstöfun"
+
+msgid "section.title"
+msgstr "Titill kafla"
+
+msgid "section.sections"
+msgstr "Kaflar"
+
+msgid "section.section"
+msgstr "Kafli"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Úthlutaðir ritstjórar"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Upplýsingar um félagsaðild eru áskildar fyrir valda áskriftarleið."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Þessi notandi er nú þegar með einstaklingsáskrift."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Vinsamlega veldu gilda áskriftarleið."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Valin áskriftarleið kerfst upplýsinga um félagsaðild."
+
+msgid "user.subscriptions.form.membership"
+msgstr "Félagsaðild"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Áskriftarleið"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Skoða áskriftarleiðir í boði"
+
+msgid "user.subscriptions.expired"
+msgstr "Rann út: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Rennur út: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Kaupa stofnanaáskrift"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Kaupa einstaklingsáskrift"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Kaupa nýja áskrift"
+
+msgid "user.subscriptions.purchase"
+msgstr "Kaupa"
+
+msgid "user.subscriptions.renew"
+msgstr "Endurnýja"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Stofnanaáskrift"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Einstaklingsáskrift"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Greiðsla á netinu er hafin, en hætt var við eða hún ekki kláruð"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Handvirk greiðsla er hafin en hefur ekki verið móttekin"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Það þarf að fara yfir áskriftina áður en hægt er að virkja hana"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Viðbótarupplýsinga er þörf áður en hægt er að virkja áskrift"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Lýsing"
+
+msgid "user.subscriptions.status"
+msgstr "Staða"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Virkar og útrunnar áskrifitr eru sýndar fyrir neðan ásamt  "
+"gildislokadagsetningu. Þar að auki er mögulegt að eftirfarandi "
+"stöðuupplýsingar séu innifaldar í hverri áskrift."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Staða áskriftar"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Mínar áskriftir"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Þú verður að samþykkja þessa yfirlýsingu um persónuvernd."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Þú verður að samþykkja skilmála um persónuvernd hjá tímaritinu sem þú ert að "
+"skrá þig hjá."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Já, ég gef leyfi fyrir söfnun og vistun á persónulegum gögnum um mig í "
+"samræmi við yfirlýsingu tímaritsins um persónuvernd: <a href=\"{$privacyUrl}"
+"\" target=\"_blank\">Persónuvernd</a>."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Já, ég vil fá sendar upplýsingar um nýjar útgáfur og tilkynningar frá öllum "
+"tímaritum sem ég hef skráð mig hjá."
+
+msgid "user.register.reviewerInterests"
+msgstr "Staðfesta áhugasvið ritrýni (efnissvið og rannsóknaraðferðir):"
+
+msgid "user.register.reviewerDescription"
+msgstr "Get tekið að mér ritrýni á innsendingum til vefsíðunnar."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Get tekið að mér ritrýni á handritum sem send eru til tímaritsins."
+
+msgid "user.register.authorDescription"
+msgstr "Getur sent inn atriði til tímaritsins."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Fá skilaboð í tölvupósti þegar tölublað tímritsins er sett í opinn aðgang."
+
+msgid "user.register.readerDescription"
+msgstr "Fá skilaboð í tölvupósti um útgáfu tölublaða hjá tímaritinu."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Lykilorðið sem þú slóst inn er ekki nógu langt."
+
+msgid "user.register.registrationDisabled"
+msgstr "Þetta tímarit tekur ekki á móti nýskráningum notenda sem stendur."
+
+msgid "user.register.privacyStatement"
+msgstr "Persónuvernd"
+
+msgid "user.register.noJournals"
+msgstr "Það eru engin tímarit sem þú getur skráð þig hjá á þessari síðu."
+
+msgid "user.register.selectContext"
+msgstr "Veldu tímarit til að skrá þig hjá:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Vista og senda ritstjóra tölvupóst"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Vista og senda höfundi tölvupóst"
+
+msgid "submission.comments.forEditor"
+msgstr "Fyrir ritstjóra"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Fyrir höfund og ritstjóra"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Eftir sendingu, útvegaðu blint afrit sem hægt er að breyta til að senda "
+"ritrýnum."
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Fyrir ritstjóra"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Fyrir höfund og ritstjóra"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Það má deila þessum athugasemdum með höfundi.<br />\n"
+"(Eftir að búið er að vista er hægt að bæta við fleiri athugasemdum.)"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Athugasemdir textatæknis"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Samskipti ritstjóra/höfundar"
+
+msgid "submission.logType.proofread"
+msgstr "Prófarkalestur"
+
+msgid "submission.logType.layout"
+msgstr "Umbrot"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Innsending send í skráageymslu"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Skrá ritstjóra uppfærð"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Ákvörðun ristjórnar send"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Ritstjóri aftendur innsendingu"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Ritstjóra úthlutað á innsendingu"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Lagfærð skrá höfundar hefur verið uppfærð"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Lagfæringar höfundar sendar inn"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Grein gefin út"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Innsending tengd við tölublað"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Innsending send í verkröð tölublaðs"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Innsend grein"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Innsending - atburður"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>ATH:</strong> Stofnanaáskrift sem keypt er á vefnum þarfnast "
+"samþykkis á léni og IP tölum áður en hægt er að virkja áskriftina."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Stofnanaáskrift krefst ekki innskráningar. Lén notanda og/eða IP tala er "
+"notuð til að gefa aðgang að innihaldi í áskrift."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Í einstaklingsáskrift þarf að skrá sig inn til að sjá innihald í áskrift."
+
+msgid "subscriptions.status.other"
+msgstr "Annað, sjá minnispunkta"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Þú ert ekki í neinni áskrift."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Bíður greiðslu á vefnum"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Bíður eftir handvirkri greiðslu"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Þarfnast samþykkis"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Þarfnast upplýsinga"
+
+msgid "subscriptions.status.active"
+msgstr "Virkt"
+
+msgid "subscriptions.status"
+msgstr "Staða"
+
+msgid "subscriptions.inactive"
+msgstr "Óvirkt"
+
+msgid "common.queue.short.completed"
+msgstr "Útgefið efni"
+
+msgid "common.queue.long.completed"
+msgstr "Útgefið efni"
+
+msgid "common.queue.short.active"
+msgstr "Virkt"
+
+msgid "common.queue.long.active"
+msgstr "Virkt"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Útgefið efni"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Útgefið efni"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Í ritrýni"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Handrit í ritrýni"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Handrit í ritstjórn"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Í ritstjórn"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Óúthlutað"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Óúthlutað"
+
+msgid "navigation.skip.issue"
+msgstr "Yfir í nýjasta tölublaðið"
+
+msgid "navigation.skip.about"
+msgstr "Sleppa að \"Um tímaritið\""
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Upplýsingar fyrir ritrýna"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Upplýsingar fyrir höfunda"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Leiðbeininar vegna hagsmunaárekstra"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Til ritrýna"
+
+msgid "navigation.infoForAuthors"
+msgstr "Til höfunda"
+
+msgid "navigation.browseByAuthor"
+msgstr "Eftir höfundi"
+
+msgid "navigation.browseByIssue"
+msgstr "Eftir tölublöðum"
+
+msgid "navigation.otherJournals"
+msgstr "Önnur tímarit"
+
+msgid "navigation.current"
+msgstr "Nýjast"
+
+msgid "navigation.journalHelp"
+msgstr "Hjálp"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Forsíðumynd tímaritsins"
+
+msgid "common.homePageHeader.altText"
+msgstr "Haus forsíðu"
+
+msgid "common.payments"
+msgstr "Greiðslur"
+
+msgid "common.payment"
+msgstr "Greiðsla"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Ertu viss um að þú viljir merkja þetta verkefni sem lokið? Mögulega getur þú "
+"ekki breytt neinu eftir það."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Vinsamlega fylltu inn áskilin svæði."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Smelltu á merkið til að fylla inn ritrýnieyðublaðið."
+
+msgid "navigation.categories.browse"
+msgstr "Vafra"
+
+msgid "navigation.categories"
+msgstr "Flokkar"
+
+msgid "context.select"
+msgstr "Fara í annað tímarit:"
+
+msgid "context.current"
+msgstr "Valið tímarit:"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Þetta tímarit birtir ekki innihald sitt á vefnum."
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Heiti stofnunar er áskilið."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Vinsamlega sláðu inn gilt heiti á léni."
+
+msgid "payment.loginRequired"
+msgstr "Greiðsla krefst innskráningar."
+
+msgid "payment.type.publication.required"
+msgstr "Komið er að greiðslu útgáfugjalds."
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Vefþjónn leyfir að skrám sé hlaðið upp: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Hámarksstærð á skrá sem þinn vefþjónn leyfir að hlaðið sé upp er: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} hefur úthlutað {$proofreaderName} fyrir prófarkalestur á "
+"innsendingu {$submissionId}."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} hefur verið úthlutað sem ritstjóra fyrir innsendingu "
+"{$submissionId}."
+
+msgid "notification.type.issuePublished"
+msgstr "Búið er að gefa út tölublað."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ný tilkynning hefur verið búin til."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Bíður eftir galley."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Bíður samþykkis."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Veldu hvernig á að raða greinum í þessum flokki."
+
+msgid "catalog.sortBy"
+msgstr "Röð greina"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} sér um ritstjórnarferlið fyrir grein {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Áskriftir"
+
+msgid "editor.issues.futureIssues"
+msgstr "Komandi tölublöð"
+
+msgid "editor.issues.backIssues"
+msgstr "Eldri tölublöð"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Uppgefin slóð fyrir tímarit \"{$journalPath}\" sýnir ekkert tímarit."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Uppsetning á þessari leit leyfir ekki endurlykklun per tímarit."
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Lyklun \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Fjarlægja samþykki á þessu galley.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Samþykkja þetta gally fyrir útgáfu.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Galley samþykkt"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Bíður samþykkis"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Samþykkt"
+
+msgid "article.view.interstitial"
+msgstr "Vinsamlega veldu skrá til að hlaða niður grein."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Fela önnur tímarit"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Skrá sig hjá öðrum tímaritum"
+
+msgid "notification.type.approveSubmission"
+msgstr "Þessi innsending bíður samþykkis áður en hún birtist í tölublaði."
+
+msgid "editor.navigation.issues"
+msgstr "Tölublöð"
+
+msgid "grid.action.createContext"
+msgstr "Stofna nýtt tímarit"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Ógild innsending textatæknis eða engin beiðni um innsendingu frá textatækni!"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Beðið um ógilt tölublað!"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Þú ert að reyna að nálgast grein sem ekki hluti af þínum kafla."
+
+msgid "user.authorization.noContext"
+msgstr "Ekkert tímarit fannst."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Aðgangi hafnað!  Þér hefur ekki verið úthlutað sem textatækni á þessa grein."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Úthlutaðu ritsjtóra til að stofan galley með því að nota tengilinn á "
+"þátttakandalistanum."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Ný grein hefur verið send inn og úthluta þarf ritstjóra."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Lýsigögn tölublaðs vistuð."
+
+msgid "notification.type.public"
+msgstr "Tilkynningar"
+
+msgid "notification.type.userComment"
+msgstr "Lesandi hefur skráð athugasemd við \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "Innsendingar"
+
+msgid "notification.type.submissionComment"
+msgstr "Ritstjóri hefur skrifað athugasemd við \"{$title}.\""
+
+msgid "notification.type.site"
+msgstr "Viðburðir á síðu"
+
+msgid "notification.type.reviewing"
+msgstr "Ritrýni"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Búið er að senda inn nýja grein, \"{$title}\"."
+
+msgid "notification.type.editing"
+msgstr "Ritstjórn"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Ritrýnd grein"
+
+msgid "log.imported"
+msgstr "{$userName} hefur flutt inn grein {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} hefur skilað {$submissionId} fyrir verkröð."
+
+msgid "log.editor.restored"
+msgstr "Innsending {$submissionId} hefur verið sett aftur í verkröðina."
+
+msgid "log.editor.archived"
+msgstr "Innsending {$submissionId} hefur verið vistuð í safni (archived)."
+
+msgid "log.editor.editorFile"
+msgstr "Búið er að hlaða upp útgáfu ritstjóra af handriti."
+
+msgid "log.editor.metadataModified"
+msgstr "Lýsigögnum fyrir þessa grein var breytt af {$editorName}."
+
+msgid "log.copyedit.authorFile"
+msgstr "Búið er að hlaða upp yfirfarinni útgáfu af handriti."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Útgáfu textatæknis á handriti hefur verið hlaðið upp."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} hefur verið úthlutað til að fara yfir innsendingu "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} hefur lokið loka yfirferð fyrir innsendingu "
+"{$submissionId}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} hefur lokið fyrstu yfirferð fyrir innsendingu "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Sjálfgefin skrá fyrir yfirferð er valin."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Yfirferð fyrir innsendingu {$submissionId} er hafin. Textatæknir er "
+"{$copyeditorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Ráðleggingar ritsjóra ({$decision}) fyrir grein {$submissionId} var skráð af "
+"{$editorName}."
+
+msgid "log.editor.decision"
+msgstr ""
+"Ákvörðun ritstjóra ({$decision}) fyrir grein {$submissionId} var skráð af "
+"{$editorName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Ritrýniskrá hefur verið hlaðið upp."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Ritstjóri, {$userName}, hefur hlaðið upp ritrýniskrá í umferð {$round} fyrir "
+"{$submissionId} fyrir hönd ritrýnis. Ritrýnir {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} hefur samþykkt ritrýni í umferð {$round} fyrir {$submissionId} "
+"fyrir hönd ritrýnis. Ritrýnir {$reviewerName}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} hefur hafnað ritrýni í umferð {$round} fyrir {$submissionId} "
+"fyrir hönd ritrýnis. Ritrýnir {$reviewerName}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} hefur samþykkt ritrýni í umferð {$round} fyrir "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} hefur hafnað ritrýni í umferð {$round} fyrir {$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Innsending {$submissionId} hefur verið send aftur í ritrýni."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Ráðleggingum fyrir umferð {$round} af ritrýni fyrir {$submissionId} hefur "
+"verið skilað af ritstjóra, {$editorName}, fyrir hönd ritrýnis. Ritrýnir "
+"{$reviewerName}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Ráðleggingum fyrir umferð {$round} af ritrýni fyrir {$submissionId} "
+"framkvæmd af {$reviewerName} hefur verið skilað."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Skiladagur fyrir ritrýniumferð {$round} fyrir {$submissionId} framkvæmd af "
+"{$reviewerName} er {$dueDate}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} hefur fengið einkunn fyrir ritrýniumferð {$round} fyrir "
+"{$submissionId}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Umferð {$round} ritrýnd af {$reviewerName} fyrir innsendingu {$submissionId} "
+"er hafin."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} hefur verið aftengdur frá ritrýni á innsendingu "
+"{$submissionId} í ritrýni umferð {$round}."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} hefur lagað grein {$submissionId}. Kenni á nýju skránni er "
+"{$fileId}."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Sláðu inn fulla slóð fyrir möppu sem er til þar sem geyma skal þær skrár sem "
+"hlaðið verður upp.  Mappan á ekki að vera aðgengileg beint frá vef.  <strong>"
+"Vinsamlega vertu viss um að mappan sé til, og hægt að skrifa í hana áður en "
+"þú setur upp. </strong> Windowsslóðin á að innihalda skástrik sem halla "
+"fram, t.d. \"C:/mitttimarit/skrar\"."
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Veldu hvaða viðbótartungumál sem er fyrir kerfið.  Valin tungumál verða "
+"aðgengileg fyrir þau tímarit sem eru vistuð á síðunni.  Vefstjóri tí"
+"maritsins/síðunnar getur bætti við viðbótartungumáli hvenær sem er."
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Aðaltungumál fyrir þetta kerfi. Vinsamlega skoðaðu skjölun af OJS ef þú "
+"leitar að tungumáli sem er ekki á þessum lista."
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Ef þú ert að uppfæra OJS kerfi sem búið er að setja upp, <a href=\""
+"{$upgradeUrl}\">smelltu hér</a> til að halda áfram."
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS uppfærsla"
+
+msgid "installer.appInstallation"
+msgstr "OJS uppsetning"
+
+msgid "payment.subscription.expires"
+msgstr "Rennur út"
+
+msgid "payment.subscription.renew"
+msgstr "Endurnýja áskrift"
+
+msgid "payment.subscription.purchase"
+msgstr "Kaupa áskrift"
+
+msgid "payment.membership.ends"
+msgstr "Lýkur"
+
+msgid "payment.membership.renewMembership"
+msgstr "Endurnýja einstaklingsaðild"
+
+msgid "payment.membership.buyMembership"
+msgstr "Kaupa einstaklingsaðild"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Útgáfugjald greitt"
+
+msgid "payment.publication.payPublication"
+msgstr "Greiða fyrir birtingu"
+
+msgid "payment.submission.paySubmission"
+msgstr "Greiða innsendingargjald"
+
+msgid "payment.donation.makeDonation"
+msgstr "Gefa frjálst framlag"
+
+msgid "payment.notFound"
+msgstr ""
+"Búið er að biðja um greiðslu en beiðnin er útrunnin.  Hafðu samband við "
+"stjórnanda tímaritsins fyrir nánari upplýsingar."
+
+msgid "payment.requestPublicationFee"
+msgstr "Útgáfugjald ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Frjáls framlög"
+
+msgid "payment.type.subscription"
+msgstr "Áskriftargjald"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Gjald fyrir tölublað"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Gjald fyrir grein"
+
+msgid "payment.type.membership"
+msgstr "Einstaklingsgjald"
+
+msgid "payment.type.fastTrack"
+msgstr "Gjald fyrir flýtimeðferð"
+
+msgid "payment.type.publication"
+msgstr "Útgáfugjald"
+
+msgid "payment.type.submission"
+msgstr "Innsendingargjald"
+
+msgid "payment.authorFees"
+msgstr "Gjöld höfunda"
+
+msgid "payment.paymentSent"
+msgstr "Búið að senda greiðslu"
+
+msgid "payment.paymentReceived"
+msgstr "Greiðsla móttekin"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Hafi greiðsla þegar verið send tímaritinu, veldu þetta box til að klára "
+"innsendinguna. Innsending verður ekki skoðuð fyrr en greiðsla berst.  "
+"Smelltu á GREIÐA NÚNA til að sjá leiðbeiningar varðandi greiðslur."
+
+msgid "payment.alreadyPaid"
+msgstr "Búið að greiða"
+
+msgid "payment.waive"
+msgstr "Fella niður"
+
+msgid "payment.payNow"
+msgstr "Greiða núna"
+
+msgid "payment.waived"
+msgstr "Fellt niður"
+
+msgid "payment.unpaid"
+msgstr "Ógreitt"
+
+msgid "payment.paid"
+msgstr "Greitt"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Framlög krefjast innskráningar."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Til að fá aðgang að þessu tölublaði þarf að vera í áskrift eða kaupa efni.  "
+"Vinsamlega skráðu þig inn til að staðfesta áskrift, fyrri kaup eða til að "
+"kaupa tölublaðið."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Til að fá aðgang að þessu efni þarf að vera í áskrift eða kaupa efni.  "
+"Vinsamlega skráðu þig inn til að staðfesta áskrift, fyrri kaup eða til að "
+"kaupa grein."
+
+msgid "donations.thankYouMessage"
+msgstr "Takk fyrir framlagið.  Við kunnum vel að meta það."
+
+msgid "donations.thankYou"
+msgstr "Takk fyrir"
+
+msgid "help.goToEditPage"
+msgstr "Breyta {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Til baka í leitarniðurstöður"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS hjálp"
+
+msgid "help.ojsHelp"
+msgstr "OJS hjálp"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Þessi síða notar \"Open Journal Systems\" {$ojsVersion}, sem er opinn "
+"hugbúnaðaru fyrir umsýslu og útgáfu tímarita.  Kerfið er þróað, stutt af og "
+"í ókeypis dreifingu frá Public Knowledge Project (PKP) undir leyfisskilmálum "
+"GNU General Publi License.   Skoðið vefsíðu  PKP til að  <a href=\""
+"http://pkp.sfu.ca/\">læra meira um hugbúnaðinn</a>.  Vinsamlega hafið beint "
+"samband við okkur með spurningar sem sem varða þetta tímarit og um "
+"innsendingu efnis í það."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Þetta tímarit notar \"Open Journal Systems\" {$ojsVersion}, sem er opinn "
+"hugbúnaður fyrir umsýslu og útgáfu tímarita.  Kerfið er þróað, stutt af og í "
+"ókeypis dreifingu frá Public Knowledge Project (PKP) undir leyfisskilmálum "
+"GNU General Publi License.   Skoðið vefsíðu  PKP til að <a href=\""
+"http://pkp.sfu.ca/\">læra meira um hugbúnaðinn</a>.  Vinsamlega <a href=\""
+"{$contactUrl}\">hafið beint samband við tímaritið</a> með spurningar sem "
+"varða það og mögulega innsendingu efnis til tímaritsins."
+
+msgid "about.aboutSoftware"
+msgstr "Um kerfið (OJS)"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Ritstjórnar og útgáfuferli OJS"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Nánari upplýsingar um útgáfukerfið, verkfang og verkferla OJS/PKP."
+
+msgid "about.memberships"
+msgstr "Félagsaðild"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Áskriftarleið"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kostnaður"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Tímabil"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Snið"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nafn"
+
+msgid "about.subscriptionsContact"
+msgstr "Tengiliður fyrir áskriftir"
+
+msgid "about.subscriptions.institutional"
+msgstr "Stofnanaáskriftir"
+
+msgid "about.subscriptions.individual"
+msgstr "Einstaklingsáskriftir"
+
+msgid "about.subscriptions"
+msgstr "Áskriftir"
+
+msgid "about.archiving"
+msgstr "Útgefið efni"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mánuði/mánuðum eftir að tölublað er gefið út."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Allar greinar sem birtar eru í tímaritinu eru í opnum aðgangi"
+
+msgid "about.delayedOpenAccess"
+msgstr "Seinkaður opinn aðgangur"
+
+msgid "about.openAccessPolicy"
+msgstr "Stefna um opinn aðang"
+
+msgid "about.publicationFrequency"
+msgstr "Útgáfutíðni"
+
+msgid "about.peerReviewProcess"
+msgstr "Ritrýniferli"
+
+msgid "about.authorFeesMessage"
+msgstr "Þetta tímarit innheimtir eftirfarandi gjöld af höfundum."
+
+msgid "about.authorFees"
+msgstr "Höfundagjöld"
+
+msgid "about.privacyStatement"
+msgstr "Persónuvernd"
+
+msgid "about.copyrightNotice"
+msgstr "Höfundaréttur"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Til að senda inn grein eða efni í tímaritið þurfa höfundar að staðfesta "
+"eftirfarandi atriði. Greinar sem ekki standast þessar kröfur verða "
+"endursendar höfundum."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Minnislisti höfunda"
+
+msgid "about.authorGuidelines"
+msgstr "Leiðbeiningar til höfunda"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Skoða þínar innsendingar"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Ný innsending"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Senda inn nýtt efni fyrir kafla <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} eða {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} eða {$register} til að senda inn grein."
+
+msgid "about.onlineSubmissions.register"
+msgstr "Nýskráning"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Innskráning"
+
+msgid "about.submissions"
+msgstr "Senda inn efni"
+
+msgid "about.sectionPolicies"
+msgstr "Stefnur"
+
+msgid "about.focusAndScope"
+msgstr "Áherslur og svið"
+
+msgid "about.editorialPolicies"
+msgstr "Ritstjórnarstefna"
+
+msgid "about.editorialTeam.biography"
+msgstr "Ágrip (bio)"
+
+msgid "about.editorialTeam"
+msgstr "Ritstjórnarteymi"
+
+msgid "about.history"
+msgstr "Saga tímaritsins"
+
+msgid "about.aboutContext"
+msgstr "Um tímaritið"
+
+msgid "about.contact"
+msgstr "Hafa samband"
+
+msgid "about.statistics"
+msgstr "Tölfræði"
+
+msgid "archive.issueUnavailable"
+msgstr "Tölublað ekki aðgengilegt"
+
+msgid "archive.browse"
+msgstr "Skoða eldri tölublöð"
+
+msgid "archive.archivesPageNumber"
+msgstr "Útgefið efni - síða {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Útgefið efni"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Þetta tímarit hefur enn ekki gefið út neitt tölublað."
+
+msgid "current.noCurrentIssue"
+msgstr "Engin ný tölublöð"
+
+msgid "current.current"
+msgstr "Nýjast"
+
+msgid "site.noJournals"
+msgstr "Það eru engin tímarit í boði."
+
+msgid "site.journalCurrent"
+msgstr "Nýjasta tölublað"
+
+msgid "site.journalRegister"
+msgstr "Nýskráning"
+
+msgid "site.journalView"
+msgstr "Skoða tímarit"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Skráin sem þú valdir ætti að hlaðast niður sjálfkrafa. Ef hún gerir það "
+"ekki, smelltu þá á tengilinn fyrir neðan. Athugaðu að þessi skrá gæti kallað "
+"á sérstakan lesara eða forritunarviðbót til að þú getir skoðað hana. <br /><"
+"br />Ef skráin hleðst ekki niður sjálfkrafa, <a href=\"{$url}\">smelltu "
+"hér</a>."
+
+msgid "article.nonpdf.title"
+msgstr "Hlaða niður grein"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>PDF skráin sem þú valdir ætti að hlaðast inn hér, ef vafrinn þinn er með "
+"uppsettann PDF lesara (t.d. nýlega útgáfu af  <a href=\"https://get.adobe."
+"com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.download"
+msgstr "Hlaða niður PDF skrá"
+
+msgid "article.pdf.title"
+msgstr "PDF skjalasnið"
+
+msgid "article.pageTitle"
+msgstr "Skoða {$title}"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Leitarráð: <ul>\n"
+"<li>Stórir eða litlir bókstafir skipta ekki máli</li>\n"
+"<li>Horft er framhjá algengum orðum</li>\n"
+"<li>Sjálfgefið er að aðeins birtast greinar sem innihalda <em>öll</em> "
+"leitarskilyrði í fyrirspurn (þ.e.a.s.., <em>OG</em> er sett á milli "
+"skilyrða)</li>\n"
+"<li>Þú getur blandað orðum saman með <em>OR</em> til að finna greinar sem "
+"innihalda annað hvort skilyrðið;  t.d., <em>mentunedu OR rannsóknir</em></li>"
+"\n"
+"<li>Notaðu sviga til að búa til flóknari fyrirspurninr; t.d., <em>útgefið "
+"efni ((tímarit OR ráðstefna) NOT doktorsritgerð)</em></li>\n"
+"<li>Leitaðu að nákvæmum frasa með þvi að setja hann í gæsalappir; t.d., <em>"
+"\"Opinn aðgangur\"</em></li>\n"
+"<li>Undanskildu orð með því að nota forskeytið  <strong>-</strong> eða "
+"<em>NOT</em>; t.d. <em>rafræn -stjórnsýsla</em> eða  <em>rafræn NOT "
+"stjórnsýsla</em></li>\n"
+"<li>Notaðu <strong>*</strong> í skilyrði sem algildisstaf til að gilda fyrir "
+"hvaða stafi sem er; t.d., <em>vi* siðferði</em> myndi finna skjöl sem "
+"innihéldu vinnusiðferði eða viðskiptasiðferði\"</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "Nánar um höfund"
+
+msgid "search.authorIndex"
+msgstr "Skoða höfundalykil"
+
+msgid "search.allJournals"
+msgstr "Öll tímrit"
+
+msgid "search.withinJournal"
+msgstr "Innan"
+
+msgid "search.searchFor"
+msgstr "Leita í greinum eftir"
+
+msgid "search.browseAuthorIndex"
+msgstr "Skoða höfundalykil"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Bæta við"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Eyða"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Vinsamlega sláðu inn gilda IP talnaröð."
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ef IP tölur eru notaðar er lén valkvætt.<br />Gild númer eru IP-slóðir (t.d. "
+"142.58.103.1), IP talnaröð (t.d. 142.58.103.1 - 142.58.103.4), IP talnaröð "
+"með stjörnu '*' (t.d. 142.58.*.*), og IP röð með CIDR (e.g. 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP tölur"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Valin áskriftarleið kallar á lén og/eða IP tölur til auðkenningar fyrir "
+"áskrift."
+
+msgid "user.subscriptions.form.domain"
+msgstr "Lén"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Ef lén er notað eru IP tölur valkvæðar.<br /> Gild heiti eru heiti léna ("
+"t.d. rmf.is)."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Póstfang"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Heiti stofnunar"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Búið er að skila ritrýnieyðublaði fyrir \"{$title}.\""
+
+msgid "notification.type.galleyModified"
+msgstr "Lokapróförk/Galley var uppfært fyrir \"{$title}.\""
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Athugasemd hefur verið skráð við ákvörðun ritstjóra fyrir \"{$title}.\""
+
+msgid "site.journalsHosted"
+msgstr "Tímarit á þessari vefsíðu"

@@ -1,0 +1,361 @@
+# Emma U <emmaupkp@gmail.com>, 2022.
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-22 15:04+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Setjari hleður hér upp skrám sem búið er að undirbúa fyrir birtingu. Notaðu  "
+"<em>'Úthluta eftirlitsaðila</em> til að tilgreina höfund og aðra til að "
+"prófarkalesa lokaprófarkir í þessu galley, með leiðréttum skrám sem búið er "
+"að hlaða upp til samþykkis fyrir birtingu."
+
+msgid "publication.event.scheduled"
+msgstr "Innsendingin hefur verið sett á birtingaráætlun."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Lýsigögn innsendingarinnar voru uppfærð."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Það þarf að vera a.m.k. einn höfundur."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Þessar upplýsingar byggjast á Dublin Core lýsigögnum, sem er alþjóðlegur "
+"staðll notaður til að lýsa innihaldi tímarits."
+
+msgid "publication.unpublish"
+msgstr "Taka úr birtingu"
+
+msgid "submission.queries.production"
+msgstr "Framleiðsluumræður"
+
+msgid "publication.version.details"
+msgstr "Nánar um útgáfuna fyrir útgáfu {$version}"
+
+msgid "publication.unschedule.confirm"
+msgstr "Ertu viss um að þú viljir ekki setja þetta á útgáfuáætlun?"
+
+msgid "publication.unpublish.confirm"
+msgstr "Ert þú viss um að þú viljir taka þetta úr birtingu?"
+
+msgid "submission.copyrightOther.description"
+msgstr "Tengja höfundarétt á útgefnu handriti á eftirfarandi aðila."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Höfundaréttur er sjálfkrafa settur á {$copyright} þegar þetta er gefið út."
+
+msgid "submission.license.description"
+msgstr ""
+"Leyfið verður sjálfkrafa  <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> þegar þetta er gefið út."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Innsendingin þarf að vera  í yfirferð eða á framleiðsluþrepi áður en hægt er "
+"að birta hana."
+
+msgid "publication.required.declined"
+msgstr "Ekki er hægt að gefa út handrit sem hefur verið hafnað."
+
+msgid "publication.publish.requirements"
+msgstr "Eftirfarandi kröfur þarf að uppfylla áður en hægt er að birta þetta."
+
+msgid "publication.publish"
+msgstr "Gefa út/Birta"
+
+msgid "publication.invalidSubmission"
+msgstr "Það fannst ekki innsending fyrir þessa birtingu."
+
+msgid "publication.event.versionScheduled"
+msgstr "Ný útgáfa hefur verið sett á birtingaráætlun."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Útgáfa var tekin úr birtingu."
+
+msgid "publication.event.versionPublished"
+msgstr "Ný útgáfa hefur verið birt."
+
+msgid "publication.event.unpublished"
+msgstr "Innsendingin hefur verið tekin úr birtingu."
+
+msgid "publication.event.published"
+msgstr "Innsendingin hefur verið gefin út."
+
+msgid "publication.editDisabled"
+msgstr "Búið er að gefa út þessa útgáfu og ekki hægt að breyta henni."
+
+msgid "publication.datePublished"
+msgstr "Útgáfudagur"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Ártal höfundaréttar er sett sjálfkrafa og byggist á útgáfudegi."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Ártal höfundaréttar er sett sjálfkrafa þegar þetta er gefið út í tölublaði."
+
+msgid "submission.publications"
+msgstr "Útgefið efni"
+
+msgid "publication.status.unscheduled"
+msgstr "Ekki í áætlun"
+
+msgid "submission.status.scheduled"
+msgstr "Í áætlun"
+
+msgid "publication.status.published"
+msgstr "Útgefið"
+
+msgid "submission.publication"
+msgstr "Útgefið efni"
+
+msgid "publication.selectIssue"
+msgstr "Veldu tölublað til að setja í birtingaráætlun"
+
+msgid "publication.unscheduledIn"
+msgstr "Þetta hefur ekki verið sett á birtingaráætlun í tölublaði."
+
+msgid "publication.scheduledIn"
+msgstr "Á birtingaráætlun fyrir  <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publishedIn"
+msgstr "Birt í <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.required.issue"
+msgstr "Útgáfan verður að vera tengd tölublaði áður en hægt er að birta hana."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt strax "
+"vegna þess að útgáfudagsetningin er {$datePublished}. Ertu viss um að þú "
+"viljir birta þetta?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt strax "
+"í tölublaði {$issue}. Ertu  viss um að þú viljir birta þetta?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt þegar "
+"tölublað: {$issue} er birt. Ertu viss um að þú viljir setja þetta í "
+"birtingaráætlun?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Búið er að uppfylla allar kröfur varðandi útgáfuna. Ertu viss um að þú "
+"viljir birta þetta?"
+
+msgid "publication.invalidIssue"
+msgstr "Tölublað fyrir þessa útgáfu finnst ekki."
+
+msgid "publication.invalidSection"
+msgstr "Kaflinn fyrir þessa útgáfu fannst ekki."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Útgáfudagur er settur sjálfkrafa þegar tölublað er gefið út. Ekki slá inn "
+"útgáfudag nema greinin hafi verið birt áður annarsstaðar og þú þurfir að "
+"setja dagsetningu aftur í tímann."
+
+msgid "publication.changeIssue"
+msgstr "Breyta tölublaði"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Þetta hefur verið tengt við  <a href=\"{$issueUrl}\">{$issueName}</a> en er "
+"ekki búið að setja í birtingaráætlun."
+
+msgid "publication.assignToissue"
+msgstr "Tengja við tölublað"
+
+msgid "galley.publicationNotFound"
+msgstr "Útgáfa fyrir þetta galley finnst ekki."
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Ekki er hægt að breyta lokapróförkum þessarar útgáfu þar sem búið er að "
+"birta hana."
+
+msgid "catalog.category.heading"
+msgstr "Öll atriði"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Atriði"
+
+msgid "submission.sectionOptions"
+msgstr "Valmöguleikar kafla"
+
+msgid "section.any"
+msgstr "Hvaða kafli sem er"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Þetta er forskoðun og hefur ekki verið birt. <a href=\"{$url}\">Skoða "
+"innsendingu</a>"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Ekki var hægt að sækja umbeðið snið á tilvitnunum."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vinsamlega veldur hlutverk fyrir þennan framlagsaðila."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Útdrátturinn er of langur. Vinsamlega styttu hann niður fyrir tilgreindan "
+"leyfilegan orðafjölda."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vinsamlega settu inn útdrátt fyrir greinina."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vinsamlega sláðu inn titil á greinina."
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Það þarf að skrá fornafn, eftirnafn og netfang hvers höfundar."
+
+msgid "submission.submit.contributorRole"
+msgstr "Hlutverk framlagsaðila"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Persónuvernd"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+"Þú verður að lesa og staðfesta að þú hafir uppfyllt öll atriðin á "
+"gátlistanum áður en þú heldur áfram."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Gátilsti fyrir höfunda"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Vinsamlega veldu tungumál innsendingar."
+
+msgid "submission.incomplete"
+msgstr "Bíður samþykkis"
+
+msgid "submission.complete"
+msgstr "Samþykkt"
+
+msgid "submission.upload.fileContents"
+msgstr "Íhluti greinar"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Senda í ritrýni"
+
+msgid "workflow.review.externalReview"
+msgstr "Ritrýni"
+
+msgid "submission.confirmSubmit"
+msgstr "Ertu viss um að þú viljir senda þessa grein til tímaritsins?"
+
+msgid "submission.pageProofs"
+msgstr "Prófarkalestur"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Hladdu upp skrám sem tengjast þessari innsendingu, þ.á.m. greininni, "
+"margmiðlunarefni, gagnasettum, myndum o.s.frv."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Titill og útdráttur"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Búið er að samþykkja þessa próförk fyrir galleyið."
+
+msgid "grid.action.approveProof"
+msgstr "Samþykkja að taka þessa próförk með í galley."
+
+msgid "submission.galleyFiles"
+msgstr "Galleyskrár - lokaprófarkir"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Gera þetta galley aðgengilegt"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Þetta galley verður  <em>aðgengilegt</em> lesendum.</p>"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Þetta galley verður  <em>ekki lengur aðgengilegt</em> lesendum.</p>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Samþykki á uppsetningu"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Auðkenni innsendingar hefur verið uppfært."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr ""
+"Galley  fyrir greinar: \"{$galleyFormatName}\"  er ekki lengur aðgengilegt."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Galley  fyrir greinar: \"{$galleyFormatName}\"  er aðgengilegt."
+
+msgid "grid.action.issueEntry"
+msgstr "Skoða lýsigögn innsendingar"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galley birtist fremst í tölublaði"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Tímaritið hefur fengið tilkynningu um innsendingu frá þér og þú færð "
+"staðfestingu í tölvupósti.  Þegar ritstjóri hefur farið yfir innsendinguna "
+"verður haft samband við þig."
+
+msgid "submission.issueEntry"
+msgstr "Lýsigögn"
+
+msgid "submission.submit.noContext"
+msgstr "Tímarit innsendingar fannst ekki."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Útdrátturinn þarf að vera {$wordCount} orð eða minna."
+
+msgid "grid.action.workflow"
+msgstr "Verkferli innsendingar"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Ný innsending"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Hefja nýja innsendingu til"
+
+msgid "submission.title.tip"
+msgstr ""
+"Tegund innsendingar er yfirleitt eitt af eftirfarandi: \"mynd\", \"texti\", "
+"eða önnur margmiðlunartegund, þar á meðal \"hugbúnaður\" eða \"gangvirkt\". "
+"Vinsamlega veldu það sem passar best við þína innsendingu.  Þú getur fundið "
+"dæmi á <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/"
+"12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/"
+"12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Titill geinar"
+
+msgid "submission.upload.selectComponent"
+msgstr "Veldu íhlut greinar"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Veldu í hvaða hlutverki þú ætlar að vera sem innsendandi greinar."
+
+msgid "submission.submit.userGroup"
+msgstr "Senda inn í hlutverki mínu sem...."
+
+msgid "submission.submit.title"
+msgstr "Senda inn grein"
