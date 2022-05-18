@@ -2115,17 +2115,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Skonfiguruj wtyczkę DOI aby móc zarządzać DOI w OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Zawartość czasopisma"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Wybierz obiekt dla którego powinno zostać przypisane DOI."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Wybierz publikowane obiekty, dla których zostanie przypisane DOI:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Numery"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artykuły"
@@ -2136,17 +2131,8 @@ msgstr "Pliki"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefiks DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Prefiks DOI jest przydzielany przez organizacje rejestrujące, np. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a> i posiada format 10.xxxx (np. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Prefiks DOI jest wymagany i musi posiadać formę 10.xxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Sufiks DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Sufiks DOI może przyjmować dowolną formę, ale musi być jednakowy dla wszystkich obiektów z takim samym prefiksem:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Podaj wzór do generowania sufiksu DOI. Użyj %j dla inicjałów czasopisma, %v dla wolumenu, %i dla numeru, %Y dla roku, %a dla ID artykułu, %g dla ID pliku z tekstem, %f dla ID pliku OJS, %p dla numeru strony oraz %x dla własnego parametru."
@@ -2162,15 +2148,6 @@ msgstr "dla artykułów"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "dla plików finalnych"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Korzystaj z domyślnego wzoru."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i dla numerów<br />%j.v%vi%i.%a dla artykułów<br />%j.v%vi%i.%a.g%g dla plików finalnych."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Podaj indywidualny sufiks DOI dla każdego z opublikowanych elementów. W zakładce metadanych znajdziesz odpowiednie pole, gdzie będziesz mógł podać własny sufiks DOI dla obiektu."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Podaj wzór sufiksu DOI dla numerów."

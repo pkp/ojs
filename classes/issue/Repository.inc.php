@@ -331,7 +331,7 @@ class Repository
         $context = $contextDao->getById($issue->getData('journalId'));
 
         if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE) && empty($issue->getData('doiId'))) {
-            $doiId = Repo::doi()->mintIssueDoi($issue);
+            $doiId = Repo::doi()->mintIssueDoi($issue, $context);
             if ($doiId !== null) {
                 $issue->setData('doiId', $doiId);
                 $this->dao->update($issue);

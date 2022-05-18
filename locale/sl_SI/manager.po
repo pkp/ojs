@@ -1983,17 +1983,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Za upravljanje in uporabo DOI-jev prosimo nastavite DOI vtičnik:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Vsebina revije"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Številke"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Prispevki"
@@ -2004,17 +1999,8 @@ msgstr "Prelomi"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI predpona"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "DOI predpono dodeli registracijska agencija (npr. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) in je oblike 10.xxxx (npr. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI predpona je obvezna in mora biti oblike 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI pripona"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "DOI pripona je poljubne oblike, pomembno je, da je unikatna med vsemi objavljenimi objekti, ki so bili izdani znotraj ene DOI predpone:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Uporabi vpisani vzorec spodaj za kreiranje DOI pripone. Uporabite %j za inicilake  revije, %v za številko zvezka, %i za številko revije, %Y za leto, %a za OJS ID prispevka, %g za OJS ID preloma, %f za OJS ID datoteke, %p za številko strani in %x za \"Identifikator po meri\"."
@@ -2030,15 +2016,6 @@ msgstr "za prispevke"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "za prelome"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Uporabi privzet vzorec."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i za številke<br />%j.v%vi%i.%a za prispevke<br />%j.v%vi%i.%a.g%g za prelome."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Za vsak izdan objekt vnesite svojo DOI priponko. Pri metapodatkih vsakega objekta boste našli DOI vnosno polje."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Prosimo vnesite vzorec za DOI pripono za številke."

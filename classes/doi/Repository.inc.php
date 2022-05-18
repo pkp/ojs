@@ -33,7 +33,7 @@ class Repository extends \PKP\doi\Repository
 {
     public const TYPE_ISSUE = 'issue';
 
-    public const LEGACY_CUSTOM_ISSUE_PATTERN = 'doiIssueSuffixPattern';
+    public const CUSTOM_ISSUE_PATTERN = 'doiIssueSuffixPattern';
 
     public function __construct(DAO $dao, Request $request, PKPSchemaService $schemaService)
     {
@@ -47,6 +47,12 @@ class Repository extends \PKP\doi\Repository
     {
         assert(!is_null($submission));
 
+        // Default suffix does not rely on any other metadata
+        if ($context->getData(Context::SETTING_DOI_SUFFIX_TYPE) === Repo::doi()::SUFFIX_DEFAULT) {
+            return $this->mintAndStoreDoi($context, $this->generateDefaultSuffix());
+        }
+
+        // If not using default suffix, additional checks are required
         $issueId = $publication->getData('issueId');
         if ($issueId === null) {
             return null;
@@ -59,7 +65,7 @@ class Repository extends \PKP\doi\Repository
             return null;
         }
 
-        $doiSuffix = $this->generateSuffixPattern($publication, $context, $context->getData(Context::SETTING_CUSTOM_DOI_SUFFIX_TYPE), $issue, $submission);
+        $doiSuffix = $this->generateSuffixPattern($publication, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue, $submission);
 
         return $this->mintAndStoreDoi($context, $doiSuffix);
     }
@@ -70,6 +76,13 @@ class Repository extends \PKP\doi\Repository
     public function mintGalleyDoi(Galley $galley, Publication $publication, Submission $submission, Context $context): ?int
     {
         assert(!is_null($submission));
+
+        // Default suffix does not rely on any other metadata
+        if ($context->getData(Context::SETTING_DOI_SUFFIX_TYPE) === Repo::doi()::SUFFIX_DEFAULT) {
+            return $this->mintAndStoreDoi($context, $this->generateDefaultSuffix());
+        }
+
+        // If not using default suffix, additional checks are required
         $issue = Repo::issue()->getBySubmissionId($submission->getId());
 
         if ($issue === null) {
@@ -78,7 +91,7 @@ class Repository extends \PKP\doi\Repository
             return null;
         }
 
-        $doiSuffix = $this->generateSuffixPattern($publication, $context, $context->getData(Context::SETTING_CUSTOM_DOI_SUFFIX_TYPE), $issue, $submission, $galley);
+        $doiSuffix = $this->generateSuffixPattern($galley, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue, $submission, $galley);
 
         return $this->mintAndStoreDoi($context, $doiSuffix);
     }
@@ -86,18 +99,19 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given Issue
      */
-    public function mintIssueDoi(Issue $issue): ?int
+    public function mintIssueDoi(Issue $issue, Context $context): ?int
     {
-        /** @var JournalDAO $contextDao */
-        $contextDao = DAORegistry::getDAO('JournalDAO');
-        /** @var Journal $context */
-        $context = $contextDao->getById($issue->getData('journalId'));
-
         if ($context->getId() != $issue->getJournalId()) {
             return null;
         }
 
-        $doiSuffix = $this->generateSuffixPattern($issue, $context, $context->getData(Context::SETTING_CUSTOM_DOI_SUFFIX_TYPE), $issue);
+        // Default suffix does not rely on any other metadata
+        if ($context->getData(Context::SETTING_DOI_SUFFIX_TYPE) === Repo::doi()::SUFFIX_DEFAULT) {
+            return $this->mintAndStoreDoi($context, $this->generateDefaultSuffix());
+        }
+
+        // If not using default suffix, use pattern generator
+        $doiSuffix = $this->generateSuffixPattern($issue, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue);
 
         return $this->mintAndStoreDoi($context, $doiSuffix);
     }
@@ -128,14 +142,11 @@ class Repository extends \PKP\doi\Repository
     ): string {
         $doiSuffix = '';
         switch ($patternType) {
-            case self::SUFFIX_DEFAULT_PATTERN:
-                $doiSuffix = PubIdPlugin::generateDefaultPattern($context, $issue, $submission, $representation);
-                break;
             case self::SUFFIX_CUSTOM_PATTERN:
                 $pubIdSuffixPattern = $this->getPubIdSuffixPattern($object, $context);
                 $doiSuffix = PubIdPlugin::generateCustomPattern($context, $pubIdSuffixPattern, $object, $issue, $submission, $representation);
                 break;
-            case self::CUSTOM_SUFFIX_MANUAL:
+            case self::SUFFIX_MANUAL:
                 break;
         }
 
@@ -226,7 +237,7 @@ class Repository extends \PKP\doi\Repository
     public function depositAll(Context $context)
     {
         parent::depositAll($context);
-        if (in_array(Repo::doi()::TYPE_ISSUE, $context->getData(Context::SETTING_ENABLED_DOI_TYPES))) {
+        if (in_array(Repo::doi()::TYPE_ISSUE, $context->getData(Context::SETTING_ENABLED_DOI_TYPES) ?? [])) {
             // If there is no configured registration agency, nothing can be deposited.
             $agency = $context->getConfiguredDoiAgency();
             if (!$agency) {
@@ -270,11 +281,11 @@ class Repository extends \PKP\doi\Repository
     private function getPubIdSuffixPattern(DataObject $object, Context $context)
     {
         if ($object instanceof Issue) {
-            return $context->getData(Repo::doi()::LEGACY_CUSTOM_ISSUE_PATTERN);
+            return $context->getData(Repo::doi()::CUSTOM_ISSUE_PATTERN);
         } elseif ($object instanceof Representation) {
-            return $context->getData(Repo::doi()::LEGACY_CUSTOM_REPRESENTATION_PATTERN);
+            return $context->getData(Repo::doi()::CUSTOM_REPRESENTATION_PATTERN);
         } else {
-            return $context->getData(Repo::doi()::LEGACY_CUSTOM_PUBLICATION_PATTERN);
+            return $context->getData(Repo::doi()::CUSTOM_PUBLICATION_PATTERN);
         }
     }
 }

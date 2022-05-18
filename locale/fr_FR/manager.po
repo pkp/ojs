@@ -2030,19 +2030,6 @@ msgstr "Veuillez entrer le modèle de suffixe DOI pour les articles."
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Veuillez entrer le modèle de suffixe DOI pour les numéros."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Entrez un suffixe DOI individuel pour chaque élément publié. Vous trouverez "
-"un champ DOI additionnel sur la page de métadonnées de chaque élément."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br "
-"/>%j.v%vi%i.%a.g%g pour les épreuves."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Utiliser les modèles par défaut."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "pour les épreuves"
 
@@ -2064,22 +2051,8 @@ msgstr ""
 "de l'épreuve, %f pour l'identifiant du fichier, %p pour le numéro de page et "
 "%x pour un numéro personnalisé."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Un suffixe DOI peut prendre n'importe quelle forme, mais doit être unique au "
-"sein de l'ensemble des objets publiés avec le même préfixe :"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Suffixe DOI"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Le préfixe DOI est obligatoire et doit être sous la forme 10.xxxx."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"Le préfixe DOI est attribué par des agences (par exemple <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) et se présente sous "
-"la forme 10.xxxx (par exemple 10.1234) :"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Préfixe DOI"
@@ -2090,17 +2063,12 @@ msgstr "Épreuves"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Articles"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Numéros"
-
 msgid "doi.manager.settings.explainDois"
 msgstr "Veuillez choisir les objets publiés auxquels seront attribués des DOI :"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Veuillez choisir les objets auxquels les DOI doivent être attribués."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Contenu de la revue"
 
 msgid "doi.manager.settings.description"
 msgstr ""

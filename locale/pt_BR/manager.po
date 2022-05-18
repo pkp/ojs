@@ -1952,17 +1952,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Configure o plugin DOI para gerenciar e usar DOIs no OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Conteúdo"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Por favor, escolha os objetos aos quais os DOIs devem ser atribuídos."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Escolha os objetos publicados que terão Identificadores de Objeto Digital (DOI) atribuídos:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Edições"
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artigos"
@@ -1973,17 +1968,8 @@ msgstr "Composições"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefixo DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "O prefixo DOI é atribuído por agências de registro (ex.: <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) e possui o formato 10.xxxx (ex.: 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "O prefixo DOI é obrigatório e deve possuir o formato 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Sufixo DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "O sufixo DOI pode assumir qualquer forma, desde que seja único entre todos todos os objetos publicados com o mesmo prefixo DOI:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Use o padrão informado a seguir para gerar sufixos DOI. Use %j para iniciais da publicação, %v para o volume, %i a edição, %Y para o ano, %a para o ID do artigo OJS, %g para o ID da composição OJS, %f para o ID do arquivo OJS e %p para o número da página."
@@ -1999,12 +1985,6 @@ msgstr "para composições"
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Por examplo, vol%viss%ipp%p poderiam criar um DOI com estrutura 10.1234/vol3iss2pp230"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Use os padrões predefinidos."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i para edições<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g para composições."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Informe o padrão do sufixo DOI para edições."
@@ -2092,9 +2072,6 @@ msgid "doi.editor.assignDoi.assigned"
 msgstr ""
 "O DOI {$pubId} foi atribuído. Para editar o DOI, visite a <a href=\""
 "{$doiManagementLink}\">Página de Gerenciamento de DOI</a>."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Insira um sufixo DOI individual para cada item publicado. Você encontrará um campo para inserir o DOI na página de meta-dados de cada item."
 
 msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "Designar DOIs"

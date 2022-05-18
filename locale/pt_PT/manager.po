@@ -1917,17 +1917,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Configure o plugin DOI para gerir e usar DOIs na sua revista:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Conteúdo da Revista"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Escolha a que publicações os DOI devem ser associados."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Escolha as publicações que terão DOI's associados:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Números"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artigos"
@@ -1938,19 +1933,8 @@ msgstr "Ficheiros para Publicação"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefixo DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "O prefixo DOI é atribuído pelas agências de registo (ex: <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) e é definido no formato 10.xxxx (ex. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "O prefixo DOI é obrigatório e deve ser definido no formato 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Sufixo DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"O sufixo DOI pode ter vários formatos, mas deve ser único para todas as "
-"publicações que usem o mesmo prefixo:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
@@ -1972,14 +1956,6 @@ msgstr "para ficheiros de publicação"
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Por exemplo, vol%viss%ipp%p para criar um DOI tal como 10.1234/vol3iss2pp230"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Usar padrão por omissão."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i para números<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g "
-"para ficheiros de publicação."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Insira o sufixo DOI padrão para números."
@@ -2023,9 +1999,6 @@ msgstr ""
 
 msgid "doi.readerDisplayName"
 msgstr "DOI"
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Insira um sufixo DOI individual para cada publicação. Encontrará um campo de entrada DOI adicional na página de metadados de cada publicação."
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""

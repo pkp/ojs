@@ -42,13 +42,16 @@ msgid "manager.distribution.publishingMode.subscription"
 msgstr "The journal will require subscriptions to access some or all of its contents."
 
 msgid "manager.setup.enableDois.description"
-msgstr "Assign Digital Object Identifiers (DOIs) to articles, issues and galleys."
+msgstr "Allow Digital Object Identifiers (DOIs) to be assigned to work published in this journal."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Select which items will be assigned a DOI. Most journals assign DOIs to articles, but you may wish to assign DOIs to all of the published items."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr "Use default patterns.<br />%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "At the copy-editing stage"
+msgstr "Upon reaching the copyediting stage"
 
 msgid "manager.website.archiving"
 msgstr "Archiving"
@@ -1794,41 +1797,38 @@ msgstr "DOIs"
 msgid "doi.manager.settings.description"
 msgstr "Please configure the DOI plugin to be able to manage and use DOIs in OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Journal Content"
-
+#, fuzzy
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Please choose the objects DOIs should be assigned to."
+msgstr "Select the types of work published in this journal that should be assigned DOIs. Most journals only assign DOIs to articles."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Please select the publishing objects that will have Digital Object Identifiers (DOI) assigned:"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Issues"
-
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Articles"
-
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr "Galleys"
+msgstr "Article Galleys"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Article galleys, such as a published PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI Prefix"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "The DOI Prefix is assigned by registration agencies (e.g. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) and is in the format 10.xxxx (e.g. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "The DOI prefix is mandatory and must be in the form 10.xxxx."
 
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI Suffix"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "A DOI suffix can take any form, but must be unique among all publishing objects with the same DOI prefix assigned:"
-
 msgid "doi.manager.settings.doiSuffixPattern"
-msgstr "Use the pattern entered below to generate DOI suffixes. Use %j for journal initials, %v for the volume number, %i for the issue number, %Y for the year, %a for the OJS article ID, %g for the OJS galley ID, %f for the OJS file ID, %p for the page number and %x for \"Custom Identifier\"."
+msgstr "Enter a custom suffix pattern for each publication type. The custom suffix pattern may use the following symbols to generate a suffix:<br><br> "
+"<code>%j</code> Journal Initials<br> "
+"<code>%v</code> Issue Volume<br> "
+"<code>%i</code> Issue Number<br> "
+"<code>%Y</code> Issue Year<br> "
+"<code>%a</code> Article ID<br> "
+"<code>%g</code> Galley ID<br> "
+"<code>%f</code> File ID<br> "
+"<code>%p</code> Page Number<br> "
+"<code>%x</code> Custom Identifier<br><br> "
+"Beware that custom suffix patterns often lead to problems generating and depositing DOIs. When using a custom suffix pattern, carefully test that editors can generate DOIs and deposit them to a registration agency like Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "For example, vol%viss%ipp%p could create a DOI such as 10.1234/vol3iss2pp230"
@@ -1841,15 +1841,6 @@ msgstr "for articles"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "for galleys"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Use default patterns."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i for issues<br />%j.v%vi%i.%a for articles<br />%j.v%vi%i.%a.g%g for galleys."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Enter an individual DOI suffix for each published item. You'll find an additional DOI input field on each item's meta-data page."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Please enter the DOI suffix pattern for issues."

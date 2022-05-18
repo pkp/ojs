@@ -1878,17 +1878,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Konten Jurnal"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Silahkan pilih objek DOIs yang harus ditugaskan."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Silahkan pilih objek penerbitan yang akan memiliki penugasan Digital Object Identifiers (DOI):"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Terbitan"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artikel"
@@ -1899,17 +1894,8 @@ msgstr "Galai"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Awalan DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) dan dalam format 10.xxxx (contoh 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Awalan DOI wajib dan harus format 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Akhiran DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
@@ -1929,14 +1915,6 @@ msgstr "untuk galai"
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/vol3iss2pp230"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Gunakan pola default."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%"
-"g untuk galai."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Silahkan masukkan pola akhiran DOI untuk terbitan."
@@ -2070,11 +2048,6 @@ msgstr ""
 "terdampak. Setelah konfigurasi DOI disimpan, gunakan tombol ini untuk "
 "menghapus semua DOI yang ada sehingga pengaturan baru akan diberlakukan pada "
 "objek yang ada."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Masukkan sufiks DOI secara individual untuk setiap butir terbitan. Anda akan "
-"menemukan field masukkan tambahan pada halaman meta-data masing-masing butir."
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artikel"

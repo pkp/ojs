@@ -2263,20 +2263,6 @@ msgstr "Vă rugăm să introduceți modelul de sufix DOI pentru articole."
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Vă rugăm să introduceți modelul de sufix DOI pentru numere."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Introduceți un sufix DOI individual pentru fiecare articol publicat. Veți "
-"găsi un câmp suplimentar de intrare DOI pe pagina de metadate a fiecărui "
-"articol."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i pentru numere<br />%j.v%vi%i.%a pentru articole<br "
-"/>%j.v%vi%i.%a.g%g pentru galerii."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Utilizați modele implicite."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "pentru galerii"
 
@@ -2297,22 +2283,8 @@ msgstr ""
 "OJS, %f pentru ID-ul fișierului OJS, %p pentru numărul paginii și %x pentru „"
 "Identificator personalizat”."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Un sufix DOI poate lua orice formă, dar trebuie să fie unic pentru toate "
-"obiectele de publicare cu același prefix DOI atribuit:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Sufixul DOI"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Prefixul DOI este obligatoriu și trebuie să aibă forma 10.xxxx."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"Prefixul DOI este atribuit de agențiile de înregistrare(de ex. <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) și are formatul "
-"10.xxxx (de ex. 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefix DOI"
@@ -2323,18 +2295,13 @@ msgstr "Galerii"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Articole"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Numere"
-
 msgid "doi.manager.settings.explainDois"
 msgstr "Vă rugăm să selectați elementele de publicare cărora li se vor DOI:"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
 "Vă rugăm să alegeți obiectele la care trebuie să li se atribuie DOI-urile."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Conținutul jurnalului"
 
 msgid "doi.manager.settings.description"
 msgstr ""

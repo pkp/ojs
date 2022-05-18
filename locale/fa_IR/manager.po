@@ -1594,17 +1594,12 @@ msgstr "DOI:"
 msgid "doi.manager.settings.description"
 msgstr "برای استفاده و مدیریت شناسه DOI لطفاً تنظیمات آن را پیکربندی نمایید:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "محتوای مجله"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "لطفاً مواردی که بایستی شنایه DOI دریافت کنند را مشخص منید."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "لطفاً مواردی از محتویات چاپی که باید به آنها شناسه DOI اختصاص داده شود انتخاب کنید:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "شماره ها"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "مقالات"
@@ -1615,17 +1610,8 @@ msgstr "کلیشه های چاپی"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "پیشوند DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "پیشوند DOI توسط مراجع ثبت کننده اختصاص داده می شود (برای مثال <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) و فرمت آن به صورت 10.xxxx می باشد (مانند 10.1234)"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "شناسه DOI باید به فرمت 10.xxxx باشد."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "پسوند DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "پشوند DOI میتواند در هر فرمتی باشد فقط باید توجه شود که به ازای یک پیشوند اختصاص داده شده DOI، این پسوندها منحصر به فرد باشد"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "برای تولید پسوندهای DOI از الگوی زیر استفاده کنید. %j برای مجله، %v برای دوره، %i برای شماره، %Y برای سال، %a برای شناسه مقاله، %g برای شناسه کلیشه چاپی، %f برای شناسه فایل، %p برای شماره صفحه و %x برای شناسه سفارشی"
@@ -1641,15 +1627,6 @@ msgstr "برای مقالات"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "برای کلیشه های چاپی"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "استفاده از الگوی پیشفرض"
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i برای شماره ها<br />%j.v%vi%i.%a برای مقالات<br />%j.v%vi%i.%a.g%g برای کلیشه های چاپی."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "یک پسوند DOI منحصر به فرد برای هر مورد منتشر شده وارد کنید. یک فیلد DOI در صفحه فراداده های هر مورد مشاهده خواهید کرد."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "لطفاً الگوی پسوند شناسه DOI برای شماره ها را وارد کنید"

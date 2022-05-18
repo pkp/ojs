@@ -1879,17 +1879,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Configure el módulo de DOI para poder administrar y usar DOIs en OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Contenido de la revista"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Elija los objetos a los cuales los DOIs deben estar asignados."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Seleccione los objetos de publicación que tendrán Identificadores de Objetos Digitales (Digital Object Identifier, DOI) asignados:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Números"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artículos"
@@ -1900,17 +1895,8 @@ msgstr "Galeradas"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefijo DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "El prefijo DOI lo asignan las agencias registradoras (p. ej., <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) y sigue el formato 10.xxxx (p. ej., 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "El prefijo DOI es obligatorio y sigue el formato 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Sufijo DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "El sufijo DOI puede tomar cualquier forma, pero debe ser único entre todos los objetos de publicación con el mismo prefijo DOI asignado:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
@@ -1932,15 +1918,6 @@ msgstr "para artículos"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "para galeradas"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Usar patrones por defecto."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i para números<br />%j.v%vi%i.%a para artículos<br />%j.v%vi%i.%a.g%g para galeradas."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Introduzca un sufijo DOI individual para cada elemento publicado. Encontrará un campo DOI adicional en la página de metadatos de cada elemento."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Introduzca el patrón del sufijo DOI para números."
