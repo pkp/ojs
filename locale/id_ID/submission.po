@@ -1,10 +1,10 @@
-# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021.
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2021-06-29 07:43+0000\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/id_ID/>\n"
@@ -363,3 +363,37 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Naskah ini telah dimasukkan ke <a href=\"{$issueUrl}\">{$issueName}</a> "
 "namun belum dijadwalkan untuk terbit."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Pilih file yang akan dikirim ke tahap review."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Kirim email pemberitahuan kepada penulis bahwa naskahnya akan dikembalikan "
+"ke tahap review. Bila memungkinkan, sampaikan kepada penulis arahan terkait "
+"berapa lama proses review akan berlangsung dan kapan mereka akan mendapatkan "
+"kabar lanjutan dari editor."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Kirim email pemberitahuan kepada penulis bahwa naskahnya sedang dikembalikan "
+"ke tahap review. Jelaskan alasan pengembalian tersebut dan sampaikan langkah "
+"review berikutnya yang akan diambil."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Naskah, {$title}, telah dikembalikan ke tahap review."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Kirim Kembali ke Review"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} membatalkan keputusan untuk menerima naskah ini dan "
+"mengirimnya kembali ke tahap review."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Batalkan keputisan menerima naskah ini dan kirim kembali ke tahap review."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Periska Kembali"
