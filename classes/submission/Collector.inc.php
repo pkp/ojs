@@ -118,7 +118,10 @@ class Collector extends \PKP\submission\Collector
                             $q->whereNull('current_p.doi_id');
                         });
                         $q->when(in_array(Repo::doi()::TYPE_REPRESENTATION, $this->enabledDoiTypes), function (Builder $q) {
-                            $q->orWhereNull('current_g.doi_id');
+                            $q->orWhere(function (Builder $q) {
+                                $q->whereNull('current_g.doi_id');
+                                $q->whereNotNull('current_g.galley_id');
+                            });
                         });
                     });
                 });
