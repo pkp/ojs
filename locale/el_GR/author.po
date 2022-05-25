@@ -1,11 +1,12 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2021.
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2021-12-26 09:24+0000\n"
-"Last-Translator: Jonas Raoni Soares da Silva <weblate@raoni.org>\n"
+"PO-Revision-Date: 2022-05-25 08:44+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/author/el_GR/>"
 "\n"
 "Language: el_GR\n"
@@ -62,13 +63,13 @@ msgid "author.submit.start"
 msgstr "1. Έναρξη"
 
 msgid "author.submit.upload"
-msgstr "2. Μεταφορτώστε το αρχείο της υποβολής."
+msgstr "2. Μεταφορτώστε το αρχείο της υποβολής"
 
 msgid "author.submit.metadata"
-msgstr "3. Εισάγετε τα μεταδεδομένα."
+msgstr "3. Εισάγετε τα μεταδεδομένα"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "4. Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)."
+msgstr "4. Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)"
 
 msgid "author.submit.confirmation"
 msgstr "5. Επιβεβαίωση"
@@ -86,7 +87,8 @@ msgid "author.submit.requestWaiver"
 msgstr "Αίτηση απαλλαγής"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Παρακαλώ εξετάστε το ενδεχόμενο απαλλαγής του άρθρου από την Εισφορά Υποβολής Άρθρου."
+msgstr ""
+"Εξετάστε το ενδεχόμενο απαλλαγής του άρθρου από την Εισφορά Υποβολής Άρθρου"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr "Χρησιμοποιήστε το ακόλουθο πλαίσιο κειμένου για να υποδείξετε τους λόγους απαλλαγής από την καταβολή της εισφοράς για την υποβολή άρθρου."
@@ -101,10 +103,10 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "Υπό αξιολόγηση: Απαιτούνται αναθεωρήσεις"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Σε επιμέλεια: Έχει γίνει αίτημα για επιμέλεια κειμένου."
+msgstr "Σε επιμέλεια: Έχει γίνει αίτημα για επιμέλεια κειμένου"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "Σε επιμέλεια: Έχει γίνει αίτημα για διόρθωση τυπογραφικών δοκιμίων."
+msgstr "Σε επιμέλεια: Έχει γίνει αίτημα για διόρθωση τυπογραφικών δοκιμίων"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Μεταφόρτωση έκδοσης επιμελημένου κειμένου"
@@ -276,13 +278,13 @@ msgid "author.submit.suppFile.availableToPeers"
 msgstr "Παρουσίαση του αρχείου (χωρίς μεταδεδομένα) στους Αξιολογητές, καθώς δεν θα επηρεάσει τη διαδικασία τυφλής αξιολόγησης."
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr "Χρήση αποκλειστικά με επίσημα δημοσιευμένο υλικό"
+msgstr "Χρήση αποκλειστικά με επίσημα δημοσιευμένο υλικό."
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Ημερομηνία κατά την οποία έγινε η συλλογή δεδομένων ή η δημιουργία οργάνου."
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "Όνομα μελέτης ή άλλη πηγή προέλευσης"
+msgstr "Όνομα μελέτης ή άλλη πηγή προέλευσης."
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "Προσδιορισμός άλλου"
@@ -303,7 +305,7 @@ msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "Το δημόσιο αναγνωριστικό του συμπληρωματικού αρχείου υπάρχει ήδη."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Δημόσιο αναγνωριστικό συμπληρωματικού αρχείου."
+msgstr "Δημόσιο αναγνωριστικό συμπληρωματικού αρχείου"
 
 msgid "author.submit.confirmationDescription"
 msgstr "Για να υποβάλετε το άρθρο στο {$journalTitle} πατήστε \"Ολοκλήρωση υποβολής\". Το κύριο πρόσωπο επικοινωνίας του περιοδικού θα ενημερωθεί για την υποβολή. Σας ευχαριστούμε για το ενδιαφέρον σας να δημοσιεύσετε στο περιοδικό {$journalTitle}."
