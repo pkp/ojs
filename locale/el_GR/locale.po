@@ -1,11 +1,12 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2021.
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2021-12-25 16:37+0000\n"
-"Last-Translator: Jonas Raoni Soares da Silva <weblate@raoni.org>\n"
+"PO-Revision-Date: 2022-05-25 08:44+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/locale/el_GR/>"
 "\n"
 "Language: el_GR\n"
@@ -393,7 +394,7 @@ msgid "user.register.contextsPrompt"
 msgstr "Σε ποια περιοδικά της πλατφόρμας θέλετε να εγγραφείτε;"
 
 msgid "user.register.otherContextRoles"
-msgstr "Ζητήστε τους ακόλουθους ρόλους"
+msgstr "Ζητήστε τους ακόλουθους ρόλους."
 
 msgid "user.register.noContextReviewerInterests"
 msgstr "Αν αιτηθήκατε εγγραφή ως Αξιολογητής σε κάποιο περιοδικό, παρακαλούμε εισάγετε τα θεματικά αντικείμενα που σας ενδιαφέρουν."
@@ -420,7 +421,9 @@ msgid "user.noRoles.regReviewer"
 msgstr "Εγγραφείτε ως Αξιολογητής"
 
 msgid "user.noRoles.regReviewerClosed"
-msgstr "Εγγραφείτε ως Αξιολογητής: Η εγγραφή Αξιολογητή είναι προς το παρόν απενεργοποιημένη"
+msgstr ""
+"Εγγραφείτε ως Αξιολογητής: Η εγγραφή Αξιολογητή είναι προς το παρόν "
+"απενεργοποιημένη."
 
 msgid "user.role.manager"
 msgstr "Διαχειριστής Περιοδικού"
@@ -549,7 +552,7 @@ msgid "subscriptions.status.noSubscription"
 msgstr "Δεν έχετε καμία ενεργή συνδρομή."
 
 msgid "subscriptions.status.other"
-msgstr "Άλλο, δείτε τις σημειώσεις."
+msgstr "Άλλο, δείτε τις σημειώσεις"
 
 msgid "subscriptions.individualDescription"
 msgstr "Οι μεμονωμένες συνδρομές απαιτούν σύνδεση στο σύστημα για πρόσβαση στο περιεχόμενο της συνδρομής."
@@ -567,19 +570,20 @@ msgid "submission.event.submissionSubmitted"
 msgstr "Υποβληθέν άρθρο"
 
 msgid "submission.event.general.issueScheduled"
-msgstr "Η υποβολή βρίσκεται στο στάδιο προγραμματισμού για δημοσίευση στο τεύχος."
+msgstr ""
+"Η υποβολή βρίσκεται στο στάδιο προγραμματισμού για δημοσίευση στο τεύχος"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Η υποβολή προγραμματίστηκε για δημοσίευση στο τεύχος."
+msgstr "Η υποβολή προγραμματίστηκε για δημοσίευση στο τεύχος"
 
 msgid "submission.event.general.articlePublished"
-msgstr "Το άρθρο δημοσιεύτηκε."
+msgstr "Το άρθρο δημοσιεύτηκε"
 
 msgid "submission.event.author.authorRevision"
-msgstr "Το αναθεωρημένο κείμενο του Συγγραφέα υποβλήθηκε."
+msgstr "Το αναθεωρημένο κείμενο του Συγγραφέα υποβλήθηκε"
 
 msgid "submission.event.general.authorRevision"
-msgstr "Το αναθεωρημένο αρχείο του Συγγραφέα ενημερώθηκε."
+msgstr "Το αναθεωρημένο αρχείο του Συγγραφέα ενημερώθηκε"
 
 msgid "submission.event.editor.editorAssigned"
 msgstr "Ανάθεση υποβολής σε Επιμελητή"
@@ -594,7 +598,7 @@ msgid "submission.event.editor.editorFile"
 msgstr "Ενημέρωση αρχείου Επιμελητή"
 
 msgid "submission.event.editor.submissionArchived"
-msgstr "Η υποβολή αρχειοθετήθηκε."
+msgstr "Η υποβολή αρχειοθετήθηκε"
 
 msgid "submission.event.editor.submissionRestored"
 msgstr "Επαναφορά υποβολής από τα αρχειοθετημένα"
@@ -609,16 +613,16 @@ msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Ανάθεση επιμέλειας κειμένου"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Το αρχείο του Επιμελητή Κειμένου ενημερώθηκε."
+msgstr "Το αρχείο του Επιμελητή Κειμένου ενημερώθηκε"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Η αρχική επιμέλεια κειμένου ολοκληρώθηκε."
+msgstr "Η αρχική επιμέλεια κειμένου ολοκληρώθηκε"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Η τελική επιμέλεια κειμένου ολοκληρώθηκε."
+msgstr "Η τελική επιμέλεια κειμένου ολοκληρώθηκε"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "To αρχείο επιμέλειας κειμένου ενημερώθηκε."
+msgstr "To αρχείο επιμέλειας κειμένου ενημερώθηκε"
 
 msgid "submission.event.proofread.proofreaderAssigned"
 msgstr "Ανάθεση υποβολής σε Επιμελητή Τυπογραφικού Δοκιμίου"
@@ -630,10 +634,10 @@ msgid "submission.event.proofread.proofreadInitiated"
 msgstr "Ανάθεση επιμέλειας τυπογραφικού δοκιμίου"
 
 msgid "submission.event.proofread.proofreadRevision"
-msgstr "Το αρχείο επιμέλειας τυπογραφικού δοκιμίου ενημερώθηκε."
+msgstr "Το αρχείο επιμέλειας τυπογραφικού δοκιμίου ενημερώθηκε"
 
 msgid "submission.event.proofread.proofreadCompleted"
-msgstr "Η επιμέλεια του τυπογραφικού δοκιμίου ολοκληρώθηκε."
+msgstr "Η επιμέλεια του τυπογραφικού δοκιμίου ολοκληρώθηκε"
 
 msgid "submission.event.layout.layoutEditorAssigned"
 msgstr "Ανάθεση υποβολής σε Επιμελητή Σελιδοποίησης"
@@ -645,10 +649,10 @@ msgid "submission.event.layout.layoutInitiated"
 msgstr "Ανάθεση επιμέλειας σελιδοποίησης"
 
 msgid "submission.event.layout.layoutGalleyCreated"
-msgstr "Το σελιδοποιημένο τυπογραφικό δοκίμιο ενημερώθηκε."
+msgstr "Το σελιδοποιημένο τυπογραφικό δοκίμιο ενημερώθηκε"
 
 msgid "submission.event.layout.layoutComplete"
-msgstr "Η σελιδοποίηση ολοκληρώθηκε."
+msgstr "Η σελιδοποίηση ολοκληρώθηκε"
 
 msgid "reader.subscribersOnly"
 msgstr "Μόνο Συνδρομητές"
@@ -944,7 +948,7 @@ msgid "submission.layout.galley.remotelyHostedContent"
 msgstr "Αυτό το τυπογραφικό δοκίμιο θα είναι διαθέσιμο σε έναν ξεχωριστό ιστότοπο."
 
 msgid "submission.layout.galley.remoteURL"
-msgstr "Σύνδεσμος περιεχομένου που φιλοξενείται σε εξωτερικό ιστότοπο."
+msgstr "Σύνδεσμος περιεχομένου που φιλοξενείται σε εξωτερικό ιστότοπο"
 
 msgid "reviewer.pendingReviews"
 msgstr "Άρθρα για τα οποία εκκρεμεί αξιολόγηση"
@@ -968,13 +972,15 @@ msgid "reviewer.article.cannotDoReview"
 msgstr "Δεν μπορεί να αναλάβει την αξιολόγηση"
 
 msgid "reviewer.article.restrictedFileAccess"
-msgstr "Η υποβολή θα είναι διαθέσιμη αν και όταν ο Αξιολογητής αναλάβει την αξιολόγηση."
+msgstr ""
+"Η υποβολή θα είναι διαθέσιμη αν και όταν ο Αξιολογητής αναλάβει την "
+"αξιολόγηση"
 
 msgid "reviewer.article.submissionEditor"
 msgstr "Επιμελητής Υποβολής"
 
 msgid "reviewer.article.reviewerCommentsDescription"
-msgstr "Πληκτρολογήστε ή επικολλήστε σχόλια αξιολόγησης εδώ."
+msgstr "Πληκτρολογήστε ή επικολλήστε σχόλια αξιολόγησης εδώ"
 
 msgid "reviewer.article.editorToEnter"
 msgstr "Καταχώρηση από τον Επιμελητή"
@@ -998,7 +1004,7 @@ msgid "reviewer.article.uploadedFile"
 msgstr "Αρχεία που έχουν μεταφορτωθεί"
 
 msgid "reviewer.article.reviewersAnnotatedVersion"
-msgstr "Έκδοση που έχει μεταφορτωθεί από τον Αξιολογητή."
+msgstr "Έκδοση που έχει μεταφορτωθεί από τον Αξιολογητή"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
 msgstr "(Εάν επιθυμείτε να εισάγετε επισημειώσεις για τον Επιμελητή στο αρχείο, αποθηκεύστε το στον υπολογιστή σας και χρησιμοποιήστε τις επιλογές Εύρεση/Μεταφόρτωση.)"
@@ -1263,7 +1269,7 @@ msgid "user.register.openAccessNotificationDescription"
 msgstr "Ειδοποίηση μέσω μηνυμάτων κατά τη διάθεση ενός τεύχους με ανοικτή πρόσβαση."
 
 msgid "user.register.authorDescription"
-msgstr "Δυνατότητα υποβολής άρθρων στο περιοδικό"
+msgstr "Δυνατότητα υποβολής άρθρων στο περιοδικό."
 
 msgid "user.register.reviewerDescriptionNoInterests"
 msgstr "Εκδήλωση ενδιαφέροντος για τη διεξαγωγή αξιολογήσεων για το περιοδικό."
@@ -1293,16 +1299,17 @@ msgid "user.subscriptions.statusDescription"
 msgstr "Περιγραφή"
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "Απαιτούνται πρόσθετες πληροφορίες πριν ενεργοποιηθεί η συνδρομή."
+msgstr "Απαιτούνται πρόσθετες πληροφορίες πριν ενεργοποιηθεί η συνδρομή"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Η συνδρομή θα πρέπει να ελεγχθεί πριν ενεργοποιηθεί."
+msgstr "Η συνδρομή θα πρέπει να ελεγχθεί πριν ενεργοποιηθεί"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "Η χειρωνακτική πληρωμή έχει ξεκινήσει αλλά δεν έχει ολοκληρωθεί."
+msgstr "Η χειρωνακτική πληρωμή έχει ξεκινήσει αλλά δεν έχει ολοκληρωθεί"
 
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
-msgstr "Μία διαδικτυακή πληρωμή έχει ξεκινήσει, αλλά ακυρώθηκε ή δεν ολοκληρώθηκε."
+msgstr ""
+"Μία διαδικτυακή πληρωμή έχει ξεκινήσει, αλλά ακυρώθηκε ή δεν ολοκληρώθηκε"
 
 msgid "user.subscriptions.individualSubscriptions"
 msgstr "Ατομική συνδρομή"
@@ -1445,13 +1452,17 @@ msgid "article.pageTitle"
 msgstr "Προβολή του {$title}"
 
 msgid "article.pdf.title"
-msgstr "PDF (Portable Document Format) "
+msgstr "PDF (Portable Document Format)"
 
 msgid "article.download"
 msgstr "Μεταφορτώστε αυτό το αρχείο PDF"
 
 msgid "article.pluginMissing"
-msgstr "<p>Αν το πρόγραμμα πλοήγησης στο διαδίκτυο που χρησιμοποιείτε διαθέτει εγκατεστημένο Πρόσθετο PDF reader, το αρχείο PDF που επιλέξατε θα φορτωθεί εδώ.</p>"
+msgstr ""
+"<p>Αν το πρόγραμμα πλοήγησης στο διαδίκτυο που χρησιμοποιείτε διαθέτει "
+"εγκατεστημένο Πρόσθετο PDF reader (για παράδειγμα το <a href=\""
+"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>, το αρχείο PDF που "
+"επιλέξατε θα φορτωθεί εδώ.</p>"
 
 msgid "article.nonpdf.title"
 msgstr "Μεταφόρτωση άρθρου"
@@ -1543,10 +1554,10 @@ msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} ή {$viewSubmissions}."
 
 msgid "about.onlineSubmissions.newSubmission"
-msgstr "Ξεκινήστε μία νέα υποβολή."
+msgstr "Ξεκινήστε μία νέα υποβολή"
 
 msgid "about.onlineSubmissions.viewSubmissions"
-msgstr "Προβολή των υποβολών που εκκρεμούν."
+msgstr "Προβολή των υποβολών που εκκρεμούν"
 
 msgid "about.authorGuidelines"
 msgstr "Οδηγίες για τους Συγγραφείς"
@@ -1635,7 +1646,9 @@ msgstr ""
 "ένα λογισμικό ανοιχτού κώδικα για τη διαχείριση και δημοσίευση ηλεκτρονικών "
 "περιοδικών, που έχει αναπτυχθεί υποστηρίζεται και διατίθεται ελεύθερα από το "
 "<a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> υπό την άδεια "
-"GNU General Public License."
+"GNU General Public License. <a href=\"{$contactUrl}\">Επικοινωνήστε "
+"απευθείας με το περιοδικό</a> για ερωτήσεις σχετικά με το περιοδικό και "
+"υποβολές σε αυτό."
 
 msgid "about.aboutOJSSite"
 msgstr ""
@@ -1736,28 +1749,28 @@ msgid "payment.donation.makeDonation"
 msgstr "Κάντε μία δωρεά"
 
 msgid "payment.submission.paySubmission"
-msgstr "Πληρώστε την εισφορά υποβολής."
+msgstr "Πληρώστε την εισφορά υποβολής"
 
 msgid "payment.publication.payPublication"
-msgstr "Πληρώστε την εισφορά δημοσίευσης."
+msgstr "Πληρώστε την εισφορά δημοσίευσης"
 
 msgid "payment.publication.publicationPaid"
-msgstr "Η εισφορά δημοσίευσης πληρώθηκε."
+msgstr "Η εισφορά δημοσίευσης πληρώθηκε"
 
 msgid "payment.membership.buyMembership"
-msgstr "Ενεργοποιήστε ατομική συνδρομή."
+msgstr "Ενεργοποιήστε ατομική συνδρομή"
 
 msgid "payment.membership.renewMembership"
-msgstr "Ανανεώστε την ατομική συνδρομή."
+msgstr "Ανανεώστε την ατομική συνδρομή"
 
 msgid "payment.membership.ends"
 msgstr "Λήγει"
 
 msgid "payment.subscription.purchase"
-msgstr "Ενεργοποιήστε συνδρομή."
+msgstr "Ενεργοποιήστε συνδρομή"
 
 msgid "payment.subscription.renew"
-msgstr "Ανανεώστε τη συνδρομή."
+msgstr "Ανανεώστε τη συνδρομή"
 
 msgid "payment.subscription.expires"
 msgstr "Λήγει"
@@ -2204,7 +2217,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Η πρόσβαση δεν σας επιτρέπεται. Δεν σας έχει ανατεθεί ο ρόλος του Επιμελητή Κειμένου για αυτό το άρθρο."
 
 msgid "user.authorization.noContext"
-msgstr "Δεν υπάρχουν περιοδικά!"
+msgstr "Δεν βρέθηκε ημερολόγιο που να ταιριάζει με το αίτημά σας."
 
 msgid "user.authorization.sectionAssignment"
 msgstr "Προσπαθείτε να προσπελάσετε ένα άρθρο που δεν ανήκει στην ενότητά σας."
@@ -2293,7 +2306,7 @@ msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
 "Ναι, αποδέχομαι τη συλλογή και αποθήκευση των δεδομένων μου σύμφωνα με τη  <"
 "a href=\"{$privacyUrl}\" target=\"_blank\">δήλωση απορρήτου</a> αυτού του "
-"περιοδικού"
+"περιοδικού."
 
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
@@ -2376,3 +2389,26 @@ msgstr "Μετάβαση στα Σχετικά με το Περιοδικό"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Επιλέξτε τον τρόπο ταξινόμησης των άρθρων σ'αυτήν την κατηγορία."
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Εάν αναβαθμίζετε μια υπάρχουσα εγκατάσταση του OJS, <a href=\"{$upgradeUrl}\""
+">κάντε κλικ εδώ</a> για να συνεχίσετε."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Δεν είναι ενεργοποιημένη η χρέωση δημοσίευσης."
+
+msgid "payment.unpaid"
+msgstr "Δεν πληρώθηκε"
+
+msgid "about.aboutSoftware"
+msgstr "Σχετικά με το OJS"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Δεν βρέθηκε το τυπογραφικό δοκίμιο που ζητήθηκε."
+
+msgid "doi.manager.settings.publications"
+msgstr "Άρθρα"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Αυτό το περιοδικό δεν δημοσιεύει το περιεχόμενό του στο διαδίκτυο."
