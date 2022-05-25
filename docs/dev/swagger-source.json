@@ -56,6 +56,10 @@
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
+			"name": "Mailables",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
 			"name": "Stats / Editorial",
 			"description": "Only admins and journal managers can access these endpoints."
 		},
@@ -97,6 +101,51 @@
 			}
 		},
 		"EmailTemplate": "emailTemplate",
+		"Mailable": {
+			"type": "object",
+			"description": "A mailable object containing email related data",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"className": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"supportsTemplates": {
+					"type": "boolean"
+				},
+				"groupsIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"fromRoleIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"toRoleIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"emailTemplateKey": {
+					"type": "string"
+				},
+				"customTemplateKeys": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
 		"Galley": "galley",
 		"InvalidParametersResponse": {
 			"type": "object",
@@ -3017,6 +3066,143 @@
 							"items": {
 								"type": "string"
 							}
+						}
+					}
+				}
+			}
+		},
+		"/mailables": {
+			"get": {
+				"tags": [
+					"Mailables"
+				],
+				"summary": "Get mailables",
+				"parameters": [
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by a search phrase matched against the `name` and `description`",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of mailables.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/Mailable"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view mailable.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/mailables/{className}": {
+			"get": {
+				"tags": [
+					"Mailables"
+				],
+				"summary": "Get a mailable by a fully qualified class name",
+				"parameters": [
+					{
+						"name": "className",
+						"description": "Mailable class name",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Mailable details.",
+						"schema": {
+							"$ref": "#/definitions/Mailable"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view mailables.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested mailable could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/mailables/{className}/emailTemplates": {
+			"put": {
+				"tags": [
+					"Mailables"
+				],
+				"summary": "Assign custom email templates to a mailable",
+				"parameters": [
+					{
+						"name": "className",
+						"description": "Mailable class name",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "templateKeys",
+						"description": "Keys of custom email templates",
+						"in": "body",
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The mailable with assigned custom email template.",
+						"schema": {
+							"$ref": "#/definitions/Mailable"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Template key is missing from the request body.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to assign templates to mailables.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "Either the requested mailable or email template(s) could not be found. ",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
 						}
 					}
 				}
