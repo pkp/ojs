@@ -1,11 +1,12 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2021.
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2021-12-26 09:24+0000\n"
-"Last-Translator: Jonas Raoni Soares da Silva <weblate@raoni.org>\n"
+"PO-Revision-Date: 2022-05-25 08:44+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el_GR/"
 ">\n"
 "Language: el_GR\n"
@@ -2004,3 +2005,8 @@ msgstr "Χρησιμοποιήστε την ημερομηνία δημοσίε�
 
 msgid "manager.setup.masthead.success"
 msgstr "Ενημερώθηκαν οι λεπυομέρειες του κύριου τίτλου αυτού του περιοδικού."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Τουλάχιστον μία ενότητα πρέπει να είναι ενεργή. Επισκεφτείτε τις ρυθμίσεις "
+"ροής εργασιών για να απενεργοποιήσετε όλες τις υποβολές σε αυτό το περιοδικό."
