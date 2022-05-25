@@ -1,11 +1,12 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2021.
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2021-12-26 09:24+0000\n"
-"Last-Translator: Jonas Raoni Soares da Silva <weblate@raoni.org>\n"
+"PO-Revision-Date: 2022-05-25 08:12+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/admin/el_GR/>"
 "\n"
 "Language: el_GR\n"
@@ -32,8 +33,14 @@ msgstr "Να μη γίνεται προώθηση"
 
 msgid "admin.settings.defaultMetricDescription"
 msgstr ""
-"Η εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, τα οποία εμφανίζονται σε διαφορετικά συγκείμενα.\n"
-"Σε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης (π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων ή για την ταξινόμηση των αποτελεσμάτων μίας αναζήτησης). Παρακαλούμε ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή."
+"\n"
+"\t\tΗ εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, "
+"τα οποία εμφανίζονται σε διαφορετικά συγκείμενα.\n"
+"\t\tΣε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης ("
+"π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων\n"
+"\t\tή για την ταξινόμηση των αποτελεσμάτων μιας αναζήτησης). Παρακαλούμε "
+"ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή.\n"
+"\t"
 
 msgid "admin.languages.confirmDisable"
 msgstr "Επιβεβαιώνετε την απενεργοποίηση αυτής της γλώσσας; Η επιλογή σας μπορεί να επηρεάσει τη λειτουργία όσων περιοδικών χρησιμοποιούν τη συγκεκριμένη γλώσσα."
@@ -208,3 +215,7 @@ msgstr "Οι ρυθμίσεις διαμόρφωσης του ιστότοπου
 
 msgid "admin.settings.appearance.success"
 msgstr "Οι ρυθμίσεις εμφάνισης του ιστότοπου έχουν ενημερωθεί επιτυχώς."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Η κύρια γλώσσα πρέπει να ανήκει σε αυτές που υποστηρίζονται από το περιοδικό."
