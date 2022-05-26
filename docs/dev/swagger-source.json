@@ -88,6 +88,7 @@
 		"Announcement": "announcement",
 		"Author": "author",
 		"Context": "context",
+		"Doi": "doi",
 		"ErrorResponse": {
 			"type": "object",
 			"description": "A response object that will be returned when the request could not be fulfilled.",
@@ -103,43 +104,63 @@
 		"EmailTemplate": "emailTemplate",
 		"Mailable": {
 			"type": "object",
-			"description": "A mailable object containing email related data",
+			"description": "Each Mailable class represents an email that is sent, such as a request sent to a reviewer.",
 			"properties": {
 				"name": {
-					"type": "string"
+					"type": "string",
+					"description": "The name of this email.",
+					"readOnly": true
 				},
 				"className": {
-					"type": "string"
+					"type": "string",
+					"description": "The fully-qualified class name, such as `PKP\\mail\\mailables\\ReviewRequest`.",
+					"readOnly": true
 				},
 				"description": {
-					"type": "string"
+					"type": "string",
+					"description": "A description of this email.",
+					"readOnly": true
 				},
 				"supportsTemplates": {
-					"type": "boolean"
+					"type": "boolean",
+					"description": "Whether or not additional email templates can be assigned to this Mailable. This will be `false` for all emails that are sent automatically by the system.",
+					"readOnly": true
 				},
 				"groupsIds": {
 					"type": "array",
+					"description": "Which groups this Mailable is assigned to. One of the `Mailable::GROUP_*` constants.",
 					"items": {
-						"type": "integer"
-					}
+						"type": "string",
+						"enum": ["submission", "review", "copyediting", "production", "other"]
+					},
+					"readOnly": true
 				},
 				"fromRoleIds": {
 					"type": "array",
+					"description": "Which user roles send this email. One of the `Role::ROLE_ID_*` constants.",
 					"items": {
-						"type": "integer"
-					}
+						"type": "integer",
+						"enum": [1,16,17,4096,4097,65536,1048576,2097152]
+					},
+					"readOnly": true
 				},
 				"toRoleIds": {
 					"type": "array",
+					"description": "Which user roles receive this email. One of the `Role::ROLE_ID_*` constants.",
 					"items": {
-						"type": "integer"
-					}
+						"type": "integer",
+						"enum": [1,16,17,4096,4097,65536,1048576,2097152]
+					},
+					"readOnly": true
 				},
 				"emailTemplateKey": {
-					"type": "string"
+					"type": "string",
+					"description": "The `key` of the default email template used with this `Mailable`, if one exists.",
+					"readOnly": true
 				},
 				"customTemplateKeys": {
 					"type": "array",
+					"description": "The `key`s of custom email templates assigned to this `Mailable`.",
 					"items": {
 						"type": "string"
 					}
@@ -3076,11 +3097,12 @@
 				"tags": [
 					"Mailables"
 				],
-				"summary": "Get mailables",
+				"summary": "Get all mailables",
+				"description": "Get a list of all Mailable classes configured in the journal. Each mailable class represents an email event, such as a notification to a reviewer.",
 				"parameters": [
 					{
 						"name": "searchPhrase",
-						"description": "Filter results by a search phrase matched against the `name` and `description`",
+						"description": "Filter results by a search phrase matched against the `name` and `description` of a Mailable.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -3104,7 +3126,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to view mailable.",
+						"description": "You do not have permission to view mailables.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3117,20 +3139,21 @@
 				"tags": [
 					"Mailables"
 				],
-				"summary": "Get a mailable by a fully qualified class name",
+				"summary": "Get a mailable",
+				"description": "Get a Mailable by its class name.",
 				"parameters": [
 					{
 						"name": "className",
-						"description": "Mailable class name",
+						"description": "The fully-qualified class name of a `Mailable`, such as `PKP\\mail\\mailables\\ReviewRequest`. See the `className` property of each Mailable.",
 						"in": "path",
 						"required": true,
-						"type": "integer"
+						"type": "string"
 					}
 				],
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "Mailable details.",
+						"description": "The `Mailable`",
 						"schema": {
 							"$ref": "#/definitions/Mailable"
 						}
@@ -3157,18 +3180,19 @@
 				"tags": [
 					"Mailables"
 				],
-				"summary": "Assign custom email templates to a mailable",
+				"summary": "Assign email templates",
+				"description": "Assign custom email templates to a `Mailable` class.",
 				"parameters": [
 					{
 						"name": "className",
-						"description": "Mailable class name",
+						"description": "The fully-qualified class name of a `Mailable`, such as `PKP\\mail\\mailables\\ReviewRequest`. See the `className` property of each Mailable.",
 						"in": "path",
 						"required": true,
-						"type": "integer"
+						"type": "string"
 					},
 					{
 						"name": "templateKeys",
-						"description": "Keys of custom email templates",
+						"description": "The `key`s of custom email templates.",
 						"in": "body",
 						"type": "array",
 						"items": {
@@ -3179,28 +3203,28 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "The mailable with assigned custom email template.",
+						"description": "The mailable with all assigned custom email templates.",
 						"schema": {
 							"$ref": "#/definitions/Mailable"
 						}
 					},
 					"400": {
 						"x-summary": "Request Invalid",
-						"description": "Template key is missing from the request body.",
+						"description": "No email template keys were sent with the request.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to assign templates to mailables.",
+						"description": "You do not have permission to assign email templates to mailables.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
 						"x-summary": "Request Not Found",
-						"description": "Either the requested mailable or email template(s) could not be found. ",
+						"description": "The requested mailable or email template(s) could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
