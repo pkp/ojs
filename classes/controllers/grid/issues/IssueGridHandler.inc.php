@@ -40,6 +40,7 @@ use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
+use PKP\db\DAORegistry;
 
 import('controllers.grid.issues.IssueGridRow');
 
