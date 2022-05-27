@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2022-05-25 08:44+0000\n"
+"PO-Revision-Date: 2022-05-27 09:05+0000\n"
 "Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el_GR/"
 ">\n"
@@ -2010,3 +2010,48 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Τουλάχιστον μία ενότητα πρέπει να είναι ενεργή. Επισκεφτείτε τις ρυθμίσεις "
 "ροής εργασιών για να απενεργοποιήσετε όλες τις υποβολές σε αυτό το περιοδικό."
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Η διεύθυνση URL στην ιστοσελίδα του περιοδικού"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Ο τίτλος του περιοδικού"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" -  \"{$issueIdentification}\""
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Δεν έχει οριστεί κύρια επαφή για αυτό το περιοδικό. Μπορείτε να εισαγάγετε "
+"μια κύρια επαφή στις <a href=\"{$url}\">ρυθμίσεις ημερολογίου</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Στείλτε ένα αντίγραφο του email επιβεβαίωσης υποβολής στην κύρια επαφή αυτού "
+"του περιοδικού."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Αποτρέψτε τους χρήστες από την υποβολή νέων άρθρων στο περιοδικό. Οι "
+"υποβολές μπορούν να απενεργοποιηθούν για μεμονωμένες ενότητες ημερολογίου "
+"στη σελίδα ρυθμίσεων <a href=\"{$url}\">ενότητες περιοδικού</a>."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Η επικύρωση απέτυχε."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Επιτυχής επικύρωση!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Αυτό το περιοδικό δεν δέχεται υποβολές αυτήν τη στιγμή. Επισκεφτείτε τις "
+"ρυθμίσεις ροής εργασιών για να επιτρέψετε τις υποβολές."
