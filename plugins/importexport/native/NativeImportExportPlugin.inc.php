@@ -446,12 +446,17 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$foundErrors = true;
 					}
 				}
-				// If there are any data or validataion errors
+				// If there are any data or validation errors
 				// delete imported objects.
 				if ($foundErrors || !empty($validationErrors)) {
-					// remove all imported issues and sumissions
+					// remove all imported issues and submissions
 					foreach (array_keys($errorTypes) as $assocType) {
 						$deployment->removeImportedObjects($assocType);
+					}
+					echo __('plugins.importexport.common.validationErrors') . "\n";
+					$i = 0;
+					foreach ($validationErrors as $validationError) {
+						echo ++$i . '. Line: ' . $validationError->line . ' Column: ' . $validationError->column . ' > ' . $validationError->message . "\n";
 					}
 				}
 				return;
