@@ -180,7 +180,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 						$foundErrors = true;
 					}
 				}
-				// If there are any data or validataion errors
+				// If there are any data or validation errors
 				// delete imported objects.
 				if ($foundErrors || !empty($validationErrors)) {
 					// remove all imported issues and sumissions
@@ -373,6 +373,22 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					echo __('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)) . "\n\n";
 					$this->usage($scriptName);
 					return;
+				}
+
+				$request = Application::get()->getRequest();
+				// Set global user
+				if (!$request->getUser()) {
+					Registry::set('user', $user);
+				}
+				// Set global context
+				if (!$request->getContext()) {
+					HookRegistry::register('Router::getRequestedContextPaths', function (string $hook, array $args) use ($press): bool {
+						$args[0] = [$press->getPath()];
+						return false;
+					});
+					$router = new PageRouter();
+					$router->setApplication(Application::get());
+					$request->setRouter($router);
 				}
 
 				$filter = 'native-xml=>issue';
