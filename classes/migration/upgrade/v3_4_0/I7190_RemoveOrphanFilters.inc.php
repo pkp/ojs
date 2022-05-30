@@ -13,6 +13,7 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
+use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\install\DowngradeNotSupportedException;
 
@@ -23,26 +24,26 @@ class I7190_RemoveOrphanFilters extends \PKP\migration\Migration
      */
     public function up(): void
     {
-        DB::delete(
-            "DELETE FROM filter_groups
-            WHERE symbolic IN (
-                'mods34=>mods34-xml',
-                'SubmissionArtworkFile=>native-xml',
-                'SupplementaryFile=>native-xml',
-                'native-xml=>SubmissionArtworkFile',
-                'native-xml=>SupplementaryFile'
-            )"
-        );
+        DB::table('filter_groups')
+            ->whereNotIn(
+                'symbolic',
+                [
+                    'mods34=>mods34-xml',
+                    'SubmissionArtworkFile=>native-xml',
+                    'SupplementaryFile=>native-xml',
+                    'native-xml=>SubmissionArtworkFile',
+                    'native-xml=>SupplementaryFile'
+                ]
+            )
+            ->delete();
 
-        DB::delete(
-            'DELETE
-            FROM filters f
-            WHERE NOT EXISTS (
-                SELECT 0
-                FROM filter_groups fg
-                WHERE fg.filter_group_id = f.filter_group_id
-            )'
-        );
+        DB::table('filters')
+            ->whereNotExists(
+                fn (Builder $query) => $query
+                    ->from('filter_groups', 'fg')
+                    ->whereColumn('fg.filter_group_id', '=', 'filters.filter_group_id')
+            )
+            ->delete();
     }
 
     /**
