@@ -13,11 +13,11 @@
  * @brief Handle payment grid requests.
  */
 
+use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
-use PKP\security\Role;
 use PKP\security\authorization\ContextAccessPolicy;
-use PKP\controllers\grid\feature\PagingFeature;
+use PKP\security\Role;
 
 import('controllers.grid.subscriptions.PaymentsGridCellProvider');
 
@@ -30,8 +30,7 @@ class PaymentsGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [
-                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'viewPayment']
         );
     }

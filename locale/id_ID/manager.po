@@ -1,10 +1,10 @@
-# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021.
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2021-09-27 05:55+0000\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "id_ID/>\n"
@@ -1878,17 +1878,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Konten Jurnal"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Silahkan pilih objek DOIs yang harus ditugaskan."
+msgstr "Silahkan pilih objek DOIs yang harus dibuatkan."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Silahkan pilih objek penerbitan yang akan memiliki penugasan Digital Object Identifiers (DOI):"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Terbitan"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artikel"
@@ -1899,17 +1894,8 @@ msgstr "Galai"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Awalan DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "Awalan DOI ditugaskan dengan agensi pendaftaran (contoh <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) dan dalam format 10.xxxx (contoh 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Awalan DOI wajib dan harus format 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Akhiran DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Akhiran DOI dapat dengan format apapun, tetapi harus unik di antara semua objek penerbitan dengan penugasan awalan DOI yang sama:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
@@ -1929,14 +1915,6 @@ msgstr "untuk galai"
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/vol3iss2pp230"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Gunakan pola default."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i untuk terbitan<br />%j.v%vi%i.%a untuk artikel<br />%j.v%vi%i.%a.g%"
-"g untuk galai."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Silahkan masukkan pola akhiran DOI untuk terbitan."
@@ -1984,7 +1962,9 @@ msgid "doi.editor.missingPrefix"
 msgstr "DOI harus diawali dengan {$doiPrefix}."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} telah diberikan."
+msgstr ""
+"DOI {$pubId} telah ditetapkan. Untuk mengedit DOI, kunjungi <a href=\""
+"{$doiManagementLink}\">halaman Pengaturan DOI</a>."
 
 msgid "doi.editor.assignDoi.pattern"
 msgstr ""
@@ -2071,11 +2051,6 @@ msgstr ""
 "menghapus semua DOI yang ada sehingga pengaturan baru akan diberlakukan pada "
 "objek yang ada."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Masukkan sufiks DOI secara individual untuk setiap butir terbitan. Anda akan "
-"menemukan field masukkan tambahan pada halaman meta-data masing-masing butir."
-
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artikel"
 
@@ -2083,3 +2058,85 @@ msgid "doi.description"
 msgstr ""
 "Plugin ini memampukan pemberian Digital Object Identifiers ke terbitan, "
 "artikel dan galai di OJS."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Email ini berisi informasi bagi penulis bahwa naskahnya telah ditolak, "
+"sebelum masuk ke tahap review, dengan alasan naskash tidak memenuhi "
+"ketentuan jurnal."
+
+msgid "doi.manager.issueDois"
+msgstr "DOI Edisi"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI Artikel"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Nomor terbitan yang diminta tidak ditemukan"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Hanya DOI yang dapat diedit setelah publikasi telah diterbitkan"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "DOI yang dimasukkan tidak valid"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Hanya DOI yang dapat diubah setelah publikasi/galley telah diterbitkan"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Galley yang Anda minta bukan bagian dari publikasi ini."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} akan diberikan pada saat publikasi."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Tidak ada"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Silajan pilih agen pendaftaran yang akan digunakan untuk mendepositkan DOI."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Agen Registrasi"
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Email ini secara otomatis dikirim ke pengguna baru ketika mereka mendaftar "
+"ke jurnal apabila pengaturan mengharuskan validasi alamat email."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "validasi Email (Registrasi Jurnal)"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informasi tentang keanggotaan pelanggan"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Ringakasan jenis, nama, durasi, dan biaya langgan"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Tanggal berakhir langgan"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL halaman langgan"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Rincian kontak pengelola pendaftaran"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Nama, afiliasi, nomor telepon, dan alamat email pelanggan"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Pada tahap copy-editing"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Gunakan format bawaan.<br />%j.v%vi%i untuk nomor terbitan<br />%j.v%vi%i.%a "
+"untuk artikel<br />%j.v%vi%i.%a.g%g untuk galley"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Tetapkan Digital Object Identifiers (DOIs) untuk artikel, nomor terbitan, "
+"dan galley."

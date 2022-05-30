@@ -13,12 +13,12 @@
  * @brief Handle issues grid requests.
  */
 
+use APP\controllers\grid\issues\IssueGridHandler;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\security\Role;
-use APP\controllers\grid\issues\IssueGridHandler;
 
 class BackIssueGridHandler extends IssueGridHandler
 {
@@ -29,7 +29,7 @@ class BackIssueGridHandler extends IssueGridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [Role::ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
             ['saveSequence']
         );
     }

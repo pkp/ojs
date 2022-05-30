@@ -1,10 +1,10 @@
-# Diego José Macêdo <diegojmacedo@gmail.com>, 2021.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2021-09-03 19:20+0000\n"
+"PO-Revision-Date: 2022-04-22 07:57+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/pt_BR/>\n"
@@ -472,3 +472,6 @@ msgstr ""
 "A imagem da capa, que você solicitou a exclusão, corresponde a um fascículo "
 "de outro periódico. Verifique se você está trabalhando com a revista "
 "correta, se está usando o ID de edição correto e tente novamente."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Solicitar pagamento"

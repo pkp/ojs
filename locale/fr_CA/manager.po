@@ -1830,17 +1830,12 @@ msgstr ""
 "Veuillez configurer le plugiciel DOI pour être en mesure d'utiliser et gérer "
 "les DOIs dans OJS :"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Contenu de la revue"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Veuillez choisir les objets auxquels des DOIs seront attribués."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Veuillez choisir les objets publiés auxquels seront attribués des DOI :"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Numéros"
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Articles"
@@ -1848,22 +1843,8 @@ msgstr "Articles"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Préfixe DOI"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"Le préfixe DOI est attribué par des agences (tel que <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) et se présente sous "
-"la forme 10.xxxx (e.g. 10.1234) :"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Le préfixe DOI est obligatoire et doit être de la forme 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "Suffixe DOI"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Un suffixe DOI s'inscrit de différentes façons mais doit être unique par "
-"rapport aux autres « objets » publiés qui ont le même préfixe DOI :"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Utilisez le modèle personnalisé plus bas pour générer les suffixes DOI. Utiliser %j pour les initiales de revue, %v pour la volumaison, %i pour le numéro, %y pour l'année, %a pour le numéro unique de l'article dans OJS, $g pour le numéro de l'épreuve, %f pour le numéro unique du fichier dans OJS, %p pour le numéro de page et %x pour le numéro attribué."
@@ -1884,17 +1865,6 @@ msgstr "pour les articles"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "pour les épreuves"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Utiliser les modèles par défaut."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Inscrivez un suffixe DOI pour chaque élément publié. Vous trouverez un champ "
-"additionnel pour le DOI sur chaque page de métadonnées de l'élément."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Inscrivez le modèle de suffixe DOI pour les numéros."

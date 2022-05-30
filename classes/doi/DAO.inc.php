@@ -35,7 +35,7 @@ class DAO extends \PKP\doi\DAO
      */
     public function getAllDepositableSubmissionIds(Context $context): Collection
     {
-        $enabledDoiTypes = $context->getData(Context::SETTING_ENABLED_DOI_TYPES);
+        $enabledDoiTypes = $context->getData(Context::SETTING_ENABLED_DOI_TYPES) ?? [];
 
         $q = DB::table($this->table, 'd')
             ->leftJoin('publications as p', 'd.doi_id', '=', 'p.doi_id')

@@ -16,8 +16,8 @@
 use APP\file\IssueFileManager;
 use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
 use APP\security\authorization\OjsIssueRequiredPolicy;
-use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
+use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\file\TemporaryFileManager;
@@ -38,7 +38,7 @@ class IssueGalleyGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [Role::ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
             [
                 'fetchGrid', 'fetchRow', 'saveSequence',
                 'add', 'edit', 'upload', 'download', 'update', 'delete'

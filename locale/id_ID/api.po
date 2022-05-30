@@ -1,7 +1,8 @@
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-03 05:53+0000\n"
-"Last-Translator: Sam Idoeb <idoebsam@gmail.com>\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/api/"
 "id_ID/>\n"
 "Language: id_ID\n"
@@ -64,3 +65,17 @@ msgstr "Pengumuman yang Anda cari bukan bagian dari jurnal ini."
 
 msgid "api.emails.403.disabled"
 msgstr "Fitur pemberitahuan melalui email tidak diaktifkan untuk jurnal ini."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Beberapa bagian belum berhasil didepositkan. Periksa kembali setiap item "
+"untuk melihat pesan error spesifiknya."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Belum ada agen registrasi DOI yang diatur pada jurnal ini."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "DOI yang Anda cari bukan bagian dari jurnal ini."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Baskah yang Anda minta tidak ditemukan di jurnal ini."

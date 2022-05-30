@@ -1,0 +1,315 @@
+# Ieva Tiltina <pastala@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-04-23 00:02+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"lv_LV/>\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "manager.distribution.access"
+msgstr "Piekļuve"
+
+msgid "manager.sections.create"
+msgstr "Izveidot sadaļu"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Lai šo sadaļu varētu dzēst, tajā iesniegtie raksti ir jāpārvieto uz citām "
+"sadaļām."
+
+msgid "manager.sections.confirmDelete"
+msgstr "Vai tiešām vēlaties neatgriezeniski dzēst šo sadaļu?"
+
+msgid "manager.sections.assigned"
+msgstr "Šīs sadaļas redaktori"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Pagaidām nav sadaļu redaktoru.  Vispirms pievienojiet šo lomu vismaz vienam "
+"lietotājam, izmantojot sadaļu Pārvaldība > Iestatījumi > Lietotāji un Lomas."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Kopsavilkumi nav nepieciešami"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Reģistrācijas sinhronizācija reģistrēs visus lietotājus norādītajā lomā "
+"norādītajā žurnālā vienā un tajā pašā lomā šajā žurnālā. Šī funkcija ļauj "
+"sinhronizēt žurnālus ar kopēju lietotāju kopu (piem., recenzenti)."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Reģistrācija"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Izvēlieties lietotāju, kuram piešķirt iepriekšējo lietotāju autorības, "
+"redakcijas uzdevumus u. c."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Izvēlieties lietotāju (vai vairākus lietotājus), kurus vēlaties apvienot ar "
+"citu lietotāja kontu (piemēram, ja kādam ir divi lietotāja konti). "
+"Pirmais(-ie) izvēlētais(-ie) konts(-i) tiks dzēsts(-i), un visi iesniegtie "
+"darbi, uzdevumi utt. tiks attiecināti uz otro kontu."
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Ar žurnālu"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Esoša lietotāja reģistrācija"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Atlasiet veidni"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Noņemt šo lietotāju no šī žurnāla? Veicot šo darbību, lietotājs tiks noņemts "
+"no visām lomām šajā žurnālā."
+
+msgid "manager.people.allUsers"
+msgstr "Visi reģistrētie lietotāji"
+
+msgid "manager.people.showNoRole"
+msgstr "Rādīt lietotājus bez lomas"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Reģistrēt šīs vietnes lietotāju šajā žurnālā"
+
+msgid "manager.people.allJournals"
+msgstr "Visi žurnāli"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Šajā žurnālā reģistrētie lietotāji"
+
+msgid "manager.payment.userName"
+msgstr "Maksājuma ID"
+
+msgid "manager.paymentTypes"
+msgstr "Maksājumu tipi"
+
+msgid "manager.payment.records"
+msgstr "Ieraksti"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Izvēlētās iespējas kopā ar to aprakstiem un maksām (kuras var rediģēt zemāk) "
+"būs redzamas sadaļā Par žurnālu, sadaļā Politika, kā arī vietās, kur ir "
+"jāveic maksājums."
+
+msgid "manager.payment.readerFees"
+msgstr "Lasītāju maksas"
+
+msgid "manager.payment.paymentType"
+msgstr "Maksājuma tips"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Maksas maksāšanas veidi"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Šajā ekrānā varat konfigurēt jebkuru no šādiem Maksājuma veida spraudņiem."
+
+msgid "manager.payment.paymentMethod"
+msgstr "Maksājuma veids"
+
+msgid "manager.payment.paymentId"
+msgstr "Maksājuma ID"
+
+msgid "manager.payment.options.text"
+msgstr "Maksājuma veida apraksts"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Iegādāties žurnāla numuru"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Iegādāties rakstu"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Rakstu apstrādes maksa"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Numuru un rakstu PDF versijām tikai ierobežota piekļuve"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Dalība asociācijā"
+
+msgid "manager.payment.options.feeName"
+msgstr "Maksas nosaukums"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Maksas apraksts"
+
+msgid "manager.payment.options.fee"
+msgstr "Maksa"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Šajā žurnālā būs iespējoti maksājumi. Ņemiet vērā, ka lietotājiem būs "
+"jāpierakstās, lai veiktu maksājumus."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst šo abonementu?"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Tas aktivizēs maksājumus par abonementiem, kuru veidus, izmaksas, ilgumu un "
+"abonementus pārvalda žurnāla (abonementu) pārvaldnieks."
+
+msgid "manager.payment.options"
+msgstr "Iespējas"
+
+msgid "manager.payment.notFound"
+msgstr "Nav atrasts"
+
+msgid "manager.payment.noPayments"
+msgstr "Maksājumu nav"
+
+msgid "manager.payment.generalOptions"
+msgstr "Vispārējās iespējas"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Asociācijas dalība būs redzama sadaļā Par žurnālu, sadaļā Politika."
+
+msgid "manager.payment.generalFees"
+msgstr "Vispārējās maksas"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Visām izmaksām jābūt pozitīvām skaitliskām vērtībām (ir atļauti "
+"decimālskaitļi)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Maksāšanas iespējas"
+
+msgid "manager.payment.enable"
+msgstr "Iespējot"
+
+msgid "manager.payment.editSubscription"
+msgstr "Rediģēt abonementu"
+
+msgid "manager.payment.details"
+msgstr "Sīkāka informācija"
+
+msgid "manager.payment.description"
+msgstr "Apraksts"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS neveic valūtas konvertēšanu. Ja tiek pieņemti maksājumi par "
+"abonementiem, ir jānodrošina, lai abonementa valūta atbilstu šeit "
+"norādītajam."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Tālāk ievadiet maksas summas, lai autoram varētu piemērot apstrādes maksu."
+
+msgid "manager.payment.authorFees"
+msgstr "Autora maksa"
+
+msgid "manager.payment.amount"
+msgstr "Summa"
+
+msgid "manager.payment.addPayment"
+msgstr "Pievienot maksājumu"
+
+msgid "manager.payment.action"
+msgstr "Rīcība"
+
+msgid "manager.managementPages"
+msgstr "Pārvaldības lapas"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Šī būs žurnāla vietnes noklusējuma valoda."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Atvainojiet, papildu valodas nav pieejamas. Ja vēlaties izmantot papildu "
+"valodas šajā žurnālā, sazinieties ar vietnes administratoru."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS var būt pieejama lietotājiem jebkurā no vairākām atbalstītajām valodām. "
+"Tāpat OJS var darboties kā daudzvalodu sistēma, nodrošinot lietotājiem "
+"iespēju katrā lapā pārslēgties starp valodām un ļaujot dažus datus ievadīt "
+"vairākās papildu valodās.<br /><br/>Ja valoda, ko atbalsta OJS, nav norādīta "
+"sarakstā, lūdziet vietnes administratoram instalēt valodu no vietnes "
+"administrēšanas saskarnes. Norādījumus par jaunu valodu atbalsta "
+"pievienošanu skatiet OJS dokumentācijā."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Ar šo tiks aizstāti visi žurnāla lokalizācijas specifiskie iestatījumi, kas "
+"tika veikti šai lokalizācijai"
+
+msgid "manager.language.forms"
+msgstr "Formas"
+
+msgid "manager.language.submissions"
+msgstr "Materiālu iesniegšana"
+
+msgid "manager.language.ui"
+msgstr "Lietotāja saskarne (UI)"
+
+msgid "manager.journalManagement"
+msgstr "Žurnāla pārvaldība"
+
+msgid "manager.files.note"
+msgstr ""
+"Piezīme: Failu pārlūks ir uzlabota funkcija, kas ļauj tieši skatīt un "
+"apstrādāt ar žurnālu saistītos failus un direktorijus."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Vai esat pārliecināts, ka vēlaties atiestatīt visas e-pasta veidnes šajā "
+"žurnālā? Jūs zaudēsiet visus veiktos pielāgojumus."
+
+msgid "manager.website.archiving"
+msgstr "Arhivēšana"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Teksta rediģēšanas posmā"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Izmantot noklusējuma šablonus.<br />%j.v%vi%i numuriem<br />%j.v%vi%i.%a "
+"rakstiem<br />%j.v%vi%i.%a.g%g saliktņiem."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Piešķirt digitālo objektu identifikatorus (DOI) rakstiem, numuriem un "
+"saliktņiem."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Lai piekļūtu žurnāla saturam, būs nepieciešams abonements."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Žurnāls nodrošinās atvērtu piekļuvi tā saturam."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS netiks izmantota, lai publicētu žurnāla saturu tiešsaistē."
+
+msgid "manager.distribution.publishingMode"
+msgstr "Publicēšanas režīms"
+
+msgid "manager.distribution.publication"
+msgstr "Publikācija"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Izmantojiet raksta publicēšanas datumu"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Izmantojiet numura publicēšanas datumu"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Izvēlieties, kā rakstam tiek atlasīts noklusējuma autortiesību datums. Šo "
+"noklusējumu var ignorēt katrā gadījumā atsevišķi. Ja publicējat, "
+"nebāzējoties izdevuma numurā (\"publish as you go\"), neizmantojiet izdevuma "
+"publicēšanas datumu."

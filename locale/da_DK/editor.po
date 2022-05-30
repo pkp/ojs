@@ -1,11 +1,12 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2021-09-06 15:04+0000\n"
-"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"PO-Revision-Date: 2022-04-22 07:57+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/editor/da_DK/"
 ">\n"
 "Language: da_DK\n"
@@ -447,3 +448,6 @@ msgstr ""
 "nummer fra et andet tidsskrift. Du skal være sikker på, at du arbejder med "
 "det korrekte tidsskrift, og at du anvender det korrekte nummer-id. Prøv "
 "derefter igen."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Anmod om betaling"

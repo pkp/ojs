@@ -16,8 +16,8 @@
 
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
-use PKP\security\Role;
 use PKP\security\authorization\SubmissionAccessPolicy;
+use PKP\security\Role;
 
 import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
 
@@ -36,6 +36,7 @@ class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
                     'roles' => [
                         Role::ROLE_ID_SUB_EDITOR,
                         Role::ROLE_ID_MANAGER,
+                        Role::ROLE_ID_SITE_ADMIN,
                         Role::ROLE_ID_ASSISTANT,
                     ],
                 ],

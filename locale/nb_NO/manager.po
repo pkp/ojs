@@ -2465,11 +2465,9 @@ msgstr ""
 "Velg publiseringsobjekter som skal ha tildelt Digital Object Identifiers "
 "(DOI):"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Velg objektene DOI-er skal tilordnes til."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Tidsskriftets innhold"
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2486,22 +2484,8 @@ msgstr ""
 msgid "doi.displayName"
 msgstr "DOI"
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Et DOI-suffiks kan ha en hvilken som helst form, men må være unikt der alle "
-"publiseringsobjekter er tildelt det samme DOI-prefikset:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI-suffiks"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI-prefikset er obligatorisk, og må være i formatet 10.xxxx."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"DOI-prefikset tildeles av registreringsbyråer (som <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>), og er i formatet "
-"10.xxxx (f.eks. 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI-prefiks"
@@ -2511,9 +2495,6 @@ msgstr "Oppsett"
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artikler"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Utgave"
 
 msgid "doi.editor.preview.objects"
 msgstr "Element"
@@ -2647,19 +2628,6 @@ msgstr "Fyll inn DOI-suffiksmønsteret for artikler."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Fyll inn DOI-suffiksmønsteret for numre."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Skriv inn et individuelt DOI-suffiks for hvert publiserte element. Et ekstra "
-"DOI-felt vil vises på hvert element sin metadataside."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i for numre<br />%j.v%vi%i.%a for artikler<br />%j.v%vi%i.%a.g%g for "
-"oppsett."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Bruk standardformatene."
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "for publiseringsversjoner"

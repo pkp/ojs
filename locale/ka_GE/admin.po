@@ -1,6 +1,7 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-12 08:24+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "ka_GE/>\n"
@@ -228,3 +229,8 @@ msgstr ""
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "ძირიტადი ენა უნდა იყოს ჟურნალის მიერ მხარდაჭერილი ერთ-ერთი ენა."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"დაამატეთ, დაარედაქტირეთ ან წაშალეთ ჟურნალები ამ საიტიდან და მართეთ მთელი "
+"საიტის პარამეტრები."

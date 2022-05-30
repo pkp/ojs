@@ -118,7 +118,7 @@ class TemplateManager extends PKPTemplateManager
         $menu = (array) $this->getState('menu');
 
         // Add issues after submissions items
-        if (in_array(Role::ROLE_ID_MANAGER, $userRoles)) {
+        if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN], $userRoles))) {
             $issuesLink = [
                 'name' => __('editor.navigation.issues'),
                 'url' => $router->url($request, null, 'manageIssues'),

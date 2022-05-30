@@ -175,7 +175,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             if (!$referredArticle || $referredArticle->getId() != $submissionId) {
                 $referredArticle = Repo::submission()->get($submissionId);
             }
-            $fileUrl = $request->url(null, 'article', 'download', [$referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getId()], $params);
+            $fileUrl = $request->url(null, 'article', 'download', [$referredArticle->getBestId(), $galley->getBestGalleyId(), $embeddableFile->getId(), $embeddableFile->getLocalizedData('name')], $params);
             $pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')));
 
             $contents = preg_replace(
@@ -187,7 +187,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                 error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
             }
 
-            // Replacement for Flowplayer
+            // Replacement for Flowplayer or other Javascript
             $contents = preg_replace(
                 '/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
                 'url:\'' . $fileUrl . '\'',
@@ -197,7 +197,17 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                 error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
             }
 
-            // Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
+            // Replacement for CSS url(...)
+            $contents = preg_replace(
+                '/[Uu][Rr][Ll]\(' . $pattern . '\)/',
+                'url(' . $fileUrl . ')',
+                $contents
+            );
+            if ($contents === null) {
+                error_log('PREG error in ' . __FILE__ . ' line ' . __LINE__ . ': ' . preg_last_error());
+            }
+
+            // Replacement for other players (tested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
             $contents = preg_replace(
                 '/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
                 'url=' . $fileUrl,

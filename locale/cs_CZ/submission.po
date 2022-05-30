@@ -1,9 +1,10 @@
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2021-05-03 22:23+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "cs_CZ/>\n"
@@ -345,3 +346,36 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Tento příspěvek byl přidán do <a href=\"{$issueUrl}\">{$issueName}</a>, ale "
 "zatím nebylo stanoveno datum jeho publikování."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Vyberte soubory, které mají být odeslány do recenzní fáze."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Pošlete autorům e-mail s informací, že tento příspěvek bude odeslán k "
+"recenznímu řízení. Pokud je to možné, naznačte autorům, jak dlouho může "
+"recenzní řízení trvat a kdy mají očekávat, že se jim redakce znovu ozve."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Pošlete autorům e-mail, ve kterém jim oznámíte, že jejich příspěvky byly "
+"vráceny do fáze recenzního řízení. Vysvětlete, proč bylo toto rozhodnutí "
+"učiněno, a informujte autora o tom, jaké další recenze budou prováděny."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Příspěvek {$title} byl poslán zpět do recenzní fáze."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Posláno zpět to recenzní fáze"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} zrušil rozhodnutí o přijetí tohoto příspěvku a vrátil ho zpět "
+"do recenzní fáze."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Vrátit rozhodnutí o přijetí tohoto podání a vrátit jej do recenzní fáze."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Zpět do recenzní fáze"

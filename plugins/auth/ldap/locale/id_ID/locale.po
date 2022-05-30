@@ -1,12 +1,13 @@
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
-"PO-Revision-Date: 2020-02-03 06:35+0000\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
-"auth-ldap/id/>\n"
+"auth-ldap/id_ID/>\n"
 "Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,7 +94,10 @@ msgid "plugins.auth.ldap.settings.saslrealm"
 msgstr "Jangkauan"
 
 msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "Memerlukan ID Pengesahan"
+msgstr "ID autorisasi proxy yang diminta"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL Properti Keamanan"
+
+msgid "plugins.auth.ldap.settings.saslauthcid"
+msgstr "ID autorisasi yang diminta"

@@ -1,10 +1,10 @@
-# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021.
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2021-11-21 21:47+0000\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -2081,17 +2081,12 @@ msgstr ""
 "Sistemde DOI'leri kullanmak ve yönetebilmek için lütfen DOI eklentisini "
 "yapılandırın:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Dergi İçeriği"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Lütfen DOI'lerin atanacağı nesneleri seçiniz."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Sayılar"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Makaleler"
@@ -2102,19 +2097,8 @@ msgstr "Dizgi Tablaları"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI Ön Eki"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "DOI Ön Ekleri kayıt ajansları (Örneğin; <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI ön eki zorunludur ve 10.xxxx biçiminde olmalıdır."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI Son Eki"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"Bir DOI son ek dosyası herhangi bir biçimi alabilir, fakat tüm yayınlanmış "
-"nesneler arasında aynı DOI ön eki almışlar arasında tekil olmalıdır:"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
 msgstr "sayılar için"
@@ -2130,12 +2114,6 @@ msgstr ""
 "Örneğin; vol%viss%ipp%p kodlaması, 10.1234/vol3iss2pp230 gibi bir DOI "
 "yaratabilir"
 
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "varsayılan örneği/şablonu kullan."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "Sayılar için %j.v%vi%i<br />makaleler için %j.v%vi%i.%a<br />dizgi tablaları için %j.v%vi%i.%a.g%g."
-
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Lütfen sayılar için örnek/şablon DOI son ekini giriniz."
 
@@ -2144,9 +2122,6 @@ msgstr "Lütfen makaleler için örnek/şablon DOI son ekini giriniz."
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
 msgstr "Lütfen dizgi tablaları için örnek/şablon DOI son ekini gibiniz."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Yayınlanan her bir öğe için ayrı bir DOI soneki girin. Her bir öğenin üst veri sayfasında ek bir DOI giriş alanı bulacaksınız."
 
 msgid "doi.manager.settings.doiReassign"
 msgstr "DOI'leri yeniden ata"
@@ -2224,7 +2199,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId}, çözümlenmemiş bir şablon içerdiğinden atanamaz."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI {$pubId} atanmıştır."
+msgstr ""
+"DOI {$pubId} atandı. DOI'yi düzenlemek için <a href=\"{$doiManagementLink}\">"
+"DOI Yönetimi sayfasını</a> ziyaret edin."
 
 msgid "doi.editor.preview.objects"
 msgstr "Öğe"
@@ -2258,3 +2235,75 @@ msgstr "DOI {$prefix} öneki ile başlamalıdır."
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Makaleler"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Bu e-posta, yazara, değerlendirme aşamasından önce aday makalenin dergide "
+"değerlendirme gereksinimlerini karşılamadığı için reddedildiğini bildirir."
+
+msgid "doi.manager.issueDois"
+msgstr "Sayı DOI'leri"
+
+msgid "doi.manager.submissionDois"
+msgstr "Makale DOI'leri"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "İstediğiniz sayılar bulunamadı"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Bir yayın yayınlandıktan sonra sadece DOI'ler düzenlenebilir"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Gönderilen DOI geçerli değil"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Bir dizgi biçimi yayımlandıktan sonra sadece DOI'ler düzenlenebilir"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Bu dizgi bu yayının bir parçası değildir."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} yayınlandığında atanacaktır."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Hiçbiri"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "Lütfen DOI'leri atarken kullanmak istediğiniz kayıt platformunu seçin."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Kayıt Ajansı"
+
+msgid "doi.manager.displayName"
+msgstr "DOI'ler"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Abonenin üyeliği hakkında bilgi"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Aboneliğin türü, adı, süresi ve maliyetinin bir özeti"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Aboneliğin sona erdiği tarih"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Abonelik sayfasının URL'si"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Abonelik yöneticisinin iletişim bilgileri"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Abonenin adı, bağlantısı, telefon numarası ve e-posta adresi"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Son kopya düzenleme aşamasında"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Varsayılan kalıpları kullan.<br />Sayılar için %j.v%vi%i<br />Makaleler için "
+"%j.v%vi%i.%a<br />Dizgi biçimleri için%j.v%vi%i.%a.g%g."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Makalelere, sayılara ve dizgi biçimlerine Dijital Nesne Tanımlayıcılar "
+"(DOI'ler) atayın."

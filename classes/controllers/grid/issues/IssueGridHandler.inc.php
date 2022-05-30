@@ -31,15 +31,16 @@ use APP\template\TemplateManager;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\Core;
-use PKP\facades\Locale;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\db\DAO;
+use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
+use PKP\db\DAORegistry;
 
 import('controllers.grid.issues.IssueGridRow');
 
@@ -52,7 +53,7 @@ class IssueGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [Role::ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
             [
                 'fetchGrid', 'fetchRow',
                 'addIssue', 'editIssue', 'editIssueData', 'updateIssue',

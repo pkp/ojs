@@ -3,7 +3,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-07 13:59+0000\n"
+"PO-Revision-Date: 2022-05-05 13:31+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "kk_KZ/>\n"
@@ -2071,24 +2071,24 @@ msgid "manager.people.enrollSyncJournal"
 msgstr "Журналмен"
 
 msgid "manager.people.enrollExistingUser"
-msgstr "Бар пайдаланушыны тіркеу"
+msgstr "Бар қолданушыны тіркеу"
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Үлгіні таңдаңыз"
 
 msgid "manager.people.confirmRemove"
 msgstr ""
-"Бұл пайдаланушы осы журналдан жойылсын ба? Бұл әрекет осы тарихта осы "
-"пайдаланушыға тағайындалған барлық рөлдерді болдырмайды."
+"Бұл қолданушы осы журналдан жойылсын ба? Бұл әрекет осы тарихтағы "
+"қолданушыға тағайындалған барлық рөлдерді болдырмайды."
 
 msgid "manager.people.allUsers"
-msgstr "Барлық тіркелген пайдаланушылар"
+msgstr "Барлық тіркелген қолданушылар"
 
 msgid "manager.people.showNoRole"
-msgstr "Рөлі жоқ пайдаланушыларды көрсету"
+msgstr "Рөлі жоқ қолданушыларды көрсету"
 
 msgid "manager.people.allSiteUsers"
-msgstr "Осы сайттан пайдаланушыны осы журналға жазыңыз"
+msgstr "Осы сайттан пайдаланушыны журналға жазыңыз"
 
 msgid "manager.people.allJournals"
 msgstr "Барлық журналдар"
@@ -2276,19 +2276,6 @@ msgstr "Мақалалар үшін DOI жұрнағының үлгісін ен
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Басылымдар үшін DOI жұрнағының үлгісін енгізіңіз."
 
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr ""
-"Әр жарияланған элемент үшін жеке DOI жұрнағын енгізіңіз. Бұдан кейін әр "
-"элемент үшін метадеректер бетінде қосымша DOI енгізу жолағын көре аласыз."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i журнал басылымдары үшін<br />%j.v%vi%i.%a мақалалар үшін<br "
-"/>%j.v%vi%i.%a.g%g электрондық жазбалар үшін."
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Негізгі үлгілерді қолданыңыз."
-
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "электрондық жазба үшін"
 
@@ -2310,22 +2297,8 @@ msgstr ""
 "идентификаторы үшін %f, бет нөмірі үшін %p және \"жеке жұрнақ\"үшін %x "
 "қолданыңыз."
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"DOI жұрнағы кез-келген формада болуы мүмкін, бірақ бірдей DOI префиксі "
-"барлық жарияланған нысандар арасында ерекше болуы керек:"
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI жұрнағы"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI префиксі міндетті және 10.xxxx түрінде болуы керек."
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"DOI префиксін тіркеу агенттіктері тағайындайды (мысалы, <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) және 10.xxxx "
-"форматында ұсынылады (мысалы, 10.1234):"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI Префиксі"
@@ -2336,19 +2309,14 @@ msgstr "Электрондық жазба"
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Мақалалар"
 
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Басылымдар"
-
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Берілген сандық нысандардың идентификаторлары бар жарияланатын нысандарды "
 "таңдаңыз (Digital Object Identifier, DOI) :"
 
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "DOI тағайындалуы керек нысандарды таңдаңыз."
-
-msgid "doi.manager.settings.doiObjects"
-msgstr "Журнал мазмұны"
+msgstr "DOI-ы тағайындалуы керек нысандарды таңдаңыз."
 
 msgid "doi.manager.settings.description"
 msgstr "OJS-те DOI-ді қолдану және басқару үшін \"DOI\" модулін орнатыңыз:"
@@ -2449,3 +2417,32 @@ msgid "manager.setup.enableDois.description"
 msgstr ""
 "Сандық нысан идентификаторларын (DOI) мақалаларға, шығарылымдарға және "
 "галлелерге тағайындаңыз."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Бұл электрондық пошта авторға олардың материалының журналдың жариялау "
+"талаптарына сәйкес келмейтіндіктен, қарау кезеңіне дейін жіберілгені туралы "
+"хабарлайды."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Абоненттің мүшелігі туралы мәліметтер"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Жазылым түрі, атауы, ұзақтығы және құны туралы қысқаша мәлімет"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Жазылым аяқталатын күн"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Жазылымның URL мекенжайы"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Жазылым менеджерінің байланыс мәліметтері"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Абоненттің аты, байланысы, телефон нөмірі мен электрондық поштасы"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr ""
+"Автоматтандырылған электрондық пошталарға арналған журналдың электрондық "
+"жауабы"

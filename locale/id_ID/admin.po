@@ -1,10 +1,11 @@
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2021-02-03 05:53+0000\n"
-"Last-Translator: Sam Idoeb <idoebsam@gmail.com>\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "id_ID/>\n"
 "Language: id_ID\n"
@@ -210,3 +211,8 @@ msgstr ""
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "Bahasa utama harus merupakan bahasa yang didukung jurnal."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Tambah, Edit, atau hapus jurnal dari website ini dan lakukan pengaturan "
+"secara global."

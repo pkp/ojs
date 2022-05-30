@@ -14,12 +14,12 @@
  */
 
 use APP\facades\Repo;
+use PKP\controllers\grid\feature\CollapsibleGridFeature;
+use PKP\controllers\grid\feature\InfiniteScrollingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
-use PKP\security\Role;
 use PKP\security\authorization\ContextAccessPolicy;
-use PKP\controllers\grid\feature\InfiniteScrollingFeature;
-use PKP\controllers\grid\feature\CollapsibleGridFeature;
+use PKP\security\Role;
 
 import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
@@ -35,7 +35,7 @@ class SubscriberSelectGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRows']
         );
     }

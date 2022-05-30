@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-04-04 16:20+0000\n"
+"PO-Revision-Date: 2022-04-29 09:26+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -1794,17 +1794,12 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "لطفاً، قم بتهيئة إضافة DOI لتتمكن من إدارة واستعمال DOI في نظام المجلات المفتوحة:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "محتوى المجلة"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "لطفاً، إختر المكونات التي على DOI أن تتعين لها."
+msgstr "لطفاً، إختر المكونات التي ينبغي تعيين DOI لها."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "لطفاً، إختر مكونات النشر التي ستكون لها معرفات للمكونات الرقمية (DOI) معينة لها:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "الأعداد"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "المقالات"
@@ -1820,9 +1815,6 @@ msgstr "إن بادئة DOI يتم تعيينها من قبل وكالات ال�
 
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "إن بادئة DOI هي إجبارية وينبغي أن تكون بصيغة 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "لاحقة DOI"
 
 msgid "doi.manager.settings.doiSuffixDescription"
 msgstr "يمكن للاحقة DOI أن تأخذ أي شكل، لكنها يجب أن تكون فريدة بين كل المكونات المنشورة التي تمتلك نفس بادئة DOI:"
@@ -1841,15 +1833,6 @@ msgstr "للمقالات"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "للألواح الطباعية"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "استعمل الأنماط الافتراضية."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr "%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "أدخل لاحقة DOI منفردة لكل فقرة منشورة مستقلة ومختلفة عن \"المعرف المخصص\" المذكور في الخيار السابق. ستجد حقل إدخال DOI إضافي في كل صفحة بيانات وصفية."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "لطفاً، أدخل نمط لاحقة DOI للأعداد."
@@ -1965,17 +1948,6 @@ msgstr ""
 msgid "doi.editor.doi.assignDoi"
 msgstr "تعيين"
 
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr ""
-"لاحقة معرف المكون الرقمي يمكنها أن تكون بأي تنسيق، لكنها لا بد أن تكون فريدة "
-"ما بين كل المكونات المنشورة المنضوية تحت نفس البادئة:"
-
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr ""
-"إن معرف المكون الرقمي يتم تعيينه من قبل وكالات التسجيل (كما في <a href=\""
-"http://www.crossref.org\" target=\"_new\">Crossref</a>) وهو بالتنسيق الآتي  "
-"10.xxxx (مثلاً 10.1234):"
-
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "المقالات"
 
@@ -2028,3 +2000,26 @@ msgstr "سيتم تعيين مُعرف المكون الرقمي {$pubId} عند
 
 msgid "doi.manager.settings.registrationAgency.none"
 msgstr "لا أحد"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"هذا البريد الالكتروني يُشعر المؤلف بأن طلب تقديمه يجري رفضه قبل مرحلة "
+"التحكيم لأنه لا يلبي متطلبات النشر في المجلة."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "معلومات عن عضوية المشترك"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "موجز عن نوع الاشتراك، اسمه، مدته وكلفته"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "تاريخ إنتهاء الاشتراك"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "عنوان رابط صفحة الاشتراك"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "تفاصيل الاتصال بمدير الاشتراكات"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "اسم المشترك، إنتماؤه، رقم هاتفه وبريده الالكتروني"

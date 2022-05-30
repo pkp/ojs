@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-02-22 13:09+0000\n"
+"PO-Revision-Date: 2022-05-18 16:13+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -714,7 +714,7 @@ msgstr "Aktivér adgang for bedømmere ved hjælp af ét klik"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Bedømmere kan få tilsendt et sikkert link i e-mail-invitationen, som giver "
-"dem adgang til anmeldelsen uden at logge ind. Adgang til andre sider kræver, "
+"dem adgang til bedømmelsen uden at logge ind. Adgang til andre sider kræver, "
 "at de logger på."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
@@ -1678,7 +1678,7 @@ msgstr ""
 "snart være tilgængeligt i plug-in-galleriet."
 
 msgid "manager.setup.otherLockss"
-msgstr "Alternative arkiveringsmuligheder"
+msgstr "Alternative muligheder for arkivering"
 
 msgid "manager.subscriptionPolicies.xMonths"
 msgstr "{$x} måneder"
@@ -1948,17 +1948,12 @@ msgstr ""
 "Konfigurér dette DOI plugin, så det bliver muligt at administrere og bruge "
 "DOI’er i OJS:"
 
-msgid "doi.manager.settings.doiObjects"
-msgstr "Tidsskriftsindhold"
-
+#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr "Vælg de elementer, der skal have tildelt et DOI."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Vælg de publicerede elementer, der skal have tildelt et DOI:"
-
-msgid "doi.manager.settings.enableIssueDoi"
-msgstr "Numre"
 
 msgid "doi.manager.settings.enableSubmissionDoi"
 msgstr "Artikler"
@@ -1969,17 +1964,8 @@ msgstr "Publiceringsversioner"
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI-præfiks"
 
-msgid "doi.manager.settings.doiPrefix.description"
-msgstr "DOI-præfikset tildeles af registreringsorganisationer (f.eks. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) og er i formatet 10.xxxx (f.eks. 10.1234):"
-
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI-præfikset er obligatorisk og skal være i formatet 10.xxxx."
-
-msgid "doi.manager.settings.doiSuffix"
-msgstr "DOI-suffiks"
-
-msgid "doi.manager.settings.doiSuffix.description"
-msgstr "Et DOI-suffiks kan antage en hvilken som helst form, men det skal være unikt for hvert enkelt udgivet element under samme DOI-præfiksgruppe:"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr "Brug nedenstående format til at generere DOI-suffikser ud fra. Anvend %j til tidsskriftsinitialer, %v til årgangsnummer, %i til nummeret i årgangen, %Y til året, %a til OJS-artikel-id, %g til OJS-satsskibs-id, %f til OJS fil-id %p til sidenummer og %x til \"Custom Identifier\"."
@@ -1995,17 +1981,6 @@ msgstr "til artikler"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "til publiceringsversioner"
-
-msgid "doi.manager.settings.doiSuffixDefault"
-msgstr "Anvend standardformaterne."
-
-msgid "doi.manager.settings.doiSuffixDefault.description"
-msgstr ""
-"%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g til "
-"publiceringsversioner."
-
-msgid "doi.manager.settings.doiSuffixCustomIdentifier"
-msgstr "Indskriv et særskilt DOI-suffiks for hvert publiceret element. Der findes et ekstra DOI-felt på hvert elements metadataside."
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Indsæt DOI-suffiks-formatet til numre."
@@ -2181,3 +2156,28 @@ msgstr "Artikel DOI'er"
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
 msgstr "På copy-editing niveau"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Denne e-mail giver forfatteren besked om, at indsendelsen afvises inden "
+"bedømmelsesfasen, fordi indsendelsen ikke opfylder kravene til udgivelse i "
+"tidsskriftet."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Oplysninger om abonnentens medlemskab"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "En oversigt over abonnementets type, navn, varighed og pris"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Datoen, hvor abonnementet ophører"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL'en til abonnementssiden"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Kontaktoplysninger på administratoren af abonnement"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Abonnentens navn, institutionelle tilknytning, telefonnummer og e-mailadresse"

@@ -18,6 +18,7 @@ import('controllers.grid.subscriptions.SubscriptionTypesGridRow');
 import('controllers.grid.subscriptions.SubscriptionTypeForm');
 
 use APP\notification\NotificationManager;
+use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
@@ -26,7 +27,6 @@ use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
-use PKP\controllers\grid\feature\PagingFeature;
 
 class SubscriptionTypesGridHandler extends GridHandler
 {
@@ -37,8 +37,7 @@ class SubscriptionTypesGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [
-                Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUBSCRIPTION_MANAGER],
             ['fetchGrid', 'fetchRow', 'editSubscriptionType', 'updateSubscriptionType',
                 'deleteSubscriptionType', 'addSubscriptionType']
         );

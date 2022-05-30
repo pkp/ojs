@@ -13,13 +13,13 @@
  * @brief Handle exportable issues with pub ids list grid requests.
  */
 
+use PKP\controllers\grid\feature\PagingFeature;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
 use PKP\security\Role;
-use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
-use PKP\controllers\grid\feature\PagingFeature;
 
 import('controllers.grid.pubIds.PubIdExportIssuesListGridCellProvider');
 
@@ -35,7 +35,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [Role::ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
             ['fetchGrid', 'fetchRow']
         );
     }

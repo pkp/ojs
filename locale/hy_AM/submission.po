@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-26 00:05+0000\n"
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hy_AM/>\n"
@@ -366,3 +366,38 @@ msgstr "Մետատվյալներ"
 
 msgid "submission.submit.noContext"
 msgstr "Այս ներկայացման ամսագիրը չհաջողվեց գտնել:"
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Ընտրեք նիշքեր, որոնք պետք է ուղարկվեն վերանայման փուլ:"
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Նամակ ուղարկեք հեղինակներին՝ տեղեկացնելու նրանց, որ այս ներկայացումը "
+"կուղարկվի գործընկերների վերանայման: Եթե հնարավոր է, որոշ ցուցումներ տվեք "
+"հեղինակներին, թե որքան երկար կարող է տևել գործընկերների վերանայման "
+"գործընթացը և երբ նրանք պետք է ակնկալեն նորից լսել խմբագիրներից:"
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Նամակ ուղարկեք հեղինակներին՝ տեղեկացնելով, որ իրենց ներկայացումը հետ է "
+"ուղարկվում վերանայման փուլ: Բացատրեք, թե ինչու է կայացվել այս որոշումը և "
+"տեղեկացրեք հեղինակին հետագա վերանայման մասին:"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Այս ներկայացումը՝ {$title}, հետ է ուղարկվել վերանայման փուլ:"
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Ուղարկվել է հետ Վերանայման"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} -ը չեղարկեց այս ներկայացումն ընդունելու որոշումը և այն հետ "
+"ուղարկեց վերանայման փուլ:"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Չեղարկեք այս ներկայացումն ընդունելու որոշումը և այն հետ ուղարկեք վերանայման "
+"փուլ:"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Վերադարձ դեպի Նախադիտում"
