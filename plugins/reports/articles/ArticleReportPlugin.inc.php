@@ -95,7 +95,7 @@ class ArticleReportPlugin extends ReportPlugin
         // (This must be stored before display because we won't know the data
         // dimensions until it has all been loaded.)
         $results = $sectionTitles = [];
-        $collector = Repo::submission()->getCollector()->filterByContextIds([$journal->getId()]);
+        $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
         $submissions = Repo::submission()->getMany($collector);
         $maxAuthors = $maxEditors = $maxDecisions = 0;
         foreach ($submissions as $submission) {
@@ -163,7 +163,7 @@ class ArticleReportPlugin extends ReportPlugin
                         $author->getData('url'),
                         html_entity_decode(strip_tags($author->getLocalizedData('biography'))),
                     ];
-                }, $publication->getData('authors')),
+                }, $publication->getData('authors')->toArray()),
                 'sectionTitle' => $sectionTitles[$sectionId],
                 'language' => $publication->getData('locale'),
                 'coverage' => $publication->getLocalizedData('coverage'),
