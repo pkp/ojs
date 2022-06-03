@@ -2,7 +2,7 @@
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-06-03 12:16+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
@@ -405,3 +405,20 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Обратно към етап на рецензиране"
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Не можа да се създаде DOI за следното подаване на материали:  "
+"{$pubObjectTitle}. Подадените материали не са присвоени към брой на списание."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Не можа да се създаде DOI за типографията {$pubObjectTitle} на следното "
+"подаване на материали: {$itemTitle}. Подадените материали трябва да бъдат "
+"присвоени към брой, преди да може да се генерира DOI."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Не можа да се създаде DOI за следното подаване на материали: "
+"{$pubObjectTitle}. Подадените материали трябва да бъдат присвоени към брой, "
+"преди да може да се генерира DOI."
