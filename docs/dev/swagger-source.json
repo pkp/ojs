@@ -102,71 +102,6 @@
 			}
 		},
 		"EmailTemplate": "emailTemplate",
-		"Mailable": {
-			"type": "object",
-			"description": "Each Mailable class represents an email that is sent, such as a request sent to a reviewer.",
-			"properties": {
-				"name": {
-					"type": "string",
-					"description": "The name of this email.",
-					"readOnly": true
-				},
-				"className": {
-					"type": "string",
-					"description": "The fully-qualified class name, such as `PKP\\mail\\mailables\\ReviewRequest`.",
-					"readOnly": true
-				},
-				"description": {
-					"type": "string",
-					"description": "A description of this email.",
-					"readOnly": true
-				},
-				"supportsTemplates": {
-					"type": "boolean",
-					"description": "Whether or not additional email templates can be assigned to this Mailable. This will be `false` for all emails that are sent automatically by the system.",
-					"readOnly": true
-				},
-				"groupsIds": {
-					"type": "array",
-					"description": "Which groups this Mailable is assigned to. One of the `Mailable::GROUP_*` constants.",
-					"items": {
-						"type": "string",
-						"enum": ["submission", "review", "copyediting", "production", "other"]
-					},
-					"readOnly": true
-				},
-				"fromRoleIds": {
-					"type": "array",
-					"description": "Which user roles send this email. One of the `Role::ROLE_ID_*` constants.",
-					"items": {
-						"type": "integer",
-						"enum": [1,16,17,4096,4097,65536,1048576,2097152]
-					},
-					"readOnly": true
-				},
-				"toRoleIds": {
-					"type": "array",
-					"description": "Which user roles receive this email. One of the `Role::ROLE_ID_*` constants.",
-					"items": {
-						"type": "integer",
-						"enum": [1,16,17,4096,4097,65536,1048576,2097152]
-					},
-					"readOnly": true
-				},
-				"emailTemplateKey": {
-					"type": "string",
-					"description": "The `key` of the default email template used with this `Mailable`, if one exists.",
-					"readOnly": true
-				},
-				"customTemplateKeys": {
-					"type": "array",
-					"description": "The `key`s of custom email templates assigned to this `Mailable`.",
-					"items": {
-						"type": "string"
-					}
-				}
-			}
-		},
 		"Galley": "galley",
 		"InvalidParametersResponse": {
 			"type": "object",
@@ -3111,16 +3046,11 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "List of mailables.",
+						"description": "List of fully qualified class names of mailables.",
 						"schema": {
-							"type": "object",
-							"properties": {
-								"items": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/Mailable"
-									}
-								}
+							"type": "array",
+							"items": {
+								"type": "string"
 							}
 						}
 					},
@@ -3134,17 +3064,17 @@
 				}
 			}
 		},
-		"/mailables/{className}": {
+		"/mailables/{id}": {
 			"get": {
 				"tags": [
 					"Mailables"
 				],
 				"summary": "Get a mailable",
-				"description": "Get a Mailable by its class name.",
+				"description": "Get a Mailable by its id.",
 				"parameters": [
 					{
-						"name": "className",
-						"description": "The fully-qualified class name of a `Mailable`, such as `PKP\\mail\\mailables\\ReviewRequest`. See the `className` property of each Mailable.",
+						"name": "id",
+						"description": "The ID of the mailable derived from the fully-qualified class name, such as `PKP-mail-mailables-ReviewRequest`.",
 						"in": "path",
 						"required": true,
 						"type": "string"
@@ -3153,9 +3083,9 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "The `Mailable`",
+						"description": "The mailable's fully qualified class name",
 						"schema": {
-							"$ref": "#/definitions/Mailable"
+							"type": "string"
 						}
 					},
 					"403": {
@@ -3175,7 +3105,7 @@
 				}
 			}
 		},
-		"/mailables/{className}/emailTemplates": {
+		"/mailables/{id}/emailTemplates": {
 			"put": {
 				"tags": [
 					"Mailables"
@@ -3184,8 +3114,8 @@
 				"description": "Assign custom email templates to a `Mailable` class.",
 				"parameters": [
 					{
-						"name": "className",
-						"description": "The fully-qualified class name of a `Mailable`, such as `PKP\\mail\\mailables\\ReviewRequest`. See the `className` property of each Mailable.",
+						"name": "id",
+						"description": "The ID of the mailable derived from the fully-qualified class name, such as `PKP-mail-mailables-ReviewRequest`.",
 						"in": "path",
 						"required": true,
 						"type": "string"
@@ -3203,9 +3133,12 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "The mailable with all assigned custom email templates.",
+						"description": "The list of assigned custom email templates.",
 						"schema": {
-							"$ref": "#/definitions/Mailable"
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
 						}
 					},
 					"400": {
