@@ -157,6 +157,7 @@ name = ojs
 ; Enable database debug output (very verbose!)
 debug = Off
 
+
 ;;;;;;;;;;;;;;;;;;
 ; Cache Settings ;
 ;;;;;;;;;;;;;;;;;;
@@ -285,6 +286,22 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
 
+
+;;;;;;;;;;;;;;;;;;;;
+; Logging Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[logging]
+
+; Path to store the log. If empty, the PHP's error_log will be used
+; path = error.log
+
+; Defines the minimum level of messages that you are interested to keep
+; The default value is "debug" (all messages), other possible values are:
+; emergency, alert, critical, error, warning, notice, info and debug
+; level = debug
+
+
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
 ;;;;;;;;;;;;;;;;;;
@@ -370,6 +387,12 @@ require_validation = Off
 ; Maximum number of days before an unvalidated account expires and is deleted
 validation_timeout = 14
 
+; Path to store the email log (if empty, [logging].path will be used)
+; log_path = mail.log
+
+; Log level (if empty, "error" will be its default value, see [logging].level)
+; log_level = error
+
 
 ;;;;;;;;;;;;;;;;;;;
 ; Search Settings ;
@@ -420,6 +443,7 @@ repository_id = ojs.pkp.sfu.ca
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100
 
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Interface Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -457,6 +481,7 @@ captcha_on_login = on
 ; Validate the hostname in the ReCaptcha response
 recaptcha_enforce_hostname = Off
 
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; External Commands ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -478,6 +503,7 @@ tar = /bin/tar
 ; source file; eg:
 ; /usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl
 xslt_command = ""
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Proxy Settings ;

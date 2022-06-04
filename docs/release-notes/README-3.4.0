@@ -30,10 +30,18 @@ configuration parameters.
 
 - The setting i18n.client_charset was removed. It used to support two options "ISO-8859-1" (LATIN1) and "UTF-8", now we're UTF-8 only.
 
-New config.inc.php section for queues is added, with the following parameters:
+New config.inc.php section for queues was added, with the following parameters:
     - default_connection (default value: database), being the default queue driver to be used;
     - default_queue (default value: queue), being the default queue to be used if someone forgot to associate a queue during Queue::push()
     - disable_jobs_run_at_shutdown (default value: off), being a flag to disable the jobs to run at php shutdown
+
+New config.inc.php section "logging" was added, with the following parameters:
+    - path: Path to store the log. If empty, the PHP's error_log will be used.
+    - level: Defines the minimum level of messages that you are interested to keep. The default value is debug (all messages).
+      Possible values are: emergency, alert, critical, error, warning, notice, info and debug.
+
+- The setting email.log_path was added to configure where email logs should be stored.
+- The setting email.log_level was added to define the minimum level of messages that should be kept.
 
 New Features
 ------------
