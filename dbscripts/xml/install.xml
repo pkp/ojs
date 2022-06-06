@@ -20,7 +20,6 @@
 	<migration class="PKP\migration\install\ControlledVocabMigration" />
 	<migration class="PKP\migration\install\FailedJobsMigration" />
 	<migration class="PKP\migration\install\FilesMigration" />
-	<migration class="PKP\migration\install\GenresMigration" />
 	<migration class="PKP\migration\install\JobsMigration" />
 	<migration class="PKP\migration\install\LibraryFilesMigration" />
 	<migration class="PKP\migration\install\LogMigration" />
@@ -44,6 +43,7 @@
 
 	<migration class="PKP\migration\install\AnnouncementsMigration" />
 	<migration class="PKP\migration\install\CategoriesMigration" />
+	<migration class="PKP\migration\install\GenresMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
