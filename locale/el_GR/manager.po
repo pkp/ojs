@@ -1,11 +1,12 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2021.
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2021-12-26 09:24+0000\n"
-"Last-Translator: Jonas Raoni Soares da Silva <weblate@raoni.org>\n"
+"PO-Revision-Date: 2022-05-27 12:09+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el_GR/"
 ">\n"
 "Language: el_GR\n"
@@ -1954,8 +1955,8 @@ msgstr ""
 
 msgid "manager.setup.emailBounceAddress.description"
 msgstr ""
-"Τυχόν ανεπίδοτα email θα οδηγήσουν σε αποστολή email σφαλμάτων σ' αυτήν τη "
-"διεύθυνση."
+"Μηνύματα σφάλματος για μη επιτυχή παράδοση ηλεκτρονικών μηνυμάτων θα "
+"αποστέλονται στη συγκεκριμένη διεύθυνση."
 
 msgid "manager.setup.contact.success"
 msgstr "Τα στοιχεία επικοινωνίας γι' αυτό το περιοδικό έχουν ενημερωθεί."
@@ -2004,3 +2005,61 @@ msgstr "Χρησιμοποιήστε την ημερομηνία δημοσίε�
 
 msgid "manager.setup.masthead.success"
 msgstr "Ενημερώθηκαν οι λεπυομέρειες του κύριου τίτλου αυτού του περιοδικού."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Τουλάχιστον μία ενότητα πρέπει να είναι ενεργή. Επισκεφτείτε τις ρυθμίσεις "
+"ροής εργασιών για να απενεργοποιήσετε όλες τις υποβολές σε αυτό το περιοδικό."
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Η διεύθυνση URL στην ιστοσελίδα του περιοδικού"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Ο τίτλος του περιοδικού"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" -  \"{$issueIdentification}\""
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Δεν έχει οριστεί κύρια επαφή για αυτό το περιοδικό. Μπορείτε να εισαγάγετε "
+"μια κύρια επαφή στις <a href=\"{$url}\">ρυθμίσεις ημερολογίου</a>."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Στείλτε ένα αντίγραφο του email επιβεβαίωσης υποβολής στην κύρια επαφή αυτού "
+"του περιοδικού."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Αποτρέψτε τους χρήστες από την υποβολή νέων άρθρων στο περιοδικό. Οι "
+"υποβολές μπορούν να απενεργοποιηθούν για μεμονωμένες ενότητες ημερολογίου "
+"στη σελίδα ρυθμίσεων <a href=\"{$url}\">ενότητες περιοδικού</a>."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Η επικύρωση απέτυχε."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Επιτυχής επικύρωση!"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Αυτό το περιοδικό δεν δέχεται υποβολές αυτήν τη στιγμή. Επισκεφτείτε τις "
+"ρυθμίσεις ροής εργασιών για να επιτρέψετε τις υποβολές."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"<strong>Σημείωση:</strong> Για να αποστέλλονται μηνύματα, ο Διαχειριστής του "
+"ιστοτόπου πρέπει να ενεργοποιήσει την επιλογή <tt>allow_envelope_sender</tt> "
+"στο αρχείο ρυθμίσεων του OJS. Ενδέχεται να απαιτούνται πρόσθετες ρυθμίσεις "
+"στον εξυπηρετητή ώστε να υποστηριχθεί η συγκεκριμένη λειτουργία, όπως "
+"διευκρινίζεται στα έγγραφα τεκμηρίωσης του OJS."

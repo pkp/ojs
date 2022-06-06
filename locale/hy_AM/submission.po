@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-06-03 12:16+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hy_AM/>\n"
@@ -401,3 +401,19 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Վերադարձ դեպի Նախադիտում"
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Չհաջողվեց ստեղծել DOI հետևյալ ներկայացման համար՝ {$pubObjectTitle}: Այն "
+"գոյություն չունի ամսագրի ներկայիս համատեքստում:"
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Չհաջողվեց ստեղծել DOI {$pubObjectTitle} շարվածքի հետևյալ ներկայացման համար՝ "
+"{$itemTitle}: Ներկայացումը պետք է նշանակվի թողարկմանը, նախքան DOI-ի "
+"ստեղծումը:"
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Չհաջողվեց ստեղծել DOI հետևյալ ներկայացման համար՝ {$pubObjectTitle}: "
+"Ներկայացումը պետք է նշանակվի թողարկմանը, նախքան DOI-ի ստեղծումը:"

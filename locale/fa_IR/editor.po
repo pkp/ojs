@@ -1,18 +1,22 @@
+# Hamid Reza Khoddami <dr_hrkhoddami@yahoo.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2022-05-19 14:02+0000\n"
+"Last-Translator: Hamid Reza Khoddami <dr_hrkhoddami@yahoo.com>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"fa_IR/>\n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "editor.home"
-msgstr "صفحه دبیر"
+msgstr "صفحه سردبیر"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "مقالات ارسالی و چاپ شده"
@@ -42,7 +46,7 @@ msgid "editor.publicIdentificationExists"
 msgstr "شناسه  «{$publicIdentifier}» برای عنوان دیگری (شماره مجله، مقاله، کلیشه چاپی و یا فایل) اختصاص یافته است. لطفاً شناسه دیگری انتخاب کنید."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "هیچ مقاله ارسالی در بایگانی نیست"
+msgstr "هیچ مقاله ارسالی در بایگانی نیست."
 
 msgid "editor.submissionArchive.saveChanges"
 msgstr "آیا تغییرات در بایگانی مقالات ارسالی ذخیره شود؟ مقالاتی که جهت حذف انتخاب شده‌اند برای همیشه از سیستم حذف خواهند شد."
@@ -117,16 +121,16 @@ msgid "editor.issues.datePublished"
 msgstr "تاریخ انتشار"
 
 msgid "editor.issues.volumeRequired"
-msgstr "ذکر دوره مجله برای این شماره لازم است"
+msgstr "شماره دوره مجله برای این شماره بصورت یک عدد مثبت لازم است."
 
 msgid "editor.issues.numberRequired"
-msgstr "ذکر شماره برای این شماره از مجله لازم است"
+msgstr "شماره بصورت یک عدد مثبت لازم است."
 
 msgid "editor.issues.yearRequired"
-msgstr "ذکر سال این شماره لازم است"
+msgstr "سال بصورت یک عدد مثبت لازم است."
 
 msgid "editor.issues.titleRequired"
-msgstr "تعیین عنوان برای شماره مجله الزامی است"
+msgstr "تعیین عنوان برای شماره مجله الزامی است."
 
 msgid "editor.issues.issueIdentificationRequired"
 msgstr "مشخصات شناسه‌ شماره مجله الزامی است. لطفاً حداقل یکی از گزینه‌های مربوط به اطلاعات شناسه‌ای شماره مجله را انتخاب کنید."
@@ -165,7 +169,7 @@ msgid "editor.issues.proofed"
 msgstr "بازبینی نهایی شد"
 
 msgid "editor.issues.removeCoverPage"
-msgstr "حذف تصویر جلد"
+msgstr "حذف تصویر جلد؟"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr "تصویری که می‌خواهید حذف کنید، تصویر این شماره از مجله نیست، لطفاً صفحه رو از اول بارگذاری کرده و دوباره تلاش کنید."
@@ -189,7 +193,7 @@ msgid "editor.issues.coverPageCaption"
 msgstr "عنوان جلد"
 
 msgid "editor.issues.showCoverPage"
-msgstr "ایجاد صفحه جلد دلخواه برای این شماره با عناصر زیر"
+msgstr "ایجاد صفحه جلد دلخواه برای این شماره با عناصر زیر."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "نمایش"
@@ -276,13 +280,13 @@ msgid "editor.issues.viewingGalley"
 msgstr "مشاهده کلیشه چاپی شماره"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "کلیشه چاپی را با تمامی محتویات شماره آن منتشر کن"
+msgstr "کلیشه چاپی را با تمامی محتویات شماره آن منتشر کن."
 
 msgid "editor.issues.noneIssueGalleys"
 msgstr "هیچ کلیشه چاپی شماره مجله‌ای منتشر نشده است."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "وارد کردن برچسب کلیشه چاپی شماره الزامی است"
+msgstr "وارد کردن برچسب کلیشه چاپی شماره الزامی است."
 
 msgid "editor.issues.galleyLocaleRequired"
 msgstr "وارد کردن زبان کلیشه چاپی شماره الزامی است."
@@ -294,7 +298,7 @@ msgid "editor.issues.backToIssueGalleys"
 msgstr "برگشت به کلیشه چاپی شماره"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "آیا مطمئنید که می‌خواهید این کلیشه چاپی شماره را حذف کنید."
+msgstr "آیا مطمئنید که می‌خواهید این کلیشه چاپی شماره را حذف کنید؟"
 
 msgid "editor.issues.identifiers"
 msgstr "شناسه‌ها"
@@ -360,7 +364,7 @@ msgid "editor.submissions.lastCompleted"
 msgstr "آخرین داوری کامل شده"
 
 msgid "editor.submissions.assignedTo"
-msgstr "منتسب شده به"
+msgstr "محول شده به"
 
 msgid "editor.submissions.inSection"
 msgstr "برای مقالات از نوع"
@@ -372,7 +376,9 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "قرار است انتساب یابد"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "هزینه چاپ پرداخت نشده است. برای قرار دادن در نوبت چاپ به نویسنده اطلاع دهید تا هزینه را پرداخت کند"
+msgstr ""
+"هزینه چاپ پرداخت نشده است. برای قرار دادن در نوبت چاپ به نویسنده اطلاع دهید "
+"تا هزینه را پرداخت کند."
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "تصویری که می‌خواهید حذف کنید در حافظه یافت نشد. احتمالاً این تصویر پیشتر پاک شده است. لطفاً صفحه را از اول بارگذاری کرده و دوباره بررسی کنید."
@@ -387,7 +393,7 @@ msgid "editor.article.remove.confirm"
 msgstr "آیا مطمئنید که می‌خواهید این مقاله را از شماره حذف کنید؟ البته همچنان مقاله برای انتشار در شمارات آینده در سیستم باقی می‌ماند."
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "تاریخ دستیابی ذکر شده معتبر نیست"
+msgstr "تاریخ دستیابی ذکر شده معتبر نیست."
 
 msgid "editor.issues.editIssueGalley"
 msgstr "ویرایش کلیشه چاپی"
@@ -409,3 +415,27 @@ msgstr "شناسه عمومی «{$publicIdentifier}» برای موجودیت د
 
 msgid "editor.article.coverImage"
 msgstr "تصویر جلد"
+
+msgid "editor.article.payment.requestPayment"
+msgstr "درخواست پرداخت"
+
+msgid "editor.article.editMetadata"
+msgstr "ویرایش فراداده نسخه"
+
+msgid "editor.article.viewMetadata"
+msgstr "مشاهده فراداده نسخه"
+
+msgid "editor.article.publishVersion"
+msgstr "نسخه منتشر شده"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "نمایش انتشار برنامه ریزی شده"
+
+msgid "issues.submissions.issueIds"
+msgstr "اختصاص داده شده به شماره"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"تصویر جلدی که درخواست حذف کردید با شماره مجله دیگری مطابقت دارد. لطفاً مطمئن "
+"شوید که با مجله صحیح کار می کنید، از شناسه شماره صحیح استفاده می کنید و "
+"دوباره امتحان کنید."

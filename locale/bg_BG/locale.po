@@ -2,7 +2,7 @@
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-06-03 12:16+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "bg_BG/>\n"
@@ -2498,3 +2498,8 @@ msgstr "Статии"
 
 msgid "payment.requestPublicationFee.notEnabled"
 msgstr "Не е активирана опцията за такса за публикуване."
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Не можа да се създаде DOI за следния брой: {$itemTitle}. Не съществува в "
+"текущия контекст на списанието."

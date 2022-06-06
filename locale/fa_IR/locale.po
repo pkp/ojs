@@ -1,15 +1,19 @@
+# Hamid Reza Khoddami <dr_hrkhoddami@yahoo.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
+"PO-Revision-Date: 2022-05-19 14:02+0000\n"
+"Last-Translator: Hamid Reza Khoddami <dr_hrkhoddami@yahoo.com>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"fa_IR/>\n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
-"Language: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 msgid "context.current"
 msgstr "مجله جاری:"
@@ -1461,7 +1465,7 @@ msgid "about.memberships"
 msgstr "عضویت"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "درباره این سامانه انتشاراتی"
+msgstr "اطلاعات بیشتر در مورد سیستم انتشار، بستر و گردش کار توسط OJS/PKP."
 
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "روند داوری و انتشار در سامانه OJS"
@@ -1809,7 +1813,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "دسترسی رد شد! شما به عنوان ویراستار این مقاله انتخاب نشده اید."
 
 msgid "user.authorization.noContext"
-msgstr "هیچ مجله ای تعریف نشده است"
+msgstr "مجله ای که با درخواست شما منطبق باشد یافت نشد."
 
 msgid "user.authorization.sectionAssignment"
 msgstr "شما در حال تلاش برای دسترسی به مقاله ای هستید که در بخش شما نمی باشد."
@@ -1873,3 +1877,85 @@ msgstr "شماره‌های آینده"
 
 msgid "navigation.subscriptions"
 msgstr "اشتراک‌ها"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"بله، می‌خواهم در مورد درخواست‌های بررسی مطالب ارسالی به این مجله با من تماس "
+"گرفته شود."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "نحوه ترتیب مقالات در این دسته بندی را انتخاب کنید."
+
+msgid "catalog.sortBy"
+msgstr "ترتیب مقالات"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} ویرایش مقاله {$submissionId} را انجام داده است."
+
+msgid "notification.type.public"
+msgstr "اطلاعیه های عمومی"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"اگر OJS موجود را ارتقا می دهید، برای ادامه <a href=\"{$upgradeUrl}\""
+">اینجا</a> را کلیک کنید."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "هزینه انتشار فعال نیست."
+
+msgid "payment.waived"
+msgstr "تخفیف داده شده"
+
+msgid "payment.unpaid"
+msgstr "پرداخت نشده"
+
+msgid "about.aboutSoftware"
+msgstr "درباره Open Journal Systems"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "یک مقاله جدید در بخش <a href=\"{$url}\">{$name}</a> ارسال کنید."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "شما باید با بیانیه حریم خصوصی این سایت موافقت کنید."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"شما باید با بیانیه حریم خصوصی هر مجله ای که با آن ثبت نام می کنید موافقت "
+"کنید."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"بله، موافقم که داده‌های من طبق <a href=\"{$privacyUrl}\" target=\"_blank\">"
+"بیانیه حریم خصوصی</a> این مجله جمع‌آوری و ذخیره شود."
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"بله، می خواهم از انتشارات و اطلاعیه های جدید برای همه مجلاتی که در آنها ثبت "
+"نام کرده ام مطلع شوم."
+
+msgid "issue.viewIssueIdentification"
+msgstr "مشاهده {$identification}"
+
+msgid "user.authorization.representationNotFound"
+msgstr "گالری درخواستی یافت نشد."
+
+msgid "submission.search"
+msgstr "جستجوی مقالات"
+
+msgid "section.policy"
+msgstr "قوانین بخش"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "دبیر تعیین شده"
+
+msgid "navigation.skip.issue"
+msgstr "رفتن به شماره فعلی"
+
+msgid "navigation.skip.about"
+msgstr "پرش به درباره مجله"
+
+msgid "doi.manager.settings.publications"
+msgstr "مقالات"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "این مجله بصورت آنلاین منتشر نمی شود."

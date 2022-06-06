@@ -1,0 +1,70 @@
+# Gints Buda <gints.buda@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-24 12:45+0000\n"
+"Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv_LV/"
+">\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nav reģistrēto lietotāju."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Visi Reģistrētie Lietotāji"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Apvienot lietotāju"
+
+msgid "admin.mergeUsers"
+msgstr "Apvienot lietotājus"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Žurnāla apraksts"
+
+msgid "admin.contexts.create"
+msgstr "Izveidot Žurnālu"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nav neviena izveidota žurnāla."
+
+msgid "admin.journals.journalSettings"
+msgstr "Žurnāla Iestatījumi"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Jūs automātiski tiksiet reģistrēts kā šī žurnāla pārvaldnieks. Pēc jauna "
+"žurnāla izveides jūs tiksiet novirzīts uz tā iestatījumu vedni, lai pabeigtu "
+"sākotnējo žurnāla iestatīšanu."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS konfigurācijas iestatījumi no <tt>config.inc.php</tt>."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS Konfigurācija"
+
+msgid "admin.systemVersion"
+msgstr "OJS Versija"
+
+msgid "admin.auth.ojs"
+msgstr "OJS Lietotāju Datubāze"
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Vai esat drošs, ka vēlaties noņemt šo lokalizāciju? Tas var ietekmēt visus "
+"izvietotos žurnālus, kas pašlaik izmanto šo lokalizāciju."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Atzīmētās lokalizācijas var būt nepilnīgas."
+
+msgid "admin.settings.redirect"
+msgstr "Žurnāla pāradresēšana"
+
+msgid "admin.hostedContexts"
+msgstr "Izvietotie Žurnāli"
