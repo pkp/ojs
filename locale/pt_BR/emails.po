@@ -30,11 +30,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Esta mensagem é enviada a usuários cadastrados que escolheram habilitar este "
-"tipo de notificação via e-mail."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmação de Redefinição de Senha"
 
@@ -117,12 +112,6 @@ msgstr ""
 "<br />\n"
 "Atenciosamente,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Esta mensagem é enviada a um novo usuário cadastrado, para validação do "
-"cadastro."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Cadastrado como Avaliador em {$contextName}"
@@ -437,10 +426,6 @@ msgstr ""
 "<br /> \n"
 "{$signature}"
 
-msgid "emails.reviewCancel.description"
-msgstr "Mensagem enviada pelo Editor de Seção com um processo de avaliação em andamento, notificando que o processo em questão foi cancelado."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Você ainda pode avaliar algo para {$contextName}?"
 
@@ -455,13 +440,6 @@ msgstr ""
 "</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor a um Avaliador quando uma avaliação "
-"cancelada é retomada. Se um avaliador aceitar uma avaliação e posteriormente "
-"a avaliação for cancelada pelo editor, o editor tem a opção de restabelecer "
-"a avaliação para permitir que o avaliador continue sua avaliação."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Disponível para realizar avaliação"
 
@@ -573,11 +551,6 @@ msgstr ""
 "instruções.</p><p>Se você tiver alguma dúvida, entre em contato conosco em "
 "seu <a href=\"{$authorSubmissionUrl}\">painel de submissão</a>.</p><p "
 ">Atenciosamente,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Este e-mail notifica o autor de que sua submissão foi aceita para publicação."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -1096,11 +1069,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Este e-mail é enviado para um novo usuário cadastrado no site para validar "
-"sua conta de e-mail."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

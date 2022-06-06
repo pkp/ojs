@@ -47,12 +47,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "Žiadosť o sadzobnice"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tento e-mail od editora alebo editora sekcie autorovi obsahuje informáciu o "
-"konečnom rozhodnutí o prijatí príspevku."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -199,12 +193,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Môžem spracovať recenziu"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Tento e-mail je odoslaný editorom sekcie recenzentovi, ktorý práve vykonáva "
-"recenziu príspevku, aby mu oznámil, že zrušené recenzie boli obnovené."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -218,11 +206,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Žiadosť o recenziu bola obnovená"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Tento email zasiela editor sekcie recenzentovi, ktorý má rozpracovanú "
-"recenziu, aby mu oznámil, že požiadavka na spracovanie recenzie bola zrušená."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -562,12 +545,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrovaný na pozícii recenzenta pre {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Tento email je odoslaný novo zaregistrovanému používateľovi a obsahuje odkaz "
-"slúžiaci na overenie jeho emailovej adresy."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -650,12 +627,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Potvrdenie o resetovaní hesla"
 
-msgid "emails.notification.description"
-msgstr ""
-"Email sa odošle zaregistrovaným používateľom, ktorí majú povolený príjem "
-"tohto typu oznámenia."
-
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Máte nové oznámenie od {$contextName}:<br />\n"

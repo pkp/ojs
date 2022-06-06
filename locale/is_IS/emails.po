@@ -53,11 +53,6 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Skráning sem ritrýnir hjá {$contextName}"
 
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Þessi tölvupóstur er sendur á nýskráða notendur til staðfestingar á "
-"tölvupóstfangi."
-
 msgid "emails.userValidateSite.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -73,11 +68,6 @@ msgstr ""
 
 msgid "emails.userValidateSite.subject"
 msgstr "Staðfesting reiknings"
-
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Þessi tölvupósur er sendur á nýskráða notendur til að þeir staðfesti "
-"netfangið sitt."
 
 msgid "emails.userValidateContext.body"
 msgstr ""
@@ -160,11 +150,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Staðfesting á endurstillingu lykilorðs"
 
-msgid "emails.notification.description"
-msgstr ""
-"Tölvupósturinn verður sendur á skráða notendur sem hafa valið að fá þessa "
-"tegund tilkynninga í tölvupósti."
-
 msgid "emails.notification.body"
 msgstr ""
 "Þú átt ný skilaboð frá {$contextName}:<br />\n"
@@ -192,11 +177,6 @@ msgstr ""
 msgid "emails.editorDecisionSendToProduction.subject"
 msgstr "Næstu skref í birtingu á  handriti þínu"
 
-msgid "emails.editorDecisionSendToExternal.description"
-msgstr ""
-"Þessi tölvupóstur frá ritstjóra eða kaflaritstjóra upplýsir höfund(a) um að "
-"innsent handrit verði sent í ritrýni."
-
 msgid "emails.editorDecisionSendToExternal.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -210,11 +190,6 @@ msgstr ""
 
 msgid "emails.editorDecisionSendToExternal.subject"
 msgstr "Ákvörðun ritstjóra"
-
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Þessi tölvupóstur upplýsir höfund um að innsend grein hefur verið samþykkt "
-"til birtingar."
 
 msgid "emails.editorDecisionAccept.body"
 msgstr ""

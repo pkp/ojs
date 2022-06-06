@@ -80,10 +80,6 @@ msgstr ""
 "Děkujeme,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Tento email je zaslán nově registrovanému uživateli a obsahuje odkaz sloužící k ověření jeho emailové adresy."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrování na pozici recenzenta pro {$contextName}"
 
@@ -259,9 +255,6 @@ msgstr ""
 "V tomto bodě jsme se rozhodli odvolat naši žádost, abyste pro nás zpracoval recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Omlouváme se za veškeré nepříjemnosti, které by Vám to mohlo způsobit, a doufáme, že Vás budeme moci oslovit ohledně recenzních řízení tohoto časopisu v budoucnu.<br />\n"
 "<br />\n"
 "V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte."
-
-msgid "emails.reviewCancel.description"
-msgstr "Tento email zasílá editor sekce recenzentovi, který má rozpracovanou recenzi, aby mu oznámil, že požadavek na zpracování recenze byl zrušen."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Mohu zpracovat recenzi"
@@ -810,11 +803,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"E-mail se odešle registrovaným uživatelům, kteří mají povolený příjem tohoto "
-"typu oznámení."
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Nové oznámení od {$siteTitle}"
 
@@ -875,10 +863,6 @@ msgstr ""
 "periodika</a>.</p><p>S pozdravem,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tento e-mail oznamuje autorovi, že jeho příspěvek byl přijat k publikaci."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Zakoupení předplatného: Individuální"
 
@@ -1274,13 +1258,6 @@ msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktivita redakce pro {$month}, {$year}"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Tento e-mail zasílá editor recenzentovi, když je obnovena zrušená recenze. "
-"Pokud recenzent recenzi přijme a následně ji editor zruší, má editor možnost "
-"recenzi obnovit a umožnit tak recenzentovi v recenzi pokračovat."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>Nedávno jsme zrušili naši žádost o "
@@ -1311,11 +1288,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Tento e-mail je zaslán novému uživateli, který se na webu zaregistroval, aby "
-"potvrdil platnost svého e-mailového účtu."
 
 msgid "emails.userValidateSite.subject"
 msgstr "Ověřte svůj účet"

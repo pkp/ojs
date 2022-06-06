@@ -29,9 +29,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους εγγεγραμμένους Χρήστες που έχουν επιλέξει να λαμβάνουν ειδοποιήσεις αυτού του τύπου."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Επιβεβαίωση αλλαγής κωδικού πρόσβασης"
 
@@ -96,10 +93,6 @@ msgstr ""
 "<br />\n"
 "Σας ευχαριστούμε,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους νέους Χρήστες, για να επικυρώσουν τον λογαριασμό ηλεκτρονικού ταχυδρομείου τους."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Εγγραφή ως Αξιολογητής στο περιοδικό {$contextName}"
@@ -340,9 +333,6 @@ msgstr ""
 "<br />\n"
 "Για οποιαδήποτε διευκρίνιση, παρακαλούμε επικοινωνήστε μαζί μας."
 
-msgid "emails.reviewCancel.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Ενότητας σε έναν Αξιολογητή ο οποίος έχει αναλάβει την αξιολόγηση μίας υποβολής, για να του γνωστοποιήσει την ακύρωση της εν λόγω αξιολόγησης."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Αποδοχή αιτήματος αξιολόγησης"
 
@@ -433,10 +423,6 @@ msgstr ""
 "Έχουμε καταλήξει σε μία απόφαση αναφορικά με την υποβολή σας &quot;{$submissionTitle}&quot;, στο περιοδικό {$contextName}.<br />\n"
 "<br />\n"
 "Η απόφασή μας είναι: Αποδοχή της υποβολής"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή ή τον Επιμελητή Ενότητας στον Συγγραφέα, ως ενημέρωση για την τελική αποδοχή της υποβολής."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -808,13 +794,6 @@ msgstr "{$announcementTitle}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Συντακτική δραστηριότητα για {$month}, {$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Το συγκεκριμένο email αποστέλλεται από τον Επιμελητή Ενότητας σε Αξιολογητή "
-"ο οποίος έχει αναλάβει την αξιολόγηση μιας υποβολής και του γνωστοποιηθεί η "
-"ακύρωση της εν λόγω αξιολόγησης."
 
 #, fuzzy
 msgid "emails.reviewReinstate.subject"

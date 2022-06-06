@@ -293,9 +293,6 @@ msgstr ""
 "<br />\n"
 "Se hai qualsiasi richiesta, ti prego di contattarmi."
 
-msgid "emails.reviewCancel.description"
-msgstr "Questa email viene inviata dal section editor al revisore che ha una  revisione di una proposta in corso per fargli sapere che la revisione è stata cancellata."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Accettazione incarico di revisione"
 
@@ -704,10 +701,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Questa email viene spedita a un nuovo utente registrato come benvenuto nel sistema e gli fornisce una nota con il suo nome utente e password."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrazione come revisore per {$contextName}"
 
@@ -754,9 +747,6 @@ msgstr ""
 "<br />\n"
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.description"
-msgstr "Questa mail è inviata agli utenti registrati che hanno chiesto di ricevere questo tipo di notifiche."
 
 msgid "emails.notificationMaillist.subject"
 msgstr "Nuova notifica da {$siteTitle}"
@@ -807,11 +797,6 @@ msgstr ""
 "La decisione è di accettare la proposta"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Questa mail informa l'autore che il manoscritto è stato accettato per la "
-"pubblicazione."
-
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Rinnovo dell'abbonamento istituzionale"
 
@@ -1109,14 +1094,6 @@ msgstr ""
 "sua disposizione per qualsiasi chiarimento."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Questa mail è inviata da un Editor al revisore con una revisione in corso "
-"per avvisarlo che l'invito alla revisione cancellato è stato ripristinato. "
-"Consente all'editor che ha cancellato la revisione in corso di ripristinarla "
-"per consentire al revisore di completarla."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Sei ancora disponibile alla revisione per {$contextName}?"
 
@@ -1163,10 +1140,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Questa mail è inviata per confermare la registrazione di un nuovo utente."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

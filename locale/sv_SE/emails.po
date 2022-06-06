@@ -29,9 +29,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Det här e-postmeddelandet skickas till registrerade användare som har valt att få den här typen av aviseringar skickade till sig via e-post."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Bekräfta återställning av lösenord"
 
@@ -96,10 +93,6 @@ msgstr ""
 "<br />\n"
 "Vänligen,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Det här e-postmeddelandet skickas till nyregistrerade användare för att bekräfta deras e-post."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som granskare hos {$contextName}"
@@ -340,9 +333,6 @@ msgstr ""
 "<br />\n"
 "Om du har några frågor, vänligen kontakta mig."
 
-msgid "emails.reviewCancel.description"
-msgstr "Det här e-postmeddelandet skickas från sektionsredaktören till en granskare med en pågående granskning av ett bidrag, för att meddela hen att granskningen blivit återkallad."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Accepterar granskningsuppdrag"
 
@@ -451,10 +441,6 @@ msgstr ""
 "Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Vårt beslut är att: Acceptera bidraget"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet \"Acceptera bidrag\" fattats för hens bidrag."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -803,15 +789,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redaktionella aktiviteter för {$month}, {$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Detta är ett e-postmeddelande från redaktören till granskare som skickas när "
-"en tidigare annullerad granskning  har återupptagits. Om granskaren "
-"accepterar en granskning och denna sedan annulleras av redaktören kan "
-"redaktören återuppta granskningen så granskaren tillåts fortsätta "
-"granskningen."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

@@ -91,10 +91,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "הרשמה כסוקר עם {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "דוא\"ל זה נשלח למשתמש שרשום לאחרונה כדי לאמת את חשבון הדוא\"ל שלו."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}\n"
@@ -172,10 +168,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "אישור איפוס סיסמה"
 
-msgid "emails.notification.description"
-msgstr "הדוא\"ל נשלח למשתמשים רשומים שבחרו לשלוח אליהם הודעה מסוג זה."
-
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "יש לך הודעה חדשה מאת {$contextName}:<br />\n"
@@ -406,12 +398,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "יכול לבדוק"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי עורך המדור לסוקר שעבר בדיקת הגשה כדי להודיע להם כי "
-"הוחזרה ביקורת שבוטלה."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:\n"
@@ -425,12 +411,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "בקשה לבדיקה חודשה"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי עורך המדור לסוקר שעבר בדיקת הגשה כדי להודיע להם כי "
-"הביקורת בוטלה."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"

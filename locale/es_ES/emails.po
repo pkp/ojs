@@ -28,11 +28,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"El correo electrónico se envía a usuarios/as registrados que hayan "
-"seleccionado recibir este tipo de notificación."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmación de cambio de contraseña"
 
@@ -103,12 +98,6 @@ msgstr ""
 "<br />\n"
 "Gracias,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Este correo electrónico se envía a los usuarios/as recién registrados para "
-"que validen su cuenta de correo."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Revisor para {$contextName}"
@@ -371,9 +360,6 @@ msgstr ""
 "<br />\n"
 "Si tiene cualquier pregunta, no dude en contactar con nosotros/as."
 
-msgid "emails.reviewCancel.description"
-msgstr "Este correo del / de la Editor/a de Sección a un/a Revisor/a que tiene la revisión de un envío en progreso para notificarles que la revisión se ha cancelado."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Acepto la revisión"
 
@@ -469,12 +455,6 @@ msgstr ""
 "Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Nuestra decisión es: Aceptar el envío"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Este correo electrónico del editor/a o editor/a de sección para el autor/a "
-"le notifica que la decisión final es aceptar su envío ."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -832,13 +812,6 @@ msgstr "Introduzca su mensaje."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "Mensaje (en blanco) por defecto usado en el Notification Center Message Listbuilder."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este correo electrónico lo envía el editor/a de sección a un revisor/a con "
-"alguna revisión en curso para notificarle que una revisión cancelada ha sido "
-"restablecida."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

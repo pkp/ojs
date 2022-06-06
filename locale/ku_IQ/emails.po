@@ -28,11 +28,6 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "ئاگادارکردنەی نوێ لە {$contextName}"
 
-msgid "emails.notification.description"
-msgstr ""
-"ئەم ئيمەيلە، بۆ ئەو بەكارهێنەرانە دەنێردرێت كە ويستوويانە "
-"ئاگاداركردنەوەكانيان لە رێگەى ئيمەيلەوە بۆ بچێت."
-
 msgid "emails.passwordResetConfirm.description"
 msgstr ""
 "ئەم ئيمەيلە، بۆ ئاگاداركردنەوەى ئەو بەكارهێنەرە تۆماركراوە دەنێردرێت كە وشەى "
@@ -82,12 +77,6 @@ msgstr "ئه‌رشیفكردنی داواكاری بۆ ناوی ده‌ق"
 
 msgid "emails.reviewerRegister.subject"
 msgstr "تۆماركردن وه‌كو پێداچوونه‌وه‌ له‌گه‌ڵ  ناوی ده‌ق"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"ئه‌م ئیمێڵه‌ بۆ به‌كارهێنه‌ره‌ نوێیه‌كان نێردراوه‌ بۆ پشتڕاستكردنه‌وه‌ی "
-"هه‌ژماره‌كانیان."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -441,12 +430,6 @@ msgstr ""
 "بەڕێزتان هاوکارمان بن لە پرۆسەی هەڵسەنگاندنەکەدا.<br />\n"
 "<br />\n"
 "ئەگەر هەر پرسیارێکتان هەیە، تکایە بە ئیمەیڵ پەیوەندیم پێوە بکەن."
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"ئەم ئیمەیڵە لە لایەن سەرنوسەری بەشەوە بۆ هەڵسەنگێنەر نێردراوە کە لە کاتی "
-"هەڵسەنگاندندا بووە بە مەبەستی ئاگادارکردنەوەیان لەوەی کە هەڵسەنگاندنەکە "
-"هەڵوەشێندراوەتەوە."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -885,12 +868,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "داواکاریی تابلۆسازی"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"ئەم ئیمەیڵە لە لایەن سەرنوسەر یان سەرنوسەری بەشەوەیە بۆ ئاگادارکردنەوەیان لە "
-"بڕیاری ''قبوڵکردنی توێژینەوەکە''."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -982,8 +959,3 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"ئەم ئیمەیڵە لە لایەن سەرنوسەری بەشەوە بۆ هەڵسەنگێنەرێک نێردراوە کە لە کاتی "
-"هەڵسەنگاندندا پرۆسەی  هەڵسەنگاندنەکە هەڵ وەشیندراوەتەوە و ئەمەش دوبارە "
-"دڵنیاکردنەوەی هەڵ وەشاندنەوەکەیە."

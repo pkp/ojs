@@ -29,9 +29,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Email ini dikirimkan ke pengguna terdaftar yang memilih untuk memperoleh jenis notifikasi ini dikirimkan melalui email."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Konfirmasi Reset Sandi"
 
@@ -96,10 +93,6 @@ msgstr ""
 "<br />\n"
 "Terimakasih,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Email ini dikirim ke pengguna baru agar melakukan validasi email yang mereka gunakan untuk registrasi."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrasi sebagai Reviewer di {$contextName}"
@@ -337,9 +330,6 @@ msgstr ""
 "<br />\n"
 "Jika ada pertanyaan, silakan hubungi kami."
 
-msgid "emails.reviewCancel.description"
-msgstr "Email ini dikirimkan Editor Bagian kepada Reviewer yang sedang melakukan review untuk memberitahukan pembatalan review."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Dapat Melakukan Review"
 
@@ -434,12 +424,6 @@ msgstr ""
 "Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Keputusan kami adalah: Naskah Diterima"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Email ini memberitahukan penulis bahwa naskahya telah diterima untuk "
-"diterbitkan."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -758,14 +742,6 @@ msgid "emails.notificationCenterDefault.description"
 msgstr "Pesan default (kosong) yang digunakan di Pengelola Pesan Pusat Notifikasi."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Email ini dikirim oleh Editor Bagian kepada Mitra Bestari ketika review yang "
-"telah dibatalkan diaktifkan kembali. Jika reviewer bersedia mereview dan "
-"review sebelumnya telah dibatalkan oleh editor, si editor dapat mengaktifkan "
-"kembali tahap review sehingga reviewer dapat melanjutkan proses reviewnya."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -823,11 +799,6 @@ msgstr ""
 "<br />\n"
 "Kunjungi website kami untuk melihat <a href=\"{$announcementUrl}\">pengumuman "
 "selengkapnya</a>."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Email ini dikirim ke pengguna baru terdaftar pada website untuk memvalidasi "
-"akun emailnya."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Это письмо отправляется зарегистрированным пользователям, которые указали, что данный тип уведомления отправляется им электронной почтой."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Подтверждение сброса пароля"
 
@@ -97,12 +94,6 @@ msgstr ""
 "<br />\n"
 "С уважением,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Это письмо отправляется вновь зарегистрированному пользователю в журнале для "
-"подтверждения его адреса электронной почты."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрация в качестве рецензента в журнале «{$contextName}»"
@@ -340,10 +331,6 @@ msgstr ""
 "<br />\n"
 "Если у Вас есть вопросы, пожалуйста, свяжитесь со мной."
 
-msgid "emails.reviewCancel.description"
-msgstr "Это письмо редактора раздела, отправляемое рецензенту, который начал рецензировать материал, с уведомлением о том, что рецензирование отменено."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Можете ли Вы ещё отрецензировать кое-что для «{$contextName}»?"
 
@@ -360,14 +347,6 @@ msgstr ""
 "уважением,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Это письмо редактора, отправляемое рецензенту, когда ранее отмененное "
-"рецензирование было возобновлено. Если рецензент соглашается дать рецензию, "
-"а потом рецензирование было отменено редактором, у редактора есть "
-"возможность возобновить рецензирование, чтобы дать рецензенту возможность "
-"продолжить его работу."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Согласен дать рецензию"
 
@@ -480,10 +459,6 @@ msgstr ""
 "Вас есть какие-то вопросы, пожалуйста, свяжитесь со мной через <a href=\""
 "{$submissionUrl}\">страницу Вашего материала</a>.</p><p>С "
 "уважением,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Это письмо уведомляет автора, что его материал был принят к публикации."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -839,11 +814,6 @@ msgstr ""
 
 msgid "emails.announcement.description"
 msgstr "Это письмо отправляется при создании нового объявления."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Это письмо отправляется вновь зарегистрированному пользователю на сайте для "
-"подтверждения его адреса электронной почты."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

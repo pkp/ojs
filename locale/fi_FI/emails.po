@@ -28,11 +28,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Tämä viesti lähetetään niille rekisteröityneille käyttäjille, jotka ovat "
-"ilmoittaneet haluavansa tällaisia ilmoituksia."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Vahvista salasanan vaihtaminen"
 
@@ -106,12 +101,6 @@ msgstr ""
 "<br />\n"
 "Ystävällisin terveisin,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Tämä sähköpostiviesti lähetetään uuden käyttäjätunnuksen luoneelle "
-"käyttäjälle hänen sähköpostiosoitteensa vahvistamiseksi."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Rekisteröinti arvioijaksi julkaisuun {$contextName}"
@@ -432,9 +421,6 @@ msgstr ""
 "<br />\n"
 "Mikäli teillä on kysyttävää, otattehan yhteyttä minuun."
 
-msgid "emails.reviewCancel.description"
-msgstr "This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Arvioinnin hyväksyminen"
 
@@ -546,10 +532,6 @@ msgstr ""
 "käsikirjoitusta &quot;{$submissionTitle}&quot; koskien<br />\n"
 "<br />\n"
 "Päätöksemme on: Käsikirjoitus on hyväksytty"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "This email from the Editor or Section Editor to an Author notifies them of a final \"accept submission\" decision regarding their submission."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -926,12 +908,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Toimitustyötä koskeva raportti {$month}/{$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Tämä on toimittajan arvioijalle lähettämä sähköposti, jolla peruttu "
-"arviointipyyntö uusitaan."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

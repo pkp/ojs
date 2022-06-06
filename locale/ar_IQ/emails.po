@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "تأكيد إعادة تعيين كلمة المرور"
 
@@ -97,10 +94,6 @@ msgstr ""
 "<br />\n"
 "شكراً لك.<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً لتأكيد صحة عناوينهم البريدية."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "التسجيل بصفة محكم في {$contextName}"
@@ -347,10 +340,6 @@ msgstr ""
 "<br />\n"
 "إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي."
 
-msgid "emails.reviewCancel.description"
-msgstr "هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بانتفاء الحاجة إلى تقييمه."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "هل لا زال بإمكانك تحكيم أي شيء لصالح {$contextName}؟"
 
@@ -364,12 +353,6 @@ msgstr ""
 "إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى المحكم عند إعادة النظر في عملية تحكيم ملغاة. "
-"إذا وافق المحكم على إجراء التحكيم ثم قام المحرر بإلغاء عملية التحكيم، سيكون "
-"لدى المحرر خيار إعادة العملية والسماح للمحكم باستئناف عمله."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "قادر على التحكيم"
 
@@ -463,10 +446,6 @@ msgstr ""
 "والتنسيق لتحضيره للنشر.</p><p>ستتلقى قريبًا المزيد من التعليمات.</p><p>إن "
 "كانت لديك أي أسئلة، يرجى التواصل معي من <a href=\"{$authorSubmissionUrl}\">"
 "دفة قيادة طلب تقديمك</a>.</p><p>أطيب التحايا،</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "هذه الرسالة تُشعر المؤلف بأن طلب تقديمه مقبول للنشر."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -827,11 +806,6 @@ msgstr ""
 
 msgid "emails.announcement.description"
 msgstr "هذه الرسالة تُرسل إلى المشتركين في الموقع عند إنشاء إعلان جديد."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"هذا البريد الالكتروني يُرسل إلى المستخدم الجديد الذي سجل في الموقع للتأكد من "
-"عنوان بريده الالكتروني."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

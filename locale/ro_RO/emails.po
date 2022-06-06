@@ -38,11 +38,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmare resetare parolă"
 
-msgid "emails.notification.description"
-msgstr ""
-"Acest email este trimis utilizatorilor înregistrați care au selectat să "
-"primească prin e-mail acest tip de notificare."
-
 msgid "emails.notification.body"
 msgstr ""
 "Ați primit o notificare nouă de la {$contextName}:<br />\n"
@@ -125,12 +120,6 @@ msgstr ""
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Înregistrarea ca evaluator pentru {$contextName}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Acest e-mail este trimis unui utilizator nou înregistrat pentru a-și valida "
-"contul de e-mail."
 
 #, fuzzy
 msgid "emails.userValidateContext.body"
@@ -528,14 +517,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Bun de revizuit"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Acest email este trimis de un editor unui evaluator atunci când o evaluare "
-"anulată este restabilită. În cazul în care un evaluator acceptă o evaluare, "
-"iar evaluarea este apoi anulată de către editor, editorul are opțiunea de a "
-"restabili evaluarea pentru a permite evaluatorului să își continue evaluarea."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -549,11 +530,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Mai puteți evalua ceva pentru {$contextName}?"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Acest e-mail este trimis de către editorul de secțiuni unui revizor care are "
-"în revizuire un manuscris pentru a-l anunța că revizuirea a fost anulată."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -729,12 +705,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Contribuția  {$submissionId} este gata la {$contextAcronym}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Acest email informează autorul că propunerea sa a fost acceptată pentru "
-"publicare."
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -1073,11 +1043,6 @@ msgstr ""
 "Dacă aveți întrebări, nu ezitați să mă contactați.<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Acest email este trimis unui nou utilizator înregistrat pe site pentru a-și "
-"valida contul de email."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

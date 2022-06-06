@@ -29,9 +29,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "这封电子邮件是发送给需要这种类型通知的注册用户。"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "密码重置确认"
 
@@ -96,10 +93,6 @@ msgstr ""
 "<br />\n"
 "谢谢您,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "这封电子邮件用来发送给验证电子邮件的新注册用户。"
 
 msgid "emails.reviewerRegister.subject"
 msgstr "在《{$contextName}》注册为审稿人"
@@ -330,9 +323,6 @@ msgstr ""
 "<br />\n"
 "如果您有任何问题，请与我们联络。"
 
-msgid "emails.reviewCancel.description"
-msgstr "这封电子邮件是由区段编辑寄给已经在进行审稿工作的审查人，通知他们说审查工作已经被取消了。"
-
 msgid "emails.reviewConfirm.subject"
 msgstr "可以进行审查工作"
 
@@ -444,10 +434,6 @@ msgstr ""
 "我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />\n"
 "<br />\n"
 "我们的决定是：接收该稿件"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "这封电子邮件是由编辑或者区段编辑发送给作者，通知他们关于他们稿件的最后决定。"
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -942,10 +928,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.description"
 msgstr "当作者上传的修订版的一篇文章后，此邮件将被自动发送到指定的编辑"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr "此邮件由“栏目编辑”发送给正在进行审阅的审阅者，以通知他们先前取消的审阅已经恢复。"
 
 #, fuzzy
 msgid "emails.reviewReinstate.subject"

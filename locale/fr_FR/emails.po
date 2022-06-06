@@ -232,9 +232,6 @@ msgstr ""
 "<br />\n"
 "Si vous avez des questions, n'hésitez pas à communiquer avec nous."
 
-msgid "emails.reviewCancel.description"
-msgstr "Ce courriel est envoyé par le Rédacteur de rubrique à un Rapporteur qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Acceptation d'évaluation"
 
@@ -654,10 +651,6 @@ msgstr ""
 "Merci,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et de son mot de passe."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Inscription en tant que rapporteur de {$contextName}"
 
@@ -690,10 +683,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Ce courriel est envoyé aux utilisateurs inscrits qui ont choisi de recevoir par courriel ce type d'avis."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Décision du rédacteur"
 
@@ -707,9 +696,6 @@ msgstr ""
 "Notre décision est d'accepter votre soumission."
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Souscription à un abonnement individuel"
 
@@ -1078,13 +1064,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Activité éditoriale pour {$month} {$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ce courriel est envoyé par le rédacteur ou la rédactrice de la rubrique à un "
-"évaluateur ou une évaluatrice qui a une évaluation en cours pour l'informer "
-"que la demande préalablement annulée à été rétablie."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

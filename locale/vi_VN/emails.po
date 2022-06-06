@@ -15,23 +15,10 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Hủy yêu cầu đánh giá bài báo"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Email này được gửi bởi Biên tập viên chuyên mục tới một phản biện người đang "
-"trong quá trình đánh giá để thông báo cho họ rằng việc đánh giá đã bị hủy."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Bạn vẫn còn đang review thêm gì đó cho {$contextName}?"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Email này được gửi bởi Biên tập viên tới Người review khi một review đang bị "
-"ngừng được tiếp tục trở lại. Nếu người review đang review sau đó review bị "
-"ngừng lại, người biên tập có thể chọn lựa tiếp tục review trở lại để cho "
-"phép người review được tiếp tục review tiếp."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Đồng ý đánh giá"
 
@@ -180,12 +167,6 @@ msgstr ""
 "chọn đánh giá trong Cài đặt > Quy trình làm việc > Phản biện) và quyền truy "
 "cập của người phản biện không cần đăng nhập được bật. Các tác vụ theo lịch "
 "trình phải được bật và định cấu hình (xem tệp cấu hình trang)."
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Email này thông báo cho tác giả về việc bài gửi của họ đã được chấp nhận "
-"đăng."
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"
@@ -924,12 +905,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Đăng ký làm Người phản biện cho {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Email này được gửi đến một người dùng mới đăng ký để xác thực tài khoản "
-"email của họ."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -1013,11 +988,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Xác nhận đặt lại mật khẩu"
 
-msgid "emails.notification.description"
-msgstr ""
-"Email được gửi đến người dùng đã đăng ký đã chọn để gửi kiểu thông báo này "
-"qua email cho họ."
-
 msgid "emails.notification.body"
 msgstr ""
 "Bạn có một thông báo mới từ {$contextName}:<br />\n"
@@ -1046,11 +1016,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Email này được gửi cho người dùng đã đăng nhập vào website để xác thực địa "
-"chỉ email."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

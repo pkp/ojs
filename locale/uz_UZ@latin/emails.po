@@ -456,13 +456,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "Galleylarni talab qiling"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tahririyat yoki bo'lim muharriridan muallifga yuborilgan elektron pochta "
-"xabarlari ularni yuborish to'g'risida \"yuborishni qabul qilish\" "
-"to'g'risida yakuniy qaror haqida xabar beradi."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}: <br />\n"
@@ -608,13 +601,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Ko'rib chiqish imkoniyati"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Bu elektron pochta bo'limi tahrirlovchisi tomonidan ko'rib chiqish bekor "
-"qilingan sharh qayta tiklanganligi to'g'risida xabar berish uchun ko'rib "
-"chiquvchiga yuboriladi."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -628,12 +614,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Tekshirish talabi tiklandi"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Bu elektron pochta bo'limi muharriri tomonidan ko'rib chiqish bekor "
-"qilinganligi to'g'risida xabardor qilish uchun yuborilgan ko'rib chiquvchiga "
-"yuboriladi."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -967,12 +947,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} bilan sharhlovchi sifatida ro'yxatdan o'tish"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Bu elektron pochta hisobini tasdiqlash uchun yangi ro'yxatdan o'tgan "
-"foydalanuvchiga yuboriladi."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName} <br />\n"
@@ -1053,18 +1027,8 @@ msgstr ""
 "<br/>\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Elektron pochta xabarnomasi elektron pochta orqali yuborilishini tanlagan "
-"ro'yxatdan o'tgan foydalanuvchilarga yuboriladi."
-
 msgid "emails.announcement.description"
 msgstr "Bu e -pochta yangi e'lon yaratilganda yuboriladi."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Bu e-pochta elektron pochta hisobini tasdiqlash uchun saytda ro'yxatdan "
-"o'tgan yangi foydalanuvchiga yuboriladi."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

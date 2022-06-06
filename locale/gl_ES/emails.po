@@ -48,11 +48,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmación de restablecemento de contrasinal"
 
-msgid "emails.notification.description"
-msgstr ""
-"O correo electrónico envíase a usuarios/as rexistrados que seleccionaron "
-"recibir este tipo de notificación."
-
 msgid "emails.notification.body"
 msgstr ""
 "Ten unha notificación nova de {$contextName}:<br />\n"
@@ -94,12 +89,6 @@ msgstr ""
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Rexistro como revisor de {$contextName}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Este correo electrónico envíase a un usuario/a que se acaba de rexistrar "
-"para darlle a benvida ao sistema e que valide a súa conta de correo."
 
 #, fuzzy
 msgid "emails.userValidateContext.body"
@@ -494,13 +483,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Aceptación da revisión"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este correo electrónico envíao o editor/a de sección a un revisor/a que ten "
-"unha revisión en curso para notificarlle que unha revisión cancelada foi "
-"restablecida."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -515,13 +497,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Solicitude de revisión restablecida"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Esta mensaxe de correo electrónico é enviada polo editor/a de sección a un "
-"revisor/a que ten unha revisión en curso, para notificarlle que esta tarefa "
-"foi cancelada."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -578,13 +553,6 @@ msgstr "Recordatorio automático de revisión dun envío"
 #, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Solicitude de galeradas"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Este correo electrónico do editor/a ou editor/a de sección vai dirixido a un "
-"autor/a para notificarlle que que se tomou a decisión final de aceptar o seu "
-"envío ."
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"

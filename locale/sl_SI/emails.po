@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Email dobijo registrirani uporabniki, ki so naročeni na ta tip obvestil."
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Novo obvestilo od {$siteTitle}"
 
@@ -136,10 +133,6 @@ msgstr ""
 "<br />\n"
 "Hvala lepa,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Email se pošlje novo registiranemu uporabniku, da potrdi svoj email naslov."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registracija kot recenzent pri reviji {$contextName}"
@@ -415,9 +408,6 @@ msgstr ""
 "<br />\n"
 "Če imate kakršnokoli vprašanje, se prosim obrnite name."
 
-msgid "emails.reviewCancel.description"
-msgstr "Ta email pošlje urednik rubrike recenzentu, ki je bil zaprošen za opravljanje recenzije, in ga obvesti, da je je bilo opravljanje recenzije preklicano."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Potrditev recenzije"
 
@@ -538,10 +528,6 @@ msgstr ""
 "objavo.</p><p>Kmalu boste prejeli nadaljna navodila.</p><p>Če imate kakšno "
 "vprašanje, se name lahko obrnete preko vaše <a href=\"{$submissionUrl}\">"
 "nadzorne plošče prispevkov</a>.</p><p>S spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ta email obvepša avtorja, da je bil prispevek sprejet za objavo."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -943,15 +929,6 @@ msgid "emails.notificationCenterDefault.description"
 msgstr "Privzeto (prazno) sporočilo, ki se uporablja v centru za obvestila."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Email pošlje urednik recenzentu v primeru, da je bila njegova preklicana "
-"prošnja za recenzijo obnovljena. Če je recenzent potrdil prošnjo za "
-"recenzijo in urednik recenzentsko prošnjo nato prekliče, ima urednik "
-"možnost, da recenzentsko prošnjo ponovno obnovi in s tem omogoči, da "
-"recenzent opravi recenzijo."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Pred kratkim smo preklicali prošnjo za "
@@ -1010,11 +987,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Ta email je poslan na novo registriranim uporabnikom, da potrdijo veljavnost "
-"svojega emaila."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

@@ -224,12 +224,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Регистрация като рецензент с {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Този имейл се изпраща на новорегистриран потребител, за да потвърди имейл "
-"адреса си."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -312,11 +306,6 @@ msgstr ""
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Потвърждение за нулиране (reset) на парола"
-
-msgid "emails.notification.description"
-msgstr ""
-"Този имейл се изпраща само до регистрирани потребители, които са избрали да "
-"им изпращат този вид известия."
 
 msgid "emails.notification.body"
 msgstr ""
@@ -518,14 +507,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Съгласен/а да рецензира"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Този имейл се изпраща от редактор до рецензент, когато отменена молба за "
-"рецензия бъде възстановена. Ако рецензентът приеме рецензирането и след това "
-"молбата за рецензия бъде отменена от редактора, редакторът има опцията да "
-"възстанови рецензията, за да позволи на рецензента да продължи прегледа си."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Уважаеми, {$recipientName},</p><p>Наскоро анулирахме молбата си да "
@@ -536,12 +517,6 @@ msgstr ""
 "качване на информация. Моля, прегледайте файловете и изпратете решението си "
 "за преглед.</p><p>Ако имате въпроси, моля, свържете се с мен.</p><p>С "
 "уважение,</p>{$signature}"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Този имейл се изпраща от редактора на секции до рецензент, който е в процес "
-"на проверка на изпращането, за да ги уведоми, че молбата за направа на "
-"рецензия е отменена."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -919,11 +894,6 @@ msgstr ""
 "към това списание.</p><p>Сърдечни поздрави,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Този имейл уведомява автора, че изпратените материали са приети за "
-"публикуване."
-
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "<p>Здравейте, {$recipientName},</p><p>Имам удоволствието да Ви информирам, "
@@ -1053,11 +1023,6 @@ msgstr ""
 
 msgid "emails.editorDecisionBackToCopyediting.subject"
 msgstr "Вашето подаване е изпратено обратно на етап стилова корекция"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Този имейл се изпраща на нов потребител, регистриран на сайта, за да "
-"потвърди своя имейл акаунт."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

@@ -29,9 +29,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Az email azoknak a regisztrált felhasználóknak lett kiküldve, akik korábban jelezték, hogy ebben a témában kérnek értesítést."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Jelszó visszaállítás megerősítése"
 
@@ -97,10 +94,6 @@ msgstr ""
 "<br />\n"
 "Köszönettel,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ez az email az újonnan regisztrált felhasználónak kerül kiküldésre, hogy hitelesítse email fiókját."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Regisztráció szakmai lektorként a(z) {$contextName} folyóirathoz"
@@ -351,9 +344,6 @@ msgstr ""
 "Üdvözlettel,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewCancel.description"
-msgstr "Ez az emailt a Rovatszerkesztő küldi a Lektornak, akihez lektorálás lett rendelve, jelezve neki, hogy a feladatot mégsem kell végrehajtania."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Lektori felkérés elfogadása"
 
@@ -455,10 +445,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}<br />"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ezt az emailt a Szerkesztő vagy Rovatszerkesztő küldi a Szerzőnek jelezve, hogy a kézirattal kapcsolatos döntés \"Kézirat elfogadva\" megszületett."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -812,13 +798,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.description"
 msgstr "Ez az email automatikusan kerül kiküldésre a szerkesztőknek és folyóirat menedzsereknek a folyóiratukkal kapcsolatos tájékoztatásul."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ezt az  emailt a Rovatvezető küldi a Szerkesztőnek, aki egy cikk szakmai "
-"lektorálásán dolgozik és tájékoztatja, hogy a megszakított lektorálási "
-"kérésre most ismételten felkéri."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

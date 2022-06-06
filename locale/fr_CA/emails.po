@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Ce courriel est envoyé aux utilisateurs-trices inscrits-es qui ont choisi de recevoir par courriel ce type d'avis."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmation de la réinitialisation du mot de passe"
 
@@ -104,10 +101,6 @@ msgstr ""
 "<br />\n"
 "Merci,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ce courriel est envoyé à un,une utilisateur-trice nouvellement inscrit-e pour valider son compte de courriel."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Inscription en tant qu'évaluateur-trice pour la revue {$contextName}"
@@ -395,9 +388,6 @@ msgstr ""
 "<br />\n"
 "Si vous avez des questions, n'hésitez pas à communiquer avec nous."
 
-msgid "emails.reviewCancel.description"
-msgstr "Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Acceptation d'évaluation"
 
@@ -522,10 +512,6 @@ msgstr ""
 " » à la revue {$contextName}.<br />\n"
 "<br />\n"
 "Notre décision est d'accepter votre soumission."
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision finale concernant sa soumission, soit d'accepter sa soumission."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -885,13 +871,6 @@ msgstr "Prière de saisir votre message."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "Message blanc par défaut utilisé pour concevoir d'autres messages."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une "
-"évaluateur-trice qui a une évaluation en cours, pour l'aviser que la demande "
-"préalablement annulée a été rétablie."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

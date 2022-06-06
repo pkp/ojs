@@ -35,12 +35,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Регистрација како рецензент со {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Овој и-меил е испратен до новорегистрирани корисници за да ја потврдат "
-"нивната и-меил адреса."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -123,11 +117,6 @@ msgstr ""
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Потврда за ресетирање на лозинката"
-
-msgid "emails.notification.description"
-msgstr ""
-"Овој и-маил е испратен до регистрирани корисници кои посочиле дека сакаат да "
-"добијат известувања од овој тип на и-меил."
 
 msgid "emails.notification.body"
 msgstr ""
@@ -342,12 +331,6 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Поднесокот {$submissionId} е подготвен за обработка на {$contextAcronym}"
 
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Овој и-меил го известува авторот дека нивниот поднесок е прифатен за "
-"објавување."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Вашиот поднесок е прифатен во {$contextName}"
 
@@ -377,21 +360,8 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Може да рецензира"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Овој и-меил е испратен од уредник до рецензент кога ќе се обнови откажаната "
-"рецензија. Доколку рецензентот прифати рецензија, а рецензијата потоа е "
-"откажана од уредникот, уредникот има опција да ја обнови рецензијата за да "
-"му дозволи на рецензентот да продолжи со својата рецензија."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Дали сè уште можете да рецензирате нешто за {$contextName}?"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Овој и-меил е испратен од Секциски уредник до Рецензент кој има рецензија во "
-"тек за да ги извести дека рецензијата е откажана."
 
 msgid "emails.reviewCancel.subject"
 msgstr "Барањето за рецензија е откажано"

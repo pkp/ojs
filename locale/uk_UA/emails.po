@@ -29,9 +29,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Цей лист надсилається зареєстрованому користувачу, який обрав опцію отримання повідомлень цього типу електронною поштою."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Підтвердження скидання пароля"
 
@@ -105,10 +102,6 @@ msgstr ""
 "<br />\n"
 "З Повагою,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Цей лист надсилається новому зареєстрованому користувачу для того, щоб привітати його з реєстрацією та надіслати йому його ім'я користувача та пароль."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Реєстрація рецензента видання {$contextName}"
@@ -380,9 +373,6 @@ msgstr ""
 "<br />\n"
 "Якщо Ви маєте додаткові запитання, будь ласка, повідомте мені про це."
 
-msgid "emails.reviewCancel.description"
-msgstr "Цим листом редактор розділу повідомляє рецензенту, який працює над поданням, про припинення рецензування."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Погоджуюсь здійснити рецензування"
 
@@ -517,9 +507,6 @@ msgstr ""
 "Наше рішення: Прийняти Подання"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Цим листом редактор або редактор розділу повідомляє автору про прийняття остаточного рішення стосовно його подання."
-
 msgid "emails.copyeditComplete.subject"
 msgstr "Літературне редагування завершено"
 
@@ -1187,7 +1174,3 @@ msgstr ""
 "які не є користувачами OJS, зазначеними у процесі подання рукопису."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Цей лист надіслано Редактором Розділу до Рецензента, який почав "
-"рецензування, з повідомленням що скасоване рецензування було поновленим."

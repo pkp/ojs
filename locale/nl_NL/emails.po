@@ -27,9 +27,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Deze e-mail wordt gestuurd naar een geregistreerde gebruiker die zich heeft ingeschreven voor dit type van berichten."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Bevestiging wachtwoord herstellen"
 
@@ -94,10 +91,6 @@ msgstr ""
 "<br />\n"
 "Dank u,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Deze e-mail wordt naar alle nieuwe gebruikers gestuurd om ze welkom te heten bij het systeem en om ze te voorzien van een kopie van hun gebruikersnaam en wachtwoord."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registratie als Reviewer bij {$contextName}"
@@ -345,9 +338,6 @@ msgstr ""
 "<br />\n"
 "Als u nog vragen heeft, kunt u contact met mij opnemen."
 
-msgid "emails.reviewCancel.description"
-msgstr "Deze e-mail wordt door de sectieredacteur verstuurd naar een reviewer die een inzending aan het reviewen is om die op de hoogte te stellen dat de review is afgeblazen."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Review mogelijk"
 
@@ -442,10 +432,6 @@ msgstr ""
 "We hebben een beslissing genomen over uw inzending voor {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Onze beslissing is: Accepteer inzending"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Deze e-mail van de redacteur of sectieredacteur brengt een auteur ervan op de hoogte dat een inzending wordt aanvaard."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -776,13 +762,6 @@ msgstr "Redactionele activiteit voor {$month}, {$year}"
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Herindienen beoordelingsverzoek"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Deze e-mail wordt door de sectieredacteur naar een reviewer gestuurd die "
-"bezig is met de beoordeling van een inzending teneinde de persoon in kwestie "
-"te laten weten dat de annulering van de beoordeling is teruggedraaid."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

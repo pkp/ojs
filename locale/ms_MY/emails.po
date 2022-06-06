@@ -44,12 +44,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Pendaftaran sebagai Pengulas dengan {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"E-mel ini dihantar kepada pengguna yang baru mendaftar untuk mengesahkan "
-"akaun e-mel mereka."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName} <br />\n"
@@ -134,11 +128,6 @@ msgstr ""
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Pengesahan Tetapan Semula Kata Laluan"
-
-msgid "emails.notification.description"
-msgstr ""
-"E-mel dihantar kepada pengguna yang terdaftar yang telah memilih untuk "
-"mengirim notifikasi jenis ini kepada mereka."
 
 msgid "emails.notification.body"
 msgstr ""
@@ -829,13 +818,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "Meminta Galley"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"E-mel ini dari Editor atau Editor Bahagian kepada Pengarang memberitahu "
-"mereka tentang keputusan \"terima penyerahan\" terakhir mengenai penyerahan "
-"mereka."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Keputusan Editor"
 
@@ -948,13 +930,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Mampu Mengulas"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"E-mel ini dihantar oleh Editor Bahagian kepada Pengulas yang mempunyai "
-"ulasan penyerahan yang sedang berlangsung untuk memberitahu mereka bahawa "
-"ulasan yang dibatalkan telah dijalankan semula."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -968,12 +943,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Permintaan Ulasan Dikembalikan"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"E-mel ini dihantar oleh Editor Bahagian kepada Pengulas yang mempunyai "
-"ulasan penyerahan yang sedang berlangsung untuk memberitahu mereka bahawa "
-"ulasan telah dibatalkan."
 
 msgid "emails.reviewCancel.body"
 msgstr ""

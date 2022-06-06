@@ -15,12 +15,6 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Бұл электрондық пошта жаңадан тіркелген пайдаланушыға электрондық пошта "
-"мекенжайын растау үшін жіберіледі."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Сәлеметсіз бе, {$recipientName}!<br />\n"
@@ -101,11 +95,6 @@ msgstr ""
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Құпия сөзді қалпына келтіруді растау"
-
-msgid "emails.notification.description"
-msgstr ""
-"Хабарлама электрондық пошта арқылы жіберілетін хабарламаларға тіркелген "
-"қолданушыларға жіберіледі."
 
 msgid "emails.notification.body"
 msgstr ""
@@ -866,12 +855,6 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Жіберу {$submissionId} мекен-жайы бойынша жіберуге дайын {$contextAcronym}"
 
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Бұл редактордың немесе бөлім редакторының авторға жіберуге қатысты соңғы «"
-"Өтінішті қабылдау» шешімі туралы хабарлау үшін жіберген хаты."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "Сәлеметсіз бе {$recipientName}!<br />\n"
@@ -993,14 +976,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Мен шолуға келісемін"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Бұл электрондық поштаны редактор рецензентке жойылған шолуды қалпына келтіру "
-"кезінде жібереді. Егер рецензент шолуды қабылдаса, содан кейін редактор "
-"шолуды болдырмаса, редактордың шолушыға шолуды жалғастыруға мүмкіндік "
-"беретін шолуды қалпына келтіруге мүмкіндігі бар."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "Сәлем {$recipientName}!<br />\n"
@@ -1014,11 +989,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Сіз әлі де {$contextName} үшін бір нәрсені көре аласыз ба?"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Бұл бөлім редакторының материалды тексеруді бастаған рецензентке жіберген "
-"хаты, қараудың жойылғанын хабарлайды."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -1037,11 +1007,6 @@ msgstr "Қарау сұрауы тоқтатылды"
 
 msgid "emails.userValidateSite.subject"
 msgstr "Есептік жазбаңызды растаңыз"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Бұл электрондық пошта электрондық пошта тіркелгісін тексеру үшін сайтқа "
-"тіркелген жаңа пайдаланушыға жіберіледі."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

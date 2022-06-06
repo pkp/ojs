@@ -29,11 +29,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Thèid am post-d seo a chur gu cleachdaichean clàraichte a dh’iarr a leithid "
-"seo de bhrath air a’ phost-d."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Dearbhadh ath-shuidheachadh an fhacail-fhaire"
 
@@ -119,12 +114,6 @@ msgstr ""
 "<br />\n"
 "Mòran taing,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Thèid am post-d seo a chur gu cleachdaiche a tha air ùr-chlàradh airson an "
-"cunntas puist-d aca a dhearbhadh."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Clàradh mar lèirmheasaiche aig {$contextName}"
@@ -476,13 +465,6 @@ msgstr ""
 "<br />\n"
 "Ma tha ceist sam bith agad, cuir fios thugam."
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Thèid am post-d seo a chur gu lèirmheasaiche a tha ag obair air lèirmheas "
-"tagraidh le deasaiche earrainn a dh’innse dhaibh gun deach an lèirmheas a "
-"chur gu neoini."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Iarrtas airson lèirmheas air a chur beò às ùr"
 
@@ -499,12 +481,6 @@ msgstr ""
 "Ma tha ceist sam bith agad, cuir fios thugam."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Thèid am post-d seo a chur gu lèirmheasaiche a tha ag obair air lèirmheas "
-"tagraidh le deasaiche earrainn a dh’innse dhaibh gun deach lèirmheas a "
-"chaidh a chur gu neoini a chur beò a-rithist."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Bidh e comasach lèirmheas a dhèanamh air"
 
@@ -633,13 +609,6 @@ msgstr ""
 "“{$submissionTitle}”.<br />\n"
 "<br />\n"
 "Cho-dhùin sinn Gabh ris an tagradh"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gum b’ e “gabhail ris” an co-dhùnadh deireannach mun "
-"tagradh aca."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"

@@ -76,10 +76,6 @@ msgstr ""
 "Eskerrik asko,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Erabiltzaile erregistratu berriei bidaltzen zaie mezu hau, sistemarako ongietorria emateko eta erabiltzaile-izena eta pasahitza jakinarazteko."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} aldizkarian Ebaluatzaile gisa erregistratzea"
 
@@ -302,9 +298,6 @@ msgstr ""
 "{$contextName} aldizkarirako {$submissionTitle} artikulua ebaluatzeko egin genizun eskaera bertan behera uztea erabaki dugu. Sentitzen dugu eta barkamena eskatzen dizugu erabaki honek sor ditzakeen endredoengatik, eta espero dugu aurrerantzean ere gure aldizkariko ebaluatzaileen artean izango zaitugula.<br />\n"
 "<br />\n"
 "Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez."
-
-msgid "emails.reviewCancel.description"
-msgstr "Mezu hau Ataleko editoreak Ebaluatzaileari bidaltzen dio artikulu baten ebaluazioa egiten hasita dagoenean, ebaluazioa bertan behera utzi dela jakinarazteko."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Ebaluazioa egiteko prest"
@@ -704,10 +697,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Mezu hau mota honetako jakinarazpena jasotzea hautatu duten erabiltzaile erregistratuei bidaltzen zaie."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Editorearen erabakia"
 
@@ -721,9 +710,6 @@ msgstr ""
 "Gure erabakia:"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Mezu hau Editoreak edo Ataleko editoreak bidaltzen dio Egileari, artikuluari buruz hartu duen erabakia jakinarazteko."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Harpidetza-erosketa: Indibiduala"
 

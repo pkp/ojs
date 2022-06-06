@@ -30,9 +30,6 @@ msgstr ""
 "<hr />"
 "{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "The email is sent to registered users that have selected to have this type of notification emailed to them."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Password Reset Confirmation"
 
@@ -96,9 +93,6 @@ msgstr ""
 "Thank you,<br />\n"
 "{$signature}"
 
-msgid "emails.userValidateContext.description"
-msgstr "This email is sent to a new user signed up on the journal to validate their email account."
-
 msgid "emails.userValidateSite.subject"
 msgstr "Validate Your Account"
 
@@ -112,9 +106,6 @@ msgstr ""
 "<br />\n"
 "Thank you,<br />\n"
 "{$signature}"
-
-msgid "emails.userValidateSite.description"
-msgstr "This email is sent to a new user signed up on the site to validate their email account."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registration as Reviewer with {$contextName}"
@@ -335,9 +326,6 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please contact me."
 
-msgid "emails.reviewCancel.description"
-msgstr "This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled."
-
 msgid "emails.reviewReinstate.subject"
 msgstr "Can you still review something for {$contextName}?"
 
@@ -351,12 +339,6 @@ msgstr ""
 "<p>If you have any questions, please contact me.</p>"
 "<p>Kind regards,</p>"
 "{$signature}"
-
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"This email is sent by an Editor to a Reviewer when a cancelled review is reinstated. "
-"If a reviewer accepts a review and the review is then cancelled by the editor, "
-"the editor has the option to reinstate the review to allow the reviewer to continue their review."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Able to Review"
@@ -446,9 +428,6 @@ msgstr ""
 "<p>If you have any questions, please contact me from your <a href=\"{$authorSubmissionUrl}\">submission dashboard</a>.</p>"
 "<p>Kind regards,</p>"
 "{$signature}"
-
-msgid "emails.editorDecisionAccept.description"
-msgstr "This email notifies the author that their submission has been accepted for publication."
 
 msgid "emails.editorDecisionBackToCopyediting.subject"
 msgstr "Your submission has been sent back for copyediting"

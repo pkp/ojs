@@ -337,11 +337,6 @@ msgstr ""
 "<br />\n"
 "Ta kontakt med meg hvis du har spørsmål."
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"I denne e-posten fra seksjonsredaktøren til en fagfelle, annuleres en "
-"fagfellevurdering som tidligere er bestilt."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Aksepter forespørsel om fagfellevurdering"
 
@@ -823,12 +818,6 @@ msgstr ""
 "Vennlig hilsen<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Denne e-posten sendes til en nyregistrert bruker for at vedkommende skal "
-"bekrefte e-postkontoen sin."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som fagfelle hos {$contextName}"
 
@@ -873,12 +862,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Denne e-posten sendes til registrerte brukere som har valgt å få tilsendt "
-"slike varslinger."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Innleveringen din har blitt akseptert til  {$contextName}"
 
@@ -893,11 +876,6 @@ msgstr ""
 "Vår beslutning er å: Akseptere manuskriptet"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Denne e-posten informerer forfatter om at innleveringen har blitt godkjent "
-"for publisering."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Abonnementskjøp: Individuelt abonnement"
 
@@ -1174,15 +1152,6 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Redigere referanser"
 
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Denne e-posten blir sendt fra en redaøktør til en fagfelle når et kansellert "
-"vurderingsoppdrag gjenopptas. Hvis fagfellen har godtatt forespørselen og "
-"redaktøren etterpå har kansellert vurderingsoppdraget, har redaktøren "
-"muligheten til å starte fagfellevurderingen igjen slik at fagfellen kan "
-"fullføre vurderingsoppdraget."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fremdeles mulighet til å være fagfelle for {$contextName}?"
 
@@ -1200,11 +1169,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Bekreftelse på innlevering"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Denne e-posten sendes til en nyregistrert bruker for å validere "
-"e-postkontoen."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

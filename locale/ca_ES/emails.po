@@ -85,10 +85,6 @@ msgstr ""
 "Gràcies,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Aquest missatge de correu electrònic s'envia a un usuari que s'acaba de registrar per a donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari i la seva contrasenya."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registre com a revisor a {$contextName}"
 
@@ -392,9 +388,6 @@ msgstr ""
 "Hem decidit cancel·lar la nostra sol·licitud perquè reviseu la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Lamentem les molèsties que us pugui causar aquesta decisió i confiem tornar a sol·licitar els vostres serveis de revisió per a aquesta revista en el futur.<br />\n"
 "<br />\n"
 "Si teniu qualsevol consulta, no dubteu a fer-me-la arribar."
-
-msgid "emails.reviewCancel.description"
-msgstr "Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un revisor que estigui revisant una tramesa per a notificar-li que aquesta tasca ha estat cancel·lada."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Accepto la revisió"
@@ -1006,13 +999,6 @@ msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Compra de subscripció: Individual"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Aquest correu electrònic de l'editor/a o de l'editor/a de secció s'adreça a "
-"un autor/a per notificar-li que s'ha pres la decisió final d'acceptar la "
-"seva tramesa."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -1025,13 +1011,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Decisió de l'editor/a"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Aquest correu electrònic de l'editor/a de secció s'adreça a un revisor/a que "
-"té una revisió en curs per notificar-li que una revisió cancel·lada ha estat "
-"restaurada."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -1086,11 +1065,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Sol·licitud de revisió de l'article"
-
-msgid "emails.notification.description"
-msgstr ""
-"El correu electrònic s'envia a usuaris/àries registrats que hagin "
-"seleccionat rebre aquest tipus de notificació."
 
 msgid "emails.notification.body"
 msgstr ""

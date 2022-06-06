@@ -75,10 +75,6 @@ msgstr ""
 "با تشکر<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "ثبت نام به عنوان کارشناس {$contextName}"
 
@@ -231,9 +227,6 @@ msgstr ""
 "در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$contextName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.<br />\n"
 "<br />\n"
 "لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید."
-
-msgid "emails.reviewCancel.description"
-msgstr "This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "داوری را قبول می کنم"
@@ -793,10 +786,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "تصمیم دبیر"
 
@@ -810,9 +799,6 @@ msgstr ""
 "تصمیم نهایی: پذیرش مقاله ارسالی"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از پذیرش مقاله"
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "خرید اشتراک شخصی"
 

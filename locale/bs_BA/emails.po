@@ -260,9 +260,6 @@ msgstr ""
 "<br />\n"
 "Srdačno."
 
-msgid "emails.reviewCancel.description"
-msgstr "Ovim obrascem e-pošte urednik rubrike recenzenta obavještava o povlačenju zahtjeva za izradu recenzije za koju je prethodno recenzent bio zadužen ili koja je recenzentu bila ponuđena."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "U mogućnosti sam izvršiti recenziju"
 
@@ -683,10 +680,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ova se poruka šalje novoregistriranim korisnicima kako bi im se zaželila dobrodošlica na sistem i zatražila potvrda njihove adrese e-pošte."
-
-#, fuzzy
 msgid "emails.announcement.subject"
 msgstr "{$title}"
 
@@ -700,11 +693,6 @@ msgstr ""
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notification.description"
-msgstr ""
-"E-mail je poslan registrovanom korisniku koji je odabrao ovaj način "
-"obavijesti putem mail-a."
 
 msgid "emails.notification.subject"
 msgstr "Nova obavijest od {$contextName}"

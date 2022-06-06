@@ -30,9 +30,6 @@ msgstr ""
 "Z wyrazami szacunku, \n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Wiadomość jest przesyłana do zarejestrowanych użytkowników, którzy zadeklarowali chęć otrzymywania tego typu powiadomień."
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Nowe powiadomienie ze strony czasopisma {$siteTitle}"
 
@@ -148,10 +145,6 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku, <br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Wiadomość jest wysyłana do nowych użytkowników systemu, celem potwierdzenia poprawności adresu e-mail, dla którego zarejestrowano konto."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Rejestracja recenzenta na stronie czasopisma {$contextName}"
@@ -390,9 +383,6 @@ msgstr ""
 "<br />\n"
 "W razie dodatkowych pytań proszę o kontakt."
 
-msgid "emails.reviewCancel.description"
-msgstr "Wiadomość wysyłana przez redaktora prowadzącego do recenzenta. Zawiera informacje o anulowaniu prośby o wykonanie recenzji."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Zgoda na wykonanie recenzji"
 
@@ -498,9 +488,6 @@ msgstr ""
 "Decyzja redakcji: Akceptacja zgłoszonego tekstu"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ta wiadomość jest wysyłana od redaktora lub redaktora działu do autora. Zawiera powiadomienie o decyzji w sprawie zgłoszonego tekstu."
-
 msgid "emails.copyeditComplete.subject"
 msgstr "Zakończona redakcja techniczna"
 
@@ -1405,13 +1392,6 @@ msgstr ""
 
 msgid "emails.subscriptionNotify.subject"
 msgstr "Powiadomienia o subskrypcji"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ten email jest wysłany przez Redaktora sekcji do recenzenta, który jest w "
-"trakcie recenzowania zgłoszenia, aby powiadomić, że anulowana recenzja "
-"została przywrócona."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

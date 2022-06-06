@@ -21,10 +21,6 @@ msgstr ""
 "ドをリセットするためのURLを提供します。"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "このメールは、新規登録したユーザーに送付され、ユーザー名とパスワードを通知します。"
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -96,10 +92,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "パスワードリセットの確認"
 
-msgid "emails.notification.description"
-msgstr "このメールは新規に登録された査読者に送付され、ユーザー名とパスワードが通知されます。"
-
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "{$contextName}からの新しいお知らせです。<br />\n"
@@ -394,9 +386,6 @@ msgstr ""
 msgid "emails.reviewConfirm.subject"
 msgstr "査読依頼の受諾"
 
-msgid "emails.reviewCancel.description"
-msgstr "このメールは、セクション編集者から査読者に既に開始している査読が取りやめになったことを通知するものです。"
-
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -509,10 +498,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "ゲラ作成のお願い"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿に関する最終的な「投稿の受理」の決定を著者に通知するものです。"
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}様:<br />\n"
@@ -552,10 +537,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "論文査読の督促（自動送信）"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr "このメールは、セクション編集者から投稿査読中の査読者に、キャンセルされた審査が復活したことを通知するために送信されます。"
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

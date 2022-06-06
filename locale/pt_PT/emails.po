@@ -400,11 +400,6 @@ msgstr ""
 "<br />\n"
 "Em caso de dúvidas, entre em contacto connosco."
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor de Secção com um processo de revisão em "
-"andamento, notificando que a revisão foi cancelada."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Disponível para realizar a revisão"
 
@@ -916,12 +911,6 @@ msgstr ""
 "Agradecendo desde já a sua atenção,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Mensagem de boas-vindas enviada a novo utilizador registado, para validação "
-"de e-mail."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registo como Revisor na revista {$contextName}"
 
@@ -963,12 +952,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Esta mensagem é enviada a utilizadores registados que escolheram ativar este "
-"tipo de notificação via email."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "A sua submissão foi aceite em {$contextName}"
 
@@ -983,11 +966,6 @@ msgstr ""
 "A decisão é: Aceitar Submissão"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Esta é uma mensagem que notifica o autor que a sua submissão foi aceite para "
-"publicação."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Aquisição de Subscrição: Individual"
 
@@ -1298,14 +1276,6 @@ msgstr ""
 "nomeados que não o autor que submeteu o trabalho."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este email é enviado pelo Editor ao Revisor que quando uma revisão cancelada "
-"foi restabelecida. Se o revisor aceitar e a revisão for cancelada pelo "
-"editor, o editor tem a possibilidade de restabelecer a revisão e permitir "
-"que o revisor continue a revisão."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -1362,11 +1332,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Este e-mail é enviado a um novo utilizador registado no site para validar a "
-"sua conta de e-mail."
 
 msgid "emails.userValidateSite.body"
 msgstr ""
