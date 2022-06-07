@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-10
+Git tag: 3_3_0-11
 
-Release date: March 7, 2022
+Release date: June 7, 2022
 ===========================
 
 Configuration Changes
@@ -28,6 +28,34 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientid
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
+
+3.3.0-11 Build
+--------------
+    #2169: Mailing Address should not be required in settings
+    #6209: Multiple use of id="setup-button" in website settings
+    #7317: CSV user export includes roles from other journals
+    #7604: Add ability to include user/context with CLI request
+    #7651: Fatal error when trying to load PKPXMLParser
+    #7716: Hide DB password in the administration "system info" page
+    #7739: Improve multimodal publishing with OJS
+    #7744: Ensure email template variables are properly filtered
+    #7751: Error if on private site password protected
+    #7773: Import XML missing filesize attribute to file node causes confusing fatal error
+    #7776: Configuration parameters get truncated if they are too long
+    #7793: Allow for plugins to describe support for fuzzy or wildcarded versions
+    #7794: Fix download filenames when encoded into content headers
+    #7816: Fatal error when deleting a submission
+    #7820: OJS: PHP Fatal error:  Declaration of SubmissionChecklistForm::initData($args) must be compatible with Form::initData()
+    #7828: Submission files and db entries are not deleted after being rejected during upload process
+    #7861: Fix fatal error with pickier PHP release and array_intersect
+    #7864: Full title in page title and DC.Title
+    #7881: User verification process failing with internal exception
+    #7895: fatal error when thanking a reviewer
+    #7930: Ensure umask is respected in file creation
+    #7935: Stop using deprecated fgetss() function
+    #7943: Typo in getUsersWithNoRole query
+    #7958: 3.3.0 installs a locale column in the publications table that should have been removed
+
 
 3.3.0-10 Build
 -------------
