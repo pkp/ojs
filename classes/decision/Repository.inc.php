@@ -28,6 +28,7 @@ use PKP\decision\types\RecommendDecline;
 use PKP\decision\types\RecommendResubmit;
 use PKP\decision\types\RecommendRevisions;
 use PKP\decision\types\RequestRevisions;
+use PKP\decision\types\RemoveEmptyExternalReviewRound;
 use PKP\decision\types\Resubmit;
 use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
@@ -62,6 +63,7 @@ class Repository extends \PKP\decision\Repository
                 new SendExternalReview(),
                 new SendToProduction(),
                 new SkipExternalReview(),
+                new RemoveEmptyExternalReviewRound(),
             ]);
             HookRegistry::call('Decision::types', [$decisionTypes]);
             $this->decisionTypes = $decisionTypes;
