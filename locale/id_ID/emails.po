@@ -29,9 +29,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Email ini dikirimkan ke pengguna terdaftar yang memilih untuk memperoleh jenis notifikasi ini dikirimkan melalui email."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Konfirmasi Reset Sandi"
 
@@ -96,10 +93,6 @@ msgstr ""
 "<br />\n"
 "Terimakasih,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Email ini dikirim ke pengguna baru agar melakukan validasi email yang mereka gunakan untuk registrasi."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrasi sebagai Reviewer di {$contextName}"
@@ -243,12 +236,6 @@ msgstr ""
 "hormat,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Email ini dikirimkan kepada Reviewer oleh Editor Bagian untuk meminta "
-"reviewer apakah menerima atau menolak permohonan review. "
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Pengingat Permintaan Review Artikel"
 
@@ -275,10 +262,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Email ini dikirim otomatis saat tenggat konfirmasi terlewati (lihat Opsi Review di menu Pengaturan > Alur Kerja > Review) dan akses one-click reviewer dinonaktifkan. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Permohonan Review Artikel"
@@ -336,14 +319,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Email ini dikirim oleh Editor Bagian kepada Reviewer untuk meminta reviewer "
-"apakah menerima atau menolak permohonan review untuk tahap review tambahan. "
-"Email ini berisi informasi tentang naskah yang mencakup  judul dan abstrak, "
-"tenggat review, dan cara mengakses naskah."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Permohonan Review Dibatalkan"
 
@@ -354,9 +329,6 @@ msgstr ""
 "Kami memutuskan untuk membatalkan permohonan review kami kepada Anda untuk naskah, &quot;{$submissionTitle},&quot; di {$contextName}. Kami mohon maaf sebesar-besarnya untuk ketidaknyamanan ini dan kami harap di masa mendatang Anda dapat membantu proses review di jurnal ini.<br />\n"
 "<br />\n"
 "Jika ada pertanyaan, silakan hubungi kami."
-
-msgid "emails.reviewCancel.description"
-msgstr "Email ini dikirimkan Editor Bagian kepada Reviewer yang sedang melakukan review untuk memberitahukan pembatalan review."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Dapat Melakukan Review"
@@ -369,9 +341,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Email ini dikirimkan Reviewer kepada Editor Bagian sebagai respon terhadap permohonan review untuk memberitahu Editor Bagian bahwa permohonan review diterima dan akan diselesaikan pada tanggal yang ditetapkan."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tidak Dapat Melakukan Review"
 
@@ -382,9 +351,6 @@ msgstr ""
 "Mohon maaf saat ini saya tidak dapat melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Terimakasih telah mempercayakann kepada saya, dan lain waktu silakan menghubungi saya lagi.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Email ini dikirimkan Reviewer kepada Editor Bagian sebagai respon terhadap permohonan review untuk memberitahu Editor Bagian bahwa permohonan review ditolak."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -406,13 +372,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Email ini dikirim oleh Editor untuk mengingatkan reviewer bahwa batas "
-"reviewnya telah habis. Email ini digunakan ketika editor secara manual "
-"mengirimkan pengingat kepada reviewer"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Pengingat untuk menyelesaikan review Anda"
 
@@ -430,12 +389,6 @@ msgstr ""
 "Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Email ini dikirimkan secara otomatis apabila mitra bestari belum "
-"menyelesaikan tugas reviewnya sesuai waktu yang ditentukan. Pengaktifan "
-"pengingat review otomatis ini dapat dilakukan pengaturan Review."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Pengingat Review Naskah Otomatis"
@@ -471,12 +424,6 @@ msgstr ""
 "Kami telah membuat keputusan terkait naskah yang Anda kirimkan ke {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Keputusan kami adalah: Naskah Diterima"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Email ini memberitahukan penulis bahwa naskahya telah diterima untuk "
-"diterbitkan."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -795,14 +742,6 @@ msgid "emails.notificationCenterDefault.description"
 msgstr "Pesan default (kosong) yang digunakan di Pengelola Pesan Pusat Notifikasi."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Email ini dikirim oleh Editor Bagian kepada Mitra Bestari ketika review yang "
-"telah dibatalkan diaktifkan kembali. Jika reviewer bersedia mereview dan "
-"review sebelumnya telah dibatalkan oleh editor, si editor dapat mengaktifkan "
-"kembali tahap review sehingga reviewer dapat melanjutkan proses reviewnya."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -860,11 +799,6 @@ msgstr ""
 "<br />\n"
 "Kunjungi website kami untuk melihat <a href=\"{$announcementUrl}\">pengumuman "
 "selengkapnya</a>."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Email ini dikirim ke pengguna baru terdaftar pada website untuk memvalidasi "
-"akun emailnya."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

@@ -456,13 +456,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "Galleylarni talab qiling"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tahririyat yoki bo'lim muharriridan muallifga yuborilgan elektron pochta "
-"xabarlari ularni yuborish to'g'risida \"yuborishni qabul qilish\" "
-"to'g'risida yakuniy qaror haqida xabar beradi."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}: <br />\n"
@@ -503,15 +496,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Avtomatik topshirishni ko'rib chiqish eslatmasi"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Bu elektron pochta xabarini ko'rib chiquvchining muddati tugashi bilan "
-"avtomatik tarzda yuboriladi (Sozlamalar> Ish oqimi> Ko'rib chiqish "
-"bo'limidagi Ko'rib chiqish variantlariga qarang) va bir marta bosish bilan "
-"tekshiruvchiga kirish o'chirilgan. Rejalashtirilgan vazifalar yoqilgan va "
-"sozlangan bo'lishi kerak (sayt konfiguratsiya faylini ko'ring)."
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -565,12 +549,6 @@ msgid "emails.reviewRemindOneclick.subject"
 msgstr "Arizani ko'rib chiqish haqida eslatma"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Bu elektron pochta bo'limi muharriri tomonidan sharhlovchiga ko'rib chiqish "
-"muddati tugashini eslatish uchun yuborilgan."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -596,12 +574,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Arizani ko'rib chiqish haqida eslatma"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Bu elektron pochta sharhlovchisi bo'lim muharririga ko'rib chiqish so'rovi "
-"rad etilganligi to'g'risida bo'lim muharririga xabar berish so'roviga "
-"javoban bo'lim muharririga yuboriladi."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Tahrirlovchilar: <br />\n"
@@ -615,12 +587,6 @@ msgstr ""
 msgid "emails.reviewDecline.subject"
 msgstr "Tekshirib bo'lmadi"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Bu elektron pochta sharhlovchisi bo'lim muharririga ko'rib chiqish so'rovi "
-"qabul qilinganligi va belgilangan sanaga qadar bajarilishi to'g'risida xabar "
-"berish so'roviga javoban bo'lim muharririga yuboriladi."
-
 msgid "emails.reviewConfirm.body"
 msgstr ""
 "Tahrirlovchilar: <br />\n"
@@ -633,13 +599,6 @@ msgstr ""
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Ko'rib chiqish imkoniyati"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Bu elektron pochta bo'limi tahrirlovchisi tomonidan ko'rib chiqish bekor "
-"qilingan sharh qayta tiklanganligi to'g'risida xabar berish uchun ko'rib "
-"chiquvchiga yuboriladi."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -656,12 +615,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Tekshirish talabi tiklandi"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Bu elektron pochta bo'limi muharriri tomonidan ko'rib chiqish bekor "
-"qilinganligi to'g'risida xabardor qilish uchun yuborilgan ko'rib chiquvchiga "
-"yuboriladi."
-
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -675,16 +628,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "Tekshirish so'rovi bekor qilindi"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Bo'lim muharriridan sharhlovchiga yuborilgan bu xat, sharhlovchidan ikkinchi "
-"yoki undan ortiq ko'rib chiqish davri uchun topshiriqni ko'rib chiqish "
-"vazifasini qabul qilishni yoki rad etishni so'raydi. Unda sarlavha va "
-"avtoreferat, ko'rib chiqish muddati va taqdimotning o'ziga qanday kirish "
-"mumkinligi haqidagi ma'lumotlar taqdim etiladi. Bu xabar menejment> "
-"sozlamalar> ish oqimi> ko'rib chiqish bo'limida standart ko'rib chiqish "
-"jarayoni tanlanganida ishlatiladi."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -763,14 +706,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Maqolani ko'rib chiqish so'rovi"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Tekshiruvchining tasdiqlash muddati tugagandan so'ng (Sozlamalar> Ish oqimi> "
-"Ko'rib chiqish bo'limidagi Ko'rib chiqish variantlariga qarang) va bir marta "
-"bosish bilan tekshiruvchiga kirish o'chirilganida, bu elektron pochta "
-"avtomatik ravishda yuboriladi. Rejalashtirilgan vazifalar yoqilgan va "
-"sozlangan bo'lishi kerak (sayt konfiguratsiya faylini ko'ring)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -808,16 +743,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Maqolani ko'rib chiqish so'rovini eslatish"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Bo'lim muharriridan sharhlovchiga yuborilgan bu xat, sharhlovchidan "
-"topshiriqni ko'rib chiqish vazifasini qabul qilish yoki rad etishni "
-"so'raydi. Unda sarlavha va avtoreferat, ko'rib chiqish muddati va "
-"taqdimotning o'ziga qanday kirish mumkinligi haqidagi ma'lumotlar taqdim "
-"etiladi. Bu xabar menejment> sozlamalar> ish oqimi> ko'rib chiqish bo'limida "
-"standart ko'rib chiqish jarayoni tanlanganida ishlatiladi."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -1022,12 +947,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} bilan sharhlovchi sifatida ro'yxatdan o'tish"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Bu elektron pochta hisobini tasdiqlash uchun yangi ro'yxatdan o'tgan "
-"foydalanuvchiga yuboriladi."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName} <br />\n"
@@ -1108,18 +1027,8 @@ msgstr ""
 "<br/>\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Elektron pochta xabarnomasi elektron pochta orqali yuborilishini tanlagan "
-"ro'yxatdan o'tgan foydalanuvchilarga yuboriladi."
-
 msgid "emails.announcement.description"
 msgstr "Bu e -pochta yangi e'lon yaratilganda yuboriladi."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Bu e-pochta elektron pochta hisobini tasdiqlash uchun saytda ro'yxatdan "
-"o'tgan yangi foydalanuvchiga yuboriladi."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

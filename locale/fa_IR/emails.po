@@ -75,10 +75,6 @@ msgstr ""
 "با تشکر<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "ثبت نام به عنوان کارشناس {$contextName}"
 
@@ -221,10 +217,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr "This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2."
-
 msgid "emails.reviewCancel.subject"
 msgstr "درخواست لغو کارشناسی"
 
@@ -235,9 +227,6 @@ msgstr ""
 "در این مرحله تصمیم بر آن شده که درخواست کارشناسی مقاله ضضض مربوط به {$contextName} که به شما محول شده بود، لغو گردد. پیشاپیش از بابت ایجاد هرگونه مشکلی از شما عذرخواهی کرده و امیدواریم که در آینده بتوانیم طی مرحله کارشناسی با شما همکاری داشته باشیم.<br />\n"
 "<br />\n"
 "لطفا چنانچه در این رابطه سوالی دارید، با من تماس بگیرید."
-
-msgid "emails.reviewCancel.description"
-msgstr "This email is sent by the Section Editor to a Reviewer who has a submission review in progress to notify them that the review has been cancelled."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "داوری را قبول می کنم"
@@ -250,9 +239,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخشبرای اطلاع از پذیرش انجام داوری"
-
 msgid "emails.reviewDecline.subject"
 msgstr "قادر به داوری نمی باشم"
 
@@ -264,9 +250,6 @@ msgstr ""
 "از توجه شما متشکرم . در دفعات بعدی آماده همکاری با این مجله هستم.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "ایمیلی از طرف داور به سردبیر یا دبیر بخش برای اطلاع از عدم پذیرش انجام داوری"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
@@ -287,10 +270,6 @@ msgstr ""
 "لطفا آمادگی خودرا نسبت به انجام این کمک مهم به مجله اعلام نمائید. منتظر پاسخ شما هستم.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is disabled. Scheduled tasks must be enabled and configured (see the site configuration file)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "یادآوری برای کارشناسی مقاله (اتوماتیک)"
@@ -774,10 +753,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای یادآوری انجام داوری"
-
 msgid "emails.lockssExistingArchive.subject"
 msgstr "تقاضای آزشیو برای {$contextName}"
 
@@ -811,10 +786,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "تصمیم دبیر"
 
@@ -828,9 +799,6 @@ msgstr ""
 "تصمیم نهایی: پذیرش مقاله ارسالی"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "ایمیلی از طرف سردبیر یا دبیر بخش به نویسنده برای اطلاع از پذیرش مقاله"
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "خرید اشتراک شخصی"
 
@@ -1016,10 +984,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "یادآوری درخواست داوری مقاله"
 
@@ -1091,7 +1055,3 @@ msgstr ""
 "<br />\n"
 "چکیده:<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "ایمیلی از طرف دبیر یا دبیر بخش به داور برای درخواست انجام داوری"

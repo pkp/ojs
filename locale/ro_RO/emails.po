@@ -38,11 +38,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmare resetare parolă"
 
-msgid "emails.notification.description"
-msgstr ""
-"Acest email este trimis utilizatorilor înregistrați care au selectat să "
-"primească prin e-mail acest tip de notificare."
-
 msgid "emails.notification.body"
 msgstr ""
 "Ați primit o notificare nouă de la {$contextName}:<br />\n"
@@ -125,12 +120,6 @@ msgstr ""
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Înregistrarea ca evaluator pentru {$contextName}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Acest e-mail este trimis unui utilizator nou înregistrat pentru a-și valida "
-"contul de e-mail."
 
 #, fuzzy
 msgid "emails.userValidateContext.body"
@@ -316,15 +305,6 @@ msgstr ""
 "autori ai manuscrisului, nu doar autorului înregistrat."
 
 #, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Acest e-mail este trimis automat la expirarea termenului de confirmare a "
-"revizorului (consultați Opțiuni de revizuire în Setări> Flux de lucru> "
-"Revizuire), iar prin apăsarea unui singur clic poate fi dezactivat. "
-"Sarcinile programate trebuie să fie activate și configurate (consultați "
-"fișierul de configurare a site-ului)."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -397,16 +377,6 @@ msgstr "Rugăminte revizuire articol"
 
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Rugăminte revizuire articol"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Acest e-mail de la editorul de secțiuni către un revizor, căruia i se "
-"solicită să accepte sau să refuze sarcina de a examina o trimitere. Oferă "
-"informații despre manuscris, cum ar fi titlul și rezumatul, data limită de "
-"revizuire și modul de accesare a prezentării. Acest mesaj este utilizat "
-"atunci când procesul de revizuire standard este selectat în Management> "
-"Setări> Flux de lucru> Revizuire."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -547,14 +517,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Bun de revizuit"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Acest email este trimis de un editor unui evaluator atunci când o evaluare "
-"anulată este restabilită. În cazul în care un evaluator acceptă o evaluare, "
-"iar evaluarea este apoi anulată de către editor, editorul are opțiunea de a "
-"restabili evaluarea pentru a permite evaluatorului să își continue evaluarea."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -568,11 +530,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Mai puteți evalua ceva pentru {$contextName}?"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Acest e-mail este trimis de către editorul de secțiuni unui revizor care are "
-"în revizuire un manuscris pentru a-l anunța că revizuirea a fost anulată."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -588,15 +545,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "Cerere de revizuire anulată"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Acest e-mail de la redactorul secțiunii către un revizor, solicită ca acesta "
-"să accepte sau să refuze sarcina de a revizui un manuscris pentru o a doua "
-"sau altă rundă suplimentară de revizuire. Oferă informații despre manuscris, "
-"cum ar fi titlul și rezumatul, data limită de revizuire și modul de accesare "
-"a lucrării. Acest mesaj este utilizat când Procesul de revizuire standard "
-"este selectat în Management> Setări> Flux de lucru> Revizuire."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -759,12 +707,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "Contribuția  {$submissionId} este gata la {$contextAcronym}"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Acest email informează autorul că propunerea sa a fost acceptată pentru "
-"publicare."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -804,13 +746,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Memento automat de revizuire a manuscrisului"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Acest email este trimis automat atunci când un evaluator nu și-a finalizat "
-"evaluarea până la data limită. Memento-urile automate de evaluare sunt "
-"activate în setările de evaluare."
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -863,13 +798,6 @@ msgid "emails.reviewRemindOneclick.subject"
 msgstr "Memento de revizuire a trimiterii"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Acest email este trimis de un editor pentru a reaminti evaluatorului că "
-"evaluarea sa trebuia trimisă. Acest email este utilizat atunci când un "
-"editor trimite manual un memento evaluatorului"
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -894,12 +822,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Memento de evaluare a manuscrisului"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Acest e-mail este trimis de un revizor, editorului de secțiune ca răspuns la "
-"o cerere de revizuire pentru a notifica editorul de secțiune că cererea de "
-"revizuire a fost respinsă."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editori:<br />\n"
@@ -912,13 +834,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Nu poate fi revizuit"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Acest e-mail este trimis de către un revizor, editorului de secțiune ca "
-"răspuns la o cerere de revizuire pentru a notifica editorul de secțiune că "
-"cererea de revizuire a fost acceptată și va fi finalizată până la data "
-"specificată."
 
 msgid "emails.subscriptionRenewInstl.description"
 msgstr ""
@@ -1128,11 +1043,6 @@ msgstr ""
 "Dacă aveți întrebări, nu ezitați să mă contactați.<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Acest email este trimis unui nou utilizator înregistrat pe site pentru a-și "
-"valida contul de email."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

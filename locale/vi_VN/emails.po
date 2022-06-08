@@ -12,52 +12,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Email này từ biên tập viên chuyên mục tới phản biện để một yêu cầu người "
-"phản biện chấp nhận hoặc từ chối nhiệm vụ đánh giá bài gửi một vòng thứ hai "
-"hoặc cao hơn. Nó cung cấp thông tin về bài gửi như tiêu đề và tóm tắt, ngày "
-"đến hạn nộp đán giá và cách truy cập bài gửi. Thông báo này được sử dụng khi "
-"Quy trình phản biện tiêu chuẩn được chọn trong Quản lý > Cài đặt > Quy trình "
-"làm việc > Phản biện."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Hủy yêu cầu đánh giá bài báo"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Email này được gửi bởi Biên tập viên chuyên mục tới một phản biện người đang "
-"trong quá trình đánh giá để thông báo cho họ rằng việc đánh giá đã bị hủy."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Bạn vẫn còn đang review thêm gì đó cho {$contextName}?"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Email này được gửi bởi Biên tập viên tới Người review khi một review đang bị "
-"ngừng được tiếp tục trở lại. Nếu người review đang review sau đó review bị "
-"ngừng lại, người biên tập có thể chọn lựa tiếp tục review trở lại để cho "
-"phép người review được tiếp tục review tiếp."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Đồng ý đánh giá"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Email này được gửi bởi một phản biện cho Biên tập viên chuyên mục để phản "
-"hồi với yêu cầu đánh giá cũng để thông báo cho Biên tập viên chuyên mục rằng "
-"yêu cầu xem xét lại đã được chấp nhận và sẽ được hoàn thành vào ngày cụ thể."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Không thể nhận đánh giá"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Email này được gửi bởi Người phản biện đến Biên tập viên chuyên mục để phản "
-"hồi về yêu cầu đánh giá cũng để thông báo cho Biên tập viên chuyên mục biết "
-"rằng yêu cầu đánh giá đã bị từ chối."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -83,13 +49,6 @@ msgstr ""
 "của tạp chí. Chúng tôi mong nhận được phản hồi của bạn.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Email này được gửi bởi một Biên tập viên để nhắc nhở người review rằng "
-"review của họ đến hạn nộp. Email này được sử dụng khi Biên tập viên gửi nhắc "
-"nhở đến người review một cách thủ công"
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Nhắc nhở nộp đánh giá"
@@ -199,13 +158,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Email này được gửi tự động khi người review không hoàn thành việc review "
-"trong hạn thời gian. Việc tự động hóa nhắc nhở được bật ở mục thiết đặt "
-"Review."
-
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Nhắc nhở nộp bài đánh giá (tự động)"
 
@@ -215,12 +167,6 @@ msgstr ""
 "chọn đánh giá trong Cài đặt > Quy trình làm việc > Phản biện) và quyền truy "
 "cập của người phản biện không cần đăng nhập được bật. Các tác vụ theo lịch "
 "trình phải được bật và định cấu hình (xem tệp cấu hình trang)."
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Email này thông báo cho tác giả về việc bài gửi của họ đã được chấp nhận "
-"đăng."
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"
@@ -717,13 +663,6 @@ msgstr ""
 "Email này được tự động gửi hàng tháng cho các biên tập viên và người quản lý "
 "tạp chí để cung cấp cho họ tổng quan về tình trạng hoạt động hệ thống."
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Email này được gửi tự động khi hết hạn xác nhận của người phản biện (xem Tùy "
-"chọn đánh giá trong Cài đặt> Quy trình làm việc> phản biện) và quyền truy "
-"cập của người phản biện không cần đăng nhập bị vô hiệu hóa. Các tác vụ theo "
-"lịch trình phải được bật và định cấu hình (xem tập tin cấu hình trang)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -760,15 +699,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Yều cầu đánh giá bài báo"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Email này từ Biên tập viên chuyên mục tới Người phản biện yêu cầu họ chấp "
-"nhận hoặc từ chối nhiệm vụ đánh giá nội dung bài gửi. Nó cung cấp thông tin "
-"về bài gửi như tiêu đề và tóm tắt, ngày đến hạn gửi bài đánh giá và cách "
-"truy cập bài gửi. Thông báo này được sử dụng khi Quy trình phản biện tiêu "
-"chuẩn được chọn trong Quản lý> Cài đặt> Quy trình làm việc> Phản biện."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -975,12 +905,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Đăng ký làm Người phản biện cho {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Email này được gửi đến một người dùng mới đăng ký để xác thực tài khoản "
-"email của họ."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -1064,11 +988,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Xác nhận đặt lại mật khẩu"
 
-msgid "emails.notification.description"
-msgstr ""
-"Email được gửi đến người dùng đã đăng ký đã chọn để gửi kiểu thông báo này "
-"qua email cho họ."
-
 msgid "emails.notification.body"
 msgstr ""
 "Bạn có một thông báo mới từ {$contextName}:<br />\n"
@@ -1097,11 +1016,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Email này được gửi cho người dùng đã đăng nhập vào website để xác thực địa "
-"chỉ email."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

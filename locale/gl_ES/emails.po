@@ -48,11 +48,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmación de restablecemento de contrasinal"
 
-msgid "emails.notification.description"
-msgstr ""
-"O correo electrónico envíase a usuarios/as rexistrados que seleccionaron "
-"recibir este tipo de notificación."
-
 msgid "emails.notification.body"
 msgstr ""
 "Ten unha notificación nova de {$contextName}:<br />\n"
@@ -94,12 +89,6 @@ msgstr ""
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Rexistro como revisor de {$contextName}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Este correo electrónico envíase a un usuario/a que se acaba de rexistrar "
-"para darlle a benvida ao sistema e que valide a súa conta de correo."
 
 #, fuzzy
 msgid "emails.userValidateContext.body"
@@ -332,14 +321,6 @@ msgstr ""
 "Grazas,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Este correo electrónico é enviado automaticamente cando o prazo de "
-"confirmación dun revisor/a expira(vexa as opcións de revisión no paso 2 da "
-"configuración da revista) e desactívase o acceso do revisor/a cun clic. Las "
-"tarefas planificadas deben ser activadas e configuradas (vexa o arquivo de "
-"configuración do sitio)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -379,16 +360,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Recordatorio de solicitude de revisión dun artigo"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Este correo electrónico do editor/a de sección diríxese a un revisor/a para "
-"solicitarlle que acepte ou rexeite a tarefa de revisión dun envío. O correo "
-"proporciona información sobre o envío, como o título e o resumo, a data "
-"límite para facer a revisión e como acceder ao envío. Esta mensaxe utilízase "
-"cando se selecciona o proceso de revisión estándar en Xestión > "
-"Configuración > Fluxo de traballo > Revisión."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr ""
 "Este correo electrónico envíase automaticamente cando expira o prazo de "
@@ -427,16 +398,6 @@ msgstr ""
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Solicitude de revisión dun artigo"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Este correo electrónico do editor/a de sección a un revisor/a solicita que "
-"este/esta acepte ou rexeite a tarefa de revisión dun envío para unha segunda "
-"rolda de revisión ou máis. Tamén proporciona información sobre o envío, como "
-"o título e o resumo, a data límite de entrega da revisión e o modo de "
-"acceder ao propio envío. Esta mensaxe utilízase cando se selecciona o "
-"proceso de revisión estándar en Xestión > Configuración > Fluxo de traballo >"
-" Revisión."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -493,12 +454,6 @@ msgstr "Solicitude de revisión cancelada"
 msgid "emails.reviewRemind.subject"
 msgstr "Recordatorio de revisión dun envío"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Este correo é enviado por un revisor/a ao editor/a de sección en resposta a "
-"unha solicitude de revisión, para notificarlle a súa indispoñibilidade para "
-"realizar a tarefa."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editores/as:<br />\n"
@@ -512,12 +467,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Rexeitamento da solicitude de revisión"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Este correo é enviado por un revisor/a ao editor/a de sección en resposta a "
-"unha solicitude de revisión, para notificarlle que aceptou encargarse desta "
-"tarefa e que a enviará antes da data indicada."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""
@@ -534,13 +483,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Aceptación da revisión"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este correo electrónico envíao o editor/a de sección a un revisor/a que ten "
-"unha revisión en curso para notificarlle que unha revisión cancelada foi "
-"restablecida."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -555,13 +497,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Solicitude de revisión restablecida"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Esta mensaxe de correo electrónico é enviada polo editor/a de sección a un "
-"revisor/a que ten unha revisión en curso, para notificarlle que esta tarefa "
-"foi cancelada."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -590,12 +525,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "Recordatorio automático de revisión dun envío"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Este correo electrónico é enviado polo Editor/a de Sección a un revisor/a "
-"para lembrarlle que superou a data de entrega da revisión."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -622,23 +551,8 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Recordatorio automático de revisión dun envío"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Este correo é enviado automaticamente cando se supera a data de entrega "
-"dunha revisión (vexa as opcións de revisión do paso 2 da configuración da "
-"revista) e o acceso é desactivado nun clic. As tarefas planificadas deben "
-"estar activadas e configuradas (vexa o arquivo de configuración do sitio)."
-
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "Solicitude de galeradas"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Este correo electrónico do editor/a ou editor/a de sección vai dirixido a un "
-"autor/a para notificarlle que que se tomou a decisión final de aceptar o seu "
-"envío ."
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"

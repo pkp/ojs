@@ -29,11 +29,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Thèid am post-d seo a chur gu cleachdaichean clàraichte a dh’iarr a leithid "
-"seo de bhrath air a’ phost-d."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Dearbhadh ath-shuidheachadh an fhacail-fhaire"
 
@@ -119,12 +114,6 @@ msgstr ""
 "<br />\n"
 "Mòran taing,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Thèid am post-d seo a chur gu cleachdaiche a tha air ùr-chlàradh airson an "
-"cunntas puist-d aca a dhearbhadh."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Clàradh mar lèirmheasaiche aig {$contextName}"
@@ -343,17 +332,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Tha am post-d seo dheasaiche earrainn gu lèirmheasaiche a’ faighneachd an "
-"gabh iad ri lèirmheas air tagradh no an diùlt iad e. Tha e a’ toirt seachad "
-"fiosrachadh mun tagradh, mar an tiotal is geàrr-chunntas, ceann-là "
-"lìbhrigeadh an lèirmheis agus mar a gheibhear greim air an tagradh e fhèin. "
-"Seo an teachdaireachd a thèid a chleachdadh nuair a thaghar am pròiseas "
-"lèirmheis stannardach fo “Stiùireadh” > “Roghainnean” > “Sruth-obrach” > "
-"“Lèirmheas”."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
 
@@ -392,16 +370,6 @@ msgstr ""
 "“{$submissionTitle}”<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Thèid am post-d seo a chur gu fèin-obrachail nuair a dh’fhalbhas an ùine air "
-"ceann-là freagairt dearbhadh an lèirmheasaiche (faic na roghainnean "
-"lèirmheis fo na “Roghainnean” > “Sruth-obrach” > “Lèirmheas) agus nuair a "
-"bhios inntrigeadh lèirmheasaichean le aon bhriogadh à comas. Feumaidh "
-"sgeidealachadh shaothraichean a bhith an comas agus air a rèiteachadh (faic "
-"faidhle rèiteachadh na làraich)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
@@ -482,17 +450,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Tha am post-d seo dheasaiche earrainn gu lèirmheasaiche a’ faighneachd an "
-"gabh iad ri lèirmheas air tagradh san dàrna cuairt (no cuairt nas motha) no "
-"an diùlt iad e. Tha e a’ toirt seachad fiosrachadh mun tagradh, mar an "
-"tiotal is geàrr-chunntas, ceann-là lìbhrigeadh an lèirmheis agus mar a "
-"gheibhear greim air an tagradh e fhèin. Seo an teachdaireachd a thèid a "
-"chleachdadh nuair a thaghar am pròiseas lèirmheis stannardach fo “Stiùireadh”"
-" > “Roghainnean” > “Sruth-obrach” > “Lèirmheas”."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Iarrtas airson lèirmheas air a chur gu neoini"
 
@@ -508,13 +465,6 @@ msgstr ""
 "<br />\n"
 "Ma tha ceist sam bith agad, cuir fios thugam."
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Thèid am post-d seo a chur gu lèirmheasaiche a tha ag obair air lèirmheas "
-"tagraidh le deasaiche earrainn a dh’innse dhaibh gun deach an lèirmheas a "
-"chur gu neoini."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Iarrtas airson lèirmheas air a chur beò às ùr"
 
@@ -531,12 +481,6 @@ msgstr ""
 "Ma tha ceist sam bith agad, cuir fios thugam."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Thèid am post-d seo a chur gu lèirmheasaiche a tha ag obair air lèirmheas "
-"tagraidh le deasaiche earrainn a dh’innse dhaibh gun deach lèirmheas a "
-"chaidh a chur gu neoini a chur beò a-rithist."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Bidh e comasach lèirmheas a dhèanamh air"
 
@@ -551,13 +495,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Thèid am post-d seo a chur gu deasaiche earrainn le lèirmheasaiche mar "
-"fhreagairt air iarrtas airson fios a leigeil gu deasaiche na h-earrainn gun "
-"deach gabhail ris an iarrtas agus gun tèid a choileanadh ron cheann-là a "
-"chaidh a shònrachadh."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Cha bhi e comasach lèirmheas a dhèanamh air"
 
@@ -571,12 +508,6 @@ msgstr ""
 "iarraidh orm uair sam bith.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Thèid am post-d seo a chur gu deasaiche earrainn le lèirmheasaiche mar "
-"fhreagairt air iarrtas airson fios a leigeil gu deasaiche na h-earrainn gun "
-"deach an t-iarrtas a dhiùltadh."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -606,12 +537,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Thèid am post-d seo a chur gu lèirmheasaiche le deasaiche earrainn airson "
-"cur na c(h)uimhne gu bheil an lèirmheas aca ri lìbhrigeadh."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Cuimhneachan fèin-obrachail mu lèirmheas tagraidh"
 
@@ -639,16 +564,6 @@ msgstr ""
 "cluinntinn uat.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Thèid am post-d seo a chur gu fèin-obrachail nuair a dh’fhalbhas an ùine air "
-"a’ cheann-là lìbhrigidh aig lèirmheasaiche (faic na roghainnean lèirmheis fo "
-"na “Roghainnean” > “Sruth-obrach” > “Lèirmheas) agus nuair a bhios "
-"inntrigeadh lèirmheasaichean le aon bhriogadh à comas. Feumaidh "
-"sgeidealachadh shaothraichean a bhith an comas agus air a rèiteachadh (faic "
-"faidhle rèiteachadh na làraich)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Cuimhneachan fèin-obrachail mu lèirmheas tagraidh"
@@ -694,13 +609,6 @@ msgstr ""
 "“{$submissionTitle}”.<br />\n"
 "<br />\n"
 "Cho-dhùin sinn Gabh ris an tagradh"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tha am post-d seo on deasaiche no o dheasaiche na h-earrainn gu ùghdar a’ "
-"leigeil fios thuca gum b’ e “gabhail ris” an co-dhùnadh deireannach mun "
-"tagradh aca."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"

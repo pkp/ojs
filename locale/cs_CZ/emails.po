@@ -80,10 +80,6 @@ msgstr ""
 "Děkujeme,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Tento email je zaslán nově registrovanému uživateli a obsahuje odkaz sloužící k ověření jeho emailové adresy."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrování na pozici recenzenta pro {$contextName}"
 
@@ -249,12 +245,6 @@ msgstr ""
 "ohledně příspěvku nebo recenzního řízení.</p><p>Děkujeme vám za zvážení této "
 "žádosti. Vaší pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Tento email od editora sekce pro recenzenta žádá, aby recenzent přijal nebo "
-"odmítl úkol zpracovat recenzi příspěvku. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Žádost o zrušení recenze"
 
@@ -265,9 +255,6 @@ msgstr ""
 "V tomto bodě jsme se rozhodli odvolat naši žádost, abyste pro nás zpracoval recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Omlouváme se za veškeré nepříjemnosti, které by Vám to mohlo způsobit, a doufáme, že Vás budeme moci oslovit ohledně recenzních řízení tohoto časopisu v budoucnu.<br />\n"
 "<br />\n"
 "V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte."
-
-msgid "emails.reviewCancel.description"
-msgstr "Tento email zasílá editor sekce recenzentovi, který má rozpracovanou recenzi, aby mu oznámil, že požadavek na zpracování recenze byl zrušen."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Mohu zpracovat recenzi"
@@ -280,9 +267,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že žádost přijal a zpracuje recenzi ve stanoveném termínu."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Nemohu zpracovat recenzi"
 
@@ -293,9 +277,6 @@ msgstr ""
 "Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili a neváhejte mě jindy opět kontaktovat.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že recenzi nemůže zpracovat."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -313,13 +294,6 @@ msgstr ""
 "Pokud potřebujete prodloužit lhůtu, kontaktujte nás, prosím. Těším se na "
 "vaši odpověď.</p><p>Předem vám děkujeme a jsme s pozdravem,</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Tento e-mail zasílá editor, aby recenzentovi připomněl, že má dokončit "
-"recenzi příspěvku. Tento e-mail se používá, když editor ručně zašle "
-"recenzentovi upomínku"
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Připomínáme, abyste dokončili svou recenzi"
 
@@ -335,13 +309,6 @@ msgstr ""
 "souborů a zasílání recenzních komentářů.</p><p>Pokud potřebujete prodloužit "
 "lhůtu, kontaktujte nás, prosím. Těšíme se na vaši odpověď.</p><p>Předem vám "
 "děkujeme a jsme s pozdravem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Tento e-mail se automaticky odešle, pokud recenzent nedokončí recenzi do "
-"stanoveného termínu. Automatické připomenutí recenze lze nastavit v "
-"nastavení recenze."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatické připomenutí recenze příspěvku"
@@ -836,11 +803,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"E-mail se odešle registrovaným uživatelům, kteří mají povolený příjem tohoto "
-"typu oznámení."
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Nové oznámení od {$siteTitle}"
 
@@ -901,10 +863,6 @@ msgstr ""
 "periodika</a>.</p><p>S pozdravem,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tento e-mail oznamuje autorovi, že jeho příspěvek byl přijat k publikaci."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Zakoupení předplatného: Individuální"
 
@@ -1215,14 +1173,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Tento e-mail od editora recenzentovi žádá, aby recenzent přijal nebo odmítl "
-"úkol posoudit předložený příspěvek v dalším kole recenzního řízení. Obsahuje "
-"informace o příspěvku, jako je název a abstrakt, datum uzávěrky recenze a "
-"způsob přístupu k samotnému příspěvku."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Požadavek na recenzi článku"
 
@@ -1278,10 +1228,6 @@ msgstr ""
 "se na nás, prosím, obraťte.</p><p>Děkuji za zvážení této žádosti. Vaší "
 "pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Tento email se automaticky odesílá, jakmile uplyne datum splatnosti potvrzení recenzenta (viz Možnosti kontroly v sekci Nastavení> Pracovní postup> Kontrola) a přístup k recenznímu kontrole je zakázán. Plánované úlohy musí být povoleny a konfigurovány (viz konfigurační soubor webu)."
-
 msgid "emails.statisticsReportNotification.description"
 msgstr ""
 "Tento e-mail je automaticky zasílán měsíčně měsíčně editorům a správcům "
@@ -1310,13 +1256,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktivita redakce pro {$month}, {$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Tento e-mail zasílá editor recenzentovi, když je obnovena zrušená recenze. "
-"Pokud recenzent recenzi přijme a následně ji editor zruší, má editor možnost "
-"recenzi obnovit a umožnit tak recenzentovi v recenzi pokračovat."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -1349,11 +1288,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Tento e-mail je zaslán novému uživateli, který se na webu zaregistroval, aby "
-"potvrdil platnost svého e-mailového účtu."
 
 msgid "emails.userValidateSite.subject"
 msgstr "Ověřte svůj účet"

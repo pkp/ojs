@@ -16,12 +16,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "რეცენზენტად რეგისტრაცია ჟურნალში {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"ეს წერილი ეგზავნება ახლად რეგისტრირებულ მომხმარებელს, ელფოსტის მისამართის "
-"დასადასტურებლად."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "გამარჯობა, {$recipientName}<br />\n"
@@ -101,11 +95,6 @@ msgstr ""
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "პაროლის ჩამოყრის დასტური"
-
-msgid "emails.notification.description"
-msgstr ""
-"ეს წერილი გაეგზავნება დარეგისტრირებულ მომხმარებლებს, რომლებმაც მიუთითეს, ამ "
-"ტიპის შეტყობინება უნდა მიიღონ ელფოსტით."
 
 msgid "emails.notification.body"
 msgstr ""
@@ -802,14 +791,6 @@ msgstr ""
 "სექციიდან „მკითხევლის ხელსაწყოები“ ჩართული უნდა იყოს ჟურნალის მმართველის "
 "მიერ: „მკითხველის ხელსაწყოები: ადმინისტრირება“."
 
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"ეს არის განყოფილების რედაქტორის წერილი, რომელიც ეგზავნება რეცენზენტს "
-"მასალების რეცენზირების თანხმობის, ან უარის დასადასტურებლად მეორე და შემდგომ "
-"რაუნდებში. წერილში მოცემულია მასალის სათაური, აბსტრაქტი, შერულების ვადები და "
-"წვდომის წესები. ეს შეტყობინება გამოიყენება, თუ არჩეულია სტანდარტული "
-"რეცენზირება: მართვა > პარამეტრები > სამუშაო პროცესი > რეცენზირება."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr ""
 "ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზენტის მიერ მონაწილების "
@@ -817,19 +798,6 @@ msgstr ""
 "პარამეტრები > სამუშაო პროცესი > რეცენზირება) და რეცენზენტს გამოერთო "
 "პირდაპირი წვდომა მასალებზე. დაგეგმილი ამოცანები უნდა ჩაირთოს და მოერგოს ("
 "იხილეთ საიტის კონფიგურაციის ფაილი)."
-
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზენტის მიერ მონაწილების "
-"მიღების დადასტურების თარიღი გასულია (იხილეთ რეცენზირების პარამეტრები: "
-"პარამეტრები > სამუშაო პროცესი > რეცენზირება) და რეცენზენტს გამოერთო "
-"პირდაპირი წვდომა მასალებზე. დაგეგმილი ამოცანები უნდა ჩაირთოს და მოერგოს ("
-"იხილეთ საიტის კონფიგურაციის ფაილი)."
-
-msgid "emails.reviewRequest.description"
-msgstr ""
-"ეს ელფოსტა სექციის რედაქტორისგან მიმომხილველს ითხოვს, რომ მიმომხილველი "
-"დაეთანხმოს ან უარყოს წარდგენის განხილვის დავალება."
 
 msgid "emails.announcement.description"
 msgstr "ეს წერილი იგზავნება ახალი განცხადების შექმნისას."
@@ -973,11 +941,6 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr "გალერეების მოთხოვნა"
 
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ ავტორთან „მასალის მიღების“ "
-"საბოლოო გადაწყვეტილების შესახებ."
-
 msgid "emails.editorDecisionAccept.subject"
 msgstr "რედაქციის გადაწყვეტილება {$contextName}"
 
@@ -991,13 +954,6 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "მასალის რეცენზირების ავტომატური შეხსენება"
 
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"ეს წერილი იგზავნება ავტომატურად, როდესაც რეცენზიის მოწოდების ვადა გავიდა ("
-"იხილეთ პარამეტრები > სამუშაო პროცესი > რეცენიზრება) და რეცენზენტს პირდაპირი "
-"წვდომა გამოერთო. დაგეგმილი ამოცანები უნდა ჩაირთოს (იხილეთ საიტის "
-"კონფიგურაციის ფაილი)."
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "მასალის რეცენზირების ავტომატური შეხსენება"
 
@@ -1009,43 +965,17 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "მასალის რეცენზირების შეხსენება"
 
-msgid "emails.reviewRemind.description"
-msgstr ""
-"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ რეცენზენტთან იმის შესახებ, "
-"რეცენზიის მოწოდების ვადა უკვე გავიდა."
-
 msgid "emails.reviewRemind.subject"
 msgstr "მასალის რეცენზირების შეხსენება"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"ეს არის რეცენზენტის წერილი, გაგზავნილი განყოფილების რედაქტორთან, იმის "
-"შესახებ, რომ მოთხოვნა რეცენზირებაზე უარყოფილია."
 
 msgid "emails.reviewDecline.subject"
 msgstr "რეცენზიის მიცემა შეუძლებელია"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"ეს არის რეცენზენტის წერილი, გაგზავნილი განყოფილების რედაქტორთან, იმის "
-"შესახებ, რომ მოთხოვნა რეცენზირებაზე მიღებულია და რეცენზია მოწოდებული იქნება "
-"მითითებულ დროს."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "თანხმობა რეცენზირებაზე"
 
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"ეს არის განყოფილების რედაქტორის წერილი, გაგზავნილი რეცენზენტთან, რომელმაც "
-"დაიწყო მასალის რეცენზირება, იმის შესახებ, რომ რეცენზირება განახლებულია."
-
 msgid "emails.reviewReinstate.subject"
 msgstr "რეცენზირების განახლების მოთხოვნა {$contextName}?"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"ეს არის განყოფილების რედაქტორის წერილი, გაგზავნილი რეცენზენტთან, რომელმაც "
-"დაიწყო მასალის რეცენზირება, იმის შესახებ, რომ რეცენზირება გაუქმებულია."
 
 msgid "emails.reviewCancel.subject"
 msgstr "სტატიის რეცენზირების მოთხოვნა"
@@ -1074,11 +1004,6 @@ msgstr ""
 "<br />\n"
 "გმადლობთ,<br />\n"
 "{$signature}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"ეს ელფოსტა ეგზავნება ახალ მომხმარებელს, რომელიც დარეგისტრირდა საიტზე, რათა "
-"დაადასტუროს მისი ელფოსტის ანგარიში."
 
 msgid "emails.editorDecisionBackToCopyediting.subject"
 msgstr "თქვენი წარდგენა დაბრუნდა კოპირების რედაქტირებისთვის"

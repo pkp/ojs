@@ -247,14 +247,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Denne e-posten sendes automatisk når fagfellens frist for å bekrefte oppdrag "
-"utløper (se Innstillinger > Arbeidsflyt > Fagfellevurdering) og ’Slå på "
-"ettklikks tilgang for fagfellene’ ikke er valgt. Planlagte oppgaver må være "
-"skrudd på og konfigurert (se filen med nettsidekonfigurering)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Forespørsel om fagfellevurdering"
 
@@ -330,16 +322,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"I denne e-posten ber Seksjonsredaktøren en Fagkonsulent om å akseptere eller "
-"avslå oppdraget med å fagfellevurdere et manuskript. E-posten gir "
-"informasjon om 1) manuskriptet (også tittel og sammendrag), 2) en "
-"forfallsdato for oppdraget, og 3) informasjon om pålogging og tilgang til "
-"manuskriptet. Denne e-posten brukes når Standard fagvurderingsprosess er "
-"valgt i Tidsskriftoppsett, Trinn 2."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annulering av forespørsel om fagfellevurdering"
 
@@ -355,11 +337,6 @@ msgstr ""
 "<br />\n"
 "Ta kontakt med meg hvis du har spørsmål."
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"I denne e-posten fra seksjonsredaktøren til en fagfelle, annuleres en "
-"fagfellevurdering som tidligere er bestilt."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Aksepter forespørsel om fagfellevurdering"
 
@@ -374,13 +351,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Denne e-posten sendes fra en fagfelle til seksjonsredaktøren som svar på «"
-"Forespørsel om fagfellevurdering» for å varsle seksjonsredaktøren om at "
-"forespørselen er mottatt og akseptert, og at fagfellevurderingen vil bli "
-"ferdigstilt innen angitt frist."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Avslå forespørsel om fagfellevurdering"
 
@@ -393,12 +363,6 @@ msgstr ""
 "kontakt ved en senere anledning.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Denne e-posten sendes av en fagfelle til seksjonsredaktøren som svar på en "
-"forespørsel om fagfellevurdering, for å varsle redaktøren om at oppdraget er "
-"avslått."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -424,13 +388,6 @@ msgstr ""
 "vårt? Jeg ser fram til å høre fra deg.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Denne e-posten sendes av en redaktør til en fagfelle for å minne om at "
-"fagfellevurderingen ventes ferdigstilt innen fristen. Denne e-posten sendes "
-"når redaktøren manuelt sender en påminnelse til en fagfelle."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Påminnelse om fagfellevurdering"
@@ -481,13 +438,6 @@ msgstr ""
 "vårt? Jeg ser fram til å høre fra deg.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Denne e-posten sendes automatisk til fagfellen når tidsfristen er "
-"overskredet. Automatiske påminnelser om fagfellevurdering kan aktiveres i "
-"Arbeidsflyt > Fagfellevurdering"
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Påminnelse om fagfellevurdering (automatisk e-post)"
@@ -868,12 +818,6 @@ msgstr ""
 "Vennlig hilsen<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Denne e-posten sendes til en nyregistrert bruker for at vedkommende skal "
-"bekrefte e-postkontoen sin."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som fagfelle hos {$contextName}"
 
@@ -918,12 +862,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Denne e-posten sendes til registrerte brukere som har valgt å få tilsendt "
-"slike varslinger."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Innleveringen din har blitt akseptert til  {$contextName}"
 
@@ -938,11 +876,6 @@ msgstr ""
 "Vår beslutning er å: Akseptere manuskriptet"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Denne e-posten informerer forfatter om at innleveringen har blitt godkjent "
-"for publisering."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Abonnementskjøp: Individuelt abonnement"
 
@@ -1219,26 +1152,8 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Redigere referanser"
 
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Denne e-posten blir sendt fra en redaøktør til en fagfelle når et kansellert "
-"vurderingsoppdrag gjenopptas. Hvis fagfellen har godtatt forespørselen og "
-"redaktøren etterpå har kansellert vurderingsoppdraget, har redaktøren "
-"muligheten til å starte fagfellevurderingen igjen slik at fagfellen kan "
-"fullføre vurderingsoppdraget."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fremdeles mulighet til å være fagfelle for {$contextName}?"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Denne e-posten fra seksjonsredaktør til fagfelle ber fagfelle akseptere "
-"eller avslå ny fagfellevurdering av en innlevering. Det gir informasjon om "
-"innleveringen, som tittel og sammendrag, fristen og tilgang til selve "
-"innleveringen. Denne beskjeden blir brukt når Standard "
-"fagfellevurderingsprosess er valgt under  Innstillinger > Arbeidsflyt > "
-"Fagfellevurdering."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
@@ -1254,11 +1169,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Bekreftelse på innlevering"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Denne e-posten sendes til en nyregistrert bruker for å validere "
-"e-postkontoen."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

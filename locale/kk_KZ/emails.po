@@ -15,12 +15,6 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Бұл электрондық пошта жаңадан тіркелген пайдаланушыға электрондық пошта "
-"мекенжайын растау үшін жіберіледі."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Сәлеметсіз бе, {$recipientName}!<br />\n"
@@ -102,11 +96,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Құпия сөзді қалпына келтіруді растау"
 
-msgid "emails.notification.description"
-msgstr ""
-"Хабарлама электрондық пошта арқылы жіберілетін хабарламаларға тіркелген "
-"қолданушыларға жіберіледі."
-
 msgid "emails.notification.body"
 msgstr ""
 "Сізге «{$contextName}» сайтынан жаңа хабарлама келіп түсті:<br />\n"
@@ -124,16 +113,6 @@ msgstr ""
 
 msgid "emails.reviewerRegister.subject"
 msgstr "\"{$ContextName}\"журналында рецензент ретінде тіркелу"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Это письмо редактора раздела, отправляемое рецензенту, с запросом согласия "
-"или отказа от выполнения рецензирования материала во втором или последующих "
-"раундах рецензирования. В письме приводится информация о материале, такая "
-"как название и аннотация, срок выполнения рецензии и как получить доступ к "
-"самому материалу. Это сообщение используется, если выбран стандартный "
-"процесс рецензирования в Управление > Настройки > Рабочий процесс > "
-"Рецензирование."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -212,14 +191,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Мақаланы қарауды сұраңыз"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Бұл электрондық пошта шолушының қарауды растау күні өткен кезде автоматты "
-"түрде жіберіледі (Параметрлер> Жұмыс үрдісі> Қарау бөліміндегі Қарау "
-"опцияларын қараңыз) және шолушының сілтеме арқылы тікелей қатынасы "
-"өшірілген. Жоспарланған тапсырмалар қосылып, конфигурациялануы керек ("
-"сайттың конфигурация файлын қараңыз)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -257,13 +228,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Мақаланы қарау туралы сұрауды еске салу"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Бұл электрондық хатта жылғы редактор-бөлімнің сын-пікір жазушысына өтіну "
-"қарай сын-пікір жазушысына қабылдауға немесе қабылдамауға міндетті сараптау "
-"бойынша ұсыну. "
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -891,12 +855,6 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Жіберу {$submissionId} мекен-жайы бойынша жіберуге дайын {$contextAcronym}"
 
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Бұл редактордың немесе бөлім редакторының авторға жіберуге қатысты соңғы «"
-"Өтінішті қабылдау» шешімі туралы хабарлау үшін жіберген хаты."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "Сәлеметсіз бе {$recipientName}!<br />\n"
@@ -938,13 +896,6 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Материалды қарау үшін автоматты еске салғыш"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Егер рецензент белгіленген мерзімде шолуды аяқтамаса, бұл электрондық пошта "
-"автоматты түрде жіберіледі. Тексеру параметрлерінде автоматты тексеру еске "
-"салғыштары бар."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "Сәлем {$recipientName}!<br />\n"
@@ -970,11 +921,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Материалды қарау үшін автоматты еске салғыш"
-
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Бұл хатты бөлім редакторы рецензентке қарау мерзімі өтіп кеткенін еске салу "
-"үшін жібереді."
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -1002,11 +948,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Материалды қарау туралы еске салғыш"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Бұл бөлім редакторына мақаланы қарау сұрауына жауап ретінде бөлім "
-"редакторына қарау сұрауы қабылданбағаны туралы жіберілген рецензент хат."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Құрметті редакторлар!<br />\n"
@@ -1019,12 +960,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Пікір беру мүмкін емес"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Бұл рецензенттің мақаланы қарау сұранысына жауап ретінде бөлім редакторына "
-"қарау сұранысының қабылданғанын және рецензия көрсетілген күнге дейін "
-"жіберілетінін хабарлау үшін жіберілген хат."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""
@@ -1041,14 +976,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Мен шолуға келісемін"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Бұл электрондық поштаны редактор рецензентке жойылған шолуды қалпына келтіру "
-"кезінде жібереді. Егер рецензент шолуды қабылдаса, содан кейін редактор "
-"шолуды болдырмаса, редактордың шолушыға шолуды жалғастыруға мүмкіндік "
-"беретін шолуды қалпына келтіруге мүмкіндігі бар."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "Сәлем {$recipientName}!<br />\n"
@@ -1062,11 +989,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Сіз әлі де {$contextName} үшін бір нәрсені көре аласыз ба?"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Бұл бөлім редакторының материалды тексеруді бастаған рецензентке жіберген "
-"хаты, қараудың жойылғанын хабарлайды."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -1085,11 +1007,6 @@ msgstr "Қарау сұрауы тоқтатылды"
 
 msgid "emails.userValidateSite.subject"
 msgstr "Есептік жазбаңызды растаңыз"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Бұл электрондық пошта электрондық пошта тіркелгісін тексеру үшін сайтқа "
-"тіркелген жаңа пайдаланушыға жіберіледі."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

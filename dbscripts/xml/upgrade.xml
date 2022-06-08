@@ -150,6 +150,7 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I7624_StrftimeDeprecation"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I7592_RemoveUnusedEmailTemplates"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I7126_Galleys"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I7706_AssociateTemplatesWithMailables"/>
 		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_COPYEDITING" locales="en_US" />

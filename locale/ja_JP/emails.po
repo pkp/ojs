@@ -21,10 +21,6 @@ msgstr ""
 "ドをリセットするためのURLを提供します。"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "このメールは、新規登録したユーザーに送付され、ユーザー名とパスワードを通知します。"
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -96,10 +92,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "パスワードリセットの確認"
 
-msgid "emails.notification.description"
-msgstr "このメールは新規に登録された査読者に送付され、ユーザー名とパスワードが通知されます。"
-
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "{$contextName}からの新しいお知らせです。<br />\n"
@@ -235,12 +227,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"このメールは、査読者の確認期限が過ぎた場合（「設定」>「ワークフロー」>「査読」の「査読オプション」を参照）、査読者のワンクリックアクセスが無効になってい"
-"る場合に自動的に送信されます。スケジュールされたタスクを有効にして設定する必要があります（サイト設定ファイルを参照）。"
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -272,13 +258,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "リマインダー：論文査読のお願い"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"このメールは、セクション編集者から査読者に投稿物の査読を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へのアクセ"
-"ス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQUEST"
-"_ATTACHEDを参照してください）。"
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -335,12 +314,6 @@ msgid "emails.editorAssign.subject"
 msgstr "セクション編集者任命のお知らせ"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"このメールは、査読者の査読期限日が過ぎ（雑誌設定ステップ2の査読オプションを参照）、査読者ワンクリックアクセスが無効な場合に、自動的に送信されるものです。"
-"定期タスク機能が有効かつ設定されている必要があります（サイト設定ファイルを参照）。"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -365,10 +338,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "論文査読の督促（自動送信）"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "このメールは、セクション編集者から査読者に査読期限日が過ぎたことを督促するものです。"
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -391,9 +360,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "論文査読の督促"
 
-msgid "emails.reviewDecline.description"
-msgstr "このメールは、査読者からセクション編集者に査読依頼を受けることができない旨を通知するものです。"
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "編集部 御中:<br />\n"
@@ -407,9 +373,6 @@ msgstr ""
 msgid "emails.reviewDecline.subject"
 msgstr "査読依頼の謝絶"
 
-msgid "emails.reviewConfirm.description"
-msgstr "このメールは、査読者からセクション編集者に査読依頼を受諾し、指定された期日までに査読を終了させる意思を伝えるものです。"
-
 msgid "emails.reviewConfirm.body"
 msgstr ""
 "編集部 御中:<br />\n"
@@ -422,9 +385,6 @@ msgstr ""
 
 msgid "emails.reviewConfirm.subject"
 msgstr "査読依頼の受諾"
-
-msgid "emails.reviewCancel.description"
-msgstr "このメールは、セクション編集者から査読者に既に開始している査読が取りやめになったことを通知するものです。"
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -440,12 +400,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "査読依頼取消のお願い"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"このメールは、セクション編集者から査読者に投稿物の査読の次回目を依頼するものです。メールには、タイトルや要旨などの投稿物に関する情報、査読期限日、投稿物へ"
-"のアクセス方法を示しています。このメールは、雑誌設定のステップ2で標準的査読プロセスが選択された場合に使用されます（そうでない場合は、REVIEW_REQ"
-"UEST_ATTACHED_SUBSEQUENTを参照してください）。"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -544,10 +498,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "ゲラ作成のお願い"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "編集者またはセクション編集者から著者へのこのメールは、投稿に関する最終的な「投稿の受理」の決定を著者に通知するものです。"
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}様:<br />\n"
@@ -587,10 +537,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "論文査読の督促（自動送信）"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr "このメールは、セクション編集者から投稿査読中の査読者に、キャンセルされた審査が復活したことを通知するために送信されます。"
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

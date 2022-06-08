@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Ce courriel est envoyé aux utilisateurs-trices inscrits-es qui ont choisi de recevoir par courriel ce type d'avis."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmation de la réinitialisation du mot de passe"
 
@@ -104,10 +101,6 @@ msgstr ""
 "<br />\n"
 "Merci,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ce courriel est envoyé à un,une utilisateur-trice nouvellement inscrit-e pour valider son compte de courriel."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Inscription en tant qu'évaluateur-trice pour la revue {$contextName}"
@@ -274,18 +267,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Ce courriel du,de la rédacteur-trice à un,une évaluateur-trice demande que l"
-"'évaluateur-trice accepte ou refuse la tâche d'évaluation d'une soumission. "
-"Il fournit de l'information sur la soumission, tel son titre et un résumé, "
-"la date d'échéance pour l'évaluation, et comment accéder à la soumission. Ce "
-"message est utilisé quand « Processus d'évaluation standard » est "
-"sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > "
-"Évaluation. (Autrement voir « Demande d'évaluation d'un article (en pièce "
-"jointe) ».)"
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Rappel de demande d'évaluation d'un article"
 
@@ -325,10 +306,6 @@ msgstr ""
 "« {$submissionTitle} »<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ce courriel est envoyé automatiquement lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est révolue (voir Options d'évaluation sous Paramètres &gt; Flux des travaux &gt; Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Demande d'évaluation d'un article"
@@ -396,19 +373,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice "
-"demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation "
-"d'une soumission pour un cycle subséquent d'évaluation. Il contient des "
-"informations sur la soumission tel que son titre et un résumé, la date "
-"d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce "
-"message est utilisé quand « Processus d'évaluation standard » est "
-"sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > "
-"Évaluation (Autrement voir « Demande d'évaluation d'un article (cycle "
-"subséquent) ».)"
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annulation de la demande d'évaluation"
 
@@ -424,9 +388,6 @@ msgstr ""
 "<br />\n"
 "Si vous avez des questions, n'hésitez pas à communiquer avec nous."
 
-msgid "emails.reviewCancel.description"
-msgstr "Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Acceptation d'évaluation"
 
@@ -437,9 +398,6 @@ msgstr ""
 "Je suis en mesure d'évaluer la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Je vous remercie d'avoir pensé à moi. Je devrais être en mesure de compléter l'évaluation pour la date du {$reviewDueDate}, voire avant.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewConfirm.description"
-msgstr "Ce courriel est envoyé par l'évaluateur-trice au,à la rédacteur-trice de rubrique en réponse à une demande d'évaluation, pour l'aviser que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée."
 
 msgid "emails.reviewDecline.subject"
 msgstr "Refus d'évaluation"
@@ -454,9 +412,6 @@ msgstr ""
 "\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ce courriel est envoyé par l'évaluateur-trice au,à la rédacteur-trice de rubrique en réponse à la demande d'évaluation, pour l'aviser qu'il ou elle ne peut effectuer l'évaluation."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -486,10 +441,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Ce courriel est envoyé par le,la rédacteur-trice de rubrique pour rappeler à un,une évaluateur-trice que son évaluation est due."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
 
@@ -517,10 +468,6 @@ msgstr ""
 "très bientôt.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
@@ -565,10 +512,6 @@ msgstr ""
 " » à la revue {$contextName}.<br />\n"
 "<br />\n"
 "Notre décision est d'accepter votre soumission."
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision finale concernant sa soumission, soit d'accepter sa soumission."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -928,13 +871,6 @@ msgstr "Prière de saisir votre message."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "Message blanc par défaut utilisé pour concevoir d'autres messages."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une "
-"évaluateur-trice qui a une évaluation en cours, pour l'aviser que la demande "
-"préalablement annulée a été rétablie."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

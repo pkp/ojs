@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Diese E-Mail wird an angemeldete Benutzer/innen geschickt, die sich für diese Art der Benachrichtigung angemeldet haben."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Reset-Bestätigung für Ihr Passwort"
 
@@ -97,12 +94,6 @@ msgstr ""
 "<br />\n"
 "Vielen Dank,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Diese E-Mail wird an neu registrierte Benutzer/innen gesendet, um sie "
-"aufzufordern, die angegebene E-Mail-Adresse zu verifizieren."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrierung als Gutachter/in bei {$contextName}"
@@ -257,10 +248,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr "Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Erinnerung an Bitte um Begutachtung eines Artikels"
 
@@ -287,16 +274,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/"
-"n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in "
-"Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für "
-"Gutachter/innen deaktiviert ist. Planmäßige Aufgaben (scheduled tasks) "
-"müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der "
-"Website)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Bitte um Begutachtung eines Artikels"
@@ -360,10 +337,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, damit diese/r die Aufgabe, eine Einreichung in einer zweiten oder weiteren Begutachtungsrunde zu beurteilen, übernimmt oder ablehnt. Sie übermittelt Informationen über die Einreichung wie den Titel und das Abstract, ein Fälligkeitsdatum für das Gutachten und Informationen, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Rücknahme einer Bitte um ein Gutachten"
 
@@ -374,9 +347,6 @@ msgstr ""
 "wir haben uns entschieden, unsere Anfrage nach einem Gutachten für den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zurückzuziehen. Verzeihen Sie bitte die Ihnen dadurch evtl. entstandenen Unannehmlichkeiten. Wir hoffen, dass wir weiterhin auf Ihre Hilfe als Gutachter/in für die Zeitschrift zählen können.<br />\n"
 "<br />\n"
 "Falls Sie Fragen haben, können Sie sich gerne an mich wenden."
-
-msgid "emails.reviewCancel.description"
-msgstr "Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in gesendet, die an einem Gutachten arbeiten, um sie darüber zu informieren, dass das Gutachten abgesagt worden ist."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Einwilligung in die Begutachtung"
@@ -389,9 +359,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um die/den Rubrikredakteur/in darüber zu informieren, dass die Begutachtung übernommen wird und bis zu dem angegebenen Datum abgeschlossen sein wird."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ablehnung der Bitte um ein Gutachten"
 
@@ -402,9 +369,6 @@ msgstr ""
 "leider kann ich gegenwärtig die Begutachtung des Beitrags &quot;{$submissionTitle}&quot; für {$contextName} nicht übernehmen. Ich danke für Ihr Vertrauen. Bei anderer Gelegenheit können Sie sich gerne wieder an mich wenden.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Diese E-Mail wird von einer Gutachterin/einem Gutachter an die/den Rubrikredakteur/in als Antwort auf eine Begutachtungsanfrage gesendet, um darüber zu informieren, dass die Anfrage abgelehnt wird."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -426,10 +390,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Diese E-Mail wird von einer Rubrikredakteurin/einem Rubrikredakteur gesendet, um eine/n Gutachter/in daran zu erinnern, dass ihr/sein Gutachten fällig ist."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatische Erinnerung an die Fälligkeit eines Gutachtens"
 
@@ -447,10 +407,6 @@ msgstr ""
 "Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Diese E-Mail wird automatisch verschickt, wenn das Fälligkeitsdatum für eine/n Gutachter/in verstrichen ist (vgl. die Begutachtungseinstellungen in Schritt 2 des Zeitschriftensetups) und wenn der One-Click-Zugang für Gutachter/innen deaktiviert ist. Planmäßige Aufgaben (scheduled tasks) müssen aktiviert und konfiguriert sein (vgl. die Konfigurationsdatei der Website)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatische Erinnerung an Begutachtung"
@@ -482,10 +438,6 @@ msgstr ""
 "wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />\n"
 "<br />\n"
 "Unsere Entscheidung lautet: Beitrag annehmen"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -802,13 +754,6 @@ msgstr "Bitte geben Sie Ihre Nachricht ein."
 
 msgid "emails.notificationCenterDefault.description"
 msgstr "Die (leere) Standardnachricht, die in der Nachrichtenliste des Benachrichtigungscenters angezeigt wird."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Diese E-Mail wird von der/dem Rubrikredakteur/in an eine/n Gutachter/in "
-"gesendet, die an einem Gutachten arbeiten, um sie darüber zu informieren, "
-"dass die zurüchgezogene Anfrage nach einem Gutachten hiermit erneuert wird."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

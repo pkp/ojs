@@ -221,17 +221,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Ce courriel du Rédacteur de rubrique à un Rapporteur demande que le "
-"rapporteur accepte ou refuse la tâche d'évaluation d'une soumission. Il "
-"fournit de l'information sur la soumission, tel son titre et un résumé, la "
-"date d'échéance pour l'évaluation, et comment accéder à la soumission elle-"
-"même. Ce message est utilisé quand « Processus d'évaluation standard » est "
-"sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir «"
-" Demande d'évaluation d'un article en pièce jointe »)."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annulation de la demande d'évaluation"
 
@@ -242,9 +231,6 @@ msgstr ""
 "Nous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$submissionTitle} » pour {$contextName}. Nous sommes désolés des inconvénients que cela pourrait vous causer et nous espérons que nous pourrons compter sur votre collaboration pour un autre projet.<br />\n"
 "<br />\n"
 "Si vous avez des questions, n'hésitez pas à communiquer avec nous."
-
-msgid "emails.reviewCancel.description"
-msgstr "Ce courriel est envoyé par le Rédacteur de rubrique à un Rapporteur qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Acceptation d'évaluation"
@@ -260,9 +246,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à une demande d'évaluation, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Refus d'évaluation"
 
@@ -273,9 +256,6 @@ msgstr ""
 "Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à la demande d'évaluation, pour aviser ce dernier qu'il ne peut effectuer l'évaluation."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -297,10 +277,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Ce courriel est envoyé par le Rédacteur de rubrique pour rappeler à un rapporteur que son évaluation est due."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
 
@@ -318,10 +294,6 @@ msgstr ""
 "Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pour notre revue. J'espère avoir de vos nouvelles très bientôt.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Ce courriel est envoyé automatiquement quand la date due d'un rapporteur est dépassée. (Voir Options d'évaluation à l'Étape 2 de la Configuration de la revue) et que l'accès en « un clic » est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de Configuration du site)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Rappel automatique d'évaluation d'une soumission"
@@ -679,10 +651,6 @@ msgstr ""
 "Merci,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et de son mot de passe."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Inscription en tant que rapporteur de {$contextName}"
 
@@ -715,10 +683,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Ce courriel est envoyé aux utilisateurs inscrits qui ont choisi de recevoir par courriel ce type d'avis."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Décision du rédacteur"
 
@@ -732,9 +696,6 @@ msgstr ""
 "Notre décision est d'accepter votre soumission."
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Souscription à un abonnement individuel"
 
@@ -958,10 +919,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un rapporteur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès du rapporteur en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Demande d'évaluation d'un article"
 
@@ -1039,10 +996,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Ce courriel du rédacteur de section à un rapporteur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé."
-
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Accusé de réception de la soumission"
 
@@ -1111,13 +1064,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Activité éditoriale pour {$month} {$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ce courriel est envoyé par le rédacteur ou la rédactrice de la rubrique à un "
-"évaluateur ou une évaluatrice qui a une évaluation en cours pour l'informer "
-"que la demande préalablement annulée à été rétablie."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
