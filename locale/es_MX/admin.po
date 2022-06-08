@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-08 09:24+0000\n"
+"PO-Revision-Date: 2022-06-09 10:39+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/es_MX/>\n"
@@ -156,3 +156,99 @@ msgstr "Redireccionar revista"
 
 msgid "admin.hostedContexts"
 msgstr "Revistas alojadas"
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Agregue, edite o elimine revistas y administre la configuración de todo el "
+"sitio."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"La funcionalidad de correo electrónico masivo se ha desactivado en esta "
+"revista. Para volver a activarla vaya a <a href=\"{$siteSettingsUrl}\">Admin "
+"> Ajustes del sitio</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"El administrador/a de la revista no podrá enviar correos electrónicos "
+"masivos a ninguno de los roles seleccionados debajo. Utilice este ajuste "
+"para limitar el abuso de la funcionalidad de notificación por correo "
+"electrónico. Por ejemplo, podría ser más seguro desactivar los correos "
+"electrónicos masivos para lectores/as, autores/as u otros grupos con muchos "
+"usuarios/os que no hayan dado su consentimiento para recibir este tipo de "
+"correos electrónicos.<br><br>La funcionalidad de correo electrónico masivo "
+"se puede desactivar completamente para esta revista en <a href=\""
+"{$siteSettingsUrl}\">Admin > Ajustes del sitio</a>."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Seleccione las revistas alojadas que deberían tener permiso para enviar "
+"correos electrónicos masivos. Cuando se activa esta función, el "
+"administrador/a de la revista puede enviar un correo electrónico a todos los "
+"usuarios/as registrados.<br><br>El uso indebido de esta funcionalidad podría "
+"violar las leyes en contra del correo no solicitado de algunas "
+"jurisdicciones, lo que provocaría el bloqueo de los correos electrónicos "
+"procedentes de su servidor. Busque asesoramiento técnico antes de activar "
+"esta característica y considere consultarlo con los administradores/as de "
+"las revistas para asegurarse de que se usa correctamente.<br><br>Se pueden "
+"activar más restricciones a esta funcionalidad para cada revista a través "
+"del asistente de configuración en el listado de <a href=\""
+"{$hostedContextsUrl}\">revistas alojadas</a>."
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Recordatorio de revisión"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificación de acceso abierto"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Recordatorio de caducidad de la suscripción"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Usuarios/as no registrados."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"¿Está seguro/a de que desea fusionar la cuenta/s seleccionada "
+"{$oldAccountCount} en la cuenta con el nombre de usuario/a \"{$newUsername}\""
+"? Las cuentas seleccionadas {$oldAccountCount} dejarán de existir. Esta "
+"acción no es reversible."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Todos los usuarios/as registrados"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Seleccione un usuario (o varios) para fusionarlos con otra cuenta de usuario "
+"(p. ej., cuando alguien tiene dos cuentas de usuario distintas). La(s) "
+"cuenta(s) seleccionada(s) en primer lugar se eliminarán y todos los envíos, "
+"asignaciones, etc. se atribuirán a la segunda cuenta."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Seleccione un usuario/a al que atribuir las autorías del usuario anterior, "
+"tareas de edición, etc."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fusionar usuario/a"
+
+msgid "admin.mergeUsers"
+msgstr "Fusionar usuarios/as"
+
+msgid "admin.journals.importErrors"
+msgstr "No se pudo completar la importación correctamente"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Se requiere la ruta de importación."
+
+msgid "admin.journals.redirect"
+msgstr "Generar código para asignar direcciones URL OJS 1 a URL OJS 2"
+
+msgid "admin.journals.transcode"
+msgstr "Transcodificar metadatos de artículos de ISO8859-1"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importar suscripciones"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Ruta actual de la revista o ruta que se desea crear (p. ej. \"ojs\")."
