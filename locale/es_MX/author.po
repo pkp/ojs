@@ -1,8 +1,228 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-06-09 10:39+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
+"author/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "¿Está seguro/a de que desea continuar sin cargar un archivo de envío?"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "No se ha cargado ningún archivo del envío."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Reemplazar el archivo del envío"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Cargar el archivo del envío"
+
+msgid "author.submit.submissionFile"
+msgstr "Archivo de envío"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Ha superado el límite máximo de palabras para resúmenes en esta sección."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Introduzca el resumen de su envío."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Ingrese el título de su envío."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Se requiere el nombre, apellido y dirección de correo electrónico de cada "
+"autor."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Se requiere al menos un autor/a."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglés=en; francés=fr; español=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Códigos adicionales</a>."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Se refiere a la localización geográfica, a la cobertura cronológica o "
+"histórica o a las características de la muestra de investigación."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Proporcione términos para indexar el envío y sepárelos con un punto y coma "
+"(término1; término2; término3)."
+
+msgid "author.submit.deleteAuthor"
+msgstr "Eliminar autor/a"
+
+msgid "author.submit.addAuthor"
+msgstr "Añadir autor/a"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Contacto principal para la correspondencia editorial."
+
+msgid "author.submit.reorder"
+msgstr "Reordenar el nombre del autor/a"
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Reordenar a los autores/as para que aparezcan en el orden en el que serán "
+"enumerados en la publicación."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaración de privacidad de la revista"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Seleccione el idioma del envío."
+
+msgid "author.submit.form.sectionRequired"
+msgstr "Seleccione la sección adecuada de la revista para este envío."
+
+msgid "author.submit.comments"
+msgstr "Introduzca texto (opcional)"
+
+msgid "submission.submit.coverNote"
+msgstr "Comentarios para el editor/a"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Debe aceptar las condiciones del aviso de derechos de autor/a antes de "
+"continuar."
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+"Los autores aceptan los términos de este Aviso de derechos de autor, que se "
+"aplicarán a este envío siempre y cuando sea publicado por esta revista (los "
+"comentarios para el editor se pueden agregar a continuación)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Antes de continuar, debe asegurarse de que se cumplen todos los requisitos "
+"de la lista de comprobación."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Los artículos deben enviarse a una de las secciones de la revista."
+
+msgid "author.submit.journalSection"
+msgstr "Sección de la revista"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Sin envíos."
+
+msgid "author.submissions.viewStatus"
+msgstr "Ver estado"
+
+msgid "author.submissions.confirmDelete"
+msgstr "¿Está seguro/a de que desea eliminar el envío incompleto?"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Modificaciones de la corrección de pruebas"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Cargar la versión corregida"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "En edición: Se requiere corrección de pruebas"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "En edición: Se requiere corrección de originales"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "En revisión: Publicable con modificaciones"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "En ronda de revisión {$round}"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Si solicita una exención de cuotas, deberá introducir un motivo en el "
+"espacio que se le proporciona."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Deje un comentario en la casilla que encontrará a continuación para indicar "
+"por qué no se deberían aplicar las cuotas."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Considere la posibilidad de exención de la cuota de envío para este envío"
+
+msgid "author.submit.requestWaiver"
+msgstr "Solicitud de exención de cuotas"
+
+msgid "author.submit.notAccepting"
+msgstr "La revista no acepta envíos en este momento."
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Puede completar este envío en otro momento seleccionando Envíos activos "
+"desde la página de inicio del autor/a."
+
+msgid "author.submit.nextSteps"
+msgstr "Siguientes pasos"
+
+msgid "author.submit.confirmation"
+msgstr "Confirmación"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Cargar los archivos complementarios"
+
+msgid "author.submit.metadata"
+msgstr "Introducir los metadatos"
+
+msgid "author.submit.upload"
+msgstr "Cargar el envío"
+
+msgid "author.submit.start"
+msgstr "Inicio"
+
+msgid "author.submit.step5"
+msgstr "Paso 5. Confirmar el envío"
+
+msgid "author.submit.step4a"
+msgstr "Paso 4a. Añadir un archivo complementario"
+
+msgid "author.submit.step4"
+msgstr "Paso 4. Cargar los archivos complementarios"
+
+msgid "author.submit.step3"
+msgstr "Paso 3. Introducir los metadatos del archivo"
+
+msgid "author.submit.step2"
+msgstr "Paso 2. Cargar los archivos"
+
+msgid "author.submit.step1"
+msgstr "Paso 1. Empezar el envío"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Haga clic aquí</a> para ir al "
+"primer paso del proceso de envío en cinco pasos."
+
+msgid "author.submit.startHereTitle"
+msgstr "Empezar un nuevo envío"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Cinco pasos para hacer un envío"
+
+msgid "author.submit.submitArticle"
+msgstr "Hacer un envío"
+
+msgid "author.competingInterests"
+msgstr ""
+"Conflicto de intereses <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+
+msgid "author.track"
+msgstr "Envíos activos"
+
+msgid "author.submit"
+msgstr "Nuevo envío"
