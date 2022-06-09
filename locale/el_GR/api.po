@@ -1,10 +1,11 @@
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-11-17 18:56+0000\n"
-"Last-Translator: Evangelos Papakirykou <vpapakir@gmail.com>\n"
+"PO-Revision-Date: 2022-05-25 08:44+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/api/el_GR/>\n"
 "Language: el_GR\n"
 "MIME-Version: 1.0\n"
@@ -56,3 +57,31 @@ msgstr "Μπορείτε να δείτε μόνο περιοδικά που έχ
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Δεν μπορείτε να αλλάξετε το περιοδικό στο οποίο έγινε μια υποβολή."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Ορισμένα στοιχεία δεν κατατέθηκαν με επιτυχία. Ελέγξτε τα μεμονωμένα "
+"στοιχεία για συγκεκριμένα μηνύματα σφάλματος."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+"Σ' αυτό το στάδιο δεν μπορείτε να συσχετίσετε ένα αρχείο με ένα τυπογραφικό "
+"δοκίμιο."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Δεν έχει διαμορφωθεί καμία υπηρεσία καταχώρισης DOI γι' αυτό το περιοδικό."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Το DOI που ζητήσατε δεν ανήκει σ' αυτό το περιοδικό."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Η υποβολή που ζητήσατε δεν υπάρχει σε αυτό το περιοδικό."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"Η δυνατότητα ειδοποίησης μέσω email δεν έχει ενεργοποιηθεί για αυτό το "
+"περιοδικό."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Η ανακοίνωση που ζητήσατε δεν ανήκει σ' αυτό το περιοδικό."

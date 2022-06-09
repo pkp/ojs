@@ -35,12 +35,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Регистрација како рецензент со {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Овој и-меил е испратен до новорегистрирани корисници за да ја потврдат "
-"нивната и-меил адреса."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -124,11 +118,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Потврда за ресетирање на лозинката"
 
-msgid "emails.notification.description"
-msgstr ""
-"Овој и-маил е испратен до регистрирани корисници кои посочиле дека сакаат да "
-"добијат известувања од овој тип на и-меил."
-
 msgid "emails.notification.body"
 msgstr ""
 "Имате ново известување од {$contextName}:<br />\n"
@@ -154,23 +143,9 @@ msgstr ""
 "новообјавено издание и ги поканува да го посетат списанието преку добавеното "
 "URL."
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Овој и-меил е автоматски испратен кога рокот за достава на потврда на "
-"рецензентот е истечен (видете Опции за рецензија во Поставки > Тек на работа "
-"> Рецензија) и пристапот за рецензентот преку еден клик е оневозможен. "
-"Закажаните задачи мора да се овозможени и прилагодени(видете ја датотеката "
-"за прилагодување на веб-страницата)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Дали ќе можете да го рецензирате ова за нас?"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Овој и-меил од Секцискиот уредник до Рецензентот бара рецензентот да ја "
-"прифати или одбие задачата за рецензирање на поднесок. "
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -356,12 +331,6 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Поднесокот {$submissionId} е подготвен за обработка на {$contextAcronym}"
 
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Овој и-меил го известува авторот дека нивниот поднесок е прифатен за "
-"објавување."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Вашиот поднесок е прифатен во {$contextName}"
 
@@ -377,71 +346,25 @@ msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Автоматски потсетник за рецензија на поднесок"
 
 #, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Овој и-меил автоматски се испраќа кога рецензентот нема да ја заврши "
-"рецензијата до датумот на доспевање. Автоматските потсетници за рецензија се "
-"овозможуваат во поставките за рецензија."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Потсетник да ја доставите вашата рецензија"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Овој и-меил е испратен од уредник како потсетник до рецензентот дека рокот "
-"за нивната рецензија е достигнат. Овој и-меил се користи кога уредникот "
-"рачно испраќа потсетник до рецензентот"
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Потсетник да ја поднесете вашата рецензија"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Овој и-меил е испратен од Рецензент до Секциски уредник како одговор на "
-"барањето за рецензија со цел да го извести секцискиот уредник дека барањето "
-"за рецензија е одбиено."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Не може да рецензира"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Овој и-меил е испратен од Рецензент до Секциски уредник како одговор на "
-"барањето за рецензија со цел да до извести секцискиот уредник дека барањето "
-"за рецензија е прифатено и ќе биде извршено до посочениот датум."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Може да рецензира"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Овој и-меил е испратен од уредник до рецензент кога ќе се обнови откажаната "
-"рецензија. Доколку рецензентот прифати рецензија, а рецензијата потоа е "
-"откажана од уредникот, уредникот има опција да ја обнови рецензијата за да "
-"му дозволи на рецензентот да продолжи со својата рецензија."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Дали сè уште можете да рецензирате нешто за {$contextName}?"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Овој и-меил е испратен од Секциски уредник до Рецензент кој има рецензија во "
-"тек за да ги извести дека рецензијата е откажана."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Барањето за рецензија е откажано"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Овој и-меил од уредник до рецензент бара рецензентот да ја прифати или одбие "
-"задачата за рецензирање на поднесок за дополнителен круг на рецензија. "
-"Обезбедува информации за поднесокот како што се насловот и апстрактот, "
-"датумот на доспевање на рецензијата и како да се пристапи до самиот поднесок."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"

@@ -47,12 +47,6 @@ msgid "emails.layoutRequest.subject"
 msgstr "Žiadosť o sadzobnice"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Tento e-mail od editora alebo editora sekcie autorovi obsahuje informáciu o "
-"konečnom rozhodnutí o prijatí príspevku."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "{$authors}:<br />\n"
@@ -94,15 +88,6 @@ msgstr ""
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatické pripomenutie recenzie príspevku"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Tento email je poslaný automaticky, keď recenzentovi vyprší stanovený termín "
-"pre spracovanie recenzie (pozri Možnosti recenzie v Nastavenie časopisu, "
-"Krok 2) a je zakázaný prístup recenzenta na jedno kliknutie. Musia byť "
-"povolené a nakonfigurované naplánované úlohy (pozri konfiguračný súbor "
-"stránky)."
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -156,12 +141,6 @@ msgid "emails.reviewRemindOneclick.subject"
 msgstr "Pripomenutie recenzie príspevku"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Tento email posiela editor sekcie recenzentovi, aby mu pripomenul, že "
-"vypršal termín pre spracovanie recenzie."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -186,11 +165,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "Pripomenutie recenzie príspevku"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Tento email posiela recenzent editorovi sekcie v odpovedi na žiadosť o "
-"spracovaní recenzie, aby mu oznámil, že recenziu nemôže spracovať."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "Editori:<br />\n"
@@ -203,12 +177,6 @@ msgstr ""
 
 msgid "emails.reviewDecline.subject"
 msgstr "Nemôžem spracovať recenziu"
-
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Tento email posiela recenzent editorovi sekcie v odpovedi na žiadosť o "
-"spracovaní recenzie, aby mu oznámil, že žiadosť prijal a spracuje recenziu v "
-"stanovenom termíne."
 
 msgid "emails.reviewConfirm.body"
 msgstr ""
@@ -225,12 +193,6 @@ msgid "emails.reviewConfirm.subject"
 msgstr "Môžem spracovať recenziu"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Tento e-mail je odoslaný editorom sekcie recenzentovi, ktorý práve vykonáva "
-"recenziu príspevku, aby mu oznámil, že zrušené recenzie boli obnovené."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -244,11 +206,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Žiadosť o recenziu bola obnovená"
-
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Tento email zasiela editor sekcie recenzentovi, ktorý má rozpracovanú "
-"recenziu, aby mu oznámil, že požiadavka na spracovanie recenzie bola zrušená."
 
 msgid "emails.reviewCancel.body"
 msgstr ""
@@ -264,15 +221,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "Žiadosť o zrušenie recenzie"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Tento email od editora sekcie recenzentovi požaduje, aby recenzent prijal "
-"alebo odmietol úlohu preskúmania príspevku pre druhé alebo ďalšie kolo "
-"recenzií. Poskytuje informácie o podaní, ako je názov a abstrakt, dátum "
-"dokončenia recenzie a prístup k samotnému príspevku. Táto správa sa používa "
-"v prípade, že je v časti Správa> Nastavenia> Pracovný postup> Kontrola "
-"vybraná možnosť Štandardná kontrola."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -353,13 +301,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Požiadavka na recenziu článku"
 
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Tento email sa automaticky odosiela, len čo uplynie dátum splatnosti "
-"potvrdenia recenzenta (pozri Možnosti kontroly v sekcii Nastavenia> Pracovný "
-"postup> Kontrola) a prístup k recenznej kontrole je zakázaný. Plánované "
-"úlohy musia byť povolené a konfigurované (pozri konfiguračný súbor webu)."
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -398,15 +339,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Požiadavka na recenziu článku"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Tento email od editora sekcie pre recenzenta žiada, aby recenzent prijal "
-"alebo odmietol úlohu spracovať recenziu príspevku. Obsahuje informácie o "
-"príspevku, ako je názov a abstrakt, termín pre spracovanie recenzie a ako sa "
-"dostať k samotnému príspevku. Táto správa je používaná, pokiaľ je zvolené "
-"Štandardné recenzné konanie v druhom kroku  Nastavenie časopisu."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -613,12 +545,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrovaný na pozícii recenzenta pre {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Tento email je odoslaný novo zaregistrovanému používateľovi a obsahuje odkaz "
-"slúžiaci na overenie jeho emailovej adresy."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -701,12 +627,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Potvrdenie o resetovaní hesla"
 
-msgid "emails.notification.description"
-msgstr ""
-"Email sa odošle zaregistrovaným používateľom, ktorí majú povolený príjem "
-"tohto typu oznámenia."
-
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Máte nové oznámenie od {$contextName}:<br />\n"

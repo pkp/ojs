@@ -25,9 +25,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Ova poruka je poslata registrovanim korisnicima koji su obeležili da žele da primaju poruke putem imejla."
-
 msgid "emails.subscriptionNotify.subject"
 msgstr "Obaveštenje o pretplati"
 

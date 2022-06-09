@@ -91,10 +91,6 @@ msgid "emails.reviewerRegister.subject"
 msgstr "הרשמה כסוקר עם {$contextName}"
 
 #, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "דוא\"ל זה נשלח למשתמש שרשום לאחרונה כדי לאמת את חשבון הדוא\"ל שלו."
-
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}\n"
@@ -172,10 +168,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "אישור איפוס סיסמה"
 
-msgid "emails.notification.description"
-msgstr "הדוא\"ל נשלח למשתמשים רשומים שבחרו לשלוח אליהם הודעה מסוג זה."
-
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "יש לך הודעה חדשה מאת {$contextName}:<br />\n"
@@ -215,14 +207,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "בקשה לסקירת מאמר"
-
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"הודעת דוא\"ל זו מעורך המדור לבודק מבקשת שהמבקר יקבל או ידחה את משימת בדיקת "
-"ההגשה. הוא מספק מידע על ההגשה כמו הכותרת והתקציר, תאריך יעד לבדיקה וכיצד "
-"לגשת להגשה עצמה. הודעה זו משמשת כאשר נבחר תהליך הבדיקה הרגיל בניהול> הגדרות> "
-"זרימת עבודה> סקירה."
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -324,13 +308,6 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "תזכורת אוטומטי להגשת חוות דעת"
 
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"דוא\"ל זה נשלח אוטומטית עם חלוף תאריך היעד של הסוקר (ראה אפשרויות סקירה תחת "
-"הגדרות> זרימת עבודה> סקירה) וגישה של בודק בלחיצה אחת מושבתת. יש לאפשר "
-"ולהגדיר משימות מתוזמנות (ראה קובץ תצורת האתר)."
-
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:\n"
@@ -343,13 +320,6 @@ msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "ביטול בקשה לסקירה"
-
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"הודעת דוא\"ל זו מעורך המדור לבודק מבקשת שהמבקר יקבל או ידחה את משימת בדיקת "
-"ההגשה לסבב ביקורת שני או יותר. הוא מספק מידע על ההגשה כמו הכותרת והתקציר, "
-"תאריך יעד לבדיקה וכיצד לגשת להגשה עצמה. הודעה זו משמשת כאשר נבחר תהליך "
-"הבדיקה הרגיל בניהול> הגדרות> זרימת עבודה> סקירה. (אחרת ראה "
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
@@ -383,10 +353,6 @@ msgid "emails.reviewRemindAuto.subject"
 msgstr "תזכורת הגשת ביקורת אוטומטית"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "דוא\"ל זה נשלח על ידי עורך מדור להזכיר מבקר שהביקורת שלהם נובעת."
-
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -407,11 +373,6 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "תזכורת שליחת חוות דעת"
 
-msgid "emails.reviewDecline.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי בודק לעורך המדור בתגובה לבקשת סקירה כדי להודיע לעורך "
-"המדור כי בקשת הביקורת נדחתה."
-
 msgid "emails.reviewDecline.body"
 msgstr ""
 "לעורכים:<br />\n"
@@ -424,11 +385,6 @@ msgstr ""
 msgid "emails.reviewDecline.subject"
 msgstr "אינו יכול לבדוק"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי בודק לעורך המדור בתגובה לבקשת סקירה כדי להודיע לעורך "
-"המדור כי בקשת הביקורת התקבלה ותושלם עד לתאריך שצוין."
-
 msgid "emails.reviewConfirm.body"
 msgstr ""
 "לעורכים:<br />\n"
@@ -440,12 +396,6 @@ msgstr ""
 
 msgid "emails.reviewConfirm.subject"
 msgstr "יכול לבדוק"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי עורך המדור לסוקר שעבר בדיקת הגשה כדי להודיע להם כי "
-"הוחזרה ביקורת שבוטלה."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -461,18 +411,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "בקשה לבדיקה חודשה"
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"דוא\"ל זה נשלח על ידי עורך המדור לסוקר שעבר בדיקת הגשה כדי להודיע להם כי "
-"הביקורת בוטלה."
-
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"הודעת דוא\"ל זו נשלחת אוטומטית עם חלוף תאריך היעד של אישור הבודק (ראה "
-"אפשרויות סקירה תחת הגדרות> זרימת עבודה> סקירה) וגישה של בודק בלחיצה אחת "
-"מושבתת. יש לאפשר ולהגדיר משימות מתוזמנות (ראה קובץ תצורת האתר)."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"

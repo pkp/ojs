@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "تأكيد إعادة تعيين كلمة المرور"
 
@@ -97,10 +94,6 @@ msgstr ""
 "<br />\n"
 "شكراً لك.<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً لتأكيد صحة عناوينهم البريدية."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "التسجيل بصفة محكم في {$contextName}"
@@ -253,12 +246,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"هذه الرسالة يرسلها محرر قسم المجلة إلى أحد المحكمين ليلتمس منه قبول مهمة "
-"التحكيم أو رفضها. "
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "تذكير إلتماس تحكيم مؤلَّف"
 
@@ -285,10 +272,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "هذه الرسالة يرسلها النظام آلياً عندما يتباطأ أحد المحكمين عن تقديم إجابة في الموعد المقرر (إنظر خيارات التحكيم ضمن: الإعدادات، المخطط الانسيابي، التحكيم) عندما تكون ميزة وصول المحكم بنقرة واحدة معطلة. يجب أن تكون المهام المجدولة ممكنة ومعدة (إنظر ملف إعدادات الموقع)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "إلتماس تحكيم مؤلَّف"
@@ -346,13 +329,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى المحكم ليلتمس منه قبول أو رفض مهمة تحكيم "
-"المؤلَّف لجولة أخرى. الرسالة تشير إلى عنوان المؤلَّف وملخصه وتاريخ استيجاب "
-"التحكيم كما تعطي رابط الوصول إلى المؤلَّف في موقع المجلة نفسه."
-
 msgid "emails.reviewCancel.subject"
 msgstr "إلغاء إلتماس التحكيم"
 
@@ -364,10 +340,6 @@ msgstr ""
 "<br />\n"
 "إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي."
 
-msgid "emails.reviewCancel.description"
-msgstr "هذه الرسالة يعنونها محرر القسم إلى المحكم الذي بحيازته طلب تقديم قيد المعالجة لإبلاغه بانتفاء الحاجة إلى تقييمه."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "هل لا زال بإمكانك تحكيم أي شيء لصالح {$contextName}؟"
 
@@ -381,12 +353,6 @@ msgstr ""
 "إن كانت لديكم أي استفسارات، لطفاً، إتصلوا بي."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى المحكم عند إعادة النظر في عملية تحكيم ملغاة. "
-"إذا وافق المحكم على إجراء التحكيم ثم قام المحرر بإلغاء عملية التحكيم، سيكون "
-"لدى المحرر خيار إعادة العملية والسماح للمحكم باستئناف عمله."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "قادر على التحكيم"
 
@@ -398,9 +364,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يبلغ المحرر بقبوله للتحكيم المذكور خلال مدة الاستيجاب المطلوبة منه."
-
 msgid "emails.reviewDecline.subject"
 msgstr "غير قادر على التحكيم"
 
@@ -411,9 +374,6 @@ msgstr ""
 "أخشى أنني حالياً غير متفرغ لتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. أشكر لكم إعتمادكم عليَّ وأرجو التواصل معي في وقت آخر.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "هذه الرسالة يعنونها المحكم إلى محرر القسم استجابة لالتماس سابق أرسله له الأخير. المحكم يعتذر فيها عن قبول التحكيم للمؤلَّف المذكور."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -434,12 +394,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"هذه الرسالة يُذكر بها المحرر محكماً قد استوجب إكمال تقييمه لمؤلَّف ما. هذه "
-"الرسالة تُستعمل عندما يرسل المحرر تذكيرًا يدويًا إلى المحكم"
-
 msgid "emails.reviewRemindAuto.subject"
 msgstr "تذكير يلتمس إكمال تحكيمك"
 
@@ -457,12 +411,6 @@ msgstr ""
 "لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"هذه الرسالة يولدها الموقع آلياً عندما لا يُكمل المحكم مهمة التحكيم حتى موعد "
-"تسليمها. تمكين تذكيرات التحكيم الآلية يتم من خلال إعدادات التحكيم."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "تذكير تلقائي بتحكيم طلب التقديم"
@@ -498,10 +446,6 @@ msgstr ""
 "والتنسيق لتحضيره للنشر.</p><p>ستتلقى قريبًا المزيد من التعليمات.</p><p>إن "
 "كانت لديك أي أسئلة، يرجى التواصل معي من <a href=\"{$authorSubmissionUrl}\">"
 "دفة قيادة طلب تقديمك</a>.</p><p>أطيب التحايا،</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "هذه الرسالة تُشعر المؤلف بأن طلب تقديمه مقبول للنشر."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -862,11 +806,6 @@ msgstr ""
 
 msgid "emails.announcement.description"
 msgstr "هذه الرسالة تُرسل إلى المشتركين في الموقع عند إنشاء إعلان جديد."
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"هذا البريد الالكتروني يُرسل إلى المستخدم الجديد الذي سجل في الموقع للتأكد من "
-"عنوان بريده الالكتروني."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

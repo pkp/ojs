@@ -295,12 +295,6 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Bu eposta Bölüm Editöründen bir hakeme bir çalışmanın hakemlik görevine "
-"davet amacı ile iletir. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Değerlendirmenin iptalini rica ederiz"
 
@@ -309,9 +303,6 @@ msgstr ""
 "Sayın {$recipientName},<br />\n"
 "<br />\n"
 "{$contextName} için yayınlanmak üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makalenin değerlendirmesini sizden talep etmiştik. Ancak gelinen noktada değerlendirmeye gerek kalmamıştır. Şu ana dek size verdiğimiz zahmetlerden dolayı teşekkür ederiz."
-
-msgid "emails.reviewCancel.description"
-msgstr "Değerlendirme süreci sona ermeden editörün değerlendirmeyi iptal için hakeme gönderdiği mesaj."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Değerlendirmeyi Yapacağım"
@@ -326,12 +317,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr ""
-"Bu e-posta, Değerlendirme talebinin kabul edildiğini ve belirtilen tarihe "
-"kadar tamamlanacağını Bölüm Editörüne bildirmek üzere yanıt olarak Hakem "
-"tarafından gönderilir."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Değerlendirmeyeceğim"
 
@@ -342,9 +327,6 @@ msgstr ""
 "{$contextName} adlı dergide yayımlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı makaleyi şu anda değerlendiremeyeceğim. Beni düşündüğünüz için teşekkür ederim. Başka bir çalışmanın değerlendirmesinde katkı sunmaya çalışacağım.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Bu elektronik posta gözden geçirme talebine cevap olarak, gözden geçirmenin red edildiğini bildirmek amacıyla Bölüm Editörüne gözden geçirmeyi yapan kişi tarafından gönderilir."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -364,13 +346,6 @@ msgstr ""
 "Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. <br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Bu elektronik posta hakemin değerlendirme için belirtilen son tarihin "
-"dolmakta olduğunu hatırlatmak için Bölüm Editörü tarafından hakemlere "
-"gönderilir."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Değerlendirilme Konusunda Hatırlatma"
@@ -410,13 +385,6 @@ msgstr ""
 "Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Hakemlik için verilen süre geçtiğinde bu elektronik posta otomatik olarak "
-"gönderilir. Otomatik hatırlatma için süre ayarlamalarına Değerlendirme "
-"Ayarları kısmından erişebilirsiniz."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Değerlendirilme Konusunda Otomatik Hatırlatma"
@@ -716,11 +684,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Bu e-posta, bu tür bildirimlerin e-postayla gönderilmesini seçmiş olan "
-"kayıtlı kullanıcılara gönderilir."
-
 msgid "emails.notificationMaillist.subject"
 msgstr "{$siteTitle} Adlı  Siteden Yeni Bildirim"
 
@@ -773,10 +736,6 @@ msgstr ""
 "<br />\n"
 "Teşekkürler,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Bu e-posta, yeni kayıtlı bir kullanıcıya sisteme hoş geldiniz ve kullanıcı adlarını ve şifrelerini kaydetmelerini sağlamak için gönderilir."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "{$ContextName} ile Hakem Olarak Kayıt"
@@ -834,14 +793,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Editörden Hakem'e gönderilen bu e-posta, hakemin yeni bir inceleme turu için "
-"hakemliği kabul etmesini veya reddetmesini ister. Başlık ve özet, "
-"değerlendirme son tarihi ve aday makaleye nasıl erişileceği gibi bilgileri "
-"içerir."
-
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Aday makaleniz {$contextName} için kabul edildi"
 
@@ -857,11 +808,6 @@ msgstr ""
 "Kararımız: Yayın Kabul"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Bu e-posta, yazarlara aday makalelerinin yayınlanmak üzere kabul edildiğini "
-"bildirir."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Abonelik Satın Alma: Bireysel"
 
@@ -1089,10 +1035,6 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Bu e-posta, bir hakemin onay tarihi geçtiğinde otomatik olarak gönderilir (Ayarlar> İş Akışı> Gözden geçirme altındaki İnceleme Seçenekleri'ne bakın) ve tek tıklatma hakem erişimi devre dışı bırakılır. Zamanlanmış görevler etkinleştirilmeli ve yapılandırılmalıdır (site yapılandırma dosyası bölümüne bakınız)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Hakem Değerlendirmesi Talebi Hatırlatma"
 
@@ -1182,12 +1124,6 @@ msgstr ""
 "hakkında genel bir bakış sağlamak için aylık olarak otomatik gönderilir."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Bu e-posta, Bölüm Editör tarafından iptal edilmiş bir hakemliğin eski haline "
-"getirildiğini bildirmek için Hakem'e gönderilir."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "{$contextName} için hakemlik yapabilir misiniz?"
 
@@ -1229,11 +1165,6 @@ msgstr ""
 "<br />\n"
 "Teşekkürler,<br />\n"
 "{$signature}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Bu e-posta, e-posta hesabını doğrulamak için kaydolan yeni kullanıcıya "
-"gönderilir."
 
 msgid "emails.userValidateSite.subject"
 msgstr "Hesabınızı Doğrulayın"

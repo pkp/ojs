@@ -1,11 +1,13 @@
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2020-07-17 07:47+0000\n"
+"PO-Revision-Date: 2022-05-25 08:54+0000\n"
 "Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
-"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/emails/el/>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/emails/el_GR/>"
+"\n"
 "Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +18,6 @@ msgstr ""
 msgid "emails.notification.subject"
 msgstr "Νέα ειδοποίηση από το {$contextName}"
 
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Έχετε μία νέα ειδοποίηση από το {$contextName}:<br />\n"
@@ -25,10 +26,8 @@ msgstr ""
 "<br />\n"
 "Σύνδεσμος: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.notification.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους εγγεγραμμένους Χρήστες που έχουν επιλέξει να λαμβάνουν ειδοποιήσεις αυτού του τύπου."
+"{$signature}\n"
+"<hr />{$unsubscribeLink}"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Επιβεβαίωση αλλαγής κωδικού πρόσβασης"
@@ -94,10 +93,6 @@ msgstr ""
 "<br />\n"
 "Σας ευχαριστούμε,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους νέους Χρήστες, για να επικυρώσουν τον λογαριασμό ηλεκτρονικού ταχυδρομείου τους."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Εγγραφή ως Αξιολογητής στο περιοδικό {$contextName}"
@@ -244,10 +239,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr "Το παρόν αίτημα αξιολόγησης μιας υποβολής αποστέλλεται από τον Επιμελητή Ενότητας σε έναν Αξιολογητή. Παρέχει πληροφορίες σχετικά με την υποβολή όπως ο τίτλος, η περίληψη, η προθεσμία της αξιολόγησης και ο τρόπος πρόσβασης στην υποβολή. Το συγκεκριμένο μήνυμα χρησιμοποιείται όταν η \"Τυπική Διαδικασία Αξιολόγησης\" έχει επιλεχθεί στη Διαχείριση > Ρυθμίσεις > Ροή εργασιών > Αξιολόγηση."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Αίτημα αξιολόγησης άρθρου"
 
@@ -274,10 +265,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται αυτόματα όταν η προθεσμία επιβεβαίωσης της ανάληψης μίας αξιολόγησης παρέλθει (ανατρέξτε στο Επιλογές Αξιολόγησης, κάτω από τις Ρυθμίσεις > Ροή εργασιών > Αξιολόγηση) και η πρόσβαση με ένα κλικ είναι απενεργοποιημένη. Οι προγραμματισμένες εργασίες θα πρέπει να έχουν ενεργοποιηθεί και διαμορφωθεί (ανατρέξτε στο αρχείο διαμόρφωσης του ιστοτόπου)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Αίτημα αξιολόγησης άρθρου"
@@ -335,10 +322,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Το παρόν αίτημα αξιολόγησης μιας υποβολής αποστέλλεται από τον Επιμελητή Ενότητας σε έναν Αξιολογητή για τον δεύτερο ή ακόλουθο κύκλο αξιολόγησης. Παρέχει πληροφορίες σχετικά με την υποβολή, όπως ο τίτλος και η περίληψη, η προθεσμία της αξιολόγησης ο τρόπος πρόσβασης στην υποβολή. Το συγκεκριμένο μήνυμα χρησιμοποιείται όταν επιλέγεται η Πρότυπη Διαδικασία Αξιολόγησης στη Διαχείριση > Ρυθμίσεις > Ροή εργασιών > Αξιολόγηση."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Ακύρωση αιτήματος για αξιολόγηση"
 
@@ -349,9 +332,6 @@ msgstr ""
 "Θα θέλαμε να σας ενημερώσουμε ότι η συντακτική ομάδα αποφάσισε την ακύρωση του αιτήματος για την αξιολόγηση της εργασίας &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Σας ζητούμε συγγνώμη για την ενδεχόμενη αναστάτωση και ελπίζουμε σε μελλοντική μας συνεργασία για την αξιολόγηση εργασιών στο περιοδικό.<br />\n"
 "<br />\n"
 "Για οποιαδήποτε διευκρίνιση, παρακαλούμε επικοινωνήστε μαζί μας."
-
-msgid "emails.reviewCancel.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Ενότητας σε έναν Αξιολογητή ο οποίος έχει αναλάβει την αξιολόγηση μίας υποβολής, για να του γνωστοποιήσει την ακύρωση της εν λόγω αξιολόγησης."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Αποδοχή αιτήματος αξιολόγησης"
@@ -364,9 +344,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Αξιολογητή στον Επιμελητή Ενότητας σε απάντηση του αιτήματος αξιολόγησης. Ενημερώνει για την αποδοχή του αιτήματος και την ολοκλήρωση της αξιολόγησης μέχρι τη λήξη της προθεσμίας."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Μη δυνατότητα πραγματοποίησης αξιολόγησης"
 
@@ -377,9 +354,6 @@ msgstr ""
 "Δυστυχώς την τρέχουσα περίοδο δεν δύναμαι να αναλάβω την αξιολόγηση της υποβολής &quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Σας ευχαριστώ για την εμπιστοσύνη σας και μη διστάσετε στο μέλλον να επικοινωνήσετε ξανά μαζί μου.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Αξιολογητή στον Επιμελητή Ενότητας, ως ενημέρωση ότι το αίτημα αξιολόγησης δεν έγινε δεκτό."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -401,10 +375,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Ενότητας στον Αξιολογητή, ως υπενθύμιση ότι η αξιολόγηση εκκρεμεί."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Αυτοματοποιημένη υπενθύμιση αξιολόγησης υποβολής"
 
@@ -422,10 +392,6 @@ msgstr ""
 "Παρακαλούμε επιβεβαιώστε τη δυνατότητά σας να ολοκληρώσετε την αξιολόγηση. Ελπίζουμε να λάβουμε σύντομα την απάντησή σας.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται αυτόματα όταν παρέλθει η προθεσμία ολοκλήρωσης μίας αξιολόγησης (ανατρέξτε στις Επιλογές Αξιολόγησης κάτω από τις Ρυθμίσεις > Ροή εργασιών > Αξιολόγηση) και η πρόσβαση με ένα κλικ είναι απενεργοποιημένη για τους Αξιολογητές. Οι προγραμματισμένες εργασίες θα πρέπει να έχουν ενεργοποιηθεί και διαμορφωθεί (ανατρέξτε στο αρχείο διαμόρφωσης του ιστοτόπου)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Αυτοματοποιημένη υπενθύμιση αξιολόγησης υποβολής"
@@ -457,10 +423,6 @@ msgstr ""
 "Έχουμε καταλήξει σε μία απόφαση αναφορικά με την υποβολή σας &quot;{$submissionTitle}&quot;, στο περιοδικό {$contextName}.<br />\n"
 "<br />\n"
 "Η απόφασή μας είναι: Αποδοχή της υποβολής"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή ή τον Επιμελητή Ενότητας στον Συγγραφέα, ως ενημέρωση για την τελική αποδοχή της υποβολής."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -834,12 +796,22 @@ msgid "emails.statisticsReportNotification.subject"
 msgstr "Συντακτική δραστηριότητα για {$month}, {$year}"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Το συγκεκριμένο email αποστέλλεται από τον Επιμελητή Ενότητας σε Αξιολογητή "
-"ο οποίος έχει αναλάβει την αξιολόγηση μιας υποβολής και του γνωστοποιηθεί η "
-"ακύρωση της εν λόγω αξιολόγησης."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Επαναφορά Αιτήματος για Αξιολόγηση"
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Έχετε δημιουργήσει έναν λογαριασμό με τον δικτυακό τόπο: {$siteTitle}, αλλά "
+"πριν αρχίσετε να το χρησιμοποιείτε, πρέπει να επικυρώσετε τον λογαριασμό "
+"email σας. Για να το κάνετε αυτό, απλώς ακολουθήστε τον παρακάτω σύνδεσμο:<"
+"br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Ευχαριστούμε,<br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Επικυρώστε τον λογαριασμό σας"

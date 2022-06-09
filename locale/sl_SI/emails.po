@@ -30,9 +30,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Email dobijo registrirani uporabniki, ki so naročeni na ta tip obvestil."
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Novo obvestilo od {$siteTitle}"
 
@@ -136,10 +133,6 @@ msgstr ""
 "<br />\n"
 "Hvala lepa,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Email se pošlje novo registiranemu uporabniku, da potrdi svoj email naslov."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registracija kot recenzent pri reviji {$contextName}"
@@ -312,11 +305,6 @@ msgstr ""
 "lahko obrnete name.</p><p>Zahvaljujemo se vam za sprejetje prošnje in se vam "
 "za vašo pomoč zahvaljujemo.</p><p>S spoštovanjem,</p>{$signature}"
 
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Ta email pošilja urednik rubrike recenzentu s prošnjo, da recenzent potrdi "
-"ali zavrne opravljanje recenzije. "
-
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Boste lahko opravili to recenzijo za nas?"
@@ -336,10 +324,6 @@ msgstr ""
 "kolikor imate vprašanja v zvezi s prispevkom ali recenzijskem postopku, se "
 "lahko obrnete name.</p><p>Zahvaljujemo se vam za sprejetje prošnje in se vam "
 "za vašo pomoč zahvaljujemo.</p><p>S spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ta email se pošlje avtomatsko, ko recenzent prekorači rok za potrditev opravljanja recenzije (več: Recenzijske nastavitve pri Nastavitve  > Potek dela > Recenzija) in je izključena opcija za recenzentski dostop z enim klikom. Opozorilo: administrator spletišča mora v nastavitveni datoteki spletišča nastaviti \"Scheduled tasks\"."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Prošnja za recenzijo prispevka"
@@ -413,13 +397,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Ta email pošlje urednik rubrike recenzentu s prošnjo za opravljanje ali "
-"zavrnitev recenzije v drugem ali kasnejšem recenzentskem krogu. Vsebuje "
-"informacije o prispevku kot so naslov in izvleček, datum do dokončanja "
-"recenzije ter dostopom do prispevka."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Prošnja za preklic recenzije"
 
@@ -430,9 +407,6 @@ msgstr ""
 "Odločili smo se, da prekličemo našo prošnjo za vašo recenzijo prispevka, &quot;{$submissionTitle},&quot; za publikacjo {$contextName}. Opravičujemo se vam za vse nevšečnosti, ki vam jih to lahko povzroči in upamo, da se lahko še obrnemo na vas pri uredniškem procesu revije tudi v prihodnje.<br />\n"
 "<br />\n"
 "Če imate kakršnokoli vprašanje, se prosim obrnite name."
-
-msgid "emails.reviewCancel.description"
-msgstr "Ta email pošlje urednik rubrike recenzentu, ki je bil zaprošen za opravljanje recenzije, in ga obvesti, da je je bilo opravljanje recenzije preklicano."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Potrditev recenzije"
@@ -445,9 +419,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ta email pošlje recenzent uredniku rubrike kot odgovor na prošnjo za opravljanje recnezije in ga obvešča, da je sprejel recenzijo in jo namerava opraviti do predvidenega datuma."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ne morem opraviti recenzije"
 
@@ -458,9 +429,6 @@ msgstr ""
 "Žal mi je, vendar v tem trenutku ne morem opraviti recenzije prispevka, &quot;{$submissionTitle},&quot; za revijo {$contextName}. Hvala za povabilo in upam, da me boste še povabili k sodelovanju.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ta email pošlje recenzent urendiku rubrike kot odgovor na prošnjo za recenzijo v primeru, ko obvešča urednika rubrike, da recenzijo zavrne."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -477,12 +445,6 @@ msgstr ""
 "recenzijske datotek in oddali vaše recenzijsko mnenje.</p><p>Če bi želeli "
 "podaljšati rok, se prosim obrnite name. Se že veselim vašega odziva.</p><p>"
 "Hvala lepa že vnaprej in s spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Ta email pošlje urednik recenzentu kot opomnik za opravljanje recenzije. "
-"Uporabi se, ko urednik ročno pošilja opomnik"
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Opomnik za recenzijo prispevka"
@@ -522,13 +484,6 @@ msgstr ""
 "mnenje.</p><p>Če bi želeli podaljšati rok, se prosim obrnite name. Se že "
 "veselim vašega odziva.</p><p>Hvala lepa že vnaprej in s "
 "spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Ta email se pošlje recenzentu avtomatično, ko poteče rok za opravljanje "
-"recenzije. Avtomatski opomnike za recenzije se nastavljajo v nastavitvah "
-"delovnega toka za recenzije."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Avtomatski opomnik za recenzijo prispevka"
@@ -573,10 +528,6 @@ msgstr ""
 "objavo.</p><p>Kmalu boste prejeli nadaljna navodila.</p><p>Če imate kakšno "
 "vprašanje, se name lahko obrnete preko vaše <a href=\"{$submissionUrl}\">"
 "nadzorne plošče prispevkov</a>.</p><p>S spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ta email obvepša avtorja, da je bil prispevek sprejet za objavo."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -978,15 +929,6 @@ msgid "emails.notificationCenterDefault.description"
 msgstr "Privzeto (prazno) sporočilo, ki se uporablja v centru za obvestila."
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Email pošlje urednik recenzentu v primeru, da je bila njegova preklicana "
-"prošnja za recenzijo obnovljena. Če je recenzent potrdil prošnjo za "
-"recenzijo in urednik recenzentsko prošnjo nato prekliče, ima urednik "
-"možnost, da recenzentsko prošnjo ponovno obnovi in s tem omogoči, da "
-"recenzent opravi recenzijo."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Pred kratkim smo preklicali prošnjo za "
@@ -1045,11 +987,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Ta email je poslan na novo registriranim uporabnikom, da potrdijo veljavnost "
-"svojega emaila."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

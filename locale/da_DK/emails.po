@@ -87,12 +87,6 @@ msgstr ""
 "Tak. <br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Denne e-mail sendes til en nyligt registreret bruger for at få vedkommende "
-"til at validere deres e-mail-konto."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som bedømmer hos {$contextName}"
 
@@ -272,10 +266,6 @@ msgstr ""
 "bedømmelsesprocessen</p><p>Tak for din overvejelse af denne forespørgsel. "
 "Din hjælp er meget værdsat.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Denne e-mail sendes automatisk når en bedømmers bekræftelsesdato er overskredet (se bedømmelsesindstillinger under Indstillinger > Workflow > Bedømmelse) og ’Aktiver adgang for bedømmere ved hjælp af ét klik’ er fravalgt. Tidsfrister og påmindelser skal være defineret."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Forespørgsel om bedømmelse af artikel"
 
@@ -332,12 +322,6 @@ msgstr ""
 "takker dig for at overveje denne henvendelse. Din hjælp værdsættes "
 "højt.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Denne e-mail fra sektionsredaktøren til en bedømmer anmoder bedømmeren om at "
-"acceptere eller afvise at bedømme et manuskript. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Annullering af forespørgsel om bedømmelse"
 
@@ -348,9 +332,6 @@ msgstr ""
 "På nuværende tidspunkt har vi valgt at annullere vores forespørgsel til dig om at bedømme manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi beklager den ulejlighed, dette eventuelt måtte forårsage, og vi håber, at vi må henvende os til dig i fremtiden og bede om din assistance i forbindelse med dette tidsskrifts bedømmelsesproces.<br />\n"
 "<br />\n"
 "Hvis du har spørgsmål, er du velkommen til at kontakte mig."
-
-msgid "emails.reviewCancel.description"
-msgstr "Denne e-mail sendes af sektionsredaktøren til en bedømmer, som er ved at bedømme et manuskript, og underretter vedkommende om, at bedømmelsen er blevet annulleret."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Kan foretage bedømmelse"
@@ -363,9 +344,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet accepteret, og at bedømmelsen vil være fuldført til den angivne dato."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Kan ikke foretage bedømmelse"
 
@@ -376,9 +354,6 @@ msgstr ""
 "Jeg beklager, at jeg på nuværende tidspunkt ikke kan bedømme manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Tak, fordi du tænkte på mig, og du er altid velkommen til at kontakte mig en anden gang.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Denne e-mail sendes af en bedømmer til sektionsredaktøren som svar på en bedømmelsesforespørgsel og underretter sektionsredaktøren om, at bedømmelsesforespørgslen er blevet afvist."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -398,13 +373,6 @@ msgstr ""
 "tak og med venlig hilsen</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Denne e-mail sendes af redaktøren til en bedømmer for at minde vedkommende "
-"om, at bedømmelsen skal afleveres. Denne e-mail bruges, når redaktøren "
-"manuelt vil sende en påmindelse til bedømmeren"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Påmindelse om at bedømmelse af manuskriptet bedes færdiggøres"
 
@@ -420,13 +388,6 @@ msgstr ""
 "dine bedømmelseskommentarer.</p><p>Kontakt mig venligst, hvis du har brug "
 "for en udsættelse af deadlinen. Jeg ser frem til at høre fra dig.</p><p>På "
 "forhånd tak og med venlig hilsen</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Denne e-mail sendes automatisk, når en bedømmer ikke har færdigggjort "
-"bedømmelsen inden forfaldsdatoen. Automatiske påmindelser om bedømmelse kan "
-"slåes til under indstillingerne for Bedømmelse under Workflow."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatisk påmindelse om bedømmelse af manuskript"
@@ -769,10 +730,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Denne e-mail er blevet sendt til registrerede brugere, som har valgt at få tilsendt denne type meddelelser."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Din indsendelse er blevet accepteret til {$contextName}"
 
@@ -795,11 +752,6 @@ msgstr ""
 "dashboard</a>.</p><p>Med venlig hilsen</p>{$signature}"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Denne e-mail informerer forfatteren om, at deres indsendelse er blevet "
-"accepteret til publicering."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Køb af abonnement: Individuelt"
 
@@ -974,15 +926,6 @@ msgstr ""
 "vil takke dig for at overveje denne anmodning. Din hjælp er meget "
 "værdsat.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Denne mail sendes af redaktøren til en bedømmer, der bedes oplyse om "
-"vedkommende vil påtage sig at bedømme et indlæg i en yderligere  "
-"bedømmelsesrunde. Det indeholder informationer om indlægget så som titel og "
-"resumé, forfaldsdato for indlevering af bedømmelse samt hvordan man får "
-"adgang til indlægget."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Revideret udgave uploadet"
 
@@ -1020,15 +963,6 @@ msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Når denne e-mail er aktiveret, sendes den automatisk til de øvrige "
 "forfattere, udover indsenderen, angivet under indsendelsesprocessen."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Denne e-mail er afsendt af redaktøren til en bedømmer for at underrette "
-"vedkommende om, at en annulleret bedømmelse er blevet genoptaget. Hvis en "
-"bedømmer accepterer en bedømmelse, som redaktøren herefter aflyser, kan "
-"redaktøren senere genindsætte bedømmeren, hvis vedkommende skal fortsætte "
-"sin bedømmelse."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -1088,11 +1022,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Denne e-mail sendes til en nyligt registreret bruger for at validere dennes "
-"e-mail."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

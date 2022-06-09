@@ -1,10 +1,11 @@
+# Manolis Saldaris <omanos@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2020-11-17 18:56+0000\n"
-"Last-Translator: Evangelos Papakirykou <vpapakir@gmail.com>\n"
+"PO-Revision-Date: 2022-05-25 08:12+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "el_GR/>\n"
 "Language: el_GR\n"
@@ -254,71 +255,87 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Δημοσίευση"
 
-
 msgid "publication.status.published"
 msgstr "Δημοσιευμένο"
-
 
 msgid "submission.status.scheduled"
 msgstr "Προγραμματισμένο"
 
-
 msgid "submission.publications"
 msgstr "Δημοσιεύσεις"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα όταν δημοσιευθεί σε ένα "
 "τεύχος."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα με βάση την ημερομηνία "
 "δημοσίευσης."
 
-
 msgid "publication.datePublished"
 msgstr "Ημερομηνία Δημοσίευσης"
-
 
 msgid "publication.editDisabled"
 msgstr "Αυτή η έκδοση έχει δημοσιευτεί και δεν είναι δυνατή η επεξεργασία της."
 
-
 msgid "publication.event.published"
 msgstr "Η υποβολή δημοσιεύτηκε."
-
 
 msgid "publication.event.scheduled"
 msgstr "Η υποβολή είχε προγραμματιστεί για δημοσίευση."
 
-
 msgid "publication.event.versionPublished"
 msgstr "Δημοσιεύθηκε μια νέα έκδοση."
-
 
 msgid "publication.event.versionScheduled"
 msgstr "Μια νέα έκδοση είχε προγραμματιστεί για δημοσίευση."
 
-
 msgid "publication.event.versionUnpublished"
 msgstr "Μια έκδοση καταργήθηκε από τη δημοσίευση."
-
 
 msgid "publication.invalidSubmission"
 msgstr "Δεν ήταν δυνατή η εύρεση της υποβολής αυτής της δημοσίευσης."
 
-
 msgid "publication.publish"
 msgstr "Δημοσίευση"
-
 
 msgid "publication.publish.requirements"
 msgstr "Πρέπει να πληρούνται οι ακόλουθες προϋποθέσεις για να δημοσιευτεί."
 
-
 msgid "submission.queries.production"
 msgstr "Συζητήσεις Παραγωγής"
 
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Τα πνευματικά δικαιώματα θα εκχωρηθούν αυτόματα στο {$copyright} όταν αυτό "
+"δημοσιευτεί."
+
+msgid "submission.license.description"
+msgstr ""
+"Η άδεια χρήσης θα οριστεί αυτόματα σε <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> όταν δημοσιευτεί."
+
+#, fuzzy
+msgid "publication.required.reviewStage"
+msgstr ""
+"Η υποβολή πρέπει να βρίσκεται στα στάδια Αντιγραφής ή Παραγωγής για να "
+"μπορέσει να δημοσιευτεί."
+
+msgid "publication.required.declined"
+msgstr "Δεν είναι δυνατή η δημοσίευση μιας υποβολής που απορρίφθηκε."
+
+msgid "publication.status.unscheduled"
+msgstr "Χωρίς προγραμματισμό"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (ανενεργό)"
+
+msgid "publication.changeIssue"
+msgstr "Αλλαγή Τεύχους"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Αυτό έχει ανατεθεί στον/την <a href=\"{$issueUrl}\">{$issueName}</a> αλλά "
+"δεν έχει προγραμματιστεί για δημοσίευση."

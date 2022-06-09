@@ -30,11 +30,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Esta mensagem é enviada a usuários cadastrados que escolheram habilitar este "
-"tipo de notificação via e-mail."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmação de Redefinição de Senha"
 
@@ -117,12 +112,6 @@ msgstr ""
 "<br />\n"
 "Atenciosamente,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Esta mensagem é enviada a um novo usuário cadastrado, para validação do "
-"cadastro."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Cadastrado como Avaliador em {$contextName}"
@@ -314,12 +303,6 @@ msgstr ""
 "solicitação.</p><p>Atenciosamente</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Mensagem do Editor de Seção para solicitar ao Avaliador que indique a "
-"disponibilidade ou não para realizar uma avaliação. "
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "A revista {$contextName} solicita avaliação de artigo"
 
@@ -347,15 +330,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Este e-mail é automaticamente enviando quando o prazo para confirmação de um "
-"avaliador vence (veja as opções para avaliação em Configurações > Fluxo de "
-"trabalho > Avaliação) e a opção de habilitar acesso 1-clique para o "
-"avaliador está desabilitada. Tarefas agendadas devem ser habilitadas e "
-"configuradas (veja o arquivo de configuração do site)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Solicita avaliação de artigo"
@@ -433,14 +407,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Este e-mail do Editor para um Avaliador, que solicita ao usuário aceitar ou "
-"recusar a tarefa de avaliar uma submissão para uma rodada adicional de "
-"avaliação. Ele fornece informações sobre a submissão, como o título e "
-"resumo, uma data de limite de avaliação, e como acessar a própria submissão."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Cancelamento de solicitação de avaliação"
 
@@ -460,10 +426,6 @@ msgstr ""
 "<br /> \n"
 "{$signature}"
 
-msgid "emails.reviewCancel.description"
-msgstr "Mensagem enviada pelo Editor de Seção com um processo de avaliação em andamento, notificando que o processo em questão foi cancelado."
-
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Você ainda pode avaliar algo para {$contextName}?"
 
@@ -478,13 +440,6 @@ msgstr ""
 "</p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor a um Avaliador quando uma avaliação "
-"cancelada é retomada. Se um avaliador aceitar uma avaliação e posteriormente "
-"a avaliação for cancelada pelo editor, o editor tem a opção de restabelecer "
-"a avaliação para permitir que o avaliador continue sua avaliação."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Disponível para realizar avaliação"
 
@@ -501,9 +456,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar disponibilidade para realizar a tarefa e de que a mesma será concluída no prazo especificado."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Indisponível para realizar avaliação"
 
@@ -516,9 +468,6 @@ msgstr ""
 "fiquem à vontade para me convidar novamente em um outro momento.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar sua NÃO disponibilidade para realizar a tarefa, rejeitando a solicitação."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -540,13 +489,6 @@ msgstr ""
 "atentamente, </p>{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Mensagem enviada pelo Editor ao Avaliador como lembrete da tarefa de "
-"avaliação em andamento ainda não concluída. Este e-mail é usado quando um "
-"editor envia manualmente um lembrete ao avaliador"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Um lembrete para concluir sua avaliação"
 
@@ -564,13 +506,6 @@ msgstr ""
 "{$passwordResetUrl}</p><p>URL da submissão:{$reviewAssignmentUrl}</p><p>Por "
 "favor, confirme que poderá completar essa contribuição vital ao trabalho do "
 "periódico. Aguardo seu retorno.</p><p>Atenciosamente,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Mensagem enviada automaticamente ao avaliador quando a data de conclusão de "
-"avaliação for ultrapassada. Os lembretes de avaliação automatizados são "
-"ativados nas configurações de avaliação."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Lembrete automático de solicitação de avaliação"
@@ -616,11 +551,6 @@ msgstr ""
 "instruções.</p><p>Se você tiver alguma dúvida, entre em contato conosco em "
 "seu <a href=\"{$authorSubmissionUrl}\">painel de submissão</a>.</p><p "
 ">Atenciosamente,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Este e-mail notifica o autor de que sua submissão foi aceita para publicação."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -1139,11 +1069,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Este e-mail é enviado para um novo usuário cadastrado no site para validar "
-"sua conta de e-mail."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

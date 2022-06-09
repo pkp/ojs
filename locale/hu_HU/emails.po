@@ -29,9 +29,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notification.description"
-msgstr "Az email azoknak a regisztrált felhasználóknak lett kiküldve, akik korábban jelezték, hogy ebben a témában kérnek értesítést."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Jelszó visszaállítás megerősítése"
 
@@ -97,10 +94,6 @@ msgstr ""
 "<br />\n"
 "Köszönettel,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Ez az email az újonnan regisztrált felhasználónak kerül kiküldésre, hogy hitelesítse email fiókját."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Regisztráció szakmai lektorként a(z) {$contextName} folyóirathoz"
@@ -256,10 +249,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr "Ez az emailt a Rovatszerkesztő küldi a Lektornak, megkérve, hogy vállalja el, vagy, ha nem alkalmas, akkor utasítsa el a beküldött anyag lektorálási feladatát. Illetve információt ad a beküldött anyagról, úgymint cím, absztrakt, a lektori vélemény határideje, valamint hogyan lehet hozzáférni magához az anyaghoz. Ezt az üzenetet akkor kell használni, ha az általános lektorálási folyamat van kiválasztva a folyóirat menedzselése részben  > Beállítások > Munkafolyamat > Szakmai lektorálás."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Cikk lektorálás kérése"
 
@@ -287,10 +276,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Ezt az emailt a rendszer automatikusan küldi, amikor a szakmai lektorálásra történő felkérésnek elfogadási határideje lejár (lásd Lektorálási beállítások részben a Beállítások > Munkafolyamat > Szakmai lektorálás) és az egykattintásos lektori hozzáférés tiltott. Az ütemezett feladatok futását engedélyezni kell és be kell állítani (lásd az oldal konfigurációs fájlját)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Cikk lektorálás kérése"
@@ -347,10 +332,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Ezt az emailt a Rovatszerkesztő küldi a Szakmai Lektornak, megkérve, hogy vállalja el, vagy, ha nem alkalmas, akkor utasítsa el a beküldött anyag lektorálási feladatát a második vagy további lektorálási körökben. Ez információt ad a beküldött anyagról, úgymint cím, absztrakt, a lektorálási határideje, valamint hogyan lehet hozzáférni magához az anyaghoz. Ezt az üzenetet akkor kell használni, ha az általános lektorálási folyamat van kiválasztva a folyóirat menedzselése részben > Beállítások > Munkafolyamat > Szakmai lektorálás."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Lektori felkérés visszavonása"
 
@@ -362,9 +343,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}"
-
-msgid "emails.reviewCancel.description"
-msgstr "Ez az emailt a Rovatszerkesztő küldi a Lektornak, akihez lektorálás lett rendelve, jelezve neki, hogy a feladatot mégsem kell végrehajtania."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Lektori felkérés elfogadása"
@@ -378,9 +356,6 @@ msgstr ""
 "Üdvözlettel,<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Ezt az emailt a Szakmai Lektor küldi a Rovatszerkesztőnek a lektori felkérésre válaszolva és jelezve, hogy a szakmai lektorálási munkát elvállalja és a megadott határidőig elvégzi."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Lektorálási felkérés elutasítása"
 
@@ -392,9 +367,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Ezt az emailt a Szakmai Lektor küldi a Rovatszerkesztőnek a lektori felkérésre válaszolva és jelezve, hogy a lektorálási munkát nem tudja elvállalni."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -419,10 +391,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Ezt az emailt a Rovatszerkesztő küldi a Szakmai Lektornak, hogy emlékeztesse a lektorálási határidőre."
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatikus emlékeztető cikk szakmai lektorálásáról"
 
@@ -443,10 +411,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Ez az email automatikusan generált, amikor a lektorálási határidő lejár (lásd a Lektorálási beállításokat a Beállítások > Munkafolyamat > Szakmai lektorálás résznél) és az egykattintásos lektorálási hozzáférés nincs engedélyezve. Az ütemezett feladatokat engedélyezni és konfigurálni kell (lásd az oldal konfigurálást)."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatikus emlékeztető cikk szakmai lektorálásáról"
@@ -481,10 +445,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}<br />"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Ezt az emailt a Szerkesztő vagy Rovatszerkesztő küldi a Szerzőnek jelezve, hogy a kézirattal kapcsolatos döntés \"Kézirat elfogadva\" megszületett."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -838,13 +798,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.description"
 msgstr "Ez az email automatikusan kerül kiküldésre a szerkesztőknek és folyóirat menedzsereknek a folyóiratukkal kapcsolatos tájékoztatásul."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Ezt az  emailt a Rovatvezető küldi a Szerkesztőnek, aki egy cikk szakmai "
-"lektorálásán dolgozik és tájékoztatja, hogy a megszakított lektorálási "
-"kérésre most ismételten felkéri."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

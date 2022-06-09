@@ -29,9 +29,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr "Det här e-postmeddelandet skickas till registrerade användare som har valt att få den här typen av aviseringar skickade till sig via e-post."
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Bekräfta återställning av lösenord"
 
@@ -96,10 +93,6 @@ msgstr ""
 "<br />\n"
 "Vänligen,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr "Det här e-postmeddelandet skickas till nyregistrerade användare för att bekräfta deras e-post."
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som granskare hos {$contextName}"
@@ -246,10 +239,6 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Förfrågan om granskning av artikel. Påminnelse"
 
@@ -276,10 +265,6 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
-
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och Granskning utan inloggning är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Förfrågan om granskning av artikel"
@@ -337,10 +322,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration > Inställningar > Arbetsflöde > Granskning."
-
 msgid "emails.reviewCancel.subject"
 msgstr "Förfrågan om granskning återkallad"
 
@@ -351,9 +332,6 @@ msgstr ""
 "Vi har beslutat att återkalla vår förfrågan till dig om att granska bidraget &quot;{$submissionTitle},&quot; för {$contextName}. Vi ber om ursäkt för besväret och hoppas att vi även i framtiden kan fråga dig om granskningsuppdrag för tidskriftens räkning.<br />\n"
 "<br />\n"
 "Om du har några frågor, vänligen kontakta mig."
-
-msgid "emails.reviewCancel.description"
-msgstr "Det här e-postmeddelandet skickas från sektionsredaktören till en granskare med en pågående granskning av ett bidrag, för att meddela hen att granskningen blivit återkallad."
 
 msgid "emails.reviewConfirm.subject"
 msgstr "Accepterar granskningsuppdrag"
@@ -366,9 +344,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.reviewConfirm.description"
-msgstr "Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren accepterar förfrågan om granskning och att hen kommer att färdigställa denna till angiven deadline."
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tackar nej till granskningsuppdrag"
 
@@ -379,9 +354,6 @@ msgstr ""
 "Tyvärr har jag inte möjlighet i nuläget att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig och hör gärna av er en annan gång.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr "Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren tackar nej till granskningsuppdraget."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -401,10 +373,6 @@ msgstr ""
 "Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr "Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat."
 
 msgid "emails.reviewRemindOneclick.subject"
 msgstr "Påminnelse om granskning av bidrag"
@@ -443,10 +411,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och när Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
-
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Automatisk påminnelse om granskning av bidrag"
 
@@ -477,10 +441,6 @@ msgstr ""
 "Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Vårt beslut är att: Acceptera bidraget"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr "Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet \"Acceptera bidrag\" fattats för hens bidrag."
 
 #, fuzzy
 msgid "emails.layoutRequest.subject"
@@ -829,15 +789,6 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redaktionella aktiviteter för {$month}, {$year}"
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Detta är ett e-postmeddelande från redaktören till granskare som skickas när "
-"en tidigare annullerad granskning  har återupptagits. Om granskaren "
-"accepterar en granskning och denna sedan annulleras av redaktören kan "
-"redaktören återuppta granskningen så granskaren tillåts fortsätta "
-"granskningen."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

@@ -387,12 +387,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequest.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor de Secção para o Revisor a solicitar que "
-"aceite ou recuse a tarefa de rever um artigo. "
-
 msgid "emails.reviewCancel.subject"
 msgstr "Pedido de revisão cancelado"
 
@@ -406,11 +400,6 @@ msgstr ""
 "<br />\n"
 "Em caso de dúvidas, entre em contacto connosco."
 
-msgid "emails.reviewCancel.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor de Secção com um processo de revisão em "
-"andamento, notificando que a revisão foi cancelada."
-
 msgid "emails.reviewConfirm.subject"
 msgstr "Disponível para realizar a revisão"
 
@@ -421,9 +410,6 @@ msgstr ""
 "Estou disponível e interessado em rever a submissão &quot;{$submissionTitle}&quot; a {$contextName}. Agradeço a consideração e estimo concluir a revisão até à data definida, {$reviewDueDate}, ou antes do prazo.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewConfirm.description"
-msgstr "Este e-mail é enviado pelo Revisor ao Editor de Secção, em resposta ao pedido de revisão, para notificar a disponibilidade para realizar a tarefa e de que a mesma será concluída no prazo especificado."
 
 msgid "emails.reviewDecline.subject"
 msgstr "Indisponível para realizar a revisão"
@@ -438,12 +424,6 @@ msgstr ""
 "noutra oportunidade.<br />\n"
 "<br />\n"
 "{$senderName}"
-
-msgid "emails.reviewDecline.description"
-msgstr ""
-"Este e-mail é enviado pelo Revisor ao Editor de Secção, em resposta ao "
-"pedido de revisão, para notificar da sua inisponibilidade para realizar a "
-"tarefa, rejeitando a revisão."
 
 #, fuzzy
 msgid "emails.reviewRemind.subject"
@@ -472,13 +452,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.reviewRemind.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor ao Revisor como lembrete da tarefa de "
-"revisão em curso. Este e-mail é usado quando um editor envia manualmente um "
-"lembrete ao revisor"
-
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Lembrete de conclusão de revisão"
 
@@ -504,13 +477,6 @@ msgstr ""
 "Aguardando o seu contacto,<br />\n"
 "<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.description"
-msgstr ""
-"Este e-mail é enviado automaticamente quando o revisor ainda não concluiu a "
-"sua revisão no prazo previsto. Lembretes automáticos de revisão estão ativos "
-"em Configurações de Revisão."
 
 msgid "emails.reviewRemindAutoOneclick.subject"
 msgstr "Lembrete automático de pedido de revisão"
@@ -945,12 +911,6 @@ msgstr ""
 "Agradecendo desde já a sua atenção,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.description"
-msgstr ""
-"Mensagem de boas-vindas enviada a novo utilizador registado, para validação "
-"de e-mail."
-
 msgid "emails.reviewerRegister.subject"
 msgstr "Registo como Revisor na revista {$contextName}"
 
@@ -992,12 +952,6 @@ msgstr ""
 "{$signature}\n"
 "<hr />{$unsubscribeLink}"
 
-msgid "emails.notification.description"
-msgstr ""
-"Esta mensagem é enviada a utilizadores registados que escolheram ativar este "
-"tipo de notificação via email."
-
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "A sua submissão foi aceite em {$contextName}"
 
@@ -1012,11 +966,6 @@ msgstr ""
 "A decisão é: Aceitar Submissão"
 
 #, fuzzy
-msgid "emails.editorDecisionAccept.description"
-msgstr ""
-"Esta é uma mensagem que notifica o autor que a sua submissão foi aceite para "
-"publicação."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Aquisição de Subscrição: Individual"
 
@@ -1212,15 +1161,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewResponseOverdueAuto.description"
-msgstr ""
-"Este e-mail é enviado automaticamente quando o prazo de confirmação de um "
-"revisor expira (consulte Opções de revisão em Configurações > Fluxo de "
-"trabalho > Revisão) e o acesso com um clique como revisor está desativado. "
-"As tarefas agendadas devem ser ativadas e configuradas (consulte o ficheiro "
-"de configuração do site)."
-
 msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "Pedido de revisão de artigo"
 
@@ -1296,14 +1236,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.description"
-msgstr ""
-"Este e-mail é enviado pelo Editor ao Revisor a solicitar que aceite ou "
-"recuse a tarefa de rever um artigo numa ronda de revisão adicional. Fornece "
-"informações sobre a submissão, como o título e resumo, prazo de revisão e "
-"como aceder à própria submissão."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versão revista enviada"
 
@@ -1342,14 +1274,6 @@ msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Este e-mail, quando ativo, é enviado automaticamente para os autores "
 "nomeados que não o autor que submeteu o trabalho."
-
-#, fuzzy
-msgid "emails.reviewReinstate.description"
-msgstr ""
-"Este email é enviado pelo Editor ao Revisor que quando uma revisão cancelada "
-"foi restabelecida. Se o revisor aceitar e a revisão for cancelada pelo "
-"editor, o editor tem a possibilidade de restabelecer a revisão e permitir "
-"que o revisor continue a revisão."
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -1408,11 +1332,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.userValidateSite.description"
-msgstr ""
-"Este e-mail é enviado a um novo utilizador registado no site para validar a "
-"sua conta de e-mail."
 
 msgid "emails.userValidateSite.body"
 msgstr ""
