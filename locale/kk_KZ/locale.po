@@ -3,7 +3,7 @@
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"PO-Revision-Date: 2022-06-10 09:21+0000\n"
 "Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/locale/kk_KZ/"
 ">\n"
@@ -299,11 +299,13 @@ msgstr "Авторларға арналған ақпарат"
 msgid "navigation.competingInterestGuidelines"
 msgstr "Мүдделер қақтығысы туралы декларацияны толтыру жөніндегі Нұсқаулық"
 
+#, fuzzy
 msgid "navigation.infoForLibrarians"
-msgstr "Кітапханаларға арналған анықтама"
+msgstr "Кітапханалар үшін"
 
+#, fuzzy
 msgid "navigation.infoForAuthors"
-msgstr "Авторларға арналған анықтама"
+msgstr "Авторлар үшін"
 
 msgid "navigation.browseByAuthor"
 msgstr "Автор бойынша"
