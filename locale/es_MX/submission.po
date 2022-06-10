@@ -1,8 +1,67 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-06-10 09:21+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "grid.action.issueEntry"
+msgstr "Ver los metadatos de este envío"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "La galerada aparece en la entrada del número"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"La revista ha sido notificada acerca de su envío y se le enviará un correo "
+"electrónico de confirmación para sus registros. Cuando el editor haya "
+"revisado el envío, se contactará con usted."
+
+msgid "submission.issueEntry"
+msgstr "Metadatos"
+
+msgid "submission.submit.noContext"
+msgstr "No se pudo encontrar este envío."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "El resumen debe tener {$wordCount} palabras o menos."
+
+msgid "grid.action.workflow"
+msgstr "Flujo de trabajo del envío"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nuevo envío"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Iniciar un nuevo envío en"
+
+msgid "submission.title.tip"
+msgstr ""
+"El tipo de envío normalmente consiste en una 'imagen', 'texto' u otros tipos "
+"de multimedia, incluidos 'software' o 'interactivo'. Elija el más relevante "
+"para su envío. Se pueden encontrar ejemplos en <a target=\"_blank\" href=\""
+"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/ 2001/04/12/guía de uso/"
+"generic.shtml#type</a>"
+
+msgid "submission.title"
+msgstr "Título del envío"
+
+msgid "submission.upload.selectComponent"
+msgstr "Seleccionar el componente del envío"
+
+msgid "submission.submit.userGroupDescription"
+msgstr "Elija el rol bajo el cual envía hace este envío."
+
+msgid "submission.submit.userGroup"
+msgstr "Enviar en mi rol como..."
+
+msgid "submission.submit.title"
+msgstr "Hacer un envío"
