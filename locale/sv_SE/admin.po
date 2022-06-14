@@ -1,9 +1,10 @@
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2021-03-11 14:02+0000\n"
+"PO-Revision-Date: 2022-06-15 02:02+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/admin/sv_SE/"
 ">\n"
@@ -199,3 +200,8 @@ msgstr ""
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "Det primära språket måste vara ett av språken som stöds av tidskriften."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Lägg till, redigera eller ta bort tidskrifter från webbplatsen och hantera "
+"inställningar för hela webbplatsen."
