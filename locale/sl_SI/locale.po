@@ -116,7 +116,7 @@ msgid "common.queue.short.completed"
 msgstr "Arhiv"
 
 msgid "section.section"
-msgstr "Rubrike"
+msgstr "Rubrika"
 
 msgid "section.sections"
 msgstr "Rubrike revije"
