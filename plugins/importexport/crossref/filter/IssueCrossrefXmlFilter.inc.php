@@ -100,7 +100,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$plugin = $deployment->getPlugin();
 		$headNode = $doc->createElementNS($deployment->getNamespace(), 'head');
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi_batch_id', htmlspecialchars($context->getData('initials', $context->getPrimaryLocale()) . '_' . time(), ENT_COMPAT, 'UTF-8')));
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'timestamp', time()));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'timestamp', date('YmdHisv')));
 		$depositorNode = $doc->createElementNS($deployment->getNamespace(), 'depositor');
 		$depositorName = $plugin->getSetting($context->getId(), 'depositorName');
 		if (empty($depositorName)) {
