@@ -1,26 +1,24 @@
 <?php
 
 /**
- * @file tools/deleteSubmissions.php
+ * @file tools/deleteIncompleteSubmissions.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class deleteSubmissions
+ * @class deleteIncompleteSubmissions
  * @ingroup tools
  *
- * @brief CLI tool to delete submissions
+ * @brief CLI tool to delete incomplete submissions
  */
 
 use APP\facades\Repo;
 
 require(dirname(__FILE__) . '/bootstrap.inc.php');
 
-class SubmissionDeletionTool extends CommandLineTool
+class IncompleteSubmissionDeletionTool extends CommandLineTool
 {
-    public $articleIds;
-
     /**
      * Constructor.
      *
@@ -30,16 +28,15 @@ class SubmissionDeletionTool extends CommandLineTool
     {
         parent::__construct($argv);
 
+        // If no parameters, show usage
         if (!sizeof($this->argv)) {
             $this->usage();
             exit(1);
         }
 
-
-        // Time limit, how old incomplete submissions shoudl be deleted. Enter the amount months
-        // "24" means all older than 2 years
-
-        $this->parameters = $this->argv;
+        $this->months = (int) $argv[1];
+        $this->context = $argv[2];
+        $this->dryrun = $argv[3];
     }
 
     /**
@@ -47,8 +44,11 @@ class SubmissionDeletionTool extends CommandLineTool
      */
     public function usage()
     {
-        echo "Permanently removes submission(s) and associated information.  USE WITH CARE.\n"
-            . "Usage: {$this->scriptName} submission_id [...]\n";
+        echo "Permanently removes incomplete submissions.\n"
+            . "Usage: {$this->scriptName} months context_id  -dryrun"
+            . "\t\tmonths: The number of months since the submission was last active, for example 24 is all submissions older than 2 years\n"
+            . "\t\tcontext_id: Limit to a given context instead of searching site wide\n"
+            . "\t\-dryrun: Only list the incomplete submission id's to be removed\n";
     }
 
     /**
