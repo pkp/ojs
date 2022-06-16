@@ -49,7 +49,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
     public function usage()
     {
         echo "Permanently removes incomplete submissions.\n"
-            . "Usage: {$this->scriptName} months context_id  -dryrun\n"
+            . "Usage: {$this->scriptName} das context_id  -dryrun\n"
             . "\t\tmonths: The number of months since the submission was last active, for example 24 is all submissions older than 2 years\n"
             . "\t\tcontext_id: Limit to a given context instead of searching site wide\n"
             . "\t\-dryrun: Only list the incomplete submission id's to be removed\n";
@@ -65,7 +65,6 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             exit(1);
         }
 
-
         // Fetch all incomplete submission that are older than x monhts
         $contextDao = \APP\core\Application::getContextDAO();
         $contexts = $contextDao->getAll();
@@ -74,39 +73,38 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
                 ->limit(50)
                 ->offset(0);
             $collector->filterByIncomplete(true)->filterByDaysInactive($this->days);
-
-            $submissions = Repo::submission()->getMany($collector);
-            foreach ($submissions as $submission) {
-                echo $submission->getId();
-            }
+            $this->deleteArticles($collector);
         }
+    }
 
 
+    // Loop through, apply our criteria, generate an array of id's to be removed
+    // Criteria
+    // 1. No files attached
+    // 2. No metadata, excluding section / categories given in the beginning
+    // 3.
 
 
-
-        // Loop through, apply our criteria, generate an array of id's to be removed
-        // Criteria
-        // 1. No files attached
-        // 2. No metadata, excluding section / categories given in the beginning
-        // 3.
+    //
 
 
-        //
-
-
-
-
-
-
-        foreach ($this->parameters as $articleId) {
-            $article = Repo::submission()->get($articleId);
+    public function deleteArticles(\APP\submission\Collector $collector): ?\APP\submission\Submission
+    {
+        $submissions = Repo::submission()->getMany($collector);
+        foreach ($submissions as $submission) {
+            echo $submission->getId() . '\n';
+            $article = Repo::submission()->get($submission->getId());
             if (!isset($article)) {
-                printf("Error: Skipping ${articleId}. Unknown submission.\n");
+                printf('Error: Skipping ' . $submission->getId() . "Unknown submission.\n");
                 continue;
             }
-            Repo::submission()->delete($article);
+            if ($this->dryrun) {
+                echo 'Found incomplete submission: ' . $submission->getData('id') . "\n";
+            } else {
+                Repo::submission()->delete($article);
+            }
         }
+        return $article;
     }
 }
 
