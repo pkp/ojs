@@ -39,10 +39,9 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
 
         $this->days = $argv[1];
         if (count($argv) > 2) {
-            $this->context = $argv[2];
-        }
-        if (count($argv) > 3) {
-            $this->dryrun = $argv[3];
+            if ($argv[2] === '--dryrun') {
+                $this->dryrun = $argv[2];
+            }
         }
     }
 
@@ -54,7 +53,6 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
         echo "Permanently removes incomplete submissions.\n"
             . "Usage: {$this->scriptName} das context_id  -dryrun\n"
             . "\t\tmonths: The number of months since the submission was last active, for example 24 is all submissions older than 2 years\n"
-            . "\t\tcontext_id: Limit to a given context instead of searching site wide\n"
             . "\t\-dryrun: Only list the incomplete submission id's to be removed\n";
     }
 
@@ -67,6 +65,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             echo "Number of days has to be numeric\n";
             exit(1);
         }
+
 
         // Fetch all incomplete submission that are older than x monhts
         $contextDao = \APP\core\Application::getContextDAO();
