@@ -59,6 +59,20 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
 
 
         // Fetch all incomplete submission that are older than x monhts
+        $contextDao = \APP\core\Application::getContextDAO();
+        $contexts = $contextDao->getAll();
+        while ($context = $contexts->next()) {
+            $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getData('id')])
+                ->limit(50)
+                ->offset(0);
+            $collector->filterByIncomplete(true);
+            $submissions = Repo::submission()->getMany($collector);
+            foreach ($submissions as $submission) {
+                $x = 1;
+            }
+        }
+
+
 
 
         // Loop through, apply our criteria, generate an array of id's to be removed
