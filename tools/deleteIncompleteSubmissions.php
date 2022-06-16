@@ -34,6 +34,9 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             exit(1);
         }
 
+        $this->context = false;
+        $this->dryrun = false;
+
         $this->days = $argv[1];
         if (count($argv) > 2) {
             $this->context = $argv[2];
@@ -88,7 +91,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
     //
 
 
-    public function deleteArticles(\APP\submission\Collector $collector): ?\APP\submission\Submission
+    public function deleteArticles(\APP\submission\Collector $collector)
     {
         $submissions = Repo::submission()->getMany($collector);
         foreach ($submissions as $submission) {
@@ -104,7 +107,6 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
                 Repo::submission()->delete($article);
             }
         }
-        return $article;
     }
 }
 
