@@ -34,9 +34,13 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             exit(1);
         }
 
-        $this->months = (int) $argv[1];
-        $this->context = $argv[2];
-        $this->dryrun = $argv[3];
+        $this->days = $argv[1];
+        if (count($argv) > 2) {
+            $this->context = $argv[2];
+        }
+        if (count($argv) > 3) {
+            $this->dryrun = $argv[3];
+        }
     }
 
     /**
@@ -45,7 +49,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
     public function usage()
     {
         echo "Permanently removes incomplete submissions.\n"
-            . "Usage: {$this->scriptName} months context_id  -dryrun"
+            . "Usage: {$this->scriptName} months context_id  -dryrun\n"
             . "\t\tmonths: The number of months since the submission was last active, for example 24 is all submissions older than 2 years\n"
             . "\t\tcontext_id: Limit to a given context instead of searching site wide\n"
             . "\t\-dryrun: Only list the incomplete submission id's to be removed\n";
@@ -56,6 +60,10 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
      */
     public function execute()
     {
+        if (!is_numeric($this->days)) {
+            echo "Number of days has to be numeric\n";
+            exit(1);
+        }
 
 
         // Fetch all incomplete submission that are older than x monhts
@@ -65,12 +73,14 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getData('id')])
                 ->limit(50)
                 ->offset(0);
-            $collector->filterByIncomplete(true);
+            $collector->filterByIncomplete(true)->filterByDaysInactive($this->days);
+
             $submissions = Repo::submission()->getMany($collector);
             foreach ($submissions as $submission) {
-                $x = 1;
+                echo $submission->getId();
             }
         }
+
 
 
 
@@ -100,5 +110,5 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
     }
 }
 
-$tool = new SubmissionDeletionTool($argv ?? []);
+$tool = new IncompleteSubmissionDeletionTool($argv ?? []);
 $tool->execute();
