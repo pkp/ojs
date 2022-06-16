@@ -34,13 +34,14 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             exit(1);
         }
 
-        $this->context = false;
+        $this->days = $argv[1];
         $this->dryrun = false;
 
-        $this->days = $argv[1];
         if (count($argv) > 2) {
             if ($argv[2] === '--dryrun') {
                 $this->dryrun = $argv[2];
+            } else {
+                exit;
             }
         }
     }
@@ -51,9 +52,9 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
     public function usage()
     {
         echo "Permanently removes incomplete submissions.\n"
-            . "Usage: {$this->scriptName} das context_id  -dryrun\n"
-            . "\t\tmonths: The number of months since the submission was last active, for example 24 is all submissions older than 2 years\n"
-            . "\t\-dryrun: Only list the incomplete submission id's to be removed\n";
+            . "Usage: {$this->scriptName} days [--dryrun]\n"
+            . "\t\tdays: The number of days since the submission was last active, for example 365 is all submissions older than 1 year\n"
+            . "\t\t--dryrun: Only list the incomplete submission id's to be removed\n";
     }
 
     /**
@@ -67,7 +68,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
         }
 
 
-        // Fetch all incomplete submission that are older than x monhts
+        // Fetch all incomplete submission that are older than $this->days days
         $contextDao = \APP\core\Application::getContextDAO();
         $contexts = $contextDao->getAll();
         while ($context = $contexts->next()) {
@@ -79,22 +80,10 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
         }
     }
 
-
-    // Loop through, apply our criteria, generate an array of id's to be removed
-    // Criteria
-    // 1. No files attached
-    // 2. No metadata, excluding section / categories given in the beginning
-    // 3.
-
-
-    //
-
-
     public function deleteArticles(\APP\submission\Collector $collector)
     {
         $submissions = Repo::submission()->getMany($collector);
         foreach ($submissions as $submission) {
-            echo $submission->getId() . '\n';
             $article = Repo::submission()->get($submission->getId());
             if (!isset($article)) {
                 printf('Error: Skipping ' . $submission->getId() . "Unknown submission.\n");
