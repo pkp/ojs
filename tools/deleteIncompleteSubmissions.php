@@ -41,6 +41,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             if ($argv[2] === '--dryrun') {
                 $this->dryrun = $argv[2];
             } else {
+                echo "Unknown argument\n";
                 exit;
             }
         }
@@ -92,6 +93,7 @@ class IncompleteSubmissionDeletionTool extends CommandLineTool
             if ($this->dryrun) {
                 echo 'Found incomplete submission: ' . $submission->getData('id') . "\n";
             } else {
+                echo 'Deleting submission: ' . $submission->getData('id') . "\n";
                 Repo::submission()->delete($article);
             }
         }
