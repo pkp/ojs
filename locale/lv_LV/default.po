@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 09:31+0000\n"
+"PO-Revision-Date: 2022-06-21 12:17+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lv_LV/>\n"
@@ -24,3 +24,14 @@ msgstr "RAK"
 
 msgid "section.default.title"
 msgstr "Raksti"
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+"Iesniedzamais materiāls ir OpenOffice, Microsoft Word vai RTF dokumenta "
+"formātā."
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+"Iesniegtais materiāls nav iepriekš publicēts, kā arī nav iesniegts "
+"apsvēršanai citā žurnālā (vai arī komentāru sadaļā tiek sniegts "
+"paskaidrojums redaktoram)."
