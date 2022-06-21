@@ -166,3 +166,6 @@ msgstr "Pētniecības materiāli"
 
 msgid "default.genres.researchInstrument"
 msgstr "Pētniecības instruments"
+
+msgid "default.genres.transcripts"
+msgstr "Transkripti"
