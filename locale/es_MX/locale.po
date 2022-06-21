@@ -1,8 +1,415 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-06-21 21:39+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
+"locale/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.authorVersion"
+msgstr "Versión del autor/a"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Versión del archivo revisado por el autor/aversión"
+
+msgid "submission.editorVersion"
+msgstr "Versión del editor/a"
+
+msgid "submission.postReviewVersion"
+msgstr "Versión del archivo posterior a la revisión"
+
+msgid "submission.reviewersVersion"
+msgstr "Versión del archivo comentado por el revisor/a"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Registro de correo electrónico del editor/a o autor/a"
+
+msgid "submission.notifyEditor"
+msgstr "Notificar al editor/a"
+
+msgid "submission.notifyAuthor"
+msgstr "Notificar al autora/a"
+
+msgid "submission.editorReview"
+msgstr "Revisión del editor/a"
+
+msgid "submission.round"
+msgstr "Ronda&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Decisión del editor/a"
+
+msgid "submission.sent"
+msgstr "Enviado"
+
+msgid "submission.changeSection"
+msgstr "Cambiar a"
+
+msgid "submission.submissionEditing"
+msgstr "Edición de envíos"
+
+msgid "article.return"
+msgstr "Volver a los detalles del artículo"
+
+msgid "article.fontSize.large.altText"
+msgstr "Grande"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Medio"
+
+msgid "article.fontSize.small.altText"
+msgstr "Pequeño"
+
+msgid "article.fontSize"
+msgstr "Tamaño de fuente"
+
+msgid "article.comments.enable"
+msgstr "Habilitar"
+
+msgid "article.comments.disable"
+msgstr "Deshabilitar"
+
+msgid "article.comments.sectionDefault"
+msgstr "Valor predeterminado"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Acceso restringido"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Acceso abierto"
+
+msgid "article.coverPage.altText"
+msgstr "Imagen de portada"
+
+msgid "article.abstract"
+msgstr "Resumen"
+
+msgid "article.details"
+msgstr "Detalles"
+
+msgid "article.submissions"
+msgstr "Envíos"
+
+msgid "article.submission"
+msgstr "Envío"
+
+msgid "article.commentsToEditor"
+msgstr "Comentarios del autor/a"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Idioma"
+
+msgid "article.type"
+msgstr "Tipo, método o enfoque"
+
+msgid "article.coverage"
+msgstr "Cobertura"
+
+msgid "article.subject"
+msgstr "Palabras clave"
+
+msgid "article.discipline"
+msgstr "Disciplina académica y subdisciplinas"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Archivos comp."
+
+msgid "article.suppFiles"
+msgstr "Archivo(s) complementario(s)"
+
+msgid "article.suppFile"
+msgstr "Archivo complementario"
+
+msgid "article.file"
+msgstr "Archivo"
+
+msgid "article.journalSection"
+msgstr "Sección de la revista"
+
+msgid "article.metadata"
+msgstr "Metadatos"
+
+msgid "article.indexingInformation"
+msgstr "Información de indexación"
+
+msgid "article.authors"
+msgstr "Autores/as"
+
+msgid "article.title"
+msgstr "Título"
+
+msgid "article.submissionId"
+msgstr "ID del envío"
+
+msgid "common.publications"
+msgstr "Artículos"
+
+msgid "common.publication"
+msgstr "Artículo"
+
+msgid "article.articles"
+msgstr "Artículos"
+
+msgid "article.article"
+msgstr "Artículo"
+
+msgid "section.policy"
+msgstr "Política de sección"
+
+msgid "section.abbreviation.example"
+msgstr "(Por ejemplo, Artículos=ART)"
+
+msgid "section.abbreviation"
+msgstr "Abreviatura"
+
+msgid "section.title"
+msgstr "Título de sección"
+
+msgid "section.sections"
+msgstr "Secciones de la revista"
+
+msgid "user.register.contextsPrompt"
+msgstr "¿En qué revistas de este sitio le gustaría registrarse?"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Sí, me gustaría que me contactaran para revisar artículos de esta revista."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Sí, solicitar el rol {$userGroup}."
+
+msgid "user.reviewerPrompt"
+msgstr "¿Estaría dispuesto/a a revisar envíos para esta revista?"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registrarse en Otras revistas"
+
+msgid "user.showAllJournals"
+msgstr "Mostrar Mis revistas"
+
+msgid "user.profile.profileImage"
+msgstr "Imagen de perfil"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Incluir usuarios/as de esta revista sin roles."
+
+msgid "user.authorization.representationNotFound"
+msgstr "No se ha podido encontrar la galerada solicitada."
+
+msgid "journal.viewAllIssues"
+msgstr "Ver todos los números"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Revista"
+
+msgid "journal.path"
+msgstr "Ruta"
+
+msgid "context.contexts"
+msgstr "Revistas"
+
+msgid "journal.currentIssue"
+msgstr "Número actual"
+
+msgid "submission.search"
+msgstr "Búsqueda de artículos"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Corregir pruebas"
+
+msgid "submissions.layoutComplete"
+msgstr "Maquetación editada"
+
+msgid "submissions.copyeditComplete"
+msgstr "Original corregido"
+
+msgid "submission.eventLog"
+msgstr "Registro de eventos"
+
+msgid "submissions.editorRuling"
+msgstr "Normativa de edición"
+
+msgid "submissions.editorDecision"
+msgstr "Decisión del editor/a"
+
+msgid "submissions.proof"
+msgstr "Prueba"
+
+msgid "submissions.reviewRound"
+msgstr "Ronda de revisión"
+
+msgid "submissions.postAuthor"
+msgstr "Posterior al autor/a"
+
+msgid "submissions.initialProof"
+msgstr "Prueba inicial"
+
+msgid "submissions.proofread"
+msgstr "Corregir pruebas"
+
+msgid "submissions.initial"
+msgstr "Inicial"
+
+msgid "submissions.published"
+msgstr "Publicado"
+
+msgid "submissions.queuedReview"
+msgstr "En revisión"
+
+msgid "submissions.step3"
+msgstr "Paso 3"
+
+msgid "submissions.step1"
+msgstr "Paso 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Anuncio pendiente)"
+
+msgid "submission.scheduledIn"
+msgstr "Listo para publicar en {$issueName}."
+
+msgid "submission.scheduling"
+msgstr "Planificación"
+
+msgid "submission.proofreading"
+msgstr "Corrección de pruebas"
+
+msgid "submission.copyedit"
+msgstr "Corregir originales"
+
+msgid "submission.copyediting"
+msgstr "Edición"
+
+msgid "section.section"
+msgstr "Sección"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Editores/as asignados"
+
+msgid "common.queue.short.completed"
+msgstr "Archivar"
+
+msgid "common.queue.long.completed"
+msgstr "Archivar"
+
+msgid "common.queue.short.active"
+msgstr "Activo"
+
+msgid "common.queue.long.active"
+msgstr "Envíos activos"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archivos"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archivos"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "En revisión"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Envíos en revisión"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "En edición"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Envíos en edición"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Sin asignar"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Sin asignar"
+
+msgid "navigation.skip.issue"
+msgstr "Ir al número actual"
+
+msgid "navigation.skip.about"
+msgstr "Ir al apartado \"Acerca de la revista\""
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Información para bibliotecarios/as"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Información para autores/as"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Directrices sobre conflictos de intereses"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Para bibliotecarios/as"
+
+msgid "navigation.infoForAuthors"
+msgstr "Para autores/as"
+
+msgid "navigation.browseByAuthor"
+msgstr "Por autor/a"
+
+msgid "navigation.browseByIssue"
+msgstr "Por número"
+
+msgid "navigation.otherJournals"
+msgstr "Otras revistas"
+
+msgid "navigation.current"
+msgstr "Actual"
+
+msgid "navigation.journalHelp"
+msgstr "Servicio de ayuda de la revista"
+
+msgid "doi.manager.settings.publications"
+msgstr "Artículos"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Imagen de la página de inicio de la revista"
+
+msgid "common.homePageHeader.altText"
+msgstr "Encabezado de la página inicial"
+
+msgid "common.payments"
+msgstr "Pagos"
+
+msgid "common.payment"
+msgstr "Pago"
+
+msgid "common.confirmComplete"
+msgstr ""
+"¿Está seguro/a de que desea marcar esta tarea como completa? No podrá "
+"realizar cambios después."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Rellene los campos obligatorios."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Haga clic en el icono para rellenar el formulario de revisión."
+
+msgid "navigation.categories.browse"
+msgstr "Examinar"
+
+msgid "navigation.categories"
+msgstr "Categorías"
+
+msgid "context.select"
+msgstr "Cambiar a otra revista:"
+
+msgid "context.current"
+msgstr "Revista actual:"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Esta revista no publica sus contenidos en línea."
