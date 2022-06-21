@@ -108,7 +108,6 @@ msgstr ""
 "pastāvīgus žurnāla arhīvus saglabāšanas un atjaunošanas vajadzībām. <a href="
 "\"http://www.lockss.org/\">Vairāk...</a>"
 
-#, fuzzy
 msgid "default.groups.abbrev.subscriptionManager"
 msgstr "SubM"
 
