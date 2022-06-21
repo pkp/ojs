@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 14:20+0000\n"
+"PO-Revision-Date: 2022-06-21 14:21+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lv_LV/>\n"
@@ -172,3 +172,6 @@ msgstr "Transkripti"
 
 msgid "default.genres.dataAnalysis"
 msgstr "Datu analīze"
+
+msgid "default.genres.dataSet"
+msgstr "Datu kopa"
