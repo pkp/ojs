@@ -118,7 +118,6 @@ msgstr "Abonēšanas pārziņi"
 msgid "default.groups.name.subscriptionManager"
 msgstr "Abonēšanas pārzinis"
 
-#, fuzzy
 msgid "default.groups.abbrev.sectionEditor"
 msgstr "SecE"
 
