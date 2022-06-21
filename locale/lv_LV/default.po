@@ -138,7 +138,6 @@ msgstr "Viesredaktori"
 msgid "default.groups.name.guestEditor"
 msgstr "Viesredaktors"
 
-#, fuzzy
 msgid "default.groups.abbrev.editor"
 msgstr "JE"
 
@@ -148,7 +147,6 @@ msgstr "Žurnāla redaktori"
 msgid "default.groups.name.editor"
 msgstr "Žurnāla redaktors"
 
-#, fuzzy
 msgid "default.groups.abbrev.manager"
 msgstr "JM"
 
