@@ -1,8 +1,9 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-24 12:45+0000\n"
-"Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
+"PO-Revision-Date: 2022-06-21 08:42+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-languageToggle/lv_LV/>\n"
 "Language: lv_LV\n"
@@ -17,4 +18,4 @@ msgid "plugins.block.languageToggle.description"
 msgstr "Šis spraudnis nodrošina valodas pārslēdzēja sānu rīkjoslu."
 
 msgid "plugins.block.languageToggle.displayName"
-msgstr "Valodas Pārslēgšanas Bloks"
+msgstr "Valodas pārslēgšanas bloks"
