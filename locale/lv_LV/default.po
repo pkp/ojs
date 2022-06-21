@@ -178,3 +178,6 @@ msgstr "Datu kopa"
 
 msgid "default.genres.sourceTexts"
 msgstr "Avotu teksti"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzents"
