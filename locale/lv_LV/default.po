@@ -169,3 +169,6 @@ msgstr "Pētniecības instruments"
 
 msgid "default.genres.transcripts"
 msgstr "Transkripti"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Datu analīze"
