@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 13:19+0000\n"
+"PO-Revision-Date: 2022-06-21 13:27+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lv_LV/>\n"
@@ -56,3 +56,9 @@ msgstr ""
 "<p>Šajā žurnāla vietnē ievadītie vārdi un e-pasta adreses tiks izmantotas "
 "tikai šajā žurnālā norādītajiem mērķiem un nebūs pieejamas citiem mērķiem "
 "vai citām personām.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Šis žurnāls nodrošina tūlītēju atvērtu piekļuvi tā saturam, pamatojoties uz "
+"principu, ka, padarot pētniecību brīvi pieejamu sabiedrībai, tiek veicināta "
+"plašāka zināšanu apmaiņa."
