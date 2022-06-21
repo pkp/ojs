@@ -153,16 +153,7 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I7190_RemoveOrphanFilters" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7190_UpdateFilters" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I8060_UpdateUserLocalesDefaultToEmptyArrayFromNull" />
-		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_COPYEDITING" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_REVIEW" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_SUBMISSION" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_NEW_ROUND" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_REVERT_DECLINE" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITOR_DECISION_SKIP_REVIEW" locales="en_US" />
-		<code function="installEmailTemplate" key="EDITORIAL_REMINDER" locales="en_US" />
+		<migration class="PKP\migration\upgrade\v3_4_0\EmailTemplatesVarcharLengthUpdate"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I6895_Institutions" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_OrphanedMetrics" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I6782_UsageStatsSettings" />
@@ -173,6 +164,18 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsGeo" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_CleanOldMetrics" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_RemovePlugins" />
+		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_COPYEDITING" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_REVIEW" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_SUBMISSION" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_NEW_ROUND" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_REVERT_DECLINE" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_SKIP_REVIEW" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITORIAL_REMINDER" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_SUBMISSION_NOTIFY_REVIEWER" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_PREVIOUS_EXTERNAL_REVIEW_ROUND_NOTIFY_REVIEWER" locales="en_US" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 

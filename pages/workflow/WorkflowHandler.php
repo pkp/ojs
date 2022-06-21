@@ -19,18 +19,20 @@ use APP\core\Application;
 use APP\core\Services;
 use APP\decision\types\Accept;
 use APP\decision\types\SkipExternalReview;
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\decision\types\BackToCopyediting;
-use PKP\decision\types\BackToReview;
-use PKP\decision\types\BackToSubmissionFromCopyediting;
+use PKP\decision\types\BackToPreviousExternalReviewRound;
+use PKP\decision\types\BackToSubmissionFromExternalReview;
 use PKP\decision\types\Decline;
 use PKP\decision\types\InitialDecline;
 use PKP\decision\types\RecommendAccept;
 use PKP\decision\types\RecommendDecline;
 use PKP\decision\types\RecommendRevisions;
+use PKP\decision\types\RemoveEmptyExternalReviewRound;
 use PKP\decision\types\RequestRevisions;
 use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
@@ -215,6 +217,10 @@ class WorkflowHandler extends PKPWorkflowHandler
     protected function getStageDecisionTypes(int $stageId): array
     {
         $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
+        $request = Application::get()->getRequest();
+        $reviewRoundId = (int) $request->getUserVar('reviewRoundId');
+        $decisionRepository = Repo::decision();
+
         switch ($stageId) {
             case WORKFLOW_STAGE_ID_SUBMISSION:
                 $decisionTypes = [
@@ -239,22 +245,20 @@ class WorkflowHandler extends PKPWorkflowHandler
                 }
                 break;
             case WORKFLOW_STAGE_ID_EDITING:
-                /** @var ReviewRoundDAO $reviewRoundDao */
-                $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
-                $hasReviewRound = $reviewRoundDao->submissionHasReviewRound($submission->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
                 $decisionTypes = [
                     new SendToProduction(),
-                    $hasReviewRound
-                        ? new BackToReview()
-                        : new BackToSubmissionFromCopyediting()
                 ];
                 break;
             case WORKFLOW_STAGE_ID_PRODUCTION:
-                $decisionTypes = [
-                    new BackToCopyediting(),
-                ];
+                $decisionTypes = [];
                 break;
         }
+
+        $decisionTypes = array_merge(
+            $decisionTypes,
+            $decisionRepository->getApplicableRetractableDecisionTypes($stageId, $submission, $reviewRoundId),
+            $decisionRepository->getApplicableRemovableDecisionTypes($stageId, $submission, $reviewRoundId)
+        );
 
         HookRegistry::call('Workflow::Decisions', [&$decisionTypes, $stageId]);
 
@@ -297,6 +301,9 @@ class WorkflowHandler extends PKPWorkflowHandler
         return [
             InitialDecline::class,
             Decline::class,
+            RemoveEmptyExternalReviewRound::class,
+            BackToSubmissionFromExternalReview::class,
+            BackToPreviousExternalReviewRound::class,
         ];
     }
 }
