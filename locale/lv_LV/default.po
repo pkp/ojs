@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 14:15+0000\n"
+"PO-Revision-Date: 2022-06-21 14:18+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lv_LV/>\n"
@@ -107,3 +107,53 @@ msgstr ""
 "sistēmu starp iesaistītajām bibliotēkām un ļautu šīm bibliotēkām izveidot "
 "pastāvīgus žurnāla arhīvus saglabāšanas un atjaunošanas vajadzībām. <a href="
 "\"http://www.lockss.org/\">Vairāk...</a>"
+
+#, fuzzy
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abonēšanas pārziņi"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abonēšanas pārzinis"
+
+#, fuzzy
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Sadaļas redaktori"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Sadaļas redaktors"
+
+#, fuzzy
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Viesredaktori"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Viesredaktors"
+
+#, fuzzy
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.editor"
+msgstr "Žurnāla redaktori"
+
+msgid "default.groups.name.editor"
+msgstr "Žurnāla redaktors"
+
+#, fuzzy
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.plural.manager"
+msgstr "Žurnāla pārvaldnieki"
+
+msgid "default.groups.name.manager"
+msgstr "Žurnāla pārvaldnieks"
