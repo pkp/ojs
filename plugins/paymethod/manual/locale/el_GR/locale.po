@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:47-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:47-07:00\n"
+"Language: \n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Μη αυτόματη πληρωμή τελών"
+
+msgid "plugins.paymethod.manual.description"
+msgstr "Ο διαχειριστής θα καταγράψει με μη αυτόματο τρόπο την απόδειξη πληρωμής ενός χρήστη (εκτός αυτού του λογισμικού)."
+
+msgid "plugins.paymethod.manual"
+msgstr "Μη αυτόματη πληρωμή τελών"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Μη αυτόματες οδηγίες πληρωμής"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Αποστολή ειδοποίησης πληρωμής"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Ειδοποίηση πληρωμής"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Στάλθηκε ειδοποίηση πληρωμής"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Τίτλος"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Τέλη"

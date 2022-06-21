@@ -27,16 +27,13 @@ msgid "plugins.auth.ldap.settings.basedn"
 msgstr "Βασικό (Base) DN"
 
 msgid "plugins.auth.ldap.settings.port.description"
-msgstr ""
-"Προαιρετικό. Η προεπιλεγμένη τιμή είναι 389 (LDAP) ή 636 (LDAP με χρήση SSL)"
+msgstr "Προαιρετικό. Η προεπιλεγμένη τιμή είναι 389 (LDAP) ή 636 (LDAP με χρήση SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Θύρα εξυπηρετητή"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr ""
-"Π.χ. , \"ldap.example.com\", ή \"ldaps://ldap.example.com\" (εάν γίνεται "
-"χρήση SSL)"
+msgstr "Π.χ. , \"ldap.example.com\", ή \"ldaps://ldap.example.com\" (εάν γίνεται χρήση SSL)"
 
 msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Όνομα εξυπηρετητή"
@@ -45,6 +42,43 @@ msgid "plugins.auth.ldap.settings"
 msgstr "Ρυθμίσεις LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr ""
-"Αυτό το πρόσθετο επιτρέπει την αυθεντικοποίηση και το συγχρονισμό των "
-"λογαριασμών των χρηστών με τη χρήση μιας εξωτερικής υπηρεσίας LDAP."
+msgstr "Αυτό το πρόσθετο επιτρέπει την αυθεντικοποίηση και το συγχρονισμό των λογαριασμών των χρηστών με τη χρήση μιας εξωτερικής υπηρεσίας LDAP."
+
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.settings.managerpwd.description"
+msgstr "Το DN διαχειριστή και ο κωδικός πρόσβασης απαιτούνται μόνο εάν είναι ενεργοποιημένες οι επιλογές συγχρονισμού προφίλ χρήστη/κωδικού πρόσβασης ή δημιουργίας χρήστη. Εάν το LDAP θα χρησιμοποιηθεί αποκλειστικά για έλεγχο ταυτότητας, τότε αυτές οι επιλογές μπορούν να παραλειφθούν."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Χαρακτηριστικό όνομα λογαριασμού"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr "Το χαρακτηριστικό του οποίου η τιμή προσδιορίζει μοναδικά ένα αντικείμενο χρήστη, όπως uid ή cn ή sAMAccountName."
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Κρυπτογράφηση κωδικού πρόσβασης"
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Μορφή κατακερματισμού για κωδικούς πρόσβασης που είναι αποθηκευμένοι στο διακομιστή. Συνιστάται το SSHA."
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Ρυθμίσεις SASL (προαιρετικό)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Χρησιμοποιήστε SASL αντί για απλό έλεγχο ταυτότητας"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Μηχανισμός SASL"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "E.g., \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Realm"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Αναγνωριστικό εξουσιοδότησης που ζητήθηκε"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Ιδιότητες ασφαλείας SASL"

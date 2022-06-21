@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Πρόσθετο XML χρηστών"
+
+msgid "plugins.importexport.users.description"
+msgstr "Εισαγωγή και εξαγωγή χρηστών"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr "Usage: {$scriptName} {$pluginName} [command] ...\nCommands:\n\timport [xmlFileName] [journal_path]\n\texport [xmlFileName] [journal_path]\n\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr "\nExamples:\n\tImport users into myJournal from myImportFile.xml:\n\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n\n\tExport all users from myJournal:\n\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n\n\tExport users specified by their ID:\n\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Εισαγωγή χρηστών"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Επιλέξτε ένα αρχείο δεδομένων XML που περιέχει πληροφορίες χρήστη για εισαγωγή σε αυτό το περιοδικό. Ανατρέξτε στη βοήθεια του περιοδικού για λεπτομέρειες σχετικά με τη μορφή αυτού του αρχείου.<br /><br />Λάβετε υπόψη ότι εάν το εισαγόμενο αρχείο περιέχει ονόματα χρήστη ή διευθύνσεις ηλεκτρονικού ταχυδρομείου που υπάρχουν ήδη στο σύστημα, τα δεδομένα χρήστη για αυτούς τους χρήστες δεν θα εισαχθούν και τυχόν νέοι ρόλοι που θα δημιουργηθούν θα ανατεθούν στους υπάρχοντες χρήστες."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Αρχείο δεδομένων χρήστη"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Στείλτε ένα email ειδοποίησης σε κάθε εισαγόμενο χρήστη που περιέχει το όνομα χρήστη και τον κωδικό πρόσβασης του χρήστη."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Συνεχίστε την εισαγωγή άλλων χρηστών εάν παρουσιαστεί αποτυχία."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Οι ακόλουθοι χρήστες εισήχθησαν με επιτυχία στο σύστημα"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Παρουσιάστηκαν σφάλματα κατά την εισαγωγή"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Επιβεβαιώστε ότι αυτοί είναι οι χρήστες που θέλετε να εισαγάγετε στο σύστημα"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Προειδοποίηση"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Δεν είναι δυνατή η χρήση κωδικών πρόσβασης που έχουν κατακερματιστεί με το {$importHash}. Το OJS έχει ρυθμιστεί να χρησιμοποιεί το {$ojsHash}. Εάν συνεχίσετε, θα χρειαστεί να επαναφέρετε τους κωδικούς πρόσβασης των εισαγόμενων χρηστών."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Καθορίστηκε μια άγνωστη διαδρομή περιοδικού\"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Εξαγωγή χρηστών"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Εξαγωγή κατά ρόλο"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Εξαγωγή όλων"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Παρουσιάστηκαν σφάλματα κατά την εξαγωγή"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Η εισαγωγή ολοκληρώθηκε με επιτυχία. Έχουν εισαχθεί χρήστες με ονόματα χρήστη και διευθύνσεις email που δεν χρησιμοποιούνται ήδη, μαζί με συνοδευτικές ομάδες χρηστών."
+
+msgid "plugins.importexport.users.results"
+msgstr "Αποτελέσματα"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Ανεβάστε ένα αρχείο στην ενότητα \"Εισαγωγή\" για να συνεχίσετε."

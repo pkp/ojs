@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "PubMed XML Πρόσθετο εξαγωγής"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "Εξαγωγή μεταδεδομένων άρθρου σε μορφή PubMed XML για ευρετηρίαση στο MEDLINE."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Εξαγωγή δεδομένων"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Εξαγωγή τευχών"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Επιλέξτε ένα τεύχος για εξαγωγή."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Εξαγωγή άρθρων"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Επιλέξτε Άρθρα για εξαγωγή."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr "Usage: \n{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ERROR:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Κανένα τεύχος δεν ταιριάζει με το καθορισμένο αναγνωριστικό τεύχους \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Κανένα άρθρο δεν ταιριάζει με το καθορισμένο αναγνωριστικό άρθρου \"{$articleId}\"."

@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:40-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:40-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Πρόσθετο ροής ανακοινώσεων"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Αυτό το πρόσθετο παράγει ροές διανομής ιστού RSS/Atom για ανακοινώσεις περιοδικών."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Ρυθμίσεις"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Εμφάνιση συνδέσμων τροφοδοσίας σε όλες τις σελίδες του περιοδικού."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Εμφάνιση συνδέσμων ροών μόνο στην αρχική σελίδα και στη σελίδα ανακοινώσεων."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Εμφάνιση συνδέσμων ροών μόνο στη σελίδα ανακοινώσεων."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Περιορισμός ροής σε"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "πιο πρόσφατες ανακοινώσεις."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Εισαγάγετε έναν θετικό ακέραιο αριθμό για πρόσφατες ανακοινώσεις."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logo"

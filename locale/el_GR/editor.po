@@ -426,3 +426,6 @@ msgstr "Έκδοση Δημοσίευσης"
 
 msgid "editor.article.showPublicationVersion"
 msgstr "Εμφάνιση Προγραμματισμένης Δημοσιεύσης"
+
+msgid "issues.submissions.issueIds"
+msgstr "Ανατέθηκε σε τεύχος"

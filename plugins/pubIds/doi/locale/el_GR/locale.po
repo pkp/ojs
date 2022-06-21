@@ -1,0 +1,189 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T06:56:48-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:48-07:00\n"
+"Language: \n"
+
+msgid "plugins.pubIds.doi.displayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.description"
+msgstr "Αυτό το πρόσθετο επιτρέπει την εκχώρηση των Αναγνωριστικών Ψηφιακών Αντικειμένων σε θέματα, άρθρα και γκαλερί στο OJS."
+
+msgid "plugins.pubIds.doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.description"
+msgstr "Διαμορφώστε την προσθήκη DOI ώστε να μπορείτε να διαχειρίζεστε και να χρησιμοποιείτε DOI στο OJS:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjects"
+msgstr "Περιεχόμενα περιοδικού"
+
+msgid "plugins.pubIds.doi.manager.settings.doiObjectsRequired"
+msgstr "Επιλέξτε τα αντικείμενα στα οποία θα πρέπει να εκχωρηθούν τα DOI."
+
+msgid "plugins.pubIds.doi.manager.settings.explainDois"
+msgstr "Επιλέξτε τα αντικείμενα δημοσίευσης στα οποία θα έχουν εκχωρηθεί Ψηφιακά Αναγνωριστικά Αντικειμένων (DOI):"
+
+msgid "plugins.pubIds.doi.manager.settings.enableIssueDoi"
+msgstr "Τεύχη"
+
+msgid "plugins.pubIds.doi.manager.settings.enablePublicationDoi"
+msgstr "Άρθρα"
+
+msgid "plugins.pubIds.doi.manager.settings.enableRepresentationDoi"
+msgstr "Τυπογραφικά δοκίμια"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix"
+msgstr "Πρόθεμα DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefix.description"
+msgstr "Το πρόθεμα DOI εκχωρείται από εταιρείες καταχώρισης (e.g. <a href=\"http://www.crossref.org\" target=\"_new\">Crossref</a>) και είναι στη μορφή 10.xxxx (e.g. 10.1234):"
+
+msgid "plugins.pubIds.doi.manager.settings.doiPrefixPattern"
+msgstr "Το πρόθεμα DOI είναι υποχρεωτικό και πρέπει να έχει τη μορφή 10.xxxx."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix"
+msgstr "Επίθημα DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffix.description"
+msgstr "Ένα επίθημα DOI μπορεί να πάρει οποιαδήποτε μορφή, αλλά πρέπει να είναι μοναδικό μεταξύ όλων των αντικειμένων δημοσίευσης με το ίδιο πρόθεμα DOI που έχει εκχωρηθεί:"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern"
+msgstr "Χρησιμοποιήστε το μοτίβο που εισάγεται παρακάτω για να δημιουργήσετε επιθήματα DOI. Χρησιμοποιήστε %j για τα αρχικά ημερολογίου, %v για τον αριθμό τόμου, %i για τον αριθμό έκδοσης, %Y για το έτος, %a για το αναγνωριστικό άρθρου OJS, %g για το αναγνωριστικό της συλλογής OJS, %f για το αναγνωριστικό αρχείου OJS , %p για τον αριθμό σελίδας και %x για \"Προσαρμοσμένο αναγνωριστικό\"."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.example"
+msgstr "Για παράδειγμα, vol%viss%ipp%p θα μπορούσε να δημιουργήσει ένα DOI όπως 10.1234/vol3iss2pp230"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues"
+msgstr "για τεύχη"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "για άρθρα"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations"
+msgstr "για τυπογραφικά δοκίμια"
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault"
+msgstr "Χρησιμοποιήστε προεπιλεγμένα μοτίβα."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"
+msgstr "%j.v%vi%i για τεύχη<br />%j.v%vi%i.%a για άρθρα<br />%j.v%vi%i.%a.g%g για τυπογραφικά δοκίμια."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier"
+msgstr "Εισαγάγετε ένα μεμονωμένο επίθημα DOI για κάθε δημοσιευμένο στοιχείο. Θα βρείτε ένα πρόσθετο πεδίο εισαγωγής DOI στη σελίδα μεταδεδομένων κάθε στοιχείου."
+
+msgid "plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Εισαγάγετε το μοτίβο επιθήματος DOI για τεύχη."
+
+msgid "plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Εισαγάγετε το μοτίβο επιθήματος DOI για άρθρα."
+
+msgid "plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Εισαγάγετε το μοτίβο επιθήματος DOI για τυπογραφικά δοκίμια."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign"
+msgstr "Εκ νέου ανάθεση DOIs"
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.description"
+msgstr "Εάν αλλάξετε τη διαμόρφωση DOI, τα DOI που έχουν ήδη εκχωρηθεί δεν θα επηρεαστούν. Μόλις αποθηκευτεί η διαμόρφωση DOI, χρησιμοποιήστε αυτό το κουμπί για να διαγράψετε όλα τα υπάρχοντα DOI, έτσι ώστε οι νέες ρυθμίσεις να εφαρμοστούν με υπάρχοντα αντικείμενα."
+
+msgid "plugins.pubIds.doi.manager.settings.doiReassign.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε όλα τα υπάρχοντα DOI?"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide"
+msgstr "Εκχώρηση DOI"
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"
+msgstr "Εκχωρήστε DOI σε όλα τα δημοσιευμένα αντικείμενα περιοδικών στα οποία δεν έχουν εκχωρηθεί DOI. Αυτή η ενέργεια δεν μπορεί να χρησιμοποιηθεί με τη διαμόρφωση μεμονωμένων επιθημάτων. Εάν έχετε τροποποιήσει τη διαμόρφωση DOI παραπάνω, αποθηκεύστε τις αλλαγές σας πριν ξεκινήσετε αυτήν την ενέργεια. Η εκχώρηση DOI μπορεί να διαρκέσει πολύ, ανάλογα με τον αριθμό των δημοσιευμένων αντικειμένων στο περιοδικό."
+
+msgid "plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να εκχωρήσετε DOI σε όλα τα δημοσιευμένα αντικείμενα στα οποία δεν έχουν εκχωρηθεί DOI?"
+
+msgid "plugins.pubIds.doi.editor.doi"
+msgstr "DOI"
+
+msgid "plugins.pubIds.doi.editor.doi.description"
+msgstr "Το DOI πρέπει να ξεκινά με {$prefix}."
+
+msgid "plugins.pubIds.doi.editor.doi.assignDoi"
+msgstr "Αναθέση"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeIssue"
+msgstr "τεύχος"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeSubmission"
+msgstr "άρθρο"
+
+msgid "plugins.pubIds.doi.editor.doiObjectTypeRepresentation"
+msgstr "τυπογραφικό δοκίμιο"
+
+msgid "plugins.pubIds.doi.editor.customSuffixMissing"
+msgstr "Το DOI δεν μπορεί να εκχωρηθεί επειδή λείπει το προσαρμοσμένο επίθημα."
+
+msgid "plugins.pubIds.doi.editor.missingIssue"
+msgstr "Δεν μπορείτε να δημιουργήσετε ένα DOI έως ότου αυτή η δημοσίευση έχει αντιστοιχιστεί σε ένα άρθρο."
+
+msgid "plugins.pubIds.doi.editor.missingParts"
+msgstr "Δεν μπορείτε να δημιουργήσετε ένα DOI επειδή λείπουν δεδομένα από ένα ή περισσότερα μέρη του μοτίβου DOI. Ίσως χρειαστεί να αντιστοιχίσετε τη δημοσίευση σε ένα τεύχος, να ορίσετε ένα αναγνωριστικό εκδότη ή να εισαγάγετε αριθμούς σελίδων."
+
+msgid "plugins.pubIds.doi.editor.patternNotResolved"
+msgstr "Το DOI δεν μπορεί να εκχωρηθεί επειδή περιέχει ένα μοτίβο που δεν έχει επιλυθεί."
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned"
+msgstr "Αυτό που βλέπετε είναι μια προεπισκόπηση του DOI. Επιλέξτε το πλαίσιο ελέγχου και αποθηκεύστε τη φόρμα για να εκχωρήσετε το DOI."
+
+msgid "plugins.pubIds.doi.editor.assigned"
+msgstr "Το DOI εκχωρείται σε αυτό {$pubObjectType}."
+
+msgid "plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "Το δεδομένο επίθημα DOI χρησιμοποιείται ήδη για άλλο δημοσιευμένο στοιχείο. Εισαγάγετε ένα μοναδικό επίθημα DOI για κάθε στοιχείο."
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi"
+msgstr "Εκκαθάριση"
+
+msgid "plugins.pubIds.doi.editor.clearObjectsDoi.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε το υπάρχον DOI?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi"
+msgstr "Εκκαθάριση DOI αντικειμένων του τεύχους"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε τα υπάρχοντα DOI αντικειμένων του τεύχους?"
+
+msgid "plugins.pubIds.doi.editor.clearIssueObjectsDoi.description"
+msgstr "Χρησιμοποιήστε την ακόλουθη επιλογή για να διαγράψετε DOI από όλα τα αντικείμενα (άρθρα και γκαλερί) που έχουν προγραμματιστεί αυτή τη στιγμή για αυτό το τεύχος."
+
+msgid "plugins.pubIds.doi.editor.assignDoi"
+msgstr "Εκχωρήστε το DOI {$pubId} σε αυτό {$pubObjectType}"
+
+msgid "plugins.pubIds.doi.editor.assignDoi.emptySuffix"
+msgstr "Το DOI δεν μπορεί να εκχωρηθεί επειδή λείπει το προσαρμοσμένο επίθημα."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.pattern"
+msgstr "Το DOI {$pubId} δεν μπορεί να εκχωρηθεί επειδή περιέχει ένα μοτίβο που δεν έχει επιλυθεί."
+
+msgid "plugins.pubIds.doi.editor.assignDoi.assigned"
+msgstr "Το DOI {$pubId} έχει εκχωρηθεί."
+
+msgid "plugins.pubIds.doi.editor.missingPrefix"
+msgstr "Το DOI πρέπει να ξεκινά με {$doiPrefix}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication"
+msgstr "Το DOI για αυτήν τη δημοσίευση θα είναι {$doi}."
+
+msgid "plugins.pubIds.doi.editor.preview.publication.none"
+msgstr "Δεν έχει εκχωρηθεί DOI σε αυτήν την έκδοση."
+
+msgid "plugins.pubIds.doi.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.doi.editor.preview.objects"
+msgstr "Item"
