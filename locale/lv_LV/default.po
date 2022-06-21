@@ -128,7 +128,6 @@ msgstr "Sadaļas redaktori"
 msgid "default.groups.name.sectionEditor"
 msgstr "Sadaļas redaktors"
 
-#, fuzzy
 msgid "default.groups.abbrev.guestEditor"
 msgstr "GE"
 
