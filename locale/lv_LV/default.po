@@ -184,3 +184,6 @@ msgstr "Recenzents"
 
 msgid "default.groups.plural.externalReviewer"
 msgstr "Recenzenti"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
