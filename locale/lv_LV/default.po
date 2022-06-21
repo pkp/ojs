@@ -181,3 +181,6 @@ msgstr "Avotu teksti"
 
 msgid "default.groups.name.externalReviewer"
 msgstr "Recenzents"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenti"
