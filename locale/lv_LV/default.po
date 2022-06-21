@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 12:17+0000\n"
+"PO-Revision-Date: 2022-06-21 13:00+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lv_LV/>\n"
@@ -35,3 +35,13 @@ msgstr ""
 "Iesniegtais materiāls nav iepriekš publicēts, kā arī nav iesniegts "
 "apsvēršanai citā žurnālā (vai arī komentāru sadaļā tiek sniegts "
 "paskaidrojums redaktoram)."
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+"Starp teksta rindām viena intervāla atstarpe, burtu lielums - 12 punkti, "
+"pasvītrojumu vietā tiek izmantots slīpraksts (izņemot vietņu adreses (URL)), "
+"un visas ilustrācijas, attēli un tabulas ir ievietotas tekstā attiecīgajās "
+"vietās, nevis teksta beigās."
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "Kur vien iespējams, atsaucēs ir norādītas saites (URL)."
