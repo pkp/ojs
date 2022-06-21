@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 13:00+0000\n"
+"PO-Revision-Date: 2022-06-21 13:13+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lv_LV/>\n"
@@ -45,3 +45,8 @@ msgstr ""
 
 msgid "default.contextSettings.checklist.addressesLinked"
 msgstr "Kur vien iespējams, atsaucēs ir norādītas saites (URL)."
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+"Tekstā ir ievērotas stilistiskās un bibliogrāfiskās prasības, kas "
+"izklāstītas vadlīnijās autoriem ."
