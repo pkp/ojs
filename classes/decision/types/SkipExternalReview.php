@@ -43,9 +43,9 @@ class SkipExternalReview extends PKPSkipExternalReview
         }
     }
 
-    public function callback(Decision $decision, Submission $submission, User $editor, Context $context, array $actions)
+    public function runAdditionalActions(Decision $decision, Submission $submission, User $editor, Context $context, array $actions)
     {
-        parent::callback($decision, $submission, $editor, $context, $actions);
+        parent::runAdditionalActions($decision, $submission, $editor, $context, $actions);
 
         foreach ($actions as $action) {
             switch ($action['id']) {
