@@ -15,6 +15,7 @@
  */
 
 use APP\facades\Repo;
+use APP\Jobs\Doi\DepositIssue;
 use PKP\context\Context;
 use PKP\core\APIResponse;
 use PKP\doi\exceptions\DoiCreationException;
@@ -135,26 +136,19 @@ class DoiHandler extends PKPDoiHandler
             return $response->withStatus(400)->withJsonError('api.dois.400.invalidPubObjectIncluded');
         }
 
-        /** @var Issue[] $issues */
-        $issues = [];
-        foreach ($requestIds as $id) {
-            $issues[] = Repo::issue()->get($id);
-        }
-
-        if (empty($issues[0])) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.doiNotFound');
-        }
-
         $agency = $context->getConfiguredDoiAgency();
         if ($agency === null) {
             return $response->withStatus(400)->withJsonError('api.dois.400.noRegistrationAgencyConfigured');
         }
 
-        $responseData = $agency->depositIssues($issues, $context);
-        if ($responseData['hasErrors']) {
-            return $response->withStatus(400)->withJsonError($responseData['responseMessage']);
+        $doisToUpdate = [];
+        foreach ($requestIds as $issueId) {
+            dispatch(new DepositIssue($issueId, $context, $agency));
+            array_merge($doisToUpdate, Repo::doi()->getDoisForIssue($issueId));
         }
-        return $response->withJson(['responseMessage' => $responseData['responseMessage']], 200);
+        Repo::doi()->markSubmitted($doisToUpdate);
+
+        return $response->withStatus(200);
     }
 
     /**
