@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-21 21:39+0000\n"
+"PO-Revision-Date: 2022-06-23 08:13+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/es_MX/>\n"
@@ -413,3 +413,219 @@ msgstr "Revista actual:"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Esta revista no publica sus contenidos en línea."
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor/a asignado al envío"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Archivo de revisión del autor/a actualizado"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revisión del autor/a enviada"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artículo publicado"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Envío asignado a un número"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Envío mandado a la cola de planificación de números"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artículo enviado"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Evento de envío"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Nota:</strong> Antes de activar las suscripciones institucionales "
+"adquiridas en línea, es necesario aprobar su dominio y rangos de IP."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Los suscriptores institucionales no necesitan iniciar sesión. El dominio del "
+"usuario/a o la dirección IP se utilizan para dar acceso al contenido de la "
+"suscripción."
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Los suscriptores individuales deben iniciar sesión para acceder al contenido "
+"de la suscripción."
+
+msgid "subscriptions.status.other"
+msgstr "Otro, ver notas"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "No tiene una suscripción activa."
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Esperando el pago en línea"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Esperando el pago manual"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Necesita aprobación"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Necesita información"
+
+msgid "subscriptions.status.active"
+msgstr "Activa"
+
+msgid "subscriptions.status"
+msgstr "Estado"
+
+msgid "subscriptions.inactive"
+msgstr "Inactivo"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Impreso y en línea"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Impreso"
+
+msgid "subscriptionTypes.format.online"
+msgstr "En línea"
+
+msgid "subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Sin caducidad"
+
+msgid "subscriptionTypes.months"
+msgstr "meses"
+
+msgid "subscriptionTypes.month"
+msgstr "mes"
+
+msgid "subscriptionTypes.years"
+msgstr "años"
+
+msgid "subscriptionTypes.year"
+msgstr "año"
+
+msgid "subscriptionTypes.currency"
+msgstr "Moneda"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"No se pudo crear un DOI para el siguiente número: {$itemTitle}. No existe en "
+"el contexto actual de la revista."
+
+msgid "issue.return"
+msgstr "Volver a los detalles del número"
+
+msgid "issue.viewIssue"
+msgstr "Ver número"
+
+msgid "issue.nonpdf.title"
+msgstr "Descargar número"
+
+msgid "issue.fullIssue"
+msgstr "Número completo"
+
+msgid "issue.coverPage.altText"
+msgstr "Portada"
+
+msgid "issue.abstract"
+msgstr "Resumen"
+
+msgid "issue.toc"
+msgstr "Tabla de contenidos"
+
+msgid "issue.noIssues"
+msgstr "No hay números"
+
+msgid "issue.year"
+msgstr "Año"
+
+msgid "issue.no"
+msgstr "Núm."
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.number"
+msgstr "Número"
+
+msgid "issue.volume"
+msgstr "Volumen"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Ver {$identification}"
+
+msgid "issue.title"
+msgstr "Título"
+
+msgid "issue.issues"
+msgstr "Números"
+
+msgid "issue.issue"
+msgstr "Número"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistentes/as de revista"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistente/a de revista"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Gestores/as de suscripción"
+
+msgid "user.role.subEditors"
+msgstr "Editores/as de sección"
+
+msgid "user.role.managers"
+msgstr "Gestores/as de la revista"
+
+msgid "user.role.subscriptionManager"
+msgstr "Gestor/a de suscripciones"
+
+msgid "user.role.subEditor"
+msgstr "Editor/a de sección"
+
+msgid "user.role.manager"
+msgstr "Gestor/a de la revista"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Registrarse como revisor/a: En este momento el registro de revisores/as se "
+"encuentra deshabilitado."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registrarse como revisor/a"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Enviar un artículo: el registro de autor/a está actualmente deshabilitado."
+
+msgid "user.noRoles.submitArticle"
+msgstr "Envíe una propuesta"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"En este momento su cuenta no tiene asignado ningún rol para esta revista. "
+"Elija entre las siguientes acciones:"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"En este momento su cuenta no está asociada a ninguna revista. Elija un "
+"revista:"
+
+msgid "user.manageMySubscriptions"
+msgstr "Administrar mis suscripciones"
+
+msgid "user.myJournals"
+msgstr "Mis revistas"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Si ha solicitado ser revisor/a en alguna revista introduzca sus temas de "
+"interés, por favor."
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicitar los siguientes roles."
