@@ -522,6 +522,12 @@ msgstr "Return to Issue Details"
 msgid "doi.issue.incorrectContext"
 msgstr "Could not create a DOI for the following issue: {$itemTitle}. It does not exist in the current journal context."
 
+msgid "doi.issue.incorrectStaleStatus"
+msgstr "Could not set the DOI status to stale for the following issue: {$itemTitle}. The DOI must currently have the \"Registered\" or \"Submitted\" status."
+
+msgid "doi.issue.notPublished"
+msgstr "Could not set the DOI status for the following issue: {$itemTitle}. The issue must be published first."
+
 msgid "subscriptionTypes.currency"
 msgstr "Currency"
 

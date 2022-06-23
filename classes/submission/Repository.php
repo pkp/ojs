@@ -20,7 +20,7 @@ use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use PKP\context\Context;
 use PKP\db\DAORegistry;
-use PKP\doi\exceptions\DoiCreationException;
+use PKP\doi\exceptions\DoiActionException;
 
 class Repository extends \PKP\submission\Repository
 {
@@ -107,7 +107,7 @@ class Repository extends \PKP\submission\Repository
             try {
                 $doiId = Repo::doi()->mintPublicationDoi($publication, $submission, $context);
                 Repo::publication()->edit($publication, ['doiId' => $doiId]);
-            } catch (DoiCreationException $exception) {
+            } catch (DoiActionException $exception) {
                 $doiCreationFailures[] = $exception;
             }
         }
@@ -124,7 +124,7 @@ class Repository extends \PKP\submission\Repository
                     try {
                         $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
                         Repo::galley()->edit($galley, ['doiId' => $doiId]);
-                    } catch (DoiCreationException $exception) {
+                    } catch (DoiActionException $exception) {
                         $doiCreationFailures[] = $exception;
                     }
                 }
