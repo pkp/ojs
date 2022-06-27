@@ -15,6 +15,7 @@
  */
 
 use APP\facades\Repo;
+use APP\Jobs\Doi\DepositIssue;
 use PKP\context\Context;
 use PKP\core\APIResponse;
 use PKP\doi\exceptions\DoiCreationException;
@@ -36,6 +37,13 @@ class DoiHandler extends PKPDoiHandler
         $this->_endpoints = array_merge_recursive($this->_endpoints, [
             'POST' => [
                 [
+                    'pattern' => $this->getEndpointPattern() . '/issues/assignDois',
+                    'handler' => [$this, 'assignIssueDois'],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN]
+                ]
+            ],
+            'PUT' => [
+                [
                     'pattern' => $this->getEndpointPattern() . '/issues/export',
                     'handler' => [$this, 'exportIssues'],
                     'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
@@ -50,11 +58,6 @@ class DoiHandler extends PKPDoiHandler
                     'handler' => [$this, 'markIssuesRegistered'],
                     'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/assignDois',
-                    'handler' => [$this, 'assignIssueDois'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN]
-                ]
             ]
         ]);
         parent::__construct();
@@ -135,26 +138,19 @@ class DoiHandler extends PKPDoiHandler
             return $response->withStatus(400)->withJsonError('api.dois.400.invalidPubObjectIncluded');
         }
 
-        /** @var Issue[] $issues */
-        $issues = [];
-        foreach ($requestIds as $id) {
-            $issues[] = Repo::issue()->get($id);
-        }
-
-        if (empty($issues[0])) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.doiNotFound');
-        }
-
         $agency = $context->getConfiguredDoiAgency();
         if ($agency === null) {
             return $response->withStatus(400)->withJsonError('api.dois.400.noRegistrationAgencyConfigured');
         }
 
-        $responseData = $agency->depositIssues($issues, $context);
-        if ($responseData['hasErrors']) {
-            return $response->withStatus(400)->withJsonError($responseData['responseMessage']);
+        $doisToUpdate = [];
+        foreach ($requestIds as $issueId) {
+            dispatch(new DepositIssue($issueId, $context, $agency));
+            array_merge($doisToUpdate, Repo::doi()->getDoisForIssue($issueId));
         }
-        return $response->withJson(['responseMessage' => $responseData['responseMessage']], 200);
+        Repo::doi()->markSubmitted($doisToUpdate);
+
+        return $response->withStatus(200);
     }
 
     /**

@@ -55,7 +55,8 @@ describe('Crossref tests', function () {
 					url: '/index.php/publicknowledge/api/v1/dois/submissions/export',
 					method: 'POST',
 					headers: {
-						'X-Csrf-Token': csrfToken
+						'X-Csrf-Token': csrfToken,
+						'X-Http-Method-Override': 'PUT'
 					},
 					body: {
 						ids: [submissionId]

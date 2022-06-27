@@ -81,7 +81,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::lib.pkp.classes.submissionFile.SubmissionFile" />
+			outputType="class::lib.pkp.classes.submissionFile.SubmissionFile[]" />
 		<!-- Article Galley native XML output -->
 		<filterGroup
 			symbolic="article-galley=>native-xml"

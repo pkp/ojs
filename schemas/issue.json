@@ -53,9 +53,7 @@
 			"description": "DOI object for this galley",
 			"apiSummary": true,
 			"readOnly": true,
-			"items": {
-				"$ref": "#/definitions/Doi"
-			}
+			"$ref": "#/definitions/Doi"
 		},
 		"doiId": {
 			"type": "integer",
