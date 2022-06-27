@@ -48,7 +48,7 @@
 		<frequency day="1"/>
 	</task>
 	<task class="lib.pkp.classes.task.EditorialReminders">
-		<descr>Send an editorial reminder email</descr>
+		<descr>Send a monthly reminder email to editors about their outstanding tasks</descr>
 		<frequency day="1"/>
 	</task>
 </scheduled_tasks>
