@@ -1,8 +1,9 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-24 12:45+0000\n"
-"Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
+"PO-Revision-Date: 2022-06-20 16:31+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "lv_LV/>\n"
 "Language: lv_LV\n"
@@ -392,3 +393,19 @@ msgstr "Iesniegt manā lomā kā..."
 
 msgid "submission.submit.title"
 msgstr "Iesniegt rakstu"
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Nav iespējams izveidot DOI šim iesniegtajam materiālam:  {$pubObjectTitle}. "
+"Tas nepastāv pašreizējā žurnāla kontekstā."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Nav iespējams izveidot DOI iesniegtā materiāla {$pubObjectTitle} saliktnim "
+"{$pubObjectTitle}. Lai izveidotu DOI, iesniegtais materiāls vispirms "
+"jāpiešķir izdevumam."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Nav iespējams izveidot DOI šim iesniegtajam materiālam: {$pubObjectTitle}. "
+"Lai izveidotu DOI, iesniegtais materiāls vispirms jāpiešķir izdevumam."

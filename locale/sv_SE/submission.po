@@ -1,9 +1,10 @@
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2021-03-11 14:02+0000\n"
+"PO-Revision-Date: 2022-06-15 02:02+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "sv_SE/>\n"
@@ -341,3 +342,52 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Bidraget har tilldelats <a href=\"{$issueUrl}\">{$issueName}</a> men har "
 "inte blivit schemalagd för publicering."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} återkallade beslutet att acceptera bidraget och skickade "
+"tillbaka det till granskningssteget."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Återkalla beslutet att acceptera bidraget och skicka tillbaka det till "
+"granskningssteget."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Kunde inte skapa en DOI till följande bidrag: {$pubObjectTitle}. Det "
+"existerar inte i den nuvarande tidskriften."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Kunde inte skapa en DOI för {$pubObjectTitle} tillhörande följande bidrag: "
+"{$itemTitle}. Bidraget måste ingå i ett nummer innan en DOI kan skapas."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Kunde inte skapa en DOI för följande bidrag: {$pubObjectTitle}. Bidraget "
+"måste ingå i ett nummer innan en DOI kan skapas."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Välj filer som ska skickas till granskningssteget."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Skicka ett e-postmeddelande till författarna om att bidraget kommer skickas "
+"till sakkunniggranskning. Ge om möjligt författarna en uppskattning hur lång "
+"tid granskningen kan ta och när de kan förväntas höra från redaktörerna igen."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Skicka ett e-postmeddelande till författarna om att deras bidrag har "
+"skickats tillbaka till granskningssteget. Förklara varför beslutet fattades "
+"och informera författarna om vilken sorts granskning som ska genomföras."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Bidraget {$title} har skickats tillbaka till granskningssteget."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Återtagen till granskning"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Tillbaka till granskning"

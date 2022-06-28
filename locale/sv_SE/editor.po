@@ -1,11 +1,12 @@
 # Edvin Erdtman <edvin.erdtman@liu.se>, 2021.
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2021-09-13 14:34+0000\n"
-"Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
+"PO-Revision-Date: 2022-06-14 12:37+0000\n"
+"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "sv_SE/>\n"
 "Language: sv_SE\n"
@@ -437,3 +438,6 @@ msgstr ""
 "hos en annan tidskrift. Var vänlig kontrollera så att du är på rätt "
 "tidskrift och att du använder rätt ID för tidskriftsnumret och försök sedan "
 "igen."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Begär betalning"

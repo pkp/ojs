@@ -1,9 +1,10 @@
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2021-03-11 14:02+0000\n"
+"PO-Revision-Date: 2022-06-15 02:02+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/api/sv_SE/>"
 "\n"
@@ -67,3 +68,17 @@ msgid "api.emails.403.disabled"
 msgstr ""
 "Funktionen för massutskick via e-post har inte aktiverats för denna "
 "tidskrift."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Vissa objekt kunde inte deponeras. Se enskilda objekts respektive "
+"felmeddelande."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Ingen DOI-organisation har valts av tidskriften."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Den efterfrågade DOI:n finns inte i denna tidskrift."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Det efterfrågade bidraget finns inte i denna tidskrift."
