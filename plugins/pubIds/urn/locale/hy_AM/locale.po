@@ -1,8 +1,251 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-06-29 18:50+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Տարր"
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Շարվածք: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN չի նշանակվել այս հրապարակմանը:"
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Այս հրապարակման URN-ը կլինի {$urn}:"
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN-ը պետք է սկսվի {$urnPrefix} -ով:"
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Դուք չեք կարող ստեղծել URN, քանի որ URN կաղապարի մեկ կամ մի քանի մասերում "
+"բացակայում են տվյալները: Ձեզ կարող է անհրաժեշտ լինել հրատարակությունը "
+"վերագրել որևէ թողարկման, սահմանել հրատարակչի ID կամ մուտքագրել էջերի թվերը:"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Դուք չեք կարող ստեղծել URN, քանի դեռ այս հրապարակումը չի վերագրվել որևէ "
+"թողարկման:"
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Նշանակել"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN-ը պետք է սկսվի {$prefix} -ով."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Ստուգիչ թիվը բացակայում է։"
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "{$pubId} URN-ը նշանակված է:"
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"{$pubId} URN-ը չի կարող նշանակվել, քանի որ այն պարունակում է չլուծված "
+"կաղապար:"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN-ը չի կարող նշանակվել, քանի որ օգտվողի վերջածանցը բացակայում է:"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Նշանակեք {$pubId} URN-ը սրան {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Ավելացրեք ստուգիչ նիշ"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Օգտագործեք հետևյալ տարբերակը՝ այս թողարկման համար նախատեսված բոլոր "
+"օբյեկտներից (հոդվածներ և շարվածքներ) URN-ները մաքրելու համար:"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Վստա՞հ եք, որ ցանկանում եք ջնջել առկա թողարկման օբյեկտների URN-ները:"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Մաքրել թողարկման օբյեկտների URN-ները"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Վստա՞հ եք, որ ցանկանում եք ջնջել առկա URN-ը:"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Մաքրել"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Տրված URN վերջածանցն արդեն օգտագործվում է մեկ այլ հրապարակված նյութի համար: "
+"Խնդրում ենք մուտքագրել եզակի URN վերջածանց յուրաքանչյուր տարրի համար:"
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN-ը նշանակված է սրան {$pubObjectType}:"
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Այն, ինչ տեսնում եք, URN-ի նախադիտումն է: Ընտրեք վանդակը և պահեք ձևը՝ URN-ը "
+"նշանակելու համար:"
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN-ը չի կարող նշանակվել, քանի որ այն պարունակում է չլուծված կաղապար:"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN-ը չի կարող նշանակվել, քանի որ օգտվողի վերջածանցը բացակայում է:"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "շարվածք"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "հոդված"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "թողարկում"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Վստա՞հ եք, որ ցանկանում եք ջնջել բոլոր առկա URN-ները:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Եթե փոխեք ձեր URN-ի կազմաձևը, URN-ները, որոնք արդեն նշանակված են, չեն ազդի: "
+"Երբ URN-ի կազմաձևը պահպանվի, օգտագործեք այս կոճակը՝ բոլոր առկա URN-ները "
+"մաքրելու համար, որպեսզի նոր կարգավորումներն ուժի մեջ մտնեն գոյություն "
+"ունեցող օբյեկտների հետ:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Վերանշանակել URN-ները"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Խնդրում ենք մուտքագրել URL-ի լուծիչը:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(օրինակ՝ http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL լուծիչ"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Մշտական նույնացուցիչի անվանատարածքը սովորաբար անհրաժեշտ է գրանցման համար "
+"(օրինակ՝ Deutsche Nationalbibliothek-ում):"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Ընտրել"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Անվան տարածք"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Ստուգիչ թիվը ինքնաշխատ կերպով կհաշվարկվի և վերջում կավելացվի որպես URN-ի "
+"վերջին նիշ:"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Ստուգիչ թիվ"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Մուտքագրեք անհատական URN վերջածանց յուրաքանչյուր հրապարակված նյութի համար: "
+"Յուրաքանչյուր նյութի մետատվյալների էջում դուք կգտնեք URN մուտքագրման "
+"լրացուցիչ դաշտ:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i թողարկումների համար<br />%j.v%vi%i.%a հոդվածների համար<br "
+"/>%j.v%vi%i.%a.g%g շարվածքների համար."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Օգտագործեք լռելյայն ձևանմուշները:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Խնդրում ենք մուտքագրել URN վերջածանցի կաղապարը շարվածքների համար:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Խնդրում ենք մուտքագրել URN վերջածանցի կաղապարը հոդվածների համար:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Խնդրում ենք մուտքագրել URN վերջածանցի կաղապարը թողարկումների համար:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "շարվածքների համար"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "հոդվածների համար"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "թողարկումների համար"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+"Օրինակ՝ vol%viss%ipp%p -ը կարող է ստեղծել \"vol3iss2pp230\" URN վերջածանցը։"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Օգտագործեք ստորև մուտքագրված կաղապարը՝ URN վերջածանցներ ստեղծելու համար: "
+"Օգտագործեք %j ամսագրի սկզբնատառերի համար, %v հատորի թվի համար, %i թողարկման "
+"թվի համար, %Y տարվա համար, %a OJS հոդվածի ID-ի համար, %g OJS շարվածքի ID-ի "
+"համար, %f OJS նիշքի ID-ի համար , %p էջի թվի համար և %x «Պատվերով "
+"նույնացուցիչ»-ի համար։"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"URN վերջածանցը կարող է ունենալ ցանկացած ձև, բայց պետք է լինի եզակի բոլոր "
+"հրատարակչական օբյեկտների մեջ, որոնց հատկացված է նույն URN նախածանցը:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN վերջածանց"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN նախածանցի կաղապարը պետք է լինի \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"URN նախածանցը ամրագրումն է, որը երբեք չի փոխում URN-ի մի մասը (օրինակ՝ "
+"«urn:nbn:de:0000-»):"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN նախածանց"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Շարվածքներ"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Հոդվածներ"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Համարներ"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Խնդրում ենք ընտրել հրատարակչական օբյեկտները, որոնց նշանակվելու են Uniform "
+"Resource Names (URN)՝"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Խնդրում ենք ընտրել այն օբյեկտները, որոնց պետք է վերագրվեն URN-ները:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Ամսագրի բովանդակությունը"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Խնդրում ենք կարգավորել URN հավելվածը, որպեսզի այն կարողանա կառավարել և "
+"օգտագործել URN-ները OJS-ում."
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Այս փլագինը հնարավորություն է տալիս Միատեսակ Պաշարների Անունները հատկացնել "
+"OJS-ում առկա նյութերին, հոդվածներին և շարվածքներին:"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
