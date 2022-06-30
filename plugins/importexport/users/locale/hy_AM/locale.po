@@ -1,8 +1,110 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-01 06:26+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Շարունակելու համար վերբեռնեք նիշք «Ներմուծում» բաժնում:"
+
+msgid "plugins.importexport.users.results"
+msgstr "Արդյունքներ"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Ներմուծումը հաջողությամբ ավարտվեց: Ներմուծվել են օգտվողների անուններով և էլ․ "
+"փոստի հասցեներով օգտատերեր, որոնք արդեն չեն օգտագործվում, ինչպես նաև "
+"ուղեկցող օգտատերերի խմբերը:"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Արտահանման ընթացքում տեղի են ունեցել սխալներ"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Արտահանել բոլորին"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Արտահանում ըստ դերի"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Արտահանեք օգտվողներին"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Նշված է անհայտ ամսագրի ուղին «{$journalPath}» :"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Պետք չէ օգտագործել {$importHash} -ով հաշված գաղտնաբառերը; OJS-ը կազմաձևված է "
+"{$ojsHash} -ն օգտագործելու համար: Եթե շարունակեք, ապա ձեզ հարկավոր է "
+"վերականգնել ներմուծված օգտատերերի գաղտնաբառերը:"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Զգուշացում"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Հաստատեք, որ սրանք այն օգտվողներն են, որոնց ցանկանում եք ներմուծել համակարգ"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Սխալներ են տեղի ունեցել ներմուծման ժամանակ"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Հետևյալ օգտվողները հաջողությամբ ներմուծվել են համակարգ"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Շարունակեք ներմուծել այլ օգտվողներ՝ եթե սխալ տեղի ունենա:"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Ուղարկեք ծանուցման նամակ յուրաքանչյուր ներմուծված օգտվողին, որը պարունակում "
+"է օգտվողի օգտանունը և գաղտնաբառը:"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Օգտագործողի տվյալների նիշք"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Ընտրեք XML տվյալների նիշք, որը պարունակում է օգտատիրոջ տեղեկատվություն՝ այս "
+"ամսագիր ներմուծելու համար: Այս նիշքի ձևաչափի վերաբերյալ մանրամասների համար "
+"տե՛ս ամսագրի օգնությունը:<br /><br />Նկատի ունեցեք, որ եթե ներմուծված նիշքը "
+"պարունակում է որևէ օգտվողի անուն կամ էլ․ փոստի հասցե, որն արդեն գոյություն "
+"ունի համակարգում, այդ օգտվողների համար օգտատերերի տվյալները չեն ներմուծվի և "
+"ստեղծվելիք բոլոր նոր դերերը կհանձնվեն առկա օգտագործողներին:"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Ներմուծեք օգտվողներին"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Օրինակներ:\n"
+"\tՆերմուծեք օգտվողներին myJournal այստեղից myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tԱրտահանեք բոլոր  օգտվողներին myJournal -ից:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tԱրտահանեք  օգտվողներին, որոնք նշված են իրենց ID-ով:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Usage: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.description"
+msgstr "Ներմուծել և արտահանել օգտվողներին"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Օգտագործողների XML պլագին"
