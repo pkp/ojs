@@ -14,7 +14,9 @@
  */
 
 use APP\facades\Repo;
+use APP\search\ArticleSearch;
 use APP\template\TemplateManager;
+use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 use PKP\plugins\ImportExportPlugin;
