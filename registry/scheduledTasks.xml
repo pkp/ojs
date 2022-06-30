@@ -47,4 +47,8 @@
 		<descr>Automatically remove unvalidated and expired users.</descr>
 		<frequency day="1"/>
 	</task>
+	<task class="lib.pkp.classes.task.EditorialReminders">
+		<descr>Send a monthly reminder email to editors about their outstanding tasks</descr>
+		<frequency day="1"/>
+	</task>
 </scheduled_tasks>

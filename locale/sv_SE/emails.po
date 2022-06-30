@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
+"PO-Revision-Date: 2022-06-15 02:02+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "sv_SE/>\n"
@@ -112,9 +112,8 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Det här e-postmeddelandet skickas till nyregistrerade granskare för välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord."
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Nytt nummer publicerat"
+msgstr "Nytt nummer publicerat: {$issueIdentification}"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
@@ -172,7 +171,6 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Det här e-postmeddelandet rekommenderar mottagaren att delta i LOCKSS-initiativet och att inkludera tidskriften i arkivet. Meddelandet innehåller även generell information om LOCKSS och hur man gör för att delta."
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Bekräftelse på mottaget bidrag"
 
@@ -187,13 +185,13 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.description"
-msgstr "Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare."
+msgstr ""
+"Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till "
+"andra författare knutna till bidraget än den som skickat in det."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Redaktionellt uppdrag"
+msgstr "Du har blivit utsedd till redaktör för ett bidrag i {$contextName}"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -207,36 +205,33 @@ msgstr ""
 "<br />\n"
 "Tack och med vänliga hälsningar."
 
-#, fuzzy
 msgid "emails.editorAssign.description"
-msgstr "Det här e-postmeddelandet meddelar en sektionsredaktör att redaktören utsett hen att ansvara för ett bidrag genom den redaktionella processen. Det innehåller även information om bidraget och hur man loggar in på tidskriftens webbplats."
+msgstr ""
+"Det här e-postmeddelandet meddelar en sektionsredaktör att redaktören utsett "
+"hen att ansvara för ett bidrag genom den redaktionella processen. Mallen kan "
+"väljas när en redaktör är knuten till bidraget i deltagarlistan. Den här "
+"mallen ska användas när sektionsredaktören har möjligheten att fatta "
+"redaktionella beslut."
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"
 
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets abstract bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, då det vore mycket värdefullt.<br />\n"
-"<br />\n"
-"Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Adressen till webbplatsen är {$contextUrl}.<br />\n"
-"<br />\n"
-"Deadline för själva granskningen är {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbplats, använd följande länk för att återställa lösenordet: {$passwordLostUrl}. Dina inloggningsuppgifter skickas då till dig per e-post.<br />\n"
-"<br />\n"
-"Bidragets URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Tack för att du överväger granskningsuppdraget.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"&quot;{$submissionTitle}&quot;<br />\n"
-"<br />\n"
-"{$submissionAbstract}"
+"<p>{$recipientName}:</p><p>Jag tror att du skulle passa utmärkt som "
+"sakkunniggranskare av ett manuskript som har skickats in till {$contextName}"
+". Bidragets titel och abstract bifogas nedan. Jag hoppas att du kan överväga "
+"att genomföra granskningen åt oss, då det vore mycket värdefullt.</p><p>"
+"Vänligen logga in på tidskriftens webbplats senast {$reviewDueDate} och "
+"svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Du "
+"kan se bidraget och skicka in din granskningsrapport genom att logga in på "
+"sidan och följa processen via länken nedan.</p><p><a href=\""
+"{$reviewAssignmentUrl}\""
+">{$submissionTitle}</a></p><p>Abstract</p>{$submissionAbstract}<p>Vänligen "
+"acceptera eller neka denna förfrågan innan {$responseDueDate}</p><p>Kontakta "
+"mig gärna om du har frågor om bidraget eller om gransknignsprocessen</p><p>"
+"Tack för att du överväger granskningsuppdraget.</p><p>Vänliga "
+"hälsningar,</p>{$signature}"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -293,9 +288,8 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och Granskning utan inloggning är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Förfrågan om granskning av artikel"
+msgstr "Förfrågan om granskning av reviderad artikel"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -355,7 +349,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Påminnelse om granskning av bidrag"
 
@@ -392,7 +385,6 @@ msgstr ""
 msgid "emails.reviewRemindOneclick.description"
 msgstr "Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat."
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatisk påminnelse om granskning av bidrag"
 
@@ -429,9 +421,8 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar > Arbetsflöde > Granskning) och när Granskning utan inloggning är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil)."
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Redaktörsbeslut"
+msgstr "Ditt bidrag har accepterats av {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -442,9 +433,8 @@ msgstr ""
 "<br />\n"
 "Vårt beslut är att: Acceptera bidraget"
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Förfrågan om publiceringsversion"
+msgstr "Bidraget {$submissionId} är redo att redigeras hos {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -463,9 +453,12 @@ msgstr ""
 "<br />\n"
 "Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften."
 
-#, fuzzy
 msgid "emails.layoutRequest.description"
-msgstr "Det här e-postmeddelandet från sektionsredaktören till layoutredaktören för att meddela att hen har blivit tilldelad uppgiften att vara layoutredaktör för ett bidrag. Det innehåller information om bidraget och hur man får tillgång till det."
+msgstr ""
+"Det här e-postmeddelandet skickas från en redaktör till layoutredaktören för "
+"att meddela att hen har blivit tilldelad uppgiften att vara layoutredaktör "
+"för ett bidrag. Det innehåller information om bidraget och hur man får "
+"tillgång till det."
 
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversioner klara"
@@ -481,9 +474,10 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.layoutComplete.description"
-msgstr "Det här e-postmeddelandet från layoutredaktören till sektionsredaktören för att meddela hen att layoutprocessen färdig."
+msgstr ""
+"Det här e-postmeddelandet från layoutredaktören meddelar en redaktör att "
+"layoutprocessen är färdig."
 
 msgid "emails.emailLink.subject"
 msgstr "Artikel som kan vara av intresse för dig"
@@ -815,3 +809,74 @@ msgstr ""
 "{$announcementSummary}<br />\n"
 "<br />\n"
 "Besök vår webbsida för att läsa <a href=\"{$announcementUrl}\">hela meddelandet</a>."
+
+msgid "emails.editorDecisionSkipReview.body"
+msgstr ""
+"<p>Hej {$recipientName},</p>\n"
+"<p>Vi har beslutat att acceptera ditt manuskript {$submissionTitle} utan att "
+"låta det genomgå sakkunniggranskning. Tack för att du skickade in ditt "
+"bidrag till {$contextName}.</p>\n"
+"Ditt bidrag till kommer att publiceras i ett framtida nummer av "
+"{$contextName} och du kan inkludera det i din egen publikationslista.</p>\n"
+"<p>Bidraget kommer genomgå redigering och formatering för att färdigställa "
+"det för publicering</p>\n"
+"<p>Du kommer snart få ytterligare instruktioner</p>\n"
+"<p>Om du har några frågor kan du kontakta mig genom <a href=\""
+"{$authorSubmissionUrl}\">gränssnittet för ditt bidrag</a>.</p>\n"
+"<p>Vänliga hälsningar,</p>\n"
+"<p>{$signature}</p>\n"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "Ditt bidrag har skickats till manusredigering"
+
+msgid "emails.editorDecisionBackToSubmission.body"
+msgstr ""
+"<p>Hej {$recipientName},</p>\n"
+"<p>Ditt bidrag{$submissionTitle} har skickats tillbaka till det första "
+"steget.\n"
+"En redaktör kommer se över bidraget innan det skickas till "
+"sakkunniggranskning</p>\n"
+"<p>Det händer tyvärr att beslut att skicka bidrag till sakkunniggranskning "
+"sker av misstag i systemet, och vi måste i dessa fall skicka tillbaka dem "
+"till det första steget. Vi ber om ursäkt för all tänkbar förvirring detta "
+"orsakat.</p><p>Vi kommer kontakta dig om vi behöver din hjälp.</p>\n"
+"<p>Om du har några frågor kan du kontakta mig genom <a href=\""
+"{$authorSubmissionUrl}\">gränssnittet för ditt bidrag</a>.</p>\n"
+"<p>Vänliga hälsningar,</p>\n"
+"<p>{$signature}</p>\n"
+
+msgid "emails.editorDecisionBackToSubmission.subject"
+msgstr "Ditt bidrag har skickats tillbaka till redaktionell granskning"
+
+msgid "emails.editorDecisionBackToCopyediting.body"
+msgstr ""
+"<p>Hej {$recipientName},</p>\n"
+"<p>Ditt bidrag {$submissionTitle} har skickats tillbaka till "
+"manusredigeringsstegt\n"
+"Det kommer genomgå ytterligare redigering och formatering.</p>\n"
+"<p>Ditt bidrag är fortfarande planerat för publicering i ett framtida nummer "
+"av {$contextName}. Bidraget skickades tillbaka till manusredigering eftersom "
+"det inte är färdigställt för publicering.</p>\n"
+"<p>Vi kommer kontakta dig om vi behöver din hjälp.</p>\n"
+"<p>Om du har några frågor kan du kontakta mig genom <a href=\""
+"{$authorSubmissionUrl}\">gränssnittet för ditt bidrag</a>.</p>\n"
+"<p>Vänliga hälsningar,</p>\n"
+"<p>{$signature}</p>\n"
+
+msgid "emails.editorDecisionBackToCopyediting.subject"
+msgstr "Ditt manuskript har skickats tillbaka till manusredigering"
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Du har skapat ett konto hos {$siteTitle}, men du måste verifiera din e-"
+"postadress innan du kan börja använda det. Följ länken nedan:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Tack så mycket,<br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Verifiera ditt konto"

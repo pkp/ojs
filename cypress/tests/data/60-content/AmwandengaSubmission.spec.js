@@ -70,7 +70,7 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 
-		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('You must complete this field in English (United States).');
+		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('You must complete this field in English.');
 		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
 		cy.get('#titleAbstract input[name=title-en_US').type(submission.title, {delay: 0});
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);

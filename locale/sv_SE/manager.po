@@ -1,11 +1,12 @@
 # Viveka Svensson <viveka.svensson@lnu.se>, 2021.
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2021-10-08 00:19+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"PO-Revision-Date: 2022-06-15 02:02+0000\n"
+"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sv_SE/>\n"
 "Language: sv_SE\n"
@@ -1849,9 +1850,11 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Konfigurera DOI-pluginet för att kunna administrera och använda DOI:er i OJS:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Välj de objekt som ska tilldelas DOI:er."
+msgstr ""
+"Välj de objekt som ska tilldelas DOI:er. De flesta tidskrifter tilldelar DOI:"
+"er till artiklar, men det är även möjligt att tilldela DOI:er till andra "
+"publicerade objekt."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Välj de publiceringsobjekt som kommer att få Digital Object Identifiers (DOI:er) tilldelade sig:"
@@ -1869,7 +1872,17 @@ msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "DOI-prefixet är obligatoriskt och måste vara i formatet 10.xxxx."
 
 msgid "doi.manager.settings.doiSuffixPattern"
-msgstr "Använd mönstret som fyllts i nedan för att generera DOI-suffix. Använd %j för tidskriftens initialer, %v för volymn, %i för nummer, %Y för år, %a för OJS artikel-ID, %g för OJS publiceringsversions-ID, %f för OJS fil-ID, %p för sidnummer och %x för \"Custom Identifier\"."
+msgstr ""
+"Ange ett eget suffixmönster för varje publiceringstyp. Det egna "
+"suffixmönstret kan innehålla följande symboler:<br><br> <code>%j</code> "
+"Tidskriftsinitialer<br> <code>%v</code> Volym<br> <code>%i</code> Nummer<br> "
+"<code>%Y</code> År<br> <code>%a</code> Artikel-ID<br> <code>%g</code> "
+"Publiceringsversionens ID<br> <code>%f</code> Fil-ID<br> <code>%p</code> "
+"Sidnummer<br> <code>%x</code> Egen identifikator<br><br> Tänk på att egna "
+"suffixmönster ofta leder till problem när DOI:er ska genereras och "
+"registreras. Vid användning av egna suffixmönster, se till att testa så DOI:"
+"er kan genereras och registreras hos en organisation som exempelvis "
+"Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Exempelvis skulle vol%viss%ipp%p kunna generera följande DOI: 10.1234/vol3iss2pp230"
@@ -1962,7 +1975,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI:t {$pubId} kan inte tilldelas eftersom det innehåller ett ofullständigt mönster."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "DOI:t {$pubId} har tilldelats."
+msgstr ""
+"DOI:n {$pubId} har tilldelats. Gå till <a href=\"{$doiManagementLink}\">DOI-"
+"inställningar</a> för att redigera DOI:n."
 
 msgid "doi.editor.preview.objects"
 msgstr "Objekt"
@@ -1996,3 +2011,87 @@ msgstr "DOI måste börja med {$doiPrefix}."
 
 msgid "doi.editor.missingIssue"
 msgstr "Du kan inte generera ett DOI innan bidraget har tilldelats ett nummer."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Detta e-postmeddelande meddelar författaren att deras bidrag har refuserats. "
+"Bidraget har inte skickats till anonym granskning eftersom det inte lever "
+"upp till tidskriftens grundläggande krav."
+
+msgid "doi.manager.issueDois"
+msgstr "Nummer-DOI:er"
+
+msgid "doi.manager.submissionDois"
+msgstr "Artikel-DOI:er"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Numren kunde inte hittas"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Endast DOI:er kan redigeras efter publicering"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Den inskickade DOI:n är inte giltig"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Endast DOI:er kan redigeras efter publicering"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Publiceringsversionen är inte en del av den här publikationen."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI:n {$pubId} kommer tilldelas vid publicering."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ingen"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "Välj vilken registreringsorganisation som ska ta emot era DOI:er."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registreringsorganisation"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Publiceringsversioner, t.ex. publicerade PDF:er"
+
+msgid "doi.manager.displayName"
+msgstr "DOI:er"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Detta e-postmeddelande skickas automatiskt till nya användare vid "
+"registreringstillfället om krav på verifiering av e-postadress är aktiverat."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Verifiera e-post (tidskriftsregistrering)"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Information om prenumerantens medlemskap"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Sammanfattning av typen av prenumeration, namn, tid och kostnad"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Slutdatum för prenumerationen"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL till prenumerationsansvarig"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Prenumerationsansvariges kontaktuppgifter"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Prenumerantens namn, anknytning, telefonnummer och e-postadress"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Vid manusredigeringssteget"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Använd default-mönster.<br />%j.v%vi%i för tidskriftsnummer<br />%j.v%vi%i.%"
+"a för artiklar<br />%j.v%vi%i.%a.g%g för publiceringsversioner."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Aktivera tilldelning av Digital Object Identifiers (DOI) till bidrag i "
+"tidskriften."

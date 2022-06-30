@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-04-29 09:26+0000\n"
+"PO-Revision-Date: 2022-06-18 04:31+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ar_IQ/>\n"
@@ -351,3 +351,19 @@ msgstr "التراجع عن قرار قبول طلب التقديم هذا بإ�
 
 msgid "editor.submission.decision.backToReview"
 msgstr "عودة إلى التحكيم"
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"تعذر إنشاء معرف المكون الرقمي لطلب التقديم الآتي: {$pubObjectTitle}. إنه غير "
+"موجود ضمن سياق المجلة الحالية."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"تعذر إنشاء معرف المكون الرقمي للوح الطباعي الخاص بـ {$pubObjectTitle} العائد "
+"لطلب التقديم الآتي: {$itemTitle}. لا بد من تعيين طلب التقديم إلى عدد معين "
+"ليتسنى توليد معرف المكون الرقمي له."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"تعذر إنشاء معرف المكون الرقمي لطلب التقديم الآتي: {$pubObjectTitle}. لا بد "
+"من تعيين طلب التقديم إلى عدد معين ليتسنى توليد معرف المكون الرقمي له."
