@@ -1,10 +1,10 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2021-08-06 16:04+0000\n"
+"PO-Revision-Date: 2022-07-01 06:26+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ca_ES/>\n"
@@ -348,3 +348,25 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "S'ha assignat a <a href=\"{$issueUrl}\">{$issueName}</a> però encara no s'ha "
 "programat per publicar-se."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Seleccioneu els arxius que haurien d'enviar-se a la fase de revisió."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "La tramesa, {$title}, s'ha retornat a la fase de revisió."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Retornar a revisió"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} ha revertit la decisió per acceptar aquesta tramesa i retornar-"
+"la a la fase de revisió."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Revertir la decisió per acceptar la tramesa i retornar-la a la fase de "
+"revisió."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Tornar a la revisió"
