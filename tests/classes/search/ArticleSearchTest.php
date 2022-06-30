@@ -138,7 +138,7 @@ class ArticleSearchTest extends PKPTestCase
     public function testRetrieveResultsViaPluginHook()
     {
         // Diverting a search to the search plugin hook.
-        HookRegistry::register('SubmissionSearch::retrieveResults', fn (...$args) => $this->callbackRetrieveResults(...$args));
+        HookRegistry::register('SubmissionSearch::retrieveResults', [$this, 'callbackRetrieveResults']);
 
         $testCases = [
             [null => 'query'], // Simple Search - "All"

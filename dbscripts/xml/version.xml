@@ -16,6 +16,6 @@
 	<release>3.4.0.0</release>
 	<tag>3_4_0-0</tag>
 	<date>2021-02-01</date>
-	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-3.4.0.tar.gz</package>
+	<info>https://pkp.sfu.ca/ojs/</info>
+	<package>https://pkp.sfu.ca/ojs/download/ojs-3.4.0.tar.gz</package>
 </version>

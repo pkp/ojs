@@ -144,7 +144,7 @@ class JournalOAI extends OAI
         $versionDao = DAORegistry::getDAO('VersionDAO'); /** @var VersionDAO $versionDao */
         $currentVersion = $versionDao->getCurrentVersion();
         $info->toolkitVersion = $currentVersion->getVersionString();
-        $info->toolkitURL = 'http://pkp.sfu.ca/ojs/';
+        $info->toolkitURL = 'https://pkp.sfu.ca/ojs/';
 
         return $info;
     }
