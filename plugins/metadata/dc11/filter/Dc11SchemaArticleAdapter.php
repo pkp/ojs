@@ -23,6 +23,8 @@ namespace APP\plugins\metadata\dc11\filter;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
+use APP\journal\Journal;
+use APP\plugins\PubIdPlugin;
 use APP\submission\Submission;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -31,6 +33,8 @@ use PKP\metadata\MetadataDataObjectAdapter;
 use PKP\metadata\MetadataDescription;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
+use PKP\submission\SubmissionKeywordDAO;
+use PKP\submission\SubmissionSubjectDAO;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -79,6 +83,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // contains cached entities and avoids extra database access if this
         // adapter is called from an OAI context.
         $oaiDao = DAORegistry::getDAO('OAIDAO'); /** @var OAIDAO $oaiDao */
+        /** @var Journal */
         $journal = $oaiDao->getJournal($article->getData('contextId'));
         $section = $oaiDao->getSection($article->getSectionId());
         if ($article instanceof Submission) { /** @var Submission $article */
@@ -147,7 +152,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         );
         $this->_addLocalizedElements($dc11Description, 'dc:type', $types);
         $driverVersion = 'info:eu-repo/semantics/publishedVersion';
-        $dc11Description->addStatement('dc:type', $driverVersion, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
+        $dc11Description->addStatement('dc:type', $driverVersion, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 
 
         $galleys = Repo::galley()->getMany(
@@ -215,16 +220,19 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Public identifiers
-        $pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
-        foreach ($pubIdPlugins as $pubIdPlugin) {
-            if ($issue && $pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
+        $publicIdentifiers = [
+            'doi',
+            ...array_map(fn (PubIdPlugin $plugin) => $plugin->getPubIdType(), (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId()))
+        ];
+        foreach ($publicIdentifiers as $publicIdentifier) {
+            if ($issue && $pubIssueId = $issue->getStoredPubId($publicIdentifier)) {
                 $dc11Description->addStatement('dc:source', $pubIssueId, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
             }
-            if ($pubArticleId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
+            if ($pubArticleId = $article->getStoredPubId($publicIdentifier)) {
                 $dc11Description->addStatement('dc:identifier', $pubArticleId);
             }
             foreach ($galleys as $galley) {
-                if ($pubGalleyId = $galley->getStoredPubId($pubIdPlugin->getPubIdType())) {
+                if ($pubGalleyId = $galley->getStoredPubId($publicIdentifier)) {
                     $dc11Description->addStatement('dc:relation', $pubGalleyId);
                 }
             }
