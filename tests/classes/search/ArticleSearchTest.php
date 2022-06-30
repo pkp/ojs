@@ -15,8 +15,6 @@
  * @brief Test class for the ArticleSearch class
  */
 
-require_mock_env('env1');
-
 import('lib.pkp.tests.PKPTestCase');
 
 define('SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE', 1);

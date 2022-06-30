@@ -15,8 +15,6 @@
  * @brief Test class for the ArticleSearchIndex class
  */
 
-import('classes.i18n.Locale'); // Causes mocked Locale class to be loaded
-
 import('lib.pkp.tests.PKPTestCase');
 
 use APP\submission\Submission;
