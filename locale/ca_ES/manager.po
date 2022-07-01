@@ -1,10 +1,10 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2021-10-12 12:06+0000\n"
+"PO-Revision-Date: 2022-07-02 03:43+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ca_ES/>\n"
@@ -1951,7 +1951,9 @@ msgid "doi.editor.missingPrefix"
 msgstr "El DOI ha de començar amb {$doiPrefix}."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "El DOI {$pubId} ha estat assignat."
+msgstr ""
+"S'ha assignat el DOI {$pubId}. Per editar-lo, visiteu la <a href=\""
+"{$doiManagementLink}\">pàgina de gestió del DOI</a>."
 
 msgid "doi.editor.assignDoi.pattern"
 msgstr "El DOI {$pubId} no es pot assignar perquè conté un patró no resolt."
@@ -2078,11 +2080,17 @@ msgstr ""
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
-"Feu servir el patró introduït a continuació per generar sufixos DOI. "
-"Utilitzeu %j per a les inicials de la revista, %v per al volum, %i per al "
-"número, %Y per a l'any, %a per a l'ID de l'article d'OJS, %g per a l'ID de "
-"la galerada d'OJS, %f per a l'ID de l'arxiu d'OJS, %p per al número de "
-"pàgina i %x per a \"identificador personalitzat\"."
+"Introduïu un patró de sufix personalitzat per a cada tipus de publicació. El "
+"patró de sufix personalitzat ha d'utilitzar els següents símbols per generar "
+"un sufix:<br><br> <code>%j</code> inicials de la revista<br> <code>%v</code> "
+"volum<br> <code>%i</code> número<br> <code>%Y</code> any<br> <code>%a</code> "
+"ID de l'article<br> <code>%g</code> ID de la galerada<br> <code>%f</code> ID "
+"de l'arxiu<br> <code>%p</code> número de pàgina<br> <code>%x</code> "
+"identificador personalitzat<br><br> Tingueu en compte que els patrons de "
+"sufix personalitzat sovint porten problemes en generar i dipositar els DOI. "
+"Quan els feu servir, verifiqueu acuradament que els editors/ores poden "
+"generar els DOI i dipositar-los en una agència de registre com per exemple "
+"Crossref. "
 
 msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "El prefix DOI és obligatori i ha de seguir el format 10.xxxx."
@@ -2091,7 +2099,7 @@ msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefix DOI"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr "Galerades"
+msgstr "Galerades de l'article"
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Articles"
@@ -2101,9 +2109,11 @@ msgstr ""
 "Seleccioneu els objectes de publicació que tindran assignats identificadors "
 "d'objectes digitals (DOI):"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Trieu els objectes als quals s'hauria d'assignar DOI."
+msgstr ""
+"Seleccioneu els elements als quals s'assignarà un DOI. La majoria de "
+"revistes assignen DOI als articles, però potser voleu assignar DOI a tots "
+"els elements publicats."
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2119,3 +2129,89 @@ msgstr ""
 
 msgid "doi.displayName"
 msgstr "DOI"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Aquest correu electrònic notifica a l'autor/a que la seva tramesa s'ha "
+"rebutjat prèviament a la fase de revisió, perquè la tramesa no compleix els "
+"requisits de publicació de la revista."
+
+msgid "doi.manager.issueDois"
+msgstr "DOI del número"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI de l'article"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "No s'han trobat els números que heu sol·licitat"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Només es poden editar els DOI després de la publicació"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "El DOI enviat no és vàlid"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Només es poden editar els DOI després que una publicació/galerada s'hagi "
+"publicat"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "La galerada que heu sol·licitat no forma part d'aquesta publicació."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "El DOI {$pubId} s'assignarà a la publicació."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Cap"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Seleccioneu l'agència de registre que voleu fer servir per dipositar els DOI."
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Agència de registre"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Galerades de l'article, com per exemple un PDF publicat"
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Aquest correu s'envia automàticament als nous usuaris/àries quan es "
+"registren a la revista si a la configuració es demana que l'adreça de correu "
+"electrònic ha de validar-se."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validar el correu electrònic (registre a la revista)"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Nom, filiació, número de telèfon i adreça electrònica del subscriptor/a"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informació sobre l'abonament del subscriptor/a"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Resum del nom, tipus, durada i cost de la subscripció"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Data en què finalitza la subscripció"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL de la pàgina de subscripció"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Detalls de contacte de l'administrador/a de subscripcions"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "En arribar a la fase de correcció"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Fer servir patrons predeterminats.<br />%j.v%vi%i per a números<br "
+"/>%j.v%vi%i.%a per a articles<br />%j.v%vi%i.%a.g%g per a galerades."
+
+msgid "manager.setup.enableDois.description"
+msgstr "Permetre que s'assignin DOI a obres publicades en aquesta revista."
