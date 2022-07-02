@@ -1,10 +1,10 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2021.
+# Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2021-10-10 06:06+0000\n"
+"PO-Revision-Date: 2022-07-02 13:32+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "sl_SI/>\n"
@@ -437,3 +437,6 @@ msgstr ""
 "Slika naslovnice, ki ste jo želeli izbrisati, pripada številki druge revije. "
 "Preverite, da delate s pravilno revij in da uporabljate pravilen ID "
 "številke, ter ponovno poskusite."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Request Payment"
