@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-29 18:50+0000\n"
+"PO-Revision-Date: 2022-07-04 06:31+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "hy_AM/>\n"
@@ -130,7 +130,7 @@ msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
 msgstr "Խնդրում ենք մուտքագրել URL-ի լուծիչը:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
-msgstr "(օրինակ՝ http://nbn-resolving.de/)"
+msgstr "(օրինակ՝ https://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver"
 msgstr "URL լուծիչ"
