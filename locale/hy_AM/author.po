@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-29 07:23+0000\n"
+"PO-Revision-Date: 2022-07-04 06:31+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "hy_AM/>\n"
@@ -197,7 +197,7 @@ msgstr "Պահանջվում է առնվազն մեկ հեղինակ:"
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/"
+"English=en; French=fr; Spanish=es. <a href=\"https://www.loc.gov/standards/"
 "iso639-2/php/code_list.php\" target=\"_blank\">Լրացուցիչ կոդեր</a>."
 
 msgid "author.submit.coverageInstructions"
