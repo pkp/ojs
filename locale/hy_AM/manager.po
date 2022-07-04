@@ -1,8 +1,2454 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-05 09:32+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Այս էլ․ նամակը ծանուցում է հեղինակին, որ իրենց ներկայացումը մերժվում է մինչև "
+"գրախոսման փուլը, քանի որ այն չի համապատասխանում ամսագրում հրապարակման "
+"պահանջներին:"
+
+msgid "doi.manager.issueDois"
+msgstr "Թողարկման DOI-ներ"
+
+msgid "doi.manager.submissionDois"
+msgstr "Հոդվածի DOI-ներ"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Ձեր պահանջած թողարկումները չեն գտնվել"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Միայն DOI-ները կարող են խմբագրվել հրապարակման հրապարակումից հետո"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Ներկայացված DOI-ն վավեր չէ"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Միայն DOI-ները կարող են խմբագրվել հրապարակման/շարվածքի հրապարակումից հետո"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Շարվածքը, որը դուք խնդրել եք, այս հրապարակման մաս չէ:"
+
+msgid "doi.editor.preview.objects"
+msgstr "Տարր"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Շարվածք: {$galleyLabel}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI չի նշանակվել այս հրապարակմանը:"
+
+msgid "doi.editor.preview.publication"
+msgstr "Այս հրապարակման DOI-ն կլինի {$doi}:"
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI-ն պետք է սկսվի {$doiPrefix} -ով:"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "{$pubId} DOI-ն կհատկացվի հրապարակման ժամանակ:"
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"{$pubId} DOI-ն նշանակված է: DOI-ն խմբագրելու համար այցելեք <a href=\""
+"{$doiManagementLink}\">DOI կառավարման էջը</a>:"
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"{$pubId} DOI-ն չի կարող նշանակվել, քանի որ այն պարունակում է չլուծված "
+"կաղապար:"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr ""
+"DOI-ն չի կարող նշանակվել, քանի որ անհատականացված վերջածանցը բացակայում է:"
+
+msgid "doi.editor.assignDoi"
+msgstr "Նշեք {$pubId} DOI-ն սրան {$pubObjectType}"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Օգտագործեք հետևյալ տարբերակը՝ մաքրելու բոլոր օբյեկտների DOI-ները (հոդվածներ "
+"և շարվածքներ), որոնք ներկայումս նախատեսված են այս թողարկման համար:"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Վստա՞հ եք, որ ցանկանում եք ջնջել առկա թողարկման օբյեկտների DOI-ները:"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Մաքրել թողարկման օբյեկտների DOI-ները"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Վստա՞հ եք, որ ցանկանում եք ջնջել առկա DOI-ն:"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Մաքրել"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Տրված DOI վերջածանցն արդեն օգտագործվում է մեկ այլ հրապարակված նյութի համար: "
+"Խնդրում ենք մուտքագրել եզակի DOI վերջածանց յուրաքանչյուր տարրի համար:"
+
+msgid "doi.editor.assigned"
+msgstr "DOI-ն նշանակված է սրան {$pubObjectType}:"
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Այն, ինչ տեսնում եք, DOI-ի նախադիտումն է: Ընտրեք վանդակը և պահեք ձևը՝ DOI "
+"նշանակելու համար:"
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI-ն չի կարող նշանակվել, քանի որ այն պարունակում է չլուծված կաղապար:"
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Դուք չեք կարող ստեղծել DOI, քանի որ DOI օրինաչափության մեկ կամ մի քանի "
+"մասերում բացակայում են տվյալներ: Ձեզ կարող է անհրաժեշտ լինել "
+"հրատարակությունը վերագրել որևէ թողարկման, սահմանել հրատարակչի ID կամ "
+"մուտքագրել էջի թվերը."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Դուք չեք կարող ստեղծել DOI, քանի դեռ այս հրապարակումը չի վերագրվել որևէ "
+"թողարկման:"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr ""
+"DOI-ն չի կարող նշանակվել, քանի որ անհատականացված վերջածանցը բացակայում է:"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "շարվածք"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "հոդված"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "Թողարկում"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Նշանակել"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI-ն պետք է սկսվի {$prefix} -ով:"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ոչ ոք"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Խնդրում ենք ընտրել գրանցման գործակալությունը, որը կցանկանայիք օգտագործել DOI-"
+"ներ ավանդադրելիս:"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Գրանցման գործակալություն"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Համոզվա՞ծ եք, որ ցանկանում եք DOI-ներ վերագրել բոլոր հրապարակված "
+"օբյեկտներին, որոնք չեն նշանակվել DOI-ներ:"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Նշանակեք DOI-ներ ամսագրի  բոլոր հրապարակված օբյեկտներին, որոնց չեն նշանակվել "
+"DOI: Այս գործողությունը չի կարող օգտագործվել անհատական վերջածանցի կազմաձևման "
+"հետ: Եթե դուք փոփոխել եք վերը նշված DOI-ի կազմաձևը, խնդրում ենք պահպանել ձեր "
+"փոփոխությունները նախքան այս գործողությունը սկսելը: DOI-ների նշանակումը կարող "
+"է երկար ժամանակ տևել՝ կախված ամսագրում հրապարակված օբյեկտների քանակից:"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Նշանակեք DOI-ներ"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Վստա՞հ եք, որ ցանկանում եք ջնջել բոլոր առկա DOI-ները:"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Տեղեկացրեք Բաժանորդագրման կառավարչին էլ․ փոստով Անհատական բաժանորդագրության "
+"առցանց գնումից հետո:"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Ինքնաշխատ էլեկտրոնային ծանուցումները (հասանելի են ամսագրի կառավարիչների "
+"կողմից OJS-ի էլ. նամակներում խմբագրման համար) կարող են ուղարկվել "
+"Բաժանորդագրության կառավարչին՝ բաժանորդագրության առցանց վճարումների ավարտից "
+"հետո:"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Առցանց վճարման ծանուցումներ"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Նշում.</strong> Այս տարբերակը ակտիվացնելու համար կայքի "
+"ադմինիստրատորը պետք է միացնի <tt>scheduled_tasks</tt> տարբերակը OJS "
+"կազմաձևման նիշքում: Այս գործառույթին աջակցելու համար կարող է պահանջվել "
+"կայանի լրացուցիչ ձևավորում (ինչը հնարավոր չէ բոլոր կայաններում), ինչպես "
+"նշված է OJS փաստաթղթերում:"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Գրանցված ընթերցողները հնարավորություն կունենան բովանդակությունը էլեկտրոնային "
+"փոստով ստանալ, երբ թողարկումը բաց հասանելի դառնա:"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Խնդրում ենք ընտրել վավեր արժեք բաժանորդագրության ժամկետի ավարտից առաջ "
+"շաբաթների քանակի համար:"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Խնդրում ենք ընտրել վավեր արժեք բաժանորդագրության ժամկետի ավարտից հետո "
+"շաբաթների քանակի համար:"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Խնդրում ենք ընտրել վավեր արժեք բաժանորդագրության ժամկետի ավարտից առաջ "
+"ամիսների քանակի համար:"
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Խնդրում ենք ընտրել վավեր արժեք բաժանորդագրության ժամկետի ավարտից հետո "
+"ամիսների քանակի համար:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML-ը կարող է օգտագործվել տեքստի տարածքում (տառաչափի, գույնի և այլնի համար)"
+", իսկ «վերադարձները» դիտվում են որպես <tt>&lt;br&gt;</tt>; HTML խմբագիրն "
+"աշխատում է Firefox դիտակների հետ:"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Ընտրեք հետևյալներից մեկը."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Նշում.</strong> Այս ընտրանքները ակտիվացնելու համար կայքի "
+"ադմինիստրատորը պետք է միացնի <tt>scheduled_tasks</tt> տարբերակը OJS "
+"կազմաձևման նիշքում: Այս գործառույթին աջակցելու համար կարող է պահանջվել "
+"կայանի լրացուցիչ ձևավորում (ինչը հնարավոր չէ բոլոր կայաններում), ինչպես "
+"նշված է OJS փաստաթղթերում:"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Էլ․ փոստի ինքնաշխատ հիշեցումները (հասանելի են ամսագրի կառավարիչների կողմից "
+"OJS-ի էլ. նամակներում խմբագրման համար) կարող են ուղարկվել բաժանորդներին "
+"ինչպես բաժանորդագրության ժամկետի ավարտից առաջ, այնպես էլ դրանից հետո:"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Բաժանորդագրության ժամկետի ավարտի հիշեցումներ"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Էլ․ փոստով տեղեկացրեք բաժանորդներին մինչև բաժանորդագրության ժամկետի ավարտը:"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Էլ․ փոստով տեղեկացնել բաժանորդներին մինչ բաժանորդագրության ժամկետի ավարտը:"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Էլ․ փոստով տեղեկացնել բաժանորդներին բաժանորդագրության ժամկետի ավարտից հետո:"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+"Էլ․ փոստով տեղեկացնել բաժանորդներին բաժանորդագրության ժամկետի ավարտից հետո"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} շաբաթ"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} ամիս"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Ընթերցողներին արգելվում է մուտք գործել վերջերս հրապարակված բաժանորդագրության "
+"բովանդակություն, սակայն պահպանում են բաժանորդագրության բովանդակության "
+"հասանելիությունը, որը հրապարակվել է մինչև բաժանորդագրության ժամկետի ավարտը:"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Ժամկետի մասնակի ավարտ"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Բաժանորդագրության ժամկետի ավարտից հետո ընթերցողներին արգելվում է մուտք "
+"գործել բաժանորդագրության ամբողջ բովանդակություն:"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Ժամկետի ամբողջական ավարտ"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Բաժանորդագրության ժամկետը լրանալուց հետո ընթերցողներին կարող է մերժվել "
+"մուտքը բաժանորդագրության ողջ բովանդակությունը կամ կարող է շարունակել օգտվել "
+"բաժանորդագրության բովանդակությունից, որը հրապարակվել է մինչև "
+"բաժանորդագրության ժամկետի ավարտը:"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Բաժանորդագրության ժամկետի ավարտը"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Խնդրում ենք օգտագործել նշված ընտրավանդակը:"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Հետաձգված բաց մուտք"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Բաժանորդագրության քաղաքականություն"
+
+msgid "manager.statistics.reports.filters.byObject.description"
+msgstr ""
+"Նեղացնել արդյունքներն ըստ օբյեկտի տեսակի (ամսագիր, թողարկում, հոդված, նիշքի "
+"տեսակներ) և/կամ ըստ մեկ կամ մի քանի օբյեկտի id(ների):"
+
+msgid "manager.statistics.reports.filters.byContext.description"
+msgstr "Նեղացնել արդյունքներն ըստ համատեքստի (թողարկումներ և/կամ հոդված):"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Թողարկման բովանդակության էջի դիտումներ"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Ամսագրի գլխավոր էջի դիտումներ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Հոդվածի համառոտագրության էջերի դիտումներ և ներբեռնումներ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Հոդվածի համառոտագրության էջերի դիտումներ"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Հոդվածի նիշքի ներբեռնում"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Բաժանորդագրություններ"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Ընտրեք բաժինները՝ այս ամսագրի գրախոսվող վիճակագրությունը հաշվարկելու համար:"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Գրախոսների թիվը"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Խմբագրի գնահատականը"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Գրախոսներ"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "նշանակված թիվ"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Գրանցված ընթերցողներ"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Գործընկերային վերանայում"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Ընդամենը ներկայացումներ"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Հրապարակված համարներ"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Նշում․ գործընկերների կողմից գրախոսված ներկայացումների տոկոսները կարող են "
+"չավելանալ մինչև 100%, քանի որ նորից ներկայացված նյութերը կա՛մ ընդունվում են, "
+"կա՛մ մերժվում, կա՛մ դեռ ընթացքի մեջ են:"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Նշեք կետերը, որոնք հասանելի կլինեն ընթերցողներին Ամսագրի մասին էջում:"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Հրապարակված նյութեր"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS-ը յուրաքանչյուր ամսագրի համար հաշվարկում է հետևյալ վիճակագրությունը. «"
+"Գրախոսման օրերը» հաշվարկվում են ներկայացման օրվանից (կամ գրախոսության "
+"տարբերակի նշանակումից) մինչև Խմբագրի սկզբնական որոշումը, մինչդեռ «"
+"հրապարակման օրերը» չափվում են ընդունված ներկայացումների համար՝ սկզբնական "
+"վերբեռնումից մինչև հրապարակումը:"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Հրապարակման օրեր"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Գրախոսման օրեր"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Կրկին ներկայացնել"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Մերժել"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Ընդունել"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Հոդվածների դիտումների քանակը (միայն հեղինակների համար)"
+
+msgid "manager.statistics.statistics"
+msgstr "Ամսագրի վիճակագրություն"
+
+msgid "manager.statistics.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tՁեր ամսագիրը կազմաձևված է այնպես, որ գրանցի մեկից ավելի օգտագործման "
+"չափումներ: Օգտագործման վիճակագրությունը կցուցադրվի մի քանի համատեքստերում:\n"
+"\t\tԿան դեպքեր, երբ պետք է օգտագործվի օգտագործման մեկ վիճակագրություն, "
+"օրինակ. ցուցադրելու ամենաշատ օգտագործվող հոդվածների պատվիրված ցանկը կամ "
+"դասակարգելու համար\n"
+"\t\tորոնման արդյունքները։ Խնդրում ենք որպես կանխադրված ընտրել կազմաձևված "
+"չափորոշիչներից մեկը:\n"
+"\t"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Վերնագրի տեքստ"
+
+msgid "manager.setup.userRegistration"
+msgstr "Օգտվողի գրանցում"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Վերնագրի պատկեր"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Մանրապատկեր"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Ամսագրի կողմից կօգտագործվի խմբագրական/գրախոսական խորհուրդ:"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Հոդվածները և թողարկումները կարող են պիտակավորվել նույնականացման թվով կամ "
+"տողով՝ օգտագործելով գրանցման համակարգ, ինչպիսին է Digital Object Identifier "
+"համակարգը (DOI):"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Եզակի նույնացուցիչ"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Այս ոլորտի համար տրամադրել համապատասխան հետազոտության տեսակների, մեթոդների և "
+"մոտեցումների օրինակներ"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Տեսակ (մեթոդ/մոտեցում)"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(Օրինակ՝ Պատմական Հետազոտություն; Քվազի-Փորձարարական; Գրական վերլուծություն; "
+"Հարցում/Հարցազրույց)"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Տրամադրեք մետատվյալներ երրորդ կողմի ինդեքսավորման ծառայություններին <a href="
+"\"https://www.openarchives.org/\">Բաց արխիվների նախաձեռնության</a> միջոցով:"
+
+msgid "manager.setup.enableOai"
+msgstr "Միացնել OAI-ը"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Այս ամսագիրն այս պահին ներկայացումներ չի ընդունում: Այցելեք աշխատանքային "
+"հոսքի կարգավորումները՝ ներկայացումները թույլատրելու համար:"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Կանխել օգտվողներին նոր հոդվածներ ներկայացնել ամսագրում: Ներկայացումները "
+"կարող են անջատվել ամսագրի առանձին բաժինների համար <a href=\"{$url}\">ամսագրի "
+"բաժիններ</a> կարգավորումների էջում:"
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Հեղինակների համար ուղեցույցներ, հեղինակային իրավունք և ինդեքսավորում ("
+"ներառյալ գրանցումը):"
+
+msgid "manager.setup.submissions"
+msgstr "Ներկայացումներ"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"Ամսագրին ներկայացում կատարելիս հեղինակներին նախքան շարունակելը նախ խնդրում "
+"են ստուգել Ներկայացման նախապատրաստման ստուգաթերթի յուրաքանչյուր կետ, քանի որ "
+"դրանք ավարտված են: Ստուգաթերթը հայտնվում է նաև «Հեղինակային ուղեցույցներում»՝"
+" «Ամսագրի մասին» բաժնում: Ցանկը կարող է խմբագրվել ստորև, բայց ցուցակի բոլոր "
+"կետերը կպահանջեն ստուգման նշան, նախքան հեղինակները կարող են շարունակել իրենց "
+"ներկայացումը:"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Ներկայացման նախապատրաստման ստուգաթերթ"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Ներկայացման ուղեցույցներ"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+"Տրամադրեք բանալի բառերի կամ թեմաների օրինակներ՝ որպես ուղեցույց հեղինակների "
+"համար"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Բանալի բառեր"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(Օրինակ, ֆոտոսինթեզ; Սև խոռոչեր; Չորս գույնի քարտեզի խնդիր; Բայեսյան "
+"տեսություն)"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Հինգ քայլ դեպի ամսագրի վեբ կայք"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Դիտեք հոդվածի բովանդակությունը"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Կայքի հասանելիություն"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+"Միշտ ցույց տվեք շարվածքի հղումները և տեղեկացրեք սահմանափակ մուտքի մասին:"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Ամսագրի բաժինը, որի համար կդիտարկվի նյութը:"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Ամսագրի խմբագիրը, ով կտեսնի այն խմբագրական գործընթացի ընթացքում:"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Ամսագրի համար բաժիններ ստեղծելու կամ փոփոխելու նպատակով (օրինակ՝ Հոդվածներ, "
+"Գրքերի ակնարկներ և այլն), անցեք Բաժինների կառավարում:<br /><br />Հեղինակները "
+"ամսագրին հոդվածներ ներկայացնելիս կկարողանան նախորոշել..."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Եթե բաժինները չեն ավելացվել, ապա տարրերը լռելյայն ներկայացվում են Հոդվածներ "
+"բաժնում):"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Բաժիններ և բաժինների խմբագիրներ"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Տրամադրեք ամսագրի համառոտ նկարագրությունը (50-300 նիշ), որը որոնող "
+"շարժիչները կարող են ցուցադրել ամսագիրը որոնման արդյունքներում ցուցակագրելիս:"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Օգնեք Google-ի նման որոնման համակարգերին հայտնաբերել և ցուցադրել ձեր կայքը: "
+"Ձեզ խորհուրդ է տրվում ներկայացնել ձեր <a href=\"{$sitemapUrl}\" target=\""
+"_blank\">կայքի քարտեզը</a>:"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Որոնման ինդեքսավորում"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Գրախոսման քաղաքականություն"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Գրախոսի հիշեցումներ"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Գրախոսների գնահատականներ"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Գրախոսողներին ուղարկված էլ․ փոստի հրավերի մեջ ներառեք անվտանգ հղում:"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Գրախոսներին կարող է ուղարկվել անվտանգ հղում էլ․ փոստ հրավերի միջոցով, որը "
+"թույլ կտա նրանց առանց մուտք գործելու մուտք ունենալ գրախոսությանը: Այլ էջեր "
+"մուտք գործելու համար անհրաժեշտ է նրանց մուտք գործել:"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Մեկ սեղմումով գրախոսների հասանելիություն"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Գրախոսների հասանելիություն"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Գրախոսներին հասանելիություն չի տրվի ներկայացվող նիշքին, քանի դեռ նրանք չեն "
+"համաձայնել այն գրախոսել:"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Սահմանափակել նիշքի մուտքը"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Խմբագիրները յուրաքանչյուր գրախոսությունից հետո կգնահատեն գրախոսներին որակի "
+"հինգ բալանոց սանդղակով:"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Շաբաթների թիվը, որի ընթացքում թույլատրվում է ավարտել գրախոսումը"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Էլ․ փոստի ինքնաշխատ հիշեցումներ ուղարկելու համար կայքի ադմինիստրատորը պետք է "
+"միացնի <tt>scheduled_tasks</tt> տարբերակը OJS կազմաձևման նիշքում: Կարող է "
+"պահանջվել լրացուցիչ կայանի ձևավորում, ինչպես նշված է OJS փաստաթղթերում:"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Ավտոմատացված էլ․ փոստի հիշեցումներ"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Գրախոսման ընտրանքներ"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Գրախոսման ուղեցույցներ"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Օգտատերերը պետք է գրանցված լինեն և մուտք գործեն՝ ամսագրի կայքը դիտելու համար:"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Բաց հասանելիության բովանդակությունը դիտելու համար օգտատերերը պետք է գրանցված "
+"լինեն և մուտք գործեն:"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Հղման կապակցում"
+
+msgid "manager.setup.publisher"
+msgstr "Հրատարակիչ"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Ամսագրի բովանդակության նույնականացում"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Հրապարակման ժամանակացույցավրում"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Ամսագրի նյութերը կարող են հրապարակվել կոլեկտիվ՝ որպես սեփական "
+"բովանդակությամբ թողարկման մաս: Որպես այլընտրանք, առանձին նյութեր կարող են "
+"հրապարակվել պատրաստ լինելուն պես՝ դրանք ավելացնելով «ներկայիս» հատորի "
+"բովանդակության աղյուսակում: Հանդեսի մասին ընթերցողներին տրամադրեք "
+"հայտարարություն այն համակարգի մասին, որը կօգտագործի այս ամսագիրը և դրա "
+"հրապարակման ակնկալվող հաճախականությունը:"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Հրապարակման ժամանակացույց"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Սրբագրման հրահանգները հասանելի կլինեն սրբագրիչներին, հեղինակներին, "
+"դասավորության խմբագիրներին և բաժնի խմբագիրներին Ներկայացման խմբագրման "
+"փուլում: Ստորև ներկայացված է HTML-ում հրահանգների լռելյայն հավաքածու, որը "
+"կարող է խմբագրվել կամ փոխարինվել Ամսագրի կառավարչի կողմից ցանկացած պահի ("
+"HTML կամ պարզ տեքստով):"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Սրբագրման հրահանգներ"
+
+msgid "manager.setup.printIssn"
+msgstr "Տպագիր ISSN"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Ուղղվածություն, գործընկերային գրախոսում, բաժիններ, գաղտնիություն, "
+"անվտանգություն և լրացուցիչ տարրեր:"
+
+msgid "manager.setup.policies"
+msgstr "Քաղաքականություն"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Էջի թվի տարբերակ"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Առցանց ISSN"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Սահմանափակեք ցանկի հաջորդ էջերին ցուցադրվող հղումների քանակը:"
+
+msgid "manager.setup.numPageLinks"
+msgstr "Էջի հղումներ"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Նշում.</strong> Ներկայացման հաստատման էլ. փոստը ներկայումս անջատված "
+"է: Այս հնարավորությունն օգտագործելու համար էլ․ փոստում միացրեք «Submission "
+"Ack» նամակը:"
+
+msgid "manager.setup.note"
+msgstr "Նշում"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Ոճային թերթիկ չի վերբեռնվել:"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Պատկերի նիշքը չի վերբեռնվել:"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Պիտակի արժեքը տեքստային տող է (օրինակ՝ \"Journal Setup\"), այլ ոչ թե "
+"տեղայնացման հաղորդագրության բանալի (օրինակ՝ \"manager.setup\")"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL-ը բացարձակ URL է (օրինակ՝ \"http://www.example.com\"), այլ ոչ թե կայքին "
+"վերաբերող ուղի (օրինակ՝ \"/manager/setup\")"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Ավելացնել կամ հեռացնել նավարկման տողի լրացուցիչ տարրեր:"
+
+msgid "manager.setup.navigationBar"
+msgstr "Նավարկման տող"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Քայլ 4. Ամսագրի կառավարում"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Կառավարման և հրատարակման կարգավորումներ"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Հիմնական խմբագրական քայլերի կառավարում"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Մուտք և անվտանգություն, ժամանակացույց, հայտարարություններ, գրական խմբագրում, "
+"դասավորություն և սրբագրում:"
+
+msgid "manager.setup.management"
+msgstr "Կառավարում"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Գլխավոր էջի վերնախորագիր, բովանդակություն, ամսագրի վերնախորագիր, էջատակ, "
+"նավարկման տող և ոճի թերթիկ:"
+
+msgid "manager.setup.look"
+msgstr "Տեսք"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Գրանցվեք CLOCKSS ծառայության համար՝ այցելելով <a href=\"https://clockss.org\""
+" target=\"_blank\">CLOCKSS կայք</a>:"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS արտոնագրի նկարագրություն"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS արտոնագիրը կհայտնվի Ամսագրի մասին՝ Արխիվացման ներքո՝ <a href=\""
+"https://clockss.org\" target=\"_blank\">CLOCKSS արտոնագիր</a>"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Միացրեք CLOCKSS-ը` պահելու և տարածելու ամսագրի բովանդակությունը մասնակից "
+"գրադարաններում CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">"
+"Հրատարակչի մանիֆեստ</a> էջի միջոցով:"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Բացահայտեք 6-10 գրադարան, որոնք գրանցելու և պահելու են ամսագիրը: Օրինակ, "
+"դիմեք հաստատություններին, որտեղ աշխատում են խմբագիրներ կամ խորհրդի անդամներ "
+"և/կամ հաստատություններ, որոնք արդեն մասնակցում են LOCKSS-ին: Տես <a href=\""
+"https://www.lockss.org/join-lockss/partner-communities\" target=\"_blank\">"
+"LOCKSS համայնքը</a>:"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS արտոնագրի նկարագրություն"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS արտոնագիրը կհայտնվի Ամսագրի մասին՝ Արխիվացման ներքո՝ <a href=\""
+"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">"
+"LOCKSS արտոնագիր</a>"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Միացրեք LOCKSS-ը` պահելու և տարածելու ամսագրի բովանդակությունը մասնակից "
+"գրադարաններում LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Հրատարակչի "
+"մանիֆեստ</a> էջի միջոցով:"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS և CLOCKSS"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) ապահովում է պահպանման անվճար ծառայություններ "
+"ցանկացած OJS ամսագրի համար, որը համապատասխանում է մի քանի հիմնական "
+"չափանիշներին: OJS 3-ի PKP PN հավելվածը ներկայումս մշակման փուլում է և շուտով "
+"հասանելի կլինի հավելվածների պատկերասրահում:"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Դիտեք <button>plugin կարգավորումները</button>՝ ընդունելու PKP PN-ի "
+"օգտագործման պայմանները:"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"KP Preservation Network (PN) ապահովում է պահպանման անվճար ծառայություններ "
+"ցանկացած OJS ամսագրի համար, որը համապատասխանում է մի քանի հիմնական "
+"չափանիշներին:"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Միացնել PKP PN հավելվածը"
+
+msgid "manager.setup.lists"
+msgstr "Ցուցակներ"
+
+msgid "manager.setup.labelName"
+msgstr "Պիտակի անվանումը"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Տրամադրեք ձեր ամսագրի կարճ նկարագրությունը և բացահայտեք խմբագիրներին, "
+"գործադիր տնօրեններին և ձեր խմբագրական թիմի այլ անդամներին:"
+
+msgid "manager.setup.keyInfo"
+msgstr "Հիմնական տեղեկատվություն"
+
+msgid "manager.setup.contextTitle"
+msgstr "Ամսագրի անվանումը"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Ամսագրի փոքր պատկերանշանը կամ ներկայացումը, որը կարող է օգտագործվել "
+"ամսագրերի ցուցակներում:"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Ամսագրի մանրապատկեր"
+
+msgid "manager.setup.journalTheme"
+msgstr "Ամսագրի թեմա"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Ամսագրի ոճաթերթի անվավեր ձևաչափ: Ընդունված ձևաչափն է .css:"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Ձեր ամսագրի կարգավորումները թարմացվել են:"
+
+msgid "manager.setup.journalSetup"
+msgstr "Ամսագրի կարգավորում"
+
+msgid "manager.setup.journalPolicies"
+msgstr "Քայլ 2. Ամսագրի քաղաքականությունը"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Սա ձեր ամսագրի էջատակն է: Էջատակը փոխելու կամ թարմացնելու համար տեղադրեք "
+"HTML կոդը ստորև նշված տեքստային վանդակում: Օրինակները կարող են լինել մեկ այլ "
+"նավիգացիոն տող, հաշվիչ և այլն: Այս էջատակը կհայտնվի յուրաքանչյուր էջում:"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Ամսագրի էջի տողատակը"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Ամսագրի լոգոն"
+
+msgid "manager.setup.journalLogo"
+msgstr "Ամսագրի լոգոն"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Ընտրեք ամսագրի թեման և այստեղ ընտրեք դասավորության բաղադրիչները: Կարող է նաև "
+"վերբեռնվել ամսագրի ոճի թերթիկը, որը կարող է օգտագործվել համակարգային ոճերի և "
+"թեմայի ոճաթերթերում ոճի տվյալները վերացնելու համար (եթե թեմա է ընտրված):"
+
+msgid "manager.setup.journalLayout"
+msgstr "Ամսագրի դասավորություն"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Ընտրեք երկիրը, որտեղ գտնվում է այս ամսագիրը, կամ ամսագրի կամ հրատարակչի "
+"փոստային հասցեի երկիրը:"
+
+msgid "manager.setup.contextInitials"
+msgstr "Ամսագրի սկզբնատառերը"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Ամսագրի վերնագրի և պատկերանշանի գրաֆիկական տարբերակը (որպես .gif, .jpg կամ "
+".png նիշք) կարող է վերբեռնվել գլխավոր էջի համար, որը կփոխարինի տեքստային "
+"տարբերակին, որն այլ կերպ է հայտնվում:"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Ամսագրի գլխավոր էջի վերնախորագիր"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Ամսագրի գլխավոր էջի վերնախորագիր"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Որպես լռելյայն, գլխավոր էջը բաղկացած է նավիգացիոն հղումներից: Գլխավոր էջի "
+"լրացուցիչ բովանդակությունը կարող է ավելացվել՝ օգտագործելով հետևյալ "
+"տարբերակներից մեկը կամ բոլորը, որոնք կհայտնվեն ցուցադրված հերթականությամբ: "
+"Նկատի ունեցեք, որ ընթացիկ թողարկումը միշտ հասանելի է նավիգացիոն տողի Ընթացիկ "
+"հղման միջոցով:"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Ամսագրի գլխավոր էջի բովանդակությունը"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Ներառեք ձեր ամսագրի մասին ցանկացած տեղեկատվություն, որը կարող է հետաքրքրել "
+"ընթերցողներին, հեղինակներին կամ գրախոսներին: Սա կարող է ներառել ձեր բաց "
+"մուտքի քաղաքականությունը, ամսագրի ուղղվածությունը և շրջանակը, հեղինակային "
+"իրավունքի մասին ծանուցումը, հովանավորության բացահայտումը, ամսագրի "
+"պատմությունը, գաղտնիության հայտարարությունը և ցանկացած LOCKSS կամ CLOCKSS "
+"արխիվային համակարգում ներառելը:"
+
+msgid "manager.setup.contextAbout"
+msgstr "Ամսագրի մասին"
+
+msgid "manager.setup.contextSummary"
+msgstr "Ամսագրի համառոտագրություն"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Ամսագրի արխիվացում"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Ամսագրի հապավումը"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Սահմանափակեք տարրերի քանակը (օրինակ՝ ներկայացումներ, օգտատերեր կամ "
+"խմբագրական առաջադրանքներ) ցուցակում ցուցադրելու համար՝ նախքան հաջորդ տարրերը "
+"մեկ այլ էջում ցուցադրելը:"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Նյութեր ըստ մեկ էջի"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Նավիգացիոն վահանակի տարրերը կարող են ավելացվել էջի վերևում հայտնված ընթացիկ "
+"հավաքածուին (Տուն, Մասին, Օգտատիրոջ տուն և այլն):"
+
+msgid "manager.setup.institution"
+msgstr "Հաստատություն"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Կախված ընտրված ձևաչափից՝ նշեք OJS-ի հետ հրատարակվող առաջին համարի "
+"թողարկումը, ծավալը և/կամ տարեթիվը."
+
+msgid "manager.setup.initialIssue"
+msgstr "Առաջին թողարկումը"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Ընթերցողների համար"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Գրադարանավարների համար"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Հեղինակների համար"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Ամսագրի համառոտ նկարագրություններ գրադարանավարների, ապագա հեղինակների և "
+"ընթերցողների համար: Դրանք հասանելի են դառնում կայքի կողագոտում, երբ ավելացվի "
+"Տեղեկատվական բլոկը:"
+
+msgid "manager.setup.information"
+msgstr "Տեղեկատվություն"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Ամսագրերի համար, որոնք առաջարկում են անհապաղ կամ հետաձգված բաց մուտք, "
+"ներառեք Creative Commons արտոնագիրը՝ հրապարակված բոլոր աշխատություններով:"
+
+msgid "manager.setup.identity"
+msgstr "Ամսագրի ինքնությունը"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Քայլ 3. Ներկայացումների ուղեցույց"
+
+msgid "manager.setup.guidelines"
+msgstr "Ուղեցույցներ"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Քայլ 1. Ստանալով մանրամասները"
+
+msgid "manager.setup.generalInformation"
+msgstr "Ընդհանուր տեղեկություն"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Աջակցության անունը պարտադիր է:"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Պահանջվում է աջակցության  էլ․ փոստի հասցե."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Պահանջվում է գրախոսների թիվը յուրաքանչյուր ներկայացման համար:"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Պահանջվում է ամսագրի վերնագիրը:"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Պահանջվում է ամսագրի սկզբնատառերը:"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Հիմնական կոնտակտային անունը պարտադիր է:"
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Հիմնական կոնտակտային էլ.փոստը պարտադիր է:"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Նշված ISSN-ը վավեր չէ:"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS-ը հավատարիմ է <a href=\"https://www.openarchives.org/\" target=\"_blank\""
+">Բաց արխիվների նախաձեռնության</a> Մետատվյալների հավաքագրման արձանագրությանը, "
+"որը ձևավորվող ստանդարտն է լավ ինդեքսավորված մուտք ապահովելու համար "
+"էլեկտրոնային հետազոտական ռեսուրսներ համաշխարհային մասշտաբով: Հեղինակները "
+"կօգտագործեն նմանատիպ ձևանմուշ՝ իրենց ներկայացմանը մետատվյալներ տրամադրելու "
+"համար: Ամսագրի կառավարիչը պետք է ընտրի ինդեքսավորման համար նախատեսված դասերը "
+"և հեղինակներին ներկայացնի համապատասխան օրինակներ՝ օգնելու նրանց ինդեքսավորել "
+"իրենց աշխատանքը:"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Հեղինակներին՝ իրենց աշխատանքը ինդեքսավորելու համար"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Հեղինակներին, ընթերցողներին և գրադարանավարներին նկարագրեք հոդվածների և այլ "
+"նյութերի շրջանակը, որոնք ամսագիրը կհրապարակի:"
+
+msgid "manager.setup.focusAndScope"
+msgstr "Նպատակը և շրջանակը"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Այցելուները կարող են գրանցել օգտվողի հաշիվ ամսագրում:"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Քանի՞ հայտարարություն պետք է ցուցադրվի գլխավոր էջում: Թողեք սա դատարկ՝ "
+"չցուցադրելու ոչ մեկը:"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Արտածել տնային էջում"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Հայտարարություններ կարող են հրապարակվել՝ տեղեկացնելու ընթերցողներին ամսագրի "
+"նորությունների և իրադարձությունների մասին: Հրապարակված հայտարարությունները "
+"կհայտնվեն Հայտարարությունների էջում։"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Միացնել հայտարարությունները"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Համակարգի կողմից պատրաստված ամսագրի անունից ուղարկված  նամակների վերջում "
+"կավելացվի հետևյալ ստորագրությունը."
+
+msgid "manager.setup.emailSignature"
+msgstr "Ստորագրություն"
+
+msgid "manager.setup.emails"
+msgstr "Էլ․ փոստի նույնականացում"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Սխալի հասցեին չառաքվող նամակներ ուղարկելու համար կայքի ադմինիստրատորը պետք է "
+"ակտիվացնի <code>allow_envelope_sender</code> տարբերակը կայքի կազմաձևման "
+"նիշքում: Սերվերի կազմաձևումը կարող է պահանջվել, ինչպես նշված է OJS "
+"փաստաթղթերում:"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Ցանկացած չառաքվող նամակներ կհանգեցնեն այս հասցեի համար սխալի հաղորդագրության:"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Վերադարձի հասցե"
+
+msgid "manager.setup.editorDecision"
+msgstr "Խմբագրի որոշումը"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Ավելացրեք ընթացիկ թողարկման բովանդակությունը (եթե առկա է):"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr ""
+"Ներկայացրեք համապատասխան ակադեմիական գիտաճյուղերի օրինակներ այս ամսագրի համար"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Օրինակ՝ պատմություն, կրթություն, սոցիոլոգիա, հոգեբանություն, "
+"մշակութաբանություն, իրավունք)"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Օգտակար է, երբ ամսագիրը հատում է գիտաճյուղի սահմանները և/կամ հեղինակները "
+"ներկայացնում են բազմամասնագիտական հոդվածներ:"
+
+msgid "manager.setup.discipline"
+msgstr "Ակադեմիական գիտաճյուղ և ենթաճյուղեր"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Ամսագրի կառավարիչը կգրանցի բոլոր օգտվողների հաշիվները: Խմբագիրները կամ Բաժնի "
+"խմբագիրները կարող են գրանցել օգտվողների հաշիվներ գրախոսողների համար:"
+
+msgid "manager.setup.details.description"
+msgstr ""
+"Ամսագրի անվանումը, ISSN-ը, կոնտակտները, հովանավորները և որոնման համակարգերը:"
+
+msgid "manager.setup.details"
+msgstr "Մանրամասներ"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Քայլ 5. Անհատականացնել տեսքը"
+
+msgid "manager.setup.currentIssue"
+msgstr "Ընթացիկ թողարկում"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Այս տեքստը կհայտնվի ամսագրի կայքի «Մասին» բաժնում և կարող է օգտագործվել "
+"վերնագրերի, խմբագրական խորհրդի և ամսագրի հրապարակումների պատմությանը առնչվող "
+"այլ նյութերի փոփոխությունները նկարագրելու համար:"
+
+msgid "manager.setup.history"
+msgstr "Ամսագրի պատմությունը"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Գրապոսներից պահանջեք ներկայացնել CI հայտարարություն իրենց կողմից ներկայացված "
+"յուրաքանչյուր գործընկերային գրախոսման հետ:"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Ներկայացնող Հեղինակներից պահանջեք տրամադրել Շահերի բախման (CI) "
+"հայտարարությունը իրենց առաքած նյութերի հետ միասին:"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(կհայտնվի \"Ամսագրի մասին\" բաժնում) "
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Մուտքագրեք ցանկացած տեղեկություն, որը ցանկանում եք որ հայտնվի "
+"հայտարարությունների ձեր էջում:"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Ներածություն"
+
+msgid "manager.setup.announcements"
+msgstr "Հայտարարություններ"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Որպես այլընտրանք, վերնագրի և պատկերանշանի փոխարեն, վերնագրի HTML տարբերակը "
+"կարող է տեղադրվել ստորև բերված տեքստային վանդակում: Անհրաժեշտության դեպքում "
+"տեքստային տուփը դատարկ թողեք:"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Այլընտրանքային վերնախորագիր"
+
+msgid "manager.setup.addSponsor"
+msgstr "Ավելացնել հովանավոր կազմակերպություն"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Ավելացնել տվյալների շտեմարանի նոր հղում"
+
+msgid "manager.setup.addNavItem"
+msgstr "Ավելացրեք տարր"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Ավելացրեք տարր «Ամսագրի մասին» բաժնում հայտնվելու համար"
+
+msgid "manager.setup.addItem"
+msgstr "Ավելացնել տարր"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Ավելացնել ստուգաթերթի կետ"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Ավելացնել նյութի ամսագրի մասին"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Բովանդակություն"
+
+msgid "manager.setup.pageHeader"
+msgstr "Ամսագրի էջի վերնախորագիր"
+
+msgid "manager.setup.contextName"
+msgstr "Ամսագրի անունը"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Ամսագրի ոճի թերթիկ"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Ամսագրի գլխավոր էջը լռելյայն կազմված է նավարկման հղումներից: Գլխավոր էջի "
+"լրացուցիչ բովանդակությունը կարող է ավելացվել՝ օգտագործելով հետևյալ "
+"տարբերակներից մեկը կամ բոլորը, որոնք կհայտնվեն ցուցադրված հերթականությամբ:"
+
+msgid "manager.setup.homepageContent"
+msgstr "Ամսագրի գլխավոր էջի բովանդակությունը"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Խմբագրական կազմ"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Եթե փոխեք ձեր DOI կազմաձևը, DOI-ները, որոնք արդեն նշանակվել են, չեն ազդի: "
+"Երբ DOI-ի կազմաձևը պահպանվի, օգտագործեք այս կոճակը՝ բոլոր առկա DOI-ները "
+"մաքրելու համար, որպեսզի նոր կարգավորումներն ուժի մեջ մտնեն գոյություն "
+"ունեցող օբյեկտների հետ:"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Վերանշանակել DOI-ները"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Խնդրում ենք մուտքագրել DOI վերջածանցի նմուշը շարվածքների համար:"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Խնդրում ենք մուտքագրել հոդվածների DOI վերջածանցի նմուշը:"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Խնդրում ենք մուտքագրել DOI վերջածանցի նմուշը թողարկումների համար:"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "շարվածքների համար"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "հոդվածների համար"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "թողարկումների համար"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Օրինակ, vol%viss%ipp%p կարող է ստեղծել DOI, ինչպիսին է 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Մուտքագրեք անհատականացված վերջածանցի նմուշ յուրաքանչյուր հրապարակման տեսակի "
+"համար: Անհատականացված  վերջածանցի նմուշը կարող է օգտագործել հետևյալ նշանները "
+"վերջածանց ստեղծելու համար.<br><br> <code>%j</code> Ամսագրի սկզբնատառեր<br> "
+"<code>%v</code> Թողարկման հատորը<br> <code >%i</code> Թողարկման թիվը<br> "
+"<code>%Y</code> Թողարկման տարին<br> <code>%a</code> Հոդվածի ID<br> "
+"<code>%g</code> Շարվածքի ID<br> <code>%f</code> Նիշքի ID<br> <code>%p</code> "
+"Էջի թիվը<br> <code>%x</code> Անհատականացված նույնացուցիչ<br><br> Զգուշացեք "
+"որ անհատականացված վերջածանցների ձևանմուշները հաճախ հանգեցնում են DOI-ների "
+"ստեղծման և տեղադրման հետ կապված խնդիրների: Անհատականացված վերջածանցի "
+"ձևանմուշ օգտագործելիս ուշադիր ստուգեք, որ խմբագիրները կարող են ստեղծել DOI և "
+"դրանք փոխանցել գրանցման գործակալությանը, ինչպիսին է Crossref-ը: "
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI նախածանցը պարտադիր է և պետք է լինի 10.xxxx ձևով:"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI նախածանց"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Հոդվածների շարվածքներ, ինչպիսիք են հրապարակված PDF-ը"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Հոդվածի շարվածքներ"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Խնդրում ենք ընտրել հրատարակչական օբյեկտները, որոնց հատկացվելու են թվային "
+"օբյեկտների նույնացուցիչներ (DOI)."
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Խնդրում ենք կարգավորել DOI հավելվածը, որպեսզի կարողանա կառավարել և "
+"օգտագործել DOI-ները OJS-ում."
+
+msgid "doi.manager.displayName"
+msgstr "DOI-ներ"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Այս փլագինը հնարավորություն է տալիս թվային օբյեկտների նույնացուցիչները "
+"հատկացնել OJS-ի թողարկումներին, հոդվածներին և շարվածքներին:"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Այս նամակն ինքնաշխատ կերպով ուղարկվում է նոր օգտվողին, երբ նրանք գրանցվում "
+"են ամսագրում, երբ կարգավորումները պահանջում են վավերացնել էլ․ փոստի հասցեն:"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Վավերացնել էլ․ փոստը (ամսագրի գրանցում)"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Տեղեկատվություն բաժանորդի անդամակցության մասին"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Բաժանորդագրության տեսակի, անվանման, տևողության և արժեքի ամփոփում"
+
+msgid "emailTemplate.variable.subscription.expireDate"
+msgstr "Ամսաթիվը, երբ բաժանորդագրությունն ավարտվում է"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Բաժանորդագրության էջի URL-ը"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Բաժանորդագրության կառավարչի կոնտակտային տվյալները"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Բաժանորդի անունը, պատկանելությունը, հեռախոսահամարը և էլեկտրոնային փոստի "
+"հասցեն"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Կայքի անվանումը, երբ տեղակայված են մեկից ավելի ամսագրեր"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Վճարման գումարի արժույթը, օրինակ՝ ԱՄՆ դոլարը"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Վճարման գումարը"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Վճարման տեսակի անվանումը"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Ամսագրի հիմնական կոնտակտի էլ. փոստի հասցեն"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Ամսագրի էլեկտրոնային ստորագրությունը ավտոմատացված նամակների համար"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Ամսագրի հիմնական կոնտակտի անվանումը"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Ամսագրի գլխավոր էջի URL-ը"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Ամսագրի անվանումը"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Թողարկման շարվածքների վերլուծման գործընթացը ձախողվեց"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Թողարկման արտահանման արդյունքները"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Այս ամսագրի համար հիմնական կոնտակտ չի սահմանվել: Դուք կարող եք մուտքագրել "
+"հիմնական կոնտակտը <a href=\"{$url}\">ամսագրի կարգավորումներում</a>:"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Ուղարկեք ներկայացման հաստատման նամակի պատճենը այս ամսագրի հիմնական կոնտակտին:"
+
+msgid "stats.publications.galleys"
+msgstr "Նիշքեր"
+
+msgid "stats.publications.abstracts"
+msgstr "Ամփոփումներ"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} of {$total} հոդվածներ"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Նիշքի ընդհանուր դիտումները ըստ ամսաթվի"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Համառոտագրության ընդհանուր դիտումներ ըստ ամսաթվի"
+
+msgid "stats.publications.none"
+msgstr ""
+"Այս պարամետրերին համապատասխանող օգտագործման վիճակագրությամբ հոդվածներ չեն "
+"գտնվել:"
+
+msgid "stats.publications.details"
+msgstr "Հոդվածի մանրամասները"
+
+msgid "stats.publicationStats"
+msgstr "Հոդված Վիճակագրություն"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Ուղարկեք պատճենը հիմնական կոնտակտին, որը նշված է Ամսագրի կարգավորումներում:"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Նշված օբյեկտները չհաջողվեց գտնել:"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI նախածանցը բացակայում է {$path} ուղով ամսագրի համար:"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Վավերացումը ձախողվեց:"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Վավերացումը հաջողվեց:"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Գրանցումը հաջողվեց:"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Գրանցումն անհաջող էր: DOI գրանցման կայանը վերադարձրեց սխալ՝ '{$param}':"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Մուտքային նիշքը {$param} ընթեռնելի չէ:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Ելքային նիշքը {$param} գրառելի չէ:"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Անվավեր XML:"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Չհաջողվեց փոխարկել ընտրված օբյեկտները:"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Ընտրված օբյեկտներ չկան:"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Վավերացրեք XML-ը մինչև արտահանումը և գրանցումը:"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Գրանցել"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Նշեք գրանցված"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Արտահանում"
+
+msgid "plugins.importexport.common.action"
+msgstr "Գործողություն"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Գրանցված"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Նշված է գրանցված"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Ավանդադրված չէ"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Ցանկացած կարգավիճակ"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Ցանկացած թողարկում"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Խնդրում ենք նկատի ունենալ, որ գաղտնաբառը կպահվի որպես պարզ տեքստ, այսինքն՝ "
+"կոդավորված չէ:"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Գաղտնաբառ"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI հանրային նույնացուցիչի հավելվածում DOI նշանակման համար հրապարակման "
+"օբյեկտներ ընտրված չեն, ուստի այս հավելվածում ավանդի կամ արտահանման "
+"հնարավորություն չկա:"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Փլագինը լիովին կարգավորված չէ:"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Այս փլագինը օգտագործելու համար խնդրում ենք գնալ «Հանրային նույնացուցիչ» "
+"հավելվածի դաս, միացնել և կարգավորել DOI հավելվածը և այնտեղ նշել վավեր DOI "
+"նախածանց:"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Փլագինի պահանջները չեն բավարարվում"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Շարվածքներ"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Թողարկումներ"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Հոդվածներ"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI փլագինի կարգավորումներ"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Կարգավորումներ"
+
+msgid "grid.genres.description"
+msgstr ""
+"Այս բաղադրիչներն օգտագործվում են նիշքերի անվանման նպատակներով և ներկայացված "
+"են նիշքերի վերբեռնման բացվող ընտրացանկում: ## նշանակված ժանրերը օգտվողին "
+"թույլ են տալիս նիշքը կապել կամ ամբողջ ներկայացման 99Z-ի կամ որոշակի "
+"բաղադրիչի հետ՝ ըստ թվի (օրինակ՝ 02):"
+
+msgid "grid.genres.title"
+msgstr "Հոդվածի բաղադրիչներ"
+
+msgid "grid.genres.title.short"
+msgstr "Բաղադրիչներ"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Հոդվածի թույլտվությունները հաջողությամբ վերականգնվեցին:"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Հեռացրեք հեղինակային իրավունքի հայտարարությունը և արտոնագրման "
+"տեղեկությունները յուրաքանչյուր հրապարակված հոդվածի համար՝ դրանք "
+"վերադարձնելով ամսագրի ընթացիկ լռելյայն կարգավորումներին: Սա ընդմիշտ կհեռացնի "
+"հոդվածներին կցված հեղինակային իրավունքի և արտոնագրման մասին բոլոր նախկին "
+"տեղեկությունները: Որոշ դեպքերում ձեզ օրինականորեն չի թույլատրվում "
+"վերաարտոնագրել այն աշխատանքը, որը հրապարակվել է  այլ արտոնագրի ներքո: "
+"Խնդրում ենք զգույշ եղեք այս գործիքն օգտագործելիս և դիմեք իրավական "
+"փորձաքննության, եթե վստահ չեք, թե ինչ իրավունքներ ունեք ձեր ամսագրում "
+"հրապարակված հոդվածների նկատմամբ:"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Վստա՞հ եք, որ ցանկանում եք վերականգնել թույլտվությունների տվյալները բոլոր "
+"հոդվածների համար: Այս գործողությունը հնարավոր չէ հետարկել:"
+
+msgid "manager.setup.resetPermissions"
+msgstr "Վերականգնել հոդվածի թույլտվությունները"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Թողարկում. լռելյայն տարին կնշվի համարի հրապարակման օրվանից:"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Հոդված. լռելյայն տարին կվերցվի հոդվածի հրապարակման օրվանից, ինչպես "
+"«հրապարակել-ընթացում»:"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Հիմնել նոր հոդվածի հեղինակային իրավունքի տարին"
+
+msgid "manager.publication.library"
+msgstr "Հրատարակչության գրադարան"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Դերերը ամսագրի օգտատերերի խմբերն են, որոնց հասանելի է թույլտվության տարբեր "
+"մակարդակները և դրանց հետ կապված աշխատանքային հոսքերը ամսագրում: Կան հինգ "
+"տարբեր թույլտվությունների մակարդակներ. Ամսագրի կառավարիչներին հասանելի է "
+"ամսագրի ամեն ինչ (ողջ բովանդակությունը և կարգավորումները); Բաժնի խմբագիրներն "
+"ունեն ամբողջական մուտք դեպի ողջ հանձնարարված բովանդակությունը. Ամսագրի "
+"օգնականները սահմանափակ հասանելիություն ունեն բոլոր հայտերին, որոնք "
+"բացահայտորեն հանձնարարվել են նրանց խմբագրի կողմից. Գրախոսները կարող են "
+"տեսնել և կատարել այն ներկայացումները, որոնք իրենց հանձնարարվել է գրախոսել. և "
+"Հեղինակները կարող են տեսնել և շփվել սահմանափակ քանակությամբ տեղեկատվության "
+"հետ իրենց իսկ ներկայացումների վերաբերյալ: Բացի այդ, կան հինգ տարբեր փուլային "
+"առաջադրանքներ, որոնց դերերը կարող են հասանելի լինել՝ ներկայացում, ներքին "
+"գրախոսություն, գրախոսություն, խմբագրական և արտադրություն:"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Ամսագրի հրապարակված համարներում հոդվածները կազմակերպվում են Բաժիններով՝ "
+"սովորաբար ըստ թեմայի կամ բովանդակության տեսակի (օրինակ՝ գրախոսման հոդվածներ, "
+"հետազոտություններ և այլն):"
+
+msgid "grid.action.addSection"
+msgstr "Ավելացրեք բաժին"
+
+msgid "grid.category.path"
+msgstr "Ուղի"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Ընտրեք ամենահարմար դասերը վերը թվարկված հավաքածուից: Ընթերցողները ամսագրի "
+"ամբողջական հավաքածուից կկարողանան թերթել ըստ դասերի:"
+
+msgid "manager.setup.categories"
+msgstr "Դասեր"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Այս հղումը կցուցադրվի միայն այն ժամանակ, երբ այցելուն մուտք է գործում:"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Հղում դեպի էջ, որը նկարագրում է այցելուի ընթացիկ և անցյալ "
+"բաժանորդագրությունները:"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Հղում դեպի ձեր առաջարկած բաժանորդագրությունները նկարագրող էջ:"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Բաժանորդագրության տեսակը հաջողությամբ ստեղծվեց:"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Բաժանորդագրման տեսակներ չեն ստեղծվել:"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Բաժանորդագրության տեսակը"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Պահանջվում է բաժանորդագրության տեսակի անուն:"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Այս անունով բաժանորդագրության տեսակ արդեն գոյություն ունի:"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Տիպի անվանումը"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Պահպանեք և ստեղծեք մեկ ուրիշը"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Խնդրում ենք օգտագործել նշված վանդակը:"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Բաժանորդագրության այս տեսակը հանրությանը հասանելի կամ տեսանելի մի դարձրեք "
+"կայքում:"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Ընտրանքներ"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Խնդրում ենք օգտագործել նշված ընտրավանդակը:"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Բաժանորդագրությունները պահանջում են անդամակցության մասին տեղեկություններ "
+"(օրինակ՝ ասոցիացիայի, կազմակերպության, կոնսորցիումի և այլն)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Խնդրում ենք օգտագործել տրամադրված տարբերակները:"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Ինստիտուցիոնալ (օգտատերերը վավերացվում են  դոմեյնի կամ IP հասցեի միջոցով)"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Անհատական (օգտատերերը վավերացվում են մուտքի միջոցով)"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Բաժանորդագրություններ"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Խնդրում ենք ընտրել բաժանորդագրության տեսակի վավեր ձևաչափ:"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Պահանջվում է բաժանորդագրության տեսակի ձևաչափ:"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Ձևաչափ"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Պահանջվում է տևողություն:"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Տևողությունը պետք է լինի դրական թիվ:"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Բաժանորդագրության տևողությունը ամիսներով (օրինակ՝ 12):"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Տևողություն"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Խնդրում ենք օգտագործել տրամադրված տարբերակները:"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Երբեք չի սպառվում"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "ամիսներ (օրինակ՝ 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Ժամկետը լրանում է հետո"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Նկարագրություն"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Խնդրում ենք ընտրել վավեր արժույթ:"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Պահանջվում է արժույթ:"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Արտարժույթ"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Պահանջվում է արժեքը:"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Արժեքը պետք է լինի դրական թիվ:"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Մուտքագրեք թվային արժեք (օրինակ՝ 40 կամ 40,00) առանց նշանի (օրինակ՝ $):"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Արժեքը"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Խմբագրել"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Խմբագրել բաժանորդագրության տեսակը"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Տևողություն"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Ստեղծել"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Ստեղծեք բաժանորդագրության նոր տեսակ"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Ինստիտուցիոնալ"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Անհատական"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Բաժանորդագրություններ"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Արժեքը"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Զգուշացում. Բաժանորդագրության այս տեսակով բոլոր բաժանորդագրությունները "
+"նույնպես կջնջվեն: Իսկապե՞ս ուզում եք շարունակել և ջնջել բաժանորդագրության "
+"այս տեսակը:"
+
+msgid "manager.subscriptionTypes"
+msgstr "Բաժանորդագրման տեսակները"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Հաստատության անվանումը"
+
+msgid "manager.subscriptions.contact"
+msgstr "Կոնտակտի անունը"
+
+msgid "manager.subscriptions.user"
+msgstr "Օգտվող"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Բաժանորդագրության տեսակ"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Բաժանորդագրությունը հաջողությամբ ստեղծվեց:"
+
+msgid "manager.subscriptions.select"
+msgstr "Ընտրել"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Բաժանորդագրության հասանելիության արտոնություններն ինքնաշխատ կերպով տրվում են "
+"ամսագրի կառավարիչներին, խմբագիրներին, բաժնի խմբագիրներին, դասավորության "
+"խմբագիրներին, գրական խմբագիրներին և սրբագրողներին:"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Ընտրեք Օգտվողին"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Ընտրեք Բաժանորդագրության կոնտակտը"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Բաժանորդագրություններ չկան"
+
+msgid "manager.subscriptions.notes"
+msgstr "Նշումներ"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Հղման թիվը"
+
+msgid "manager.subscriptions.membership"
+msgstr "Անդամակցություն"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP միջակայք"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Բաժանորդագրության տեսակը պետք է ստեղծվի մինչև նոր բաժանորդագրություններ "
+"կատարելը:"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Այս օգտվողն արդեն ունի այս ամսագրի բաժանորդագրություն:"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Օգտատիրոջը ծանուցման էլ. փոստ ուղարկելու համար բաժանորդագրության կոնտակտային "
+"անունը և էլ․ փոստի հասցեն պետք է նշվեն ամսագրի կարգաբերման մեջ:"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Պահպանեք և ստեղծեք մեկ ուրիշը"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Ավելացնել"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Ջնջել"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Խնդրում ենք մուտքագրել վավեր IP տիրույթ:"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Եթե այստեղ մուտքագրված են IP տիրույթներ, ապա տիրույթն ընտրովի է:<br />Վավեր "
+"արժեքները ներառում են IP հասցե (օրինակ՝ 142.58.103.1), IP տիրույթ (օրինակ՝ "
+"142.58.103.1 - 142.58.103.4), IP տիրույթ «*» նշանով ( օրինակ՝ 142.58.*.*) և "
+"IP տիրույթ CIDR-ով (օրինակ՝ 142.58.100.0/24):"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP միջակայքերը"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Խնդրում ենք մուտքագրել վավեր դոմեյն:"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Բաժանորդագրության ընտրված տեսակը պահանջում է դոմեյն և/կամ IP տիրույթ՝ "
+"բաժանորդագրության նույնականացման համար:"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Եթե այստեղ մուտքագրված է դոմեյն, IP-ի տիրույթները պարտադիր չեն:<br />Վավեր "
+"արժեքները տիրույթի անուններն են (օրինակ՝ lib.sfu.ca):"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Փոստային հասցե"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Պահանջվում է հաստատության անվանումը:"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Հաստատության անվանումը"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Դոմեյն"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Նշումներ"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr ""
+"Ընտրված բաժանորդագրության տեսակը պահանջում է անդամակցության մասին "
+"տեղեկություններ:"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Մուտքագրեք անդամակցության տվյալները, եթե բաժանորդագրության տեսակը պահանջում "
+"է, որ բաժանորդները պատկանում են ասոցիացիայի կամ կազմակերպության:"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Հղման թիվը"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Անդամակցություն"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Խնդրում ենք օգտագործել նշված ընտրավանդակը:"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Օգտագործողին էլ-նամակ ուղարկեք՝ իր օգտանունով և բաժանորդագրության "
+"մանրամասներով:"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Խնդրում ենք ընտրել վավեր երկիր:"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Խնդրում ենք ընտրել վավեր օգտվող:"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Պահանջվում է օգտատեր։"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Կոնտակտ"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Օգտվող"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Նշում. Ստորև բերված բոլոր փոփոխությունները վերաբերում են օգտվողի ամբողջ "
+"համակարգի պրոֆիլին:"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Խնդրում ենք ընտրել բաժանորդագրության ավարտի վավեր ամսաթիվ:"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Սա անժամկետ բաժանորդագրության տեսակ է. խնդրում ենք չնշել ավարտի ամսաթիվը:"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Սա անժամկետ բաժանորդագրության տեսակ է. խնդրում ենք չնշել մեկնարկի ամսաթիվը:"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Պահանջվում է բաժանորդագրության ավարտի ամսաթիվը:"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Ավարտի ամսաթիվը"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Խնդրում ենք ընտրել բաժանորդագրության մեկնարկի վավեր ամսաթիվ:"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Պահանջվում է բաժանորդագրության մեկնարկի ամսաթիվ:"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Մեկնարկի ամսաթիվ"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Խնդրում ենք ընտրել բաժանորդագրության վավեր տեսակ:"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Պահանջվում է բաժանորդագրության տեսակ:"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Բաժանորդագրության տեսակը"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Խնդրում ենք ընտրել բաժանորդագրության վավեր կարգավիճակ:"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Պահանջվում է բաժանորդագրության կարգավիճակ:"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Կարգավիճակ"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Բոլորը"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Կարգավիճակով"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Խմբագրել"
+
+msgid "manager.subscriptions.edit"
+msgstr "Խմբագրել բաժանորդագրությունը"
+
+msgid "manager.subscriptions.domain"
+msgstr "Դոմեյն"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Սկսման ամսաթիվ"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Սկիզբ"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Ավարտի ամսաթիվ"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Ավարտ"
+
+msgid "manager.subscriptions.renew"
+msgstr "Թարմացնել"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Ստեղծել"
+
+msgid "manager.subscriptions.create"
+msgstr "Ստեղծեք նոր բաժանորդագրություն"
+
+msgid "manager.subscriptions.summary"
+msgstr "Բաժանորդագրությունների ամփոփում"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Իսկապե՞ս ուզում եք ջնջել այս բաժանորդագրությունը:"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Իսկապե՞ս ուզում եք թարմացնել այս բաժանորդագրությունը:"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Ինստիտուցիոնալ բաժանորդագրություններ"
+
+msgid "manager.individualSubscriptions"
+msgstr "Անհատական բաժանորդագրություններ"
+
+msgid "manager.subscriptions"
+msgstr "Բաժանորդագրություններ"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Խնդրում ենք մուտքագրել վավեր էլ. փոստ."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Այս կոնտակտային տվյալները կցուցադրվեն բաժանորդագրության էջում՝ "
+"բաժանորդագրությունների հետ կապված հարցումներով հաճախորդների համար:"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Բաժանորդագրության կառավարիչ"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Բաժանորդագրության տեսակները և վճարների կառուցվածքը կցուցադրվեն "
+"բաժանորդագրությունների էջում, ինչպես նաև Բաժանորդագրության կառավարչի անունը "
+"և կոնտակտային տվյալները: Բաժանորդագրությունների մասին հավելյալ "
+"տեղեկություններ, ինչպիսիք են վճարման եղանակները կամ զարգացող երկրների "
+"բաժանորդներին աջակցությունը, կարող են ավելացվել այստեղ:"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Բաժանորդագրության Տեղեկություններ"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Բաժանորդագրված ամսագրերը կարող են ապահովել «հետաձգված բաց մուտք» իրենց "
+"հրապարակված բովանդակությանը, ինչպես նաև թույլատրել «հեղինակային "
+"ինքնաարխիվացում» (որոնք երկուսն էլ մեծացնում են ընթերցողների թիվը և "
+"բովանդակության մեջբերումը):"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Բաժանորդագրության ամսագրերի համար բաց մուտքի ընտրանքներ"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Նշում.</strong> Այս ընտրանքները միացնելու համար ամսագրի կառավարիչը "
+"պետք է միացնի առցանց վճարումների մոդուլը, ներառյալ առցանց վճարումները "
+"բաժանորդագրությունների համար՝ Ընթերցողի վճարների ներքո:"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Նշում.</strong> Ինստիտուցիոնալ բաժանորդագրությունները, որոնք ձեռք են "
+"բերվել առցանց, պահանջում են տրամադրված տիրույթի և IP տիրույթի հաստատում և "
+"բաժանորդագրության ակտիվացում Բաժանորդագրման կառավարչի կողմից:"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Տեղեկացրեք Բաժանորդագրման կառավարչին էլեկտրոնային փոստով Ինստիտուցիոնալ "
+"բաժանորդագրության առցանց թարմացման դեպքում:"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Տեղեկացրեք Բաժանորդագրության կառավարչին էլ․ փոստով Անհատական "
+"բաժանորդագրության առցանց թարմացման դեպքում:"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Տեղեկացրեք Բաժանորդագրման կառավարչին էլեկտրոնային փոստով Ինստիտուցիոնալ "
+"բաժանորդագրության առցանց գնումից հետո (խորհուրդ է տրվում):"
+
+msgid "manager.setup.masthead"
+msgstr "Մասթհեդ"
+
+msgid "manager.setup"
+msgstr "Ամսագրի կարգավորումներ"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Սահմանափակել ամփոփման բառերի քանակը այս բաժնի համար (0՝ առանց "
+"սահմանափակումների)"
+
+msgid "manager.sections.wordCount"
+msgstr "Բառի հաշվիչ"
+
+msgid "manager.sections.unassigned"
+msgstr "Բաժնի հասանելի խմբագիրներ"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Ամսագրի այս բաժնին արված ներկայացումներ"
+
+msgid "manager.sections.submissionReview"
+msgstr "Չի ենթարկվի գործընկերային գրախոսության"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Չի ներառվի ամսագրի ինդեքսավորման մեջ"
+
+msgid "manager.sections.reviewed"
+msgstr "Գործընկերային գրախոսություն"
+
+msgid "manager.sections.readingTools"
+msgstr "Ընթերցանության գործիքներ"
+
+msgid "manager.sections.policy"
+msgstr "Բաժնի քաղաքականություն"
+
+msgid "manager.sections.open"
+msgstr "Բացեք հայտերը"
+
+msgid "manager.sections.noneCreated"
+msgstr "Չկան ստեղծված բաժիններ."
+
+msgid "manager.sections.indexed"
+msgstr "Ինդեքսավորված"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Օրինակ՝ «Գործընկերային գրախոսված հոդված», «Գրքի գրախոսություն», «"
+"Մասնագիտական մեկնաբանություն» և այլն):"
+
+msgid "manager.sections.identifyType"
+msgstr "Նշեք այս բաժնում հրապարակված նյութերը որպես a(n)"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Բաց թողեք այս բաժնի վերնագիրը թողարկման բովանդակությունից:"
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Թողարկման բովանդակությունից բաց թողեք բաժնի նյութերի հեղինակների անունները:"
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Բաժնի համար անհրաժեշտ է վերնագիր:"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Խնդրում ենք համոզվել, որ դուք ընտրել եք վերանայման վավեր ձև:"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Խնդրում ենք համոզվել, որ առնվազն մեկ վանդակը նշված է Բաժնի խմբագրիչի "
+"յուրաքանչյուր հանձնարարության համար:"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Բաժնի համար պահանջվում է կրճատ վերնագիր"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Առնվազն մեկ բաժին պետք է ակտիվ լինի: Այցելեք աշխատանքային հոսքի "
+"կարգավորումները՝ անջատելու այս ամսագրի բոլոր ներկայացումները:"
+
+msgid "manager.sections.editors"
+msgstr "Բաժնի խմբագիրներ"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Նյութերը կարող են ներկայացվել միայն խմբագիրների և բաժնի խմբագիրների կողմից:"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Այս բաժնում ավելացրեք Բաժնի խմբագիր, որպեսզի ներկայացումները ինքնաշխատ "
+"կերպով վերագրվեն Բաժինների խմբագրին: (Հակառակ դեպքում, Բաժնի խմբագիրները "
+"կարող են նշանակվել ձեռքով, ներկայացումը մուտքագրվելուց հետո:) Եթե ավելացվի՝ "
+"Բաժնի խմբագիրն ինքնաշխատ կարող է նշանակվել՝ վերահսկելու համար այս բաժին "
+"ներկայացված նյութերի ԳՐԱԽՈՍՈՒՄԸ (գործընկերային գրախոսություն) և/կամ "
+"ԽՄԲԱԳՐՈՒՄԸ (գրական խմբագրում, դասավորություն և սրբագրում)։ Բաժինների "
+"խմբագիրները ստեղծվում են՝ սեղմելով «Բաժինների խմբագիրներ»՝ «Դերեր ամսագրի "
+"կառավարման մեջ» ներքո:"
+
+msgid "manager.sections.create"
+msgstr "Ստեղծեք բաժին"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Նախքան այս բաժինը ջնջելը, դուք պետք է դրան ներկայացված հոդվածները տեղափոխեք "
+"այլ բաժիններ:"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Իսկապե՞ս ուզում եք ընդմիշտ ջնջել այս բաժինը:"
+
+msgid "manager.sections.assigned"
+msgstr "Այս բաժնի խմբագիրները"
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Բաժնի խմբագիրներ դեռ չկան։ Սկզբում ավելացրեք այս դերը առնվազն մեկ օգտատիրոջ "
+"համար՝ Կառավարում > Կարգավորումներ > Օգտատերեր & amp; Դերեր բաժնից."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Չեն պահանջում համառոտագրություններ"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Գրանցման համաժամացումը կգրանցի նշված ամսագրում նշված դերում գրանցված բոլոր "
+"օգտվողներին այս ամսագրի նույն դերում: Այս ֆունկցիան թույլ է տալիս օգտատերերի "
+"մի շարք (օրինակ՝ Գրախոսներ) համաժամեցնել ամսագրերի միջև:"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Գրանցումը"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"նտրեք օգտվողին, որին կվերագրվի նախորդ օգտատերերի հեղինակությունները, "
+"խմբագրման հանձնարարությունները և այլն:"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Ընտրեք օգտվողին (կամ մի քանիսին)՝ մեկ այլ օգտատիրոջ հաշվին միանալու համար "
+"(օրինակ՝ երբ ինչ-որ մեկն ունի օգտատիրոջ երկու հաշիվ): Առաջինը ընտրված "
+"հաշիվ(ներ)ը կջնջվեն, և ցանկացած ներկայացում, առաջադրանք և այլն կվերագրվի "
+"երկրորդ հաշվին:"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Ամսագրի հետ"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Գրանցեք գոյություն ունեցող օգտվողին"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Ընտրեք կաղապար"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Հեռացնե՞լ այս օգտվողին այս ամսագրից: Այս գործողությունը կհեռացնի օգտատիրոջ "
+"գրանցումը այս ամսագրի բոլոր դերերից:"
+
+msgid "manager.people.allUsers"
+msgstr "Բոլոր գրանցված օգտվողները"
+
+msgid "manager.people.showNoRole"
+msgstr "Ցույց տալ առանց դերի օգտատերերին"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Գրանցեք օգտվողին այս կայքից այս ամսագրում"
+
+msgid "manager.people.allJournals"
+msgstr "Բոլոր ամսագրերը"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Այս ամսագրում գրանցված օգտվողներ"
+
+msgid "manager.payment.userName"
+msgstr "Վճարման ID"
+
+msgid "manager.paymentTypes"
+msgstr "Վճարման տեսակները"
+
+msgid "manager.payment.records"
+msgstr "Գրանցումներ"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Ընտրված ընտրանքները, դրանց նկարագրությունների և վճարների հետ միասին (որոնք "
+"կարող են խմբագրվել ստորև), կհայտնվեն ամսագրի մասին «Քաղաքականություն» "
+"բաժնում, ինչպես նաև այն կետերում, որտեղ պահանջվում է վճարում:"
+
+msgid "manager.payment.readerFees"
+msgstr "Ընթերցողի վճարներ"
+
+msgid "manager.payment.paymentType"
+msgstr "Վճարման տեսակ"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Վճարների մուծման եղանակներ"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "Այս էկրանից կարող եք կարգավորել վճարման հետևյալ  եղանակներից որևէ մեկը:"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Վճարման եղանակ"
+
+msgid "manager.payment.paymentId"
+msgstr "Վճարման ID"
+
+msgid "manager.payment.options.text"
+msgstr "Վճարման եղանակի նկարագրություն"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Գնել թողարկում"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Գնել հոդված"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Հոդվածի մշակման վճար"
+
+msgid "manager.payment.options.onlypdf"
+msgstr ""
+"Սահմանափակել միայն թողարկումների և հոդվածների PDF տարբերակի հասանելիությունը"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Ասոցիացիայի անդամակցություն"
+
+msgid "manager.payment.options.feeName"
+msgstr "Վճարի անուն"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Վճարի նկարագրություն"
+
+msgid "manager.payment.options.fee"
+msgstr "Վճար"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Վճարումները կակտիվացվեն այս ամսագրի համար: Նկատի ունեցեք, որ վճարումներ "
+"կատարելու համար օգտատերերից կպահանջվի մուտք գործել:"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Իսկապե՞ս ցանկանում եք ջնջել այս բաժանորդագրությունը:"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Սա կակտիվացնի վճարումները Բաժանորդագրությունների համար, որտեղ տեսակները, "
+"արժեքը, տևողությունը և բաժանորդագրությունները կառավարվում են Ամսագրի "
+"(Բաժանորդագրության) կառավարչի կողմից:"
+
+msgid "manager.payment.options"
+msgstr "Ընտրանքներ"
+
+msgid "manager.payment.notFound"
+msgstr "Չի գտնվել"
+
+msgid "manager.payment.noPayments"
+msgstr "Վճարումներ չկան"
+
+msgid "manager.payment.generalOptions"
+msgstr "Ընդհանուր ընտրանքներ"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Ասոցիացիայի Անդամակցությունը կհայտնվի «Օրագրի մասին» բաժնում՝ \""
+"Քաղաքականություն\" ներքո:"
+
+msgid "manager.payment.generalFees"
+msgstr "Ընդհանուր վճարներ"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Բոլոր ծախսերը պետք է լինեն դրական թվային արժեքներ (թույլատրվում են "
+"տասնորդական միավորներ)"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Վճարների մուծման տարբերակներ"
+
+msgid "manager.payment.enable"
+msgstr "Միացնել"
+
+msgid "manager.payment.editSubscription"
+msgstr "Խմբագրել բաժանորդագրությունը"
+
+msgid "manager.payment.details"
+msgstr "Մանրամասներ"
+
+msgid "manager.payment.description"
+msgstr "Նկարագրություն"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS-ը արժույթի փոխարկումներ չի իրականացնում: Եթե ընդունում եք վճարումներ "
+"բաժանորդագրությունների համար, դուք պետք է համոզվեք, որ բաժանորդագրության "
+"արժույթը համընկնում է այստեղ նշված արժույթի հետ:"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Ստորև մուտքագրեք վճարների գումարները՝ հեղինակի վճարները միացնելու համար:"
+
+msgid "manager.payment.authorFees"
+msgstr "Հեղինակային վճարներ"
+
+msgid "manager.payment.amount"
+msgstr "Գումարը"
+
+msgid "manager.payment.addPayment"
+msgstr "Ավելացնել վճարում"
+
+msgid "manager.payment.action"
+msgstr "Գործողություն"
+
+msgid "manager.managementPages"
+msgstr "Կառավարման էջեր"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Սա կլինի ամսագրի կայքի լռելյայն լեզուն:"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Ներեցեք, լրացուցիչ լեզուներ չկան: Կապվեք ձեր կայքի ադմինիստրատորի հետ, եթե "
+"ցանկանում եք օգտագործել լրացուցիչ լեզուներ այս ամսագրի հետ:"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS-ը կարող է հասանելի լինել օգտվողներին աջակցվող մի քանի լեզուներից որևէ "
+"մեկով: Բացի այդ, OJS-ը կարող է գործել որպես բազմալեզու համակարգ՝ տրամադրելով "
+"օգտատերերին յուրաքանչյուր էջի լեզուների միջև փոխարկման հնարավորություն և "
+"թույլ տալով որոշակի տվյալներ մուտքագրել մի քանի լրացուցիչ լեզուներով:<br /><"
+"br/>Եթե լեզուն աջակցվում է OJS-ի կողմից և ստորև նշված չէ, խնդրեք ձեր կայքի "
+"ադմինիստրատորին տեղադրել լեզուն կայքի կառավարման միջերեսից: Նոր լեզուների "
+"աջակցություն ավելացնելու հրահանգների համար խնդրում ենք ծանոթանալ OJS-ի "
+"փաստաթղթերին:"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Սա կփոխարինի ամսագրի ցանկացած տեղային կարգավորում, որն ունեիք այս տեղայինի "
+"համար"
+
+msgid "manager.language.forms"
+msgstr "Ձևեր"
+
+msgid "manager.language.submissions"
+msgstr "Ներկայացումներ"
+
+msgid "manager.language.ui"
+msgstr "Օգտվողի միջերես"
+
+msgid "manager.journalManagement"
+msgstr "Ամսագրի կառավարում"
+
+msgid "manager.files.note"
+msgstr ""
+"Նշում. Նիշքերի զննարկիչը լրացուցիչ հատկություն է, որը թույլ է տալիս "
+"ուղղակիորեն դիտել և կառավարել ամսագրի հետ կապված նիշքերը և գրացուցակները:"
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Վստա՞հ եք, որ ցանկանում եք վերակայել այս ամսագրի էլ․փոստի բոլոր ձևանմուշները:"
+" Դուք կկորցնեք ձեր կատարած ցանկացած հարմարեցում:"
+
+msgid "manager.website.archiving"
+msgstr "Արխիվացում"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Գրական խմբագրման փուլին հասնելուն պես"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Օգտագործեք լռելյայն կաղապարները:<br />%j.v%vi%i թողարկումների համար<br "
+"/>%j.v%vi%i.%a հոդվածների համար<br />%j.v%vi%i.%a.g%g շարվածքների համար."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Ընտրեք, թե որ տարրերին կհատկացվի DOI: Ամսագրերից շատերը DOI-ներ են "
+"հատկացնում հոդվածներին, բայց դուք կարող եք ցանկանալ DOI-ներ հատկացնել բոլոր "
+"հրապարակված նյութերին:"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Թույլ տվեք թվային օբյեկտների նույնացուցիչներին (DOI) նշանակվել այս ամսագրում "
+"հրապարակված աշխատանքին:"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Ամսագիրը կպահանջի բաժանորդագրություններ՝ դրա բովանդակության մի մասը կամ "
+"ամբողջը մուտք գործելու համար:"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Ամսագիրը կապահովի բաց մուտք դեպի բովանդակություն:"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS-ը չի օգտագործվի ամսագրի բովանդակությունը առցանց հրապարակելու համար:"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Հրապարակման ռեժիմ"
+
+msgid "manager.distribution.publication"
+msgstr "Հրապարակում"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Օգտագործեք հոդվածի հրապարակման ամսաթիվը"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Օգտագործեք թողարկման հրապարակման ամսաթիվը"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Ընտրեք, թե ինչպես է որոշվում հեղինակային իրավունքի լռելյայն ամսաթիվը հոդվածի "
+"համար: Այս լռելյայնը կարող է անտեսվել յուրաքանչյուր դեպքի համար: Եթե դուք «"
+"հրապարակում եք ստանալուն պես», մի օգտագործեք համարի հրապարակման ամսաթիվը:"
+
+msgid "manager.distribution.access"
+msgstr "Մուտք"
