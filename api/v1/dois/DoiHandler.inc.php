@@ -146,7 +146,7 @@ class DoiHandler extends PKPDoiHandler
         $doisToUpdate = [];
         foreach ($requestIds as $issueId) {
             dispatch(new DepositIssue($issueId, $context, $agency));
-            array_merge($doisToUpdate, Repo::doi()->getDoisForIssue($issueId));
+            $doisToUpdate = array_merge($doisToUpdate, Repo::doi()->getDoisForIssue($issueId));
         }
         Repo::doi()->markSubmitted($doisToUpdate);
 
