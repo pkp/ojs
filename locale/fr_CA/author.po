@@ -1,9 +1,10 @@
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2020-07-24 13:47+0000\n"
+"PO-Revision-Date: 2022-07-05 09:31+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -177,7 +178,7 @@ msgstr "Se réfère à un lieu géo-spatial, une couverture historique ou chrono
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"anglais=en ; français=fr ; espagnol=es. <a href=\"http ://www.loc.gov/"
+"anglais=en ; français=fr ; espagnol=es. <a href=\"https ://www.loc.gov/"
 "standards/iso639-2/php/code_list.php\" target=\"_blank\">Codes "
 "supplémentaires</a>."
 
