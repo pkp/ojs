@@ -1,10 +1,11 @@
+# Piotr Pielach <ppielach@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:38+00:00\n"
-"PO-Revision-Date: 2020-12-09 14:51+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
+"PO-Revision-Date: 2022-07-05 09:31+0000\n"
+"Last-Translator: Piotr Pielach <ppielach@gmail.com>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "pl_PL/>\n"
 "Language: pl_PL\n"
@@ -184,7 +185,7 @@ msgid "publication.selectIssue"
 msgstr "Wybierz wydanie w celu zaplanowania publikacji"
 
 msgid "publication.assignToissue"
-msgstr "Przydziel do wydania"
+msgstr "Przydziel do numeru"
 
 msgid "publication.unscheduledIn"
 msgstr "Element nie został zaplanowany do publikacji w żadnym z wydań."
@@ -223,7 +224,7 @@ msgid "publication.issue.success"
 msgstr "Szczegóły publikacji wydania zostały zaktualizowane."
 
 msgid "publication.invalidIssue"
-msgstr "Nie można odnaleźć wydania dla tej publikacji."
+msgstr "Nie można odnaleźć numeru dla tej publikacji."
 
 msgid "publication.invalidSection"
 msgstr "Nie można odnaleźć działu dla tej publikacji."
@@ -258,7 +259,7 @@ msgid "submission.queries.production"
 msgstr "Dyskusja w trakcie realizacji"
 
 msgid "publication.version.details"
-msgstr "Szczegóły publikacji wersji {$version}"
+msgstr "Szczegóły publikacji dla wersji {$version}"
 
 msgid "publication.unschedule.confirm"
 msgstr "Jesteś pewien, że nie chcesz zaplanować tego do publikacji?"
@@ -347,3 +348,23 @@ msgstr "Opublikowano"
 
 msgid "submission.publication"
 msgstr "Publikacja"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Zgłoszenie, {$title}, zostało odesłane do etapu recenzji."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Wyślij z powrotem do recenzji"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Cofnij decyzję o akceptacji zgłoszenia i odeślij ją do etapu recenzji."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Wróć do recenzji"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Publikacja została przydzielona do <a href=\"{$issueUrl}\">{$issueName}</a> "
+"ale nie została przewidziana do opublikowania."
+
+msgid "publication.changeIssue"
+msgstr "Zmień numer"
