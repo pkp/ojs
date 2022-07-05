@@ -1,8 +1,1782 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-05 09:32+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Լրացուցիչ տեղեկություններ հրապարակման համակարգի, պլատֆորմի և աշխատանքային "
+"հոսքի մասին OJS/PKP-ի կողմից:"
+
+msgid "about.memberships"
+msgstr "Անդամակցություններ"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Բաժանորդագրման տեսակները"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Արժեքը"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Տևողություն"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Ձևաչափ"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Անուն"
+
+msgid "about.subscriptionsContact"
+msgstr "Բաժանորդագրություններ կապի պատասխանատու"
+
+msgid "about.subscriptions.institutional"
+msgstr "Անհատական բաժանորդագրություններ"
+
+msgid "about.subscriptions.individual"
+msgstr "Անհատական բաժանորդագրություններ"
+
+msgid "about.subscriptions"
+msgstr "Բաժանորդագրություններ"
+
+msgid "about.archiving"
+msgstr "Արխիվացում"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "համարի հրապարակումից հետո ամիս(ներ):"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Այս ամսագրի բովանդակությունը հասանելի կլինի բաց մատչելիության ձևաչափով"
+
+msgid "about.delayedOpenAccess"
+msgstr "Հետաձգված բաց մատչելիություն"
+
+msgid "about.openAccessPolicy"
+msgstr "Բաց մատչելիության քաղաքականություն"
+
+msgid "about.publicationFrequency"
+msgstr "Հրապարակման հաճախականությունը"
+
+msgid "about.peerReviewProcess"
+msgstr "Գործընկերային գրախոսության գործընթաց"
+
+msgid "about.authorFeesMessage"
+msgstr "Այս ամսագիրը գանձում է հետևյալ հեղինակային վճարները."
+
+msgid "about.authorFees"
+msgstr "Հեղինակային վճարներ"
+
+msgid "about.privacyStatement"
+msgstr "Գաղտնիության քաղաքականությունը"
+
+msgid "about.copyrightNotice"
+msgstr "Հեղինակային իրավունքի ծանուցում"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Որպես ներկայացման գործընթացի մաս, հեղինակներից պահանջվում է ստուգել իրենց "
+"ներկայացման համապատասխանությունը հետևյալ բոլոր կետերին, և ներկայացումները "
+"կարող են վերադարձվել այն հեղինակներին, որոնք չեն հետևում այս ուղեցույցներին:"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Ներկայացման նախապատրաստման ստուգաթերթ"
+
+msgid "about.authorGuidelines"
+msgstr "Հեղինակի ուղեցույցներ"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "դիտեք ձեր առկախված ներկայացումները"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Կատարեք նոր ներկայացում"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Կատարեք նոր ներկայացում <a href=\"{$url}\">{$name}</a> բաժնում:"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} կամ {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} կամ {$register} ներկայացնելու համար։"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Գրանցվել"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Մուտք"
+
+msgid "about.submissions"
+msgstr "Ներկայացումներ"
+
+msgid "about.sectionPolicies"
+msgstr "Բաժնի Քաղաքականություն"
+
+msgid "about.focusAndScope"
+msgstr "Ուղղվածություն և շրջանակ"
+
+msgid "about.editorialPolicies"
+msgstr "Խմբագրական քաղաքականություն"
+
+msgid "about.editorialTeam.biography"
+msgstr "Կենսագրություն"
+
+msgid "about.editorialTeam"
+msgstr "Խմբագրական կազմ"
+
+msgid "about.history"
+msgstr "Ամսագրի պատմություն"
+
+msgid "about.aboutContext"
+msgstr "Ամսագրի մասին"
+
+msgid "about.contact"
+msgstr "Կոնտակտ"
+
+msgid "about.statistics"
+msgstr "Վիճակագրություն"
+
+msgid "archive.issueUnavailable"
+msgstr "Համարն անհասանելի է"
+
+msgid "archive.browse"
+msgstr "Թերթիր ավելի հին համարների միջով"
+
+msgid "archive.archivesPageNumber"
+msgstr "Արխիվներ - էջ {$pageNumber}"
+
+msgid "archive.archives"
+msgstr "Արխիվներ"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Այս ամսագիրը որևէ համար չի հրապարակել։"
+
+msgid "current.noCurrentIssue"
+msgstr "Ընթացիկ թողարկում չկա"
+
+msgid "current.current"
+msgstr "Ընթացիկ"
+
+msgid "site.noJournals"
+msgstr "Հասանելի ամսագրեր չկան:"
+
+msgid "site.journalCurrent"
+msgstr "Ընթացիկ թողարկումը"
+
+msgid "site.journalRegister"
+msgstr "Գրանցվել"
+
+msgid "site.journalView"
+msgstr "Դիտել ամսագիրը"
+
+msgid "site.journalsHosted"
+msgstr "Այս կայքում տեղակայված ամսագրեր"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Ձեր ընտրած նիշքը պետք է ինքնաշխատ սկսի ներբեռնվել: Եթե դա այդպես չէ, սեղմեք "
+"ստորև նշված հղումը: Նկատի ունեցեք, որ այս նիշքը դիտելու համար կարող է "
+"պահանջվել հատուկ դիտակ կամ փլագին:<br /><br />Եթե նիշքն ինքնաշխատ չի "
+"ներբեռնվում, <a href=\"{$url}\">սեղմեք այստեղ</a>:"
+
+msgid "article.nonpdf.title"
+msgstr "Հոդվածի ներբեռնում"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Ձեր ընտրած PDF նիշքը պետք է բեռնվի այստեղ, եթե ոստայնի ձեր դիտակում "
+"տեղադրված է PDF ընթերցիչի պլագին (օրինակ՝ վերջին տարբերակը <a href=\""
+"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>).</p>"
+
+msgid "article.download"
+msgstr "Ներբեռնեք այս PDF նիշքը"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.pageTitle"
+msgstr "{$title} -ի դիտում"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Որոնման հնարքներ: <ul>\n"
+"<li>Որոնման տերմինները մեծատառերի նկատմամբ զգայուն չեն</li>\n"
+"<li>Ընդհանուր բառերն անտեսվում են</li>\n"
+"<li>Որպես լռելյայն վերադարձվում են միայն հարցման մեջ <em>բոլոր</em> "
+"տերմինները պարունակող հոդվածները (օրինակ, <em>AND</em> ենթադրվում է)</li>\n"
+"<li>Միավորել մի քանի բառեր <em>OR</em>-ի հետ՝ գտնելու որևէ տերմին պարունակող "
+"հոդվածներ. օրինակ, <em>education OR research</em></li>\n"
+"<li>Ավելի բարդ հարցումներ ստեղծելու համար օգտագործեք փակագծեր. օրինակ՝ <em>"
+"archive ((journal OR conference) NOT theses)</em></li>\n"
+"<li>Որոնեք ճշգրիտ արտահայտություն՝ այն չակերտների մեջ դնելով. օրինակ, <em>\""
+"open access publishing\"</em></li>\n"
+"<li>Բացառե՛ք բառը՝ նախածանցով <strong>-</strong> կամ <em>NOT</em>; օրինակ "
+"<em>online -politics</em> կամ <em>online NOT politics</em></li>\n"
+"<li>Օգտագործեք <strong>*</strong> տերմինի մեջ որպես նիշերի ցանկացած "
+"հաջորդականություն համապատասխանելու համար: Օրինակ, <em>soci* morality</em> "
+"կհամապատասխանեն փաստաթղթերին, պարունակող  \"sociological\" կամ \"societal\""
+"</li>\n"
+"</ul>"
+
+msgid "search.authorDetails"
+msgstr "Հեղինակի մանրամասները"
+
+msgid "search.authorIndex"
+msgstr "Թերթիր հեղինակի ցուցիչը"
+
+msgid "search.allJournals"
+msgstr "Բոլոր ամսագրերը"
+
+msgid "search.withinJournal"
+msgstr "Շրջանակներում"
+
+msgid "search.searchFor"
+msgstr "Որոնել հոդվածներ"
+
+msgid "search.browseAuthorIndex"
+msgstr "Թերթիր հեղինակի ցուցիչը"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Ավելացնել"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Ջնջել"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Խնդրում ենք մուտքագրել վավեր IP տիրույթ:"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Եթե այստեղ մուտքագրված են IP տիրույթներ, ապա տիրույթն ընտրովի է:<br />Վավեր "
+"արժեքները ներառում են IP հասցե (օրինակ՝ 142.58.103.1), IP տիրույթ (օրինակ՝ "
+"142.58.103.1 - 142.58.103.4), IP տիրույթ «*» նշանով (օրինակ՝ 142.58.*.*) և "
+"IP տիրույթ CIDR-ով (օրինակ՝ 142.58.100.0/24):"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP միջակայքեր"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Խնդրում ենք մուտքագրել վավեր դոմեյն:"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Բաժանորդագրության ընտրված տեսակը պահանջում է դոմեյն և/կամ IP տիրույթ՝ "
+"բաժանորդագրության նույնականացման համար:"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Եթե այստեղ մուտքագրված է դոմեյն, IP-ի տիրույթները պարտադիր չեն:<br />Վավեր "
+"արժեքները դոմեյնի անուններն են (օրինակ՝ lib.sfu.ca):"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Դոմեյն"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Փոստային հասցե"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Պահանջվում է հաստատության անվանումը:"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Հաստատության անվանումը"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Եթե պահանջվում է անդամության մասին տեղեկատվություն, բաժանորդագրության "
+"ընտրված տեսակի համար:"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Օգտվողի այս հաշիվն արդեն ունի անհատական բաժանորդագրություն:"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Խնդրում ենք ընտրել բաժանորդագրության վավեր տեսակ:"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr ""
+"Բաժանորդագրության ընտրված տեսակը պահանջում է անդամակցության մասին "
+"տեղեկություններ:"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Անդամակցություն"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Բաժանորդագրության տեսակներ"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Դիտեք մատչելի բաժանորդագրության տեսակները"
+
+msgid "user.subscriptions.expired"
+msgstr "Ժամկետանց: {$date}"
+
+msgid "user.subscriptions.expires"
+msgstr "Ժամկետը լրանում է: {$date}"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Ձեռք բերեք ինստիտուցիոնալ բաժանորդագրություն"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Ձեռք բերեք անհատական բաժանորդագրություն"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Ձեռք բերեք նոր բաժանորդագրություն"
+
+msgid "user.subscriptions.purchase"
+msgstr "Ձեռք բերել"
+
+msgid "user.subscriptions.renew"
+msgstr "Նորացնել"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Անհատական բաժանորդագրություններ"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Անհատական բաժանորդագրություն"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Առցանց վճարում է սկսվել, բայց չեղարկվել է կամ չի ավարտվել"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Ձեռքով վճարումը սկսվել է, բայց դեռ չի ստացվել"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr ""
+"Բաժանորդագրությունը պետք է վերանայվի, նախքան այն հնարավոր լինի ակտիվացնել"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+"Բաժանորդագրությունն ակտիվացնելուց առաջ անհրաժեշտ է լրացուցիչ տեղեկատվություն"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Նկարագրություն"
+
+msgid "user.subscriptions.status"
+msgstr "Կարգավիճակ"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Ակտիվ և ժամկետանց բաժանորդագրությունները ցուցադրվում են ստորև՝ դրանց "
+"գործողության ժամկետի հետ միասին: Բացի այդ, յուրաքանչյուր բաժանորդագրության "
+"հետ կարող են ներառվել կարգավիճակի մասին  հետևյալ տեղեկությունները."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Բաժանորդագրության կարգավիճակը"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Իմ բաժանորդագրությունները"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Դուք պետք է համաձայնեք այս կայքի գաղտնիության հայտարարությանը:"
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Դուք պետք է համաձայնեք գաղտնիության հայտարարությանը ցանկացած ամսագրի համար, "
+"որում գրանցվում եք:"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Այո, ես համաձայն եմ, որ իմ տվյալները հավաքվեն և պահպանվեն այս ամսագրի <a "
+"href=\"{$privacyUrl}\" target=\"_blank\">գաղտնիության հայտարարության</a> "
+"համաձայն:"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Այո, ես կցանկանայի տեղեկանալ բոլոր ամսագրերի նոր հրապարակումների և "
+"հայտարարությունների մասին, որոնցում գրանցվել եմ:"
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Բացահայտեք գրախոսման հետաքրքրությունները (էական ոլորտներ և հետազոտության "
+"մեթոդներ)."
+
+msgid "user.register.reviewerDescription"
+msgstr ""
+"Ցանկանում եք կայքում ներկայացված փաստաթղթերի գործընկերային գրախոսություն "
+"իրականացնել:"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Ցանկանում է ամսագրին ներկայացվող նյութերի գրախոսություն իրականացնել:"
+
+msgid "user.register.authorDescription"
+msgstr "Կարողանում է հոդվածներ ներկայացնել ամսագրին:"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Տեղեկացվում է էլեկտրոնային փոստով, երբ ամսագրի համարը հասանելի է դառնում:"
+
+msgid "user.register.readerDescription"
+msgstr "Էլեկտրոնային փոստով ծանուցվում է ամսագրի թողարկման մասին:"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Ձեր մուտքագրած գաղտնաբառը բավականաչափ երկար չէ:"
+
+msgid "user.register.registrationDisabled"
+msgstr "Այս ամսագիրը ներկայումս չի ընդունում օգտվողների գրանցումները:"
+
+msgid "user.register.privacyStatement"
+msgstr "Գաղտնիության քաղաքականությունը"
+
+msgid "user.register.noJournals"
+msgstr "Այս կայքում չկան ամսագրեր, որոնց կարող եք գրանցվել:"
+
+msgid "user.register.selectContext"
+msgstr "Ընտրեք ամսագիր գրանցվելու համար."
+
+msgid "submission.comments.forEditor"
+msgstr "Հեղինակի համար"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Հեղինակի և խմբագրի համար"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Ուղարկելուց հետո ներկայացրեք խմբագրվող BCC պատճենը՝ գրախոսողներին ուղարկելու "
+"համար:"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Խմբագրի համար"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Հեղինակի և խմբագրի համար"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Այս մեկնաբանությունները կարող են կիսվել հեղինակի հետ:<br />\n"
+"(Պահպանելուց հետո կարող են ավելացվել լրացուցիչ մեկնաբանություններ):"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Գրական խմբագրման մեկնաբանություններ"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Խմբագիր/Հեղինակ նամակագրություն"
+
+msgid "submission.logType.proofread"
+msgstr "Սրբագրում"
+
+msgid "submission.logType.layout"
+msgstr "Դասավորություն"
+
+msgid "submission.logType.copyedit"
+msgstr "Գրական խմբագրում"
+
+msgid "submission.logType.review"
+msgstr "Գրախոս"
+
+msgid "submission.logType.editor"
+msgstr "Խմբագիր"
+
+msgid "submission.logType.author"
+msgstr "Հեղինակ"
+
+msgid "submission.logType.article"
+msgstr "Հոդված"
+
+msgid "submission.proofread.instructions"
+msgstr "Սրբագրման հրահանգներ"
+
+msgid "submission.proofread.corrections"
+msgstr "Սրբագրման շտկումներ"
+
+msgid "submission.proofreadingComments"
+msgstr "Սրբագրման մեկնաբանություններ"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Հղման կապակցում"
+
+msgid "submission.layout.instructions"
+msgstr "Դասավորության հրահանգներ"
+
+msgid "submission.layout.layoutComments"
+msgstr "Դասավորության մեկնաբանություններ"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Փոխարինեք դասավորության խմբագրին"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Նշանակել դասավորության խմբագիր"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Հանրային շարվածքի նույնականացումն արդեն գոյություն ունի:"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Ոչ մեկը (Վերբեռնեք վերջնական Գրական խմբագրման տարբերակը որպես դասավորության "
+"տարբերակ՝ նախքան հարցումն ուղարկելը)"
+
+msgid "submission.copyedit.instructions"
+msgstr "Գրական խմբագրման հրահանգներ"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Գրական խմբագրման մեկնաբանություններ"
+
+msgid "submission.copyedit.useFile"
+msgstr "Օգտագործեք նիշք"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Նշաանակեք գրական խմբագիր"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Գրական խմբագրման տարբերակ"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Վերջնական գրական խմբագրում"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Հեղինակի կողմից գրական խմբագրում"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Խմբագրի կողմից գրական խմբագրում"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Սկզբնական գրական խմբագրում"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Հարցման էլ․ նամակ չի կարող ուղարկվել մինչև նիշքը չի վերբեռնվել գրական "
+"խմբագրման համար:"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Հարցումը չի կարող ուղարկվել այնքան ժամանակ, մինչև նիշք \"Խմբագրի որոշում\" \""
+"Գրախոսում\" էջում չընտրվի գրական խմբագրման համար:"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Հարցման էլ․ նամակը չի կարող ուղարկվել քանի դեռ Գրախոսման տարբերակը տեղում է:"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Այս ամսագրում ձեռագիր վերբեռնելու համար կատարեք հետևյալ քայլերը.</p>\n"
+"<ol>\n"
+"<li>Այս էջում կտտացրեք «Դիտել» (կամ Ընտրել Նիշքը), որը բացում է «Ընտրել նիշք»"
+" պատուհանը՝ նիշքը ձեր համակարգչի կոշտ սկավառակի վրա գտնելու համար:</li>\n"
+"<li>Գտեք այն նիշքլը, որը ցանկանում եք ներկայացնել և ընդգծեք այն:</li>\n"
+"<li>Ընտրել նիշք» պատուհանից սեղմեք «Բացել», որը տեղադրում է նիշքի անունը այս "
+"էջում:</li>\n"
+"<li>Սեղմեք «Վերբեռնել» այս էջում, որը նիշքը վերբեռնում է համակարգչից ամսագրի "
+"վեբ կայք և վերանվանում այն ամսագրի կանոններին համապատասխան:</li>\n"
+"<li>Ներկայացումը վերբեռնելուց հետո սեղմեք \"Պահպանել\" և \"Շարունակել\" այս "
+"էջի ներքևում:</li>\n"
+"</ol>"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Չկան սրբագրման առաջադրանքներ"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Գրական խմբագրի նիշք"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Գրական խմբագրման նիշք"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Նիշք գրական խմբագրման համար"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Որոշումը գրանցելուց հետո դուք այլևս չեք կարողանա փոփոխություններ կատարել այս "
+"գրախոսության մեջ: Վստա՞հ եք, որ ցանկանում եք շարունակել:"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Ոչ մի առաջարկ չի ընտրվել: Դուք պետք է ընտրեք առաջարկություն ներկայացնելու "
+"համար:"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Սահմանեք կամ կարգավորեք գրախոսի առաջարկությունը:"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Ընտրեք առաջարկություն և ներկայացրեք գրախոսությունը՝ գործընթացը ավարտելու "
+"համար: Նախքան առաջարկ ընտրելը, դուք պետք է մուտք անեք գրախոսություն կամ նիշք "
+"վերբեռնեք:"
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Բացի այդ, դուք կարող եք նիշքեր վերբեռնել խմբագրի և/կամ հեղինակի հետ "
+"խորհրդակցելու համար:"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Սեղմեք պատկերակի վրա՝ մուտքագրելու (կամ տեղադրելու) ձեր գրախոսությունը այս "
+"ներկայացման վերաբերյալ:"
+
+msgid "reviewer.competingInterests"
+msgstr "Շահերի բախում"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Հայտարարեք՝ արդյոք ունեք շահերի բախում այս հետազոտության հետ կապված, թե ոչ ("
+"see <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Սեղմեք նիշքերի անունների վրա՝ այս ներկայացման հետ կապված նիշքերը ներբեռնելու "
+"և գրախոսելու համար (պաստառին կամ տպելու միջոցով):"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Եթե դուք պատրաստվում եք գրախոսել, դիմեք Ստորև բերված Գրախոսների "
+"ուղեցույցներին:"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "այն մասին, թե արդյոք դուք կստանձնեք գրախոսությունը:"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Տեղեկացրեք ներկայացման խմբագրին"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"գրախոսման ուղեցույցները գրախոսներին կտրամադրեն չափորոշիչներ՝ գնահատելու "
+"համար, թե որքանով է համապատասխանում հոդվածը ամսագրում հրապարակման համար, և "
+"կարող է ներառել ցանկացած հատուկ հրահանգ՝ արդյունավետ և օգտակար գրախոսություն "
+"պատրաստելու համար: Ստուգումն իրականացնելիս գրախոսներին ներկայացվում է երկու "
+"բաց տեքստային տուփ, առաջինը «հեղինակի և խմբագրի համար», իսկ երկրորդը՝ «"
+"խմբագրի համար»: Որպես այլընտրանք, ամսագրի կառավարիչը կարող է ստեղծել "
+"գործընկերային գրախոսման ձևը Գրախոսման ձևերի ներքո: Բոլոր դեպքերում, "
+"խմբագիրները հնարավորություն կունենան ներառել գրախոսությունները հեղինակի հետ "
+"նամակագրության մեջ:"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Գրախոսի ուղեցույց"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Գրախոսման քայլեր"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Գրախոսման ժամանակացույց"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Ներկայացում, որը պետք է գրախոսվի"
+
+msgid "reviewer.article.schedule"
+msgstr "Ժամանակացույց"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Տես Մեկնաբանությունները"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Մերժել ներկայացումը"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Կրկին ներկայացնել այլ տեղ"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Կրկին ներկայացնել գրախոսման համար"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Պահանջվում են վերանայումներ"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Ընդունել ներկայացումը"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Գրախոսությունը ենթակա է վերադարձի"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Գրախոսությունը ուղարկված է"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Ձեր արձագանքը"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Խմբագրի հարցում"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Եթե ցանկանում եք խմբագրի համար ծանոթագրել նիշքը, պահեք այն ձեր կոշտ "
+"սկավառակի վրա և օգտագործեք Փնտրել/Վերբեռնել։)"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Գրախոսի կողմից վերբեռնված տարբերակը"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Վերբեռնված նիշքեր"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Մեկնաբանություններ"
+
+msgid "reviewer.article.submitReview"
+msgstr "Ներկայացրեք գրախոսություն խմբագրին"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Ընդգծված տարրերը ցույց են տալիս, որ խմբագրի կողմից պահանջվում է "
+"գործողություն՝ պիտակավորված հետևյալ կերպ.\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Գործողություն է պահանջվում գրական "
+"խմբագրման փուլում</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Գործողություն է պահանջվում "
+"դասավորության խմբագրման փուլում</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Գործողություն է պահանջվում "
+"սրբագրման փուլում</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "reviewer.article.recommendation"
+msgstr "Հանձնարարական"
+
+msgid "reviewer.article.automatic"
+msgstr "(Ինքնաշխատ)"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Ուղարկել հիշեցում"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Խմբագիր Մուտք գործելու համար"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Մուտքագրեք կամ տեղադրեք գրախոսման մեկնաբանություններն այստեղ"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Ներկայացման խմբագիր"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Ներկայացումը հասանելի կլինի, եթե և երբ գրախոսը համաձայնի ստանձնել վերանայումը"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Չհաջողվեց կատարել գրախոսում"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Կկատարի գրախոսում"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Ծանուցեք խմբագրին"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Գրախոսման ենթակա նիշք"
+
+msgid "reviewer.averageQuality"
+msgstr "Վարկանիշ"
+
+msgid "reviewer.completedReviews"
+msgstr "Կատարված"
+
+msgid "reviewer.pendingReviews"
+msgstr "Հոդվածներ որ սպասվում են գրախոսման"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Հեռակառավարվող բովանդակության URL"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Այս շարվածքը հասանելի կլինի առանձին կայքում:"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Պատկերի անվավեր ձևաչափ: Ընդունված ձևաչափերն են .gif, .jpg և .png:"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Վերբեռնեք լրացուցիչ նիշքը"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Փոխարինել նիշքը"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Վերբեռնեք շարվածքի ձևաչափը"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Դասավորության խմբագրման առաջադրանքներ"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Ակտիվ խմբագրական առաջադրանքներ չկան:"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Կատարված խմբագրական առաջադրանքներ"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Ակտիվ խմբագրական առաջադրանքներ"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Ստեղծեք նոր գրախոս"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Գրանցեք գոյություն ունեցող օգտվողին որպես գրախոս"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Արդյունք"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Ափսոսանք"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Գրախոսի ափսոսանքները և չեղարկումները"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Խմբագրի որոշումը, փուլ {$round}"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Գործընկերային գրախոսում, փուլ {$round}"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Դիտեք ափսոսանքները, չեղարկումները, նախորդ փուլերը"
+
+msgid "sectionEditor.regrets"
+msgstr "Ափսոսանքներ"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Գրախոսի ափսոսանքները, չեղարկումները և ավելի վաղ փուլերը"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Ափսոսանք"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Այս սրբագրիչին նորից ծանուցելը կվերսկսի նրանց հանձնարարությունը: Վստա՞հ եք, "
+"որ ցանկանում եք դա անել:"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Այս դասավորության խմբագրին նորից ծանուցելը կվերսկսի նրանց հանձնարարությունը: "
+"Վստա՞հ եք, որ ցանկանում եք դա անել:"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Այս հեղինակին նորից ծանուցելը կվերագործարկի նրա հանձնարարությունը: Վստա՞հ "
+"եք, որ ցանկանում եք դա անել:"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Կրկին ծանուցելով այս գրական խմբագրին, նրանց հանձնարարությունը կվերսկսվի: "
+"Վստա՞հ եք, որ ցանկանում եք դա անել:"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Չկան նշանակված ներկայացումներ:"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Կատարված խմբագրական առաջադրանքներ"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Խմբագրական ակտիվ առաջադրանքներ"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Ընդգծված տարրերը ցույց են տալիս, որ խմբագրի կողմից պահանջվում է "
+"գործողություն՝ պիտակավորված հետևյալ կերպ.\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Գրախոս է նշանակվել, բայց էլ․"
+" փոստով չի ծանուցվել</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Բոլոր գրախոսները վերադարձել են իրենց "
+"մեկնաբանություններով, բայց ոչ մի որոշում չի գրանցվել</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Հեղինակը վերբեռնել է "
+"վերանայված ձեռագիրը</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Գրախոսը ուշացել է՝ "
+"հաստատելու գործընկերների կարծիքի հրավերը</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Գրախոսը ուշացել է՝ "
+"գրախոսությունն ավարտելու համար</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Վերասդարձը\" լրացվում է, երբ գրախոսն ընդունում է գրախոսման հարցումը. "
+"այն ցույց է տալիս շաբաթների քանակը գրախոսության վերադարձի համար կամ (-) "
+"շաբաթներ, երբ այն ժամկետանց է:</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Ներեցեք, դուք այս օգտվողի նկատմամբ վարչական իրավունքներ չունեք: Սա կարող է "
+"լինել այն պատճառով, որ.\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Օգտվողը կայքի կառավարիչ է</li>\n"
+"\t\t\t<li>Օգտվողը ակտիվ է այն ամսագրերում, որոնք դուք չեք կառավարում</li>\n"
+"\t\t</ul>\n"
+"\tԱյս խնդիրը պետք է կատարի կայքի ադմինիստրատորը:\n"
+"\t"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Անջատե՞լ այս օգտվողին: Սա թույլ չի տա օգտվողին մուտք գործել համակարգ:\n"
+"\n"
+"Դուք կարող եք կամայականորեն օգտվողին բացատրել իր հաշիվն անջատելու պատճառը:"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Որպեսզի ընթերցողներին կարողանան գտնել հեղինակի կողմից մեջբերված "
+"ստեղծագործության առցանց տարբերակները, հասանելի են հետևյալ ընտրանքները.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Ավելացնել ընթերցման գործիք</strong><p>Ամսագրի կառավարիչը կարող "
+"է ավելացնել «Գտնել հղումներ» Ընթերցանության գործիքներին, որոնք ուղեկցում են "
+"հրապարակված նյութերին, ինչը թույլ է տալիս ընթերցողներին տեղադրել հղման "
+"վերնագիրը և այնուհետև որոնել նախապես ընտրված գիտական տվյալների շտեմարանները "
+"նշված աշխատանքի համար:</p></li>\n"
+"\t<li><strong>Տեղադրել կապեր հղումների մեջ</strong><p>Դասավորության խմբագիրը "
+"կարող է հղում ավելացնել հղումներին, որոնք կարելի է գտնել առցանց՝ "
+"օգտագործելով հետևյալ հրահանգները (որոնք կարելի է խմբագրել):</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Քայլեր. Ներկայացման հերթ &gt; Ներկայացման գրախոսում &gt; Ներկայացման "
+"խմբագրում &gt; Բովանդակություն։<br /><br />\n"
+"Ընտրեք մոդել խմբագրման գործընթացի այս ասպեկտները կարգավորելու համար: ("
+"Կառավարող խմբագրին և բաժնի խմբագիրներին նշանակելու համար գնացեք Խմբագիրներ՝ "
+"Ամսագրի կառավարման մասում):"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Առաջարկվող \"Ստեղծագործական համայնքներ\" հեղինակային իրավունքի "
+"ծանուցումներ</h3>\n"
+"<h4>1. Առաջարկվող քաղաքականություն այն ամսագրերի համար, որոնք առաջարկում են "
+"հետաձգված բաց մուտք</h4>\n"
+"Հեղինակները, ովքեր հրապարակվում են այս ամսագրում, համաձայն են հետևյալ "
+"պայմաններին.\n"
+"<ol type=\"a\">\n"
+"\t<li>Հեղինակները պահպանում են հեղինակային իրավունքը և տալիս են ամսագրի "
+"առաջին հրապարակման իրավունքը ստեղծագործության հետ միաժամանակ արտոնագրված <a "
+"target=\"_new\" href=\"https://creativecommons.org/licenses/by/3.0/\">"
+"Creative Commons Attribution License</a> որը թույլ է տալիս ուրիշներին կիսվել "
+"աշխատանքով՝ հաստատելով աշխատանքի հեղինակությունը և սկզբնական հրապարակումը "
+"այս ամսագրում:</li>\n"
+"\t<li>Հեղինակները կարող են կնքել առանձին, լրացուցիչ պայմանագրային "
+"պայմանավորվածություններ՝ ամսագրի հրապարակված աշխատության ոչ բացառիկ բաշխման "
+"համար (օրինակ՝ տեղադրել այն ինստիտուցիոնալ շտեմարանում կամ հրատարակել այն "
+"գրքում), հաստատելով դրա սկզբնական հրապարակումը այս ամսագրում:</li>\n"
+"\t<li>Հեղինակներին թույլատրվում և խրախուսվում է տեղադրել իրենց աշխատանքը "
+"առցանց (օրինակ՝ ինստիտուցիոնալ շտեմարաններում կամ իրենց կայքում) "
+"ներկայացնելու գործընթացից առաջ և ընթացքում, քանի որ դա կարող է հանգեցնել "
+"արդյունավետ փոխանակումների, ինչպես նաև հրապարակված աշխատանքի ավելի վաղ և "
+"ավելի մեծ մեջբերումների (Տե՛ս <a target=\"_new\" href=\"https://web-"
+"archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio.html\">The "
+"Effect of Open Access</a>):</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Առաջարկվող քաղաքականություն ամսագրերի համար, որոնք առաջարկում են "
+"հետաձգված բաց մուտք</h4>\n"
+"Հեղինակները, ովքեր հրապարակվում են այս ամսագրում, համաձայն են հետևյալ "
+"պայմաններին.\n"
+"<ol type=\"a\">\n"
+"\t<li>Հեղինակները պահպանում են հեղինակային իրավունքը և շնորհում են ամսագրի "
+"առաջին հրապարակման իրավունքը, ընդ որում աշխատանքը [ՆՇԵՔ ԺԱՄԱՆԱԿԻ "
+"ՏեՎՈՂՈՒԹՅՈՒՆԸ] հրապարակումից հետո միաժամանակ արտոնագրված է <a target=\"_new\""
+" href=\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution License</a>, որը թույլ է տալիս ուրիշներին կիսվել աշխատանքով` "
+"հաստատելով աշխատանքի հեղինակությունը և նախնական հրապարակումը այս "
+"ամսագրում:</li>\n"
+"\t <li>Հեղինակները կարող են կնքել առանձին, լրացուցիչ պայմանագրային "
+"պայմանավորվածություններ՝ ամսագրի հրապարակված աշխատության ոչ բացառիկ բաշխման "
+"համար (օրինակ՝ տեղադրել այն ինստիտուցիոնալ շտեմարանում կամ հրատարակել այն "
+"գրքում), հաստատելով դրա սկզբնական հրապարակումը այս ամսագրում:</li>\n"
+"\t <li>Հեղինակներին թույլատրվում և խրախուսվում է տեղադրել իրենց աշխատանքը "
+"առցանց (օրինակ՝ ինստիտուցիոնալ շտեմարաններում կամ իրենց կայքում) "
+"ներկայացնելու գործընթացից առաջ և ընթացքում, քանի որ դա կարող է հանգեցնել "
+"արդյունավետ փոխանակումների, ինչպես նաև հրապարակված աշխատանքի ավելի վաղ և "
+"ավելի մեծ մեջբերումների (Տե՛ս <a target=\"_new\" href=\"https://web-"
+"archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio.html\"> The "
+"Effect of Open Access</a>):</li>\n"
+"</ol>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Ընդհանուր պլագիններն օգտագործվում են բաց ամսագրի համակարգերը ընդլայնելու "
+"համար տարբեր ձևերով, որոնք չեն աջակցվում հավելումների այլ դասերի կողմից:"
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Թույլտվության պլագինները թույլ են տալիս Open Journal Systems-ին պատվիրակել "
+"օգտատերերի նույնականացման առաջադրանքները այլ համակարգերի, ինչպիսիք են LDAP "
+"սերվերները:"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Հոդվածի շարվածքի փլագինները աջակցություն են ավելացնում փաստաթղթերի տարբեր "
+"տեսակների ցուցադրման համար որպես հոդվածների շարվածքներ:"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Հոդվածի շարվածքի փլագիններ"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Բաժանորդագրման տեսակները"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Ինստիտուցիոնալ բաժանորդագրություններ"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Անհատական բաժանորդագրություններ"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Բաժանորդագրության կառավարում"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ՆՇՈՒՄ</h4>\n"
+"<p>Համակարգը չկարողացավ ինքնաշխատ կերպով վերագրել կազմաձևման նիշքը: "
+"Կազմաձևման ձեր փոփոխությունները կիրառելու համար դուք պետք է բացեք "
+"<tt>config.inc.php</tt> համապատասխան տեքստային խմբագրիչում և փոխարինեք դրա "
+"բովանդակությունը ստորև բերված տեքստային դաշտի բովանդակությամբ:</p>"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+"<p>OJS-ից բացի լռելյայն նույնականացման աղբյուր նշելն ունի հետևյալ "
+"հետևանքները:</p>\n"
+"<ul>\n"
+"\t<li>Եթե օգտատերը փորձում է գրանցել նոր հաշիվ այս կայքում՝ օգտանունով, որը "
+"գոյություն ունի նույնականացման աղբյուրում (բայց ոչ OJS տվյալների շտեմարանում)"
+", գրանցման փորձը թույլատրվում է միայն այն դեպքում, եթե տրամադրված գաղտնաբառը "
+"վավեր է այդ օգտվողի հաշվի համար:</li>\n"
+"</ul>"
+
+msgid "search.results.similarDocuments"
+msgstr "նմանատիպ փաստաթղթեր"
+
+msgid "search.results.orderDir.desc"
+msgstr "Ըստ նվազման"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ըստ աճման"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Համապատասխանություն"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Հանրաճանաչություն (անցյալ ամիս)"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Հանրաճանաչություն (Բոլոր ժամանակներում)"
+
+msgid "search.results.orderBy.journal"
+msgstr "Ամսագրի վերնագիրը"
+
+msgid "search.results.orderBy.issue"
+msgstr "Թողարկում"
+
+msgid "search.results.orderBy.date"
+msgstr "Հրապարակման ամսաթիվ"
+
+msgid "search.results.orderBy.author"
+msgstr "Հեղինակ"
+
+msgid "search.results.orderBy.article"
+msgstr "Հոդվածի վերնագիրը"
+
+msgid "search.results.orderBy"
+msgstr "Դասավորել արդյունքները ըստ"
+
+msgid "comments.authenticated"
+msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "comments.commentsOnArticle"
+msgstr "Մեկնաբանություններ այս հոդվածի վերաբերյալ"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Պահանջվում է բաժանորդագրություն կամ վճար"
+
+msgid "reader.subscriptionAccess"
+msgstr "Պահանջում է բաժանորդագրություն"
+
+msgid "reader.openAccess"
+msgstr "Բաց մատչելիություն"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Նյութին մուտք գործելու համար պահանջվում է բաժանորդագրություն: "
+"Բաժանորդագրությունը հաստատելու համար մուտք գործեք ամսագիր:"
+
+msgid "reader.subscribersOnly"
+msgstr "Միայն բաժանորդներ"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Դասավորության առաջադրանքն ավարտված է"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Դասավորության շարվածքը թարմացվել է"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Դասավորության նշանակումը սկսված է"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Դասավորության խմբագիրը հետ է կանչված ներկայացումից"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Ներկայացմանը նշանակված է դասավորության խմբագիր"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Սրբագրման առաջադրանքն ավարտված է"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Սրբագրիչի վերանայումներով նիշքը թարմացվել է"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Սկսվել է սրբագրիչի նշանակումը"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Սրբագրիչը հետ է կանչվել ներկայացումից"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Ներկայացմանը նշանակվել է սրբագրիչ"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Գրական խմբագրման նիշքը թարմացվեց"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Վերջնական գրական խմբագրումն ավարտված է"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Սկզբնական գրական խմբագրումն ավարտված է"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Գրական խմբագրի վերանայումների նիշքը թարմացվել է"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Գրական խմբագրման նշանակում է սկսված"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Գրական խմբագիրը հետ է կանչված ներկայացումից"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Ներկայացմանը գրական խմբագիր է նշանակված"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Ներկայացումը վերականգնվել է արխիվից"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Ներկայացումն ուղարկվել է արխիվ"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Խմբագրի նիշքը թարմացվել է"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Խմբագրի որոշումը ներկայացված է"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Խմբագիրը հետ է կանչված ներկայացումից"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Ներկայացմանը խմբագիր է նշանակված"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Հեղինակի վերանայման նիշքը թարմացվել է"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Հեղինակի վերանայումն ուղարկված է"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Հոդվածը հրապարակված է"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Ներկայացումը նշանակված է թողարկմանը"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Ներկայացումը ուղարկվել է թողարկման ժամանակացույցի հերթին"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Հոդվածը ներկայացված է"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Ներկայացման իրադարձություն"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Նշում.</strong> Ինստիտուցիոնալ բաժանորդագրությունները, որոնք ձեռք են "
+"բերվել առցանց, պահանջում են դոմեյնի և IP միջակայքի հաստատում մինչև "
+"բաժանորդագրության ակտիվացումը:"
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Ինստիտուցիոնալ բաժանորդագրությունները մուտք չեն պահանջում: Օգտագործողի "
+"դոմեյնը և/կամ IP հասցեն օգտագործվում է բաժանորդագրության բովանդակությանը "
+"հասանելիություն ապահովելու համար:"
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Անհատական բաժանորդագրությունների համար անհրաժեշտ է մուտք գործել՝ "
+"բաժանորդագրության բովանդակության հասանելիության համար:"
+
+msgid "subscriptions.status.other"
+msgstr "Այլ, տես Ծանոթագրությունները"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Դուք չունեք ակտիվ բաժանորդագրություն:"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Սպասում է առցանց վճարման"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Սպասում է ձեռքով վճարման"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Հաստատման կարիք ունի"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Տեղեկատվության կարիք կա"
+
+msgid "subscriptions.status.active"
+msgstr "Ակտիվ"
+
+msgid "subscriptions.status"
+msgstr "Կարգավիճակ"
+
+msgid "subscriptions.inactive"
+msgstr "Ոչ ակտիվ"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Տպագիր և առցանց"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Տպագիր"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Առցանց"
+
+msgid "subscriptionTypes.format"
+msgstr "Ձևաչափ"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Անժամկետ"
+
+msgid "subscriptionTypes.months"
+msgstr "ամիսներ"
+
+msgid "subscriptionTypes.month"
+msgstr "ամիս"
+
+msgid "subscriptionTypes.years"
+msgstr "տարիներ"
+
+msgid "subscriptionTypes.year"
+msgstr "տարի"
+
+msgid "subscriptionTypes.currency"
+msgstr "Արտարժույթ"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Չհաջողվեց ստեղծել DOI հետևյալ թողարկման համար՝ {$itemTitle}: Այն գոյություն "
+"չունի ամսագրի ներկայիս համատեքստում:"
+
+msgid "issue.return"
+msgstr "Վերադարձ դեպի Թողարկման մանրամասներ"
+
+msgid "issue.viewIssue"
+msgstr "Դիտել թողարկումը"
+
+msgid "issue.nonpdf.title"
+msgstr "Թողարկման ներբեռնում"
+
+msgid "issue.fullIssue"
+msgstr "Ամբողջական թողարկումը"
+
+msgid "issue.coverPage.altText"
+msgstr "Շապիկը"
+
+msgid "issue.abstract"
+msgstr "Համառոտագրություն"
+
+msgid "issue.toc"
+msgstr "Բովանդակություն"
+
+msgid "issue.noIssues"
+msgstr "Թողարկումներ չկան"
+
+msgid "issue.year"
+msgstr "Տարի"
+
+msgid "issue.no"
+msgstr "Հմր․"
+
+msgid "issue.vol"
+msgstr "Հտ․"
+
+msgid "issue.number"
+msgstr "Համար"
+
+msgid "issue.volume"
+msgstr "Հատոր"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Դիտել {$identification}"
+
+msgid "issue.title"
+msgstr "Վերնագիր"
+
+msgid "issue.issues"
+msgstr "Թողարկումներ"
+
+msgid "issue.issue"
+msgstr "Թողարկում"
+
+msgid "user.role.journalAssistants"
+msgstr "Ամսագրի օգնականներ"
+
+msgid "user.role.journalAssistant"
+msgstr "Ամսագրի օգնական"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Բաժանորդագրության կառավարիչներ"
+
+msgid "user.role.subEditors"
+msgstr "Բաժնի խմբագիրներ"
+
+msgid "user.role.managers"
+msgstr "Ամսագրի կառավարիչներ"
+
+msgid "user.role.subscriptionManager"
+msgstr "Բաժանորդագրության կառավարիչ"
+
+msgid "user.role.subEditor"
+msgstr "Բաժնի խմբագիր"
+
+msgid "user.role.manager"
+msgstr "Ամսագրի կառավարիչ"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Գրանցվեք որպես գրախոս. Գրախոսի գրանցումն այս պահին անջատված է:"
+
+msgid "user.noRoles.regReviewer"
+msgstr "Գրանցվիր որպես գրախոս"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Ներկայացրեք հոդված. հեղինակի գրանցումը ներկայումս անջատված է:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Ներկայացրե՛ք առաջարկ"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Ձեր հաշիվը ներկայումս չունի որևէ դեր այս ամսագրի համար: Խնդրում ենք ընտրել "
+"ստորև նշված գործողություններից."
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Ձեր հաշիվը ներկայումս կապված չէ որևէ ամսագրի հետ: Խնդրում ենք ընտրել ամսագիր."
+
+msgid "user.manageMySubscriptions"
+msgstr "Կառավարեք իմ բաժանորդագրությունները"
+
+msgid "user.myJournals"
+msgstr "Իմ ամսագրերը"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Եթե դուք խնդրել եք լինել որևէ ամսագրի գրախոս , խնդրում ենք մուտքագրել ձեր "
+"թեմատիկ հետաքրքրությունները:"
+
+msgid "user.register.otherContextRoles"
+msgstr "Հարցրեք հետևյալ դերերը."
+
+msgid "user.register.contextsPrompt"
+msgstr "Այս կայքի ո՞ր ամսագրերում կցանկանայիք գրանցվել:"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Այո, ես կցանկանայի որ ինձ հետ կապվեն այս ամսագրին ներկայացված նյութերը "
+"գրախոսելու հարցումների վերաբերյալ:"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Այո, պահանջեք {$userGroup} դերը:"
+
+msgid "user.reviewerPrompt"
+msgstr "Ցանկանու՞մ եք գրախոսել այս ամսագրին ներկայացված նյութերը:"
+
+msgid "user.registerForOtherJournals"
+msgstr "Գրանցվել այլ ամսագրերի համար"
+
+msgid "user.showAllJournals"
+msgstr "Ցույց տալ իմ ամսագրերը"
+
+msgid "user.profile.profileImage"
+msgstr "Պրոֆիլի պատկերը"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Ներառեք այս ամսագրում դերեր չունեցող օգտվողներին:"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Պահանջվող շարվածքը չհաջողվեց գտնել:"
+
+msgid "journal.viewAllIssues"
+msgstr "Դիտել բոլոր թողարկումները"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "context.context"
+msgstr "Ամսագիր"
+
+msgid "journal.path"
+msgstr "Ուղի"
+
+msgid "context.contexts"
+msgstr "Ամսագրեր"
+
+msgid "journal.currentIssue"
+msgstr "Ընթացիկ թողարկումը"
+
+msgid "submission.search"
+msgstr "Հոդվածի որոնում"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Անցել է սրբագրումը"
+
+msgid "submissions.layoutComplete"
+msgstr "Դասավորությունը խմբագրված է"
+
+msgid "submissions.copyeditComplete"
+msgstr "Անցել է գրական խմբագրումը"
+
+msgid "submission.eventLog"
+msgstr "Իրադարձությունների մատյան"
+
+msgid "submissions.editorRuling"
+msgstr "Խմբագրի կարգը"
+
+msgid "submissions.editorDecision"
+msgstr "Խմբագրի որոշումը"
+
+msgid "submissions.proof"
+msgstr "Սրբագիր"
+
+msgid "submissions.reviewRound"
+msgstr "Գրախոսման փուլ"
+
+msgid "submissions.postAuthor"
+msgstr "Հեղինակից հետո"
+
+msgid "submissions.initialProof"
+msgstr "Նախնական սրբագրում"
+
+msgid "submissions.proofread"
+msgstr "Սրբագրություն"
+
+msgid "submissions.initial"
+msgstr "Սկզբնական"
+
+msgid "submissions.published"
+msgstr "Հրատարակվել է"
+
+msgid "submissions.queuedReview"
+msgstr "Գրախոսվում է"
+
+msgid "submissions.step3"
+msgstr "Քայլ 3"
+
+msgid "submissions.step1"
+msgstr "Քայլ 1"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submission.scheduledIn"
+msgstr "Պլանավորված է հրապարակման {$issueName} -ում:"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Պահպանել և էլ․ փոստով ուղարկել խմբագրին"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Պահպանել և էլ․ փոստով ուղարկել հեղինակին"
+
+msgid "submission.scheduling"
+msgstr "Ժամանակացույց"
+
+msgid "submission.proofreading"
+msgstr "Սրբագրում"
+
+msgid "submission.copyedit"
+msgstr "Գրական խմբագրում"
+
+msgid "submission.copyediting"
+msgstr "Գրական խմբագրում"
+
+msgid "submission.authorVersion"
+msgstr "Հեղինակային տարբերակ"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Նիշքի հեղինակի վերանայված տարբերակը"
+
+msgid "submission.editorVersion"
+msgstr "Խմբագրի տարբերակը"
+
+msgid "submission.postReviewVersion"
+msgstr "Նիշքի հետվերանայման տարբերակը"
+
+msgid "submission.reviewersVersion"
+msgstr "Գրախոսի կողմից նիշքի ծանոթագրված տարբերակը"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Խմբագիր/Հեղինակ էլ․ փոստի գրառում"
+
+msgid "submission.notifyEditor"
+msgstr "Տեղեկացնել խմբագրին"
+
+msgid "submission.notifyAuthor"
+msgstr "Տեղեկացնել հեղինակին"
+
+msgid "submission.editorReview"
+msgstr "Խմբագրի կարծիքը"
+
+msgid "submission.round"
+msgstr "Շրջանագիծ&nbsp;{$round}"
+
+msgid "submission.editorDecision"
+msgstr "Խմբագրի որոշումը"
+
+msgid "submission.sent"
+msgstr "Ուղարկված"
+
+msgid "submission.changeSection"
+msgstr "Փոխել"
+
+msgid "submission.submissionEditing"
+msgstr "Ներկայացման խմբագրում"
+
+msgid "article.return"
+msgstr "Վերադարձ դեպի հոդվածի մանրամասներ"
+
+msgid "article.fontSize.large.altText"
+msgstr "Լայն"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Միջին"
+
+msgid "article.fontSize.small.altText"
+msgstr "Փոքր"
+
+msgid "article.fontSize"
+msgstr "Տառատեսակի չափը"
+
+msgid "article.comments.enable"
+msgstr "Միացնել"
+
+msgid "article.comments.disable"
+msgstr "Անջատել"
+
+msgid "article.comments.sectionDefault"
+msgstr "Լռելյայն"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Սահմանափակ մատչելիություն"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Բաց մատչելիություն"
+
+msgid "article.coverPage.altText"
+msgstr "Կազմի պատկեր"
+
+msgid "article.abstract"
+msgstr "Ամփոփում"
+
+msgid "article.details"
+msgstr "Մանրամասներ"
+
+msgid "article.submissions"
+msgstr "Ներկայացումներ"
+
+msgid "article.submission"
+msgstr "Ներկայացում"
+
+msgid "article.commentsToEditor"
+msgstr "Հեղինակի մեկնաբանություններ"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.language"
+msgstr "Լեզու"
+
+msgid "article.type"
+msgstr "Տեսակ, մեթոդ կամ մոտեցում"
+
+msgid "article.coverage"
+msgstr "Ծածկույթ"
+
+msgid "article.subject"
+msgstr "Բանալի բառեր"
+
+msgid "article.discipline"
+msgstr "Ակադեմիական գիտակարգ և ենթագիտակարգեր"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Լրաց․ նիշքեր"
+
+msgid "article.suppFiles"
+msgstr "Լրացուցիչ նիշք(եր)"
+
+msgid "article.suppFile"
+msgstr "Լրացուցիչ նիշք"
+
+msgid "article.file"
+msgstr "Նիշք"
+
+msgid "article.journalSection"
+msgstr "Ամսագրի բաժին"
+
+msgid "article.metadata"
+msgstr "Մետատվյալներ"
+
+msgid "article.indexingInformation"
+msgstr "Ինդեքսավորման տեղեկատվություն"
+
+msgid "article.authors"
+msgstr "Հեղինակներ"
+
+msgid "article.title"
+msgstr "Վերնագիր"
+
+msgid "article.submissionId"
+msgstr "Ներկայացման ID"
+
+msgid "common.publications"
+msgstr "Հոդվածներ"
+
+msgid "common.publication"
+msgstr "Հոդված"
+
+msgid "article.articles"
+msgstr "Հոդվածներ"
+
+msgid "article.article"
+msgstr "Հոդված"
+
+msgid "section.policy"
+msgstr "Բաժին քաղաքականությունը"
+
+msgid "section.abbreviation.example"
+msgstr "(Օրինակ, Articles=ART)"
+
+msgid "section.abbreviation"
+msgstr "Հապավում"
+
+msgid "section.title"
+msgstr "Բաժնի վերնագիրը"
+
+msgid "section.sections"
+msgstr "Բաժիններ"
+
+msgid "section.section"
+msgstr "Բաժին"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Նշանակված խմբագիրներ"
+
+msgid "common.queue.short.completed"
+msgstr "Արխիվ"
+
+msgid "common.queue.long.completed"
+msgstr "Արխիվ"
+
+msgid "common.queue.short.active"
+msgstr "Ակտիվ"
+
+msgid "common.queue.long.active"
+msgstr "Ակտիվ"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Արխիվներ"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Արխիվներ"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Գրախոսման մեջ են"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Ներկայացումները գրախոսման մեջ են"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Խմբագրման մեջ է"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Ներկայացումները խմբագրման մեջ են"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Չնշանակված"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Չնշանակված"
+
+msgid "navigation.skip.issue"
+msgstr "Անցնել ընթացիկ թողարկմանը"
+
+msgid "navigation.skip.about"
+msgstr "Անցնել ամսագրի մասին"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Տեղեկատվություն գրադարանավարների համար"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Տեղեկատվություն հեղինակների համար"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Մրցակցային հետաքրքրությունների ուղեցույցներ"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Գրադարանավարների հանար"
+
+msgid "navigation.infoForAuthors"
+msgstr "Ըստ հեղինակների"
+
+msgid "navigation.browseByAuthor"
+msgstr "Ըստ հեղինակի"
+
+msgid "navigation.browseByIssue"
+msgstr "Ըստ թողարկման"
+
+msgid "navigation.otherJournals"
+msgstr "Այլ ամսագրեր"
+
+msgid "navigation.current"
+msgstr "Ընթացիկ"
+
+msgid "navigation.journalHelp"
+msgstr "Ամսագրի օգնություն"
+
+msgid "doi.manager.settings.publications"
+msgstr "Հոդվածներ"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Ամսագրի գլխավոր էջի պատկերը"
+
+msgid "common.homePageHeader.altText"
+msgstr "Գլխավոր էջի վերնախորագիր"
+
+msgid "common.payments"
+msgstr "Վճարումներ"
+
+msgid "common.payment"
+msgstr "Վճարում"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Վստա՞հ եք, որ ցանկանում եք այս առաջադրանքը նշել որպես ավարտված: Հնարավոր է՝ "
+"հետագայում չկարողանաք փոփոխություններ կատարել։"
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Խնդրում ենք լրացնել պարտադիր դաշտերը:"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Սեղմեք պատկերակի վրա՝ գրախոսման ձևը լրացնելու համար:"
+
+msgid "navigation.categories.browse"
+msgstr "Թերթել"
+
+msgid "navigation.categories"
+msgstr "Դասեր"
+
+msgid "context.select"
+msgstr "Անցում մեկ այլ ամսագրի."
+
+msgid "context.current"
+msgstr "Ընթացիկ ամսագիր."
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Այս ամսագիրը չի հրապարակում իր բովանդակությունը առցանց:"
