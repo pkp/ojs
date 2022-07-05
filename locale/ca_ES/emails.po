@@ -1,9 +1,10 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2021-03-20 13:12+0000\n"
+"PO-Revision-Date: 2022-07-01 06:26+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "ca_ES/>\n"
@@ -113,9 +114,8 @@ msgstr ""
 msgid "emails.reviewerRegister.description"
 msgstr "Aquest missatge de correu electrònic s'envia a un revisor que s'acaba de registrar per a donar-li la benvinguda al sistema i fer-li arribar el seu nom d'usuari i la seva contrasenya."
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Nou número publicat"
+msgstr "Hi ha un número nou disponible: {$issueIdentification}"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
@@ -198,9 +198,8 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Aquest missatge de correu electrònic convida el destinatari a participar en la iniciativa LOCKSS i a incloure aquesta revista en el seu arxiu. Proporciona informació sobre la iniciativa LOCKSS i com s'hi ha de participar."
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
-msgstr "Justificant de recepció de la tramesa"
+msgstr "Confirmació de tramesa"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.body"
@@ -247,9 +246,8 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Aquest missatge de correu electrònic notifica als revisors d'una tramesa que s'ha completat el procés de revisió. Inclou informació sobre l'article i la decisió presa, i agraeix als revisors la seva contribució."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Assignació editorial"
+msgstr "Heu estat assignats com a editor/a en una tramesa per a {$contextName}"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -342,9 +340,8 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAutoOneclick.description"
 msgstr "Aquest missatge de correu electrònic té com a remitent l'editor de secció i s'envia a un possible revisor perquè accepti o rebutgi la revisió d'una tramesa. Proporciona la informació següent relativa a la tramesa: títol i resum, data de venciment per a la revisió i mode d'accés a la tramesa. Aquest missatge s'utilitza si s'ha seleccionat el procés de revisió estàndard en el pas 2 de la configuració de la revista i s'ha habilitat l'accés a la revisió en un clic."
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "Sol·licitud de revisió d'un article"
+msgstr "Invitació de revisió"
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -411,9 +408,8 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Recordatori de revisió de la tramesa"
+msgstr "Recordatori perquè completeu la revisió"
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -431,7 +427,7 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Recordatori automàtic de revisió de la tramesa"
+msgstr "Recordatori perquè completeu la revisió"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -466,9 +462,9 @@ msgstr ""
 msgid "emails.reviewRemindAutoOneclick.description"
 msgstr "Aquest missatge de correu electrònic s'envia automàticament quan se supera la data de venciment per a una revisió (vegeu les opcions de revisió del pas 2 de la configuració de la revista) i s'ha habilitat l'accés per a revisors en un clic. Les tasques planificades han d'estar habilitades i configurades (vegeu el fitxer de configuració del lloc)."
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Sol·licitud de galerades"
+msgstr ""
+"La tramesa {$submissionId} està llesta per a producció a {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -513,9 +509,10 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.layoutComplete.description"
-msgstr "Aquest missatge té el maquetista com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat el procés de maquetació."
+msgstr ""
+"Aquest correu electrònic del maquetista notifica a l'editor/a que les "
+"galerades estan preparades."
 
 msgid "emails.layoutAck.subject"
 msgstr "Justificant de recepció de les galerades"
@@ -1008,9 +1005,8 @@ msgstr ""
 "<br />\n"
 "La nostra decisió és: Acceptar la tramesa"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Decisió de l'editor/a"
+msgstr "La vostra tramesa ha estat acceptada a {$contextName}"
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -1024,9 +1020,8 @@ msgstr ""
 "<br />\n"
 "Si teniu qualsevol pregunta no dubteu a contactar-me."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Sol·licitud de revisió restaurada"
+msgstr "Encara podeu fer revisions per a {$contextName}?"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -1062,9 +1057,8 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Sol·licitud de revisió de l'article"
+msgstr "Sol·licitud per revisar una tramesa ja revisada"
 
 msgid "emails.notification.body"
 msgstr ""
@@ -1093,3 +1087,15 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "La vostra tramesa ha estat enviada a correcció"
+
+msgid "emails.editorDecisionBackToSubmission.subject"
+msgstr "La vostra tramesa ha estat retornada a revisió editorial"
+
+msgid "emails.editorDecisionBackToCopyediting.subject"
+msgstr "La vostra tramesa ha estat retornada a correcció"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Valideu el vostre compte"

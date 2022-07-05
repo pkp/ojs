@@ -1,7 +1,8 @@
+# Piotr Pielach <ppielach@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-01 11:48+0000\n"
-"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"PO-Revision-Date: 2022-07-05 09:31+0000\n"
+"Last-Translator: Piotr Pielach <ppielach@gmail.com>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/api/pl_PL/>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
@@ -59,3 +60,9 @@ msgstr "Nie można zmienić czasopisma do którego należy to zgłoszenie."
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "To ogłoszenie nie należy do tego czasopisma."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Żądane zgłoszenie nie znajduje się w tym czasopiśmie."
+
+msgid "api.emails.403.disabled"
+msgstr "Powiadomienia e-mail nie zostały włączone dla tego czasopisma."
