@@ -29,13 +29,11 @@
 	<email key="REVIEW_REQUEST" subject="emails.reviewRequest.subject" body="emails.reviewRequest.body"/>
 	<email key="REVIEW_REQUEST_SUBSEQUENT" subject="emails.reviewRequestSubsequent.subject" body="emails.reviewRequestSubsequent.body"/>
 	<email key="REVIEW_RESPONSE_OVERDUE_AUTO" subject="emails.reviewResponseOverdueAuto.subject" body="emails.reviewResponseOverdueAuto.body"/>
-	<email key="REVIEW_RESPONSE_OVERDUE_AUTO_ONECLICK" can_disable="0" to_role_id="4096" stage_id="3" subject="emails.reviewResponseOverdueAutoOneclick.subject" description="emails.reviewResponseOverdueAutoOneclick.description" body="emails.reviewResponseOverdueAutoOneclick.body"/>
 	<email key="REVIEW_CONFIRM" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
 	<email key="REVIEW_DECLINE" subject="emails.reviewDecline.subject" body="emails.reviewDecline.body"/>
 	<email key="REVIEW_ACK" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
 	<email key="REVIEW_REMIND" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
 	<email key="REVIEW_REMIND_AUTO" subject="emails.reviewRemindAuto.subject" body="emails.reviewRemindAuto.body"/>
-	<email key="REVIEW_REMIND_AUTO_ONECLICK" can_disable="0" to_role_id="4096" stage_id="3" subject="emails.reviewRemindAutoOneclick.subject" description="emails.reviewRemindAutoOneclick.description" body="emails.reviewRemindAutoOneclick.body"/>
 	<email key="EDITOR_DECISION_ACCEPT" subject="emails.editorDecisionAccept.subject" body="emails.editorDecisionAccept.body"/>
 	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" subject="emails.editorDecisionSendToExternal.subject" body="emails.editorDecisionSendToExternal.body"/>
 	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" subject="emails.editorDecisionSendToProduction.subject" body="emails.editorDecisionSendToProduction.body"/>

@@ -369,33 +369,9 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.reviewResponseOverdueAutoOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ responseDueDate} द्वारा आपकी प्रतिक्रिया की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख को पारित करने के साथ भेजा गया है.\n"
-"<br />\n"
-"मुझे विश्वास है कि आप पांडुलिपि के एक उत्कृष्ट समीक्षक के रूप में काम करेंगे। सबमिशन का सार नीचे दिया गया है, और मुझे आशा है कि आप हमारे लिए इस महत्वपूर्ण कार्य को करने पर विचार करेंगे.<br />\n"
-"<br />\n"
-"कृपया यह दर्शाने के लिए जर्नल वेब साइट पर लॉग इन करें कि आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और अपनी समीक्षा और सिफारिश रिकॉर्ड करने के लिए.<br />\n"
-"<br />\n"
-"The review itself is due {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Submission URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Thank you for considering this request.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"&quot;{$submissionTitle}&quot;<br />\n"
-"<br />\n"
-"{$submissionAbstract}"
-
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.reviewResponseOverdueAutoOneclick.description"
-msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब किसी समीक्षक की पुष्टि की नियत तिथि समाप्त हो जाती है (सेटिंग्स के अंतर्गत समीक्षा विकल्प देखें> वर्कफ़्लो> समीक्षा) और एक-क्लिक समीक्षक पहुंच सक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
-
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
@@ -566,24 +542,9 @@ msgstr ""
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.reviewRemindAutoOneclick.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस समीक्षा की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख को पारित करने के साथ भेजा गया है। जैसे ही आप इसे तैयार करने में सक्षम होंगे, हम इसे प्राप्त करके प्रसन्न होंगे.<br />\n"
-"<br />\n"
-"Submission URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"कृपया पत्रिका के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
-"<br />\n"
-"{$signature}"
-
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.reviewRemindAutoOneclick.description"
-msgstr "यह ईमेल स्वचालित रूप से तब भेजा जाता है जब एक समीक्षक की नियत तिथि समाप्त हो जाती है (सेटिंग्स> वर्कफ़्लो> समीक्षा के तहत समीक्षा विकल्प देखें) और एक-क्लिक समीक्षक पहुंच सक्षम है। अनुसूचित कार्यों को सक्षम और कॉन्फ़िगर किया जाना चाहिए (साइट कॉन्फ़िगरेशन फ़ाइल देखें)."
-
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}, {$submissionTitle}, {$contextName}
@@ -1071,17 +1032,11 @@ msgstr "सदस्यता समाप्ति की सूचना"
 msgid "emails.editorDecisionAccept.subject"
 msgstr "संपादक का निर्णय"
 
-msgid "emails.reviewRemindAutoOneclick.subject"
-msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
-
 #, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "ऑटोमेटेड सबमिशन रिव्यू रिमाइंडर"
 
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "लेख समीक्षा का अनुरोध"
-
-msgid "emails.reviewResponseOverdueAutoOneclick.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
 msgid "emails.reviewResponseOverdueAuto.subject"
