@@ -45,7 +45,7 @@
 		},
 		"description": {
 			"type": "string",
-			"multilingual": "true",
+			"multilingual": true,
 			"apiSummary": true
 		},
 		"doiObject": {
@@ -138,7 +138,7 @@
 		},
 		"title": {
 			"type": "string",
-			"multilingual": "true",
+			"multilingual": true,
 			"apiSummary": true
 		},
 		"urlPath": {
