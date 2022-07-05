@@ -1,10 +1,10 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2021-08-06 16:04+0000\n"
+"PO-Revision-Date: 2022-07-01 06:26+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "ca_ES/>\n"
@@ -1978,7 +1978,7 @@ msgid "notification.type.awaitingRepresentations"
 msgstr "Esperant galerades."
 
 msgid "user.authorization.noContext"
-msgstr "Cap revista en aquest context!"
+msgstr "No s'ha trobat cap revista que compleixi la vostra petició."
 
 msgid "user.authorization.invalidIssue"
 msgstr "Sol·licitud de número invàlida!"
@@ -2088,3 +2088,14 @@ msgstr "No pagat"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Aquesta revista no publica el seu contingut en línia."
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"No s'ha pogut crear el DOI per al següent número: {$itemTitle}. No existeix "
+"en el context de la revista actual."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "No hi ha cap taxa de publicació habilitada."
+
+msgid "doi.manager.settings.publications"
+msgstr "Articles"

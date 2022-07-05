@@ -117,7 +117,7 @@
 			"properties": {
 				"temporaryFileId": {
 					"type": "integer",
-					"writeOnly": "true"
+					"writeOnly": true
 				},
 				"name": {
 					"type": "string"

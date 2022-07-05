@@ -1,7 +1,7 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-06 16:04+0000\n"
+"PO-Revision-Date: 2022-07-01 06:26+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/api/ca_ES/>"
 "\n"
@@ -65,3 +65,17 @@ msgid "api.emails.403.disabled"
 msgstr ""
 "La funcionalitat de notificació per correu electrònic no s'ha activat en "
 "aquesta revista."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Alguns elements no s'han dipositat correctament. Comproveu els elements "
+"individuals segons els missatges d'error específics."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "No s'ha configurat cap agència de registre DOI per a aquesta revista."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "El DOI que heu sol·licitat no forma part d'aquesta revista."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "La tramesa que heu sol·licitat no està en aquesta revista."

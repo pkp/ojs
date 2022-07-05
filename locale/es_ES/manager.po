@@ -1,12 +1,12 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
 # Antonio <elguije.ag@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2021-12-16 21:18+0000\n"
-"Last-Translator: Antonio <elguije.ag@gmail.com>\n"
+"PO-Revision-Date: 2022-07-02 03:43+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "es_ES/>\n"
 "Language: es_ES\n"
@@ -1860,12 +1860,12 @@ msgstr "La firma para los correos electrónicos automatizados de la revista"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
-"Este correo se envía automáticamente a un nuevo usuario, cuando se registra "
-"en la revista, cuando la configuración requiere que se valide la dirección "
-"de correo electrónico."
+"Este correo electrónico se envía automáticamente a un nuevo usuario/a al "
+"registrarse en la revista cuando en los ajustes se pide que la dirección de "
+"correo electrónico debe validarse."
 
 msgid "mailable.validateEmailContext.name"
-msgstr "Validar correo (Registro en revista)"
+msgstr "Validar correo electrónico (registro en la revista)"
 
 msgid "doi.displayName"
 msgstr "DOI"
