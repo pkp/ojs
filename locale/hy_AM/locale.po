@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-05 09:32+0000\n"
+"PO-Revision-Date: 2022-07-05 18:08+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "hy_AM/>\n"
@@ -1780,3 +1780,673 @@ msgstr "Ընթացիկ ամսագիր."
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Այս ամսագիրը չի հրապարակում իր բովանդակությունը առցանց:"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Ընտրեք, թե ինչպես պատվիրել հոդվածներ այս դասում:"
+
+msgid "catalog.sortBy"
+msgstr "Հոդվածների հերթագայում"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} -ն սկսել է {$submissionId} հոդվածի խմբագրման գործընթացը:"
+
+msgid "navigation.subscriptions"
+msgstr "Բաժանորդագրություններ"
+
+msgid "editor.issues.futureIssues"
+msgstr "Ապագա համարները"
+
+msgid "editor.issues.backIssues"
+msgstr "Հին համարները"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "\"{$journalPath}\" ամսագրի տրված ուղին չի կարող լուծվել ամսագրի համար:"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Այս որոնման իրականացումը թույլ չի տալիս ըստ ամսագրի վերաինդեքսավորում:"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Ինդեքսավորում է \"{$journalName}\""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Հեռացնել այս շարվածքի հաստատումը:</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Հաստատեք այս շարվածքը հրապարակման համար:</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Շարվածքի հաստատում"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Սպասում է հաստատմանը"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Հաստատված է"
+
+msgid "article.view.interstitial"
+msgstr "Խնդրում ենք ընտրել հոդվածի նիշք՝ ներբեռնելու համար:"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Թաքցնել այլ ամսագրերը"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Գրանցվեք այլ ամսագրերում"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Սպասում է հաստատմանը:"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Այս ներկայացումը ներկայումս սպասում է հաստատմանը, նախքան այն կհայտնվի "
+"համարում:"
+
+msgid "editor.navigation.issues"
+msgstr "Թողարկումներ"
+
+msgid "grid.action.createContext"
+msgstr "Ստեղծեք նոր ամսագիր"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Գրական խմբագրի անվավեր ներկայացում կամ գրական խմբագրի ներկայացում չի "
+"պահանջվել:"
+
+msgid "user.authorization.invalidIssue"
+msgstr "Անվավեր համար է պահանջվել:"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Դուք փորձում եք մուտք գործել հոդված, որը ձեր բաժնի մաս չէ:"
+
+msgid "user.authorization.noContext"
+msgstr "Ոչ մի ամսագիր չի գտնվել, որը համապատասխանում է ձեր խնդրանքին:"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Մուտքն արգելված է! Դուք չեք նշանակվել որպես այս հոդվածի գրական խմբագիր:"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Սպասում են շարվածքներին:"
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Հանձնարարեք օգտատիրոջը ստեղծելու շարվածքներ, օգտագործելով \"Նշանակել հղումը\""
+" \"Մասնակիցների ցանկից\":"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Ներկայացվել է նոր հոդված, որին անհրաժեշտ է նշանակել խմբագիր։"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Թողարկման հրապարակման մետատվյալները պահվեցին:"
+
+msgid "notification.type.public"
+msgstr "Հանրային հայտարարություններ"
+
+msgid "notification.type.userComment"
+msgstr "Ընթերցողը մեկնաբանություն է արել \"{$title}\" -ի վերաբերյալ"
+
+msgid "notification.type.submissions"
+msgstr "Ներկայացման Իրադարձություններ"
+
+msgid "notification.type.submissionComment"
+msgstr "Խմբագիրը մեկնաբանություն է արել \"{$title}.\" -ի վերաբերյալ։"
+
+msgid "notification.type.site"
+msgstr "Կայքի իրադարձություններ"
+
+msgid "notification.type.reviewing"
+msgstr "Գրախոսության իրադարձություններ"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Գրախոսման ձև է ուղարկվել այս ներկայացման համար \"{$title}.\""
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ստեղծվել է նոր հայտարարություն."
+
+msgid "notification.type.issuePublished"
+msgstr "Հրատարակվել է հերթական համարը."
+
+msgid "notification.type.galleyModified"
+msgstr "Շարվածքը փոփոխվել է \"{$title}.\" -ի համար։"
+
+msgid "notification.type.editorDecisionComment"
+msgstr ""
+"Խմբագրի որոշման վերաբերյալ մեկնաբանություն է թողնվել սրա համար \"{$title}.\""
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Ներկայացվել է նոր հոդված՝ \"{$title},\""
+
+msgid "notification.type.editing"
+msgstr "Իրադարձությունների խմբագրում"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Գործընկերային գրախոսության հոդված"
+
+msgid "log.imported"
+msgstr "{$userName} -ը ներմուծել է {$submissionId} հոդվածը:"
+
+msgid "log.proofread.complete"
+msgstr ""
+"{$proofreaderName}-ը ներկայացրել է {$submissionId}՝ ժամանակացույցի համար:"
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} -ը հանձնարարել է {$proofreaderName} -ին սրբագրել "
+"{$submissionId} ներկայացումը:"
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} -ը նշանակվել է որպես խմբագիր {$submissionId} ներկայացման համար:"
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} ներկայացումը վերականգնվել է հերթում:"
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} Ներկայացումը արխիվացված է:"
+
+msgid "log.editor.editorFile"
+msgstr "Ներկայացված նիշքի խմբագրի տարբերակը վերբեռնվել է:"
+
+msgid "log.editor.metadataModified"
+msgstr "Այս հոդվածի մետատվյալները փոփոխվել են {$editorName} -ի կողմից:"
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} -ն ավարտել է դասավորության խմբագրումը {$submissionId} "
+"ներկայացման համար:"
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} -ը հետ է կանչվել որպես դասավորության խմբագիր {$submissionId} "
+"ներկայացման համար:"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} -ը նշանակվել է որպես դասավորության խմբագիր {$submissionId} "
+"ներկայացման համար:"
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"Վերբեռնվել է հեղինակի կողմից գրական խմբագրված ներկայացման նիշքի տարբերակը:"
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Ներկայացված նիշքի գրական խմբագրված տարբերակը վերբեռնվել է:"
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} -ին հանձնարարվել է գրական խմբագրել {$submissionId} "
+"ներկայացումը:"
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} -ն ավարտել է {$submissionId} ներկայացման վերջնական գրական "
+"խմբագրումը:"
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} -ն ավարտել է {$submissionId} ներկայացման սկզբնական գրական "
+"խմբագրումը:"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Ընտրված է գրական խմբագրման լռելյայն նիշքը:"
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$submissionId} ներկայացման գրական խմբագրումը սկսվել է {$copyeditorName} -ի "
+"կողմից:"
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Խմբագրի առաջարկը ({$decision}) {$submissionId} հոդվածի համար գրանցվել է "
+"{$editorName} -ի կողմից:"
+
+msgid "log.editor.decision"
+msgstr ""
+"Խմբագրի ({$decision}) որոշումը {$submissionId} հոդվածի համար գրանցվել է "
+"{$editorName} -ի կողմից:"
+
+msgid "log.review.reviewerFile"
+msgstr "Վերբեռնվել է գրախոսի նիշքը:"
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Խմբագիրը՝ {$userName}, վերբեռնել է գրախոսման նիշք {$round} փուլի "
+"{$submissionId} ներկայացման համար՝ գրախոսի՝ {$reviewerName} -ի անունից:"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} -ն ընդունել է {$round} փուլի գրախոսումը {$submissionId} -ի "
+"կողմից {$reviewerName}-ի անունից ներկայացնելու համար:"
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} -ը մերժել է {$reviewerName} -ի անունից {$submissionId} -ի "
+"{$round} գրախոսումը:"
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} -ը ընդունել է {$round} փուլի գրախոսությունը {$submissionId} "
+"ներկայացման համար։"
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} -ը մերժել է {$submissionId} -ի {$round} փուլի գրախոսումը:"
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} ներկայացումը  կրկին ուղարկվել է գրախոսման:"
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"{$round} փուլի {$submissionId} ներկայացման գրախոսությն հանձնարարականը "
+"սահմանվել է {$editorName} խմբագրի կողմից, {$reviewerName} գրախոսի անունից:"
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Սահմանվել է {$reviewerName}-ի կողմից {$submissionId}  ներկայացման {$round} "
+"փուլի գրախոսման առաջարկությունը:"
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"{$reviewerName} -ի {$submissionId} ներկայացման {$round} փուլի գրախոսման "
+"վերջնաժամկետը սահմանվել է {$dueDate}:"
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} -ը գնահատվել է {$submissionId} ներկայացման {$round} փուլի "
+"գրախոսման համար:"
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"{$reviewerName} -ի {$round} փուլի գրախոսումը {$submissionId} ներկայացման "
+"համար մեկնարկել է:"
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} -ը հետ է կանչվել {$submissionId} ներկայացումը գրախոսելու "
+"{$round} փուլից:"
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} -ը վերանայել է {$submissionId} հոդվածը: Նիշքի նոր ID-ն է՝ "
+"{$fileId}:"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Հասանելի է OJS-ի նոր տարբերակը: Դուք ներկայումս օգտագործում եք OJS "
+"{$currentVersion}: Ամենավերջին տարբերակն է OJS {$latestVersion}: Խնդրում ենք "
+"կապնվել ձեր կայքի ադմինիստրատորի հետ ({$siteAdminName}, <a href=\""
+"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) այս նոր թողարկման մասին "
+"ծանուցելու համար: Լրացուցիչ տեղեկություններ կարելի է գտնել <a href=\""
+"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\">այստեղ</a>:"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Հասանելի է OJS-ի նոր տարբերակը: Դուք ներկայումս օգտագործում եք OJS "
+"{$currentVersion}: Ամենավերջին տարբերակն է OJS {$latestVersion}: Խնդրում ենք "
+"այցելել <a href=\"https://pkp.sfu.ca/ojs_download\" target=\"_new\">այս "
+"էջը</a>՝ ամենավերջին տարբերակը ներբեռնելու և թարմացման հրահանգները ստանալու "
+"համար:"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>OJS-ի թարմացումը {$version} տարբերակին հաջողությամբ ավարտվել է:</p>\n"
+"<p>Մի մոռացեք ձեր config.inc.php կազմաձևման նիշքում «տեղադրված» պարամետրը "
+"նորից դնել <em>Միացված</em>։</p>\n"
+"<p>Եթե դեռ չեք գրանցվել և ցանկանում եք ստանալ նորությունները և "
+"թարմացումները, <strong>գրանցվեք այստեղ <a href=\""
+"https://lists.publicknowledgeproject.org/lists/\" target=\"_new\""
+">https://lists.publicknowledgeproject.org/lists/</a>։</strong> Եթե ունեք "
+"հարցեր կամ մեկնաբանություններ, խնդրում ենք այցելել <a href=\""
+"https://forum.pkp.sfu.ca\" target=\"_new\">աջակցության ֆորում</a>։</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS-ի տեղադրումը հաջողությամբ ավարտվեց:</p>\n"
+"<p>Համակարգն օգտագործելու համար <a href=\"{$loginUrl}\">մուտք գործեք</a> "
+"նախորդ էջում մուտքագրված օգտվողի անունով և գաղտնաբառով:</p>\n"
+"<p>Եթե ցանկանում եք լինել PKP համայնքի մի մասը, կարող եք։</p>\n"
+"<ol>\n"
+"\t<li>Կարդացեք <a href=\"https://pkp.sfu.ca/category/news/\" target=\"_new\">"
+"PKP blog</a> և հետևեք <a href=\"https://pkp.sfu.ca/category/News/feed/\" "
+"target=\"_new\">RSS feed</a> նորությունների և թարմացումների համար։</li>\n"
+"\t<li>Այցելեք <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">"
+"աջակցության ֆորում</a> եթե ունես հարցեր կամ մեկնաբանություններ։</li>\n"
+"</ol>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ԿԱՐԵՎՈՐ Է</h4>\n"
+"<p>Տեղադրողը չկարողացավ ինքնաշխատ կերպով վերագրել կազմաձևման նիշքը: "
+"Համակարգն օգտագործելուց առաջ խնդրում ենք բացել <tt>config.inc.php</tt> "
+"համապատասխան տեքստային խմբագրիչում և փոխարինել դրա բովանդակությունը ստորև "
+"նշված տեքստային դաշտի բովանդակությամբ:</p>"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Զգուշացում.</strong> Եթե տեղադրումը ձախողվեց տվյալների շտեմարանի "
+"տեղադրման մի մասում, կարող է անհրաժեշտ լինել հեռացնել ձեր OJS տվյալների "
+"բազան կամ տվյալների բազայի աղյուսակները՝ նախքան տվյալների բազան նորից "
+"տեղադրելու փորձը:"
+
+msgid "installer.upgradeApplication"
+msgstr "Թարմացնել Open Journal Systems"
+
+msgid "installer.installApplication"
+msgstr "Տեղադրեք Open Journal Systems"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS-ը պահանջում է մուտք գործել SQL տվյալների շտեմարան՝ իր տվյալները պահելու "
+"համար: Աջակցվող տվյալների շտեմարանների ցանկի համար տե՛ս համակարգի պահանջները "
+"վերևում: Ստորև բերված դաշտերում տեղադրեք տվյալների շտեմարանին միանալու համար "
+"օգտագործվող կարգավորումները:"
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Մուտքագրեք ամբողջական ուղու անունը գոյություն ունեցող գրացուցակում, որտեղ "
+"պետք է պահվեն վերբեռնված նիշքերը: Այս գրացուցակը չպետք է ուղղակիորեն "
+"հասանելի լինի համացանցում: <strong>Նախքան տեղադրումը, խնդրում ենք համոզվել, "
+"որ այս գրացուցակը գոյություն ունի և գրառելի է:</strong> Windows-ի ուղիների "
+"անունները պետք է օգտագործենդեպի  առաջ շեղեր, օրինակ. «C:/myjournal/files»:"
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+"Ընտրեք ցանկացած լրացուցիչ լեզու այս համակարգում աջակցելու համար: Այս "
+"լեզուները հասանելի կլինեն կայքում տեղակայված ամսագրերի օգտագործման համար: "
+"Լրացուցիչ լեզուներ կարող են նաև տեղադրվել ցանկացած պահի կայքի կառավարման "
+"միջերեսից:"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Այս համակարգի համար օգտագործվող հիմնական լեզուն: Խնդրում ենք ծանոթանալ OJS-ի "
+"փաստաթղթերին, եթե հետաքրքրված եք այստեղ չնշված լեզուների աջակցությամբ:"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Ձեր կայանը ներկայումս թույլ է տալիս նիշքի վերբեռնման առավելագույն չափը: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Ձեր կայանը ներկայումս թույլ է տալիս նիշքերի վերբեռնում.: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Unicode-ի ամբողջական աջակցության համար PHP-ն պետք է կազմվի <a href=\""
+"https://www.php.net/mbstring\" target=\"_blank\">mbstring</a> գրադարանի "
+"աջակցությամբ (միացված է լռելյայն PHP-ի ամենավերջին տեղադրումներում): Դուք "
+"կարող եք խնդիրներ ունենալ ընդլայնված նիշերի հավաքածուների հետ, եթե ձեր "
+"կայանը չի համապատասխանում այս պահանջներին:\n"
+"<br /><br />\n"
+"Ձեր կայանը ներկայումս աջակցում է mbstring-ին: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS Version {$version}</h4>\n"
+"\n"
+"<p>Շնորհակալություն Public Knowledge Project-ի <strong>Open Journal "
+"Systems</strong> ներբեռնելու համար։ Մինչ կատարելը, կարդացեք այս "
+"ծրագարակզմում ներառված  <a href=\"{$baseUrl}/docs/README.md\">README</a> և <"
+"a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> նիշքերը։ Public Knowledge "
+"Project-ի և դրա ծրագրային նախագծերի մասին լրացուցիչ տեղեկությունների համար "
+"այցելեք <a href=\"https://pkp.sfu.ca/\" target=\"_blank\">PKP կայք</a>։ Եթե "
+"ունեք սխալների մասին հաշվետվություններ կամ տեխնիկական աջակցության հարցումներ "
+"Open Journal Systems-ի վերաբերյալ, տես <a href=\"https://forum.pkp.sfu.ca\" "
+"target=\"_blank\">support forum</a> կամ այցելեք PKP-ի առցանց <a href=\""
+"https://github.com/pkp/pkp-lib/issues\" target=\"_blank\">վրիպակների "
+"հաշվետվության համակարգ</a>։ Թեև աջակցության ֆորումը շփման նախընտրելի եղանակն "
+"է, կարող եք նաև նամակ ուղարկել թիմին <a href=\"mailto:pkp.contact@gmail.com\""
+">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Նախքան շարունակելը, <strong>խստորեն խորհուրդ է տրվում</strong>, որ "
+"կրկնօրինակեք ձեր տվյալների շտեմարանը, նիշքերի գրացուցակը և OJS տեղադրման "
+"գրացուցակը:</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Նախատեղադրման քայլերը</h4>\n"
+"\n"
+"\n"
+"<p>1. Հետևյալ նիշքերը և գրացուցակները (և դրանց բովանդակությունը) պետք է "
+"գրառելի լինեն.</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> գրառելի է (կամընտրական): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> գրառելի է: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> գրառելի է: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> գրառելի է: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> գրառելի է: {$writable_templates_compile}</li>"
+"\n"
+"\t<li><tt>cache/_db</tt> գրառելի է: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2.Վերբեռնված նիշքերը պահելու համար գրացուցակ պետք է ստեղծվի և պետք է լինի "
+"գրառելի (տե՛ս «Նիշքի կարգավորումները» ստորև):</p>"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS տարբերակ {$version}</h4>\n"
+"\n"
+"<p>Շնորհակալություն Public Knowledge Project-ի <strong>Open Journal "
+"Systems</strong> ներբեռնելու համար: Շարունակելուց առաջ կարդացեք այս "
+"ծրագրաշարի հետ ներառված <a href=\"{$baseUrl}/docs/README.md\">README</a> "
+"նիշքը։ Public Knowledge Project-ի և դրա ծրագրային նախագծերի մասին լրացուցիչ "
+"տեղեկությունների համար այցելեք <a href=\"https://pkp.sfu.ca/\" target=\""
+"_blank\">PKP կայք</a>։ Եթե ունեք սխալների մասին հաշվետվություններ կամ "
+"տեխնիկական աջակցության հարցումներ Open Journal Systems-ի վերաբերյալ, տես the "
+"<a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> կամ "
+"այցելեք PKP-ի առցանց <a href=\"https://github.com/pkp/pkp-lib#issues\" "
+"target=\"_blank\">վրիպակների հաղորդման համակարգ</a>։ Թեև աջակցության ֆորումը "
+"շփման նախընտրելի եղանակն է, դուք կարող եք նաև նամակ ուղարկել թիմին <a href=\""
+"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Առաջարկվող համակարգի պահանջները</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; դուք ներկայումս օգտագործում եք PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
+">= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Գործառնական համակարգ. Ցանկացած ԳՀ, որն աջակցում է վերը նշված "
+"ծրագրակազմին, ներառյալ <a href=\"https://www.linux.org/\" target=\"_blank\""
+">Linux</a>, <a href=\"https://www.bsd.org\" target=\"_blank\">BSD</a>, <a "
+"href=\"https://www.oracle.com/solaris/\" target=\"_blank\">Solaris</a>, <a "
+"href=\"https://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\""
+"https://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Քանի որ PKP-ն ռեսուրսներ չունի ծրագրային ապահովման տարբերակների և "
+"հարթակների բոլոր հնարավոր համակցությունները փորձարկելու համար, ճիշտ "
+"աշխատանքի կամ աջակցության երաշխիք չի ենթադրվում:</p>\n"
+"\n"
+"<p>Այս կարգավորումների փոփոխությունները կարող են կատարվել տեղադրումից հետո՝ "
+"խմբագրելով <tt>config.inc.php</tt> նիշքը OJS-ի բազային գրացուցակում կամ "
+"օգտագործելով կայքի կառավարման վեբ միջերեսը:</p>\n"
+"\n"
+"<h4>Աջակցված տվյալների շտեմարանի համակարգեր</h4>\n"
+"\n"
+"<p>OJS-ը ներկայումս փորձարկվել է միայն MySQL-ում և PostgreSQL-ում, չնայած <a "
+"href=\"https://adodb.org\" target=\"_blank\">ADOdb</a>-ի կողմից աջակցվող "
+"տվյալների շտեմարանի կառավարման այլ համակարգեր կարող են աշխատել ("
+"ամբողջությամբ կամ մասնակի): Համատեղելիության հաշվետվությունները և/կամ "
+"այլընտրանքային DBMS-ների համար նախատեսված կոդերի կարկատանները կարող են "
+"ուղարկվել OJS թիմին:</p>\n"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Եթե դուք թարմացնում եք OJS-ի գոյություն ունեցող տեղադրումը, <a href=\""
+"{$upgradeUrl}\">սեղմեք այստեղ</a> շարունակելու համար:"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS-ի արդիականացում"
+
+msgid "installer.appInstallation"
+msgstr "OJS-ի տեղադրում"
+
+msgid "payment.subscription.expires"
+msgstr "Ժամկետը լրանում է"
+
+msgid "payment.subscription.renew"
+msgstr "Նորացրեք բաժանորդագրությունը"
+
+msgid "payment.subscription.purchase"
+msgstr "Գնեք բաժանորդագրություն"
+
+msgid "payment.membership.ends"
+msgstr "Ավարտվում է"
+
+msgid "payment.membership.renewMembership"
+msgstr "Անհատական անդամակցության նորացում"
+
+msgid "payment.membership.buyMembership"
+msgstr "Գնեք անհատական անդամակցություն"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Հրատարակության գինը վճարված է"
+
+msgid "payment.publication.payPublication"
+msgstr "Վճարեք հրապարակման համար"
+
+msgid "payment.submission.paySubmission"
+msgstr "Վճարեք ներկայացման գինը"
+
+msgid "payment.donation.makeDonation"
+msgstr "Կատարեք նվիրատվություն"
+
+msgid "payment.notFound"
+msgstr ""
+"Պահանջվել է վճարում, սակայն հարցման ժամկետը սպառվել է: Մանրամասների համար "
+"կապվեք ամսագրի կառավարիչի հետ:"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Հրապարակման վճարը միացված չէ:"
+
+msgid "payment.requestPublicationFee"
+msgstr "Հարցրեք հրապարակման վճարի մասին ({$feeAmount})"
+
+msgid "payment.type.donation"
+msgstr "Նվիրատվություններ"
+
+msgid "payment.type.subscription"
+msgstr "Բաժանորդային վճար"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Թողարկման գնման վճար"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Հոդվածի գնման վճար"
+
+msgid "payment.type.membership"
+msgstr "Անհատական անդամակցության վճար"
+
+msgid "payment.type.fastTrack"
+msgstr "Արագացված Վերանայման վճար"
+
+msgid "payment.type.publication.required"
+msgstr "Հրապարակման վճարը ենթակա է վճարման:"
+
+msgid "payment.type.publication"
+msgstr "Հրապարակման վճար"
+
+msgid "payment.type.submission"
+msgstr "Ներկայացման վճար"
+
+msgid "payment.authorFees"
+msgstr "Հեղինակի վճարներ"
+
+msgid "payment.paymentSent"
+msgstr "Վճարումն արդեն ուղարկվել է"
+
+msgid "payment.paymentReceived"
+msgstr "Վճարումը ստացված է"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Ընտրեք այս վանդակը, եթե արդեն ուղարկել եք ձեր վճարումը ամսագրին՝ ներկայացման "
+"գործընթացը ավարտին հասցենելու համար: Ներկայացումը չի վերանայվի մինչև "
+"վճարումը չհասնի: Վերևում սեղմեք ՎՃԱՐԵԼ ՀԻՄԱ՝ տեսնելու վճարման հրահանգները:"
+
+msgid "payment.alreadyPaid"
+msgstr "Արդեն վճարված է"
+
+msgid "payment.waive"
+msgstr "Նկատի չառնել"
+
+msgid "payment.payNow"
+msgstr "Վճարիր հիմա"
+
+msgid "payment.waived"
+msgstr "Հրաժարվել է"
+
+msgid "payment.unpaid"
+msgstr "Չվճարված"
+
+msgid "payment.paid"
+msgstr "Վճարված"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Նվիրատվություն կատարելու համար դուք պետք է մուտք գործեք:"
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Տարր մուտք գործելու համար պահանջվում է բաժանորդագրություն կամ թողարկման "
+"գնում: Բաժանորդագրությունը ստուգելու, նախորդ գնում մուտք գործելու, կամ "
+"թողարկում գնելու համար մուտք գործեք ամսագիր:"
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Տարր մուտք գործելու համար պահանջվում է բաժանորդագրություն կամ հոդվածի գնում: "
+"Բաժանորդագրությունը ստուգելու, նախորդ գնում մուտք գործելու կամ հոդված գնելու "
+"համար մուտք գործեք ամսագիր:"
+
+msgid "payment.loginRequired"
+msgstr "Վճարում կատարելու համար դուք պետք է մուտք գործեք:"
+
+msgid "donations.thankYouMessage"
+msgstr ""
+"Շնորհակալություն ներդրում կատարելու համար: Ձեր ներդրումը շատ գնահատելի է:"
+
+msgid "donations.thankYou"
+msgstr "Շնորհակալություն"
+
+msgid "help.goToEditPage"
+msgstr "Խմբագրել {$sectionTitle}"
+
+msgid "help.searchReturnResults"
+msgstr "Վերադարձ դեպի որոնման արդյունքներ"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS օգնություն"
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems օգնություն"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Այս կայքը օգտագործում է Open Journal Systems {$ojsVersion}, որը բաց կոդով "
+"ամսագրերի կառավարման և հրատարակման ծրագրակազմ է, որը մշակվել, աջակցվում և "
+"ազատորեն տարածվում է Public Knowledge Project-ի կողմից GNU Ընդհանուր "
+"հանրային լիցենզիայի ներքո: Այցելեք PKP-ի կայք՝ <a href=\"https://pkp.sfu.ca/"
+"\">ծրագրաշարի մասին ավելին իմանալու համար</a>: Խնդրում ենք ուղղակիորեն "
+"կապվել կայքի հետ՝ ամսագրերի և ամսագրերին ներկայացված նյութերի վերաբերյալ "
+"հարցերով:"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Այս ամսագիրը օգտագործում է Open Journal Systems {$ojsVersion}, որը բաց կոդով "
+"ամսագրերի կառավարման և հրատարակման ծրագրակազմ է, որը մշակվել, աջակցվում և "
+"ազատորեն տարածվում է Public Knowledge Project-ի կողմից GNU Ընդհանուր "
+"հանրային արտոնագրի ներքո: Այցելեք PKP-ի կայք՝ <a href=\"https://pkp.sfu.ca/\""
+">ծրագրաշարի մասին ավելին իմանալու համար</a>: Խնդրում ենք <a href=\""
+"{$contactUrl}\">կապվել ամսագրի հետ</a> ամսագրի վերաբերյալ հարցերով և "
+"ամսագրին ներկայացված նյութերով:"
+
+msgid "about.aboutSoftware"
+msgstr "Open Journal Systems-ի մասին"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS -ի խմբագրական և հրատարակչական գործընթաց"
