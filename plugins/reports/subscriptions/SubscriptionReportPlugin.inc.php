@@ -140,7 +140,11 @@ class SubscriptionReportPlugin extends ReportPlugin {
 						$columns[$index] = PKPString::html2text($user->getMailingAddress());
 						break;
 					case 'country':
-						$country = $countries->getByAlpha2($user->getCountry());
+						$userCountry = $user->getCountry();
+						$country = null;
+						if ($userCountry) {
+							$country = $countries->getByAlpha2($user->getCountry());
+						}
 						$columns[$index] = $country?$country->getLocalName():'';
 						break;
 					case 'email':
