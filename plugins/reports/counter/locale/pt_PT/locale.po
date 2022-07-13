@@ -17,7 +17,7 @@ msgstr ""
 msgid "plugins.reports.counter.description"
 msgstr ""
 "O plugin COUNTER permite armazenar e produzir relatórios sobre a atividade "
-"da revista, compatíveis com a iniciativa<a href=\"http://www.projectcounter."
+"da revista, compatíveis com a iniciativa<a href=\"https://www.projectcounter."
 "org\">COUNTER</a>. Estes relatórios não tornam a revista compatível com "
 "COUNTER. Para oferecer compatibilidade com o COUNTER, saiba mais sobre os "
 "critérios no site do Projeto COUNTER."
@@ -44,7 +44,9 @@ msgid "plugins.reports.counter.1a.name"
 msgstr "Relatório COUNTER JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.description"
-msgstr "Relatório 1 (R3) COUNTER da Revista: Artigo com texto completo solicitados por mês e revista"
+msgstr ""
+"Relatório 1 (R3) COUNTER da Revista: Artigo com texto completo solicitados "
+"por mês e revista"
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Todos os Clientes"
@@ -54,3 +56,63 @@ msgstr "Relatório de revista 1"
 
 msgid "plugins.reports.counter.ar1.title"
 msgstr "Relatório de Artigo 1"
+
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Relatório 1 (R3): Solicitações de texto completo de artigos por mês e revista"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Relatório 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Número de solicitações bem-sucedidas de artigos com texto completo por mês e "
+"revista (Ano {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Data da execução:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Editora"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Plataforma"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN (Impresso)"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN (Eletrónico)"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Total YTD"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "HTML YTD"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "PDF YTD"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Total para todas as revistas"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Os links em baixo geram relatórios usando os dados do antigo plugin COUNTER. "
+"Se pretende gerar relatórios COUNTER usando o novo tipo de métrica do "
+"COUNTER do OJS, use os links em cima."
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Relatórios antigos do portal"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Estes links geram relatórios COUNTER com base na versão obsoleta 3.0. Este "
+"relatório abrange todas as revistas do portal. Use a versão mais recente, "
+"sempre que possível."
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Versão XML"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anónimo"
