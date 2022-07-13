@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-23 08:13+0000\n"
+"PO-Revision-Date: 2022-07-08 01:54+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/es_MX/>\n"
@@ -629,3 +629,27 @@ msgstr ""
 
 msgid "user.register.otherContextRoles"
 msgstr "Solicitar los siguientes roles."
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Asignación de corrección de estilos iniciada"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Corrector/a de estilo no asignado al envío"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Corrector/a de estilo asignado al envío"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Envío recuperado del archivo"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Envío archivado"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Archivo del editor/a actualizado"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Decisión del editor/a enviada"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor/a no asignado al envío"

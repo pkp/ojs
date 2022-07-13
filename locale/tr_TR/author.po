@@ -1,9 +1,10 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2020-11-26 18:19+0000\n"
+"PO-Revision-Date: 2022-07-08 10:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "tr_TR/>\n"
@@ -168,7 +169,9 @@ msgid "author.submit.coverageInstructions"
 msgstr "Araştırma materyalinin coğrafik konumları, kronolojik ya da tarihsel kapsamı ve/veya karekteristiği."
 
 msgid "author.submit.languageInstructions"
-msgstr "Türkçe = tr; İngilizce = en. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Diğer Kodlar</a>."
+msgstr ""
+"English=en; Türkçe=tr. <a href=\"https://www.loc.gov/standards/iso639-2/php/"
+"code_list.php\" target=\"_blank\">Diğer dil kodları</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "En az bir yazar gerekli."

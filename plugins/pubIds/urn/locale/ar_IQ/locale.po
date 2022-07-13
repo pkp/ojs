@@ -1,9 +1,10 @@
+# M. Ali <vorteem@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:02+00:00\n"
-"PO-Revision-Date: 2020-06-14 15:54+0000\n"
+"PO-Revision-Date: 2022-07-09 18:41+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "ar_IQ/>\n"
@@ -109,7 +110,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnResolver"
 msgstr "محلل رابط الإنترنت"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
-msgstr "(مثل: http://nbn-resolving.de/)"
+msgstr "(مثل: https://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
 msgstr "لطفاً، أدخل رابط الإنترنت للمحلل."

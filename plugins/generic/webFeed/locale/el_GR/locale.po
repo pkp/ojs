@@ -1,0 +1,56 @@
+# Manolis Saldaris <omanos@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-07-08 11:17+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "Λογότυπο RSS2"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "Λογότυπο RSS1"
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Λογότυπο Atom"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Εισαγάγετε έναν θετικό ακέραιο για τα πρόσφατα δημοσιευμένα στοιχεία."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Αριθμός στοιχείων προς εμφάνιση"
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Εμφανίστε έναν σταθερό αριθμό από τα πιο πρόσφατα στοιχεία."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Εμφάνιση στοιχείων στο τρέχον δημοσιευμένο τεύχος."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr ""
+"Εμφάνιση συνδέσμων τροφοδοσίας Ιστού σε όλες τις σελίδες του περιοδικού."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Εμφάνιση συνδέσμων ροών ιστού μόνο στην αρχική σελίδα και τις σελίδες "
+"τεύχους."
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Εμφάνιση συνδέσμων τροφοδοσίας Ιστού μόνο σε σελίδες τεύχους."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Ρυθμίσεις"
+
+msgid "plugins.generic.webfeed.description"
+msgstr ""
+"Το πρόσθετο αυτό παράγει RSS/Atom web syndication ροές για το τρέχον τεύχος."
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Πρόσθετο Ροών Παγκοσμίου Ιστού"
