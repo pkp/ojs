@@ -75,7 +75,13 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
 
         $pluginCategory = $request->getUserVar('category');
         $pluginPathName = $request->getUserVar('plugin');
-        $this->_plugin = PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);
+
+        // Allow for plugins that have already been loaded (e.g. by injection from a generic plugin)
+        $this->_plugin = PluginRegistry::getPlugin($pluginCategory, $pluginPathName);
+
+        // Otherwise, load the plugin as specified
+        $this->_plugin ??= PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);
+
         assert(isset($this->_plugin));
 
         // Fetch the authorized roles.

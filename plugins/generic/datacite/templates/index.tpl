@@ -73,7 +73,7 @@
 					<form id="exportSubmissionXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
 						<input type="hidden" name="tab" value="exportSubmissions-tab" />
 						{fbvFormArea id="submissionsXmlForm"}
-							{capture assign=submissionsListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="datacite" category="importexport" escape=false}{/capture}
+							{capture assign=submissionsListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="DataciteExportPlugin" category="importexport" escape=false}{/capture}
 							{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 							{fbvFormSection list="true"}
 								{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
@@ -104,7 +104,7 @@
 					<form id="exportIssueXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
 						<input type="hidden" name="tab" value="exportIssues-tab" />
 						{fbvFormArea id="issuesXmlForm"}
-							{capture assign=issuesListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="datacite" category="importexport" escape=false}{/capture}
+							{capture assign=issuesListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="DataciteExportPlugin" category="importexport" escape=false}{/capture}
 							{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 							{fbvFormSection list="true"}
 								{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
@@ -135,7 +135,7 @@
 					<form id="exportRepresentationXmlForm" class="pkp_form" action="{plugin_url path="exportRepresentations"}" method="post">
 						<input type="hidden" name="tab" value="exportRepresentations-tab" />
 						{fbvFormArea id="representationsXmlForm"}
-							{capture assign=representationsListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportRepresentationsListGridHandler" op="fetchGrid" plugin="datacite" category="importexport" escape=false}{/capture}
+							{capture assign=representationsListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.pubIds.PubIdExportRepresentationsListGridHandler" op="fetchGrid" plugin="DataciteExportPlugin" category="importexport" escape=false}{/capture}
 							{load_url_in_div id="representationsListGridContainer" url=$representationsListGridUrl}
 							{fbvFormSection list="true"}
 								{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
