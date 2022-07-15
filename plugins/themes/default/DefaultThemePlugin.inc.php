@@ -14,6 +14,7 @@
  */
 
 use APP\core\Application;
+use APP\file\PublicFileManager;
 use PKP\config\Config;
 use PKP\session\SessionManager;
 
