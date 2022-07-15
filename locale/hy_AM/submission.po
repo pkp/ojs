@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-03 12:16+0000\n"
+"PO-Revision-Date: 2022-07-15 20:43+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hy_AM/>\n"
@@ -11,16 +11,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"Հրապարակման բոլոր պահանջները կատարվել են։ Սա անմիջապես կհրապարակվի  {$issue} "
+"Հրապարակման բոլոր պահանջները կատարվել են։ Սա անմիջապես կհրապարակվի {$issue} "
 "-ում: Վստա՞հ եք, որ ցանկանում եք հրապարակել սա:"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Հրապարակման բոլոր պահանջները կատարվել են։ Սա կհրապարակվի, երբ հրապարակվի  "
+"Հրապարակման բոլոր պահանջները կատարվել են։ Սա կհրապարակվի, երբ հրապարակվի "
 "{$issue}: Վստա՞հ եք, որ ցանկանում եք պլանավորել սա հրապարակման համար:"
 
 msgid "publication.publish.confirmation"
