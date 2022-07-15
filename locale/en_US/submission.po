@@ -9,7 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2019-09-30T06:07:35-07:00\n"
 "PO-Revision-Date: 2019-09-30T06:07:35-07:00\n"
-"Language: \n"
+"Language: en_US\n"
 
 msgid "submission.submit.title"
 msgstr "Submit an Article"
