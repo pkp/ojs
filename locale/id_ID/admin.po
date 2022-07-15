@@ -229,7 +229,7 @@ msgstr ""
 "\"{$hostedContextsUrl}\">Jurnal yang Dikelola</a>."
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
-msgstr "Bahasa utama harus merupakan bahasa yang didukung jurnal"
+msgstr "Bahasa utama harus merupakan bahasa yang didukung jurnal."
 
 msgid "admin.siteManagement.description"
 msgstr ""
