@@ -38,12 +38,11 @@ class Decision extends BaseDecision
     public const NEW_EXTERNAL_ROUND = 16;
     public const REVERT_DECLINE = 17;
     public const SKIP_EXTERNAL_REVIEW = 19;
-    public const BACK_TO_REVIEW = 20;
+    public const BACK_TO_EXTERNAL_REVIEW = 20;
     public const BACK_TO_COPYEDITING = 21;
     public const BACK_TO_SUBMISSION_FROM_COPYEDITING = 22;
-    public const DELETE_EMPTY_EXTERNAL_REVIEW_ROUND = 23;
-    public const BACK_TO_SUBMISSION_FROM_EXTERNAL_REVIEW = 24;
-    public const BACK_TO_PREVIOUS_EXTERNAL_REVIEW_ROUND = 25;
+    public const BACK_TO_SUBMISSION_FROM_EXTERNAL_REVIEW = 23;
+    public const BACK_TO_PREVIOUS_EXTERNAL_REVIEW_ROUND = 24;
 }
 
 if (!PKP_STRICT_MODE) {

@@ -19,7 +19,7 @@ use APP\notification\Notification;
 use Illuminate\Database\Eloquent\Collection;
 use PKP\decision\types\BackToCopyediting;
 use PKP\decision\types\BackToPreviousExternalReviewRound;
-use PKP\decision\types\BackToReview;
+use PKP\decision\types\BackToExternalReview;
 use PKP\decision\types\BackToSubmissionFromCopyediting;
 use PKP\decision\types\BackToSubmissionFromExternalReview;
 use PKP\decision\types\Decline;
@@ -29,7 +29,6 @@ use PKP\decision\types\RecommendAccept;
 use PKP\decision\types\RecommendDecline;
 use PKP\decision\types\RecommendResubmit;
 use PKP\decision\types\RecommendRevisions;
-use PKP\decision\types\RemoveEmptyExternalReviewRound;
 use PKP\decision\types\RequestRevisions;
 use PKP\decision\types\Resubmit;
 use PKP\decision\types\RevertDecline;
@@ -49,7 +48,7 @@ class Repository extends \PKP\decision\Repository
             $decisionTypes = new Collection([
                 new Accept(),
                 new BackToCopyediting(),
-                new BackToReview(),
+                new BackToExternalReview(),
                 new BackToSubmissionFromCopyediting(),
                 new Decline(),
                 new InitialDecline(),
@@ -65,7 +64,6 @@ class Repository extends \PKP\decision\Repository
                 new SendExternalReview(),
                 new SendToProduction(),
                 new SkipExternalReview(),
-                new RemoveEmptyExternalReviewRound(),
                 new BackToSubmissionFromExternalReview(),
                 new BackToPreviousExternalReviewRound(),
             ]);
