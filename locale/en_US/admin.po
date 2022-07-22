@@ -20,14 +20,6 @@ msgstr "Journal redirect"
 msgid "admin.settings.redirectInstructions"
 msgstr "Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tYour OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.\n"
-"\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank\n"
-"\t\tsearch results. Please select one of the configured metrics as a default.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Are you sure you want to disable this locale? This may affect any hosted journals currently using the locale."
 

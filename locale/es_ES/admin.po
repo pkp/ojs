@@ -24,12 +24,6 @@ msgstr "Redirigir revista"
 msgid "admin.settings.redirectInstructions"
 msgstr "Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tSu instalación de OJS está configurada para registrar más de una métrica de uso. Las estadísticas de uso se mostrarán en varios contextos. En algunos casos se debe utilizar una sola estadística de uso, p. ej. para mostrar una lista ordenada de los artículos más consultados o para clasificar los resultados de búsqueda. Seleccione una de las métricas configuradas como predeterminada.\n"
-"\t"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Éste será el idioma predeterminado para el sitio y para todas las revistas que aloje."
 

@@ -131,16 +131,6 @@ msgstr "Žádní zapsaní uživatelé."
 msgid "admin.locale.maybeIncomplete"
 msgstr "Označené soubory lokalizace mohou být nekompletní."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVaše instalace OJS je konfigurována k zaznamenávání více metrik. "
-"Statistiky čtenosti budou zobrazeny ve více souvisleostech.\n"
-"  V některých případech musí být použita jedna statistika čtenosti, např. "
-"při zobrazování seznamu nejčtenějších článků, nebo při zobrazení rozsahu "
-"hledání. Vyberte si, prosím, jednu z následujících metrik jako standardní.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na všechny časopisy, které tuto lokalizaci využívají."
 

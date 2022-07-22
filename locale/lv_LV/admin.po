@@ -157,8 +157,5 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr ""
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-
 msgid "admin.settings.redirectInstructions"
 msgstr ""

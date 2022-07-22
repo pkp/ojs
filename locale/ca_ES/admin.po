@@ -24,18 +24,6 @@ msgstr "Redirecció a la revista"
 msgid "admin.settings.redirectInstructions"
 msgstr "Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tLa vostra instal·lació d'OJS està configurada per registrar més d'una "
-"mètrica d'ús. Les estadístiques d'ús es mostraran en diversos contextos.\n"
-"\t\tHi ha casos en què s'ha d'utilitzar una estadística d'ús única, per "
-"exemple per mostrar una llista ordenada dels articles més consultats o per "
-"classificar\n"
-"\t\tels resultats d'una cerca. Seleccioneu una de les mètriques configurades "
-"com a predeterminada.\n"
-"\t"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Aquesta és la llengua predeterminada per al lloc web i per a qualsevol revista allotjada."
 

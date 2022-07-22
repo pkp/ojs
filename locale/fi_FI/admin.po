@@ -23,17 +23,6 @@ msgstr "Julkaisun uudelleenohjaus"
 msgid "admin.settings.redirectInstructions"
 msgstr "Pyynnöt pääsivustolle uudelleenohjataan tähän julkaisuun. Tämä saattaa olla hyödyllinen toiminto, jos sivustolla ylläpidetään vain yhtä julkaisua."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tOJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. "
-"Käyttötilastot näkyvät useassa yhteydessä.\n"
-"\tJoissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. "
-"silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja \n"
-"\tasetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi "
-"määritetyistä mittareista oletusarvoksi.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Haluatko varmasti poistaa tämän kielialueen käytöstä? Se saattaa vahingoittaa muita ylläpidettyjä julkaisuja, joilla on tämä kielialue käytössä."
 

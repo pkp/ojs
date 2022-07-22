@@ -144,14 +144,6 @@ msgstr ""
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "未注册用户。"
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\t您的期刊使用多个衡量标准。 这些衡量标准的使用统计将在许多上下文中出现。\n"
-"\t在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。\n"
-"\t请选择其中一个度量标准作为默认值。\n"
-"\t"
-
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "订阅到期提醒"
 

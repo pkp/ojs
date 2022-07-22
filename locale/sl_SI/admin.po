@@ -31,13 +31,6 @@ msgstr "Vse zahteve in obiski domače strani bodo preusmerjene na to revijo. To 
 msgid "admin.settings.noJournalRedirect"
 msgstr "Ne preusmeri"
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVaša OJS namestitev beleži več kot le eno metriko uporabe, ki so prikazane v različnih kontekstih.\n"
-"\t\tV nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni red najbolj branih člankov ali vrstni red iskalnih rezultatof. Prosimo izberite eno od konfiguriranih metrik kot privzeto.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Ste prepričani, da želite onemogočiti ta jezik? To lahko vpliva na revije, ki ga trenutno uporabljajo."
 

@@ -21,14 +21,6 @@ msgstr "別のユーザーアカウントに統合するユーザー（複数可
 msgid "admin.mergeUsers.confirm"
 msgstr "選択された{$oldAccountCount}アカウントを、ユーザー名\"{$newUsername}\"のアカウントに統合してよろしいですか？選択した{$oldAccountCount}アカウントは、その後存在しなくなります。この操作は元に戻すことはできません。"
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tお使いのOJSは、複数の使用状況を記録するように設定されています。使用状況の統計は、いくつかのコンテキストで表示されます。\n"
-"\t\t最も利用された記事の順序付きリストを表示したり、検索結果をランク付けするなど、単一の利用統計を使用しなければならない場合があります。\n"
-"\t\設定されたメトリクスの1つをデフォルトとして選択してください。\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "この言語を無効にしてよろしいですか？これは、現在その言語を使用しているホストされたジャーナルに影響を与える可能性があります。"
 

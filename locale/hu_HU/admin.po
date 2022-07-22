@@ -48,13 +48,6 @@ msgstr "Folyóirat cím"
 msgid "admin.settings.journalsList.showDescription"
 msgstr "Folyóirat leírás"
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tAz OJS telepítés egynél több használati statisztika tárolására van konfigurálva. A használati statisztikák különböző összefüggésekben jelennek meg.\n"
-"\t\tVannak olyan esetek, amikor egyféle használatú statisztikát kell alkalmazni, pl. egy rendezett listát megjeleníteni a leggyakrabban használt cikkekről, vagy rangsorolni a keresési eredményeket. Kérem, válassza ki, hogy melyik statisztika legyen az alapértelmezett.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Biztosan letiltja ezt a nyelvi környezetet? Ez hatással lehet bármelyik tárolt folyóiratra, amely jelenleg használja ezt a nyelvi környezetet."
 

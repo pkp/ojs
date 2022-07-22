@@ -135,18 +135,6 @@ msgstr "Označeni prijevodi su možda nezavršeni."
 msgid "admin.systemVersion"
 msgstr "OJS verzija"
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVaš časopis je podešen tako da bilježi više od jednog načina mjerenja "
-"upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko "
-"konteksta.\n"
-"Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz "
-"liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata "
-"pretrage.\n"
-"Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni.\n"
-"\t"
-
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Podsjetnik za recenziju"
 

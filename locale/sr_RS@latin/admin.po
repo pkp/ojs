@@ -135,9 +135,6 @@ msgstr "Da li ste sigurni da želite da spojite korisničke naloge {$oldAccountC
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Nema korisnika sa dodeljenim ulogama."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr "Vaša OJS instalacija je konfigurisana da može sačuvati rezultate jednog ili više načina merenja upotrebe. Statistika upotrebe će biti prikazana u nekoliko konteksta. U slučajevima kad mora biti upotrebljen samo jedan način merenja, npr. da bi se prikazala lista najčešće upotrebljenih članak ili za rangiranje rezultata pretrage.  Odaberite jedan od podešenih merenja kao pretpostavljen."
-
 msgid "admin.languages.confirmDisable"
 msgstr "Da li ste sigurni da želite da onemogućite ovu lokalizaciju? Ovo će uticati na časopise koji ju koriste."
 
