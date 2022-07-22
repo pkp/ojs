@@ -23,56 +23,11 @@ msgstr "SAYAÇ İstatistikleri"
 msgid "plugins.reports.counter.1a.name"
 msgstr "COUNTER Reporu JR1 (R3)"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML sürüm"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr "COUNTER Dergi Raporu 1 (R3): Tam Metin Makale İstekleri"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "Dergi Raporu 1 (R3): Aylık Tam Metin Makale İstekleri"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Dergi Raporu 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Aylık Başarılı Tam Metin Makale İstekleri Sayısı (Yıl {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Başlangıç tarihi:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Yayncı"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platform"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Basılı ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Çevrimiçi ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Bu Güne Kadar Yıllık Toplam"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "Bu Güne Kadar Yıllık HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "Bu Güne Kadar Yıllık PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Tüm dergiler için toplam"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonim"
-
 msgid "plugins.reports.counter.release"
 msgstr "COUNTER Sürümü"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Eski Site Raporları"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Rapor parametreleri geçersiz."
@@ -88,12 +43,6 @@ msgstr "Tüm Müşteriler"
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Sonuçlar XML olarak biçimlendirilemedi."
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "Bu bağlantılar, eski Sürüm 3.0'a dayanarak COUNTER tabanlı raporlar oluşturur. Bu rapor sitede tüm dergileri kapsar. Mümkünse en son sürümü kullanın."
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "Aşağıdaki bağlantılar, COUNTER destekli olmayan eski eklenti verilerini kullanarak eski raporlar oluşturur. Yeni OJS COUNTER metrik tipini kullanarak mevcut COUNTER raporları oluşturmak istiyorsanız, yukarıdaki bağlantıları kullanın."
 
 msgid "plugins.reports.counter.jr1.title"
 msgstr "Dergi Raporu 1"

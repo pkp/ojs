@@ -20,55 +20,6 @@ msgstr "Artikkeliraportti 1"
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Kaikki asiakkaat"
 
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Alla olevat linkit luovat vanhempia COUNTER-yhteensopimattomia raportteja. "
-"Mikäli haluat luoda uusimman COUNTER-standardin mukaisia raportteja, käytä "
-"yläpuolella olevia linkkejä."
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonyymi"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Kokonaismäärä, kaikki julkaisut"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "Kuluva vuosi (YTD) PDF"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "Kuluva vuosi (YTD) HTML"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Kuluva vuosi (YTD) kokonaismäärä"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Verkkojulkaisun ISSN"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Painetun julkaisun ISSN"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Alusta"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Julkaisija"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Kyselyn päivämäärä:"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Journal Report 1 (R3): Artikkeleiden kokotekstien latausmäärät kuukauden ja "
-"julkaisun mukaan jaoteltuna"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Toteutuneet kokotekstien latausmäärät kuukauden ja julkaisun mukaan "
-"jaoteltuna (vuosi {$year})"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Journal Report 1 (R3)"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "COUNTER Journal Report 1 (R3): Artikkeleiden kokotekstien latausmäärät "
@@ -76,15 +27,6 @@ msgstr ""
 
 msgid "plugins.reports.counter.1a.name"
 msgstr "COUNTER Report JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML-versio"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Nämä linkit luovat COUNTER-yhteensopivan raportin perustuen vanhempaan 3.0-"
-"versioon. Raporttiin sisältyy kaikki sivuston julkaisut. Käytä uusinta "
-"versiota mikäli mahdollista."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Tuloksia ei voitu muuntaa XML-muotoon."
@@ -97,9 +39,6 @@ msgstr "Virheellinen pyyntö."
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Raportin parametrit olivat virheelliset."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Vanhat sivustoraportit"
 
 msgid "plugins.reports.counter.release"
 msgstr "COUNTER-versio"

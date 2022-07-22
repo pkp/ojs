@@ -20,62 +20,14 @@ msgstr "计数器插件提供关于站点活动的记录和<a href=\"http://www.
 msgid "plugins.reports.counter"
 msgstr "计数器统计"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "期刊报告1(R3): 按月份与杂志的全文文章点击请求"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "期刊报告1(R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "按照月份与期刊的全文请求成功次数( 年{$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "日运行:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "发行人"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "平台"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "在线ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "最近一年总数"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "总计所有期刊"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "下面的链接产生的报告使用的是旧的COUNTER插件数据。如果你希望生成的COUNTER报告使用的是新的OJS COUNTER度量标准，请使用上面的链接。"
-
 msgid "plugins.reports.counter.allCustomers"
 msgstr "所有顾客"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "匿名"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr "计数器期刊报告1 (R3)：按月份和期刊分类的全文文章请求"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML 版本"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "计数器报告 JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "这些链接根据过时的3.0版生成支持计数器的报告。 该报告涵盖该站点上的所有期刊。 请尽可能使用最新版本。"
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "结果无法被格式化为XML。"
@@ -88,9 +40,6 @@ msgstr "报告请求无效。"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "报告参数无效。"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "旧版网站报告"
 
 msgid "plugins.reports.counter.release"
 msgstr "计数器版本"

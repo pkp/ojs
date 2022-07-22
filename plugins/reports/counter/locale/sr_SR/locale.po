@@ -19,39 +19,3 @@ msgstr "COUNTER statistika"
 
 msgid "plugins.reports.counter.migrate"
 msgstr "Migriraj Log fajl"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr "Izveštaj časopisa 1 (R3): Ceo tekst članka zahtevan od strane Month and Journal"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Izveštaj časopisa 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Broj časopisa sa celim tekstom zahtevanih od strane Month and Journal (Godina {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Datum pokretanja:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Izdavač"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platforma"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Štampani ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Online ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD ukupno"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Ukupno za sve časopise"

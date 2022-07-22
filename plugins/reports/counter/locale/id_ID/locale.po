@@ -27,74 +27,16 @@ msgstr "Statistik COUNTER"
 msgid "plugins.reports.counter.migrate"
 msgstr " Log Migrasi "
 
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Laporan Jurnal 1 (R3): Permintaan Artikel Lengkap berdasarkan Bulan dan "
-"Jurnal"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Laporan Jurnal 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Jumlah Permintaan Artikel Full-Text yang sukses dari Bulan dan Jurnal (Year "
-"{$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Tanggal Operasi:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Penerbit"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platform"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN Cetak"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN Online"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Total YTD"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total untuk seluruh jurnal"
-
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Semua Pelanggan"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Tautan di bawah ini menghasilkan laporan usang menggunakan data plugin lama, "
-"yang tidak COUNTER-ready. Jika ingin membuat laporan COUNTER terbaru "
-"menggunakan jenis metrik OJS COUNTER terkini, gunakan tautan di atas."
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "Tanpa nama"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "Laporan 1 Jurnal COUNTER (R3): Permintaan Artikel Lengkap berdasarkan Bulan "
 "dan Jurnal"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "Versi XML"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "COUNTER Report JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Tautan-tautan ini menghasilkan laporan jadi COUNTER berdasarkan Rilis 3.0 "
-"sebelumnya. Laporan ini mencakup semua jurnal pada situs ini. Gunakanlah "
-"Rilis terbaru bila memungkinkan."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Hasilnya tidak bisa diformat menjadi XML."
@@ -107,9 +49,6 @@ msgstr "Permintaan laporan tidak valid."
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Parameter laporan tidak valid."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Laporan Situs Terdahulu"
 
 msgid "plugins.reports.counter.release"
 msgstr "Rilis COUNTER"

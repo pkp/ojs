@@ -20,9 +20,6 @@ msgstr "گزارشگر COUNTER"
 msgid "plugins.reports.counter.release"
 msgstr "COUNTER Release"
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "گزارشات قدیمی سایت"
-
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "پارامترهای گزارش نامعتبر است"
 
@@ -35,59 +32,11 @@ msgstr "هیچ نتیجه‌ای برای این گزارش یافت نشد."
 msgid "plugins.reports.counter.error.noXML"
 msgstr "مجله امکان اراده به فرمت XML را پشتیبانی نمی‌کند"
 
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "این لینک گزارش COUNTER را تولید می‌کند. این گزارش شامل تمامی مجلات موجود رد سایت می‌باشد.  "
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "گزارش COUNTER"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "نسخه XML"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr "گزارش مجله COUNTER: متن کامل مقالات بر حس ماه و مجله مورد نیاز است."
-
-msgid "plugins.reports.counter.1a.title"
-msgstr "گزارش مجله 1 (R3): متن کامل مقالات بر حس ماه و مجله  مورد نیاز است."
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "گزارش مجله 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "تعداد موفق متن کامل مقالات بر حسب ماه و مجله (سال {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "تاریخ اجرا"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "ناشر"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "پلتفرم"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "شاپا چاپی"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "شاپا الکترونیکی"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "مجموع از اول سال"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML از اول سال"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF از اول سال"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "مجموع برای تمامی مجلات"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "ناشناس"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "لینک زیر یک گزارش بر اساس داده‌های افزونه قدیمی تولید می‌کند که با استاندارد COUNTER سازگار نیست.در صورتی می‌خواهید گزارش تولیدی با استاندارد COUNTER سازگار باشد از لینک بالا استفاده نمایید."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "تمامی مشتریان"

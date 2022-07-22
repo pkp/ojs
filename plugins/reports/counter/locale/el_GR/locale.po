@@ -25,69 +25,15 @@ msgstr ""
 msgid "plugins.reports.counter"
 msgstr "Στατιστικά COUNTER"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "Αναφορά Περιοδικού 1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Αναφορά Περιοδικού 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Αριθμός Επιτυχημένων Αιτημάτων για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό (Έτος {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Ημερομηνία εκτέλεσης:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Εκδότης"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Πλατφόρμα"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN Εντύπου"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Online ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Σύνολο τρέχοντος έτους"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Σύνολο για όλα τα περιοδικά"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Οι παρακάτω σύνδεσμοι παράγουν αναφορές με τη χρήση του παλιού COUNTER "
-"plugin. Αν θέλετε να δημιουργήσετε COUNTER αναφορές με τη χρήση του νέου OJS "
-"COUNTER μετρικού συστήματος, χρησιμοποιείστε τους παραπάνω συνδέσμους."
-
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Πελάτες"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "ανώνυμος"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "COUNTER JR1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "Έκδοση XML"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "Αναφορά COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Αυτοί οι σύνδεσμοι δημιουργούν αναφορές έτοιμες για COUNTER με βάση την "
-"ξεπερασμένη έκδοση 3.0. Αυτή η αναφορά καλύπτει όλα τα περιοδικά στον "
-"ιστότοπο. Χρησιμοποιήστε, όταν είναι δυνατό, την πιο πρόσφατη έκδοση."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Δεν ήταν δυνατή η μορφοποίηση των αποτελεσμάτων ως XML."
@@ -100,9 +46,6 @@ msgstr "Το αίτημα δημιουργίας αναφοράς δεν είν�
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Οι παράμετροι της αναφοράς δεν ήταν έγκυρες."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Παλαιότερες αναφορές του ιστότοπου"
 
 msgid "plugins.reports.counter.jr1.title"
 msgstr "Αναφορά περιοδικού 1"

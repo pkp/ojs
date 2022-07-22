@@ -29,9 +29,6 @@ msgstr "تقارير COUNTER"
 msgid "plugins.reports.counter.release"
 msgstr "إطلاق COUNTER"
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "التقارير الأقدم للموقع"
-
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "معايير التقرير غير صحيحة."
 
@@ -44,59 +41,11 @@ msgstr "لا نتائج لهذا التقرير."
 msgid "plugins.reports.counter.error.noXML"
 msgstr "تعذرت صياغة النتائج بتنسيق XML."
 
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "هذه الروابط تنشئ تقارير جاهزة من COUNTER تستند على الإصدار المهمل 3.0. هذه التقارير تظهر عند جميع المجلات في الموقع. استعمل الإصدارات اللاحقة بدلاً عنه، إن أمكن ذلك."
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "تقرير COUNTER JR1 (R3)"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "صيغة XML"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr "تقرير المجلة من COUNTER 1 (R3): طلبات المؤلفات بالنص الكامل حسب المجلة والشهر"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr "تقرير المجلة 1 (R3): طلبات النص الكامل للمقالات حسب الشهر والمجلة"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "تقرير المجلة 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "عدد طلبات النص الكامل الناجحة للمقالات حسب الشهر والمجلة (لسنة {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "تأريخ التشغيل:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "الناشر"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "منصة العمل"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN الطباعي"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN للإنترنت"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "مجموع YTD"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "الإجمالي لكل المجلات"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "مجهول الاسم"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "الروابط أدناه تنشئ تقارير بصيغة مهملة عبر استعمال بيانات الوظيفة الإضافية القديمة، والتي هي غير موائمة لـ COUNTER. إذا أردت إنشاء تقارير COUNTER مستعملاً نوع المقاييس الجديدة في COUNTER لنظام المجلات المفتوحة، استعمل الروابط أعلاه."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "All Customers"

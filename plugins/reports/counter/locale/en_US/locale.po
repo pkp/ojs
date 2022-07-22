@@ -28,9 +28,6 @@ msgstr "COUNTER Reports"
 msgid "plugins.reports.counter.release"
 msgstr "COUNTER Release"
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "Older Site Reports"
-
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "The report parameters were invalid."
 
@@ -43,59 +40,11 @@ msgstr "No results were found for this report."
 msgid "plugins.reports.counter.error.noXML"
 msgstr "The results could not be formatted as XML."
 
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "These links generate COUNTER-ready reports based on the obsolete Release 3.0. This report spans all journals on the site. Use the latest Release instead, when possible."
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "COUNTER Report JR1 (R3)"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML version"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr "COUNTER Journal Report 1 (R3): Full-Text Article Requests by Month and Journal"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr "Journal Report 1 (R3): Full-Text Article Requests by Month and Journal"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Journal Report 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Number of Successful Full-Text Article Requests by Month and Journal (Year {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Date run:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Publisher"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platform"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Print ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Online ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD Total"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total for all journals"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonymous"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "The links below generate obsolete reports using the old plugin data, which is not COUNTER-ready. If you want to generate current COUNTER reports using the new OJS COUNTER metric type, use the links above."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "All Customers"

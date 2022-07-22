@@ -22,72 +22,13 @@ msgstr "Հոդվածի հաշվետվություն 1"
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Բոլոր գնորդները"
 
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Ստորև բերված հղումները ստեղծում են հնացած հաշվետվություններ՝ օգտագործելով "
-"հին պլագինների տվյալները, որոնք COUNTER-ի համար պատրաստ չեն: Եթե ցանկանում "
-"եք ստեղծել ընթացիկ COUNTER հաշվետվություններ՝ օգտագործելով նոր OJS COUNTER "
-"մետրային տեսակը, օգտագործեք վերը նշված հղումները:"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "անանուն"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Ընդհանուր բոլոր ամսագրերի համար"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD Ընդամենը"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Առցանց ISSN"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Տպագիր ISSN"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Հարթակ"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Հրատարակիչ"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Մեկնարկի ամսաթիվ:"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Հաջողված ամբողջական տեքստային հոդվածների հարցումների քանակը ըստ ամիսների և "
-"ամսագրի (տարի {$year})"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Ամսագրի հաշվետվություն 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Ամսագրի հաշվետվություն 1 (R3). Հոդվածների ամբողջական տեքստային հարցումներ "
-"ըստ ամիսների և ամսագրի"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "COUNTER ամսագրի հաշվետվություն 1 (R3). Հոդվածների ամբողջական տեքստային "
 "հարցումներ ըստ ամիսների և ամսագրի"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML տարբերակ"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "COUNTER Report JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Այս հղումները ստեղծում են OUNTER-պատրաստի հաշվետվություններ՝ հիմնված հնացած "
-"թողարկում 3.0-ի վրա: Այս զեկույցը ներառում է կայքի բոլոր ամսագրերը: "
-"Հնարավորության դեպքում դրա փոխարեն օգտագործեք վերջին թողարկումը:"
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Արդյունքները չհաջողվեց ձևաչափել որպես XML:"
@@ -100,9 +41,6 @@ msgstr "Զեկույցի հարցումն անվավեր է:"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Հաշվետվության պարամետրերն անվավեր էին:"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Ավելի հին կայքի հաշվետվություններ"
 
 msgid "plugins.reports.counter.release"
 msgstr "COUNTER Release"

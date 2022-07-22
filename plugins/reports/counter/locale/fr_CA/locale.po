@@ -26,55 +26,8 @@ msgstr ""
 msgid "plugins.reports.counter"
 msgstr "Rapports COUNTER"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Rapport de revue 1 (R3) : Demandes de texte intégral d'articles, par mois et "
-"par revue"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Rapport de revue 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Nombre de demandes de texte intégral acceptées, par mois et par revue (Année {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Date d'exécution :"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Éditeur"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Plateforme"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN imprimé"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN en ligne"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Cumulatif de l'année en cours"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "Cumulatif annuel - HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "Cumulatif annuel - PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total pour toutes les revues"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Les liens ci-dessous créent des rapports utilisant les données de l'ancien "
-"plugiciel COUNTER. Si vous désirez produire des rapports COUNTER à l'aide du "
-"nouvel indicateur COUNTER d'OJS, veuillez utiliser les liens ci-dessus."
-
 msgid "plugins.reports.counter.release"
 msgstr "Version de COUNTER"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Rapports antérieurs"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Les paramètres du rapport sont invalides."
@@ -88,25 +41,13 @@ msgstr "Aucun résultat trouvé pour ce rapport."
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Les résultats n'ont pas pu être formatés en XML."
 
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Ces liens génèrent des rapports basés sur la version 3.0 de COUNTER, qui est "
-"maintenant désuète. Ce rapport contient toutes les revues du site. Veuillez "
-"plutôt utiliser la dernière version lorsque possible."
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "Rapport COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "Version XML"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "Rapport COUNTER de revue 1 (R3) : Requête sur des articles en plein texte "
 "par mois et par revue"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonyme"
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Tous les clients"
