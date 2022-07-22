@@ -1006,16 +1006,6 @@ msgstr "Cadastro de usuários"
 msgid "manager.setup.useTextTitle"
 msgstr "Título em formato de texto"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tSua revista está configurado para registrar mais de uma métrica de uso. "
-"As estatísticas de uso serão exibidas em vários contextos.\n"
-"Há casos em que uma estatística de uso único deve ser usada, por exemplo, "
-"para exibir uma lista ordenada dos artigos mais usados ou para classificar\n"
-"resultados de busca. Selecione uma das métricas configuradas como padrão.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Estatísticas"
 
@@ -1093,12 +1083,6 @@ msgstr "Acessos à capa do periódico"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Visualizações do sumário da edição"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Restringir resultados por contexto (fascículos e/ou artigo)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Restrinja os resultados por tipo de objeto (periódico, edição, artigo, composições finais em pdf, ou outros tipos) e/ou por um ou mais IDs de objeto."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Políticas de assinaturas"

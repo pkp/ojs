@@ -1981,14 +1981,6 @@ msgstr "Truy cập mở trì hoãn"
 msgid "manager.subscriptionPolicies"
 msgstr "Chính sách thuê bao"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Thu hẹp kết quả theo loại đối tượng (tạp chí, số, bài viết, loại tệp) và/"
-"hoặc bởi một hoặc nhiều id đối tượng."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Thu hẹp kết quả theo ngữ cảnh (số và/hoặc bài viết)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Lượt xem mục lục"
 
@@ -2053,18 +2045,6 @@ msgstr ""
 " được tính từ ngày gửi (hoặc chỉ định phiên bản dùng để đánh giá) cho đến "
 "quyết định ban đầu, trong khi \"ngày để xuất bản\" được tính cho bài gửi "
 "được chấp nhận từ khi tải lên bản gốc đến khi được xuất bản."
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tTạp chí của bạn được cấu hình để ghi lại nhiều hơn một số liệu sử dụng. "
-"Thống kê sử dụng sẽ được hiển thị trong một số bối cảnh.\n"
-"\t\tCó những trường hợp phải sử dụng một thống kê sử dụng duy nhất, ví dụ: "
-"để hiển thị một danh sách theo thứ tự các bài viết được sử dụng nhiều nhất "
-"hoặc để xếp hạng\n"
-"\t\tkết quả tìm kiếm. Vui lòng chọn một trong các số liệu được cấu hình làm "
-"mặc định.\n"
-"\t"
 
 msgid "manager.setup.useImageTitle"
 msgstr "Tiêu đề ảnh"

@@ -985,14 +985,6 @@ msgstr "Felhasználó regisztráció"
 msgid "manager.setup.useTextTitle"
 msgstr "Cím szöveg"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tA folyóirat a jelenlegi konfiguráció szerint egy vagy több használati statisztikát képes tárolni. A használati statisztikák különböző környezetekben jelennek meg.\n"
-"\t\tVannak esetek, amikor egy egyedülálló statisztikát kell használni, pl. egy rendezetlen lista a leggyakrabban olvasott cikkekről vagy rangsorolni a keresési eredményeket.\n"
-"\t\tKérem, válasszon az alapértelmezett statisztikák közül.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Folyóirat statisztikák"
 
@@ -1073,12 +1065,6 @@ msgstr "Folyóiratszám fájl letöltések"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "A folyóiratszám tartalomjegyzék-oldal megtekintés"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "A szövegkörnyezettel közeli találatok (folyóirat számok és/vagy cikk)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Az objektum típushoz közeli találatok (folyóirat, szám, cikk, fájl típusok) és/vagy egy vagy több objektum azonosító(k)."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Előfizetési irányelvek"

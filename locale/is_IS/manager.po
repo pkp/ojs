@@ -1205,14 +1205,6 @@ msgstr "Seinkaður opinn aðgangur"
 msgid "manager.subscriptionPolicies"
 msgstr "Stefna um áskriftir"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Þrengdu niðurstöðurnar út frá tegund (tímarit, tölublað, grein, skráartegund)"
-" og/eða auðkennum."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Þrengdu niðurstöðurnar út frá samhengi (tölublöð og/eða greinar)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Skoðun efnisyfirlits tölublaðs"
 
@@ -1297,16 +1289,6 @@ msgstr "Skoðun greinar (fyrir höfunda)"
 
 msgid "manager.statistics.statistics"
 msgstr "Tölfræði"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tTímaritið er sett upp til að nota meira en einn notkunarmælikvarða.  "
-"Tölfræði um notkun verður sýnd í fleiru en einu samhengi. \n"
-"\t\tÞað eru tilfelli þar sem einföld notkunartölfræði er notuð, t.d. til að "
-"sýna mest skoðuðu greinanar eða til raða þeim eftir fjölda leita. \n"
-"\t\tVinsamlega veldu einn uppsettan mælikvarða sem sjálfgefinn.\n"
-"\t"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Titill - texti"

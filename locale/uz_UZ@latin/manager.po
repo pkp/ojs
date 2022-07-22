@@ -99,19 +99,6 @@ msgstr "Maqolalarni ko'rish soni (faqat mualliflar uchun)"
 msgid "manager.statistics.statistics"
 msgstr "Jurnal statistikasi"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tSizning jurnalingiz bir nechta foydalanish ko'rsatkichlarini yozish "
-"uchun tuzilgan. Foydalanish statistikasi bir nechta kontekstda ko'rsatiladi."
-"\n"
-"Bitta foydalanish statistikasidan foydalanish kerak bo'lgan holatlar mavjud, "
-"masalan. eng ko'p ishlatiladigan maqolalarning tartiblangan ro'yxatini "
-"ko'rsatish yoki tartiblashtirish\n"
-"Qidiruv natijalari. Iltimos, sozlangan o'lchovlardan birini sukut bo'yicha "
-"tanlang.\n"
-"\t"
-
 msgid "manager.setup.useTextTitle"
 msgstr "Sarlavha matni"
 
@@ -2035,14 +2022,6 @@ msgstr "Kechiktirilgan ochiq kirish"
 
 msgid "manager.subscriptionPolicies"
 msgstr "Obuna siyosati"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Ob'ektlar turi (jurnal, son, maqola, fayl turlari) va/yoki bir yoki bir "
-"nechta ob'ekt identifikatorlari bo'yicha tor natijalar."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Kontekst bo'yicha tor natijalar (muammolar va/yoki maqola)."
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Muammolar jadvali sahifalarini ko'rish"

@@ -1616,14 +1616,6 @@ msgstr "Одложен отворен пристап"
 msgid "manager.subscriptionPolicies"
 msgstr "Политики за претплата"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Тесни резултати според типот на објектот (списание, издание, напис, типови "
-"на датотеки) и / или по еден или повеќе идентитет (и) на објектот."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Тесни резултати по контекст (прашања и / или напис)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Издадете прегледи на страницата со содржина"
 
@@ -1713,17 +1705,6 @@ msgstr "Број на прегледи на написи (само за авто
 
 msgid "manager.statistics.statistics"
 msgstr "Статистика за весник"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tВашиот дневник е конфигуриран да снима повеќе од една метрика на "
-"употреба. Статистиката за употреба ќе биде прикажана во неколку контексти.\n"
-"Постојат случаи кога мора да се користи статистика за една употреба, на пр. "
-"да прикажува нарачана листа на најкористени статии или да рангира\n"
-"Резултати од пребарувањето. Изберете една од конфигурираните метрики како "
-"стандардна.\n"
-"\t"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Наслов текст"

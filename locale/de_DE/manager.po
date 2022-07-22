@@ -935,14 +935,6 @@ msgstr "Registrierung von Benutzer/innen"
 msgid "manager.setup.useTextTitle"
 msgstr "Titeltext"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tIhre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.\n"
-"\t\tEs gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um\n"
-"\t\tSuchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Zeitschriftenstatistik"
 
@@ -1023,12 +1015,6 @@ msgstr "Startseiten-Aufrufe"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Aufrufe des Inhaltverzeichnis der Ausgabe"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Ergebnisse nach Kontext filtern (Ausgabe und/oder Artikel)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Ergebnisse nach Objekttyp (Zeitschrift, Ausgabe, Artikel, PDF-Fahne, andere Fahnen) und/oder nach einer oder mehrerer Objekt-ID filtern."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Abonnementrichtlinien"

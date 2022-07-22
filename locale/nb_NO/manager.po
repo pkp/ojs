@@ -2088,17 +2088,6 @@ msgstr ""
 msgid "manager.setup.useThumbnail"
 msgstr "Miniatyrbilde"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tDin {$contextObjectName} er konfigurert til å registrere mer enn ett mål "
-"på bruk. Brukerstatistikken vil bli vist i flere sammenhenger.\n"
-"\t\tI noen tilfeller vil ett enkelt statistisk mål må brukes, f.eks. for å "
-"vise en ordnet liste over de mest brukte innleveringene eller til å rangere "
-"søkeresultater. Velg ett av de\n"
-"\t\tkonfigurerte målene som standard.\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Artikkelnedlastinger"
 
@@ -2113,14 +2102,6 @@ msgstr "Antall visninger på hovedsiden"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Visninger av innholdsfortegnelsen"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Begrens resultatene ut fra kontekst (utgaver og/eller artikkel)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Begrens resultatene ut fra type (tidsskrift, utgave, artikkel, filtype) og/"
-"eller objekt-ID(er)."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Innstillinger"

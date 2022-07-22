@@ -268,14 +268,6 @@ msgstr "Akses Terbuka Tertunda"
 msgid "manager.subscriptionPolicies"
 msgstr "Polisi Langganan"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Hasil yang tipis mengikut jenis objek (jurnal, terbitan, artikel, jenis fail)"
-" dan/atau oleh satu atau lebih id objek."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Hasil yang tipis mengikut konteks (terbitan dan/atau artikel)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Terbitan paparan halaman isi kandungan"
 
@@ -2047,16 +2039,6 @@ msgstr ""
 "dikira dari tarikh penyerahan (atau penetapan Versi Ulasan) hingga Keputusan "
 "Editor awal, sementara \"hari untuk diterbitkan\" ditentukan untuk "
 "penyerahan yang diterima dari muat naik asalnya hingga penerbitannya."
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tJurnal anda dikonfigurasi untuk merekod lebih daripada satu metrik "
-"penggunaan. Statistik penggunaan akan dipaparkan dalam beberapa konteks.\n"
-"\t\tTerdapat kes di mana statistik penggunaan tunggal mesti digunakan, mis. "
-"untuk memaparkan senarai artikel yang paling kerap digunakan atau peringkat\n"
-"\t\thasil carian. Pilih salah satu metrik yang dikonfigurasi sebagai lalai.\n"
-"\t"
 
 msgid "manager.setup.uniqueIdentifierDescription"
 msgstr ""

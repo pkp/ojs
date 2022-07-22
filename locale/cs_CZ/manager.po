@@ -1356,9 +1356,6 @@ msgstr "Počet přečtení hlavní stránky časopisu"
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Stažení souborů článku"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Zúžení výsledků podle kontextu (vydání a/nebo článek)."
-
 msgid "manager.language.submissions"
 msgstr "Příspěvky"
 
@@ -1367,20 +1364,6 @@ msgstr "Zakoupit přístup k číslu"
 
 msgid "manager.setup.copyrightYearBasis"
 msgstr "Nastavit rok copyrightu nového článku na"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVáš časopis je nakonfigurován k využívaní více metrik. Statistiky "
-"čtenosti budou zobrazovány ve více souvislostech.\n"
-"  Jsou případy, kdy musí být zobrazovány jednotlivé statistiky, např. pro "
-"zobrazení seznamu nejčtenějších článků, nebo pro zobrazení rozsahu "
-"vyhledávání. Vyberte si, prosím, jednu z nakonfigurovaných metrik jako "
-"standardní.\n"
-"\t"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, ostatní sazebnice) a/nebo podle jednoho, nebo více id."
 
 msgid "manager.setup.categories"
 msgstr "Kategorie"

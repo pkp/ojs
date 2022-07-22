@@ -1037,12 +1037,6 @@ msgstr "Εγγραφή Χρήστη"
 msgid "manager.setup.useTextTitle"
 msgstr "Κείμενο τίτλου"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\tΗ εγκατάσταση του OJS καταγράφει διάφορες κατηγορίες στατιστικών χρήσης, τα οποία εμφανίζονται σε διάφορα συγκείμενα.\n"
-"\tΣε κάποιες περιπτώσεις χρησιμοποιείται ένα μοναδικό στατιστικό χρήσης (π.χ. για την εμφάνιση ενός καταλόγου των πιο δημοφιλών άρθρων ή για την ταξινόμηση των αποτελεσμάτων μίας αναζήτησης). Παρακαλούμε ορίστε ένα από τα διαμορφωμένα σύνολα ως προεπιλογή."
-
 msgid "manager.statistics.statistics"
 msgstr "Στατιστικά περιοδικού"
 
@@ -1134,12 +1128,6 @@ msgstr "Προβολές αρχικής σελίδας περιοδικού"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Προβολές σελίδας πίνακα περιεχομένων τεύχους"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Περιορίστε τα αποτελέσματα ανά κατηγορία τεκμηρίου (τεύχος ή/και άρθρο)"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Περιορίστε τα αποτελέσματα σύμφωνα με τον τύπο του αντικειμένου (περιοδικό, τεύχος, άρθρο, είδος αρχείου) ή/και σύμφωνα με ένα ή περισσότερα αναγνωριστικά (id) αντικειμένων."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Πολιτικές συνδρομών"

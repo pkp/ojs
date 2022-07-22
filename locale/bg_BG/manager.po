@@ -2018,14 +2018,6 @@ msgstr "Отложен отворен достъп"
 msgid "manager.subscriptionPolicies"
 msgstr "Правила за абонамент"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Филтриране на резултати по тип обект (списание, брой, статия, типове файлове)"
-" и/или по един или повече идентификатори на обекти."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Филтриране на резултати по контекст (броеве и/или статия)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Прегледи на таблицата със съдържанието на списанието"
 
@@ -2113,19 +2105,6 @@ msgstr "Брой прегледи на статии (само за автори)
 
 msgid "manager.statistics.statistics"
 msgstr "Статистики за списанието"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tВашето списание е конфигурирано да записва повече от един показател за "
-"използване. Статистическите данни за употребата ще се показват в няколко "
-"контекста.\n"
-"\t\tИма случаи, когато трябва да се използва единна статистика за употреба, "
-"напр. за показване на подреден списък на най-използваните статии или за "
-"класиране\n"
-"\t\tна резултати от търсенето. Моля, изберете един от конфигурираните "
-"показатели по подразбиране.\n"
-"\t"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Текст на заглавието"

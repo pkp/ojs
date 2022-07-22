@@ -1327,28 +1327,6 @@ msgstr "Sažetak članka i preuzimanja"
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Broj pregleda naslovnice časopisa"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Suzi rezultate po kontekstu (izdanje i ili članak)."
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"Vaš časopis je podešen tako da bilježi više od jednog načina mjerenja upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko konteksta.\n"
-"Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata pretrage.\n"
-"Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni."
-
-msgid "manager.statistics.reports.columns.description"
-msgstr ""
-"Odredite stupce koji će biti upotrebljeni za stvaranje izvještaja. Stupci koje odaberete za vaš izvještaj neće samo pokazati vrstu podataka koji će se pojaviti u izvještaju nego i nivo grupiranja statistike.\n"
-"Na primjer, ako odaberete stupce ID, Tip i Mjesec, izvještaj će zbrojiti sve preglede za objekat u jednom mjesecu predstaviti te podatke u jednom redu.  Ako odaberet stubac Dan umjesto Mjesec svaki objekat će imati podatke prikazane u jednom redu vezane za upotrebu na dnevnoj osnovi."
-
-msgid "manager.statistics.reports.reportUrl.label"
-msgstr ""
-"Slijedeći URL će biti upotrebljen za kreiranje izvještaja sa sadašnjim podešavanjima obrasca. Kopirajte ovaj URL i stavite ga u adresni prostor internet preglednika i pritisnite tipku Enter.\n"
-"Možete ovaj URL spremiti u pregledniku i brže stvarati vaše posebne izvještaje."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Suzi rezultate po tipu objekta (časopis, izdanje, članak, pdf korekturne kopije, druge korekturne kopije) i/ili po jednom ili više ID za određeni objekt."
-
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
 msgstr "Automatska obavještenja e-porukama (koje mogu urediti Ravnatelji časopisa ulaskom u Pripremljene poruke u OJS) mogu biti poslate Ravnatelju za pretplate nakon izvršenja uplate preko interneta za pretplatu."
 

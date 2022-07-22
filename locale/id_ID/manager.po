@@ -889,14 +889,6 @@ msgstr "Registrasi Pengguna"
 msgid "manager.setup.useTextTitle"
 msgstr "Nama"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tJurnal Anda diatur untuk mencatat lebih dari satu parameter penggunaan.  Statistik penggunaan akan ditampilkan dalam beberapa konteks.\n"
-"\t\tTerdapat kondisi tertentu yang mengharuskan pemakaian satu parameter saja, misalnya untuk menampilkan urutan naskah yang paling banyak dibaca atau membuat peringkat\n"
-"\t\thasil pencarian. Silakan pilih salah satu paket parameter sebagai default.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Statistik Jurnal"
 
@@ -977,12 +969,6 @@ msgstr "Kunjungan ke halaman utama jurnal"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Kunjungan ke halaman daftar isi terbitan"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Persempit hasil berdasar konteks (terbitan dan/atau artikel)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Persempit hasil berdasar tipe objek (jurnal, terbitan, artikel, tipe file) dan/atau satu atau lebih id objek."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Kebijakan Langganan"

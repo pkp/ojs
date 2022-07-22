@@ -1515,14 +1515,6 @@ msgstr "Oneskorený otvorený prístup"
 msgid "manager.subscriptionPolicies"
 msgstr "Pravidla predplatného"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Spresnite výsledky podľa typu objektu (časopis, číslo, článok, pdf "
-"sadzobnice, ostatné sadzobnice) a / alebo podľa jedného, alebo viacerých id."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Zúženie výsledkov podľa kontextu (vydania a / alebo článku)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Obsah čísla s počtom prístupov"
 
@@ -1611,17 +1603,6 @@ msgstr "Počet zobrazení článku (len pre autorov)"
 
 msgid "manager.statistics.statistics"
 msgstr "Štatistiky časopisu"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVáš denník je nakonfigurovaný na zaznamenávanie viac ako jednej metriky. "
-"Štatistiky používania sa budú zobrazovať v niekoľkých kontextoch.\n"
-"\t\tExistujú prípady, kedy je potrebné použiť jednu štatistiku, napr. na "
-"zobrazenie zoradeného zoznamu najpoužívanejších článkov alebo na zaradenie\n"
-"\t\tvýsledkov vyhľadávania. Vyberte jednu z nakonfigurovaných metrík ako "
-"predvolenú.\n"
-"\t"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Text nadpisu"

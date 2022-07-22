@@ -918,14 +918,6 @@ msgstr "Användarregistrering"
 msgid "manager.setup.useTextTitle"
 msgstr "Titel i text"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\tTidskriften är konfigurerad så att mer än ett användarmått registreras. Användarstatistiken kommer att visas i olika sammanhang.\n"
-"\tVid visa tillfällen kan bara en enskild användarstatistik användas, t.ex. för att visa en lista över de mest använda artiklarna eller för att rangordna\n"
-"\tsökresultat. Välj ett av de konfigurerade måtten som förval.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Tidskriftsstatistik"
 
@@ -1006,12 +998,6 @@ msgstr "Visningar av tidskriftens förstasida"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Visningar av numrets innehållsförteckning"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Begränsa resultaten med nummer och/eller artikel."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Begränsa resultaten med objektstyp (tidskrift, nummer, artikel, filtyp) och/eller med en eller flera identifikatorer."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Prenumerationspolicyer"

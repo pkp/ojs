@@ -1281,21 +1281,6 @@ msgstr "उपयोगकर्ता का पंजीकरण"
 # (pofilter) newlines: Different line endings
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
 # (pofilter) tabs: Different tabs
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tआपकी जर्नल एक से अधिक उपयोग मीट्रिक रिकॉर्ड करने के लिए कॉन्फ़िगर की गई "
-"है। उपयोग के आँकड़े कई संदर्भों में प्रदर्शित किए जाएंगे.\n"
-"\t\tऐसे मामले हैं जहां एकल उपयोग सांख्यिकीय का उपयोग किया जाना चाहिए, उदा। "
-"सबसे अधिक उपयोग किए जाने वाले लेखों या रैंक करने के लिए एक आदेशित सूची "
-"प्रदर्शित करना\n"
-"\t\tखोज परिणाम। कृपया डिफ़ॉल्ट के रूप में कॉन्फ़िगर किए गए मीट्रिक में से एक "
-"का चयन करें।\n"
-"\t"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) doublespacing: Different use of double spaces
-# (pofilter) simplecaps: Different capitalization
 msgid "manager.statistics.statistics.articleViews"
 msgstr "आलेख देखें मायने रखता है (केवल लेखकों के लिए)"
 
@@ -1369,17 +1354,6 @@ msgstr "लेख फ़ाइल डाउनलोड"
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "संदर्भ (अंको  और / या आलेख) द्वारा संकीर्ण परिणाम।"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) simpleplurals: The original uses plural(s)
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "ऑब्जेक्ट प्रकार (जर्नल, अंक, आलेख, फ़ाइल प्रकार) और / या एक या अधिक ऑब्जेक्ट द्वारा संकीर्ण परिणाम id(s)."
-
 # (pofilter) simplecaps: Different capitalization
 msgid "manager.subscriptionPolicies"
 msgstr "सदस्यता नीतियाँ"

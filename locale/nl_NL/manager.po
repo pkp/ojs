@@ -949,17 +949,6 @@ msgstr "Registratie van gebruikers"
 msgid "manager.setup.useTextTitle"
 msgstr "Titel tekst"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tUw tijdschrift is geconfigureerd voor meer dan een gebruiksmeting "
-"Gebruiksstatistieken zullen getoond worden in verschillende contexten.\n"
-"\t\tEr zijn situaties waar een enkele statistiek gebruikt moet worden, bv. "
-"om een geordende lijst van meestgebruikte artikels te tonen of om\n"
-"\t\tzoekresultaten te rangschikken. Kies een van de hieronder getoonde "
-"metrieken als standaard.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Tijdschrift statistieken"
 
@@ -1040,12 +1029,6 @@ msgstr "Tijdschrift voorpagina views"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Nummer inhoudsopgave views"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Verfijn resultaten naar context (nummer en/of artikel)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Verfijn de resultaten naar objecttype (tijdschrift, nummer, artikel, pdf proeven, andere proeven) en/of een of meerdere object id(s)."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Abonnementenbeleid"

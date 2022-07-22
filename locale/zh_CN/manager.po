@@ -1331,20 +1331,6 @@ msgstr "文章文件下载"
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "期刊主要页面访问量"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "通过上下文（期次 和/或 文章）缩小结果范围。"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "通过目标类型（期刊，期次，样稿，样稿格式）和/或 一个或多个目标 id 缩小结果范围。"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\t您的期刊目前有多种统计衡量标准。使用情况统计会在多处显示相关情况。\n"
-"\t\t很多情况更适合使用单一标准。例如显示期刊文章的利用率或者检索情况\n"
-"\t\t排名。请选择一种衡量标准作为默认标准。\n"
-"\t"
-
 msgid "manager.setup.copyrightYearBasis"
 msgstr "根据新期刊的版权"
 
