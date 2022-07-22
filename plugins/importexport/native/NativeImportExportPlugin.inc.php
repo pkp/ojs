@@ -382,8 +382,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				}
 				// Set global context
 				if (!$request->getContext()) {
-					HookRegistry::register('Router::getRequestedContextPaths', function (string $hook, array $args) use ($press): bool {
-						$args[0] = [$press->getPath()];
+					HookRegistry::register('Router::getRequestedContextPaths', function (string $hook, array $args) use ($journal): bool {
+						$args[0] = [$journal->getPath()];
 						return false;
 					});
 					$router = new PageRouter();
