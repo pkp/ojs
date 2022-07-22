@@ -18,7 +18,7 @@
     "moment": "^2.29.2",
     "tinymce": "^5.10.0",
     "v-tooltip": "^2.0.3",
-    "vue": "^2.6.12",
+    "vue": "^2.7.0",
     "vue-autosuggest": "^2.2.0",
     "vue-chartjs": "^3.5.1",
     "vue-color": "^2.7.1",
