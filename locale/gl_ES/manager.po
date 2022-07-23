@@ -1157,14 +1157,6 @@ msgstr "Acceso aberto adiado"
 msgid "manager.subscriptionPolicies"
 msgstr "Políticas de subscricións"
 
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Restrinxir os resultados por tipo de obxecto (revista, número, artigo, tipos "
-"de arquivos) e/ou por un ou mais IDs de obxectos."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Restrinxir os resultados por contexto (número e/ou artigo)."
-
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Visualizacións da taboa de contidos do número"
 
@@ -1254,17 +1246,6 @@ msgstr "Reconto de vistas de artigos (só para autores)"
 
 msgid "manager.statistics.statistics"
 msgstr "Estatísticas da revista"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tA sua revista está configurada para rexistrar máis dunha métrica de uso. "
-"As estatísticas de uso amosaranse en varios contextos.\n"
-"\t\tHai casos nos que se debe empregar unha única estatística de uso, por "
-"exemplo. para amosar unha lista ordenada dos artigos\t\n"
-"\t\tmáis usados ou para clasificar resultados da busca.\n"
-"\t\tSeleccione unha das métricas configuradas como predeterminada.\n"
-"\t"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Texto do título"

@@ -12,9 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platform"
-
 msgid "plugins.reports.counter.description"
 msgstr ""
 "Plugin COUNTER membenarkan melaporkan aktiviti jurnal, menggunakan <a href=\""
@@ -31,68 +28,13 @@ msgstr "Laporan Artikel 1"
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Semua Pelanggan"
 
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Pautan di bawah menghasilkan laporan usang menggunakan data plugin lama, "
-"yang tidak sedia COUNTER. Sekiranya anda ingin menghasilkan laporan COUNTER "
-"semasa menggunakan jenis metrik OJS COUNTER baru, gunakan pautan di atas."
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "tidak dikenali"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Jumlah untuk semua jurnal"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF YTD"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML YTD"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Jumlah YTD"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN dalam talian"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Cetak ISSN"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Penerbit"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Tarikh dijalankan:"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Bilangan Permintaan Artikel Teks Lengkap yang Berjaya mengikut Bulan dan "
-"Jurnal (Tahun {$year})"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Laporan Jurnal 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Laporan Jurnal 1 (R3): Permintaan Artikel Teks Penuh mengikut Bulan dan "
-"Jurnal"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "Laporan Jurnal COUNTER 1 (R3): Permintaan Artikel Teks Penuh mengikut Bulan "
 "dan Jurnal"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "versi XML"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "Laporan COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Pautan ini menghasilkan laporan sedia COUNTER berdasarkan Pelepasan 3.0 yang "
-"usang. Laporan ini merangkumi semua jurnal di laman web ini. Gunakan "
-"Pelepasan terbaru, jika boleh."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Hasilnya tidak dapat diformat sebagai XML."
@@ -105,9 +47,6 @@ msgstr "Permintaan laporan tidak sah."
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Parameter laporan tidak sah."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Laporan Tapak Lama"
 
 msgid "plugins.reports.counter.release"
 msgstr "Pelepasan COUNTER"

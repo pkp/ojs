@@ -24,16 +24,6 @@ msgstr "Redirecionamento para revista"
 msgid "admin.settings.redirectInstructions"
 msgstr "As solicitações realizadas ao portal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tO OJS está configurado para registrar mais de uma métrica de uso. "
-"Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma "
-"estatística única deve ser usada, como, por exemplo, para exibir listas "
-"ordenadas dos artigos mais usados, ou para classificar resultados de "
-"pesquisa. Escolha uma das métricas configuradas como padrão.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer revistas hospedadas utilizando o idioma."
 

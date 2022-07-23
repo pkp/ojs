@@ -871,17 +871,6 @@ msgstr "Käyttäjärekisteröinti"
 msgid "manager.setup.useTextTitle"
 msgstr "Otsikon teksti"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tJulkaisusi on määritetty tallentamaan useita käytön mittareita. "
-"Käyttötilastot näkyvät useassa yhteydessä.\n"
-"\t\tJoissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. "
-"silloin, kun näytetään käytetyimpien artikkeleiden\n"
-"\t\tjärjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. "
-"Valitse yksi määritetyistä mittareista oletusarvoksi.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Julkaisun tilastot"
 
@@ -962,12 +951,6 @@ msgstr "Lehden pääsivun katselukerrat"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Numeron sisällysluettelosivun katselukerrat"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Rajaa tuloksia sisällön (numerot ja/tai artikkeli) perusteella."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Rajaa tuloksia kohteen tyypin (julkaisu, numero, artikkeli, tiedostotyypit) ja/tai yhden tai useamman kohteen tunnisteen perusteella."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Tilauskäytännöt"

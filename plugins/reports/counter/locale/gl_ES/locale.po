@@ -20,72 +20,13 @@ msgstr "Informe de artigo 1"
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Tódolos clientes"
 
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"As ligazóns de abaixo xeran informes obsoletos empregando os antigos datos "
-"do complemento, que non están preparados para COUNTER. Se desexa xerar "
-"informes COUNTER actuais usando o novo tipo de métrica OJS COUNTER, use as "
-"ligazóns anteriores."
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anónimo"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total para todas as publicacións"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF do último ano"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML do último ano"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Totais do último ano"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN (Eletrónico)"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN (Impresión)"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Plataforma"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Editorial"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Data de execución:"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Número de solicitudes aceptadas de artigos completos exitosas por mes e "
-"revista (ano {$year})"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Informe da revista 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Informe da revista 1 (R3): solicitudes de artigos de texto completo por mes "
-"e revista"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "Informe da publicación COUNTER 1 (R3): solicitudes de artigos de texto "
 "completo por mes e revista"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "versión XML"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "Informe COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Estas ligazóns xeran informes listos para COUNTER baseados na versión 3.0 "
-"(obsoleta). Este informe abarca todas as revistas do sitio. Cando sexa "
-"posible, use a versión máis recente."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Non se puido formatar os resultados como XML."
@@ -98,9 +39,6 @@ msgstr "A solicitude de informe non é válida."
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Os parámetros do informe non son válidos."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Informes do sitio antigo"
 
 msgid "plugins.reports.counter.release"
 msgstr "Versión de COUNTER"

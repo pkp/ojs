@@ -139,7 +139,6 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I6093_AddForeignKeys" />
 		<migration class="PKP\migration\upgrade\v3_4_0\FailedJobsMigration" />
 		<migration class="PKP\migration\upgrade\v3_4_0\UpgradeMigration" />
-		<migration class="PKP\migration\upgrade\v3_4_0\I4904_UsageStatsTemporaryRecords" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6807_SetLastModified" />
 		<migration class="APP\migration\upgrade\v3_4_0\I4235_OAISetSpec" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7167_RemoveDuplicatedUserSettingsAndDeprecatedFields" />
@@ -164,6 +163,16 @@
 		<code function="installEmailTemplate" key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SKIP_REVIEW" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITORIAL_REMINDER" locales="en_US" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6895_Institutions" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_OrphanedMetrics" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I6782_UsageStatsSettings" />
+		<migration class="APP\migration\install\MetricsMigration" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsContext" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsIssue" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsSubmission" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsGeo" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_CleanOldMetrics" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_RemovePlugins" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 

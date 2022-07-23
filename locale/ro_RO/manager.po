@@ -998,19 +998,6 @@ msgstr "Număr de vizualizări articol (doar pentru autori)"
 msgid "manager.statistics.statistics"
 msgstr "Statistici jurnal"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tAplicația OJS instalată este configurată pentru a înregistra mai multe "
-"date de utilizare. Statisticile de utilizare vor fi afișate în diferite "
-"contexturi.\n"
-"\t\tExistă cazuri în care trebuie utilizată o singură statistică de "
-"utilizare, de ex. pentru a afișa o listă ordonată cu cele mai utilizate "
-"articole sau pentru a clasifica\n"
-"\t\trezultatele căutărilor. Vă rugăm să selectați una din valorile "
-"măsurabile ca implicită.\n"
-"\t"
-
 msgid "manager.setup.useTextTitle"
 msgstr "Text titlu"
 
@@ -1974,14 +1961,6 @@ msgstr "Acces liber întârziat"
 
 msgid "manager.subscriptionPolicies"
 msgstr "Politici de abonare"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Rezultate restrânse în funcție de tipul obiectului (jurnal, număr, articol, "
-"tipuri de fișiere) și / sau de unul sau mai multe ID-uri de obiect."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Rezultate restrânse după context (volume și/sau articol)."
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Vizualizări cuprins volum"

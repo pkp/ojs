@@ -23,14 +23,6 @@ msgstr "Umleitung zu der Zeitschrift"
 msgid "admin.settings.redirectInstructions"
 msgstr "Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tIhre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.\n"
-"\t\tEs gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um\n"
-"\t\tSuchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren wollen? Dies könnte alle Zeitschriften auf dieser Plattform, die momentan diese Regionaleinstellung benutzen, betreffen."
 

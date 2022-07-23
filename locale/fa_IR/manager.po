@@ -859,9 +859,6 @@ msgstr "ثبت‌نام کاربران"
 msgid "manager.setup.useTextTitle"
 msgstr "متن عنوان"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr "مجله شما از چندین معیار اندازه‌گیری برای ذخیره آمار استفاده می‌کند. اما در برخی موارد نیاز است که از یک معیار استفاده شود، برای مثال در نمایش لیست مقالات بیشتر مشاهده شده. لطفاً یک معیار اندازه‌گیری را به عنوان معیار پیش‌فرض انتخاب کنید."
-
 msgid "manager.statistics.statistics"
 msgstr "آمار مجله"
 
@@ -942,12 +939,6 @@ msgstr "مشاهده صفحه اصلی مجله"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "مشاهده صفحه فهرست مطالب شماره"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "محدودتر کردن نتایج بر اساس محتوا(شماره یا مقاله)"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "محدودتر کردن نتایج بر اساس نوع (مجله، شماره، مقاله یا نوع فایل) یا شناسه داده"
 
 msgid "manager.subscriptionPolicies"
 msgstr "سیاست‌های اشتراک"

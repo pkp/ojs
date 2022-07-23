@@ -59,45 +59,6 @@ msgstr "搜尋"
 msgid "plugins.reports.counter.entry.value"
 msgstr "值"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "期刊報告 1 (R3): 調閱全文文章的月份和期刊。"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "期刊報告 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "成功調閱文章全文的月份和期刊數({$year}年)"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "橫跨時間："
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "出版者"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "平台"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "印刷書ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "線上ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "最近一年總數"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "最近一年HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "最近一年PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "所有期刊總數"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML格式。"
-
 msgid "plugins.reports.counter.error.noXML"
 msgstr "結果無法被格式化為XML。"
 
@@ -106,9 +67,6 @@ msgstr "搜查不到此報告。"
 
 msgid "plugins.reports.counter.error.badRequest"
 msgstr "報告請求無効。"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "舊版網站報告"
 
 msgid "plugins.reports.counter.release"
 msgstr "計數器版本"

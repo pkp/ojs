@@ -838,12 +838,6 @@ msgstr "Registro de usuarios/as"
 msgid "manager.setup.useTextTitle"
 msgstr "Título en formato de texto"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tTu revista está configurada para registrar más de una métrica de uso. Las estadísticas de uso aparecerán en diversos contextos. En algunos casos se debe utilizar una sola estadística de uso, p. ej. para mostrar una lista ordenada de los artículos más consultados o para clasificar los resultados de búsqueda. Seleccione una de las siguientes métricas configuradas por defecto.\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Descargas del archivo del artículo"
 
@@ -855,12 +849,6 @@ msgstr "Resumen del artículo y descargas"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Visitas a la página principal de la revista"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Resultados reducidos por contexto (número y/o artículo)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Resultados reducidos por tipo de objeto (revista, número, artículo, galeradas en PDF, otras galeradas) o por uno o más id. de objeto."
 
 msgid "manager.statistics.statistics"
 msgstr "Estadísticas de la revista"

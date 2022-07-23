@@ -1399,18 +1399,6 @@ msgstr "Thumbnail da Revista"
 msgid "manager.setup.useThumbnail"
 msgstr "Thumbnail"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tA sua revista encontra-se configurada para gravar mais do que uma "
-"estatística de uso. Estatísticas de uso irão ser disponibilizadas em vários "
-"contextos.\n"
-"\t\tHá casos em que deve ser usada apenas uma estatística de uso, por ex. "
-"para exibir uma lista ordenada dos artigos mais usados ou para classificar\n"
-"\t\tresultados de pesquisa. Selecionar uma das métricas configuradas como "
-"padrão.\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Downloads do ficheiro do artigo"
 
@@ -1422,12 +1410,6 @@ msgstr "Resumo do artigo e downloads"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Visualizações da página principal da revista"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Restringir resultados por contexto (número e/ou artigo)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Restringir resultados por tipo de objecto (revista, número, artigo, tipos de ficheiros) e/ou por um mais IDs de objectos."
 
 msgid "manager.setup.categories"
 msgstr "Categorias"

@@ -33,9 +33,6 @@ msgstr "流通"
 msgid "manager.statistics.reports.description"
 msgstr "このシステムでは、一定期間のサイト利用や投稿に関連する詳細を追跡するレポートが生成されます。レポートはCSV形式で作成されるため、閲覧には表計算ソフトが必要となります。"
 
-msgid "manager.statistics.reports.generateReport"
-msgstr "カスタムレポートの生成"
-
 msgid "manager.statistics.reports"
 msgstr "レポート"
 
@@ -987,14 +984,6 @@ msgstr "ユーザー登録"
 msgid "manager.setup.useTextTitle"
 msgstr "タイトル文字"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tジャーナルは、複数の使用状況を記録するように構成されています。使用状況の統計は、いくつかのコンテキストで表示されます。\n"
-"\t\t最も利用された記事の順序付きリストを表示したり、検索結果をランク付けするなど、単一の利用統計を使用しなければならない場合があります。\n"
-"\t\t設定されたメトリクスの1つをデフォルトとして選択してください。\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "ジャーナル統計"
 
@@ -1072,12 +1061,6 @@ msgstr "ジャーナルのメインページビュー"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "発行巻号の目次のページビュー"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "コンテキスト（巻号数や記事）で絞り込みます。"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "オブジェクトタイプ（ジャーナル、巻号、記事、ファイルタイプ）や1つ以上のオブジェクトIDで結果を絞り込めます。"
 
 msgid "manager.subscriptionPolicies"
 msgstr "購読ポリシー"

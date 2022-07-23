@@ -1185,18 +1185,6 @@ msgstr "خستنەڕووی ژمارەدنی وشەکانی توێژینەوە (�
 msgid "manager.statistics.statistics"
 msgstr "ئاماری گۆڤار"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tگۆڤارەکەتان ڕێکخراوە بۆ ئەوەی زیاتر لە سیستەمێکی مەتری تۆمار بکات. "
-"بەکارهێنای ژمێریاری لە چەندین چوارچێوەی دەقدا پێشاندەدرێت.\n"
-"چەندین دۆخ هەیە کە یەک بەکارهێنانی ژمێریاری دەبیت بەکاربهێندرێت، بۆ نمونە بۆ "
-"پیشاندانی لیستێکی ڕیزکراو لەو توێژینەوانەی کە زۆرترین بەکارهێندراون یان بۆ "
-"ڕیکخستنی پێگەی \n"
-"ئەنجامەکانی گەڕان. تکایە یەکێک لە سیستەمە مەترییە ڕیزکراوەکان هەڵبژێرە بە "
-"شێوەیەکی ئاسایی.\n"
-"\t"
-
 msgid "manager.setup.useTextTitle"
 msgstr "دەقی ناونیشان"
 
@@ -1291,14 +1279,6 @@ msgstr "دەستپێڕاگەیشتنی کراوەی دواخراو"
 
 msgid "manager.subscriptionPolicies"
 msgstr "سیاسەتەکانی بەشداریکردن"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"ئەنجامەکان تەسک بکەوە لە ڕێگای جۆری بابەتەکە ( گۆڤار، ژمارە، توێژینەوە، جۆری "
-"فایلەکان) و/یان لە ڕێگای پێناسێک یان زیاتری بابەتەکە."
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "تەسکردنەوەی ئەنجامەکان لە ڕێگای دەق ( ژمارەکان و/ یان توێژینەوەکان)."
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "پیشاندانی لاپەڕەی خشتەی ناوەڕۆکەکانی ژمارەکە"

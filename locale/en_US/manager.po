@@ -969,14 +969,6 @@ msgstr "User Registration"
 msgid "manager.setup.useTextTitle"
 msgstr "Title text"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tYour journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.\n"
-"\t\tThere are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank\n"
-"\t\tsearch results. Please select one of the configured metrics as a default.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Journal Statistics"
 
@@ -1054,12 +1046,6 @@ msgstr "Journal main page views"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Issue table of contents page views"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Narrow results by context (issues and/or article)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Narrow results by object type (journal, issue, article, file types) and/or by one or more object id(s)."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Subscription Policies"
@@ -1256,6 +1242,12 @@ msgstr "A subscription type is required."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Please select a valid subscription type."
 
+msgid "manager.subscriptions.form.institution"
+msgstr "Institution"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Please select a valid institution."
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Start date"
 
@@ -1369,6 +1361,9 @@ msgstr "This user already has a subscription for this journal."
 
 msgid "manager.subscriptions.form.typeRequired"
 msgstr "A subscription type must be created before new subscriptions can be made."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "An institution must be created before new subscriptions can be made."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP Range"
@@ -1709,6 +1704,12 @@ msgstr "The specified objects could not be found."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Send a copy to the primary contact, identified in the Journal Settings."
 
+msgid "stats.issueTOCViews"
+msgstr "Issue TOC Views"
+
+msgid "stats.issueGalleyViews"
+msgstr "Issue Galley Views"
+
 msgid "stats.publicationStats"
 msgstr "Article Stats"
 
@@ -2002,3 +2003,6 @@ msgstr "Issue DOIs"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr "This email notifies the author that their submission is being declined, before the review stage, because the submission does not meet the requirements for publication in the journal."
+
+msgid "manager.institutions.noContext"
+msgstr "This institution's journal could not be found."

@@ -55,39 +55,3 @@ msgstr "Pretraživanje"
 
 msgid "plugins.reports.counter.entry.value"
 msgstr "Vrijednost"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr "Izvješće časopisa 1 (R3): Broj zahtjeva za punim tekstom članka po mjesecu i časopisu"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Izvješće časopisa 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Broj uspješno ispunjenih zahtjeva za punim tekstom članka po mjesecu i časopisu (Godina: {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Datum izvršavanja:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Nakladnik"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platforma"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN tiskanog izdanja"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "E-ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Ukupno od početka godine"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML-ova od početka godine"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF-ova od početka godine"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Ukupno za sve časopise"

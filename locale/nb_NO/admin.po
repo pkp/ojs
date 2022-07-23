@@ -179,16 +179,6 @@ msgstr ""
 "Er du sikker på at du vil skru av denne språkpakken? Dette kan gå ut over "
 "tidsskrifter som bruker den."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tInstallasjonen din er konfigurert til å registrere mer enn ett mål på "
-"bruk. Bruksstatistikken vil bli vist i flere sammenhenger. I noen tilfeller "
-"vil ett sett med bruksdata bli brukt, for eksempel til å vise en ordnet "
-"liste over de mest brukte artiklene eller til å rangere søkeresultater. Velg "
-"ett av de konfigurerte målene som standard.\n"
-"\t"
-
 msgid "admin.settings.info.success"
 msgstr "Nettstedsinformasjonen er oppdatert."
 

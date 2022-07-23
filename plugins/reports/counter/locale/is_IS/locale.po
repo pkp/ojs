@@ -26,9 +26,6 @@ msgstr "TELJARI skýrslur"
 msgid "plugins.reports.counter.release"
 msgstr "TELJARI  úgáfa"
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "Skýrslur eldri vefsíðna"
-
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Breytur skýrslunnar eru ógildar."
 
@@ -44,55 +41,10 @@ msgstr "Ekki var hægt að birta niðurstöður á XML formi."
 msgid "plugins.reports.counter.1a.name"
 msgstr "TELJARI skýrsla JR1 (R3)"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML útgáfa"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "TELJARI Tímaritsskýrsla 1 (R3): Beiðnir um heildartexta greina eftir mánuði "
 "og tímariti"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Tímaritsskýrsla 1 (R3): Beiðnir um heildartexta greina eftir mánuði og "
-"tímariti"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Tímaritsskýrsla 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Fjöldi beiðna um heildartexta greina eftir mánuði og  tímariti (Ár {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Keyrsludagsetning:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Útgefandi"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Verkvangur"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Prent ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "eISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Samtals í ár til þessa"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML árs til þessa"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF árs til þessa"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Samtala fyrir öll tímarit"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "nafnlaust"
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Allir viðskiptavinir"

@@ -29,58 +29,13 @@ msgstr "Statistici COUNTER"
 msgid "plugins.reports.counter.migrate"
 msgstr "Migrează fișierul de log"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "Raportul pentru revista 1 (R3): Solicitări de text integral pe lună şi pe revistă"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Raportul pentru revista 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Numărul de cereri înregistrate cu succes pentru articole cu text integral pe lună şi pe revistă (Anul {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Data:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Editor"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Platformă"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN pentru tipar"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN online"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Total YTD"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML YTD"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF YTD"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Totalul pentru reviste"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "Raportul COUNTER JR1 (R3): Cereri de articol cu text integral pe lună și "
 "jurnal"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "Versiunea XML"
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "Raportul COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Aceste legături generează rapoarte COUNTER finalizate bazate pe versiunea "
-"depășită 3.0. Acest raport se extinde pe toate revistele de pe site. "
-"Utilizați cea mai recentă versiune, atunci când este posibil."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Rezultatele nu au putut fi formatate ca XML."
@@ -94,21 +49,8 @@ msgstr "Solicitarea raportului nu este validă."
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Parametrii raportului au fost nevalide."
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "Rapoarte mai vechi ale sitului"
-
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Toți clienții"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Link-urile de mai jos generează rapoarte învechite folosind datele vechi ale "
-"plugin-ului, care nu este pregătit pentru COUNTER. Dacă doriți să generați "
-"rapoarte COUNTER curente utilizând noul tip de măsură OJS COUNTER, folosiți "
-"linkurile de mai sus."
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonim"
 
 msgid "plugins.reports.counter.release"
 msgstr "Lansare COUNTER"

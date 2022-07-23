@@ -939,14 +939,6 @@ msgstr "Регистрация пользователей"
 msgid "manager.setup.useTextTitle"
 msgstr "Текст заголовка"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tВаша журнал настроен на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.\n"
-"\t\tЕсть случаи, когда должна быть использована только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее часто используемых статей или отранжировать\n"
-"\t\tрезультаты поиска. Пожалуйста, выберите одну из настроенных метрик в качестве метрики по умолчанию.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Статистика журнала"
 
@@ -1024,12 +1016,6 @@ msgstr "Просмотры главной страницы журнала"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Просмотры страницы с содержанием выпуска"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Фильтровать результаты по контексту (выпуску и/или статье)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Фильтровать результаты по типу объекта (журнал, выпуск, статья, типы файлов) и/или по одному или нескольким ID объектов."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Правила подписки"

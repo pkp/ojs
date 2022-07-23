@@ -791,12 +791,6 @@ msgstr "Viste degli abstract e download degli articoli"
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Viste della home page della rivista"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Restringe i risultati per contesto (fascicolo e/o articolo)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Restringe i risultati per tipo di oggetto (rivista, fascicolo, articolo, gabbia PDF, altre gabbie) e/o per uno o più id."
-
 msgid "manager.statistics.statistics"
 msgstr "Statistiche"
 
@@ -1376,17 +1370,6 @@ msgstr "Scegli le categorie più appropriate nella lista sottostante. I lettori 
 
 msgid "manager.setup.resetPermissions"
 msgstr "Cancella i permessi dell'articolo"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tLa testata è configurata per registrare più di una metrica di utilizzo. "
-"Le statistiche di utilizzo verranno visualizzate in diversi contesti.\n"
-"Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, "
-"ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o "
-"risultati di ricerca.\n"
-"Selezionare una delle metriche configurate come predefinita.\n"
-"\t"
 
 msgid "plugins.importexport.common.settings"
 msgstr "Impostazioni"

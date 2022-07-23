@@ -976,13 +976,6 @@ msgstr "Registracija uporabnikov"
 msgid "manager.setup.useTextTitle"
 msgstr "Besedilo naslova"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVaša OJS namestitev beleži več kot le eno metriko uporabe, ki so prikazane v različnih kontekstih.\n"
-"\t\tV nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni red najbolj branih člankov ali vrstni red iskalnih rezultatof. Prosimo izberite eno od konfiguriranih metrik kot privzeto.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Statistike revije"
 
@@ -1063,12 +1056,6 @@ msgstr "Vpogledi na osnovno stran revije"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Vpogledi na stran s kazalom"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Zožaj območje rezultato z izbiro konteksta (številke in/ali prispevki)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Zožaj območje rezultato z izbiro tipa objekta (revija, številka, prispevek, tip datoteke) in/ali eno ali več IDjev objekta/ov."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Naročniška politika"

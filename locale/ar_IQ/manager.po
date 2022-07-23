@@ -953,14 +953,6 @@ msgstr "تسجيل المستخدم"
 msgid "manager.setup.useTextTitle"
 msgstr "نص العنوان"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tإن مجلتك مهيئة لتسجيل أكثر من مقياس تشغيل واحد. إحصائيات التشغيل ستم عرضها في عدة سياقات.\n"
-"\t\tهناك حالات لا بد فيها من استعمال معيار تشغيل إحصائي واحد، مثل: عرض قائمة مرتبة هجائياً لمؤلَّفات الأكثر استعمالاً\n"
-"\t\tأو عند تقييم نتائج البحث في الموقع. لطفاً، إختر أحد المقاييس الإحصائية ليكون بمثابة المعيار الإفتراضي.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "إحصائيات المجلة"
 
@@ -1038,12 +1030,6 @@ msgstr "مشاهدات صفحة المجلة الرئيسية"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "مشاهدات صفحة محتويات العدد"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "تضييق النتائج حسب السياق (الإصدار و/أو المؤلَّف)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "تضييق النتائج حسب نوع المكون (مجلة، إصدار، مؤلَّف، لوح طباعي بصيغة pdf، ألواح طباعية أخرى) و/أو حسب الرمز التعريفي لمكون واحد أو أكثر."
 
 msgid "manager.subscriptionPolicies"
 msgstr "سياسات الاشتراك"

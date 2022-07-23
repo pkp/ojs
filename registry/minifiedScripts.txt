@@ -92,7 +92,6 @@ lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
 lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js
 lib/pkp/js/controllers/informationCenter/NotesHandler.js
-lib/pkp/js/controllers/statistics/ReportGeneratorFormHandler.js
 lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js
 lib/pkp/js/pages/header/HeaderHandler.js
 lib/pkp/js/pages/header/TasksHandler.js

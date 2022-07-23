@@ -187,14 +187,6 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr "이 언어를 비활성화 하시겠습니까? 이는 현재 언어를 사용하는 모든 학술지에 영향을 줄 수 있습니다."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tOJS 설치는 둘 이상의 사용 메트릭을 기록하도록 구성되어 있습니다. 사용 통계는 여러 컨텍스트로 표시됩니다. 단일 사용 통계를 "
-"사용해야하는 경우가 있습니다. (예: 가장 많이 사용되는 기사의 정렬 된 목록을 표시하거나 검색 결과 순위를 지정합니다. )구성된 측정 "
-"항목 중 하나를 기본값으로 선택하십시오.\n"
-"\t"
-
 msgid "admin.settings.redirectInstructions"
 msgstr "메인 화면 접속 시 이 학술지로 이동 합니다. 예를 들어, 사이트에서 한 가지의 학술지만 호스팅하는 경우 유용 할 수 있습니다."
 

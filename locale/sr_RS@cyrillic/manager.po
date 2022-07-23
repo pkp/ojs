@@ -59,17 +59,8 @@ msgstr "Преузимања чланка и апстракта"
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Број прегледа главне стране часописa"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Сузи резултат по контексту (издање и/или чланак)."
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr "Ваш часопис је подешен тако да може сачувати више начина мерења употребе.  Статистика употребе ће бити приказана у више од једног контекста. Ово су случајеви кад може једна статистика употребе бити употребљена нпр. да прикаже листу најчешће употребљених чланака или да се рангирају резултирати претраге."
-
 msgid "manager.setup.categories.description"
 msgstr "Одаберите одговарајуће категорије из листе горе. Читаоци ће тако моћи да претражују часопис."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Сузите резултате по типу објекта (часопис, издање, чланак, пдф копије, друге копије) и/или поједном или више id објеката."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Подешавања"

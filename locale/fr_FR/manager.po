@@ -1427,19 +1427,6 @@ msgstr "Réinitialiser les autorisations de l'article"
 msgid "manager.setup.copyrightYearBasis"
 msgstr "Baser l'année de mention de droit d'auteur du nouvel article sur"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVotre revue est paramétrée pour enregistrer plus d'une mesure "
-"d'utilisation. Les statistiques d'utilisation seront affichées dans "
-"plusieurs contextes.\n"
-"\t\tIl y a des cas où seulement une seule statistique d'utilisation doit "
-"être utilisée , par exemple pour afficher une liste ordonnée des articles "
-"les plus utilisés ou pour classer\n"
-"\t\tles résultats de recherche. Veuillez sélectionner l'une des mesures "
-"paramétrées comme celle par défaut.\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Téléchargement du fichier de l'article"
 
@@ -1451,12 +1438,6 @@ msgstr "Résumé de l'article et téléchargements"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Vue de la page principale de la revue"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Affiner les résultats par contexte (numéro et/ou article)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Affiner les résultats par type d'objet (revue, numéro, article, épreuves PDF, autres épreuves) et/ou par un ou plusieurs ID(s) d'objet."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Paramètres"

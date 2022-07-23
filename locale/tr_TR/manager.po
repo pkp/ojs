@@ -1499,14 +1499,6 @@ msgstr "Lütfen verilen seçenekleri kullanınız."
 msgid "manager.setup.categories"
 msgstr "Kategoriler"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Sonuçları (sayı ve/veya makale) bağlamıyla daralt."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Sonuçları nesne türüne (dergi, sayı, makale, pdf dizgisi, diğer dizgiler) ve/"
-"veya bir veya daha fazla nesne ID'sine göre daralt."
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Makale dosyası indirmeleri"
 
@@ -1672,17 +1664,6 @@ msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 "CLOCKSS lisansı Dergi Hakkında bölümünde, arşivleme altında  görünecektir: <"
 "a href=\"https://clockss.org\" target=\"_blank\">CLOCKSS Lisansı</a>"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tDerginiz, birden fazla kullanım metriği kaydetmek için yapılandırıldı. "
-"Kullanım istatistikleri birkaç bağlamda görüntülenecektir.\n"
-"Tek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örn. En "
-"çok kullanılan makalelerin sıralı bir listesini görüntülemek veya arama "
-"sonuçlarını sıralamak için. Lütfen yapılandırılmış metriklerden birini "
-"varsayılan olarak seçin.\n"
-"\t"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "İçindekiler sayfası görüntülemeleri"

@@ -1401,19 +1401,6 @@ msgstr "Vælg den mest passende kategori blandt de ovenfor anførte. Læserne ka
 msgid "manager.setup.resetPermissions"
 msgstr "Genindstil artikelbegrænsning"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tJeres tidsskrift er konfigureret til at registrere mere end en metrisk "
-"brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige "
-"sammenhænge.\n"
-"  Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved "
-"visning af en sorteret liste over mest viste artikler eller ved rangering "
-"af\n"
-"  søgeresultater. Vælg én af de konfigurerede metriske enheder som standard."
-"\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Artikeldownloads"
 
@@ -1425,14 +1412,6 @@ msgstr "Artikelresuméer og downloads"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Visninger af tidsskriftets indgangsside"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Indsnævre resultatet ud fra sammenhæng (nummer og/eller artikel)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Indsnævre resultatet ud fra elementtype (tidsskrift, nummer, artikel, "
-"filtyper) og/eller ud fra et eller flere element-id'er."
 
 msgid "manager.setup.copyrightYearBasis"
 msgstr "Basér ny artikels copyright-år på"

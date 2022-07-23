@@ -24,14 +24,6 @@ msgstr "Omdirigering av tidskrift"
 msgid "admin.settings.redirectInstructions"
 msgstr "Anrop till huvudsidan kommer att dirigeras om till den här tidskriften. Detta kan till exempel vara lämpligt om webbplatsen endast hyser en tidskrift."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tDin OJS-installation är konfigurerad för att registrera mer än ett användningsmått. Användningsstatistiken kommer att presenteras i flera sammanhang.\n"
-"\t\tDet finns fall där endast ett användningsmått måste användas, t.ex. för att visa en sorterad lista över de mest använda bidragen eller för\n"
-"\t\tatt rangordna sökresultat. Välj ett av de konfigurerade värdena som default.\n"
-"\t"
-
 msgid "admin.languages.confirmDisable"
 msgstr "Är du säker på att du vill inaktivera detta språk/region? Det kan påverka tidskrifter som använder språket nu."
 

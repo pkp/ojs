@@ -910,16 +910,6 @@ msgstr "Miniatura czasopisma"
 msgid "manager.setup.useThumbnail"
 msgstr "Miniatura"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tCzasopismo jest skonfigurowane do wykorzystania więcej niż jednego "
-"rodzaju metryki. Statystyki zostaną wyświetlone w różnych kontekstach. W "
-"niektórych przypadkach mogą zostać wyświetlone tylko pojedyncze statystyki, "
-"np. przy wyświetlaniu listy najczęściej czytanych artykułów lub w celu "
-"sortowania elementów wyszukiwanych. Podaj domyślny rodzaj metryki.\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Liczba pobrań artykułu"
 
@@ -931,12 +921,6 @@ msgstr "Liczba wyświetleń strony abstraktu oraz pobrań"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Liczba wyświetleń głównej strony czasopisma"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Ogranicz wyniki wyszukiwania według kontekstu (numer lub artykuł)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Ogranicz wyniki wyszukiwania według typu obiektu (czasopismo, numer, artykuł, plik) lub dodatkowego ID obiektu."
 
 msgid "manager.setup.categories"
 msgstr "Kategorie"

@@ -20,9 +20,6 @@ msgstr "Плагин «Отчеты COUNTER»"
 msgid "plugins.reports.counter.release"
 msgstr "Версия COUNTER Release"
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "Устаревшие отчеты по сайту"
-
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Неправильные параметры отчета."
 
@@ -35,59 +32,11 @@ msgstr "Результаты для этого отчета не найдены.
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Не удается сформатировать результаты в XML."
 
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "Эти ссылки генерируют отчеты, готовые для COUNTER, опираясь на устаревшую версию Release 3.0. Этот отчет включает в себя все журналы на сайте. Если возможно, используйте более позднюю версию."
-
 msgid "plugins.reports.counter.1a.name"
 msgstr "Отчет COUNTER JR1 (R3)"
 
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML-версия"
-
 msgid "plugins.reports.counter.1a.description"
 msgstr "COUNTER Отчет журнала 1 (R3): Запросы полных текстов статей по месяцам и журналам"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr "Отчет журнала 1 (R3): Запросы полных текстов статей по месяцам и журналам"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Отчет журнала 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Количество успешных запросов полных текстов статей по месяцам и журналам (год {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Дата запуска:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Издатель"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Платформа"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN печатной версии"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN онлайн-версии"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD (Итого)"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Итого для всех журналов"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "анонимно"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "Ссылки ниже генерируют устаревшие отчеты, используя данные старого плагина, который не является готовым для COUNTER. Если вы хотите сгенерировать текущие отчеты «COUNTER», используя новый тип метрики OJS COUNTER, воспользуйтесь ссылками выше."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Все покупатели"

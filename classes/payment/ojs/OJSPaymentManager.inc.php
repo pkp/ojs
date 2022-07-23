@@ -20,12 +20,11 @@ namespace APP\payment\ojs;
 
 use APP\core\Application;
 use APP\facades\Repo;
-
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionAction;
+use PKP\db\DAORegistry;
 use PKP\payment\CompletedPayment;
 use PKP\payment\PaymentManager;
-
 use PKP\payment\QueuedPayment;
 use PKP\plugins\PluginRegistry;
 

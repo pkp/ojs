@@ -25,56 +25,8 @@ msgstr ""
 msgid "plugins.reports.counter"
 msgstr "Estadístiques de COUNTER"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "Informe de la revista 1 (R3): Sol·licituds d'articles de text complet per mes i revista"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Informe de la revista 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Nombre de sol·licituds amb èxit d'articles de text complet per mes i revista (any {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Data d'execució:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Institució publicadora"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Plataforma"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Impressió ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN electrònic"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Total de l'any en curs"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML de l'any en curs"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF de l'any en curs"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total per a totes les revistes"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr "Els enllaços següents generen informes utilitzant dades de l'antic mòdul COUNTER. Si voleu generar informes COUNTER utilitzant la nova mètrica OJS COUNTER, utilitzeu els enllaços superiors."
-
 msgid "plugins.reports.counter.release"
 msgstr "Llançament de COUNTER"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Informes de llocs antics"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "versió XML"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anònim"
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Tots els clients/es"
@@ -86,12 +38,6 @@ msgstr ""
 
 msgid "plugins.reports.counter.1a.name"
 msgstr "Informe COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Aquests enllaços generen informes llestos per a COUNTER basats en la versió "
-"3.0, que ja està obsoleta. Aquest informe inclou totes les revistes del "
-"lloc. No obstant això, utilitzeu la darrera versió tan aviat com pugueu."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Els resultats no poden formatar-se com a XML."

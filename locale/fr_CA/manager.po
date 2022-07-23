@@ -949,18 +949,6 @@ msgstr "Inscription des utilisateurs-trices"
 msgid "manager.setup.useTextTitle"
 msgstr "Texte du titre"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVotre revue est paramétrée pour enregistrer plus d'une mesure "
-"d'utilisation. Les statistiques d'utilisation seront affichées dans "
-"plusieurs contextes.\n"
-"Il y a des cas où une statistique d'utilisation unique doit être utilisée, "
-"par exemple pour afficher une liste ordonnée des articles les plus consultés "
-"ou pour classer des résultats de recherche. Veuillez sélectionner l'une des "
-"mesures paramétrées par défaut.\n"
-"\t"
-
 msgid "manager.statistics.statistics"
 msgstr "Statistiques de la revue"
 
@@ -1041,12 +1029,6 @@ msgstr "Consultations de la page principale de la revue"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "Consultations de la page du sommaire du numéro"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Affiner les résultats par contexte (numéro et/ou article)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Affiner les résultats par type d'objet (revue, numéro, article, fichiers) et/ou par un ou plusieurs identifiants (ID) d'objet."
 
 msgid "manager.subscriptionPolicies"
 msgstr "Politiques d'abonnement"

@@ -824,12 +824,6 @@ msgstr "Registre d’usuaris/àries"
 msgid "manager.setup.useTextTitle"
 msgstr "Text del títol"
 
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tLa vostra revista està configurada per registrar més d'una analítica web. Les estadístiques d'ús es mostren en diversos contextos. Hi ha casos on només es fa servir una estadística d'ús, p. ex. per mostrar una llista ordenada dels articles més utilitzats o per ordenar resultats d'una cerca. Seleccioneu una analítica web de les que hi ha configurades perquè s'utilitzi de manera predeterminada.\n"
-"\t"
-
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
 msgstr "Descàrregues de fitxers d'articles"
 
@@ -841,12 +835,6 @@ msgstr "Resum i descàrregues dels articles"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Visualitzacions de la pàgina principal de la revista"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Redueix els resultats per context (número i/o article)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr "Redueix els resultats per tipus d'objecte (revista, número, article, galerades en format PDF, altres galerades) i/o per un o més identificadors d'objecte."
 
 msgid "manager.statistics.statistics"
 msgstr "Estadístiques de la revista"

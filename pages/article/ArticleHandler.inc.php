@@ -14,15 +14,19 @@
  *
  */
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\issue\IssueAction;
+use APP\observers\events\Usage;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
+use PKP\db\DAORegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\submission\Genre;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
 
@@ -125,7 +129,6 @@ class ArticleHandler extends Handler
         }
 
         $this->article = $submission;
-
         // Get the requested publication or if none requested get the current publication
         $subPath = empty($args) ? 0 : array_shift($args);
         if ($subPath === 'version') {
@@ -342,7 +345,9 @@ class ArticleHandler extends Handler
             }
 
             if (!HookRegistry::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
-                return $templateMgr->display('frontend/pages/article.tpl');
+                $templateMgr->display('frontend/pages/article.tpl');
+                event(new Usage(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
+                return;
             }
         } else {
 
@@ -479,6 +484,17 @@ class ArticleHandler extends Handler
 
                 $filename = Services::get('file')->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
 
+                // if the file is a gallay file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
+                if ($this->galley->getData('submissionFileId') == $this->fileId) {
+                    $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
+                    $genreDao = DAORegistry::getDAO('GenreDAO');
+                    $genre = $genreDao->getById($submissionFile->getData('genreId'));
+                    // TO-DO: is this correct ?
+                    if ($genre->getCategory() != Genre::GENRE_CATEGORY_DOCUMENT || $genre->getSupplementary() || $genre->getDependent()) {
+                        $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
+                    }
+                    event(new Usage($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
+                }
                 $returner = true;
                 HookRegistry::call('FileManager::downloadFileFinished', [&$returner]);
                 Services::get('file')->download($submissionFile->getData('fileId'), $filename);

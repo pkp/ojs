@@ -20,6 +20,9 @@ use Pimple\Container;
 use PKP\services\PKPFileService;
 use PKP\services\PKPSchemaService;
 use PKP\services\PKPSiteService;
+use PKP\services\PKPStatsContextService;
+use PKP\services\PKPStatsGeoService;
+use PKP\services\PKPStatsSushiService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface
 {
@@ -58,9 +61,29 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface
             return new PKPSchemaService();
         };
 
+        // Context statistics service
+        $pimple['contextStats'] = function () {
+            return new PKPStatsContextService();
+        };
+
         // Publication statistics service
-        $pimple['stats'] = function () {
-            return new StatsService();
+        $pimple['publicationStats'] = function () {
+            return new StatsPublicationService();
+        };
+
+        // Issue statistics service
+        $pimple['issueStats'] = function () {
+            return new StatsIssueService();
+        };
+
+        // Geo statistics service
+        $pimple['geoStats'] = function () {
+            return new PKPStatsGeoService();
+        };
+
+        // SUSHI statistics service
+        $pimple['sushiStats'] = function () {
+            return new PKPStatsSushiService();
         };
 
         // Editorial statistics service

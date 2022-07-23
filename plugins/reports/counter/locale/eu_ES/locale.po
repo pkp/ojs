@@ -27,42 +27,6 @@ msgstr "COUNTER estatistikak"
 msgid "plugins.reports.counter.migrate"
 msgstr "Migratu log-fitxategia"
 
-msgid "plugins.reports.counter.1a.title"
-msgstr "Aldizkariaren 1. txostena (R3): Testu osoko artikulu-eskaerak hilabetez eta aldizkariz"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Aldizkariaren 1. txostena (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Testu osoko artikulu-eskaera zuzenak hilabetez eta egunkariz ({$year} urtea)"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Data:"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Argitaratzailea"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Plataforma"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "Inprimatzeko ISSN"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "Lineako ISSN"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Aurten guztira"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Aldizkari guztien totala"
-
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Emaitzak ezin dira XML-ra formateatu."
 
@@ -74,9 +38,6 @@ msgstr "Txosten eskaria ez da bailozkoa."
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "Txostenaren parametroak ez ziren baliozkoak."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Web zaharreko txostenak"
 
 msgid "plugins.reports.counter.release"
 msgstr "COUNTER bertsioa"
