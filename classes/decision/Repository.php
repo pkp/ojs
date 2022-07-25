@@ -19,7 +19,7 @@ use APP\notification\Notification;
 use Illuminate\Database\Eloquent\Collection;
 use PKP\decision\types\BackToCopyediting;
 use PKP\decision\types\BackToPreviousExternalReviewRound;
-use PKP\decision\types\BackToExternalReview;
+use PKP\decision\types\BackToExternalReviewFromCopyediting;
 use PKP\decision\types\BackToSubmissionFromCopyediting;
 use PKP\decision\types\BackToSubmissionFromExternalReview;
 use PKP\decision\types\Decline;
@@ -48,7 +48,7 @@ class Repository extends \PKP\decision\Repository
             $decisionTypes = new Collection([
                 new Accept(),
                 new BackToCopyediting(),
-                new BackToExternalReview(),
+                new BackToExternalReviewFromCopyediting(),
                 new BackToSubmissionFromCopyediting(),
                 new Decline(),
                 new InitialDecline(),

@@ -24,6 +24,7 @@ use APP\file\PublicFileManager;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\decision\types\BackToExternalReviewFromCopyediting;
 use PKP\decision\types\BackToPreviousExternalReviewRound;
 use PKP\decision\types\BackToSubmissionFromExternalReview;
 use PKP\decision\types\Decline;
@@ -304,6 +305,7 @@ class WorkflowHandler extends PKPWorkflowHandler
             Decline::class,
             BackToSubmissionFromExternalReview::class,
             BackToPreviousExternalReviewRound::class,
+            BackToExternalReviewFromCopyediting::class,
         ];
     }
 }
