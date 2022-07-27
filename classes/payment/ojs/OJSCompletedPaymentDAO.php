@@ -20,11 +20,9 @@ namespace APP\payment\ojs;
 
 use Illuminate\Support\Facades\DB;
 
-use PKP\payment\CompletedPayment;
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
-
-use APP\payment\ojs\OJSPaymentManager;
+use PKP\payment\CompletedPayment;
 
 class OJSCompletedPaymentDAO extends \PKP\db\DAO
 {

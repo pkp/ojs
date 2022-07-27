@@ -25,8 +25,8 @@ namespace APP\issue;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
-use PKP\facades\Locale;
 use PKP\core\Core;
+use PKP\facades\Locale;
 use PKP\submission\PKPSubmission;
 
 class Issue extends \PKP\core\DataObject

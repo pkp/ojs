@@ -14,7 +14,6 @@
 
 namespace APP\security\authorization;
 
-use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\Role;
 

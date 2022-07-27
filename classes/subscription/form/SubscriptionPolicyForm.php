@@ -24,8 +24,8 @@ define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MAX', '12');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
-use APP\template\TemplateManager;
 use APP\core\Application;
+use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\form\Form;

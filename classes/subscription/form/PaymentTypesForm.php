@@ -15,9 +15,9 @@
 
 namespace APP\subscription\form;
 
-use PKP\form\Form;
-use PKP\db\DAORegistry;
 use APP\core\Application;
+use PKP\db\DAORegistry;
+use PKP\form\Form;
 
 class PaymentTypesForm extends Form
 {
@@ -92,4 +92,3 @@ class PaymentTypesForm extends Form
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\subscription\form\PaymentTypesForm', '\PaymentTypesForm');
 }
-

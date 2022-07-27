@@ -516,7 +516,7 @@ class Upgrade extends Installer
                 $stageAssignmentDao->update('UPDATE stage_assignments sa SET can_change_metadata=1 FROM user_groups ug WHERE sa.user_group_id = ug.user_group_id AND ug.role_id IN ' . $roleString);
                 break;
             default: fatalError('Unknown database type!');
-            }
+        }
 
         return true;
     }

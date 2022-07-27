@@ -14,11 +14,11 @@
 
 namespace APP\security\authorization;
 
-use PKP\security\authorization\DataObjectRequiredPolicy;
-use PKP\security\authorization\AuthorizationPolicy;
-use PKP\db\DAORegistry;
-
 use APP\issue\IssueGalley;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\AuthorizationPolicy;
+
+use PKP\security\authorization\DataObjectRequiredPolicy;
 
 class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
 {

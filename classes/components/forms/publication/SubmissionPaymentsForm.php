@@ -14,10 +14,10 @@
 
 namespace APP\components\forms\publication;
 
-use PKP\components\forms\FieldRadioInput;
-use PKP\components\forms\FormComponent;
-
 use APP\payment\ojs\OJSPaymentManager;
+use PKP\components\forms\FieldRadioInput;
+
+use PKP\components\forms\FormComponent;
 
 define('FORM_SUBMISSION_PAYMENTS', 'submissionPayments');
 

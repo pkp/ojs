@@ -161,7 +161,7 @@ class UserInstitutionalSubscriptionForm extends Form
                     '$/i',
                         trim($ipRange)
                     )
-                ) {
+                    ) {
                         return false;
                     }
                 }

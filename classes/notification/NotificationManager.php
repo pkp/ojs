@@ -135,7 +135,7 @@ class NotificationManager extends PKPNotificationManager
             case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
             case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
             case Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
-                    return 'notifySuccess';
+                return 'notifySuccess';
             default: return parent::getStyleClass($notification);
         }
     }

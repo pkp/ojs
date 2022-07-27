@@ -22,7 +22,7 @@ class OJSv3_3_1_i6872_UrlPathMigration extends \PKP\migration\Migration
     /**
      * Run the migrations.
      */
-    public function up() : void
+    public function up(): void
     {
         DB::table('publications')->whereNull('url_path')->update(['url_path' => null]);
     }
@@ -30,7 +30,7 @@ class OJSv3_3_1_i6872_UrlPathMigration extends \PKP\migration\Migration
     /**
      * Reverse the downgrades
      */
-    public function down() : void
+    public function down(): void
     {
         // This migration is not destructive. A downgrade should leave these url_paths as null.
     }

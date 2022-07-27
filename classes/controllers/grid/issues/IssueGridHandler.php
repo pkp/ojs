@@ -34,13 +34,13 @@ use PKP\core\Core;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
-use PKP\db\DAORegistry;
 
 import('controllers.grid.issues.IssueGridRow');
 

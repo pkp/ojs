@@ -18,9 +18,9 @@
 namespace APP\submission\reviewer;
 
 use APP\facades\Repo;
-use PKP\facades\Locale;
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 
 use PKP\plugins\HookRegistry;
 

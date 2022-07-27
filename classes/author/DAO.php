@@ -17,14 +17,14 @@
 
 namespace APP\author;
 
-use PKP\facades\Locale;
+use APP\core\Application;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
-use PKP\identity\Identity;
+use PKP\facades\Locale;
 
+use PKP\identity\Identity;
 use PKP\submission\PKPSubmission;
-use APP\core\Application;
 
 class DAO extends \PKP\author\DAO
 {

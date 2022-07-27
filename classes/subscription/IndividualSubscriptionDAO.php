@@ -18,7 +18,6 @@
 namespace APP\subscription;
 
 use PKP\core\Core;
-use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\plugins\HookRegistry;
 

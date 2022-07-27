@@ -17,11 +17,11 @@
 
 namespace APP\subscription;
 
-use PKP\facades\Locale;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
-
 use PKP\db\DAOResultFactory;
+
+use PKP\facades\Locale;
 
 use PKP\plugins\HookRegistry;
 

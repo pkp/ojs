@@ -220,111 +220,111 @@ class OJSPaymentManager extends PaymentManager
         $journal = $request->getContext();
         if ($queuedPayment) {
             switch ($queuedPayment->getType()) {
-            case self::PAYMENT_TYPE_MEMBERSHIP:
-                $user = Repo::user()->get($queuedPayment->getUserId(), true);
-                $dateEnd = $user->getSetting('dateEndMembership', 0);
-                if (!$dateEnd) {
-                    $dateEnd = 0;
-                }
+                case self::PAYMENT_TYPE_MEMBERSHIP:
+                    $user = Repo::user()->get($queuedPayment->getUserId(), true);
+                    $dateEnd = $user->getSetting('dateEndMembership', 0);
+                    if (!$dateEnd) {
+                        $dateEnd = 0;
+                    }
 
-                // if the membership is expired, extend it to today + 1 year
-                $time = time();
-                if ($dateEnd < $time) {
-                    $dateEnd = $time;
-                }
+                    // if the membership is expired, extend it to today + 1 year
+                    $time = time();
+                    if ($dateEnd < $time) {
+                        $dateEnd = $time;
+                    }
 
-                $dateEnd = mktime(23, 59, 59, date('m', $dateEnd), date('d', $dateEnd), date('Y', $dateEnd) + 1);
-                $user->updateSetting('dateEndMembership', $dateEnd, 'date', 0);
-                $returner = true;
-                break;
-            case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
-                $subscriptionId = $queuedPayment->getAssocId();
-                $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
-                $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
-                if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
-                    $subscription = $institutionalSubscriptionDao->getById($subscriptionId);
-                    $institutional = true;
-                } else {
-                    $subscription = $individualSubscriptionDao->getById($subscriptionId);
-                    $institutional = false;
-                }
-                if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
-                    fatalError('Subscription integrity checks fail!');
-                    return false;
-                }
-                // Update subscription end date now that payment is completed
-                if ($institutional) {
-                    // Still requires approval from JM/SM since includes domain and IP ranges
-                    $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
-                    if ($subscription->isNonExpiring()) {
-                        $institutionalSubscriptionDao->updateObject($subscription);
+                    $dateEnd = mktime(23, 59, 59, date('m', $dateEnd), date('d', $dateEnd), date('Y', $dateEnd) + 1);
+                    $user->updateSetting('dateEndMembership', $dateEnd, 'date', 0);
+                    $returner = true;
+                    break;
+                case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+                    $subscriptionId = $queuedPayment->getAssocId();
+                    $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+                    $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
+                    if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
+                        $subscription = $institutionalSubscriptionDao->getById($subscriptionId);
+                        $institutional = true;
                     } else {
-                        $institutionalSubscriptionDao->renewSubscription($subscription);
+                        $subscription = $individualSubscriptionDao->getById($subscriptionId);
+                        $institutional = false;
                     }
+                    if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
+                        fatalError('Subscription integrity checks fail!');
+                        return false;
+                    }
+                    // Update subscription end date now that payment is completed
+                    if ($institutional) {
+                        // Still requires approval from JM/SM since includes domain and IP ranges
+                        $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
+                        if ($subscription->isNonExpiring()) {
+                            $institutionalSubscriptionDao->updateObject($subscription);
+                        } else {
+                            $institutionalSubscriptionDao->renewSubscription($subscription);
+                        }
 
-                    // Notify JM/SM of completed online purchase
-                    if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
-                        SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
+                        // Notify JM/SM of completed online purchase
+                        if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
+                        }
+                    } else {
+                        $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_ACTIVE);
+                        if ($subscription->isNonExpiring()) {
+                            $individualSubscriptionDao->updateObject($subscription);
+                        } else {
+                            $individualSubscriptionDao->renewSubscription($subscription);
+                        }
+                        // Notify JM/SM of completed online purchase
+                        if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INDL');
+                        }
                     }
-                } else {
-                    $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_ACTIVE);
-                    if ($subscription->isNonExpiring()) {
-                        $individualSubscriptionDao->updateObject($subscription);
+                    $returner = true;
+                    break;
+                case self::PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+                    $subscriptionId = $queuedPayment->getAssocId();
+                    $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+                    $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
+                    if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
+                        $subscription = $institutionalSubscriptionDao->getById($subscriptionId);
+                        $institutional = true;
+                    } else {
+                        $subscription = $individualSubscriptionDao->getById($subscriptionId);
+                        $institutional = false;
+                    }
+                    if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
+                        return false;
+                    }
+                    if ($institutional) {
+                        $institutionalSubscriptionDao->renewSubscription($subscription);
+
+                        // Notify JM/SM of completed online purchase
+                        if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INSTL');
+                        }
                     } else {
                         $individualSubscriptionDao->renewSubscription($subscription);
-                    }
-                    // Notify JM/SM of completed online purchase
-                    if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
-                        SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INDL');
-                    }
-                }
-                $returner = true;
-                break;
-            case self::PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-                $subscriptionId = $queuedPayment->getAssocId();
-                $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
-                $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
-                if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
-                    $subscription = $institutionalSubscriptionDao->getById($subscriptionId);
-                    $institutional = true;
-                } else {
-                    $subscription = $individualSubscriptionDao->getById($subscriptionId);
-                    $institutional = false;
-                }
-                if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
-                    return false;
-                }
-                if ($institutional) {
-                    $institutionalSubscriptionDao->renewSubscription($subscription);
 
-                    // Notify JM/SM of completed online purchase
-                    if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
-                        SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INSTL');
+                        // Notify JM/SM of completed online purchase
+                        if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INDL');
+                        }
                     }
-                } else {
-                    $individualSubscriptionDao->renewSubscription($subscription);
-
-                    // Notify JM/SM of completed online purchase
-                    if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
-                        SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INDL');
-                    }
-                }
-                $returner = true;
-                break;
-            case self::PAYMENT_TYPE_DONATION:
-                assert(false); // Deprecated
-                $returner = true;
-                break;
-            case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
-            case self::PAYMENT_TYPE_PURCHASE_ISSUE:
-            case self::PAYMENT_TYPE_SUBMISSION:
-            case self::PAYMENT_TYPE_PUBLICATION:
-                $returner = true;
-                break;
-            default:
-                // Invalid payment type
-                assert(false);
-        }
+                    $returner = true;
+                    break;
+                case self::PAYMENT_TYPE_DONATION:
+                    assert(false); // Deprecated
+                    $returner = true;
+                    break;
+                case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
+                case self::PAYMENT_TYPE_PURCHASE_ISSUE:
+                case self::PAYMENT_TYPE_SUBMISSION:
+                case self::PAYMENT_TYPE_PUBLICATION:
+                    $returner = true;
+                    break;
+                default:
+                    // Invalid payment type
+                    assert(false);
+            }
         }
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName, $request->getUser()->getId());

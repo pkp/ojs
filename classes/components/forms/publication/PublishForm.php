@@ -150,7 +150,7 @@ class PublishForm extends FormComponent
 
                 $returnValue = $msg;
             }
-            // Show a table if more than one DOI is going to be created
+        // Show a table if more than one DOI is going to be created
         } else {
             $doiTableRows = [];
             if ($publicationDoiEnabled) {

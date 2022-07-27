@@ -396,44 +396,44 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
         if (!empty($search)) {
             switch ($searchField) {
-            case self::SUBSCRIPTION_INSTITUTION_NAME:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(insl.setting_value) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(insl.setting_value) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(insl) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $institutionFetch = 'JOIN institution_settings insl ON (insl.institution_id = iss.institution_id AND insl.setting_name = \'name\')';
-                $params[] = $search;
-                break;
-            case self::SUBSCRIPTION_DOMAIN:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(iss.domain) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(iss.domain) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(iss.domain) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case self::SUBSCRIPTION_IP_RANGE:
-                if ($searchMatch === 'inip') {
-                    $searchSql = ' AND LOWER(inip.ip_string) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(inip.ip_string) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(inip.ip_string) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $ipRangeFetch = ' JOIN institution_ip inip ON (inip.institution_id = iss.institution_id)';
-                $params[] = $search;
-                break;
+                case self::SUBSCRIPTION_INSTITUTION_NAME:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(insl.setting_value) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(insl.setting_value) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(insl) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $institutionFetch = 'JOIN institution_settings insl ON (insl.institution_id = iss.institution_id AND insl.setting_name = \'name\')';
+                    $params[] = $search;
+                    break;
+                case self::SUBSCRIPTION_DOMAIN:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(iss.domain) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(iss.domain) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(iss.domain) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case self::SUBSCRIPTION_IP_RANGE:
+                    if ($searchMatch === 'inip') {
+                        $searchSql = ' AND LOWER(inip.ip_string) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(inip.ip_string) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(inip.ip_string) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $ipRangeFetch = ' JOIN institution_ip inip ON (inip.institution_id = iss.institution_id)';
+                    $params[] = $search;
+                    break;
             }
         }
 

@@ -236,112 +236,112 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
         $userDao = Repo::user()->dao;
         if (!empty($search)) {
             switch ($searchField) {
-            case Identity::IDENTITY_SETTING_GIVENNAME:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(COALESCE(ugl,ugpl)) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case Identity::IDENTITY_SETTING_FAMILYNAME:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case $userDao::USER_FIELD_USERNAME:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(u.username) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case $userDao::USER_FIELD_EMAIL:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(u.email) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case self::SUBSCRIPTION_MEMBERSHIP:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(s.membership) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case self::SUBSCRIPTION_REFERENCE_NUMBER:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(s.reference_number) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(s.reference_number) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(s.reference_number) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-            case self::SUBSCRIPTION_NOTES:
-                if ($searchMatch === 'is') {
-                    $searchSql = ' AND LOWER(s.notes) = LOWER(?)';
-                } elseif ($searchMatch === 'contains') {
-                    $searchSql = ' AND LOWER(s.notes) LIKE LOWER(?)';
-                    $search = '%' . $search . '%';
-                } else { // $searchMatch === 'startsWith'
-                    $searchSql = ' AND LOWER(s.notes) LIKE LOWER(?)';
-                    $search = $search . '%';
-                }
-                $params[] = $search;
-                break;
-        }
+                case Identity::IDENTITY_SETTING_GIVENNAME:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(COALESCE(ugl,ugpl)) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case Identity::IDENTITY_SETTING_FAMILYNAME:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case $userDao::USER_FIELD_USERNAME:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(u.username) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case $userDao::USER_FIELD_EMAIL:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(u.email) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case self::SUBSCRIPTION_MEMBERSHIP:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(s.membership) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case self::SUBSCRIPTION_REFERENCE_NUMBER:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(s.reference_number) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(s.reference_number) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(s.reference_number) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+                case self::SUBSCRIPTION_NOTES:
+                    if ($searchMatch === 'is') {
+                        $searchSql = ' AND LOWER(s.notes) = LOWER(?)';
+                    } elseif ($searchMatch === 'contains') {
+                        $searchSql = ' AND LOWER(s.notes) LIKE LOWER(?)';
+                        $search = '%' . $search . '%';
+                    } else { // $searchMatch === 'startsWith'
+                        $searchSql = ' AND LOWER(s.notes) LIKE LOWER(?)';
+                        $search = $search . '%';
+                    }
+                    $params[] = $search;
+                    break;
+            }
         }
 
         if (!empty($dateFrom) || !empty($dateTo)) {
             switch ($dateField) {
-            case Subscription::SUBSCRIPTION_DATE_START:
-                if (!empty($dateFrom)) {
-                    $searchSql .= ' AND s.date_start >= ' . $this->datetimeToDB($dateFrom);
-                }
-                if (!empty($dateTo)) {
-                    $searchSql .= ' AND s.date_start <= ' . $this->datetimeToDB($dateTo);
-                }
-                break;
-            case Subscription::SUBSCRIPTION_DATE_END:
-                if (!empty($dateFrom)) {
-                    $searchSql .= ' AND s.date_end >= ' . $this->datetimeToDB($dateFrom);
-                }
-                if (!empty($dateTo)) {
-                    $searchSql .= ' AND s.date_end <= ' . $this->datetimeToDB($dateTo);
-                }
-                break;
-        }
+                case Subscription::SUBSCRIPTION_DATE_START:
+                    if (!empty($dateFrom)) {
+                        $searchSql .= ' AND s.date_start >= ' . $this->datetimeToDB($dateFrom);
+                    }
+                    if (!empty($dateTo)) {
+                        $searchSql .= ' AND s.date_start <= ' . $this->datetimeToDB($dateTo);
+                    }
+                    break;
+                case Subscription::SUBSCRIPTION_DATE_END:
+                    if (!empty($dateFrom)) {
+                        $searchSql .= ' AND s.date_end >= ' . $this->datetimeToDB($dateFrom);
+                    }
+                    if (!empty($dateTo)) {
+                        $searchSql .= ' AND s.date_end <= ' . $this->datetimeToDB($dateTo);
+                    }
+                    break;
+            }
         }
 
         if (!empty($status)) {
