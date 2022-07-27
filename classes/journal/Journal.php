@@ -25,7 +25,7 @@ namespace APP\journal;
 
 use PKP\context\Context;
 
-use PKP\core\DAORegistry;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 
 class Journal extends Context
