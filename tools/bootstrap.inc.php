@@ -14,4 +14,4 @@
  */
 
 define('INDEX_FILE_LOCATION', dirname(__FILE__, 2) . '/index.php');
-require dirname(__FILE__, 2) . '/lib/pkp/classes/cliTool/CommandLineTool.inc.php';
+require dirname(__FILE__, 2) . '/lib/pkp/classes/cliTool/CommandLineTool.php';
