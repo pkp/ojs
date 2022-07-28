@@ -15,8 +15,8 @@
 
 import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
 
-use APP\template\TemplateManager;
 use APP\facades\Repo;
+use APP\template\TemplateManager;
 use PKP\security\Role;
 
 class SectionForm extends PKPSectionForm

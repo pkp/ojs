@@ -20,7 +20,6 @@ use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\form\Form;
-use Sokil\IsoCodes\IsoCodesFactory;
 
 class SubscriptionTypeForm extends Form
 {
@@ -68,7 +67,7 @@ class SubscriptionTypeForm extends Form
 
         // Cost	is provided and is numeric and positive
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', fn($cost) => is_numeric($cost) && $cost >= 0));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'cost', 'required', 'manager.subscriptionTypes.form.costNumeric', fn ($cost) => is_numeric($cost) && $cost >= 0));
 
         // Currency is provided and is valid value
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
@@ -146,7 +145,7 @@ class SubscriptionTypeForm extends Form
     {
         $this->readUserVars(['name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display']);
 
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', fn($duration) => is_numeric($duration) && $duration >= 0));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', fn ($duration) => is_numeric($duration) && $duration >= 0));
     }
 
     /**

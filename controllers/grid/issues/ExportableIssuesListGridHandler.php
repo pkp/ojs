@@ -13,10 +13,10 @@
  * @brief Handle exportable issues grid requests.
  */
 
-use APP\facades\Repo;
 use APP\controllers\grid\issues\IssueGridHandler;
-use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
+use APP\facades\Repo;
 use PKP\controllers\grid\feature\PagingFeature;
+use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 
 class ExportableIssuesListGridHandler extends IssueGridHandler
 {

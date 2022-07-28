@@ -14,11 +14,11 @@
  */
 
 use APP\facades\Repo;
+use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\OpenWindowAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
-use PKP\controllers\grid\GridRow;
 
 class IssueGridRow extends GridRow
 {
@@ -27,6 +27,8 @@ class IssueGridRow extends GridRow
     //
     /**
      * @copydoc GridRow::initialize
+     *
+     * @param null|mixed $template
      */
     public function initialize($request, $template = null)
     {

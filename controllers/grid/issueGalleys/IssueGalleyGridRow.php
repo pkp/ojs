@@ -39,6 +39,8 @@ class IssueGalleyGridRow extends GridRow
     //
     /**
      * @copydoc GridRow::initialize
+     *
+     * @param null|mixed $template
      */
     public function initialize($request, $template = null)
     {

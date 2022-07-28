@@ -16,9 +16,9 @@
 import('controllers.grid.subscriptions.SubscriptionsGridHandler');
 import('controllers.grid.subscriptions.IndividualSubscriptionForm');
 
+use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\SubscriptionDAO;
-use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
 use PKP\identity\Identity;

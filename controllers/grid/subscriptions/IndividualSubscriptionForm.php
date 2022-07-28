@@ -13,10 +13,10 @@
  * @brief Form class for individual subscription create/edits.
  */
 
-use APP\subscription\form\SubscriptionForm;
 use APP\notification\NotificationManager;
-use PKP\notification\PKPNotification;
+use APP\subscription\form\SubscriptionForm;
 use APP\subscription\IndividualSubscription;
+use PKP\notification\PKPNotification;
 
 class IndividualSubscriptionForm extends SubscriptionForm
 {

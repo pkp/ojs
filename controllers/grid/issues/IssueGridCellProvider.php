@@ -91,7 +91,8 @@ class IssueGridCellProvider extends GridCellProvider
                 return ['label' => $datePublished ? date($this->dateFormatShort, $datePublished) : ''];
             case 'numArticles':
                 return ['label' => $issue->getNumArticles()];
-            default: assert(false); break;
+            default: assert(false);
+                break;
         }
     }
 }

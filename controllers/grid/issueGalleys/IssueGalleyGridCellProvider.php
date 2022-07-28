@@ -39,7 +39,8 @@ class IssueGalleyGridCellProvider extends GridCellProvider
             case 'label': return ['label' => $issueGalley->getLabel()];
             case 'locale': return ['label' => Locale::getMetadata($issueGalley->getLocale())->getDisplayName()];
             case 'publicGalleyId': return ['label' => $issueGalley->getStoredPubId('publisher-id')];
-            default: assert(false); break;
+            default: assert(false);
+                break;
         }
     }
 }

@@ -18,8 +18,8 @@
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
-use PKP\form\Form;
 use PKP\facades\Locale;
+use PKP\form\Form;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 
