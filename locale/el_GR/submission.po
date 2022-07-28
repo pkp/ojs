@@ -189,7 +189,7 @@ msgid "publication.unscheduledIn"
 msgstr "Αυτό δεν έχει προγραμματιστεί για δημοσίευση σε κάποιο τεύχος."
 
 msgid "publication.scheduledIn"
-msgstr "Προγραμματισμένο για δημοσίευση στο  <a href=\"{$issueUrl}\>{$issueName}</a>."
+msgstr "Προγραμματισμένο για δημοσίευση στο  <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.publishedIn"
 msgstr "Δημοσιεύτηκε στο <a href=\"{$issueUrl}\">{$issueName}</a>."

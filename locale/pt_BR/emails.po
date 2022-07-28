@@ -993,7 +993,7 @@ msgid "emails.emailLink.subject"
 msgstr "Artigo interessante para sua leitura"
 
 msgid "emails.emailLink.body"
-msgstr "Acredito ser de seu interesse o artigo "{$submissionTitle}", de {$authorName}, publicado na revista {$contextName}, V. {$volume}, n. {$number}, Ano {$year}, disponível em "{$articleUrl}"."
+msgstr "Acredito ser de seu interesse o artigo \"{$submissionTitle}\", de {$authorName}, publicado na revista {$contextName}, V. {$volume}, n. {$number}, Ano {$year}, disponível em \"{$articleUrl}\"."
 
 msgid "emails.emailLink.description"
 msgstr "Mensagem enviada por um leitor a um colega, sobre um artigo considerado de seu interesse, com link para acesso e informações sobre a revista e a edição onde o documento foi publicado."

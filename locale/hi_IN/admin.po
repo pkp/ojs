@@ -190,7 +190,7 @@ msgstr "जर्नल विवरण"
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 msgid "admin.journal.pathImportInstructions"
-msgstr "मौजूदा जर्नल पथ या पथ बनाने के लिए (जैसे, \ "ojs \")।"
+msgstr "मौजूदा जर्नल पथ या पथ बनाने के लिए (जैसे, \"ojs\")।"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.journals.importSubscriptions"

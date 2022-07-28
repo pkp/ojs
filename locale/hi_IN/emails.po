@@ -201,7 +201,7 @@ msgstr ""
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.publishNotify.description"
-msgstr "यह ईमेल पंजीकृत पाठकों को संपादक के उपयोगकर्ता के घर में "उपयोगकर्ता सूचित करें" लिंक के माध्यम से भेजा जाता है। यह एक नए मुद्दे के पाठकों को सूचित करता है और उन्हें एक आपूर्ति किए गए URL पर जर्नल देखने के लिए आमंत्रित करता है."
+msgstr "यह ईमेल पंजीकृत पाठकों को संपादक के उपयोगकर्ता के घर में \"उपयोगकर्ता सूचित करें\" लिंक के माध्यम से भेजा जाता है। यह एक नए मुद्दे के पाठकों को सूचित करता है और उन्हें एक आपूर्ति किए गए URL पर जर्नल देखने के लिए आमंत्रित करता है."
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
@@ -887,7 +887,7 @@ msgstr ""
 # (pofilter) doublequoting: Different quotation marks
 # (pofilter) endpunc: Different punctuation at the end
 msgid "emails.editorDecisionAccept.description"
-msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप से "सबमिशन स्वीकार" करने का निर्णय देता है."
+msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप से \"सबमिशन स्वीकार\" करने का निर्णय देता है."
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
@@ -943,7 +943,7 @@ msgstr ""
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 msgid "emails.editorDecisionRevisions.description"
-msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप देने के बारे में सूचित करता है, जो उनके प्रस्तुतिकरण के संबंध में आवश्यक \ "संशोधन” है."
+msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें अंतिम रूप देने के बारे में सूचित करता है, जो उनके प्रस्तुतिकरण के संबंध में आवश्यक \"संशोधन” है."
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
@@ -962,7 +962,7 @@ msgstr ""
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 msgid "emails.editorDecisionResubmit.description"
-msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \ "पुनर्निमित \" निर्णय के बारे में सूचित करता है."
+msgstr "लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \"पुनर्निमित\" निर्णय के बारे में सूचित करता है."
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
@@ -981,7 +981,7 @@ msgstr ""
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 msgid "emails.editorDecisionDecline.description"
-msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \ "गिरावट \" निर्णय के बारे में सूचित करता है."
+msgstr "एक लेखक के संपादक या अनुभाग संपादक का यह ईमेल उन्हें उनके जमा करने के बारे में अंतिम \"गिरावट\" निर्णय के बारे में सूचित करता है."
 
 # (pofilter) simplecaps: Different capitalization
 msgid "emails.editorRecommendation.subject"
