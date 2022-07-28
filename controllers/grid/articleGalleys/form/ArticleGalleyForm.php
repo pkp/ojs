@@ -15,6 +15,8 @@
  * @brief Article galley editing form.
  */
 
+namespace APP\controllers\grid\articleGalleys\form;
+
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 

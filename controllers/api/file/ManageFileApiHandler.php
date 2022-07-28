@@ -13,10 +13,12 @@
  * @brief Class defining an AJAX API for file manipulation.
  */
 
-// Import the base handler.
-import('lib.pkp.controllers.api.file.PKPManageFileApiHandler');
+namespace APP\controllers\api\file;
 
+use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
+use PKP\controllers\api\file\PKPManageFileApiHandler;
 use PKP\core\JSONMessage;
+use PKP\db\DAO;
 use PKP\security\Role;
 
 class ManageFileApiHandler extends PKPManageFileApiHandler
@@ -45,7 +47,6 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
     {
         $submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
         $stageId = $request->getUserVar('stageId');
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($submissionFile, $stageId);
         $form->initData();
         return new JSONMessage(true, $form->fetch($request));
@@ -63,7 +64,6 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
     {
         $submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
         $stageId = $request->getUserVar('stageId');
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($submissionFile, $stageId);
         $form->readInputData();
         if ($form->validate()) {
@@ -90,7 +90,6 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
 
         $submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
         $stageId = $request->getUserVar('stageId');
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($submissionFile, $stageId);
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));
         return new JSONMessage(true);

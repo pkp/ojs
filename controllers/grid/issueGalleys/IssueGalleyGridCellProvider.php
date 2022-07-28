@@ -13,6 +13,8 @@
  * @brief Grid cell provider for the issue galleys grid
  */
 
+namespace APP\controllers\grid\issueGalleys;
+
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 use PKP\facades\Locale;

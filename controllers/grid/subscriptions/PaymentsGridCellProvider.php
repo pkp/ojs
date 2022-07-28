@@ -13,6 +13,9 @@
  * @brief Class for a cell provider to display information about payments
  */
 
+namespace APP\controllers\grid\subscriptions;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;

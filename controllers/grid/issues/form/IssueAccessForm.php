@@ -15,11 +15,14 @@
  * @brief Form to edit an issue's access settings
  */
 
+namespace APP\controllers\grid\issues\form;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
-
 use APP\template\TemplateManager;
 use PKP\form\Form;
+use PKP\plugins\HookRegistry;
 
 class IssueAccessForm extends Form
 {

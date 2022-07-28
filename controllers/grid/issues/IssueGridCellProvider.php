@@ -13,6 +13,8 @@
  * @brief Grid cell provider for the issue management grid
  */
 
+namespace APP\controllers\grid\issues;
+
 use APP\core\Application;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;

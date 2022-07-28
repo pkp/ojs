@@ -13,10 +13,11 @@
  * @brief Handle exportable submissions with pub ids list grid requests.
  */
 
+namespace APP\controllers\grid\pubIds;
+
+use APP\controllers\grid\submissions\ExportPublishedSubmissionsListGridHandler;
 use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
-
-import('controllers.grid.submissions.ExportPublishedSubmissionsListGridHandler');
 
 class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsListGridHandler
 {
@@ -56,7 +57,6 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
     {
         // Fetch the authorized roles.
         $authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-        import('controllers.grid.pubIds.PubIdExportSubmissionsListGridCellProvider');
         return new PubIdExportSubmissionsListGridCellProvider($this->_plugin, $authorizedRoles);
     }
 

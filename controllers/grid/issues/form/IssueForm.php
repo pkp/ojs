@@ -15,13 +15,18 @@
  * @brief Form to create or edit an issue
  */
 
+namespace APP\controllers\grid\issues\form;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
+use PKP\plugins\HookRegistry;
 
 class IssueForm extends Form
 {

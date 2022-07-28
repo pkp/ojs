@@ -13,6 +13,8 @@
  * @brief Handle reviewer grid requests.
  */
 
+namespace APP\controllers\grid\users\reviewer;
+
 use APP\facades\Repo;
 use PKP\controllers\grid\users\reviewer\PKPReviewerGridHandler;
 use PKP\log\SubmissionLog;

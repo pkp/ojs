@@ -13,13 +13,15 @@
  * @brief Displays a pub ids form.
  */
 
-import('lib.pkp.controllers.tab.pubIds.form.PKPPublicIdentifiersForm');
+namespace APP\controllers\tab\pubIds\form;
 
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\template\TemplateManager;
+use PKP\controllers\tab\pubIds\form\PKPPublicIdentifiersForm;
 use PKP\galley\Galley;
+use PKP\plugins\PluginRegistry;
 
 class PublicIdentifiersForm extends PKPPublicIdentifiersForm
 {

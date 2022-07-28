@@ -13,9 +13,13 @@
  * @brief Form class for individual subscription create/edits.
  */
 
+namespace APP\controllers\grid\subscriptions;
+
+use APP\core\Application;
 use APP\notification\NotificationManager;
 use APP\subscription\form\SubscriptionForm;
 use APP\subscription\IndividualSubscription;
+use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
 
 class IndividualSubscriptionForm extends SubscriptionForm

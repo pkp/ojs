@@ -13,9 +13,7 @@
  * @brief Handle subscription grid requests.
  */
 
-import('controllers.grid.subscriptions.SubscriptionsGridHandler');
-
-import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
+namespace APP\controllers\grid\subscriptions;
 
 use APP\facades\Repo;
 use APP\notification\NotificationManager;

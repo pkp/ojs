@@ -13,7 +13,9 @@
  * @brief Form for adding/editing a author
  */
 
-import('lib.pkp.controllers.grid.users.author.form.PKPAuthorForm');
+namespace APP\controllers\grid\users\author\form;
+
+use PKP\controllers\grid\users\author\form\PKPAuthorForm;
 
 class AuthorForm extends PKPAuthorForm
 {

@@ -13,6 +13,8 @@
  * @brief Class for a cell provider to display information about individual subscriptions
  */
 
+namespace APP\controllers\grid\subscriptions;
+
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 

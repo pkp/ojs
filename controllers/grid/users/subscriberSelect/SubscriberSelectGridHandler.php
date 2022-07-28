@@ -13,15 +13,18 @@
  * @brief Handle subscriber selector grid requests.
  */
 
+namespace APP\controllers\grid\users\subscriberSelect;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\controllers\grid\feature\CollapsibleGridFeature;
 use PKP\controllers\grid\feature\InfiniteScrollingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\users\userSelect\UserSelectGridCellProvider;
+use PKP\db\DAORegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
-
-import('lib.pkp.controllers.grid.users.userSelect.UserSelectGridCellProvider');
 
 class SubscriberSelectGridHandler extends GridHandler
 {

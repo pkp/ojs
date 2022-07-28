@@ -13,7 +13,9 @@
  * @brief Form for managers to create/edit navigationMenuItems.
  */
 
-import('lib.pkp.controllers.grid.navigationMenus.form.PKPNavigationMenuItemsForm');
+namespace APP\controllers\grid\navigationMenus\form;
+
+use PKP\controllers\grid\navigationMenus\form\PKPNavigationMenuItemsForm;
 
 class NavigationMenuItemsForm extends PKPNavigationMenuItemsForm
 {

@@ -15,9 +15,13 @@
  * @brief Issue galley editing form.
  */
 
-use APP\file\IssueFileManager;
+namespace APP\controllers\grid\issues\form;
 
+use APP\core\Application;
+use APP\file\IssueFileManager;
 use APP\template\TemplateManager;
+
+use PKP\db\DAORegistry;
 use PKP\form\Form;
 
 class IssueGalleyForm extends Form

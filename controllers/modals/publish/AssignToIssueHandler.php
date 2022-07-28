@@ -14,9 +14,14 @@
  *   publication
  */
 
+namespace APP\controllers\modals\publish;
+
+use APP\components\forms\publication\AssignToIssueForm;
+use APP\core\Services;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
+use PKP\core\PKPApplication;
 use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
@@ -88,7 +93,7 @@ class AssignToIssueHandler extends Handler
         }
 
         $publicationApiUrl = $request->getDispatcher()->url($request, PKPApplication::ROUTE_API, $submissionContext->getPath(), 'submissions/' . $this->submission->getId() . '/publications/' . $this->publication->getId());
-        $assignToIssueForm = new APP\components\forms\publication\AssignToIssueForm($publicationApiUrl, $this->publication, $submissionContext);
+        $assignToIssueForm = new AssignToIssueForm($publicationApiUrl, $this->publication, $submissionContext);
         $settingsData = [
             'components' => [
                 FORM_ASSIGN_TO_ISSUE => $assignToIssueForm->getConfig(),

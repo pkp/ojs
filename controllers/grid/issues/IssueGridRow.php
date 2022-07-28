@@ -13,8 +13,11 @@
  * @brief Handle issue grid row requests.
  */
 
+namespace APP\controllers\grid\issues;
+
 use APP\facades\Repo;
 use PKP\controllers\grid\GridRow;
+use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\OpenWindowAction;

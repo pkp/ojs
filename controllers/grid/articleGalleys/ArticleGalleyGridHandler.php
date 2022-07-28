@@ -13,6 +13,11 @@
  * @brief Handle article galley grid requests.
  */
 
+namespace APP\controllers\grid\articleGalleys;
+
+use APP\controllers\grid\articleGalleys\form\ArticleGalleyForm;
+use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
@@ -20,10 +25,14 @@ use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
+use PKP\core\PKPApplication;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
+use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\internal\RepresentationRequiredPolicy;
 use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\WorkflowStageAccessPolicy;
@@ -125,7 +134,6 @@ class ArticleGalleyGridHandler extends GridHandler
         parent::initialize($request, $args);
         $this->setTitle('submission.layout.galleys');
 
-        import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
         $cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission(), $this->getPublication(), $this->canEdit());
 
         // Columns
@@ -193,7 +201,6 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function getRowInstance()
     {
-        import('controllers.grid.articleGalleys.ArticleGalleyGridRow');
         return new ArticleGalleyGridRow(
             $this->getSubmission(),
             $this->getPublication(),
@@ -244,7 +251,6 @@ class ArticleGalleyGridHandler extends GridHandler
     public function identifiers($args, $request)
     {
         $representation = Repo::galley()->get($request->getUserVar('representationId'));
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($representation);
         $form->initData();
         return new JSONMessage(true, $form->fetch($request));
@@ -262,7 +268,6 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         $representationDao = Application::getRepresentationDAO();
         $representation = $representationDao->getById($request->getUserVar('representationId'));
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($representation, null, array_merge($this->getRequestArgs(), ['representationId' => $representation->getId()]));
         $form->readInputData();
         if ($form->validate()) {
@@ -290,7 +295,6 @@ class ArticleGalleyGridHandler extends GridHandler
         $submission = $this->getSubmission();
         $representationDao = Application::getRepresentationDAO();
         $representation = $representationDao->getById($request->getUserVar('representationId'));
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
         $form = new PublicIdentifiersForm($representation);
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));
         return new JSONMessage(true);
@@ -306,7 +310,6 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function addGalley($args, $request)
     {
-        import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
         $galleyForm = new ArticleGalleyForm(
             $request,
             $this->getSubmission(),
@@ -395,7 +398,6 @@ class ArticleGalleyGridHandler extends GridHandler
     public function editGalleyTab($args, $request)
     {
         // Form handling
-        import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
         $galleyForm = new ArticleGalleyForm(
             $request,
             $this->getSubmission(),
@@ -418,7 +420,6 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         $galley = $this->getGalley();
 
-        import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
         $galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getPublication(), $galley);
         $galleyForm->readInputData();
 

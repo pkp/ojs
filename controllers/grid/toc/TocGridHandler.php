@@ -13,19 +13,16 @@
  * @brief Handle TOC (table of contents) grid requests.
  */
 
-import('controllers.grid.toc.TocGridCategoryRow');
-import('controllers.grid.toc.TocGridRow');
+namespace APP\controllers\grid\toc;
 
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use PKP\controllers\grid\CategoryGridHandler;
-
 use PKP\controllers\grid\feature\OrderCategoryGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
-
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -77,7 +74,6 @@ class TocGridHandler extends CategoryGridHandler
         //
         // Grid columns.
         //
-        import('controllers.grid.toc.TocGridCellProvider');
         $tocGridCellProvider = new TocGridCellProvider();
 
         // Article title

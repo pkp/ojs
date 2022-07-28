@@ -13,18 +13,20 @@
  * @brief Handle section grid requests.
  */
 
+namespace APP\controllers\grid\settings\sections;
+
+use APP\controllers\grid\settings\sections\form\SectionForm;
 use APP\notification\NotificationManager;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\settings\SetupGridHandler;
 use PKP\core\JSONMessage;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
-
 use PKP\security\Role;
-
-import('lib.pkp.controllers.grid.settings.SetupGridHandler');
-import('controllers.grid.settings.sections.SectionGridRow');
 
 class SectionGridHandler extends SetupGridHandler
 {
@@ -108,7 +110,6 @@ class SectionGridHandler extends SetupGridHandler
         //
         // Grid columns.
         //
-        import('controllers.grid.settings.sections.SectionGridCellProvider');
         $sectionGridCellProvider = new SectionGridCellProvider();
 
         // Section name
@@ -205,7 +206,6 @@ class SectionGridHandler extends SetupGridHandler
         $sectionId = $args['sectionId'] ?? null;
         $this->setupTemplate($request);
 
-        import('controllers.grid.settings.sections.form.SectionForm');
         $sectionForm = new SectionForm($request, $sectionId);
         $sectionForm->initData();
         return new JSONMessage(true, $sectionForm->fetch($request));
@@ -223,7 +223,6 @@ class SectionGridHandler extends SetupGridHandler
     {
         $sectionId = $request->getUserVar('sectionId');
 
-        import('controllers.grid.settings.sections.form.SectionForm');
         $sectionForm = new SectionForm($request, $sectionId);
         $sectionForm->readInputData();
 

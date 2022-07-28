@@ -13,14 +13,15 @@
  * @brief Handle subscription grid requests.
  */
 
-import('controllers.grid.subscriptions.SubscriptionsGridHandler');
-import('controllers.grid.subscriptions.IndividualSubscriptionForm');
+namespace APP\controllers\grid\subscriptions;
 
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\SubscriptionDAO;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\identity\Identity;
 use PKP\notification\PKPNotification;
 

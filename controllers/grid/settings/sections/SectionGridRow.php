@@ -13,6 +13,8 @@
  * @brief Handle section grid row requests.
  */
 
+namespace APP\controllers\grid\settings\sections;
+
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;

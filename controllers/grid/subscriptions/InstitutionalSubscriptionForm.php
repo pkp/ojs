@@ -13,6 +13,8 @@
  * @brief Form class for institutional subscription create/edits.
  */
 
+namespace APP\controllers\grid\subscriptions;
+
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;

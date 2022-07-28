@@ -13,15 +13,15 @@
  * @brief Handle AJAX operations for workflow tabs.
  */
 
-// Import the base Handler.
-import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
+namespace APP\controllers\tab\workflow;
 
 use APP\notification\Notification;
 use APP\template\TemplateManager;
+use PKP\controllers\tab\workflow\PKPWorkflowTabHandler;
+use PKP\core\PKPApplication;
 use PKP\decision\DecisionType;
 use PKP\decision\types\NewExternalReviewRound;
 use PKP\linkAction\LinkAction;
-
 use PKP\linkAction\request\AjaxModal;
 use PKP\notification\PKPNotification;
 

@@ -13,6 +13,8 @@
  * @brief Handle issue galley grid row requests.
  */
 
+namespace APP\controllers\grid\issueGalleys;
+
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;

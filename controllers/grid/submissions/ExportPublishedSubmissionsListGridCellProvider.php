@@ -13,10 +13,14 @@
  * @brief Class for a cell provider that can retrieve labels from submissions
  */
 
+namespace APP\controllers\grid\submissions;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\submission\Submission;
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
+use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 
 use PKP\linkAction\request\AjaxModal;

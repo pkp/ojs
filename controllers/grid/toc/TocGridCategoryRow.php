@@ -13,6 +13,8 @@
  * @brief System Info grid category row definition
  */
 
+namespace APP\controllers\grid\toc;
+
 use PKP\controllers\grid\GridCategoryRow;
 
 class TocGridCategoryRow extends GridCategoryRow

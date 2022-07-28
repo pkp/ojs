@@ -13,7 +13,10 @@
  * @brief Handle issue grid row requests.
  */
 
+namespace APP\controllers\grid\toc;
+
 use PKP\controllers\grid\GridRow;
+use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RedirectAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;

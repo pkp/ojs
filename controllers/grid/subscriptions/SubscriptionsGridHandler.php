@@ -13,12 +13,12 @@
  * @brief Handle subscription grid requests.
  */
 
-
-import('controllers.grid.subscriptions.SubscriptionsGridRow');
-import('controllers.grid.subscriptions.SubscriptionsGridCellProvider');
+namespace APP\controllers\grid\subscriptions;
 
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridHandler;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\security\authorization\ContextAccessPolicy;

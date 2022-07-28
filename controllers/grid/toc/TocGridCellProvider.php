@@ -13,6 +13,8 @@
  * @brief Grid cell provider for the TOC (Table of Contents) category grid
  */
 
+namespace APP\controllers\grid\toc;
+
 use APP\submission\Submission;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;

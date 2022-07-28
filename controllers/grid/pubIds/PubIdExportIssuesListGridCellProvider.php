@@ -13,8 +13,12 @@
  * @brief Class for a cell provider that can retrieve labels from issues with pub ids
  */
 
+namespace APP\controllers\grid\pubIds;
+
+use APP\core\Application;
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
+use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;

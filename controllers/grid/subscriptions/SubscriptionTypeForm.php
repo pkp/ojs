@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/subscription/form/SubscriptionTypeForm.inc.php
+ * @file controllers/grid/subscriptions/SubscriptionTypeForm.inc.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -12,6 +12,8 @@
  *
  * @brief Form for journal managers to create/edit subscription types.
  */
+
+namespace APP\controllers\grid\subscriptions;
 
 use APP\core\Application;
 use APP\subscription\SubscriptionType;

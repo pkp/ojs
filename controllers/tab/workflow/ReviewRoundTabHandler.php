@@ -13,6 +13,8 @@
  * @brief Handle AJAX operations for review round tabs on review stages workflow pages.
  */
 
+namespace APP\controllers\tab\workflow;
+
 use APP\handler\Handler;
 use PKP\controllers\tab\workflow\PKPReviewRoundTabHandler;
 use PKP\security\authorization\WorkflowStageAccessPolicy;

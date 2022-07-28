@@ -13,6 +13,9 @@
  * @brief Handle issues grid requests.
  */
 
+namespace APP\controllers\grid\issueGalleys;
+
+use APP\controllers\grid\issues\form\IssueGalleyForm;
 use APP\file\IssueFileManager;
 use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
 use APP\security\authorization\OjsIssueRequiredPolicy;
@@ -20,14 +23,13 @@ use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
-
-import('controllers.grid.issueGalleys.IssueGalleyGridRow');
 
 class IssueGalleyGridHandler extends GridHandler
 {
@@ -140,7 +142,6 @@ class IssueGalleyGridHandler extends GridHandler
         );
 
         // Grid columns.
-        import('controllers.grid.issueGalleys.IssueGalleyGridCellProvider');
         $issueGalleyGridCellProvider = new IssueGalleyGridCellProvider();
 
         // Issue identification
@@ -220,7 +221,6 @@ class IssueGalleyGridHandler extends GridHandler
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
         $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 
-        import('controllers.grid.issues.form.IssueGalleyForm');
         $issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
         $issueGalleyForm->initData();
         return new JSONMessage(true, $issueGalleyForm->fetch($request));
@@ -280,7 +280,6 @@ class IssueGalleyGridHandler extends GridHandler
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
         $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 
-        import('controllers.grid.issues.form.IssueGalleyForm');
         $issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
         $issueGalleyForm->readInputData();
 

@@ -13,9 +13,11 @@
  * @brief Form to notify a user regarding a file
  */
 
+namespace APP\controllers\grid\users\stageParticipant\form;
+
 use APP\mail\ArticleMailTemplate;
 
-import('lib.pkp.controllers.grid.users.stageParticipant.form.PKPStageParticipantNotifyForm');
+use PKP\controllers\grid\users\stageParticipant\form\PKPStageParticipantNotifyForm;
 
 class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm
 {
