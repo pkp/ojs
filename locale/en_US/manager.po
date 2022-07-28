@@ -1815,11 +1815,6 @@ msgstr "DOIs"
 msgid "doi.manager.settings.description"
 msgstr "Please configure the DOI plugin to be able to manage and use DOIs in OJS:"
 
-#, fuzzy
-#, fuzzy
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Select the types of work published in this journal that should be assigned DOIs. Most journals only assign DOIs to articles."
-
 msgid "doi.manager.settings.explainDois"
 msgstr "Please select the publishing objects that will have Digital Object Identifiers (DOI) assigned:"
 

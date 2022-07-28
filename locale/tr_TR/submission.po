@@ -48,9 +48,6 @@ msgstr "... olarak gönder."
 msgid "submission.issueEntry.submissionMetadata"
 msgstr "Yazı Girişi"
 
-msgid "submission.publication"
-msgstr "Yayın"
-
 msgid "submission.submit.userGroupDescription"
 msgstr "Bu makaleyi gönderdiğiniz rolü seçin."
 

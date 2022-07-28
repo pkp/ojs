@@ -57,9 +57,6 @@ msgstr "Το τυπογραφικό δοκίμιο εμφανίζεται στη
 msgid "grid.action.issueEntry"
 msgstr "Προβολή των μεταδεδομένων αυτής της υποβολής"
 
-msgid "submission.publication"
-msgstr "Δημοσίευση"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Το τυπογραφικό δοκίμιο του άρθρου \"{$galleyFormatName}\" είναι διαθέσιμο."
 

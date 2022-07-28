@@ -15,9 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "admin.hostedContexts"
-msgstr "Revistas hospedadas"
-
 msgid "admin.settings.redirect"
 msgstr "Redirecionamento para revista"
 

@@ -15,18 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "context.current"
-msgstr "Revista atual:"
-
-msgid "context.select"
-msgstr "Alterne para outra revista:"
-
-msgid "navigation.categories"
-msgstr "Categorias"
-
-msgid "navigation.categories.browse"
-msgstr "Procurar"
-
 msgid "reviewer.article.enterReviewForm"
 msgstr "Clique no ícone para preencher o formulário de avaliação."
 

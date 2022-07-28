@@ -63,9 +63,6 @@ msgstr "Galai tampil di entri terbitan"
 msgid "grid.action.issueEntry"
 msgstr "Lihat metadata naskah ini"
 
-msgid "submission.publication"
-msgstr "Publikasi"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Galai artikel \"{$galleyFormatName}\" tersedia."
 

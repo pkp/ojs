@@ -15,15 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "editor.home"
-msgstr "Página inicial do editor"
-
-msgid "editor.submissionsAndPublishing"
-msgstr "Submissões e Publicação"
-
-msgid "editor.submissionQueue"
-msgstr "Fila de envio"
-
 msgid "editor.submissionArchive"
 msgstr "Acervo de Submissões"
 

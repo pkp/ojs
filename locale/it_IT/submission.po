@@ -32,9 +32,6 @@ msgstr "Metadati"
 msgid "submission.submit.whatNext.description"
 msgstr "La redazione ha ricevuto notifica della tua proposta e ti è stata inviata una email di conferma. Appena gli editor avranno visionato la tua proposta sarai contattato."
 
-msgid "submission.publication"
-msgstr "Pubblicazione"
-
 msgid "submission.confirmSubmit"
 msgstr "Sei sicuro di voler inviare la proposta?"
 

@@ -57,9 +57,6 @@ msgstr "Publiceringsversion visas i numrets lista"
 msgid "grid.action.issueEntry"
 msgstr "Visa metadata för det här bidraget"
 
-msgid "submission.publication"
-msgstr "Publicering"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Artikelns publiceringsversion \"{$galleyFormatName}\" har gjorts tillgänglig."
 

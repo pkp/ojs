@@ -110,9 +110,6 @@ msgstr "Approuvé"
 msgid "grid.action.issueEntry"
 msgstr "Voir les métadonnées de la soumission"
 
-msgid "submission.publication"
-msgstr "Publication"
-
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Les épreuves se trouvent dans le répertoire du numéro"
 
