@@ -14,18 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "section.default.title"
-msgstr "Artigos"
-
-msgid "section.default.abbrev"
-msgstr "ART"
-
-msgid "section.default.policy"
-msgstr ""
-
-msgid "default.genres.article"
-msgstr "Texto do Artigo"
-
 msgid "default.contextSettings.checklist.notPreviouslyPublished"
 msgstr "A contribuição é original e inédita, e não está sendo avaliada para publicação por outra revista; caso contrário, deve-se justificar em \"Comentários ao editor\"."
 

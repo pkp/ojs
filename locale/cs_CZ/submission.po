@@ -56,9 +56,6 @@ msgstr "Ve vstupu do čísla je sazebnice"
 msgid "grid.action.issueEntry"
 msgstr "Prohlédněte si metadata tohoto příspěvku"
 
-msgid "submission.publication"
-msgstr "Publikace"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Sazebnice článku \"{$galleyFormatName}\" byla zpřístupněna."
 

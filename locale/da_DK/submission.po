@@ -57,9 +57,6 @@ msgstr "Send til bedømmelse"
 msgid "submission.title"
 msgstr "Artiklens titel"
 
-msgid "submission.publication"
-msgstr "Publikation"
-
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Indsendelsens nummer-metadata blev opdateret."
 

@@ -57,9 +57,6 @@ msgstr "Fahne in der Ausgabe angezeigt"
 msgid "grid.action.issueEntry"
 msgstr "Die Metadaten dieses Beitrags ansehen"
 
-msgid "submission.publication"
-msgstr "Veröffentlichung"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Die Artikelfahne \"{$galleyFormatName}\" wird verfügbar gemacht."
 

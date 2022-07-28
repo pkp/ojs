@@ -1806,9 +1806,6 @@ msgstr "Acesso ao conteúdo"
 msgid "manager.statistics.statistics.registeredUsers"
 msgstr "Usuários cadastrados"
 
-msgid "manager.distribution.access"
-msgstr "Acesso"
-
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
 msgstr "Notificar assinantes via e-mail"
 

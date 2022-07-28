@@ -16,18 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "Submeter um artigo"
-
-msgid "submission.submit.userGroup"
-msgstr "Submeter em meu papel como..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Escolha o papel sob o qual está a submeter este artigo."
-
-msgid "submission.upload.selectComponent"
-msgstr "Selecionar componente do artigo"
-
 msgid "submission.title"
 msgstr "Título do artigo"
 
@@ -236,9 +224,6 @@ msgstr "Escolha o papel com o qual deseja submeter este manuscrito."
 
 msgid "submission.upload.selectComponent"
 msgstr "Selecione o componente do artigo"
-
-msgid "submission.publication"
-msgstr "Publicação"
 
 msgid "publication.issue.success"
 msgstr "Os detalhes do fascículo desta publicação foram atualizados."
