@@ -59,9 +59,6 @@ msgstr "La galerada aparece en la entrada del número"
 msgid "grid.action.issueEntry"
 msgstr "Ver los metadatos de este envío"
 
-msgid "submission.publication"
-msgstr "Publicación"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "La galerada del artículo \"{$galleyFormatName}\" ya está disponible."
 

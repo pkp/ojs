@@ -57,9 +57,6 @@ msgstr "Гранка з'явилась у випуску"
 msgid "grid.action.issueEntry"
 msgstr "Переглянути метадані цього подання"
 
-msgid "submission.publication"
-msgstr "Публікація"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Гранка статті \"{$galleyFormatName}\" зроблена доступною."
 

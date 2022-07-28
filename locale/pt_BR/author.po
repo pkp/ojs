@@ -14,18 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "author.submit"
-msgstr "Nova Submissão"
-
-msgid "author.track"
-msgstr "Submissões Ativas"
-
-msgid "author.competingInterests"
-msgstr "Competing interests <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
-
-msgid "author.submit.submitArticle"
-msgstr "Submeter um Artigo"
-
 msgid "author.submit.stepsToSubmit"
 msgstr "Cinco Passos para a Submissão"
 

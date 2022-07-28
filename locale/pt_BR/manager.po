@@ -14,9 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.distribution.access"
-msgstr "Acesso"
-
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr "Escolha como uma data padrão de direitos autorais é selecionada para um artigo. Esse padrão pode ser substituído caso a caso. Se você \"publica conforme avança\", não use a data de publicação da edição."
 
