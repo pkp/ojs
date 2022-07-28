@@ -20,6 +20,10 @@
 
 namespace APP\controllers\grid\issues;
 
+use APP\controllers\grid\issues\form\IssueAccessForm;
+use APP\controllers\grid\issues\form\IssueForm;
+use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
+use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\notification\Notification;
@@ -41,8 +45,6 @@ use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
-
-import('controllers.grid.issues.IssueGridRow');
 
 class IssueGridHandler extends GridHandler
 {
@@ -96,8 +98,7 @@ class IssueGridHandler extends GridHandler
         parent::initialize($request, $args);
 
         // Grid columns.
-        import('controllers.grid.issues.IssueGridCellProvider');
-        $issueGridCellProvider = new \IssueGridCellProvider();
+        $issueGridCellProvider = new IssueGridCellProvider();
 
         // Issue identification
         $this->addColumn(
@@ -142,7 +143,7 @@ class IssueGridHandler extends GridHandler
      */
     protected function getRowInstance()
     {
-        return new \IssueGridRow();
+        return new IssueGridRow();
     }
 
     //
@@ -196,8 +197,7 @@ class IssueGridHandler extends GridHandler
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-        import('controllers.grid.issues.form.IssueForm');
-        $issueForm = new \IssueForm($issue);
+        $issueForm = new IssueForm($issue);
         $issueForm->initData();
         return new JSONMessage(true, $issueForm->fetch($request));
     }
@@ -284,8 +284,7 @@ class IssueGridHandler extends GridHandler
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-        import('controllers.grid.issues.form.IssueForm');
-        $issueForm = new \IssueForm($issue);
+        $issueForm = new IssueForm($issue);
         $issueForm->readInputData();
 
         if ($issueForm->validate()) {
@@ -310,8 +309,7 @@ class IssueGridHandler extends GridHandler
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-        import('controllers.grid.issues.form.IssueAccessForm');
-        $issueAccessForm = new \IssueAccessForm($issue);
+        $issueAccessForm = new IssueAccessForm($issue);
         $issueAccessForm->initData();
         return new JSONMessage(true, $issueAccessForm->fetch($request));
     }
@@ -328,8 +326,7 @@ class IssueGridHandler extends GridHandler
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 
-        import('controllers.grid.issues.form.IssueAccessForm');
-        $issueAccessForm = new \IssueAccessForm($issue);
+        $issueAccessForm = new IssueAccessForm($issue);
         $issueAccessForm->readInputData();
 
         if ($issueAccessForm->validate()) {
@@ -405,8 +402,7 @@ class IssueGridHandler extends GridHandler
     public function identifiers($args, $request)
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-        $form = new \PublicIdentifiersForm($issue);
+        $form = new PublicIdentifiersForm($issue);
         $form->initData();
         return new JSONMessage(true, $form->fetch($request));
     }
@@ -422,8 +418,7 @@ class IssueGridHandler extends GridHandler
     public function updateIdentifiers($args, $request)
     {
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-        $form = new \PublicIdentifiersForm($issue);
+        $form = new PublicIdentifiersForm($issue);
         $form->readInputData();
         if ($form->validate()) {
             $form->execute();
@@ -448,8 +443,7 @@ class IssueGridHandler extends GridHandler
         }
 
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-        $form = new \PublicIdentifiersForm($issue);
+        $form = new PublicIdentifiersForm($issue);
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));
         $json = new JSONMessage(true);
         $json->setEvent('reloadTab', [['tabsSelector' => '#editIssueTabs', 'tabSelector' => '#identifiersTab']]);
@@ -471,8 +465,7 @@ class IssueGridHandler extends GridHandler
         }
 
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        import('controllers.tab.pubIds.form.PublicIdentifiersForm');
-        $form = new \PublicIdentifiersForm($issue);
+        $form = new PublicIdentifiersForm($issue);
         $form->clearIssueObjectsPubIds($request->getUserVar('pubIdPlugIn'));
         return new JSONMessage(true);
     }
@@ -535,9 +528,8 @@ class IssueGridHandler extends GridHandler
 
         if (!$wasPublished) {
             $confirmationText = __('editor.issues.confirmPublish');
-            import('controllers.grid.pubIds.form.AssignPublicIdentifiersForm');
             $formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
-            $assignPublicIdentifiersForm = new \AssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
+            $assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
             if (!$request->getUserVar('confirmed')) {
                 // Display assign pub ids modal
                 $assignPublicIdentifiersForm->initData();

@@ -27,8 +27,6 @@ use PKP\core\JSONMessage;
 use PKP\core\PKPString;
 use PKP\submissionFile\SubmissionFile;
 
-// FIXME: Add namespacing
-
 abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
 {
     /**
