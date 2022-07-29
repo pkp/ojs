@@ -76,7 +76,7 @@ msgid "admin.journals.transcode"
 msgstr "記事のメタデータを ISO8859-1 から変換します"
 
 msgid "admin.journals.redirect"
-msgstr "msgstr "OJS 1 の URL から OJS 2 の URL にマッピングするコードの生成"
+msgstr "OJS 1 の URL から OJS 2 の URL にマッピングするコードの生成"
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "購読期間終了のお知らせ"

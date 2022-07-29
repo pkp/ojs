@@ -1,7 +1,7 @@
-# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021.
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-14 06:03+0000\n"
+"PO-Revision-Date: 2022-07-15 11:33+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/id_ID/>\n"
@@ -10,9 +10,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
-#, fuzzy
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Usage: {$scriptName} {$pluginName} [command] ...\n"
@@ -25,7 +24,7 @@ msgstr ""
 "\n"
 "Parameter tambahan diperlukan untuk mengimpor data sebagai berikut, "
 "bergantung\n"
-"pada  root node dokumen XML.\n"
+"pada root node dokumen XML.\n"
 "\n"
 "Jika root node <article> atau <articles>, parameter tambahan diperlukan.\n"
 "Format berikut dibolehkan:\n"
@@ -81,9 +80,8 @@ msgstr ""
 "Bagian judul \"{$section1Title}\" dan bagian judul \"{$section2Title}\" "
 "dalam issue \"{$issueTitle}\" sam dengan bagian jurnal yang ada dan berbeda."
 
-#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Pengguna yang dimaksud,  \"{$userName}\", tidak ada."
+msgstr "Pengguna yang dimaksud, \"{$userName}\", tidak ada."
 
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Bagian Tak Diketahui {$param}"

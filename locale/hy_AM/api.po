@@ -1,7 +1,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-07-15 20:43+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
 "\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Հարցված հրապարակումը այս նյութի մաս չէ։"
@@ -41,7 +41,7 @@ msgstr "Դուք չեք կարող խմբագրել ամսագիրը կայքի 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
 "Դուք չեք կարող դիտել կամ խմբագրել այս ամսագիրը, քանի դեռ հարցում չեք կատարել "
-"ամսագրի API-ի  կամ ամբողջ կայքի API-ի համար:"
+"ամսագրի API-ի կամ ամբողջ կայքի API-ի համար:"
 
 msgid "api.contexts.403.notAllowed"
 msgstr "Դուք չունեք թույլտվություն այս ամսագիրը դիտելու համար։"
@@ -54,7 +54,7 @@ msgid "api.submissions.403.unpublishedIssues"
 msgstr "Դուք չունեք թույլտվություն տեսնելու չհրապարակված համարը։"
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "Դուք չեք կարող փոխել  ամսագիրը։"
+msgstr "Դուք չեք կարող փոխել ամսագիրը։"
 
 msgid "api.emails.403.disabled"
 msgstr "Մեյլով ծանուցման ֆունկցիան այս ամսագրի համար միացված չէ։"

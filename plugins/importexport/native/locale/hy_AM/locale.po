@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-02 03:43+0000\n"
+"PO-Revision-Date: 2022-07-15 20:43+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/hy_AM/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr ""
@@ -36,7 +36,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
 msgstr ""
-"Բաժնի  \"{$sectionAbbrev}\" հապավումը «\"{$issueTitle}\" համարում համընկնում "
+"Բաժնի \"{$sectionAbbrev}\" հապավումը «\"{$issueTitle}\" համարում համընկնում "
 "է գոյություն ունեցող ամսագրի բաժնի հետ, սակայն այս բաժնի մեկ այլ հապավումը "
 "չի համընկնում գոյություն ունեցող ամսագրի մեկ այլ հապավման հետ:"
 
