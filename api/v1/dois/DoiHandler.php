@@ -187,7 +187,7 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         $invalidIds = array_diff($requestIds, $validIds);
         if (count($invalidIds)) {
             $failedDoiActions = array_map(function (int $id) {
-                $issueTitle = Repo::issue()->get($id)->getIssueIdentification();
+                $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
                 return new DoiActionException($issueTitle, $issueTitle, DoiActionException::ISSUE_NOT_PUBLISHED);
             }, $invalidIds);
 
@@ -215,7 +215,7 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
     }
 
     /**
-     * Mark submission DOIs as no longer registered with a DOI registration agency.
+     * Mark issues DOIs as no longer registered with a DOI registration agency.
      */
     public function markIssuesUnregistered(SlimRequest $slimRequest, APIResponse $response, array $args): Response
     {
@@ -236,7 +236,7 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         $invalidIds = array_diff($requestIds, $validIds);
         if (count($invalidIds)) {
             $failedDoiActions = array_map(function (int $id) {
-                $issueTitle = Repo::issue()->get($id)->getIssueIdentification();
+                $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
                 return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_ISSUE_CONTEXT);
             }, $invalidIds);
 
@@ -288,8 +288,8 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         $invalidIds = array_diff($requestIds, $validIds);
         if (count($invalidIds)) {
             $failedDoiActions = array_map(function (int $id) {
-                $issueTitle = Repo::issue()->get($id)->getIssueIdentification();
-                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_STALE_STATUS_ISSUE);
+                $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
+                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_STALE_STATUS);
             }, $invalidIds);
 
             return $response->withJson(

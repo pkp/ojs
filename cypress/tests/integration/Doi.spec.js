@@ -16,103 +16,50 @@ describe('DOI tests', function() {
 	const publicationId = 18;
 	const galleyId = 3;
 
+	const loginAndGoToDoiPage = (itemType = 'submission') => {
+		cy.login('dbarnes', null, 'publicknowledge');
+		goToDoiPage(itemType);
+	};
+
+	const goToDoiPage = (itemType = 'submission') => {
+		cy.get('a:contains("DOIs")').click();
+		cy.get(`button#${itemType}-doi-management-button`).click();
+	};
+
+	const clearFilter = (itemType = 'submission') => {
+		cy.get(`#${itemType}-doi-management button:contains("Clear filter")`).click();
+	};
+
 	it('Check DOI Configuration', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("Distribution")').click();
-
-		cy.get('button#dois-button').click();
-
-		// DOI is or can be enabled
-		cy.get('input[name="enableDois"]').check();
-		cy.get('input[name="enableDois"]').should('be.checked');
-
-		// Check all content
-		cy.get('input[name="enabledDoiTypes"][value="publication"]').check();
-		cy.get('input[name="enabledDoiTypes"][value="issue"]').check();
-		cy.get('input[name="enabledDoiTypes"][value="representation"]').check();
-
-		// Declare DOI Prefix
-		cy.get('input[name=doiPrefix]').focus().clear().type('10.1234');
-
-		// Select automatic DOI creation time
-		cy.get('select[name="doiCreationTime"]').select('copyEditCreationTime');
-
-		// Save
-		cy.get('#doisSetup button').contains('Save').click();
-		cy.get('#doisSetup [role="status"]').contains('Saved');
+		cy.checkDoiConfig(['publication', 'issue', 'representation']);
 	});
 
-	it('Check Issue DOI Assignment', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${issueId}]`).check();
-
-		// Select assign DOIs from bulk actions
-		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkAssign').click();
-
-		// Confirm assignment
-		cy.get('.modal__content').contains('assign new DOIs to 1 item(s)');
-		cy.get('.modal__footer button').contains('Assign DOIs').click();
-		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout:20000});
+	it('Check DOI Assignment and Visibility', function() {
+		cy.log('Check Issue assignment');
+		loginAndGoToDoiPage('issue');
+		cy.assignDois(issueId, 'issue');
 
 		cy.get(`#list-item-issue-${issueId} button.expander`).click();
-		cy.get(`input#${issueId}-issue`).should(($input) => {
-			const val = $input.val();
-			expect(val).to.match(/10.1234\/[0-9abcdefghjkmnpqrstvwxyz]{4}-[0-9abcdefghjkmnpqrstvwxyz]{2}[0-9]{2}/);
-		});
-	});
+		cy.checkDoiAssignment(`${issueId}-issue`);
 
-	it('Check Issue DOI visible', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
+		cy.log('Check Submission Assignment');
+		goToDoiPage();
+		cy.assignDois(submissionId);
 
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
+		cy.get(`#list-item-submission-${submissionId} button.expander`).click();
+		cy.checkDoiAssignment(`${submissionId}-article-${publicationId}`);
+		cy.checkDoiAssignment(`${submissionId}-galley-${galleyId}`);
 
+		cy.log('Check Issue Visibility');
 		// View issue with assigned DOI
 		cy.visit('');
 		cy.get('a:contains("Archives")').click();
 		cy.get('a:contains("' + issueDescription + '")').click();
 		cy.get('div.pub_id').should('have.class', 'doi');
 		cy.get('div.doi span.id a').contains('https://doi.org/10.1234/');
-	});
 
-	it('Check Publication/Galley DOI Assignments', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
-
-		// Select assign DOIs from bulk actions
-		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkAssign').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Assign DOIs")').click();
-		cy.get('.app__notifications').contains('Items successfully assigned new DOIs', {timeout: 20000});
-
-		cy.get(`#list-item-submission-${submissionId} button.expander`).click();
-		cy.get(`input#${submissionId}-article-${publicationId}`).should(($input) => {
-			const val = $input.val();
-			expect(val).to.match(/10.1234\/[0-9abcdefghjkmnpqrstvwxyz]{4}-[0-9abcdefghjkmnpqrstvwxyz]{2}[0-9]{2}/);
-		});
-		cy.get(`input#${submissionId}-galley-${galleyId}`).should(($input) => {
-			const val = $input.val();
-			expect(val).to.match(/10.1234\/[0-9abcdefghjkmnpqrstvwxyz]{4}-[0-9abcdefghjkmnpqrstvwxyz]{2}[0-9]{2}/);
-		});
-	});
-
-	it('Check Publication/Galley DOI visible', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
+		cy.log('Check Submission Visibility');
 		// Select a submission
 		cy.visit(`/index.php/publicknowledge/article/view/${submissionId}`);
 
@@ -120,271 +67,59 @@ describe('DOI tests', function() {
 			.find('span.value').contains('https://doi.org/10.1234/');
 	});
 
-	it('Check Issue Filter Behaviour (pre-deposit)', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
+	it('Check filters and mark registered', function() {
+		cy.log('Check Issue Filter Behaviour (pre-deposit)');
+		loginAndGoToDoiPage('issue');
 
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
+		cy.checkDoiFilterResults('Needs DOI', 'Vol. 2 No. 1 (2015)', 1, 'issue');
+		cy.checkDoiFilterResults('Unpublished', 'No items found.', 0, 'issue');
+		cy.checkDoiFilterResults('Unregistered', 'Vol. 1 No. 2 (2014)', 1, 'issue');
+		clearFilter('issue');
 
-		// Needs DOI
-		cy.get('#issue-doi-management button:contains("Needs DOI")').click();
-		cy.contains('Vol. 2 No. 1 (2015)');
+		cy.log('Check Issue Marked Registered');
+		cy.checkDoiMarkedStatus('Registered', issueId, true, 'Registered', 'issue');
 
-		// Unpublished
-		cy.get('#issue-doi-management button:contains("Unpublished")').click();
-		cy.get('#issue-doi-management .listPanel__items').contains('No items found.');
+		cy.log('Check Issue Filter Behaviour (post-deposit)');
+		cy.checkDoiFilterResults('Submitted', 'No items found.', 0, 'issue');
+		cy.checkDoiFilterResults('Registered', 'Vol. 1 No. 2 (2014)', 1, 'issue');
 
-		// Unregistered
-		cy.get('#issue-doi-management button:contains("Unregistered")').click();
-		cy.contains('Vol. 1 No. 2 (2014)');
+		cy.log('Check Submission filter behaviour (pre-deposit)');
+		goToDoiPage();
+
+		cy.checkDoiFilterResults('Needs DOI', 'Woods — Finocchiaro: Arguments About Arguments', 7);
+		cy.checkDoiFilterResults('Unpublished', 'No items found.', 0);
+		cy.checkDoiFilterResults('Unregistered', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
+		clearFilter();
+
+		cy.log('Check Submission Marked Registered');
+		cy.checkDoiMarkedStatus('Registered', submissionId, true, 'Registered');
+
+		cy.log('Check Submission Filter Behaviour (post-deposit)');
+		cy.checkDoiFilterResults('Submitted', 'No items found.', 0);
+		cy.checkDoiFilterResults('Registered', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
 	});
 
-	it('Check Submission Filter Behaviour (pre-deposit)', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Needs DOI
-		cy.get('#article-doi-management button:contains("Needs DOI")').click();
-		cy.contains('Woods — Finocchiaro: Arguments About Arguments');
-
-		// Unpublished
-		cy.get('#article-doi-management button:contains("Unpublished")').click();
-		cy.get('#article-doi-management .listPanel__items').contains('No items found.');
-
-		// Unregistered
-		cy.get('#article-doi-management button:contains("Unregistered")').click();
-		cy.contains('Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran');
-	});
-
-	it('Check Issue Marked Registered', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
-
-		// Select mark registered from bulk actions
-		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkRegistered').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Registered")').click();
-		cy.get('.app__notifications').contains('Items successfully marked registered', {timeout:20000});
-
-		cy.get(`#list-item-issue-${issueId} .pkpBadge`).contains('Registered');
-	});
-
-	it('Check Publication/Galley Marked Registered', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
-
-		// Select mark registered from bulk actions
-		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkRegistered').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Registered")').click();
-		cy.get('.app__notifications').contains('Items successfully marked registered', {timeout:20000});
-
-		cy.get(`#list-item-submission-${submissionId} .pkpBadge`).contains('Registered');
-	});
-
-	it('Check Issue Filter Behaviour (post-deposit)', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Submitted
-		cy.get('#issue-doi-management button:contains("Submitted")').click();
-		cy.get('#issue-doi-management .listPanel__items').contains('No items found.');
-
-		// Registered
-		cy.get('#issue-doi-management button:contains("Registered")').click();
-		cy.contains('Vol. 1 No. 2 (2014)');
-	});
-
-	it('Check Submission Filter Behaviour (post-deposit)', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Submitted
-		cy.get('#article-doi-management button:contains("Submitted")').click();
-		cy.get('#article-doi-management .listPanel__items').contains('No items found.');
-
-		// Unregistered
-		cy.get('#article-doi-management button:contains("Registered")').click();
-		cy.contains(' Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran ');
-	});
-
-	it('Check unpublished Issue Marked Registered displays error', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${unpublishedIssueId}]`).check()
-
-		// Select mark registered from bulk actions
-		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkRegistered').click();
-
-		// Confirm unsuccessful
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Registered")').click();
-		cy.get('div[data-modal="failedDoiActionModal"]').contains('Could not set the DOI status for the following issue: Vol. 2 No. 1 (2015). The issue must be published first. ', {timeout:20000});
-
-		cy.get(`#list-item-issue-${unpublishedIssueId} .pkpBadge`).contains('Unpublished');
-	});
-
-	it('Check unpublished Publication/Galley Marked Registered displays error', function() {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Select the first article
-		cy.get(`input[name="submission[]"][value=${unpublishedSubmissionId}]`).check();
-
-		// Select mark registered from bulk actions
-		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkRegistered').click();
-
-		// Confirm unsuccessful
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Registered")').click();
-		cy.get('div[data-modal="failedDoiActionModal"]').contains('Could not set DOI status for the following submission: Finocchiaro: Arguments About Arguments. The submission must be published first.', {timeout:20000});
-
-		cy.get(`#list-item-submission-${unpublishedSubmissionId} .pkpBadge`).contains('Unpublished');
-	});
-
-	it('Check Issue Marked Stale', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
-
-		// Select mark stale from bulk actions
-		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkStale').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Stale")').click();
-		cy.get('.app__notifications').contains('Items successfully marked stale', {timeout:20000});
-
-		cy.get(`#list-item-issue-${issueId} .pkpBadge`).contains('Stale');
-	});
-
-	it('Check Publication/Galley Marked Stale', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
-
-		// Select mark stale from bulk actions
-		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkStale').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Stale")').click();
-		cy.get('.app__notifications').contains('Items successfully marked stale', {timeout:20000});
-
-		cy.get(`#list-item-submission-${submissionId} .pkpBadge`).contains('Stale');
-	});
-
-	it('Check Issue Marked Unregistered', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
-
-		// Select mark unregistered from bulk actions
-		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkUnregistered').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Unregistered")').click();
-		cy.get('.app__notifications').contains('Items successfully marked unregistered', {timeout:20000});
-
-		cy.get(`#list-item-issue-${issueId} .pkpBadge`).contains('Unregistered');
-	});
-
-	it('Check Publication/Galley Marked Unregistered', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
-
-		// Select mark unregistered from bulk actions
-		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkUnregistered').click();
-
-		// Confirm assignment
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Unregistered")').click();
-		cy.get('.app__notifications').contains('Items successfully marked unregistered', {timeout:20000});
-
-		cy.get(`#list-item-submission-${submissionId} .pkpBadge`).contains('Unregistered');
-	});
-
-	it('Check invalid Issue Marked Stale displays error', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#issue-doi-management-button').click();
-
-		// Select the first issue
-		cy.get(`input[name="issue[]"][value=${issueId}]`).check()
-
-		// Select mark stale from bulk actions
-		cy.get('#issue-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkStale').click();
-
-		// Confirm unsuccessful
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Stale")').click();
-		cy.get('div[data-modal="failedDoiActionModal"]').contains('Could not set the DOI status to stale for the following issue: Vol. 1 No. 2 (2014).', {timeout:20000});
-
-		cy.get(`#list-item-issue-${issueId} .pkpBadge`).contains('Unregistered');
-	});
-
-	it('Check invalid Publication/Galley Marked Stale displays error', function () {
-		cy.login('dbarnes', null, 'publicknowledge');
-
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#article-doi-management-button').click();
-
-		// Select the first article
-		cy.get(`input[name="submission[]"][value=${submissionId}]`).check();
-
-		// Select mark stale from bulk actions
-		cy.get('#article-doi-management button:contains("Bulk Actions")').click({multiple: true});
-		cy.get('button#openBulkMarkStale').click();
-
-		// Confirm unsuccessful
-		cy.get('div[data-modal="bulkActions"] button:contains("Mark DOIs Stale")').click();
-		cy.get('div[data-modal="failedDoiActionModal"]').contains('Could not set DOI status to stale for the following submission: Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran. The DOI must currently have the "Registered" or "Submitted" status.', {timeout:20000});
-
-		cy.get(`#list-item-submission-${submissionId} .pkpBadge`).contains('Unregistered');
+	it('Check Marked Status Behaviour', function() {
+		loginAndGoToDoiPage('issue');
+
+		cy.log('Check unpublished Issue Marked Registered displays error');
+		cy.checkDoiMarkedStatus('Registered', unpublishedIssueId, false, 'Unpublished', 'issue');
+		cy.log('Check Issue Marked Stale');
+		cy.checkDoiMarkedStatus('Stale', issueId, true, 'Stale', 'issue');
+		cy.log('Check Issue Marked Unregistered');
+		cy.checkDoiMarkedStatus('Unregistered', issueId, true, 'Unregistered', 'issue');
+		cy.log('Check invalid Issue Marked Stale displays error');
+		cy.checkDoiMarkedStatus('Stale', issueId, false, 'Unregistered', 'issue');
+
+		goToDoiPage();
+
+		cy.log('Check unpublished Submission Marked Registered displays error');
+		cy.checkDoiMarkedStatus('Registered', unpublishedSubmissionId, false, 'Unpublished');
+		cy.log('Check Submission Marked Stale');
+		cy.checkDoiMarkedStatus('Stale', submissionId, true, 'Stale');
+		cy.log('Check Submission Marked Unregistered');
+		cy.checkDoiMarkedStatus('Unregistered', submissionId, true, 'Unregistered');
+		cy.log('Check invalid Submission Marked Stale displays error');
+		cy.checkDoiMarkedStatus('Stale', submissionId, false, 'Unregistered');
 	});
 });

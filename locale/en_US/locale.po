@@ -523,10 +523,10 @@ msgid "doi.issue.incorrectContext"
 msgstr "Could not create a DOI for the following issue: {$itemTitle}. It does not exist in the current journal context."
 
 msgid "doi.issue.incorrectStaleStatus"
-msgstr "Could not set the DOI status to stale for the following issue: {$itemTitle}. The DOI must currently have the \"Registered\" or \"Submitted\" status."
+msgstr "Could not set the DOI status to stale for the following issue: {$itemTitle}. The DOI must have the \"Registered\" or \"Submitted\" status."
 
 msgid "doi.issue.notPublished"
-msgstr "Could not set the DOI status for the following issue: {$itemTitle}. The issue must be published first."
+msgstr "Failed to mark the DOI registered for {$pubObjectTitle}. The issue must be published before the status can be updated."
 
 msgid "subscriptionTypes.currency"
 msgstr "Currency"
