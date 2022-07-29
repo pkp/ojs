@@ -16,5 +16,4 @@
  *
  */
 
-import('pages.stats.StatsHandler');
-define('HANDLER_CLASS', 'StatsHandler');
+define('HANDLER_CLASS', 'APP\pages\stats\StatsHandler');

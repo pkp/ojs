@@ -13,6 +13,8 @@
  * @brief Display journal information.
  */
 
+namespace APP\pages\information;
+
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use PKP\security\authorization\ContextRequiredPolicy;

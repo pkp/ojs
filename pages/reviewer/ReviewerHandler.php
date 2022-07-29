@@ -13,15 +13,19 @@
  * @brief Handle requests for reviewer functions.
  */
 
+namespace APP\pages\reviewer;
+
 use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
+use APP\submission\reviewer\ReviewerSubmission;
+use APP\submission\reviewer\ReviewerSubmission;
+use PKP\core\PKPRequest;
+use PKP\db\DAORegistry;
+use PKP\pages\reviewer\PKPReviewerHandler;
 use PKP\security\AccessKeyManager;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
 use PKP\security\Validation;
-
-// FIXME: Add namespacing
-import('lib.pkp.pages.reviewer.PKPReviewerHandler');
 
 class ReviewerHandler extends PKPReviewerHandler
 {

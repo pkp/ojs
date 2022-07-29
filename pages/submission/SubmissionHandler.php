@@ -13,10 +13,11 @@
  * @brief Handle requests for the submission wizard.
  */
 
-use PKP\facades\Locale;
-use PKP\security\Role;
+namespace APP\pages\submission;
 
-import('lib.pkp.pages.submission.PKPSubmissionHandler');
+use PKP\facades\Locale;
+use PKP\pages\submission\PKPSubmissionHandler;
+use PKP\security\Role;
 
 class SubmissionHandler extends PKPSubmissionHandler
 {

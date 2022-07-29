@@ -20,7 +20,6 @@ switch ($op) {
     case 'step':
     case 'saveStep':
     case 'index':
-        import('pages.submission.SubmissionHandler');
-        define('HANDLER_CLASS', 'SubmissionHandler');
+        define('HANDLER_CLASS', 'APP\pages\submission\SubmissionHandler');
         break;
 }

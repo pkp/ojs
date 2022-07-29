@@ -21,7 +21,6 @@ switch ($op) {
     case 'archive':
     case 'view':
     case 'download':
-        define('HANDLER_CLASS', 'IssueHandler');
-        import('pages.issue.IssueHandler');
+        define('HANDLER_CLASS', 'APP\pages\issue\IssueHandler');
         break;
 }

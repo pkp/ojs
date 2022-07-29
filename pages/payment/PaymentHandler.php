@@ -13,9 +13,14 @@
  * @brief Handle requests for payment functions.
  */
 
-use APP\handler\Handler;
+namespace APP\pages\payment;
 
+use APP\core\Application;
+use APP\handler\Handler;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+use PKP\plugins\PluginRegistry;
+use PKP\security\Validation;
 
 class PaymentHandler extends Handler
 {

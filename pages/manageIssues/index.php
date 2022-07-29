@@ -22,7 +22,6 @@ switch ($op) {
     //
     case 'index':
     case 'issuesTabs':
-        define('HANDLER_CLASS', 'ManageIssuesHandler');
-        import('pages.manageIssues.ManageIssuesHandler');
+        define('HANDLER_CLASS', 'APP\pages\manageIssues\ManageIssuesHandler');
         break;
 }

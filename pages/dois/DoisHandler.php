@@ -13,10 +13,12 @@
  * @brief Handle requests for DOI management functions.
  */
 
+namespace APP\pages\dois;
+
 use APP\components\listPanels\DoiListPanel;
 use APP\facades\Repo;
-
-import('lib.pkp.pages.dois.PKPDoisHandler');
+use PKP\core\PKPApplication;
+use PKP\pages\dois\PKPDoisHandler;
 
 class DoisHandler extends PKPDoisHandler
 {

@@ -13,9 +13,12 @@
  * @brief Handle requests for statistics pages.
  */
 
-import('lib.pkp.pages.stats.PKPStatsHandler');
+namespace APP\pages\stats;
 
+use APP\core\Application;
 use APP\template\TemplateManager;
+use PKP\pages\stats\PKPStatsHandler;
+use PKP\plugins\HookRegistry;
 
 class StatsHandler extends PKPStatsHandler
 {

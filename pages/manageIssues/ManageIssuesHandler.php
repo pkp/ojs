@@ -13,6 +13,8 @@
  * @brief Handle requests for issue management in publishing.
  */
 
+namespace APP\pages\manageIssues;
+
 use APP\handler\Handler;
 use APP\template\TemplateManager;
 use PKP\security\authorization\PKPSiteAccessPolicy;

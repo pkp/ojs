@@ -18,7 +18,6 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'SitemapHandler');
-        import('pages.sitemap.SitemapHandler');
+        define('HANDLER_CLASS', 'APP\pages\sitemap\SitemapHandler');
         break;
 }

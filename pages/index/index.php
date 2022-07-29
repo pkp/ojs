@@ -18,7 +18,6 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'IndexHandler');
-        import('pages.index.IndexHandler');
+        define('HANDLER_CLASS', 'APP\pages\index\IndexHandler');
         break;
 }

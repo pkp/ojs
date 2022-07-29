@@ -13,8 +13,10 @@
  * @brief Handle requests for the author dashboard.
  */
 
-// Import base class
-import('lib.pkp.pages.authorDashboard.PKPAuthorDashboardHandler');
+namespace APP\pages\authorDashboard;
+
+use PKP\core\PKPApplication;
+use PKP\pages\authorDashboard\PKPAuthorDashboardHandler;
 
 class AuthorDashboardHandler extends PKPAuthorDashboardHandler
 {

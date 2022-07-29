@@ -13,13 +13,17 @@
  * @brief Handle site index requests.
  */
 
-import('lib.pkp.pages.index.PKPIndexHandler');
+namespace APP\pages\index;
 
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\observers\events\Usage;
+use APP\pages\issue\IssueHandler;
 use APP\template\TemplateManager;
+use PKP\config\Config;
 use PKP\db\DAORegistry;
+use PKP\pages\index\PKPIndexHandler;
+use PKP\security\Validation;
 
 class IndexHandler extends PKPIndexHandler
 {
@@ -65,7 +69,6 @@ class IndexHandler extends PKPIndexHandler
 
             $issue = Repo::issue()->getCurrent($journal->getId(), true);
             if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
-                import('pages.issue.IssueHandler');
                 // The current issue TOC/cover page should be displayed below the custom home page.
                 IssueHandler::_setupIssueTemplate($request, $issue);
             }

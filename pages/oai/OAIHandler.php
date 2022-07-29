@@ -13,10 +13,14 @@
  * @brief Handle OAI protocol requests.
  */
 
+namespace APP\pages\oai;
+
 use APP\handler\Handler;
 use APP\oai\ojs\JournalOAI;
 use Firebase\JWT\JWT;
+use PKP\config\Config;
 use PKP\oai\OAIConfig;
+use PKP\plugins\PluginRegistry;
 use PKP\session\SessionManager;
 
 // Disable initializing the session

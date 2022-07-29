@@ -18,7 +18,6 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'OAIHandler');
-        import('pages.oai.OAIHandler');
+        define('HANDLER_CLASS', 'APP\pages\oai\OAIHandler');
         break;
 }

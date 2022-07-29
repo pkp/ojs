@@ -13,7 +13,7 @@
  * @brief Handle requests for the submssion workflow.
  */
 
-import('lib.pkp.pages.workflow.PKPWorkflowHandler');
+namespace APP\pages\workflow;
 
 use APP\core\Application;
 use APP\core\Services;
@@ -37,6 +37,7 @@ use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
 use PKP\notification\PKPNotification;
+use PKP\pages\workflow\PKPWorkflowHandler;
 use PKP\plugins\HookRegistry;
 use PKP\security\Role;
 
@@ -92,7 +93,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         $publicFileManager = new PublicFileManager();
         $baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($submissionContext->getId());
 
-        $issueEntryForm = new APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
+        $issueEntryForm = new \APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
         $sectionWordLimits = [];
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
@@ -101,8 +102,7 @@ class WorkflowHandler extends PKPWorkflowHandler
             $sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
         }
 
-        import('classes.components.forms.publication.AssignToIssueForm');
-        import('classes.components.forms.publication.PublishForm');
+        class_exists(\APP\components\forms\publication\AssignToIssueForm::class); // Force define of FORM_ASSIGN_TO_ISSUE
         $templateMgr->setConstants([
             'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE,
             'FORM_ISSUE_ENTRY' => FORM_ISSUE_ENTRY,
@@ -118,7 +118,7 @@ class WorkflowHandler extends PKPWorkflowHandler
             'submissionPaymentsEnabled' => $paymentManager->publicationEnabled(),
         ]);
         if ($paymentManager->publicationEnabled()) {
-            $submissionPaymentsForm = new APP\components\forms\publication\SubmissionPaymentsForm(
+            $submissionPaymentsForm = new \APP\components\forms\publication\SubmissionPaymentsForm(
                 $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getPath(), '_submissions/' . $submission->getId() . '/payment'),
                 $submission,
                 $request->getContext()

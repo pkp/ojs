@@ -13,11 +13,13 @@
  * @brief Produce a sitemap in XML format for submitting to search engines.
  */
 
-import('lib.pkp.pages.sitemap.PKPSitemapHandler');
+namespace APP\pages\sitemap;
 
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\submission\Submission;
+use PKP\pages\sitemap\PKPSitemapHandler;
+use PKP\plugins\HookRegistry;
 
 class SitemapHandler extends PKPSitemapHandler
 {
