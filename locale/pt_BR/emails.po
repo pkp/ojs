@@ -14,19 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Nova notificação de {$siteTitle}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Você tem uma nova notificação de {$siteTitle}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$url}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
 msgid "emails.notification.description"
 msgstr "Esta mensagem é enviada a usuários cadastrados que escolheram habilitar este tipo de notificação via email."
 

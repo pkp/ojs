@@ -53,9 +53,6 @@ msgstr "Julkaistava tiedosto näkyy numeron tiedoissa"
 msgid "grid.action.issueEntry"
 msgstr "Katsele tämän käsikirjoituksen metatietoja"
 
-msgid "submission.publication"
-msgstr "Julkaiseminen"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" on nyt saatavilla."
 

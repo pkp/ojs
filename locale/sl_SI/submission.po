@@ -57,9 +57,6 @@ msgstr "Prelom je v vpisu številke"
 msgid "grid.action.issueEntry"
 msgstr "Poglej metapodatke prispevka"
 
-msgid "submission.publication"
-msgstr "Številka"
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Prelom \"{$galleyFormatName}\" za prispevek je na voljo."
 
