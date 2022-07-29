@@ -14,7 +14,10 @@
  *
  */
 
+namespace APP\pages\article;
+
 use APP\core\Application;
+use APP\core\Services;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\issue\IssueAction;
@@ -24,8 +27,13 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
+use PKP\config\Config;
+use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
+use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\security\Validation;
 use PKP\submission\Genre;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;

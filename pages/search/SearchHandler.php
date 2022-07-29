@@ -13,6 +13,8 @@
  * @brief Handle site index requests.
  */
 
+namespace APP\pages\search;
+
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\search\ArticleSearch;

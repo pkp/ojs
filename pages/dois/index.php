@@ -17,7 +17,6 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'DoisHandler');
-        import('pages.dois.DoisHandler');
+        define('HANDLER_CLASS', 'APP\pages\dois\DoisHandler');
         break;
 }

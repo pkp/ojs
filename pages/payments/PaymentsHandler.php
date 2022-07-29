@@ -13,12 +13,17 @@
  * @brief Handle requests for payment management.
  */
 
+namespace APP\pages\payments;
+
+use APP\core\Application;
 use APP\handler\Handler;
 use APP\notification\NotificationManager;
 use APP\subscription\form\PaymentTypesForm;
 use APP\subscription\form\SubscriptionPolicyForm;
 use APP\template\TemplateManager;
+use PKP\config\Config;
 use PKP\core\JSONMessage;
+use PKP\core\PKPApplication;
 use PKP\security\authorization\PKPSiteAccessPolicy;
 use PKP\security\Role;
 

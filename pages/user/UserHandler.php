@@ -13,14 +13,17 @@
  * @brief Handle requests for user functions.
  */
 
-import('lib.pkp.pages.user.PKPUserHandler');
+namespace APP\pages\user;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\subscription\form\UserIndividualSubscriptionForm;
 use APP\subscription\form\UserInstitutionalSubscriptionForm;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+use PKP\pages\user\PKPUserHandler;
 
 class UserHandler extends PKPUserHandler
 {

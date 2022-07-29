@@ -13,6 +13,8 @@
  * @brief Handle external gateway requests.
  */
 
+namespace APP\pages\gateway;
+
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\template\TemplateManager;

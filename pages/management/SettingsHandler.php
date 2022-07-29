@@ -13,11 +13,12 @@
  * @brief Handle requests for settings pages.
  */
 
-// Import the base ManagementHandler.
-import('lib.pkp.pages.management.ManagementHandler');
+namespace APP\pages\management;
 
 use APP\template\TemplateManager;
 use PKP\core\PKPApplication;
+use PKP\pages\management\ManagementHandler;
+use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\Role;
 

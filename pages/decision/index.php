@@ -16,5 +16,4 @@
  *
  */
 
-define('HANDLER_CLASS', 'DecisionHandler');
-import('lib.pkp.pages.decision.DecisionHandler');
+define('HANDLER_CLASS', 'PKP\pages\decision\DecisionHandler');

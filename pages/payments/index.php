@@ -28,7 +28,6 @@ switch ($op) {
     case 'paymentTypes':
     case 'savePaymentTypes':
     case 'payments':
-        define('HANDLER_CLASS', 'PaymentsHandler');
-        import('pages.payments.PaymentsHandler');
+        define('HANDLER_CLASS', 'APP\pages\payments\PaymentsHandler');
         break;
 }

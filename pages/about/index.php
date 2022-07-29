@@ -18,7 +18,7 @@
 
 switch ($op) {
     case 'subscriptions':
-        return new \APP\pages\about\AboutHandler();
+        return new APP\pages\about\AboutHandler();
     default:
         // Fall back on pkp-lib implementation
         return require_once('lib/pkp/pages/about/index.php');

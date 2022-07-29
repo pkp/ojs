@@ -23,7 +23,6 @@ switch ($op) {
     case 'librarians':
     case 'competingInterestGuidelines':
     case 'sampleCopyrightWording':
-        define('HANDLER_CLASS', 'InformationHandler');
-        import('pages.information.InformationHandler');
+        define('HANDLER_CLASS', 'APP\pages\information\InformationHandler');
         break;
 }

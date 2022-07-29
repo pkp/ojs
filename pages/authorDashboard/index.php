@@ -24,6 +24,5 @@ switch ($op) {
     case 'submission':
     case 'readSubmissionEmail':
     case 'reviewRoundInfo':
-        import('pages.authorDashboard.AuthorDashboardHandler');
-        define('HANDLER_CLASS', 'AuthorDashboardHandler');
+        define('HANDLER_CLASS', 'APP\pages\authorDashboard\AuthorDashboardHandler');
 }

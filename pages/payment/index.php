@@ -19,7 +19,6 @@
 switch ($op) {
     case 'plugin':
     case 'pay':
-        define('HANDLER_CLASS', 'PaymentHandler');
-        import('pages.payment.PaymentHandler');
+        define('HANDLER_CLASS', 'APP\pages\payment\PaymentHandler');
         break;
 }

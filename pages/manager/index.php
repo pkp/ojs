@@ -23,7 +23,7 @@ switch ($op) {
     case 'subscriptionPolicies':
     case 'saveSubscriptionPolicies':
     //
-    // Subscription Types
+        // Subscription Types
     //
     case 'subscriptionTypes':
     case 'deleteSubscriptionType':
@@ -33,7 +33,7 @@ switch ($op) {
     case 'updateSubscriptionType':
     case 'moveSubscriptionType':
     //
-    // Subscriptions
+        // Subscriptions
     //
     case 'subscriptions':
     case 'subscriptionsSummary':
@@ -42,17 +42,15 @@ switch ($op) {
     case 'createSubscription':
     case 'editSubscription':
     case 'updateSubscription':
-        define('HANDLER_CLASS', 'SubscriptionHandler');
-        import('pages.manager.SubscriptionHandler');
+        define('HANDLER_CLASS', 'APP\manager\SubscriptionHandler');
         break;
     //
-    // Payment
+        // Payment
     //
     case 'payments':
     case 'savePaymentSettings':
     case 'viewPayments':
     case 'viewPayment':
-        define('HANDLER_CLASS', 'ManagerPaymentHandler');
-        import('pages.manager.ManagerPaymentHandler');
+        define('HANDLER_CLASS', 'APP\manager\ManagerPaymentHandler');
         break;
 }
