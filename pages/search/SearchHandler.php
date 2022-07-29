@@ -13,9 +13,9 @@
  * @brief Handle site index requests.
  */
 
-use APP\search\ArticleSearch;
 use APP\facades\Repo;
 use APP\handler\Handler;
+use APP\search\ArticleSearch;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 

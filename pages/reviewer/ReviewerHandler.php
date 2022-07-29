@@ -125,8 +125,8 @@ class ReviewerHandler extends PKPReviewerHandler
         ReviewAssignment $reviewAssignment
     ): ReviewerReviewForm {
         switch ($step) {
-        case 3:
-            return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
+            case 3:
+                return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
         }
         return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
     }
