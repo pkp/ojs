@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file pages/user/UserHandler.inc.php
+ * @file pages/user/UserHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

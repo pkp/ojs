@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file pages/authorDashboard/AuthorDashboardHandler.inc.php
+ * @file pages/authorDashboard/AuthorDashboardHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
