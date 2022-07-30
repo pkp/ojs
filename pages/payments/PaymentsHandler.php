@@ -48,7 +48,7 @@ class PaymentsHandler extends Handler
      * Display a list of payment tabs for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function index($args, $request)
     {
@@ -73,7 +73,7 @@ class PaymentsHandler extends Handler
      * Display a list of subscriptions for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function subscriptions($args, $request)
     {
@@ -110,7 +110,7 @@ class PaymentsHandler extends Handler
      * Display a list of subscription types for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function subscriptionTypes($args, $request)
     {
@@ -132,7 +132,7 @@ class PaymentsHandler extends Handler
      * Display subscription policies for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function subscriptionPolicies($args, $request)
     {
@@ -157,7 +157,7 @@ class PaymentsHandler extends Handler
      * Save subscription policies for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function saveSubscriptionPolicies($args, $request)
     {
@@ -180,7 +180,7 @@ class PaymentsHandler extends Handler
      * Display payment types for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function paymentTypes($args, $request)
     {
@@ -197,7 +197,7 @@ class PaymentsHandler extends Handler
      * Save payment types for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function savePaymentTypes($args, $request)
     {
@@ -220,7 +220,7 @@ class PaymentsHandler extends Handler
      * Display a list of payments for the current journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function payments($args, $request)
     {

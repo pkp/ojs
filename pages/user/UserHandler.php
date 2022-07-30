@@ -21,6 +21,7 @@ use APP\journal\Journal;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\subscription\form\UserIndividualSubscriptionForm;
 use APP\subscription\form\UserInstitutionalSubscriptionForm;
+use APP\subscription\Subscription;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\pages\user\PKPUserHandler;
@@ -31,7 +32,7 @@ class UserHandler extends PKPUserHandler
      * Display subscriptions page
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function subscriptions($args, $request)
     {
@@ -115,7 +116,7 @@ class UserHandler extends PKPUserHandler
      * Purchase a subscription.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function purchaseSubscription($args, $request)
     {
@@ -191,7 +192,7 @@ class UserHandler extends PKPUserHandler
      * Pay for a subscription purchase.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function payPurchaseSubscription($args, $request)
     {
@@ -299,7 +300,7 @@ class UserHandler extends PKPUserHandler
      * Complete the purchase subscription process.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function completePurchaseSubscription($args, $request)
     {
@@ -352,7 +353,7 @@ class UserHandler extends PKPUserHandler
      * Pay the "renew subscription" fee.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function payRenewSubscription($args, $request)
     {
@@ -414,7 +415,7 @@ class UserHandler extends PKPUserHandler
      * Pay for a membership.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function payMembership($args, $request)
     {

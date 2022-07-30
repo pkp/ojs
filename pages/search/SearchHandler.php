@@ -39,7 +39,7 @@ class SearchHandler extends Handler
      * Show the search form
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function index($args, $request)
     {
@@ -51,7 +51,7 @@ class SearchHandler extends Handler
      * Private function to transmit current filter values
      * to the template.
      *
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      * @param TemplateManager $templateMgr
      * @param array $searchFilters
      */
@@ -124,7 +124,7 @@ class SearchHandler extends Handler
      * Show the search form
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function search($args, $request)
     {
@@ -182,7 +182,7 @@ class SearchHandler extends Handler
      * request.
      *
      * @param array $args
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function similarDocuments($args, &$request)
     {
@@ -211,7 +211,7 @@ class SearchHandler extends Handler
     /**
      * Setup common template variables.
      *
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function setupTemplate($request)
     {

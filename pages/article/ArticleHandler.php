@@ -40,22 +40,22 @@ use PKP\submissionFile\SubmissionFile;
 
 class ArticleHandler extends Handler
 {
-    /** @var Context Context associated with the request */
+    /** @var \PKP\context\Context Context associated with the request */
     public $context;
 
-    /** @var Issue Issue associated with the request */
+    /** @var ?\APP\issue\Issue Issue associated with the request */
     public $issue;
 
-    /** @var Submission Submission associated with the request */
+    /** @var \APP\submission\Submission Submission associated with the request */
     public $article;
 
-    /** @var Category Category associated with the request */
+    /** @var \PKP\category\Category Category associated with the request */
     public $categories;
 
-    /** @var Publication Publication associated with the request */
+    /** @var \APP\publication\Publication Publication associated with the request */
     public $publication;
 
-    /** @var Representation galley associated with the request */
+    /** @var \PKP\galley\Galley galley associated with the request */
     public $galley;
 
     /** @var int fileId associated with the request */
@@ -85,7 +85,7 @@ class ArticleHandler extends Handler
                         $apiToken = json_decode($apiToken);
                     }
                     $this->setApiToken($apiToken);
-                } catch (Exception $e) {
+                } catch (\Exception $e) {
                     $templateMgr = TemplateManager::getManager($request);
                     $templateMgr->assign('message', 'api.400.invalidApiToken');
                     return $templateMgr->display('frontend/pages/message.tpl');
@@ -103,7 +103,7 @@ class ArticleHandler extends Handler
     /**
      * @see PKPHandler::initialize()
      *
-     * @param Request $request
+     * @param \APP\core\Request $request
      * @param array $args Arguments list
      */
     public function initialize($request, $args = [])
@@ -205,7 +205,7 @@ class ArticleHandler extends Handler
      * View Article. (Either article landing page or galley view.)
      *
      * @param array $args
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function view($args, $request)
     {
@@ -389,7 +389,7 @@ class ArticleHandler extends Handler
      * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function viewFile($args, $request)
     {
@@ -405,7 +405,7 @@ class ArticleHandler extends Handler
      * For deprecated OJS 2.x URLs; see https://github.com/pkp/pkp-lib/issues/1541
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function downloadSuppFile($args, $request)
     {
@@ -446,7 +446,7 @@ class ArticleHandler extends Handler
      * Download an article file
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function download($args, $request)
     {
@@ -516,7 +516,7 @@ class ArticleHandler extends Handler
     /**
      * Determines whether a user can view this article galley or not.
      *
-     * @param Request $request
+     * @param \APP\core\Request $request
      * @param string $articleId
      * @param int|string $galleyId
      */

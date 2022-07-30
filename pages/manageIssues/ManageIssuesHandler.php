@@ -22,7 +22,7 @@ use PKP\security\Role;
 
 class ManageIssuesHandler extends Handler
 {
-    /** @var Issue Issue associated with the request */
+    /** @var \APP\issue\Issue Issue associated with the request */
     public $issue;
 
     /** @copydoc PKPHandler::_isBackendPage */
@@ -55,7 +55,7 @@ class ManageIssuesHandler extends Handler
      * Displays the issue listings in a tabbed interface.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      *
      * @return string Response contents.
      */
