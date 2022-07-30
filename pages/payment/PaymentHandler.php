@@ -28,7 +28,7 @@ class PaymentHandler extends Handler
      * Pass request to plugin.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function plugin($args, $request)
     {
@@ -50,7 +50,7 @@ class PaymentHandler extends Handler
      * Present a landing page from which to fulfill a payment.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function pay($args, $request)
     {

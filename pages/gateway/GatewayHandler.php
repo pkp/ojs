@@ -30,7 +30,7 @@ class GatewayHandler extends Handler
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function __construct($request)
     {
@@ -54,7 +54,7 @@ class GatewayHandler extends Handler
      * Index handler.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function index($args, $request)
     {
@@ -65,7 +65,7 @@ class GatewayHandler extends Handler
      * Display the LOCKSS manifest.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function lockss($args, $request)
     {
@@ -130,7 +130,7 @@ class GatewayHandler extends Handler
      * Display the CLOCKSS manifest.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function clockss($args, $request)
     {
@@ -201,7 +201,7 @@ class GatewayHandler extends Handler
      * Handle requests for gateway plugins.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function plugin($args, $request)
     {

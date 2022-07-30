@@ -37,7 +37,7 @@ use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
 {
-    /** @var IssueGalley retrieved issue galley */
+    /** @var \APP\issue\IssueGalley retrieved issue galley */
     public $_galley = null;
 
 
@@ -111,7 +111,7 @@ class IssueHandler extends Handler
      * View an issue.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function view($args, $request)
     {
@@ -141,7 +141,7 @@ class IssueHandler extends Handler
      * Display the issue archive listings
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function archive($args, $request)
     {
@@ -184,7 +184,7 @@ class IssueHandler extends Handler
      * Downloads an issue galley file
      *
      * @param array $args ($issueId, $galleyId)
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function download($args, $request)
     {
@@ -206,7 +206,7 @@ class IssueHandler extends Handler
     /**
      * Get the retrieved issue galley
      *
-     * @return IssueGalley
+     * @return \APP\issue\IssueGalley
      */
     public function getGalley()
     {
@@ -216,7 +216,7 @@ class IssueHandler extends Handler
     /**
      * Set a retrieved issue galley
      *
-     * @param IssueGalley $galley
+     * @param \APP\issue\IssueGalley $galley
      */
     public function setGalley($galley)
     {
@@ -226,7 +226,7 @@ class IssueHandler extends Handler
     /**
      * Determines whether or not a user can view an issue galley.
      *
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function userCanViewGalley($request)
     {

@@ -67,7 +67,7 @@ class WorkflowHandler extends PKPWorkflowHandler
     /**
      * Setup variables for the template
      *
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function setupIndex($request)
     {

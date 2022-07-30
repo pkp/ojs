@@ -48,7 +48,7 @@ class SettingsHandler extends ManagementHandler
      * Add the workflow settings page
      *
      * @param array $args
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function workflow($args, $request)
     {
@@ -60,7 +60,7 @@ class SettingsHandler extends ManagementHandler
      * Add the archive and payments tabs to the distribution settings page
      *
      * @param array $args
-     * @param Request $request
+     * @param \APP\core\Request $request
      */
     public function distribution($args, $request)
     {

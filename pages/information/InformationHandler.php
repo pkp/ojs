@@ -40,7 +40,7 @@ class InformationHandler extends Handler
      * Display the information page for the journal.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function index($args, $request)
     {
@@ -107,7 +107,7 @@ class InformationHandler extends Handler
     /**
      * Initialize the template.
      *
-     * @param PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function setupTemplate($request)
     {
