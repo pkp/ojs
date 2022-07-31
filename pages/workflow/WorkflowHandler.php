@@ -24,6 +24,9 @@ use APP\file\PublicFileManager;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
+use PKP\decision\types\BackFromCopyediting;
+use PKP\decision\types\BackFromExternalReview;
+use PKP\decision\types\BackFromProduction;
 use PKP\decision\types\BackToExternalReviewFromCopyediting;
 use PKP\decision\types\BackToPreviousExternalReviewRound;
 use PKP\decision\types\BackToSubmissionFromExternalReview;
@@ -303,9 +306,12 @@ class WorkflowHandler extends PKPWorkflowHandler
         return [
             InitialDecline::class,
             Decline::class,
-            BackToSubmissionFromExternalReview::class,
-            BackToPreviousExternalReviewRound::class,
-            BackToExternalReviewFromCopyediting::class,
+            // BackToSubmissionFromExternalReview::class,
+            // BackToPreviousExternalReviewRound::class,
+            // BackToExternalReviewFromCopyediting::class,
+            BackFromProduction::class,
+            BackFromCopyediting::class,
+            BackFromExternalReview::class,
         ];
     }
 }

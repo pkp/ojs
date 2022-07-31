@@ -178,6 +178,9 @@
 		<code function="installEmailTemplate" key="EDITORIAL_REMINDER" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_SUBMISSION_NOTIFY_REVIEWER" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_TO_PREVIOUS_REVIEW_ROUND_NOTIFY_AUTHOR" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_PRODUCTION" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_COPYEDITING" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_EXTERNAL_REVIEW" locales="en_US" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 

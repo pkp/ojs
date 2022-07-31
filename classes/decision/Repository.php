@@ -17,6 +17,9 @@ use APP\decision\types\Accept;
 use APP\decision\types\SkipExternalReview;
 use APP\notification\Notification;
 use Illuminate\Database\Eloquent\Collection;
+use PKP\decision\types\BackFromCopyediting;
+use PKP\decision\types\BackFromExternalReview;
+use PKP\decision\types\BackFromProduction;
 use PKP\decision\types\BackToCopyediting;
 use PKP\decision\types\BackToPreviousExternalReviewRound;
 use PKP\decision\types\BackToExternalReviewFromCopyediting;
@@ -47,9 +50,9 @@ class Repository extends \PKP\decision\Repository
         if (!isset($this->decisionTypes)) {
             $decisionTypes = new Collection([
                 new Accept(),
-                new BackToCopyediting(),
-                new BackToExternalReviewFromCopyediting(),
-                new BackToSubmissionFromCopyediting(),
+                // new BackToCopyediting(),
+                // new BackToExternalReviewFromCopyediting(),
+                // new BackToSubmissionFromCopyediting(),
                 new Decline(),
                 new InitialDecline(),
                 new NewExternalReviewRound(),
@@ -64,8 +67,11 @@ class Repository extends \PKP\decision\Repository
                 new SendExternalReview(),
                 new SendToProduction(),
                 new SkipExternalReview(),
-                new BackToSubmissionFromExternalReview(),
-                new BackToPreviousExternalReviewRound(),
+                // new BackToSubmissionFromExternalReview(),
+                // new BackToPreviousExternalReviewRound(),
+                new BackFromProduction(),
+                new BackFromCopyediting(),
+                new BackFromExternalReview(),
             ]);
             HookRegistry::call('Decision::types', [$decisionTypes]);
             $this->decisionTypes = $decisionTypes;

@@ -51,6 +51,9 @@
 	<email key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" subject="emails.editorDecisionRevertInitialDecline.subject" body="emails.editorDecisionRevertInitialDecline.body"/>
 	<email key="EDITOR_DECISION_SKIP_REVIEW" subject="emails.editorDecisionSkipReview.subject" body="emails.editorDecisionSkipReview.body"/>
 	<email key="EDITOR_DECISION_BACK_TO_PREVIOUS_REVIEW_ROUND_NOTIFY_AUTHOR" subject="emails.editorDecisionBackToPreviousReviewRoundNotifyAuthor.subject" body="emails.editorDecisionBackToPreviousReviewRoundNotifyAuthor.body"/>
+	<email key="EDITOR_DECISION_BACK_FROM_PRODUCTION" subject="emails.editorDecisionBackFromProduction.subject" body="emails.editorDecisionBackFromProduction.body"/>
+	<email key="EDITOR_DECISION_BACK_FROM_COPYEDITING" subject="emails.editorDecisionBackFromCopyediting.subject" body="emails.editorDecisionBackFromCopyediting.body"/>
+	<email key="EDITOR_DECISION_BACK_FROM_EXTERNAL_REVIEW" subject="emails.editorDecisionBackFromExternalReview.subject" body="emails.editorDecisionBackFromExternalReview.body"/>
 	<email key="COPYEDIT_REQUEST" can_disable="1" from_role_id="16" to_role_id="4097" stage_id="4" subject="emails.copyeditRequest.subject" description="emails.copyeditRequest.description" body="emails.copyeditRequest.body"/>
 	<email key="LAYOUT_REQUEST" can_disable="1" from_role_id="16" to_role_id="4097" stage_id="5" subject="emails.layoutRequest.subject" description="emails.layoutRequest.description" body="emails.layoutRequest.body"/>
 	<email key="LAYOUT_COMPLETE" can_disable="1" from_role_id="4097" to_role_id="16" stage_id="5" subject="emails.layoutComplete.subject" description="emails.layoutComplete.description" body="emails.layoutComplete.body"/>
