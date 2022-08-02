@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/tab/pubIds/form/PublicIdentifiersForm.inc.php
+ * @file controllers/tab/pubIds/form/PublicIdentifiersForm.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

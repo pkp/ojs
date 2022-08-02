@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/tab/workflow/WorkflowTabHandler.inc.php
+ * @file controllers/tab/workflow/WorkflowTabHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
