@@ -13,5 +13,5 @@
  * @ingroup api_v1_dois
  * @brief Handle API requests for DOI operations.
  */
-import('api.v1.dois.DoiHandler');
-return new DoiHandler();
+
+return new \PKP\API\v1\dois\DoiHandler();

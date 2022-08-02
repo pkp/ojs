@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/issues/IssueHandler.inc.php
+ * @file api/v1/issues/IssueHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -13,6 +13,8 @@
  * @brief Handle API requests for issues operations.
  *
  */
+
+namespace APP\API\v1\issues;
 
 use APP\facades\Repo;
 use APP\issue\Collector;
@@ -123,8 +125,8 @@ class IssueHandler extends APIHandler
                     }
                     break;
 
-                // Enforce a maximum count to prevent the API from crippling the
-                // server
+                    // Enforce a maximum count to prevent the API from crippling the
+                    // server
                 case 'count':
                     $collector->limit(min((int) $val, self::MAX_COUNT));
                     break;
@@ -133,7 +135,7 @@ class IssueHandler extends APIHandler
                     $collector->offset((int) $val);
                     break;
 
-                // Always convert volume, number and year values to array
+                    // Always convert volume, number and year values to array
                 case 'volumes':
                 case 'volume':
                 case 'numbers':

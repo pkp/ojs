@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/stats/sushi/StatsSushiHandler.inc.php
+ * @file api/v1/stats/sushi/StatsSushiHandler.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky
@@ -14,6 +14,8 @@
  *
  */
 
+namespace APP\API\v1\stats\sushi;
+
 use APP\sushi\IR;
 use APP\sushi\IR_A1;
 use APP\sushi\TR;
@@ -21,9 +23,7 @@ use APP\sushi\TR_J3;
 use PKP\core\APIResponse;
 use Slim\Http\Request as SlimHttpRequest;
 
-import('lib.pkp.api.v1.stats.sushi.PKPStatsSushiHandler');
-
-class StatsSushiHandler extends PKPStatsSushiHandler
+class StatsSushiHandler extends \PKP\API\v1\stats\sushi\PKPStatsSushiHandler
 {
     /**
      * Get this API's endpoints definitions

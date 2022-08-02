@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/dois/DoiHandler.inc.php
+ * @file api/v1/dois/DoiHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -14,6 +14,8 @@
  *
  */
 
+namespace APP\API\v1\dois;
+
 use APP\facades\Repo;
 use APP\Jobs\Doi\DepositIssue;
 use PKP\context\Context;
@@ -24,9 +26,7 @@ use PKP\security\Role;
 use Slim\Http\Request as SlimRequest;
 use Slim\Http\Response;
 
-import('lib.pkp.api.v1.dois.PKPDoiHandler');
-
-class DoiHandler extends PKPDoiHandler
+class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 {
     /**
      * Constructor

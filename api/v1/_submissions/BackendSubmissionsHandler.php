@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/_submissions/BackendSubmissionsHandler.inc.php
+ * @file api/v1/_submissions/BackendSubmissionsHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -14,14 +14,14 @@
  *
  */
 
+namespace APP\API\v1\_submissions;
+
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
 
-import('lib.pkp.api.v1._submissions.PKPBackendSubmissionsHandler');
-
-class BackendSubmissionsHandler extends PKPBackendSubmissionsHandler
+class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmissionsHandler
 {
     /**
      * Constructor

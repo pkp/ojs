@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/stats/StatsEditorialHandler.inc.php
+ * @file api/v1/stats/StatsEditorialHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -14,9 +14,9 @@
  *
  */
 
-import('lib.pkp.api.v1.stats.editorial.PKPStatsEditorialHandler');
+namespace APP\API\v1\stats;
 
-class StatsEditorialHandler extends PKPStatsEditorialHandler
+class StatsEditorialHandler extends \PKP\API\v1\stats\editorial\PKPStatsEditorialHandler
 {
     /** @var string The name of the section ids query param for this application */
     public $sectionIdsQueryParam = 'sectionIds';

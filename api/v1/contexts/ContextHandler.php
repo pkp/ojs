@@ -1,6 +1,6 @@
 <?php
 /**
- * @file api/v1/contexts/ContextHandler.inc.php
+ * @file api/v1/contexts/ContextHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -11,7 +11,9 @@
  *
  * @brief Handle API requests for contexts (journals/presses).
  */
-import('lib.pkp.api.v1.contexts.PKPContextHandler');
-class ContextHandler extends PKPContextHandler
+
+namespace APP\API\v1\contexts;
+
+class ContextHandler extends \PKP\API\v1\contexts\PKPContextHandler
 {
 }

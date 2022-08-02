@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/stats/StatsIssueHandler.inc.php
+ * @file api/v1/stats/StatsIssueHandler.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky
@@ -13,6 +13,8 @@
  * @brief Handle API requests for issue statistics.
  *
  */
+
+namespace APP\API\v1\stats;
 
 use APP\core\Application;
 use APP\core\Services;

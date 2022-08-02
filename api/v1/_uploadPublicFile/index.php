@@ -13,5 +13,5 @@
  * @ingroup api_v1_uploadPublicFile
  * @brief Handle API requests for uploadPublicFile.
  */
-import('lib.pkp.api.v1._uploadPublicFile.PKPUploadPublicFileHandler');
-return new PKPUploadPublicFileHandler();
+
+return new \PKP\API\v1\_uploadPublicFile\PKPUploadPublicFileHandler();

@@ -13,5 +13,5 @@
  * @ingroup api_v1_library
  * @brief Handle API requests for the publisher and submission library files.
  */
-import('lib.pkp.api.v1._library.PKPLibraryHandler');
-return new PKPLibraryHandler();
+
+return new \PKP\API\v1\_library\PKPLibraryHandler();

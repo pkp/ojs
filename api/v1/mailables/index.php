@@ -14,7 +14,4 @@
  * @brief Handle API requests for mailables.
  */
 
-use PKP\api\v1\mailables\MailableHandler;
-
-import('lib.pkp.api.v1.mailables.MailableHandler');
-return new MailableHandler();
+return new \PKP\API\v1\mailables\MailableHandler();

@@ -16,5 +16,4 @@
  *
  */
 
-import('api.v1.users.UserHandler');
-return new UserHandler();
+return new \APP\API\v1\users\UserHandler();

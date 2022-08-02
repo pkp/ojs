@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/submissions/SubmissionHandler.inc.php
+ * @file api/v1/submissions/SubmissionHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -14,11 +14,11 @@
  *
  */
 
+namespace APP\API\v1\submissions;
+
 use APP\submission\Collector;
 
-import('lib.pkp.api.v1.submissions.PKPSubmissionHandler');
-
-class SubmissionHandler extends PKPSubmissionHandler
+class SubmissionHandler extends \PKP\API\v1\submissions\PKPSubmissionHandler
 {
     /** @copydoc PKPSubmissionHandler::getSubmissionCollector() */
     protected function getSubmissionCollector(array $queryParams): Collector

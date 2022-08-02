@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/users/UserHandler.inc.php
+ * @file api/v1/users/UserHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -14,8 +14,8 @@
  *
  */
 
-import('lib.pkp.api.v1.users.PKPUserHandler');
+namespace APP\API\v1\users;
 
-class UserHandler extends PKPUserHandler
+class UserHandler extends \PKP\API\v1\users\PKPUserHandler
 {
 }

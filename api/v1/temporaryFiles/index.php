@@ -13,5 +13,5 @@
  * @ingroup api_v1_temporaryFiles
  * @brief Handle API requests for temporary file uploading.
  */
-import('lib.pkp.api.v1.temporaryFiles.PKPTemporaryFilesHandler');
-return new PKPTemporaryFilesHandler();
+
+return new \PKP\API\v1\temporaryFiles\PKPTemporaryFilesHandler();

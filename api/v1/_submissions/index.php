@@ -16,5 +16,4 @@
  *
  */
 
-import('api.v1._submissions.BackendSubmissionsHandler');
-return new BackendSubmissionsHandler();
+return new \APP\API\v1\_submissions\BackendSubmissionsHandler();

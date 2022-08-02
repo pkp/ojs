@@ -13,5 +13,5 @@
  * @ingroup api_v1_site
  * @brief Handle API requests for the site object.
  */
-import('lib.pkp.api.v1.site.PKPSiteHandler');
-return new PKPSiteHandler();
+
+return new \PKP\API\v1\site\PKPSiteHandler();

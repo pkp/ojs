@@ -13,5 +13,5 @@
  * @ingroup api_v1_institutions
  * @brief Handle API requests for institutions.
  */
-import('lib.pkp.api.v1.institutions.PKPInstitutionHandler');
-return new PKPInstitutionHandler();
+
+return new \PKP\API\v1\institutions\PKPInstitutionHandler();

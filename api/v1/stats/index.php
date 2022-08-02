@@ -20,23 +20,18 @@ use APP\core\Application;
 
 $requestPath = Application::get()->getRequest()->getRequestPath();
 if (strpos($requestPath, '/stats/publications')) {
-    import('api.v1.stats.publications.StatsPublicationHandler');
-    return new StatsPublicationHandler();
+    return new \APP\API\v1\stats\publications\StatsPublicationHandler();
 } elseif (strpos($requestPath, '/stats/editorial')) {
-    import('api.v1.stats.editorial.StatsEditorialHandler');
-    return new StatsEditorialHandler();
+    return new \APP\API\v1\stats\editorial\StatsEditorialHandler();
 } elseif (strpos($requestPath, '/stats/users')) {
-    import('lib.pkp.api.v1.stats.users.PKPStatsUserHandler');
-    return new PKPStatsUserHandler();
+    return new \PKP\API\v1\stats\users\PKPStatsUserHandler();
 } elseif (strpos($requestPath, '/stats/issues')) {
-    import('api.v1.stats.issues.StatsIssueHandler');
-    return new StatsIssueHandler();
+    return new \APP\API\v1\stats\issues\StatsIssueHandler();
 } elseif (strpos($requestPath, '/stats/contexts')) {
-    import('lib.pkp.api.v1.stats.contexts.PKPStatsContextHandler');
-    return new PKPStatsContextHandler();
+    return new \PKP\API\v1\stats\contexts\PKPStatsContextHandler();
 } elseif (strpos($requestPath, '/stats/sushi')) {
     import('api.v1.stats.sushi.StatsSushiHandler');
-    return new StatsSushiHandler();
+    return new \APP\API\v1\stats\sushi\StatsSushiHandler();
 } else {
     http_response_code('404');
     header('Content-Type: application/json');

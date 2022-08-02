@@ -16,5 +16,4 @@
  *
  */
 
-import('api.v1._payments.BackendPaymentsSettingsHandler');
-return new BackendPaymentsSettingsHandler();
+return new \PKP\API\v1\_payments\BackendPaymentsSettingsHandler();

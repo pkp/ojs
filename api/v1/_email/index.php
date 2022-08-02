@@ -16,5 +16,4 @@
  *
  */
 
-import('lib.pkp.api.v1._email.PKPEmailHandler');
-return new PKPEmailHandler();
+return new \PKP\API\v1\_email\PKPEmailHandler();

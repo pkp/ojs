@@ -16,5 +16,4 @@
  *
  */
 
-import('api.v1.issues.IssueHandler');
-return new IssueHandler();
+return new \APP\API\v1\issues\IssueHandler();

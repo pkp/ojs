@@ -17,9 +17,7 @@
  */
 $urlParts = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 if (count($urlParts) >= 6 && $urlParts[5] == 'files') {
-    import('lib.pkp.api.v1.submissions.PKPSubmissionFileHandler');
-    return new PKPSubmissionFileHandler();
+    return new \PKP\API\v1\submissions\PKPSubmissionFileHandler();
 } else {
-    import('api.v1.submissions.SubmissionHandler');
-    return new SubmissionHandler();
+    return new \APP\API\v1\submissions\SubmissionHandler();
 }
