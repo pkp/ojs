@@ -18,6 +18,7 @@ namespace APP\controllers\grid\issues;
 use APP\facades\Repo;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
+use PKP\controllers\grid\GridRow;
 
 class ExportableIssuesListGridHandler extends IssueGridHandler
 {
