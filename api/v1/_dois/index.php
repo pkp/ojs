@@ -14,4 +14,4 @@
  * @brief Handle API requests for backend DOI operations.
  */
 
-return new \PKP\API\v1\_dois\BackendDoiHandler();
+return new \APP\API\v1\_dois\BackendDoiHandler();

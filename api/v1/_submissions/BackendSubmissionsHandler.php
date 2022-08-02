@@ -63,7 +63,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
     /**
      * Change the status of submission payments.
      *
-     * @param Request $slimRequest Slim request object
+     * @param \Psr\Http\Message\RequestInterface $slimRequest Slim request object
      * @param Response $response object
      * @param array $args arguments
      *
