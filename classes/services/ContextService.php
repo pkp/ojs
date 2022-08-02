@@ -147,6 +147,9 @@ class ContextService extends \PKP\services\PKPContextService
         // Create tombstones for all published submissions
         $articleTombstoneManager = new ArticleTombstoneManager();
         $articleTombstoneManager->insertTombstonesByContext($context);
+
+        $genreDao = DAORegistry::getDAO('GenreDAO');
+        $genreDao->deleteByContextId($context->getId());
     }
 
     /**
