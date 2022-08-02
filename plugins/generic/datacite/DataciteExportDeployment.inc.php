@@ -25,10 +25,10 @@ define('DATACITE_XSI_SCHEMALOCATION', 'http://schema.datacite.org/meta/kernel-4/
 
 class DataciteExportDeployment
 {
-    /** @var Context The current import/export context */
+    /** @var \PKP\context\Context The current import/export context */
     public $_context;
 
-    /** @var Plugin The current import/export plugin */
+    /** @var \PKP\plugin\Plugin The current import/export plugin */
     public $_plugin;
 
     /**

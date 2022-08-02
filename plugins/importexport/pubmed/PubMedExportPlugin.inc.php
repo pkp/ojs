@@ -15,8 +15,8 @@
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
-use PKP\plugins\ImportExportPlugin;
 use PKP\file\FileManager;
+use PKP\plugins\ImportExportPlugin;
 
 class PubMedExportPlugin extends ImportExportPlugin
 {
@@ -168,8 +168,8 @@ class PubMedExportPlugin extends ImportExportPlugin
      * Get the XML for a set of issues.
      *
      * @param array $issueIds Array of issue IDs
-     * @param Context $context
-     * @param User $user
+     * @param \PKP\context\Context $context
+     * @param \PKP\user\User $user
      *
      * @return string XML contents representing the supplied issue IDs.
      */
@@ -223,29 +223,29 @@ class PubMedExportPlugin extends ImportExportPlugin
 
         if ($xmlFile != '') {
             switch (array_shift($args)) {
-            case 'articles':
-                $articleSearch = new ArticleSearch();
-                $results = $articleSearch->formatResults($args);
-                if (!$this->exportArticles($results, $xmlFile)) {
-                    echo __('plugins.importexport.pubmed.cliError') . "\n";
-                    echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
-                }
-                return;
-            case 'issue':
-                $issueId = array_shift($args);
-                $issue = Repo::issue()->getByBestId($issueId, $journal->getId());
-                if ($issue == null) {
-                    echo __('plugins.importexport.pubmed.cliError') . "\n";
-                    echo __('plugins.importexport.pubmed.export.error.issueNotFound', ['issueId' => $issueId]) . "\n\n";
+                case 'articles':
+                    $articleSearch = new ArticleSearch();
+                    $results = $articleSearch->formatResults($args);
+                    if (!$this->exportArticles($results, $xmlFile)) {
+                        echo __('plugins.importexport.pubmed.cliError') . "\n";
+                        echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
+                    }
                     return;
-                }
-                $issues = [$issue];
-                if (!$this->exportIssues($journal, $issues, $xmlFile)) {
-                    echo __('plugins.importexport.pubmed.cliError') . "\n";
-                    echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
-                }
-                return;
-        }
+                case 'issue':
+                    $issueId = array_shift($args);
+                    $issue = Repo::issue()->getByBestId($issueId, $journal->getId());
+                    if ($issue == null) {
+                        echo __('plugins.importexport.pubmed.cliError') . "\n";
+                        echo __('plugins.importexport.pubmed.export.error.issueNotFound', ['issueId' => $issueId]) . "\n\n";
+                        return;
+                    }
+                    $issues = [$issue];
+                    if (!$this->exportIssues($journal, $issues, $xmlFile)) {
+                        echo __('plugins.importexport.pubmed.cliError') . "\n";
+                        echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
+                    }
+                    return;
+            }
         }
         $this->usage($scriptName);
     }

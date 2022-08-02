@@ -83,8 +83,8 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin
      * Get the XML for a set of issues.
      *
      * @param array $issueIds
-     * @param Context $context
-     * @param User $user
+     * @param \PKP\context\Context $context
+     * @param \PKP\user\User $user
      * @param array $opts
      *
      * @return string XML contents representing the supplied issue IDs.

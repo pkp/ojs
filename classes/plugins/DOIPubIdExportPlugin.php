@@ -24,10 +24,9 @@ define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 use APP\facades\Repo;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
-use Context;
-use Doi;
+use PKP\context\Context;
 use PKP\core\PKPString;
-
+use PKP\doi\Doi;
 use PKP\plugins\PluginRegistry;
 use PKP\submission\PKPSubmission;
 

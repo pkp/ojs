@@ -738,10 +738,10 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Identify the locale precedence for this export.
      *
-     * @param Context $context
-     * @param Submission $article
-     * @param Publication $publication
-     * @param Galley $galley
+     * @param \PKP\context\Context $context
+     * @param \APP\submission\Submission $article
+     * @param \APP\publication\Publication $publication
+     * @param \PKP\galley\Galley $galley
      *
      * @return array A list of valid PKP locales in descending
      *  order of priority.
@@ -871,7 +871,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * Construct an issue title from the journal title
      * and the issue identification.
      *
-     * @param Issue $issue
+     * @param \APP\issue\Issue $issue
      * @param array $objectLocalePrecedence
      *
      * @return array|string An array of localized issue titles
@@ -901,7 +901,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Construct a table of content for an issue.
      *
-     * @param Issue $issue
+     * @param \APP\issue\Issue $issue
      * @param array $objectLocalePrecedence
      *
      * @return string

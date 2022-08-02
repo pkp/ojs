@@ -22,6 +22,7 @@ use Illuminate\Support\LazyCollection;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
 use PKP\context\Context;
+use PKP\core\Core;
 use PKP\core\PKPString;
 
 define('FORM_PUBLISH', 'publish');
@@ -34,18 +35,18 @@ class PublishForm extends FormComponent
     /** @copydoc FormComponent::$method */
     public $method = 'PUT';
 
-    /** @var \Publication */
+    /** @var \APP\publication\Publication */
     public $publication;
 
-    /** @var \Context */
+    /** @var \PKP\context\Context */
     public $submissionContext;
 
     /**
      * Constructor
      *
      * @param string $action URL to submit the form to
-     * @param Publication $publication The publication to change settings for
-     * @param \Context $submissionContext journal or press
+     * @param \APP\publication\Publication $publication The publication to change settings for
+     * @param \PKP\context\Context $submissionContext journal or press
      * @param array $requirementErrors A list of pre-publication requirements that are not met.
      */
     public function __construct($action, $publication, $submissionContext, $requirementErrors)
@@ -72,7 +73,7 @@ class PublishForm extends FormComponent
             }
             // If a publication date has already been set and the date has passed this will
             // be published immediately regardless of the issue assignment
-            if ($publication->getData('datePublished') && $publication->getData('datePublished') <= \Core::getCurrentDate()) {
+            if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
                 $timestamp = strtotime($publication->getData('datePublished'));
                 $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
                 $msg = __(

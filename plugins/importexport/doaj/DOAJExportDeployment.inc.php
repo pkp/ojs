@@ -23,16 +23,16 @@ define('DOAJ_XSI_SCHEMALOCATION', 'http://doaj.org/static/doaj/doajArticles.xsd'
 
 class DOAJExportDeployment
 {
-    /** @var Context The current import/export context */
+    /** @var \PKP\context\Context The current import/export context */
     public $_context;
 
-    /** @var Plugin The current import/export plugin */
+    /** @var \PKP\plugin\Plugin The current import/export plugin */
     public $_plugin;
 
     /**
      * Get the plugin cache
      *
-     * @return PubObjectCache
+     * @return \APP\plugins\PubObjectCache
      */
     public function getCache()
     {
@@ -42,7 +42,7 @@ class DOAJExportDeployment
     /**
      * Constructor
      *
-     * @param Context $context
+     * @param \PKP\context\Context $context
      * @param PubObjectsPubIdExportPlugin $plugin
      */
     public function __construct($context, $plugin)
@@ -55,7 +55,7 @@ class DOAJExportDeployment
     // Deployment items for subclasses to override
     //
     /**
-     * Get the root lement name
+     * Get the root element name
      *
      * @return string
      */
