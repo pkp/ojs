@@ -30,7 +30,6 @@ if (strpos($requestPath, '/stats/publications')) {
 } elseif (strpos($requestPath, '/stats/contexts')) {
     return new \PKP\API\v1\stats\contexts\PKPStatsContextHandler();
 } elseif (strpos($requestPath, '/stats/sushi')) {
-    import('api.v1.stats.sushi.StatsSushiHandler');
     return new \APP\API\v1\stats\sushi\StatsSushiHandler();
 } else {
     http_response_code('404');
