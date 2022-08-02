@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-29 18:50+0000\n"
+"PO-Revision-Date: 2022-08-03 14:20+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/hy_AM/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Ցույց տալ գլխավոր էջի պատկերը որպես վերնախորագրի ֆոն:"
@@ -74,3 +74,29 @@ msgstr "Այս թեման իրականացնում է լռելյայն թեմա�
 
 msgid "plugins.themes.default.name"
 msgstr "Կանխադրված թեմա"
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Օգտագործման վիճակագրության ցուցադրման ընտրանքներ"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+"Մի ցուցադրեք ներկայացումների օգտագործման վիճակագրության աղյուսակը ընթերցողի "
+"համար:"
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+"Օգտագործման վիճակագրության ցուցադրման համար օգտագործեք դիագրամի գծապատկերի "
+"տեսակը:"
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+"Օգտագործման վիճակագրության ցուցադրման համար օգտագործեք դիագրամի գծի տեսակը:"
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Հնվ Փետ Մրտ Ապր Մայ Հնս Հլս Օգս Սպտ Հկտ Նով Դկտ"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Ներբեռնումներ"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Ներբեռնման տվյալները դեռ հասանելի չեն:"
