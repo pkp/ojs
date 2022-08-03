@@ -15,7 +15,7 @@
 
 use APP\facades\Repo;
 
-require(dirname(__FILE__) . '/bootstrap.inc.php');
+require(dirname(__FILE__) . '/bootstrap.php');
 
 class SubmissionDeletionTool extends CommandLineTool
 {

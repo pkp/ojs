@@ -13,7 +13,7 @@
  * @brief CLI tool to rebuild the article keyword search database.
  */
 
-require(dirname(__FILE__) . '/bootstrap.inc.php');
+require(dirname(__FILE__) . '/bootstrap.php');
 
 class rebuildSearchIndex extends CommandLineTool
 {

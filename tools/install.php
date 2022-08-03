@@ -13,7 +13,7 @@
  * @brief CLI tool for installing OJS.
  */
 
-require(dirname(__FILE__) . '/bootstrap.inc.php');
+require(dirname(__FILE__) . '/bootstrap.php');
 
 class OJSInstallTool extends \PKP\cliTool\InstallTool
 {

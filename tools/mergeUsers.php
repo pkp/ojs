@@ -13,7 +13,7 @@
  * @brief CLI tool for merging two user accounts.
  */
 
-require(dirname(__FILE__) . '/bootstrap.inc.php');
+require(dirname(__FILE__) . '/bootstrap.php');
 
 $tool = new \PKP\cliTool\MergeUsersTool($argv ?? []);
 $tool->execute();

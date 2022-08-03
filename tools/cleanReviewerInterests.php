@@ -13,7 +13,7 @@
  * @brief CLI tool to remove user interests that are not referenced by any user accounts.
  */
 
-require(dirname(__FILE__) . '/bootstrap.inc.php');
+require(dirname(__FILE__) . '/bootstrap.php');
 
 class ReviewerInterestsDeletionTool extends CommandLineTool
 {

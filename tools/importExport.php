@@ -13,7 +13,7 @@
  * @brief CLI tool to perform import/export tasks
  */
 
-require(dirname(__FILE__) . '/bootstrap.inc.php');
+require(dirname(__FILE__) . '/bootstrap.php');
 
 class importExport extends CommandLineTool
 {
