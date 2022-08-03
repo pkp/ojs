@@ -39,7 +39,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $submission = $this->getSubmission();
             $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
             $user = $request->getUser();
-            import('classes.log.SubmissionEventLogEntry');
+            import('classes.log.SubmissionEventLogEntry'); // Constants
             SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
         }
         return parent::reviewRead($args, $request);

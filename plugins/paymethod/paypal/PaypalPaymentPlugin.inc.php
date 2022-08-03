@@ -14,6 +14,7 @@
  */
 
 use APP\template\TemplateManager;
+use PKP\plugins\HookRegistry;
 use PKP\plugins\PaymethodPlugin;
 
 require_once(dirname(__FILE__) . '/vendor/autoload.php');
@@ -53,7 +54,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin
     {
         if (parent::register($category, $path, $mainContextId)) {
             $this->addLocaleData();
-            \HookRegistry::register('Form::config::before', [$this, 'addSettings']);
+            HookRegistry::register('Form::config::before', [$this, 'addSettings']);
             return true;
         }
         return false;

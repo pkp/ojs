@@ -441,7 +441,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             $params[] = 'pub-id::' . $pubIdType;
         }
 
-        import('classes.plugins.PubObjectsExportPlugin');
+        import('classes.plugins.PubObjectsExportPlugin'); // Constants
         if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
             $params[] = $pubIdSettingValue;
         }
