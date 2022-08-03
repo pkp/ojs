@@ -73,7 +73,7 @@ class SectionDAO extends PKPSectionDAO
      * @param int $journalId Journal ID optional
      * @param bool $useCache optional
      *
-     * @return Section?
+     * @return ?Section
      */
     public function getById($sectionId, $journalId = null, $useCache = false)
     {
@@ -107,7 +107,7 @@ class SectionDAO extends PKPSectionDAO
      * @param int $journalId Journal ID
      * @param string $locale optional
      *
-     * @return Section?
+     * @return ?Section
      */
     public function getByAbbrev($sectionAbbrev, $journalId, $locale = null)
     {
@@ -138,7 +138,7 @@ class SectionDAO extends PKPSectionDAO
      * @param int $journalId Journal ID
      * @param string $locale optional
      *
-     * @return Section?
+     * @return ?Section
      */
     public function getByTitle($sectionTitle, $journalId, $locale = null)
     {
@@ -612,7 +612,7 @@ class SectionDAO extends PKPSectionDAO
      * @param int $issueId
      * @param int $sectionId
      *
-     * @return int?
+     * @return ?int
      */
     public function getCustomSectionOrder($issueId, $sectionId)
     {
