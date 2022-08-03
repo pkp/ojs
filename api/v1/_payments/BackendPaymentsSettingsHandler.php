@@ -10,6 +10,8 @@
  * @ingroup api_v1_backend
  */
 
+namespace APP\API\v1\_payments;
+
 class BackendPaymentsSettingsHandler extends \PKP\API\v1\_payments\PKPBackendPaymentsSettingsHandler
 {
 }
