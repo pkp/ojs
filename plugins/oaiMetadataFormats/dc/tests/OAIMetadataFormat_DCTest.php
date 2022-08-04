@@ -171,6 +171,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $journal->setPath('journal-path');
         $journal->setData('onlineIssn', 'onlineIssn');
         $journal->setData('printIssn', null);
+        $journal->setData(Journal::SETTING_ENABLE_DOIS, true);
         $journal->setId($journalId);
 
         // Section

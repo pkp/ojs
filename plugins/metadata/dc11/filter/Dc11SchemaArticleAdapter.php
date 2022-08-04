@@ -220,10 +220,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Public identifiers
-        $publicIdentifiers = [
-            'doi',
-            ...array_map(fn (PubIdPlugin $plugin) => $plugin->getPubIdType(), (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId()))
-        ];
+        $publicIdentifiers = array_map(fn (PubIdPlugin $plugin) => $plugin->getPubIdType(), (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId()));
+        if ($journal->areDoisEnabled()) {
+            $publicIdentifiers[] = 'doi';
+        }
         foreach ($publicIdentifiers as $publicIdentifier) {
             if ($issue && $pubIssueId = $issue->getStoredPubId($publicIdentifier)) {
                 $dc11Description->addStatement('dc:source', $pubIssueId, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
