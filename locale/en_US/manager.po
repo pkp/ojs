@@ -1758,6 +1758,9 @@ msgstr "The URL to the journal's homepage"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "The name of the journal's primary contact"
 
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "the journal initials"
+
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "The journal's email signature for automated emails"
 
@@ -1785,7 +1788,7 @@ msgstr "The subscription manager's contact details"
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
 msgstr "The URL to the subscription page"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "The date when the subscription ends"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
@@ -1793,6 +1796,18 @@ msgstr "A summary of the subscription's type, name, duration and cost"
 
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Information about the subscriber's membership"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "The name of the institution"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "The mailing address of the institution"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domain"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP ranges for subscription authentication"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validate Email (Journal Registration)"
@@ -2001,3 +2016,66 @@ msgstr "This email notifies the author that their submission is being declined, 
 
 msgid "manager.institutions.noContext"
 msgstr "This institution's journal could not be found."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Subscription Notify"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Subscription Expires Soon"
+
+#, fuzzy
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "This email is sent automatically to notify a subscriber that their subscription expires soon."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Subscription Expired"
+
+#, fuzzy
+msgid "mailable.subscriptionExpired.description"
+msgstr "This Email sent automatically to notify a subscriber that their subscription has expired"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Subscription Expired Last"
+
+#, fuzzy
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "This email sent automatically to notify a subscriber the second time that their subscription has expired"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Purchase Individual Subscription"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Purchase Institutional Subscription"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Renew Individual Subscription"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Renew Institutional Subscription"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Open Access Notify"
+
+msgid "mailable.openAccessNotify.description"
+msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Issue Published Notify"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr "This email is automatically sent to registered users when the new issue is published."

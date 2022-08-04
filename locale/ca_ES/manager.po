@@ -2184,7 +2184,7 @@ msgstr "Informació sobre l'abonament del subscriptor/a"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Resum del nom, tipus, durada i cost de la subscripció"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Data en què finalitza la subscripció"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2203,3 +2203,46 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr "Permetre que s'assignin DOI a obres publicades en aquesta revista."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Aquest missatge de correu electrònic notifica a un lector que l'administrador l'ha subscrit al sistema. Proporciona l'URL de la revista i també instruccions per a accedir-hi."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Aquest missatge de correu electrònic notifica a un subscriptor que la seva subscripció és a punt de vèncer. Proporciona l'URL de la revista i instruccions per a accedir-hi."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Aquest missatge de correu electrònic notifica a un subscriptor que la seva subscripció ha vençut. Proporciona l'URL de la revista i també instruccions per a accedir-hi."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Aquest missatge de correu electrònic notifica a un subscriptor que la seva subscripció ha vençut. Proporciona l'URL de la revista i també instruccions per a accedir-hi."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Aquest correu electrònic notifica a l'administrador/a de subscripcions que "
+"s'ha adquirit una subscripció individual en línia. El correu proporciona un "
+"resum de la informació sobre la subscripció i un enllaç d'accés ràpid a la "
+"subscripció adquirida."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Aquest correu electrònic notifica a l'administrador/a de subscripcions que "
+"s'ha adquirit una subscripció institucional en línia. El correu proporciona "
+"un resum de la informació sobre la subscripció i un enllaç d'accés ràpid a  "
+"la subscripció adquirida."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Aquest correu notifica a l'administrador/a de subscripcions que una "
+"subscripció individual s'ha renovat en línia. El correu proporciona un resum "
+"de la informació sobre la subscripció i un enllaç d'accés ràpid a la "
+"subscripció renovada."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Aquest correu notifica a l'administrador/a de subscripcions que una "
+"subscripció institucional s'ha renovat en línia. El correu proporciona un "
+"resum de la informació sobre la subscripció i un enllaç d'accés ràpid a la "
+"subscripció renovada."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Aquest missatge de correu electrònic s'envia als lectors que han sol·licitat rebre una notificació per correu electrònic quan es publiqui un número en format d'accés obert."

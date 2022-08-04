@@ -19,7 +19,12 @@
 namespace APP\payment\ojs;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
+use APP\mail\mailables\SubscriptionPurchaseIndividual;
+use APP\mail\mailables\SubscriptionPurchaseInstitutional;
+use APP\mail\mailables\SubscriptionRenewIndividual;
+use APP\mail\mailables\SubscriptionRenewInstitutional;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionAction;
 use PKP\db\DAORegistry;
@@ -208,7 +213,7 @@ class OJSPaymentManager extends PaymentManager
     /**
      * Fulfill a queued payment.
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param QueuedPayment $queuedPayment
      * @param string $payMethodPluginName Name of payment plugin.
      *
@@ -264,7 +269,7 @@ class OJSPaymentManager extends PaymentManager
 
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INSTL');
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionPurchaseInstitutional($journal, $subscription));
                         }
                     } else {
                         $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_ACTIVE);
@@ -275,7 +280,7 @@ class OJSPaymentManager extends PaymentManager
                         }
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_PURCHASE_INDL');
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionPurchaseIndividual($journal, $subscription));
                         }
                     }
                     $returner = true;
@@ -299,14 +304,14 @@ class OJSPaymentManager extends PaymentManager
 
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INSTL');
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionRenewInstitutional($journal, $subscription));
                         }
                     } else {
                         $individualSubscriptionDao->renewSubscription($subscription);
 
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INDL');
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionRenewIndividual($journal, $subscription));
                         }
                     }
                     $returner = true;

@@ -20,7 +20,7 @@ msgstr ""
 "<br />\n"
 "링크: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.notification.subject"
 msgstr "{$contextName}로 부터 새 공지"

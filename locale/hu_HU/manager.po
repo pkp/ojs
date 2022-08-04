@@ -2161,3 +2161,30 @@ msgstr "Akkor hozhat létre DOI-t, ha a cikk  számhoz van rendelve."
 
 msgid "doi.editor.preview.galleys"
 msgstr "Posztprint: {$galleyLabel}"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Ez az email értesíti a regisztrált olvasót, hogy a Menedzser előfizetési fiókot hozott létre számára. A levél tartalmazza  a folyóirat URL címét és instrukciókat a hozzáféréshez."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Ezt az email értesítést azok az előfizetők kapják, akiknek hamarosan lejár előfizetésük. A levél tartalmazza a folyóirat URL címét és a hozzáféréshez instrukciókat."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Ez az email azoknak az előfizetőknek megy, akiknek lejárt az előfizetésük. A levél tartalmazza a folyóirat URL címét és a hozzáféréshez instrukciókat."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Ez az email értesíti az előfizetőt, hogy lejárt az előfizetése. A levél tartalmazza a folyóirat URL címét és a hozzáféréshez instrukciókat."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Ez az email az előfizetés menedzsert értesíti online vásárolt egyéni előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Az email az előfizetés menedzsert értesíti online vásárolt intézményi előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Ez az email az előfizetés menedzsert értesíti az online megújított egyéni előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Az email az Előfizetés Menedzsert értesíti az online megújított intézményi előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Ez az email azoknak a regisztrált olvasóknak szól, akik értesítést kértek korábban a nyilvánossá tett számokról."

@@ -1913,3 +1913,30 @@ msgstr "De DOI moet beginnen met {$prefix}."
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artikelen"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Deze e-mail bericht een geregistreerde lezer dat de beheerder een abonnement heeft gecreëerd. Het bevat de URL van het tijdschrift en instructies om toegang te krijgen."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Deze e-mail bericht een abonnee dat zijn abonnement binnenkort verloopt. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Deze e-mail bericht een abonnee dat zijn abonnement is verlopen. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De URL van het tijdschrift en instructies voor toegang worden meegeleverd."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Deze e-mail wordt verstuurd naar geregistreerde gebruikers die aangegeven hebben een e-mail te willen ontvangen als een nummer open access wordt."

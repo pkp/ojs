@@ -1863,3 +1863,18 @@ msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
 "Barem jedan odjeljak mora biti aktivan. Posjetite postavke tijeka rada da "
 "biste onemogućili sve prijave u ovaj časopis."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici o aktivaciji njihove pretplate . Poruka sadrži URL časopisa i upute za pristup."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici da će njihova pretplata uskoro isteći. Poruka sadrži URL časopisa i upute za pristup."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Ovaj obrazac e-pošte šalje se registriranim čitateljima koji su zatražili primanje obavijesti e-poštom kada broj časopisa postane dostupan pod uvjetima otvorenog pristupa."

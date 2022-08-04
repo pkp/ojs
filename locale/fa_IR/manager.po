@@ -1699,3 +1699,30 @@ msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص ش�
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr "شنایه {$pubId} اختصاص داده شد."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+
+msgid "mailable.openAccessNotify.description"
+msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."

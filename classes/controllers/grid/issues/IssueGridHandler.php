@@ -26,12 +26,14 @@ use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\facades\Repo;
 use APP\issue\Collector;
+use APP\Jobs\Notifications\IssuePublishedMailUsers;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\publication\Publication;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\Bus;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\Core;
@@ -41,6 +43,8 @@ use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
+use PKP\mail\Mailer;
+use PKP\notification\NotificationSubscriptionSettingsDAO;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -594,26 +598,26 @@ class IssueGridHandler extends GridHandler
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
         if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
-            $notificationManager = new NotificationManager();
-            $notificationUsers = [];
-            $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-            $allUsers = $userGroupDao->getUsersByContextId($contextId);
-            while ($user = $allUsers->next()) {
-                if ($user->getDisabled()) {
-                    continue;
-                }
-                $notificationUsers[] = ['id' => $user->getId()];
-            }
-            foreach ($notificationUsers as $userRole) {
-                $notificationManager->createNotification(
-                    $request,
-                    $userRole['id'],
-                    Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+            /** @var NotificationSubscriptionSettingsDAO $notificationSubscriptionSettingsDao */
+            $notificationSubscriptionSettingsDao = DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');
+
+            $userIdsToMail = $notificationSubscriptionSettingsDao->getSubscribedUserIds(
+                [NotificationSubscriptionSettingsDAO::BLOCKED_EMAIL_NOTIFICATION_KEY],
+                [Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE],
+                [$contextId]
+            );
+
+            $jobs = [];
+            foreach ($userIdsToMail->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT) as $mailUserIds) {
+                $mailJob = new IssuePublishedMailUsers(
+                    $mailUserIds,
                     $contextId,
-                    ASSOC_TYPE_ISSUE,
-                    $issue->getId()
+                    $request->getUser(),
+                    Locale::getLocale()
                 );
+                $jobs[] = $mailJob;
             }
+            Bus::batch($jobs)->dispatch();
         }
 
         $json = DAO::getDataChangedEvent();

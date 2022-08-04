@@ -1341,3 +1341,30 @@ msgstr "Argitalpena"
 
 msgid "manager.distribution.access"
 msgstr "Sarbidea"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Mezu honek irakurle erregistratuari jakinarazten dio Kudeatzaileak harpidetza egin diola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Mezu honek harpidedunari jakinarazten dio harpidetza amaitzera doakiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Mezu honek Harpidetza-kudeatzaileari jakinarazten dio harpidetza indibidual bat erosi dutela linean. Harpidetza-datuen laburpena ematen du eta erositako harpidetzara bizkor joateko esteka."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat erosi dutela linean. Harpidetza-datuen laburpena ematen du eta erositako harpidetzara bizkor joateko esteka."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Mezu honek Harpidetza-kudeatzaileari jakinarazten dio harpidetza indibidual bat berritu dutela linean. Harpidetza-datuen laburpena ematen du eta berritutako harpidetzara bizkor joateko esteka."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat berritu dutela linean. Harpidetza-datuen laburpena ematen du eta berritutako harpidetzara bizkor joateko esteka."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Mezu hau bidaltzen zaie zenbakia sarrera libreko egiten denean jakinarazpena jaso nahi dutela esan duten erabiltzaile erregistratuei."

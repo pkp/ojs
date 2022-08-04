@@ -30,10 +30,7 @@ msgstr ""
 "<br />\n"
 "Reset password: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Questa email viene mandata ad un utente registrato quando questi indica che ha dimenticato la sua password o non riesce a fare il log in. Fornisce una URL per il reset della password."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Password modificata"
@@ -46,10 +43,7 @@ msgstr ""
 "Username: {$recipientUsername}<br />\n"
 "Password: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Questa email viene mandata ad un utente registrato quando ha resettato la password seguendo il processo descritto nella email PASSWORD_RESETTA_CONFERMA."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Registrazione nuovo utente"
@@ -72,9 +66,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.userRegister.description"
-msgstr "Questa email viene mandata agli utenti appena registrati per dar loro il benvenuto nel sistema e fornirgli una nota della loro username e password."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nuova uscita disponibile: {$issueIdentification}"
@@ -88,10 +79,6 @@ msgstr ""
 "<br />\n"
 "<p>Grazie per l'interesse dimostratoci,</p>\n"
 "<p>{$signature}</p>"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Questa email viene mandata ai lettori registrsati tramite il link \"Notifica Utenti\" nella home utente del curatore. Questa informa i lettori di una nuova uscita e li invita a visitare il journal alla URL fornita."
 
 msgid "emails.subscriptionNotify.subject"
 msgstr "Notifica di abbonamento"
@@ -112,10 +99,7 @@ msgstr ""
 "<br />\n"
 "Per qualsiasi domanda non esitare a contattarmi.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Questa email notifica ai lettori registrati che l'amministratore ha attivato un abbonamento per loro. Questa fornisce la URL del journal insieme con le istruzioni per l'accesso."
+"{$subscriptionSignature}"
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Richiesta di archiviazione per {$contextName}"
@@ -246,14 +230,6 @@ msgstr ""
 "<p>Grazie per la sua collaborazione.</p>\n"
 "<p>Cordiali saluti,</p>\n"
 "<p>{$signature}</p>"
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"Questa email notifica ai section editor che l'editor ha assegnato loro il "
-"compito di supervisionare una submission attraverso il processo editoriale. "
-"Questa mail fornisce informazioni sulla submission e su come accedere al "
-"sito del journal."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -407,12 +383,6 @@ msgstr ""
 "<p>{$signature}</p>"
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Questa email viene inviata dall'editor al compositore/typesetter per "
-"assegnare l'incarico. Fornisce indicazioni specifiche e il link per accedere "
-"al manoscritto."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Bozze pronte"
 
@@ -428,11 +398,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr ""
-"Questa email notifica all'editor che il processo di produzione delle bozze è "
-"completo."
-
 msgid "emails.layoutAck.subject"
 msgstr "Ringraziamenti layout"
 
@@ -612,10 +577,7 @@ msgstr ""
 "trovare articoli e altre risorse di tuo interesse.<br />\n"
 "<br />\n"
 "Grazie per il tuo interesse per la nostra testata<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Questa email viene inviata ai lettori registrati che hanno chiesto di ricevere un'email di notifica in caso di uscite ad accesso aperto."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Avviso di abbonamento in scadenza"
@@ -633,10 +595,7 @@ msgstr ""
 "<br />\n"
 "Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Questa email informa un abbonato della prossima scadenza del suo abbonamento. Fornisce la URL della rivista e le istruzioni per l'accesso."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Abbonamento scaduto"
@@ -656,12 +615,7 @@ msgstr ""
 "Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.<br "
 "/>\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr ""
-"Questa email informa un abbonato che il proprio abbonamento è scaduto. "
-"Fornisce la URL della rivista e le istruzioni per l'accesso."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Abbonamento scaduto - Ultimo avviso"
@@ -683,12 +637,7 @@ msgstr ""
 "Per qualsiasi domanda e ulteriore informazione, non esiti a contattarci.<br "
 "/>\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr ""
-"Questa email informa un abbonato che il proprio abbonamento è scaduto. "
-"Fornisce la URL della rivista e le istruzioni per l'accesso."
+"{$subscriptionSignature}"
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -741,11 +690,6 @@ msgstr ""
 "Con i più cordiali saluti,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr ""
-"Questa email viene inviata ad un nuovo revisore quando viene registrato per "
-"la prima volta, inviandogli username e password."
-
 msgid "emails.notification.subject"
 msgstr "Nuova notifica da {$contextName}"
 
@@ -757,7 +701,7 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notificationMaillist.subject"
@@ -839,9 +783,6 @@ msgstr ""
 "Per vedere o modificare i dettagli, andare alla pagina: {$subscriptionUrl}<"
 "br />\n"
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Notifica del rinnovo di un abbonamento istituzionale."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Rinnovo dell'abbonamento individuale"
 
@@ -861,9 +802,6 @@ msgstr ""
 "<br />\n"
 "Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: "
 "{$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Notifica del rinnovo di un abbonamento individuale."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Acquisto di un abbonamento istituzionale"
@@ -896,9 +834,6 @@ msgstr ""
 "Per vedere o modificare i dettagli, andare alla pagina: {$subscriptionUrl}<"
 "br />\n"
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Questo messaggio iforma il Subscription manager che è stato acquistato online un nuovo abbonamento istituzionale. Informa sulla procedura e fornisce un link all'abbonamento acquistato."
-
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Acquisto di un abbonamento individuale"
 
@@ -918,9 +853,6 @@ msgstr ""
 "<br />\n"
 "Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: "
 "{$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Questo messaggio informa il Subscription manager che è stato acquistato online un nuovo abbonamento individuale. Informa sulla procedura e fornisce un link all'abbonamento acquistato."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Richiesta di verifica delle citazioni"
@@ -949,16 +881,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Caro editor:<br />\n"
 "<br />\n"
-"L'autore {$authors} ha caricato una versione revisionata di &quot;{$submissionTitle}&quot;.<br />\n"
+"L'autore {$submitterName} ha caricato una versione revisionata di &quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "Submission URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr ""
-"Questo messaggio viene inviato automaticamente all'Editor quando un autore "
-"invia una versione revisionata del proprio articolo."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
@@ -1051,13 +978,7 @@ msgstr ""
 "<p>questi sono i dettagli forniti: {$authorsWithAffiliation}</p>\n"
 "<p>Se non fossero corretti la prego di contattarci. Siamo a disposizione per "
 "qualsiasi chiarimento e la ringraziamo per la sua collaborazione.</p>\n"
-"<p>{$signature}</p>"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"Questa mail, quando abilitata, è inviata in automatico ai co-autori "
-"registrati al momento della sottomissione."
+"<p>{$contextSignature}</p>"
 
 msgid "emails.reviewReinstate.body"
 msgstr ""
@@ -1074,15 +995,10 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Sei ancora disponibile alla revisione per {$contextName}?"
 
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"Questo report sull'attività del sistema è inviato via email mensilmente in "
-"automatico agli editors."
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "E' disponibile il report per il mese di {$month}, {$year} e di seguito sono "
 "indicate le statistiche principali<br />\n"
@@ -1098,13 +1014,10 @@ msgstr ""
 "mese è allegata.<br />\n"
 "<br />\n"
 "Distinti saluti,<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Attività editorial e per {$month}, {$year}"
-
-msgid "emails.announcement.description"
-msgstr "Questo messaggio è inviato quando viene creata una nuova notizia."
 
 msgid "emails.announcement.body"
 msgstr ""

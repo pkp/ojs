@@ -26,7 +26,7 @@ msgstr ""
 "<br />\n"
 "Σύνδεσμος: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.passwordResetConfirm.subject"
@@ -40,10 +40,7 @@ msgstr ""
 "<br />\n"
 "Αλλαγή του κωδικού πρόσβασής μου: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους εγγεγραμμένους Χρήστες που δηλώνουν ότι έχουν ξεχάσει τον κωδικό πρόσβασής τους ή αδυνατούν να συνδεθούν. Παρέχει έναν σύνδεσμο όπου μπορούν να αλλάξουν τον κωδικό πρόσβασής τους."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Αλλαγή κωδικού πρόσβασης"
@@ -55,10 +52,7 @@ msgstr ""
 "Όνομα χρήστη: {$recipientUsername}<br />\n"
 "Κωδικός πρόσβασης: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους εγγεγραμμένους Χρήστες που έχουν αλλάξει επιτυχώς τον κωδικό πρόσβασής τους ακολουθώντας τη διαδικασία που περιγράφεται στο μήνυμα PASSWORD_RESET_CONFIRM."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Εγγραφή στο περιοδικό"
@@ -74,9 +68,6 @@ msgstr ""
 "<br />\n"
 "Σας ευχαριστούμε,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Το παρόν μήνυμα καλωσορίσματος αποστέλλεται στους νέους Χρήστες. Περιέχει το όνομα Χρήστη και τον κωδικό πρόσβασής τους στον ιστότοπο."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -109,9 +100,6 @@ msgstr ""
 "Σας ευχαριστούμε,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Το παρόν μήνυμα καλωσορίσματος αποστέλλεται στους νέους Αξιολογητές. Περιέχει το όνομα Χρήστη και τον κωδικό πρόσβασής τους στον ιστότοπο."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Έκδοση νέου τεύχους"
@@ -125,10 +113,6 @@ msgstr ""
 "<br />\n"
 "Σας ευχαριστούμε για το ενδιαφέρον σας σχετικά με τις εκδόσεις μας,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται στους Αναγνώστες, μέσω του συνδέσμου \"Ενημέρωση Χρηστών\" στην αρχική σελίδα του Επιμελητή του περιοδικού. Ενημερώνει σχετικά με τη δημοσίευση νέων τευχών και προσκαλεί τους Αναγνώστες να επισκεφθούν τον ιστότοπο του περιοδικού."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Αίτημα αρχειοθέτησης για το περιοδικό {$contextName}"
@@ -185,11 +169,7 @@ msgstr ""
 "<br />\n"
 "Εάν έχετε ερωτήσεις, παρακαλούμε επικοινωνήστε μαζί μας. Σας ευχαριστούμε που θεωρήσατε το περιοδικό μας κατάλληλο για δημοσίευση της εργασίας σας.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr "Εφόσον έχει ενεργοποιηθεί η αντίστοιχη επιλογή, το παρόν μήνυμα αποστέλλεται αυτόματα στους μη εγγεγραμμένους στην πλατφόρμα Συγγραφείς, όπως καθορίστηκαν κατά τη διαδικασία υποβολής."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -206,10 +186,6 @@ msgstr ""
 "Όνομα Χρήστη: {$recipientUsername}<br />\n"
 "<br />\n"
 "Σας ευχαριστούμε."
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr "Το παρόν μήνυμα ενημερώνει έναν Επιμελητή Ενότητας για την ανάθεση της επιμέλειας μιας υποβολής. Παρέχει πληροφορίες σχετικά με την υποβολή και τον τρόπο πρόσβασης στον ιστότοπο του περιοδικού."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -401,9 +377,6 @@ msgstr ""
 "Εάν δεν μπορείτε να αναλάβετε τη συγκεκριμένη εργασία αυτή τη στιγμή ή έχετε απορίες, παρακαλούμε επικοινωνήστε μαζί μας. Ευχαριστούμε για τη συμβολή σας στην έκδοση του περιοδικού."
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Ενότητας στον Επιμελητή Σελιδοποίησης ως ανάθεση της επιμέλειας σελιδοποίησης μίας υποβολής. Παρέχει πληροφορίες σχετικά με την υποβολή και τον τρόπο πρόσβασης σε αυτήν."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Ολοκλήρωση δημιουργίας τυπογραφικών δοκιμίων"
 
@@ -419,9 +392,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται από τον Επιμελητή Σελιδοποίησης προς τον Επιμελητή Ενότητας, ως ενημέρωση για την ολοκλήρωση της διαδικασίας σελιδοποίησης."
-
 msgid "emails.emailLink.subject"
 msgstr "Ενδιαφέρον άρθρο"
 
@@ -450,10 +420,7 @@ msgstr ""
 "<br />\n"
 "Εάν έχετε απορίες, μην διαστάσετε να επικοινωνήσετε μαζί μας.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Το παρόν μήνυμα ενημερώνει τους εγγεγραμμένους Συνδρομητές ότι ο Διαχειριστής του περιοδικού δημιούργησε μία συνδρομή για λογαριασμό τους. Παρέχει τον σύνδεσμο του περιοδικού καθώς και οδηγίες πρόσβασης σε αυτό."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Τεύχος διαθέσιμο με ανοικτή πρόσβαση"
@@ -465,10 +432,7 @@ msgstr ""
 "Το περιοδικό {$contextName} διαθέτει πλέον με ανοικτή πρόσβαση το ακόλουθο τεύχος. Σας προσκαλούμε να επισκεφθείτε τον ιστότοπό μας ({$contextUrl}) για να βρείτε ενδιαφέροντα άρθρα και τεκμήρια.<br />\n"
 "<br />\n"
 "Σας ευχαριστούμε για το συνεχές ενδιαφέρον που επιδεικνύετε για την εργασία μας<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται σε εγγεγραμμένους αναγνώστες που έχουν αιτηθεί να λαμβάνουν ενημερώσεις όταν κάποιο τεύχος διατίθεται με ανοικτή πρόσβαση."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Ειδοποίηση λήξης συνδρομής"
@@ -486,10 +450,7 @@ msgstr ""
 "<br />\n"
 "Εάν έχετε απορίες, μη διστάσετε να επικοινωνήσετε μαζί μας.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τους Συνδρομητές σχετικά με την επικείμενη λήξη της συνδρομής τους. Παρέχει τον σύνδεσμο του περιοδικού καθώς και οδηγίες πρόσβασης σε αυτό."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Λήξη συνδρομής"
@@ -507,10 +468,7 @@ msgstr ""
 "<br />\n"
 "Εάν έχετε απορίες, μη διαστάσετε να επικοινωνήσετε μαζί μας.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τους Συνδρομητές σχετικά με τη λήξη της συνδρομής τους. Παρέχει τον σύνδεσμο του περιοδικού καθώς και οδηγίες πρόσβασης σε αυτό."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Λήξη συνδρομής – Τελική υπενθύμιση"
@@ -529,10 +487,7 @@ msgstr ""
 "<br />\n"
 "Εάν έχετε απορίες, μη διστάσετε να επικοινωνήσετε μαζί μας.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τους Συνδρομητές σχετικά με τη λήξη της συνδρομής τους. Παρέχει τον σύνδεσμο του περιοδικού καθώς και οδηγίες πρόσβασης σε αυτό."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Αγορά συνδρομής: Ατομική"
@@ -554,9 +509,6 @@ msgstr ""
 "<br />\n"
 "Σύνδεσμος συνδρομής: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τον Διαχειριστή Συνδρομών ότι αγοράστηκε online μία ατομική συνδρομή. Παρέχει συνοπτική πληροφόρηση σχετικά με τη συνδρομή καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Αγορά συνδρομής: Ιδρυματική"
@@ -589,9 +541,6 @@ msgstr ""
 "Σύνδεσμος συνδρομής: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τον Διαχειριστή Συνδρομών ότι αγοράστηκε online μία ιδρυματική συνδρομή. Παρέχει συνοπτική πληροφόρηση σχετικά με τη συνδρομή καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Ανανέωση συνδρομής: Ατομική"
 
@@ -612,9 +561,6 @@ msgstr ""
 "<br />\n"
 "Σύνδεσμος συνδρομής: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τον Διαχειριστή Συνδρομών ότι ανανεώθηκε online μία ατομική συνδρομή. Παρέχει συνοπτική πληροφόρηση σχετικά με τη συνδρομή καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Ανανέωση συνδρομής: Ιδρυματική"
@@ -647,9 +593,6 @@ msgstr ""
 "Σύνδεσμος συνδρομής: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Το παρόν μήνυμα ειδοποιεί τον Διαχειριστή Συνδρομών ότι ανανεώθηκε online μία ιδρυματική συνδρομή. Παρέχει συνοπτική πληροφόρηση σχετικά με τη συνδρομή καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Επεξεργασία παραπομπής"
 
@@ -677,14 +620,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors:<br />\n"
 "<br />\n"
-"Μία αναθεωρημένη έκδοση του &quot;{$submissionTitle}&quot; μεταφορτώθηκε από τον Συγγραφέα {$authors}.<br />\n"
+"Μία αναθεωρημένη έκδοση του &quot;{$submissionTitle}&quot; μεταφορτώθηκε από τον Συγγραφέα {$submitterName}.<br />\n"
 "<br />\n"
 "Σύνδεσμος υποβολής: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Το παρόν μήνυμα αποστέλλεται αυτόματα στον Επιμελητή μιας υποβολής, όταν ο Συγγραφέας μεταφορτώνει στην πλατφόρμα μία αναθεωρημένη έκδοση του άρθρου."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Ένα μήνυμα σχετικά με το περιοδικό {$contextName}"
@@ -698,7 +638,7 @@ msgstr "Το προεπιλεγμένο (κενό) μήνυμα που χρησ�
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "Η έκθεση του περιοδικού σας για τον {$month}, {$year} είναι τώρα διαθέσιμη. "
 "Τα βασικά στατιστικά σας για αυτόν τον μήνα είναι παρακάτω.<br />\n"
@@ -714,7 +654,7 @@ msgstr ""
 "ένα πλήρες αντίγραφο των συντακτικών τάσεων αυτού του μήνα.<br />\n"
 "<br />\n"
 "Με τιμή,<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -727,9 +667,6 @@ msgstr ""
 "<br />\n"
 "Αν έχετε απορίες, επικοινωνήστε μαζί μου."
 
-msgid "emails.announcement.description"
-msgstr "Αυτό το email αποστέλλεται όταν δημιουργείται μια νέα ανακοίνωση."
-
 msgid "emails.announcement.body"
 msgstr ""
 "<b>{$announcementTitle}</b><br />\n"
@@ -738,11 +675,6 @@ msgstr ""
 "<br />\n"
 "Επισκεφθείτε τον ιστότοπό μας για να διαβάσετε την <a href=\"{$announcementUrl}\">πλήρη "
 "ανακοίνωση</a>."
-
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"Αυτό το email αποστέλλεται αυτόματα κάθε μήνα σε συντάκτες και διαχειριστές "
-"περιοδικών για να τους παρέχει μια επισκόπηση της υγείας του συστήματος."
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"

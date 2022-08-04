@@ -26,7 +26,7 @@ msgstr ""
 "<br />\n"
 "链接：{$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.passwordResetConfirm.subject"
@@ -40,10 +40,7 @@ msgstr ""
 "<br />\n"
 "重置我的密码： {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "当注册用户忘记他们的密码或者无法登入的时候，这封电子邮件会寄给他们。信中会提供一个网址让它们能够登入并重置他们的密码。"
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "重置密码"
@@ -55,10 +52,7 @@ msgstr ""
 "您的用户名称：{$recipientUsername}<br />\n"
 "密码：{$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "当注册用户成功依照PASSWORD_RESET_CONFIRM电子邮件的指示重新设定他们的密码时，这封电子邮件会被寄给他们。"
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "新用户注册"
@@ -74,9 +68,6 @@ msgstr ""
 "<br />\n"
 "谢谢您<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "这封电子邮件会被寄给新注册的用户，欢迎他们加入这个系统，并且提供他们一个用户名称和密码的记录。"
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -109,9 +100,6 @@ msgstr ""
 "谢谢您，<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "这封电子邮件发送给新注册的审稿人，欢迎他们的加入并提供关于他们的用户名和密码的记录。"
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "新一期期刊已出版"
@@ -125,10 +113,6 @@ msgstr ""
 "<br />\n"
 "感谢您持续地关注我们的作品，<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "这封电子邮件是透过编辑的「用户首页」页面中的「通知用户」链接，寄发给注册用户。此邮件通知读者有新一期的内容并邀请他们以内附的网址查看期刊。"
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "请存档《{$contextName}》"
@@ -216,10 +200,6 @@ msgstr ""
 "用户名称：{$recipientUsername}<br />\n"
 "<br />\n"
 "谢谢您。"
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr "这封电子邮件通知一个区段编辑说，编辑已经指派他们透过编辑流程来审查一份稿件。邮件中含有关于稿件以及如何进入期刊网站的信息。"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -390,9 +370,6 @@ msgstr ""
 "如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献."
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr "这封电子邮件是由区段编辑寄发给版面编辑，通知他们要进行一份稿件的版面编辑工作。邮件中含有稿件的信息以及如何取得稿件的指引。"
-
 msgid "emails.layoutComplete.subject"
 msgstr "已完成制版"
 
@@ -408,9 +385,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "这封电子邮件是由版面编辑寄发给区段编辑，通知他们排版流程已经完成。"
-
 msgid "emails.layoutAck.subject"
 msgstr "排版工作致谢"
 
@@ -595,10 +569,7 @@ msgstr ""
 "<br />\n"
 "谢谢您<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "这封电子邮件通知一位已注册的读者说，管理员已经替他们完成了订阅手续。邮件中含有期刊的网址以及访问网站内容的指引。"
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "本期内容已经开放访问"
@@ -611,10 +582,7 @@ msgstr ""
 "<br />\n"
 "感谢您持续地关注本期刊<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "这封电子邮件是寄发给要求在一期期刊变成公开格式时收到一份通知电子邮件的已注册读者。"
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "订阅到期通知"
@@ -632,10 +600,7 @@ msgstr ""
 "<br />\n"
 "如果您有任何的疑问，请直接联络我们。<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "这封电子邮件通知一位订户说他们的订阅期限将要到期了。邮件中含有期刊的网址以及进入网站的指南。"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "订阅时间已经过期"
@@ -653,10 +618,7 @@ msgstr ""
 "<br />\n"
 "如果您有任何的疑问，请直接联络我们。<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "这封电子邮件通知一位订户说他们的订阅时间已经到期了。邮件中含有期刊的网址以及进入网站的指南。"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "订阅时间已经过期—最后提醒"
@@ -675,10 +637,7 @@ msgstr ""
 "<br />\n"
 "如果您有任何疑问，请直接联系我们。<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "这封电子邮件通知订阅者，订阅已到期。邮件中含有期刊的网址以及进入网站的指南。"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "订阅购买:个人"
@@ -700,9 +659,6 @@ msgstr ""
 "<br />\n"
 "订阅URL: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "这个邮件通知订阅管理员有一个个人订阅已经在线购买.这里提供关于订阅的摘要信息和快速存取链接到订阅."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "订阅购买: 团体"
@@ -736,9 +692,6 @@ msgstr ""
 "订阅URL: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "这个邮件通知订阅管理员，一个团体订阅已经在线购买。邮件还将提供关于订阅的摘要信息和到订阅的快速存取链接."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "订阅续订: 个人"
 
@@ -759,9 +712,6 @@ msgstr ""
 "<br />\n"
 "订阅链接URL: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "这个邮件通知订阅管理员一个个人订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "订阅续订: 团体"
@@ -793,9 +743,6 @@ msgstr ""
 "<br />\n"
 "订阅URL: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "这个邮件通知订阅管理员一个团体订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "引文编辑"
@@ -854,22 +801,15 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"
 "<br />\n"
-"A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authors}.<br />\n"
+"A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$submitterName}.<br />\n"
 "<br />\n"
 "Submission URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
 
-msgid "emails.revisedVersionNotify.description"
-msgstr "当作者上传的修订版的一篇文章后，此邮件将被自动发送到指定的编辑"
-
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "恢复审核的请求"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr "启用此电子邮件后，它将自动发送给不是提交过程中指定的OJS中用户的其他作者。"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.body"
@@ -881,7 +821,7 @@ msgstr ""
 "<br />\n"
 "如果您有任何问题，请立即与我们联系。 感谢您考虑在本杂志出版您的作品。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
@@ -897,9 +837,6 @@ msgstr ""
 "<br/>\n"
 "如果您有任何问题，请同我们联系。"
 
-msgid "emails.announcement.description"
-msgstr "此邮件当公告发布时将会自动发送。"
-
 msgid "emails.announcement.body"
 msgstr ""
 "<b>{$announcementTitle}</b><br />\n"
@@ -911,13 +848,10 @@ msgstr ""
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
 
-msgid "emails.statisticsReportNotification.description"
-msgstr "此为系统自动为总编和期刊管理提供系统运行状况报告的邮件。"
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "您的期刊长达 {$month}, {$year} 的运行报告已经生成。当月统计数据如下。<br />\n"
 "<ul>\n"
@@ -930,7 +864,7 @@ msgstr ""
 "{$publicationStatsLink}\">发表文章统计</a>。本月编辑趋势见附件。<br />\n"
 "<br />\n"
 "谨启<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "编辑持续达 {$year} 年 {$month} 个月"

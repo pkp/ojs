@@ -2105,3 +2105,30 @@ msgstr ""
 msgid "manager.setup.enableDois.description"
 msgstr ""
 "Digital Object Identifier (DOIs) zu Artikeln, Heften, und Fahnen zuweisen."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Diese E-Mail benachrichtigt eine/n registrierte/n Leser/in, dass die/der Abonnementverwalter/in für sie/ihn ein Abonnement angelegt hat. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement demnächst abläuft. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Diese E-Mail wird an registrierte Leser/innen gesendet, die darum gebeten haben, informiert zu werden, wenn eine Ausgabe frei verfügbar wird."

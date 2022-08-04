@@ -15,6 +15,7 @@
 
 namespace APP\subscription\form;
 
+use APP\core\Application;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;

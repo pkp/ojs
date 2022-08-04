@@ -2463,7 +2463,7 @@ msgstr "Informace o členství předplatitele"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Shrnutí typu, názvu, doby trvání a ceny předplatného"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Datum ukončení předplatného"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2497,3 +2497,42 @@ msgid "manager.statistics.reports.filters.byObject.description"
 msgstr ""
 "Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, "
 "ostatní sazebnice) a/nebo podle jednoho, nebo více id."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Tento email informuje registrovaného čtenáře, že pro něj manažer vytvořil předplatné. Obsahuje URL časopisu a přístupové instrukce."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Tento email informuje předplatitele, že jeho předplatné brzy vyprší. Obsahuje URL časopisu a instrukce pro přístup."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Tento e-mail upozorňuje Správce předplatného, že individuální předplatné "
+"bylo zakoupeno online. Poskytuje souhrnné informace o předplatném a rychlý "
+"přístup k zakoupenému předplatnému."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Tento e-mail upozorňuje Správce předplatného, že bylo zakoupeno "
+"institucionální předplatné online. Poskytuje souhrnné informace o "
+"předplatném a rychlý přístup k zakoupenému předplatnému."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Tento e-mail upozorňuje správce předplatného, že jednotlivé předplatné bylo "
+"obnoveno online. Poskytuje souhrnné informace o předplatném a rychlý přístup "
+"k obnovenému předplatnému."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Tento e-mail informuje správce předplatného o obnovení institucionálního "
+"předplatného online. Poskytuje souhrnné informace o předplatném a rychlý "
+"přístup k obnovenému předplatnému."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Tento email je posílán čtenářům, kteří požádali o zasílání upozornění na přechod čísla časopisu do otevřeného přístupu."

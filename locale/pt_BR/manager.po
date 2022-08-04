@@ -2169,7 +2169,7 @@ msgstr "Informações sobre a adesão do assinante"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Um resumo do tipo, nome, duração e custo da assinatura"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "A data em que a assinatura termina"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2183,3 +2183,30 @@ msgstr "O nome, afiliação, número de telefone e endereço de e-mail do assina
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Composições de artigos, como um PDF publicado"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Mensagem notifica o leitor cadastrado que o Editor criou sua Assinatura. Proporciona todas as informações necessárias para acesso ao conteúdo."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Esta mensagem avisa o assinante da proximidade do término da assinatura. Informa a URL da revista e instruções de acesso."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Esta mensagem avisa o assinante da expiração da assinatura. Informa a URL da revista e instruções de acesso."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Esta mensagem é o último aviso ao assinante da expiração da assinatura. Informa a URL da revista e instruções de acesso."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Esta mensagem notifica o Gerente de Assinaturas que uma assinatura individual foi adquirida online. Oferece informações sobre a assinatura e um link para acesso rápido à mesma."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Esta mensagem notifica o Editor Gerente que uma assinatura institucional foi adquirida online. Oferece informações sobre a assinatura e um link para acesso rápido à mesma."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Esta mensagem notifica o Editor Gerente que uma assinatura individual foi renovada online. Oferece informações sobre a assinatura e um link para acesso rápido à mesma."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Esta mensagem notifica o Editor Gerente que uma assinatura institucional foi renovada online. Oferece informações sobre a assinatura e um link para acesso rápido à mesma."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Esta mensagem é enviada a leitores cadastrados que solicitam o recebimento do sumário de uma nova edição de Acesso Livre."

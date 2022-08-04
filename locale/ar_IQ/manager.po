@@ -2021,7 +2021,7 @@ msgstr "معلومات عن عضوية المشترك"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "موجز عن نوع الاشتراك، اسمه، مدته وكلفته"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "تاريخ إنتهاء الاشتراك"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2035,3 +2035,30 @@ msgstr "اسم المشترك، إنتماؤه، رقم هاتفه وبريده 
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "الألواح الطباعية للمقالة، مثل ملفات PDF المنشورة"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "هذه الرسالة تُبلغ مشتركاً بأن مدة إشتراكه على وشك النفاد، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك مؤسساتي عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها."

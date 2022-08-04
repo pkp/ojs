@@ -173,6 +173,7 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsGeo" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_CleanOldMetrics" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_RemovePlugins" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I7286_BatchesMigration"/>
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 

@@ -1579,3 +1579,6 @@ msgstr "Тип плаћања"
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Да ли сте сигурни да желите да обришете претплату?"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Ovaj imejl obaveštava registrovane čitaoce da je urednik napravio nalog za njihovu pretplatu. Imejl poruka sadrži URL časopisa kao i instrukcije za pristup."

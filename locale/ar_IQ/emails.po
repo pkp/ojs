@@ -27,7 +27,7 @@ msgstr ""
 "<br />\n"
 "الرابط: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.passwordResetConfirm.subject"
@@ -41,10 +41,7 @@ msgstr ""
 "<br />\n"
 "أعد تعيين كلمة مروري: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين الذي أبلغوا عن فقدانهم لكلمات مرورهم إلى الموقع، أو الذين تعذر عليهم الولوج لأي سبب آخر. سيحصل هؤلاء على رابط يمكنهم عند النقر عليه إعادة تعيين كلمات مرورهم."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "إعادة تعيين كلمة المرور"
@@ -56,10 +53,7 @@ msgstr ""
 "اسم الدخول: {$recipientUsername}<br />\n"
 "كلمة المرور: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين الذي تمكنوا من إعادة تعيين كلمات مرورهم بنجاح متبعين الخطوات الموضحة في رسالة إعادة تعيين كلمة المرور."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "التسجيل في المجلة"
@@ -75,9 +69,6 @@ msgstr ""
 "<br />\n"
 "شكراً لك.<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين حديثاً للترحيب بهم في نظام موقع المجلة، ولتزويدهم باسم الدخول وكلمة المرور الخاصين بالموقع."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -110,9 +101,6 @@ msgstr ""
 "شكراً لك.<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "هذه الرسالة معنونة إلى المحكمين المسجلين حديثاً للترحيب بهم في موقعنا ولتزويدهم بأسماء الدخول وكلمات المرور الخاصين بهم."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "صدر عدد جديد من المجلة: {$issueIdentification}"
@@ -126,10 +114,6 @@ msgstr ""
 "<br />\n"
 "نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "هذه الرسالة معنونة إلى القراء المسجلين عبر خدمة \"إشعار القراء\" الموجود رابطها في صفحة المحرر الرئيسية. هذه الخدمة تُعلم القراء بصدور العدد الجديد من المجلة وتدعوهم إلى زيارة موقعها على الرابط المرسل لهم."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "طلب أرشفة لمجلة {$contextName}"
@@ -197,13 +181,7 @@ msgstr ""
 "<br />\n"
 "إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين المذكورين "
-"في طلب التقديم من غير من قام بتسجيل الطلب بنفسه."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -220,14 +198,6 @@ msgstr ""
 "اسم الدخول: {$recipientUsername}<br />\n"
 "<br />\n"
 "شكراً لك."
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"هذه الرسالة تبلغ أحد المحررين في قسم ما من المجلة بإحالة مهمة تحرير أحد "
-"طلبات التقديم المرسلة إلى ذلك القسم من المجلة إليه. هذا القالب متاح لاختياره "
-"عند تعيين محرر ما إلى طلب التقديم من منطقة المساهمين. ينبغي استعمال هذا "
-"القالب عندما تكون لمحرر القسم إمكانية تسجيل قرارات التحرير."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -437,12 +407,6 @@ msgstr ""
 "لو تعذر عليك تولي هذه المهمة حالياً أو كان لديك أية أسئلة، لطفاً لا تترد في مراسلتي. نشكر لك مساهمتك في هذه المجلة."
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"هذه الرسالة يعنونها المحرر إلى المصمم الطباعي معلماً إياه بتعيينه لمهمة "
-"التصميم الطباعي لمؤلَّفٍ معين، وهي توفر له معلومات عن طلب التقديم وكيفية "
-"الوصول إليه."
-
 msgid "emails.layoutComplete.subject"
 msgstr "التصميم الطباعي إكتمل"
 
@@ -458,11 +422,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr ""
-"هذه الرسالة يعنونها المصمم الطباعي إلى المحرر يعلمه فيها بأن الألواح "
-"الطباعية لمؤلَّف معين قد إكتملت."
-
 msgid "emails.emailLink.subject"
 msgstr "مقالة قد تكون مهمة"
 
@@ -491,10 +450,7 @@ msgstr ""
 "<br />\n"
 "إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "صدور عدد مجاني الآن"
@@ -506,10 +462,7 @@ msgstr ""
 "{$contextName} قد أصدرت تواً عدداً مجانياً. نحن ندعوك لمراجعة جدول المحتويات هنا، ومن ثم زيارة موقعنا ({$contextUrl}) لتطلع على المواضيع والفقرات التي تحوز على إهتمامك.<br />\n"
 "<br />\n"
 "نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "إشعار بانتهاء صلاحية الإشتراك"
@@ -527,10 +480,7 @@ msgstr ""
 "<br />\n"
 "إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "هذه الرسالة تُبلغ مشتركاً بأن مدة إشتراكه على وشك النفاد، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "إنتهت صلاحية الإشتراك"
@@ -548,10 +498,7 @@ msgstr ""
 "<br />\n"
 "إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "إنتهت صلاحية الإشتراك - التذكير الأخير"
@@ -570,10 +517,7 @@ msgstr ""
 "<br />\n"
 "إن كانت لديك أية استفسارات، فلا تتردد في مراسلتي.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "هذه الرسالة تُعلم مشتركاً بانتهاء فترة إشتراكه في المجلة، وهي تقدم له رابط الدخول إلى الموقع مع تعليمات الوصول."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "شراء إشتراك: منفرد"
@@ -595,9 +539,6 @@ msgstr ""
 "<br />\n"
 "رابط الاشتراك: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "شراء إشتراك: مؤسساتي"
@@ -630,9 +571,6 @@ msgstr ""
 "رابط الاشتراك: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "تجديد إشتراك: منفرد"
 
@@ -653,9 +591,6 @@ msgstr ""
 "<br />\n"
 "رابط الاشتراك: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "تجديد إشتراك: مؤسساتي"
@@ -688,9 +623,6 @@ msgstr ""
 "رابط الاشتراك: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك مؤسساتي عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "تحرير إقتباس"
 
@@ -718,14 +650,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "أعزائي المحررون:<br />\n"
 "<br />\n"
-"لقد تم رفع نسخة منقحة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; من قبل المؤلف {$authors}.<br />\n"
+"لقد تم رفع نسخة منقحة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; من قبل المؤلف {$submitterName}.<br />\n"
 "<br />\n"
 "رابط الطلب: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "هذه الرسالة تُرسل تلقائياً إلى المحرر المعني عندما يقوم المؤلف برفع نسخة منقحة من مؤلَّفه إلى الموقعe."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "رسالة تتعلق بالمجلة {$contextName}"
@@ -742,7 +671,7 @@ msgstr "نشاط هيئة التحرير لشهر {$month}، {$year}"
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "تقرير حالة مجلتك لشهر {$month}، {$year} متوافر حالياً. الأمور المفصلية لهذا الشهر هي كما يأتي.<br />\n"
 "<ul>\n"
@@ -754,10 +683,7 @@ msgstr ""
 "سجل دخولك إلى المجلة لمعاينة <a href=\"{$editorialStatsLink}\">ما يشغل هيئة التحرير</a> بشكل مفصل فضلاً عن <a href=\"{$publicationStatsLink}\">حالة المقالات المنشورة</a>. لديك نسخة مرفقة بهذه الرسالة تتضمن كل مشاغل هيئة التحرير لهذا الشهر.<br />\n"
 "<br />\n"
 "مع التقدير<br />\n"
-"{$signature}"
-
-msgid "emails.statisticsReportNotification.description"
-msgstr "هذه الرسالة تُرسل شهرياً إلى مدراء التحرير ورؤسائه لتزويدهم بنظرة عامة على حالة النظام."
+"{$contextSignature}"
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
@@ -769,9 +695,6 @@ msgstr ""
 "{$announcementSummary}<br />\n"
 "<br />\n"
 "قم بزيارة موقعنا للاطلاع على <a href=\"{$announcementUrl}\">الإعلان بشكله الكامل</a>."
-
-msgid "emails.announcement.description"
-msgstr "هذه الرسالة تُرسل إلى المشتركين في الموقع عند إنشاء إعلان جديد."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

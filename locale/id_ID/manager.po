@@ -2410,7 +2410,7 @@ msgstr "Informasi tentang keanggotaan pelanggan"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Ringakasan jenis, nama, durasi, dan biaya langgan"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Tanggal berakhir langgan"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2457,3 +2457,30 @@ msgstr ""
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Galei Artikel, misalnya PDF"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Email ini memberitahu pembaca terdaftar bahwa Manajer telah membuat akses langganan untuk mereka.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Email ini memberitahu seorang pelanggan bahwa langganannya hampir berakhir.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Email ini memberitahu seorang pelanggan bahwa langganannya telah berakhir.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Email ini memberitahu seorang pelanggan bahwa langganannya telah berakhir.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu telah dibeli online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi telah dibeli online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang diperbaharui."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang diperbaharui."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Email ini dikirimkan ke pembaca terdaftar yang meminta untuk dikirimkan email pemberitahuan saat suatu terbitan menjadi Open Access."

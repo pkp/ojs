@@ -2297,3 +2297,53 @@ msgstr ""
 
 msgid "doi.displayName"
 msgstr "DOI"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Acest e-mail notifică un cititor înregistrat că Managerul a creat un "
+"abonament pentru acesta. Oferă adresa URL a jurnalului împreună cu "
+"instrucțiunile de acces."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+"Acest e-mail notifică un abonat că abonamentul său va expira în curând. "
+"Oferă adresa URL a jurnalului împreună cu instrucțiuni de acces."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+"Acest e-mail notifică un abonat că abonamentul a expirat. Acesta oferă "
+"adresa URL a jurnalului împreună cu instrucțiuni de acces."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"Acest e-mail notifică un abonat că abonamentul a expirat. Oferă adresa URL a "
+"jurnalului împreună cu instrucțiuni de acces."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Acest e-mail notifică Managerul de abonamente că un abonament individual a "
+"fost achiziționat online. Oferă informații sumare despre abonament și un "
+"link de acces rapid la abonamentul achiziționat."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Acest e-mail notifică managerul abonamentului că un abonament instituțional "
+"a fost achiziționat online. Acesta oferă informații sumare despre abonament "
+"și un link de acces rapid la abonamentul achiziționat."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Acest e-mail notifică Managerul de abonamente că un abonament individual a "
+"fost reînnoit online. Oferă informații sumare despre abonament și un link de "
+"acces rapid la abonamentul reînnoit."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Acest e-mail notifică managerul jurnalului că un abonament instituțional a "
+"fost reînnoit online. Acesta oferă informații sumare despre abonament și un "
+"link de acces rapid la abonamentul reînnoit."
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Acest e-mail este trimis cititorilor înregistrați care au solicitat să "
+"primească un e-mail de notificare atunci când număr devine cu acces deschis."

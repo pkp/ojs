@@ -2473,3 +2473,39 @@ msgid "manager.statistics.reports.filters.byObject.description"
 msgstr ""
 "Affiner les résultats par type d'objet (revue, numéro, article, fichiers) et/"
 "ou par un ou plusieurs identifiants (ID) d'objet."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Ce courriel avise un,une lecteur-trice inscrit-e que le,la directeur-trice de la revue lui a créé un abonnement. Il fournit l'adresse URL de la revue ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Ce courriel avise un-e abonné-e que son abonnement expirera sous peu. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Ce courriel informe le,la responsable des abonnements qu'un abonnement "
+"institutionnel a été souscrit en ligne. Il fournit des renseignements "
+"sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Ce courriel informe le,la responsable des abonnements qu'un abonnement "
+"individuel a été renouvelé en ligne. Il fournit des renseignements sommaires "
+"sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Ce courriel informe le,la responsable des abonnements qu'un abonnement "
+"institutionnel a été renouvelé en ligne. Il fournit des renseignements "
+"sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Ce courriel est envoyé aux lecteurs-trices inscrits-es qui ont demandé à recevoir un avis par courriel quand un numéro devient disponible en libre accès."

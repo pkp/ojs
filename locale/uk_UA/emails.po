@@ -27,7 +27,7 @@ msgstr ""
 "<br />\n"
 "Посилання: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Підтвердження скидання пароля"
@@ -43,10 +43,7 @@ msgstr ""
 "<br />\n"
 "Скинути мій пароль: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Цей лист надсилається зареєстрованому користувачу, який вказав, що забув свій пароль і не може увійти до системи. У листі міститься URL, натиснувши на який користувач може скинути свій пароль."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Зміна пароля"
@@ -58,10 +55,7 @@ msgstr ""
 "Ваше ім'я користувача: {$recipientUsername}<br />\n"
 "Пароль: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Цей лист надсилається зареєстрованому користувачу після того, як він успішно скинув свій пароль за допомогою процесу, викладеного у листі PASSWORD_RESET_CONFIRM."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Реєстрація нового користувача"
@@ -80,9 +74,6 @@ msgstr ""
 "<br />\n"
 "З Повагою,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Цей лист надсилається новому зареєстрованому користувачу для того, щоб привітати його з реєстрацією та надіслати йому його ім'я користувача та пароль."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -118,9 +109,6 @@ msgstr ""
 "Дякую,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Цей лист надсилається новому зареєстрованому рецензенту для того, щоб повідомити йому про реєстрацію та надіслати його ім'я користувача та пароль."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Опубліковано новий випуск"
@@ -137,10 +125,6 @@ msgstr ""
 "<br />\n"
 "Дякуємо, що продовжуєте цікавитись нашою роботою,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Цей лист надсилається зареєстрованим читачам засобами посилання \"Сповістити користувачів\" у теці редактора. Лист інформує читачів про вихід нового випуску видання та запрошує їх відвідати сайт журналу, скориставшись відповідним URL-посиланням."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Запит на архівування видання {$contextName}"
@@ -249,10 +233,6 @@ msgstr ""
 "Ім'я користувача: {$recipientUsername}<br />\n"
 "<br />\n"
 "Дякую."
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr "Цим листом редактор видання повідомляє редактора розділу про доручення йому нагляду за процесом редакційного опрацювання подання. У листі міститься інформація про подання та про те, як отримати доступ до сайту журналу."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -588,9 +568,6 @@ msgstr ""
 "Якщо зараз Ви не маєте можливості виконати цю роботу або маєте додаткові запитання, будь ласка, повідомте мені. Дякую за працю для нашого журналу."
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr "Цим листом редактор розділу просить редактора верстки розпочати процес верстки подання. У листі міститься інформація про подання та про те, як отримати доступ до нього."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Верстка завершена"
 
@@ -606,9 +583,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "Цим листом редактор верстки повідомляє редактора розділу про закінчення процесу верстки."
-
 msgid "emails.layoutAck.subject"
 msgstr "Подяка за верстку"
 
@@ -784,10 +758,7 @@ msgstr ""
 "<br />\n"
 "Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Цей лист сповіщає зареєстрованого читача про те, що менеджер зареєстрував його як передплатника. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Випуск з'явився у відритому доступі"
@@ -799,10 +770,7 @@ msgstr ""
 "Видання &quot;{$contextName}&quot; відкрило доступ до наступного випуску. Запрошуємо переглянути сторінку змісту випуску, а потім відвідати наш веб-сайт (<a href=\"{$contextUrl}\">{$contextUrl}</a>), щоб переглянути статті та інші матеріали, що можуть Вас зацікавити.<br />\n"
 "<br />\n"
 "Дякуємо, що продовжуєте цікавитись нашою роботою,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Цей лист надсилається зареєстрованим читачам, які виявили бажання отримувати поштові повідомлення про появу випусків у відкритому доступі."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Нагадування про закінчення передплати"
@@ -820,10 +788,7 @@ msgstr ""
 "<br />\n"
 "Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Цей лист сповіщає передплатника про те, що його передплата незабаром закінчується. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Передплата закінчилась"
@@ -841,10 +806,7 @@ msgstr ""
 "<br />\n"
 "Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Цей лист сповіщає передплатника про те, що його передплата закінчилась. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Передплата закінчилась (останнє нагадування)"
@@ -863,10 +825,7 @@ msgstr ""
 "<br />\n"
 "Будь ласка, повідомте мені, якщо Ви маєте додаткові запитання.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Цей лист сповіщає передплатника про те, що його передплата закінчилась. У листі міститься URL-адреса журналу та інструкції щодо отримання доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Придбання передплати: Індивідуальна"
@@ -888,9 +847,6 @@ msgstr ""
 "<br />\n"
 "URL передплати: <a href=\"{$subscriptionUrl}\">{$subscriptionUrl}</a><br />\n"
 ""
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Цей лист інформує менеджера передплати про те, що в електронному режимі була придбана індивідуальна передплата. У листі міститься основна інформація про придбану передплату та посилання для швидкого доступу до неї."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Придбання передплати: інституційна"
@@ -923,9 +879,6 @@ msgstr ""
 "URL передплати: <a href=\"{$subscriptionUrl}\">{$subscriptionUrl}</a><br />\n"
 ""
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Цей лист інформує менеджера передплати про те, що в електронному режимі установою була придбана інституційна передплата. У листі міститься основна інформація про придбану передплату та посилання для швидкого доступу до неї."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Поновлення передплати: Індивідуальна"
 
@@ -946,9 +899,6 @@ msgstr ""
 "<br />\n"
 "URL передплати: <a href=\"{$subscriptionUrl}\">{$subscriptionUrl}</a><br />\n"
 ""
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Цей лист інформує менеджера передплати про те, що в електронному режимі була поновлена індивідуальна передплата. У листі міститься основна інформація про поновлену передплату та посилання для швидкого доступу до неї."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Поновлення передплати: Інституційна"
@@ -980,9 +930,6 @@ msgstr ""
 "<br />\n"
 "URL передплати: <a href=\"{$subscriptionUrl}\">{$subscriptionUrl}</a><br />\n"
 ""
-
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Цей лист інформує менеджера передплати про те, що в електронному режимі установою була поновлена інституційна передплата. У листі міститься основна інформація про поновлену передплату та посилання для швидкого доступу до неї."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Редагування посилання"
@@ -1049,14 +996,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"
 "<br />\n"
-"Перероблена версія рукопису &quot;{$submissionTitle}&quot; була вивантажена автором {$authors}.<br />\n"
+"Перероблена версія рукопису &quot;{$submissionTitle}&quot; була вивантажена автором {$submitterName}.<br />\n"
 "<br />\n"
 "URL подання: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Цей лист автоматично надсилається призначеному редактору, коли автор вивантажує перероблену версію своєї статті."
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.body"
@@ -1069,7 +1013,7 @@ msgstr ""
 "Якщо у вас є якісь питання, будь ласка, зв'яжіться зі мною. Дякуємо, що "
 "розглянули цей журнал як місце для публікації вашої роботи.<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
@@ -1089,11 +1033,3 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Запит на відновлення рецензії"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"При ввімкненні цей електронний лист автоматично надсилається іншим авторам, "
-"які не є користувачами OJS, зазначеними у процесі подання рукопису."
-
-#, fuzzy

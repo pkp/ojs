@@ -1928,3 +1928,30 @@ msgstr "DOI-tunnuksen alun pitää olla {$prefix}."
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Artikkelit"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."

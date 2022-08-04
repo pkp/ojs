@@ -27,7 +27,7 @@ msgstr ""
 "<br />\n"
 "Povezava: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notificationMaillist.subject"
@@ -78,10 +78,7 @@ msgstr ""
 "<br />\n"
 "Ponastavi moje geslo: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Email se pošlje uporabniku, ko pozabi geslo za prijavo in odda zahtevo za ponastavitev gesla. V emailu se nahaja povezava, ki jo mora uporabnik klikniti za ponastavitev gesla."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Geslo ponastavljeno"
@@ -93,10 +90,7 @@ msgstr ""
 "Uporabniško ime: {$recipientUsername}<br />\n"
 "Geslo: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Email se pošlje registriranemu uporabniku, ko uspešno ponastavi svoje geslo, kot je opisano v emailu PASSWORD_RESET_CONFIRM."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Potrdilo registracije"
@@ -112,9 +106,6 @@ msgstr ""
 "<br />\n"
 "Hvala lepa,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Email se pošlje novoregistriranemu uporabniku kot dobrodošlica, skupaj z uporabniškim imenom in geslom za prijavo v sistem."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -149,9 +140,6 @@ msgstr ""
 "Lepa hvala,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Email se pošlje novo registriranim recenzentom kot dobrodošlica, skupaj z uporabniškim imenom in geslom za dostop do spletišča revije."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nova številka je na voljo: {$issueIdentification}"
@@ -165,10 +153,6 @@ msgstr ""
 "zanimajo. Zahvaljujemo se tudi našim avtorjem, recenzentom in lektorjem za "
 "njihov dragoc prispevek pri tem delu. </p><p>Hvala za zanimanje za naše "
 "delo,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Email se pošlje vsem registriranim bralcem preko urednikove funkcionalnosti \"Obvesti uporabnike\". Email obvesti bralce o novi številki in jih povabi k obisku revije preko spletne povezave."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Prošnja za arhiviranje revije {$contextName}"
@@ -242,11 +226,7 @@ msgstr ""
 "Če imate kakršnokoli vprašanje, se lahko obrnete name. Hvala, da ste izbrali "
 "našo revijo za objavo vašega dela.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr "Ta email, če je vključen, se avtomatično pošlje po uspešni oddaji vsem soavtorjem, ki so navedeni kot soavtorji."
+"{$contextSignature}"
 
 msgid "emails.submissionUnsuitable.subject"
 msgstr "Neprimeren prispevek"
@@ -275,14 +255,6 @@ msgstr ""
 "s klikom na \"Pošlji v recenzijo\" in določite recenzente s klikom na \"Dodaj"
 " recenzenta\".</p><p>Če prispevek ni primeren za to revijo, ga prosim "
 "zavrnite.</p><p>Hvala že vnaprej.</p><p>S spoštovanjem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"Email je obvestilo urendiku rubrike, da je zadolžen za vodenje prispevka "
-"skozi uredniški postopek. Predloga je na voljo, ko se dodeli urednika pri "
-"rubniki Udeleženci. Predloga je namenjena uporabi, ko ima urednik možnost "
-"sprejemanja uredniških odločitev."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -471,12 +443,6 @@ msgstr ""
 "publikacijo.</p><p>S spoštovanjem,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Ta email pošlje urednik grafičnemu uredniku prispevka s prošnjo za pripravo "
-"preloma prispevka. Vsebuje kratka navodila za prirpavo preloma in dostop do "
-"prispevka."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Prelom končan"
 
@@ -492,9 +458,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "Ta email pošlje grafični urednik uredniku prispevka z obvestilom, da je prelom prispevka končan."
-
 msgid "emails.emailLink.subject"
 msgstr "Zanimiv prispevek"
 
@@ -528,10 +491,7 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please feel free to contact me.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Številka je sedaj prosto dostopna"
@@ -546,10 +506,7 @@ msgstr ""
 "br />\n"
 "<br />\n"
 "Thanks for the continuing interest in our work,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Notice of Subscription Expiry"
@@ -567,10 +524,7 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please feel free to contact me.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Subscription Expired"
@@ -588,10 +542,7 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please feel free to contact me.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Subscription Expired - Final Reminder"
@@ -610,10 +561,7 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please feel free to contact me.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Subscription Purchase: Individual"
@@ -635,9 +583,6 @@ msgstr ""
 "To view or edit this subscription, please use the following URL.<br />\n"
 "<br />\n"
 "Subscription URL: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Subscription Purchase: Institutional"
@@ -672,9 +617,6 @@ msgstr ""
 "<br />\n"
 "Subscription URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Subscription Renewal: Individual"
 
@@ -695,9 +637,6 @@ msgstr ""
 "To view or edit this subscription, please use the following URL.<br />\n"
 "<br />\n"
 "Subscription URL: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Subscription Renewal: Institutional"
@@ -729,9 +668,6 @@ msgstr ""
 "To view or edit this subscription, please use the following URL.<br />\n"
 "<br />\n"
 "Subscription URL: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Urejanje citiranja"
@@ -836,14 +772,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Uredništvo:<br />\n"
 "<br />\n"
-"Avtor {$authors} je naložil posodobljeno verzijo prispevka \"&quot;{$submissionTitle}&quot;.<br />\n"
+"Avtor {$submitterName} je naložil posodobljeno verzijo prispevka \"&quot;{$submissionTitle}&quot;.<br />\n"
 "<br />\n"
 "URL povezava prispevka: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Ta email se avtomatično pošlje uredniku prispevka, ko avtor naloži popravljeno verzijo prispevka."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Sporočilo v zvezi s publikacijo {$contextName}"
@@ -870,15 +803,10 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Ali lahko še vedno opravite recenzijo pri {$contextName}?"
 
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"Ta email je vsak mesec avtomatično poslan urednikom in glavnim urednikom, da "
-"vidijo stanje sistema."
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "Poročilo o stanju vaše revije za mesec {$month}, {$year} je na voljo. "
 "Ključne statistike so spodaj.<br />\n"
@@ -894,13 +822,10 @@ msgstr ""
 "aktivnostih je v priponki.<br />\n"
 "<br />\n"
 "Lep pozdrav,<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Uredniške aktivnosti za {$month}, {$year}"
-
-msgid "emails.announcement.description"
-msgstr "Email je poslan, ko je objavljeno novo obvestilo."
 
 msgid "emails.announcement.body"
 msgstr ""

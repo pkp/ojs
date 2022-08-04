@@ -27,7 +27,7 @@ msgstr ""
 "<br />\n"
 "Länk: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.passwordResetConfirm.subject"
@@ -41,10 +41,7 @@ msgstr ""
 "<br />\n"
 "Återställ mitt lösenord: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Det här meddelandet skickas till registrerade användare som meddelar att de har glömt sitt lösenord eller inte kan logga in. E-postmeddelandet innehåller en URL som leder till återställning av lösenordet."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Lösenord återställt"
@@ -56,10 +53,7 @@ msgstr ""
 "Ditt användarnamn: {$recipientUsername}<br />\n"
 "Lösenord: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Det här e-postmeddelandet skickas till registrerade användare som bekräftelse på återställt lösenord (enligt beskrivning i PASSWORD_RESET_CONFIRM-mailet)."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Registrering hos tidskrift"
@@ -75,9 +69,6 @@ msgstr ""
 "<br />\n"
 "Vänligen,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Det här e-postmeddelandet skickas till nyregistrerade användare för att välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -110,9 +101,7 @@ msgstr ""
 "Vänligen,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Det här e-postmeddelandet skickas till nyregistrerade granskare för välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord."
-
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nytt nummer publicerat: {$issueIdentification}"
 
@@ -125,10 +114,6 @@ msgstr ""
 "<p>\n"
 "Tack för visat intresse för vårt arbete,</p>\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Det här e-postmeddelandet skickas till registrerade läsare via \"Meddela användare\"-länken under redaktörens användarprofil. Det innehåller information om att det publicerats ett nytt nummer och välkomnar dem genom en länk att besöka tidskriften."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Förfrågan om arkivering för {$contextName}"
@@ -198,12 +183,7 @@ msgstr ""
 "<br />\n"
 "Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att skicka ditt bidrag till den här tidskriften.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till "
-"andra författare knutna till bidraget än den som skickat in det."
+"{$contextSignature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Du har blivit utsedd till redaktör för ett bidrag i {$contextName}"
@@ -220,14 +200,7 @@ msgstr ""
 "<br />\n"
 "Tack och med vänliga hälsningar."
 
-msgid "emails.editorAssign.description"
-msgstr ""
-"Det här e-postmeddelandet meddelar en sektionsredaktör att redaktören utsett "
-"hen att ansvara för ett bidrag genom den redaktionella processen. Mallen kan "
-"väljas när en redaktör är knuten till bidraget i deltagarlistan. Den här "
-"mallen ska användas när sektionsredaktören har möjligheten att fatta "
-"redaktionella beslut."
-
+#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"
 
@@ -399,13 +372,7 @@ msgstr ""
 "tidskriften.</p><p>Vänliga hälsningar, </p>\n"
 "{$signature}"
 
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Det här e-postmeddelandet skickas från en redaktör till layoutredaktören för "
-"att meddela att hen har blivit tilldelad uppgiften att vara layoutredaktör "
-"för ett bidrag. Det innehåller information om bidraget och hur man får "
-"tillgång till det."
-
+#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversioner klara"
 
@@ -420,11 +387,7 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-msgid "emails.layoutComplete.description"
-msgstr ""
-"Det här e-postmeddelandet från layoutredaktören meddelar en redaktör att "
-"layoutprocessen är färdig."
-
+#, fuzzy
 msgid "emails.emailLink.subject"
 msgstr "Artikel som kan vara av intresse för dig"
 
@@ -453,10 +416,7 @@ msgstr ""
 "<br />\n"
 "Vänligen kontakta mig om du har några frågor.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Det här e-postmeddelandet meddelar en registrerad läsare att ansvariga har skapat en prenumeration åt hen. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Nummer nu tillgängligt som open access"
@@ -468,10 +428,7 @@ msgstr ""
 "{$contextName} har nyligen gjort ett nytt nummer tillgängligt som open access. Se innehållsförteckningen här och klicka dig sedan in på vår webbplats {$contextUrl}) för att ta del av material av intresse.<br />\n"
 "<br />\n"
 "Tack för fortsatt visat intresse för vårt arbete!<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Det här e-postmeddelandet skickas till registrerade läsare som har begärt att meddelas om och när ett nummer görs tillgängligt som open access."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Prenumeration närmar sig förfallodatum"
@@ -489,10 +446,7 @@ msgstr ""
 "<br />\n"
 "Vänligen kontakta mig om du har frågor.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen håller på att förfalla. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Prenumeration har förfallit"
@@ -510,10 +464,7 @@ msgstr ""
 "<br />\n"
 "Vänligen kontakta mig om du har frågor.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har förfallit. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Prenumeration har förfallit – sista påminnelsen"
@@ -532,10 +483,7 @@ msgstr ""
 "<br />\n"
 "Vänligen kontakta mig om du har frågor.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har gått ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Tecknande av prenumeration: Enskild prenumeration"
@@ -557,9 +505,6 @@ msgstr ""
 "<br />\n"
 "Prenumerationens URL: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en enskild prenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Tecknande av prenumeration: Institutionsprenumeration"
@@ -592,9 +537,6 @@ msgstr ""
 "Prenumerationens URL: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en institutionsprenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Förnyelse av prenumeration: Enskild prenumeration"
 
@@ -615,9 +557,6 @@ msgstr ""
 "<br />\n"
 "Prenumerationens URL: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en enskild prenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Förnyelse av prenumeration: Institutionsprenumeration"
@@ -650,9 +589,6 @@ msgstr ""
 "Prenumerationens URL: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en institutionsprenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Referensredigering"
 
@@ -680,14 +616,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Redaktörer:<br />\n"
 "<br />\n"
-"En reviderad version av &quot;{$submissionTitle}&quot; har laddats upp av författaren, {$authors}.<br />\n"
+"En reviderad version av &quot;{$submissionTitle}&quot; har laddats upp av författaren, {$submitterName}.<br />\n"
 "<br />\n"
 "Bidragets URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Det här e-postmeddelandet skickas automatiskt till den tilldelade redaktören när författaren laddar upp en reviderad version av sin artikel."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Ett meddelande angående {$contextName}"
@@ -702,15 +635,10 @@ msgstr "Defaultmeddelande (tomt) att använda i Notification Center Message List
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fortfarande möjlighet att granska bidrag till {$contextName}?"
 
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"E-postmeddelandet skickas ut månadsvis till redaktörer och "
-"tidskriftsansvariga för ge en lägesrapport."
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "Lägesrapport för tidskriften {$month}, {$year} är nu tillgänglig. Månadens "
 "statistiska nyckeltal finns nedan.<br />\n"
@@ -725,7 +653,7 @@ msgstr ""
 "för publicerade artiklar</a>. En komplett redogörelse bifogas.<br />\n"
 "<br />\n"
 "Vänligen,<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redaktionella aktiviteter för {$month}, {$year}"
@@ -742,10 +670,6 @@ msgstr ""
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
-
-msgid "emails.announcement.description"
-msgstr ""
-"Detta e-post-meddelande skickas när ett nytt publicerat meddelande skapas."
 
 msgid "emails.announcement.body"
 msgstr ""
