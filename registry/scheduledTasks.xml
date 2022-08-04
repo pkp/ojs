@@ -59,4 +59,8 @@
 		<descr>Process the usage stats logs and load the numbers into the DB tables.</descr>
 		<frequency day="0"/>
 	</task>
+	<task class="PKP\task\ProcessQueueJobs">
+		<descr>Process pending queue jobs in the default queue driver and queue</descr>
+		<frequency second="0"/>
+	</task>
 </scheduled_tasks>

@@ -20,18 +20,14 @@ import '@foreachbe/cypress-tinymce'
 
 require('cypress-failed-log')
 
-// See https://stackoverflow.com/questions/58657895/is-there-a-reliable-way-to-have-cypress-exit-as-soon-as-a-test-fails/58660504#58660504
-function abortEarly() {
-	if (this.currentTest.state === 'failed') {
-		return cy.task('shouldSkip', true);
-	}
-	cy.task('shouldSkip').then(value => {
-		if (value) this.skip();
-	});
-}
+beforeEach(function() {
+	cy.abortEarly(this);
+});
 
-beforeEach(abortEarly);
-afterEach(abortEarly);
+afterEach(function() {
+	cy.abortEarly(this);
+	cy.runQueueJobs();
+});
 
 before(() => {
 	if (Cypress.browser.isHeaded) {
