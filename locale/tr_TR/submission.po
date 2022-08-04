@@ -1,11 +1,12 @@
 # Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-05-13 01:58+0000\n"
-"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"PO-Revision-Date: 2022-08-04 12:41+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "tr_TR/>\n"
 "Language: tr_TR\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Yazar Onay Butonları"
@@ -390,3 +391,18 @@ msgstr "Kabul kararını geri alın ve değerlendirme aşamasına geri gönderin
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Değerlendirmeye Dön"
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Gönderi için DOI oluşturulamadı: {$pubObjectTitle}. Gönderi bu dergide yer "
+"almıyor."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Gönderi için DOI oluşturulamadı: {$pubObjectTitle}. DOI oluşturulabilmesi "
+"için gönderinin bir sayıya atanması gereklidir."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Gönderi dizgisi için DOI oluşturulamadı: {$itemTitle}. DOI oluşturulabilmesi "
+"için gönderinin bir sayıya atanması gereklidir."
