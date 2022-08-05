@@ -346,7 +346,7 @@
 							{translate key="submission.howToCite"}
 						</h2>
 						<div class="value">
-							<div id="citationOutput" role="region" aria-live="polite">
+							<div id="citationOutput" role="region" aria-live="assertive">
 								{$citation}
 							</div>
 							<div class="citation_formats">
