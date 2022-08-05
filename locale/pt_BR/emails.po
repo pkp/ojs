@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-08-05 20:16+0000\n"
+"PO-Revision-Date: 2022-08-05 21:04+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
@@ -215,7 +215,6 @@ msgstr ""
 "incluir a revista no seu repositório. O e-mail oferece informações iniciais "
 "e sobre como participar na iniciativa LOCKSS e formas de se envolver."
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Confirmação de submissão"
 
@@ -231,16 +230,14 @@ msgstr ""
 "este periódico para publicar o seu trabalho.</p><br "
 "/><p>Atenciosamente,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.description"
 msgstr ""
 "Quando habilitada, esta mensagem é enviado automaticamente para os autores "
 "informados durante o processo de submissão, que não seja o autor que está "
 "submetendo o manuscrito."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Você foi designado como editor em uma submissão a {$contextName}"
+msgstr "Você foi designado como editor em uma submissão para {$contextName}"
 
 msgid "emails.editorAssign.body"
 msgstr ""
@@ -253,7 +250,6 @@ msgstr ""
 "for apropriada para este periódico, recuse a submissão.</p><p>Agradecemos "
 "antecipadamente.</p> <p>Atenciosamente,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.editorAssign.description"
 msgstr ""
 "Mensagem notifica o Editor de Seção que uma nova tarefa de acompanhamento de "
