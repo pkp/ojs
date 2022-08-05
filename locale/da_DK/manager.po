@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-07-05 09:31+0000\n"
+"PO-Revision-Date: 2022-08-05 17:52+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Er du sikker på, at du vil nulstille alle e-mail-skabeloner i dette tidsskrift? Alle tilpasninger vil gå tabt."
@@ -1391,9 +1391,10 @@ msgstr "Kategorier"
 msgid "manager.payment.options.purchaseIssueFee"
 msgstr "Køb nummer"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Før denne sektion kan slettes, skal de artikler, der er publiceret i sektionen overføres til andre sektioner."
+msgstr ""
+"Før denne sektion kan slettes, skal de artikler, der er indsendt til "
+"sektionen, overføres til andre sektioner."
 
 msgid "manager.setup.categories.description"
 msgstr "Vælg den mest passende kategori blandt de ovenfor anførte. Læserne kan herefter browse gennem hele tidsskriftet via kategorier."
@@ -1932,9 +1933,11 @@ msgstr ""
 "Konfigurér dette DOI plugin, så det bliver muligt at administrere og bruge "
 "DOI’er i OJS:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Vælg de elementer, der skal have tildelt et DOI."
+msgstr ""
+"Vælg de elementer, der skal have tildelt et DOI. De fleste tidsskrifter "
+"tildeler DOI'er til artikler, men du kan vælge at tildele DOI'er til alle "
+"publicerede elementer."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Vælg de publicerede elementer, der skal have tildelt et DOI:"
@@ -2179,3 +2182,21 @@ msgstr ""
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Publiceringsversioner, såsom en publiceret PDF"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institution"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Vælg venligst en gyldig institution."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Der skal oprettes en institution, før der kan laves nye indsendelser."
+
+msgid "stats.issueTOCViews"
+msgstr "Visninger af indholdsfortegnelse for numre"
+
+msgid "stats.issueGalleyViews"
+msgstr "Visninger af numres publiceringsversion"
+
+msgid "manager.institutions.noContext"
+msgstr "Denne institutions tidsskrift kunne ikke findes."
