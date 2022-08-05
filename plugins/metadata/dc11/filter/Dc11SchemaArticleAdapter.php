@@ -18,13 +18,19 @@
  *  a Submission object.
  */
 
+namespace APP\plugins\metadata\dc11\filter;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
 use APP\submission\Submission;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleConversion;
 use PKP\metadata\MetadataDataObjectAdapter;
 use PKP\metadata\MetadataDescription;
+use PKP\plugins\HookRegistry;
+use PKP\plugins\PluginRegistry;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -277,4 +283,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             }
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\metadata\dc11\filter\Dc11SchemaArticleAdapter', '\Dc11SchemaArticleAdapter');
 }

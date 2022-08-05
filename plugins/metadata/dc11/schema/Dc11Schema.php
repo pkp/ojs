@@ -15,12 +15,12 @@
  * @brief OJS-specific implementation of the Dc11Schema.
  */
 
-import('lib.pkp.plugins.metadata.dc11.schema.PKPDc11Schema');
+namespace APP\plugins\metadata\dc11\schema;
 
-use PKP\metadata\MetadataTypeDescription;
 use PKP\core\PKPApplication;
+use PKP\metadata\MetadataTypeDescription;
 
-class Dc11Schema extends PKPDc11Schema
+class Dc11Schema extends \PKP\plugins\metadata\dc11\schema\PKPDc11Schema
 {
     /**
      * Constructor
@@ -30,4 +30,8 @@ class Dc11Schema extends PKPDc11Schema
         // Configure the DC schema.
         parent::__construct([PKPApplication::ASSOC_TYPE_SUBMISSION, MetadataTypeDescription::ASSOC_TYPE_ANY]);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\metadata\dc11\schema\Dc11Schema', '\Dc11Schema');
 }

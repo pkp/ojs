@@ -15,8 +15,6 @@
  * @brief dc metadata format plugin for OAI.
  */
 
-import('lib.pkp.plugins.oaiMetadataFormats.dc.PKPOAIMetadataFormatPlugin_DC');
-
-class OAIMetadataFormatPlugin_DC extends PKPOAIMetadataFormatPlugin_DC
+class OAIMetadataFormatPlugin_DC extends \PKP\plugins\oaiMetadataFormats\dc\PKPOAIMetadataFormatPlugin_DC
 {
 }
