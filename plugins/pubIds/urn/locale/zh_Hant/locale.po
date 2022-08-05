@@ -1,8 +1,40 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-08-05 17:52+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/pubIds-urn/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.pubIds.urn.description"
+msgstr "此插件讓你可以配置統一資源名稱予各卷、各文章及各校樣。"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "管理和使用OJS內的URN前，請先設定URN插件。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "期刊內容"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "請選擇要配置URN的項目。"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "卷"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "文章"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "校樣"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN前綴"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "請選擇會配置統一資源名稱(URN)的出版項目："
