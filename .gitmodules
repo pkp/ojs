@@ -50,3 +50,6 @@
 [submodule "plugins/generic/crossref"]
 	path = plugins/generic/crossref
 	url = https://github.com/pkp/crossref-ojs
+[submodule "plugins/generic/acron"]
+	path = plugins/generic/acron
+	url = https://github.com/pkp/acron
