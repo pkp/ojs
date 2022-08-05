@@ -1,10 +1,11 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:11+00:00\n"
-"PO-Revision-Date: 2021-03-24 14:26+0000\n"
-"Last-Translator: Lai Heung Pauline Lam <lai.tutrees@gmail.com>\n"
+"PO-Revision-Date: 2022-08-05 17:52+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/reports-counter/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.reports.counter.description"
 msgstr "計數器外掛程式允許紀錄以及提供<a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">計數器</a>-報告網站活動。"
@@ -70,3 +71,21 @@ msgstr "報告請求無効。"
 
 msgid "plugins.reports.counter.release"
 msgstr "計數器版本"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "計數器報告JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "計數器期刊報告1 (R3): 按月份及期刊文章全文申請"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "期刊報告1"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "報告的參數無效。"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "文章報告1"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "全部顧客"
