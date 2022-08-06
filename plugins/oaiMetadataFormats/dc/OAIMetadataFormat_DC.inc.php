@@ -18,6 +18,8 @@
  * @brief OAI metadata format class -- Dublin Core.
  */
 
+namespace APP\plugins\oaiMetadataFormats\dc;
+
 class OAIMetadataFormat_DC extends \PKP\plugins\oaiMetadataFormats\dc\PKPOAIMetadataFormat_DC
 {
     /**
@@ -30,4 +32,8 @@ class OAIMetadataFormat_DC extends \PKP\plugins\oaiMetadataFormats\dc\PKPOAIMeta
         $article = & $record->getData('article');
         return parent::toXml($article, $format);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormat_DC', '\OAIMetadataFormat_DC');
 }

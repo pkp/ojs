@@ -17,6 +17,7 @@
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\core\Core;
+use PKP\db\DAORegistry;
 use PKP\plugins\GatewayPlugin;
 
 class AnnouncementFeedGatewayPlugin extends GatewayPlugin

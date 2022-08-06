@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/NativeXmlArticleGalleyFilter.inc.php
+ * @file plugins/importexport/native/filter/NativeXmlArticleGalleyFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,16 +13,14 @@
  * @brief Class that converts a Native XML document to a set of publication formats.
  */
 
-import('lib.pkp.plugins.importexport.native.filter.NativeXmlRepresentationFilter');
+namespace APP\plugins\importexport\native\filter;
 
 use APP\facades\Repo;
 use APP\submission\Submission;
+use DOMElement;
 use PKP\galley\Galley;
 
-// FIXME: Add namespacing
-// use DOMElement;
-
-class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
+class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filter\NativeXmlRepresentationFilter
 {
     //
     // Implement template methods from NativeImportFilter
@@ -89,16 +87,16 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
             if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
-            case 'name':
-                // Labels are not localized in OJS Galleys, but we use the <name locale="....">...</name> structure.
-                $locale = $n->getAttribute('locale');
-                if (empty($locale)) {
-                    $locale = $submission->getLocale();
+                    case 'name':
+                        // Labels are not localized in OJS Galleys, but we use the <name locale="....">...</name> structure.
+                        $locale = $n->getAttribute('locale');
+                        if (empty($locale)) {
+                            $locale = $submission->getLocale();
+                        }
+                        $representation->setLabel($n->textContent);
+                        $representation->setLocale($locale);
+                        break;
                 }
-                $representation->setLabel($n->textContent);
-                $representation->setLocale($locale);
-                break;
-        }
             }
         }
 
@@ -122,4 +120,8 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter
         // representation proof files
         return $representation;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\NativeXmlArticleGalleyFilter', '\NativeXmlArticleGalleyFilter');
 }

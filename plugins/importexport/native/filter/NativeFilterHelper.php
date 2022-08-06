@@ -1,6 +1,6 @@
 <?php
 /**
- * @file plugins/importexport/native/filter/NativeFilterHelper.inc.php
+ * @file plugins/importexport/native/filter/NativeFilterHelper.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -11,20 +11,21 @@
  *
  * @brief Class that provides native import/export filter-related helper methods.
  */
-import('lib.pkp.plugins.importexport.native.filter.PKPNativeFilterHelper');
+
+namespace APP\plugins\importexport\native\filter;
 
 use APP\file\PublicFileManager;
 
-class NativeFilterHelper extends PKPNativeFilterHelper
+class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNativeFilterHelper
 {
     /**
      * Create and return an issue identification node.
      *
      * @param NativeExportFilter $filter
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createIssueIdentificationNode($filter, $doc, $issue)
     {
@@ -58,10 +59,10 @@ class NativeFilterHelper extends PKPNativeFilterHelper
      * Create and return an object covers node.
      *
      * @param NativeExportFilter $filter
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $object
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createIssueCoversNode($filter, $doc, $object)
     {
@@ -91,14 +92,14 @@ class NativeFilterHelper extends PKPNativeFilterHelper
      * Parse out the object covers.
      *
      * @param NativeExportFilter $filter
-     * @param DOMElement $node
+     * @param \DOMElement $node
      * @param Issue $object
      */
     public function parseIssueCovers($filter, $node, $object)
     {
         $deployment = $filter->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'cover':
                         $this->parseIssueCover($filter, $n, $object);
@@ -114,7 +115,7 @@ class NativeFilterHelper extends PKPNativeFilterHelper
      * Parse out the cover and store it in the object.
      *
      * @param NativeExportFilter $filter
-     * @param DOMElement $node
+     * @param \DOMElement $node
      * @param Issue $object
      */
     public function parseIssueCover($filter, $node, $object)
@@ -126,10 +127,12 @@ class NativeFilterHelper extends PKPNativeFilterHelper
             $locale = $context->getPrimaryLocale();
         }
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
-                    case 'cover_image': $object->setCoverImage($n->textContent, $locale); break;
-                    case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale); break;
+                    case 'cover_image': $object->setCoverImage($n->textContent, $locale);
+                        break;
+                    case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale);
+                        break;
                     case 'embed':
                         $publicFileManager = new PublicFileManager();
                         $filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);

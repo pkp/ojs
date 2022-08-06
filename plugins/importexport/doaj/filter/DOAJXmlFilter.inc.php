@@ -14,12 +14,10 @@
  */
 
 use APP\facades\Repo;
-
-import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
-
+use PKP\db\DAORegistry;
 use PKP\i18n\LocaleConversion;
 
-class DOAJXmlFilter extends NativeExportFilter
+class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
     /**
      * Constructor

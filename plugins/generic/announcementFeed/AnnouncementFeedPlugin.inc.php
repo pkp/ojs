@@ -17,8 +17,8 @@ use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\PluginRegistry;
 
 class AnnouncementFeedPlugin extends GenericPlugin
 {

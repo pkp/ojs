@@ -14,6 +14,7 @@
  */
 
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\plugins\HookRegistry;
 use PKP\plugins\PaymethodPlugin;
 

@@ -15,7 +15,7 @@
  */
 
 use APP\facades\Repo;
-
+use PKP\db\DAORegistry;
 use PKP\plugins\BlockPlugin;
 
 class SubscriptionBlockPlugin extends BlockPlugin

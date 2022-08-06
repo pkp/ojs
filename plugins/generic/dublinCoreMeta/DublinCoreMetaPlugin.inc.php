@@ -15,8 +15,8 @@
 
 use APP\facades\Repo;
 use APP\submission\Submission;
-
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\HookRegistry;

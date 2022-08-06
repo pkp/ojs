@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/NativeXmlIssueGalleyFilter.inc.php
+ * @file plugins/importexport/native/filter/NativeXmlIssueGalleyFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,12 +13,13 @@
  * @brief Base class that converts a Native XML document to a set of issue galleys
  */
 
-import('lib.pkp.plugins.importexport.native.filter.NativeImportFilter');
+namespace APP\plugins\importexport\native\filter;
 
 use APP\file\IssueFileManager;
 use APP\issue\Issue;
+use PKP\db\DAORegistry;
 
-class NativeXmlIssueGalleyFilter extends NativeImportFilter
+class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter\NativeImportFilter
 {
     /**
      * Constructor
@@ -95,39 +96,47 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter
 
         // Handle metadata in subelements.
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
-            case 'id':
-                $this->parseIdentifier($n, $issueGalley);
-                break;
-            case 'label': $issueGalley->setLabel($n->textContent); break;
-            case 'issue_file':
-                $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
-                $issueFile = $issueFileDao->newDataObject();
-                $issueFile->setIssueId($issue->getId());
+                    case 'id':
+                        $this->parseIdentifier($n, $issueGalley);
+                        break;
+                    case 'label': $issueGalley->setLabel($n->textContent);
+                        break;
+                    case 'issue_file':
+                        $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
+                        $issueFile = $issueFileDao->newDataObject();
+                        $issueFile->setIssueId($issue->getId());
 
-                for ($o = $n->firstChild; $o !== null; $o = $o->nextSibling) {
-                    if (is_a($o, 'DOMElement')) {
-                        switch ($o->tagName) {
-                    case 'file_name': $issueFile->setServerFileName($o->textContent); break;
-                    case 'file_type': $issueFile->setFileType($o->textContent); break;
-                    case 'file_size': $issueFile->setFileSize($o->textContent); break;
-                    case 'content_type': $issueFile->setContentType((int)$o->textContent); break;
-                    case 'original_file_name': $issueFile->setOriginalFileName($o->textContent); break;
-                    case 'date_uploaded': $issueFile->setDateUploaded($o->textContent); break;
-                    case 'date_modified': $issueFile->setDateModified($o->textContent); break;
-                    case 'embed':
-                        $issueFileManager = new IssueFileManager($issue->getId());
-                        $filePath = $issueFileManager->getFilesDir() . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
-                        $issueFileManager->writeFile($filePath, base64_decode($o->textContent));
+                        for ($o = $n->firstChild; $o !== null; $o = $o->nextSibling) {
+                            if ($o instanceof \DOMElement) {
+                                switch ($o->tagName) {
+                                    case 'file_name': $issueFile->setServerFileName($o->textContent);
+                                        break;
+                                    case 'file_type': $issueFile->setFileType($o->textContent);
+                                        break;
+                                    case 'file_size': $issueFile->setFileSize($o->textContent);
+                                        break;
+                                    case 'content_type': $issueFile->setContentType((int)$o->textContent);
+                                        break;
+                                    case 'original_file_name': $issueFile->setOriginalFileName($o->textContent);
+                                        break;
+                                    case 'date_uploaded': $issueFile->setDateUploaded($o->textContent);
+                                        break;
+                                    case 'date_modified': $issueFile->setDateModified($o->textContent);
+                                        break;
+                                    case 'embed':
+                                        $issueFileManager = new IssueFileManager($issue->getId());
+                                        $filePath = $issueFileManager->getFilesDir() . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
+                                        $issueFileManager->writeFile($filePath, base64_decode($o->textContent));
+                                        break;
+                                }
+                            }
+                        }
+                        $issueFileId = $issueFileDao->insertObject($issueFile);
+                        $issueGalley->setFileId($issueFileId);
                         break;
                 }
-                    }
-                }
-                $issueFileId = $issueFileDao->insertObject($issueFile);
-                $issueGalley->setFileId($issueFileId);
-                break;
-        }
             }
         }
 

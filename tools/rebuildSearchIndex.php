@@ -15,6 +15,8 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use PKP\db\DAORegistry;
+
 class rebuildSearchIndex extends CommandLineTool
 {
     /**

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/NativeXmlArticleFileFilter.inc.php
+ * @file plugins/importexport/native/filter/NativeXmlArticleFileFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,9 +13,9 @@
  * @brief Class that converts a Native XML document to an article file.
  */
 
-import('lib.pkp.plugins.importexport.native.filter.NativeXmlSubmissionFileFilter');
+namespace APP\plugins\importexport\native\filter;
 
-class NativeXmlArticleFileFilter extends NativeXmlSubmissionFileFilter
+class NativeXmlArticleFileFilter extends \PKP\plugins\importexport\native\filter\NativeXmlSubmissionFileFilter
 {
     //
     // Implement template methods from PersistableFilter
@@ -27,4 +27,8 @@ class NativeXmlArticleFileFilter extends NativeXmlSubmissionFileFilter
     {
         return 'plugins.importexport.native.filter.NativeXmlArticleFileFilter';
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\NativeXmlArticleFileFilter', '\NativeXmlArticleFileFilter');
 }

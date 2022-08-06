@@ -15,7 +15,7 @@
 
 use APP\decision\Decision;
 use APP\facades\Repo;
-
+use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
 use PKP\i18n\LocaleConversion;
 
@@ -54,7 +54,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
      *
      * @param array $submissions Array of submissions
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function &process(&$submissions)
     {
@@ -154,7 +154,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Construct and return a Journal element.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Journal $journal
      * @param Issue $issue
      * @param Submission $submission
@@ -209,13 +209,13 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Generate and return an author node representing the supplied author.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Journal $journal
      * @param Issue $issue
      * @param Submission $submission
      * @param Author $author
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function generateAuthorNode($doc, $journal, $issue, $submission, $author)
     {
@@ -237,11 +237,11 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Generate and return a date element per the PubMed standard.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param string $pubDate
      * @param string $pubStatus
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function generatePubDateDom($doc, $pubDate, $pubStatus)
     {

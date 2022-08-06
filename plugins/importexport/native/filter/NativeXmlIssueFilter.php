@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/NativeXmlIssueFilter.inc.php
+ * @file plugins/importexport/native/filter/NativeXmlIssueFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,11 +13,14 @@
  * @brief Base class that converts a Native XML document to a set of issues
  */
 
+namespace APP\plugins\importexport\native\filter;
+
 use APP\facades\Repo;
+use PKP\db\DAORegistry;
+use PKP\plugins\importexport\PKPImportExportFilter;
+use PKP\plugins\PluginRegistry;
 
-import('lib.pkp.plugins.importexport.native.filter.NativeImportFilter');
-
-class NativeXmlIssueFilter extends NativeImportFilter
+class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\NativeImportFilter
 {
     /**
      * Constructor
@@ -69,7 +72,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Handle a singular element import.
      *
-     * @param DOMElement $node
+     * @param \DOMElement $node
      *
      * @return Issue
      */
@@ -104,7 +107,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
         $deployment->setIssue($issue);
 
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 $this->handleChildElement($n, $issue, $issueExists);
             }
         }
@@ -117,7 +120,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Handle an element whose parent is the issue element.
      *
-     * @param DOMElement $n
+     * @param \DOMElement $n
      * @param Issue $issue
      * @param bool $processOnlyChildren Do not modify the issue itself, only generate child objects
      */
@@ -147,38 +150,37 @@ class NativeXmlIssueFilter extends NativeImportFilter
             }
         } else {
             switch ($n->tagName) {
-            // Otherwise, delegate to specific parsing code
-            case 'id':
-                if (!$processOnlyChildren) {
-                    $this->parseIdentifier($n, $issue);
-                }
-                break;
-            case 'articles':
-                $this->parseArticles($n, $issue);
-                break;
-            case 'issue_galleys':
-                if (!$processOnlyChildren) {
-                    $this->parseIssueGalleys($n, $issue);
-                }
-                break;
-            case 'sections':
-                $this->parseSections($n, $issue);
-                break;
-            case 'covers':
-                if (!$processOnlyChildren) {
-                    import('plugins.importexport.native.filter.NativeFilterHelper');
-                    $nativeFilterHelper = new NativeFilterHelper();
-                    $nativeFilterHelper->parseIssueCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
-                }
-                break;
-            case 'issue_identification':
-                if (!$processOnlyChildren) {
-                    $this->parseIssueIdentification($n, $issue);
-                }
-                break;
-            default:
-                $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
-        }
+                // Otherwise, delegate to specific parsing code
+                case 'id':
+                    if (!$processOnlyChildren) {
+                        $this->parseIdentifier($n, $issue);
+                    }
+                    break;
+                case 'articles':
+                    $this->parseArticles($n, $issue);
+                    break;
+                case 'issue_galleys':
+                    if (!$processOnlyChildren) {
+                        $this->parseIssueGalleys($n, $issue);
+                    }
+                    break;
+                case 'sections':
+                    $this->parseSections($n, $issue);
+                    break;
+                case 'covers':
+                    if (!$processOnlyChildren) {
+                        $nativeFilterHelper = new NativeFilterHelper();
+                        $nativeFilterHelper->parseIssueCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
+                    }
+                    break;
+                case 'issue_identification':
+                    if (!$processOnlyChildren) {
+                        $this->parseIssueIdentification($n, $issue);
+                    }
+                    break;
+                default:
+                    $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+            }
         }
     }
 
@@ -188,7 +190,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an identifier node and set up the issue object accordingly
      *
-     * @param DOMElement $element
+     * @param \DOMElement $element
      * @param Issue $issue
      */
     public function parseIdentifier($element, $issue)
@@ -217,14 +219,14 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an articles element
      *
-     * @param DOMElement $node
+     * @param \DOMElement $node
      * @param Issue $issue
      */
     public function parseIssueGalleys($node, $issue)
     {
         $deployment = $this->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'issue_galley':
                         $this->parseIssueGalley($n, $issue);
@@ -239,13 +241,13 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an issue galley and add it to the issue.
      *
-     * @param DOMElement $n
+     * @param \DOMElement $n
      * @param Issue $issue
      */
     public function parseIssueGalley($n, $issue)
     {
         $currentFilter = PKPImportExportFilter::getFilter('native-xml=>IssueGalley', $this->getDeployment());
-        $issueGalleyDoc = new DOMDocument();
+        $issueGalleyDoc = new \DOMDocument();
         $issueGalleyDoc->appendChild($issueGalleyDoc->importNode($n, true));
         return $currentFilter->execute($issueGalleyDoc);
     }
@@ -253,14 +255,14 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an articles element
      *
-     * @param DOMElement $node
+     * @param \DOMElement $node
      * @param Issue $issue
      */
     public function parseArticles($node, $issue)
     {
         $deployment = $this->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'article':
                         $this->parseArticle($n, $issue);
@@ -275,13 +277,13 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse an article and add it to the issue.
      *
-     * @param DOMElement $n
+     * @param \DOMElement $n
      * @param Issue $issue
      */
     public function parseArticle($n, $issue)
     {
         $currentFilter = PKPImportExportFilter::getFilter('native-xml=>article', $this->getDeployment());
-        $articleDoc = new DOMDocument();
+        $articleDoc = new \DOMDocument();
         $articleDoc->appendChild($articleDoc->importNode($n, true));
         return $currentFilter->execute($articleDoc);
     }
@@ -289,14 +291,14 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse a submission file and add it to the submission.
      *
-     * @param DOMElement $node
+     * @param \DOMElement $node
      * @param Issue $issue
      */
     public function parseSections($node, $issue)
     {
         $deployment = $this->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'section':
                         $this->parseSection($n);
@@ -311,7 +313,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse a section stored in an issue.
      *
-     * @param DOMElement $node
+     * @param \DOMElement $node
      */
     public function parseSection($node)
     {
@@ -334,7 +336,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
 
         $unknownNodes = [];
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'id':
                         // Only support "ignore" advice for now
@@ -382,7 +384,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
     /**
      * Parse out the issue identification and store it in an issue.
      *
-     * @param DOMElement $node
+     * @param \DOMElement $node
      * @param Issue $issue
      * @param bool $allowWarnings Warnings should be suppressed if this function is not being used to populate a new issue
      */
@@ -391,7 +393,7 @@ class NativeXmlIssueFilter extends NativeImportFilter
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'volume':
                         $issue->setVolume($n->textContent);
@@ -567,4 +569,8 @@ class NativeXmlIssueFilter extends NativeImportFilter
             return isset($section) || isset($abbrevSection);
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\NativeXmlIssueFilter', '\NativeXmlIssueFilter');
 }

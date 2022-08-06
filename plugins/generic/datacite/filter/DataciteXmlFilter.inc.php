@@ -17,8 +17,8 @@ use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\submission\Submission;
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
-
 use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
 
@@ -87,12 +87,12 @@ class DataciteXmlFilter extends NativeExportFilter
      *
      * @param Issue|Submission|Galley $pubObject
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function &process(&$pubObject)
     {
         // Create the XML document
-        $doc = new DOMDocument('1.0', 'utf-8');
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $deployment = $this->getDeployment();
@@ -254,9 +254,9 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create and return the root node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createRootNode($doc)
     {
@@ -270,7 +270,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create creators node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Publication $publication
      * @param Galley $galley
@@ -278,7 +278,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param string $publisher
      * @param array $objectLocalePrecedence
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createCreatorsNode($doc, $issue, $publication, $galley, $galleyFile, $publisher, $objectLocalePrecedence)
     {
@@ -320,14 +320,14 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create titles node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Publication $publication
      * @param Galley $galley
      * @param SubmissionFile $galleyFile
      * @param array $objectLocalePrecedence
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createTitlesNode($doc, $issue, $publication, $galley, $galleyFile, $objectLocalePrecedence)
     {
@@ -370,7 +370,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create a date node list.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
@@ -378,7 +378,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param SubmissionFile $galleyFile
      * @param string $publicationDate
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createDatesNode($doc, $issue, $article, $publication, $galley, $galleyFile, $publicationDate)
     {
@@ -457,13 +457,13 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create a resource type node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
      * @param Galley $galley
      * @param SubmissionFile $galleyFile
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile)
     {
@@ -504,12 +504,12 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Generate alternate identifiers node list.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
      * @param Galley $galley
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createAlternateIdentifiersNode($doc, $issue, $article, $galley)
     {
@@ -548,13 +548,13 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Generate related identifiers node list.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
      * @param Galley $galley
      *
-     * @return DOMElement|null
+     * @return ?\DOMElement
      */
     public function createRelatedIdentifiersNode($doc, $issue, $article, $publication, $galley)
     {
@@ -622,15 +622,14 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create a sizes node list.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
      * @param Galley $galley
      * @param SubmissionFile $galleyFile
      *
-     * @return DOMElement|null Can be null if a size
-     *  cannot be identified for the given object.
+     * @return ?\DOMElement Can be null if a size cannot be identified for the given object.
      */
     public function createSizesNode($doc, $issue, $article, $publication, $galley, $galleyFile)
     {
@@ -675,7 +674,7 @@ class DataciteXmlFilter extends NativeExportFilter
     /**
      * Create descriptions node list.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      * @param Submission $article
      * @param Publication $publication
@@ -683,8 +682,7 @@ class DataciteXmlFilter extends NativeExportFilter
      * @param SubmissionFile $galleyFile
      * @param array $objectLocalePrecedence
      *
-     * @return DOMElement|null Can be null if a size
-     *  cannot be identified for the given object.
+     * @return ?\DOMElement Can be null if a size cannot be identified for the given object.
      */
     public function createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence)
     {

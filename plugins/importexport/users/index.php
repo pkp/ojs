@@ -16,7 +16,4 @@
  *
  */
 
-
-require_once('UserImportExportPlugin.inc.php');
-
-return new UserImportExportPlugin();
+return new \APP\plugins\importexport\users\UserImportExportPlugin();

@@ -18,6 +18,7 @@ namespace APP\subscription\form;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\form\Form;
 
 class UserIndividualSubscriptionForm extends Form

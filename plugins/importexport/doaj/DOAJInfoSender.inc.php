@@ -13,6 +13,7 @@
  * @brief Scheduled task to send deposits to DOAJ.
  */
 
+use PKP\plugins\PluginRegistry;
 use PKP\scheduledTask\ScheduledTask;
 use PKP\scheduledTask\ScheduledTaskHelper;
 

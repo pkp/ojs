@@ -16,6 +16,7 @@
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\submission\PKPSubmission;
 
 class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin

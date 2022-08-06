@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/ArticleGalleyNativeXmlFilter.inc.php
+ * @file plugins/importexport/native/filter/ArticleGalleyNativeXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,11 +13,11 @@
  * @brief Class that converts an Galley to a Native XML document.
  */
 
+namespace APP\plugins\importexport\native\filter;
+
 use APP\facades\Repo;
 
-import('lib.pkp.plugins.importexport.native.filter.RepresentationNativeXmlFilter');
-
-class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
+class ArticleGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter\RepresentationNativeXmlFilter
 {
     //
     // Implement template methods from PersistableFilter
@@ -37,10 +37,10 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
      * Create and return a representation node. Extend the parent class
      * with publication format specific data.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Representation $representation
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createRepresentationNode($doc, $representation)
     {
@@ -65,4 +65,8 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter
         }
         return $galleyFiles;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\ArticleGalleyNativeXmlFilter', '\ArticleGalleyNativeXmlFilter');
 }

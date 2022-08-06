@@ -12,6 +12,4 @@
  *
  */
 
-require_once('NativeImportExportPlugin.inc.php');
-
-return new NativeImportExportPlugin();
+return new \APP\plugins\importexport\native\NativeImportExportPlugin();

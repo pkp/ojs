@@ -13,9 +13,9 @@
  * @brief LDAP authentication plugin.
  */
 
-use PKP\plugins\AuthPlugin;
-
+use PKP\db\DAORegistry;
 use PKP\facades\Locale;
+use PKP\plugins\AuthPlugin;
 
 class LDAPAuthPlugin extends AuthPlugin
 {

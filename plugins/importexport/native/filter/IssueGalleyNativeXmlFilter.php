@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/IssueGalleyNativeXmlFilter.inc.php
+ * @file plugins/importexport/native/filter/IssueGalleyNativeXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,11 +13,12 @@
  * @brief Base class that converts a set of issue galleys to a Native XML document
  */
 
-import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
+namespace APP\plugins\importexport\native\filter;
 
 use APP\file\IssueFileManager;
+use PKP\db\DAORegistry;
 
-class IssueGalleyNativeXmlFilter extends NativeExportFilter
+class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
     /**
      * Constructor
@@ -51,12 +52,12 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
      *
      * @param array $issueGalleys Array of issue galleys
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function &process(&$issueGalleys)
     {
         // Create the XML document
-        $doc = new DOMDocument('1.0');
+        $doc = new \DOMDocument('1.0');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $deployment = $this->getDeployment();
@@ -79,10 +80,10 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Create and return an issueGalley node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param IssueGalley $issueGalley
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createIssueGalleyNode($doc, $issueGalley)
     {
@@ -102,8 +103,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Add the issue file to its DOM element.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueGalleyNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueGalleyNode
      * @param IssueGalley $issueGalley
      */
     public function addFile($doc, $issueGalleyNode, $issueGalley)
@@ -136,8 +137,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add identifier nodes to an issue galley node.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueGalleyNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueGalleyNode
      * @param IssueGalley $issueGalley
      */
     public function addIdentifiers($doc, $issueGalleyNode, $issueGalley)
@@ -156,4 +157,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter
             $node->setAttribute('advice', 'update');
         }
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\IssueGalleyNativeXmlFilter', '\IssueGalleyNativeXmlFilter');
 }

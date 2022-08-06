@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/IssueNativeXmlFilter.inc.php
+ * @file plugins/importexport/native/filter/IssueNativeXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,11 +13,14 @@
  * @brief Base class that converts a set of issues to a Native XML document
  */
 
+namespace APP\plugins\importexport\native\filter;
+
 use APP\facades\Repo;
+use PKP\db\DAORegistry;
+use PKP\plugins\importexport\PKPImportExportFilter;
+use PKP\plugins\PluginRegistry;
 
-import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
-
-class IssueNativeXmlFilter extends NativeExportFilter
+class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
     /**
      * Constructor
@@ -51,12 +54,12 @@ class IssueNativeXmlFilter extends NativeExportFilter
      *
      * @param array $issues Array of issues
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function &process(&$issues)
     {
         // Create the XML document
-        $doc = new DOMDocument('1.0');
+        $doc = new \DOMDocument('1.0');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $deployment = $this->getDeployment();
@@ -84,10 +87,10 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and return an issue node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Issue $issue
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createIssueNode($doc, $issue)
     {
@@ -98,24 +101,22 @@ class IssueNativeXmlFilter extends NativeExportFilter
         $issueNode = $doc->createElementNS($deployment->getNamespace(), 'issue');
         $this->addIdentifiers($doc, $issueNode, $issue);
 
-        $issueNode->setAttribute('published', $issue->getPublished());
+        $issueNode->setAttribute('published', (int) $issue->getPublished());
 
         $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
         $isCurrentIssue = $currentIssue != null && $issue->getId() == $currentIssue->getId();
 
-        $issueNode->setAttribute('current', $isCurrentIssue);
+        $issueNode->setAttribute('current', (int) $isCurrentIssue);
         $issueNode->setAttribute('access_status', $issue->getAccessStatus());
         $issueNode->setAttribute('url_path', $issue->getData('urlPath'));
 
         $this->createLocalizedNodes($doc, $issueNode, 'description', $issue->getDescription(null));
-        import('plugins.importexport.native.filter.NativeFilterHelper');
         $nativeFilterHelper = new NativeFilterHelper();
         $issueNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 
         $this->addDates($doc, $issueNode, $issue);
         $this->addSections($doc, $issueNode, $issue);
         // cover images
-        import('plugins.importexport.native.filter.NativeFilterHelper');
         $nativeFilterHelper = new NativeFilterHelper();
         $coversNode = $nativeFilterHelper->createIssueCoversNode($this, $doc, $issue);
         if ($coversNode) {
@@ -131,8 +132,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add identifier nodes to an issue node.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
      * @param Issue $issue
      */
     public function addIdentifiers($doc, $issueNode, $issue)
@@ -161,12 +162,12 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Add a single pub ID element for a given plugin to the document.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
      * @param Issue $issue
      * @param PubIdPlugin $pubIdPlugin
      *
-     * @return DOMElement|null
+     * @return \DOMElement|null
      */
     public function addPubIdentifier($doc, $issueNode, $issue, $pubIdPlugin)
     {
@@ -184,8 +185,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add various date nodes to an issue node.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
      * @param Issue $issue
      */
     public function addDates($doc, $issueNode, $issue)
@@ -212,8 +213,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add articles to an issue node.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
      * @param Issue $issue
      */
     public function addArticles($doc, $issueNode, $issue)
@@ -229,7 +230,7 @@ class IssueNativeXmlFilter extends NativeExportFilter
         )->toArray();
 
         $articlesDoc = $currentFilter->execute($submissions);
-        if ($articlesDoc->documentElement instanceof DOMElement) {
+        if ($articlesDoc->documentElement instanceof \DOMElement) {
             $clone = $doc->importNode($articlesDoc->documentElement, true);
             $issueNode->appendChild($clone);
         }
@@ -238,8 +239,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Create and add issue galleys to an issue node.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
      * @param Issue $issue
      */
     public function addIssueGalleys($doc, $issueNode, $issue)
@@ -250,7 +251,7 @@ class IssueNativeXmlFilter extends NativeExportFilter
         $issue = $issueGalleyDao->getByIssueId($issue->getId());
         $issueGalleysDoc = $currentFilter->execute($issue);
 
-        if ($issueGalleysDoc && $issueGalleysDoc->documentElement instanceof DOMElement) {
+        if ($issueGalleysDoc && $issueGalleysDoc->documentElement instanceof \DOMElement) {
             $clone = $doc->importNode($issueGalleysDoc->documentElement, true);
             $issueNode->appendChild($clone);
         } else {
@@ -264,8 +265,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
     /**
      * Add the sections to the Issue DOM element.
      *
-     * @param DOMDocument $doc
-     * @param DOMElement $issueNode
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
      * @param Issue $issue
      */
     public function addSections($doc, $issueNode, $issue)
@@ -310,4 +311,8 @@ class IssueNativeXmlFilter extends NativeExportFilter
 
         $issueNode->appendChild($sectionsNode);
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\IssueNativeXmlFilter', '\IssueNativeXmlFilter');
 }

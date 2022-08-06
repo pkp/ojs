@@ -15,6 +15,7 @@
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 use PKP\plugins\ImportExportPlugin;
 

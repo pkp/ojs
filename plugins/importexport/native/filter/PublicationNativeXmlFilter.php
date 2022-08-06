@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/PublicationNativeXmlFilter.inc.php
+ * @file plugins/importexport/native/filter/PublicationNativeXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,11 +13,12 @@
  * @brief Class that converts a Publication to a Native XML document.
  */
 
+namespace APP\plugins\importexport\native\filter;
+
 use APP\facades\Repo;
+use PKP\db\DAORegistry;
 
-import('lib.pkp.plugins.importexport.native.filter.PKPPublicationNativeXmlFilter');
-
-class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
+class PublicationNativeXmlFilter extends \PKP\plugins\importexport\native\filter\PKPPublicationNativeXmlFilter
 {
     //
     // Implement template methods from PersistableFilter
@@ -50,10 +51,10 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
     /**
      * Create and return a publication node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param Publication $entity
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createEntityNode($doc, $entity)
     {
@@ -72,7 +73,6 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
         // add issue identification element
         if ($entity->getData('issueId') && !$deployment->getIssue()) {
             $issue = Repo::issue()->get($entity->getData('issueId'));
-            import('plugins.importexport.native.filter.NativeFilterHelper');
             $nativeFilterHelper = new NativeFilterHelper();
             $entityNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
         }
@@ -83,7 +83,6 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
         }
 
         // cover images
-        import('plugins.importexport.native.filter.NativeFilterHelper');
         $nativeFilterHelper = new NativeFilterHelper();
         $coversNode = $nativeFilterHelper->createPublicationCoversNode($this, $doc, $entity);
         if ($coversNode) {
@@ -92,4 +91,8 @@ class PublicationNativeXmlFilter extends PKPPublicationNativeXmlFilter
 
         return $entityNode;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\PublicationNativeXmlFilter', '\PublicationNativeXmlFilter');
 }

@@ -15,6 +15,8 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use PKP\plugins\PluginRegistry;
+
 class importExport extends CommandLineTool
 {
     public $command;

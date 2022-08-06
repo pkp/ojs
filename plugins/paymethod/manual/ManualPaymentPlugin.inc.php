@@ -14,6 +14,7 @@
  */
 
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
 use PKP\plugins\PaymethodPlugin;

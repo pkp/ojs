@@ -16,6 +16,7 @@
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
 use PKP\plugins\GatewayPlugin;
 
 class ResolverPlugin extends GatewayPlugin

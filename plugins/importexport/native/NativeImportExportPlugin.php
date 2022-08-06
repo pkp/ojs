@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/NativeImportExportPlugin.inc.php
+ * @file plugins/importexport/native/NativeImportExportPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -13,12 +13,12 @@
  * @brief Native XML import/export plugin
  */
 
-import('lib.pkp.plugins.importexport.native.PKPNativeImportExportPlugin');
+namespace APP\plugins\importexport\native;
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 
-class NativeImportExportPlugin extends PKPNativeImportExportPlugin
+class NativeImportExportPlugin extends \PKP\plugins\importexport\native\PKPNativeImportExportPlugin
 {
     /**
      * @see ImportExportPlugin::display()
@@ -105,7 +105,7 @@ class NativeImportExportPlugin extends PKPNativeImportExportPlugin
         $filter = 'native-xml=>issue';
         // is this articles import:
         $xmlString = file_get_contents($xmlFile);
-        $document = new DOMDocument();
+        $document = new \DOMDocument();
         $document->loadXml($xmlString);
         if (in_array($document->documentElement->tagName, ['article', 'articles'])) {
             $filter = 'native-xml=>article';

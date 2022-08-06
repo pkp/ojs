@@ -16,9 +16,9 @@
  */
 
 use APP\template\TemplateManager;
-
-use PKP\oai\OAIMetadataFormat;
 use PKP\i18n\LocaleConversion;
+use PKP\oai\OAIMetadataFormat;
+use PKP\plugins\PluginRegistry;
 
 class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
 {

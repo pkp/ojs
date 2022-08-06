@@ -26,6 +26,7 @@ use APP\journal\Journal;
 use APP\search\ArticleSearch;
 use Illuminate\Support\Facades\App;
 use PKP\core\PKPRouter;
+use PKP\db\DAORegistry;
 
 class ArticleSearchTest extends PKPTestCase
 {

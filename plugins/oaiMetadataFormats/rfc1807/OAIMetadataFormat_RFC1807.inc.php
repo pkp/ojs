@@ -15,9 +15,10 @@
  * @brief OAI metadata format class -- RFC 1807.
  */
 
-use PKP\oai\OAIMetadataFormat;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
+use PKP\db\DAORegistry;
+use PKP\oai\OAIMetadataFormat;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
@@ -51,8 +52,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         // Format creators
         $creators = [];
         $authors = Repo::author()->getSubmissionAuthors($article);
-        foreach ($authors as $author)
-        {
+        foreach ($authors as $author) {
             $authorName = $author->getFullName(false, true);
             $affiliation = $author->getLocalizedAffiliation();
             if (!empty($affiliation)) {
@@ -109,7 +109,6 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
      * Format XML for single RFC 1807 element.
      *
      * @param string $name
-     * @param mixed $value
      */
     public function formatElement($name, $value)
     {

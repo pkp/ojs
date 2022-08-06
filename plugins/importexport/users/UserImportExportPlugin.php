@@ -13,20 +13,12 @@
  * @brief User XML import/export plugin
  */
 
-import('lib.pkp.plugins.importexport.users.PKPUserImportExportPlugin');
+namespace APP\plugins\importexport\users;
 
-class UserImportExportPlugin extends PKPUserImportExportPlugin
+use PKP\db\DAORegistry;
+
+class UserImportExportPlugin extends \PKP\plugins\importexport\users\PKPUserImportExportPlugin
 {
-    /**
-     * @copydoc Plugin::register()
-     *
-     * @param null|mixed $mainContextId
-     */
-    public function register($category, $path, $mainContextId = null)
-    {
-        return parent::register($category, $path, $mainContextId);
-    }
-
     /**
      * @copydoc PKPImportExportPlugin::usage
      */

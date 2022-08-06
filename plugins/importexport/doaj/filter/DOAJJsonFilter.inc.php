@@ -14,6 +14,7 @@
  */
 
 use APP\facades\Repo;
+use PKP\db\DAORegistry;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
 class DOAJJsonFilter extends PKPImportExportFilter
@@ -150,7 +151,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
         ];
         // Authors: name and affiliation
         $article['bibjson']['author'] = [];
-		$articleAuthors = Repo::author()->getSubmissionAuthors($pubObject);
+        $articleAuthors = Repo::author()->getSubmissionAuthors($pubObject);
         foreach ($articleAuthors as $articleAuthor) {
             $author = ['name' => $articleAuthor->getFullName(false)];
             $affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());

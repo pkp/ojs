@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/AuthorNativeXmlFilter.inc.php
+ * @file plugins/importexport/native/filter/AuthorNativeXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,9 +13,9 @@
  * @brief Class that converts a Author to a Native XML document.
  */
 
-import('lib.pkp.plugins.importexport.native.filter.PKPAuthorNativeXmlFilter');
+namespace APP\plugins\importexport\native\filter;
 
-class AuthorNativeXmlFilter extends PKPAuthorNativeXmlFilter
+class AuthorNativeXmlFilter extends \PKP\plugins\importexport\native\filter\PKPAuthorNativeXmlFilter
 {
     //
     // Implement template methods from PersistableFilter
@@ -27,4 +27,8 @@ class AuthorNativeXmlFilter extends PKPAuthorNativeXmlFilter
     {
         return 'plugins.importexport.native.filter.AuthorNativeXmlFilter';
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\AuthorNativeXmlFilter', '\AuthorNativeXmlFilter');
 }

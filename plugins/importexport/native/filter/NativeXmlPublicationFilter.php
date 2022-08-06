@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/native/filter/NativeXmlPublicationFilter.inc.php
+ * @file plugins/importexport/native/filter/NativeXmlPublicationFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,11 +13,14 @@
  * @brief Class that converts a Native XML document to a set of articles.
  */
 
+namespace APP\plugins\importexport\native\filter;
+
+use APP\core\Application;
 use APP\facades\Repo;
+use PKP\db\DAORegistry;
+use PKP\plugins\importexport\PKPImportExportFilter;
 
-import('lib.pkp.plugins.importexport.native.filter.NativeXmlPKPPublicationFilter');
-
-class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
+class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter
 {
     //
     // Implement template methods from PersistableFilter
@@ -108,7 +111,6 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
                 $publication->setData('pages', $n->textContent);
                 break;
             case 'covers':
-                import('plugins.importexport.native.filter.NativeFilterHelper');
                 $nativeFilterHelper = new NativeFilterHelper();
                 $nativeFilterHelper->parsePublicationCovers($this, $n, $publication);
                 break;
@@ -202,7 +204,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
         $vol = $num = $year = null;
         $titles = [];
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if (is_a($n, 'DOMElement')) {
+            if ($n instanceof \DOMElement) {
                 switch ($n->tagName) {
                     case 'volume':
                         $vol = $n->textContent;
@@ -271,4 +273,8 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter
 
         return $issue;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\NativeXmlPublicationFilter', '\NativeXmlPublicationFilter');
 }
