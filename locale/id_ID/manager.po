@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2022-05-13 01:58+0000\n"
+"PO-Revision-Date: 2022-08-06 15:07+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "id_ID/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Pengarsipan"
@@ -266,11 +266,10 @@ msgstr "Editor Bagian ini"
 msgid "manager.sections.confirmDelete"
 msgstr "Apakah Anda yakin ingin menghapus bagian ini secara permanen?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
-"Sebelum bagian ini dapat dihapus, Anda harus memindah artikel yang "
-"dipublikasikan di bagian ini ke bagian lain."
+"Sebelum bagian ini dapat dihapus, Anda harus memindahkan artikel yang masuk "
+"ke bagian ini ke bagian lain."
 
 msgid "manager.sections.create"
 msgstr "Tambah Bagian"
@@ -2166,9 +2165,10 @@ msgstr ""
 "Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs "
 "dalam OJS:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Silahkan pilih objek DOIs yang harus dibuatkan."
+msgstr ""
+"Silahkan pilih artikel yang ingin diberi DOI. Umumnya jurnal memberikan doi "
+"untuk artikel, namun bisa juga doi diberikan pada item yang diterbitkan."
 
 msgid "doi.manager.settings.explainDois"
 msgstr ""
@@ -2457,3 +2457,15 @@ msgstr ""
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Galei Artikel, misalnya PDF"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institusi"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Pilih institusi yang valid."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Institusi harus dibuat terlebih dahulu sebelum membuat sibskripsi baru."
+
+msgid "stats.issueTOCViews"
+msgstr "Tampilan Dafis Edisi"
