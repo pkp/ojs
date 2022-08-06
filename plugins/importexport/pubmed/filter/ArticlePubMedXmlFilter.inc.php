@@ -13,8 +13,13 @@
  * @brief Class that converts a Article to a PubMed XML document.
  */
 
+use APP\author\Author;
 use APP\decision\Decision;
 use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\journal\Journal;
+use APP\submission\Submission;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
 use PKP\i18n\LocaleConversion;
@@ -71,11 +76,11 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $rootNode = $doc->createElement('ArticleSet');
         foreach ($submissions as $submission) {
             // Fetch associated objects
-            if (!$journal || $journal->getId() != $submission->getContextId()) {
+            if ($journal?->getId() !== $submission->getContextId()) {
                 $journal = $journalDao->getById($submission->getContextId());
             }
             $issue = Repo::issue()->getBySubmissionId($submission->getId());
-            $issue = $issue->getJournalId() == $journal->getId() ? $issue : null;
+            $issue = $issue?->getJournalId() === $journal->getId() ? $issue : null;
 
             $articleNode = $doc->createElement('Article');
             $articleNode->appendChild($this->createJournalNode($doc, $journal, $issue, $submission));
@@ -107,7 +112,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
 
             $authorListNode = $doc->createElement('AuthorList');
-            foreach ((array) $publication->getData('authors') as $author) {
+            foreach ($publication->getData('authors') ?? [] as $author) {
                 $authorListNode->appendChild($this->generateAuthorNode($doc, $journal, $issue, $submission, $author));
             }
             $articleNode->appendChild($authorListNode);
@@ -130,9 +135,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                     ->getCollector()
                     ->filterBySubmissionIds([$submission->getId()])
             );
-            $editorDecision = $editDecisions->first(function (Decision $decision, $key) {
-                return $decision->getData('decision') === Decision::ACCEPT;
-            });
+            $editorDecision = $editDecisions->first(fn (Decision $decision, $key) => $decision->getData('decision') === Decision::ACCEPT);
 
             if ($editorDecision) {
                 $historyNode->appendChild($this->generatePubDateDom($doc, $editorDecision->getData('dateDecided'), 'accepted'));
@@ -192,13 +195,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $journalNode->appendChild($doc->createElement('Issue'))->appendChild($doc->createTextNode($issue->getNumber()));
         }
 
-        $datePublished = null;
-        if ($submission) {
-            $datePublished = $submission->getCurrentPublication()->getData('datePublished');
-        }
-        if (!$datePublished && $issue) {
-            $datePublished = $issue->getDatePublished();
-        }
+        $datePublished = $submission->getCurrentPublication()?->getData('datePublished')
+            ?: $issue?->getDatePublished();
         if ($datePublished) {
             $journalNode->appendChild($this->generatePubDateDom($doc, $datePublished, 'epublish'));
         }

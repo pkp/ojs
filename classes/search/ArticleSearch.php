@@ -285,7 +285,7 @@ class ArticleSearch extends SubmissionSearch
 
                 // Get the issue, storing in cache if necessary.
                 $issueId = $publishedSubmission->getCurrentPublication()->getData('issueId');
-                if (!isset($issueCache[$issueId])) {
+                if ($issueId && !isset($issueCache[$issueId])) {
                     $issue = Repo::issue()->get($issueId);
                     $issueCache[$issueId] = $issue;
                     $issueAction = new IssueAction();

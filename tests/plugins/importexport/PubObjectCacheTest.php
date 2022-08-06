@@ -18,12 +18,13 @@
  * is used symlinked in both plug-ins.
  */
 
-import('lib.pkp.tests.PKPTestCase');
-import('plugins.importexport.medra.classes.PubObjectCache');
+namespace APP\tests\plugins\importexport;
 
 use APP\facades\Repo;
 use APP\issue\Issue;
-use PKP\submission\Submission;
+use APP\plugins\PubObjectCache;
+use APP\submission\Submission;
+use PKP\tests\PKPTestCase;
 
 class PubObjectCacheTest extends PKPTestCase
 {

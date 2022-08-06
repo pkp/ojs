@@ -1,7 +1,6 @@
 ./files/
 ./tests/
-./lib/pkp/tests/phpunit-env1.xml
-./lib/pkp/tests/phpunit-env2.xml
+./lib/pkp/tests/phpunit.xml
 ./lib/pkp/lib
 ./lib/pkp/tests/classes/xslt
 ./lib/pkp/js/lib

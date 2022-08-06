@@ -117,7 +117,7 @@
 
 <p>CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.</p>
 
-<p><a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/lib/pkp/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a></p>
+<p><a href="https://pkp.sfu.ca/"><img src="{$baseUrl}/lib/pkp/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a></p>
 <p>Open Journal Systems was developed by the Public Knowledge Project.</p>
 
 </div>
