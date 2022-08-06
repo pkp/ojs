@@ -167,3 +167,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
         }
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\importexport\native\filter\NativeXmlIssueGalleyFilter', '\NativeXmlIssueGalleyFilter');
+}

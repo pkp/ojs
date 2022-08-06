@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
+ * @file plugins/generic/usageEvent/UsageEventPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -13,12 +13,12 @@
  * @brief Implement application specifics for generating usage events.
  */
 
-import('lib.pkp.plugins.generic.usageEvent.PKPUsageEventPlugin');
+namespace APP\plugins\generic\usageEvent;
 
 use APP\facades\Repo;
 use APP\submission\Submission;
 
-class UsageEventPlugin extends PKPUsageEventPlugin
+class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlugin
 {
     //
     // Implement methods from PKPUsageEventPlugin.
