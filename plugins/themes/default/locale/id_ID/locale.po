@@ -1,15 +1,16 @@
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-28 09:51+0000\n"
+"PO-Revision-Date: 2022-08-06 15:07+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/id/>\n"
+"themes-default/id_ID/>\n"
 "Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Tampilkan gambar beranda sebagai latar header."
@@ -72,3 +73,24 @@ msgstr "Tema ini menggunakan tema bawaan."
 
 msgid "plugins.themes.default.name"
 msgstr "Tema Bawaan"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Jangan tampilkan bagan statistik aktivitas naskah kepada pembaca."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Pilihan tampilan statistik penggunaan"
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Gunakan diagram batang untuk menampilkan statistik penggunaan."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Gunakan diagram garis until tampilan statistik penggunaan."
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Data unduhan tidak tersedia."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Mei Jun Jul Agu Sep Okt Nov Des"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Unduhan"
