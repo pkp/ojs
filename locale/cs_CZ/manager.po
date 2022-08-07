@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2022-05-19 14:02+0000\n"
+"PO-Revision-Date: 2022-08-08 09:15+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr ""
@@ -1582,7 +1582,6 @@ msgstr "Individuální (uživatelé jsou ověřování pomocí přihlášení)"
 msgid "manager.sections.confirmDelete"
 msgstr "Jste si jisti, že chcete natrvalo vymazat tuto sekci?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Než budete moci smazat tuto sekci, musíte přesunout všechny články z této "
@@ -2223,9 +2222,10 @@ msgstr ""
 "Naonfigurujte, prosím, plugin DOI, abyste mohli spravovat a používat DOI v "
 "OJS:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Zvolte, prosím, které objekty mají mít přiděleno DOI."
+msgstr ""
+"Vyberte, kterým položkám bude přiřazen DOI. Většina časopisů přiděluje DOI "
+"článkům, ale můžete si přát přidělit DOI všem publikovaným položkám."
 
 msgid "doi.manager.settings.explainDois"
 msgstr ""
@@ -2497,3 +2497,21 @@ msgid "manager.statistics.reports.filters.byObject.description"
 msgstr ""
 "Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, "
 "ostatní sazebnice) a/nebo podle jednoho, nebo více id."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Instituce"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Zvolte, prosím, platnou instituci."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Před provedením nového předplatného musí být vytvořena instituce."
+
+msgid "stats.issueTOCViews"
+msgstr "Náhledy obsahu čísla"
+
+msgid "stats.issueGalleyViews"
+msgstr "Náhledy sazebnic čísla"
+
+msgid "manager.institutions.noContext"
+msgstr "Časopis této instituce nelze nalézt."
