@@ -43,14 +43,10 @@
 	<email key="EDITOR_DECISION_INITIAL_DECLINE" subject="emails.editorDecisionInitialDecline.subject" body="emails.editorDecisionInitialDecline.body"/>
 	<email key="EDITOR_RECOMMENDATION" subject="emails.editorRecommendation.subject" body="emails.editorRecommendation.body"/>
 	<email key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" subject="emails.decision.notifyOtherAuthors.subject" body="emails.decision.notifyOtherAuthors.body"/>
-	<email key="EDITOR_DECISION_BACK_TO_COPYEDITING" subject="emails.editorDecisionBackToCopyediting.subject" body="emails.editorDecisionBackToCopyediting.body"/>
-	<email key="EDITOR_DECISION_BACK_TO_REVIEW" subject="emails.editorDecisionBackToReview.subject" body="emails.editorDecisionBackToReview.body"/>
-	<email key="EDITOR_DECISION_BACK_TO_SUBMISSION" subject="emails.editorDecisionBackToSubmission.subject" body="emails.editorDecisionBackToSubmission.body"/>
 	<email key="EDITOR_DECISION_NEW_ROUND" subject="emails.editorDecisionNewReviewRound.subject" body="emails.editorDecisionNewReviewRound.body"/>
 	<email key="EDITOR_DECISION_REVERT_DECLINE" subject="emails.editorDecisionRevertDecline.subject" body="emails.editorDecisionRevertDecline.body"/>
 	<email key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" subject="emails.editorDecisionRevertInitialDecline.subject" body="emails.editorDecisionRevertInitialDecline.body"/>
 	<email key="EDITOR_DECISION_SKIP_REVIEW" subject="emails.editorDecisionSkipReview.subject" body="emails.editorDecisionSkipReview.body"/>
-	<email key="EDITOR_DECISION_BACK_TO_PREVIOUS_REVIEW_ROUND_NOTIFY_AUTHOR" subject="emails.editorDecisionBackToPreviousReviewRoundNotifyAuthor.subject" body="emails.editorDecisionBackToPreviousReviewRoundNotifyAuthor.body"/>
 	<email key="EDITOR_DECISION_BACK_FROM_PRODUCTION" subject="emails.editorDecisionBackFromProduction.subject" body="emails.editorDecisionBackFromProduction.body"/>
 	<email key="EDITOR_DECISION_BACK_FROM_COPYEDITING" subject="emails.editorDecisionBackFromCopyediting.subject" body="emails.editorDecisionBackFromCopyediting.body"/>
 	<email key="EDITOR_DECISION_BACK_FROM_EXTERNAL_REVIEW" subject="emails.editorDecisionBackFromExternalReview.subject" body="emails.editorDecisionBackFromExternalReview.body"/>
