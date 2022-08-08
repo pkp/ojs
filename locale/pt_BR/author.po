@@ -1,9 +1,10 @@
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2020-11-30 15:32+0000\n"
+"PO-Revision-Date: 2022-08-09 09:59+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/pt_BR/>\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "Cinco Passos para a Submissão"
@@ -251,9 +252,10 @@ msgstr "Texto Original"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Descrição"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Apresentar documento aos avaliadores (sem metadados), pois não irá comprometer a avaliação pelos pares cega."
+msgstr ""
+"Apresentar documento aos avaliadores (sem metadados), pois não irá "
+"comprometer a avaliação cega pelos pares."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Utilizar somente com material publicado formalmente."
