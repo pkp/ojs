@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-08-05 21:04+0000\n"
+"PO-Revision-Date: 2022-08-08 13:46+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
@@ -466,10 +466,9 @@ msgstr ""
 "seu <a href=\"{$authorSubmissionUrl}\">painel de submissão</a>.</p><p "
 ">Atenciosamente,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
-"A submissão {$submissionId} está pronto para Editoração em {$contextAcronym}"
+"A submissão {$submissionId} está pronta para Editoração em {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
