@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup plugins_oaiMetadataFormats_dc_tests Dublin Core OAI Plugin
  */
@@ -18,7 +19,7 @@
  * @brief Test class for OAIMetadataFormat_DC.
  */
 
-namespace APP\plugins\oaiMetadataFormats\dc;
+namespace APP\plugins\oaiMetadataFormats\dc\tests;
 
 use APP\author\Author;
 use APP\core\Application;
@@ -28,11 +29,11 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\Section;
 use APP\oai\ojs\OAIDAO;
+use APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormat_DC;
+use APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormatPlugin_DC;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
-use OAIMetadataFormat_DC;
-use OAIMetadataFormatPlugin_DC;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\author\Repository as AuthorRepository;
 use PKP\core\PKPRouter;
