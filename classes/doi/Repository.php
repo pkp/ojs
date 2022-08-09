@@ -25,7 +25,7 @@ use APP\submission\Submission;
 use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\db\DAORegistry;
-use PKP\doi\exceptions\DoiCreationException;
+use PKP\doi\exceptions\DoiActionException;
 use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Representation;
@@ -44,7 +44,7 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given publication.
      *
-     * @throws DoiCreationException
+     * @throws DoiActionException
      */
     public function mintPublicationDoi(Publication $publication, Submission $submission, Context $context): int
     {
@@ -56,25 +56,25 @@ class Repository extends \PKP\doi\Repository
         // If not using default suffix, additional checks are required
         $issueId = $publication->getData('issueId');
         if ($issueId === null) {
-            throw new DoiCreationException(
+            throw new DoiActionException(
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
                 $publication->getLocalizedFullTitle(),
-                DoiCreationException::PUBLICATION_MISSING_ISSUE
+                DoiActionException::PUBLICATION_MISSING_ISSUE
             );
         }
 
         $issue = Repo::issue()->get($publication->getData('issueId'));
         if ($issue === null) {
-            throw new DoiCreationException(
+            throw new DoiActionException(
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
                 $publication->getLocalizedFullTitle(),
-                DoiCreationException::PUBLICATION_MISSING_ISSUE
+                DoiActionException::PUBLICATION_MISSING_ISSUE
             );
         } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            throw new DoiCreationException(
+            throw new DoiActionException(
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
                 $publication->getLocalizedFullTitle(),
-                DoiCreationException::PUBLICATION_MISSING_ISSUE
+                DoiActionException::PUBLICATION_MISSING_ISSUE
             );
         }
 
@@ -86,7 +86,7 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given galley
      *
-     * @throws DoiCreationException
+     * @throws DoiActionException
      */
     public function mintGalleyDoi(Galley $galley, Publication $publication, Submission $submission, Context $context): int
     {
@@ -99,16 +99,16 @@ class Repository extends \PKP\doi\Repository
         $issue = Repo::issue()->getBySubmissionId($submission->getId());
 
         if ($issue === null) {
-            throw new DoiCreationException(
+            throw new DoiActionException(
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
                 $galley->getLabel(),
-                DoiCreationException::REPRESENTATION_MISSING_ISSUE
+                DoiActionException::REPRESENTATION_MISSING_ISSUE
             );
         } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            throw new DoiCreationException(
+            throw new DoiActionException(
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
                 $galley->getLabel(),
-                DoiCreationException::REPRESENTATION_MISSING_ISSUE
+                DoiActionException::REPRESENTATION_MISSING_ISSUE
             );
         }
 
@@ -120,15 +120,15 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given Issue
      *
-     * @throws DoiCreationException
+     * @throws DoiActionException
      */
     public function mintIssueDoi(Issue $issue, Context $context): int
     {
         if ($context->getId() != $issue->getJournalId()) {
-            throw new DoiCreationException(
+            throw new DoiActionException(
                 $issue->getLocalizedTitle(),
                 $issue->getLocalizedTitle(),
-                DoiCreationException::INCORRECT_ISSUE_CONTEXT
+                DoiActionException::INCORRECT_ISSUE_CONTEXT
             );
         }
 

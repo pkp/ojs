@@ -20,7 +20,8 @@ use APP\facades\Repo;
 use APP\Jobs\Doi\DepositIssue;
 use PKP\context\Context;
 use PKP\core\APIResponse;
-use PKP\doi\exceptions\DoiCreationException;
+use PKP\doi\Doi;
+use PKP\doi\exceptions\DoiActionException;
 use PKP\security\Role;
 
 use Slim\Http\Request as SlimRequest;
@@ -58,7 +59,17 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
                     'handler' => [$this, 'markIssuesRegistered'],
                     'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
                 ],
-            ]
+                [
+                    'pattern' => $this->getEndpointPattern() . '/issues/markUnregistered',
+                    'handler' => [$this, 'markIssuesUnregistered'],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
+                ],
+                [
+                    'pattern' => $this->getEndpointPattern() . '/issues/markStale',
+                    'handler' => [$this, 'markIssuesStale'],
+                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
+                ],
+            ],
         ]);
         parent::__construct();
     }
@@ -175,10 +186,24 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 
         $invalidIds = array_diff($requestIds, $validIds);
         if (count($invalidIds)) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.invalidPubObjectIncluded');
+            $failedDoiActions = array_map(function (int $id) {
+                $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
+                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::ISSUE_NOT_PUBLISHED);
+            }, $invalidIds);
+
+            return $response->withJson(
+                [
+                    'failedDoiActions' => array_map(
+                        function (DoiActionException $item) {
+                            return $item->getMessage();
+                        },
+                        $failedDoiActions
+                    )
+                ],
+                400
+            );
         }
 
-        $idsWithErrors = [];
         foreach ($requestIds as $id) {
             $doiIds = Repo::doi()->getDoisForIssue($id);
             foreach ($doiIds as $doiId) {
@@ -186,8 +211,103 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             }
         }
 
-        if (!empty($idsWithErrors)) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.markRegisteredFailed');
+        return $response->withStatus(200);
+    }
+
+    /**
+     * Mark issues DOIs as no longer registered with a DOI registration agency.
+     */
+    public function markIssuesUnregistered(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    {
+        // Retrieve issues
+        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        if (!count($requestIds)) {
+            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+        }
+
+        $context = $this->getRequest()->getContext();
+
+        $validIds = Repo::issue()->getIds(
+            Repo::issue()
+                ->getCollector()
+                ->filterByContextIds([$context->getId()])
+        )->toArray();
+
+        $invalidIds = array_diff($requestIds, $validIds);
+        if (count($invalidIds)) {
+            $failedDoiActions = array_map(function (int $id) {
+                $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
+                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_ISSUE_CONTEXT);
+            }, $invalidIds);
+
+            return $response->withJson(
+                [
+                    'failedDoiActions' => array_map(
+                        function (DoiActionException $item) {
+                            return $item->getMessage();
+                        },
+                        $failedDoiActions
+                    )
+                ],
+                400
+            );
+        }
+
+        foreach ($requestIds as $id) {
+            $doiIds = Repo::doi()->getDoisForIssue($id);
+            foreach ($doiIds as $doiId) {
+                Repo::doi()->markUnregistered($doiId);
+            }
+        }
+
+        return $response->withStatus(200);
+    }
+
+    /**
+     * Mark submission DOIs as stale, indicating a need to be resubmitted to registration agency with updated metadata.
+     */
+    public function markIssuesStale(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    {
+        // Retrieve issues
+        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        if (!count($requestIds)) {
+            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+        }
+
+        $context = $this->getRequest()->getContext();
+
+        $validIds = Repo::issue()->getIds(
+            Repo::issue()
+                ->getCollector()
+                ->filterByContextIds([$context->getId()])
+                ->filterByPublished(true)
+                // Items can only be considered stale if they have been deposited/queued for deposit in the first place
+                ->filterByDoiStatuses([Doi::STATUS_SUBMITTED, Doi::STATUS_REGISTERED])
+        )->toArray();
+
+        $invalidIds = array_diff($requestIds, $validIds);
+        if (count($invalidIds)) {
+            $failedDoiActions = array_map(function (int $id) {
+                $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
+                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_STALE_STATUS);
+            }, $invalidIds);
+
+            return $response->withJson(
+                [
+                    'failedDoiActions' => array_map(
+                        function (DoiActionException $item) {
+                            return $item->getMessage();
+                        },
+                        $failedDoiActions
+                    )
+                ],
+                400
+            );
+        }
+
+        foreach ($requestIds as $id) {
+            $doiIds = Repo::doi()->getDoisForIssue($id);
+            Repo::doi()->markStale($doiIds);
         }
 
         return $response->withStatus(200);
@@ -210,31 +330,31 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             return $response->withStatus(400)->withJsonError('api.dois.400.prefixRequired');
         }
 
-        $failedDoiCreations = [];
+        $failedDoiActions = [];
 
         // Assign DOIs
         foreach ($ids as $id) {
             $issue = Repo::issue()->get($id);
             if ($issue !== null) {
                 $creationFailureResults = Repo::issue()->createDoi($issue);
-                $failedDoiCreations = array_merge($failedDoiCreations, $creationFailureResults);
+                $failedDoiActions = array_merge($failedDoiActions, $creationFailureResults);
             }
         }
 
-        if (!empty($failedDoiCreations)) {
+        if (!empty($failedDoiActions)) {
             return $response->withJson(
                 [
-                    'failedDoiCreations' => array_map(
-                        function (DoiCreationException $item) {
+                    'failedDoiActions' => array_map(
+                        function (DoiActionException $item) {
                             return $item->getMessage();
                         },
-                        $failedDoiCreations
+                        $failedDoiActions
                     )
                 ],
                 400
             );
         }
 
-        return $response->withJson(['failedDoiCreations' => $failedDoiCreations], 200);
+        return $response->withJson(['failedDoiActions' => $failedDoiActions], 200);
     }
 }
