@@ -40,7 +40,7 @@ class Decision extends BaseDecision
     public const SKIP_EXTERNAL_REVIEW = 19;
     public const BACK_FROM_PRODUCTION = 20;
     public const BACK_FROM_COPYEDITING = 21;
-    public const BACK_FROM_EXTERNAL_REVIEW = 22;
+    public const CANCEL_REVIEW_ROUND = 22;
 }
 
 if (!PKP_STRICT_MODE) {

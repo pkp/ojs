@@ -18,8 +18,8 @@ use APP\decision\types\SkipExternalReview;
 use APP\notification\Notification;
 use Illuminate\Database\Eloquent\Collection;
 use PKP\decision\types\BackFromCopyediting;
-use PKP\decision\types\BackFromExternalReview;
 use PKP\decision\types\BackFromProduction;
+use PKP\decision\types\CancelReviewRound;
 use PKP\decision\types\Decline;
 use PKP\decision\types\InitialDecline;
 use PKP\decision\types\NewExternalReviewRound;
@@ -61,7 +61,7 @@ class Repository extends \PKP\decision\Repository
                 new SkipExternalReview(),
                 new BackFromProduction(),
                 new BackFromCopyediting(),
-                new BackFromExternalReview(),
+                new CancelReviewRound(),
             ]);
             HookRegistry::call('Decision::types', [$decisionTypes]);
             $this->decisionTypes = $decisionTypes;

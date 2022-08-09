@@ -25,8 +25,8 @@ use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\decision\types\BackFromCopyediting;
-use PKP\decision\types\BackFromExternalReview;
 use PKP\decision\types\BackFromProduction;
+use PKP\decision\types\CancelReviewRound;
 use PKP\decision\types\Decline;
 use PKP\decision\types\InitialDecline;
 use PKP\decision\types\RecommendAccept;
@@ -236,6 +236,10 @@ class WorkflowHandler extends PKPWorkflowHandler
                     new RequestRevisions(),
                     new Accept(),
                 ];
+                $cancelReviewRound = new CancelReviewRound();
+                if ($cancelReviewRound->canRetract($submission, $reviewRoundId)) {
+                    $decisionTypes[] = $cancelReviewRound();
+                }
                 if ($submission->getData('status') === Submission::STATUS_DECLINED) {
                     $decisionTypes[] = new RevertDecline();
                 } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
@@ -251,16 +255,6 @@ class WorkflowHandler extends PKPWorkflowHandler
                 $decisionTypes = [];
                 break;
         }
-
-        $decisionTypes = array_merge(
-            $decisionTypes,
-            Repo::decision()
-                ->getApplicableRetractableDecisionTypes(
-                    $stageId, 
-                    $submission, 
-                    $reviewRoundId
-                )
-        );
 
         HookRegistry::call('Workflow::Decisions', [&$decisionTypes, $stageId]);
 
@@ -305,7 +299,7 @@ class WorkflowHandler extends PKPWorkflowHandler
             Decline::class,
             BackFromProduction::class,
             BackFromCopyediting::class,
-            BackFromExternalReview::class,
+            CancelReviewRound::class,
         ];
     }
 }
