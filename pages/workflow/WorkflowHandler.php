@@ -238,7 +238,7 @@ class WorkflowHandler extends PKPWorkflowHandler
                 ];
                 $cancelReviewRound = new CancelReviewRound();
                 if ($cancelReviewRound->canRetract($submission, $reviewRoundId)) {
-                    $decisionTypes[] = $cancelReviewRound();
+                    $decisionTypes[] = $cancelReviewRound;
                 }
                 if ($submission->getData('status') === Submission::STATUS_DECLINED) {
                     $decisionTypes[] = new RevertDecline();
@@ -249,10 +249,13 @@ class WorkflowHandler extends PKPWorkflowHandler
             case WORKFLOW_STAGE_ID_EDITING:
                 $decisionTypes = [
                     new SendToProduction(),
+                    new BackFromCopyediting(),
                 ];
                 break;
             case WORKFLOW_STAGE_ID_PRODUCTION:
-                $decisionTypes = [];
+                $decisionTypes = [
+                    new BackFromProduction(),
+                ];
                 break;
         }
 
@@ -297,9 +300,9 @@ class WorkflowHandler extends PKPWorkflowHandler
         return [
             InitialDecline::class,
             Decline::class,
-            BackFromProduction::class,
-            BackFromCopyediting::class,
             CancelReviewRound::class,
+            BackFromCopyediting::class,
+            BackFromProduction::class,
         ];
     }
 }
