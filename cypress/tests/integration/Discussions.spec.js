@@ -12,7 +12,7 @@
     var message = 'Test discussion message';
     var discussionGrid = '[id^="component-grid-queries"]';
 
-	it('#8097 Discussion deleted or preserved correctly when modal closed while creating discussion', function() {
+	it.skip('#8097 Discussion deleted or preserved correctly when modal closed while creating discussion', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, author);
         cy.get(discussionGrid);
         cy.contains('Add discussion').click();
