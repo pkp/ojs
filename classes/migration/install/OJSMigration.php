@@ -73,7 +73,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('section_id');
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
-            $table->text('setting_value')->nullable();
+            $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->comment('(bool|int|float|string|object)');
             $table->index(['section_id'], 'section_settings_section_id');
             $table->unique(['section_id', 'locale', 'setting_name'], 'section_settings_pkey');
@@ -110,7 +110,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('issue_id');
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
-            $table->text('setting_value')->nullable();
+            $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->nullable();
             $table->index(['issue_id'], 'issue_settings_issue_id');
             $table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_pkey');
@@ -141,7 +141,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('galley_id');
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
-            $table->text('setting_value')->nullable();
+            $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->comment('(bool|int|float|string|object)');
             $table->index(['galley_id'], 'issue_galley_settings_galley_id');
             $table->unique(['galley_id', 'locale', 'setting_name'], 'issue_galley_settings_pkey');
@@ -219,7 +219,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('galley_id');
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
-            $table->text('setting_value')->nullable();
+            $table->mediumText('setting_value')->nullable();
             $table->index(['galley_id'], 'publication_galley_settings_galley_id');
             $table->unique(['galley_id', 'locale', 'setting_name'], 'publication_galley_settings_pkey');
         });
@@ -250,7 +250,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->bigInteger('type_id');
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
-            $table->text('setting_value')->nullable();
+            $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6);
             $table->index(['type_id'], 'subscription_type_settings_type_id');
             $table->unique(['type_id', 'locale', 'setting_name'], 'subscription_type_settings_pkey');
