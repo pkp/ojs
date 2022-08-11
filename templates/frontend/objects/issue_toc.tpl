@@ -41,12 +41,10 @@
 		{* Issue cover image *}
 		{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 		{if $issueCover}
-			<a class="cover" href="{url op="view" page="issue" path=$issue->getBestIssueId()}">
-				{capture assign="defaultAltText"}
-					{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
-				{/capture}
-				<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
-			</a>
+			{capture assign="defaultAltText"}
+				{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
+			{/capture}
+			<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
 		{/if}
 
 		{* Description *}
