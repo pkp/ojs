@@ -15,34 +15,21 @@
 
 namespace APP\subscription;
 
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
-use PKP\db\DAORegistry;
-use PKP\mail\MailTemplate;
+use Exception;
+use Illuminate\Support\Facades\Mail;
+use PKP\mail\Mailable;
 use PKP\notification\PKPNotification;
 
 class SubscriptionAction
 {
     /**
      * Send notification email to Subscription Manager when online payment is completed.
-     *
-     * @param PKPRequest $request
-     * @param Subscription $subscription
-     * @param string $mailTemplateKey
      */
-    public function sendOnlinePaymentNotificationEmail($request, $subscription, $mailTemplateKey)
+    public static function sendOnlinePaymentNotificationEmail(Request $request, Mailable $mailable): void
     {
-        $validKeys = [
-            'SUBSCRIPTION_PURCHASE_INDL',
-            'SUBSCRIPTION_PURCHASE_INSTL',
-            'SUBSCRIPTION_RENEW_INDL',
-            'SUBSCRIPTION_RENEW_INSTL'
-        ];
-
-        if (!in_array($mailTemplateKey, $validKeys)) {
-            return false;
-        }
-
         $journal = $request->getJournal();
 
         $subscriptionContactName = $journal->getData('subscriptionName');
@@ -54,45 +41,27 @@ class SubscriptionAction
         }
 
         if (empty($subscriptionContactEmail)) {
-            return false;
+            return;
         }
 
-        $user = Repo::user()->get($subscription->getUserId());
+        $template = Repo::emailTemplate()->getByKey($journal->getId(), $mailable::getEmailTemplateKey());
+        $mailable
+            ->sender($request->getUser())
+            ->replyTo($subscriptionContactEmail, $subscriptionContactName)
+            ->to($subscriptionContactEmail, $subscriptionContactName)
+            ->subject($template->getData('subject', $journal->getPrimaryLocale()))
+            ->body($template->getData('body', $journal->getPrimaryLocale()));
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
-        $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
-
-        $paramArray = [
-            'subscriptionType' => $subscriptionType->getSummaryString(),
-            'subscriberDetails' => $user->getSignature() ?? '',
-            'membership' => $subscription->getMembership()
-        ];
-
-        switch ($mailTemplateKey) {
-            case 'SUBSCRIPTION_PURCHASE_INDL':
-            case 'SUBSCRIPTION_RENEW_INDL':
-                $paramArray['subscriptionUrl'] = $request->url($journal->getPath(), 'payments', null, null, null, 'individual');
-                break;
-            case 'SUBSCRIPTION_PURCHASE_INSTL':
-            case 'SUBSCRIPTION_RENEW_INSTL':
-                $institution = Repo::institution()->get($subscription->getInstitutionId());
-                $paramArray['subscriptionUrl'] = $request->url($journal->getPath(), 'payments', null, null, null, 'institutional');
-                $paramArray['institutionName'] = $institution->getLocalizedName();
-                $paramArray['institutionMailingAddress'] = $subscription->getInstitutionMailingAddress();
-                $paramArray['domain'] = $subscription->getDomain();
-                $paramArray['ipRanges'] = implode(' ', $institution->getIPRanges());
-                break;
-        }
-
-        $mail = new MailTemplate($mailTemplateKey);
-        $mail->setReplyTo($subscriptionContactEmail, $subscriptionContactName);
-        $mail->addRecipient($subscriptionContactEmail, $subscriptionContactName);
-        $mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
-        $mail->setBody($mail->getBody($journal->getPrimaryLocale()));
-        $mail->assignParams($paramArray);
-        if (!$mail->send()) {
+        try {
+            Mail::send($mailable);
+        } catch (Exception $e) {
             $notificationMgr = new NotificationManager();
-            $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+            $notificationMgr->createTrivialNotification(
+                $request->getUser()->getId(),
+                PKPNotification::NOTIFICATION_TYPE_ERROR,
+                ['contents' => __('email.compose.error')]
+            );
+            error_log($e->getMessage());
         }
     }
 }

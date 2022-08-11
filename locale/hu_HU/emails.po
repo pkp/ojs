@@ -27,7 +27,7 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Jelszó visszaállítás megerősítése"
@@ -40,10 +40,7 @@ msgstr ""
 "<br />\n"
 "Jelszavam visszaállítása: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Ez a levél egy regisztrált felhasználónak kerül kiküldésre, amikor jelzi, hogy elfelejtette a jelszavát, és nem tud bejelentkezni. Tartalmaz egy linket, amire kattintva visszaállítható a jelszava."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Jelszó visszaállítás"
@@ -55,10 +52,7 @@ msgstr ""
 "Felhasználóneve: {$recipientUsername}<br />\n"
 "Jelszava: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Ez az email egy regisztrált felhasználónak kerül kiküldésre, amikor sikeresen visszaállításra került jelszava, követve a PASSWORD_RESET_CONFIRM levélben írtakat."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Folyóirat regisztráció"
@@ -75,9 +69,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Ez az email az újonnan regisztrált felhasználóknak kerül kiküldésre, köszöntésként, felhasználónevük, jelszavuk megadásával."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -115,9 +106,6 @@ msgstr ""
 "Üdvözlettel,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Ez az email az újonnan regisztrált lektoroknak kerül kiküldésre, köszöntésként és a felhasználónevük, jelszavuk elküldéséhez."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Új folyóiratszám jelent meg"
@@ -131,10 +119,6 @@ msgstr ""
 "<br />\n"
 "Köszönjük, hogy érdeklődik folyóiratunk iránt,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Ez az email a regisztrált felhasználóknak kerül kiküldésre, a \"Felhasználók értesítése\" linken keresztül a Szerkesztői főoldalról. Az új számokról értesíti a felhasználókat, és arra invitálja, hogy a kapott URL-en keressék fel az online folyóiratot."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Folyóirat archiválásának kérése a(z) {$contextName} számára"
@@ -193,11 +177,7 @@ msgstr ""
 "<br />\n"
 "Ha a szerkesztési munkafolyamat során segítségére lehetünk, kérjük forduljon szerkesztőségünkhöz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr "Ha be van kapcsolva ez az email, akkor automatikusan értesítést küld azoknak a Szerzőknek, akik a benyújtás idején nem szerepelnek aktívan ennek a beküldésnek a munkafolyamatában."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -215,10 +195,6 @@ msgstr ""
 "<br />\n"
 "Köszönettel,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr "Ez az email értesíti a Rovatszerkesztőt, hogy a Szerkesztő rászignálta a beküldött anyag nyomon követését valamint felügyeletét a teljes szerkesztési fázisban. Információt ad a kéziratról és arról, hogyan férhet hozzá a folyóirat oldalán."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -424,9 +400,6 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr "Ez az email a Rovatszerkesztőtől érkezik a Tördelőszerkesztőnek, jelezve, hogy a cikk tördelési munkájára őt jelölték ki. A levél információkat tartalmaz a kézirat elérésével kapcsolatban."
-
 msgid "emails.layoutComplete.subject"
 msgstr "A tördelt változat elkészült"
 
@@ -443,9 +416,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "Ezt az emailt a Tördelőszerkesztő küldi a Rovatszerkesztőnek, értesítve, hogy a tördelési munka befejeződött."
-
 msgid "emails.emailLink.subject"
 msgstr "Cikkajánló"
 
@@ -474,10 +444,7 @@ msgstr ""
 "<br />\n"
 "Ha kérdése merülne fel, kérjük forduljon szerkesztőségünkhöz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Ez az email értesíti a regisztrált olvasót, hogy a Menedzser előfizetési fiókot hozott létre számára. A levél tartalmazza  a folyóirat URL címét és instrukciókat a hozzáféréshez."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Új folyóiratszám szabadon hozzáférhető"
@@ -489,10 +456,7 @@ msgstr ""
 "A(z) {$contextName} folyóirat nemrég új számot tett szabadon hozzáférhetővé, melyet a következő linken tekinthet meg: {$contextUrl}<br />\n"
 "<br />\n"
 "Üdvözlettel,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Ez az email azoknak a regisztrált olvasóknak szól, akik értesítést kértek korábban a nyilvánossá tett számokról."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Értesítés előfizetés lejáratáról"
@@ -510,10 +474,7 @@ msgstr ""
 "<br />\n"
 "Ha kérdése merülne fel, kérjük forduljon szerkesztőségünkhöz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Ezt az email értesítést azok az előfizetők kapják, akiknek hamarosan lejár előfizetésük. A levél tartalmazza a folyóirat URL címét és a hozzáféréshez instrukciókat."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Előfizetése lejárt"
@@ -531,10 +492,7 @@ msgstr ""
 "<br />\n"
 "Ha kérdése merülne fel, kérjük forduljon szerkesztőségünkhöz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Ez az email azoknak az előfizetőknek megy, akiknek lejárt az előfizetésük. A levél tartalmazza a folyóirat URL címét és a hozzáféréshez instrukciókat."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Előfizetése lejárt"
@@ -552,10 +510,7 @@ msgstr ""
 "<br />\n"
 "Ha kérdése merülne fel, kérjük forduljon szerkesztőségünkhöz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Ez az email értesíti az előfizetőt, hogy lejárt az előfizetése. A levél tartalmazza a folyóirat URL címét és a hozzáféréshez instrukciókat."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Előfizetés vásárlás: Egyéni"
@@ -578,9 +533,6 @@ msgstr ""
 "következő címet.<br />\n"
 "<br />\n"
 "Előfizetési URL cím: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Ez az email az előfizetés menedzsert értesíti online vásárolt egyéni előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Előfizetés vásárlás: Intézményi"
@@ -616,9 +568,6 @@ msgstr ""
 "<br />\n"
 "Előfizetési URL cím: {$subscriptionUrl}<br />\n"
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Az email az előfizetés menedzsert értesíti online vásárolt intézményi előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Előfizetés megújítása: Egyéni"
 
@@ -640,9 +589,6 @@ msgstr ""
 "következő címet.<br />\n"
 "<br />\n"
 "Előfizetés URL címe: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Ez az email az előfizetés menedzsert értesíti az online megújított egyéni előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Előfizetés megújítása: Intézményi"
@@ -676,9 +622,6 @@ msgstr ""
 "<br />\n"
 "Előfizetés URL címe: {$subscriptionUrl}<br />\n"
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Az email az Előfizetés Menedzsert értesíti az online megújított intézményi előfizetésekről. Összefoglaló információt és gyorslinket biztosít a megvásárolt előfizetéshez."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Idézettség szerkesztés"
 
@@ -705,15 +648,12 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Tisztelt Szerkesztő!<br />\n"
 "<br />\n"
-"A szerző, {$authors} által feltöltésre került a(z) &quot;{$submissionTitle}&quot; átdolgozott változata.<br />\n"
+"A szerző, {$submitterName} által feltöltésre került a(z) &quot;{$submissionTitle}&quot; átdolgozott változata.<br />\n"
 "<br />\n"
 "Kézirat URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Ez az email automatikus értesítést küld a kijelölt szerkesztőnek, amikor a szerző a cikk átdolgozott változatát feltöltötte."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Üzenet a(z) {$contextName} folyóirattól"
@@ -730,7 +670,7 @@ msgstr "Cikk és lektorálási riport"
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"Tisztelt {$name}! <br />\n"
+"Tisztelt {$recipientName}! <br />\n"
 "<br />\n"
 "A folyóiratával kapcsolatos összesítő riport elérhető az <a href=\""
 "{$editorialReportLink}\">OJS rendszerben</a>. A főbb mutatók {$year} {$month}"
@@ -747,10 +687,7 @@ msgstr ""
 "szerkesztőségi folyamatok teljes másolata csatolva lett.<br />\n"
 "<br>\n"
 "Üdvözlettel,<br />\n"
-"{$signature}"
-
-msgid "emails.statisticsReportNotification.description"
-msgstr "Ez az email automatikusan kerül kiküldésre a szerkesztőknek és folyóirat menedzsereknek a folyóiratukkal kapcsolatos tájékoztatásul."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"

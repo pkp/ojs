@@ -2408,7 +2408,7 @@ msgstr "Информация за членството на абоната"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Резюме на типа, името, продължителността и цената на абонамента"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Датата, на която приключва абонамента"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2423,3 +2423,53 @@ msgstr ""
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Типограии на статия, като публикувани PDF файлове"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Този имейл уведомява регистриран читател, че мениджърът е създал абонамент "
+"за тях. Той предоставя URL адреса на списанието заедно с инструкции за "
+"достъп."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+"Този имейл уведомява абоната, че абонаментът му скоро ще изтече. Той "
+"предоставя URL адреса на списанието заедно с инструкции за достъп."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+"Този имейл уведомява абоната, че абонаментът му е изтекъл. Той предоставя "
+"URL адреса на списанието заедно с инструкции за достъп."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"Този имейл уведомява абоната, че абонаментът му е изтекъл. Той предоставя "
+"URL адреса на списанието заедно с инструкции за достъп."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Този имейл уведомява Мениджъра на абонаменти, че отделен абонамент е закупен "
+"онлайн. Той предоставя обобщена информация за абонамента и връзка за бърз "
+"достъп до закупения абонамент."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Този имейл уведомява мениджъра на абонаменти, че институционален абонамент е "
+"закупен онлайн. Той предоставя обобщена информация за абонамента и връзка за "
+"бърз достъп до закупения абонамент."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Този имейл уведомява мениджъра на абонаменти, че индивидуален абонамент е "
+"подновен онлайн. Той предоставя обобщена информация за абонамента и връзка "
+"за бърз достъп до подновения абонамент."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Този имейл уведомява мениджъра на абонаменти, че институционален абонамент е "
+"подновен онлайн. Той предоставя обобщена информация за абонамента и връзка "
+"за бърз достъп до подновения абонамент."
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Този имейл се изпраща на регистрирани читатели, които са поискали да получат "
+"имейл с известия, когато броят стане с отворен достъп."

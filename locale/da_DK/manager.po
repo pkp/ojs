@@ -2164,7 +2164,7 @@ msgstr "Oplysninger om abonnentens medlemskab"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "En oversigt over abonnementets type, navn, varighed og pris"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Datoen, hvor abonnementet ophører"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2179,3 +2179,36 @@ msgstr ""
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Publiceringsversioner, såsom en publiceret PDF"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Denne e-mail underretter en registreret læser om, at abonnementschefen har "
+"oprettet et abonnement til dem. Den indeholder tidsskriftets URL-adresse "
+"samt adgangsinstruktioner."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Denne e-mail underretter en abonnent om, at vedkommendes abonnement snart udløber. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Denne e-mail underretter en abonnent om, at vedkommendes abonnement er udløbet. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Denne e-mail underretter en abonnent om, at vedkommendes abonnement er udløbet. Den indeholder tidsskriftets URL-adresse samt adgangsinstruktioner."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Denne e-mail giver abonnementschefen besked om, at der er blevet købt et individuelt abonnement online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det købte abonnement."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Denne e-mail informerer abonnementschefen om, at et institutionelt "
+"abonnement er blevet købt online. Det giver resumeoplysninger om "
+"abonnementet og et hurtigt adgangslink til det købte abonnement."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Denne e-mail giver abonnementschefen besked om, at et individuelt abonnement er blevet fornyet online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det fornyede abonnement."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Denne e-mail giver abonnementschefen besked om, at et individuelt abonnement er blevet fornyet online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det fornyede abonnement."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Denne e-mail sendes til registrerede læsere, der har anmodet om at modtage en e-mail-meddelelse, når en udgave udgives i et Open Access-format."

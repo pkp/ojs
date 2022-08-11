@@ -27,7 +27,7 @@ msgstr ""
 "<br />\n"
 "Ссылка: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.passwordResetConfirm.subject"
@@ -41,10 +41,7 @@ msgstr ""
 "<br />\n"
 "Сбросить мой пароль: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Это письмо отправляется зарегистрированному пользователю, когда он сообщает, что забыл пароль или не может войти на сайт. В письме содержится ссылка (URL), перейдя по которой пользователь сможет сбросить свой пароль."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Пароль сброшен"
@@ -56,10 +53,7 @@ msgstr ""
 "Имя пользователя: {$recipientUsername}<br />\n"
 "Пароль: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Это письмо отправляется зарегистрированному пользователю, когда он успешно сбросил свой пароль в соответствии с процедурой, описанной в письме PASSWORD_RESET_CONFIRM."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Регистрация в журнале"
@@ -75,9 +69,6 @@ msgstr ""
 "<br />\n"
 "С уважением,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Это письмо отправляется вновь зарегистрированному пользователю, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -110,9 +101,6 @@ msgstr ""
 "С уважением,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Это письмо отправляется вновь зарегистрированному рецензенту, приветствуя его в системе и сообщая ему имя пользователя и пароль для доступа к сайту."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Новый выпуск уже доступен: {$issueIdentification}"
@@ -126,10 +114,6 @@ msgstr ""
 "интересуют. Благодарим наших авторов, рецензентов и редакторов за их "
 "неоценимый вклад в эту работу, а наших читателей — за постоянный интерес к "
 "нашей работе.</p><p>С уважением,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Это письмо отправляется зарегистрированным читателям по ссылке «Уведомить пользователей» на главной странице редактора. Оно сообшает читателям о выходе нового выпуска и приглашает их посетить сайт журнала по указанному адресу (URL)."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Запрос на архивацию для журнала «{$contextName}»"
@@ -186,14 +170,7 @@ msgstr ""
 "<br />\n"
 "Если у Вас возникнут какие-то вопросы, пожалуйста, свяжитесь со мной. Спасибо за выбор нашего журнала для публикации Вашей работы.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"Это письмо (если эта возможность включена) автоматически отправляется "
-"авторам, которые не являются пользователями OJS, указанным в процессе "
-"отправки материала."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -210,15 +187,6 @@ msgstr ""
 "рецензию», а затем назначив рецензентов, щелкнув на «Добавить "
 "рецензента».</p><p>Если материал не подходит для этого журнала, пожалуйста "
 "отклоните его.</p><p>Заранее благодарю.</p><p>С уважением,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"Это письмо уведомляет редактора раздела о том, что редактор поручил ему "
-"контроль прохождения материала через редакционный процесс. Этот шаблон "
-"доступен для выбора, когда редактор назначается на материал в области "
-"«Участники». Этот шаблон должен использоваться, когда редактор раздела имеет "
-"право сохранять решения редакции в систему."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -416,12 +384,6 @@ msgstr ""
 "Ваш вклад в наш журнал.</p><p>С уважением,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Это письмо редактора, отправляемое верстальщику, с уведомлением о том, что "
-"ему поручено выполнить верстку материала. В письме содержится информация о "
-"материале и о том, как получить к нему доступ."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Гранки сделаны"
 
@@ -437,11 +399,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr ""
-"Это письмо верстальщика уведомляет редактора, что работа над гранками была "
-"завершена."
-
 msgid "emails.emailLink.subject"
 msgstr "Эта статья будет Вам интересна"
 
@@ -470,10 +427,7 @@ msgstr ""
 "<br />\n"
 "Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Это письмо уведомляет зарегистрированного читателя, что менеджер создал для него подписку. В письме содержится URL журнала и инструкции по доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Выпуск уже в открытом доступе"
@@ -485,10 +439,7 @@ msgstr ""
 "Журнал «{$contextName}» только что предоставил открытый доступ к следующему выпуску. Мы предлагаем вам ознакомиться здесь с содержанием выпуска, а затем посетить наш веб-сайт ({$contextUrl}), чтобы прочитать статьи и сообщения на интересующие вас темы.<br />\n"
 "<br />\n"
 "Благодарю вас за постоянный интерес к нашей работе,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Это письмо отправляется тем зарегистрированным читателям, которые подписались на получение уведомлений на электронную почту о том, что номер появился в открытом доступе."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Уведомление об окончании срока подписки"
@@ -506,15 +457,12 @@ msgstr ""
 "<br />\n"
 "Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Это письмо уведомляет подписчика о том, что его подписка вскоре закончится. В письме содержится URL журнала и инструкции по доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "уведомление об окончании срока подписки"
 
-msgid "emails.subscriptionAfterExpiry.body"
+msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
 "Здравствуйте, {$recipientName}!<br />\n"
 "<br />\n"
@@ -528,9 +476,6 @@ msgstr ""
 "Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Это письмо уведомляет подписчика о том, что срок его подписки закончился. В письме содержится URL журнала и инструкции по доступу."
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Срок подписки истек — последнее напоминание"
@@ -549,10 +494,7 @@ msgstr ""
 "<br />\n"
 "Если у Вас есть какие-либо вопросы, пожалуйста, не стесняйтесь, связывайтесь со мной.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Это письмо уведомляет подписчика о том, что срок его подписки закончился. В письме содержится URL журнала и инструкции по доступу."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Покупка подписки: индивидуальная"
@@ -574,9 +516,6 @@ msgstr ""
 "<br />\n"
 "URL подписки: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Это письмо уведомляет менеджера по подписке, что через сайт была куплена индивидуальная подписка. В письме содержится общая информация о подписке и ссылка быстрого доступа к приобретенной подписке."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Покупка подписки: на организацию"
@@ -609,9 +548,6 @@ msgstr ""
 "URL подписки: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Это письмо уведомляет менеджера по подписке, что через сайт была куплена подписка на организацию. В письме содержится общая информация о подписке и ссылка быстрого доступа к приобретенной подписке."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Продление подписки: индивидуальная"
 
@@ -632,9 +568,6 @@ msgstr ""
 "<br />\n"
 "URL подписки: {$subscriptionUrl}<br />\n"
 ""
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Это письмо уведомляет менеджера по подписке, что через сайт была продлена индивидуальная подписка. В письме содержится общая информация о подписке и ссылка быстрого доступа к продленной подписке."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Продление подписки: на организацию"
@@ -667,9 +600,6 @@ msgstr ""
 "URL подписки: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Это письмо уведомляет менеджера по подписке, что через сайт была продлена подписка на организацию. В письме содержится общая информация о подписке и ссылка быстрого доступа к продленной подписке."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Редактирование библиографических ссылок"
 
@@ -697,14 +627,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Уважаемые редакторы!<br />\n"
 "<br />\n"
-"Исправленная версия материала «{$submissionTitle}» была загружена на сайт (автор — {$authors}).<br />\n"
+"Исправленная версия материала «{$submissionTitle}» была загружена на сайт (автор — {$submitterName}).<br />\n"
 "<br />\n"
 "URL материала: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Это письмо автоматически отправляется назначенному редактору, когда автор загружает исправленную версию статьи."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Сообщение о журнале «{$contextName}»"
@@ -721,7 +648,7 @@ msgstr "Активность журнала за {$month} {$year} года"
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"Здравствуйте, {$name}! <br />\n"
+"Здравствуйте, {$recipientName}! <br />\n"
 "<br />\n"
 "Отчёт об активности журнала за {$month} {$year} года уже доступен. Ключевые статистические параметры этого месяца приведены ниже.<br />\n"
 "<ul>\n"
@@ -733,10 +660,7 @@ msgstr ""
 "Войдите в систему, чтобы посмотреть более подробные отчёты о <a href=\"{$editorialStatsLink}\">тенденциях редакции</a> и <a href=\"{$publicationStatsLink}\">статистике опубликованных статей</a>. Полная копия отчёта о тенденциях редакции за данный месяц прилагается к письму.<br />\n"
 "<br />\n"
 "С уважением,<br />\n"
-"{$signature}"
-
-msgid "emails.statisticsReportNotification.description"
-msgstr "Это письмо каждый месяц автоматически отправляется редакторам и управляющим журнала, чтобы у них было представление о работе системы."
+"{$contextSignature}"
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
@@ -748,9 +672,6 @@ msgstr ""
 "{$announcementSummary}<br />\n"
 "<br />\n"
 "Посетите наш веб-сайт, чтобы прочитать <a href=\"{$announcementUrl}\">объявление полностью</a>."
-
-msgid "emails.announcement.description"
-msgstr "Это письмо отправляется при создании нового объявления."
 
 msgid "emails.userValidateSite.body"
 msgstr ""

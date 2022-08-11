@@ -4,7 +4,6 @@
 Content-Type: text/plain; charset={$defaultCharset|escape}
 Content-Transfer-Encoding: quoted-printable
 
-{literal}{$templateHeader}{/literal}
 {$body}
 
 {$issue->getIssueIdentification()}
@@ -23,7 +22,7 @@ Content-Transfer-Encoding: quoted-printable
 
 
 {/foreach}
-{literal}{$templateSignature}{/literal}
+{literal}{$journalSignature}{/literal}
 
 --{$mimeBoundary}
 Content-Type: text/html; charset={$defaultCharset|escape}
@@ -40,8 +39,6 @@ Content-Transfer-Encoding: quoted-printable
 		{/foreach}
 		</head>
 	<body>
-
-	<pre>{literal}{$templateHeader}{/literal}</pre>
 
 	<p>{$body|escape|nl2br}</p>
 
@@ -77,7 +74,7 @@ Content-Transfer-Encoding: quoted-printable
 				<div class="separator"></div>
 			{/if}
 		{/foreach}
-		<pre>{literal}{$templateSignature}{/literal}</pre>
+		<pre>{literal}{$journalSignature}{/literal}</pre>
 	</body>
 </html>
 

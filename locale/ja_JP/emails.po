@@ -15,11 +15,6 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "ユーザー名『{$contextName}』で査読者として登録されました"
 
-msgid "emails.passwordResetConfirm.description"
-msgstr ""
-"このメールは、登録ユーザーからパスワードを忘れた、または、ログインできない旨の連絡を受けた場合に、登録ユーザーに送信されるものです。このメールではパスワー"
-"ドをリセットするためのURLを提供します。"
-
 #, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
@@ -37,9 +32,6 @@ msgstr ""
 msgid "emails.userValidateContext.subject"
 msgstr "アカウントの確認"
 
-msgid "emails.userRegister.description"
-msgstr "このメールは、新規に登録したユーザーに送信されるもので、システムへの登録を歓迎し、ユーザー名とパスワードの記録を提供します。"
-
 msgid "emails.userRegister.body"
 msgstr ""
 "{$recipientName}様<br />\n"
@@ -56,11 +48,6 @@ msgstr ""
 msgid "emails.userRegister.subject"
 msgstr "新規ユーザーの登録"
 
-msgid "emails.passwordReset.description"
-msgstr ""
-"このメールは、PASSWORD_RESET_CONFIRMメールで説明されている処理を受けてパスワードのリセットが成功した場合に、登録ユーザーに送信される"
-"ものです。"
-
 msgid "emails.passwordReset.body"
 msgstr ""
 "ご利用の{$siteTitle}のWebサイトのパスワードのリセットが終了しました。このユーザー名とパスワードは、雑誌のすべての処理で必要となりますので、"
@@ -71,7 +58,7 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "パスワードのリセット"
@@ -87,7 +74,7 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$siteContactName}"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "パスワードリセットの確認"
@@ -100,15 +87,11 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notification.subject"
 msgstr "{$contextName}からの新しいお知らせ"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr "このメールは（設定で有効になっていれば）OJSに登録していない著者がこの雑誌への投稿プロセスを終了した時に、自動的に送信されるものです。"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.body"
@@ -119,7 +102,7 @@ msgstr ""
 "<br />\n"
 "何かご不明な点がございましたら、ご連絡ください。研究成果の発表の場として、本誌をご検討いただき、誠にありがとうございました。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"
@@ -183,12 +166,6 @@ msgid "emails.lockssExistingArchive.subject"
 msgstr "『{$contextName}』保存のお願い"
 
 #, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr ""
-"このメールは、編集者のユーザーページにある「利用者への通知」リンクにより、登録ユーザーに送信されるものです。このメールは、最新号の発行を読者に通知し、UR"
-"Lを示して雑誌にアクセスするよう案内します。"
-
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "読者各位:<br />\n"
@@ -204,9 +181,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "最新号の発行案内"
-
-msgid "emails.reviewerRegister.description"
-msgstr "このメールは新規に登録された査読者に送付され、ユーザー名とパスワードが通知されます。"
 
 msgid "emails.reviewerRegister.body"
 msgstr ""
@@ -289,12 +263,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "論文査読のお願い"
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"このメールは、編集者からセクション編集者に投稿物の編集プロセスを監督する作業を任命したことを通知するものです。メールには投稿物に関する情報と雑誌サイトへの"
-"アクセス法を示しています。"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -433,12 +401,6 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "論文査読のお願い"
 
-msgid "emails.layoutRequest.description"
-msgstr ""
-"このメールは、セクション編集者からレイアウトエディタに投稿物に対するレイアウト作業を任命したことを通知するものです。メールでは、投稿物に関する情報とアクセ"
-"ス方法を提供しています。"
-
-#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -489,9 +451,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "論文査読のお願いの復活"
 
-msgid "emails.announcement.description"
-msgstr "このメールは、新しいお知らせが作成された際に送信されます。"
-
 msgid "emails.announcement.body"
 msgstr ""
 "<b>{$announcementTitle}</b><br />\n"
@@ -503,13 +462,10 @@ msgstr ""
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
 
-msgid "emails.statisticsReportNotification.description"
-msgstr "このメールは、編集者や雑誌管理者に毎月自動的に送信され、システムの健全性の概要を提供します。"
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}様 <br />\n"
+"{$recipientName}様 <br />\n"
 "<br />\n"
 "あなたの雑誌の{$month}月{$year}年のヘルスレポートが公開されました。今月の主な統計情報は以下の通りです。<br />\n"
 "<ul>\n"
@@ -523,7 +479,7 @@ msgstr ""
 "/>\n"
 "<br />\n"
 "よろしくお願いします。<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month}月{$year}年の編集活動"
@@ -537,14 +493,11 @@ msgstr "メッセージを入力してください。"
 msgid "emails.notificationCenterDefault.subject"
 msgstr "{$contextName}に関するメッセージ"
 
-msgid "emails.revisedVersionNotify.description"
-msgstr "このメールは、著者が投稿の改訂版をアップロードした際に、指定された編集者に自動的に送信されます。"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "編集部 御中:<br />\n"
 "<br />\n"
-"筆者{$authors}が「{$submissionTitle}」の改訂版をアップロードしました。<br />\n"
+"筆者{$submitterName}が「{$submissionTitle}」の改訂版をアップロードしました。<br />\n"
 "<br />\n"
 "投稿URL: {$submissionUrl}<br />\n"
 "<br />\n"
@@ -573,10 +526,6 @@ msgstr ""
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "引用の編集"
-
-msgid "emails.subscriptionRenewInstl.description"
-msgstr ""
-"このメールは機関購読の更新がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
 
 msgid "emails.subscriptionRenewInstl.body"
 msgstr ""
@@ -608,10 +557,6 @@ msgstr ""
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "購読更新: 機関"
 
-msgid "emails.subscriptionRenewIndl.description"
-msgstr ""
-"このメールは個人購読の更新がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
-
 msgid "emails.subscriptionRenewIndl.body"
 msgstr ""
 "オンラインで {$contextName} に対する個人購読の更新申込がされました。詳細は下記の通りです。<br />\n"
@@ -631,10 +576,6 @@ msgstr ""
 
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "購読更新: 個人"
-
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr ""
-"このメールは機関購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
 
 msgid "emails.subscriptionPurchaseInstl.body"
 msgstr ""
@@ -668,10 +609,6 @@ msgstr ""
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "購読申込: 機関"
 
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr ""
-"このメールは個人購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
-
 msgid "emails.subscriptionPurchaseIndl.body"
 msgstr ""
 "オンラインで {$contextName}  に対する個人購読が申し込まれました。詳細は下記の通りです。<br />\n"
@@ -692,9 +629,6 @@ msgstr ""
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "購読申込: 個人"
 
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"
-
 msgid "emails.subscriptionAfterExpiryLast.body"
 msgstr ""
 "{$recipientName}様:<br />\n"
@@ -713,13 +647,10 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "購読期間終了（最終案内）"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"
 
 msgid "emails.subscriptionAfterExpiry.body"
 msgstr ""
@@ -738,13 +669,10 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "購読期間終了"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "このメールは、購読者に購読期間がまもなく終了することを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"
 
 msgid "emails.subscriptionBeforeExpiry.body"
 msgstr ""
@@ -764,13 +692,10 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "購読期間終了のお知らせ"
-
-msgid "emails.openAccessNotify.description"
-msgstr "このメールは、巻号がオープンアクセスになった時に通知を受け取るよう登録している読者に送信されるものです。"
 
 msgid "emails.openAccessNotify.body"
 msgstr ""
@@ -782,13 +707,10 @@ msgstr ""
 "xtUrl})にアクセスし、目次をチェックし興味のある論文や記事をご利用ください。<br />\n"
 "<br />\n"
 "よろしくお願いいたします。<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "オープンアクセスのお知らせ"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "このメールは、管理者から登録読者に購読者として登録したことを通知するものです。メールでは、雑誌のURLとアクセス方法を提供しています。"
 
 msgid "emails.subscriptionNotify.body"
 msgstr ""
@@ -809,7 +731,7 @@ msgstr ""
 "<br />\n"
 "ありがとうございました。<br />\n"
 "<br />\n"
-"{$signature}"
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionNotify.subject"
 msgstr "購読に関する通知"
@@ -826,10 +748,6 @@ msgstr ""
 
 msgid "emails.emailLink.subject"
 msgstr "論文の紹介"
-
-#, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "このメールは、レイアウトエディタからセクション編集者にレイアウト処理が終了したことを通知するものです。"
 
 #, fuzzy
 msgid "emails.layoutComplete.body"

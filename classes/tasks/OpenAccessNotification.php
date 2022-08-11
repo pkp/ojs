@@ -15,14 +15,13 @@
 
 namespace APP\tasks;
 
-use APP\core\Application;
 use APP\facades\Repo;
-
 use APP\issue\Collector;
-use APP\template\TemplateManager;
+use APP\Jobs\Notifications\OpenAccessMailUsers;
+use APP\journal\Journal;
+use Illuminate\Support\Facades\Bus;
 use PKP\db\DAORegistry;
-use PKP\mail\MailTemplate;
-
+use PKP\mail\Mailer;
 use PKP\scheduledTask\ScheduledTask;
 
 class OpenAccessNotification extends ScheduledTask
@@ -33,54 +32,6 @@ class OpenAccessNotification extends ScheduledTask
     public function getName()
     {
         return __('admin.scheduledTask.openAccessNotification');
-    }
-
-    /**
-     * Send a notification for the given users, journal, and issue.
-     *
-     * @param array $users
-     * @param Journal $journal
-     * @param Issue $issue
-     */
-    public function sendNotification($users, $journal, $issue)
-    {
-        if ($users->getCount() != 0) {
-            $email = new MailTemplate('OPEN_ACCESS_NOTIFY', $journal->getPrimaryLocale(), $journal, false);
-
-            $email->setSubject($email->getSubject($journal->getPrimaryLocale()));
-            $email->setReplyTo(null);
-            $email->setFrom($journal->getData('contactEmail'), $journal->getData('contactName'));
-            $email->addRecipient($journal->getData('contactEmail'), $journal->getData('contactName'));
-
-            $request = Application::get()->getRequest();
-            $paramArray = [
-                'journalName' => $journal->getLocalizedName(),
-                'journalUrl' => $request->url($journal->getPath()),
-                'journalSignature' => $journal->getData('contactName') . "\n" . $journal->getLocalizedName(),
-            ];
-            $email->assignParams($paramArray);
-
-            $submissions = Repo::submission()->getInSections($issue->getId(), $issue->getJournalId());
-            $mimeBoundary = '==boundary_' . md5(microtime());
-
-            $templateMgr = TemplateManager::getManager();
-            $templateMgr->assign([
-                'body' => $email->getBody($journal->getPrimaryLocale()),
-                'templateSignature' => $journal->getData('emailSignature'),
-                'mimeBoundary' => $mimeBoundary,
-                'issue' => $issue,
-                'publishedSubmissions' => $submissions,
-            ]);
-
-            $email->addHeader('MIME-Version', '1.0');
-            $email->setContentType('multipart/alternative; boundary="' . $mimeBoundary . '"');
-            $email->setBody($templateMgr->fetch('subscription/openAccessNotifyEmail.tpl'));
-
-            while ($user = $users->next()) {
-                $email->addBcc($user->getEmail(), $user->getFullName());
-            }
-            $email->send();
-        }
     }
 
     /**
@@ -104,6 +55,7 @@ class OpenAccessNotification extends ScheduledTask
                 ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
             $issues = Repo::issue()->getMany($publishedIssuesCollector);
 
+            $jobs = [];
             foreach ($issues as $issue) {
                 $accessStatus = $issue->getAccessStatus();
                 $openAccessDate = $issue->getOpenAccessDate();
@@ -115,8 +67,17 @@ class OpenAccessNotification extends ScheduledTask
                             ->filterByContextIds([$journal->getId()])
                             ->filterBySettings(['openAccessNotification' => 1])
                     );
-                    $this->sendNotification(iterator_to_array($users), $journal, $issue);
+                    if ($users->isNotEmpty()) {
+                        $userChunks = $users->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT);
+                        foreach ($userChunks as $chunk) {
+                            $jobs[] = new OpenAccessMailUsers($chunk, $journal->getId(), $issue->getId());
+                        }
+                    }
                 }
+            }
+
+            if (!empty($jobs)) {
+                Bus::batch($jobs)->dispatch();
             }
         }
     }

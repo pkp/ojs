@@ -2264,7 +2264,7 @@ msgstr "Abonenin üyeliği hakkında bilgi"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Aboneliğin türü, adı, süresi ve maliyetinin bir özeti"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Aboneliğin sona erdiği tarih"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2291,3 +2291,42 @@ msgstr ""
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Makale dizgi biçimleri, PDF gibi"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Bu mesaj kayıtlı kullanıcıya yönetici tarafından abonelik işleminin yapıldığını bildirir. Derginin internet adresi ve giriş bilgileri sunulmaktadır."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Bu mesaj aboneliği bitmek üzere olan abonelere gönderilir."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Bu mesaj aboneliği biten abonelere gönderilir."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Bu mesaj aboneliği biten abonelere gönderilir. Son mesajdır..."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Bu e-posta, Abonelik Yöneticisine çevrimiçi olarak tek bir abonelik satın "
+"alındığını bildirir. Abonelik hakkında özet bilgiler ve satın alınan "
+"aboneliğe hızlı erişim bağlantısı sağlar."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Bu e-posta, abonelik yöneticisine çevrimiçi olarak kurumsal bir abonelik "
+"satın alındığını bildirir. Abonelik hakkında özet bilgiler ve satın alınan "
+"aboneliğe hızlı erişim bağlantısı sağlar."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Bu e-posta, Abonelik Yöneticisine tek bir aboneliğin çevrimiçi olarak "
+"yenilendiğini bildirir. Abonelik hakkında özet bilgiler ve yenilenen "
+"aboneliğe hızlı erişim bağlantısı sağlar."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Bu e-posta, Abonelik Yöneticisine kurumsal bir aboneliğin çevrimiçi olarak "
+"yenilendiğini bildirir. Abonelik hakkında özet bilgiler ve yenilenen "
+"aboneliğe hızlı erişim bağlantısı sağlar."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Bu mesaj sayı açık erişime açıldığında haberdar olmak isteyen okuyuculara gönderilir."

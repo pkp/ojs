@@ -29,13 +29,7 @@ msgstr ""
 "<br />\n"
 "Şifre değiştirmek için: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr ""
-"Bu e-posta, şifrelerini unuttuğunu  ve/veya giriş yapamadıklarını bildiren "
-"kayıtlı kullanıcılara gönderilmektedir. Şifrelerini sıfırlamak için "
-"izleyebilecekleri bir URL bağlantısı içerir."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Şifre Sıfırlama"
@@ -49,12 +43,7 @@ msgstr ""
 "Kullanıcı adı: {$recipientUsername}<br />\n"
 "Şifre: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Bu e-posta PASSWORD_RESET_CONFIRM e-postasında gösterilen süreci takip "
-"ederek şifre sıfırlaması yapmış kayıtlı kullanıcılara gönderilmektedir."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Dergi Yeni Kullanıcı Kaydı"
@@ -74,9 +63,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.userRegister.description"
-msgstr "Bu e-posta yeni kaydolmuş kullanıcıya sisteme kabul edildiğini belirtmek ve kullanıcı adı ile şifresini bildirmek amacı ile gönderilmektedir."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Yeni sayı yayımlandı: {$issueIdentification}"
@@ -93,10 +79,6 @@ msgstr ""
 "<br />\n"
 "Dergimize gösterdiğiniz ilgi için teşekkür ederiz.<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Bu e-posta “Bana Haber Ver” seçeneğini işaretlemiş okuyuculara yeni sayıyı haber vermek ve son sayının adresini vererek okumaya çağrı için kullanılır."
 
 msgid "emails.subscriptionNotify.subject"
 msgstr "Abonelik Bilgilendirme"
@@ -117,10 +99,7 @@ msgstr ""
 "<br />\n"
 "Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Bu mesaj kayıtlı kullanıcıya yönetici tarafından abonelik işleminin yapıldığını bildirir. Derginin internet adresi ve giriş bilgileri sunulmaktadır."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Sayı Açık Erişime Açıldı"
@@ -132,10 +111,7 @@ msgstr ""
 "{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz ({$contextUrl}).<br />\n"
 "<br />\n"
 "Çalışmalarımıza süren ilginiz için teşekkür ederiz,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Bu mesaj sayı açık erişime açıldığında haberdar olmak isteyen okuyuculara gönderilir."
+"{$contextSignature}"
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "{$contextName} arşivleme talebi"
@@ -248,13 +224,6 @@ msgstr ""
 "Kullanıcı Adınız: {$recipientUsername}<br />\n"
 "<br />\n"
 "Teşekkür ederiz."
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"Bu eposta, bir Bölüm Editörüne bir gönderinin yayınlanma sürecinde editör "
-"yetkisi verildiğini bildirir. Aday makale hakkındaki bilgileri ve dergi "
-"internet sitesine girişte gerekli olan bilgileri içerir."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -386,11 +355,6 @@ msgstr ""
 "Katkılarınız için teşekkür ederiz."
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Bu e-posta Editör tarafından Tasarımcıya makalenin dizgi biçiminin "
-"hazırlanması için gönderilir."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Prova dizgi tamamlandı"
 
@@ -406,10 +370,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr ""
-"Bu e-posta Tasarımcının makalenin dizgi biçimini tamamlandığını bildirir."
-
 msgid "emails.layoutAck.subject"
 msgstr "Dizgi için teşekkürler"
 
@@ -583,10 +543,7 @@ msgstr ""
 "<br />\n"
 "Eğer bir sorununuz olur ise, bana bildirebilirsiniz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Bu mesaj aboneliği bitmek üzere olan abonelere gönderilir."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Aboneliğiniz sona erdi"
@@ -604,10 +561,7 @@ msgstr ""
 "<br />\n"
 "Eğer bir sorununuz olur ise, bana bildirebilirsiniz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Bu mesaj aboneliği biten abonelere gönderilir."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Aboneliğiniz sona erdi - Son anımsatma"
@@ -626,10 +580,7 @@ msgstr ""
 "<br />\n"
 "Eğer bir sorununuz olur ise, bana bildirebilirsiniz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Bu mesaj aboneliği biten abonelere gönderilir. Son mesajdır..."
+"{$subscriptionSignature}"
 
 msgid "emails.notification.subject"
 msgstr "{$contextName} Yeni Bildirim"
@@ -642,7 +593,7 @@ msgstr ""
 "<br />\n"
 "Bağlantı: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.notificationMaillist.subject"
 msgstr "{$siteTitle} Adlı  Siteden Yeni Bildirim"
@@ -719,9 +670,6 @@ msgstr ""
 "Saygılarımızla,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Bu e-posta, yeni kayıt olan bir hakeme, sisteme hoş geldiniz mesajı ile birlikte kullanıcı adı ve şifresini iletmek için gönderilir."
-
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Gözden geçirilmiş bir aday makaleye hakemlik daveti"
@@ -790,12 +738,6 @@ msgstr ""
 "<br />\n"
 "Abonelik URL: {$subscriptionUrl}\n"
 
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr ""
-"Bu e-posta, Abonelik Yöneticisine çevrimiçi olarak tek bir abonelik satın "
-"alındığını bildirir. Abonelik hakkında özet bilgiler ve satın alınan "
-"aboneliğe hızlı erişim bağlantısı sağlar."
-
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Abonelik Satın Alma: Kurumsal"
 
@@ -829,12 +771,6 @@ msgstr ""
 "<br />\n"
 "Abonelik URL: {$subscriptionUrl}\n"
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr ""
-"Bu e-posta, abonelik yöneticisine çevrimiçi olarak kurumsal bir abonelik "
-"satın alındığını bildirir. Abonelik hakkında özet bilgiler ve satın alınan "
-"aboneliğe hızlı erişim bağlantısı sağlar."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Abonelik Yenileme: Bireysel"
 
@@ -856,12 +792,6 @@ msgstr ""
 "aşağıdaki URL'ye tıklayın.<br />\n"
 "<br />\n"
 "Abonelik URL: {$subscriptionUrl}\n"
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr ""
-"Bu e-posta, Abonelik Yöneticisine tek bir aboneliğin çevrimiçi olarak "
-"yenilendiğini bildirir. Abonelik hakkında özet bilgiler ve yenilenen "
-"aboneliğe hızlı erişim bağlantısı sağlar."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Abonelik Yenileme: Kurumsal"
@@ -895,12 +825,6 @@ msgstr ""
 "<br />\n"
 "Abonelik URL: {$subscriptionUrl}\n"
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr ""
-"Bu e-posta, Abonelik Yöneticisine kurumsal bir aboneliğin çevrimiçi olarak "
-"yenilendiğini bildirir. Abonelik hakkında özet bilgiler ve yenilenen "
-"aboneliğe hızlı erişim bağlantısı sağlar."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Atıf Düzenleme"
 
@@ -930,17 +854,12 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Sayın Editörler,<br />\n"
 "<br />\n"
-"&quot;{$submissionTitle}&quot'un düzeltilmiş sürümü,  yazar {$authors} "
+"&quot;{$submissionTitle}&quot'un düzeltilmiş sürümü,  yazar {$submitterName} "
 "tarafından yüklendi<br />\n"
 "<br />\n"
 "Gönderi URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr ""
-"Bu e-posta, yazar bir makalenin gözden geçirilmiş bir sürümünü yüklediğinde "
-"makaleye atanmış editöre otomatik olarak gönderilir."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "{$contextName} ile ilgili bir mesaj"
@@ -1011,13 +930,7 @@ msgstr ""
 "Emek ürünü çalışmanızı yayınlamak üzere dergimizi tercih ettiğiniz için "
 "teşekkür ederiz.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"Bu e-posta etkinleştirildiğinde, aday makale başvurusu sırasında belirtilen "
-"diğer yazarlara da e-posta gönderilir."
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month} {$year} süreç işlemleri"
@@ -1025,7 +938,7 @@ msgstr "{$month} {$year} süreç işlemleri"
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"Sayın {$name}, <br />\n"
+"Sayın {$recipientName}, <br />\n"
 "<br />\n"
 "Dergimizin {$month} {$year} durum raporu hazırdır. Bu ayın öne çıkan "
 "istatistikleri aşağıda verilmiştir.<br />\n"
@@ -1041,12 +954,7 @@ msgstr ""
 "istatistiklerinin tam bir kopyası ekte gönderilmiştir.<br />\n"
 "<br />\n"
 "Saygılarımızla,<br />\n"
-"{$signature}"
-
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"Bu e-posta editörler ve dergi yöneticilerine sistem durumu ve istatistikler "
-"hakkında genel bir bakış sağlamak için aylık olarak otomatik gönderilir."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
@@ -1062,9 +970,6 @@ msgstr ""
 "sürecine yardımcı olabileceğinizi umuyoruz.<br />\n"
 "<br />\n"
 "Herhangi bir sorunuz olursa, lütfen benimle iletişime geçin."
-
-msgid "emails.announcement.description"
-msgstr "Bu e-posta, yeni bir duyuru oluşturulduğunda gönderilir."
 
 msgid "emails.announcement.body"
 msgstr ""

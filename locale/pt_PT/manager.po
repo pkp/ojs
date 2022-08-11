@@ -2146,7 +2146,7 @@ msgstr "Informação sobre a adesão do assinante"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Um resumo do tipo, nome, duração e preço da subscrição"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "A data em que a subscrição termina"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2157,3 +2157,47 @@ msgstr "Detalhes de contacto do gestor de subscrições"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
 msgstr "O nome, afiliação, telefone e e-mail do assinante"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Este e-mail notifica o leitor registado que o Gestor criou a sua Subscrição. "
+"Proporciona todas as informações necessárias para acesso ao conteúdo."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Esta mensagem avisa o assinante da proximidade do término da subscrição. Informa sobre o URL da revista e instruções de acesso."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+"Esta mensagem avisa o assinante que a subscrição. expirou. Informa o URL da "
+"revista e instruções de acesso."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"Esta mensagem é o último aviso ao assinante relativo à expiração da "
+"subscrição. Informa sobre o URL da revista e instruções de acesso."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Esta mensagem notifica o Gestor de Subscrições que uma subscrição individual foi adquirida online. Oferece informações sobre a subscrição e um link para acesso rápido à mesma."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Esta mensagem notifica o Gestor de Subscrições que uma subscrição "
+"institucional foi adquirida online. Oferece informações sobre a subscrição e "
+"um link para acesso rápido à mesma."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Esta mensagem notifica o Gestor de Subscrições que uma subscrição individual "
+"foi renovada online. Oferece informações sobre a subscrição e um link para "
+"acesso rápido à mesma."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Esta mensagem notifica o Gestor de Subscrição que uma subscrição "
+"institucional foi renovada online. Oferece informações sobre a subscrição e "
+"um link para acesso rápido à mesma."
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Esta mensagem é enviada a leitores registados que solicitam a receção de "
+"notificações da publicação de novas edições em Acesso Aberto."

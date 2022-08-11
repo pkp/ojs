@@ -31,7 +31,7 @@ class SubscriptionEmailVariable extends Variable
     public const SUBSCRIBER_DETAILS = 'subscriberDetails';
     public const SUBSCRIPTION_SIGNATURE = 'subscriptionSignature';
     public const SUBSCRIPTION_URL = 'subscriptionUrl';
-    public const EXPIRE_DATE = 'expireDate';
+    public const EXPIRY_DATE = 'expiryDate';
     public const SUBSCRIPTION_TYPE = 'subscriptionType';
     public const MEMBERSHIP = 'membership';
 
@@ -67,7 +67,7 @@ class SubscriptionEmailVariable extends Variable
             self::SUBSCRIBER_DETAILS => __('emailTemplate.variable.subscription.subscriberDetails'),
             self::SUBSCRIPTION_SIGNATURE => __('emailTemplate.variable.subscription.subscriptionSignature'),
             self::SUBSCRIPTION_URL => __('emailTemplate.variable.subscription.subscriptionUrl'),
-            self::EXPIRE_DATE => __('emailTemplate.variable.subscription.expireDate'),
+            self::EXPIRY_DATE => __('emailTemplate.variable.subscription.expiryDate'),
             self::SUBSCRIPTION_TYPE => __('emailTemplate.variable.subscription.subscriptionType'),
             self::MEMBERSHIP => __('emailTemplate.variable.subscription.membership'),
         ];
@@ -80,10 +80,10 @@ class SubscriptionEmailVariable extends Variable
     {
         return
         [
-            self::SUBSCRIBER_DETAILS => $this->subscriber->getSignature() ?? '',
+            self::SUBSCRIBER_DETAILS => $this->subscriber->getSignature($locale) ?? '',
             self::SUBSCRIPTION_SIGNATURE => $this->getSubscriptionSignature(),
             self::SUBSCRIPTION_URL => $this->getSubscriptionUrl(),
-            self::EXPIRE_DATE => $this->subscription->getDateEnd(),
+            self::EXPIRY_DATE => $this->subscription->getDateEnd(),
             self::SUBSCRIPTION_TYPE => $this->subscriptionType->getSummaryString(),
             self::MEMBERSHIP => $this->subscription->getMembership(),
         ];

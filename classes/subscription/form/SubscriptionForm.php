@@ -17,13 +17,13 @@ namespace APP\subscription\form;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\mail\mailables\SubscriptionNotify;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\form\Form;
-use PKP\mail\MailTemplate;
 
 class SubscriptionForm extends Form
 {
@@ -75,7 +75,7 @@ class SubscriptionForm extends Form
         // Subscription type is provided
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdRequired'));
         // Notify email flag is valid value
-        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', ['1']));
+        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', ['on']));
 
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
@@ -227,47 +227,23 @@ class SubscriptionForm extends Form
     /**
      * Internal function to prepare notification email
      */
-    protected function _prepareNotificationEmail($mailTemplateKey)
+    protected function _prepareNotificationEmail(): SubscriptionNotify
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
-
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
-        $journalName = $journal->getLocalizedTitle();
         $user = Repo::user()->get($this->subscription->getUserId());
-        $subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId());
-
         $subscriptionName = $journal->getData('subscriptionName');
         $subscriptionEmail = $journal->getData('subscriptionEmail');
-        $subscriptionPhone = $journal->getData('subscriptionPhone');
-        $subscriptionMailingAddress = $journal->getData('subscriptionMailingAddress');
-        $subscriptionContactSignature = $subscriptionName;
 
-        if ($subscriptionMailingAddress != '') {
-            $subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
-        }
-        if ($subscriptionPhone != '') {
-            $subscriptionContactSignature .= "\n" . __('user.phone') . ': ' . $subscriptionPhone;
-        }
+        $template = Repo::emailTemplate()->getByKey($journal->getId(), SubscriptionNotify::getEmailTemplateKey());
+        $mailable = new SubscriptionNotify($journal, $this->subscription);
+        $mailable
+            ->recipients([$user])
+            ->from($subscriptionEmail, $subscriptionName)
+            ->subject($template->getLocalizedData('subject'))
+            ->body($template->getLocalizedData('body'));
 
-        $subscriptionContactSignature .= "\n" . __('user.email') . ': ' . $subscriptionEmail;
-
-        $paramArray = [
-            'recipientName' => $user->getFullName(),
-            'journalName' => $journalName,
-            'subscriptionType' => $subscriptionType->getSummaryString(),
-            'recipientUsername' => $user->getUsername(),
-            'signature' => $subscriptionContactSignature
-        ];
-
-        $mail = new MailTemplate($mailTemplateKey);
-        $mail->setReplyTo($subscriptionEmail, $subscriptionName);
-        $mail->addRecipient($user->getEmail(), $user->getFullName());
-        $mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
-        $mail->setBody($mail->getBody($journal->getPrimaryLocale()));
-        $mail->assignParams($paramArray);
-
-        return $mail;
+        return $mailable;
     }
 }
 

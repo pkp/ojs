@@ -2044,3 +2044,30 @@ msgstr "Il DOI deve iniziare con {$prefix}."
 
 msgid "doi.manager.settings.enablePublicationDoi"
 msgstr "Articoli"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Questa email notifica ai lettori registrati che l'amministratore ha attivato un abbonamento per loro. Questa fornisce la URL del journal insieme con le istruzioni per l'accesso."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Questa email informa un abbonato della prossima scadenza del suo abbonamento. Fornisce la URL della rivista e le istruzioni per l'accesso."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Questa email informa un abbonato che il suo abbonamento a  è scaduto. Fornisce la URL della rivista e le istruzioni per l'accesso."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Questa email informa un abbonato che il suo abbonamento a  è scaduto. Fornisce la URL della rivista e le istruzioni per l'accesso."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Questo messaggio informa il Subscription manager che è stato acquistato online un nuovo abbonamento individuale. Informa sulla procedura e fornisce un link all'abbonamento acquistato."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Questo messaggio iforma il Subscription manager che è stato acquistato online un nuovo abbonamento istituzionale. Informa sulla procedura e fornisce un link all'abbonamento acquistato."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Notifica del rinnovo di un abbonamento individuale."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Notifica del rinnovo di un abbonamento istituzionale."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Questa email viene inviata ai lettori registrati che hanno chiesto di ricevere un'email di notifica in caso di uscite ad accesso aperto."

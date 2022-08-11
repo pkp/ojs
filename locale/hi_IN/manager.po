@@ -2695,3 +2695,96 @@ msgstr "&#8226;"
 
 msgid "manager.subscriptions.form.institutionMailingAddress"
 msgstr "डाक पता"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
+msgid "mailable.subscriptionNotify.description"
+msgstr "यह ईमेल एक पंजीकृत पाठक को सूचित करता है कि प्रबंधक ने उनके लिए एक सदस्यता बनाई है। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "यह ईमेल एक ग्राहक को सूचित करता है कि उनकी सदस्यता जल्द ही समाप्त हो जाएगी। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$signature}, {$contextName}, {$expiryDate}, {$subscriptionType}, {$recipientName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "यह ईमेल एक ग्राहक को सूचित करता है कि उनकी सदस्यता समाप्त हो गई है। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$signature}, {$contextName}, {$expiryDate}, {$subscriptionType}, {$recipientName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "यह ईमेल एक ग्राहक को सूचित करता है कि उनकी सदस्यता समाप्त हो गई है। यह एक्सेस के लिए निर्देशों के साथ जर्नल का URL प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberDetails}, {$subscriptionUrl}, {$membership}, {$subscriptionType}, {$ contextName}
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक व्यक्तिगत सदस्यता ऑनलाइन खरीदी गई है। यह सदस्यता के बारे में सारांश जानकारी और खरीदी गई सदस्यता के लिए त्वरित पहुंच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberDetails}, {$subscriptionUrl}, {$domain}, {$institutionMailingAddress}, {$institutionName}, {$ipRanges}, {$membership}, {$contextName}, {$subscriptionType}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) singlequoting: Different quotation marks
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक संस्थागत सदस्यता ऑनलाइन खरीदी गई है। यह सदस्यता के बारे में सारांश जानकारी और खरीदी गई सदस्यता के लिए त्वरित पहुंच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberDetails}, {$subscriptionUrl}, {$membership}, {$contextName}, {$subscriptionType}
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक व्यक्तिगत सदस्यता ऑनलाइन नवीनीकृत हो गई है। यह सदस्यता के बारे में सारांश जानकारी और नवीनीकृत सदस्यता के लिए एक त्वरित पहुँच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}', '(', ')'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$subscriberDetails}, {$subscriptionUrl}, {$domain}, {$institutionMailingAddress}, {$institutionName}, {$ipRanges}, {$membership}, {$contextName}, {$subscriptionType}
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "यह ईमेल सदस्यता प्रबंधक को सूचित करता है कि एक संस्थागत सदस्यता ऑनलाइन नवीनीकृत की गई है। यह सदस्यता के बारे में सारांश जानकारी और नवीनीकृत सदस्यता के लिए एक त्वरित पहुँच लिंक प्रदान करता है."
+
+# (pofilter) endwhitespace: Different whitespace at the end
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$rawCitation}, {$recipientName}, {$submissionTitle}, {$contextName}, {$senderName}
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"यह ईमेल उन पंजीकृत पाठकों को भेजा जाता है, जिन्होंने किसी अंक पर खुली पहुंच "
+"बनने पर अधिसूचना ईमेल प्राप्त करने का अनुरोध किया है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) newlines: Different line endings
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$signature}, {$contextName}, {$expiryDate}, {$subscriptionType}, {$recipientName}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) startpunc: Different punctuation at the start
+# (pofilter) xmltags: Added XML tags

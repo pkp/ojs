@@ -43,13 +43,6 @@ msgid "emails.lockssExistingArchive.subject"
 msgstr "בקשת ארכיון עבור {$contextName}"
 
 #, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr ""
-"דוא\"ל זה נשלח לקוראים הרשומים באמצעות הקישור \"הודע למשתמשים\" באזור של "
-"העורך. זה מודיע לקוראים על גיליון חדש ומזמין אותם לבקר בכתב העת בכתובת URL "
-"שסופקה."
-
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "קוראים: <br />\n"
@@ -64,11 +57,6 @@ msgstr ""
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "גיליון חדש פורסם"
-
-msgid "emails.reviewerRegister.description"
-msgstr ""
-"דוא\"ל זה נשלח למבקר שנרשם לאחרונה כדי לקבל אותו במערכת ולספק להם רשומה של "
-"שם המשתמש והסיסמה שלהם."
 
 msgid "emails.reviewerRegister.body"
 msgstr ""
@@ -108,11 +96,6 @@ msgstr ""
 msgid "emails.userValidateContext.subject"
 msgstr "אמת את חשבונך"
 
-msgid "emails.userRegister.description"
-msgstr ""
-"דוא\"ל זה נשלח למשתמש שנרשם לאחרונה כדי לקבל אותו במערכת ולספק לו רשומה של "
-"שם המשתמש והסיסמה שלהם."
-
 msgid "emails.userRegister.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -130,11 +113,6 @@ msgstr ""
 msgid "emails.userRegister.subject"
 msgstr "רישום כתב עת"
 
-msgid "emails.passwordReset.description"
-msgstr ""
-"דוא\"ל זה נשלח למשתמש רשום לאחר שאיפס בהצלחה את סיסמתו בעקבות התהליך המתואר "
-"בדוא\"ל PASSWORD_RESET_CONFIRM."
-
 msgid "emails.passwordReset.body"
 msgstr ""
 "איפוס סיסמתך בוצע בהצלחה. שמור על פרטי שם משתמש וסיסמה כי צריכים אותם לכל "
@@ -143,15 +121,10 @@ msgstr ""
 "שם משתמש: {$recipientUsername}<br />\n"
 "סיסמה:  {$password}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "איפוס סיסמה"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr ""
-"דוא\"ל זה נשלח למשתמש רשום כאשר הוא מציין ששכח את סיסמתו או שאינו יכול "
-"להתחבר. היא מספקת כתובת URL כדי לאפס את הסיסמה שלהם."
 
 msgid "emails.passwordResetConfirm.body"
 msgstr ""
@@ -163,7 +136,7 @@ msgstr ""
 "<br />\n"
 "איפוס סיסמה: {$passwordResetUrl}\n"
 "<br />\n"
-"{$signature}"
+"{$siteContactName}"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "אישור איפוס סיסמה"
@@ -176,7 +149,7 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.notification.subject"
 msgstr "הודעה חדשה מאת {$contextName}"
@@ -238,12 +211,6 @@ msgid "emails.reviewRequest.subject"
 msgstr "בקשה לביקורת מאמר"
 
 #, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"דוא\"ל זה מודיע לעורך מדורים כי העורך הקצה להם את המשימה לפקח על הגשה "
-"באמצעות תהליך העריכה. הוא מספק מידע על ההגשה וכיצד לגשת לאתר כתב העת."
-
-#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -261,12 +228,6 @@ msgid "emails.editorAssign.subject"
 msgstr "הקצאת עריכה"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"דוא\"ל זה, כאשר הוא פעיל, נשלח אוטומטית למחברים האחרים שאינם משתמשים בתוך "
-"OJS שצוינו במהלך תהליך ההגשה."
-
-#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "שלום,<br />\n"
@@ -275,7 +236,7 @@ msgstr ""
 "<br />\n"
 "בכל שאלה ניתן לפנות אלי. תודה על פנייתך לכתב עת זה.<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.submissionAckNotUser.subject"

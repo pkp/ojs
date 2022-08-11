@@ -47,6 +47,10 @@
 		{fbvFormSection label="manager.subscriptions.form.notes"}
 			{fbvElement type="textarea" name="notes" id="notes" value=$notes rich=true}
 		{/fbvFormSection}
+
+		{fbvFormSection for="notifyEmail" list=true}
+			{fbvElement type="checkbox" label="manager.subscriptions.form.notifyEmail" name="notifyEmail" id="notifyEmail"}
+		{/fbvFormSection}
 	{/fbvFormArea}
 
 	<span class="formRequired">{translate key="common.requiredField"}</span>

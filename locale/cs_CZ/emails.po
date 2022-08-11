@@ -26,10 +26,7 @@ msgstr ""
 "<br />\n"
 "Resetovat moje heslo: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Tento email je zasílán registrovanému uživateli, když uvede, že zapomněl své heslo nebo se nemůže přihlásit. Obsahuje adresu URL, kterou může následovat a resetovat své heslo."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Resetování hesla"
@@ -41,10 +38,7 @@ msgstr ""
 "Vaše uživatelské jméno: {$recipientUsername}<br />\n"
 "Heslo: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Tento email je zaslán registrovanému uživateli, když úspěšně resetuje své heslo postupem uvedeným v PASSWORD_RESET_CONFIRM emailu."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Registrace do časopisu"
@@ -60,9 +54,6 @@ msgstr ""
 "<br />\n"
 "Děkujeme,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Tento email je zaslán nově registrovanému uživateli jako přivítání do systému a poskytne mu doklad o jeho uživatelském jménu a heslu."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -95,9 +86,6 @@ msgstr ""
 "Děkujeme,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Tento email je zaslán nově registrovanému recenzentovi jako přivítání do systému a poskytne mu doklad o jeho uživatelském jménu a heslu."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nové číslo bylo vydáno: {$issueIdentification}"
@@ -110,10 +98,6 @@ msgstr ""
 "návštěvě stránek časopisu a k prohlídce článků a zajímavostí. Děkujeme našim "
 "autorům, recenzentům a redaktorům za jejich cenné příspěvky k tomuto dílu a "
 "našim čtenářům za váš trvalý zájem.</p><p>S pozdravem,</p>{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Tento email je zasílán registrovaným čtenářům prostřednictvím odkazu \"Informovat uživatele\" z domácí stránky editora. Informuje čtenáře o novém čísle a zve je k návštěvě časopisu přes poskytnutou URL adresu."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Žádost o archivaci pro {$contextName}"
@@ -228,14 +212,6 @@ msgstr ""
 "recenzenty kliknutím na \"Přidat recenzenta\". </p><p>Pokud podle vás není "
 "příspěvek vhodný pro tento časopis, odmítněte jej, prosím.</p><p>Předem "
 "děkujeme.</p><p>S pozdravem,</p>{$signature}"
-
-msgid "emails.editorAssign.description"
-msgstr ""
-"Tento e-mail oznamuje editorovi sekce, že mu editor přidělil úkol dohlížet "
-"na předložený příspěvek v rámci redakčního procesu. Tato šablona je k "
-"dispozici k výběru, když je editor přiřazen k příspěvku v oblasti pro "
-"účastníky. Tato šablona by měla být použita, pokud má editor sekce možnost "
-"zaznamenávat redakční rozhodnutí."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -495,12 +471,6 @@ msgstr ""
 "spolupráci v rámci našeho periodika.</p><p>S pozdravem,</p>{$signature}"
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Tento email posílá editor typografovi, aby mu oznámil, že mu byl přidělen "
-"úkol provést typografické úpravy příspěvku. Obsahuje informace o příspěvku a "
-"přístupu k němu."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Sazebnice dokončeny"
 
@@ -512,11 +482,6 @@ msgstr ""
 "mě prosím.<br /><br />{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr ""
-"Tento email posílá typograf editorovi, aby mu oznámil, že byly vytvořeny "
-"sazebnice příslušného příspěvku."
-
 msgid "emails.layoutAck.subject"
 msgstr "Poděkování za grafické úpravy "
 
@@ -692,10 +657,7 @@ msgstr ""
 "<br />\n"
 "Pokud máte nějaké dotazy, neváhejte mě kontaktovat<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Tento email informuje registrovaného čtenáře, že pro něj manažer vytvořil předplatné. Obsahuje URL časopisu a přístupové instrukce."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Nyní otevřen přístup k číslu"
@@ -707,10 +669,7 @@ msgstr ""
 "Časopis {$contextName} povolil otevřený přístup k následujícímu číslu. Zveme vás k prohlédnutí obsahu časopisu a návštěvě našich stránek ({$contextUrl}).<br />\n"
 "<br />\n"
 "Děkujeme za Vás pokračující zájem o naši práci<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Tento email je posílán čtenářům, kteří požádali o zasílání upozornění na přechod čísla časopisu do otevřeného přístupu."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Oznámení o vypršení předplatného"
@@ -728,10 +687,7 @@ msgstr ""
 "<br />\n"
 "Pokud máte nějaké otázky, neváhejte mě prosím kontaktovat.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Tento email informuje předplatitele, že jeho předplatné brzy vyprší. Obsahuje URL časopisu a instrukce pro přístup."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Vypršelo předplatné"
@@ -749,10 +705,7 @@ msgstr ""
 "<br />\n"
 "Pokud máte nějaké otázky, neváhejte mě prosím kontaktovat.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Předplatné vypršelo – poslední připomínka"
@@ -771,10 +724,7 @@ msgstr ""
 "<br />\n"
 "Pokud máte nějaké otázky, neváhejte mě prosím kontaktovat.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
+"{$subscriptionSignature}"
 
 msgid "emails.notification.subject"
 msgstr "Nové oznámení od {$contextName}"
@@ -787,7 +737,7 @@ msgstr ""
 "<br />\n"
 "Odkaz: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}\n"
+"{$contextSignature}\n"
 "<hr />{$unsubscribeLink}"
 
 msgid "emails.notificationMaillist.subject"
@@ -872,12 +822,6 @@ msgstr ""
 "<br />\n"
 "URL předplatného: {$subscriptionUrl}<br/>\n"
 
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr ""
-"Tento e-mail upozorňuje Správce předplatného, že individuální předplatné "
-"bylo zakoupeno online. Poskytuje souhrnné informace o předplatném a rychlý "
-"přístup k zakoupenému předplatnému."
-
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Zakoupení předplatného: Institucionální"
 
@@ -911,12 +855,6 @@ msgstr ""
 "<br />\n"
 "URL předplatného: {$subscriptionUrl}<br />\n"
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr ""
-"Tento e-mail upozorňuje Správce předplatného, že bylo zakoupeno "
-"institucionální předplatné online. Poskytuje souhrnné informace o "
-"předplatném a rychlý přístup k zakoupenému předplatnému."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Obnovení předplatného: Individuální"
 
@@ -938,12 +876,6 @@ msgstr ""
 "URL.<br />\n"
 "<br />\n"
 "URL předplatného: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr ""
-"Tento e-mail upozorňuje správce předplatného, že jednotlivé předplatné bylo "
-"obnoveno online. Poskytuje souhrnné informace o předplatném a rychlý přístup "
-"k obnovenému předplatnému."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Obnovení předplatného: Institucionální"
@@ -976,12 +908,6 @@ msgstr ""
 "URL.<br />\n"
 "<br />\n"
 "URL předplatného: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewInstl.description"
-msgstr ""
-"Tento e-mail informuje správce předplatného o obnovení institucionálního "
-"předplatného online. Poskytuje souhrnné informace o předplatném a rychlý "
-"přístup k obnovenému předplatnému."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Zpracování citací"
@@ -1098,12 +1024,7 @@ msgstr ""
 "jsou některé z těchto údajů nesprávné nebo si nepřejete být v tomto "
 "příspěvku uvedeni, kontaktujte mě prosím.</p><p>Děkuji, že zvažujete náš "
 "časopis jako místo pro publikaci své práce.</p><p>S "
-"pozdravem,</p>{$signature}"
-
-msgid "emails.submissionAckNotUser.description"
-msgstr ""
-"Pokud je tato funkce povolena, je tento e-mail automaticky zasílán autorům "
-"uvedeným v příspěvku, kteří nejsou kontaktním autorem."
+"pozdravem,</p>{$contextSignature}"
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Nahrána opravená verze příspěvku"
@@ -1112,14 +1033,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editoři:<br />\n"
 "<br />\n"
-"Opravená verze příspěvku &quot;{$submissionTitle}&quot; byla nahrána autorem {$authors}.<br />\n"
+"Opravená verze příspěvku &quot;{$submissionTitle}&quot; byla nahrána autorem {$submitterName}.<br />\n"
 "<br />\n"
 "Webová adresa příspěvku: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Tento email je automaticky odeslán příslušnému editorovi článku, pokud autor odešle revidovanou verzi článku."
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
@@ -1163,15 +1081,10 @@ msgstr ""
 "se na nás, prosím, obraťte.</p><p>Děkuji za zvážení této žádosti. Vaší "
 "pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"Tento e-mail je automaticky zasílán měsíčně editorům a správcům časopisů, "
-"aby jim poskytl přehled o stavu systému."
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "Vaše zpráva o stavu časopisu za {$month}, {$year} je nyní k dispozici. Vaše "
 "klíčové statistiky pro tento měsíc jsou níže. <br />\n"
@@ -1187,7 +1100,7 @@ msgstr ""
 "měsíce je připojena. <br />\n"
 "<br />\n"
 "S pozdravem <br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktivita redakce pro {$month}, {$year}"
@@ -1204,9 +1117,6 @@ msgstr ""
 
 msgid "emails.reviewReinstate.subject"
 msgstr "Můžete, prosím, stále ještě udělat recenzi pro časopis {$contextName}?"
-
-msgid "emails.announcement.description"
-msgstr "Tento email je posílán, pokud je vytvořeno nové oznámení."
 
 msgid "emails.announcement.body"
 msgstr ""

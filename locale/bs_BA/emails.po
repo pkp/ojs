@@ -26,10 +26,7 @@ msgstr ""
 "<br />\n"
 "Promjena lozinke: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Ovaj obrazac e-pošte šalje se registriranim korisnicima kada informiraju sustav da su zaboravili svoju lozinku ili da se ne mogu prijaviti u sustav. U poruci se nalazi URL koji mogu slijediti kao bi postavili svoju novu lozinku."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Promjena lozinke"
@@ -41,10 +38,7 @@ msgstr ""
 "Vaše korisničko ime: {$recipientUsername}<br />\n"
 "Lozinka: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Ovaj obrazac e-pošte šalje se registriranim korisnicima nakon što  uspješno ponovno postave  svoju  lozinku slijedeći postupak koji je opisan u PASSWORD_RESET_CONFIRM."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Registracija novog korisnika"
@@ -59,9 +53,6 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$signature}"
 
-msgid "emails.userRegister.description"
-msgstr "Ovaj se obrazac e-pošte šalje novoregistriranim korisnicima u sustavu i sadrži njihovo korisničko ime i lozinku."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Objavljen novi broj"
@@ -75,10 +66,6 @@ msgstr ""
 "<br />\n"
 "Hvala vam na interesu za naš rad,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Ovaj obrazac e-pošte šalje se registriranim čitateljima kroz opciju \"Obavijesti korisnika\" na početnom urednikovom izborniku. Čitatelji se njome obavještavaju o izlasku novog broja časopisa i pozivaju se da posjete stranice časopisa na priloženom URL-u."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Zamolba za arhiviranje časopisa {$contextName}"
@@ -167,10 +154,6 @@ msgstr ""
 "Korisničko ime: {$recipientUsername}<br />\n"
 "<br />\n"
 "Unaprijed hvala."
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr "Ovim obrascem e-pošte glavni urednik obavještava urednika rubrike da mu je dodijeljen zadatak vođenja priloga kroz uređivački postupak. Obrazac pruža i osnovne informacije o prilogu."
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
@@ -317,9 +300,6 @@ msgstr ""
 "Srdačno,"
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr "Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da mu je dodijeljen zadatak  izrade prijeloma priloga."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Napravljen prijelom"
 
@@ -336,9 +316,6 @@ msgstr ""
 ""
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "Ova e-pošta urednika prijeloma uredniku rubrike obaviještava da je proces prijeloma završen."
-
 msgid "emails.layoutAck.subject"
 msgstr "Zaprimljen prijelom"
 
@@ -514,10 +491,7 @@ msgstr ""
 "Molimo vas da nam se obratite u slučaju da imate bilo kakva dodatna pitanja.<br />\n"
 "<br />\n"
 "Srdačno,<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici o aktivaciji njihove pretplate . Poruka sadrži URL časopisa i upute za pristup."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Broj dostupan pod uvjetima otvorenog pristupa"
@@ -527,10 +501,7 @@ msgstr ""
 "Ovaj broj časopisa {$contextName} od sada je u cijelosti dostupan svim čitateljima pod uvjetima otvorenog pristupa. Pozivamo vas da pregledate kazalo sadržaja i potom posjetite našu mrežnu stranicu ({$contextUrl}) gdje možete bez ograničenja pregledati sve članke i priloge koji vas zanimaju.<br />\n"
 "<br />\n"
 "Hvala vam na zanimanju za naš rad,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Ovaj obrazac e-pošte šalje se registriranim čitateljima koji su zatražili primanje obavijesti e-poštom kada broj časopisa postane dostupan pod uvjetima otvorenog pristupa."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Obavijest o isteku pretplate"
@@ -549,10 +520,7 @@ msgstr ""
 "U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />\n"
 "<br />\n"
 "Srdačno,<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici da će njihova pretplata uskoro isteći. Poruka sadrži URL časopisa i upute za pristup."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Vaša pretplata je istekla"
@@ -571,11 +539,8 @@ msgstr ""
 "U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />\n"
 "<br />\n"
 "Srdačno,<br />\n"
-"{$signature}<br />\n"
+"{$subscriptionSignature}<br />\n"
 ""
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup."
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Vaša pretplata je istekla - Posljednji podsjetnik"
@@ -595,10 +560,7 @@ msgstr ""
 "U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.<br />\n"
 "<br />\n"
 "Srdačno,<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup."
+"{$subscriptionSignature}"
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrirani ste kao recenzent časopisa {$contextName}"
@@ -614,9 +576,6 @@ msgstr ""
 "<br />\n"
 "Srdačno,<br />\n"
 "{$signature}"
-
-msgid "emails.reviewerRegister.description"
-msgstr "Ova se poruka šalje recenzentima koje registriraju urednici. Njome se novoregistriranom recenzentu želi dobrodošlica te pružaju informacije o korisničkom imenu i lozinki."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -647,7 +606,7 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.notification.subject"
 msgstr "Nova obavijest od {$contextName}"

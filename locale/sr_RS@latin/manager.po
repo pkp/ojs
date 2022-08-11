@@ -1691,3 +1691,6 @@ msgstr "DOI {$pubId} ne može biti dodeljen pošto sadrži nečitljivu nisku."
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr "DOI {$pubId} je dodeljen."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Ovaj imejl obaveštava registrovane čitaoce da je urednik napravio nalog za njihovu pretplatu. Imejl poruka sadrži URL časopisa kao i instrukcije za pristup."

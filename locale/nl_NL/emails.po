@@ -25,7 +25,7 @@ msgstr ""
 "<br />\n"
 "Link: {$notificationUrl}<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Bevestiging wachtwoord herstellen"
@@ -38,10 +38,7 @@ msgstr ""
 "<br />\n"
 "Herstel mijn wachtwoord: {$passwordResetUrl}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordResetConfirm.description"
-msgstr "Deze e-mail wordt gestuurd naar een geregistreerde gebruiker die heeft aangegeven zijn wachtwoord vergeten te zijn of niet in te kunnen loggen. Het bevat een URL die ze kunnen volgen om hun wachtwoord te herstellen."
+"{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
 msgstr "Wachtwoord hersteld"
@@ -53,10 +50,7 @@ msgstr ""
 "Uw gebruikersnaam: {$recipientUsername}<br />\n"
 "Wachtwoord: {$password}<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met succes hun wachtwoord hebben veranderd volgens de procedure die is beschreven in de PASSWORD_RESET_CONFIRM e-mail."
+"{$siteContactName}"
 
 msgid "emails.userRegister.subject"
 msgstr "Tijdschriftregistratie"
@@ -72,9 +66,6 @@ msgstr ""
 "<br />\n"
 "Dank u,<br />\n"
 "{$signature}"
-
-msgid "emails.userRegister.description"
-msgstr "Deze e-mail wordt verstuurd naar alle nieuw geregistreerde gebruikers om ze welkom te heten bij het tijdschrift en om ze te voorzien van een kopie van hun gebruikersnaam en wachtwoord."
 
 #, fuzzy
 msgid "emails.userValidateContext.subject"
@@ -107,9 +98,6 @@ msgstr ""
 "Dank u,<br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.description"
-msgstr "Deze e-mail wordt naar iedere nieuwe reviewer gestuurd om ze welkom te heten bij het systeem en ze van een kopie van hun gebruikersnaam en wachtwoord te voorzien."
-
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nieuw nummer gepubliceerd"
@@ -123,10 +111,6 @@ msgstr ""
 "<br />\n"
 "Dank voor uw interesse in ons werk,<br />\n"
 "{$signature}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.description"
-msgstr "Deze e-mail wordt verstuurd naar de geregistreerde gebruikers via de \"Bericht gebruikers\" link op de gebruikerspagina van de redacteur. Het stelt lezers op de hoogte van het verschijnen van een nieuw nummer en nodigt ze uit om het tijdschrift te bezoeken via de bijgevoegde URL."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Verzoek tot archivering voor {$contextName}"
@@ -183,11 +167,7 @@ msgstr ""
 "<br />\n"
 "Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van dit tijdschrift als podium voor u werk.<br />\n"
 "<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotUser.description"
-msgstr "Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar de andere auteurs die niet geregistreerd zijn als gebruikers van OJS.."
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -204,13 +184,6 @@ msgstr ""
 "Gebruikersnaam: {$recipientUsername}<br />\n"
 "<br />\n"
 "Dank u."
-
-#, fuzzy
-msgid "emails.editorAssign.description"
-msgstr ""
-"Deze e-mail bericht een sectieredacteur dat de redacteur een inzending heeft "
-"toegewezen om door het redactieproces te leiden. Het geeft informatie over "
-"de inzending en hoe de tijdschrift-website te benaderen."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -405,12 +378,6 @@ msgstr ""
 "Als u op dit moment niet in staat bent om dit werk te doen of als u vragen heeft, neem dan contact met me op."
 
 #, fuzzy
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Deze e-mail van de sectieredacteur aan de opmaakredacteur meldt de "
-"toekenning van de taak om de opmaak van een inzending uit te voeren. Het "
-"bevat informatie over de inzending en hoe die te benaderen."
-
 msgid "emails.layoutComplete.subject"
 msgstr "Proeven gereed"
 
@@ -426,9 +393,6 @@ msgstr ""
 "{$senderName}"
 
 #, fuzzy
-msgid "emails.layoutComplete.description"
-msgstr "Deze e-mail van de opmaakredacteur aan de sectieredacteur bericht dat het opmaakproces is voltooid."
-
 msgid "emails.emailLink.subject"
 msgstr "Mogelijk interessant artikel"
 
@@ -461,10 +425,7 @@ msgstr ""
 "<br />\n"
 "Als vragen heeft, neemt u dan alstublieft contact met me op.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionNotify.description"
-msgstr "Deze e-mail bericht een geregistreerde lezer dat de beheerder een abonnement heeft gecreëerd. Het bevat de URL van het tijdschrift en instructies om toegang te krijgen."
+"{$subscriptionSignature}"
 
 msgid "emails.openAccessNotify.subject"
 msgstr "Nummer nu Open Access"
@@ -476,10 +437,7 @@ msgstr ""
 "{$contextName} heeft het volgende nummer in open access beschikbaar gesteld. We nodigen u uit om de inhoudsopgave te bekijken en onze website te bezoeken ({$contextUrl}) voor de items en artikels die u interesseren.<br />\n"
 "<br />\n"
 "Bedankt voor de interesse in ons werk,<br />\n"
-"{$signature}"
-
-msgid "emails.openAccessNotify.description"
-msgstr "Deze e-mail wordt verstuurd naar geregistreerde gebruikers die aangegeven hebben een e-mail te willen ontvangen als een nummer open access wordt."
+"{$contextSignature}"
 
 msgid "emails.subscriptionBeforeExpiry.subject"
 msgstr "Bericht van aflopen abonnement"
@@ -497,10 +455,7 @@ msgstr ""
 "<br />\n"
 "Aarzel niet om contact met me op te nemen als u vragen heeft.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionBeforeExpiry.description"
-msgstr "Deze e-mail bericht een abonnee dat zijn abonnement binnenkort verloopt. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiry.subject"
 msgstr "Abonnement verlopen - laatste herinnering"
@@ -518,10 +473,7 @@ msgstr ""
 "<br />\n"
 "Aarzel niet om contact met me op te nemen als u vragen heeft.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiry.description"
-msgstr "Deze e-mail bericht een abonnee dat zijn abonnement is verlopen. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
 msgstr "Abonnement verlopen - laatste herinnering"
@@ -540,10 +492,7 @@ msgstr ""
 "<br />\n"
 "Aarzel niet om contact met mij op te nemen als u vragen heeft.<br />\n"
 "<br />\n"
-"{$signature}"
-
-msgid "emails.subscriptionAfterExpiryLast.description"
-msgstr "Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De URL van het tijdschrift en instructies voor toegang worden meegeleverd."
+"{$subscriptionSignature}"
 
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Aankoop abonnement: individueel"
@@ -565,9 +514,6 @@ msgstr ""
 "Gebruik de volgende URL om dit abonnement te bekijken of te wijzigen.<br />\n"
 "<br />\n"
 "Abonnement URL: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionPurchaseIndl.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven."
 
 msgid "emails.subscriptionPurchaseInstl.subject"
 msgstr "Aankoop abonnement: institutioneel"
@@ -601,9 +547,6 @@ msgstr ""
 "<br />\n"
 "Abonnement URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.subscriptionPurchaseInstl.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven."
-
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "Verlenging abonnement: individueel"
 
@@ -624,9 +567,6 @@ msgstr ""
 "Gebruik de volgende URL om het abonnement te bekijken of bewerken.<br />\n"
 "<br />\n"
 "Abonnement URL: {$subscriptionUrl}<br />\n"
-
-msgid "emails.subscriptionRenewIndl.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
 
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Verlenging abonnement: institutioneel"
@@ -659,9 +599,6 @@ msgstr ""
 "<br />\n"
 "Abonnement URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.subscriptionRenewInstl.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
-
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Citatie redactie"
 
@@ -689,14 +626,11 @@ msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"
 "<br />\n"
-"Een herziene versie van &quot;{$submissionTitle}&quot; is geladen door de auteur {$authors}.<br />\n"
+"Een herziene versie van &quot;{$submissionTitle}&quot; is geladen door de auteur {$submitterName}.<br />\n"
 "<br />\n"
 "URL van de inzending: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.revisedVersionNotify.description"
-msgstr "Deze e-mail wordt automatisch verstuurd naar de redacteur als de auteur een herziene versie van een artikel laadt."
 
 msgid "emails.notificationCenterDefault.subject"
 msgstr "Een bericht over {$contextName}"
@@ -727,10 +661,6 @@ msgstr ""
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
 
-msgid "emails.announcement.description"
-msgstr ""
-"Deze e-mail wordt verzonden wanneer er een nieuwe aankondiging is gemaakt."
-
 msgid "emails.announcement.body"
 msgstr ""
 "<b>{$announcementTitle}</b><br />\n"
@@ -740,16 +670,10 @@ msgstr ""
 "Bezoek onze website om de <a href=\"{$announcementUrl}\">volledige aankondiging</a> te "
 "lezen."
 
-msgid "emails.statisticsReportNotification.description"
-msgstr ""
-"Deze e-mail wordt maandelijks automatisch naar redacteuren en "
-"tijdschriftbeheerders gestuurd om hen een overzicht van de systeemgezondheid "
-"te geven."
-
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 "\n"
-"{$name}, <br />\n"
+"{$recipientName}, <br />\n"
 "<br />\n"
 "Uw dagboekgezondheidsrapport voor {$month}, {$year} is nu beschikbaar. "
 "Hieronder vindt u uw belangrijkste statistieken voor deze maand.<br />\n"
@@ -766,4 +690,4 @@ msgstr ""
 "bijgevoegd.<br />\n"
 "<br />\n"
 "Vriendelijke groet,<br />\n"
-"{$signature}"
+"{$contextSignature}"

@@ -22,6 +22,7 @@ use APP\subscription\form\SubscriptionForm;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\SubscriptionType;
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
 
@@ -196,12 +197,15 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         }
 
         // Send notification email
-        if ($this->_data['notifyEmail'] == 1) {
-            $mail = $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
-            if (!$mail->send()) {
+        if ($this->getData('notifyEmail')) {
+            $mailable = $this->_prepareNotificationEmail();
+            try {
+                Mail::send($mailable);
+            } catch (Exception $e) {
                 $notificationMgr = new NotificationManager();
                 $request = Application::get()->getRequest();
                 $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+                error_log($e->getMessage());
             }
         }
     }

@@ -130,7 +130,7 @@ sitewide_privacy_statement = Off
 
 ; The number of days a new user has to validate their account
 ; A new user account will be expired and removed if this many days have passed since the user registered
-; their account, and they have not validated their account or logged in. If the user_validation_period is set to 
+; their account, and they have not validated their account or logged in. If the user_validation_period is set to
 ; 0, unvalidated accounts will never be removed. Use this setting to automatically remove bot registrations.
 user_validation_period = 28
 

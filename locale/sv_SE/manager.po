@@ -2067,7 +2067,7 @@ msgstr "Information om prenumerantens medlemskap"
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr "Sammanfattning av typen av prenumeration, namn, tid och kostnad"
 
-msgid "emailTemplate.variable.subscription.expireDate"
+msgid "emailTemplate.variable.subscription.expiryDate"
 msgstr "Slutdatum för prenumerationen"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
@@ -2091,3 +2091,30 @@ msgid "manager.setup.enableDois.description"
 msgstr ""
 "Aktivera tilldelning av Digital Object Identifiers (DOI) till bidrag i "
 "tidskriften."
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "Det här e-postmeddelandet meddelar en registrerad läsare att ansvariga har skapat en prenumeration åt hen. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen håller på att förfalla. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har förfallit. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har gått ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång."
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en enskild prenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en institutionsprenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en enskild prenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen."
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en institutionsprenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen."
+
+msgid "mailable.openAccessNotify.description"
+msgstr "Det här e-postmeddelandet skickas till registrerade läsare som har begärt att meddelas om och när ett nummer görs tillgängligt som open access."

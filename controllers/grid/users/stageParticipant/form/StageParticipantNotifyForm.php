@@ -15,42 +15,23 @@
 
 namespace APP\controllers\grid\users\stageParticipant\form;
 
-use APP\mail\ArticleMailTemplate;
-
 use PKP\controllers\grid\users\stageParticipant\form\PKPStageParticipantNotifyForm;
 
 class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm
 {
     /**
-     * Return app-specific stage templates.
-     *
-     * @return array
+     * FIXME should be retrieved from a database based on a record in email_template_assignments table after
+     * API implementation pkp/pkp-lib#7706
      */
-    protected function _getStageTemplates()
+    protected function getStageTemplates(): array
     {
-        return [
+        $map = [
             WORKFLOW_STAGE_ID_SUBMISSION => ['EDITOR_ASSIGN'],
+            WORKFLOW_STAGE_ID_INTERNAL_REVIEW => ['EDITOR_ASSIGN'],
             WORKFLOW_STAGE_ID_EXTERNAL_REVIEW => ['EDITOR_ASSIGN'],
-            WORKFLOW_STAGE_ID_EDITING => ['COPYEDIT_REQUEST'],
-            WORKFLOW_STAGE_ID_PRODUCTION => ['LAYOUT_REQUEST', 'LAYOUT_COMPLETE', 'EDITOR_ASSIGN']
+            WORKFLOW_STAGE_ID_EDITING => ['EDITOR_ASSIGN', 'COPYEDIT_REQUEST'],
+            WORKFLOW_STAGE_ID_PRODUCTION => ['EDITOR_ASSIGN', 'LAYOUT_REQUEST', 'LAYOUT_COMPLETE'],
         ];
-    }
-
-    /**
-     * return app-specific mail template.
-     *
-     * @param Submission $submission
-     * @param string $templateKey
-     * @param bool $includeSignature optional
-     *
-     * @return ArticleMailTemplate
-     */
-    protected function _getMailTemplate($submission, $templateKey, $includeSignature = true)
-    {
-        if ($includeSignature) {
-            return new ArticleMailTemplate($submission, $templateKey);
-        } else {
-            return new ArticleMailTemplate($submission, $templateKey, null, null, false);
-        }
+        return $map[$this->getStageId()];
     }
 }

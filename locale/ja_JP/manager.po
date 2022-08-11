@@ -1797,3 +1797,34 @@ msgstr "用意されている選択肢をご利用ください。"
 
 msgid "manager.setup.announcements"
 msgstr "お知らせ"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "このメールは、管理者から登録読者に購読者として登録したことを通知するものです。メールでは、雑誌のURLとアクセス方法を提供しています。"
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr "このメールは、購読者に購読期間がまもなく終了することを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"
+
+msgid "mailable.subscriptionExpired.description"
+msgstr "このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr "このメールは、購読者に購読期間が終了したことを通知するものです。メールでは雑誌のURLとアクセス方法を提供しています。"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"このメールは個人購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"このメールは機関購読がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"このメールは個人購読の更新がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"このメールは機関購読の更新がオンラインで申し込まれた場合に購読管理者に通知されます。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
+
+msgid "mailable.openAccessNotify.description"
+msgstr "このメールは、巻号がオープンアクセスになった時に通知を受け取るよう登録している読者に送信されるものです。"
