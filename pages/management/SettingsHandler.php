@@ -18,7 +18,7 @@ namespace APP\pages\management;
 use APP\template\TemplateManager;
 use PKP\core\PKPApplication;
 use PKP\pages\management\ManagementHandler;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\Role;
 
@@ -146,7 +146,7 @@ class SettingsHandler extends ManagementHandler
         ]);
 
         // Hook into the settings templates to add the appropriate tabs
-        HookRegistry::register('Template::Settings::distribution', function ($hookName, $args) {
+        Hook::add('Template::Settings::distribution', function ($hookName, $args) {
             $templateMgr = $args[1];
             $output = &$args[2];
             $output .= $templateMgr->fetch('management/additionalDistributionTabs.tpl');

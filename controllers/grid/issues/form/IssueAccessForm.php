@@ -22,7 +22,7 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\template\TemplateManager;
 use PKP\form\Form;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class IssueAccessForm extends Form
 {
@@ -99,7 +99,7 @@ class IssueAccessForm extends Form
             $this->_issue->setOpenAccessDate(null);
         }
 
-        HookRegistry::call('IssueAccessForm::execute', [$this, $this->_issue]);
+        Hook::call('IssueAccessForm::execute', [$this, $this->_issue]);
         Repo::issue()->edit($this->_issue, []);
         parent::execute(...$functionArgs);
     }

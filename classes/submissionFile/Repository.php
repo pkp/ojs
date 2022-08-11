@@ -17,7 +17,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use Exception;
 use PKP\observers\events\SubmissionFileDeleted;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\submissionFile\Repository as BaseRepository;
 use PKP\submissionFile\SubmissionFile;
 
@@ -89,7 +89,7 @@ class Repository extends BaseRepository
             SubmissionFile::SUBMISSION_FILE_QUERY,
         ];
 
-        HookRegistry::call('SubmissionFile::fileStages', [&$stages]);
+        Hook::call('SubmissionFile::fileStages', [&$stages]);
 
         return $stages;
     }

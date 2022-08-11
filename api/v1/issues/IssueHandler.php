@@ -22,7 +22,7 @@ use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use PKP\db\DAORegistry;
 use PKP\handler\APIHandler;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Role;
@@ -185,7 +185,7 @@ class IssueHandler extends APIHandler
 
         $collector->filterByContextIds([$context->getId()]);
 
-        HookRegistry::call('API::issues::params', [&$collector, $slimRequest]);
+        Hook::call('API::issues::params', [&$collector, $slimRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
         $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], \PKP\core\PKPApplication::CONTEXT_SITE);

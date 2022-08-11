@@ -33,7 +33,7 @@ class AnnouncementFeedPlugin extends GenericPlugin
             return false;
         }
         if ($this->getEnabled($mainContextId)) {
-            HookRegistry::register('TemplateManager::display', [$this, 'callbackAddLinks']);
+            Hook::add('TemplateManager::display', [$this, 'callbackAddLinks']);
             $this->import('AnnouncementFeedBlockPlugin');
             PluginRegistry::register('blocks', new AnnouncementFeedBlockPlugin($this), $this->getPluginPath());
 

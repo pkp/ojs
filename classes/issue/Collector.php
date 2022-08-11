@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use PKP\core\interfaces\CollectorInterface;
 use PKP\core\PKPApplication;
 use PKP\doi\Doi;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class Collector implements CollectorInterface
 {
@@ -458,7 +458,7 @@ class Collector implements CollectorInterface
         });
 
         // Add app-specific query statements
-        HookRegistry::call('Issue::getMany::queryObject', [&$q, $this]);
+        Hook::call('Issue::getMany::queryObject', [&$q, $this]);
 
         return $q;
     }

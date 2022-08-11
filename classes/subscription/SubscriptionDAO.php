@@ -20,7 +20,7 @@ namespace APP\subscription;
 use APP\facades\Repo;
 use PKP\db\DAORegistry;
 use PKP\identity\Identity;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 abstract class SubscriptionDAO extends \PKP\db\DAO
 {
@@ -379,7 +379,7 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
         $subscription->setReferenceNumber($row['reference_number']);
         $subscription->setNotes($row['notes']);
 
-        HookRegistry::call('SubscriptionDAO::_fromRow', [&$subscription, &$row]);
+        Hook::call('SubscriptionDAO::_fromRow', [&$subscription, &$row]);
 
         return $subscription;
     }

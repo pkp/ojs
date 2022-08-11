@@ -14,8 +14,8 @@
  */
 
 use APP\core\Application;
-use PKP\plugins\GenericPlugin;
 use APP\search\ArticleSearch;
+use PKP\plugins\GenericPlugin;
 
 define('RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT', 10);
 
@@ -37,7 +37,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         }
 
         if ($success && $this->getEnabled($mainContextId)) {
-            HookRegistry::register('Templates::Article::Footer::PageFooter', [$this, 'callbackTemplateArticlePageFooter']);
+            Hook::add('Templates::Article::Footer::PageFooter', [$this, 'callbackTemplateArticlePageFooter']);
         }
         return $success;
     }

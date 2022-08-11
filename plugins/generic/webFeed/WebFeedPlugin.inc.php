@@ -21,7 +21,7 @@ use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 
 class WebFeedPlugin extends GenericPlugin
@@ -57,7 +57,7 @@ class WebFeedPlugin extends GenericPlugin
             return false;
         }
         if ($this->getEnabled($mainContextId)) {
-            HookRegistry::register('TemplateManager::display', [$this, 'callbackAddLinks']);
+            Hook::add('TemplateManager::display', [$this, 'callbackAddLinks']);
             $this->import('WebFeedBlockPlugin');
             PluginRegistry::register('blocks', new WebFeedBlockPlugin($this), $this->getPluginPath());
 

@@ -31,7 +31,7 @@ use PKP\facades\Locale;
 use PKP\i18n\LocaleConversion;
 use PKP\metadata\MetadataDataObjectAdapter;
 use PKP\metadata\MetadataDescription;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\submission\SubmissionKeywordDAO;
 use PKP\submission\SubmissionSubjectDAO;
@@ -251,7 +251,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             $dc11Description->addStatement('dc:rights', $licenseUrl);
         }
 
-        HookRegistry::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', [$this, $article, $journal, $issue, &$dc11Description]);
+        Hook::call('Dc11SchemaArticleAdapter::extractMetadataFromDataObject', [$this, $article, $journal, $issue, &$dc11Description]);
 
         return $dc11Description;
     }

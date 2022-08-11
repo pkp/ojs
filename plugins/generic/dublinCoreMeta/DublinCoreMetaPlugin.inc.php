@@ -19,7 +19,7 @@ use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\GenericPlugin;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class DublinCoreMetaPlugin extends GenericPlugin
 {
@@ -32,7 +32,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
     {
         if (parent::register($category, $path, $mainContextId)) {
             if ($this->getEnabled($mainContextId)) {
-                HookRegistry::register('ArticleHandler::view', [&$this, 'articleView']);
+                Hook::add('ArticleHandler::view', [&$this, 'articleView']);
             }
             return true;
         }

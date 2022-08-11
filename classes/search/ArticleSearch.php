@@ -24,7 +24,7 @@ use APP\facades\Repo;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 use PKP\search\SubmissionSearch;
 use PKP\submission\PKPSubmission;
@@ -323,7 +323,7 @@ class ArticleSearch extends SubmissionSearch
     {
         // Check whether a search plugin provides terms for a similarity search.
         $searchTerms = [];
-        $result = HookRegistry::call('ArticleSearch::getSimilarityTerms', [$submissionId, &$searchTerms]);
+        $result = Hook::call('ArticleSearch::getSimilarityTerms', [$submissionId, &$searchTerms]);
 
         // If no plugin implements the hook then use the subject keywords
         // of the submission for a similarity search.
@@ -382,7 +382,7 @@ class ArticleSearch extends SubmissionSearch
         }
 
         // Let plugins mangle the search ordering options.
-        HookRegistry::call(
+        Hook::call(
             'SubmissionSearch::getResultSetOrderingOptions',
             [$context, &$resultSetOrderingOptions]
         );

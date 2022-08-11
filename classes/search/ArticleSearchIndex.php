@@ -19,7 +19,7 @@ use APP\facades\Repo;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\search\SearchFileParser;
 
 use PKP\search\SubmissionSearch;
@@ -34,7 +34,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function submissionMetadataChanged($submission)
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = HookRegistry::call(
+        $hookResult = Hook::call(
             'ArticleSearchIndex::articleMetadataChanged',
             [$submission]
         );
@@ -109,7 +109,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function submissionFileChanged($articleId, $type, $submissionFile)
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = HookRegistry::call(
+        $hookResult = Hook::call(
             'ArticleSearchIndex::submissionFileChanged',
             [$articleId, $type, $submissionFile->getId()]
         );
@@ -153,7 +153,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function submissionFilesChanged($article)
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = HookRegistry::call(
+        $hookResult = Hook::call(
             'ArticleSearchIndex::submissionFilesChanged',
             [$article]
         );
@@ -205,7 +205,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function submissionFileDeleted($articleId, $type = null, $assocId = null)
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = HookRegistry::call(
+        $hookResult = Hook::call(
             'ArticleSearchIndex::submissionFileDeleted',
             [$articleId, $type, $assocId]
         );
@@ -231,7 +231,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     {
         // Trigger a hook to let the indexing back-end know that
         // an article was deleted.
-        HookRegistry::call(
+        Hook::call(
             'ArticleSearchIndex::articleDeleted',
             [$articleId]
         );
@@ -247,7 +247,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     {
         // Trigger a hook to let the indexing back-end know that
         // the index may be updated.
-        HookRegistry::call(
+        Hook::call(
             'ArticleSearchIndex::articleChangesFinished'
         );
 
@@ -281,7 +281,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function rebuildIndex($log = false, $journal = null, $switches = [])
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = HookRegistry::call(
+        $hookResult = Hook::call(
             'ArticleSearchIndex::rebuildIndex',
             [$log, $journal, $switches]
         );

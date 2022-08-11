@@ -13,7 +13,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiActionException;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\services\PKPSchemaService;
 use PKP\validation\ValidatorFactory;
 
@@ -146,7 +146,7 @@ class Repository
             $errors = $this->schemaService->formatValidationErrors($validator->errors(), $this->schemaService->get($this->dao->schema), $allowedLocales);
         }
 
-        HookRegistry::call('Issue::validate', [&$errors, $object, $props, $allowedLocales, $primaryLocale]);
+        Hook::call('Issue::validate', [&$errors, $object, $props, $allowedLocales, $primaryLocale]);
 
         return $errors;
     }
@@ -162,7 +162,7 @@ class Repository
     {
         $newIssue = $this->newDataObject(array_merge($issue->_data, $params));
 
-        HookRegistry::call('Issue::edit', [&$newIssue, $issue, $params]);
+        Hook::call('Issue::edit', [&$newIssue, $issue, $params]);
 
         $this->dao->update($newIssue);
     }

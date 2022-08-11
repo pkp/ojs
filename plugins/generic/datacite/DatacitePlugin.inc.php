@@ -22,7 +22,7 @@ use PKP\form\Form;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 
 class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
@@ -296,8 +296,8 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $this->import('DataciteExportPlugin');
         PluginRegistry::register('importexport', new DataciteExportPlugin(), $this->getPluginPath());
 
-        HookRegistry::register('Template::doiManagement', [$this, 'callbackShowDoiManagementTabs']);
-        HookRegistry::register('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
+        Hook::add('Template::doiManagement', [$this, 'callbackShowDoiManagementTabs']);
+        Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
     }
 
     /**

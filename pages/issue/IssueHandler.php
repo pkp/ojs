@@ -29,7 +29,7 @@ use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
@@ -121,7 +121,7 @@ class IssueHandler extends Handler
         $journal = $request->getJournal();
 
         if (($galley = $this->getGalley()) && $this->userCanViewGalley($request)) {
-            if (!HookRegistry::call('IssueHandler::view::galley', [&$request, &$issue, &$galley])) {
+            if (!Hook::call('IssueHandler::view::galley', [&$request, &$issue, &$galley])) {
                 $request->redirect(null, null, 'download', [$issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)]);
             }
         } else {
@@ -192,7 +192,7 @@ class IssueHandler extends Handler
             $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
             $galley = $this->getGalley();
 
-            if (!HookRegistry::call('IssueHandler::download', [&$issue, &$galley])) {
+            if (!Hook::call('IssueHandler::download', [&$issue, &$galley])) {
                 $issueFileManager = new IssueFileManager($issue->getId());
                 if ($issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false)) {
                     event(new Usage(Application::ASSOC_TYPE_ISSUE_GALLEY, $request->getContext(), null, null, null, $issue, $galley));

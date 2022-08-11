@@ -21,7 +21,7 @@ use APP\search\ArticleSearch;
 use APP\statistics\StatisticsHelper;
 use PKP\core\VirtualArrayIterator;
 use PKP\plugins\GenericPlugin;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\submission\PKPSubmission;
 
 class RecommendByAuthorPlugin extends GenericPlugin
@@ -44,7 +44,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
         }
 
         if ($success && $this->getEnabled($mainContextId)) {
-            HookRegistry::register('Templates::Article::Footer::PageFooter', [$this, 'callbackTemplateArticlePageFooter']);
+            Hook::add('Templates::Article::Footer::PageFooter', [$this, 'callbackTemplateArticlePageFooter']);
         }
         return $success;
     }

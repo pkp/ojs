@@ -33,7 +33,7 @@ use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class Repository extends \PKP\decision\Repository
 {
@@ -63,7 +63,7 @@ class Repository extends \PKP\decision\Repository
                 new SendToProduction(),
                 new SkipExternalReview(),
             ]);
-            HookRegistry::call('Decision::types', [$decisionTypes]);
+            Hook::call('Decision::types', [$decisionTypes]);
             $this->decisionTypes = $decisionTypes;
         }
 

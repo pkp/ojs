@@ -20,7 +20,7 @@ use APP\core\Application;
 use APP\statistics\StatisticsHelper;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\services\queryBuilders\PKPStatsQueryBuilder;
 
 class StatsIssueQueryBuilder extends PKPStatsQueryBuilder
@@ -129,7 +129,7 @@ class StatsIssueQueryBuilder extends PKPStatsQueryBuilder
             }
         }
 
-        HookRegistry::call('StatsIssue::queryObject', [&$q, $this]);
+        Hook::call('StatsIssue::queryObject', [&$q, $this]);
 
         return $q;
     }

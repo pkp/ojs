@@ -19,7 +19,7 @@ namespace APP\core;
 
 use APP\journal\Journal;
 use PKP\core\PKPRequest;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class Request extends PKPRequest
 {
@@ -34,7 +34,7 @@ class Request extends PKPRequest
 
         if (!isset($journal)) {
             $journal = $this->_delegateToRouter('getRequestedContextPath', 1);
-            HookRegistry::call('Request::getRequestedJournalPath', [&$journal]);
+            Hook::call('Request::getRequestedJournalPath', [&$journal]);
         }
 
         return $journal;

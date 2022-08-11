@@ -25,7 +25,7 @@ use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class IssueFileManager extends FileManager
 {
@@ -182,7 +182,7 @@ class IssueFileManager extends FileManager
     public function fromTemporaryFile($temporaryFile, $contentType = IssueFile::ISSUE_FILE_PUBLIC)
     {
         $result = null;
-        if (HookRegistry::call('IssueFileManager::fromTemporaryFile', [&$temporaryFile, &$contentType, &$result])) {
+        if (Hook::call('IssueFileManager::fromTemporaryFile', [&$temporaryFile, &$contentType, &$result])) {
             return $result;
         }
 

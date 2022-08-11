@@ -17,6 +17,7 @@ use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
 use PKP\mail\MailTemplate;
+use PKP\plugins\Hook;
 use PKP\plugins\PaymethodPlugin;
 
 class ManualPaymentPlugin extends PaymethodPlugin
@@ -54,7 +55,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
     {
         if (parent::register($category, $path, $mainContextId)) {
             $this->addLocaleData();
-            \HookRegistry::register('Form::config::before', [$this, 'addSettings']);
+            Hook::add('Form::config::before', [$this, 'addSettings']);
             return true;
         }
         return false;

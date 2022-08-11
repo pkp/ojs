@@ -18,7 +18,7 @@
 namespace APP\issue;
 
 use PKP\db\DAO;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class IssueFileDAO extends DAO
 {
@@ -100,7 +100,7 @@ class IssueFileDAO extends DAO
         $issueFile->setOriginalFileName($row['original_file_name']);
         $issueFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
         $issueFile->setDateModified($this->datetimeFromDB($row['date_modified']));
-        HookRegistry::call('IssueFileDAO::_returnIssueFileFromRow', [&$issueFile, &$row]);
+        Hook::call('IssueFileDAO::_returnIssueFileFromRow', [&$issueFile, &$row]);
         return $issueFile;
     }
 

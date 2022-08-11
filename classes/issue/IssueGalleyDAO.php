@@ -19,7 +19,7 @@ namespace APP\issue;
 
 use APP\file\IssueFileManager;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class IssueGalleyDAO extends \PKP\db\DAO
 {
@@ -58,7 +58,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
         if ($row = $result->current()) {
             $returner = $this->_fromRow((array) $row);
         } else {
-            HookRegistry::call('IssueGalleyDAO::getById', [&$galleyId, &$issueId, &$returner]);
+            Hook::call('IssueGalleyDAO::getById', [&$galleyId, &$issueId, &$returner]);
         }
         return $returner;
     }
@@ -131,7 +131,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
         if ($row) {
             $returner = $this->_fromRow((array) $row);
         } else {
-            HookRegistry::call('IssueGalleyDAO::getByPubId', [&$pubIdType, &$pubId, &$issueId, &$returner]);
+            Hook::call('IssueGalleyDAO::getByPubId', [&$pubIdType, &$pubId, &$issueId, &$returner]);
         }
         return $returner;
     }
@@ -166,7 +166,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
             $issueGalley = $this->_fromRow((array) $row);
             $galleys[$issueGalley->getId()] = $issueGalley;
         }
-        HookRegistry::call('IssueGalleyDAO::getGalleysByIssue', [&$galleys, &$issueId]);
+        Hook::call('IssueGalleyDAO::getGalleysByIssue', [&$galleys, &$issueId]);
         return $galleys;
     }
 
@@ -282,7 +282,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
         $this->getDataObjectSettings('issue_galley_settings', 'galley_id', $row['galley_id'], $galley);
 
-        HookRegistry::call('IssueGalleyDAO::_fromRow', [&$galley, &$row]);
+        Hook::call('IssueGalleyDAO::_fromRow', [&$galley, &$row]);
 
         return $galley;
     }
@@ -316,7 +316,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
         $galley->setId($this->getInsertId());
         $this->updateLocaleFields($galley);
 
-        HookRegistry::call('IssueGalleyDAO::insertObject', [&$galley, $galley->getId()]);
+        Hook::call('IssueGalleyDAO::insertObject', [&$galley, $galley->getId()]);
 
         return $galley->getId();
     }
@@ -367,7 +367,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
      */
     public function deleteById($galleyId, $issueId = null)
     {
-        HookRegistry::call('IssueGalleyDAO::deleteById', [&$galleyId, &$issueId]);
+        Hook::call('IssueGalleyDAO::deleteById', [&$galleyId, &$issueId]);
 
         if (isset($issueId)) {
             // Delete the file

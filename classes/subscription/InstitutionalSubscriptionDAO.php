@@ -21,7 +21,7 @@ use APP\core\Application;
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
 use PKP\facades\Locale;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class InstitutionalSubscriptionDAO extends SubscriptionDAO
 {
@@ -622,7 +622,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
         $institutionalSubscription->setInstitutionMailingAddress($row['mailing_address']);
         $institutionalSubscription->setDomain($row['domain']);
 
-        HookRegistry::call('InstitutionalSubscriptionDAO::_fromRow', [&$institutionalSubscription, &$row]);
+        Hook::call('InstitutionalSubscriptionDAO::_fromRow', [&$institutionalSubscription, &$row]);
 
         return $institutionalSubscription;
     }

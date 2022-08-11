@@ -44,7 +44,7 @@ use PKP\linkAction\LinkAction;
 
 use PKP\linkAction\request\NullAction;
 use PKP\notification\PKPNotification;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\ImportExportPlugin;
 use PKP\plugins\PluginRegistry;
 use PKP\submission\PKPSubmission;
@@ -89,12 +89,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
 
         $this->addLocaleData();
 
-        HookRegistry::register('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
+        Hook::add('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
         foreach ($this->_getDAOs() as $dao) {
             if ($dao instanceof SchemaDAO) {
-                HookRegistry::register('Schema::get::' . $dao->schemaName, [$this, 'addToSchema']);
+                Hook::add('Schema::get::' . $dao->schemaName, [$this, 'addToSchema']);
             } else {
-                HookRegistry::register(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', [&$this, 'getAdditionalFieldNames']);
+                Hook::add(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', [&$this, 'getAdditionalFieldNames']);
             }
         }
         return true;

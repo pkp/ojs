@@ -17,7 +17,7 @@ namespace APP\services\queryBuilders;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\services\queryBuilders\interfaces\EntityQueryBuilderInterface;
 
 class GalleyQueryBuilder implements EntityQueryBuilderInterface
@@ -99,7 +99,7 @@ class GalleyQueryBuilder implements EntityQueryBuilderInterface
         $q->orderBy('g.seq', 'asc');
 
         // Add app-specific query statements
-        HookRegistry::call('Galley::getMany::queryObject', [&$q, $this]);
+        Hook::call('Galley::getMany::queryObject', [&$q, $this]);
 
         $q->select($this->columns);
 

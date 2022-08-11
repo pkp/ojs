@@ -25,7 +25,7 @@ use PKP\oai\OAI;
 use PKP\oai\OAIRepository;
 use PKP\oai\OAIResumptionToken;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class JournalOAI extends OAI
 {
@@ -191,7 +191,7 @@ class JournalOAI extends OAI
     public function records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total)
     {
         $records = null;
-        if (!HookRegistry::call('JournalOAI::records', [$this, $from, $until, $set, $offset, $limit, &$total, &$records])) {
+        if (!Hook::call('JournalOAI::records', [$this, $from, $until, $set, $offset, $limit, &$total, &$records])) {
             $sectionId = null;
             if (isset($set)) {
                 [$journalId, $sectionId] = $this->setSpecToSectionId($set);
@@ -209,7 +209,7 @@ class JournalOAI extends OAI
     public function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total)
     {
         $records = null;
-        if (!HookRegistry::call('JournalOAI::identifiers', [$this, $from, $until, $set, $offset, $limit, &$total, &$records])) {
+        if (!Hook::call('JournalOAI::identifiers', [$this, $from, $until, $set, $offset, $limit, &$total, &$records])) {
             $sectionId = null;
             if (isset($set)) {
                 [$journalId, $sectionId] = $this->setSpecToSectionId($set);
@@ -227,7 +227,7 @@ class JournalOAI extends OAI
     public function sets($offset, $limit, &$total)
     {
         $sets = null;
-        if (!HookRegistry::call('JournalOAI::sets', [$this, $offset, $limit, &$total, &$sets])) {
+        if (!Hook::call('JournalOAI::sets', [$this, $offset, $limit, &$total, &$sets])) {
             $sets = $this->dao->getJournalSets($this->journalId, $offset, $limit, $total);
         }
         return $sets;

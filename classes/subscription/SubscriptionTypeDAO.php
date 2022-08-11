@@ -23,7 +23,7 @@ use PKP\db\DAOResultFactory;
 
 use PKP\facades\Locale;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class SubscriptionTypeDAO extends \PKP\db\DAO
 {
@@ -176,7 +176,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
 
         $this->getDataObjectSettings('subscription_type_settings', 'type_id', $row['type_id'], $subscriptionType);
 
-        HookRegistry::call('SubscriptionTypeDAO::_fromRow', [&$subscriptionType, &$row]);
+        Hook::call('SubscriptionTypeDAO::_fromRow', [&$subscriptionType, &$row]);
 
         return $subscriptionType;
     }

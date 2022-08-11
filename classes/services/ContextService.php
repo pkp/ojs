@@ -24,7 +24,7 @@ use APP\file\PublicFileManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -43,11 +43,11 @@ class ContextService extends \PKP\services\PKPContextService
             Config::getVar('files', 'public_files_dir') . '/%s/%d',
         ];
 
-        HookRegistry::register('Context::add', [$this, 'afterAddContext']);
-        HookRegistry::register('Context::edit', [$this, 'afterEditContext']);
-        HookRegistry::register('Context::delete::before', [$this, 'beforeDeleteContext']);
-        HookRegistry::register('Context::delete', [$this, 'afterDeleteContext']);
-        HookRegistry::register('Context::validate', [$this, 'validateContext']);
+        Hook::add('Context::add', [$this, 'afterAddContext']);
+        Hook::add('Context::edit', [$this, 'afterEditContext']);
+        Hook::add('Context::delete::before', [$this, 'beforeDeleteContext']);
+        Hook::add('Context::delete', [$this, 'afterDeleteContext']);
+        Hook::add('Context::validate', [$this, 'validateContext']);
     }
 
     /**

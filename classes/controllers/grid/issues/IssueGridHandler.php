@@ -45,7 +45,7 @@ use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\mail\Mailer;
 use PKP\notification\NotificationSubscriptionSettingsDAO;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
@@ -565,7 +565,7 @@ class IssueGridHandler extends GridHandler
             $issue->setOpenAccessDate(date('Y-m-d H:i:s', mktime(0, 0, 0, $delayOpenAccessMonth, $curDay, $delayOpenAccessYear)));
         }
 
-        HookRegistry::call('IssueGridHandler::publishIssue', [&$issue]);
+        Hook::call('IssueGridHandler::publishIssue', [&$issue]);
 
         Repo::issue()->updateCurrent($contextId, $issue);
 
@@ -647,7 +647,7 @@ class IssueGridHandler extends GridHandler
             'datePublished' => null
         ];
 
-        HookRegistry::call('IssueGridHandler::unpublishIssue', [&$issue]);
+        Hook::call('IssueGridHandler::unpublishIssue', [&$issue]);
 
         Repo::issue()->edit($issue, $updateParams);
         Repo::issue()->updateCurrent($request->getContext()->getId());

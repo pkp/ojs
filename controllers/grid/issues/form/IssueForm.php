@@ -26,7 +26,7 @@ use PKP\facades\Locale;
 use PKP\form\Form;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class IssueForm extends Form
 {
@@ -275,7 +275,7 @@ class IssueForm extends Form
 
         $issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
-        HookRegistry::call('issueform::execute', [$this, $issue]);
+        Hook::call('issueform::execute', [$this, $issue]);
 
         Repo::issue()->edit($issue, []);
     }

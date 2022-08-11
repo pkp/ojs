@@ -38,7 +38,7 @@ use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
 use PKP\notification\PKPNotification;
 use PKP\pages\workflow\PKPWorkflowHandler;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\security\Role;
 
 class WorkflowHandler extends PKPWorkflowHandler
@@ -256,7 +256,7 @@ class WorkflowHandler extends PKPWorkflowHandler
                 break;
         }
 
-        HookRegistry::call('Workflow::Decisions', [&$decisionTypes, $stageId]);
+        Hook::call('Workflow::Decisions', [&$decisionTypes, $stageId]);
 
         return $decisionTypes;
     }
@@ -276,7 +276,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         }
 
 
-        HookRegistry::call('Workflow::Recommendations', [$decisionTypes, $stageId]);
+        Hook::call('Workflow::Recommendations', [$decisionTypes, $stageId]);
 
         return $decisionTypes;
     }

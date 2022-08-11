@@ -23,7 +23,7 @@ define('DRIVER_ACCESS_RESTRICTED', 4);
 
 use PKP\db\DAORegistry;
 use PKP\plugins\GenericPlugin;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class DRIVERPlugin extends GenericPlugin
 {
@@ -41,14 +41,14 @@ class DRIVERPlugin extends GenericPlugin
             DAORegistry::registerDAO('DRIVERDAO', $driverDao);
 
             // Add DRIVER set to OAI results
-            HookRegistry::register('OAIDAO::getJournalSets', [$this, 'sets']);
-            HookRegistry::register('JournalOAI::records', [$this, 'recordsOrIdentifiers']);
-            HookRegistry::register('JournalOAI::identifiers', [$this, 'recordsOrIdentifiers']);
-            HookRegistry::register('OAIDAO::_returnRecordFromRow', [$this, 'addSet']);
-            HookRegistry::register('OAIDAO::_returnIdentifierFromRow', [$this, 'addSet']);
+            Hook::add('OAIDAO::getJournalSets', [$this, 'sets']);
+            Hook::add('JournalOAI::records', [$this, 'recordsOrIdentifiers']);
+            Hook::add('JournalOAI::identifiers', [$this, 'recordsOrIdentifiers']);
+            Hook::add('OAIDAO::_returnRecordFromRow', [$this, 'addSet']);
+            Hook::add('OAIDAO::_returnIdentifierFromRow', [$this, 'addSet']);
 
             // consider DRIVER article in article tombstones
-            HookRegistry::register('ArticleTombstoneManager::insertArticleTombstone', [$this, 'insertDRIVERArticleTombstone']);
+            Hook::add('ArticleTombstoneManager::insertArticleTombstone', [$this, 'insertDRIVERArticleTombstone']);
         }
         return $success;
     }

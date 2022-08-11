@@ -19,7 +19,7 @@ namespace APP\subscription;
 
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class IndividualSubscriptionDAO extends SubscriptionDAO
 {
@@ -234,7 +234,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     public function _fromRow($row)
     {
         $individualSubscription = parent::_fromRow($row);
-        HookRegistry::call('IndividualSubscriptionDAO::_fromRow', [&$individualSubscription, &$row]);
+        Hook::call('IndividualSubscriptionDAO::_fromRow', [&$individualSubscription, &$row]);
 
         return $individualSubscription;
     }

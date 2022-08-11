@@ -30,7 +30,7 @@ use Firebase\JWT\JWT;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
@@ -352,7 +352,7 @@ class ArticleHandler extends Handler
                 $templateMgr->assign('purchaseArticleEnabled', true);
             }
 
-            if (!HookRegistry::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
+            if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');
                 event(new Usage(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
                 return;
@@ -365,7 +365,7 @@ class ArticleHandler extends Handler
             }
 
             // Galley: Prepare the galley file download.
-            if (!HookRegistry::call('ArticleHandler::view::galley', [&$request, &$issue, &$this->galley, &$article, $publication])) {
+            if (!Hook::call('ArticleHandler::view::galley', [&$request, &$issue, &$this->galley, &$article, $publication])) {
                 if ($this->publication->getId() !== $this->article->getCurrentPublication()->getId()) {
                     $redirectPath = [
                         $article->getBestId(),
@@ -483,7 +483,7 @@ class ArticleHandler extends Handler
                 }
             }
 
-            if (!HookRegistry::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
+            if (!Hook::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
                 $submissionFile = Repo::submissionFile()->get($this->fileId);
 
                 if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
@@ -504,7 +504,7 @@ class ArticleHandler extends Handler
                     event(new Usage($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
                 }
                 $returner = true;
-                HookRegistry::call('FileManager::downloadFileFinished', [&$returner]);
+                Hook::call('FileManager::downloadFileFinished', [&$returner]);
                 Services::get('file')->download($submissionFile->getData('fileId'), $filename);
             }
         } else {

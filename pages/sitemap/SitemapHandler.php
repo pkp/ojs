@@ -19,7 +19,7 @@ use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\submission\Submission;
 use PKP\pages\sitemap\PKPSitemapHandler;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class SitemapHandler extends PKPSitemapHandler
 {
@@ -77,7 +77,7 @@ class SitemapHandler extends PKPSitemapHandler
         $doc->appendChild($root);
 
         // Enable plugins to change the sitemap
-        HookRegistry::call('SitemapHandler::createJournalSitemap', [&$doc]);
+        Hook::call('SitemapHandler::createJournalSitemap', [&$doc]);
 
         return $doc;
     }

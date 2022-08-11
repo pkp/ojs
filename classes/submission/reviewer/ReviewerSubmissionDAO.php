@@ -22,7 +22,7 @@ use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class ReviewerSubmissionDAO extends DAO
 {
@@ -121,7 +121,7 @@ class ReviewerSubmissionDAO extends DAO
         $reviewerSubmission->setStageId($row['stage_id']);
         $reviewerSubmission->setReviewMethod($row['review_method']);
 
-        HookRegistry::call('ReviewerSubmissionDAO::_fromRow', [&$reviewerSubmission, &$row]);
+        Hook::call('ReviewerSubmissionDAO::_fromRow', [&$reviewerSubmission, &$row]);
         return $reviewerSubmission;
     }
 

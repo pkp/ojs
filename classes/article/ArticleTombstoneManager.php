@@ -22,7 +22,7 @@ use PKP\config\Config;
 
 use PKP\context\Context;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class ArticleTombstoneManager
 {
@@ -57,7 +57,7 @@ class ArticleTombstoneManager
         $articleTombstone->setOAISetObjectsIds($OAISetObjectsIds);
         $tombstoneDao->insertObject($articleTombstone);
 
-        if (HookRegistry::call('ArticleTombstoneManager::insertArticleTombstone', [&$articleTombstone, &$article, &$journal])) {
+        if (Hook::call('ArticleTombstoneManager::insertArticleTombstone', [&$articleTombstone, &$article, &$journal])) {
             return;
         }
     }

@@ -26,7 +26,7 @@ use Mockery;
 use Mockery\MockInterface;
 use PKP\core\PKPRouter;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\tests\PKPTestCase;
 
 class ArticleSearchTest extends PKPTestCase
@@ -138,7 +138,7 @@ class ArticleSearchTest extends PKPTestCase
     public function testRetrieveResultsViaPluginHook()
     {
         // Diverting a search to the search plugin hook.
-        HookRegistry::register('SubmissionSearch::retrieveResults', [$this, 'callbackRetrieveResults']);
+        Hook::add('SubmissionSearch::retrieveResults', [$this, 'callbackRetrieveResults']);
 
         $testCases = [
             [null => 'query'], // Simple Search - "All"

@@ -18,7 +18,7 @@ namespace APP\services;
 use APP\core\Application;
 use APP\services\queryBuilders\StatsIssueQueryBuilder;
 use APP\statistics\StatisticsHelper;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\services\PKPStatsServiceTrait;
 
 class StatsIssueService
@@ -54,7 +54,7 @@ class StatsIssueService
         unset($args['offset']);
         $metricsQB = $this->getQueryBuilder($args);
 
-        HookRegistry::call('StatsIssue::getCount::queryBuilder', [&$metricsQB, $args]);
+        Hook::call('StatsIssue::getCount::queryBuilder', [&$metricsQB, $args]);
 
         return $metricsQB->getIssueIds()->get()->count();
     }
@@ -68,7 +68,7 @@ class StatsIssueService
         $args = array_merge($defaultArgs, $args);
         $metricsQB = $this->getQueryBuilder($args);
 
-        HookRegistry::call('StatsIssue::getTotals::queryBuilder', [&$metricsQB, $args]);
+        Hook::call('StatsIssue::getTotals::queryBuilder', [&$metricsQB, $args]);
 
         $groupBy = [StatisticsHelper::STATISTICS_DIMENSION_ISSUE_ID];
         $metricsQB = $metricsQB->getSum($groupBy);
@@ -93,7 +93,7 @@ class StatsIssueService
         ];
         $metricsQB = $this->getQueryBuilder($args);
 
-        HookRegistry::call('StatsIssue::getTotalsByType::queryBuilder', [&$metricsQB, $args]);
+        Hook::call('StatsIssue::getTotalsByType::queryBuilder', [&$metricsQB, $args]);
 
         // get toc and galley views for the issue
         $groupBy = [StatisticsHelper::STATISTICS_DIMENSION_ASSOC_TYPE];
@@ -161,7 +161,7 @@ class StatsIssueService
             }
         }
 
-        HookRegistry::call('StatsIssue::queryBuilder', [&$statsQB, $args]);
+        Hook::call('StatsIssue::queryBuilder', [&$statsQB, $args]);
 
         return $statsQB;
     }

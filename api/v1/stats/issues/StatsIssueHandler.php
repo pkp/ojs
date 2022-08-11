@@ -23,7 +23,7 @@ use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\statistics\StatisticsHelper;
 use PKP\core\APIResponse;
 use PKP\handler\APIHandler;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
@@ -120,7 +120,7 @@ class StatsIssueHandler extends APIHandler
             'issueIds',
         ]);
 
-        HookRegistry::call('API::stats::issues::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issues::params', [&$allowedParams, $slimRequest]);
 
         $allowedParams['contextIds'] = [$request->getContext()->getId()];
 
@@ -203,7 +203,7 @@ class StatsIssueHandler extends APIHandler
             'searchPhrase',
         ]);
 
-        HookRegistry::call('API::stats::issues::timeline::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issues::timeline::params', [&$allowedParams, $slimRequest]);
 
         if (!$this->isValidTimelineInterval($allowedParams['timelineInterval'])) {
             return $response->withStatus(400)->withJsonError('api.stats.400.wrongTimelineInterval');
@@ -252,7 +252,7 @@ class StatsIssueHandler extends APIHandler
             'dateEnd',
         ]);
 
-        HookRegistry::call('API::stats::issue::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issue::params', [&$allowedParams, $slimRequest]);
 
         $result = $this->_validateStatDates($allowedParams);
         if ($result !== true) {
@@ -293,7 +293,7 @@ class StatsIssueHandler extends APIHandler
             'timelineInterval',
         ]);
 
-        HookRegistry::call('API::stats::issue::timeline::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issue::timeline::params', [&$allowedParams, $slimRequest]);
 
         $allowedParams['contextIds'] = [$request->getContext()->getId()];
         $allowedParams['issueIds'] = [$issue->getId()];

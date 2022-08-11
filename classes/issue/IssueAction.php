@@ -20,7 +20,7 @@ namespace APP\issue;
 use APP\facades\Repo;
 use APP\subscription\Subscription;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\security\Role;
 
 use PKP\submission\PKPSubmission;
@@ -51,7 +51,7 @@ class IssueAction
                 is_null($issue->getOpenAccessDate()) ||
                 strtotime($issue->getOpenAccessDate()) > time()
             );
-        HookRegistry::call('IssueAction::subscriptionRequired', [&$journal, &$issue, &$result]);
+        Hook::call('IssueAction::subscriptionRequired', [&$journal, &$issue, &$result]);
         return $result;
     }
 
@@ -144,7 +144,7 @@ class IssueAction
                 }
             }
         }
-        HookRegistry::call('IssueAction::subscribedUser', [&$user, &$journal, &$issueId, &$articleId, &$result]);
+        Hook::call('IssueAction::subscribedUser', [&$user, &$journal, &$issueId, &$articleId, &$result]);
         return $result;
     }
 
@@ -181,7 +181,7 @@ class IssueAction
                 }
             }
         }
-        HookRegistry::call('IssueAction::subscribedDomain', [&$request, &$journal, &$issueId, &$articleId, &$result]);
+        Hook::call('IssueAction::subscribedDomain', [&$request, &$journal, &$issueId, &$articleId, &$result]);
         return (bool) $result;
     }
 

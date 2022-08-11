@@ -20,7 +20,7 @@ use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\observers\events\Usage;
 use APP\template\TemplateManager;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 use PKP\submissionFile\SubmissionFile;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
@@ -36,8 +36,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             return false;
         }
         if ($this->getEnabled($mainContextId)) {
-            HookRegistry::register('ArticleHandler::view::galley', [$this, 'articleViewCallback'], HOOK_SEQUENCE_LATE);
-            HookRegistry::register('ArticleHandler::download', [$this, 'articleDownloadCallback'], HOOK_SEQUENCE_LATE);
+            Hook::add('ArticleHandler::view::galley', [$this, 'articleViewCallback'], HOOK_SEQUENCE_LATE);
+            Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], HOOK_SEQUENCE_LATE);
         }
         return true;
     }
@@ -130,10 +130,10 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 
         $submissionFile = $galley->getFile();
         if ($galley->getData('submissionFileId') == $fileId && $submissionFile->getData('mimetype') === 'text/html' && $galley->getData('submissionFileId') == $submissionFile->getId()) {
-            if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', [$article,  &$galley, &$fileId])) {
+            if (!Hook::call('HtmlArticleGalleyPlugin::articleDownload', [$article,  &$galley, &$fileId])) {
                 echo $this->_getHTMLContents($request, $galley);
                 $returner = true;
-                HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
+                Hook::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
                 $publication = Repo::publication()->get($galley->getData('publicationId'));
                 // This part is the same as in ArticleHandler::initialize():
                 if ($publication->getData('issueId')) {
@@ -275,62 +275,62 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $urlParts = explode('/', $url);
         if (isset($urlParts[0])) {
             switch (strtolower_codesafe($urlParts[0])) {
-            case 'journal':
-                $url = $request->url(
-                    $urlParts[1] ??
+                case 'journal':
+                    $url = $request->url(
+                        $urlParts[1] ??
                 $request->getRequestedJournalPath(),
-                    null,
-                    null,
-                    null,
-                    null,
-                    $anchor
-                );
-                break;
-            case 'article':
-                if (isset($urlParts[1])) {
-                    $url = $request->url(
                         null,
-                        'article',
-                        'view',
-                        $urlParts[1],
                         null,
-                        $anchor
-                    );
-                }
-                break;
-            case 'issue':
-                if (isset($urlParts[1])) {
-                    $url = $request->url(
-                        null,
-                        'issue',
-                        'view',
-                        $urlParts[1],
-                        null,
-                        $anchor
-                    );
-                } else {
-                    $url = $request->url(
-                        null,
-                        'issue',
-                        'current',
                         null,
                         null,
                         $anchor
                     );
-                }
-                break;
-            case 'sitepublic':
-                array_shift($urlParts);
-                $publicFileManager = new PublicFileManager();
-                $url = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor ? '#' . $anchor : '');
-                break;
-            case 'public':
-                array_shift($urlParts);
-                $journal = $request->getJournal();
-                $publicFileManager = new PublicFileManager();
-                $url = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor ? '#' . $anchor : '');
-                break;
-        }
+                    break;
+                case 'article':
+                    if (isset($urlParts[1])) {
+                        $url = $request->url(
+                            null,
+                            'article',
+                            'view',
+                            $urlParts[1],
+                            null,
+                            $anchor
+                        );
+                    }
+                    break;
+                case 'issue':
+                    if (isset($urlParts[1])) {
+                        $url = $request->url(
+                            null,
+                            'issue',
+                            'view',
+                            $urlParts[1],
+                            null,
+                            $anchor
+                        );
+                    } else {
+                        $url = $request->url(
+                            null,
+                            'issue',
+                            'current',
+                            null,
+                            null,
+                            $anchor
+                        );
+                    }
+                    break;
+                case 'sitepublic':
+                    array_shift($urlParts);
+                    $publicFileManager = new PublicFileManager();
+                    $url = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor ? '#' . $anchor : '');
+                    break;
+                case 'public':
+                    array_shift($urlParts);
+                    $journal = $request->getJournal();
+                    $publicFileManager = new PublicFileManager();
+                    $url = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($journal->getId()) . '/' . implode('/', $urlParts) . ($anchor ? '#' . $anchor : '');
+                    break;
+            }
         }
         return $matchArray[1] . $url . $matchArray[3];
     }

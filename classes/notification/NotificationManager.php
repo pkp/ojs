@@ -21,7 +21,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\managerDelegate\ApproveSubmissionNotificationManager;
 use PKP\notification\PKPNotificationManager;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class NotificationManager extends PKPNotificationManager
 {
@@ -64,7 +64,7 @@ class NotificationManager extends PKPNotificationManager
     {
         // Allow hooks to override default behavior
         $message = null;
-        HookRegistry::call('NotificationManager::getNotificationMessage', [&$notification, &$message]);
+        Hook::call('NotificationManager::getNotificationMessage', [&$notification, &$message]);
         if ($message) {
             return $message;
         }
