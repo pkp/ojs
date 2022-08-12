@@ -1,20 +1,19 @@
 <?php
 
 /**
- * @file plugins/generic/announcementFeed/AnnouncementFeedSettingsForm.inc.php
+ * @file plugins/generic/announcementFeed/AnnouncementFeedSettingsForm.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedSettingsForm
- * @ingroup plugins_generic_annoucementFeed
- *
  * @brief Form for journal managers to modify announcement feed plugin settings
  */
 
-use APP\template\TemplateManager;
+namespace APP\plugins\generic\announcementFeed;
 
+use APP\template\TemplateManager;
 use PKP\form\Form;
 
 class AnnouncementFeedSettingsForm extends Form
@@ -70,12 +69,14 @@ class AnnouncementFeedSettingsForm extends Form
      * Fetch the form.
      *
      * @copydoc Form::fetch()
+     *
+     * @param null|mixed $template
      */
-    public function fetch($request)
+    public function fetch($request, $template = null, $display = false)
     {
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign('pluginName', $this->_plugin->getName());
-        return parent::fetch($request);
+        return parent::fetch($request, $template, $display);
     }
 
     /**

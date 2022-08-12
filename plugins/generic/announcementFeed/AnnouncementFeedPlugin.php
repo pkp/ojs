@@ -1,23 +1,25 @@
 <?php
 
 /**
- * @file plugins/generic/announcementFeed/AnnouncementFeedPlugin.inc.php
+ * @file plugins/generic/announcementFeed/AnnouncementFeedPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedPlugin
- * @ingroup plugins_generic_announcementFeed
- *
  * @brief Annoucement Feed plugin class
  */
 
+namespace APP\plugins\generic\announcementFeed;
+
+use APP\core\Application;
 use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 
 class AnnouncementFeedPlugin extends GenericPlugin
@@ -34,10 +36,7 @@ class AnnouncementFeedPlugin extends GenericPlugin
         }
         if ($this->getEnabled($mainContextId)) {
             Hook::add('TemplateManager::display', [$this, 'callbackAddLinks']);
-            $this->import('AnnouncementFeedBlockPlugin');
             PluginRegistry::register('blocks', new AnnouncementFeedBlockPlugin($this), $this->getPluginPath());
-
-            $this->import('AnnouncementFeedGatewayPlugin');
             PluginRegistry::register('gateways', new AnnouncementFeedGatewayPlugin($this), $this->getPluginPath());
         }
         return true;
@@ -152,7 +151,6 @@ class AnnouncementFeedPlugin extends GenericPlugin
                 $templateMgr = TemplateManager::getManager($request);
                 $templateMgr->registerPlugin('function', 'plugin_url', [$this, 'smartyPluginUrl']);
 
-                $this->import('AnnouncementFeedSettingsForm');
                 $form = new AnnouncementFeedSettingsForm($this, $context->getId());
 
                 if ($request->getUserVar('save')) {

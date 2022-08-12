@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/blocks/languageToggle/LanguageToggleBlockPlugin.inc.php
+ * @file plugins/blocks/languageToggle/LanguageToggleBlockPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LanguageToggleBlockPlugin
- * @ingroup plugins_blocks_languageToggle
- *
  * @brief Class for language selector block plugin
  */
+
+namespace APP\plugins\blocks\languageToggle;
 
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
