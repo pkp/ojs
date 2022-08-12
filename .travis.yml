@@ -188,8 +188,9 @@ script:
   - ./lib/pkp/tools/travis/run-tests.sh
 
 after_failure:
+  - tail -n 500 error.log
   - sudo apt-get install sharutils
   - tar cz cypress/screenshots | uuencode /dev/stdout
 
-after_script:
-  - tail -n 200 error.log
+after_success:
+  - head -n 500 error.log
