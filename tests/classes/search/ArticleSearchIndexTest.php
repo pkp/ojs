@@ -60,7 +60,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        HookRegistry::rememberCalledHooks();
+        Hook::rememberCalledHooks();
     }
 
     /**
@@ -68,7 +68,7 @@ class ArticleSearchIndexTest extends PKPTestCase
      */
     protected function tearDown(): void
     {
-        HookRegistry::resetCalledHooks();
+        Hook::resetCalledHooks();
         parent::tearDown();
     }
 
@@ -91,12 +91,12 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->submissionFileChanged(0, 1, $submissionFile);
 
         // Test whether the hook was called.
-        $calledHooks = HookRegistry::getCalledHooks();
+        $calledHooks = Hook::getCalledHooks();
         $lastHook = array_pop($calledHooks);
         self::assertEquals('ArticleSearchIndex::submissionFileChanged', $lastHook[0]);
 
         // Remove the test hook.
-        HookRegistry::clear('ArticleSearchIndex::submissionFileChanged');
+        Hook::clear('ArticleSearchIndex::submissionFileChanged');
     }
 
     /**
@@ -108,7 +108,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         $this->registerMockArticleSearchDAO($this->never(), $this->atLeastOnce());
 
         // Make sure that no hook is being called.
-        HookRegistry::clear('ArticleSearchIndex::submissionFileDeleted');
+        Hook::clear('ArticleSearchIndex::submissionFileDeleted');
 
         // Test deleting an article from the index with a mock database back-end.#
         $articleSearchIndex = Application::getSubmissionSearchIndex();
@@ -131,12 +131,12 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->submissionFileDeleted(0, 1, 2);
 
         // Test whether the hook was called.
-        $calledHooks = HookRegistry::getCalledHooks();
+        $calledHooks = Hook::getCalledHooks();
         $lastHook = array_pop($calledHooks);
         self::assertEquals('ArticleSearchIndex::submissionFileDeleted', $lastHook[0]);
 
         // Remove the test hook.
-        HookRegistry::clear('ArticleSearchIndex::submissionFileDeleted');
+        Hook::clear('ArticleSearchIndex::submissionFileDeleted');
     }
 
     /**
@@ -149,7 +149,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         $this->registerMockJournalDAO();
 
         // Make sure that no hook is being called.
-        HookRegistry::clear('ArticleSearchIndex::rebuildIndex');
+        Hook::clear('ArticleSearchIndex::rebuildIndex');
 
         // Test log output.
         $this->expectOutputString(__('search.cli.rebuildIndex.clearingIndex') . ' ... ' . __('search.cli.rebuildIndex.done') . "\n");
@@ -176,7 +176,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->rebuildIndex(false); // Without log (that's why we expect the log message to appear only once).
 
         // Remove the test hook.
-        HookRegistry::clear('ArticleSearchIndex::rebuildIndex');
+        Hook::clear('ArticleSearchIndex::rebuildIndex');
     }
 
     /**
@@ -185,7 +185,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testIndexArticleMetadata()
     {
         // Make sure that no hook is being called.
-        HookRegistry::clear('ArticleSearchIndex::articleMetadataChanged');
+        Hook::clear('ArticleSearchIndex::articleMetadataChanged');
 
         /** @var Publication|MockObject */
         $publication = $this->getMockBuilder(Publication::class)
@@ -223,11 +223,11 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->submissionMetadataChanged($article);
 
         // Test whether the hook was called.
-        $calledHooks = HookRegistry::getCalledHooks();
+        $calledHooks = Hook::getCalledHooks();
         self::assertEquals('ArticleSearchIndex::articleMetadataChanged', $calledHooks[0][0]);
 
         // Remove the test hook.
-        HookRegistry::clear('ArticleSearchIndex::articleMetadataChanged');
+        Hook::clear('ArticleSearchIndex::articleMetadataChanged');
     }
 
     /**
@@ -236,7 +236,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testIndexSubmissionFiles()
     {
         // Make sure that no hook is being called.
-        HookRegistry::clear('ArticleSearchIndex::submissionFilesChanged');
+        Hook::clear('ArticleSearchIndex::submissionFilesChanged');
         $this->registerFileDAOs(true);
 
         // Test indexing an article with a mock environment.
@@ -262,12 +262,12 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->submissionFilesChanged($article);
 
         // Test whether the hook was called.
-        $calledHooks = HookRegistry::getCalledHooks();
+        $calledHooks = Hook::getCalledHooks();
         $lastHook = array_pop($calledHooks);
         self::assertEquals('ArticleSearchIndex::submissionFilesChanged', $lastHook[0]);
 
         // Remove the test hook.
-        HookRegistry::clear('ArticleSearchIndex::submissionFilesChanged');
+        Hook::clear('ArticleSearchIndex::submissionFilesChanged');
     }
 
 

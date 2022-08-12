@@ -60,7 +60,7 @@ class ArticleSearchTest extends PKPTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        HookRegistry::rememberCalledHooks();
+        Hook::rememberCalledHooks();
 
         // Prepare the mock environment for this test.
         $this->registerMockArticleSearchDAO();
@@ -78,7 +78,7 @@ class ArticleSearchTest extends PKPTestCase
      */
     protected function tearDown(): void
     {
-        HookRegistry::resetCalledHooks();
+        Hook::resetCalledHooks();
         parent::tearDown();
     }
 
@@ -92,7 +92,7 @@ class ArticleSearchTest extends PKPTestCase
     public function testRetrieveResults()
     {
         // Make sure that no hook is being called.
-        HookRegistry::clear('SubmissionSearch::retrieveResults');
+        Hook::clear('SubmissionSearch::retrieveResults');
 
         // Test a simple search with a mock database back-end.
         $journal = new Journal();
@@ -162,7 +162,7 @@ class ArticleSearchTest extends PKPTestCase
             $journal = new Journal();
             $keywords = $testCase;
             $articleSearch = new ArticleSearch();
-            HookRegistry::resetCalledHooks(true);
+            Hook::resetCalledHooks(true);
             $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error, $testFromDate, $testToDate);
 
             // Check the parameters passed into the callback.
@@ -175,7 +175,7 @@ class ArticleSearchTest extends PKPTestCase
             }
 
             // Test the call history of the hook registry.
-            $calledHooks = HookRegistry::getCalledHooks();
+            $calledHooks = Hook::getCalledHooks();
             self::assertCount(1, array_filter($calledHooks, fn ($hook) => $hook[0] === 'SubmissionSearch::retrieveResults'));
 
             // Test whether the result from the hook is being returned.
@@ -192,7 +192,7 @@ class ArticleSearchTest extends PKPTestCase
         }
 
         // Remove the test hook.
-        HookRegistry::clear('SubmissionSearch::retrieveResults');
+        Hook::clear('SubmissionSearch::retrieveResults');
     }
 
 
