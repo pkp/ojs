@@ -8,13 +8,12 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class WebFeedSettingsForm
- * @ingroup plugins_generic_webFeed
- *
  * @brief Form for managers to modify web feeds plugin settings
  */
 
-use APP\template\TemplateManager;
+namespace APP\plugins\generic\webFeed;
 
+use APP\template\TemplateManager;
 use PKP\form\Form;
 
 class WebFeedSettingsForm extends Form

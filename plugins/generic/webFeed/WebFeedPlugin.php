@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/generic/webFeed/WebFeedPlugin.inc.php
+ * @file plugins/generic/webFeed/WebFeedPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class WebFeedPlugin
- * @ingroup plugins_block_webFeed
- *
  * @brief Web Feeds plugin class
  */
+
+namespace APP\plugins\generic\webFeed;
 
 use APP\core\Application;
 use APP\facades\Repo;
@@ -20,7 +20,6 @@ use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
-
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 
@@ -58,10 +57,7 @@ class WebFeedPlugin extends GenericPlugin
         }
         if ($this->getEnabled($mainContextId)) {
             Hook::add('TemplateManager::display', [$this, 'callbackAddLinks']);
-            $this->import('WebFeedBlockPlugin');
             PluginRegistry::register('blocks', new WebFeedBlockPlugin($this), $this->getPluginPath());
-
-            $this->import('WebFeedGatewayPlugin');
             PluginRegistry::register('gateways', new WebFeedGatewayPlugin($this), $this->getPluginPath());
         }
         return true;
@@ -164,7 +160,6 @@ class WebFeedPlugin extends GenericPlugin
     {
         switch ($request->getUserVar('verb')) {
             case 'settings':
-                $this->import('WebFeedSettingsForm');
                 $form = new WebFeedSettingsForm($this, $request->getContext()->getId());
 
                 if ($request->getUserVar('save')) {

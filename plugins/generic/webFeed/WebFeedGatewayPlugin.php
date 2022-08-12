@@ -1,19 +1,20 @@
 <?php
 
 /**
- * @file plugins/generic/webFeed/WebFeedGatewayPlugin.inc.php
+ * @file plugins/generic/webFeed/WebFeedGatewayPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class WebFeedGatewayPlugin
- * @ingroup plugins_generic_webFeed
- *
  * @brief Gateway component of web feed plugin
  *
  */
 
+namespace APP\plugins\generic\webFeed;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
