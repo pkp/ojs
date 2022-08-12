@@ -8,11 +8,10 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
- * @ingroup plugins_generic_htmlArticleGalley
- *
  * @brief Class for HtmlArticleGalley plugin
  */
 
+namespace APP\plugins\generic\htmlArticleGalley;
 
 use APP\core\Application;
 use APP\core\Services;
