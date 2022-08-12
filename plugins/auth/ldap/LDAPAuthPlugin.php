@@ -8,10 +8,10 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LDAPAuthPlugin
- * @ingroup plugins_auth_ldap
- *
  * @brief LDAP authentication plugin.
  */
+
+namespace APP\plugins\auth\ldap;
 
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
