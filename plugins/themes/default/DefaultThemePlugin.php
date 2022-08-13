@@ -256,3 +256,7 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         return __('plugins.themes.default.description');
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\themes\default\DefaultThemePlugin', '\DefaultThemePlugin');
+}
