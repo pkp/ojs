@@ -104,3 +104,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
         return parent::getContents($templateMgr, $request);
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\blocks\subscription\SubscriptionBlockPlugin', '\SubscriptionBlockPlugin');
+}

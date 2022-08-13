@@ -88,3 +88,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin
         return parent::getContents($templateMgr, $request);
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\blocks\languageToggle\LanguageToggleBlockPlugin', '\LanguageToggleBlockPlugin');
+}
