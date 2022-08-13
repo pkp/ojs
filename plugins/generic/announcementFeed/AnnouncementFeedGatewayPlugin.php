@@ -93,7 +93,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
      * Handle fetch requests for this plugin.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function fetch($args, $request)
     {

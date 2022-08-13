@@ -35,7 +35,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             return false;
         }
         if ($this->getEnabled($mainContextId)) {
-            Hook::add('ArticleHandler::view::galley', [$this, 'articleViewCallback'], HOOK_SEQUENCE_LATE);
+            Hook::add('ArticleHandler::view::galley', [$this, 'articleViewCallback'], Hook::SEQUENCE_LATE);
             Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], HOOK_SEQUENCE_LATE);
         }
         return true;
@@ -152,8 +152,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
      * Return string containing the contents of the HTML file.
      * This function performs any necessary filtering, like image URL replacement.
      *
-     * @param PKPRequest $request
-     * @param Galley $galley
+     * @param \PKP\core\PKPRequest $request
+     * @param \PKP\galley\Galley $galley
      *
      * @return string
      */

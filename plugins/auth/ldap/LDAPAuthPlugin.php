@@ -85,7 +85,7 @@ class LDAPAuthPlugin extends AuthPlugin
      * @param array $settings settings specific to this instance.
      * @param int $authId identifier for this instance
      *
-     * @return LDAPuthPlugin
+     * @return LDAPAuthPlugin
      */
     public function getInstance($settings, $authId)
     {
@@ -145,7 +145,7 @@ class LDAPAuthPlugin extends AuthPlugin
     /**
      * Retrieve user profile information from the LDAP server.
      *
-     * @param User $user User to update
+     * @param \PKP\user\User $user User to update
      *
      * @return bool true if successful
      */

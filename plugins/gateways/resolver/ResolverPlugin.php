@@ -13,9 +13,11 @@
 
 namespace APP\plugins\gateways\resolver;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\template\TemplateManager;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\plugins\GatewayPlugin;
 

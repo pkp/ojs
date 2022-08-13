@@ -31,8 +31,6 @@ use APP\oai\ojs\OAIDAO;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
-use OAIMetadataFormat_DC;
-use OAIMetadataFormatPlugin_DC;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\author\Repository as AuthorRepository;
 use PKP\core\PKPRouter;
@@ -45,9 +43,6 @@ use PKP\oai\OAIRecord;
 use PKP\submission\SubmissionKeywordDAO;
 use PKP\submission\SubmissionSubjectDAO;
 use PKP\tests\PKPTestCase;
-
-import('plugins.oaiMetadataFormats.dc.OAIMetadataFormat_DC');
-import('plugins.oaiMetadataFormats.dc.OAIMetadataFormatPlugin_DC');
 
 class OAIMetadataFormat_DCTest extends PKPTestCase
 {
