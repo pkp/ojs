@@ -1,23 +1,25 @@
 <?php
 
 /**
- * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormatPlugin_MARC21.inc.php
+ * @file plugins/oaiMetadataFormats/marc/OAIMetadataFormatPlugin_MARC.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class OAIMetadataFormatPlugin_MARC21
+ * @class OAIMetadataFormatPlugin_MARC
  * @ingroup oai_format
  *
  * @see OAI
  *
- * @brief marc21 metadata format plugin for OAI.
+ * @brief marc metadata format plugin for OAI.
  */
+
+namespace APP\plugins\oaiMetadataFormats\marc;
 
 use PKP\plugins\OAIMetadataFormatPlugin;
 
-class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin
+class OAIMetadataFormatPlugin_MARC extends OAIMetadataFormatPlugin
 {
     /**
      * Get the name of this plugin. The name must be unique within
@@ -27,36 +29,36 @@ class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin
      */
     public function getName()
     {
-        return 'OAIFormatPlugin_MARC21';
+        return 'OAIFormatPlugin_MARC';
     }
 
     public function getDisplayName()
     {
-        return __('plugins.OAIMetadata.marcxml.displayName');
+        return __('plugins.OAIMetadata.marc.displayName');
     }
 
     public function getDescription()
     {
-        return __('plugins.OAIMetadata.marcxml.description');
+        return __('plugins.OAIMetadata.marc.description');
     }
 
     public function getFormatClass()
     {
-        return 'OAIMetadataFormat_MARC21';
+        return '\APP\plugins\oaiMetadataFormats\marc\OAIMetadataFormat_MARC';
     }
 
     public static function getMetadataPrefix()
     {
-        return 'marcxml';
+        return 'oai_marc';
     }
 
     public static function getSchema()
     {
-        return 'http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd';
+        return 'http://www.openarchives.org/OAI/1.1/oai_marc.xsd';
     }
 
     public static function getNamespace()
     {
-        return 'http://www.loc.gov/MARC21/slim';
+        return 'http://www.openarchives.org/OAI/1.1/oai_marc';
     }
 }

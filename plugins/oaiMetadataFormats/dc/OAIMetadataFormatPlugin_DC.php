@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/oaiMetadataFormats/dc/OAIMetadataFormatPlugin_DC.inc.php
+ * @file plugins/oaiMetadataFormats/dc/OAIMetadataFormatPlugin_DC.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -14,6 +14,8 @@
  *
  * @brief dc metadata format plugin for OAI.
  */
+
+namespace APP\plugins\oaiMetadataFormats\dc;
 
 class OAIMetadataFormatPlugin_DC extends \PKP\plugins\oaiMetadataFormats\dc\PKPOAIMetadataFormatPlugin_DC
 {

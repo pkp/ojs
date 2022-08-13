@@ -12,7 +12,4 @@
  *
  */
 
-require_once('OAIMetadataFormatPlugin_MARC21.inc.php');
-require_once('OAIMetadataFormat_MARC21.inc.php');
-
-return new OAIMetadataFormatPlugin_MARC21();
+return new \APP\plugins\oaiMetadataFormats\marcxml\OAIMetadataFormatPlugin_MARC21();

@@ -4,7 +4,7 @@
  */
 
 /**
- * @file plugins/oaiMetadataFormats/dc/OAIMetadataFormat_DC.inc.php
+ * @file plugins/oaiMetadataFormats/dc/OAIMetadataFormat_DC.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

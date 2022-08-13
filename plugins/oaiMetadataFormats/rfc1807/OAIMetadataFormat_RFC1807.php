@@ -8,17 +8,20 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_RFC1807
- * @ingroup oai_format
  *
  * @see OAI
  *
  * @brief OAI metadata format class -- RFC 1807.
  */
 
+namespace APP\plugins\oaiMetadataFormats\rfc1807;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
 use PKP\oai\OAIMetadataFormat;
+use PKP\oai\OAIUtils;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {

@@ -1,23 +1,25 @@
 <?php
 
 /**
- * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormatPlugin_RFC1807.inc.php
+ * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormatPlugin_MARC21.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class OAIMetadataFormatPlugin_RFC1807
+ * @class OAIMetadataFormatPlugin_MARC21
  * @ingroup oai_format
  *
  * @see OAI
  *
- * @brief rfc1807 metadata format plugin for OAI.
+ * @brief marc21 metadata format plugin for OAI.
  */
+
+namespace APP\plugins\oaiMetadataFormats\marcxml;
 
 use PKP\plugins\OAIMetadataFormatPlugin;
 
-class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin
+class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin
 {
     /**
      * Get the name of this plugin. The name must be unique within
@@ -27,36 +29,36 @@ class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin
      */
     public function getName()
     {
-        return 'OAIFormatPlugin_RFC1807';
+        return 'OAIFormatPlugin_MARC21';
     }
 
     public function getDisplayName()
     {
-        return __('plugins.OAIMetadata.rfc1807.displayName');
+        return __('plugins.OAIMetadata.marcxml.displayName');
     }
 
     public function getDescription()
     {
-        return __('plugins.OAIMetadata.rfc1807.description');
+        return __('plugins.OAIMetadata.marcxml.description');
     }
 
     public function getFormatClass()
     {
-        return 'OAIMetadataFormat_RFC1807';
+        return '\APP\plugins\oaiMetadataFormats\marcxml\OAIMetadataFormat_MARC21';
     }
 
     public static function getMetadataPrefix()
     {
-        return 'rfc1807';
+        return 'marcxml';
     }
 
     public static function getSchema()
     {
-        return 'http://www.openarchives.org/OAI/1.1/rfc1807.xsd';
+        return 'http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd';
     }
 
     public static function getNamespace()
     {
-        return 'http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt';
+        return 'http://www.loc.gov/MARC21/slim';
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/metadata/dc11/Dc11MetadataPlugin.inc.php
+ * @file plugins/metadata/dc11/Dc11Plugin.inc.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -13,6 +13,8 @@
  * @brief Dublic Core version 1.1 metadata plugin
  */
 
-class Dc11MetadataPlugin extends \PKP\plugins\metadata\dc11\PKPDc11MetadataPlugin
+namespace APP\plugins\metadata\dc11;
+
+class Dc11Plugin extends \PKP\plugins\metadata\dc11\PKPDc11MetadataPlugin
 {
 }

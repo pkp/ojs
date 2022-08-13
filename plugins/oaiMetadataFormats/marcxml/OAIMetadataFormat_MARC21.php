@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormat_MARC21.inc.php
+ * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormat_MARC21.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -15,7 +15,10 @@
  * @brief OAI metadata format class -- MARC21 (MARCXML).
  */
 
+namespace APP\plugins\oaiMetadataFormats\marcxml;
+
 use APP\template\TemplateManager;
+use PKP\core\PKPString;
 use PKP\i18n\LocaleConversion;
 use PKP\oai\OAIMetadataFormat;
 use PKP\plugins\PluginRegistry;
