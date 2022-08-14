@@ -19,8 +19,9 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
+use Illuminate\Database\MySqlConnection;
+use Illuminate\Database\PostgresConnection;
 use Illuminate\Support\Facades\DB;
-use PKP\config\Config;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
@@ -325,22 +326,18 @@ class Upgrade extends Installer
 
         // middle name will be migrated to the given name
         // note that given names are already migrated to the settings table
-        switch (Config::getVar('database', 'driver')) {
-            case 'mysql':
-            case 'mysqli':
+        switch (DB::connection()::class) {
+            case MySqlConnection::class:
                 // the alias for _settings table cannot be used for some reason -- syntax error
                 DB::update("UPDATE user_settings, users_tmp u SET user_settings.setting_value = CONCAT(user_settings.setting_value, ' ', u.middle_name) WHERE user_settings.setting_name = ? AND u.user_id = user_settings.user_id AND u.middle_name IS NOT NULL AND u.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
                 DB::update("UPDATE author_settings, authors_tmp a SET author_settings.setting_value = CONCAT(author_settings.setting_value, ' ', a.middle_name) WHERE author_settings.setting_name = ? AND a.author_id = author_settings.author_id AND a.middle_name IS NOT NULL AND a.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
                 break;
-            case 'postgres':
-            case 'postgres64':
-            case 'postgres7':
-            case 'postgres8':
-            case 'postgres9':
+            case PostgresConnection::class:
                 DB::update("UPDATE user_settings SET setting_value = CONCAT(setting_value, ' ', u.middle_name) FROM users_tmp u WHERE user_settings.setting_name = ? AND u.user_id = user_settings.user_id AND u.middle_name IS NOT NULL AND u.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
                 DB::update("UPDATE author_settings SET setting_value = CONCAT(setting_value, ' ', a.middle_name) FROM authors_tmp a WHERE author_settings.setting_name = ? AND a.author_id = author_settings.author_id AND a.middle_name IS NOT NULL AND a.middle_name <> ''", [Identity::IDENTITY_SETTING_GIVENNAME]);
                 break;
-            default: fatalError('Unknown database type!');
+            default:
+                fatalError('Unknown database type!');
         }
 
         // salutation and suffix will be migrated to the preferred public name
@@ -503,19 +500,15 @@ class Upgrade extends Installer
         $roleString = '(' . implode(',', $roles) . ')';
 
         $userGroupDao->update('UPDATE user_groups SET permit_metadata_edit = 1 WHERE role_id IN ' . $roleString);
-        switch (Config::getVar('database', 'driver')) {
-            case 'mysql':
-            case 'mysqli':
+        switch (DB::connection()::class) {
+            case MySqlConnection::class:
                 $stageAssignmentDao->update('UPDATE stage_assignments sa JOIN user_groups ug on sa.user_group_id = ug.user_group_id SET sa.can_change_metadata = 1 WHERE ug.role_id IN ' . $roleString);
                 break;
-            case 'postgres':
-            case 'postgres64':
-            case 'postgres7':
-            case 'postgres8':
-            case 'postgres9':
+            case PostgresConnection::class:
                 $stageAssignmentDao->update('UPDATE stage_assignments sa SET can_change_metadata=1 FROM user_groups ug WHERE sa.user_group_id = ug.user_group_id AND ug.role_id IN ' . $roleString);
                 break;
-            default: fatalError('Unknown database type!');
+            default:
+                fatalError('Unknown database type!');
         }
 
         return true;
