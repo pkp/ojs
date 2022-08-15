@@ -144,9 +144,6 @@ class CounterReportPlugin extends ReportPlugin
      */
     public function display($args, $request)
     {
-        // We need these constants
-        import('classes.statistics.StatisticsHelper');
-
         $available = $this->getValidReports();
         $years = $this->_getYears();
         if ($request->getUserVar('type')) {
