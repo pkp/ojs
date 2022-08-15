@@ -45,18 +45,6 @@ msgstr "言語のインストール"
 msgid "admin.languages.availableLocales"
 msgstr "有効な言語"
 
-msgid "admin.auth.enableSyncProfiles"
-msgstr ""
-"ユーザープロフィールの同期を有効にします（この認証プラグインでサポートされている場合）。ユーザーがログインすると、リモートソースからユーザーのプロフィール"
-"情報が自動的に更新され、OJS内で行われたプロフィールの変更（パスワードの変更を含む）がリモートソースに自動的に更新されます。このオプションを有効にしない"
-"と、OJSのプロフィール情報は、リモートソースのプロフィール情報とは別に保持されます。"
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "ユーザーのパスワード変更を有効にします（この認証プラグインでサポートされている場合）。このオプションを有効にすると、ユーザーがOJS内でパスワードを変更したり、OJSの \"lost password\" 機能を使って忘れたパスワードをリセットしたりできます。このオプションを有効にしないと、この認証ソースのユーザーはこれらの機能を利用できません。"
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "ユーザー作成を有効にします（この認証プラグインでサポートされている場合）。この認証ソースを使ってOJS内で作成されたユーザーがまだ存在していなかった場合、自動的にリモート認証ソースに追加されます。さらに、この認証ソースがデフォルトの認証ソースである場合は、ユーザー登録によって作成されたOJSアカウントもリモート認証ソースに追加されます。"
-
 msgid "admin.journals.createInstructions"
 msgstr "あなたは自動的にこのジャーナルの管理者として登録されます。新しいジャーナルを作成すると、設定ウィザードのリダイレクトを経て、ジャーナルの初期設定が完了します。"
 
@@ -176,9 +164,6 @@ msgstr "ホストされているジャーナル"
 
 msgid "admin.systemConfiguration"
 msgstr "OJS設定"
-
-msgid "admin.auth.ojs"
-msgstr "OJSユーザーデータベース"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "査読リマインダー"

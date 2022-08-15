@@ -617,13 +617,6 @@ msgstr "Commenti su questo articolo"
 msgid "comments.authenticated"
 msgstr "di <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Specificare una fonte di autenticazione diversa da OJS produrà i seguenti effetti:</p>\n"
-"<ul>\n"
-"\t<li>Se un utente tenta di registrare un nuovo account in questo sito con una username che già esiste sulla fonte di autenticazione (ma non nel database di OJS), il tentativo di registrazione andrà a buon fine solamente se la password fornita per quell'account è corretta.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>NOTA!</h4>\n"

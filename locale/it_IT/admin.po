@@ -42,18 +42,6 @@ msgstr ""
 "documentazione di OJS per ulteriori informazioni su come aggiungere nuove "
 "lingue."
 
-msgid "admin.auth.ojs"
-msgstr "Database degli utenti OJS"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Abilita la sincronizzazione del profilo dell'utente (se supportato da questo plug-in di autenticazione). Le informazione sul profilo dell'utente saranno automaticamente aggiornate in remoto quando un utente accede, e i cambiamenti del profilo (inclusi cambi di password) fatti all'interno di OJS saranno automaticamente aggiornati in remoto. Se questa opzione è disabilitata le informazioni del profilo OJS  saranno mantenute separate dalle informazioni del profilo in remoto."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Abilita la modifica della password dell'utente (se supportato da questo plug-in di autenticazione). L'abilitazione di questa opzione permette agli utenti di modificare la password all'interno di OJS and e di usare il comando OJS \"password smarrita\"  per resettare una password dimenticata. Queste funzioni non saranno disponibili all'utente con questa fonte di autenticazione se questa opzione è disabilitata ."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Abilita la creazione di un utente (se supportato da questo plug-in di autenticazione). Gli utenti creati all'interno di OJS con questa fonte di autenticazione  saranno automaticamente aggiunti alla fonte di autenticazione in remoto se ancora non esiste. Inoltre, se questa fonte è la fonte di autenticazione di default, gli account di OJS creati  tramite la registrazione dello user  saranno aggiunti alla fonte di autenticazione in remoto."
-
 msgid "admin.systemVersion"
 msgstr "Versione di OJS"
 

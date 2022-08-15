@@ -702,13 +702,6 @@ msgstr "Descending"
 msgid "search.results.similarDocuments"
 msgstr "dokumen serupa"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Menetapkan sumber otentikasi selain OJS akan menimbulkan dampak berikut:</p>\n"
-"<ul>\n"
-"\t<li>Jika pengguna hendak mendaftar akun baru ke situs ini dengan username yang telah ada di sumber otentikasi (namun belum ada di databasee OJS), pendaftaran hanya akan berhasil bila menggunakan password yang sama untuk username di sumber tersebut.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>CATATAN!</h4>\n"

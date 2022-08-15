@@ -735,13 +735,6 @@ msgstr "تنازلياً"
 msgid "search.results.similarDocuments"
 msgstr "ملفات مشابهة"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>تحديد مصدر مصادقة إفتراضي مغاير لنظام المجلات المفتوحة له التبعات الآتية:</p>\n"
-"\t<ul>\n"
-"\t\t<li>لو حاول مستخدم ما تسجيل حساب جديد في هذا الموقع باسم دخول مسجل سلفاً في مصدر المصادقة (لكنه غير معروف في قاعدة بيانات نظام المجلات المفتوحة)، فإن ذلك التسجيل سيكون ممكناً فقط عندما تكون كلمة المرور صحيحة في ذلك المصدر الخارجي أيضاً.</li>\n"
-"\t</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>ملاحظة!</h4>\n"

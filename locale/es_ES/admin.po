@@ -39,18 +39,6 @@ msgstr "¿Está seguro/a de que desea desinstalar esta configuración regional? 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Seleccione cualquier configuración regional adicional para instalar su soporte en este sistema. Debe instalar las configuraciones regionales antes de que otras revistas alojadas puedan utilizarlas. Vea la documentación de OJS para obtener más información o para añadir soporte para nuevos idiomas."
 
-msgid "admin.auth.ojs"
-msgstr "Base de datos de usuarios/as de OJS"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Habilitar la sincronización del perfil de usuario/a (si el módulo de autenticación es compatible). La información del perfil del usuario/a se actualizará automáticamente desde una fuente remota cuando el usuario/a inicie sesión. Los cambios que se hagan en el perfil dentro de OJS (incluido el cambio de contraseña) se actualizarán automáticamente en la fuente remota. Si esta opción no está habilitada, la información del perfil de OJS se mantendrá separada de la información del perfil de la fuente remota."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Habilitar la modificación de contraseña de usuario/a (si el módulo de autenticación es compatible). Habilitar esta opción permite a los usuarios/as modificar su contraseña desde OJS y usar la función de OJS \"contraseña perdida\" para restablecer la contraseña en caso de olvido. Los usuarios/as con esta fuente de autenticación no podrán disponer de dichas funciones si la opción no está habilitada."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Habilitar la creación de usuarios/as (si es compatible con el módulo de autenticación). Los usuarios/as creados en OJS con esta fuente de autenticación se añadirán automáticamente a la fuente de autenticación remota si no existían previamente. De forma adicional, si ésta es la fuente de autenticación por defecto, las cuentas OJS creadas mediante un registro de usuario/a también se añadirán a la fuente de autenticación remota."
-
 msgid "admin.systemVersion"
 msgstr "Versión de OJS"
 

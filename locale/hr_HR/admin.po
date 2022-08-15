@@ -36,18 +36,6 @@ msgstr "Jeste li sigurni da želite deinstalirati ovaj prijevod? To može utjeca
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Izaberite bilo koji od ispod navedenih prijevoda kako biste instalirali podršku za taj jezik u sustavu. Prijevodi moraju biti instalirani prije nego što se mogu aktivirati i koristiti u pojedinim časopisima. Pogledajte OJS dokumentaciju za informacije o dodavanju podrške za nove jezike."
 
-msgid "admin.auth.ojs"
-msgstr "OJS korisnička baza"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Omogući sinkronizaciju korisničkog profila (ako je podržana ovim autentifikacijskim dodatkom). Informacije o korisničkom profilu bit će automatski ažurirane preko udaljenog izvora prilikom prijave korisnika. Također, izmjene profila (uključujući promjenu lozinke) izvršene unutar OJS-a bit će automatski ažurirane na udaljenom izvoru. Informacije o OJS profilu bit će odvojene od informacija o profilu na udaljenom izvoru, ako ova opcija nije uključena."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Omogući promjenu korisničke lozinke (ako je podržana ovim autentifikacijskim dodatkom). Uključivanje ove opcije dopušta korisnicima da promjene svoje lozinke unutar OJS-a te korištenje OJS opcije \"izdaj novu lozinku\" kako bi se umjesto zaboravljene lozinke izdala nova. Te opcije neće biti dostupne korisnicima s ovim izvorom autentifikacije, ako ova opcija nije uključena."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Omogući kreiranja korisnika (ako je podržano ovim autentifikacijskim dodatkom). Korisnici kreirani unutar OJS-a s ovim autentifikacijskim izvorom bit će automatski dodani na udaljeni izvor autentifikacije ukoliko već ne postoje. Osim toga, ako je ovaj izvor primaran, OJS računi kreirani preko korisničke registracije bit će također dodani na udaljeni izvor."
-
 msgid "admin.systemConfiguration"
 msgstr "Konfiguracija OJS-a"
 

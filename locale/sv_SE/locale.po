@@ -711,13 +711,6 @@ msgstr "Fallande"
 msgid "search.results.similarDocuments"
 msgstr "liknande dokument"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Att använda en annan förvald valideringskälla än OJS medför att:</p>\n"
-"<ul>\n"
-"\t<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns hos valideringskällan (men inte i OJS-databasen) så kommer registreringen bara godkännas om lösenordet överensstämmer med det aktuella användarkontot.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>OBSERVERA!</h4>\n"

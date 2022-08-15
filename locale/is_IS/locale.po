@@ -504,9 +504,6 @@ msgstr "Einstaklingsáskriftir"
 msgid "subscriptionManager.subscriptionManagement"
 msgstr "Umsjón með áskriftum"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-
 msgid "search.results.similarDocuments"
 msgstr "svipuð skjöl"
 

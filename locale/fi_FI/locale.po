@@ -696,13 +696,6 @@ msgstr "Laskeva"
 msgid "search.results.similarDocuments"
 msgstr "samankaltaisia asiakirjoja"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Mikäli oletustodentamislähteeksi määritetään OJS:n sijaan jokin muu lähde, sillä on seuraavia vaikutuksia:</p>\n"
-"<ul>\n"
-"\t<li>Jos käyttäjä yrittää rekisteröidä tällä sivustolla uuden tilin käyttäjätunnuksella, joka on olemassa todentamislähteessä (mutta ei OJS:n tietokannassa), rekisteröinti sallitaan vain, jos annettu salasana kuuluu kyseiselle käyttäjätilille.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>HUOM!</h4>\n"

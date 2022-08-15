@@ -1623,18 +1623,6 @@ msgstr ""
 "mos matn tahrirlovchisida ochish va uning tarkibini quyidagi matn "
 "maydonining mazmuni bilan almashtirish kerak. </p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p> OJSdan boshqa standart autentifikatsiya manbasini ko'rsatish quyidagi "
-"effektlarga ega: </p>\n"
-"<ul>\n"
-"<li> Agar foydalanuvchi bu saytda autentifikatsiya manbasida mavjud bo'lgan "
-"foydalanuvchi nomi bilan yangi hisob qaydnomasini ro'yxatdan o'tkazishga "
-"harakat qilsa (lekin OJS ma'lumotlar bazasida emas), ro'yxatdan o'tish "
-"urinishiga faqat berilgan parol o'sha foydalanuvchi hisobi uchun haqiqiy "
-"bo'lgan taqdirda ruxsat etiladi. </li>\n"
-"</ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "shunga o'xshash hujjatlar"
 

@@ -574,18 +574,6 @@ msgstr "अवरोही"
 msgid "search.results.similarDocuments"
 msgstr "इसी तरह के दस्तावेज"
 
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) tabs: Different tabs
-# (pofilter) xmltags: Added XML tags
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>OJS के अलावा एक डिफ़ॉल्ट प्रमाणीकरण स्रोत को निर्दिष्ट करने के निम्नलिखित प्रभाव हैं:</p>\n"
-"<ul>\n"
-"\t<li>यदि कोई उपयोगकर्ता प्रमाणीकरण साइट पर मौजूद उपयोगकर्ता नाम (लेकिन OJS डेटाबेस में नहीं) के साथ इस साइट के साथ एक नया खाता पंजीकृत करने का प्रयास करता है, तो पंजीकरण प्रयास केवल तभी अनुमति दी जाती है जब आपूर्ति की गई पासवर्ड उस उपयोगकर्ता खाते के लिए मान्य हो।</li>\n"
-"</ul>"
-
 # (pofilter) newlines: Different line endings
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) xmltags: Added XML tags

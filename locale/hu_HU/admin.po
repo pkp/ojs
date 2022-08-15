@@ -66,18 +66,6 @@ msgstr "Biztosan törölni szeretné ezt a nyelvi környezetet? Ez hatással leh
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Telepítse bármelyiket az alábbi támogatott nyelvi környezetek közül. A nyelvi környezeteket telepíteni kell mielőtt a tárolt folyóiratok oldalain használni kezdené. Lásd az OJS dokumentációt a további támogatott nyelvi környezetek használatához."
 
-msgid "admin.auth.ojs"
-msgstr "OJS Felhasználói adatbázis"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "A felhasználói fiók szinkronizációjának engedélyezése (amennyiben támogatja ez a hitelesítési plugin). A felhasználói fiók információi automatikusan frissülni fognak a távoli forrásból, hogyha a felhasználó bejelentkezik, és amennyiben az OJS fiók változik (beleértve a jelszóváltoztatást), akkor automatikusan frissülnek az adatok a távoli forrásnál. Ha nem engedélyezett ez az opció, akkor az OJS fiók információk elkülönítetten maradnak a távoli forrás fiók információtól."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "A felhasználói jelszó változtatásának engedélyezése (amennyiben támogatja ez a hitelesítési plugin). Ennek az opciónak az engedélyezésével a felhasználók megváltoztathatják a jelszavukat az OJS-en belül és használhatják az OJS \"elveszett jelszó\" szolgáltatását az elveszett jelszó törléséhez. Ha nincs engedélyezve ez az opció, akkor ezek a funkciók nem lesznek elérhetőek a felhasználók számára."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Felhasználó létrehozásának engedélyezése (amennyiben támogatja ez a hitelesítési plugin). Az OJS-en belüli felhasználók létrehozásánál ezzel a hitelesítési forrással automatikusan szinkronizálásra kerül, ha ott a felhasználó nem létezik még. Továbbá amennyiben ez az alapértelmezett hitelesítési forrás, akkor minden felhasználói regisztráció fiókadata is átkerül a külső forrásba."
-
 msgid "admin.systemVersion"
 msgstr "OJS verzió"
 

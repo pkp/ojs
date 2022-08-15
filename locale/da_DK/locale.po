@@ -468,13 +468,6 @@ msgstr "Kommentarer til denne artikel"
 msgid "comments.authenticated"
 msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Angivelse af en anden standardgodkendelseskilde end OJS har følgende virkning:</p>\n"
-"<ul>\n"
-"\t<li>Hvis en bruger forsøger at registrere en ny konto på dette websted med et brugernavn, der findes i godkendelseskilden (men ikke i OJS-databasen), vil registreringen kun lykkes, hvis den angivne adgangskode er gyldig for den pågældende brugerkonto.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>BEMÆRK!</h4>\n"

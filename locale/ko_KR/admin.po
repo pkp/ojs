@@ -20,12 +20,6 @@ msgstr ""
 msgid "admin.journals.redirect"
 msgstr "OJS 1 URL 주소를 OJS 2 URL 주소로 매핑하는 코드 실행"
 
-msgid "admin.auth.enableCreateUsers"
-msgstr ""
-"이 인증 플러그인에서 지원되는 경우, 사용자 생성을 활성화합니다. 이 인증 소스로 OJS 내에서 작성된 사용자는 원격 인증 소스가 없는 "
-"경우 자동으로 원격 인증 소스에 추가됩니다. 또한 이 소스가 기본 인증 소스 인 경우 사용자 등록을 통해 생성 된 OJS 계정도 원격 "
-"인증 소스에 추가됩니다."
-
 msgid "admin.languages.download.cannotOpen"
 msgstr "PKP 웹 사이트에서 언어 관련 설명을 열 수 없습니다."
 
@@ -39,9 +33,6 @@ msgstr "이전 사용자의 저작권, 심사 내용 편집 등을 대신할 사
 
 msgid "admin.journals.transcode"
 msgstr "ISO8859-1 형식의 논문 메타 데이터 코드 변환"
-
-msgid "admin.auth.ojs"
-msgstr "OJS 사용자 데이터베이스"
 
 msgid "admin.languages.download.cannotModifyRegistry"
 msgstr "새 언어를 언어 레지스트리 파일 (일반적으로 \"registry/locales.xml\")에 추가 할 수 없습니다."
@@ -159,18 +150,6 @@ msgstr "OJS 설정"
 
 msgid "admin.systemVersion"
 msgstr "OJS 버전"
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr ""
-"이 인증 플러그인에서 지원되는 경우 사용자 비밀번호 수정을 사용. 이 옵션을 사용하면 사용자가 OJS 내에서 비밀번호를 수정하고 OJS "
-"\"비밀번호 분실\"기능을 사용하여 잊어 버린 비밀번호를 재설정 할 수 있습니다. 이 옵션을 사용하지 않으면이 인증 소스를 가진 "
-"사용자는이 기능을 사용할 수 없습니다."
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr ""
-"이 인증 플러그인에서 지원하는 경우, 사용자 프로필 동기화를 활성화합니다. 사용자가 로그인하면 사용자 프로필 정보가 원격 소스에서 "
-"자동으로 업데이트되고 OJS 내에서 수행 된 프로필 변경 (암호 변경 포함)이 원격 소스에서 자동으로 업데이트됩니다. 이 옵션을 사용하지 "
-"않으면 OJS 프로파일 정보가 원격 소스 프로파일 정보와 분리되어 유지됩니다."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "이 언어가 사이트 및 호스팅 된 학술지의 기본 언어가 됩니다."

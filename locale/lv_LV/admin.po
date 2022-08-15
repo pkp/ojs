@@ -38,9 +38,6 @@ msgstr "OJS Konfigurācija"
 msgid "admin.systemVersion"
 msgstr "OJS Versija"
 
-msgid "admin.auth.ojs"
-msgstr "OJS Lietotāju Datubāze"
-
 msgid "admin.settings.redirect"
 msgstr "Žurnāla pāradresēšana"
 
@@ -126,15 +123,6 @@ msgid "admin.contexts.form.titleRequired"
 msgstr ""
 
 msgid "admin.journals.urlWillBe"
-msgstr ""
-
-msgid "admin.auth.enableCreateUsers"
-msgstr ""
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr ""
-
-msgid "admin.auth.enableSyncProfiles"
 msgstr ""
 
 msgid "admin.languages.installNewLocalesInstructions"

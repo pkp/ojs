@@ -712,13 +712,6 @@ msgstr "Absteigend"
 msgid "search.results.similarDocuments"
 msgstr "ähnliche Dokumente"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Eine Standardauthentifizierungsquelle außerhalb vom OJS festzulegen, hat folgende Auswirkungen:</p>\n"
-"<ul>\n"
-"\t<li>Versucht jemand, auf dieser Seite ein neues Konto mit einem Benutzer/innen-Namen, der in der Authentifizierungsquelle existiert, nicht jedoch in der OJS-Datenbank, einzurichten, dann gelingt die Registrierung nur, wenn das eingegebene Passwort für dieses Benutzer/innen-Konto gültig ist.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>Beachten Sie:</h4>\n"

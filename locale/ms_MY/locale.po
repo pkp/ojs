@@ -1309,17 +1309,6 @@ msgstr ""
 "<tt>config.inc.php</tt> dalam penyunting teks yang sesuai dan menggantinya "
 "dengan isi bidang teks di bawah.</p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p> Menentukan sumber pengesahan lalai selain OJS mempunyai kesan berikut: "
-"</p>\n"
-"<ul>\n"
-"\t<li> Sekiranya pengguna cuba mendaftarkan akaun baru dengan laman web ini "
-"dengan nama pengguna yang terdapat pada sumber pengesahan (tetapi tidak "
-"terdapat dalam pangkalan data OJS), percubaan pendaftaran hanya dibenarkan "
-"jika kata laluan yang diberikan sah untuk akaun pengguna tersebut. </li>\n"
-"</ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "dokumen serupa"
 

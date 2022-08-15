@@ -1970,13 +1970,6 @@ msgstr "Azalan"
 msgid "search.results.similarDocuments"
 msgstr "benzer belgeler"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>OJS dışındaki bir varsayılan kimlik doğrulama kaynağının belirtilmesi aşağıdaki etkilere sahiptir:</p>\n"
-"<ul>\n"
-"\t<li>Bir kullanıcı, bu site ile kimlik doğrulama kaynağında bulunan (ancak OJS veri tabanında bulunmayan) bir kullanıcı adıyla yeni bir hesap oluşturmaya çalışırsa, kayıt girişimi yalnızca sağlanan şifre söz konusu kullanıcı hesabı için geçerliyse izin verilir.</li>\n"
-"</ul>"
-
 msgid "plugins.categories.viewableFiles"
 msgstr "Makale Dizgi Eklentisi"
 

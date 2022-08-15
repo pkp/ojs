@@ -1069,14 +1069,6 @@ msgstr ""
 "<p>시스템이 구성 파일을 자동으로 덮어 쓸 수 없습니다. 구성 변경 사항을 적용하려면 적합한 텍스트 편집기에서 "
 "<tt>config.inc.php</tt> 를 열고 해당 내용을 아래 텍스트 필드의 내용으로 바꿔야합니다.</p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>OJS 이외의 기본 인증 소스를 지정하면 다음과 같은 효과가 있습니다 :</p>\n"
-"<ul>\n"
-"\t<li>사용자가 인증 소스 (OJS 데이터베이스에는 없음)에 존재하는 사용자 이름으로이 사이트에 새 계정을 등록하려고 시도하는 경우 "
-"제공된 비밀번호가 해당 사용자 계정에 대해 유효한 경우에만 등록 시도가 허용됩니다.</li>\n"
-"</ul>"
-
 msgid "reader.purchasePrice"
 msgstr "({$currency} {$price})"
 

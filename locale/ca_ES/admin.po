@@ -39,18 +39,6 @@ msgstr "Esteu segurs que voleu suprimir aquesta configuració regional? Aquesta 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Cal que instal·leu les configuracions regionals abans que les revistes allotjades les puguin fer servir. Consulteu la documentació de l'OJS per obtenir més informació sobre com instal·lar llengües addicionals."
 
-msgid "admin.auth.ojs"
-msgstr "Base de dades d'usuaris/àries de l'OJS"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Habilita la sincronització de perfils d'usuari/ària (si ho admet aquest connector d'autenticació). La informació del perfil d'usuari/ària s'actualitza automàticament des de la font remota quan un usuari/ària inicia la sessió, i els canvis al perfil (també els canvis de contrasenya) fets dins de l'OJS s'actualitzen automàticament a la font remota. Si aquesta opció no està habilitada, la informació de perfil de l'OJS es mantindrà separada de la de la font remota."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Habilita la modificació de contrasenyes d'usuari/ària (si ho admet aquest connector d'autenticació). L'habilitació d'aquesta opció permet que els usuaris/àries modifiquin la seva contrasenya de l'OJS i facin servir la característica «recuperar contrasenya» per restablir la contrasenya oblidada. Si no s'habilita l'opció, aquestes funcions no estan disponibles pels usuaris/àries amb aquesta font d’autenticació."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Habilita la creació d'usuaris/àries (si ho admet aquest connector d'autenticació). Els usuaris/àries creats a l'OJS amb aquesta font d'autenticació s'afegeixen automàticament a la font d’autenticació remota si és que encara no hi són. A més, si aquesta font és la font d'autenticació predeterminada, els comptes de l'OJS creats mitjançant el registre d'usuaris/àries també s'afegeixen a la font d'autenticació remota."
-
 msgid "admin.systemVersion"
 msgstr "Versió de l'OJS"
 
