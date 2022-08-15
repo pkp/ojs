@@ -41,18 +41,6 @@ msgstr "Haluatko varmasti poistaa tämän kielialueen? Se saattaa vahingoittaa m
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Valitse mitä tahansa lisäkielialueita asentaaksesi tuen tässä järjestelmässä. Kielialueet täytyy asentaa ennen kuin ylläpidetyt julkaisut voivat käyttää niitä. Katso OJS:n ohjeista tietoja siitä, kuinka uusille kielille lisätään tuki."
 
-msgid "admin.auth.ojs"
-msgstr "OJS:n käyttäjätietokanta"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Ota käyttäjäprofiilin synkronointi käyttöön (jos tämä todentamislisäosa tukee sitä). Käyttäjäprofiilin tiedot päivittyvät automaattisesti etälähteestä käyttäjän kirjautuessa sisään. OJS:ssä profiiliin tehtävät muutokset (myös salasanan vaihto) päivittyvät automaattisesti etälähteeseen. Jos tämä valinta ei ole käytössä, OJS:n profiilitiedot pidetään erillään etälähteen profiilitiedoista."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Ota käyttäjän salasanan muuttaminen käyttöön (jos tämä todentamislisäosa tukee sitä). Tämä valinta sallii käyttäjien muuttaa salasanaansa OJS:ssä ja käyttää OJS:n \"Unohditko salasanasi\"-ominaisuutta salasanan palauttamiseksi/vaihtamiseksi. Nämä toiminnot eivät ole käytettävissä tämän todentamislähteen yhteydessä, mikäli tämä valinta ei ole käytössä."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Ota käyttäjän luonti käyttöön (jos tämä todentamislisäosa tukee sitä). Tällä todentamislähteellä OJS:ssä luodut käyttäjät lisätään automaattisesti etätodentamislähteeseen, mikäli niitä ei siellä vielä ole. Lisäksi, jos tämä lähde on oletusarvoinen todentamislähde, rekisteröitymisen yhteydessä luodut OJS-käyttäjätilit lisätään myös etätodentamislähteeseen."
-
 msgid "admin.systemVersion"
 msgstr "OJS-versio"
 

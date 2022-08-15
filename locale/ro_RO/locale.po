@@ -855,17 +855,6 @@ msgstr ""
 "<tt>config.inc.php</tt> într-un editor de text adecvat și înlocuiți "
 "conținutul său cu conținutul câmpului de text de mai jos.</p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Specificarea unei surse de autentificare implicită, alta decât OJS, are "
-"următoarele efecte:</p>\n"
-"<ul>\n"
-"\t<li>Dacă un utilizator încearcă să înregistreze un cont nou pe acest site "
-"cu un nume de utilizator care există pe sursa de autentificare (dar nu în "
-"baza de date OJS), încercarea de înregistrare este permisă numai dacă parola "
-"furnizată este valabilă pentru contul de utilizator.</li>\n"
-"</ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "documente similare"
 

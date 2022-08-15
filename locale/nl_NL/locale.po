@@ -710,13 +710,6 @@ msgstr "Aflopend"
 msgid "search.results.similarDocuments"
 msgstr "gelijkaardige documenten"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Een standaard authenticatiesysteem anders dan OJS heeft de volgende effecten:</p>\n"
-"<ul>\n"
-"\t<li>Wanneer een gebruiker een nieuw account probeert te registreren  met een gebruikersnaam die al bestaat in het externe systeem (maar niet in OJS), zal de registratie alleen lukken als het wachtwoord geldig is voor dat account.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>Attentie!</h4>\n"

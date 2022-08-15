@@ -39,18 +39,6 @@ msgstr "Deseja realmente remover este idioma? A execução pode afetar revistas 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Selecione idiomas adicionais para uso no sistema. Os idiomas devem ser instalados antes que possam ser utilizados pelas revistas hospedadas. Veja a documentação para informações sobre como incluir novos idiomas no sistema."
 
-msgid "admin.auth.ojs"
-msgstr "Base de dados de usuários"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Habilitar sincronização de perfil de usuários (caso suportado pelo plugin de autenticação!). Os perfis dos usuários serão atualizados com o conteúdo da fonte remota assim que o usuário acessar o sistema, e alterações no perfil (incluindo alteração de senha) realizadas dentro do sistema atualizarão a fonte remota. Caso esta opção não esteja habilitada, os perfis no sistema serão mantidos separados da fonte remota."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Habilitar alteração de senha de usuário (caso suportado pelo plugin de autenticação!). Habilitar esta opção permite ao usuário modificar a senha do sistema e fazer uso da opção de recuperação de senha para criar uma nova senha. Estas funcionalidades não estarão disponíveis aos usuários com esta fonte de autenticação, caso esta opção não seja habilitada."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Habilitar criação de usuários (caso suportado pelo plugin de autenticação!). Usuários criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, usuários criados através do cadastro de usuários também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão."
-
 msgid "admin.systemVersion"
 msgstr "Versão do OJS"
 

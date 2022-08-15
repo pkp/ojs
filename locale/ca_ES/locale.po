@@ -618,9 +618,6 @@ msgstr "Comentaris per a aquest article"
 msgid "comments.authenticated"
 msgstr "per <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr "<p>Si indiqueu una font d’autenticació predeterminada que no sigui l’OJS es pot produir l’efecte següent:</p> <ul> <li>Si un usuari/ària intenta registrar un compte nou en aquest lloc web amb un nom d’usuari/ària que ja existeixi a la font d’autenticació (però no a la base de dades de l’OJS), l’intent de registre només s’admetrà si la contrasenya indicada és vàlida per a aquest compte d’usuari/ària.</li> </ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr "<h4>AVÍS</h4> <p>El sistema no ha pogut sobreescriure automàticament el fitxer de configuració. Per aplicar els canvis a la configuració heu d’obrir el fitxer <tt>config.inc.php</tt> en un editor de textos adequat i reemplaçar-ne el contingut amb el contingut del camp de text que es mostra a continuació.</p>"
 

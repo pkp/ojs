@@ -55,18 +55,6 @@ msgstr ""
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Sélectionner toute langue supplémentaire pour la prise en charge sur ce système. Les langues doivent être installées avant qu'elles ne puissent être utilisées par les revues hébergées. Voir la documentation d'OJS pour plus de renseignements sur la prise en charge de nouvelles langues."
 
-msgid "admin.auth.ojs"
-msgstr "Base de données utilisateur d'OJS"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Activer la synchronisation du profil de l'utilisateur-trice (si prise en charge par ce plugiciel d'authentification). Les informations du profil de l'utilisateur-trice sont automatiquement mises à jour depuis la source distante quand un-e utilisateur-trice se connecte, et les modifications au profil (y compris le mot de passe) effectuées dans OJS sont automatiquement mises à jour sur la source distante. Si cette option n'est pas activée, les informations du profil OJS vont rester séparées de celles du profil sur la source distante."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Permettre la modification du mot de passe de l'utilisateur-trice (si prise en charge par ce plugiciel d'authentification). Activer cette option permettra aux utilisateurs-trices de modifier leurs mot de passe OJS et d'utiliser la fonction « mot de passe oublié » pour réinitialiser un mot de passe oublié. Ces fonctions ne seront pas disponibles pour les utilisateurs-trices utilisant une source d'authentification où cette option n'est pas activée."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Permettre la création d'utilisateurs-trices (si supporté par ce plugiciel d'authentification). Les utilisateurs-trices créés-es avec OJS à l'aide de cette source d'authentification vont automatiquement être ajoutés-es à la source d'authentification distante s'ils n'existent pas déjà. De plus, si cette source est la source d'authentification par défaut, les comptes OJS créés par l'intermédiaire d'une inscription d'utilisateur-trice seront également ajoutés à la source distante d'authentification."
-
 msgid "admin.systemVersion"
 msgstr "Version de OJS"
 

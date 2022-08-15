@@ -36,18 +36,6 @@ msgstr "Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Můž
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Vyberte další jazykové lokalizace, pro které má být do systému nainstalována podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci k OJS."
 
-msgid "admin.auth.ojs"
-msgstr "Databáze OJS uživatelů"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Umožnit synchronizaci uživatelských profilů (pokud je podporována tímto ověřovacím pluginem). Informace v profilu uživatele budou automaticky aktualizovány ze vzdáleného zdroje, jakmile se uživatel přihlásí a změní se jeho profil (včetně změn hesla) v rámci OJS. Pokud není tato možnost povolena, informace v OJS profilu budou uchovávány odděleně od informací vzdáleného zdroje."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Umožnit změnu hesla uživatele (pokud je podporována tímto ověřovacím pluginem). Povolení této možnosti umožní uživatelům změnit své heslo v rámci OJS a využít funkci \"ztracené heslo\" pro obnovení zapomenutého hesla. Tyto funkce nebudou dostupné uživatelům s tímto zdrojem ověření pokud není povolena tato možnost."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Umožnit vytvoření uživatele (pokud je podporováno tímto ověřovacím pluginem). Uživatelé vytvoření v rámci OJS tímto zdrojem ověření budou, pokud již neexistují, automaticky přidáni do vzdáleného zdroje ověření. Navíc, pokud je tento zdroj výchozím zdrojem ověření, OJS účty vytvořené v průběhu registrace uživatele budou přidány do vzdáleného zdroje ověření."
-
 msgid "admin.systemVersion"
 msgstr "Verze OJS"
 

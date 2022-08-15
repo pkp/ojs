@@ -31,18 +31,6 @@ msgstr "Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako
 msgid "admin.languages.confirmUninstall"
 msgstr "Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan."
 
-msgid "admin.auth.ojs"
-msgstr "OJS erabiltzaileen datu-basea"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Gaitu erabiltzaile-profilen sinkronizazioa (autentifikazioko plugin honek onartzen badu). Erabiltzaile-profilen informazioa automatikoki eguneratuko da urruneko iturburutik erabiltzaileak saioa hasten duenean, eta OJSn egiten diren profil-aldaketak (pasahitz-aldaketak barne) automatikoki eguneratuko dira urruneko iturburuan. Aukera hau ez bada gaitzen, OJS profil-informazioa eta urruneko iturburuko profil-informazioa aparte bereizita mantenduko dira."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Gaitu erabiltzailearen pasahitza aldatzea (autentifikazioko plugin honek onartzen badu). Aukera hau gaitzen bada, erabiltzaileek OJS barruan aldatu ahal izango dute pasahitza eta OJSren \"galdutako pasahitza\" eginbidea erabili ahal izango dute pasahitza ahazten zaienean. Aukera hau ez bada gaitzen, funtzio horiek ez dira erabilgarri egongo autentifikazio-iturburu hau daukaten erabiltzaileentzat."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Gaitu erabiltzaileak sortzea (autentifikazioko plugin honek onartzen badu). OJSn autentifikazio-iturburu honekin sortzen diren erabiltzaileak automatikoki gehituko dira urruneko autentifikazio-iturburuan, dagoeneko sortuta ez badaude. Gainera, iturburu hori autentifikazio-iturburu lehenetsia baldin bada, erabiltzaile-erregistratzearen bidez sortutako OJS kontuak ere gehituko dira urruneko autentifikazio-iturburuan."
-
 msgid "admin.systemVersion"
 msgstr "OJS bertsioa"
 

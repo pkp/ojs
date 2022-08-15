@@ -744,13 +744,6 @@ msgstr "Descending"
 msgid "search.results.similarDocuments"
 msgstr "similar documents"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Specifying a default authentication source other than OJS has the following effects:</p>\n"
-"<ul>\n"
-"\t<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>NOTE!</h4>\n"

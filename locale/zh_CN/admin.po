@@ -42,24 +42,6 @@ msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
 "安装额外的地区配置以在这个系统取得语言支持。地区配置必须先安装，系统托管的期刊才能使用该地区语言。请参考 OJS 文档获取关于增加语言支持的信息。"
 
-msgid "admin.auth.ojs"
-msgstr "OJS 用户数据库"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr ""
-"启用用户配置文件同步 (如果支持这种身份验证插件). 当用户登录时，其帐户信息将被自动从远程的数据源更新,并且在 OJS "
-"里帐户信息变化（包含密码改变）的时候，将更新到远程源. 如果这个选项没有激活，OJS 的帐户信息将与远程的源信息保持差异."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr ""
-"启用用户密码修改(如果支持这种身份验证插件). 启用此选项可以允许用户在 OJS 里修改其帐户密码，并且使用 OJS 的“丢失密码”来重置密码. "
-"如果该选项是不启用这些功能将无法使用此验证来源的用户."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr ""
-"启用用户创建（如果支持这种身份验证插件）。使用这个验证源在 OJS 里创建用户，如果远程源里该用户不存在时，该新用户将被自动添加到远程源。 "
-"另外，如果这个源是默认认证源， 通过注册的OJS帐户也将被添加到远程源。"
-
 msgid "admin.systemVersion"
 msgstr "OJS 版本"
 

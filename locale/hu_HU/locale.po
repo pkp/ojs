@@ -696,13 +696,6 @@ msgstr "Csökkenő sorrend"
 msgid "search.results.similarDocuments"
 msgstr "hasonló dokumentumok"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Az alapértelmezett hitelesítési forrás eltér az OJS-től a következőkben:</p>\n"
-"<ul>\n"
-"\t<li>Ha a felhasználó megpróbál regisztrálni egy új fiókot ezen az oldalon egy olyan felhasználói névvel, ami már létezik más hitelesítési forrásban (nem az OJS adatbázisban), a regisztráció csak akkor lesz elfogadott, ha a fiókhoz tartozó jelszót adja meg.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>MEGJEGYZÉS!</h4>\n"

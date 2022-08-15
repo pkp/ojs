@@ -662,15 +662,6 @@ msgstr ""
 "seu contido polo que se encontra no campo de texto que se mostra a "
 "continuación.</p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Establecer como fonte de autenticación predeterminada outra diferente de "
-"OJS producirá o efecto seguinte:</p> <ul> <li>Se un usuario/a intenta "
-"rexistrar unha conta nova neste sitio web cun nome de usuario/a xa existente "
-"na fonte de autenticación (pero non na base de datos de OJS), o intento de "
-"rexistro só se permitirá se o contrasinal proporcionado é válido para esta "
-"conta de usuario/a.</li> </ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "documentos similares"
 

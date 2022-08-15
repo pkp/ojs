@@ -41,18 +41,6 @@ msgstr "Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wolle
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation."
 
-msgid "admin.auth.ojs"
-msgstr "OJS-Benutzer/innen-Datenbank"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Die Synchronisierung der Benutzer/innen-Profile ermöglichen, falls diese Funktion durch dieses Programm (authentication plugin) unterstützt wird. Benutzer/innen-Profile werden automatisch in der Quelldatei aktualisiert, wenn ein/e Benutzer/in sich einloggt. Profiländerungen (einschließlich Passwortänderungen) innerhalb von OJS bewirken automatisch die Aktualisierung der Quelldatei. Ist diese Option nicht zugelassen, bleiben die Informationen im OJS Benutzer/innen-Profil von den Informationen des Profils in der Quelldatei getrennt."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Die Passwortänderung durch die Benutzer/innen ermöglichen, falls diese Funktion durch dieses Programm (authentication plugin) unterstützt wird. Dadurch können die Benutzer/innen ihre Passwörter innerhalb des OJS ändern und die OJS-Funktion \"Passwort verloren?\" zur Wiederherstellung eines vergessenen Passwortes verwenden. Diese Funktionen stehen den Benutzer/innen dieser Authentifizierungsquelle nur dann zur Verfügung, wenn die Option aktiviert ist."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Die Einrichtung eines Benutzer/innen-Profils ermöglichen, falls diese Funktion durch dieses Programm (authentication plugin) unterstützt wird. Benutzer/innen-Profile, die im OJS mit Hilfe dieser Authentifizierungsquelle eingerichtet werden, werden automatisch auch der Quelldatei hinzugefügt, wenn sie dort nicht schon eingerichtet sind. Sollte diese Quelldatei die Standardauthentifizierungsquelle sein, werden auch die OJS-Konten, die bei der Registrierung von Benutzer/innen entstehen, der Authentifizierungsquelle hinzugefügt."
-
 msgid "admin.systemVersion"
 msgstr "OJS-Version"
 

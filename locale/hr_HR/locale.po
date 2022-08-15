@@ -438,13 +438,6 @@ msgstr "Komentari za ovaj članak"
 msgid "comments.authenticated"
 msgstr "od <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultira sljedećim:</p>\n"
-"<ul>\n"
-"\t<li>Ako korisnik pokuša registrirati novi korisnički račun na ovoj stranici s korisničkim imenom koje postoji na izvoru autentifikacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je isporučena lozinka valjana za taj korisnički račun.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>OBAVIJEST!</h4>\n"

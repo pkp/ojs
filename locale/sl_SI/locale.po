@@ -702,13 +702,6 @@ msgstr "Padajoče"
 msgid "search.results.similarDocuments"
 msgstr "podobni dokumenti"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Določitev privzetega vira avtentikacije drugega kot OJS ima naslednji učinek:</p>\n"
-"<ul>\n"
-"\t<li>Če želi uporabnik registrirati nov uporabniški račun na tem spletišču z imenom, ki obstaja na viruu avtentikacije (a ne tudi v OJS bazi podatkov), bo registracija dovoljena le, če bo geslo veljavno za ta uporabniški račun.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>OPOZORILO!</h4>\n"

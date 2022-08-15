@@ -447,13 +447,6 @@ msgstr ""
 "<br /><br />\n"
 "Aktivirani OAI protokol može biti isključen na nivou čitavog sajta promenom sistemske konfiguracije OJS-a. Buduće verzije OJS-a omogući će da se OAI sudelovanje u OAI protokolu može uključiti ili isključiti individualno za svaki časopis koji se nalazi na sajtu."
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultuje sledećim:</p>\n"
-"<ul>\n"
-" <li>Ako korisnik pokuša registrovati novi korisnički nalog na ovom sajtu sa korisničkim imenom koje postoji na izvoru autentifikacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je priložena lozinka ispravna za taj korisnički nalog.</li>\n"
-"</ul>"
-
 #, fuzzy
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""

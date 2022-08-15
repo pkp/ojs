@@ -51,18 +51,6 @@ msgstr ""
 "documentação do OJS para informações sobre como adicionar novos idiomas no "
 "sistema."
 
-msgid "admin.auth.ojs"
-msgstr "Base de Dados de Utilizadores do OJS"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Activar sincronização de perfil de utilizadores (caso suportado pelo plugin de autenticação!). Os perfis dos utilizadores serão actualizados com o conteúdo da fonte remota assim que o utilizador aceda ao sistema e alterações no perfil (incluindo alteração de senha) realizadas dentro do sistema actualizarão a fonte remota. Caso esta opção não esteja activada, os perfis no sistema serão mantidos separados da fonte remota."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Activar alteração de senha de utilizador (caso suportado pelo plugin de autenticação!). Activar esta opção permite ao utilizador modificar a senha do sistema e fazer uso da opção de recuperação de senha para criar uma nova senha. Estas funcionalidades não estarão disponíveis aos utilizadores com esta fonte de autenticação, caso não seja activada."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Activar criação de utilizadores (caso suportado pelo plugin de autenticação!). Utilizadores criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, utilizadores criados através do registo de utilizadores também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão."
-
 msgid "admin.systemVersion"
 msgstr "Versão do OJS"
 

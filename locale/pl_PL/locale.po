@@ -604,13 +604,6 @@ msgstr "Uwagi do artykułu"
 msgid "comments.authenticated"
 msgstr "przez <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Podaj inne źródło uwierzytelniania niż OJS, uzyskując następujący wynik:</p>\n"
-"<ul>\n"
-"\t<li>Jeżeli użytkownik usiłuje utworzyć nowe konto w systemie używając nazwy użytkownika, która już istnieje w źródle uwierzytelniania (poza bazą OJS), rejestracja jest dozwolona tylko w przypadku podania poprawnego hasła dla nazwy użytkownika.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>UWAGA!</h4>\n"

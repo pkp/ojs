@@ -53,18 +53,6 @@ msgstr "Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tij
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning voor nieuwe talen."
 
-msgid "admin.auth.ojs"
-msgstr "OJS gebruikersdatabank"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Schakel synchronisatie van gebruikersprofielen in (indien ondersteund door deze authenticatie plug-in). Gebruikersinformatie wordt automatisch bijgewerkt uit het externe systeem als de gebruiker inlogt. Wijzigingen in de gebruikersgegevens (waaronder het wachtwoord) in OJS worden automatisch aangepast in het externe systeem. Als deze optie uitgeschakeld is, blijft de gebruikersinformatie in OJS gescheiden van die in het externe systeem."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Sta wachtwoordmodificatie toe (indien ondersteund door deze authenticatie plug-in). Het inschakelen van deze optie geeft gebruikers de mogelijkheid hun OJS wachtwoord te veranderen en gebruik te maken van de \"vergeten wachtwoord\" voorziening om een vergeten wachtwoord opnieuw in te stellen. Als deze optie uitgeschakeld is, is de voorziening niet beschikbaar voor de gebruikers van dit authenticatiesysteem."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Sta het aanmaken van gebruikers toe (indien ondersteund door deze authenticatie plug-in). Gebruikers die in OJS aangemaakt worden, worden automatisch toegevoegd in het externe systeem als ze daar nog niet bestaan. Als dit het standaard authenticatiesysteem is worden de accounts die in OJS aangemaakt worden door gebruikersregistratie ook aan het externe systeem toegevoegd."
-
 msgid "admin.systemVersion"
 msgstr "OJS versie"
 

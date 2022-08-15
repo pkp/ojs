@@ -618,13 +618,6 @@ msgstr "Komentáře k tomuto článku"
 msgid "comments.authenticated"
 msgstr "<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Specifikování jiného výchozího zdroje ověření než OJS má následující efekt:</p>\n"
-"<ul>\n"
-"\t<li>Pokud se uživatel pokusí zaregistrovat nový účet na této stránce s uživatelským jménem, které existuje ve zdroji ověření (ale ne v OJS databázi), pokus o registraci je povolen pouze tehdy, pokud je zadané heslo platné pro tento uživatelský účet.</li>\n"
-"</ul>"
-
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
 "<h4>POZNÁMKA!</h4>\n"

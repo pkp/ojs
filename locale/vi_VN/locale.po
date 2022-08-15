@@ -709,16 +709,6 @@ msgstr ""
 "thảo văn bản phù hợp và thay thế nội dung của nó bằng nội dung của trường "
 "văn bản bên dưới.</p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Chỉ định nguồn xác thực mặc định khác với OJS có các hiệu ứng sau:</p>\n"
-"<ul>\n"
-"\t<li>Nếu người dùng cố gắng đăng ký tài khoản mới với trang web này với tên "
-"người dùng tồn tại trên nguồn xác thực (nhưng không phải trong cơ sở dữ liệu "
-"OJS), nỗ lực đăng ký chỉ được phép nếu mật khẩu được cung cấp hợp lệ cho tài "
-"khoản người dùng đó.</li>\n"
-"</ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "tài liệu tương tự"
 

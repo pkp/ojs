@@ -42,18 +42,6 @@ msgstr "Da li ste sigurni da želite da obrišete lokalizaciju? Ovo može uticat
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Odaberite dodatne lokalizacije koje želite da instalirate.Pogledajte OJS dokumentaciju za više informacija kako da obezbedite podršku za nove jezike."
 
-msgid "admin.auth.ojs"
-msgstr "OJS korisnička baza podataka"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Uključi sinhronizaciju korisničkih profila (ukoliko je podržano dodatkom za autentifikaciju). Informacije o korisničkim profilima biće automatski sinhronizovane sa udaljenim izvorom kada se korisnik prijavi, a profil promeni."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Omogući modifikacije lozinki korisnika (ukoliko je poržano dodatkom za autentifikaciju). Uključivanjem ovog dodatka korisnici će moći da modifikuu svoje lozinke i koriste servis \"izgubljena lozinka\"."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Uključi kreiranje korisnika (ukoliko je podržano dodatkom za autentifikaciju). Korisnici koji su kreirani pomoću ovog izvora autentifikacije automatski će se kreirati i na udaljenom serveru."
-
 msgid "admin.systemVersion"
 msgstr "OJS verzija"
 

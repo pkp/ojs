@@ -1161,17 +1161,6 @@ msgstr ""
 "zmien konfigurácie musíte otvoriť<tt>config.inc.php</tt> vo vhodnom textovom "
 "editore a nahradiť jeho obsah obsahom textového poľa nižšie. </p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Špecifikovanie iného východiskového zdroja overení než OJS má nasledujúci "
-"efekt:</p>\n"
-"<ul>\n"
-"\t<li>Ak sa užívateľ pokúsi zaregistrovať nový účet na tejto stránke s "
-"používateľským menom, ktoré existuje v zdroji overenie (ale nie v OJS "
-"databáze), pokus o registráciu je povolený len vtedy, ak je zadané heslo "
-"platné pre tento užívateľský účet.</li>\n"
-"</ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "podobné dokumenty"
 

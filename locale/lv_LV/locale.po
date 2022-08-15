@@ -1387,17 +1387,6 @@ msgstr ""
 "piemērotā teksta redaktorā un jāaizstāj saturs ar turpmāk norādītā teksta "
 "lauka saturu.</p>"
 
-msgid "admin.auth.defaultSourceDescription"
-msgstr ""
-"<p>Norādot citu noklusējuma autentifikācijas avotu, kas nav OJS, ir šādas "
-"sekas:</p>\n"
-"<ul>\n"
-"\t<li>Ja lietotājs mēģina reģistrēt jaunu kontu šajā vietnē ar "
-"lietotājvārdu, kas pastāv autentifikācijas avotā (bet nav OJS datu bāzē), "
-"reģistrācijas mēģinājums ir atļauts tikai tad, ja norādītā parole ir derīga "
-"šim lietotāja kontam</li>\n"
-"</ul>"
-
 msgid "search.results.similarDocuments"
 msgstr "līdzīgi dokumenti"
 

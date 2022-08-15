@@ -42,18 +42,6 @@ msgstr "Är du säker på att du vill avinstallera språket/regionen? Det kan ko
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr "Välj ytterligare språk/regioner som ska stödjas i systemet. Språken/regionerna måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk/regioner."
 
-msgid "admin.auth.ojs"
-msgstr "OJS Användardatabas"
-
-msgid "admin.auth.enableSyncProfiles"
-msgstr "Aktivera användarprofilsynkronisering (om detta stöds av det här pluginet för autentisering). Information om användarprofilen kommer uppdateras automatiskt från den externa källan när en användare loggar in, även profiländringar (inklusive lösenordsändringar) gjorda i OJS kommer automatiskt uppdateras på den externa källan. Om den här valmöjligheten inte är aktiverad så kommer OJS-profilinformation skötas separat från den externa källans profilinformation."
-
-msgid "admin.auth.enableSyncPasswords"
-msgstr "Aktivera ändring av lösenord (om detta stöds av det här pluginet för autentisering). Aktivering av den här valmöjligheten möjliggör för användaren att ändra sitt lösenord inifrån OJS och användningen av OJS \"glömt lösenord\"-funktion för att skaffa ett nytt lösenord. Dessa funktioner kommer inte vara tillgängliga för användare hos den här autentiseringskällan, om valmöjligheten inte är aktiverad."
-
-msgid "admin.auth.enableCreateUsers"
-msgstr "Aktivera användarskapande (om detta stöds av det här pluginet för autentisering). Användare skapade inom OJS på den här autentiseringskällan kommer automatiskt att läggas till den externa autentiseringskälla, om de inte redan finns där. Om den här källan är förvald autentiseringskälla kommer OJS-konton skapade genom användarregistrering att läggas till den externa autentiseringskällan."
-
 msgid "admin.systemVersion"
 msgstr "OJS-version"
 
