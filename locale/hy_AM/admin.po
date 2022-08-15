@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-08-03 14:20+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "hy_AM/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
 msgstr "Կայքում թողարկվող ամսագրեր"
@@ -241,3 +241,12 @@ msgstr ""
 "\t\tՈրոնման արդյունքները. Խնդրում ենք որպես կանխադրված ընտրել կազմաձևված "
 "չափորոշիչներից մեկը:\n"
 "\t"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Թողարկման շարվածքի ID-ն ամբողջ թիվ չէ:"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Թողարկման ID-ն ամբողջ թիվ չէ:"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Թողարկման ID-ն չի համընկնում իր ասոցիացված ID-ի հետ:"

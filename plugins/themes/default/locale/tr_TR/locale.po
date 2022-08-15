@@ -1,10 +1,11 @@
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
-"PO-Revision-Date: 2020-07-21 22:47+0000\n"
-"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"PO-Revision-Date: 2022-08-04 12:41+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/tr_TR/>\n"
 "Language: tr_TR\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Varsayılan Tema"
@@ -70,3 +71,24 @@ msgstr "Üst Kısım Arkaplan Resmi"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Ana sayfada dergi özetini göster."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Kullanım istatistikleri gösterim ayarları"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Makale kullanıcı istatistikleri grafiğini okurlara gösterme."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Kullanım istatistiklerini göstermek için sütun grafiği kullan."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Kullanım istatistiklerini göstermek için çizgi grafiği kullan."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Oca Şub Mar Nis May Haz Tem Ağu Eyl Eki Kas Ara"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "İndirmeler"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "İndirme verisi henüz mevcut değil."

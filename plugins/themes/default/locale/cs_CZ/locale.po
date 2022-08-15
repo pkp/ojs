@@ -1,9 +1,10 @@
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:17+00:00\n"
-"PO-Revision-Date: 2020-08-03 15:15+0000\n"
+"PO-Revision-Date: 2022-08-08 09:15+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/cs_CZ/>\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Výchozí téma"
@@ -66,3 +67,24 @@ msgstr "Obrázek na pozadí záhlaví"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Ukázat na úvodní stránce časopisu souhrnné informace o něm."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Možnosti zobrazení statistik využívání"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Nezobrazovat statistiky využití příspěvku čtenářům."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Pro zobrazení statistik používání použijte sloupcový graf."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Pro zobrazení statistik používání použijte čarový graf."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "led úno bře dub kvě čvn čvc srp zář říj lis pro"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Stažení"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Údaje o počtu stažení nejsou zatím k dispozici."

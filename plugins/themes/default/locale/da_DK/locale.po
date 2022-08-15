@@ -1,18 +1,19 @@
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2020-02-09 18:35+0000\n"
-"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"PO-Revision-Date: 2022-08-05 17:52+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/da/>\n"
+"themes-default/da_DK/>\n"
 "Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Standard layout-tema"
@@ -70,3 +71,24 @@ msgstr "Sidehovedets baggrundsbillede"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Vis tidsskriftsresuméet på hjemmesiden."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Visningsmuligheder for brugsstatistik"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Fremvis ikke diagram over indsendelsesstatistik for læseren."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Anvend søjlediagram til visning af brugsstatistik."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Anvend kurvediagram til visning af brugsstatistik."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Maj Jun Jul Aug Sep Okt Nov Dec"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Download-data er endnu ikke tilgængelige."

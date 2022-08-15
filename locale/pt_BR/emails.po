@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-04-24 11:36+0000\n"
+"PO-Revision-Date: 2022-08-08 13:46+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmação de Redefinição de Senha"
@@ -65,10 +65,14 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
+msgid "emails.userRegister.description"
+msgstr ""
+"Esta mensagem é enviada aos usuários recém-cadastrados no sistema, para dar-"
+"lhes as boas-vindas e deixar registrado seu login e senha."
+
 msgid "emails.userValidateContext.subject"
 msgstr "Valide seu Cadastro"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Prezado(a) {$recipientName}<br />\n"
@@ -108,16 +112,22 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nova Edição Publicada: {$issueIdentification}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Caro leitor, </p><p>{$contextName} tem o prazer de anunciar a publicação "
-"de nosso último número:  <a href=\"{$contextUrl}\" target=\"_blank\""
+"de nosso último número: <a href=\"{$contextUrl}\" target=\"_blank\""
 "><strong>{$issueIdentification}</strong></a>. Convidamos você a visitar o "
 "índice e ler os artigos e itens de interesse. Muito obrigado aos nossos "
 "autores, avaliadores e editores por suas valiosas contribuições para este "
 "trabalho, e aos nossos leitores por seu interesse "
 "contínuo.</p><p>{$contextUrl}</p><p>Atenciosamente,</p>{$signature}"
+
+msgid "emails.issuePublishNotify.description"
+msgstr ""
+"Esta mensagem é enviada para leitores cadastrados através do link "
+"\"notificação de usuários\" na página do Editor. Ela avisa os leitores a "
+"respeito de uma nova edição e os convida a acessar o periódico através da "
+"URL informada."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Solicitação para Arquivamento de {$contextName}"
@@ -189,7 +199,6 @@ msgstr ""
 "incluir a revista no seu repositório. O e-mail oferece informações iniciais "
 "e sobre como participar na iniciativa LOCKSS e formas de se envolver."
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Confirmação de submissão"
 
@@ -205,9 +214,14 @@ msgstr ""
 "este periódico para publicar o seu trabalho.</p><br "
 "/><p>Atenciosamente,</p>{$contextSignature}"
 
-#, fuzzy
+msgid "emails.submissionAckNotUser.description"
+msgstr ""
+"Quando habilitada, esta mensagem é enviado automaticamente para os autores "
+"informados durante o processo de submissão, que não seja o autor que está "
+"submetendo o manuscrito."
+
 msgid "emails.editorAssign.subject"
-msgstr "Você foi designado como editor em uma submissão a {$contextName}"
+msgstr "Você foi designado como editor em uma submissão para {$contextName}"
 
 msgid "emails.editorAssign.body"
 msgstr ""
@@ -219,6 +233,14 @@ msgstr ""
 "avaliadores clicando em \"Adicionar Avaliador\".</p><p>Se a submissão não "
 "for apropriada para este periódico, recuse a submissão.</p><p>Agradecemos "
 "antecipadamente.</p> <p>Atenciosamente,</p>{$signature}"
+
+msgid "emails.editorAssign.description"
+msgstr ""
+"Mensagem notifica o Editor de Seção que uma nova tarefa de acompanhamento de "
+"submissão lhe foi designada pelo Editor-Gerente. Este modelo está disponível "
+"para seleção quando um editor é atribuído a uma submissão na área "
+"Participantes. Este modelo deve ser usado quando o editor de seção tem a "
+"capacidade de registrar decisões editoriais."
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
@@ -428,10 +450,9 @@ msgstr ""
 "seu <a href=\"{$authorSubmissionUrl}\">painel de submissão</a>.</p><p "
 ">Atenciosamente,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
-"A submissão {$submissionId} está pronto para Editoração em {$contextAcronym}"
+"A submissão {$submissionId} está pronta para Editoração em {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
