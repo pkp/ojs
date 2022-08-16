@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-08-05 17:52+0000\n"
+"PO-Revision-Date: 2022-08-17 00:37+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -2153,7 +2153,7 @@ msgid "doi.manager.submissionDois"
 msgstr "Artikel DOI'er"
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "Når kopiredigeringstrinnet nås"
+msgstr "Når manuskriptredigeringstrinnet nås"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
@@ -2233,3 +2233,53 @@ msgstr "Visninger af numres publiceringsversion"
 
 msgid "manager.institutions.noContext"
 msgstr "Denne institutions tidsskrift kunne ikke findes."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "tidsskriftets initialer"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Navnet på institutionen"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domæne"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abonnementet er udløbet"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abonnement udløber snart"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Meddel om abonnement"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abonnement udløb sidste"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Køb individuelt abonnement"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Køb institutionsabonnement"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Forny individuelt abonnement"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Forny institutionsabonnement"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Meddel om Open Access"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Postadressen på institutionen"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Meddel om publiceret nummer"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP ranges for abonnements-autentificering"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Denne e-mail sendes automatisk til registrerede brugere, når et nyt nummer "
+"publiceres."
