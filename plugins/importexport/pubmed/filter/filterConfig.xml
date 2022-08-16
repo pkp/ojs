@@ -24,7 +24,7 @@
 		<!-- PubMed article output -->
 		<filter
 			inGroup="article=>pubmed-xml"
-			class="plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter"
+			class="APP\plugins\importexport\pubmed\filter\ArticlePubMedXmlFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>

@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/classes/form/DOAJSettingsForm.inc.php
+ * @file plugins/importexport/doaj/classes/form/DOAJSettingsForm.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJSettingsForm
- * @ingroup plugins_importexport_doaj
- *
  * @brief Form for journal managers to setup DOAJ plugin
  */
+
+namespace APP\plugins\importexport\doaj\classes\form;
 
 use PKP\form\Form;
 
@@ -33,13 +33,13 @@ class DOAJSettingsForm extends Form
         return $this->_contextId;
     }
 
-    /** @var CrossRefExportPlugin */
+    /** @var \PKP\plugins\Plugin */
     public $_plugin;
 
     /**
      * Get the plugin.
      *
-     * @return CrossRefExportPlugin
+     * @return \PKP\plugins\Plugin
      */
     public function _getPlugin()
     {
@@ -53,7 +53,7 @@ class DOAJSettingsForm extends Form
     /**
      * Constructor
      *
-     * @param DOAJExportPlugin $plugin
+     * @param \PKP\plugins\Plugin $plugin
      * @param int $contextId
      */
     public function __construct($plugin, $contextId)

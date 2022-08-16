@@ -42,7 +42,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.NativeXmlIssueFilter';
+        return (string) self::class;
     }
 
 
@@ -569,8 +569,4 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
             return isset($section) || isset($abbrevSection);
         }
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\NativeXmlIssueFilter', '\NativeXmlIssueFilter');
 }

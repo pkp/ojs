@@ -38,17 +38,17 @@
 		<!-- DataCite XML issue output -->
 		<filter
 			inGroup="issue=>datacite-xml"
-			class="plugins.generic.datacite.filter.DataciteXmlFilter"
+			class="APP\plugins\generic\datacite\filter\DataciteXmlFilter"
 			isTemplate="0" />
 		<!-- DataCite XML article output -->
 		<filter
 			inGroup="article=>datacite-xml"
-			class="plugins.generic.datacite.filter.DataciteXmlFilter"
+			class="APP\plugins\generic\datacite\filter\DataciteXmlFilter"
 			isTemplate="0" />
 		<!-- DataCite XML article output -->
 		<filter
 			inGroup="galley=>datacite-xml"
-			class="plugins.generic.datacite.filter.DataciteXmlFilter"
+			class="APP\plugins\generic\datacite\filter\DataciteXmlFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>

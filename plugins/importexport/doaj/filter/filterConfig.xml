@@ -31,12 +31,12 @@
 		<!-- DOAJ XML article output -->
 		<filter
 			inGroup="article=>doaj-xml"
-			class="plugins.importexport.doaj.filter.DOAJXmlFilter"
+			class="APP\plugins\importexport\doaj\filter\DOAJXmlFilter"
 			isTemplate="0" />
 		<!-- DOAJ JSON article output -->
 		<filter
 			inGroup="article=>doaj-json"
-			class="plugins.importexport.doaj.filter.DOAJJsonFilter"
+			class="APP\plugins\importexport\doaj\filter\DOAJJsonFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>

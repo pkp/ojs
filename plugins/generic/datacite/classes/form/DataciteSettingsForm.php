@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/datacite/classes/form/DataciteSettingsForm.inc.php
+ * @file plugins/generic/datacite/classes/form/DataciteSettingsForm.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -13,6 +13,10 @@
  * @brief Form for journal managers to setup the DataCite plugin.
  */
 
+namespace APP\plugins\generic\datacite\classes\form;
+
+use APP\core\Application;
+use PKP\core\PKPApplication;
 use PKP\form\Form;
 use PKP\form\validation\FormValidator;
 use PKP\linkAction\LinkAction;
@@ -37,13 +41,13 @@ class DataciteSettingsForm extends Form
         return $this->_contextId;
     }
 
-    /** @var DataciteExportPlugin */
+    /** @var \APP\plugins\generic\datacite\DataciteExportPlugin */
     public $_plugin;
 
     /**
      * Get the plugin.
      *
-     * @return DataciteExportPlugin
+     * @return \APP\plugins\generic\datacite\DataciteExportPlugin
      */
     public function _getPlugin()
     {
@@ -56,7 +60,7 @@ class DataciteSettingsForm extends Form
     /**
      * Constructor
      *
-     * @param DataciteExportPlugin $plugin
+     * @param \APP\plugins\generic\datacite\DataciteExportPlugin $plugin
      * @param int $contextId
      */
     public function __construct($plugin, $contextId)

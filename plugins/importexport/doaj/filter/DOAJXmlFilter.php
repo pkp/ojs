@@ -1,19 +1,21 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/filter/DOAJXmlFilter.inc.php
+ * @file plugins/importexport/doaj/filter/DOAJXmlFilter.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJXmlFilter
- * @ingroup plugins_importexport_doaj
- *
  * @brief Class that converts an Article to a DOAJ XML document.
  */
 
+namespace APP\plugins\importexport\doaj\filter;
+
+use APP\core\Application;
 use APP\facades\Repo;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\i18n\LocaleConversion;
 
@@ -22,7 +24,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
     /**
      * Constructor
      *
-     * @param FilterGroup $filterGroup
+     * @param \PKP\filter\FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -38,7 +40,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
      */
     public function getClassName()
     {
-        return 'plugins.importexport.doaj.filter.DOAJXmlFilter';
+        return (string) self::class;
     }
 
     //
@@ -49,12 +51,12 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
      *
      * @param array $pubObjects Array of Submissions
      *
-     * @return DOMDocument
+     * @return \DOMDocument
      */
     public function &process(&$pubObjects)
     {
         // Create the XML document
-        $doc = new DOMDocument('1.0', 'utf-8');
+        $doc = new \DOMDocument('1.0', 'utf-8');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $deployment = $this->getDeployment();
@@ -212,9 +214,9 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
     /**
      * Create and return the root node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createRootNode($doc)
     {
@@ -228,12 +230,12 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
     /**
      * Generate the author node.
      *
-     * @param DOMDocument $doc
+     * @param \DOMDocument $doc
      * @param object $publication Article
      * @param object $author Author
      * @param array $affilList List of author affiliations
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
     public function createAuthorNode($doc, $publication, $author, $affilList)
     {
@@ -253,7 +255,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
      * Generate a list of affiliations among all authors of an article.
      *
      * @param object $authors Array of article authors
-     * @param Publication $publication
+     * @param \APP\publication\Publication $publication
      *
      * @return array
      */

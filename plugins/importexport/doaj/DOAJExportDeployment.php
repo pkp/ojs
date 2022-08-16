@@ -1,21 +1,18 @@
 <?php
-/**
- * @defgroup plugins_importexport_doaj DOAJ export plugin
- */
 
 /**
- * @file plugins/importexport/doaj/DOAJExportDeployment.inc.php
+ * @file plugins/importexport/doaj/DOAJExportDeployment.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportDeployment
- * @ingroup plugins_importexport_doaj
- *
  * @brief Base class configuring the DOAJ export process to an
  * application's specifics.
  */
+
+namespace APP\plugins\importexport\doaj;
 
 // XML attributes
 define('DOAJ_XMLNS_XSI', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -43,7 +40,7 @@ class DOAJExportDeployment
      * Constructor
      *
      * @param \PKP\context\Context $context
-     * @param PubObjectsPubIdExportPlugin $plugin
+     * @param \APP\plugins\importexport\doaj\DOAJExportPlugin $plugin
      */
     public function __construct($context, $plugin)
     {
@@ -100,7 +97,7 @@ class DOAJExportDeployment
     /**
      * Set the import/export context.
      *
-     * @param Context $context
+     * @param \PKP\context\Context $context
      */
     public function setContext($context)
     {
@@ -110,7 +107,7 @@ class DOAJExportDeployment
     /**
      * Get the import/export context.
      *
-     * @return Context
+     * @return \PKP\context\Context
      */
     public function getContext()
     {
@@ -120,7 +117,7 @@ class DOAJExportDeployment
     /**
      * Set the import/export plugin.
      *
-     * @param ImportExportPlugin $plugin
+     * @param \PKP\plugins\Plugin $plugin
      */
     public function setPlugin($plugin)
     {
@@ -130,7 +127,7 @@ class DOAJExportDeployment
     /**
      * Get the import/export plugin.
      *
-     * @return ImportExportPlugin
+     * @return \PKP\plugins\Plugin
      */
     public function getPlugin()
     {

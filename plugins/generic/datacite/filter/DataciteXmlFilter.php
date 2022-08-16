@@ -1,22 +1,25 @@
 <?php
 
 /**
- * @file plugins/generic/datacite/filter/DataciteXmlFilter.inc.php
+ * @file plugins/generic/datacite/filter/DataciteXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
- * @ingroup plugins_generic_datacite
- *
  * @brief Class that converts an Issue to a DataCite XML document.
  */
 
+namespace APP\plugins\generic\datacite\filter;
+
+use APP\core\Application;
+use APP\core\Services;
 use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\submission\Submission;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\galley\Galley;
@@ -53,14 +56,12 @@ define('DATACITE_DESCTYPE_SERIESINFO', 'SeriesInformation');
 define('DATACITE_DESCTYPE_TOC', 'TableOfContents');
 define('DATACITE_DESCTYPE_OTHER', 'Other');
 
-import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
-
-class DataciteXmlFilter extends NativeExportFilter
+class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
     /**
      * Constructor
      *
-     * @param FilterGroup $filterGroup
+     * @param \PKP\filter\FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -76,7 +77,7 @@ class DataciteXmlFilter extends NativeExportFilter
      */
     public function getClassName()
     {
-        return 'plugins.generic.datacite.filter.DataciteXmlFilter';
+        return (string) self::class;
     }
 
     //
@@ -271,10 +272,10 @@ class DataciteXmlFilter extends NativeExportFilter
      * Create creators node.
      *
      * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Publication $publication
-     * @param Galley $galley
-     * @param SubmissionFile $galleyFile
+     * @param \APP\issue\Issue $issue
+     * @param \APP\publication\Publication $publication
+     * @param \PKP\galley\Galley $galley
+     * @param \PKP\submissionFile\SubmissionFile $galleyFile
      * @param string $publisher
      * @param array $objectLocalePrecedence
      *
@@ -321,10 +322,10 @@ class DataciteXmlFilter extends NativeExportFilter
      * Create titles node.
      *
      * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Publication $publication
-     * @param Galley $galley
-     * @param SubmissionFile $galleyFile
+     * @param \APP\issue\Issue $issue
+     * @param \APP\publication\Publication $publication
+     * @param \PKP\galley\Galley $galley
+     * @param \PKP\submissionFile\SubmissionFile $galleyFile
      * @param array $objectLocalePrecedence
      *
      * @return \DOMElement

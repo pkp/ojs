@@ -25,10 +25,6 @@ class AuthorNativeXmlFilter extends \PKP\plugins\importexport\native\filter\PKPA
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.AuthorNativeXmlFilter';
+        return (string) self::class;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\AuthorNativeXmlFilter', '\AuthorNativeXmlFilter');
 }
