@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-08-09 09:59+0000\n"
+"PO-Revision-Date: 2022-08-17 00:37+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/emails/da_DK/"
 ">\n"
@@ -71,14 +71,12 @@ msgstr ""
 "Mvh. <br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Validér din konto"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
-"{$recipientName}<br />\n"
+"Kære {$recipientName}<br />\n"
 "<br />\n"
 "Du har oprettet en konto hos {$contextName}, men inden du kan benytte den, "
 "skal du validere din e-mail-konto. Det gør du ved blot at følge linket "
@@ -86,7 +84,7 @@ msgstr ""
 "<br />\n"
 "{$activateUrl}<br />\n"
 "<br />\n"
-"Tak. <br />\n"
+"Mvh. <br />\n"
 "{$signature}"
 
 msgid "emails.reviewerRegister.subject"
@@ -226,7 +224,6 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Denne e-mail underretter bedømmerne af et manuskript om, at bedømmelsesprocessen er fuldført. Den indeholder oplysninger om artiklen og om den vedtagne beslutning og takker bedømmerne for deres bidrag."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Du er blevet tilmeldt som redaktør på en indsendelse til {$contextName}"
 
@@ -241,7 +238,6 @@ msgstr ""
 "indsendelsen ikke passer til dette tidsskrift, så afvis indsendelsen.</"
 "p><p>Tak på forhånd.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Vil du kunne bedømme denne artikel for os?"
 
@@ -263,7 +259,6 @@ msgstr ""
 "bedømmelsesprocessen</p><p>Tak for din overvejelse af denne forespørgsel. "
 "Din hjælp er meget værdsat.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Forespørgsel om bedømmelse af artikel"
 
@@ -316,9 +311,8 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Påmindelse om at bedømmeren skal afslutte sin bedømmelse"
+msgstr "Påmindelse om at afslutte din bedømmelse"
 
 msgid "emails.reviewRemind.body"
 msgstr ""
@@ -332,9 +326,8 @@ msgstr ""
 "udsættelse af deadlinen. Jeg ser frem til at høre fra dig.</p><p>På forhånd "
 "tak og med venlig hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Påmindelse om at bedømmelse af manuskriptet bedes færdiggøres"
+msgstr "Påmindelse om at afslutte din bedømmelse"
 
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
@@ -348,7 +341,6 @@ msgstr ""
 "for en udsættelse af deadlinen. Jeg ser frem til at høre fra dig.</p><p>På "
 "forhånd tak og med venlig hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "Indsendelsen {$submissionId} er klar til produktion til {$contextAcronym}"
@@ -368,7 +360,6 @@ msgstr ""
 "spørgsmål, bedes du kontakte mig. Tak for dit bidrag til dette tidsskrift.</"
 "p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversion færdiggjort"
 
@@ -653,7 +644,6 @@ msgstr ""
 "kontakte mig via dit <a href=\"{$submissionUrl}\">indsendelses "
 "dashboard</a>.</p><p>Med venlig hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Køb af abonnement: Individuelt"
 
@@ -825,7 +815,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Indsendelsesbekræftelse"
 
@@ -857,7 +846,6 @@ msgstr ""
 "spørgsmål, er du velkommen til at kontakte mig.</p><p>Med venlig "
 "hilsen</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Kan du stadig bedømme noget for {$contextName}?"
 
@@ -926,8 +914,8 @@ msgstr ""
 "er velkommen til at inkludere den på din liste over publikationer. Vi "
 "anerkender det hårde arbejde, der ligger bag hver succesfuld indsendelse, og "
 "vi vil gerne lykønske dig med din indsats.</p>\n"
-"<p>Din indsendelse vil nu gennemgå kopiredigering og formatering for at "
-"forberede den til offentliggørelse. </p>\n"
+"<p>Din indsendelse vil nu gennemgå manuskriptredigering og formatering for "
+"at forberede den til offentliggørelse. </p>\n"
 "<p>Du vil snart modtage yderligere instruktioner.</p>\n"
 "<p>Hvis du har spørgsmål, bedes du kontakte mig fra dit <a href=\""
 "{$authorSubmissionUrl}\">indsendelseskontrolpanel</a>.</p>\n"
@@ -935,7 +923,7 @@ msgstr ""
 "<p>{$signatur}</p>\n"
 
 msgid "emails.editorDecisionSkipReview.subject"
-msgstr "Din indsendelse er blevet sendt til kopiredigering"
+msgstr "Din indsendelse er blevet sendt til manuskriptredigering"
 
 msgid "emails.editorDecisionBackToSubmission.body"
 msgstr ""
