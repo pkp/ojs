@@ -27,7 +27,7 @@ class NativeXmlArticleFilter extends \PKP\plugins\importexport\native\filter\Nat
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.NativeXmlArticleFilter';
+        return (string) self::class;
     }
 
     /**
@@ -57,8 +57,4 @@ class NativeXmlArticleFilter extends \PKP\plugins\importexport\native\filter\Nat
         $currentFilter = PKPImportExportFilter::getFilter('native-xml=>' . $importClass, $deployment);
         return $currentFilter;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\NativeXmlArticleFilter', '\NativeXmlArticleFilter');
 }

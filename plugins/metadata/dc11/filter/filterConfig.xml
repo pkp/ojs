@@ -24,7 +24,7 @@
 		<!-- DC 1.1 article adapters -->
 		<filter
 			inGroup="article=>dc11"
-			class="plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter"
+			class="APP\plugins\metadata\dc11\filter\Dc11SchemaArticleAdapter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>

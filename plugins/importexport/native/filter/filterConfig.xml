@@ -115,70 +115,70 @@
 		<!-- Native XML article output -->
 		<filter
 			inGroup="article=>native-xml"
-			class="plugins.importexport.native.filter.ArticleNativeXmlFilter"
+			class="APP\plugins\importexport\native\filter\ArticleNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML article input -->
 		<filter
 			inGroup="native-xml=>article"
-			class="plugins.importexport.native.filter.NativeXmlArticleFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlArticleFilter"
 			isTemplate="0" />
 		<!-- Native XML issue output -->
 		<filter
 			inGroup="issue=>native-xml"
-			class="plugins.importexport.native.filter.IssueNativeXmlFilter"
+			class="APP\plugins\importexport\native\filter\IssueNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML issue input -->
 		<filter
 			inGroup="native-xml=>issue"
-			class="plugins.importexport.native.filter.NativeXmlIssueFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlIssueFilter"
 			isTemplate="0" />
 		<!-- Native XML issue galley output -->
 		<filter
 			inGroup="issuegalley=>native-xml"
-			class="plugins.importexport.native.filter.IssueGalleyNativeXmlFilter"
+			class="APP\plugins\importexport\native\filter\IssueGalleyNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML issue galley input -->
 		<filter
 			inGroup="native-xml=>issuegalley"
-			class="plugins.importexport.native.filter.NativeXmlIssueGalleyFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlIssueGalleyFilter"
 			isTemplate="0" />
 		<!-- Native XML author output -->
 		<filter
 			inGroup="author=>native-xml"
-			class="plugins.importexport.native.filter.AuthorNativeXmlFilter"
+			class="APP\plugins\importexport\native\filter\AuthorNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML author input -->
 		<filter
 			inGroup="native-xml=>author"
-			class="plugins.importexport.native.filter.NativeXmlAuthorFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlAuthorFilter"
 			isTemplate="0" />
 		<!-- Native XML article file input -->
 		<filter
 			inGroup="native-xml=>SubmissionFile"
-			class="plugins.importexport.native.filter.NativeXmlArticleFileFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlArticleFileFilter"
 			isTemplate="0" />
 		<!-- Native XML submission file output -->
 		<filter
 			inGroup="SubmissionFile=>native-xml"
-			class="lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter"
+			class="PKP\plugins\importexport\native\filter\SubmissionFileNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML article galley output -->
 		<filter
 			inGroup="article-galley=>native-xml"
-			class="plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter"
+			class="APP\plugins\importexport\native\filter\ArticleGalleyNativeXmlFilter"
 			isTemplate="0" />
 		<!-- Native XML article galley input -->
 		<filter
 			inGroup="native-xml=>ArticleGalley"
-			class="plugins.importexport.native.filter.NativeXmlArticleGalleyFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlArticleGalleyFilter"
 			isTemplate="0" />
 		<filter
 			inGroup="publication=>native-xml"
-			class="plugins.importexport.native.filter.PublicationNativeXmlFilter"
+			class="APP\plugins\importexport\native\filter\PublicationNativeXmlFilter"
 			isTemplate="0" />
 		<filter
 			inGroup="native-xml=>Publication"
-			class="plugins.importexport.native.filter.NativeXmlPublicationFilter"
+			class="APP\plugins\importexport\native\filter\NativeXmlPublicationFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>

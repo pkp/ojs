@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.inc.php
+ * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
- * @ingroup plugins_importexport_pubmed
- *
  * @brief Class that converts a Article to a PubMed XML document.
  */
+
+namespace APP\plugins\importexport\pubmed\filter;
 
 use APP\author\Author;
 use APP\decision\Decision;
@@ -34,7 +34,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
      */
     public function getClassName()
     {
-        return 'plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter';
+        return (string) self::class;
     }
 
 
@@ -64,7 +64,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     public function &process(&$submissions)
     {
         // Create the XML document
-        $implementation = new DOMImplementation();
+        $implementation = new \DOMImplementation();
         $dtd = $implementation->createDocumentType('ArticleSet', '-//NLM//DTD PubMed 2.0//EN', 'http://www.ncbi.nlm.nih.gov/entrez/query/static/PubMed.dtd');
         $doc = $implementation->createDocument('', '', $dtd);
         $doc->preserveWhiteSpace = false;

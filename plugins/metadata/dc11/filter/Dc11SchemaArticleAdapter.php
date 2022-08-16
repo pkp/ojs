@@ -46,7 +46,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
      */
     public function getClassName()
     {
-        return 'plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter';
+        return (string) self::class;
     }
 
 
@@ -291,8 +291,4 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             }
         }
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\metadata\dc11\filter\Dc11SchemaArticleAdapter', '\Dc11SchemaArticleAdapter');
 }

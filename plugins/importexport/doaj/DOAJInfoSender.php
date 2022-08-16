@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/DOAJInfoSender.inc.php
+ * @file plugins/importexport/doaj/DOAJInfoSender.php
  *
  * Copyright (c) 2013-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJInfoSender
- * @ingroup plugins_importexport_doaj
- *
  * @brief Scheduled task to send deposits to DOAJ.
  */
 
+namespace APP\plugins\importexport\doaj;
+
+use APP\core\Application;
 use PKP\plugins\PluginRegistry;
 use PKP\scheduledTask\ScheduledTask;
 use PKP\scheduledTask\ScheduledTaskHelper;
@@ -100,7 +101,7 @@ class DOAJInfoSender extends ScheduledTask
      *
      * @param array $objects
      * @param string $filter
-     * @param Journal $journal
+     * @param \APP\journal\Journal $journal
      * @param string $objectsFileNamePart
      */
     public function _registerObjects($objects, $filter, $journal, $objectsFileNamePart)

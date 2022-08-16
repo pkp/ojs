@@ -1,18 +1,18 @@
 <?php
 
 /**
- * @file plugins/generic/datacite/Datacite.inc.php
+ * @file plugins/generic/datacite/DatacitePlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under The MIT License. For full terms see the file LICENSE.
  *
- * @package plugins.generic.crossRefPlugin
- * @class CrossRefPlugin
- *
- * Plugin to let managers deposit DOIs and metadata to Datacite
+ * @class Datacite
+ * @brief Plugin to let managers deposit DOIs and metadata to Datacite
  *
  */
+
+namespace APP\plugins\generic\datacite;
 
 use APP\core\Application;
 use APP\plugins\IDoiRegistrationAgency;
@@ -212,8 +212,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function isPluginConfigured(\PKP\context\Context $context): bool
     {
-        $this->import('classes.form.DataciteSettingsForm');
-        $form = new DataciteSettingsForm($this->_getExportPlugin(), $context->getId());
+        $form = new classes\form\DataciteSettingsForm($this->_getExportPlugin(), $context->getId());
         $configurationErrors = $this->_getConfigurationErrors($context, $form);
 
         if (!empty($configurationErrors)) {
@@ -312,8 +311,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             case 'settings':
                 $context = $request->getContext();
 
-                $this->import('classes.form.DataciteSettingsForm');
-                $form = new DataciteSettingsForm($this->_getExportPlugin(), $context->getId());
+                $form = new classes\form\DataciteSettingsForm($this->_getExportPlugin(), $context->getId());
                 $form->initData();
 
                 // Check for configuration errors

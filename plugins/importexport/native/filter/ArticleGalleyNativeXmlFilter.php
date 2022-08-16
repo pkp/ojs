@@ -27,7 +27,7 @@ class ArticleGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filt
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter';
+        return self::class;
     }
 
     //
@@ -65,8 +65,4 @@ class ArticleGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filt
         }
         return $galleyFiles;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\ArticleGalleyNativeXmlFilter', '\ArticleGalleyNativeXmlFilter');
 }

@@ -13,7 +13,11 @@
  * @brief Class that converts an Article to a DOAJ JSON string.
  */
 
+namespace APP\plugins\importexport\doaj\filter;
+
+use APP\core\Application;
 use APP\facades\Repo;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
@@ -22,7 +26,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * Constructor
      *
-     * @param FilterGroup $filterGroup
+     * @param \PKP\filter\FilterGroup $filterGroup
      */
     public function __construct($filterGroup)
     {
@@ -38,7 +42,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
      */
     public function getClassName()
     {
-        return 'plugins.importexport.doaj.filter.DOAJJsonFilter';
+        return (string) self::class;
     }
 
     //
@@ -47,9 +51,9 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * @see Filter::process()
      *
-     * @param Submission $pubObject
+     * @param \APP\submission\Submission $pubObject
      *
-     * @return JSON string
+     * @return string JSON
      */
     public function &process(&$pubObject)
     {

@@ -40,7 +40,7 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.IssueGalleyNativeXmlFilter';
+        return (string) self::class;
     }
 
 
@@ -157,8 +157,4 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
             $node->setAttribute('advice', 'update');
         }
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\IssueGalleyNativeXmlFilter', '\IssueGalleyNativeXmlFilter');
 }

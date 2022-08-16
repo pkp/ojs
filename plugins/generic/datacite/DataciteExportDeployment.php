@@ -1,21 +1,18 @@
 <?php
-/**
- * @defgroup plugins_generic_datacite DataCite export plugin
- */
 
 /**
- * @file plugins/generic/datacite/DataciteExportDeployment.inc.php
+ * @file plugins/generic/datacite/DataciteExportDeployment.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportDeployment
- * @ingroup plugins_generic_datacite
- *
  * @brief Base class configuring the datacite export process to an
  * application's specifics.
  */
+
+namespace APP\plugins\generic\datacite;
 
 // XML attributes
 define('DATACITE_XMLNS', 'http://datacite.org/schema/kernel-4');
@@ -34,7 +31,7 @@ class DataciteExportDeployment
     /**
      * Get the plugin cache
      *
-     * @return PubObjectCache
+     * @return \APP\plugins\PubObjectCache
      */
     public function getCache()
     {
@@ -44,8 +41,8 @@ class DataciteExportDeployment
     /**
      * Constructor
      *
-     * @param Context $context
-     * @param DOIPubIdExportPlugin $plugin
+     * @param \PKP\context\Context $context
+     * @param \APP\plugins\DOIPubIdExportPlugin $plugin
      */
     public function __construct($context, $plugin)
     {
@@ -122,7 +119,7 @@ class DataciteExportDeployment
     /**
      * Set the import/export context.
      *
-     * @param Context $context
+     * @param \PKP\context\Context $context
      */
     public function setContext($context)
     {
@@ -132,7 +129,7 @@ class DataciteExportDeployment
     /**
      * Get the import/export context.
      *
-     * @return Context
+     * @return \PKP\context\Context
      */
     public function getContext()
     {
@@ -142,7 +139,7 @@ class DataciteExportDeployment
     /**
      * Set the import/export plugin.
      *
-     * @param ImportExportPlugin $plugin
+     * @param \PKP\plugins\Plugin $plugin
      */
     public function setPlugin($plugin)
     {
@@ -152,7 +149,7 @@ class DataciteExportDeployment
     /**
      * Get the import/export plugin.
      *
-     * @return ImportExportPlugin
+     * @return \PKP\plugins\ImportExportPlugin
      */
     public function getPlugin()
     {

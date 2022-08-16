@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/importexport/pubmed/PubMedExportPlugin.inc.php
+ * @file plugins/importexport/pubmed/PubMedExportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportPlugin
- * @ingroup plugins_importexport_pubmed
- *
  * @brief PubMed/MEDLINE XML metadata export plugin
  */
+
+namespace APP\plugins\importexport\pubmed;
 
 use APP\facades\Repo;
 use APP\search\ArticleSearch;
@@ -70,7 +70,7 @@ class PubMedExportPlugin extends ImportExportPlugin
      * Display the plugin.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param \PKP\core\PKPRequest $request
      */
     public function display($args, $request)
     {
@@ -87,7 +87,7 @@ class PubMedExportPlugin extends ImportExportPlugin
                     [
                         'apiUrl' => $apiUrl,
                         'count' => 100,
-                        'getParams' => new stdClass(),
+                        'getParams' => new \stdClass(),
                         'lazyLoad' => true,
                     ]
                 );

@@ -40,7 +40,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.NativeXmlIssueGalleyFilter';
+        return (string) self::class;
     }
 
     //
@@ -166,8 +166,4 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
                 break;
         }
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\NativeXmlIssueGalleyFilter', '\NativeXmlIssueGalleyFilter');
 }

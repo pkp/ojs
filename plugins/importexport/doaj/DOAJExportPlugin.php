@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/DOAJExportPlugin.inc.php
+ * @file plugins/importexport/doaj/DOAJExportPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportPlugin
- * @ingroup plugins_importexport_doaj
- *
  * @brief DOAJ export plugin
  */
+
+namespace APP\plugins\importexport\doaj;
 
 define('DOAJ_XSD_URL', 'https://www.doaj.org/schemas/doajArticles.xsd');
 
@@ -21,6 +21,7 @@ define('DOAJ_API_URL', 'https://doaj.org/api/v2/');
 define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v2/');
 define('DOAJ_API_OPERATION', 'articles');
 
+use APP\core\Application;
 use APP\plugins\PubObjectsExportPlugin;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
@@ -100,7 +101,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
      */
     public function getExportDeploymentClassName()
     {
-        return 'DOAJExportDeployment';
+        return '\APP\plugins\importexport\doaj\DOAJExportDeployment';
     }
 
     /**
@@ -108,7 +109,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
      */
     public function getSettingsFormClassName()
     {
-        return 'DOAJSettingsForm';
+        return '\APP\plugins\importexport\datacite\classes\form\DOAJSettingsForm';
     }
 
     /**
@@ -133,7 +134,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
                     'json' => json_decode($jsonString)
                 ]
             );
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return [['plugins.importexport.doaj.register.error.mdsError', $e->getMessage()]];
         }
         if (($status = $response->getStatusCode()) != DOAJ_API_DEPOSIT_OK) {

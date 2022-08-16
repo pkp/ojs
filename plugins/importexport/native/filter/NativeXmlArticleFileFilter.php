@@ -25,10 +25,6 @@ class NativeXmlArticleFileFilter extends \PKP\plugins\importexport\native\filter
      */
     public function getClassName()
     {
-        return 'plugins.importexport.native.filter.NativeXmlArticleFileFilter';
+        return (string) self::class;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\importexport\native\filter\NativeXmlArticleFileFilter', '\NativeXmlArticleFileFilter');
 }

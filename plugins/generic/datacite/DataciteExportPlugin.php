@@ -1,27 +1,30 @@
 <?php
 
 /**
- * @file plugins/generic/datacite/DataciteExportPlugin.inc.php
+ * @file plugins/generic/datacite/DataciteExportPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportPlugin
- * @ingroup plugins_generic_datacite
- *
  * @brief DataCite export/registration plugin.
  */
 
+namespace APP\plugins\generic\datacite;
+
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
-
 use APP\plugins\DOIPubIdExportPlugin;
 use APP\submission\Submission;
+use PKP\config\Config;
 use PKP\context\Context;
 use PKP\core\DataObject;
+use PKP\core\PKPApplication;
 use PKP\core\PKPString;
 use PKP\doi\Doi;
+use PKP\file\FileManager;
 use PKP\file\TemporaryFileManager;
 use PKP\galley\Galley;
 use PKP\submission\Representation;
@@ -98,7 +101,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function getSettingsFormClassName()
     {
-        return 'DataciteSettingsForm';
+        return '\APP\plugins\generic\datacite\classes\form\DataciteSettingsForm';
     }
 
     /**
@@ -254,7 +257,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                     'Content-Type' => 'application/xml;charset=UTF-8',
                 ],
             ]);
-        } catch (GuzzleHttp\Exception\RequestException $e) {
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
             $returnMessage = $e->getMessage();
             if ($e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody(true) . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
@@ -273,7 +276,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 ],
                 'body' => "doi=${doi}\nurl=${url}",
             ]);
-        } catch (GuzzleHttp\Exception\RequestException $e) {
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
             $returnMessage = $e->getMessage();
             if ($e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody(true) . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
@@ -439,9 +442,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * Get the canonical URL of an object.
      *
-     * @param Request $request
-     * @param Context $context
-     * @param Issue|Submission|Galley $object
+     * @param \APP\core\Request $request
+     * @param \PKP\context\Context $context
+     * @param \APP\issue\Issue|\APP\submission\Submission|\PKP\galley\Galley $object
      */
     public function _getObjectUrl($request, $context, $object)
     {

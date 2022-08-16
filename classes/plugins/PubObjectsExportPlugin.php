@@ -874,14 +874,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      *
      * @param Context $context
      *
-     * @return CrossRefSettingsForm
+     * @return \PKP\form\Form
      */
     public function _instantiateSettingsForm($context)
     {
         $settingsFormClassName = $this->getSettingsFormClassName();
-        $this->import('classes.form.' . $settingsFormClassName);
-        $settingsForm = new $settingsFormClassName($this, $context->getId());
-        return $settingsForm;
+        return new $settingsFormClassName($this, $context->getId());
     }
 
     /**
