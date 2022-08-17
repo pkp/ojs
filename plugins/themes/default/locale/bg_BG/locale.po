@@ -1,16 +1,16 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-31 20:53+0000\n"
+"PO-Revision-Date: 2022-08-17 16:00+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/bg/>\n"
-"Language: bg\n"
+"themes-default/bg_BG/>\n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr ""
@@ -74,3 +74,30 @@ msgstr "Това е оформлението на темата по подраз
 
 msgid "plugins.themes.default.name"
 msgstr "Оформление на темата по подразбиране"
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Опции за показване на статистиката за употреба"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+"Да не се показва диаграма със статистически данни за използването за "
+"читатели."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+"Използване на лентов тип на диаграмата за показване на статистически данни "
+"за употребата."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+"Използване на тип линия на диаграмата за показване на статистически данни за "
+"употребата."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Яну Фев Мар Апр Май Юни Юли Авг Сеп Окт Ное Дек"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Сваляния"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Данните за свалянията все още не са налични."
