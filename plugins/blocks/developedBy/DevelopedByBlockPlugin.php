@@ -55,3 +55,7 @@ class DevelopedByBlockPlugin extends BlockPlugin
         return __('plugins.block.developedBy.description');
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\blocks\developedBy\DevelopedByBlockPlugin', '\DevelopedByBlockPlugin');
+}
