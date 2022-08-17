@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-08-08 13:46+0000\n"
+"PO-Revision-Date: 2022-08-17 20:48+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
@@ -242,7 +242,6 @@ msgstr ""
 "Participantes. Este modelo deve ser usado quando o editor de seção tem a "
 "capacidade de registrar decisões editoriais."
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "A revista {$contextName} solicita avaliação de artigo"
 
@@ -293,7 +292,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Solicitação de avaliação de uma submissão revisada"
 
@@ -391,7 +389,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Um lembrete para concluir sua avaliação"
 
@@ -410,7 +407,6 @@ msgstr ""
 "periódico. Aguardo seu retorno.</p><p>Agradeço antecipadamente e "
 "atentamente, </p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Um lembrete para concluir sua avaliação"
 
