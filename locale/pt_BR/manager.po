@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-05 20:16+0000\n"
+"PO-Revision-Date: 2022-08-17 20:48+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
@@ -2236,3 +2236,53 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
 "Uma instituição deve ser criada antes que novas assinaturas possam ser "
 "feitas."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "as iniciais da revista"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "O nome da instituição"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "O endereço de correspondência da instituição"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domínio"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Intervalos de IP para autenticação de assinatura"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Notificação de Assinatura"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "A assinatura expira em breve"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Assinatura Expirada"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Assinatura expirada por último"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Adquira uma assinatura individual"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Adquirir assinatura institucional"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Renovar assinatura individual"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Renovar assinatura institucional"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Notificação de Acesso Aberto"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Notificação de edição publicada"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Este e-mail é enviado automaticamente aos usuários registrados quando a nova "
+"edição é publicada."
