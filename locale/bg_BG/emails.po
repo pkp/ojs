@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-08-17 17:37+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "bg_BG/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
@@ -85,7 +85,6 @@ msgstr ""
 "<br />\n"
 "{$contextSignature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Потвърждение за подаване"
 
@@ -157,7 +156,6 @@ msgstr ""
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Искане за архивиране за {$contextName}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Уважаеми читателю,</p><p>{$contextName} има удоволствието да обяви "
@@ -196,7 +194,6 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрация като рецензент с {$contextName}"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
@@ -210,9 +207,8 @@ msgstr ""
 "Благодарим ви,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
-msgstr "Потвърдете профила (акаунта) си"
+msgstr "Потвърдете акаунта си"
 
 msgid "emails.userRegister.body"
 msgstr ""
@@ -249,7 +245,7 @@ msgstr "Нулиране на парола"
 
 msgid "emails.passwordResetConfirm.body"
 msgstr ""
-"Получихме искане за нулиране на вашата парола към акаунт в  {$siteTitle}.<br "
+"Получихме искане за нулиране на вашата парола към акаунт в {$siteTitle}.<br "
 "/>\n"
 "<br />\n"
 "Ако не сте направили тази заявка, моля, игнорирайте този имейл и паролата ви "
