@@ -109,7 +109,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function getExportDeploymentClassName()
     {
-        return 'DataciteExportDeployment';
+        return '\APP\plugins\generic\datacite\DataciteExportDeployment';
     }
 
     /**

@@ -864,7 +864,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function _instantiateExportDeployment($context)
     {
         $exportDeploymentClassName = $this->getExportDeploymentClassName();
-        $this->import($exportDeploymentClassName);
         $exportDeployment = new $exportDeploymentClassName($context, $this);
         return $exportDeployment;
     }
