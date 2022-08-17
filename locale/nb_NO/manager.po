@@ -1,11 +1,12 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
+# Tormod Strømme <tormod.stromme@uib.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-03-10 13:56+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2022-08-17 11:15+0000\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr ""
@@ -2198,7 +2199,7 @@ msgid "stats.publications.galleys"
 msgstr "Filer"
 
 msgid "stats.publications.abstracts"
-msgstr "Abstrakter"
+msgstr "Sammendrag"
 
 msgid "stats.publications.countOfTotal"
 msgstr "{$count} av {$total} artikler"
