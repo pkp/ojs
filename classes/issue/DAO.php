@@ -402,7 +402,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      */
     public function deleteAllPubIds($contextId, $pubIdType)
     {
-        $issues = Repo::issue()->getMany(Repo::issue()->getCollector()->filterByContextIds([$contextId]));
+        $issues = Repo::issue()->getCollector()->filterByContextIds([$contextId])->getMany();
         foreach ($issues as $issue) {
             $this->deprecatedDao->update(
                 'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',

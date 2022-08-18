@@ -62,11 +62,11 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
             $submissionEnabled = $this->isObjectTypeEnabled('Publication', $context->getId());
             $representationEnabled = $this->isObjectTypeEnabled('Representation', $context->getId());
             if ($issueEnabled) {
-                $publishedIssuesCollector = Repo::issue()->getCollector()
+                $issues = Repo::issue()->getCollector()
                     ->filterByContextIds([$context->getId()])
                     ->filterByPublished(true)
-                    ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-                $issues = Repo::issue()->getMany($publishedIssuesCollector);
+                    ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+                    ->getMany();
                 foreach ($issues as $issue) {
                     $issuePubId = $issue->getStoredPubId($this->getPubIdType());
                     if (empty($issuePubId)) {

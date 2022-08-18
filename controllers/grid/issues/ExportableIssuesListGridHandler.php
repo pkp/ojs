@@ -53,13 +53,12 @@ class ExportableIssuesListGridHandler extends IssueGridHandler
         $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
         $collector = Repo::issue()->getCollector()
             ->filterByContextIds([$journal->getId()]);
-        $totalCount = Repo::issue()->getCount($collector);
+
+        $totalCount = $collector->getCount();
         $collector->limit($rangeInfo->getCount());
         $collector->offset($rangeInfo->getOffset() + max(0, $rangeInfo->getPage() - 1) * $rangeInfo->getCount());
 
-        $issues = iterator_to_array(Repo::issue()->getMany($collector));
-
-        return new \PKP\core\VirtualArrayIterator($issues, $totalCount, $rangeInfo->getPage(), $rangeInfo->getCount());
+        return new \PKP\core\VirtualArrayIterator($collector->getMany()->toArray(), $totalCount, $rangeInfo->getPage(), $rangeInfo->getCount());
     }
 
     /**

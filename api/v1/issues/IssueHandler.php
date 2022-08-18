@@ -195,12 +195,11 @@ class IssueHandler extends APIHandler
             $collector->filterByPublished(true);
         }
 
-
-        $issues = Repo::issue()->getMany($collector);
+        $issues = $collector->getMany();
 
         return $response->withJson([
             'items' => iterator_to_array(Repo::issue()->getSchemaMap()->summarizeMany($issues, $context), false),
-            'itemsMax' => Repo::issue()->getCount($collector->limit(null)->offset(null)),
+            'itemsMax' => $collector->limit(null)->offset(null)->getCount(),
         ], 200);
     }
 

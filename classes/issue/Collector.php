@@ -4,7 +4,9 @@ namespace APP\issue;
 
 use APP\facades\Repo;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\LazyCollection;
 use PKP\core\interfaces\CollectorInterface;
 use PKP\core\PKPApplication;
 use PKP\doi\Doi;
@@ -65,6 +67,24 @@ class Collector implements CollectorInterface
     public function __construct(DAO $dao)
     {
         $this->dao = $dao;
+    }
+
+    /** @copydoc DAO::getCount() */
+    public function getCount(): int
+    {
+        return $this->dao->getCount($this);
+    }
+
+    /** @copydoc DAO::getIds() */
+    public function getIds(): Collection
+    {
+        return $this->dao->getIds($this);
+    }
+
+    /** @copydoc DAO::getMany() */
+    public function getMany(): LazyCollection
+    {
+        return $this->dao->getMany($this);
     }
 
     /**

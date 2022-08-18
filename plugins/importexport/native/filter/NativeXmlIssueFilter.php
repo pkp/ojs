@@ -484,7 +484,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 $collector->filterByTitles((array) $searchIssue->getTitle(null));
             }
 
-            $foundIssues = Repo::issue()->getMany($collector);
+            $foundIssues = $collector->getMany();
             foreach ($foundIssues as $issue) {
                 $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.issueIdentificationDuplicate', ['issueId' => $issue->getId(), 'issueIdentification' => $n->ownerDocument->saveXML($n)]));
             }

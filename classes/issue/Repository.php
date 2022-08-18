@@ -10,7 +10,6 @@ use APP\journal\JournalDAO;
 use APP\journal\SectionDAO;
 use APP\publication\Publication;
 use Illuminate\Support\Collection;
-use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiActionException;
 use PKP\plugins\Hook;
@@ -72,24 +71,6 @@ class Repository
 //        }
 
         return $this->dao->get($id);
-    }
-
-    /** @copydoc DAO::getCount() */
-    public function getCount(Collector $query): int
-    {
-        return $this->dao->getCount($query);
-    }
-
-    /** @copydoc DAO::getIds() */
-    public function getIds(Collector $query): Collection
-    {
-        return $this->dao->getIds($query);
-    }
-
-    /** @copydoc DAO::getMany() */
-    public function getMany(Collector $query): LazyCollection
-    {
-        return $this->dao->getMany($query);
     }
 
     /** @copydoc DAO::getCollector() */
@@ -201,13 +182,9 @@ class Repository
         $this->dao->delete($issue);
     }
 
-    /**
-     * Delete a collection of issues
-     */
     public function deleteMany(Collector $collector)
     {
-        $issueIds = $this->getIds($collector);
-        foreach ($issueIds as $issueId) {
+        foreach ($collector->getIds() as $issueId) {
             $this->dao->deleteById($issueId);
         }
     }
@@ -223,7 +200,7 @@ class Repository
         //	    if ($useCache) {
         //	        $cache = $this->dao->_getCache('current');
         //	        return $cache->get($contextId);
-//        }
+        //        }
 
         /** @var JournalDAO $journalDao */
         $journalDao = DAORegistry::getDAO('JournalDAO');
@@ -319,7 +296,7 @@ class Repository
     public function deleteByContextId(int $contextId)
     {
         $collector = $this->getCollector()->filterByContextIds([$contextId]);
-        Repo::issue()->deleteMany($collector);
+        $this->deleteMany($collector);
     }
 
     /**

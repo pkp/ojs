@@ -382,11 +382,11 @@ class IssueGridHandler extends GridHandler
         Repo::issue()->delete($issue);
         $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
         if ($currentIssue != null && $issue->getId() == $currentIssue->getId()) {
-            $publishedIssuesCollector = Repo::issue()->getCollector()
+            $issues = Repo::issue()->getCollector()
                 ->filterByContextIds([$journal->getId()])
                 ->filterByPublished(true)
-                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-            $issues = Repo::issue()->getMany($publishedIssuesCollector);
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+                ->getMany();
             if ($issue = $issues->first()) {
                 Repo::issue()->updateCurrent($journal->getId(), $issue);
             }
