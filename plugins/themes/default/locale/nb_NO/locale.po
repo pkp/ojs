@@ -1,10 +1,11 @@
+# Tormod Strømme <tormod.stromme@uib.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
-"PO-Revision-Date: 2021-03-02 09:12+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2022-08-18 10:23+0000\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Standard tema"
@@ -74,3 +75,9 @@ msgstr "Sidehodets bakgrunnsbilde"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Vis tidsskriftssammendraget på hovedsiden."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Visningsvalg for bruksstatistikk"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Vis ikke diagram over innleveringsstatistikk for leseren."
