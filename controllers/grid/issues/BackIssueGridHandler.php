@@ -110,11 +110,12 @@ class BackIssueGridHandler extends IssueGridHandler
     protected function loadData($request, $filter)
     {
         $journal = $request->getJournal();
-        $publishedIssuesCollector = Repo::issue()->getCollector()
+        return Repo::issue()->getCollector()
             ->filterByContextIds([$journal->getId()])
             ->filterByPublished(true)
-            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-        return Repo::issue()->getMany($publishedIssuesCollector)->toArray();
+            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+            ->getMany()
+            ->toArray();
     }
 
     /**

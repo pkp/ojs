@@ -243,7 +243,7 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
         if (!empty($titles)) {
             $collector->filterByTitles($titles);
         }
-        $issuesIdsByIdentification = Repo::issue()->getIds($collector);
+        $issuesIdsByIdentification = $collector->getIds();
 
         if ($issuesIdsByIdentification->count() != 1) {
             $deployment->addError(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', ['issueIdentification' => $node->ownerDocument->saveXML($node)]));

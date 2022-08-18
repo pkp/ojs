@@ -120,7 +120,7 @@ class ResolverPlugin extends GatewayPlugin
                     $issueCollector->filterByYears([$year]);
                 }
 
-                $issues = Repo::issue()->getMany($issueCollector);
+                $issues = $issueCollector->getMany();
 
                 // Ensure only one issue matched, and fetch it.
                 if ($issues->count() != 1) {
@@ -178,11 +178,11 @@ class ResolverPlugin extends GatewayPlugin
         header('content-disposition: attachment; filename=holdings.txt');
         echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
         while ($journal = $journals->next()) {
-            $publishedIssuesCollector = Repo::issue()->getCollector()
+            $issues = Repo::issue()->getCollector()
                 ->filterByContextIds([$journal->getId()])
                 ->filterByPublished(true)
-                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-            $issues = Repo::issue()->getMany($publishedIssuesCollector);
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+                ->getMany();
             $startDate = $endDate = null;
             $startNumber = $endNumber = null;
             $startVolume = $endVolume = null;

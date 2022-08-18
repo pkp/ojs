@@ -40,11 +40,11 @@ class SitemapHandler extends PKPSitemapHandler
         if ($journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'current')));
             $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'archive')));
-            $publishedIssuesCollector = Repo::issue()->getCollector()
+            $publishedIssues = Repo::issue()->getCollector()
                 ->filterByContextIds([$journalId])
                 ->filterByPublished(true)
-                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-            $publishedIssues = Repo::issue()->getMany($publishedIssuesCollector);
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+                ->getMany();
             foreach ($publishedIssues as $issue) {
                 $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
                 // Articles for issue

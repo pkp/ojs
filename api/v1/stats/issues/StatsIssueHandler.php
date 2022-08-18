@@ -374,18 +374,18 @@ class StatsIssueHandler extends APIHandler
      */
     protected function _processSearchPhrase(string $searchPhrase, array $issueIds = []): array
     {
-        $searchPhraseIssueIds = Repo::issue()->getIds(
-            Repo::issue()
-                ->getCollector()
-                ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
-                ->filterByPublished(true)
-                ->searchPhrase($searchPhrase)
-        );
+        $searchPhraseIssueIds = Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
+            ->filterByPublished(true)
+            ->searchPhrase($searchPhrase)
+            ->getIds()
+            ->toArray();
 
         if (!empty($issueIds)) {
-            return array_intersect($issueIds, $searchPhraseIssueIds->toArray());
+            return array_intersect($issueIds, $searchPhraseIssueIds);
         }
-        return $searchPhraseIssueIds->toArray();
+        return $searchPhraseIssueIds;
     }
 
     /**

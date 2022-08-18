@@ -59,11 +59,11 @@ class FutureIssueGridHandler extends IssueGridHandler
     protected function loadData($request, $filter)
     {
         $journal = $request->getJournal();
-        $unpublishedIssuesCollector = Repo::issue()->getCollector()
+        return Repo::issue()->getCollector()
             ->filterByContextIds([$journal->getId()])
             ->filterByPublished(false)
-            ->orderBy(Collector::ORDERBY_UNPUBLISHED_ISSUES);
-        return Repo::issue()->getMany($unpublishedIssuesCollector);
+            ->orderBy(Collector::ORDERBY_UNPUBLISHED_ISSUES)
+            ->getMany();
     }
 
     /**

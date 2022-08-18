@@ -236,6 +236,6 @@ class GatewayHandler extends Handler
             $collector->filterByYears([$year]);
         }
 
-        return Repo::issue()->getMany($collector);
+        return $collector->getMany();
     }
 }

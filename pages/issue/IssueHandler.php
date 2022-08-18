@@ -160,8 +160,8 @@ class IssueHandler extends Handler
             ->orderBy(Collector::ORDERBY_SEQUENCE)
             ->filterByPublished(true);
 
-        $issues = Repo::issue()->getMany($collector)->toArray();
-        $total = Repo::issue()->getCount($collector->limit(null)->offset(null));
+        $issues = $collector->getMany()->toArray();
+        $total = $collector->limit(null)->offset(null)->getCount();
 
         $showingStart = $offset + 1;
         $showingEnd = min($offset + $count, $offset + count($issues));

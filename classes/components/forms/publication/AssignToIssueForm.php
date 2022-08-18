@@ -42,10 +42,10 @@ class AssignToIssueForm extends FormComponent
         // Issue options
         $issueOptions = [['value' => '', 'label' => '']];
 
-        $unpublishedCollector = Repo::issue()->getCollector()
+        $unpublishedIssues = Repo::issue()->getCollector()
             ->filterByContextIds([$publicationContext->getId()])
-            ->filterByPublished(false);
-        $unpublishedIssues = Repo::issue()->getMany($unpublishedCollector);
+            ->filterByPublished(false)
+            ->getMany();
 
         if ($unpublishedIssues->count() > 0) {
             $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
@@ -57,10 +57,10 @@ class AssignToIssueForm extends FormComponent
             }
         }
 
-        $publishedCollector = Repo::issue()->getCollector()
+        $publishedIssues = Repo::issue()->getCollector()
             ->filterByContextIds([$publicationContext->getId()])
-            ->filterByPublished(true);
-        $publishedIssues = Repo::issue()->getMany($publishedCollector);
+            ->filterByPublished(true)
+            ->getMany();
 
         if ($publishedIssues->count() > 0) {
             $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];

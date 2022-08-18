@@ -49,11 +49,11 @@ class OpenAccessNotification extends ScheduledTask
             $curDay = $curDate['day'];
 
             // Check if the current date corresponds to the open access date of any issues
-            $publishedIssuesCollector = Repo::issue()->getCollector()
+            $issues = Repo::issue()->getCollector()
                 ->filterByContextIds([$journal->getId()])
                 ->filterByPublished(true)
-                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-            $issues = Repo::issue()->getMany($publishedIssuesCollector);
+                ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+                ->getMany();
 
             $jobs = [];
             foreach ($issues as $issue) {

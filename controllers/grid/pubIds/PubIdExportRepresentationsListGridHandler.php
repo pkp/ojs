@@ -208,11 +208,11 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler
     public function renderFilter($request, $filterData = [])
     {
         $context = $request->getContext();
-        $publishedIssuesCollector = Repo::issue()->getCollector()
+        $issues = Repo::issue()->getCollector()
             ->filterByContextIds([$context->getId()])
             ->filterByPublished(true)
-            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES);
-        $issues = Repo::issue()->getMany($publishedIssuesCollector);
+            ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
+            ->getMany();
         foreach ($issues as $issue) {
             $issueOptions[$issue->getId()] = $issue->getIssueIdentification();
         }
