@@ -1,9 +1,10 @@
+# Tormod Strømme <tormod.stromme@uib.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2021-01-29 20:07+0000\n"
+"PO-Revision-Date: 2022-08-18 10:23+0000\n"
 "Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/nb_NO/>\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "common.software"
 msgstr "Open Journal Systems"
@@ -2453,3 +2454,22 @@ msgstr "Frafalt"
 
 msgid "payment.unpaid"
 msgstr "Ubetalt"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Tidsskriftets innhold publiseres ikke på nett."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Publiseringsavgift er ikke aktivert."
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Kunne ikke generere DOI til følgende nummer: {$itemTitle}. Nummeret "
+"eksisterer ikke i det valgte tidsskriftet."
+
+msgid "doi.manager.settings.publications"
+msgstr "Artikler"
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"Mislyktes med å markere DOI som registrert for {$pubObjectTitle}. Nummeret "
+"må publiseres før status kan oppdateres."
