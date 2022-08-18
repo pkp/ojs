@@ -413,11 +413,10 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $dates[DATACITE_DATE_SUBMITTED] = $submittedDate;
                 }
                 // Accepted date: the last editor accept decision date
-                $editDecisions = Repo::decision()->getMany(
-                    Repo::decision()
-                        ->getCollector()
-                        ->filterBySubmissionIds([$article->getId()])
-                );
+                $editDecisions = Repo::decision()->getCollector()
+                    ->filterBySubmissionIds([$article->getId()])
+                    ->getMany();
+
                 foreach ($editDecisions->reverse() as $editDecision) {
                     if ($editDecision->getData('decision') == Decision::ACCEPT) {
                         $dates[DATACITE_DATE_ACCEPTED] = $editDecision->getData('dateDecided');
