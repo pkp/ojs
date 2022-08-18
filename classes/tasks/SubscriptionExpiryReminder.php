@@ -262,7 +262,3 @@ class SubscriptionExpiryReminder extends ScheduledTask
         return true;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\tasks\SubscriptionExpiryReminder', '\SubscriptionExpiryReminder');
-}

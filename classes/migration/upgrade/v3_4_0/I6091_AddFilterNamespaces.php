@@ -50,6 +50,17 @@ class I6091_AddFilterNamespaces extends \PKP\migration\Migration
         'lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter' => 'PKP\plugins\importexport\native\filter\SubmissionFileNativeXmlFilter',
     ];
 
+    public const TASK_RENAME_MAP = [
+        'lib.pkp.classes.task.ReviewReminder' => 'PKP\task\ReviewReminder',
+        'lib.pkp.classes.task.StatisticsReport' => 'PKP\task\StatisticsReport',
+        'classes.tasks.SubscriptionExpiryReminder' => 'APP\tasks\SubscriptionExpiryReminder',
+        'lib.pkp.classes.task.DepositDois' => 'PKP\task\DepositDois',
+        'lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers' => 'PKP\task\RemoveUnvalidatedExpiredUsers',
+        'lib.pkp.classes.task.EditorialReminders' => 'PKP\task\EditorialReminders',
+        'lib.pkp.classes.task.UpdateIPGeoDB' => 'PKP\task\UpdateIPGeoDB',
+        'classes.tasks.UsageStatsLoader' => 'APP\tasks\UsageStatsLoader',
+    ];
+
     /**
      * Run the migration.
      */
@@ -57,6 +68,9 @@ class I6091_AddFilterNamespaces extends \PKP\migration\Migration
     {
         foreach (self::FILTER_RENAME_MAP as $oldName => $newName) {
             DB::statement('UPDATE filters SET class_name = ? WHERE class_name = ?', [$newName, $oldName]);
+        }
+        foreach (self::TASK_RENAME_MAP as $oldName => $newName) {
+            DB::statement('UPDATE scheduled_tasks SET class_name = ? WHERE class_name = ?', [$newName, $oldName]);
         }
         DB::statement('UPDATE filter_groups SET output_type=? WHERE output_type = ?', ['metadata::APP\plugins\metadata\dc11\schema\Dc11Schema(ARTICLE)', 'metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)']);
     }
@@ -68,6 +82,9 @@ class I6091_AddFilterNamespaces extends \PKP\migration\Migration
     {
         foreach (self::FILTER_RENAME_MAP as $oldName => $newName) {
             DB::statement('UPDATE filters SET class_name = ? WHERE class_name = ?', [$oldName, $newName]);
+        }
+        foreach (self::TASK_RENAME_MAP as $oldName => $newName) {
+            DB::statement('UPDATE scheduled_tasks SET class_name = ? WHERE class_name = ?', [$oldName, $newName]);
         }
         DB::statement('UPDATE filter_groups SET output_type=? WHERE output_type = ?', ['metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)', 'metadata::APP\plugins\metadata\dc11\schema\Dc11Schema(ARTICLE)']);
     }

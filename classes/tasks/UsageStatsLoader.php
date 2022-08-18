@@ -50,7 +50,3 @@ class UsageStatsLoader extends PKPUsageStatsLoader
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\tasks\UsageStatsLoader', '\UsageStatsLoader');
-}

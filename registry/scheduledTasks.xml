@@ -27,35 +27,35 @@
 <!DOCTYPE scheduled_tasks SYSTEM "../lib/pkp/dtd/scheduledTasks.dtd">
 
 <scheduled_tasks>
-	<task class="lib.pkp.classes.task.ReviewReminder">
+	<task class="PKP\task\ReviewReminder">
 		<descr>Send automated reminders to reviewers to complete their assignments.</descr>
 		<frequency hour="0"/>
 	</task>
-	<task class="lib.pkp.classes.task.StatisticsReport">
+	<task class="PKP\task\StatisticsReport">
 		<descr>Send automated statistics reports to journal managers and editors.</descr>
 		<frequency day="1"/>
 	</task>
-	<task class="classes.tasks.SubscriptionExpiryReminder">
+	<task class="APP\tasks\SubscriptionExpiryReminder">
 		<descr>Send automated reminders about subscription expiry.</descr>
 		<frequency day="1"/>
 	</task>
-	<task class="lib.pkp.classes.task.DepositDois">
+	<task class="PKP\task\DepositDois">
 		<descr>Automatically deposit any outstanding DOIs to the configured registration agency.</descr>
 		<frequency hour="0" />
 	</task>
-	<task class="lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers">
+	<task class="PKP\task\RemoveUnvalidatedExpiredUsers">
 		<descr>Automatically remove unvalidated and expired users.</descr>
 		<frequency day="1"/>
 	</task>
-	<task class="lib.pkp.classes.task.EditorialReminders">
+	<task class="PKP\task\EditorialReminders">
 		<descr>Send a monthly reminder email to editors about their outstanding tasks</descr>
 		<frequency day="1"/>
 	</task>
-	<task class="lib.pkp.classes.task.UpdateIPGeoDB">
+	<task class="PKP\task\UpdateIPGeoDB">
 		<descr>Update the DB-IP city lite database periodically to ensure the geographical stats remain accurate.</descr>
 		<frequency day="10"/>
 	</task>
-	<task class="classes.tasks.UsageStatsLoader">
+	<task class="APP\tasks\UsageStatsLoader">
 		<descr>Process the usage stats logs and load the numbers into the DB tables.</descr>
 		<frequency day="0"/>
 	</task>
