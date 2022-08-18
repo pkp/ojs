@@ -131,7 +131,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
         if ($recentItems > 0) {
             $collector->limit($recentItems);
         }
-        $announcements = Repo::announcement()->getMany($collector);
+        $announcements = $collector->getMany();
 
         // Get date of most recent announcement
         $lastDateUpdated = $this->_parentPlugin->getSetting($journal->getId(), 'dateUpdated');
