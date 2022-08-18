@@ -13,12 +13,14 @@
  * @brief Article report plugin
  */
 
+namespace APP\plugins\reports\articles;
+
 use APP\decision\Decision;
 use APP\facades\Repo;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
-
 use PKP\submission\PKPSubmission;
 
 class ArticleReportPlugin extends ReportPlugin
@@ -247,44 +249,44 @@ class ArticleReportPlugin extends ReportPlugin
             $row = [];
             foreach ($result as $column => $value) {
                 switch ($column) {
-                case 'authors':
-                    for ($i = 0; $i < $maxAuthors; $i++) {
-                        $row = array_merge($row, $value[$i] ?? array_fill(0, $authorColumnCount, ''));
-                    }
-                    break;
-                case 'editors':
-                    $editorIds = array_keys($value);
-                    $editorEntries = array_values($value);
-                    for ($i = 0; $i < $maxEditors; $i++) {
-                        $submissionHasThisEditor = isset($editorEntries[$i]);
-                        $row = array_merge($row, $submissionHasThisEditor ? $editorEntries[$i] : array_fill(0, $editorColumnCount, ''));
-                        for ($j = 0; $j < $maxDecisions; $j++) {
-                            if (!$submissionHasThisEditor) {
-                                $row = array_merge($row, array_fill(0, $decisionColumnCount, ''));
-                                continue;
-                            }
-
-                            $editorId = $editorIds[$i];
-                            $latestDecision = $latestDecisionDate = '';
-                            $decisionCounter = 0;
-                            foreach ($result['decisions'] as $decision) {
-                                if ($decision->getData('editorId') != $editorId) {
-                                    continue;
-                                }
-                                if ($j != $decisionCounter++) {
-                                    continue;
-                                }
-                                $latestDecision = $this->getDecisionMessage($decision->getData('decision'));
-                                $latestDecisionDate = $decision->getData('dateDecided');
-                            }
-                            $row = array_merge($row, [$latestDecision, $latestDecisionDate]);
+                    case 'authors':
+                        for ($i = 0; $i < $maxAuthors; $i++) {
+                            $row = array_merge($row, $value[$i] ?? array_fill(0, $authorColumnCount, ''));
                         }
-                    }
-                    break;
-                case 'decisions':
-                    break; // Handled in the 'editors' case
-                default: $row[] = $value; // Other columns can be sent as they are.
-            }
+                        break;
+                    case 'editors':
+                        $editorIds = array_keys($value);
+                        $editorEntries = array_values($value);
+                        for ($i = 0; $i < $maxEditors; $i++) {
+                            $submissionHasThisEditor = isset($editorEntries[$i]);
+                            $row = array_merge($row, $submissionHasThisEditor ? $editorEntries[$i] : array_fill(0, $editorColumnCount, ''));
+                            for ($j = 0; $j < $maxDecisions; $j++) {
+                                if (!$submissionHasThisEditor) {
+                                    $row = array_merge($row, array_fill(0, $decisionColumnCount, ''));
+                                    continue;
+                                }
+
+                                $editorId = $editorIds[$i];
+                                $latestDecision = $latestDecisionDate = '';
+                                $decisionCounter = 0;
+                                foreach ($result['decisions'] as $decision) {
+                                    if ($decision->getData('editorId') != $editorId) {
+                                        continue;
+                                    }
+                                    if ($j != $decisionCounter++) {
+                                        continue;
+                                    }
+                                    $latestDecision = $this->getDecisionMessage($decision->getData('decision'));
+                                    $latestDecisionDate = $decision->getData('dateDecided');
+                                }
+                                $row = array_merge($row, [$latestDecision, $latestDecisionDate]);
+                            }
+                        }
+                        break;
+                    case 'decisions':
+                        break; // Handled in the 'editors' case
+                    default: $row[] = $value; // Other columns can be sent as they are.
+                }
             }
             fputcsv($fp, $row);
         }

@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/generic/recommendByAuthor/RecommendByAuthorPlugin.inc.php
+ * @file plugins/generic/recommendByAuthor/RecommendByAuthorPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class RecommendByAuthorPlugin
- * @ingroup plugins_generic_recommendByAuthor
- *
  * @brief Plugin to recommend articles from the same author.
  */
+
+namespace APP\plugins\generic\recommendByAuthor;
 
 use APP\core\Application;
 use APP\core\Services;

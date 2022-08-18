@@ -1,21 +1,22 @@
 <?php
 
 /**
- * @file plugins/generic/recommendBySimilarity/RecommendBySimilarityPlugin.inc.php
+ * @file plugins/generic/recommendBySimilarity/RecommendBySimilarityPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class RecommendBySimilarityPlugin
- * @ingroup plugins_generic_recommendBySimilarity
- *
  * @brief Plugin to recommend similar articles.
  */
+
+namespace APP\plugins\generic\recommendBySimilarity;
 
 use APP\core\Application;
 use APP\search\ArticleSearch;
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
 
 define('RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT', 10);
 

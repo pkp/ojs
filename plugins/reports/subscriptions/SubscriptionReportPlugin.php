@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/reports/subscriptions/SubscriptionReportPlugin.inc.php
+ * @file plugins/reports/subscriptions/SubscriptionReportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionReportPlugin
- * @ingroup plugins_reports_subscription
- *
  * @brief Subscription report plugin
  */
+
+namespace APP\plugins\reports\subscriptions;
 
 use APP\facades\Repo;
 use PKP\core\PKPString;
@@ -156,7 +156,7 @@ class SubscriptionReportPlugin extends ReportPlugin
                         $userCountry = $user->getCountry();
                         $country = null;
                         if ($userCountry) {
-                             $country = $countries->getByAlpha2($user->getCountry());
+                            $country = $countries->getByAlpha2($user->getCountry());
                         }
                         $columns[$index] = $country ? $country->getLocalName() : '';
                         break;

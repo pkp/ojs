@@ -581,7 +581,7 @@ class ArticleHandler extends Handler
                         /* if the article has been paid for then forget about everything else
                          * and just let them access the article */
                         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
-                        $dateEndMembership = $user->getSetting('dateEndMembership', 0);
+                        $dateEndMembership = $user->getData('dateEndMembership', 0);
                         if ($completedPaymentDao->hasPaidPurchaseArticle($userId, $submission->getId())
                             || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
                             $this->issue = $issue;

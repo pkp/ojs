@@ -13,6 +13,9 @@
  * @brief Paypal payment plugin class
  */
 
+namespace APP\plugins\paymethod\paypal;
+
+use APP\core\Application;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -142,7 +145,6 @@ class PaypalPaymentPlugin extends PaymethodPlugin
      */
     public function getPaymentForm($context, $queuedPayment)
     {
-        $this->import('PaypalPaymentForm');
         return new PaypalPaymentForm($this, $queuedPayment);
     }
 
@@ -218,4 +220,8 @@ class PaypalPaymentPlugin extends PaymethodPlugin
     {
         return "{$this->getPluginPath()}/emailTemplates.xml";
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\paymethod\paypal\PaypalPaymentPlugin', '\PaypalPaymentPlugin');
 }

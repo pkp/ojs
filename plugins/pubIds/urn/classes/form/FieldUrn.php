@@ -1,18 +1,17 @@
 <?php
+
 /**
- * @file plugins/pubIds/urn/classes/form/FieldUrn.inc.php
+ * @file plugins/pubIds/urn/classes/form/FieldUrn.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class FieldUrn
- * @ingroup classes_controllers_form
- *
  * @brief A field for entering a URN and then having the check number generated.
  */
 
-namespace Plugins\Generic\URN;
+namespace APP\plugins\pubIds\urn\classes\form;
 
 use PKP\components\forms\FieldText;
 

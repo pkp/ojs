@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/reports/counter/classes/CounterReport.inc.php
+ * @file plugins/reports/counter/classes/CounterReport.php
  *
  * Copyright (c) 2014 University of Pittsburgh
  * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
@@ -11,6 +11,9 @@
  *
  * @brief A COUNTER report, base class
  */
+
+namespace APP\plugins\reports\counter\classes;
+
 require_once(dirname(__FILE__, 2) . '/classes/COUNTER/COUNTER.php');
 
 define('COUNTER_EXCEPTION_WARNING', 0);
@@ -23,8 +26,6 @@ define('COUNTER_EXCEPTION_BAD_ORDERBY', 64);
 define('COUNTER_EXCEPTION_BAD_RANGE', 128);
 define('COUNTER_EXCEPTION_INTERNAL', 256);
 
-define('COUNTER_CLASS_PREFIX', 'CounterReport');
-
 // COUNTER as of yet is not internationalized and requires English constants
 define('COUNTER_LITERAL_ARTICLE', 'Article');
 define('COUNTER_LITERAL_JOURNAL', 'Journal');
@@ -36,6 +37,7 @@ use PKP\core\PKPString;
 
 class CounterReport
 {
+    public const COUNTER_CLASS_PREFIX = 'CounterReport';
     /**
      * @var string $_release A COUNTER release number
      */
@@ -74,7 +76,7 @@ class CounterReport
      */
     public function getCode()
     {
-        return substr(get_class($this), strlen(COUNTER_CLASS_PREFIX));
+        return substr(get_class($this), strlen(self::COUNTER_CLASS_PREFIX));
     }
 
     /**

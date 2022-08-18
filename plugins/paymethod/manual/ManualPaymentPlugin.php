@@ -1,18 +1,19 @@
 <?php
 
 /**
- * @file plugins/paymethod/manual/ManualPaymentPlugin.inc.php
+ * @file plugins/paymethod/manual/ManualPaymentPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ManualPaymentPlugin
- * @ingroup plugins_paymethod_manual
- *
  * @brief Manual payment plugin class
  */
 
+namespace APP\plugins\paymethod\manual;
+
+use APP\core\Application;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
@@ -198,4 +199,8 @@ class ManualPaymentPlugin extends PaymethodPlugin
     {
         return "{$this->getPluginPath()}/emailTemplates.xml";
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\paymethod\manual\ManualPaymentPlugin', '\ManualPaymentPlugin');
 }

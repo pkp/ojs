@@ -1,23 +1,17 @@
 <?php
 
 /**
- * @file plugins/reports/counter/CounterReportPlugin.inc.php
+ * @file plugins/reports/counter/CounterReportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class CounterReportPlugin
- * @ingroup plugins_reports_counter
- *
  * @brief Counter report plugin
  */
 
-define('OJS_METRIC_TYPE_LEGACY_COUNTER', 'ojs::legacyCounterPlugin');
-
-define('COUNTER_CLASS_SUFFIX', '.inc.php');
-
-import('plugins.reports.counter.classes.CounterReport');
+namespace APP\plugins\reports\counter;
 
 use APP\core\Application;
 use APP\core\Services;
@@ -29,6 +23,8 @@ use PKP\plugins\ReportPlugin;
 
 class CounterReportPlugin extends ReportPlugin
 {
+    public const COUNTER_CLASS_SUFFIX = '.php';
+
     /**
      * @copydoc Plugin::register()
      *
@@ -79,18 +75,18 @@ class CounterReportPlugin extends ReportPlugin
 
     /**
      * List the valid reports
-     * Must exist in the report path as {Report}_r{release}.inc.php
+     * Must exist in the report path as {Report}_r{release}.php
      *
      * @return array multidimentional array release => array( report => reportClassName )
      */
     public function getValidReports()
     {
         $reports = [];
-        $prefix = "{$this->getReportPath()}/" . COUNTER_CLASS_PREFIX;
-        $suffix = COUNTER_CLASS_SUFFIX;
+        $prefix = "{$this->getReportPath()}/" . classes\CounterReport::COUNTER_CLASS_PREFIX;
+        $suffix = self::COUNTER_CLASS_SUFFIX;
         foreach (glob($prefix . '*' . $suffix) as $file) {
             $report_name = substr($file, strlen($prefix), -strlen($suffix));
-            $report_class_file = substr($file, strlen($prefix), -strlen(COUNTER_CLASS_SUFFIX));
+            $report_class_file = substr($file, strlen($prefix), -strlen(self::COUNTER_CLASS_SUFFIX));
             $reports[$report_name] = $report_class_file;
         }
         return $reports;
@@ -98,7 +94,7 @@ class CounterReportPlugin extends ReportPlugin
 
     /**
      * Get a COUNTER Reporter Object
-     * Must exist in the report path as {Report}_r{release}.inc.php
+     * Must exist in the report path as {Report}_r{release}.php
      *
      * @param string $report Report name
      * @param string $release release identifier
@@ -107,10 +103,10 @@ class CounterReportPlugin extends ReportPlugin
      */
     public function getReporter($report, $release)
     {
-        $reportClass = COUNTER_CLASS_PREFIX . $report;
+        $reportClass = classes\CounterReport::COUNTER_CLASS_PREFIX . $report;
         $reportClasspath = 'plugins.reports.counter.classes.reports.';
         $reportPath = str_replace('.', '/', $reportClasspath);
-        if (file_exists($reportPath . $reportClass . COUNTER_CLASS_SUFFIX)) {
+        if (file_exists($reportPath . $reportClass . self::COUNTER_CLASS_SUFFIX)) {
             import($reportPath . $reportClass);
             $reporter = new $reportClass($release);
             return $reporter;

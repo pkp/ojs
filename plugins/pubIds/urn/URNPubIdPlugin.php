@@ -1,18 +1,17 @@
 <?php
 
 /**
- * @file plugins/pubIds/urn/URNPubIdPlugin.inc.php
+ * @file plugins/pubIds/urn/URNPubIdPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2022 Simon Fraser University
+ * Copyright (c) 2003-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class URNPubIdPlugin
- * @ingroup plugins_pubIds_urn
- *
  * @brief URN plugin class
  */
 
+namespace APP\plugins\pubIds\urn;
 
 use APP\core\Application;
 use APP\facades\Repo;
@@ -21,10 +20,10 @@ use APP\issue\IssueGalley;
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
 use APP\template\TemplateManager;
-
 use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
+use PKP\plugins\Hook;
 
 class URNPubIdPlugin extends PubIdPlugin
 {
@@ -164,8 +163,7 @@ class URNPubIdPlugin extends PubIdPlugin
      */
     public function instantiateSettingsForm($contextId)
     {
-        $this->import('classes.form.URNSettingsForm');
-        return new URNSettingsForm($this, $contextId);
+        return new classes\form\URNSettingsForm($this, $contextId);
     }
 
     /**
@@ -492,7 +490,7 @@ class URNPubIdPlugin extends PubIdPlugin
                 }
             }
             if ($galleyUrnEnabled) {
-                foreach ((array) $form->publication->getData('galleys') as $galley) {
+                foreach ($form->publication->getData('galleys') as $galley) {
                     if ($galley->getStoredPubId('other::urn')) {
                         $urnTableRows[] = [$galley->getStoredPubId('other::urn'), __('plugins.pubIds.urn.editor.preview.galleys', ['galleyLabel' => $galley->getGalleyLabel()])];
                     } else {
@@ -596,4 +594,8 @@ class URNPubIdPlugin extends PubIdPlugin
 
         return $quotString[strlen($quotString) - 1];
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\pubIds\urn\URNPubIdPlugin', '\URNPubIdPlugin');
 }

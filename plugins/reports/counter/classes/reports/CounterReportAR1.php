@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @file plugins/reports/counter/classes/reports/CounterReportAR1.inc.php
+ * @file plugins/reports/counter/classes/reports/CounterReportAR1.php
  *
  * Copyright (c) 2014 University of Pittsburgh
  * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
  *
  * @class AR1
- * @ingroup plugins_reports_counter
- *
  * @brief Article Report 1
  */
+
+namespace APP\plugins\reports\counter\classes\reports;
 
 use APP\core\Application;
 use App\core\Services;
@@ -19,9 +19,7 @@ use APP\statistics\StatisticsHelper;
 use PKP\db\DAORegistry;
 use PKP\plugins\PluginRegistry;
 
-import('plugins.reports.counter.classes.CounterReport');
-
-class CounterReportAR1 extends CounterReport
+class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterReport
 {
     /**
      * Get the report title
@@ -201,7 +199,7 @@ class CounterReportAR1 extends CounterReport
                         }
                         break;
                     default:
-                }
+                    }
             }
         }
         $reportItem = [];

@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/generic/driver/DRIVERPlugin.inc.php
+ * @file plugins/generic/driver/DRIVERPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DRIVERPlugin
- * @ingroup plugins_generic_driver
- *
  * @brief DRIVER plugin class
  */
+
+namespace APP\plugins\generic\driver;
 
 use APP\facades\Repo;
 
@@ -36,7 +36,6 @@ class DRIVERPlugin extends GenericPlugin
     {
         $success = parent::register($category, $path, $mainContextId);
         if ($success && $this->getEnabled($mainContextId)) {
-            $this->import('DRIVERDAO');
             $driverDao = new DRIVERDAO();
             DAORegistry::registerDAO('DRIVERDAO', $driverDao);
 
@@ -73,7 +72,7 @@ class DRIVERPlugin extends GenericPlugin
     public function sets($hookName, $params)
     {
         $sets = & $params[5];
-        array_push($sets, new OAISet('driver', 'Open Access DRIVERset', ''));
+        array_push($sets, new \PKP\OAI\OAISet('driver', 'Open Access DRIVERset', ''));
         return false;
     }
 
@@ -237,4 +236,8 @@ class DRIVERPlugin extends GenericPlugin
         }
         return false;
     }
+}
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\driver\DRIVERPlugin', '\DRIVERPlugin');
 }

@@ -1,25 +1,23 @@
 <?php
 
 /**
- * @file plugins/reports/counter/classes/reports/CounterReportJR1.inc.php
+ * @file plugins/reports/counter/classes/reports/CounterReportJR1.php
  *
  * Copyright (c) 2014 University of Pittsburgh
  * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
  *
  * @class CounterReportJR1
- * @ingroup plugins_reports_counter
- *
  * @brief Journal Report 1
  */
+
+namespace APP\plugins\reports\counter\classes\reports;
 
 use APP\core\Application;
 use APP\core\Services;
 use APP\statistics\StatisticsHelper;
 use PKP\db\DAORegistry;
 
-import('plugins.reports.counter.classes.CounterReport');
-
-class CounterReportJR1 extends CounterReport
+class CounterReportJR1 extends \APP\plugins\reports\counter\classes\CounterReport
 {
     /**
      * Get the report title
