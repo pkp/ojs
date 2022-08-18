@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
-"PO-Revision-Date: 2022-08-18 10:23+0000\n"
+"PO-Revision-Date: 2022-08-18 15:34+0000\n"
 "Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/nb_NO/>\n"
@@ -80,4 +80,19 @@ msgid "plugins.themes.default.option.displayStats.label"
 msgstr "Visningsvalg for bruksstatistikk"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr "Vis ikke diagram over innleveringsstatistikk for leseren."
+msgstr "Vis ikke diagram for innleveringsstatistikk for leseren."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Bruk søylediagram for visning av bruksstatistikk."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Bruk linjediagram for visning av bruksstatistikk."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Mai Jun Jul Aug Sep Okt Nov Des"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Nedlastinger"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Nedlastingsdata er foreløpig ikke tilgjengelig."
