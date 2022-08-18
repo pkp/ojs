@@ -103,11 +103,10 @@ class ArticleReportPlugin extends ReportPlugin
         foreach ($submissions as $submission) {
             $publication = $submission->getCurrentPublication();
             $maxAuthors = max($maxAuthors, count($publication->getData('authors')));
-            $editDecisions = Repo::decision()->getMany(
-                Repo::decision()
-                    ->getCollector()
-                    ->filterBySubmissionIds([$submission->getId()])
-            );
+            $editDecisions = Repo::decision()->getCollector()
+                ->filterBySubmissionIds([$submission->getId()])
+                ->getMany();
+
             $statusMap = $submission->getStatusMap();
 
             // Count the highest number of decisions per editor.

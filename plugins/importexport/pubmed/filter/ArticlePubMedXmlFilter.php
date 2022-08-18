@@ -130,12 +130,10 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $historyNode = $doc->createElement('History');
             $historyNode->appendChild($this->generatePubDateDom($doc, $submission->getDateSubmitted(), 'received'));
 
-            $editDecisions = Repo::decision()->getMany(
-                Repo::decision()
-                    ->getCollector()
-                    ->filterBySubmissionIds([$submission->getId()])
-            );
-            $editorDecision = $editDecisions->first(fn (Decision $decision, $key) => $decision->getData('decision') === Decision::ACCEPT);
+            $editorDecision = Repo::decision()->getCollector()
+                ->filterBySubmissionIds([$submission->getId()])
+                ->getMany()
+                ->first(fn (Decision $decision, $key) => $decision->getData('decision') === Decision::ACCEPT);
 
             if ($editorDecision) {
                 $historyNode->appendChild($this->generatePubDateDom($doc, $editorDecision->getData('dateDecided'), 'accepted'));
