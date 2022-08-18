@@ -106,10 +106,11 @@ class IssueEntryForm extends FormComponent
 
         // Categories
         $categoryOptions = [];
-        $categories = iterator_to_array(Repo::category()->getMany(
-            Repo::category()->getCollector()
-                ->filterByContextIds([$publicationContext->getId()])
-        ));
+        $categories = Repo::category()->getCollector()
+            ->filterByContextIds([$publicationContext->getId()])
+            ->getMany()
+            ->toArray();
+
         foreach ($categories as $category) {
             $label = $category->getLocalizedTitle();
             if ($category->getParentId()) {
