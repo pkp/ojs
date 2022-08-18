@@ -87,12 +87,11 @@ class RecommendByAuthorPlugin extends GenericPlugin
             // false positives or miss some entries. But there's no other way
             // until OJS allows users to consistently normalize authors (via name,
             // email, ORCID, whatever).
-            $authorsIterator = Repo::author()->getMany(
-                Repo::author()
-                    ->getCollector()
-                    ->filterByContextIds([$displayedArticle->getData('contextId')])
-                    ->filterByName($author->getLocalizedGivenName(), $author->getLocalizedFamilyName())
-            );
+            $authorsIterator = Repo::author()
+                ->getCollector()
+                ->filterByContextIds([$displayedArticle->getData('contextId')])
+                ->filterByName($author->getLocalizedGivenName(), $author->getLocalizedFamilyName())
+                ->getMany();
 
             $publicationIds = [];
             foreach ($authorsIterator as $thisAuthor) {
