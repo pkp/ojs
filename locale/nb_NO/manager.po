@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-08-17 11:15+0000\n"
+"PO-Revision-Date: 2022-08-18 15:34+0000\n"
 "Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
@@ -1922,9 +1922,10 @@ msgstr ""
 msgid "manager.sections.confirmDelete"
 msgstr "Er du sikker på at du ønsker å slette denne seksjonen for godt?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner."
+msgstr ""
+"Før du kan slette denne seksjonen, må artiklene som er sendt inn til "
+"seksjonen overføres til andre seksjoner."
 
 msgid "manager.plugins.settings"
 msgstr "Innstillinger"
@@ -2447,9 +2448,11 @@ msgstr ""
 "Velg publiseringsobjekter som skal ha tildelt Digital Object Identifiers "
 "(DOI):"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Velg objektene DOI-er skal tilordnes til."
+msgstr ""
+"Velg de objektene som skal tildeles DOI-er. De fleste tidsskrifter tildeler "
+"DOI-er til artikler, men du kan velge å tildele DOI-er til alle publiserte "
+"objekt."
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2493,11 +2496,10 @@ msgstr "DOI for denne publikationen blir {$doi}."
 msgid "doi.editor.missingPrefix"
 msgstr "DOI skal begynne med {$doiPrefix}."
 
-#, fuzzy
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
-"DOI {$pubId} har blitt tildelt. For å endre DOI-en kan du gå til <a href=\""
-"{$doiManagementLink}\">DOI Management siden</a>."
+"DOI-en {$pubId} har blitt tildelt. For å endre DOI-en kan du gå til <a href="
+"\"{$doiManagementLink}\">DOI-innstillinger</a>."
 
 msgid "doi.editor.assignDoi.pattern"
 msgstr "DOI {$pubId} kan ikke tildeles fordi det inneholder et ukjent mønster."
@@ -2791,3 +2793,54 @@ msgid "mailable.openAccessNotify.description"
 msgstr ""
 "Denne e-posten sendes til registrerte lesere som har bedt om å bli varslet "
 "når utgivelser blir åpent tilgjengelig."
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domene"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Varsel om abonnement"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Varsel om åpen tilgang"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Varsel om publisert nummer"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Denne e-posten sendes automatisk til registrerte brukere når et nytt nummer "
+"publiseres."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Denne e-posten gir forfatteren beskjed om at manuskriptet avvises før "
+"fagfellevurdering, fordi manuskriptet ikke oppfyller kravene til publisering "
+"i tidsskriftet."
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Tidsskriftets e-postsignatur til automatiserte e-post"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Artikkeloppsett, for eksempel en publisert PDF"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "tidsskriftets initialer"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Abonnentens navn, institusjonelle tilknytning, telefonnummer og e-postadresse"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institusjon"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Vær vennlig å velge en gyldig institusjon."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "En institusjon må opprettes før nye abonnement kan opprettes."
+
+msgid "stats.issueTOCViews"
+msgstr "Visninger av innholdsfortegnelse for nummer"
+
+msgid "manager.institutions.noContext"
+msgstr "Tidsskriftet til denne institusjonen kunne ikke finnes."
