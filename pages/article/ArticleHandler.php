@@ -245,10 +245,10 @@ class ArticleHandler extends Handler
         }
 
         $templateMgr->assign([
-            'categories' => iterator_to_array(Repo::category()->getMany(
-                Repo::category()->getCollector()
-                    ->filterByPublicationIds([$publication->getId()])
-            ))
+            'categories' => Repo::category()->getCollector()
+                ->filterByPublicationIds([$publication->getId()])
+                ->getMany()
+                ->toArray()
         ]);
 
         // Get galleys sorted into primary and supplementary groups
