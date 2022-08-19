@@ -68,8 +68,10 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
             $this->addErrorField('typeId');
         }
 
-        $collector = Repo::institution()->getCollector()->filterByContextIds([$journalId]);
-        $institutions = Repo::institution()->getMany($collector)->values();
+        $institutions = Repo::institution()->getCollector()
+            ->filterByContextIds([$journalId])
+            ->getMany();
+
         $this->institutions = [];
         foreach ($institutions as $institution) {
             $this->institutions[$institution->getId()] = $institution->getLocalizedName();
