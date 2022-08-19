@@ -164,15 +164,15 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $contents = Services::get('file')->fs->read($submissionFile->getData('path'));
 
         // Replace media file references
-        $collector = Repo::submissionFile()
+        $embeddableFiles = Repo::submissionFile()
             ->getCollector()
             ->filterByAssoc(
                 Application::ASSOC_TYPE_SUBMISSION_FILE,
                 [$submissionFile->getId()]
             )
             ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
-            ->includeDependentFiles();
-        $embeddableFiles = Repo::submissionFile()->getMany($collector);
+            ->includeDependentFiles()
+            ->getMany();
 
         $referredArticle = null;
         foreach ($embeddableFiles as $embeddableFile) {

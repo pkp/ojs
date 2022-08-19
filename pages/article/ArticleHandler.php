@@ -417,11 +417,11 @@ class ArticleHandler extends Handler
         }
         $suppId = $args[1] ?? 0;
 
-        $collector = Repo::submissionFile()
+        $submissionFiles = Repo::submissionFile()
             ->getCollector()
-            ->filterBySubmissionIds([$article->getId()]);
+            ->filterBySubmissionIds([$article->getId()])
+            ->getMany();
 
-        $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
                 $articleGalleys = Repo::galley()->getCollector()
@@ -466,17 +466,17 @@ class ArticleHandler extends Handler
 
             // If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
             if ($this->fileId != $this->galley->getData('submissionFileId')) {
-                $collector = Repo::submissionFile()
+                $dependentFileIds = Repo::submissionFile()
                     ->getCollector()
                     ->filterByAssoc(
                         ASSOC_TYPE_SUBMISSION_FILE,
                         [$this->galley->getData('submissionFileId')]
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
-                    ->includeDependentFiles();
-                $dependentFileIds = Repo::submissionFile()
-                    ->getIds($collector)
+                    ->includeDependentFiles()
+                    ->getIds()
                     ->toArray();
+
                 if (!in_array($this->fileId, $dependentFileIds)) {
                     $request->getDispatcher()->handle404();
                 }
