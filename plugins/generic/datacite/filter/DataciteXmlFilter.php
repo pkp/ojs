@@ -595,12 +595,12 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 break;
             case isset($issue):
                 // Parts: articles in this issue.
-                $submissions = Repo::submission()->getMany(
-                    Repo::submission()
-                        ->getCollector()
-                        ->filterByContextIds([$issue->getJournalId()])
-                        ->filterByIssueIds([$issue->getId()])
-                );
+                $submissions = Repo::submission()
+                    ->getCollector()
+                    ->filterByContextIds([$issue->getJournalId()])
+                    ->filterByIssueIds([$issue->getId()])
+                    ->getMany();
+
                 foreach ($submissions as $relatedArticle) {
                     $doi = $relatedArticle->getDoi();
                     if (!empty($doi)) {
@@ -906,12 +906,12 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function getIssueToc($issue, $objectLocalePrecedence)
     {
-        $submissions = Repo::submission()->getMany(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$issue->getJournalId()])
-                ->filterByIssueIds([$issue->getId()])
-        );
+        $submissions = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->getMany();
+
         $toc = '';
         foreach ($submissions as $submissionInIssue) {
             $currentEntry = $this->getPrimaryTranslation($submissionInIssue->getTitle(null), $objectLocalePrecedence);

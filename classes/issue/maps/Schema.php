@@ -101,12 +101,11 @@ class Schema extends \PKP\core\maps\Schema
                 case 'articles':
                     $data = [];
 
-                    $submissions = Repo::submission()->getMany(
-                        Repo::submission()
-                            ->getCollector()
-                            ->filterByContextIds([$issue->getJournalId()])
-                            ->filterByIssueIds([$issue->getId()])
-                    );
+                    $submissions = Repo::submission()
+                        ->getCollector()
+                        ->filterByContextIds([$issue->getJournalId()])
+                        ->filterByIssueIds([$issue->getId()])
+                        ->getCount();
 
                     foreach ($submissions as $submission) {
                         $data[] = Repo::submission()->getSchemaMap()->summarize($submission, $this->userGroups, $this->genres);

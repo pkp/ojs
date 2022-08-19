@@ -98,7 +98,7 @@ class ArticleReportPlugin extends ReportPlugin
         // dimensions until it has all been loaded.)
         $results = $sectionTitles = [];
         $collector = Repo::submission()->getCollector()->filterByContextIds([$context->getId()]);
-        $submissions = Repo::submission()->getMany($collector);
+        $submissions = $collector->getMany();
         $maxAuthors = $maxEditors = $maxDecisions = 0;
         foreach ($submissions as $submission) {
             $publication = $submission->getCurrentPublication();

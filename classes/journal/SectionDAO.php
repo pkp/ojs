@@ -327,8 +327,10 @@ class SectionDAO extends PKPSectionDAO
     public function deleteById($sectionId, $contextId = null)
     {
         // No articles should exist in this section
-        $collector = Repo::submission()->getCollector()->filterBySectionIds([(int) $sectionId])->filterByContextIds([Application::CONTEXT_ID_ALL]);
-        $count = Repo::submission()->getCount($collector);
+        $count = Repo::submission()->getCollector()
+            ->filterBySectionIds([(int) $sectionId])
+            ->filterByContextIds([Application::CONTEXT_ID_ALL])
+            ->getCount();
         if ($count) {
             throw new Exception('Tried to delete a section that has one or more submissions assigned to it.');
         }
@@ -397,13 +399,12 @@ class SectionDAO extends PKPSectionDAO
         if (!$issue->getPublished()) {
             $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
-        $collector = Repo::submission()->getCollector();
-        $collector
+        $submissions = Repo::submission()->getCollector()
             ->filterByContextIds([$issue->getJournalId()])
             ->filterByIssueIds([$issueId])
             ->filterByStatus($allowedStatuses)
-            ->orderBy($collector::ORDERBY_SEQUENCE, $collector::ORDER_DIR_ASC);
-        $submissions = Repo::submission()->getMany($collector);
+            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
+            ->getMany();
         $sectionIds = [];
         foreach ($submissions as $submission) {
             $sectionIds[] = $submission->getCurrentPublication()->getData('sectionId');

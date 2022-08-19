@@ -363,11 +363,12 @@ class IssueGridHandler extends GridHandler
         }
 
         // remove all published submissions and return original articles to editing queue
-        $collector = Repo::submission()
+        $submissions = Repo::submission()
             ->getCollector()
             ->filterByContextIds([$issue->getData('journalId')])
-            ->filterByIssueIds([$issue->getId()]);
-        $submissions = Repo::submission()->getMany($collector);
+            ->filterByIssueIds([$issue->getId()])
+            ->getMany();
+
         foreach ($submissions as $submission) {
             $publications = (array) $submission->getData('publications');
             foreach ($publications as $publication) {
@@ -577,13 +578,11 @@ class IssueGridHandler extends GridHandler
             // versions of the same submission are published in distinct issues. In
             // such cases, the submission will be STATUS_PUBLISHED but the
             // publication will be STATUS_SCHEDULED.
-            $submissions = Repo::submission()->getMany(
-                Repo::submission()
-                    ->getCollector()
-                    ->filterByContextIds([$issue->getJournalId()])
-                    ->filterByIssueIds([$issue->getId()])
-                    ->filterByStatus([Submission::STATUS_SCHEDULED, Submission::STATUS_PUBLISHED])
-            );
+            $submissions = Repo::submission()->getCollector()
+                ->filterByContextIds([$issue->getJournalId()])
+                ->filterByIssueIds([$issue->getId()])
+                ->filterByStatus([Submission::STATUS_SCHEDULED, Submission::STATUS_PUBLISHED])
+                ->getMany();
 
             foreach ($submissions as $submission) { /** @var Submission $submission */
                 $publications = $submission->getData('publications');
@@ -655,12 +654,10 @@ class IssueGridHandler extends GridHandler
         Repo::doi()->issueUpdated($issue);
 
         // insert article tombstones for all articles
-        $submissions = Repo::submission()->getMany(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$issue->getJournalId()])
-                ->filterByIssueIds([$issue->getId()])
-        );
+        $submissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->getMany();
 
         foreach ($submissions as $submission) { /** @var Submission $submission */
             $publications = $submission->getData('publications');

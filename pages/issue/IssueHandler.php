@@ -347,14 +347,13 @@ class IssueHandler extends Handler
             $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
         }
 
-        $collector = Repo::submission()->getCollector();
-        $issueSubmissions = Repo::submission()->getMany(
-            $collector
-                ->filterByContextIds([$issue->getJournalId()])
-                ->filterByIssueIds([$issue->getId()])
-                ->filterByStatus($allowedStatuses)
-                ->orderBy($collector::ORDERBY_SEQUENCE, $collector::ORDER_DIR_ASC)
-        );
+        $issueSubmissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->filterByStatus($allowedStatuses)
+            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
+            ->getMany();
+
         $sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];
         foreach ($sections as $section) {

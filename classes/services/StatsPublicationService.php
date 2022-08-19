@@ -35,13 +35,13 @@ class StatsPublicationService extends \PKP\services\PKPStatsPublicationService
      */
     public function getSubmissionIdsByIssue(array $issueIds, ?array $submissionIds): array
     {
-        $issueIdsSubmissionIds = Repo::submission()->getIds(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
-                ->filterByStatus([Submission::STATUS_PUBLISHED])
-                ->filterByIssueIds($issueIds)
-        )->toArray();
+        $issueIdsSubmissionIds = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
+            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->filterByIssueIds($issueIds)
+            ->getIds()
+            ->toArray();
 
         if ($submissionIds !== null && !empty($submissionIds)) {
             $submissionIds = array_intersect($submissionIds, $issueIdsSubmissionIds);

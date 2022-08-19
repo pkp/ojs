@@ -314,11 +314,11 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     echo __('search.cli.rebuildIndex.indexing', ['journalName' => $journal->getLocalizedName()]) . ' ... ';
                 }
 
-                $submissions = Repo::submission()->getMany(
-                    Repo::submission()
-                        ->getCollector()
-                        ->filterByContextIds([$journal->getId()])
-                );
+                $submissions = Repo::submission()
+                    ->getCollector()
+                    ->filterByContextIds([$journal->getId()])
+                    ->getMany();
+
                 foreach ($submissions as $submission) {
                     if ($submission->getSubmissionProgress() == 0) { // Not incomplete
                         $this->submissionMetadataChanged($submission);

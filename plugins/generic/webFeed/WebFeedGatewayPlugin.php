@@ -138,7 +138,11 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
         $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
 
         if ($displayItems == 'recent' && $recentItems > 0) {
-            $submissionsIterator = Repo::submission()->getMany(['contextId' => $journal->getId(), 'status' => PKPSubmission::STATUS_PUBLISHED, 'count' => $recentItems]);
+            $submissionsIterator = Repo::submission()->getCollector()
+                ->filterByContextIds([$journal->getId()])
+                ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+                ->limit($recentItems)
+                ->getMany();
             $submissionsInSections = [];
             foreach ($submissionsIterator as $submission) {
                 $submissionsInSections[]['articles'][] = $submission;

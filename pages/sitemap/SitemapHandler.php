@@ -48,13 +48,13 @@ class SitemapHandler extends PKPSitemapHandler
             foreach ($publishedIssues as $issue) {
                 $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
                 // Articles for issue
-                $submissions = Repo::submission()->getMany(
-                    Repo::submission()
-                        ->getCollector()
-                        ->filterByContextIds([$journal->getId()])
-                        ->filterByIssueIds([$issue->getId()])
-                        ->filterByStatus([Submission::STATUS_PUBLISHED])
-                );
+                $submissions = Repo::submission()
+                    ->getCollector()
+                    ->filterByContextIds([$journal->getId()])
+                    ->filterByIssueIds([$issue->getId()])
+                    ->filterByStatus([Submission::STATUS_PUBLISHED])
+                    ->getMany();
+
                 foreach ($submissions as $submission) {
                     // Abstract
                     $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId()])));
