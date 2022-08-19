@@ -1,8 +1,9 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
+# Tormod Strømme <tormod.stromme@uib.no>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-10 13:56+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"PO-Revision-Date: 2022-08-19 13:09+0000\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Publikasjonen som du forespurte er ikke del av denne innleveringen."
@@ -75,3 +76,6 @@ msgstr ""
 
 msgid "api.dois.400.contextsNotMatched"
 msgstr "DOI-en du spurte etter tilhører ikke dette tidsskriftet."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Innleveringen som du etterspurte finnes ikke i dette tidsskriftet."
