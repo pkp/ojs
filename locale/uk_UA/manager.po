@@ -1,11 +1,12 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
+# Pavel Usenko <mail@openscience.in.ua>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
 "PO-Revision-Date: 2022-08-19 23:35+0000\n"
-"Last-Translator: IgorVeha <igor.veha@gmail.com>\n"
+"Last-Translator: Pavel Usenko <mail@openscience.in.ua>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "uk_UA/>\n"
 "Language: uk_UA\n"
@@ -2147,3 +2148,24 @@ msgstr ""
 "Цей електронний лист повідомляє автора про те, що його заявка відхиляється "
 "до етапу рецензування, оскільки заявка не відповідає вимогам для публікації "
 "в журналі."
+
+msgid "manager.distribution.publication"
+msgstr "Публікація"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Режим публікації"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Використовувати дату публікації статті"
+
+msgid "manager.setup.homepageContent"
+msgstr "Вміст домашньої сторінки журналу"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Вступ"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Використовувати дату публікації випуску"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Відображати на домашній сторінці"
