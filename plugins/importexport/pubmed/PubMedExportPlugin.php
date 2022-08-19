@@ -182,12 +182,12 @@ class PubMedExportPlugin extends ImportExportPlugin
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
-        $submissions = Repo::submission()->getMany(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$context->getId()])
-                ->filterByIssueIds($issueIds)
-        );
+        $submissions = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByIssueIds($issueIds)
+            ->getMany();
+
         libxml_use_internal_errors(true);
         $submissionXml = $exportFilter->execute($submissions->toArray(), true);
         $xml = $submissionXml->saveXml();

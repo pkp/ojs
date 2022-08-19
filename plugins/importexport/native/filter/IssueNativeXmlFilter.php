@@ -222,12 +222,12 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $currentFilter = PKPImportExportFilter::getFilter('article=>native-xml', $this->getDeployment(), $this->opts);
         $currentFilter->setIncludeSubmissionsNode(true);
 
-        $submissions = Repo::submission()->getMany(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$issue->getJournalId()])
-                ->filterByIssueIds([$issue->getId()])
-        )->toArray();
+        $submissions = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->getMany()
+            ->toArray();
 
         $articlesDoc = $currentFilter->execute($submissions);
         if ($articlesDoc->documentElement instanceof \DOMElement) {

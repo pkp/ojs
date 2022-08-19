@@ -129,12 +129,12 @@ class ResolverPlugin extends GatewayPlugin
                 $issue = $issues->first();
                 unset($issues);
 
-                $submissions = Repo::submission()->getMany(
-                    Repo::submission()
-                        ->getCollector()
-                        ->filterByContextIds([$issue->getJournalId()])
-                        ->filterByIssueIds([$issue->getId()])
-                );
+                $submissions = Repo::submission()
+                    ->getCollector()
+                    ->filterByContextIds([$issue->getJournalId()])
+                    ->filterByIssueIds([$issue->getId()])
+                    ->getMany();
+
                 foreach ($submissions as $submission) {
                     // Look for the correct page in the list of articles.
                     $matches = null;

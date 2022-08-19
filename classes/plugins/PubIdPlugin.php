@@ -77,12 +77,11 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
             }
             if ($submissionEnabled || $representationEnabled) {
                 $representationDao = Application::getRepresentationDAO();
-                $submissions = Repo::submission()->getMany(
-                    Repo::submission()
-                        ->getCollector()
-                        ->filterByContextIds([$context->getId()])
-                        ->filterByStatus([Submission::STATUS_PUBLISHED])
-                );
+                $submissions = Repo::submission()->getCollector()
+                    ->filterByContextIds([$context->getId()])
+                    ->filterByStatus([Submission::STATUS_PUBLISHED])
+                    ->getMany();
+
                 foreach ($submissions as $submission) {
                     $publications = $submission->getData('publications');
                     if ($submissionEnabled) {
@@ -353,12 +352,11 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
 
         $pubIdType = $this->getPubIdType();
 
-        $submissionIds = Repo::submission()->getIds(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$issue->getJournalId()])
-                ->filterByIssueIds([$issue->getId()])
-        );
+        $submissionIds = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->getIds();
 
         foreach ($submissionIds as $submissionId) {
             $submission = Repo::submission()->get($submissionId);

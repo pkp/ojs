@@ -88,13 +88,13 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
         // Identify submissions which should be included in the results when issue IDs are passed
         if (isset($validFilters['issueIds'])) {
             $submissionIds = isset($validFilters['submissionIds']) ?? [];
-            $issueIdsSubmissionIds = Repo::submission()->getIds(
-                Repo::submission()
-                    ->getCollector()
-                    ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
-                    ->filterByStatus([\APP\submission\Submission::STATUS_PUBLISHED])
-                    ->filterByIssueIds($validFilters['issueIds'])
-            )->toArray();
+            $issueIdsSubmissionIds = Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
+                ->filterByStatus([\APP\submission\Submission::STATUS_PUBLISHED])
+                ->filterByIssueIds($validFilters['issueIds'])
+                ->getIds()
+                ->toArray();
 
             if (!empty($submissionIds)) {
                 $submissionIds = array_intersect($submissionIds, $issueIdsSubmissionIds);

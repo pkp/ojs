@@ -67,12 +67,12 @@ class ArticleTombstoneManager
      */
     public function insertTombstonesByContext(Context $context)
     {
-        $submissions = Repo::submission()->getMany(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$context->getId()])
-                ->filterByStatus([Submission::STATUS_PUBLISHED])
-        );
+        $submissions = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->getMany();
+
         foreach ($submissions as $submission) {
             $this->insertArticleTombstone($submission, $context);
         }
@@ -84,12 +84,11 @@ class ArticleTombstoneManager
     public function deleteTombstonesByContextId(int $contextId)
     {
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
-        $submissions = Repo::submission()->getMany(
-            Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$contextId])
-                ->filterByStatus([Submission::STATUS_PUBLISHED])
-        );
+        $submissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$contextId])
+            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->getMany();
+
         foreach ($submissions as $submission) {
             $tombstoneDao->deleteByDataObjectId($submission->getId());
         }

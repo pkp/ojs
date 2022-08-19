@@ -655,11 +655,11 @@ class Issue extends \PKP\core\DataObject
      */
     public function getNumArticles()
     {
-        $collector = Repo::submission()->getCollector()
+        return Repo::submission()->getCollector()
             ->filterByContextIds([$this->getData('journalId')])
             ->filterByIssueIds([$this->getId()])
-            ->filterByStatus([PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED]);
-        return Repo::submission()->getCount($collector);
+            ->filterByStatus([PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED])
+            ->getCount();
     }
 
     /**
