@@ -100,12 +100,11 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                     }
                     if ($representationEnabled) {
                         foreach ($publications as $publication) {
-                            $representations = Repo::galley()->getMany(
-                                Repo::galley()
-                                    ->getCollector()
-                                    ->filterByPublicationIds([$publication->getId()])
-                            );
-                            while ($representation = $representations->next()) {
+                            $representations = Repo::galley()->getCollector()
+                                ->filterByPublicationIds([$publication->getId()])
+                                ->getMany();
+
+                            foreach ($representations as $representation) {
                                 $representationPubId = $representation->getStoredPubId($this->getPubIdType());
                                 if (empty($representationPubId)) {
                                     $representationPubId = $this->getPubId($representation);

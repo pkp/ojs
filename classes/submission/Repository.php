@@ -114,11 +114,10 @@ class Repository extends \PKP\submission\Repository
 
         // Galleys
         if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION)) {
-            $galleys = Repo::galley()->getMany(
-                Repo::galley()
-                    ->getCollector()
-                    ->filterByPublicationIds(['publicationIds' => $publication->getId()])
-            );
+            $galleys = Repo::galley()->getCollector()
+                ->filterByPublicationIds(['publicationIds' => $publication->getId()])
+                ->getMany();
+
             foreach ($galleys as $galley) {
                 if (empty($galley->getData('doiId'))) {
                     try {

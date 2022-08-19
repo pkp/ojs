@@ -162,9 +162,9 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc \PKP\publication\Repository::delete() */
     public function delete(Publication $publication)
     {
-        $collector = Repo::galley()->getCollector();
-        $collector->filterByPublicationIds([$publication->getId()]);
-        $galleys = Repo::galley()->getMany($collector);
+        $galleys = Repo::galley()->getCollector()
+            ->filterByPublicationIds([$publication->getId()])
+            ->getMany();
 
         foreach ($galleys as $galley) {
             Repo::galley()->delete($galley);

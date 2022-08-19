@@ -59,14 +59,11 @@ class SitemapHandler extends PKPSitemapHandler
                     // Abstract
                     $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId()])));
                     // Galley files
+                    $galleys = Repo::galley()
+                        ->getCollector()
+                        ->filterByPublicationIds([($submission->getCurrentPublication()->getId())])
+                        ->getMany();
 
-
-
-                    $galleys = Repo::galley()->getMany(
-                        Repo::galley()
-                            ->getCollector()
-                            ->filterByPublicationIds([($submission->getCurrentPublication()->getId())])
-                    );
                     foreach ($galleys as $galley) {
                         $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'article', 'view', [$submission->getBestId(), $galley->getBestGalleyId()])));
                     }
