@@ -209,11 +209,9 @@ class Repository extends \PKP\doi\Repository
             }
 
             // Galleys
-            $galleys = Repo::galley()->getMany(
-                Repo::galley()
-                    ->getCollector()
-                    ->filterByPublicationIds(['publicationIds' => $publication->getId()])
-            );
+            $galleys = Repo::galley()->getCollector()
+                ->filterByPublicationIds(['publicationIds' => $publication->getId()])
+                ->getMany();
 
             foreach ($galleys as $galley) {
                 $galleyDoiId = $galley->getData('doiId');

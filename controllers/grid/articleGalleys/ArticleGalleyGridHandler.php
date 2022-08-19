@@ -229,12 +229,9 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function loadData($request, $filter = null)
     {
-        $galleys = Repo::galley()->getMany(
-            Repo::galley()
-                ->getCollector()
-                ->filterByPublicationIds([$this->getPublication()->getId()])
-        );
-        return $galleys;
+        return Repo::galley()->getCollector()
+            ->filterByPublicationIds([$this->getPublication()->getId()])
+            ->getMany();
     }
 
     //

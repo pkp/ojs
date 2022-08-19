@@ -424,11 +424,10 @@ class ArticleHandler extends Handler
         $submissionFiles = Repo::submissionFile()->getMany($collector);
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
-                $articleGalleys = Repo::galley()->getMany(
-                    Repo::galley()
-                        ->getCollector()
-                        ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
-                );
+                $articleGalleys = Repo::galley()->getCollector()
+                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+                    ->getMany();
+
                 foreach ($articleGalleys as $articleGalley) {
                     $galleyFile = Repo::submissionFile()->get($articleGalley->getData('submissionFileId'));
                     if ($galleyFile && $galleyFile->getData('submissionFileId') == $submissionFile->getId()) {

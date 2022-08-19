@@ -154,12 +154,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $driverVersion = 'info:eu-repo/semantics/publishedVersion';
         $dc11Description->addStatement('dc:type', $driverVersion, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 
-
-        $galleys = Repo::galley()->getMany(
-            Repo::galley()
-                ->getCollector()
-                ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
-        );
+        $galleys = Repo::galley()->getCollector()
+            ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+            ->getMany();
 
         // Format
         foreach ($galleys as $galley) {

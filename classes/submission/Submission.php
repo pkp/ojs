@@ -192,11 +192,10 @@ class Submission extends PKPSubmission
 
         $this->setData(
             'galleys',
-            Repo::galley()->getMany(
-                Repo::galley()
-                    ->getCollector()
-                    ->filterByPublicationIds([$this->getCurrentPublication()->getId()])
-            )->toArray()
+            Repo::galley()->getCollector()
+                ->filterByPublicationIds([$this->getCurrentPublication()->getId()])
+                ->getMany()
+                ->toArray()
         );
 
         return $this->getData('galleys');
