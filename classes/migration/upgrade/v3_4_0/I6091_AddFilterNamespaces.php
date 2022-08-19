@@ -59,6 +59,7 @@ class I6091_AddFilterNamespaces extends \PKP\migration\Migration
         'lib.pkp.classes.task.EditorialReminders' => 'PKP\task\EditorialReminders',
         'lib.pkp.classes.task.UpdateIPGeoDB' => 'PKP\task\UpdateIPGeoDB',
         'classes.tasks.UsageStatsLoader' => 'APP\tasks\UsageStatsLoader',
+        'plugins.importexport.doaj.DOAJInfoSender' => 'APP\plugins\importexport\doaj\DOAJInfoSender',
     ];
 
     /**

@@ -16,7 +16,7 @@
 <!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
 
 <scheduled_tasks>
-	<task class="plugins.importexport.doaj.DOAJInfoSender">
+	<task class="APP\plugins\importexport\doaj\DOAJInfoSender">
 		<descr>Deposit articles to DOAJ and update statuses.</descr>
 		<frequency minute="0"/>
 	</task>
