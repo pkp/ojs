@@ -62,11 +62,11 @@ class OpenAccessNotification extends ScheduledTask
 
                 if ($accessStatus == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0, 0, 0, $curMonth, $curDay, $curYear)) {
                     // Notify all users who have open access notification set for this journal
-                    $users = Repo::user()->getMany(
-                        Repo::user()->getCollector()
-                            ->filterByContextIds([$journal->getId()])
-                            ->filterBySettings(['openAccessNotification' => 1])
-                    );
+                    $users = Repo::user()->getCollector()
+                        ->filterByContextIds([$journal->getId()])
+                        ->filterBySettings(['openAccessNotification' => 1])
+                        ->getMany();
+
                     if ($users->isNotEmpty()) {
                         $userChunks = $users->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT);
                         foreach ($userChunks as $chunk) {
