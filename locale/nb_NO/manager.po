@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-08-18 15:34+0000\n"
+"PO-Revision-Date: 2022-08-19 13:09+0000\n"
 "Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
@@ -2844,3 +2844,21 @@ msgstr "Visninger av innholdsfortegnelse for nummer"
 
 msgid "manager.institutions.noContext"
 msgstr "Tidsskriftet til denne institusjonen kunne ikke finnes."
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Sluttdato for abonnementet"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Navn på institusjon"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Postadressen til institusjonen"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL-en til abonnementssiden"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Kontaktopplysninger til abonnementskontakten"
+
+msgid "stats.issueGalleyViews"
+msgstr "Visninger av nummerets oppsett"
