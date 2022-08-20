@@ -105,7 +105,7 @@ class Schema extends \PKP\core\maps\Schema
                         ->getCollector()
                         ->filterByContextIds([$issue->getJournalId()])
                         ->filterByIssueIds([$issue->getId()])
-                        ->getCount();
+                        ->getMany();
 
                     foreach ($submissions as $submission) {
                         $data[] = Repo::submission()->getSchemaMap()->summarize($submission, $this->userGroups, $this->genres);
