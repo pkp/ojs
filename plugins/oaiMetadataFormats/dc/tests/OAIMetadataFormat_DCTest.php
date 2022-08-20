@@ -37,8 +37,8 @@ use PKP\core\PKPRouter;
 use PKP\core\Registry;
 use PKP\db\DAORegistry;
 use PKP\doi\Doi;
+use PKP\galley\Collector as GalleyCollector;
 use PKP\galley\Galley;
-use PKP\galley\Repository as GalleyRepository;
 use PKP\oai\OAIRecord;
 use PKP\submission\SubmissionKeywordDAO;
 use PKP\submission\SubmissionSubjectDAO;
@@ -67,7 +67,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
      */
     protected function getMockedContainerKeys(): array
     {
-        return [...parent::getMockedContainerKeys(), GalleyRepository::class, AuthorRepository::class];
+        return [...parent::getMockedContainerKeys(), GalleyCollector::class, AuthorRepository::class];
     }
 
     /**
@@ -246,15 +246,15 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->will($this->returnValue(LazyCollection::wrap([$author])));
         app()->instance(AuthorRepository::class, $mockAuthorRepository);
 
-        /** @var GalleyRepository|MockObject */
-        $mockGalleyRepository = $this->getMockBuilder(GalleyRepository::class)
+        /** @var GalleyCollector|MockObject */
+        $mockGalleyCollector = $this->getMockBuilder(GalleyCollector::class)
             ->disableOriginalConstructor()
             ->onlyMethods(['getMany'])
             ->getMock();
-        $mockGalleyRepository->expects($this->any())
+        $mockGalleyCollector->expects($this->any())
             ->method('getMany')
             ->will($this->returnValue(LazyCollection::wrap($galleys)));
-        app()->instance(GalleyRepository::class, $mockGalleyRepository);
+        app()->instance(GalleyCollector::class, $mockGalleyCollector);
 
         // Mocked DAO to return the subjects
         $submissionSubjectDao = $this->getMockBuilder(SubmissionSubjectDAO::class)
