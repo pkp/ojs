@@ -34,13 +34,12 @@ class Repository extends \PKP\submission\Repository
      */
     public function getInSections(int $issueId, int $contextId): array
     {
-        $collector = $this->getCollector()
+        $submissions = $this->getCollector()
             ->filterByContextIds([$contextId])
             ->filterByIssueIds([$issueId])
             ->filterByStatus([Submission::STATUS_PUBLISHED, Submission::STATUS_SCHEDULED])
-            ->orderBy(Collector::ORDERBY_SEQUENCE, Collector::ORDER_DIR_ASC);
-
-        $submissions = $this->getMany($collector);
+            ->orderBy(Collector::ORDERBY_SEQUENCE, Collector::ORDER_DIR_ASC)
+            ->getMany();
 
         $bySections = [];
         foreach ($submissions as $submission) {
