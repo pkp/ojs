@@ -16,8 +16,10 @@ namespace APP\submissionFile;
 use APP\core\Application;
 use APP\facades\Repo;
 use Exception;
+use Illuminate\Support\Facades\App;
 use PKP\observers\events\SubmissionFileDeleted;
 use PKP\plugins\Hook;
+use PKP\submissionFile\Collector;
 use PKP\submissionFile\Repository as BaseRepository;
 use PKP\submissionFile\SubmissionFile;
 
@@ -28,6 +30,11 @@ class Repository extends BaseRepository
         SubmissionFile::SUBMISSION_FILE_REVIEW_ATTACHMENT,
         SubmissionFile::SUBMISSION_FILE_REVIEW_FILE,
     ];
+
+    public function getCollector(): Collector
+    {
+        return App::makeWith(Collector::class, ['dao' => $this->dao]);
+    }
 
     public function add(SubmissionFile $submissionFile): int
     {

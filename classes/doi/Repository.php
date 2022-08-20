@@ -22,9 +22,11 @@ use APP\journal\JournalDAO;
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
+use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\db\DAORegistry;
+use PKP\doi\Collector;
 use PKP\doi\exceptions\DoiActionException;
 use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
@@ -39,6 +41,11 @@ class Repository extends \PKP\doi\Repository
     public function __construct(DAO $dao, Request $request, PKPSchemaService $schemaService)
     {
         parent::__construct($dao, $request, $schemaService);
+    }
+
+    public function getCollector(): Collector
+    {
+        return App::makeWith(Collector::class, ['dao' => $this->dao]);
     }
 
     /**
