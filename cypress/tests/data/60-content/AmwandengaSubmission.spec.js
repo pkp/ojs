@@ -321,7 +321,7 @@ describe('Data suite tests', function() {
 		cy.get('[name="recommendOnly"]').check();
 		cy.get('[id^="submitFormButton"]').contains('OK').click();
 		cy.contains('The stage assignment has been changed.');
-		cy.wait(500);
+		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('.pkpModalConfirmButton').contains('OK').click();
 		cy.get('#publication-button').click();
@@ -340,7 +340,7 @@ describe('Data suite tests', function() {
 		cy.get('[name="canChangeMetadata"]').uncheck();
 		cy.get('[id^="submitFormButton"]').contains('OK').click();
 		cy.contains('The stage assignment has been changed.');
-		cy.wait(500);
+		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('.pkpModalConfirmButton').contains('OK').click();
 		cy.get('#publication-button').click();
