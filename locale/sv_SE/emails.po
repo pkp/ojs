@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-08-22 12:33+0000\n"
+"PO-Revision-Date: 2022-08-22 13:33+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "sv_SE/>\n"
@@ -186,19 +186,16 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Du har blivit utsedd till redaktör för ett bidrag i {$contextName}"
 
-#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Som sektionsredaktör hos {$contextName} har du fått i uppdrag att föra bidraget &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />\n"
-"<br />\n"
-"Bidragets URL: {$submissionUrl}<br />\n"
-"Användarnamn: {$recipientUsername}<br />\n"
-"<br />\n"
-"Tack och med vänliga hälsningar."
+"<p>Hej{$recipientName},</p><p>Du har tilldelats uppdraget att föra följande "
+"bidrag genom den redaktionella processen.</p><p><a href=\"{$submissionUrl}\""
+">{$submissionTitle}</a><br />{$authors}</p><p>Om du finner bidraget relevant "
+"för {$contextName} kan du skicka den vidare till granskning genom att välja "
+"\"Skicka till granskning\" och lägga till granskare med \"Lägg till "
+"granskare\".</p><p>Om inte bidraget är lämpligt för tidskriften kan du avslå "
+"det. </p><p>Tack på förhand.</p><p>Vänliga hälsningar,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"
 
@@ -219,9 +216,8 @@ msgstr ""
 "Tack för att du överväger granskningsuppdraget.</p><p>Vänliga "
 "hälsningar,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Förfrågan om granskning av artikel. Påminnelse"
+msgstr "Har du möjlighet att granska följande bidrag?"
 
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -370,22 +366,16 @@ msgstr ""
 "tidskriften.</p><p>Vänliga hälsningar, </p>\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversioner klara"
 
-#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Publiceringsversioner har nu färdigställts för manuskriptet &quot;{$submissionTitle}&quot; hos {$contextName}. Dessa är nu redo för korrekturläsning.<br />\n"
-"<br />\n"
-"Vänligen kontakta mig om du har några frågor.<br />\n"
-"<br />\n"
-"{$senderName}"
+"<p>Hej {$recipientName},<p><p>Publiceringsformat har nu färdigställts för "
+"manuskriptet nedan.</p><p><a href=\"{$submissionUrl}\">{$submissionTitle}</"
+"a><br />{$contextName}</p><p>Kontakta mig om du har några frågor.</"
+"p><p>Vänliga hälsningar,</p><p>{$senderName}</p>"
 
-#, fuzzy
 msgid "emails.emailLink.subject"
 msgstr "Artikel som kan vara av intresse för dig"
 
@@ -629,7 +619,6 @@ msgstr "Skriv in ditt meddelande."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Defaultmeddelande (tomt) att använda i Notification Center Message Listbuilder."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fortfarande möjlighet att granska bidrag till {$contextName}?"
 
