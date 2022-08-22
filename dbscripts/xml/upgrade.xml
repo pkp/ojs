@@ -154,10 +154,11 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I7190_RemoveOrphanFilters" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7190_UpdateFilters" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I8060_UpdateUserLocalesDefaultToEmptyArrayFromNull" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I6895_CreateNewInstitutionsTables" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6895_Institutions" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_OrphanedMetrics" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I6782_UsageStatsSettings" />
-		<migration class="APP\migration\install\MetricsMigration" />
+		<migration class="APP\migration\upgrade\v3_4_0\I6782_CreateNewMetricsTables" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsContext" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsIssue" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_MetricsSubmission" />

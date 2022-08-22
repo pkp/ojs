@@ -17,7 +17,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use PKP\install\DowngradeNotSupportedException;
-use PKP\migration\install\InstitutionsMigration;
 use PKP\migration\Migration;
 
 class I6895_Institutions extends Migration
@@ -27,9 +26,6 @@ class I6895_Institutions extends Migration
      */
     public function up(): void
     {
-        $institutionsMigrations = new InstitutionsMigration($this->_installer, $this->_attributes);
-        $institutionsMigrations->up();
-
         // Requires that institution tables are already there
         // Add the new column institution_id to the table insitutional_substriptions
         Schema::table('institutional_subscriptions', function (Blueprint $table) {
