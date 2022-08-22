@@ -1,12 +1,13 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022.
 # Felipe Geremia Nievinski <fgnievinski@gmail.com>, 2021.
+# William Costa Rodrigues <webmaster@antsoft.com.br>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-08-17 20:48+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2022-08-22 14:33+0000\n"
+"Last-Translator: William Costa Rodrigues <webmaster@antsoft.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -263,7 +264,6 @@ msgstr ""
 "Resumo</p>{$submissionAbstract}<p>Agradeço por considerar esta "
 "solicitação.</p><p>Atenciosamente</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "A revista {$contextName} solicita avaliação de artigo"
 
