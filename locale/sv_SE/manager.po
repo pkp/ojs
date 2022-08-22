@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2022-07-08 01:54+0000\n"
-"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"PO-Revision-Date: 2022-08-22 13:33+0000\n"
+"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sv_SE/>\n"
 "Language: sv_SE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Arkivering"
@@ -232,9 +232,10 @@ msgstr "Sektionens redaktörer"
 msgid "manager.sections.confirmDelete"
 msgstr "Vill du ta bort sektionen?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Innan sektionen kan tas bort, måste sektionens artiklar flyttas till en annan  sektion."
+msgstr ""
+"Innan sektionen kan tas bort, måste sektionens artiklar flyttas till en "
+"annan sektion."
 
 msgid "manager.sections.create"
 msgstr "Skapa en sektion"
@@ -442,7 +443,7 @@ msgstr "E-postmeddelanden som inte kan levereras producerar ett felmeddelande so
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
 "För att skicka e-postmeddelanden som inte kan levereras till en bounce-"
-"adress måste sidadministratören aktivera  <code>allow_envelope_sender</code> "
+"adress måste sidadministratören aktivera <code>allow_envelope_sender</code> "
 "i OJS konfigureringsfil. Ytterligare serverkonfigurering kan komma att bli "
 "nödvändig för att stödja den här funktionaliteten (något som inte alla "
 "servrar tillåter, se OJS-dokumentationen för information)."
@@ -1066,7 +1067,9 @@ msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderVal
 msgstr "Välj ett giltligt värde på antalet månader innan prenumerationen förfaller."
 
 msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
-msgstr "Välj ett giltligt värde på hur många veckor det var sedan prenumerationen prenumerationen förföll."
+msgstr ""
+"Välj ett giltigt värde för hur många veckor det var sedan prenumerationen "
+"förföll."
 
 msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
 msgstr "Välj ett giltligt värde på antalet veckor innan prenumerationen förfaller."
@@ -1243,7 +1246,9 @@ msgid "manager.subscriptions.form.referenceNumber"
 msgstr "Referens nummer"
 
 msgid "manager.subscriptions.form.membershipInstructions"
-msgstr "Fyll i medlemskapsinformation om prenumertionsformen kräver att prenumeranten tillhör en organisation eller  en förening."
+msgstr ""
+"Fyll i medlemskapsinformation om prenumerationsformen kräver att "
+"prenumeranten tillhör en organisation eller en förening."
 
 msgid "manager.subscriptions.form.membershipRequired"
 msgstr "Den valda prenumerationsformen kräver medlemskapsinformation."
@@ -1513,7 +1518,18 @@ msgstr ""
 "forskningsartiklar, recensioner, osv)."
 
 msgid "settings.roles.gridDescription"
-msgstr "Roller är grupper av tidskriftens användare som har tillgång till olika funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och alla inställningar); Sektionsredaktör har fullständig tillgång till allt innehåll i tidskriften; Redaktionssekreterare har begränsad tillgång till inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se och arbeta med inskickade bidrag som  de har tilldelats att granska; och Författare kan se och interagera med begränsad information om deras egna bidrag. Dessutom finns det fem olika steg som de olika rollerna kan få tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redigering, och Produktion."
+msgstr ""
+"Roller är grupper av tidskriftens användare som har tillgång till olika "
+"funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: "
+"Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och "
+"alla inställningar); Sektionsredaktör har fullständig tillgång till allt "
+"innehåll i tidskriften; Redaktionssekreterare har begränsad tillgång till "
+"inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se "
+"och arbeta med inskickade bidrag som de har tilldelats att granska; och "
+"Författare kan se och interagera med begränsad information om deras egna "
+"bidrag. Dessutom finns det fem olika steg som de olika rollerna kan få "
+"tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redigering, "
+"och Produktion."
 
 msgid "manager.publication.library"
 msgstr "Utgivarens publikationer"
@@ -1756,10 +1772,10 @@ msgstr ""
 "Permanent radering av upphovsrätts- och licensinformation för alla "
 "publicerade artiklar, vilket återställer dem till tidskriftens nuvarande "
 "standardinställningar. I vissa fall kan det vara juridiskt otillåtet att "
-"tilldela ett verk en annan licens än den som  verket tidigare har "
-"publicerats under. Var försiktig vid användning av detta verktyg och "
-"rådfråga juridisk expertis om du är osäker på vilka rättigheter du har till "
-"artiklarna som har publicerats i din tidskrift."
+"tilldela ett verk en annan licens än den som verket tidigare har publicerats "
+"under. Var försiktig vid användning av detta verktyg och rådfråga juridisk "
+"expertis om du är osäker på vilka rättigheter du har till artiklarna som har "
+"publicerats i din tidskrift."
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
@@ -1775,11 +1791,11 @@ msgstr "Valideringens lyckades!"
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
 "Tidskriften tar inte emot bidrag för tillfället. Gå till inställningar för "
-"arbetsflöde för att  öppna för bidrag."
+"arbetsflöde för att öppna för bidrag."
 
 msgid "manager.setup.disableSubmissions.description"
 msgstr ""
-"Förhindra användare  att skicka in nya bidrag till tidskriften. Bidrag kan "
+"Förhindra användare att skicka in nya bidrag till tidskriften. Bidrag kan "
 "avaktiveras för enskilda tidskriftssektioner på sidan <a href=\"{$url}\""
 ">tidskriftssektion</a>."
 
@@ -1896,10 +1912,10 @@ msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Fyll i DOI-suffixmönstret för nummer."
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr "Fyll i  DOI-suffixmönstret för artiklar."
+msgstr "Fyll i DOI-suffixmönstret för artiklar."
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr "Fyll i  DOI-suffixmönstret för publiceringsversioner."
+msgstr "Fyll i DOI-suffixmönstret för publiceringsversioner."
 
 msgid "doi.manager.settings.doiReassign"
 msgstr "Tilldela DOI igen"
@@ -2118,3 +2134,71 @@ msgstr "Det här e-postmeddelandet meddelar prenumerationsansvarig att en instit
 
 msgid "mailable.openAccessNotify.description"
 msgstr "Det här e-postmeddelandet skickas till registrerade läsare som har begärt att meddelas om och när ett nummer görs tillgängligt som open access."
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Namn på institutionen"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Institutionens postadress"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domän"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP-intervall för prenumeration"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Prenumerationsmeddelande"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Prenumerationen går snart ut"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Utgången prenumeration"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Utgången prenumeration"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Köp individuell prenumeration"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Köp institutionell prenumeration"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Förnya individuell prenumeration"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Förnya institutionell prenumeration"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Open access-meddelande"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Meddelande för publicerat nummer"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "tidskriftens initialer"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Detta e-postmeddelande skickas automatiskt till registrerade användare när "
+"ett nytt nummer har publicerats."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institution"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Välj en giltig institution."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "En institution måste skapas innan en ny prenumeration kan genomföras."
+
+msgid "stats.issueTOCViews"
+msgstr "Visningar av numrets innehållsförteckning"
+
+msgid "stats.issueGalleyViews"
+msgstr "Visningar av numrets publiceringsversion"
+
+msgid "manager.institutions.noContext"
+msgstr "Den här institutionens tidskrift kunde inte hittas."
