@@ -1,18 +1,19 @@
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
-"PO-Revision-Date: 2020-02-24 10:36+0000\n"
+"PO-Revision-Date: 2022-08-23 11:33+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/sv/>\n"
+"themes-default/sv_SE/>\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Default-tema"
@@ -66,3 +67,24 @@ msgstr ""
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
 msgstr "Sidhuvudets bakgrundsbild"
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Visningsalternativ för användningsstatistik"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Visa inte bidrags användningsstatistik för läsaren."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Använd stapeldiagram för att visa användningsstatistik."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Använd linjediagram för att visa användningsstatistik."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Maj Jun Jul Aug Sep Okt Nov Dec"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Nedladdningar"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Nedladdningsstatistik är inte tillgänglig ännu."
