@@ -23,9 +23,7 @@ describe('API tests', function() {
 		cy.get('.app__userNav button').click();
 		cy.get('a:contains("Edit Profile")').click();
 		cy.get('a[name="apiSettings"]').click();
-		cy.get('input[id="apiKeyEnabled"]').check();
-		cy.get('input[id="generateApiKey"]').check();
-		cy.get('form[id="apiProfileForm"] button:contains("Save")').click();
+		cy.get('form[id="apiProfileForm"] button:contains("Create API Key")').click();
 		cy.waitJQuery();
 		cy.get('span:contains("Your changes have been saved.")');
 		cy.get('input[id^="apiKey-"]').invoke('val').as('apiKey').then(function() {
@@ -33,6 +31,7 @@ describe('API tests', function() {
 		});
 		cy.logout();
 	});
+
 	it("Lists submissions using an author's API key", function() {
 		cy.request('index.php/publicknowledge/api/v1/submissions?apiToken=' + this.apiKey).then(response => {
 			// The author only has a single submission; submissions from other users should not be included.
