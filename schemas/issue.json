@@ -17,6 +17,11 @@
 				"$ref": "#/definitions/SubmissionSummary"
 			}
 		},
+		"coverImage": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true
+		},
 		"coverImageAltText": {
 			"type": "string",
 			"multilingual": true,
@@ -26,6 +31,7 @@
 			"type": "string",
 			"multilingual": true,
 			"apiSummary": true,
+			"readOnly": true,
 			"validation": [
 				"url"
 			]
