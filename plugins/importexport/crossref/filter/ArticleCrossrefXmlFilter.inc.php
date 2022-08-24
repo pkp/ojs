@@ -151,7 +151,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				}
 
 			} else {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($givenNames[$locale]), ENT_COMPAT, 'UTF-8')));
 			}
 
 			$contributorsNode->appendChild($personNameNode);
