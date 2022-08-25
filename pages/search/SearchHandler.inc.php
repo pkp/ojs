@@ -273,7 +273,7 @@ class SearchHandler extends Handler {
 
 			$isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
 			$countries = $isoCodes->getCountries();
-			if ($country != null) $country = $countries->getByAlpha2($country);
+			if (is_string($country)) $country = $countries->getByAlpha2($country);
 			$templateMgr->assign('country', $country ? $country->getLocalName() : '');
 
 			$templateMgr->display('frontend/pages/searchAuthorDetails.tpl');
