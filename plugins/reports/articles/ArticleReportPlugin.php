@@ -87,9 +87,14 @@ class ArticleReportPlugin extends ReportPlugin
         $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
         $submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /** @var SubmissionAgencyDAO $submissionAgencyDao */
 
+        $userGroups = Repo::userGroup()->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getMany()
+            ->toArray();
+
         $editorUserGroupIds = array_map(function ($userGroup) {
             return $userGroup->getId();
-        }, array_filter(Repo::userGroup()->getByContextId($context->getId())->toArray(), function ($userGroup) {
+        }, array_filter($userGroups, function ($userGroup) {
             return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 

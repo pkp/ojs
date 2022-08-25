@@ -263,7 +263,9 @@ class IssueHandler extends APIHandler
 
     protected function getUserGroups(int $contextId): LazyCollection
     {
-        return Repo::userGroup()->getByContextId($contextId);
+        return Repo::userGroup()->getCollector()
+            ->filterByContextIds([$contextId])
+            ->getMany();
     }
 
     protected function getGenres(int $contextId): array

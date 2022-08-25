@@ -147,7 +147,10 @@ class SubscriberSelectGridHandler extends GridHandler
     public function renderFilter($request, $filterData = [])
     {
         $context = $request->getContext();
-        $userGroups = Repo::userGroup()->getByContextId($context->getId());
+        $userGroups = Repo::userGroup()->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getMany();
+        
         $userGroupOptions = ['' => __('grid.user.allRoles')];
         foreach ($userGroups as $userGroup) {
             $userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
