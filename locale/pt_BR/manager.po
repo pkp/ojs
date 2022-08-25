@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-25 18:34+0000\n"
+"PO-Revision-Date: 2022-08-25 19:34+0000\n"
 "Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
@@ -850,23 +850,34 @@ msgstr "Opção de número de página"
 msgid "manager.setup.policies"
 msgstr "Políticas"
 
+#, fuzzy
 msgid "manager.setup.policies.description"
-msgstr "Foco, avaliação pelos pares, seções, privacidade, acesso, segurança e itens adicionais sobre da revista."
+msgstr ""
+"Foco, avaliação pelos pares, seções, privacidade, acesso, segurança e itens "
+"adicionais sobre da revista."
 
+#, fuzzy
 msgid "manager.setup.printIssn"
 msgstr "ISSN Impresso"
 
+#, fuzzy
 msgid "manager.setup.proofingInstructions"
 msgstr "Instruções para leitura de provas"
 
 msgid "manager.setup.proofingInstructionsDescription"
 msgstr "As instruções para leitura de provas estarão disponíveis aos leitores de prova, autores, editores de layout e editores de seção no estágio Edição da submissão. A seguir está um padrão de instruções em HTML, que pode ser modificado ou substituído pelo Gerente da Revista a qualquer tempo (em HTML ou texto simples)."
 
+#, fuzzy
 msgid "manager.setup.publicationSchedule"
 msgstr "Periodicidade de publicação"
 
+#, fuzzy
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Os itens da revista podem ser publicados coletivamente, quando o sumário estiver pronto, ou individualmente, adicionando-se os mesmos ao sumário atual quando prontos. Informe os leitores, na página Sobre a revista, a respeito do formato adotado pela revista e a periodicidade de publicação."
+msgstr ""
+"Os itens da revista podem ser publicados coletivamente, quando o sumário "
+"estiver pronto, ou individualmente, adicionando-se os mesmos ao sumário "
+"atual quando prontos. Informe os leitores, na página Sobre a revista, a "
+"respeito do formato adotado pela revista e a periodicidade de publicação."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Periodicidade de publicação"
