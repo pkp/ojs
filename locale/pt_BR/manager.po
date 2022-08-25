@@ -1,13 +1,14 @@
 # EDMILSON JOSE BOREGAS <ejsboregas@fgv.br>, 2021.
 # Flavio Chaffin <flavio.chaffin@gmail.com>, 2021.
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022.
+# cicilia conceiçao de maria <ccmaria@uem.br>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-17 20:48+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2022-08-25 18:34+0000\n"
+"Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -690,19 +691,29 @@ msgstr "Listas"
 msgid "manager.setup.plnPluginEnable"
 msgstr "Plugin PKP PN ativo"
 
+#, fuzzy
 msgid "manager.setup.plnDescription"
-msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios."
+msgstr ""
+"A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de "
+"preservação para qualquer revista OJS que cumpra um conjunto básico de "
+"critérios."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
 "Veja as <button>configurações do plugin</button> para aceitar os termos de "
 "uso da PKP PN."
 
+#, fuzzy
 msgid "manager.setup.plnPluginArchiving"
 msgstr "Rede de Preservação PKP (PKP PN)"
 
+#, fuzzy
 msgid "manager.setup.plnPluginNotInstalled"
-msgstr "A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de preservação para qualquer revista OJS que cumpra um conjunto básico de critérios. O plugin PKP PN para OJS 3 está em desenvolvimento e ficará disponível na galeria de plugins em breve."
+msgstr ""
+"A Rede de Preservação do PKP (PKP PN) providencia serviços gratuitos de "
+"preservação para qualquer revista OJS que cumpra um conjunto básico de "
+"critérios. O plugin PKP PN para OJS 3 está em desenvolvimento e ficará "
+"disponível na galeria de plugins em breve."
 
 msgid "manager.setup.otherLockss"
 msgstr "Opções Alternativas de Arquivo (LOCKSS e CLOCKSS)"
@@ -748,66 +759,94 @@ msgstr "Assine o serviço CLOCKSS visitando <a href=\"http://clockss.org/\" targ
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
 
+#, fuzzy
 msgid "manager.setup.look"
 msgstr "Visual"
 
+#, fuzzy
 msgid "manager.setup.look.description"
-msgstr "Cabeçalho da capa, conteúdo, cabeçalho da revista, rodapé, barra de navegação e folha de estilo."
+msgstr ""
+"Cabeçalho da capa, conteúdo, cabeçalho da revista, rodapé, barra de "
+"navegação e folha de estilo."
 
 msgid "manager.setup.management"
 msgstr "Administração"
 
+#, fuzzy
 msgid "manager.setup.management.description"
-msgstr "Acesso e segurança, agendamento, avisos, edição de texto, layout e leitura de provas."
+msgstr ""
+"Acesso e segurança, agendamento, avisos, edição de texto, layout e leitura "
+"de provas."
 
+#, fuzzy
 msgid "manager.setup.managementOfBasicEditorialSteps"
 msgstr "Administração dos passos básicos do processo editorial"
 
+#, fuzzy
 msgid "manager.setup.managingPublishingSetup"
 msgstr "Configurações administrativas e de publicação"
 
+#, fuzzy
 msgid "manager.setup.managingTheJournal"
 msgstr "Passo 4. Administração da revista"
 
+#, fuzzy
 msgid "manager.setup.navigationBar"
 msgstr "Barra de navegação"
 
+#, fuzzy
 msgid "manager.setup.navigationBarDescription"
 msgstr "Inclua ou exclua itens adicionais da barra de navegação."
 
+#, fuzzy
 msgid "manager.setup.navItemIsAbsolute"
-msgstr "A URL é absoluta (ex.: \"http://www.exemplo.com\") em vez de um caminho relativo no portal (ex.: \"/manager/setup\")"
+msgstr ""
+"A URL é absoluta (ex.: \"http://www.exemplo.com\") em vez de um caminho "
+"relativo no portal (ex.: \"/manager/setup\")"
 
+#, fuzzy
 msgid "manager.setup.navItemIsLiteral"
-msgstr "O rótulo é um texto literal (ex.: \"Administração da Revista\") em vez de uma chave de tradução (ex.: \"manager.setup.nav\")"
+msgstr ""
+"O rótulo é um texto literal (ex.: \"Administração da Revista\") em vez de "
+"uma chave de tradução (ex.: \"manager.setup.nav\")"
 
+#, fuzzy
 msgid "manager.setup.noImageFileUploaded"
 msgstr "Nenhuma imagem para exibição."
 
+#, fuzzy
 msgid "manager.setup.noStyleSheetUploaded"
 msgstr "Nenhuma Folha de Estilos enviada."
 
 msgid "manager.setup.note"
 msgstr "Nota de agradecimento"
 
+#, fuzzy
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
 "<strong>Aviso:</strong> O e-mail de confirmação de submissão está desativado "
 "no momento. Para usar esse recurso, ative o e-mail \"Submission Ack\" em "
 "E-mails."
 
+#, fuzzy
 msgid "manager.setup.numPageLinks"
 msgstr "Links de paginação"
 
+#, fuzzy
 msgid "manager.setup.numPageLinks.description"
-msgstr "Limitar o número de links a serem exibidos nas páginas subseqüentes em uma lista."
+msgstr ""
+"Limitar o número de links a serem exibidos nas páginas subseqüentes em uma "
+"lista."
 
+#, fuzzy
 msgid "manager.setup.onlineIssn"
 msgstr "ISSN Eletrônico"
 
+#, fuzzy
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Opção de número de página"
 
+#, fuzzy
 msgid "manager.setup.policies"
 msgstr "Políticas"
 
