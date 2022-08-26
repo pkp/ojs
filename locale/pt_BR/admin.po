@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-25 18:34+0000\n"
+"PO-Revision-Date: 2022-08-26 19:50+0000\n"
 "Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
@@ -140,11 +140,11 @@ msgstr "Importação falhou"
 
 #, fuzzy
 msgid "admin.mergeUsers"
-msgstr "Mesclar usuários"
+msgstr "Mesclar usuários/as"
 
 #, fuzzy
 msgid "admin.mergeUsers.mergeUser"
-msgstr "Mesclar usuário"
+msgstr "Mesclar usuário/a"
 
 #, fuzzy
 msgid "admin.mergeUsers.into.description"
