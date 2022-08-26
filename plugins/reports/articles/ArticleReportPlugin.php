@@ -17,6 +17,7 @@ namespace APP\plugins\reports\articles;
 
 use APP\decision\Decision;
 use APP\facades\Repo;
+use APP\i18n\AppLocale;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\plugins\ReportPlugin;
@@ -148,6 +149,11 @@ class ArticleReportPlugin extends ReportPlugin
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
 
+            $subjects = $submissionSubjectDao->getSubjects($submission->getCurrentPublication()->getId());
+            $disciplines = $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId());
+            $keywords = $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId());
+            $agencies = $submissionAgencyDao->getAgencies($submission->getCurrentPublication()->getId());
+
             // Store the submission results
             $results[] = [
                 'submissionId' => $submission->getId(),
@@ -170,11 +176,11 @@ class ArticleReportPlugin extends ReportPlugin
                 'coverage' => $publication->getLocalizedData('coverage'),
                 'rights' => $publication->getLocalizedData('rights'),
                 'source' => $publication->getLocalizedData('source'),
-                'subjects' => join(', ', $submissionSubjectDao->getSubjects($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
+                'subjects' => join(', ', $subjects[AppLocale::getLocale()] ?? $subjects[$submission->getLocale()] ?? []),
                 'type' => $publication->getLocalizedData('type'),
-                'disciplines' => join(', ', $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
-                'keywords' => join(', ', $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
-                'agencies' => join(', ', $submissionAgencyDao->getAgencies($submission->getCurrentPublication()->getId(), [$submission->getLocale()])[$submission->getLocale()] ?? []),
+                'disciplines' => join(', ', $disciplines[AppLocale::getLocale()] ?? $disciplines[$submission->getLocale()] ?? []),
+                'keywords' => join(', ', $keywords[AppLocale::getLocale()] ?? $keywords[$submission->getLocale()] ?? []),
+                'agencies' => join(', ', $agencies[AppLocale::getLocale()] ?? $agencies[$submission->getLocale()] ?? []),
                 'status' => $submission->getStatus() == PKPSubmission::STATUS_QUEUED ? $this->getStageLabel($submission->getStageId()) : __($statusMap[$submission->getStatus()]),
                 'url' => $request->url(null, 'workflow', 'access', $submission->getId()),
                 'doi' => $submission->getStoredPubId('doi'),
