@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-26 19:50+0000\n"
+"PO-Revision-Date: 2022-08-26 20:50+0000\n"
 "Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
@@ -16,9 +16,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-#, fuzzy
 msgid "admin.settings.redirect"
-msgstr "Redirecionamento para revista"
+msgstr "Redirecionamento da revista"
 
 msgid "admin.settings.redirectInstructions"
 msgstr "As solicitações realizadas ao portal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista."
@@ -35,9 +34,8 @@ msgstr "Este será o idioma padrão para o portal e todas as revistas hospedadas
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr "Os idiomas selecionados estarão disponíveis para todas as revistas no portal, e constarão da lista de idiomas que aparece em cada página do sistema (esta opção pode ser desativada individualmente por revista). Caso não sejam selecionados vários idiomas, a lista de idiomas não estará disponível e a opção \"configurações de idioma\" não estará disponível para as revistas."
 
-#, fuzzy
 msgid "admin.locale.maybeIncomplete"
-msgstr "Idiomas marcados podem estar incompletos."
+msgstr "As configurações dos Idiomas marcados podem estar incompletos."
 
 #, fuzzy
 msgid "admin.languages.confirmUninstall"
@@ -63,7 +61,6 @@ msgstr "Configuração do OJS"
 msgid "admin.systemConfigurationDescription"
 msgstr "Configurações do OJS no arquivo <tt>config.inc.php</tt>."
 
-#, fuzzy
 msgid "admin.journals.createInstructions"
 msgstr ""
 "Seu cadastro como Gerente da Revista será automático. Após a criação de uma "
@@ -85,8 +82,8 @@ msgstr "Criar revista"
 #, fuzzy
 msgid "admin.journals.urlWillBe"
 msgstr ""
-"Geralmente é usado um acrônimo que identifica o periódico. A URL do "
-"periódico será: {$sampleUrl}."
+"Uma palavra pequena ou acrônimo para identificar a revista. O endereço URL "
+"da revista será {$sampleUrl}."
 
 #, fuzzy
 msgid "admin.contexts.form.titleRequired"
@@ -108,11 +105,10 @@ msgstr "O caminho selecionado já está em uso por outra revista."
 
 #, fuzzy
 msgid "admin.journals.enableJournalInstructions"
-msgstr "Permitir Acesso Livre a esta revista no portal"
+msgstr "Habilitar esta revista para aparecer publicamente no site"
 
-#, fuzzy
 msgid "admin.contexts.contextDescription"
-msgstr "Descrição"
+msgstr "Descrição da revista"
 
 #, fuzzy
 msgid "admin.journal.pathImportInstructions"
@@ -130,15 +126,12 @@ msgstr "Transcodificar metadados de ISO8859-1"
 msgid "admin.journals.redirect"
 msgstr "Gerar código para mapear URLs da versão 1 do OJS para URLs da versão 2"
 
-#, fuzzy
 msgid "admin.journals.form.importPathRequired"
-msgstr "O caminho físico para a importação é obrigatório."
+msgstr "O caminho para importação é necessário."
 
-#, fuzzy
 msgid "admin.journals.importErrors"
-msgstr "Importação falhou"
+msgstr "Não foi possível concluir a importação corretamente"
 
-#, fuzzy
 msgid "admin.mergeUsers"
 msgstr "Mesclar usuários/as"
 
@@ -152,17 +145,14 @@ msgstr ""
 "Escolha um usuário a quem deseja atribuir as submissões e histórico de "
 "tarefas do cadastro anterior."
 
-#, fuzzy
 msgid "admin.mergeUsers.from.description"
 msgstr ""
-"Escolha um usuário para mesclar o cadastro com o de outra conta (quando um "
-"usuário possui duas contas distintas, em vez de acumular papéis editoriais). "
-"O cadastro selecionado primeiro será excluído e suas submissões e histórico "
-"de tarefas atribuídas ao segundo cadastro escolhido."
+"Selecione um (ou vários) usuários/as para fundi-los em outra conta de usuá"
+"rio/a (p. ex. quando um usuário/a tem duas contas distintas). A conta/s "
+"selecionada em primeiro lugar"
 
-#, fuzzy
 msgid "admin.mergeUsers.allUsers"
-msgstr "Todos os usuários"
+msgstr "Todos os usuários cadastrados"
 
 #, fuzzy
 msgid "admin.mergeUsers.confirm"
@@ -188,9 +178,8 @@ msgstr "Notificação de Acesso Aberto"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Lembrete de Avaliação"
 
-#, fuzzy
 msgid "admin.hostedContexts"
-msgstr "Revistas alojadas"
+msgstr "Revistas Hospedadas"
 
 msgid "admin.contexts.confirmDelete"
 msgstr "Deseja realmente excluir permanentemente esta revista e seu conteúdo?"
@@ -215,7 +204,7 @@ msgstr ""
 "para garantir que seja usado de maneira adequada. <br><br> Restrições "
 "adicionais sobre este recurso podem ser ativadas para cada revista visitando "
 "seu assistente de configuração na lista de <a href=\"{$hostedContextsUrl}\"> "
-"Revistas  hospedadas </a>."
+"Revistas  hospedados </a>."
 
 #, fuzzy
 msgid "admin.settings.disableBulkEmailRoles.description"
