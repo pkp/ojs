@@ -11,9 +11,10 @@ use APP\journal\Journal;
 use APP\journal\SectionDAO;
 use Illuminate\Support\Enumerable;
 use PKP\db\DAORegistry;
-use PKP\security\UserGroup;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Genre;
+use Illuminate\Support\LazyCollection;
+use Illuminate\Support\Collection;
 
 class Schema extends \PKP\core\maps\Schema
 {
@@ -23,8 +24,8 @@ class Schema extends \PKP\core\maps\Schema
     /** @copydoc \PKP\core\maps\Schema::$schema */
     public string $schema = PKPSchemaService::SCHEMA_ISSUE;
 
-    /** @var UserGroup[] The user groups for this context. */
-    public array $userGroups;
+    /** @var LazyCollection<UserGroup> The user groups for this context. */
+    public LazyCollection $userGroups;
 
     /** @var Genre[] The genres for this context. */
     public array $genres;
@@ -34,10 +35,10 @@ class Schema extends \PKP\core\maps\Schema
      *
      * Includes all properties in the Issue schema
      *
-     * @param UserGroup[] $userGroups The user groups of this content
+     * @param LazyCollection<UserGroup> $userGroups The user groups of this content
      * @param Genre[] $genres The genres of this context
      */
-    public function map(Issue $item, Journal $context, array $userGroups, array $genres): array
+    public function map(Issue $item, Journal $context, LazyCollection $userGroups, array $genres): array
     {
         $this->userGroups = $userGroups;
         $this->genres = $genres;
@@ -61,10 +62,10 @@ class Schema extends \PKP\core\maps\Schema
      *
      * @see self::map
      *
-     * @param UserGroup[] $userGroups The user groups of this content
+     * @param LazyCollection<UserGroup> $userGroups The user groups of this content
      * @param Genre[] $genres The genres of this context
      */
-    public function mapMany(Enumerable $collection, Journal $context, array $userGroups, array $genres): Enumerable
+    public function mapMany(Enumerable $collection, Journal $context, LazyCollection $userGroups, array $genres): Enumerable
     {
         $this->collection = $collection;
         return $collection->map(function ($item) use ($context, $userGroups, $genres) {

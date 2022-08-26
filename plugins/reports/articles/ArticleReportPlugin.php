@@ -81,7 +81,6 @@ class ArticleReportPlugin extends ReportPlugin
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
@@ -90,7 +89,7 @@ class ArticleReportPlugin extends ReportPlugin
 
         $editorUserGroupIds = array_map(function ($userGroup) {
             return $userGroup->getId();
-        }, array_filter($userGroupDao->getByContextId($context->getId())->toArray(), function ($userGroup) {
+        }, array_filter(Repo::userGroup()->getByContextId($context->getId())->toArray(), function ($userGroup) {
             return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
