@@ -28,11 +28,10 @@ class StatsSushiHandler extends \PKP\API\v1\stats\sushi\PKPStatsSushiHandler
     /**
      * Get this API's endpoints definitions
      */
-    protected function getGETDefinitions(): array
+    protected function getGETDefinitions(array $roles = null): array
     {
-        $roles = [];
         return array_merge(
-            parent::getGETDefinitions(),
+            parent::getGETDefinitions($roles),
             [
                 [
                     'pattern' => $this->getEndpointPattern() . '/reports/tr',
