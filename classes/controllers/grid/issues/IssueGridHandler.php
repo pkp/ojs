@@ -49,6 +49,7 @@ use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
+use APP\core\Application;
 
 class IssueGridHandler extends GridHandler
 {

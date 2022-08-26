@@ -26,7 +26,7 @@ use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Role;
-use PKP\security\UserGroupDAO;
+use Illuminate\Support\LazyCollection;
 
 class IssueHandler extends APIHandler
 {
@@ -261,11 +261,9 @@ class IssueHandler extends APIHandler
         return $response->withJson($data, 200);
     }
 
-    protected function getUserGroups(int $contextId): array
+    protected function getUserGroups(int $contextId): LazyCollection
     {
-        /** @var UserGroupDAO $userGroupDao */
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-        return $userGroupDao->getByContextId($contextId)->toArray();
+        return Repo::userGroup()->getByContextId($contextId);
     }
 
     protected function getGenres(int $contextId): array

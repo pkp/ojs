@@ -65,13 +65,12 @@ class SubscriberSelectGridHandler extends GridHandler
         parent::initialize($request, $args);
 
         $stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        $userGroups = $userGroupDao->getUserGroupsByStage(
+        $userGroups = Repo::userGroup()->getUserGroupsByStage(
             $request->getContext()->getId(),
             $stageId
         );
         $this->_userGroupOptions = [];
-        while ($userGroup = $userGroups->next()) {
+        foreach ($userGroups as $userGroup) {
             $this->_userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
         }
 
@@ -120,15 +119,26 @@ class SubscriberSelectGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        return $users = $userGroupDao->getUsersById(
-            $filter['userGroup'],
-            $request->getContext()->getId(),
-            $filter['searchField'],
-            $filter['search'] ? $filter['search'] : null,
-            $filter['searchMatch'],
-            $this->getGridRangeInfo($request, $this->getId())
-        );
+        // Get the context.
+        $context = $request->getContext();
+
+        // Get all users for this context that match search criteria.
+        $rangeInfo = $this->getGridRangeInfo($request, $this->getId());
+
+        // The user interface uses filter['userGroup'] and $filter['search']
+        $userGroupSearchTerm = $filter['userGroup'] ? [$filter['userGroup']] : null;
+
+        $userCollector = Repo::user()->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->searchPhrase($filter['search'])
+            ->filterByUserGroupIds($userGroupSearchTerm)
+            ->limit($rangeInfo->getCount())
+            ->offset($rangeInfo->getOffset() + max(0, $rangeInfo->getPage() - 1) * $rangeInfo->getCount());
+            
+        $users = $userCollector->getMany();
+
+        $totalCount = $users->count($userCollector->limit(null)->offset(null));
+        return new \PKP\core\VirtualArrayIterator(iterator_to_array($users, true), $totalCount, $rangeInfo->getPage(), $rangeInfo->getCount());
     }
 
     /**
@@ -137,10 +147,9 @@ class SubscriberSelectGridHandler extends GridHandler
     public function renderFilter($request, $filterData = [])
     {
         $context = $request->getContext();
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        $userGroups = $userGroupDao->getByContextId($context->getId());
+        $userGroups = Repo::userGroup()->getByContextId($context->getId());
         $userGroupOptions = ['' => __('grid.user.allRoles')];
-        while ($userGroup = $userGroups->next()) {
+        foreach ($userGroups as $userGroup) {
             $userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
         }
 

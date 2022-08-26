@@ -27,7 +27,6 @@ use PKP\file\FileManager;
 use PKP\identity\Identity;
 use PKP\install\Installer;
 use PKP\security\Role;
-use PKP\security\UserGroupDAO;
 use PKP\submissionFile\SubmissionFile;
 
 class Upgrade extends Installer
@@ -93,16 +92,21 @@ class Upgrade extends Installer
      */
     public function fixAuthorGroup()
     {
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
-        $result = $userGroupDao->retrieve(
-            'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
-        );
-        foreach ($result as $row) {
-            $authorGroup = $userGroupDao->getDefaultByRoleId($row->context_id, Role::ROLE_ID_AUTHOR);
+        $rows = DB::table('authors as a')
+            ->leftJoin('submissions as s', 's.submission_id', '=', 'a.submission_id')
+            ->leftJoin('user_groups as g', 'a.user_group_id', '=', 'g.user_group_id')
+            ->whereColumn('g.context_id', '<>', 's.context_id')
+            ->get(['a.author_id', 's.context_id']);
+        
+        foreach ($rows as $row) {
+            $authorGroup = Repo::userGroup()->getByRoleIds([Role::ROLE_ID_AUTHOR], $row->context_id, true);
             if ($authorGroup) {
-                $userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE author_id = ?', [(int) $authorGroup->getId(), $row->author_id]);
+                DB::table('authors')
+                    ->where('author_id', '=', $row->author_id)
+                    ->update(['user_group_id' => $authorGroup->getId()]);
             }
         }
+
         return true;
     }
 
@@ -497,12 +501,14 @@ class Upgrade extends Installer
     public function changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit()
     {
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO'); /** @var UserGroupDAO $userGroupDao */
 
-        $roles = UserGroupDAO::getNotChangeMetadataEditPermissionRoles();
+        $roles = Repo::userGroup()::NOT_CHANGE_METADATA_EDIT_PERMISSION_ROLES;
         $roleString = '(' . implode(',', $roles) . ')';
 
-        $userGroupDao->update('UPDATE user_groups SET permit_metadata_edit = 1 WHERE role_id IN ' . $roleString);
+        DB::table('user_groups')
+            ->whereIn('role_id', $roles)
+            ->update(['permit_metadata_edit' => 1]);
+
         switch (Config::getVar('database', 'driver')) {
             case 'mysql':
             case 'mysqli':
