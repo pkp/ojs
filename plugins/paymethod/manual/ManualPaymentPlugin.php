@@ -14,10 +14,14 @@
 namespace APP\plugins\paymethod\manual;
 
 use APP\core\Application;
+use APP\facades\Repo;
+use APP\journal\Journal;
+use APP\plugins\paymethod\manual\mailables\ManualPaymentNotify;
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
-use PKP\mail\MailTemplate;
+use PKP\payment\QueuedPaymentDAO;
 use PKP\plugins\Hook;
 use PKP\plugins\PaymethodPlugin;
 
@@ -57,6 +61,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
         if (parent::register($category, $path, $mainContextId)) {
             $this->addLocaleData();
             Hook::add('Form::config::before', [$this, 'addSettings']);
+            Hook::add('Mailer::Mailables', [$this, 'addMailable']);
             return true;
         }
         return false;
@@ -148,7 +153,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
      */
     public function handle($args, $request)
     {
-        $context = $request->getContext();
+        $context = $request->getContext(); /** @var Journal $context */
         $templateMgr = TemplateManager::getManager($request);
         $user = $request->getUser();
         $op = $args[0] ?? null;
@@ -156,7 +161,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
 
         $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
         $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId);
-        $paymentManager = Application::getPaymentManager($context);
+
         // if the queued payment doesn't exist, redirect away from payments
         if (!$queuedPayment) {
             $request->redirect(null, 'index');
@@ -164,20 +169,16 @@ class ManualPaymentPlugin extends PaymethodPlugin
 
         switch ($op) {
             case 'notify':
-                $contactName = $context->getData('contactName');
-                $contactEmail = $context->getData('contactEmail');
-                $mail = new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
-                $mail->setReplyTo(null);
-                $mail->addRecipient($contactEmail, $contactName);
-                $mail->assignParams([
-                    'contextName' => $context->getLocalizedName(),
-                    'userFullName' => $user ? $user->getFullName() : ('(' . __('common.none') . ')'),
-                    'userName' => $user ? $user->getUsername() : ('(' . __('common.none') . ')'),
-                    'itemName' => $paymentManager->getPaymentName($queuedPayment),
-                    'itemCost' => $queuedPayment->getAmount(),
-                    'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
-                ]);
-                $mail->send();
+                $mailable = new ManualPaymentNotify($context, $queuedPayment);
+                $template = Repo::emailTemplate()->getByKey($context->getId(), $mailable::getEmailTemplateKey());
+                $locale = $context->getPrimaryLocale();
+                $mailable
+                    ->sender($user)
+                    ->to($context->getData('contactEmail'), $context->getData('contactName'))
+                    ->subject($template->getData('subject', $locale))
+                    ->body($template->getData('body', $locale));
+
+                Mail::send($mailable);
 
                 $templateMgr->assign([
                     'currentUrl' => $request->url(null, null, 'payment', 'plugin', ['notify', $queuedPaymentId]),
@@ -198,6 +199,14 @@ class ManualPaymentPlugin extends PaymethodPlugin
     public function getInstallEmailTemplatesFile()
     {
         return "{$this->getPluginPath()}/emailTemplates.xml";
+    }
+
+    /**
+     * Add mailable to the list of mailables in the application
+     */
+    public function addMailable(string $hookName, array &$args): void
+    {
+        $args[0][] = ManualPaymentNotify::class;
     }
 }
 

@@ -16,10 +16,10 @@ msgstr "Уведомление о платеже"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"Необходимо вручную обработать платеж для журнала «{$contextName}» и пользователя {$userFullName} (имя пользователя «{$userName}»).<br />\n"
+"Необходимо вручную обработать платеж для журнала «{$contextName}» и пользователя {$senderName} (имя пользователя «{$senderUsername}»).<br />\n"
 "<br />\n"
-"Оплата вносится за «{$itemName}».<br />\n"
-"Сумма {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Оплата вносится за «{$paymentName}».<br />\n"
+"Сумма {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Это письмо сгенерировано модулем «Ввод оплаты вручную» системы Open Journal Systems."
 

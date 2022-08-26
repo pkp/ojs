@@ -15,13 +15,13 @@
 namespace APP\mail\mailables;
 
 use APP\journal\Journal;
+use APP\mail\traits\SubscriptionInstitutional;
 use APP\mail\variables\SubscriptionEmailVariable;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\Subscription;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
 use PKP\mail\traits\Sender;
-use PKP\mail\traits\SubscriptionInstitutional;
 use PKP\security\Role;
 
 class SubscriptionPurchaseInstitutional extends Mailable

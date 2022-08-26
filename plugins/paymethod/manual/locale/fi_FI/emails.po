@@ -19,10 +19,10 @@ msgstr "Ilmoitus manuaalisesta maksusta"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"Käyttäjän {$userFullName} (käyttäjätunnus &quot;{$userName}&quot;) tekemä, julkaisuun {$contextName} kohdistuva manuaalinen maksu on käsiteltävä.<br />\n"
+"Käyttäjän {$senderName} (käyttäjätunnus &quot;{$senderUsername}&quot;) tekemä, julkaisuun {$contextName} kohdistuva manuaalinen maksu on käsiteltävä.<br />\n"
 "<br />\n"
-"Maksettava kohde on &quot;{$itemName}&quot;.<br />\n"
-"Hinta: {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Maksettava kohde on &quot;{$paymentName}&quot;.<br />\n"
+"Hinta: {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Tämä sähköposti on Open Journal Systemsin Manuaalinen maksu -lisäosan luoma."
 

@@ -19,10 +19,10 @@ msgstr "Oznámení o manuální platbě"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"Je třeba zpracovat manuální platbu pro časopis {$contextName} a uživatele {$userFullName} (uživatelské jméno &quot;{$userName}&quot;).<br />\n"
+"Je třeba zpracovat manuální platbu pro časopis {$contextName} a uživatele {$senderName} (uživatelské jméno &quot;{$senderUsername}&quot;).<br />\n"
 "<br />\n"
-"Položka, za kterou je placeno &quot;{$itemName}&quot;.<br />\n"
-"Cena je {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Položka, za kterou je placeno &quot;{$paymentName}&quot;.<br />\n"
+"Cena je {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Tento email byl vygenerován OJS pluginem Manuální platby."
 
