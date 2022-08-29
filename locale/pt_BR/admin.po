@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-26 20:50+0000\n"
+"PO-Revision-Date: 2022-08-29 17:50+0000\n"
 "Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
@@ -82,8 +82,8 @@ msgstr "Criar revista"
 #, fuzzy
 msgid "admin.journals.urlWillBe"
 msgstr ""
-"Uma palavra pequena ou acrônimo para identificar a revista. O endereço URL "
-"da revista será {$sampleUrl}."
+"Geralmente é usado um acrônimo que identifica o periódico. A URL do "
+"periódico será: {$sampleUrl}."
 
 #, fuzzy
 msgid "admin.contexts.form.titleRequired"
@@ -103,9 +103,8 @@ msgstr ""
 msgid "admin.contexts.form.pathExists"
 msgstr "O caminho selecionado já está em uso por outra revista."
 
-#, fuzzy
 msgid "admin.journals.enableJournalInstructions"
-msgstr "Habilitar esta revista para aparecer publicamente no site"
+msgstr "Permitir Acesso Livre a esta revista no portal"
 
 msgid "admin.contexts.contextDescription"
 msgstr "Descrição da revista"
@@ -137,7 +136,7 @@ msgstr "Mesclar usuários/as"
 
 #, fuzzy
 msgid "admin.mergeUsers.mergeUser"
-msgstr "Mesclar usuário/a"
+msgstr "Mesclar usuário"
 
 #, fuzzy
 msgid "admin.mergeUsers.into.description"
@@ -204,7 +203,7 @@ msgstr ""
 "para garantir que seja usado de maneira adequada. <br><br> Restrições "
 "adicionais sobre este recurso podem ser ativadas para cada revista visitando "
 "seu assistente de configuração na lista de <a href=\"{$hostedContextsUrl}\"> "
-"Revistas  hospedados </a>."
+"Revistas  hospedadas </a>."
 
 #, fuzzy
 msgid "admin.settings.disableBulkEmailRoles.description"
