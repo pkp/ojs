@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/notification/form/NotificationSettingsForm.inc.php
+ * @file classes/notification/form/NotificationSettingsForm.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

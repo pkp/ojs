@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @file classes/statistics/StatisticsHelper.inc.php
+* @file classes/statistics/StatisticsHelper.php
 *
 * Copyright (c) 2013-2021 Simon Fraser University
 * Copyright (c) 2003-2021 John Willinsky

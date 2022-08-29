@@ -1,6 +1,6 @@
 <?php
 /**
- * @file classes/submission/Collector.inc.php
+ * @file classes/submission/Collector.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky

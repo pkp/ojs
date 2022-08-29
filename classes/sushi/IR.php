@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @file classes/sushi/IR.inc.php
+* @file classes/sushi/IR.php
 *
 * Copyright (c) 2022 Simon Fraser University
 * Copyright (c) 2022 John Willinsky

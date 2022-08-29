@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/mail/variables/SubscriptionEmailVariable.inc.php
+ * @file classes/mail/variables/SubscriptionEmailVariable.php
  *
  * Copyright (c) 2014-2022 Simon Fraser University
  * Copyright (c) 2000-2022 John Willinsky

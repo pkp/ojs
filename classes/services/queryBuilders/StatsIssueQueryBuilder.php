@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/services/queryBuilders/StatsIssueQueryBuilder.inc.php
+ * @file classes/services/queryBuilders/StatsIssueQueryBuilder.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky

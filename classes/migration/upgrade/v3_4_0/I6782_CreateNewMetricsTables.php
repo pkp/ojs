@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/install/I6782_CreateNewMetricsTables.inc.php
+ * @file classes/migration/install/I6782_CreateNewMetricsTables.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky

@@ -7,7 +7,7 @@
  */
 
 /**
- * @file classes/journal/Journal.inc.php
+ * @file classes/journal/Journal.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

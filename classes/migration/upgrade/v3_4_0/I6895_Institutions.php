@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_4_0/I6895_Institutions.inc.php
+ * @file classes/migration/upgrade/v3_4_0/I6895_Institutions.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky

@@ -1,6 +1,6 @@
 <?php
 /**
- * @file classes/publication/DAO.inc.php
+ * @file classes/publication/DAO.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -43,8 +43,8 @@ class DAO extends \PKP\publication\DAO
         $publication->setData(
             'galleys',
             Repo::galley()->getCollector()
-            ->filterByPublicationIds([$publication->getId()])
-            ->getMany()
+                ->filterByPublicationIds([$publication->getId()])
+                ->getMany()
         );
 
         return $publication;

@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @file classes/sushi/TR_J3.inc.php
+* @file classes/sushi/TR_J3.php
 *
 * Copyright (c) 2022 Simon Fraser University
 * Copyright (c) 2022 John Willinsky

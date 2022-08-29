@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/publication/Publication.inc.php
+ * @file classes/publication/Publication.php
  *
  * Copyright (c) 2016-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

@@ -1,6 +1,6 @@
 <?php
 /**
- * @file classes/decision/types/traits/RequestPayment.inc.php
+ * @file classes/decision/types/traits/RequestPayment.php
  *
  * Copyright (c) 2014-2022 Simon Fraser University
  * Copyright (c) 2000-2022 John Willinsky

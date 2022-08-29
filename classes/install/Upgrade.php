@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/install/Upgrade.inc.php
+ * @file classes/install/Upgrade.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -97,7 +97,7 @@ class Upgrade extends Installer
             ->leftJoin('user_groups as g', 'a.user_group_id', '=', 'g.user_group_id')
             ->whereColumn('g.context_id', '<>', 's.context_id')
             ->get(['a.author_id', 's.context_id']);
-        
+
         foreach ($rows as $row) {
             $authorGroup = Repo::userGroup()->getByRoleIds([Role::ROLE_ID_AUTHOR], $row->context_id, true);
             if ($authorGroup) {

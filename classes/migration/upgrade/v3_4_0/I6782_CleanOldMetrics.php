@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_4_0/I6782_CleanOldMetrics.inc.php
+ * @file classes/migration/upgrade/v3_4_0/I6782_CleanOldMetrics.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky

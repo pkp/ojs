@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormatPlugin_RFC1807.inc.php
+ * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormatPlugin_RFC1807.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

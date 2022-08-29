@@ -6,7 +6,7 @@
  */
 
 /**
- * @file classes/i18n/AppLocale.inc.php
+ * @file classes/i18n/AppLocale.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky

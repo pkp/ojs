@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/observers/events/Usage.inc.php
+ * @file classes/observers/events/Usage.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky

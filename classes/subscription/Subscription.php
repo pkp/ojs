@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/subscription/Subscription.inc.php
+ * @file classes/subscription/Subscription.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

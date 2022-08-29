@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
+ * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky

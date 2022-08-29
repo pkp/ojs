@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/install/MetricsMigration.inc.php
+ * @file classes/migration/install/MetricsMigration.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky

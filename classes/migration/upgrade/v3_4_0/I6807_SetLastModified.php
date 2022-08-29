@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_4_0/I6807_SetLastModified.inc.php
+ * @file classes/migration/upgrade/v3_4_0/I6807_SetLastModified.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
