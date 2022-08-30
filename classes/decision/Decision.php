@@ -25,11 +25,6 @@ use PKP\decision\Decision as BaseDecision;
 
 class Decision extends BaseDecision
 {
-    public const ACCEPT = 1;
-    public const PENDING_REVISIONS = 2;
-    public const RESUBMIT = 3;
-    public const DECLINE = 4;
-    public const EXTERNAL_REVIEW = 8;
 }
 
 if (!PKP_STRICT_MODE) {
