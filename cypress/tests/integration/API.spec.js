@@ -23,6 +23,16 @@ describe('API tests', function() {
 		cy.get('.app__userNav button').click();
 		cy.get('a:contains("Edit Profile")').click();
 		cy.get('a[name="apiSettings"]').click();
+		cy.get("body").then($body => {
+			if ($body.find("button:contains(\"Delete\")").length > 0) {   
+				cy.get('form[id="apiProfileForm"] button:contains("Delete")').click();
+				cy.waitJQuery();
+				cy.on('window:confirm', (text) => {
+					return true;
+				});
+				cy.waitJQuery();
+			}
+		});
 		cy.get('form[id="apiProfileForm"] button:contains("Create API Key")').click();
 		cy.waitJQuery();
 		cy.get('span:contains("Your changes have been saved.")');
@@ -37,5 +47,21 @@ describe('API tests', function() {
 			// The author only has a single submission; submissions from other users should not be included.
 			expect(response.body.items.length).eq(1);
 		});
+	});
+
+	it("Deletes an author's API key", function() {
+		cy.login('ccorino', null, 'publicknowledge');
+		cy.get('.app__userNav button').click();
+		cy.get('a:contains("Edit Profile")').click();
+		cy.get('a[name="apiSettings"]').click();
+		cy.get('form[id="apiProfileForm"] button:contains("Delete")').click();
+		cy.waitJQuery();
+		cy.on('window:confirm', (text) => {
+			return true;
+		});
+		cy.waitJQuery();
+		cy.get('span:contains("Your changes have been saved.")');
+		cy.get('input[id^="apiKey-"]').invoke('val').should('eq', 'None');
+		cy.logout();
 	});
 })
