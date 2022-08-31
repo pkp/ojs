@@ -2,7 +2,7 @@
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-25 17:11+0000\n"
+"PO-Revision-Date: 2022-08-17 17:37+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "Достъп"
@@ -279,7 +279,7 @@ msgstr ""
 "потребител чрез Управление> Настройки> Потребители &amp; Първо роли."
 
 msgid "manager.sections.abstractsNotRequired"
-msgstr "Не се  изискват резюмета"
+msgstr "Не се изискват резюмета"
 
 msgid "manager.people.syncUserDescription"
 msgstr ""
@@ -911,7 +911,7 @@ msgid "manager.setup.pageNumberIdentifier"
 msgstr "Настройка за номерацията на страници"
 
 msgid "manager.setup.onlineIssn"
-msgstr "ISSN  за онлайн версия на списание"
+msgstr "ISSN за онлайн версия на списание"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr "Ограничете броя на връзките за показване до следващи страници в списък."
@@ -1128,7 +1128,7 @@ msgstr ""
 "текстовата версия, която се появява, ако не е избрана графична версия."
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "Заглавие на на началната страница на списанието (алт. текст)"
+msgstr "Заглавие на началната страница на списанието"
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Заглавие на началната страница на списанието"
@@ -1174,7 +1174,7 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Име на уебсайта, когато се хоства повече от едно списание"
 
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr "Валутата на сумата на плащането,  например USD"
+msgstr "Валутата на сумата на плащането, например USD"
 
 msgid "emailTemplate.variable.queuedPayment.itemCost"
 msgstr "Сумата на плащането"
@@ -1609,7 +1609,7 @@ msgstr "Изберете"
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
 "Привилегиите за достъп до абонамент автоматично се предоставят на "
-"мениджърите на списанието, редакторите, редакторите на секции, редакторите "
+"мениджърите на списанието, редакторите, секционните редактори, редакторите "
 "на оформления, техническите редактори и коректорите."
 
 msgid "manager.subscriptions.selectUser"
@@ -2387,9 +2387,11 @@ msgstr ""
 "Използвайте стандартни шаблони.<br />%j.v%vi%i за издания<br />%j.v%vi%i.%a "
 "\" \"за статии<br />%j.v%vi%i.%a.g%g за типографии."
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Моля, изберете обектите, към които трябва да бъдат присвоени DOI."
+msgstr ""
+"Моля, изберете обектите, към които трябва да бъдат присвоени DOI. Повечето "
+"списания присвояват DOI на статии, но може да пожелаете да присвоите DOI на "
+"всички публикувани елементи."
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
@@ -2473,3 +2475,72 @@ msgid "mailable.openAccessNotify.description"
 msgstr ""
 "Този имейл се изпраща на регистрирани читатели, които са поискали да получат "
 "имейл с известия, когато броят стане с отворен достъп."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "инициали на списанието"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Име на институцията"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Пощенски адрес на институцията"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Домейн"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP диапазон за удостоверяване на абонамент"
+
+msgid "manager.institutions.noContext"
+msgstr "Списанието на тази институция не може да бъде намерено."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Уведомяване за абонамент"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Абонаментът изтича скоро"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Абонаментът е изтекъл"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Последно изтекли абонаменти"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Покупка на институционален абонамент"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Покупка на индивидуален (личен) абонамент"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Подновяване на индивидуалния (личен) абонамент"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Подновяване на институционалния абонамент"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Уведомяване за отворен достъп"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Уведомяване за публикуване на брой"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Този имейл се изпраща автоматично до регистрираните потребители, когато бъде "
+"публикуван новият брой."
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Моля, изберете валидна институция."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Институция"
+
+msgid "stats.issueTOCViews"
+msgstr "Прегледи на съдържанието на броя"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
+"Трябва да се създаде институция, преди да могат да се правят нови абонаменти."
+
+msgid "stats.issueGalleyViews"
+msgstr "Прегледи на типографията на броя"

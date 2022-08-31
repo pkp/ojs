@@ -1,19 +1,20 @@
+# IgorVeha <igor.veha@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
-"PO-Revision-Date: 2020-05-05 01:37+0000\n"
-"Last-Translator: Fylypovych Georgii <red.ukr@gmail.com>\n"
+"PO-Revision-Date: 2022-08-20 11:32+0000\n"
+"Last-Translator: IgorVeha <igor.veha@gmail.com>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "uk_UA/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "context.current"
 msgstr "Поточний журнал:"
@@ -1620,13 +1621,26 @@ msgstr "Про цю видавничу систему"
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Редакційно-видавничий процес OJS"
 
-#, fuzzy
 msgid "about.aboutOJSJournal"
-msgstr "Цей журнал використовує Open Journal Systems {$ojsVersion} - програмний пакет з відкритим вихідним кодом, який підтримує процеси менеджменту та публікації журналу. Пакет розробляється, підтримується та вільно розповсюджується <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> на умовах ліцензії GNU General Public License."
+msgstr ""
+"Цей журнал використовує Open Journal Systems {$ojsVersion} - програмний "
+"пакет з відкритим вихідним кодом, який підтримує процеси менеджменту та "
+"публікації журналу. Пакет розробляється, підтримується та вільно "
+"розповсюджується <a href=\"https://pkp.sfu.ca/\">Public Knowledge Project</"
+"a> на умовах ліцензії GNU General Public License. Відвідайте веб-сайт <a "
+"href=\"https://pkp.sfu.ca/\">щоб дізнатися більше про програмне "
+"забезпечення</a>. З питань, пов'язаних з журналом і подачею матеріалів в "
+"журнал, <a href=\"{$contactUrl}\">звертайтеся безпосередньо в журнал</a>."
 
-#, fuzzy
 msgid "about.aboutOJSSite"
-msgstr "Цей сайт використовує Open Journal Systems {$ojsVersion} - програмний пакет з відкритим вихідним кодом, який підтримує процеси менеджменту та публікації журналів. Пакет розробляється, підтримується та вільно розповсюджується <a href=\"http://pkp.sfu.ca/\">Public Knowledge Project</a> на умовах ліцензії GNU General Public License."
+msgstr ""
+"Цей сайт використовує Open Journal Systems {$ojsVersion}, яка є програмним "
+"забезпеченням для керування журналами та публікацією з відкритим кодом, "
+"розробленим, підтримуваним та вільно розповсюджуваним проєктом Public "
+"Knowledge під GNU General Public License. Відвідайте сайт PKP, щоб <a href="
+"\"https://pkp.sfu.ca/\">дізнатися більше про програмне забезпечення</a>. "
+"Будь ласка, звертайтеся безпосередньо на сайт з питаннями про журнали та "
+"подачі матеріалів в журнали."
 
 msgid "help.ojsHelp"
 msgstr "Допомога Open Journal Systems"
@@ -2369,3 +2383,47 @@ msgstr ""
 "http://opcit.eprints.org/oacitation-biblio.html\">Ефект Відкритого "
 "Доступу</a>).</li>\n"
 "</ol>"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Цей журнал не публікує свої матеріали в Інтернеті."
+
+#, fuzzy
+msgid "payment.waived"
+msgstr "Відмовився"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Призначені редактори"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Плата за публікацію не включена."
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Не вдалося створити DOI для наступного випуску: {$itemTitle}. Він не існує в "
+"поточному контексті журналу."
+
+msgid "issue.viewIssueIdentification"
+msgstr "Дивитися {$identification}"
+
+msgid "about.aboutSoftware"
+msgstr "Про Open Journal Systems"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Запитувана гранка не може бути знайдена."
+
+msgid "doi.manager.settings.publications"
+msgstr "Статті"
+
+msgid "payment.unpaid"
+msgstr "Неоплачений"
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"Не вдалося встановити статус DOI на неактуальний для наступного випуску: "
+"{$itemTitle}. DOI повинен мати статус \"зареєстрований \" або\"відправлений\""
+"."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"Не вдалося позначити DOI зареєстрованим для {$pubObjectTitle}. Випуск "
+"повинен бути опублікований, перш ніж статус може бути оновлений."

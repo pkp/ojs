@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-03 14:20+0000\n"
+"PO-Revision-Date: 2022-08-17 00:37+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hy_AM/>\n"
@@ -2542,3 +2542,53 @@ msgstr "Թողարկման շարվածքի դիտումները"
 
 msgid "manager.institutions.noContext"
 msgstr "Այս հաստատության ամսագիրը չհաջողվեց գտնել:"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Հաստատության անվանումը"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Հաստատության փոստային հասցեն"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Դոմեյն"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Բաժանորդագրության նույնականացման IP միջակայքերը"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Բաժանորդագրության ծանուցում"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Բաժանորդագրության ժամկետը վերջացել է"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Գնեք անհատական բաժանորդագրություն"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Թարմացնել անհատական բաժանորդագրությունը"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Թարմացնել ինստիտուցիոնալ բաժանորդագրությունը"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Թողարկման հրապարակման ծանուցում"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "ամսագրի սկզբնատառերը"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Բաժանորդագրության ժամկետը շուտով կլրանա"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Բաժանորդագրության ժամկետը սպառվել է"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Գնեք ինստիտուցիոնալ բաժանորդագրություն"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Բաց մատչելիության ծանուցում"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Այս էլ․ նամակն ինքնաշխատ կերպով ուղարկվում է գրանցված օգտատերերին, երբ նոր "
+"թողարկումը հրապարակվի:"

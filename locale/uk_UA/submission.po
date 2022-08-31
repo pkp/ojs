@@ -1,19 +1,20 @@
+# IgorVeha <igor.veha@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
-"PO-Revision-Date: 2020-04-18 20:21+0000\n"
-"Last-Translator: Fylypovych Georgii <red.ukr@gmail.com>\n"
+"PO-Revision-Date: 2022-08-19 19:35+0000\n"
+"Last-Translator: IgorVeha <igor.veha@gmail.com>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
-"submission/uk/>\n"
+"submission/uk_UA/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.title"
 msgstr "Подати статтю"
@@ -167,120 +168,235 @@ msgstr "Будь-який розділ"
 msgid "submission.publication"
 msgstr "Публікація"
 
-
 msgid "publication.status.published"
 msgstr "Опубліковано"
-
 
 msgid "submission.status.scheduled"
 msgstr "Запланований"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Знято з плану"
-
 
 msgid "submission.publications"
 msgstr "Публікації"
 
-
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Рік авторського права буде виставлено автоматично після публікації випуску."
-
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "Рік авторського права буде виставлено автоматично, базуючись на даті "
 "публікації."
 
-
 msgid "publication.datePublished"
 msgstr "Дата Публікації"
-
 
 msgid "publication.editDisabled"
 msgstr "Ця версія була опублікована і не може бути змінена."
 
-
 msgid "publication.event.published"
 msgstr "Подання було опубліковано."
-
 
 msgid "publication.event.scheduled"
 msgstr "Подання заплановане до публікації."
 
-
 msgid "publication.event.unpublished"
 msgstr "Подання було знято з публікації."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Нова версія опублікована."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Нова версія запланована до публікації."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "Версія була прибрана з публікації."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Подання для цієї публікації неможливо знайти."
-
 
 msgid "publication.publish"
 msgstr "Опублікувати"
 
-
 msgid "publication.publish.requirements"
 msgstr "Наступні вимоги мають бути виконані перед публікацією."
 
-
 msgid "publication.required.declined"
 msgstr "Матеріал якому відмовлено, неможливо опублікувати."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "До того як Опублікувати подання, воно має бути на стадії \"Літературне "
 "редагування\" або \"Виробництво\"."
 
-
 msgid "submission.license.description"
 msgstr ""
 "Ліцензія призначиться автоматично <a href='{$licenseUrl}' "
 "target='_blank'>{$licenseName}</a> коли матеріал буде опубліковано."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Авторське право автоматично призначиться на {$copyright} після публікування "
 "матеріалу."
 
-
 msgid "submission.copyrightOther.description"
 msgstr "Призначити авторські права на опубліковані матеріали наступній стороні."
-
 
 msgid "publication.unpublish"
 msgstr "Зняти з публікації"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Ви впевнені що не хочете публікувати цей матеріал?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Ви впевнені, що не хочете запланувати цей матеріал до публікації?"
 
-
 msgid "publication.version.details"
 msgstr "Деталі публікації для версії {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Обговорення подання"
 
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Гранки цієї публікації не можуть бути відредаговані, оскільки вона вже була "
+"опублікована."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Надішліть електронний лист авторам, щоб повідомити їм, що дана робота буде "
+"відправлена на рецензування. Якщо можливо, повідомте авторам, скільки часу "
+"може зайняти процес рецензування і коли їм слід очікувати нових повідомлень "
+"від редакторів."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Всі вимоги до публікації були виконані. Ви впевнені, що хочете опублікувати?"
+
+#, fuzzy
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Відправити назад на перевірку"
+
+msgid "publication.invalidSection"
+msgstr "Не вдалося знайти розділ для цієї публікації."
+
+msgid "submission.sectionOptions"
+msgstr "Параметри розділу"
+
+#, fuzzy
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Не вдалося створити DOI для наступного матеріалу: {$pubObjectTitle}. Він не "
+"існує в поточному контексті/розділі журналу."
+
+msgid "publication.selectIssue"
+msgstr "Виберіть випуск, який потрібно запланувати для публікації"
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Не вдалося створити DOI для {$pubObjectTitle} гранки для наступного подання: "
+"{$itemTitle}. Подання має бути віднесено до випуску, перш ніж DOI може бути "
+"створений."
+
+msgid "publication.changeIssue"
+msgstr "Змінити випуск"
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Виберіть файли, які повинні бути відправлені на етап рецензування."
+
+msgid "publication.unscheduledIn"
+msgstr "Це не було заплановано для публікації в будь-якому випуску."
+
+msgid "publication.assignToissue"
+msgstr "Призначити для видачі"
+
+msgid "publication.required.issue"
+msgstr ""
+"Публікація повинна бути призначена випуску, перш ніж вона може бути "
+"опублікована."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Всі вимоги до публікації були виконані. Це буде опубліковано негайно, "
+"оскільки дата публікації була встановлена на {$datePublished}. Ви впевнені, "
+"що хочете це опублікувати?"
+
+msgid "galley.publicationNotFound"
+msgstr "Не вдалося знайти публікацію для цієї гранки."
+
+msgid "publication.publishedIn"
+msgstr "Опубліковано в <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Заявка, {$title}, була відправлена назад на етап розгляду."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Не вдалося створити DOI для наступного надсилання: {$pubObjectTitle}. "
+"Подання має бути віднесено до випуску, перш ніж можна буде створити DOI."
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Пункти"
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Надішліть авторам електронний лист із повідомленням про те, що їхня робота "
+"повертається на етап рецензування. Поясніть, чому було прийнято таке "
+"рішення, і проінформуйте автора про те, яке подальше рецензування буде "
+"проведено."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Неактивний)"
+
+msgid "publication.scheduledIn"
+msgstr "Заплановано до публікації в <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Всі вимоги до публікації були виконані. Це буде негайно опубліковано в "
+"{$issue}. Ви впевнені, що хочете опублікувати?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Всі вимоги до публікації були виконані. Це буде опубліковано, коли буде "
+"опубліковано {$issue}. Ви впевнені, що хочете запланувати цю публікацію?"
+
+msgid "submission.submit.noContext"
+msgstr "Не вдалось знайти журнал цього матеріалу."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Це попередній перегляд і він не був опублікований. <a href=\"{$url}\""
+">Перегляд відправки</a>"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Ця робота була передана в <a href=\"{$issueUrl}\">{$issueName}</a>, але її "
+"публікація не була запланована."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Дата публікації буде встановлена автоматично при публікації номера. Не "
+"вводьте дату публікації, якщо тільки стаття раніше не була опублікована в "
+"іншому місці та вам не потрібно встановити її заднім числом."
+
+msgid "publication.invalidIssue"
+msgstr "Випуск для цієї публікації знайти не вдалося."
+
+msgid "catalog.category.heading"
+msgstr "Всі пункти"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Скасуйте рішення про прийняття цієї заявки й відправте її назад на етап "
+"розгляду."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} скасував рішення про прийняття цього матеріалу і відправив "
+"його назад на стадію розгляду."
+
+#, fuzzy
+msgid "editor.submission.decision.backToReview"
+msgstr "Повернутися до Огляду"

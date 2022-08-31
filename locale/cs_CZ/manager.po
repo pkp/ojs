@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2022-08-08 09:15+0000\n"
+"PO-Revision-Date: 2022-08-17 00:37+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -2554,3 +2554,53 @@ msgstr "Náhledy sazebnic čísla"
 
 msgid "manager.institutions.noContext"
 msgstr "Časopis této instituce nelze nalézt."
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "E-mailová adresa instituce"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Doména"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Rozsahy IP adres pro autentizaci předplatného"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Předplatné vypršelo"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Předplatné vypršelo naposledy"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Nákup individuálního předplatného"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Nákup institucionálního předplatného"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Obnovení individuálního předplatného"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Obnovení institucionálního předplatného"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Upozornění na otevřený přístup"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "iniciály časopisu"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Jméno instituce"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Upozornění na předplatné"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Předplatné brzy vyprší"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Oznámení o zveřejnění čísla"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Tento e-mail je automaticky zasílán registrovaným uživatelům při zveřejnění "
+"nového čísla."

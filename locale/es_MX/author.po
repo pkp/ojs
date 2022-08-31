@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-10 09:21+0000\n"
+"PO-Revision-Date: 2022-08-15 22:14+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/es_MX/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit.noSubmissionConfirm"
 msgstr "¿Está seguro/a de que desea continuar sin cargar un archivo de envío?"
@@ -78,7 +78,7 @@ msgstr ""
 "enumerados en la publicación."
 
 msgid "submission.submit.privacyStatement"
-msgstr "Declaración de privacidad de la revista"
+msgstr "Declaración de privacidad"
 
 msgid "author.submit.form.localeRequired"
 msgstr "Seleccione el idioma del envío."

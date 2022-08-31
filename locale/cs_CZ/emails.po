@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2022-07-19 05:07+0000\n"
+"PO-Revision-Date: 2022-08-17 00:37+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/emails/cs_CZ/>"
 "\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Potvrzení o resetování hesla"
@@ -55,16 +55,16 @@ msgstr ""
 "Děkujeme,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
-msgstr "Ověření Vašeho účtu"
+msgstr "Ověřte svůj účet"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
 "<br />\n"
-"Vytvořil jste si účet pro {$contextName}, ale před tím, než ho budete moci začít používat, musí být ověřen Váš emailový účet. Pro jeho ověření jednoduše následujte odkaz uvedený níže:<br />\n"
+"Vytvořil jste si účet pro {$contextName}, ale před tím, než ho budete moci "
+"začít používat, musí být ověřen Váš emailový účet. Pro jeho ověření "
+"jednoduše následujte odkaz uvedený níže:<br />\n"
 "<br />\n"
 "{$activateUrl}<br />\n"
 "<br />\n"
@@ -90,7 +90,6 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nové číslo bylo vydáno: {$issueIdentification}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Vážení čtenáři/vážená čtenářko,</p><p>{$contextName} s potěšením oznamuje "
@@ -197,30 +196,26 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Tento email oznamuje recenzentům příspěvku, že bylo dokončeno recenzní řízení. Obsahuje informace o článku a konečné rozhodnutí a poděkování recenzentům za jejich práci."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Byl /a jste přiřazen jako editor příspěvku pro {$contextName}"
 
-#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
 "<p>Dobrý den {$recipientName},</p><p>Následující příspěvek byl přidělen Vám, "
 "abyste ho provedl/a redakčním procesem.</p><p><a href=\"{$submissionUrl}\""
 ">{$submissionTitle}</a><br />{$authors}</p><p>Pokud považujete příspěvek za "
-"relevantní pro {$contextName}, předejte prosím podání do fáze recenzního "
-"řízení výběrem možnosti \"Odeslat k recenznímu řízení\" a poté přidělte "
-"recenzenty kliknutím na \"Přidat recenzenta\". </p><p>Pokud podle vás není "
+"relevantní pro {$contextName}, předejte prosím příspěvek do fáze recenzního "
+"řízení výběrem možnosti „Odeslat k recenznímu řízení“ a poté přidejte "
+"recenzenty kliknutím na „Přidat recenzenta“. </p><p>Pokud podle vás není "
 "příspěvek vhodný pro tento časopis, odmítněte jej, prosím.</p><p>Předem "
 "děkujeme.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Pozvánka k recenzi"
 
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
-"<p>Vážený/á {$recipientName},</p><p>Domnívám se, že byste byl vynikajícím "
+"<p>Vážený/á {$recipientName},</p><p>Domnívám se, že byste byl/a vynikajícím "
 "recenzentem pro periodikum {$contextName}. Název a anotace příspěvku jsou "
 "uvedeny níže a doufám, že zvážíte, zda se tohoto důležitého úkolu pro nás "
 "ujmete.</p><p>Pokud jste schopni receznovat tento příspěvek, vaše recenze vy "
@@ -229,10 +224,10 @@ msgstr ""
 "systému našeho periodika a podle pokynů na níže uvedeném odkazu.</p><p><a "
 "href=\"{$reviewAssignmentUrl}\""
 ">{$submissionTitle}</a></p><p>Abstrakt</p>{$submissionAbstract}<p>O tom, zda "
-"recenzi přijmete či odmítnete, se rozhodněte, prosím, do "
-"{$responseDueDate}</p><p>Můžete se na nás obrátit s jakýmikoliv dotazy "
-"ohledně příspěvku nebo recenzního řízení.</p><p>Děkujeme vám za zvážení této "
-"žádosti. Vaší pomoci si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
+"recenzi přijmete či odmítnete, se rozhodněte, prosím, do {$responseDueDate}</"
+"p><p>Můžete se na nás obrátit s jakýmikoliv dotazy ohledně příspěvku nebo "
+"recenzního řízení.</p><p>Děkujeme vám za zvážení této žádosti. Vaší pomoci "
+"si velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
 msgid "emails.reviewCancel.subject"
 msgstr "Žádost o zrušení recenze"
@@ -267,26 +262,24 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Připomínáme, abyste dokončili svou recenzi"
+msgstr "Prosíme o dokončení recenze"
 
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Vážený/á {$jméno příjemce},</p><p>Dovolujeme si jemně připomenout naši "
 "žádost o recenzi příspěvku \"{$submissionTitle}\" pro periodikum "
 "{$contextName}. Očekávali jsme, že recenzi obdržíme do {$reviewDueDate}, a "
-"budeme rádi, když jej obdržíme, jakmile budete schopni jej připravit.</p><p>"
-"Můžete se přihlásit do časopisu a postupovat podle pokynů pro prohlížení "
-"posudku, nahrávání souborů s posudkem a zaslání recenzních připomínek.</p><p>"
-"Pokud potřebujete prodloužit lhůtu, kontaktujte nás, prosím. Těším se na "
-"vaši odpověď.</p><p>Předem vám děkujeme a jsme s pozdravem,</p>{$signature}"
+"budeme rádi, když jej obdržíme, jakmile budete schopni ji připravit.</"
+"p><p>Můžete se přihlásit do časopisu a postupovat podle pokynů pro "
+"prohlížení posudku, nahrávání souborů s posudkem a zaslání recenzních "
+"připomínek.</p><p>Pokud potřebujete prodloužit lhůtu, kontaktujte nás, "
+"prosím. Těším se na vaši odpověď.</p><p>Předem vám děkujeme a jsme s "
+"pozdravem,</p>{$signature}"
 
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Připomínáme, abyste dokončili svou recenzi"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Vážený/á {$recipientName}:</p><p>Tento email je automatickým připomenutím "
@@ -450,27 +443,24 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "Tento email posílá editor sekce redaktorovi, aby mu poděkoval za dokončení finálního kola redigování a ocenil jeho práci."
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
-"Příspěvek {$submissionId} je připraven do produkční fáze pro periodikum "
+"Příspěvek {$submissionId} je připraven do produkční fáze v periodiku "
 "{$contextAcronym}"
 
-#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
-"<p>Vážený/á{$recipientName},</p><p>Nový příspěvek  je připraven k "
-"editaci:</p><p><a href=\"{$submissionUrl}\">{$submissionId} "
+"<p>Vážený/á{$recipientName},</p><p>Nový příspěvek  je připraven k editaci "
+"sazebnice:</p><p><a href=\"{$submissionUrl}\">{$submissionId} "
 "{$submissionTitle}</a><br />{$contextName}</p><ol><li>1. Klikněte na adresu "
-"příspěvku výše.</li><li>2.  Stáhněte si soubory pro produkční fázi a "
-"použijte je k vytvoření sazebnic dle standardů našeho periodika.</li><li>3. "
-"Nahrajte sazebnice do sekce Publikace pro tento příspěvek.</li><li>4. "
-"Použijte diskusi v rámci produkční fáze, abyste upozornili editora, že jsou "
-"sazebnice hotové.</li></ol><p>Pokud nejste schopný/á převzít tento úkol, "
-"nebo pokud máte jakékoliv dotazy, kontaktujte mne, prosím. Děkujeme za "
-"spolupráci v rámci našeho periodika.</p><p>S pozdravem,</p>{$signature}"
+"příspěvku výše.</li><li>2. Stáhněte si soubory pro produkční fázi a použijte "
+"je k vytvoření sazebnic dle standardů našeho periodika.</li><li>3. Nahrajte "
+"sazebnice do sekce Publikace pro tento příspěvek.</li><li>4. Použijte "
+"diskusi v rámci produkční fáze, abyste upozornili editora, že jsou sazebnice "
+"hotové.</li></ol><p>Pokud nejste schopný/á převzít tento úkol, nebo pokud "
+"máte jakékoliv dotazy, kontaktujte mne, prosím. Děkujeme za spolupráci v "
+"rámci našeho periodika.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Sazebnice dokončeny"
 
@@ -777,18 +767,16 @@ msgstr ""
 msgid "emails.notificationMaillistWelcome.description"
 msgstr "Tento e-mail je odeslán neregistrovanému uživateli, který se právě zaregistroval do mailového seznamu oznámeními."
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Váš příspěvek do periodika {$contextName} byl přijat"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>S potěšením vám oznamuji, že jsme se "
 "rozhodli přijmout váš příspěvek bez dalšího přepracování. Po pečlivém "
 "přezkoumání jsme shledali, že váš příspěvek {$submissionTitle} vyhověl naším "
 "očekáváním, nebo je dokonce překročil. Jsme potěšení, že můžeme publikovat "
-"váš příspěvke do periodika {$contextName} a děkujeme vám, že jste si vybrali "
+"váš příspěvek do periodika {$contextName} a děkujeme vám, že jste si vybrali "
 "naše periodikum k zveřejnění vašeho příspěvku.</p><p>Váš příspěvek bude "
 "zveřejněn v nejbližším čísle našeho periodika {$contextName} a uvítáme, když "
 "ho zahrnete do vašeho publikačního seznamu. Jsme si vědomi tvrdé práce, "
@@ -799,7 +787,6 @@ msgstr ""
 "nás prosím pomocí redakčního systému <a href=\"{$submissionUrl}\">našeho "
 "periodika</a>.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Zakoupení předplatného: Individuální"
 
@@ -1011,7 +998,6 @@ msgstr "Vložte, prosím, vaši zprávu."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Výchozí (prázdná) zpráva použitá v nástroji List Builder Message Center Message Builder."
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Potvrzení příspěvku"
 
@@ -1039,7 +1025,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Požadavek na recenzi upravené verze příspěvku"
 
@@ -1060,9 +1045,8 @@ msgstr ""
 "recenzního řízení.</p><p>Děkuji za zvážení naší žádosti. Vaší pomoci si "
 "velmi vážíme.</p><p>S pozdravem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Bude nám schopen/schopna udělat recenzi příspěvku?"
+msgstr "Bude schopen/a udělat pro nás recenzi tohoto příspěvku?"
 
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""

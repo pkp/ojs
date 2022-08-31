@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-08-17 16:00+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "bg_BG/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
 msgstr ""
@@ -203,3 +203,12 @@ msgid "admin.siteManagement.description"
 msgstr ""
 "Добавяне, редактиране или премахване на списания от този сайт и управление "
 "на настройките за целия сайт."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Идентификаторът на броя не е цяло число."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Идентификаторът на броя не съвпада с асоциирания идентификатор."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Идентификаторът на типографията не е цяло число."

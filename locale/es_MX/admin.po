@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-09 10:39+0000\n"
+"PO-Revision-Date: 2022-08-15 22:14+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/es_MX/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.contexts.contextDescription"
 msgstr "Descripción de la revista"
@@ -210,3 +210,12 @@ msgstr "Importar suscripciones"
 
 msgid "admin.journal.pathImportInstructions"
 msgstr "Ruta actual de la revista o ruta que se desea crear (p. ej. \"ojs\")."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Issue ID no es un entero."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Issue galley ID no es un entero."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Issue ID no coincide con assoc ID."

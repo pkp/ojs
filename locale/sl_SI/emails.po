@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-07-17 12:47+0000\n"
+"PO-Revision-Date: 2022-08-27 16:50+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "sl_SI/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.notification.subject"
 msgstr "Novo obvestilo od {$contextName}"
@@ -111,14 +111,13 @@ msgstr ""
 msgid "emails.userValidateContext.subject"
 msgstr "Potrdite svoj račun"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName}<br />\n"
 "<br />\n"
 "Ustvarili ste uporabniški račun za revijo {$contextName}. Pred uporabo "
-"morate potrditi vaš email naslov, zato prosimo, da sledite spodnji povezavi:<"
-"br />\n"
+"morate potrditi vaš e-poštni naslov, zato prosimo, da sledite spodnji "
+"povezavi:<br />\n"
 "<br />\n"
 "{$activateUrl}<br />\n"
 "<br />\n"
@@ -144,7 +143,6 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nova številka je na voljo: {$issueIdentification}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Spoštovani bralec,</p><p>Z veseljem sporočamo, da je izšla je nova "
@@ -242,7 +240,6 @@ msgstr ""
 msgid "emails.submissionUnsuitable.description"
 msgstr ""
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Kot urednik ste dodeljeni na prispevek {$contextName}"
 
@@ -256,11 +253,9 @@ msgstr ""
 " recenzenta\".</p><p>Če prispevek ni primeren za to revijo, ga prosim "
 "zavrnite.</p><p>Hvala že vnaprej.</p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Prošnja za recenzijo prispevka"
 
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Verjamem, da bi lahko bili odličen "
@@ -277,7 +272,6 @@ msgstr ""
 "lahko obrnete name.</p><p>Zahvaljujemo se vam za sprejetje prošnje in se vam "
 "za vašo pomoč zahvaljujemo.</p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Boste lahko opravili to recenzijo za nas?"
 

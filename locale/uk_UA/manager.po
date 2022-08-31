@@ -1,19 +1,21 @@
+# IgorVeha <igor.veha@gmail.com>, 2022.
+# Pavel Usenko <mail@openscience.in.ua>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
-"PO-Revision-Date: 2020-05-02 02:10+0000\n"
-"Last-Translator: Fylypovych Georgii <red.ukr@gmail.com>\n"
+"PO-Revision-Date: 2022-08-20 19:30+0000\n"
+"Last-Translator: IgorVeha <igor.veha@gmail.com>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "uk_UA/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.website.archiving"
 msgstr "Архівування"
@@ -93,9 +95,11 @@ msgstr "У цьому пункті активуються платежі за п
 msgid "manager.payment.generalFees"
 msgstr "Загальні платежі"
 
-#, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Посилання \"Членство у асоціації\" з'явиться у розділі \"Політика\" сторінки \"Про журнал\", кнопка для пожертв з'явиться над блоком пошуку правої бічної панелі."
+msgstr ""
+"Посилання \"Членство у асоціації\" з'явиться у розділі \"Політика\" сторінки "
+"\"Про журнал\", кнопка для пожертв з'явиться над блоком пошуку правої бічної "
+"панелі."
 
 msgid "manager.payment.generalOptions"
 msgstr "Загальні налаштування"
@@ -228,9 +232,10 @@ msgstr "Редактори цього розділу"
 msgid "manager.sections.confirmDelete"
 msgstr "Ви впевнені, що хочете назавжди видалити цей розділ?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів."
+msgstr ""
+"Перш ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані "
+"у ньому статті до інших розділів."
 
 msgid "manager.sections.create"
 msgstr "Створити розділ"
@@ -1619,9 +1624,11 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Щоб мати можливість використовувати DOI у OJS, будь ласка, налаштуйте модуль DOI:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Будь ласка, оберіть об'єкти, для яких мають призначатись DOI."
+msgstr ""
+"Будь ласка, оберіть об'єкти, для яких мають призначатись DOI. Більшість "
+"журналів присвоюють DOI статтям, але ви можете захотіти присвоїти DOI всім "
+"опублікованим статтям."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Будь ласка, оберіть об'єкти, які матимуть призначені для них унікальні цифрові ідентифікатори DOI:"
@@ -1805,3 +1812,352 @@ msgstr "Цей лист надсилається зареєстрованим ч
 
 msgid "mailable.issuePublishNotify.description"
 msgstr "Цей лист автоматично надсилається зареєстрованим користувачам у разі публікації нового випуску."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "ініціали журналу"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Дата закінчення підписки"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Назва установи"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Поштова адреса установи"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Домен"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Діапазони IP-адрес для аутентифікації за підпискою"
+
+#, fuzzy
+msgid "manager.institutions.noContext"
+msgstr "Журнал цієї установи знайти не вдалося."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Повідомлення про підписку"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Підписка скоро закінчиться"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Підписка закінчилася"
+
+#, fuzzy
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Остання підписка минула"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Придбайте індивідуальну підписку"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Придбати інституційну підписку"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Продовжити індивідуальну підписку"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Продовжити інституційну підписку"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Повідомлення про відкритий доступ"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Повідомляти про опублікований випуск"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Короткий опис типу, назви, тривалості та вартості підписки"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Представлений DOI недійсний"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Адреса електронної пошти основної контактної особи журналу"
+
+msgid "manager.setup.identity"
+msgstr "Журнальна ідентичність"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Обмеження доступу до файлів"
+
+msgid "stats.publicationStats"
+msgstr "Статистика статей"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Назва виду платежу"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Це тип підписки, термін дії якої не закінчується; будь ласка, не вказуйте "
+"дату закінчення."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Перевірка електронної пошти (реєстрація в журналі)"
+
+#, fuzzy
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Тільки DOI можна редагувати після публікації"
+
+msgid "stats.publications.galleys"
+msgstr "Файли"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Перегляд Вмісту Статті"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Загальна кількість переглядів файлів за датою"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Хоча б один розділ повинен бути активним. Відвідайте налаштування робочого "
+"процесу, щоб відключити подачу всіх матеріалів в цей журнал."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Дозволити присвоєння цифрових ідентифікаторів об'єктів (DOI) працям, "
+"опублікованим у цьому журналі."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Інформація про членство передплатника"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Виберіть спосіб вибору дати авторського права за замовчуванням для статті. "
+"Це значення за замовчуванням може бути перевизначено в кожному конкретному "
+"випадку. Якщо ви \"публікуєте по ходу справи\", не використовуйте дату "
+"публікації випуску."
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL - адреса сторінки підписки"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Помилка процесу збору гранок випуску"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Загальна кількість переглядів статті за датою"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Надіслати копію електронного листа з підтвердженням відправки основній "
+"контактній особі цього журналу."
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Ім'я основної контактної особи журналу"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} статей із {$total}"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Виберіть країну, в якій знаходиться даний журнал, або країну поштової адреси "
+"журналу або видавництва."
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Сума платежу"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Будь ласка, виберіть реєстраційне агентство, яке ви хотіли б використовувати "
+"при внесенні DOI."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Перевірка не вдалася."
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Електронний підпис журналу для автоматизованих електронних листів"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Гранки статті, наприклад опублікований PDF-файл"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Контактні дані менеджера підписки"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Доступ до сайту"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Валюта суми платежу, наприклад, Долар США"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Включіть безпечне посилання в запрошення рецензентам по електронній пошті."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Обмежте кількість відображуваних посилань на наступні сторінки в списку."
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Гранка, яку ви запросили, не є частиною цієї публікації."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Використовуйте шаблони за замовчуванням.<br />%j.v%vi%i для випусків<br /"
+">%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Права доступу до статей були успішно скинуті."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ніхто"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI випуску"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Експортувати результати випуску"
+
+msgid "manager.setup.keyInfo"
+msgstr "Ключова інформація"
+
+#, fuzzy
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Ім'я, приналежність, номер телефону та адресу електронної пошти"
+
+#, fuzzy
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Тільки DOI можуть бути відредаговані після публікації / гранки"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Реєстраційне агентство"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Для цього журналу не було визначено основний контакт. Ви можете ввести "
+"основний контакт в <a href=\"{$url}\">налаштування журналу</a>."
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI статті"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Назва веб-сайту, якщо розміщено більше одного журналу"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Перевірка пройшла успішно!"
+
+msgid "stats.publications.details"
+msgstr "Деталі статей"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Скільки оголошень має відображатися на головній сторінці. Залиште цей "
+"параметр порожнім, щоб не відображати жодного."
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Обмежте кількість елементів (наприклад, відправлень, користувачів або "
+"завдань на редагування), які потрібно показати в списку, перш ніж показувати "
+"наступні елементи на іншій сторінці."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Надайте короткий опис (50-300 символів) журналу, який пошукові системи "
+"можуть відображати при показі журналу в результатах пошуку."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Заборонити користувачам відправляти нові статті в журнал. Відправку можна "
+"відключити для окремих розділів журналу на сторінці налаштувань<a href=\""
+"{$url}\">розділи журналу</a>."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Зараз цей журнал не приймає матеріали. Перейдіть до налаштувань робочого "
+"процесу, щоб дозволити надсилання."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Надавати метадані стороннім службам індексації через <a href=\"https://www."
+"openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Видаліть заяву про авторські права та інформацію про ліцензію для кожної "
+"опублікованої статті, повернувши їх до поточних налаштувань журналу за "
+"замовчуванням. Це призведе до безповоротного видалення всієї попередньої "
+"інформації про авторські права та ліцензування, доданої до статей. У деяких "
+"випадках вам може бути юридично заборонено повторно ліцензувати роботу, "
+"опубліковану під іншою Ліцензією. Будь ласка, будьте обережні при "
+"використанні цього інструменту і проконсультуйтеся з юристами, якщо ви не "
+"впевнені, які права у вас є на статті, опубліковані у вашому журналі."
+
+msgid "stats.publications.none"
+msgstr ""
+"Не було знайдено жодної статті зі статистикою використання, що відповідає "
+"цим параметрам."
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Ім'я журналу"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Цей електронний лист автоматично надсилається новому користувачеві під час "
+"реєстрації в журналі, якщо налаштування вимагають підтвердження адреси "
+"електронної пошти."
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Установа/Заклад"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Будь ласка, виберіть дійсний навчальний заклад."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Установа має бути створена до того, як будуть оформлені нові підписки."
+
+msgid "manager.setup.enableOai"
+msgstr "Включити OAI"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Надайте короткий опис вашого журналу і вкажіть редакторів, керуючих "
+"директорів та інших членів вашої редакційної команди."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Це тип підписки, термін дії якої не закінчується; будь ласка, не вказуйте "
+"дату початку."
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL домашньої сторінки дурналу"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} буде присвоєно при публікації."
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Запитані вами випуски не були знайдені"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Цей електронний лист повідомляє автора про те, що його заявка відхиляється "
+"до етапу рецензування, оскільки заявка не відповідає вимогам для публікації "
+"в журналі."
+
+msgid "manager.distribution.publication"
+msgstr "Публікація"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Режим публікації"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Використовувати дату публікації статті"
+
+msgid "manager.setup.homepageContent"
+msgstr "Вміст домашньої сторінки журналу"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Вступ"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Використовувати дату публікації випуску"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Відображати на домашній сторінці"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Після досягнення стадії редагування копії"

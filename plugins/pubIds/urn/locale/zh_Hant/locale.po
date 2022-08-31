@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-09 09:59+0000\n"
+"PO-Revision-Date: 2022-08-11 10:51+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/pubIds-urn/zh_Hant/>\n"
@@ -87,3 +87,77 @@ msgstr "請輸入所有卷使用的URN的後綴樣式。"
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr "請輸入一個獨立的URN後綴予每一個出版項目。你可以在每一項目的後設資料頁面找到額"
 "外的URN輸入位置。"
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "已配置URN至{$pubObjectType}。"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "以下URN後綴已在其他出版項目使用。請輪入一個獨特的URN後綴予每一項目。"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "是否確定刪除現有卷項目的URN？"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "利用以下選項以清除所有預定予此卷項目（文章及校樣）的URN。"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "由於欠缺自訂的後綴，所以未能配置URN。"
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "由於當中包含未定義的樣式，所以未能配置URN{$pubId}。"
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "已配置URN{$pubId}。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr "如你要改變你的URN配置，已配置的URN不會受到影響。儲存URN配置後，可使用此按鈕清"
+"除所有現存URN並以新配置取代原有的項目。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "是否刪除原有的URN？"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "統一資源名稱(URN)"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "卷"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "文章"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "校樣"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "由於欠缺自訂的後綴，所以未能配置URN。"
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "現為URN的預覽。請點選方框以存儲配置URN的方式。"
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "由於當中包含未定義的樣式，所以未能配置URN。"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "清除"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "是否確定刪除現有的URN？"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "清除卷項目的URN"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "添加剔選數目"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "配置URN{$pubId}至此{$pubObjectType}"
+
+#, fuzzy
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "欠缺剔選數目。"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN開端必須為{$prefix}。"
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "配置"
