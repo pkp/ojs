@@ -257,7 +257,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
      */
     public static function generateDefaultPattern($context, $issue = null, $submission = null, $representation = null, $submissionFile = null): string
     {
-        $pubIdSuffix = PKPString::regexp_replace('/[^A-Za-z0-9]/', '', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale())));
+        $pubIdSuffix = PKPString::regexp_replace('/[^-._;()\/A-Za-z0-9]/', '', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale())));
 
         if ($issue) {
             $pubIdSuffix .= '.v' . $issue->getVolume() . 'i' . $issue->getNumber();
@@ -295,7 +295,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     public static function generateCustomPattern($context, $pubIdSuffix, $pubObject, $issue = null, $submission = null, $representation = null, $submissionFile = null): string
     {
         // %j - journal initials, remove special characters and uncapitalize
-        $pubIdSuffix = PKPString::regexp_replace('/%j/', PKPString::regexp_replace('/[^A-Za-z0-9]/', '', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale()))), $pubIdSuffix);
+        $pubIdSuffix = PKPString::regexp_replace('/%j/', PKPString::regexp_replace('/[^-._;()\/A-Za-z0-9]/', '', PKPString::strtolower($context->getAcronym($context->getPrimaryLocale()))), $pubIdSuffix);
 
         // %x - custom identifier
         if ($pubObject->getStoredPubId('publisher-id')) {
