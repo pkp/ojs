@@ -1,8 +1,73 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+# CTHung <penjhorng@gmail.com>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-09-05 08:50+0000\n"
+"Last-Translator: CTHung <penjhorng@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/author/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "author.submit"
+msgstr "新稿件"
+
+msgid "author.track"
+msgstr "處理中稿件"
+
+msgid "author.submit.submitArticle"
+msgstr "提交稿件"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "投稿五步驟"
+
+msgid "author.submit.startHereTitle"
+msgstr "開始一篇新稿件"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">按一下</a>進入投稿五步驟的第一步。"
+
+msgid "author.submit.step1"
+msgstr "步驟一 開始投稿"
+
+msgid "author.submit.step2"
+msgstr "步驟二 上傳稿件"
+
+msgid "author.submit.step3"
+msgstr "步驟三 輸入稿件的元數據"
+
+msgid "author.submit.step4"
+msgstr "步驟四 上傳附件資料"
+
+msgid "author.submit.step4a"
+msgstr "步驟四a 加入一個附件檔案"
+
+msgid "author.submit.step5"
+msgstr "步驟五 確認稿件"
+
+msgid "author.submit.start"
+msgstr "開始"
+
+msgid "author.submit.upload"
+msgstr "上傳稿件"
+
+msgid "author.submit.metadata"
+msgstr "輸入元數據"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "上傳附件檔案"
+
+msgid "author.submit.confirmation"
+msgstr "確認"
+
+msgid "author.submit.nextSteps"
+msgstr "下一步"
+
+msgid "author.competingInterests"
+msgstr ""
+"利益衝突<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
