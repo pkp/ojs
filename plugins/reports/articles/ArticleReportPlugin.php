@@ -190,6 +190,7 @@ class ArticleReportPlugin extends ReportPlugin
                 'doi' => $submission->getStoredPubId('doi'),
                 'dateSubmitted' => $submission->getDateSubmitted(),
                 'lastModified' => $submission->getLastModified(),
+                'firstPublished' => $submission->getOriginalPublication()?->getData('datePublished') ?? '',
                 'editors' => $editors,
                 'decisions' => $editDecisions->toArray(),
             ];
@@ -233,6 +234,7 @@ class ArticleReportPlugin extends ReportPlugin
             __('metadata.property.displayName.doi'),
             __('common.dateSubmitted'),
             __('submission.lastModified'),
+            __('submission.firstPublished'),
         ]);
 
         for ($e = 1; $e <= $maxEditors; $e++) {
