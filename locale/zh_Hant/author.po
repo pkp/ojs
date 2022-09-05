@@ -2,7 +2,7 @@
 # CTHung <penjhorng@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-05 08:50+0000\n"
+"PO-Revision-Date: 2022-09-05 09:50+0000\n"
 "Last-Translator: CTHung <penjhorng@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_Hant/>\n"
@@ -71,3 +71,9 @@ msgid "author.competingInterests"
 msgstr ""
 "利益衝突<a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "您可以之後於作者頁面選擇處理中的投稿以完成投稿程序。"
+
+msgid "author.submit.notAccepting"
+msgstr "此期刊目前不接受投稿。"
