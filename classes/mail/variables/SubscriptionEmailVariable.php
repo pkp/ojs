@@ -120,7 +120,7 @@ class SubscriptionEmailVariable extends Variable
         return $dispatcher->url(
             $request,
             Application::ROUTE_PAGE,
-            $this->context->getData('path'),
+            $this->context->getData('urlPath'),
             'payments',
             null,
             null,
