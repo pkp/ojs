@@ -13,7 +13,7 @@
 		},
 		"defaultGenre": "Article Text"
 	},
-	"integrationFolder": "cypress/tests",
+	"specPattern": "cypress/tests/",
 	"pluginsFile": "lib/pkp/cypress/plugins/index.js",
 	"watchForFileChanges": false,
 	"defaultCommandTimeout": 10000,

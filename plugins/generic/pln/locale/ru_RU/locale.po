@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "Плагин «PKP PLN»"
+
+msgid "plugins.generic.pln.description"
+msgstr "Плагин «PKP PLN» отправляет ваш опубликованный контент для депонирования в Частную сеть LOCKSS от PKP."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>Частная сеть LOCKSS от PKP</strong><br /><br />Пожалуйста, прочитайте <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">обзор PKP PLN</a> и заполните <a href=\"{$plnPluginURL}\">эту простую форму</a>. Эта настройка позволит включить ваш журналв Частную сеть LOCKSS, созданную Public Knowledge Project (PKP PLN)."
+
+msgid "plugins.generic.pln.enabled"
+msgstr "Плагин «PKP PLN» был включен."
+
+msgid "plugins.generic.pln.disabled"
+msgstr "Плагин «PKP PLN» был отключен."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Настройки"
+
+msgid "plugins.generic.pln.settings.acron_required"
+msgstr "Плагин PKP PN требуется либо плагин Acron, либо инструменты периодического запуска по расписанию, например, «cron»."
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "Настройки PKP PN сохранены."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Условия использования"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "Как основное контактное лицо, я добросовестно принимаю и соглашаюсь со следующими условиями участия в частной сети LOCKSS, созданной Public Knowledge Project (PKP-PLN):"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "Я соглашаюсь"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Идентификатор журнала"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "Это уникальный идентификатор вашего журнала для PKP PLN. Возможно Вам потребуется сообщить его администраторам PKP PN для поддержки Вашего журнала."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Обновить"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "Если по какой-либо причине выше не показаны условия использования или вы знаете, что эти условия были изменены, щелкните на кнопке «Обновить» для обновления списка условий выше."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Пожалуйста, выберите тип депонируемого объекта."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Пожалуйста, выберите порог депонируемых объектов."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "Принятие условий использования сети является обязательным для депонирования в PLN."
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Статья"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Выпуск"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Статус сети: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Депонируемые объекты"
+
+msgid "plugins.generic.pln.status"
+msgstr "Статус"
+
+msgid "plugins.generic.pln.status.docs"
+msgstr "<a href=\"{$statusDocsUrl}\">Здесь описаны статусы депонирования в PLN</a>."
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Тип"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Объекты"
+
+msgid "plugins.generic.pln.status.checked"
+msgstr "Отметка"
+
+msgid "plugins.generic.pln.status.local_status"
+msgstr "Локальный статус"
+
+msgid "plugins.generic.pln.status.processing_status"
+msgstr "Статус обработки"
+
+msgid "plugins.generic.pln.status.lockss_status"
+msgstr "Статус LOCKSS"
+
+msgid "plugins.generic.pln.status.complete"
+msgstr "Завершено"
+
+msgid "plugins.generic.pln.status.confirmReset"
+msgstr "Вы уверены, что хотите заменить эти депонируемые объекты? Они будут заново упакованы и отправлены на сервер обработки."
+
+msgid "plugins.generic.pln.status.unknown"
+msgstr "Неизвестно"
+
+msgid "plugins.generic.pln.status.new"
+msgstr "Новый"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Упакован"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Передан"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Получен"
+
+msgid "plugins.generic.pln.status.validated"
+msgstr "Проверен"
+
+msgid "plugins.generic.pln.status.sent"
+msgstr "Отправлен"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "Синхронизируется"
+
+msgid "plugins.generic.pln.status.agreement"
+msgstr "Соглашение"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Обновлен"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Локальная ошибка"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Удаленная ошибка"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "Задача депонирования PKP PLN"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Депонирование выполняется для"
+
+msgid "plugins.generic.pln.notifications.getting_servicedocument"
+msgstr "Получение служебного документа."
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "PKP PN сейчас не принимает депонируемые объекты."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "PKP PN принимает депонируемые объекты."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Проверьте статус ваших депонируемых объектов."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Ваш журнал должен иметь ISSN для депонирования контента в PKP PLN."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "Произошла ошибка при подключении к PKP PN — пожалуйста, свяжитесь с системным администратором."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "Условия использования PKP PN были обновлены. Принятие новых условий является обязательным для продолжения депонирования."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "Для работы необходимо включить поддержку ZipArchive."
+
+msgid "plugins.generic.pln.notifications.issn_setting"
+msgstr "У вашего журнала должен быть ISSN до того, как вы примение условия использования. Вы можете ввести ISSN на странице «Настройка журнала». После того как будет введен ISSN журнал, условия использования будут показаны ниже."
+
+msgid "plugins.generic.pln.notifications.tar_missing"
+msgstr "В вашей системе должен быть исполняемый файл tar."
+
+msgid "plugins.generic.pln.error.network.servicedocument"
+msgstr "Ошибка сети {$error} при подключении к PKP PN для получения служебного документа."
+
+msgid "plugins.generic.pln.error.network.deposit"
+msgstr "Ошибка сети {$error} при подключении к PKP PN для отправки депонируемого объекта."
+
+msgid "plugins.generic.pln.error.network.swordstatement"
+msgstr "Ошибка сети {$error} при подключении к PKP PN для получения обновленного статуса депонируемого объекта."
+
+msgid "plugins.generic.pln.error.http.servicedocument"
+msgstr "Сервер PKP PN вернул ошибку HTTP {$error} при попытке получения служебного документа."
+
+msgid "plugins.generic.pln.error.http.deposit"
+msgstr "Сервер PKP PN вернул ошибку HTTP {$error} при отправке депонируемого объекта."
+
+msgid "plugins.generic.pln.error.http.swordstatement"
+msgstr "PLN вернул ошибку HTTP {$error} при проверке статуса депонируемого объекта."
+
+msgid "plugins.generic.pln.error.depositor.missingpackage"
+msgstr "Не удается найти файл пакета {$file}."
+
+msgid "plugins.generic.pln.error.depositor.export.articles.error"
+msgstr "В процессе экспорта статей произошла ошибка. Более подробная информация может быть в журнале ошибок сервера."
+
+msgid "plugins.generic.pln.error.depositor.export.issue.error"
+msgstr "При экспорте выпуска произошла ошибка. Более подробная информация может быть в журнале ошибок сервера."
+
+msgid "plugins.generic.pln.error.handler.uuid.invalid"
+msgstr "Запрошенный UUID является некорректным или имеет неправильный формат."
+
+msgid "plugins.generic.pln.error.handler.uuid.notfound"
+msgstr "Запрошенному UUID не соответствует ни один депонируемый объект."
+
+msgid "plugins.generic.pln.error.handler.file.notfound"
+msgstr "Не удается найти депонируемый файл. Возможно он еще не был упакован или же пакет мог быть удален."
+
+msgid "plugins.generic.pln.depositor.statusupdates"
+msgstr "Обработка обновлений статуса депонируемых объектов."
+
+msgid "plugins.generic.pln.depositor.updatedcontent"
+msgstr "Обработка обновленного контента."
+
+msgid "plugins.generic.pln.depositor.newcontent"
+msgstr "Обработка нового контента."
+
+msgid "plugins.generic.pln.depositor.packagingdeposits"
+msgstr "Упаковка контента для депонирования."
+
+msgid "plugins.generic.pln.depositor.transferringdeposits"
+msgstr "Отправка депонируемых объектов в PLN."
+
+msgid "plugins.generic.plngateway.displayName"
+msgstr "Шлюз PLN"
+
+msgid "plugins.generic.plngateway.description"
+msgstr "Передает статус PKP PN и названия последних статей на сервер."

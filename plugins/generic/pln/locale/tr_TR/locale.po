@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln.notifications.getting_servicedocument"
+msgstr "Hizmet belgesi alınıyor."
+
+msgid "plugins.generic.pln.notifications.issn_setting"
+msgstr "Hizmet şartlarını kabul edebilmeniz için derginizin bir ISSN'sinin olması gerekir. Dergi Ayarları sayfasında ISSN bilgisini girebilirsiniz. Hizmet koşullarının aşağıda görüntülenebilmesi için öncelikle derginin ISSN'si girilmelidir."
+
+msgid "plugins.generic.pln.notifications.tar_missing"
+msgstr "Sisteminiz tar uygulamasını çalıştırabilmelidir."
+
+msgid "plugins.generic.pln.error.depositor.export.articles.error"
+msgstr "Makaleler ihraç edilirken bir hata oluştu. Sunucu günlük dosyaları daha fazla bilgi içerebilir."
+
+msgid "plugins.generic.pln.error.depositor.export.issue.error"
+msgstr "Sayı ihraç edilirken bir hata oluştu. Sunucu günlük dosyaları daha fazla bilgi içerebilir."
+
+msgid "plugins.generic.pln.error.handler.uuid.invalid"
+msgstr "İstenen UUID geçerli değil veya düzgün olarak biçimlendirilmedi."
+
+msgid "plugins.generic.pln.error.handler.uuid.notfound"
+msgstr "İstenen UUID ile hiçbir arşiv bulunmamaktadır."
+
+msgid "plugins.generic.pln.error.handler.file.notfound"
+msgstr "Arşivlenen dosya bulunamadı. Henüz paketlenmemiş olabilir veya paket silinmiş olabilir."
+
+msgid "plugins.generic.pln.depositor.statusupdates"
+msgstr "Arşiv durum güncellemeleri işleniyor."
+
+msgid "plugins.generic.pln.depositor.updatedcontent"
+msgstr "İçerik güncellemesi işlendi"
+
+msgid "plugins.generic.pln.depositor.newcontent"
+msgstr "Yeni içerik işleniyor."
+
+msgid "plugins.generic.pln.depositor.packagingdeposits"
+msgstr "Arşiv için içerik paketleniyor."
+
+msgid "plugins.generic.pln.depositor.transferringdeposits"
+msgstr "Arşivler PLN'ye gönderiliyor."
+
+msgid "plugins.generic.plngateway.displayName"
+msgstr "PLN Yolu"
+
+msgid "plugins.generic.pln.settings"
+msgstr "Ayarlar"
+
+msgid "plugins.generic.pln"
+msgstr "PKP PN Eklentisi"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Öğeler"
+
+msgid "plugins.generic.pln.status.lockss_status"
+msgstr "LOCKSS Durumu"
+
+msgid "plugins.generic.pln.status.unknown"
+msgstr "Bilinmeyen"
+
+msgid "plugins.generic.pln.status.new"
+msgstr "Yeni"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Paketli"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Aktarılan"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Alınan"
+
+msgid "plugins.generic.pln.status.validated"
+msgstr "Geçerli"
+
+msgid "plugins.generic.pln.status.sent"
+msgstr "LOCKSS'a gönder"
+
+msgid "plugins.generic.pln.status.agreement"
+msgstr "Anlaşma"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Güncellendi"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Yerel Hata"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Uzak Hata"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "Katılıyorum"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Dergi Belirleyicisi"
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Yenile"
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Makale"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Sayı"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Ağ Durumu: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status"
+msgstr "Durum"
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Tür"
+
+msgid "plugins.generic.pln.status.checked"
+msgstr "İşaretli"
+
+msgid "plugins.generic.pln.status.local_status"
+msgstr "Yerel Durum"
+
+msgid "plugins.generic.pln.status.processing_status"
+msgstr "İşlem Durumu"
+
+msgid "plugins.generic.pln.status.complete"
+msgstr "Tamam"
+
+msgid "plugins.generic.pln.description"
+msgstr "The PKP PN plugin will deposit your published content into the PKP Private LOCKSS Network for preservation."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>PKP Private LOCKSS Network</strong><br /><br />Please read the <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">overview of the PKP PLN</a> and complete <a href=\"{$plnPluginURL}\">this simple form</a>. This option will enable inclusion of your journal in the Public Knowledge Project Private LOCKSS Network (PKP PLN)."
+
+msgid "plugins.generic.pln.enabled"
+msgstr "The PKP PN plugin has been enabled."
+
+msgid "plugins.generic.pln.disabled"
+msgstr "The PKP PN plugin has been disabled."
+
+msgid "plugins.generic.pln.settings.acron_required"
+msgstr "The PKP PN plugin requires either the Acron plugin or a periodic scheduling tools such as 'cron.'"
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "PKP PN settings saved."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Terms of Use"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "As Primary Contact, I, in good faith, accept and confirm the following terms and conditions for participation in the Public Knowledge Project’s Private LOCKSS Network (PKP-PLN):"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "This is your journal's unique identifier for the PKP PLN. You may need to share this with PKP PN administrators for support purposes."
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Please choose an deposit object type."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Please choose a deposit object threshold."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "Agreement to the network's terms of use is required in order to deposit to the PLN."
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Deposits"
+
+msgid "plugins.generic.pln.status.docs"
+msgstr "The PKP PN <a href=\"{$statusDocsUrl}\">deposit statuses are described here</a>."
+
+msgid "plugins.generic.pln.status.confirmReset"
+msgstr "Are you sure you want to reset this deposit? It will be repackaged and resent to the processing server."
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "Syncing"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "PKP PN Depositor Task"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Depositor processing for {$title}."
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "The PKP PN is not currently accepting deposits."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "The PKP PN is accepting deposits."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Check the status of your deposits."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Your journal must have an ISSN to deposit content to the PKP PLN."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "There was an error connecting to the PKP PN - please contact your system administrator."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "The PKP PN terms of use have been updated. Agreement with new terms is required to continue depositing."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "ZipArchive support must be enabled to proceed."
+
+msgid "plugins.generic.pln.error.network.servicedocument"
+msgstr "Network error {$error} connecting to the PKP PN to get the service document."
+
+msgid "plugins.generic.pln.error.network.deposit"
+msgstr "Network error {$error} connecting to the PKP PN to send the deposit."
+
+msgid "plugins.generic.pln.error.network.swordstatement"
+msgstr "Network error {$error} connecting to the PKP PN to get a status update for deposit."
+
+msgid "plugins.generic.pln.error.http.servicedocument"
+msgstr "PLN server returned HTTP error {$error} when attempting to get the service document."
+
+msgid "plugins.generic.pln.error.http.deposit"
+msgstr "PLN server returned HTTP error {$error} when sending the deposit."
+
+msgid "plugins.generic.pln.error.http.swordstatement"
+msgstr "PLN server returned HTTP error {$error} when checking the status of a deposit."
+
+msgid "plugins.generic.pln.error.depositor.missingpackage"
+msgstr "Cannot find package file {$file}."
+
+msgid "plugins.generic.plngateway.description"
+msgstr "Reports PKP PN Status and recent article titles for the staging server."

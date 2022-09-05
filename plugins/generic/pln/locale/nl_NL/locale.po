@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "PKP PN Plugin"
+
+msgid "plugins.generic.pln.description"
+msgstr "De PKP PN plugin deponeert uw publicaties in het PKP Private LOCKSS Network ter preservatie."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>PKP Private LOCKSS Network</strong><br /><br />Gelieve het <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">overshot van het PKP PLN</a> te lezen en <a href=\"{$plnPluginURL}\">dit formulier</a> in te vullen. Deze optie zorgt ervoor dat uw tijdschrift wordt opgenomen in het  Public Knowledge Project Private LOCKSS Network (PKP PLN)."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Instellingen"
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "PKP PN instellingen opgeslagen."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Gebruiksvoorwaarden"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "Voorafgaand aan deponeren moet u akkoord gaan met de gebruiksvoorwaarden"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "Akkoord"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Tijdschrift identificatie"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "Dit is de unieke identificatie van uw tijdschrift voor het PKP PLN. Mogelijk heeft u dit nodig bij sondersteuningsvragen aan de  PKP PN beheerders.."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Verversen"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "Als hierboven geen gebruiksvoorwaarden getoond worden, of als u weet dat ze bijgewerkt zijn, klik dan op Verversen."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Kies een objet type voor het deponeren."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Kies een drempelwaarde voor inzenden."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "U moet akkoord gaan met de gebruiksvoorwaarden om te kunnen deponeren in de PLN"
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Artikel"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Nummer"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Netwerk status: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Deponeringen"
+
+msgid "plugins.generic.pln.status"
+msgstr "Status"
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Type"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Items"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Ingepakt"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Verstuurd"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Ontvangen"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "Synchroniseren"
+
+msgid "plugins.generic.pln.status.synced"
+msgstr "Gesunchroniseerd"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Bijgewerkt"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Lokale fout"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Fout aan de andere kant"
+
+msgid "plugins.generic.pln.status.reset"
+msgstr "Herstel"
+
+msgid "plugins.generic.pln.status.yes"
+msgstr "Ja"
+
+msgid "plugins.generic.pln.status.no"
+msgstr "Nee"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "PKP PN Depositor Taak"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Depositor verwerken voor"
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "Het PKP PN accepteert momenteel geen inzendingen."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "Het PKP PN accepteert inzendingen."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Controleer de status van uw inzendingen."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Uw tijdschrift heeft een ISSN nodig om te kunnen deponeren in het PKP PLN."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "De verbinding met het PKP PN is mislukt - neem contact op met uw systeembeheerder."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "De PKP PN gebruiksvoorwaarden zijn verander. Inzenden is pas weer mogelijk na uw akkoord daarmee."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "ZipArchive support moet ingeschakeld zijn om verder te gaan."

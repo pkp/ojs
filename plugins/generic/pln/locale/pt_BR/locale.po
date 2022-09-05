@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "Plugin PKP PN do PKP"
+
+msgid "plugins.generic.pln.description"
+msgstr "O plugin PKP PN do PKP  realizará o deposito do conteúdo preservado na Rede Privada LOCKSS da PKP para preservação."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>Rede Privada LOCKSS da PKP</strong><br /><br />Por favor, leia o <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">resumo da PKP PN (Rede Privada LOCKSS) da PKP</a> e preencha <a href=\"{$plnPluginURL}\">este formulário</a>. Esta opção permitirá a inclusão de seu periódico no Public Knowledge Project Private LOCKSS Network (PLN do PKP)."
+
+msgid "plugins.generic.pln.enabled"
+msgstr "O plugin PKP PN do PKP foi habilitado."
+
+msgid "plugins.generic.pln.disabled"
+msgstr "O plugin PKP PN do PKP foi desabilitado."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Configurações"
+
+msgid "plugins.generic.pln.settings.acron_required"
+msgstr "O plugin PKP PN exige o plugin Acron ou outra forma de agendamento periódico de ações como o 'cron'."
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "PLN do PKP configurações salvas."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Termos de uso"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "Como o contato principal, aceito, de boa fé, os seguintes termos e condições de participação na Rede LOCKSS Privada do Public Knowledge Project (PKP-PLN):"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "Aceito"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Identificador de periódico"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "Este é o identificador único do seu periódico para a PKP PN do PKP. Pode ser necessário informar esse identificador aos administradores da PKP PN do PKP em casos de suporte."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Atualizar"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "Se por algum motivo não aparecer os termos listados acima ou você sabe que esses termos foram atualizados, clique em Atualizar para atualizar os termos listados acima."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Por favor, escolha um objeto próprio para o depósito."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Por favor, escolha um limite para o depósito do objeto."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "Para continuar o deposito na PLN, é necessário aceitar os termos de utilização da rede."
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Artigo"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Edição"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Estado da rede: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Depósitos"
+
+msgid "plugins.generic.pln.status"
+msgstr "Situação"
+
+msgid "plugins.generic.pln.status.docs"
+msgstr "A <a href=\"{$statusDocsUrl}\">situação dos depósitos à PKP PN está descrita aqui</a>."
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Tipo"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Itens"
+
+msgid "plugins.generic.pln.status.checked"
+msgstr "Verificado"
+
+msgid "plugins.generic.pln.status.local_status"
+msgstr "Situação local"
+
+msgid "plugins.generic.pln.status.processing_status"
+msgstr "Situação do processamento"
+
+msgid "plugins.generic.pln.status.lockss_status"
+msgstr "Situação LOCKSS"
+
+msgid "plugins.generic.pln.status.complete"
+msgstr "Concluído"
+
+msgid "plugins.generic.pln.status.confirmReset"
+msgstr "Deseja realmente reiniciar este depósito? Ele será empacotado e enviado novamente para processamento."
+
+msgid "plugins.generic.pln.status.unknown"
+msgstr "Desconhecido"
+
+msgid "plugins.generic.pln.status.new"
+msgstr "Novo"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Empacotado"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Transferido"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Recebido"
+
+msgid "plugins.generic.pln.status.validated"
+msgstr "Validado"
+
+msgid "plugins.generic.pln.status.sent"
+msgstr "Enviado ao LOCKSS"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "Sincronizando"
+
+msgid "plugins.generic.pln.status.agreement"
+msgstr "Acordo"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Atualizado"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Falha local"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Falha remota"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "PLN do PKP - Tarefa de depositante"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Depositante processando para {$title}."
+
+msgid "plugins.generic.pln.notifications.getting_servicedocument"
+msgstr "Recuperando documento de serviço."
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "A PKP PN do PKP não está aceitando depósitos no momento."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "A PKP PN do PKP está aceitando depósitos."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Verificar situação de seus depósitos."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Seu periódico deve ter um ISSN para poder depositar na PKP PN do PKP."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "Erro ao conectar à PKP PN do PKP - entre em contato com o administrador do sistema."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "Os termos de uso da PKP PN do PKP foram atualizados. É necessário aceitar os novos termos para continuar depositando."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "Suporte ao ZipArchive deve estar habilitado para continuar."
+
+msgid "plugins.generic.pln.notifications.issn_setting"
+msgstr "A revista deve possuir um ISSN antes de concordar com os termos de serviço. Informe o ISSN no formulário de Detalhes da revista, na configuração. Os termos de serviço serão apresentados assim que o ISSN for informado."
+
+msgid "plugins.generic.pln.notifications.tar_missing"
+msgstr "Um executável tar deve estar disponível."
+
+msgid "plugins.generic.pln.error.network.servicedocument"
+msgstr "Erro de rede {$error} ao conectar à PKP PN para recuperar documento de serviço."
+
+msgid "plugins.generic.pln.error.network.deposit"
+msgstr "Erro de rede {$error} ao conectar à PKP PN para enviar depósito."
+
+msgid "plugins.generic.pln.error.network.swordstatement"
+msgstr "Erro de rede {$error} ao conectar à PKP PN para atualizar situação do depósito."
+
+msgid "plugins.generic.pln.error.http.servicedocument"
+msgstr "O servidor da PKP PN retornou o erro HTTP {$error} ao tentar recuperar documento de serviço."
+
+msgid "plugins.generic.pln.error.http.deposit"
+msgstr "Servidor da PKP PN retornou erro HTTP {$error} ao enviar o depósito."
+
+msgid "plugins.generic.pln.error.http.swordstatement"
+msgstr "O servidor da PKP PN retornou o erro HTTP {$error} ao verificar a situação de um depósito."
+
+msgid "plugins.generic.pln.error.depositor.missingpackage"
+msgstr "Impossível encontrar arquivo de pacote {$file}."
+
+msgid "plugins.generic.pln.error.depositor.export.articles.error"
+msgstr "Ocorreu um erro ao exportar artigos. O registro de erros do servidor pode conter mais informações."
+
+msgid "plugins.generic.pln.error.depositor.export.issue.error"
+msgstr "Ocorreu um erro ao exportar uma edição. O registro de erros do servidor pode conter mais informações."
+
+msgid "plugins.generic.pln.error.handler.uuid.invalid"
+msgstr "o UUID solicitado é inválido ou não está formatado corretamente."
+
+msgid "plugins.generic.pln.error.handler.uuid.notfound"
+msgstr "Não há depósito para o UUID solicitado."
+
+msgid "plugins.generic.pln.error.handler.file.notfound"
+msgstr "Impossível encontrar arquivo de depósito. Pode não ter sido empacotado ainda, ou o pacote foi removido."
+
+msgid "plugins.generic.pln.depositor.statusupdates"
+msgstr "Processando atualização da situação do depósito."
+
+msgid "plugins.generic.pln.depositor.updatedcontent"
+msgstr "Processando conteúdo atualizado."
+
+msgid "plugins.generic.pln.depositor.newcontent"
+msgstr "Processando conteúdo novo."
+
+msgid "plugins.generic.pln.depositor.packagingdeposits"
+msgstr "Empacotando conteúdo para depósito."
+
+msgid "plugins.generic.pln.depositor.transferringdeposits"
+msgstr "Enviando depósitos à PLN."
+
+msgid "plugins.generic.plngateway.displayName"
+msgstr "Gateway da PLN"
+
+msgid "plugins.generic.plngateway.description"
+msgstr "Reporta situação da PKP PN e títulos de artigos recentes para o servidor de preprocessamento."

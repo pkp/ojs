@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docs/manual" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/pkp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/ui-library" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/blocks/browse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/blocks/makeSubmission" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/authorRequirements" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/citationStyleLanguage" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/customBlockManager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/docxConverter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/docxConverter/docxToJats" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/funding" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/googleAnalytics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/googleScholar" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/lensGalley" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/lensGalleyBits" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/orcidProfile" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/pdfJsViewer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/ror" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/staticPages" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/texture" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/tinymce" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/generic/usageStats" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/importexport/dnb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/importexport/portico" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/importexport/rosetta" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/reports/counter/classes/COUNTER" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/reports/reviewReport" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/themes/defaultManuscript" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/themes/tibTheme" vcs="Git" />
+  </component>
+</project>

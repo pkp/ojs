@@ -1,0 +1,15 @@
+pln/vendor/whikloj/bagittools/tests
+pln/vendor/whikloj/bagittools/.gitignore
+pln/vendor/whikloj/bagittools/.travis.yml
+pln/vendor/pear/archive_tar/tests
+pln/vendor/pear/archive_tar/.gitignore
+pln/vendor/pear/archive_tar/.travis.yml
+pln/vendor/pear/pear_exception/.gitignore
+pln/vendor/pear/pear_exception/.travis.yml
+pln/vendor/pear/pear_exception/tests
+pln/vendor/pear/console_getopt/tests
+pln/vendor/pear/console_getopt/.gitignore
+pln/vendor/pear/console_getopt/.travis.yml
+pln/vendor/scholarslab/bagit/.gitignore
+pln/.gitattributes
+pln/.gitignore

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "whikloj/bagittools": "^3.0.1"
+    }
+}

@@ -1,0 +1,301 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "PKP PN Plugin"
+
+msgid "plugins.generic.pln.description"
+msgstr "The PKP PN plugin will deposit your published content into the PKP Preservation Network."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>PKP Preservation Network</strong><br /><br />Please read the <a href=\"https://pkp.sfu.ca/pkp-pn\" target=\"_blank\">overview of the PKP PN</a> and complete <a href=\"{$plnPluginURL}\">this simple form</a>. This option will enable inclusion of your journal in the Public Knowledge Project Preservation Network (PKP PN)."
+
+msgid "plugins.generic.pln.enabled"
+msgstr "The PKP PN plugin has been enabled."
+
+msgid "plugins.generic.pln.disabled"
+msgstr "The PKP PN plugin has been disabled."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Settings"
+
+msgid "plugins.generic.pln.settings.acron_required"
+msgstr "The PKP PN plugin requires either the Acron plugin or a periodic scheduling tools such as 'cron.'"
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "PKP PN settings saved."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Terms of Use"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "As Journal Manager, I, in good faith, accept and confirm the following terms and conditions for participation in the Public Knowledge Project’s Preservation Network (PKP-PN):"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "I Agree"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Journal Identifier"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "This is your journal's unique identifier for the PKP PN. You may need to share this with PKP PN administrators for support purposes."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Refresh"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "If for some reason there are no terms listed above or you know these terms have been updated, click Refresh to update the terms listed above."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Please choose an deposit object type."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Please choose a deposit object threshold."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "Agreement to the network's terms of use is required in order to deposit to the PKP PN."
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Article"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Issue"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Network Status: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Deposits"
+
+msgid "plugins.generic.pln.status"
+msgstr "Status"
+
+msgid "plugins.generic.pln.objectId"
+msgstr "Type Object Id"
+
+msgid "plugins.generic.pln.issueId"
+msgstr "Issue Id"
+
+msgid "plugins.generic.pln.status.docs"
+msgstr "The PKP PN <a href=\"{$statusDocsUrl}\">deposit statuses are described here</a>."
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Type"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Items"
+
+msgid "plugins.generic.pln.status.status"
+msgstr "Status"
+
+msgid "plugins.generic.pln.status.confirmReset"
+msgstr "Are you sure you want to reset this deposit? It will be repackaged and resent to the processing server."
+
+msgid "plugins.generic.pln.status.unknown"
+msgstr "Unknown"
+
+msgid "plugins.generic.pln.status.new"
+msgstr "New"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Packaged"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Transferred"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Received"
+
+msgid "plugins.generic.pln.status.validated"
+msgstr "Validated"
+
+msgid "plugins.generic.pln.status.sent"
+msgstr "Sent to LOCKSS"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "Syncing"
+
+msgid "plugins.generic.pln.status.agreement"
+msgstr "Agreement"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Updated"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Local Failure"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Remote Failure"
+
+msgid "plugins.generic.pln.status.packagingFailed"
+msgstr "Packaging Failure"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "PKP PN Depositor Task"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Depositor processing for {$title}."
+
+msgid "plugins.generic.pln.notifications.getting_servicedocument"
+msgstr "Getting service document."
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "The PKP PN is not currently accepting deposits."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "The PKP PN is accepting deposits."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Check the status of your deposits."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Your journal must have an ISSN to deposit content to the PKP PN."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "There was an error connecting to the PKP PN - please contact your system administrator."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "The PKP PN terms of use have been updated. Agreement with new terms is required to continue depositing."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "ZipArchive support must be enabled to proceed."
+
+msgid "plugins.generic.pln.notifications.issn_setting"
+msgstr "Your journal must have an ISSN before you can agree to the terms of service. You can enter the ISSN on the Journal Settings page. Once the journal ISSN is entered, the terms of service will be shown below."
+
+msgid "plugins.generic.pln.notifications.tar_missing"
+msgstr "Your system must have a tar executable."
+
+msgid "plugins.generic.pln.error.network.servicedocument"
+msgstr "Network error {$error} connecting to the PKP PN to get the service document."
+
+msgid "plugins.generic.pln.error.network.deposit"
+msgstr "Network error {$error} connecting to the PKP PN to send the deposit."
+
+msgid "plugins.generic.pln.error.network.swordstatement"
+msgstr "Network error {$error} connecting to the PKP PN to get a status update for deposit."
+
+msgid "plugins.generic.pln.error.http.servicedocument"
+msgstr "PN server returned HTTP error {$error} when attempting to get the service document."
+
+msgid "plugins.generic.pln.error.http.deposit"
+msgstr "PN server returned HTTP error {$error} when sending the deposit."
+
+msgid "plugins.generic.pln.error.http.swordstatement"
+msgstr "PN server returned HTTP error {$error} when checking the status of a deposit."
+
+msgid "plugins.generic.pln.error.depositor.missingpackage"
+msgstr "Cannot find package file {$file}."
+
+msgid "plugins.generic.pln.error.depositor.export.articles.error"
+msgstr "An error occured while exporting articles. The server's error log may have more information."
+
+msgid "plugins.generic.pln.error.depositor.export.issue.error"
+msgstr "An error occured while exporting an issue. The server's error log may have more information."
+
+msgid "plugins.generic.pln.error.handler.uuid.invalid"
+msgstr "The requested UUID is not valid or is not formatted correctly."
+
+msgid "plugins.generic.pln.error.handler.uuid.notfound"
+msgstr "There is no deposit with the requested UUID."
+
+msgid "plugins.generic.pln.error.handler.file.notfound"
+msgstr "The deposit file cannot be found. It may not have been packaged yet, or the package may have been removed."
+
+msgid "plugins.generic.pln.depositor.statusupdates"
+msgstr "Processing deposit status updates."
+
+msgid "plugins.generic.pln.depositor.updatedcontent"
+msgstr "Processing updated content."
+
+msgid "plugins.generic.pln.depositor.newcontent"
+msgstr "Processing new content."
+
+msgid "plugins.generic.pln.depositor.packagingdeposits"
+msgstr "Packaging content for deposit."
+
+msgid "plugins.generic.pln.depositor.transferringdeposits"
+msgstr "Sending deposits to the PKP PN."
+
+msgid "plugins.generic.pln.depositor.statusupdates.processing"
+msgstr "Trying status update for {$depositId} ({$objectType}: {$objectId}) (Local Status: [{$statusLocal}], Processing Status: [{$statusProcessing}], Lockss Status: [{$statusLockss}])"
+
+msgid "plugins.generic.pln.depositor.statusupdates.processing.processingState"
+msgstr "Processing status got for {$depositId} -> ({$processingState})"
+
+msgid "plugins.generic.pln.depositor.packagingdeposits.processing"
+msgstr "Trying package deposit {$depositId} ({$objectType}: {$objectId}) (Local Status: [{$statusLocal}], Processing Status: [{$statusProcessing}], Lockss Status: [{$statusLockss}])"
+
+msgid "plugins.generic.pln.depositor.packagingdeposits.processing.error"
+msgstr "Native Import/Export plugin failed for deposit {$depositId}, when trying to package it"
+
+msgid "plugins.generic.pln.depositor.packagingdeposits.processing.packageFailed"
+msgstr "Packaging for deposit {$depositId} failed"
+
+msgid "plugins.generic.pln.depositor.packagingdeposits.processing.packageSucceeded"
+msgstr "Packaging for deposit {$depositId} succeeded"
+
+msgid "plugins.generic.pln.depositor.transferringdeposits.processing"
+msgstr "Trying transfer deposit {$depositId} ({$objectType}: {$objectId}) (Local Status: [{$statusLocal}], Processing Status: [{$statusProcessing}], Lockss Status: [{$statusLockss}])"
+
+msgid "plugins.generic.pln.depositor.transferringdeposits.processing.postAtom"
+msgstr "Posting the Atom file to staging server for deposit {$depositId} (Local Status: [{$statusLocal}], Processing Status: [{$statusProcessing}], Lockss Status: [{$statusLockss}]) - (Url: [{$url}], AtomPath: [{$atomPath}], Method: [{$method}])"
+
+msgid "plugins.generic.pln.depositor.transferringdeposits.processing.resultSucceeded"
+msgstr "Posting the Atom file to staging server for deposit {$depositId} succeeded"
+
+msgid "plugins.generic.pln.depositor.transferringdeposits.processing.resultFailed"
+msgstr "Posting the Atom file to staging server for deposit {$depositId} failed (Error: [{$error} - [{$result}]])"
+
+msgid "plugins.generic.plngateway.displayName"
+msgstr "PN Gateway"
+
+msgid "plugins.generic.plngateway.description"
+msgstr "Reports PKP PN Status and recent article titles for the staging server."
+
+msgid "plugins.generic.pln.displayedstatus.pending"
+msgstr "Pending"
+
+msgid "plugins.generic.pln.displayedstatus.pending.description"
+msgstr "The process of the deposit has not yet started"
+
+msgid "plugins.generic.pln.displayedstatus.inprogress"
+msgstr "In Progress"
+
+msgid "plugins.generic.pln.displayedstatus.inprogress.description"
+msgstr "The deposit process is in progress"
+
+msgid "plugins.generic.pln.displayedstatus.completed"
+msgstr "Completed"
+
+msgid "plugins.generic.pln.displayedstatus.completed.description"
+msgstr "The deposit process is completed"
+
+msgid "plugins.generic.pln.displayedstatus.error"
+msgstr "Error"
+
+msgid "plugins.generic.pln.displayedstatus.error.description"
+msgstr "There has been an error regarding the deposit process"
+
+msgid "plugins.generic.pln.status.warning"
+msgstr "It might take several days for a deposit to be fully processed."
+
+msgid "plugins.generic.pln.status.latestupdate"
+msgstr "Latest Update"
+
+msgid "plugins.generic.pln.status.description.title"
+msgstr "Status Description"
+

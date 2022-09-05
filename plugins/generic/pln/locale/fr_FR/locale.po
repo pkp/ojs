@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "Plugiciel PKP PLN"
+
+msgid "plugins.generic.pln.description"
+msgstr "Le Plugiciel PKP PN déposera votre contenu publié dans le réseau privé LOCKSS de PKP pour le sécuriser."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>Réseau privé LOCKSS de PKP</strong><br /><br />Veuillez lire le <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">guide de PKP PLN</a> et compléter <a href=\"{$plnPluginURL}\">ce simple formulaire</a>. Cette option permettra l'inclusion de votre revue dans le réseau LOCKSS privé du Public Project Knowledge (PKP PLN)."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Paramètres"
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "Paramètres de PKP PN enregistrés."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Conditions d'utilisation"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "Avant de déposer sur le réseau, vous devez accepter toutes les conditions d'utilisation."
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "J'accepte"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Identifiant de la revue"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "Ceci est l’identifiant unique de votre revue pour PKP PLN. Vous devrez le communiquer aux administrateurs de PKP PN en cas de demande d'assistance."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Rafraîchir"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "Si pour quelques raisons que ce soit, il n'y aucun terme listé ci-dessus, où si vous savez que ces termes ont été mis à jour, cliquez sur rafraîchir pour mettre à jour les termes listés ci-dessus."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Veuillez choisir un type d'objet pour le dépôt."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Veuillez choisir une limite de l'objet pour le dépôt."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "L'acceptation des conditions d'utilisation du réseau est requise pour déposer sur le PLN."
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Article"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Numéro"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Statut du réseau : {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Dépôt"
+
+msgid "plugins.generic.pln.status"
+msgstr "Statut"
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Type"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Items"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Packaged"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Transferré"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Reçu"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "En synchronisation"
+
+msgid "plugins.generic.pln.status.synced"
+msgstr "Synchronisé"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Mis à jour"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Échec local"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Échec distant"
+
+msgid "plugins.generic.pln.status.reset"
+msgstr "Réinitialiser"
+
+msgid "plugins.generic.pln.status.yes"
+msgstr "Oui"
+
+msgid "plugins.generic.pln.status.no"
+msgstr "Non"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "Tâche de dépôt PKP PLN"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Déposant en traitement de"
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "Le PKP PN n'accepte pas les dépôts actuellement."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "Le PKP PN accepte les dépôts."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Vérifier les statuts de vos dépôts."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Votre revue doit avoir un ISSN pour déposer son contenu sur PKP PLN."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "Une erreur est survenue pendant la connexion à PKP PN - veuillez contacter votre administrateur système."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "Les conditions d'utilisation de PKP PN ont été mises à jour. L'acceptation des nouvelles conditions sont requises avant de continuer à déposer."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "Le support ZipArchive doit être activé avant de poursuivre."

@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "Plugin PKP PLN"
+
+msgid "plugins.generic.pln.description"
+msgstr "Plugin PKP PN uloží váš publikovaný obsah do PKP veřejné sítě LOCKSS pro jejich ochranu."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>PKP soukromá síť LOCKSS</strong><br /><br />Přečtěte si <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">informace o PKP PLN</a> a vyplňte <a href=\"{$plnPluginURL}\">tento jednoduchý formulář</a>. Tato volba vám umožní zahrnutí vašeho časopisu do sítě Public Knowledge Project Private LOCKSS (PKP PLN)."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Nastavení"
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "Nastavení PKP PN byla uložena."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Podmínky užití"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "Než budete ukládat soubory do sítě, je třeba odsouhlasit všechny podmínky užití."
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "Souhlas"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Identifikátor časopisu"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "Toto je jedinečný identifikátor časopisu pro PKP PLN. Pokud budete potřebovat pomoc administrátorů PKP PLN, bude jim potřeba poskytnout tento identifikátor."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Obnovit"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "Pokud nejsou z nějakého důvodu zobrazeny položky, nebo pokud víte, že tyto položky byly aktualizovány, klikněte na Obnovit k jejich obnovení."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Zvolte, prosím, typ objektu na ukládání."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Zvolte, prosím, práh ukládání souborů."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "Je třeba souhlas s podmínkami sítě, aby bylo možno ukládat do PLN"
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Článek"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Číslo"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Stav sítě: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Úložky"
+
+msgid "plugins.generic.pln.status"
+msgstr "Stav"
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Typ"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Položky"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Sbaleno"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Transformováno"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Obdrženo"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "Synchronizuje se"
+
+msgid "plugins.generic.pln.status.synced"
+msgstr "Synchronizováno"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Aktualizováno"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Místní chyba"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Vzdálená chyba"
+
+msgid "plugins.generic.pln.status.reset"
+msgstr "Reset"
+
+msgid "plugins.generic.pln.status.yes"
+msgstr "Ano"
+
+msgid "plugins.generic.pln.status.no"
+msgstr "Ne"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "Úkol PKP PN depozitoru"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Zpracování uložení pro"
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "PKP PN v tomto momentě nepřijímá uložení."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "PKP PN přijímá ukládání."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Zkontrolujte status vašich uložení."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Váš časopis musí mít ISSN aby bylo možné ukládat obsah do PKP PLN."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "Při připojování k PKP PN nastala chyba - kontaktujte, prosím, systémového administrátora."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "Zásady používání PKP PN byly aktualizovány. Je vyžadován souhlas s novými podmínkami používání před pokračování v ukládání."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "Podpora ZipArchive musí být povolena, aby proběhlo zpracování."

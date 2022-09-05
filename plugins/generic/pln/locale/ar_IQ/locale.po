@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "إضافة مشروع المعرفة العامة PLN"
+
+msgid "plugins.generic.pln.description"
+msgstr "إن إضافة مشروع المعرفة العامة PKP PN ستقوم بإيداع محتوياتك المنشورة في شبكة LOCKSS الخاصة من أجل الحفاظ عليها."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>الشبكة الخاصة لمشروع المعرفة العامة LOCKSS</strong><br /><br />لطفاً، إقرأ <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">نظرة عامة على PKP PN لمشروع المعرفة العامة</a> ومن ثم أكمل <a href=\"{$plnPluginURL}\">هذا النموذج البسيط</a>. هذا الخيار سيمكنك من تضمين مجلتك في الشبكة الاصة لمشروع المعرفة العامة LOCKSS (PKP PLN)."
+
+msgid "plugins.generic.pln.enabled"
+msgstr "إن إضافة PKP PN لمشروع المعرفة العامة قد تم تمكينها."
+
+msgid "plugins.generic.pln.disabled"
+msgstr "إن إضافة PKP PN لمشروع المعرفة العامة قد تم تعطيلها."
+
+msgid "plugins.generic.pln.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.generic.pln.settings.acron_required"
+msgstr "إن إضافة PKP PN تتطلب وجود إضافة Acron أو تواجد أداة جدولة دورية مثل 'cron.'"
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "تم حفظ إعدادات PKP PN لمشروع المعرفة العامة."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "شروط الاستعمال"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "باعتباري فرد الاتصال الرئيسي، فإنني، وبإيمان ووعي مطلقين، أوافق على الشروط الآتية والمتعلقة بالمشاركة ضمن الشبكة الخاصة LOCKSS لمشروع المعرفة العامة، أو ما يسمى اختصاراً (PKP-PLN):"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "أوافق"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "رمز تعريف المجلة"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "هذا هو رمز تعريف مجلتك لـ PKP PN الخاص بمشروع المعرفة العامة. بإمكانك مشاركته مع مدراء PKP PN لمشروع المعرفة العامة لأغراض الحصول على الدعم."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "تنشيط"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "إن لم يكن هناك فقرات مدرجة أعلاه لأي سبب كان، أو أنك على علم بأن تلك الفقرات قد تم تعديلها، أنقر على زر تنشيط لمحاولة عرض الفقرات مجدداً."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "لطفاً، إختر نوعية مكون الإيداع."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "لطفاً، إختر عتبة مكون الإيداع."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "الموافقة على شروط استعمال الشبكة أمر ضروري لغرض الإيداع في PLN."
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "المؤلَّف"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "العدد"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "حالة الشبكة: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "الإيداعات"
+
+msgid "plugins.generic.pln.status"
+msgstr "الحالة"
+
+msgid "plugins.generic.pln.status.id"
+msgstr "رمز التعريف"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "النوع"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "الفقرات"
+
+msgid "plugins.generic.pln.status.checked"
+msgstr "مؤشر"
+
+msgid "plugins.generic.pln.status.local_status"
+msgstr "الوضع المحلي"
+
+msgid "plugins.generic.pln.status.processing_status"
+msgstr "معالجة الوضع"
+
+msgid "plugins.generic.pln.status.lockss_status"
+msgstr "وضعية LOCKSS"
+
+msgid "plugins.generic.pln.status.complete"
+msgstr "مكتمل"
+
+msgid "plugins.generic.pln.status.confirmReset"
+msgstr "هل أنت متأكد من رغبتك في إعادة تهيئة هذا الإيداع؟ سيعاد رزمه وإرساله إلى الملقم المعالج."
+
+msgid "plugins.generic.pln.status.unknown"
+msgstr "مجهول"
+
+msgid "plugins.generic.pln.status.new"
+msgstr "جديد"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "معبأة"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "منقولة"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "مستلمة"
+
+msgid "plugins.generic.pln.status.validated"
+msgstr "مصادق عليه"
+
+msgid "plugins.generic.pln.status.sent"
+msgstr "مرسل إلى LOCKSS"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "قيد المزامنة"
+
+msgid "plugins.generic.pln.status.agreement"
+msgstr "موافقة"
+
+msgid "plugins.generic.pln.status.synced"
+msgstr "تمت مزامنتها"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "محدثة"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "فشل محلي"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "فشل ناء"
+
+msgid "plugins.generic.pln.status.reset"
+msgstr "إعادة ضبط"
+
+msgid "plugins.generic.pln.status.yes"
+msgstr "نعم"
+
+msgid "plugins.generic.pln.status.no"
+msgstr "لا"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "مهمة الإيداع في PKP PN لمشروع المعرفة العامة"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "معالجة الإيداع الخاص بـ {$title}."
+
+msgid "plugins.generic.pln.notifications.getting_servicedocument"
+msgstr "يجري الحصول على مستند الخدمة."
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "إن PKP PN لمشروع المعرفة العامة لا يتقبل حالياً إيداعات."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "إن PKP PN لمشروع المعرفة العامة يتقبل الإيداعات."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "تحقق من حالة إيداعاتك."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "على مجتلك أن تمتلك رمز ISSN حتى تتمكن من إيداع محتوياتها في PKP PN لمشروع المعرفة العامة."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "حدث خطأ ما عند الاتصال بـ PKP PN لمشروع المعرفة العامة، لطفاً، اتصل بمدير النظام عندك."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "لقد تم تعديل شروط الاستعمال لـ PKP PN لمشروع المعرفة العامة. الموافقة على الشروط الجديدة مطلوب لمواصلة الإيداع فيها."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "دعم ZipArchive ينبغي تمكينه للمتابعة."
+
+msgid "plugins.generic.pln.notifications.issn_setting"
+msgstr "ينبغي أن يكون لمجلتك رمز ISSN قبل أن يتسنى لك الموافقة على شروط الخدمة. بإمكانك إدخال رمز ISSN في صفحة إعدادات المجلة. بمجرد إدخال هذا الرمز، ستظهر لك شروط الخدمة أدناه."
+
+msgid "plugins.generic.pln.notifications.tar_missing"
+msgstr "ينبغي أن تكون لنظامك القدرة على تشغيل ملفات مضغوطة بصيغة tar."
+
+msgid "plugins.generic.pln.error.network.servicedocument"
+msgstr "خطأ في الشبكة: {$error} عند الاتصال بـ PKP PN للحصول على مستند الخدمة."
+
+msgid "plugins.generic.pln.error.network.deposit"
+msgstr "خطأ في الشبكة: {$error} عند الاتصال بـ PKP PN لإرسال الإيداع."
+
+msgid "plugins.generic.pln.error.network.swordstatement"
+msgstr "خطأ ما في الشبكة {$error} عند محاولة الاتصال بـ PKP PN للحصول على تحديث لوضعية الإيداع."
+
+msgid "plugins.generic.pln.error.http.servicedocument"
+msgstr "أعاد ملقم PKP PN خطأ بترميز HTTP مفاده: {$error} عند محاولة الحصول على مستند الخدمة."
+
+msgid "plugins.generic.pln.error.http.deposit"
+msgstr "أعاد ملقم PKP PN خطأ بترميز HTTP مفاده: {$error} عند إرسال الإيداع."
+
+msgid "plugins.generic.pln.error.http.swordstatement"
+msgstr "أعاد ملقم PKP PN خطأ من نوع HTTP {$error} عند التحقق من وضعية الإيداع."
+
+msgid "plugins.generic.pln.error.depositor.missingpackage"
+msgstr "تعذر العثور على ملف حزمة {$file}."
+
+msgid "plugins.generic.pln.error.depositor.export.articles.error"
+msgstr "حصل خطأ ما عند تصدير المؤلفات. قد يتضمن ملف توثيق الملقم المزيد من المعلومات."
+
+msgid "plugins.generic.pln.error.depositor.export.issue.error"
+msgstr "حصل خطأ ما عند تصدير العدد. قد يتضمن ملف توثيق الملقم المزيد من المعلومات."
+
+msgid "plugins.generic.pln.error.handler.uuid.invalid"
+msgstr "الرمز التعريفي UUID غير صحيح، أو غير منسق كما ينبغي."
+
+msgid "plugins.generic.pln.error.handler.uuid.notfound"
+msgstr "ليس هناك أي إيداع ذو صلة بالرمز التعريفي المعطى."
+
+msgid "plugins.generic.pln.error.handler.file.notfound"
+msgstr "تعذر العثور على ملف الإيداع. قد لا يكون مكتمل الرزم بعد، أو أن الرزمة الخاصة به قد تمت إزالتها."
+
+msgid "plugins.generic.pln.depositor.statusupdates"
+msgstr "تجري معالجة تحديثات موقف الإيداع."
+
+msgid "plugins.generic.pln.depositor.updatedcontent"
+msgstr "معالجة المحتوى المحدث."
+
+msgid "plugins.generic.pln.depositor.newcontent"
+msgstr "معالجة المحتوى الجديد."
+
+msgid "plugins.generic.pln.depositor.packagingdeposits"
+msgstr "يجري رزم محتوى الإيداع."
+
+msgid "plugins.generic.pln.depositor.transferringdeposits"
+msgstr "يجري إرسال الإيداعات إلى PLN."
+
+msgid "plugins.generic.plngateway.displayName"
+msgstr "بوابة PLN"
+
+msgid "plugins.generic.plngateway.description"
+msgstr "يقدم تقارير عن موقف PKP PN مع عناوين المؤلفات الأخيرة إلى الملقم المرحلي."

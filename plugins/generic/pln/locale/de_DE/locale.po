@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-03T23:08:22+00:00\n"
+"PO-Revision-Date: 2020-03-03T23:08:22+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.pln"
+msgstr "PKP-PLN-Plug-In"
+
+msgid "plugins.generic.pln.description"
+msgstr "Das PKP-PLN-Plug-In wird Ihre veröffentlichten Inhalte in das PKP Private LOCKSS Network zur Archivierung abliefern."
+
+msgid "plugins.generic.pln.manager.setup.description"
+msgstr "<strong>PKP Private LOCKSS Network</strong><br /><br />Bitte lesen Sie die <a href=\"https://pkp.sfu.ca/pkp-lockss/\" target=\"_blank\">Übersicht zu PKP PLN</a> und füllen Sie <a href=\"{$plnPluginURL}\">dieses einfache Formular</a> aus. Diese Option wird die Aufnahme Ihrer Zeitschrift in das Public Knowledge Project Private LOCKSS Network (PKP PLN) aktivieren."
+
+msgid "plugins.generic.pln.enabled"
+msgstr "Das PKP-PLN-Plug-In wurde aktiviert."
+
+msgid "plugins.generic.pln.disabled"
+msgstr "Das PKP-PLN-Plug-In wurde deaktiviert."
+
+msgid "plugins.generic.pln.settings"
+msgstr "Einstellungen"
+
+msgid "plugins.generic.pln.settings.acron_required"
+msgstr "Das PKP-PLN-Plug-In benötigt entweder das Acron-Plug-In oder ein Tool für regelmäßig wiederholte Aktionen (wie 'cron')."
+
+msgid "plugins.generic.pln.settings.saved"
+msgstr "PKP-PLN-Einstellungen gespeichert."
+
+msgid "plugins.generic.pln.settings.terms_of_use"
+msgstr "Nutzungsbedingungen"
+
+msgid "plugins.generic.pln.settings.terms_of_use_help"
+msgstr "Als Zeitschriftenverwalter/in der Zeitschrift akzeptiere und bestätige ich die folgenden Nutzungsbedingungen zur Teilnahme am Private LOCKSS Network des Public Knowledge Projects (PKP-PLN):"
+
+msgid "plugins.generic.pln.settings.terms_of_use_agree"
+msgstr "Ich stimme zu"
+
+msgid "plugins.generic.pln.settings.journal_uuid"
+msgstr "Kennzeichnung der Zeitschrift"
+
+msgid "plugins.generic.pln.settings.journal_uuid_help"
+msgstr "Dies ist die eindeutige Kennung Ihrer Zeitschrift für das PKP PLN. Sie müssen diese Kennung angeben, wenn Sie Support durch die Administrator/innen von PKP PN erhalten möchten."
+
+msgid "plugins.generic.pln.settings.refresh"
+msgstr "Aktualisieren"
+
+msgid "plugins.generic.pln.settings.refresh_help"
+msgstr "Wenn aus irgendeinem Grund keine Einträge oben gelistet sind oder wenn Sie wissen, dass die Einträge aktualisiert worden sind, klicken Sie Aktualisieren um die Liste zu erneuern."
+
+msgid "plugins.generic.pln.required.object_type"
+msgstr "Bitte wählen Sie einen Typ für die Objektablieferung."
+
+msgid "plugins.generic.pln.required.object_threshold"
+msgstr "Bitte wählen Sie eine Schwelle für die Objektablieferung."
+
+msgid "plugins.generic.pln.required.terms_of_use_agreement"
+msgstr "Die Zustimmung zu den Nutzungsbedingungen des Netzwerks ist erforderlich, um bei dem PKP PN abzuliefern."
+
+msgid "plugins.generic.pln.objects.article"
+msgstr "Artikel"
+
+msgid "plugins.generic.pln.objects.issue"
+msgstr "Ausgabe"
+
+msgid "plugins.generic.pln.status.network_status"
+msgstr "Netzwerk-Status: {$networkStatusMessage}"
+
+msgid "plugins.generic.pln.status.deposits"
+msgstr "Ablieferungen"
+
+msgid "plugins.generic.pln.status"
+msgstr "Status"
+
+msgid "plugins.generic.pln.status.docs"
+msgstr "Die <a href=\"{$statusDocsUrl}\">Statusangaben des PLN</a> sind hier beschrieben."
+
+msgid "plugins.generic.pln.status.id"
+msgstr "ID"
+
+msgid "plugins.generic.pln.status.type"
+msgstr "Typ"
+
+msgid "plugins.generic.pln.status.items"
+msgstr "Elemente"
+
+msgid "plugins.generic.pln.status.checked"
+msgstr "Überprüft"
+
+msgid "plugins.generic.pln.status.local_status"
+msgstr "Lokaler Status"
+
+msgid "plugins.generic.pln.status.processing_status"
+msgstr "Bearbeitungsstatus"
+
+msgid "plugins.generic.pln.status.lockss_status"
+msgstr "LOCKSS-Status"
+
+msgid "plugins.generic.pln.status.complete"
+msgstr "Abgeschlossen"
+
+msgid "plugins.generic.pln.status.confirmReset"
+msgstr "Sind Sie sicher, dass Sie diese Ablieferung zurücksetzen wollen? Es wird neu gepackt und erneut zum Server zur Verarbeitung geschickt."
+
+msgid "plugins.generic.pln.status.unknown"
+msgstr "Unbekannt"
+
+msgid "plugins.generic.pln.status.new"
+msgstr "Neu"
+
+msgid "plugins.generic.pln.status.packaged"
+msgstr "Gepackt"
+
+msgid "plugins.generic.pln.status.transferred"
+msgstr "Transferiert"
+
+msgid "plugins.generic.pln.status.received"
+msgstr "Erhalten"
+
+msgid "plugins.generic.pln.status.validated"
+msgstr "Validiert"
+
+msgid "plugins.generic.pln.status.sent"
+msgstr "An LOCKSS geschickt"
+
+msgid "plugins.generic.pln.status.syncing"
+msgstr "In Synchronisation"
+
+msgid "plugins.generic.pln.status.agreement"
+msgstr "Vereinbarung"
+
+msgid "plugins.generic.pln.status.updated"
+msgstr "Aktualisiert"
+
+msgid "plugins.generic.pln.status.local_failure"
+msgstr "Lokaler Fehler"
+
+msgid "plugins.generic.pln.status.remote_failure"
+msgstr "Serverfehler"
+
+msgid "plugins.generic.pln.depositorTask.name"
+msgstr "PKP PN Ablieferungsaufgabe"
+
+msgid "plugins.generic.pln.notifications.processing_for"
+msgstr "Ablieferung wird durchgeführt für {$title}."
+
+msgid "plugins.generic.pln.notifications.getting_servicedocument"
+msgstr "Hole das Service-Dokument."
+
+msgid "plugins.generic.pln.notifications.pln_not_accepting"
+msgstr "Das PKP PN akzeptiert momentan keine Ablieferungen."
+
+msgid "plugins.generic.pln.notifications.pln_accepting"
+msgstr "Das PKP PN akzeptiert Ablieferungen."
+
+msgid "plugins.generic.pln.notifications.check_status"
+msgstr "Überprüfen Sie den Status Ihrer Ablieferungen."
+
+msgid "plugins.generic.pln.notifications.issn_missing"
+msgstr "Ihre Zeitschrift muss über eine ISSN verfügen, um Inhalte in das PKP PN abzuliefern."
+
+msgid "plugins.generic.pln.notifications.http_error"
+msgstr "Es gab einen Fehler bei der Verbindung zum PKP PN - bitte benachrichten Sie Ihre/n Systemadministrator/in."
+
+msgid "plugins.generic.pln.notifications.terms_updated"
+msgstr "Die Nutzungsbedingungen des PKP PN sind aktualisiert worden. Die Zustimmung zu den neuen Bedingungen ist notwendig, um weiter abliefern zu können."
+
+msgid "plugins.generic.pln.notifications.zip_missing"
+msgstr "Die Unterstützung von ZipArchive muss aktiviert werden, um fortfahren zu können."
+
+msgid "plugins.generic.pln.notifications.issn_setting"
+msgstr "Ihre Zeitschrift muss über eine ISSN verfügen, bevor Sie den Nutzungsbedingungen zustimmen können. Sie können die ISSN im Setup der Zeitschrift eingeben. Sobald die ISSN der Zeitschrift eingegeben ist, werden die Nutzungsbedingungen unten angezeigt."
+
+msgid "plugins.generic.pln.notifications.tar_missing"
+msgstr "Ihr System muss über ein tar-Programm verfügen."
+
+msgid "plugins.generic.pln.error.network.servicedocument"
+msgstr "Netzwerk-Fehler {$error} beim Versuch, das Service-Dokument vom PKP PN zu holen."
+
+msgid "plugins.generic.pln.error.network.deposit"
+msgstr "Netzwerk-Fehler {$error} beim Versuch, die Ablieferung an das PKP PN zu senden."
+
+msgid "plugins.generic.pln.error.network.swordstatement"
+msgstr "Netzwerk-Fehler {$error} beim Versuch, von PKP PN ein Statusupdate für die Ablieferung zu holen."
+
+msgid "plugins.generic.pln.error.http.servicedocument"
+msgstr "PLN-Server hat einen HTTP-Fehler {$error} gemeldet beim Versuch, das Service-Dokument zu holen."
+
+msgid "plugins.generic.pln.error.http.deposit"
+msgstr "PLN-Server hat einen HTTP-Fehler {$error} gemeldet beim Versuch, die Ablieferung zu senden."
+
+msgid "plugins.generic.pln.error.http.swordstatement"
+msgstr "PLN-Server hat einen HTTP-Fehler {$error} gemeldet bei der Überprüfung des Status einer Ablieferung."
+
+msgid "plugins.generic.pln.error.depositor.missingpackage"
+msgstr "Kann die Datei {$file} des Pakets nicht finden."
+
+msgid "plugins.generic.pln.error.depositor.export.articles.error"
+msgstr "Ein Fehler ist beim Export der Artikel aufgetreten. Das Fehlerlog des Servers könnte weitere Informationen enthalten."
+
+msgid "plugins.generic.pln.error.depositor.export.issue.error"
+msgstr "Ein Fehler ist beim Export einer Ausgabe aufgetreten. Das Fehlerlog des Servers könnte weitere Informationen enthalten."
+
+msgid "plugins.generic.pln.error.handler.uuid.invalid"
+msgstr "Die angeforderte UUID ist ungültig oder ist nicht korrekt formatiert."
+
+msgid "plugins.generic.pln.error.handler.uuid.notfound"
+msgstr "Es gibt keine Ablieferung mit der angegebenen UUID."
+
+msgid "plugins.generic.pln.error.handler.file.notfound"
+msgstr "Die Datei der Ablieferung konnte nicht gefunden werden. Es könnte sein, dass sie noch nicht verpackt ist oder dass das Paket entfernt worden ist."
+
+msgid "plugins.generic.pln.depositor.statusupdates"
+msgstr "Verarbeite die Aktualisierungen des Ablieferungsstatus."
+
+msgid "plugins.generic.pln.depositor.updatedcontent"
+msgstr "Verarbeite aktualisierte Inhalte."
+
+msgid "plugins.generic.pln.depositor.newcontent"
+msgstr " Verarbeite neue Inhalte."
+
+msgid "plugins.generic.pln.depositor.packagingdeposits"
+msgstr "Verpacke Inhalte zur Ablieferung."
+
+msgid "plugins.generic.pln.depositor.transferringdeposits"
+msgstr "Sende Ablieferungen an das PLN."
+
+msgid "plugins.generic.plngateway.displayName"
+msgstr "PLN-Schnittstelle"
+
+msgid "plugins.generic.plngateway.description"
+msgstr "Liefert den PLN-Status und die Titel der letzten Artikel an den Übergabeserver."
