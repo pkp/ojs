@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-08-31 17:50+0000\n"
+"PO-Revision-Date: 2022-09-05 16:50+0000\n"
 "Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
@@ -37,7 +37,6 @@ msgstr "Os idiomas selecionados estarão disponíveis para todas as revistas no 
 msgid "admin.locale.maybeIncomplete"
 msgstr "As configurações dos Idiomas marcados podem estar incompletos."
 
-#, fuzzy
 msgid "admin.languages.confirmUninstall"
 msgstr ""
 "Deseja realmente remover este idioma? A execução pode afetar revistas "
