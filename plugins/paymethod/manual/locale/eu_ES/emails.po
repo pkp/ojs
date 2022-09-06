@@ -16,10 +16,10 @@ msgstr "Eskuzko ordainketaren jakinarazpena"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"{$userFullName} erabiltzaileak (&quot;{$userName}&quot; erab.-iz.) {$contextName} aldizkarirako egindako eskuzko ordainketa bat prozesatu beharrean dago.<br />\n"
+"{$senderName} erabiltzaileak (&quot;{$senderUsername}&quot; erab.-iz.) {$contextName} aldizkarirako egindako eskuzko ordainketa bat prozesatu beharrean dago.<br />\n"
 "<br />\n"
-"Ordaindu beharreko lana &quot;{$itemName}&quot; da.<br />\n"
-"Kostua : {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Ordaindu beharreko lana &quot;{$paymentName}&quot; da.<br />\n"
+"Kostua : {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Mezu hau Open Journal Systems-en Eskuzko ordainketen pluginak sortu du."
 

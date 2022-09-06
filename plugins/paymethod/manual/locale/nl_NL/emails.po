@@ -16,10 +16,10 @@ msgstr "Bericht van handmatige betaling"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"Er moet een handmatige betaling verwerkt worden voor tijdschrift {$contextName} en gebruiker {$userFullName} (gebruikersnaam &quot;{$userName}&quot;).<br />\n"
+"Er moet een handmatige betaling verwerkt worden voor tijdschrift {$contextName} en gebruiker {$senderName} (gebruikersnaam &quot;{$senderUsername}&quot;).<br />\n"
 "<br />\n"
-"Er wordt betaald voor &quot;{$itemName}&quot;.<br />\n"
-"De prijs is {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Er wordt betaald voor &quot;{$paymentName}&quot;.<br />\n"
+"De prijs is {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Deze e-mail is gegenereerd door de Handmatige betalingen plugin van Open Journal Systems."
 

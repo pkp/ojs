@@ -13,7 +13,7 @@
  * @brief Mailable trait to set institutional subscription variables
  */
 
-namespace PKP\mail\traits;
+namespace APP\mail\traits;
 
 use APP\facades\Repo;
 use APP\subscription\InstitutionalSubscription;

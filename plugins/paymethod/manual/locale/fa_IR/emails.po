@@ -16,10 +16,10 @@ msgstr "اطلاع رسانی پرداخت دستی"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"یک پرداخت دستی قرار است برای مجله {$contextName} از طرف کاربر {$userFullName} (username &quot;{$userName}&quot;) صورت گیرد.<br />\n"
+"یک پرداخت دستی قرار است برای مجله {$contextName} از طرف کاربر {$senderName} (username &quot;{$senderUsername}&quot;) صورت گیرد.<br />\n"
 "<br />\n"
-"مورد خرید &quot;{$itemName}&quot;.<br />\n"
-"قیمت {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"مورد خرید &quot;{$paymentName}&quot;.<br />\n"
+"قیمت {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "این ایمیل توسط افزونه پرداخت دستی سیستم های مجله آزاد ایجاد شده است."
 

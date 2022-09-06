@@ -16,10 +16,10 @@ msgstr "Notifica di pagamento manuale"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"Bisogna registrare un pagamento offline per  {$contextName}, utente {$userFullName} (username &quot;{$userName}&quot;).<br />\n"
+"Bisogna registrare un pagamento offline per  {$contextName}, utente {$senderName} (username &quot;{$senderUsername}&quot;).<br />\n"
 "<br />\n"
-"Il pagamento riguarda &quot;{$itemName}&quot;.<br />\n"
-"Il costo è {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Il pagamento riguarda &quot;{$paymentName}&quot;.<br />\n"
+"Il costo è {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Questa email è generata automaticamente da Open Journal Systems' Manual Payment plugin."
 

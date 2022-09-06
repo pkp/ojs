@@ -16,10 +16,10 @@ msgstr "Інформування про платіж"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"На рахунок журналу {$contextName} користувачем {$userFullName} (username &quot;{$userName}&quot;) повинен бути перерахований платіж.<br />\n"
+"На рахунок журналу {$contextName} користувачем {$senderName} (username &quot;{$senderUsername}&quot;) повинен бути перерахований платіж.<br />\n"
 "<br />\n"
-"Це плата за &quot;{$itemName}&quot;.<br />\n"
-"Сума платежу {$itemCost} ({$itemCurrencyCode}).<br />\n"
+"Це плата за &quot;{$paymentName}&quot;.<br />\n"
+"Сума платежу {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
 "<br />\n"
 "Цей лист був створений модулем ручних платежів системи Open Journal Systems."
 

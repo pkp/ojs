@@ -37,3 +37,6 @@ msgstr "Title"
 
 msgid "plugins.paymethod.manual.purchase.fee"
 msgstr "Fee"
+
+msgid "plugins.paymethod.manual.manualPaymentNotify.name"
+msgstr "Manual Payment Notify"

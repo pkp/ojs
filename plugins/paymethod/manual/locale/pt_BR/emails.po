@@ -16,10 +16,10 @@ msgstr "Notificação de pagamento manual"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"É necessário realizar o processamento de um pagamento manual de assinatura da revista {$contextName}, pelo usuário {$userFullName} (login &quot;{$userName}&quot;).<br />\n"
+"É necessário realizar o processamento de um pagamento manual de assinatura da revista {$contextName}, pelo usuário {$senderName} (login &quot;{$senderUsername}&quot;).<br />\n"
 "<br />\n"
-"O item adquirido é &quot;{$itemName}&quot;.<br />\n"
-"Valor em ({$itemCurrencyCode}): {$itemCost}<br />\n"
+"O item adquirido é &quot;{$paymentName}&quot;.<br />\n"
+"Valor em ({$paymentCurrencyCode}): {$paymentAmount}<br />\n"
 "<br />\n"
 "Esta é uma mensagem automática da ferramenta de Pagamento manual do Open Journal Systems."
 
