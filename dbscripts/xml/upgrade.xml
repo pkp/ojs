@@ -185,6 +185,7 @@
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_PRODUCTION" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_COPYEDITING" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_CANCEL_REVIEW_ROUND" locales="en_US" />
+		<migration class="APP\migration\upgrade\v3_4_0\I7796_UpdateCrossrefSchema"/>
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 
