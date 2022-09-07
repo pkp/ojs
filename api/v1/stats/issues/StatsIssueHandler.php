@@ -27,6 +27,7 @@ use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
+use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
 use Slim\Http\Request as SlimHttpRequest;
 
@@ -73,6 +74,8 @@ class StatsIssueHandler extends APIHandler
     {
         $routeName = null;
         $slimRequest = $this->getSlimRequest();
+
+        $this->addPolicy(new UserRolesRequiredPolicy($request), true);
 
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 

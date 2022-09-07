@@ -20,13 +20,14 @@ use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
+use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
 use PKP\handler\APIHandler;
 use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
-use Illuminate\Support\LazyCollection;
 
 class IssueHandler extends APIHandler
 {
@@ -77,6 +78,7 @@ class IssueHandler extends APIHandler
             $routeName = $route->getName();
         }
 
+        $this->addPolicy(new UserRolesRequiredPolicy($request), true);
         $this->addPolicy(new ContextRequiredPolicy($request));
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
         $this->addPolicy(new OjsJournalMustPublishPolicy($request));
