@@ -18,11 +18,11 @@ namespace APP\mail\variables;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\Journal;
-use APP\journal\JournalDAO;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionType;
 use APP\subscription\SubscriptionTypeDAO;
 use PKP\db\DAORegistry;
+use PKP\mail\Mailable;
 use PKP\mail\variables\Variable;
 use PKP\user\User;
 
@@ -36,21 +36,17 @@ class SubscriptionEmailVariable extends Variable
     public const MEMBERSHIP = 'membership';
 
     protected User $subscriber;
-
     protected Subscription $subscription;
-
+    protected SubscriptionType $subscriptionType;
     protected Journal $context;
 
-    protected SubscriptionType $subscriptionType;
-
-    public function __construct(Subscription $subscription)
+    public function __construct(Subscription $subscription, Mailable $mailable)
     {
+        parent::__construct($mailable);
+
         $this->subscriber = Repo::user()->get($subscription->getUserId());
         $this->subscription = $subscription;
-
-        /** @var JournalDAO $journalDao */
-        $contextDao = DAORegistry::getDAO('JournalDAO');
-        $this->context = $contextDao->getById($this->subscription->getData('journalId'));
+        $this->context = $this->getContextFromVariables();
 
         /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
