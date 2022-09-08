@@ -23,6 +23,7 @@ use APP\mail\mailables\SubscriptionExpiresSoon;
 use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\Subscription;
+use APP\subscription\SubscriptionTypeDAO;
 use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
 use PKP\mail\Mailable;
@@ -79,6 +80,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
         $curDay = $curDate['day'];
         $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
         $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
 
         // Check if expiry notification before months is enabled
         if ($beforeMonths = $journal->getData('numMonthsBeforeSubscriptionExpiryReminder')) {
@@ -95,11 +97,19 @@ class SubscriptionExpiryReminder extends ScheduledTask
             $institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
             while ($subscription = $individualSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
 
             while ($subscription = $institutionalSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
         }
 
@@ -118,11 +128,23 @@ class SubscriptionExpiryReminder extends ScheduledTask
             $institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
             while ($subscription = $individualSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
 
             while ($subscription = $institutionalSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon($journal, $subscription));
+                $this->sendReminder(
+                    $journal,
+                    $subscription,
+                    new SubscriptionExpiresSoon(
+                        $journal,
+                        $subscription,
+                        $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    )
+                );
             }
         }
 
@@ -147,11 +169,19 @@ class SubscriptionExpiryReminder extends ScheduledTask
             $institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
             while ($subscription = $individualSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpiredLast($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpiredLast(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
 
             while ($subscription = $institutionalSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpiredLast($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpiredLast(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
         }
 
@@ -183,11 +213,19 @@ class SubscriptionExpiryReminder extends ScheduledTask
             $institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
             while ($subscription = $individualSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpired($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpired(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
 
             while ($subscription = $institutionalSubscriptions->next()) {
-                $this->sendReminder($journal, $subscription, new SubscriptionExpired($journal, $subscription));
+                $this->sendReminder($journal, $subscription, new SubscriptionExpired(
+                    $journal,
+                    $subscription,
+                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                ));
             }
         }
     }

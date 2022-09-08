@@ -25,8 +25,11 @@ use APP\mail\mailables\SubscriptionPurchaseIndividual;
 use APP\mail\mailables\SubscriptionPurchaseInstitutional;
 use APP\mail\mailables\SubscriptionRenewIndividual;
 use APP\mail\mailables\SubscriptionRenewInstitutional;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionAction;
+use APP\subscription\SubscriptionTypeDAO;
 use PKP\db\DAORegistry;
 use PKP\payment\CompletedPayment;
 use PKP\payment\PaymentManager;
@@ -246,6 +249,7 @@ class OJSPaymentManager extends PaymentManager
                     $subscriptionId = $queuedPayment->getAssocId();
                     $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
                     $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
+                    $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
                     if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
                         $subscription = $institutionalSubscriptionDao->getById($subscriptionId);
                         $institutional = true;
@@ -257,6 +261,7 @@ class OJSPaymentManager extends PaymentManager
                         fatalError('Subscription integrity checks fail!');
                         return false;
                     }
+                    $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
                     // Update subscription end date now that payment is completed
                     if ($institutional) {
                         // Still requires approval from JM/SM since includes domain and IP ranges
@@ -269,7 +274,11 @@ class OJSPaymentManager extends PaymentManager
 
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionPurchaseInstitutional($journal, $subscription));
+                            $institution = Repo::institution()->get($subscription->getInstitutionId());
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail(
+                                $request,
+                                new SubscriptionPurchaseInstitutional($journal, $subscription, $subscriptionType, $institution)
+                            );
                         }
                     } else {
                         $subscription->setStatus(Subscription::SUBSCRIPTION_STATUS_ACTIVE);
@@ -280,7 +289,10 @@ class OJSPaymentManager extends PaymentManager
                         }
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationPurchaseIndividual')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionPurchaseIndividual($journal, $subscription));
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail(
+                                $request,
+                                new SubscriptionPurchaseIndividual($journal, $subscription, $subscriptionType)
+                            );
                         }
                     }
                     $returner = true;
@@ -289,6 +301,7 @@ class OJSPaymentManager extends PaymentManager
                     $subscriptionId = $queuedPayment->getAssocId();
                     $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
                     $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */
+                    $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
                     if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
                         $subscription = $institutionalSubscriptionDao->getById($subscriptionId);
                         $institutional = true;
@@ -299,19 +312,27 @@ class OJSPaymentManager extends PaymentManager
                     if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
                         return false;
                     }
+                    $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
                     if ($institutional) {
                         $institutionalSubscriptionDao->renewSubscription($subscription);
 
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionRenewInstitutional($journal, $subscription));
+                            $institution = Repo::institution()->get($subscription->getInstitutionId());
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail(
+                                $request,
+                                new SubscriptionRenewInstitutional($journal, $subscription, $subscriptionType, $institution)
+                            );
                         }
                     } else {
                         $individualSubscriptionDao->renewSubscription($subscription);
 
                         // Notify JM/SM of completed online purchase
                         if ($journal->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual')) {
-                            SubscriptionAction::sendOnlinePaymentNotificationEmail($request, new SubscriptionRenewIndividual($journal, $subscription));
+                            SubscriptionAction::sendOnlinePaymentNotificationEmail(
+                                $request,
+                                new SubscriptionRenewIndividual($journal, $subscription, $subscriptionType)
+                            );
                         }
                     }
                     $returner = true;

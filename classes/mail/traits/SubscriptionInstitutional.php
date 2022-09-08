@@ -15,8 +15,8 @@
 
 namespace APP\mail\traits;
 
-use APP\facades\Repo;
 use APP\subscription\InstitutionalSubscription;
+use PKP\institution\Institution;
 
 trait SubscriptionInstitutional
 {
@@ -27,9 +27,8 @@ trait SubscriptionInstitutional
     protected static string $domain = 'domain';
     protected static string $ipRanges = 'ipRanges';
 
-    protected function setupInstitutionalVariables(InstitutionalSubscription $subscription): void
+    protected function setupInstitutionalVariables(InstitutionalSubscription $subscription, Institution $institution): void
     {
-        $institution = Repo::institution()->get($subscription->getInstitutionId());
         $this->addData([
             static::$institutionName => $institution->getLocalizedName(),
             static::$institutionMailingAddress => $subscription->getInstitutionMailingAddress(),
