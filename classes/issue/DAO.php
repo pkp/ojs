@@ -22,11 +22,14 @@ use Illuminate\Support\LazyCollection;
 use PKP\cache\CacheManager;
 use PKP\cache\GenericCache;
 use PKP\core\EntityDAO;
+use PKP\core\traits\HasParent;
 use PKP\db\DAOResultFactory;
 use PKP\services\PKPSchemaService;
 
 class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
 {
+    use HasParent;
+
     // TODO: Needs to be addressed with refactor of caching.
     public $caches;
 
@@ -64,6 +67,14 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
         'urlPath' => 'url_path',
         'doiId' => 'doi_id'
     ];
+
+    /**
+     * @copydoc HasParent::getParentColumn()
+     */
+    public function getParentColumn(): string
+    {
+        return 'journal_id';
+    }
 
     /**
      * Handle a cache miss.
@@ -107,24 +118,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     public function newDataObject(): Issue
     {
         return app(Issue::class);
-    }
-
-    /**
-     * Check if a submission exists
-     */
-    public function exists(int $id): bool
-    {
-        return DB::table($this->table)
-            ->where($this->primaryKeyColumn, '=', $id)
-            ->exists();
-    }
-
-    /**
-     * @copydoc EntityDAO::get()
-     */
-    public function get(int $id): ?Issue
-    {
-        return parent::get($id);
     }
 
     /**

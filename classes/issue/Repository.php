@@ -50,15 +50,15 @@ class Repository
     }
 
     /** @copydoc DAO::exists() */
-    public function exists(int $id): bool
+    public function exists(int $id, int $journalId = null): bool
     {
-        return $this->dao->exists($id);
+        return $this->dao->exists($id, $journalId);
     }
 
     /** @copydoc DAO::get()
      * TODO: Function signature should stick with ID, but previous DAO expected $useCache = false as default
      */
-    public function get(int $id): ?Issue
+    public function get(int $id, int $journalId = null): ?Issue
     {
         // TODO: Caching as currently setup never properly caches objects and always fires a _cacheMiss()
 //        if ($useCache) {
@@ -70,7 +70,7 @@ class Repository
 //            return $returner;
 //        }
 
-        return $this->dao->get($id);
+        return $this->dao->get($id, $journalId);
     }
 
     /** @copydoc DAO::getCollector() */
