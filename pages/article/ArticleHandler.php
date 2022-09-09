@@ -283,6 +283,7 @@ class ArticleHandler extends Handler
         $templateMgr->assign([
             'primaryGalleys' => $primaryGalleys,
             'supplementaryGalleys' => $supplementaryGalleys,
+            'userGroupsById' => Repo::userGroup()->getCollector()->filterByPublicationIds([$this->publication->getId()])->getMany()->toArray()
         ]);
 
         // Citations
@@ -304,20 +305,6 @@ class ArticleHandler extends Handler
             'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
             'keywords' => $publication->getData('keywords'),
         ]);
-
-        // Get the author uesr groups.
-        $authors = $publication->getData('authors');
-        $userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-        $userGroupsById = [];
-        if ($authors) {
-            foreach ($authors as $author) {
-                $userGroupId = $author->getData('userGroupId');
-                if (!isset($userGroupsById[$userGroupId])) {
-                    $userGroupsById[$userGroupId] = $userGroupDao->getById($userGroupId);
-                }
-            }
-        }
-        $templateMgr->assign('userGroupsById', $userGroupsById);
 
         // Fetch and assign the galley to the template
         if ($this->galley && $this->galley->getRemoteURL()) {
