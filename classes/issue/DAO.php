@@ -22,13 +22,13 @@ use Illuminate\Support\LazyCollection;
 use PKP\cache\CacheManager;
 use PKP\cache\GenericCache;
 use PKP\core\EntityDAO;
-use PKP\core\traits\HasParent;
+use PKP\core\traits\EntityWithParent;
 use PKP\db\DAOResultFactory;
 use PKP\services\PKPSchemaService;
 
 class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
 {
-    use HasParent;
+    use EntityWithParent;
 
     // TODO: Needs to be addressed with refactor of caching.
     public $caches;
@@ -69,7 +69,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     ];
 
     /**
-     * @copydoc HasParent::getParentColumn()
+     * @copydoc EntityWithParent::getParentColumn()
      */
     public function getParentColumn(): string
     {
