@@ -127,9 +127,12 @@
 
 	.galleys_links {
 		&:extend(.pkp_unstyled_list);
-
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: start;
+		
 		li {
-			display: inline-block;
+			margin-right: 0.2em;
 		}
 	}
 
