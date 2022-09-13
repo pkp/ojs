@@ -59,7 +59,7 @@ class SubscriptionEmailVariable extends Variable
      */
     public function values(string $locale): array
     {
-        $context = $this->getContextFromVariables();
+        $context = $this->getContext();
         return
         [
             self::SUBSCRIBER_DETAILS => $this->subscriber->getSignature($locale) ?? '',
