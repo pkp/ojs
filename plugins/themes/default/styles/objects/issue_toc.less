@@ -72,10 +72,12 @@
 	.galleys_links {
 		&:extend(.pkp_unstyled_list);
 		margin-top: @base;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: start;
 
 		li {
-			display: inline-block;
-			margin-right: 1em;
+			margin-inline-end: 1.25rem;
 
 			&:last-child {
 				margin-right: 0;
