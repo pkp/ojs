@@ -20,6 +20,7 @@ use APP\facades\Repo;
 use APP\mail\mailables\SubscriptionNotify;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionDAO;
+use APP\subscription\SubscriptionTypeDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -230,13 +231,16 @@ class SubscriptionForm extends Form
     protected function _prepareNotificationEmail(): SubscriptionNotify
     {
         $request = Application::get()->getRequest();
-        $journal = $request->getJournal();
+        $context = $request->getJournal();
         $user = Repo::user()->get($this->subscription->getUserId());
-        $subscriptionName = $journal->getData('subscriptionName');
-        $subscriptionEmail = $journal->getData('subscriptionEmail');
+        $subscriptionName = $context->getData('subscriptionName');
+        $subscriptionEmail = $context->getData('subscriptionEmail');
 
-        $template = Repo::emailTemplate()->getByKey($journal->getId(), SubscriptionNotify::getEmailTemplateKey());
-        $mailable = new SubscriptionNotify($journal, $this->subscription);
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
+        $subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId(), $context->getId());
+
+        $template = Repo::emailTemplate()->getByKey($context->getId(), SubscriptionNotify::getEmailTemplateKey());
+        $mailable = new SubscriptionNotify($context, $this->subscription, $subscriptionType);
         $mailable
             ->recipients([$user])
             ->from($subscriptionEmail, $subscriptionName)

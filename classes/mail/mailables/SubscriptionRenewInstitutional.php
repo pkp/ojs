@@ -16,9 +16,12 @@ namespace APP\mail\mailables;
 
 use APP\journal\Journal;
 use APP\mail\traits\SubscriptionInstitutional;
+use APP\mail\traits\SubscriptionTypeVariables;
 use APP\mail\variables\SubscriptionEmailVariable;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\Subscription;
+use APP\subscription\SubscriptionType;
+use PKP\institution\Institution;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
 use PKP\mail\traits\Sender;
@@ -29,6 +32,7 @@ class SubscriptionRenewInstitutional extends Mailable
     use Configurable;
     use Sender;
     use SubscriptionInstitutional;
+    use SubscriptionTypeVariables;
 
     protected static ?string $name = 'mailable.subscriptionRenewInstitutional.name';
     protected static ?string $description = 'mailable.subscriptionRenewInstitutional.description';
@@ -37,10 +41,15 @@ class SubscriptionRenewInstitutional extends Mailable
     protected static array $fromRoleIds = [Role::ROLE_ID_READER];
     protected static array $toRoleIds = [Role::ROLE_ID_SUBSCRIPTION_MANAGER];
 
-    public function __construct(Journal $journal, InstitutionalSubscription $subscription)
-    {
+    public function __construct(
+        Journal $context,
+        InstitutionalSubscription $subscription,
+        SubscriptionType $subscriptionType,
+        Institution $institution,
+    ) {
         parent::__construct(func_get_args());
-        $this->setupInstitutionalVariables($subscription);
+        $this->setupInstitutionalVariables($subscription, $institution);
+        $this->setupSubscriptionTypeVariables($subscriptionType, $context);
     }
 
     /**
@@ -59,6 +68,7 @@ class SubscriptionRenewInstitutional extends Mailable
     public static function getDataDescriptions(): array
     {
         $variables = parent::getDataDescriptions();
-        return static::addInstitutionalVariablesDescription($variables);
+        $variables = static::addInstitutionalVariablesDescription($variables);
+        return static::addSubscriptionTypeVariablesDescription($variables);
     }
 }

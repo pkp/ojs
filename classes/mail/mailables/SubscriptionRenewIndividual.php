@@ -15,9 +15,11 @@
 namespace APP\mail\mailables;
 
 use APP\journal\Journal;
+use APP\mail\traits\SubscriptionTypeVariables;
 use APP\mail\variables\SubscriptionEmailVariable;
 use APP\subscription\IndividualSubscription;
 use APP\subscription\Subscription;
+use APP\subscription\SubscriptionType;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
 use PKP\mail\traits\Sender;
@@ -27,6 +29,7 @@ class SubscriptionRenewIndividual extends Mailable
 {
     use Configurable;
     use Sender;
+    use SubscriptionTypeVariables;
 
     protected static ?string $name = 'mailable.subscriptionRenewIndividual.name';
     protected static ?string $description = 'mailable.subscriptionRenewIndividual.description';
@@ -35,9 +38,10 @@ class SubscriptionRenewIndividual extends Mailable
     protected static array $fromRoleIds = [Role::ROLE_ID_READER];
     protected static array $toRoleIds = [Role::ROLE_ID_SUBSCRIPTION_MANAGER];
 
-    public function __construct(Journal $journal, IndividualSubscription $subscription)
+    public function __construct(Journal $context, IndividualSubscription $subscription, SubscriptionType $subscriptionType)
     {
-        parent::__construct(func_get_args());
+        parent::__construct([$context, $subscription]);
+        $this->setupSubscriptionTypeVariables($subscriptionType, $context);
     }
 
     /**
@@ -48,5 +52,14 @@ class SubscriptionRenewIndividual extends Mailable
         $map = parent::templateVariablesMap();
         $map[Subscription::class] = SubscriptionEmailVariable::class;
         return $map;
+    }
+
+    /**
+     * Description for subscription type related variables
+     */
+    public static function getDataDescriptions(): array
+    {
+        $variables = parent::getDataDescriptions();
+        return static::addSubscriptionTypeVariablesDescription($variables);
     }
 }

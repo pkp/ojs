@@ -15,14 +15,10 @@
 
 namespace APP\mail\variables;
 
-use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\Journal;
-use APP\journal\JournalDAO;
 use APP\subscription\Subscription;
-use APP\subscription\SubscriptionType;
-use APP\subscription\SubscriptionTypeDAO;
-use PKP\db\DAORegistry;
+use PKP\mail\Mailable;
 use PKP\mail\variables\Variable;
 use PKP\user\User;
 
@@ -30,31 +26,18 @@ class SubscriptionEmailVariable extends Variable
 {
     public const SUBSCRIBER_DETAILS = 'subscriberDetails';
     public const SUBSCRIPTION_SIGNATURE = 'subscriptionSignature';
-    public const SUBSCRIPTION_URL = 'subscriptionUrl';
     public const EXPIRY_DATE = 'expiryDate';
-    public const SUBSCRIPTION_TYPE = 'subscriptionType';
     public const MEMBERSHIP = 'membership';
 
     protected User $subscriber;
-
     protected Subscription $subscription;
 
-    protected Journal $context;
-
-    protected SubscriptionType $subscriptionType;
-
-    public function __construct(Subscription $subscription)
+    public function __construct(Subscription $subscription, Mailable $mailable)
     {
+        parent::__construct($mailable);
+
         $this->subscriber = Repo::user()->get($subscription->getUserId());
         $this->subscription = $subscription;
-
-        /** @var JournalDAO $journalDao */
-        $contextDao = DAORegistry::getDAO('JournalDAO');
-        $this->context = $contextDao->getById($this->subscription->getData('journalId'));
-
-        /** @var SubscriptionTypeDAO $subscriptionTypeDao */
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-        $this->subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $this->context->getId());
     }
 
     /**
@@ -66,9 +49,7 @@ class SubscriptionEmailVariable extends Variable
         [
             self::SUBSCRIBER_DETAILS => __('emailTemplate.variable.subscription.subscriberDetails'),
             self::SUBSCRIPTION_SIGNATURE => __('emailTemplate.variable.subscription.subscriptionSignature'),
-            self::SUBSCRIPTION_URL => __('emailTemplate.variable.subscription.subscriptionUrl'),
             self::EXPIRY_DATE => __('emailTemplate.variable.subscription.expiryDate'),
-            self::SUBSCRIPTION_TYPE => __('emailTemplate.variable.subscription.subscriptionType'),
             self::MEMBERSHIP => __('emailTemplate.variable.subscription.membership'),
         ];
     }
@@ -78,13 +59,12 @@ class SubscriptionEmailVariable extends Variable
      */
     public function values(string $locale): array
     {
+        $context = $this->getContext();
         return
         [
             self::SUBSCRIBER_DETAILS => $this->subscriber->getSignature($locale) ?? '',
-            self::SUBSCRIPTION_SIGNATURE => $this->getSubscriptionSignature(),
-            self::SUBSCRIPTION_URL => $this->getSubscriptionUrl(),
+            self::SUBSCRIPTION_SIGNATURE => $this->getSubscriptionSignature($context),
             self::EXPIRY_DATE => $this->subscription->getDateEnd(),
-            self::SUBSCRIPTION_TYPE => $this->subscriptionType->getSummaryString(),
             self::MEMBERSHIP => $this->subscription->getMembership(),
         ];
     }
@@ -93,12 +73,12 @@ class SubscriptionEmailVariable extends Variable
      * Subscription signature consisting of contact details of the person responsible for subscriptions included in the
      * context's Subscription Policies form, Subscription Manager section
      */
-    protected function getSubscriptionSignature(): string
+    protected function getSubscriptionSignature(Journal $context): string
     {
-        $subscriptionName = $this->context->getData('subscriptionName');
-        $subscriptionEmail = $this->context->getData('subscriptionEmail');
-        $subscriptionPhone = $this->context->getData('subscriptionPhone');
-        $subscriptionMailingAddress = $this->context->getData('subscriptionMailingAddress');
+        $subscriptionName = $context->getData('subscriptionName');
+        $subscriptionEmail = $context->getData('subscriptionEmail');
+        $subscriptionPhone = $context->getData('subscriptionPhone');
+        $subscriptionMailingAddress = $context->getData('subscriptionMailingAddress');
         $subscriptionContactSignature = $subscriptionName;
 
         if ($subscriptionMailingAddress != '') {
@@ -109,23 +89,5 @@ class SubscriptionEmailVariable extends Variable
         }
 
         return $subscriptionContactSignature . "\n" . __('user.email') . ': ' . $subscriptionEmail;
-    }
-
-    protected function getSubscriptionUrl(): string
-    {
-        $application = Application::get();
-        $request = $application->getRequest();
-        $dispatcher = $application->getDispatcher();
-
-        return $dispatcher->url(
-            $request,
-            Application::ROUTE_PAGE,
-            $this->context->getData('path'),
-            'payments',
-            null,
-            null,
-            null,
-            $this->subscriptionType->getInstitutional() ? 'institutional' : 'individual',
-        );
     }
 }
