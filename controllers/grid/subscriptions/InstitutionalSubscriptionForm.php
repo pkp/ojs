@@ -94,7 +94,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
 
         // Ensure institution ID exists
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'institutionId', 'required', 'manager.subscriptions.form.institutionIdValid', function ($institutionId) use ($journalId, $subscriptionInstitutionId) {
-            return ($institutionId == $subscriptionInstitutionId) || Repo::institution()->existsInContext($institutionId, $journalId);
+            return ($institutionId == $subscriptionInstitutionId) || Repo::institution()->exists($institutionId, $journalId);
         }));
 
         // If provided, domain is valid
