@@ -714,6 +714,7 @@ msgstr "Accès pour le rapporteur"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activer l'accès en un clic pour le rapporteur"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Note :</strong> Le courriel d'invitation destiné aux rapporteurs contient une URL qui les mène directement à la page d'évaluation de la soumission. L'accès à toute autre page requiert de se connecter. Pour des raisons de sécurité, les rédacteurs ne peuvent pas modifier les adresses de courriel, ni ajouter des CC ou CCI avant d'envoyer une invitation aux rapporteurs."
 

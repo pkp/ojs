@@ -787,6 +787,7 @@ msgstr "Akses Review"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Memberi akses One-Click review"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Catatan:</strong>  email undangan ke Reviewer akan berisi URL yang akan membawa Reviewer yang diundang secara langsung ke halaman review untuk naskah (untuk akses ke halaman lain mengharuskan mereka untuk login). Untuk alasan keamanan dengan pilihan ini, editor tidak bisa memodifikasi alamat email atau menambahkan CCs atau BCCs sebelum mengirimkan undangan kepada Reviewer."
 

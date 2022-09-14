@@ -1872,6 +1872,7 @@ msgstr "Оценки на рецензентот"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Вклучете безбедна врска во поканата за е-пошта до рецензентите."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "На прегледувачите може да им се испрати безбедна врска во поканата за е-"

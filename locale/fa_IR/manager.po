@@ -763,6 +763,7 @@ msgstr "دسترسی داور"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "فعال ساختن گزینه تک کلیک دسترسی داور"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>توجه: </strong> دعوت‌نامه ارسالی برای داور  حاوی یک URL است که با کلیک بر روی آن، داور را مستقیماً به صفحه داوری مقاله ارسالی مورد نظر هدایت می‌کند. به دلایل امنیتی در صورت فعال‌سازی این گزینه دبیران نمی‌توانند آدرس‌های ایمیل و رونوشت‌های آن را تغییر دهند."
 

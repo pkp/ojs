@@ -674,6 +674,7 @@ msgstr "Přístup pro recenzenta"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Umožnit přístup recenzentovi na-jedno-kliknutí"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Poznámka:</strong> E-mailové pozvání pro recenzenta bude obsahovat speciální URL, které dovede pozvané recenzenty přímo na Recenzní stránku k danému příspěvku (s přístupem na jakékoliv další stránky normálně vyžadující přihlášení). Z bezpečnostních důvodů nemohou editoři při tomto nastavení pozměnit e-mailové adresy nebo přidat CC nebo BCC předtím, než pošlou recenzentům pozvání."
 

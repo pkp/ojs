@@ -942,6 +942,7 @@ msgstr ""
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "بەستەرێکی پارێزراو  دابنێ لە ناو ئیمێڵی داوەتنامە بۆ هەڵسەنگێنەران."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "هەڵسەنگێنەران دەتوانن بەستەرێکی پارێزراو بنێرن بە ئیمێڵێکی داوەتنامە، کە "

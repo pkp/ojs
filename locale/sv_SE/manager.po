@@ -808,6 +808,7 @@ msgstr "Granskarens tillgång"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Aktivera granskning utan inloggning"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Observera:</strong> Inbjudan via e-post till granskare innehåller en URL som pekar direkt till sidan för granskning av bidraget (med tillgång till andra sidor som kräver inloggning). Av säkerhetsskäl kan inte redaktörer cc:a eller lägga till andras e-postadresser när de skickar inbjudan till granskare."
 

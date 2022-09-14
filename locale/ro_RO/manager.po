@@ -1154,6 +1154,7 @@ msgstr "Evaluările revizorilor"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Includeți un link securizat în invitația de e-mail către recenzori."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Revizorilor li se poate trimite un link securizat în invitația de e-mail, "
