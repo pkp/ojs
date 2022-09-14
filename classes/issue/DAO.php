@@ -69,7 +69,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     ];
 
     /**
-     * @copydoc EntityWithParent::getParentColumn()
+     * Get the parent object ID column name
      */
     public function getParentColumn(): string
     {
