@@ -932,6 +932,7 @@ msgstr "Akses Review"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Memberi akses One-Click review"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Catatan:</strong> email undangan ke Reviewer akan berisi URL yang "

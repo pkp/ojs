@@ -1060,6 +1060,7 @@ msgstr "Dostop za recenzente"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Omogoči recenzentom dostop z enim klikom"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Opozorilo:</strong> E-poštna povabila recenzentom vsebujejo posebne "

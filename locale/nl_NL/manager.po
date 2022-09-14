@@ -835,6 +835,7 @@ msgstr "Toegang voor reviewers"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Schakel één-klik toegang voor reviewers in"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Noot:</strong> De uitnodigings-e-mail voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteurs geen e-mailadressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigingen aan reviewers als deze optie is ingeschakeld."
 

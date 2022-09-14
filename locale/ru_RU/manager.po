@@ -822,6 +822,7 @@ msgstr "Доступ рецензента"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Прямой доступ для рецензента"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "Рецензентам может быть отправлена безопасная ссылка в письме-приглашении, по которой можно получить доступ к рецензированию материала без входа в систему. Для доступа к другим страницам необходимо будет войти в систему."
 

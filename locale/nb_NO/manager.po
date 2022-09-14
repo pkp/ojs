@@ -774,6 +774,7 @@ msgstr "Fagfellenes tilgang"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Slå på ettklikks tilgang for fagfellene"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Merk:</strong> E-post-invitasjonen til fagfeller vil inneholde en "

@@ -1045,6 +1045,7 @@ msgstr ""
 msgid "manager.setup.numPageLinks"
 msgstr "Odkazy na stránky"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<Strong>Poznámka:</strong> E-mailové pozvanie pre recenzenta bude obsahovať "

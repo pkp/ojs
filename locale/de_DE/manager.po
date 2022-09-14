@@ -828,6 +828,7 @@ msgstr "Zugang für Gutachter/innen"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Ein-Klick-Zugang für Gutachter/innen"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen."
 

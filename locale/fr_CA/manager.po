@@ -1069,6 +1069,7 @@ msgstr "Accès pour l'évaluateur-trice"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activer l'accès en un clic pour l'évaluateur-trice."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Un lien sécurisé peut être envoyé aux évaluateurs-trices dans le courriel "

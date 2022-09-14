@@ -933,6 +933,7 @@ msgstr "Área do avaliador"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Habilitar acesso 1-clique"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Aviso:</strong> O convite ao avaliador conterá uma URL especial que "

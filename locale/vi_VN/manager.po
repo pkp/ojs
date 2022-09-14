@@ -1058,6 +1058,7 @@ msgstr "Đánh giá người phản biện"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Bao gồm một liên kết an toàn trong thư mời đến người phản biện."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Người phản biện có thể được gửi một liên kết an toàn trong thư mời, điều này "

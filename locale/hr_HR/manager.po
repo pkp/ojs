@@ -630,6 +630,7 @@ msgstr "Pristup za recenzente"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Omogući recenzentima pristup recenziji preko poveznice."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Napomena:</strong> Pozivnica e-pošte za recenzente sadržavat će poseban URL koji vodi recenzente izravno na stranicu za recenziju prijava (za pristup bilo kojoj drugoj stranici potrebno je prijaviti se u sustav). Iz sigurnosnih razloga pri korištenju ove opcije urednici neće moći modificirati adrese primatelja e-pošte ili poslati kopiju poruke \"na znanje\" drugim primateljima pri slanju pozivnica recenzentima."
 

@@ -1410,6 +1410,7 @@ msgstr "Privilegije pristupa pretplati su automatski dodeljene Upravniku časopi
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr "Da bi aktivirali ove mogućnosti administrator mora uključiti <tt>scheduled_tasks</tt> mogućnost u konfiguracionom fajlu za OJS. Možda će biti potrebna dodatna konfiguracija servera da bi se podržala ova funkcija ( što možda neće biti moguće na svim serverima) kao što je naznačeno u OJS dokumentaciji."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Napomena:</strong> Poruka kojom se poziva recenzent da uradi recenziju će u sebi imati link na kojem se nalazi stranica za recenziju za taj prijavljeni članak (sa pristupom drugim stranam koje zahtevaju prijavu u sistem). Zbog bezbednosnih razloga u opvoj mogućnosti urednici nemogu promeniti adrese niti dodati CC kopiju ni  BCC kopiju pre slanja pozivne poruke recenzentima."
 

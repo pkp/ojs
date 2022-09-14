@@ -536,6 +536,7 @@ msgstr "Einkunnargjöf fyrir ritrýni"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Bæta öruggum tengli við tölvupóst til ritrýna."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Hægt er að senda ritrýnum öruggan tengil í tölvupósti. Það gerir þeim kleift "

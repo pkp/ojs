@@ -681,6 +681,7 @@ msgstr "Accesso per i revisori"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Abilita l'accesso diretto per i revisori"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti."
 

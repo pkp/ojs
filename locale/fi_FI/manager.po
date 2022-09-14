@@ -769,6 +769,7 @@ msgstr ""
 "Ota käyttöön automaattisesti arvioijan sisäänkirjaavat linkit "
 "arviointipyynnöissä"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Huom.</strong> Arvioijille lähetettävässä sähköpostikutsussa on erityinen URL-osoite, jonka kautta arvioijat pääsevät suoraan käsikirjoituksen arviointisivulle (muille sivuille pääsy vaatii sisäänkirjautumista). Tietoturvasyistä tämän valinnan kohdalla toimittajat eivät voi muokata sähköpostiosoitteita tai lisätä kopioita tai piilokopioita ennen viestin lähettämistä."
 

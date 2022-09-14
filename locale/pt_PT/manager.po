@@ -709,6 +709,7 @@ msgstr "Área do Revisor"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activar Acesso 1-Clique"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Aviso:</strong> O convite ao revisor conterá um URL especial que levará os revisores directamente à página de Revisão para a submissão em questão (sendo necessário realizar a autenticação para aceder a outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos revisores."
 

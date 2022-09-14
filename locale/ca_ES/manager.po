@@ -721,6 +721,7 @@ msgstr "Accés per als revisors/ores"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Accés per a revisors/ores en un clic"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Nota:</strong> La invitació per correu electrònic als revisors/ores conté un URL especial que dirigeix directament els revisors/ores convidats a la pàgina de revisió de la tramesa (amb accés a qualsevol altra pàgina que requereixi identificació). Per motius de seguretat, els editors/ores no poden modificar les adreces de correu electrònic ni afegir-ne als camps CC o CCO abans d’enviar les invitacions als revisors/ores."
 

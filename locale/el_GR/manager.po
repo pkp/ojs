@@ -914,6 +914,7 @@ msgstr "Πρόσβαση Αξιολογητή"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Ενεργοποίηση πρόσβασης Αξιολογητή με ένα κλικ."
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Σημείωση:</strong> Το αίτημα προς τους Αξιολογητές θα περιλαμβάνει "
