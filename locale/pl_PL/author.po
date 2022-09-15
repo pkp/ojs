@@ -1,11 +1,12 @@
 # rl <biuro@fimagis.pl>, 2022.
+# Sebastian Wojnowski <sebastian.wojnowski@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:03+00:00\n"
 "PO-Revision-Date: 2022-09-15 13:50+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
+"Last-Translator: Sebastian Wojnowski <sebastian.wojnowski@gmail.com>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/author/pl_PL/"
 ">\n"
 "Language: pl_PL\n"
@@ -20,7 +21,7 @@ msgid "author.submit"
 msgstr "Nowe zgłoszenie"
 
 msgid "author.track"
-msgstr "Przedłożenia  rozpatrywane"
+msgstr "Aktywne zgłoszenia"
 
 msgid "author.competingInterests"
 msgstr ""
@@ -28,7 +29,7 @@ msgstr ""
 "\">Konflikt interesów</a>"
 
 msgid "author.submit.submitArticle"
-msgstr "Prześlij artykuł"
+msgstr "Zgłoś artykuł"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "Przesłanie tekstu w 5 krokach"
