@@ -867,6 +867,7 @@ msgstr "Szakmai lektor hozzáférése"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Az egy kattintásos lektori hozzáférés engedélyezése"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Megjegyzés:</strong> a Szakmai lektorok emailes meghívása tartalmaz egy speciális URL-t, ami közvetlenül elirányítja a szakmai lektorokat a beküldött cikk lektorálási oldalára (bármilyen más oldalon, ha szükséges be kell jelentkezni). Biztonsági okokból ennél az opciónál a Szerkesztők nem módosíthatják az email címzést nem adhatnak hozzá másolati vagy titkos másolati címzettet, csak a szakmai lektoroknak lehet ezt a levelet elküldeni."
 

@@ -831,6 +831,7 @@ msgstr "صلاحية وصول المحكم"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "وصول المحكم بنقرة واحدة"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً مؤمناً يأخذهم مباشرة "

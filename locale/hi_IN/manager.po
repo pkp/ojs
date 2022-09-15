@@ -1145,6 +1145,7 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "ईमेल आमंत्रण में समीक्षकों को एक सुरक्षित लिंक भेजा जा सकता है, जो उन्हें "

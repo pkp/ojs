@@ -814,6 +814,7 @@ msgstr "Hakem Erişimi"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Tek Tıkla Hakem Erişimi"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet "

@@ -682,6 +682,7 @@ msgstr "Dostęp dla recenzentów"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Włącz dostęp do recenzji po jednym kliknięciu"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Uwaga:</strong> E-mail z zaproszeniem do recenzji wysłany do recenzenta (recenzentów) zawiera specjalnie przygotowany link, który przekieruje recenzenta bezpośrednio do strony recenzji."
 

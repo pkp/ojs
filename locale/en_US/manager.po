@@ -829,7 +829,7 @@ msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "One-click Reviewer Access"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in."
+msgstr "Reviewers can be sent a secure link in the email invitation, which will log them in automatically when they click the link."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Include a secure link in the email invitation to reviewers."
