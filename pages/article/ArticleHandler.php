@@ -58,8 +58,8 @@ class ArticleHandler extends Handler
     /** @var \PKP\galley\Galley galley associated with the request */
     public $galley;
 
-    /** @var int fileId associated with the request */
-    public $fileId;
+    /** @var int submissionFileId associated with the request */
+    public $submissionFileId;
 
 
     /**
@@ -189,7 +189,7 @@ class ArticleHandler extends Handler
 
             // Store the file id if it exists
             if (!empty($args)) {
-                $this->fileId = array_shift($args);
+                $this->submissionFileId = array_shift($args);
             }
         }
 
@@ -221,7 +221,8 @@ class ArticleHandler extends Handler
             'publication' => $publication,
             'currentPublication' => $article->getCurrentPublication(),
             'galley' => $this->galley,
-            'fileId' => $this->fileId,
+            'fileId' => $this->submissionFileId, // DEPRECATED in 3.4.0: https://github.com/pkp/pkp-lib/issues/6545
+            'submissionFileId' => $this->submissionFileId,
         ]);
         $this->setupTemplate($request);
 
@@ -396,9 +397,9 @@ class ArticleHandler extends Handler
     {
         $articleId = $args[0] ?? 0;
         $galleyId = $args[1] ?? 0;
-        $fileId = isset($args[2]) ? (int) $args[2] : 0;
+        $submissionFileId = isset($args[2]) ? (int) $args[2] : 0;
         header('HTTP/1.1 301 Moved Permanently');
-        $request->redirect(null, null, 'download', [$articleId, $galleyId, $fileId]);
+        $request->redirect(null, null, 'download', [$articleId, $galleyId, $submissionFileId]);
     }
 
     /**
@@ -456,17 +457,17 @@ class ArticleHandler extends Handler
         if ($this->galley->getRemoteURL()) {
             $request->redirectUrl($this->galley->getRemoteURL());
         } elseif ($this->userCanViewGalley($request, $this->article->getId(), $this->galley->getId())) {
-            if (!$this->fileId) {
-                $this->fileId = $this->galley->getData('submissionFileId');
+            if (!$this->submissionFileId) {
+                $this->submissionFileId = $this->galley->getData('submissionFileId');
             }
 
             // If no file ID could be determined, treat it as a 404.
-            if (!$this->fileId) {
+            if (!$this->submissionFileId) {
                 $request->getDispatcher()->handle404();
             }
 
             // If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
-            if ($this->fileId != $this->galley->getData('submissionFileId')) {
+            if ($this->submissionFileId != $this->galley->getData('submissionFileId')) {
                 $dependentFileIds = Repo::submissionFile()
                     ->getCollector()
                     ->filterByAssoc(
@@ -478,13 +479,13 @@ class ArticleHandler extends Handler
                     ->getIds()
                     ->toArray();
 
-                if (!in_array($this->fileId, $dependentFileIds)) {
+                if (!in_array($this->submissionFileId, $dependentFileIds)) {
                     $request->getDispatcher()->handle404();
                 }
             }
 
-            if (!Hook::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->fileId])) {
-                $submissionFile = Repo::submissionFile()->get($this->fileId);
+            if (!Hook::call('ArticleHandler::download', [$this->article, &$this->galley, &$this->submissionFileId])) {
+                $submissionFile = Repo::submissionFile()->get($this->submissionFileId);
 
                 if (!Services::get('file')->fs->has($submissionFile->getData('path'))) {
                     $request->getDispatcher()->handle404();
@@ -493,7 +494,7 @@ class ArticleHandler extends Handler
                 $filename = Services::get('file')->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
 
                 // if the file is a gallay file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
-                if ($this->galley->getData('submissionFileId') == $this->fileId) {
+                if ($this->galley->getData('submissionFileId') == $this->submissionFileId) {
                     $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
                     $genreDao = DAORegistry::getDAO('GenreDAO');
                     $genre = $genreDao->getById($submissionFile->getData('genreId'));
