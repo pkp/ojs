@@ -1,8 +1,9 @@
 # Piotr Pielach <ppielach@gmail.com>, 2022.
+# rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-05 09:31+0000\n"
-"Last-Translator: Piotr Pielach <ppielach@gmail.com>\n"
+"PO-Revision-Date: 2022-09-15 13:50+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/api/pl_PL/>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Żądana publikacja nie jest częścią tego przedłożenia."
@@ -66,3 +67,11 @@ msgstr "Żądane zgłoszenie nie znajduje się w tym czasopiśmie."
 
 msgid "api.emails.403.disabled"
 msgstr "Powiadomienia e-mail nie zostały włączone dla tego czasopisma."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Dla tego czasopisma nie wybrano żadnej agencji rejestrującej DOI."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Niektóre DOI nie zostały zarejestrowane poprawnie. Proszę sprawdzić "
+"poszczególne elementy i ustalić przyczynę błędów."
