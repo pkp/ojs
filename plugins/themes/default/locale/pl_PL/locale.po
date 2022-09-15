@@ -1,9 +1,10 @@
+# rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2020-06-15 16:01+0000\n"
+"PO-Revision-Date: 2022-09-15 07:50+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/pl_PL/>\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Domyślny motyw"
@@ -67,3 +68,24 @@ msgstr "Obraz tła w nagłówku"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Pokaż opis czasopisma na stronie głównej."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opcje wyświetlania statystyk"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Nie wyświetlaj wyświetleń zgłoszenia czytelnikowi."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Pokaż statystyki w stylu słupków."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Pokaż statystki w formie linii."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Sty Lut Mar Kwi Maj Cze Lip Sie Wrz Paz Lis Gru"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Pobrania"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Statystyki pobrań niedostępne."
