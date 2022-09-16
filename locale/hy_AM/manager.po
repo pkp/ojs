@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-17 00:37+0000\n"
+"PO-Revision-Date: 2022-09-16 05:38+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hy_AM/>\n"
@@ -554,8 +554,7 @@ msgstr "Գրախոսողներին ուղարկված էլ․ փոստի հրա�
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Գրախոսներին կարող է ուղարկվել անվտանգ հղում էլ․ փոստ հրավերի միջոցով, որը "
-"թույլ կտա նրանց առանց մուտք գործելու մուտք ունենալ գրախոսությանը: Այլ էջեր "
-"մուտք գործելու համար անհրաժեշտ է նրանց մուտք գործել:"
+"կապահովի նրանց ինքնաշխատ մուտքը, երբ նրանք սեղմեն հղումը:"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Մեկ սեղմումով գրախոսների հասանելիություն"
