@@ -1,8 +1,35 @@
 # Emma U <emmaupkp@gmail.com>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-09-16 03:38+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/admin/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.settings.redirect"
+msgstr "更改期刊導向"
+
+msgid "admin.languages.confirmDisable"
+msgstr "是否確認解除此區性？如解除，現時使用此區性之期刊將會受到影響。"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "這是網站及任何支援的期刊之默認語言。"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "標示的區性可能尚未完成。"
+
+msgid "admin.hostedContexts"
+msgstr "支援期刊"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "在主要網站提出之請求會傳送至此期刊。此功能適用於例如網站僅支援一本期刊。"
+
+msgid "admin.languages.confirmUninstall"
+msgstr "是否確認解除安裝此區性？如解除，現時使用此區性之期刊將會受到影響。"
