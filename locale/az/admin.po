@@ -1,8 +1,9 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
+# Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-07 15:25+0000\n"
-"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"PO-Revision-Date: 2022-09-16 08:38+0000\n"
+"Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
 "Language: az\n"
@@ -14,3 +15,20 @@ msgstr ""
 
 msgid "admin.hostedContexts"
 msgstr "Nəşr Olunan Jurnallar"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Siz bu lokalı deaktiv etmək istədiyinizə əminsiniz? Bu, hazırda lokaldan "
+"istifadə edən hər bir host olunan jurnalına təsir edə bilər."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Bu dil, sayt və bütün yerləşdirilən jurnallar üçün standart dil olacaq."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Saytda dəstək olmaq üçün bütün lokalları seçin. Seçilmiş lokal dillər saytda "
+"yerləşdirilən bütün jurnalların istifadəsi üçün əlçatan olacaq və həmçinin "
+"saytın hər səhifəsində dil seçimi menyusunda görünəcək (bu, xüsusi "
+"jurnalların səhifələrində ləğv edilə bilər). Əgər bir neçə lokallar "
+"seçiməyibsə, dil dəyişdirmə menyusu görünməyəcək və əlavə dil parametrləri "
+"qeydlər üçün əlçatan olmayacaq."
