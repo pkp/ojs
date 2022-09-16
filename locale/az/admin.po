@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 09:38+0000\n"
+"PO-Revision-Date: 2022-09-16 10:38+0000\n"
 "Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
@@ -47,3 +47,69 @@ msgstr ""
 "Lokallar (yerli dillər) host olunan jurnallar tərəfindən istifadə edilməzdən "
 "əvvəl quraşdırılmalıdır. Yeni dilləri necə əlavə etmək haqqında məlumatı "
 "əldə etmək üçün OJS sənədlərinə baxın."
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+"Təqdim etdiyiniz yol (ad) artıq başqa jurnal tərəfindən istifadə olunur."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Jurnalın əsas dili dəstəklənən yerli dillərindən biri olmalıdır."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Bu jurnalın saytda açıq görünməsini aktiv edin"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Jurnalın təsviri"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Mövcud jurnalın yolu (adı) və ya yaratmaq üçün yol (ad) (məsələn, \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Abunəlikləri idxal edin"
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URL-lərini OJS 2 URL-lərinə uyğunlaşdırmaq üçün kod yaradın"
+
+msgid "admin.journals.journalSettings"
+msgstr "Jurnalın parametrləri"
+
+msgid "admin.journals.noneCreated"
+msgstr "Heç bir jurnal yaradılmayıb."
+
+msgid "admin.systemVersion"
+msgstr "OJS versiyası"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfiqurasiyası"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>-dan OJS konfiqurasiya parametrləri"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Siz avtomatik olaraq bu jurnalın meneceri kimi qeydiyyatdan keçəcəksiniz. "
+"Yeni jurnalı yaratdıqdan sonra ilkin jurnalın quraşdırmasını başa çatdırmaq "
+"üçün onun parametrlər sehrbazına yönləndiriləcəksiniz."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Başlıq tələb olunur."
+
+msgid "admin.contexts.create"
+msgstr "Jurnalı yaradın"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Jurnalı müəyyən edən tək qısa söz və ya abbreviatura olmalıdır. Jurnalın URL-"
+"ı {$sampleUrl} olacaq."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Yol (ad) mütləq göstərilməlidir."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Yolda (adda) yalnız hərflər, rəqəmlər və \"_\" və \"-\" simvolları ola "
+"bilər. Hərf və ya rəqəmlə başlamalı və bitməlidir."
+
+msgid "admin.journals.transcode"
+msgstr "Məqalənin metadatasını ISO8859-1-dən yenidən kodlayın"
