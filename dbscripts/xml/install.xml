@@ -23,7 +23,6 @@
 	<migration class="PKP\migration\install\FailedJobsMigration" />
 	<migration class="PKP\migration\install\FilesMigration" />
 	<migration class="PKP\migration\install\JobsMigration" />
-	<migration class="PKP\migration\install\LibraryFilesMigration" />
 	<migration class="PKP\migration\install\LogMigration" />
 	<migration class="PKP\migration\install\MetadataMigration" />
 	<migration class="PKP\migration\install\NavigationMenusMigration" />
@@ -33,6 +32,7 @@
 	<migration class="PKP\migration\install\RolesAndUserGroupsMigration" />
 	<migration class="PKP\migration\install\ScheduledTasksMigration" />
 	<migration class="PKP\migration\install\SubmissionsMigration" />
+	<migration class="PKP\migration\install\LibraryFilesMigration" />
 	<migration class="PKP\migration\install\ReviewsMigration" />
 	<migration class="PKP\migration\install\TemporaryFilesMigration" />
 	<migration class="PKP\migration\install\TombstoneMigration" />
