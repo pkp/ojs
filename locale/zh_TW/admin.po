@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 03:38+0000\n"
+"PO-Revision-Date: 2022-09-16 04:38+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/zh_TW/>\n"
@@ -33,3 +33,60 @@ msgstr "在主要網站提出之請求會傳送至此期刊。此功能適用於
 
 msgid "admin.languages.confirmUninstall"
 msgstr "是否確認解除安裝此區性？如解除，現時使用此區性之期刊將會受到影響。"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"選取任何額外區性以安裝相關支援至本系統。必須先安裝區性，才可在所支援的期刊使"
+"用。請查閱OJS documentation以了解添加新語言的詳情。"
+
+msgid "admin.systemVersion"
+msgstr "OJS版本"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS配置"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>內的OJS配置設定。"
+
+msgid "admin.journals.createInstructions"
+msgstr "你會自動被註冊成此期刊的主管。在創建新期刊後，你會被帶至相關設定精靈以完成基"
+"本期刊設置。"
+
+msgid "admin.journals.journalSettings"
+msgstr "期刊設定"
+
+msgid "admin.journals.noneCreated"
+msgstr "無期刊被創建。"
+
+msgid "admin.contexts.create"
+msgstr "創建期刊"
+
+msgid "admin.journals.urlWillBe"
+msgstr "這是一個簡短的縮寫，以辨識這本期刊。這本期刊的網址會是{$sampleUrl}。"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "必須提供標題。"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "必須提供路徑。"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "路徑只可包含字母、數字、符號_及-。開首和結尾必須為字母或數字。"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "你提供的路徑已被其他期刊使用。"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "主要區性必須為期刊其中所支援的區性之一。"
+
+msgid "admin.contexts.contextDescription"
+msgstr "期刊描述"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "現存期刊路徑或創建路徑（例如\"ojs\"）。"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "導入訂閱"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "允許此期刊在此網站開放至公眾瀏覽"
