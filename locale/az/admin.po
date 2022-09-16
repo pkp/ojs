@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 08:38+0000\n"
+"PO-Revision-Date: 2022-09-16 09:38+0000\n"
 "Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
@@ -32,3 +32,18 @@ msgstr ""
 "jurnalların səhifələrində ləğv edilə bilər). Əgər bir neçə lokallar "
 "seçiməyibsə, dil dəyişdirmə menyusu görünməyəcək və əlavə dil parametrləri "
 "qeydlər üçün əlçatan olmayacaq."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Отмеченные локали могут быть неполными."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Bu lokalları silmək istədiyinizə əminsiniz? Bu, hazırda bu lokalı istifadə "
+"edən hər hansı host olunan jurnalına təsir edə bilər."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Bu sistemdə dəstəyi quraşdırmaq üçün istənilən əlavə lokalları seçin. "
+"Lokallar (yerli dillər) host olunan jurnallar tərəfindən istifadə edilməzdən "
+"əvvəl quraşdırılmalıdır. Yeni dilləri necə əlavə etmək haqqında məlumatı "
+"əldə etmək üçün OJS sənədlərinə baxın."
