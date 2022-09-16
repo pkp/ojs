@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 04:38+0000\n"
+"PO-Revision-Date: 2022-09-16 05:38+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/zh_TW/>\n"
@@ -90,3 +90,31 @@ msgstr "導入訂閱"
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "允許此期刊在此網站開放至公眾瀏覽"
+
+msgid "admin.journals.transcode"
+msgstr "從ISO8859-1為文章元資料為進行轉碼"
+
+msgid "admin.journals.redirect"
+msgstr "產生代碼把OJS 1的URL變址至OJS 2的URL"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "必須提供導入路徑。"
+
+msgid "admin.journals.importErrors"
+msgstr "完全導入失敗"
+
+msgid "admin.mergeUsers"
+msgstr "合併多個用戶"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "合併用戶"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "請選擇一個用戶，以轉移上一個用戶的作者身份、編輯分配等等。"
+
+msgid "admin.mergeUsers.from.description"
+msgstr "請選擇一個（或多個）用戶，以合併至另一用戶（例如：當同一人擁有多個用戶）。先"
+"選擇的用戶將被刪除，相關的投稿、配置等等將會轉移至第二個用戶。"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "所有登記用戶"
