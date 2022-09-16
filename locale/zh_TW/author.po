@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 08:38+0000\n"
+"PO-Revision-Date: 2022-09-16 09:38+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_TW/>\n"
@@ -313,3 +313,7 @@ msgstr "提供以下附加檔案的元資料，以把附加檔案編入索引。
 
 msgid "author.submit.suppFile.form.titleRequired"
 msgstr "請輸入此附加檔案標題。"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr "用戶需要一個帳戶以投稿至此期刊。編輯會透過帳戶追蹤您的投稿及聯絡您，例如通知"
+"您投稿狀態的變更，或需要您提供額外的資訊。"
