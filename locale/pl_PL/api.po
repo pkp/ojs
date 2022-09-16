@@ -2,8 +2,8 @@
 # rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-15 13:50+0000\n"
-"Last-Translator: Piotr Pielach <ppielach@gmail.com>\n"
+"PO-Revision-Date: 2022-09-16 11:38+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/api/pl_PL/>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgid "api.submissions.400.wrongContext"
 msgstr "Żądane zgłoszenie nie znajduje się w tym czasopiśmie."
 
 msgid "api.emails.403.disabled"
-msgstr "Powiadomienia e-mail nie zostały włączone dla tego czasopisma."
+msgstr "W tym czasopiśmie nie włączono funkcji powiadamiania mailowego."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr "Dla tego czasopisma nie wybrano żadnej agencji rejestrującej DOI."
