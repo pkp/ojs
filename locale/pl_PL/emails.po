@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-09-16 10:38+0000\n"
+"PO-Revision-Date: 2022-09-16 11:38+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/emails/pl_PL/"
 ">\n"
@@ -219,9 +219,8 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Powiadomienie przesyłane do recenzentów, potwierdzające ukończenie procesu recenzowania."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Przypisanie redaktora"
+msgstr "Zostałeś przypisany jako redaktor do zgłoszenia w {$contextName}"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -235,7 +234,6 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku."
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
@@ -350,7 +348,6 @@ msgstr ""
 "Z wyrazami szacunku, \n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Przypomnienie o terminie przygotowania recenzji"
 
@@ -368,7 +365,6 @@ msgstr ""
 "Z wyrazami szacunku, <br />\n"
 "{$signature}<br />"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatyczne przypomnienie o upłynięciu terminu wykonania recenzji"
 
@@ -392,9 +388,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Decyzja redakcji"
+msgstr "Twoje zgłoszenie zostało zaakceptowane w {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -594,9 +589,9 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "Wiadomość od redaktora działu do redaktora technicznego zawierająca podziękowanie za realizację końcowego etapu redakcji technicznej."
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Prośba o wykonanie składu"
+msgstr ""
+"Zgłoszenie {$submissionId} jest gotowe do etapu produkcji w {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -618,9 +613,8 @@ msgstr ""
 "Jeśli nie możesz podjąć się tego zadania lub masz jakiekolwiek pytania, "
 "proszę, skontaktuj się ze mną. Dziękujemy za Twój wkład w pracę czasopisma."
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
-msgstr "Ukończony skład"
+msgstr "Gotowe nośniki artykułu"
 
 #, fuzzy
 msgid "emails.layoutComplete.body"
@@ -882,9 +876,8 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "Wiadomość od korektora do autora, z prośbą o dodatkowe informacje na temat bibliografii."
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Prośba o wykonanie recenzji tekstu"
+msgstr "Prośba o wykonanie recenzji poprawionego tekstu"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -934,7 +927,6 @@ msgstr ""
 "Z wyrazami szacunku,\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Potwierdzenie zgłoszenia tekstu"
 
@@ -1256,9 +1248,8 @@ msgstr ""
 "<br />\n"
 "W razie pytań, proszę się ze mną skontaktować."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Ponowienie prośby o recenzje"
+msgstr "Czy możesz wciąż recenzować dla {$contextName}?"
 
 msgid "emails.userValidateSite.body"
 msgstr ""
@@ -1275,3 +1266,6 @@ msgstr ""
 
 msgid "emails.userValidateSite.subject"
 msgstr "Potwierdź swoje konto"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "Twoje zgłoszenie zostało przesłane do etapu korekty technicznej"
