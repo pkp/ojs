@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 05:38+0000\n"
+"PO-Revision-Date: 2022-09-16 06:38+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/zh_TW/>\n"
@@ -118,3 +118,36 @@ msgstr "請選擇一個（或多個）用戶，以合併至另一用戶（例如
 
 msgid "admin.mergeUsers.allUsers"
 msgstr "所有登記用戶"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"你是否希望合併所選取的 {$oldAccountCount}個用戶至另一用戶\"{$newUsername}\"？"
+"屆時你所選取的 {$oldAccountCount}個用戶將會被刪除。這個動作不可逆轉。"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "沒有登記用戶。"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "訂閱期滿提示"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "開放取用通知"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "審稿提示"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "期數校對樣本ID不是整數。"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "期數ID不是整數。"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "期數ID與assoc ID不相符。"
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr "此期刊的批量發送電郵已被解除。請到<a href=\"{$siteSettingsUrl}\">管理員 > "
+"網站設定</a>啟動此功能。"
+
+msgid "admin.siteManagement.description"
+msgstr "從此網站新增、編輯或移除期刊及管理網站層面設定。"
