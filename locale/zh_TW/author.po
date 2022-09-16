@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 06:38+0000\n"
+"PO-Revision-Date: 2022-09-16 07:38+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_TW/>\n"
@@ -96,3 +96,6 @@ msgstr "編輯：要求校對"
 
 msgid "author.submissions.queuedEditingCopyedit"
 msgstr "編輯：要求審稿"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "上載已審稿稿件"
