@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-16 10:38+0000\n"
+"PO-Revision-Date: 2022-09-16 11:38+0000\n"
 "Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
@@ -113,3 +113,57 @@ msgstr ""
 
 msgid "admin.journals.transcode"
 msgstr "Məqalənin metadatasını ISO8859-1-dən yenidən kodlayın"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "İdxal yolu tələb olunur."
+
+msgid "admin.journals.importErrors"
+msgstr "İdxal uğurla tamamlanmadı"
+
+msgid "admin.mergeUsers"
+msgstr "İstifadəçiləri birləşdirin"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "İstifadəçini birləşdirin"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Bütün qeydiyyatlı istifadəçilər"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Seçilmiş {$oldAccountCount} hesablarını \"{$newUsername}\" istifadəçi adı "
+"ilə hesaba birləşdirmək istədiyinizə əminsiniz? Seçilmiş {$oldAccountCount} "
+"hesabları bundan sonra mövcud olmayacaq. Bu hərəkət geri dönməzdir."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Qeydiyyatdan keçmiş istifadəçilər yoxdur."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Abunəlik müddətinin bitməsi haqqında xatırlatma"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Açıq Girişin Bildirişi"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Nəzərdən keçirmə xatırlatma"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Buraxılışın identifikatoru (ID) tam ədəd deyil."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Buraxılışın qalereyasının identifikatoru (ID) tam ədəd deyil."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Buraxılışın identifikatoru (ID) onun köməkçi ID ilə uyğun gəlmir."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Əvvəlki istifadəçinin müəllifliklərini, redaktə tapşırıqlarını və s. aid "
+"etmək üçün istifadəçi seçin"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Başqa bir istifadəçi hesabına birləşmək üçün istifadəçini (və ya bir "
+"neçəsini) seçin (məsələn, kiminsə iki istifadəçi hesabı olduqda). Əvvəlcə "
+"seçilmiş hesab(lar) silinəcək və hər hansı təqdimatlar, tapşırıqlar və s. "
+"ikinci hesaba aid ediləcək."
