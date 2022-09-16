@@ -1,8 +1,98 @@
 # Weblate Admin <alec@smecher.bc.ca>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-09-16 06:38+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/author/zh_TW/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "author.submit"
+msgstr "新增投稿"
+
+msgid "author.track"
+msgstr "現有投稿"
+
+msgid "author.submit.submitArticle"
+msgstr "提交文章"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "5個提交步驟"
+
+msgid "author.submit.startHereTitle"
+msgstr "開始新增投稿"
+
+msgid "author.submit.startHereLink"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">按此</a>前往5個提交步驟中的第1步。"
+
+msgid "author.submit.step1"
+msgstr "第1步：開始新增投稿"
+
+msgid "author.submit.step2"
+msgstr "第2步：上傳稿件"
+
+msgid "author.submit.step3"
+msgstr "第3步：輸入投稿的元資料"
+
+msgid "author.submit.step4"
+msgstr "第4步：上傳補充檔案"
+
+msgid "author.submit.step4a"
+msgstr "第4a步：新增補充檔案"
+
+msgid "author.submit.step5"
+msgstr "第5步：確認投稿"
+
+msgid "author.submit.start"
+msgstr "開始"
+
+msgid "author.submit.upload"
+msgstr "上傳稿件"
+
+msgid "author.submit.metadata"
+msgstr "輸入元資料"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "補充檔案"
+
+msgid "author.submit.confirmation"
+msgstr "確認"
+
+msgid "author.submit.nextSteps"
+msgstr "下一步"
+
+msgid "submission.submit.cancelSubmission"
+msgstr "你可以日後在作者主頁從現有投稿選取投稿，再完成此投稿。"
+
+msgid "author.submit.notAccepting"
+msgstr "此期刊現時停止徵稿。"
+
+msgid "author.submit.requestWaiver"
+msgstr "申請豁免"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "請考慮豁免此文章的投稿費用"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "請在意見欄說明應豁免費用的原因。"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "如你想申請豁免，你必須在下方輸入原因。"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "第{$round}輪審稿"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "審稿：需要修改"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "編輯：要求校對"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "編輯：要求審稿"
