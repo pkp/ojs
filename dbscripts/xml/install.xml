@@ -24,7 +24,6 @@
 	<migration class="PKP\migration\install\FilesMigration" />
 	<migration class="PKP\migration\install\JobsMigration" />
 	<migration class="PKP\migration\install\LogMigration" />
-	<migration class="PKP\migration\install\MetadataMigration" />
 	<migration class="PKP\migration\install\NavigationMenusMigration" />
 	<migration class="PKP\migration\install\NotesMigration" />
 	<migration class="PKP\migration\install\ReviewFormsMigration" />
@@ -41,6 +40,7 @@
 
 	<migration class="APP\migration\install\OJSMigration" />
 
+	<migration class="PKP\migration\install\MetadataMigration" />
 	<migration class="PKP\migration\install\AnnouncementsMigration" />
 	<migration class="PKP\migration\install\CategoriesMigration" />
 	<migration class="PKP\migration\install\GenresMigration" />
