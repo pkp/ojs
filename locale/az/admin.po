@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-19 09:38+0000\n"
+"PO-Revision-Date: 2022-09-19 10:38+0000\n"
 "Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
-msgstr "Nəşr Olunan Jurnallar"
+msgstr "Nəşr olunan jurnallar"
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
