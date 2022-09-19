@@ -1,8 +1,60 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
+# Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-09-19 12:38+0000\n"
+"Last-Translator: Gadirova <leylakb@yahoo.com>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "author.submit.submitArticle"
+msgstr "Məqalə göndərin"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Göndərmək üçün beş addım"
+
+msgid "author.submit.step1"
+msgstr "Addım 1. Təqdimatın Başlanması"
+
+msgid "author.track"
+msgstr "Aktiv məqalələr"
+
+msgid "author.submit"
+msgstr "Yeni məqalə"
+
+msgid "author.competingInterests"
+msgstr ""
+"Maraqların toqquşması<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+
+msgid "author.submit.step2"
+msgstr "Addım 2. Məqalənin yüklənməsi"
+
+msgid "author.submit.step3"
+msgstr "Addım 3. Məqalənin metadatanı daxil edin"
+
+msgid "author.submit.step4"
+msgstr "Addım 4. Əlavə faylları yükləyin"
+
+msgid "author.submit.step4a"
+msgstr "Addım 4a. Əlavə Fayl əlavə edin"
+
+msgid "author.submit.step5"
+msgstr "Addım 5. Məqalənin təqdim olunmasının təsdiqi"
+
+msgid "author.submit.start"
+msgstr "Başlamaq"
+
+msgid "author.submit.startHereTitle"
+msgstr "Yeni məqalə göndər"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Click here</a> beş addımlı "
+"təqdimetmə prosesinin birinci mərhələsinə keçin."
