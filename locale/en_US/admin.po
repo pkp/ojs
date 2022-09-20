@@ -164,14 +164,14 @@ msgstr "The bulk email feature has been disabled for this journal. Enable this f
 msgid "admin.siteManagement.description"
 msgstr "Add, edit or remove journals from this site and manage site-wide settings."
 
-msgid "admin.statistics.geo.description"
+msgid "admin.settings.statistics.geo.description"
 msgstr ""
 "Select the type of geographical usage statistics that can be collected by journals on this site. More detailed geographical statistics may increase your database size considerably and, in some rare cases, may undermine the anonymity of your visitors. Each journal may configure this setting differently, but a journal can never collect more detailed records than what is configured here. For example, if the site only supports country and region, the journal may select country and region or only country. The journal will not be able to track country, region and city."
 
-msgid "admin.statistics.institutions.description"
+msgid "admin.settings.statistics.institutions.description"
 msgstr ""
 "Enable institutional statistics if you would like journals on this site to be able to collect usage statistics by institution. Journals will need to add the institution and its IP ranges in order to use this feature. Enabling institutional statistics may increase your database size considerably."
 
-msgid "admin.statistics.sushi.public.description"
+msgid "admin.settings.statistics.sushi.public.description"
 msgstr ""
 "Whether or not to make the SUSHI API endpoints publicly accessible for all journals on this site. If you enable the public API, each journal may override this setting to make their statistics private. However, if you disable the public API, journals can not make their own API public."
