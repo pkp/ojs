@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 04:38+0000\n"
+"PO-Revision-Date: 2022-09-20 06:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/default/zh_Hant/>\n"
@@ -63,3 +63,97 @@ msgstr ""
 "請參見說明確保用戶的姓名及電郵不會用作其他用途的<a href=\""
 "{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\""
 ">隱私聲明</a>。"
+
+msgid "section.default.abbrev"
+msgstr "文"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"我們鼓勵圖書館管理員把此期刊列入圖書館的電子期刊館藏。同時作為開源軟體，此期"
+"刊的出版系統亦適合圖書館為學院教職員設置他們編輯的期刊（見<a href=\"https"
+"://pkp.sfu.ca/ojs\">Open Journal Systems</a>）。"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"此期刊應用LOCKSS系統來建立一個分散存檔典藏系統，為參與的圖書館建立期刊的永久"
+"資料庫，作為保存及修復的用途。<a href=\"https://www.lockss.org\">更多……</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"此期刊應用CLOCKSS系統來建立一個分散存檔典藏系統，為參與的圖書館建立期刊的永久"
+"資料庫，作為保存及修復的用途。<a href=\"https://clockss.org\">更多……</a>"
+
+msgid "default.groups.name.manager"
+msgstr "期刊管理員"
+
+msgid "default.groups.name.editor"
+msgstr "期刊編輯"
+
+msgid "default.groups.plural.manager"
+msgstr "期刊管理員們"
+
+msgid "default.groups.plural.editor"
+msgstr "期刊編輯們"
+
+msgid "default.groups.name.guestEditor"
+msgstr "客席編輯"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "客席編輯們"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "分類編輯"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "分類編輯們"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "訂閱管理員"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "訂閱管理員們"
+
+msgid "default.genres.researchInstrument"
+msgstr "研究工具"
+
+msgid "default.genres.researchMaterials"
+msgstr "研究資料"
+
+msgid "default.genres.researchResults"
+msgstr "研究結果"
+
+msgid "default.genres.transcripts"
+msgstr "文字記錄"
+
+msgid "default.genres.dataAnalysis"
+msgstr "數據分析"
+
+msgid "default.genres.dataSet"
+msgstr "數據集"
+
+msgid "default.genres.sourceTexts"
+msgstr "源文本"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "評審員"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "評審員們"
+
+msgid "default.groups.abbrev.manager"
+msgstr "期管"
+
+msgid "default.groups.abbrev.editor"
+msgstr "期編"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "客編"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "分類編"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "訂閱管"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "評審"
