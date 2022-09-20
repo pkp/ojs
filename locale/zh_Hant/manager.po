@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 08:43+0000\n"
+"PO-Revision-Date: 2022-09-20 09:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -298,3 +298,144 @@ msgstr "請確認你已選取一個有效的評審方式。"
 
 msgid "manager.sections.form.titleRequired"
 msgstr "需提供一個此分類的標題。"
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "在期數內的目錄省略分類項目的作者姓名。"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "在卷數內的目錄省略分類項目的作者姓名。"
+
+msgid "manager.sections.identifyType"
+msgstr "辨認在此分類出版的項目為"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "（例如：「同行評審論文」、「非評審書評」、「邀請評論」等等）"
+
+msgid "manager.sections.indexed"
+msgstr "已編入索引"
+
+msgid "manager.sections.noneCreated"
+msgstr "無分類已被創建。"
+
+msgid "manager.sections.open"
+msgstr "接受投稿"
+
+msgid "manager.sections.policy"
+msgstr "分類政策"
+
+msgid "manager.sections.readingTools"
+msgstr "閱覽功具"
+
+msgid "manager.sections.reviewed"
+msgstr "同行評審"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "不會包含在此期刊的索引"
+
+msgid "manager.sections.submissionReview"
+msgstr "不經同行評審"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "配置至此分類的期刊投搞"
+
+msgid "manager.sections.unassigned"
+msgstr "可選用分類編輯"
+
+msgid "manager.sections.wordCount"
+msgstr "字數統計"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "此分類的摘要字數限制（如無限制則為零）"
+
+msgid "manager.setup"
+msgstr "期刊設定"
+
+msgid "manager.setup.masthead"
+msgstr "出版資訊欄"
+
+msgid "manager.setup.editorialTeam"
+msgstr "編輯委員會"
+
+msgid "manager.setup.homepageContent"
+msgstr "期刊主頁內容"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "期刊樣式表（Style sheet）"
+
+msgid "manager.setup.contextName"
+msgstr "期刊名稱"
+
+msgid "manager.setup.pageHeader"
+msgstr "期刊頁面標頭（Header）"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "內容"
+
+msgid "manager.setup.addAboutItem"
+msgstr "增添關於項目"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "增添清單項目"
+
+msgid "manager.setup.addItem"
+msgstr "增添項目"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "增添出現在「關於期刊」的項目"
+
+msgid "manager.setup.addNavItem"
+msgstr "增添項目"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "增添新的數據庫連結"
+
+msgid "manager.setup.addSponsor"
+msgstr "增添支持機構"
+
+msgid "manager.setup.alternateHeader"
+msgstr "替換標頭（Header）"
+
+msgid "manager.setup.announcements"
+msgstr "公告"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "簡介"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "輪入任何你想在公告頁面出現的資訊。"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "（將出現在關於期刊頁面） "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "要求提交作者投稿時，同時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
+
+msgid "manager.setup.history"
+msgstr "期刊歷史"
+
+msgid "manager.setup.historyDescription"
+msgstr "此文字會出現在期刊網站「關於」頁面，可以用作說明名稱更變、編輯委員會及其他有"
+"關期刊出版歷史內容。"
+
+msgid "manager.setup.currentIssue"
+msgstr "當期期刊"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "第5步：設定外觀"
+
+msgid "manager.setup.details"
+msgstr "詳細說明"
+
+msgid "manager.setup.details.description"
+msgstr "期刊名稱國際標準期刊號(ISSN)、贊助者及搜尋引擎。"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "此期刊主頁載有默認的瀏覽連結。您可透過以下一個或多個選項增添主頁內容，內容會"
+"按以下順序出現。"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "此外，除了標題及標識，也可以添加HTML版本的標頭（Header）至以下空白欄位。如不"
+"需要，請留空欄位。"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "要求審稿員提交每個評審時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
