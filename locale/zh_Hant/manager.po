@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 06:38+0000\n"
+"PO-Revision-Date: 2022-09-20 07:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -33,3 +33,68 @@ msgstr "取用"
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr "選取如何設置文章的默認版權日期。此默認設定可以按個別情況取代。如果您希望「直"
 "接出版」，請不要使用每期的出版日期。"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "此期刊會提供開放取用(Open Access)內容。"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "此期刊需要訂閱方可閱覽部分或全部內容。"
+
+msgid "manager.setup.enableDois.description"
+msgstr "允許配置數位物件識別碼（Digital Object Identifiers, "
+"簡稱DOIs）至本期刊之出版物。"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "選手配置數位物件識別碼(DOI)至那些項目。大多數期刊會配置DOI予文章，您也可配置D"
+"OI至所有出版項目。"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"使用默認樣式<br />期數為%j.v%vi%i<br />文章為%j.v%vi%i.%a<br />校對樣本為%j."
+"v%vi%i.%a.g%g。"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "達至審稿階段"
+
+msgid "manager.website.archiving"
+msgstr "封存"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "是否確認重置所有本期刊的電郵樣板？確認後您將失去您原先設置的設定。"
+
+msgid "manager.files.note"
+msgstr "備註：檔案瀏覽器屬進階功能，容許直接瀏覽及控制與期刊相關的檔案及目錄。"
+
+msgid "manager.journalManagement"
+msgstr "管理期刊"
+
+msgid "manager.language.ui"
+msgstr "用戶介面"
+
+msgid "manager.language.submissions"
+msgstr "投稿"
+
+msgid "manager.language.forms"
+msgstr "表格"
+
+msgid "manager.languages.noneAvailable"
+msgstr "抱歉，沒有額外語言供選擇。如您希望在期刊增加額外語言，請聯絡您的網站管理員。"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "此為期刊網站的默認語言。"
+
+msgid "manager.managementPages"
+msgstr "管理設定頁面"
+
+msgid "manager.payment.action"
+msgstr "行動"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "這會取代您以往所設置的任何指定區性的期刊設定"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"您可以開啟OJS以支援不同語言供用戶。同時，OJS系統也可使用不同語言操作，用戶在"
+"每一頁面可切換至另一語言、輸入額外不同語言的資料。<br /><br/>如果您想選取的語"
+"言OJS支援但不在列表內，請聯絡您的網站管理員在網站管理介面為您安裝。有關增添新"
+"語言的支援，請參閱OJS documentation。"
