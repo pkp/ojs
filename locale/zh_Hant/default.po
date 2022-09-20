@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 01:38+0000\n"
+"PO-Revision-Date: 2022-09-20 02:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/default/zh_Hant/>\n"
@@ -20,3 +20,12 @@ msgstr "分類默認政策"
 
 msgid "default.genres.article"
 msgstr "文章正文內容"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr "此投稿並無在被出版過，也非另一期刊考慮過（或已在意見欄提供解釋予編輯）。"
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr "投稿檔案為OpenOffice、Microsoft Word或RTF格式。"
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr "已提供參考文獻網址（如有）。"
