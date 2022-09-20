@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 07:38+0000\n"
+"PO-Revision-Date: 2022-09-20 08:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -98,3 +98,182 @@ msgstr ""
 "每一頁面可切換至另一語言、輸入額外不同語言的資料。<br /><br/>如果您想選取的語"
 "言OJS支援但不在列表內，請聯絡您的網站管理員在網站管理介面為您安裝。有關增添新"
 "語言的支援，請參閱OJS documentation。"
+
+msgid "manager.payment.amount"
+msgstr "數目"
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS並無提供貨幣兌換功能。如果接受訂閱的費用，你必須以符合在此標明的貨幣繳付費"
+"用。"
+
+msgid "manager.payment.description"
+msgstr "描述"
+
+msgid "manager.payment.details"
+msgstr "詳細說明"
+
+msgid "manager.payment.editSubscription"
+msgstr "更改訂閱"
+
+msgid "manager.payment.enable"
+msgstr "允許"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "付款選項"
+
+msgid "manager.payment.form.numeric"
+msgstr "所有價錢必須為正數（允許點數）"
+
+msgid "manager.payment.generalFees"
+msgstr "一般費用"
+
+msgid "manager.payment.generalOptions"
+msgstr "一般選項"
+
+msgid "manager.payment.noPayments"
+msgstr "沒有付款"
+
+msgid "manager.payment.notFound"
+msgstr "找不到"
+
+msgid "manager.payment.options"
+msgstr "選項"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "此會啟動訂閱款項，相關種類、價錢、持續時間及訂閱由期刊（訂閱）管理員設置。"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "是否確認刪除此訂閱？"
+
+msgid "manager.payment.options.fee"
+msgstr "費用"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "費用描述"
+
+msgid "manager.payment.options.feeName"
+msgstr "費用名稱"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "協會會員資格"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "只限制各卷及各期的PDF版本閱覽"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "文章處理費用"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "購買文章"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "購買期數"
+
+msgid "manager.payment.options.text"
+msgstr "付款方式說明"
+
+msgid "manager.payment.paymentId"
+msgstr "付款ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "付款方法"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "你可以在此設定任何以下付款插件。"
+
+msgid "manager.payment.paymentMethods"
+msgstr "費用繳付方法"
+
+msgid "manager.payment.paymentType"
+msgstr "付款方式"
+
+msgid "manager.payment.readerFees"
+msgstr "讀者費用"
+
+msgid "manager.payment.records"
+msgstr "記錄"
+
+msgid "manager.paymentTypes"
+msgstr "付款方式"
+
+msgid "manager.payment.userName"
+msgstr "付款ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "登記在此期刊的用戶"
+
+msgid "manager.people.allJournals"
+msgstr "所有期刊"
+
+msgid "manager.people.allSiteUsers"
+msgstr "從此網站此期刊登記一個用戶"
+
+msgid "manager.people.showNoRole"
+msgstr "顯示無特定角色的用戶"
+
+msgid "manager.people.allUsers"
+msgstr "所有登記用戶"
+
+msgid "manager.people.confirmRemove"
+msgstr "是否從此期刊移除此用戶？此動作會取消此用戶在此期刊中的所有角色。"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "包括期刊"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "選擇一個用戶，供配置舊有帳戶的作者身分、編輯分工等。"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} 登記"
+
+msgid "manager.people.syncUserDescription"
+msgstr "登記同步會為所有已在特定期刊登記特定角色的用戶，在此期刊登記至相同角色。此功"
+"能允許同一批用戶（例如審稿員）在不同期刊同步。"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "不需摘要"
+
+msgid "manager.section.noSectionEditors"
+msgstr "尚未有分類編輯。請先透過管理＞設定＞用戶＞&amp; 角色 "
+"增添最少一位用戶至此角色。"
+
+msgid "manager.sections.assigned"
+msgstr "此分類編輯"
+
+msgid "manager.sections.confirmDelete"
+msgstr "是否確認刪除此分類？"
+
+msgid "manager.sections.create"
+msgstr "創建分類"
+
+msgid "manager.payment.addPayment"
+msgstr "增添付款"
+
+msgid "manager.payment.authorFees"
+msgstr "作者費用"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "在下方輸入費用，增添作者處理費用。"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "協會會員資格會出現在政策內關於期刊頁面。"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "此會啟動期刊收費。注意用戶需要先登入才能付款。"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "已選取選項與其描述及費用（您可在下方進行編輯），相關內容會在政策內關於期刊的"
+"頁面及需要付款的頁面出現。"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "選取一個樣式"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "登記一個已有用戶"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "選取合併一個（或多個）用戶至另一用戶帳戶（例如尤其一人擁有兩個戶口）。首先選"
+"取的帳戶會被刪除，相關的投稿、設定等會被配置至第二個帳戶。"
+
+msgid "manager.sections.alertDelete"
+msgstr "在刪除此分類前，你必須把已提交文章轉移至其他分類。"
