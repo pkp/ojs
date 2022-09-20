@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 02:38+0000\n"
+"PO-Revision-Date: 2022-09-20 03:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/default/zh_Hant/>\n"
@@ -29,3 +29,14 @@ msgstr "投稿檔案為OpenOffice、Microsoft Word或RTF格式。"
 
 msgid "default.contextSettings.checklist.addressesLinked"
 msgstr "已提供參考文獻網址（如有）。"
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr "內文行距為單行間距；使用12點字型大小；採用斜體而非加上底線（網址除外）；以及"
+"所有圖像、數字和圖表放置在文中的適當位置而非文末。"
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr "檔案內文遵從作者指引中之格式及參考文獻要求。"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr "<p>在此期刊網站內提供的姓名及電郵地址只會按期刊所列明的用途使用，並不會提供作"
+"其他用途或予第三方。</p>"
