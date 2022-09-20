@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 08:38+0000\n"
+"PO-Revision-Date: 2022-09-20 08:43+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -277,3 +277,24 @@ msgstr "選取合併一個（或多個）用戶至另一用戶帳戶（例如尤
 
 msgid "manager.sections.alertDelete"
 msgstr "在刪除此分類前，你必須把已提交文章轉移至其他分類。"
+
+msgid "manager.sections.editorRestriction"
+msgstr "只有編輯及分類編輯可提交項目。"
+
+msgid "manager.sections.editors"
+msgstr "分類編輯"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr "需要最少一種有效分類。請查閱流程設定，取消所有至此期刊的投稿。"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "需提供一個此分類的簡稱"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "請確認每一個分類編輯配置已選取最少一個複選框。"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "請確認你已選取一個有效的評審方式。"
+
+msgid "manager.sections.form.titleRequired"
+msgstr "需提供一個此分類的標題。"
