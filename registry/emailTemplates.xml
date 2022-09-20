@@ -26,6 +26,7 @@
 	<email key="EDITOR_ASSIGN" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
 	<email key="REVIEW_CANCEL" subject="emails.reviewCancel.subject" body="emails.reviewCancel.body"/>
 	<email key="REVIEW_REINSTATE" subject="emails.reviewReinstate.subject" body="emails.reviewReinstate.body"/>
+	<email key="REVIEW_RESEND_REQUEST" subject="emails.reviewResendRequest.subject" body="emails.reviewResendRequest.body"/>
 	<email key="REVIEW_REQUEST" subject="emails.reviewRequest.subject" body="emails.reviewRequest.body"/>
 	<email key="REVIEW_REQUEST_SUBSEQUENT" subject="emails.reviewRequestSubsequent.subject" body="emails.reviewRequestSubsequent.body"/>
 	<email key="REVIEW_RESPONSE_OVERDUE_AUTO" subject="emails.reviewResponseOverdueAuto.subject" body="emails.reviewResponseOverdueAuto.body"/>

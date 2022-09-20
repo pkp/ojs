@@ -175,6 +175,8 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I7366_UpdateUserAPIKeySettings"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I8093_UpdateUserGroupRelationTablesFK"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7725_DecisionConstantsUpdate"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I4789_AddReviewerRequestResentColumns"/>
+		<migration class="APP\migration\upgrade\v3_4_0\I7796_UpdateCrossrefSchema"/>
 		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_NEW_ROUND" locales="en_US" />
@@ -185,7 +187,7 @@
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_PRODUCTION" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_COPYEDITING" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_CANCEL_REVIEW_ROUND" locales="en_US" />
-		<migration class="APP\migration\upgrade\v3_4_0\I7796_UpdateCrossrefSchema"/>
+		<code function="installEmailTemplate" key="REVIEW_RESEND_REQUEST" locales="en_US" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 
