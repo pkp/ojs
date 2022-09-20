@@ -1,0 +1,441 @@
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-20 09:38+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/manager/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "使用該期的出版日期"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "使用該文章的出版日期"
+
+msgid "manager.distribution.publication"
+msgstr "出版物"
+
+msgid "manager.distribution.publishingMode"
+msgstr "出版模式"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "不會使OJS在網上出版期刊內容。"
+
+msgid "manager.distribution.access"
+msgstr "取用"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr "選取如何設置文章的默認版權日期。此默認設定可以按個別情況取代。如果您希望「直"
+"接出版」，請不要使用每期的出版日期。"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "此期刊會提供開放取用(Open Access)內容。"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "此期刊需要訂閱方可閱覽部分或全部內容。"
+
+msgid "manager.setup.enableDois.description"
+msgstr "允許配置數位物件識別碼（Digital Object Identifiers, "
+"簡稱DOIs）至本期刊之出版物。"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "選手配置數位物件識別碼(DOI)至那些項目。大多數期刊會配置DOI予文章，您也可配置D"
+"OI至所有出版項目。"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"使用默認樣式<br />期數為%j.v%vi%i<br />文章為%j.v%vi%i.%a<br />校對樣本為%j."
+"v%vi%i.%a.g%g。"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "達至審稿階段"
+
+msgid "manager.website.archiving"
+msgstr "封存"
+
+msgid "manager.emails.confirmResetAll"
+msgstr "是否確認重置所有本期刊的電郵樣板？確認後您將失去您原先設置的設定。"
+
+msgid "manager.files.note"
+msgstr "備註：檔案瀏覽器屬進階功能，容許直接瀏覽及控制與期刊相關的檔案及目錄。"
+
+msgid "manager.journalManagement"
+msgstr "管理期刊"
+
+msgid "manager.language.ui"
+msgstr "用戶介面"
+
+msgid "manager.language.submissions"
+msgstr "投稿"
+
+msgid "manager.language.forms"
+msgstr "表格"
+
+msgid "manager.languages.noneAvailable"
+msgstr "抱歉，沒有額外語言供選擇。如您希望在期刊增加額外語言，請聯絡您的網站管理員。"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "此為期刊網站的默認語言。"
+
+msgid "manager.managementPages"
+msgstr "管理設定頁面"
+
+msgid "manager.payment.action"
+msgstr "行動"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "這會取代您以往所設置的任何指定區性的期刊設定"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"您可以開啟OJS以支援不同語言供用戶。同時，OJS系統也可使用不同語言操作，用戶在"
+"每一頁面可切換至另一語言、輸入額外不同語言的資料。<br /><br/>如果您想選取的語"
+"言OJS支援但不在列表內，請聯絡您的網站管理員在網站管理介面為您安裝。有關增添新"
+"語言的支援，請參閱OJS documentation。"
+
+msgid "manager.payment.amount"
+msgstr "數目"
+
+msgid "manager.payment.currencymessage"
+msgstr "OJS並無提供貨幣兌換功能。如果接受訂閱的費用，你必須以符合在此標明的貨幣繳付費"
+"用。"
+
+msgid "manager.payment.description"
+msgstr "描述"
+
+msgid "manager.payment.details"
+msgstr "詳細說明"
+
+msgid "manager.payment.editSubscription"
+msgstr "更改訂閱"
+
+msgid "manager.payment.enable"
+msgstr "允許"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "付款選項"
+
+msgid "manager.payment.form.numeric"
+msgstr "所有價錢必須為正數（允許點數）"
+
+msgid "manager.payment.generalFees"
+msgstr "一般費用"
+
+msgid "manager.payment.generalOptions"
+msgstr "一般選項"
+
+msgid "manager.payment.noPayments"
+msgstr "沒有付款"
+
+msgid "manager.payment.notFound"
+msgstr "找不到"
+
+msgid "manager.payment.options"
+msgstr "選項"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr "此會啟動訂閱款項，相關種類、價錢、持續時間及訂閱由期刊（訂閱）管理員設置。"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "是否確認刪除此訂閱？"
+
+msgid "manager.payment.options.fee"
+msgstr "費用"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "費用描述"
+
+msgid "manager.payment.options.feeName"
+msgstr "費用名稱"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "協會會員資格"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "只限制各卷及各期的PDF版本閱覽"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "文章處理費用"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "購買文章"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "購買期數"
+
+msgid "manager.payment.options.text"
+msgstr "付款方式說明"
+
+msgid "manager.payment.paymentId"
+msgstr "付款ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "付款方法"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "你可以在此設定任何以下付款插件。"
+
+msgid "manager.payment.paymentMethods"
+msgstr "費用繳付方法"
+
+msgid "manager.payment.paymentType"
+msgstr "付款方式"
+
+msgid "manager.payment.readerFees"
+msgstr "讀者費用"
+
+msgid "manager.payment.records"
+msgstr "記錄"
+
+msgid "manager.paymentTypes"
+msgstr "付款方式"
+
+msgid "manager.payment.userName"
+msgstr "付款ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "登記在此期刊的用戶"
+
+msgid "manager.people.allJournals"
+msgstr "所有期刊"
+
+msgid "manager.people.allSiteUsers"
+msgstr "從此網站此期刊登記一個用戶"
+
+msgid "manager.people.showNoRole"
+msgstr "顯示無特定角色的用戶"
+
+msgid "manager.people.allUsers"
+msgstr "所有登記用戶"
+
+msgid "manager.people.confirmRemove"
+msgstr "是否從此期刊移除此用戶？此動作會取消此用戶在此期刊中的所有角色。"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "包括期刊"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr "選擇一個用戶，供配置舊有帳戶的作者身分、編輯分工等。"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} 登記"
+
+msgid "manager.people.syncUserDescription"
+msgstr "登記同步會為所有已在特定期刊登記特定角色的用戶，在此期刊登記至相同角色。此功"
+"能允許同一批用戶（例如審稿員）在不同期刊同步。"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "不需摘要"
+
+msgid "manager.section.noSectionEditors"
+msgstr "尚未有分類編輯。請先透過管理＞設定＞用戶＞&amp; 角色 "
+"增添最少一位用戶至此角色。"
+
+msgid "manager.sections.assigned"
+msgstr "此分類編輯"
+
+msgid "manager.sections.confirmDelete"
+msgstr "是否確認刪除此分類？"
+
+msgid "manager.sections.create"
+msgstr "創建分類"
+
+msgid "manager.payment.addPayment"
+msgstr "增添付款"
+
+msgid "manager.payment.authorFees"
+msgstr "作者費用"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "在下方輸入費用，增添作者處理費用。"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "協會會員資格會出現在政策內關於期刊頁面。"
+
+msgid "manager.payment.options.enablePayments"
+msgstr "此會啟動期刊收費。注意用戶需要先登入才能付款。"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr "已選取選項與其描述及費用（您可在下方進行編輯），相關內容會在政策內關於期刊的"
+"頁面及需要付款的頁面出現。"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "選取一個樣式"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "登記一個已有用戶"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr "選取合併一個（或多個）用戶至另一用戶帳戶（例如尤其一人擁有兩個戶口）。首先選"
+"取的帳戶會被刪除，相關的投稿、設定等會被配置至第二個帳戶。"
+
+msgid "manager.sections.alertDelete"
+msgstr "在刪除此分類前，你必須把已提交文章轉移至其他分類。"
+
+msgid "manager.sections.editorRestriction"
+msgstr "只有編輯及分類編輯可提交項目。"
+
+msgid "manager.sections.editors"
+msgstr "分類編輯"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr "需要最少一種有效分類。請查閱流程設定，取消所有至此期刊的投稿。"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "需提供一個此分類的簡稱"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr "請確認每一個分類編輯配置已選取最少一個複選框。"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "請確認你已選取一個有效的評審方式。"
+
+msgid "manager.sections.form.titleRequired"
+msgstr "需提供一個此分類的標題。"
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "在期數內的目錄省略分類項目的作者姓名。"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "在卷數內的目錄省略分類項目的作者姓名。"
+
+msgid "manager.sections.identifyType"
+msgstr "辨認在此分類出版的項目為"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "（例如：「同行評審論文」、「非評審書評」、「邀請評論」等等）"
+
+msgid "manager.sections.indexed"
+msgstr "已編入索引"
+
+msgid "manager.sections.noneCreated"
+msgstr "無分類已被創建。"
+
+msgid "manager.sections.open"
+msgstr "接受投稿"
+
+msgid "manager.sections.policy"
+msgstr "分類政策"
+
+msgid "manager.sections.readingTools"
+msgstr "閱覽功具"
+
+msgid "manager.sections.reviewed"
+msgstr "同行評審"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "不會包含在此期刊的索引"
+
+msgid "manager.sections.submissionReview"
+msgstr "不經同行評審"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "配置至此分類的期刊投搞"
+
+msgid "manager.sections.unassigned"
+msgstr "可選用分類編輯"
+
+msgid "manager.sections.wordCount"
+msgstr "字數統計"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "此分類的摘要字數限制（如無限制則為零）"
+
+msgid "manager.setup"
+msgstr "期刊設定"
+
+msgid "manager.setup.masthead"
+msgstr "出版資訊欄"
+
+msgid "manager.setup.editorialTeam"
+msgstr "編輯委員會"
+
+msgid "manager.setup.homepageContent"
+msgstr "期刊主頁內容"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "期刊樣式表（Style sheet）"
+
+msgid "manager.setup.contextName"
+msgstr "期刊名稱"
+
+msgid "manager.setup.pageHeader"
+msgstr "期刊頁面標頭（Header）"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "內容"
+
+msgid "manager.setup.addAboutItem"
+msgstr "增添關於項目"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "增添清單項目"
+
+msgid "manager.setup.addItem"
+msgstr "增添項目"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "增添出現在「關於期刊」的項目"
+
+msgid "manager.setup.addNavItem"
+msgstr "增添項目"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "增添新的數據庫連結"
+
+msgid "manager.setup.addSponsor"
+msgstr "增添支持機構"
+
+msgid "manager.setup.alternateHeader"
+msgstr "替換標頭（Header）"
+
+msgid "manager.setup.announcements"
+msgstr "公告"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "簡介"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "輪入任何你想在公告頁面出現的資訊。"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "（將出現在關於期刊頁面） "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr "要求提交作者投稿時，同時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
+
+msgid "manager.setup.history"
+msgstr "期刊歷史"
+
+msgid "manager.setup.historyDescription"
+msgstr "此文字會出現在期刊網站「關於」頁面，可以用作說明名稱更變、編輯委員會及其他有"
+"關期刊出版歷史內容。"
+
+msgid "manager.setup.currentIssue"
+msgstr "當期期刊"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "第5步：設定外觀"
+
+msgid "manager.setup.details"
+msgstr "詳細說明"
+
+msgid "manager.setup.details.description"
+msgstr "期刊名稱國際標準期刊號(ISSN)、贊助者及搜尋引擎。"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr "此期刊主頁載有默認的瀏覽連結。您可透過以下一個或多個選項增添主頁內容，內容會"
+"按以下順序出現。"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr "此外，除了標題及標識，也可以添加HTML版本的標頭（Header）至以下空白欄位。如不"
+"需要，請留空欄位。"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr "要求審稿員提交每個評審時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"

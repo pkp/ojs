@@ -1,9 +1,10 @@
+# rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2020-12-09 14:52+0000\n"
+"PO-Revision-Date: 2022-09-16 11:38+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/emails/pl_PL/"
 ">\n"
@@ -13,12 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.notification.subject"
 msgstr "Nowe powiadomienie ze strony czasopisma {$contextName}"
 
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Na stronie czasopisma {$contextName}:<br />\n"
@@ -28,7 +28,8 @@ msgstr ""
 "WWW: {$notificationUrl}<br />\n"
 "<br />\n"
 "Z wyrazami szacunku, \n"
-"{$contextSignature}"
+"{$contextSignature}\n"
+"<hr />{$unsubscribeLink}"
 
 msgid "emails.notificationMaillist.subject"
 msgstr "Nowe powiadomienie ze strony czasopisma {$siteTitle}"
@@ -119,14 +120,12 @@ msgstr ""
 "Z wyrazami szacunku, <br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
-msgstr "Potwierdź założenie konta"
+msgstr "Potwierdź swoje konto"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
+"Szanowna Pani/ Szanowny Panie {$recipientName},<br />\n"
 "<br />\n"
 "dla tego adresu e-mail zostało utworzone konto na stronie czasopisma \""
 "{$contextName}\". W celu potwierdzenia założenia konta należy kliknąć w "
@@ -165,17 +164,12 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nowy numer czasopisma"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
-"Szanowni Państwo, <br />\n"
-"<br />\n"
-"ukazał się nowy numer czasopisma {$contextName}. Zachęcamy do zapoznania się "
-"z jego treścią, a także z innymi pozycjami godnymi zainteresowania, które "
-"znajdziecie na naszej stronie.<br />\n"
-"<br />\n"
-"Dziękujemy za zainteresowanie działalnością czasopisma,<br />\n"
-"{$signature}"
+"<p>Szanowni Państwo,</p><p>Ukazał się nowy numer czasopisma {$contextName}. "
+"Zachęcamy do zapoznania się z jego treścią, a także z innymi pozycjami "
+"godnymi zainteresowania, które znajdziecie na naszej stronie. </"
+"p><p>Dziękujemy za zainteresowanie działalnością czasopisma.</p> {$signature}"
 
 msgid "emails.submissionUnsuitable.subject"
 msgstr "Zgłoszony tekst niezgodny z zakresem czasopisma"
@@ -225,9 +219,8 @@ msgstr ""
 msgid "emails.submissionDecisionReviewers.description"
 msgstr "Powiadomienie przesyłane do recenzentów, potwierdzające ukończenie procesu recenzowania."
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Przypisanie redaktora"
+msgstr "Zostałeś przypisany jako redaktor do zgłoszenia w {$contextName}"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -241,7 +234,6 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku."
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
@@ -356,7 +348,6 @@ msgstr ""
 "Z wyrazami szacunku, \n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Przypomnienie o terminie przygotowania recenzji"
 
@@ -374,7 +365,6 @@ msgstr ""
 "Z wyrazami szacunku, <br />\n"
 "{$signature}<br />"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatyczne przypomnienie o upłynięciu terminu wykonania recenzji"
 
@@ -398,9 +388,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Decyzja redakcji"
+msgstr "Twoje zgłoszenie zostało zaakceptowane w {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -600,9 +589,9 @@ msgstr ""
 msgid "emails.copyeditFinalAck.description"
 msgstr "Wiadomość od redaktora działu do redaktora technicznego zawierająca podziękowanie za realizację końcowego etapu redakcji technicznej."
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Prośba o wykonanie składu"
+msgstr ""
+"Zgłoszenie {$submissionId} jest gotowe do etapu produkcji w {$contextAcronym}"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -624,9 +613,8 @@ msgstr ""
 "Jeśli nie możesz podjąć się tego zadania lub masz jakiekolwiek pytania, "
 "proszę, skontaktuj się ze mną. Dziękujemy za Twój wkład w pracę czasopisma."
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
-msgstr "Ukończony skład"
+msgstr "Gotowe nośniki artykułu"
 
 #, fuzzy
 msgid "emails.layoutComplete.body"
@@ -888,9 +876,8 @@ msgstr ""
 msgid "emails.citationEditorAuthorQuery.description"
 msgstr "Wiadomość od korektora do autora, z prośbą o dodatkowe informacje na temat bibliografii."
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Prośba o wykonanie recenzji tekstu"
+msgstr "Prośba o wykonanie recenzji poprawionego tekstu"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -940,7 +927,6 @@ msgstr ""
 "Z wyrazami szacunku,\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Potwierdzenie zgłoszenia tekstu"
 
@@ -1262,6 +1248,24 @@ msgstr ""
 "<br />\n"
 "W razie pytań, proszę się ze mną skontaktować."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Ponowienie prośby o recenzje"
+msgstr "Czy możesz wciąż recenzować dla {$contextName}?"
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"W czasopiśmie {$siteTitle} zostało założone konto, zanim jednak będzie można "
+"z niego korzystać, prosimy o potwierdzenie adresu email. Aby tego dokonać "
+"prosze użyć poniższego linku:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Dziękujęmy,<br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Potwierdź swoje konto"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "Twoje zgłoszenie zostało przesłane do etapu korekty technicznej"

@@ -2,7 +2,7 @@
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-17 17:37+0000\n"
+"PO-Revision-Date: 2022-09-19 07:38+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
@@ -810,8 +810,7 @@ msgstr "Включете защитена връзка в поканата по 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "На рецензентите може да бъде изпратена защитена връзка в поканата по имейл, "
-"която ще им позволи достъп до рецензията, без да влизат в системата. "
-"Достъпът до други страници изисква от тях да влязат в системата."
+"чрез която ще влязат автоматично, когато кликнат върху самата връзка."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Директен (one-click) достъп на рецензент"

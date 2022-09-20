@@ -1,11 +1,12 @@
 # Dariusz Lis <Dariusz@Lis.PL>, 2021.
+# rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2021-06-28 09:03+0000\n"
-"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"PO-Revision-Date: 2022-09-16 11:38+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl_PL/>"
 "\n"
 "Language: pl_PL\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
 msgstr "Obsługiwane czasopisma"
@@ -194,9 +195,9 @@ msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."
 
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
 msgstr ""
-"Funkcjonalność masowego wysyłania wiadomości e-mail do użytkowników tego "
-"czasopisma jest wyłączona. Włącz tę funkcjonalność w <a href=\""
-"{$siteSettingsUrl}\">Administracja > Ustawienia systemu</a>."
+"Funkcja masowej poczty e-mail została wyłączona dla tego czasopisma. Włącz "
+"tę funkcję w <a href=\"{$siteSettingsUrl}\">Administrator > Ustawienia "
+"strony internetowej</a>."
 
 msgid "admin.settings.disableBulkEmailRoles.description"
 msgstr ""
@@ -226,3 +227,16 @@ msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr ""
 "Podstawowa lokalizacja musi być jedną z lokalizacji obsługiwanych przez "
 "czasopismo."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "ID wydania nie jest daną integer."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "ID pliku wydania nie jest daną Integer."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Issue ID nie pasuje do Assoc ID."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Dodaj, edytuj lub usuń tytuły czasopism, zarządzaj ustawieniami instalacji."

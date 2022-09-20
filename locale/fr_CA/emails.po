@@ -1,12 +1,12 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-02-24 12:23+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
-"helene.vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2022-09-15 12:50+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.notification.subject"
 msgstr "Nouvel avis de {$contextName}"
@@ -75,11 +75,9 @@ msgstr ""
 "Merci,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Valider votre compte"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -123,18 +121,13 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Parution du dernier numéro"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
-"Lecteurs-trices,<br />\n"
-"<br />\n"
-"Le plus récent numéro de la revue {$contextName} vient d'être publié à "
-"l'adresse suivante : {$contextUrl}. Nous vous invitons à consulter le "
-"sommaire, puis à visiter notre site Web pour y lire les articles qui vous "
-"intéressent.<br />\n"
-"<br />\n"
-"Nous vous remercions de l'intérêt que vous portez à notre revue,<br />\n"
-"{$signature}"
+"<p>Lecteurs-trices,</p><p>La revue {$contextName} vient de publier le numéro "
+"{$issueIdentification} à l'adresse suivante : {$contextUrl}. Nous vous "
+"invitons à consulter le sommaire, puis à visiter notre site Web pour y lire "
+"les articles qui vous intéressent.</p><p>Nous vous remercions de l'intérêt "
+"que vous portez à notre revue,</p>{$signature}"
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Demande d'archivage pour la revue {$contextName}"
@@ -181,23 +174,18 @@ msgstr "Ce courriel encourage le ou la destinaire à participer à l'initiative 
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Accusé de réception de la soumission"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
-"Bonjour,<br />\n"
-"<br />\n"
-"Le manuscrit intitulé , « {$submissionTitle} » , a été soumis par "
-"{$submitterName} à la revue {$contextName}.<br />\n"
-"<br />\n"
-"Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous "
-"remercions d'avoir pensé à la revue {$contextName} pour la publication de "
-"vos travaux.<br />\n"
-"<br />\n"
-"{$contextSignature}"
+"<p>Bonjour,</p><p>Le manuscrit intitulé , « {$submissionTitle} » , a été "
+"soumis par {$submitterName} à la revue {$contextName}.</p><p>Si vous avez "
+"des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions "
+"d'avoir pensé à la revue {$contextName} pour la publication de vos "
+"travaux.</p><p>Cordialement,</p>{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Assignation d'un-e rédacteur-trice"
+msgstr ""
+"Vous avez été assigné-e en tant que rédacteur-trice pour la soumission "
+"{$contextName}"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
