@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 09:38+0000\n"
+"PO-Revision-Date: 2022-09-21 04:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -439,3 +439,30 @@ msgstr "此外，除了標題及標識，也可以添加HTML版本的標頭（He
 
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "要求審稿員提交每個評審時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "期刊管理員會為所有用戶註冊帳戶。編輯或分類編輯可為評審員註冊帳戶。"
+
+msgid "manager.setup.discipline"
+msgstr "學術領域及分支領域"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "此適用於期刊為跨領域及／或作者會提交涉獵多學科的項目的情況。"
+
+msgid "manager.setup.disciplineExamples"
+msgstr "（例如：歷史、教育、社會學、心理學、文化研究、法律學）"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "提供與此期刊相關學科的例子"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "增添此期的目錄（如有）。"
+
+msgid "manager.setup.editorDecision"
+msgstr "編輯決定"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "彈回電郵地址"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "如有任何發送失敗的電郵，此電郵地址會收到一個相關錯誤的訊息。"
