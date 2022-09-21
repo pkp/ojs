@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-21 06:38+0000\n"
+"PO-Revision-Date: 2022-09-21 07:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -563,3 +563,79 @@ msgstr "必須輸入支援者姓名。"
 msgid "manager.setup.includeCreativeCommons"
 msgstr "提供即時或暫緩開放取用的期刊，出版物需在適合時間包含一個共享創意特許條款 ("
 "Creative Commons license)。"
+
+msgid "manager.setup.initialIssue"
+msgstr "最初期數"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "視乎所選取的格式，辨識在OJS出版的第一期的卷數、期數，及／或年份："
+
+msgid "manager.setup.institution"
+msgstr "院校"
+
+msgid "manager.setup.itemsDescription"
+msgstr "可增添出現在頁面最上方的巡覽列項目至現有組合（主頁、關於、用戶主頁等）。"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "每頁項目數量"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "在另一頁面羅列項目前，限制列表中顯示項目數量（例如：投稿、用戶或編輯配置）。"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "期刊簡稱"
+
+msgid "manager.setup.journalArchiving"
+msgstr "期刊保存"
+
+msgid "manager.setup.contextSummary"
+msgstr "期刊簡介"
+
+msgid "manager.setup.contextAbout"
+msgstr "關於期刊"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "期刊主頁內容"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "主頁載有默認的瀏覽連結。您可透過以下一個或多個選項增添主頁內容，內容會按以下"
+"順序出現。注意透過巡覽列中當期期刊連結，可連接至最新一期期刊。"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "期刊主頁標頭（Header）"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "期刊頁面標頭（Header）"
+
+msgid "manager.setup.contextInitials"
+msgstr "期刊簡稱"
+
+msgid "manager.setup.selectCountry"
+msgstr "選擇期刊所在位置，或期刊／出版社郵寄地址的國家。"
+
+msgid "manager.setup.journalLayout"
+msgstr "期刊版面編排"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"在此選擇一個期刊主題及版面編排元素。你也可上載期刊的式樣表單(stylesheet)以取"
+"代原先系統式樣表單的樣式數據及主題式樣表單（如您已選取了一個主題）。"
+
+msgid "manager.setup.journalLogo"
+msgstr "期刊標識"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "期刊標識"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "期刊頁面註腳"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "您可上載一個圖片版本的標題及標識（.gif, .jpg或."
+"png格式）應用在主頁。此圖片會取代相關的文字版本。"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"包含有關您的期刊任何讀者、作者或審稿員會有興趣的內容。例如您的開放取用(Open A"
+"ccess)政策、期刊重點及範圍、版權資訊、贊助者公開資訊、私隱聲明及如有LOCKSS或C"
+"LOCKSS檔案保存系統。"
