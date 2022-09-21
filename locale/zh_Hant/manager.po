@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-21 05:38+0000\n"
+"PO-Revision-Date: 2022-09-21 06:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -471,3 +471,95 @@ msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
 "為免未能傳送電郵至彈回電郵地址，網站管理員必須允許網站設置檔案內的<code>allow"
 "_envelope_sender</code>選項。OJS documentation表示，此或需設定伺服器。"
+
+msgid "manager.setup.emails"
+msgstr "電郵地址辨識"
+
+msgid "manager.setup.emailSignature"
+msgstr "簽署"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "允許公告"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "在首頁顯示"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "顯示在首頁公告的數目。如無公告需顯示，請留空。"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "訪客可以在期刊網站註冊帳戶。"
+
+msgid "manager.setup.focusAndScope"
+msgstr "重點及範圍"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "向作者、讀者及圖書館管理員描述文章範疇及其他期刊會出版的項目。"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "讓作者可以把其著作編入索引"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "此國際標準期刊號(ISSN)無效。"
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "必須輸入優先聯絡電郵。"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "必須輸入期刊簡稱的起首字母。"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "必須輸入期刊名稱。"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "必須輸入每個投稿所需的評審員數目。"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "必須輸入支援用聯絡電郵。"
+
+msgid "manager.setup.generalInformation"
+msgstr "一般資訊"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "步驟1：查看仔細資料"
+
+msgid "manager.setup.guidelines"
+msgstr "指引"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "步驟3：引導投搞"
+
+msgid "manager.setup.identity"
+msgstr "期刊身分"
+
+msgid "manager.setup.information"
+msgstr "資訊"
+
+msgid "manager.setup.information.description"
+msgstr "供圖書館管理員及潛在作者和讀者參考的簡述。增添此資訊方塊後，相關描述會出現在"
+"網站的側邊欄。"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "致作者"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "致圖書館管理員"
+
+msgid "manager.setup.information.forReaders"
+msgstr "致讀者"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "此等預先準備的電郵末端會增添以下簽署，由系統以期刊名義發出。"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "可以發出公告通知讀者有關期刊的消息及活動。發出後公告會出現在公告頁面。"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "必須輸入優先聯絡人姓名。"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "必須輸入支援者姓名。"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "提供即時或暫緩開放取用的期刊，出版物需在適合時間包含一個共享創意特許條款 ("
+"Creative Commons license)。"
