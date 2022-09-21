@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-21 04:38+0000\n"
+"PO-Revision-Date: 2022-09-21 05:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -466,3 +466,8 @@ msgstr "彈回電郵地址"
 
 msgid "manager.setup.emailBounceAddress.description"
 msgstr "如有任何發送失敗的電郵，此電郵地址會收到一個相關錯誤的訊息。"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"為免未能傳送電郵至彈回電郵地址，網站管理員必須允許網站設置檔案內的<code>allow"
+"_envelope_sender</code>選項。OJS documentation表示，此或需設定伺服器。"
