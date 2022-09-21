@@ -33,7 +33,7 @@
     "@vue/cli-service": "^4.5.15",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.1.0",
-    "cypress": "^4.12.1",
+    "cypress": "^5.6",
     "cypress-failed-log": "^2.7.0",
     "cypress-file-upload": "^3.5.1",
     "cypress-wait-until": "^1.7.1",
