@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-21 07:38+0000\n"
+"PO-Revision-Date: 2022-09-21 09:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -639,3 +639,123 @@ msgstr ""
 "包含有關您的期刊任何讀者、作者或審稿員會有興趣的內容。例如您的開放取用(Open A"
 "ccess)政策、期刊重點及範圍、版權資訊、贊助者公開資訊、私隱聲明及如有LOCKSS或C"
 "LOCKSS檔案保存系統。"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "這是期刊網站的註腳。如想修改或更新註腳，請在下方空格貼上HTML代碼。例如另一巡"
+"覽列、計數器等。此註腳將出現在每個頁面。"
+
+msgid "manager.setup.journalPolicies"
+msgstr "步驟2：期刊政策"
+
+msgid "manager.setup.journalSetup"
+msgstr "期刊設置"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "您已更新期刊設定。"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "式樣表單(stylesheet)格式無效。只接受.css格式。"
+
+msgid "manager.setup.journalTheme"
+msgstr "期刊主題"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "期刊縮圖"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "放置在眾期刊列表的一個小型標識或其他可代表期刊圖像。"
+
+msgid "manager.setup.contextTitle"
+msgstr "期刊標題"
+
+msgid "manager.setup.keyInfo"
+msgstr "重要資訊"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "請提供一個簡短的期刊描述及選用編輯、管理人和其他編輯團隊的成員。"
+
+msgid "manager.setup.labelName"
+msgstr "標籤名稱"
+
+msgid "manager.setup.lists"
+msgstr "列表"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "允許PKP PN插件"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP Preservation Network "
+"(PN)提供免費的保存服務予任何達到幾個基本要求的OJS期刊。"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "查看<button>插件設定</button>以接受使用PKP PN條款。"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP保存網絡（PKP Preservation Network, 簡稱PN）"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network "
+"(PN)提供免費的保存服務予任何達到幾個基本要求的OJS期刊。現正開發應用於OJS "
+"3的PKP PN插件，屆時可在插件一覽選取使用。"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS及CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"允許LOCKSS透過LOCKSS<a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a>頁面於參與的圖書館儲存及安置期刊期刊內容。"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS許可證將出現於關於期刊頁面內檔案保存下方：<a href=\"http://www.lockss."
+"org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS許可證</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS許可證說明"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"允許CLOCKSS透過CLOCKSS<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a>頁面於參與的圖書館儲存及安置期刊期刊內容。"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS許可證將出現於關於期刊頁面內檔案保存下方：<a href=\"https://clockss."
+"org\" target=\"_blank\">CLOCKSS許可證</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS許可證說明"
+
+msgid "manager.setup.look"
+msgstr "外觀"
+
+msgid "manager.setup.look.description"
+msgstr "主頁標頭、內容、期刊標頭、註腳、巡覽列及樣式表。"
+
+msgid "manager.setup.management"
+msgstr "管理"
+
+msgid "manager.setup.management.description"
+msgstr "取用及保安、日程計劃、公告、審稿、版面設計及校對。"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "管理基本編輯步驟"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "管理及出版設定"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "步驟4：管理期刊"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"識辨6-10個將會註冊及貯藏期刊的圖書館。例如：轉至編輯或委員會成員工作的院校，"
+"及／或已參與LOCKSS的院校。見<a href=\"https://www.lockss.org/join-lockss/"
+"partner-communities\" target=\"_blank\">LOCKSS社群</a>。"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"到<a href=\"https://clockss.org\" target=\"_blank\""
+">CLOCKSS網站</a>註冊CLOCKSS服務。"
