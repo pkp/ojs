@@ -168,7 +168,17 @@ class OJSMigration extends \PKP\migration\Migration
             $table->index(['url_path'], 'publications_url_path');
             $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
         });
-
+        // The following foreign key relationships are for tables defined in SubmissionsMigration
+        // but they depend on publications to exist so are created here.
+        Schema::table('submissions', function (Blueprint $table) {
+            $table->foreign('current_publication_id', 'submissions_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
+        });
+        Schema::table('publication_settings', function (Blueprint $table) {
+            $table->foreign('publication_id', 'publication_settings_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
+        });
+        Schema::table('authors', function (Blueprint $table) {
+            $table->foreign('publication_id', 'authors_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
+        });
         // Publication galleys
         Schema::create('publication_galleys', function (Blueprint $table) {
             $table->bigInteger('galley_id')->autoIncrement();
