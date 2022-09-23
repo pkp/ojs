@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 05:38+0000\n"
+"PO-Revision-Date: 2022-09-23 06:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -291,7 +291,7 @@ msgid "manager.sections.form.abbrevRequired"
 msgstr "需提供一個此分類的簡稱"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "請確認每一個分類編輯配置已選取最少一個複選框。"
+msgstr "請確認每一個分類編輯配置已選取最少一個勾選框。"
 
 msgid "manager.sections.form.reviewFormId"
 msgstr "請確認你已選取一個有效的評審方式。"
@@ -911,3 +911,226 @@ msgstr ""
 msgid "manager.setup.sectionsDescription"
 msgstr "如需創建或更改期刊內分類（例如：文章、書評等等），請到分類管理頁面。<br /"
 "><br />作者投稿至期刊項目會分配到……"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "會考慮分配項目至那一個期刊分類。"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "必定顯示校對樣本連結及標明限制取用。"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "網站存取"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "查閱文章內容"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "期刊網站的5個步驟"
+
+msgid "manager.setup.subjectExamples"
+msgstr "（例如：光合作用;黑洞;四色地圖定理;貝葉斯定理）"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "關鍵字詞"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "提供關鍵字詞的例子予作者作為指引"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "投稿指引"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "投稿準備核對清單"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"在投稿前，請作者先檢查已完成投稿準備核對清單上每一項目。清單也會出現在關於期"
+"刊內作者指引的頁面。您可在下方編輯清單內容，作者繼續投稿前，必須已剔選所有項"
+"目。"
+
+msgid "manager.setup.submissions"
+msgstr "投稿"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "此期刊現正停止徵稿。請到步驟設定允許投稿。"
+
+msgid "manager.setup.enableOai"
+msgstr "允許OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"透過<a href=\"https://www.openarchives.org/\">Open Archives "
+"Initiative</a>提供元資料予第三方索引服務。"
+
+msgid "manager.setup.typeExamples"
+msgstr "（例如：歷史學探究、準實驗研究、文學分析、問卷調查／訪問）"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "類別（方法／方式）"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "唯一識別碼"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "可為文章及每期期刊添加一個識別數字或字串，或使用一個註冊系統，例如數位物件識"
+"別符(DOI)系統。"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "期刊所採用的編輯／評審委員會。"
+
+msgid "manager.setup.useThumbnail"
+msgstr "縮圖"
+
+msgid "manager.setup.useImageTitle"
+msgstr "標識圖像"
+
+msgid "manager.setup.userRegistration"
+msgstr "用戶註冊"
+
+msgid "manager.setup.useTextTitle"
+msgstr "標題"
+
+msgid "manager.statistics.statistics"
+msgstr "期刊統計數據"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "接受"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "拒絕"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "再遞交"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "評審所需日數"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "出版所需日數"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "出版項目"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "檢查讀者在關於期刊頁面可查閱項目。"
+
+msgid "manager.statistics.statistics.note"
+msgstr "備註：經同行評審之投稿百份比，總和未必等於100%，因為重新投稿項目可能被接納、"
+"拒絕或仍在評審階段。"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "已出版期刊"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "總投稿數目"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "同行評審"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "註冊讀者"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "配置數目"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "評審員"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "編輯分數"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "評審員數目"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "選取用作計算此期刊同行評審統計的分類。"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "文章下載數量"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "文章摘要頁面閱覽數量"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "文章摘要頁面閱覽及下載數量"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "期刊主頁閱覽數量"
+
+msgid "manager.subscriptionPolicies"
+msgstr "訂閱政策"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "延遲開放取用"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "訂閱到期"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "完全到期"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "讀者會在訂閱到期時，受限於取用所有訂閱內容。"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "部分到期"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "讀者會在訂閱到期時，受限於取用當期期刊內容，但仍可取訂閱到期日前出版的訂閱內"
+"容。"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} 月份"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} 星期"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "在訂閱到期後透過電郵通知讀者"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "在訂閱到期後透過電郵通知讀者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "在訂閱到期前透過電郵通知讀者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "在訂閱到期前透過電郵通知讀者。"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "訂閱到期通知"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "提供此學術領域相關研究類別、方法及方式的例子"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "文章閱覽數目（只供作者查閱）"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS會為每本期刊計算以下統計數字。「評審所需日數」由投稿日（或分配評審版本）計"
+"算至最初編輯決定，「出版所需日數」則量度接受投稿上載檔案至出版日。"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "期刊目錄頁面閱覽數量"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "當訂閱到期時，讀者可能會未能取用所有訂閱內容，或可在到期日前繼續取用訂閱內容"
+"。"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "可在訂閱到期前和後，均發送自動電郵提示給訂閱讀者（期刊管理員可以在OJS的電郵頁"
+"面內編輯）。"
+
+msgid "manager.setup.submissions.description"
+msgstr "作者指引、版權及索引（包括註冊）。"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "為免作者投新文章至期刊，您可在<a href=\"{$url}\""
+">期刊分類</a>設定頁面內，取消接受期刊各分類的投稿。"
