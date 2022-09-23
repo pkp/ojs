@@ -12,6 +12,7 @@
 <emails>
 	<email key="NOTIFICATION" subject="emails.notification.subject" body="emails.notification.body"/>
 	<email key="NOTIFICATION_CENTER_DEFAULT" can_disable="0" subject="emails.notificationCenterDefault.subject" description="emails.notificationCenterDefault.description" body="emails.notificationCenterDefault.body"/>
+	<email key="DISCUSSION_NOTIFICATION" can_edit="0" can_disable="0" subject="discussion.notification.subject" description="discussion.notification.description" body="discussion.notification.body"/>
 	<email key="PASSWORD_RESET_CONFIRM" subject="emails.passwordResetConfirm.subject" body="emails.passwordResetConfirm.body"/>
 	<email key="PASSWORD_RESET" subject="emails.passwordReset.subject" body="emails.passwordReset.body"/>
 	<email key="USER_REGISTER" subject="emails.userRegister.subject" description="emails.userRegister.description" body="emails.userRegister.body"/>
