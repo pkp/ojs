@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 10:38+0000\n"
+"PO-Revision-Date: 2022-09-23 11:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1836,7 +1836,7 @@ msgid "mailable.validateEmailContext.name"
 msgstr "認證電郵（註冊期刊）"
 
 msgid "doi.description"
-msgstr "此插件允許配置數位物件識別碼（DOI）至OJS內各期、文章及其檔案。"
+msgstr "此插件允許配置數位物件識別碼(DOI)至OJS內各期、文章及其檔案。"
 
 msgid "doi.manager.settings.description"
 msgstr "請設定DOI插件至可以在OJS管理及使用DOI："
@@ -1865,3 +1865,12 @@ msgstr "訂閱種類、名稱、期限及價錢的概要"
 
 msgid "mailable.validateEmailContext.description"
 msgstr "當用戶在期刊註冊及設定要求認證電郵地址時，此電郵會自發送至他們的電郵地址。"
+
+msgid "doi.manager.settings.explainDois"
+msgstr "請選擇將會配置數位物件識別碼(DOI)之出版物："
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "文章校對樣本"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "文章校對樣本，例如出版的PDF"
