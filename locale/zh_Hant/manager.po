@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 07:38+0000\n"
+"PO-Revision-Date: 2022-09-23 08:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1224,3 +1224,234 @@ msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription
 msgstr ""
 "訂閱種類及費用結構將與訂閱管理員的姓名和聯絡方法，一同在訂閱頁面顯示。也可在"
 "此添加有關訂閱的其他資訊，如付款方式或給予發展中國家訂閱讀者的支援。"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "是否確定更新此訂閱？"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "是否確定刪除此訂閱？"
+
+msgid "manager.subscriptions.summary"
+msgstr "訂閱概要"
+
+msgid "manager.subscriptions.create"
+msgstr "創建新訂閱"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "創建"
+
+msgid "manager.subscriptions.renew"
+msgstr "更新"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "結束"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "完結日期"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "開始"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "開始日期"
+
+msgid "manager.subscriptions.domain"
+msgstr "網域"
+
+msgid "manager.subscriptions.edit"
+msgstr "更改訂閱"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "更改"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "顯示狀態"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "全部"
+
+msgid "manager.subscriptions.form.status"
+msgstr "狀態"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "必須有訂閱狀態。"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "請選擇一個有效訂閱狀態。"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "必須有訂閱種類。"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "請選擇一個有效訂閱種類。"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "院校"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "請選手一個有效院校。"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "開始日期"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "必須有訂閱開始日期。"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "請選擇一個有效訂閱開始日期。"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "必須有訂閱結束日期。"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "此為不會過期的訂閱種類；請勿指定結束日期。"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "請選擇一個有效訂閱結束日期。"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "備註：所有以下更變會應用在全系統用戶個人資料。"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "用戶"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "聯絡"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "必須一個用戶。"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "請選擇一個有效用戶。"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "發送一個載有其用戶名稱及訂閱詳情的電郵給用戶。"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "會員資格"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "參考編號"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "所選取的訂閱種類需要會員資格資訊。"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "備註"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "網域"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "院校名稱"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "必須有一個院校名稱。"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "郵寄地址"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "選取訂閱種類必須有一個網域或／和一個IP範圍作驗證訂閱之用。"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "請輸入一個有效網域。"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP範圍"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "請輸入一個有效的IP範圍。"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "刪除"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "增添"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "儲存及創建另一個"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "如需發送通知電郵予用戶，請先在期刊設置中註明訂閱聯絡人姓名及電郵地址。"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "此用戶已訂閱此期刊。"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "建立新訂閱前，必須先創建一個訂閱種類。"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "建立新訂閱前，必須先創建一個院校選項。"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP範圍"
+
+msgid "manager.subscriptions.membership"
+msgstr "會員資格"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "參考編號"
+
+msgid "manager.subscriptions.notes"
+msgstr "備註"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "無訂閱"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "選擇用戶"
+
+msgid "manager.subscriptions.select"
+msgstr "選取"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "成功建立訂閱。"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptions.user"
+msgstr "用戶"
+
+msgid "manager.subscriptions.contact"
+msgstr "聯絡人姓名"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "院校名稱"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "結束日期"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "此為不會過期的訂閱種類；請勿指定開始日期。"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "請選擇一個有效國家。"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "如訂閱種類要求訂閱用戶必須為某組織或機構成員，請輸入相關會員資格資訊。"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "如在此輸入了網域，可選填IP範圍。<br />有效的數值為網域名稱 （例如 ：lib.sfu."
+"ca）。"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"如在此輸入了IP範圍，可選填網域。<br />有效的數值包括IP地址（例如：142.58.103."
+"1）、IP範圍（例如：142.58.103.1 - 142.58.103."
+"4）、包含通配符的IP範圍（例如：142.58.*.*）及包含CIDR的IP範圍（例如：142.58."
+"100.0/24）。"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "選擇訂閱聯絡"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "期刊管理員、編輯、分類編輯、版面設計編輯、審稿員及校對員可自動獲得訂閱取用特"
+"權。"
