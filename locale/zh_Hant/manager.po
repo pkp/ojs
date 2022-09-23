@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 09:38+0000\n"
+"PO-Revision-Date: 2022-09-23 10:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1668,3 +1668,200 @@ msgid "grid.genres.description"
 msgstr ""
 "這些組成部分將用作命名檔案之用及將會出現在上載檔案時的下拉選單。設定類型 ## "
 "允許用戶聯繫檔案至整個投稿99Z 或按數字的指定組成部分（例如：02）。"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "若要使用此插件，請往「公眾辨認」插件類別，允許及設置DOI插件和指明一個有效的DO"
+"I字首。"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "此插件尚未完全安裝。"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "在DOI公眾辨認插件中現無出版項目被選擇分配DOI，所以此插件無法寄存或輸出。"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "密碼"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "請注意密碼將以純文字方式儲存，即無加密。"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "任何期數"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "任何狀態"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "無寄存"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "已紀錄註冊"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "已註冊"
+
+msgid "plugins.importexport.common.action"
+msgstr "動作"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "輸出"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "註冊"
+
+msgid "plugins.importexport.common.validation"
+msgstr "輸出及註冊前確認XML。"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "無已選項目。"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "未能轉換已選項目。"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "無效XML："
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "所輸入的檔案 {$param} 未能讀取。"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "註冊失敗！DOI註冊伺服器回報 '{$param}' 錯誤。"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "註冊成功！"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "確認成功！"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "確認失敗。"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "欠缺以 {$path} 為路徑的期刊DOI字首。"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "未能找到指定項目。"
+
+msgid "stats.issueTOCViews"
+msgstr "該期的目錄瀏覽數目"
+
+msgid "stats.issueGalleyViews"
+msgstr "該期的檔案瀏覽數目"
+
+msgid "stats.publicationStats"
+msgstr "文章統計"
+
+msgid "stats.publications.details"
+msgstr "文章詳細內容"
+
+msgid "stats.publications.none"
+msgstr "無文章的統計數據符合此參數要求。"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "摘要閱覽總數（按日期）"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "檔案閱覽總數（按日期）"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} 篇文章的{$count}"
+
+msgid "stats.publications.abstracts"
+msgstr "摘要"
+
+msgid "stats.publications.galleys"
+msgstr "檔案"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "輸出該期／各期結果"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "未能分析期刊檔案"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "期刊名稱"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "期刊主頁網址"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "期刊優先聯絡人姓名"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "期刊起首字母簡稱"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "期刊自動電郵之簽署"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "期刊優先聯絡電郵地址"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "付款種類"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "付款銀碼"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "網站名稱（當寄存多於一本期刊）"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "訂閱者姓名、所屬機構、電話號碼及電郵地址"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "訂閱管理人的聯絡詳情"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "訂閱頁面的連結"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "訂閱完結日期"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "訂閱人會員資格資訊"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "院校名稱"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "院校郵寄地址"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "網域"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "訂閱認證的IP範圍"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "認證電郵（註冊期刊）"
+
+msgid "doi.description"
+msgstr "此插件允許配置數位物件識別碼（DOI）至OJS內各期、文章及其檔案。"
+
+msgid "doi.manager.settings.description"
+msgstr "請設定DOI插件至可以在OJS管理及使用DOI："
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "紀錄已註冊"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "所生產的檔案 {$param} 未能寫入。"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "發送副本至在期刊設定標明的優先聯絡人。"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "發送投稿確認副本至此期刊的優先聯絡人。"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "此期刊查無優先聯絡人。您可在<a href=\"{$url}\""
+">期刊設定</a>輸入一個基本聯絡人。"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "付款銀碼貨幣，例如美金"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "訂閱種類、名稱、期限及價錢的概要"
+
+msgid "mailable.validateEmailContext.description"
+msgstr "當用戶在期刊註冊及設定要求認證電郵地址時，此電郵會自發送至他們的電郵地址。"
