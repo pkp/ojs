@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 06:38+0000\n"
+"PO-Revision-Date: 2022-09-23 07:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1089,7 +1089,7 @@ msgid "manager.subscriptionPolicies.xMonths"
 msgstr "{$x} 月份"
 
 msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} 星期"
+msgstr "{$x} 週"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
 msgstr "在訂閱到期後透過電郵通知讀者"
@@ -1125,8 +1125,8 @@ msgstr "當訂閱到期時，讀者可能會未能取用所有訂閱內容，或
 "。"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "可在訂閱到期前和後，均發送自動電郵提示給訂閱讀者（期刊管理員可以在OJS的電郵頁"
-"面內編輯）。"
+msgstr "可在訂閱到期前和後，均發送自動電郵提示（期刊管理員可以在OJS的電郵頁面內編輯）"
+"給訂閱讀者。"
 
 msgid "manager.setup.submissions.description"
 msgstr "作者指引、版權及索引（包括註冊）。"
@@ -1134,3 +1134,93 @@ msgstr "作者指引、版權及索引（包括註冊）。"
 msgid "manager.setup.disableSubmissions.description"
 msgstr "為免作者投新文章至期刊，您可在<a href=\"{$url}\""
 ">期刊分類</a>設定頁面內，取消接受期刊各分類的投稿。"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "選取以下一項："
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期後的多少個月份。"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期前的多少個月份。"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期後的多少週。"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期前的多少週。"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "註冊讀者可選取，在期刊某期變成開放取用時，透過電郵收到該期的目錄。"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>備註：</strong>網站管理員必須允許OJS設置檔案內<tt>scheduled_tasks</tt"
+">選項，以啟動此選項。根據OJS documentation，您可能需要另外設定伺服器配置以支"
+"持這些功能（可能未能應用在所有伺服器）。"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>備註：</strong>網站管理員必須允許OJS設置檔案內<tt>scheduled_tasks</tt"
+">選項，以啟動此選項。根據OJS documentation，您可能需要另外設定伺服器配置以支"
+"持這些功能（可能未能應用在所有伺服器）。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "網上付款通知"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "可在完成網上付款後，發送自動電郵提示（期刊管理員可以在OJS的電郵頁面內編輯）給"
+"訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "在每一用戶網上付費訂閱後透過電郵通知訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "在每一院校網上付費訂閱後透過電郵通知訂閱管理員（建議）。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>備註：</strong>院校網上訂閱付款需提供已供核準的網域和IP範圍以及訂閱管"
+"理員所啟用的訂閱。"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "訂閱期刊的開放取用選項"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "訂閱期刊可提供「延遲開放取用」出版內容，及允許「作者自行典藏」（更者均可吸引"
+"更多讀者閱讀及引用內容）。"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "訂閱資訊"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "訂閱管理員"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "這些聯絡資訊將於訂閱頁面列出供顧客參考，如他們有相關疑問。"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "請輸入一個有效的電郵地址。"
+
+msgid "manager.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.individualSubscriptions"
+msgstr "獨立訂閱"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "院校訂閱"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "在每一用戶網上付費更新訂閱後透過電郵通知訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "在每一院校網上付費更新訂閱後透過電郵通知訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>備註：</strong>期刊管理員必須在讀者收費允許網上付款模組，包括訂閱的網"
+"上付款，以啟用這些選項。"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"訂閱種類及費用結構將與訂閱管理員的姓名和聯絡方法，一同在訂閱頁面顯示。也可在"
+"此添加有關訂閱的其他資訊，如付款方式或給予發展中國家訂閱讀者的支援。"
