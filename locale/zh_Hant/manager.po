@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-21 09:38+0000\n"
+"PO-Revision-Date: 2022-09-23 03:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -759,3 +759,9 @@ msgid "manager.setup.clockssRegister"
 msgstr ""
 "到<a href=\"https://clockss.org\" target=\"_blank\""
 ">CLOCKSS網站</a>註冊CLOCKSS服務。"
+
+msgid "manager.setup.navigationBar"
+msgstr "巡覽列"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "增添或刪除巡覽列項目。"
