@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 08:38+0000\n"
+"PO-Revision-Date: 2022-09-23 09:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1455,3 +1455,216 @@ msgstr "選擇訂閱聯絡"
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr "期刊管理員、編輯、分類編輯、版面設計編輯、審稿員及校對員可自動獲得訂閱取用特"
 "權。"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "警告！所有此訂閱種類的訂閱會自動被刪除。是否確認繼續及刪除此訂閱種類？"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "價錢"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "獨立／個人"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "院校"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "創建新訂閱種類"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "創建"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "編輯訂閱種類"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "編輯"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "價錢"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "輸入一個數值（例如：40或40.00），不需任何符號（例如：$）。"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "價錢必須為正數的數值。"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "貨幣"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "必須提供貨幣單位。"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "必須提供價錢。"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "請選擇一個有效貨幣。"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "說明"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "在此日期後過期"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "月份（例如12）"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "永不過期"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "請使用所提供的選項。"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "持續時間"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "持續時間"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "所訂閱的月份數目（例如12）。"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "持續時間必須為正數數值。"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "必須提供持續時間。"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "格式"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "必須提供訂閱種類格式。"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "請選擇一個有效訂閱種類格式。"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "獨立／個人（用戶可透過登入認證）"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "院校（用戶可透過網域或IP地址認證）"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "請使用所提供的選項。"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "訂閱必須提供會員資訊（例如：組織、機構、聯會等等）"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "選項"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "儲存及創建另一個"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "種類名稱"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "此訂閱名稱已存在。"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "必須提供訂閱名稱。"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "無創建任何訂閱種類。"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "訂閱種類創建成功。"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "現有及過往用戶所選擇訂閱說明頁面連結。"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "此連結只會在訪客登入後才顯示。"
+
+msgid "manager.setup.categories"
+msgstr "範疇"
+
+msgid "manager.setup.categories.description"
+msgstr "從以上列表選取最適合範疇。讀者可按範疇瀏覽完整期刊內容。"
+
+msgid "grid.category.path"
+msgstr "路徑"
+
+msgid "grid.action.addSection"
+msgstr "添加分類"
+
+msgid "manager.publication.library"
+msgstr "出版圖書館"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "以以下年份新文章版權年份為基礎"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "文章：默認年份會按文章出版日期而定，如同「立即出版」。"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "期數：默認年份會按該期出版日期而定。"
+
+msgid "manager.setup.resetPermissions"
+msgstr "重設文章權限"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "是否確認重置所有文章的權限設定？此舉不能夠還原。"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "成功重置文章權限。"
+
+msgid "grid.genres.title.short"
+msgstr "組成部分"
+
+msgid "grid.genres.title"
+msgstr "文章組成部分"
+
+msgid "plugins.importexport.common.settings"
+msgstr "設定"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI插件設定"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "文章"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "期"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "校對樣本"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "尚未達至插件要求"
+
+msgid "manager.subscriptionTypes"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "請勿設定此訂閱種類可在網站供公眾閱覽。"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "所提供的訂閱種類說明頁面連結。"
+
+msgid "manager.setup.section.description"
+msgstr "在已出版期刊中的文章會按主題或內容種類（例如：評論文章、研究等等）歸類至相應"
+"分類。"
+
+msgid "grid.genres.description"
+msgstr ""
+"這些組成部分將用作命名檔案之用及將會出現在上載檔案時的下拉選單。設定類型 ## "
+"允許用戶聯繫檔案至整個投稿99Z 或按數字的指定組成部分（例如：02）。"
