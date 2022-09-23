@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 04:38+0000\n"
+"PO-Revision-Date: 2022-09-23 05:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -815,3 +815,99 @@ msgstr ""
 
 msgid "manager.setup.publicationSchedule"
 msgstr "出版日程"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"若是某期的一部份及收錄在其目錄中，期刊項目可集合出版。或者，各獨立項目也可以"
+"準備好後加添至當期期刊的目錄中，立即出版。建議在「關於期刊」內列明此期刊使用"
+"的系統及出版頻率，讓讀者知悉。"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "出版日程"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "期刊內容識別"
+
+msgid "manager.setup.publisher"
+msgstr "出版社"
+
+msgid "manager.setup.referenceLinking"
+msgstr "參考連結"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "用戶必須先註冊及登入以瀏覽期刊網站。"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "評審指引"
+
+msgid "manager.setup.reviewOptions"
+msgstr "評審選項"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "自動電郵提示"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "評審期限（以週計）"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "限制檔案取用"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "評審員必須先同意負責評審，才可閱覽及取用投稿稿件。"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "評審員取用"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "一鍵式評審員取用"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "評審員會收到一封載有安全連結的邀請電郵，按連結後可自動登入。"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "在發送予評審員的電邸包括一條安全連結。"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "編輯會在每次評審後，分五等評價評審員的評審質素。"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "評審員評分"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "評審員提示"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "評審政策"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "搜尋索引"
+
+msgid "manager.setup.searchDescription.description"
+msgstr "提供一個有關期刊的簡介（50-300字），當搜尋引擎在搜尋結果列出期刊時會顯示此簡"
+"介。"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "分類及分類編輯"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "（如沒有增添分類，所有項目會默認遞交至文章分類。）"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "期刊編輯會在編輯過程中看到。"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "用戶必須先註冊及登入以閱覽開放取用內容。"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"網站管理員必須允許OJS設置檔案內<tt>scheduled_tasks</tt>選項，以傳送自動電郵提"
+"示。根據OJS documentation，您可能需要另外設定伺服器配置。"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"我們鼓勵提交<a href=\"{$sitemapUrl}\" target=\"_blank\""
+">網站地圖(sitemap)</a>，此有助如Google的搜尋引擎發現和顯示您的網站。"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "如需創建或更改期刊內分類（例如：文章、書評等等），請到分類管理頁面。<br /"
+"><br />作者投稿至期刊項目會分配到……"
