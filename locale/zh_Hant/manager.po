@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 03:38+0000\n"
+"PO-Revision-Date: 2022-09-23 04:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -765,3 +765,53 @@ msgstr "巡覽列"
 
 msgid "manager.setup.navigationBarDescription"
 msgstr "增添或刪除巡覽列項目。"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "網址必須為完整URL（例如：http://www.example."
+"com）而非網站的其中一部分路徑（例如：/manager/setup）"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "無成功上載圖像。"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "無成功上載樣式表。"
+
+msgid "manager.setup.note"
+msgstr "備註"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>備註：</strong>現已取消投稿確認電郵。如需此功能，請允許在電郵項目中的"
+"「投稿確認」電郵。"
+
+msgid "manager.setup.numPageLinks"
+msgstr "頁面連結"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "限制另一頁面列表中顯示連結數量。"
+
+msgid "manager.setup.onlineIssn"
+msgstr "網上國際標準期刊號(ISSN)"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "頁碼選項"
+
+msgid "manager.setup.policies"
+msgstr "政策"
+
+msgid "manager.setup.policies.description"
+msgstr "重點、同行評審、私隱、保安及額外關於項目。"
+
+msgid "manager.setup.printIssn"
+msgstr "印刷國際標準期刊號(ISSN)"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "校對指引"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"所有校對員、作者、版面設計員及分類編輯將能在投稿編輯階段閱覽校對指引。以下為H"
+"TML模式之默認指引，期刊管理員可以在任何階段編輯或取代指引（以HTML格式或純文字"
+"）。"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "出版日程"
