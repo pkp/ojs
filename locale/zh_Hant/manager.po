@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-23 11:38+0000\n"
+"PO-Revision-Date: 2022-09-24 03:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1874,3 +1874,21 @@ msgstr "文章校對樣本"
 
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "文章校對樣本，例如出版的PDF"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI字首"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "必須提供DOI字首，字首需使用10.xxxx格式。"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "各期用"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "各文章用"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "各校對樣本用"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "例如：vol%viss%ipp%p 可使用如10.1234/vol3iss2pp230的DOI"
