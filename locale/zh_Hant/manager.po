@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 06:38+0000\n"
+"PO-Revision-Date: 2022-09-24 07:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1998,3 +1998,33 @@ msgstr ""
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr "透過以下選項清除現編配至此期所有項目（文章及校對樣本）的DOI。"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} 將在出版時配置。"
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI必須為{$doiPrefix}起首。"
+
+msgid "doi.editor.preview.publication"
+msgstr "此出版項目的DOI將會是{$doi}。"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "尚未配置DOI至此出項項目。"
+
+msgid "doi.editor.preview.galleys"
+msgstr "校對樣本：{$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "項目"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "出版項目／校對樣本出版後，只可編輯DOI"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "您所遞交的DOI無效"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "出版項目出版後，只可編輯DOI"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "您要求的校對樣本並非此出版項目的一部份。"
