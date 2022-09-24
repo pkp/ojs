@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 04:38+0000\n"
+"PO-Revision-Date: 2022-09-24 06:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1914,3 +1914,87 @@ msgstr "配置DOI"
 msgid "doi.manager.settings.doiReassign.description"
 msgstr "如您改變了你的DOI設定，已配置的DOI將不會受到影響。當儲存了DOI設定，可按此按鈕"
 "以清除所有現存DOI，然後新的設定將影響現有項目。"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "是否確認配置DOI給所有已出版但尚未配置DOI項目？"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"配置DOI給期刊所有已出版但尚未配置DOI項目。此舉不可應用獨立字尾設定。如你已在"
+"上方更改DOI設定，請先儲存更變，才進行配置。配置DOI或需花費一定時間，視乎期刊"
+"出版項目數量。"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "註冊代理機構"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "請選擇你存放DOI的註冊代辦機構。"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "沒有"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI必須為{$prefix}起首。"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "配置"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "期"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "文章"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "校對樣本"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "未能配置DOI，因為未有設定字尾。"
+
+msgid "doi.editor.missingIssue"
+msgstr "您必須分配此出版項目至其中一期才可產生DOI。"
+
+msgid "doi.editor.missingParts"
+msgstr "由於欠缺部分DOI樣式資訊，您未能產生DOI。您或需配置出版項目至一期、設定一個出"
+"版社ID或輸入頁碼。"
+
+msgid "doi.editor.patternNotResolved"
+msgstr "未能配置DOI，因為有未能識別的樣式。"
+
+msgid "doi.editor.canBeAssigned"
+msgstr "您所見的為DOI預覽。從勾選框選取及儲存配置DOI的方式。"
+
+msgid "doi.editor.assigned"
+msgstr "已配置DOI至 {$pubObjectType} 。"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "DOI字尾已應用在另一出版項目。請為每一項目輸入一個獨特的DOI字尾。"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "清除"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "是否確認刪除已存在DOI？"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "清除該期項目DOI"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "是否確認刪除該期項目已有DOI？"
+
+msgid "doi.editor.assignDoi"
+msgstr "配置DOI {$pubId} 至此 {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "未能配置DOI，因為未有設定字尾。"
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "未能配置DOI {$pubId} ，因為有未能識別的樣式。"
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"已配置DOI {$pubId} 。如需編輯DOI，請到<a href=\"{$doiManagementLink}\""
+">DOI管理頁面</a>。"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "透過以下選項清除現編配至此期所有項目（文章及校對樣本）的DOI。"
