@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 07:38+0000\n"
+"PO-Revision-Date: 2022-09-24 08:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -434,7 +434,7 @@ msgstr "此期刊主頁載有默認的瀏覽連結。您可透過以下一個或
 "按以下順序出現。"
 
 msgid "manager.setup.alternateHeaderDescription"
-msgstr "此外，除了標題及標識，也可以添加HTML版本的標頭（Header）至以下空白欄位。如不"
+msgstr "此外，除了標題及標誌，也可以添加HTML版本的標頭（Header）至以下空白欄位。如不"
 "需要，請留空欄位。"
 
 msgid "manager.setup.competingInterests.requireReviewers"
@@ -622,16 +622,16 @@ msgstr ""
 "代原先系統式樣表單的樣式數據及主題式樣表單（如您已選取了一個主題）。"
 
 msgid "manager.setup.journalLogo"
-msgstr "期刊標識"
+msgstr "期刊標誌"
 
 msgid "manager.setup.journalLogo.altText"
-msgstr "期刊標識"
+msgstr "期刊標誌"
 
 msgid "manager.setup.journalPageFooter"
 msgstr "期刊頁面註腳"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "您可上載一個圖片版本的標題及標識（.gif, .jpg或."
+msgstr "您可上載一個圖片版本的標題及標誌（.gif, .jpg或."
 "png格式）應用在主頁。此圖片會取代相關的文字版本。"
 
 msgid "manager.setup.contextAbout.description"
@@ -663,7 +663,7 @@ msgid "manager.setup.journalThumbnail"
 msgstr "期刊縮圖"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "放置在眾期刊列表的一個小型標識或其他可代表期刊圖像。"
+msgstr "放置在眾期刊列表的一個小型標誌或其他可代表期刊圖像。"
 
 msgid "manager.setup.contextTitle"
 msgstr "期刊標題"
@@ -1173,7 +1173,7 @@ msgstr "可在完成網上付款後，發送自動電郵提示（期刊管理員
 "訂閱管理員。"
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "在每一用戶網上付費訂閱後透過電郵通知訂閱管理員。"
+msgstr "在每一網上付費個體訂閱後透過電郵通知訂閱管理員。"
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
 msgstr "在每一院校網上付費訂閱後透過電郵通知訂閱管理員（建議）。"
@@ -1205,13 +1205,13 @@ msgid "manager.subscriptions"
 msgstr "訂閱"
 
 msgid "manager.individualSubscriptions"
-msgstr "獨立訂閱"
+msgstr "個體訂閱"
 
 msgid "manager.institutionalSubscriptions"
 msgstr "院校訂閱"
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "在每一用戶網上付費更新訂閱後透過電郵通知訂閱管理員。"
+msgstr "在每一網上付費更新個體訂閱後透過電郵通知訂閱管理員。"
 
 msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
 msgstr "在每一院校網上付費更新訂閱後透過電郵通知訂閱管理員。"
@@ -1466,7 +1466,7 @@ msgid "manager.subscriptionTypes.subscriptions"
 msgstr "訂閱"
 
 msgid "manager.subscriptionTypes.individual"
-msgstr "獨立／個人"
+msgstr "個體"
 
 msgid "manager.subscriptionTypes.institutional"
 msgstr "院校"
@@ -1547,7 +1547,7 @@ msgid "manager.subscriptionTypes.form.subscriptions"
 msgstr "訂閱"
 
 msgid "manager.subscriptionTypes.form.individual"
-msgstr "獨立／個人（用戶可透過登入認證）"
+msgstr "個體（用戶可透過登入認證）"
 
 msgid "manager.subscriptionTypes.form.institutional"
 msgstr "院校（用戶可透過網域或IP地址認證）"
@@ -2028,3 +2028,70 @@ msgstr "出版項目出版後，只可編輯DOI"
 
 msgid "api.galley.403.publicationDidNotMatch"
 msgstr "您要求的校對樣本並非此出版項目的一部份。"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "未能找到您所要求的期數"
+
+msgid "doi.manager.submissionDois"
+msgstr "文章DOI"
+
+msgid "doi.manager.issueDois"
+msgstr "發行DOI"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr "此電郵通知作者其投稿在評審階段前被拒，因為該投稿未能符合此期刊的出版要求。"
+
+msgid "manager.institutions.noContext"
+msgstr "未能找到此院校的期刊。"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "投稿通知"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "此電郵通知一註冊用戶管理員已為他創建訂閱。電郵內有期刊網址及取用指引。"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "訂閱將會到期"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "訂閱已到期"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "購買院校訂閱"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "此電郵通知訂閱管理員其中一個院校訂閱已經網上付款。電郵內有訂閱概要及已付款訂"
+"閱的快捷連結。"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "購買個體訂閱"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "此電郵通知訂閱管理員其中一個個體訂閱已經網上付款。電郵內有訂閱概要及已付款訂"
+"閱的快捷連結。"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "更新個體訂閱"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "此電郵通知訂閱管理員其中一個個體訂閱已經網上更新。電郵內有訂閱概要及已更新訂"
+"閱的快捷連結。"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "更新院校訂閱"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "此電郵通知訂閱管理員其中一個院校訂閱已經網上更新。電郵內有訂閱概要及已更新訂"
+"閱的快捷連結。"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "開放取用通知"
+
+msgid "mailable.openAccessNotify.description"
+msgstr "如用戶曾要求收取此期變成開放取用的通知，此電郵將發送給相關用戶。"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "期刊期數出版通知"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr "如有新一期出版，此電郵將發送至註冊用戶。"
