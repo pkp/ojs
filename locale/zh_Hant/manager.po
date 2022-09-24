@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 08:38+0000\n"
+"PO-Revision-Date: 2022-09-24 09:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1677,7 +1677,7 @@ msgid "plugins.importexport.common.error.pluginNotConfigured"
 msgstr "此插件尚未完全安裝。"
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "在DOI公眾辨認插件中現無出版項目被選擇分配DOI，所以此插件無法寄存或輸出。"
+msgstr "在DOI公眾辨認插件中現無出版項目被選擇分配DOI，所以此插件無法寄存或導出。"
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "密碼"
@@ -1704,13 +1704,13 @@ msgid "plugins.importexport.common.action"
 msgstr "動作"
 
 msgid "plugins.importexport.common.action.export"
-msgstr "輸出"
+msgstr "導出"
 
 msgid "plugins.importexport.common.action.register"
 msgstr "註冊"
 
 msgid "plugins.importexport.common.validation"
-msgstr "輸出及註冊前確認XML。"
+msgstr "導出及註冊前確認XML。"
 
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "無已選項目。"
@@ -1773,7 +1773,7 @@ msgid "stats.publications.galleys"
 msgstr "檔案"
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr "輸出該期／各期結果"
+msgstr "導出該期／各期結果"
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "未能分析期刊檔案"
