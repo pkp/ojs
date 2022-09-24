@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 03:38+0000\n"
+"PO-Revision-Date: 2022-09-24 04:38+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -1892,3 +1892,25 @@ msgstr "各校對樣本用"
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "例如：vol%viss%ipp%p 可使用如10.1234/vol3iss2pp230的DOI"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "請輸入每期DOI字尾的樣式。"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "請輸入每篇文章DOI字尾的樣式。"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "請輸入每份校對樣本DOI字尾的樣式。"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "重置DOI"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "是否確認刪除所有現有DOI?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "配置DOI"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "如您改變了你的DOI設定，已配置的DOI將不會受到影響。當儲存了DOI設定，可按此按鈕"
+"以清除所有現存DOI，然後新的設定將影響現有項目。"
