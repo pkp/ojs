@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 09:38+0000\n"
+"PO-Revision-Date: 2022-09-24 10:38+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/reports-counter/zh_Hant/>\n"
@@ -32,3 +32,15 @@ msgstr "計數器報告JR1 (R3)"
 
 msgid "plugins.reports.counter"
 msgstr "計數器報告"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "JR1 (R3)期刊報告1 (R3)：按月份及期刊全文文章請求"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "全部顧客"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "文章報告1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "期刊報告1"
