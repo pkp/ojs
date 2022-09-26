@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-26 09:01+0000\n"
+"PO-Revision-Date: 2022-09-26 10:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/editor/zh_Hant/>\n"
@@ -417,3 +417,18 @@ msgstr "出版校對樣本與全期內容。"
 
 msgid "editor.issues.confirmDeleteGalley"
 msgstr "是否確認刪除此期校對樣本？"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr "在此列表最終稿件檔案將由審稿員編輯至另一版本，然後上載至<span class="
+"\"pkp_help_title\">審稿</span>之下。"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr "在所有投稿步驟中任何已上載檔案，也可透過剔選以下勾選框添加至校對列表及點選搜"
+"尋：所有可供選擇檔案將被列出及可選取。"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr "公開識別碼'{$publicIdentifier}'已被另一同類項目使用。請為此期刊的這類項目提供"
+"獨一無二的識別碼。"
+
+msgid "editor.article.coverImage"
+msgstr "封面圖像"
