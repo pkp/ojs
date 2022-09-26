@@ -62,10 +62,10 @@ class ArticleGalleyGridRow extends GridRow {
 				'editGalley',
 				new AjaxModal(
 					$router->url($request, null, null, 'editGalley', null, $actionArgs),
-					__('submission.layout.editGalley'),
+					($this->_isEditable)?__('submission.layout.editGalley'):__('submission.layout.viewGalley'),
 					'modal_edit'
 				),
-				__('grid.action.edit'),
+				($this->_isEditable)?__('grid.action.edit'):__('grid.action.view'),
 				'edit'
 			));
 			
