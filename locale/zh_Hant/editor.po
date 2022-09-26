@@ -1,8 +1,70 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-09-26 08:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/editor/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "editor.home"
+msgstr "編輯主頁"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "投稿與出版"
+
+msgid "editor.submissionQueue"
+msgstr "投稿佇列"
+
+msgid "editor.submissionArchive"
+msgstr "投稿典藏"
+
+msgid "editor.publishing"
+msgstr "出版"
+
+msgid "editor.publishedIssues"
+msgstr "出版期數"
+
+msgid "editor.allSections"
+msgstr "所有分類"
+
+msgid "editor.allEditors"
+msgstr "所有編輯"
+
+msgid "editor.me"
+msgstr "我"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "現典藏庫無投稿。"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "儲存已典藏投稿的更變？標誌要刪除的投稿將會從系統永遠刪除。"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "是否確認紀錄此決定？"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "此投稿將會在發送通知作者的電郵或按跳過電郵按鈕後被典藏。"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr "發送投稿去審稿前，請使用通知作者連結去通知作者期刊決定及選擇發送的版本。"
+
+msgid "editor.notifyUsers"
+msgstr "通知用戶"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "所有讀者 ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "所有出版作者 ({$count} users)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "所有個體訂閱用戶 ({$count} users)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "所有院校訂閱用戶 ({$count} users)"
