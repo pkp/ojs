@@ -1,8 +1,9 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 09:38+0000\n"
-"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"PO-Revision-Date: 2022-09-27 02:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -209,13 +210,13 @@ msgid "manager.people.allSiteUsers"
 msgstr "從此網站此期刊登記一個用戶"
 
 msgid "manager.people.showNoRole"
-msgstr "顯示無特定角色的用戶"
+msgstr "顯示無特定身份的用戶"
 
 msgid "manager.people.allUsers"
 msgstr "所有登記用戶"
 
 msgid "manager.people.confirmRemove"
-msgstr "是否從此期刊移除此用戶？此動作會取消此用戶在此期刊中的所有角色。"
+msgstr "是否從此期刊移除此用戶？此動作會取消此用戶在此期刊中的所有身份。"
 
 msgid "manager.people.enrollSyncJournal"
 msgstr "包括期刊"
@@ -227,15 +228,15 @@ msgid "manager.people.roleEnrollment"
 msgstr "{$role} 登記"
 
 msgid "manager.people.syncUserDescription"
-msgstr "登記同步會為所有已在特定期刊登記特定角色的用戶，在此期刊登記至相同角色。此功"
+msgstr "登記同步會為所有已在特定期刊登記特定身份的用戶，在此期刊登記至相同身份。此功"
 "能允許同一批用戶（例如審稿員）在不同期刊同步。"
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "不需摘要"
 
 msgid "manager.section.noSectionEditors"
-msgstr "尚未有分類編輯。請先透過管理＞設定＞用戶＞&amp; 角色 "
-"增添最少一位用戶至此角色。"
+msgstr "尚未有分類編輯。請先透過管理＞設定＞用戶＞&amp; 身份 "
+"增添最少一位用戶至此身份。"
 
 msgid "manager.sections.assigned"
 msgstr "此分類編輯"
