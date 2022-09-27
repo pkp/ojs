@@ -267,6 +267,7 @@ describe('Data suite tests', function() {
 		cy.contains('Add galley');
 		cy.get('#representations-grid .show_extras').click();
 		cy.get('[id*="editGalley-button"]').click();
+		cy.waitJQuery(); // Wait for the form initialization
 		cy.get('#editArticleGalleyMetadataTabs [name="label"]').type(' Version 2');
 		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
 		cy.get('#articleGalleyForm button').contains('Save').click();

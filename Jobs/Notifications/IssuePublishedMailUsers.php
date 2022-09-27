@@ -69,8 +69,8 @@ class IssuePublishedMailUsers extends BaseJob
         $mailable
             ->recipients([$recipient])
             ->sender($this->sender)
-            ->body($template->getData('body', $this->locale))
-            ->subject($template->getData('subject', $this->locale));
+            ->body($template->getLocalizedData('body', $this->locale))
+            ->subject($template->getLocalizedData('subject', $this->locale));
 
         return $mailable;
     }
