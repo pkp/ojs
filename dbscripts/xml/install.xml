@@ -19,6 +19,7 @@
 
 	<!-- PKP schema components -->
 	<migration class="PKP\migration\install\CommonMigration" />
+	<migration class="PKP\migration\install\GenresMigration" />
 	<migration class="PKP\migration\install\ControlledVocabMigration" />
 	<migration class="PKP\migration\install\FailedJobsMigration" />
 	<migration class="PKP\migration\install\FilesMigration" />
@@ -43,7 +44,6 @@
 	<migration class="PKP\migration\install\MetadataMigration" />
 	<migration class="PKP\migration\install\AnnouncementsMigration" />
 	<migration class="PKP\migration\install\CategoriesMigration" />
-	<migration class="PKP\migration\install\GenresMigration" />
 	<migration class="PKP\migration\install\InstitutionsMigration" />
 	<migration class="APP\migration\install\MetricsMigration" />
 
