@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-27 02:01+0000\n"
+"PO-Revision-Date: 2022-09-28 05:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_Hant/>\n"
@@ -17,3 +17,50 @@ msgstr "提交文章"
 
 msgid "submission.submit.userGroup"
 msgstr "以……身份提交"
+
+msgid "submission.upload.selectComponent"
+msgstr "選擇文章部分"
+
+msgid "submission.title"
+msgstr "文章標題"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "開始投稿"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "新投稿"
+
+msgid "grid.action.workflow"
+msgstr "投稿程序"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "摘要字數上限為 {$wordCount} 字。"
+
+msgid "submission.submit.noContext"
+msgstr "未能找到您所投稿的期刊。"
+
+msgid "submission.issueEntry"
+msgstr "元資料"
+
+msgid "submission.submit.whatNext.description"
+msgstr "期刊已收到您的投稿，您也會收到投稿記錄的電郵確認。當編輯開始審查稿件時，他們"
+"將聯絡您。"
+
+msgid "grid.action.issueEntry"
+msgstr "查看此投稿元資料"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "文章樣對樣本「{$galleyFormatName}」現可供查看。"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "文章樣對樣本「{$galleyFormatName}」現已收藏，不會供人查看。"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "已更新投稿的公開識別碼。"
+
+msgid "submission.title.tip"
+msgstr ""
+"投稿種類通常會有「圖像」、「文字」或其他多媒類別，包括「軟件」或「互動項目」"
+"。請選取一個與您投稿最相近的類別。例子：<a target=\"_blank\" href=\"http"
+"://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
