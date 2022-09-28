@@ -187,3 +187,6 @@ msgstr "Galley: {$galleyLabel}"
 
 msgid "plugins.pubIds.doi.editor.preview.objects"
 msgstr "Item"
+
+msgid "plugins.pubIds.doi.editor.canBeAssigned.disabled"
+msgstr "What you see is a just a preview of the DOI and is not yet assigned."
