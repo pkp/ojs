@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 06:01+0000\n"
+"PO-Revision-Date: 2022-09-28 08:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_Hant/>\n"
@@ -73,3 +73,207 @@ msgstr "更變此校對樣本供讀者查看"
 
 msgid "submission.galleyFiles"
 msgstr "校對樣本檔案"
+
+msgid "submission.proofReadingDescription"
+msgstr "版面編輯會在此上載準備出版的檔案。使用<em>分配審查人員</em>來配置作者及其他用"
+"戶去校對稿件，並在出版前提供正確的檔案供核准。"
+
+msgid "grid.action.approveProof"
+msgstr "核准及在校對樣本包含此稿件。"
+
+msgid "grid.action.pageProofApproved"
+msgstr "此稿件已被核准，可包含在校對樣本中。"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "標題及摘要"
+
+msgid "submission.submit.upload.description"
+msgstr "上載與此投稿相關的檔案，包括文章、多媒體、數據集、插圖等等。"
+
+msgid "submission.pageProofs"
+msgstr "校對中"
+
+msgid "submission.confirmSubmit"
+msgstr "是否確認提交此文章至期刊？"
+
+msgid "workflow.review.externalReview"
+msgstr "評審"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "此投稿一期的元資料已更新。"
+
+msgid "submission.upload.fileContents"
+msgstr "文章組成部分"
+
+msgid "submission.incomplete"
+msgstr "等待批准"
+
+msgid "submission.complete"
+msgstr "已批准"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "請選取一個投稿語言。"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "投稿核對清單"
+
+msgid "submission.submit.privacyStatement"
+msgstr "隱私聲明"
+
+msgid "submission.submit.contributorRole"
+msgstr "投稿人身份"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "必須提供最少一個作者。"
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "必須提供每個作者的姓、名及電郵地址。"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "請輸入您的文章標題。"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "請輸入您的文章摘要。"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "請選擇投稿人身份。"
+
+msgid "submission.citationFormat.notFound"
+msgstr "未能取得所要求的引文格式。"
+
+msgid "submission.metadataDescription"
+msgstr "這些規格均基於都柏林核心元資料標準，一個用於描述期刊內容的國際標準。"
+
+msgid "submission.viewingPreview"
+msgstr "這是預覽，項目尚未出版。<a href=\"{$url}\">查看投稿</a>"
+
+msgid "section.any"
+msgstr "任何分類"
+
+msgid "submission.sectionOptions"
+msgstr "分類選項"
+
+msgid "catalog.category.heading"
+msgstr "所有項目"
+
+msgid "galley.publicationNotFound"
+msgstr "未能找到此出版項目的校對樣本。"
+
+msgid "publication.assignToissue"
+msgstr "分配至其中一期"
+
+msgid "publication.changeIssue"
+msgstr "更改期數"
+
+msgid "publication.datePublished.description"
+msgstr "出版日期將自動定為該期的出版日期。請勿輸入一個出版日期，除非文章已在其他地方"
+"出版而您需要輸入當初的日期。"
+
+msgid "publication.invalidSection"
+msgstr "未能找到此出版項目的分類。"
+
+msgid "publication.invalidIssue"
+msgstr "未能找到此出版項目的期數。"
+
+msgid "publication.publish.confirmation"
+msgstr "已完成所有出版要求。是否確認出版此項目？"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "已完成所有出版要求。此項目會立即在{$issue}期出版，是否確認安排到時候出版此項"
+"目？"
+
+msgid "publication.required.issue"
+msgstr "必須在出版前分配出版項目至其中一期。"
+
+msgid "publication.publishedIn"
+msgstr "在<a href=\"{$issueUrl}\">{$issueName}</a>出版。"
+
+msgid "publication.scheduledIn"
+msgstr "安排在 <a href=\"{$issueUrl}\">{$issueName}</a>出版。"
+
+msgid "publication.unscheduledIn"
+msgstr "此尚未安排在任何一期出版。"
+
+msgid "publication.selectIssue"
+msgstr "選擇一期以安排出版"
+
+msgid "publication.status.published"
+msgstr "已出版"
+
+msgid "submission.status.scheduled"
+msgstr "已安排"
+
+msgid "publication.status.unscheduled"
+msgstr "取消安排"
+
+msgid "submission.publication"
+msgstr "出版項目"
+
+msgid "submission.publications"
+msgstr "出版項目"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "當此項目在其中一期出版時，版權年份將自動設定。"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "版權年份將自動按出版日期設定。"
+
+msgid "publication.datePublished"
+msgstr "出版日期"
+
+msgid "publication.editDisabled"
+msgstr "此版本已出版及不能修改。"
+
+msgid "publication.event.published"
+msgstr "投稿已出版。"
+
+msgid "publication.event.scheduled"
+msgstr "投稿已安排出版。"
+
+msgid "publication.event.unpublished"
+msgstr "投稿出版狀態已取消。"
+
+msgid "publication.event.versionScheduled"
+msgstr "已安排出版一個更新版本。"
+
+msgid "publication.event.versionUnpublished"
+msgstr "已從出版項目移除一個版本。"
+
+msgid "publication.invalidSubmission"
+msgstr "未能找到此出版項目的投稿。"
+
+msgid "publication.publish"
+msgstr "出版"
+
+msgid "publication.required.declined"
+msgstr "未能出版被拒的投稿。"
+
+msgid "publication.required.reviewStage"
+msgstr "出版項目出版前必須先經過審稿及製作步驟。"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr "您必須閱讀及承認您已完成以下要求才可繼續。"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "您的文章摘要過長。請勿超越此部分的字數上限。"
+
+msgid "galley.editPublishedDisabled"
+msgstr "由於狀態為已出版，所以未能更改此出版項目的校對樣本。"
+
+msgid "publication.assignedToIssue"
+msgstr "此已分配至<a href=\"{$issueUrl}\""
+">{$issueName}</a>一期，但此期尚未安排正式出版日子。"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "已完成所有出版要求。當{$issue}期出版時，此項目會一同出版，是否確認安排到時候"
+"出版此項目？"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr "已完成所有出版要求。由於出版日期為{$datePublished}，此項目將會立即出版，是否"
+"確認出版此項目？"
+
+msgid "publication.event.versionPublished"
+msgstr "已出版一個更新版本。"
+
+msgid "publication.publish.requirements"
+msgstr "出版前必須完成以下要求。"
