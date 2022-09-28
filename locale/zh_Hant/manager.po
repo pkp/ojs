@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-27 02:01+0000\n"
+"PO-Revision-Date: 2022-09-28 09:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -367,7 +367,7 @@ msgid "manager.setup.contextName"
 msgstr "期刊名稱"
 
 msgid "manager.setup.pageHeader"
-msgstr "期刊頁面標頭（Header）"
+msgstr "期刊頁面標頭(Header)"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "內容"
@@ -394,7 +394,7 @@ msgid "manager.setup.addSponsor"
 msgstr "增添支持機構"
 
 msgid "manager.setup.alternateHeader"
-msgstr "替換標頭（Header）"
+msgstr "替換標頭(Header)"
 
 msgid "manager.setup.announcements"
 msgstr "公告"
@@ -435,8 +435,8 @@ msgstr "此期刊主頁載有默認的瀏覽連結。您可透過以下一個或
 "按以下順序出現。"
 
 msgid "manager.setup.alternateHeaderDescription"
-msgstr "此外，除了標題及標誌，也可以添加HTML版本的標頭（Header）至以下空白欄位。如不"
-"需要，請留空欄位。"
+msgstr "此外，除了標題及標誌，也可以添加HTML版本的標頭(Header)至以下空白欄位。如不需"
+"要，請留空欄位。"
 
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "要求審稿員提交每個評審時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
@@ -603,10 +603,10 @@ msgstr "主頁載有默認的瀏覽連結。您可透過以下一個或多個選
 "順序出現。注意透過巡覽列中當期期刊連結，可連接至最新一期期刊。"
 
 msgid "manager.setup.journalHomepageHeader"
-msgstr "期刊主頁標頭（Header）"
+msgstr "期刊主頁標頭(Header)"
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "期刊頁面標頭（Header）"
+msgstr "期刊頁面標頭(Header)"
 
 msgid "manager.setup.contextInitials"
 msgstr "期刊簡稱"
