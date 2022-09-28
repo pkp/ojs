@@ -55,8 +55,8 @@ class SubscriptionExpiryReminder extends ScheduledTask
         $mailable
             ->from($journal->getData('subscriptionEmail'), $journal->getData('subscriptionName'))
             ->recipients([$user])
-            ->subject($template->getData('subject', $locale))
-            ->body($template->getData('body', $locale))
+            ->subject($template->getLocalizedData('subject', $locale))
+            ->body($template->getLocalizedData('body', $locale))
             ->setData($locale);
 
         Mail::send($mailable);
