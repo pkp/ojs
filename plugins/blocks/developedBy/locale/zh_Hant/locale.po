@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 08:38+0000\n"
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/blocks-developedBy/zh_Hant/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.block.developedBy.displayName"
-msgstr "「開發者」方塊"
+msgstr "「開發者」欄"
 
 msgid "plugins.block.developedBy.description"
 msgstr "此插件在提供側邊欄提供「開發者」連結。"
