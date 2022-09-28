@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 09:01+0000\n"
+"PO-Revision-Date: 2022-09-28 10:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/importexport-doaj/zh_Hant/>\n"
@@ -31,3 +31,16 @@ msgstr "DOAJ API密鑰"
 
 msgid "plugins.importexport.doaj.settings.form.apiKey.description"
 msgstr "您會在您的DOAJ用戶頁面找到您的API密鑰。"
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS將會自動典藏文章至DOAJ。請注意，此步驟在出版後需要一些時間（例如：視乎您的"
+"cronjob設置）。您可以點選所有未註冊文章。"
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "使用DOAJ測試API（測試環境）註冊。請不要忘記在正式製作程序時移除此選項。"
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ自動註冊工序"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "典藏失敗！DOAJ API回覆錯誤訊息：'{$param}'。"
