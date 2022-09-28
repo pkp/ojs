@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 08:01+0000\n"
+"PO-Revision-Date: 2022-09-28 09:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_Hant/>\n"
@@ -277,3 +277,65 @@ msgstr "已出版一個更新版本。"
 
 msgid "publication.publish.requirements"
 msgstr "出版前必須完成以下要求。"
+
+msgid "submission.license.description"
+msgstr ""
+"此項目出版時，將自動設定為<a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>。"
+
+msgid "submission.copyrightHolder.description"
+msgstr "此項目出版時，版權將自動設定為{$copyright}。"
+
+msgid "submission.copyrightOther.description"
+msgstr "設定出版項目的版權屬以下單位。"
+
+msgid "publication.unpublish"
+msgstr "取消已出版狀態"
+
+msgid "publication.unpublish.confirm"
+msgstr "是否確認取消此出版狀態？"
+
+msgid "publication.unschedule.confirm"
+msgstr "是否取消安排出版此項目？"
+
+msgid "publication.version.details"
+msgstr "{$version}版本出版細節"
+
+msgid "submission.queries.production"
+msgstr "製作討論"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "返回評審"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "更改接受此投稿的決定及還原至評審階段。"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr "{$editorName}更改了接受此投稿的決定及還原至評審階段。"
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "還原至評審階段"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "投稿{$title}已還原至評審階段。"
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr "發送電郵給作者通知其投稿已回到評審階段。解釋為何有此決定及向作者說明會如何再"
+"度評審。"
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr "發送電郵給作者通知其投稿已進入同行評審階段。盡可能通知作者同行評審需時多久及"
+"他們大約何時會再收到編輯通知。"
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "選擇發送至評審階段的檔案。"
+
+msgid "doi.submission.issueMissing.publication"
+msgstr "未能為此投稿{$pubObjectTitle}創建DOI。創建DOI前，必須分配投稿至其中一期。"
+
+msgid "doi.submission.issueMissing.representation"
+msgstr "未能為投稿{$itemTitle}的校對樣本{$pubObjectTitle}創建DOI。創建DOI前，必須分配"
+"投稿至其中一期。"
+
+msgid "doi.submission.incorrectContext"
+msgstr "未能為此投稿{$pubObjectTitle}創建DOI。此期刊現查無此投稿。"
