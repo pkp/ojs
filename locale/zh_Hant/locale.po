@@ -1,8 +1,325 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/locale/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "context.current"
+msgstr "當期期刊："
+
+msgid "context.select"
+msgstr "切換至另一期刊："
+
+msgid "navigation.categories"
+msgstr "類別"
+
+msgid "navigation.categories.browse"
+msgstr "瀏覽"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "請填寫要求項目。"
+
+msgid "common.payment"
+msgstr "付款"
+
+msgid "common.payments"
+msgstr "付款"
+
+msgid "common.homePageHeader.altText"
+msgstr "主頁標頭(Header)"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "期刊主頁圖像"
+
+msgid "doi.manager.settings.publications"
+msgstr "文章"
+
+msgid "navigation.journalHelp"
+msgstr "期刊求助"
+
+msgid "navigation.current"
+msgstr "當期期刊"
+
+msgid "navigation.otherJournals"
+msgstr "其他期刊"
+
+msgid "navigation.browseByIssue"
+msgstr "按期數"
+
+msgid "navigation.browseByAuthor"
+msgstr "按作者"
+
+msgid "navigation.infoForAuthors"
+msgstr "供作者之用"
+
+msgid "navigation.infoForLibrarians"
+msgstr "供圖書館管理員之用"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "利益衝突指引"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "圖書館管理員須知"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "作者投稿須知"
+
+msgid "navigation.skip.issue"
+msgstr "跳轉至當期期刊"
+
+msgid "navigation.skip.about"
+msgstr "跳轉至關於期刊"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "未有分配"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "未有分配"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "編輯中"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "投稿尚待評審完成"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "評審中"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "各期目錄"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "各期目錄"
+
+msgid "common.queue.long.active"
+msgstr "處理中"
+
+msgid "common.queue.short.active"
+msgstr "處理中"
+
+msgid "common.queue.long.completed"
+msgstr "各期目錄"
+
+msgid "common.queue.short.completed"
+msgstr "各期目錄"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "分配編輯"
+
+msgid "section.section"
+msgstr "分類"
+
+msgid "section.sections"
+msgstr "分類"
+
+msgid "section.title"
+msgstr "分類名稱"
+
+msgid "section.abbreviation.example"
+msgstr "例如：文章, Article為ART"
+
+msgid "section.policy"
+msgstr "分類政策"
+
+msgid "article.article"
+msgstr "文章"
+
+msgid "article.articles"
+msgstr "文章"
+
+msgid "common.publication"
+msgstr "文章"
+
+msgid "common.publications"
+msgstr "文章"
+
+msgid "article.submissionId"
+msgstr "投稿ID"
+
+msgid "article.title"
+msgstr "標題"
+
+msgid "article.authors"
+msgstr "作者"
+
+msgid "article.metadata"
+msgstr "元資料"
+
+msgid "article.journalSection"
+msgstr "期刊內容分類"
+
+msgid "article.file"
+msgstr "檔案"
+
+msgid "article.suppFiles"
+msgstr "附加檔案"
+
+msgid "article.discipline"
+msgstr "學術領域及分支領域"
+
+msgid "article.subject"
+msgstr "關鍵字詞"
+
+msgid "article.coverage"
+msgstr "幅蓋"
+
+msgid "article.type"
+msgstr "類別、方法及方式"
+
+msgid "article.language"
+msgstr "語言"
+
+msgid "article.commentsToEditor"
+msgstr "作者意見"
+
+msgid "article.submission"
+msgstr "投稿"
+
+msgid "article.submissions"
+msgstr "投稿"
+
+msgid "article.details"
+msgstr "詳細資訊"
+
+msgid "article.abstract"
+msgstr "摘要"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "開放取用"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "限制取用"
+
+msgid "article.comments.sectionDefault"
+msgstr "默認"
+
+msgid "article.comments.disable"
+msgstr "取消"
+
+msgid "article.comments.enable"
+msgstr "啓用"
+
+msgid "article.fontSize"
+msgstr "字體大小"
+
+msgid "article.fontSize.small.altText"
+msgstr "小"
+
+msgid "article.fontSize.medium.altText"
+msgstr "中"
+
+msgid "article.fontSize.large.altText"
+msgstr "大"
+
+msgid "submission.submissionEditing"
+msgstr "投稿編輯"
+
+msgid "submission.changeSection"
+msgstr "更變至"
+
+msgid "submission.sent"
+msgstr "已發送"
+
+msgid "submission.editorDecision"
+msgstr "編輯決定"
+
+msgid "submission.editorReview"
+msgstr "編輯評審"
+
+msgid "submission.notifyAuthor"
+msgstr "通知作者"
+
+msgid "submission.notifyEditor"
+msgstr "通佑編輯"
+
+msgid "submission.editorAuthorRecord"
+msgstr "編輯／作者電郵記錄"
+
+msgid "submission.postReviewVersion"
+msgstr "評審後版本檔案"
+
+msgid "submission.editorVersion"
+msgstr "編輯版本"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "作者修改後版本檔案"
+
+msgid "submission.authorVersion"
+msgstr "作者版本"
+
+msgid "submission.copyediting"
+msgstr "審稿中"
+
+msgid "submission.copyedit"
+msgstr "審稿"
+
+msgid "submission.proofreading"
+msgstr "校對中"
+
+msgid "submission.scheduling"
+msgstr "安排中"
+
+msgid "submission.scheduledIn"
+msgstr "安排在{$issueName}出版。"
+
+msgid "submissions.step1"
+msgstr "第1步"
+
+msgid "submissions.step3"
+msgstr "第3步"
+
+msgid "submissions.queuedReview"
+msgstr "評審中"
+
+msgid "submissions.published"
+msgstr "已出版"
+
+msgid "submissions.initial"
+msgstr "最初"
+
+msgid "submissions.reviewRound"
+msgstr "評審次數"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "此期刊不在網上出版內容。"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "點選圖示填寫評審表格。"
+
+msgid "common.confirmComplete"
+msgstr "是否標誌此工序為完成？您之後或未能作其他改變。"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "投稿尚待編輯完成"
+
+msgid "section.abbreviation"
+msgstr "簡稱"
+
+msgid "article.indexingInformation"
+msgstr "索引資訊"
+
+msgid "article.suppFile"
+msgstr "附加檔案"
+
+msgid "article.coverPage.altText"
+msgstr "封面圖像"
+
+msgid "article.return"
+msgstr "返回文章詳細資訊"
+
+msgid "submission.reviewersVersion"
+msgstr "評審完註解版本檔案"
+
+msgid "submissions.proofread"
+msgstr "校對"
+
+msgid "submissions.initialProof"
+msgstr "最初版本"
