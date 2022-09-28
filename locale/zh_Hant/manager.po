@@ -2,8 +2,8 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 09:01+0000\n"
-"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -606,7 +606,7 @@ msgid "manager.setup.journalHomepageHeader"
 msgstr "期刊主頁標頭(Header)"
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "期刊頁面標頭(Header)"
+msgstr "期刊主頁標頭(Header)"
 
 msgid "manager.setup.contextInitials"
 msgstr "期刊簡稱"
