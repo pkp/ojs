@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 10:01+0000\n"
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/emails/zh_Hant/>\n"
@@ -98,3 +98,24 @@ msgstr "訂閱付費：院校"
 
 msgid "emails.subscriptionRenewIndl.subject"
 msgstr "訂閱更新：個體"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "訂閱更新：院校"
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "引文編輯"
+
+msgid "emails.citationEditorAuthorQuery.description"
+msgstr "此電郵讓審稿員向作者要求提供參考文獻的額外資料。"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "已上載修正版本"
+
+msgid "emails.notificationCenterDefault.subject"
+msgstr "有關{$contextName}的訊息"
+
+msgid "emails.notificationCenterDefault.body"
+msgstr "請輸入您的訊息。"
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "{$year}年{$month}月的編輯記錄"
