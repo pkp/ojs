@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 05:01+0000\n"
+"PO-Revision-Date: 2022-09-28 06:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/submission/zh_Hant/>\n"
@@ -64,3 +64,12 @@ msgstr ""
 "。請選取一個與您投稿最相近的類別。例子：<a target=\"_blank\" href=\"http"
 "://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
 ">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "格式核准"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "更變此校對樣本供讀者查看"
+
+msgid "submission.galleyFiles"
+msgstr "校對樣本檔案"
