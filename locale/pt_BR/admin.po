@@ -78,8 +78,8 @@ msgstr "Criar Revista"
 
 msgid "admin.journals.urlWillBe"
 msgstr ""
-"Uma palavra pequena ou acrônimo para identificar a revista. O endereço URL "
-"da revista será {$sampleUrl}."
+"Deve ser uma única palavra curta ou acrônimo para identificar a revista. O "
+"endereço URL da revista será {$sampleUrl}."
 
 #, fuzzy
 msgid "admin.contexts.form.titleRequired"
