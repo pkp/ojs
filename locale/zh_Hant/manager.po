@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-09-29 03:01+0000\n"
-"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -304,7 +304,7 @@ msgid "manager.sections.hideTocAuthor"
 msgstr "在期號內的目錄省略分類項目的作者姓名。"
 
 msgid "manager.sections.hideTocTitle"
-msgstr "在卷數內的目錄省略分類項目的作者姓名。"
+msgstr "在卷號內的目錄省略分類項目的作者姓名。"
 
 msgid "manager.sections.identifyType"
 msgstr "辨認在此分類出版的項目為"
