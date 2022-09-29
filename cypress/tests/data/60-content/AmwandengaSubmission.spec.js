@@ -153,7 +153,7 @@ describe('Data suite tests', function() {
 
 		cy.get('#galleys-button').click();
 		cy.get('[id*="addGalley-button"]').should('not.exist');
-		cy.get('[id*="editGalley-button"]').should('not.exist');
+		cy.get('[id*="editGalley-button"]').contains('View').should('exist');
 	});
 
 	it('Allow author to edit publication details', function() {
