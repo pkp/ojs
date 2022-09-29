@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"PO-Revision-Date: 2022-09-29 02:01+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -323,3 +323,66 @@ msgstr "校對"
 
 msgid "submissions.initialProof"
 msgstr "最初版本"
+
+msgid "submission.scheduledIn.tba"
+msgstr "（待公佈）"
+
+msgid "submissions.editorDecision"
+msgstr "編輯決定"
+
+msgid "submissions.proof"
+msgstr "校樣"
+
+msgid "submissions.editorRuling"
+msgstr "編輯原則"
+
+msgid "submission.eventLog"
+msgstr "事件日誌"
+
+msgid "submissions.copyeditComplete"
+msgstr "已審稿"
+
+msgid "submissions.layoutComplete"
+msgstr "已編輯版面設計"
+
+msgid "submissions.proofreadingComplete"
+msgstr "校對"
+
+msgid "submission.search"
+msgstr "文章搜尋"
+
+msgid "context.contexts"
+msgstr "期刊"
+
+msgid "journal.path"
+msgstr "路徑"
+
+msgid "context.context"
+msgstr "期刊"
+
+msgid "journal.issn"
+msgstr "國際標準期刊號(ISSN)"
+
+msgid "journal.viewAllIssues"
+msgstr "各期目錄"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "包括在此期刊沒有特定身份的用戶。"
+
+msgid "user.profile.profileImage"
+msgstr "頭像"
+
+msgid "user.showAllJournals"
+msgstr "顯示我的期刊"
+
+msgid "user.registerForOtherJournals"
+msgstr "註冊其他期刊"
+
+msgid "user.reviewerPrompt"
+msgstr "您是否願意評審此期刊的投稿？"
+
+msgid "journal.currentIssue"
+msgstr "當期期刊"
+
+msgid "user.authorization.representationNotFound"
+msgstr "未能找到您所查詢的校對樣本。"
