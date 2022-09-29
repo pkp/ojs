@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 04:01+0000\n"
+"PO-Revision-Date: 2022-09-29 07:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -769,3 +769,126 @@ msgstr ""
 "步驟：投稿佇列&gt;投稿評審&gt;投稿編輯&gt;目錄<br /><br />\n"
 "選取一個模組來處理這些編輯過程。（前往期刊管理的編輯頁面，選定一個管理編輯及"
 "分類編輯。）"
+
+msgid "sectionEditor.regrets"
+msgstr ""
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "同行評審，第{$round}輪"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "編輯決定，第{$round}輪"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "登記一個現有用戶為評審員"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "創建新評審員"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "完編輯工作分配"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "未有處理中的編輯工作。"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "版面設計編輯工作"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "上載校對樣本格式"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "取代檔案"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "上載附件檔案"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "校對樣本將會在另一網站可查看。"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "遠程存放內容網址"
+
+msgid "reviewer.pendingReviews"
+msgstr "文章尚待評審"
+
+msgid "reviewer.completedReviews"
+msgstr "完成"
+
+msgid "reviewer.averageQuality"
+msgstr "評價"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "尚待評審檔案"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "通佑編輯"
+
+msgid "reviewer.article.canDoReview"
+msgstr "會進行評審"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "未能進行評審"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "投稿編輯"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "在此輸入或貼上評審意見"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "待編輯輸入"
+
+msgid "reviewer.article.sendReminder"
+msgstr "發送提示"
+
+msgid "reviewer.article.automatic"
+msgstr "（自動）"
+
+msgid "reviewer.article.recommendation"
+msgstr "推薦"
+
+msgid "reviewer.article.submitReview"
+msgstr "提交評審予編輯"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "意見"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "上載檔案"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "評審員上載版本"
+
+msgid "reviewer.article.schedule.request"
+msgstr "編輯要求"
+
+msgid "reviewer.article.schedule.response"
+msgstr "您的回應"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "已提交評審"
+
+msgid "reviewer.article.schedule.due"
+msgstr "評審到期"
+
+msgid "reviewer.article.decision.accept"
+msgstr "接受投稿"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "需要修改"
+
+msgid "sectionEditor.regrets.result"
+msgstr "結果"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "處理中的編輯工作"
+
+msgid "submission.layout.imageInvalid"
+msgstr "圖片檔案無效。接受格式有.gif、 .jpg及 .png。"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "如果評審員同意進行評審，將可查閱投稿"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "（如您希望在檔案提供註解給編輯，請儲存在您的硬碟及使用瀏覽／上載。）"
