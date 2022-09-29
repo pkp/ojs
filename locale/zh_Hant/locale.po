@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 02:01+0000\n"
+"PO-Revision-Date: 2022-09-29 02:20+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -52,7 +52,7 @@ msgid "navigation.otherJournals"
 msgstr "其他期刊"
 
 msgid "navigation.browseByIssue"
-msgstr "按期數"
+msgstr "按期號"
 
 msgid "navigation.browseByAuthor"
 msgstr "按作者"
@@ -386,3 +386,78 @@ msgstr "當期期刊"
 
 msgid "user.authorization.representationNotFound"
 msgstr "未能找到您所查詢的校對樣本。"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "是，我希望期刊在有投稿需要我評審時聯絡我。"
+
+msgid "user.register.contextsPrompt"
+msgstr "您希望在此網站哪一本期刊註冊？"
+
+msgid "user.register.otherContextRoles"
+msgstr "要求成為以下身份。"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "如您有興趣成為任何一本期刊的評審員，請輸入您有興趣的學術領域。"
+
+msgid "user.myJournals"
+msgstr "我的期刊"
+
+msgid "user.manageMySubscriptions"
+msgstr "管理我的訂閱"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "您的戶口尚未有跟任何期刊有關聯。請選擇一本期刊："
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "您的帳戶在此期刊尚未有任何身份。請從以下選取想執行的項目："
+
+msgid "user.noRoles.submitArticle"
+msgstr "提交一份計劃"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "投稿：現在未有開放作者註冊。"
+
+msgid "user.noRoles.regReviewer"
+msgstr "註冊為評審員"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "註冊為評審員：現在未有開放評審員註冊。"
+
+msgid "user.role.manager"
+msgstr "期刊管理員"
+
+msgid "user.role.subEditor"
+msgstr "分類編輯"
+
+msgid "user.role.subscriptionManager"
+msgstr "訂閱管理員"
+
+msgid "user.role.managers"
+msgstr "期刊管理員"
+
+msgid "user.role.subEditors"
+msgstr "分類編輯"
+
+msgid "user.role.subscriptionManagers"
+msgstr "訂閱管理員"
+
+msgid "user.role.journalAssistant"
+msgstr "期刊助理"
+
+msgid "user.role.journalAssistants"
+msgstr "期刊助理"
+
+msgid "issue.title"
+msgstr "標題"
+
+msgid "issue.viewIssueIdentification"
+msgstr "查看{$identification}"
+
+msgid "issue.volume"
+msgstr "卷數"
+
+msgid "issue.issue"
+msgstr "期號"
+
+msgid "issue.issues"
+msgstr "期號"
