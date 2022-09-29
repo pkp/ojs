@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-26 08:01+0000\n"
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/api/zh_Hant/>\n"
@@ -25,7 +25,7 @@ msgid "api.submissions.403.cantChangeContext"
 msgstr "您不能改變投稿的期刊。"
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "您沒有閱覽未出版期數的權限。"
+msgstr "您沒有閱覽未出版期號的權限。"
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "您只可查閱所允許的期刊。"
