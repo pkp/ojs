@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-26 10:01+0000\n"
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/importexport-native/zh_Hant/>\n"
@@ -16,7 +16,7 @@ msgid "plugins.importexport.native.displayName"
 msgstr "原始XML插件"
 
 msgid "plugins.importexport.native.description"
-msgstr "從OJS原始XML格式導入及導出文章和期數。"
+msgstr "從OJS原始XML格式導入及導出文章和期號。"
 
 msgid "plugins.importexport.native.import"
 msgstr "導入"
@@ -31,7 +31,7 @@ msgid "plugins.importexport.native.exportSubmissions"
 msgstr "導出文章"
 
 msgid "plugins.importexport.native.exportIssues"
-msgstr "導出期數"
+msgstr "導出期號"
 
 msgid "plugins.importexport.native.results"
 msgstr "導入結果"
@@ -77,7 +77,7 @@ msgstr ""
 "。此期不會被修改，但仍可添加文章。"
 
 msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
-msgstr "文章\"{$articleTitle}\"欠缺期數認證部分。"
+msgstr "文章\"{$articleTitle}\"欠缺期號認證部分。"
 
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr "文章\"{$articleTitle}\"已編配到其中一期，但未有出版日期。"
