@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 12:01+0000\n"
+"PO-Revision-Date: 2022-09-29 13:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "lv_LV/>\n"
@@ -509,7 +509,7 @@ msgid "context.contexts"
 msgstr "Žurnāli"
 
 msgid "journal.currentIssue"
-msgstr "Aktuālais izdevums"
+msgstr "Jaunākais izdevums"
 
 msgid "submission.search"
 msgstr "Rakstu meklēšana"
@@ -575,7 +575,7 @@ msgid "common.queue.long.submissionsUnassigned"
 msgstr "Nav piešķirts"
 
 msgid "navigation.skip.issue"
-msgstr "Pāriet uz aktuālo numuru"
+msgstr "Pāriet uz jaunāko izdevumu"
 
 msgid "navigation.skip.about"
 msgstr "Pāriet uz sadaļu par žurnālu"
@@ -605,7 +605,7 @@ msgid "navigation.otherJournals"
 msgstr "Citi žurnāli"
 
 msgid "navigation.current"
-msgstr "Aktuālais"
+msgstr "Jaunākais"
 
 msgid "navigation.journalHelp"
 msgstr "Žurnāla palīdzība"
@@ -649,7 +649,7 @@ msgid "context.select"
 msgstr "Pārslēgties uz citu žurnālu:"
 
 msgid "context.current"
-msgstr "Aktuālais žurnāls:"
+msgstr "Jaunākais žurnāls:"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Šī žurnāla saturs netiek publicēts tiešsaistē."
@@ -661,16 +661,16 @@ msgid "current.noCurrentIssueDesc"
 msgstr "Šis žurnāls nav publicējis nevienu numuru."
 
 msgid "current.noCurrentIssue"
-msgstr "Nav aktuālu izdevumu"
+msgstr "Nav jaunāko izdevumu"
 
 msgid "current.current"
-msgstr "Aktuālais"
+msgstr "Jaunākais"
 
 msgid "site.noJournals"
 msgstr "Nav pieejamu žurnālu."
 
 msgid "site.journalCurrent"
-msgstr "Aktuālais izdevums"
+msgstr "Jaunākais izdevums"
 
 msgid "site.journalRegister"
 msgstr "Reģistrēties"
@@ -2409,8 +2409,8 @@ msgstr ""
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
-"Nevarēja iestatīt DOI statusu uz neaktuālu šādam jautājumam: {$itemTitle}. "
-"DOI jābūt statusā \"Reģistrēts\" vai \"Iesniegts\"."
+"Nevarēja iestatīt DOI statusu uz neaktīvu izdevumam {$itemTitle}. DOI "
+"statusam jābūt \"Reģistrēts\" vai \"Iesniegts\"."
 
 msgid "doi.issue.notPublished"
 msgstr ""
