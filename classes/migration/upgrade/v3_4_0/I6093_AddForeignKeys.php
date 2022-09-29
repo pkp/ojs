@@ -24,4 +24,9 @@ class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeig
     {
         return 'journal_id';
     }
+
+    protected function getContextSettingsTable(): string
+    {
+        return 'journal_settings';
+    }
 }
