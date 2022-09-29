@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-09-05 18:50+0000\n"
+"PO-Revision-Date: 2022-09-29 17:31+0000\n"
 "Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
@@ -22,7 +22,6 @@ msgstr "Redirecionamento da revista"
 msgid "admin.settings.redirectInstructions"
 msgstr "As solicitações realizadas ao portal serão direcionadas a esta revista. Esta opção pode ser útil caso o Portal hospede apenas uma revista."
 
-#, fuzzy
 msgid "admin.languages.confirmDisable"
 msgstr ""
 "Tem certeza de que deseja desativar este idioma? Isso pode afetar qualquer "
@@ -78,11 +77,10 @@ msgstr "Nenhuma revista foi criada."
 msgid "admin.contexts.create"
 msgstr "Criar revista"
 
-#, fuzzy
 msgid "admin.journals.urlWillBe"
 msgstr ""
-"Geralmente é usado um acrônimo que identifica o periódico. A URL do "
-"periódico será: {$sampleUrl}."
+"Uma palavra pequena ou acrônimo para identificar a revista. O endereço URL "
+"da revista será {$sampleUrl}."
 
 #, fuzzy
 msgid "admin.contexts.form.titleRequired"
