@@ -1,8 +1,9 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 02:20+0000\n"
-"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -454,10 +455,151 @@ msgid "issue.viewIssueIdentification"
 msgstr "查看{$identification}"
 
 msgid "issue.volume"
-msgstr "卷數"
+msgstr "卷號"
 
 msgid "issue.issue"
 msgstr "期號"
 
 msgid "issue.issues"
 msgstr "期號"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "已提交編輯決定"
+
+msgid "issue.number"
+msgstr "編號"
+
+msgid "issue.vol"
+msgstr "卷"
+
+msgid "issue.no"
+msgstr "期"
+
+msgid "issue.year"
+msgstr "年"
+
+msgid "issue.noIssues"
+msgstr "未有期號"
+
+msgid "issue.toc"
+msgstr "目錄"
+
+msgid "issue.abstract"
+msgstr "摘要"
+
+msgid "issue.coverPage.altText"
+msgstr "封面"
+
+msgid "issue.fullIssue"
+msgstr "全期"
+
+msgid "issue.nonpdf.title"
+msgstr "下載此期"
+
+msgid "issue.viewIssue"
+msgstr "查看期號"
+
+msgid "issue.return"
+msgstr "返回該期"
+
+msgid "subscriptionTypes.currency"
+msgstr "貨幣"
+
+msgid "subscriptionTypes.year"
+msgstr "年份"
+
+msgid "subscriptionTypes.years"
+msgstr "年份"
+
+msgid "subscriptionTypes.month"
+msgstr "月份"
+
+msgid "subscriptionTypes.months"
+msgstr "月份"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "不會過期"
+
+msgid "subscriptionTypes.format"
+msgstr "格式"
+
+msgid "subscriptionTypes.format.online"
+msgstr "網上"
+
+msgid "subscriptionTypes.format.print"
+msgstr "印刷"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "印刷及網上"
+
+msgid "subscriptions.inactive"
+msgstr "閒置"
+
+msgid "subscriptions.status"
+msgstr "狀態"
+
+msgid "subscriptions.status.active"
+msgstr "處理中"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "需要資料"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "需要批准"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "尚待手動付款"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "尚待網上付款"
+
+msgid "subscriptions.status.other"
+msgstr "其他，見備註"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "投稿從典藏中恢復"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "審稿員已更新修正檔案"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "完成最終審稿"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "已更新審稿檔案"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "已分配校對員予投稿"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "開始分配審稿"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "已取消分配審稿員予投稿"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "已分配審稿員予投稿"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "已取消分配校對員予投稿"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "開始分配校對"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "取消分配編輯予投稿"
+
+msgid "submission.event.editor.editorFile"
+msgstr "已更新編輯檔案"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "投稿已典藏"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "已完成初步審稿"
+
+msgid "doi.issue.notPublished"
+msgstr "標誌為{$pubObjectTitle}註冊的DOI失敗。此期必須出版後才可更新狀態。"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "您未有一個現行訂閱方案。"
