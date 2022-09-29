@@ -2,7 +2,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 11:01+0000\n"
+"PO-Revision-Date: 2022-09-29 13:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "lv_LV/>\n"
@@ -91,7 +91,7 @@ msgid "editor.navigation.issueArchive"
 msgstr "Agrākie izdevumi"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Iestatīt aktuālo izdevumu"
+msgstr "Iestatīt jaunāko izdevumu"
 
 msgid "grid.action.addIssueGalley"
 msgstr "Izveidot izdevuma saliktni"
@@ -160,7 +160,7 @@ msgid "editor.issues.publicArticleIdExists"
 msgstr "Nav iespējams saglabāt publisko identifikatoru rakstam:"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Vai tiešām vēlaties iestatīt šo izdevumu kā aktuālo?"
+msgstr "Vai tiešām vēlaties iestatīt šo izdevumu kā jaunāko?"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Vai tiešām vēlaties atcelt šī publicētā izdevuma publicēšanu?"
@@ -385,7 +385,7 @@ msgid "editor.issues.numArticles"
 msgstr "Vienības"
 
 msgid "editor.issues.currentIssue"
-msgstr "Aktuālais numurs"
+msgstr "Jaunākais numurs"
 
 msgid "editor.issues.editIssue"
 msgstr "Numura pārvaldība: {$issueIdentification}"
