@@ -17,7 +17,6 @@ namespace APP\controllers\grid\articleGalleys;
 
 use APP\controllers\grid\articleGalleys\form\ArticleGalleyForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
-use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
@@ -247,7 +246,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function identifiers($args, $request)
     {
-        $representation = Repo::galley()->get($request->getUserVar('representationId'));
+        $representation = $this->getGalley();
         $form = new PublicIdentifiersForm($representation);
         $form->initData();
         return new JSONMessage(true, $form->fetch($request));
@@ -263,8 +262,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function updateIdentifiers($args, $request)
     {
-        $representationDao = Application::getRepresentationDAO();
-        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        $representation = $this->getGalley();
         $form = new PublicIdentifiersForm($representation, null, array_merge($this->getRequestArgs(), ['representationId' => $representation->getId()]));
         $form->readInputData();
         if ($form->validate()) {
@@ -289,9 +287,7 @@ class ArticleGalleyGridHandler extends GridHandler
             return new JSONMessage(false);
         }
 
-        $submission = $this->getSubmission();
-        $representationDao = Application::getRepresentationDAO();
-        $representation = $representationDao->getById($request->getUserVar('representationId'));
+        $representation = $this->getGalley();
         $form = new PublicIdentifiersForm($representation);
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));
         return new JSONMessage(true);
