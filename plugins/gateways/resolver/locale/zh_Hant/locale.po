@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 09:01+0000\n"
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/gateways-resolver/zh_Hant/>\n"
@@ -19,4 +19,4 @@ msgid "plugins.gateways.resolver.displayName"
 msgstr "解決插件"
 
 msgid "plugins.gateways.resolver.description"
-msgstr "此插件按引文資料解決期數及文章。"
+msgstr "此插件按引文資料解決期號及文章。"
