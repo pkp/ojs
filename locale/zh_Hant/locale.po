@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"PO-Revision-Date: 2022-09-29 04:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -560,7 +560,7 @@ msgid "submission.event.editor.submissionRestored"
 msgstr "投稿從典藏中恢復"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "審稿員已更新修正檔案"
+msgstr "審稿員修正檔案已更新"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
 msgstr "完成最終審稿"
@@ -603,3 +603,169 @@ msgstr "標誌為{$pubObjectTitle}註冊的DOI失敗。此期必須出版後才�
 
 msgid "subscriptions.status.noSubscription"
 msgstr "您未有一個現行訂閱方案。"
+
+msgid "subscriptions.individualDescription"
+msgstr "個體訂閱需要先登入才可取用訂閱內容。"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "院校訂閱不需要登入。用戶可透過網域及／或IP地址來取用訂閱內容。"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr "<strong>備註：</strong>透過網上付款的院校訂閱在啟用訂閱前需要先獲得網域及IP範"
+"圍的認可。"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "提交事件"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "已提交文章"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "投稿已發送至安排出版佇列"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "已分配投稿至其中一期"
+
+msgid "submission.event.general.articlePublished"
+msgstr "已出版文章"
+
+msgid "submission.event.author.authorRevision"
+msgstr "作者已提交修正"
+
+msgid "submission.event.general.authorRevision"
+msgstr "已更新作者修正檔案"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "已分配編輯至投稿"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "校對員修正檔案已更新"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "完成分配校對"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "已分配版面設計編輯予投稿"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "已取消分配版面設計編輯予投稿"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "開始分配版面設計"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "已更新版面校對樣本"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "完成版面分配"
+
+msgid "reader.subscribersOnly"
+msgstr "只限訂閱者"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "需要訂閱才可閱覽項目。請登入期刊認證訂閱權限。"
+
+msgid "reader.openAccess"
+msgstr "開放取用"
+
+msgid "reader.subscriptionAccess"
+msgstr "需要訂閱"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "需要訂閱或費用"
+
+msgid "comments.commentsOnArticle"
+msgstr "對此文章的意見"
+
+msgid "search.results.orderBy"
+msgstr "次序排列按"
+
+msgid "search.results.orderBy.article"
+msgstr "文章標題"
+
+msgid "search.results.orderBy.author"
+msgstr "作者"
+
+msgid "search.results.orderBy.date"
+msgstr "出版日期"
+
+msgid "search.results.orderBy.issue"
+msgstr "期號"
+
+msgid "search.results.orderBy.journal"
+msgstr "期刊名稱"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "受歡迎程度（所有時期）"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "受歡迎程度（上一個月）"
+
+msgid "search.results.orderBy.relevance"
+msgstr "相關程度"
+
+msgid "search.results.orderDir.asc"
+msgstr "從小至大"
+
+msgid "search.results.orderDir.desc"
+msgstr "從大至小"
+
+msgid "search.results.similarDocuments"
+msgstr "類似文件"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "訂閱管理"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "個體訂閱"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "院校訂閱"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "訂閱種類"
+
+msgid "plugins.categories.generic.description"
+msgstr "一般插件用來在尚未有其他插件支援的不同方面擴展Open Journal Systems。"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"限制此用戶？此會限制用戶登入系統。\n"
+"\n"
+"您也可選擇向用會提供限制帳戶的理由。"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "處理中的編輯工作分配"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "完成編輯工作分配"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "未有分配投稿。"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "現正再次通知審稿員會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "現正再次通知作者會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "現正再次通知版面設計編輯會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "現正再次通知校對員會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "抱歉"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "文章校對樣本插件"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "文章校對樣本插件額外支援顯示各種文件種類如文章校對樣本。"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"步驟：投稿佇列&gt;投稿評審&gt;投稿編輯&gt;目錄<br /><br />\n"
+"選取一個模組來處理這些編輯過程。（前往期刊管理的編輯頁面，選定一個管理編輯及"
+"分類編輯。）"
