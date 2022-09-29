@@ -1,7 +1,7 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 10:01+0000\n"
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/paymethod-paypal/zh_Hant/>\n"
@@ -37,4 +37,4 @@ msgid "plugins.paymethod.paypal.settings.secret"
 msgstr "加密"
 
 msgid "plugins.paymethod.paypal.error"
-msgstr "交易出現錯誤。詳細請聯絡期刊管理員。"
+msgstr "交易出現錯誤。詳情請聯絡期刊管理員。"
