@@ -126,16 +126,6 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     }
 
     /**
-     * Get the ID of the last inserted completed payment.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('completed_payments', 'completed_payment_id');
-    }
-
-    /**
      * Get a payment by assoc info
      *
      * @param int? $userId

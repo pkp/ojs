@@ -534,16 +534,6 @@ class SectionDAO extends PKPSectionDAO
     }
 
     /**
-     * Get the ID of the last inserted section.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('sections', 'section_id');
-    }
-
-    /**
      * Delete the custom ordering of an issue's sections.
      *
      * @param int $issueId

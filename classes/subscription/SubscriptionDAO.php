@@ -116,16 +116,6 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     abstract public function insertObject($subscription);
 
     /**
-     * Function to get the ID of the last inserted subscription.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('subscriptions', 'subscription_id');
-    }
-
-    /**
      * Update existing subscription.
      *
      * @param Subscription $subscription
