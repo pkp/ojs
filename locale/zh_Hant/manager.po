@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
 "Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
@@ -51,7 +51,7 @@ msgstr "選手配置數位物件識別碼(DOI)至那些項目。大多數期刊�
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
-"使用默認樣式<br />期數為%j.v%vi%i<br />文章為%j.v%vi%i.%a<br />校對樣本為%j."
+"使用默認樣式<br />期號為%j.v%vi%i<br />文章為%j.v%vi%i.%a<br />校對樣本為%j."
 "v%vi%i.%a.g%g。"
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
@@ -88,7 +88,7 @@ msgid "manager.managementPages"
 msgstr "管理設定頁面"
 
 msgid "manager.payment.action"
-msgstr "行動"
+msgstr "執行項目"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "這會取代您以往所設置的任何指定區性的期刊設定"
@@ -168,7 +168,7 @@ msgid "manager.payment.options.purchaseArticleFee"
 msgstr "購買文章"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "購買期數"
+msgstr "購買期號"
 
 msgid "manager.payment.options.text"
 msgstr "付款方式說明"
@@ -301,7 +301,7 @@ msgid "manager.sections.form.titleRequired"
 msgstr "需提供一個此分類的標題。"
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "在期數內的目錄省略分類項目的作者姓名。"
+msgstr "在期號內的目錄省略分類項目的作者姓名。"
 
 msgid "manager.sections.hideTocTitle"
 msgstr "在卷數內的目錄省略分類項目的作者姓名。"
@@ -566,10 +566,10 @@ msgstr "提供即時或暫緩開放取用的期刊，出版物需在適合時間
 "Creative Commons license)。"
 
 msgid "manager.setup.initialIssue"
-msgstr "最初期數"
+msgstr "最初期號"
 
 msgid "manager.setup.initialIssueDescription"
-msgstr "視乎所選取的格式，辨識在OJS出版的第一期的卷數、期數，及／或年份："
+msgstr "視乎所選取的格式，辨識在OJS出版的第一期的卷號、期號，及／或年份："
 
 msgid "manager.setup.institution"
 msgstr "院校"
@@ -1614,7 +1614,7 @@ msgid "manager.setup.copyrightYearBasis.article"
 msgstr "文章：默認年份會按文章出版日期而定，如同「立即出版」。"
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "期數：默認年份會按該期出版日期而定。"
+msgstr "期號：默認年份會按該期出版日期而定。"
 
 msgid "manager.setup.resetPermissions"
 msgstr "重設文章權限"
@@ -1687,7 +1687,7 @@ msgid "plugins.importexport.common.settings.form.password.description"
 msgstr "請注意密碼將以純文字方式儲存，即無加密。"
 
 msgid "plugins.importexport.common.filter.issue"
-msgstr "任何期數"
+msgstr "任何期號"
 
 msgid "plugins.importexport.common.status.any"
 msgstr "任何狀態"
@@ -1702,7 +1702,7 @@ msgid "plugins.importexport.common.status.registered"
 msgstr "已註冊"
 
 msgid "plugins.importexport.common.action"
-msgstr "動作"
+msgstr "執行項目"
 
 msgid "plugins.importexport.common.action.export"
 msgstr "導出"
@@ -2031,7 +2031,7 @@ msgid "api.galley.403.publicationDidNotMatch"
 msgstr "您要求的校對樣本並非此出版項目的一部份。"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr "未能找到您所要求的期數"
+msgstr "未能找到您所要求的期號"
 
 msgid "doi.manager.submissionDois"
 msgstr "文章DOI"
@@ -2092,7 +2092,7 @@ msgid "mailable.openAccessNotify.description"
 msgstr "如用戶曾要求收取此期變成開放取用的通知，此電郵將發送給相關用戶。"
 
 msgid "mailable.issuePublishNotify.name"
-msgstr "期刊期數出版通知"
+msgstr "期刊期號出版通知"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr "如有新一期出版，此電郵將發送至註冊用戶。"
