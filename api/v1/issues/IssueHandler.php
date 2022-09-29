@@ -200,7 +200,7 @@ class IssueHandler extends APIHandler
         $issues = $collector->getMany();
 
         return $response->withJson([
-            'items' => iterator_to_array(Repo::issue()->getSchemaMap()->summarizeMany($issues, $context), false),
+            'items' => Repo::issue()->getSchemaMap()->summarizeMany($issues, $context)->values(),
             'itemsMax' => $collector->limit(null)->offset(null)->getCount(),
         ], 200);
     }
