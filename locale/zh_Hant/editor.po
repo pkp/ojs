@@ -1,8 +1,9 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-09-29 03:01+0000\n"
-"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/editor/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -91,7 +92,7 @@ msgid "editor.issues.createIssue"
 msgstr "創建新一期"
 
 msgid "editor.issues.editIssue"
-msgstr "期數管理： {$issueIdentification}"
+msgstr "期號管理： {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "當期期刊"
@@ -127,13 +128,13 @@ msgid "editor.issues.titleRequired"
 msgstr "必須為此期提供標題。"
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "必須認證每期。請選擇最少一個期數認證選項。"
+msgstr "必須認證每期。請選擇最少一個期號認證選項。"
 
 msgid "editor.issues.issueIdentification"
-msgstr "期數認證"
+msgstr "期號認證"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "公開期數識別碼"
+msgstr "公開期號識別碼"
 
 msgid "editor.issues.description"
 msgstr "說明"
@@ -288,7 +289,7 @@ msgid "editor.issues.identifiers"
 msgstr "識別碼"
 
 msgid "editor.navigation.futureIssues"
-msgstr "未來期數"
+msgstr "未來期號"
 
 msgid "grid.action.addGalley"
 msgstr "新增校對樣本"
@@ -312,7 +313,7 @@ msgid "grid.action.setCurrentIssue"
 msgstr "設定為當期期刊"
 
 msgid "editor.navigation.issueArchive"
-msgstr "過往期數"
+msgstr "過往期號"
 
 msgid "editor.article.designateReviewVersion"
 msgstr "分配原先檔案為評審版本"
