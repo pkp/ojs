@@ -2,8 +2,8 @@
 # CTHung <penjhorng@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-05 09:50+0000\n"
-"Last-Translator: CTHung <penjhorng@gmail.com>\n"
+"PO-Revision-Date: 2022-09-30 09:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -77,3 +77,61 @@ msgstr "您可以之後於作者頁面選擇處理中的投稿以完成投稿程
 
 msgid "author.submit.notAccepting"
 msgstr "此期刊目前不接受投稿。"
+
+msgid "author.submit.requestWaiver"
+msgstr "要求免除"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "請考慮免除此文章的投稿費用"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "請使用以下意見欄說明為何需要免除費用。"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "如您正申請免除費用，您必須在下方輸入原因。"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "上載已審稿版本"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "校對修正"
+
+msgid "author.submissions.viewStatus"
+msgstr "查看狀態"
+
+msgid "author.submissions.noSubmissions"
+msgstr "沒有投稿。"
+
+msgid "author.submit.journalSection"
+msgstr "期刊分類"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "文章必須提交至期刊的其中一個類別。"
+
+msgid "author.submit.verifyChecklist"
+msgstr "您必須確保所有在投稿符合所投稿核對清單項目才可繼續。"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "您必須同意版權資訊的條款才可繼續。"
+
+msgid "submission.submit.coverNote"
+msgstr "致編輯的意見"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "第{$round}輪評審中"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "評審中：需要修改"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "編輯中：需要審稿"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "編輯中：要求校對"
+
+msgid "author.submissions.confirmDelete"
+msgstr "是否確認刪除此未完成投稿？"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr "作者同意版權資訊頁面的條款，出版時也會應用至此投稿（可在下方增添致編輯的意見)"
+"。"
