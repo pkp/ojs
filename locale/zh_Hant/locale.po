@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 08:01+0000\n"
+"PO-Revision-Date: 2022-09-30 09:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -1569,3 +1569,241 @@ msgstr "您的伺服器現准許上載檔案：<strong>{$allowFileUploads}</stro
 msgid "installer.localeInstructions"
 msgstr "此系統採用的優先語言。如您有意採用在此未有列出的語言，請諮詢OJS "
 "documentation。"
+
+msgid "installer.additionalLocalesInstructions"
+msgstr "選擇任何額外語言支援此系統。這些語言可供寄存在網站的期刊採用。您亦可隨時在網"
+"站管理介面安裝其他語言。"
+
+msgid "installer.installApplication"
+msgstr "安裝Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "升級Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr "<strong>警告：</strong>如在安裝資料庫期間失敗，您或需移除您的OJS或資料庫表格"
+"才可重新安裝資料庫。"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"現有新版本的OJS可供應用！您現正使用OJS版本{$currentVersion}。最新的版本為{$cu"
+"rrentVersion}。請到<a href=\"https://pkp.sfu.ca/ojs_download\" target=\"_new"
+"\">此頁面</a>下載最新版本及查看升級指引。"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"現有新版本的OJS可供應用！您現正使用OJS版本{$currentVersion}。最新的版本為{$cu"
+"rrentVersion}。請聯絡您的網站管理員（{$siteAdminName}，<a href=\"mailto"
+":{$siteAdminEmail}\">{$siteAdminEmail}</a>），通知他們此版本。<a href=\"https"
+"://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\">在此</a>可找到更多資訊。"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName}已更新文章{$submissionId}。更新檔案ID為{$fileId}。"
+
+msgid "log.review.reviewerUnassigned"
+msgstr "已取消分配{$reviewerName}在第{$round}輪負責評審投稿{$submissionId}。"
+
+msgid "log.review.reviewInitiated"
+msgstr "{$reviewerName}已開始評審在第{$round}輪的投稿{$submissionId}。"
+
+msgid "log.review.reviewerRated"
+msgstr "已評價{$reviewerName}在第{$round}輪對投稿{$submissionId}的評審。"
+
+msgid "log.review.reviewDueDateSet"
+msgstr "已設定{$dueDate}為{$reviewerName}為第{$round} "
+"輪投稿{$submissionId}評審的完成日期。"
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "已設定建議{$reviewerName}為第{$round} 輪投稿{$submissionId}評審。"
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr "編輯已代表評審員{$reviewerName}設定第{$round} 輪投稿{$submissionId}建議。"
+
+msgid "log.review.resubmit"
+msgstr "已重新提交投稿{$submissionId}予評審。"
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr "{$userName}已代表{$reviewerName}拒絕第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr "{$userName}已代表{$reviewerName}接受第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewerFile"
+msgstr "已上載評審檔案。"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "已選擇默認審稿檔案。"
+
+msgid "log.copyedit.authorFile"
+msgstr "已上載經作者審稿版本的投稿。"
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName}已修改此文章的元資料。"
+
+msgid "log.editor.editorFile"
+msgstr "已上載經編輯版本的投稿。"
+
+msgid "log.editor.archived"
+msgstr "已典藏投稿{$submissionId}。"
+
+msgid "log.editor.restored"
+msgstr "已恢復投稿{$submissionId}至佇列。"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "同行評審文章"
+
+msgid "notification.type.editing"
+msgstr "編輯事件"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "有人留下有關「{$title}」編輯決定的意見。"
+
+msgid "notification.type.galleyModified"
+msgstr "「{$title}」的校對樣本已被修改。"
+
+msgid "notification.type.issuePublished"
+msgstr "新一期已出版。"
+
+msgid "notification.type.newAnnouncement"
+msgstr "已創建新公告。"
+
+msgid "notification.type.reviewing"
+msgstr "評審事件"
+
+msgid "notification.type.site"
+msgstr "網站事件"
+
+msgid "notification.type.submissionComment"
+msgstr "編輯已留下有關「{$title}」的意見。"
+
+msgid "notification.type.submissions"
+msgstr "投稿事件"
+
+msgid "notification.type.userComment"
+msgstr "讀者已為「{$title}」留下意見。"
+
+msgid "notification.type.public"
+msgstr "致公眾的公告"
+
+msgid "notification.savedIssueMetadata"
+msgstr "已儲存期號的出版元資料。"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "收到新的文章投稿，需要分配一位編輯。"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "拒絕存取！您未有被分配為此文章的審稿員。"
+
+msgid "user.authorization.noContext"
+msgstr "未能找符合您要求的期刊。"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "您現正嘗試取用一篇不屬於您的類別的文章。"
+
+msgid "user.authorization.invalidIssue"
+msgstr "讀取期號要求無效！"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "提交審稿要求無效或未有提交審稿！"
+
+msgid "grid.action.createContext"
+msgstr "創建新期刊"
+
+msgid "editor.navigation.issues"
+msgstr "期號"
+
+msgid "notification.type.approveSubmission"
+msgstr "此投稿尚待批准刊登在期號。"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "尚待批准。"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "在其他期刊註冊"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "隱藏其他期刊"
+
+msgid "article.view.interstitial"
+msgstr "請選取文章檔案下載。"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "已核准"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "尚待核准"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "校對樣本核准"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>核准此校對樣本作出版之用。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>移除此校對樣本的核准。</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "加入「{$journalName}」至索引"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "此搜尋不允許逐本期刊重新加入索引。"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "提供的期刊路徑\"{$journalPath}\"未能引導至一期刊。"
+
+msgid "editor.issues.backIssues"
+msgstr "過往期號"
+
+msgid "editor.issues.futureIssues"
+msgstr "未來期號"
+
+msgid "navigation.subscriptions"
+msgstr "訂閱"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName}已負責文章{$submissionId}的編輯工序。"
+
+msgid "catalog.sortBy"
+msgstr "文章次序"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "選擇如何安排在此類別的文章次序。"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr "OJS需要能夠存取一個SQL資料庫以儲存資料。見以上系統要求所列出的支援資料庫列表"
+"。在以下欄位，提供所採用的設定連接至資料庫。"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>重要！</h4>\n"
+"<p>安裝程式未能自動覆蓋設置檔案。在試圖使用系統前，請在適當的文字編輯器開啟<t"
+"t>config.inc.php</tt>及以下方內容取代原先內容。</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>成功安裝OJS。</p>\n"
+"<p>請使用上一頁輸入的用戶名稱及密碼<a href=\"{$loginUrl}\""
+">登入</a>，開始使用系統。</p>\n"
+"<p>如您想成為PKP社群的一部分，您可以：</p>\n"
+"<ol>\n"
+"<li>閱讀<a href=\"https://pkp.sfu.ca/category/news/\" target=\"_new\""
+">PKP網誌</a>及追蹤<a href=\"https://pkp.sfu.ca/category/News/feed/\" target="
+"\"_new\">RSS feed</a>跟進消息及更新。</li>\n"
+"<li>如您有任問題或意見，請到<a href=\"https://forum.pkp.sfu.ca\" target="
+"\"_new\">support forum</a>。</li>\n"
+"</ol>"
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName}已拒絕第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName}已接受第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "已上載經審稿版本的投稿。"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "新一篇文章「{$title}」已被提交。"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "「{$title}」的評審表格已被提交。"
