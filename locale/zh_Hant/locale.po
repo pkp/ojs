@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 04:01+0000\n"
+"PO-Revision-Date: 2022-09-30 05:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -961,3 +961,113 @@ msgstr ""
 
 msgid "reviewer.article.selectRecommendation"
 msgstr "選取一個建議及提交評審完成過程。您在選擇建議前，必須進入評審或上載一個檔案。"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "公開校對樣本認證已存在。"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "分配版面設計編輯"
+
+msgid "submission.layout.layoutComments"
+msgstr "版面意見"
+
+msgid "submission.layout.instructions"
+msgstr "版面指引"
+
+msgid "submission.layout.referenceLinking"
+msgstr "參考文獻連結"
+
+msgid "submission.proofreadingComments"
+msgstr "校對意見"
+
+msgid "submission.proofread.corrections"
+msgstr "校對修正"
+
+msgid "submission.logType.article"
+msgstr "文章"
+
+msgid "submission.logType.author"
+msgstr "作者"
+
+msgid "submission.logType.editor"
+msgstr "編輯"
+
+msgid "submission.logType.review"
+msgstr "評審"
+
+msgid "submission.logType.copyedit"
+msgstr "審稿"
+
+msgid "submission.logType.layout"
+msgstr "版面"
+
+msgid "submission.logType.proofread"
+msgstr "校對"
+
+msgid "submission.comments.copyeditComments"
+msgstr "審稿意見"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "致作者及編輯"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "致編輯"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "發送後，提供一個可編輯的密件副本供發送給評審員。"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "致作者及編輯"
+
+msgid "submission.comments.forEditor"
+msgstr "致編輯"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "儲存及發送電郵給編輯"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "儲存及發送電郵給作者"
+
+msgid "user.register.selectContext"
+msgstr "選擇註冊的期刊："
+
+msgid "user.register.noJournals"
+msgstr "您在此網站沒有期刊可註冊。"
+
+msgid "user.register.privacyStatement"
+msgstr "隱私聲明"
+
+msgid "user.register.registrationDisabled"
+msgstr "此期刊現不接受任何用戶註冊。"
+
+msgid "user.register.readerDescription"
+msgstr "期刊出版新一期時以電郵通知。"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "期刊一期變成開放取用時以電郵通知。"
+
+msgid "user.register.authorDescription"
+msgstr "可以提交項目給期刊。"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "願意為期刊投稿作同行評審。"
+
+msgid "user.register.reviewerDescription"
+msgstr "願意為網站投稿作同行評審。"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "取代版面設計編輯"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "編輯／作者通信"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"可以跟作者分享這些意見。<br />\n"
+"（儲存後，可增添其他意見。）"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "您所輸入的密碼長度不足。"
+
+msgid "user.register.reviewerInterests"
+msgstr "識別評審興趣（實質範圍及研究方法）："
