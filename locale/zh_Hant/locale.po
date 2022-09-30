@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 07:01+0000\n"
+"PO-Revision-Date: 2022-09-30 03:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -892,3 +892,30 @@ msgstr "如果評審員同意進行評審，將可查閱投稿"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
 msgstr "（如您希望在檔案提供註解給編輯，請儲存在您的硬碟及使用瀏覽／上載。）"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "重新提交予評審"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "在其他地方重新提交"
+
+msgid "reviewer.article.decision.decline"
+msgstr "拒絕投稿"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "見意見欄"
+
+msgid "reviewer.article.schedule"
+msgstr "進度"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "尚待評審投稿"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "檢查進度"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "評審員指引"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "檢查步驟"
