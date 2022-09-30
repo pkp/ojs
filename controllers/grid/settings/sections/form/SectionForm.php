@@ -181,10 +181,12 @@ class SectionForm extends PKPSectionForm
         // Populate/update the section object from the form
         $section->setTitle($this->getData('title'), null); // Localized
         $section->setAbbrev($this->getData('abbrev'), null); // Localized
+
         $reviewFormId = $this->getData('reviewFormId');
-        if ($reviewFormId === '') {
+        if (!$reviewFormId) {
             $reviewFormId = null;
         }
+
         $section->setReviewFormId($reviewFormId);
         $section->setIsInactive($this->getData('isInactive') ? 1 : 0);
         $section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
