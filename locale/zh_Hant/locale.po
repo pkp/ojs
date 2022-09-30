@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 07:01+0000\n"
+"PO-Revision-Date: 2022-09-30 08:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -1478,3 +1478,94 @@ msgstr ""
 "Project開發、支援及免費發行的開源期刊管理及出版程式。請到PKP網站<a href="
 "\"https://pkp.sfu.ca/\""
 ">了解更多此程式</a>。有關期刊及投稿相關問題，請直接聯絡此期刊。"
+
+msgid "payment.paymentSent"
+msgstr "付款已發送"
+
+msgid "payment.type.submission"
+msgstr "投稿費用"
+
+msgid "payment.type.publication"
+msgstr "出版費用"
+
+msgid "payment.type.publication.required"
+msgstr "出版費用到期付款。"
+
+msgid "payment.type.fastTrack"
+msgstr "快速評審費用"
+
+msgid "payment.type.membership"
+msgstr "個人會員資格費用"
+
+msgid "payment.type.purchaseArticle"
+msgstr "購買文章費用"
+
+msgid "payment.type.subscription"
+msgstr "訂閱費用"
+
+msgid "payment.type.donation"
+msgstr "捐款"
+
+msgid "payment.requestPublicationFee"
+msgstr "要求出版費用（{$feeAmount}）"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "未有要求出版費用。"
+
+msgid "payment.donation.makeDonation"
+msgstr "捐款"
+
+msgid "payment.submission.paySubmission"
+msgstr "支付投稿費用"
+
+msgid "payment.publication.payPublication"
+msgstr "付款出版"
+
+msgid "payment.publication.publicationPaid"
+msgstr "已支付出版費用"
+
+msgid "payment.membership.buyMembership"
+msgstr "購買個人會員資格"
+
+msgid "payment.membership.renewMembership"
+msgstr "更新個人會員資格"
+
+msgid "payment.membership.ends"
+msgstr "結束"
+
+msgid "payment.subscription.purchase"
+msgstr "付款訂閱"
+
+msgid "payment.subscription.renew"
+msgstr "更新訂閱"
+
+msgid "payment.subscription.expires"
+msgstr "過期"
+
+msgid "installer.appInstallation"
+msgstr "OJS安裝"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS升級"
+
+msgid "installer.maxFileUploadSize"
+msgstr "您的伺服器現准許上載檔案大小的上限：<strong>{$maxFileUploadSize}</strong>"
+
+msgid "payment.authorFees"
+msgstr "作者費用"
+
+msgid "payment.type.purchaseIssue"
+msgstr "購買期號費用"
+
+msgid "payment.notFound"
+msgstr "已提出付款請求，但請求已過期。詳情請聯絡期刊管理員。"
+
+msgid "installer.updatingInstructions"
+msgstr "如您現正升級一個安裝中的OJS，<a href=\"{$upgradeUrl}\">按此</a>繼續。"
+
+msgid "installer.allowFileUploads"
+msgstr "您的伺服器現准許上載檔案：<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr "此系統採用的優先語言。如您有意採用在此未有列出的語言，請諮詢OJS "
+"documentation。"
