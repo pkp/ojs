@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 05:01+0000\n"
+"PO-Revision-Date: 2022-09-30 06:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -1071,3 +1071,154 @@ msgstr "您所輸入的密碼長度不足。"
 
 msgid "user.register.reviewerInterests"
 msgstr "識別評審興趣（實質範圍及研究方法）："
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "是，我希望會收到所有我已註冊期刊相關的新出版物及公告的通知。"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr "是，我同意期刊按照<a href=\"{$privacyUrl}\" target=\"_blank\""
+">隱私聲明</a>收集及儲存我的資料。"
+
+msgid "user.register.form.missingContextConsent"
+msgstr "無論您在任何一本期刊註冊，您必須同意其隱私聲明。"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "您必須同意此網站的隱私聲明。"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "我的訂閱"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "訂閱狀態"
+
+msgid "user.subscriptions.statusInformation"
+msgstr "以下顯示現行及過期訂閱和相關過期日子。此外，以下狀態資訊也會在每一訂閱找到。"
+
+msgid "user.subscriptions.status"
+msgstr "狀態"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "說明"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "在訂閱激活前，需要提供額外資訊"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "在激活前必須檢視訂閱"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "已啟動手動付款，但尚未收到款項"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "一項網上付款已啟動，但已被取消或尚未完成"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "個體訂閱"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "院校訂閱"
+
+msgid "user.subscriptions.renew"
+msgstr "更新"
+
+msgid "user.subscriptions.purchase"
+msgstr "購買"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "購買新訂閱"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "購買個體訂閱"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "購買院校訂閱"
+
+msgid "user.subscriptions.expires"
+msgstr "到期日期：{$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "已過期：{$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "查看可供選擇訂閱種類"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "訂閱種類"
+
+msgid "user.subscriptions.form.membership"
+msgstr "會員資格"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "請選擇一個有效的訂閱種類。"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "此用戶已有個體訂閱。"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "所選取的訂閱種類需要會員資格資訊。"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "院校名稱"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "必須提供院校名稱。"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "郵寄地址"
+
+msgid "user.subscriptions.form.domain"
+msgstr "網域"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "所選擇的訂閱種類需要一個網域及／或IP範圍用作認證訂閱。"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "請輸入一個有效網域。"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP範圍"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "請輸入一個有效的IP範圍。"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "刪除"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "增添"
+
+msgid "search.browseAuthorIndex"
+msgstr "瀏覽作者索引"
+
+msgid "search.searchFor"
+msgstr "搜尋文章作"
+
+msgid "search.withinJournal"
+msgstr "當中"
+
+msgid "search.allJournals"
+msgstr "所有期刊"
+
+msgid "search.authorIndex"
+msgstr "瀏覽作者索引"
+
+msgid "search.authorDetails"
+msgstr "作者資訊"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "所選取的訂閱種類需要會員資格資訊。"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr "如在此輸入網域，IP範圍可選填。<br />有效值為網域名稱（例如lib.sfu.ca）。"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"如在此輸入IP範圍，網域可選填。<br />有效值為IP地址（例如142.58.103."
+"1）、IP範圍（例如142.58.103.1 - 142.58.103.4）、有通配符的IP範圍（例如142."
+"58.*.*）及有CIDR的IP範圍（例如142.58.100.0/24）。"
+
+msgid "article.pageTitle"
+msgstr "查看{$title}"
+
+msgid "article.pdf.title"
+msgstr "可攜式文件格式(PDF)"
