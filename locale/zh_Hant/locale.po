@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 03:01+0000\n"
+"PO-Revision-Date: 2022-09-30 04:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -919,3 +919,45 @@ msgstr "評審員指引"
 
 msgid "reviewer.article.reviewSteps"
 msgstr "檢查步驟"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "通知負責相關投稿的編輯"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "您是否願意進行評審而言。"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "如您將進行評審，請參閱以下評審員指引。"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "點選想下載的與此投稿相關的檔案及進行評審（在電腦或列印出來）。"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"申報您與此研究會否有利益衝突（見<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">利益衝突聲明</a>）。"
+
+msgid "reviewer.competingInterests"
+msgstr "利益衝突"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "點選圖示進入（或貼上）您為此投稿撰寫的評審。"
+
+msgid "reviewer.article.uploadFile"
+msgstr "另外，您可上載檔案供編輯及／或作者作諮詢用途。"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "設置或調整評審員建議。"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "尚未選取任何建議。您必須選取一個建議才能提交。"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"評審員指引會為評審員提供決定投稿是否適合在期刊出版的準則，也可包括任何關於有"
+"效及有建設性評審的特別指引。評審時，評審員會有兩個文字框，第一個為「致作者及"
+"編輯」，第二個為「致編輯」。此外，期刊管理員也可在同行評審表格下創建評審表格"
+"。在任何情況下，編輯也可選擇與作者分享評審內容。"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr "選取一個建議及提交評審完成過程。您在選擇建議前，必須進入評審或上載一個檔案。"
