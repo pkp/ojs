@@ -1,7 +1,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"PO-Revision-Date: 2022-09-30 09:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/importexport-pubmed/zh_Hant/>\n"
@@ -37,7 +37,7 @@ msgid "plugins.importexport.pubmed.cliError"
 msgstr "錯誤："
 
 msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr "無一期符合指明的期號ID\"{$issueId}\"。"
+msgstr "未能找到符合指明的期號ID\"{$issueId}\"。"
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr "無一文章符合指明的文章ID\"{$articleId}\"。"
+msgstr "未能找到符合指明的文章ID\"{$articleId}\"。"
