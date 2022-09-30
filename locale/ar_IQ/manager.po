@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-07-09 18:41+0000\n"
+"PO-Revision-Date: 2022-09-30 05:01+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "الوصول"
@@ -250,7 +250,6 @@ msgstr "محررو هذا القسم"
 msgid "manager.sections.confirmDelete"
 msgstr "هل أنت متأكد من رغبتك في حذف هذا القسم؟"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr "قبل حذف هذا القسم، عليك نقل المؤلَّفات المنشورة ضمنه إلى قسم آخر."
 
@@ -839,12 +838,10 @@ msgstr "صلاحية وصول المحكم"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "وصول المحكم بنقرة واحدة"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً مؤمناً يأخذهم مباشرة "
-"إلى صفحة التحكيم الخاصة بالطلب المعني دون الحاجة إلى تسجيل دخولهم. الوصول "
-"إلى صفحات الموقع الأخرى سيتطلب منهم تسجيل الدخول."
+"يمكن إرسال رابط مؤمن إلى المحكمين عبر دعوة البريد الالكتروني ليأخذهم مباشرة "
+"إلى صفحة التحكيم المعنية عند النقر عليه."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "تضمين رسائل التماس التحكيم لرابط الوصول المؤمن."
@@ -1793,9 +1790,11 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "لطفاً، قم بتهيئة إضافة DOI لتتمكن من إدارة واستعمال DOI في نظام المجلات المفتوحة:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "لطفاً، إختر المكونات التي ينبغي تعيين DOI لها."
+msgstr ""
+"لطفاً، إختر المكونات التي ينبغي تعيين معرف المكون الرقمي لها. أغلب المجلات "
+"تعين معرفات المكونات الرقمية للمقالات، ولكنك قد ترغب بتعيين تلك المعرفات إلى "
+"كل العناصر المنشورة."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "لطفاً، إختر مكونات النشر التي ستكون لها معرفات للمكونات الرقمية (DOI) معينة لها:"
@@ -2063,3 +2062,71 @@ msgstr "هذه الرسالة تُشعر مدير الإشتراكات بتجد�
 
 msgid "mailable.openAccessNotify.description"
 msgstr "هذه الرسالة تُعلم قارئاً مسجلاً بأن مدير المجلة قد أنشأ له اشتراكاً، وهي تتضمن رابط المجلة مع تعليمات الوصول إليها."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "الحروف الأولى للمجلة"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "اسم المؤسسة"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "عنوان المراسلة للمؤسسة"
+
+msgid "manager.institutions.noContext"
+msgstr "تعذر العثور على مجلة المؤسسة."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "إشعار الاشتراك"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "الاشتراك يوشك على الانتهاء"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "الاشتراك منتهي"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "الاشتراك المنتهي مؤخرًا"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "شراء الاشتراك الفردي"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "شراء الاشتراك المؤسساتي"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "تجديد الاشتراك الفردي"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "تجديد الاشتراك المؤسساتي"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "إشعار الوصول المفتوح"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "المؤسسة"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "يرجى اختيار مؤسسة صحيحة."
+
+msgid "stats.issueTOCViews"
+msgstr "معاينات جدول محتويات العدد"
+
+msgid "stats.issueGalleyViews"
+msgstr "معاينات الألواح الطباعية للعدد"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "ينبغي إنشاء المؤسسة قبل القيام بتسجيل إشتراكات جديدة."
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "النطاق"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "نطاق عناوين IP للمصادقة على الاشتراكات"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "إشعار إصدار العدد"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"هذا البريد الالكتروني يُرسل تلقائيًا إلى المستخدمين المسجلين عند نشر العدد "
+"الجديد."
