@@ -2,7 +2,7 @@
 # Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 06:01+0000\n"
+"PO-Revision-Date: 2022-09-30 07:01+0000\n"
 "Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/zh_Hant/>\n"
@@ -1222,3 +1222,259 @@ msgstr "查看{$title}"
 
 msgid "article.pdf.title"
 msgstr "可攜式文件格式(PDF)"
+
+msgid "article.download"
+msgstr "下載此PDF檔案"
+
+msgid "article.nonpdf.title"
+msgstr "文章下載"
+
+msgid "site.journalsHosted"
+msgstr "在此網站存放的期刊"
+
+msgid "site.journalView"
+msgstr "查看期刊"
+
+msgid "site.journalRegister"
+msgstr "註冊"
+
+msgid "site.journalCurrent"
+msgstr "當期期刊"
+
+msgid "site.noJournals"
+msgstr "現無期刊供閱覽。"
+
+msgid "current.current"
+msgstr "當期期刊"
+
+msgid "current.noCurrentIssue"
+msgstr "未有當期期刊"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "此期刊尚未出版任何一期。"
+
+msgid "archive.archives"
+msgstr "各期目錄"
+
+msgid "archive.archivesPageNumber"
+msgstr "各期目錄 - 頁碼{$pageNumber}"
+
+msgid "archive.browse"
+msgstr "瀏覽過往期刊"
+
+msgid "archive.issueUnavailable"
+msgstr "尚未開放"
+
+msgid "about.statistics"
+msgstr "數據"
+
+msgid "about.contact"
+msgstr "聯絡"
+
+msgid "about.aboutContext"
+msgstr "關於期刊"
+
+msgid "about.history"
+msgstr "期刊歷史"
+
+msgid "about.editorialTeam"
+msgstr "編輯委員會"
+
+msgid "about.editorialTeam.biography"
+msgstr "發展史"
+
+msgid "about.editorialPolicies"
+msgstr "編輯政策"
+
+msgid "about.focusAndScope"
+msgstr "重點及範圍"
+
+msgid "about.sectionPolicies"
+msgstr "分類政策"
+
+msgid "about.submissions"
+msgstr "投稿"
+
+msgid "about.onlineSubmissions.login"
+msgstr "登入"
+
+msgid "about.onlineSubmissions.register"
+msgstr "註冊"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "投稿請先{$login}或{$register}。"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission}或{$viewSubmissions}。"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "投稿至<a href=\"{$url}\">{$name}</a>類別。"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "投稿"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "查看您的尚待處理投稿"
+
+msgid "about.authorGuidelines"
+msgstr "作者指引"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "投稿準備核對清單"
+
+msgid "about.copyrightNotice"
+msgstr "版權資訊"
+
+msgid "about.privacyStatement"
+msgstr "隱私聲明"
+
+msgid "about.authorFees"
+msgstr "作者費用"
+
+msgid "about.peerReviewProcess"
+msgstr "同行評審過程"
+
+msgid "about.publicationFrequency"
+msgstr "出版頻率"
+
+msgid "about.openAccessPolicy"
+msgstr "開放取用政策"
+
+msgid "about.delayedOpenAccess"
+msgstr "延遲開放取用"
+
+msgid "about.archiving"
+msgstr "典藏"
+
+msgid "about.subscriptions"
+msgstr "訂閱"
+
+msgid "about.subscriptions.individual"
+msgstr "個體訂閱"
+
+msgid "about.subscriptions.institutional"
+msgstr "院校訂閱"
+
+msgid "about.subscriptionsContact"
+msgstr "訂閱聯絡"
+
+msgid "about.subscriptionTypes.name"
+msgstr "姓名"
+
+msgid "about.subscriptionTypes.format"
+msgstr "格式"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "持續時間"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "價錢"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "訂閱種類"
+
+msgid "about.memberships"
+msgstr "會員資格"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "更多有關OJS/PKP出版系統、平台及工序的資訊。"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS編輯及出版過程"
+
+msgid "about.aboutSoftware"
+msgstr "關於Open Journal Systems"
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems幫助"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS幫助"
+
+msgid "help.searchReturnResults"
+msgstr "返回搜尋結果"
+
+msgid "help.goToEditPage"
+msgstr "編輯{$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "感謝"
+
+msgid "donations.thankYouMessage"
+msgstr "非常感謝您的貢獻。"
+
+msgid "payment.loginRequired"
+msgstr "您必須登入才能付款。"
+
+msgid "payment.loginRequired.forArticle"
+msgstr "此項目需要訂閱或購買才可閱覽。如需認證訂閱、取用以前的購買項目或希望購買項目"
+"，請先登入期刊。"
+
+msgid "payment.loginRequired.forIssue"
+msgstr "此期需要訂閱或購買才可閱覽。如需認證訂閱、取用以前的購買項目或希望購買項目，"
+"請先登入期刊。"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "您必須先登入才可捐款。"
+
+msgid "payment.paid"
+msgstr "已付款"
+
+msgid "payment.unpaid"
+msgstr "尚未付款"
+
+msgid "payment.waived"
+msgstr "已免除"
+
+msgid "payment.payNow"
+msgstr "現在付款"
+
+msgid "payment.waive"
+msgstr "免除"
+
+msgid "payment.alreadyPaid"
+msgstr "已付款"
+
+msgid "payment.alreadyPaidMessage"
+msgstr "如您已經向期刊繳付您的款項完成投稿過程，請點選此框。投稿將會在付款後才開始評"
+"審程序。按上方「現在付款」查看付款指引。"
+
+msgid "payment.paymentReceived"
+msgstr "已收到款項"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>如您的瀏覽器有安裝PDF閱讀器插件（例如最近版本的<a href=\"https://get.adobe"
+".com/reader/\">Adobe Acrobat Reade</a>），您所選取的PDF檔案會在此顯示。</p>"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"您所選取的檔案應該會自動開始下載。如沒有開始，請點選以下連結。注意此檔案或需"
+"要特定的閱讀器或插件來讀取。<br /><br />如下載沒有自動開始，請<a href=\""
+"{$url}\">按此</a>。"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr "作為投稿步驟之一，作者需要檢查投稿符合所有以下項目，如未能符合以下指引投稿會"
+"被退還。"
+
+msgid "about.authorFeesMessage"
+msgstr "此期刊將收取以下作者費用。"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "此期刊內容將為開放取用可供查閱"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"此期刊揾用Open Journal Systems{$ojsVersion}，"
+"一個在GNU通用公眾特許條款下由Public Knowledge "
+"Project開發、支援及免費發行的開源期刊管理及出版程式。請到PKP網站<a href="
+"\"https://pkp.sfu.ca/\">了解更多此程式</a>。有關期刊及投稿相關問題，請直接<a "
+"href=\"{$contactUrl}\">聯絡此期刊</a>。"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"此期刊揾用Open Journal Systems{$ojsVersion}，"
+"一個在GNU通用公眾特許條款下由Public Knowledge "
+"Project開發、支援及免費發行的開源期刊管理及出版程式。請到PKP網站<a href="
+"\"https://pkp.sfu.ca/\""
+">了解更多此程式</a>。有關期刊及投稿相關問題，請直接聯絡此期刊。"
