@@ -1,8 +1,9 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-24 09:38+0000\n"
-"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"PO-Revision-Date: 2022-09-30 09:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/generic-usageEvent/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -13,4 +14,4 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.generic.usageEvent.displayName"
-msgstr "使用方式"
+msgstr "使用方式事件"
