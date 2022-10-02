@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-02 13:01+0000\n"
+"PO-Revision-Date: 2022-10-02 14:01+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/es_MX/>\n"
@@ -749,11 +749,11 @@ msgstr "Corrector/a de pruebas no asignado al envío"
 
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
-"<h4>¡NOTA!</h4> <p>El sistema no puede sobrescribir automáticamente el "
-"archivo de configuración. Para aplicar los cambios de configuración es "
-"necesario abrir <tt>config.inc.php</tt> en un editor de texto adecuado y "
-"reemplazar los contenidos por los del campo de texto que se muestran a "
-"continuación.</p>"
+"<h4>¡NOTA!</h4>\n"
+" <p>El sistema no puede sobrescribir automáticamente el archivo de "
+"configuración. Para aplicar los cambios de configuración es necesario abrir "
+"<tt>config.inc.php</tt> en un editor de texto adecuado y reemplazar los "
+"contenidos por los del campo de texto que se muestran a continuación.</p>"
 
 msgid "submission.event.layout.layoutGalleyCreated"
 msgstr "Maquetación de galerada actualizada"
@@ -775,3 +775,18 @@ msgid "reader.subscriptionRequiredLoginText"
 msgstr ""
 "Es necesario estar suscrito para acceder a este elemento. Acceda a la "
 "revista con sus datos de usuario para verificar la suscripción."
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Gestión de suscripción"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Suscripciones institucionales"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipos de suscripción"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Módulos de galerada del artículo"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Suscripciones individuales"
