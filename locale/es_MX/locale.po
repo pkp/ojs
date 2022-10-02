@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-08 01:54+0000\n"
+"PO-Revision-Date: 2022-10-02 13:01+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/es_MX/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.authorVersion"
 msgstr "Versión del autor/a"
@@ -121,7 +121,7 @@ msgid "article.discipline"
 msgstr "Disciplina académica y subdisciplinas"
 
 msgid "article.suppFilesAbbrev"
-msgstr "Archivos comp."
+msgstr "Archivos compl."
 
 msgid "article.suppFiles"
 msgstr "Archivo(s) complementario(s)"
@@ -653,3 +653,125 @@ msgstr "Decisión del editor/a enviada"
 
 msgid "submission.event.editor.editorUnassigned"
 msgstr "Editor/a no asignado al envío"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevancia"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Corrección de originales final completada"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Asignación de corrección de pruebas completada"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Corrector/a de pruebas asignado al envío"
+
+msgid "reader.openAccess"
+msgstr "Acceso abierto"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor/a"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Suscripción o acceso de pago"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularidad (histórico)"
+
+msgid "search.results.orderBy"
+msgstr "Ordenar resultados por"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Asignación de corrección de pruebas iniciada"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "search.results.similarDocuments"
+msgstr "documentos similares"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Maquetador/a asignado al envío"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comentarios sobre este artículo"
+
+msgid "search.results.orderBy.article"
+msgstr "Título del artículo"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Maquetador/a no asignado al envío"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularidad (último mes)"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Asignación de maquetación completada"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Corrección de originales inicial completada"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Documento de revisiones del corrector/a de originales actualizado"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Documento de corrección de originales actualizado"
+
+msgid "comments.authenticated"
+msgstr "por <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Documento de revisiones del corrector/a de pruebas actualizado"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Asignación de maquetación iniciada"
+
+msgid "search.results.orderBy.journal"
+msgstr "Título de la revista"
+
+msgid "search.results.orderBy.issue"
+msgstr "Número"
+
+msgid "search.results.orderBy.date"
+msgstr "Fecha de publicación"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendente"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendente"
+
+msgid "reader.subscriptionAccess"
+msgstr "Acceso mediante suscripción"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Corrector/a de pruebas no asignado al envío"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>¡NOTA!</h4> <p>El sistema no puede sobrescribir automáticamente el "
+"archivo de configuración. Para aplicar los cambios de configuración es "
+"necesario abrir <tt>config.inc.php</tt> en un editor de texto adecuado y "
+"reemplazar los contenidos por los del campo de texto que se muestran a "
+"continuación.</p>"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Maquetación de galerada actualizada"
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"No se pudo establecer el DOI en estado de obsoleto para el siguiente asunto: "
+"{$itemTitle}. El DOI debe tener el estado \"Registrado\" o \"Enviado\"."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"No se pudo marcar el DOI registrado para {$pubObjectTitle}. El número debe "
+"publicarse antes de que se pueda actualizar el estado."
+
+msgid "reader.subscribersOnly"
+msgstr "Sólo suscriptores"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Es necesario estar suscrito para acceder a este elemento. Acceda a la "
+"revista con sus datos de usuario para verificar la suscripción."
