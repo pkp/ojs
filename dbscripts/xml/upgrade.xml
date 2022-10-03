@@ -189,6 +189,7 @@
 		<code function="installEmailTemplate" key="EDITOR_DECISION_BACK_FROM_COPYEDITING" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_CANCEL_REVIEW_ROUND" locales="en_US" />
 		<code function="installEmailTemplate" key="REVIEW_RESEND_REQUEST" locales="en_US" />
+		<code function="installEmailTemplate" key="DISCUSSION_NOTIFICATION" locales="en_US" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 
