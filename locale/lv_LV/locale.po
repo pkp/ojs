@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-30 12:01+0000\n"
+"PO-Revision-Date: 2022-10-03 06:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "lv_LV/>\n"
@@ -1485,7 +1485,7 @@ msgid "notification.type.issuePublished"
 msgstr "Žurnāla numurs ir publicēts."
 
 msgid "notification.type.galleyModified"
-msgstr "\"{$title}\" saliktnis ir pārveidots ."
+msgstr "Ir pārveidots \"{$title}\" saliktnis."
 
 msgid "notification.type.editorDecisionComment"
 msgstr "Ir atstāts komentārs par redaktora lēmumu attiecībā uz \"{$title}\"."
