@@ -13,9 +13,9 @@
 <version>
 	<application>ojs2</application>
 	<type>core</type>
-	<release>3.3.0.12</release>
-	<tag>3_3_0-12</tag>
-	<date>2022-09-20</date>
+	<release>3.3.0.13</release>
+	<tag>3_3_0-13</tag>
+	<date>2022-10-04</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-3.3.0-12.tar.gz</package>
+	<package>http://pkp.sfu.ca/ojs/download/ojs-3.3.0-13.tar.gz</package>
 </version>

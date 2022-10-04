@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-12
+Git tag: 3_3_0-13
 
-Release date: September 20, 2022
-================================
+Release date: October 4, 2022
+=============================
 
 Configuration Changes
 ---------------------
@@ -28,6 +28,11 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientid
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
+
+3.3.0-13 Build
+--------------
+	#8299: Use helper method in galley grids
+	#8307: Validate author IDs against submissions/publications
 
 3.3.0-12 Build
 --------------
