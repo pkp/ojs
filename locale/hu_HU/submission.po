@@ -1,18 +1,19 @@
+# Molnár Tamás <molnart@bibl.u-szeged.hu>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2020-02-27 15:39+0000\n"
-"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"PO-Revision-Date: 2022-09-28 14:01+0000\n"
+"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"submission/hu/>\n"
+"submission/hu_HU/>\n"
 "Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.title"
 msgstr "Egy cikk beküldése"
@@ -231,119 +232,116 @@ msgstr ""
 msgid "submission.publication"
 msgstr "Cikk"
 
-
 msgid "publication.status.published"
 msgstr "Publikált"
-
 
 msgid "submission.status.scheduled"
 msgstr "Ütemezett"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Ütemezésből visszavonva"
 
-
 msgid "submission.publications"
 msgstr "Publikációk"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Számban történő pulikáláskor a copyright  év automatikusan beállításra kerül."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "A copyright  év automatikusan beállításra kerül a publikáció dátuma szerint."
 
-
 msgid "publication.datePublished"
 msgstr "Publikálás dátuma"
-
 
 msgid "publication.editDisabled"
 msgstr "Ez a verzió publikálásra került és nem szerkeszthető."
 
-
 msgid "publication.event.published"
 msgstr "A cikk publikált."
-
 
 msgid "publication.event.scheduled"
 msgstr "A cikk publikálásra volt ütemezve."
 
-
 msgid "publication.event.unpublished"
 msgstr "A cikk publikálását visszavonták."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Új verzió került publikálásra."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Új verzió volt publikálásra ütemezve."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "A publikálásból egy verzió el lett távolítva."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Ennek a publikációnak a beküldése nem található."
-
 
 msgid "publication.publish"
 msgstr "Publikál"
 
-
 msgid "publication.publish.requirements"
 msgstr "Az alábbi feltételeknek kell teljesülnie, mielőtt publikálhatóvá válik."
 
-
 msgid "publication.required.declined"
 msgstr "Elutasított beküldés nem publikálható."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "A cikknek a technikai szerkesztés vagy előállítás fázisában kell lennie, "
 "hogy publikálható legyen."
 
-
 msgid "submission.license.description"
 msgstr ""
 "A licenc automatikusan beállításra kerül a(z) <a href='{$licenseUrl}' "
 "target='_blank'>{$licenseName}</a> számára, amikor publikálásra kerül."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "A szerzői jog automatikusan hozzárendelésre kerül a {$copyright}-hoz "
 "publikáláskor."
 
-
 msgid "submission.copyrightOther.description"
 msgstr "Szerzői jogok hozzárendelése publikált cikkekhez az alábbi fél számára."
-
 
 msgid "publication.unpublish"
 msgstr "Publikálásból visszavonva"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Biztosan nem szeretné publikálni?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Biztosan nem szeretné publikálásra ütemezni?"
 
-
 msgid "publication.version.details"
 msgstr "A publikáció részletei ennél a verziónál: {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Publikálási megbeszélések"
 
+msgid "publication.changeIssue"
+msgstr "Folyóiratszám változtatása"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Ez hozzá lett rendelve ehhez <a href=\"{$issueUrl}\">{$issueName}</a> de nem "
+"lett megjelentetésre ütemezve."
+
+msgid "publication.assignToissue"
+msgstr "Folyóiratszámhoz rendelés"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inaktív)"
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Ez csak egy előnézet, még nem lett megjelentetve. <a href=\"{$url}\">Kézirat "
+"megtekintése</a>"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Minden megjelentetési feltétel rendben van. Azonnal publikálásra kerül, "
+"mivel a megjelentetési dátumnak ez lett beállítva: {$datePublished}. "
+"Biztosan meg szeretné jelentetni ezt?"

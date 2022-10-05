@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-19 12:38+0000\n"
+"PO-Revision-Date: 2022-09-21 11:38+0000\n"
 "Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
@@ -45,7 +45,8 @@ msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
 "Bu sistemdə dəstəyi quraşdırmaq üçün əlavə dilləri seçin. Dillər "
 "yerləşdirilən jurnallarda istifadə edilməzdən əvvəl quraşdırılmalıdır. Yeni "
-"dillərə dəstəyin əlavə edilməsi haqqında məlumat üçün AJS sənədlərinə baxın."
+"dillərə dəstəyin əlavə edilməsi haqqında məlumat üçün OSJ-nın sənədlərinə "
+"baxın."
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Əlavə etdiyiniz yol başqa jurnal tərəfindən istifadə olunur."

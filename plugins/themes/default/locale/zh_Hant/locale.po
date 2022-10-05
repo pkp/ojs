@@ -1,0 +1,64 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 09:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/themes-default/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.default.name"
+msgstr "默認主題"
+
+msgid "plugins.themes.default.description"
+msgstr "主題設定為默認主題。"
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "印刷體裁"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "選取一個適合此期刊的字體。"
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "顏色"
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "在主頁顯示期刊簡介。"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "選取標頭(Header)的顏色。"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "標頭(Header)背景圖片"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "顯示主頁圖片為標頭(Header)背景。"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr "上載主頁圖片後在標頭(Header)背景顯示，而非一般在主頁的位置。"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "不向讀者展示投稿使用統計。"
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "使用長條圖來展示統計。"
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "使用量統計展示選項"
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "使用折線圖來展示統計。"
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "一 二 三 四 五 六 七 八 九 十 十一 十二"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "下載"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "尚未有下載數據。"

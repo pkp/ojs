@@ -2,7 +2,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-20 16:31+0000\n"
+"PO-Revision-Date: 2022-09-30 12:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "lv_LV/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Atlasiet failus, kas jānosūta uz recenzēšanas posmu."
@@ -261,7 +261,7 @@ msgid "submission.submit.contributorRole"
 msgstr "Iesniedzēja loma"
 
 msgid "submission.submit.privacyStatement"
-msgstr "Paziņojums par konfidencialitāti"
+msgstr "Privātuma atruna"
 
 msgid "submission.submit.submissionChecklistDescription"
 msgstr ""
@@ -323,7 +323,7 @@ msgid "grid.action.availableArticleGalley"
 msgstr "Padarīt šo saliktni pieejamu"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Šis saliktnis lasītājiem  <em>būs pieejams.</em> </p>"
+msgstr "<p>Šis saliktnis lasītājiem <em>būs pieejams.</em> </p>"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr "<p>Šis saliktnis lasītājiem <em>vairs nebūs pieejams.</em> </p>"
@@ -396,7 +396,7 @@ msgstr "Iesniegt rakstu"
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
-"Nav iespējams izveidot DOI šim iesniegtajam materiālam:  {$pubObjectTitle}. "
+"Nav iespējams izveidot DOI šim iesniegtajam materiālam: {$pubObjectTitle}. "
 "Tas nepastāv pašreizējā žurnāla kontekstā."
 
 msgid "doi.submission.issueMissing.representation"

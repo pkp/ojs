@@ -1,0 +1,49 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-24 09:38+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/generic-announcementFeed/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "公告消息插件"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "此插件產生RSS/Atom網站整合消息作期刊公告之用。"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "設定"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "在所有期刊頁面顯示消息連結。"
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "只在主頁及公告頁面顯示消息連結。"
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "只在公告頁面顯示消息連結。"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "限制消息至"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "最近公告。"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "請輸入一個正數整數予最近公告之用。"
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom標誌"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1標誌"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2標誌"

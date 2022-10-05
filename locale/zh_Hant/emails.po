@@ -1,0 +1,121 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/emails/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "emails.notification.subject"
+msgstr "從{$contextName}收到的新通知"
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr "密碼重置確認"
+
+msgid "emails.passwordReset.subject"
+msgstr "密碼重置"
+
+msgid "emails.userRegister.subject"
+msgstr "期刊註冊"
+
+msgid "emails.userValidateContext.subject"
+msgstr "認證您的帳戶"
+
+msgid "emails.userValidateSite.subject"
+msgstr "認證您的帳戶"
+
+msgid "emails.submissionAckNotUser.subject"
+msgstr "投稿確認"
+
+msgid "emails.editorAssign.subject"
+msgstr "您被分配為投稿{$contextName}的編輯"
+
+msgid "emails.reviewRequest.subject"
+msgstr "邀請評審"
+
+msgid "emails.reviewResponseOverdueAuto.subject"
+msgstr "您會否願意評審此投稿？"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "要求評審已修改的投稿"
+
+msgid "emails.reviewCancel.subject"
+msgstr "已取消提出評審要求"
+
+msgid "emails.reviewReinstate.subject"
+msgstr "您會否能夠再為{$contextName}評審項目？"
+
+msgid "emails.reviewConfirm.subject"
+msgstr "能夠評審"
+
+msgid "emails.reviewDecline.subject"
+msgstr "未能評審"
+
+msgid "emails.reviewRemind.subject"
+msgstr "提示請求完成評審"
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "提示請求完成評審"
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "您的投稿已被{$contextName}接受"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "我們現正為您的投稿進行審稿"
+
+msgid "emails.layoutComplete.subject"
+msgstr "校對樣本完成"
+
+msgid "emails.emailLink.subject"
+msgstr "或有興趣的文章"
+
+msgid "emails.subscriptionNotify.subject"
+msgstr "訂閱通知"
+
+msgid "emails.openAccessNotify.subject"
+msgstr "發布即時開放取用"
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "通知訂閱到期"
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "訂閱過期"
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "訂閱過期 - 最後提示"
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "訂閱付費：個體"
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "訂閱付費：院校"
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "訂閱更新：個體"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "訂閱更新：院校"
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "引文編輯"
+
+msgid "emails.citationEditorAuthorQuery.description"
+msgstr "此電郵讓審稿員向作者要求提供參考文獻的額外資料。"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "已上載修正版本"
+
+msgid "emails.notificationCenterDefault.subject"
+msgstr "有關{$contextName}的訊息"
+
+msgid "emails.notificationCenterDefault.body"
+msgstr "請輸入您的訊息。"
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "{$year}年{$month}月的編輯記錄"

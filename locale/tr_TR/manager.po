@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-08-04 12:41+0000\n"
-"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"PO-Revision-Date: 2022-09-28 12:01+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
 "Language: tr_TR\n"
@@ -811,14 +811,10 @@ msgstr "Hakem Erişimi"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Tek Tıkla Hakem Erişimi"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet "
-"edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL "
-"adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu "
-"seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri "
-"eklemelerine izin vermez."
+"Hakemlere, e-posta ile hakemlik daveti gönderilirken otomatik olarak güvenli "
+"bir bağlantı gönderilir."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Hakem Puanlama"
@@ -1473,7 +1469,6 @@ msgstr "Herhangi bir abonelik türü oluşturulmadı."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Abonelik türü başarıyla oluşturuldu."
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Bu bölümü silmeden önce, bu bölümde yayımlanmış makaleleri diğer bölümlere "
@@ -2063,9 +2058,10 @@ msgstr ""
 "Sistemde DOI'leri kullanmak ve yönetebilmek için lütfen DOI eklentisini "
 "yapılandırın:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Lütfen DOI'lerin atanacağı nesneleri seçiniz."
+msgstr ""
+"Hangi öğelere DOI atanacağını seçin. Çoğu dergi makalelere DOI atar, ancak "
+"yayınlanan tüm makalelere DOI atamak isteyebilirsiniz."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:"
@@ -2349,3 +2345,53 @@ msgstr "Sayı İçindekiler Gösterimleri"
 
 msgid "manager.institutions.noContext"
 msgstr "Bu kurumun dergisi bulunamadı."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "Dergi baş harfleri"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Kurum adı"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Kurum adresi"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Alan adı"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Abonelik kimlik doğrulaması için IP aralıkları"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Abonelik Bildirimi"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abonelik Yakında Sona Eriyor"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abonelik Süresi Doldu"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abonelik Süresi Dolan Son"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Bireysel Abonelik Satın Alın"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Kurumsal Abonelik Satın Alın"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Bireysel Aboneliği Yenile"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Kurumsal Abonoliği Yenile"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Açık Erişim Bildirimi"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Sayı Yayımlandı Bildirimi"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Bu e-posta, yeni sayı yayımlandığında kayıtlı kullanıcılara otomatik olarak "
+"gönderilir."

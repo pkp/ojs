@@ -1,8 +1,9 @@
 # HKBU Library <libms@hkbu.edu.hk>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-20 09:38+0000\n"
-"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"PO-Revision-Date: 2022-09-29 04:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
 "Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -50,7 +51,7 @@ msgstr "選手配置數位物件識別碼(DOI)至那些項目。大多數期刊�
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
-"使用默認樣式<br />期數為%j.v%vi%i<br />文章為%j.v%vi%i.%a<br />校對樣本為%j."
+"使用默認樣式<br />期號為%j.v%vi%i<br />文章為%j.v%vi%i.%a<br />校對樣本為%j."
 "v%vi%i.%a.g%g。"
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
@@ -87,7 +88,7 @@ msgid "manager.managementPages"
 msgstr "管理設定頁面"
 
 msgid "manager.payment.action"
-msgstr "行動"
+msgstr "執行項目"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "這會取代您以往所設置的任何指定區性的期刊設定"
@@ -167,7 +168,7 @@ msgid "manager.payment.options.purchaseArticleFee"
 msgstr "購買文章"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "購買期數"
+msgstr "購買期號"
 
 msgid "manager.payment.options.text"
 msgstr "付款方式說明"
@@ -209,13 +210,13 @@ msgid "manager.people.allSiteUsers"
 msgstr "從此網站此期刊登記一個用戶"
 
 msgid "manager.people.showNoRole"
-msgstr "顯示無特定角色的用戶"
+msgstr "顯示無特定身份的用戶"
 
 msgid "manager.people.allUsers"
 msgstr "所有登記用戶"
 
 msgid "manager.people.confirmRemove"
-msgstr "是否從此期刊移除此用戶？此動作會取消此用戶在此期刊中的所有角色。"
+msgstr "是否從此期刊移除此用戶？此動作會取消此用戶在此期刊中的所有身份。"
 
 msgid "manager.people.enrollSyncJournal"
 msgstr "包括期刊"
@@ -227,15 +228,15 @@ msgid "manager.people.roleEnrollment"
 msgstr "{$role} 登記"
 
 msgid "manager.people.syncUserDescription"
-msgstr "登記同步會為所有已在特定期刊登記特定角色的用戶，在此期刊登記至相同角色。此功"
+msgstr "登記同步會為所有已在特定期刊登記特定身份的用戶，在此期刊登記至相同身份。此功"
 "能允許同一批用戶（例如審稿員）在不同期刊同步。"
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "不需摘要"
 
 msgid "manager.section.noSectionEditors"
-msgstr "尚未有分類編輯。請先透過管理＞設定＞用戶＞&amp; 角色 "
-"增添最少一位用戶至此角色。"
+msgstr "尚未有分類編輯。請先透過管理＞設定＞用戶＞&amp; 身份 "
+"增添最少一位用戶至此身份。"
 
 msgid "manager.sections.assigned"
 msgstr "此分類編輯"
@@ -291,7 +292,7 @@ msgid "manager.sections.form.abbrevRequired"
 msgstr "需提供一個此分類的簡稱"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "請確認每一個分類編輯配置已選取最少一個複選框。"
+msgstr "請確認每一個分類編輯配置已選取最少一個勾選框。"
 
 msgid "manager.sections.form.reviewFormId"
 msgstr "請確認你已選取一個有效的評審方式。"
@@ -300,10 +301,10 @@ msgid "manager.sections.form.titleRequired"
 msgstr "需提供一個此分類的標題。"
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "在期數內的目錄省略分類項目的作者姓名。"
+msgstr "在期號內的目錄省略分類項目的作者姓名。"
 
 msgid "manager.sections.hideTocTitle"
-msgstr "在卷數內的目錄省略分類項目的作者姓名。"
+msgstr "在卷號內的目錄省略分類項目的作者姓名。"
 
 msgid "manager.sections.identifyType"
 msgstr "辨認在此分類出版的項目為"
@@ -366,7 +367,7 @@ msgid "manager.setup.contextName"
 msgstr "期刊名稱"
 
 msgid "manager.setup.pageHeader"
-msgstr "期刊頁面標頭（Header）"
+msgstr "期刊頁面標頭(Header)"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "內容"
@@ -393,7 +394,7 @@ msgid "manager.setup.addSponsor"
 msgstr "增添支持機構"
 
 msgid "manager.setup.alternateHeader"
-msgstr "替換標頭（Header）"
+msgstr "替換標頭(Header)"
 
 msgid "manager.setup.announcements"
 msgstr "公告"
@@ -434,8 +435,1664 @@ msgstr "此期刊主頁載有默認的瀏覽連結。您可透過以下一個或
 "按以下順序出現。"
 
 msgid "manager.setup.alternateHeaderDescription"
-msgstr "此外，除了標題及標識，也可以添加HTML版本的標頭（Header）至以下空白欄位。如不"
-"需要，請留空欄位。"
+msgstr "此外，除了標題及標誌，也可以添加HTML版本的標頭(Header)至以下空白欄位。如不需"
+"要，請留空欄位。"
 
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "要求審稿員提交每個評審時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr "期刊管理員會為所有用戶註冊帳戶。編輯或分類編輯可為評審員註冊帳戶。"
+
+msgid "manager.setup.discipline"
+msgstr "學術領域及分支領域"
+
+msgid "manager.setup.disciplineDescription"
+msgstr "此適用於期刊為跨領域及／或作者會提交涉獵多學科的項目的情況。"
+
+msgid "manager.setup.disciplineExamples"
+msgstr "（例如：歷史、教育、社會學、心理學、文化研究、法律學）"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "提供與此期刊相關學科的例子"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "增添此期的目錄（如有）。"
+
+msgid "manager.setup.editorDecision"
+msgstr "編輯決定"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "彈回電郵地址"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "如有任何發送失敗的電郵，此電郵地址會收到一個相關錯誤的訊息。"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"為免未能傳送電郵至彈回電郵地址，網站管理員必須允許網站設置檔案內的<code>allow"
+"_envelope_sender</code>選項。OJS documentation表示，此或需設定伺服器。"
+
+msgid "manager.setup.emails"
+msgstr "電郵地址辨識"
+
+msgid "manager.setup.emailSignature"
+msgstr "簽署"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "允許公告"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "在首頁顯示"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "顯示在首頁公告的數目。如無公告需顯示，請留空。"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "訪客可以在期刊網站註冊帳戶。"
+
+msgid "manager.setup.focusAndScope"
+msgstr "重點及範圍"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr "向作者、讀者及圖書館管理員描述文章範疇及其他期刊會出版的項目。"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "讓作者可以把其著作編入索引"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "此國際標準期刊號(ISSN)無效。"
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "必須輸入優先聯絡電郵。"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "必須輸入期刊簡稱的起首字母。"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "必須輸入期刊名稱。"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "必須輸入每個投稿所需的評審員數目。"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "必須輸入支援用聯絡電郵。"
+
+msgid "manager.setup.generalInformation"
+msgstr "一般資訊"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "步驟1：查看仔細資料"
+
+msgid "manager.setup.guidelines"
+msgstr "指引"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "步驟3：引導投搞"
+
+msgid "manager.setup.identity"
+msgstr "期刊身分"
+
+msgid "manager.setup.information"
+msgstr "資訊"
+
+msgid "manager.setup.information.description"
+msgstr "供圖書館管理員及潛在作者和讀者參考的簡述。增添此資訊方塊後，相關描述會出現在"
+"網站的側邊欄。"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "致作者"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "致圖書館管理員"
+
+msgid "manager.setup.information.forReaders"
+msgstr "致讀者"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "此等預先準備的電郵末端會增添以下簽署，由系統以期刊名義發出。"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "可以發出公告通知讀者有關期刊的消息及活動。發出後公告會出現在公告頁面。"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "必須輸入優先聯絡人姓名。"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "必須輸入支援者姓名。"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr "提供即時或暫緩開放取用的期刊，出版物需在適合時間包含一個共享創意特許條款 ("
+"Creative Commons license)。"
+
+msgid "manager.setup.initialIssue"
+msgstr "最初期號"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr "視乎所選取的格式，辨識在OJS出版的第一期的卷號、期號，及／或年份："
+
+msgid "manager.setup.institution"
+msgstr "院校"
+
+msgid "manager.setup.itemsDescription"
+msgstr "可增添出現在頁面最上方的巡覽列項目至現有組合（主頁、關於、用戶主頁等）。"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "每頁項目數量"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr "在另一頁面羅列項目前，限制列表中顯示項目數量（例如：投稿、用戶或編輯配置）。"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "期刊簡稱"
+
+msgid "manager.setup.journalArchiving"
+msgstr "期刊保存"
+
+msgid "manager.setup.contextSummary"
+msgstr "期刊簡介"
+
+msgid "manager.setup.contextAbout"
+msgstr "關於期刊"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "期刊主頁內容"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr "主頁載有默認的瀏覽連結。您可透過以下一個或多個選項增添主頁內容，內容會按以下"
+"順序出現。注意透過巡覽列中當期期刊連結，可連接至最新一期期刊。"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "期刊主頁標頭(Header)"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "期刊主頁標頭(Header)"
+
+msgid "manager.setup.contextInitials"
+msgstr "期刊簡稱"
+
+msgid "manager.setup.selectCountry"
+msgstr "選擇期刊所在位置，或期刊／出版社郵寄地址的國家。"
+
+msgid "manager.setup.journalLayout"
+msgstr "期刊版面編排"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"在此選擇一個期刊主題及版面編排元素。你也可上載期刊的式樣表單(stylesheet)以取"
+"代原先系統式樣表單的樣式數據及主題式樣表單（如您已選取了一個主題）。"
+
+msgid "manager.setup.journalLogo"
+msgstr "期刊標誌"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "期刊標誌"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "期刊頁面註腳"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr "您可上載一個圖片版本的標題及標誌（.gif, .jpg或."
+"png格式）應用在主頁。此圖片會取代相關的文字版本。"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"包含有關您的期刊任何讀者、作者或審稿員會有興趣的內容。例如您的開放取用(Open A"
+"ccess)政策、期刊重點及範圍、版權資訊、贊助者公開資訊、私隱聲明及如有LOCKSS或C"
+"LOCKSS檔案保存系統。"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr "這是期刊網站的註腳。如想修改或更新註腳，請在下方空格貼上HTML代碼。例如另一巡"
+"覽列、計數器等。此註腳將出現在每個頁面。"
+
+msgid "manager.setup.journalPolicies"
+msgstr "步驟2：期刊政策"
+
+msgid "manager.setup.journalSetup"
+msgstr "期刊設置"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "您已更新期刊設定。"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "式樣表單(stylesheet)格式無效。只接受.css格式。"
+
+msgid "manager.setup.journalTheme"
+msgstr "期刊主題"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "期刊縮圖"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "放置在眾期刊列表的一個小型標誌或其他可代表期刊圖像。"
+
+msgid "manager.setup.contextTitle"
+msgstr "期刊名稱"
+
+msgid "manager.setup.keyInfo"
+msgstr "重要資訊"
+
+msgid "manager.setup.keyInfo.description"
+msgstr "請提供一個簡短的期刊描述及選用編輯、管理人和其他編輯團隊的成員。"
+
+msgid "manager.setup.labelName"
+msgstr "標籤名稱"
+
+msgid "manager.setup.lists"
+msgstr "列表"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "允許PKP PN插件"
+
+msgid "manager.setup.plnDescription"
+msgstr "PKP Preservation Network "
+"(PN)提供免費的保存服務予任何達到幾個基本要求的OJS期刊。"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr "查看<button>插件設定</button>以接受使用PKP PN條款。"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP保存網絡（PKP Preservation Network, 簡稱PN）"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network "
+"(PN)提供免費的保存服務予任何達到幾個基本要求的OJS期刊。現正開發應用於OJS "
+"3的PKP PN插件，屆時可在插件一覽選取使用。"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS及CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"允許LOCKSS透過LOCKSS<a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a>頁面於參與的圖書館儲存及安置期刊期刊內容。"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS許可證將出現於關於期刊頁面內檔案保存下方：<a href=\"http://www.lockss."
+"org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS許可證</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS許可證說明"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"允許CLOCKSS透過CLOCKSS<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a>頁面於參與的圖書館儲存及安置期刊期刊內容。"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS許可證將出現於關於期刊頁面內檔案保存下方：<a href=\"https://clockss."
+"org\" target=\"_blank\">CLOCKSS許可證</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS許可證說明"
+
+msgid "manager.setup.look"
+msgstr "外觀"
+
+msgid "manager.setup.look.description"
+msgstr "主頁標頭、內容、期刊標頭、註腳、巡覽列及樣式表。"
+
+msgid "manager.setup.management"
+msgstr "管理"
+
+msgid "manager.setup.management.description"
+msgstr "取用及保安、日程計劃、公告、審稿、版面設計及校對。"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "管理基本編輯步驟"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "管理及出版設定"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "步驟4：管理期刊"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"識辨6-10個將會註冊及貯藏期刊的圖書館。例如：轉至編輯或委員會成員工作的院校，"
+"及／或已參與LOCKSS的院校。見<a href=\"https://www.lockss.org/join-lockss/"
+"partner-communities\" target=\"_blank\">LOCKSS社群</a>。"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"到<a href=\"https://clockss.org\" target=\"_blank\""
+">CLOCKSS網站</a>註冊CLOCKSS服務。"
+
+msgid "manager.setup.navigationBar"
+msgstr "巡覽列"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "增添或刪除巡覽列項目。"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr "網址必須為完整URL（例如：http://www.example."
+"com）而非網站的其中一部分路徑（例如：/manager/setup）"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "無成功上載圖像。"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "無成功上載樣式表。"
+
+msgid "manager.setup.note"
+msgstr "備註"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr "<strong>備註：</strong>現已取消投稿確認電郵。如需此功能，請允許在電郵項目中的"
+"「投稿確認」電郵。"
+
+msgid "manager.setup.numPageLinks"
+msgstr "頁面連結"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "限制另一頁面列表中顯示連結數量。"
+
+msgid "manager.setup.onlineIssn"
+msgstr "網上國際標準期刊號(ISSN)"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "頁碼選項"
+
+msgid "manager.setup.policies"
+msgstr "政策"
+
+msgid "manager.setup.policies.description"
+msgstr "重點、同行評審、私隱、保安及額外關於項目。"
+
+msgid "manager.setup.printIssn"
+msgstr "印刷國際標準期刊號(ISSN)"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "校對指引"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"所有校對員、作者、版面設計員及分類編輯將能在投稿編輯階段閱覽校對指引。以下為H"
+"TML模式之默認指引，期刊管理員可以在任何階段編輯或取代指引（以HTML格式或純文字"
+"）。"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "出版日程"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"若是某期的一部份及收錄在其目錄中，期刊項目可集合出版。或者，各獨立項目也可以"
+"準備好後加添至當期期刊的目錄中，立即出版。建議在「關於期刊」內列明此期刊使用"
+"的系統及出版頻率，讓讀者知悉。"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "出版日程"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "期刊內容識別"
+
+msgid "manager.setup.publisher"
+msgstr "出版社"
+
+msgid "manager.setup.referenceLinking"
+msgstr "參考連結"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "用戶必須先註冊及登入以瀏覽期刊網站。"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "評審指引"
+
+msgid "manager.setup.reviewOptions"
+msgstr "評審選項"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "自動電郵提示"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "評審期限（以週計）"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "限制檔案取用"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr "評審員必須先同意負責評審，才可閱覽及取用投稿稿件。"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "評審員取用"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "一鍵式評審員取用"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr "評審員會收到一封載有安全連結的邀請電郵，按連結後可自動登入。"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "在發送予評審員的電邸包括一條安全連結。"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr "編輯會在每次評審後，分五等評價評審員的評審質素。"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "評審員評分"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "評審員提示"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "評審政策"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "搜尋索引"
+
+msgid "manager.setup.searchDescription.description"
+msgstr "提供一個有關期刊的簡介（50-300字），當搜尋引擎在搜尋結果列出期刊時會顯示此簡"
+"介。"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "分類及分類編輯"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "（如沒有增添分類，所有項目會默認遞交至文章分類。）"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "期刊編輯會在編輯過程中看到。"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "用戶必須先註冊及登入以閱覽開放取用內容。"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"網站管理員必須允許OJS設置檔案內<tt>scheduled_tasks</tt>選項，以傳送自動電郵提"
+"示。根據OJS documentation，您可能需要另外設定伺服器配置。"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"我們鼓勵提交<a href=\"{$sitemapUrl}\" target=\"_blank\""
+">網站地圖(sitemap)</a>，此有助如Google的搜尋引擎發現和顯示您的網站。"
+
+msgid "manager.setup.sectionsDescription"
+msgstr "如需創建或更改期刊內分類（例如：文章、書評等等），請到分類管理頁面。<br /"
+"><br />作者投稿至期刊項目會分配到……"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "會考慮分配項目至那一個期刊分類。"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "必定顯示校對樣本連結及標明限制取用。"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "網站存取"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "查閱文章內容"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "期刊網站的5個步驟"
+
+msgid "manager.setup.subjectExamples"
+msgstr "（例如：光合作用;黑洞;四色地圖定理;貝葉斯定理）"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "關鍵字詞"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "提供關鍵字詞的例子予作者作為指引"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "投稿指引"
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "投稿準備核對清單"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"在投稿前，請作者先檢查已完成投稿準備核對清單上每一項目。清單也會出現在關於期"
+"刊內作者指引的頁面。您可在下方編輯清單內容，作者繼續投稿前，必須已剔選所有項"
+"目。"
+
+msgid "manager.setup.submissions"
+msgstr "投稿"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr "此期刊現正停止徵稿。請到步驟設定允許投稿。"
+
+msgid "manager.setup.enableOai"
+msgstr "允許OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"透過<a href=\"https://www.openarchives.org/\">Open Archives "
+"Initiative</a>提供元資料予第三方索引服務。"
+
+msgid "manager.setup.typeExamples"
+msgstr "（例如：歷史學探究、準實驗研究、文學分析、問卷調查／訪問）"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "類別（方法／方式）"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "唯一識別碼"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr "可為文章及每期期刊添加一個識別數字或字串，或使用一個註冊系統，例如數位物件識"
+"別符(DOI)系統。"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "期刊所採用的編輯／評審委員會。"
+
+msgid "manager.setup.useThumbnail"
+msgstr "縮圖"
+
+msgid "manager.setup.useImageTitle"
+msgstr "標識圖像"
+
+msgid "manager.setup.userRegistration"
+msgstr "用戶註冊"
+
+msgid "manager.setup.useTextTitle"
+msgstr "標題"
+
+msgid "manager.statistics.statistics"
+msgstr "期刊統計數據"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "接受"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "拒絕"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "再遞交"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "評審所需日數"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "出版所需日數"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "出版項目"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "檢查讀者在關於期刊頁面可查閱項目。"
+
+msgid "manager.statistics.statistics.note"
+msgstr "備註：經同行評審之投稿百份比，總和未必等於100%，因為重新投稿項目可能被接納、"
+"拒絕或仍在評審階段。"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "已出版期刊"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "總投稿數目"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "同行評審"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "註冊讀者"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "配置數目"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "評審員"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "編輯分數"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "評審員數目"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "選取用作計算此期刊同行評審統計的分類。"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "文章下載數量"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "文章摘要頁面閱覽數量"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "文章摘要頁面閱覽及下載數量"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "期刊主頁閱覽數量"
+
+msgid "manager.subscriptionPolicies"
+msgstr "訂閱政策"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "延遲開放取用"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "訂閱到期"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "完全到期"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr "讀者會在訂閱到期時，受限於取用所有訂閱內容。"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "部分到期"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr "讀者會在訂閱到期時，受限於取用當期期刊內容，但仍可取訂閱到期日前出版的訂閱內"
+"容。"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} 月份"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} 週"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "在訂閱到期後透過電郵通知讀者"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "在訂閱到期後透過電郵通知讀者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "在訂閱到期前透過電郵通知讀者。"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "在訂閱到期前透過電郵通知讀者。"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "訂閱到期通知"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "提供此學術領域相關研究類別、方法及方式的例子"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "文章閱覽數目（只供作者查閱）"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS會為每本期刊計算以下統計數字。「評審所需日數」由投稿日（或分配評審版本）計"
+"算至最初編輯決定，「出版所需日數」則量度接受投稿上載檔案至出版日。"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "期刊目錄頁面閱覽數量"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr "當訂閱到期時，讀者可能會未能取用所有訂閱內容，或可在到期日前繼續取用訂閱內容"
+"。"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr "可在訂閱到期前和後，均發送自動電郵提示（期刊管理員可以在OJS的電郵頁面內編輯）"
+"給訂閱讀者。"
+
+msgid "manager.setup.submissions.description"
+msgstr "作者指引、版權及索引（包括註冊）。"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr "為免作者投新文章至期刊，您可在<a href=\"{$url}\""
+">期刊分類</a>設定頁面內，取消接受期刊各分類的投稿。"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "選取以下一項："
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期後的多少個月份。"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期前的多少個月份。"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期後的多少週。"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "請提供一個有效數值用作為訂閱到期前的多少週。"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr "註冊讀者可選取，在期刊某期變成開放取用時，透過電郵收到該期的目錄。"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>備註：</strong>網站管理員必須允許OJS設置檔案內<tt>scheduled_tasks</tt"
+">選項，以啟動此選項。根據OJS documentation，您可能需要另外設定伺服器配置以支"
+"持這些功能（可能未能應用在所有伺服器）。"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>備註：</strong>網站管理員必須允許OJS設置檔案內<tt>scheduled_tasks</tt"
+">選項，以啟動此選項。根據OJS documentation，您可能需要另外設定伺服器配置以支"
+"持這些功能（可能未能應用在所有伺服器）。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "網上付款通知"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr "可在完成網上付款後，發送自動電郵提示（期刊管理員可以在OJS的電郵頁面內編輯）給"
+"訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr "在每一網上付費個體訂閱後透過電郵通知訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr "在每一院校網上付費訂閱後透過電郵通知訂閱管理員（建議）。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr "<strong>備註：</strong>院校網上訂閱付款需提供已供核準的網域和IP範圍以及訂閱管"
+"理員所啟用的訂閱。"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "訂閱期刊的開放取用選項"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr "訂閱期刊可提供「延遲開放取用」出版內容，及允許「作者自行典藏」（更者均可吸引"
+"更多讀者閱讀及引用內容）。"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "訂閱資訊"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "訂閱管理員"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "這些聯絡資訊將於訂閱頁面列出供顧客參考，如他們有相關疑問。"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "請輸入一個有效的電郵地址。"
+
+msgid "manager.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.individualSubscriptions"
+msgstr "個體訂閱"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "院校訂閱"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "在每一網上付費更新個體訂閱後透過電郵通知訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "在每一院校網上付費更新訂閱後透過電郵通知訂閱管理員。"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr "<strong>備註：</strong>期刊管理員必須在讀者收費允許網上付款模組，包括訂閱的網"
+"上付款，以啟用這些選項。"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"訂閱種類及費用結構將與訂閱管理員的姓名和聯絡方法，一同在訂閱頁面顯示。也可在"
+"此添加有關訂閱的其他資訊，如付款方式或給予發展中國家訂閱讀者的支援。"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "是否確定更新此訂閱？"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "是否確定刪除此訂閱？"
+
+msgid "manager.subscriptions.summary"
+msgstr "訂閱概要"
+
+msgid "manager.subscriptions.create"
+msgstr "創建新訂閱"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "創建"
+
+msgid "manager.subscriptions.renew"
+msgstr "更新"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "結束"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "完結日期"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "開始"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "開始日期"
+
+msgid "manager.subscriptions.domain"
+msgstr "網域"
+
+msgid "manager.subscriptions.edit"
+msgstr "更改訂閱"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "更改"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "顯示狀態"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "全部"
+
+msgid "manager.subscriptions.form.status"
+msgstr "狀態"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "必須有訂閱狀態。"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "請選擇一個有效訂閱狀態。"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "必須有訂閱種類。"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "請選擇一個有效訂閱種類。"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "院校"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "請選手一個有效院校。"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "開始日期"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "必須有訂閱開始日期。"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "請選擇一個有效訂閱開始日期。"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "必須有訂閱結束日期。"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "此為不會過期的訂閱種類；請勿指定結束日期。"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "請選擇一個有效訂閱結束日期。"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr "備註：所有以下更變會應用在全系統用戶個人資料。"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "用戶"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "聯絡"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "必須一個用戶。"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "請選擇一個有效用戶。"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "發送一個載有其用戶名稱及訂閱詳情的電郵給用戶。"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "會員資格"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "參考編號"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "所選取的訂閱種類需要會員資格資訊。"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "備註"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "網域"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "院校名稱"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "必須有一個院校名稱。"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "郵寄地址"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr "選取訂閱種類必須有一個網域或／和一個IP範圍作驗證訂閱之用。"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "請輸入一個有效網域。"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP範圍"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "請輸入一個有效的IP範圍。"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "刪除"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "增添"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "儲存及創建另一個"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr "如需發送通知電郵予用戶，請先在期刊設置中註明訂閱聯絡人姓名及電郵地址。"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "此用戶已訂閱此期刊。"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "建立新訂閱前，必須先創建一個訂閱種類。"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "建立新訂閱前，必須先創建一個院校選項。"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP範圍"
+
+msgid "manager.subscriptions.membership"
+msgstr "會員資格"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "參考編號"
+
+msgid "manager.subscriptions.notes"
+msgstr "備註"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "無訂閱"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "選擇用戶"
+
+msgid "manager.subscriptions.select"
+msgstr "選取"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "成功建立訂閱。"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptions.user"
+msgstr "用戶"
+
+msgid "manager.subscriptions.contact"
+msgstr "聯絡人姓名"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "院校名稱"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "結束日期"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "此為不會過期的訂閱種類；請勿指定開始日期。"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "請選擇一個有效國家。"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr "如訂閱種類要求訂閱用戶必須為某組織或機構成員，請輸入相關會員資格資訊。"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr "如在此輸入了網域，可選填IP範圍。<br />有效的數值為網域名稱 （例如 ：lib.sfu."
+"ca）。"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"如在此輸入了IP範圍，可選填網域。<br />有效的數值包括IP地址（例如：142.58.103."
+"1）、IP範圍（例如：142.58.103.1 - 142.58.103."
+"4）、包含通配符的IP範圍（例如：142.58.*.*）及包含CIDR的IP範圍（例如：142.58."
+"100.0/24）。"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "選擇訂閱聯絡"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr "期刊管理員、編輯、分類編輯、版面設計編輯、審稿員及校對員可自動獲得訂閱取用特"
+"權。"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr "警告！所有此訂閱種類的訂閱會自動被刪除。是否確認繼續及刪除此訂閱種類？"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "價錢"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "個體"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "院校"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "創建新訂閱種類"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "創建"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "編輯訂閱種類"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "編輯"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "價錢"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "輸入一個數值（例如：40或40.00），不需任何符號（例如：$）。"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "價錢必須為正數的數值。"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "貨幣"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "必須提供貨幣單位。"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "必須提供價錢。"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "請選擇一個有效貨幣。"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "說明"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "在此日期後過期"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "月份（例如12）"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "永不過期"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "請使用所提供的選項。"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "持續時間"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "持續時間"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "所訂閱的月份數目（例如12）。"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "持續時間必須為正數數值。"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "必須提供持續時間。"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "格式"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "必須提供訂閱種類格式。"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "請選擇一個有效訂閱種類格式。"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "訂閱"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "個體（用戶可透過登入認證）"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "院校（用戶可透過網域或IP地址認證）"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "請使用所提供的選項。"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr "訂閱必須提供會員資訊（例如：組織、機構、聯會等等）"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "選項"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "儲存及創建另一個"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "種類名稱"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "此訂閱名稱已存在。"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "必須提供訂閱名稱。"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "無創建任何訂閱種類。"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "訂閱種類創建成功。"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "現有及過往用戶所選擇訂閱說明頁面連結。"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "此連結只會在訪客登入後才顯示。"
+
+msgid "manager.setup.categories"
+msgstr "範疇"
+
+msgid "manager.setup.categories.description"
+msgstr "從以上列表選取最適合範疇。讀者可按範疇瀏覽完整期刊內容。"
+
+msgid "grid.category.path"
+msgstr "路徑"
+
+msgid "grid.action.addSection"
+msgstr "添加分類"
+
+msgid "manager.publication.library"
+msgstr "出版圖書館"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "以以下年份新文章版權年份為基礎"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr "文章：默認年份會按文章出版日期而定，如同「立即出版」。"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "期號：默認年份會按該期出版日期而定。"
+
+msgid "manager.setup.resetPermissions"
+msgstr "重設文章權限"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr "是否確認重置所有文章的權限設定？此舉不能夠還原。"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "成功重置文章權限。"
+
+msgid "grid.genres.title.short"
+msgstr "組成部分"
+
+msgid "grid.genres.title"
+msgstr "文章組成部分"
+
+msgid "plugins.importexport.common.settings"
+msgstr "設定"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI插件設定"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "文章"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "期"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "校對樣本"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "尚未達至插件要求"
+
+msgid "manager.subscriptionTypes"
+msgstr "訂閱種類"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "請使用所提供的勾選框。"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "請勿設定此訂閱種類可在網站供公眾閱覽。"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "所提供的訂閱種類說明頁面連結。"
+
+msgid "manager.setup.section.description"
+msgstr "在已出版期刊中的文章會按主題或內容種類（例如：評論文章、研究等等）歸類至相應"
+"分類。"
+
+msgid "grid.genres.description"
+msgstr ""
+"這些組成部分將用作命名檔案之用及將會出現在上載檔案時的下拉選單。設定類型 ## "
+"允許用戶聯繫檔案至整個投稿99Z 或按數字的指定組成部分（例如：02）。"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr "若要使用此插件，請往「公眾辨認」插件類別，允許及設置DOI插件和指明一個有效的DO"
+"I字首。"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "此插件尚未完全安裝。"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr "在DOI公眾辨認插件中現無出版項目被選擇分配DOI，所以此插件無法寄存或導出。"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "密碼"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "請注意密碼將以純文字方式儲存，即無加密。"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "任何期號"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "任何狀態"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "無寄存"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "已紀錄註冊"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "已註冊"
+
+msgid "plugins.importexport.common.action"
+msgstr "執行項目"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "導出"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "註冊"
+
+msgid "plugins.importexport.common.validation"
+msgstr "導出及註冊前確認XML。"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "無已選項目。"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "未能轉換已選項目。"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "無效XML："
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "所輸入的檔案 {$param} 未能讀取。"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "註冊失敗！DOI註冊伺服器回報 '{$param}' 錯誤。"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "註冊成功！"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "確認成功！"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "確認失敗。"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "欠缺以 {$path} 為路徑的期刊DOI字首。"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "未能找到指定項目。"
+
+msgid "stats.issueTOCViews"
+msgstr "該期的目錄瀏覽數目"
+
+msgid "stats.issueGalleyViews"
+msgstr "該期的檔案瀏覽數目"
+
+msgid "stats.publicationStats"
+msgstr "文章統計"
+
+msgid "stats.publications.details"
+msgstr "文章詳細內容"
+
+msgid "stats.publications.none"
+msgstr "無文章的統計數據符合此參數要求。"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "摘要閱覽總數（按日期）"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "檔案閱覽總數（按日期）"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} 篇文章的{$count}"
+
+msgid "stats.publications.abstracts"
+msgstr "摘要"
+
+msgid "stats.publications.galleys"
+msgstr "檔案"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "導出該期／各期結果"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "未能分析期刊檔案"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "期刊名稱"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "期刊主頁網址"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "期刊優先聯絡人姓名"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "期刊起首字母簡稱"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "期刊自動電郵之簽署"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "期刊優先聯絡電郵地址"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "付款種類"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "付款銀碼"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "網站名稱（當寄存多於一本期刊）"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "訂閱者姓名、所屬機構、電話號碼及電郵地址"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "訂閱管理人的聯絡詳情"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "訂閱頁面的連結"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "訂閱完結日期"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "訂閱人會員資格資訊"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "院校名稱"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "院校郵寄地址"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "網域"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "訂閱認證的IP範圍"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "認證電郵（註冊期刊）"
+
+msgid "doi.description"
+msgstr "此插件允許配置數位物件識別碼(DOI)至OJS內各期、文章及其檔案。"
+
+msgid "doi.manager.settings.description"
+msgstr "請設定DOI插件至可以在OJS管理及使用DOI："
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "紀錄已註冊"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "所生產的檔案 {$param} 未能寫入。"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "發送副本至在期刊設定標明的優先聯絡人。"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "發送投稿確認副本至此期刊的優先聯絡人。"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "此期刊查無優先聯絡人。您可在<a href=\"{$url}\""
+">期刊設定</a>輸入一個基本聯絡人。"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "付款銀碼貨幣，例如美金"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "訂閱種類、名稱、期限及價錢的概要"
+
+msgid "mailable.validateEmailContext.description"
+msgstr "當用戶在期刊註冊及設定要求認證電郵地址時，此電郵會自發送至他們的電郵地址。"
+
+msgid "doi.manager.settings.explainDois"
+msgstr "請選擇將會配置數位物件識別碼(DOI)之出版物："
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "文章校對樣本"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "文章校對樣本，例如出版的PDF"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI字首"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "必須提供DOI字首，字首需使用10.xxxx格式。"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "各期用"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "各文章用"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "各校對樣本用"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "例如：vol%viss%ipp%p 可使用如10.1234/vol3iss2pp230的DOI"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "請輸入每期DOI字尾的樣式。"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "請輸入每篇文章DOI字尾的樣式。"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "請輸入每份校對樣本DOI字尾的樣式。"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "重置DOI"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "是否確認刪除所有現有DOI?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "配置DOI"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr "如您改變了你的DOI設定，已配置的DOI將不會受到影響。當儲存了DOI設定，可按此按鈕"
+"以清除所有現存DOI，然後新的設定將影響現有項目。"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr "是否確認配置DOI給所有已出版但尚未配置DOI項目？"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"配置DOI給期刊所有已出版但尚未配置DOI項目。此舉不可應用獨立字尾設定。如你已在"
+"上方更改DOI設定，請先儲存更變，才進行配置。配置DOI或需花費一定時間，視乎期刊"
+"出版項目數量。"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "註冊代理機構"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "請選擇你存放DOI的註冊代辦機構。"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "沒有"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI必須為{$prefix}起首。"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "配置"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "期"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "文章"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "校對樣本"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "未能配置DOI，因為未有設定字尾。"
+
+msgid "doi.editor.missingIssue"
+msgstr "您必須分配此出版項目至其中一期才可產生DOI。"
+
+msgid "doi.editor.missingParts"
+msgstr "由於欠缺部分DOI樣式資訊，您未能產生DOI。您或需配置出版項目至一期、設定一個出"
+"版社ID或輸入頁碼。"
+
+msgid "doi.editor.patternNotResolved"
+msgstr "未能配置DOI，因為有未能識別的樣式。"
+
+msgid "doi.editor.canBeAssigned"
+msgstr "您所見的為DOI預覽。從勾選框選取及儲存配置DOI的方式。"
+
+msgid "doi.editor.assigned"
+msgstr "已配置DOI至 {$pubObjectType} 。"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr "DOI字尾已應用在另一出版項目。請為每一項目輸入一個獨特的DOI字尾。"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "清除"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "是否確認刪除已存在DOI？"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "清除該期項目DOI"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "是否確認刪除該期項目已有DOI？"
+
+msgid "doi.editor.assignDoi"
+msgstr "配置DOI {$pubId} 至此 {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "未能配置DOI，因為未有設定字尾。"
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "未能配置DOI {$pubId} ，因為有未能識別的樣式。"
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"已配置DOI {$pubId} 。如需編輯DOI，請到<a href=\"{$doiManagementLink}\""
+">DOI管理頁面</a>。"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr "透過以下選項清除現編配至此期所有項目（文章及校對樣本）的DOI。"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} 將在出版時配置。"
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI必須為{$doiPrefix}起首。"
+
+msgid "doi.editor.preview.publication"
+msgstr "此出版項目的DOI將會是{$doi}。"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "尚未配置DOI至此出項項目。"
+
+msgid "doi.editor.preview.galleys"
+msgstr "校對樣本：{$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "項目"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "出版項目／校對樣本出版後，只可編輯DOI"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "您所遞交的DOI無效"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "出版項目出版後，只可編輯DOI"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "您要求的校對樣本並非此出版項目的一部份。"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "未能找到您所要求的期號"
+
+msgid "doi.manager.submissionDois"
+msgstr "文章DOI"
+
+msgid "doi.manager.issueDois"
+msgstr "發行DOI"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr "此電郵通知作者其投稿在評審階段前被拒，因為該投稿未能符合此期刊的出版要求。"
+
+msgid "manager.institutions.noContext"
+msgstr "未能找到此院校的期刊。"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "投稿通知"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr "此電郵通知一註冊用戶管理員已為他創建訂閱。電郵內有期刊網址及取用指引。"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "訂閱將會到期"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "訂閱已到期"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "購買院校訂閱"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr "此電郵通知訂閱管理員其中一個院校訂閱已經網上付款。電郵內有訂閱概要及已付款訂"
+"閱的快捷連結。"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "購買個體訂閱"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr "此電郵通知訂閱管理員其中一個個體訂閱已經網上付款。電郵內有訂閱概要及已付款訂"
+"閱的快捷連結。"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "更新個體訂閱"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr "此電郵通知訂閱管理員其中一個個體訂閱已經網上更新。電郵內有訂閱概要及已更新訂"
+"閱的快捷連結。"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "更新院校訂閱"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr "此電郵通知訂閱管理員其中一個院校訂閱已經網上更新。電郵內有訂閱概要及已更新訂"
+"閱的快捷連結。"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "開放取用通知"
+
+msgid "mailable.openAccessNotify.description"
+msgstr "如用戶曾要求收取此期變成開放取用的通知，此電郵將發送給相關用戶。"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "期刊期號出版通知"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr "如有新一期出版，此電郵將發送至註冊用戶。"

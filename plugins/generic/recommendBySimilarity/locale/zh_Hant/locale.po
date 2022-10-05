@@ -1,0 +1,28 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 10:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/generic-recommendBySimilarity/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "推薦類似文章"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr "此插件會在文章摘要頁面增添一個有類似文章的列表。"
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "類似文章"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "您也可{$advancedSearchLink}此文章。"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "開始進階搜尋"

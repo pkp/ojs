@@ -1,8 +1,9 @@
 # Mirko Spiroski <mspiroski@id-press.eu>, 2021.
+# Jovan Jonovski <jonovski@hotmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-01 01:52+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2022-09-27 23:01+0000\n"
+"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "mk_MK/>\n"
 "Language: mk_MK\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
@@ -485,3 +486,6 @@ msgstr ""
 "Насловната страница што барате да се избрише одговара на број од различно "
 "списание. Молам бидете сигурни дека работите со вистинското списание, "
 "користите коректен ИД на бројот и обидете се повторно."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Побарај плаќање"

@@ -1,8 +1,9 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-24 12:45+0000\n"
-"Last-Translator: Gints Buda <gints.buda@gmail.com>\n"
+"PO-Revision-Date: 2022-09-29 13:01+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "lv_LV/>\n"
 "Language: lv_LV\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
@@ -90,7 +91,7 @@ msgid "editor.navigation.issueArchive"
 msgstr "Agrākie izdevumi"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Iestatīt aktuālo izdevumu"
+msgstr "Iestatīt jaunāko izdevumu"
 
 msgid "grid.action.addIssueGalley"
 msgstr "Izveidot izdevuma saliktni"
@@ -159,7 +160,7 @@ msgid "editor.issues.publicArticleIdExists"
 msgstr "Nav iespējams saglabāt publisko identifikatoru rakstam:"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Vai tiešām vēlaties iestatīt šo izdevumu kā aktuālo?"
+msgstr "Vai tiešām vēlaties iestatīt šo izdevumu kā jaunāko?"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Vai tiešām vēlaties atcelt šī publicētā izdevuma publicēšanu?"
@@ -306,7 +307,7 @@ msgstr ""
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
 "Jebkuras datnes, kas jau ir augšupielādētas jebkurā iesniegšanas posmā, var "
-"pievienot korektūras sarakstam, atzīmējot izvēles rūtiņu “Iekļaut”  un "
+"pievienot korektūras sarakstam, atzīmējot izvēles rūtiņu “Iekļaut” un "
 "noklikšķinot uz “Meklēt”: visas pieejamās datnes tiks uzskaitītas un tās "
 "varēs izvēlēties iekļaušanai."
 
@@ -384,7 +385,7 @@ msgid "editor.issues.numArticles"
 msgstr "Vienības"
 
 msgid "editor.issues.currentIssue"
-msgstr "Aktuālais numurs"
+msgstr "Jaunākais numurs"
 
 msgid "editor.issues.editIssue"
 msgstr "Numura pārvaldība: {$issueIdentification}"
