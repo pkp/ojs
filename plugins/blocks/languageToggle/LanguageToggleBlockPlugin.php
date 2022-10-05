@@ -14,7 +14,6 @@
 namespace APP\plugins\blocks\languageToggle;
 
 use PKP\facades\Locale;
-use PKP\i18n\LocaleMetadata;
 use PKP\plugins\BlockPlugin;
 use PKP\session\SessionManager;
 
@@ -76,7 +75,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin
                 $locales = $site->getSupportedLocaleNames();
             }
         } else {
-            $locales = array_map(fn (LocaleMetadata $locale) => $locale->getDisplayName(), Locale::getLocales());
+            $locales = Locale::getFormattedDisplayNames();
             $templateMgr->assign('languageToggleNoUser', true);
         }
 
