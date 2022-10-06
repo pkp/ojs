@@ -1,11 +1,12 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
+# Thierry Liu <tra@kreega.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-11-04 14:06+0000\n"
-"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"PO-Revision-Date: 2022-10-06 10:01+0000\n"
+"Last-Translator: Thierry Liu <tra@kreega.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit"
 msgstr "新稿件"
@@ -153,7 +154,7 @@ msgid "author.submit.form.sectionRequired"
 msgstr "请未稿件选择一个合适的期刊栏目。"
 
 msgid "submission.submit.privacyStatement"
-msgstr "期刊隐私声明"
+msgstr "本期刊隐私声明"
 
 msgid "author.submit.reorderInstructions"
 msgstr "重新排列作者在发表时候的顺序。"
@@ -178,8 +179,8 @@ msgstr "地理空间位置、年代或历史涵盖范围，和/或研究样本�
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"English=en；French=fr；中文=zh <a href=\"http://www.loc.gov/standards/iso639-2/"
-"langcodes.html\" target=\"_blank\">其他代码</a>。"
+"English=en；French=fr；中文=zh <a href=\"http://www.loc.gov/standards/"
+"iso639-2/langcodes.html\" target=\"_blank\">其他代码</a>。"
 
 msgid "author.submit.form.authorRequired"
 msgstr "至少需要一个作者。"
