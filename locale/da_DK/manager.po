@@ -712,6 +712,7 @@ msgstr "Adgang for bedømmere"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Aktivér adgang for bedømmere ved hjælp af ét klik"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Bedømmere kan få tilsendt et sikkert link i e-mail-invitationen, som giver "

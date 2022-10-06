@@ -641,6 +641,7 @@ msgstr "Ebaluazioa egitea onartu ondoren bakarrik izango dute ebaluatzaileek bid
 msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Ebaluatzaileen sarbidea"
 
+#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr "<strong>Oharra:</strong> Ebaluatzaileei mezu elektroniko bat bidaltzen zaienean bidalketa bat ebaluatzeko gonbita egiteko, zuzenean bidalketaren orrira eramaten duen URL bat jarriko da mezuan (saioa hasteko behar diren gainerako orrietarako sarbidearekin). Segurtasun-arrazoiengatik, aukera honekin editoreek ezingo dute helbide elektronikorik aldatu edo CC edo BCC helbiderik gehitu ebaluatzaileei gonbitak bidali aurretik."
 

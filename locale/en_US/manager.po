@@ -661,7 +661,7 @@ msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
-msgstr "The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon."
+msgstr "The PKP Preservation Network (PN) provides free preservation services for any OJS journal that meets a few basic criteria. To archive your journal in the PN, ask your administrator to install the PKP|PN Plugin from the Plugin Gallery."
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS and CLOCKSS"
@@ -829,7 +829,7 @@ msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "One-click Reviewer Access"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "Reviewers can be sent a secure link in the email invitation, which will allow them to access the review without logging in. Access to other pages requires them to log in."
+msgstr "Reviewers can be sent a secure link in the email invitation, which will log them in automatically when they click the link."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Include a secure link in the email invitation to reviewers."

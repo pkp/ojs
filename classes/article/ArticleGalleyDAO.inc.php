@@ -14,6 +14,9 @@
  * @brief Operations for retrieving and modifying ArticleGalley objects.
  */
 
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Query\Builder;
+
 import('classes.article.ArticleGalley');
 import('lib.pkp.classes.db.SchemaDAO');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
@@ -50,6 +53,24 @@ class ArticleGalleyDAO extends SchemaDAO implements PKPPubIdPluginDAO {
 	 */
 	function newDataObject() {
 		return new ArticleGalley();
+	}
+
+	/**
+	 * @copydoc RepresentationDAO::getById()
+	 */
+	function getById($representationId, $publicationId = null) {
+		$row = Capsule::table($this->tableName)
+			->where($this->primaryKeyColumn, (int) $representationId)
+			->when(!is_null($publicationId), function(Builder $query) use ($publicationId) {
+				$query->where('publication_id', (int) $publicationId);
+			})
+			->first();
+		if (!$row) {
+			return null;
+		}
+		// Convert to an assoc array
+		$rowArray = json_decode(json_encode($row), true);
+		return $this->_fromRow($rowArray);
 	}
 
 	/**
