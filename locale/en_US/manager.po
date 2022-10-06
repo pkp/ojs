@@ -1734,6 +1734,15 @@ msgstr "Abstracts"
 msgid "stats.publications.galleys"
 msgstr "Files"
 
+msgid "stats.publications.downloadReport.description"
+msgstr "Download a CSV/Excel spreadsheet with usage statistics for articles matching the following parameters."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Download Articles"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "The number of abstract views and file downloads for each article."
+
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr "Send a copy of the submission acknowledgement email to this journal's primary contact."
 
