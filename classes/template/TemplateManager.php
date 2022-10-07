@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TemplateManager
+ *
  * @ingroup template
  *
  * @brief Class for accessing the underlying template engine.
@@ -19,8 +20,12 @@ namespace APP\template;
 
 use APP\core\Application;
 use APP\file\PublicFileManager;
+use PKP\context\Context;
+use PKP\facades\Locale;
+use PKP\i18n\LocaleMetadata;
 use PKP\security\Role;
 use PKP\session\SessionManager;
+use PKP\site\Site;
 use PKP\template\PKPTemplateManager;
 
 class TemplateManager extends PKPTemplateManager
@@ -46,8 +51,9 @@ class TemplateManager extends PKPTemplateManager
              * installer pages).
              */
 
-            $context = $request->getContext();
-            $site = $request->getSite();
+            $context = $request->getContext(); /** @var Context $context */
+            $site = $request->getSite(); /** @var Site $site */
+            $allLocales = Locale::getLocales();
 
             $publicFileManager = new PublicFileManager();
             $siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
@@ -67,7 +73,11 @@ class TemplateManager extends PKPTemplateManager
                     'siteTitle' => $context->getLocalizedName(),
                     'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId()),
                     'primaryLocale' => $context->getPrimaryLocale(),
-                    'supportedLocales' => $context->getSupportedLocaleNames(),
+                    'supportedLocales' => Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                        $context->getSupportedLocales(),
+                        $allLocales,
+                        LocaleMetadata::LANGUAGE_LOCALE_ONLY
+                    ),
                     'numPageLinks' => $context->getData('numPageLinks'),
                     'itemsPerPage' => $context->getData('itemsPerPage'),
                     'enableAnnouncements' => $context->getData('enableAnnouncements'),
@@ -90,7 +100,11 @@ class TemplateManager extends PKPTemplateManager
                     'disableUserReg' => empty($contextsForRegistration),
                     'siteTitle' => $site->getLocalizedTitle(),
                     'primaryLocale' => $site->getPrimaryLocale(),
-                    'supportedLocales' => $site->getSupportedLocaleNames(),
+                    'supportedLocales' => Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                        $site->getSupportedLocales(),
+                        $allLocales,
+                        LocaleMetadata::LANGUAGE_LOCALE_ONLY
+                    ),
                     'pageFooter' => $site->getLocalizedData('pageFooter'),
                 ]);
             }

@@ -8,12 +8,14 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LanguageToggleBlockPlugin
+ *
  * @brief Class for language selector block plugin
  */
 
 namespace APP\plugins\blocks\languageToggle;
 
 use PKP\facades\Locale;
+use PKP\i18n\LocaleMetadata;
 use PKP\plugins\BlockPlugin;
 use PKP\session\SessionManager;
 
@@ -65,14 +67,24 @@ class LanguageToggleBlockPlugin extends BlockPlugin
      */
     public function getContents($templateMgr, $request = null)
     {
+        $allLocales = Locale::getLocales();
         $templateMgr->assign('isPostRequest', $request->isPost());
+
         if (!SessionManager::isDisabled()) {
-            $journal = $request->getJournal();
-            if (isset($journal)) {
-                $locales = $journal->getSupportedLocaleNames();
+            $context = $request->getContext();
+            if (isset($context)) {
+                $locales = Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                    $context->getSupportedLocales(),
+                    $allLocales,
+                    LocaleMetadata::LANGUAGE_LOCALE_ONLY
+                );
             } else {
                 $site = $request->getSite();
-                $locales = $site->getSupportedLocaleNames();
+                $locales = Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                    $site->getSupportedLocales(),
+                    $allLocales,
+                    LocaleMetadata::LANGUAGE_LOCALE_ONLY
+                );
             }
         } else {
             $locales = Locale::getFormattedDisplayNames();
