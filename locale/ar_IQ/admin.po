@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:15+00:00\n"
-"PO-Revision-Date: 2022-10-07 04:01+0000\n"
+"PO-Revision-Date: 2022-10-07 06:01+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/admin/ar_IQ/>"
 "\n"
@@ -185,3 +185,6 @@ msgstr "الرمز التعريفي للوح الطباعي ليس عددًا ص
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
 msgstr "الرمز التعريفي للعدد ليس عددًا صحيحًا."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "الرمز التعريفي للعدد لا يتطابق مع الرمز التعريفي ذي الصلة."
