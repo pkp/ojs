@@ -1626,12 +1626,6 @@ msgstr ""
 "Bu sistem için kullanılacak birincil dil. Burada belirtilmeyen diller için "
 "destek almak istiyorsanız lütfen OJS yardım dökümanlarına bakın."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Bu sistemi desteklemek için ekli herhangi bir dili seçebilirsiniz. Bu "
-"diller, bu sitede yer verilen dergiler tarafından kullanıma hazır olacaktır. "
-"Başka diller site yönetim arayüzünden herhangi bir zamanda yüklenebilir."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Yüklenen dosyaların tutulacağı bir dizinin tam erişim yolunu yazınız. Bu "

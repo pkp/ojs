@@ -1756,9 +1756,6 @@ msgstr "Palvelimesi sallima latausten enimmäiskoko tällä hetkellä: <strong>{
 msgid "installer.localeInstructions"
 msgstr "Pääkieli, jota käytetään tässä järjestelmässä. Jos olet kiinnostunut muiden kuin tässä lueteltujen kielten tuesta, katso lisätietoja OJS:n käyttöohjeista."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Valitse muita tässä järjestelmässä tuettavia kieliä. Nämä kielet ovat sivustolla ylläpidettyjen julkaisujen käytettävissä. Lisää kieliä voidaan asentaa milloin tahansa myös sivuston ylläpitokäyttöliittymän kautta."
-
 msgid "installer.filesDirInstructions"
 msgstr "Kirjoita koko polun nimi olemassa olevaan hakemistoon, jossa ladattavia tiedostoja säilytetään. Tähän hakemistoon ei tulisi olla suoraa pääsyä verkosta. <strong>Varmista ennen asennusta, että tämä hakemisto on olemassa ja kirjoituskelpoinen.</strong> Windowsin polkujen nimissä tulee käyttää vinoviivaa, esim. \"C:/myjournal/files\"."
 

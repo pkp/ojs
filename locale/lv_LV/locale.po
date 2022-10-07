@@ -1736,12 +1736,6 @@ msgstr ""
 "pastāv un ir rakstāms.</strong> Windows ceļu nosaukumos jāizmanto "
 "slīpsvītras, piemēram, \"C:/myjournal/files\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Izvēlieties papildu valodas, kas jāatbalsta šajā sistēmā. Šīs valodas būs "
-"pieejamas vietnē izvietotajos žurnālos. Papildu valodas var arī jebkurā "
-"laikā instalēt no vietnes administrēšanas saskarnes."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Galvenā valoda, kas jāizmanto šai sistēmai. Lūdzu, skatiet OJS "

@@ -1071,9 +1071,6 @@ msgstr ""
 msgid "installer.localeInstructions"
 msgstr "Primarni jezik za korišćenje u ovom sistemu. Molimo pogledajte OJS dokumentaciju ako ste zaintersovani za podršku za jezike koji nisu izlistani ovde."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Odaberite bilo koji dodatni jezik koji želite podržati u ovom sistemu. Ti jezici će biti omogućeni za korišćenje za časopise koji se nalaze na sajtu. Dodatni jezici takođe mogu biti instalirani u bilo koje vreme iz administratorskog interfejsa."
-
 msgid "installer.filesDirInstructions"
 msgstr "Unesite puno ime putanje prema postojećem direktorijumu gdje će se čuvati poslati fajlovi. Taj direktorijum ne bi smeo biti direktno dostupan preko mreže. <strong>Molimo osigurajte da taj direktorijum postoji i da se može pisati po njemu pre instalacije.</strong> Imena Windows putanji moraju koristiti kose crte unapred, npr. \"C:/mojicasopisi/fajlovi\"."
 

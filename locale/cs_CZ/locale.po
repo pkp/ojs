@@ -1660,9 +1660,6 @@ msgstr "Váš server v současnosti dovoluje nahrávání souborů o maximální
 msgid "installer.localeInstructions"
 msgstr "Výchozí jazyk pro použití tohoto systému. Pokud Vás zajímá podpora jazyků zde neuvedených, prostudujte si dokumentaci k OJS."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Zvolte jakékoliv doplňkové jazyky, které mají být podorovány v tomto systému. Tyto jazyky budou dostupné pro použití v časopisech hostovaných na této stránce. Doplňkové jazyky mohou být také kdykoliv nainstalovány přes webové administrační rozhraní."
-
 msgid "installer.filesDirInstructions"
 msgstr "Zadejte celou cestu k existujícímu adresáři, ve kterém se mají uchovávat nahrané soubory. Tento adresář by neměl být přímo dostupný z webu. <strong>Prosím, před zahájením instalace se ujistěte, že tento adresář existuje a je zapsatelný.</strong> Ve Windows by měla cesta obsahovat dopředná lomítka, např.: \"C:/myjournal/files\"."
 

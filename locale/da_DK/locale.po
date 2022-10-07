@@ -1353,9 +1353,6 @@ msgstr ""
 msgid "installer.localeInstructions"
 msgstr "Det primære sprog, der anvendes i dette system. Se dokumentationen til OJS, hvis du er interesseret i understøttelse af sprog, der ikke er angivet her."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Vælg eventuelt flere sprog, som dette system skal understøtte. Disse sprog kan anvendes af tidsskrifter, der er tilknyttet webstedet. Det er til enhver tid også muligt at installere flere sprog fra webstedsadministratorens grænseflade."
-
 msgid "installer.filesDirInstructions"
 msgstr "Angiv det fulde stinavn til en eksisterende mappe, hvor overførte filer skal gemmes. Denne mappe bør ikke være tilgængelig via nettet. <strong>Sørg for, at denne mappe eksisterer og er skrivbar forud for installationen.</strong> Benyt skråstreger i Windows-stinavne, f.eks. \"C:/mittidsskrift/filer\"."
 

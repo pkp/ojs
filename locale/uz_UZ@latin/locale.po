@@ -347,13 +347,6 @@ msgstr ""
 "mumkinligiga ishonch hosil qiling. </strong> Windows yo'llari nomlari "
 "oldinga siljishni ishlatishi kerak, masalan. \"C:/myjournal/fayllar\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Ushbu tizimda qo'llab -quvvatlanadigan boshqa tillarni tanlang. Bu tillar "
-"saytda joylashtirilgan jurnallarda foydalanishlari mumkin bo'ladi. Sayt "
-"ma'muriyati interfeysidan istalgan vaqtda qo'shimcha tillarni o'rnatish "
-"mumkin."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Bu tizimda ishlatiladigan asosiy til. Agar siz bu erda ko'rsatilmagan "

@@ -1570,10 +1570,6 @@ msgid "installer.localeInstructions"
 msgstr "此系統採用的優先語言。如您有意採用在此未有列出的語言，請諮詢OJS "
 "documentation。"
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "選擇任何額外語言支援此系統。這些語言可供寄存在網站的期刊採用。您亦可隨時在網"
-"站管理介面安裝其他語言。"
-
 msgid "installer.installApplication"
 msgstr "安裝Open Journal Systems"
 

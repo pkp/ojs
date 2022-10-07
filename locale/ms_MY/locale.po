@@ -1540,13 +1540,6 @@ msgstr ""
 "pemasangan.</strong> Nama laluan Windows patut menggunakan garis condong "
 "hadapan, cth. \"C:/myjournal/files\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Pilih sebarang bahasa tambahan untuk disokong dalam sistem ini. Bahasa ini "
-"boleh digunakan oleh jurnal yang dihoskan di laman web ini. Bahasa tambahan "
-"juga boleh dipasang pada bila-bila masa dari antara muka pentadbiran laman "
-"web."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Bahasa utama yang digunakan untuk sistem ini. Sila rujuk dokumentasi OJS "

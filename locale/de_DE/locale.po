@@ -1828,9 +1828,6 @@ msgstr "Ihr Server erlaubt beim Upload momentan eine maximale Dateigröße von: 
 msgid "installer.localeInstructions"
 msgstr "Die Hauptsprache dieses Systems. Falls Sie an hier nicht aufgeführten Sprachen interessiert sind, sehen Sie bitte in der OJS-Dokumentation nach."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Wählen Sie alle weiteren Regionaleinstellungen, die das System unterstützen soll. Diese Regionaleinstellungen stehen allen Zeitschriften der Website zur Verfügung. Weitere Regionaleinstellungen können jederzeit über die Website-Administration eingerichtet werden."
-
 msgid "installer.filesDirInstructions"
 msgstr "Bitte geben Sie den vollständigen Pfad zu einem existierenden Verzeichnis an, in dem hochgeladene Dateien gespeichert werden sollen. Dieses Verzeichnis sollte nicht direkt aus dem WWW lesbar sein. <strong>Bitte stellen Sie sicher, dass dieses Verzeichnis existiert und beschreibbar ist, bevor Sie mit der Installation fortfahren.</strong> Pfadangaben auf Windows-Rechnern sollten normale Schrägstriche enthalten, z.B. \"C:/myjournal/files\"."
 

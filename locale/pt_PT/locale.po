@@ -1129,13 +1129,6 @@ msgstr ""
 msgid "installer.localeInstructions"
 msgstr "O idioma padrão do sistema. Consulte a documentação caso deseje suporte a idiomas não listados."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Escolha qualquer idioma adicional para incluir no sistema. Os idiomas "
-"estarão disponíveis a todas as revistas alojadas. Idiomas adicionais também "
-"podem ser instalados a qualquer momento através da interface de "
-"administração via web."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Insira o caminho completo para uma pasta existente no servidor onde serão "

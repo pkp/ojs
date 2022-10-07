@@ -717,11 +717,6 @@ msgstr ""
 "strong>インストール前に、このディレクトリが存在し、書き込み可能であることを確認してください。</strong> Windowsのパス名は、「C:/"
 "myjournal/files」のように、フォワードスラッシュを使用してください。"
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"このシステムでサポートする追加の言語を選択します。これらの言語は、サイトでホストされているジャーナルで使えます。追加の言語は、サイト管理インターフェイスか"
-"らいつでもインストールすることができます。"
-
 msgid "installer.localeInstructions"
 msgstr "このシステムで主に使用する言語です。ここに記載されていない言語のサポートに興味があれば、OJSのドキュメントを見てください。"
 

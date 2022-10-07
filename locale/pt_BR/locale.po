@@ -1909,9 +1909,6 @@ msgstr "Seu servidor permite atualmente envio de arquivos no tamanho máximo de:
 msgid "installer.localeInstructions"
 msgstr "O idioma padrão do sistema. Consulte a documentação caso deseje suporte a idiomas não listados."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Escolha qualquer idioma adicional para incluir no sistema. Os idiomas estarão disponíveis a todas as revistas hospedadas. Idiomas adicionais também podem ser instalados a qualquer tempo através da interface de administração via Web."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Digite o nome do caminho completo em um diretório existente onde os arquivos "
