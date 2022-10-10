@@ -127,7 +127,7 @@ class TemplateManager extends PKPTemplateManager
 
         $router = $request->getRouter();
         $handler = $router->getHandler();
-        $userRoles = (array) $handler->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $userRoles = (array) $handler->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
 
         $menu = (array) $this->getState('menu');
 

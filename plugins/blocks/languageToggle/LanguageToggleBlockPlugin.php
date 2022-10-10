@@ -67,27 +67,19 @@ class LanguageToggleBlockPlugin extends BlockPlugin
      */
     public function getContents($templateMgr, $request = null)
     {
-        $allLocales = Locale::getLocales();
         $templateMgr->assign('isPostRequest', $request->isPost());
 
         if (!SessionManager::isDisabled()) {
             $context = $request->getContext();
-            if (isset($context)) {
-                $locales = Locale::applyBeforeFilter()->getFormattedDisplayNames(
-                    $context->getSupportedLocales(),
-                    $allLocales,
-                    LocaleMetadata::LANGUAGE_LOCALE_ONLY
-                );
-            } else {
-                $site = $request->getSite();
-                $locales = Locale::applyBeforeFilter()->getFormattedDisplayNames(
-                    $site->getSupportedLocales(),
-                    $allLocales,
-                    LocaleMetadata::LANGUAGE_LOCALE_ONLY
-                );
-            }
+            $locales = Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                isset($context)
+                    ? $context->getSupportedLocales()
+                    : $request->getSite()->getSupportedLocales(),
+                Locale::getLocales(),
+                LocaleMetadata::LANGUAGE_LOCALE_ONLY
+            );
         } else {
-            $locales = Locale::getFormattedDisplayNames();
+            $locales = Locale::getFormattedDisplayNames(null, null, LocaleMetadata::LANGUAGE_LOCALE_ONLY);
             $templateMgr->assign('languageToggleNoUser', true);
         }
 
