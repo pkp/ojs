@@ -1,8 +1,9 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-25 15:48+0000\n"
-"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"PO-Revision-Date: 2022-10-11 20:06+0000\n"
+"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-doaj/bg_BG/>\n"
 "Language: bg_BG\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.importexport.doaj.cliUsage"
 msgstr ""
@@ -19,14 +20,14 @@ msgstr ""
 "objectId1 [objectId2] ...\n"
 
 msgid "plugins.importexport.doaj.register.error.mdsError"
-msgstr "Депозитът не беше успешен! API на DOAJ върна грешка:  '{$param}'."
+msgstr "Депозитът не беше успешен! API на DOAJ върна грешка: '{$param}'."
 
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Задача за автоматична регистрация на DOAJ"
 
 msgid "plugins.importexport.doaj.settings.form.testMode.description"
 msgstr ""
-"Използвайте  DOAJ test API (среда за тестване) за регистрация. Моля, не "
+"Използвайте DOAJ test API (среда за тестване) за регистрация. Моля, не "
 "забравяйте да премахнете тази опция за производството (след приключване на "
 "тестовете)."
 
