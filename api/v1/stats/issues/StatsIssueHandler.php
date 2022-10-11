@@ -14,7 +14,7 @@
  *
  */
 
-namespace APP\API\v1\stats;
+namespace APP\API\v1\stats\issues;
 
 use APP\core\Application;
 use APP\core\Services;
