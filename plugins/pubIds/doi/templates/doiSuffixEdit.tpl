@@ -43,14 +43,16 @@
 				{/fbvFormSection}
 			{/if}
 		{else} {* pub id preview *}
-			<p>{$pubIdPlugin->getPubId($pubObject)|escape}</p>
+			{if !$formDisabled}
+				<p>{$pubIdPlugin->getPubId($pubObject)|escape}</p>
+			{/if}
 			{if $canBeAssigned}
 				{if !$formDisabled}
 					<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.canBeAssigned"}</p>
 					{assign var=templatePath value=$pubIdPlugin->getTemplateResource('doiAssignCheckBox.tpl')}
 					{include file=$templatePath pubId="" pubObjectType=$pubObjectType}
 				{else}
-					<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.canBeAssigned.disabled"}</p>
+					<p class="pkp_help">{translate key="plugins.pubIds.doi.editor.noDoiAssigned"}</p>
 				{/if}
 				
 			{else}
