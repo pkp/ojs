@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-11 13:01+0000\n"
+"PO-Revision-Date: 2022-10-11 14:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -395,3 +395,123 @@ msgstr "Identificēt šajā sadaļā publicētos elementus kā a(n)"
 
 msgid "manager.sections.reviewed"
 msgstr "Zinātniski recenzēts"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Tiks publicēts sadaļā Par žurnālu) "
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Nosaukuma un logotipa vietā teksta lodziņā zemāk var ievietot galvenes HTML "
+"versiju. Ja tas nav nepieciešams, atstājiet teksta lodziņu tukšu."
+
+msgid "manager.setup.pageHeader"
+msgstr "Žurnāla lapas galvene"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Pievienot kontrolsaraksta elementu"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Redkolēģija"
+
+msgid "manager.setup.details"
+msgstr "Sīkāka informācija"
+
+msgid "manager.setup.history"
+msgstr "Žurnāla vēsture"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Žurnāla sākumlapā pēc noklusējuma ir navigācijas saites. Papildu saturu "
+"sākumlapai var pievienot, izmantojot vienu vai visas turpmāk minētās "
+"opcijas, kas parādīsies norādītajā secībā."
+
+msgid "manager.setup.discipline"
+msgstr "Akadēmiskā disciplīna un apakšdisciplīnas"
+
+msgid "manager.setup.addSponsor"
+msgstr "Pievienot sponsorējošo organizāciju"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Pievienot elementu, kas parādās sadaļā \"Par žurnālu\""
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5. solis. Izskata pielāgošana"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternatīvā galvene"
+
+msgid "manager.setup.details.description"
+msgstr "Žurnāla nosaukums, ISSN, kontakti, sponsori un meklētājprogrammas."
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Saturs"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Prasība autoriem kopā ar manuskriptu iesniegt apliecinājumu par interešu "
+"konflikta neesamību."
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Kopsavilkuma vārdu skaita ierobežojums šajā sadaļā (0 – bez ierobežojuma)"
+
+msgid "manager.sections.wordCount"
+msgstr "Vārdu skaits"
+
+msgid "manager.setup.addItem"
+msgstr "Pievienot elementu"
+
+msgid "manager.sections.unassigned"
+msgstr "Pieejamie sadaļas redaktori"
+
+msgid "manager.setup.currentIssue"
+msgstr "Jaunākais numurs"
+
+msgid "manager.setup.contextName"
+msgstr "Žurnāla nosaukums"
+
+msgid "manager.setup.homepageContent"
+msgstr "Žurnāla mājaslapas saturs"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Pievienot informāciju"
+
+msgid "manager.setup"
+msgstr "Žurnāla uzstādījumi"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Pievienot jaunu datubāzes saiti"
+
+msgid "manager.setup.announcements"
+msgstr "Paziņojumi"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Ievads"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Žurnālu pārvaldnieks reģistrēs visus lietotāju kontus. Redaktori vai sadaļu "
+"redaktori var reģistrēt lietotāju kontus recenzentiem."
+
+msgid "manager.setup.masthead"
+msgstr "Galvenā lapa"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Ievadiet jebkuru informāciju, ko vēlētos parādīt paziņojumu lapā."
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Šis teksts parādīsies žurnāla tīmekļa vietnes sadaļā \"Par\", un to var "
+"izmantot, lai aprakstītu izmaiņas nosaukumos, redkolēģijā un citos ar "
+"žurnāla publicēšanas vēsturi saistītos elementos."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Žurnāla stila lapa"
+
+msgid "manager.setup.addNavItem"
+msgstr "Pievienot elementu"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Prasība recenzentiem kopā ar recenziju iesniegt apliecinājumu par interešu "
+"konflikta neesamību."
