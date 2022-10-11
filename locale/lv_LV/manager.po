@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-23 00:02+0000\n"
+"PO-Revision-Date: 2022-10-11 10:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "Piekļuve"
@@ -313,3 +313,44 @@ msgstr ""
 "noklusējumu var ignorēt katrā gadījumā atsevišķi. Ja publicējat, "
 "nebāzējoties izdevuma numurā (\"publish as you go\"), neizmantojiet izdevuma "
 "publicēšanas datumu."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Vismaz vienai sadaļai jābūt aktīvai. Apmeklējiet darba plūsmas iestatījumus, "
+"lai atspējotu visus iesniegumus šim žurnālam."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Lūdzu, pārliecinieties, ka esat izvēlējies derīgu pārskatīšanas formu."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Sadaļai ir nepieciešams nosaukums."
+
+msgid "manager.sections.editors"
+msgstr "Sadaļas redaktori"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Sadaļai jānorāda saīsināts nosaukums"
+
+msgid "manager.sections.editorRestriction"
+msgstr "Ziņas var iesniegt tikai redaktori un sadaļu redaktori."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Izvēlieties, kuriem vienumiem tiks piešķirts DOI. Vairums žurnālu piešķir "
+"DOI rakstiem, bet jūs varat iestatīt DOI visiem publicētajiem elementiem."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Pievienojiet Sadaļas redaktoru šai sadaļai, lai manuskripti tiktu "
+"automātiski piešķirti Sadaļas redaktoram. (Citādi Sadaļas redaktorus var "
+"piešķirt manuāli pēc manuskripta saņemšanas.) Sadaļas redaktoram pēc "
+"pievienošanas var automātiski piešķirt iespēju pārraudzīt šajā sadaļā "
+"iesniegto darbu RECENZĒŠANU (zinātnisko recenzēšana) un/vai REDIĢĒŠANU ("
+"teksta liteārā rediģēšana, maketēšana un korektūra). Sadaļas redaktorus "
+"izveido, žurnāla pārvaldības sadaļā Roles (Lomas) noklikšķinot uz Section "
+"Editors (Sadaļas redaktori)."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Lūdzu, pārliecinieties, ka katram sadaļas redaktora uzdevumam ir atzīmēta "
+"vismaz viena izvēles rūtiņa."
