@@ -138,7 +138,6 @@ class TemplateManager extends PKPTemplateManager
                 'url' => $router->url($request, null, 'manageIssues'),
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues',
             ];
-
             $index = array_search('submissions', array_keys($menu));
             if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
@@ -147,6 +146,18 @@ class TemplateManager extends PKPTemplateManager
                     + ['issues' => $issuesLink]
                     + array_slice($menu, $index + 1, null, true);
             }
+        }
+
+        if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
+            $statsIssuesLink = [
+                'name' => __('editor.navigation.issues'),
+                'url' => $router->url($request, null, 'stats', 'issues', 'issues'),
+                'isCurrent' => $router->getRequestedPage($request) === 'stats' && $router->getRequestedOp($request) === 'issues',
+            ];
+            $statsPublicationsIndex = array_search('publications', array_keys($menu['statistics']));
+            $menu['statistics']['submenu'] = array_slice($menu['statistics']['submenu'], 0, $statsPublicationsIndex + 1, true) +
+                ['issues' => $statsIssuesLink] +
+                array_slice($menu['statistics']['submenu'], $statsPublicationsIndex + 1, null, true);
         }
 
         // Add payments link before settings

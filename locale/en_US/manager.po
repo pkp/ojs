@@ -1710,6 +1710,24 @@ msgstr "Issue TOC Views"
 msgid "stats.issueGalleyViews"
 msgstr "Issue Galley Views"
 
+msgid "stats.issueStats"
+msgstr "Issue Stats"
+
+msgid "stats.issue.details"
+msgstr "Issue Details"
+
+msgid "stats.issue.totalTOCViews.timelineInterval"
+msgstr "Total table of contents views by date"
+
+msgid "stats.issue.totalIssueGalleyViews.timelineInterval"
+msgstr "Total issue galleys views by date"
+
+msgid "stats.issue.searchIssueDescription"
+msgstr "Search by issue identification"
+
+msgid "stats.issue.none"
+msgstr "No issues were found with usage statistics matching these parameters."
+
 msgid "stats.publicationStats"
 msgstr "Article Stats"
 
