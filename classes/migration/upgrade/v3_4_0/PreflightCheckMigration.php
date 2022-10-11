@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PreflightCheckMigration
+ *
  * @brief Check for common problems early in the upgrade process.
  */
 
@@ -24,7 +25,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
 
     protected function getContextSettingsTable(): string
     {
-        return 'journals';
+        return 'journal_settings';
     }
 
     protected function getContextKeyField(): string

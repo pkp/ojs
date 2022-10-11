@@ -21,6 +21,8 @@ describe('Data suite tests', function() {
 		cy.get('button').contains('Save').click()
 		cy.get('div[id=context-name-error-en_US]').find('span').contains('This field is required.');
 		cy.get('div[id=context-acronym-error-en_US]').find('span').contains('This field is required.');
+		cy.get('div[id=context-contactName-error]').find('span').contains('This field is required.');
+		cy.get('div[id=context-contactEmail-error]').find('span').contains('This field is required.');
 		cy.get('div[id=context-urlPath-error]').find('span').contains('This field is required.');
 		cy.get('div[id=context-primaryLocale-error]').find('span').contains('This field is required.');
 		cy.get('input[name="name-en_US"]').type(Cypress.env('contextTitles')['en_US'], {delay: 0});
@@ -30,12 +32,20 @@ describe('Data suite tests', function() {
 		cy.get('input[name="supportedLocales"][value="fr_CA').check();
 		cy.get('input[name="primaryLocale"][value="en_US').check();
 		cy.get('select[id=context-country-control]').select('Iceland');
+		cy.get('input[name=contactName]').type('Ramiro Vaca', {delay: 0});
 
-		// Test invalid path characters
+		// Test invalid contact email and path character
+		cy.get('input[name=contactEmail').type('rvacamailinator.com', {delay: 0});
 		cy.get('input[name=urlPath]').type('public&-)knowledge', {delay: 0});
 		cy.get('button').contains('Save').click()
+		cy.get('div[id=context-contactEmail-error]').find('span').contains('This is not a valid email address.');
 		cy.get('div[id=context-urlPath-error]').find('span').contains('The path can only include letters');
+
+		// Fill up the path information with valid path data
 		cy.get('input[name=urlPath]').clear().type('publicknowledge', {delay: 0});
+
+		// Fill up the contact email with valid data
+		cy.get('input[name=contactEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 
 		// Context descriptions
 		cy.setTinyMceContent('context-description-control-en_US', Cypress.env('contextDescriptions')['en_US']);
@@ -113,23 +123,17 @@ describe('Data suite tests', function() {
 
 		// Submit the form with required fields missing.
 		cy.get('div[id=contact').find('button').contains('Save').click();
-		cy.get('div[id="contact-contactName-error"]').contains('This field is required.');
-		cy.get('div[id="contact-contactEmail-error"]').contains('This field is required.');
 		cy.get('div[id="contact-supportName-error"]').contains('This field is required.');
 		cy.get('div[id="contact-supportEmail-error"]').contains('This field is required.');
 
-		cy.get('input[name=contactName]').type('Ramiro Vaca', {delay: 0});
 		cy.get('textarea[name=mailingAddress]').type("123 456th Street\nBurnaby, British Columbia\nCanada", {delay: 0});
 		cy.get('input[name=supportName]').type('Ramiro Vaca', {delay: 0});
 
 		// Test invalid emails
-		cy.get('input[name=contactEmail').type('rvacamailinator.com', {delay: 0});
 		cy.get('input[name=supportEmail').type('rvacamailinator.com', {delay: 0});
 		cy.get('div[id=contact').find('button').contains('Save').click();
-		cy.get('div[id="contact-contactEmail-error"]').contains('This is not a valid email address.');
 		cy.get('div[id="contact-supportEmail-error"]').contains('This is not a valid email address.');
 
-		cy.get('input[name=contactEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('input[name=supportEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('div[id=contact').find('button').contains('Save').click();
 		cy.get('#contact [role="status"]').contains('Saved');
