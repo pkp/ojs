@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-11 10:01+0000\n"
+"PO-Revision-Date: 2022-10-11 13:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -32,7 +32,7 @@ msgstr "Šīs sadaļas redaktori"
 
 msgid "manager.section.noSectionEditors"
 msgstr ""
-"Pagaidām nav sadaļu redaktoru.  Vispirms pievienojiet šo lomu vismaz vienam "
+"Pagaidām nav sadaļu redaktoru. Vispirms pievienojiet šo lomu vismaz vienam "
 "lietotājam, izmantojot sadaļu Pārvaldība > Iestatījumi > Lietotāji un Lomas."
 
 msgid "manager.sections.abstractsNotRequired"
@@ -354,3 +354,44 @@ msgid "manager.sections.form.mustAllowPermission"
 msgstr ""
 "Lūdzu, pārliecinieties, ka katram sadaļas redaktora uzdevumam ir atzīmēta "
 "vismaz viena izvēles rūtiņa."
+
+msgid "manager.sections.policy"
+msgstr "Sadaļas politika"
+
+msgid "manager.sections.indexed"
+msgstr "Indeksēts"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Netiks iekļauts žurnāla indeksācijā"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Šajā žurnāla sadaļā iesniegtie materiāli"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Neiekļaut šīs sadaļas virsrakstu izdevumu satura rādītājos."
+
+msgid "manager.sections.noneCreated"
+msgstr "Neviena sadaļa nav izveidota."
+
+msgid "manager.sections.open"
+msgstr "Materiālu iesniegšana atvērta"
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Neiekļaut autoru vārdus no izdevumu satura rādītājiem sadaļu vienībās."
+
+msgid "manager.sections.submissionReview"
+msgstr "Netiks zinātniski recenzēts"
+
+msgid "manager.sections.readingTools"
+msgstr "Lasīšanas rīki"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Piemēram, \"recenzēts raksts\", \" nerecenzēts grāmatas apskats\", \" "
+"uzaicināts komentārs\" u. c.)"
+
+msgid "manager.sections.identifyType"
+msgstr "Identificēt šajā sadaļā publicētos elementus kā a(n)"
+
+msgid "manager.sections.reviewed"
+msgstr "Zinātniski recenzēts"
