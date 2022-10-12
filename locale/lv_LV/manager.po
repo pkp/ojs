@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 09:01+0000\n"
+"PO-Revision-Date: 2022-10-12 10:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -590,3 +590,28 @@ msgid "manager.setup.enableAnnouncements.description"
 msgstr ""
 "Lai informētu lasītājus par žurnāla jaunumiem un notikumiem, var publicēt "
 "paziņojumus. Publicētie paziņojumi būs redzami Paziņojumu lapā."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Nepieciešams norādīt primāro kontaktinformācijas e-pasta adresi."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS ievēro <a href=\"https://www.openarchives.org/\" target=\"_blank\""
+">Atvērto arhīvu iniciatīvas</a> metadatu ievākšanas protokolu, kas ir jauns "
+"standarts labi indeksētas piekļuves nodrošināšanai elektroniskajiem "
+"pētniecības resursiem pasaules mērogā. Autori izmantos līdzīgu veidni, lai "
+"sniegtu metadatus saviem manuskriptiem. Žurnāla pārvaldniekam jāizvēlas "
+"indeksēšanas kategorijas un jāiesniedz autoriem attiecīgie piemēri, lai "
+"palīdzētu viņiem indeksēt savu darbu."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Nepieciešams norādīt žurnāla nosaukumu."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Norādītais ISSN nav derīgs."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Nepieciešams norādīt žurnāla iniciāļus."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Nepieciešams norādīt primāro kontaktpersonas vārdu."
