@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-11 15:01+0000\n"
+"PO-Revision-Date: 2022-10-12 08:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -525,3 +525,15 @@ msgid "manager.setup.disciplineDescription"
 msgstr ""
 "Noderīgi, ja žurnāls šķērso disciplīnu robežas un/vai autori "
 "iesniedzstarpdisciplinārus darbus."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Atlēciena adrese"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Sniedziet šim žurnālam atbilstošu akadēmisko nozaru piemērus"
+
+msgid "manager.setup.editorDecision"
+msgstr "Redaktora lēmums"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Pievienojiet jaunākā numura satura rādītāju (ja iespējams)."
