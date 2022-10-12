@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 10:01+0000\n"
+"PO-Revision-Date: 2022-10-12 12:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -615,3 +615,110 @@ msgstr "Nepieciešams norādīt žurnāla iniciāļus."
 
 msgid "manager.setup.form.contactNameRequired"
 msgstr "Nepieciešams norādīt primāro kontaktpersonas vārdu."
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Pēc noklusējuma mājaslapu veido navigācijas saites. Papildu sākumlapas "
+"saturu var pievienot, izmantojot vienu vai visas turpmāk norādītās opcijas, "
+"kas tiks parādītas norādītajā secībā. Ņemiet vērā, ka pašreizējais izdevums "
+"vienmēr ir pieejams, izmantojot saiti Current (Jaunākais) navigācijas joslā."
+
+msgid "manager.setup.initialIssue"
+msgstr "Pirmreizējs izdevums"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Bibliotekāriem"
+
+msgid "manager.setup.guidelines"
+msgstr "Vadlīnijas"
+
+msgid "manager.setup.information"
+msgstr "Informācija"
+
+msgid "manager.setup.contextAbout"
+msgstr "Par žurnālu"
+
+msgid "manager.setup.identity"
+msgstr "Žurnāla identitāte"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Nepieciešams recenzentu skaits uz vienu iesniegto materiālu."
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Žurnāla mājaslapas galvene"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Atkarībā no izvēlētā formāta norādiet OJS publicējamā pirmā izdevuma numuru, "
+"sējumu un/vai gadu:"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "1. solis. Sīkāka informācijas apkopošana"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "3. solis. Iesniegšanas vadlīnijas"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Žurnāla saīsinājums"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Īss žurnāla apraksts bibliotekāriem un topošajiem autoriem un lasītājiem. "
+"Tas pieejams vietnes sānu joslā, kad pievienots informācijas bloks."
+
+msgid "manager.setup.generalInformation"
+msgstr "Pamatinformācija"
+
+msgid "manager.setup.institution"
+msgstr "Institūcija"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Navigācijas joslas elementus var pievienot esošai kopai (Sākums, Par, "
+"Lietotāja sākumlapa u. c.), kas parādās lapas augšpusē."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Žurnāla mājaslapas saturs"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Žurnāla arhivēšana"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Jānorāda atbalsta personas vārds."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Iekļaut jebkādu informāciju par žurnālu, kas varētu interesēt lasītājus, "
+"autorus vai recenzentus. Tā varētu ietvert atvērtās piekļuves politiku, "
+"žurnāla mērķi un darbības jomu, paziņojumu par autortiesībām, informāciju "
+"par sponsoriem, žurnāla vēsturi, privātuma atrunu un iekļaušanu jebkurā "
+"LOCKSS vai CLOCKSS arhīvu sistēmā."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Jānorāda atbalsta e-pasta adrese."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Autoriem"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Vienības lapā"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Lasītājiem"
+
+msgid "manager.setup.contextSummary"
+msgstr "Žurnāla kopsavilkums"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Ierobežojiet elementu (piemēram, manuskriptu, lietotāju vai rediģēšanas "
+"uzdevumu) skaitu, kas tiks parādīti sarakstā pirms nākamo elementu "
+"parādīšanas citā lapā."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Žurnāliem, kas piedāvā tūlītēju vai kavētu atvērto piekļuvi, pievienojiet "
+"Creative Commons licenci visiem publicētajiem darbiem atbilstošā laikā."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Žurnāla mājaslapas galvene"
