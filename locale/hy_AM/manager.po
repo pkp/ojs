@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-05 14:01+0000\n"
+"PO-Revision-Date: 2022-10-12 13:01+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hy_AM/>\n"
@@ -2591,3 +2591,16 @@ msgid "mailable.issuePublishNotify.description"
 msgstr ""
 "Այս էլ․ նամակն ինքնաշխատ կերպով ուղարկվում է գրանցված օգտատերերին, երբ նոր "
 "թողարկումը հրապարակվի:"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Ներբեռնեք CSV/Excel աղյուսակը՝ հետևյալ պարամետրերին համապատասխանող "
+"հոդվածների օգտագործման վիճակագրությամբ:"
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Ներբեռնեք հոդվածները"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+"Յուրաքանչյուր հոդվածի համար համառոտագրության դիտումների և նիշքերի "
+"ներբեռնումների քանակը:"
