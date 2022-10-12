@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 08:01+0000\n"
+"PO-Revision-Date: 2022-10-12 09:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -426,7 +426,7 @@ msgstr ""
 "opcijas, kas parādīsies norādītajā secībā."
 
 msgid "manager.setup.discipline"
-msgstr "Akadēmiskā disciplīna un apakšdisciplīnas"
+msgstr "Akadēmiskā nozare un apakšnozares"
 
 msgid "manager.setup.addSponsor"
 msgstr "Pievienot sponsorējošo organizāciju"
@@ -523,11 +523,11 @@ msgstr ""
 
 msgid "manager.setup.disciplineDescription"
 msgstr ""
-"Noderīgi, ja žurnāls šķērso disciplīnu robežas un/vai autori "
-"iesniedzstarpdisciplinārus darbus."
+"Noderīgi, ja žurnāls pārsniedz nozaru robežas un/vai autori iesniedz "
+"starpnozaru darbus."
 
 msgid "manager.setup.emailBounceAddress"
-msgstr "Atlēciena adrese"
+msgstr "Atlēciena (bounce) adrese"
 
 msgid "manager.setup.disciplineProvideExamples"
 msgstr "Sniedziet šim žurnālam atbilstošu akadēmisko nozaru piemērus"
@@ -537,3 +537,56 @@ msgstr "Redaktora lēmums"
 
 msgid "manager.setup.displayCurrentIssue"
 msgstr "Pievienojiet jaunākā numura satura rādītāju (ja iespējams)."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Jebkuri nepiegādātie e-pasta ziņojumi ar kļūdas ziņojumu tiks nosūtīti uz šo "
+"adresi."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Cik daudz paziņojumu parādīt sākumlapā. Atstājiet tukšu, lai nerādītu "
+"nevienu."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Mērķis un darbības joma"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Lai nosūtītu nepiegādātos e-pasta ziņojumus uz atlēciena (bounce) adresi, "
+"vietnes administratoram ir jāaktivizē opcija <code>allow_envelope_sender</"
+"code> vietnes konfigurācijas failā. Iespējams, būs nepieciešama servera "
+"konfigurācija, kā norādīts OJS dokumentācijā."
+
+msgid "manager.setup.emailSignature"
+msgstr "Paraksts"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Aprakstiet autoriem, lasītājiem un bibliotekāriem rakstu un citu materiālu "
+"klāstu, ko žurnāls publicēs."
+
+msgid "manager.setup.emails"
+msgstr "E-pasta identifikācija"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Apmeklētāji žurnālā var reģistrēt lietotāja profilu."
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Sagatavotajiem e-pasta ziņojumiem, kurus sistēma nosūta žurnāla vārdā, "
+"beigās tiks pievienots šāds paraksts."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Autoriem savu darbu indeksēšanai"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Rādīt mājaslapā"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Ieslēgt paziņojumus"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Lai informētu lasītājus par žurnāla jaunumiem un notikumiem, var publicēt "
+"paziņojumus. Publicētie paziņojumi būs redzami Paziņojumu lapā."
