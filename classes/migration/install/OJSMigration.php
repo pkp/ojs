@@ -190,7 +190,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->datetime('last_modified')->nullable();
 
             $table->bigInteger('primary_contact_id')->nullable();
-            $table->foreign('primary_contact_id', 'publications_user_id')->references('user_id')->on('users')->onDelete('set null');
+            $table->foreign('primary_contact_id', 'publications_author_id')->references('author_id')->on('authors')->onDelete('set null');
 
             $table->bigInteger('section_id')->nullable();
             $table->foreign('section_id', 'publications_section_id')->references('section_id')->on('sections')->onDelete('set null');
