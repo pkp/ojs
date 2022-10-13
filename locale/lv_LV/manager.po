@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-13 10:01+0000\n"
+"PO-Revision-Date: 2022-10-13 11:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -789,7 +789,7 @@ msgstr ""
 
 msgid "manager.setup.plnDescription"
 msgstr ""
-"PKP saglabāšanas tīkls (Preservation Network - PN) sniedz bezmaksas "
+"PKP Uzturēšanas tīkls (Preservation Network - PN) sniedz bezmaksas "
 "glabāšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst pamatkritērijiem."
 
 msgid "manager.setup.plnPluginEnable"
@@ -806,3 +806,36 @@ msgstr "Žurnāla noformējums"
 
 msgid "manager.setup.keyInfo"
 msgstr "Galvenā informācija"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
+"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\""
+">LOCKSS Licence</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS licences apraksts"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS un CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Iespējot LOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās "
+"bibliotēkās, izmantojot LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\""
+">Publisher Manifest</a> lapu."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Skatiet <button>spraudņa iestatījumi</button>, lai piekristu PKP PN "
+"lietošanas noteikumiem."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Uzturēšanas tīkls (Preservation Network - PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Uzturēšanas tīkls (PN - Preservation network) sniedz bezmaksas "
+"uzturēšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst vairākiem "
+"pamatkritērijiem. Lai arhivētu savu žurnālu PN, lūdziet administratoram "
+"instalēt PKP|PN spraudni no spraudņu galerijas."
