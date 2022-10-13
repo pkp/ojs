@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-13 13:01+0000\n"
+"PO-Revision-Date: 2022-10-13 14:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -954,3 +954,86 @@ msgstr "Ierobežojiet sarakstā uz nākamajām lapām rādāmo saišu skaitu."
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Pārbaudes instrukcijas"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Recenzentiem piekļuve iesniegtajai datnei tiks piešķirta tikai pēc tam, kad "
+"viņi būs piekrituši to pārskatīt."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Failu piekļuves ierobežošana"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Publikāciju plānošana"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Recenzēšanas iespējas"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Pēc katras recenzijas redaktori vērtēs recenzentus pēc piecu ballu skalas."
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Žurnāla satura identificēšana"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Lietotājiem jābūt reģistrētiem un jāpieslēdzas, lai skatītu žurnāla vietni."
+
+msgid "manager.setup.referenceLinking"
+msgstr "Atsauces sasaiste"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automatizēti e-pasta atgādinājumi"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Žurnāla materiālus var publicēt kopīgi, kā daļu no izdevuma ar savu satura "
+"rādītāju. Var arī publicēt atsevišķus materiālus, tiklīdz tie ir gatavi, "
+"pievienojot tos \"pašreizējā\" sējuma satura rādītājam. Sadaļā Par žurnālu "
+"sniedziet lasītājiem paziņojumu par sistēmu, ko izmantos šis žurnāls, un "
+"paredzamo publicēšanas biežumu."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Recenzēšanas pabeigšanai atvēlētās nedēļas"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Recenzēšanas vadlīnijas"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Iekļaut drošu saiti e-pasta uzaicinājumā recenzentiem."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Recenzentiem e-pasta uzaicinājumā var nosūtīt drošu saiti, kas nodrošinās "
+"automātisku pieslēgšanos pēc uzklikšķināšanas uz saites."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Recenzenta viena klikšķa piekļuve"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Lai nosūtītu automātiskus e-pasta atgādinājumus, vietnes administratoram ir "
+"jāaktivizē opcija <tt>scheduled_tasks</tt> OJS konfigurācijas failā. Var būt "
+"nepieciešama papildu servera konfigurācija, kā norādīts OJS dokumentācijā."
+
+msgid "manager.setup.publisher"
+msgstr "Izdevējs"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Recenzenta piekļuve"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Korektūras instrukcijas būs pieejamas korektoriem, autoriem, maketētājiem un "
+"sadaļu redaktoriem iesniegtā manuskripta rediģēšanas posmā. Zemāk ir sniegts "
+"noklusējuma norādījumu kopums HTML formātā, ko žurnāla pārvaldnieks jebkurā "
+"brīdī var rediģēt vai aizstāt (HTML vai teksta formātā)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Publicēšanas grafiks"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Lietotājiem jābūt reģistrētiem un jāpieslēdzas, lai skatītu brīvpieejas "
+"saturu."
