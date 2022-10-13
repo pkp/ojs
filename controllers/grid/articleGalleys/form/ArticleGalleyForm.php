@@ -22,6 +22,8 @@ use APP\template\TemplateManager;
 
 use PKP\form\Form;
 use PKP\galley\Galley;
+use APP\submission\Submission;
+use APP\publication\Publication;
 
 class ArticleGalleyForm extends Form
 {
@@ -34,19 +36,23 @@ class ArticleGalleyForm extends Form
     /** @var Galley current galley */
     public $_articleGalley = null;
 
+    public bool $_isEditable = true;
+
     /**
      * Constructor.
      *
      * @param Submission $submission
      * @param Publication $publication
      * @param Galley $articleGalley (optional)
+     * @param bool $isEditable (optional, default = true)
      */
-    public function __construct($request, $submission, $publication, $articleGalley = null)
+    public function __construct($request, $submission, $publication, $articleGalley = null, bool $isEditable = true)
     {
         parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
         $this->_submission = $submission;
         $this->_publication = $publication;
         $this->_articleGalley = $articleGalley;
+        $this->_isEditable = $isEditable;
 
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'label', 'required', 'editor.issues.galleyLabelRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'optional', 'validator.alpha_dash_period', '/^[a-zA-Z0-9]+([\\.\\-_][a-zA-Z0-9]+)*$/'));
@@ -90,6 +96,7 @@ class ArticleGalleyForm extends Form
             'supportedLocales' => $context->getSupportedSubmissionLocaleNames(),
             'submissionId' => $this->_submission->getId(),
             'publicationId' => $this->_publication->getId(),
+            'formDisabled' => !$this->_isEditable
         ]);
 
         return parent::fetch($request, $template, $display);
@@ -112,6 +119,10 @@ class ArticleGalleyForm extends Form
                     $this->addErrorField('urlPath');
                 }
             }
+        }
+
+        if (!$this->_isEditable) {
+            $this->addError('', __('galley.cantEditPublished'));
         }
 
         return parent::validate($callHooks);

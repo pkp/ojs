@@ -367,3 +367,9 @@ msgstr "Could not create a DOI for the {$pubObjectTitle} galley for the followin
 
 msgid "doi.submission.incorrectContext"
 msgstr "Could not create a DOI for the following submission: {$pubObjectTitle}. It does not exist in the current journal context."
+
+msgid "submission.layout.viewGalley"
+msgstr "View Galley"
+
+msgid "galley.cantEditPublished"
+msgstr "This galley can not be edited because it has already been published."
