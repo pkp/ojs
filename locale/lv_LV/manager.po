@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-13 12:01+0000\n"
+"PO-Revision-Date: 2022-10-13 13:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -888,3 +888,69 @@ msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 "CLOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
 "\"https://clockss.org\" target=\"_blank\">CLOCKSS Licence</a>"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Lapas numura iespēja"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Mērķis, recenzēšana, sadaļas, privātums, drošība un papildu informācija par "
+"elementiem."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL ir absolūtais URL (piemēram, \"http://www.example.com\"), nevis "
+"relatīvais ceļš uz vietni (piemēram, \"/manager/setup\")"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigācijas josla"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Iesniegšanas apstiprinājuma e-pasts pašlaik ir "
+"atspējots. Lai izmantotu šo funkciju, iespējojiet \"Iesniegšanas "
+"apstiprinājuma\" e-pastu sadaļā E-pasti."
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Pārvaldības un publicēšanas iestatīšana"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nav augšupielādēts neviens attēla fails."
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Pievienojiet vai noņemiet papildu navigācijas joslas elementus."
+
+msgid "manager.setup.note"
+msgstr "Piezīme"
+
+msgid "manager.setup.policies"
+msgstr "Noteikumi"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4. solis. Žurnāla pārvaldība"
+
+msgid "manager.setup.numPageLinks"
+msgstr "Lapas saites"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Marķējuma vērtība ir burtiska virkne (piemēram, \"Journal Setup\"), nevis "
+"lokalizācijas ziņojuma atslēga (piemēram, \"manager.setup\")"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Nav augšupielādēta neviena stila lapa."
+
+msgid "manager.setup.printIssn"
+msgstr "Drukāta izdevuma ISSN"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Pamata redakcijas posmu pārvaldība"
+
+msgid "manager.setup.onlineIssn"
+msgstr "Tiešsaistes ISSN"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ierobežojiet sarakstā uz nākamajām lapām rādāmo saišu skaitu."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Pārbaudes instrukcijas"
