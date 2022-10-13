@@ -37,6 +37,8 @@ use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\WorkflowStageAccessPolicy;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
+use APP\submission\Submission;
+use APP\publication\Publication;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
@@ -247,7 +249,7 @@ class ArticleGalleyGridHandler extends GridHandler
     public function identifiers($args, $request)
     {
         $representation = $this->getGalley();
-        $form = new PublicIdentifiersForm($representation);
+        $form = new PublicIdentifiersForm($representation, null, null, $this->canEdit());
         $form->initData();
         return new JSONMessage(true, $form->fetch($request));
     }
@@ -263,7 +265,7 @@ class ArticleGalleyGridHandler extends GridHandler
     public function updateIdentifiers($args, $request)
     {
         $representation = $this->getGalley();
-        $form = new PublicIdentifiersForm($representation, null, array_merge($this->getRequestArgs(), ['representationId' => $representation->getId()]));
+        $form = new PublicIdentifiersForm($representation, null, array_merge($this->getRequestArgs(), ['representationId' => $representation->getId()]), $this->canEdit());
         $form->readInputData();
         if ($form->validate()) {
             $form->execute();
@@ -288,7 +290,7 @@ class ArticleGalleyGridHandler extends GridHandler
         }
 
         $representation = $this->getGalley();
-        $form = new PublicIdentifiersForm($representation);
+        $form = new PublicIdentifiersForm($representation, null, null, $this->canEdit());
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));
         return new JSONMessage(true);
     }
@@ -395,7 +397,8 @@ class ArticleGalleyGridHandler extends GridHandler
             $request,
             $this->getSubmission(),
             $this->getPublication(),
-            $this->getGalley()
+            $this->getGalley(),
+            $this->canEdit()
         );
         $galleyForm->initData();
         return new JSONMessage(true, $galleyForm->fetch($request));
@@ -413,7 +416,7 @@ class ArticleGalleyGridHandler extends GridHandler
     {
         $galley = $this->getGalley();
 
-        $galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getPublication(), $galley);
+        $galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getPublication(), $galley, $this->canEdit());
         $galleyForm->readInputData();
 
         if ($galleyForm->validate()) {
