@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 12:01+0000\n"
+"PO-Revision-Date: 2022-10-13 08:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -722,3 +722,52 @@ msgstr ""
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Žurnāla mājaslapas galvene"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Žurnāla logo"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Šeit izvēlieties žurnāla tēmu un izkārtojuma sastāvdaļas. Var augšupielādēt "
+"arī žurnāla stilu lapu, ko var izmantot, lai aizstātu stila datus sistēmas "
+"stilu lapās un tēmas stilu lapā (ja ir izvēlēta tēma)."
+
+msgid "manager.setup.contextInitials"
+msgstr "Žurnāla iniciāļi"
+
+msgid "manager.setup.journalLogo"
+msgstr "Žurnāla logo"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Izvēlieties valsti, kurā atrodas šis žurnāls, vai valsti, kurā ir žurnāla "
+"vai izdevēja pasta adrese."
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Jūsu žurnāla iestatījumi ir atjaunināti."
+
+msgid "manager.setup.journalLayout"
+msgstr "Žurnāla izkārtojums"
+
+msgid "manager.setup.journalSetup"
+msgstr "Žurnāla iestatījumi"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Nederīgs žurnāla stila lapas formāts. Pieņemtais formāts ir .css."
+
+msgid "manager.setup.journalPolicies"
+msgstr "2. solis. Žurnāla politika"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Šī ir jūsu žurnāla apakšējā daļa. Lai to mainītu vai atjauninātu, "
+"ievietojiet HTML kodu zemāk esošajā teksta lodziņā. Kā piemēru var minēt "
+"citu navigācijas joslu, skaitītāju utt. Šis laukums būs redzams katrā lapā."
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Sākumlapā var augšupielādēt žurnāla nosaukuma un logotipa grafisko versiju ("
+"kā .gif, .jpg vai .png failu), kas aizstās teksta versiju."
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Žurnāla lapas apakšējā daļa"
