@@ -38,6 +38,7 @@ class JournalsMigration extends \PKP\migration\Migration
         Schema::create('journal_settings', function (Blueprint $table) {
             $table->bigInteger('journal_id');
             $table->foreign('journal_id', 'journal_settings_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
+            $table->index(['journal_id'], 'journal_settings_journal_id');
 
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
