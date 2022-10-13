@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-13 11:01+0000\n"
+"PO-Revision-Date: 2022-10-13 12:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -821,9 +821,9 @@ msgstr "LOCKSS un CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
-"Iespējot LOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās "
-"bibliotēkās, izmantojot LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\""
-">Publisher Manifest</a> lapu."
+"Ļauj LOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās bibliotēkās, "
+"izmantojot LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a> lapu."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
@@ -839,3 +839,52 @@ msgstr ""
 "uzturēšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst vairākiem "
 "pamatkritērijiem. Lai arhivētu savu žurnālu PN, lūdziet administratoram "
 "instalēt PKP|PN spraudni no spraudņu galerijas."
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Piekļuve un drošība, plānošana, paziņojumi, literārā rediģēšana, maketēšana "
+"un korektūra."
+
+#, fuzzy
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Reģistrējieties CLOCKSS pakalpojumam, apmeklējot <a href=\"https://clockss."
+"org\" target=\"_blank\">CLOCKSS tīmekļa vietni</a>."
+
+msgid "manager.setup.look"
+msgstr "Izskats"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Mājaslapas galvene, saturs, žurnāla galvene, kājene, navigācijas josla un "
+"stila lapa."
+
+msgid "manager.setup.management"
+msgstr "Pārvaldība"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS licences apraksts"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Ļauj CLOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās bibliotēkās, "
+"izmantojot CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a> lapu."
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Nosakiet 6–10 bibliotēkas, kas reģistrēs un kešos žurnālu. Piemēram, "
+"vērsieties pie iestādēm, kurās strādā redaktori un redkolēģijas locekļu un/"
+"vai iestādēm, kuras jau piedalās LOCKSS. Skatīt <a href=\"https://www.lockss."
+"org/join-lockss/partner-communities\" target=\"_blank\">LOCKSS kopienu</a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
+"\"https://clockss.org\" target=\"_blank\">CLOCKSS Licence</a>"
