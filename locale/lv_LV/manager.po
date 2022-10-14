@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-14 12:01+0000\n"
+"PO-Revision-Date: 2022-10-14 13:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1339,3 +1339,133 @@ msgstr ""
 "jāaktivizē opcija <tt>scheduled_tasks</tt> OJS konfigurācijas failā. Šīs "
 "funkcijas atbalstam var būt nepieciešama papildu servera konfigurācija (kas "
 "var nebūt iespējama visos serveros), kā norādīts OJS dokumentācijā."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML var izmantot teksta laukumā (fonta izmēram, krāsai utt.), \"enter\" "
+"izmantošana tiek pielīdzināta rindas lauzumam <tt>&lt;br&gt;</tt>; HTML "
+"redaktors darbojas ar Firefox pārlūkpogrammām."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Pēc iestādes abonementa iegādes tiešsaistē (ieteicams) pa e-pastu paziņot "
+"par to abonēšanas pārvaldniekam."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Paziņot abonēšanas pārvaldniekam pa e-pastu par individuālā abonementa "
+"iegādi tiešsaistē."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Lai aktivizētu šo opciju, vietnes administratoram "
+"jāaktivizē <tt>scheduled_tasks</tt> opcija OJS konfigurācijas failā. Šīs "
+"funkcijas atbalstam var būt nepieciešama papildu servera konfigurācija (kas "
+"var nebūt iespējama visos serveros), kā norādīts OJS dokumentācijā."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Šī kontaktinformācija tiks norādīta abonēšanas lapā, lai klienti varētu "
+"saņemt ar abonēšanu saistītus pieprasījumus."
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Iestāžu abonementi"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Vai tiešām vēlaties dzēst šo abonementu?"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Pēc institucionālā abonementa atjaunošanas tiešsaistē paziņot par to "
+"abonēšanas pārvaldniekam pa e-pastu."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informācija par abonēšanu"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Pēc abonēšanas tiešsaistes maksājumu veikšanas abonēšanas pārvaldniekam var "
+"nosūtīt automatizētus e-pasta paziņojumus (žurnālu pārvaldniekiem tie "
+"pieejami rediģēšanai OJS sadaļā E-pasti)."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību mēnešu skaitam pirms abonementa termiņa "
+"beigām."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Reģistrētiem lasītājiem būs iespēja saņemt satura rādītāju pa e-pastu, kad "
+"izdevums būs publicēts atvērtā piekļuvē."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību nedēļu skaitam pirms abonementa termiņa "
+"beigām."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Abonēšanas pārvaldnieks"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individuālie abonementi"
+
+msgid "manager.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Lūdzu, ievadiet derīgu e-pasta adresi."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Tiešsaistes maksājumu paziņojumi"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Abonēšanas veidi un maksas struktūra tiks parādīti abonēšanas lapā kopā ar "
+"abonēšanas pārvaldnieka vārdu un kontaktinformāciju. Šeit var pievienot "
+"papildu informāciju par abonementiem, piemēram, maksāšanas metodes vai "
+"atbalstu abonentiem jaunattīstības valstīs."
+
+msgid "manager.subscriptions.create"
+msgstr "Izveidot jaunu abonementu"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Vai tiešām vēlaties atjaunot šo abonementu?"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Abonētajos žurnālos var nodrošināt \"aizkavētu atvērto piekļuvi\" "
+"publicētajam saturam, kā arī atļaut \"autora pašarhivēšanu\" (abi šie "
+"faktori palielina lasītāju skaitu un satura citējamību)."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Lai iespējotu šīs opcijas, žurnāla pārvaldniekam "
+"jāiedarbina tiešsaistes maksājumu modulis, tostarp tiešsaistes maksājumi par "
+"abonementiem, sadaļā Lasītāju maksas."
+
+msgid "manager.subscriptions.summary"
+msgstr "Abonēšanas kopsavilkums"
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību mēnešu skaitam pēc abonementa termiņa "
+"beigām."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību nedēļu skaitam pēc abonementa termiņa "
+"beigām."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Paziņot abonēšanas pārvaldniekam pa e-pastu pēc individuālās abonēšanas "
+"atjaunošanas tiešsaistē."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Piezīme:</strong> Tiešsaistē iegādātajiem iestāžu abonementiem ir "
+"nepieciešams apstiprināt sniegto domēna un IP diapazonu un aktivizēt "
+"abonementu ar abonēšanas pārvaldnieka palīdzību."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Abonēto žurnālu atvērtās piekļuves iespējas"
