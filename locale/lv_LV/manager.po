@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-14 11:01+0000\n"
+"PO-Revision-Date: 2022-10-14 12:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1138,3 +1138,204 @@ msgstr ""
 
 msgid "manager.setup.submissions"
 msgstr "Iesniegtie materiāli"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Titulattēls"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Lasītājiem tiek liegta piekļuve nesen publicētajam abonēšanas saturam, taču "
+"tiek saglabāta piekļuve abonēšanas saturam, kas publicēts pirms abonēšanas "
+"termiņa beigām."
+
+msgid "manager.setup.useTextTitle"
+msgstr "Nosaukuma teksts"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(piem., vēsturiskais pētījums; kvazieksperiments; literatūras analīze; "
+"aptauja/intervija)"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Kopējais iesniegto darbu skaits"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Akceptēšana"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Piezīme: Iesniegto recenzēto darbu procentuālais īpatsvars var nesasniegt "
+"100 %, jo atkārtoti iesniegtie darbi ir vai nu pieņemti, vai noraidīti, vai "
+"joprojām tiek apstrādāti."
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Recenziju skaits"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS aprēķina šādu statistiku katram žurnālam. \"Dienas līdz recenzenta "
+"pārskatam\" tiek aprēķinātas no manuskripta iesniegšanas datuma (vai "
+"manuskripta recenzēšanas versijas iesniegšanas brīža) līdz sākotnējam "
+"redaktora lēmumam, savukārt \"dienas līdz publicēšanai\" tiek mērītas "
+"pieņemtajiem manuskriptiem no to sākotnējās augšupielādes līdz publicēšanai."
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Izvēlieties sadaļas šī žurnāla recenzēto darbu statistikas aprēķināšanai."
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Pēc abonēšanas termiņa beigām lasītājiem tiek liegta piekļuve visam "
+"abonētajam saturam."
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} nedēļas"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Beidzoties abonēšanas termiņam, lasītājiem var tikt liegta piekļuve visam "
+"abonētajam saturam vai arī viņi var saglabāt piekļuvi abonētajam saturam, "
+"kas publicēts pirms abonēšanas termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Abonēšanas termiņa beigas"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Piešķirts Nr."
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Raksta skatījumu skaits (tikai autoriem)"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Izvēlieties vienu no šādām iespējām:"
+
+msgid "manager.statistics.statistics"
+msgstr "Žurnāla statistika"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Lūdzu, izmantojiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Pilnīga abonēšanas termiņa izbeigšanās"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Raksta anotācijas lapas skatījumi un lejupielādes"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mēneši"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Paziņot abonentiem e-pastā pirms abonēšanas termiņa beigām."
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Raksta anotācijas lapas skatījumi"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Žurnāls izmantos redakcijas/recenzēšanas komisiju."
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Zinātniski recenzēti"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Recenzenti"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Aizkavēta atvērta piekļuve"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Atkārtota iesniegšana"
+
+msgid "manager.setup.userRegistration"
+msgstr "Lietotāja reģistrācija"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Žurnāla galvenās lapas skatījumi"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Abonēšanas termiņa beigu atgādinājumi"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Sniedziet piemērus par attiecīgajiem pētījumu veidiem, metodēm un pieejām "
+"šajā jomā"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Unikālais identifikators"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Reģistrētie lasītāji"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Automatizētus e-pasta atgādinājumus (tos var rediģēt žurnālu pārvaldnieki "
+"OJS sadaļā E-pasti) abonentiem var nosūtīt gan pirms, gan pēc abonēšanas "
+"termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Paziņot abonentiem e-pastā par abonēšanas termiņa beigām"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Publicētie materiāli"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Sīktēls"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Raksta failu lejupielādes"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Abonēšanas noteikumi"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Dienas līdz recenzentu pārskatam"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Izdevuma satura lapas skatījumi"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Paziņot abonentiem e-pastā pirms abonēšanas termiņa beigām."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Redaktora novērtējums"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Noraidīšana"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Paziņot abonentiem e-pastā par abonēšanas termiņa beigām."
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Veids (metode/pieeja)"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Pārbaudiet materiālus, kas būs pieejami lasītājiem sadaļā Par žurnālu."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Rakstus un izdevumus var marķēt ar identifikācijas numuru vai virkni, "
+"izmantojot reģistrācijas sistēmu, piemēram, digitālo objektu identifikatoru "
+"sistēmu (DOI)."
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Dienas līdz publicēšanai"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Publicētie numuri"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Nodrošināt metadatus trešo pušu indeksēšanas pakalpojumiem, izmantojot <a "
+"href=\"https://www.openarchives.org/\">Atvērto arhīvu iniciatīvu (OAI)</a>."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Daļēja abonēšanas termiņa izbeigšanās"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Lai aktivizētu šīs opcijas, vietnes pārvaldniekam "
+"jāaktivizē opcija <tt>scheduled_tasks</tt> OJS konfigurācijas failā. Šīs "
+"funkcijas atbalstam var būt nepieciešama papildu servera konfigurācija (kas "
+"var nebūt iespējama visos serveros), kā norādīts OJS dokumentācijā."
