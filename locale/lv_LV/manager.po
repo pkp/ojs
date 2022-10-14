@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-13 14:01+0000\n"
+"PO-Revision-Date: 2022-10-14 07:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1037,3 +1037,69 @@ msgid "manager.setup.restrictArticleAccess"
 msgstr ""
 "Lietotājiem jābūt reģistrētiem un jāpieslēdzas, lai skatītu brīvpieejas "
 "saturu."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Lai izveidotu vai mainītu žurnāla sadaļas (piemēram, Raksti, Grāmatu "
+"recenzijas u. c.), dodieties uz sadaļu pārvaldību.<br /><br />Autori, "
+"iesniedzot materiālus žurnālam, norādīs..."
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Atslēgvārdi"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Meklēšanas indeksēšana"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Palīdziet meklētājprogrammām, piemēram, Google, atklāt un parādīt jūsu "
+"vietni. Aicinām iesniegt savu <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">vietni</a>."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Recenzentu reitingi"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Skatīt raksta saturu"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Recenzēšanas politika"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Recenzentu atgādinājumi"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Pieci soļi žurnāla tīmekļa vietnes izveidei"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Žurnāla redaktors, kas nodrošinās žurnāla rediģēšanas procesu."
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(piem., fotosintēze; melnie caurumi; četru krāsu kartes problēma; Beiesa "
+"teorēma)"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Piekļuve vietnei"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Sadaļas un sadaļu redaktori"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Vienmēr rādīt saliktņa saites un norādi par ierobežotu piekļuvi."
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Sniedziet atslēgvārdu vai tēmu piemērus kā vadlīnijas autoriem"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Sniedziet īsu žurnāla aprakstu (50-300 rakstzīmju), ko meklētājprogrammas "
+"var parādīt, iekļaujot žurnālu meklēšanas rezultātos."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ja sadaļas nav pievienotas, materiāli pēc noklusējuma tiek iesniegti sadaļā "
+"Raksti.)"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Žurnāla sadaļa, kurā tiks izskatīts šis materiāls."
