@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-14 08:01+0000\n"
+"PO-Revision-Date: 2022-10-14 11:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1108,12 +1108,33 @@ msgid "manager.setup.submissionPreparationChecklistDescription"
 msgstr ""
 "Iesniedzot manuskriptu žurnālam, autori vispirms tiek aicināti pārbaudīt, "
 "vai katrs kontrolsaraksta punkts ir izpildīts, un tikai pēc tam turpināt "
-"darbu. Šis kontrolsaraksts ir iekļauts arī Vadlīnijās autoriem, sadaļā Par "
-"žurnālu. Sarakstu var rediģēt zemāk, bet pirms autori var turpināt darbu ar "
-"iesniegumu, visos saraksta punktos ir jābūt atzīmētiem ar ķeksīti."
+"darba iesniegšanu. Šis kontrolsaraksts ir iekļauts arī Vadlīnijās autoriem, "
+"sadaļā Par žurnālu. Sarakstu var rediģēt zemāk. Pirms autori var turpināt "
+"darba iesniegšanu, visiem saraksta punktiem ir jābūt atzīmētiem."
 
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Kontrolsaraksts iesniedzamā materiāla sagatavošanai"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Iesniegšanas vadlīnijas"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Aizliegt lietotājiem iesniegt žurnālam jaunus rakstus. Iesniegšanu "
+"atsevišķām žurnālu sadaļām var atspējot <a href=\"{$url}\">žurnāla sadaļu</"
+"a> iestatījumu lapā."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Vadlīnijas autoriem, autortiesības un indeksēšana (tostarp reģistrācija)."
+
+msgid "manager.setup.enableOai"
+msgstr "Iespējot OAI"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Šis žurnāls pašlaik nepieņem manuskriptus. Apmeklējiet darba plūsmas "
+"iestatījumus, lai atļautu manuskriptu iesniegšanu."
+
+msgid "manager.setup.submissions"
+msgstr "Iesniegtie materiāli"
