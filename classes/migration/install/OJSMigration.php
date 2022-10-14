@@ -231,14 +231,14 @@ class OJSMigration extends \PKP\migration\Migration
         // but they depend on publications to exist so are created here.
         Schema::table('submissions', function (Blueprint $table) {
             $table->foreign('current_publication_id', 'submissions_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
-            $table->index(['current_publication_id'], 'submissions_current_publication_id');
+            $table->index(['current_publication_id'], 'submissions_publication_id');
         });
         Schema::table('publication_settings', function (Blueprint $table) {
             $table->foreign('publication_id', 'publication_settings_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
             $table->index(['publication_id'], 'publication_settings_publication_id');
         });
         Schema::table('authors', function (Blueprint $table) {
-            $table->foreign('publication_id', 'authors_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
+            $table->foreign('publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
             $table->index(['publication_id'], 'authors_publication_id');
         });
         // Publication galleys
@@ -353,7 +353,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->index(['subscription_id'], 'institutional_subscriptions_subscription_id');
 
             $table->bigInteger('institution_id');
-            $table->foreign('institution_id', 'institutional_subscriptions_institution_id')->references('institution_id')->on('institutions')->onDelete('cascade');
+            $table->foreign('institution_id')->references('institution_id')->on('institutions')->onDelete('cascade');
             $table->index(['institution_id'], 'institutional_subscriptions_institution_id');
 
             $table->string('mailing_address', 255)->nullable();
