@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-14 07:01+0000\n"
+"PO-Revision-Date: 2022-10-14 08:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1103,3 +1103,17 @@ msgstr ""
 
 msgid "manager.setup.selectSectionDescription"
 msgstr "Žurnāla sadaļa, kurā tiks izskatīts šis materiāls."
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"Iesniedzot manuskriptu žurnālam, autori vispirms tiek aicināti pārbaudīt, "
+"vai katrs kontrolsaraksta punkts ir izpildīts, un tikai pēc tam turpināt "
+"darbu. Šis kontrolsaraksts ir iekļauts arī Vadlīnijās autoriem, sadaļā Par "
+"žurnālu. Sarakstu var rediģēt zemāk, bet pirms autori var turpināt darbu ar "
+"iesniegumu, visos saraksta punktos ir jābūt atzīmētiem ar ķeksīti."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Kontrolsaraksts iesniedzamā materiāla sagatavošanai"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Iesniegšanas vadlīnijas"
