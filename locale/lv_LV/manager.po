@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-17 10:01+0000\n"
+"PO-Revision-Date: 2022-10-17 11:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1484,3 +1484,124 @@ msgstr "Atjaunot"
 
 msgid "manager.subscriptions.dateEnd"
 msgstr "Izbeigt"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Ir nepieciešams lietotājs."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Šis ir beztermiņa abonēšanas veids; lūdzu, nenorādiet beigu datumu."
+
+msgid "manager.subscriptions.domain"
+msgstr "Domēns"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Identifikācijas numurs"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas sākuma datumu."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Ir jānorāda abonēšanas sākuma datums."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Šis ir beztermiņa abonēšanas veids; lūdzu, nenorādiet sākuma datumu."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Piezīmes"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Ievadiet informāciju par dalību, ja abonēšanas veids paredz, ka abonentiem "
+"jābūt kādas asociācijas vai organizācijas biedriem."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Nosūtīt lietotājam e-pastu ar lietotājvārdu un abonēšanas informāciju."
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domēns"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas veidu."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Beigu datums"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas statusu."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Pasta adrese"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Lūdzu, izvēlieties derīgu valsti."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Izvēlētajam abonēšanas veidam ir nepieciešama dalības informācija."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Piezīme: Visas turpmāk minētās izmaiņas attiecas uz lietotāja sistēmas "
+"profilu."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontaktinformācija"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Sākuma datums"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Abonēšanas veids"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Lietotājs"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Ir jānorāda abonēšanas beigu datums."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Lūdzu, atzīmējiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas beigu datumu."
+
+msgid "manager.subscriptions.form.status"
+msgstr "Statuss"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Viss"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Dalība"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Rediģēt"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Ar statusu"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Lūdzu, izvēlieties derīgu lietotāju."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Ir nepieciešams abonēšanas veids."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Sākuma datums"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Ir nepieciešams abonēšanas statuss."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Iestāde"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Lūdzu, izvēlieties derīgu iestādi."
+
+msgid "manager.subscriptions.edit"
+msgstr "Rediģēt abonementu"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Jānorāda iestādes nosaukums."
