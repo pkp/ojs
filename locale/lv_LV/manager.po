@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-17 11:01+0000\n"
+"PO-Revision-Date: 2022-10-17 12:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1605,3 +1605,76 @@ msgstr "Iestādes nosaukums"
 
 msgid "manager.subscriptions.form.institutionNameRequired"
 msgstr "Jānorāda iestādes nosaukums."
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Pievienot"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Lūdzu, ievadiet derīgu IP diapazonu."
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Nav abonementu"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Pirms jaunu abonementu izveides ir jāizveido abonēšanas tips."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Ja šeit tiek ievadīts domēns, IP diapazoni nav obligāti.<br />Pareizās "
+"vērtības ir domēna vārdi (piemēram, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ja šeit tiek ievadīti IP diapazoni, domēna norādīšana nav obligāta.<br /"
+">Derīgas vērtības ir IP adrese (piemēram, 142.58.103.1), IP diapazons ("
+"piemēram, 142.58.103.1 – 142.58.103.4), IP diapazons ar aizstājējzīmi '*' ("
+"piemēram, 142.58.*.*) un IP diapazons ar CIDR (piemēram, 142.58.100.0/24)."
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Izvēlieties Abonēšanas kontaktpersonu"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Saglabāt un izveidot citu"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Lai lietotājam varētu nosūtīt paziņojumu pa e-pastu, žurnāla iestatījumos "
+"jānorāda abonēšanas kontaktpersonas vārds un e-pasta adrese."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Izvēlētajam abonementa tipam abonementa autentifikācijai ir nepieciešams "
+"domēns un/vai IP diapazons."
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Atlasiet lietotāju"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Identifikācijas numurs"
+
+msgid "manager.subscriptions.membership"
+msgstr "Dalība"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP diapazons"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Dzēst"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP diapazoni"
+
+msgid "manager.subscriptions.notes"
+msgstr "Piezīmes"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Šis lietotājs jau ir abonējis šo žurnālu."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Pirms jaunu abonementu veikšanas ir jāizveido iestāde."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Lūdzu, ievadiet derīgu domēnu."
