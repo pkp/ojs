@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-17 15:01+0000\n"
+"PO-Revision-Date: 2022-10-17 16:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -2351,3 +2351,135 @@ msgstr ""
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "saliktņiem"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Abonēšanas paziņojums"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Ar šo e-pasta vēstuli reģistrētajam lasītājam tiek paziņots, ka pārvaldnieks "
+"viņam ir izveidojis abonementu. Tajā ir norādīts žurnāla URL kopā ar "
+"piekļuves norādījumiem."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abonēšanas termiņš drīz beigsies"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abonēšanas termiņš beidzies"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abonementa derīgums beidzies pēdējo reizi"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Iegādāties iestāžu abonementu"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Iegādāties individuālo abonementu"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Šī e-pasta vēstule informē abonēšanas pārvaldnieku par to, ka tiešsaistē ir "
+"iegādāts individuāls abonements. Tajā ir sniegta kopsavilkuma informācija "
+"par abonementu un ātras piekļuves saite uz iegādāto abonementu."
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Šī e-pasta vēstule informē abonēšanas pārvaldnieku par to, ka tiešsaistē ir "
+"iegādāts iestāžu abonements. Tajā ir sniegta kopsavilkuma informācija par "
+"abonementu un ātras piekļuves saite uz iegādāto abonementu."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Atjaunot individuālo abonementu"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Šī e-pasta vēstule informē abonementa pārvaldnieku, ka individuālais "
+"abonements atjaunots tiešsaistē. Tajā ir sniegta kopsavilkuma informācija "
+"par abonementu un ātras piekļuves saite uz atjaunoto abonementu."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Atjaunot iestāžu abonementu"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Šī e-pasta vēstule paziņo abonēšanas pārvaldniekam, ka iestāžu abonēšana "
+"atjaunota tiešsaistē. Tajā ir sniegta kopsavilkuma informācija par "
+"abonementu un ātras piekļuves saite uz atjaunoto abonementu."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Paziņojums par atvērto piekļuvi"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Šis e-pasts tiek nosūtīts reģistrētiem lasītājiem, kuri ir pieprasījuši "
+"saņemt paziņojumu e-pastu, kad izdevums kļūst brīvpieejams."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Paziņojums par izdevuma publicēšanu"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Šis e-pasts tiek automātiski nosūtīts reģistrētajiem lietotājiem, kad tiek "
+"publicēts jauns izdevums."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI šai publikācijai nav piešķirts."
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Iesniegtais DOI nav derīgs"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Pēc publikācijas publicēšanas var rediģēt tikai DOI"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI nevar piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Jūsu pieprasītie izdevumi netika atrasti"
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI jāsākas ar {$doiPrefix}."
+
+msgid "doi.editor.assignDoi"
+msgstr "Piešķirt DOI {$pubId} šim {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} tiks piešķirts pēc publicēšanas."
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Jūsu pieprasītais saliktnis nav daļa no šīs publikācijas."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} nevar piešķirt, jo tas satur neatrisinātu modeli."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} piešķirts. Lai rediģētu DOI, apmeklējiet <a href=\""
+"{$doiManagementLink}\">DOI pārvaldības lapu</a>."
+
+msgid "doi.editor.preview.publication"
+msgstr "Šīs publikācijas DOI būs {$doi}."
+
+msgid "doi.manager.issueDois"
+msgstr "Izdevumu DOI"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Pēc publikācijas/saliktņa publicēšanas var rediģēt tikai DOI"
+
+msgid "doi.manager.submissionDois"
+msgstr "Rakstu DOI"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Saliktnis: {$galleyLabel}"
+
+msgid "manager.institutions.noContext"
+msgstr "Šīs iestādes žurnālu neizdevās atrast."
+
+msgid "doi.editor.preview.objects"
+msgstr "Vienība"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Šajā e-pasta vēstulē autors tiek informēts, ka viņa iesniegtais materiāls "
+"tiek noraidīts pirms recenzēšanas posma, jo tas neatbilst publicēšanas "
+"prasībām žurnālā."
