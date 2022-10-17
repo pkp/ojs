@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-17 14:01+0000\n"
+"PO-Revision-Date: 2022-10-17 15:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -2092,3 +2092,262 @@ msgstr "Izvades fails {$param} nav rakstāms."
 
 msgid "plugins.importexport.common.validation.success"
 msgstr "Apstiprināšana ir veiksmīga!"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Lejupielādēt CSV/Excel izklājlapu ar lietošanas statistiku rakstiem, kas "
+"atbilst šādiem parametriem."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "žurnāla iniciāļi"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Datums, kad beidzas abonēšanas termiņš"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Iestādes pasta adrese"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domēns"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP diapazoni abonēšanas autentificēšanai"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Žurnāla galvenās kontaktpersonas e-pasta adrese"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli rakstiem."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Notīrīt"
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Jūs nevarat ģenerēt DOI, jo vienā vai vairākās DOI modeļa daļās trūkst datu. "
+"Iespējams, jums būs jāpiešķir publikācija izdevumam, jānosaka izdevēja ID "
+"vai jāievada lappušu numuri."
+
+msgid "doi.editor.doi.description"
+msgstr "DOI jāsākas ar {$prefix}."
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "izdevums"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Maksājuma veida nosaukums"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "saliktnis"
+
+msgid "doi.editor.missingIssue"
+msgstr "Jūs nevarat ģenerēt DOI, kamēr šī publikācija nav piešķirta izdevumam."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "E-pasta apstiprināšana (žurnāla reģistrācija)"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Žurnāla mājaslapas URL"
+
+msgid "doi.description"
+msgstr ""
+"Šis spraudnis OJS sistēmā ļauj piešķirt digitālo objektu identifikatorus "
+"žurnālu numuriem, rakstiem un saliktņiem."
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Izmantojiet šādu opciju, lai dzēstu DOI visiem objektiem (rakstiem un "
+"saliktņiem), kas pašlaik plānoti šim izdevumam."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Piešķirt"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Piešķirt DOI"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Šo e-pastu automātiski nosūta jaunam lietotājam, kad viņš reģistrējas "
+"žurnālā, ja iestatījumos ir prasīts apstiprināt e-pasta adresi."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Vai esat pārliecināts, ka vēlaties piešķirt DOI visiem publicētajiem "
+"objektiem, kuriem nav piešķirts DOI?"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Piemēram, vol%viss%ipp%p izveidos tādu DOI kā 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "izdevumiem"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI prefikss"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli izdevumiem."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI nevar piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informācija par abonenta dalību"
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Tas, ko redzat, ir DOI priekšskatījums. Atlasiet izvēles rūtiņu un "
+"saglabājiet veidlapu, lai piešķirtu DOI."
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Notīrīt izdevuma objektu DOI"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Rakstu saliktņi"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Abonēšanas lapas URL"
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Procesam neizdevās parsēt izdevuma saliktņus"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst esošos izdevuma objektu DOI?"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" – \"{$issueIdentification}\""
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI prefikss ir obligāts, un tam jābūt 10.xxxx formā."
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Ja mainīsiet DOI konfigurāciju, tas neietekmēs jau piešķirtos DOI. Kad DOI "
+"konfigurācija ir saglabāta, izmantojiet šo pogu, lai dzēstu visus esošos DOI "
+"un jaunie iestatījumi stātos spēkā esošajiem objektiem."
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Žurnāla galvenās kontaktpersonas vārds un uzvārds"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Maksājuma summa"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Piešķirt DOI visiem publicētajiem žurnāla objektiem, kuriem nav piešķirts "
+"DOI. Šo darbību nevar izmantot kopā ar individuālo sufiksu konfigurāciju. Ja "
+"iepriekš esat mainījis DOI konfigurāciju, pirms šīs darbības uzsākšanas "
+"saglabājiet izmaiņas. DOI piešķiršana var aizņemt ilgu laiku atkarībā no "
+"žurnālā publicēto objektu skaita."
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Lūdzu, izvēlieties reģistrācijas aģentūru, kuru vēlaties izmantot, deponējot "
+"DOI."
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Lūdzu, konfigurējiet DOI spraudni, lai varētu pārvaldīt un izmantot DOI OJS:"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Žurnāla e-pasta paraksts automātiskajiem e-pastiem"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Rakstu saliktņi, piemēram, publicēts PDF dokuments"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Abonēšanas pārvaldnieka kontaktinformācija"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "rakstiem"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Maksājuma summas valūta, piemēram, EUR"
+
+msgid "doi.editor.assigned"
+msgstr "DOI tiek piešķirts šim {$pubObjectType}."
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli saliktņiem."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI nevar piešķirt, jo tajā ir neatrisināms modelis."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Dotais DOI sufikss jau tiek izmantots citam publicētam elementam. Lūdzu, "
+"ievadiet unikālu DOI sufiksu katrai vienībai."
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Lūdzu, atlasiet publicēšanas objektus, kuriem tiks piešķirti digitālo "
+"objektu identifikatori (DOI):"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI atkārtota piešķiršana"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Nav"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst visus esošos DOI?"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Žurnāla nosaukums"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Abonenta vārds, uzvārds, piederība, tālruņa numurs un e-pasta adrese"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst esošo DOI?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Reģistrācijas aģentūra"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "raksts"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Tīmekļa vietnes nosaukums, ja tiek izvietots vairāk nekā viens žurnāls"
+
+msgid "stats.issueTOCViews"
+msgstr "Izdevuma TOC skati"
+
+msgid "stats.issueGalleyViews"
+msgstr "Izdevuma saliktņa skati"
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Lejupielādēt rakstus"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Katra raksta kopsavilkumu skatījumu un lejupielādēto failu skaits."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Ievadiet pielāgotu sufiksa formu katram publikācijas veidam. Pielāgotā "
+"sufiksa veidnē var izmantot šādus simbolus, lai ģenerētu sufiksu:<br><br> "
+"<code>%j</code> Žurnāla iniciāļi<br> <code>%v</code> Izdevuma sējums<br> "
+"<code>%i</code> Izdevuma numurs<br> <code>%Y</code> Izdevuma gads<br> "
+"<code>%a</code> Raksta ID<br> <code>%g</code> Saliktņa ID<br> <code>%f</"
+"code> Datnes ID<br> <code>%p</code>Lapas numurs<br> <code>%x</code> "
+"Pielāgots identifikators<br><br> Jāievēro, ka pielāgotie sufiksu modeļi "
+"bieži rada problēmas ar DOI ģenerēšanu un deponēšanu. Ja izmantojat "
+"pielāgotu sufiksa modeli, rūpīgi pārbaudiet, vai redaktori var ģenerēt DOI "
+"un deponēt tos reģistrācijas aģentūrā, piemēram, Crossref. "
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "saliktņiem"
