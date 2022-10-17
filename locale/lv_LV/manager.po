@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-17 12:01+0000\n"
+"PO-Revision-Date: 2022-10-17 13:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -845,7 +845,6 @@ msgstr ""
 "Piekļuve un drošība, plānošana, paziņojumi, literārā rediģēšana, maketēšana "
 "un korektūra."
 
-#, fuzzy
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
 
@@ -1201,7 +1200,7 @@ msgid "manager.subscriptionPolicies.expiry"
 msgstr "Abonēšanas termiņa beigas"
 
 msgid "manager.statistics.statistics.reviewerCount"
-msgstr "Piešķirts Nr."
+msgstr "Nr. piešķirts"
 
 msgid "manager.statistics.statistics.articleViews"
 msgstr "Raksta skatījumu skaits (tikai autoriem)"
@@ -1616,7 +1615,7 @@ msgid "manager.subscriptions.noneCreated"
 msgstr "Nav abonementu"
 
 msgid "manager.subscriptions.form.typeRequired"
-msgstr "Pirms jaunu abonementu izveides ir jāizveido abonēšanas tips."
+msgstr "Pirms jaunu abonementu izveides ir jāizveido abonēšanas veids."
 
 msgid "manager.subscriptions.form.domainInstructions"
 msgstr ""
@@ -1646,8 +1645,8 @@ msgstr "&#8226;"
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
 msgstr ""
-"Izvēlētajam abonementa tipam abonementa autentifikācijai ir nepieciešams "
-"domēns un/vai IP diapazons."
+"Izvēlētā abonēšanas veida abonementa autentifikācijai ir nepieciešams domēns "
+"un/vai IP diapazons."
 
 msgid "manager.subscriptions.selectUser"
 msgstr "Atlasiet lietotāju"
@@ -1678,3 +1677,206 @@ msgstr "Pirms jaunu abonementu veikšanas ir jāizveido iestāde."
 
 msgid "manager.subscriptions.form.domainValid"
 msgstr "Lūdzu, ievadiet derīgu domēnu."
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Ilgums"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Raksti publicētajos žurnāla numuros ir sakārtoti sadaļās, parasti pēc tēmas "
+"vai satura veida (piemēram, pārskata raksti, pētījumi utt.)."
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Kopsavilkums par abonementa veidu, nosaukumu, ilgumu un izmaksām"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Nepieciešams norādīt izmaksas."
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Izveidot jaunu abonēšanas veidu"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Abonēšanas mēnešu skaits (piemēram, 12)."
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucionāls"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Abonēšanas veids"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Abonementiem nepieciešama informācija par dalību (piemēram, asociācijā, "
+"organizācijā, konsorcijā utt.)"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas veida formātu."
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Ir nepieciešams abonēšanas veida formāts."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Saglabāt un izveidot citu"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Lūdzu, atzīmējiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valūta"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Abonēšanas piekļuves tiesības automātiski tiek piešķirtas žurnāla "
+"pārvaldniekiem, redaktoriem, sadaļu redaktoriem, maketētājiem, teksta "
+"redaktoriem un korektoriem."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Saite uz lapu, kurā aprakstīti apmeklētāja pašreizējie un iepriekšējie "
+"abonementi."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Lūdzu, atzīmējiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptions.select"
+msgstr "Atlasīt"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Izmaksām jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "grid.action.addSection"
+msgstr "Pievienot sadaļu"
+
+msgid "manager.subscriptionTypes"
+msgstr "Abonēšanas veidi"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "mēneši (piemēram, 12)"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Abonēšanas veids ar šo nosaukumu jau pastāv."
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Institucionālā (lietotāji tiek apstiprināti, izmantojot domēnu vai IP adresi)"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Labot abonēšanas veidu"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Abonēšanas veids izveidots veiksmīgi."
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Labot"
+
+msgid "manager.setup.categories"
+msgstr "Kategorijas"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Lūdzu, izvēlieties derīgu valūtu."
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuāli (lietotāji tiek apstiprināti, izmantojot autorizāciju)"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nav izveidoti nekādi abonēšanas veidi."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Abonēšanas veids"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Abonements izveidots veiksmīgi."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Ir nepieciešama valūta."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Nepadarīt šo abonēšanas veidu publiski pieejamu vai redzamu tīmekļa vietnē."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Ilgums"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Saite uz lapu, kurā aprakstīti jūsu piedāvātie abonementi."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Darbības termiņš nekad nebeidzas"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Ilgumam jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "grid.category.path"
+msgstr "Ceļš"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Šī saite tiks rādīta tikai tad, ja apmeklētājs ir autorizējies."
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Darbības termiņš beidzas pēc"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Izmaksas"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Veida nosaukums"
+
+msgid "manager.subscriptions.contact"
+msgstr "Kontaktpersonas vārds"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formāts"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Apraksts"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Brīdinājums! Visi abonementi ar šo abonēšanas veidu arī tiks dzēsti. Vai "
+"esat pārliecināts, ka vēlaties turpināt un dzēst šo abonēšanas veidu?"
+
+msgid "manager.subscriptions.user"
+msgstr "Lietotājs"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Ir jānorāda abonēšanas veida nosaukums."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Lūdzu, izmantojiet piedāvātās iespējas."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Nepieciešams norādīt ilgumu."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Iespējas"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individuāls"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Izvēlieties vispiemērotākās kategorijas no augstāk minētā saraksta. Lasītāji "
+"varēs pārlūkot pilnu žurnālu komplektu pa kategorijām."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Ievadiet skaitlisku vērtību (piemēram, 40 vai 40,00) bez simbola (piemēram, "
+"€)."
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Izveidot"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Izmaksas"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Lūdzu, izmantojiet piedāvātās iespējas."
