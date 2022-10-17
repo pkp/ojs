@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-17 13:01+0000\n"
+"PO-Revision-Date: 2022-10-17 14:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1880,3 +1880,215 @@ msgstr "Izmaksas"
 
 msgid "manager.subscriptionTypes.form.nonExpiringValid"
 msgstr "Lūdzu, izmantojiet piedāvātās iespējas."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Lomas ir žurnāla lietotāju grupas, kurām žurnālā ir piešķirta piekļuve "
+"dažādiem tiesību līmeņiem un ar tiem saistītajām darbplūsmām. Ir pieci "
+"dažādi tiesību līmeņi: Žurnāla pārvaldniekiem ir piekļuve visam žurnālam ("
+"visam saturam un iestatījumiem); sadaļu redaktoriem ir pilnīga piekļuve "
+"visam piešķirtajam saturam; žurnāla asistentiem ir ierobežota piekļuve "
+"visiem materiāliem, kurus viņiem ir skaidri piešķīris redaktors; recenzenti "
+"var redzēt un veikt to materiālu izskatīšanu, kuru izskatīšana viņiem ir "
+"uzticēta; autori var redzēt un mijiedarboties ar ierobežotu informācijas "
+"apjomu par saviem materiāliem. Turklāt ir pieci dažādi posmu uzdevumi, "
+"kuriem lomām var piešķirt piekļuvi: Iesniegšana, Iekšējā recenzēšana, "
+"Recenzēšana, Rediģēšana un Izstrāde."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Noņemt autortiesību paziņojumu un licences informāciju katram publicētajam "
+"rakstam, atgriežot tos pie žurnāla pašreizējiem noklusējuma iestatījumiem. "
+"Tas uz visiem laikiem noņems visu iepriekš rakstiem pievienoto autortiesību "
+"un licencēšanas informāciju. Dažos gadījumos jums var nebūt juridiski "
+"atļauts atkārtoti licencēt darbu, kas publicēts ar citu licenci. Lūdzu, "
+"esiet piesardzīgi, izmantojot šo rīku, un konsultējieties ar juristu, ja "
+"neesat pārliecināts, kādas tiesības jums pieder uz žurnālā publicētajiem "
+"rakstiem."
+
+msgid "grid.genres.title.short"
+msgstr "Sastāvdaļas"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Jebkurš izdevums"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Žurnālam trūkst DOI prefiksa ar ceļu {$path}."
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Saliktņi"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Reģistrācija veiksmīga!"
+
+msgid "stats.publicationStats"
+msgstr "Rakstu statistika"
+
+msgid "stats.publications.abstracts"
+msgstr "Kopsavilkumi"
+
+msgid "stats.publications.galleys"
+msgstr "Datnes"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Atzīmēts kā reģistrēts"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Raksti"
+
+msgid "grid.genres.title"
+msgstr "Raksta sastāvdaļas"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Kopējais failu skatījumu skaits pa datumiem"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"Izdevums: noklusējuma gads tiks skaitīts no izdevuma publicēšanas datuma."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI publiskā identifikatora spraudnī nav atlasīts neviens publicēšanas "
+"objekts DOI piešķiršanai, tāpēc šajā spraudnī nav depozīta vai eksportēšanas "
+"iespējas."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Raksts: noklusējuma gads tiks ņemts no raksta publicēšanas datuma, līdzīgi "
+"kā \"public-as-you-go\" gadījumā."
+
+msgid "grid.genres.description"
+msgstr ""
+"Šīs sastāvdaļas tiek izmantotas failu nosaukumu piešķiršanai un tiek "
+"parādītas lejupejošā izvēlnē, augšupielādējot failus. Ar ## apzīmētie "
+"paveidi ļauj lietotājam saistīt failu vai nu ar visu iesniegumu 99Z, vai ar "
+"konkrētu sastāvdaļu ar numuru (piemēram, 02)."
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Reģistrēts"
+
+msgid "stats.publications.details"
+msgstr "Rakstu informācija"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Reģistrācija nebija veiksmīga! DOI reģistrācijas serveris ir atgriezis kļūdu:"
+" '{$param}'."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Spraudnis nav pilnībā iestatīts."
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Nav noguldīts"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Kopējais kopsavilkumu skatījumu skaits pa datumiem"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Numuri"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Nosūtīt materiāla iesniegšanas apstiprinājuma e-pasta kopiju šī žurnāla "
+"galvenajai kontaktpersonai."
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} no {$total} rakstiem"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Apstiprināšana neizdevās."
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Reģistrēta atzīme"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Lūdzu, ņemiet vērā, ka parole tiks saglabāta kā vienkāršs teksts, t. i., "
+"netiks šifrēta."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Nosūtīt kopiju galvenajai kontaktpersonai, kas norādīta žurnāla iestatījumos."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Jaunā raksta autortiesību gadu balstīt uz"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Spraudņa prasības nav izpildītas"
+
+msgid "manager.setup.resetPermissions"
+msgstr "Atiestatīt raksta tiesības"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Jebkurš statuss"
+
+msgid "stats.publications.none"
+msgstr ""
+"Raksti, kuru lietošanas statistika atbilstu šiem parametriem, netika atrasti."
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Reģistrēties"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Raksta tiesības ir veiksmīgi atiestatītas."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Parole"
+
+msgid "plugins.importexport.common.validation"
+msgstr "XML validācija pirms eksportēšanas un reģistrācijas."
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI spraudņa iestatījumi"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Norādītos objektus neizdevās atrast."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Izdevumu eksporta rezultāti"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Iestatījumi"
+
+msgid "plugins.importexport.common.action"
+msgstr "Rīcība"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Objekti nav atlasīti."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Nederīgs XML:"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Eksportēt"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Šim žurnālam nav noteikta galvenā kontaktpersona. Jūs varat ievadīt galveno "
+"kontaktpersonu <a href=\"{$url}\">žurnāla iestatījumos</a>."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Ievades fails {$param} nav nolasāms."
+
+msgid "manager.publication.library"
+msgstr "Izdevēja bibliotēka"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Vai esat pārliecināts, ka vēlaties atiestatīt visu rakstu tiesību datus? Šo "
+"darbību nevar atcelt."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Lai izmantotu šo spraudni, dodieties uz spraudņa kategoriju \"Publiskais "
+"identifikators\", iespējojiet un konfigurējiet DOI spraudni un norādiet "
+"derīgu DOI prefiksu."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Neizdevās konvertēt atlasītos objektus."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Izvades fails {$param} nav rakstāms."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Apstiprināšana ir veiksmīga!"
