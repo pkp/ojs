@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-14 13:01+0000\n"
+"PO-Revision-Date: 2022-10-17 10:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -1469,3 +1469,18 @@ msgstr ""
 
 msgid "manager.subscriptionPolicies.openAccessOptions"
 msgstr "Abonēto žurnālu atvērtās piekļuves iespējas"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Beigu datums"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Sākt"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Izveidot"
+
+msgid "manager.subscriptions.renew"
+msgstr "Atjaunot"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Izbeigt"
