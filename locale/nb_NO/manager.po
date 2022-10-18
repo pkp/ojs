@@ -1,12 +1,13 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-08-19 13:09+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2022-10-18 21:01+0000\n"
+"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -774,15 +775,10 @@ msgstr "Fagfellenes tilgang"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Slå på ettklikks tilgang for fagfellene"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Merk:</strong> E-post-invitasjonen til fagfeller vil inneholde en "
-"URL som tar den inviterte fagfellen direkte til fagfellevurderingssiden for "
-"den aktuelle innleveringen (tilgang til andre sider vil kreve innlogging). "
-"Om denne valgmuligheten er slått på, kan ikke redaktørene endre e-"
-"postadresser eller legge til kopier eller blindkopier ved bestilling av "
-"fagfellevurderinger (av sikkerhetsgrunner)."
+"Fagfeller kan få en sikker lenke i e-postinvitasjonen som logger dem inn "
+"automatisk når de følger lenken."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Vurdering av fagfellene"
@@ -2863,3 +2859,32 @@ msgstr "Kontaktopplysninger til abonnementskontakten"
 
 msgid "stats.issueGalleyViews"
 msgstr "Visninger av nummerets oppsett"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abbonementet utløper snart"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "En oversikt over abbonementstype, navn, varighet og pris"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Last ned et csv/excel-regneark med bruksstatistikk for artikler som "
+"samsvarer med følgende parametere."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Last ned artikler"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Antall sammendragsvisninger og filnedlastinger for hver artikkel."
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP-intervall for autentisering av abbonenter"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abbonement utløpt"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abbonement utløpt sist"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informasjon om abbonentens medlemsskap"
