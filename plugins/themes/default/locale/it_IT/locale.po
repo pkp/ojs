@@ -1,18 +1,19 @@
+# Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2020-01-11 00:20+0000\n"
+"PO-Revision-Date: 2022-10-18 10:39+0000\n"
 "Last-Translator: Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/it/>\n"
+"themes-default/it_IT/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Tema di default"
@@ -24,7 +25,7 @@ msgid "plugins.themes.default.option.typography.label"
 msgstr "I fonts"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr "Scegli una combinazione di forn the vadano bene per questa rivista."
+msgstr "Scegli una combinazione di font the vada bene per questa rivista."
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr "Noto Sans: Un font digital-native font fatto da Google con un esteso supporto linguistico."
@@ -66,3 +67,26 @@ msgstr "Immagine di sfondo della testata"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Mostra il sommario della rivista nella homepage."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opzioni di visualizzazione delle statistiche d'uso"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+"Non mostrare il grafico delle statistiche d'uso della proposta per il "
+"lettore."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Usa il grafico a barre per la visualizzazione delle statistiche d'uso."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Usa il grafico a linee per la visualizzazione delle statistiche d'uso."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Gen Feb Mar Apr Mag Giu Lug Ago Set Ott Nov Dic"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "La data di download non è ancora disponibile."
