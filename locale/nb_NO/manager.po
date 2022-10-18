@@ -1,13 +1,15 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
+# FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-10-18 21:01+0000\n"
-"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
+"PO-Revision-Date: 2022-10-18 21:03+0000\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
+"no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -1957,7 +1959,7 @@ msgstr ""
 "rekkefølgen."
 
 msgid "manager.setup.useStyleSheet"
-msgstr "Stilark"
+msgstr "Stilark (CSS)"
 
 msgid "manager.setup.contextName"
 msgstr "Tidsskriftets navn"
