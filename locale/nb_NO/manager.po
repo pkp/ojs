@@ -8,8 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
 "PO-Revision-Date: 2022-10-18 21:03+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
-"no>\n"
+"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -2890,3 +2889,15 @@ msgstr "Abbonement utløpt sist"
 
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informasjon om abbonentens medlemsskap"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Kjøp individuelt abbonement"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Kjøp institusjonsabbonement"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Forny individuelt abbonement"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Forny institusjonsabbonement"
