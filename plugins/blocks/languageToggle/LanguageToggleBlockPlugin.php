@@ -71,7 +71,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin
 
         if (!SessionManager::isDisabled()) {
             $context = $request->getContext();
-            $locales = Locale::applyBeforeFilter()->getFormattedDisplayNames(
+            $locales = Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
                 isset($context)
                     ? $context->getSupportedLocales()
                     : $request->getSite()->getSupportedLocales(),
