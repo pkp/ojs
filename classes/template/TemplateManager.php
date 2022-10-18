@@ -73,7 +73,7 @@ class TemplateManager extends PKPTemplateManager
                     'siteTitle' => $context->getLocalizedName(),
                     'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId()),
                     'primaryLocale' => $context->getPrimaryLocale(),
-                    'supportedLocales' => Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                    'supportedLocales' => Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
                         $context->getSupportedLocales(),
                         $allLocales,
                         LocaleMetadata::LANGUAGE_LOCALE_ONLY
@@ -100,7 +100,7 @@ class TemplateManager extends PKPTemplateManager
                     'disableUserReg' => empty($contextsForRegistration),
                     'siteTitle' => $site->getLocalizedTitle(),
                     'primaryLocale' => $site->getPrimaryLocale(),
-                    'supportedLocales' => Locale::applyBeforeFilter()->getFormattedDisplayNames(
+                    'supportedLocales' => Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
                         $site->getSupportedLocales(),
                         $allLocales,
                         LocaleMetadata::LANGUAGE_LOCALE_ONLY
