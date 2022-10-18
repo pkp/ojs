@@ -1,13 +1,13 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
+# Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
 "PO-Revision-Date: 2022-10-18 21:01+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
-"no>\n"
+"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "default/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -22,8 +22,7 @@ msgstr "Manuskriptet er ikke tidligere publisert, og er heller ikke til vurderin
 
 msgid "default.contextSettings.checklist.fileFormat"
 msgstr ""
-"Manuskriptfilen er levert i OpenOffice-, /LibreOffice-, Microsoft Word- "
-"eller RTF-filformat."
+"Manuskriptfilen er levert i OpenOffice-, Microsoft Word- eller RTF-filformat."
 
 msgid "default.contextSettings.checklist.addressesLinked"
 msgstr ""
@@ -48,7 +47,15 @@ msgid "default.contextSettings.forReaders"
 msgstr "Vi oppfordrer alle lesere til å registrere seg for å motta publiseringsvarsel fra dette tidsskriftet. Bruk <a href=\"{$indexUrl}/{$contextPath}/user/register\">Registrer</a> lenken øverst på hjemmesiden for tidsskriftet. Da vil du få tilsendt en e-post med innholdsoversikten for hver nye utgivelse fra tidsskriftet. På denne måten kan tidsskriftet dessuten dokumentere leserkretsen sin. Se gjerne tidsskriftets <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Erklæring om personopplysninger</a>, som skal sikre at leserenes navn og e-postadresser ikke brukes for uvedkommende formål."
 
 msgid "default.contextSettings.forAuthors"
-msgstr "Ønsker du å sende inn bidrag til dette tidsskriftet? I så fall bør du sette deg inn i  retningslinjene for tidsskriftetsseksjonene under <a href=\"{$indexUrl}/{$contextPath}/about\">Om tidsskriftet</a>, og <a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Forfatterinstruksen</a>. Forfattere må <a href=\"{$indexUrl}/{$contextPath}/user/register\">registrere</a> seg i tidsskriftet før de kan sende inn bidrag. Hvis du allerede er registrert, kan du ganske enkelt <a href=\"{$indexUrl}/index/login\">logge inn</a> og starte innsendingsprosessen."
+msgstr ""
+"Ønsker du å sende inn bidrag til dette tidsskriftet? I så fall bør du sette "
+"deg inn i retningslinjene for tidsskriftetsseksjonene under <a href=\""
+"{$indexUrl}/{$contextPath}/about\">Om tidsskriftet</a>, og <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\""
+">Forfatterinstruksen</a>. Forfattere må <a href=\"{$indexUrl}/{$contextPath}/"
+"user/register\">registrere</a> seg i tidsskriftet før de kan sende inn "
+"bidrag. Hvis du allerede er registrert, kan du ganske enkelt <a href=\""
+"{$indexUrl}/index/login\">logge inn</a> og starte innsendingsprosessen."
 
 msgid "default.contextSettings.forLibrarians"
 msgstr ""
