@@ -1,10 +1,11 @@
+# Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2021-01-25 10:19+0000\n"
-"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"PO-Revision-Date: 2022-10-18 10:39+0000\n"
+"Last-Translator: Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/api/it_IT/>"
 "\n"
 "Language: it_IT\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Non hai il permesso si vedere i fascicoli non pubblicati."
@@ -66,3 +67,19 @@ msgstr "L'annuncio richiesta non fa parte di questo giornale."
 
 msgid "api.emails.403.disabled"
 msgstr "Le notifiche email per questa rivista non sono abilitate."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "La proposta che hai richiesto non è in questa rivista."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Per questa rivista non è stata configurata nessuna agenzia di registrazione "
+"dei DOI."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Il DOI che hai richiesto non è in questa rivista."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Alcuni depositi non sono andati a buon fine. Controlla singolarmente quanto "
+"inviato per il deposito per i messaggi di errore specifici."
