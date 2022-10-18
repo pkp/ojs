@@ -1,11 +1,12 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2022-08-18 15:34+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2022-10-18 21:01+0000\n"
+"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -206,10 +207,10 @@ msgid "author.submit.confirmDeleteSuppFile"
 msgstr "Er du sikker på at du vil slette denne supplerende filen?"
 
 msgid "author.submit.uploadSuppFile"
-msgstr "Last opp  supplerende fil"
+msgstr "Last opp supplerende fil"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr "Legg til en  supplerende fil"
+msgstr "Legg til en supplerende fil"
 
 msgid "author.submit.editSupplementaryFile"
 msgstr "Rediger en supplerende fil"
