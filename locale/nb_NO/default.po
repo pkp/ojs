@@ -1,11 +1,13 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2022-08-18 10:23+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2022-10-18 21:01+0000\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
+"no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "default/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -24,7 +26,9 @@ msgstr ""
 "eller RTF-filformat."
 
 msgid "default.contextSettings.checklist.addressesLinked"
-msgstr "Så langt det går an er URL-adresser oppgitt til alle siterte kilder som foreligger på nett. URL-adressene skal være klikkbare (som for eks. <a href=\"http://pkp.sfu.ca\">http://pkp.sfu.ca</a>)."
+msgstr ""
+"Så langt det går an er URL-adresser oppgitt til alle siterte kilder som "
+"foreligger på nett."
 
 msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr "Teksten bruker enkel linjeavstand; 12-punkts skrifttype som normalskrift (helst Times New Roman); kursiv i stedet for understreking (unntatt i URL-adresser); bruker aldri fet skrift (unntatt i overskrifter: kursiv er ellers eneste uthevingsmåte); og alle illustrasjoner, figurer og tabeller er satt inn på rett plass i teksten."
@@ -32,7 +36,7 @@ msgstr "Teksten bruker enkel linjeavstand; 12-punkts skrifttype som normalskrift
 msgid "default.contextSettings.checklist.bibliographicRequirements"
 msgstr ""
 "Teksten følger formatkravene for stil og bibliografisk formatering, slik de "
-"er angitt i Forfatterinstruksen, som finnes i Om tidsskriftet."
+"er angitt i Forfatterinstruksen."
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>Navn og e-postadresser som skrives inn til dette tidsskriftet og nettstedet vil kun bli brukt for de formålene som er oppgitt for tidsskriftet eller som følger av gyldig rettslig pålegg, og vil ikke bli gjort tilgjengelig verken for andre formål eller for uvedkommende.</p>"
