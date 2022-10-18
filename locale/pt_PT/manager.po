@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-09-29 15:01+0000\n"
+"PO-Revision-Date: 2022-10-18 12:01+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -2223,3 +2223,25 @@ msgstr "Visualizações do sumário da edição"
 
 msgid "stats.issueGalleyViews"
 msgstr "Visualizaçãoes dos Ficheiros da Edição"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "O endereço da instituição"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domínio"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Intervalos de IP para autentição por subscrição"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Descarregue um CSV/folha de cálculo do Excel com estatísticas de uso para os "
+"artigos que correspondam aos seguintes parâmetros."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Descarregar Artigos"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+"O número de visualizações dos resumos e downloads dos ficheiros de cada "
+"artigo."
