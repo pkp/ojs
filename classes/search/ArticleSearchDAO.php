@@ -17,6 +17,7 @@
 
 namespace APP\search;
 
+use APP\journal\Journal;
 use PKP\search\SubmissionSearchDAO;
 use PKP\submission\PKPSubmission;
 
@@ -82,24 +83,28 @@ class ArticleSearchDAO extends SubmissionSearchDAO
 
         $result = $this->retrieve(
             'SELECT
-				o.submission_id,
-				MAX(s.context_id) AS journal_id,
-				MAX(i.date_published) AS i_pub,
-				MAX(p.date_published) AS s_pub,
-				COUNT(*) AS count
-			FROM
-				submissions s
-				JOIN publications p ON (p.publication_id = s.current_publication_id)
-				JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name=\'issueId\' AND ps.locale=\'\')
-				JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = ps.setting_value AND i.journal_id = s.context_id)
-				JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
-				NATURAL JOIN ' . $sqlFrom . '
-			WHERE
-				s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
-				i.published = 1 AND ' . $sqlWhere . '
-			GROUP BY o.submission_id
-			ORDER BY count DESC
-			LIMIT ' . $limit,
+                o.submission_id,
+                MAX(s.context_id) AS journal_id,
+                MAX(i.date_published) AS i_pub,
+                MAX(p.date_published) AS s_pub,
+                COUNT(*) AS count
+            FROM
+                submissions s
+                JOIN publications p ON (p.publication_id = s.current_publication_id)
+                JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name=\'issueId\' AND ps.locale=\'\')
+                JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = ps.setting_value AND i.journal_id = s.context_id)
+                JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
+                JOIN journals j ON j.journal_id = s.context_id
+                LEFT JOIN journal_settings js ON j.journal_id = js.journal_id AND js.setting_name = \'publishingMode\'
+                NATURAL JOIN ' . $sqlFrom . '
+            WHERE
+                (js.setting_value <> \'' . Journal::PUBLISHING_MODE_NONE . '\' OR
+                js.setting_value IS NULL) AND j.enabled = 1 AND
+                s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
+                i.published = 1 AND ' . $sqlWhere . '
+            GROUP BY o.submission_id
+            ORDER BY count DESC
+            LIMIT ' . $limit,
             $params
         );
 
