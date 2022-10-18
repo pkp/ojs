@@ -29,9 +29,6 @@ msgstr "{$section} (Inactive)"
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Lýsigögn innsendingarinnar voru uppfærð."
 
-msgid "submission.submit.form.authorRequired"
-msgstr "Það þarf að vera a.m.k. einn höfundur."
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Þessar upplýsingar byggjast á Dublin Core lýsigögnum, sem er alþjóðlegur "
@@ -207,39 +204,15 @@ msgstr "Hvaða kafli sem er"
 msgid "submission.citationFormat.notFound"
 msgstr "Ekki var hægt að sækja umbeðið snið á tilvitnunum."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Vinsamlega veldur hlutverk fyrir þennan framlagsaðila."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Útdrátturinn er of langur. Vinsamlega styttu hann niður fyrir tilgreindan "
-"leyfilegan orðafjölda."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Vinsamlega settu inn útdrátt fyrir greinina."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Vinsamlega sláðu inn titil á greinina."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Það þarf að skrá fornafn, eftirnafn og netfang hvers höfundar."
-
 msgid "submission.submit.contributorRole"
 msgstr "Hlutverk framlagsaðila"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Persónuvernd"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Þú verður að lesa og staðfesta að þú hafir uppfyllt öll atriðin á "
-"gátlistanum áður en þú heldur áfram."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Gátilsti fyrir höfunda"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Vinsamlega veldu tungumál innsendingar."
 
 msgid "submission.incomplete"
 msgstr "Bíður samþykkis"
@@ -255,9 +228,6 @@ msgstr "Senda í ritrýni"
 
 msgid "workflow.review.externalReview"
 msgstr "Ritrýni"
-
-msgid "submission.confirmSubmit"
-msgstr "Ertu viss um að þú viljir senda þessa grein til tímaritsins?"
 
 msgid "submission.pageProofs"
 msgstr "Prófarkalestur"
@@ -346,11 +316,5 @@ msgstr "Titill geinar"
 msgid "submission.upload.selectComponent"
 msgstr "Veldu íhlut greinar"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Veldu í hvaða hlutverki þú ætlar að vera sem innsendandi greinar."
-
 msgid "submission.submit.userGroup"
 msgstr "Senda inn í hlutverki mínu sem...."
-
-msgid "submission.submit.title"
-msgstr "Senda inn grein"

@@ -68,14 +68,6 @@ msgstr "Inclusão de metadados"
 msgid "author.submit.supplementaryFiles"
 msgstr "Transferência de documentos suplementares"
 
-msgid "author.submit.confirmation"
-msgstr "Confirmação"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"A submissão pode ser concluída mais tarde, clicando em Submissões Ativas na "
-"página do Autor."
-
 msgid "author.submit.notAccepting"
 msgstr "Neste momento esta revista não aceita submissões."
 
@@ -125,9 +117,6 @@ msgstr "Condições para submissão"
 msgid "author.submit.verifyChecklist"
 msgstr "Todas as condições devem ser cumpridas antes de poder continuar."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Os autores concordam com os termos da Declaração de Direitos de Autor, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "É obrigatório aceitar a Declaração de Direitos de Autor para continuar."
 
@@ -136,12 +125,6 @@ msgstr "Comentários ao Editor"
 
 msgid "author.submit.comments"
 msgstr "Insira o texto (opcional)"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Escolha a secção apropriada para a submissão."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Política de Privacidade"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos autores na publicação."
@@ -302,17 +285,6 @@ msgstr "Documento suplementar público já existente."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificador de documento suplementar público"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Após a conclusão e verificação dos passos anteriores, clique em \"Concluir "
-"submissão\" para enviar o seu manuscrito para a revista {$journalTitle}. "
-"Será enviado um e-mail de confirmação e a situação da submissão no processo "
-"editorial pode ser acompanhada ao aceder ao sistema. Agradecemos o seu "
-"interesse em publicar na revista {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Nenhum documento anexado à submissão."
 
 msgid "author.submit.filesSummary"
 msgstr "Resumo de documentos"

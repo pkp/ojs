@@ -133,7 +133,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
 
                 // Record a fulfilled payment.
                 $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR);
+                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleIds($submission->getId(), [Role::ROLE_ID_AUTHOR]);
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(
                     $request,

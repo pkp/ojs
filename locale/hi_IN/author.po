@@ -66,13 +66,6 @@ msgstr "अगला कदम"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"आप लेखक के घर से सक्रिय सबमिशन का चयन करके इसे बाद की तारीख में पूरा कर सकते "
-"हैं।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
 msgid "author.submit.notAccepting"
 msgstr "यह जर्नल इस समय प्रस्तुतियाँ स्वीकार नहीं कर रही है।"
 
@@ -127,10 +120,6 @@ msgstr "आपको यह सुनिश्चित करना होग�
 
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "लेखक इस कॉपीराइट नोटिस की शर्तों से सहमत हैं, जो इस सबमिशन पर लागू होगा यदि यह इस जर्नल द्वारा प्रकाशित किया जाता है (संपादक के लिए टिप्पणी नीचे जोड़ा जा सकता है)।"
-
-# (pofilter) endpunc: Different punctuation at the end
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "जारी रखने से पहले आपको कॉपीराइट नोटिस की शर्तों से सहमत होना चाहिए।"
 
@@ -144,17 +133,8 @@ msgstr "पाठ दर्ज करें (वैकल्पिक)"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "author.submit.form.sectionRequired"
-msgstr "कृपया इस सबमिशन के लिए एक उपयुक्त जर्नल सेक्शन चुनें।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
 msgid "author.submit.form.localeRequired"
 msgstr "कृपया एक सबमिशन भाषा चुनें।"
-
-# (pofilter) simplecaps: Different capitalization
-msgid "submission.submit.privacyStatement"
-msgstr "जर्नल की गोपनीयता कथन"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -307,15 +287,6 @@ msgstr "सार्वजनिक पूरक फ़ाइल पहचान
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ JournalTitle}, {$ journalTitle}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) simplecaps: Different capitalization
-msgid "author.submit.confirmationDescription"
-msgstr "अपनी पांडुलिपि को {$ journalTitle} सबमिट करने के लिए, सबमिशन समाप्त पर क्लिक करें। सबमिशन के प्रमुख संपर्क को ईमेल द्वारा एक स्वीकृति प्राप्त होगी और जर्नल वेब साइट पर लॉग इन करके संपादकीय प्रक्रिया के माध्यम से प्रस्तुत करने की प्रगति को देखने में सक्षम होगा। {$ JournalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "author.submit.noFiles"
-msgstr "कोई फ़ाइल इस सबमिशन से जुड़ी नहीं है।"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "author.submit.filesSummary"
 msgstr "फ़ाइल सारांश"
 
@@ -411,9 +382,6 @@ msgstr "समीक्षा में: संशोधन आवश्यक �
 
 msgid "author.submit.qualifyForWaiver"
 msgstr "कृपया इस लेख के लिए लेख सबमिशन की फीस माफ करने पर विचार करें"
-
-msgid "author.submit.confirmation"
-msgstr "पुष्टीकरण"
 
 msgid "author.submit.metadata"
 msgstr "मेटाडेटा दर्ज करें"

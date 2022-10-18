@@ -14,9 +14,6 @@ msgstr ""
 msgid "author.submit.nextSteps"
 msgstr "Следна стапка"
 
-msgid "author.submit.confirmation"
-msgstr "Потврда"
-
 msgid "author.submit.supplementaryFiles"
 msgstr "Внеси дополнителни фајлови"
 
@@ -40,9 +37,6 @@ msgstr "Поднеси труд"
 
 msgid "author.track"
 msgstr "Активен поднесок"
-
-msgid "author.submit.noFiles"
-msgstr "Нема прикачено фајлови кон овој поднесок."
 
 msgid "author.submit.filesSummary"
 msgstr "Фајл од извадок"
@@ -73,14 +67,6 @@ msgstr "Авторски фајл"
 
 msgid "author.submit"
 msgstr "Нов поднесок"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"За да го доставите вашиот ракопис до {$journalTitle} кликнете на Заврши "
-"Поднесување. Главниот контакт на поднесувањето ќе добие потврда преку е-"
-"пошта и ќе може да го гледа напредокот на поднесокот во текот на "
-"уредувачкиот процес со најавување на веб-страницата на списанието. Ви "
-"благодариме за интересот за објавување во {$journalTitle}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Јавна идентификација  на дополнителна датотека"
@@ -266,14 +252,8 @@ msgid "author.submit.reorderInstructions"
 msgstr ""
 "Променете го редоследот на авторите како да бидат наведени во публикацијата."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Изјава за приватност на списанието"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Изберете јазик на поднесувањето."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Изберете соодветен оддел за списанија за овој поднесок."
 
 msgid "author.submit.comments"
 msgstr "Додадете текст (опционално)"
@@ -285,12 +265,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Мора да се согласите со условите на Известувањето за авторски права пред да "
 "продолжите."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Авторите се согласуваат со условите на ова Известување за авторски права, "
-"што ќе се применува на овој поднесок ако и кога ќе биде објавен од ова "
-"списание (коментарите до уредникот може да се додадат подолу)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -340,11 +314,6 @@ msgstr "Побаарај ослободување од плаќање"
 
 msgid "author.submit.notAccepting"
 msgstr "Списанието не прима поднесоци во моментов."
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Можете да го завршите поднесувањето подоцна со селектирање на Активни "
-"поднесоци од страната за автори."
 
 msgid "author.submit.step5"
 msgstr "Чекор 5: Потврди го поднесувањето"

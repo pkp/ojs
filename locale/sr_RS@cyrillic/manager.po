@@ -620,11 +620,6 @@ msgstr "Синхронизација уписаних корисника ће у
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Није потребан апстракт"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Нема уредника рубрика. Додајте ову улогу барем једном од корисника у "
-"Управљање > Подешавања > Корисници &amp; Улоге."
-
 msgid "manager.sections.assigned"
 msgstr "Уредници ове секције"
 
@@ -1468,9 +1463,6 @@ msgstr "Напишите примере кључних речи или тема 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Упутство за пријављивање чланка"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Припремна листа за припрему пријављивања чланка"
-
 msgid "manager.subscriptionPolicies.expiryFull"
 msgstr "Потпуни истек"
 
@@ -1479,9 +1471,6 @@ msgstr "Читаоцима је ускраћен приступ целокупн
 
 msgid "manager.subscriptionPolicies.expiryPartial"
 msgstr "Деломични истек"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "У току процеса пријављивања чланка обавезно је да аутори означе сваки ставку у листи за припрему пријаве чланка пре наставка. Ова контролна листа се такође налази у Упутству за ауторе у страници О часопису. Ову листу можете изменити, али ће и даље сви делови листе тражити потврду испуњености означавањем сваког питања пре него аутор настави са процесом пријаве."
 
 msgid "manager.statistics.statistics.description"
 msgstr "OJS израчунава следеће статистике за сваки часопис. Број \"дана до рецензије\" је израчунат од дана пријаве чланка (или доделе рецензентске верзије) до почетне уредникове одлуке док је број \"дана до објављивања\" мерен за прихваћене пријаве од изворног постављања у систем до објављивања."

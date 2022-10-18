@@ -19,6 +19,7 @@
 namespace APP\core;
 
 use APP\facades\Repo;
+use APP\journal\SectionDAO;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;

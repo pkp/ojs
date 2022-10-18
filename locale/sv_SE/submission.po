@@ -16,14 +16,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Skicka in en artikel"
-
 msgid "submission.submit.userGroup"
 msgstr "Skicka in i egenskap av min roll som..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Välj vilken roll du skickar in den här artikeln som."
 
 msgid "submission.upload.selectComponent"
 msgstr "Välj artikelkomponent"
@@ -145,9 +139,6 @@ msgstr "Godkänt"
 msgid "submission.incomplete"
 msgstr "Väntar på godkännande"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Välj språk för bidraget."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Checklista för bidrag"
 
@@ -155,6 +146,7 @@ msgid "submission.submit.submissionChecklistDescription"
 msgstr ""
 "Du måste läsa och acceptera att du följer kraven nedan innan du fortsätter."
 
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Integritetspolicy"
 

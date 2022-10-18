@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Egy cikk beküldése"
-
 msgid "submission.submit.userGroup"
 msgstr "Benyújtás az alábbi szerepkörben..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Válassza ki, hogy milyen szerepkörben nyújtja be a cikket."
 
 msgid "submission.upload.selectComponent"
 msgstr "Válassza ki a cikk összetevőit"
@@ -108,9 +102,6 @@ msgstr "A beküldéshez feltöltött fájlok, beleértve a cikket, multimédiát
 msgid "submission.pageProofs"
 msgstr "Korrektúrázás"
 
-msgid "submission.confirmSubmit"
-msgstr "Biztos benne, hogy be szeretné küldeni ezt az anyagot a folyóirathoz?"
-
 msgid "workflow.review.externalReview"
 msgstr "Szakmai lektorálás"
 
@@ -129,35 +120,15 @@ msgstr "Jóváhagyott"
 msgid "submission.incomplete"
 msgstr "Jóváhagyásra vár"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Kérjük válassza ki a kézirat nyelvét."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Beküldési ellenőrzőlista"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "A folytatás előtt el kell olvasnia és el kell fogadnia, hogy teljesítette a lenti követelményeket."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Adatvédelmi nyilatkozat"
 
 msgid "submission.submit.contributorRole"
 msgstr "Résztvevő szerepköre"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Legalább egy szerző kötelező."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "A vezetéknév, keresztnév és email cím megadása kötelező minden szerzőnél."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Kérjük, adja meg a cikk címét."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Kérjük, adja meg a cikk absztraktját."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Kérjük, válassza ki a közreműködő szerepkörét."
 
 msgid "submission.citationFormat.notFound"
 msgstr "A kért idézetformátumot nem lehet letölteni."
@@ -167,9 +138,6 @@ msgstr "Ezek a specifikációk a Dublin Core metaadatokon alapulnak, ami egy nem
 
 msgid "section.any"
 msgstr "Bármelyik rovat"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Az absztrakt túl hosszú. Kérjük, rövidítse le azt az alább megadott szóhatár alá."
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Az absztrakt legyen {$wordCount} szó vagy kevesebb."

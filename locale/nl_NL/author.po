@@ -66,14 +66,8 @@ msgstr "Metadata invoeren"
 msgid "author.submit.supplementaryFiles"
 msgstr "Aanvullende bestanden laden"
 
-msgid "author.submit.confirmation"
-msgstr "Bevestiging"
-
 msgid "author.submit.nextSteps"
 msgstr "Volgende stappen"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "U kunt deze inzending op een later tijdstip voltooien door Actieve inzendingen te kiezen op de homepage voor auteurs."
 
 msgid "author.submit.notAccepting"
 msgstr "Dit tijdschrift accepteert momenteel geen inzendingen."
@@ -126,9 +120,6 @@ msgstr "Kies de juiste sectie voor deze inzending (Zie Secties en beleid in <a h
 msgid "author.submit.verifyChecklist"
 msgstr "U moet zich ervan verzekeren dat alle onderdelen van de inzendings-checklist zijn afgewerkt voordat u verdergaat."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "De auteurs verklaren zich akkoord met de voorwaarden van deze auteursrecht verklaring die van toepassing is op deze inzending als het gepubliceerd wordt door dit tijdschrift (opmerkingen voor de redacteur kunnen hieronder later toegevoegd worden)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "U moet akkoord gaan met de voorwaarden van de auteursrecht verklaring voor u door kunt gaan."
 
@@ -138,14 +129,8 @@ msgstr "Opmerkingen voor de redacteur"
 msgid "author.submit.comments"
 msgstr "Tekst opgeven (optioneel)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Kies een geschikte tijdschriftsectie voor deze inzending."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Selecteer een taal voor de inzending."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Privacybeleid van dit tijdschrift"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Verander de volgorde van de auteurs naar de volgorde zoals ze getoond worden bij de publicatie."
@@ -297,12 +282,6 @@ msgstr "Deze openbare identificatie voor aanvullend bestand bestaat al."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificatie voor openbaar aanvullend bestand"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Klik op Voltooi inzending om uw manuscript in de zenden naar {$journalTitle}. De eerste contactpersoon van de inzending krijgt een bevestigings-e-mail en kan de voortgang van de inzending door het redactionele proces volgen door in te loggen op de website van het tijdschrift. Dank u voor uw interesse in het publiceren in {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Geen bestanden gekoppeld aan deze inzending."
 
 msgid "author.submit.filesSummary"
 msgstr "Samenvatting bestanden"

@@ -30,22 +30,17 @@ class SectionDAO extends PKPSectionDAO
 {
     public $cache;
 
-    /**
-     * Get the name of the section table in the database
-     *
-     * @return string
-     */
-    protected function _getTableName()
+    protected function _getTableName(): string
     {
         return 'sections';
     }
 
-    /**
-     * Get the name of the context ID table column
-     *
-     * @return string
-     */
-    protected function _getContextIdColumnName()
+    protected function _getIdColumnName(): string
+    {
+        return 'section_id';
+    }
+
+    protected function _getContextIdColumnName(): string
     {
         return 'journal_id';
     }
@@ -75,7 +70,7 @@ class SectionDAO extends PKPSectionDAO
      *
      * @return ?Section
      */
-    public function getById($sectionId, $journalId = null, $useCache = false)
+    public function getById($sectionId, $journalId = null, $useCache = false): ?Section
     {
         if ($useCache) {
             $cache = $this->_getCache();
@@ -456,7 +451,7 @@ class SectionDAO extends PKPSectionDAO
     public function getByContextId($journalId, $rangeInfo = null, $submittableOnly = false)
     {
         $result = $this->retrieveRange(
-            'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0' : '') . ' ORDER BY seq',
+            'SELECT * FROM sections WHERE journal_id = ? ' . ($submittableOnly ? ' AND editor_restricted = 0 AND is_inactive = 0' : '') . ' ORDER BY seq',
             [(int) $journalId],
             $rangeInfo
         );

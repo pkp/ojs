@@ -40,17 +40,6 @@ msgstr "Pabeigt iesniegšanu"
 msgid "author.submit.filesSummary"
 msgstr "Datņu kopsavilkums"
 
-msgid "author.submit.noFiles"
-msgstr "Šim iesniedzamajam materiālam nav pievienoti dokumenti."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Lai iesniegtu savu manuskriptu žurnālam {$journalTitle} noklikšķiniet uz "
-"Pabeigt iesniegšanu (Finish Submission). Iesniegtā materiāla kontaktpersona "
-"saņems apstiprinājumu pa e-pastu un, pieslēdzoties žurnāla tīmekļa vietnē, "
-"varēs apskatīt materiāla virzību redakcijas procesā. Paldies par izrādīto "
-"interesi publicēties žurnālā {$journalTitle}."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Publiskais papildu datnes identifikators"
 
@@ -229,9 +218,6 @@ msgstr "Privātuma atruna"
 msgid "author.submit.form.localeRequired"
 msgstr "Lūdzu, izvēlieties materiāla valodu."
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Lūdzu, izvēlieties šim materiālam atbilstošu žurnāla sadaļu."
-
 msgid "author.submit.comments"
 msgstr "Ievadiet tekstu (nav obligāti)"
 
@@ -304,16 +290,8 @@ msgstr "Atteikuma pieprasījums"
 msgid "author.submit.notAccepting"
 msgstr "Šis žurnāls pašlaik nepieņem materiāla iesniegšanu."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Šo iesniegšanu varat pabeigt vēlāk, autora sākumlapā atlasot Aktuāli "
-"iesniegtie materiāli (Active Submissions)."
-
 msgid "author.submit.nextSteps"
 msgstr "Turpmākie soļi"
-
-msgid "author.submit.confirmation"
-msgstr "Apstiprinājums"
 
 msgid "author.submit.upload"
 msgstr "Iesniedzamā materiāla augšupielāde"

@@ -37,14 +37,8 @@ msgid "author.submit.notAccepting"
 msgstr "یہ مجلہ فی الحال مقالے وصول نہیں کر رہا۔"
 
 #, fuzzy
-msgid "submission.submit.cancelSubmission"
-msgstr "آپ اس ارسال کے عمل کو بعد میں (ارسال شدہ مقالات) تکمیل کر سکتے ہیں"
-
 msgid "author.submit.nextSteps"
 msgstr "اگلا مرحلہ"
-
-msgid "author.submit.confirmation"
-msgstr "تصدیق کریں"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "اضافی فائل اپ لوڈ کریں"
@@ -131,18 +125,6 @@ msgstr "ارسال کریں"
 
 msgid "author.submit.filesSummary"
 msgstr "فائل کا خلاصہ"
-
-#, fuzzy
-msgid "author.submit.noFiles"
-msgstr "اس مقالہ ارسال کرنے کی درخواست کے ساتھ کوئی فائل ضم نہیں کی۔"
-
-#, fuzzy
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"اپنا مسودہ {$journalTitle} کو ارسال کرنے کے لیے (ارسال کریں) پر کلک کریں. "
-"مجلے کے مدیران اپ کو ایمیل کے ذریعے رابطہ کریں گے، اور آپ ارسال کردہ مقالات "
-"کو اسی سائٹ پر دیکھ سکیں گے، ہم آپ کی {$journalTitle} میں مقالہ شائع کرنے "
-"کی دلچسپی کے شکر گزار ہیں۔"
 
 #, fuzzy
 msgid "author.suppFile.publicSuppFileIdentifier"
@@ -338,16 +320,10 @@ msgstr "مقالہ نگاروں کو دوبارہ ترتیب دیں"
 msgid "author.submit.reorderInstructions"
 msgstr "مقالہ نگاروں کو شائع کردہ مجلے میں دی گئی ترتیب دیں۔"
 
-msgid "submission.submit.privacyStatement"
-msgstr "مجلے کا رازداری بیان"
-
 msgid "author.submit.form.localeRequired"
 msgstr "برائے مہربانی مناسب زبان اختیار کریں۔"
 
 #, fuzzy
-msgid "author.submit.form.sectionRequired"
-msgstr "برائے مہربانی اس مقالے کی درخواست کے لئے مجلے کا مناسب حصہ اختیار کریں۔"
-
 msgid "author.submit.comments"
 msgstr "متن درج کریں (اختیاری)"
 
@@ -359,13 +335,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "درخواست جاری رکھنے سے پہلے آپ کو دی گئی کاپی رائٹ کی شرائط و ضوابط سے اتفاق "
 "کرنا لازمی ہے۔"
-
-#, fuzzy
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"مقالہ نگار اس کاپی رائٹ نوٹس میں دی گئی تمام شرائط و ضوابط سے اتفاق کرتے ہیں،"
-" جو کہ اس مقالے کے نشر کیے جانے پر لاگو ہوں گی (اس بارے میں مدیران کو تبصرہ "
-"مندرجہ ذیل خانے میں ارسال کیا جا سکتا ہے)۔"
 
 #, fuzzy
 msgid "author.submit.verifyChecklist"

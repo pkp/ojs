@@ -18,8 +18,11 @@ use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
+use APP\journal\Section;
+use APP\journal\SectionDAO;
 use PKP\context\Context;
 use PKP\context\PKPSection;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiActionException;
 
@@ -60,8 +63,57 @@ class Repository extends \PKP\submission\Repository
         return $bySections;
     }
 
+<<<<<<< HEAD
     /** @copydoc \PKP\submission\Repo::updateStatus() */
     public function updateStatus(Submission $submission, ?int $newStatus = null, ?PKPSection $section = null)
+=======
+    public function validateSubmit(Submission $submission, Context $context): array
+    {
+        $errors = parent::validateSubmit($submission, $context);
+
+        $locale = $submission->getData('locale');
+        $publication = $submission->getCurrentPublication();
+
+        /** @var SectionDAO $sectionDao */
+        $sectionDao = DAORegistry::getDAO('SectionDAO');
+        $section = $sectionDao->getById($submission->getCurrentPublication()->getData('sectionId'));
+
+        // Required abstract
+        if (!$section->getAbstractsNotRequired() && !$publication->getData('abstract', $locale)) {
+            $errors['abstract'] = [$locale => [__('validator.required')]];
+        }
+
+        // Abstract word limit
+        if ($section->getAbstractWordCount()) {
+            $abstracts = $publication->getData('abstract');
+            if ($abstracts) {
+                $abstractErrors = [];
+                foreach ($context->getSupportedSubmissionLocales() as $localeKey) {
+                    $abstract = $publication->getData('abstract', $localeKey);
+                    $wordCount = $abstract ? PKPString::getWordCount($abstract) : 0;
+                    if ($wordCount > $section->getAbstractWordCount()) {
+                        $abstractErrors[$localeKey] = [
+                            __(
+                                'publication.wordCountLong',
+                                [
+                                    'limit' => $section->getAbstractWordCount(),
+                                    'count' => $wordCount
+                                ]
+                            )
+                        ];
+                    }
+                }
+                if (count($abstractErrors)) {
+                    $errors['abstract'] = $abstractErrors;
+                }
+            }
+        }
+
+        return $errors;
+    }
+
+    public function updateStatus(Submission $submission, ?int $newStatus = null)
+>>>>>>> d9ed277506... pkp/pkp-lib#7191 Implement new submission wizard
     {
         $oldStatus = $submission->getData('status');
         parent::updateStatus($submission, $newStatus, $section);

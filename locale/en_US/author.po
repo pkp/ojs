@@ -68,14 +68,8 @@ msgstr "Enter Metadata"
 msgid "author.submit.supplementaryFiles"
 msgstr "Upload Supplementary Files"
 
-msgid "author.submit.confirmation"
-msgstr "Confirmation"
-
 msgid "author.submit.nextSteps"
 msgstr "Next Steps"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "You can complete this submission at a later date by selecting Active Submissions from the Author home."
 
 msgid "author.submit.notAccepting"
 msgstr "This journal is not accepting submissions at this time."
@@ -122,14 +116,12 @@ msgstr "No submissions."
 msgid "author.submit.journalSection"
 msgstr "Journal Section"
 
+#, fuzzy
 msgid "author.submit.journalSectionDescription"
-msgstr "Articles must be submitted to one of the journal's sections."
+msgstr "Submissions must be made to one of the journal's sections."
 
 msgid "author.submit.verifyChecklist"
 msgstr "You must make sure all items in the submission checklist are satisfied before continuing."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "You must agree to the terms of the Copyright Notice before continuing."
@@ -140,14 +132,8 @@ msgstr "Comments for the Editor"
 msgid "author.submit.comments"
 msgstr "Enter text (optional)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Please select an appropriate journal section for this submission."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Please select a submission language."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Journal's Privacy Statement"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Reorder authors to appear in the order they will be listed on publication."
@@ -300,12 +286,6 @@ msgstr "Public supplemental file identification already exists."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Public supplemental file identifier"
-
-msgid "author.submit.confirmationDescription"
-msgstr "To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "No files have been attached to this submission."
 
 msgid "author.submit.filesSummary"
 msgstr "File Summary"

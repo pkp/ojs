@@ -302,11 +302,6 @@ msgstr "Ertu viss um að þú viljir eyða þessum kafla?"
 msgid "manager.sections.assigned"
 msgstr "Ritstjórar þessa kafla"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Kaflaritstjórn hefur ekki verið úthlutað. Úthlutaðu hlutverkinu til a.m.k. "
-"eins notanda í Umsjón > Stillingar > Notendur &amp;."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Krefst ekki útdráttar"
 
@@ -1335,17 +1330,6 @@ msgstr ""
 
 msgid "manager.setup.submissions"
 msgstr "Innsent efni"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Þegar höfundar senda inn efni er þeir í upphafi innsendingarferlis beðnir um "
-"að merkja við hvert atriði á minnislista höfunda áður en haldið er áfram. "
-"Þessi minnislisti eða gátlisti birtist einnig í leiðbeiningum til höfunda, "
-"undir \"Um tímaritið\".  Hægt er er að breyta listanum hér fyrir neðan, en "
-"merkja þarf við öll atriðin áður en höfundur getur haldið áfram innsendingu."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Minnislisti höfunda"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Leiðbeiningar um innsendingu á efni"

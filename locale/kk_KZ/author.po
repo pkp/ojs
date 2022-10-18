@@ -40,16 +40,6 @@ msgstr "Мақаланы жіберу қадамын аяқтау"
 msgid "author.submit.filesSummary"
 msgstr "Файл туралы ақпарат"
 
-msgid "author.submit.noFiles"
-msgstr "Бұл жіберілген мақалаға ешқандай файл тіркелмеген."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Қолжазбаңызды {$journalTitle} жіберу үшін \"жіберуді аяқтау\" батырмасын "
-"басыңыз. Мақаланың бас авторы мақала жіберілгені туралы ақпарат пен қатар "
-"мақаланың редакциядағы мәртебесін қадағалай алады. {$journalTitle} "
-"басылымына үлес қосқаныңыз үшін рақмет."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Қосымша файлдың ашық идентификаторы"
 
@@ -221,14 +211,8 @@ msgstr "Автордың есімінің орнласу орнын өзгерт
 msgid "author.submit.reorderInstructions"
 msgstr "Мақала авторларының есімдерін жарияланымға сәйкес орналастырыңыз."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Құпиялылық туралы журнал мәлімдемесі"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Мақаланың тілін таңдаңыз."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Мақалаға журналдың тиісті бөлімін таңдаңыз."
 
 msgid "author.submit.comments"
 msgstr "Мәтінді енгізіңіз (міндетті емес)"
@@ -240,12 +224,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Мақаланы редакцияа жіберу үшін сіз журналдың \"Авторлық құқық\" шарттарымен "
 "келісуіңіз қажет."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Авторлар осы мақала жариялаған жағдайда \"Авторлық құқық туралы\" журнал "
-"шарттарымен келіседі (редакторға түсініктеме төмендегі жолақта берілуі "
-"мүмкін)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -307,16 +285,8 @@ msgstr "Төлемді болдырмау сұранысы"
 msgid "author.submit.notAccepting"
 msgstr "Дәл қазір журнал жаңа мақалаларды қабылдамайды."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Сіз бұл мақаланы жіберуді автордың басты бетіндегі \"Ағымдағы мақалалар\" "
-"бөлімін таңдау арқылы кейінге қалдыра аласыз."
-
 msgid "author.submit.nextSteps"
 msgstr "Келесі қадамдар"
-
-msgid "author.submit.confirmation"
-msgstr "Растау"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Қосымша файлдарды жүктеу"

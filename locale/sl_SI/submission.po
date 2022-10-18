@@ -16,14 +16,8 @@ msgstr ""
 "%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Oddaj prispevek"
-
 msgid "submission.submit.userGroup"
 msgstr "Oddaj v moji vlogi..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Izberite v kakšni vlogi oddajate ta prispevek."
 
 msgid "submission.upload.selectComponent"
 msgstr "Izberite komponento prispevka"
@@ -100,9 +94,6 @@ msgstr "Naložite datoteke, ki pripadajo prispevku in vključujejo rokopis, mult
 msgid "submission.pageProofs"
 msgstr "Korektura"
 
-msgid "submission.confirmSubmit"
-msgstr "Ste prepričani, da želite oddati prispevek v to revijo?"
-
 msgid "workflow.review.externalReview"
 msgstr "Recenzija"
 
@@ -121,35 +112,15 @@ msgstr "Odobreno"
 msgid "submission.incomplete"
 msgstr "Čaka odobritev"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Prosimo izberite jezik prispevka."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolni seznam za oddajo"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Pred oddajo prispevka morate potrditi, da ste izpolnili vse spodnje zahteve."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Izjava o varstvu podatkov"
 
 msgid "submission.submit.contributorRole"
 msgstr "Vloga soavtorja"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Zahtevan je vsaj en avtor."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Za vsakega avtoraj so zahtevani ime in priimek ter email naslov."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Prosimo vnesite naslov vašega prispevka."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Prosimo vnesite izvleček vašega prispevka."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Prosimo izberite vlogo soavtoraj."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Zahtevanega formata citata ni bilo mogoče pridobiti."
@@ -159,9 +130,6 @@ msgstr "Te specifikacije temljijo na Dublin Core standardu metapodatkov za opis 
 
 msgid "section.any"
 msgstr "Katerakoli rubrika"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Vaš izvleček je predolg. Prosimo skrajšajte ga na spodaj zapisano omejitev dolžino."
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} postavk"

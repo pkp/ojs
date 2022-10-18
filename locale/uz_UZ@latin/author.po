@@ -39,17 +39,6 @@ msgstr "Yuborishni tugatish"
 msgid "author.submit.filesSummary"
 msgstr "Faylning qisqacha mazmuni"
 
-msgid "author.submit.noFiles"
-msgstr "Ushbu materialga hech qanday fayl biriktirilmagan."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Qo'lyozmangizni {$ journalTitle} ga yuborish uchun Tugatishni tugmasini "
-"bosing. Yuborilganlarning asosiy aloqasi elektron pochta orqali xabarnoma "
-"oladi va jurnal veb-saytiga kirib, tahrir jarayonida jarayonni ko'rish "
-"imkoniyatiga ega bo'ladi. {$ JournalTitle} bilan nashr etishga qiziqishingiz "
-"uchun tashakkur."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Ommaviy qo'shimcha fayl identifikatori"
 
@@ -226,14 +215,8 @@ msgid "author.submit.reorderInstructions"
 msgstr ""
 "Mualliflarning nashr etilish tartibida paydo bo'lish tartibini o'zgartiring."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Jurnalning maxfiylik to'g'risidagi bayonoti"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Iltimos, yuborilayotgan material tilini tanlang."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Iltimos, ushbu material uchun tegishli jurnal qismini tanlang."
 
 msgid "author.submit.comments"
 msgstr "Matn kiriting (ixtiyoriy)"
@@ -245,13 +228,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Davom etishdan oldin siz mualliflik huquqi to'g'risidagi bildirishnoma "
 "shartlariga rozi bo'lishingiz kerak."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Mualliflar ushbu mualliflik huquqi to'g'risidagi bildirishnomaning "
-"shartlariga rozilik bildiradilar, agar ushbu jurnal ushbu nashr paytida va "
-"qachon nashr etilsa (ushbu muharrirga sharhlar quyida qo'shilishi mumkin) "
-"ushbu materialga tegishli bo'ladi."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -312,16 +288,8 @@ msgstr "To‘lovni bekor qilishni so‘rash"
 msgid "author.submit.notAccepting"
 msgstr "Ushbu jurnal hozircha materiallarni qabul qilmayapti."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Ushbu materialni keyinroq Muallif uyidan \"Faol yuborish\" ni tanlab "
-"to'ldirishingiz mumkin."
-
 msgid "author.submit.nextSteps"
 msgstr "Keyingi qadam"
-
-msgid "author.submit.confirmation"
-msgstr "Tasdiqlash"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Qo'shimcha fayllarni yuklang"

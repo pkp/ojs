@@ -62,14 +62,8 @@ msgstr "Título do artigo"
 msgid "submission.upload.selectComponent"
 msgstr "Selecione o compoñente do artigo"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Escolla o rol baixo o cal envía este artigo."
-
 msgid "submission.submit.userGroup"
 msgstr "Enviar na meu rol de..."
-
-msgid "submission.submit.title"
-msgstr "Enviar un artigo"
 
 msgid "submission.queries.production"
 msgstr "Discusións de produción"
@@ -256,43 +250,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Non se puido recuperar o formato de cita solicitado."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Selecciona o rol do colaborador."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"O teu resumo é demasiado longo. Axústao por debaixo do límite de palabras "
-"indicado para esta sección."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Introduza o resumo do seu artigo."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Insira o título do seu artigo."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Requírese o nome, apelidos e enderezo de correo electrónico de cada autor."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Requírese polo menos un autor."
-
 msgid "submission.submit.contributorRole"
 msgstr "Rol de colaborador"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Declaración de privacidade"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Debes ler e recoñecer que cumpriches os seguintes requisitos antes de "
-"continuar."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista de verificación do envío"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Seleccione un idioma do envío."
 
 msgid "submission.incomplete"
 msgstr "Agardando aprobación"
@@ -311,9 +277,6 @@ msgstr "Enviar a revisión"
 
 msgid "workflow.review.externalReview"
 msgstr "Revisión"
-
-msgid "submission.confirmSubmit"
-msgstr "Seguro/a que desexas enviar este artigo á revista?"
 
 msgid "submission.pageProofs"
 msgstr "Correción de probas"

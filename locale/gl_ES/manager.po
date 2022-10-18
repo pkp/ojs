@@ -1466,11 +1466,6 @@ msgstr "Está seguro/a de que quere eliminar esta sección de forma permanente?"
 msgid "manager.sections.assigned"
 msgstr "Editores/as desta sección"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Aínda non hai editores/as de sección. Engada este rol polo menos a un "
-"usuario vía  Administración > Configuración > Users &amp; Roles first."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Non requirir resumos"
 
@@ -1495,20 +1490,8 @@ msgstr "Decisión do editor/a"
 msgid "manager.setup.submissions"
 msgstr "Envíos"
 
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Ao facer un envío á revista, pídese aos autores/as que comproben cada "
-"elemento da lista de verificación de preparación de envíos antes de "
-"continuar. A lista de verificación tamén aparece nas Directrices do autor, "
-"en Acerca da revista. A lista pódese editar a continuación, pero todos os "
-"elementos da lista requirirán unha verificación antes de que os autores "
-"poidan continuar co envío."
-
 msgid "manager.setup.displayCurrentIssue"
 msgstr "Engadir a táboa de contidos para o número actual (se está dispoñible)."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Lista de verificación para preparar o envío"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Pautas de envío"

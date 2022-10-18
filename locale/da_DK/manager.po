@@ -770,12 +770,6 @@ msgstr "Angiv eksempler på nøgleord eller emneområder som en hjælp til forfa
 msgid "manager.setup.submissionGuidelines"
 msgstr "Retningslinjer for manuskripter"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Tjekliste til forberedelse af manuskript"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Forfattere, der fremsender et manuskript til tidsskriftet, bliver først bedt om at fuldføre hvert enkelt element på Tjekliste til forberedelse af manuskript, inden de fortsætter. Tjeklisten vises også under Retningslinjer for forfattere under Om tidsskriftet. Listen kan redigeres nedenfor, men alle elementer på listen skal afkrydses, inden forfatterne kan fortsætte med deres manuskript."
-
 msgid "manager.setup.submissions"
 msgstr "Indsendelser"
 
@@ -1480,11 +1474,6 @@ msgid "manager.setup.clockssRegister"
 msgstr ""
 "Tilmelding til CLOCKSS sker via <a href=\"https://clockss.org\" target=\""
 "_blank\">CLOCKSS hjemmesiden</a>."
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Der er endnu ikke valgt sektionsredaktør. Tilføj denne rolle til mindst én "
-"bruger via 'Brugere & roller'."
 
 msgid "manager.setup.homepageContent"
 msgstr "Indhold på tidsskriftshjemmeside"

@@ -41,17 +41,6 @@ msgstr "Приключване на подаването на материали
 msgid "author.submit.filesSummary"
 msgstr "Обобщение на файловете"
 
-msgid "author.submit.noFiles"
-msgstr "Към това изпращане на материали не са прикачени файлове."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"За да изпратите ръкописа си на {$journalTitle}, щракнете върху Приключване "
-"на подаването на материали. Посоченият основент контакт за подаванете "
-"материали ще получи потвърждение по имейл и ще може да види напредъка на "
-"редакционния процес, като влезе в уеб сайта на списанието. Благодарим ви за "
-"проявения интерес към публикуването в {$journalTitle}."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Публичнен идентификатор на допълнителен файл"
 
@@ -227,16 +216,8 @@ msgstr ""
 "Пренаредете авторите да се появяват в реда, в който ще бъдат изброени при "
 "публикуването."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Декларация за поверителност на списанието"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Моля, изберете език за изпращане на материалите за статия."
-
-msgid "author.submit.form.sectionRequired"
-msgstr ""
-"Моля, изберете подходящ раздел на списанието за изпращане на материалите за "
-"статия."
 
 msgid "author.submit.comments"
 msgstr "Добавяне на текст (опционално)"
@@ -248,13 +229,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Трябва да се съгласите с условията на Известието за авторските права, преди "
 "да продължите."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Авторите се съгласяват с условията на настоящото Известие за авторските "
-"права, което ще се прилага към това изпращане на материали за статия в "
-"списанието, ако и когато тя бъде публикувана (коментарите към редактора "
-"могат да бъдат добавени по-долу)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -316,17 +290,8 @@ msgstr "Искане на отпадане на таксата за плащан
 msgid "author.submit.notAccepting"
 msgstr "Понастоящем това списание не приема материали."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Можете да завършите това подаване на материали на по-късна дата, като "
-"изберете Активни изпращания / подавания на материали от началната страница "
-"на автора."
-
 msgid "author.submit.nextSteps"
 msgstr "Следващи стъпки"
-
-msgid "author.submit.confirmation"
-msgstr "Потвърждение"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Качи допълнителни файлове"

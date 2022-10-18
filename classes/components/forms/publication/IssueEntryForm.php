@@ -124,7 +124,7 @@ class IssueEntryForm extends FormComponent
         if (!empty($categoryOptions)) {
             $this->addField(new FieldOptions('categoryIds', [
                 'label' => __('submission.submit.placement.categories'),
-                'value' => (array) $publication->getData('categoryIds'),
+                'value' => $publication->getData('categoryIds'),
                 'options' => $categoryOptions,
             ]));
         }

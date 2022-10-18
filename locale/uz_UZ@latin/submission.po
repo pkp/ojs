@@ -35,14 +35,8 @@ msgstr "Maqola nomi"
 msgid "submission.upload.selectComponent"
 msgstr "Maqola komponentini tanlang"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Ushbu maqolani yuboradigan hajmni tanlang."
-
 msgid "submission.submit.userGroup"
 msgstr "Mening rolimdan foydalanib yuboring ..."
-
-msgid "submission.submit.title"
-msgstr "Maqola yuboring"
 
 msgid "submission.submit.noContext"
 msgstr "Ushbu material uchun jurnal topilmadi."
@@ -70,9 +64,6 @@ msgstr "Ko'rib chiqish uchun yuboring"
 
 msgid "workflow.review.externalReview"
 msgstr "Taqriz"
-
-msgid "submission.confirmSubmit"
-msgstr "Ushbu maqolani jurnalga taqdim qilmoqchi ekanligingizga aminmisiz?"
 
 msgid "submission.pageProofs"
 msgstr "Tekshirish"
@@ -322,39 +313,13 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "So'ralgan iqtibos formatini olib bo'lmadi."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Iltimos, ishtirokchining rolini tanlang."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Abstraktingiz juda uzun. Iltimos, ushbu bo'lim uchun ko'rsatilgan so'z "
-"chegarasidan kamroqqa qisqartiring."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Iltimos, maqolangizning konspektini kiriting."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Iltimos, maqolangiz sarlavhasini kiriting."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Har bir muallifning ismi, familiyasi va elektron pochta manzili talab "
-"qilinadi."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Hech bo'lmaganda bitta muallif kerak."
-
 msgid "submission.submit.contributorRole"
 msgstr "Ishtirokchining roli"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Maxfiylik bayonoti"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Davom etishdan oldin siz quyida keltirilgan talablarni bajarganingizni "
-"o'qishingiz va tan olishingiz kerak."
-
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Ishlab chiqarish muhokamalari"
 

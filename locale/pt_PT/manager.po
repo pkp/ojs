@@ -772,12 +772,6 @@ msgstr "Forneça exemplos de palavras-chave ou tópicos para auxiliar o autor"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Instruções para Submissão"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Normas de Submissão"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada Item de Verificação nas Normas de Submissão, antes de proceder. A lista de Itens de Verificação também é apresentada em Instruções para Autores, na secção Sobre a Revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão."
-
 msgid "manager.setup.submissions"
 msgstr "Submissões"
 
@@ -1454,12 +1448,6 @@ msgstr "Registo com sucesso!"
 
 msgid "manager.website.archiving"
 msgstr "Arquivar"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Ainda não existem Editores de Secção. Associe este papel a pelo menos um "
-"utilizador através da Administração > Configurações > Utilizadores& amp; "
-"Papéis."
 
 msgid "manager.setup.masthead"
 msgstr "Cabeçalho"

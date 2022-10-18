@@ -218,9 +218,6 @@ msgstr "Synkroniserad tilldelning innebär att samtliga användare inom en speci
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Abstracts ej obligatoriskt"
 
-msgid "manager.section.noSectionEditors"
-msgstr "Det finns ingen redaktör för sektionen än. Lägg till åtminstone en användare till rollen under Administration > Inställningar > Användare &amp; Roller först."
-
 msgid "manager.sections.assigned"
 msgstr "Sektionens redaktörer"
 
@@ -869,12 +866,6 @@ msgstr "Ger exempel på nyckelord eller ämnen som är till hjälp för författ
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Riktlinjer för bidrag"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Checklista för insändning av bidrag"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "När ett bidrag skickas in till tidskriften måste författaren först kontrollera de olika momenten i Checklista för insändning av bidrag. Checklistan syns också i Författarinstruktioner under Om tidskriften. Checklistan kan redigeras nedan men alla delmoment på listan måste markeras av författaren innan bidraget skickas in."
 
 msgid "manager.setup.submissions"
 msgstr "Bidrag"

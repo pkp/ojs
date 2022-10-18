@@ -207,9 +207,6 @@ msgstr "هماهنگ‌سازی اعطای نقش موجب می‌شود تا ت
 msgid "manager.sections.abstractsNotRequired"
 msgstr "نیاز به چکیده ندارد"
 
-msgid "manager.section.noSectionEditors"
-msgstr "هیچ دبیری برای این نوع مقاله مشخص نشده است. حداقل به یک کاربر این نقش را عطا کنید."
-
 msgid "manager.sections.assigned"
 msgstr "دبیر این نوع مقاله"
 
@@ -809,12 +806,6 @@ msgstr "مثال‌هایی برای کلیدواژه به عنوان راهنم
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "راهنمای ارسال مقاله"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "چک‌لیست موارد مورد نیاز برای ارسال مقاله"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "در بدو ارسال مقاله به مجله ابتدا از نویسنده خواسته می‌شود تا موارد مختلف مربوط ارسال مقاله را در یک چک‌لیست تیک بزند تا بدین وسیله اطمینان حاصل شود که وی آن‌ها را رعایت کرده است. این چک‌لیست همچنین در راهنمای نویسندگان نیز در قسمت درباره مجله نمایش داده  می‌شود. در زیر می‌توان این لیست را مشاهده و به‌دلخواه آن را ویرایش کنید. تمام موارد این چک‌لیست می‌بایست توسط نویسنده تیک بخورد تا وی قادر به ادامه ارسال مقاله باشد."
 
 msgid "manager.setup.submissions"
 msgstr "مقالات ارسالی"

@@ -13,13 +13,6 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Autorii sunt de acord cu termenii Notificării privind drepturile de autor, "
-"care se vor aplica pentru această înregistrare de manuscris, dacă și când "
-"este publicată de această revistă (comentariile pentru editor pot fi "
-"adăugate mai jos)."
-
 msgid "author.submit.verifyChecklist"
 msgstr ""
 "Înainte de a continua, trebuie să vă asigurați că toate elementele din lista "
@@ -81,16 +74,8 @@ msgstr "Cerere renunțare"
 msgid "author.submit.notAccepting"
 msgstr "Jurnalul nu acceptă înregistrări de manuscrise în acest moment."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Puteți completa această înregistrare de manuscris la o dată ulterioară, "
-"selectând înregistrările active din pagina de autor."
-
 msgid "author.submit.nextSteps"
 msgstr "Pașii următori"
-
-msgid "author.submit.confirmation"
-msgstr "Confirmare"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Încărcați fișiere suplimentare"
@@ -284,17 +269,9 @@ msgstr ""
 "Reordonați autorii astfel încât să apară în ordinea în care vor fi listați "
 "la publicare."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Declarația de confidențialitate a jurnalului"
-
 msgid "author.submit.form.localeRequired"
 msgstr ""
 "Vă rugăm să selectați limba folosită pentru înregistrarea manuscrisului."
-
-msgid "author.submit.form.sectionRequired"
-msgstr ""
-"Vă rugăm să selectați o secțiune de jurnal adecvată pentru această "
-"înregistrare de manuscris."
 
 msgid "author.submit.comments"
 msgstr "Introduceți text (opțional)"
@@ -333,17 +310,6 @@ msgstr "Finalizați înregistrarea de manuscris"
 
 msgid "author.submit.filesSummary"
 msgstr "Rezumatul fișierului"
-
-msgid "author.submit.noFiles"
-msgstr "Nu au fost atașate fișiere la această înregistrare."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Pentru a înregistra manuscrisul la {$journalTitle} click pe Finalizare "
-"înregistrare. Autorul corespondent al manuscrisului înregistrat va primi o "
-"confirmare prin e-mail și va putea vizualiza progresul manuscrisului prin "
-"procesul editorial, conectându-se pe site-ul web al jurnalului. Vă mulțumim "
-"pentru interesul dvs. de a publica în {$journalTitle}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificator de fișiere suplimentare publice"
