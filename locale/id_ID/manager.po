@@ -250,11 +250,6 @@ msgstr ""
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Tidak membutuhkan abstrak"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Belum ada Editor Bagian.  Tambahkan terlebih dahulu peran ini ke setidaknya "
-"satu pengguna via Manajemen > Pengaturan > Pengguna &amp; Peran."
-
 msgid "manager.sections.assigned"
 msgstr "Editor Bagian ini"
 
@@ -995,17 +990,6 @@ msgstr "Masukkan kata kunci atau topik sebagai petunjuk untuk Penulis"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Petunjuk Penyerahan Naskah"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Daftar Tilik Pra-Penyerahan Naskah"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Saat melakukan penyerahan naskah untuk jurnal, Penulis terlebih dahulu "
-"diminta untuk mengecek kelengkapan item di daftar ini, sebelum melanjutkan "
-"proses. Daftar tersebut juga ditampilkan di Panduan Penulis, di bawah "
-"Tentang Jurnal. Daftar ini dapat diedit, tapi terlebih dahulu diberi tanda "
-"centang sebelum diproses."
 
 msgid "manager.setup.submissions"
 msgstr "Penyerahan Naskah"

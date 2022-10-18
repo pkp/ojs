@@ -27,20 +27,16 @@ msgstr "Section default policy"
 msgid "default.genres.article"
 msgstr "Article Text"
 
-msgid "default.contextSettings.checklist.notPreviouslyPublished"
-msgstr "The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor)."
-
-msgid "default.contextSettings.checklist.fileFormat"
-msgstr "The submission file is in OpenOffice, Microsoft Word, or RTF document file format."
-
-msgid "default.contextSettings.checklist.addressesLinked"
-msgstr "Where available, URLs for the references have been provided."
-
-msgid "default.contextSettings.checklist.submissionAppearance"
-msgstr "The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."
-
-msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines."
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>All submissions must meet the following requirements.</p>"
+"<ul>"
+"<li>The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</li>"
+"<li>The submission file is in OpenOffice, Microsoft Word, or RTF document file format.</li>"
+"<li>Where available, URLs for the references have been provided.</li>"
+"<li>The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</li>"
+"<li>The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.</li>"
+"</ul>"
 
 msgid "default.contextSettings.privacyStatement"
 msgstr "<p>The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</p>"

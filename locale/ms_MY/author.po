@@ -77,17 +77,6 @@ msgstr "Selesaikan Penyerahan"
 msgid "author.submit.filesSummary"
 msgstr "Ringkasan Fail"
 
-msgid "author.submit.noFiles"
-msgstr "Tiada fail yang dilampirkan pada penyerahan ini."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Untuk menghantar manuskrip anda ke {$journalTitle} klik Selesaikan "
-"Penyerahan. Kontak utama penyerahan akan menerima pengakuan melalui e-mel "
-"dan dapat melihat status penyerahan melalui proses editorial dengan log "
-"masuk ke laman web jurnal. Terima kasih kerana berminat untuk menerbitkan "
-"dengan {$journalTitle}."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Pengenalpasti fail awam tambahan"
 
@@ -260,14 +249,8 @@ msgid "author.submit.reorderInstructions"
 msgstr ""
 "Susun semula nama pengarang sehingga tertera mengikut urutan ia diterbitkan."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Kenyataan Privasi Jurnal"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Sila pilih bahasa penyerahan."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Sila pilih bahagian jurnal yang bersesuaian untuk penyerahan ini."
 
 msgid "author.submit.comments"
 msgstr "Masukkan teks (pilihan)"
@@ -277,12 +260,6 @@ msgstr "Komen untuk Editor"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Anda mesti bersetuju dengan syarat Notis Hak Cipta sebelum meneruskan."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Pengarang bersetuju dengan syarat Notis Hak Cipta ini, yang akan digunakan "
-"untuk penyerahan mereka jika dan bila ia diterbitkan oleh jurnal ini (komen "
-"untuk editor dapat ditambah di bawah)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -343,16 +320,8 @@ msgstr "Memohon Pengecualian"
 msgid "author.submit.notAccepting"
 msgstr "Jurnal ini tidak menerima penyerahan buat masa ini."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Anda boleh menyelesaikan penyerahan ini di kemudian hari dengan memilih "
-"Penyerahan Aktif dari laman utama Pengarang."
-
 msgid "author.submit.nextSteps"
 msgstr "Langkah Seterusnya"
-
-msgid "author.submit.confirmation"
-msgstr "Pengesahan"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Muat Naik Fail Tambahan"

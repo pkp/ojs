@@ -680,12 +680,6 @@ msgstr "Navedite relevantne primjere ključnih riječi ili tema za područje ovo
 msgid "manager.setup.submissionGuidelines"
 msgstr "Smjernice za prijave"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Uvjeti za predaju članka"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Pri prijavljivanju priloga za časopis, od autora se prvo traži da potvrde kako njihov prilog zadovoljava svaku stavku \"uvjeta za predaju priloga\" prije nego što mogu nastaviti s postupkom prijave. Uvjeti za predaju priloga se također navode i kod \"smjernica za autore\", unutar rubrike \"o časopisu\". Popis uvjeta se može nadopuniti ili prilagoditi, a autori će uz svaku navedenu stavku svoju suglasnost morati označiti kvačicom."
-
 msgid "manager.setup.submissions"
 msgstr "Prijave"
 
@@ -1798,11 +1792,6 @@ msgstr "Urednički odbor"
 
 msgid "manager.setup.masthead"
 msgstr "Impresum"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Još ne postoje urednici rubrike. Dodajte ovu ulogu najmanje jednom korisniku "
-"putem Korisnici & uloge > Korisnici."
 
 msgid "manager.paymentTypes"
 msgstr "Načini plaćanja"

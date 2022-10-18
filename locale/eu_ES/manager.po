@@ -691,12 +691,6 @@ msgstr "Eman gako-hitzen edo gaien adibideak, egileentzako laguntza gisa"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Bidalketei buruzko gidalerroak"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Bidalketa prestatzeko zerrenda"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Aldizkarira lan bat bidaltzera doazenean, bidali aurretik Bidalketa prestatzeko zerrendako puntu guztiak bete dituztela egiaztatzeko eskatzen zaie egileei. Zerrenda hori Egileentzako gidalerroetan ere azaltzen da, Aldizkariari buruz orrian. Behean edita daiteke zerrenda, baina bertako puntu guztiak markatu beharko dituzte egileek bidalketa egin ahal izateko."
-
 msgid "manager.setup.submissions"
 msgstr "Bidalketak"
 

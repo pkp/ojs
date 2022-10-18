@@ -853,17 +853,6 @@ msgstr "Gi forfatterne eksempler på relevante nøkkelord eller emneord"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Retningslinjer for innleveringer"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Sjekkliste for innlevering"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Når de leverer inn bidrag til tidsskriftet, må forfattere først krysse av "
-"for hvert element på «Sjekkliste for innlevering», før de får gå videre. "
-"Sjekklisten vises også i forfatterinstruksen, under «Om» tidsskriftet. "
-"Sjekklisten kan redigeres nedenfor, men alle elementene på listen må krysses "
-"av før forfatteren kan gå videre med innsendingen."
-
 msgid "manager.setup.submissions"
 msgstr "Innleveringer"
 
@@ -1932,11 +1921,6 @@ msgstr "Arkivering"
 
 msgid "manager.language.submissions"
 msgstr "Innleveringer"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Det er foreløpig ingen seksjonsredaktører. Oppnevn minst en bruker til "
-"rollen via «Administrasjon» > «Innstillinger»  > «Roller»."
 
 msgid "manager.setup.masthead"
 msgstr "Kolofon"

@@ -257,6 +257,7 @@ msgstr ""
 msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Staðfesting á innsendingu"
 
+#, fuzzy
 msgid "emails.submissionAck.body"
 msgstr ""
 "<p>Kæri {$recipientName},</p><p>Takk fyrir að senda inn grein/efni fyrir "

@@ -68,14 +68,8 @@ msgstr "Metaadatok megadása"
 msgid "author.submit.supplementaryFiles"
 msgstr "Kiegészítő fájlok feltöltése"
 
-msgid "author.submit.confirmation"
-msgstr "Megerősítés"
-
 msgid "author.submit.nextSteps"
 msgstr "Következő lépés"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Később is jóváhagyhatja a beküldést, ha kiválasztja az aktív beküldéseket  a szerzői főoldalról."
 
 msgid "author.submit.notAccepting"
 msgstr "Ez a folyóirat jelenleg nem fogad beküldéseket."
@@ -128,9 +122,6 @@ msgstr "A cikkeket a folyóirat valamelyik rovatához kell beküldeni."
 msgid "author.submit.verifyChecklist"
 msgstr "A folytatás előtt meg kell bizonyosodnia arról, hogy az ellenőrzési lista minden tétele elfogadott."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "A szerzőknek el kell fogadniuk a szerzői jogi közleményeket, amely erre a benyújtott anyagra vonatkozik, ha és amikor a folyóiratban publikálásra kerül (a szerkesztőnek szánt megjegyzéseket később lehet hozzátenni)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Mielőtt folytatná el kell fogadnia a szerzői jogi közleményeket."
 
@@ -140,14 +131,8 @@ msgstr "A szerkesztőnek szánt megjegyzések"
 msgid "author.submit.comments"
 msgstr "Szöveg megadása (nem kötelező)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Kérjük, válassza ki, hogy melyik folyóiratterülethez nyújtja be az anyagot."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Kérjük, válassza ki a benyújtás nyelvét."
-
-msgid "submission.submit.privacyStatement"
-msgstr "A folyóirat adatvédelmi nyilatkozata"
 
 msgid "author.submit.reorderInstructions"
 msgstr "A szerzők újrarendezése, hogy megfelelő sorrendben jelenjenek meg a publikációnál."
@@ -299,12 +284,6 @@ msgstr "Nyilvános kiegészítő fájl azonosító már létezik."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Nyilvános kiegészítő fájl azonosító"
-
-msgid "author.submit.confirmationDescription"
-msgstr "A kézirat {$journalTitle} elküldéséhez kattintson a Beküldés befejezése gombra. A benyújtás fő kapcsolattartója kap egy e-mailt, amelyben a benyújtott anyag aktuális állapotának megtekintéséhez talál linket, így bejelentkezés után folyamatosan nyomonkövethető a lektorálási és szerkesztői folyamat. Köszönjük, hogy érdeklődik a {$journalTitle} folyóiratunknál való publikálás iránt."
-
-msgid "author.submit.noFiles"
-msgstr "Ehhez a benyújtáshoz nem csatolt fájlt."
 
 msgid "author.submit.filesSummary"
 msgstr "Fájl összesítő"

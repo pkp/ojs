@@ -65,12 +65,6 @@ msgstr "Metapodaci"
 msgid "author.submit.supplementaryFiles"
 msgstr "Dopunske datoteke"
 
-msgid "author.submit.confirmation"
-msgstr "Potvrda"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Ovu prijavu možete dovršiti nekom drugom prilikom ukoliko odaberete Aktivne prijave s autorove naslovne stranice."
-
 msgid "author.submit.notAccepting"
 msgstr "Ovaj časopis ne prihvaća prijave u ovom trenutku."
 
@@ -117,9 +111,6 @@ msgstr "Uvjeti za predaju priloga"
 msgid "author.submit.verifyChecklist"
 msgstr "Da biste nastavili s prijavom, morate označiti da vaš rad zadovoljava sve navedene uvijete predaje priloga."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Autori su suglasni s time da se navedeni uvjeti primijene i na ovu prijavu ako i kada bude objavljena u časopisu (posebne napomene uredniku možete priložiti na dnu stranice)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Da biste nastavili s prijavom, morate se suglasiti sa uvjetima vezanim uz autorska prava."
 
@@ -128,12 +119,6 @@ msgstr "Komentari uredniku"
 
 msgid "author.submit.comments"
 msgstr "Unesite tekst"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Molimo odaberite prikladnu rubriku časopisa za ovu prijavu."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Izjava o privatnosti"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Koristite strelice da biste promijenili redoslijed autora u prijavi. Autori će u izdanju biti navedeni ovim slijedom."
@@ -273,12 +258,6 @@ msgstr "Javna dopunska identifikacija datoteke već postoji."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identifikator javne dopunske datoteke"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Završili ste prva četiri koraka postupka prijave. Kliknite <i>Dovrši prijavu</i> kako biste predali rukopis vašeg priloga za časopis {$journalTitle}. O tome ćete primiti potvrdu putem e-pošte. Informacije o kretanju prijavljenog priloga kroz urednički postupak moći ćete pratiti prijavljivanjem na mrežnu stranicu časopisa. Hvala vam na interesu za objavljivanje vašeg rada u časopisu {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Nema datoteka priloženih ovoj prijavi."
 
 msgid "author.submit.filesSummary"
 msgstr "Kratak pregled datoteke"

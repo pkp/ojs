@@ -81,7 +81,7 @@ class IssueAction
             $userId = $user->getId();
 
             $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR, null, $userId);
+            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleIds($submission->getId(), [Role::ROLE_ID_AUTHOR], null, $userId);
             $stageAssignment = $stageAssignments->next();
             if ($stageAssignment) {
                 return true;

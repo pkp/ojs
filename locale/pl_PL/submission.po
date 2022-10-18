@@ -17,14 +17,8 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Zgłoś tekst"
-
 msgid "submission.submit.userGroup"
 msgstr "Zgłoś w mojej roli jako..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Wybierz grupę, w ramach której przesyłasz artykuł."
 
 msgid "submission.upload.selectComponent"
 msgstr "Wybierz element artykułu"
@@ -110,9 +104,6 @@ msgstr "Prześlij pliki powiązane z tekstem, włączając w to treść, multime
 msgid "submission.pageProofs"
 msgstr "Korekta końcowa"
 
-msgid "submission.confirmSubmit"
-msgstr "Czy na pewno zgłosić ten tekst do czasopisma?"
-
 msgid "workflow.review.externalReview"
 msgstr "Recenzja"
 
@@ -131,35 +122,15 @@ msgstr "Zatwierdzony"
 msgid "submission.incomplete"
 msgstr "Oczekuje na zatwierdzenie"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Określ język zgłoszenia."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista kontrolna zgłoszenia"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Zapoznaj się z listą kontrolną i upewnij się, że spełniasz wszystkie wymagania przed kontynuowaniem."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Przetwarzanie danych użytkownika"
 
 msgid "submission.submit.contributorRole"
 msgstr "Rola współautorów"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Przynajmniej jeden autor jest wymagany."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Imię, nazwisko oraz adres e-mail każdego autora są wymagane."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Podaj tytuł zgłaszanego tekstu."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Podaj abstrakt zgłaszanego tekstu."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Podaj rolę współautorów."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Wybrany format cytowania nie jest dostępny."
@@ -172,9 +143,6 @@ msgstr "Dowolny dział"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Długość abstraktu nie może przekraczać {$wordCount} wyrazów."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Abstrakt jest za długi. Skróć go, uwzględniając limit wyrazów określony poniżej dla tego działu."
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} pozycji"

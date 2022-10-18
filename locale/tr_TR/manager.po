@@ -868,17 +868,6 @@ msgstr "Yazarlar için anahtar kelime veya konu başlığı örnekleri verin"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Gönderi Rehberi"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Gönderi Hazırlık Kontrol Listesi"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Dergiye makale başvurusu yaparken, yazarlar önce Başvuru Hazırlık Kontrol "
-"Listesini kontrol etmelidirler. Kontrol listesi \"Dergi Hakkında\" altındaki "
-"\"Yazar Rehberi\" bölümündedir. Liste aşağıda düzenlenebilir, ama listedeki "
-"bütün öğelerin bir sonraki basamağa geçebilmek için yazarlar tarafından "
-"işaretlenmesi gerekmektedir."
-
 msgid "manager.setup.submissions"
 msgstr "Gönderiler"
 
@@ -1525,12 +1514,6 @@ msgstr "Bu aboneliği silmek istediğinizden emin misiniz?"
 
 msgid "manager.paymentTypes"
 msgstr "Ödeme Türleri"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Henüz bölüm editörü atanmamış. Bölüm editörü atamak için öncelikle Yönetim > "
-"Ayarlar > Kullanıcılar  &amp; Roller yolunu takip ederek bu role az bir "
-"kullanıcı ekleyin."
 
 msgid "manager.setup.masthead"
 msgstr "Yönetici Listesi"

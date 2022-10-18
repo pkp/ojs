@@ -28,9 +28,6 @@ msgstr ""
 "Հրապարակման բոլոր պահանջները կատարվել են։ Վստա՞հ եք, որ ցանկանում եք "
 "հրապարակել սա:"
 
-msgid "submission.confirmSubmit"
-msgstr "Վստա՞հ եք, որ ցանկանում եք այս հոդվածը ուղարկել ամսագրին:"
-
 msgid "grid.action.availableArticleGalley"
 msgstr "Այս շարվածքը դարձրեք հասանելի"
 
@@ -67,14 +64,8 @@ msgstr "Հոդվածի վերնագիր"
 msgid "submission.upload.selectComponent"
 msgstr "Ընտրեք հոդվածի բաղադրիչը"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Ընտրեք կարողությունը, որի ներքո դուք ներկայացնում եք այս հոդվածը:"
-
 msgid "submission.submit.userGroup"
 msgstr "Ներկայացնել իմ դերը որպես..."
-
-msgid "submission.submit.title"
-msgstr "Ներկայացրեք հոդված"
 
 msgid "submission.queries.production"
 msgstr "Թողարկման քննարկումներ"
@@ -253,28 +244,6 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Պահանջվող մեջբերումների ձևաչափը հնարավոր չէ վերստանալ:"
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Խնդրում ենք ընտրել աջակցողի դերը:"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Ձեր ամփոփումը չափազանց երկար է: Խնդրում ենք կրճատել այն մինչև այս բաժնի "
-"համար նշված բառերի սահմանաչափը:"
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Խնդրում ենք մուտքագրել ձեր հոդվածի ամփոփագիրը:"
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Խնդրում ենք մուտքագրել ձեր հոդվածի վերնագիրը:"
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Յուրաքանչյուր հեղինակի անունը, ազգանունը և էլեկտրոնային փոստի հասցեն "
-"պարտադիր են:"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Պահանջվում է առնվազն մեկ հեղինակ:"
-
 msgid "submission.submit.contributorRole"
 msgstr "Աջակցողի դերը"
 
@@ -288,9 +257,6 @@ msgstr ""
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Ներկայացման ստուգաթերթ"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Խնդրում ենք ընտրել ներկայացման լեզուն:"
 
 msgid "submission.incomplete"
 msgstr "Սպասում է հաստատմանը"

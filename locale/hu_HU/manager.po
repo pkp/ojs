@@ -235,9 +235,6 @@ msgstr "A beiratkozási szinkronizálás minden felhasználót, aki egy adott sz
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Az absztrakt nem kötelező"
 
-msgid "manager.section.noSectionEditors"
-msgstr "Nincs még rovatszerkesztő.  Először legalább egy ilyen szerepkörű felhasználót adjon hozzá az Adminisztráció > Beállítások > Felhasználók &amp; Szerepkörök oldalon."
-
 msgid "manager.sections.assigned"
 msgstr "Ennek a rovatnak a szerkesztői"
 
@@ -926,12 +923,6 @@ msgstr "Adjon példákat a kulcsszavakra vagy témákra, ami segíti a szerzőke
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Cikkbeküldési útmutató"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "A benyújtás előkészítésének ellenőrzőlistája"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Folyóirathoz történő beküldésnél még a beküldés előtt a szerzőnek először egy ellenőrzést kell elvégeznie, hogy a benyújtási követelmények minden pontjának megfelel a cikk. Az ellenőrzőlista a szerzői útmutatóban is rendelkezésre áll az Információk alatt. A listát alább lehet szerkeszteni, de a szerzőnek minden tételnél tennie kell egy pipát, mielőtt a folytathatja a beküldést."
 
 msgid "manager.setup.submissions"
 msgstr "Beküldések"

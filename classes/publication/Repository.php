@@ -19,7 +19,9 @@ use APP\facades\Repo;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\App;
+use PKP\context\Context;
 use PKP\core\Core;
+use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\publication\Collector;
 
@@ -34,10 +36,12 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc PKP\publication\Repository::validate() */
-    public function validate($publication, array $props, array $allowedLocales, string $primaryLocale): array
+    public function validate($publication, array $props, Submission $submission, Context $context): array
     {
-        $errors = parent::validate($publication, $props, $allowedLocales, $primaryLocale);
+        $errors = parent::validate($publication, $props, $submission, $context);
 
+        $allowedLocales = $context->getSupportedSubmissionLocales();
+        $primaryLocale = $submission->getLocale();
         $sectionDao = Application::get()->getSectionDAO(); /** @var SectionDAO $sectionDao */
 
         // Ensure that the specified section exists
@@ -54,7 +58,8 @@ class Repository extends \PKP\publication\Repository
             $section = $sectionDao->getById($publication->getData('sectionId'));
         }
 
-        if ($section) {
+        // Only validate section settings for completed submissions
+        if ($section && !$submission->getData('submissionProgress')) {
 
             // Require abstracts for new publications if the section requires them
             if (is_null($publication) && !$section->getData('abstractsNotRequired') && empty($props['abstract'])) {
@@ -78,7 +83,7 @@ class Repository extends \PKP\publication\Repository
                     if (empty($props['abstract'][$localeKey])) {
                         continue;
                     }
-                    $wordCount = count(preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($props['abstract'][$localeKey])))));
+                    $wordCount = PKPString::getWordCount($props['abstract'][$localeKey]);
                     $wordCountLimit = $section->getData('wordCount');
                     if ($wordCountLimit && $wordCount > $wordCountLimit) {
                         if (!isset($errors['abstract'])) {
@@ -92,8 +97,7 @@ class Repository extends \PKP\publication\Repository
 
         // Ensure that the issueId exists
         if (isset($props['issueId']) && empty($errors['issueId'])) {
-            $issue = Repo::issue()->get($props['issueId']);
-            if (!$issue) {
+            if (!Repo::issue()->exists($props['issueId'])) {
                 $errors['issueId'] = [__('publication.invalidIssue')];
             }
         }

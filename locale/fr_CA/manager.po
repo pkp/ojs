@@ -294,12 +294,6 @@ msgstr ""
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Résumé non obligatoire"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Aucun-e rédacteur-trice de rubrique n'a encore été désigné-e. Ajouter ce "
-"rôle à au moins un-e utilisateur-trice via « Administration > Paramètres > "
-"Rôles et utilisateurs-trices »."
-
 msgid "manager.sections.assigned"
 msgstr "Rédacteurs-trices de cette rubrique"
 
@@ -1150,19 +1144,6 @@ msgstr ""
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Directives pour la soumission"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Liste de vérification de la soumission"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Lors d'une soumission à la revue, on demande d'abord aux auteurs-es de "
-"s'assurer, avant d'aller plus loin, que toutes les conditions requises pour "
-"soumettre un article sont remplies. La liste de vérification doit aussi "
-"apparaître dans « Directives aux auteurs-es », sous « À propos » de la "
-"revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de "
-"la liste devront être cochés avant que les auteurs-es puissent poursuivre la "
-"procédure de soumission."
 
 msgid "manager.setup.submissions"
 msgstr "Soumissions"

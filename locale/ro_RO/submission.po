@@ -98,43 +98,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Formatul de citare solicitat nu a putut fi preluat."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Vă rugăm să selectați rolul contributorului."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Rezumatul este prea lung. Vă rugăm să îl scurtați până la limita de cuvinte "
-"indicată pentru această secțiune."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Introduceți rezumatul manuscrisului."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Introduceți titlul manuscrisului."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Pentru fiecare autor sunt necesare prenumele, numele și adresa de email."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Este necesar cel puțin un autor."
-
 msgid "submission.submit.contributorRole"
 msgstr "Rolul contributorului"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Declarație de confidențialitate"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Trebuie să citiți și să confirmați că ați îndeplinit cerințele de mai jos "
-"înainte de a continua."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista de verificare pentru înregistrarea manuscrisului"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Selectați limba folosită pentru înregistrare."
 
 msgid "submission.incomplete"
 msgstr "Așteptați decizia"
@@ -153,10 +125,6 @@ msgstr "Trimite pentru revizie"
 
 msgid "workflow.review.externalReview"
 msgstr "Revizie"
-
-msgid "submission.confirmSubmit"
-msgstr ""
-"Sunteți sigur ca doriți sa înregistrați manuscrisul pentru această revistă?"
 
 msgid "submission.pageProofs"
 msgstr "Corectare"
@@ -253,14 +221,8 @@ msgstr "Titlu manuscris"
 msgid "submission.upload.selectComponent"
 msgstr "Selectați componenta manuscrisului"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Alegeți calitatea în care trimiteți acest manuscris."
-
 msgid "submission.submit.userGroup"
 msgstr "Trimit manuscrisul în calitate de ..."
-
-msgid "submission.submit.title"
-msgstr "Înregistrare manuscrise"
 
 msgid "submission.publication"
 msgstr "Publicare"

@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "Υποβολή άρθρου"
-
 msgid "submission.submit.userGroup"
 msgstr "Υποβολή με τον ρόλο μου ως..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Επιλέξτε την ιδιότητα υπό την οποία υποβάλλετε αυτό το άρθρο."
 
 msgid "submission.upload.selectComponent"
 msgstr "Επιλέξτε στοιχείο άρθρου"
@@ -103,9 +97,6 @@ msgstr ""
 msgid "submission.pageProofs"
 msgstr "Διόρθωση τυπογραφικών δοκιμίων"
 
-msgid "submission.confirmSubmit"
-msgstr "Ειβεβαιώνετε την υποβολή του άρθρου στο περιοδικό;"
-
 msgid "workflow.review.externalReview"
 msgstr "Αξιολόγηση"
 
@@ -124,38 +115,15 @@ msgstr "Εγκρίθηκε"
 msgid "submission.incomplete"
 msgstr "Σε αναμονή για έγκριση"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Παρακαλούμε επιλέξτε τη γλώσσα της υποβολής."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Λίστα ελέγχου υποβολής"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Πριν προχωρήσετε, πρέπει να διαβάσετε και να επιβεβαιώσετε ότι η υποβολή πληροί τις παρακάτω προϋποθέσεις."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Πολιτική Προστασίας Προσωπικών Δεδομένων"
 
 msgid "submission.submit.contributorRole"
 msgstr "Ρόλος Συνεργάτη"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Απαιτείται η καταχώρηση τουλάχιστον ενός Συγγραφέα."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Απαιτούνται το όνομα, το επίθετο και η διεύθυνση ηλεκτρονικού ταχυδρομείου κάθε Συγγραφέα."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Παρακαλούμε εισάγετε τον τίτλο του άρθρου."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Παρακαλούμε εισάγετε την περίληψη του άρθρου."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Η περίληψή σας υπερβαίνει τον μέγιστο προβλεπόμενο αριθμό λέξεων για τη συγκεκριμένη ενότητα."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Παρακαλούμε επιλέξτε την ιδιότητα του Συνεργάτη."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Το πρότυπο παραπομπής που ζητήθηκε δε μπορεί να ανακτηθεί."

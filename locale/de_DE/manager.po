@@ -224,9 +224,6 @@ msgstr "Mit der Synchronisierung werden alle in einer anderen Zeitschrift in ein
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Zusammenfassungen sind nicht verpflichtend"
 
-msgid "manager.section.noSectionEditors"
-msgstr "Es gibt bisher keine Rubrikredakteur/innen. Ordnen Sie diese Rolle zunächst wenigstens einer Nutzerin/einem Nutzer via Management > Einstellungen > Nutzer/innen &amp; Rollen zu."
-
 msgid "manager.sections.assigned"
 msgstr "Rubrikredakteur/innen dieser Rubrik"
 
@@ -882,12 +879,6 @@ msgstr ""
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Richtlinien für die Beitragseinreichung"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Checkliste für die Beitragseinreichung"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Autor/innen, die beabsichtigen, einen Beitrag einzureichen, werden zunächst gebeten, die Checkliste Punkt für Punkt abzuarbeiten. Die Liste erscheint bei den Richtlinien für Autor/innen unter \"Über uns\". Die Liste kann weiter unten verändert werden, doch müssen alle Punkte der Liste abgehakt sein, bevor die Autor/innen mit dem Einreichen ihres Beitrags fortfahren können."
 
 msgid "manager.setup.submissions"
 msgstr "Beitragseinreichung"

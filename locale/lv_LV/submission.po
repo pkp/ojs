@@ -238,26 +238,6 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Pieprasīto citēšanas formātu neizdevās iegūt."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Lūdzu, atlasiet līdzstrādnieka lomu."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Kopsavilkums ir pārāk garš. Lūdzu, saīsiniet to, lai tas nepārsniegtu šai "
-"sadaļai norādīto vārdu ierobežojumu."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Lūdzu, ievadiet raksta kopsavilkumu."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Lūdzu, ievadiet raksta virsrakstu."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Jānorāda katra autora vārds, uzvārds un e-pasta adrese."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Jābūt vismaz vienam autoram."
-
 msgid "submission.submit.contributorRole"
 msgstr "Iesniedzēja loma"
 
@@ -271,9 +251,6 @@ msgstr ""
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Iesniegšanas kontrolsaraksts"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Lūdzu, izvēlieties iesniedzamā materiāla valodu."
 
 msgid "submission.incomplete"
 msgstr "Gaida apstiprināšanu"
@@ -289,9 +266,6 @@ msgstr "Iesniegtā materiāla izdošanas metadati ir atjaunināti."
 
 msgid "workflow.review.externalReview"
 msgstr "Recenzēšana"
-
-msgid "submission.confirmSubmit"
-msgstr "Vai tiešām vēlaties iesniegt šo rakstu žurnālam?"
 
 msgid "submission.pageProofs"
 msgstr "Korektūru veikšana"
@@ -386,14 +360,8 @@ msgstr "Raksta virsraksts"
 msgid "submission.upload.selectComponent"
 msgstr "Izvēlēties raksta sastāvdaļu"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Izvēlēties statusu, kādā iesniedzat šo rakstu."
-
 msgid "submission.submit.userGroup"
 msgstr "Iesniegt manā lomā kā..."
-
-msgid "submission.submit.title"
-msgstr "Iesniegt rakstu"
 
 msgid "doi.submission.incorrectContext"
 msgstr ""

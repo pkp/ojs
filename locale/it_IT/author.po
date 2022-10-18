@@ -68,9 +68,6 @@ msgstr "Carica il file della proposta"
 msgid "author.submit.supplementaryFiles"
 msgstr "Carica i file supplementari"
 
-msgid "author.submit.confirmation"
-msgstr "Conferma"
-
 msgid "author.submit.notAccepting"
 msgstr "In questo momento la rivista non accetta nessuna proposta."
 
@@ -110,9 +107,6 @@ msgid "author.submit.verifyChecklist"
 msgstr ""
 "Assicurati di aver spuntato tutte le voci della lista prima di continuare."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Gli autori acconsentono ai termini di questa nota sul Copyright, che sarà applicata al loro contributo se e quando verrà pubblicato (commenti per l'editor possono essere aggiunti sotto)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Devi accettare i termini della nota di Copyright prima di continuare."
 
@@ -121,12 +115,6 @@ msgstr "Commenti per l'Editor"
 
 msgid "author.submit.comments"
 msgstr "Inserisci il testo (opzionale)"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Devi scegliere la sezione per il tuo contributo."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Tutela della privacy"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Ordina gli autori nel modo in cui vuoi che appaiano sulla pubblicazione."
@@ -273,18 +261,6 @@ msgstr "Esiste già l'identificazione del file pubblico supplementare."
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificatore pubblico del file supplementare"
 
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Per inviare il tuo lavoro a {$journalTitle} clicca il tasto \"Completa la "
-"proposta\". L'autore che hai indicato per la corrispondenza riceverà una "
-"notifica via email e potrà controllare, effettuando il log in al sito web "
-"della rivista, lo stato di avanzamento della proposta nel processo "
-"editoriale. Grazie per aver scelto di sottomettere il tuo contributo a "
-"{$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Non hai caricato alcun file per questa proposta."
-
 msgid "author.submit.filesSummary"
 msgstr "Riepilogo dei file"
 
@@ -332,8 +308,3 @@ msgstr "Seleziona una lingua per la proposta."
 
 msgid "author.submit.nextSteps"
 msgstr "Passi successivi"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Puoi completare questa proposta successivamente selezionado \"Proposte "
-"attive\" dalla home dell'autore."

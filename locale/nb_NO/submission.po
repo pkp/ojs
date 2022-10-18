@@ -98,43 +98,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Det forespurte referanseformatet kunne ikke hentes."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Velg bidragsyterens rolle."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Sammendraget ditt er for langt. Gjør det kortere i tråd med ordgrensen for "
-"denne seksjonen."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Skriv inn sammendraget."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Skriv inn tittelen på artikkelen."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Skriv inn fornavn, etternavn og e-postadressen til hver enkelt forfatter."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Skriv inn minst en forfatter."
-
 msgid "submission.submit.contributorRole"
 msgstr "Bidragsyterens rolle"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Erklæring om personvern"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Du må lese gjennom og bekrefte at du har gjort alt på listen før du "
-"fortsetter."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Sjekkliste"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Velg et språk."
 
 msgid "submission.incomplete"
 msgstr "Avventer godkjenning"
@@ -153,9 +125,6 @@ msgstr "Send til fagfellevurdering"
 
 msgid "workflow.review.externalReview"
 msgstr "Fagfellevurdering"
-
-msgid "submission.confirmSubmit"
-msgstr "Er du sikker på at du vil levere inn denne artikkelen til tidsskriftet?"
 
 msgid "submission.pageProofs"
 msgstr "Korrekturlesing"
@@ -252,14 +221,8 @@ msgstr "Tittel"
 msgid "submission.upload.selectComponent"
 msgstr "Velg artikkelkomponent"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Velg rolle for å leverer inn denne artikkelen."
-
 msgid "submission.submit.userGroup"
 msgstr "Lever inn i min rolle som ..."
-
-msgid "submission.submit.title"
-msgstr "Lever inn en artikkel"
 
 msgid "submission.publication"
 msgstr "Publikasjon"

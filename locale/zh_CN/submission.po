@@ -12,9 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "提交一篇文章"
-
 msgid "submission.title.tip"
 msgstr ""
 "稿件类型通常会是“图像”、“文本”或者其他诸如“软件”或者“交互式视频”等。请选择跟您的稿件最贴近的类型。更多类型可参考<a target=\""
@@ -124,38 +121,15 @@ msgstr "这些规范基于都柏林核心元数据集（一种用于描述期刊
 msgid "submission.citationFormat.notFound"
 msgstr "请求的引用格式无法进行检索。"
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "选择合作者的角色。"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "您的摘要太长了。请按照要求作必要删减。"
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "请填写文章摘要。"
-
-msgid "submission.submit.form.titleRequired"
-msgstr "请填写文章题目。"
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "作者的名字、姓氏、电子邮件地址必填。"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "至少要有一位作者。"
-
 msgid "submission.submit.contributorRole"
 msgstr "合作者"
 
 msgid "submission.submit.privacyStatement"
 msgstr "隐私声明"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "你在继续操作前已经阅读并且理解了下面的要求。"
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "稿件清单"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "选择稿件语言。"
 
 msgid "submission.incomplete"
 msgstr "等待批复中"
@@ -174,9 +148,6 @@ msgstr "送审"
 
 msgid "workflow.review.externalReview"
 msgstr "审核"
-
-msgid "submission.confirmSubmit"
-msgstr "确认要提交此文章吗？"
 
 msgid "submission.pageProofs"
 msgstr "校对"
@@ -220,9 +191,6 @@ msgstr "稿件文章 \"{$galleyFormatName}\" 校样生成。"
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "当期文章校样"
-
-msgid "submission.submit.userGroupDescription"
-msgstr "选择提交稿件的身份。"
 
 msgid "submission.copyrightHolder.description"
 msgstr "版权将在期刊出版后自动设定为{$copyright}。"

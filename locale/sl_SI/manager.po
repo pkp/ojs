@@ -243,11 +243,6 @@ msgstr ""
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Povzetek ni obvezen"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Ne obstaja noben urednik rubrike. Najprej dodajte to vlogo vsaj enemu "
-"uporabniku preko Upravljanje > Nastavitve > Uporabniki &amp; vloge."
-
 msgid "manager.sections.assigned"
 msgstr "Uredniki te rubrike"
 
@@ -1124,18 +1119,6 @@ msgstr "V pomoč avtorjem podajte primere ključnih besed ali vsebin"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Navodila za oddajo prispevka"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Kontrolni seznam za oddajo prispevka"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Ob oddaji prispevka za revijo morajo avtorji najprej potrditi, da njihov "
-"prispevek zadovoljuje vsako postavko na kontrolnem seznamu za oddajo "
-"prispevka. Kontrolni seznam za oddajo prispevka je tudi na strani O reviji "
-"pod rubriko Navodila avtorjem. Kontrolni seznam lahko urejate spodaj, "
-"avtorji pa morajo vedno s kljukico označiti vsak postavko kot izpolnjeno, "
-"preden lahko oddajo prispevek."
 
 msgid "manager.setup.submissions"
 msgstr "Oddani prispevki"

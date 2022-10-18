@@ -464,6 +464,7 @@ msgstr ""
 msgid "manager.setup.submissions"
 msgstr "Ներկայացումներ"
 
+#, fuzzy
 msgid "manager.setup.submissionPreparationChecklistDescription"
 msgstr ""
 "Ամսագրին ներկայացում կատարելիս հեղինակներին նախքան շարունակելը նախ խնդրում "
@@ -473,6 +474,7 @@ msgstr ""
 "բայց ցուցակի բոլոր կետերը կպահանջեն ստուգման նշան, նախքան հեղինակները կարող "
 "են շարունակել իրենց ներկայացումը:"
 
+#, fuzzy
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Ներկայացման նախապատրաստման ստուգաթերթ"
 

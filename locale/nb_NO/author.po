@@ -63,14 +63,6 @@ msgstr "Skriv inn metadata"
 msgid "author.submit.supplementaryFiles"
 msgstr "Last opp supplerende filer"
 
-msgid "author.submit.confirmation"
-msgstr "Bekreftelse"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Du kan fullføre denne innleveringen ved en senere anledning om du velger «"
-"Aktive innleveringer» fra forfattersiden."
-
 msgid "author.submit.notAccepting"
 msgstr "Dette tidsskriftet tar for øyeblikket ikke imot bidrag."
 
@@ -106,19 +98,11 @@ msgstr "Vennligst velg en seksjon ..."
 msgid "submission.submit.submissionChecklist"
 msgstr "Sjekkliste for klargjøring av manuskript"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor)."
-
+#, fuzzy
 msgid "author.submit.verifyChecklist"
 msgstr ""
 "Før du går videre må du sørge for at alle momentene i sjekklisten for "
 "klargjøring av innlevering er utført og krysset av."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Forfatteren aksepterer med dette at vilkårene i erklæringen om opphavsrett "
-"gjøres gjeldende for dette manuskripet, hvis og når det publiseres av dette "
-"tidsskriftet (øvrige kommentarer til redaktøren kan legges til nedenfor)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
@@ -129,14 +113,6 @@ msgstr "Kommentarer til redaktøren"
 
 msgid "author.submit.comments"
 msgstr "Skriv inn tekst (valgfritt)"
-
-msgid "author.submit.form.sectionRequired"
-msgstr ""
-"Velg en passende tidsskriftseksjon for denne innleveringen (se «Seksjoner» "
-"og «Retningslinjer» i <a href=\"{$aboutUrl}\">«Om»</a> tidsskriftet)."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Erklæring om personvern"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Bruk pilene for å endre rekkefølgen forfatterne skal vises i."
@@ -290,16 +266,6 @@ msgstr "Offentlig identifikasjon for den supplerende filen finnes allerede."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Offentlig identifikator for den supplerende filen"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Klikk «Bekreft» for å levere inn arbeider til {$journalTitle}. Du vil motta "
-"en e-post som bekrefter innleveringen. Du kan følge den gjennom den "
-"redaksjonelle prosessen ved å logge inn på tidsskriftets nettsted. Takk for "
-"at du vil publisere hos {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Ingen filer er lagt ved denne innleveringen."
 
 msgid "author.submit.filesSummary"
 msgstr "Oppsummering"

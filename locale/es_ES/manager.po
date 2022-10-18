@@ -789,12 +789,6 @@ msgstr "Proporcione ejemplos de palabras clave y temas que sirvan de guía para 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Indicaciones para el envío"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Lista de comprobación para la preparación de envíos"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Cuando se realice un envío a la revista, se pedirá a los autores/as que comprueben cada elemento enviado en la Lista de comprobación para preparar los envíos y registren el resultado como completado antes de continuar con el proceso. Esta lista también está disponible en la sección Indicaciones para los autores/as de la sección Acerca de la revista. Se puede editar aquí, aunque todos sus elementos necesitarán haberse comprobado y registrado para que los autores/as puedan continuar con la entrega."
-
 msgid "manager.setup.submissions"
 msgstr "Envíos"
 
@@ -1390,9 +1384,6 @@ msgstr "Poner la fecha del copyright del artículo a"
 
 msgid "manager.website.archiving"
 msgstr "Almacenamiento"
-
-msgid "manager.section.noSectionEditors"
-msgstr "Aún no hay editores/as de sección. Añada este rol al menos a un usuario vía Administración > Ajustes > Users &amp; Roles first."
 
 msgid "manager.setup.masthead"
 msgstr "Cabecera"

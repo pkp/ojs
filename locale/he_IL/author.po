@@ -18,16 +18,8 @@ msgstr "בקש ויתור"
 msgid "author.submit.notAccepting"
 msgstr "כתב עת זה אינו מקבל הגשות כרגע."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"אתה יכול להשלים הגשה זו במועד מאוחר יותר על ידי בחירת הגשות פעילות מפרופיל "
-"המחבר."
-
 msgid "author.submit.nextSteps"
 msgstr "השלבים הבאים"
-
-msgid "author.submit.confirmation"
-msgstr "אישור"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "העלה קבצים משלימים"
@@ -105,15 +97,6 @@ msgstr "סיים את ההגשה"
 
 msgid "author.submit.filesSummary"
 msgstr "סיכום קובץ"
-
-msgid "author.submit.noFiles"
-msgstr "לא צורפו קבצים להגשה זו."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"כדי להגיש את כתב היד שלך ל {journalTitle$} לחץ על סיום הגשה. איש הקשר העיקרי "
-"של ההגשה יקבל אישור בדוא\"ל ויוכל לראות את התקדמות ההגשה בתהליך העריכה על "
-"ידי כניסה לאתר כתב הכת. תודה על התעניינותך בפרסום באמצעות {journalTitle$}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "מזהה קובץ משלים ציבורי"
@@ -276,14 +259,8 @@ msgstr "סדר מחדש את שם המחבר"
 msgid "author.submit.reorderInstructions"
 msgstr "סדר מחדש מחברים שיופיעו לפי הסדר שיופיעו בפרסום."
 
-msgid "submission.submit.privacyStatement"
-msgstr "הצהרת הפרטיות של כתב העת"
-
 msgid "author.submit.form.localeRequired"
 msgstr "בחר שפת הגשה."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "בחר מדור כתב העת מתאים להגשה זו."
 
 msgid "author.submit.comments"
 msgstr "הזן טקסט (לא חובה)"
@@ -293,11 +270,6 @@ msgstr "הערות לעורך"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "עליך להסכים לתנאי הודעת זכויות היוצרים לפני שתמשיך."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"המחברים מסכימים לתנאי הודעת זכויות יוצרים זו, אשר יחולו על הגשה זו אם וכאשר "
-"היא תפורסם על ידי כתב עת זה (ניתן להוסיף הערות לעורך בהמשך)."
 
 msgid "author.submit.verifyChecklist"
 msgstr "עליך לוודא שכל הפריטים ברשימת הבדיקה של ההגשה הושלמו לפני שתמשיך."

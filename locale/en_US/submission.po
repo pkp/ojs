@@ -11,14 +11,8 @@ msgstr ""
 "PO-Revision-Date: 2019-09-30T06:07:35-07:00\n"
 "Language: en_US\n"
 
-msgid "submission.submit.title"
-msgstr "Submit an Article"
-
 msgid "submission.submit.userGroup"
 msgstr "Submit in my role as..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Choose the capacity under which you are submitting this article."
 
 msgid "submission.upload.selectComponent"
 msgstr "Select article component"
@@ -98,9 +92,6 @@ msgstr "Upload files associated with this submission, including the article, mul
 msgid "submission.pageProofs"
 msgstr "Proofreading"
 
-msgid "submission.confirmSubmit"
-msgstr "Are you sure you wish to submit this article to the journal?"
-
 msgid "workflow.review.externalReview"
 msgstr "Review"
 
@@ -116,38 +107,14 @@ msgstr "Approved"
 msgid "submission.incomplete"
 msgstr "Awaiting Approval"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Please select a submission language."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Submission Checklist"
-
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "You must read and acknowledge that you've completed the requirements below before proceeding."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Privacy Statement"
 
 msgid "submission.submit.contributorRole"
 msgstr "Contributor's role"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "At least one author is required."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "The first name, last name, and email address of each author is required."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Please enter the title of your article."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Please enter your article's abstract."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Your abstract is too long. Please shorten it to below the word limit indicated for this section."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Please select the contributor's role."
 
 msgid "submission.citationFormat.notFound"
 msgstr "The requested citation format could not be retrieved."
@@ -373,3 +340,18 @@ msgstr "View Galley"
 
 msgid "galley.cantEditPublished"
 msgstr "This galley can not be edited because it has already been published."
+
+msgid "submission.copyright.description"
+msgstr "Please read and understand the copyright terms for submissions to this journal."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr "You are not allowed to submit to this journal because authors must be registered by the editorial staff. If you believe this is an error, please contact <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr "You are not allowed to submit to this journal because submissions to all sections of this journal have been deactivated or restricted. If you believe this is an error, please contact <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "The section for this submission could not be found."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Only editorial staff are allowed to submit to this section."

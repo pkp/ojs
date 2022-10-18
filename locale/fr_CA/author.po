@@ -70,14 +70,8 @@ msgstr "Saisir les métadonnées"
 msgid "author.submit.supplementaryFiles"
 msgstr "Téléverser les fichiers supplémentaires"
 
-msgid "author.submit.confirmation"
-msgstr "Confirmation"
-
 msgid "author.submit.nextSteps"
 msgstr "Étapes suivantes"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Vous pouvez compléter cette soumission ultérieurement en la sélectionnant dans le menu des soumissions actives de l'auteur-e."
 
 msgid "author.submit.notAccepting"
 msgstr "Cette revue n'accepte pas de soumissions pour le moment."
@@ -132,9 +126,6 @@ msgstr ""
 "Vous devez vous assurer que tous les éléments de la liste de vérification de "
 "la soumission sont satisfaits avant de continuer."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Les auteurs-es acceptent les conditions de l'avis de droit d'auteur, qui s'appliqueront à cette soumission si et quand elle sera publiée par cette revue (des commentaires au,à la rédacteur-trice peuvent être ajoutés ci-dessous)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Vous devez accepter les conditions de l'avis de droit d'auteur avant de pouvoir continuer."
 
@@ -144,14 +135,8 @@ msgstr "Commentaires pour le,la rédacteur-trice"
 msgid "author.submit.comments"
 msgstr "Saisir du texte (optionnel)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Veuillez sélectionner une rubrique de la revue appropriée pour cette soumission."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Veuillez sélectionner une langue de soumission."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Déclaration de confidentialité de la revue"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Réordonner les auteurs-es pour qu'ils et elles paraissent dans l'ordre dans lequel ils et elles seront listés-es lors de la publication."
@@ -308,12 +293,6 @@ msgstr "L'identification publique du fichier supplémentaire existe déjà."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identifiant public du fichier supplémentaire"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Pour soumettre votre manuscrit à la publication {$journalTitle}, cliquer sur Terminer la soumission. Le personne-ressource principale de la soumission recevra un accusé de réception par courriel et sera en mesure de consulter l'avancement du processus éditorial de la soumission en se connectant au site Web de la revue. Merci de votre intérêt à publier dans {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Aucun fichier n'a été attaché à cette soumission."
 
 msgid "author.submit.filesSummary"
 msgstr "Sommaire du fichier"

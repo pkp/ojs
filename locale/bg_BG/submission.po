@@ -14,16 +14,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Трябва да прочетете и да потвърдите, че сте изпълнили изискванията по-долу, "
-"преди да продължите."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Контролен списък за изпращаните материали"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Моля, изберете език за изпращаните материали."
 
 msgid "submission.incomplete"
 msgstr "Чака одобрение"
@@ -42,9 +35,6 @@ msgstr "Пращане за рецензия"
 
 msgid "workflow.review.externalReview"
 msgstr "Рецензия"
-
-msgid "submission.confirmSubmit"
-msgstr "Сигурни ли сте, че искате да изпратите тази статия към списанието?"
 
 msgid "submission.pageProofs"
 msgstr "Коректура"
@@ -140,15 +130,8 @@ msgstr "Заглавие на статията"
 msgid "submission.upload.selectComponent"
 msgstr "Изберете компонент от статията"
 
-msgid "submission.submit.userGroupDescription"
-msgstr ""
-"Изберете ролята (в качеството си на какъв/а), в която изпращате тази статия."
-
 msgid "submission.submit.userGroup"
 msgstr "Изпращане в ролята ми на..."
-
-msgid "submission.submit.title"
-msgstr "Изпращане на статия"
 
 msgid "submission.queries.production"
 msgstr "Продукционни дискусии"
@@ -344,26 +327,6 @@ msgstr ""
 
 msgid "submission.citationFormat.notFound"
 msgstr "Заявеният формат на цитиране не може да бъде извлечен."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Моля, изберете ролята на изпращача/сътрудниците."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Резюмето ви е твърде дълго. Моля, съкратете го под ограничението на думите, "
-"посочено за този раздел."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Моля, въведете резюмето на вашата статия."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Моля, въведете заглавието на вашата статия."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Името, фамилията и имейл адресът на всеки автор са задължителни."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Изисква се да е отбелязан поне един автор."
 
 msgid "submission.submit.contributorRole"
 msgstr "Роля на изпращача"

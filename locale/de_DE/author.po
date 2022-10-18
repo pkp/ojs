@@ -64,14 +64,8 @@ msgstr "Metadaten eingeben"
 msgid "author.submit.supplementaryFiles"
 msgstr "Zusatzdateien hochladen"
 
-msgid "author.submit.confirmation"
-msgstr "Bestätigung"
-
 msgid "author.submit.nextSteps"
 msgstr "Nächste Schritte"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Sie können die Einreichung auch später fertigstellen, indem Sie \"Aktuelle Beiträge\" auf der Autor/innenstartseite auswählen."
 
 msgid "author.submit.notAccepting"
 msgstr "Die Zeitschrift nimmt zur Zeit keine Beiträge an."
@@ -124,9 +118,6 @@ msgstr "Artikel müssen in einer der Rubriken der Zeitschrift eingereicht werden
 msgid "author.submit.verifyChecklist"
 msgstr "Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)"
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren."
 
@@ -136,14 +127,8 @@ msgstr "Kommentare für die Redaktion"
 msgid "author.submit.comments"
 msgstr "Text eingeben (optional)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Wählen Sie eine passende Rubrik für diesen Beitrag aus."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Bitte wählen Sie eine Beitragssprache."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Erklärung zum Schutz personenbezogener Daten in dieser Zeitschrift"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Gruppieren Sie die Autor/innen um, so dass sie in der Reihenfolge stehen, in der sie in der Veröffentlichung auftauchen werden."
@@ -299,12 +284,6 @@ msgstr "Die öffentliche Bezeichnung der Zusatzdatei existiert bereits."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Öffentliche Bezeichnung der Zusatzdatei"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Um Ihr Manuskript bei {$journalTitle} einzureichen, klicken Sie \"Einreichung abschließen\" an. Der Hauptkontakt des Beitrags wird eine Benachrichtigung per E-Mail erhalten und wird den Stand des Beitrags im redaktionellen Prozess auf der Website der Zeitschrift nachvollziehen können (Einloggen erforderlich). Vielen Dank für Ihr Interesse an einer Veröffentlichung bei {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Dieser Einreichung wurden keine Dateien beigefügt."
 
 msgid "author.submit.filesSummary"
 msgstr "Zusammenfassung"
