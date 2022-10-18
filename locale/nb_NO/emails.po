@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.passwordResetConfirm.subject"
-msgstr "Bekreftelse på fornying av passord"
+msgstr "Bekreftelse på tilbakestilling av passord"
 
 msgid "emails.passwordResetConfirm.body"
 msgstr ""
@@ -34,7 +34,7 @@ msgstr ""
 "{$siteContactName}"
 
 msgid "emails.passwordReset.subject"
-msgstr "Fornying av passord"
+msgstr "TIlbakestilling av passord"
 
 msgid "emails.passwordReset.body"
 msgstr ""
