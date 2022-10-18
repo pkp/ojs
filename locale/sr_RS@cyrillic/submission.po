@@ -11,9 +11,6 @@ msgstr ""
 "PO-Revision-Date: 2019-11-19T10:49:33+00:00\n"
 "Language: sr_RS@cyrillic\n"
 
-msgid "submission.submit.title"
-msgstr "Предај рад"
-
 msgid "submission.submit.userGroup"
 msgstr "Предај у мојој улози као..."
 
@@ -68,9 +65,6 @@ msgstr "Наслов и апстракт"
 msgid "submission.pageProofs"
 msgstr "Лектура"
 
-msgid "submission.confirmSubmit"
-msgstr "Да ли сте сигурни да желите да предате овај рад у часопис?"
-
 msgid "workflow.review.externalReview"
 msgstr "Рецензија"
 
@@ -89,44 +83,21 @@ msgstr "Одобрено"
 msgid "submission.incomplete"
 msgstr "Чекам одобрење"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Одаберите језик предаје."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Чеклиста предаје"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Морате прочитати и потврдити да сте испунили све захтеве пре наставка."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Изјава о приватности"
 
 msgid "submission.submit.contributorRole"
 msgstr "Улоге сарадника"
 
-msgid "submission.submit.form.authorRequired"
-msgstr "Потребан је барем један аутор."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Имена, презимена и имејл адресе свих аутора су неопходни."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Унесите наслов рада"
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Унесите апстракт рада."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Одаберите улогу сарадника."
-
 msgid "submission.citationFormat.notFound"
 msgstr "Захтевани формат цитата није могуће преузети."
 
 msgid "submission.metadataDescription"
 msgstr "Ове спецификације су базиране на Dublin Core сету метаподатака, међународном стандарду који се користи за описивање садржаја часописа."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Одаберите капацитет под којим пријављујете овај чланак."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Ова копија се појављује у броју часописа"

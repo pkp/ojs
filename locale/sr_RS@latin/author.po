@@ -62,9 +62,6 @@ msgstr "Unos metapodataka"
 msgid "author.submit.supplementaryFiles"
 msgstr "Dodavanje dodatnih dokumenata"
 
-msgid "author.submit.confirmation"
-msgstr "Potvrda"
-
 msgid "author.submit.cancelSubmission"
 msgstr "Možete završiti predaju kasnije odabirom \"Aktivnih predaja\" u autorskom nalogu."
 
@@ -122,9 +119,6 @@ msgstr "Ovaj časopis prihvata radove ne nekoliko jezika. Odaberite primarni jez
 msgid "author.submit.verifyChecklist"
 msgstr "Morate biti sigurni da su sve stavke u predaji zadovoljene pre nastavka."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Autor se slaže sa autorskim pravima koja će biti primenjena na ovaj rad ako i kada bude objavljen u časopisu (komentare za urednika možete dodat ispod )."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Morate se složiti sa Autorskim pravima pre nastavka."
 
@@ -134,14 +128,8 @@ msgstr "Komentari za urednika"
 msgid "author.submit.comments"
 msgstr "Unesite tekst (opciono)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Odaberite odgovarajuću sekciju časopisa za rad."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Odaberite jezik rada."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Izjava o privatnosti"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Redosled kojim će autori biti prikazani u časopisu."
@@ -293,12 +281,6 @@ msgstr "Identifikacija javnog dodatnog fajla već postoji."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identifikator javnog dodatnog fajla."
-
-msgid "author.submit.confirmationDescription"
-msgstr "Da biste predali vaš rukopis u {$journalTitle} kliknite na \"Završi predaju\". Direktor predaje će primiti obaveštenje o predaji putem imejla i biće u mogućnosti da vidi progres predaje putem uredničkog procesa. Hvala Vam na interesovanju da objavljujete radove u {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Fajlovi nisu dodati uz ovu prijavu."
 
 msgid "author.submit.filesSummary"
 msgstr "Rezime fajlova"

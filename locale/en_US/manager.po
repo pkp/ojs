@@ -249,9 +249,6 @@ msgstr "Enrollment synchronization will enroll all users enrolled in the specifi
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Do not require abstracts"
 
-msgid "manager.section.noSectionEditors"
-msgstr "There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first."
-
 msgid "manager.sections.assigned"
 msgstr "This Section's Editors"
 
@@ -911,12 +908,6 @@ msgstr "Provide examples of keywords or topics as a guide for authors"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Submission guidelines"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Submission Preparation Checklist"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "On making a submission to the journal, authors are first asked to check each item on the Submission Preparation Checklist as completed, before proceeding. The checklist also appears in the Author Guidelines, under About the Journal. The list can be edited below, but all items on the list will require a checkmark before authors can proceed with their submission."
 
 msgid "manager.setup.submissions"
 msgstr "Submissions"
@@ -2146,3 +2137,6 @@ msgstr "New Version Created"
 msgid "mailable.publicationVersionNotify.description"
 msgstr "This email automatically notifies assigned editors when a new version of the submission is created."
 
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"This email is sent to journal managers when a new submission is made and no editors are assigned."

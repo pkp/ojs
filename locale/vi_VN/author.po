@@ -49,17 +49,6 @@ msgstr "Hoàn tất Gửi bài"
 msgid "author.submit.filesSummary"
 msgstr "Tóm tắt Tập tin"
 
-msgid "author.submit.noFiles"
-msgstr "Không có tập tin đã được đính kèm với bài gửi này."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Để gửi bản thảo của bạn tới {$journalTitle} nhấp vào Hoàn tất bài gửi. Người "
-"liên hệ chính của bài gửi sẽ nhận được xác nhận qua email và sẽ có thể xem "
-"tiến trình của bài gửi thông qua quy trình biên tập bằng cách đăng nhập vào "
-"trang web của tạp chí. Cảm ơn bạn đã quan tâm đến việc xuất bản trên "
-"{$journalTitle}."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Nhận dạng tập tin bổ sung công khai"
 
@@ -221,14 +210,8 @@ msgid "author.submit.reorderInstructions"
 msgstr ""
 "Sắp xếp lại các tác giả xuất hiện theo thứ tự sẽ được liệt kê khi xuất bản."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Tuyên bố về quyền riêng tư của Tạp chí"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Vui lòng chọn một ngôn ngữ."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Vui lòng chọn một chuyên mục thích hợp cho bài này."
 
 msgid "author.submit.comments"
 msgstr "Nhập văn bản (tùy chọn)"
@@ -240,12 +223,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Bạn phải đồng ý với các điều khoản của Thông báo bản quyền trước khi tiếp "
 "tục."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Các tác giả đồng ý với các điều khoản của Thông báo bản quyền này, sẽ áp "
-"dụng cho bài gửi này nếu và khi nó được xuất bản bởi tạp chí này (có thể "
-"thêm ý kiến cho biên tập viên bên dưới)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -301,16 +278,8 @@ msgstr "Yêu cầu Miễn lệ phí"
 msgid "author.submit.notAccepting"
 msgstr "Tạp chí này không chấp nhận các bài gửi tại thời điểm này."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Bạn có thể hoàn thành việc gửi bài này vào ngày sau đó bằng cách chọn Các "
-"bài gửi đang hoạt động từ trang tác giả."
-
 msgid "author.submit.nextSteps"
 msgstr "Bước tiếp theo"
-
-msgid "author.submit.confirmation"
-msgstr "Xác nhận"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Tải lên các tập tin bổ sung"

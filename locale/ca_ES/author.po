@@ -68,12 +68,6 @@ msgstr "Introducció de les metadades"
 msgid "author.submit.supplementaryFiles"
 msgstr "Càrrega de fitxers addicionals"
 
-msgid "author.submit.confirmation"
-msgstr "Confirmació"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a."
-
 msgid "author.submit.notAccepting"
 msgstr "Actualment aquesta revista no accepta trameses."
 
@@ -139,9 +133,6 @@ msgstr "Llista de verificació de tramesa"
 msgid "author.submit.verifyChecklist"
 msgstr "Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Abans de continuar, accepteu les condicions de l’avís de drets d'autor/a."
 
@@ -151,14 +142,8 @@ msgstr "Comentaris per a l'editor/a"
 msgid "author.submit.comments"
 msgstr "Introduïu el text (opcional)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Seleccioneu una secció adequada de la revista per a aquesta tramesa."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Seleccioneu la llengua per a la tramesa."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Declaració de privacitat de la revista"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Reordena els autors/ores perquè apareguin en l'ordre que sortiran a la publicació."
@@ -312,12 +297,6 @@ msgstr "La identificació pública del fitxer addicional ja existeix."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificador públic del fitxer addicional"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Per trametre el vostre manuscrit a {$journalTitle} feu clic a «Finalitza la tramesa». El contacte principal de la tramesa rebrà un justificant de recepció per correu electrònic i podrà visualitzar el progrés de la tramesa a través del procés editorial quan iniciï la sessió al lloc web de la revista. Us agraïm el vostre interès per publicar a {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "No s’ha adjuntat cap fitxer a aquesta tramesa."
 
 msgid "author.submit.filesSummary"
 msgstr "Resum dels fitxers"

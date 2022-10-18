@@ -67,12 +67,6 @@ msgstr "Introducir los metadatos"
 msgid "author.submit.supplementaryFiles"
 msgstr "Cargar los archivos complementarios"
 
-msgid "author.submit.confirmation"
-msgstr "Confirmación"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Puede completar este envío en otro momento seleccionando Envíos activos desde la página de inicio del autor/a."
-
 msgid "author.submit.notAccepting"
 msgstr "La revista no acepta envíos en este momento."
 
@@ -137,9 +131,6 @@ msgstr "Lista de comprobación del envío"
 msgid "author.submit.verifyChecklist"
 msgstr "Antes de continuar, debe asegurarse de que se cumplen todos los requisitos de la lista de comprobación."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Los autores/as se comprometen a aceptar las condiciones de este aviso de derechos de autor/a, que se aplicarán a este envío siempre y cuando se publique en esta revista (más abajo se pueden añadir comentarios al editor/a)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Debe aceptar las condiciones del aviso de derechos de autor/a antes de continuar."
 
@@ -149,14 +140,8 @@ msgstr "Comentarios para el editor/a"
 msgid "author.submit.comments"
 msgstr "Introduzca texto (opcional)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Seleccione la sección adecuada de la revista para este envío."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Seleccione el idioma del envío."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Declaración de privacidad de la revista"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Reordenar a los autores/as para que aparezcan en el orden en el que serán enumerados en la publicación."
@@ -310,12 +295,6 @@ msgstr "La identificación pública del archivo complementario ya existe."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificador público del archivo complementario"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Para enviar su manuscrito a {$journalTitle} haga clic en Finalizar envío. El contacto principal del envío recibirá un acuse de recibo por correo electrónico y podrá ver el progreso del envío a través del proceso editorial iniciando sesión en el sitio web de la revista. Gracias por su publicación en {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "No se han adjuntado archivos a este envío."
 
 msgid "author.submit.filesSummary"
 msgstr "Resumen del archivo"

@@ -744,12 +744,6 @@ msgstr "Podaj przykłady słów kluczowych lub tematów jako wzór dla autorów"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Wytyczne dla autorów"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Sprawdzenie tekstu przed wysłaniem"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Na stronie przesyłania tekstu, autorzy muszą oznaczyć każdy z elementów listy."
-
 msgid "manager.setup.submissions"
 msgstr "Przesyłanie tekstów"
 
@@ -947,9 +941,6 @@ msgstr "O czasopiśmie"
 
 msgid "manager.setup.journalAbout.description"
 msgstr "Zamieść wszelkie informacje o czasopiśmie, które mogą być interesujące dla czytelników, autorów lub recenzentów. Możesz zamieścić informacje o polityce otwartego dostępu, zawartości i zasięgu czasopisma, prawach autorskich, instytucjach finansujących czasopismo, historii czasopisma, polityce prywatności, a także systemach archiwizacji takich jak np. LOCKSS lub CLOCKSS."
-
-msgid "manager.section.noSectionEditors"
-msgstr "Nie ma jeszcze dodanego redaktora działu. Tę rolę przypisz najpierw co najmniej jednemu użytkownikowi poprzez Zarządzanie stroną > Ustawienia > Użytkownicy i ich role."
 
 msgid "manager.website.archiving"
 msgstr "Archiwizacja"

@@ -71,14 +71,8 @@ msgstr "3. Εισάγετε τα μεταδεδομένα"
 msgid "author.submit.supplementaryFiles"
 msgstr "4. Μεταφορτώστε τα συμπληρωματικά αρχεία (αν υπάρχουν)"
 
-msgid "author.submit.confirmation"
-msgstr "5. Επιβεβαίωση"
-
 msgid "author.submit.nextSteps"
 msgstr "Επόμενα βήματα"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Μπορείτε να ολοκληρώσετε αυτή την υποβολή αργότερα, επιλέγοντας \"Ενεργές υποβολές\" στην αρχική σελίδα σας ως Συγγραφέας."
 
 msgid "author.submit.notAccepting"
 msgstr "Το περιοδικό δεν δέχεται υποβολές αυτή την περίοδο."
@@ -132,9 +126,6 @@ msgstr "Επιλέξτε την κατάλληλη ενότητα για τη σ
 msgid "author.submit.verifyChecklist"
 msgstr "Πριν συνεχίσετε, βεβαιωθείτε ότι ικανοποιούνται τα κριτήρια της λίστας ελέγχου υποβολής."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Οι Συγγραφείς αποδέχονται τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων που θα ισχύουν για τη συγκεκριμένη υποβολή, εάν και όταν αυτή δημοσιευθεί από το περιοδικό (σχόλια προς τον Επιμελητή μπορούν να προστεθούν στη συνέχεια)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Πριν συνεχίσετε, πρέπει να αποδεχθείτε τους όρους της Δήλωσης Πνευματικών Δικαιωμάτων."
 
@@ -144,14 +135,8 @@ msgstr "Σχόλια προς τον Επιμελητή"
 msgid "author.submit.comments"
 msgstr "Εισαγωγή κειμένου (προαιρετικά)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Παρακαλούμε επιλέξτε την κατάλληλη ενότητα του περιοδικού για τη συγκεκριμένη υποβολή."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Παρακαλούμε επιλέξτε τη γλώσσα υποβολής."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Δήλωση Προστασίας Προσωπικών Δεδομένων του περιοδικού"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Αντιστοιχίστε τα ονόματα των Συγγραφέων στη σειρά που θα εμφανίζονται κατά την δημοσίευση του άρθρου."
@@ -306,12 +291,6 @@ msgstr "Το δημόσιο αναγνωριστικό του συμπληρωμ
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Δημόσιο αναγνωριστικό συμπληρωματικού αρχείου"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Για να υποβάλετε το άρθρο στο {$journalTitle} πατήστε \"Ολοκλήρωση υποβολής\". Το κύριο πρόσωπο επικοινωνίας του περιοδικού θα ενημερωθεί για την υποβολή. Σας ευχαριστούμε για το ενδιαφέρον σας να δημοσιεύσετε στο περιοδικό {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Δεν έχουν επισυναφθεί αρχεία στη συγκεκριμένη υποβολή."
 
 msgid "author.submit.filesSummary"
 msgstr "Σύνοψη αρχείου"

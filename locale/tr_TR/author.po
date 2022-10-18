@@ -71,12 +71,6 @@ msgstr "Üstveri Gir"
 msgid "author.submit.supplementaryFiles"
 msgstr "Ek Dosyaları Yükle"
 
-msgid "author.submit.confirmation"
-msgstr "Onay"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Bu gönderiyi, yazar sayfasında, Aktif Gönderilerden seçerek daha sonra tamamlayabilirsiniz."
-
 msgid "author.submit.notAccepting"
 msgstr "Dergi şu anda göneri kabul etemiyor."
 
@@ -127,9 +121,6 @@ msgstr ""
 "Devam etmeden önce başvuru kontrol listesindeki her ögenin tamamlanmış "
 "olduğundan emin olmalısınız."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Yazarlar bu dergi tarafından yayımlanan gönderiler için Telif Hakkı koşullarını kabul etmiş sayılır. Telif Hakkı koşulları bu gönderi için de geçerli olacaktır (editöre iletmek istediğiniz yorumları aşağıya yazabilirsiniz)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Devam etmeden önce telif hakkı ile ilgili koşulları kabul etmeniz gerekmektedir."
 
@@ -139,14 +130,8 @@ msgstr "Editör için notlar"
 msgid "author.submit.comments"
 msgstr "Editöre iletmek istediğiniz notları bu alana yazabilirsiniz (isteğe bağlı)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Lütfen bu gönderi için uygun bir dergi bölümü seçiniz."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Lütfen gönderi dilini seçiniz."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Dergi Gizlilik Bildirimi"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Yayın üzerindeki yazarların sırasnı yeniden düzenle."
@@ -303,17 +288,6 @@ msgstr "Açık ek dosya tanımlayıcı zaten var."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Açık ek dosya tanımlayıcı"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"{$journalTitle} adlı dergimize makale gönderisini tamamlamak için \"Gönderiyi"
-" Bitir\" tuşuna basınız. Dergi editör/editörleri sistem tarafından bir e-"
-"posta ile yaptığınız başvuru hakkında otomatik olarak bilgilendirilecektir. "
-"Editör sisteme giriş yapınca editoryal süreçte başvurunuzu görecektir. "
-"{$journalTitle} adlı yayına göstermiş olduğunuz ilgiye teşekkür ederiz."
-
-msgid "author.submit.noFiles"
-msgstr "Başvuruya herhangi bir dosya eklenmemiştir."
 
 msgid "author.submit.filesSummary"
 msgstr "Dosya Özeti"

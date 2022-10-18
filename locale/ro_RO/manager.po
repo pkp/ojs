@@ -278,11 +278,6 @@ msgstr "Sigur doriți să ștergeți definitiv această secțiune?"
 msgid "manager.sections.assigned"
 msgstr "Editorii acestei secțiuni"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Încă nu există editori de secțiuni.  Adăugați acest rol la cel puțin un "
-"utilizator via Management > Setări > Utilizatori &amp; Primele roluri."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Nu necesită rezumat"
 
@@ -1044,17 +1039,6 @@ msgstr ""
 
 msgid "manager.setup.submissions"
 msgstr "Înregistrare manuscris"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"La înregistrarea manuscrisului către revistă, autorilor li se cere mai întâi "
-"să verifice fiecare articol din Lista de verificare a pregătirii înainte de "
-"a continua. Lista de verificare apare și în Ghidul autorului, la Despre "
-"jurnal. Lista poate fi editată mai jos, dar toate elementele din listă vor "
-"necesita o bifă înainte ca autorii să poată continua trimiterea lor."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Lista de verificare a pregătirii depunerii manuscrisului"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Ghidul de înregistrare manuscrise"

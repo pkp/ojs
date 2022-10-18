@@ -21,16 +21,8 @@ msgstr "Solicitude de exención de cotas"
 msgid "author.submit.notAccepting"
 msgstr "Esta revista non acepta envíos neste momento."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Pode completar este envío máis tarde seleccionando Envíos activos na páxina "
-"de inicio do autor/a."
-
 msgid "author.submit.nextSteps"
 msgstr "Seguintes pasos"
-
-msgid "author.submit.confirmation"
-msgstr "Confirmación do envío"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Cargar os arquivos complementarios"
@@ -115,14 +107,8 @@ msgstr ""
 "Reordenar os autores para que aparezan na orde en que serán enumerados na "
 "publicación."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Declaración de privacidade da revista"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Seleccione un idioma para o envío."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Seleccione unha sección da revista axeitada para este envío."
 
 msgid "author.submit.comments"
 msgstr "Introduza o texto (opcional)"
@@ -134,12 +120,6 @@ msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Debe aceptar as condicións do aviso de dereitos de autor/a para poder "
 "continuar."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Os autores/as aceptan as condicións deste aviso de dereitos de autor, que se "
-"aplicarán a este envío sempre e cando se publique  nesta revista (máis "
-"abaixo pódense engadir comentarios ao editor/a)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -348,17 +328,6 @@ msgstr "Finalizar o envío"
 
 msgid "author.submit.filesSummary"
 msgstr "Resumo do arquivo"
-
-msgid "author.submit.noFiles"
-msgstr "Non se anexou  ningún arquivo a este envío."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Para enviar o seu manuscrito a {$journalTitle} faga clic en Finalizar envío. "
-"O contacto principal do envío recibirá un xustificante de recepción por "
-"correo electrónico e poderá ver o progreso do envío no proceso editorial "
-"iniciando sesión no sitio web da revista. Grazas polo seu interese en "
-"publicar en {$journalTitle}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificador público do arquivo adicional"

@@ -13,13 +13,9 @@
  */
 
 switch ($op) {
-    //
-    // Monograph Submission
-    //
-    case 'wizard':
-    case 'step':
-    case 'saveStep':
     case 'index':
+    case 'saved':
+    case 'wizard': // Deprecated
         define('HANDLER_CLASS', 'APP\pages\submission\SubmissionHandler');
         break;
 }

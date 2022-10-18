@@ -39,17 +39,6 @@ msgstr "Ljúka innsendingu"
 msgid "author.submit.filesSummary"
 msgstr "Skrá - samantekt"
 
-msgid "author.submit.noFiles"
-msgstr "Engar skrár hafa verið tengdar við innsendinguna."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Til að senda inn handrit til tímaritsins: {$journalTitle} smelltu þá á \""
-"Ljúka innsendingu\". Aðaltengiliður innsendingarinnar mun fá staðfestingu í "
-"tölvupósti og getur fylgst með framvindu í gegnum ritstjórnarferlið með því "
-"að skrá sig inn á vefsíðu tímaritsins.  Við þökkum fyrir áhuga þinn á að "
-"birta grein í {$journalTitle}."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Opinbert kenni viðbótarskrár"
 
@@ -223,15 +212,8 @@ msgstr "Endurraða nafni höfundar"
 msgid "author.submit.reorderInstructions"
 msgstr "Endurraða höfundum í þá röð sem þeir eiga að birtast í á útgefnu efni."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Persónuverndarstefna tímarits"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Vinsamlega veldu tungumál innsendingar."
-
-msgid "author.submit.form.sectionRequired"
-msgstr ""
-"Vinsamlega veldu viðeigand hluta/kafla í tímaritinu fyrir þessa innsendingu."
 
 msgid "author.submit.comments"
 msgstr "Sláðu inn texta (valkvætt)"
@@ -306,16 +288,8 @@ msgstr "Biðja um undanþágu"
 msgid "author.submit.notAccepting"
 msgstr "Sem stendur, tekur þetta tímarit ekki á móti innsendingum."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Þú getur klárað þessa innsendingu síðar með því að velja \"Virkar "
-"innsendingar\" á upphafssíðu höfundar."
-
 msgid "author.submit.nextSteps"
 msgstr "Næstu skref"
-
-msgid "author.submit.confirmation"
-msgstr "Staðfesting"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Hlaða upp viðbótarskrám"

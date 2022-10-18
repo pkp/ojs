@@ -44,17 +44,6 @@ msgstr "Завяршыць адпраўку"
 msgid "author.submit.filesSummary"
 msgstr "Звесткі пра файлы"
 
-msgid "author.submit.noFiles"
-msgstr "Ні адзін файл не быў далучаны да гэтага матэрыялу для адпраўкі."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Націсніце «Завяршыць адпраўку», каб адправіць ваш матэрыял у часопіс "
-"«{$journalTitle}». Асноўны аўтар, указаны для перапіскі з рэдакцыяй, атрымае "
-"пацвярджэнне па электроннай пошце і будзе мець магчымасць сачыць за "
-"праходжаннем матэрыялу праз рэдакцыйны працэс, заходзячы на вэб-сайт "
-"часопіса. Дзякуй за інтарэс да публікацыі ў часопісе «{$journalTitle}»."
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Адкрыты ідэнтыфікатар дадатковага файла"
 
@@ -233,14 +222,8 @@ msgstr ""
 "Пастаўце імёны аўтараў у тым парадку, у якім яны павінны быць указаны ў "
 "публікацыі."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Заява часопіса аб канфідэнцыяльнасці"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Калі ласка, выберыце мову матэрыялу, які адпраўляецца."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Калі ласка, выберыце адпаведны раздзел часопіса для гэтага матэрыялу."
 
 msgid "author.submit.comments"
 msgstr "Увядзіце текст (не абавязкова)"
@@ -250,12 +233,6 @@ msgstr "Каментарыі для рэдактара"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Каб працягнуць, вы павінны прыняць Умовы перадачы аўтарскіх правоў."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Аўтары згодны з Умовамі перадачы аўтарскіх правоў, якія будуць ужыты да "
-"гэтага матэрыялу ў выпадку, калі ён будзе апублікаваны гэтым часопісам ("
-"каментарыі для рэдактара могуць быць дабаўлены ніжэй)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -316,16 +293,8 @@ msgstr "Запыт адмены платы"
 msgid "author.submit.notAccepting"
 msgstr "Гэты часопіс цяпер не прымае матэрыялы."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Вы можаце закончыць гэту адпраўку пазней, выбраўшы «Актыўныя матэрыялы» на "
-"хатняй старонцы аўтара."
-
 msgid "author.submit.nextSteps"
 msgstr "Наступныя крокі"
-
-msgid "author.submit.confirmation"
-msgstr "Пацвярджэнне"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Загрузка дадатковых файлаў"

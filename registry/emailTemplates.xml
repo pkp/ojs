@@ -62,7 +62,6 @@
 	<email key="REVISED_VERSION_NOTIFY" name="mailable.revisedVersionNotify.name" subject="emails.revisedVersionNotify.subject" body="emails.revisedVersionNotify.body"/>
 	<email key="STATISTICS_REPORT_NOTIFICATION" name="mailable.statisticsReportNotify.name" subject="emails.statisticsReportNotification.subject" body="emails.statisticsReportNotification.body"/>
 	<email key="ANNOUNCEMENT" name="mailable.announcementNotify.name" subject="emails.announcement.subject" body="emails.announcement.body"/>
-	<email key="EDITORIAL_REMINDER" name="mailable.editorialReminder.name" subject="emails.editorialReminder.subject" body="emails.editorialReminder.body"/>
 	<email key="DISCUSSION_NOTIFICATION_SUBMISSION" name="mailable.discussionSubmission.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
 	<email key="DISCUSSION_NOTIFICATION_REVIEW" name="mailable.discussionReview.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
 	<email key="DISCUSSION_NOTIFICATION_COPYEDITING" name="mailable.discussionCopyediting.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
@@ -75,4 +74,7 @@
 	<email key="LAYOUT_REQUEST" name="mailable.layoutRequest.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutRequest.subject" body="emails.layoutRequest.body"/>
 	<email key="LAYOUT_COMPLETE" name="mailable.layoutComplete.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutComplete.subject" body="emails.layoutComplete.body"/>
 	<email key="VERSION_CREATED" name="mailable.versionCreated.name" subject="emails.versionCreated.subject" body="emails.versionCreated.body"/>
+	<email key="EDITORIAL_REMINDER" can_disable="0" subject="emails.editorialReminder.subject" description="emails.editorialReminder.description" body="emails.editorialReminder.body"/>
+	<email key="SUBMISSION_SAVED_FOR_LATER" subject="emails.submissionSavedForLater.subject" body="emails.submissionSavedForLater.body"/>
+	<email key="SUBMISSION_NEEDS_EDITOR" subject="emails.submissionNeedsEditor.subject" body="emails.submissionNeedsEditor.body"/>
 </emails>

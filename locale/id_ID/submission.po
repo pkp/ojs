@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-msgid "submission.submit.title"
-msgstr "Serahkan Artikel"
-
 msgid "submission.submit.userGroup"
 msgstr "Serahkan dalam peran saya sebagai..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Pilih peran yang Anda gunakan dalam penyerahan naskah ini."
 
 msgid "submission.upload.selectComponent"
 msgstr "Pilih komponen artikel"
@@ -111,9 +105,6 @@ msgstr ""
 msgid "submission.pageProofs"
 msgstr "Mengoreksi"
 
-msgid "submission.confirmSubmit"
-msgstr "Anda yakin akan menyerahkan naskah ke jurnal ini?"
-
 msgid "workflow.review.externalReview"
 msgstr "Ulasan"
 
@@ -132,35 +123,15 @@ msgstr "Disetujui"
 msgid "submission.incomplete"
 msgstr "Menunggu Persetujuan"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Silakan pilih bahasa yang hendak digunakan."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Daftar Tilik Penyerahan Naskah"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Sebelum melanjutkan, Anda harus membaca dan menyatakan bahwa Anda telah memenuhi persyaratan berikut ini."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Pernyataan Privasi"
 
 msgid "submission.submit.contributorRole"
 msgstr "Peran Kontributor"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Dibutuhkan setidaknya satu penulis."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Nama depan, nama belakang, dan surel setiap penulis harus ada."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Mohon tuliskan judul naskah Anda."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Mohon masukkan abstrak naskah Anda."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Silakan pilih peran kontributor."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Format sitasi yang diminta tidak ditemukan."
@@ -209,11 +180,6 @@ msgstr "{$numTitles} butir"
 
 msgid "submission.sectionOptions"
 msgstr "Pilih Bagian"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Abstrak Anda terlalu panjang. Mohon dipersingkat menurut batasan kata yang "
-"ditunjukkan untuk bagian ini."
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Abstrak harus berjumlah {$wordCount} kata atau kurang."

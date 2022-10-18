@@ -40,17 +40,6 @@ msgstr "Ավարտել ներկայացումը"
 msgid "author.submit.filesSummary"
 msgstr "Նիշքի ամփոփում"
 
-msgid "author.submit.noFiles"
-msgstr "Ոչ մի նիշք չի կցվել այս ներկայացմանը:"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Ձեր ձեռագիրը {$journalTitle} -ին ուղարկելու համար սեղմեք Ավարտել "
-"Ներկայացումը: Ներկայացման գլխավոր կոնտակտային անձը կստանա հաստատում "
-"էլեկտրոնային փոստով և կկարողանա դիտել ներկայացման առաջընթացը խմբագրական "
-"գործընթացի ընթացքում՝ մուտք գործելով ամսագրի վեբ կայք: Շնորհակալություն "
-"{$journalTitle} -ով հրապարակելու ձեր հետաքրքրության համար:"
-
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Հանրային լրացուցիչ նիշքի նույնացուցիչ"
 
@@ -227,14 +216,8 @@ msgstr ""
 "Վերադասավորեք հեղինակներին, որպեսզի նրանք հայտնվեն հրապարակման մեջ նշված "
 "հերթականությամբ:"
 
-msgid "submission.submit.privacyStatement"
-msgstr "Ամսագրի Գաղտնիության հայտարարություն"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Խնդրում ենք ընտրել ներկայացման լեզուն:"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Խնդրում ենք ընտրել համապատասխան ամսագրի բաժին այս ներկայացման համար:"
 
 msgid "author.submit.comments"
 msgstr "Մուտքագրեք տեքստ (ըստ ցանկության)"
@@ -312,16 +295,8 @@ msgstr "Վճարի հայցից հրաժարվելը"
 msgid "author.submit.notAccepting"
 msgstr "Այս ամսագիրն այս պահին հոդվածներ չի ընդունում:"
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Դուք կարող եք լրացնել այս ներկայացումը ավելի ուշ՝ ընտրելով Ակտիվ "
-"ներկայացումները հեղինակի տնային էջից:"
-
 msgid "author.submit.nextSteps"
 msgstr "Հաջորդ քայլերը"
-
-msgid "author.submit.confirmation"
-msgstr "Հաստատում"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Վերբեռնեք լրացուցիչ նիշքեր"

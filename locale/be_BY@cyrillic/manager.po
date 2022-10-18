@@ -682,12 +682,6 @@ msgstr "Вы ўпэўнены, што хочаце назаўсёды выдал
 msgid "manager.sections.assigned"
 msgstr "Рэдактары дадзенага раздзела"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Рэдактары раздзелаў покуль што адсутнічаюць. Спачатку дабаўце гэту ролю хаця "
-"б аднаму карыстальніку праз Адміністраванне > Наладкі > Карыстальнікі &amp; "
-"Ролі."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Не патрабаваць анатацыю"
 

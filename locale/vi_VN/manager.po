@@ -391,11 +391,6 @@ msgstr "Bạn có chắc chắn muốn xóa vĩnh viễn chuyên mục này?"
 msgid "manager.sections.assigned"
 msgstr "Các biên tập viên của chuyên mục này"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Không có biên tập viên chuyên mục nào.  Trước tiên, thêm vai trò này cho ít "
-"nhất một người dùng thông qua Quản lý > Cài đặt > Người dùng & Vai trò."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Không yêu cầu tóm tắt"
 
@@ -958,9 +953,6 @@ msgstr ""
 "Cung cấp siêu dữ liệu cho các dịch vụ lập chỉ mục của bên thứ ba thông qua <"
 "a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Checklist cho các bài chuẩn bị gửi"
-
 msgid "manager.setup.policies"
 msgstr "Các chính sách"
 
@@ -969,14 +961,6 @@ msgstr "Kích hoạt OAI"
 
 msgid "manager.setup.submissions.description"
 msgstr "Hướng dẫn tác giả, bản quyền và lập chỉ mục (bao gồm đăng ký)."
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Khi gửi bài cho tạp chí, trước tiên các tác giả được yêu cầu hoàn thành từng "
-"mục trong checklist cho các bài chuẩn bị gửi. Checklist cũng xuất hiện trong "
-"Hướng dẫn tác giả, bên dưới Giới thiệu về Tạp chí. Danh sách có thể được "
-"chỉnh sửa dưới đây, nhưng tất cả các mục trong danh sách sẽ yêu cầu đánh dấu "
-"trước khi tác giả có thể tiến hành gửi."
 
 msgid "manager.setup.submissions"
 msgstr "Các bài gửi"

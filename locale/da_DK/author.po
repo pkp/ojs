@@ -56,14 +56,6 @@ msgstr "Start"
 msgid "author.submit.supplementaryFiles"
 msgstr "Overfør supplerende filer"
 
-msgid "author.submit.confirmation"
-msgstr "Bekræftelse"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge "
-"'Aktive indsendelser' på startsiden for forfattere."
-
 msgid "author.submit.notAccepting"
 msgstr "Dette tidsskrift accepterer ikke indsendelser på nuværende tidspunkt."
 
@@ -100,12 +92,6 @@ msgstr "Artikler skal tilknyttes en af tidsskriftsektionerne."
 msgid "author.submit.verifyChecklist"
 msgstr "Du skal sikre, at alle elementer på manuskripttjeklisten er opfyldt, inden du fortsætter."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Forfatterne accepterer vilkårene under 'Oplysninger om copyright', der vil "
-"gælde for dette manuskript, hvis og når det publiceres af dette tidsskrift ("
-"kommentarer til redaktøren kan tilføjes nedenfor)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Du skal acceptere vilkårene under 'Oplysninger om copyright', inden du "
@@ -116,12 +102,6 @@ msgstr "Kommentarer til redaktøren"
 
 msgid "author.submit.comments"
 msgstr "Indfør tekst (valgfri)"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Vælg en relevant tidsskriftssektion til denne indsendelse."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Tidsskriftets erklæring om beskyttelse af personlige oplysninger"
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
@@ -276,17 +256,6 @@ msgstr "Offentlig identifikation af supplerende fil findes allerede."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Offentligt id for supplerende fil"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Klik på 'Afslut manuskript' for at fremsende manuskriptet til {$journalTitle}"
-". Manuskriptets primære kontaktperson modtager en bekræftelse via e-mail og "
-"kan få vist manuskriptets forløb igennem den redaktionelle proces ved at "
-"logge på tidsskriftets websted. Tak, fordi du er interesseret i at publicere "
-"din artikel i {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Der er ikke vedhæftet nogen filer til dette manuskript."
 
 msgid "author.submit.filesSummary"
 msgstr "Filresumé"

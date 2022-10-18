@@ -249,11 +249,6 @@ msgstr "A sincronização cadastrará, nesta revista e no mesmo papel, todos os 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Não exigir resumos"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Ainda não existem editores de seção. Designe este papel a ao menos um "
-"usuário por meio de Gerente > Configurações > Usuários e Papéis."
-
 msgid "manager.sections.assigned"
 msgstr "Editores desta seção"
 
@@ -990,12 +985,6 @@ msgstr "Informe exemplos de palavras-chave ou tópicos para auxiliar o autor"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Diretrizes para submissão"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Condições para a submissão"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada condição para a submissão, antes de proceder. A lista de condições também é apresentada em Diretrizes para autores, na página Sobre a revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão."
 
 msgid "manager.setup.submissions"
 msgstr "Submissões"

@@ -386,9 +386,6 @@ msgstr ""
 msgid "manager.setup.submissions"
 msgstr "Penyerahan"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Senarai Semak Penyediaan Penyerahan"
-
 msgid "manager.setup.submissionGuidelines"
 msgstr "Garis panduan penyerahan"
 
@@ -1068,12 +1065,6 @@ msgstr "Adakah anda pasti mahu memadamkan bahagian ini secara kekal?"
 
 msgid "manager.sections.assigned"
 msgstr "Editor Bahagian ini"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Belum ada editor bahagian. Tambahkan peranan ini kepada sekurang-kurangnya "
-"satu pengguna melalui Pengurusan> Tetapan> Pengguna &amp; Peranan terlebih "
-"dahulu."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Tidak memerlukan abstrak"
@@ -2047,15 +2038,6 @@ msgstr ""
 "Halang pengguna serah artikel baru ke jurnal. Penyerahan boleh dinyahdayakan "
 "untuk bahagian jurnal individu di halaman tetapan <a href=\"{$url}\">"
 "bahagian jurnal</a>."
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Setelah membuat penyerahan ke jurnal, pengarang pertama kali diminta untuk "
-"memeriksa setiap item dalam Senarai Semak Penyediaan Penyerahan sebagai "
-"selesai, sebelum melanjutkan. Senarai semak juga muncul dalam Garis Panduan "
-"Pengarang, di bawah Mengenai Jurnal. Senarai boleh diedit di bawah, tetapi "
-"semua item dalam senarai memerlukan tanda semak sebelum pengarang dapat "
-"meneruskan penyerahannya."
 
 msgid "manager.setup.sectionsDescription"
 msgstr ""

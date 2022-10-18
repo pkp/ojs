@@ -201,43 +201,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Format petikan yang diminta tidak dapat diperoleh."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Sila pilih peranan penyumbang."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Abstrak anda terlalu panjang. Silakan dipendekkan ke bawah had perkataan "
-"yang ditunjukkan untuk bahagian ini."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Sila masukkan abstrak artikel anda."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Sila masukkan tajuk artikel anda."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Nama pertama, nama terakhir, dan alamat e-mel setiap pengarang diperlukan."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Diperlukan sekurang-kurangnya satu pengarang."
-
 msgid "submission.submit.contributorRole"
 msgstr "Peranan penyumbang"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Kenyataan Privasi"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Anda mesti membaca dan mengakui bahawa anda telah memenuhi syarat di bawah "
-"sebelum meneruskan."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Senarai Semak Penyerahan"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Sila pilih bahasa penyerahan."
 
 msgid "submission.incomplete"
 msgstr "Menunggu Kelulusan"
@@ -256,9 +228,6 @@ msgstr "Hantar ke Ulasan"
 
 msgid "workflow.review.externalReview"
 msgstr "Ulasan"
-
-msgid "submission.confirmSubmit"
-msgstr "Adakah anda pasti mahu menghantar artikel ini ke jurnal?"
 
 msgid "submission.pageProofs"
 msgstr "Proofreading"
@@ -351,12 +320,5 @@ msgstr "Tajuk Artikel"
 msgid "submission.upload.selectComponent"
 msgstr "Pilih komponen artikel"
 
-msgid "submission.submit.userGroupDescription"
-msgstr ""
-"Sila pilih peranan yang akan anda gunakan dalam menyerahkan artikel ini."
-
 msgid "submission.submit.userGroup"
 msgstr "Serahkan dalam peranan saya sebagai ..."
-
-msgid "submission.submit.title"
-msgstr "Serah Artikel"

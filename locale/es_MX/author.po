@@ -83,9 +83,6 @@ msgstr "Declaración de privacidad"
 msgid "author.submit.form.localeRequired"
 msgstr "Seleccione el idioma del envío."
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Seleccione la sección adecuada de la revista para este envío."
-
 msgid "author.submit.comments"
 msgstr "Introduzca texto (opcional)"
 
@@ -161,16 +158,8 @@ msgstr "Solicitud de exención de cuotas"
 msgid "author.submit.notAccepting"
 msgstr "La revista no acepta envíos en este momento."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Puede completar este envío en otro momento seleccionando Envíos activos "
-"desde la página de inicio del autor/a."
-
 msgid "author.submit.nextSteps"
 msgstr "Siguientes pasos"
-
-msgid "author.submit.confirmation"
-msgstr "Confirmación"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Cargar los archivos complementarios"
@@ -252,17 +241,6 @@ msgstr "Finalizar envío"
 
 msgid "author.submit.filesSummary"
 msgstr "Resumen del archivo"
-
-msgid "author.submit.noFiles"
-msgstr "No se han adjuntado archivos a este envío."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Para enviar su manuscrito a {$journalTitle}, haga clic en Finalizar envío. "
-"El contacto principal del envío recibirá un acuse de recibo por correo "
-"electrónico y podrá ver el progreso del envío a través del proceso editorial "
-"iniciando sesión en el sitio web de la revista. Gracias por su interés en "
-"publicar con {$journalTitle}."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identificador público del archivo complementario"

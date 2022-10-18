@@ -269,11 +269,6 @@ msgstr "Наистина ли искате да изтриете този раз
 msgid "manager.sections.assigned"
 msgstr "Редактори на този раздел"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Все още няма редактори на раздели. Добавете тази роля към поне един "
-"потребител чрез Управление> Настройки> Потребители &amp; Първо роли."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Не се изискват резюмета"
 
@@ -718,18 +713,6 @@ msgstr ""
 
 msgid "manager.setup.submissions"
 msgstr "Изпращане на материали"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"При подаване на материали към списанието авторите първо се приканват да "
-"проверят всеки елемент от контролния списък за подготовка за подаване на "
-"материали, преди да продължат. Контролният списък също се появява в Насоките "
-"за авторите, под „За списанието“. Списъкът може да бъде редактиран по-долу, "
-"но всички елементи в списъка ще изискват отметка, преди авторите да могат да "
-"продължат с изпращането си."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Контролен списък за изпращане на материали"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Ръководство за изпращане на материали"

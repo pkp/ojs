@@ -741,12 +741,6 @@ msgstr "提供用来指导作者提取关键字或主题的示例"
 msgid "manager.setup.submissionGuidelines"
 msgstr "投稿须知"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "投稿准备清单"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "在提交一份投稿文章给这个期刊时，作者首先会被要求检查是否完成「投稿准备清单」中的每个项目，才能继续下一步。这份清单也会出现在「期刊介绍」内的「作者须知」栏位中。这份清单能够在下面进行编辑，而所有的项目将会需要作者进行检查后，才能继续他们的投稿流程。"
-
 msgid "manager.setup.submissions"
 msgstr "投稿"
 
@@ -1454,9 +1448,6 @@ msgstr "编辑团队"
 
 msgid "manager.setup.masthead"
 msgstr "刊头"
-
-msgid "manager.section.noSectionEditors"
-msgstr "还没有栏目编辑。 请通过 管理 > 设置 > 用户 &amp; 角色 将此角色添加到至少一个用户。"
 
 msgid "manager.paymentTypes"
 msgstr "付款方式"

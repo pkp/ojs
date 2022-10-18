@@ -15,9 +15,6 @@ msgstr ""
 msgid "submission.submit.userGroup"
 msgstr "...の役割として提出"
 
-msgid "submission.submit.title"
-msgstr "記事・論文を投稿"
-
 msgid "publication.status.unscheduled"
 msgstr "予約無し"
 
@@ -99,38 +96,15 @@ msgstr "これらの仕様は、ダブリン・コア・メタデータ・セッ
 msgid "submission.citationFormat.notFound"
 msgstr "要求された引用形式は検索できません。"
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "寄稿者の役割を選択してください。"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "要旨が長すぎます。このセクションで示されている制限語数以下に短縮してください。"
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "投稿の概要を入力してください。"
-
-msgid "submission.submit.form.titleRequired"
-msgstr "投稿のタイトルを入力してください。"
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "各著者の名字、名前、メールアドレスが必要です。"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "著者は最低1名必要です。"
-
 msgid "submission.submit.contributorRole"
 msgstr "寄稿者の役割"
 
 msgid "submission.submit.privacyStatement"
 msgstr "個人情報の扱いについて"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "以下の要件を読み、完了したことを確認してから進めてください。"
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "投稿チェックリスト"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "投稿言語を選択してください。"
 
 msgid "submission.incomplete"
 msgstr "承認待ち"
@@ -149,9 +123,6 @@ msgstr "査読に回す"
 
 msgid "workflow.review.externalReview"
 msgstr "査読"
-
-msgid "submission.confirmSubmit"
-msgstr "この投稿を本誌に提出してもよろしいですか？"
 
 msgid "submission.pageProofs"
 msgstr "校正"
@@ -236,9 +207,6 @@ msgstr "記事・論文タイトル"
 
 msgid "submission.upload.selectComponent"
 msgstr "投稿の要素を選択"
-
-msgid "submission.submit.userGroupDescription"
-msgstr "この記事・論文を投稿することにあたって、役割を選択してください。"
 
 msgid "submission.queries.production"
 msgstr "制作ディスカッション"

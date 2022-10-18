@@ -17,15 +17,6 @@ msgstr ""
 "ئەمە ڕێگا بە سەرنوسەرەکانمان دەدات کە ڕەشنوسەکە ببینن و پەیوەندیت پێوە بکەن "
 "کاتێک گۆڕانکاری ڕو دەدات یان زانیاری زیاتریان پێوست دەبێت."
 
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"بۆ ناردنی ڕەشنوسەکەت بۆ{$journalTitle} کلیک لەسەر (ناردنی توێژینەوە) بکە. "
-"لایەنی سەرەکیی پەیوەندیدار بە شێوەی ئیمەیڵ داواکرییەکەیان بەدەست دەگات، تۆ "
-"دەتوانی زانیاری لەسەر قۆناغەکانی بڵاوکردنەوەی توێژینەوەکە بزانین بە "
-"سەردانیکردنی پێگەی ئەلیکترۆنیی گۆڤار. سوپاس بۆ ناردنی توێژینەوەکەت بۆ "
-"{$journalTitle}."
-
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "فایلەکە بنێرە بۆ هەڵسەنگێنەران (بەبێ زانیارییە کەسییەکان)، ئەگەر ئەمە "
@@ -59,9 +50,6 @@ msgstr "پێشکەش بکە"
 
 msgid "author.submit.filesSummary"
 msgstr "پوختەی فایلە پێشکەشکراوەکان"
-
-msgid "author.submit.noFiles"
-msgstr "هیچ فایلێک بۆ ئەم پێشکەشکردنە بار نەکراوە."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
 msgstr "تکایە ناساندنێک بنوسە."
@@ -222,15 +210,8 @@ msgstr ""
 "ڕیزبەندیی توێژەرەکان دیاری بکە بۆ ئەوەی لە کاتی بڵاوکردنەوە بەمجۆرە "
 "دەربکەوێت کە خۆت ئارەزوی دەکەیت."
 
-msgid "submission.submit.privacyStatement"
-msgstr "تایبەتمەندییەکانی گۆڤارەکە"
-
 msgid "author.submit.form.localeRequired"
 msgstr "تکایە یەکێک لە زمانەکان دیاری بکە بۆ پێشکەشکردن."
-
-msgid "author.submit.form.sectionRequired"
-msgstr ""
-"تکایە ئەو بەشەی گۆڤارەکە دیاری بکە کە لەگەڵ پێشکەشکردنەکەی تۆدا دەگونجێت."
 
 msgid "author.submit.comments"
 msgstr "شتێک بنوسە (ئارەزومەندانەیە)"
@@ -241,12 +222,6 @@ msgstr "تێبینییەکانت بۆ سەرنوسەر"
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "دەبیت تۆ ڕازی ببیت بە مەرجەکانی خاوەندارێتی پێش ئەوەی بچیتە قۆناغی دواتر."
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"توێژەران ڕازین بە مەرجەکانی خاوەندارێتی، کە ئەم توێژینەوەیەش دەگرێتەوە لە "
-"کاتی پێشکەشکردن یان بڵاوبونەوە لە گۆڤاردا (دەتوانیت لە خوارەوە تێچێن بۆ "
-"سەرنوسەری گۆڤار بنوسیت)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -305,16 +280,8 @@ msgstr "داواکاریی پاشگەزبونەوە"
 msgid "author.submit.notAccepting"
 msgstr "ئەم گۆڤارە لە ئێستادا توێژینەوەی نوێ وەرناگرێت."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-". دەتوانیت دواتر پێشکەشکردنەکەت تەواو بکەیت بە دیاریکردنی (پێشکەشکردنی چالاک)"
-" لە پەڕەی سەرەکیی توێژەر"
-
 msgid "author.submit.nextSteps"
 msgstr "هەنگاوی دواتر"
-
-msgid "author.submit.confirmation"
-msgstr "پشتڕاستکردنەوە"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "فایلە تەواوکارییەکان بار بکە"

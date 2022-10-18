@@ -759,12 +759,6 @@ msgstr "Fornisci degli esempi di parole chiave o argomenti come guida per gli au
 msgid "manager.setup.submissionGuidelines"
 msgstr "Linee guida per l'invio di una proposta"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Checklist per la preparazione dell'invio di una proposta"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Nell'effettuare una submission alla rivista gli autori dovrebbero prima controllare le varie voci della Checklist prima di procedere oltre. Questa checklist è presente nelle Linee guida per gli autori, nella sezione About. Questa lista può essere modificata qui di seguito, ma tutte le voci della lista dovranno essere spuntate dall'autore per proseguire con la submission."
-
 msgid "manager.setup.submissions"
 msgstr "Invio di una proposta"
 
@@ -1491,11 +1485,6 @@ msgstr "Sei sicuro di cancellare questo abbonamento ?"
 
 msgid "manager.paymentTypes"
 msgstr "Tipi di pagameti"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Non ci sono editor di sezione. Aggiungi questo ruolo almeno ad un utente con "
-">Impostazioni >Utenti e Ruoli."
 
 msgid "manager.setup.homepageContent"
 msgstr "Contenuto Homepage rivista"

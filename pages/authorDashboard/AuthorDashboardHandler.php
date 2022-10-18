@@ -15,14 +15,16 @@
 
 namespace APP\pages\authorDashboard;
 
+use APP\components\forms\publication\TitleAbstractForm;
+use APP\journal\SectionDAO;
+use APP\publication\Publication;
+use PKP\context\Context;
 use PKP\core\PKPApplication;
+use PKP\db\DAORegistry;
 use PKP\pages\authorDashboard\PKPAuthorDashboardHandler;
 
 class AuthorDashboardHandler extends PKPAuthorDashboardHandler
 {
-    /**
-     * @copydoc PKPAuthorDashboardHandler::_getRepresentationsGridUrl()
-     */
     protected function _getRepresentationsGridUrl($request, $submission)
     {
         return $request->getDispatcher()->url(
@@ -36,6 +38,20 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler
                 'submissionId' => $submission->getId(),
                 'publicationId' => '__publicationId__',
             ]
+        );
+    }
+
+    protected function getTitleAbstractForm(string $latestPublicationApiUrl, array $locales, Publication $latestPublication, Context $context): TitleAbstractForm
+    {
+        /** @var SectionDAO $sectionDao */
+        $sectionDao = DAORegistry::getDAO('SectionDAO');
+        $section = $sectionDao->getById($latestPublication->getData('sectionId'), $context->getId());
+
+        return new TitleAbstractForm(
+            $latestPublicationApiUrl,
+            $locales,
+            $latestPublication,
+            $section
         );
     }
 }

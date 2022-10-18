@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Odeslat článek"
-
 msgid "submission.submit.userGroup"
 msgstr "Vložit v rámci mé následující role..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Zvolte roli, pod kterou odesíláte tento článek."
 
 msgid "submission.upload.selectComponent"
 msgstr "Zvolte komponentu článku"
@@ -109,9 +103,6 @@ msgstr ""
 msgid "submission.pageProofs"
 msgstr "Korektury"
 
-msgid "submission.confirmSubmit"
-msgstr "Jste si jisti, že chcete odeslat tento článek do časopisu?"
-
 msgid "workflow.review.externalReview"
 msgstr "Recenze"
 
@@ -130,9 +121,6 @@ msgstr "Schváleno"
 msgid "submission.incomplete"
 msgstr "Čeká se na schválení"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Zvolte, prosím, jazyk příspěvku."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolní seznam pro příspěvek"
 
@@ -141,6 +129,7 @@ msgstr ""
 "Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené "
 "požadavky."
 
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Prohlášení o ochraně osobních údajů"
 

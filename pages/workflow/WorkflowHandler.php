@@ -15,14 +15,17 @@
 
 namespace APP\pages\workflow;
 
+use APP\components\forms\publication\TitleAbstractForm;
 use APP\core\Application;
 use APP\core\Services;
 use APP\decision\types\Accept;
 use APP\decision\types\SkipExternalReview;
-use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\journal\SectionDAO;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\decision\types\BackFromCopyediting;
 use PKP\decision\types\BackFromProduction;
@@ -194,9 +197,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         return null;
     }
 
-    /**
-     * @copydoc PKPWorkflowHandler::_getRepresentationsGridUrl()
-     */
     protected function _getRepresentationsGridUrl($request, $submission)
     {
         return $request->getDispatcher()->url(
@@ -284,7 +284,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         return $decisionTypes;
     }
 
-    /** @copydoc parent::getPrimaryDecisionTypes() */
     protected function getPrimaryDecisionTypes(): array
     {
         return [
@@ -294,7 +293,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         ];
     }
 
-    /** @copydoc parent::getWarnableDecisionTypes() */
     protected function getWarnableDecisionTypes(): array
     {
         return [
@@ -304,5 +302,19 @@ class WorkflowHandler extends PKPWorkflowHandler
             BackFromCopyediting::class,
             BackFromProduction::class,
         ];
+    }
+
+    protected function getTitleAbstractForm(string $latestPublicationApiUrl, array $locales, Publication $latestPublication, Context $context): TitleAbstractForm
+    {
+        /** @var SectionDAO $sectionDao */
+        $sectionDao = DAORegistry::getDAO('SectionDAO');
+        $section = $sectionDao->getById($latestPublication->getData('sectionId'), $context->getId());
+
+        return new TitleAbstractForm(
+            $latestPublicationApiUrl,
+            $locales,
+            $latestPublication,
+            $section
+        );
     }
 }

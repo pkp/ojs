@@ -775,12 +775,6 @@ msgstr "Indiqueu exemples de paraules clau o temes que poden fer servir de guia 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Directrius per a les trameses"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Llista de verificació per preparar trameses"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Abans de fer una tramesa a la revista, els autors/ores han de marcar com a complets tots els elements de la llista de verificació per a la preparació de la tramesa. Aquesta llista de verificació també apareix a les directrius per als autors/ores, dins la pàgina «Sobre la revista». A continuació podeu editar la llista de verificació, però tingueu en compte que els autors/ores n’han d’activar tots els elements per poder continuar amb la tramesa."
-
 msgid "manager.setup.submissions"
 msgstr "Trameses"
 
@@ -1409,9 +1403,6 @@ msgstr "Registre correcte!"
 
 msgid "manager.website.archiving"
 msgstr "Arxivant"
-
-msgid "manager.section.noSectionEditors"
-msgstr "Encara no hi ha editors/es de secció. Dóna aquest rol a un usuari/ària com a mínim a través de Gestió > Configuració > Users &amp; Roles first."
 
 msgid "manager.setup.masthead"
 msgstr "Capçalera"

@@ -14,14 +14,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "Lähetä artikkeli"
-
 msgid "submission.submit.userGroup"
 msgstr "Lähetä roolissani..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Valitse rooli, jossa lähetät tämän artikkelin."
 
 msgid "submission.upload.selectComponent"
 msgstr "Valitse artikkelin osa"
@@ -95,9 +89,6 @@ msgstr "Lataa tähän käsikirjoitukseen liittyvät tiedostot, mukaan lukien its
 msgid "submission.pageProofs"
 msgstr "Oikoluku"
 
-msgid "submission.confirmSubmit"
-msgstr "Oletko varma, että haluat lähettää tämän artikkelin julkaisuun?"
-
 msgid "workflow.review.externalReview"
 msgstr "Arviointi"
 
@@ -116,35 +107,15 @@ msgstr "Hyväksytty"
 msgid "submission.incomplete"
 msgstr "Odottaa hyväksyntää"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Valitse käsikirjoituksen kieli."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Käsikirjoituksen tarkistuslista"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Sinun täytyy lukea ja vahvistaa, että täytät alla mainitut vaatimukset, ennen kuin jatkat."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Tietosuojaseloste"
 
 msgid "submission.submit.contributorRole"
 msgstr "Tekijän rooli"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Vähintään yksi kirjoittaja vaaditaan."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Jokaisen kirjoittajan etunimi, sukunimi ja sähköpostiosoite vaaditaan."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Syötä artikkelisi otsikko."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Syötä artikkelisi abstrakti."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Valitse tekijän rooli."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Pyydettyä viittausmuotoa ei voitu noutaa."
@@ -157,9 +128,6 @@ msgstr "Kaikki osastot"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Abstraktin tulee olla korkeintaan {$wordCount} sanaa."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen."
 
 msgid "publication.scheduledIn"
 msgstr ""

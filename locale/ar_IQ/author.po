@@ -69,16 +69,8 @@ msgstr "أدخل البيانات الوصفية"
 msgid "author.submit.supplementaryFiles"
 msgstr "إرفع الملفات التكميلية"
 
-msgid "author.submit.confirmation"
-msgstr "تأكيد الطلب"
-
 msgid "author.submit.nextSteps"
 msgstr "الخطوة التالية"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد "
-"المعالجة) في صفحة دخول المؤلفين."
 
 msgid "author.submit.notAccepting"
 msgstr "النشر في هذه المجلة معلق حالياً."
@@ -135,12 +127,6 @@ msgstr ""
 msgid "author.submit.verifyChecklist"
 msgstr "عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على "
-"طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة "
-"التحرير يمكن إضافتها أدناه)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة."
 
@@ -150,14 +136,8 @@ msgstr "ملاحظات للمحرر"
 msgid "author.submit.comments"
 msgstr "أدخل نصاً (إختياري)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "لطفاً، إختر قسم المجلة الذي يتناسب وطلب النشر هذا."
-
 msgid "author.submit.form.localeRequired"
 msgstr "لطفا، إختر أحد اللغات لطلب النشر."
-
-msgid "submission.submit.privacyStatement"
-msgstr "بيان الخصوصية للمجلة"
 
 msgid "author.submit.reorderInstructions"
 msgstr "أعد ترتيب المؤلفين بالشكل الذي سيتم فيه سرد أسمائهم عند النشر."
@@ -325,12 +305,6 @@ msgstr "معرَّف الملف التكميلي موجود سلفاً."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "معرِّف الملف التكميلي"
-
-msgid "author.submit.confirmationDescription"
-msgstr "لتقديم مؤلَّفِك إلى {$journalTitle} أنقر (إنهاء التقديم). جهة الاتصال الأساسية لطلب النشر ستتلقى إشعاراً عبر البريد الالكتروني، وستكون قادرة على متابعة مراحل النشر لدى هيئة التحرير عبر الولوج إلى موقع المجلة. نشكر لك إهتمامك بالنشر في {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "لم يتم ربط أي مرفقات بطلب النشر هذا."
 
 msgid "author.submit.filesSummary"
 msgstr "ملخص ملفات طلب النشر"

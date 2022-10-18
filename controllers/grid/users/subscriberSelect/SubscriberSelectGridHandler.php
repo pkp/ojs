@@ -22,7 +22,6 @@ use PKP\controllers\grid\feature\InfiniteScrollingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\users\userSelect\UserSelectGridCellProvider;
-use PKP\db\DAORegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
@@ -91,7 +90,7 @@ class SubscriberSelectGridHandler extends GridHandler
         $this->addColumn(
             new GridColumn(
                 'name',
-                'author.users.contributor.name',
+                'common.name',
                 null,
                 null,
                 $cellProvider,
@@ -134,7 +133,7 @@ class SubscriberSelectGridHandler extends GridHandler
             ->filterByUserGroupIds($userGroupSearchTerm)
             ->limit($rangeInfo->getCount())
             ->offset($rangeInfo->getOffset() + max(0, $rangeInfo->getPage() - 1) * $rangeInfo->getCount());
-            
+
         $users = $userCollector->getMany();
 
         $totalCount = $users->count($userCollector->limit(null)->offset(null));
@@ -150,7 +149,7 @@ class SubscriberSelectGridHandler extends GridHandler
         $userGroups = Repo::userGroup()->getCollector()
             ->filterByContextIds([$context->getId()])
             ->getMany();
-        
+
         $userGroupOptions = ['' => __('grid.user.allRoles')];
         foreach ($userGroups as $userGroup) {
             $userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();

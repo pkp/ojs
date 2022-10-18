@@ -764,12 +764,6 @@ msgstr "Donner des exemples de mots-clés ou de sujets comme guide pour les aute
 msgid "manager.setup.submissionGuidelines"
 msgstr "Directives pour la soumission"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Liste de vérification de la soumission"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Lors d'une soumission à la revue, on demande d'abord aux auteurs de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans Directives aux auteurs, sous À propos de la revue. Cette liste peut être modifiée ci-dessous, mais tous les éléments de la liste devront être cochés avant que les auteurs puissent poursuivre la procédure de soumission."
-
 msgid "manager.setup.submissions"
 msgstr "Soumissions"
 
@@ -1515,9 +1509,6 @@ msgstr ""
 "d'informations en lien avec  leurs propres soumissions. En outre, il y a "
 "cinq différentes étapes auxquelles les rôles peuvent avoir accès : "
 "soumission, évaluation interne, évaluation, édition et production."
-
-msgid "manager.section.noSectionEditors"
-msgstr "*Aucun Rédacteur de rubrique n'a été désigné. Ajouter ce rôle à au moins un utilisateur via Administration > Paramètres > Rôles et utilisateurs."
 
 msgid "manager.setup.journalThumbnail.description"
 msgstr "Un logo ou une image de la revue qui peut être utilisé dans des listes de revues."
