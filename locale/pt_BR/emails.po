@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-10-07 20:01+0000\n"
-"Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
+"PO-Revision-Date: 2022-10-19 17:01+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -380,7 +380,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Você ainda pode avaliar algo para {$contextName}?"
 
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName}, </p><p>nós gostaríamos de convidá-lo(a) "
@@ -456,7 +455,6 @@ msgstr ""
 "favor, confirme que poderá completar essa contribuição vital ao trabalho do "
 "periódico. Aguardo seu retorno.</p><p>Atenciosamente,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Sua submissão foi aceita para {$contextName}"
 
@@ -504,14 +502,13 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Composições Concluídas"
 
-#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>As provas topográficas já foram "
 "preparadas para a seguinte submissão e já estão prontas para a revisão "
 "final.</p><p><a href=\"{$submissionUrl}\">{$submissionTitle}</a><br "
 "/>{$contextName}</p><p>Se você tiver alguma dúvida, favor entrar em contato "
-"comigo.</p><p>Atenciosamente</p>{$senderName}"
+"comigo.</p><p>Atenciosamente</p><p>{$senderName}</p>"
 
 msgid "emails.emailLink.subject"
 msgstr "Artigo interessante para sua leitura"
