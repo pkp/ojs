@@ -1705,28 +1705,46 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Send a copy to the primary contact, identified in the Journal Settings."
 
 msgid "stats.issueTOCViews"
-msgstr "Issue TOC Views"
+msgstr "Views"
 
 msgid "stats.issueGalleyViews"
-msgstr "Issue Galley Views"
+msgstr "Downloads"
 
 msgid "stats.issueStats"
 msgstr "Issue Stats"
 
-msgid "stats.issue.details"
-msgstr "Issue Details"
+msgid "stats.issues.details"
+msgstr "Views and Downloads"
 
-msgid "stats.issue.totalTOCViews.timelineInterval"
-msgstr "Total table of contents views by date"
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Total views by date"
 
-msgid "stats.issue.totalIssueGalleyViews.timelineInterval"
-msgstr "Total issue galleys views by date"
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Total downloads by date"
 
-msgid "stats.issue.searchIssueDescription"
-msgstr "Search by issue identification"
+msgid "stats.issues.searchIssueDescription"
+msgstr "Search issue title, volume and number"
 
-msgid "stats.issue.none"
+msgid "stats.issues.none"
 msgstr "No issues were found with usage statistics matching these parameters."
+
+msgid "stats.issues.downloadReport.description"
+msgstr "Download a CSV/Excel spreadsheet with usage statistics for issues matching the following parameters."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "The number of TOC views and issue galley downloads for each issue."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Download Issues"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} of {$total} issues"
+
+msgid "stats.issues.tooltip.label"
+msgstr "About issue statistics"
+
+msgid "stats.issues.tooltip.text"
+msgstr "<strong>Views</strong>: Number of visitors viewing the issue's table of contents.<br><strong>Downloads</strong>: Number of downloads of the issue galley, if one exists."
 
 msgid "stats.publicationStats"
 msgstr "Article Stats"

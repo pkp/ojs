@@ -56,14 +56,14 @@
 									aria-describedby="issue-stats-graph-title"
 									@click="setTimelineType('toc')"
 								>
-									{translate key="issue.toc"}
+									{translate key="stats.issueTOCViews"}
 								</pkp-button>
 								<pkp-button
 									:aria-pressed="timelineType === 'files'"
 									aria-describedby="issue-stats-graph-title"
 									@click="setTimelineType('files')"
 								>
-									{translate key="editor.issues.galleys"}
+									{translate key="stats.issueGalleyViews"}
 								</pkp-button>
 							</div>
 							<div class="pkpStats__graphSelector pkpStats__graphSelector--timelineInterval">
@@ -87,8 +87,8 @@
 						</div>
 					</div>
 					<table class="-screenReader" role="region" aria-live="polite">
-						<caption v-if="timelineType === 'files'">{translate key="stats.issue.totalIssueGalleyViews.timelineInterval"}</caption>
-						<caption v-else>{translate key="stats.issue.totalTOCViews.timelineInterval"}</caption>
+						<caption v-if="timelineType === 'files'">{translate key="stats.issues.totalIssueGalleyViews.timelineInterval"}</caption>
+						<caption v-else>{translate key="stats.issues.totalTOCViews.timelineInterval"}</caption>
 						<thead>
 							<tr>
 								<th scope="col">{translate key="common.date"}</th>
@@ -111,7 +111,11 @@
 				<div class="pkpStats__panel" role="region" aria-live="polite">
 					<pkp-header>
 						<h2 id="issueDetailTableLabel">
-							{translate key="stats.issue.details"}
+							{translate key="stats.issues.details"}
+							<tooltip
+								tooltip="{translate key="stats.issues.tooltip.text"}"
+								label="{translate key="stats.issues.tooltip.label"}"
+							></tooltip>
 							<spinner v-if="isLoadingItems"></spinner>
 						</h2>
 						<template slot="actions">
@@ -131,11 +135,45 @@
 								</a>
 							</div>
 							<pkp-button
-								aria-describedby="report-type-issues report-type-issues-description"
-								@click="downloadReport"
+								ref="downloadReportModalButton"
+								@click="$modal.show('downloadReport')"
 							>
 								{translate key="common.downloadReport"}
 							</pkp-button>
+							<modal
+								close-label="{translate key="common.close"}"
+								name="downloadReport"
+								title={translate key="common.download"}
+								@closed="setFocusToRef('downloadReportModalButton')"
+							>
+								<p>{translate key="stats.issues.downloadReport.description"}</p>
+								<table class="pkpTable pkpStats__reportParams">
+									<tr class="pkpTable__row">
+										<th>{translate key="stats.dateRange"}</th>
+										<td>{{ getDateRangeDescription() }}</th>
+									</tr>
+									<tr
+										v-if="searchPhrase"
+										class="pkpTable__row">
+										<th>{translate key="common.searchPhrase"}</th>
+										<td>{{ searchPhrase }}</th>
+									</tr>
+								</table>
+								<action-panel class="pkpStats__reportAction">
+									<h2 id="report-type-issues">{translate key="issue.issues"}</h2>
+									<p id="report-type-issues-description">
+										{translate key="stats.issues.downloadReport.downloadIssues.description"}
+									</p>
+									<template slot="actions">
+										<pkp-button
+											aria-describedby="report-type-issues report-type-issues-description"
+											@click="downloadReport"
+										>
+											{translate key="stats.issues.downloadReport.downloadIssues"}
+										</pkp-button>
+									</template>
+								</action-panel>
+							</modal>
 						</template>
 					</pkp-header>
 					<pkp-table
@@ -151,7 +189,7 @@
 							slot="thead-title"
 							class="pkpStats__titleSearch"
 							:search-phrase="searchPhrase"
-							search-label="{translate key="stats.issue.searchIssueDescription"}"
+							search-label="{translate key="stats.issues.searchIssueDescription"}"
 							@search-phrase-changed="setSearchPhrase"
 						></search>
 						<template slot-scope="{ row, rowIndex }">
@@ -164,7 +202,7 @@
 							>
 								<template v-if="column.name === 'title'">
 									<a
-										:href="row.issue._href"
+										:href="row.issue.publishedUrl"
 										class="pkpStats__itemLink"
 										target="_blank"
 									>
@@ -180,7 +218,7 @@
 							{translate key="common.loading"}
 						</template>
 						<template v-else>
-							{translate key="stats.issue.none"}
+							{translate key="stats.issues.none"}
 						</template>
 					</div>
 					<pagination

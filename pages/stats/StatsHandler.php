@@ -78,7 +78,7 @@ class StatsHandler extends PKPStatsHandler
                 'tableColumns' => [
                     [
                         'name' => 'title',
-                        'label' => __('editor.issues.issueIdentification'),
+                        'label' => __('issue.issue'),
                     ],
                     [
                         'name' => 'tocViews',
