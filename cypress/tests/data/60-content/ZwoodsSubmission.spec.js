@@ -8,6 +8,22 @@
  */
 
 describe('Data suite tests', function() {
+	var title = 'Finocchiaro: Arguments About Arguments';
+	var submission = {
+		'section': 'Reviews',
+		sectionId: 2,
+		'title': title,
+		'abstract': 'None.',
+		files: [
+			{
+				'file': 'dummy.pdf',
+				'fileName': title + '.pdf',
+				'mimeType': 'application/pdf',
+				'genre': Cypress.env('defaultGenre')
+			}
+		]
+	};
+
 	it('Create a submission', function() {
 		cy.register({
 			'username': 'zwoods',
@@ -17,25 +33,34 @@ describe('Data suite tests', function() {
 			'country': 'United States',
 		});
 
-		cy.createSubmission({
-			'section': 'Reviews',
-			'title': 'Finocchiaro: Arguments About Arguments',
-			'abstract': 'None.'
-		});
+		// Go to page where CSRF token is available
+		cy.visit('/index.php/publicknowledge/user/profile');
 
-		let authors = [
+		let csrfToken = '';
+		cy.window()
+			.then((win) => {
+				csrfToken = win.pkp.currentUser.csrfToken;
+			})
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, csrfToken);
+			});
+	});
+
+	it('Sends the submission to review and copyediting, and assigns reviewers and a copyeditor.', function() {
+		let authorNames = [
 			'Zita Woods',
 		];
-
-		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, 'Woods');
 		cy.clickDecision('Send for Review');
-		cy.recordDecisionSendToReview('Send for Review', authors, ['Finocchiaro: Arguments About Arguments']);
+		cy.recordDecisionSendToReview('Send for Review', authorNames, ['Finocchiaro: Arguments About Arguments']);
 		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Paul Hudson');
 		cy.assignReviewer('Aisla McCrae');
 		cy.clickDecision('Accept Submission');
-		cy.recordDecisionAcceptSubmission(authors, [], []);
+		cy.recordDecisionAcceptSubmission(authorNames, [], []);
 		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Sarah Vogt');
 	});

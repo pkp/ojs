@@ -8,6 +8,23 @@
  */
 
 describe('Data suite tests', function() {
+	var title = 'Genetic transformation of forest trees';
+	var submission = {
+		'section': 'Articles',
+		sectionId: 1,
+		'title': title,
+		'abstract': 'In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.',
+		'authorNames': ['Diaga Diouf'],
+		files: [
+			{
+				'file': 'dummy.pdf',
+				'fileName': title + '.pdf',
+				'mimeType': 'application/pdf',
+				'genre': Cypress.env('defaultGenre')
+			}
+		]
+	};
+
 	it('Create a submission', function() {
 		cy.register({
 			'username': 'ddiouf',
@@ -17,27 +34,35 @@ describe('Data suite tests', function() {
 			'country': 'Egypt',
 		});
 
-		var submission = {
-			'section': 'Articles',
-			'title': 'Genetic transformation of forest trees',
-			'abstract': 'In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.',
-			'authors': ['Diaga Diouf']
-		};
-		cy.createSubmission(submission);
+		// Go to page where CSRF token is available
+		cy.visit('/index.php/publicknowledge/user/profile');
 
-		cy.logout();
+		let csrfToken = '';
+		cy.window()
+			.then((win) => {
+				csrfToken = win.pkp.currentUser.csrfToken;
+			})
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, csrfToken);
+			});
+	});
+
+	it('Sends to review, copyediting and production. Assigns reviewers, copyeditor, layout editor, and production editor', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, 'Diouf');
 		cy.clickDecision('Send for Review');
-		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.recordDecisionSendToReview('Send for Review', submission.authorNames, [submission.title]);
 		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Paul Hudson');
 		cy.assignReviewer('Adela Gallego');
 		cy.clickDecision('Accept Submission');
-		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.recordDecisionAcceptSubmission(submission.authorNames, [], []);
 		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Maria Fritz');
 		cy.clickDecision('Send To Production');
-		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.recordDecisionSendToProduction(submission.authorNames, []);
 		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Graham Cox');
 		cy.assignParticipant('Proofreader', 'Catherine Turner');

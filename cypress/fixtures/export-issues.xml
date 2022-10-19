@@ -26,7 +26,7 @@
     </covers>
     <issue_galleys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd"/>
     <articles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
-      <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2020-03-10" status="5" submission_progress="0" current_publication_id="16" stage="production">
+      <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" locale="en_US" date_submitted="2020-03-10" status="5" submission_progress="files" current_publication_id="16" stage="production">
         <id type="internal" advice="ignore">9</id>
         <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" stage="submission" id="9" xsi:schemaLocation="http://pkp.sfu.ca native.xsd" genre="Article Text" viewable="true" uploader="admin" file_id="1">
           <name locale="en_US">admin, test-upload-1.txt</name>
