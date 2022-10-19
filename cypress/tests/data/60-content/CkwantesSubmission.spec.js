@@ -7,30 +7,59 @@
  *
  */
 
-describe('Data suite tests', function() {
+describe('Data suite: Ckwantes', function() {
+	var familyName = 'Kwantes';
+	var title = 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence';
+
+	var submission = {
+		'title': title,
+		'section': 'Articles',
+		sectionId: 1,
+		'abstract': 'Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.',
+		'keywords': [
+			'employees',
+			'survey'
+		],
+		'authors': ['Catherine Kwantes'],
+		files: [
+			{
+				'file': 'dummy.pdf',
+				'fileName': title + '.pdf',
+				'mimeType': 'application/pdf',
+				'genre': Cypress.env('defaultGenre')
+			}
+		]
+	};
+
 	it('Create a submission', function() {
 		cy.register({
 			'username': 'ckwantes',
 			'givenName': 'Catherine',
-			'familyName': 'Kwantes',
+			'familyName': familyName,
 			'affiliation': 'University of Windsor',
 			'country': 'Canada'
 		});
 
-		var submission = {
-			'title': 'The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence',
-			'section': 'Articles',
-			'abstract': 'Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.',
-			'keywords': [
-				'employees',
-				'survey'
-			],
-			'authors': ['Catherine Kwantes']
-		};
-		cy.createSubmission(submission);
-		cy.logout();
+		// Go to page where CSRF token is available
+		cy.visit('/index.php/publicknowledge/user/profile');
 
-		cy.findSubmissionAsEditor('dbarnes', null, 'Kwantes');
+		let csrfToken = '';
+		cy.window()
+			.then((win) => {
+				csrfToken = win.pkp.currentUser.csrfToken;
+			})
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, csrfToken);
+			});
+
+	});
+
+
+	it('Sends to review, assigns reviewers, and accepts submission', function() {
+		cy.findSubmissionAsEditor('dbarnes', null, familyName);
 		cy.clickDecision('Send for Review');
 		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
 		cy.isActiveStageTab('Review');
