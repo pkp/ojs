@@ -13,6 +13,8 @@
  * @brief Simple resolver gateway plugin
  */
 
+use function PHP81_BC\strftime;
+
 import('lib.pkp.classes.plugins.GatewayPlugin');
 
 class ResolverPlugin extends GatewayPlugin {

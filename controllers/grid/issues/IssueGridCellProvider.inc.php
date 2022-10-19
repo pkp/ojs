@@ -13,6 +13,8 @@
  * @brief Grid cell provider for the issue management grid
  */
 
+use function PHP81_BC\strftime;
+
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
 class IssueGridCellProvider extends GridCellProvider {
