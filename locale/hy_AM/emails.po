@@ -284,6 +284,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Գրախոսման հարցումը չեղարկվել է"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},</p><p>Շնորհակալություն այս գրախոսման համար <a "

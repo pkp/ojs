@@ -237,6 +237,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Förfrågan om granskning av reviderad artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Hej {$recipientName},</p><p>Tack för din granskning av <a href=\""

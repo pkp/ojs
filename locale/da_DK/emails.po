@@ -813,6 +813,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Forespørgsel om bedømmelse af en revideret artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Tak for din bedømmelse af <a href=\""

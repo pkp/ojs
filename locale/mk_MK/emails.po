@@ -314,6 +314,7 @@ msgstr ""
 "<br />\n"
 "Доколку имате дополнителни прашања, ве молам да не контактирате."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
