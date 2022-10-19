@@ -13,6 +13,7 @@
  * @brief View report plugin
  */
 
+use function PHP81_BC\strftime;
 
 import('lib.pkp.classes.plugins.ReportPlugin');
 

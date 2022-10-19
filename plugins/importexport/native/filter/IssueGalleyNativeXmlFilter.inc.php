@@ -13,6 +13,8 @@
  * @brief Base class that converts a set of issue galleys to a Native XML document
  */
 
+use function PHP81_BC\strftime;
+
 import('lib.pkp.plugins.importexport.native.filter.NativeExportFilter');
 
 class IssueGalleyNativeXmlFilter extends NativeExportFilter {
