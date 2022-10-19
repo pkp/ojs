@@ -8,6 +8,28 @@
  */
 
 describe('Data suite tests', function() {
+
+	var title = 'Self-Organization in Multi-Level Institutions in Networked Environments';
+	var submission = {
+		'section': 'Articles',
+		sectionId: 1,
+		'title': title,
+		'abstract': 'We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.',
+		'keywords': [
+			'Self-Organization',
+			'Multi-Level Institutions',
+			'Goverance',
+		],
+		files: [
+			{
+				'file': 'dummy.pdf',
+				'fileName': title + '.pdf',
+				'mimeType': 'application/pdf',
+				'genre': Cypress.env('defaultGenre')
+			}
+		]
+	};
+
 	it('Create a submission', function() {
 		cy.register({
 			'username': 'vwilliamson',
@@ -17,18 +39,23 @@ describe('Data suite tests', function() {
 			'country': 'Canada',
 		});
 
-		cy.createSubmission({
-			'section': 'Articles',
-			'title': 'Self-Organization in Multi-Level Institutions in Networked Environments',
-			'abstract': 'We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.',
-			'keywords': [
-				'Self-Organization',
-				'Multi-Level Institutions',
-				'Goverance',
-			],
-		});
+		// Go to page where CSRF token is available
+		cy.visit('/index.php/publicknowledge/user/profile');
 
-		cy.logout();
+		let csrfToken = '';
+		cy.window()
+			.then((win) => {
+				csrfToken = win.pkp.currentUser.csrfToken;
+			})
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, csrfToken);
+			});
+	});
+
+	it('Declines the submission', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, 'Williamson');
 		cy.clickDecision('Decline Submission');
 		cy.recordDecisionDecline(['Valerie Williamson']);

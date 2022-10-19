@@ -7,9 +7,44 @@
  *
  */
 
-describe('Data suite tests', function() {
+describe('Data suite: Cmontgomerie', function() {
+	var title = 'Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice';
+
+	var submission = {
+		title,
+		'section': 'Articles',
+		sectionId: 1,
+		'abstract': 'The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.',
+		'keywords': [
+			'Integrating Technology',
+			'Computer Skills',
+			'Survey',
+			'Alberta',
+			'National',
+			'Provincial',
+			'Professional Development'
+		],
+		'additionalAuthors': [
+			{
+				givenName: {en_US: 'Mark'},
+				familyName: {en_US: 'Irvine'},
+				affiliation: {en_US: 'University of Victoria'},
+				email: 'mirvine@mailinator.com',
+				country: 'CA',
+				userGroupId: Cypress.env('authorUserGroupId')
+			}
+		],
+		files: [
+			{
+				'file': 'dummy.pdf',
+				'fileName': title + '.pdf',
+				'mimeType': 'application/pdf',
+				'genre': Cypress.env('defaultGenre')
+			}
+		]
+	};
+
 	it('Create a submission', function() {
-		var title = 'Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice';
 		cy.register({
 			'username': 'cmontgomerie',
 			'givenName': 'Craig',
@@ -18,28 +53,19 @@ describe('Data suite tests', function() {
 			'country': 'Canada'
 		});
 
-		cy.createSubmission({
-			title,
-			'section': 'Articles',
-			'abstract': 'The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.',
-			'keywords': [
-				'Integrating Technology',
-				'Computer Skills',
-				'Survey',
-				'Alberta',
-				'National',
-				'Provincial',
-				'Professional Development'
-			],
-			'additionalAuthors': [
-				{
-					'givenName': 'Mark',
-					'familyName': 'Irvine',
-					'country': 'Canada',
-					'affiliation': 'University of Victoria',
-					'email': 'mirvine@mailinator.com'
-				}
-			]
-		});
+		// Go to page where CSRF token is available
+		cy.visit('/index.php/publicknowledge/user/profile');
+
+		let csrfToken = '';
+		cy.window()
+			.then((win) => {
+				csrfToken = win.pkp.currentUser.csrfToken;
+			})
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, csrfToken);
+			});
 	});
 })
