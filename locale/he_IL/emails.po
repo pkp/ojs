@@ -368,6 +368,7 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"

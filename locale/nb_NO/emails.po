@@ -748,6 +748,7 @@ msgstr ""
 "vurdering.</p><p>Ta gjerne kontakt hvis du har spørsmål</p><p>Med vennlig "
 "hilsen</p>{$signature}"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Kjære {$recipientName}</p><p>Takk for din vurdering av <a href=\""

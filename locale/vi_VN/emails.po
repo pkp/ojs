@@ -58,6 +58,7 @@ msgstr "Nhắc việc hoàn thành review"
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Yêu cầu review một bài báo được gửi lại"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"

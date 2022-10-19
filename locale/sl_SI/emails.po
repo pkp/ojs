@@ -292,6 +292,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Prošnja za recenzijo spremenjenega prispevka"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"
