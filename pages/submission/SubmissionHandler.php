@@ -40,7 +40,7 @@ class SubmissionHandler extends PKPSubmissionHandler
     {
         $context = $request->getContext();
         $userGroups = $this->getSubmitUserGroups($context, $request->getUser());
-        if (empty($userGroups)) {
+        if (!$userGroups->count()) {
             $this->showErrorPage(
                 'submission.wizard.notAllowed',
                 __('submission.wizard.notAllowed.description', [
