@@ -24,6 +24,9 @@ use PKP\statistics\PKPStatisticsHelper;
 
 class StatsPublicationQueryBuilder extends PKPStatsPublicationQueryBuilder
 {
+    /** The name of the section column */
+    public string $sectionColumn = 'section_id';
+
     /** Include records for these issues */
     protected array $issueIds = [];
 
@@ -36,9 +39,6 @@ class StatsPublicationQueryBuilder extends PKPStatsPublicationQueryBuilder
         return $this;
     }
 
-    /**
-     * @copydoc PKPStatsQueryBuilder::_getAppSpecificQuery()
-     */
     protected function _getAppSpecificQuery(Builder &$q): void
     {
         if (!empty($this->issueIds)) {

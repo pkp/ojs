@@ -19,9 +19,6 @@ use APP\services\queryBuilders\StatsPublicationQueryBuilder;
 
 class StatsPublicationService extends \PKP\services\PKPStatsPublicationService
 {
-    /**
-     * @copydoc PKPStatsPublicationService::getAppSpecificFilters()
-     */
     protected function getAppSpecificFilters(array $args = [], StatsPublicationQueryBuilder &$statsQB): void
     {
         if (!empty(($args['issueIds']))) {
