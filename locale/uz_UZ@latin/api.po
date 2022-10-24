@@ -1,7 +1,8 @@
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-29 14:59+0000\n"
-"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"PO-Revision-Date: 2022-10-24 12:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/api/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -9,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Siz ushbu bosqichidagi faylni to‘plam bilan bog'lay olmaysiz."
@@ -62,3 +63,17 @@ msgstr "Ushbu jurnal uchun elektron pochta xabarlari xususiyati yoqilmagan."
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Siz so'ragan e'lon ushbu jurnalning bir qismi emas."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Siz soʻragan xabar bu jurnalda yoʻq."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Siz soʻragan DOI ushbu jurnalning bir qismi emas."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Ushbu jurnal uchun DOI ro'yxatga olish agentligi sozlanmagan."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Ba'zi elementlar muvaffaqiyatli topshirilmadi. Iltimos, alohida "
+"elementlarning xato xabarlarini tekshiring."
