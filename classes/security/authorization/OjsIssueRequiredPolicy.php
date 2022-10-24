@@ -92,7 +92,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
         $router = $this->_request->getRouter();
         switch (true) {
             case $router instanceof \PKP\core\PKPPageRouter:
-                if (ctype_digit((string) $this->_request->getUserVar($this->_parameterName))) {
+                if ($this->_parameterName !== null && ctype_digit((string) $this->_request->getUserVar($this->_parameterName))) {
                     // We may expect a object id in the user vars
                     return (int) $this->_request->getUserVar($this->_parameterName);
                 } elseif (isset($this->_args[0])) {

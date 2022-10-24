@@ -70,10 +70,10 @@
 		{foreach from=$assignableUserGroup.users item=$username key="id"}
 			{fbvElement
 				type="checkbox"
-				id="subEditors[{$userGroupId}][]"
+				id="subEditors[{$userGroupId|escape}][]"
 				value=$id
 				checked=in_array($id, $assignedSubeditors)
-				label={translate key="manager.sections.form.assignEditorAs" name=$username role=$role}
+				label={translate key="manager.sections.form.assignEditorAs" name=$username|escape role=$role|escape}
 				translate=false
 			}
 		{/foreach}

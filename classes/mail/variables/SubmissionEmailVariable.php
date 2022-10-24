@@ -20,28 +20,6 @@ use PKP\context\Context;
 
 class SubmissionEmailVariable extends \PKP\mail\variables\SubmissionEmailVariable
 {
-    public const SUBMISSION_PUBLISHED_URL = 'submissionPublishedUrl';
-
-    public static function descriptions(): array
-    {
-        return array_merge(
-            parent::descriptions(),
-            [
-                self::SUBMISSION_PUBLISHED_URL => __('emailTemplate.variable.submission.submissionPublishedUrl'),
-            ]
-        );
-    }
-
-    public function values(string $locale): array
-    {
-        return array_merge(
-            parent::values($locale),
-            [
-                self::SUBMISSION_PUBLISHED_URL => $this->getSubmissionPublishedUrl($this->getContext()),
-            ]
-        );
-    }
-
     protected function getSubmissionPublishedUrl(Context $context): string
     {
         return Application::get()->getDispatcher()->url(
