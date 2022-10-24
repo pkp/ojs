@@ -1,8 +1,9 @@
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-03 08:14+0000\n"
-"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
+"PO-Revision-Date: 2022-10-24 12:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr ""
@@ -72,3 +73,28 @@ msgstr ""
 
 msgid "plugins.themes.default.option.typography.notoSerif"
 msgstr "Noto Serif: Google raqamli shriftining serif talqini."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Foydalanish statistikasini ko'rsatish imkoniyatlari"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "O'quvchi uchun foydalanish statistikasi jadvalini ko'rsatmang."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+"Foydalanish statistikasini ko'rsatish uchun diagrammaning bar turidan "
+"foydalaning."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+"Foydalanish statistikasini ko'rsatish uchun diagrammaning chiziqli turidan "
+"foydalaning."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Yanvar Fevral Mart Aprel May Iyun Avgust Sentyabr Oktyabr Dekabr"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Yuklashlar"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Yuklab olish maʼlumotlari hali mavjud emas."
