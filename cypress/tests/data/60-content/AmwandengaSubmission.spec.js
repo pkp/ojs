@@ -40,6 +40,18 @@ describe('Data suite: Amwandenga', function() {
 					'genre': Cypress.env('defaultGenre')
 				},
 				{
+					'file': 'dummy.odt',
+					'fileName': 'structured-interview-guide.odt',
+					'mimeType': 'application/vnd.oasis.opendocument.text',
+					'genre': 'Other'
+				},
+				{
+					'file': 'dummy.ods',
+					'fileName': 'response-evaluation-all-team-members-draft-after-edits-final-version-final.ods',
+					'mimeType': 'application/vnd.oasis.opendocument.spreadsheet',
+					'genre': 'Data Set'
+				},
+				{
 					'file': 'dummy.xlsx',
 					'fileName': 'signalling-theory-dataset.pdf',
 					'mimeType': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',

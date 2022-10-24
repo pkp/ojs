@@ -15,6 +15,7 @@
 namespace APP\components\forms\submission;
 
 use APP\journal\Section;
+use Illuminate\Support\Enumerable;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\submission\StartSubmission as BaseStartSubmission;
@@ -26,7 +27,7 @@ class StartSubmission extends BaseStartSubmission
     /**
      * @param Section[] $sections The sections that this user can submit to
      */
-    public function __construct(string $action, Context $context, array $userGroups, array $sections)
+    public function __construct(string $action, Context $context, Enumerable $userGroups, array $sections)
     {
         parent::__construct($action, $context, $userGroups);
 
