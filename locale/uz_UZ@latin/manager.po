@@ -1,9 +1,10 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-03 08:14+0000\n"
-"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
+"PO-Revision-Date: 2022-10-24 13:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.languages.languageInstructions"
 msgstr ""
@@ -2201,9 +2202,11 @@ msgstr ""
 "Iltimos, raqamli ob'ekt identifikatorlari (DOI) tayinlanadigan nashriyot "
 "ob'ektlarini tanlang:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Iltimos, DOIlar tayinlanishi kerak bo'lgan ob'ektlarni tanlang."
+msgstr ""
+"Qaysi elementlarga DOI tayinlanishini tanlang. Aksariyat jurnallar "
+"maqolalarga DOI ni tayinlaydi, lekin siz chop etilgan barcha maqolalarga DOI "
+"belgilashni xohlashingiz mumkin."
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2392,3 +2395,158 @@ msgid "mailable.openAccessNotify.description"
 msgstr ""
 "Bu elektron pochta xabarlari, muammo ochiq bo'lganida, elektron pochta "
 "xabarini olishni so'ragan, ro'yxatdan o'tgan o'quvchilarga yuboriladi."
+
+msgid "stats.publications.downloadReport.description"
+msgstr "Qoralama nusxa ko'rinishlarining nashri"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "jurnalning bosh harflari"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Obuna tugash sanasi"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Tashkilot nomi"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Obuna muddati tez orada tugaydi"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Obuna muddati tugagan"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Obuna muddati oxirgi marta tugagan"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Individual obunani sotib oling"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Institutsional obunani sotib oling"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Individual obunani yangilang"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Institutsional obunani yangilang"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Kirish bildirishnomasini oching"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Nashr e'lon qilingan xabarnoma"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Yangi nashr e'lon qilinganda, ushbu elektron pochta ro'yxatdan o'tgan "
+"foydalanuvchilarga avtomatik ravishda yuboriladi."
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Obuna turi, nomi, muddati va narxi haqida qisqacha ma'lumot"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Nusxani tahrirlash bosqichiga yetganda"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Bu e-pochtada muallifga ularning taqdimoti ko‘rib chiqish bosqichidan oldin "
+"rad etilganligi haqida xabar beriladi, chunki taqdimnoma jurnalda chop etish "
+"talablariga javob bermaydi."
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Nashr chop etilgandan keyin faqat DOI-larni tahrirlash mumkin"
+
+msgid "doi.manager.submissionDois"
+msgstr "Maqola DOI"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Raqamli obyekt identifikatorlarini (DOI) ushbu jurnalda chop etilgan "
+"ishlarga tayinlashga ruxsat bering."
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Abonentning a'zoligi haqida ma'lumot"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Siz soʻragan muammolar topilmadi"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Iltimos, DOIlarni depozit qilishda foydalanmoqchi bo'lgan ro'yxatga olish "
+"agentligini tanlang."
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Chop etilgan PDF kabi maqola qoralama nusxalari"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Obuna menejerining aloqa ma'lumotlari"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} nashr etilganda tayinlanadi."
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Siz soʻragan qoralama nusxa bu nashrning bir qismi emas."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Birlamchi andozalardan foydalaning.<br />Masalalar uchun%j.v%vi%i<br /"
+">%j.v%vi%i.%a maqolalar uchun<br />%j.v%vi%i.%a.g%g galleylar uchun."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Yo'q"
+
+msgid "doi.manager.issueDois"
+msgstr "DOIlarni chiqarish"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Abonentning ismi, mansubligi, telefon raqami va elektron pochta manzili"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Nashr/qoralama nusxa chop etilgandan keyin faqat DOI-larni tahrirlash"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Ro'yxatga olish agentligi"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Tashkilot"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Yaroqli muassasani tanlang."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Yangi obunalarni amalga oshirishdan oldin muassasa yaratilishi kerak."
+
+msgid "stats.issueTOCViews"
+msgstr "TOC koʻrinishlarini chiqarish"
+
+msgid "stats.issueGalleyViews"
+msgstr "Qoralama nusxa ko'rinishlarining nashri"
+
+msgid "manager.institutions.noContext"
+msgstr "Ushbu muassasa jurnali topilmadi."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Maqolalar yuklab olish"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Mavhum ko'rishlar soni va har bir maqola uchun yuklab olingan fayllar."
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Tashkilotning pochta manzili"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domen"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Obunani autentifikatsiya qilish uchun IP diapazonlari"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Obuna haqida bildirishnoma"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Taqdim etilgan DOI haqiqiy emas"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Obuna sahifasining URL manzili"

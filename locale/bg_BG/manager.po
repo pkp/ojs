@@ -1,9 +1,10 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-05 18:01+0000\n"
-"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"PO-Revision-Date: 2022-10-11 20:01+0000\n"
+"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
 "Language: bg_BG\n"
@@ -2543,3 +2544,14 @@ msgstr ""
 
 msgid "stats.issueGalleyViews"
 msgstr "Прегледи на типографията на броя"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Свалете CSV/Excel таблица със статистика на използването на статии, "
+"отговарящи на зададените параметри."
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Брой на прегледите на резюметата и свалянията на всяка статия."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Свалете Сатиите"

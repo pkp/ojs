@@ -1,9 +1,10 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-17 16:00+0000\n"
-"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"PO-Revision-Date: 2022-10-11 20:06+0000\n"
+"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
 "Language: bg_BG\n"
@@ -408,7 +409,7 @@ msgstr "Обратно към етап на рецензиране"
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
-"Не можа да се създаде DOI за следното подаване на материали:  "
+"Не можа да се създаде DOI за следното подаване на материали: "
 "{$pubObjectTitle}. Подадените материали не са присвоени към брой на списание."
 
 msgid "doi.submission.issueMissing.representation"

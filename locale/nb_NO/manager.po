@@ -1,12 +1,14 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
+# FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-08-19 13:09+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2022-10-18 22:01+0000\n"
+"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -18,7 +20,7 @@ msgstr ""
 
 msgid "manager.emails.confirmResetAll"
 msgstr ""
-"Er du sikker på at du vil tilbakestille alle e-postmalene  i dette "
+"Er du sikker på at du vil tilbakestille alle e-postmalene i dette "
 "tidsskriftet? Du vil miste alle tilpasninger du har gjort."
 
 msgid "manager.files.note"
@@ -774,15 +776,10 @@ msgstr "Fagfellenes tilgang"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Slå på ettklikks tilgang for fagfellene"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Merk:</strong> E-post-invitasjonen til fagfeller vil inneholde en "
-"URL som tar den inviterte fagfellen direkte til fagfellevurderingssiden for "
-"den aktuelle innleveringen (tilgang til andre sider vil kreve innlogging). "
-"Om denne valgmuligheten er slått på, kan ikke redaktørene endre e-"
-"postadresser eller legge til kopier eller blindkopier ved bestilling av "
-"fagfellevurderinger (av sikkerhetsgrunner)."
+"Fagfeller kan få en sikker lenke i e-postinvitasjonen som logger dem inn "
+"automatisk når de følger lenken."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Vurdering av fagfellene"
@@ -1060,8 +1057,8 @@ msgstr ""
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
 msgstr ""
 "<strong>Merk:</strong> For å aktivere disse, må nettstedsadministratoren slå "
-"på valgmuligheten <tt>planlagte_oppgaver</tt>  i konfigurasjonsfilen til "
-"OJS. Andre serverkonfigurasjoner kan være nødvendige for å støtte denne "
+"på valgmuligheten <tt>planlagte_oppgaver</tt> i konfigurasjonsfilen til OJS. "
+"Andre serverkonfigurasjoner kan være nødvendige for å støtte denne "
 "funksjonen (som likevel kan være umulig å bruke på enkelte servere), som "
 "oppgitt i OJS-dokumentasjonen."
 
@@ -1191,9 +1188,9 @@ msgstr "IP-område"
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr ""
 "Hvis et IP-område er skrevet inn her, er domene valgfritt.<br />Gyldige "
-"verdier kan være en IP (f.eks. 142.58.103.1),  et IP-område (f.eks. "
-"142.58.103.1 - 142.58.103.4), et IP-område med jokertegnet «*» (f.eks. "
-"142.58.103.*) eller et CIDR IP-område (f.eks. 142.58.100.0/24)."
+"verdier kan være en IP (f.eks. 142.58.103.1), et IP-område (f.eks. "
+"142.58.103.1 - 142.58.103.4), et IP-område med jokertegnet «*» (f.eks. 142.58"
+".103.*) eller et CIDR IP-område (f.eks. 142.58.100.0/24)."
 
 msgid "manager.subscriptions.form.ipRangeValid"
 msgstr "Skriv inn et gyldig IP-område."
@@ -1597,7 +1594,7 @@ msgid "manager.setup.journalLogo.altText"
 msgstr "Logo"
 
 msgid "manager.setup.journalTheme"
-msgstr "Tidsskriftsutseende"
+msgstr "Tidsskriftstema"
 
 msgid "manager.setup.notifyAllAuthorsOnDecision"
 msgstr "Når e-postfunksjonen 'Send beskjed til forfatter' brukes skal e-posten sendes til alle medforfattere, ikke bare til den forfatteren som sendte inn manuskriptet."
@@ -1961,7 +1958,7 @@ msgstr ""
 "rekkefølgen."
 
 msgid "manager.setup.useStyleSheet"
-msgstr "Stilark"
+msgstr "Stilark (CSS)"
 
 msgid "manager.setup.contextName"
 msgstr "Tidsskriftets navn"
@@ -2633,7 +2630,7 @@ msgstr ""
 "Bruk mønsteret under til å generere DOI-suffikser. Bruk %j for "
 "tidsskriftsinitialer, %v for årgang, %i for nummeret i årgangen, %Y for "
 "året, %a for OJS-artikkel-ID, %g for OJS publiseringsversjons-ID, %f for OJS "
-"fil-ID, %p for sidenummer og %x for \"Egendefinert identifikator\"."
+"fil-ID, %p for sidenummer og %x for \"Egendefinert identifikator\". "
 
 msgid "doi.manager.issueDois"
 msgstr "Nummer DOI-er"
@@ -2709,7 +2706,7 @@ msgid "emailTemplate.variable.context.contextName"
 msgstr "Tidsskriftets navn"
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "Prosessen kunne ikke  parse nummerets oppsett"
+msgstr "Prosessen kunne ikke parse nummerets oppsett"
 
 msgid "plugins.importexport.issue.cli.display"
 msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
@@ -2863,3 +2860,44 @@ msgstr "Kontaktopplysninger til abonnementskontakten"
 
 msgid "stats.issueGalleyViews"
 msgstr "Visninger av nummerets oppsett"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abbonementet utløper snart"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "En oversikt over abbonementstype, navn, varighet og pris"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Last ned et csv/excel-regneark med bruksstatistikk for artikler som "
+"samsvarer med følgende parametere."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Last ned artikler"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Antall sammendragsvisninger og filnedlastinger for hver artikkel."
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP-intervall for autentisering av abbonenter"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abbonement utløpt"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abbonement utløpt sist"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informasjon om abbonentens medlemsskap"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Kjøp individuelt abbonement"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Kjøp institusjonsabbonement"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Forny individuelt abbonement"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Forny institusjonsabbonement"

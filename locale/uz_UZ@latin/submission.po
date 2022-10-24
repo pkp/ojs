@@ -1,9 +1,10 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-03 08:14+0000\n"
-"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
+"PO-Revision-Date: 2022-10-24 12:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Yangi material yuborish"
@@ -367,3 +368,61 @@ msgstr "Taqdim etish ro'yxati"
 
 msgid "submission.submit.form.localeRequired"
 msgstr "Iltimos, yuborish tilini tanlang."
+
+msgid "submission.layout.viewGalley"
+msgstr "Galleyni ko'rish"
+
+msgid "galley.cantEditPublished"
+msgstr "Bu galleyni tahrirlab bo‘lmaydi, chunki u allaqachon chop etilgan."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Mualliflarga e-pochta orqali xabar yuboring, ular ushbu taqdimot ko'rib "
+"chiqish uchun yuboriladi. Iloji bo'lsa, mualliflarga o'zaro baholash "
+"jarayoni qancha davom etishi va qachon muharrirlardan yana eshitishlarini "
+"kutishlari haqida ma'lumot bering."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Ko'rib chiqish uchun yuborildi"
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Quyidagi yuborish uchun DOI yaratib bo‘lmadi: {$pubObjectTitle}. Joriy "
+"jurnal kontekstida u mavjud emas."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Quyidagi yuborish uchun {$pubObjectTitle} galereyasi uchun DOI yaratib "
+"bo‘lmadi: {$itemTitle}. DOI yaratilishidan oldin taqdimnoma muammoga "
+"tayinlanishi kerak."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Ko'rib chiqish bosqichiga yuborilishi kerak bo'lgan fayllarni tanlang."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} ushbu yuborishni qabul qilish qarorini bekor qildi va uni "
+"qayta ko‘rib chiqish bosqichiga yubordi."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Ko'rib chiqish sahifasiga qaytish"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} taqdimoti koʻrib chiqish bosqichiga qaytarildi."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Quyidagi yuborish uchun DOI yaratib bo‘lmadi: {$pubObjectTitle}. DOI "
+"yaratilishidan oldin taqdimnoma muammoga tayinlanishi kerak."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Mualliflarga e-pochta orqali xabar yuboring, ularning taqdimoti ko'rib "
+"chiqish bosqichiga qaytarilmoqda. Nima uchun bunday qaror qabul "
+"qilinganligini tushuntiring va muallifga keyingi tekshiruv o'tkazilishi "
+"haqida xabar bering."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Ushbu taqdimnomani qabul qilish qarorini bekor qiling va uni qayta ko‘rib "
+"chiqish bosqichiga yuboring."
