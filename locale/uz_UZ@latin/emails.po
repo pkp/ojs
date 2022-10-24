@@ -4,7 +4,7 @@
 # Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 07:01+0000\n"
+"PO-Revision-Date: 2022-10-24 13:01+0000\n"
 "Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/emails/uz_UZ@"
 "latin/>\n"
@@ -550,20 +550,18 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Siz {$contextName} ga yuborilgan muharrir sifatida tayinlangansiz"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.body"
 msgstr ""
 "Salom, <br />\n"
 "<br/>\n"
-"{$submitterName} qo'lyozmani topshirdi, & quot; {$submissionTitle} & quot; {$contextName} "
-"ga. <br/>\n"
+"{$submitterName} qo'lyozmani topshirdi, & quot; {$submissionTitle} & quot; "
+"{$contextName} ga. <br/>\n"
 "<br/>\n"
 "Agar sizda biron bir savol bo'lsa, iltimos, men bilan bog'laning. Ushbu "
 "jurnalni ish joyingiz deb hisoblaganingiz uchun tashakkur. <br />\n"
 "<br/>\n"
 "{$contextSignature}"
 
-#, fuzzy
 msgid "emails.submissionAckNotUser.subject"
 msgstr "Taqdim etishni tasdiqlash"
 
@@ -672,7 +670,6 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} bilan sharhlovchi sifatida ro'yxatdan o'tish"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "{$recipientName} <br />\n"
@@ -686,7 +683,6 @@ msgstr ""
 "Rahmat, <br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Hisobingizni tasdiqlang"
 
