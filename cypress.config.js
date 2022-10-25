@@ -2,6 +2,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
 	e2e: {
+		supportFile: false,
 		specPattern: 'cypress/tests/data/**',
 		experimentalSessionAndOrigin: true,
 		"chromeWebSecurity": false,
