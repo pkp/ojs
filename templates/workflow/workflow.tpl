@@ -33,15 +33,7 @@
 			>
 				{translate key="common.declined"}
 			</badge>
-			<span class="pkpWorkflow__identificationId">{{ submission.id }}</span>
-			<span class="pkpWorkflow__identificationDivider">/</span>
-			<span class="pkpWorkflow__identificationAuthor">
-				{{ currentPublication.authorsStringShort }}
-			</span>
-			<span class="pkpWorkflow__identificationDivider">/</span>
-			<span class="pkpWorkflow__identificationTitle">
-				{{ localizeSubmission(currentPublication.fullTitle, currentPublication.locale) }}
-			</span>
+			{include file="workflow/submissionIdentification.tpl"}
 		</h1>
 		<template slot="actions">
 			<pkp-button
