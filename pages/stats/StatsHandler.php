@@ -16,6 +16,7 @@
 namespace APP\pages\stats;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use PKP\pages\stats\PKPStatsHandler;
 use PKP\plugins\Hook;
 
@@ -63,6 +64,22 @@ class StatsHandler extends PKPStatsHandler
                 ];
             }, $sections),
         ];
+        if ($template == 'stats/publications.tpl') {
+            $issues = Repo::issue()->getCollector()
+                ->filterByContextIds([$context->getId()])
+                ->filterByPublished(true)
+                ->getMany();
+            $filters[] = [
+                'heading' => __('issue.issues'),
+                'filters' => $issues->map(function ($issue, $key) {
+                    return [
+                        'param' => 'issueIds',
+                        'value' => (int) $issue->getId(),
+                        'title' => $issue->getIssueIdentification(),
+                    ];
+                })->toArray(),
+            ];
+        }
         $templateMgr->setState([
             'filters' => $filters
         ]);
