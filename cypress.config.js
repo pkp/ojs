@@ -19,12 +19,6 @@ module.exports = defineConfig({
 			},
 			"defaultGenre": "Article Text"
 		},
-		setupNodeEvents(on, config) {
-			on('<event>', (arg1, arg2) => {
-
-			})
-		},
-
 		"watchForFileChanges": false,
 		"defaultCommandTimeout": 10000,
 		"video": false,
