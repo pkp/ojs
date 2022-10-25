@@ -110,7 +110,7 @@
 				</div>
 				<div class="pkpStats__panel" role="region" aria-live="polite">
 					<pkp-header>
-						<h2 id="issueDetailTableLabel">
+						<h2>
 							{translate key="stats.issues.details"}
 							<tooltip
 								tooltip="{translate key="stats.issues.tooltip.text"}"
@@ -160,13 +160,12 @@
 									</tr>
 								</table>
 								<action-panel class="pkpStats__reportAction">
-									<h2 id="report-type-issues">{translate key="issue.issues"}</h2>
-									<p id="report-type-issues-description">
+									<h2>{translate key="issue.issues"}</h2>
+									<p>
 										{translate key="stats.issues.downloadReport.downloadIssues.description"}
 									</p>
 									<template slot="actions">
 										<pkp-button
-											aria-describedby="report-type-issues report-type-issues-description"
 											@click="downloadReport"
 										>
 											{translate key="stats.issues.downloadReport.downloadIssues"}
