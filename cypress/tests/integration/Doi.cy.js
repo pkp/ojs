@@ -49,7 +49,7 @@ describe('DOI tests', function() {
 
 		cy.get(`#list-item-submission-${submissionId} button.expander`).click();
 		cy.checkDoiAssignment(`${submissionId}-article-${publicationId}`);
-		cy.checkDoiAssignment(`${submissionId}-galley-${galleyId}`);
+		cy.checkDoiAssignment(`${submissionId}-representation-${galleyId}`);
 
 		cy.log('Check Issue Visibility');
 		// View issue with assigned DOI

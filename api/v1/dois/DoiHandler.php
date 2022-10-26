@@ -357,4 +357,20 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 
         return $response->withJson(['failedDoiActions' => $failedDoiActions], 200);
     }
+
+    /**
+     * @copydoc PKPDoiHandler::getPubObjectHandler()
+     */
+    protected function getPubObjectHandler(string $type): mixed
+    {
+        $handler = parent::getPubObjectHandler($type);
+        if ($handler !== null) {
+            return $handler;
+        }
+
+        return match ($type) {
+            Repo::doi()::TYPE_ISSUE => Repo::issue(),
+            default => null,
+        };
+    }
 }
