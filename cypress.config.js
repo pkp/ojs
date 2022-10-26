@@ -27,7 +27,7 @@ module.exports = defineConfig({
 		setupNodeEvents(on, config) {
 			return require('./lib/pkp/cypress/plugins/index.js')(on, config)
 		},
-		specPattern: ['cypress/tests/**/*.cy.js', 'cypress/tests/**/**/*.cy.js'],
+		specPattern: ['cypress/tests/data/*.cy.js', 'cypress/tests/data/**/*.cy.js','cypress/tests/integration/*.cy.js'],
 		experimentalSessionAndOrigin: true,
 		chromeWebSecurity: false,
 	},
