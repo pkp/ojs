@@ -292,7 +292,6 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     private function _pluginInitialization()
     {
-        $this->import('DataciteExportPlugin');
         PluginRegistry::register('importexport', new DataciteExportPlugin(), $this->getPluginPath());
 
         Hook::add('Template::doiManagement', [$this, 'callbackShowDoiManagementTabs']);

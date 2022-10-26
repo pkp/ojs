@@ -136,12 +136,18 @@ class Repository extends \PKP\publication\Repository
     {
         $newId = parent::version($publication);
 
+        $context = Application::get()->getRequest()->getContext();
+
         $galleys = $publication->getData('galleys');
+        $isDoiVersioningEnabled = $context->getData(Context::SETTING_DOI_VERSIONING);
         if (!empty($galleys)) {
             foreach ($galleys as $galley) {
                 $newGalley = clone $galley;
                 $newGalley->setData('id', null);
                 $newGalley->setData('publicationId', $newId);
+                if ($isDoiVersioningEnabled) {
+                    $newGalley->setData('doiId', null);
+                }
                 Repo::galley()->add($newGalley);
             }
         }
