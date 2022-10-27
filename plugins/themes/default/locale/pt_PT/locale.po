@@ -1,10 +1,11 @@
+# José Carvalho <jcarvalho@keep.pt>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2020-06-15 16:01+0000\n"
-"Last-Translator: Carla Marques <carla.marques@sdum.uminho.pt>\n"
+"PO-Revision-Date: 2022-10-27 09:01+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/themes-default/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Tema Padrão"
@@ -66,3 +67,24 @@ msgstr "Imagem de fundo do cabeçalho"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Exibir o sumário da revista na página de início."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opções de visualização de estatísticas de uso"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Não exibir gráfico de estatísticas de uso ao leitor."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Use o gráfico de barras para exibição das estatísticas de uso."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Use o gráfico de linha para exibição das estatísticas de uso."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Os dados de download ainda não estão disponíveis."
