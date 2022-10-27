@@ -204,6 +204,7 @@ class StatsIssueHandler extends APIHandler
             'dateEnd',
             'timelineInterval',
             'searchPhrase',
+            'type'
         ]);
 
         Hook::call('API::stats::issues::timeline::params', [&$allowedParams, $slimRequest]);
@@ -294,6 +295,7 @@ class StatsIssueHandler extends APIHandler
             'dateStart',
             'dateEnd',
             'timelineInterval',
+            'type'
         ]);
 
         Hook::call('API::stats::issue::timeline::params', [&$allowedParams, $slimRequest]);
