@@ -1,11 +1,12 @@
 # Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
+# Edvin Erdtman <edvin.erdtman@liu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2022-06-15 02:02+0000\n"
-"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
+"PO-Revision-Date: 2022-10-27 09:01+0000\n"
+"Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "sv_SE/>\n"
 "Language: sv_SE\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.title"
 msgstr "Skicka in en artikel"
@@ -388,3 +389,6 @@ msgstr "Återtagen till granskning"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Tillbaka till granskning"
+
+msgid "submission.layout.viewGalley"
+msgstr "Visa Publiceringsversion"
