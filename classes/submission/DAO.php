@@ -13,7 +13,6 @@
 
 namespace APP\submission;
 
-use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\db\Generator;
 use PKP\identity\Identity;
@@ -26,11 +25,7 @@ class DAO extends \PKP\submission\DAO
      */
     public function deleteById(int $id)
     {
-        $articleSearchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO  $articleSearchDao */
-        $articleSearchDao->deleteSubmissionKeywords($id);
-
         event(new SubmissionDeleted($id));
-
         parent::deleteById($id);
     }
 
