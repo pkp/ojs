@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-10-28 15:32+0000\n"
+"PO-Revision-Date: 2022-10-28 17:01+0000\n"
 "Last-Translator: Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -2164,3 +2164,14 @@ msgstr "البحث عن العدد، الحجم و العدد"
 
 msgid "stats.issues.none"
 msgstr "لا توجد هناك مشاكل مع احصائيات الاستخدام تطابق هذه المعايير."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"قم بتنزيل جدول بيانات CSV / Excel به إحصائيات الاستخدام للأعداد المطابقة "
+"للمعايير التالية."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "عدد مشاهدات جدول المحتويات و تنزيلات ملفات العدد لكل عدد."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "تحميل الأعداد"
