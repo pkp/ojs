@@ -1,11 +1,12 @@
 # M. Ali <vorteem@gmail.com>, 2021, 2022.
+# Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-10-15 04:01+0000\n"
-"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"PO-Revision-Date: 2022-10-28 15:32+0000\n"
+"Last-Translator: Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
 "Language: ar_IQ\n"
@@ -2113,10 +2114,10 @@ msgid "manager.subscriptions.form.institutionIdValid"
 msgstr "يرجى اختيار مؤسسة صحيحة."
 
 msgid "stats.issueTOCViews"
-msgstr "معاينات جدول محتويات العدد"
+msgstr "معاينات"
 
 msgid "stats.issueGalleyViews"
-msgstr "معاينات الألواح الطباعية للعدد"
+msgstr "تحميلات"
 
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "ينبغي إنشاء المؤسسة قبل القيام بتسجيل إشتراكات جديدة."
@@ -2145,3 +2146,21 @@ msgid "stats.publications.downloadReport.description"
 msgstr ""
 "تنزيل جدول بصيغة CSV/Excel يتضمن إحصائيات الاستعمال للمقالات التي تطابق "
 "العوامل الآتية."
+
+msgid "stats.issueStats"
+msgstr "أحصائيات العدد"
+
+msgid "stats.issues.details"
+msgstr "المشاهدات و التحميلات"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "المشاهدات الكلية بواسطة التأريخ"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "التنزيلات الكلية بواسطة التأريخ"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "البحث عن العدد، الحجم و العدد"
+
+msgid "stats.issues.none"
+msgstr "لا توجد هناك مشاكل مع احصائيات الاستخدام تطابق هذه المعايير."
