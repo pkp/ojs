@@ -33,14 +33,12 @@ class ArticleTombstoneManager
     {
     }
 
-    public function insertArticleTombstone($article, $journal)
+    public function insertArticleTombstone($article, $journal, $section)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
         // delete article tombstone -- to ensure that there aren't more than one tombstone for this article
         $tombstoneDao->deleteByDataObjectId($article->getId());
         // insert article tombstone
-        $section = $sectionDao->getById($article->getSectionId());
         $setSpec = OAIDAO::setSpec($journal, $section);
         $oaiIdentifier = 'oai:' . Config::getVar('oai', 'repository_id') . ':' . 'article/' . $article->getId();
         $OAISetObjectsIds = [
@@ -57,7 +55,7 @@ class ArticleTombstoneManager
         $articleTombstone->setOAISetObjectsIds($OAISetObjectsIds);
         $tombstoneDao->insertObject($articleTombstone);
 
-        if (Hook::call('ArticleTombstoneManager::insertArticleTombstone', [&$articleTombstone, &$article, &$journal])) {
+        if (Hook::call('ArticleTombstoneManager::insertArticleTombstone', [&$articleTombstone, &$article, &$journal, &$section])) {
             return;
         }
     }
@@ -73,8 +71,10 @@ class ArticleTombstoneManager
             ->filterByStatus([Submission::STATUS_PUBLISHED])
             ->getMany();
 
+        $sectionDao = DAORegistry::getDAO('SectionDAO');
         foreach ($submissions as $submission) {
-            $this->insertArticleTombstone($submission, $context);
+            $section = $sectionDao->getById($submission->getSectionId());
+            $this->insertArticleTombstone($submission, $context, $section);
         }
     }
 
