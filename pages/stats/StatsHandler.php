@@ -16,9 +16,9 @@
 namespace APP\pages\stats;
 
 use APP\core\Application;
-use APP\facades\Repo;
 use APP\core\Request;
 use APP\core\Services;
+use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\core\PKPApplication;
 use PKP\pages\stats\PKPStatsHandler;
@@ -82,12 +82,12 @@ class StatsHandler extends PKPStatsHandler
                     ],
                     [
                         'name' => 'tocViews',
-                        'label' => __('stats.issueTOCViews'),
+                        'label' => __('stats.views'),
                         'value' => 'tocViews',
                     ],
                     [
                         'name' => 'issueGalleyViews',
-                        'label' => __('stats.issueGalleyViews'),
+                        'label' => __('stats.downloads'),
                         'value' => 'issueGalleyViews',
                     ],
                     [

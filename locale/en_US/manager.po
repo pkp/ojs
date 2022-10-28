@@ -1704,23 +1704,29 @@ msgstr "The specified objects could not be found."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Send a copy to the primary contact, identified in the Journal Settings."
 
-msgid "stats.issueTOCViews"
-msgstr "Views"
+msgid "stats.contextStats"
+msgstr "Journal Stats"
 
-msgid "stats.issueGalleyViews"
-msgstr "Downloads"
+msgid "stats.context.tooltip.text"
+msgstr "Number of visitors viewing the journal's index page."
+
+msgid "stats.context.tooltip.label"
+msgstr "About journal statistics"
+
+msgid "stats.context.downloadReport.description"
+msgstr "Download a CSV/Excel spreadsheet with usage statistics for this journal matching the following parameters."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "The number of journal's index page views."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Download Journal"
 
 msgid "stats.issueStats"
 msgstr "Issue Stats"
 
 msgid "stats.issues.details"
 msgstr "Views and Downloads"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Total views by date"
-
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Total downloads by date"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr "Search issue title, volume and number"
