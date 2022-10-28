@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-10-13 09:01+0000\n"
+"PO-Revision-Date: 2022-10-28 08:01+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -2225,10 +2225,10 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Der skal oprettes en institution, før der kan laves nye indsendelser."
 
 msgid "stats.issueTOCViews"
-msgstr "Visninger af indholdsfortegnelse for numre"
+msgstr "Visninger"
 
 msgid "stats.issueGalleyViews"
-msgstr "Visninger af numres publiceringsversion"
+msgstr "Downloads"
 
 msgid "manager.institutions.noContext"
 msgstr "Denne institutions tidsskrift kunne ikke findes."
@@ -2293,3 +2293,9 @@ msgstr "Download artikler"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr "Antal resume-visninger og fildownloads for hver artikel."
+
+msgid "stats.issueStats"
+msgstr "Statistik for nummer"
+
+msgid "stats.issues.details"
+msgstr "Visninger og downloads"
