@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 13:01+0000\n"
+"PO-Revision-Date: 2022-10-28 16:01+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hy_AM/>\n"
@@ -2534,10 +2534,10 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Նախքան նոր բաժանորդագրություններ կատարելը պետք է հաստատություն ստեղծվի:"
 
 msgid "stats.issueTOCViews"
-msgstr "Թողարկման Բովանդակության դիտումները"
+msgstr "Դիտումները"
 
 msgid "stats.issueGalleyViews"
-msgstr "Թողարկման շարվածքի դիտումները"
+msgstr "Ներբեռնումներ"
 
 msgid "manager.institutions.noContext"
 msgstr "Այս հաստատության ամսագիրը չհաջողվեց գտնել:"
@@ -2604,3 +2604,48 @@ msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
 "Յուրաքանչյուր հոդվածի համար համառոտագրության դիտումների և նիշքերի "
 "ներբեռնումների քանակը:"
+
+msgid "stats.issues.details"
+msgstr "Դիտումներ և ներբեռնումներ"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Գումարային դիտումներ ըստ ամսաթվի"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Որոնեք թողարկման անվանումը, հատորը և թիվը"
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Ներբեռնեք CSV/Excel աղյուսակ՝ օգտագործման վիճակագրությամբ հետևյալ "
+"պարամետրերին համապատասխանող թողարկումների համար:"
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Ներբեռնեք թողարկումները"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} -ը ընդ․ {$total} թողարկումներից"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Թողարկումների վիճակագրության մասին"
+
+msgid "stats.issueStats"
+msgstr "Թողարկման վիճակագրություն"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Ընդհանուր ներբեռնումներ ըստ ամսաթվի"
+
+msgid "stats.issues.none"
+msgstr ""
+"Այս պարամետրերին համապատասխան օգտագործման վիճակագրության հետ կապված "
+"թողարկումներ չեն հայտնաբերվել:"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Բովանդակության դիտումների և թողարկման շարվածքի ներբեռնումների քանակը "
+"յուրաքանչյուր թողարկման համար:"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Դիտումներ</strong>: Այցելուների թիվը, ովքեր դիտում են թողարկման "
+"բովանդակության աղյուսակը:<br><strong>Ներբեռնումներ</strong>: Թողարկման "
+"շարվածքի ներբեռնումների քանակը, եթե այդպիսիք կան:"
