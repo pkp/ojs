@@ -1,11 +1,12 @@
 # M. Ali <vorteem@gmail.com>, 2022.
+# Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:15+00:00\n"
-"PO-Revision-Date: 2022-10-08 03:01+0000\n"
-"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"PO-Revision-Date: 2022-10-28 13:01+0000\n"
+"Last-Translator: Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/admin/ar_IQ/>"
 "\n"
 "Language: ar_IQ\n"
@@ -20,7 +21,7 @@ msgid "admin.hostedContexts"
 msgstr "المجلات المستضافة"
 
 msgid "admin.settings.redirect"
-msgstr "إعادة توجيه موقع المجلة"
+msgstr "إعادة توجيه المجلة"
 
 msgid "admin.settings.redirectInstructions"
 msgstr ""
