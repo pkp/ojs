@@ -330,3 +330,18 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Zurück zur Begutachtung"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Mindestens ein/e Autor/in muss angegeben werden."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Bitte geben Sie den Titel Ihres Artikels an."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Bitte geben Sie das Abstract Ihres Artikels an."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ihr Abstract ist zu lang. Bitte kürzen Sie es auf eine Länge, die unter der Höchstgrenze für diese Rubrik liegt."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Bitte wählen Sie die Rolle der Beiträgerin/des Beiträgers aus."

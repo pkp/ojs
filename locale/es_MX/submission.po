@@ -390,3 +390,20 @@ msgstr "Ver Galerada"
 
 msgid "galley.cantEditPublished"
 msgstr "Esta galerada no se puede editar porque ya se ha publicado."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Se requiere por lo menos un autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, introduzca el título de su envío."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, introduzca el resumen de su envío."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resumen es demasiado largo, debe ajustarlo al límite de palabras indicado "
+"para esta sección."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccione el rol del colaborador/a."

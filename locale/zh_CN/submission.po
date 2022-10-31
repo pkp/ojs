@@ -288,3 +288,18 @@ msgstr "更换期次"
 
 msgid "publication.assignedToIssue"
 msgstr "此文章已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "至少要有一位作者。"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "请填写文章题目。"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "请填写文章摘要。"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "您的摘要太长了。请按照要求作必要删减。"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "选择合作者的角色。"

@@ -345,3 +345,18 @@ msgstr "معاينة اللوح الطباعي"
 
 msgid "galley.cantEditPublished"
 msgstr "لا يمكن تعديل هذا اللوح الطباعي لأنه سبق وأن تم نشره."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "أذكر مؤلفاً واحداً على الأقل لهذا الطلب."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "لطفاً، أذكر عنوان مؤلَّفك هذا."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "لطفاً، أعطنا ملخصاً عن المؤلَّف."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "إن ملخصك طويل جداً. لطفاً، حاول إختزاله ليصير ضمن محدد عدد الكلمات الخاص بهذا القسم."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "لطفاً، إختر دور المساهم."

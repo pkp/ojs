@@ -327,3 +327,20 @@ msgstr "Pilih komponen artikel"
 
 msgid "submission.submit.userGroup"
 msgstr "Serahkan dalam peranan saya sebagai ..."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Diperlukan sekurang-kurangnya satu pengarang."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Sila masukkan tajuk artikel anda."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Sila masukkan abstrak artikel anda."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstrak anda terlalu panjang. Silakan dipendekkan ke bawah had perkataan "
+"yang ditunjukkan untuk bahagian ini."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Sila pilih peranan penyumbang."

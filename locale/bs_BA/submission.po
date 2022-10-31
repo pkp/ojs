@@ -321,3 +321,20 @@ msgstr "Kopija članka \"{$ galley FormatName}\" je dostupna."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Kopija se pojavljuje u unosu izdanja"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Potreban je najmanje jedan autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Unesite naslov članka."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Unesite sažetak vašeg članka."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Vaš sažetak je predug. Skratite ga na dolje ograničeni broj riječi "
+"naznačenih za ovu sekciju."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Odaberite ulogu saradnika."

@@ -390,3 +390,20 @@ msgstr "Դիտել շարվածքը"
 
 msgid "galley.cantEditPublished"
 msgstr "Այս շարվածքը հնարավոր չէ խմբագրել, քանի որ այն արդեն հրապարակվել է:"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Պահանջվում է առնվազն մեկ հեղինակ:"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Խնդրում ենք մուտքագրել ձեր հոդվածի վերնագիրը:"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Խնդրում ենք մուտքագրել ձեր հոդվածի ամփոփագիրը:"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Ձեր ամփոփումը չափազանց երկար է: Խնդրում ենք կրճատել այն մինչև այս բաժնի "
+"համար նշված բառերի սահմանաչափը:"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Խնդրում ենք ընտրել աջակցողի դերը:"

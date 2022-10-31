@@ -392,3 +392,20 @@ msgid "editor.submission.decision.backToReview.description"
 msgstr ""
 "Ushbu taqdimnomani qabul qilish qarorini bekor qiling va uni qayta ko‘rib "
 "chiqish bosqichiga yuboring."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Hech bo'lmaganda bitta muallif kerak."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Iltimos, maqolangiz sarlavhasini kiriting."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Iltimos, maqolangizning konspektini kiriting."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstraktingiz juda uzun. Iltimos, ushbu bo'lim uchun ko'rsatilgan so'z "
+"chegarasidan kamroqqa qisqartiring."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Iltimos, ishtirokchining rolini tanlang."

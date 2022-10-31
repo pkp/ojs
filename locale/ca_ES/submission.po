@@ -364,3 +364,20 @@ msgstr ""
 "tramesa es retornarà a la fase de revisió. Expliqueu el motiu d'aquesta "
 "decisió i informeu l'autor/a de quines revisions addicionals es portaran a "
 "terme."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Es requereix un autor com a mínim."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Introdueixi el títol del seu article, si us plau."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Introdueixi el resum del seu article, si us plau."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resum és massa llarg. Ajusteu-lo segons el límit de paraules per a "
+"aquesta secció indicat a sota."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccioni el rol del col·laborador, si us plau."

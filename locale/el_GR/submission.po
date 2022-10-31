@@ -308,3 +308,18 @@ msgstr ""
 #, fuzzy
 msgid "submission.copyrightOther.description"
 msgstr "Εκχωρήστε πνευματικά δικαιώματα για δημοσιευμένες υποβολές."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Απαιτείται η καταχώρηση τουλάχιστον ενός Συγγραφέα."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Παρακαλούμε εισάγετε τον τίτλο του άρθρου."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Παρακαλούμε εισάγετε την περίληψη του άρθρου."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Η περίληψή σας υπερβαίνει τον μέγιστο προβλεπόμενο αριθμό λέξεων για τη συγκεκριμένη ενότητα."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Παρακαλούμε επιλέξτε την ιδιότητα του Συνεργάτη."

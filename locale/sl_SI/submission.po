@@ -365,3 +365,18 @@ msgstr "Poglej prelom"
 
 msgid "galley.cantEditPublished"
 msgstr "Preloma ni mogoce urejati, ker je bil že objavljen."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Zahtevan je vsaj en avtor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Prosimo vnesite naslov vašega prispevka."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Prosimo vnesite izvleček vašega prispevka."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Vaš izvleček je predolg. Prosimo skrajšajte ga na spodaj zapisano omejitev dolžino."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Prosimo izberite vlogo soavtoraj."

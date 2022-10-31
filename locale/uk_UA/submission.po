@@ -367,3 +367,20 @@ msgstr ""
 #, fuzzy
 msgid "editor.submission.decision.backToReview"
 msgstr "Повернутися до Огляду"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потрібно зазначити хоча б одного автора."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Будь ласка, введіть назву Вашої статті."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Будь ласка, введіть анотацію Вашої статті."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Ваша анотація надто довга. Будь ласка, скоротіть її до кількості слів, що "
+"задана для даного розділу."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Будь ласка, виберіть роль відправника."

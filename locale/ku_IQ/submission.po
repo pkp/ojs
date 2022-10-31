@@ -230,3 +230,18 @@ msgstr "{$section} (ناچالاک)"
 msgid "submission.viewingPreview"
 msgstr ""
 "ئەمە پێشبینینە و بڵاونەکراوەتەوە. <a href=\"{$url}\">پیشاندانی پێشکەشکردن</a>"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "لانیکەم توێژەرێک داوا کراوە."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "تکایە ناونیشانی توێژینەوەکەت بنوسە."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "تکایە پوختەی توێژینەوەکەت لێرە بنوسە."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "پوختەی توێژینەوەکەت زۆرە، تکایە ژمارەی وشەکان کەم بکەوە."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "تکایە ڕۆڵی هاوبەشەکەت دیاری بکە."

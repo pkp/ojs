@@ -367,3 +367,18 @@ msgstr "Zobrazit sazebnici"
 
 msgid "galley.cantEditPublished"
 msgstr "Sazebnici nelze editovat protože už byla zveřejněna."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadován minimálně jeden autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, název vašeho článku."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vašeho článku."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvolte, prosím, roli autora."

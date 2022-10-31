@@ -344,3 +344,18 @@ msgstr ""
 "Не удалось создать DOI для гранок «{$pubObjectTitle}» следующего материала: "
 "{$itemTitle}. Материал должен быть назначен в выпуск до того как будет "
 "выполнена генерация DOI."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Требуется как минимум один автор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Пожалуйста, введите название Вашей статьи."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Пожалуйста, введите аннотацию Вашей статьи."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ваша аннотация слишком длинная. Пожалуйста, сократите ее до количества слов, заданного для этого раздела."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Пожалуйста, выберите роль отправителя."

@@ -384,3 +384,20 @@ msgstr "Skatīt saliktni"
 
 msgid "galley.cantEditPublished"
 msgstr "Šo saliktni nevar rediģēt, jo tas jau ir publicēts."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Jābūt vismaz vienam autoram."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Lūdzu, ievadiet raksta virsrakstu."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Lūdzu, ievadiet raksta kopsavilkumu."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Kopsavilkums ir pārāk garš. Lūdzu, saīsiniet to, lai tas nepārsniegtu šai "
+"sadaļai norādīto vārdu ierobežojumu."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Lūdzu, atlasiet līdzstrādnieka lomu."

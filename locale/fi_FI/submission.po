@@ -307,3 +307,18 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Osoitettu numeroon <a href=\"{$issueUrl}\">{$issueName}</a>, mutta ei "
 "ajoitettu julkaistavaksi."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Vähintään yksi kirjoittaja vaaditaan."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Syötä artikkelisi otsikko."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Syötä artikkelisi abstrakti."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Valitse tekijän rooli."

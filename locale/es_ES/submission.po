@@ -330,3 +330,20 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Se ha asignado a <a href=\"{$issueUrl}\">{$issueName}</a> pero aún no se ha "
 "programado para publicarse."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Se requiere por lo menos un autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, introduzca el título de su artículo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, introduzca el resumen de su artículo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resumen es demasiado largo, debe ajustarlo al límite de palabras de la "
+"sección."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccione el rol del colaborador/a."

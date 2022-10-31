@@ -329,3 +329,20 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Ова е доделено на <a href=\"{$issueUrl}\"> {$ issueName} </a>, но не е "
 "закажано за објавување."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потребен е барем еден автор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Внесете го насловот на статијата."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Внесете го апстрактот на статијата."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Вашиот апстракт е предолг. Скратете го на според бројот на зборови што е "
+"наведено за овој дел."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Изберете ја улогата на соработникот."
