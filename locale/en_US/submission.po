@@ -352,3 +352,18 @@ msgstr "The section for this submission could not be found."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr "Only editorial staff are allowed to submit to this section."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "At least one author is required."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Please enter the title of your article."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Please enter your article's abstract."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Your abstract is too long. Please shorten it to below the word limit indicated for this section."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Please select the contributor's role."

@@ -375,3 +375,20 @@ msgid "galley.cantEditPublished"
 msgstr ""
 "Denne publiceringsklare fil kan ikke ændres da den allerede er blevet "
 "publiceret."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Mindst en forfatter er påkrævet."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Indskriv artiklens titel."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Tilføj artiklens resumé."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Dit resumé er for langt. Forkort det venligst til under den ordgrænse, der "
+"er angivet for denne sektion."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vælg bidragyderens rolle."

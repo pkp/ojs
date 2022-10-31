@@ -379,3 +379,20 @@ msgstr "Ver Composição"
 
 msgid "galley.cantEditPublished"
 msgstr "Esta composição não pode ser editada porque já foi publicada."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Pelo menos um autor é necessário."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, indique o título do seu artigo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, informe o resumo do seu artigo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Seu resumo é muito longo. Reduza-o para abaixo do limite de palavras "
+"indicado para esta seção."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Por favor, selecione o papel do colaborador."

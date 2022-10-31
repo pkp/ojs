@@ -217,3 +217,18 @@ msgstr "Het tijdschrift van deze inzending kan niet gevonden worden."
 
 msgid "submission.queries.production"
 msgstr "Productie-discussies"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Er is minimaal één auteur vereist."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vul de titel van uw artikel in."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vul de samenvatting van uw artikel in."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "De samenvatting is te lang. Verkort het tot de maximumlengte voor dit onderdeel."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecteer de rol van de bijdrager."

@@ -375,3 +375,20 @@ msgid "doi.submission.issueMissing.publication"
 msgstr ""
 "Kunne ikke opprette en DOI til den følgende innlevering: {$pubObjectTitle}. "
 "Innleveringen må knyttes til et nummer før en DOI kan genereres."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Skriv inn minst en forfatter."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Skriv inn tittelen på artikkelen."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Skriv inn sammendraget."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Sammendraget ditt er for langt. Gjør det kortere i tråd med ordgrensen for "
+"denne seksjonen."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Velg bidragsyterens rolle."

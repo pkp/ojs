@@ -141,3 +141,15 @@ msgstr "Выбраць кампанент артыкула"
 
 msgid "submission.submit.userGroup"
 msgstr "Адправіць з выкарыстаннем маёй ролі ..."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Патрабуецца як мінімум адзін аўтар."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Калі ласка, увядзіце назву Вашага артыкула."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Калі ласка, увядзіце анатацыю Вашага артыкула."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Калі ласка, выберыце ролю адпраўніка."

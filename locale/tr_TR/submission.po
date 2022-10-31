@@ -376,3 +376,18 @@ msgstr "Dizgiyi Gör"
 
 msgid "galley.cantEditPublished"
 msgstr "Bu dizgi daha önce yayımlandığı için düzenlenemez."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "En az bir yazar gerekli."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Lütfen makalenizin başlığını giriniz."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Lütfen makalenizin özetini giriniz."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Özetiniz çok uzun. Lütfen bu bölüm için belirtilen kelime limitinin uygun düzenleyin."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Lütfen katkıda bulunanın rolünü seçin."

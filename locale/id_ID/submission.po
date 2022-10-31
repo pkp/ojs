@@ -372,3 +372,20 @@ msgid "doi.submission.issueMissing.publication"
 msgstr ""
 "Tidak dapat memberikan DOI untuk naskah: {$pubObjectTitle}. Naskah harus "
 "dimasukkan ke dalam edisi agar dapat diberi DOI."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Dibutuhkan setidaknya satu penulis."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Mohon tuliskan judul naskah Anda."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Mohon masukkan abstrak naskah Anda."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstrak Anda terlalu panjang. Mohon dipersingkat menurut batasan kata yang "
+"ditunjukkan untuk bagian ini."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Silakan pilih peran kontributor."

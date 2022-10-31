@@ -388,3 +388,20 @@ msgstr "Преглед на типографията"
 
 msgid "galley.cantEditPublished"
 msgstr "Тази типография не може да се редактира, защото вече е публикувана."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Изисква се да е отбелязан поне един автор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Моля, въведете заглавието на вашата статия."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Моля, въведете резюмето на вашата статия."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Резюмето ви е твърде дълго. Моля, съкратете го под ограничението на думите, "
+"посочено за този раздел."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Моля, изберете ролята на изпращача/сътрудниците."

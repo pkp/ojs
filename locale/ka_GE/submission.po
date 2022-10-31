@@ -361,3 +361,20 @@ msgstr ""
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "აირჩიეთ ფაილები, რომლებიც უნდა გაიგზავნოს განხილვის ეტაპზე."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "საჭიროა სულ მცირე ერთი ავტორი."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "გთხოვთ, შეიტანოთ თქვენი სტატიის სათაური."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "გთხოვთ, შეიტანოთ სტატიის აბსტრაქტი."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"თქვენი აბსტრაქტი ძალიან გრძელია. გთხოვთ, შეამცირეთ სიტყვების რაოდენობა "
+"საჭირო მინიმუმამდე."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "გთხოვთ, აირჩიეთ გამგზავნის როლი."

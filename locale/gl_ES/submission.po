@@ -320,3 +320,20 @@ msgstr "Formato aprobado"
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Actualizáronse os identificadores públicos do envío."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Requírese polo menos un autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Insira o título do seu artigo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Introduza o resumo do seu artigo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"O teu resumo é demasiado longo. Axústao por debaixo do límite de palabras "
+"indicado para esta sección."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecciona o rol do colaborador."

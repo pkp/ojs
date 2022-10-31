@@ -414,3 +414,18 @@ msgid "galley.cantEditPublished"
 msgstr ""
 "Denna publiceringsversion kan inte redigeras eftersom den redan är "
 "publicerad."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Minst en författare krävs."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vänligen mata in titeln på din artikel."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vänligen mata in abstract för din artikel."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ditt abstract är för långt. Korta det så att det ryms inom begränsningen i antal ord som gäller för den här sektionen."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vänligen välj medarbetarens roll."

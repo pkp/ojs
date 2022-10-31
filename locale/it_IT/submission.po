@@ -371,3 +371,20 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Torna alla revisione"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "E' necessario indicare almeno un autore."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Inserisci il titolo del contributo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Per favore inserisci l'abstract dell'articolo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"L'abstract è troppo lungo. Per favore accorcialo entro il limite di parole "
+"indicato per questa sezione."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selezione il ruolo dell'autore."

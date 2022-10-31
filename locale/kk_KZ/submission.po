@@ -361,3 +361,20 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Шолуға қайта оралу"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Кем дегенде бір авторды көрсету қажет."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Мақаланың атауын енгізіңіз."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Мақаланың аңдатпасын енгізіңіз."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Сіз енгізген мақала аннотациясы тым үлкен. Оны осы бөлім үшін келісілген "
+"сөздердің санына дейін қысқартыңыз."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Жіберушінің рөлін таңдаңыз."

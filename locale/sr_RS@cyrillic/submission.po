@@ -126,3 +126,15 @@ msgstr "Поставите на сервер фајлове у вези овог
 msgid "submission.queries.production"
 msgstr "Продукционе дискусије"
 
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потребан је барем један аутор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Унесите наслов рада"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Унесите апстракт рада."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Одаберите улогу сарадника."
