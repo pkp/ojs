@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-10-17 11:01+0000\n"
+"PO-Revision-Date: 2022-10-31 10:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -2339,10 +2339,10 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Yeni abonelikler yapılmadan önce bir kurum oluşturulmalıdır."
 
 msgid "stats.issueGalleyViews"
-msgstr "Sayı Dizgisi Gösterimleri"
+msgstr "İndirmeler"
 
 msgid "stats.issueTOCViews"
-msgstr "Sayı İçindekiler Gösterimleri"
+msgstr "Görüntüle"
 
 msgid "manager.institutions.noContext"
 msgstr "Bu kurumun dergisi bulunamadı."
@@ -2407,3 +2407,18 @@ msgstr ""
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr "Makale İstatistiklerini İndir"
+
+msgid "stats.issueStats"
+msgstr "Sayı İstatistikleri"
+
+msgid "stats.issues.details"
+msgstr "Görüntüleme ve İndirmeler"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Tarihe göre toplam görüntüleme"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Tarihe göre toplam indirme"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Sayı başlığı, cilt ve numarasından arayın"
