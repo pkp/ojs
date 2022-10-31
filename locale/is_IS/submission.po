@@ -318,3 +318,20 @@ msgstr "Veldu íhlut greinar"
 
 msgid "submission.submit.userGroup"
 msgstr "Senda inn í hlutverki mínu sem...."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Það þarf að vera a.m.k. einn höfundur."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vinsamlega sláðu inn titil á greinina."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vinsamlega settu inn útdrátt fyrir greinina."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Útdrátturinn er of langur. Vinsamlega styttu hann niður fyrir tilgreindan "
+"leyfilegan orðafjölda."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vinsamlega veldur hlutverk fyrir þennan framlagsaðila."

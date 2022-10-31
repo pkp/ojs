@@ -237,3 +237,20 @@ msgstr "Tagh iris airson a chur air an sgeideal airson foillseachadh"
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neo-ghnìomhach)"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Tha feum air co-dhiù aon ùghdar."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Cuir a-steach tiotal an artaigil seo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Cuir a-steach geàrr-chunntas an artaigil agad."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Tha an geàrr-chunntas agad ro fhada. Dèan nas giorra e gus an gèill e ri "
+"crìoch nam faclan aig an earrann seo."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Tagh dreuchd neach-pàirteachaidh."

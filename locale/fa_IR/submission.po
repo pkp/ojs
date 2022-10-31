@@ -129,3 +129,15 @@ msgstr "هر بخشی"
 msgid "submission.queries.production"
 msgstr "گفتگوی انتشار"
 
+
+msgid "submission.submit.form.authorRequired"
+msgstr "تعریف حداقل یک نویسنده الزامی است"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "لطفاً عنوان مقاله خود را وارد کنید"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "لطفاً چکیده مقاله خود را وارد کنید"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "لطفا نقش مشارکت کننده را انتخاب کنید."

@@ -387,3 +387,18 @@ msgstr ""
 "Impossible de créer un DOI pour la soumission suivante : {$pubObjectTitle}. "
 "La soumission doit être assignée à un numéro avant qu'un DOI puisse être "
 "généré."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Au moins un-e auteur-e est requis-e."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Veuillez inscrire le titre de votre article."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Veuillez inscrire le résumé de votre article."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée pour cette rubrique."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Sélectionner le rôle du,de la contributeur-trice."

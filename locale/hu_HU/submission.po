@@ -313,3 +313,18 @@ msgstr ""
 "Minden megjelentetési feltétel rendben van. Azonnal publikálásra kerül, "
 "mivel a megjelentetési dátumnak ez lett beállítva: {$datePublished}. "
 "Biztosan meg szeretné jelentetni ezt?"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Legalább egy szerző kötelező."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Kérjük, adja meg a cikk címét."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Kérjük, adja meg a cikk absztraktját."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Az absztrakt túl hosszú. Kérjük, rövidítse le azt az alább megadott szóhatár alá."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Kérjük, válassza ki a közreműködő szerepkörét."

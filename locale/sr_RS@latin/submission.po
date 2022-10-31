@@ -126,3 +126,15 @@ msgstr "Postavite na server fajlove u vezi ovog članka uključujući sam člana
 msgid "submission.queries.production"
 msgstr "Produkcione diskusije"
 
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Potreban je barem jedan autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Unesite naslov rada"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Unesite apstrakt rada."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Odaberite ulogu saradnika."

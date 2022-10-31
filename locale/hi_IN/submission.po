@@ -290,3 +290,28 @@ msgstr "में एक नया सबमिशन शुरू करें"
 
 msgid "submission.title"
 msgstr "लेख का शीर्षक"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "कम से कम एक लेखक की आवश्यकता है ।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "submission.submit.form.titleRequired"
+msgstr "कृपया अपने लेख का शीर्षक दर्ज करें ।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submit.form.abstractRequired"
+msgstr "कृपया अपने लेख का सार दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"आपका सार बहुत लंबा है। कृपया इस अनुभाग के लिए इंगित शब्द सीमा के नीचे इसे "
+"छोटा करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "कृपया योगदानकर्ता की भूमिका का चयन करें।"
+
+# (pofilter) endpunc: Different punctuation at the end

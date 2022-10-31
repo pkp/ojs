@@ -330,3 +330,25 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Acesta a fost atribuit  lui<a href=\"{$issueUrl}\">{$issueName}</a>, dar nu "
 "a fost programat pentru publicare."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Aceasta este o previzualizare și nu a fost publicată. <a href=\"{$url}\">"
+"Vedeți contribuția</a>"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Este necesar cel puțin un autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Introduceți titlul manuscrisului."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Introduceți rezumatul manuscrisului."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Rezumatul este prea lung. Vă rugăm să îl scurtați până la limita de cuvinte "
+"indicată pentru această secțiune."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vă rugăm să selectați rolul contributorului."

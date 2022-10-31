@@ -287,3 +287,18 @@ msgstr "巻号を変更"
 
 msgid "publication.assignedToIssue"
 msgstr "これは <a href=\"{$issueUrl}\">{$issueName}</a> に割り当てられていますが、公開が予定されていません。"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "著者は最低1名必要です。"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "投稿のタイトルを入力してください。"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "投稿の概要を入力してください。"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "要旨が長すぎます。このセクションで示されている制限語数以下に短縮してください。"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "寄稿者の役割を選択してください。"

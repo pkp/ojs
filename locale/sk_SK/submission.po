@@ -224,3 +224,20 @@ msgstr ""
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktívne)"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadovaný minimálne jeden autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, názov vášho článku."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vášho článku."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Váš abstrakt je príliš dlhý. Skráťte ho, prosím na počet slov podľa limitu "
+"stanoveného pre túto sekciu."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvoľte, prosím, rolu autora."
