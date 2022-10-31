@@ -3,8 +3,8 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-11 20:06+0000\n"
-"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
+"PO-Revision-Date: 2022-10-31 08:02+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
 "Language: bg_BG\n"
@@ -423,3 +423,9 @@ msgstr ""
 "Не можа да се създаде DOI за следното подаване на материали: "
 "{$pubObjectTitle}. Подадените материали трябва да бъдат присвоени към брой, "
 "преди да може да се генерира DOI."
+
+msgid "submission.layout.viewGalley"
+msgstr "Преглед на типографията"
+
+msgid "galley.cantEditPublished"
+msgstr "Тази типография не може да се редактира, защото вече е публикувана."
