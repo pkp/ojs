@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-10-27 09:01+0000\n"
+"PO-Revision-Date: 2022-10-31 09:02+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -2290,3 +2290,46 @@ msgstr "Notificação de Acesso Aberto"
 
 msgid "mailable.issuePublishNotify.name"
 msgstr "Notificação de Edição Publicada"
+
+msgid "stats.issues.details"
+msgstr "Consultas e Downloads"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Total de downloads por data"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Procure pelo título do número, volume e número"
+
+msgid "stats.issues.none"
+msgstr ""
+"Não foram encontrados números com estas opções de pesquisa que contenham "
+"estatísticas de uso."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Descarregue um ficheiro CSV/Excel com as estatísticas de uso para os números "
+"com os parâmetros definidos."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "O número de consultas ao índice e ficheiros de cada número."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Descarregar Números"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} de {$total} números"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Sobre as estatísticas"
+
+msgid "stats.issueStats"
+msgstr "Estatísticas do Número"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Total de visualizações por data"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Visualizações</strong>: Número de visitas ao índice do "
+"número.<br><strong>Downloads</strong>: Número de downloads do número, caso "
+"exista."
