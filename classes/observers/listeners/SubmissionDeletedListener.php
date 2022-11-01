@@ -20,7 +20,6 @@ namespace APP\observers\listeners;
 use APP\article\ArticleTombstoneManager;
 
 use APP\core\Application;
-use APP\facades\Repo;
 use Illuminate\Events\Dispatcher;
 use PKP\observers\events\SubmissionDeleted;
 
@@ -42,24 +41,19 @@ class SubmissionDeletedListener
      */
     public function handle(SubmissionDeleted $event): void
     {
-        $submission = Repo::submission()->get($event->submissionId);
-        if (!$submission) {
-            return;
-        }
-
         $sectionDao = Application::get()->getSectionDao();
-        $section = $sectionDao->getById($submission->getSectionId());
+        $section = $sectionDao->getById($event->submission->getSectionId());
         if (!$section) {
             return;
         }
 
         $contextDao = Application::get()->getContextDao();
-        $context = $contextDao->getById($submission->getContextId());
+        $context = $contextDao->getById($event->submission->getContextId());
         if (!$context) {
             return;
         }
 
         $articleTombstoneManager = new ArticleTombstoneManager();
-        $articleTombstoneManager->insertArticleTombstone($submission, $context, $section);
+        $articleTombstoneManager->insertArticleTombstone($event->submission, $context, $section);
     }
 }

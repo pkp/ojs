@@ -16,19 +16,9 @@ namespace APP\submission;
 use PKP\db\DAOResultFactory;
 use PKP\db\Generator;
 use PKP\identity\Identity;
-use PKP\observers\events\SubmissionDeleted;
 
 class DAO extends \PKP\submission\DAO
 {
-    /**
-     * @copydoc \PKP\core\EntityDAO::deleteById()
-     */
-    public function deleteById(int $id)
-    {
-        event(new SubmissionDeleted($id));
-        parent::deleteById($id);
-    }
-
     /**
      * Get all published submissions (eventually with a pubId assigned and) matching the specified settings.
      *
