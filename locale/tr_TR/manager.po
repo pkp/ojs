@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-10-31 10:02+0000\n"
+"PO-Revision-Date: 2022-11-01 19:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -2422,3 +2422,31 @@ msgstr "Tarihe göre toplam indirme"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr "Sayı başlığı, cilt ve numarasından arayın"
+
+msgid "stats.issues.none"
+msgstr ""
+"Bu parametrelerle eşleşen kullanım istatistikleri için herhangi bir sayı "
+"bulunamadı."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Aşağıdaki parametrelerle eşleşen sayılar için kullanım istatistiklerini "
+"içeren bir CSV/Excel tablosu indirin."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "Her sayı için görüntülenme ve indirilme sayısı."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Sayı İndirilmeleri"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} / {$total} sayı"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Sayı istatistikleri hakkında"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Görüntüle</strong>: Sayının içindekiler tablosunu görüntüleyen "
+"ziyaretçi sayısı.<br><strong>İndirme</strong>: Sayı dosyalarının indirilme "
+"sayısı."
