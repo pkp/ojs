@@ -145,7 +145,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @return array (int, int)
 	 */
 	function getSetJournalSectionId($journalSpec, $sectionSpec, $restrictJournalId = null) {
-		$journal =& $this->journalDao->getByPath($journalSpec);
+		$journal = $this->journalDao->getByPath($journalSpec);
 		if (!isset($journal) || (isset($restrictJournalId) && $journal->getId() != $restrictJournalId)) {
 			return array(0, 0);
 		}
