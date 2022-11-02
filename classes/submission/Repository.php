@@ -63,10 +63,6 @@ class Repository extends \PKP\submission\Repository
         return $bySections;
     }
 
-<<<<<<< HEAD
-    /** @copydoc \PKP\submission\Repo::updateStatus() */
-    public function updateStatus(Submission $submission, ?int $newStatus = null, ?PKPSection $section = null)
-=======
     public function validateSubmit(Submission $submission, Context $context): array
     {
         $errors = parent::validateSubmit($submission, $context);
@@ -112,8 +108,7 @@ class Repository extends \PKP\submission\Repository
         return $errors;
     }
 
-    public function updateStatus(Submission $submission, ?int $newStatus = null)
->>>>>>> d9ed277506... pkp/pkp-lib#7191 Implement new submission wizard
+    public function updateStatus(Submission $submission, ?int $newStatus = null, ?PKPSection $section = null)
     {
         $oldStatus = $submission->getData('status');
         parent::updateStatus($submission, $newStatus, $section);
