@@ -25,6 +25,7 @@ use APP\controllers\grid\issues\form\IssueForm;
 use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\facades\Repo;
+use APP\file\PublicFileManager;
 use APP\issue\Collector;
 use APP\Jobs\Notifications\IssuePublishedMailUsers;
 use APP\notification\Notification;
