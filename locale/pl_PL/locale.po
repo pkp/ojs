@@ -1914,9 +1914,6 @@ msgstr "Musisz zalogować się, aby dokonać płatności."
 msgid "installer.localeInstructions"
 msgstr "Podstawowy język wykorzystywany przez OJS. Zapoznaj się z dokumentacją, jeżeli jesteś zainteresowany(a) wspieraniem języka nie zamieszczonego na liście."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Wybierz języki. Te języki będą dostępne do wykorzystania na stronie. Dodatkowe języki mogą być doinstalowane w dowolnym czasie z poziomu interfejsu administratora."
-
 msgid "installer.filesDirInstructions"
 msgstr "Wpisz pełna ścieżkę do istniejącego katalogu na pliki. Ten katalog nie może być publicznie dostępny. <strong>Upewnij się, że katalog istnieje i posiada uprawnienia do zapisu przed instalacją. </strong> Ścieżki w systemie Windows powinny zawierać znaki odwrotnych ukośników (forward slash), np. \"C:/myjournal/files\"."
 

@@ -542,6 +542,7 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please contact me."
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "{$recipientName}:<br />\n"

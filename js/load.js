@@ -22,6 +22,7 @@ import ImportExportPage from '@/components/Container/ImportExportPage.vue';
 import SettingsPage from '@/components/Container/SettingsPage.vue';
 import StatsEditorialPage from '@/components/Container/StatsEditorialPage.vue';
 import StatsPublicationsPage from '@/components/Container/StatsPublicationsPage.vue';
+import StatsIssuesPage from '@/components/Container/StatsIssuesPage.vue';
 import StatsUsersPage from '@/components/Container/StatsUsersPage.vue';
 import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
 import JobsPage from '@/components/Container/JobsPage.vue';
@@ -44,6 +45,7 @@ window.pkp = Object.assign(PkpLoad, {
 		SettingsPage,
 		StatsEditorialPage,
 		StatsPublicationsPage,
+		StatsIssuesPage,
 		StatsUsersPage,
 		WorkflowPage
 	}

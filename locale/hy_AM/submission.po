@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-15 20:43+0000\n"
+"PO-Revision-Date: 2022-10-20 08:01+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hy_AM/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
@@ -417,3 +417,9 @@ msgid "doi.submission.issueMissing.publication"
 msgstr ""
 "Չհաջողվեց ստեղծել DOI հետևյալ ներկայացման համար՝ {$pubObjectTitle}: "
 "Ներկայացումը պետք է նշանակվի թողարկմանը, նախքան DOI-ի ստեղծումը:"
+
+msgid "submission.layout.viewGalley"
+msgstr "Դիտել շարվածքը"
+
+msgid "galley.cantEditPublished"
+msgstr "Այս շարվածքը հնարավոր չէ խմբագրել, քանի որ այն արդեն հրապարակվել է:"

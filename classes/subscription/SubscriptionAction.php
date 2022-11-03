@@ -49,8 +49,8 @@ class SubscriptionAction
             ->sender($request->getUser())
             ->replyTo($subscriptionContactEmail, $subscriptionContactName)
             ->to($subscriptionContactEmail, $subscriptionContactName)
-            ->subject($template->getData('subject', $journal->getPrimaryLocale()))
-            ->body($template->getData('body', $journal->getPrimaryLocale()));
+            ->subject($template->getLocalizedData('subject', $journal->getPrimaryLocale()))
+            ->body($template->getLocalizedData('body', $journal->getPrimaryLocale()));
 
         try {
             Mail::send($mailable);

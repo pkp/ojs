@@ -19,6 +19,7 @@ use APP\core\Services;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use PKP\context\Context;
+use PKP\context\PKPSection;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiActionException;
 
@@ -60,10 +61,10 @@ class Repository extends \PKP\submission\Repository
     }
 
     /** @copydoc \PKP\submission\Repo::updateStatus() */
-    public function updateStatus(Submission $submission, ?int $newStatus = null)
+    public function updateStatus(Submission $submission, ?int $newStatus = null, ?PKPSection $section = null)
     {
         $oldStatus = $submission->getData('status');
-        parent::updateStatus($submission, $newStatus);
+        parent::updateStatus($submission, $newStatus, $section);
         $newStatus = $submission->getData('status');
 
         // Add or remove tombstones when submission is published or unpublished
@@ -78,7 +79,11 @@ class Repository extends \PKP\submission\Repository
                 $context = Services::get('context')->get($submission->getData('contextId'));
             }
             $articleTombstoneManager = new ArticleTombstoneManager();
-            $articleTombstoneManager->insertArticleTombstone($submission, $context);
+            if (!$section) {
+                $sectionDao = Application::get()->getSectionDAO();
+                $section = $sectionDao->getById($submission->getSectionId());
+            }
+            $articleTombstoneManager->insertArticleTombstone($submission, $context, $section);
         }
     }
 

@@ -1,9 +1,10 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-03 08:14+0000\n"
-"Last-Translator: OBIDJON ABDULLOYEV <obidjon1987@mail.ru>\n"
+"PO-Revision-Date: 2022-10-24 13:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/default/uz_UZ@"
 "latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr ""

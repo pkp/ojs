@@ -1921,13 +1921,6 @@ msgstr ""
 "zapsatelný.</strong> Vo Windowse by mala cesta obsahovať lomítka, napr .: \""
 "C:/myjournal/files\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Zvoľte akékoľvek doplnkové jazyky, ktoré majú byť podporované v tomto "
-"systéme. Tieto jazyky budú dostupné na použitie v časopisoch hostovaných na "
-"tejto stránke. Doplnkové jazyky môžu byť tiež kedykoľvek nainštalované cez "
-"webové administračné rozhranie."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Predvolený jazyk pre použitie tohto systému. Pokiaľ Vás zaujíma podpora "

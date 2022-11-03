@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TemplateManager
+ *
  * @ingroup template
  *
  * @brief Class for accessing the underlying template engine.
@@ -19,8 +20,12 @@ namespace APP\template;
 
 use APP\core\Application;
 use APP\file\PublicFileManager;
+use PKP\context\Context;
+use PKP\facades\Locale;
+use PKP\i18n\LocaleMetadata;
 use PKP\security\Role;
 use PKP\session\SessionManager;
+use PKP\site\Site;
 use PKP\template\PKPTemplateManager;
 
 class TemplateManager extends PKPTemplateManager
@@ -46,8 +51,9 @@ class TemplateManager extends PKPTemplateManager
              * installer pages).
              */
 
-            $context = $request->getContext();
-            $site = $request->getSite();
+            $context = $request->getContext(); /** @var Context $context */
+            $site = $request->getSite(); /** @var Site $site */
+            $allLocales = Locale::getLocales();
 
             $publicFileManager = new PublicFileManager();
             $siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
@@ -67,7 +73,11 @@ class TemplateManager extends PKPTemplateManager
                     'siteTitle' => $context->getLocalizedName(),
                     'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId()),
                     'primaryLocale' => $context->getPrimaryLocale(),
-                    'supportedLocales' => $context->getSupportedLocaleNames(),
+                    'supportedLocales' => Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
+                        $context->getSupportedLocales(),
+                        $allLocales,
+                        LocaleMetadata::LANGUAGE_LOCALE_ONLY
+                    ),
                     'numPageLinks' => $context->getData('numPageLinks'),
                     'itemsPerPage' => $context->getData('itemsPerPage'),
                     'enableAnnouncements' => $context->getData('enableAnnouncements'),
@@ -90,7 +100,11 @@ class TemplateManager extends PKPTemplateManager
                     'disableUserReg' => empty($contextsForRegistration),
                     'siteTitle' => $site->getLocalizedTitle(),
                     'primaryLocale' => $site->getPrimaryLocale(),
-                    'supportedLocales' => $site->getSupportedLocaleNames(),
+                    'supportedLocales' => Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
+                        $site->getSupportedLocales(),
+                        $allLocales,
+                        LocaleMetadata::LANGUAGE_LOCALE_ONLY
+                    ),
                     'pageFooter' => $site->getLocalizedData('pageFooter'),
                 ]);
             }
@@ -113,7 +127,7 @@ class TemplateManager extends PKPTemplateManager
 
         $router = $request->getRouter();
         $handler = $router->getHandler();
-        $userRoles = (array) $handler->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $userRoles = (array) $handler->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
 
         $menu = (array) $this->getState('menu');
 
@@ -124,7 +138,6 @@ class TemplateManager extends PKPTemplateManager
                 'url' => $router->url($request, null, 'manageIssues'),
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues',
             ];
-
             $index = array_search('submissions', array_keys($menu));
             if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
@@ -133,6 +146,18 @@ class TemplateManager extends PKPTemplateManager
                     + ['issues' => $issuesLink]
                     + array_slice($menu, $index + 1, null, true);
             }
+        }
+
+        if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
+            $statsIssuesLink = [
+                'name' => __('editor.navigation.issues'),
+                'url' => $router->url($request, null, 'stats', 'issues', 'issues'),
+                'isCurrent' => $router->getRequestedPage($request) === 'stats' && $router->getRequestedOp($request) === 'issues',
+            ];
+            $statsPublicationsIndex = array_search('publications', array_keys($menu['statistics']));
+            $menu['statistics']['submenu'] = array_slice($menu['statistics']['submenu'], 0, $statsPublicationsIndex + 1, true) +
+                ['issues' => $statsIssuesLink] +
+                array_slice($menu['statistics']['submenu'], $statsPublicationsIndex + 1, null, true);
         }
 
         // Add payments link before settings

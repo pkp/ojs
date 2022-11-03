@@ -50,9 +50,7 @@ class DepositIssue extends BaseJob
         $issue = Repo::issue()->get($this->issueId);
 
         if (!$issue || !$this->agency) {
-            $this->failed(new JobException(JobException::INVALID_PAYLOAD));
-
-            return;
+            throw new JobException(JobException::INVALID_PAYLOAD);
         }
         $retResults = $this->agency->depositIssues([$issue], $this->context);
     }

@@ -175,8 +175,8 @@ class ManualPaymentPlugin extends PaymethodPlugin
                 $mailable
                     ->sender($user)
                     ->to($context->getData('contactEmail'), $context->getData('contactName'))
-                    ->subject($template->getData('subject', $locale))
-                    ->body($template->getData('body', $locale));
+                    ->subject($template->getLocalizedData('subject', $locale))
+                    ->body($template->getLocalizedData('body', $locale));
 
                 Mail::send($mailable);
 

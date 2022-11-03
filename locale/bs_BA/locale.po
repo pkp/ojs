@@ -2058,13 +2058,6 @@ msgstr ""
 "dokumentaciju ako ste zainteresirani za podršku za jezike koji nisu "
 "izlistani ovdje."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Odaberite bilo koji dodatni jezik koji želite podržati u ovom sustavu. Ti "
-"jezici će biti omogućeni za korištenje za časopise udomaćene na stranici. "
-"Dodatni jezici također mogu biti instalirani u bilo koje vrijeme iz sučelja "
-"za administraciju stranice."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Unesite puno ime putanje prema postojećem direktoriju gdje će se "

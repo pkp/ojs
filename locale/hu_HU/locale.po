@@ -1874,9 +1874,6 @@ msgstr "A szerveren engedélyezett maximálisan feltölthető fájlméret: <stro
 msgid "installer.localeInstructions"
 msgstr "A rendszer által használt elsődleges nyelv. Kérem, nézze meg az OJS dokumentációt, ha olyan nyelvek is érdeklik, amelyek nem szerepelnek az alábbi listában."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Válasszon a rendszer által támogatott további nyelvek közül. Ezek a nyelvek elérhetőek lesznek a rendszerben megtalálható folyóiratoknál. Bármikor további nyelvek is telepíthetőek az adminisztrációs oldalon."
-
 msgid "installer.filesDirInstructions"
 msgstr "Adja meg a teljes elérési útvonalát annak a létező könyvtárnak, ahol a feltöltött fájlokat fogja tárolni. Ezt a könyvtárat nem szabad közvetlenül a webről elérni. <strong>Mielőtt telepít kérem, győződjön meg arról, hogy létezik a könyvtár és írható.</strong> A Windows útvonal nevében használjon perjeleket, pl. \"C:/myjournal/files\"."
 

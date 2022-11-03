@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-08-27 16:50+0000\n"
+"PO-Revision-Date: 2022-10-02 13:01+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "sl_SI/>\n"
@@ -107,7 +107,6 @@ msgstr ""
 "Hvala lepa,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Potrdite svoj račun"
 
@@ -275,7 +274,6 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Boste lahko opravili to recenzijo za nas?"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Ta email je avtomatičen opomnik od "
@@ -291,7 +289,6 @@ msgstr ""
 "lahko obrnete name.</p><p>Zahvaljujemo se vam za sprejetje prošnje in se vam "
 "za vašo pomoč zahvaljujemo.</p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Prošnja za recenzijo spremenjenega prispevka"
 
@@ -362,11 +359,9 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Opomnik za recenzijo prispevka"
+msgstr "Opomnik za končanje recenzije prispevka"
 
-#, fuzzy
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Prijazen opomnik za našo prošnjo za "
@@ -375,14 +370,12 @@ msgstr ""
 "takoj, ko ste jo pripravljeni opraviti.</p><p>Prijavite se v sistem in "
 "sledite recenzijskim korakom, da boste lahko videli prispevek, naložili "
 "recenzijske datotek in oddali vaše recenzijsko mnenje.</p><p>Če bi želeli "
-"podaljšati rok, se prosim obrnite name. Se že veselim vašega odziva.</p><p>"
-"Hvala lepa že vnaprej in s spoštovanjem,</p>{$signature}"
+"podaljšati rok, se prosim obrnite name. Se že veselim vašega odziva.</"
+"p><p>Hvala lepa že vnaprej in s spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Opomnik za recenzijo prispevka"
+msgstr "Opomnik za koknčanje recenzije prispevka"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Ta email je avtoamtski opomnik za našo "
@@ -390,16 +383,13 @@ msgstr ""
 "{$contextName}. </p><p>Recenzijo pričakujemo opravljeno do {$reviewDueDate}, "
 "a bi je bili veseli takoj, ko ste jo pripravljeni opraviti.</p><p>Prijavite "
 "se v sistem in sledite recenzijskim korakom, da boste lahko videli "
-"prispevek, naložili recenzijske datotek in oddali vaše recenzijsko "
-"mnenje.</p><p>Če bi želeli podaljšati rok, se prosim obrnite name. Se že "
-"veselim vašega odziva.</p><p>Hvala lepa že vnaprej in s "
-"spoštovanjem,</p>{$signature}"
+"prispevek, naložili recenzijske datotek in oddali vaše recenzijsko mnenje.</"
+"p><p>Če bi želeli podaljšati rok, se prosim obrnite name. Se že veselim "
+"vašega odziva.</p><p>Hvala lepa že vnaprej in s spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Vaš prispevek je bil sprejet pri reviji {$contextName}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Veseli me, da vam lahko sporočim, da "
@@ -411,18 +401,16 @@ msgstr ""
 "revije {$contextName}, povabljeni ste, da ga dodate na seznam vaših objav. "
 "Zavedamo se težkega dela, ki je potreben za dober prispevek in vam "
 "čestitamo, da ste pripeljali prispevek do objave.</p><p>Vaš prispevek bo šel "
-"sedaj še v postopek lektoriranja in oblikovanja, da bo primeren za "
-"objavo.</p><p>Kmalu boste prejeli nadaljna navodila.</p><p>Če imate kakšno "
-"vprašanje, se name lahko obrnete preko vaše <a href=\"{$submissionUrl}\">"
-"nadzorne plošče prispevkov</a>.</p><p>S spoštovanjem,</p>{$signature}"
+"sedaj še v postopek lektoriranja in oblikovanja, da bo primeren za objavo.</"
+"p><p>Kmalu boste prejeli nadaljna navodila.</p><p>Če imate kakšno vprašanje, "
+"se name lahko obrnete preko vaše <a href=\"{$submissionUrl}\">nadzorne "
+"plošče prispevkov</a>.</p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr ""
 "Prispevek {$submissionId} je pripravljen za produkcijo pri reviji "
 "{$contextAcronym}"
 
-#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Nov prispevek je pripravljen za "
@@ -436,22 +424,20 @@ msgstr ""
 "imate kakšno vprašanje, se prosim obrnite name. Hvala za vaš trud za to "
 "publikacijo.</p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Prelom končan"
 
-#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
 "<br />\n"
-"Prelom za prispevka, &quot;{$submissionTitle},&quot; za publikacijo {$contextName} je končan in pripravljen za korekturo.<br />\n"
+"Prelom za prispevka, &quot;{$submissionTitle},&quot; za publikacijo "
+"{$contextName} je končan in pripravljen za korekturo.<br />\n"
 "<br />\n"
 "Če imate kakšna vprašanja, se prosim obrnite name.<br />\n"
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.emailLink.subject"
 msgstr "Zanimiv prispevek"
 
@@ -781,7 +767,6 @@ msgstr "Prosimo, vnesite vaše sporočilo."
 msgid "emails.notificationCenterDefault.description"
 msgstr "Privzeto (prazno) sporočilo, ki se uporablja v centru za obvestila."
 
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Spoštovani {$recipientName},</p><p>Pred kratkim smo preklicali prošnjo za "
@@ -790,10 +775,9 @@ msgstr ""
 "pripravljeni opraviti to recenzijo.</p><p>Če ste nam pripravljeni pomagati, "
 "vas prosimo, da se prijavite v sistem za urejanje naše revije, da pogledate "
 "prispevek, naložite recenzirane datoteke in oddate vaše recenzijsko "
-"priporočilo.</p><p>Če imate kakršnakoli vprašanja, se prosim obrnite "
-"name.</p><p>S spoštovanjem,</p>{$signature}"
+"priporočilo.</p><p>Če imate kakršnakoli vprašanja, se prosim obrnite name.</"
+"p><p>S spoštovanjem,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Ali lahko še vedno opravite recenzijo pri {$contextName}?"
 

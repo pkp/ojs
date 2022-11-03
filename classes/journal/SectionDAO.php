@@ -262,7 +262,7 @@ class SectionDAO extends PKPSectionDAO
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [
                 (int)$section->getJournalId(),
-                (int)$section->getReviewFormId(),
+                $section->getReviewFormId(),
                 (float) $section->getSequence(),
                 $section->getMetaIndexed() ? 1 : 0,
                 $section->getMetaReviewed() ? 1 : 0,
@@ -302,7 +302,7 @@ class SectionDAO extends PKPSectionDAO
 					abstract_word_count = ?
 				WHERE section_id = ?',
             [
-                (int)$section->getReviewFormId(),
+                $this->nullOrInt($section->getReviewFormId()),
                 (float) $section->getSequence(),
                 (int)$section->getMetaIndexed(),
                 (int)$section->getMetaReviewed(),
@@ -531,16 +531,6 @@ class SectionDAO extends PKPSectionDAO
             $this->update('UPDATE sections SET seq = ? WHERE section_id = ?', [$i, $row->section_id]);
             $result->next();
         }
-    }
-
-    /**
-     * Get the ID of the last inserted section.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('sections', 'section_id');
     }
 
     /**

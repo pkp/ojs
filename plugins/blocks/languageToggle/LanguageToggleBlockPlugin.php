@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LanguageToggleBlockPlugin
+ *
  * @brief Class for language selector block plugin
  */
 
@@ -67,16 +68,18 @@ class LanguageToggleBlockPlugin extends BlockPlugin
     public function getContents($templateMgr, $request = null)
     {
         $templateMgr->assign('isPostRequest', $request->isPost());
+
         if (!SessionManager::isDisabled()) {
-            $journal = $request->getJournal();
-            if (isset($journal)) {
-                $locales = $journal->getSupportedLocaleNames();
-            } else {
-                $site = $request->getSite();
-                $locales = $site->getSupportedLocaleNames();
-            }
+            $context = $request->getContext();
+            $locales = Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
+                isset($context)
+                    ? $context->getSupportedLocales()
+                    : $request->getSite()->getSupportedLocales(),
+                Locale::getLocales(),
+                LocaleMetadata::LANGUAGE_LOCALE_ONLY
+            );
         } else {
-            $locales = array_map(fn (LocaleMetadata $locale) => $locale->getDisplayName(), Locale::getLocales());
+            $locales = Locale::getFormattedDisplayNames(null, null, LocaleMetadata::LANGUAGE_LOCALE_ONLY);
             $templateMgr->assign('languageToggleNoUser', true);
         }
 

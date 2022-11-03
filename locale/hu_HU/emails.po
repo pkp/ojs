@@ -1,24 +1,24 @@
 # Molnár Tamás <molnart@bibl.u-szeged.hu>, 2021.
+# Zsombor Fritz <zsombor.fritz@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:53+00:00\n"
-"PO-Revision-Date: 2021-07-08 13:00+0000\n"
-"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
-"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/emails/hu/"
-">\n"
+"PO-Revision-Date: 2022-10-09 23:01+0000\n"
+"Last-Translator: Zsombor Fritz <zsombor.fritz@gmail.com>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
+"hu_HU/>\n"
 "Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.notification.subject"
 msgstr "Új értesítés a(z) {$contextName} oldaltól"
 
-#, fuzzy
 msgid "emails.notification.body"
 msgstr ""
 "Önnek új értesítése van a(z) {$contextName} oldaltól:<br />\n"
@@ -70,16 +70,16 @@ msgstr ""
 "Üdvözlettel,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Hitelesítse fiókját"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Tisztelt {$recipientName}!<br />\n"
 "<br />\n"
-"Sikeresen létrehozta felhasználói fiókját a(z) {$contextName} folyóirathoz, melynek használatba vételéhez kérjük, hitelesítse email címét az alábbi hivatkozás segítségével:<br />\n"
+"Sikeresen létrehozta felhasználói fiókját a(z) {$contextName} folyóirathoz, "
+"melynek használatba vételéhez kérjük, hitelesítse email címét az alábbi "
+"hivatkozás segítségével:<br />\n"
 "<br />\n"
 "{$activateUrl}<br />\n"
 "<br />\n"
@@ -702,3 +702,7 @@ msgstr ""
 #, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "Ismételt felkérés lektorálásra"
+
+#, fuzzy
+msgid "emails.userValidateSite.subject"
+msgstr "Kérjük, hitelesítse email címét"

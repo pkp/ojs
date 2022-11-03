@@ -1801,12 +1801,6 @@ msgstr ""
 "Primarni jezik, ki se bo uporabljal na sistemu. Preverite OJS dokumentacijo, "
 "če vas zanima podpora jezikov, ki tukaj niso naštetil."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Izberite dodatne jezike, ki bodo podprti na sistemu. Ti jeziki bodo na voljo "
-"za uporabo pri posameznih revijah na sistemu. Dodatne jezike lahko dodate "
-"tudi kasneje v administratorskem vmesniku."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Vnesite celotno pot do obstoječe mape, kjer se bodo shranjevale naložene "

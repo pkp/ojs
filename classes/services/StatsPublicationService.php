@@ -15,39 +15,14 @@
 
 namespace APP\services;
 
-use APP\core\Application;
-use APP\facades\Repo;
-use APP\submission\Submission;
+use APP\services\queryBuilders\StatsPublicationQueryBuilder;
 
 class StatsPublicationService extends \PKP\services\PKPStatsPublicationService
 {
-    /**
-     * A helper method to get the submissionIds param when a issueIds
-     * param is also passed.
-     *
-     * If the issueIds and submissionIds params were both passed in the
-     * request, then we only return ids that match both conditions.
-     *
-     * @param array $issueIds issue Ids
-     * @param ?array $submissionIds List of allowed submission IDs
-     *
-     * @return array submission IDs
-     */
-    public function getSubmissionIdsByIssue(array $issueIds, ?array $submissionIds): array
+    protected function getAppSpecificFilters(array $args = [], StatsPublicationQueryBuilder &$statsQB): void
     {
-        $issueIdsSubmissionIds = Repo::submission()
-            ->getCollector()
-            ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
-            ->filterByStatus([Submission::STATUS_PUBLISHED])
-            ->filterByIssueIds($issueIds)
-            ->getIds()
-            ->toArray();
-
-        if ($submissionIds !== null && !empty($submissionIds)) {
-            $submissionIds = array_intersect($submissionIds, $issueIdsSubmissionIds);
-        } else {
-            $submissionIds = $issueIdsSubmissionIds;
+        if (!empty(($args['issueIds']))) {
+            $statsQB->filterByIssues($args['issueIds']);
         }
-        return $submissionIds;
     }
 }

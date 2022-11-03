@@ -1887,9 +1887,6 @@ msgstr "Your server currently allows a maximum file upload size of: <strong>{$ma
 msgid "installer.localeInstructions"
 msgstr "The primary language to use for this system. Please consult the OJS documentation if you are interested in support for languages not listed here."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Select any additional languages to support in this system. These languages will be available for use by journals hosted on the site. Additional languages can also be installed at any time from the site administration interface."
-
 msgid "installer.filesDirInstructions"
 msgstr "Enter full pathname to an existing directory where uploaded files are to be kept. This directory should not be directly web-accessible. <strong>Please ensure that this directory exists and is writable prior to installation.</strong> Windows path names should use forward slashes, e.g. \"C:/myjournal/files\"."
 

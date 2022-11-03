@@ -14,7 +14,7 @@
  *
  */
 
-namespace APP\API\v1\stats;
+namespace APP\API\v1\stats\issues;
 
 use APP\core\Application;
 use APP\core\Services;
@@ -191,6 +191,8 @@ class StatsIssueHandler extends APIHandler
      */
     public function getManyTimeline(SlimHttpRequest $slimRequest, APIResponse $response, array $args): APIResponse
     {
+        $responseCSV = str_contains($slimRequest->getHeaderLine('Accept'), APIResponse::RESPONSE_CSV) ? true : false;
+
         $request = $this->getRequest();
 
         $defaultParams = [
@@ -204,6 +206,7 @@ class StatsIssueHandler extends APIHandler
             'dateEnd',
             'timelineInterval',
             'searchPhrase',
+            'type'
         ]);
 
         Hook::call('API::stats::issues::timeline::params', [&$allowedParams, $slimRequest]);
@@ -232,12 +235,19 @@ class StatsIssueHandler extends APIHandler
                 $dateStart = empty($allowedParams['dateStart']) ? StatisticsHelper::STATISTICS_EARLIEST_DATE : $allowedParams['dateStart'];
                 $dateEnd = empty($allowedParams['dateEnd']) ? date('Ymd', strtotime('yesterday')) : $allowedParams['dateEnd'];
                 $emptyTimeline = Services::get('issueStats')->getEmptyTimelineIntervals($dateStart, $dateEnd, $allowedParams['timelineInterval']);
+                if ($responseCSV) {
+                    $csvColumnNames = Services::get('issueStats')->getTimelineReportColumnNames();
+                    return $response->withCSV($emptyTimeline, $csvColumnNames, 0);
+                }
                 return $response->withJson($emptyTimeline, 200);
             }
         }
 
         $data = Services::get('issueStats')->getTimeline($allowedParams['timelineInterval'], $allowedParams);
-
+        if ($responseCSV) {
+            $csvColumnNames = Services::get('issueStats')->getTimelineReportColumnNames();
+            return $response->withCSV($data, $csvColumnNames, count($data));
+        }
         return $response->withJson($data, 200);
     }
 
@@ -294,6 +304,7 @@ class StatsIssueHandler extends APIHandler
             'dateStart',
             'dateEnd',
             'timelineInterval',
+            'type'
         ]);
 
         Hook::call('API::stats::issue::timeline::params', [&$allowedParams, $slimRequest]);
@@ -316,7 +327,6 @@ class StatsIssueHandler extends APIHandler
 
         $statsService = Services::get('issueStats');
         $data = $statsService->getTimeline($allowedParams['timelineInterval'], $allowedParams);
-
         return $response->withJson($data, 200);
     }
 

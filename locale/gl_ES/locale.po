@@ -1981,13 +1981,6 @@ msgstr ""
 "ruta de acceso de Windows teñen que utilizar barras oblicuas, por exemplo: \""
 "C:/amiñarevista/arquivos\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Seleccione as linguas adicionais que queira utilizar neste sistema. Estas "
-"linguas estarán dispoñibles para o seu uso nas revistas aloxadas no sitio "
-"web. Tamén pode instalar linguas adicionais desde a interface de "
-"administración do sitio web en calquera momento."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Lingua principal para este sistema. Consulte a documentación de OJS se "

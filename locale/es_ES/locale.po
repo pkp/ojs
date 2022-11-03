@@ -1556,9 +1556,6 @@ msgstr "Su servidor actualmente permite cargar archivos con un tamaño máximo d
 msgid "installer.localeInstructions"
 msgstr "El idioma principal que se utilizará para este sistema. Consulte la documentación de OJS si está interesado en la compatibilidad de idiomas que no figuran en esta lista."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Seleccione idiomas adicionales para este sistema. Las revistas almacenadas en el sitio tendrán disponibles estos idiomas para su uso. Además, desde la interfaz de administración del sitio se pueden instalar idiomas adicionales en cualquier momento."
-
 msgid "installer.filesDirInstructions"
 msgstr "Introduzca la ruta completa de un directorio existente donde se deban guardar los archivos. Este directorio no debe ser accesible desde la web. <strong>Asegúrese de que este directorio existe y es editable antes de la instalación.</strong> Los nombres de ruta para las ventanas tienen que utilizar barras oblicuas; p. ej. \"C:/mirevista/archivos\"."
 

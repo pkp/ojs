@@ -1,0 +1,116 @@
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-24 09:38+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/admin/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "寄存期刊"
+
+msgid "admin.settings.redirect"
+msgstr "期刊重新導向"
+
+msgid "admin.languages.confirmDisable"
+msgstr "是否確認取消此區性？此會影響所有現正使用此區性的期刊。"
+
+msgid "admin.settings.redirectInstructions"
+msgstr "前往主頁的要求將重新導向至此期刊。此功能在，例如網站只寄存一本期刊時有用。"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "這將會是網站和任何寄存期刊的默認語言。"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "標誌的區性可能尚未完成。"
+
+msgid "admin.languages.confirmUninstall"
+msgstr "是否確認解除此區性的安裝？此會影響所有現正使用此區性的期刊。"
+
+msgid "admin.systemVersion"
+msgstr "OJS版本"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS配置"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>的OJS配置設定。"
+
+msgid "admin.journals.journalSettings"
+msgstr "期刊設定"
+
+msgid "admin.journals.noneCreated"
+msgstr "無期刊被創建。"
+
+msgid "admin.contexts.create"
+msgstr "創建期刊"
+
+msgid "admin.journals.urlWillBe"
+msgstr "此應為識別期刊的簡稱或縮寫。期刊的網址將會是{$sampleUrl}。"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "必須提供標題。"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "必須提供路徑。"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "路徑只能包括字母、數字及符號_和-。起首和結尾必須為字母或數字。"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "你提供的路徑已被另一本期刊採用。"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "基本區性必須為其中一個期刊支援的區性。"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "允許公眾在網站看到此期刊"
+
+msgid "admin.contexts.contextDescription"
+msgstr "期刊描述"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "現有期刊路徑或用作創建的路徑（例如：「ojs」）。"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "導入訂閱"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "必須提供導入路徑。"
+
+msgid "admin.journals.importErrors"
+msgstr "未能完成導入"
+
+msgid "admin.mergeUsers"
+msgstr "合併用戶"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "合併用戶"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "訂閱過期提示"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "開放取用通知"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "評審提示"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "此期ID不是整數。"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "此期校對樣本ID不是整數。"
+
+msgid "admin.siteManagement.description"
+msgstr "從此網站增添、編輯或移除期刊及管理全網站設定。"
+
+msgid "admin.journals.createInstructions"
+msgstr "您將會被加入為此期刊的管理員。創建新期刊後，將引導您到設定精靈，完成最初的期"
+"刊設置。"

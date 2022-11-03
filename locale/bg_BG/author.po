@@ -1,8 +1,9 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-17 16:00+0000\n"
-"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"PO-Revision-Date: 2022-10-11 20:06+0000\n"
+"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "bg_BG/>\n"
 "Language: bg_BG\n"
@@ -289,7 +290,7 @@ msgid "author.submissions.queuedEditingCopyedit"
 msgstr "Цикъл на редакция: Необходима е стилистична корекция"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Цикъл на рецензия:  Необходима е ревизия"
+msgstr "Цикъл на рецензия: Необходима е ревизия"
 
 msgid "author.submissions.queuedReviewSubsequent"
 msgstr "Цикъл на рецензия: (етап {$round})"
@@ -340,7 +341,7 @@ msgid "author.submit.start"
 msgstr "Старт"
 
 msgid "author.submit.step5"
-msgstr "Стъпка 5. Потвърждение на на изпращането"
+msgstr "Стъпка 5. Потвърждение на изпращането"
 
 msgid "author.submit.step4a"
 msgstr "Стъпка 4а. Качване на допълнителен файл"

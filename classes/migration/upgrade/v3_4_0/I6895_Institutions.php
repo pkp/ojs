@@ -69,7 +69,8 @@ class I6895_Institutions extends Migration
 
         // Create the foreign key constraint (now that the values are correct and match the IDs in the parent table)
         Schema::table('institutional_subscriptions', function (Blueprint $table) {
-            $table->foreign('institution_id')->references('institution_id')->on('institutions');
+            $table->foreign('institution_id')->references('institution_id')->on('institutions')->onDelete('cascade');
+            $table->index(['institution_id'], 'institutional_subscriptions_institution_id');
         });
     }
 

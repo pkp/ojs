@@ -33,6 +33,7 @@ class I7129_IssueEntityDAORefactor extends \PKP\migration\Migration
         Schema::table('journals', function (Blueprint $table) {
             $table->bigInteger('current_issue_id')->nullable()->default(null);
             $table->foreign('current_issue_id')->references('issue_id')->on('issues');
+            $table->index(['current_issue_id'], 'journals_current_issue_id');
         });
         $this->transferCurrentStatusToJournal();
         Schema::table('issues', function (Blueprint $table) {

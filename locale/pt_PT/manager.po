@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-05-25 11:33+0000\n"
+"PO-Revision-Date: 2022-10-18 12:01+0000\n"
 "Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.emails.confirmResetAll"
 msgstr "Deseja realmente restaurar todos os e-mails para o padrão original desta revista? Todas as personalizações serão perdidas."
@@ -709,9 +709,10 @@ msgstr "Área do Revisor"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activar Acesso 1-Clique"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Aviso:</strong> O convite ao revisor conterá um URL especial que levará os revisores directamente à página de Revisão para a submissão em questão (sendo necessário realizar a autenticação para aceder a outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos revisores."
+msgstr ""
+"Pode ser enviado aos Revisores um link seguro no e-mail de convite, que lhes "
+"permite entrar no sistema automaticamente quando clicam no link."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Classificação de Revisores"
@@ -1385,10 +1386,9 @@ msgstr "Comprar Número"
 msgid "manager.sections.confirmDelete"
 msgstr "Tem a certeza que pretende eliminar permanentemente esta secção?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
-"Antes de ser eliminada esta secção, tem de mover os artigos publicados para "
+"Antes de ser eliminada esta secção, tem de mover os artigos submetidos para "
 "outras secções."
 
 msgid "manager.setup.resetPermissions"
@@ -2202,3 +2202,46 @@ msgid "mailable.openAccessNotify.description"
 msgstr ""
 "Esta mensagem é enviada a leitores registados que solicitam a receção de "
 "notificações da publicação de novas edições em Acesso Aberto."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "as iniciais da revista"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "O nome da instituição"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Instituição"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Selecione uma instituição válida."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Deve ser criar uma instituição antes de serem feitas novas subscrições."
+
+msgid "stats.issueTOCViews"
+msgstr "Visualizações do sumário da edição"
+
+msgid "stats.issueGalleyViews"
+msgstr "Visualizaçãoes dos Ficheiros da Edição"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "O endereço da instituição"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domínio"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Intervalos de IP para autentição por subscrição"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Descarregue um CSV/folha de cálculo do Excel com estatísticas de uso para os "
+"artigos que correspondam aos seguintes parâmetros."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Descarregar Artigos"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+"O número de visualizações dos resumos e downloads dos ficheiros de cada "
+"artigo."

@@ -1833,9 +1833,6 @@ msgstr "Din server tillåter i nuläget uppladdning av filer med en maxstorlek p
 msgid "installer.localeInstructions"
 msgstr "Primärt språk som systemet ska använda. Se OJS-dokumentationen om du är intresserad av att använda språk som inte listas här."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Välj andra språk som ska stödjas av systemet. De här språken kommer finnas tillgängliga för användning i tidskrifter som sidan är värd för. Ytterligare språk kan installeras när som helst i gränssnittet för webbplatsadministration."
-
 msgid "installer.filesDirInstructions"
 msgstr "Lägg till fullständig sökväg till en existerande katalog där uppladdade filer ska sparas. Katalogen bör inte vara direkt läsbar via webben. <strong>Vänligen försäkra dig före installation om att katalogen existerar och är skrivbar.</strong> Windows-sökvägar ska skrivas snedstreck, t.ex. \"C:/mintidskrift/filer\"."
 

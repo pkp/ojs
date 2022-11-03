@@ -1609,13 +1609,6 @@ msgstr ""
 "Tên đường dẫn Windows nên sử dụng dấu gạch chéo về phía trước, ví dụ: \"C:/"
 "myjournal/files\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Chọn bất kỳ ngôn ngữ bổ sung để hỗ trợ trong hệ thống này. Các ngôn ngữ này "
-"sẽ có sẵn để sử dụng bởi các tạp chí được lưu trữ trên trang web. Các ngôn "
-"ngữ bổ sung cũng có thể được cài đặt bất cứ lúc nào từ giao diện quản trị "
-"trang web."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Ngôn ngữ chính để sử dụng cho hệ thống này. Vui lòng tham khảo tài liệu OJS "

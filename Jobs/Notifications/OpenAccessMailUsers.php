@@ -61,7 +61,7 @@ class OpenAccessMailUsers extends BaseJob
             $templateMgr->assign($mailable->getSmartyTemplateVariables());
 
             $mailable
-                ->subject($template->getData('subject', $locale))
+                ->subject($template->getLocalizedData('subject', $locale))
                 ->body($templateMgr->fetch('payments/openAccessNotifyEmail.tpl'));
 
             $mailable->withSymfonyMessage(function (Message $message) use ($templateMgr) {

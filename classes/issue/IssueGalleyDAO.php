@@ -431,16 +431,6 @@ class IssueGalleyDAO extends \PKP\db\DAO
         $row = $result->current();
         return $row->next_sequence;
     }
-
-    /**
-     * Get the ID of the last inserted gallery.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('issue_galleys', 'galley_id');
-    }
 }
 
 if (!PKP_STRICT_MODE) {

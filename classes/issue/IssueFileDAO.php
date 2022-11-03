@@ -203,16 +203,6 @@ class IssueFileDAO extends DAO
     {
         $this->update('DELETE FROM issue_files WHERE issue_id = ?', [(int) $issueId]);
     }
-
-    /**
-     * Get the ID of the last inserted issue file.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('issue_files', 'file_id');
-    }
 }
 
 if (!PKP_STRICT_MODE) {

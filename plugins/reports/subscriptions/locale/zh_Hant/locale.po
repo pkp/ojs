@@ -1,0 +1,25 @@
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-24 09:38+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/reports-subscriptions/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "訂閱報告"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr "此插件輸出載有訂閱列表及相關資訊的CSV報告。"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "院校郵寄地址"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP範圍"

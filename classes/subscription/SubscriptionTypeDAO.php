@@ -373,16 +373,6 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     }
 
     /**
-     * Get the ID of the last inserted subscription type.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('subscription_types', 'type_id');
-    }
-
-    /**
      * Sequentially renumber subscription types in their sequence order.
      */
     public function resequenceSubscriptionTypes($journalId)

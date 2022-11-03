@@ -1512,9 +1512,6 @@ msgstr ""
 msgid "installer.localeInstructions"
 msgstr "使用本系统的主要语言。如果您有意支持不列在这里的语系，请参见 OJS 的说明文件。"
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "选择额外的语系以支持本系统。这些语言可以被本站的期刊所使用。也可以随时通过网站管理介面来安装额外的语系。"
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "输入一个保存上传文件的既存目录的完整路径名称。这个目录不应该直接通过网页存取。<strong>请确定这个目录存在而且可写入。</strong> "

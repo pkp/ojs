@@ -1695,12 +1695,6 @@ msgstr ""
 "þú setur upp. </strong> Windowsslóðin á að innihalda skástrik sem halla "
 "fram, t.d. \"C:/mitttimarit/skrar\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Veldu hvaða viðbótartungumál sem er fyrir kerfið.  Valin tungumál verða "
-"aðgengileg fyrir þau tímarit sem eru vistuð á síðunni.  Vefstjóri tí"
-"maritsins/síðunnar getur bætti við viðbótartungumáli hvenær sem er."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Aðaltungumál fyrir þetta kerfi. Vinsamlega skoðaðu skjölun af OJS ef þú "

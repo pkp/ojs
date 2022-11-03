@@ -1824,13 +1824,6 @@ msgstr ""
 "Bahasa utama yang digunakan untuk sistem ini. Mohon baca dokumentasi OJS "
 "jika Anda menghendaki bahasa yang tidak tercantum di daftar ini."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Pilih bahasa-bahasa tambahan yang hendak didukung sistem ini. Bahasa-bahasa "
-"ini akan dapat digunakan oleh jurnal-jurnal yang dikelola di sistem ini. "
-"Bahasa tambahan dapat juga diinstal kapan saja dari antarmuka administrasi "
-"situs."
-
 msgid "installer.filesDirInstructions"
 msgstr "Masukkan pathname lengkap direktori yang digunakan untuk menyimpan file yang diunggah. Direktori ini sebaiknya tidak bisa diakses langsung melalui web. <strong>Pastikan direktori ini sudah ada dan writable sebelum instalasi.</strong> Jendela pathname harus menggunakan forward slash (/), contoh \"C:/myjournal/files\"."
 

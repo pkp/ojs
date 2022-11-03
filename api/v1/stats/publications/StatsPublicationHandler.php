@@ -20,4 +20,34 @@ class StatsPublicationHandler extends \PKP\API\v1\stats\publications\PKPStatsPub
 {
     /** @var string The name of the section ids query param for this application */
     public $sectionIdsQueryParam = 'sectionIds';
+
+    protected function getManyAllowedParams()
+    {
+        $params = parent::getManyAllowedParams();
+        $params[] = 'issueIds';
+        return $params;
+    }
+
+    protected function getManyTimelineAllowedParams()
+    {
+        $params = parent::getManyTimelineAllowedParams();
+        $params[] = 'issueIds';
+        return $params;
+    }
+
+    protected function _processParam(string $requestParam, mixed $value): array
+    {
+        if ($requestParam == 'issueIds') {
+            $returnParams = [];
+            if (is_string($value) && str_contains($value, ',')) {
+                $value = explode(',', $value);
+            } elseif (!is_array($value)) {
+                $value = [$value];
+            }
+            $returnParams[$requestParam] = array_map('intval', $value);
+        } else {
+            $returnParams = parent::_processParam($requestParam, $value);
+        }
+        return $returnParams;
+    }
 }

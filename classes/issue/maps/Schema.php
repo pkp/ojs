@@ -9,12 +9,12 @@ use APP\issue\Issue;
 use APP\issue\IssueGalleyDAO;
 use APP\journal\Journal;
 use APP\journal\SectionDAO;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
+use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Genre;
-use Illuminate\Support\LazyCollection;
-use Illuminate\Support\Collection;
 
 class Schema extends \PKP\core\maps\Schema
 {
@@ -207,7 +207,8 @@ class Schema extends \PKP\core\maps\Schema
         $props = $this->mapByProperties([
             '_href',
             'id',
-            'identification'
+            'identification',
+            'publishedUrl'
         ], $issue);
         return $props;
     }

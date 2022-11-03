@@ -1877,9 +1877,6 @@ msgstr "Uw server staat momenteel het laden toe van bestanden met een maximale g
 msgid "installer.localeInstructions"
 msgstr "De primaire taal voor gebruik in dit systeem. Zie de OJS documentatie voor ondersteuning van hier niet genoemde talen."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Selecteer de bijkomende talen voor gebruik in dit systeem. Deze talen kunnen gebruikt worden door de tijdschriften in deze site. Bijkomende talen kunnen op ieder gewenst moment  geïnstalleerd worden bij sitebeheer."
-
 msgid "installer.filesDirInstructions"
 msgstr "Geef het volledige pad naar een bestaande map waar geladen bestanden bewaard moeten worden. Deze map moet niet direct vanaf het web benaderbaar zijn. <strong>Verzeker u ervan dat de map bestaat en erin geschreven mag worden.</strong> Gebruik voor Windows pad-namen voorwaartse schuine strepen, bv. \"C:/myjournal/files\"."
 

@@ -1531,9 +1531,6 @@ msgstr ""
 "Sistema honetan erabiltzeko lehenengo hizkuntza. Zerrendan ez dagoen "
 "hizkuntzaren bat erabili nahi baduzu, kontsultatu OJS dokumentazioa."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Hautatu sistema honetan erabili nahi dituzun beste hizkuntzak. Hizkuntza horiek erabilgarri egongo dira gune honetan ostatatutako aldizkarietan. Hizkuntzak edozein unetan instala daitezke gune-administratzailearen interfazetik."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Idatzi dagoeneko sortuta dagoen direktorio baten bide-izen osoa, igotako "

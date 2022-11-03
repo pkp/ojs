@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-06-14 04:07+0000\n"
+"PO-Revision-Date: 2022-10-03 13:01+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/es_MX/>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Muestra la imagen de la página de inicio como fondo del encabezado."
@@ -70,3 +70,9 @@ msgstr "Este tema implementa el diseño predeterminado."
 
 msgid "plugins.themes.default.name"
 msgstr "Tema predeterminado"
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opciones de visualización de estadísticas de uso"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "No mostrar el gráfico de estadísticas de envíos para el lector."

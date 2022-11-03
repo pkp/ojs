@@ -1,0 +1,22 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/reports-articles/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.reports.articles.displayName"
+msgstr "文章報告"
+
+msgid "plugins.reports.articles.description"
+msgstr "此插件提供一個載有文章及其資料的CSV報告。"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "未有決定"

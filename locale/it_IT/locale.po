@@ -1655,13 +1655,6 @@ msgstr ""
 "documentazione di OJS se sei interessato a gestire altre lingue non in "
 "questo elenco."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Seleziona qualsiasi lingua aggiuntiva da consentire in questo sistema. "
-"Queste lingue saranno rese disponibili per l'uso da parte di tutte le "
-"riviste impostate nel sito. Le lingue aggiuntive possono essere installate "
-"in ogni momento dall'interfaccia dell'amminitratore del sito."
-
 msgid "installer.filesDirInstructions"
 msgstr "Inserisci il percorso completo della cartella dove vengono conservati i file caricati. Questa cartella non dovrebbe essere direttamente accessibile da web. <strong>Assicurati che questa cartella esista e che sia scrivibile prima dell'installazione.</strong> I nomi dei percorsi su Windows utilizzano normali slash, es. \"C:/myjournal/files\"."
 

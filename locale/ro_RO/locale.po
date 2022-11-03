@@ -1937,13 +1937,6 @@ msgstr ""
 "Windows ar trebui să utilizeze bare oblice dreapta, de ex. \"C:/myjournal/"
 "files\"."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr ""
-"Selectați limbile suplimentare pe care le doriți în acest sistem. Aceste "
-"limbi vor fi disponibile pentru utilizare de jurnalele găzduite pe site. "
-"Limbi suplimentare pot fi, de asemenea, instalate în orice moment din "
-"interfața de administrare a site-ului."
-
 msgid "installer.localeInstructions"
 msgstr ""
 "Limba principală utilizată pentru acest sistem. Vă rugăm să consultați "

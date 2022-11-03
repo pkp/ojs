@@ -1,9 +1,10 @@
+# M. Ali <vorteem@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-05T21:18:37+00:00\n"
-"PO-Revision-Date: 2020-06-14 15:54+0000\n"
+"PO-Revision-Date: 2022-09-30 05:01+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/ar_IQ/>\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.manualPaymentNotification.subject"
 msgstr "إشعار الدفع اليدوي"
@@ -31,3 +32,6 @@ msgstr ""
 
 msgid "emails.manualPaymentNotification.description"
 msgstr "قالب هذه الرسالة يستعمل لإشعار رئيس تحرير المجلة أو مدير تحريرها بحدوث مطالبة لدفع المال يدوياً في المجلة."
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr "اسم المستخدم للمستخدم الذي قام بالدفع"

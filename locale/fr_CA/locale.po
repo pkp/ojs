@@ -1844,9 +1844,6 @@ msgstr "Votre serveur permet actuellement de téléverser des fichiers d'une tai
 msgid "installer.localeInstructions"
 msgstr "La langue principale à utiliser pour ce système. Veuillez consulter la documentation d'OJS si vous êtes intéressé-e à prendre en charge des langues qui ne sont pas listées ici."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Sélectionner une ou plusieurs langues supplémentaires à prendre en charge dans ce système. Ces langues seront disponibles pour fins d'utilisation par les revues hébergées sur le site. Des langues supplémentaires peuvent également être installées en tout temps à partir de l'interface d'administration du site."
-
 msgid "installer.filesDirInstructions"
 msgstr ""
 "Saisir le nom du chemin d'accès complet à un répertoire existant où les "

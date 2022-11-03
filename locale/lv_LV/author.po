@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"PO-Revision-Date: 2022-10-18 14:01+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lv_LV/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
@@ -193,7 +193,7 @@ msgstr "Nepieciešams vismaz viens autors."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"Angļu = en; franču = fr; spāņu = es. <a href=\"http://www.loc.gov/standards/"
+"Angļu = en; franču = fr; spāņu = es. <a href=\"https://www.loc.gov/standards/"
 "iso639-2/php/code_list.php\" target=\"_blank\">Citi kodi</a>."
 
 msgid "author.submit.coverageInstructions"
@@ -224,7 +224,7 @@ msgstr ""
 "publikācijā."
 
 msgid "submission.submit.privacyStatement"
-msgstr "Žurnāla Privātuma atruna"
+msgstr "Privātuma atruna"
 
 msgid "author.submit.form.localeRequired"
 msgstr "Lūdzu, izvēlieties materiāla valodu."

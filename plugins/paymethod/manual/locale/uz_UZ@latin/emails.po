@@ -1,9 +1,10 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # Mironshoh Sattorov <s.mironshoh23@gmail.com>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-08 01:00+0000\n"
-"Last-Translator: Mironshoh Sattorov <s.mironshoh23@gmail.com>\n"
+"PO-Revision-Date: 2022-10-24 12:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
 "Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/uz_UZ@latin/>\n"
 "Language: uz_UZ@latin\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.manualPaymentNotification.description"
 msgstr ""
@@ -32,3 +33,6 @@ msgstr ""
 
 msgid "emails.manualPaymentNotification.subject"
 msgstr "Qo'lda to'lov to'g'risida bildirishnoma"
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr "To'lovni amalga oshirgan foydalanuvchining foydalanuvchi nomi"

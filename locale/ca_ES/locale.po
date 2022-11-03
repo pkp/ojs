@@ -1564,9 +1564,6 @@ msgstr "El vostre servidor admet càrregues de fitxers amb una mida màxima de: 
 msgid "installer.localeInstructions"
 msgstr "Llengua principal per a aquest sistema. Consulteu la documentació de l’OJS si necessiteu utilitzar alguna llengua no llistada."
 
-msgid "installer.additionalLocalesInstructions"
-msgstr "Seleccioneu les llengües addicionals que vulgueu utilitzar en aquest sistema. Aquestes llengües estaran disponibles a les revistes allotjades al lloc web. També podeu instal·lar llengües addicionals des de la interfície d’administració del lloc web en qualsevol moment."
-
 msgid "installer.filesDirInstructions"
 msgstr "Introduïu la ruta completa del directori on s’emmagatzemaran els fitxers carregats. Aquest directori no hauria de ser directament accessible a través de la web. <strong>Assegureu-vos que aquest directori existeix i que té permís d'escriptura abans de la instal·lació.</strong> Les rutes de Windows han de fer servir barres inclinades, per exemple: «C:/lamevarevista/arxius»."
 

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-08-27 16:50+0000\n"
+"PO-Revision-Date: 2022-10-02 13:01+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl_SI/>\n"
@@ -1060,15 +1060,10 @@ msgstr "Dostop za recenzente"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Omogoči recenzentom dostop z enim klikom"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Opozorilo:</strong> E-poštna povabila recenzentom vsebujejo posebne "
-"URL povezave, ki vodijo recenzente direktno na stran za opravljanje "
-"recenzije prispevka (za dostop do drugih strani se morajo najprej "
-"prijaviti). Iz varnostnih razlogov uredniki ne morejo spreminjati e-poštnega "
-"naslova ali dodati kopijo ali skrito kopijo e-poštnega naslova pred "
-"pošiljanjem e-pošte recenzentom."
+"Recenzentom se lahko pošlje posebno povezavo v email povabilu, ki jih bo "
+"avtomatično prijavil v sistem, ko kliknejo na povezavo."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Ocene recenzentov"
@@ -2634,3 +2629,26 @@ msgstr "This email notifies the Subscription Manager that an institutional subsc
 
 msgid "mailable.openAccessNotify.description"
 msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "začetnice revije"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Obvestilo o izdani številki"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institucija"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Prosimo izberite veljavno institucijo."
+
+msgid "stats.issueTOCViews"
+msgstr "Število vpogledov v kazalo vsebine"
+
+msgid "stats.issueGalleyViews"
+msgstr "Število vpogledov v prelom"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Ta email je avtomatično poslan vsem registriranim uporabnikom, ko je "
+"objavljena nova številka revije."

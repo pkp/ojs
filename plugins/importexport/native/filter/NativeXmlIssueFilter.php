@@ -324,7 +324,8 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $section = $sectionDao->newDataObject();
         $section->setContextId($context->getId());
-        $section->setReviewFormId($node->getAttribute('review_form_id'));
+        $reviewFormId = $node->getAttribute('review_form_id');
+        $section->setReviewFormId($reviewFormId ? (int) $reviewFormId : null);
         $section->setSequence($node->getAttribute('seq'));
         $section->setEditorRestricted($node->getAttribute('editor_restricted'));
         $section->setMetaIndexed($node->getAttribute('meta_indexed'));
