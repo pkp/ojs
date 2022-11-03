@@ -31,7 +31,7 @@ class ManualPaymentNotify extends Mailable
     protected static ?string $name = 'plugins.paymethod.manual.manualPaymentNotify.name';
     protected static ?string $description = 'emails.manualPaymentNotification.description';
     protected static ?string $emailTemplateKey = 'MANUAL_PAYMENT_NOTIFICATION';
-    protected static array $toRoleIds = [Role::ROLE_ID_MANAGER];
+    protected static array $toRoleIds = [Role::ROLE_ID_SUB_EDITOR];
 
     protected const SENDER_USERNAME = 'senderUsername';
 

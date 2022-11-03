@@ -60,9 +60,6 @@ msgstr "達至審稿階段"
 msgid "manager.website.archiving"
 msgstr "封存"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "是否確認重置所有本期刊的電郵樣板？確認後您將失去您原先設置的設定。"
-
 msgid "manager.files.note"
 msgstr "備註：檔案瀏覽器屬進階功能，容許直接瀏覽及控制與期刊相關的檔案及目錄。"
 
@@ -549,6 +546,7 @@ msgstr "致圖書館管理員"
 msgid "manager.setup.information.forReaders"
 msgstr "致讀者"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "此等預先準備的電郵末端會增添以下簽署，由系統以期刊名義發出。"
 

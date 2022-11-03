@@ -19,11 +19,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Arkivering"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Är du säker på att du vill återställa alla tidskriftens e-postmallar till "
-"ursprungligt utseende? Egna inställningar kommer att raderas."
-
 msgid "manager.files.note"
 msgstr "Observera: Filutforskaren är en avancerad funktion som gör det möjligt att ändra och visa en tidskrifts innehåll och filer direkt."
 
@@ -454,6 +449,7 @@ msgstr "E-post-identifiering"
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Färdiga e-postmeddelanden som skickas från tidskriften kommer ha följande signatur infogad sist i e-posten."
 

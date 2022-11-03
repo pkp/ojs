@@ -16,9 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "¿Está seguro/a de que desea restablecer todas las plantillas de correo electrónico de la revista? Se perderán todas las personalizaciones que haya realizado."
-
 msgid "manager.files.note"
 msgstr "Nota: El explorador de archivos es una función avanzada que permite visualizar y manipular de manera directa archivos y directorios asociados con una revista."
 
@@ -412,6 +409,7 @@ msgstr "Identificación del correo electrónico"
 msgid "manager.setup.emailSignature"
 msgstr "Firma"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Las plantillas de correo que el sistema envíe en nombre de la revista llevarán esta firma al final. Es posible editar el cuerpo de estos correos en el apartado Gestión de la revista."
 

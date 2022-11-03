@@ -19,11 +19,6 @@ msgstr ""
 "директно гледање и манипулирање со датотеките и директориумите поврзани со "
 "списание."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Дали сте сигурни дека сакате да ги ресетирате сите обрасци за е-пошта во ова "
-"списание? Ќе ги изгубите сите прилагодувања што сте ги направиле."
-
 msgid "manager.website.archiving"
 msgstr "Архивирање"
 
@@ -529,6 +524,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Овозможете соопштенија"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Подготвените е-пошта што системот ги испраќа во име на списанието ќе го "

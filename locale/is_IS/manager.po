@@ -58,6 +58,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Virkja tilkynningar"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Tölvupóstar sem kerfið sendir fyrir hönd tímaritsins munu hafa eftirfarnadi "
@@ -431,11 +432,6 @@ msgid "manager.files.note"
 msgstr ""
 "ATH: Vafrinn fyrir skrár er þróðu virkni sem gerir mögulegt að vinna beint "
 "með skrár og möppur sem eru tengar við tímaritið."
-
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Ertu viss um að þú viljir endurstilla öll sniðmát fyrir tölvupósta þessa "
-"tímarits?  Þú tapar öllum breytingum sem þú hefur gert."
 
 msgid "manager.website.archiving"
 msgstr "Útgefið efni"

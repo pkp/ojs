@@ -18,11 +18,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Pengarsipan"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Apakah Anda yakin Anda ingin mengatur ulang seluruh template email di jurnal "
-"ini? Anda akan kehilangan semua penyesuaian yang sudah Anda buat."
-
 msgid "manager.files.note"
 msgstr ""
 "Catatan: Berkas Penelusuran adalah fitur canggih yang memungkinkan file dan "
@@ -521,6 +516,7 @@ msgstr "Identifikasi Email"
 msgid "manager.setup.emailSignature"
 msgstr "Tandatangan"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Email yang disiapkan dan dikirim oleh sistem atas nama jurnal akan memiliki "

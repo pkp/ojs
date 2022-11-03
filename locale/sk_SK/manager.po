@@ -72,11 +72,6 @@ msgstr ""
 "Poznámka: Prehliadač súborov je pokročilý nástroj, ktorý umožňuje zobrazenie "
 "a priamu manipuláciu so súborrmi a adresármi súvisiacimi s časopisom."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Ste si istý, že chcete resetovať všetky šablóny e-mailov v tomto časopise? "
-"Stratíte tak všetky prispôsobenia, které ste doteraz spravili."
-
 msgid "manager.website.archiving"
 msgstr "Archivácia"
 
@@ -629,6 +624,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Umožniť manažérom časopisu pridávať oznámenia časopisu"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Pripravené e-maily, ktoré sú systémom posielané v mene časopisu, budú mať na "

@@ -265,11 +265,6 @@ msgstr ""
 "Piezīme: Failu pārlūks ir uzlabota funkcija, kas ļauj tieši skatīt un "
 "apstrādāt ar žurnālu saistītos failus un direktorijus."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Vai esat pārliecināts, ka vēlaties atiestatīt visas e-pasta veidnes šajā "
-"žurnālā? Jūs zaudēsiet visus veiktos pielāgojumus."
-
 msgid "manager.website.archiving"
 msgstr "Arhivēšana"
 

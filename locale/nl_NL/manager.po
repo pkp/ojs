@@ -43,9 +43,6 @@ msgstr "Het tijdschrift vereist een abonnement om toegang tot een deel van of al
 msgid "manager.website.archiving"
 msgstr "Archivering"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Weet u zeker dat u alle e-mail sjablonen wilt terugzetten op hun standaardwaarden? Alle aanpassingen die u hebt gemaakt gaan verloren."
-
 msgid "manager.files.note"
 msgstr "Noot: De bestandenbrowser is een geavanceerde functie waarmee u de bestanden en mappen van dit tijdschrift direct kunt bekijken en manipuleren."
 
@@ -465,6 +462,7 @@ msgstr "E-mail identificatie"
 msgid "manager.setup.emailSignature"
 msgstr "Ondertekening"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "De voorbewerkte e-mails die door het systeem namens het tijdschrift verzonden worden, krijgen de volgende ondertekening toegevoegd aan het einde. De tekst van de voorbwerkte e-mails kan aangepast worden bij tijdschriftbeheer."
 

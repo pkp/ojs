@@ -1036,6 +1036,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Միացնել հայտարարությունները"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Համակարգի կողմից պատրաստված ամսագրի անունից ուղարկված նամակների վերջում "
@@ -2392,11 +2393,6 @@ msgid "manager.files.note"
 msgstr ""
 "Նշում. Նիշքերի զննարկիչը լրացուցիչ հատկություն է, որը թույլ է տալիս "
 "ուղղակիորեն դիտել և կառավարել ամսագրի հետ կապված նիշքերը և գրացուցակները:"
-
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Վստա՞հ եք, որ ցանկանում եք վերակայել այս ամսագրի էլ․փոստի բոլոր "
-"ձևանմուշները: Դուք կկորցնեք ձեր կատարած ցանկացած հարմարեցում:"
 
 msgid "manager.website.archiving"
 msgstr "Արխիվացում"

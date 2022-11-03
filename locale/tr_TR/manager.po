@@ -16,12 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Bu dergide yer alan bütün e-posta şablonlarını varsayılan biçime döndürmek "
-"istediğinizden emin misiniz? Bu işlemi yaparsanız, özelleştirdiğiniz tüm "
-"şablonları kaybedeceksiniz."
-
 msgid "manager.files.note"
 msgstr ""
 "Not: Dosya Tarayıcı dergi ile ilişkilendirilmiş dosyalar ve dizinlerin "
@@ -461,6 +455,7 @@ msgstr "E-posta Tanımlama"
 msgid "manager.setup.emailSignature"
 msgstr "İmza"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Dergi adına hazırlanmış ve sistem tarafından gönderilen e-postalara eklenen imzadır. Hazır e-posta metinleri Dergi Yönetimi sayfası altındadır."
 

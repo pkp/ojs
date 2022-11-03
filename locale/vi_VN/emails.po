@@ -450,11 +450,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Copy-Editor, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Email này cho phép các biên tập viên yêu cầu thông tin bổ sung về các tài "
-"liệu tham khảo từ các tác giả."
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Kính gửi Biên tập viên,<br />\n"
@@ -468,17 +463,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Tải lên bản sửa chữa"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Một thông báo liên quan đến {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Vui lòng nhập tin nhắn của bạn."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Thông báo (trống) mặc định được sử dụng trong Trình tạo danh sách thông báo "
-"của Trung tâm thông báo."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Hoạt động cho {$month}, {$year}"
@@ -596,7 +580,7 @@ msgid "emails.editorAssign.subject"
 msgstr "Bạn đã được chỉ định là người biên tập cho bài gửi {$contextName}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Xin chào,<br />\n"
 "<br />\n"
@@ -609,7 +593,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Xác nhận gửi bài"
 
 msgid "emails.lockssNewArchive.description"

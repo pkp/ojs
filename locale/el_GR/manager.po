@@ -19,9 +19,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Αρχειοθέτηση"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Επιβεβαιώνετε την επαναφορά στην αρχική μορφή όλων των προτύπων μηνυμάτων στο συγκεκριμένο περιοδικό; Όλες οι αλλαγές που έχετε πραγματοποιήσει θα χαθούν."
-
 msgid "manager.files.note"
 msgstr "Σημείωση: O Περιηγητής Αρχείων αποτελεί μια προηγμένη λειτουργία που επιτρέπει την άμεση προβολή και διαχείριση των αρχείων και καταλόγων που σχετίζονται με κάποιο περιοδικό."
 
@@ -1937,6 +1934,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Ενεργοποίηση ανακοινώσεων"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Τα προετοιμασμένα emails που αποστέλλονται από το σύστημα για λογαριασμό του "

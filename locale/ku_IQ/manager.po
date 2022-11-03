@@ -111,11 +111,6 @@ msgstr ""
 "دەدار بۆ ئەوەی فایلە پەیوەندیدارەکان ببیندرێن و بە شێوەیەکی ڕاستەوخۆ کۆنتڕۆڵ "
 "بکرێن."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"ئایا تۆ دڵنیایت لە هەڵوەشاندنەوەی تێمپلەیتی هەمو ئیمەیڵەکانی ئەم گۆڤارە؟ بەم "
-"هەنگاوە تۆ هەر تایبەتمەندییەکی ئەو بووارە لەدەست دەدەیت."
-
 msgid "manager.website.archiving"
 msgstr "ئەرشیفکردن"
 
@@ -688,6 +683,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "ڕاگەیاندنەکان چالاک بکە"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "ئیمێڵە ئامادەکاراوەکان کە لەلایەن سیستەمەکەوە دەنێردرێن لە جیاتی گۆڤارەکە "

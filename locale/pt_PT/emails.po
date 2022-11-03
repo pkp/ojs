@@ -930,22 +930,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Editor de Texto, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Este e-mail permite aos editores de texto que solicitem aos autores "
-"informação adicional sobre as referências."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Uma mensagem relativa {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Escreva a sua mensagem."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"A mensagem padrão (em branco) usada no Construtor de Listas de Mensagens do "
-"Centro de Notificações."
-
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Está disponível para rever um trabalho para a revista?"
 
@@ -997,10 +981,12 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotUser.subject"
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Confirmação da submissão"
 
-msgid "emails.submissionAckNotUser.body"
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Caro {$recipientName},</p><p>Foi nomeado como coautor da submissão à "
 "{$contextName}. A pessoa que submeteu, {$submitterName} forneceu os "

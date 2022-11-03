@@ -15,11 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Jste si jisti, že chcete resetovat všechny šablony e-mailů v tomto časopisu? "
-"Ztratíte tak veškerá přizpůsobení, která jste dopsud udělali."
-
 msgid "manager.files.note"
 msgstr ""
 "Poznámka: Prohlížeč souborů je pokročilý nástroj, který umožňuje zobrazení a "
@@ -450,6 +445,7 @@ msgstr "E-mailová identifikace"
 msgid "manager.setup.emailSignature"
 msgstr "Podpis"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Připravené e-maily, které jsou systémem posílány ve jménu časopisu budou mít "

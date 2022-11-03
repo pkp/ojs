@@ -10,64 +10,67 @@
   * Email templates XML file.
   -->
 <emails>
-	<email key="NOTIFICATION" subject="emails.notification.subject" body="emails.notification.body"/>
-	<email key="NOTIFICATION_CENTER_DEFAULT" can_disable="0" subject="emails.notificationCenterDefault.subject" description="emails.notificationCenterDefault.description" body="emails.notificationCenterDefault.body"/>
-	<email key="PASSWORD_RESET_CONFIRM" subject="emails.passwordResetConfirm.subject" body="emails.passwordResetConfirm.body"/>
-	<email key="PASSWORD_RESET" subject="emails.passwordReset.subject" body="emails.passwordReset.body"/>
-	<email key="USER_REGISTER" subject="emails.userRegister.subject" description="emails.userRegister.description" body="emails.userRegister.body"/>
-	<email key="USER_VALIDATE_CONTEXT" subject="emails.userValidateContext.subject" body="emails.userValidateContext.body"/>
-	<email key="USER_VALIDATE_SITE" subject="emails.userValidateSite.subject" body="emails.userValidateSite.body"/>
-	<email key="REVIEWER_REGISTER" subject="emails.reviewerRegister.subject" body="emails.reviewerRegister.body"/>
-	<email key="ISSUE_PUBLISH_NOTIFY" subject="emails.issuePublishNotify.subject" body="emails.issuePublishNotify.body"/>
-	<email key="LOCKSS_EXISTING_ARCHIVE" can_disable="0" subject="emails.lockssExistingArchive.subject" description="emails.lockssExistingArchive.description" body="emails.lockssExistingArchive.body"/>
-	<email key="LOCKSS_NEW_ARCHIVE" can_disable="0" subject="emails.lockssNewArchive.subject" description="emails.lockssNewArchive.description" body="emails.lockssNewArchive.body"/>
-	<email key="SUBMISSION_ACK" subject="emails.submissionAck.subject" body="emails.submissionAck.body"/>
-	<email key="SUBMISSION_ACK_NOT_USER" subject="emails.submissionAckNotUser.subject" body="emails.submissionAckNotUser.body"/>
-	<email key="EDITOR_ASSIGN" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
-	<email key="REVIEW_CANCEL" subject="emails.reviewCancel.subject" body="emails.reviewCancel.body"/>
-	<email key="REVIEW_REINSTATE" subject="emails.reviewReinstate.subject" body="emails.reviewReinstate.body"/>
-	<email key="REVIEW_RESEND_REQUEST" subject="emails.reviewResendRequest.subject" body="emails.reviewResendRequest.body"/>
-	<email key="REVIEW_REQUEST" subject="emails.reviewRequest.subject" body="emails.reviewRequest.body"/>
-	<email key="REVIEW_REQUEST_SUBSEQUENT" subject="emails.reviewRequestSubsequent.subject" body="emails.reviewRequestSubsequent.body"/>
-	<email key="REVIEW_RESPONSE_OVERDUE_AUTO" subject="emails.reviewResponseOverdueAuto.subject" body="emails.reviewResponseOverdueAuto.body"/>
-	<email key="REVIEW_CONFIRM" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
-	<email key="REVIEW_DECLINE" subject="emails.reviewDecline.subject" body="emails.reviewDecline.body"/>
-	<email key="REVIEW_ACK" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
-	<email key="REVIEW_REMIND" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
-	<email key="REVIEW_REMIND_AUTO" subject="emails.reviewRemindAuto.subject" body="emails.reviewRemindAuto.body"/>
-	<email key="EDITOR_DECISION_ACCEPT" subject="emails.editorDecisionAccept.subject" body="emails.editorDecisionAccept.body"/>
-	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" subject="emails.editorDecisionSendToExternal.subject" body="emails.editorDecisionSendToExternal.body"/>
-	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" subject="emails.editorDecisionSendToProduction.subject" body="emails.editorDecisionSendToProduction.body"/>
-	<email key="EDITOR_DECISION_REVISIONS" subject="emails.editorDecisionRevisions.subject" body="emails.editorDecisionRevisions.body"/>
-	<email key="EDITOR_DECISION_RESUBMIT" subject="emails.editorDecisionResubmit.subject" body="emails.editorDecisionResubmit.body"/>
-	<email key="EDITOR_DECISION_DECLINE" subject="emails.editorDecisionDecline.subject" body="emails.editorDecisionDecline.body"/>
-	<email key="EDITOR_DECISION_INITIAL_DECLINE" subject="emails.editorDecisionInitialDecline.subject" body="emails.editorDecisionInitialDecline.body"/>
-	<email key="EDITOR_RECOMMENDATION" subject="emails.editorRecommendation.subject" body="emails.editorRecommendation.body"/>
-	<email key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" subject="emails.decision.notifyOtherAuthors.subject" body="emails.decision.notifyOtherAuthors.body"/>
-	<email key="EDITOR_DECISION_NEW_ROUND" subject="emails.editorDecisionNewReviewRound.subject" body="emails.editorDecisionNewReviewRound.body"/>
-	<email key="EDITOR_DECISION_REVERT_DECLINE" subject="emails.editorDecisionRevertDecline.subject" body="emails.editorDecisionRevertDecline.body"/>
-	<email key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" subject="emails.editorDecisionRevertInitialDecline.subject" body="emails.editorDecisionRevertInitialDecline.body"/>
-	<email key="EDITOR_DECISION_SKIP_REVIEW" subject="emails.editorDecisionSkipReview.subject" body="emails.editorDecisionSkipReview.body"/>
-	<email key="EDITOR_DECISION_BACK_FROM_PRODUCTION" subject="emails.editorDecisionBackFromProduction.subject" body="emails.editorDecisionBackFromProduction.body"/>
-	<email key="EDITOR_DECISION_BACK_FROM_COPYEDITING" subject="emails.editorDecisionBackFromCopyediting.subject" body="emails.editorDecisionBackFromCopyediting.body"/>
-	<email key="EDITOR_DECISION_CANCEL_REVIEW_ROUND" subject="emails.editorDecisionCancelReviewRound.subject" body="emails.editorDecisionCancelReviewRound.body"/>
-	<email key="COPYEDIT_REQUEST" can_disable="1" from_role_id="16" to_role_id="4097" stage_id="4" subject="emails.copyeditRequest.subject" description="emails.copyeditRequest.description" body="emails.copyeditRequest.body"/>
-	<email key="LAYOUT_REQUEST" can_disable="1" from_role_id="16" to_role_id="4097" stage_id="5" subject="emails.layoutRequest.subject" description="emails.layoutRequest.description" body="emails.layoutRequest.body"/>
-	<email key="LAYOUT_COMPLETE" can_disable="1" from_role_id="4097" to_role_id="16" stage_id="5" subject="emails.layoutComplete.subject" description="emails.layoutComplete.description" body="emails.layoutComplete.body"/>
-	<email key="EMAIL_LINK" can_disable="0" from_role_id="1048576" subject="emails.emailLink.subject" description="emails.emailLink.description" body="emails.emailLink.body"/>
-	<email key="SUBSCRIPTION_NOTIFY" subject="emails.subscriptionNotify.subject" body="emails.subscriptionNotify.body"/>
-	<email key="OPEN_ACCESS_NOTIFY" subject="emails.openAccessNotify.subject" body="emails.openAccessNotify.body"/>
-	<email key="SUBSCRIPTION_BEFORE_EXPIRY" subject="emails.subscriptionBeforeExpiry.subject" body="emails.subscriptionBeforeExpiry.body"/>
-	<email key="SUBSCRIPTION_AFTER_EXPIRY" subject="emails.subscriptionAfterExpiry.subject" body="emails.subscriptionAfterExpiry.body"/>
-	<email key="SUBSCRIPTION_AFTER_EXPIRY_LAST" subject="emails.subscriptionAfterExpiryLast.subject" body="emails.subscriptionAfterExpiryLast.body"/>
-	<email key="SUBSCRIPTION_PURCHASE_INDL" subject="emails.subscriptionPurchaseIndl.subject" body="emails.subscriptionPurchaseIndl.body"/>
-	<email key="SUBSCRIPTION_PURCHASE_INSTL" subject="emails.subscriptionPurchaseInstl.subject" body="emails.subscriptionPurchaseInstl.body"/>
-	<email key="SUBSCRIPTION_RENEW_INDL" subject="emails.subscriptionRenewIndl.subject" body="emails.subscriptionRenewIndl.body"/>
-	<email key="SUBSCRIPTION_RENEW_INSTL" subject="emails.subscriptionRenewInstl.subject" body="emails.subscriptionRenewInstl.body"/>
-	<email key="CITATION_EDITOR_AUTHOR_QUERY" can_disable="0" stage_id="4" subject="emails.citationEditorAuthorQuery.subject" description="emails.citationEditorAuthorQuery.description" body="emails.citationEditorAuthorQuery.body"/>
-	<email key="REVISED_VERSION_NOTIFY" subject="emails.revisedVersionNotify.subject" body="emails.revisedVersionNotify.body"/>
-	<email key="STATISTICS_REPORT_NOTIFICATION" subject="emails.statisticsReportNotification.subject" body="emails.statisticsReportNotification.body"/>
-	<email key="ANNOUNCEMENT" subject="emails.announcement.subject" body="emails.announcement.body"/>
-	<email key="EDITORIAL_REMINDER" can_disable="0" from_role_id="16" to_role_id="1048576" subject="emails.editorialReminder.subject" description="emails.announcement.description" body="emails.editorialReminder.body"/>
-	<email key="DISCUSSION_NOTIFICATION" subject="discussion.notification.subject" body="discussion.notification.body"/>
+	<email key="NOTIFICATION" name="notification.notification" subject="emails.notification.subject" body="emails.notification.body"/>
+	<email key="PASSWORD_RESET_CONFIRM" name="mailable.passwordResetRequested.name" subject="emails.passwordResetConfirm.subject" body="emails.passwordResetConfirm.body"/>
+	<email key="PASSWORD_RESET" name="mailable.passwordReset.name" subject="emails.passwordReset.subject" body="emails.passwordReset.body"/>
+	<email key="USER_REGISTER" name="mailable.userRegister.name" subject="emails.userRegister.subject" body="emails.userRegister.body"/>
+	<email key="USER_VALIDATE_CONTEXT" name="mailable.validateEmailContext.name" subject="emails.userValidateContext.subject" body="emails.userValidateContext.body"/>
+	<email key="USER_VALIDATE_SITE" name="mailable.validateEmailSite.name" subject="emails.userValidateSite.subject" body="emails.userValidateSite.body"/>
+	<email key="REVIEWER_REGISTER" name="mailable.reviewerRegister.name" subject="emails.reviewerRegister.subject" body="emails.reviewerRegister.body"/>
+	<email key="ISSUE_PUBLISH_NOTIFY" name="mailable.issuePublishNotify.name" subject="emails.issuePublishNotify.subject" body="emails.issuePublishNotify.body"/>
+	<email key="LOCKSS_EXISTING_ARCHIVE" name="mailable.lockssExistingArchive.name" ssubject="emails.lockssExistingArchive.subject" description="emails.lockssExistingArchive.description" body="emails.lockssExistingArchive.body"/>
+	<email key="LOCKSS_NEW_ARCHIVE" name="mailable.lockssNewArchive.name" ssubject="emails.lockssNewArchive.subject" description="emails.lockssNewArchive.description" body="emails.lockssNewArchive.body"/>
+	<email key="SUBMISSION_ACK" name="mailable.submissionAck.name" subject="emails.submissionAck.subject" body="emails.submissionAck.body"/>
+	<email key="SUBMISSION_ACK_NOT_USER" name="mailable.submissionAckNotAuthor.name" subject="emails.submissionAckNotAuthor.subject" body="emails.submissionAckNotAuthor.body"/>
+	<email key="REVIEW_CANCEL" name="mailable.reviewerUnassign.name" subject="emails.reviewCancel.subject" body="emails.reviewCancel.body"/>
+	<email key="REVIEW_REINSTATE" name="mailable.reviewerReinstate.name" subject="emails.reviewReinstate.subject" body="emails.reviewReinstate.body"/>
+	<email key="REVIEW_RESEND_REQUEST" name="mailable.reviewerResendRequest.name" subject="emails.reviewResendRequest.subject" body="emails.reviewResendRequest.body"/>
+	<email key="REVIEW_REQUEST" name="mailable.reviewRequest.name" subject="emails.reviewRequest.subject" body="emails.reviewRequest.body"/>
+	<email key="REVIEW_REQUEST_SUBSEQUENT" name="mailable.reviewRequestSubsequent.name" subject="emails.reviewRequestSubsequent.subject" body="emails.reviewRequestSubsequent.body"/>
+	<email key="REVIEW_RESPONSE_OVERDUE_AUTO" name="mailable.reviewResponseOverdueAuto.name" subject="emails.reviewResponseOverdueAuto.subject" body="emails.reviewResponseOverdueAuto.body"/>
+	<email key="REVIEW_CONFIRM" name="mailable.reviewConfirm.name" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
+	<email key="REVIEW_DECLINE" name="mailable.reviewDecline.name" subject="emails.reviewDecline.subject" body="emails.reviewDecline.body"/>
+	<email key="REVIEW_ACK" name="mailable.decision.notifyReviewer.name" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
+	<email key="REVIEW_REMIND" name="mailable.decision.notifyReviewer.name" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
+	<email key="REVIEW_REMIND_AUTO" name="mailable.reviewRemindAuto.name" subject="emails.reviewRemindAuto.subject" body="emails.reviewRemindAuto.body"/>
+	<email key="EDITOR_DECISION_ACCEPT" name="mailable.decision.accept.notifyAuthor.name" subject="emails.editorDecisionAccept.subject" body="emails.editorDecisionAccept.body"/>
+	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" name="mailable.decision.sendExternalReview.notifyAuthor.name" subject="emails.editorDecisionSendToExternal.subject" body="emails.editorDecisionSendToExternal.body"/>
+	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" name="mailable.decision.sendToProduction.notifyAuthor.name" subject="emails.editorDecisionSendToProduction.subject" body="emails.editorDecisionSendToProduction.body"/>
+	<email key="EDITOR_DECISION_REVISIONS" name="mailable.decision.requestRevisions.notifyAuthor.name" subject="emails.editorDecisionRevisions.subject" body="emails.editorDecisionRevisions.body"/>
+	<email key="EDITOR_DECISION_RESUBMIT" name="mailable.decision.resubmit.notifyAuthor.name" subject="emails.editorDecisionResubmit.subject" body="emails.editorDecisionResubmit.body"/>
+	<email key="EDITOR_DECISION_DECLINE" name="mailable.decision.decline.notifyAuthor.name" subject="emails.editorDecisionDecline.subject" body="emails.editorDecisionDecline.body"/>
+	<email key="EDITOR_DECISION_INITIAL_DECLINE" name="mailable.decision.initialDecline.notifyAuthor.name" subject="emails.editorDecisionInitialDecline.subject" body="emails.editorDecisionInitialDecline.body"/>
+	<email key="EDITOR_RECOMMENDATION" name="mailable.decision.recommendation.notifyEditors.name" subject="emails.editorRecommendation.subject" body="emails.editorRecommendation.body"/>
+	<email key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" name="mailable.decision.notifyOtherAuthors.name" subject="emails.decision.notifyOtherAuthors.subject" body="emails.decision.notifyOtherAuthors.body"/>
+	<email key="EDITOR_DECISION_NEW_ROUND" name="mailable.decision.newReviewRound.notifyAuthor.name" subject="emails.editorDecisionNewReviewRound.subject" body="emails.editorDecisionNewReviewRound.body"/>
+	<email key="EDITOR_DECISION_REVERT_DECLINE" name="mailable.decision.revertDecline.notifyAuthor.name" subject="emails.editorDecisionRevertDecline.subject" body="emails.editorDecisionRevertDecline.body"/>
+	<email key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" name="mailable.decision.revertInitialDecline.notifyAuthor.name" subject="emails.editorDecisionRevertInitialDecline.subject" body="emails.editorDecisionRevertInitialDecline.body"/>
+	<email key="EDITOR_DECISION_SKIP_REVIEW" name="mailable.decision.skipReview.notifyAuthor.name" subject="emails.editorDecisionSkipReview.subject" body="emails.editorDecisionSkipReview.body"/>
+	<email key="EDITOR_DECISION_BACK_FROM_PRODUCTION" name="mailable.decision.backToCopyediting.notifyAuthor.name" subject="emails.editorDecisionBackFromProduction.subject" body="emails.editorDecisionBackFromProduction.body"/>
+	<email key="EDITOR_DECISION_BACK_FROM_COPYEDITING" name="mailable.decision.backFromCopyediting.notifyAuthor.name" subject="emails.editorDecisionBackFromCopyediting.subject" body="emails.editorDecisionBackFromCopyediting.body"/>
+	<email key="EDITOR_DECISION_CANCEL_REVIEW_ROUND" name="mailable.decision.cancelReviewRound.notifyAuthor.name" subject="emails.editorDecisionCancelReviewRound.subject" body="emails.editorDecisionCancelReviewRound.body"/>
+	<email key="SUBSCRIPTION_NOTIFY" name="mailable.subscriptionNotify.name" subject="emails.subscriptionNotify.subject" body="emails.subscriptionNotify.body"/>
+	<email key="OPEN_ACCESS_NOTIFY" name="mailable.openAccessNotify.name" subject="emails.openAccessNotify.subject" body="emails.openAccessNotify.body"/>
+	<email key="SUBSCRIPTION_BEFORE_EXPIRY" name="mailable.subscriptionExpiresSoon.name" subject="emails.subscriptionBeforeExpiry.subject" body="emails.subscriptionBeforeExpiry.body"/>
+	<email key="SUBSCRIPTION_AFTER_EXPIRY" name="mailable.subscriptionExpired.name" subject="emails.subscriptionAfterExpiry.subject" body="emails.subscriptionAfterExpiry.body"/>
+	<email key="SUBSCRIPTION_AFTER_EXPIRY_LAST" name="mailable.subscriptionExpiredLast.name" subject="emails.subscriptionAfterExpiryLast.subject" body="emails.subscriptionAfterExpiryLast.body"/>
+	<email key="SUBSCRIPTION_PURCHASE_INDL" name="mailable.subscriptionPurchaseIndividual.name" subject="emails.subscriptionPurchaseIndl.subject" body="emails.subscriptionPurchaseIndl.body"/>
+	<email key="SUBSCRIPTION_PURCHASE_INSTL" name="mailable.subscriptionPurchaseInstitutional.name" subject="emails.subscriptionPurchaseInstl.subject" body="emails.subscriptionPurchaseInstl.body"/>
+	<email key="SUBSCRIPTION_RENEW_INDL" name="mailable.subscriptionRenewIndividual.name" subject="emails.subscriptionRenewIndl.subject" body="emails.subscriptionRenewIndl.body"/>
+	<email key="SUBSCRIPTION_RENEW_INSTL" name="mailable.subscriptionRenewInstitutional.name" subject="emails.subscriptionRenewInstl.subject" body="emails.subscriptionRenewInstl.body"/>
+	<email key="REVISED_VERSION_NOTIFY" name="mailable.revisedVersionNotify.name" subject="emails.revisedVersionNotify.subject" body="emails.revisedVersionNotify.body"/>
+	<email key="STATISTICS_REPORT_NOTIFICATION" name="mailable.statisticsReportNotify.name" subject="emails.statisticsReportNotification.subject" body="emails.statisticsReportNotification.body"/>
+	<email key="ANNOUNCEMENT" name="mailable.announcementNotify.name" subject="emails.announcement.subject" body="emails.announcement.body"/>
+	<email key="EDITORIAL_REMINDER" name="mailable.editorialReminder.name" subject="emails.editorialReminder.subject" body="emails.editorialReminder.body"/>
+	<email key="DISCUSSION_NOTIFICATION_SUBMISSION" name="mailable.discussionSubmission.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
+	<email key="DISCUSSION_NOTIFICATION_REVIEW" name="mailable.discussionReview.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
+	<email key="DISCUSSION_NOTIFICATION_COPYEDITING" name="mailable.discussionCopyediting.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
+	<email key="DISCUSSION_NOTIFICATION_PRODUCTION" name="mailable.discussionProduction.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
+	<email key="COPYEDIT_REQUEST" name="mailable.copyeditRequest.name" alternateTo="DISCUSSION_NOTIFICATION_COPYEDITING" subject="emails.copyeditRequest.subject" body="emails.copyeditRequest.body"/>
+	<email key="CITATION_EDITOR_AUTHOR_QUERY" name="mailable.citationAuthorQuery.name" alternateTo="DISCUSSION_NOTIFICATION_COPYEDITING" subject="emails.citationEditorAuthorQuery.subject" body="emails.citationEditorAuthorQuery.body"/>
+	<email key="EDITOR_ASSIGN_SUBMISSION" name="mailable.editorAssign.name" alternateTo="DISCUSSION_NOTIFICATION_SUBMISSION" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
+	<email key="EDITOR_ASSIGN_REVIEW" name="mailable.editorAssign.name" alternateTo="DISCUSSION_NOTIFICATION_REVIEW" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
+	<email key="EDITOR_ASSIGN_PRODUCTION" name="mailable.editorAssign.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
+	<email key="LAYOUT_REQUEST" name="mailable.layoutRequest.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutRequest.subject" body="emails.layoutRequest.body"/>
+	<email key="LAYOUT_COMPLETE" name="mailable.layoutComplete.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutComplete.subject" body="emails.layoutComplete.body"/>
 </emails>

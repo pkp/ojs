@@ -18,11 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Er du sikker på at du vil tilbakestille alle e-postmalene i dette "
-"tidsskriftet? Du vil miste alle tilpasninger du har gjort."
-
 msgid "manager.files.note"
 msgstr ""
 "Merk: Filutforskeren er en avansert funksjon som gir mulighet til å se og å "
@@ -317,6 +312,7 @@ msgstr "E-post identifikasjon"
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "De forberedte e-postene som blir sendt av systemet på vegne av tidsskriftet kommer til å ha følgende signatur nederst. Selve meldingstekstene til de forberedte e-postene er tilgjengelig for redigering under Tidsskriftadministrasjon."
 

@@ -171,10 +171,10 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Det här e-postmeddelandet rekommenderar mottagaren att delta i LOCKSS-initiativet och att inkludera tidskriften i arkivet. Meddelandet innehåller även generell information om LOCKSS och hur man gör för att delta."
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Bekräftelse på mottaget bidrag"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>{$recipientName},</p><p>Du har angivits som medförfattare till "
 "{$contextName}. {$submitterName} skickade med följande "
@@ -586,9 +586,6 @@ msgstr ""
 "Manusredaktör, {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Det här e-postmeddelandet kan användas om manusredaktörer behöver efterfråga mer information om referenser från författare."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Reviderad version uppladdad"
 
@@ -601,15 +598,6 @@ msgstr ""
 "Bidragets URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Ett meddelande angående {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Skriv in ditt meddelande."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Defaultmeddelande (tomt) att använda i Notification Center Message Listbuilder."
 
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fortfarande möjlighet att granska bidrag till {$contextName}?"

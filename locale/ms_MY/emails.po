@@ -127,7 +127,7 @@ msgid "emails.editorAssign.subject"
 msgstr "Tugasan Editorial"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Ucapan Terima Kasih"
 
 msgid "emails.lockssNewArchive.description"
@@ -268,7 +268,7 @@ msgstr ""
 "Terima kasih.<br />"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Hello, <br />\n"
 "<br />\n"
@@ -424,17 +424,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktiviti editorial untuk {$month}, {$year}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Mesej lalai (kosong) yang digunakan dalam Pembangun Senarai Mesej Pusat "
-"Pemberitahuan."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Sila masukkan mesej anda."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Mesej mengenai {$contextName}"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editor: <br />\n"
@@ -448,11 +437,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versi Semakan Dimuat naik"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"E-mel ini membenarkan copyeditors untuk meminta maklumat tambahan mengenai "
-"rujukan dari pengarang."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

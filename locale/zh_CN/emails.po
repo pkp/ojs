@@ -760,10 +760,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Copy-Editor, {$contextName}"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "本邮件允许文字编辑向作者要求参考文献的其他信息"
-
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "文章审稿请求"
 
@@ -812,7 +808,7 @@ msgid "emails.reviewReinstate.subject"
 msgstr "恢复审核的请求"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "您好,<br />\n"
 "<br />\n"
@@ -824,7 +820,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "投稿致谢函"
 
 #, fuzzy
@@ -868,12 +864,3 @@ msgstr ""
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "编辑持续达 {$year} 年 {$month} 个月"
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "信息提醒中心生成默认信息（通常会是空白）。"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "请输入您的信息。"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "关于{$contextName} 的信息"

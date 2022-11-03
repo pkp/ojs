@@ -337,11 +337,6 @@ msgstr ""
 "Nota: o explorador de arquivos é unha función avanzada que permite ver e "
 "manipular directamente os ficheiros e directorios asociados a unha revista."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Estás seguro de que queres restablecer todos os modelos de correo "
-"electrónico desta revista? Perderás as personalizacións que fixeras."
-
 msgid "manager.website.archiving"
 msgstr "Arquivar"
 
@@ -2106,6 +2101,7 @@ msgstr "Cabeceira da páxina de inicio da revista"
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Activar os avisos"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Os padróns das mensaxes de correo electrónico que o sistema envíe en nome da "

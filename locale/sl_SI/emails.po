@@ -210,10 +210,10 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Email vsebuje prošnjo za naslovnika, da se vključi v LOCKSS iniciativo in za vključitev te revije v njihov arhiv. Vsebuje tudi informaciej o LOCKKS iniciativi in načinu vključitve v iniciativo."
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Potrditev oddaje prispevka"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Spoštovani {$recipientName},<br />\n"
 "<br />\n"
@@ -665,9 +665,6 @@ msgstr ""
 "Lektor, {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Ta email pošlje lektor avtorju s prošnjo za dodatne informacije o citiranih referencah."
-
 msgid "emails.giftAvailable.subject"
 msgstr "{$giftNoteTitle}"
 
@@ -756,15 +753,6 @@ msgstr ""
 "URL povezava prispevka: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Sporočilo v zvezi s publikacijo {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Prosimo, vnesite vaše sporočilo."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Privzeto (prazno) sporočilo, ki se uporablja v centru za obvestila."
 
 msgid "emails.reviewReinstate.body"
 msgstr ""

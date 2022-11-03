@@ -16,9 +16,6 @@ msgstr ""
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Да ли сте сигурни да желите да ресетујете све имејл шаблоне? Изгубићете сва подешавања која сте урадили."
-
 msgid "manager.files.note"
 msgstr "Напомена: прегледач фајлова је додатак који омогућује директно управљање сви фајловима и директоријима који су везани за часопис."
 
@@ -928,6 +925,7 @@ msgstr "Емаил идентификација"
 msgid "manager.setup.emailSignature"
 msgstr "Потпис"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Припремљене поруке које ће слати овај часопис ће имати следећи потпис додат на крај поруке."
 

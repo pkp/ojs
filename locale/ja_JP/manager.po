@@ -87,9 +87,6 @@ msgstr "このジャーナルは、コンテンツの一部または全部にア
 msgid "manager.website.archiving"
 msgstr "アーカイブする"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "このジャーナルのすべてのメールテンプレートをリセットしてよろしいですか？これまでに行ったカスタマイズは失われてしまいます。"
-
 msgid "manager.files.note"
 msgstr "注：「ファイルブラウザ」は、ジャーナルに関連するファイルやディレクトリを直接表示・操作できる高度な機能です。"
 
@@ -492,6 +489,7 @@ msgstr "メールアドレスの識別"
 msgid "manager.setup.emailSignature"
 msgstr "署名"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "システムがジャーナルに代わって送信する準備された電子メールには、末尾に以下の署名が追加されます。"
 

@@ -18,9 +18,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Archiválás"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Biztos, hogy minden e-mail sablont törölni akar ebben a folyóiratban? Minden korábban készített egyéni beállítást elveszít."
-
 msgid "manager.files.note"
 msgstr "Figyelem: A fájl böngésző egy kiegészítő lehetőség, amellyel a folyóirat fájl- és könyvtárstruktúrája megtekinthető és közvetlenül szerkeszthető."
 
@@ -1849,6 +1846,7 @@ msgstr ""
 msgid "manager.setup.identity"
 msgstr "Journal Identity"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Az  alapértelmezett e-mailekbe, melyeket a rendszer a folyóirat nevében "

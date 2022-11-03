@@ -54,12 +54,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Archivage"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Êtes-vous certain-e de vouloir réinitialiser tous les modèles de courriels "
-"dans cette revue ? Vous allez perdre toutes les personnalisations que vous "
-"avez effectuées."
-
 msgid "manager.files.note"
 msgstr ""
 "Note : L'explorateur de fichiers est une fonction avancée qui permet aux "
@@ -571,6 +565,7 @@ msgstr "Identification par courriel"
 msgid "manager.setup.emailSignature"
 msgstr "Signature"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "La signature suivante sera ajoutée à la fin de chaque courriel prédéfini "

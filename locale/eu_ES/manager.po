@@ -14,9 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Ziur zaude aldizkariko mezu-txantiloi guztiak berrezarri nahi dituzula? Egin dituzun aukera pertsonal guztiak galduko dituzu"
-
 msgid "manager.files.note"
 msgstr "Oharra: Fitxategi-arakatzailea, aldizkari bateko fitxategiak eta direktorioak zuzenean ikusi eta manipulatzeko aukera ematen duen eginbide aurreratu bat da."
 
@@ -365,6 +362,7 @@ msgstr "Helbide elektronikoen identifikazioa"
 msgid "manager.setup.emailSignature"
 msgstr "Sinadura"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Sistemak aldizkariaren izenean bidaltzen dituen mezu aurrez prestatuek sinadura hau edukiko dute bukaeran. Aurrez prestatutako mezuen gorputza Aldizkariaren kudeaketan edita daiteke."
 

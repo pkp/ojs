@@ -16,7 +16,7 @@
 namespace APP\notification\form;
 
 use APP\notification\Notification;
-
+use PKP\context\Context;
 use PKP\notification\form\PKPNotificationSettingsForm;
 
 class NotificationSettingsForm extends PKPNotificationSettingsForm
@@ -24,9 +24,9 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm
     /**
      * @copydoc PKPNotificationSettingsForm::getNotificationSettingsCategories()
      */
-    public function getNotificationSettingCategories()
+    public function getNotificationSettingCategories(Context $context)
     {
-        $categories = parent::getNotificationSettingCategories();
+        $categories = parent::getNotificationSettingCategories($context);
         for ($i = 0; $i < count($categories); $i++) {
             if ($categories[$i]['categoryKey'] === 'notification.type.public') {
                 $categories[$i]['settings'][] = Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE;

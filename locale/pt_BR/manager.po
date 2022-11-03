@@ -48,9 +48,6 @@ msgstr "A revista terá controle de assinaturas para acesso ao seu conteúdo, ou
 msgid "manager.website.archiving"
 msgstr "Arquivamento"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Deseja realmente restaurar todos os e-mails para o padrão original para esta revista? Todas as personalizações serão perdidas."
-
 msgid "manager.files.note"
 msgstr "Aviso: o navegador de arquivos é uma ferramenta avançada que permite visualização e manipulação direta de documentos e diretórios associados à revista."
 
@@ -479,6 +476,7 @@ msgstr "Identificação de e-mail"
 msgid "manager.setup.emailSignature"
 msgstr "Assinatura"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Os <em>e-mails</em> padrão enviados pelo sistema em nome da revista "

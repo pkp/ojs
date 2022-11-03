@@ -227,7 +227,7 @@ msgid "emails.editorAssign.subject"
 msgstr "Сіз {$contextName} жіберген кезде редактор болып тағайындалдыңыз"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Сәлем!<br />\n"
 "<br />\n"
@@ -240,7 +240,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Жіберуді растау"
 
 msgid "emails.lockssNewArchive.description"
@@ -384,16 +384,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month} {$year} жылдық журнал қызметі"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Әдепкі (бос) хабарландыру орталығы хабарлар тізімі өңдегішінде қолданылады."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Хабарламаңызды енгізіңіз."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "«{$contextName}» журнал хабарламасы"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Құрметті редакторлар!<br />\n"
@@ -407,11 +397,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Түзетілген нұсқасы жүктелді"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Бұл хат әдеби редакторларға авторлардан цитаталар туралы қосымша ақпарат "
-"сұрауға мүмкіндік береді."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

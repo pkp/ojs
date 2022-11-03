@@ -212,11 +212,11 @@ msgstr ""
 "mar as urrainnear pàirt a ghabhail ann."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Dearbhadh air tagradh"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Shin thu,<br />\n"
 "<br />\n"
@@ -789,11 +789,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Grinn-deasaiche, {$contextName}<br/>\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Tha am post-d seo a’ toirt cothrom do ghrinn-deasaichean barrachd "
-"fiosrachaidh iarraidh o ùghdaran mu dhèidhinn reifreansan."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Chaidh tionndadh lèirmheaste a luchdadh suas"
 
@@ -807,17 +802,6 @@ msgstr ""
 "URL an tagraidh: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Teachdaireachd a thaobh {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Cuir a-steach do theachdaireachd."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"An teachdaireachd (bhàn) bhunaiteach a thèid a chleachdadh ann an togalaiche "
-"liostaichean theachdaireachdan aig ionad nam brathan."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Gnìomhachd deasachaidh sa mhìos seo: {$month} {$year}"

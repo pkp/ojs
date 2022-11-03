@@ -57,9 +57,6 @@ msgstr "Upon reaching the copyediting stage"
 msgid "manager.website.archiving"
 msgstr "Archiving"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Are you sure you want to reset all email templates in this journal? You will lose any customizations you have made."
-
 msgid "manager.files.note"
 msgstr "Note: The Files Browser is an advanced feature that allows the files and directories associated with a journal to be viewed and manipulated directly."
 
@@ -468,7 +465,7 @@ msgid "manager.setup.emailSignature"
 msgstr "Signature"
 
 msgid "manager.setup.emailSignature.description"
-msgstr "The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end."
+msgstr "Emails sent automatically on behalf of the journal will have the following signature added."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Enable announcements"
@@ -2130,3 +2127,16 @@ msgstr "Issue Published Notify"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr "This email is automatically sent to registered users when the new issue is published."
+
+msgid "manager.manageEmails.description"
+msgstr "Edit the messages sent in emails from this journal."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Galleys Complete"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Archive Request"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Archive Request (New)"
+

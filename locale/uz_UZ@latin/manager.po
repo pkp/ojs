@@ -48,11 +48,6 @@ msgstr ""
 "kataloglarni to'g'ridan-to'g'ri ko'rish va boshqarish imkonini beradigan "
 "rivojlangan xususiyat."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Ushbu jurnaldagi barcha elektron pochta shablonlarini qayta "
-"tiklamoqchimisiz? Siz qilgan har qanday sozlamalarni yo'qotasiz."
-
 msgid "manager.website.archiving"
 msgstr "Arxivlash"
 
@@ -742,6 +737,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "E'lonlarni yoqish"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Jurnal nomidan tizim tomonidan yuborilgan tayyorlangan elektron pochta "

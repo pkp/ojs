@@ -841,7 +841,7 @@ msgstr ""
 "manuskriptet eller vurderingsprosessen.</p><p>Takk for at du vurderer denne "
 "forespørselen. </p><p>Med vennlig hilsen</p>{$signature}"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Kjære {$recipientName}</p><p>Du er angitt som medforfatter på et "
 "manuskript innsendt til {$contextName}. Innsenderen, {$submitterName}, har "
@@ -888,16 +888,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redaksjonell aktivitet for {$month}, {$year}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Denne blanke standardbeskjeden blir brukt der du lager liste over varslinger."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Skriv inn beskjeden din her."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "En beskjed angående {$contextName}"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Redaktører:<br />\n"
@@ -911,11 +901,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Revidert versjon lastet opp"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Denne e-posten lar språkvaskere be forfattere bekrefte eller rette opp "
-"referanser."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""
@@ -941,7 +926,7 @@ msgstr "Har du fremdeles mulighet til å være fagfelle for {$contextName}?"
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Forespørsel om fagfellevurdering av revidert innlevering"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Bekreftelse på innlevering"
 
 msgid "emails.userValidateSite.body"

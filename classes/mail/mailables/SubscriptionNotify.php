@@ -34,7 +34,7 @@ class SubscriptionNotify extends Mailable
     protected static ?string $description = 'mailable.subscriptionNotify.description';
     protected static ?string $emailTemplateKey = 'SUBSCRIPTION_NOTIFY';
     protected static array $groupIds = [self::GROUP_OTHER];
-    protected static array $fromRoleIds = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUBSCRIPTION_MANAGER];
+    protected static array $fromRoleIds = [Role::ROLE_ID_SUBSCRIPTION_MANAGER];
     protected static array $toRoleIds = [Role::ROLE_ID_READER];
 
     public function __construct(Journal $context, Subscription $subscription, SubscriptionType $subscriptionType)

@@ -176,10 +176,10 @@ msgid "emails.lockssNewArchive.description"
 msgstr "Email ini mendorong penerima untuk berpartisipasi di gerakan LOCKSS dan memasukkan jurnal ini dalam arsip. Email ini memberikan informasi tentang gerakan LOCKSS dan cara untuk bergabung."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Konfirmasi pengiriman naskah"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Yth {$recipientName},</p><p>Nama Anda ditulis sebagai co-author pada "
 "nasakah {$contextName}. Pengirim, {$submitterName}, memberikan rincian "
@@ -613,9 +613,6 @@ msgstr ""
 "Copy-Editor, {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Email ini memungkinkan copyeditor untuk meminta informasi tambahan tentang rujukan dari penulis."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versi Revisi telah Diunggah"
 
@@ -628,15 +625,6 @@ msgstr ""
 "URL naskah: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Pesan terkait {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Silakan tuliskan pesan Anda."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Pesan default (kosong) yang digunakan di Pengelola Pesan Pusat Notifikasi."
 
 msgid "emails.reviewReinstate.body"
 msgstr ""

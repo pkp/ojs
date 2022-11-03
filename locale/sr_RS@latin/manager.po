@@ -16,9 +16,6 @@ msgstr ""
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Da li ste sigurni da želite da resetujete sve imejl šablone? Izgubićete sva podešavanja koja ste uradili."
-
 msgid "manager.files.note"
 msgstr "Napomena: pregledač fajlova je dodatak koji omogućuje direktno upravljanje svi fajlovima i direktorijima koji su vezani za časopis."
 
@@ -928,6 +925,7 @@ msgstr "Email identifikacija"
 msgid "manager.setup.emailSignature"
 msgstr "Potpis"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Pripremljene poruke koje će slati ovaj časopis će imati sledeći potpis dodat na kraj poruke."
 

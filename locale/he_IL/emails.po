@@ -228,7 +228,7 @@ msgid "emails.editorAssign.subject"
 msgstr "הקצאת עריכה"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "שלום,<br />\n"
 "<br />\n"
@@ -239,7 +239,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "אישור הגשה"
 
 msgid "emails.lockssNewArchive.description"

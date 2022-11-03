@@ -2951,38 +2951,25 @@
 				"summary": "Get email templates.",
 				"parameters": [
 					{
-						"name": "isEnabled",
-						"description": "Filter results by enabled/disabled email templates. Any truthy or falsey value will get enabled/disabled email templates.",
+						"name": "alternateTo",
+						"description": "Filter results by those assigned to a `Mailable` with this default email template key.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "isCustom",
-						"description": "Filter results by those with or without a default template. A truthy value will return only templates with a key that does not match one of the default templates. A falsey value will return only templates with a key that matches one of the default templates. Note that a default template may be customized, but this does not qualify for `isCustom`. Only completely custom templates, not a customization of a default template, will be returned when `isCustom` is `true`.",
+						"description": "Filter results by those with or without a default template. A truthy value will return only templates with a key that does not match one of the default templates. A falsey value will return only templates with a key that matches one of the default templates. Note that a default template may be customized, but this does not qualify for `isCustom`. Only completely custom templates, not a customization of a default template, will be returned when `isCustom` is `true`. If you want to see default templates that have been customized, use `isModified`.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "boolean"
 					},
 					{
-						"name": "fromRoleIds",
-						"description": "Filter results by email templates sent by one or more role IDs.",
+						"name": "isModified",
+						"description": "Filter results by those that have been modified from the default template. This is different from `isCustom` because it will return custom templates alongside any default templates that have been modified.",
 						"in": "query",
 						"required": false,
-						"type": "array",
-						"items": {
-							"type": "integer"
-						}
-					},
-					{
-						"name": "toRoleIds",
-						"description": "Filter results by email templates received by one or more role IDs.",
-						"in": "query",
-						"required": false,
-						"type": "array",
-						"items": {
-							"type": "integer"
-						}
+						"type": "boolean"
 					},
 					{
 						"name": "searchPhrase",
@@ -2992,15 +2979,20 @@
 						"type": "string"
 					},
 					{
-						"name": "stageIds",
-						"description": "Filter results by email templates that belong to one or more workflow stage IDs. Pass `0` to return templates not assigned to a stage.",
+						"name": "count",
+						"description": "How many templates to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "array",
-						"items": {
-							"type": "integer"
-						}
-					}
+						"type": "type",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the templates returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
 				],
 				"responses":  {
 					"200": {

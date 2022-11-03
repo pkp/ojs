@@ -17,9 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Er du sikker på, at du vil nulstille alle e-mail-skabeloner i dette tidsskrift? Alle tilpasninger vil gå tabt."
-
 msgid "manager.files.note"
 msgstr "Bemærk! Filbrowser er en avanceret funktion, der tillader visning og direkte redigering af de filer og mapper, som er forbundet med et tidsskrift."
 
@@ -400,6 +397,7 @@ msgstr "E-mail-identifikation"
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "De forberedte e-mails, der sendes af systemet på vegne af tidsskriftet, får følgende signatur tilføjet nederst. Brødteksten til de forberedte e-mails kan redigeres under Administration af tidsskrifter."
 

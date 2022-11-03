@@ -155,11 +155,11 @@ msgid "emails.lockssNewArchive.description"
 msgstr "Deze e-mail moedigt de ontvanger aan om deel te nemen in het LOCKSS initiatief en dit tijdschrift in het archief op te nemen. Informatie over het LOCKSS initiatief en manieren om daarbij betrokken te raken worden meegeleverd."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Bevestiging van inzending"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Beste,<br />\n"
 "<br />\n"
@@ -616,9 +616,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Tekstredacteur, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Met deze e-mail kunnen tekstredacteurs auteurs vragen om bijkomende informatie te geven over de bronverwijzing van citaten in hun artikel."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Herziene versie geladen"
 
@@ -631,15 +628,6 @@ msgstr ""
 "URL van de inzending: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Een bericht over {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Voeg hier uw boodschap in."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "De standaard (lege) berichttekst die wordt gebruikt in het Notification Center Message Listbuilder."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Redactionele activiteit voor {$month}, {$year}"

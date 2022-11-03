@@ -163,11 +163,11 @@ msgid "emails.lockssNewArchive.description"
 msgstr "Ez az email arra bátorítja a címzettet, hogy vegyen részt a LOCKSS kezdeményezésben és vonja be folyóiratát az archivumba. Információt nyújt a LOCKSS kezdeményezésről és a kapcsolódási lehetőségekről."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Értesítés cikk beküldéséről"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Tisztelt Szerző!<br />\n"
 "<br />\n"
@@ -638,9 +638,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Technikai szerkesztő, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Ez az email lehetővé teszi, hogy a technikai szerkesztők további információkat kérjenek a szerzőktől."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Átdolgozott változat feltöltve"
 
@@ -654,15 +651,6 @@ msgstr ""
 "<br />\n"
 "Üdvözlettel,<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Üzenet a(z) {$contextName} folyóirattól"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Kérjük, adja meg itt üzenete tartalmát."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Alapértelmezett (üres) üzenet sablon."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Cikk és lektorálási riport"

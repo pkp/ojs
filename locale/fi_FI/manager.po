@@ -17,9 +17,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Arkistointi"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Haluatko varmasti palauttaa kaikki tämän julkaisun sähköpostipohjat oletusarvoisiksi? Menetät kaikki tekemäsi mukautukset."
-
 msgid "manager.files.note"
 msgstr "Huom. Tiedostoselain (Files Browser) on erikoisominaisuus, jonka avulla julkaisuun liittyviä tiedostoja ja hakemistoja voidaan katsoa ja käsitellä suoraan."
 
@@ -440,6 +437,7 @@ msgstr "Sähköpostitunnistautuminen"
 msgid "manager.setup.emailSignature"
 msgstr "Allekirjoitus"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Valmiisiin sähköposteihin, jotka järjestelmä lähettää julkaisun puolesta, lisätään seuraava allekirjoitus."
 
