@@ -13,14 +13,10 @@
 
 namespace APP\submission;
 
-use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use PKP\context\Context;
-use PKP\context\PKPSection;
-use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiActionException;
 
 class Repository extends \PKP\submission\Repository
@@ -58,33 +54,6 @@ class Repository extends \PKP\submission\Repository
         }
 
         return $bySections;
-    }
-
-    /** @copydoc \PKP\submission\Repo::updateStatus() */
-    public function updateStatus(Submission $submission, ?int $newStatus = null, ?PKPSection $section = null)
-    {
-        $oldStatus = $submission->getData('status');
-        parent::updateStatus($submission, $newStatus, $section);
-        $newStatus = $submission->getData('status');
-
-        // Add or remove tombstones when submission is published or unpublished
-        if ($newStatus === Submission::STATUS_PUBLISHED && $newStatus !== $oldStatus) {
-            $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
-            $tombstoneDao->deleteByDataObjectId($submission->getId());
-        } elseif ($oldStatus === Submission::STATUS_PUBLISHED && $newStatus !== $oldStatus) {
-            $requestContext = $this->request->getContext();
-            if ($requestContext && $requestContext->getId() === $submission->getData('contextId')) {
-                $context = $requestContext;
-            } else {
-                $context = Services::get('context')->get($submission->getData('contextId'));
-            }
-            $articleTombstoneManager = new ArticleTombstoneManager();
-            if (!$section) {
-                $sectionDao = Application::get()->getSectionDAO();
-                $section = $sectionDao->getById($submission->getSectionId());
-            }
-            $articleTombstoneManager->insertArticleTombstone($submission, $context, $section);
-        }
     }
 
     /**
