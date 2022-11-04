@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-10-02 13:01+0000\n"
+"PO-Revision-Date: 2022-11-04 13:02+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl_SI/>\n"
@@ -2652,3 +2652,29 @@ msgid "mailable.issuePublishNotify.description"
 msgstr ""
 "Ta email je avtomatično poslan vsem registriranim uporabnikom, ko je "
 "objavljena nova številka revije."
+
+msgid "stats.issues.details"
+msgstr "Vpogledi in prenosi"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Skupno število vpogledov po datumu"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Išči številko po naslovu, zvezku in številki"
+
+msgid "stats.issues.none"
+msgstr "Nobena številka s statistikami ne ustreza danim parametrom."
+
+msgid "stats.issueStats"
+msgstr "Statistike številk"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Skupno število prenosov po datumu"
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Prenesi CSV/Exel datoteko s statistikami uporabe za številke, ki ustrezajo "
+"spodnjim parametrom."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "preden lahko uredite naročnino mora biti ustvarjena institucija."
