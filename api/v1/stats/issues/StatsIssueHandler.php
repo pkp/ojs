@@ -410,8 +410,8 @@ class StatsIssueHandler extends APIHandler
             __('common.id'),
             __('editor.issues.issueIdentification'),
             __('stats.total'),
-            __('stats.issueTOCViews'),
-            __('stats.issueGalleyViews')
+            __('stats.views'),
+            __('stats.downloads')
         ];
     }
 

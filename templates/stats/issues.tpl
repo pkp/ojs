@@ -47,7 +47,7 @@
 				<div v-if="chartData" class="pkpStats__graph">
 					<div class="pkpStats__graphHeader">
 						<h2 class="pkpStats__graphTitle -screenReader" id="issue-stats-graph-title">
-							{translate key="submission.views"}
+							{translate key="stats.views"}
 						</h2>
 						<div class="pkpStats__graphSelectors">
 							<div class="pkpStats__graphSelector pkpStats__graphSelector--timelineType">
@@ -56,14 +56,14 @@
 									aria-describedby="issue-stats-graph-title"
 									@click="setTimelineType('toc')"
 								>
-									{translate key="stats.issueTOCViews"}
+									{translate key="stats.views"}
 								</pkp-button>
 								<pkp-button
 									:aria-pressed="timelineType === 'files'"
 									aria-describedby="issue-stats-graph-title"
 									@click="setTimelineType('files')"
 								>
-									{translate key="stats.issueGalleyViews"}
+									{translate key="stats.downloads"}
 								</pkp-button>
 							</div>
 							<div class="pkpStats__graphSelector pkpStats__graphSelector--timelineInterval">
@@ -87,13 +87,13 @@
 						</div>
 					</div>
 					<table class="-screenReader" role="region" aria-live="polite">
-						<caption v-if="timelineType === 'files'">{translate key="stats.issues.totalIssueGalleyViews.timelineInterval"}</caption>
-						<caption v-else>{translate key="stats.issues.totalTOCViews.timelineInterval"}</caption>
+						<caption v-if="timelineType === 'files'">{translate key="stats.downloads.timelineInterval"}</caption>
+						<caption v-else>{translate key="stats.views.timelineInterval"}</caption>
 						<thead>
 							<tr>
 								<th scope="col">{translate key="common.date"}</th>
-								<th v-if="timelineType === 'files'" scope="col">{translate key="stats.issueGalleyViews"}</th>
-								<th v-else scope="col">{translate key="stats.issueTOCViews"}</th>
+								<th v-if="timelineType === 'files'" scope="col">{translate key="stats.downloads"}</th>
+								<th v-else scope="col">{translate key="stats.views"}</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -169,6 +169,19 @@
 											@click="downloadReport"
 										>
 											{translate key="stats.issues.downloadReport.downloadIssues"}
+										</pkp-button>
+									</template>
+								</action-panel>
+								<action-panel class="pkpStats__reportAction">
+									<h2>{translate key="stats.timeline"}</h2>
+									<p>
+										{{ getTimelineDescription() }}
+									</p>
+									<template slot="actions">
+										<pkp-button
+											@click="downloadReport('timeline')"
+										>
+											{translate key="stats.timeline.downloadReport.downloadTimeline"}
 										</pkp-button>
 									</template>
 								</action-panel>
