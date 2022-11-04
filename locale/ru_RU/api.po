@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
-"PO-Revision-Date: 2022-11-04 09:02+0000\n"
+"PO-Revision-Date: 2022-11-04 09:07+0000\n"
 "Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
 "Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/api/ru_RU/>"
 "\n"
@@ -70,3 +70,11 @@ msgstr "Запрошенный вами материал отсутствует 
 
 msgid "api.dois.400.contextsNotMatched"
 msgstr "Запрошенный вами DOI не является частью этого журнала."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Депонирование некоторых элементов завершилось неудачей. Пожалуйста, "
+"проверьте отдельные элементы на наличие сообщений о конкретных ошибках."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Для этого журнала не настроено агентство регистрации DOI."
