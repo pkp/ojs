@@ -1,8 +1,8 @@
-OJS 3.2.1-4 Release Notes
-Git tag: 3_2_1-4
+OJS 3.2.1-5 Release Notes
+Git tag: 3_2_1-5
 
-Release date: February 5, 2021
-===============================
+Release date: November 4, 2022
+==============================
 
 Configuration Changes
 ---------------------
@@ -15,10 +15,14 @@ New config.inc.php parameters:
 		queries. Default: utf8_general_ci
 	- email.smtp_suppress_cert_check - True if PHPMailer's certificate check
 		is to be disabled. Not recommended unless you're sure. Default: Off
-	- curl.cainfo - Path to Certificate Authority (CA) bundle.a
+	- curl.cainfo - Path to Certificate Authority (CA) bundle.
 	- An allowed_hosts option was added to protect against HOST injection attacks.
 		We recommend configuring this setting! See "Recommended Configuration" in
 		docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
+
+3.2.1-5 Build
+-------------
+	#8307: SECURITY Validate author IDs against submissions/publications
 
 3.2.1-4 Build
 -------------
