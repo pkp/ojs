@@ -1,11 +1,12 @@
 # Pavel Pisklakov <ppv1979@mail.ru>, 2022.
+# Alexander Sapozhnikov <shoorick@mail.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
-"PO-Revision-Date: 2022-11-04 11:02+0000\n"
-"Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
+"PO-Revision-Date: 2022-11-05 22:02+0000\n"
+"Last-Translator: Alexander Sapozhnikov <shoorick@mail.ru>\n"
 "Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ru_RU/>\n"
 "Language: ru_RU\n"
@@ -336,3 +337,6 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Возвращён обратно на рецензию"
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Выберите файлы, которые следует отправить на этап рецензирования."
