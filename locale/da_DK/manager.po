@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-10-28 09:01+0000\n"
+"PO-Revision-Date: 2022-11-07 11:02+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -2338,3 +2338,23 @@ msgstr ""
 "<strong>Visninger</strong>: Antal besøgende, der ser udgivelsens "
 "indholdsfortegnelse.<br><strong>Downloads</strong>: Antal downloads af "
 "udgivelsens publiceringsversion, hvis en sådan findes."
+
+msgid "stats.contextStats"
+msgstr "Statistik for tidsskriftet"
+
+msgid "stats.context.tooltip.text"
+msgstr "Antal besøgende på tidsskriftets indeksside."
+
+msgid "stats.context.tooltip.label"
+msgstr "Om statistik for tidsskriftet"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Download et CSV/Excel-regneark med brugsstatistik for dette tidsskrift, der "
+"matcher de følgende parametre."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Antal visninger af tidsskriftets indeksside."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Download tidsskrift"
