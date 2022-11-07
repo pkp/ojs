@@ -1,8 +1,12 @@
-OJS 3.2.0-3 Release Notes
-Git tag: 3_2_0-3
+OJS 3.2.0-4 Release Notes
+Git tag: 3_2_0-4
 
-Release date: April 30, 2020
-===========================
+Release date: November 7, 2022
+==============================
+
+3.2.0-4 Build
+-------------
+	#8307: SECURITY Validate author IDs against submissions/publications
 
 Bug Fixes (-3 build)
 --------------------
