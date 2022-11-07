@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-11-01 19:02+0000\n"
+"PO-Revision-Date: 2022-11-07 09:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -2450,3 +2450,23 @@ msgstr ""
 "<strong>Görüntüle</strong>: Sayının içindekiler tablosunu görüntüleyen "
 "ziyaretçi sayısı.<br><strong>İndirme</strong>: Sayı dosyalarının indirilme "
 "sayısı."
+
+msgid "stats.contextStats"
+msgstr "Dergi İstatistikleri"
+
+msgid "stats.context.tooltip.text"
+msgstr "Derginin sayfasını görüntüleyen ziyaretçi sayısı."
+
+msgid "stats.context.tooltip.label"
+msgstr "Dergi istatistikleri hakkında"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Dergi web sayfasının görüntüleme sayısı."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Dergi İstatistiklerini İndir"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Aşağıdaki parametrelerle eşleşen dergi için kullanım istatistiklerini içeren "
+"bir CSV/Excel tablosu indirin."
