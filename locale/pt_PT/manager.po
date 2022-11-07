@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-10-31 09:02+0000\n"
+"PO-Revision-Date: 2022-11-07 13:02+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -2333,3 +2333,23 @@ msgstr ""
 "<strong>Visualizações</strong>: Número de visitas ao índice do "
 "número.<br><strong>Downloads</strong>: Número de downloads do número, caso "
 "exista."
+
+msgid "stats.contextStats"
+msgstr "Estatísticas da Revista"
+
+msgid "stats.context.tooltip.text"
+msgstr "Número de visitantes que consultaram a página inicial da revista."
+
+msgid "stats.context.tooltip.label"
+msgstr "Sobre as estatísticas da revista"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Descarregar um CSV/Excel com as estatísticas para esta revista de acordo com "
+"os seguintes parâmetros."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "O número de consultas da página inicial da revista."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Descarregar Revista"
