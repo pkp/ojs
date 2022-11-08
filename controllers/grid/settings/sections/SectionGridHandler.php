@@ -75,7 +75,7 @@ class SectionGridHandler extends SetupGridHandler
             } else {
                 $editorsString = Repo::user()
                     ->getCollector()
-                    ->filterByUserIds($users->map(fn ($user) => $user->user_id)->toArray())
+                    ->filterByUserIds($users->map(fn ($user) => $user->userId)->toArray())
                     ->getMany()
                     ->map(fn ($user) => $user->getFullName())
                     ->join(__('common.commaListSeparator'));
