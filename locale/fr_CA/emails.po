@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-10-27 17:01+0000\n"
+"PO-Revision-Date: 2022-11-09 20:02+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -400,9 +400,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Décision du rédacteur"
+msgstr "Votre soumission a été acceptée dans la revue {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -737,9 +736,10 @@ msgstr ""
 "<br />\n"
 "Si vous avez des questions, n'hésitez pas à communiquer avec moi."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Réintégration de la demande d'évaluation"
+msgstr ""
+"Êtes-vous encore en mesure d'évaluer des travaux pour la revue {$contextName}"
+" ?"
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
@@ -795,3 +795,6 @@ msgstr ""
 
 msgid "emails.userValidateSite.subject"
 msgstr "Valider votre compte"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "Votre soumission a été envoyée à la révision linguistique"
