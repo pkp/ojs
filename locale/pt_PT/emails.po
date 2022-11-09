@@ -775,20 +775,6 @@ msgstr ""
 "Agradecendo desde já a atenção dispensada,<br />\n"
 "{$signature}"
 
-msgid "emails.notification.subject"
-msgstr "Nova notificação de {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Tem uma nova notificação de {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.editorDecisionAccept.subject"
 msgstr "A sua submissão foi aceite em {$contextName}"
 

@@ -15,20 +15,6 @@ msgstr ""
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
 
-msgid "emails.notification.subject"
-msgstr "Brath ùr o {$contextName}"
-
-#, fuzzy
-msgid "emails.notification.body"
-msgstr ""
-"Tha bhrath ùr agad o {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Ceangal: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Dearbhadh ath-shuidheachadh an fhacail-fhaire"
 

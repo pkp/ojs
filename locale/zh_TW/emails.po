@@ -12,9 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "emails.notification.subject"
-msgstr "從{$contextName}收到的新通知"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "密碼重置確認"
 

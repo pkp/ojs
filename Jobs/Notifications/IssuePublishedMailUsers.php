@@ -17,11 +17,15 @@ namespace APP\Jobs\Notifications;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\mail\mailables\IssuePublishedNotify;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 use Illuminate\Bus\Batchable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 use PKP\context\Context;
+use PKP\Domains\Jobs\Exceptions\JobException;
 use PKP\emailTemplate\EmailTemplate;
 use PKP\Support\Jobs\BaseJob;
 use PKP\user\User;
@@ -32,29 +36,67 @@ class IssuePublishedMailUsers extends BaseJob
 
     protected Collection $recipientIds;
     protected int $contextId;
-    protected User $sender;
+    protected Issue $issue;
     protected string $locale;
 
-    public function __construct(Collection $recipientIds, int $contextId, User $sender, string $locale)
-    {
+    // Sender of the email; should be set if sendEmail is true
+    protected User $sender;
+
+    // Whether to send notification email
+    protected bool $sendEmail = false;
+
+    public function __construct(
+        Collection $recipientIds,
+        int $contextId,
+        Issue $issue,
+        string $locale,
+        ?User $sender = null,
+        bool $sendEmail = false
+    ) {
         parent::__construct();
 
         $this->recipientIds = $recipientIds;
         $this->contextId = $contextId;
-        $this->sender = $sender;
+        $this->issue = $issue;
         $this->locale = $locale;
+        if (!is_null($sender)) {
+            $this->sender = $sender;
+        }
+        if ($sendEmail) {
+            $this->sendEmail = $sendEmail;
+        }
     }
 
     public function handle()
     {
         $context = Application::getContextDAO()->getById($this->contextId);
         $template = Repo::emailTemplate()->getByKey($this->contextId, IssuePublishedNotify::getEmailTemplateKey());
+
         foreach ($this->recipientIds as $recipientId) {
             $recipient = Repo::user()->get($recipientId);
             if (!$recipient) {
                 continue;
             }
-            $mailable = $this->createMailable($context, $recipient, $template);
+
+            $notificationManager = new NotificationManager();
+            $notification = $notificationManager->createNotification(
+                null,
+                $recipientId,
+                Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE,
+                $this->contextId,
+                Application::ASSOC_TYPE_ISSUE,
+                $this->issue->getId()
+            );
+
+            if (!$this->sendEmail) {
+                continue;
+            }
+
+            if (!$this->sender) {
+                throw new JobException(JobException::INVALID_PAYLOAD);
+            }
+
+            $mailable = $this->createMailable($context, $this->issue, $recipient, $template, $notification);
             $mailable->setData($this->locale);
             Mail::send($mailable);
         }
@@ -63,14 +105,20 @@ class IssuePublishedMailUsers extends BaseJob
     /**
      * Creates new issue published notification email
      */
-    protected function createMailable(Context $context, User $recipient, EmailTemplate $template): IssuePublishedNotify
-    {
-        $mailable = new IssuePublishedNotify($context);
+    protected function createMailable(
+        Context $context,
+        Issue $issue,
+        User $recipient,
+        EmailTemplate $template,
+        Notification $notification
+    ): IssuePublishedNotify {
+        $mailable = new IssuePublishedNotify($context, $issue);
         $mailable
             ->recipients([$recipient])
             ->sender($this->sender)
             ->body($template->getLocalizedData('body', $this->locale))
-            ->subject($template->getLocalizedData('subject', $this->locale));
+            ->subject($template->getLocalizedData('subject', $this->locale))
+            ->allowUnsubscribe($notification);
 
         return $mailable;
     }

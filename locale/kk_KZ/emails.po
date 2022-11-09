@@ -80,21 +80,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Құпия сөзді қалпына келтіруді растау"
 
-msgid "emails.notification.body"
-msgstr ""
-"Сізге «{$contextName}» сайтынан жаңа хабарлама келіп түсті:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Сілтеме: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr ""
-"«{$contextName}» сайтынан жаңа хабарландыру"
-
 msgid "emails.reviewerRegister.subject"
 msgstr "\"{$ContextName}\"журналында рецензент ретінде тіркелу"
 

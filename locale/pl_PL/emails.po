@@ -16,21 +16,6 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Nowe powiadomienie ze strony czasopisma {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Na stronie czasopisma {$contextName}:<br />\n"
-"<br /> \n"
-"oczekuje nowe powiadomienie {$notificationContents}<br />\n"
-"<br />\n"
-"WWW: {$notificationUrl}<br />\n"
-"<br />\n"
-"Z wyrazami szacunku, \n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Nowe powiadomienie ze strony czasopisma {$siteTitle}"
 

@@ -596,17 +596,3 @@ msgstr ""
 #, fuzzy
 msgid "emails.announcement.subject"
 msgstr "{$title}"
-
-#, fuzzy
-msgid "emails.notification.body"
-msgstr ""
-"Imate novu obavijest od {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
-msgid "emails.notification.subject"
-msgstr "Nova obavijest od {$contextName}"

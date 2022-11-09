@@ -716,20 +716,6 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-msgid "emails.notification.subject"
-msgstr "Nové oznámení od {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Máte nové oznámení od {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Odkaz: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Nové oznámení od {$siteTitle}"
 

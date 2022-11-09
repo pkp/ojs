@@ -104,20 +104,6 @@ msgstr "Tetapan Semula Kata Laluan"
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Pengesahan Tetapan Semula Kata Laluan"
 
-msgid "emails.notification.body"
-msgstr ""
-"Anda mempunyai notifikasi baharu dari {$contextName}: <br />\n"
-"<br />\n"
-"{$notificationContents} <br />\n"
-"<br />\n"
-"Pautan: {$notificationUrl} <br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr/> {$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr "Notifikasi baharu dari {$contextName}"
-
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Permintaan Ulasan Artikel"

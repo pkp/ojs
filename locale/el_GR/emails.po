@@ -15,20 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Νέα ειδοποίηση από το {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Έχετε μία νέα ειδοποίηση από το {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Σύνδεσμος: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Επιβεβαίωση αλλαγής κωδικού πρόσβασης"
 

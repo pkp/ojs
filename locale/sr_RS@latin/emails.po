@@ -11,20 +11,6 @@ msgstr ""
 "PO-Revision-Date: 2019-12-02T16:17:18-08:00\n"
 "Language: sr_RS@latin\n"
 
-msgid "emails.notification.subject"
-msgstr "Imate poruku od {$contextName}"
-
-#, fuzzy
-msgid "emails.notification.body"
-msgstr ""
-"Imate poruku od {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 msgid "emails.subscriptionNotify.subject"
 msgstr "Obaveštenje o pretplati"
 

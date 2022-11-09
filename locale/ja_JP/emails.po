@@ -79,20 +79,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "パスワードリセットの確認"
 
-msgid "emails.notification.body"
-msgstr ""
-"{$contextName}からの新しいお知らせです。<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr "{$contextName}からの新しいお知らせ"
-
 #, fuzzy
 msgid "emails.submissionAckNotAuthor.body"
 msgstr ""

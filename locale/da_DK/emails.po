@@ -639,20 +639,6 @@ msgstr ""
 "Mvh.\n"
 "{$subscriptionsignature}"
 
-msgid "emails.notification.subject"
-msgstr "Ny meddelelse fra {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Du har modtaget en ny meddelelse fra {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.editorDecisionAccept.subject"
 msgstr "Din indsendelse er blevet accepteret til {$contextName}"
 

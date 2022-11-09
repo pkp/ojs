@@ -1941,9 +1941,6 @@ msgstr "Et oppsett til \"{$title}\" har blitt endret."
 msgid "notification.type.issuePublished"
 msgstr "En utgave har blitt publisert."
 
-msgid "notification.type.metadataModified"
-msgstr "\"{$title}'s\" metadata har blitt endret."
-
 msgid "notification.type.newAnnouncement"
 msgstr "Nytt oppslag."
 

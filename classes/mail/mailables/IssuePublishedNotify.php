@@ -15,12 +15,13 @@
 
 namespace APP\mail\mailables;
 
-use APP\facades\Repo;
+use APP\issue\Issue;
 use PKP\context\Context;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
 use PKP\mail\traits\Recipient;
 use PKP\mail\traits\Sender;
+use PKP\mail\traits\Unsubscribe;
 use PKP\security\Role;
 
 class IssuePublishedNotify extends Mailable
@@ -28,6 +29,7 @@ class IssuePublishedNotify extends Mailable
     use Configurable;
     use Recipient;
     use Sender;
+    use Unsubscribe;
 
     protected static ?string $name = 'mailable.issuePublishNotify.name';
     protected static ?string $description = 'mailable.issuePublishNotify.description';
@@ -38,10 +40,13 @@ class IssuePublishedNotify extends Mailable
 
     protected static string $issueIdentification = 'issueIdentification';
 
-    public function __construct(Context $context)
+    protected Context $context;
+
+    public function __construct(Context $context, Issue $issue)
     {
-        parent::__construct(func_get_args());
-        $this->setupIssueIdentificationVariable($context);
+        parent::__construct([$context]);
+        $this->context = $context;
+        $this->setupIssueIdentificationVariable($issue);
     }
 
     /**
@@ -57,11 +62,19 @@ class IssuePublishedNotify extends Mailable
     /**
      * Include current issue identification to be used as an email template variable
      */
-    protected function setupIssueIdentificationVariable(Context $context)
+    protected function setupIssueIdentificationVariable(Issue $issue)
     {
-        $issue = Repo::issue()->get($context->getData('currentIssueId'));
         $this->addData([
             static::$issueIdentification => $issue->getData('identification')
         ]);
+    }
+
+    /**
+     * Adds a footer with unsubscribe link
+     */
+    protected function addFooter(string $locale): Mailable
+    {
+        $this->setupUnsubscribeFooter($locale, $this->context);
+        return $this;
     }
 }

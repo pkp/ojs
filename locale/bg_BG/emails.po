@@ -250,20 +250,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Потвърждение за нулиране (reset) на парола"
 
-msgid "emails.notification.body"
-msgstr ""
-"Имате ново известие от {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Връзка: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr "Ново известие от {$contextName}"
-
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Редакторска активност за {$month}, {$year}"
 

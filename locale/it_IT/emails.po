@@ -668,20 +668,6 @@ msgstr ""
 "Con i più cordiali saluti,<br />\n"
 "{$signature}"
 
-msgid "emails.notification.subject"
-msgstr "Nuova notifica da {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Hai ricevuto una nuova notifica da {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Nuova notifica da {$siteTitle}"
 
