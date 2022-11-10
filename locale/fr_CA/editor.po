@@ -1,13 +1,13 @@
 # Jean-Hugues Roy <roy.jean-hugues@uqam.ca>, 2021.
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# Jeanette Hatherill <jeanette.hatherill@uottawa.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
 "PO-Revision-Date: 2022-11-10 15:46+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
-"vezina@umontreal.ca>\n"
+"Last-Translator: Jeanette Hatherill <jeanette.hatherill@uottawa.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -437,10 +437,10 @@ msgstr "Assignée au numéro"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"L'image de la page couverture que vous voulez supprimer correspond à celle "
-"d'une autre revue. Veuillez vous assurer que vous travaillez sur le site de "
-"la bonne revue, que vous utilisez le bon identifiant de numéro et essayez de "
-"nouveau."
+"L'image de la page couverture que vous désirez supprimer correspond à un "
+"numéro pour une revue différente. Veuillez vous assurer que vous travaillez "
+"avec avec la bonne revue, que vous utilisez le bon identifiant de numéro et "
+"essayez de nouveau."
 
 msgid "editor.article.payment.requestPayment"
 msgstr "Demander le paiement"
