@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2022-10-10 20:01+0000\n"
+"PO-Revision-Date: 2022-11-10 18:02+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -368,3 +368,19 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Revenir à l'évaluation"
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Retourné-e à l'étape d'évaluation"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} a annulé la décision d'accepter cette soumission et l'a remise "
+"à l'étape d'évaluation."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "La soumission, {$title}, a été retournée à l'étape d'évaluation."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Revenir sur la décision d'accepter cette soumission et la remettre à l'étape "
+"d'évaluation."
