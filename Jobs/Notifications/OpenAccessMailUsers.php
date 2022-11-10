@@ -23,7 +23,7 @@ use APP\template\TemplateManager;
 use Illuminate\Bus\Batchable;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\LazyCollection;
-use PKP\Support\Jobs\BaseJob;
+use PKP\Jobs\BaseJob;
 use Symfony\Component\Mime\Message;
 
 class OpenAccessMailUsers extends BaseJob
