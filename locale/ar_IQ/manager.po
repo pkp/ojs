@@ -1,10 +1,11 @@
 # M. Ali <vorteem@gmail.com>, 2021, 2022.
+# Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-10-15 04:01+0000\n"
+"PO-Revision-Date: 2022-11-09 13:02+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -537,7 +538,9 @@ msgid "manager.setup.information"
 msgstr "المعلومات"
 
 msgid "manager.setup.information.description"
-msgstr "وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء، متاح ضمن خانة  \"المعلومات\" من الشريط الجانبي."
+msgstr ""
+"وصف موجز للمجلة موجه لأمناء المكتبات والمؤلفين الكرام والقراء، متاح ضمن خانة "
+"\"المعلومات\" من الشريط الجانبي."
 
 msgid "manager.setup.information.forAuthors"
 msgstr "للمؤلفين"
@@ -1544,7 +1547,9 @@ msgid "grid.action.addSection"
 msgstr "أضف قسماً"
 
 msgid "manager.setup.section.description"
-msgstr "المؤلفات الموجودة في الأعداد المنشورة للمجلة منظمة في أقسام، عادة باستعمال الأنماط أو نوعية المحتوى (مثلاً،  مقالات محكمة، بحوث... إلخ.)."
+msgstr ""
+"المؤلفات الموجودة في الأعداد المنشورة للمجلة منظمة في أقسام، عادة باستعمال "
+"الأنماط أو نوعية المحتوى (مثلاً، مقالات محكمة، بحوث... إلخ.)."
 
 msgid "settings.roles.gridDescription"
 msgstr "الأدوار هي مجموعات من المستخدمين في المجلة الذين تم منحهم صلاحيات بمستويات مختلفة مع مسارات عمل تتناسب معها ضمن المجلة. هناك خمسة مستويات للصلاحيات: رؤساء التحرير الذين لديهم حق الوصول إلى أي شيء في المجلة (كل المحتويات والإعدادات)؛ محررو الأقسام لديهم حق الوصول إلى كل المحتوى المعين لهم؛ مساعدو المجلة لهم حق وصول محدود إلى كل طلبات النشر التي تم تخصيصها حصرياً لهم من قبل مدير التحرير؛ المحكمون يمكنهم معاينة ومتابعة الطلبات التي عُينوا لها؛ والمؤلفون الذين يمكنهم معاينة ومعاملة حجم محدود من المعلومات التي تتعلق بطلباتهم. فضلاً عن ذلك، هناك خمس مهام مرحلية مختلفة يمكن منح الأدوار للوصول إليها: تقديم طلب النشر، التحكيم الدخلي، التحكيم، التحرير، ومرحلة الإنتاج."
@@ -1582,7 +1587,10 @@ msgid "grid.genres.title"
 msgstr "مكونات المؤلفات"
 
 msgid "grid.genres.description"
-msgstr "هذه المكونات مستعملة لأغراض تسمية الملفات وهي مقدمة بشكل قائمة منسدلة عند رفع الملفات. إن النمط المعلم بعلامتي ## يسمح للمستخدم بربط الملف إما مع طلب النشر بأكمله  99Z أو مع مكون محدد بالرقم (مثلاً: 02)."
+msgstr ""
+"هذه المكونات مستعملة لأغراض تسمية الملفات وهي مقدمة بشكل قائمة منسدلة عند "
+"رفع الملفات. إن النمط المعلم بعلامتي ## يسمح للمستخدم بربط الملف إما مع طلب "
+"النشر بأكمله 99Z أو مع مكون محدد بالرقم (مثلاً: 02)."
 
 msgid "plugins.importexport.common.settings"
 msgstr "الإعدادات"
@@ -2113,10 +2121,10 @@ msgid "manager.subscriptions.form.institutionIdValid"
 msgstr "يرجى اختيار مؤسسة صحيحة."
 
 msgid "stats.issueTOCViews"
-msgstr "معاينات جدول محتويات العدد"
+msgstr "معاينات"
 
 msgid "stats.issueGalleyViews"
-msgstr "معاينات الألواح الطباعية للعدد"
+msgstr "تحميلات"
 
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "ينبغي إنشاء المؤسسة قبل القيام بتسجيل إشتراكات جديدة."
@@ -2145,3 +2153,64 @@ msgid "stats.publications.downloadReport.description"
 msgstr ""
 "تنزيل جدول بصيغة CSV/Excel يتضمن إحصائيات الاستعمال للمقالات التي تطابق "
 "العوامل الآتية."
+
+msgid "stats.issueStats"
+msgstr "أحصائيات العدد"
+
+msgid "stats.issues.details"
+msgstr "المشاهدات و التحميلات"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "المشاهدات الكلية بواسطة التأريخ"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "التنزيلات الكلية بواسطة التأريخ"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "البحث عن العدد، الحجم و العدد"
+
+msgid "stats.issues.none"
+msgstr "لا توجد هناك مشاكل مع احصائيات الاستخدام تطابق هذه المعايير."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"قم بتنزيل جدول بيانات CSV / Excel به إحصائيات الاستخدام للأعداد المطابقة "
+"للمعايير التالية."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "عدد مشاهدات جدول المحتويات و تنزيلات ملفات العدد لكل عدد."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "تحميل الأعداد"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} من {$total} الأعداد"
+
+msgid "stats.issues.tooltip.label"
+msgstr "حول أحصائيات العدد"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Views</strong>: عدد الزوار الذين جدول محتويات "
+"العدد.<br><strong>Downloads</strong>: عدد التنزيلات للملفات العدد، اذا كان "
+"هناك واحد."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "تنزيل المجلة"
+
+msgid "stats.contextStats"
+msgstr "إحصائيات المجلة"
+
+msgid "stats.context.tooltip.text"
+msgstr "عدد الزوار الذين يعاينون صفحة فهرس المجلة."
+
+msgid "stats.context.tooltip.label"
+msgstr "عن إحصائيات المجلة"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "عدد معاينات صفحة فهرس المجلة."
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"تنزيل جدول بصيغة CSV/Excel يضم إحصائيات الاستعمال لهذه المجلة والذي يطابق "
+"المعايير الآتية."

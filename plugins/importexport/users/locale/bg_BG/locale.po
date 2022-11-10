@@ -1,16 +1,16 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-29 19:32+0000\n"
+"PO-Revision-Date: 2022-10-31 08:02+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"importexport-users/bg/>\n"
-"Language: bg\n"
+"importexport-users/bg_BG/>\n"
+"Language: bg_BG\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.importexport.users.uploadFile"
 msgstr "Моля, качете файл в „Импорт“ за да продължите."
@@ -41,7 +41,7 @@ msgstr "Посочен е неизвестен път на списанието 
 
 msgid "plugins.importexport.users.import.encryptionMismatch"
 msgstr ""
-"Не можете да използвате пароли хеширани с  {$importHash}; OJS е конфигуриран "
+"Не можете да използвате пароли хеширани с {$importHash}; OJS е конфигуриран "
 "да използва {$ojsHash}. Ако продължите, ще трябва да нулирате паролите на "
 "импортираните потребители."
 

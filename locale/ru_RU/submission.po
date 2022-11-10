@@ -1,19 +1,21 @@
+# Pavel Pisklakov <ppv1979@mail.ru>, 2022.
+# Alexander Sapozhnikov <shoorick@mail.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
-"PO-Revision-Date: 2021-01-17 14:53+0000\n"
-"Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
+"PO-Revision-Date: 2022-11-05 22:02+0000\n"
+"Last-Translator: Alexander Sapozhnikov <shoorick@mail.ru>\n"
 "Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ru_RU/>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.title"
 msgstr "Отправить статью"
@@ -316,3 +318,25 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Этот материал был назначен в <a href=\"{$issueUrl}\">«{$issueName}»</a>, но "
 "он не был запланирован для публикации."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"Редактор «{$editorName}» отменил решение о приёме этого материала и вернул "
+"его на этап рецензирования."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Вернуть на рецензию"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Материал «{$title}» был возвращён на этап рецензирования."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Отменить решение о приёме данного материала и вернуть его обратно на этап "
+"рецензирования."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Возвращён обратно на рецензию"
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Выберите файлы, которые следует отправить на этап рецензирования."

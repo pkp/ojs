@@ -1,11 +1,12 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2021, 2022.
+# José Carvalho <jcarvalho@keep.pt>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-10-18 12:01+0000\n"
-"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
+"PO-Revision-Date: 2022-11-07 13:02+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -36,7 +37,7 @@ msgstr ""
 "O sistema pode estar disponível para utilizadores em vários idiomas. O "
 "sistema também pode operar como parcialmente multilíngue, fornecendo a opção "
 "de troca de idioma em cada página e permitindo que algumas informações sejam "
-"incluídas  em vários idiomas adicionais.<br /><br />Caso o idioma desejado "
+"incluídas em vários idiomas adicionais.<br /><br />Caso o idioma desejado "
 "não esteja disponível, solicite ao administrador do portal a sua instalação "
 "através da interface de administração. Para informações sobre instalação de "
 "novos idiomas, consulte a documentação do sistema."
@@ -505,7 +506,11 @@ msgid "manager.setup.journalHomepageContent"
 msgstr "Conteúdo da Página Inicial"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "A página inicial consiste de uma lista de atalhos (links). Pode ser adicionado conteúdo adicional à página inicial  através de uma ou mais opções a seguir, que aparecerão na ordem exibida. Note que a edição actual é sempre acessível pelo atalho Actual na barra de navegação."
+msgstr ""
+"A página inicial consiste de uma lista de atalhos (links). Pode ser "
+"adicionado conteúdo adicional à página inicial através de uma ou mais opções "
+"a seguir, que aparecerão na ordem exibida. Note que a edição actual é sempre "
+"acessível pelo atalho Actual na barra de navegação."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Cabeçalho da Página Inicial da Revista"
@@ -689,7 +694,7 @@ msgstr "E-mails automatizados serão enviados ao revisor (o editor também pode 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
 "Para enviar lembretes por e-mail, o administrador do portal deve ativar a "
-"opção de  <tt>scheduled_tasks</tt>  no documento de configuração do sistema. "
+"opção de <tt>scheduled_tasks</tt> no documento de configuração do sistema. "
 "Configurações adicionais no servidor podem ser necessárias para suportar "
 "tais funcionalidades (pode não ser possível em todos os tipos de servidores!)"
 ", como descrito na documentação do sistema."
@@ -1740,8 +1745,8 @@ msgstr "Este é um tipo de subscrição que não expira; não insira data de in�
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
-"Insira metadados para serviços de indexação externos através de  <a href=\""
-"https://www.openarchives.org/\">Open Archives Initiative</a>."
+"Insira metadados para serviços de indexação externos através de <a href="
+"\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.enableOai"
 msgstr "Ativar OAI"
@@ -2047,7 +2052,9 @@ msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Tem a certeza que quer atribuir DOI a todos os objetos publicados e aos quais não tenham sido atribuídos DOI?"
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "O DOI {$pubId} foi atribuído."
+msgstr ""
+"O DOI {$pubId} foi atribuído. Para editar o DOI, visite a <a href=\""
+"{$doiManagementLink}\">página de gestão do DOI</a>."
 
 msgid "doi.editor.preview.publication.none"
 msgstr "Não foi atribuído DOI a esta publicação."
@@ -2105,7 +2112,7 @@ msgid "api.galley.403.publicationDidNotMatch"
 msgstr "A composição selecionada não faz parte desta publicação."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr "O DOI {$pubId} será atribuído na publicação."
+msgstr "O DOI {$pubId} será atribuído à publicação."
 
 msgid "doi.manager.settings.registrationAgency.none"
 msgstr "Nenhuma"
@@ -2245,3 +2252,104 @@ msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
 "O número de visualizações dos resumos e downloads dos ficheiros de cada "
 "artigo."
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Este e-mail é enviado automaticamente aos utilizadores registados quando a "
+"nova edição é publicada."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Notificação de Subscrição"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "A subscrição expira em breve"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Subscrição Expirada"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Subscreva uma assinatura individual"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Subscrição Expirada Apelido"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Adquira uma assinatura institucional"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Renovar Assinatura Individual"
+
+msgid "manager.institutions.noContext"
+msgstr "Não foi possível encontrar a revista desta instituição."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Renovar Assinatura Institucional"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Notificação de Acesso Aberto"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Notificação de Edição Publicada"
+
+msgid "stats.issues.details"
+msgstr "Consultas e Downloads"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Total de downloads por data"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Procure pelo título do número, volume e número"
+
+msgid "stats.issues.none"
+msgstr ""
+"Não foram encontrados números com estas opções de pesquisa que contenham "
+"estatísticas de uso."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Descarregue um ficheiro CSV/Excel com as estatísticas de uso para os números "
+"com os parâmetros definidos."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "O número de consultas ao índice e ficheiros de cada número."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Descarregar Números"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} de {$total} números"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Sobre as estatísticas"
+
+msgid "stats.issueStats"
+msgstr "Estatísticas do Número"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Total de visualizações por data"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Visualizações</strong>: Número de visitas ao índice do "
+"número.<br><strong>Downloads</strong>: Número de downloads do número, caso "
+"exista."
+
+msgid "stats.contextStats"
+msgstr "Estatísticas da Revista"
+
+msgid "stats.context.tooltip.text"
+msgstr "Número de visitantes que consultaram a página inicial da revista."
+
+msgid "stats.context.tooltip.label"
+msgstr "Sobre as estatísticas da revista"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Descarregar um CSV/Excel com as estatísticas para esta revista de acordo com "
+"os seguintes parâmetros."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "O número de consultas da página inicial da revista."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Descarregar Revista"

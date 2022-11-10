@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-10-17 11:01+0000\n"
+"PO-Revision-Date: 2022-11-07 09:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -2339,10 +2339,10 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Yeni abonelikler yapılmadan önce bir kurum oluşturulmalıdır."
 
 msgid "stats.issueGalleyViews"
-msgstr "Sayı Dizgisi Gösterimleri"
+msgstr "İndirmeler"
 
 msgid "stats.issueTOCViews"
-msgstr "Sayı İçindekiler Gösterimleri"
+msgstr "Görüntüle"
 
 msgid "manager.institutions.noContext"
 msgstr "Bu kurumun dergisi bulunamadı."
@@ -2407,3 +2407,66 @@ msgstr ""
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr "Makale İstatistiklerini İndir"
+
+msgid "stats.issueStats"
+msgstr "Sayı İstatistikleri"
+
+msgid "stats.issues.details"
+msgstr "Görüntüleme ve İndirmeler"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Tarihe göre toplam görüntüleme"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Tarihe göre toplam indirme"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Sayı başlığı, cilt ve numarasından arayın"
+
+msgid "stats.issues.none"
+msgstr ""
+"Bu parametrelerle eşleşen kullanım istatistikleri için herhangi bir sayı "
+"bulunamadı."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Aşağıdaki parametrelerle eşleşen sayılar için kullanım istatistiklerini "
+"içeren bir CSV/Excel tablosu indirin."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "Her sayı için görüntülenme ve indirilme sayısı."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Sayı İndirilmeleri"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} / {$total} sayı"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Sayı istatistikleri hakkında"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Görüntüle</strong>: Sayının içindekiler tablosunu görüntüleyen "
+"ziyaretçi sayısı.<br><strong>İndirme</strong>: Sayı dosyalarının indirilme "
+"sayısı."
+
+msgid "stats.contextStats"
+msgstr "Dergi İstatistikleri"
+
+msgid "stats.context.tooltip.text"
+msgstr "Derginin sayfasını görüntüleyen ziyaretçi sayısı."
+
+msgid "stats.context.tooltip.label"
+msgstr "Dergi istatistikleri hakkında"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Dergi web sayfasının görüntüleme sayısı."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Dergi İstatistiklerini İndir"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Aşağıdaki parametrelerle eşleşen dergi için kullanım istatistiklerini içeren "
+"bir CSV/Excel tablosu indirin."

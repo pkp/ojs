@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2022-10-06 10:01+0000\n"
+"PO-Revision-Date: 2022-11-02 22:02+0000\n"
 "Last-Translator: Thierry Liu <tra@kreega.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/zh_CN/>\n"
@@ -20,7 +20,7 @@ msgid "author.submit"
 msgstr "新稿件"
 
 msgid "author.track"
-msgstr "处理中的稿件"
+msgstr "待处理稿件"
 
 msgid "author.competingInterests"
 msgstr ""
@@ -28,19 +28,20 @@ msgstr ""
 "{$competingInterestGuidelinesUrl}\">CI 政策</a>"
 
 msgid "author.submit.submitArticle"
-msgstr "提交一篇文章"
+msgstr "提交文章"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "五步投稿"
+msgstr "五个步骤投稿"
 
 msgid "author.submit.startHereTitle"
-msgstr "开始一篇新稿件"
+msgstr "开始投新稿件"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">点击这里</a> 开始五步投稿的第一步。"
+msgstr "<a href=\"{$submitUrl}\" class=\"action\">点击这里</a> "
+"开始五个步骤投稿的第一步。"
 
 msgid "author.submit.step1"
-msgstr "步骤一、开启投稿"
+msgstr "步骤一、开始投稿"
 
 msgid "author.submit.step2"
 msgstr "步骤二、上传稿件"
@@ -52,10 +53,10 @@ msgid "author.submit.step4"
 msgstr "步骤四、上传附件"
 
 msgid "author.submit.step4a"
-msgstr "步骤四a、添加一个附件"
+msgstr "步骤四a、添加附件"
 
 msgid "author.submit.step5"
-msgstr "步骤五、确认稿件"
+msgstr "步骤五、确认投稿"
 
 msgid "author.submit.start"
 msgstr "开始"
@@ -73,10 +74,10 @@ msgid "author.submit.confirmation"
 msgstr "确认"
 
 msgid "submission.submit.cancelSubmission"
-msgstr "您可以在以后通过选择在作者首页的处理中投稿来完成本次投稿."
+msgstr "您可以以后通过在作者首页中选择待处理稿件来完成投稿."
 
 msgid "author.submit.notAccepting"
-msgstr "这个期刊此时不接受投稿。"
+msgstr "该期刊此刻不接受投稿。"
 
 msgid "author.submit.requestWaiver"
 msgstr "申请免费"
@@ -88,10 +89,10 @@ msgid "author.submit.addReasonsForWaiver"
 msgstr "请在下面的评论种说明为何要免除版面费。"
 
 msgid "author.submit.mustEnterWaiverReason"
-msgstr "如果需要申请免费，您必须在提供空白处说明您的理由。"
+msgstr "如果需要申请免费，您必须在空白处说明理由。"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "审稿回合： {$round}"
+msgstr "审稿阶段： {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "审稿中: 要求修订"
@@ -103,13 +104,13 @@ msgid "author.submissions.queuedEditingProofread"
 msgstr "编辑中: 请校对"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "上传文本编辑版本"
+msgstr "上传编辑好的版本"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "校对更正"
 
 msgid "author.submissions.confirmDelete"
-msgstr "你确定要删除这个未完成的稿件？"
+msgstr "你确定要删除这个未完成的投稿？"
 
 msgid "author.submissions.viewStatus"
 msgstr "查看状态"
@@ -127,7 +128,7 @@ msgid "author.submit.journalSection"
 msgstr "期刊栏目"
 
 msgid "author.submit.journalSectionDescription"
-msgstr "文章必须选择一个期刊的栏目。"
+msgstr "文章必须选择投到期刊的一个栏目。"
 
 msgid "submission.submit.selectSection"
 msgstr "请选择一个栏目..."
@@ -136,34 +137,34 @@ msgid "author.submit.submissionChecklist"
 msgstr "投稿清单"
 
 msgid "author.submit.verifyChecklist"
-msgstr "您必须确定已经完成稿件清单中的所有的项目，才能继续下一步。"
+msgstr "您必须确定已经完成投稿清单中的所有的项目，才能继续下一步。"
 
 msgid "author.submit.copyrightNoticeAgree"
 msgstr "作者同意这份版权注意事项的内容，并同意在这份期刊出版此稿件时适用于这份稿件（可以在下面加上给编辑的意见）."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "您必须同意的条款版权公告，然后继续."
+msgstr "您必须同意本版权声明的条款才能继续."
 
 msgid "submission.submit.coverNote"
-msgstr "给编辑的注释"
+msgstr "致编辑的说明"
 
 msgid "author.submit.comments"
 msgstr "输入文本(可选)"
 
 msgid "author.submit.form.sectionRequired"
-msgstr "请未稿件选择一个合适的期刊栏目。"
+msgstr "请为稿件选择一个合适的期刊栏目。"
 
 msgid "submission.submit.privacyStatement"
-msgstr "本期刊隐私声明"
+msgstr "本期刊的隐私声明"
 
 msgid "author.submit.reorderInstructions"
-msgstr "重新排列作者在发表时候的顺序。"
+msgstr "重新排列作者在发表文章中的顺序。"
 
 msgid "author.submit.reorder"
 msgstr "重新排序作者姓名"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "主要联系人。"
+msgstr "主要编辑联系人。"
 
 msgid "author.submit.addAuthor"
 msgstr "添加作者"
@@ -172,10 +173,11 @@ msgid "author.submit.deleteAuthor"
 msgstr "删除作者"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "提供能够索引稿件的术语，以分号（;）来分隔多个术语（如，词汇1; 词汇2; 词汇3）。"
+msgstr "提供能够为稿件提供索引的词汇，以分号（;）来分隔多个词汇（如，词汇1; 词汇2; "
+"词汇3）。"
 
 msgid "author.submit.coverageInstructions"
-msgstr "地理空间位置、年代或历史涵盖范围，和/或研究样本的特色。"
+msgstr "指出研究样本的地理空间位置、年代或历史涵盖范围和/或特点。"
 
 msgid "author.submit.languageInstructions"
 msgstr ""
@@ -186,10 +188,10 @@ msgid "author.submit.form.authorRequired"
 msgstr "至少需要一个作者。"
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "姓名和每个作者的电子邮件是必须的。"
+msgstr "每个作者的姓名和电子邮件是必须的。"
 
 msgid "author.submit.form.titleRequired"
-msgstr "请输入文章的题目。"
+msgstr "请输入文章的标题。"
 
 msgid "author.submit.form.abstractRequired"
 msgstr "请输入文章摘要。"
@@ -198,65 +200,65 @@ msgid "author.submit.form.wordCountAlert"
 msgstr "您已经超出了这个栏目摘要的最多字数。"
 
 msgid "author.submit.submissionFile"
-msgstr "稿件文件"
+msgstr "稿件文档"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "上传稿件文件"
+msgstr "上传稿件文档"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "更换稿件文件"
+msgstr "替换稿件文档"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "没有稿件文件上传。"
+msgstr "未上传稿件文档。"
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr "你确定要继续而不提交的投稿的相关文件?"
+msgstr "你确定要继续而不上传投稿的相关文档?"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
-"这个在投稿流程中选择性的步骤，让作者可以增加文件到稿件上，加强稿件所拥有的影响力。「补充文件」可以包括(a)研究设备或方法；(b) "
-"资料或数据组，依循研究工作的研究伦理审核； (c) 资料来源；无法提供给读者的来源不算；(d) 无法纳入文章本文之中的图片或表格。这些文件也会由作者编目索"
-"引，指明它们与稿件之间的关系，以及文件和文件之间的关系。「补充文件」可以用任一种文件格式上传，并且可以用原本的格式让读者取得。如果无损匿名审稿原则的话，也"
-"可以和审稿人共用这些文件。"
+"这个可选的投稿步骤，让作者可以为投稿添加补充文档。补充文件可以是任何格式，可"
+"以包括(a)研究设备或方法；(b) 资料或数据组，依循研究工作的研究伦理审核； (c) "
+"舍此无法提供给读者的资料来源；(d) "
+"无法纳入文章本文之中的图表或表格，或者其他任何增加文章内容的资料。"
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr "点击保存上传文件 (其他文件被上传之后)。"
+msgstr "点击保存上传文件 (之后补充文件可以被上传)。"
 
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr "您确定要不上传已经选择的补充文件而继续？"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr "这个稿件没有添加附件。"
+msgstr "这个稿件没有添加补充文件。"
 
 msgid "author.submit.backToSupplementaryFiles"
-msgstr "备份附件"
+msgstr "回到补充文件"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "您确认删除这个附件？"
+msgstr "您确认删除该补充文件？"
 
 msgid "author.submit.uploadSuppFile"
-msgstr "上传附件"
+msgstr "上传补充文件"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr "添加一个附件"
+msgstr "添加补充文件"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "编辑一个附件"
+msgstr "编辑补充文件"
 
 msgid "author.submit.supplementaryFileData"
-msgstr "附件元数据"
+msgstr "补充文件元数据"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr "要索引这份补充材料，请为上传的补充文件输入下列元数据。"
 
 msgid "author.submit.supplementaryFileUpload"
-msgstr "附件"
+msgstr "补充文档"
 
 msgid "author.submit.suppFile.createrOrOwner"
 msgstr "文件的拥有者"
 
 msgid "author.submit.suppFile.researchInstrument"
-msgstr "科研仪器"
+msgstr "科研仪器/方法"
 
 msgid "author.submit.suppFile.researchMaterials"
 msgstr "科研资料"
@@ -277,51 +279,52 @@ msgid "author.submit.suppFile.sourceText"
 msgstr "源文本"
 
 msgid "author.submit.suppFile.briefDescription"
-msgstr "摘要"
+msgstr "简短描述"
 
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "给审稿人的当前文件（没有元数据）不会送审。"
+msgstr "与审稿人分享当前文件（无元数据），不会影响匿名评审。"
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr "只使用已出版的资料。"
+msgstr "请仅使用已正式出版的资料。"
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "数据搜集或者仪器购置的日期。"
+msgstr "数据已搜集或者研究方法已经确定，请注明日期。"
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "研究的名称或其他来源点。"
+msgstr "研究的名称或其他来源信息。"
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "指定其他"
 
 msgid "author.submit.suppFile.noFile"
-msgstr "没有上传的文件。"
+msgstr "未上传文件。"
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "请输入补充文件的标题。"
+msgstr "请输入该补充文件的标题。"
 
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "请输入主题。"
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "请输入说明。"
+msgstr "请输入描述。"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "公共附件标识符已经存在。"
+msgstr "公共补充文件标识已经存在。"
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "公共附件标识符"
+msgstr "公共附件标识"
 
 msgid "author.submit.confirmationDescription"
 msgstr ""
-"完成了之前投稿流程的四个步骤，点击「完成投稿」以将您的初稿送交给 {$journalTitle} "
-"。您会收到一封电子邮件确认信，并且在登录期刊网站后能够查看您的稿件正经历哪些编辑过程。感谢您愿意在 {$journalTitle} 出版您的文章。"
+"点击「完成投稿」以将您的稿件投给{$journalTitle} 。投稿主要联系人将会收到一封"
+"电子邮件确认信，并且在登录期刊网站后能够查看您的稿件正经历哪些编辑流程。"
+"感谢您向 {$journalTitle} 投稿。"
 
 msgid "author.submit.noFiles"
-msgstr "这个稿件没有添加文件。"
+msgstr "本投稿没有包含附件。"
 
 msgid "author.submit.filesSummary"
-msgstr "文件摘要"
+msgstr "文档简介"
 
 msgid "author.submit.finishSubmission"
 msgstr "完成投稿"
@@ -333,16 +336,17 @@ msgid "author.article.uploadAuthorVersion"
 msgstr "上传作者版本"
 
 msgid "author.article.copyeditedFile"
-msgstr "文本编辑文件"
+msgstr "编辑过的文件"
 
 msgid "author.article.authorRevisedFile"
 msgstr "作者文件"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "投稿需要有一个本期刊的帐户。这个帐户用于编辑跟踪您的稿件，当稿件的状态改变的时候通知您，或者编辑需要您提供的相关信息。"
+msgstr "投稿需要拥有本期刊的帐户。这个帐户用于编辑跟踪您的稿件，当稿件的状态改变或者"
+"编辑需要您提供信息的时候通知您。"
 
 msgid "author.submit.form.localeRequired"
-msgstr "请选择一种稿件语言。"
+msgstr "请选择投稿的语言。"
 
 msgid "author.submit.nextSteps"
 msgstr "接下来的步骤"

@@ -1,8 +1,9 @@
 # Cristina Bleortu <cristina.bleortu@uzh.ch>, 2022.
+# Adrian Petrovan <adrian.petrovan@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-10 13:56+0000\n"
-"Last-Translator: Cristina Bleortu <cristina.bleortu@uzh.ch>\n"
+"PO-Revision-Date: 2022-11-10 08:02+0000\n"
+"Last-Translator: Adrian Petrovan <adrian.petrovan@gmail.com>\n"
 "Language-Team: Romanian <http://translate.pkp.sfu.ca/projects/ojs/api/ro_RO/>"
 "\n"
 "Language: ro_RO\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Publicația solicitată nu face parte din acest abonament."
@@ -76,3 +77,6 @@ msgstr "Anunțul pe care l-ați solicitat nu face parte din această revistă."
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Anunțul pe care l-ați solicitat nu face parte din această revistă."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Înregistrarea pe care ați solicitat-o nu se găsește în acest jurnal."

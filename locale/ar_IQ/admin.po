@@ -1,11 +1,12 @@
 # M. Ali <vorteem@gmail.com>, 2022.
+# Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:15+00:00\n"
-"PO-Revision-Date: 2022-10-08 03:01+0000\n"
-"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"PO-Revision-Date: 2022-10-28 18:01+0000\n"
+"Last-Translator: Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/admin/ar_IQ/>"
 "\n"
 "Language: ar_IQ\n"
@@ -20,12 +21,12 @@ msgid "admin.hostedContexts"
 msgstr "المجلات المستضافة"
 
 msgid "admin.settings.redirect"
-msgstr "إعادة توجيه موقع المجلة"
+msgstr "إعادة توجيه المجلة"
 
 msgid "admin.settings.redirectInstructions"
 msgstr ""
-"إجعل الوصول إلى الموقع مؤدياً إلى تصفح هذه المجلة مباشرة. هذا الخيار نافع إن "
-"كان الموقع مستضيفاً لمجلة واحدة فقط، على سبيل المثال."
+"طلبات الوصول الى الموقع الرئيسي سيتم اعادة توجيهها الى هذه المجلة. هذا ربما "
+"يكون مفيد اذا الموقع يستضيف مجلة واحدة فقط، على سبيل المثال."
 
 msgid "admin.languages.confirmDisable"
 msgstr "هل أنت متأكد من رغبتك في تعطيل هذه اللغة؟ هذا الأمر سيؤثر على المجلات المستضافة التي تستعمل هذه اللغة حالياً."
@@ -40,10 +41,15 @@ msgid "admin.locale.maybeIncomplete"
 msgstr "اللغات المعلمة بالنجمة قد تكون غير مكتملة."
 
 msgid "admin.languages.confirmUninstall"
-msgstr "هل أنت متأكد من رغبتك في تغييب هذه اللغة عن الموقع؟ إذ قد يؤثر هذا الأمر على أيٍّ من المجلات التي تستعملها حالياً"
+msgstr ""
+"هل أنت متأكد من رغبتك في تغييب هذه اللغة عن الموقع؟ إذ قد يؤثر هذا الأمر على "
+"أيٍّ من المجلات التي تستعملها حالياً."
 
 msgid "admin.languages.installNewLocalesInstructions"
-msgstr "إختر أي من اللغات الإضافية لتنصيب الدعم لها في هذا الموقع. إذ لا بد من تنصيبها قبل أن تستعملها المجلات المستضافة في الموقع. أنظر ما هو مكتوب في وثيقة النظام لمزيد من المعلومات التي تتعلق بإضافة الدعم للغات جديدة"
+msgstr ""
+"إختر أي من اللغات الإضافية لتنصيب الدعم لها في هذا الموقع. إذ لا بد من "
+"تنصيبها قبل أن تستعملها المجلات المستضافة في الموقع. أنظر ما هو مكتوب في "
+"وثيقة النظام لمزيد من المعلومات التي تتعلق بإضافة الدعم للغات جديدة."
 
 msgid "admin.systemVersion"
 msgstr "نسخة النظام"

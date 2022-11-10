@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-19 12:38+0000\n"
+"PO-Revision-Date: 2022-10-27 09:01+0000\n"
 "Last-Translator: Gadirova <leylakb@yahoo.com>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "az/>\n"
@@ -26,7 +26,7 @@ msgid "author.track"
 msgstr "Aktiv məqalələr"
 
 msgid "author.submit"
-msgstr "Yeni məqalə"
+msgstr "Yeni məqalə göndər"
 
 msgid "author.competingInterests"
 msgstr ""

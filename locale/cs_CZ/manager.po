@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2022-10-13 19:01+0000\n"
+"PO-Revision-Date: 2022-11-04 22:02+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -2543,10 +2543,10 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Před provedením nového předplatného musí být vytvořena instituce."
 
 msgid "stats.issueTOCViews"
-msgstr "Náhledy obsahu čísla"
+msgstr "Náhledy"
 
 msgid "stats.issueGalleyViews"
-msgstr "Náhledy sazebnic čísla"
+msgstr "Stažení"
 
 msgid "manager.institutions.noContext"
 msgstr "Časopis této instituce nelze nalézt."
@@ -2611,3 +2611,67 @@ msgstr "Stažené články"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr "Počet zobrazení abstraktů a stažení souborů pro každý článek."
+
+msgid "stats.issueStats"
+msgstr "Statistiky čísla"
+
+msgid "stats.issues.details"
+msgstr "Náhledy a stažení"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Počet náhledů podle data"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Počet stažení podle data"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Vyhledávání názvu, svazku a čísla vydání"
+
+msgid "stats.issues.none"
+msgstr ""
+"Nebyly zjištěny žádná vydání se statistikami používání, které by odpovídaly "
+"těmto parametrům."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Stáhněte si tabulku CSV/Excel se statistikami použití pro vydání, která "
+"odpovídají následujícím parametrům."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Stáhnout vydání"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} z {$total} vydání"
+
+msgid "stats.issues.tooltip.label"
+msgstr "O statistikách vydání"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Počet zobrazení tabulky s obsahem a stažení sazebnic jednotlivých čísel."
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Náhledy</strong>: Počet návštěvníků zobrazujících obsah "
+"vydání.<br><strong>Stažení</strong>: Počet stažení sazebnic vydání, pokud "
+"existuje."
+
+msgid "stats.contextStats"
+msgstr "Statistiky časopisu"
+
+msgid "stats.context.tooltip.label"
+msgstr "O statistikách časopisu"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Stáhněte si tabulku CSV/Excel se statistikami používání tohoto časopisu, "
+"které odpovídají následujícím parametrům."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Počet zobrazení titulní stránky časopisu."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Stáhnout obsah časopisu"
+
+msgid "stats.context.tooltip.text"
+msgstr "Počet návštěvníků kteří si zobrazili titulní stránku časopisu."

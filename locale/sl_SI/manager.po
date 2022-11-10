@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-10-02 13:01+0000\n"
+"PO-Revision-Date: 2022-11-04 18:02+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl_SI/>\n"
@@ -2652,3 +2652,122 @@ msgid "mailable.issuePublishNotify.description"
 msgstr ""
 "Ta email je avtomatično poslan vsem registriranim uporabnikom, ko je "
 "objavljena nova številka revije."
+
+msgid "stats.issues.details"
+msgstr "Vpogledi in prenosi"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Skupno število vpogledov po datumu"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Išči številko po naslovu, zvezku in številki"
+
+msgid "stats.issues.none"
+msgstr "Nobena številka s statistikami ne ustreza danim parametrom."
+
+msgid "stats.issueStats"
+msgstr "Statistike številk"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Skupno število prenosov po datumu"
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Prenesi CSV/Exel datoteko s statistikami uporabe za številke, ki ustrezajo "
+"spodnjim parametrom."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "preden lahko uredite naročnino mora biti ustvarjena institucija."
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} od {$total} številk"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Število vpogledov v kazalo vsebine in prenosov prelomov številke za vsako "
+"številko."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Prenešene številke"
+
+msgid "stats.issues.tooltip.label"
+msgstr "O statistikah številk"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Vpogledi</strong>: Število obiskovalcev, ki so vpogledali v kazalo "
+"vsebine posamezne številke.<br><strong>Prenosi/strong>: število prenosov "
+"preloma številke, če obstaja."
+
+msgid "manager.institutions.noContext"
+msgstr "Revijo te insitucije ni bilo mogoče najti."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Obvestilo o naročnini"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Nakup instuticionalne naročnine"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Obnova institucionalne naročnine"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Obnova individualne naročnine"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Obvestilo o prostem dostopu"
+
+msgid "stats.contextStats"
+msgstr "Statistike revije"
+
+msgid "stats.context.tooltip.text"
+msgstr "Število obiskovalcev, ki je videlo osnovno stran revije."
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Ime institucije"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domena"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP razponi za avtentikacijo naročnine"
+
+msgid "stats.context.tooltip.label"
+msgstr "O statistikah revije"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Prenesi CVS/Excel tabelo s statistikami uporabe za to revijo, ki ustrezajo "
+"spodnjim parametrom."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Število vpogledov v osnovno stran revije."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Prenos revije"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Naročnina je potekla"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Subscription Expired Last"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Naročnina bo kmalu potekla"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Nakup individualne naročnine"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Prenesi CSV/Exel datoteko s statistikami uporabe za članke, ki ustrezajo "
+"spodnjim parametrom."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Prenešeni članki"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Število vpogledov v povzetek in število prenosov za vsak članek."
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Poštni naslov institucije"

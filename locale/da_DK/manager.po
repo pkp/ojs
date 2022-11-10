@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-10-13 09:01+0000\n"
+"PO-Revision-Date: 2022-11-07 11:02+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -2225,10 +2225,10 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Der skal oprettes en institution, før der kan laves nye indsendelser."
 
 msgid "stats.issueTOCViews"
-msgstr "Visninger af indholdsfortegnelse for numre"
+msgstr "Visninger"
 
 msgid "stats.issueGalleyViews"
-msgstr "Visninger af numres publiceringsversion"
+msgstr "Downloads"
 
 msgid "manager.institutions.noContext"
 msgstr "Denne institutions tidsskrift kunne ikke findes."
@@ -2285,7 +2285,7 @@ msgstr ""
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Download et csv/excel-regneark med brugsstatistik forartikler, der matcher "
+"Download et csv/excel-regneark med brugsstatistik for artikler, der matcher "
 "de følgende parametre."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
@@ -2293,3 +2293,68 @@ msgstr "Download artikler"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr "Antal resume-visninger og fildownloads for hver artikel."
+
+msgid "stats.issueStats"
+msgstr "Statistik for nummer"
+
+msgid "stats.issues.details"
+msgstr "Visninger og downloads"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Total antal visninger per dato"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Total antal downloads per dato"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Søg i udgivelsens titel, årgang og nummer"
+
+msgid "stats.issues.none"
+msgstr ""
+"Der blev ikke fundet nogen udgivelser med brugsstatistik, der matcher disse "
+"parametre."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Download et CSV/Excel regneark med brugsstatistik for udgivelser, der "
+"matcher de følgende parametre."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Antallet af TOC visninger og download af publiceringsversioner for hver "
+"udgivelse."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Download udgivelser"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} af {$total} udgivelser"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Om udgivelsesstatistik"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Visninger</strong>: Antal besøgende, der ser udgivelsens "
+"indholdsfortegnelse.<br><strong>Downloads</strong>: Antal downloads af "
+"udgivelsens publiceringsversion, hvis en sådan findes."
+
+msgid "stats.contextStats"
+msgstr "Statistik for tidsskriftet"
+
+msgid "stats.context.tooltip.text"
+msgstr "Antal besøgende på tidsskriftets indeksside."
+
+msgid "stats.context.tooltip.label"
+msgstr "Om statistik for tidsskriftet"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Download et CSV/Excel-regneark med brugsstatistik for dette tidsskrift, der "
+"matcher de følgende parametre."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Antal visninger af tidsskriftets indeksside."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Download tidsskrift"

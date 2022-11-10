@@ -3,8 +3,8 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-11 20:01+0000\n"
-"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
+"PO-Revision-Date: 2022-10-31 08:02+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
 "Language: bg_BG\n"
@@ -2536,14 +2536,14 @@ msgid "manager.subscriptions.form.institution"
 msgstr "Институция"
 
 msgid "stats.issueTOCViews"
-msgstr "Прегледи на съдържанието на броя"
+msgstr "Прегледи"
 
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
 "Трябва да се създаде институция, преди да могат да се правят нови абонаменти."
 
 msgid "stats.issueGalleyViews"
-msgstr "Прегледи на типографията на броя"
+msgstr "Сваляния"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
@@ -2555,3 +2555,48 @@ msgstr "Брой на прегледите на резюметата и свал
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr "Свалете Сатиите"
+
+msgid "stats.issues.details"
+msgstr "Прегледи и сваляния"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Търсения по заглавие, том и номер на издание"
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Изтегляне на CSV/Excel електронна таблица със статистически данни за броеве, "
+"отговарящи на следните параметри."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Свалени броеве"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} от {$total} броя"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Относно статистиката по броеве"
+
+msgid "stats.issueStats"
+msgstr "Статистики за броя"
+
+msgid "stats.issues.totalTOCViews.timelineInterval"
+msgstr "Общо гледания по дата"
+
+msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
+msgstr "Общо сваляния по дата"
+
+msgid "stats.issues.none"
+msgstr ""
+"Не бяха открити броеве със статистическите данни за употреба, съответстващи "
+"на тези параметри."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Броят на прегледите на съдържанието и изтеглянията на типографията за всеки "
+"брой."
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Прегледи</strong>: Брой посетители, разглеждащи съдържанието на "
+"броя.<br><strong>Изтегляния</strong>: Брой изтегляния на типографията на "
+"броя, ако има такава."
