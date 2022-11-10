@@ -20,9 +20,9 @@ use APP\statistics\TemporaryItemInvestigationsDAO;
 use APP\statistics\TemporaryItemRequestsDAO;
 use APP\statistics\TemporaryTotalsDAO;
 use PKP\db\DAORegistry;
-use PKP\Domains\Jobs\Exceptions\JobException;
 use PKP\statistics\TemporaryInstitutionsDAO;
-use PKP\Support\Jobs\BaseJob;
+use PKP\Jobs\BaseJob;
+use PKP\job\exceptions\JobException;
 use PKP\task\FileLoader;
 
 class CompileUsageStatsFromTemporaryRecords extends BaseJob

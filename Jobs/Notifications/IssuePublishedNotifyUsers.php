@@ -26,7 +26,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 use PKP\context\Context;
 use PKP\emailTemplate\EmailTemplate;
-use PKP\Support\Jobs\BaseJob;
+use PKP\Jobs\BaseJob;
 use PKP\user\User;
 
 class IssuePublishedNotifyUsers extends BaseJob
