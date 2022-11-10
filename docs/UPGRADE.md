@@ -61,10 +61,12 @@ downloading the complete package for the latest release of OJS:
 	directory (NOT over top of your current OJS installation)
 - Move or copy the following files and directories into it from your current
 	OJS installation:
+	
 		- config.inc.php
 		- public/
 		- Your uploaded files directory ("files_dir" in config.inc.php), if it
 			resides within your OJS directory
+			
 - Synchronize new changes from config.TEMPLATE.inc.php to config.inc.php
 - Replace the current OJS directory with the new OJS directory, moving the
 	old one to a safe location as a backup
@@ -78,6 +80,8 @@ downloading the complete package for the latest release of OJS:
 
 Updating from GitHub is the recommended approach if you have made local
 modifications to the system.
+
+##### Updating the application code
 
 If your instance of OJS was checked out from GitHub (see [README.md](../README.md)),
 you can update the OJS code using a git client.
@@ -107,7 +111,7 @@ than OJS or third-party developers; using experimental code on a production
 deployment is strongly discouraged and will not be supported in any way by
 the OJS team.
 
-### Updating dependencies
+##### Updating dependencies
 
 After obtaining to the latest OJS code, additional steps are required to
 update OJS's dependencies.
@@ -124,6 +128,14 @@ Then, install and update dependencies via Composer:
 composer --working-dir=lib/pkp install
 composer --working-dir=plugins/paymethod/paypal install
 composer --working-dir=plugins/generic/citationStyleLanguage install
+```
+
+and NPM:
+
+```
+# install [nodejs](https://nodejs.org/en/) if you don't already have it
+npm install
+npm run build
 ```
 
 ### Upgrading the OJS database
@@ -156,17 +168,3 @@ web-based script. To do so:
 - Re-edit config.inc.php and change "installed = Off" back to
 	 "installed = On"
 
-### Update Javascript libraries and build.js
-
-The official .tar.gz releases contain precompiled javascript. If you are installing
-OJS using this method, you do not need to compile Javascript.
-
-If you are using the git `main` branch, or any of the stable branches (e.g.
-`stable-3_3_0`), or have made changes to your
-Javascript code, you will need to recompile it following these instructions.
-
-To update the Javascript libraries and rebuild the build.js you have to run
-```
-npm install
-npm run build
-```
