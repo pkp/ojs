@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DublinCoreMetaPlugin
+ *
  * @brief Inject Dublin Core meta tags into article views to facilitate indexing.
  */
 
@@ -17,7 +18,6 @@ use APP\facades\Repo;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
-use PKP\facades\Locale;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
@@ -136,9 +136,18 @@ class DublinCoreMetaPlugin extends GenericPlugin
         }
 
         $templateMgr->addHeader('dublinCoreUri', '<meta name="DC.Identifier.URI" content="' . $request->url(null, 'article', 'view', [$article->getBestId()]) . '"/>');
+
+        if ($publication->getDoi()) {
+            $templateMgr->addHeader('dublinCorePubIdDOI', '<meta name="DC.Identifier.DOI" content="' . htmlspecialchars($publication->getDoi()) . '"/>');
+        }
+
         $templateMgr->addHeader('dublinCoreLanguage', '<meta name="DC.Language" scheme="ISO639-1" content="' . substr($article->getLocale(), 0, 2) . '"/>');
         $templateMgr->addHeader('dublinCoreCopyright', '<meta name="DC.Rights" content="' . htmlspecialchars(__('submission.copyrightStatement', ['copyrightHolder' => $article->getCopyrightHolder($article->getLocale()), 'copyrightYear' => $article->getCopyrightYear()])) . '"/>');
-        $templateMgr->addHeader('dublinCorePagesLicenseUrl', '<meta name="DC.Rights" content="' . htmlspecialchars($article->getLicenseURL()) . '"/>');
+
+        if ($article->getLicenseURL()) {
+            $templateMgr->addHeader('dublinCorePagesLicenseUrl', '<meta name="DC.Rights" content="' . htmlspecialchars($article->getLicenseURL()) . '"/>');
+        }
+
         $templateMgr->addHeader('dublinCoreSource', '<meta name="DC.Source" content="' . htmlspecialchars($journal->getName($journal->getPrimaryLocale())) . '"/>');
         if (($issn = $journal->getData('onlineIssn')) || ($issn = $journal->getData('printIssn')) || ($issn = $journal->getData('issn'))) {
             $templateMgr->addHeader('dublinCoreIssn', '<meta name="DC.Source.ISSN" content="' . htmlspecialchars($issn) . '"/>');
@@ -156,7 +165,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $templateMgr->addHeader('dublinCoreSourceUri', '<meta name="DC.Source.URI" content="' . $request->url($journal->getPath()) . '"/>');
 
         $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-        $keywords = $dao->getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale()]);
+        $keywords = $dao->getKeywords($article->getCurrentPublication()->getId());
         foreach ($keywords as $locale => $localeKeywords) {
             foreach ($localeKeywords as $i => $keyword) {
                 $templateMgr->addHeader('dublinCoreSubject' . $locale . $i, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
