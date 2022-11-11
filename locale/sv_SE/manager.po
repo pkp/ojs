@@ -2196,11 +2196,5 @@ msgstr "Välj en giltig institution."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "En institution måste skapas innan en ny prenumeration kan genomföras."
 
-msgid "stats.issueTOCViews"
-msgstr "Visningar av numrets innehållsförteckning"
-
-msgid "stats.issueGalleyViews"
-msgstr "Visningar av numrets publiceringsversion"
-
 msgid "manager.institutions.noContext"
 msgstr "Den här institutionens tidskrift kunde inte hittas."

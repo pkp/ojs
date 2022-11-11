@@ -2324,12 +2324,6 @@ msgstr "raksts"
 msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Tīmekļa vietnes nosaukums, ja tiek izvietots vairāk nekā viens žurnāls"
 
-msgid "stats.issueTOCViews"
-msgstr "Izdevuma TOC skati"
-
-msgid "stats.issueGalleyViews"
-msgstr "Izdevuma saliktņa skati"
-
 msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr "Lejupielādēt rakstus"
 

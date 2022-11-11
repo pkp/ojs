@@ -2837,9 +2837,6 @@ msgstr "Vær vennlig å velge en gyldig institusjon."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "En institusjon må opprettes før nye abonnement kan opprettes."
 
-msgid "stats.issueTOCViews"
-msgstr "Visninger av innholdsfortegnelse for nummer"
-
 msgid "manager.institutions.noContext"
 msgstr "Tidsskriftet til denne institusjonen kunne ikke finnes."
 
@@ -2857,9 +2854,6 @@ msgstr "URL-en til abonnementssiden"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
 msgstr "Kontaktopplysninger til abonnementskontakten"
-
-msgid "stats.issueGalleyViews"
-msgstr "Visninger av nummerets oppsett"
 
 msgid "mailable.subscriptionExpiresSoon.name"
 msgstr "Abbonementet utløper snart"

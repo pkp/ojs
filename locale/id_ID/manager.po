@@ -2495,11 +2495,5 @@ msgstr "Pilih institusi yang valid."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Institusi harus dibuat terlebih dahulu sebelum membuat langganan baru."
 
-msgid "stats.issueTOCViews"
-msgstr "Tampilan Dafis Edisi"
-
-msgid "stats.issueGalleyViews"
-msgstr "Tinjauan Galei Edisi"
-
 msgid "manager.institutions.noContext"
 msgstr "Jurnal institusi ini tidak ditemukan."

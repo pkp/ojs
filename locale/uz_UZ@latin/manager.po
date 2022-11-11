@@ -2518,12 +2518,6 @@ msgstr "Yaroqli muassasani tanlang."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Yangi obunalarni amalga oshirishdan oldin muassasa yaratilishi kerak."
 
-msgid "stats.issueTOCViews"
-msgstr "TOC koʻrinishlarini chiqarish"
-
-msgid "stats.issueGalleyViews"
-msgstr "Qoralama nusxa ko'rinishlarining nashri"
-
 msgid "manager.institutions.noContext"
 msgstr "Ushbu muassasa jurnali topilmadi."
 

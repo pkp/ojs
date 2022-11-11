@@ -2542,12 +2542,6 @@ msgstr "Zvolte, prosím, platnou instituci."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Před provedením nového předplatného musí být vytvořena instituce."
 
-msgid "stats.issueTOCViews"
-msgstr "Náhledy"
-
-msgid "stats.issueGalleyViews"
-msgstr "Stažení"
-
 msgid "manager.institutions.noContext"
 msgstr "Časopis této instituce nelze nalézt."
 
@@ -2617,12 +2611,6 @@ msgstr "Statistiky čísla"
 
 msgid "stats.issues.details"
 msgstr "Náhledy a stažení"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Počet náhledů podle data"
-
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Počet stažení podle data"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr "Vyhledávání názvu, svazku a čísla vydání"

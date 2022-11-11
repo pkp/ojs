@@ -2535,15 +2535,9 @@ msgstr "Моля, изберете валидна институция."
 msgid "manager.subscriptions.form.institution"
 msgstr "Институция"
 
-msgid "stats.issueTOCViews"
-msgstr "Прегледи"
-
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
 "Трябва да се създаде институция, преди да могат да се правят нови абонаменти."
-
-msgid "stats.issueGalleyViews"
-msgstr "Сваляния"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
@@ -2578,12 +2572,6 @@ msgstr "Относно статистиката по броеве"
 
 msgid "stats.issueStats"
 msgstr "Статистики за броя"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Общо гледания по дата"
-
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Общо сваляния по дата"
 
 msgid "stats.issues.none"
 msgstr ""

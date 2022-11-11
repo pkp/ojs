@@ -2338,12 +2338,6 @@ msgstr "Lütfen geçerli bir kurum seçin."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Yeni abonelikler yapılmadan önce bir kurum oluşturulmalıdır."
 
-msgid "stats.issueGalleyViews"
-msgstr "İndirmeler"
-
-msgid "stats.issueTOCViews"
-msgstr "Görüntüle"
-
 msgid "manager.institutions.noContext"
 msgstr "Bu kurumun dergisi bulunamadı."
 
@@ -2413,12 +2407,6 @@ msgstr "Sayı İstatistikleri"
 
 msgid "stats.issues.details"
 msgstr "Görüntüleme ve İndirmeler"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Tarihe göre toplam görüntüleme"
-
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Tarihe göre toplam indirme"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr "Sayı başlığı, cilt ve numarasından arayın"

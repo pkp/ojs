@@ -2447,12 +2447,6 @@ msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
 "Zanim zostanie zapisana nowa subskrypcja należy stworzyć nową Instytucję."
 
-msgid "stats.issueTOCViews"
-msgstr "Wyświetlenia spisu treści"
-
-msgid "stats.issueGalleyViews"
-msgstr "Wyświetlenia plików wydania"
-
 msgid "doi.manager.displayName"
 msgstr "DOI"
 
