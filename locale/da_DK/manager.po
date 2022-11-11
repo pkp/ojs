@@ -2224,12 +2224,6 @@ msgstr "Vælg venligst en gyldig institution."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Der skal oprettes en institution, før der kan laves nye indsendelser."
 
-msgid "stats.issueTOCViews"
-msgstr "Visninger"
-
-msgid "stats.issueGalleyViews"
-msgstr "Downloads"
-
 msgid "manager.institutions.noContext"
 msgstr "Denne institutions tidsskrift kunne ikke findes."
 
@@ -2299,12 +2293,6 @@ msgstr "Statistik for nummer"
 
 msgid "stats.issues.details"
 msgstr "Visninger og downloads"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Total antal visninger per dato"
-
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Total antal downloads per dato"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr "Søg i udgivelsens titel, årgang og nummer"

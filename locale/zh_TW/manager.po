@@ -1743,12 +1743,6 @@ msgstr "欠缺以 {$path} 為路徑的期刊DOI字首。"
 msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "未能找到指定項目。"
 
-msgid "stats.issueTOCViews"
-msgstr "該期的目錄瀏覽數目"
-
-msgid "stats.issueGalleyViews"
-msgstr "該期的檔案瀏覽數目"
-
 msgid "stats.publicationStats"
 msgstr "文章統計"
 

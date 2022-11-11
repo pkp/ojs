@@ -2225,12 +2225,6 @@ msgstr "Selecione uma instituição válida."
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "Deve ser criar uma instituição antes de serem feitas novas subscrições."
 
-msgid "stats.issueTOCViews"
-msgstr "Visualizações do sumário da edição"
-
-msgid "stats.issueGalleyViews"
-msgstr "Visualizaçãoes dos Ficheiros da Edição"
-
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "O endereço da instituição"
 
@@ -2294,9 +2288,6 @@ msgstr "Notificação de Edição Publicada"
 msgid "stats.issues.details"
 msgstr "Consultas e Downloads"
 
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Total de downloads por data"
-
 msgid "stats.issues.searchIssueDescription"
 msgstr "Procure pelo título do número, volume e número"
 
@@ -2324,9 +2315,6 @@ msgstr "Sobre as estatísticas"
 
 msgid "stats.issueStats"
 msgstr "Estatísticas do Número"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Total de visualizações por data"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""

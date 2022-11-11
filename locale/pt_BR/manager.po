@@ -2254,12 +2254,6 @@ msgstr "Instituição"
 msgid "manager.subscriptions.form.institutionIdValid"
 msgstr "Selecione uma instituição válida."
 
-msgid "stats.issueTOCViews"
-msgstr "Emitir visualizações de sumário"
-
-msgid "stats.issueGalleyViews"
-msgstr "Visualizações da composição da edição"
-
 msgid "manager.institutions.noContext"
 msgstr "Não foi possível encontrar o periódico desta instituição."
 

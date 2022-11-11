@@ -2642,12 +2642,6 @@ msgstr "Institucija"
 msgid "manager.subscriptions.form.institutionIdValid"
 msgstr "Prosimo izberite veljavno institucijo."
 
-msgid "stats.issueTOCViews"
-msgstr "Število vpogledov v kazalo vsebine"
-
-msgid "stats.issueGalleyViews"
-msgstr "Število vpogledov v prelom"
-
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
 "Ta email je avtomatično poslan vsem registriranim uporabnikom, ko je "
@@ -2655,9 +2649,6 @@ msgstr ""
 
 msgid "stats.issues.details"
 msgstr "Vpogledi in prenosi"
-
-msgid "stats.issues.totalTOCViews.timelineInterval"
-msgstr "Skupno število vpogledov po datumu"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr "Išči številko po naslovu, zvezku in številki"
@@ -2667,9 +2658,6 @@ msgstr "Nobena številka s statistikami ne ustreza danim parametrom."
 
 msgid "stats.issueStats"
 msgstr "Statistike številk"
-
-msgid "stats.issues.totalIssueGalleyViews.timelineInterval"
-msgstr "Skupno število prenosov po datumu"
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
