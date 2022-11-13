@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-31 08:02+0000\n"
+"PO-Revision-Date: 2022-11-13 09:02+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
@@ -2588,3 +2588,23 @@ msgstr ""
 "<strong>Прегледи</strong>: Брой посетители, разглеждащи съдържанието на "
 "броя.<br><strong>Изтегляния</strong>: Брой изтегляния на типографията на "
 "броя, ако има такава."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Броят показвания на индексната страница на списанието."
+
+msgid "stats.contextStats"
+msgstr "Статистики за списание"
+
+msgid "stats.context.tooltip.text"
+msgstr "Брой посетители, разглеждащи индексната страница на списанието."
+
+msgid "stats.context.tooltip.label"
+msgstr "Относно статистиката на списанието"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Изтегляне на електронна таблица в CSV/Excel със статистически данни за "
+"използването на това списание, отговаряща на следните параметри."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Сваляне на цялото списание"
