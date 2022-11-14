@@ -2958,13 +2958,6 @@
 						"type": "string"
 					},
 					{
-						"name": "isCustom",
-						"description": "Filter results by those with or without a default template. A truthy value will return only templates with a key that does not match one of the default templates. A falsey value will return only templates with a key that matches one of the default templates. Note that a default template may be customized, but this does not qualify for `isCustom`. Only completely custom templates, not a customization of a default template, will be returned when `isCustom` is `true`. If you want to see default templates that have been customized, use `isModified`.",
-						"in": "query",
-						"required": false,
-						"type": "boolean"
-					},
-					{
 						"name": "isModified",
 						"description": "Filter results by those that have been modified from the default template. This is different from `isCustom` because it will return custom templates alongside any default templates that have been modified.",
 						"in": "query",
@@ -2983,7 +2976,7 @@
 						"description": "How many templates to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "type",
+						"type": "integer",
 						"default": 30
 					},
 					{
@@ -2992,7 +2985,7 @@
 						"in": "query",
 						"required": false,
 						"type": "integer"
-					},
+					}
 				],
 				"responses":  {
 					"200": {
