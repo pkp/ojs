@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-09 12:02+0000\n"
+"PO-Revision-Date: 2022-11-14 08:02+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "lv_LV/>\n"
@@ -2477,3 +2477,60 @@ msgstr ""
 "Šajā e-pasta vēstulē autors tiek informēts, ka viņa iesniegtais materiāls "
 "tiek noraidīts pirms recenzēšanas posma, jo tas neatbilst publicēšanas "
 "prasībām žurnālā."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Lejupielādēt izdevumus"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} no {$total} izdevumiem"
+
+msgid "stats.issueStats"
+msgstr "Izdevuma statistika"
+
+msgid "stats.issues.details"
+msgstr "Skatījumi un lejupielādes"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Meklēt izdevuma nosaukumu, sējumu un numuru"
+
+msgid "stats.issues.none"
+msgstr ""
+"Netika konstatētas problēmas ar lietošanas statistiku, kas atbilstu šiem "
+"parametriem."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Lejupielādējiet CSV/Excel izklājlapu ar izmantošanas statistiku par "
+"jautājumiem, kas atbilst šādiem parametriem."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "Katra numura TOC skatījumu un izdevuma saliktņa lejupielādes skaits."
+
+msgid "stats.issues.tooltip.label"
+msgstr "Par izdevuma statistiku"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Skatījumi</strong>: Apmeklētāju skaits, kas skatījuši izdevuma "
+"satura rādītāju.<br><strong>lejupielādes</strong>: Izdevuma saliktņa "
+"lejupielādes skaits, ja tāds ir."
+
+msgid "stats.contextStats"
+msgstr "Žurnāla statistika"
+
+msgid "stats.context.tooltip.text"
+msgstr "Apmeklētāju skaits, kas aplūko žurnāla sākumlapu."
+
+msgid "stats.context.tooltip.label"
+msgstr "Par žurnāla statistiku"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Lejupielādējiet CSV/Excel izklājlapu ar šī žurnāla lietošanas statistiku, "
+"kas atbilst šādiem parametriem."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Žurnāla sākumlapas skatījumu skaits."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Lejupielādēt žurnālu"
