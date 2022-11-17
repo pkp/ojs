@@ -110,9 +110,10 @@
 		"Context": "context",
 		"ContextStats": {
 			"type": "object",
-			"description": "The total index page views for a published journal, press or server.",
+			"description": "Reader stats for the homepage for a journal, press or preprint server.",
 			"properties": {
 				"total": {
+					"description": "The number of views of the homepage.",
 					"type": "integer"
 				},
 				"context": {
@@ -189,15 +190,18 @@
 		"Issue": "issue",
 		"IssueStats": {
 			"type": "object",
-			"description": "The total, TOC and issue galley views for a published issue.",
+			"description": "Reader stats for an issue.",
 			"properties": {
 				"totalViews": {
+					"description": "The number of views of the issue table of contents and galley.",
 					"type": "integer"
 				},
 				"tocViews": {
+					"description": "The number of views of the issue table of contents.",
 					"type": "integer"
 				},
 				"issueGalleyViews": {
+					"description": "The number of views of the issue galley.",
 					"type": "integer"
 				},
 				"issue": {
@@ -230,7 +234,7 @@
 		"Publication": "publication",
 		"PublicationCityStats": {
 			"type": "object",
-			"description": "The total and unique views for a published submission for a city.",
+			"description": "Reader stats of a publication by city.",
 			"properties": {
 				"city": {
 					"type": "string"
@@ -242,16 +246,18 @@
 					"type": "string"
 				},
 				"total": {
+					"description": "The number of visits to this publication from this city.",
 					"type": "integer"
 				},
 				"unique": {
+					"description": "The number of unique visitors to this publication from this city.",
 					"type": "integer"
 				}
 			}
 		},
 		"PublicationRegionStats": {
 			"type": "object",
-			"description": "The total and unique views for a published submission for a region.",
+			"description": "Reader stats of a publication by region.",
 			"properties": {
 				"region": {
 					"type": "string"
@@ -260,31 +266,35 @@
 					"type": "string"
 				},
 				"total": {
+					"description": "The number of visits to this publication from this region.",
 					"type": "integer"
 				},
 				"unique": {
+					"description": "The number of unique visitors to this publication from this region.",
 					"type": "integer"
 				}
 			}
 		},
 		"PublicationCountryStats": {
 			"type": "object",
-			"description": "The total and unique views for a published submission for a country.",
+			"description": "Reader stats of a publication by country.",
 			"properties": {
 				"country": {
 					"type": "string"
 				},
 				"total": {
+					"description": "The number of visits to this publication from this country.",
 					"type": "integer"
 				},
 				"unique": {
+					"description": "The number of unique visitors to this publication from this country.",
 					"type": "integer"
 				}
 			}
 		},
 		"PublicationFileStats": {
 			"type": "object",
-			"description": "The total file views for a published submission.",
+			"description": "The number of downloads of a submission file.",
 			"properties": {
 				"submissionId": {
 					"type": "integer"
@@ -3210,7 +3220,7 @@
 				"tags": [
 					"Institutions"
 				],
-				"summary": "Get a collection of institutions.",
+				"summary": "Get a collection of institutions that have been added to this journal, press or preprint server.",
 				"parameters": [
 					{
 						"name": "count",
@@ -3268,7 +3278,7 @@
 					"Institutions"
 				],
 				"summary": "Create a new institution.",
-				"description": "Create and publish a new institution in this context.",
+				"description": "Add an institution to this context.",
 				"parameters": [
 					{
 						"name": "Institution",
@@ -3292,6 +3302,13 @@
 						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this institution.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
 						}
 					}
 				}
@@ -3685,7 +3702,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access editorial statistics for this journal, press or server.",
+						"description": "You do not have permission to access editorial statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3757,8 +3774,8 @@
 				"tags": [
 					"Stats / Contexts"
 				],
-				"summary": "Get a list of contexts by total visits.",
-				"description": "Returns a list of contexts (journals (OJS), presses (OMP) or servers (OPS)) ordered by their total index page views. Only admin can access this endpoint.",
+				"summary": "Get a list of contexts sorted by the number of visitors to their homepage.",
+				"description": "Returns a list of journals, presses or preprint servers ordered by the number of visitors to their homepage. Only admins can access this endpoint.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -3839,7 +3856,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3860,7 +3877,7 @@
 					"Stats / Contexts"
 				],
 				"summary": "Get visits by day or month.",
-				"description": "Returns a monthly or daily timeline of index page views for the contexts (journals (OJS), presses (OMP) or servers (OPS)) which match the request parameters. Only admin can access this endpoint.",
+				"description": "Returns a monthly or daily timeline of the number of visitors to the homepage of each journal, press or preprint server. Only admins can access this endpoint.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
@@ -3926,7 +3943,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3946,8 +3963,8 @@
 				"tags": [
 					"Stats / Contexts"
 				],
-				"summary": "Get one context's index page views.",
-				"description": "Returns a context's (journal (OJS), press (OMP) or server (OPS)) total index page views.",
+				"summary": "Get the number of views of a context's homepage.",
+				"description": "Returns the number of views of the homepage of a journal, press or preprint server.",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -3988,7 +4005,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4008,8 +4025,8 @@
 				"tags": [
 					"Stats / Contexts"
 				],
-				"summary": "Get one context's visits by day or month.",
-				"description": "Returns a monthly or daily timeline of index page views for the requested issue.",
+				"summary": "Get visits to one context by day or month.",
+				"description": "Returns a monthly or daily timeline of visits to the homepage of this context.",
 				"parameters": [
 					{
 						"name": "contextId",
@@ -4065,7 +4082,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4085,8 +4102,8 @@
 				"tags": [
 					"Stats / Issues"
 				],
-				"summary": "Get a list of issues by total visits.",
-				"description": "Returns a list of issues ordered by their total views and downloads. Includes total views by TOC and issue galleys.",
+				"summary": "Get a list of issues ordered by the number of visits it received.",
+				"description": "Returns a list of issues ordered by the total visits it received, based on the number of views of the TOC and the number of downloads of the issue galley.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -4188,7 +4205,7 @@
 					"Stats / Issues"
 				],
 				"summary": "Get visits by day or month.",
-				"description": "Returns a monthly or daily timeline of TOC view issue galley downloads for the issues which match the request parameters.",
+				"description": "Returns a monthly or daily timeline of an issue's stats.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
@@ -4235,7 +4252,7 @@
 					},
 					{
 						"name": "type",
-						"description": "Return issue galley downloads.",
+						"description": "Whether to return a timeline based on views of the issue's table of contents or downloads of the issue's galley. Default: table of contents views.",
 						"in": "query",
 						"required": false,
 						"type": "string",
@@ -4284,8 +4301,8 @@
 				"tags": [
 					"Stats / Issues"
 				],
-				"summary": "Get one issue's visits (views and downloads) by type.",
-				"description": "Returns an issue's total views by TOC and issue galleys.",
+				"summary": "Get the visitor statistics for one issue.",
+				"description": "Returns an issue's view and download statistics broken down by type of request.",
 				"parameters": [
 					{
 						"name": "issueId",
@@ -4347,7 +4364,7 @@
 					"Stats / Issues"
 				],
 				"summary": "Get one issue's visits by day or month.",
-				"description": "Returns a monthly or daily timeline of TOC views of issue galley downloads for the requested issue.",
+				"description": "Returns a monthly or daily timeline of visits to the issue.",
 				"parameters": [
 					{
 						"name": "issueId",
@@ -4384,7 +4401,7 @@
 					},
 					{
 						"name": "type",
-						"description": "Return issue galley downloads.",
+						"description": "Whether to return a timeline based on views of the issue table of contents or downloads of the issue galley. Default: table of contents views.",
 						"in": "query",
 						"required": false,
 						"type": "string",
@@ -4433,8 +4450,8 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get a list of publications by total visits.",
-				"description": "Returns a list of publications ordered by their total abstract views. Includes total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
+				"summary": "Get a list of publications ordered by visits.",
+				"description": "Returns a list of publications ordered by the total number of views.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -4518,7 +4535,7 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of publications with their total stats during the requested period.",
+						"description": "A list of publications with the number of visits during the requested period.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -4535,7 +4552,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4556,11 +4573,11 @@
 					"Stats / Publications"
 				],
 				"summary": "Get visits by day or month.",
-				"description": "Returns a monthly or daily timeline of abstract views or files downloads for the publications which match the request parameters.",
+				"description": "Returns a monthly or daily timeline of visits to the publications which match the request parameters.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
-						"description": "Return the total daily or monthly views",
+						"description": "Return the daily or monthly values.",
 						"in": "query",
 						"required": false,
 						"type": "string",
@@ -4623,7 +4640,7 @@
 					},
 					{
 						"name": "type",
-						"description": "Return full texts and supplementary files downloads.",
+						"description": "Whether to return a timeline based on abstract page views or file downloads. Default: abstract page views.",
 						"in": "query",
 						"required": false,
 						"type": "string",
@@ -4652,7 +4669,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4672,8 +4689,8 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get one publication's visits (views and downloads) by type.",
-				"description": "Returns a publication's total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
+				"summary": "Get one publication's stats.",
+				"description": "Returns a publication's number of visits and downloads broken down by type.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -4714,7 +4731,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4735,7 +4752,7 @@
 					"Stats / Publications"
 				],
 				"summary": "Get one publication's visits by day or month.",
-				"description": "Returns a monthly or daily timeline of abstract views of files downloads for the requested publication.",
+				"description": "Returns a monthly or daily timeline of visits to the publication.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -4772,7 +4789,7 @@
 					},
 					{
 						"name": "type",
-						"description": "Return full texts and supplementary files downloads.",
+						"description": "Whether to return a timeline based on abstract page views or file downloads. Default: abstract page views.",
 						"in": "query",
 						"required": false,
 						"type": "string",
@@ -4801,7 +4818,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4821,8 +4838,8 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get a list of publications files by total visits.",
-				"description": "Returns a list of publications full texts and supplementary files ordered by their total downloads.",
+				"summary": "Get a list of published files ordered by downloads.",
+				"description": "Returns a list of published files ordered by their total downloads.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -4877,7 +4894,7 @@
 					},
 					{
 						"name": "count",
-						"description": "How many publications files to return in a single request. Max is `100`.",
+						"description": "How many files to return in a single request. Max is 100.",
 						"in": "query",
 						"required": false,
 						"type": "integer",
@@ -4885,7 +4902,7 @@
 					},
 					{
 						"name": "offset",
-						"description": "Offset the publications files returned. Use this to receive subsequent pages of requests.",
+						"description": "Offset the files returned. Use this to receive subsequent pages of requests.",
 						"in": "query",
 						"required": false,
 						"type": "integer"
@@ -4906,7 +4923,7 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of publications files with their total stats during the requested period.",
+						"description": "A list of files with their total stats during the requested period.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -4923,7 +4940,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4943,8 +4960,8 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get a list of countries by total publications visits.",
-				"description": "Returns a list of countries ordered by their total publications visits (views and downloads). IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"summary": "Get a list of countries ordered by the number of visits to publications.",
+				"description": "Returns a list of countries ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -5028,7 +5045,7 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of countries with their total publications stats during the requested period.",
+						"description": "A list of countries.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -5045,7 +5062,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -5065,8 +5082,8 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get a list of regions by total publications visits.",
-				"description": "Returns a list of regions ordered by their total publications visits (views and downloads). IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"summary": "Get a list of regions ordered by the number of visits to publications.",
+				"description": "Returns a list of regions ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -5150,7 +5167,7 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of regions with their total publications stats during the requested period.",
+						"description": "A list of regions.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -5167,7 +5184,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -5187,8 +5204,8 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get a list of cities by total publications visits.",
-				"description": "Returns a list of cities ordered by their total publications visits (views and downloads). IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"summary": "Get a list of cities ordered by the number of visits to publications.",
+				"description": "Returns a list of cities ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -5272,7 +5289,7 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of cities with their total publications stats during the requested period.",
+						"description": "A list of cities.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -5289,7 +5306,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal, press or server.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
