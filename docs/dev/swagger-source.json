@@ -1,9 +1,9 @@
 {
 	"swagger": "2.0",
 	"info": {
-		"version": "3.3",
+		"version": "3.4",
 		"title": "REST API - OJS",
-		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for technical documentation on the software.\n\n**Breaking changes since v3.2**\n* Major changes were made to how galleys are fetched and new endpoints were added for submission files. See the documentation for full details.",
+		"description": "This guide documents the REST API endpoints which can be accessed with this version of [Open Journal Systems](https://pkp.sfu.ca/ojs/). It is a technical reference for software developers who wish to build custom interactions with the platform.\n\nPlease consult the [REST API Usage Guide](/dev/api) for an introduction to using the API or the [Developer Documentation Hub](/dev) for technical documentation on the software.\n\n**Breaking changes since v3.3**\n* Changes were made to /stats/publications endpoint. See the documentation for full details.",
 		"contact": {
 			"name": "Public Knowledge Project",
 			"url": "https://docs.pkp.sfu.ca"
@@ -56,11 +56,23 @@
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
+			"name": "Institutions",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
 			"name": "Mailables",
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
 			"name": "Stats / Editorial",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Stats / Contexts",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Stats / Issues",
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
@@ -70,6 +82,14 @@
 		{
 			"name": "Stats / Users",
 			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Stats / Sushi",
+			"description": "Support automatic harvesting of COUNTER R5 reports via the COUNTER_SUSHI API at the path /stats/sushi.",
+			"externalDocs": {
+				"description": "COUNTER_SUSHI API specification:",
+				"url": "https://app.swaggerhub.com/apis/COUNTER/counter-sushi_5_0_api/"
+			}
 		},
 		{
 			"name": "Vocabs",
@@ -88,6 +108,57 @@
 		"Announcement": "announcement",
 		"Author": "author",
 		"Context": "context",
+		"ContextStats": {
+			"type": "object",
+			"description": "Reader stats for the homepage for a journal, press or preprint server.",
+			"properties": {
+				"total": {
+					"description": "The number of views of the homepage.",
+					"type": "integer"
+				},
+				"context": {
+					"type": "object",
+					"properties": {
+						"_href": {
+							"type": "string"
+						},
+						"abbreviation": {
+							"$ref": "#/definitions/LocaleObject"
+						},
+						"acronym": {
+							"$ref": "#/definitions/LocaleObject"
+						},
+						"currentIssueId": {
+							"type": "integer"
+						},
+						"description": {
+							"$ref": "#/definitions/LocaleObject"
+						},
+						"enabled": {
+							"type": "boolean"
+						},
+						"id": {
+							"type": "integer"
+						},
+						"journalThumbnail": {
+							"$ref": "#/definitions/LocaleObject"
+						},
+						"name": {
+							"$ref": "#/definitions/LocaleObject"
+						},
+						"seq": {
+							"type": "integer"
+						},
+						"url": {
+							"type": "string"
+						},
+						"urlPath": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
 		"Doi": "doi",
 		"ErrorResponse": {
 			"type": "object",
@@ -103,6 +174,7 @@
 		},
 		"EmailTemplate": "emailTemplate",
 		"Galley": "galley",
+		"Institution": "institution",
 		"InvalidParametersResponse": {
 			"type": "object",
 			"description": "A response object that will be returned when there are validation errors for the request parameters. Typically used with forms.",
@@ -116,6 +188,41 @@
 			}
 		},
 		"Issue": "issue",
+		"IssueStats": {
+			"type": "object",
+			"description": "Reader stats for an issue.",
+			"properties": {
+				"totalViews": {
+					"description": "The number of views of the issue table of contents and galley.",
+					"type": "integer"
+				},
+				"tocViews": {
+					"description": "The number of views of the issue table of contents.",
+					"type": "integer"
+				},
+				"issueGalleyViews": {
+					"description": "The number of views of the issue galley.",
+					"type": "integer"
+				},
+				"issue": {
+					"type": "object",
+					"properties": {
+						"_href": {
+							"type": "string"
+						},
+						"id": {
+							"type": "integer"
+						},
+						"identification": {
+							"type": "string"
+						},
+						"publishedUrl": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
 		"LocaleObject": {
 			"type": "object",
 			"description": "Key/value pairs containing data stored by locale key.",
@@ -125,6 +232,87 @@
 			}
 		},
 		"Publication": "publication",
+		"PublicationCityStats": {
+			"type": "object",
+			"description": "Reader stats of a publication by city.",
+			"properties": {
+				"city": {
+					"type": "string"
+				},
+				"region": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"total": {
+					"description": "The number of visits to this publication from this city.",
+					"type": "integer"
+				},
+				"unique": {
+					"description": "The number of unique visitors to this publication from this city.",
+					"type": "integer"
+				}
+			}
+		},
+		"PublicationRegionStats": {
+			"type": "object",
+			"description": "Reader stats of a publication by region.",
+			"properties": {
+				"region": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"total": {
+					"description": "The number of visits to this publication from this region.",
+					"type": "integer"
+				},
+				"unique": {
+					"description": "The number of unique visitors to this publication from this region.",
+					"type": "integer"
+				}
+			}
+		},
+		"PublicationCountryStats": {
+			"type": "object",
+			"description": "Reader stats of a publication by country.",
+			"properties": {
+				"country": {
+					"type": "string"
+				},
+				"total": {
+					"description": "The number of visits to this publication from this country.",
+					"type": "integer"
+				},
+				"unique": {
+					"description": "The number of unique visitors to this publication from this country.",
+					"type": "integer"
+				}
+			}
+		},
+		"PublicationFileStats": {
+			"type": "object",
+			"description": "The number of downloads of a submission file.",
+			"properties": {
+				"submissionId": {
+					"type": "integer"
+				},
+				"submissionTitle": {
+					"type": "string"
+				},
+				"submissionFileId": {
+					"type": "integer"
+				},
+				"fileName": {
+					"type": "string"
+				},
+				"downloads": {
+					"type": "integer"
+				}
+			}
+		},
 		"PublicationStats": {
 			"type": "object",
 			"description": "The total abstract and galley views for a published submission.",
@@ -2112,7 +2300,7 @@
 						"description": "How many results to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "type",
+						"type": "integer",
 						"default": 20
 					},
 					{
@@ -2534,7 +2722,7 @@
 						"description": "How many results to return in a single request.",
 						"in": "query",
 						"required": false,
-						"type": "type",
+						"type": "integer",
 						"default": 20
 					},
 					{
@@ -3027,6 +3215,238 @@
 				}
 			}
 		},
+		"/institutions": {
+			"get": {
+				"tags": [
+					"Institutions"
+				],
+				"summary": "Get a collection of institutions that have been added to this journal, press or preprint server.",
+				"parameters": [
+					{
+						"name": "count",
+						"description": "How many results to return in a single request.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the results returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by a search phrase matched against the name or IP adress.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of institutions.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"itemsMax": {
+									"type": "integer"
+								},
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/InstitutionSummary"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view institutions in this context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post":  {
+				"tags": [
+					"Institutions"
+				],
+				"summary": "Create a new institution.",
+				"description": "Add an institution to this context.",
+				"parameters": [
+					{
+						"name": "Institution",
+						"description": "Details about the institution that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/InstitutionEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the institution that was just added.",
+						"schema": {
+							"$ref": "#/definitions/Institution"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this institution.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/institutions/{institutionId}": {
+			"get": {
+				"tags":  [
+					"Institutions"
+				],
+				"summary": "Get an institution.",
+				"parameters": [
+					{
+						"name": "institutionId",
+						"description": "Institution ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Institution details.",
+						"schema": {
+							"$ref": "#/definitions/Institution"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this institution.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested institution could not be found. Or you requested an institution that is not part of this context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Institutions"
+				],
+				"summary": "Edit an institution.",
+				"description": "Edit an institution.",
+				"parameters": [
+					{
+						"name": "institutionId",
+						"description": "Institution ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "Institution",
+						"description": "The details about the institution that you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/InstitutionEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The institution that was just edited with the current values after the edit has occurred.",
+						"schema": {
+							"$ref": "#/definitions/Institution"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to edit this institution.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested institution could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Institutions"
+				],
+				"summary": "Delete an institution.",
+				"description": "Delete an institution.",
+				"parameters": [
+					{
+						"name": "institutionId",
+						"description": "Institution ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the institution that was just deleted.",
+						"schema": {
+							"$ref": "#/definitions/Institution"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to delete this institution.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested institution could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/mailables": {
 			"get": {
 				"tags": [
@@ -3282,7 +3702,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access editorial statistics for this journal or press.",
+						"description": "You do not have permission to access editorial statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3349,13 +3769,689 @@
 				}
 			}
 		},
+		"/stats/contexts": {
+			"get": {
+				"tags": [
+					"Stats / Contexts"
+				],
+				"summary": "Get a list of contexts sorted by the number of visitors to their homepage.",
+				"description": "Returns a list of journals, presses or preprint servers ordered by the number of visitors to their homepage. Only admins can access this endpoint.",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for contexts after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for contexts before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "contextIds",
+						"description": "Filter results by these contexts.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by contexts that match this search phrase. Searches the same context properties as the `searchPhrase` parameter in the `/contexts` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many contexts to return in a single request. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the contexts returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Return the results in ascending or descending order.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of contexts with their total stats during the requested period.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ContextStats"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/contexts/timeline": {
+			"get": {
+				"tags": [
+					"Stats / Contexts"
+				],
+				"summary": "Get visits by day or month.",
+				"description": "Returns a monthly or daily timeline of the number of visitors to the homepage of each journal, press or preprint server. Only admins can access this endpoint.",
+				"parameters": [
+					{
+						"name": "timelineInterval",
+						"description": "Return the total daily or monthly views",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats for contexts after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for contexts before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "contextIds",
+						"description": "Filter results by these contexts.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by contexts that match this search phrase. Searches the same context properties as the `searchPhrase` parameter in the `/contexts` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/contexts/{contextId}": {
+			"get": {
+				"tags": [
+					"Stats / Contexts"
+				],
+				"summary": "Get the number of views of a context's homepage.",
+				"description": "Returns the number of views of the homepage of a journal, press or preprint server.",
+				"parameters": [
+					{
+						"name": "contextId",
+						"description": "The context ID.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The total stats for the context during the period requested.",
+						"schema": {
+							"$ref": "#/definitions/ContextStats"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/contexts/{contextId}/timeline": {
+			"get": {
+				"tags": [
+					"Stats / Contexts"
+				],
+				"summary": "Get visits to one context by day or month.",
+				"description": "Returns a monthly or daily timeline of visits to the homepage of this context.",
+				"parameters": [
+					{
+						"name": "contextId",
+						"description": "The context ID.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "timelineInterval",
+						"description": "Return the total daily or monthly views",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/issues": {
+			"get": {
+				"tags": [
+					"Stats / Issues"
+				],
+				"summary": "Get a list of issues ordered by the number of visits it received.",
+				"description": "Returns a list of issues ordered by the total visits it received, based on the number of views of the TOC and the number of downloads of the issue galley.",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for issues after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for issues before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by issues that match this search phrase. Searches the same issue properties as the `searchPhrase` parameter in the `/issues` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many issues to return in a single request. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the issues returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Return the results in ascending or descending order.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of issues with their total stats during the requested period.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IssueStats"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/issues/timeline": {
+			"get": {
+				"tags": [
+					"Stats / Issues"
+				],
+				"summary": "Get visits by day or month.",
+				"description": "Returns a monthly or daily timeline of an issue's stats.",
+				"parameters": [
+					{
+						"name": "timelineInterval",
+						"description": "Return the total daily or monthly views",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats for issues after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for issues before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by issues that match this search phrase. Searches the same issue properties as the `searchPhrase` parameter in the `/issues` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "type",
+						"description": "Whether to return a timeline based on views of the issue's table of contents or downloads of the issue's galley. Default: table of contents views.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"enum": [
+							"files"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/issues/{issueId}": {
+			"get": {
+				"tags": [
+					"Stats / Issues"
+				],
+				"summary": "Get the visitor statistics for one issue.",
+				"description": "Returns an issue's view and download statistics broken down by type of request.",
+				"parameters": [
+					{
+						"name": "issueId",
+						"description": "The issue ID.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The total stats for the issue during the period requested.",
+						"schema": {
+							"$ref": "#/definitions/IssueStats"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/issues/{issueId}/timeline": {
+			"get": {
+				"tags": [
+					"Stats / Issues"
+				],
+				"summary": "Get one issue's visits by day or month.",
+				"description": "Returns a monthly or daily timeline of visits to the issue.",
+				"parameters": [
+					{
+						"name": "issueId",
+						"description": "The issue ID.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "timelineInterval",
+						"description": "Return the total daily or monthly views",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "month",
+						"enum": [
+							"day",
+							"month"
+						]
+					},
+					{
+						"name": "dateStart",
+						"description": "Return stats after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "type",
+						"description": "Whether to return a timeline based on views of the issue table of contents or downloads of the issue galley. Default: table of contents views.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"enum": [
+							"files"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of days or months with the total stats for that day or month.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TimelineInterval"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/stats/publications": {
 			"get": {
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get the views of a publication.",
-				"description": "Returns a list of publications ordered by their total abstract views. Includes total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
+				"summary": "Get a list of publications ordered by visits.",
+				"description": "Returns a list of publications ordered by the total number of views.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -3372,11 +4468,24 @@
 						"type": "string"
 					},
 					{
+						"name": "issueIds",
+						"description": "Filter results by publications in these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
 						"name": "sectionIds",
 						"description": "Filter results by publications in these sections.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "submissionIds",
@@ -3400,7 +4509,7 @@
 						"description": "How many publications to return in a single request. Max is `100`.",
 						"in": "query",
 						"required": false,
-						"type": "type",
+						"type": "integer",
 						"default": 30
 					},
 					{
@@ -3415,7 +4524,7 @@
 						"description": "Return the results in ascending or descending order.",
 						"in": "query",
 						"required": false,
-						"type": "integer",
+						"type": "string",
 						"default": "DESC",
 						"enum": [
 							"ASC",
@@ -3426,7 +4535,7 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of publications with their total stats during the requested period.",
+						"description": "A list of publications with the number of visits during the requested period.",
 						"schema": {
 							"type": "array",
 							"items": {
@@ -3443,7 +4552,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal or press.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3458,17 +4567,17 @@
 				}
 			}
 		},
-		"/stats/publications/abstract": {
+		"/stats/publications/timeline": {
 			"get": {
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get abstract views by day or month.",
-				"description": "Returns a monthly or daily timeline of abstract views for the publications which match the request parameters.",
+				"summary": "Get visits by day or month.",
+				"description": "Returns a monthly or daily timeline of visits to the publications which match the request parameters.",
 				"parameters": [
 					{
 						"name": "timelineInterval",
-						"description": "Return the total daily or monthly views",
+						"description": "Return the daily or monthly values.",
 						"in": "query",
 						"required": false,
 						"type": "string",
@@ -3491,6 +4600,16 @@
 						"in": "query",
 						"required": false,
 						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by publications in these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "sectionIds",
@@ -3518,103 +4637,16 @@
 						"in": "query",
 						"required": false,
 						"type": "string"
-					}
-				],
-				"responses": {
-					"200": {
-						"x-summary": "Success",
-						"description": "A list of days or months with the total stats for that day or month.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/TimelineInterval"
-							}
-						}
 					},
-					"400": {
-						"x-summary": "Request Invalid",
-						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"403": {
-						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal or press.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					}
-				}
-			}
-		},
-		"/stats/publications/galley": {
-			"get": {
-				"tags": [
-					"Stats / Publications"
-				],
-				"summary": "Get galley views by day or month.",
-				"description": "Returns a monthly or daily timeline of galley views for the publications which match the request parameters.",
-				"parameters": [
 					{
-						"name": "timelineInterval",
-						"description": "Return the total daily or monthly views.",
+						"name": "type",
+						"description": "Whether to return a timeline based on abstract page views or file downloads. Default: abstract page views.",
 						"in": "query",
 						"required": false,
 						"type": "string",
-						"default": "month",
 						"enum": [
-							"day",
-							"month"
+							"files"
 						]
-					},
-					{
-						"name": "dateStart",
-						"description": "Return stats for publications after this date.",
-						"in": "query",
-						"required": false,
-						"type": "string"
-					},
-					{
-						"name": "dateEnd",
-						"description": "Return stats for publications before this date.",
-						"in": "query",
-						"required": false,
-						"type": "string"
-					},
-					{
-						"name": "sectionIds",
-						"description": "Filter results by publications in these sections.",
-						"in": "query",
-						"required": false,
-						"type": "array",
-						"items": {
-							"type": "integer"
-						}
-					},
-					{
-						"name": "submissionIds",
-						"description": "Filter results by these publications.",
-						"in": "query",
-						"required": false,
-						"type": "array",
-						"items": {
-							"type": "integer"
-						}
-					},
-					{
-						"name": "searchPhrase",
-						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
-						"in": "query",
-						"required": false,
-						"type": "string"
 					}
 				],
 				"responses": {
@@ -3637,7 +4669,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal or press.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3657,19 +4689,26 @@
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get one publication's views by type.",
-				"description": "Returns a publication's total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
+				"summary": "Get one publication's stats.",
+				"description": "Returns a publication's number of visits and downloads broken down by type.",
 				"parameters": [
 					{
+						"name": "submissionId",
+						"description": "The submission ID.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
 						"name": "dateStart",
-						"description": "Return stats for publications after this date.",
+						"description": "Return stats after this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "dateEnd",
-						"description": "Return stats for publications before this date.",
+						"description": "Return stats before this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -3692,7 +4731,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal or press.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3707,14 +4746,21 @@
 				}
 			}
 		},
-		"/stats/publications/{submissionId}/abstract": {
+		"/stats/publications/{submissionId}/timeline": {
 			"get": {
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get onne publication's abstract views by day or month.",
-				"description": "Returns a monthly or daily timeline of abstract views for the requested publication.",
+				"summary": "Get one publication's visits by day or month.",
+				"description": "Returns a monthly or daily timeline of visits to the publication.",
 				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "The submission ID.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
 					{
 						"name": "timelineInterval",
 						"description": "Return the total daily or monthly views",
@@ -3729,17 +4775,27 @@
 					},
 					{
 						"name": "dateStart",
-						"description": "Return stats for publications after this date.",
+						"description": "Return stats after this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "dateEnd",
-						"description": "Return stats for publications before this date.",
+						"description": "Return stats before this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
+					},
+					{
+						"name": "type",
+						"description": "Whether to return a timeline based on abstract page views or file downloads. Default: abstract page views.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"enum": [
+							"files"
+						]
 					}
 				],
 				"responses": {
@@ -3762,7 +4818,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal or press.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -3777,26 +4833,14 @@
 				}
 			}
 		},
-		"/stats/publications/{submissionId}/galley": {
+		"/stats/publications/files": {
 			"get": {
 				"tags": [
 					"Stats / Publications"
 				],
-				"summary": "Get one publication's galley views by day or month.",
-				"description": "Returns a monthly or daily timeline of galley views for the requested publication.",
+				"summary": "Get a list of published files ordered by downloads.",
+				"description": "Returns a list of published files ordered by their total downloads.",
 				"parameters": [
-					{
-						"name": "timelineInterval",
-						"description": "Return the total daily or monthly views.",
-						"in": "query",
-						"required": false,
-						"type": "string",
-						"default": "month",
-						"enum": [
-							"day",
-							"month"
-						]
-					},
 					{
 						"name": "dateStart",
 						"description": "Return stats for publications after this date.",
@@ -3810,16 +4854,80 @@
 						"in": "query",
 						"required": false,
 						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by publications in these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these submissions.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many files to return in a single request. Max is 100.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the files returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Return the results in ascending or descending order.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
 					}
 				],
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of days or months with the total stats for that day or month.",
+						"description": "A list of files with their total stats during the requested period.",
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/TimelineInterval"
+								"$ref": "#/definitions/PublicationFileStats"
 							}
 						}
 					},
@@ -3832,7 +4940,373 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to access statistics for this journal or press.",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/countries": {
+			"get": {
+				"tags": [
+					"Stats / Publications"
+				],
+				"summary": "Get a list of countries ordered by the number of visits to publications.",
+				"description": "Returns a list of countries ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by publications in these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these submissions.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many countries to return in a single request. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the countries returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Return the results in ascending or descending order.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of countries.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PublicationCountryStats"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/regions": {
+			"get": {
+				"tags": [
+					"Stats / Publications"
+				],
+				"summary": "Get a list of regions ordered by the number of visits to publications.",
+				"description": "Returns a list of regions ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by publications in these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these submissions.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many regions to return in a single request. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the regions returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Return the results in ascending or descending order.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of regions.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PublicationRegionStats"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested resource was not found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/stats/publications/cities": {
+			"get": {
+				"tags": [
+					"Stats / Publications"
+				],
+				"summary": "Get a list of cities ordered by the number of visits to publications.",
+				"description": "Returns a list of cities ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"parameters": [
+					{
+						"name": "dateStart",
+						"description": "Return stats for publications after this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "dateEnd",
+						"description": "Return stats for publications before this date.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter results by publications in these issues.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "sectionIds",
+						"description": "Filter results by publications in these sections.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "submissionIds",
+						"description": "Filter results by these submissions.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by publications that match this search phrase. Searches the same submission properties as the `searchPhrase` parameter in the `/submissions` endpoint.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"description": "How many cities to return in a single request. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the cities returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "orderDirection",
+						"description": "Return the results in ascending or descending order.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"default": "DESC",
+						"enum": [
+							"ASC",
+							"DESC"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of cities.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PublicationCityStats"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request parameters will be invalid. The error message will contain details about the invalid parameter.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
