@@ -41,14 +41,8 @@ describe('Data suite: Ccorino', function() {
 			'country': 'Italy'
 		});
 
-		// Go to page where CSRF token is available
-		cy.visit('/index.php/publicknowledge/user/profile');
-
-		let csrfToken = '';
+		cy.getCsrfToken();
 		cy.window()
-			.then((win) => {
-				csrfToken = win.pkp.currentUser.csrfToken;
-			})
 			.then(() => {
 				return cy.createSubmissionWithApi(submission, csrfToken);
 			})
