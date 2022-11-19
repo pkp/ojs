@@ -7,8 +7,8 @@
  *
  */
 
+import Api from '../../lib/pkp/cypress/support/api.js';
 import '../../lib/pkp/cypress/support/commands';
-
 
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.get('button[id="publication-button"]').click();
@@ -36,3 +36,23 @@ Cypress.Commands.add('checkViewableGalley', (galleyTitle) => {
 			cy.request(src);
 		});
 });
+
+Cypress.Commands.add('createSubmissionWithApi', (data, csrfToken) => {
+	const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+
+	return cy.beginSubmissionWithApi(api, data, csrfToken)
+		.putMetadataWithApi(data, csrfToken)
+		.get('@submissionId').then((submissionId) => {
+			if (typeof data.files === 'undefined' || !data.files.length) {
+				return;
+			}
+			cy.visit('/index.php/publicknowledge/submission?id=' + submissionId);
+
+			// Must use the UI to upload files until we upgrade Cypress
+			// to 7.4.0 or higher.
+			// @see https://github.com/cypress-io/cypress/issues/1647
+			cy.addSubmissionGalleys(data.files);
+		})
+		.uploadSubmissionFiles(api, data, csrfToken);
+});
+
