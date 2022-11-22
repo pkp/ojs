@@ -323,6 +323,7 @@ msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr "發送電郵給作者通知其投稿已回到評審階段。解釋為何有此決定及向作者說明會如何再"
 "度評審。"
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr "發送電郵給作者通知其投稿已進入同行評審階段。盡可能通知作者同行評審需時多久及"
 "他們大約何時會再收到編輯通知。"

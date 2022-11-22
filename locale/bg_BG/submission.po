@@ -374,6 +374,7 @@ msgstr "Декларация за поверителност на списани
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Изберете файлове, които трябва да бъдат изпратени на етап рецензиране."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Изпратете имейл до авторите, за да ги уведомите, че това подаване на "

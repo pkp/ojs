@@ -364,6 +364,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Pilih file yang akan dikirim ke tahap review."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Kirim email pemberitahuan kepada penulis bahwa naskahnya akan dikembalikan "

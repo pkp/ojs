@@ -375,6 +375,7 @@ msgstr "Galleyni ko'rish"
 msgid "galley.cantEditPublished"
 msgstr "Bu galleyni tahrirlab bo‘lmaydi, chunki u allaqachon chop etilgan."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Mualliflarga e-pochta orqali xabar yuboring, ular ushbu taqdimot ko'rib "

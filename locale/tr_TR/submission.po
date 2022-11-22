@@ -362,6 +362,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Değerlendirme aşamasına gönderilmesi gereken dosyaları seçin."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Yazarlara, bu aday makalenin hakem değerlendirmesine gönderileceğini "

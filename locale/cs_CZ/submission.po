@@ -347,6 +347,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Vyberte soubory, které mají být odeslány do recenzní fáze."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Pošlete autorům e-mail s informací, že tento příspěvek bude odeslán k "

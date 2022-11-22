@@ -369,6 +369,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Välj filer som ska skickas till granskningssteget."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Skicka ett e-postmeddelande till författarna om att bidraget kommer skickas "

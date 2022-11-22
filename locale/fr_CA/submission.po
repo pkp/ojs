@@ -396,6 +396,7 @@ msgid "galley.cantEditPublished"
 msgstr ""
 "Ces épreuves ne peuvent pas être éditées car elles ont déjà été publiées."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Envoyer un courriel aux auteur.e.s pour leur faire savoir que cette "

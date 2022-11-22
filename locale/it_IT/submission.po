@@ -378,6 +378,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Seleziona i file che devono essere resi disponibili per la revisione."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Invia una email agli autori per informarli che la loro sottomissione è stata "

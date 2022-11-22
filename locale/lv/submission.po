@@ -364,6 +364,7 @@ msgstr "Iesniegt manā lomā kā..."
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Atlasiet failus, kas jānosūta uz recenzēšanas posmu."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Nosūtiet e-pasta autoriem, lai informētu, ka šis iesniegtais materiāls tiks "

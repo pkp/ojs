@@ -370,6 +370,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Vælg filer som skal sendes til bedømmelsestrinnet."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Send en e-mail til forfatterne for at fortælle dem, at denne indsendelse vil "
