@@ -51,8 +51,8 @@ Cypress.Commands.add('createSubmissionWithApi', (data, csrfToken) => {
 			// Must use the UI to upload files until we upgrade Cypress
 			// to 7.4.0 or higher.
 			// @see https://github.com/cypress-io/cypress/issues/1647
-			cy.addSubmissionGalleys(data.files);
+			cy.uploadSubmissionFiles(data.files);
 		})
-		.uploadSubmissionFiles(api, data, csrfToken);
+		.addSubmissionAuthorsWithApi(api, data, csrfToken);
 });
 
