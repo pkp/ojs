@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2022-11-10 16:02+0000\n"
+"PO-Revision-Date: 2022-11-14 18:02+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -229,9 +229,8 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Rappel de demande d'évaluation d'un article"
+msgstr "Seriez-vous en mesure d'évaluer ce manuscrit pour nous ?"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"

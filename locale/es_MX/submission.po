@@ -1,7 +1,7 @@
 # Dago Salas <dago.salas@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-15 22:14+0000\n"
+"PO-Revision-Date: 2022-11-16 02:02+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/es_MX/>\n"
@@ -417,3 +417,9 @@ msgstr "La galerada del artículo \"{$galleyFormatName}\" no está disponible."
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "La galerada del artículo \"{$galleyFormatName}\" ya está disponible."
+
+msgid "submission.layout.viewGalley"
+msgstr "Ver Galerada"
+
+msgid "galley.cantEditPublished"
+msgstr "Esta galerada no se puede editar porque ya se ha publicado."
