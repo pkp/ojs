@@ -137,7 +137,7 @@ class IssueFileManager extends FileManager
             $fileType = $issueFile->getFileType();
             $filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 
-            return parent::downloadByPath($filePath, $fileType, $inline);
+            return parent::downloadByPath($filePath, $fileType, $inline, $issueFile->getOriginalFileName());
         } else {
             return false;
         }
