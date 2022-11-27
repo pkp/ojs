@@ -14,11 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
-import '@foreachbe/cypress-tinymce'
-
-require('cypress-failed-log')
+require('cypress-failed-log');
 
 beforeEach(function() {
 	cy.abortEarly(this);
