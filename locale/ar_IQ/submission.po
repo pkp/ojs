@@ -220,11 +220,6 @@ msgstr "التعيين للنشر ضمن عدد"
 msgid "publication.selectIssue"
 msgstr "إختر أحد الأعداد لجدولته للنشر"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"هذه معاينة استعراضية ولم يتم نشرها بعد. <a href=\"{$url}\">View "
-"submission</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (غير فعال)"
 

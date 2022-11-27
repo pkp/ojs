@@ -314,11 +314,6 @@ msgstr "Bo'lim variantlari"
 msgid "section.any"
 msgstr "Har qanday bo'lim"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Bu oldindan ko‘rish va chop etilmagan. <a href=\"{$url}\"> yuborishni ko‘"
-"rish </a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Bu spetsifikatsiyalar Dublin Core metadata to'plamiga asoslangan bo'lib, u "

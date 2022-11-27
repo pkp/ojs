@@ -93,9 +93,6 @@ msgstr "セクション・オプション"
 msgid "section.any"
 msgstr "任意のセクション"
 
-msgid "submission.viewingPreview"
-msgstr "これはプレビューであり、公開されていません。 <a href=\"{$url}\">投稿表示</a>"
-
 msgid "submission.metadataDescription"
 msgstr "これらの仕様は、ダブリン・コア・メタデータ・セット（ジャーナル・コンテンツを記述するための国際標準）に基づいています。"
 

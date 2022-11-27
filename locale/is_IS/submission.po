@@ -204,11 +204,6 @@ msgstr "Valmöguleikar kafla"
 msgid "section.any"
 msgstr "Hvaða kafli sem er"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Þetta er forskoðun og hefur ekki verið birt. <a href=\"{$url}\">Skoða "
-"innsendingu</a>"
-
 msgid "submission.citationFormat.notFound"
 msgstr "Ekki var hægt að sækja umbeðið snið á tilvitnunum."
 

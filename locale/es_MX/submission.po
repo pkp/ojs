@@ -300,11 +300,6 @@ msgstr "Opciones de sección"
 msgid "section.any"
 msgstr "Cualquier sección"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Esta es una vista previa y no ha sido publicado. <a href=\"{$url}\">Ver "
-"envío</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Estas especificaciones se basan en el conjunto de metadatos Dublin Core, un "

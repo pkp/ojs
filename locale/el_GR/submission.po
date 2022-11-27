@@ -244,11 +244,6 @@ msgstr ""
 msgid "galley.publicationNotFound"
 msgstr "Δεν βρέθηκε η δημοσίευση που σχετίζεται με αυτό το τυπογραφικό δοκίμιο."
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Αυτή είναι μια προεπισκόπηση και δεν έχει δημοσιευτεί ακόμα. <a href=\"{$url}"
-"\">Δείτε την υποβολή</a>"
-
 msgid "submission.publication"
 msgstr "Δημοσίευση"
 

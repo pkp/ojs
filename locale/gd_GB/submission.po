@@ -194,11 +194,6 @@ msgstr ""
 "Tha na riatanasan seo stèidhichte air seata meata-dàta Dublin Core, stannard "
 "eadar-nàiseanta airson tuairisgeul a thoirt air susbaint iris-leabhraichean."
 
-msgid "submission.viewingPreview"
-msgstr ""
-"’S e ro-shealladh a tha seo ’s cha deach fhoillseachadh fhathast. <a href=\""
-"{$url}\">Seall an tagradh</a>"
-
 msgid "section.any"
 msgstr "Earrann sam bith"
 

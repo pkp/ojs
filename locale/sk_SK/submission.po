@@ -251,10 +251,5 @@ msgstr "Vložiť v rámci mojej nasledujúcej role..."
 msgid "submission.submit.title"
 msgstr "Odoslať článok"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Toto je náhľad – doteraz nebol publikovaný.  <a href=\"{$url}\">Zobraziť "
-"príspevok</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktívne)"

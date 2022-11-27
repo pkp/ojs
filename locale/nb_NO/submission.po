@@ -85,11 +85,6 @@ msgstr "Seksjonsinnstillinger"
 msgid "section.any"
 msgstr "Alle seksjoner"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Dette er en forhåndsvisning og har ikke blitt publisert enda. <a href=\""
-"{$url}\">Se innleveringen</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Disse spesifikasjonene er basert på metadatasettet Dublin Core, en "

@@ -327,11 +327,6 @@ msgstr "Tuotantoon liittyvät keskustelut"
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inactive)"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Tämä on esikatselu eikä artikkelia ole julkaistu. <a href=\"{$url}\">Katso "
-"käsikirjoitusta</a>"
-
 msgid "publication.changeIssue"
 msgstr "Vaihda numero"
 

@@ -304,11 +304,6 @@ msgstr "სექციის პარამეტრები"
 msgid "section.any"
 msgstr "ნებისმიერი სექცია"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"ეს არის წინასწარი დათვალიერების რეჟიმი, მასალა ჯერ არ გამოქვეყნებულა. <a "
-"href=\"{$url}\">მასალის ნახვა</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "ეს სპეციფიკაციები დაფუძნებულია Dublin Core-ის მეტა-მონაცემებზე — "

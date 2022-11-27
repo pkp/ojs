@@ -191,11 +191,6 @@ msgstr "Sadaļas iespējas"
 msgid "section.any"
 msgstr "Jebkura sadaļa"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Šis ir priekšskatījums, un tas nav publicēts. <a href=\"{$url}\">Skatīt "
-"iesniegto materiālu</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Šo specifikāciju pamatā ir Dublin Core metadatu kopums - starptautisks "

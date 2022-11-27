@@ -354,10 +354,6 @@ msgstr "Публикација"
 msgid "publication.inactiveSection"
 msgstr "{$section} (неактивно)"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Ова е преглед кој не е објавен. <a href=\"{$url}\">Види го поднесокот</a>"
-
 msgid "publication.changeIssue"
 msgstr "Смени издание"
 

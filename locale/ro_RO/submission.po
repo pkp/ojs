@@ -368,8 +368,3 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Acesta a fost atribuit  lui<a href=\"{$issueUrl}\">{$issueName}</a>, dar nu "
 "a fost programat pentru publicare."
-
-msgid "submission.viewingPreview"
-msgstr ""
-"Aceasta este o previzualizare și nu a fost publicată. <a href=\"{$url}\">"
-"Vedeți contribuția</a>"

@@ -246,11 +246,6 @@ msgstr ""
 "sofort veröffentlicht, da das Veröffentlichungsdatum auf {$datePublished} "
 "gesetzt wurde. Sind Sie sicher, dass Sie dies veröffentlichen möchten?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Diese Vorschau wurde noch nicht veröffentlicht. <a href=\"{$url}\">Beitrag "
-"anzeigen</a>"
-
 msgid "submission.publication"
 msgstr "Veröffentlichung"
 

@@ -252,11 +252,6 @@ msgstr ""
 "olarak ayarlandığı için bu hemen yayınlanacaktır. Bunu yayınlamak "
 "istediğinizden emin misiniz?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Bu bir önizlemedir ve yayınlanmamıştır.  <a href=\"{$url}\">Makaleyi "
-"görüntüle</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (Pasif)"
 
