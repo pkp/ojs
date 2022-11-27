@@ -294,9 +294,6 @@ msgstr "出版物"
 msgid "publication.inactiveSection"
 msgstr "{$section}（不活跃）"
 
-msgid "submission.viewingPreview"
-msgstr "这仅是预览，文章尚未发布。<a href=\"{$url}\">查看稿件</a>"
-
 msgid "submission.queries.production"
 msgstr "出版讨论"
 

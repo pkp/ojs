@@ -120,11 +120,10 @@ class ArticleHandler extends Handler
             }
         }
 
-        $issueAction = new IssueAction();
-        $context = $request->getContext();
         $user = $request->getUser();
 
-        if (!$submission || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user))) {
+        // Serve 404 if no submission available OR submission is unpublished and no user is logged in OR submission is unpublished and we have a user logged in but the user does not have access to preview
+        if (!$submission || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$user) || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && $user && !Repo::submission()->canPreview($user, $submission))) {
             $request->getDispatcher()->handle404();
         }
 
@@ -155,7 +154,7 @@ class ArticleHandler extends Handler
             $galleyId = $subPath;
         }
 
-        if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$issueAction->allowedPrePublicationAccess($context, $submission, $user)) {
+        if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
             $request->getDispatcher()->handle404();
         }
 
@@ -534,7 +533,7 @@ class ArticleHandler extends Handler
 
         // If this is an editorial user who can view unpublished/unscheduled
         // articles, bypass further validation. Likewise for its author.
-        if ($submission && $issueAction->allowedPrePublicationAccess($context, $submission, $user)) {
+        if ($submission && $user && Repo::submission()->canPreview($user, $submission)) {
             return true;
         }
 

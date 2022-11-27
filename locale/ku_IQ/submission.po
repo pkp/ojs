@@ -261,7 +261,3 @@ msgstr "پێسپاردن بە ژمارەیەک"
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (ناچالاک)"
-
-msgid "submission.viewingPreview"
-msgstr ""
-"ئەمە پێشبینینە و بڵاونەکراوەتەوە. <a href=\"{$url}\">پیشاندانی پێشکەشکردن</a>"

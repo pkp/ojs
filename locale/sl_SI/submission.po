@@ -331,11 +331,6 @@ msgstr ""
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktivno)"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"To je le predogled, še ni bilo objavljeno. <a href=\"{$url}\">View "
-"submission</a>"
-
 msgid "publication.changeIssue"
 msgstr "Spremeni številko"
 

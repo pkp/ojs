@@ -348,11 +348,6 @@ msgstr "Diskusi Produksi"
 msgid "publication.inactiveSection"
 msgstr "{$section} (Tidak aktif)"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Naskah ini merupakan pratinjau dan belum diterbitkan. <a href=\"{$url}\">"
-"Lihat Naskah</a>"
-
 msgid "publication.changeIssue"
 msgstr "Ubah Terbitan"
 

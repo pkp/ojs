@@ -332,11 +332,6 @@ msgstr "Параметри на раздела"
 msgid "section.any"
 msgstr "Произволен раздел"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Това е предварителен преглед и не е публикуван. <a href=\"{$url}\">Преглед "
-"на изпращаните материали</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Тези спецификации се основават на набора от метаданни Dublin Core, "

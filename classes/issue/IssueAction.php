@@ -21,7 +21,6 @@ use APP\facades\Repo;
 use APP\subscription\Subscription;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
-use PKP\security\Role;
 
 use PKP\submission\PKPSubmission;
 
@@ -56,41 +55,6 @@ class IssueAction
     }
 
     /**
-     * Checks if this user is granted reader access to pre-publication articles
-     * based on their roles in the journal (i.e. Manager, Editor, etc).
-     *
-     * @param \APP\journal\Journal $journal
-     * @param \APP\submission\Submission $submission
-     * @param \PKP\user\User $user
-     *
-     * @return bool
-     */
-    public function allowedPrePublicationAccess($journal, $submission, $user)
-    {
-        // Don't grant access until submission reaches Copyediting stage
-        if ($submission->getData('stageId') < WORKFLOW_STAGE_ID_EDITING) {
-            return false;
-        }
-
-        if ($this->_roleAllowedPrePublicationAccess($journal, $user)) {
-            return true;
-        }
-
-        if ($user && $journal) {
-            $journalId = $journal->getId();
-            $userId = $user->getId();
-
-            $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-            $stageAssignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), Role::ROLE_ID_AUTHOR, null, $userId);
-            $stageAssignment = $stageAssignments->next();
-            if ($stageAssignment) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
      * Checks if this user is granted access to pre-publication issue galleys
      * based on their roles in the journal (i.e. Manager, Editor, etc).
      *
@@ -100,7 +64,25 @@ class IssueAction
      */
     public function allowedIssuePrePublicationAccess($journal, $user)
     {
-        return $this->_roleAllowedPrePublicationAccess($journal, $user);
+        $roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
+        if ($user && $journal) {
+            $journalId = $journal->getId();
+            $userId = $user->getId();
+            $subscriptionAssumedRoles = [
+                ROLE_ID_MANAGER,
+                ROLE_ID_SUB_EDITOR,
+                ROLE_ID_ASSISTANT,
+                ROLE_ID_SUBSCRIPTION_MANAGER
+            ];
+
+            $roles = $roleDao->getByUserId($userId, $journalId);
+            foreach ($roles as $role) {
+                if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -119,7 +101,7 @@ class IssueAction
         $submission = Repo::submission()->get((int) $articleId);
         $result = false;
         if (isset($user) && isset($journal)) {
-            if ($submission && $this->allowedPrePublicationAccess($journal, $submission, $user)) {
+            if ($submission && Repo::submission()->canPreview($user, $submission)) {
                 $result = true;
             } else {
                 $result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId());
@@ -183,39 +165,6 @@ class IssueAction
         }
         Hook::call('IssueAction::subscribedDomain', [&$request, &$journal, &$issueId, &$articleId, &$result]);
         return (bool) $result;
-    }
-
-    /**
-     * Checks if this user is granted access to pre-publication galleys based on role
-     * based on their roles in the journal (i.e. Manager, Editor, etc).
-     *
-     * @param \APP\journal\Journal $journal
-     * @param \PKP\user\User $user
-     *
-     * @return bool
-     */
-    public function _roleAllowedPrePublicationAccess($journal, $user)
-    {
-        $roleDao = DAORegistry::getDAO('RoleDAO'); /** @var RoleDAO $roleDao */
-        if ($user && $journal) {
-            $journalId = $journal->getId();
-            $userId = $user->getId();
-            $subscriptionAssumedRoles = [
-                Role::ROLE_ID_MANAGER,
-                Role::ROLE_ID_SITE_ADMIN,
-                Role::ROLE_ID_SUB_EDITOR,
-                Role::ROLE_ID_ASSISTANT,
-                Role::ROLE_ID_SUBSCRIPTION_MANAGER
-            ];
-
-            $roles = $roleDao->getByUserId($userId, $journalId);
-            foreach ($roles as $role) {
-                if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 }
 

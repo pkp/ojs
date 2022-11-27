@@ -239,11 +239,6 @@ msgstr "Բաժնի Ընտրանքներ"
 msgid "section.any"
 msgstr "Ցանկացած բաժին"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Սա նախադիտում է և չի հրապարակվել: <a href=\"{$url}\">Դիտեք ներկայացված "
-"նյութը</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Այս բնութագրերը հիմնված են Dublin Core մետատվյալների հավաքածուի վրա, որը "

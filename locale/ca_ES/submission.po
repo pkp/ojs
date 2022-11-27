@@ -235,11 +235,6 @@ msgstr ""
 "immediatament atès que la data de publicació s'ha ajustat a {$datePublished}"
 ". Segur que voleu publicar-ho?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Això és una vista prèvia i encara no s'ha publicat. <a href=\"{$url}\">Veure "
-"tramesa</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inactiu)"
 

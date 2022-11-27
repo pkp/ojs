@@ -248,11 +248,6 @@ msgstr ""
 "immédiatement car la date de publication a été fixée au {$datePublished}. "
 "Êtes-vous certain-e de vouloir publier ceci ?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Ceci est un aperçu et n'a pas été publié. <a href=\"{$url}\">Afficher la "
-"soumission</a>"
-
 msgid "submission.publication"
 msgstr "Publication"
 

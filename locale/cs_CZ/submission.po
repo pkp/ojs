@@ -254,11 +254,6 @@ msgstr ""
 "okamžitě, protože datum publikování bylo nastaveno na {$datePublished}. Jste "
 "si jisti, že má být příspěvek publikován?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Toto je náhled – dosud nebyl publikován. <a href=\"{$url}\">Zobrazit "
-"příspěvek</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktivní)"
 

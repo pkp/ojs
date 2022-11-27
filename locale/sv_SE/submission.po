@@ -266,11 +266,6 @@ msgstr ""
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inaktiv)"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Detta är en förhandsvisning och har därmed inte blivit publicerad än. <a "
-"href=\"{$url}\">Visa bidrag</a>"
-
 msgid "submission.publication"
 msgstr "Publikation"
 

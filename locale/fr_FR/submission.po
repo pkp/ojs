@@ -257,11 +257,6 @@ msgstr "Options de rubrique"
 msgid "submission.submit.noContext"
 msgstr "La revue associée à cette soumission est introuvable."
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Ceci est un aperçu et n'a pas été publié. <a href=\"{$url}\">Voir la "
-"soumission</a>"
-
 msgid "submission.publication"
 msgstr "Publication"
 

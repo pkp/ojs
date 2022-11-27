@@ -355,7 +355,3 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Đã phân công cho <a href=\"{$issueUrl}\">{$issueName}</a> nhưng chưa được "
 "lên lịch xuất bản."
-
-msgid "submission.viewingPreview"
-msgstr ""
-"Đây là bản xem trước chưa được xuất bản. <a href=\"{$url}\">Xem bài gửi</a>"

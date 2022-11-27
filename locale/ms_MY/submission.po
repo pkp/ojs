@@ -193,11 +193,6 @@ msgstr "Pilihan Bahagian"
 msgid "section.any"
 msgstr "Mana-mana Bahagian"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Ini adalah pratonton dan belum diterbitkan. <a href=\"{$url}\"> Lihat "
-"penyerahan </a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Spesifikasi ini berdasarkan set metadata Dublin Core, standard antarabangsa "

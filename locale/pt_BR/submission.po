@@ -247,10 +247,6 @@ msgstr ""
 "imediatamente porque a data da publicação foi definida para {$datePublished}"
 ". Deseja realmente publicar?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Esta é uma prévia e não foi publicada. <a href=\"{$url}\"> Ver submissão</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inactive)"
 

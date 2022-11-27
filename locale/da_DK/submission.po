@@ -246,11 +246,6 @@ msgstr ""
 "udgivelsesdatoen er sat til {$datePublished}. Er du sikker på, at du ønsker "
 "at udgive det?"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Dette er en forhåndsvisning, der endnu ikke er blevet offentliggjort. <a "
-"href=\"{$url}\">Se indsendelse</a>"
-
 msgid "publication.inactiveSection"
 msgstr "{$section} (Inaktiv)"
 

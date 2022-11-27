@@ -102,10 +102,6 @@ msgstr "Odaberite opcije"
 msgid "section.any"
 msgstr "Bilo koja sekcija"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Ovo je pregled i nije objavljeno. <a href=\"{$url}\">Pogledaj predaju</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Ove se specifikacije baziraju na skupu metapodataka Dublin Core, "

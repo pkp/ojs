@@ -248,10 +248,6 @@ msgstr "Opcións da sección"
 msgid "section.any"
 msgstr "Calquera sección"
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Esta é unha vista previa e non se publicou. <a href=\"{$url}\">Ver envío</a>"
-
 msgid "submission.metadataDescription"
 msgstr ""
 "Estas especificacións están baseadas no conxunto de metadatos Dublin Core, "
