@@ -445,7 +445,6 @@ msgstr "E-mailová identifikace"
 msgid "manager.setup.emailSignature"
 msgstr "Podpis"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Připravené e-maily, které jsou systémem posílány ve jménu časopisu budou mít "
@@ -2101,7 +2100,7 @@ msgid "manager.distribution.publishingMode"
 msgstr "Režim vydávání"
 
 msgid "manager.distribution.publication"
-msgstr "Vydání"
+msgstr "Zveřejnění"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Použijte datum zveřejnění článku"
@@ -2491,16 +2490,24 @@ msgstr ""
 "ostatní sazebnice) a/nebo podle jednoho, nebo více id."
 
 msgid "mailable.subscriptionNotify.description"
-msgstr "Tento email informuje registrovaného čtenáře, že pro něj manažer vytvořil předplatné. Obsahuje URL časopisu a přístupové instrukce."
+msgstr ""
+"Tento email informuje registrovaného čtenáře, že pro něj manažer vytvořil "
+"předplatné. Obsahuje URL časopisu a přístupové instrukce."
 
 msgid "mailable.subscriptionExpiresSoon.description"
-msgstr "Tento email informuje předplatitele, že jeho předplatné brzy vyprší. Obsahuje URL časopisu a instrukce pro přístup."
+msgstr ""
+"Tento email informuje předplatitele, že jeho předplatné brzy vyprší. "
+"Obsahuje URL časopisu a instrukce pro přístup."
 
 msgid "mailable.subscriptionExpired.description"
-msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
+msgstr ""
+"Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje "
+"URL časopisu a instrukce pro přístup."
 
 msgid "mailable.subscriptionExpiredLast.description"
-msgstr "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje URL časopisu a instrukce pro přístup."
+msgstr ""
+"Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje "
+"URL časopisu a instrukce pro přístup."
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2527,7 +2534,9 @@ msgstr ""
 "přístup k obnovenému předplatnému."
 
 msgid "mailable.openAccessNotify.description"
-msgstr "Tento email je posílán čtenářům, kteří požádali o zasílání upozornění na přechod čísla časopisu do otevřeného přístupu."
+msgstr ""
+"Tento email je posílán čtenářům, kteří požádali o zasílání upozornění na "
+"přechod čísla časopisu do otevřeného přístupu."
 
 msgid "manager.subscriptions.form.institution"
 msgstr "Instituce"
@@ -2636,9 +2645,8 @@ msgstr ""
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
-"<strong>Náhledy</strong>: Počet návštěvníků zobrazujících obsah "
-"vydání.<br><strong>Stažení</strong>: Počet stažení sazebnic vydání, pokud "
-"existuje."
+"<strong>Náhledy</strong>: Počet návštěvníků zobrazujících obsah vydání."
+"<br><strong>Stažení</strong>: Počet stažení sazebnic vydání, pokud existuje."
 
 msgid "stats.contextStats"
 msgstr "Statistiky časopisu"
@@ -2659,3 +2667,8 @@ msgstr "Stáhnout obsah časopisu"
 
 msgid "stats.context.tooltip.text"
 msgstr "Počet návštěvníků kteří si zobrazili titulní stránku časopisu."
+
+msgid "manager.emails.confirmResetAll"
+msgstr ""
+"Jste si jisti, že chcete resetovat všechny šablony e-mailů v tomto časopisu? "
+"Ztratíte tak veškerá přizpůsobení, která jste dopsud udělali."
