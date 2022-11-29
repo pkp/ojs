@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2022-11-29 14:02+0000\n"
+"PO-Revision-Date: 2022-11-29 15:02+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/locale/cs_CZ/>"
 "\n"
@@ -547,16 +547,16 @@ msgid "submission.event.editor.submissionRestored"
 msgstr "Příspěvek obnoven z archívu"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Redaktor přidělen k příspěvku"
+msgstr "K příspěvku byl přidělen copyeditor/ka"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Redaktor odebrán od příspěvku"
+msgstr "Copyeditorovy/ce byl odebrán příspěvek"
 
 msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Přidělené redigování zahájeno"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Soubor s úpravami copyeditora byl aktualizován"
+msgstr "Soubor s úpravami copyeditora/ky byl aktualizován"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
 msgstr "Úvodní redigování dokončeno"
@@ -975,10 +975,10 @@ msgid "copyeditor.article.fileToCopyedit"
 msgstr "Soubor pro redaktora"
 
 msgid "copyeditor.article.copyeditorFile"
-msgstr "Soubor od redaktora"
+msgstr "Soubor od copyeditora/ky"
 
 msgid "copyeditor.article.copyeditorFinalFile"
-msgstr "Soubor od redaktora"
+msgstr "Soubor copyeditora/ky"
 
 msgid "proofreader.noProofreadingAssignments"
 msgstr "Žádné úkoly pro korektora"
@@ -1020,7 +1020,7 @@ msgid "submission.copyedit.copyeditVersion"
 msgstr "Redaktorova verze"
 
 msgid "submission.copyedit.selectCopyeditor"
-msgstr "Přidělit redaktora"
+msgstr "Přidělit copyeditora/ku"
 
 msgid "submission.copyedit.useFile"
 msgstr "Použít soubor"
@@ -1776,16 +1776,18 @@ msgid "log.copyedit.copyeditFileSet"
 msgstr "Byl vybrán výchozí soubor pro redigování."
 
 msgid "log.copyedit.initialEditComplete"
-msgstr "{$copyeditorName} dokončil úvodní redigování příspěvku {$submissionId}."
+msgstr ""
+"{$copyeditorName} dokončil/a úvodní redigování příspěvku {$submissionId}."
 
 msgid "log.copyedit.finalEditComplete"
-msgstr "{$copyeditorName} dokončil závěrečné redigování příspěvku {$submissionId}."
+msgstr ""
+"{$copyeditorName} dokončil/a závěrečné redigování příspěvku {$submissionId}."
 
 msgid "log.copyedit.copyeditorAssigned"
 msgstr "{$copyeditorName} byl přidělen pro redigování příspěvku {$submissionId}."
 
 msgid "log.copyedit.copyeditorFile"
-msgstr "Redaktorova verze souboru s příspěvkem byla nahrána."
+msgstr "Copyeditorova verze souboru s příspěvkem byla nahrána."
 
 msgid "log.copyedit.authorFile"
 msgstr "Byla nahrána autorem redigovaná verze souboru s příspěvkem."
@@ -1860,13 +1862,17 @@ msgid "notification.type.userComment"
 msgstr "Čtenář vložil poznámku k článku \"{$title}.\""
 
 msgid "user.authorization.copyeditorAssignmentMissing"
-msgstr "Přístup není povolen! Nebyl/a vám přiřazena úloha lektora tohoto článku."
+msgstr ""
+"Přístup není povolen! Nebyl/a vám přiřazena úloha copyeditora/ky tohoto "
+"článku."
 
 msgid "user.authorization.sectionAssignment"
 msgstr "Snažíte se přistoupit k článku, který není součástí této sekce."
 
 msgid "user.authorization.invalidCopyditorSubmission"
-msgstr "Špatný příspěvek redaktora, nebo příspěvek redaktora není vyžadován!"
+msgstr ""
+"Špatný příspěvek copyeditora/ky, nebo příspěvek copyeditora/ky není "
+"vyžadován!"
 
 msgid "context.current"
 msgstr "Aktuální časopis:"
