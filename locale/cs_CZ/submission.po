@@ -31,7 +31,13 @@ msgid "submission.title"
 msgstr "Název článku"
 
 msgid "submission.title.tip"
-msgstr "Typ odesílání je obvykle jeden z následujících 'obrázek', 'text' nebo některý jiný multimediální typ, včetně 'software' nebo 'interaktivní'. Zvolte prosím ten, který je pro váš příspěvek nejrelevantnější. Příklady lze nalézt na adrese <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Typ odesílání je obvykle jeden z následujících 'obrázek', 'text' nebo "
+"některý jiný multimediální typ, včetně 'software' nebo 'interaktivní'. "
+"Zvolte prosím ten, který je pro váš příspěvek nejrelevantnější. Příklady lze "
+"nalézt na adrese <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Začít nový příspěvek v"
@@ -96,7 +102,9 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Název a abstrakt"
 
 msgid "submission.submit.upload.description"
-msgstr "Nahrajte soubory spojené s tímto příspěvkem, včetně článku, multimédií, datových sad, kreseb atd."
+msgstr ""
+"Nahrajte soubory spojené s tímto příspěvkem, včetně článku, multimédií, "
+"datových sad, kreseb atd."
 
 msgid "submission.pageProofs"
 msgstr "Korektury"
@@ -129,7 +137,9 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolní seznam pro příspěvek"
 
 msgid "submission.submit.submissionChecklistDescription"
-msgstr "Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené požadavky."
+msgstr ""
+"Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené "
+"požadavky."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Prohlášení o ochraně osobních údajů"
@@ -141,7 +151,8 @@ msgid "submission.submit.form.authorRequired"
 msgstr "Je vyžadován minimálně jeden autor."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "Křestní jméno, příjmení a emailová adresa jsou vyžadovány pro každého autora."
+msgstr ""
+"Křestní jméno, příjmení a emailová adresa jsou vyžadovány pro každého autora."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Vložte, prosím, název vašeho článku."
@@ -156,7 +167,9 @@ msgid "submission.citationFormat.notFound"
 msgstr "Požadovaný citační formát nelze načíst."
 
 msgid "submission.metadataDescription"
-msgstr "Tyto specifikace vycházejí z množiny metadat Dublin Core, což je mezinárodní standard používaný k popisu obsahu časopisu."
+msgstr ""
+"Tyto specifikace vycházejí z množiny metadat Dublin Core, což je mezinárodní "
+"standard používaný k popisu obsahu časopisu."
 
 msgid "section.any"
 msgstr "Libovolná sekce"
@@ -165,13 +178,16 @@ msgid "submission.abstract.wordCount.description"
 msgstr "Abstrakt musí obsahovat maximálně {$wordCount} slov."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."
+msgstr ""
+"Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu "
+"stanoveného pro tuto sekci."
 
 msgid "galley.publicationNotFound"
 msgstr "Příspěvek pro tuto sazebnici nebyl nalezen."
 
 msgid "galley.editPublishedDisabled"
-msgstr "Sazebnice tohoto příspěvku nelze upravovat, protože již byl publikován."
+msgstr ""
+"Sazebnice tohoto příspěvku nelze upravovat, protože již byl publikován."
 
 msgid "publication.scheduledIn"
 msgstr "Naplánováno vydání v <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -247,7 +263,7 @@ msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktivní)"
 
 msgid "submission.publication"
-msgstr "Vydání"
+msgstr "Zveřejnění"
 
 msgid "publication.status.published"
 msgstr "Publikováno"
@@ -283,7 +299,7 @@ msgid "publication.event.scheduled"
 msgstr "Příspěvek byl naplánován k publikaci."
 
 msgid "publication.event.unpublished"
-msgstr "Publikace příspěvku byla odvolána."
+msgstr "Zveřejnění tohoto příspěvku bylo ukončeno."
 
 msgid "publication.event.versionPublished"
 msgstr "Byla vydána nová verze."
@@ -311,8 +327,8 @@ msgstr "Před zveřejněním musí být příspěvek ve fázi Copyediting nebo P
 
 msgid "submission.license.description"
 msgstr ""
-"Jakmile bude tento článek zveřejněn, bude licence automaticky nastavena na <"
-"a href='{$licenseUrl}' target='_blank'> {$licenseName} </a>."
+"Jakmile bude tento článek zveřejněn, bude licence automaticky nastavena na "
+"<a href='{$licenseUrl}' target='_blank'> {$licenseName} </a>."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
@@ -347,7 +363,6 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Vyberte soubory, které mají být odeslány do recenzní fáze."
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Pošlete autorům e-mail s informací, že tento příspěvek bude odeslán k "
