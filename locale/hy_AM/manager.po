@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-07 21:02+0000\n"
+"PO-Revision-Date: 2022-11-30 20:02+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hy_AM/>\n"
@@ -1036,11 +1036,10 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Միացնել հայտարարությունները"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Համակարգի կողմից պատրաստված ամսագրի անունից ուղարկված նամակների վերջում "
-"կավելացվի հետևյալ ստորագրությունը."
+"Ամսագրի անունից ինքնաշխատ ուղարկված նամակներում կավելացվի հետևյալ "
+"ստորագրությունը."
 
 msgid "manager.setup.emailSignature"
 msgstr "Ստորագրություն"
@@ -2653,3 +2652,15 @@ msgstr "Ամսագրի ինդեքսային էջի դիտումների քանա
 
 msgid "stats.context.downloadReport.downloadContext"
 msgstr "Ներբեռնեք ամսագիր"
+
+msgid "mailable.layoutComplete.name"
+msgstr "Շարվածքները ամբողջական են"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Արխիվային հարցում"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Արխիվային հարցում (Նոր)"
+
+msgid "manager.manageEmails.description"
+msgstr "Խմբագրել այս ամսագրից ուղարկված նամակները:"
