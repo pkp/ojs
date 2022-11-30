@@ -54,13 +54,6 @@ msgstr "प्रकाशन का विवरण अपडेट कर द�
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"क्या आप वाकई इस जर्नल के सभी ईमेल टेम्प्लेट रीसेट करना चाहते हैं? आपके द्वारा"
-" किए गए किसी भी अनुकूलन को खो देंगे।"
-
-# (pofilter) doublespacing: Different use of double spaces
-# (pofilter) endpunc: Different punctuation at the end
 msgid "manager.files.note"
 msgstr ""
 "सूचना:  फाइल ब्राउज़र एक उन्नत सुविधा है जो किसी जर्नल से जुड़ी फाइलों और "
@@ -570,6 +563,7 @@ msgstr "हस्ताक्षर"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "जर्नल की ओर से सिस्टम द्वारा भेजे गए तैयार ईमेल में अंत में जोड़े गए "

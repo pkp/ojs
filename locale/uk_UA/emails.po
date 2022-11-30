@@ -947,10 +947,6 @@ msgstr ""
 "Літературний редактор видання &quot;{$contextName}&quot;<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Цей лист дозволяє літературним редакторам уточнювати у авторів інформацію про пристатейну бібліографію."
-
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Запит на рецензування статті"
 
@@ -1002,7 +998,7 @@ msgstr ""
 "{$signature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Вітаємо,<br />\n"
 "<br />\n"
@@ -1015,7 +1011,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Подяка за подання рукопису"
 
 #, fuzzy

@@ -94,11 +94,6 @@ msgstr ""
 "директно преглеждане и манипулиране на файловете и директориите, свързани с "
 "това списание."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Сигурни ли сте, че искате да нулирате всички шаблони за имейли в това "
-"списание? Ще загубите всички персонализации, които сте направили."
-
 msgid "manager.website.archiving"
 msgstr "Архивиране"
 
@@ -502,6 +497,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Включване на съобщения"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Подготвените имейли, изпратени от системата от името на списанието, ще имат "

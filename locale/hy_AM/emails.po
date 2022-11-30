@@ -16,12 +16,12 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Դուք նշանակվել եք որպես խմբագիր {$contextName} -ի ներկայացման համար"
 
-msgid "emails.submissionAckNotUser.description"
+msgid "emails.submissionAckNotAuthor.description"
 msgstr ""
 "Այս էլ․ նամակը, երբ միացված է, ինքնաշխատ կերպով ուղարկվում է հեղինակներին, "
 "որոնք նշված են ներկայացման մեջ, ովքեր չեն ներկայացնում հեղինակին:"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},</p><p>Դուք նշվել եք որպես {$contextName} -ի "
 "համահեղինակ։ Ներկայացնողը՝ {$submitterName}, տրամադրել է հետևյալ "
@@ -31,7 +31,7 @@ msgstr ""
 "p><p>Շնորհակալություն այս ամսագիրը որպես ձեր աշխատանքի վայր ընտրելու "
 "համար:</p><p>Հարգանքով,</p>{$contextSignature}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Ներկայացման հաստատում"
 
 msgid "emails.lockssNewArchive.description"
@@ -512,17 +512,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Խմբագրական գործունեություն {$month}, {$year} համար"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Լռելյայն (դատարկ) հաղորդագրությունը, որն օգտագործվում է Ծանուցումների "
-"կենտրոնի հաղորդագրությունների ցանկում:"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Խնդրում ենք մուտքագրել ձեր հաղորդագրությունը:"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Հաղորդագրություն {$contextName} -ի վերաբերյալ"
-
 msgid "emails.revisedVersionNotify.description"
 msgstr ""
 "Այս նամակն ինքնաշխատ կերպով ուղարկվում է նշանակված խմբագրին, երբ հեղինակը "
@@ -541,11 +530,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Վերանայված տարբերակը վերբեռնվեց"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Այս էլ․ նամակը թույլ է տալիս գրական խմբագիրներին լրացուցիչ տեղեկություններ "
-"պահանջել հեղինակներից հղումների մասին:"
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""
@@ -797,11 +781,6 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "Հնարավոր հետաքրքրություն ներկայացնող հոդված"
 
-msgid "emails.layoutComplete.description"
-msgstr ""
-"Դասավորության խմբագրից ստացված այս նամակը տեղեկացնում է խմբագրին, որ "
-"շարվածքներն ավարտված են:"
-
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},<p><p>Շարվածքներն այժմ պատրաստվել են հետևյալ "
@@ -812,12 +791,6 @@ msgstr ""
 
 msgid "emails.layoutComplete.subject"
 msgstr "Շարվածքները ամբողջական են"
-
-msgid "emails.layoutRequest.description"
-msgstr ""
-"Խմբագրի կողմից Դասավորության խմբագրին ուղարկված այս նամակը ծանուցում է, որ "
-"իրենց հանձնարարվել է կատարել դասավորության խմբագրման առաջադրանք: Այն "
-"տրամադրում է տեղեկատվություն ներկայացման և այն մուտք գործելու մասին:"
 
 msgid "emails.layoutRequest.body"
 msgstr ""

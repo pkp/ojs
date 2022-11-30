@@ -201,10 +201,10 @@ msgstr ""
 "incluir a revista no seu repositório. O e-mail oferece informações iniciais "
 "e sobre como participar na iniciativa LOCKSS e formas de se envolver."
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Confirmação de submissão"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p>\n"
 "<br />\n"
@@ -216,7 +216,7 @@ msgstr ""
 "este periódico para publicar o seu trabalho.</p><br "
 "/><p>Atenciosamente,</p>{$contextSignature}"
 
-msgid "emails.submissionAckNotUser.description"
+msgid "emails.submissionAckNotAuthor.description"
 msgstr ""
 "Quando habilitada, esta mensagem é enviado automaticamente para os autores "
 "informados durante o processo de submissão, que não seja o autor que está "
@@ -764,9 +764,6 @@ msgstr ""
 "{$senderName} <br />\n"
 "Editor de Texto, {$contextName} <br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Solicitação ao autor de detalhes sobre referência, enviada pelo editor de texto."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Envio de versão atualizada"
 
@@ -780,15 +777,6 @@ msgstr ""
 "URL da Submissão: {$submissionUrl} <br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Uma mensagem sobre {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Insira a sua mensagem por gentileza."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "A mensagem padrão (em branco) usada no Criador de lista de mensagens do Notification Center."
 
 msgid "emails.submissionComment.subject"
 msgstr "Comentário sobre a submissão"

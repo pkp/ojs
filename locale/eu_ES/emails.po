@@ -740,10 +740,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Zuzentzailea, {$contextName}"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Mezu elektroniko honekin zuzentzaileek erreferentziei buruzko informazio osagarria eskatzen diete egileei."
-
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Artikulua berrikusteko eskakizuna"
 

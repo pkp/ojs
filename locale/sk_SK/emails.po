@@ -292,7 +292,7 @@ msgid "emails.editorAssign.subject"
 msgstr "Editorská úloha"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Dobrý deň,<br />\n"
 "<br />\n"
@@ -305,7 +305,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Poďakovanie za príspevok"
 
 msgid "emails.lockssNewArchive.description"
@@ -591,17 +591,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Aktivita redakcie pre {$month}, {$year}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Predvolená (prázdna) správa použitá v nástroji List Builder Message Center "
-"Message Builder."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Vložte, prosím, vašu správu."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Správa týkajúca sa {$contextName}"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editori:<br />\n"
@@ -615,11 +604,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Nahraná opravená verzia príspevku"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Tento e-mail umožňuje redaktorom vyžiadať si ďalšie informácie o "
-"referenciách od autorov."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

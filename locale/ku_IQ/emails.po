@@ -115,7 +115,7 @@ msgid "emails.editorAssign.subject"
 msgstr "ئەرکدارکردنی سەرنوسەر"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "دانپێدانانی پێشکەشکردن"
 
 msgid "emails.lockssNewArchive.subject"
@@ -231,7 +231,7 @@ msgstr ""
 "Thank you."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "سڵاو،<br />\n"
 "<br />\n"
@@ -381,11 +381,6 @@ msgstr ""
 "<br />\n"
 "لەگەڵ ڕێزدا،<br />\n"
 "{$contextSignature}"
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"ئەمە نامەیەکی بەتاڵە لە لایەن سەنتەری نامەکان بۆ ئاگادارکردنەوەی سیستەمەکە "
-"بەکار دێت."
 
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
@@ -636,19 +631,8 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "چالاکی سەرنوسەر لە {$month}،{$year}"
 
-msgid "emails.notificationCenterDefault.body"
-msgstr "تکایە نامەکەت بنوسە."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "نامەی پەیوەندیدار بە  {$contextName}"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "وەشانی دوای پێداچونەوە بار کرا"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"ئەم ئیمەیڵە ڕێگا بە وردبینەکان دەدات کە داوای زانیاریی زیادە دەربارەی "
-"سەرچاوەکان لە توێژەران بکەن."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "گۆڕانکاریی گوتراوەکان"

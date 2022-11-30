@@ -570,11 +570,6 @@ msgstr ""
 "ჟურნალთან დაკავშირებული ფაილების და დირექტორიების პირდაპირ ნახვასა და "
 "მანიპულირებას."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"დარწმუნებული ხართ, რომ გსურთ ამ ჟურნალის ყველა ელფოსტის შაბლონის ჩამოყრა? "
-"თქვენ დაკარგავთ თქვენს მიერ მორგებულ ნებისმიერ კონფიგურაციას."
-
 msgid "manager.distribution.publishingMode.subscription"
 msgstr ""
 "ჟურნალი მოითხოვს გამოწერებს, რომ შესაძლებელი გახდეს მის ზოგიერთ ან ყველა "
@@ -1388,6 +1383,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "განცხადებების ჩართვა"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "სისტემის მიერ ჟურნალის სახელით გაგზავნილ ელწერილს ბოლომდე დაემატება შემდეგი "

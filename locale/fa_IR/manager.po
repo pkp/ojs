@@ -14,9 +14,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "بایگانی کردن"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "آیا می‌خواهید تمام الگوها را به حالت نخست برگردانید؟ تغییرات ایجاد شده در الگو‌های ایمیل‌ها از بین خواهد رفت"
-
 msgid "manager.files.note"
 msgstr "توجه: با مرورگر فایل می‌توانید به فایل‌ها یا پوشه‌های یک مجله  مستقیماً دسترسی داشته باشید"
 
@@ -433,6 +430,7 @@ msgstr "شناسایی ایمیل"
 msgid "manager.setup.emailSignature"
 msgstr "امضا"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "تمام ایمیل‌های از قبل تهیه شده که از طرف مجله ارسال می‌شود در انتها دارای امضای زیر است."
 

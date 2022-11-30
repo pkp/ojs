@@ -913,9 +913,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Redaktor {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Tento e-mail umožňuje redaktorům vyžádat si další informace o referencích od autorů."
-
 msgid "emails.giftAvailable.subject"
 msgstr "{$giftNoteTitle}"
 
@@ -989,19 +986,10 @@ msgstr ""
 msgid "emails.giftUserRegister.description"
 msgstr "Tento e-mail oznamuje příjemci daru své přihlašovací údaje k novému účtu."
 
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Zpráva týkající se {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Vložte, prosím, vaši zprávu."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Výchozí (prázdná) zpráva použitá v nástroji List Builder Message Center Message Builder."
-
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Potvrzení příspěvku"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Vážený/á {$recipientName}, byl/a jste uveden/a jako spoluautor/spoluautorka "
 "v příspěvku zaslaném do {$contextName}. Předkladatel, {$submitterName}, "

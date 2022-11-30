@@ -104,11 +104,6 @@ msgstr "UI"
 msgid "manager.journalManagement"
 msgstr "Quản lý tạp chí"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Bạn có chắc chắn muốn đặt lại các mẫu email trong tạp chị này? Bạn sẽ mất "
-"hết những chỉnh sửa đã thiết lập."
-
 msgid "manager.website.archiving"
 msgstr "Lưu trữ"
 
@@ -783,6 +778,7 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Bật thông báo"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Các email được chuẩn bị được gửi bởi hệ thống thay mặt cho tạp chí sẽ có chữ "

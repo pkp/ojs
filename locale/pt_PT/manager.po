@@ -16,9 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Deseja realmente restaurar todos os e-mails para o padrão original desta revista? Todas as personalizações serão perdidas."
-
 msgid "manager.files.note"
 msgstr ""
 "Aviso: o Navegador de Ficheiros é uma ferramenta avançada que permite "
@@ -415,6 +412,7 @@ msgstr "Identificação de E-mail"
 msgid "manager.setup.emailSignature"
 msgstr "Subscrição"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Os modelos e-mails enviados pelo sistema em nome da revista incluirão a seguinte assinatura no final. O corpo do texto pode ser editado na secção E-mails da Administração da Revista."
 

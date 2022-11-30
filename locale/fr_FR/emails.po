@@ -758,21 +758,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Réviseur/Réviseuse, revue {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Ce courriel permet au réviseurs et réviseuses de demander aux auteurs ou "
-"auteures des renseignements supplémentaires à propos des références "
-"bibliographiques."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Un message à propos de {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Veuillez saisir votre message."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Message blanc par défaut utilisé pour concevoir d'autres messages."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Version révisée téléversée"
 
@@ -864,11 +849,11 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Accusé de réception de la soumission"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Bonjour,<br />\n"
 "<br />\n"

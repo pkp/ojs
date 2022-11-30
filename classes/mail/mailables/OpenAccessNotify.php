@@ -31,6 +31,7 @@ class OpenAccessNotify extends Mailable
     protected static ?string $description = 'mailable.openAccessNotify.description';
     protected static ?string $emailTemplateKey = 'OPEN_ACCESS_NOTIFY';
     protected static array $groupIds = [self::GROUP_OTHER];
+    protected static array $fromRoleIds = [self::FROM_SYSTEM];
     protected static array $toRoleIds = [Role::ROLE_ID_READER];
 
     protected Journal $context;

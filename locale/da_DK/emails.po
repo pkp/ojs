@@ -796,20 +796,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Manuskriptredaktør, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Denne e-mail tillader manuskriptredaktører at anmode forfattere om yderligere oplysninger vedrørende referencer."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Besked omhandlende {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Skriv venligst din besked."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Standardmeddelelsen (tom), der blev brugt i Notification Center Message "
-"Listbuilder."
-
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Forespørgsel om bedømmelse af en revideret artikel"
 
@@ -846,10 +832,10 @@ msgstr ""
 "Mvh.\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Indsendelsesbekræftelse"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Du er angivet som medforfatter på et "
 "manuskript indsendt til {$contextName}. Indsenderen, {$submitterName}, har "
@@ -861,7 +847,7 @@ msgstr ""
 "arbejde i.</p><p>Med venlig hilsen</p>{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.description"
+msgid "emails.submissionAckNotAuthor.description"
 msgstr ""
 "Når denne e-mail er aktiveret, sendes den automatisk til de øvrige "
 "forfattere, udover indsenderen, angivet under indsendelsesprocessen."

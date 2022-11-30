@@ -161,7 +161,7 @@ msgid "emails.subscriptionNotify.subject"
 msgstr "Notificare abonat"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Buna ziua,<br />\n"
 "<br />\n"
@@ -175,7 +175,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Confirmarea înregistrării manuscrisului"
 
 msgid "emails.lockssNewArchive.description"
@@ -359,11 +359,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Editor de conținut, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Acest e-mail permite editorilor de conținut să solicite informații "
-"suplimentare despre referințe de la autori."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versiunea revizuită a fost încărcată"
 
@@ -377,17 +372,6 @@ msgstr ""
 "Adresa URL a manuscrisului: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Un mesaj cu privire la {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Vă rugăm să introduceți mesajul dvs."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Mesajul implicit (necompletat) utilizat în Generatorul de liste de mesaje al "
-"Centrului de notificări."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Activitatea editorială pentru {$month}, {$year}"

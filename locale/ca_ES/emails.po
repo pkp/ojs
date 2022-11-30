@@ -182,11 +182,11 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Aquest missatge de correu electrònic convida el destinatari a participar en la iniciativa LOCKSS i a incloure aquesta revista en el seu arxiu. Proporciona informació sobre la iniciativa LOCKSS i com s'hi ha de participar."
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Confirmació de tramesa"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Hola,<br />\n"
 "<br />\n"
@@ -703,17 +703,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Activitat editorial per {$month}, {$year}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Missatge (en blanc) predeterminat utilitzat en el Notification Center "
-"Message Listbuilder."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Introduïu el vostre missatge."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Missatge sobre {$contextName}"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors/ores:<br />\n"
@@ -727,11 +716,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versió revisada carregada"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Aquest correu electrònic permet que els correctors/ores sol·licitin "
-"informació addicional sobre les referències als autors/ores."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

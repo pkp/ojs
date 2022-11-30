@@ -243,7 +243,7 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Þér hefur verið úthlutað sem ritstjóra á innsendingu í  {$contextName}"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Komdu sæl(l/t) {$recipientName},</p><p>Þú hefur verið tilgreind(ur/t) sem "
 "meðhöfundur á innsendingu greinar/efnis í {$contextName}.  Sendandinn, "
@@ -254,7 +254,7 @@ msgstr ""
 "áhuga ykkar á að birta verk ykkar í tímaritinu okkar.</p><p>Kærar "
 "kveðjur,</p>{$contextSignature}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Staðfesting á innsendingu"
 
 msgid "emails.submissionAck.body"

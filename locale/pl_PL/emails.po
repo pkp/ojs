@@ -860,9 +860,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Korektor, „{$contextName}”<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Wiadomość od korektora do autora, z prośbą o dodatkowe informacje na temat bibliografii."
-
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Prośba o wykonanie recenzji poprawionego tekstu"
 
@@ -914,11 +911,11 @@ msgstr ""
 "Z wyrazami szacunku,\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Potwierdzenie zgłoszenia tekstu"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Szanowny Panie/Szanowna Pani,<br />\n"
 "<br />\n"
@@ -927,15 +924,6 @@ msgstr ""
 "W razie dodatkowych pytań proszę o kontakt. Dziękujemy za zgłoszenie.<br />\n"
 "<br />\n"
 "{$contextSignature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Wiadomość do czasopisma \"{$contextName}\""
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Proszę o wpisanie wiadomości."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Typowe (puste) pole wiadomości."
 
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Prośba o archiwizowanie czasopisma \"{$contextName}\""

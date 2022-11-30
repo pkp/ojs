@@ -234,7 +234,7 @@ msgstr "यह ईमेल प्राप्तकर्ता को LOCKSS �
 
 # (pofilter) simplecaps: Different capitalization
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Hello,<br />\n"
 "<br />\n"
@@ -826,13 +826,6 @@ msgstr ""
 ""
 
 # (pofilter) endpunc: Different punctuation at the end
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "यह ईमेल लेखकों से संदर्भों के बारे में अतिरिक्त जानकारी का अनुरोध करने के लिए प्रतिलिपिलेखकों को अनुमति देता है."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ authorName}, {$signature}, {$submissionTitle}, {$submissionUrl}
-# (pofilter) xmltags: Added XML tags
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "संपादकों:<br />\n"
@@ -844,25 +837,6 @@ msgstr ""
 "{$signature}"
 
 # (pofilter) endpunc: Different punctuation at the end
-msgid "emails.notificationCenterDefault.subject"
-msgstr "{$contextName} के बारे में एक संदेश"
-
-# (pofilter) endpunc: Different punctuation at the end
-msgid "emails.notificationCenterDefault.body"
-msgstr "कृपया अपना संदेश लिखें."
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) endpunc: Different punctuation at the end
-msgid "emails.notificationCenterDefault.description"
-msgstr "सूचना केंद्र मैसेज लिस्टबिल्डर में प्रयुक्त डिफ़ॉल्ट (रिक्त) संदेश."
-
-# (pofilter) endwhitespace: Different whitespace at the end
-# (pofilter) startwhitespace: Different whitespace at the start
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authors}
-# (pofilter) tabs: Different tabs
-# (pofilter) xmltags: Added XML tags
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$ माह}, {$ वर्ष} के लिए संपादकीय गतिविधि"
 
@@ -908,7 +882,7 @@ msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "लेख समीक्षा का अनुरोध"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "सबमिशन स्वीकृति"
 
 msgid "emails.passwordResetConfirm.subject"

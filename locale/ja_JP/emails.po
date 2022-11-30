@@ -94,7 +94,7 @@ msgid "emails.notification.subject"
 msgstr "{$contextName}からの新しいお知らせ"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "拝啓<br />\n"
 "<br />\n"
@@ -105,7 +105,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "投稿のお礼"
 
 msgid "emails.lockssNewArchive.description"
@@ -484,15 +484,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month}月{$year}年の編集活動"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr "通知センター メッセージ リストビルダで使用されるデフォルトの (空白の) メッセージです。"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "メッセージを入力してください。"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "{$contextName}に関するメッセージ"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "編集部 御中:<br />\n"
@@ -505,9 +496,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "改訂版アップロード"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "このメールでは、コピーエディターが著者に参考文献に関する追加情報を要求することができます。"
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

@@ -835,11 +835,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Kopya Editör, {$contextName}\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Bu e-posta, kopya düzenleme editörlerinin yazarlardan kaynakça hakkında ek "
-"bilgi istemesini sağlar."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Düzeltilmiş Sürüm Yüklendi"
 
@@ -854,18 +849,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notificationCenterDefault.subject"
-msgstr "{$contextName} ile ilgili bir mesaj"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Lütfen mesajınızı giriniz."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Bildirim Merkezi Mesaj Listesi Oluşturucusunda kullanılan varsayılan (boş) "
-"mesaj."
-
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Hakemlik Talebi Hatırlatma"
 
@@ -907,10 +890,10 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Gönderme onayı"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Sayın {$recipientName},</p><p>{$contextName} için gönderilen aday "
 "makaleye ortak yazar olarak eklendiniz. Aday makaleyi gönderen, "

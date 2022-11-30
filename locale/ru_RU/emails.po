@@ -171,10 +171,12 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Это письмо предлагает получателю принять участие в инициативе LOCKSS и включить этот журнал в архив. В письме содержится информация об инициативе LOCKSS initiative и способах к ней присоединиться."
 
-msgid "emails.submissionAckNotUser.subject"
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Подтверждение отправки"
 
-msgid "emails.submissionAckNotUser.body"
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Вы были указаны в качестве соавтора "
 "материала, направленного в журнал «{$contextName}». Отправитель, "
@@ -602,9 +604,6 @@ msgstr ""
 "Литературный редактор журнала «{$contextName}»<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Это письмо позволяет литературным редакторам запрашивать дополнительную информацию о ссылках у авторов."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Загружена исправленная версия"
 
@@ -617,15 +616,6 @@ msgstr ""
 "URL материала: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Сообщение о журнале «{$contextName}»"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Пожалуйста, введите свое сообщение."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Сообщение по умолчанию (пустое) используется в редакторе списка сообщений Центра уведомлений."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Активность журнала за {$month} {$year} года"

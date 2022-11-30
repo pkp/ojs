@@ -15,9 +15,6 @@ msgstr ""
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Jeste li sigurni da želite vratiti izvorno sve predloške e-pošte u ovom časopisu? Izgubit ćete sva podešenja koja ste napravili."
-
 msgid "manager.files.note"
 msgstr "Napomena: Preglednik datoteka je napredna funkcija sustava koja omogućuje direktno pregledavanje i uređivanje datoteka i direktorija koje časopis koristi."
 
@@ -364,6 +361,7 @@ msgstr "Identifikacija e-pošte"
 msgid "manager.setup.emailSignature"
 msgstr "Potpis"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Pripremljeni obrasci e-pošte poslani od strane sustava u ime časopisa na kraju će sadržavati ovdje priložen potpis. Sam sadržaj obrazaca e-pošte može uređivati glavni urednik opcijom \"pripremljeni obrasci e-pošte\" u izborniku \"uređivački postupci\"."
 

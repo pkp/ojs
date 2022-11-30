@@ -223,7 +223,7 @@ msgid "emails.editorAssign.subject"
 msgstr "Asignación editorial"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Ola,<br />\n"
 "<br />\n"
@@ -236,7 +236,7 @@ msgstr ""
 "{$contextSignature}"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Xustificante de recepción do envío"
 
 msgid "emails.lockssNewArchive.description"
@@ -781,17 +781,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "Actividade editorial para {$month}, {$year}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Mensaxe (en branco) por defecto utilizada no Notification Center Message "
-"Listbuilder."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Introduza a súa mensaxe."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Unha mensaxe sobre {$contextName}"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editores/as:<br />\n"
@@ -805,11 +794,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versión revisada cargada"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Este correo electrónico permite  que os correctores/as soliciten aos autores/"
-"as información adicional sobre as referencias bibliográficas."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

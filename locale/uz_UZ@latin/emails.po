@@ -68,17 +68,6 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "{$month}, {$year} uchun tahririyat faoliyati"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Xabarlar markazi xabarlar ro'yxatini tuzish dasturida ishlatiladigan "
-"standart (bo'sh) xabar."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Xabaringizni kiriting."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "{$ ContextName} haqida xabar"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Tahrirlovchilar: <br />\n"
@@ -92,11 +81,6 @@ msgstr ""
 
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Yangilangan versiya yuklandi"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Bu elektron pochta nusxa ko'chiruvchilarga mualliflardan havolalar haqida "
-"qo'shimcha ma'lumot so'rash imkonini beradi."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""
@@ -550,7 +534,8 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Siz {$contextName} ga yuborilgan muharrir sifatida tayinlangansiz"
 
-msgid "emails.submissionAckNotUser.body"
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Salom, <br />\n"
 "<br/>\n"
@@ -562,7 +547,8 @@ msgstr ""
 "<br/>\n"
 "{$contextSignature}"
 
-msgid "emails.submissionAckNotUser.subject"
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Taqdim etishni tasdiqlash"
 
 msgid "emails.lockssNewArchive.description"

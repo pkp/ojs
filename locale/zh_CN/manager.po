@@ -15,9 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "您确定要重置这份期刊中所有的电子邮件模板吗？如果重置您将会失去曾定制的所有配置。"
-
 msgid "manager.files.note"
 msgstr "注意：文件浏览器是一项高级功能，它允许对一个期刊内的文件和目录直接浏览和操作。"
 
@@ -392,6 +389,7 @@ msgstr "电子邮件认证"
 msgid "manager.setup.emailSignature"
 msgstr "签名"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "系统代表这份期刊所寄发的预备电子邮件会具有下面的签名列在信末。预备电子邮件的正文部分允许「期刊管理员」进行编辑。"
 

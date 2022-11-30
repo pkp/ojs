@@ -19,11 +19,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Arhiviranje"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Ste prepričani, da želite ponastaviti vse e-poštne predloge te revije? S tem "
-"boste izgubili vse prilagoditve, ki ste jih naredili."
-
 msgid "manager.files.note"
 msgstr ""
 "Opomba: Brskalnik datotek je napredna funkcionalnost, ki omogoča, da se "
@@ -2188,6 +2183,7 @@ msgstr "Z objavo obvestil lahko obvestite bralce o novicah in dogodkih revije."
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Omogoči obvestila"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Prednastavljeni emaili, ki jih bo poslal sistem v imenu revije, bodo imeli "

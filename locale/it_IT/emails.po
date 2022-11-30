@@ -849,9 +849,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Copy-Editor, {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Questo messaggio permette al copyeditor di chiedere a un autore ulteriori informazioni sulle citazioni bibliografiche."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Caricamento di versione revisionata"
 
@@ -894,15 +891,6 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Nuovo messaggio da: {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Inserisci qui il testo del tuo messaggio."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Questo messaggio vuoto è usato dal sistema centralizzato di messaggistica via lista."
-
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Puoi effettuare questa revisione per la rivista?"
 
@@ -927,10 +915,10 @@ msgstr ""
 "richiesta.</p><p>{$signature}</p><p>Dati della "
 "proposta:</p><p>&quot;{$submissionTitle}&quot;</p><p>{$submissionAbstract}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Conferma di ricezione della proposta"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Gentilissimo {$recipientName}</p>\n"
 "<p>{$submitterName} ha aggiunto il suo nominativo in qualità di co-author "

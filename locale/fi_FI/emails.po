@@ -195,11 +195,11 @@ msgid "emails.lockssNewArchive.description"
 msgstr "This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Käsikirjoituksesi on vastaanotettu"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Hei,<br />\n"
 "<br />\n"
@@ -731,9 +731,6 @@ msgstr ""
 "Tekninen toimittaja, {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "This email allows copyeditors to request additional information about references from authors."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Korjattu versio on ladattu"
 
@@ -747,15 +744,6 @@ msgstr ""
 "Käsikirjoituksen URL: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Viesti julkaisua {$contextName} koskien"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Kirjoita viesti."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "The default (blank) message used in the Notification Center Message Listbuilder."
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""

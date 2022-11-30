@@ -19,9 +19,6 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "Archivierung"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Sind Sie sicher, dass Sie alle E-Mail-Vorlagen dieser Zeitschrift zurücksetzen wollen? Sie verlieren damit alle speziellen Einstellungen, die Sie vorgenommen haben."
-
 msgid "manager.files.note"
 msgstr "Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse."
 
@@ -455,6 +452,7 @@ msgstr ""
 msgid "manager.setup.emails"
 msgstr "E-Mail-Kennzeichnung"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter \"Zeitschriftenverwaltung\" bearbeitet werden."
 

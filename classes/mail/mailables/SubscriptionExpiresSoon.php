@@ -30,10 +30,11 @@ class SubscriptionExpiresSoon extends Mailable
     use Recipient;
     use SubscriptionTypeVariables;
 
-    protected static ?string $name = 'mailable.SubscriptionExpiresSoon.name';
-    protected static ?string $description = 'mailable.SubscriptionExpiresSoon.description';
+    protected static ?string $name = 'mailable.subscriptionExpiresSoon.name';
+    protected static ?string $description = 'mailable.subscriptionExpiresSoon.description';
     protected static ?string $emailTemplateKey = 'SUBSCRIPTION_BEFORE_EXPIRY';
     protected static array $groupIds = [self::GROUP_OTHER];
+    protected static array $fromRoleIds = [self::FROM_SYSTEM];
     protected static array $toRoleIds = [Role::ROLE_ID_READER];
 
     public function __construct(Journal $context, Subscription $subscription, SubscriptionType $subscriptionType)

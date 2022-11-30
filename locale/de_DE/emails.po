@@ -158,11 +158,11 @@ msgid "emails.lockssNewArchive.description"
 msgstr "Diese E-Mail ermuntert die Empfängerin/den Empfänger, an der LOCKSS-Initiative teilzunehmen und diese Zeitschrift in das Archiv aufzunehmen. Sie liefert Informationen über die LOCKSS-Initiative und über Wege, daran teilzunehmen."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Eingangsbestätigung"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Liebe/r Autor/in,<br />\n"
 "<br />\n"
@@ -619,9 +619,6 @@ msgstr ""
 "Lektor/in, {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Diese E-Mail ermöglicht es Lektor/innen, zusätzliche Informationen über Verweise von Autor/innen anzufordern."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Überarbeitete Version hochgeladen"
 
@@ -635,16 +632,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Eine Nachricht bezüglich {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Bitte geben Sie Ihre Nachricht ein."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Die (leere) Standardnachricht, die in der Nachrichtenliste des Benachrichtigungscenters angezeigt wird."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName},<br />\n"

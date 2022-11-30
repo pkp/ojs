@@ -15,9 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr "Esteu segur/a que voleu restablir totes les plantilles de missatges de correu electrònic per a aquesta revista? Aquesta acció elimina totes les personalitzacions que hi hagueu aplicat."
-
 msgid "manager.files.note"
 msgstr "Nota: El Navegador de fitxers és una funció avançada que us permet visualitzar i manipular directament els fitxers i els directoris associats amb una revista."
 
@@ -414,6 +411,7 @@ msgstr "Identificació per correu electrònic"
 msgid "manager.setup.emailSignature"
 msgstr "Signatura"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr "Les plantilles dels missatges de correu electrònic enviats pel sistema en nom de la revista tenen la signatura següent al final. Podeu editar el cos de la plantilla dels missatges de correu electrònic a la secció «Administració de la revista»."
 

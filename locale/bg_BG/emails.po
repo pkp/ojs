@@ -65,7 +65,7 @@ msgstr ""
 msgid "emails.editorAssign.subject"
 msgstr "Бяхте асоцииран като редактор за подаден ръкопис към {$contextName}"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Уважаеми {$recipientName},</p><p>Вие сте посочени като съавтор на "
 "изпратени материали до {$contextName}. Подателят, {$submitterName}, "
@@ -76,7 +76,7 @@ msgstr ""
 "това списание за място за вашата работа.</p><p>Сърдечни "
 "поздрави,</p>{$contextSignature}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Потвърждение за подаване"
 
 msgid "emails.lockssNewArchive.description"
@@ -429,17 +429,6 @@ msgstr ""
 "Ваш,<br />\n"
 "{$contextSignature}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"Съобщението по подразбиране (празно), използвано в Списъка със съобщения в "
-"центъра за известия (Notification Center Message Listbuilder)."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Моля, въведете вашето съобщение."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Съобщение относно {$contextName}"
-
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "До редакторите:<br />\n"
@@ -450,11 +439,6 @@ msgstr ""
 "URL на изпратените материали: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Този имейл позволява на стиловите редакторите да изискват допълнителна "
-"информация за библиографски препратки от автори."
 
 msgid "emails.citationEditorAuthorQuery.body"
 msgstr ""

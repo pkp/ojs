@@ -175,10 +175,10 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "هذه الرسالة تشجع متلقيها على المبادرة إلى اعتماد العمل بنظام LOCKSS وتضمين هذه المجلة في الأرشيف الخاص به. إنها تتضمن معلومات عن تمهيد نظام LOCKSS وكيفية المشاركة فيه."
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "تأكيد طلب التقديم"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>عزيزنا {$recipientName}،</p><p>لقد تمت تسميتك بمثابة مؤلف مشارك في طلب "
 "تقديم إلى {$contextName}. مقدم الطلب، {$submitterName}، أعطانا التفاصيل "
@@ -588,9 +588,6 @@ msgstr ""
 "المدقق، {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "هذه الرسالة تسمح لمدققي المجلة بالمطالبة بمعلومات إضافية عن المراجع من المؤلفين."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "تم رفع نسخة منقحة"
 
@@ -603,15 +600,6 @@ msgstr ""
 "رابط الطلب: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "رسالة تتعلق بالمجلة {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "لطفاً أكتب رسالتك هنا."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "هذه الرسالة الإفتراضية (الخالية) التي يستعملها منشئ الرسائل في مركز إشعارات النظام."
 
 msgid "emails.statisticsReportNotification.subject"
 msgstr "نشاط هيئة التحرير لشهر {$month}، {$year}"

@@ -170,7 +170,7 @@ msgstr "მოწვევა განხილვისთვის"
 msgid "emails.editorAssign.subject"
 msgstr "რედაქტორის მიერ დანიშნული {$contextName}"
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "გაგზავნის დადასტურება"
 
 msgid "emails.announcement.body"
@@ -653,7 +653,7 @@ msgstr ""
 "Thank you."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Hello,<br />\n"
 "<br />\n"
@@ -692,7 +692,7 @@ msgstr ""
 "გმადლობთ,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotUser.description"
+msgid "emails.submissionAckNotAuthor.description"
 msgstr ""
 "ეს წერილი (თუ ეს შესაძლებლობა ჩართულია) ავტომატურად გაეგზავნება სხვა "
 "ავტორებს, რომლებიც არ არიან OJS-ის მომხმარებლები, მაგრამ მითითებული არიან "
@@ -721,24 +721,8 @@ msgstr ""
 msgid "emails.statisticsReportNotification.subject"
 msgstr "ჟურნალის აქტოვობა {$month}, {$year}"
 
-msgid "emails.notificationCenterDefault.description"
-msgstr ""
-"ნაგულისხმევი შეტყობინება (ცარიელი) გამოიყენება შეტყობინებების ცენტრის სიის "
-"რედაქტორში."
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "გთხოვთ, შეიტანოთ შეტყობინება."
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "შეტყობინება ჟურანლის შესახებ {$contextName}"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "ატვირთულია ჩასწორებული ვერსია"
-
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"ეს წერილი ლიტერატურულ რედაქტორებს საშუალებას აძლევთ მოითხოვონ დამატებითი "
-"ინფორმაცია ავტორებისგან ბმულების შესახებ."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "ბიბლიოგრაფიული ბმულების ჩასწორება"
@@ -779,20 +763,8 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "ეს სტატია თქვენ დაგაინტერესებთ"
 
-msgid "emails.layoutComplete.description"
-msgstr ""
-"ეს წერილი იგზავნება დამკაბადონებლის მიერ განყოფილების რედაქტორთან იმის "
-"შესახებ, რომ გალერეები შექმნილია."
-
 msgid "emails.layoutComplete.subject"
 msgstr "გალერეები შექმნილია"
-
-msgid "emails.layoutRequest.description"
-msgstr ""
-"ეს წერილი იგზავნება განყოფილების რედაქტორის მიერ მასალის გალერეის "
-"შემქმნელთან დაკაბადონების დაწყების მოთხოვნის შესახებ. წერილში მოცემულია "
-"ინფორმაცია მასალის შესახებ და იმის შესახებაც, თუ როგორ უნდა მიიღოს წვდომა ამ "
-"მასალაზე."
 
 msgid "emails.layoutRequest.subject"
 msgstr "გალერეების მოთხოვნა"

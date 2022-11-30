@@ -155,4 +155,18 @@ class SettingsHandler extends ManagementHandler
 
         $templateMgr->display('management/distribution.tpl');
     }
+
+    protected function getEmailFromFilters(): array
+    {
+        $filters = parent::getEmailFromFilters();
+        $filters[Role::ROLE_ID_SUBSCRIPTION_MANAGER] = __('user.role.subscriptionManager');
+        return $filters;
+    }
+
+    protected function getEmailToFilters(): array
+    {
+        $filters = parent::getEmailToFilters();
+        $filters[Role::ROLE_ID_SUBSCRIPTION_MANAGER] = __('user.role.subscriptionManager');
+        return $filters;
+    }
 }

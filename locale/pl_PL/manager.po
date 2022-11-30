@@ -17,11 +17,6 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Czy jesteś pewien, że chcesz usunąć wszystkie szablony wiadomości e-mail "
-"używane dla tego czasopisma? Stracisz je nieodwracalnie."
-
 msgid "manager.files.note"
 msgstr "Uwaga: Przeglądarka plików jest zaawansowaną funkcją, która umożliwia przeglądanie wszystkich plików w systemie, bezpośrednio, z pominięciem ról użytkowników."
 
@@ -1489,6 +1484,7 @@ msgstr "Użyj daty publikacji wydania"
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Włącz ogłoszenia"
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Do wiadomości poczty elektronicznej wysyłanych na rzecz czasopisma dołączany "

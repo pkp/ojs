@@ -191,11 +191,6 @@ msgstr ""
 "direktori yang berkaitan dengan jurnal dapat dilihat dan dimanipulasi secara "
 "langsung."
 
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Adakah anda pasti mahu menetapkan semula semua templat e-mel dalam jurnal "
-"ini? Anda akan kehilangan pengubahsuaian yang telah anda buat."
-
 msgid "manager.website.archiving"
 msgstr "Pengarkiban"
 
@@ -762,6 +757,7 @@ msgstr ""
 "peristiwa jurnal. Pengumuman yang diterbitkan akan muncul di halaman "
 "Pengumuman."
 
+#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "E-mel yang disiapkan yang dihantar oleh sistem bagi pihak jurnal akan "

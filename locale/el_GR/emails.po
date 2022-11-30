@@ -157,11 +157,11 @@ msgid "emails.lockssNewArchive.description"
 msgstr "Το παρόν μήνυμα ενημερώνει σχετικά με την πρωτοβουλία LOCKSS και προτρέπει τους παραλήπτες να συμμετάσχουν σε αυτή, συμπεριλαμβάνοντας το περιοδικό στο αρχείο που θα δημιουργήσουν."
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Επιβεβαίωση υποβολής"
 
 #, fuzzy
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "Αγαπητέ/η<br />\n"
 "<br />\n"
@@ -610,9 +610,6 @@ msgstr ""
 "Επιμελητής Κειμένου, {$contextName}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr "Με το παρόν μήνυμα οι Επιμελητές Κειμένου ζητούν επιπρόσθετες πληροφορίες από τους Συγγραφείς σχετικά με τις παραπομπές."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Μεταφόρτωση αναθεωρημένης έκδοσης"
 
@@ -625,15 +622,6 @@ msgstr ""
 "Σύνδεσμος υποβολής: {$submissionUrl}<br />\n"
 "<br />\n"
 "{$signature}"
-
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Ένα μήνυμα σχετικά με το περιοδικό {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Παρακαλούμε εισάγετε το μήνυμά σας."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Το προεπιλεγμένο (κενό) μήνυμα που χρησιμοποιείται στον Κατάλογο Μηνυμάτων του Κέντρου Ειδοποιήσεων."
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""

@@ -31,6 +31,12 @@ use PKP\submissionFile\SubmissionFile;
 
 class Upgrade extends Installer
 {
+    protected $appEmailTemplateVariableNames = [
+        'contextName' => 'journalName',
+        'contextUrl' => 'journalUrl',
+        'contextSignature' => 'journalSignature',
+    ];
+
     /**
      * Constructor.
      *

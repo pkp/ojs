@@ -174,10 +174,10 @@ msgstr ""
 msgid "emails.lockssNewArchive.description"
 msgstr "Ce courriel encourage le ou la destinaire à participer à l'initiative LOCKSS et à inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet."
 
-msgid "emails.submissionAckNotUser.subject"
+msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Accusé de réception de la soumission"
 
-msgid "emails.submissionAckNotUser.body"
+msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 "<p>Bonjour,</p><p>Le manuscrit intitulé , « {$submissionTitle} » , a été "
 "soumis par {$submitterName} à la revue {$contextName}.</p><p>Si vous avez "
@@ -697,12 +697,6 @@ msgstr ""
 "{$senderName}<br />\n"
 "Réviseur-e, revue {$contextName}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.description"
-msgstr ""
-"Ce courriel permet aux réviseurs-es de demander des renseignements "
-"additionnels à propos des références bibliographiques citées par les auteurs-"
-"es."
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Version révisée téléversée"
 
@@ -717,16 +711,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-msgid "emails.notificationCenterDefault.subject"
-msgstr "Un message à propos de la revue {$contextName}"
-
-msgid "emails.notificationCenterDefault.body"
-msgstr "Prière de saisir votre message."
-
-msgid "emails.notificationCenterDefault.description"
-msgstr "Message blanc par défaut utilisé pour concevoir d'autres messages."
-
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName},<br />\n"
