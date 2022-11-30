@@ -37,11 +37,11 @@
 				</div>
 			</div>
 			{capture assign="htmlUrl"}
-				{url page="article" op="download" path=$article->getBestId()|to_array:'version':$galleyPublication->getId():$galley->getBestGalleyId() inline=true}
+				{url page="article" op="download" path=$article->getBestId()|to_array:'version':$galleyPublication->getId():$galley->getBestGalleyId():$submissionFile->getId() inline=true}
 			{/capture}
 		{else}
 			{capture assign="htmlUrl"}
-				{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId() inline=true}
+				{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId():$submissionFile->getId() inline=true}
 			{/capture}
 		{/if}
 		<iframe name="htmlFrame" src="{$htmlUrl}" title="{translate key="submission.representationOfTitle" representation=$galley->getLabel() title=$galleyPublication->getLocalizedFullTitle()|escape}" allowfullscreen webkitallowfullscreen></iframe>
