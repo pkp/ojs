@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-11-04 18:02+0000\n"
+"PO-Revision-Date: 2022-12-02 12:50+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl_SI/>\n"
@@ -2183,11 +2183,10 @@ msgstr "Z objavo obvestil lahko obvestite bralce o novicah in dogodkih revije."
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Omogoči obvestila"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Prednastavljeni emaili, ki jih bo poslal sistem v imenu revije, bodo imeli "
-"na koncu dodan spodnji podpis."
+"Avtomatični emaili, ki jih bo poslal sistem v imenu revije, bodo imeli na "
+"koncu dodan spodnji podpis."
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
@@ -2755,3 +2754,15 @@ msgstr "Število vpogledov v povzetek in število prenosov za vsak članek."
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Poštni naslov institucije"
+
+msgid "mailable.layoutComplete.name"
+msgstr "Prelom končan"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Zahteva za arhiviranje"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Zahteva za arhiviranje (novo)"
+
+msgid "manager.manageEmails.description"
+msgstr "Urejanje email sporočil poslanih iz te revije."
