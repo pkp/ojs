@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2022-09-15 15:50+0000\n"
+"PO-Revision-Date: 2022-12-02 10:02+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sv_SE/>\n"
@@ -449,9 +449,10 @@ msgstr "E-post-identifiering"
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "Färdiga e-postmeddelanden som skickas från tidskriften kommer ha följande signatur infogad sist i e-posten."
+msgstr ""
+"E-postmeddelanden som skickas från tidskriften kommer ha följande signatur "
+"infogad sist i e-posten."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Möjliggör för tidskriftsansvariga att lägga till meddelanden"
@@ -2194,3 +2195,47 @@ msgstr "En institution måste skapas innan en ny prenumeration kan genomföras."
 
 msgid "manager.institutions.noContext"
 msgstr "Den här institutionens tidskrift kunde inte hittas."
+
+msgid "stats.issueStats"
+msgstr "Nummerstatistik"
+
+msgid "stats.issues.details"
+msgstr "Visningar och nedladdningar"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Sök efter nummertitel, volym och nummer"
+
+msgid "stats.issues.none"
+msgstr ""
+"Kunde inte hitta nummer med användningsstatistik som matchar angivna "
+"parametrar."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Ladda ned en CSV/Excel-tabell med användningsstatistik för det här numret "
+"som matchar följande parametrar"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Antalet visningar av varje nummers innehållsförteckningar och nedladdningar "
+"av varje nummers publiceringsversioner."
+
+msgid "stats.contextStats"
+msgstr "Tidskriftens statistik"
+
+msgid "stats.context.tooltip.text"
+msgstr "Antal besökare till tidskriftens förstasida."
+
+msgid "stats.context.tooltip.label"
+msgstr "Om tidskriftsstatistiken"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Ladda ned en CSV/Excel-tabell med användningsstatistik för den här "
+"tidskriften som matchar följande parametrar."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Antal besök till tidskriftens förstasida."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Ladda ned tidskrift"
