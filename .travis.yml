@@ -23,7 +23,8 @@ addons:
   apt:
     update: true
     packages:
-      - libgconf-2-4
+      - libvulkan1
+      - libu2f-udev
 
 
 before_install:
