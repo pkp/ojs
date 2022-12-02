@@ -209,9 +209,9 @@ msgstr "Bidraget måste tilldelas ett nummer innan det kan publiceras."
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Alla publiceringskrav är uppfyllda. Bidraget kommer att publiceras när  "
-"{$issue}  är publicerat. Är du säker på att du vill planera publiceringen "
-"för publikationen?"
+"Alla publiceringskrav är uppfyllda. Bidraget kommer att publiceras när "
+"{$issue} är publicerat. Är du säker på att du vill planera publiceringen för "
+"publikationen?"
 
 msgid "publication.publish.confirmation"
 msgstr "Alla publiceringskrav är uppfyllda. Vill du publicera?"
