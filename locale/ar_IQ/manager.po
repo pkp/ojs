@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-11-09 13:02+0000\n"
+"PO-Revision-Date: 2022-12-03 07:02+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "ar_IQ/>\n"
@@ -451,9 +451,10 @@ msgstr "تحديد هوية البريد الالكتروني"
 msgid "manager.setup.emailSignature"
 msgstr "التوقيع"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (الإعدادات)."
+msgstr ""
+"رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن "
+"المجلة، ستكون مذيلة بالتوقيع الآتي."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "تمكين الإعلانات"
@@ -2118,7 +2119,6 @@ msgstr "المؤسسة"
 msgid "manager.subscriptions.form.institutionIdValid"
 msgstr "يرجى اختيار مؤسسة صحيحة."
 
-
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr "ينبغي إنشاء المؤسسة قبل القيام بتسجيل إشتراكات جديدة."
 
@@ -2201,3 +2201,15 @@ msgid "stats.context.downloadReport.description"
 msgstr ""
 "تنزيل جدول بصيغة CSV/Excel يضم إحصائيات الاستعمال لهذه المجلة والذي يطابق "
 "المعايير الآتية."
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "طلب الأرشفة"
+
+msgid "manager.manageEmails.description"
+msgstr "تعديل الرسائل المرسلة بالبريد الالكتروني من هذه المجلة."
+
+msgid "mailable.layoutComplete.name"
+msgstr "الألواح الطباعية مكتملة"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "طلب الأرشفة (جديد)"
