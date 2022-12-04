@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-11-07 09:02+0000\n"
+"PO-Revision-Date: 2022-12-04 21:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "tr_TR/>\n"
@@ -455,9 +455,10 @@ msgstr "E-posta Tanımlama"
 msgid "manager.setup.emailSignature"
 msgstr "İmza"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "Dergi adına hazırlanmış ve sistem tarafından gönderilen e-postalara eklenen imzadır. Hazır e-posta metinleri Dergi Yönetimi sayfası altındadır."
+msgstr ""
+"Dergi sistemi tarafından otomatik olarak gönderilen e-postalara aşağıdaki "
+"imza eklenecektir."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Duyuruları Etkinleştir"
@@ -2453,3 +2454,15 @@ msgid "stats.context.downloadReport.description"
 msgstr ""
 "Aşağıdaki parametrelerle eşleşen dergi için kullanım istatistiklerini içeren "
 "bir CSV/Excel tablosu indirin."
+
+msgid "manager.manageEmails.description"
+msgstr "Bu dergiden gönderilen e-postaların içeriklerini düzenleyin."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Dizgi Tamamlandı"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Arşiv Talebi"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Arşiv Talebi (Yeni)"
