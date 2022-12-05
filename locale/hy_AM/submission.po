@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-20 08:01+0000\n"
+"PO-Revision-Date: 2022-12-05 18:02+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hy_AM/>\n"
@@ -370,13 +370,13 @@ msgstr "Այս ներկայացման ամսագիրը չհաջողվեց գտն
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Ընտրեք նիշքեր, որոնք պետք է ուղարկվեն վերանայման փուլ:"
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Նամակ ուղարկեք հեղինակներին՝ տեղեկացնելու նրանց, որ այս ներկայացումը "
 "կուղարկվի գործընկերների վերանայման: Եթե հնարավոր է, որոշ ցուցումներ տվեք "
 "հեղինակներին, թե որքան երկար կարող է տևել գործընկերների վերանայման "
-"գործընթացը և երբ նրանք պետք է ակնկալեն նորից լսել խմբագիրներից:"
+"գործընթացը և երբ նրանք պետք է ակնկալեն նորից լսել խմբագիրներից: Այս էլ․ "
+"նամակը չի ուղարկվի մինչև որոշումը չգրանցվի:"
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
