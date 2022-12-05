@@ -263,6 +263,7 @@ msgstr ""
 "Гранки цієї публікації не можуть бути відредаговані, оскільки вона вже була "
 "опублікована."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Надішліть електронний лист авторам, щоб повідомити їм, що дана робота буде "

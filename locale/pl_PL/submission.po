@@ -383,6 +383,7 @@ msgstr ""
 "Nie można wygenerować DOI dla zgłoszenia : {$pubObjectTitle]. Zgłoszenie "
 "powinno być uprzednio przypisane do jakiegoś wydania."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Wyślij email do autorów aby powiadomić ich, że zgłoszenie zostało odesłane "

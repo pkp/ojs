@@ -384,6 +384,7 @@ msgstr ""
 "No s'ha pogut crear un DOI per a la següent tramesa: {$pubObjectTitle}. La "
 "tramesa ha d'assignar-se a un número abans que es pugui generar el DOI."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Envieu un correu electrònic als autors/ores per fer-los saber que la seva "

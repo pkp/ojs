@@ -370,6 +370,7 @@ msgstr "Այս ներկայացման ամսագիրը չհաջողվեց գտն
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Ընտրեք նիշքեր, որոնք պետք է ուղարկվեն վերանայման փուլ:"
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Նամակ ուղարկեք հեղինակներին՝ տեղեկացնելու նրանց, որ այս ներկայացումը "

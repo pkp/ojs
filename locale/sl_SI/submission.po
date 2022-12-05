@@ -347,6 +347,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Izberite datoteke za fazo recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Pošljite avtorjem email z obvestilom, da bo njihov prispevek poslan v fazo "

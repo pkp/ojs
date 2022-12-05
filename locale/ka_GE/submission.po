@@ -392,6 +392,7 @@ msgstr ""
 "განხილვის ეტაპზე. ახსენით, რატომ იქნა მიღებული ეს გადაწყვეტილება და აცნობეთ "
 "ავტორს შემდგომი განხილვის შესახებ."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "გაუგზავნეთ ელფოსტა ავტორებს, რათა აცნობონ, რომ ეს წარდგენა გაიგზავნება "

@@ -323,6 +323,7 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "إختر الملفات التي ينبغي إرسالها إلى مرحلة التحكيم."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "إرسال بريد الكتروني إلى المؤلفين لإبلاغهم بأن طلب التقديم هذا سيتم إرساله "

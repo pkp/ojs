@@ -370,6 +370,7 @@ msgstr "Мақала шығарылмастан бұрын басылымға т
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Тексеру кезеңіне жіберілетін файлдарды таңдаңыз."
 
+#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Авторларға электрондық хат жіберіп, бұл материал рецензенттерге "
