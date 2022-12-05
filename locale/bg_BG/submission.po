@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-31 08:02+0000\n"
+"PO-Revision-Date: 2022-12-05 21:02+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
@@ -374,13 +374,13 @@ msgstr "Декларация за поверителност на списани
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Изберете файлове, които трябва да бъдат изпратени на етап рецензиране."
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Изпратете имейл до авторите, за да ги уведомите, че това подаване на "
 "материали ще бъде изпратено за рецензиране. Ако е възможно, дайте на "
 "авторите някаква индикация за това колко време може да отнеме процесът на "
-"рецензиране и кога трябва да очакват известие от редакторите."
+"рецензиране и кога трябва да очакват известие от редакторите. Този имейл "
+"няма да бъде изпратен, докато решението не бъде записано."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
