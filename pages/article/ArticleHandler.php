@@ -21,7 +21,7 @@ use APP\core\Services;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\issue\IssueAction;
-use APP\observers\events\Usage;
+use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
@@ -356,7 +356,7 @@ class ArticleHandler extends Handler
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');
-                event(new Usage(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
+                event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
                 return;
             }
         } else {
@@ -502,7 +502,7 @@ class ArticleHandler extends Handler
                     if ($genre->getCategory() != Genre::GENRE_CATEGORY_DOCUMENT || $genre->getSupplementary() || $genre->getDependent()) {
                         $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
                     }
-                    event(new Usage($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
+                    event(new UsageEvent($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
                 }
                 $returner = true;
                 Hook::call('FileManager::downloadFileFinished', [&$returner]);

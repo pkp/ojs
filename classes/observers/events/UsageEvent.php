@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/observers/events/Usage.php
+ * @file classes/observers/events/UsageEvent.php
  *
  * Copyright (c) 2022 Simon Fraser University
  * Copyright (c) 2022 John Willinsky
@@ -10,7 +10,7 @@
  * @class Usage
  * @ingroup observers_events
  *
- * @brief Usage event.
+ * @brief Adds issue tracking to the usage event data.
  *
  */
 
@@ -21,22 +21,26 @@ use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\submission\Submission;
 use PKP\context\Context;
-use PKP\observers\traits\UsageEvent;
 use PKP\submission\Representation;
 use PKP\submissionFile\SubmissionFile;
 
-class Usage
+class UsageEvent extends \PKP\observers\events\UsageEvent
 {
-    use UsageEvent;
-
     public ?Issue $issue;
     public ?IssueGalley $issueGalley;
 
-    public function __construct(int $assocType, Context $context, Submission $submission = null, Representation $galley = null, SubmissionFile $submissionFile = null, Issue $issue = null, IssueGalley $issueGalley = null)
-    {
+    public function __construct(
+        int $assocType,
+        Context $context,
+        Submission $submission = null,
+        Representation $galley = null,
+        SubmissionFile $submissionFile = null,
+        Issue $issue = null,
+        IssueGalley $issueGalley = null
+    ) {
+        parent::__construct($assocType, $context, $submission, $galley, $submissionFile);
         $this->issue = $issue;
         $this->issueGalley = $issueGalley;
-        $this->traitConstruct($assocType, $context, $submission, $galley, $submissionFile);
     }
 
     /**
@@ -62,7 +66,7 @@ class Usage
             $canonicalUrl = $this->getRouterCanonicalUrl($this->request, $canonicalUrlPage, $canonicalUrlOp, $canonicalUrlParams);
             return $canonicalUrl;
         } else {
-            return $this->getTraitCanonicalUrl();
+            return parent::getCanonicalUrl();
         }
     }
 }

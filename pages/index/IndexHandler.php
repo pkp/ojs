@@ -17,7 +17,7 @@ namespace APP\pages\index;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\observers\events\Usage;
+use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
 use APP\template\TemplateManager;
 use PKP\config\Config;
@@ -76,7 +76,7 @@ class IndexHandler extends PKPIndexHandler
             $this->_setupAnnouncements($journal, $templateMgr);
 
             $templateMgr->display('frontend/pages/indexJournal.tpl');
-            event(new Usage(Application::ASSOC_TYPE_JOURNAL, $journal));
+            event(new UsageEvent(Application::ASSOC_TYPE_JOURNAL, $journal));
             return;
         } else {
             $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
