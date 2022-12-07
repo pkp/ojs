@@ -1,11 +1,12 @@
 # Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
+# Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2021-11-16 06:39+0000\n"
-"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"PO-Revision-Date: 2022-12-07 18:02+0000\n"
+"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "it_IT/>\n"
 "Language: it_IT\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.files.note"
 msgstr "Nota: La navigazione tra i file è una funzione avanzata che permette di vedere e manipolare direttamente i file e le directory associate a una rivista."
@@ -1891,9 +1892,11 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Seguire il setup per essere in grado di gestire e utilizzare DOI in OJS:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Scegli gli oggetti ai quali assegnare DOI."
+msgstr ""
+"Scegli gli oggetti ai quali assegnare DOI. La maggior parte delle riviste "
+"assegna i DOI agli articoli, ma è possibile assegnare i DOI a tutti i "
+"prodotti pubblicati."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Seleziona gli oggetti che avranno un DOI:"
@@ -2070,3 +2073,8 @@ msgstr "Notifica del rinnovo di un abbonamento istituzionale."
 
 msgid "mailable.openAccessNotify.description"
 msgstr "Questa email viene inviata ai lettori registrati che hanno chiesto di ricevere un'email di notifica in caso di uscite ad accesso aperto."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Consentire l'assegnazione dei Digital Object Identifier (DOI) ai lavori "
+"pubblicati in questa rivista."
