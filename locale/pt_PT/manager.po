@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-11-07 13:02+0000\n"
+"PO-Revision-Date: 2022-12-07 13:02+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -412,9 +412,10 @@ msgstr "Identificação de E-mail"
 msgid "manager.setup.emailSignature"
 msgstr "Subscrição"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "Os modelos e-mails enviados pelo sistema em nome da revista incluirão a seguinte assinatura no final. O corpo do texto pode ser editado na secção E-mails da Administração da Revista."
+msgstr ""
+"Os modelos de e-mail enviados pelo sistema em nome da revista incluirão a "
+"seguinte assinatura no final."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Ativar notícias"
@@ -2339,3 +2340,15 @@ msgstr "O número de consultas da página inicial da revista."
 
 msgid "stats.context.downloadReport.downloadContext"
 msgstr "Descarregar Revista"
+
+msgid "manager.manageEmails.description"
+msgstr "Edite as mensagens de email enviadas pela revista."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Número Completo"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Pedido de Arquivo"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Pedido de Arquivo (Novo)"
