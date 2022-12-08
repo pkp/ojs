@@ -24,8 +24,8 @@ use APP\notification\NotificationManager;
 use Illuminate\Bus\Batchable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
+use InvalidArgumentException;
 use PKP\context\Context;
-use PKP\Domains\Jobs\Exceptions\JobException;
 use PKP\emailTemplate\EmailTemplate;
 use PKP\Support\Jobs\BaseJob;
 use PKP\user\User;
@@ -40,7 +40,7 @@ class IssuePublishedMailUsers extends BaseJob
     protected string $locale;
 
     // Sender of the email; should be set if sendEmail is true
-    protected User $sender;
+    protected ?User $sender;
 
     // Whether to send notification email
     protected bool $sendEmail = false;
@@ -59,11 +59,11 @@ class IssuePublishedMailUsers extends BaseJob
         $this->contextId = $contextId;
         $this->issue = $issue;
         $this->locale = $locale;
-        if (!is_null($sender)) {
-            $this->sender = $sender;
-        }
-        if ($sendEmail) {
-            $this->sendEmail = $sendEmail;
+        $this->sender = $sender;
+        $this->sendEmail = $sendEmail;
+
+        if ($this->sendEmail && is_null($this->sender)) {
+            throw new InvalidArgumentException('Sender should be set to send an email');
         }
     }
 
@@ -90,10 +90,6 @@ class IssuePublishedMailUsers extends BaseJob
 
             if (!$this->sendEmail) {
                 continue;
-            }
-
-            if (!$this->sender) {
-                throw new JobException(JobException::INVALID_PAYLOAD);
             }
 
             $mailable = $this->createMailable($context, $this->issue, $recipient, $template, $notification);
