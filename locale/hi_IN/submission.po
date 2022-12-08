@@ -20,10 +20,6 @@ msgid "submission.submit.userGroup"
 msgstr "मेरी भूमिका में प्रस्तुत करें..."
 
 # (pofilter) endpunc: Different punctuation at the end
-msgid "submission.submit.userGroupDescription"
-msgstr "वह क्षमता चुनें जिसके तहत आप यह लेख प्रस्तुत कर रहे हैं."
-
-# (pofilter) simplecaps: Different capitalization
 msgid "submission.upload.selectComponent"
 msgstr "लेख घटक चुनें"
 
@@ -133,10 +129,6 @@ msgstr "प्रूफ़रीडिंग"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "submission.confirmSubmit"
-msgstr "क्या आप वाकई इस लेख को जर्नल में सबमिट करना चाहते हैं?"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "workflow.review.externalReview"
 msgstr "समीक्षा"
 
@@ -150,20 +142,11 @@ msgstr "लेख घटक"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "submission.submit.form.localeRequired"
-msgstr "कृपया एक सबमिशन भाषा चुनें ।"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "submission.submit.submissionChecklist"
 msgstr "सबमिशन चेकलिस्ट"
 
 # (pofilter) endpunc: Different punctuation at the end
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"आपको पढ़ना और स्वीकार करना होगा कि आपने आगे बढ़ने से पहले नीचे की आवश्यकताओं "
-"को पूरा कर लिया है ।"
-
-# (pofilter) simplecaps: Different capitalization
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "गोपनीयता वाले कथन"
 
@@ -173,35 +156,6 @@ msgstr "योगदानकर्ता की भूमिका"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "submission.submit.form.authorRequired"
-msgstr "कम से कम एक लेखक की आवश्यकता है ।"
-
-# (pofilter) endpunc: Different punctuation at the end
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "प्रत्येक लेखक का पहला नाम, अंतिम नाम और ईमेल पता आवश्यक है ।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "submission.submit.form.titleRequired"
-msgstr "कृपया अपने लेख का शीर्षक दर्ज करें ।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "submission.submit.form.abstractRequired"
-msgstr "कृपया अपने लेख का सार दर्ज करें।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"आपका सार बहुत लंबा है। कृपया इस अनुभाग के लिए इंगित शब्द सीमा के नीचे इसे "
-"छोटा करें।"
-
-# (pofilter) endpunc: Different punctuation at the end
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "कृपया योगदानकर्ता की भूमिका का चयन करें।"
-
-# (pofilter) endpunc: Different punctuation at the end
 msgid "submission.citationFormat.notFound"
 msgstr "अनुरोधित उद्धरण प्रारूप पुनर्प्राप्त नहीं किया जा सका।"
 
@@ -337,5 +291,27 @@ msgstr "में एक नया सबमिशन शुरू करें"
 msgid "submission.title"
 msgstr "लेख का शीर्षक"
 
-msgid "submission.submit.title"
-msgstr "लेख प्रस्तुत करें"
+msgid "submission.submit.form.authorRequired"
+msgstr "कम से कम एक लेखक की आवश्यकता है ।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "submission.submit.form.titleRequired"
+msgstr "कृपया अपने लेख का शीर्षक दर्ज करें ।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) simplecaps: Different capitalization
+msgid "submission.submit.form.abstractRequired"
+msgstr "कृपया अपने लेख का सार दर्ज करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"आपका सार बहुत लंबा है। कृपया इस अनुभाग के लिए इंगित शब्द सीमा के नीचे इसे "
+"छोटा करें।"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "कृपया योगदानकर्ता की भूमिका का चयन करें।"
+
+# (pofilter) endpunc: Different punctuation at the end

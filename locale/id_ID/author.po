@@ -68,14 +68,8 @@ msgstr "Masukkan Metadata"
 msgid "author.submit.supplementaryFiles"
 msgstr "Unggah File Suplemen"
 
-msgid "author.submit.confirmation"
-msgstr "Konfirmasi"
-
 msgid "author.submit.nextSteps"
 msgstr "Langkah Berikutnya"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Anda dapat melengkapi penyerahan naskah ini kapan saja dengan memilih Penyerahan Aktif dari beranda Penulis."
 
 msgid "author.submit.notAccepting"
 msgstr "Saat ini jurnal sedang tidak menerima penyerahan naskah."
@@ -128,9 +122,6 @@ msgstr "Naskah harus diserahkan ke salah satu bagian jurnal."
 msgid "author.submit.verifyChecklist"
 msgstr "Anda harus memastikan semua artikel tercantum dalam daftar nama naskah yang memuaskan sebelum dilanjutkan."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Penulis setuju dengan persyaratan hak cipta, yang akan berlaku pada naskah ini saat diterbitkan oleh jurnal (komentar untuk editor dapat ditambahkan di bawah)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Anda harus menyetujui persyaratan hak cipta sebelum melanjutkan."
 
@@ -140,14 +131,8 @@ msgstr "Komentar untuk Editor"
 msgid "author.submit.comments"
 msgstr "Masukkan Teks (pilihan)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Pilih bagian jurnal yang sesuai untuk penyerahan ini."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Pilih bahasa penyerahan naskah."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Pernyataan Privasi Jurnal"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Mengurutkan nama penulis agar ditampilkan seperti urutan dalam terbitan."
@@ -302,16 +287,6 @@ msgstr "Identifier publik file suplemen sudah ada."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identifier file suplemen"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Untuk menyerahkan naskah Anda ke {$journalTitle} klik Penyerahan Selesai. "
-"Kontak utama penyerahan akan menerima pemberitahuan melalui email dan akan "
-"bisa melihat perkembangan penyerahan melalui proses editorial dengan login "
-"ke website jurnal. Terima kasih telah mengirimkan naskah ke {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Tidak ada file yang dilampirkan pada penyerahan ini."
 
 msgid "author.submit.filesSummary"
 msgstr "Ringkasan File"

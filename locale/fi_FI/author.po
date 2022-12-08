@@ -69,9 +69,6 @@ msgstr "Syötä metatiedot"
 msgid "author.submit.supplementaryFiles"
 msgstr "Lataa liitetiedostot"
 
-msgid "author.submit.confirmation"
-msgstr "Vahvistus"
-
 msgid "author.submit.nextSteps"
 msgstr "Seuraavat vaiheet"
 
@@ -126,9 +123,6 @@ msgstr "Artikkelit on lähetettävä yhteen julkaisun osastoista."
 msgid "author.submit.verifyChecklist"
 msgstr "Varmista, että kaikki käsikirjoituksen tarkistuslistan kohdat täyttyvät ennen jatkamista."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Kirjoittajat hyväksyvät tämän tekijänoikeushuomautuksen ehdot, joita sovelletaan tähän käsikirjoitukseen, jos ja kun se julkaistaan tämän julkaisun toimesta (kommentteja toimittajalle voidaan lisätä alla)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Sinun on hyväksyttävä tekijänoikeushuomautuksen ehdot, ennen kuin voit jatkaa."
 
@@ -138,14 +132,8 @@ msgstr "Kommentteja toimittajalle"
 msgid "author.submit.comments"
 msgstr "Syötä teksti (valinnainen)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Valitse tälle käsikirjoitukselle sopiva julkaisun osasto."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Valitse käsikirjoituksen kieli."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Julkaisun tietosuojaseloste"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Järjestä kirjoittajat uudelleen järjestykseen, jossa ne näkyvät julkaisuhetkellä."
@@ -298,17 +286,6 @@ msgstr "Julkinen liitetiedoston tunnistetieto on jo olemassa."
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Julkinen liitetiedoston tunniste"
 
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Lähetä käsikirjoituksesi julkaisuun {$journalTitle} klikkaamalla Suorita "
-"lähetys -painiketta. Käsikirjoituksen pääasiallinen yhteyshenkilö saa "
-"vastaanottoilmoituksen sähköpostitse ja voi seurata toimitusprosessin "
-"etenemistä kirjautumalla julkaisun verkkosivustolle. Kiitos, että lähetit "
-"käsikirjoituksesi julkaisuun {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Tähän käsikirjoitukseen ei ole liitetty tiedostoja."
-
 msgid "author.submit.filesSummary"
 msgstr "Yhteenveto tiedostoista"
 
@@ -331,6 +308,3 @@ msgstr "Kirjoittajan tiedosto"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr "Käsikirjoituksen lähettäminen tähän julkaisuun vaatii käyttäjätilin. Näin toimittajamme voivat seurata käsikirjoituksiasi ja ottaa sinuun yhteyttä käsikirjoituksen tilan muuttuessa tai jos sinulta tarvitaan lisätietoja."
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Voit viimeistellä tämän lähetyksen myöhemmin valitsemalla välilehden Kaikki aktiiviset Kirjoittajan etusivulta."

@@ -67,14 +67,8 @@ msgstr "Vpiši metapodatke"
 msgid "author.submit.supplementaryFiles"
 msgstr "Dodaj dodatne datoteke"
 
-msgid "author.submit.confirmation"
-msgstr "Potrdi"
-
 msgid "author.submit.nextSteps"
 msgstr "Naslednji koraki"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Oddajo prispevka lahko kasneje dokončate, če izberete Aktivni prispevki v meniju Dom avtorja."
 
 msgid "author.submit.notAccepting"
 msgstr "Revija trenutno ne sprejema prispevkov."
@@ -127,9 +121,6 @@ msgstr "Prispevek mora biti oddan v eno od rubrik."
 msgid "author.submit.verifyChecklist"
 msgstr "Prosimo potrdite, da so vsi zahtevani pogoji izpolnjeni."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Avtorji se strinjajo z navedenimi pogoji o avtorskih pravicah, ki se nanašajo na oddan prispevek in objavo v reviji (komentarje uredniku lahko vpišete spodaj)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Pred nadaljevanjem se morate strinjati s pogoji z navedenimi pogoji o avtorskih pravicah."
 
@@ -139,14 +130,8 @@ msgstr "Sporočilo za urednika"
 msgid "author.submit.comments"
 msgstr "Vpišite besedilo (opcijsko)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Prosimo izberite ustrezno rubriko v reviji za vaš prispevek."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Prosimo izberite jezik za oddan prispevek."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Izjava o zasebnosti revije"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Avtorje navedite v zaporedju, kakor bodo objavljeni v reviji."
@@ -300,12 +285,6 @@ msgstr "Javni identifikator dopolnilne datoteke že obstaja."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Javni identifikator dopolnilne datoteke"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Za končanje postopka oddaje vašega rokopisa za {$journalTitle} kliknite gumb Končaj oddajo. O uspešni oddaji boste dobili potrditev preko e-pošte. Informacije o uredniškem postopku boste lahko spremljali preko prijave na spletišču revije. Hvala lepa za izkazan interes in oddajo prispevka."
-
-msgid "author.submit.noFiles"
-msgstr "Nobena datoteka ni bila priložena oddaji."
 
 msgid "author.submit.filesSummary"
 msgstr "Povzetek datotek"

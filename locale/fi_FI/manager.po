@@ -209,9 +209,6 @@ msgstr "Rooliin lisäämisen synkronointi lisää kaikki määrätyn julkaisun m
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Älä vaadi abstrakteja"
 
-msgid "manager.section.noSectionEditors"
-msgstr "Osastotoimittajia ei vielä ole. Lisää ensin tämä rooli vähintään yhdelle käyttäjälle seuraavaasti: Hallinnointi > Asetukset > Käyttäjät &amp; Roolit."
-
 msgid "manager.sections.assigned"
 msgstr "Tämän osaston toimittajat"
 
@@ -821,12 +818,6 @@ msgstr "Anna esimerkkejä avainsanoista tai aiheista kirjoittajien avuksi"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Käsikirjoituksen lähettämisen ohjeet"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Käsikirjoituksen lähettämisen tarkistuslista"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Käsikirjoituksen lähetettäessä kirjoittajia pyydetään ennen jatkamista vahvistamaan (rastittamalla kohdat), että käsikirjoitus noudattaa tarkistuslistan jokaista kohtaa. Tarkistuslista on näkyvillä myös Kirjoittajan ohjeet -sivun Tietoa julkaisusta -kohdassa. Listaa voidaan muokata alla, mutta kaikki listan kohdat on rastitettava ennen kuin kirjoittaja voi jatkaa lähetysprosessia."
 
 msgid "manager.setup.submissions"
 msgstr "Käsikirjoitukset"

@@ -11,6 +11,7 @@ describe('Data suite tests', function() {
 	var issueTitle = 'Vol. 2 No. 1 (2015)';
 	let submission;
 	let author;
+	let title;
 
 	before(function() {
 		author = {
@@ -20,34 +21,52 @@ describe('Data suite tests', function() {
 			affiliation: 'University of Tehran',
 			country: 'Iran, Islamic Republic of',
 		}
+		title = 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran';
 		submission = {
 			section: 'Articles',
+			sectionId: 1,
 			prefix: '',
-			title: 'Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran',
+			title: title,
 			subtitle: '',
 			abstract: 'The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (>56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.',
-			authors: [author.givenName + ' ' + author.familyName]
+			authorNames: [author.givenName + ' ' + author.familyName],
+			files: [
+				{
+					'file': 'dummy.pdf',
+					'fileName': title + '.pdf',
+					'mimeType': 'application/pdf',
+					'genre': Cypress.env('defaultGenre')
+				}
+			]
 		}
 	});
 
 	it('Create a submission', function() {
 		cy.register(author);
 
-		cy.createSubmission(submission);
+		cy.getCsrfToken();
+		cy.window()
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, this.csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, this.csrfToken);
+			});
+	});
 
-		cy.logout();
+	it('Sends to review, copyediting and production, assigns reviewers, copyeditor, layout editor and proofreader, and creates a galley', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, author.familyName);
 		cy.clickDecision('Send for Review');
-		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.recordDecisionSendToReview('Send for Review', submission.authorNames, [submission.title]);
 		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Paul Hudson');
 		cy.clickDecision('Accept Submission');
-		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.recordDecisionAcceptSubmission(submission.authorNames, [], []);
 		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Maria Fritz');
 		cy.clickDecision('Send To Production');
-		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.recordDecisionSendToProduction(submission.authorNames, []);
 		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Graham Cox');
 		cy.assignParticipant('Proofreader', 'Catherine Turner');
@@ -126,7 +145,8 @@ describe('Data suite tests', function() {
 
 	it('Unpublish the issue', function() {
 		cy.login('dbarnes');
-		cy.visit('index.php/publicknowledge/manageIssues#back');
+		cy.visit('index.php/publicknowledge/manageIssues');
+		cy.get('button:contains("Back Issues")').click();
 		cy.get('span:contains("' + issueTitle + '")').prev('a.show_extras').click();
 		cy.get('tr:contains("' + issueTitle + '")').next().contains('a', 'Unpublish Issue').click();
 		cy.get('button:contains("OK")').click();
@@ -147,7 +167,7 @@ describe('Data suite tests', function() {
 
 	it('Republish the issue', function() {
 		cy.login('dbarnes');
-		cy.visit('index.php/publicknowledge/manageIssues#future');
+		cy.visit('index.php/publicknowledge/manageIssues');
 		cy.get('span:contains("' + issueTitle + '")').prev('a.show_extras').click();
 		cy.get('tr:contains("' + issueTitle + '")').next().contains('a', 'Publish Issue').click();
 		cy.get('input[id="sendIssueNotification"]').click();
@@ -169,7 +189,8 @@ describe('Data suite tests', function() {
 
 	it('Remove submission from TOC', function() {
 		cy.login('dbarnes');
-		cy.visit('index.php/publicknowledge/manageIssues#back');
+		cy.visit('index.php/publicknowledge/manageIssues');
+		cy.get('button:contains("Back Issues")').click();
 		cy.get('span:contains("' + issueTitle + '")').prev('a.show_extras').click();
 		cy.get('tr:contains("' + issueTitle + '")').next().contains('a', 'Edit').click();
 		cy.get('span:contains("' + submission.title + '")').prev('a.show_extras').click();
@@ -203,14 +224,16 @@ describe('Data suite tests', function() {
 		cy.get('div[id^="publish-"] button:contains("Publish")').click();
 		cy.isInIssue('Antimicrobial, heavy metal resistance', 'Vol. 1 No. 2 (2014)');
 		// unpublish the future issue
-		cy.visit('index.php/publicknowledge/manageIssues#back');
+		cy.visit('index.php/publicknowledge/manageIssues');
+		cy.get('button:contains("Back Issues")').click();
 		cy.get('span:contains("' + issueTitle + '")').prev('a.show_extras').click();
 		cy.get('tr:contains("' + issueTitle + '")').next().contains('a', 'Unpublish Issue').click();
 		cy.get('button:contains("OK")').click();
-		cy.visit('index.php/publicknowledge/manageIssues#future');
+		cy.visit('index.php/publicknowledge/manageIssues');
 		cy.get('span:contains("' + issueTitle + '")');
 		// define the back issue as the current issue again
-		cy.visit('index.php/publicknowledge/manageIssues#back');
+		cy.visit('index.php/publicknowledge/manageIssues');
+		cy.get('button:contains("Back Issues")').click();
 		cy.get('span:contains("Vol. 1 No. 2 (2014)")').prev('a.show_extras').click();
 		cy.get('tr:contains("Vol. 1 No. 2 (2014)")').next().contains('a', 'Current Issue').click();
 		cy.get('button:contains("OK")').click();

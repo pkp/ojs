@@ -11,14 +11,8 @@ msgstr ""
 "PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
 "Language: fa_IR\n"
 
-msgid "submission.submit.title"
-msgstr "ارسال مقاله"
-
 msgid "submission.submit.userGroup"
 msgstr "ثبت مقاله به عنوان ..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "گروه کاربری که تحت عنوان آن مقاله را ارسال می کنید را انتخاب کنید."
 
 msgid "submission.upload.selectComponent"
 msgstr "انتخاب اجزاء مقاله"
@@ -95,9 +89,6 @@ msgstr "فایل‌های مربوط به مقاله را آپلود کنید: �
 msgid "submission.pageProofs"
 msgstr "بازبینی نهایی"
 
-msgid "submission.confirmSubmit"
-msgstr "آیا از ارسال مقاله ی خود در این مجله اطمینان دارید؟"
-
 msgid "workflow.review.externalReview"
 msgstr "داوری"
 
@@ -116,35 +107,15 @@ msgstr "کامل"
 msgid "submission.incomplete"
 msgstr "منتظر تایید"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "لطفاً زبان مقاله را انتخاب کنید"
-
 msgid "submission.submit.submissionChecklist"
 msgstr "موارد ضروری برای ارسال"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "قبل از ورود به قسمت های بعدی نسبت به موارد زیر اطمینان حاصل کنید"
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "بیانیه محرمانگی اطلاعات مجله"
 
 msgid "submission.submit.contributorRole"
 msgstr "نقش پدیدآورنده"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "تعریف حداقل یک نویسنده الزامی است"
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "وارد کردن نام، نام خانوادگی و ایمیل تمامی نویسندگان الزامی است"
-
-msgid "submission.submit.form.titleRequired"
-msgstr "لطفاً عنوان مقاله خود را وارد کنید"
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "لطفاً چکیده مقاله خود را وارد کنید"
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "لطفا نقش مشارکت کننده را انتخاب کنید."
 
 msgid "submission.citationFormat.notFound"
 msgstr "فرمت درخواستی ارجاع قابل بازیابی نیست"
@@ -158,3 +129,15 @@ msgstr "هر بخشی"
 msgid "submission.queries.production"
 msgstr "گفتگوی انتشار"
 
+
+msgid "submission.submit.form.authorRequired"
+msgstr "تعریف حداقل یک نویسنده الزامی است"
+
+msgid "submission.submit.form.titleRequired"
+msgstr "لطفاً عنوان مقاله خود را وارد کنید"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "لطفاً چکیده مقاله خود را وارد کنید"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "لطفا نقش مشارکت کننده را انتخاب کنید."

@@ -317,11 +317,6 @@ msgstr "Ste si istí, že chcete natrvalo vymazať túto sekciu?"
 msgid "manager.sections.assigned"
 msgstr "Editori tejto sekcie"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Zatiaľ nie sú žiadni sekčný editori. Pridajte najprv túto rolu minimálne "
-"jednému používateľovi pomocou Správa> Nastavenia> Používatelia a role."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Nepožadovať abstrakty"
 
@@ -1091,19 +1086,6 @@ msgstr "Inštrukcie pre autorov, copyright a indexácia (vrátane registrácie).
 
 msgid "manager.setup.submissions"
 msgstr "Príspevky"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"V priebehu zadávania príspevku do časopisu sú autori najprv požiadaní, aby "
-"zaškrtli všetky položky v Zaškrtávacom zozname pre prípravu príspevku a "
-"potvrdili tak ich splnenie; potom môžu postupovať ďalej. Zaškrtávací zoznam "
-"je tiež zobrazený v Pokyny autorom v časti O časopise. Zoznam môžete upraviť "
-"nižšie, pamätajte ale, že aby autori mohli pokračovať ďalej v odosielaní "
-"svojho príspevku, budú musieť zaškrtnutím potvrdiť všetky položky tohto "
-"zoznamu."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Zaškrtávací zoznam pre prípravu príspevku"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Inštrukcie pre príspevky"

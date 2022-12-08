@@ -16,14 +16,8 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Подати статтю"
-
 msgid "submission.submit.userGroup"
 msgstr "Подати, використовуючи мою роль..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Оберіть роль, в якій ви подаєте цю статтю."
 
 msgid "submission.upload.selectComponent"
 msgstr "Обрати компонент статті"
@@ -100,9 +94,6 @@ msgstr "Завантажити файли, пов'язані з цим мате�
 msgid "submission.pageProofs"
 msgstr "Коректура"
 
-msgid "submission.confirmSubmit"
-msgstr "Ви впевнені, що хочете подати цю статтю в журнал?"
-
 msgid "workflow.review.externalReview"
 msgstr "Рецензування"
 
@@ -121,40 +112,15 @@ msgstr "Підтверджено"
 msgid "submission.incomplete"
 msgstr "Очікується підтвердження"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Будь ласка, оберіть мову подання."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Вимоги до подання"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Ви повинні прочитати і підтвердити, що виконали всі зазначені нижче вимоги перш ніж продовжити подання рукопису."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Положення про конфіденційність"
 
 msgid "submission.submit.contributorRole"
 msgstr "Роль відправника"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Потрібно зазначити хоча б одного автора."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Потрібно вказати ім'я, прізвище та адресу електронної пошти кожного автора."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Будь ласка, введіть назву Вашої статті."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Будь ласка, введіть анотацію Вашої статті."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Ваша анотація надто довга. Будь ласка, скоротіть її до кількості слів, що "
-"задана для даного розділу."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Будь ласка, виберіть роль відправника."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Не вдається отримати зазначений формат оформлення бібліографічних посилань."
@@ -401,3 +367,20 @@ msgstr ""
 #, fuzzy
 msgid "editor.submission.decision.backToReview"
 msgstr "Повернутися до Огляду"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потрібно зазначити хоча б одного автора."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Будь ласка, введіть назву Вашої статті."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Будь ласка, введіть анотацію Вашої статті."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Ваша анотація надто довга. Будь ласка, скоротіть її до кількості слів, що "
+"задана для даного розділу."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Будь ласка, виберіть роль відправника."

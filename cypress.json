@@ -11,7 +11,9 @@
 		"contextAcronyms": {
 			"en_US": "JPK"
 		},
-		"defaultGenre": "Article Text"
+		"defaultGenre": "Article Text",
+		"authorUserGroupId": 14,
+		"translatorUserGroupId": 15
 	},
 	"integrationFolder": "cypress/tests",
 	"pluginsFile": "lib/pkp/cypress/plugins/index.js",

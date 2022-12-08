@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Odeslat článek"
-
 msgid "submission.submit.userGroup"
 msgstr "Vložit v rámci mé následující role..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Zvolte roli, pod kterou odesíláte tento článek."
 
 msgid "submission.upload.selectComponent"
 msgstr "Zvolte komponentu článku"
@@ -101,9 +95,6 @@ msgstr "Nahrajte soubory spojené s tímto příspěvkem, včetně článku, mul
 msgid "submission.pageProofs"
 msgstr "Korektury"
 
-msgid "submission.confirmSubmit"
-msgstr "Jste si jisti, že chcete odeslat tento článek do časopisu?"
-
 msgid "workflow.review.externalReview"
 msgstr "Recenze"
 
@@ -122,35 +113,15 @@ msgstr "Schváleno"
 msgid "submission.incomplete"
 msgstr "Čeká se na schválení"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Zvolte, prosím, jazyk příspěvku."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolní seznam pro příspěvek"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené požadavky."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Prohlášení o ochraně osobních údajů"
 
 msgid "submission.submit.contributorRole"
 msgstr "Role přispěvatele"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Je vyžadován minimálně jeden autor."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Křestní jméno, příjmení a emailová adresa jsou vyžadovány pro každého autora."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Vložte, prosím, název vašeho článku."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Vložte, prosím, abstrakt vašeho článku."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Zvolte, prosím, roli autora."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Požadovaný citační formát nelze načíst."
@@ -163,9 +134,6 @@ msgstr "Libovolná sekce"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Abstrakt musí obsahovat maximálně {$wordCount} slov."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."
 
 msgid "galley.publicationNotFound"
 msgstr "Příspěvek pro tuto sazebnici nebyl nalezen."
@@ -399,3 +367,18 @@ msgstr "Zobrazit sazebnici"
 
 msgid "galley.cantEditPublished"
 msgstr "Sazebnici nelze editovat protože už byla zveřejněna."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadován minimálně jeden autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, název vašeho článku."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vašeho článku."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu stanoveného pro tuto sekci."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvolte, prosím, roli autora."

@@ -57,14 +57,8 @@ msgstr "Título del envío"
 msgid "submission.upload.selectComponent"
 msgstr "Seleccionar el componente del envío"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Elija el rol bajo el cual envía hace este envío."
-
 msgid "submission.submit.userGroup"
 msgstr "Enviar en mi rol como..."
-
-msgid "submission.submit.title"
-msgstr "Hacer un envío"
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
@@ -313,28 +307,6 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "El formato de cita solicitado no puede recuperarse."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Seleccione el rol del colaborador/a."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"El resumen es demasiado largo, debe ajustarlo al límite de palabras indicado "
-"para esta sección."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Por favor, introduzca el resumen de su envío."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Por favor, introduzca el título de su envío."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"El nombre, los apellidos y el correo electrónico de cada autor son "
-"obligatorios."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Se requiere por lo menos un autor."
-
 msgid "submission.submit.contributorRole"
 msgstr "Rol del colaborador"
 
@@ -348,9 +320,6 @@ msgstr ""
 
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista de verificación del envío"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Por favor, seleccione un idioma de envío."
 
 msgid "submission.incomplete"
 msgstr "Esperando aceptación"
@@ -366,9 +335,6 @@ msgstr "Los metadatos del envío han sido actualizados."
 
 msgid "workflow.review.externalReview"
 msgstr "Revisión"
-
-msgid "submission.confirmSubmit"
-msgstr "¿Está seguro de que desea realizar este envío a la revista?"
 
 msgid "submission.pageProofs"
 msgstr "Corrección de pruebas"
@@ -424,3 +390,20 @@ msgstr "Ver Galerada"
 
 msgid "galley.cantEditPublished"
 msgstr "Esta galerada no se puede editar porque ya se ha publicado."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Se requiere por lo menos un autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, introduzca el título de su envío."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, introduzca el resumen de su envío."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resumen es demasiado largo, debe ajustarlo al límite de palabras indicado "
+"para esta sección."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccione el rol del colaborador/a."

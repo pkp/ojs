@@ -861,18 +861,6 @@ msgstr "Poskytněte příklady klíčových slov jako vodítko pro autory"
 msgid "manager.setup.submissionGuidelines"
 msgstr "Instrukce pro příspěvky"
 
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Zaškrtávací seznam pro přípravu příspěvku"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"V průběhu podávání příspěvku do časopisu jsou autoři nejdříve požádáni, aby "
-"zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu příspěvku a "
-"potvrdili tak jejich splnění; poté mohou postupovat dále. Zaškrtávací seznam "
-"je také zobrazen v Pokyny autorům v části O časopisu. Seznam můžete upravit "
-"níže, pamatujte ale, že aby autoři mohli pokračovat dále v odesílání svého "
-"příspěvku, budou muset zaškrtnutím potvrdit všechny položky tohoto seznamu."
-
 msgid "manager.setup.submissions"
 msgstr "Příspěvky"
 
@@ -1652,11 +1640,6 @@ msgstr "Registrace byla úspěšná!"
 
 msgid "manager.website.archiving"
 msgstr "Archivace"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně "
-"jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role."
 
 msgid "manager.setup.masthead"
 msgstr "Hlavní titulek"

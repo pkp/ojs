@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "Stuur een artikel in"
-
 msgid "submission.submit.userGroup"
 msgstr "Stuur in als..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Kies de hoedanigheid waarin u dit artikel instuurt."
 
 msgid "submission.upload.selectComponent"
 msgstr "Selecteer een onderdeel"
@@ -107,9 +101,6 @@ msgstr "Laad bestanden op die geassocieerd zijn met deze inzending: het artikel 
 msgid "submission.pageProofs"
 msgstr "Proeflezing"
 
-msgid "submission.confirmSubmit"
-msgstr "Weet u zeker dat u dit artikel wil indienen voor het tijdschrift?"
-
 msgid "workflow.review.externalReview"
 msgstr "Review"
 
@@ -128,38 +119,15 @@ msgstr "Geaccepteerd"
 msgid "submission.incomplete"
 msgstr "In afwachting van goedkeuring"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Selecteer een taal voor de inzending."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Checklist voor inzendingen"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Geef aan dat uw inzending aan onderstaande vereisten voldoet."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Privacyverklaring"
 
 msgid "submission.submit.contributorRole"
 msgstr "Rol"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Er is minimaal één auteur vereist."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "De voornaam, familienaam en e-mailadres van elke auteur moet worden ingevuld."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Vul de titel van uw artikel in."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Vul de samenvatting van uw artikel in."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "De samenvatting is te lang. Verkort het tot de maximumlengte voor dit onderdeel."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Selecteer de rol van de bijdrager."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Het gevraagde citatieformaat kon niet worden gevonden."
@@ -249,3 +217,18 @@ msgstr "Het tijdschrift van deze inzending kan niet gevonden worden."
 
 msgid "submission.queries.production"
 msgstr "Productie-discussies"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Er is minimaal één auteur vereist."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vul de titel van uw artikel in."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vul de samenvatting van uw artikel in."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "De samenvatting is te lang. Verkort het tot de maximumlengte voor dit onderdeel."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecteer de rol van de bijdrager."

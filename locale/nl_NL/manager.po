@@ -244,9 +244,6 @@ msgstr ""
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Samenvattingen niet verplicht stellen"
 
-msgid "manager.section.noSectionEditors"
-msgstr "Er zijn nog geen sectieredacteurs. Wijs deze rol eerst toe aan minstens één gebruiker via Beheer > Gebruikers en rollen."
-
 msgid "manager.sections.assigned"
 msgstr "De redacteurs van deze sectie"
 
@@ -899,12 +896,6 @@ msgstr "Geef voorbeelden van trefwoorden of onderwerpen om auteurs te helpen"
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Richtlijnen voor inzendingen"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Checklist voor het voorbereiden van een inzending"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Bij het aanleveren van een inzending voor het tijdschrift wordt aan auteurs gevraagd om eerst ieder punt op de checklist ter voorbereiding van een inzending af te vinken. De checklist wordt ook getoond in bij de auteursrichtlijnen, onder Over dit tijdschrift. De checklist kan hieronder aangepast worden. Alle punten moeten aangevinkt worden voor auteurs verder kunnen gaan met hun inzending."
 
 msgid "manager.setup.submissions"
 msgstr "Inzendingen"

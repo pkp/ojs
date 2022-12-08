@@ -72,16 +72,8 @@ msgstr "Cuir a-steach meata-dàta"
 msgid "author.submit.supplementaryFiles"
 msgstr "Luchdaich suas faidhlichean foirlionaidh"
 
-msgid "author.submit.confirmation"
-msgstr "Dearbhadh"
-
 msgid "author.submit.nextSteps"
 msgstr "Na h-ath cheuman"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"’S urrainn dhut an tagradh seo a choileanadh uaireigin eile le bhith a’ "
-"taghadh “Tagraidhean gnìomhach” o dhachaigh an ùghdair."
 
 msgid "author.submit.notAccepting"
 msgstr "Chan eil an iris seo a’ gabhail ri tagraidhean aig an àm seo."
@@ -141,12 +133,6 @@ msgstr ""
 "Feumaidh tu dèanamh cinnteach gun do dhèilig thu ri gach rud air liosta an "
 "tagraidh mus lean thu air adhart."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Tha na h-ùghdaran a’ gabhail ri teirmichean brath na còrach-lethbhreac seo "
-"agus bidh buaidh aca air an tagradh seo ma thèid fhoillseachadh leis an iris "
-"seo (’s urrainn dhut beachdan dhan deasaiche a chur ris gu h-ìosal)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
 "Feumaidh tu gabhail ri brath na còrach-lethbhreac mus lean thu air adhart."
@@ -157,14 +143,8 @@ msgstr "Beachdan dhan deasaiche"
 msgid "author.submit.comments"
 msgstr "Cuir teacsa a-steach (roghainneil)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Tagh earrann iomchaidh dhen iris airson an tagraidh seo."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Tagh cànan an tagraidh."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Aithris prìobhaideachd na h-irise"
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
@@ -341,17 +321,6 @@ msgstr ""
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Aithnichear poblach an fhaidhle fhoirlionaidh"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Airson an sgrìobhainn agad a chur gu {$journalTitle}, briog air “Coilean cur "
-"an tagraidh”. Gheibh prìomh neach-conaltraidh an tagraidh agad fios air a’ "
-"phost-d gun d’fhuair sinn e agus chì iad adhartas an tagraidh tron phròiseas "
-"deasachaidh ma chlàraicheas iad a-steach air làrach-lìn na h-irise. Tapadh "
-"leat airson ùidh a ghabhail ann am foillseachadh san iris {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Cha deach faidhle sam bith a cheangal ris an tagradh."
 
 msgid "author.submit.filesSummary"
 msgstr "Geàrr-chunntas air an fhaidhle"

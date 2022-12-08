@@ -15,9 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-msgid "submission.submit.title"
-msgstr "Invia una nuova proposta"
-
 msgid "submission.upload.selectComponent"
 msgstr "Selezionare il tipo di proposta"
 
@@ -33,9 +30,6 @@ msgstr "Metadati"
 msgid "submission.submit.whatNext.description"
 msgstr "La redazione ha ricevuto notifica della tua proposta e ti è stata inviata una email di conferma. Appena gli editor avranno visionato la tua proposta sarai contattato."
 
-msgid "submission.confirmSubmit"
-msgstr "Sei sicuro di voler inviare la proposta?"
-
 msgid "workflow.review.externalReview"
 msgstr "Revisione"
 
@@ -47,9 +41,6 @@ msgstr "File della proposta"
 
 msgid "submission.submit.userGroup"
 msgstr "Invia usando il mio ruolo come ..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Scegli il tipo di utente con il quale invii questa proposta."
 
 msgid "submission.title.tip"
 msgstr "Il tipo di proposta è di solito  'immagine', 'testo', o un altro tipo multimediale come 'software' o 'interativo'. Per favore scegli il più rilevante per la tua propostoa. Esempio possono essere trovati qui: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
@@ -120,35 +111,15 @@ msgstr "Approvata"
 msgid "submission.incomplete"
 msgstr "In attesa di approvazione"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Seleziona una lingua."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista di controllo per le proposte"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Devi leggere e controllare di aver completato quanto richiesto qui sotto prima di procedere."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Informativa sulla privacy"
 
 msgid "submission.submit.contributorRole"
 msgstr "Ruolo dei contributori"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "E' necessario indicare almeno un autore."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Inserisci nome, cognome e indirizzo email di ciascun autore."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Inserisci il titolo del contributo."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Per favore inserisci l'abstract dell'articolo."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Selezione il ruolo dell'autore."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Il formato di citazione richiesto non è stato trovato."
@@ -161,11 +132,6 @@ msgstr "Qualsiasi sezione"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "L'abstract deve essere di {$wordCount} parole o meno."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"L'abstract è troppo lungo. Per favore accorcialo entro il limite di parole "
-"indicato per questa sezione."
 
 msgid "catalog.category.heading"
 msgstr "Tutti gli items"
@@ -410,3 +376,20 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Torna alla revisione"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "E' necessario indicare almeno un autore."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Inserisci il titolo del contributo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Per favore inserisci l'abstract dell'articolo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"L'abstract è troppo lungo. Per favore accorcialo entro il limite di parole "
+"indicato per questa sezione."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selezione il ruolo dell'autore."

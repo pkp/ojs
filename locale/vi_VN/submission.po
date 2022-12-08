@@ -78,42 +78,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Các định dạng trích dẫn được yêu cầu không thể được lấy."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Vui lòng chọn vai trò của người đóng góp."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Tóm tắt của bạn quá dài. Vui lòng rút ngắn nó xuống dưới giới hạn từ được "
-"chỉ định cho phần này."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Vui lòng nhập tóm tắt bài báo của bạn."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Vui lòng nhập tiêu đề của bài báo của bạn."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Họ, tên và địa chỉ email của mỗi tác giả là bắt buộc."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Ít nhất một tác giả được yêu cầu."
-
 msgid "submission.submit.contributorRole"
 msgstr "Vai trò của người đóng góp"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Cam kết bảo mật"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Bạn phải đọc và xác nhận rằng bạn đã hoàn thành các yêu cầu bên dưới trước "
-"khi tiếp tục."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Danh sách yêu cầu trước gửi bài"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Vui lòng chọn một ngôn ngữ của bài gửi."
 
 msgid "submission.incomplete"
 msgstr "Chờ phê duyệt"
@@ -132,9 +105,6 @@ msgstr "Gửi phản biện"
 
 msgid "workflow.review.externalReview"
 msgstr "Phản biện"
-
-msgid "submission.confirmSubmit"
-msgstr "Bạn có chắc chắn muốn gửi bài báo này đến tạp chí?"
 
 msgid "submission.pageProofs"
 msgstr "Hiệu đính"
@@ -229,14 +199,8 @@ msgstr "Tiêu đề bài báo"
 msgid "submission.upload.selectComponent"
 msgstr "Chọn thành phần bài báo"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Chọn tư cách mà bạn đang gửi bài báo này."
-
 msgid "submission.submit.userGroup"
 msgstr "Gửi trong vai trò như là ..."
-
-msgid "submission.submit.title"
-msgstr "Gửi một bài báo mới"
 
 msgid "publication.selectIssue"
 msgstr "Chọn một số để lên lịch xuất bản"
@@ -359,3 +323,20 @@ msgstr ""
 msgid "submission.viewingPreview"
 msgstr ""
 "Đây là bản xem trước chưa được xuất bản. <a href=\"{$url}\">Xem bài gửi</a>"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Ít nhất một tác giả được yêu cầu."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vui lòng nhập tiêu đề của bài báo của bạn."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vui lòng nhập tóm tắt bài báo của bạn."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Tóm tắt của bạn quá dài. Vui lòng rút ngắn nó xuống dưới giới hạn từ được "
+"chỉ định cho phần này."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vui lòng chọn vai trò của người đóng góp."

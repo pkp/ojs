@@ -91,43 +91,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Požadovaný citačný formát sa nedá načítať."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Zvoľte, prosím, rolu autora."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Váš abstrakt je príliš dlhý. Skráťte ho, prosím na počet slov podľa limitu "
-"stanoveného pre túto sekciu."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Vložte, prosím, abstrakt vášho článku."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Vložte, prosím, názov vášho článku."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Krstné meno, priezvisko a emailová adresa sú vyžadované pre každého autora."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Je vyžadovaný minimálne jeden autor."
-
 msgid "submission.submit.contributorRole"
 msgstr "Rola autora"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Prehlásenie o ochrane súkromia"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Pred pokračovaním musíte prečítať a potvrdiť, že ste splnili nižšie uvedené "
-"požiadavky."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolný zoznam pre príspevok"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Vyberte, prosím, jazyk príspevku."
 
 msgid "submission.incomplete"
 msgstr "Čaká na schválenie"
@@ -146,9 +118,6 @@ msgstr "Odoslať na recenziu"
 
 msgid "workflow.review.externalReview"
 msgstr "Recenzia"
-
-msgid "submission.confirmSubmit"
-msgstr "Ste si istý, že chcete odoslať tento článok do časopisu?"
 
 msgid "submission.pageProofs"
 msgstr "Korektúry"
@@ -242,14 +211,8 @@ msgstr "Názov článku"
 msgid "submission.upload.selectComponent"
 msgstr "Zvoľte komponent článku"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Zvoľte rolu, pod ktorou odosielate tento článok."
-
 msgid "submission.submit.userGroup"
 msgstr "Vložiť v rámci mojej nasledujúcej role..."
-
-msgid "submission.submit.title"
-msgstr "Odoslať článok"
 
 msgid "submission.viewingPreview"
 msgstr ""
@@ -258,3 +221,20 @@ msgstr ""
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktívne)"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadovaný minimálne jeden autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, názov vášho článku."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vášho článku."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Váš abstrakt je príliš dlhý. Skráťte ho, prosím na počet slov podľa limitu "
+"stanoveného pre túto sekciu."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvoľte, prosím, rolu autora."

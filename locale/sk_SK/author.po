@@ -16,26 +16,14 @@ msgstr ""
 "Reorganizujte autorov tak, aby boli zobrazení v rovnakom poradí, v akom majú "
 "byť uvedení v publikácii."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Vyhlásenie o súkromí pre tento časopis"
-
 msgid "author.submit.form.localeRequired"
 msgstr "Zvoľte si, prosím, jazyk príspevku."
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Prosím, vyberte vhodnú sekciu časopisu pre tento príspevok."
 
 msgid "author.submit.comments"
 msgstr "Vložte text (nepovinné)"
 
 msgid "submission.submit.coverNote"
 msgstr "Komentár pre editora"
-
-msgid "author.submit.copyrightNoticeAgree"
-msgstr ""
-"Autori súhlasia s podmienkami uvedenými v Oznámenie o copyrighte, ktoré budú "
-"aplikované na tento príspevok, akonáhle bude publikovaný týmto časopisom ("
-"nižšie je možné pridať komentár pre editora)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
@@ -102,16 +90,8 @@ msgstr "Požiadať o odpustenie"
 msgid "author.submit.notAccepting"
 msgstr "Tento časopis aktuálne neprijíma príspevky."
 
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Odoslanie tohto príspevku môžete dokončiť neskôr tým, že na domácej stránke "
-"pre autora vyberiete Aktívne príspevky."
-
 msgid "author.submit.nextSteps"
 msgstr "Ďalšie kroky"
-
-msgid "author.submit.confirmation"
-msgstr "Potvrdenie"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Nahrať doplnkové súbory"
@@ -196,16 +176,6 @@ msgstr "Dokončiť príspevok"
 
 msgid "author.submit.filesSummary"
 msgstr "Informácie o súbore"
-
-msgid "author.submit.noFiles"
-msgstr "K príspevku neboli pripojené žiadne súbory."
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"Pre odoslanie vášho príspevku do {$journalTitle} kliknite na Dokončiť "
-"príspevok. Hlavný kontakt príspevku dostane e-mailom oznámenie a bude môcť "
-"po prihlásení na stránky časopisu sledovať postup príspevku redakčným "
-"riadením. Ďakujeme za Váš záujem publikovať v{$journalTitle}."
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "Verejný identifikátor doplnkového súboru už existuje."

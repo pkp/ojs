@@ -230,9 +230,6 @@ msgstr ""
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Δεν απαιτούνται περιλήψεις"
 
-msgid "manager.section.noSectionEditors"
-msgstr "Δεν υπάρχουν Χρήστες με ρόλο Επιμελητή Ενότητας. Προσθέστε πρώτα αυτόν τον ρόλο σε τουλάχιστον ένα Χρήστη, μέσω του μενού Διαχείριση > Ρυθμίσεις > Χρήστες &amp; Ρόλοι."
-
 msgid "manager.sections.assigned"
 msgstr "Επιμελητές της συγκεκριμένης ενότητας"
 
@@ -980,12 +977,6 @@ msgstr "Παραθέστε παραδείγματα λέξεων-κλειδιώ�
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "Οδηγίες υποβολής"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Λίστα ελέγχου προετοιμασίας υποβολής"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "Κατά την υποβολή εργασιών στο περιοδικό, ζητείται από τους Συγγραφείς να επιβεβαιώσουν ότι η υποβολή συμβαδίζει με τις υποδείξεις της λίστας ελέγχου. Η λίστα ελέγχου εμφανίζεται επίσης στις «Οδηγίες για τους Συγγραφείς», στην σελίδα «Σχετικά με το περιοδικό». Μπορείτε να επεξεργαστείτε τα στοιχεία της λίστας παρακάτω. Για την ολοκλήρωση της υποβολής από τους Συγγραφείς, απαιτείται η επιβεβαίωση όλων των στοιχείων της λίστας."
 
 msgid "manager.setup.submissions"
 msgstr "Υποβολές"

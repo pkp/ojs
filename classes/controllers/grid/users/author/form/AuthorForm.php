@@ -10,6 +10,8 @@
  * @class AuthorForm
  * @ingroup controllers_grid_users_author_form
  *
+ * @deprecated 3.4
+ *
  * @brief Form for adding/editing a author
  */
 

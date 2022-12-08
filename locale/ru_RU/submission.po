@@ -17,14 +17,8 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Отправить статью"
-
 msgid "submission.submit.userGroup"
 msgstr "Отправить, используя мою роль ..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Выберите роль, под которой вы отправляете статью."
 
 msgid "submission.upload.selectComponent"
 msgstr "Выбрать компонент статьи"
@@ -104,9 +98,6 @@ msgstr "Загрузить файлы, связанные с этим матер
 msgid "submission.pageProofs"
 msgstr "Корректура"
 
-msgid "submission.confirmSubmit"
-msgstr "Вы уверены, что хотите отправить эту статью в журнал?"
-
 msgid "workflow.review.externalReview"
 msgstr "Рецензирование"
 
@@ -125,38 +116,15 @@ msgstr "Одобрен"
 msgid "submission.incomplete"
 msgstr "Ждет одобрения"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Пожалуйста, выберите язык отправляемого материала."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Контрольный список подготовки материала к отправке"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Вы должны прочитать и подтвердить, что вы выполнили все перечисленные ниже требования прежде чем продолжить отправку материала."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Заявление о конфиденциальности"
 
 msgid "submission.submit.contributorRole"
 msgstr "Роль отправителя"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Требуется как минимум один автор."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Для каждого автора необходимо указать имя, фамилию и адрес электронной почты."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Пожалуйста, введите название Вашей статьи."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Пожалуйста, введите аннотацию Вашей статьи."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Ваша аннотация слишком длинная. Пожалуйста, сократите ее до количества слов, заданного для этого раздела."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Пожалуйста, выберите роль отправителя."
 
 msgid "submission.citationFormat.notFound"
 msgstr "Запрошенный формат оформления библиографических ссылок не удается получить."
@@ -376,3 +344,18 @@ msgstr ""
 "Не удалось создать DOI для гранок «{$pubObjectTitle}» следующего материала: "
 "{$itemTitle}. Материал должен быть назначен в выпуск до того как будет "
 "выполнена генерация DOI."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Требуется как минимум один автор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Пожалуйста, введите название Вашей статьи."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Пожалуйста, введите аннотацию Вашей статьи."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Ваша аннотация слишком длинная. Пожалуйста, сократите ее до количества слов, заданного для этого раздела."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Пожалуйста, выберите роль отправителя."

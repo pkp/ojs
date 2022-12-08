@@ -15,14 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "Enviar un article"
-
 msgid "submission.submit.userGroup"
 msgstr "Enviar en el meu rol com a..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Esculli el rol sota el qual envia aquest article."
 
 msgid "submission.upload.selectComponent"
 msgstr "Seleccioni el component de l'article"
@@ -96,9 +90,6 @@ msgstr "Carregui els arxius associats amb aquesta tramesa, incloent l'article, e
 msgid "submission.pageProofs"
 msgstr "Correcció de proves"
 
-msgid "submission.confirmSubmit"
-msgstr "Segur que voleu enviar aquest article a la revista?"
-
 msgid "workflow.review.externalReview"
 msgstr "Revisió"
 
@@ -117,35 +108,15 @@ msgstr "Acceptat"
 msgid "submission.incomplete"
 msgstr "Esperant acceptació"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Seleccioni un idioma de tramesa, si us plau."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Llista de comprovació de la tramesa"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Ha de llegir i comprovar que ha completat els requisits següents abans de continuar."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Declaració de privacitat"
 
 msgid "submission.submit.contributorRole"
 msgstr "Rol del col·laborador"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Es requereix un autor com a mínim."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "El nom, els cognoms i el correu electrònic de cada autor/a són obligatoris."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Introdueixi el títol del seu article, si us plau."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Introdueixi el resum del seu article, si us plau."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Seleccioni el rol del col·laborador, si us plau."
 
 msgid "submission.citationFormat.notFound"
 msgstr "El format de cita sol·licitat no ha pogut ser recuperat."
@@ -208,11 +179,6 @@ msgstr "{$numTitles} elements"
 
 msgid "submission.sectionOptions"
 msgstr "Opcions de secció"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"El resum és massa llarg. Ajusteu-lo segons el límit de paraules per a "
-"aquesta secció indicat a sota."
 
 msgid "submission.submit.noContext"
 msgstr "No s'ha pogut trobar aquesta tramesa."
@@ -398,3 +364,20 @@ msgstr ""
 "tramesa es retornarà a la fase de revisió. Expliqueu el motiu d'aquesta "
 "decisió i informeu l'autor/a de quines revisions addicionals es portaran a "
 "terme."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Es requereix un autor com a mínim."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Introdueixi el títol del seu article, si us plau."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Introdueixi el resum del seu article, si us plau."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resum és massa llarg. Ajusteu-lo segons el límit de paraules per a "
+"aquesta secció indicat a sota."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Seleccioni el rol del col·laborador, si us plau."

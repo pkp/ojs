@@ -116,14 +116,6 @@ msgstr "Бешинчи қадам"
 msgid "author.track"
 msgstr "Фаол мақолалар"
 
-msgid "author.submit.confirmation"
-msgstr "Тасдиқлаш"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"Муаллифлар уйидан Фаол тақдимотларни танлаш орқали ушбу юборишни кейинроқ "
-"бажариши мумкин."
-
 msgid "author.submit.start"
 msgstr "Бошлаш"
 

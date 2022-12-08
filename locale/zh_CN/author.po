@@ -139,9 +139,6 @@ msgstr "投稿清单"
 msgid "author.submit.verifyChecklist"
 msgstr "您必须确定已经完成投稿清单中的所有的项目，才能继续下一步。"
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "作者同意这份版权注意事项的内容，并同意在这份期刊出版此稿件时适用于这份稿件（可以在下面加上给编辑的意见）."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "您必须同意本版权声明的条款才能继续."
 

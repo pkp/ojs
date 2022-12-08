@@ -101,9 +101,6 @@ msgstr "Baixar arquivos associados a esta submissão, incluindo o artigo, multim
 msgid "submission.pageProofs"
 msgstr "Leitura de prova"
 
-msgid "submission.confirmSubmit"
-msgstr "Tem certeza que deseja submeter este artigo para o periódico?"
-
 msgid "workflow.review.externalReview"
 msgstr "Avaliação"
 
@@ -122,40 +119,15 @@ msgstr "Aprovado"
 msgid "submission.incomplete"
 msgstr "Esperando Aprovação"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Por favor selecione um idioma para o envio do manuscrito."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Checklist da Submissão"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Você deve ler e reconhecer que você completou os requisitos abaixo antes de prosseguir."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Declaração de Privacidade"
 
 msgid "submission.submit.contributorRole"
 msgstr "Papel do Colaborador"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Pelo menos um autor é necessário."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "O primeiro nome, sobrenome e endereço de e-mail de cada autor devem ser informados."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Por favor, indique o título do seu artigo."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Por favor, informe o resumo do seu artigo."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Seu resumo é muito longo. Reduza-o para abaixo do limite de palavras "
-"indicado para esta seção."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Por favor, selecione o papel do colaborador."
 
 msgid "submission.citationFormat.notFound"
 msgstr "O formato de citação solicitado não pôde ser recuperado."
@@ -217,14 +189,8 @@ msgstr "Publicado em <a href=\"{$issueUrl}\">{$issueName}</a>."
 msgid "publication.scheduledIn"
 msgstr "Agendado para publicação em <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "submission.submit.title"
-msgstr "Submeter um artigo"
-
 msgid "submission.submit.userGroup"
 msgstr "Realizar a submissão como..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Escolha o papel com o qual deseja submeter este manuscrito."
 
 msgid "submission.upload.selectComponent"
 msgstr "Selecione o componente do artigo"
@@ -417,3 +383,20 @@ msgstr "Ver Composição"
 
 msgid "galley.cantEditPublished"
 msgstr "Esta composição não pode ser editada porque já foi publicada."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Pelo menos um autor é necessário."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Por favor, indique o título do seu artigo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Por favor, informe o resumo do seu artigo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Seu resumo é muito longo. Reduza-o para abaixo do limite de palavras "
+"indicado para esta seção."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Por favor, selecione o papel do colaborador."

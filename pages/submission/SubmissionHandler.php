@@ -10,52 +10,157 @@
  * @class SubmissionHandler
  * @ingroup pages_submission
  *
- * @brief Handle requests for the submission wizard.
+ * @brief Handles page requests to the submission wizard
  */
 
 namespace APP\pages\submission;
 
+use APP\components\forms\publication\TitleAbstractForm;
+use APP\components\forms\submission\ReconfigureSubmission;
+use APP\components\forms\submission\StartSubmission;
+use APP\core\Application;
+use APP\core\Request;
+use APP\journal\Section;
+use APP\publication\Publication;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
+use Illuminate\Support\LazyCollection;
+use PKP\components\forms\FormComponent;
+use PKP\components\forms\submission\ForTheEditors;
+use PKP\context\Context;
 use PKP\facades\Locale;
 use PKP\pages\submission\PKPSubmissionHandler;
-use PKP\security\Role;
 
 class SubmissionHandler extends PKPSubmissionHandler
 {
     /**
-     * Constructor
+     * Display the screen to start a new submission
      */
-    public function __construct()
+    protected function start(array $args, Request $request): void
     {
-        parent::__construct();
-        $this->addRoleAssignment(
-            [Role::ROLE_ID_AUTHOR, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER],
-            ['index', 'wizard', 'step', 'saveStep']
+        $context = $request->getContext();
+        $userGroups = $this->getSubmitUserGroups($context, $request->getUser());
+        if (!$userGroups->count()) {
+            $this->showErrorPage(
+                'submission.wizard.notAllowed',
+                __('submission.wizard.notAllowed.description', [
+                    'email' => $context->getData('contactEmail'),
+                    'name' => $context->getData('contactName'),
+                ])
+            );
+            return;
+        }
+
+        $sections = $this->getSubmitSections($context);
+        if (empty($sections)) {
+            $this->showErrorPage(
+                'submission.wizard.notAllowed',
+                __('submission.wizard.noSectionAllowed.description', [
+                    'email' => $context->getData('contactEmail'),
+                    'name' => $context->getData('contactName'),
+                ])
+            );
+            return;
+        }
+
+        $apiUrl = $request->getDispatcher()->url(
+            $request,
+            Application::ROUTE_API,
+            $context->getPath(),
+            'submissions'
+        );
+
+        $form = new StartSubmission($apiUrl, $context, $userGroups, $sections);
+
+        $templateMgr = TemplateManager::getManager($request);
+
+        $templateMgr->setState([
+            'form' => $form->getConfig(),
+        ]);
+
+        parent::start($args, $request);
+    }
+
+    protected function getSubmittingTo(Context $context, Submission $submission, array $sections, LazyCollection $categories): string
+    {
+        $languageCount = count($context->getSupportedSubmissionLocales()) > 1;
+        $sectionCount = count($sections) > 1;
+        $section = collect($sections)->first(fn ($section) => $section->getId() === $submission->getCurrentPublication()->getData('sectionId'));
+
+        if ($sectionCount && $languageCount) {
+            return __(
+                'submission.wizard.submittingToSectionInLanguage',
+                [
+                    'section' => $section->getLocalizedTitle(),
+                    'language' => Locale::getMetadata($submission->getData('locale'))->getDisplayName(),
+                ]
+            );
+        } elseif ($sectionCount) {
+            return __(
+                'submission.wizard.submittingToSection',
+                [
+                    'section' => $section->getLocalizedTitle(),
+                ]
+            );
+        } elseif ($languageCount) {
+            return __(
+                'submission.wizard.submittingInLanguage',
+                [
+                    'language' => Locale::getMetadata($submission->getData('locale'))->getDisplayName(),
+                ]
+            );
+        }
+        return '';
+    }
+
+    protected function getReconfigureForm(Context $context, Submission $submission, Publication $publication, array $sections, LazyCollection $categories): ReconfigureSubmission
+    {
+        return new ReconfigureSubmission(
+            FormComponent::ACTION_EMIT,
+            $submission,
+            $publication,
+            $context,
+            $sections
         );
     }
 
-    /**
-     * Get the step numbers and their corresponding title locale keys.
-     *
-     * @return array
-     */
-    public function getStepsNumberAndLocaleKeys()
+    protected function getTitleAbstractForm(string $publicationApiUrl, array $locales, Publication $publication, Context $context, array $sections): TitleAbstractForm
+    {
+        /** @var Section $section */
+        $section = collect($sections)->first(fn ($section) => $section->getId() === $publication->getData('sectionId'));
+
+        return new TitleAbstractForm(
+            $publicationApiUrl,
+            $locales,
+            $publication,
+            $section,
+            true
+        );
+    }
+
+    protected function getForTheEditorsForm(string $publicationApiUrl, array $locales, Publication $publication, Submission $submission, Context $context, string $suggestionUrlBase): ForTheEditors
+    {
+        return new ForTheEditors(
+            $publicationApiUrl,
+            $locales,
+            $publication,
+            $submission,
+            $context,
+            $suggestionUrlBase
+        );
+    }
+
+    protected function getReconfigurePublicationProps(): array
     {
         return [
-            1 => 'author.submit.start',
-            2 => 'author.submit.upload',
-            3 => 'author.submit.metadata',
-            4 => 'author.submit.confirmation',
-            5 => 'author.submit.nextSteps',
+            'sectionId',
         ];
     }
 
-    /**
-     * Get the number of submission steps.
-     *
-     * @return int
-     */
-    public function getStepCount()
+    protected function getReconfigureSubmissionProps(): array
     {
-        return 5;
+        return [
+            'locale',
+        ];
     }
 }

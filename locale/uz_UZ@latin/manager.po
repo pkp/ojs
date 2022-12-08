@@ -158,18 +158,6 @@ msgstr ""
 msgid "manager.setup.submissions"
 msgstr "Taqdimotlar"
 
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"Jurnalga topshirish paytida, mualliflardan oldin, ishni davom ettirishdan "
-"oldin, topshirishni tayyorlash ro'yxatidagi har bir bandni "
-"to'ldirilganligini tekshirish talab qilinadi. Tekshirish ro'yxati, "
-"shuningdek, \"Muallif ko'rsatmalari\" jurnalida joylashgan. Ro'yxatni quyida "
-"tahrir qilish mumkin, lekin mualliflar topshirishni davom ettirishdan oldin "
-"ro'yxatdagi barcha elementlarga belgi qo'yish kerak bo'ladi."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Arizalarni tayyorlashga tayyorgarlik ro'yxati"
-
 msgid "manager.setup.submissionGuidelines"
 msgstr "Arizalarni topshirish bo'yicha ko'rsatmalar"
 
@@ -1000,11 +988,6 @@ msgstr "Haqiqatan ham bu bo'limni butunlay o'chirib tashlamoqchimisiz?"
 
 msgid "manager.sections.assigned"
 msgstr "Bu bo'lim muharrirlari"
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Hali bo'lim muharrirlari yo'q. Bu rolni hech bo'lmaganda bitta "
-"foydalanuvchiga Boshqaruv> Sozlamalar> Foydalanuvchilar & amp; Avval rollar."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Tezislarni talab qilmang"

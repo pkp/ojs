@@ -7,23 +7,68 @@
  *
  */
 
-describe('Data suite tests', function() {
+describe('Data suite: Amwandenga', function() {
 
 	let submission;
 
 	before(function() {
+		const title = 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence';
 		submission = {
 			id: 0,
 			section: 'Articles',
 			prefix: '',
-			title: 'Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence',
+			title: title,
 			subtitle: '',
 			abstract: 'The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.',
-			authors: ['Alan Mwandenga']
+			shortAuthorString: 'Mwandenga, et al.',
+			authorNames: ['Alan Mwandenga', 'Amina Mansour'],
+			assignedAuthorNames: ['Alan Mwandenga'],
+			authors: [
+				{
+					givenName: 'Amina',
+					familyName: 'Mansour',
+					email: 'amansour@mailinator.com',
+					country: 'Barbados',
+					affiliation: 'Public Knowledge Project'
+				}
+			],
+			files: [
+				{
+					'file': 'dummy.pdf',
+					'fileName': title + '.pdf',
+					'mimeType': 'application/pdf',
+					'genre': Cypress.env('defaultGenre')
+				},
+				{
+					'file': 'dummy.odt',
+					'fileName': 'structured-interview-guide.odt',
+					'mimeType': 'application/vnd.oasis.opendocument.text',
+					'genre': 'Other'
+				},
+				{
+					'file': 'dummy.ods',
+					'fileName': 'response-evaluation-all-team-members-draft-after-edits-final-version-final.ods',
+					'mimeType': 'application/vnd.oasis.opendocument.spreadsheet',
+					'genre': 'Data Set'
+				},
+				{
+					'file': 'dummy.xlsx',
+					'fileName': 'signalling-theory-dataset.pdf',
+					'mimeType': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+					'genre': 'Data Set'
+				},
+				{
+					'file': 'dummy.docx',
+					'fileName': 'author-disclosure-form.docx',
+					'mimeType': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+					'genre': 'Other'
+				}
+			]
 		};
 	});
 
 	it('Registers as author and creates a submission', function() {
+
 		cy.register({
 			'username': 'amwandenga',
 			'givenName': 'Alan',
@@ -31,23 +76,199 @@ describe('Data suite tests', function() {
 			'affiliation': 'University of Cape Town',
 			'country': 'South Africa',
 		});
-		cy.createSubmission(submission);
+
+		cy.contains('Make a New Submission').click();
+
+		// All required fields in the start submission form
+		cy.contains('Begin Submission').click();
+		cy.get('#startSubmission-title-error').contains('This field is required.');
+		cy.get('#startSubmission-sectionId-error').contains('This field is required.');
+		cy.get('#startSubmission-locale-error').contains('This field is required.');
+		cy.get('#startSubmission-submissionRequirements-error').contains('This field is required.');
+		cy.get('#startSubmission-privacyConsent-error').contains('This field is required.');
+		cy.get('input[name="title"]').type(submission.title, {delay: 0});
+		cy.get('label:contains("Articles")').click();
+		cy.get('label:contains("English")').click();
+		cy.get('input[name="submissionRequirements"]').check();
+		cy.get('input[name="privacyConsent"]').check();
+		cy.contains('Begin Submission').click();
+
+		// The submission wizard has loaded
+		cy.contains('Make a Submission: Upload Files');
+		cy.get('.submissionWizard__submissionDetails').contains('Mwandenga');
+		cy.get('.submissionWizard__submissionDetails').contains(submission.title);
+		cy.contains('Submitting to the Articles section in English');
+		cy.get('.pkpSteps__step__label--current').contains('Upload Files');
+		cy.get('.pkpSteps__step__label').contains('Contributors');
+		cy.get('.pkpSteps__step__label').contains('Details');
+		cy.get('.pkpSteps__step__label').contains('For the Editors');
+		cy.get('.pkpSteps__step__label').contains('Review');
+
+		// Save the submission id for later tests
+		cy.location('search')
+			.then(search => {
+				submission.id = parseInt(search.split('=')[1]);
+			});
+
+		// Upload files and set file genres
+		cy.get('h2').contains('Upload Files');
+		cy.get('h2').contains('Files');
+		cy.uploadSubmissionFiles(submission.files);
+
+		// Delete a file
+		cy.uploadSubmissionFiles([{
+			'file': 'dummy.pdf',
+			'fileName': 'delete-this-file.pdf',
+			'mimeType': 'application/pdf',
+			'genre': Cypress.env('defaultGenre')
+		}]);
+		cy.get('.listPanel__item:contains("delete-this-file.pdf")').find('button').contains('Remove').click();
+		cy.get('.modal__panel:contains("Are you sure you want to remove this file?")').find('button').contains('Yes').click();
+		cy.get('.listPanel__item:contains("delete-this-file.pdf")').should('not.exist');
+
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
+		// Add Contributors
+		cy.contains('Make a Submission: Contributors');
+		cy.get('.pkpSteps__step__label--current').contains('Contributors');
+		cy.get('h2').contains('Contributors');
+		cy.get('.listPanel__item:contains("Alan Mwandenga")');
+		cy.get('button').contains('Add Contributor').click();
+		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('#contributor-givenName-error-en_US').contains('This field is required.');
+		cy.get('#contributor-email-error').contains('This field is required.');
+		cy.get('#contributor-country-error').contains('This field is required.');
+		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="en_US"]').type(submission.authors[0].givenName);
+		cy.get('.pkpFormField:contains("Family Name")').find('input[name*="en_US"]').type(submission.authors[0].familyName);
+		cy.get('.pkpFormField:contains("Country")').find('select').select(submission.authors[0].country)
+		cy.get('.pkpFormField:contains("Email")').find('input').type('notanemail');
+		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('#contributor-email-error').contains('This is not a valid email address.');
+		cy.get('.pkpFormField:contains("Email")').find('input').type(submission.authors[0].email);
+		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('button').contains('Order').click();
+		cy.get('button:contains("Decrease position of Alan Mwandenga")').click();
+		cy.get('button').contains('Save Order').click();
+		cy.get('button:contains("Preview")').click(); // Will only appear after order is saved
+		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mansour et al.');
+		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Amina Mansour, Alan Mwandenga (Author)');
+		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Full")').contains('Amina Mansour, Alan Mwandenga (Author)');
+		cy.get('.modal__panel:contains("List of Contributors")').find('.modal__closeButton').click();
+		cy.get('.listPanel:contains("Contributors")').find('button').contains('Order').click();
+		cy.get('button:contains("Increase position of Alan Mwandenga")').click();
+		cy.get('.listPanel:contains("Contributors")').find('button').contains('Save Order').click();
+		cy.get('.listPanel:contains("Contributors") button:contains("Preview")').click(); // Will only appear after order is saved
+		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mwandenga et al.');
+		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Alan Mwandenga, Amina Mansour (Author)');
+		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Full")').contains('Alan Mwandenga, Amina Mansour (Author)');
+		cy.get('.modal__panel:contains("List of Contributors")').find('.modal__closeButton').click();
+
+		// Delete a contributor
+		cy.get('.listPanel:contains("Contributors")').find('button').contains('Add Contributor').click();
+		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="en_US"]').type('Fake Author Name');
+		cy.get('.pkpFormField:contains("Email")').find('input').type('delete@mailinator.com');
+		cy.get('.pkpFormField:contains("Country")').find('select').select('Barbados');
+		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('.listPanel__item:contains("Fake Author Name")').find('button').contains('Delete').click();
+		cy.get('.modal__panel:contains("Are you sure you want to remove Fake Author Name as a contributor?")').find('button').contains('Delete Contributor').click();
+		cy.get('.listPanel__item:contains("Fake Author Name")').should('not.exist');
+
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
+		// Enter details
+		cy.contains('Make a Submission: Details');
+		cy.get('.pkpSteps__step__label--current').contains('Details');
+		cy.get('h2').contains('Submission Details');
+		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
+		cy.get('#titleAbstract-abstract-control-en_US').click(); // Ensure blur event is fired
+
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
+		// For the Editors
+		cy.contains('Make a Submission: For the Editors');
+		cy.get('.pkpSteps__step__label--current').contains('For the Editors');
+		cy.get('h2').contains('For the Editors');
+
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
+		// Review
+		cy.contains('Make a Submission: Review');
+		cy.get('.pkpSteps__step__label--current').contains('Review');
+		cy.get('h2').contains('Review and Submit');
+		submission.files.forEach(function(file) {
+			cy
+				.get('h3')
+				.contains('Files')
+				.parents('.submissionWizard__reviewPanel')
+				.contains(file.fileName)
+				.parents('.submissionWizard__reviewPanel__item__value')
+				.find('.pkpBadge')
+				.contains(file.genre);
+		});
+		submission.authorNames.forEach(function(author) {
+			cy
+				.get('h3')
+				.contains('Contributors')
+				.parents('.submissionWizard__reviewPanel')
+				.contains(author)
+				.parents('.submissionWizard__reviewPanel__item__value')
+				.find('.pkpBadge')
+				.contains('Author');
+		});
+		cy.get('h3').contains('Details (English)')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Title').siblings('.submissionWizard__reviewPanel__item__value').contains(submission.title)
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Abstract').siblings('.submissionWizard__reviewPanel__item__value').contains(submission.abstract);
+		cy.get('h3').contains('Details (French)')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Title').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Abstract').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided');
+		cy.get('h3').contains('For the Editors (English)')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Categories').siblings('.submissionWizard__reviewPanel__item__value').contains('None selected')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Comments for the Editor').siblings('.submissionWizard__reviewPanel__item__value').contains('None');
+		cy.get('h3').contains('For the Editors (French)')
+			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided');
+
+		// Save for later
+		cy.get('button').contains('Save for Later').click();
+		cy.contains('Saved for Later');
+		cy.contains('Your submission details have been saved');
+		cy.contains('We have emailed a copy of this link to you at amwandenga@mailinator.com.');
+		cy.get('a').contains(submission.title).click();
+
+		// Submit
+		cy.contains('Make a Submission: Review');
+		cy.get('button:contains("Submit")').click();
+		const message = 'The submission, ' + submission.title + ', will be submitted to ' + Cypress.env('contextTitles').en_US + ' for editorial review';
+		cy.get('.modal__panel:contains("' + message + '")').find('button').contains('Submit').click();
+		cy.contains('Submission complete');
+		cy.get('a').contains('Create a new submission');
+		cy.get('a').contains('Return to your dashboard');
+		cy.get('a').contains('Review this submission').click();
+		cy.get('h1:contains("' + submission.title + '")');
 	});
 
 	it('Sends a submission to review, assigns reviewers, accepts a submission, and sends to production', function() {
 		cy.findSubmissionAsEditor('dbarnes', null, 'Mwandenga');
 		cy.clickDecision('Send for Review');
-		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
+		cy.recordDecisionSendToReview('Send for Review', submission.assignedAuthorNames, [submission.title]);
 		cy.isActiveStageTab('Review');
 		cy.assignReviewer('Julie Janssen');
 		cy.assignReviewer('Aisla McCrae');
 		cy.assignReviewer('Adela Gallego');
 		cy.clickDecision('Accept Submission');
-		cy.recordDecisionAcceptSubmission(submission.authors, [], []);
+		cy.recordDecisionAcceptSubmission(submission.assignedAuthorNames, [], []);
 		cy.isActiveStageTab('Copyediting');
 		cy.assignParticipant('Copyeditor', 'Sarah Vogt');
 		cy.clickDecision('Send To Production');
-		cy.recordDecisionSendToProduction(submission.authors, []);
+		cy.recordDecisionSendToProduction(submission.assignedAuthorNames, []);
 		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Stephen Hellier');
 		cy.assignParticipant('Proofreader', 'Sabine Kumar');
@@ -70,9 +291,11 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 
-		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('You must complete this field in English.');
-		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
+		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('This field is required.');
 		cy.get('#titleAbstract input[name=title-en_US').type(submission.title, {delay: 0});
+		cy.get('#titleAbstract button').contains('Save').click();
+
+		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
 		cy.get('#titleAbstract-abstract-control-en_US').click(); // Ensure blur event is fired
 		cy.get('input[name=subtitle-en_US]').click();
@@ -116,13 +339,13 @@ describe('Data suite tests', function() {
 
 		cy.get('#contributors button').contains('Add Contributor').click();
 
-		cy.get('#contributors [name="givenName-en_US"]').type('Lorem', {delay: 0});
-		cy.get('#contributors [name="familyName-en_US"]').type('Ipsum', {delay: 0});
-		cy.get('#contributors [name="email"]').type('lorem@mailinator.com', {delay: 0});
+		cy.get('#contributors [name="givenName-en_US"]').type('Nicolas', {delay: 0});
+		cy.get('#contributors [name="familyName-en_US"]').type('Riouf', {delay: 0});
+		cy.get('#contributors [name="email"]').type('nriouf@mailinator.com', {delay: 0});
 		cy.get('#contributors [name="country"]').select('South Africa');
 		cy.get('#contributors button').contains('Save').click();
 		cy.wait(500);
-		cy.get('#contributors div').contains('Lorem Ipsum');
+		cy.get('#contributors div').contains('Nicolas Riouf');
 
 		// Create a galley
 		cy.get('button#publication-button').click();
@@ -191,7 +414,8 @@ describe('Data suite tests', function() {
 		cy.contains(submission.title).click();
 		cy.contains('Alan Mwandenga');
 		cy.contains('University of Cape Town');
-		cy.contains('Lorem Ipsum');
+		cy.contains('Amina Mansour');
+		cy.contains('Nicolas Riouf');
 		cy.contains('Professional Development');
 		cy.contains('Social Transformation');
 	});
@@ -231,7 +455,7 @@ describe('Data suite tests', function() {
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
 		cy.get('#publication button').contains('Create New Version').click();
 		cy.contains('Are you sure you want to create a new version?');
-		cy.get('button').contains('Yes').click();
+		cy.get('.modal__panel:contains("Create New Version")').get('button').contains('Yes').click();
 		cy.wait(3000);
 
 		// Toggle between versions

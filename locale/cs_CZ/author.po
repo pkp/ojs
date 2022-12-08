@@ -56,12 +56,6 @@ msgstr "Zahájení"
 msgid "author.submit.supplementaryFiles"
 msgstr "Nahrát doplňkové soubory"
 
-msgid "author.submit.confirmation"
-msgstr "Potvrzení"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky."
-
 msgid "author.submit.notAccepting"
 msgstr "Tento časopis aktuálně nepřijímá příspěvky."
 
@@ -98,9 +92,6 @@ msgstr "Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v čá
 msgid "author.submit.verifyChecklist"
 msgstr "Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu."
 
@@ -109,12 +100,6 @@ msgstr "Komentáře pro editora"
 
 msgid "author.submit.comments"
 msgstr "Vložte text (nepovinné)"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Vyberte prosím vhodnou sekci časopisu pro tento příspěvek."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Prohlášení o ochraně osobních údajů tohoto časopisu"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Přeuspořádejte autory tak, aby byli zobrazeni ve stejném pořadí, v jakém mají být uvedeni v publikaci."
@@ -263,12 +248,6 @@ msgstr "Veřejný identifikátor doplňkového souboru již existuje."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Veřejný identifikátor doplňkového souboru"
-
-msgid "author.submit.confirmationDescription"
-msgstr "Pro odeslání vašeho příspěvku do {$journalTitle} klikněte na Dokončit příspěvek. Hlavní kontakt příspěvku obdrží e-mailem oznámení a bude moci po příhlášení na stránky časopisu sledovat postup příspěvku redakčním řízením. Děkujeme za Váš zájem publikovat v {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "K příspěvku nebyly připojeny žádné soubory."
 
 msgid "author.submit.filesSummary"
 msgstr "Informace o souboru"

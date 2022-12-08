@@ -70,9 +70,6 @@ msgstr "Wprowadź metadane"
 msgid "author.submit.supplementaryFiles"
 msgstr "Prześlij dodatkowe pliki"
 
-msgid "author.submit.confirmation"
-msgstr "Potwierdź"
-
 msgid "author.submit.notAccepting"
 msgstr "Czasopismo nie przyjmuje obecnie nowych zgłoszeń."
 
@@ -127,17 +124,11 @@ msgstr "Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w ja
 msgid "author.submit.verifyChecklist"
 msgstr "Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Zapoznałem(am) się z prawami autorskimi dotyczącymi przesyłanego tekstu (ewentualny komenatrz dla redaktora można wpisać poniżej)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Aby kontynuować, upewnij się, że zapoznałeś(aś) się z prawami autorskimi."
 
 msgid "author.submit.comments"
 msgstr "Wpisz komentarz dla redaktora (opcjonalne)"
-
-msgid "author.submit.form.sectionRequired"
-msgstr "Aby kontynuować, upewnij się, że wybrałeś poprawny dział czasopisma dla przesyłanego tekstu."
 
 msgid "author.submit.form.localeRequired"
 msgstr "Aby kontynuować, wybierz język w jakim został napisany tekst."
@@ -295,12 +286,6 @@ msgstr "Publiczny identyfikator pliku pomocniczego już istnieje."
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Publiczny identyfikator pliku pomocniczego"
 
-msgid "author.submit.confirmationDescription"
-msgstr "Aby przesłać tekst do czasopisma {$journalTitle} kliknij Zakończ. Osoba podana jako główny autor tekstu otrzyma e-mail z potwierdzeniem przesłania tekstu. Od tej chwili możliwe jest również śledzenie statusu tekstu po zalogowaniu się na stronie czasopisma {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Żadne pliki nie zostały dołączone."
-
 msgid "author.submit.filesSummary"
 msgstr "Podsumowanie"
 
@@ -328,11 +313,5 @@ msgstr "Proszę o umorzenie płatności za zgłoszenie tego tekstu"
 msgid "author.submit.nextSteps"
 msgstr "Następne kroki"
 
-msgid "submission.submit.cancelSubmission"
-msgstr "Możesz dokończyć zgłoszenie później. Niekompletne zgłoszenia znajdziesz w swoim panelu roboczym."
-
 msgid "submission.submit.coverNote"
 msgstr "Wiadomość dla redaktora"
-
-msgid "submission.submit.privacyStatement"
-msgstr "Polityka prywatności czasopisma"

@@ -279,9 +279,6 @@ msgstr "登録同期では、指定されたジャーナルで指定されたロ
 msgid "manager.sections.abstractsNotRequired"
 msgstr "アブストラクトは不要"
 
-msgid "manager.section.noSectionEditors"
-msgstr "まだセクション編集者はいません。まず、「管理」→「設定」→「ユーザー＆役割」で、少なくとも1人のユーザーにこの役割を追加してください。"
-
 msgid "manager.sections.assigned"
 msgstr "このセクションの編集者"
 
@@ -927,12 +924,6 @@ msgstr "キーワードやトピックの例を著者へのガイドとして提
 
 msgid "manager.setup.submissionGuidelines"
 msgstr "投稿規定"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "提出準備チェックリスト"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr "本誌への投稿の際には，まず投稿準備チェックリストの各項目が完了していることを確認した上で，投稿を進めてください。このチェックリストは，「ジャーナルについて」の「著者ガイドライン」にも掲載されています。チェックリストは以下で編集可能ですが，すべての項目にチェックが入っていないと投稿できません。"
 
 msgid "manager.setup.submissions"
 msgstr "投稿内容"

@@ -68,14 +68,8 @@ msgstr "Ange metadata"
 msgid "author.submit.supplementaryFiles"
 msgstr "Ladda upp kompletterande filer"
 
-msgid "author.submit.confirmation"
-msgstr "Bekräfta"
-
 msgid "author.submit.nextSteps"
 msgstr "Följande steg"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Du kan fortsätta vid ett senare tillfälle genom att gå in på Aktuella bidrag under författarens Min sida."
 
 msgid "author.submit.notAccepting"
 msgstr "Den här tidskriften tar för tillfället inte emot några bidrag."
@@ -128,9 +122,6 @@ msgstr "Artiklar måste skickas in till en av tidskriftens sektioner."
 msgid "author.submit.verifyChecklist"
 msgstr "Alla moment i checklistan för insändning av bidrag måste vara genomförda innan du kan fortsätta."
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "Författarna samtycker till upphovsrättsvillkoren som kommer att gälla för bidraget om och när det publiceras av tidskriften. (Kommentarer till redaktören kan lämnas nedan)."
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "Godkännande av upphovsrättsvillkoren krävs innan du kan fortsätta."
 
@@ -140,14 +131,8 @@ msgstr "Kommentarer till redaktören"
 msgid "author.submit.comments"
 msgstr "Fyll i text (frivilligt)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "Välj en lämplig tidskriftssektion för detta bidrag."
-
 msgid "author.submit.form.localeRequired"
 msgstr "Ange språk för bidraget."
-
-msgid "submission.submit.privacyStatement"
-msgstr "Tidskriftens sekretessdeklaration"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Sortera författarna i den ordning de ska listas i publikationen."
@@ -301,12 +286,6 @@ msgstr "Identifikator för publik kompletterande finns redan."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Identifikator för publik kompletterande fil"
-
-msgid "author.submit.confirmationDescription"
-msgstr "För att skicka in bidraget till {$journalTitle} klicka på Skicka in bidrag. Den primära kontaktpersonen för bidraget kommer få en bekräftelse med e-post och kommer att kunna följa bidragets väg genom den redaktionella processen genom att logga in på tidskriftens webbplats. Tack för att du är intresserad av att publicera i {$journalTitle}."
-
-msgid "author.submit.noFiles"
-msgstr "Inga filer har laddats upp till det här bidraget."
 
 msgid "author.submit.filesSummary"
 msgstr "Sammanfattning av filer"

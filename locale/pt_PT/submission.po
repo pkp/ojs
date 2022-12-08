@@ -16,14 +16,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.title"
-msgstr "Submeter Artigo"
-
 msgid "submission.submit.userGroup"
 msgstr "Submeter artigo com o papel..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Escolha o papel sob o qual está a submeter este artigo."
 
 msgid "submission.upload.selectComponent"
 msgstr "Selecione o componente do artigo"
@@ -117,9 +111,6 @@ msgstr ""
 msgid "submission.pageProofs"
 msgstr "Leitura de Provas"
 
-msgid "submission.confirmSubmit"
-msgstr "Deseja realmente submeter este artigo à revista?"
-
 msgid "workflow.review.externalReview"
 msgstr "Revisão"
 
@@ -138,35 +129,15 @@ msgstr "Aprovado"
 msgid "submission.incomplete"
 msgstr "A Aguardar Aprovação"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Selecione o idioma da submissão."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Lista de Verificação da Submissão"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Deve ler e validar os requisitos apresentados abaixo antes de prosseguir."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Declaração de Privacidade"
 
 msgid "submission.submit.contributorRole"
 msgstr "Papel do Colaborador"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "É obrigatório ter pelo menos um autor."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "É obrigatório o nome próprio, apelido e endereço de e-mail de cada autor."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Insira o título do seu artigo."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Insira o resumo do artigo."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Selecione o papel do colaborador."
 
 msgid "submission.citationFormat.notFound"
 msgstr "O formato de citação solicitado não pôde ser recuperado."
@@ -176,11 +147,6 @@ msgstr "Estas especificações são baseadas no conjunto de metadados Dublin Cor
 
 msgid "section.any"
 msgstr "Qualquer Secção"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"O seu resumo é demasiado longo. Por favor reduza-o de modo a conter o limite "
-"máximo de palavras definido para esta secção."
 
 msgid "submission.abstract.wordCount.description"
 msgstr "O resumo deverá ter no máximo {$wordCount} palavras."
@@ -422,3 +388,20 @@ msgstr "Ver Composição"
 
 msgid "galley.cantEditPublished"
 msgstr "Esta composição não pode ser editada porque já foi publicada."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "É obrigatório ter pelo menos um autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Insira o título do seu artigo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Insira o resumo do artigo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"O seu resumo é demasiado longo. Por favor reduza-o de modo a conter o limite "
+"máximo de palavras definido para esta secção."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecione o papel do colaborador."

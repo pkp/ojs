@@ -22,9 +22,6 @@ msgstr "تقديم مقالة للنشر"
 msgid "submission.submit.userGroup"
 msgstr "قدم طلباً بصفتي..."
 
-msgid "submission.submit.userGroupDescription"
-msgstr "إختر الصفة التي تقدم بها طلبك هذا."
-
 msgid "submission.upload.selectComponent"
 msgstr "إختر جزءا من المقال"
 
@@ -103,9 +100,6 @@ msgstr "إرفع الملفات ذات الصلة بطلب النشر هذا، �
 msgid "submission.pageProofs"
 msgstr "القراءة التصحيحية"
 
-msgid "submission.confirmSubmit"
-msgstr "هل أنت متأكد من رغبتك في تقديم طلب النشر هذا إلى المجلة؟"
-
 msgid "workflow.review.externalReview"
 msgstr "التحكيم"
 
@@ -124,38 +118,15 @@ msgstr "مصادق عليه"
 msgid "submission.incomplete"
 msgstr "ينتظر المصادقة"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "لطفاً، إختر اللغة التي كُتب بها المؤلَّف."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "قائمة إجراءات طلب النشر"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "عليك أن تقرأ المتطلبات أدناه وتعترف بها قبل المتابعة."
-
+#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "بيان الخصوصية"
 
 msgid "submission.submit.contributorRole"
 msgstr "دور المساهمين"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "أذكر مؤلفاً واحداً على الأقل لهذا الطلب."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "الاسم الأول، الاسم الأخير وعنوان البريد الالكتروني لكل مؤلف معلومات مطلوبة حتماً."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "لطفاً، أذكر عنوان مؤلَّفك هذا."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "لطفاً، أعطنا ملخصاً عن المؤلَّف."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "إن ملخصك طويل جداً. لطفاً، حاول إختزاله ليصير ضمن محدد عدد الكلمات الخاص بهذا القسم."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "لطفاً، إختر دور المساهم."
 
 msgid "submission.citationFormat.notFound"
 msgstr "تعذر استرجاع صيغة الاقتباس التي تم طلبها."
@@ -374,3 +345,18 @@ msgstr "معاينة اللوح الطباعي"
 
 msgid "galley.cantEditPublished"
 msgstr "لا يمكن تعديل هذا اللوح الطباعي لأنه سبق وأن تم نشره."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "أذكر مؤلفاً واحداً على الأقل لهذا الطلب."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "لطفاً، أذكر عنوان مؤلَّفك هذا."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "لطفاً، أعطنا ملخصاً عن المؤلَّف."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "إن ملخصك طويل جداً. لطفاً، حاول إختزاله ليصير ضمن محدد عدد الكلمات الخاص بهذا القسم."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "لطفاً، إختر دور المساهم."

@@ -39,14 +39,8 @@ msgstr "Naslov članka"
 msgid "submission.upload.selectComponent"
 msgstr "Odaberite komponentu članka"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Odaberite kapacitet pod kojim šaljete ovaj članak."
-
 msgid "submission.submit.userGroup"
 msgstr "Pošalji u mojoj ulozi kao..."
-
-msgid "submission.submit.title"
-msgstr "Pošalji članak"
 
 msgid "submission.pageProofs"
 msgstr "Lektura"
@@ -114,42 +108,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Traženi format citata nije se mogao dohvatiti."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Odaberite ulogu saradnika."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Vaš sažetak je predug. Skratite ga na dolje ograničeni broj riječi "
-"naznačenih za ovu sekciju."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Unesite sažetak vašeg članka."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Unesite naslov članka."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Potrebno je ime, prezime i e-mail adresa svakog autora."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Potreban je najmanje jedan autor."
-
 msgid "submission.submit.contributorRole"
 msgstr "Uloga saradnika"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Izjava o privatnosti"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Prije nastavka morate pročitati i potvrditi da ste ispunili dolje navedene "
-"zahtjeve."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolna lista predaje"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Odaberite jezik predaje."
 
 msgid "submission.incomplete"
 msgstr "Čeka odobrenje"
@@ -168,9 +135,6 @@ msgstr "Pošalji na pregled"
 
 msgid "workflow.review.externalReview"
 msgstr "Pregled"
-
-msgid "submission.confirmSubmit"
-msgstr "Jeste li sigurni da želite ovaj članak poslati u časopis?"
 
 msgid "submission.submit.upload.description"
 msgstr ""
@@ -357,3 +321,20 @@ msgstr "Kopija članka \"{$ galley FormatName}\" je dostupna."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Kopija se pojavljuje u unosu izdanja"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Potreban je najmanje jedan autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Unesite naslov članka."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Unesite sažetak vašeg članka."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Vaš sažetak je predug. Skratite ga na dolje ograničeni broj riječi "
+"naznačenih za ovu sekciju."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Odaberite ulogu saradnika."

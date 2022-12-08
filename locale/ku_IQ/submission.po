@@ -29,9 +29,6 @@ msgstr "ڕۆڵی هاوبەشکار"
 msgid "submission.submit.privacyStatement"
 msgstr "دەستەواژەی تایبەتێتی"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "تکایە زمانی ناردنی توێژینەوەکەت دیاری بکە."
-
 msgid "submission.complete"
 msgstr "پەسەند کرا"
 
@@ -67,9 +64,6 @@ msgstr "پێکهاتەی توێژینەوەکەت دیاری بکە"
 
 msgid "submission.submit.userGroup"
 msgstr "توێژینەوەکە پێشکەش بکە بە ڕۆڵی…"
-
-msgid "submission.submit.title"
-msgstr "توێژینەوەیەک پێشکەش بکە"
 
 msgid "publication.scheduledIn"
 msgstr "بڵاو دەکرێتەوە لە <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -125,29 +119,6 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "شێوازی ڕێکخستنی گوتراوەکانت ڕێگە پێ نەدراوە."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "تکایە ڕۆڵی هاوبەشەکەت دیاری بکە."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "پوختەی توێژینەوەکەت زۆرە، تکایە ژمارەی وشەکان کەم بکەوە."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "تکایە پوختەی توێژینەوەکەت لێرە بنوسە."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "تکایە ناونیشانی توێژینەوەکەت بنوسە."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "ناوی یەکەم، ناسناو و ئیمەیڵی هەر توێژەرێک داوا کراوە."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "لانیکەم توێژەرێک داوا کراوە."
-
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"پێویستە تۆ داواکارییەکانی خوارەوە بخوێنیتەوە و قبوڵییان بکەیت پێش ئەوەی "
-"زیاتر بچیتە پێشەوە."
-
 msgid "submission.submit.submissionChecklist"
 msgstr "لیستی پێشکەشکراوەکان"
 
@@ -156,9 +127,6 @@ msgstr "لە چاوەڕوانیی پەسەندکردن دایە"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "ئەژماری زانیاریی ناسێنەری ئەم پێشکەشکردنە بار کرا."
-
-msgid "submission.confirmSubmit"
-msgstr "ئایا تۆ دڵنیایت لە پێشکەشکردنی توێژینەوەکەت؟"
 
 msgid "grid.action.pageProofApproved"
 msgstr ".ئەم بەڵگەیە پشتڕاست کرایەوە بۆ هەڵگرتنی لە تابلۆی چاپدا."
@@ -209,9 +177,6 @@ msgstr "کورتەی توێژینەوەکە نابێت لە  {$wordCount} وشە
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "توێژینەوەیەکی نوێ پێشکەش بکە لە"
-
-msgid "submission.submit.userGroupDescription"
-msgstr "ئەو ڕۆڵە هەڵبژێرە کە تۆ ئەم توێژینەوەی پێ پێشکەش دەکەیت."
 
 msgid "submission.submit.upload.description"
 msgstr ""
@@ -265,3 +230,18 @@ msgstr "{$section} (ناچالاک)"
 msgid "submission.viewingPreview"
 msgstr ""
 "ئەمە پێشبینینە و بڵاونەکراوەتەوە. <a href=\"{$url}\">پیشاندانی پێشکەشکردن</a>"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "لانیکەم توێژەرێک داوا کراوە."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "تکایە ناونیشانی توێژینەوەکەت بنوسە."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "تکایە پوختەی توێژینەوەکەت لێرە بنوسە."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "پوختەی توێژینەوەکەت زۆرە، تکایە ژمارەی وشەکان کەم بکەوە."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "تکایە ڕۆڵی هاوبەشەکەت دیاری بکە."

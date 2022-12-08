@@ -295,13 +295,6 @@ msgstr ""
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"अभी तक कोई अनुभाग संपादक नहीं हैं । मैनेजमेंट > सेटिंग > यूजर्स रोल्स फर्स्ट "
-"के जरिए कम से कम एक यूजर को इस रोल को जोड़ें।"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
 msgid "manager.sections.confirmDelete"
 msgstr "क्या आप वाकई इस अनुभाग को स्थायी रूप से हटाना चाहते हैं??"
 
@@ -1200,16 +1193,6 @@ msgstr "जमा करने के निर्देश"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"जर्नल को प्रस्तुत करने पर, लेखकों को सबसे पहले सबमिशन तैयारी चेकलिस्ट पर "
-"प्रत्येक आइटम को पूरा करने से पहले जांचने के लिए कहा जाता है। चेकलिस्ट लेखक "
-"दिशानिर्देशों में, जर्नल के बारे में भी दिखाई देती है। सूची को नीचे संपादित "
-"किया जा सकता है, लेकिन सूची में सभी वस्तुओं को एक चेकमार्क की आवश्यकता होगी, "
-"इससे पहले कि लेखक उनके प्रस्तुतिकरण के साथ आगे बढ़ सकें।"
-
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) endpunc: Different punctuation at the end
 msgid "manager.setup.submissions.description"
 msgstr "लेखक के दिशानिर्देश, कॉपीराइट और अनुक्रमण (पंजीकरण सहित)।"
 
@@ -2530,9 +2513,6 @@ msgstr ""
 
 msgid "manager.setup.submissions"
 msgstr "सबमिशन्स"
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "सबमिशन तैयारी चेकलिस्ट"
 
 msgid "manager.setup.subjectProvideExamples"
 msgstr ""

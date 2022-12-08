@@ -32,6 +32,8 @@ class InstallEmailTemplates extends \PKP\migration\upgrade\v3_4_0\InstallEmailTe
             'DISCUSSION_NOTIFICATION_REVIEW',
             'DISCUSSION_NOTIFICATION_COPYEDITING',
             'DISCUSSION_NOTIFICATION_PRODUCTION',
+            'SUBMISSION_SAVED_FOR_LATER',
+            'SUBMISSION_NEEDS_EDITOR',
         ];
     }
 

@@ -30,11 +30,6 @@ msgstr "Vai tiešām vēlaties neatgriezeniski dzēst šo sadaļu?"
 msgid "manager.sections.assigned"
 msgstr "Šīs sadaļas redaktori"
 
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Pagaidām nav sadaļu redaktoru. Vispirms pievienojiet šo lomu vismaz vienam "
-"lietotājam, izmantojot sadaļu Pārvaldība > Iestatījumi > Lietotāji un Lomas."
-
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Kopsavilkumi nav nepieciešami"
 

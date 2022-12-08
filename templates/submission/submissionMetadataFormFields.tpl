@@ -7,6 +7,8 @@
  *
  * Submission's metadata form fields. To be included in any form that wants to handle
  * submission metadata.
+ *
+ * @deprecated 3.4
  *}
 {capture assign="languagesField"}
 	{capture assign="sectionDescription"}{if !$readOnly}submission.submit.metadataForm.tip{/if}{/capture}

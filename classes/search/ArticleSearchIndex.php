@@ -320,7 +320,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     ->getMany();
 
                 foreach ($submissions as $submission) {
-                    if ($submission->getSubmissionProgress() == 0) { // Not incomplete
+                    if (!$submission->getSubmissionProgress()) { // Submission has been submitted
                         $this->submissionMetadataChanged($submission);
                         $this->submissionFilesChanged($submission);
                         $numIndexed++;

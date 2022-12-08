@@ -19,17 +19,12 @@ msgstr ""
 msgid "submission.submit.submissionChecklist"
 msgstr "Yazar Onay Butonları"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Yeni yazı girişi için yazarın bu butonları onaylamış ve kabul etmiş olmaları gerekmektedir."
-
+#, fuzzy
 msgid "submission.upload.fileContents"
 msgstr "Yüklenecek Dosya İçeriği"
 
 msgid "submission.upload.selectComponent"
 msgstr "Makale bileşeni seç"
-
-msgid "submission.submit.title"
-msgstr "Makale Gönder"
 
 msgid "submission.title"
 msgstr "Makale Başlığı"
@@ -48,9 +43,6 @@ msgstr "... olarak gönder."
 
 msgid "submission.issueEntry.submissionMetadata"
 msgstr "Yazı Girişi"
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Bu makaleyi gönderdiğiniz rolü seçin."
 
 msgid "submission.title.tip"
 msgstr ""
@@ -125,9 +117,6 @@ msgstr "Makale, multimedya, veri setleri, sanat eseri vb. dahil olmak üzere bu 
 msgid "submission.pageProofs"
 msgstr "Düzeltme"
 
-msgid "submission.confirmSubmit"
-msgstr "Bu yazıyı dergiye göndermek istediğinizden emin misiniz?"
-
 msgid "workflow.review.externalReview"
 msgstr "Değerlendir"
 
@@ -143,32 +132,11 @@ msgstr "Onaylandı"
 msgid "submission.incomplete"
 msgstr "Bekleyen Onay"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Lütfen bir gönderi dili seçiniz."
-
 msgid "submission.submit.privacyStatement"
 msgstr "Gizlilik Beyanı"
 
 msgid "submission.submit.contributorRole"
 msgstr "Katkı verenin rolü"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "En az bir yazar gerekli."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Her bir yazarın adı, soyadı ve e-posta adresi gereklidir."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Lütfen makalenizin başlığını giriniz."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Lütfen makalenizin özetini giriniz."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Özetiniz çok uzun. Lütfen bu bölüm için belirtilen kelime limitinin uygun düzenleyin."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Lütfen katkıda bulunanın rolünü seçin."
 
 msgid "submission.citationFormat.notFound"
 msgstr "İstenen alıntı formatı alınamadı."
@@ -413,3 +381,18 @@ msgstr "Dizgiyi Gör"
 
 msgid "galley.cantEditPublished"
 msgstr "Bu dizgi daha önce yayımlandığı için düzenlenemez."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "En az bir yazar gerekli."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Lütfen makalenizin başlığını giriniz."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Lütfen makalenizin özetini giriniz."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "Özetiniz çok uzun. Lütfen bu bölüm için belirtilen kelime limitinin uygun düzenleyin."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Lütfen katkıda bulunanın rolünü seçin."

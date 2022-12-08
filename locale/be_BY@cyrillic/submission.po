@@ -24,39 +24,15 @@ msgid "submission.citationFormat.notFound"
 msgstr ""
 "Запытаны фармат афармлення бібліяграфічных спасылак не можа быць атрыманы."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Калі ласка, выберыце ролю адпраўніка."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Калі ласка, увядзіце анатацыю Вашага артыкула."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Калі ласка, увядзіце назву Вашага артыкула."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Для кожнага аўтара неабходна ўказаць імя, прозвішча і адрас электроннай "
-"пошты."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Патрабуецца як мінімум адзін аўтар."
-
 msgid "submission.submit.contributorRole"
 msgstr "Роля адпраўніка"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Заява аб канфідэнцыяльнасці"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Вы павінны прачытаць і пацвердзіць, што вы выканалі ўсе пералічаныя ніжэй "
-"патрабаванні, перш чым працягнуць адпраўку матэрыялу."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Кантрольны спіс падрыхтоўкі матэрыялу для адпраўкі"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Калі ласка, выберыце мову матэрыялу для адпраўкі."
 
 msgid "submission.incomplete"
 msgstr "Чакае адабрэння"
@@ -75,9 +51,6 @@ msgstr "Адправіць на рэцэнзію"
 
 msgid "workflow.review.externalReview"
 msgstr "Рэцэнзаванне"
-
-msgid "submission.confirmSubmit"
-msgstr "Вы ўпэўнены, што хочаце адправіць гэты артыкул у часопіс?"
 
 msgid "submission.pageProofs"
 msgstr "Карэктура"
@@ -166,11 +139,17 @@ msgstr "Загаловак артыкула"
 msgid "submission.upload.selectComponent"
 msgstr "Выбраць кампанент артыкула"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Выберыце ролю, пад якой вы адпраўляеце артыкул."
-
 msgid "submission.submit.userGroup"
 msgstr "Адправіць з выкарыстаннем маёй ролі ..."
 
-msgid "submission.submit.title"
-msgstr "Адправіць артыкул"
+msgid "submission.submit.form.authorRequired"
+msgstr "Патрабуецца як мінімум адзін аўтар."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Калі ласка, увядзіце назву Вашага артыкула."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Калі ласка, увядзіце анатацыю Вашага артыкула."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Калі ласка, выберыце ролю адпраўніка."

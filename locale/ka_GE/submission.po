@@ -12,17 +12,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.submit.title"
-msgstr "სტატიის გაგზავნა"
-
 msgid "editor.submission.decision.sendExternalReview"
 msgstr "რეცენზიაზე გაგზავნა"
 
 msgid "workflow.review.externalReview"
 msgstr "რეცენზია"
-
-msgid "submission.confirmSubmit"
-msgstr "დარწმუნებული ხართ, რომ გსურთ ამ სტატიის გაგზავნა ჟურნალში?"
 
 msgid "submission.pageProofs"
 msgstr "კორექტურა"
@@ -119,9 +113,6 @@ msgstr "სტატიის სათაური"
 
 msgid "submission.upload.selectComponent"
 msgstr "სტატიის კომპონენტის არჩევა"
-
-msgid "submission.submit.userGroupDescription"
-msgstr "აირჩიეთ როლი, რომლითაც გაგზავნით სტატიას."
 
 msgid "submission.submit.userGroup"
 msgstr "გაგზავნა, ჩემი როლის გამოყენებით …"
@@ -318,42 +309,15 @@ msgid "submission.citationFormat.notFound"
 msgstr ""
 "ვერ მოხერხდა ბიბლიოგრაფიული ბმულების გაფორმების მოთხოვნილი ფორმატის მიღება."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "გთხოვთ, აირჩიეთ გამგზავნის როლი."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"თქვენი აბსტრაქტი ძალიან გრძელია. გთხოვთ, შეამცირეთ სიტყვების რაოდენობა "
-"საჭირო მინიმუმამდე."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "გთხოვთ, შეიტანოთ სტატიის აბსტრაქტი."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "გთხოვთ, შეიტანოთ თქვენი სტატიის სათაური."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "ყოველი ავტორისათვის საჭიროა სახელის, გვარისა და ელფოსტის მითითება."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "საჭიროა სულ მცირე ერთი ავტორი."
-
 msgid "submission.submit.contributorRole"
 msgstr "გამგზავნის როლი"
 
 msgid "submission.submit.privacyStatement"
 msgstr "კონფიდენციალურობის განაცხადი"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"თქვენ უნდა წაიკითხოთ და დაადასტუროთ, რომ შეასრულეთ ქვემოთ მოცემული ყველა "
-"მოთხოვნა, სანამ განაგრძობთ მასალის გაგზავნას."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "მასალის გაგზავნის საკონტროლო სია"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "გთხოვთ, აირჩიეთ გასაგზავნი მასალის ენა."
 
 msgid "submission.incomplete"
 msgstr "დაელოდეთ მიღებას"
@@ -402,3 +366,20 @@ msgstr ""
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "აირჩიეთ ფაილები, რომლებიც უნდა გაიგზავნოს განხილვის ეტაპზე."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "საჭიროა სულ მცირე ერთი ავტორი."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "გთხოვთ, შეიტანოთ თქვენი სტატიის სათაური."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "გთხოვთ, შეიტანოთ სტატიის აბსტრაქტი."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"თქვენი აბსტრაქტი ძალიან გრძელია. გთხოვთ, შეამცირეთ სიტყვების რაოდენობა "
+"საჭირო მინიმუმამდე."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "გთხოვთ, აირჩიეთ გამგზავნის როლი."

@@ -10,6 +10,8 @@
  * @class SubmissionMetadataFormImplementation
  * @ingroup submission
  *
+ * @deprecated 3.4
+ *
  * @brief This can be used by other forms that want to
  * implement submission metadata data and form operations.
  */

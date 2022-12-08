@@ -88,14 +88,8 @@ msgstr "Наслов на труд"
 msgid "submission.upload.selectComponent"
 msgstr "Избери дел од труд"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Одбери под кој капацитет го поднесувате овој труд."
-
 msgid "submission.submit.userGroup"
 msgstr "Поденси во моја улога како ..."
-
-msgid "submission.submit.title"
-msgstr "Поденси труд"
 
 msgid "publication.selectIssue"
 msgstr "Изберете број за планирање за објавување"
@@ -182,42 +176,15 @@ msgstr ""
 msgid "submission.citationFormat.notFound"
 msgstr "Бараниот формат за цитирање не може да се преземе."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Изберете ја улогата на соработникот."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Вашиот апстракт е предолг. Скратете го на според бројот на зборови што е "
-"наведено за овој дел."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Внесете го апстрактот на статијата."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Внесете го насловот на статијата."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Потребно е име, презиме и адреса на е-пошта на секој автор."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Потребен е барем еден автор."
-
 msgid "submission.submit.contributorRole"
 msgstr "Улога на соработникот"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Изјава за приватност"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Мора да прочитате и да потврдите дека сте ги завршиле барањата подолу пред "
-"да продолжите."
-
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Лисѕта на проверка за поднесување"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Изберете јазик на поднесокот."
 
 msgid "submission.incomplete"
 msgstr "Чека одобрување"
@@ -236,9 +203,6 @@ msgstr "Пратете на рецензија"
 
 msgid "workflow.review.externalReview"
 msgstr "Рецензија"
-
-msgid "submission.confirmSubmit"
-msgstr "Дали сте сигурни дека сакате да поднесете статијата до списнието?"
 
 msgid "submission.pageProofs"
 msgstr "Лектура"
@@ -365,3 +329,20 @@ msgid "publication.assignedToIssue"
 msgstr ""
 "Ова е доделено на <a href=\"{$issueUrl}\"> {$ issueName} </a>, но не е "
 "закажано за објавување."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Потребен е барем еден автор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Внесете го насловот на статијата."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Внесете го апстрактот на статијата."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Вашиот апстракт е предолг. Скратете го на според бројот на зборови што е "
+"наведено за овој дел."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Изберете ја улогата на соработникот."

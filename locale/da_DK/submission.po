@@ -19,23 +19,15 @@ msgstr ""
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Ny indsendelse"
 
-msgid "submission.submit.title"
-msgstr "Indsend en artikel"
-
 msgid "submission.submit.submissionChecklist"
 msgstr "Indsendelsestjekliste"
 
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Læs og acceptér nedenstående krav før du fortsætter."
-
+#, fuzzy
 msgid "submission.upload.fileContents"
 msgstr "Artikelmateriale"
 
 msgid "submission.upload.selectComponent"
 msgstr "Vælg artikelelement"
-
-msgid "submission.confirmSubmit"
-msgstr "Ønsker du at indsende denne artikel til tidsskriftet?"
 
 msgid "submission.submit.whatNext.description"
 msgstr "Tidsskriftet er blevet underrettet om din indsendelse, og du har modtaget en e-mailbekræftelse. Så snart redaktionen har gennemset indsendelsen, vil du blive kontaktet."
@@ -60,29 +52,11 @@ msgstr "Artiklens titel"
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Indsendelsens nummer-metadata blev opdateret."
 
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Vælg bidragyderens rolle."
-
 msgid "submission.submit.contributorRole"
 msgstr "Bidragyders rolle"
 
-msgid "submission.submit.form.authorRequired"
-msgstr "Mindst en forfatter er påkrævet."
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Vælg indsendelsessprog."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Indskriv artiklens titel."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Tilføj artiklens resumé."
-
 msgid "submission.submit.userGroup"
 msgstr "Indsend i min rolle som..."
-
-msgid "submission.submit.userGroupDescription"
-msgstr "Vælg i hvilken egenskab du indsender denne artikel."
 
 msgid "submission.title.tip"
 msgstr "Indsendelsestypen er som regel enten 'billede', 'tekst' eller anden multimedietype.  Vælg den, der er mest relevant i forbindelse med din indsendelse.  Eksempler kan ses her: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
@@ -156,9 +130,6 @@ msgstr "Mangler godkendelse"
 msgid "submission.submit.privacyStatement"
 msgstr "Erklæring om beskyttelse af personlige oplysninger"
 
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Fornavn, efternavn og e-mailadresse for hver forfatter er påkrævet."
-
 msgid "submission.citationFormat.notFound"
 msgstr "Det ønskede citationsformat kunne ikke genfindes."
 
@@ -167,11 +138,6 @@ msgstr "Enhver sektion"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Resumeet skal være på {$wordCount} ord eller derunder."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Dit resumé er for langt. Forkort det venligst til under den ordgrænse, der "
-"er angivet for denne sektion."
 
 msgid "publication.scheduledIn"
 msgstr ""
@@ -414,3 +380,20 @@ msgid "galley.cantEditPublished"
 msgstr ""
 "Denne publiceringsklare fil kan ikke ændres da den allerede er blevet "
 "publiceret."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Mindst en forfatter er påkrævet."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Indskriv artiklens titel."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Tilføj artiklens resumé."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Dit resumé er for langt. Forkort det venligst til under den ordgrænse, der "
+"er angivet for denne sektion."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vælg bidragyderens rolle."

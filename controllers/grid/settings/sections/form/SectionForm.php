@@ -16,12 +16,10 @@
 namespace APP\controllers\grid\settings\sections\form;
 
 use APP\core\Application;
-use APP\facades\Repo;
+use APP\journal\SectionDAO;
 use APP\template\TemplateManager;
 use PKP\controllers\grid\settings\sections\form\PKPSectionForm;
 use PKP\db\DAORegistry;
-use PKP\security\Role;
-use PKP\security\Validation;
 
 class SectionForm extends PKPSectionForm
 {
@@ -57,34 +55,24 @@ class SectionForm extends PKPSectionForm
         $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $sectionId = $this->getSectionId();
         if ($sectionId) {
-            $section = $sectionDao->getById($sectionId, $journal->getId());
+            $this->section = $sectionDao->getById($sectionId, $journal->getId());
         }
 
-        if (isset($section)) {
+        if (isset($this->section)) {
             $this->setData([
-                'title' => $section->getTitle(null), // Localized
-                'abbrev' => $section->getAbbrev(null), // Localized
-                'reviewFormId' => $section->getReviewFormId(),
-                'isInactive' => $section->getIsInactive(),
-                'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
-                'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
-                'abstractsNotRequired' => $section->getAbstractsNotRequired(),
-                'identifyType' => $section->getIdentifyType(null), // Localized
-                'editorRestriction' => $section->getEditorRestricted(),
-                'hideTitle' => $section->getHideTitle(),
-                'hideAuthor' => $section->getHideAuthor(),
-                'policy' => $section->getPolicy(null), // Localized
-                'wordCount' => $section->getAbstractWordCount(),
-                'assignedSubeditors' => Repo::user()->getCollector()
-                    ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
-                    ->filterByRoleIds([Role::ROLE_ID_SUB_EDITOR])
-                    ->assignedToSectionIds([$this->getSectionId()])
-                    ->getIds()
-                    ->toArray()
-            ]);
-        } else {
-            $this->setData([
-                'assignedSubeditors' => [],
+                'title' => $this->section->getTitle(null), // Localized
+                'abbrev' => $this->section->getAbbrev(null), // Localized
+                'reviewFormId' => $this->section->getReviewFormId(),
+                'isInactive' => $this->section->getIsInactive(),
+                'metaIndexed' => !$this->section->getMetaIndexed(), // #2066: Inverted
+                'metaReviewed' => !$this->section->getMetaReviewed(), // #2066: Inverted
+                'abstractsNotRequired' => $this->section->getAbstractsNotRequired(),
+                'identifyType' => $this->section->getIdentifyType(null), // Localized
+                'editorRestriction' => $this->section->getEditorRestricted(),
+                'hideTitle' => $this->section->getHideTitle(),
+                'hideAuthor' => $this->section->getHideAuthor(),
+                'policy' => $this->section->getPolicy(null), // Localized
+                'wordCount' => $this->section->getAbstractWordCount(),
             ]);
         }
 
