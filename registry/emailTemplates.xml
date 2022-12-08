@@ -77,4 +77,7 @@
 	<email key="EDITORIAL_REMINDER" can_disable="0" subject="emails.editorialReminder.subject" description="emails.editorialReminder.description" body="emails.editorialReminder.body"/>
 	<email key="SUBMISSION_SAVED_FOR_LATER" subject="emails.submissionSavedForLater.subject" body="emails.submissionSavedForLater.body"/>
 	<email key="SUBMISSION_NEEDS_EDITOR" subject="emails.submissionNeedsEditor.subject" body="emails.submissionNeedsEditor.body"/>
+	<email key="EDITORIAL_REMINDER" name="mailable.editorialReminder.name" subject="emails.editorialReminder.subject" body="emails.editorialReminder.body"/>
+	<email key="SUBMISSION_SAVED_FOR_LATER" name="mailable.submissionSavedForLater.name" subject="emails.submissionSavedForLater.subject" body="emails.submissionSavedForLater.body"/>
+	<email key="SUBMISSION_NEEDS_EDITOR" name="mailable.submissionNeedsEditor.name" subject="emails.submissionNeedsEditor.subject" body="emails.submissionNeedsEditor.body"/>
 </emails>
