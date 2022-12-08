@@ -32,6 +32,8 @@
 	<email key="REVIEW_ACK" name="mailable.decision.notifyReviewer.name" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
 	<email key="REVIEW_REMIND" name="mailable.decision.notifyReviewer.name" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
 	<email key="REVIEW_REMIND_AUTO" name="mailable.reviewRemindAuto.name" subject="emails.reviewRemindAuto.subject" body="emails.reviewRemindAuto.body"/>
+	<email key="REVIEW_COMPLETE" name="mailable.reviewComplete.name" subject="emails.reviewComplete.subject" body="emails.reviewComplete.body"/>
+	<email key="REVIEW_EDIT" name="mailable.reviewEdit.name" subject="emails.reviewEdit.subject" body="emails.reviewEdit.body"/>
 	<email key="EDITOR_DECISION_ACCEPT" name="mailable.decision.accept.notifyAuthor.name" subject="emails.editorDecisionAccept.subject" body="emails.editorDecisionAccept.body"/>
 	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" name="mailable.decision.sendExternalReview.notifyAuthor.name" subject="emails.editorDecisionSendToExternal.subject" body="emails.editorDecisionSendToExternal.body"/>
 	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" name="mailable.decision.sendToProduction.notifyAuthor.name" subject="emails.editorDecisionSendToProduction.subject" body="emails.editorDecisionSendToProduction.body"/>
@@ -73,6 +75,4 @@
 	<email key="LAYOUT_REQUEST" name="mailable.layoutRequest.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutRequest.subject" body="emails.layoutRequest.body"/>
 	<email key="LAYOUT_COMPLETE" name="mailable.layoutComplete.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutComplete.subject" body="emails.layoutComplete.body"/>
 	<email key="VERSION_CREATED" name="mailable.versionCreated.name" subject="emails.versionCreated.subject" body="emails.versionCreated.body"/>
-	<email key="REVIEW_COMPLETE" name="mailable.reviewComplete.name" subject="emails.reviewComplete.subject" body="emails.reviewComplete.body"/>
-	<email key="REVIEW_EDITED" name="mailable.reviewEdited.name" subject="emails.reviewEdited.subject" body="emails.reviewEdited.body"/>
 </emails>
