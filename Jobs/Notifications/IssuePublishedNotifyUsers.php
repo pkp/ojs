@@ -30,7 +30,7 @@ use PKP\emailTemplate\EmailTemplate;
 use PKP\Support\Jobs\BaseJob;
 use PKP\user\User;
 
-class IssuePublishedMailUsers extends BaseJob
+class IssuePublishedNotifyUsers extends BaseJob
 {
     use Batchable;
 

@@ -27,7 +27,7 @@ use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Collector;
-use APP\Jobs\Notifications\IssuePublishedMailUsers;
+use APP\Jobs\Notifications\IssuePublishedNotifyUsers;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\publication\Publication;
@@ -619,24 +619,21 @@ class IssueGridHandler extends GridHandler
                 [$contextId]
             );
 
-            [$userIdsToNotify, $userIdsToNotifyAndMail] = [
-                $userIdsToNotify->diff($userIdsToMail),
-                $userIdsToNotify->intersect($userIdsToMail)
-            ];
+            $userIdsToNotifyAndMail = $userIdsToNotify->intersect($userIdsToMail);
+            $userIdsToNotify = $userIdsToNotify->diff($userIdsToMail);
 
             $jobs = [];
             foreach ($userIdsToNotify->chunk(PKPNotification::NOTIFICATION_CHUNK_SIZE_LIMIT) as $notifyUserIds) {
-                $notifyJob = new IssuePublishedMailUsers(
+                $jobs[] = new IssuePublishedNotifyUsers(
                     $notifyUserIds,
                     $contextId,
                     $issue,
                     Locale::getLocale(),
                 );
-                $jobs[] = $notifyJob;
             }
 
             foreach ($userIdsToNotifyAndMail->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT) as $mailUserIds) {
-                $mailJob = new IssuePublishedMailUsers(
+                $jobs[] = new IssuePublishedNotifyUsers(
                     $mailUserIds,
                     $contextId,
                     $issue,
@@ -644,7 +641,6 @@ class IssueGridHandler extends GridHandler
                     $request->getUser(),
                     true
                 );
-                $jobs[] = $mailJob;
             }
             Bus::batch($jobs)->dispatch();
         }
