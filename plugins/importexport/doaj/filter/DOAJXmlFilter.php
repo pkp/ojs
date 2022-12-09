@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJXmlFilter
+ *
  * @brief Class that converts an Article to a DOAJ XML document.
  */
 
@@ -157,12 +158,16 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 }
             }
             // Authors and affiliations
-            $authorsNode = $doc->createElement('authors');
-            $recordNode->appendChild($authorsNode);
-            $affilList = $this->createAffiliationsList((array) $publication->getData('authors'), $publication);
-            foreach ((array) $publication->getData('authors') as $author) {
-                $authorsNode->appendChild($this->createAuthorNode($doc, $publication, $author, $affilList));
+            $authors = $publication->getData('authors');
+            if (!empty($authors)) {
+                $authorsNode = $doc->createElement('authors');
+                $recordNode->appendChild($authorsNode);
+                $affilList = $this->createAffiliationsList($authors, $publication);
+                foreach ($authors as $author) {
+                    $authorsNode->appendChild($this->createAuthorNode($doc, $publication, $author, $affilList));
+                }
             }
+
             if (!empty($affilList[0])) {
                 $affilsNode = $doc->createElement('affiliationsList');
                 $recordNode->appendChild($affilsNode);

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJJsonFilter
+ *
  * @ingroup plugins_importexport_doaj
  *
  * @brief Class that converts an Article to a DOAJ JSON string.
@@ -154,16 +155,20 @@ class DOAJJsonFilter extends PKPImportExportFilter
             'content_type' => 'html'
         ];
         // Authors: name and affiliation
-        $article['bibjson']['author'] = [];
         $articleAuthors = Repo::author()->getSubmissionAuthors($pubObject);
-        foreach ($articleAuthors as $articleAuthor) {
-            $author = ['name' => $articleAuthor->getFullName(false)];
-            $affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());
-            if (!empty($affiliation)) {
-                $author['affiliation'] = $affiliation;
+        if ($articleAuthors->isNotEmpty()) {
+            $article['bibjson']['author'] = [];
+
+            foreach ($articleAuthors as $articleAuthor) {
+                $author = ['name' => $articleAuthor->getFullName(false)];
+                $affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());
+                if (!empty($affiliation)) {
+                    $author['affiliation'] = $affiliation;
+                }
+                $article['bibjson']['author'][] = $author;
             }
-            $article['bibjson']['author'][] = $author;
         }
+
         // Abstract
         $abstract = $pubObject->getAbstract($pubObject->getLocale());
         if (!empty($abstract)) {
