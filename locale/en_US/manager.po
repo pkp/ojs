@@ -2140,3 +2140,11 @@ msgstr "Archive Request"
 msgid "mailable.lockssNewArchive.name"
 msgstr "Archive Request (New)"
 
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Publication Version Notification"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"This email automatically notifies assigned editors about new version of the "
+"publication"
+
