@@ -44,10 +44,10 @@ describe('Data suite: Ccorino', function() {
 		cy.getCsrfToken();
 		cy.window()
 			.then(() => {
-				return cy.createSubmissionWithApi(submission, csrfToken);
+				return cy.createSubmissionWithApi(submission, this.csrfToken);
 			})
 			.then(xhr => {
-				return cy.submitSubmissionWithApi(submission.id, csrfToken);
+				return cy.submitSubmissionWithApi(submission.id, this.csrfToken);
 			});
 	});
 
