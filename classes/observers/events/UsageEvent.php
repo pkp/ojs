@@ -38,9 +38,9 @@ class UsageEvent extends \PKP\observers\events\UsageEvent
         Issue $issue = null,
         IssueGalley $issueGalley = null
     ) {
-        parent::__construct($assocType, $context, $submission, $galley, $submissionFile);
         $this->issue = $issue;
         $this->issueGalley = $issueGalley;
+        parent::__construct($assocType, $context, $submission, $galley, $submissionFile);
     }
 
     /**
