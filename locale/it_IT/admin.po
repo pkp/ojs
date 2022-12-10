@@ -1,12 +1,13 @@
 # Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
 # Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
+# Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2022-10-18 10:39+0000\n"
-"Last-Translator: Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>\n"
+"PO-Revision-Date: 2022-12-10 20:02+0000\n"
+"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/admin/it_IT/"
 ">\n"
 "Language: it_IT\n"
@@ -17,7 +18,7 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
-msgstr "Riviste"
+msgstr "Riviste ospitate"
 
 msgid "admin.settings.redirect"
 msgstr "Redirect alla rivista"
