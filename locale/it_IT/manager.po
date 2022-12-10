@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2022-12-07 18:02+0000\n"
+"PO-Revision-Date: 2022-12-10 17:02+0000\n"
 "Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "it_IT/>\n"
@@ -386,9 +386,10 @@ msgstr "Firma delle email"
 msgid "manager.setup.emailSignature"
 msgstr "Firma"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista."
+msgstr ""
+"Le e-mail inviate automaticamente per conto della Rivista avranno la "
+"seguente firma."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Abilita gli amministratori della rivista ad aggiungere avvisi"
@@ -680,9 +681,10 @@ msgstr "Accesso per i revisori"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Abilita l'accesso diretto per i revisori"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti."
+msgstr ""
+"Ai revisori può essere inviato un link sicuro nell'e-mail di invito, che li "
+"farà accedere automaticamente quando faranno clic sul link."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Voto ai revisori"
@@ -1361,9 +1363,10 @@ msgstr "Categorie"
 msgid "manager.payment.options.purchaseIssueFee"
 msgstr "Acquista il fascicolo"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene."
+msgstr ""
+"Prima di cancellare questa sezione, devi spostare in un'altra tutti gli "
+"articoli pubblicati."
 
 msgid "manager.setup.categories.description"
 msgstr "Scegli le categorie più appropriate nella lista sottostante. I lettori potranno navigare le riviste ospitate nel sito per categorie."
@@ -2078,3 +2081,72 @@ msgid "manager.setup.enableDois.description"
 msgstr ""
 "Consentire l'assegnazione dei Digital Object Identifier (DOI) ai lavori "
 "pubblicati in questa rivista."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Il numero di visualizzazioni della TOC e di download della bozza del numero "
+"per ogni uscita."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Scarica i fascicoli"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} di {$total} fascicoli"
+
+msgid "stats.issueStats"
+msgstr "Satistiche sul fascicolo"
+
+msgid "stats.issues.details"
+msgstr "Visite e Downloads"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Cerca titolo, volume e numero"
+
+msgid "stats.issues.none"
+msgstr ""
+"Non sono stati riscontrati problemi con le statistiche d'uso che "
+"corrispondono a questi parametri."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Scaricate un foglio di calcolo CSV/Excel con le statistiche di utilizzo dei "
+"problemi corrispondenti ai seguenti parametri."
+
+msgid "stats.contextStats"
+msgstr "Statistiche della rivista"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
+"Per poter sottoscrivere nuovi abbonamenti è necessario creare un'istituzione."
+
+msgid "stats.context.tooltip.text"
+msgstr ""
+"Numero di visitatori che visualizzano la pagina dell'indice della rivista."
+
+msgid "stats.context.tooltip.label"
+msgstr "Informazioni sulle statistiche della rivista"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Il numero di visualizzazioni della pagina dell'indice della rivista."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Scarica Rivista"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Dopo aver raggiunto la fase di copyediting"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Utilizzare i modelli predefiniti.<br />%j.v%vi%i per i fascicoli<br /"
+">%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per le gabbie."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Istituzione"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Seleziona un'istituzione valida."
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Scaricare un foglio di calcolo CSV/Excel con le statistiche di utilizzo di "
+"questa rivista in base ai seguenti parametri."
