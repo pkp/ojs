@@ -31,7 +31,7 @@ describe('Orcid tests', function () {
 			cy.get('input[id^=orcidClientId]').click();
 			cy.get('input[id^=orcidClientId]').clear().type('APP-T0KMLIZMQ8FMWNVL');
 			cy.get('input[id^=orcidClientSecret]').click();
-			cy.get('input[id^=orcidClientSecret]').clear().type('288de1f5-2b3a-4223-9783-c7e76c96f6c1');
+			cy.get('input[id^=orcidClientSecret]').clear().type('288de1f5-2b3a-4223-9783-c7e76c96f5b0');
 			cy.get('input[id^=city]').click();
 			cy.get('input[id^=city]').clear().type('Kabul');
 			cy.get('select[id^=logLevel]').select('All');
@@ -43,7 +43,7 @@ describe('Orcid tests', function () {
 		cy.get('input[id^=select-cell-orcidprofileplugin]').should('be.checked');
 
 
-	})*/
+	})
 
 	it('Add co author', function () {
 		cy.login('dbarnes', null, 'publicknowledge');
@@ -52,8 +52,8 @@ describe('Orcid tests', function () {
 		cy.get('button#contributors-button').click();
 
 		cy.get('tr[id^=component-grid-users-author-authorgrid-row-1]').within(() => {
-				cy.get('.show_extras').click();
-				cy.get('a[id^=component-grid-users-author-authorgrid-row-1-editAuthor-button]').click();
+			cy.get('.show_extras').click();
+			cy.get('a[id^=component-grid-users-author-authorgrid-row-1-editAuthor-button]').click();
 		})
 
 		cy.get('.pkp_modal_panel').within(() => {
@@ -62,7 +62,41 @@ describe('Orcid tests', function () {
 
 		})
 
-;
 
 	})
+*/
+
+	const getIframeBodyById = (id) => {
+		return cy.get('iframe[id="' + id + '"]')
+			.its('0.contentDocument.body').should('not.be.empty')
+			.then(cy.wrap)
+	}
+
+
+	it('Verify Orcid User by Email', function () {
+		const user = 'amwandenga';
+		const publicMailBox = 'https://mailinator.com/v4/public/inboxes.jsp?to=' + user;
+		cy.visit(publicMailBox)
+		// open  the latest email
+		cy.get('.os-content > .table-striped > tbody > .ng-scope > .ng-binding:nth-child(3)')
+			.first()
+			.should('be.visible')
+			.click()
+		// get email  from the iframe
+		getIframeBodyById('html_msg_body')
+			.contains('Register or Connect your ORCID iD').should('have.attr', 'href')
+			.then((href) => {
+				// cross domain request
+				cy.origin('https://sandbox.orcid.org', {args: {href}}, ({href}) => {
+					cy.visit('/signin')
+					cy.wait(10)
+					cy.get('[id=username]').type("amwandenga@mailinator.com")
+					cy.get('[id=password]').type("amwandenga1")
+					cy.get('[id=signin-button]').click()
+					cy.wait(10000)
+					//cy.visit(href)
+				})
+			})
+	})
+
 })
