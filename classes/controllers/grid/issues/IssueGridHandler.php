@@ -638,8 +638,7 @@ class IssueGridHandler extends GridHandler
                     $contextId,
                     $issue,
                     Locale::getLocale(),
-                    $request->getUser(),
-                    true
+                    $request->getUser()
                 );
             }
             Bus::batch($jobs)->dispatch();

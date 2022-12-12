@@ -24,7 +24,6 @@ use APP\notification\NotificationManager;
 use Illuminate\Bus\Batchable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
-use InvalidArgumentException;
 use PKP\context\Context;
 use PKP\emailTemplate\EmailTemplate;
 use PKP\Support\Jobs\BaseJob;
@@ -39,19 +38,15 @@ class IssuePublishedNotifyUsers extends BaseJob
     protected Issue $issue;
     protected string $locale;
 
-    // Sender of the email; should be set if sendEmail is true
+    // The sender of the email
     protected ?User $sender;
-
-    // Whether to send notification email
-    protected bool $sendEmail = false;
 
     public function __construct(
         Collection $recipientIds,
         int $contextId,
         Issue $issue,
         string $locale,
-        ?User $sender = null,
-        bool $sendEmail = false
+        ?User $sender = null // Leave null to not send an email
     ) {
         parent::__construct();
 
@@ -60,11 +55,6 @@ class IssuePublishedNotifyUsers extends BaseJob
         $this->issue = $issue;
         $this->locale = $locale;
         $this->sender = $sender;
-        $this->sendEmail = $sendEmail;
-
-        if ($this->sendEmail && is_null($this->sender)) {
-            throw new InvalidArgumentException('Sender should be set to send an email');
-        }
     }
 
     public function handle()
@@ -88,7 +78,7 @@ class IssuePublishedNotifyUsers extends BaseJob
                 $this->issue->getId()
             );
 
-            if (!$this->sendEmail) {
+            if (!$this->sender) {
                 continue;
             }
 
