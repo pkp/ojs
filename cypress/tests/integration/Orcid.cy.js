@@ -65,7 +65,6 @@ describe('Orcid tests', function () {
 
 	})
 
-
 	const getIframeBodyById = (id) => {
 		return cy.get('iframe[id="' + id + '"]')
 			.its('0.contentDocument.body').should('not.be.empty')
