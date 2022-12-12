@@ -13,20 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Nieuw bericht van {$contextName}"
-
-#, fuzzy
-msgid "emails.notification.body"
-msgstr ""
-"U heeft een nieuw bericht van {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Bevestiging wachtwoord herstellen"
 

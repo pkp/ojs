@@ -96,20 +96,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Потврда за ресетирање на лозинката"
 
-msgid "emails.notification.body"
-msgstr ""
-"Имате ново известување од {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Линк: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr "Ново известување од {$contextName}"
-
 msgid "emails.lockssExistingArchive.subject"
 msgstr "Барање за архивирање за {$contextName}"
 

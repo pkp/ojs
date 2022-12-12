@@ -13,28 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}
-# (pofilter) simplecaps: Different capitalization
-msgid "emails.notification.subject"
-msgstr "से नई अधिसूचना {$contextName}"
-
-#, fuzzy
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}, {$url}, {$notificationContents}, {$signature}
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) xmltags: Added XML tags
-msgid "emails.notification.body"
-msgstr ""
-"आपके पास एक नई सूचना है {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 # (pofilter) endpunc: Different punctuation at the end
 msgid "emails.passwordResetConfirm.body"
 msgstr ""

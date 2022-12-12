@@ -15,20 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Notifikasi baru dari {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Anda memperoleh satu notifikasi baru dari {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Konfirmasi Reset Sandi"
 

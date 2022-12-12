@@ -16,20 +16,6 @@ msgstr ""
 "%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Novo obvestilo od {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Imate novo obvestilo od {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Povezava: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.notificationMaillist.subject"
 msgstr "Novo obvestilo od {$siteTitle}"
 

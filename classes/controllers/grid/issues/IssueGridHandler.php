@@ -27,7 +27,7 @@ use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Collector;
-use APP\Jobs\Notifications\IssuePublishedMailUsers;
+use APP\Jobs\Notifications\IssuePublishedNotifyUsers;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\publication\Publication;
@@ -46,6 +46,7 @@ use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\mail\Mailer;
 use PKP\notification\NotificationSubscriptionSettingsDAO;
+use PKP\notification\PKPNotification;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -598,24 +599,47 @@ class IssueGridHandler extends GridHandler
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
         if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
+
+            // Notify users
             /** @var NotificationSubscriptionSettingsDAO $notificationSubscriptionSettingsDao */
             $notificationSubscriptionSettingsDao = DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');
 
-            $userIdsToMail = $notificationSubscriptionSettingsDao->getSubscribedUserIds(
-                [NotificationSubscriptionSettingsDAO::BLOCKED_EMAIL_NOTIFICATION_KEY],
+            $userIdsToNotify = $notificationSubscriptionSettingsDao->getSubscribedUserIds(
+                [NotificationSubscriptionSettingsDAO::BLOCKED_NOTIFICATION_KEY],
                 [Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE],
                 [$contextId]
             );
 
+            $userIdsToMail = $notificationSubscriptionSettingsDao->getSubscribedUserIds(
+                [
+                    NotificationSubscriptionSettingsDAO::BLOCKED_NOTIFICATION_KEY,
+                    NotificationSubscriptionSettingsDAO::BLOCKED_EMAIL_NOTIFICATION_KEY
+                ],
+                [Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE],
+                [$contextId]
+            );
+
+            $userIdsToNotifyAndMail = $userIdsToNotify->intersect($userIdsToMail);
+            $userIdsToNotify = $userIdsToNotify->diff($userIdsToMail);
+
             $jobs = [];
-            foreach ($userIdsToMail->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT) as $mailUserIds) {
-                $mailJob = new IssuePublishedMailUsers(
+            foreach ($userIdsToNotify->chunk(PKPNotification::NOTIFICATION_CHUNK_SIZE_LIMIT) as $notifyUserIds) {
+                $jobs[] = new IssuePublishedNotifyUsers(
+                    $notifyUserIds,
+                    $contextId,
+                    $issue,
+                    Locale::getLocale(),
+                );
+            }
+
+            foreach ($userIdsToNotifyAndMail->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT) as $mailUserIds) {
+                $jobs[] = new IssuePublishedNotifyUsers(
                     $mailUserIds,
                     $contextId,
-                    $request->getUser(),
-                    Locale::getLocale()
+                    $issue,
+                    Locale::getLocale(),
+                    $request->getUser()
                 );
-                $jobs[] = $mailJob;
             }
             Bus::batch($jobs)->dispatch();
         }

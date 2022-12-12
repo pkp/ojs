@@ -245,20 +245,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Գաղտնաբառի վերակայման հաստատում"
 
-msgid "emails.notification.body"
-msgstr ""
-"Ունեք նոր ծանուցում {$contextName} -ից:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr "Նոր ծանուցում {$contextName} -ից"
-
 msgid "emails.reviewRequest.subject"
 msgstr "Գրախոսման հրավեր"
 

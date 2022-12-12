@@ -14,21 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.notification.subject"
-msgstr "来自{$contextName}的新通知"
-
-#, fuzzy
-msgid "emails.notification.body"
-msgstr ""
-"您有一条来自{$contextName}的新通知:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"链接：{$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "密码重置确认"
 

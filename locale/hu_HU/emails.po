@@ -16,19 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Új értesítés a(z) {$contextName} oldaltól"
-
-msgid "emails.notification.body"
-msgstr ""
-"Önnek új értesítése van a(z) {$contextName} oldaltól:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Link: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Jelszó visszaállítás megerősítése"
 

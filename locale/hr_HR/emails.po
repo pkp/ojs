@@ -611,20 +611,6 @@ msgstr ""
 msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Potvrda o prijavi članka"
 
-msgid "emails.notification.body"
-msgstr ""
-"Imate novu obavijest od časopisa {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Poveznica: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
-msgid "emails.notification.subject"
-msgstr "Nova obavijest od časopisa {$contextName}"
-
 msgid "emails.announcement.subject"
 msgstr "{$title}"
 

@@ -14,20 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.notification.subject"
-msgstr "Uusi ilmoitus sivustolta {$contextName}"
-
-msgid "emails.notification.body"
-msgstr ""
-"Teille on uusi ilmoitus sivustolta {$contextName}:<br/>\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Linkki: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}\n"
-"<hr />{$unsubscribeLink}"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Vahvista salasanan vaihtaminen"
 

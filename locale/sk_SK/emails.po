@@ -484,19 +484,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Potvrdenie o resetovaní hesla"
 
-msgid "emails.notification.body"
-msgstr ""
-"Máte nové oznámenie od {$contextName}:<br />\n"
-"<br />\n"
-"{$notificationContents}<br />\n"
-"<br />\n"
-"Odkaz: {$notificationUrl}<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
-msgid "emails.notification.subject"
-msgstr "Nové oznámenie od {$contextName}"
-
 msgid "emails.openAccessNotify.subject"
 msgstr "Teraz otvorený prístup k číslu"
 
