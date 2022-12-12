@@ -44,7 +44,7 @@ describe('Orcid tests', function () {
 
 
 	})
-
+    */
 	it('Add co author', function () {
 		cy.login('dbarnes', null, 'publicknowledge');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submissionId);
@@ -61,10 +61,10 @@ describe('Orcid tests', function () {
 			cy.get('button[id^=submitFormButton]').click();
 
 		})
-
+		cy.wait(10000);
 
 	})
-*/
+
 
 	const getIframeBodyById = (id) => {
 		return cy.get('iframe[id="' + id + '"]')
@@ -76,6 +76,7 @@ describe('Orcid tests', function () {
 	it('Verify Orcid User by Email', function () {
 		const user = 'amwandenga';
 		const publicMailBox = 'https://mailinator.com/v4/public/inboxes.jsp?to=' + user;
+
 		cy.visit(publicMailBox)
 		// open  the latest email
 		cy.get('.os-content > .table-striped > tbody > .ng-scope > .ng-binding:nth-child(3)')
@@ -89,9 +90,10 @@ describe('Orcid tests', function () {
 				// cross domain request
 				cy.origin('https://sandbox.orcid.org', {args: {href}}, ({href}) => {
 					cy.visit('/signin')
-					cy.wait(10)
 					cy.get('[id=username]').type("amwandenga@mailinator.com")
+					cy.wait(5000)
 					cy.get('[id=password]').type("amwandenga1")
+					cy.wait(5000)
 					cy.get('[id=signin-button]').click()
 					cy.wait(10000)
 					//cy.visit(href)
