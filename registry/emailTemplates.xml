@@ -27,10 +27,10 @@
 	<email key="REVIEW_REQUEST" name="mailable.reviewRequest.name" subject="emails.reviewRequest.subject" body="emails.reviewRequest.body"/>
 	<email key="REVIEW_REQUEST_SUBSEQUENT" name="mailable.reviewRequestSubsequent.name" subject="emails.reviewRequestSubsequent.subject" body="emails.reviewRequestSubsequent.body"/>
 	<email key="REVIEW_RESPONSE_OVERDUE_AUTO" name="mailable.reviewResponseOverdueAuto.name" subject="emails.reviewResponseOverdueAuto.subject" body="emails.reviewResponseOverdueAuto.body"/>
-	<email key="REVIEW_CONFIRM" name="mailable.reviewConfirm.name" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
+	<email key="REVIEW_CONFIRM" name="mailable.reviewAcknowledgement.name" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
 	<email key="REVIEW_DECLINE" name="mailable.reviewDecline.name" subject="emails.reviewDecline.subject" body="emails.reviewDecline.body"/>
-	<email key="REVIEW_ACK" name="mailable.decision.notifyReviewer.name" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
-	<email key="REVIEW_REMIND" name="mailable.decision.notifyReviewer.name" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
+	<email key="REVIEW_ACK" name="mailable.decision.reviewAck.name" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
+	<email key="REVIEW_REMIND" name="mailable.reviewRemind.name" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
 	<email key="REVIEW_REMIND_AUTO" name="mailable.reviewRemindAuto.name" subject="emails.reviewRemindAuto.subject" body="emails.reviewRemindAuto.body"/>
 	<email key="REVIEW_COMPLETE" name="mailable.reviewComplete.name" subject="emails.reviewComplete.subject" body="emails.reviewComplete.body"/>
 	<email key="REVIEW_EDIT" name="mailable.reviewEdit.name" subject="emails.reviewEdit.subject" body="emails.reviewEdit.body"/>
@@ -43,6 +43,7 @@
 	<email key="EDITOR_DECISION_INITIAL_DECLINE" name="mailable.decision.initialDecline.notifyAuthor.name" subject="emails.editorDecisionInitialDecline.subject" body="emails.editorDecisionInitialDecline.body"/>
 	<email key="EDITOR_RECOMMENDATION" name="mailable.decision.recommendation.notifyEditors.name" subject="emails.editorRecommendation.subject" body="emails.editorRecommendation.body"/>
 	<email key="EDITOR_DECISION_NOTIFY_OTHER_AUTHORS" name="mailable.decision.notifyOtherAuthors.name" subject="emails.decision.notifyOtherAuthors.subject" body="emails.decision.notifyOtherAuthors.body"/>
+	<email key="EDITOR_DECISION_NOTIFY_REVIEWERS" name="mailable.decision.notifyReviewer.name" subject="emails.decision.notifyReviewers.subject" body="emails.decision.notifyReviewers.body"/>
 	<email key="EDITOR_DECISION_NEW_ROUND" name="mailable.decision.newReviewRound.notifyAuthor.name" subject="emails.editorDecisionNewReviewRound.subject" body="emails.editorDecisionNewReviewRound.body"/>
 	<email key="EDITOR_DECISION_REVERT_DECLINE" name="mailable.decision.revertDecline.notifyAuthor.name" subject="emails.editorDecisionRevertDecline.subject" body="emails.editorDecisionRevertDecline.body"/>
 	<email key="EDITOR_DECISION_REVERT_INITIAL_DECLINE" name="mailable.decision.revertInitialDecline.notifyAuthor.name" subject="emails.editorDecisionRevertInitialDecline.subject" body="emails.editorDecisionRevertInitialDecline.body"/>
