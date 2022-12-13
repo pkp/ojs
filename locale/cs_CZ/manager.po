@@ -2666,3 +2666,28 @@ msgstr "Požadavek na archiv (nový)"
 
 msgid "manager.manageEmails.description"
 msgstr "Upravit zprávy odeslané v e-mailech z tohoto deníku."
+
+msgid "manager.setup.submissionPreparationChecklist"
+msgstr "Zaškrtávací seznam pro přípravu příspěvku"
+
+msgid "manager.setup.submissionPreparationChecklistDescription"
+msgstr ""
+"V průběhu podávání příspěvku do časopisu jsou autoři nejdříve požádáni, aby "
+"zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu příspěvku a "
+"potvrdili tak jejich splnění; poté mohou postupovat dále. Zaškrtávací seznam "
+"je také zobrazen v Pokyny autorům v části O časopisu. Seznam můžete upravit "
+"níže, pamatujte ale, že aby autoři mohli pokračovat dále v odesílání svého "
+"příspěvku, budou muset zaškrtnutím potvrdit všechny položky tohoto seznamu."
+
+msgid "manager.section.noSectionEditors"
+msgstr ""
+"Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně "
+"jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role."
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Byla vytvořena nová verze"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Tento e-mail automaticky upozorní přiřazené redaktory na vytvoření nové "
+"verze příspěvku."
