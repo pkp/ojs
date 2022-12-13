@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-11-07 11:02+0000\n"
+"PO-Revision-Date: 2022-12-01 09:02+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "da_DK/>\n"
@@ -397,9 +397,10 @@ msgstr "E-mail-identifikation"
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "De forberedte e-mails, der sendes af systemet på vegne af tidsskriftet, får følgende signatur tilføjet nederst. Brødteksten til de forberedte e-mails kan redigeres under Administration af tidsskrifter."
+msgstr ""
+"De forberedte e-mails, der sendes af systemet på vegne af tidsskriftet, får "
+"følgende signatur tilføjet nederst."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Aktivér meddelelser"
@@ -2344,3 +2345,15 @@ msgstr "Antal visninger af tidsskriftets indeksside."
 
 msgid "stats.context.downloadReport.downloadContext"
 msgstr "Download tidsskrift"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Arkiver anmodningen"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Arkiver anmodningen (ny)"
+
+msgid "manager.manageEmails.description"
+msgstr "Rediger de beskeder, der sendes i e-mails fra dette tidsskrift."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Publiceringsversion færdiggjort"

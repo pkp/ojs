@@ -1,11 +1,12 @@
 # Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
+# Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2021-11-16 06:39+0000\n"
-"Last-Translator: Lucia Steele <lucia.steele@aboutscience.eu>\n"
+"PO-Revision-Date: 2022-12-10 18:02+0000\n"
+"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "it_IT/>\n"
 "Language: it_IT\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.files.note"
 msgstr "Nota: La navigazione tra i file è una funzione avanzata che permette di vedere e manipolare direttamente i file e le directory associate a una rivista."
@@ -25,7 +26,14 @@ msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr "Questo sostituirà qualunque personalizzazione fatta per la rivista"
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS permette di offrire agli utenti della rivista un'interfaccia multilingue. Gli utenti potranno scegliere fra le lingue disponibili per la visualizzazione delle pagine; anche i dati, inseriti in più lingue, potranno essere visualizzati in lingue diverse.<br /><br />Se hai bisogno di utilizzare una lingua, supportata da OJS  ma non elencata nella lista qui sotto, chiedi all'amministratore del sito di installarla. Per ulteriori informazioni, consultare la documentazione di OJS."
+msgstr ""
+"OJS permette di offrire agli utenti della rivista un'interfaccia "
+"multilingue. Gli utenti potranno scegliere fra le lingue disponibili per la "
+"visualizzazione delle pagine; anche i dati, inseriti in più lingue, potranno "
+"essere visualizzati in lingue diverse.<br /><br />Se hai bisogno di "
+"utilizzare una lingua, supportata da OJS ma non elencata nella lista qui "
+"sotto, chiedi all'amministratore del sito di installarla. Per ulteriori "
+"informazioni, consultare la documentazione di OJS."
 
 msgid "manager.languages.noneAvailable"
 msgstr "Non è disponibile alcuna lingua aggiuntiva. Contattare l'amministratore del sito per utilizzare un'altra lingua per questa rivista."
@@ -182,7 +190,11 @@ msgid "manager.people.roleEnrollment"
 msgstr "{$role} Iscrizione"
 
 msgid "manager.people.syncUserDescription"
-msgstr "La sincronizzazione iscriverà tutti gli utenti inseriti nel ruolo e nella rivista specificati, all'interno dello stesso ruolo in questa rivista. Questa funzione permette a un insieme comune di utenti  (es. revisori) di essere sincronizzati tra due o più riviste."
+msgstr ""
+"La sincronizzazione iscriverà tutti gli utenti inseriti nel ruolo e nella "
+"rivista specificati, all'interno dello stesso ruolo in questa rivista. "
+"Questa funzione permette a un insieme comune di utenti (es. revisori) di "
+"essere sincronizzati tra due o più riviste."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Abstracts non richiesti"
@@ -191,15 +203,20 @@ msgid "manager.sections.assigned"
 msgstr "Editor di questa sezione"
 
 msgid "manager.sections.confirmDelete"
-msgstr "Sei sicuro di voler cancellare definitivamente questa sezione? Se sì dovrete ripubblicare tutti gli articoli attualmente presenti."
+msgstr "Sei sicuro di voler cancellare definitivamente questa sezione?"
 
 msgid "manager.sections.create"
 msgstr "Crea una sezione"
 
 msgid "manager.section.sectionEditorInstructions"
 msgstr ""
-"Aggiungi un Section Editor a questa sezione per assegnargli automaticamente le proposte inviate a questa sezione (comunque potrai sempre assegnare manualmente un SE, quando arriva ciascuna proposta).\n"
-"Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della REVISIONE (peer review) e/o dell'EDITING (copyediting, layout e correzione delle bozze) delle submission di questa sezione. I SE vengono creati cliccando 'Section editor' nel menù dei ruoli nella pagina di gestione della rivista."
+"Aggiungi un Section Editor a questa sezione per assegnargli automaticamente "
+"le proposte inviate a questa sezione (comunque potrai sempre assegnare "
+"manualmente un SE, quando arriva ciascuna proposta). Una volta aggiunto, il "
+"SE sarà automaticamente assegnato alla gestione della REVISIONE (peer review)"
+" e/o dell'EDITING (copyediting, layout e correzione delle bozze) delle "
+"submission di questa sezione. I SE vengono creati cliccando 'Section editor' "
+"nel menù dei ruoli nella pagina di gestione della rivista."
 
 msgid "manager.sections.editorRestriction"
 msgstr ""
@@ -372,9 +389,9 @@ msgstr "Nel caso l'invio di un messaggio di posta elettronica non dovesse andare
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
-"Per poter recapitare email non conseguibili ad un bounce address,  "
+"Per poter recapitare email non conseguibili ad un bounce address, "
 "l'amministratore del sito deve abilitare l'opzione "
-"<code>allow_envelope_sender</code>  nel file di configurazione di OJS. "
+"<code>allow_envelope_sender</code> nel file di configurazione di OJS. "
 "Configurazioni aggiuntive del server possono essere necessarie per "
 "supportare questa funzione (che potrebbe non essere disponibile su tutti i "
 "server), come indicato nella documentazione di OJS."
@@ -385,9 +402,10 @@ msgstr "Firma delle email"
 msgid "manager.setup.emailSignature"
 msgstr "Firma"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "Le email inviate in automatico dal sistema avranno la seguente firma alla fine del messaggio. Il contenuto di queste email può essere modificato nella sezione di amministrazione della rivista."
+msgstr ""
+"Le e-mail inviate automaticamente per conto della Rivista avranno la "
+"seguente firma."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Abilita gli amministratori della rivista ad aggiungere avvisi"
@@ -627,7 +645,13 @@ msgid "manager.setup.publicationSchedule"
 msgstr "Programma delle pubblicazioni"
 
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Gli articoli della rivista possono essere pubblicati tutti insieme, come parte di un numero completo, con un sommario definitivo. In alternativa, gli articoli possono essere pubblicati singolarmente, appena pronti, e venendo cos&#x00EC; aggiunti al sommario di volta in volta. Indicate ai lettori, nella pagina delle informazioni sulla rivista, sia il il metodo utilizzato per la pubblicazione, sia la frequenza."
+msgstr ""
+"Gli articoli della rivista possono essere pubblicati tutti insieme, come "
+"parte di un numero completo con un sommario definitivo. In alternativa, "
+"possono essere pubblicati singolarmente, appena pronti, venendo aggiunti al "
+"sommario del volume \"corrente\". Indicate ai lettori, nella pagina delle "
+"informazioni sulla rivista, sia il il metodo utilizzato per la "
+"pubblicazione, sia la frequenza."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Pianificazione delle pubblicazioni"
@@ -679,9 +703,10 @@ msgstr "Accesso per i revisori"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Abilita l'accesso diretto per i revisori"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti."
+msgstr ""
+"Ai revisori può essere inviato un link sicuro nell'e-mail di invito, che li "
+"farà accedere automaticamente quando faranno clic sul link."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Voto ai revisori"
@@ -797,25 +822,25 @@ msgid "manager.statistics.statistics.articleViews"
 msgstr "Conteggi delle visite dell'articolo (solo per gli autori)"
 
 msgid "manager.statistics.statistics.count.accept"
-msgstr "Proposte accettate (%):"
+msgstr "Accettato"
 
 msgid "manager.statistics.statistics.count.decline"
-msgstr "Proposte rifiutate (%):"
+msgstr "Rifiutato"
 
 msgid "manager.statistics.statistics.count.revise"
-msgstr "Proposte accettate dopo modifiche (%):"
+msgstr "Reinviato"
 
 msgid "manager.statistics.statistics.daysPerReview"
-msgstr "Giorni utilizzati per la revisione:"
+msgstr "Giorni utilizzati per la revisione"
 
 msgid "manager.statistics.statistics.daysToPublication"
-msgstr "Giorni utilizzati per la pubblicazione:"
+msgstr "Giorni utilizzati per la pubblicazione"
 
 msgid "manager.statistics.statistics.description"
 msgstr "OJS calcola le seguenti statistiche per ogni rivista. La statistica \"giorni utilizzati per la revisione\" è calcolata dalla data di submission (o di designazione della versione di Review ) fino alla decisione dell'Editor, mentre quella \"giorni utlizzati per la pubblicazione\" viene calcolata per le submissions accettate dalla primo caricamento fino alla pubblicazione."
 
 msgid "manager.statistics.statistics.itemsPublished"
-msgstr "Articoli pubblicati:"
+msgstr "Articoli pubblicati"
 
 msgid "manager.statistics.statistics.makePublic"
 msgstr "Indica quali informazioni devono essere visualizzate nella pagina delle informazioni sulla rivista."
@@ -824,31 +849,31 @@ msgid "manager.statistics.statistics.note"
 msgstr "Nota: Le percentuali per le proposte peer reviewed possono non raggiungere il 100%, dato che le proposte inviate nuovamente possono essere state accettate, rifiutate, o essere ancora nel processo editoriale."
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr "Uscite pubblicate:"
+msgstr "Uscite pubblicate"
 
 msgid "manager.statistics.statistics.numSubmissions"
-msgstr "Contributi totali ricevuti:"
+msgstr "Contributi totali ricevuti"
 
 msgid "manager.statistics.statistics.peerReviewed"
-msgstr "Peer reviewed:"
+msgstr "Peer reviewed"
 
 msgid "manager.statistics.statistics.registeredReaders"
-msgstr "Lettori registrati:"
+msgstr "Lettori registrati"
 
 msgid "manager.statistics.statistics.registeredUsers"
 msgstr "Utenti registrati (comprende lo staff della rivista):"
 
 msgid "manager.statistics.statistics.reviewerCount"
-msgstr "N. di contributi assegnati:"
+msgstr "N. di contributi assegnati"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr "Revisori:"
+msgstr "Revisori"
 
 msgid "manager.statistics.statistics.reviewerScore"
-msgstr "Editor Score:"
+msgstr "Editor Score"
 
 msgid "manager.statistics.statistics.reviewsPerReviewer"
-msgstr "Nr. di revisioni:"
+msgstr "Nr. di revisioni"
 
 msgid "manager.statistics.statistics.selectSections"
 msgstr "Seleziona le sezioni sulle quali calcolare le statistiche sulla peer-review di questa rivista."
@@ -1114,7 +1139,7 @@ msgid "manager.subscriptionTypes.form.currency"
 msgstr "Valuta"
 
 msgid "manager.subscriptionTypes.form.currencyRequired"
-msgstr "Inserire  la valuta."
+msgstr "Inserire la valuta."
 
 msgid "manager.subscriptionTypes.form.currencyValid"
 msgstr "Inserire una valuta valida."
@@ -1360,9 +1385,10 @@ msgstr "Categorie"
 msgid "manager.payment.options.purchaseIssueFee"
 msgstr "Acquista il fascicolo"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene."
+msgstr ""
+"Prima di cancellare questa sezione, devi spostare in un'altra tutti gli "
+"articoli pubblicati."
 
 msgid "manager.setup.categories.description"
 msgstr "Scegli le categorie più appropriate nella lista sottostante. I lettori potranno navigare le riviste ospitate nel sito per categorie."
@@ -1534,7 +1560,10 @@ msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
-msgstr "Abilita CLOCKSS per conservare e distribuire il contenuto delle riviste alle biblioteche che partecipano alla tua  <a href=\"{$clockssUrl}\" target=\"_blank\">rete CLOCKSS</a>."
+msgstr ""
+"Abilita CLOCKSS per conservare e distribuire il contenuto delle riviste alle "
+"biblioteche che partecipano alla tua <a href=\"{$clockssUrl}\" target="
+"\"_blank\">rete CLOCKSS</a>."
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
@@ -1745,8 +1774,8 @@ msgstr ""
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
-"Invia metadata a servizi di indicizzazione di terze parti tramite  <a href=\""
-"https://www.openarchives.org/\">Open Archives Initiative</a>."
+"Invia metadata a servizi di indicizzazione di terze parti tramite <a href="
+"\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.enableOai"
 msgstr "Abilita OAI"
@@ -1782,7 +1811,7 @@ msgstr "Informazioni chiave"
 msgid "manager.setup.itemsPerPage.description"
 msgstr ""
 "Limitare il numero di articoli (ad esempio contributi, utenti o assegnazioni)"
-" da visualizzare in un elenco prima di  visualizzare altri articoli in altra "
+" da visualizzare in un elenco prima di visualizzare altri articoli in altra "
 "pagina."
 
 msgid "manager.setup.identity"
@@ -1891,9 +1920,11 @@ msgstr "DOI"
 msgid "doi.manager.settings.description"
 msgstr "Seguire il setup per essere in grado di gestire e utilizzare DOI in OJS:"
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Scegli gli oggetti ai quali assegnare DOI."
+msgstr ""
+"Scegli gli oggetti ai quali assegnare DOI. La maggior parte delle riviste "
+"assegna i DOI agli articoli, ma è possibile assegnare i DOI a tutti i "
+"prodotti pubblicati."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Seleziona gli oggetti che avranno un DOI:"
@@ -1911,11 +1942,23 @@ msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Il prefisso DOI è obbligatorio e deve essere nel formato 10.xxxx."
 
 msgid "doi.manager.settings.doiSuffixPattern"
-msgstr "Usa il pattern inserito sotto per generare suffissi DOI. Usa %j per le iniziali della rivista, %v per il numero del volume, %i per il numero del fascicolo, %Y per l'anno, %a per l'ID OJS degli articoli, %g per gli ID OJS dei file degli articoli, %f per gli ID OJS dei file e %p per il numero di pagina."
+msgstr ""
+"Inserire un modello di suffisso personalizzato per ogni tipo di "
+"pubblicazione. Il modello di suffisso personalizzato può utilizzare i "
+"seguenti simboli per generare un suffisso:<br><br> <code>%j</code> Sigla "
+"della Rivista<br> <code>%v</code> Numero di volume<br> <code>%i</code> "
+"Numero di fascicolo<br> <code>%Y</code> Annata<br> <code>%a</code> ID "
+"Articolo<br> <code>%g</code> ID Gabbia<br> <code>%f</code> ID File<br> "
+"<code>%p</code> Numero di pagine<br> <code>%x</code> Identificativo "
+"personalizzato<br><br> Attenzione: i modelli di suffisso personalizzati "
+"spesso causano problemi nella generazione e nel deposito dei DOI. Quando si "
+"utilizza un modello di suffisso personalizzato, verificare attentamente che "
+"gli editori possano generare DOI e depositarli presso un'agenzia di "
+"registrazione come Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
-"Per esempio, vol%viss%ipp%p creerà un DOI con questo fomato:  10.1234/"
+"Per esempio, vol%viss%ipp%p creerà un DOI con questo fomato: 10.1234/"
 "vol3iss2pp230"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
@@ -1940,7 +1983,11 @@ msgid "doi.manager.settings.doiReassign"
 msgstr "Riassegna i DOI"
 
 msgid "doi.manager.settings.doiReassign.description"
-msgstr "Se cambi la tua configurazione dei DOI, i DOI già assegnati non vengono toccati. Una volta che la configurazione dei DOI è stata salvata, usando questo bottone tutti i DOI esistenti vengono cancellati  e cosi le nuove configurazioni interverranno sugli oggetti già esistenti."
+msgstr ""
+"Se cambi la tua configurazione dei DOI, i DOI già assegnati non vengono "
+"toccati. Una volta che la configurazione dei DOI è stata salvata, usando "
+"questo bottone tutti i DOI esistenti vengono cancellati e cosi le nuove "
+"configurazioni interverranno sugli oggetti già esistenti."
 
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Sei sicuro di eliminare tutti i DOI esistenti?"
@@ -2007,7 +2054,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "Il DOI {$pubId} non può essere assegnato perchè contiene una forma non risolta."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "Il DOI {$pubId} è stato assegnato."
+msgstr ""
+"Il DOI {$pubId} è stato assegnato. Per cambiare il DOI visita la <a href=\""
+"{$doiManagementLink}\">pagina di gestione DOI</a>."
 
 msgid "doi.editor.preview.objects"
 msgstr "Elemento"
@@ -2070,3 +2119,234 @@ msgstr "Notifica del rinnovo di un abbonamento istituzionale."
 
 msgid "mailable.openAccessNotify.description"
 msgstr "Questa email viene inviata ai lettori registrati che hanno chiesto di ricevere un'email di notifica in caso di uscite ad accesso aperto."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Consentire l'assegnazione dei Digital Object Identifier (DOI) ai lavori "
+"pubblicati in questa rivista."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Il numero di visualizzazioni della TOC e di download della bozza del numero "
+"per ogni uscita."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Scarica i fascicoli"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} di {$total} fascicoli"
+
+msgid "stats.issueStats"
+msgstr "Satistiche sul fascicolo"
+
+msgid "stats.issues.details"
+msgstr "Visite e Downloads"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Cerca titolo, volume e numero"
+
+msgid "stats.issues.none"
+msgstr ""
+"Non sono stati riscontrati problemi con le statistiche d'uso che "
+"corrispondono a questi parametri."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Scaricate un foglio di calcolo CSV/Excel con le statistiche di utilizzo dei "
+"problemi corrispondenti ai seguenti parametri."
+
+msgid "stats.contextStats"
+msgstr "Statistiche della rivista"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
+"Per poter sottoscrivere nuovi abbonamenti è necessario creare un'istituzione."
+
+msgid "stats.context.tooltip.text"
+msgstr ""
+"Numero di visitatori che visualizzano la pagina dell'indice della rivista."
+
+msgid "stats.context.tooltip.label"
+msgstr "Informazioni sulle statistiche della rivista"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Il numero di visualizzazioni della pagina dell'indice della rivista."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Scarica Rivista"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Dopo aver raggiunto la fase di copyediting"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Utilizzare i modelli predefiniti.<br />%j.v%vi%i per i fascicoli<br /"
+">%j.v%vi%i.%a per gli articoli<br />%j.v%vi%i.%a.g%g per le gabbie."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Istituzione"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Seleziona un'istituzione valida."
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Scaricare un foglio di calcolo CSV/Excel con le statistiche di utilizzo di "
+"questa rivista in base ai seguenti parametri."
+
+msgid "stats.issues.tooltip.label"
+msgstr "Statistiche sui fascicoli"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "sigla della rivista"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "L'abbonamento scade tra poco"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abbonamento scaduto"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abbonamento scaduto l'ultima volta"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Acquisto di un abbonamento individuale"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Acquisto di un abbonamento istituzionale"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Rinnovo dell'abbonamento individuale"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Rinnovo dell'abbonamento istituzionale"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Notifica di accesso aperto"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Notifica di numero pubblicato"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Questa e-mail viene inviata automaticamente agli utenti registrati quando "
+"viene pubblicato il nuovo numero."
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Visite</strong>: Numero di visitatori che visualizzano "
+"l'indice.<br><strong>Downloads</strong>: Numero di download della gabbia del "
+"fascicolo, se esiste."
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "La data di scadenza dell'abbonamento"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Nome dell'istituzione"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Dominio"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Intervalli IP per l'autenticazione dell'abbonamento"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Notifica di sottoscrizione"
+
+msgid "mailable.layoutComplete.name"
+msgstr "Gabbia completa"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Richiesta di archiviazione (Nuova)"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Riepilogo del tipo, del nome, della durata e del costo dell'abbonamento"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Il DOI inserito non è valido"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Questa e-mail notifica all'autore che il suo lavoro è stato rifiutato prima "
+"della fase di revisione, perché non soddisfa i requisiti per la "
+"pubblicazione sulla rivista."
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+"Solo i DOI possono essere modificati dopo la pubblicazione di una "
+"pubblicazione"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informazioni sull'iscrizione dell'abbonato"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "L'URL della pagina di sottoscrizione"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "I fasicoli richiesti non sono stati trovati"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Selezionare l'agenzia di registrazione che si desidera utilizzare per il "
+"deposito dei DOI."
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Gabbie degli articoli, come un PDF pubblicato"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "I dati di contatto del gestore dell'abbonamento"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "Il DOI {$pubId} sarà assegnato al momento della pubblicazione."
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "La gabbia richiesta non fa parte di questa pubblicazione."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Nessuno"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI dei fascicoli"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Il nome, l'affiliazione, il numero di telefono e l'indirizzo di posta "
+"elettronica dell'abbonato"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Solo i DOI possono essere modificati dopo che una gabbia di pubblicazione è "
+"stata pubblicata"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Agenzia di registrazione"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI degli articoli"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Indirizzo mail dell'istituzione"
+
+msgid "manager.manageEmails.description"
+msgstr "Modificare i messaggi inviati nelle e-mail da questa rivista."
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Richiesta di archiviazione"
+
+msgid "manager.institutions.noContext"
+msgstr "Non è stato possibile trovare il periodico di questa istituzione."
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Scarica un foglio di calcolo CSV/Excel con le statistiche di utilizzo degli "
+"articoli corrispondenti ai seguenti parametri."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Download Articoli"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+"Il numero di visualizzazioni di abstract e di download per ogni articolo."
