@@ -464,7 +464,6 @@ msgstr ""
 msgid "manager.setup.submissions"
 msgstr "Ներկայացումներ"
 
-#, fuzzy
 msgid "manager.setup.submissionPreparationChecklistDescription"
 msgstr ""
 "Ամսագրին ներկայացում կատարելիս հեղինակներին նախքան շարունակելը նախ խնդրում "
@@ -474,7 +473,6 @@ msgstr ""
 "բայց ցուցակի բոլոր կետերը կպահանջեն ստուգման նշան, նախքան հեղինակները կարող "
 "են շարունակել իրենց ներկայացումը:"
 
-#, fuzzy
 msgid "manager.setup.submissionPreparationChecklist"
 msgstr "Ներկայացման նախապատրաստման ստուգաթերթ"
 
@@ -2528,7 +2526,8 @@ msgid "manager.subscriptions.form.institutionIdValid"
 msgstr "Խնդրում ենք ընտրել վավեր հաստատություն:"
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr "Նախքան նոր բաժանորդագրություններ կատարելը պետք է հաստատություն ստեղծվի:"
+msgstr ""
+"Նախքան նոր բաժանորդագրություններ կատարելը պետք է հաստատություն ստեղծվի:"
 
 msgid "manager.institutions.noContext"
 msgstr "Այս հաստատության ամսագիրը չհաջողվեց գտնել:"
@@ -2666,3 +2665,11 @@ msgstr "Արխիվային հարցում (Նոր)"
 
 msgid "manager.manageEmails.description"
 msgstr "Խմբագրել այս ամսագրից ուղարկված նամակները:"
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Ստեղծվել է նոր տարբերակը"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Այս նամակն ինքնաշխատ կերպով տեղեկացնում է նշանակված խմբագիրներին, երբ "
+"ստեղծվում է ներկայացման նոր տարբերակը:"
