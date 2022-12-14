@@ -128,10 +128,17 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
                         return;
                     case 'crossref::status':
                         $status = Doi::STATUS_ERROR;
+                        $registrationAgency = null;
                         if (in_array($item->setting_value, ['found', 'registered', 'markedRegistered'])) {
                             $status = Doi::STATUS_REGISTERED;
+                            if ($item->setting_value == 'registered') {
+                                $registrationAgency = 'CrossRefExportPlugin';
+                            }
                         }
                         $doisBySubmission[$item->submission_id]['status'] = $status;
+                        if ($registrationAgency !== null) {
+                            $doisBySubmission[$item->submission_id]['registrationAgency'] = $registrationAgency;
+                        }
                         return;
                     case 'crossref::batchId':
                         $doisBySubmission[$item->submission_id]['crossrefplugin_batchId'] = $item->setting_value;
@@ -168,6 +175,14 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
                     $doiStatusUpdates[$doiId] = ['status' => $item['status']];
                 } elseif (isset($item['crossref::registeredDoi'])) {
                     $doiStatusUpdates[$doiId] = ['status' => 3];
+                }
+
+                if (isset($item['registrationAgency'])) {
+                    $doiSettingInserts[] = [
+                        'doi_id' => $doiId,
+                        'setting_name' => 'registrationAgency',
+                        'setting_value' => $item['registrationAgency']
+                    ];
                 }
             }
         }
@@ -229,12 +244,23 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
             // Status
             if (isset($item['crossref::status'])) {
                 $status = Doi::STATUS_ERROR;
+                $registrationAgency = null;
                 if (in_array($item['crossref::status'], ['found', 'registered', 'markedRegistered'])) {
                     $status = Doi::STATUS_REGISTERED;
+                    if ($item['crossref::status'] === 'registered') {
+                        $registrationAgency = 'CrossRefExportPlugin';
+                    }
                 } elseif (isset($item['crossref::registeredDoi'])) {
                     $status = Doi::STATUS_REGISTERED;
                 }
                 $statuses[$item['doi_id']] = ['status' => $status];
+                if ($registrationAgency !== null) {
+                    $inserts[] = [
+                        'doi_id' => $item['doi_id'],
+                        'setting_name' => 'registrationAgency',
+                        'setting_value' => $registrationAgency
+                    ];
+                }
             }
         }
 
@@ -347,16 +373,22 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
 
         // 2. Map statuses insert statements
         $statuses = [];
+        $registrationAgencies = [];
         foreach ($issueData as $item) {
             // Status
             if (isset($item['datacite::status'])) {
                 $status = Doi::STATUS_ERROR;
+                $registrationAgency = null;
                 if (in_array($item['datacite::status'], ['found', 'registered', 'markedRegistered'])) {
+                    if ($item['datacite::status'] === 'regisetered') {
+                        $registrationAgency = 'DataciteExportPlugin';
+                    }
                     $status = Doi::STATUS_REGISTERED;
                 } elseif (isset($item['datacite::registeredDoi'])) {
                     $status = Doi::STATUS_REGISTERED;
                 }
                 $statuses[$item['doi_id']] = ['status' => $status];
+                $registrationAgencies[$item['doi_id']] = $registrationAgency;
             }
         }
 
@@ -367,6 +399,19 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
                 ->update($insert);
         }
 
+        foreach ($registrationAgencies as $doiId => $agency) {
+            if ($agency === null) {
+                continue;
+            }
+
+            DB::table('doi_settings')
+                ->insert([
+                    'doi_id' => $doiId,
+                    'setting_name' => 'registrationAgency',
+                    'setting_value' => $agency
+                ]);
+        }
+
         // 4. Clean up old settings
         DB::table('issue_settings')
             ->whereIn('setting_name', ['datacite::registeredDoi', 'datacite::status'])
@@ -374,10 +419,11 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
 
         // ===== Publications Statuses & Settings ===== //
         // 1. Get publications with Datacite-related info
-        $publicationData = DB::table('publications', 'p')
-            ->leftJoin('publication_settings as ps', 'p.publication_id', '=', 'ps.publication_id')
-            ->whereIn('ps.setting_name', ['datacite::registeredDoi', 'datacite::status'])
-            ->select(['p.publication_id', 'p.doi_id', 'ps.setting_name', 'ps.setting_value'])
+        $publicationData = DB::table('submissions', 's')
+            ->leftJoin('submission_settings as ss', 's.submission_id', '=', 'ss.submission_id')
+            ->leftJoin('publications as p', 's.current_publication_id', '=', 'p.publication_id')
+            ->whereIn('ss.setting_name', ['datacite::registeredDoi', 'datacite::status'])
+            ->select(['p.publication_id', 'p.doi_id', 'ss.setting_name', 'ss.setting_value'])
             ->get()
             ->reduce(function ($carry, $item) {
                 if (!isset($carry[$item->publication_id])) {
@@ -392,16 +438,22 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
 
         // 2. Map statuses insert statements
         $statuses = [];
+        $registrationAgencies = [];
         foreach ($publicationData as $item) {
             // Status
             if (isset($item['datacite::status'])) {
                 $status = Doi::STATUS_ERROR;
+                $registrationAgency = null;
                 if (in_array($item['datacite::status'], ['found', 'registered', 'markedRegistered'])) {
+                    if ($item['datacite::status'] === 'registered') {
+                        $registrationAgency = 'DataciteExportPlugin';
+                    }
                     $status = Doi::STATUS_REGISTERED;
                 } elseif (isset($item['datacite::registeredDoi'])) {
                     $status = Doi::STATUS_REGISTERED;
                 }
                 $statuses[$item['doi_id']] = ['status' => $status];
+                $registrationAgencies[$item['doi_id']] = $registrationAgency;
             }
         }
 
@@ -410,6 +462,19 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
             DB::table('dois')
                 ->where('doi_id', '=', $doiId)
                 ->update($insert);
+        }
+
+        foreach ($registrationAgencies as $doiId => $agency) {
+            if ($agency === null) {
+                continue;
+            }
+
+            DB::table('doi_settings')
+                ->insert([
+                    'doi_id' => $doiId,
+                    'setting_name' => 'registrationAgency',
+                    'setting_value' => $agency
+                ]);
         }
 
         // 4. Clean up old settings
@@ -437,16 +502,22 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
 
         // 2. Map statuses insert statements
         $statuses = [];
-        foreach ($issueData as $item) {
+        $registrationAgencies = [];
+        foreach ($galleyData as $item) {
             // Status
             if (isset($item['datacite::status'])) {
                 $status = Doi::STATUS_ERROR;
+                $registrationAgency = null;
                 if (in_array($item['datacite::status'], ['found', 'registered', 'markedRegistered'])) {
+                    if ($item['datacite::status'] === 'registered') {
+                        $registrationAgency = 'DataciteExportPlugin';
+                    }
                     $status = Doi::STATUS_REGISTERED;
                 } elseif (isset($item['datacite::registeredDoi'])) {
                     $status = Doi::STATUS_REGISTERED;
                 }
                 $statuses[$item['doi_id']] = ['status' => $status];
+                $registrationAgencies[$item['doi_id']] = $registrationAgency;
             }
         }
 
@@ -455,6 +526,19 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
             DB::table('dois')
                 ->where('doi_id', '=', $doiId)
                 ->update($insert);
+        }
+
+        foreach ($registrationAgencies as $doiId => $agency) {
+            if ($agency === null) {
+                continue;
+            }
+
+            DB::table('doi_settings')
+                ->insert([
+                    'doi_id' => $doiId,
+                    'setting_name' => 'registrationAgency',
+                    'setting_value' => $agency
+                ]);
         }
 
         // 4. Clean up old settings

@@ -27,8 +27,7 @@ use PKP\plugins\PluginRegistry;
 
 class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
 {
-    /** @var DataciteExportPlugin */
-    private $_exportPlugin = null;
+    private ?DataciteExportPlugin $_exportPlugin = null;
 
     /**
      * @see Plugin::getDisplayName()
@@ -296,6 +295,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
 
         Hook::add('Template::doiManagement', [$this, 'callbackShowDoiManagementTabs']);
         Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
+        Hook::add('DoiListPanel::setConfig', [$this, 'addRegistrationAgencyName']);
     }
 
     /**
@@ -326,6 +326,23 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
                 return new JSONMessage(true, $form->fetch($request));
         }
         return parent::manage($args, $request);
+    }
+
+    /**
+     * Includes human-readable name of registration agency for display in conjunction with how/with whom the
+     * DOI was registered.
+     *
+     * @param string $hookName DoiListPanel::setConfig
+     * @param $args [
+     *      @option $config array
+     * ]
+     */
+    public function addRegistrationAgencyName(string $hookName, array $args): bool
+    {
+        $config = &$args[0];
+        $config['registrationAgencyNames'][$this->_getExportPlugin()->getName()] = $this->getRegistrationAgencyName();
+
+        return HOOK::CONTINUE;
     }
 
     /**
