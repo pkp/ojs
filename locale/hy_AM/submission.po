@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-05 18:02+0000\n"
+"PO-Revision-Date: 2022-12-14 12:02+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hy_AM/>\n"
@@ -402,3 +402,26 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Խնդրում ենք ընտրել աջակցողի դերը:"
+
+msgid "submission.copyright.description"
+msgstr ""
+"Խնդրում ենք կարդալ և հասկանալ այս ամսագրին ներկայացված նյութերի հեղինակային "
+"իրավունքի պայմանները:"
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Ձեզ չի թույլատրվում ներկայացնել հոդված այս ամսագրին, քանի որ հեղինակները "
+"պետք է գրանցվեն խմբագրության կողմից: Եթե կարծում եք, որ սա սխալ է, դիմեք <a "
+"href='mailto:{$email}'>{$name}</a>:"
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Ձեզ չի թույլատրվում ներկայացնել հոդված այս ամսագրին, քանի որ այս ամսագրի "
+"բոլոր բաժինների ներկայացումները ապաակտիվացվել կամ սահմանափակվել են: Եթե "
+"կարծում եք, որ սա սխալ է, դիմեք <a href='mailto:{$email}'>{$name}</a>:"
+
+msgid "submission.sectionNotFound"
+msgstr "Այս ներկայացման համար բաժինը չի գտնվել:"
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Միայն խմբագրակազմին է թույլատրվում կատարել ներկայացումներ այս բաժնում:"
