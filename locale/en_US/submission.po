@@ -347,6 +347,9 @@ msgstr "You are not allowed to submit to this journal because authors must be re
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr "You are not allowed to submit to this journal because submissions to all sections of this journal have been deactivated or restricted. If you believe this is an error, please contact <a href='mailto:{$email}'>{$name}</a>."
 
+msgid "submission.wizard.sectionClosed.message"
+msgstr "{$contextName} is not accepting submissions to the {$section} section. If you need help recovering your submission, please contact <a href='mailto:{$email}'>{$name}</a>."
+
 msgid "submission.sectionNotFound"
 msgstr "The section for this submission could not be found."
 
