@@ -304,6 +304,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         $editParams = [
             'status' => $status
         ];
+        if ($status == Doi::STATUS_REGISTERED) {
+            $editParams['registrationAgency'] = $this->getName();
+        }
         Repo::doi()->edit($doiObject, $editParams);
     }
 
