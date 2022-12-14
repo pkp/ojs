@@ -385,6 +385,17 @@ msgstr ""
 "<p>Kind regards,</p>\n"
 "<p>{$signature}</p>\n"
 
+msgid "emails.editorDecisionCancelSubmission.subject"
+msgstr "Your submission has been withdrawn"
+
+msgid "emails.editorDecisionCancelSubmission.body"
+msgstr ""
+"<p>Dear {$recipientName},</p>"
+"<p>Your submission, {$submissionTitle}, has been withdrawn "
+"and is no longer considered for publication in {$contextName}.</p>"
+"<p>Kind regards,</p>"
+"{$signature}"
+
 msgid "emails.layoutRequest.subject"
 msgstr "Submission {$submissionId} is ready for production at {$contextAcronym}"
 

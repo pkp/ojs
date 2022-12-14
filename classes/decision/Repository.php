@@ -20,6 +20,10 @@ use Illuminate\Database\Eloquent\Collection;
 use PKP\decision\types\BackFromCopyediting;
 use PKP\decision\types\BackFromProduction;
 use PKP\decision\types\CancelReviewRound;
+use PKP\decision\types\CancelSubmissionInCopyediting;
+use PKP\decision\types\CancelSubmissionInExternalReview;
+use PKP\decision\types\CancelSubmissionInProduction;
+use PKP\decision\types\CancelSubmissionInSubmission;
 use PKP\decision\types\Decline;
 use PKP\decision\types\InitialDecline;
 use PKP\decision\types\NewExternalReviewRound;
@@ -29,10 +33,15 @@ use PKP\decision\types\RecommendResubmit;
 use PKP\decision\types\RecommendRevisions;
 use PKP\decision\types\RequestRevisions;
 use PKP\decision\types\Resubmit;
+use PKP\decision\types\RevertCancelSubmissionInCopyediting;
+use PKP\decision\types\RevertCancelSubmissionInExternalReview;
+use PKP\decision\types\RevertCancelSubmissionInProduction;
+use PKP\decision\types\RevertCancelSubmissionInSubmission;
 use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
+
 use PKP\plugins\Hook;
 
 class Repository extends \PKP\decision\Repository
@@ -62,6 +71,14 @@ class Repository extends \PKP\decision\Repository
                 new BackFromProduction(),
                 new BackFromCopyediting(),
                 new CancelReviewRound(),
+                new CancelSubmissionInSubmission(),
+                new RevertCancelSubmissionInSubmission(),
+                new CancelSubmissionInExternalReview(),
+                new RevertCancelSubmissionInExternalReview(),
+                new CancelSubmissionInCopyediting(),
+                new RevertCancelSubmissionInCopyediting(),
+                new CancelSubmissionInProduction(),
+                new RevertCancelSubmissionInProduction(),
             ]);
             Hook::call('Decision::types', [$decisionTypes]);
             $this->decisionTypes = $decisionTypes;

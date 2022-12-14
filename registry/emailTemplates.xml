@@ -49,6 +49,7 @@
 	<email key="EDITOR_DECISION_BACK_FROM_PRODUCTION" name="mailable.decision.backToCopyediting.notifyAuthor.name" subject="emails.editorDecisionBackFromProduction.subject" body="emails.editorDecisionBackFromProduction.body"/>
 	<email key="EDITOR_DECISION_BACK_FROM_COPYEDITING" name="mailable.decision.backFromCopyediting.notifyAuthor.name" subject="emails.editorDecisionBackFromCopyediting.subject" body="emails.editorDecisionBackFromCopyediting.body"/>
 	<email key="EDITOR_DECISION_CANCEL_REVIEW_ROUND" name="mailable.decision.cancelReviewRound.notifyAuthor.name" subject="emails.editorDecisionCancelReviewRound.subject" body="emails.editorDecisionCancelReviewRound.body"/>
+	<email key="EDITOR_DECISION_CANCEL_SUBMISSION" name="mailable.decision.cancelSubmission.notifyAuthor.name" subject="emails.editorDecisionCancelSubmission.subject" body="emails.editorDecisionCancelSubmission.body"/>
 	<email key="SUBSCRIPTION_NOTIFY" name="mailable.subscriptionNotify.name" subject="emails.subscriptionNotify.subject" body="emails.subscriptionNotify.body"/>
 	<email key="OPEN_ACCESS_NOTIFY" name="mailable.openAccessNotify.name" subject="emails.openAccessNotify.subject" body="emails.openAccessNotify.body"/>
 	<email key="SUBSCRIPTION_BEFORE_EXPIRY" name="mailable.subscriptionExpiresSoon.name" subject="emails.subscriptionBeforeExpiry.subject" body="emails.subscriptionBeforeExpiry.body"/>

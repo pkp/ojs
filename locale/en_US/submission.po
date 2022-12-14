@@ -227,22 +227,20 @@ msgstr "Select an issue to schedule for publication"
 msgid "submission.publication"
 msgstr "Publication"
 
-
 msgid "publication.status.published"
 msgstr "Published"
-
 
 msgid "submission.status.scheduled"
 msgstr "Scheduled"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Unscheduled"
 
+msgid "submission.status.canceled"
+msgstr "Withdrawn"
 
 msgid "submission.publications"
 msgstr "Publications"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr "The copyright year will be set automatically when this is published in an issue."
@@ -299,6 +297,8 @@ msgstr "The following requirements must be met before this can be published."
 msgid "publication.required.declined"
 msgstr "A declined submission can not be published."
 
+msgid "publication.required.canceled"
+msgstr "A withdrawn submission can not be published."
 
 msgid "publication.required.reviewStage"
 msgstr "The submission must be in the Copyediting or Production stages before it can be published."
@@ -358,6 +358,36 @@ msgstr "Send an email to the authors to let them know that this submission will 
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Select files that should be sent to the review stage."
+
+msgid "editor.submission.decision.cancelSubmission"
+msgstr "Withdraw submission"
+
+msgid "editor.submission.decision.cancelSubmission.description"
+msgstr "The submission will be archived and marked as Withdrawn."
+
+msgid "editor.submission.decision.cancelSubmission.completed"
+msgstr "Submission Withdrawn"
+
+msgid "editor.submission.decision.cancelSubmission.completed.description"
+msgstr "The submission has been withdrawn."
+
+msgid "editor.submission.decision.revertCancelSubmission"
+msgstr "Cancel Withdraw submission"
+
+msgid "editor.submission.decision.revertCancelSubmission.description"
+msgstr "Cancel the Withdraw decision for this Submission. The Submission will be moved back to the list of active submissions."
+
+msgid "editor.submission.decision.revertCancelSubmission.completed"
+msgstr "Withdraw submission canceled"
+
+msgid "editor.submission.decision.revertCancelSubmission.completed.description"
+msgstr "The decisions to Withdraw this submission has been canceled."
+
+msgid "editor.submission.decision.cancelSubmission.log"
+msgstr "Submission withdrawn"
+
+msgid "editor.submission.decision.revertCancelSubmission.log"
+msgstr "Decision to withdraw submission canceled"
 
 msgid "doi.submission.issueMissing.publication"
 msgstr "Could not create a DOI for the following submission: {$pubObjectTitle}. The submission must be assigned to an issue before a DOI can be generated."

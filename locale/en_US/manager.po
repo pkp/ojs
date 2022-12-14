@@ -2062,6 +2062,12 @@ msgstr "Issue DOIs"
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr "This email notifies the author that their submission is being declined, before the review stage, because the submission does not meet the requirements for publication in the journal."
 
+msgid "mailable.decision.cancelSubmission.notifyAuthor.name"
+msgstr "Withdraw Submission."
+
+msgid "mailable.decision.cancelSubmission.notifyAuthor.description"
+msgstr "This email notifies the author that their submission is being withdrawn."
+
 msgid "manager.institutions.noContext"
 msgstr "This institution's journal could not be found."
 

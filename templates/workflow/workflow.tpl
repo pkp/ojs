@@ -33,6 +33,13 @@
 			>
 				{translate key="common.declined"}
 			</badge>
+			<badge
+				v-else-if="submission.status === getConstant('STATUS_CANCELED')"
+				class="pkpWorkflow__identificationStatus"
+				:is-warnable="true"
+			>
+				{translate key="submission.status.canceled"}
+			</badge>
 			{include file="workflow/submissionIdentification.tpl"}
 		</h1>
 		<template slot="actions">
@@ -58,20 +65,34 @@
 					<pkp-form class="pkpWorkflow__submissionPaymentsForm" v-bind="components.{$smarty.const.FORM_SUBMISSION_PAYMENTS}" @set="set">
 				</dropdown>
 			{/if}
-			{if $canAccessEditorialHistory}
-				<pkp-button
-					ref="activityButton"
-					@click="openActivity"
-				>
-					{translate key="editor.activityLog"}
-				</pkp-button>
-			{/if}
-			<pkp-button
-				ref="library"
-				@click="openLibrary"
+			<dropdown
+				class="pkpWorkflow__moreActions"
+				label="{translate key="common.more"}"
+				icon="gear"
 			>
-				{translate key="editor.submissionLibrary"}
-			</pkp-button>
+				<ul>
+					{if $canAccessEditorialHistory}
+						<li>
+							<button class="pkpDropdown__action" ref="activityButton" @click="openActivity">
+								{translate key="editor.activityLog"}
+							</button>
+						</li>
+					{/if}
+					<li>
+						<button class="pkpDropdown__action" ref="library" @click="openLibrary">
+							{translate key="editor.submissionLibrary"}
+						</button>
+					</li>
+					{if !$submissionWasPublishedBefore}
+						<li>
+							<a class="pkpDropdown__action" ref="cancelButton" href="{$cancelSubmissionDecisionUrl}">
+								<template v-if="submission.status === getConstant('STATUS_CANCELED')">{translate key="editor.submission.decision.revertCancelSubmission"}</template>
+								<template v-else>{translate key="editor.submission.decision.cancelSubmission"}</template>
+							</a>
+						</li>
+					{/if}
+			</ul>
+			</dropdown>
 		</template>
 	</pkp-header>
 	<tabs default-tab="workflow" :track-history="true">

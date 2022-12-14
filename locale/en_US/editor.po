@@ -342,6 +342,12 @@ msgstr "Designate the original file as the Review Version"
 msgid "editor.article.decision"
 msgstr "Decision"
 
+msgid "editor.submission.workflowDecision.submission.canceled"
+msgstr "Submission withdrawn."
+
+msgid "editor.submission.decision.cancelSubmission.notifyAuthorsDescription"
+msgstr "Send an email to the authors to let them know that their submission has been withdrawn."
+
 msgid "editor.submissions.showBy"
 msgstr "Show By"
 
