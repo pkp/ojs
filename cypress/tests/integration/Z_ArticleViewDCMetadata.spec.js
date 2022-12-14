@@ -19,6 +19,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		uniqueId = Cypress._.uniqueId(uniqueSeed);
 
 		submission = {
+			sectionId: 1,
 			section: 'Articles',
 			prefix: 'Test prefix',
 			title: 'Test title',
@@ -31,18 +32,20 @@ describe('Article View Metadata - DC Plugin', function() {
 			submitterRole: 'Journal manager',
 			additionalAuthors: [
 				{
-					'givenName': 'Name 1',
-					'familyName': 'Author 1',
-					'country': 'United States',
-					'affiliation': 'Stanford University',
-					'email': 'nameauthor1Test@mailinator.com',
+					givenName: {en_US: 'Name 1'},
+					familyName: {en_US: 'Author 1'},
+					country: 'US',
+					affiliation: {en_US: 'Stanford University'},
+					email: 'nameauthor1Test@mailinator.com',
+					userGroupId: Cypress.env('authorUserGroupId')
 				},
 				{
-					'givenName': 'Name 2',
-					'familyName': 'Author 2',
-					'country': 'United States',
-					'affiliation': 'Stanford University',
-					'email': 'nameauthor2Test@mailinator.com',
+					givenName: {en_US: 'Name 2'},
+					familyName: {en_US: 'Author 2'},
+					country: 'US',
+					affiliation: {en_US: 'Stanford University'},
+					email: 'nameauthor2Test@mailinator.com',
+					userGroupId: Cypress.env('authorUserGroupId')
 				}
 			],
 			localeTitles: {
@@ -79,7 +82,7 @@ describe('Article View Metadata - DC Plugin', function() {
 				{
 					locale: 'en_US',
 					manyValues: [
-						keywords = {
+						{
 							metadata: 'keywords',
 							values: [
 								'Test keyword 1',
@@ -364,10 +367,18 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('.app__nav a').contains('Submissions').click();
 
 		// Create a new submission
-		cy.createSubmission(submission);
+		cy.getCsrfToken();
+		cy.window()
+			.then(() => {
+				return cy.createSubmissionWithApi(submission, this.csrfToken);
+			})
+			.then(xhr => {
+				return cy.submitSubmissionWithApi(submission.id, this.csrfToken);
+			})
+			.then(xhr => {
+				cy.visit('/index.php/publicknowledge/workflow/index/' + submission.id + '/1');
+			});
 
-		// Go to the new submission's workflow
-		cy.get('a').contains('Review this submission').click();
 
 		// Go to publication tabs
 		cy.get('#publication-button').click();
