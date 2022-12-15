@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-03 10:02+0000\n"
+"PO-Revision-Date: 2022-12-15 16:52+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg_BG/>\n"
@@ -2598,3 +2598,16 @@ msgstr "Запитване за архив (нов)"
 
 msgid "manager.manageEmails.description"
 msgstr "Редактиране на съобщенията, изпратени в имейли от това списание."
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Този имейл се изпраща до мениджърите на списанието, когато е получен нов "
+"материал и няма асоциирани редактори."
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Създадена е нова версия"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Този имейл автоматично уведомява назначените редактори, когато бъде "
+"създадена нова версия на подадените материали."
