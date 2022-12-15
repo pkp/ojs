@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-12-06 07:02+0000\n"
+"PO-Revision-Date: 2022-12-15 10:02+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "da_DK/>\n"
@@ -22,9 +22,8 @@ msgstr "Ny indsendelse"
 msgid "submission.submit.submissionChecklist"
 msgstr "Indsendelsestjekliste"
 
-#, fuzzy
 msgid "submission.upload.fileContents"
-msgstr "Artikelmateriale"
+msgstr "Artikelkomponent"
 
 msgid "submission.upload.selectComponent"
 msgstr "Vælg artikelelement"
@@ -392,3 +391,27 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Vælg bidragyderens rolle."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Læs og forstå venligst ophavsretsbetingelserne for at indsende til dette "
+"tidsskrift."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Du har ikke lov til at indsende et manuskript til dette tidsskrift, idet "
+"indsendelser til alle sektioner hos dette tidsskrift er blevet deaktiveret "
+"eller begrænset. Hvis du mener, dette er en fejl, så kontakt venligst <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Du har ikke lov til at indsende et manuskript til dette tidsskrift, idet "
+"forfattere skal registreres først af redaktionen. Hvis du mener, dette er en "
+"fejl, så kontakt venligst <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Denne indsendelses sektion kunne ikke findes."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Kun redaktionen kan indsende et manuskript til denne sektion."
