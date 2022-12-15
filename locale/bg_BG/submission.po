@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-15 16:02+0000\n"
+"PO-Revision-Date: 2022-12-15 16:52+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
@@ -425,3 +425,7 @@ msgstr ""
 
 msgid "submission.sectionNotFound"
 msgstr "Разделът за това изпращане на материали не можа да бъде намерен."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+"Само на редакционния екип е разрешено да изпраща материали в този раздел."
