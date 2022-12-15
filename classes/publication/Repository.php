@@ -153,19 +153,35 @@ class Repository extends \PKP\publication\Repository
         return $newId;
     }
 
-    /** @copydoc \PKP\publication\Repository::setStatusOnPublish() */
+    /**
+    * Set the status and date of publication
+    *
+    * A publication's status and date of publication will be set depending
+    * on the issue it is assigned to. Publications in future issues should
+    * be set to `STATUS_SCHEDULED`. Otherwise, they should be set to
+    * `STATUS_PUBLISHED` and should inherit the date of publication from the
+    * issue, unless a date of publication has already been set.
+    *
+    * Usually, the date of publication will be set when the issue is
+    * published. In some unusual cases, a publication may be published
+    * without an issue. This may happen in a continuous publishing model
+    * where articles are published right away. In these cases, the date of
+    * publication should be set to the current date, unless a date of
+    * publication has already been set.
+    */
     protected function setStatusOnPublish(Publication $publication)
     {
-        // A publication may be scheduled in a future issue. In such cases,
-        // the `datePublished` should remain empty and the status should be set to
-        // scheduled.
-        //
-        // If there is no assigned issue, the journal may be using a continuous
-        // publishing model in which articles are published right away.
         $issue = Repo::issue()->get($publication->getData('issueId'));
-        if ($issue && !$issue->getData('published')) {
-            $publication->setData('datePublished', null);
-            $publication->setData('status', Submission::STATUS_SCHEDULED);
+
+        if ($issue) {
+            if ($issue->getData('published')) {
+                $publication->setData('status', Submission::STATUS_PUBLISHED);
+                if (!$publication->getData('datePublished')) {
+                    $publication->setData('datePublished', $issue->getData('datePublished'));
+                }
+            } else {
+                $publication->setData('status', Submission::STATUS_SCHEDULED);
+            }
         } else {
             $publication->setData('status', Submission::STATUS_PUBLISHED);
             if (!$publication->getData('datePublished')) {

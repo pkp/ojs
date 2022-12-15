@@ -43,16 +43,15 @@
 		{assign var=issuePublished value=false}
 	{/if}
 
-	{if $issuePublished}
 		{fbvFormArea id="datePublishedArea" title="editor.issues.datePublished"}
 			{fbvFormSection}
 				{if $issuePublished}
 					{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker"}
+				{else}
+					{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker" label="editor.issues.datePublished.notPublished.description"}
 				{/if}
 			{/fbvFormSection}
 		{/fbvFormArea}
-	{/if}
-
 
 	{fbvFormArea id="identificationArea" title="editor.issues.identification"}
 		{fbvFormSection}
