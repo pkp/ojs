@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-05 21:02+0000\n"
+"PO-Revision-Date: 2022-12-15 16:52+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/bg_BG/>\n"
@@ -14,7 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Контролен списък за изпращаните материали"
 
@@ -405,3 +404,28 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Моля, изберете ролята на изпращача/сътрудниците."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Не ви е разрешено да изпращате материали към това списание, защото "
+"изпращанията във всички раздели на това списание са деактивирани или "
+"ограничени. Ако смятате, че това е грешка, моля, свържете се с <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Моля, прочетете и разберете условията за авторските права при изпращане на "
+"материали към това списание."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Нямате право да изпращате материали към това списание, защото авторите "
+"трябва да бъдат регистрирани от редакцията на списанието. Ако смятате, че "
+"това е грешка, моля, свържете се с <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Разделът за това изпращане на материали не можа да бъде намерен."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+"Само на редакционния екип е разрешено да изпраща материали в този раздел."

@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-30 20:02+0000\n"
+"PO-Revision-Date: 2022-12-14 12:02+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "hy_AM/>\n"
@@ -2673,3 +2673,8 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 "Այս նամակն ինքնաշխատ կերպով տեղեկացնում է նշանակված խմբագիրներին, երբ "
 "ստեղծվում է ներկայացման նոր տարբերակը:"
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Այս նամակն ուղարկվում է ամսագրի կառավարիչներին, երբ նոր ներկայացում է "
+"կատարվում, և չկան նշանակված խմբագիրներ:"

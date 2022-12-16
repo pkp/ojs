@@ -1,7 +1,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-15 20:43+0000\n"
+"PO-Revision-Date: 2022-12-14 12:02+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/api/hy_AM/>"
 "\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Հարցված հրապարակումը այս նյութի մաս չէ։"
@@ -78,3 +78,6 @@ msgstr "Ձեր պահանջած DOI-ն այս ամսագրի մաս չէ:"
 
 msgid "api.submissions.400.wrongContext"
 msgstr "Ձեր պահանջած ներկայացումը այս ամսագրում չէ:"
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Այս բաժինն այլևս դիմումներ չի ստանում:"

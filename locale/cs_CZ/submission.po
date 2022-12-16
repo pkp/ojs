@@ -129,7 +129,6 @@ msgstr ""
 "Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené "
 "požadavky."
 
-#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Prohlášení o ochraně osobních údajů"
 
@@ -399,3 +398,27 @@ msgstr "Zobrazit sazebnici"
 
 msgid "galley.cantEditPublished"
 msgstr "Sazebnici nelze editovat protože už byla zveřejněna."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Přečtěte si, prosím, podmínky autorských práv pro zasílání příspěvků do "
+"tohoto časopisu a seznamte se s nimi."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Do tohoto časopisu nelze zasílat příspěvky, protože autoři musí být "
+"registrováni redakcí. Pokud se domníváte, že se jedná o chybu, kontaktujte "
+"prosím <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Do tohoto časopisu nemůžete zasílat příspěvky, protože zasílání příspěvků do "
+"všech sekcí tohoto časopisu bylo deaktivováno nebo omezeno. Pokud se "
+"domníváte, že se jedná o chybu, kontaktujte prosím <a href='mailto:"
+"{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Sekci pro tento příspěvek se nepodařilo najít."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Do této sekce mohou přispívat pouze redaktoři."

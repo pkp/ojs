@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-12-12 14:02+0000\n"
+"PO-Revision-Date: 2022-12-16 15:42+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/sl_SI/>\n"
@@ -375,3 +375,13 @@ msgstr "Vaš izvleček je predolg. Prosimo skrajšajte ga na spodaj zapisano ome
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Prosimo izberite vlogo soavtoraj."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Prosimo preberite in se seznanite z izjavo o avtorskih pravicah za to revijo."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Nimate pravic za oddajo prispevkov v to revijo, ker morajo biti avrotji "
+"registrirani s strani uredništva. Če mislite, da je to pomota, prosimo, da "
+"se obrnete na <a href='mailto:{$email}'>{$name}</a>."
