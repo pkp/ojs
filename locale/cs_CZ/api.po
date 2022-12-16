@@ -13,57 +13,57 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Požadované oznámení není součástí tohoto časopisu."
+
+msgid "api.emails.403.disabled"
+msgstr "Pro tento časopis nebyla zapnuta e-mailová upozornění."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Nemůžete změnit záznamy příspěvku."
+
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nemáte právo vidět nepublikovaná čísla."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Požadované vydání není součástí tohoto příspěvku."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Požadované vydání není součástí tohoto časopisu."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Zvolený způsob platby není podporován."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr "Nemáte oprávnění přesunout tuto e-mailovou šablonu do jiného časopisu."
-
-msgid "api.contexts.404.contextNotFound"
-msgstr "Požadovaný časopis nebyl nalezen."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "K odstranění tohoto časopisu nemáte oprávnění."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Nemáte oprávnění upravovat tento časopis."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Tento časopis nelze upravovat přes API pro celý web."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Tento časopis nemůžete prohlížet ani upravovat, dokud nepožádáte o API "
-"časopisu nebo API pro celý web."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "K prohlížení tohoto časopisu nemáte oprávnění."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Můžete zobrazit pouze časopisy, které byly povoleny."
 
 msgid "api.submissions.403.contextRequired"
 msgstr ""
 "Chcete-li odeslat nebo upravit příspěvek, musíte odeslat požadavek do "
 "koncového bodu API časopisu."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Nemůžete změnit záznamy příspěvku."
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Můžete zobrazit pouze časopisy, které byly povoleny."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "K prohlížení tohoto časopisu nemáte oprávnění."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Tento časopis nemůžete prohlížet ani upravovat, dokud nepožádáte o API "
+"časopisu nebo API pro celý web."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Tento časopis nelze upravovat přes API pro celý web."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nemáte oprávnění upravovat tento časopis."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "K odstranění tohoto časopisu nemáte oprávnění."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Požadovaný časopis nebyl nalezen."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Nemáte oprávnění přesunout tuto e-mailovou šablonu do jiného časopisu."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Zvolený způsob platby není podporován."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Požadované vydání není součástí tohoto časopisu."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Požadované vydání není součástí tohoto příspěvku."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Nelze přidružit soubor z této fáze souborů se sazebnicí."
-
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "Požadované oznámení není součástí tohoto časopisu."
-
-msgid "api.emails.403.disabled"
-msgstr "Pro tento časopis nebyla zapnuta e-mailová upozornění."
