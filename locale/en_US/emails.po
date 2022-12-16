@@ -46,21 +46,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.description"
 msgstr "This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password."
 
-msgid "emails.passwordReset.subject"
-msgstr "Password Reset"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />\n"
-"<br />\n"
-"Your username: {$username}<br />\n"
-"Password: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr "This email is sent to a registered user when they have successfully reset their password following the process described in the PASSWORD_RESET_CONFIRM email."
-
 msgid "emails.userRegister.subject"
 msgstr "Journal Registration"
 
