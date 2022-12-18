@@ -17,7 +17,7 @@
 namespace APP\API\v1\dois;
 
 use APP\facades\Repo;
-use APP\Jobs\Doi\DepositIssue;
+use APP\jobs\doi\DepositIssue;
 use PKP\context\Context;
 use PKP\core\APIResponse;
 use PKP\doi\Doi;

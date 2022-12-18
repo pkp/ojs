@@ -27,7 +27,7 @@ use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Collector;
-use APP\Jobs\Notifications\IssuePublishedNotifyUsers;
+use APP\jobs\notifications\IssuePublishedNotifyUsers;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\publication\Publication;

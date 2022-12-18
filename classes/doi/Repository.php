@@ -16,7 +16,7 @@ namespace APP\doi;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\Issue;
-use APP\Jobs\Doi\DepositIssue;
+use APP\jobs\doi\DepositIssue;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\plugins\PubIdPlugin;

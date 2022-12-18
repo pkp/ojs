@@ -17,7 +17,7 @@ namespace APP\tasks;
 
 use APP\facades\Repo;
 use APP\issue\Collector;
-use APP\Jobs\Notifications\OpenAccessMailUsers;
+use APP\jobs\notifications\OpenAccessMailUsers;
 use APP\journal\Journal;
 use Illuminate\Support\Facades\Bus;
 use PKP\db\DAORegistry;
