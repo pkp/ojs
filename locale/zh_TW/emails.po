@@ -15,9 +15,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.subject"
 msgstr "密碼重置確認"
 
-msgid "emails.passwordReset.subject"
-msgstr "密碼重置"
-
 msgid "emails.userRegister.subject"
 msgstr "期刊註冊"
 

@@ -27,18 +27,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Cambio de contraseña"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Su contraseña en {$siteTitle} se ha cambiado sin problema. Por favor, guarde en lugar seguro su nombre de usuaria/o y contraseña, ya que son necesarios para trabajar con la revista.<br />\n"
-"<br />\n"
-"Nombre de usuaria/o: {$recipientUsername}<br />\n"
-"Contraseña: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Nuevo registro de usuaria/o"
 

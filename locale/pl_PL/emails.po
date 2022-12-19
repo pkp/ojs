@@ -74,19 +74,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Resetowanie hasła"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Zresetowano Twoje hasło na stronie czasopisma {$siteTitle}. Proszę zachować "
-"nowe te dane do logowania: <br />\n"
-"<br />\n"
-"Nazwa użytkownika: {$recipientUsername} <br />\n"
-"Hasło: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Rejestracja na stronie czasopisma"
 

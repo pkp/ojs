@@ -29,18 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Password Reset"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Your password has been successfully reset for use with the {$siteTitle} web site. Please retain this username and password, as it is necessary for all work with the journal.<br />\n"
-"<br />\n"
-"Your username: {$recipientUsername}<br />\n"
-"Password: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Journal Registration"
 

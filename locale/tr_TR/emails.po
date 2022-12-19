@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Şifre Sıfırlama"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"{$siteTitle} sitesinde kullanacağınız şifreniz sıfırlanmıştır. Kullanıcı adı "
-"ve şifre yapacağınız tüm işlemlerde gerekli olduğu için güvenli bir yere not "
-"ediniz. <br />\n"
-"<br />\n"
-"Kullanıcı adı: {$recipientUsername}<br />\n"
-"Şifre: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Dergi Yeni Kullanıcı Kaydı"
 

@@ -29,20 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Salasana vaihdettu"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Salasananne sivustolle {$siteTitle} on vaihdettu onnistuneesti. Säilyttäkää "
-"tämä käyttäjätunnus ja salasana, sillä tarvitsette niitä kaikkeen "
-"työskentelyyn julkaisun parissa.<br />\n"
-"<br />\n"
-"Käyttäjätunnuksenne: {$recipientUsername}<br />\n"
-"Salasana: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Julkaisuun rekisteröityminen"
 

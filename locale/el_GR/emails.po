@@ -28,18 +28,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Αλλαγή κωδικού πρόσβασης"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ο κωδικός πρόσβασής σας στον ιστότοπο {$siteTitle} άλλαξε επιτυχώς. Παρακαλούμε διατηρήστε το συγκεκριμένο όνομα Χρήστη και κωδικό πρόσβασης, καθώς είναι απαραίτητα για όλες τις εργασίες σας στο περιοδικό.<br />\n"
-"<br />\n"
-"Όνομα χρήστη: {$recipientUsername}<br />\n"
-"Κωδικός πρόσβασης: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Εγγραφή στο περιοδικό"
 

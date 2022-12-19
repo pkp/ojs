@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Ath-shuidheachadh nam faclan-faire"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Chaidh am facal-faire agad airson làrach-lìn {$siteTitle} ath-shuidheachadh. "
-"Cùm clàr dhen ainm-chleachdaiche is dhen fhacal-fhaire seo oir bidh feum "
-"agad air mu choinneamh obair sam bith a nì thu dhan iris-leabhar.<br />\n"
-"<br />\n"
-"An t-ainm-cleachdaiche agad: {$recipientUsername}<br />\n"
-"Facal-faire: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Clàradh iris-leabhair"
 

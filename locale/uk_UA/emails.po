@@ -32,18 +32,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Зміна пароля"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ваш пароль для доступу до веб-сайту {$siteTitle} був успішно змінений. Будь ласка, збережіть вказані нижче ім'я користувача та пароль, оскільки ці дані будуть Вам необхідні протягом усієї подальшої роботи з цим журналом.<br />\n"
-"<br />\n"
-"Ваше ім'я користувача: {$recipientUsername}<br />\n"
-"Пароль: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Реєстрація нового користувача"
 

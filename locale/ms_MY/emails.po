@@ -87,20 +87,6 @@ msgstr ""
 msgid "emails.userRegister.subject"
 msgstr "Pendaftaran Jurnal"
 
-msgid "emails.passwordReset.body"
-msgstr ""
-"Kata laluan anda berjaya ditetapkan semula untuk digunakan dengan laman web "
-"{$siteTitle}. Harap simpan nama pengguna dan kata laluan ini, kerana perlu "
-"untuk semua kerja dengan jurnal. <br />\n"
-"<br />\n"
-"Nama pengguna anda: {$recipientUsername} <br />\n"
-"Kata Laluan: {$password} <br />\n"
-"<br />\n"
-"{$siteContactName}"
-
-msgid "emails.passwordReset.subject"
-msgstr "Tetapan Semula Kata Laluan"
-
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Pengesahan Tetapan Semula Kata Laluan"
 

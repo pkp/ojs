@@ -28,18 +28,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Promjena lozinke"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis.<br />\n"
-"<br />\n"
-"Vaše korisničko ime: {$recipientUsername}<br />\n"
-"Lozinka: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Registracija novog korisnika"
 

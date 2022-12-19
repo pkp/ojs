@@ -29,18 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Lösenord återställt"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ditt lösenord för {$siteTitle} har återställts. Spara nedanstående användarnamn och lösenord, de är nödvändiga för allt arbete med tidskriften.<br />\n"
-"<br />\n"
-"Ditt användarnamn: {$recipientUsername}<br />\n"
-"Lösenord: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Registrering hos tidskrift"
 

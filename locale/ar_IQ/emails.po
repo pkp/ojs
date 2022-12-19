@@ -30,18 +30,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "إعادة تعيين كلمة المرور"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"كلمة مرورك أُعيد تعيينها بنجاح لتتمكن من الولوج إلى موقع {$siteTitle}. لطفاً، إحتفظ باسم الدخول وكلمة المرور المبينين أدناه كونهما ضروريان لمتابعة كل أعمالك في موقع المجلة.<br />\n"
-"<br />\n"
-"اسم الدخول: {$recipientUsername}<br />\n"
-"كلمة المرور: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "التسجيل في المجلة"
 

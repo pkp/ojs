@@ -30,20 +30,6 @@ msgstr ""
 msgid "emails.userRegister.subject"
 msgstr "خۆتۆماركردن لە گۆڤار"
 
-msgid "emails.passwordReset.body"
-msgstr ""
-"دووبارە رێكخستنەوەى وشەى نهێنيتان بەسەركەوتوويى ئەنجامدرا بۆ بەكارهێنانى "
-"لەگەڵ {$siteTitle} ماڵپەڕ. تكايە ناوى بەكارهێنەر و وشەى نهێنى بپارێزە, چونكە "
-"زۆر گرنگە بۆ هەموو كارەكانى گۆڤار .<br />\n"
-"<br />\n"
-"ناوى بەكارهێنەر: {$recipientUsername}<br />\n"
-"وشەى نهێنى: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
-msgid "emails.passwordReset.subject"
-msgstr "دووبارە رێكخستنەوەى  وشەى نهێنى"
-
 msgid "emails.lockssExistingArchive.subject"
 msgstr "ئه‌رشیفكردنی داواكاری بۆ ناوی ده‌ق"
 

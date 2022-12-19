@@ -24,18 +24,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "رمز عبور دوباره تنظیم شد"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"رمزعبور شما برای استفاده از وب سایت {$siteTitle}، دوباره تنظیم شد. لطفا این کلمه کاربری و رمز عبور را محفوظ نگاه دارید، زیرا برای کارکردن با وب سایت مجله لازم است.<br />\n"
-"<br />\n"
-"نام کاربری شما: {$recipientUsername}<br />\n"
-"رمز ورود شما: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "ثبت نام کاربر جدید"
 
