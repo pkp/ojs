@@ -54,26 +54,6 @@ msgstr ""
 "hogy elfelejtette a jelszavát, és nem tud bejelentkezni. Tartalmaz egy "
 "linket, amire kattintva visszaállítható a jelszava."
 
-msgid "emails.passwordReset.subject"
-msgstr "Jelszó visszaállítás"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Jelszavának visszaállítása sikeresen megtörtént a(z) {$siteTitle} oldalhoz. "
-"Kérem, őrizze meg felhasználónevét és jelszavát, mert a folyóirattal "
-"kapcsolatos összes munkafolyamatban szüksége lehet rá.<br />\n"
-"<br />\n"
-"Felhasználóneve: {$username}<br />\n"
-"Jelszava: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Ez az email egy regisztrált felhasználónak kerül kiküldésre, amikor "
-"sikeresen visszaállításra került jelszava, követve a PASSWORD_RESET_CONFIRM "
-"levélben írtakat."
-
 msgid "emails.userRegister.subject"
 msgstr "Folyóirat regisztráció"
 

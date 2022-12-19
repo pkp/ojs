@@ -54,27 +54,6 @@ msgstr ""
 "indicat que no recorda la seva contrasenya o que no pot iniciar la sessió. "
 "Inclou un URL per a la reinicialització de la contrasenya."
 
-msgid "emails.passwordReset.subject"
-msgstr "Reinicialització de la contrasenya"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"La vostra contrasenya per al lloc web {$siteTitle} s'ha reinicialitzat "
-"correctament. Recordeu aquest nom d'usuari i aquesta contrasenya, ja que els "
-"necessitareu per a accedir a la revista i treballar-hi.<br />\n"
-"<br />\n"
-"Nom d'usuari: {$username}<br />\n"
-"Contrasenya: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Aquest missatge de correu electrònic s'envia a un usuari registrat per a "
-"notificar-li que la seva contrasenya s'ha reinicialitzat amb èxit després "
-"d'haver seguit el procés descrit al missatge de correu electrònic "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Registre a la revista"
 

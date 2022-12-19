@@ -57,26 +57,6 @@ msgstr ""
 "U poruci se nalazi URL koji mogu slijediti kao bi postavili svoju novu "
 "lozinku."
 
-msgid "emails.passwordReset.subject"
-msgstr "Promjena lozinke"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. "
-"Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za "
-"sve aktivnosti vezane uz časopis.<br />\n"
-"<br />\n"
-"Vaše korisničko ime: {$username}<br />\n"
-"Lozinka: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Ovaj obrazac e-pošte šalje se registriranim korisnicima nakon što  uspješno "
-"ponovno postave  svoju  lozinku slijedeći postupak koji je opisan u "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Registracija novog korisnika"
 

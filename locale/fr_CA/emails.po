@@ -53,27 +53,6 @@ msgstr ""
 "avoir oublié son mot de passe ou qui est incapable d'ouvrir une session. Il "
 "fournit le lien URL à cliquer pour pouvoir réinitialiser son mot de passe."
 
-msgid "emails.passwordReset.subject"
-msgstr "Réinitialisation du mot de passe"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec "
-"succès. Veuillez conserver votre nom d'utilisateur-trice ainsi que votre mot "
-"de passe. Vous en aurez besoin pour chacune de vos interactions avec la "
-"revue.<br />\n"
-"<br />\n"
-"Votre nom d'utilisateur-trice : {$username}<br />\n"
-"Mot de passe : {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Ce courriel est envoyé à l'utilisateur-trice inscrit-e lorsqu'il a réussi à "
-"réinitialiser son mot de passe en ayant suivi la procédure décrite dans le "
-"courriel « Confirmation de la réinitialisation du mot de passe »."
-
 msgid "emails.userRegister.subject"
 msgstr "Inscription à la revue"
 

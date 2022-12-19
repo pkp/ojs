@@ -57,24 +57,6 @@ msgstr ""
 "potwierdzenia zresetowania hasła. Załączony jest link do strony resetowania "
 "hasła."
 
-msgid "emails.passwordReset.subject"
-msgstr "Resetowanie hasła"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Zresetowano Twoje hasło na stronie czasopisma {$siteTitle}. Proszę zachować "
-"nowe te dane do logowania: <br />\n"
-"<br />\n"
-"Nazwa użytkownika: {$username} <br />\n"
-"Hasło: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Wiadomość jest przesyłana do zarejestrowanych użytkowników po zresetowaniu "
-"hasła."
-
 msgid "emails.userRegister.subject"
 msgstr "Rejestracja na stronie czasopisma"
 

@@ -53,25 +53,6 @@ msgstr ""
 "Email ini dikirimkan ke pengguna terdaftar ketika lupa sandi atau tidak "
 "dapat login. Email ini memberikan URL untuk melakukan reset sandi."
 
-msgid "emails.passwordReset.subject"
-msgstr "Reset Sandi"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Sandi akun Anda di website {$siteTitle} telah berhasil di-reset. Silakan "
-"simpan nama pengguna dan sandi ini karena akan dibutuhkan untuk semua "
-"kegiatan terkait jurnal di website ini.<br />\n"
-"<br />\n"
-"Nama pengguna Anda: {$username}<br />\n"
-"Sandi: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Email ini dikirimkan ke pengguna terdaftar saat proses reset password "
-"berhasil sesuai prosedur di email PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Registrasi Jurnal"
 

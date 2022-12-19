@@ -51,26 +51,6 @@ msgstr ""
 "mật khẩu hoặc không thể đăng nhập. Nó cung cấp một URL mà họ có thể theo dõi "
 "để đặt lại mật khẩu của họ."
 
-msgid "emails.passwordReset.subject"
-msgstr "Đặt lại mật khẩu"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Mật khẩu của bạn đã được đặt lại thành công để sử dụng với trang web của "
-"{$siteTitle}. Vui lòng lưu lại tên người dùng và mật khẩu này, vì nó cần "
-"thiết cho tất cả các công việc với tạp chí.<br />\n"
-"<br />\n"
-"Username: {$username}<br />\n"
-"Password: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Email này được gửi đến người dùng đã đăng ký khi họ đã đặt lại thành công "
-"mật khẩu của mình theo quy trình được mô tả trong email "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Đăng ký tạp chí"
 

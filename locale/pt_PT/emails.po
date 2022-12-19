@@ -54,26 +54,6 @@ msgstr ""
 "aceder à revista. O link fornecido permite ao utilizador concluir a "
 "atualização da senha."
 
-msgid "emails.passwordReset.subject"
-msgstr "Senha atualizada"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"A sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. "
-"Guarde os seus dados de acesso (nome de utilizador e senha), uma vez que "
-"serão necessários para todas as interações com a revista.<br />\n"
-"<br />\n"
-"O seu nome de utilizador: {$username}<br />\n"
-"A sua senha: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Este e-mail é enviado a um utilizador registado quando este atualizou com "
-"sucesso a senha seguindo o processo descrito no e-mail "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Novo utilizador registado"
 

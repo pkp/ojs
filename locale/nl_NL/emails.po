@@ -53,26 +53,6 @@ msgstr ""
 "aangegeven zijn wachtwoord vergeten te zijn of niet in te kunnen loggen. Het "
 "bevat een URL die ze kunnen volgen om hun wachtwoord te herstellen."
 
-msgid "emails.passwordReset.subject"
-msgstr "Wachtwoord hersteld"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Uw wachtwoord is met succes hersteld voor de website {$siteTitle}. Bewaar de "
-"gebruikersnaam en wachtwoord, ze zijn nodig om het tijdschrift te kunnen "
-"gebruiken.<br />\n"
-"<br />\n"
-"Uw gebruikersnaam: {$username}<br />\n"
-"Wachtwoord: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Deze e-mail wordt verstuurd naar een geregistreerde gebruiker als ze met "
-"succes hun wachtwoord hebben veranderd volgens de procedure die is "
-"beschreven in de PASSWORD_RESET_CONFIRM e-mail."
-
 msgid "emails.userRegister.subject"
 msgstr "Tijdschriftregistratie"
 

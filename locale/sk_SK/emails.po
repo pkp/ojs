@@ -51,25 +51,6 @@ msgstr ""
 "zabudol svoje heslo alebo sa nemôže prihlásiť. Obsahuje adresu URL, ktorú "
 "môže navštíviť a obnoviť si svoje heslo."
 
-msgid "emails.passwordReset.subject"
-msgstr "Resetovanie hesla"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaše heslo pre stránku {$siteTitle} bolo úspešne obnovené. Zapamätajte si, "
-"prosím, toto používateľské meno a heslo, pretože ich budete potrebovať pre "
-"všetku prácu s týmto časopisom.<br />\n"
-"<br />\n"
-"Vaše používateľské meno: {$username}<br />\n"
-"Heslo: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Tento email je odoslaný zaregistrovanému používateľovi, keď si úspešne "
-"obnoví svoje heslo postupom uvedeným v PASSWORD_RESET_CONFIRM emaili."
-
 msgid "emails.userRegister.subject"
 msgstr "Registrácia do časopisu"
 

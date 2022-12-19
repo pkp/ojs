@@ -54,26 +54,6 @@ msgstr ""
 "tenha esquecido sua senha ou não consiga efetuar login. Um link é fornecido "
 "que permite ao usuário redefinir sua senha."
 
-msgid "emails.passwordReset.subject"
-msgstr "Senha Redefinida"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Sua senha foi redefinida com sucesso para uso com o site {$siteTitle}. Favor "
-"guardar esse nome de usuário e senha, pois são necessários para todo o "
-"trabalho com o periódico.<br />\n"
-"<br />\n"
-"Seu usuário: {$username}<br />\n"
-"Senha: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Esta mensagem é enviada a um usuário cadastrado quando ele redefiniu sua "
-"senha com sucesso, seguindo o processo descrito na mensagem "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Cadastro no Periódico"
 

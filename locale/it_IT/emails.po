@@ -55,25 +55,6 @@ msgstr ""
 "ha dimenticato la sua password o non riesce a fare il log in. Fornisce una "
 "URL per il reset della password."
 
-msgid "emails.passwordReset.subject"
-msgstr "Password modificata"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"La tua password per {$siteTitle} è stata modificata con successo.<br />\n"
-"Qui sotto trovi il tuo username e la nuova password.<br />\n"
-"<br />\n"
-"Username: {$username}<br />\n"
-"Password: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Questa email viene mandata ad un utente registrato quando ha resettato la "
-"password seguendo il processo descritto nella email "
-"PASSWORD_RESETTA_CONFERMA."
-
 msgid "emails.userRegister.subject"
 msgstr "Registrazione nuovo utente"
 

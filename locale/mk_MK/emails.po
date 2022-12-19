@@ -51,26 +51,6 @@ msgstr ""
 "заборавиле нивната лозинка и не можат да се најават. Им обезбедува URL-"
 "адреса на која можат да ја ресетираат својата лозинка."
 
-msgid "emails.passwordReset.subject"
-msgstr "Ресетирај лозинка"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Вашата лозинка е успешно ресетирана за употреба на {$siteTitle} веб-"
-"страницата. Ве молиме запомнетете го ова корисничко име и лозинка, бидејќи "
-"ви се потребни  за сета работа со списанието.<br />\n"
-"<br />\n"
-"Вашето корисничко име: {$username}<br />\n"
-"Лозинка: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Овој и-меил е испратен до регистриран корисник кога успешно ќе ја ресетираат "
-"нивната лозинка следејќи го процесот опишан во PASSWORD_RESET_CONFIRM и-"
-"меилот."
-
 msgid "emails.userRegister.subject"
 msgstr "Регистрација на списание"
 

@@ -54,25 +54,6 @@ msgstr ""
 "glemt passordet sitt, eller at de ikke klarer å logge inn. Den gir en URL-"
 "lenke brukeren kan følge for å fornye passordet sitt."
 
-msgid "emails.passwordReset.subject"
-msgstr "Fornying av passord"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare "
-"på brukernavnet og passordet. Du vil trenge dem for oppgavene du skal utføre "
-"på nettstedet.<br />\n"
-"<br />\n"
-"Ditt brukernavn: «{$username»}<br />\n"
-"Passord: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Denne e-posten sendes til en bruker som har fornyet passordet sitt som "
-"beskrevet i PASSWORD_RESET_CONFIRM e-posten."
-
 msgid "emails.userRegister.subject"
 msgstr "Du er nå registrert som bruker"
 

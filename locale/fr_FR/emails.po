@@ -54,26 +54,6 @@ msgstr ""
 "mot de passe ou qui sont incapables d'ouvrir une session. Il fournit le lien "
 "URL pour réinitialiser leur mot de passe."
 
-msgid "emails.passwordReset.subject"
-msgstr "Réinitialisation du mot de passe"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec "
-"succès. Ce mot de passe est temporaire, vous devrez le changer à la "
-"prochaine utilisation.<br />\n"
-"<br />\n"
-"Votre nom d'utilisateur : {$username}<br />\n"
-"Mot de passe temporaire : {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à "
-"réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le "
-"courriel « Confirmation de la réinitialisation du mot de passe »."
-
 msgid "emails.userRegister.subject"
 msgstr "Inscription d'un nouvel utilisateur"
 
