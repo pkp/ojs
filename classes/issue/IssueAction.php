@@ -21,6 +21,7 @@ use APP\facades\Repo;
 use APP\subscription\Subscription;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
+use PKP\security\Role;
 
 use PKP\submission\PKPSubmission;
 
@@ -69,10 +70,10 @@ class IssueAction
             $journalId = $journal->getId();
             $userId = $user->getId();
             $subscriptionAssumedRoles = [
-                ROLE_ID_MANAGER,
-                ROLE_ID_SUB_EDITOR,
-                ROLE_ID_ASSISTANT,
-                ROLE_ID_SUBSCRIPTION_MANAGER
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_ASSISTANT,
+                Role::ROLE_ID_SUBSCRIPTION_MANAGER
             ];
 
             $roles = $roleDao->getByUserId($userId, $journalId);
