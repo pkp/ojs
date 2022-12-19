@@ -47,21 +47,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.description"
 msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين الذي أبلغوا عن فقدانهم لكلمات مرورهم إلى الموقع، أو الذين تعذر عليهم الولوج لأي سبب آخر. سيحصل هؤلاء على رابط يمكنهم عند النقر عليه إعادة تعيين كلمات مرورهم."
 
-msgid "emails.passwordReset.subject"
-msgstr "إعادة تعيين كلمة المرور"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"كلمة مرورك أُعيد تعيينها بنجاح لتتمكن من الولوج إلى موقع {$siteTitle}. لطفاً، إحتفظ باسم الدخول وكلمة المرور المبينين أدناه كونهما ضروريان لمتابعة كل أعمالك في موقع المجلة.<br />\n"
-"<br />\n"
-"اسم الدخول: {$username}<br />\n"
-"كلمة المرور: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr "هذه الرسالة معنونة إلى المستخدمين المسجلين الذي تمكنوا من إعادة تعيين كلمات مرورهم بنجاح متبعين الخطوات الموضحة في رسالة إعادة تعيين كلمة المرور."
-
 msgid "emails.userRegister.subject"
 msgstr "التسجيل في المجلة"
 

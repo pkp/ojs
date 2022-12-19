@@ -30,21 +30,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.description"
 msgstr "Tento email je zasílán registrovanému uživateli, když uvede, že zapomněl své heslo nebo se nemůže přihlásit. Obsahuje adresu URL, kterou může následovat a resetovat své heslo."
 
-msgid "emails.passwordReset.subject"
-msgstr "Resetování hesla"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaše heslo pro stránku {$siteTitle} bylo úspěšně resetováno. Zapamatujte si prosím toto uživatelské jméno a heslo, protože je budete potřebovat pro veškerou práci s tímto časopisem.<br />\n"
-"<br />\n"
-"Vaše uživatelské jméno: {$username}<br />\n"
-"Heslo: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Tento email je zaslán registrovanému uživateli, když úspěšně resetuje své heslo postupem uvedeným v PASSWORD_RESET_CONFIRM emailu."
-
 msgid "emails.userRegister.subject"
 msgstr "Registrace do časopisu"
 

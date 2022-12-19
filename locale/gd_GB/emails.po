@@ -53,26 +53,6 @@ msgstr ""
 "clàradh a-steach. Tha e a’ toirt URL dhaibh far an urrainn dhaibh am facal-"
 "faire aca ath-shuidheachadh."
 
-msgid "emails.passwordReset.subject"
-msgstr "Ath-shuidheachadh nam faclan-faire"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Chaidh am facal-faire agad airson làrach-lìn {$siteTitle} ath-shuidheachadh. "
-"Cùm clàr dhen ainm-chleachdaiche is dhen fhacal-fhaire seo oir bidh feum "
-"agad air mu choinneamh obair sam bith a nì thu dhan iris-leabhar.<br />\n"
-"<br />\n"
-"An t-ainm-cleachdaiche agad: {$username}<br />\n"
-"Facal-faire: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Thèid am post-d seo a chur gu cleachdaiche clàraichte nuair a bhios iad air "
-"am facal-faire aca ath-shuidheachadh a rèir mar a mhìnich sinn sa phost-d "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Clàradh iris-leabhair"
 

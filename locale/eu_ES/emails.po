@@ -51,25 +51,6 @@ msgstr ""
 "ezinda dabiltzanei bidaltzen zaie mezu hau. Pasahitza berrezartzeko URL bat "
 "ematen du."
 
-msgid "emails.passwordReset.subject"
-msgstr "Pasahitza berrezarrita"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"{$siteTitle} webgunean sartzeko pasahitza ongi berrezarri da. Ondo gorde "
-"erabiltzaile-izen eta pasahitz hauek, aldizkarian sartzeko beharko baitituzu."
-"<br />\n"
-"<br />\n"
-"Zure erabiltzaile-izena: {$username}<br />\n"
-"Pasahitza: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Mezu hau bidaltzen zaie PASSWORD_RESET_CONFIRM mezuan azaldutako prozesuaren "
-"bidez pasahitza ondo berrezartzea lortu duten erabiltzaile erregistratuei."
-
 msgid "emails.userRegister.subject"
 msgstr "Aldizkarian erregistratzea"
 

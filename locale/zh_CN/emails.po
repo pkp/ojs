@@ -49,24 +49,6 @@ msgstr ""
 "当注册用户忘记他们的密码或者无法登入的时候，这封电子邮件会寄给他们。信中会提"
 "供一个网址让它们能够登入并重置他们的密码。"
 
-msgid "emails.passwordReset.subject"
-msgstr "重置密码"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"您的密码已经成功重新设定以使用{$siteTitle}网站。请保管好这份用户名称和密码，"
-"它对于使用本站的所有功能来说是非常必要的。<br />\n"
-"<br />\n"
-"您的用户名称：{$username}<br />\n"
-"密码：{$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"当注册用户成功依照PASSWORD_RESET_CONFIRM电子邮件的指示重新设定他们的密码时，"
-"这封电子邮件会被寄给他们。"
-
 msgid "emails.userRegister.subject"
 msgstr "新用户注册"
 

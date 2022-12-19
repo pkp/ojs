@@ -55,26 +55,6 @@ msgstr ""
 "haben oder sich nicht einloggen können. Sie liefert eine URL, der die "
 "Benutzer/innen folgen können, um ihr Passwort zurückzusetzen."
 
-msgid "emails.passwordReset.subject"
-msgstr "Passwort neu gesetzt"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ihr Benutzer/innen-Passwort für die Webseite {$siteTitle} wurde neu gesetzt. "
-"Bitte notieren Sie Benutzer/innennamen und Passwort, beides wird für alle "
-"Arbeiten mit dieser Zeitschrift gebraucht.<br />\n"
-"<br />\n"
-"Ihr Benutzer/innenname: {$username}<br />\n"
-"Passwort: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Diese E-Mail wird an registrierte Benutzer/innen gesendet, nachdem sie ihr "
-"Passwort erfolgreich nach dem in der PASSWORD_RESET_CONFIRM-E-Mail "
-"beschriebenen Verfahren zurückgesetzt haben."
-
 msgid "emails.userRegister.subject"
 msgstr "Registrierung bei der Zeitschrift"
 

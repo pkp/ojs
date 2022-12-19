@@ -53,26 +53,6 @@ msgstr ""
 "lykilorði sínu og geta ekki skráð sig inn.  Tölvupósturinn sendir vefslóð "
 "sem notandinn getur notað til að endurstilla lykilorðið sitt."
 
-msgid "emails.passwordReset.subject"
-msgstr "Endurstilling lykilorðs"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Búið er að endurstilla lykilorð þitt á vefsíðu tímritsins {$siteTitle}. "
-"Vinsamlega geymdu þetta notendanafn og lykilorð þar sem það er nauðsynlegt "
-"fyrir alla vinnu með tímaritinu. <br />\n"
-"<br />\n"
-"Notendanafn þitt: {$recipientUsername}<br />\n"
-"Lykilorð: {$password}<br />\n"
-"<br />\n"
-"{$signature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Þessi tölvupóstur er sendur á skráða notendur þegar þeir hafa endurstillt "
-"lykilorð sitt samkvæmt ferli sem lýst er í PASSWORD_RESET_CONFIRM "
-"tölvupóstinum."
-
 msgid "emails.userRegister.subject"
 msgstr "Tímarit - skráning"
 

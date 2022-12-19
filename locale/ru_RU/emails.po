@@ -47,21 +47,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.description"
 msgstr "Это письмо отправляется зарегистрированному пользователю, когда он сообщает, что забыл пароль или не может войти на сайт. В письме содержится ссылка (URL), перейдя по которой пользователь сможет сбросить свой пароль."
 
-msgid "emails.passwordReset.subject"
-msgstr "Пароль сброшен"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ваш пароль на сайте «{$siteTitle}» был успешно сброшен. Пожалуйста, сохраните имя пользователя и пароль, так как они требуются для работы с журналом.<br />\n"
-"<br />\n"
-"Имя пользователя: {$username}<br />\n"
-"Пароль: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr "Это письмо отправляется зарегистрированному пользователю, когда он успешно сбросил свой пароль в соответствии с процедурой, описанной в письме PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Регистрация в журнале"
 

@@ -53,25 +53,6 @@ msgstr ""
 "ponastavitev gesla. V emailu se nahaja povezava, ki jo mora uporabnik "
 "klikniti za ponastavitev gesla."
 
-msgid "emails.passwordReset.subject"
-msgstr "Geslo ponastavljeno"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaše geslo za dostop do spletišča {$siteTitle} je bilo uspešno "
-"ponastavljeno. Spodaj sta vaše uporabnipko ime in novo geslo, ki ju "
-"potrebujete za prijavo.<br />\n"
-"<br />\n"
-"Uporabniško ime: {$username}<br />\n"
-"Geslo: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Email se pošlje registriranemu uporabniku, ko uspešno ponastavi svoje geslo, "
-"kot je opisano v emailu PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Potrdilo registracije"
 

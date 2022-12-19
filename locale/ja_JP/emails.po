@@ -53,27 +53,6 @@ msgstr ""
 "の連絡を受けた場合に、登録ユーザーに送信されるものです。このメールではパス"
 "ワードをリセットするためのURLを提供します。"
 
-msgid "emails.passwordReset.subject"
-msgstr "パスワードのリセット"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"ご利用の{$siteTitle}のWebサイトのパスワードのリセットが終了しました。このユー"
-"ザー名とパスワードは、雑誌のすべての処理で必要となりますので、大切に保管して"
-"ください。<br />\n"
-"<br />\n"
-"あなたのユーザー名: {$username}<br />\n"
-"あなたのパスワード: {$password}<br />\n"
-"<br />\n"
-"よろしくお願いいたします。<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"このメールは、PASSWORD_RESET_CONFIRMメールで説明されている処理を受けてパス"
-"ワードのリセットが成功した場合に、登録ユーザーに送信されるものです。"
-
 msgid "emails.userRegister.subject"
 msgstr "新規ユーザーの登録"
 

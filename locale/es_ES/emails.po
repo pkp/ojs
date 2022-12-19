@@ -54,26 +54,6 @@ msgstr ""
 "olvidado su contraseña o que no se pueden identificar. Proporciona una URL "
 "para que cambien su contraseña."
 
-msgid "emails.passwordReset.subject"
-msgstr "Cambio de contraseña"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Su contraseña en {$siteTitle} se ha cambiado sin problema. Por favor, guarde "
-"en lugar seguro su nombre de usuaria/o y contraseña, ya que son necesarios "
-"para trabajar con la revista.<br />\n"
-"<br />\n"
-"Nombre de usuaria/o: {$username}<br />\n"
-"Contraseña: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Este correo se envía a un/a usuario/a registrado/a una vez han cambiado su "
-"contraseña siguiendo el procedimiento descrito en el correo-e "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Nuevo registro de usuaria/o"
 

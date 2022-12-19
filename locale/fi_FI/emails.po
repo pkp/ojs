@@ -53,26 +53,6 @@ msgstr ""
 "ilmoittaa unohtaneensa salasanansa tai joka ei pysty kirjautumaan. Viesti "
 "sisältää ULR:n, jonka kautta salasana voidaan vaihtaa."
 
-msgid "emails.passwordReset.subject"
-msgstr "Salasana vaihdettu"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Salasananne sivustolle {$siteTitle} on vaihdettu onnistuneesti. Säilyttäkää "
-"tämä käyttäjätunnus ja salasana, sillä tarvitsette niitä kaikkeen "
-"työskentelyyn julkaisun parissa.<br />\n"
-"<br />\n"
-"Käyttäjätunnuksenne: {$username}<br />\n"
-"Salasana: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"This email is sent to a registered user when they have successfully reset "
-"their password following the process described in the PASSWORD_RESET_CONFIRM "
-"email."
-
 msgid "emails.userRegister.subject"
 msgstr "Julkaisuun rekisteröityminen"
 

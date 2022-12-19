@@ -48,24 +48,6 @@ msgstr ""
 "דוא\"ל זה נשלח למשתמש רשום כאשר הוא מציין ששכח את סיסמתו או שאינו יכול "
 "להתחבר. היא מספקת כתובת URL כדי לאפס את הסיסמה שלהם."
 
-msgid "emails.passwordReset.subject"
-msgstr "איפוס סיסמה"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"איפוס סיסמתך בוצע בהצלחה. שמור על פרטי שם משתמש וסיסמה כי צריכים אותם לכל "
-"עבודה עם כתב העת. <br />\n"
-"<br />\n"
-"שם משתמש: {username$}<br />\n"
-"סיסמה:  {password$}<br />\n"
-"<br />\n"
-"{principalContactSignature$}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"דוא\"ל זה נשלח למשתמש רשום לאחר שאיפס בהצלחה את סיסמתו בעקבות התהליך המתואר "
-"בדוא\"ל PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "רישום כתב עת"
 

@@ -54,26 +54,6 @@ msgstr ""
 "har glömt sitt lösenord eller inte kan logga in. E-postmeddelandet "
 "innehåller en URL som leder till återställning av lösenordet."
 
-msgid "emails.passwordReset.subject"
-msgstr "Lösenord återställt"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ditt lösenord för {$siteTitle} har återställts. Spara nedanstående "
-"användarnamn och lösenord, de är nödvändiga för allt arbete med tidskriften."
-"<br />\n"
-"<br />\n"
-"Ditt användarnamn: {$username}<br />\n"
-"Lösenord: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Det här e-postmeddelandet skickas till registrerade användare som "
-"bekräftelse på återställt lösenord (enligt beskrivning i "
-"PASSWORD_RESET_CONFIRM-mailet)."
-
 msgid "emails.userRegister.subject"
 msgstr "Registrering hos tidskrift"
 

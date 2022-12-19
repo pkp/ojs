@@ -54,26 +54,6 @@ msgstr ""
 "glemt deres adgangskode eller ikke kan logge på. Den indeholder en URL-"
 "adresse, de kan følge for at nulstille deres adgangskode."
 
-msgid "emails.passwordReset.subject"
-msgstr "Nulstil adgangskode"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Din adgangskode er blevet nulstillet og kan benyttes på webstedet "
-"{$siteTitle}. Opbevar brugernavnet og adgangskoden, da de er nødvendige for "
-"alt arbejde i forbindelse med tidsskriftet.<br />\n"
-"<br />\n"
-"Dit brugernavn: {$username}<br/>\n"
-"Adgangskode: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-msgid "emails.passwordReset.description"
-msgstr ""
-"Denne e-mail sendes til registrerede brugere, når de har nulstillet deres "
-"adgangskode, efter at de har fulgt den proces, der er beskrevet i e-mailen "
-"PASSWORD_RESET_CONFIRM."
-
 msgid "emails.userRegister.subject"
 msgstr "Tidsskriftsregistrering"
 

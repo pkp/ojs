@@ -70,36 +70,6 @@ msgstr ""
 "करने के लिए अनुसरण कर सकते हैं."
 
 # (pofilter) simplecaps: Different capitalization
-msgid "emails.passwordReset.subject"
-msgstr "पासवर्ड रीसेट"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ siteTitle}, {$password}, {$principalContactSignature}, {$username}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) xmltags: Added XML tags
-msgid "emails.passwordReset.body"
-msgstr ""
-"आपका पासवर्ड सफलतापूर्वक {$ siteTitle} वेब साइट के साथ उपयोग के लिए रीसेट कर दिया "
-"गया है। कृपया इस उपयोगकर्ता नाम और पासवर्ड को बनाए रखें, क्योंकि यह जर्नल के साथ काम "
-"करने के लिए आवश्यक है.<br />\n"
-"<br />\n"
-"Your username: {$username}<br />\n"
-"Password: {$password}<br />\n"
-"<br />\n"
-"{$principalContactSignature}"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) startcaps: Different capitalization at the start
-msgid "emails.passwordReset.description"
-msgstr ""
-"PASSWORD_RESET_CONFIRM ईमेल में वर्णित प्रक्रिया का पालन करते हुए यह ईमेल एक पंजीकृत "
-"उपयोगकर्ता को भेजा जाता है जब उन्होंने अपना पासवर्ड सफलतापूर्वक रीसेट कर दिया हो."
-
-# (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "emails.userRegister.subject"
 msgstr "जर्नल पंजीकरण"
