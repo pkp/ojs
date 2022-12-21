@@ -162,8 +162,8 @@ class WebFeedGatewayPlugin extends \PKP\plugins\GatewayPlugin
             'issue' => $issue,
             'showToc' => true,
         ]);
-
-        $templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
+        $templateMgr->setHeaders(['content-type: ' . $mimeTypeMap[$type] . '; charset=utf-8']);
+        $templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]));
         return true;
     }
 }
