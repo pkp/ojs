@@ -32,20 +32,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Пароль сброшен"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ваш пароль на сайте «{$siteTitle}» был успешно сброшен. Пожалуйста, "
-"сохраните имя пользователя и пароль, так как они требуются для работы с "
-"журналом.<br />\n"
-"<br />\n"
-"Имя пользователя: {$recipientUsername}<br />\n"
-"Пароль: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Регистрация в журнале"
 

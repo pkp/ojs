@@ -27,20 +27,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Pasahitza berrezarrita"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"{$siteTitle} webgunean sartzeko pasahitza ongi berrezarri da. Ondo gorde "
-"erabiltzaile-izen eta pasahitz hauek, aldizkarian sartzeko beharko baitituzu."
-"<br />\n"
-"<br />\n"
-"Zure erabiltzaile-izena: {$recipientUsername}<br />\n"
-"Pasahitza: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Aldizkarian erregistratzea"
 

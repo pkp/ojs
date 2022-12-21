@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Reset Sandi"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Sandi akun Anda di website {$siteTitle} telah berhasil di-reset. Silakan "
-"simpan nama pengguna dan sandi ini karena akan dibutuhkan untuk semua "
-"kegiatan terkait jurnal di website ini.<br />\n"
-"<br />\n"
-"Nama pengguna Anda: {$recipientUsername}<br />\n"
-"Sandi: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Registrasi Jurnal"
 

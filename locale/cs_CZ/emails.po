@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Resetování hesla"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaše heslo pro stránku {$siteTitle} bylo úspěšně resetováno. Zapamatujte si "
-"prosím toto uživatelské jméno a heslo, protože je budete potřebovat pro "
-"veškerou práci s tímto časopisem.<br />\n"
-"<br />\n"
-"Vaše uživatelské jméno: {$recipientUsername}<br />\n"
-"Heslo: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Registrace do časopisu"
 

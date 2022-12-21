@@ -34,20 +34,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Senha Redefinida"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Sua senha foi redefinida com sucesso para uso com o site {$siteTitle}. Favor "
-"guardar esse nome de usuário e senha, pois são necessários para todo o "
-"trabalho com o periódico.<br />\n"
-"<br />\n"
-"Seu usuário: {$recipientUsername}<br />\n"
-"Senha: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Cadastro no Periódico"
 

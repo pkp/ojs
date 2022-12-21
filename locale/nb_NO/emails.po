@@ -33,20 +33,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "TIlbakestilling av passord"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Passordet ditt til nettstedet for {$siteTitle} er nå fornyet. Ta godt vare "
-"på brukernavnet og passordet. Du vil trenge dem for oppgavene du skal utføre "
-"på nettstedet.<br />\n"
-"<br />\n"
-"Ditt brukernavn: {$recipientUsername}<br />\n"
-"Passord: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Du er nå registrert som bruker"
 

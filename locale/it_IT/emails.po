@@ -33,19 +33,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Password modificata"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"La tua password per {$siteTitle} è stata modificata con successo.<br />\n"
-"Qui sotto trovi il tuo username e la nuova password.<br />\n"
-"<br />\n"
-"Username: {$recipientUsername}<br />\n"
-"Password: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Registrazione nuovo utente"
 

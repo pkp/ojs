@@ -11,7 +11,6 @@
   -->
 <emails>
 	<email key="PASSWORD_RESET_CONFIRM" name="mailable.passwordResetRequested.name" subject="emails.passwordResetConfirm.subject" body="emails.passwordResetConfirm.body"/>
-	<email key="PASSWORD_RESET" name="mailable.passwordReset.name" subject="emails.passwordReset.subject" body="emails.passwordReset.body"/>
 	<email key="USER_REGISTER" name="mailable.userRegister.name" subject="emails.userRegister.subject" body="emails.userRegister.body"/>
 	<email key="USER_VALIDATE_CONTEXT" name="mailable.validateEmailContext.name" subject="emails.userValidateContext.subject" body="emails.userValidateContext.body"/>
 	<email key="USER_VALIDATE_SITE" name="mailable.validateEmailSite.name" subject="emails.userValidateSite.subject" body="emails.userValidateSite.body"/>
