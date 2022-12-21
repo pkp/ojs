@@ -30,20 +30,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Réinitialisation du mot de passe"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec "
-"succès. Ce mot de passe est temporaire, vous devrez le changer à la "
-"prochaine utilisation.<br />\n"
-"<br />\n"
-"Votre nom d'utilisateur : {$recipientUsername}<br />\n"
-"Mot de passe temporaire : {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Inscription d'un nouvel utilisateur"
 

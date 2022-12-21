@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Geslo ponastavljeno"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Vaše geslo za dostop do spletišča {$siteTitle} je bilo uspešno "
-"ponastavljeno. Spodaj sta vaše uporabnipko ime in novo geslo, ki ju "
-"potrebujete za prijavo.<br />\n"
-"<br />\n"
-"Uporabniško ime: {$recipientUsername}<br />\n"
-"Geslo: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Potrdilo registracije"
 

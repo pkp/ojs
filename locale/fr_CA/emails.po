@@ -33,21 +33,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Réinitialisation du mot de passe"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec "
-"succès. Veuillez conserver votre nom d'utilisateur-trice ainsi que votre mot "
-"de passe. Vous en aurez besoin pour chacune de vos interactions avec la "
-"revue.<br />\n"
-"<br />\n"
-"Votre nom d'utilisateur-trice : {$recipientUsername}<br />\n"
-"Mot de passe : {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Inscription à la revue"
 

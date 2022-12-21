@@ -32,20 +32,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Jelszó visszaállítás"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Jelszavának visszaállítása sikeresen megtörtént a(z) {$siteTitle} oldalhoz. "
-"Kérem, őrizze meg felhasználónevét és jelszavát, mert a folyóirattal "
-"kapcsolatos összes munkafolyamatban szüksége lehet rá.<br />\n"
-"<br />\n"
-"Felhasználóneve: {$recipientUsername}<br />\n"
-"Jelszava: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Folyóirat regisztráció"
 

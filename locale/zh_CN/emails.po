@@ -28,19 +28,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "重置密码"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"您的密码已经成功重新设定以使用{$siteTitle}网站。请保管好这份用户名称和密码，"
-"它对于使用本站的所有功能来说是非常必要的。<br />\n"
-"<br />\n"
-"您的用户名称：{$recipientUsername}<br />\n"
-"密码：{$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "新用户注册"
 

@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Senha atualizada"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"A sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. "
-"Guarde os seus dados de acesso (nome de utilizador e senha), uma vez que "
-"serão necessários para todas as interações com a revista.<br />\n"
-"<br />\n"
-"O seu nome de utilizador: {$recipientUsername}<br />\n"
-"A sua senha: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Novo utilizador registado"
 

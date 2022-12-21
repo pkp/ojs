@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Passwort neu gesetzt"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ihr Benutzer/innen-Passwort für die Webseite {$siteTitle} wurde neu gesetzt. "
-"Bitte notieren Sie Benutzer/innennamen und Passwort, beides wird für alle "
-"Arbeiten mit dieser Zeitschrift gebraucht.<br />\n"
-"<br />\n"
-"Ihr Benutzer/innenname: {$recipientUsername}<br />\n"
-"Passwort: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Registrierung bei der Zeitschrift"
 

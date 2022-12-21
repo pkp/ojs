@@ -29,20 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Wachtwoord hersteld"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Uw wachtwoord is met succes hersteld voor de website {$siteTitle}. Bewaar de "
-"gebruikersnaam en wachtwoord, ze zijn nodig om het tijdschrift te kunnen "
-"gebruiken.<br />\n"
-"<br />\n"
-"Uw gebruikersnaam: {$recipientUsername}<br />\n"
-"Wachtwoord: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Tijdschriftregistratie"
 
