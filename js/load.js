@@ -55,8 +55,8 @@ window.pkp = Object.assign(PkpLoad, {
 		StatsIssuesPage,
 		StatsUsersPage,
 		SubmissionWizardPage,
-		WorkflowPage
-	}
+		WorkflowPage,
+	},
 });
 
 // Required by the URN plugin
