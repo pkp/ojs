@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Application
+ *
  * @ingroup core
  *
  * @see PKPApplication
@@ -139,7 +140,6 @@ class Application extends PKPApplication
             'MetricsDAO' => 'APP\statistics\MetricsDAO',
             'OAIDAO' => 'APP\oai\ojs\OAIDAO',
             'OJSCompletedPaymentDAO' => 'APP\payment\ojs\OJSCompletedPaymentDAO',
-            'ReviewerSubmissionDAO' => 'APP\submission\reviewer\ReviewerSubmissionDAO',
             'SectionDAO' => 'APP\journal\SectionDAO',
             'SubscriptionDAO' => 'APP\subscription\SubscriptionDAO',
             'SubscriptionTypeDAO' => 'APP\subscription\SubscriptionTypeDAO',
