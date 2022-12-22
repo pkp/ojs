@@ -180,7 +180,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('.pkpSteps__step__label--current').contains('Details');
 		cy.get('h2').contains('Submission Details');
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
-		cy.get('#titleAbstract-abstract-control-en_US').click(); // Ensure blur event is fired
+		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
 
 		cy.get('.submissionWizard__footer button').contains('Continue').click();
 
@@ -287,7 +287,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#titleAbstract input[name=subtitle-en_US]').type(submission.subtitle, {delay: 0});
 		cy.get('#titleAbstract input[name=title-en_US]').clear();
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract.repeat(10));
-		cy.get('#titleAbstract-abstract-control-en_US').click(); // Ensure blur event is fired
+		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
 		cy.get('#titleAbstract input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 
@@ -297,7 +297,7 @@ describe('Data suite: Amwandenga', function() {
 
 		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
-		cy.get('#titleAbstract-abstract-control-en_US').click(); // Ensure blur event is fired
+		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
 		cy.get('input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');

@@ -26,7 +26,7 @@ describe('Article View Metadata - DC Plugin', function() {
 			subtitle: 'Test subtitle',
 			abstract: 'Test abstract',
 			authors: [
-				'Name 1 Author 1', 
+				'Name 1 Author 1',
 				'Name 2 Author 2'
 			],
 			submitterRole: 'Journal manager',
@@ -135,7 +135,7 @@ describe('Article View Metadata - DC Plugin', function() {
 					values: [
 						{
 							locale: 'en',
-							contents: [ 
+							contents: [
 								submission.localeMetadata
 									.find(element => element.locale == 'en_US')
 									.oneValue
@@ -177,11 +177,11 @@ describe('Article View Metadata - DC Plugin', function() {
 					values: [
 						{
 							locale: 'fr',
-							contents: [ 
+							contents: [
 								submission.localeTitles.fr_CA.prefix + ' ' + submission.localeTitles.fr_CA.title + ': ' + submission.localeTitles.fr_CA.subtitle
 							]
 						},
-						
+
 					]
 				},
 				{
@@ -196,7 +196,7 @@ describe('Article View Metadata - DC Plugin', function() {
 									.find(element => element.metadata == 'type')
 									.value
 							]
-							
+
 						},
 						{
 							locale: 'fr',
@@ -393,7 +393,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('#titleAbstract input[name=prefix-fr_CA]').type(submission.localeTitles.fr_CA.prefix, {delay: 0});
 		cy.get('#titleAbstract input[name=subtitle-fr_CA]').type(submission.localeTitles.fr_CA.subtitle, {delay: 0});
 		cy.setTinyMceContent('titleAbstract-abstract-control-fr_CA', submission.localeTitles.fr_CA.abstract);
-		cy.get('#titleAbstract-abstract-control-fr_CA').click(); // Ensure blur event is fired
+		cy.get('#titleAbstract-title-control-fr_CA').click(); // Ensure blur event is fired
 		cy.get('#titleAbstract input[name=subtitle-fr_CA]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
@@ -414,7 +414,7 @@ describe('Article View Metadata - DC Plugin', function() {
 					cy.wait(500);
 					cy.get('#metadata-' + manyValueMetadata.metadata + '-selected-' + localeName).contains(value);
 					cy.wait(1000);
-				}); 
+				});
 			});
 
 			locale.oneValue.forEach((oneValueMetadata) => {
@@ -450,7 +450,7 @@ describe('Article View Metadata - DC Plugin', function() {
 			cy.get('button').contains('Continue').click();
 			cy.get('button').contains('Complete').click();
 		});
-		
+
 
 		// Issue
 		cy.get('#issue-button').click();
@@ -471,7 +471,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		// Publish the submission
 		cy.publish(submission.source.volume, submission.source.issueTitle);
 	});
-	
+
 	it('Tests if Header DC Metadata are present and consistent', function() {
 		cy.visit('/index.php/publicknowledge/article/view/' + submission.urlPath);
 
