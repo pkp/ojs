@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\users\reviewer;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\controllers\grid\users\reviewer\PKPReviewerGridHandler;
 use PKP\log\SubmissionLog;
@@ -27,7 +28,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
     public function reviewRead($args, $request)
     {
         // Retrieve review assignment.
-        $reviewAssignment = $this->getAuthorizedContextObject(ASSOC_TYPE_REVIEW_ASSIGNMENT); /** @var \PKP\submission\reviewAssignment\ReviewAssignment $reviewAssignment */
+        $reviewAssignment = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_REVIEW_ASSIGNMENT); /** @var \PKP\submission\reviewAssignment\ReviewAssignment $reviewAssignment */
 
         // Recommendation
         $newRecommendation = $request->getUserVar('recommendation');
@@ -39,7 +40,6 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $submission = $this->getSubmission();
             $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
             $user = $request->getUser();
-            import('classes.log.SubmissionEventLogEntry'); // Constants
             SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
         }
         return parent::reviewRead($args, $request);
