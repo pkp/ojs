@@ -31,4 +31,6 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/tests/**/*.cy.{js,jsx,ts,tsx}',
   },
+  // Allow cypress to interact with iframes
+  chromeWebSecurity: false
 })
