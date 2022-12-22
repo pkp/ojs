@@ -352,6 +352,22 @@ class ReviewerSubmission extends Submission {
 	public function setStep($step) {
 		$this->setData('step', $step);
 	}
+
+	/**
+	 * Get the Review Assignment StageId
+	 * @return int
+	 */
+	public function getReviewAssignmentStageId(): int {
+		return $this->getData('reviewAssignmentStageId');
+	}
+
+	/**
+	 * Set the Review Assignment StageId
+	 * @param int $reviewAssignmentStageId
+	 */
+	public function setReviewAssignmentStageId(int $reviewAssignmentStageId) {
+		$this->setData('reviewAssignmentStageId', $reviewAssignmentStageId);
+	}
 }
 
 
