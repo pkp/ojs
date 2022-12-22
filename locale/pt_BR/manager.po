@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-12-16 20:41+0000\n"
+"PO-Revision-Date: 2022-12-22 19:02+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
@@ -2328,3 +2328,70 @@ msgstr ""
 
 msgid "stats.context.downloadReport.downloadContext.description"
 msgstr "O número de exibições de página de índice da revista."
+
+msgid "stats.issueStats"
+msgstr "Estatísticas da Edição"
+
+msgid "stats.issues.details"
+msgstr "Visualizações e Downloads"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Pesquisar título, volume e número da edição"
+
+msgid "stats.issues.none"
+msgstr ""
+"Nenhuma edição foi encontrada com estatísticas de uso correspondentes a "
+"esses parâmetros."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Baixe uma planilha CSV/Excel com estatísticas de uso para edições "
+"correspondentes aos seguintes parâmetros."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"O número de exibições de sumário e downloads das composições de edição para "
+"cada edição."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Baixar Edições"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} de {$total} edições"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Sobre estatísticas de edições"
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Baixar Revista"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Visualizações</strong>: Número de visitantes que visualizaram o "
+"sumário da edição.<br><strong>Downloads</strong>: Número de downloads da "
+"composição da edição, se houver."
+
+msgid "manager.manageEmails.description"
+msgstr "Edite as mensagens enviadas nos e-mails desta revista."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Composições Completas"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Solicitação de Arquivo"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Este e-mail notifica automaticamente os editores designados quando uma nova "
+"versão da submissão é criada."
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Nova Versão Criada"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Solicitação de Arquivo (Novo)"
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Este e-mail é enviado aos gerentes de revistas quando uma nova submissão é "
+"feita e nenhum editor é designado."
