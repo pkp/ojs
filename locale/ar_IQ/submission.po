@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-12-07 16:02+0000\n"
+"PO-Revision-Date: 2022-12-23 06:02+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ar_IQ/>\n"
@@ -121,7 +121,6 @@ msgstr "ينتظر المصادقة"
 msgid "submission.submit.submissionChecklist"
 msgstr "قائمة إجراءات طلب النشر"
 
-#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "بيان الخصوصية"
 
@@ -354,3 +353,32 @@ msgstr "إن ملخصك طويل جداً. لطفاً، حاول إختزاله 
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "لطفاً، إختر دور المساهم."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} لا تستقبل طلبات التقديم الموجهة إلى قسم {$section} إذا كنت "
+"بحاجة إلى لالمساعدة لاستعادة طلب تقديمك، يرجى التواصل مع <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.copyright.description"
+msgstr ""
+"يرجى قراءة وفهم شروط الحقوق الفكرية المتعلقة بطلبات التقديم الموجهة إلى هذه "
+"المجلة."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"ليس مسموحًا لك التقديم إلى هذه المجلة لأن المؤلفين ينبغي تسجيلهم من قبل طاقم "
+"هيئة التحرير. إذا كنت تعتقد أن هذا الأمر فيه خطأ، يرجى التواصل مع <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"ليس مسموحًا لك التقديم إلى هذه المجلة لأنه تم تعطيل أو حظر طلبات التقديم في "
+"كل أقسامها. إذا كنت تعتقد أن هذا الأمر فيه خطأ، يرجى التواصل مع <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "تعذر العثور على القسم الخاص بطلب التقديم هذا."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "طاقم هيئة التحرير وحدهم مسموح لهم بالتقديم إلى هذا القسم."
