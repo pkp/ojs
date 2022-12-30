@@ -1,17 +1,18 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
+# Mohamad Shabilullah <shabilhamid91@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-21 09:17+0000\n"
-"Last-Translator: Ga Ja Poh <gajapo2932@decorbuz.com>\n"
-"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/ms/"
-">\n"
-"Language: ms\n"
+"PO-Revision-Date: 2022-12-30 07:02+0000\n"
+"Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"ms_MY/>\n"
+"Language: ms_MY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo"
 msgstr "Nombor Semakan"
@@ -37,10 +38,10 @@ msgstr "galley"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
 msgstr ""
-"Sekiranya anda mengubah konfigurasi URN, URN yang telah ditugaskan tidak "
-"akan terjejas. Setelah konfigurasi URN disimpan, gunakan butang ini untuk "
-"mengosongkan semua URN yang wujud sehingga tetapan baru akan berlaku dengan "
-"objek yang wujud."
+"Jika anda menukar konfigurasi URN anda, URN yang telah ditetapkan tidak akan "
+"terjejas. Setelah konfigurasi URN disimpan, gunakan butang ini untuk "
+"mengosongkan semua URN sedia ada supaya tetapan baharu akan berkuat kuasa "
+"dengan objek sedia ada."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
 msgstr "Contohnya, vol%viss%ipp%p dapat membuat akhiran URN \"vol3iss2pp230\"."
@@ -145,7 +146,7 @@ msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
 msgstr "Sila masukkan URL penyelesai."
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
-msgstr "(mis. http://nbn-resolving.de/)"
+msgstr "(mis. https://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver"
 msgstr "URL Penyelesai"
