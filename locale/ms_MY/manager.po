@@ -1,17 +1,19 @@
 # Ga Ja Poh <gajapo2932@decorbuz.com>, 2021.
 # Studiorimau <studiorimau@gmail.com>, 2021.
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Mohamad Shabilullah <shabilhamid91@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-13 05:54+0000\n"
-"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
-"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms/>\n"
-"Language: ms\n"
+"PO-Revision-Date: 2022-12-30 07:02+0000\n"
+"Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms_MY/"
+">\n"
+"Language: ms_MY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Gunakan tarikh penerbitan artikel"
@@ -754,11 +756,10 @@ msgstr ""
 "peristiwa jurnal. Pengumuman yang diterbitkan akan muncul di halaman "
 "Pengumuman."
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"E-mel yang disiapkan yang dihantar oleh sistem bagi pihak jurnal akan "
-"mempunyai tanda tangan berikut yang ditambahkan pada akhir."
+"E-mel yang dihantar secara automatik bagi pihak jurnal akan mempunyai "
+"tandatangan berikut ditambah."
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
@@ -2140,3 +2141,40 @@ msgid "mailable.openAccessNotify.description"
 msgstr ""
 "E-mel ini dihantar kepada pembaca berdaftar yang telah meminta untuk "
 "menerima e-mel pemberitahuan ketika terbitan menjadi akses terbuka."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Pilih item mana yang akan diberikan DOI. Kebanyakan jurnal memberikan DOI "
+"kepada artikel, tetapi anda mungkin ingin menetapkan DOI kepada semua item "
+"yang diterbitkan."
+
+msgid "stats.contextStats"
+msgstr "Statistik Jurnal"
+
+msgid "stats.context.tooltip.text"
+msgstr "Bilangan pelawat yang melihat halaman indeks jurnal."
+
+msgid "stats.context.tooltip.label"
+msgstr "Mengenai statistik jurnal"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Apabila sampai ke peringkat copyediting"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Benarkan Pengecam Objek Digital (DOI) ditugaskan untuk kerja yang "
+"diterbitkan dalam jurnal ini."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Gunakan corak lalai.<br />%j.v%vi%i untuk isu<br />%j.v%vi%i.%a untuk "
+"artikel<br />%j.v%vi%i.%a.g%g untuk galley."
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Sila pilih institusi yang sah."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Institusi mesti diwujudkan sebelum langganan baharu boleh dibuat."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institusi"
