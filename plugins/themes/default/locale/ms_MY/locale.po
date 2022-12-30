@@ -1,16 +1,17 @@
 # Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Mohamad Shabilullah <shabilhamid91@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-19 06:15+0000\n"
-"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"PO-Revision-Date: 2022-12-30 07:02+0000\n"
+"Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
 "Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/ms/>\n"
-"Language: ms\n"
+"themes-default/ms_MY/>\n"
+"Language: ms_MY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Tunjukkan gambar halaman utama sebagai latar belakang tajuk."
@@ -72,3 +73,24 @@ msgstr "Tema ini menerapkan tema lalai."
 
 msgid "plugins.themes.default.name"
 msgstr "Tema Lalai"
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Pilihan paparan statistik penggunaan"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Jangan paparkan carta statistik penggunaan penyerahan untuk pembaca."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Gunakan jenis bar carta untuk paparan statistik penggunaan."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Gunakan jenis baris carta untuk paparan statistik penggunaan."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Jan Feb Mac Apr Mei Jun Jul Ogos Sep Okt Nov Dis"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Muat turun"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Muat turun data belum tersedia."
