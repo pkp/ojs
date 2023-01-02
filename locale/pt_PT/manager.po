@@ -1,11 +1,11 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2021, 2022.
-# José Carvalho <jcarvalho@keep.pt>, 2022.
+# José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-12-19 16:02+0000\n"
+"PO-Revision-Date: 2023-01-02 09:02+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -2343,3 +2343,13 @@ msgstr "Pedido de Arquivo (Novo)"
 
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Criada Nova Versão"
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Este e-mail é enviado aos gestores de revistas quando uma nova submissão é "
+"feita e nenhum editor é designado."
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Este e-mail notifica automaticamente os editores designados quando uma nova "
+"versão da submissão é criada."
