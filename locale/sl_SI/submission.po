@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-12-16 15:42+0000\n"
+"PO-Revision-Date: 2022-12-26 10:02+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/sl_SI/>\n"
@@ -115,7 +115,6 @@ msgstr "Čaka odobritev"
 msgid "submission.submit.submissionChecklist"
 msgstr "Kontrolni seznam za oddajo"
 
-#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Izjava o varstvu podatkov"
 
@@ -382,6 +381,24 @@ msgstr ""
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
-"Nimate pravic za oddajo prispevkov v to revijo, ker morajo biti avrotji "
+"Nimate pravic za oddajo prispevkov v to revijo, ker morajo biti avtorji "
 "registrirani s strani uredništva. Če mislite, da je to pomota, prosimo, da "
 "se obrnete na <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Nimate pravic za oddajo prispevkov v to revijo, ker so vse rubrike "
+"deaktivirane ali omejene. Če mislite, da je to pomota, prosimo, da se "
+"obrnete na <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Rubrika za ta prispevek ni bila najdena."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Samo uredništvo ima pravico oddati prispevek v to rubriko."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"Revija {$contextName} ne sprejema prispevkov za rubriko {$section}. Če "
+"potrebujete pomoč pri dostopu do vašega prispevka, se obrnite na <a "
+"href='mailto:{$email}'>{$name}</a>."

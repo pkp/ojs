@@ -1,11 +1,11 @@
-# Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2022, 2023.
 # Diego Abadan <diego@lepidus.com.br>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-10-19 17:01+0000\n"
+"PO-Revision-Date: 2023-01-04 19:02+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/pt_BR/>\n"
@@ -323,13 +323,13 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Selecione os arquivos que devem ser enviados para a etapa de avaliação."
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Envie um e-mail para os autores para que eles saibam que esta submissão será "
 "enviada para avaliação por pares. Se possível, dê aos autores alguma "
 "indicação de quanto tempo o processo de avaliação por pares pode levar e "
-"quando eles devem esperar ouvir os editores novamente."
+"quando eles devem esperar ouvir os editores novamente. Este e-mail não será "
+"enviado até que a decisão seja registrada."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
@@ -396,3 +396,35 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Por favor, selecione o papel do colaborador."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Sem permissão para submeter para esta revista porque os autores devem ser "
+"registrados pela equipe editorial. Se acredita que isso é um erro, entre em "
+"contato com <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} não está aceitando submissões para a seção {$section}. Se "
+"precisar de ajuda para recuperar sua submissão, entre em contato com <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+"Somente a equipe editorial está autorizada a submeter artigos para esta "
+"seção."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Por favor, leia e entenda os termos de direitos autorais para submissões a "
+"esta revista."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Sem permissão para submeter para esta revista porque as submissões para "
+"todas as seções desta revista foram desativadas ou restritas. Se acredita "
+"que isso é um erro, entre em contato com <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "A seção para esta submissão não pôde ser encontrada."
