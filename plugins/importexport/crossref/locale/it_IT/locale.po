@@ -20,12 +20,28 @@ msgstr "CrossRef XML"
 msgid "plugins.importexport.crossref.description"
 msgstr "Esporta i metadati degli articoli in formato CrossRef."
 
-msgid "plugins.importexport.crossref.cliUsage"
+msgid "plugins.importexport.crossref.requirements"
+msgstr "Requisiti"
+
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "Tutti i requisiti del plugin sono soddisfatti."
+
+msgid "plugins.importexport.crossref.error.publisherNotConfigured"
 msgstr ""
-"Uso:\n"
-"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
-"{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...\n"
-""
+"Non è stato configurato un editore per la rivista. Devi indicare un editore "
+"per la rivista nella <a href=\"{$journalSettingsUrl}\" target=\"_blank"
+"\">Pagina di configurazione della rivista</a>."
+
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
+msgstr ""
+"Non è stato configurato un ISSN per la rivista. Devi indicare un ISSN per la "
+"rivista nella <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Pagina di "
+"configurazione della rivista</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"Gli articoli non sono stati configurati per ricevere DOI nel plugin dei DOI. "
+"Per tanto non è possibile depositare o esportare con questo plugin."
 
 msgid "plugins.importexport.crossref.settings.depositorIntro"
 msgstr ""
@@ -37,50 +53,50 @@ msgstr "Nome del depositor"
 msgid "plugins.importexport.crossref.settings.form.depositorEmail"
 msgstr "Email del depositor"
 
-msgid "plugins.importexport.crossref.registrationIntro"
-msgstr "Se vuoi usare questo plugin per registrare i DOI direttamente su CrossRef avrai bisogno di un nome utente e una password (ottenibili su <a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>). Se non ha un nome utente e una password, puoi comunque esportare nel formato XML di CrossRef ma non potrai registrare i DOI con CrossRef tramite OJS."
-
-msgid "plugins.importexport.crossref.settings.form.username"
-msgstr "Nome utente"
-
-msgid "plugins.importexport.crossref.requirements"
-msgstr "Requisiti"
-
-msgid "plugins.importexport.crossref.requirements.satisfied"
-msgstr "Tutti i requisiti del plugin sono soddisfatti."
-
-msgid "plugins.importexport.crossref.error.publisherNotConfigured"
-msgstr "Non è stato configurato un editore per la rivista. Devi indicare un editore per la rivista nella <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Pagina di configurazione della rivista</a>."
-
-msgid "plugins.importexport.crossref.error.issnNotConfigured"
-msgstr "Non è stato configurato un ISSN per la rivista. Devi indicare un ISSN per la rivista nella <a href=\"{$journalSettingsUrl}\" target=\"_blank\">Pagina di configurazione della rivista</a>."
-
-msgid "plugins.importexport.crossref.error.noDOIContentObjects"
-msgstr "Gli articoli non sono stati configurati per ricevere DOI nel plugin dei DOI. Per tanto non è possibile depositare o esportare con questo plugin."
-
 msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
 msgstr "Per favore inserisci il nome del depositante."
 
 msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
 msgstr "Per favore inserisci la mail del depositante."
 
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"Se vuoi usare questo plugin per registrare i DOI direttamente su CrossRef "
+"avrai bisogno di un nome utente e una password (ottenibili su <a href="
+"\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>). Se non ha un "
+"nome utente e una password, puoi comunque esportare nel formato XML di "
+"CrossRef ma non potrai registrare i DOI con CrossRef tramite OJS."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "Nome utente"
+
 msgid "plugins.importexport.crossref.settings.form.usernameRequired"
 msgstr "Per favore inserisci lo username che hai ricevuto da CrossRef."
 
-msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
-msgstr "OJS depositerà automaticamente i DOI in CrossRef per registrarli. Per favore nota che può passare un certo tempo dalla pubblicazione prima della fine del processo. Puoi controllare tutti i DOI non registrati."
+msgid ""
+"plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS depositerà automaticamente i DOI in CrossRef per registrarli. Per favore "
+"nota che può passare un certo tempo dalla pubblicazione prima della fine del "
+"processo. Puoi controllare tutti i DOI non registrati."
 
 msgid "plugins.importexport.crossref.settings.form.testMode.description"
-msgstr "Usa l'API di test di CrossRef per il deposito. Non ti dimenticare di togliere questa opzione quando passi in produzione."
+msgstr ""
+"Usa l'API di test di CrossRef per il deposito. Non ti dimenticare di "
+"togliere questa opzione quando passi in produzione."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"Controlla il file XML. Utilizzare questa opzione per il download manuale del "
+"file XML necessario per il deposito del DOI."
+
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr "Convalidare l'esportazione senza scaricare il file."
 
 msgid "plugins.importexport.crossref.issues.description"
-msgstr "Nota: solo i fascicoli (e non i loro articoli) saranno considerati per l'export e/o la registrazione."
-
-msgid "plugins.importexport.crossref.status.submitted"
-msgstr "Inviato."
-
-msgid "plugins.importexport.crossref.status.completed"
-msgstr "Depositato."
+msgstr ""
+"Nota: solo i fascicoli (e non i loro articoli) saranno considerati per "
+"l'export e/o la registrazione."
 
 msgid "plugins.importexport.crossref.status.failed"
 msgstr "Fallito"
@@ -91,6 +107,9 @@ msgstr "Attivo"
 msgid "plugins.importexport.crossref.status.markedRegistered"
 msgstr "Segnato come attivo"
 
+msgid "plugins.importexport.crossref.action.register"
+msgstr "Invia"
+
 msgid "plugins.importexport.crossref.statusLegend"
 msgstr ""
 "\n"
@@ -100,8 +119,8 @@ msgstr ""
 "- Inviato: questo DOI è stato inviato per il deposito.<br />\n"
 "- Depositato: Il DOI è stato depositato presso Crossref, ma non è ancora "
 "attivo.<br />\n"
-"- Attivo: Il DOI è stato depositato e viene interpretato correttamente.<br />"
-"\n"
+"- Attivo: Il DOI è stato depositato e viene interpretato correttamente.<br /"
+">\n"
 "- Fallito: Il deposito del DOI è fallito.<br />\n"
 "- Marcato come attivo: Il DOI è stato marcato come attivo manualmente.\n"
 "</p>\n"
@@ -116,20 +135,25 @@ msgstr "Scarica XML"
 msgid "plugins.importexport.crossref.action.markRegistered"
 msgstr "Marca come attivo"
 
-msgid "plugins.importexport.crossref.action.register"
-msgstr "Invia"
-
-msgid "plugins.importexport.crossref.action.checkStatus"
-msgstr "Controlla lo status"
-
 msgid "plugins.importexport.crossref.senderTask.name"
 msgstr "Nome del task che registra in automatico in CrossRef"
 
-msgid "plugins.importexport.crossref.register.error.mdsError"
-msgstr "L'invio non ha avuto successo. Il server di registrazione ha dato come errore: '{$param}'."
+msgid "plugins.importexport.crossref.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} register [journal_path] articles objectId1 "
+"[objectId2] ...\n"
 
-msgid "plugins.importexport.crossref.register.success"
-msgstr "L'invio ha avuto successo!"
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr ""
+"L'invio non ha avuto successo. Il server di registrazione ha dato come "
+"errore: '{$param}'."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr ""
+"La registrazione è andata a buon fine con il seguente avviso: '{$param}'."
 
 msgid "plugins.importexport.crossref.export.error.issueNotFound"
 msgstr "Nessun fascicolo corrisponde all'ID: \"{$issueId}\"."
@@ -137,17 +161,19 @@ msgstr "Nessun fascicolo corrisponde all'ID: \"{$issueId}\"."
 msgid "plugins.importexport.crossref.export.error.articleNotFound"
 msgstr "Nessun articolo corrisponde all'ID: \"{$articleId}\"."
 
-msgid "plugins.importexport.crossref.notification.failed"
-msgstr "Un DOI ha fallito la registrazione. Per favore vai in Strumenti > import/esport > CrossRef Plufin per vedere i depositi falliti"
+#~ msgid "plugins.importexport.crossref.status.submitted"
+#~ msgstr "Inviato."
 
-msgid "plugins.importexport.crossref.register.success.warning"
-msgstr ""
-"La registrazione è andata a buon fine con il seguente avviso: '{$param}'."
+#~ msgid "plugins.importexport.crossref.status.completed"
+#~ msgstr "Depositato."
 
-msgid "plugins.importexport.crossref.settings.form.validation"
-msgstr ""
-"Controlla il file XML. Utilizzare questa opzione per il download manuale del "
-"file XML necessario per il deposito del DOI."
+#~ msgid "plugins.importexport.crossref.action.checkStatus"
+#~ msgstr "Controlla lo status"
 
-msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
-msgstr "Convalidare l'esportazione senza scaricare il file."
+#~ msgid "plugins.importexport.crossref.register.success"
+#~ msgstr "L'invio ha avuto successo!"
+
+#~ msgid "plugins.importexport.crossref.notification.failed"
+#~ msgstr ""
+#~ "Un DOI ha fallito la registrazione. Per favore vai in Strumenti > import/"
+#~ "esport > CrossRef Plufin per vedere i depositi falliti"

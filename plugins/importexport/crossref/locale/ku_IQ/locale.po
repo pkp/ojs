@@ -11,71 +11,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.crossref.export.error.articleNotFound"
-msgstr "هیچ توێژینەوەیەک لەگەڵ ئەم توێژینەوەیە \"{$articleId}\" یەک ناگرێتەوە."
+msgid "plugins.importexport.crossref.displayName"
+msgstr "هەناردەکردنی گرێدانی CrossRef  بۆ فایلەکانی XML"
 
-msgid "plugins.importexport.crossref.export.error.issueNotFound"
-msgstr "ژمارەکان لەگەڵ ئەم ژمارەیە \"{$issueId}\". یەکناگرنەوە."
+msgid "plugins.importexport.crossref.description"
+msgstr "هەناردەکردنی زانیاریی ناسێنەر بۆ ڕێکخستنی CrossRef XML."
 
-msgid "plugins.importexport.crossref.register.success.warning"
-msgstr "تۆمارکردنەکە سەرکەوتو بو، بەڵام  ئاگاداری'{$param}': بە."
+msgid "plugins.importexport.crossref.requirements"
+msgstr "پێویستییەکان"
 
-msgid "plugins.importexport.crossref.register.error.mdsError"
-msgstr "تۆمارکردنەکە سەرکەوتو نەبو! تۆماری DOI کێشەیەکی تێدایە."
-
-msgid "plugins.importexport.crossref.senderTask.name"
-msgstr "تۆمارکردنی ئۆتۆماتیکی CrossRef"
-
-msgid "plugins.importexport.crossref.action.markRegistered"
-msgstr "چالاکی بکە"
-
-#, fuzzy
-msgid "plugins.importexport.crossref.action.export"
-msgstr "دابەزاندنی XML"
-
-msgid "plugins.importexport.crossref.action.register"
-msgstr "پارە دان"
-
-msgid "plugins.importexport.crossref.status.markedRegistered"
-msgstr "چالاک کراوە"
-
-msgid "plugins.importexport.crossref.status.registered"
-msgstr "چالاکە"
-
-msgid "plugins.importexport.crossref.status.failed"
-msgstr "سەرکەوتو نەبو"
-
-msgid "plugins.importexport.crossref.settings.form.usernameRequired"
-msgstr "تکایە ناوی بەکارهێنەر کە لە CrossRefەوە پێت گەیشتووە داخل بکە."
-
-msgid "plugins.importexport.crossref.settings.form.username"
-msgstr "ناوی بەکارهێنەر"
-
-msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
-msgstr "تکایە، ئیمەیڵی پارەدەر داخل بکە."
-
-msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
-msgstr "تکایە، ناوی پارەدەر داخل بکە."
-
-msgid "plugins.importexport.crossref.settings.form.depositorEmail"
-msgstr "ئیمەیڵی پارەدەر"
-
-msgid "plugins.importexport.crossref.settings.form.depositorName"
-msgstr "ناوی پارەدەر"
-
-msgid "plugins.importexport.crossref.settings.depositorIntro"
-msgstr "ئەم دانانەی خوارەوە بۆ CrossRefێکی سەرکەوتو داواکراون."
-
-msgid "plugins.importexport.crossref.error.noDOIContentObjects"
-msgstr ""
-"ئەو توێژینەوانەی کە ژمارەی DOI یان بۆ دیاری نەکراوە و بەو ژمارەیەوە گرێ "
-"نەدراون، ناکرێت لە ڕێگای ئەم گرێدانەوە هەناردە بکرێن."
-
-msgid "plugins.importexport.crossref.error.issnNotConfigured"
-msgstr ""
-"زیاد بکەیت ISSN بۆ گۆڤارێک کە هەتا ئێستا نەناسێندراوە! پێویستە ئەژماری ISSN "
-"لە لاپەڕەی <a href=\"{$journalSettingsUrl}\" target=\"_blank\">ڕێکخستنی "
-"گۆڤارەکە</a>."
+msgid "plugins.importexport.crossref.requirements.satisfied"
+msgstr "هەمو پێویستییە گرێدراوەکان ڕازیکەرن."
 
 msgid "plugins.importexport.crossref.error.publisherNotConfigured"
 msgstr ""
@@ -83,25 +29,82 @@ msgstr ""
 "بکەیت <a href=\"{$journalSettingsUrl}\" target=\"_blank\">ڕێکخستنی گۆڤار  "
 "پەڕەی</a>."
 
-msgid "plugins.importexport.crossref.requirements.satisfied"
-msgstr "هەمو پێویستییە گرێدراوەکان ڕازیکەرن."
-
-msgid "plugins.importexport.crossref.requirements"
-msgstr "پێویستییەکان"
-
-msgid "plugins.importexport.crossref.description"
-msgstr "هەناردەکردنی زانیاریی ناسێنەر بۆ ڕێکخستنی CrossRef XML."
-
-msgid "plugins.importexport.crossref.displayName"
-msgstr "هەناردەکردنی گرێدانی CrossRef  بۆ فایلەکانی XML"
-
-msgid "plugins.importexport.crossref.cliUsage"
+msgid "plugins.importexport.crossref.error.issnNotConfigured"
 msgstr ""
-"بەکارهێنان:\n"
-"{$scriptName} {$pluginName} هەناردە[xmlFileName] [journal_path] articles "
-"objectId1 [objectId2] ...\n"
-"{$scriptName} {$pluginName} تۆمارکردن[journal_path] articles objectId1 "
-"[objectId2] ...\n"
+"زیاد بکەیت ISSN بۆ گۆڤارێک کە هەتا ئێستا نەناسێندراوە! پێویستە ئەژماری ISSN "
+"لە لاپەڕەی <a href=\"{$journalSettingsUrl}\" target=\"_blank\">ڕێکخستنی "
+"گۆڤارەکە</a>."
+
+msgid "plugins.importexport.crossref.error.noDOIContentObjects"
+msgstr ""
+"ئەو توێژینەوانەی کە ژمارەی DOI یان بۆ دیاری نەکراوە و بەو ژمارەیەوە گرێ "
+"نەدراون، ناکرێت لە ڕێگای ئەم گرێدانەوە هەناردە بکرێن."
+
+msgid "plugins.importexport.crossref.settings.depositorIntro"
+msgstr "ئەم دانانەی خوارەوە بۆ CrossRefێکی سەرکەوتو داواکراون."
+
+msgid "plugins.importexport.crossref.settings.form.depositorName"
+msgstr "ناوی پارەدەر"
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmail"
+msgstr "ئیمەیڵی پارەدەر"
+
+msgid "plugins.importexport.crossref.settings.form.depositorNameRequired"
+msgstr "تکایە، ناوی پارەدەر داخل بکە."
+
+msgid "plugins.importexport.crossref.settings.form.depositorEmailRequired"
+msgstr "تکایە، ئیمەیڵی پارەدەر داخل بکە."
+
+msgid "plugins.importexport.crossref.registrationIntro"
+msgstr ""
+"ئەگەر تۆ دەتەوێت ناسێنەری سەرچاوە دیجیتاڵییەکان DOI و CrossRef  بەیەکەوە گرێ "
+"بدەیت، پێویستت بە ئەژماری کەسی و ژمارەی نهێنییەکەی دەبێت کە لێرە بەردەستە "
+"(<a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>) ئەگەر "
+"ئەژماری کەسیشت نییە دەتوانیت لە ڕێکخستنی  CrossRef XML هەناردەی بکەیت، بەڵام "
+"ناتوانیت DOIیەکەت  لەگەڵ CrossRef  تۆمار بکەیت لە سیستەمی گۆڤاری کراوەدا."
+
+msgid "plugins.importexport.crossref.settings.form.username"
+msgstr "ناوی بەکارهێنەر"
+
+msgid "plugins.importexport.crossref.settings.form.usernameRequired"
+msgstr "تکایە ناوی بەکارهێنەر کە لە CrossRefەوە پێت گەیشتووە داخل بکە."
+
+msgid ""
+"plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgstr ""
+"سیستەمی گۆڤاری کراوە ئۆتۆماتیکی DOI بۆ CrossRef دادەنێت. ئەمە لەوانەیە "
+"هەندێک کاتی پێویست ببێت. تۆ دەتوانیت وردبینی لە ناسێنەرە تۆمارنەکراوەکانی "
+"سەرچاوە دیجیتاڵییەکاندا بکەیت."
+
+msgid "plugins.importexport.crossref.settings.form.testMode.description"
+msgstr ""
+"شێوازی تایبەتی CrossRef  بۆ پێدانی پێشوەختەی DOI بەکار بهێنە. تکایە پێش "
+"بڵاوکردنەوە ئەمە بسڕەوە."
+
+msgid "plugins.importexport.crossref.settings.form.validation"
+msgstr ""
+"XML چالاک بکە. ئەم بژاردەیە بۆ دابەزاندنی XML بەکار بهێنە بۆ تۆمارکردنی "
+"ناسێنەری سەرچاوە دیجیتاڵییەکان DOI."
+
+msgid "plugins.importexport.crossref.settings.form.onlyValidateExport"
+msgstr ""
+
+msgid "plugins.importexport.crossref.issues.description"
+msgstr ""
+"تێبینی: تەنیا ژمارەکانی گۆڤار (ژمارەی توژینەوەکان نا) بڕیاری لێ دەدرێت بۆ "
+"هەناردە و تۆمارکردن."
+
+msgid "plugins.importexport.crossref.status.failed"
+msgstr "سەرکەوتو نەبو"
+
+msgid "plugins.importexport.crossref.status.registered"
+msgstr "چالاکە"
+
+msgid "plugins.importexport.crossref.status.markedRegistered"
+msgstr "چالاک کراوە"
+
+msgid "plugins.importexport.crossref.action.register"
+msgstr "پارە دان"
 
 msgid "plugins.importexport.crossref.statusLegend"
 msgstr ""
@@ -114,34 +117,35 @@ msgstr ""
 "\t\t- وەک چالاک دیاری کراوە: DOI  وەک چالاک دیاری کراوە.\n"
 "\t\t</p>\n"
 "\t\t<p>تەنیا حاڵەتی دوایین پێدانی پێشوەختە دیاری دەکرێت.</p>\n"
-"\t\t<p>ئەگەر پێدانەکە شکستی هێنا، تکایە دوبارە هەوڵی تۆمارکردنی DOI "
-"بدەوە.</p>"
+"\t\t<p>ئەگەر پێدانەکە شکستی هێنا، تکایە دوبارە هەوڵی تۆمارکردنی DOI بدەوە.</"
+"p>"
 
-msgid "plugins.importexport.crossref.issues.description"
-msgstr ""
-"تێبینی: تەنیا ژمارەکانی گۆڤار (ژمارەی توژینەوەکان نا) بڕیاری لێ دەدرێت بۆ "
-"هەناردە و تۆمارکردن."
+#, fuzzy
+msgid "plugins.importexport.crossref.action.export"
+msgstr "دابەزاندنی XML"
 
-msgid "plugins.importexport.crossref.settings.form.validation"
-msgstr ""
-"XML چالاک بکە. ئەم بژاردەیە بۆ دابەزاندنی XML بەکار بهێنە بۆ تۆمارکردنی "
-"ناسێنەری سەرچاوە دیجیتاڵییەکان DOI."
+msgid "plugins.importexport.crossref.action.markRegistered"
+msgstr "چالاکی بکە"
 
-msgid "plugins.importexport.crossref.settings.form.testMode.description"
-msgstr ""
-"شێوازی تایبەتی CrossRef  بۆ پێدانی پێشوەختەی DOI بەکار بهێنە. تکایە پێش "
-"بڵاوکردنەوە ئەمە بسڕەوە."
+msgid "plugins.importexport.crossref.senderTask.name"
+msgstr "تۆمارکردنی ئۆتۆماتیکی CrossRef"
 
-msgid "plugins.importexport.crossref.settings.form.automaticRegistration.description"
+msgid "plugins.importexport.crossref.cliUsage"
 msgstr ""
-"سیستەمی گۆڤاری کراوە ئۆتۆماتیکی DOI بۆ CrossRef دادەنێت. ئەمە لەوانەیە "
-"هەندێک کاتی پێویست ببێت. تۆ دەتوانیت وردبینی لە ناسێنەرە تۆمارنەکراوەکانی "
-"سەرچاوە دیجیتاڵییەکاندا بکەیت."
+"بەکارهێنان:\n"
+"{$scriptName} {$pluginName} هەناردە[xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} تۆمارکردن[journal_path] articles objectId1 "
+"[objectId2] ...\n"
 
-msgid "plugins.importexport.crossref.registrationIntro"
-msgstr ""
-"ئەگەر تۆ دەتەوێت ناسێنەری سەرچاوە دیجیتاڵییەکان DOI و CrossRef  بەیەکەوە گرێ "
-"بدەیت، پێویستت بە ئەژماری کەسی و ژمارەی نهێنییەکەی دەبێت کە لێرە بەردەستە (<"
-"a href=\"http://www.crossref.org\" target=\"_blank\">CrossRef</a>) ئەگەر "
-"ئەژماری کەسیشت نییە دەتوانیت لە ڕێکخستنی  CrossRef XML هەناردەی بکەیت، بەڵام "
-"ناتوانیت DOIیەکەت  لەگەڵ CrossRef  تۆمار بکەیت لە سیستەمی گۆڤاری کراوەدا."
+msgid "plugins.importexport.crossref.register.error.mdsError"
+msgstr "تۆمارکردنەکە سەرکەوتو نەبو! تۆماری DOI کێشەیەکی تێدایە."
+
+msgid "plugins.importexport.crossref.register.success.warning"
+msgstr "تۆمارکردنەکە سەرکەوتو بو، بەڵام  ئاگاداری'{$param}': بە."
+
+msgid "plugins.importexport.crossref.export.error.issueNotFound"
+msgstr "ژمارەکان لەگەڵ ئەم ژمارەیە \"{$issueId}\". یەکناگرنەوە."
+
+msgid "plugins.importexport.crossref.export.error.articleNotFound"
+msgstr "هیچ توێژینەوەیەک لەگەڵ ئەم توێژینەوەیە \"{$articleId}\" یەک ناگرێتەوە."

@@ -17,6 +17,9 @@ msgstr ""
 msgid "editor.home"
 msgstr "Startside for redaktør"
 
+msgid "editor.reassign"
+msgstr "Overfør"
+
 msgid "editor.submissionsAndPublishing"
 msgstr "Indsendelser og publicering"
 
@@ -41,6 +44,12 @@ msgstr "Alle redaktører"
 msgid "editor.me"
 msgstr "Mig"
 
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet "
+"materiale (nummer, artikel, publiceringsversion eller supplerende filer). "
+"Vælg et unikt filnavn inden for dit tidsskrift."
+
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Der findes ingen indsendelser i arkivet."
 
@@ -57,8 +66,26 @@ msgstr ""
 "Indsendelsen arkiveres, når du har sendt e-mailen 'Underret forfatter', "
 "eller når du har trykket på knappen 'Spring e-mail over'."
 
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Inden du sender en indsendelse til manuskriptredigering, skal du bruge "
+"linket 'Underret forfatter' til at informere forfatteren om beslutningen og "
+"vælge den version, der skal sendes."
+
 msgid "editor.notifyUsers"
 msgstr "Underret brugere"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Alle læsere ({$count} brugere)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Alle udgivne forfattere({$count} brugere)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Alle individuelle abonnenter ({$count} brugere)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Alle institutionsabonnenter ({$count} brugere)"
 
 msgid "editor.notifyUsers.inProgress"
 msgstr "Underretter brugere..."
@@ -67,7 +94,9 @@ msgid "editor.usersNotified"
 msgstr "Underrettede brugere"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Send denne meddelelse til alle brugere, der er tilknyttet dette tidsskrift ({$count} brugere)"
+msgstr ""
+"Send denne meddelelse til alle brugere, der er tilknyttet dette tidsskrift "
+"({$count} brugere)"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
@@ -82,6 +111,9 @@ msgstr "Administration af redaktører"
 
 msgid "editor.issues.createIssue"
 msgstr "Opret nummer"
+
+msgid "editor.issues.editIssue"
+msgstr "Nummerforvaltning: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "Aktuelt nummer"
@@ -101,6 +133,9 @@ msgstr "Publiceret"
 msgid "editor.issues.unpublished"
 msgstr "Ikke-publiceret"
 
+msgid "editor.issues.datePublished"
+msgstr "Publiceringsdato"
+
 msgid "editor.issues.volumeRequired"
 msgstr "Årgang/bind er påkrævet og skal være en positiv, numerisk værdi."
 
@@ -114,7 +149,9 @@ msgid "editor.issues.titleRequired"
 msgstr "Titel er påkrævet for dette nummer."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Nummeridentifikation er påkrævet. Vælg mindst en af indstillingerne for udgaveidentifikation."
+msgstr ""
+"Nummeridentifikation er påkrævet. Vælg mindst en af indstillingerne for "
+"udgaveidentifikation."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Nummeridentifikation"
@@ -131,8 +168,8 @@ msgstr "Adgangsstatus"
 msgid "editor.issues.accessDate"
 msgstr "Dato for Open Access"
 
-msgid "editor.issues.invalidAccessDate"
-msgstr "Adgangsdatoen er ikke gyldig."
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Aktivér forsinket åben adgang"
 
 msgid "editor.issues.coverPage"
 msgstr "Forsidebillede"
@@ -151,6 +188,21 @@ msgstr "Korrekturlæst"
 
 msgid "editor.issues.removeCoverPage"
 msgstr "Vil du fjerne forsidebilledet?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Forsidebilledet, som du ønskede af slette, svarede ikke til dette nummers "
+"forsidebillede. Genindlæs siden og prøv igen."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Forsidebilledet som du ønskede at slette kunne ikke fremfindes. Det er måske "
+"allerede slettet. Prøv og genindlæs siden."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Ugyldigt format til forsidebillede. De godkendte formater er  .gif, .jpg, "
+"or .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Stylesheet"
@@ -189,13 +241,19 @@ msgid "editor.issues.cover"
 msgstr "Forside"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Alle artikler returneres til redigeringskøen, og alle tilknyttede filer fjernes permanent. Er du sikker på, at du vil fjerne dette nummer?"
+msgstr ""
+"Alle artikler returneres til redigeringskøen, og alle tilknyttede filer "
+"fjernes permanent. Er du sikker på, at du vil fjerne dette nummer?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Dette tidsskrift anvender brugerdefineret nummersortering. <a href=\"{$url}\" class=\"action\">Nulstil til standarder</a>"
+msgstr ""
+"Dette tidsskrift anvender brugerdefineret nummersortering. <a href="
+"\"{$url}\" class=\"action\">Nulstil til standarder</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Dette nummer anvender brugerdefineret sektionssortering. <a href=\"{$url}\" class=\"action\">Nulstil til standarder</a>"
+msgstr ""
+"Dette nummer anvender brugerdefineret sektionssortering. <a href=\"{$url}\" "
+"class=\"action\">Nulstil til standarder</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Nummerdata"
@@ -215,6 +273,9 @@ msgstr "Public id"
 msgid "editor.issues.publishIssue"
 msgstr "Publicer nummer"
 
+msgid "editor.issues.unpublishIssue"
+msgstr "Træk udgivet nummer tilbage"
+
 msgid "editor.issues.previewIssue"
 msgstr "Vis nummer"
 
@@ -223,6 +284,12 @@ msgstr "Preview"
 
 msgid "editor.issues.confirmPublish"
 msgstr "Er du sikker på, at du vil publicere det nye nummer?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Er du sikker på, at du vil trække dette publicerede nummer tilbage?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Er du sikker på at du vil registrere dette nummer som det nyeste?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Det er ikke muligt at gemme public id til artikel:"
@@ -236,8 +303,62 @@ msgstr "Åbn"
 msgid "editor.issues.pages"
 msgstr "Sider"
 
+msgid "editor.issues.galleys"
+msgstr "Hele numre"
+
+msgid "editor.issues.galley"
+msgstr "Hele numre"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Se hele nummeret"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Udgiv publiceringsversioner sammen med hele nummerets indhold."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Der blev ikke udgivet nogen publiceringsversioner fra nummeret."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "En nummerbetegnelse er nødvendig."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "En nummersprogkode er nødvendig."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Nummerbetegnelsen findes allerede."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Tilbage til hele numre"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Er du sikker på, at du vil slette dette nummer?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikationer"
+
 msgid "editor.navigation.futureIssues"
 msgstr "Fremtidige numre"
+
+msgid "grid.action.addGalley"
+msgstr "Tilføj publiceringsversion"
+
+msgid "grid.action.publish"
+msgstr "Publicér nummer"
+
+msgid "grid.action.addIssue"
+msgstr "Opret nummer"
+
+msgid "grid.action.viewIssue"
+msgstr "Vis"
+
+msgid "grid.action.previewIssue"
+msgstr "Vis"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Opret hele numre"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Sæt nyeste nummer"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Tidligere numre"
@@ -278,8 +399,23 @@ msgstr "Senest fuldført"
 msgid "editor.submissions.assignedTo"
 msgstr "Tildelt redaktør"
 
+msgid "issues.submissions.issueIds"
+msgstr "Tildelt nummer"
+
 msgid "editor.submissions.inSection"
 msgstr "I sektion"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Vis planlagt publikation"
+
+msgid "editor.article.publishVersion"
+msgstr "Publicér udgave"
+
+msgid "editor.article.viewMetadata"
+msgstr "Se udgave-metadata"
+
+msgid "editor.article.editMetadata"
+msgstr "Redigér udgave-metadata"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Planlæg publicering i"
@@ -288,157 +424,59 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Skal tildeles"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Publiceringsgebyret er ikke betalt. Bed forfatteren om at betale gebyr, eller giv afkald på gebyr, hvis du vil planlægge publicering af element."
-
-msgid "editor.article.remove"
-msgstr "Fjern"
-
-msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Inden du sender en indsendelse til manuskriptredigering, skal du bruge "
-"linket 'Underret forfatter' til at informere forfatteren om beslutningen og "
-"vælge den version, der skal sendes."
-
-msgid "editor.notifyUsers.allReaders"
-msgstr "Alle læsere ({$count} brugere)"
-
-msgid "editor.notifyUsers.allAuthors"
-msgstr "Alle udgivne forfattere({$count} brugere)"
-
-msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Alle individuelle abonnenter ({$count} brugere)"
-
-msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Alle institutionsabonnenter ({$count} brugere)"
-
-msgid "editor.issues.enableOpenAccessDate"
-msgstr "Aktivér forsinket åben adgang"
-
-msgid "editor.issues.unpublishIssue"
-msgstr "Træk udgivet nummer tilbage"
-
-msgid "editor.issues.confirmUnpublish"
-msgstr "Er du sikker på, at du vil trække dette publicerede nummer tilbage?"
-
-msgid "editor.issues.galleys"
-msgstr "Hele numre"
-
-msgid "editor.issues.galley"
-msgstr "Hele numre"
-
-msgid "editor.issues.viewingGalley"
-msgstr "Se hele nummeret"
-
-msgid "editor.issues.issueGalleysDescription"
-msgstr "Udgiv publiceringsversioner sammen med hele nummerets indhold."
-
-msgid "editor.issues.noneIssueGalleys"
-msgstr "Der blev ikke udgivet nogen publiceringsversioner fra nummeret."
-
-msgid "editor.issues.galleyLabelRequired"
-msgstr "En nummerbetegnelse er nødvendig."
-
-msgid "editor.issues.galleyLocaleRequired"
-msgstr "En nummersprogkode er nødvendig."
-
-msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Nummerbetegnelsen findes allerede."
-
-msgid "editor.issues.backToIssueGalleys"
-msgstr "Tilbage til hele numre"
-
-msgid "editor.issues.confirmDeleteGalley"
-msgstr "Er du sikker på, at du vil slette dette nummer?"
-
-msgid "editor.reassign"
-msgstr "Overfør"
-
-msgid "editor.publicIdentificationExists"
-msgstr "Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, publiceringsversion eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift."
-
-msgid "grid.action.addIssue"
-msgstr "Opret nummer"
-
-msgid "grid.action.addGalley"
-msgstr "Tilføj publiceringsversion"
-
-msgid "grid.action.viewIssue"
-msgstr "Vis"
-
-msgid "grid.action.previewIssue"
-msgstr "Vis"
-
-msgid "editor.issues.editIssue"
-msgstr "Nummerforvaltning: {$issueIdentification}"
-
-msgid "editor.issues.datePublished"
-msgstr "Publiceringsdato"
-
-msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "Forsidebilledet, som du ønskede af slette, svarede ikke til dette nummers forsidebillede. Genindlæs siden og prøv igen."
+"Publiceringsgebyret er ikke betalt. Bed forfatteren om at betale gebyr, "
+"eller giv afkald på gebyr, hvis du vil planlægge publicering af element."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Forsidebilledet, som du ønskede at slette, kunne ikke findes. Det er måske allerede slettet. Prøv og genindlæs siden."
-
-msgid "grid.action.addIssueGalley"
-msgstr "Opret hele numre"
+msgstr ""
+"Forsidebilledet, som du ønskede at slette, kunne ikke findes. Det er måske "
+"allerede slettet. Prøv og genindlæs siden."
 
 msgid "grid.action.removeArticle"
 msgstr "Fjern artikel fra nummer"
 
+msgid "editor.article.remove"
+msgstr "Fjern"
+
 msgid "editor.article.remove.confirm"
-msgstr "Er du sikker på, at du vil fjerne denne artikel fra dette nummer? Artiklen vil være klar til at blive indsat i et andet nummer."
+msgstr ""
+"Er du sikker på, at du vil fjerne denne artikel fra dette nummer? Artiklen "
+"vil være klar til at blive indsat i et andet nummer."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Adgangsdatoen er ikke gyldig."
 
 msgid "editor.issues.editIssueGalley"
 msgstr "Redigér hele nummeret"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "Layoutredaktøren klargører disse filer, så de kan lægges under hver sit 'Publiceringsformat' og uploader derefter til passende <span class=\"pkp_help_title\">Korrekturer</span> til korrekturlæsning."
-
-msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Forsidebilledet som du ønskede at slette kunne ikke fremfindes. Det er måske allerede slettet. Prøv og genindlæs siden."
-
-msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ugyldigt format til forsidebillede. De godkendte formater er  .gif, .jpg, or .png."
-
-msgid "editor.issues.identifiers"
-msgstr "Identifikationer"
-
-msgid "grid.action.publish"
-msgstr "Publicér nummer"
+msgstr ""
+"Layoutredaktøren klargører disse filer, så de kan lægges under hver sit "
+"'Publiceringsformat' og uploader derefter til passende <span class="
+"\"pkp_help_title\">Korrekturer</span> til korrekturlæsning."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Vælg publicéringsklare filer"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Det sidste udkast på denne liste tilrettes af en manuskriptredaktør til den manuskriptredigerede version uploadet nedenfor under <span class=\"pkp_help_title\">Manuskriptredigering</span>."
+msgstr ""
+"Det sidste udkast på denne liste tilrettes af en manuskriptredaktør til den "
+"manuskriptredigerede version uploadet nedenfor under <span class="
+"\"pkp_help_title\">Manuskriptredigering</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Enhver fil, der allerede er blevet uploadet til et af indsendelsestrinnene kan tilføjes korrekturlæsningslisten ved nedenfor at markere afkrydsningsfeltet ud for 'Inkludér' og klikke 'Søg': Alle tilgængelige filer vil stå opført og kan tilvælges."
-
-msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Er du sikker på at du vil registrere dette nummer som det nyeste?"
-
-msgid "grid.action.setCurrentIssue"
-msgstr "Sæt nyeste nummer"
+msgstr ""
+"Enhver fil, der allerede er blevet uploadet til et af indsendelsestrinnene "
+"kan tilføjes korrekturlæsningslisten ved nedenfor at markere "
+"afkrydsningsfeltet ud for 'Inkludér' og klikke 'Søg': Alle tilgængelige "
+"filer vil stå opført og kan tilvælges."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "Identifikatoren (publicid) '{$publicIdentifier}' eksisterer allerede i forbindelse med et andet objekt af samme type. Vælg unikke identifikatorer for objekter af samme type i dit tidsskrift."
+msgstr ""
+"Identifikatoren (publicid) '{$publicIdentifier}' eksisterer allerede i "
+"forbindelse med et andet objekt af samme type. Vælg unikke identifikatorer "
+"for objekter af samme type i dit tidsskrift."
 
 msgid "editor.article.coverImage"
 msgstr "Forsidebillede"
-
-msgid "editor.article.editMetadata"
-msgstr "Redigér udgave-metadata"
-
-msgid "editor.article.viewMetadata"
-msgstr "Se udgave-metadata"
-
-msgid "editor.article.publishVersion"
-msgstr "Publicér udgave"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Vis planlagt publikation"
-
-msgid "issues.submissions.issueIds"
-msgstr "Tildelt nummer"

@@ -14,58 +14,37 @@ msgstr ""
 msgid "plugins.importexport.native.displayName"
 msgstr "Plugin XML gốc"
 
-msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgid "plugins.importexport.native.description"
 msgstr ""
-"Bài báo \"{$articleTitle}\" được chứa trong một số xuất bản, nhưng không có "
-"ngày xuất bản."
+"Nhập và xuất các bài báo và các số xuất bản theo định dạng XML gốc của OJS."
 
-msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
-msgstr "Phần tử nhận dạng số xuất bản bị thiếu cho bài báo \"{$articleTitle}\"."
+msgid "plugins.importexport.native.import"
+msgstr "Nhập"
 
-msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
-msgstr ""
-"Số xuất bản hiện tại với id {$issueId} phù hợp với nhận dạng số xuất bản đã "
-"cho \"{$issueIdentification}\".  Số xuất bản này sẽ không được sửa đổi, "
-"nhưng các bài báo có thể được thêm vào."
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Tải lên tệp XML để nhập"
 
-msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
-msgstr ""
-"Không có hoặc nhiều hơn một số xuất bản khớp với nhận dạng số xuất bản đã "
-"cho \"{$issueIdentification}\"."
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Chọn các bài báo để xuất"
 
-msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
-msgstr ""
-"Viết tắt của chuyên mục \"{$sectionAbbrev}\" trong số \"{$issueTitle}\"phù "
-"hợp với các chuyên mục hiện có, nhưng một viết tắt khác của chuyên mục này "
-"không khớp với viết tắt của các chuyên mục tạp chí hiện có."
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Xuất các bài báo"
 
-msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
-msgstr ""
-"Viết tắt của chuyên mục \"{$section1Abbrev}\" và viết tắt của chuyên mục \""
-"{$section2Abbrev}\" của số \"{$issueTitle}\" phù hợp trong sự khác nhau "
-"với các chuyên mục hiện có của tạp chí."
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Xuất các số"
 
-msgid "plugins.importexport.native.import.error.sectionTitleMatch"
-msgstr ""
-"Tiêu đề của chuyên mục \"{$sectionTitle}\" trong số \"{$issueTitle}\" phù "
-"hợp với các chuyên mục hiện có, nhưng một tiêu đề khác của chuyên mục này "
-"không khớp với tiêu đề khác của các chuyên mục hiện có của tạp chí."
+msgid "plugins.importexport.native.results"
+msgstr "Kết quả"
 
-msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
-msgstr ""
-"Tiêu đề của chuyên mục \"{$section1Title}\" và tiêu đề của chuyên mục \""
-"{$section2Title}\" trong số \"{$issueTitle}\" phù hợp với sự  khác nhau của "
-"các chuyên mục hiện có của tạp chí."
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Vui lòng tải lên một tập tin trong \"Nhập\" để tiếp tục."
 
-msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Người dùng được chỉ định, \"{$userName}\", không tồn tại."
-
-msgid "plugins.importexport.native.error.unknownSection"
-msgstr "Chuyên mục không xác định {$param}"
+msgid "plugins.importexport.native.importComplete"
+msgstr "Việc nhập thành công. Các hạng mục sau đây đã được nhập:"
 
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
-"Sử dụng: {$scriptName} {$pluginName} [command] ...\n"
+"\bSử dụng: {$scriptName} {$pluginName} [command] ...\n"
 "Các lệnh:\n"
 "\tnhập [xmlFileName] [journal_path] [user_name] ...\n"
 "\txuất [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
@@ -88,30 +67,52 @@ msgstr ""
 "{$scriptName} {$pluginName} nhập [xmlFileName] [journal_path]\n"
 "\tissue_id [issueId] section_abbrev [abbrev]\n"
 
-msgid "plugins.importexport.native.importComplete"
-msgstr "Việc nhập thành công. Các hạng mục sau đây đã được nhập:"
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Chuyên mục không xác định {$param}"
 
-msgid "plugins.inportexport.native.uploadFile"
-msgstr "Vui lòng tải lên một tập tin trong \"Nhập\" để tiếp tục."
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Người dùng được chỉ định, \"{$userName}\", không tồn tại."
 
-msgid "plugins.importexport.native.results"
-msgstr "Kết quả"
-
-msgid "plugins.importexport.native.exportIssues"
-msgstr "Xuất các số"
-
-msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Xuất các bài báo"
-
-msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Chọn các bài báo để xuất"
-
-msgid "plugins.importexport.native.import.instructions"
-msgstr "Tải lên tệp XML để nhập"
-
-msgid "plugins.importexport.native.import"
-msgstr "Nhập"
-
-msgid "plugins.importexport.native.description"
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"Nhập và xuất các bài báo và các số xuất bản theo định dạng XML gốc của OJS."
+"Tiêu đề của chuyên mục \"{$section1Title}\" và tiêu đề của chuyên mục "
+"\"{$section2Title}\" trong số \"{$issueTitle}\" phù hợp với sự  khác nhau "
+"của các chuyên mục hiện có của tạp chí."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"Tiêu đề của chuyên mục \"{$sectionTitle}\" trong số \"{$issueTitle}\" phù "
+"hợp với các chuyên mục hiện có, nhưng một tiêu đề khác của chuyên mục này "
+"không khớp với tiêu đề khác của các chuyên mục hiện có của tạp chí."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"Viết tắt của chuyên mục \"{$section1Abbrev}\" và viết tắt của chuyên mục "
+"\"{$section2Abbrev}\" của số \"{$issueTitle}\" phù hợp trong sự khác nhau "
+"với các chuyên mục hiện có của tạp chí."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"Viết tắt của chuyên mục \"{$sectionAbbrev}\" trong số \"{$issueTitle}\"phù "
+"hợp với các chuyên mục hiện có, nhưng một viết tắt khác của chuyên mục này "
+"không khớp với viết tắt của các chuyên mục tạp chí hiện có."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Không có hoặc nhiều hơn một số xuất bản khớp với nhận dạng số xuất bản đã "
+"cho \"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"Số xuất bản hiện tại với id {$issueId} phù hợp với nhận dạng số xuất bản đã "
+"cho \"{$issueIdentification}\".  Số xuất bản này sẽ không được sửa đổi, "
+"nhưng các bài báo có thể được thêm vào."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr ""
+"Phần tử nhận dạng số xuất bản bị thiếu cho bài báo \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Bài báo \"{$articleTitle}\" được chứa trong một số xuất bản, nhưng không có "
+"ngày xuất bản."

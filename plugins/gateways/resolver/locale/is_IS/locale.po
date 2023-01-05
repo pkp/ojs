@@ -6,3 +6,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Weblate\n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr ""
+
+msgid "plugins.gateways.resolver.description"
+msgstr ""
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr ""
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr ""

@@ -11,14 +11,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "default.contextSettings.checklist.addressesLinked"
-msgstr ""
-"სადაც ეს შესაძლებელია, მოწოდებულია სრული ინტერნეტ მისამართების (URL) ბმულები."
+msgid "section.default.title"
+msgstr "სტატიები"
 
-msgid "default.contextSettings.checklist.fileFormat"
-msgstr ""
-"მასალის ფაილი მოწოდებულია OpenOffice, Microsoft Word ან RTF დოკუმენტის "
-"ფორმატში."
+msgid "section.default.abbrev"
+msgstr "სტ"
+
+msgid "section.default.policy"
+msgstr "განყოფილების ნაგულისხმევი პოლიტიკა"
+
+msgid "default.genres.article"
+msgstr "სტატიის ტექსტი"
 
 msgid "default.contextSettings.checklist.notPreviouslyPublished"
 msgstr ""
@@ -26,134 +29,39 @@ msgstr ""
 "განსახილვევლად და გამოქვეყნებისათვის სხვა ჟურნალში (ან მოწოდებულია ახსნა "
 "რედაქტორისათვის კომენტარებში)."
 
-msgid "default.contextSettings.emailSignature"
+msgid "default.contextSettings.checklist.fileFormat"
 msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
+"მასალის ფაილი მოწოდებულია OpenOffice, Microsoft Word ან RTF დოკუმენტის "
+"ფორმატში."
 
-msgid "default.groups.abbrev.externalReviewer"
-msgstr "რეც"
-
-msgid "default.groups.plural.externalReviewer"
-msgstr "რეცენზენტები"
-
-msgid "default.groups.name.externalReviewer"
-msgstr "რეცენზენტი"
-
-msgid "default.genres.sourceTexts"
-msgstr "საწყისი ტექსტები"
-
-msgid "default.genres.dataSet"
-msgstr "მონაცემთა ნაკრები"
-
-msgid "default.genres.dataAnalysis"
-msgstr "მონაცემთა ანალიზი"
-
-msgid "default.genres.transcripts"
-msgstr "ტრანსკრიპტები"
-
-msgid "default.genres.researchResults"
-msgstr "კვლევის შედეგები"
-
-msgid "default.genres.researchMaterials"
-msgstr "კვლევის მასალები"
-
-msgid "default.genres.researchInstrument"
-msgstr "კვლევის ხელსაწყო"
-
-msgid "default.groups.abbrev.subscriptionManager"
-msgstr "ხმ"
-
-msgid "default.groups.plural.subscriptionManager"
-msgstr "ხელმოწერის მმართველები"
-
-msgid "default.groups.name.subscriptionManager"
-msgstr "ხელმოწერის მმართველი"
-
-msgid "default.groups.abbrev.sectionEditor"
-msgstr "გრ"
-
-msgid "default.groups.plural.sectionEditor"
-msgstr "განყოფილებების რედაქტორები"
-
-msgid "default.groups.name.sectionEditor"
-msgstr "განყოფილების რედაქტორი"
-
-msgid "default.groups.abbrev.guestEditor"
-msgstr "მრ"
-
-msgid "default.groups.plural.guestEditor"
-msgstr "მოწვეული რედაქტორები"
-
-msgid "default.groups.name.guestEditor"
-msgstr "მოწვეული რედაქტორი"
-
-msgid "default.groups.abbrev.editor"
-msgstr "ჟრ"
-
-msgid "default.groups.plural.editor"
-msgstr "ჟურნალის რედაქტორები"
-
-msgid "default.groups.name.editor"
-msgstr "ჟურნალის რედაქტორი"
-
-msgid "default.groups.abbrev.manager"
-msgstr "ჟმ"
-
-msgid "default.groups.plural.manager"
-msgstr "ჟურნალის მმართველები"
-
-msgid "default.groups.name.manager"
-msgstr "ჟურნალის მმართველი"
-
-msgid "default.genres.article"
-msgstr "სტატიის ტექსტი"
-
-msgid "section.default.policy"
-msgstr "განყოფილების ნაგულისხმევი პოლიტიკა"
-
-msgid "section.default.abbrev"
-msgstr "სტ"
-
-msgid "section.default.title"
-msgstr "სტატიები"
-
-msgid "default.contextSettings.clockssLicense"
+msgid "default.contextSettings.checklist.addressesLinked"
 msgstr ""
-"ეს ჟურნალი იყენებს CLOCKSS განაწილებული საარქივო სისტემის შექმნისათვის "
-"სისტემაში მონაწილე ბიბლიოთეკებისათვის და ამ ბიბლიოთეკებს საშუალებას აძლევს "
-"შექმნან ჟურნალის მუდმივი არქივები შენახვისა და აღდგენისათვის. <a href=\""
-"http://clockss.org/\">დამატებით...</a>"
+"სადაც ეს შესაძლებელია, მოწოდებულია სრული ინტერნეტ მისამართების (URL) ბმულები."
 
-msgid "default.contextSettings.lockssLicense"
+msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr ""
-"ეს ჟურნალი იყენებს LOCKSS განაწილებული საარქივო სისტემის შექმნისათვის "
-"სისტემაში მონაწილე ბიბლიოთეკებისათვის და ამ ბიბლიოთეკებს საშუალებას აძლევს "
-"შექმნან ჟურნალის მუდმივი არქივები შენახვისა და აღდგენისათვის. <a href=\""
-"http://www.lockss.org/\">დამატებით...</a>"
+"ტექსტი აკრეფილია ერთმაგი სტრიქონთშორისი დაშორებით; გამოყენებულია შრიფტის "
+"კეგლი 12 პუნქტი; მონიშვნისათვის გამოიყენება დახრილი სტილი და არა ხაზგასმა "
+"(URL-მისამართების გარდა); ყველა ილისუსტრაცია, გრაფიკები და ცხრილები "
+"განთავსებულია ტექსტის შესაბამის ადგილებში და არა დოკუმენტის ბოლოში."
 
-msgid "default.contextSettings.forLibrarians"
+msgid "default.contextSettings.checklist.bibliographicRequirements"
 msgstr ""
-"ჩვენ იმედს ვიტოვებთ, რომ ბიბლიოთეკების თანამშრომლები შეიტანენ ამ ჟურნალს "
-"ბიბლიოთეკის ელექტრონული ჟურნალების სიაში. უნდა აღინიშნოს, რომ ამ ჟურნალის "
-"ღია საგამომცემლო სისტემა ასევე მოსახერხებელია ბიბლიოთეკებისათვის საკუთარი "
-"ელექტრონული ჟურნალების განსათავსებლად, რომელთა რედაქტირებაში მონაწილეობენ "
-"მასწავლებლები და სამეცნიერო მუშაკები (დეტალურად იხილეთ  <a href=\""
-"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+"ტექსტი შეესაბამება სტილისტურ და ბიბლიოგრაფიულ მოთხოვნებს, რომლებიც აღწერილია "
+"წესებში."
 
-msgid "default.contextSettings.forAuthors"
+msgid "default.contextSettings.privacyStatement"
 msgstr ""
-"გსურთ ამ ჟურნალში სტატიის გამოგზავნა? ჩვენ გირჩევთ ნახოთ ეს განყოფილება <a "
-"href=\"{$indexUrl}/{$contextPath}/about\">ამ ჟურნალის შესახებ</a>, სადაც "
-"შეძლებთ გაეცნოთ ჟურნალის წესებს, აგრეთვე გთხოვთ ნახოთ <a href=\""
-"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">წესები "
-"ავტორებისათვის</a>. ავტორებმა უნდა გაიარონ <a href=\""
-"{$indexUrl}/{$contextPath}/user/register\">რეგისტრაცია</a> მასალების "
-"გამოგზავნამდე, თუ უკვე გაიარეთ რეგისტრაცია, შეგიძლიათ განახორციელოთ "
-"სისტემაში <a href=\"{$indexUrl}/index/login\">შემოსვლა</a> და დაიწყოთ "
-"გამოგზავნის პროცესი, რომელიც ხუთი ბიჯისაგან შედგება."
+"<p>ელექტრონული ფოსტის სახელები და მისამართები, რომლებსაც შეიტანთ ამ საიტზე, "
+"გამოყენებული იქნება მხოლოდ ამ ჟურნალის საჭიროებისათვის და არ იქნება "
+"გამოყენებული სხვა მიზნებისათვის, ან არ გადაეცემა სხვა პირებისა და "
+"ორგანიზაციებს.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"ეს ჟურნალი უზრუნველყოფს უშუალო ღია წვდომას შიგთავსზე, გამომდინარე შემდეგი "
+"პრინციპიდან: თავისუფალი, ღია წვდომა კვლევების შედეგებზე უზრუნველყოფს ცოდნის "
+"გლობალურ გაცვლას."
 
 msgid "default.contextSettings.forReaders"
 msgstr ""
@@ -167,27 +75,119 @@ msgstr ""
 "რომელიც მკითხველებს დაარწმუნებს იმაში, რომ მათი ელფოსტა არ იქნება "
 "გამოყენებული სხვა მიზნებისათვის."
 
-msgid "default.contextSettings.openAccessPolicy"
+msgid "default.contextSettings.forAuthors"
 msgstr ""
-"ეს ჟურნალი უზრუნველყოფს უშუალო ღია წვდომას შიგთავსზე, გამომდინარე შემდეგი "
-"პრინციპიდან: თავისუფალი, ღია წვდომა კვლევების შედეგებზე უზრუნველყოფს ცოდნის "
-"გლობალურ გაცვლას."
+"გსურთ ამ ჟურნალში სტატიის გამოგზავნა? ჩვენ გირჩევთ ნახოთ ეს განყოფილება <a "
+"href=\"{$indexUrl}/{$contextPath}/about\">ამ ჟურნალის შესახებ</a>, სადაც "
+"შეძლებთ გაეცნოთ ჟურნალის წესებს, აგრეთვე გთხოვთ ნახოთ <a href=\"{$indexUrl}/"
+"{$contextPath}/about/submissions#authorGuidelines\">წესები ავტორებისათვის</"
+"a>. ავტორებმა უნდა გაიარონ <a href=\"{$indexUrl}/{$contextPath}/user/register"
+"\">რეგისტრაცია</a> მასალების გამოგზავნამდე, თუ უკვე გაიარეთ რეგისტრაცია, "
+"შეგიძლიათ განახორციელოთ სისტემაში <a href=\"{$indexUrl}/index/login"
+"\">შემოსვლა</a> და დაიწყოთ გამოგზავნის პროცესი, რომელიც ხუთი ბიჯისაგან "
+"შედგება."
 
-msgid "default.contextSettings.privacyStatement"
+msgid "default.contextSettings.forLibrarians"
 msgstr ""
-"<p>ელექტრონული ფოსტის სახელები და მისამართები, რომლებსაც შეიტანთ ამ საიტზე, "
-"გამოყენებული იქნება მხოლოდ ამ ჟურნალის საჭიროებისათვის და არ იქნება "
-"გამოყენებული სხვა მიზნებისათვის, ან არ გადაეცემა სხვა პირებისა და "
-"ორგანიზაციებს.</p>"
+"ჩვენ იმედს ვიტოვებთ, რომ ბიბლიოთეკების თანამშრომლები შეიტანენ ამ ჟურნალს "
+"ბიბლიოთეკის ელექტრონული ჟურნალების სიაში. უნდა აღინიშნოს, რომ ამ ჟურნალის "
+"ღია საგამომცემლო სისტემა ასევე მოსახერხებელია ბიბლიოთეკებისათვის საკუთარი "
+"ელექტრონული ჟურნალების განსათავსებლად, რომელთა რედაქტირებაში მონაწილეობენ "
+"მასწავლებლები და სამეცნიერო მუშაკები (დეტალურად იხილეთ  <a href=\"http://pkp."
+"sfu.ca/ojs\">Open Journal Systems</a>)."
 
-msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgid "default.contextSettings.lockssLicense"
 msgstr ""
-"ტექსტი შეესაბამება სტილისტურ და ბიბლიოგრაფიულ მოთხოვნებს, რომლებიც აღწერილია "
-"წესებში."
+"ეს ჟურნალი იყენებს LOCKSS განაწილებული საარქივო სისტემის შექმნისათვის "
+"სისტემაში მონაწილე ბიბლიოთეკებისათვის და ამ ბიბლიოთეკებს საშუალებას აძლევს "
+"შექმნან ჟურნალის მუდმივი არქივები შენახვისა და აღდგენისათვის. <a href="
+"\"http://www.lockss.org/\">დამატებით...</a>"
 
-msgid "default.contextSettings.checklist.submissionAppearance"
+msgid "default.contextSettings.clockssLicense"
 msgstr ""
-"ტექსტი აკრეფილია ერთმაგი სტრიქონთშორისი დაშორებით; გამოყენებულია შრიფტის "
-"კეგლი 12 პუნქტი; მონიშვნისათვის გამოიყენება დახრილი სტილი და არა ხაზგასმა "
-"(URL-მისამართების გარდა); ყველა ილისუსტრაცია, გრაფიკები და ცხრილები "
-"განთავსებულია ტექსტის შესაბამის ადგილებში და არა დოკუმენტის ბოლოში."
+"ეს ჟურნალი იყენებს CLOCKSS განაწილებული საარქივო სისტემის შექმნისათვის "
+"სისტემაში მონაწილე ბიბლიოთეკებისათვის და ამ ბიბლიოთეკებს საშუალებას აძლევს "
+"შექმნან ჟურნალის მუდმივი არქივები შენახვისა და აღდგენისათვის. <a href="
+"\"http://clockss.org/\">დამატებით...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "ჟურნალის მმართველი"
+
+msgid "default.groups.plural.manager"
+msgstr "ჟურნალის მმართველები"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ჟმ"
+
+msgid "default.groups.name.editor"
+msgstr "ჟურნალის რედაქტორი"
+
+msgid "default.groups.plural.editor"
+msgstr "ჟურნალის რედაქტორები"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ჟრ"
+
+msgid "default.groups.name.guestEditor"
+msgstr "მოწვეული რედაქტორი"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "მოწვეული რედაქტორები"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "მრ"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "განყოფილების რედაქტორი"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "განყოფილებების რედაქტორები"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "გრ"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "ხელმოწერის მმართველი"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "ხელმოწერის მმართველები"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ხმ"
+
+msgid "default.genres.researchInstrument"
+msgstr "კვლევის ხელსაწყო"
+
+msgid "default.genres.researchMaterials"
+msgstr "კვლევის მასალები"
+
+msgid "default.genres.researchResults"
+msgstr "კვლევის შედეგები"
+
+msgid "default.genres.transcripts"
+msgstr "ტრანსკრიპტები"
+
+msgid "default.genres.dataAnalysis"
+msgstr "მონაცემთა ანალიზი"
+
+msgid "default.genres.dataSet"
+msgstr "მონაცემთა ნაკრები"
+
+msgid "default.genres.sourceTexts"
+msgstr "საწყისი ტექსტები"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "რეცენზენტი"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "რეცენზენტები"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "რეც"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/"
+">\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

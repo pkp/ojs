@@ -12,14 +12,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.auth.ldap.displayName"
+msgstr "LDAP"
+
+msgid "plugins.auth.ldap.description"
+msgstr ""
+"Þessi viðbót leyfir staðfestingu og samhæfingu á notendareikningum upp á "
+"móti ytri LDAP gagnauppruna."
+
+msgid "plugins.auth.ldap.settings"
+msgstr "LDAP stillingar"
+
+msgid "plugins.auth.ldap.settings.hostname"
+msgstr "Hýsingarheiti vefþjóns"
+
+msgid "plugins.auth.ldap.settings.hostname.description"
+msgstr ""
+"T.d., \"ldap.example.com\", eða \"ldaps://ldap.example.com\" (til að nota "
+"SSL)"
+
+msgid "plugins.auth.ldap.settings.port"
+msgstr "Server port"
+
 msgid "plugins.auth.ldap.settings.port.description"
 msgstr "Optional. Defaults to 389 (LDAP) or 636 (LDAP over SSL)"
-
-msgid "plugins.auth.ldap.settings.managerdn.description"
-msgstr "E.g., \"cn=Manager,dc=example,dc=com\""
-
-msgid "plugins.auth.ldap.settings.managerdn"
-msgstr "Manager DN"
 
 msgid "plugins.auth.ldap.settings.basedn"
 msgstr "Base DN"
@@ -27,24 +43,47 @@ msgstr "Base DN"
 msgid "plugins.auth.ldap.settings.basedn.description"
 msgstr "T.d., \"ou=people,dc=example,dc=com\""
 
-msgid "plugins.auth.ldap.settings.port"
-msgstr "Server port"
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "Manager DN"
 
-msgid "plugins.auth.ldap.settings.hostname.description"
+msgid "plugins.auth.ldap.settings.managerdn.description"
+msgstr "E.g., \"cn=Manager,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr ""
-"T.d., \"ldap.example.com\", eða \"ldaps://ldap.example.com\" (til að nota "
-"SSL)"
 
-msgid "plugins.auth.ldap.settings.hostname"
-msgstr "Hýsingarheiti vefþjóns"
-
-msgid "plugins.auth.ldap.settings"
-msgstr "LDAP stillingar"
-
-msgid "plugins.auth.ldap.description"
+msgid "plugins.auth.ldap.settings.managerpwd.description"
 msgstr ""
-"Þessi viðbót leyfir staðfestingu og samhæfingu á notendareikningum upp á "
-"móti ytri LDAP gagnauppruna."
 
-msgid "plugins.auth.ldap.displayName"
-msgstr "LDAP"
+msgid "plugins.auth.ldap.settings.uid"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr ""
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr ""

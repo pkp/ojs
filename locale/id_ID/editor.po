@@ -45,7 +45,10 @@ msgid "editor.me"
 msgstr "Saya"
 
 msgid "editor.publicIdentificationExists"
-msgstr "Identifier publik '{$publicIdentifier}' sudah digunakan objek lain (terbitan, artikel, galley atau file). Silakan pilih identifier unik di jurnal Anda."
+msgstr ""
+"Identifier publik '{$publicIdentifier}' sudah digunakan objek lain "
+"(terbitan, artikel, galley atau file). Silakan pilih identifier unik di "
+"jurnal Anda."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Tidak ada naskah dalam arsip."
@@ -59,10 +62,18 @@ msgid "editor.submissionReview.confirmDecision"
 msgstr "Apakah Anda ingin merekam keputusan ini?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Penyerahan naskah ini akan diarsipkan setelah email Beritahu Penulis telah dikirimkan atau tombol Lewati Email ditekan."
+msgstr ""
+"Penyerahan naskah ini akan diarsipkan setelah email Beritahu Penulis telah "
+"dikirimkan atau tombol Lewati Email ditekan."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Sebelum mengirimkan naskah ke Copyediting, gunakan tautan Beritahu Penulis untuk memberitahukan keputusan kepada penulis dan pilih versi yang akan dikirim."
+msgstr ""
+"Sebelum mengirimkan naskah ke Copyediting, gunakan tautan Beritahu Penulis "
+"untuk memberitahukan keputusan kepada penulis dan pilih versi yang akan "
+"dikirim."
+
+msgid "editor.notifyUsers"
+msgstr "Beritahu Pengguna"
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "Semua Pembaca ({$count} pembaca)"
@@ -83,10 +94,14 @@ msgid "editor.usersNotified"
 msgstr "Para Pengguna telah Diberitahu"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini ({$count} pengguna)"
+msgstr ""
+"Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini "
+"({$count} pengguna)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini yang telah meminta dikirimi berita terbaru ({$count} pengguna)"
+msgstr ""
+"Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini yang "
+"telah meminta dikirimi berita terbaru ({$count} pengguna)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Sertakan daftar isi dari terbitan ini:"
@@ -175,21 +190,27 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Hapus gambar sampul?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "Gambar sampul yang hendak Anda hapus tidak sesuai dengan gambar sampul untuk terbitan ini. Mohon muat ulang halaman ini dan coba lagi."
+msgstr ""
+"Gambar sampul yang hendak Anda hapus tidak sesuai dengan gambar sampul untuk "
+"terbitan ini. Mohon muat ulang halaman ini dan coba lagi."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin telah dihapus. Coba muat ulang halaman."
+msgstr ""
+"Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin "
+"telah dihapus. Coba muat ulang halaman."
 
-msgid "editor.issues.invalidCoverPageFormat"
-msgstr "Format gambar sampul invalid. Format yang diterima adalah .gif, .jpg, atau .png."
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Format halaman depan tidak valid. Format yang diterima adalah .gif, .jpg, "
+"atau .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Lembargaya"
 
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
-"Format lembargaya tidak berlaku. Pastikan file yang diserahkan adalah CSS. ("
-"Komentar dalam lembargaya akan diabaikan.)"
+"Format lembargaya tidak berlaku. Pastikan file yang diserahkan adalah CSS. "
+"(Komentar dalam lembargaya akan diabaikan.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Hapus lembargaya?"
@@ -219,7 +240,10 @@ msgid "editor.issues.cover"
 msgstr "Sampul"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Semua artikel akan kembali pada antrian pengeditan dan file-file yang terkait akan dihapus secara permanen. Apakah Anda yakin ingin menghapus terbitan ini?"
+msgstr ""
+"Semua artikel akan kembali pada antrian pengeditan dan file-file yang "
+"terkait akan dihapus secara permanen. Apakah Anda yakin ingin menghapus "
+"terbitan ini?"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
@@ -227,7 +251,9 @@ msgstr ""
 "\"action\">Kembali ke default</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Jurnal ini menggunakan pengaturan bagian custom. <a href=\"{$url}\" class=\"action\">Kembali ke default</a>"
+msgstr ""
+"Jurnal ini menggunakan pengaturan bagian custom. <a href=\"{$url}\" class="
+"\"action\">Kembali ke default</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Data Terbitan"
@@ -261,6 +287,9 @@ msgstr "Apakah Anda yakin ingin menerbitkan terbitan baru?"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Apakah Anda yakin ingin menarik terbitan yang telah terbit ini?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Anda yakin ingin mengatur nomor ini sebagai terbitan terkini?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Tidak bisa menyimpan ID publik untuk artikel:"
@@ -328,6 +357,9 @@ msgstr "Pratinjau"
 msgid "grid.action.addIssueGalley"
 msgstr "Buat Galai Terbitan"
 
+msgid "grid.action.setCurrentIssue"
+msgstr "Tetapkan Nomor Terbitan Terkini"
+
 msgid "editor.navigation.issueArchive"
 msgstr "Terbitan Terdahulu"
 
@@ -367,8 +399,23 @@ msgstr "Terakhir Lengkap"
 msgid "editor.submissions.assignedTo"
 msgstr "Ditugaskan ke Editor"
 
+msgid "issues.submissions.issueIds"
+msgstr "Dimasukkan ke Terbitan"
+
 msgid "editor.submissions.inSection"
 msgstr "Di Bagian"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Tampilkan Terbitan Terjadwal"
+
+msgid "editor.article.publishVersion"
+msgstr "Terbitkan Versi"
+
+msgid "editor.article.viewMetadata"
+msgstr "Lihat Versi Metadata"
+
+msgid "editor.article.editMetadata"
+msgstr "Edit Versi Metadata"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Jadwalkan untuk publikasi di"
@@ -377,10 +424,14 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Untuk Ditugaskan"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Biaya publikasi tidak dibayar. Untuk menjadwalkan item untuk dipublikasi beritahu penulis untuk membayar biaya atau mengajukan dispensasi."
+msgstr ""
+"Biaya publikasi tidak dibayar. Untuk menjadwalkan item untuk dipublikasi "
+"beritahu penulis untuk membayar biaya atau mengajukan dispensasi."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin telah dihapus. Coba muat ulang halaman."
+msgstr ""
+"Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin "
+"telah dihapus. Coba muat ulang halaman."
 
 msgid "grid.action.removeArticle"
 msgstr "Hapus Naskah dari Terbitan"
@@ -410,8 +461,8 @@ msgstr "Pilih File Galai"
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
 "File draf final di daftar ini telah diubah oleh Copyeditor menjadi versi "
-"pasca-copyedit, diunggah di bawah ini <span class=\"pkp_help_title\""
-">Copyediting</span>."
+"pasca-copyedit, diunggah di bawah ini <span class=\"pkp_help_title"
+"\">Copyediting</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
@@ -420,40 +471,16 @@ msgstr ""
 "klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk "
 "diikutsertakan."
 
-msgid "editor.article.coverImage"
-msgstr "Gambar sampul"
-
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
 "Pengidentifikasi publik '{$publicIdentifier}' sudah ada untuk objek lain "
 "dengan tipe yang sama. Silakan pilih pengidentifikasi unik untuk objek "
 "dengan tipe yang sama dalam jurnal Anda."
 
-msgid "editor.article.editMetadata"
-msgstr "Edit Versi Metadata"
+msgid "editor.article.coverImage"
+msgstr "Gambar sampul"
 
-msgid "editor.article.viewMetadata"
-msgstr "Lihat Versi Metadata"
-
-msgid "editor.article.publishVersion"
-msgstr "Terbitkan Versi"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Tampilkan Terbitan Terjadwal"
-
-msgid "grid.action.setCurrentIssue"
-msgstr "Tetapkan Nomor Terbitan Terkini"
-
-msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Anda yakin ingin mengatur nomor ini sebagai terbitan terkini?"
-
-msgid "editor.issues.invalidCoverImageFormat"
-msgstr ""
-"Format halaman depan tidak valid. Format yang diterima adalah .gif, .jpg, "
-"atau .png."
-
-msgid "editor.notifyUsers"
-msgstr "Beritahu Pengguna"
-
-msgid "issues.submissions.issueIds"
-msgstr "Dimasukkan ke Terbitan"
+#~ msgid "editor.issues.invalidCoverPageFormat"
+#~ msgstr ""
+#~ "Format gambar sampul invalid. Format yang diterima adalah .gif, .jpg, "
+#~ "atau .png."

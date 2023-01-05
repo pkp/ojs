@@ -14,6 +14,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "submission.submit.title"
+msgstr "लेख प्रस्तुत करें"
+
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.submit.userGroup"
@@ -27,6 +30,9 @@ msgstr "वह क्षमता चुनें जिसके तहत आ�
 msgid "submission.upload.selectComponent"
 msgstr "लेख घटक चुनें"
 
+msgid "submission.title"
+msgstr "लेख का शीर्षक"
+
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
@@ -36,11 +42,20 @@ msgstr "लेख घटक चुनें"
 # (pofilter) xmltags: Added XML tags
 msgid "submission.title.tip"
 msgstr ""
-"सबमिशन प्रकार आमतौर पर 'इमेज', 'टेक्स्ट', या 'सॉफ्टवेयर' या 'इंटरएक्टिव' सहि"
-"त अन्य मल्टीमीडिया प्रकारों में से एक है। कृपया अपने सबमिशन के लिए सबसे अधिक "
-"प्रासंगिक चुनें.  उदाहरण मिल सकते हैं  <a target=\"_blank\" href=\""
-"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
-">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+"सबमिशन प्रकार आमतौर पर 'इमेज', 'टेक्स्ट', या 'सॉफ्टवेयर' या 'इंटरएक्टिव' सहित अन्य "
+"मल्टीमीडिया प्रकारों में से एक है। कृपया अपने सबमिशन के लिए सबसे अधिक प्रासंगिक चुनें.  "
+"उदाहरण मिल सकते हैं  <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "में एक नया सबमिशन शुरू करें"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "नई सबमिशन"
+
+msgid "grid.action.workflow"
+msgstr "सबमिशन वर्कफ़्लो"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
@@ -63,9 +78,12 @@ msgstr "मेटाडाटा"
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"जर्नल  को आपके प्रस्तुत करने के बारे में सूचित किया गया है, और आपको अपने "
-"रिकॉर्ड के लिए एक पुष्टिकरण ईमेल किया गया है। एक बार संपादक ने सबमिशन की "
-"समीक्षा की, तो वे आपसे संपर्क करेंगे ।"
+"जर्नल  को आपके प्रस्तुत करने के बारे में सूचित किया गया है, और आपको अपने रिकॉर्ड के लिए एक "
+"पुष्टिकरण ईमेल किया गया है। एक बार संपादक ने सबमिशन की समीक्षा की, तो वे आपसे संपर्क "
+"करेंगे ।"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "गैली अंक प्रविष्टि में दिखाई देता है"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "grid.action.issueEntry"
@@ -90,6 +108,9 @@ msgstr "लेख गैली\"{$galleyFormatName}\" उपलब्ध कर�
 msgid "submission.event.publicIdentifiers"
 msgstr "सबमिशन के सार्वजनिक पहचानकर्ताओं को अपडेट किया गया ।"
 
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "प्रारूप स्वीकृति"
+
 # (pofilter) xmltags: Added XML tags
 msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr "<p> यह गैली <em> अब पाठकों को उपलब्ध </ em> नहीं कराई जाएगी </ p>"
@@ -97,6 +118,9 @@ msgstr "<p> यह गैली <em> अब पाठकों को उपल�
 # (pofilter) xmltags: Added XML tags
 msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p> यह गैली <em> अब पाठकों को उपलब्ध </ em> कराई जाएगी </ p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "इस गैली को उपलब्ध कराएं"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.galleyFiles"
@@ -107,10 +131,9 @@ msgstr "गैली फाइलें"
 # (pofilter) xmltags: Added XML tags
 msgid "submission.proofReadingDescription"
 msgstr ""
-"लेआउट संपादक उत्पादन-तैयार फ़ाइलों को अपलोड करता है जो यहां प्रकाशन के लिए "
-"तैयार किए गए हैं। प्रकाशन से पहले अनुमोदन के लिए अपलोड की गई सही फ़ाइलों के "
-"साथ, गैलीस को प्रमाणित करने के लिए लेखकों और अन्य को नामित करने के लिए <em> "
-"असाइन ऑडिटर </ em> का उपयोग करें।"
+"लेआउट संपादक उत्पादन-तैयार फ़ाइलों को अपलोड करता है जो यहां प्रकाशन के लिए तैयार किए गए "
+"हैं। प्रकाशन से पहले अनुमोदन के लिए अपलोड की गई सही फ़ाइलों के साथ, गैलीस को प्रमाणित "
+"करने के लिए लेखकों और अन्य को नामित करने के लिए <em> असाइन ऑडिटर </ em> का उपयोग करें।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -121,11 +144,14 @@ msgstr "गैली में शामिल करने के लिए इ
 msgid "grid.action.pageProofApproved"
 msgstr "इस प्रमाण को गैली में शामिल करने के लिए मंजूरी दे दी गई है ।"
 
+msgid "submission.submit.titleAndSummary"
+msgstr "शीर्षक और सार"
+
 # (pofilter) endpunc: Different punctuation at the end
 msgid "submission.submit.upload.description"
 msgstr ""
-"इस सबमिशन से जुड़ी फाइलें अपलोड करें, जिसमें आर्टिकल, मल्टीमीडिया, डेटा सेट, "
-"आर्टवर्क आदि शामिल हैं ।"
+"इस सबमिशन से जुड़ी फाइलें अपलोड करें, जिसमें आर्टिकल, मल्टीमीडिया, डेटा सेट, आर्टवर्क आदि "
+"शामिल हैं ।"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.pageProofs"
@@ -140,6 +166,9 @@ msgstr "क्या आप वाकई इस लेख को जर्नल
 msgid "workflow.review.externalReview"
 msgstr "समीक्षा"
 
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "समीक्षा के लिए भेजें"
+
 # (pofilter) endpunc: Different punctuation at the end
 msgid "submission.event.issueMetadataUpdated"
 msgstr "सबमिशन्स अंक मेटाडेटा अद्यतन किया गया था ।"
@@ -147,6 +176,12 @@ msgstr "सबमिशन्स अंक मेटाडेटा अद्य
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.upload.fileContents"
 msgstr "लेख घटक"
+
+msgid "submission.complete"
+msgstr "स्वीकृत"
+
+msgid "submission.incomplete"
+msgstr "स्वीकृति का इंतजार"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -160,8 +195,8 @@ msgstr "सबमिशन चेकलिस्ट"
 # (pofilter) endpunc: Different punctuation at the end
 msgid "submission.submit.submissionChecklistDescription"
 msgstr ""
-"आपको पढ़ना और स्वीकार करना होगा कि आपने आगे बढ़ने से पहले नीचे की आवश्यकताओं "
-"को पूरा कर लिया है ।"
+"आपको पढ़ना और स्वीकार करना होगा कि आपने आगे बढ़ने से पहले नीचे की आवश्यकताओं को पूरा कर "
+"लिया है ।"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.submit.privacyStatement"
@@ -194,8 +229,7 @@ msgstr "कृपया अपने लेख का सार दर्ज क
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
-"आपका सार बहुत लंबा है। कृपया इस अनुभाग के लिए इंगित शब्द सीमा के नीचे इसे "
-"छोटा करें।"
+"आपका सार बहुत लंबा है। कृपया इस अनुभाग के लिए इंगित शब्द सीमा के नीचे इसे छोटा करें।"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "submission.submit.form.contributorRoleRequired"
@@ -209,8 +243,14 @@ msgstr "अनुरोधित उद्धरण प्रारूप पु
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.metadataDescription"
 msgstr ""
-"ये विनिर्देश डबलिन कोर मेटाडेटा सेट पर आधारित हैं, जो एक अंतरराष्ट्रीय मानक "
-"है जिसका उपयोग जर्नल सामग्री का वर्णन करने के लिए किया जाता है ।"
+"ये विनिर्देश डबलिन कोर मेटाडेटा सेट पर आधारित हैं, जो एक अंतरराष्ट्रीय मानक है जिसका "
+"उपयोग जर्नल सामग्री का वर्णन करने के लिए किया जाता है ।"
+
+msgid "submission.viewingPreview"
+msgstr ""
+
+msgid "section.any"
+msgstr "कोई खंड"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "submission.sectionOptions"
@@ -223,29 +263,44 @@ msgstr "अनुभाग विकल्प"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} आइटम"
 
+msgid "catalog.category.heading"
+msgstr "सभी आइटम"
+
 # (pofilter) endpunc: Different punctuation at the end
 msgid "galley.editPublishedDisabled"
 msgstr ""
-"इस प्रकाशन की गैलियों को संपादित नहीं किया जा सकता क्योंकि यह पहले ही प्रकाशि"
-"त हो चुकी है।"
+"इस प्रकाशन की गैलियों को संपादित नहीं किया जा सकता क्योंकि यह पहले ही प्रकाशित हो चुकी "
+"है।"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "galley.publicationNotFound"
 msgstr "इस गैली के लिए प्रकाशन नहीं मिल सका।"
+
+msgid "publication.assignToissue"
+msgstr ""
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
 msgid "publication.datePublished.description"
 msgstr ""
-"अंक प्रकाशित होने पर प्रकाशन की तिथि अपने आप निर्धारित हो जाएगी। जब तक लेख "
-"पहले कहीं और प्रकाशित नहीं किया गया था, तब तक आप प्रकाशन तिथि दर्ज न करें और "
-"आपको इसे वापस करने की आवश्यकता है।"
+"अंक प्रकाशित होने पर प्रकाशन की तिथि अपने आप निर्धारित हो जाएगी। जब तक लेख पहले कहीं "
+"और प्रकाशित नहीं किया गया था, तब तक आप प्रकाशन तिथि दर्ज न करें और आपको इसे वापस "
+"करने की आवश्यकता है।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
 msgid "publication.invalidSection"
 msgstr "इस प्रकाशन के लिए अनुभाग नहीं मिला।"
+
+msgid "publication.inactiveSection"
+msgstr ""
 
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
@@ -254,13 +309,10 @@ msgid "publication.invalidIssue"
 msgstr "इस प्रकाशन के लिए अंक नहीं मिल सका।"
 
 # (pofilter) endpunc: Different punctuation at the end
-msgid "publication.issue.success"
-msgstr "प्रकाशन की अंक का विवरण अद्यतन किया गया है ।"
-
-# (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 msgid "publication.publish.confirmation"
-msgstr "सभी प्रकाशन आवश्यकताओं को पूरा किया गया है। क्या आप वाकई इसे प्रकाशित करना चाहते हैं?"
+msgstr ""
+"सभी प्रकाशन आवश्यकताओं को पूरा किया गया है। क्या आप वाकई इसे प्रकाशित करना चाहते हैं?"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
@@ -268,7 +320,9 @@ msgstr "सभी प्रकाशन आवश्यकताओं को �
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) simplecaps: Different capitalization
 msgid "publication.publish.confirmation.futureIssue"
-msgstr "सभी प्रकाशन आवश्यकताओं को पूरा किया गया है। {$issue}प्रकाशित होने पर इसे प्रकाशित किया जाएगा। क्या आप वाकई प्रकाशन के लिए इसे शेड्यूल करना चाहते हैं?"
+msgstr ""
+"सभी प्रकाशन आवश्यकताओं को पूरा किया गया है। {$issue}प्रकाशित होने पर इसे प्रकाशित "
+"किया जाएगा। क्या आप वाकई प्रकाशन के लिए इसे शेड्यूल करना चाहते हैं?"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
@@ -276,7 +330,12 @@ msgstr "सभी प्रकाशन आवश्यकताओं को �
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) simplecaps: Different capitalization
 msgid "publication.publish.confirmation.backIssue"
-msgstr "सभी प्रकाशन आवश्यकताओं को पूरा किया गया है। इसे तुरंत {$issue} में प्रकाशित किया जाएगा। क्या आप वाकई इसे प्रकाशित करना चाहते हैं?"
+msgstr ""
+"सभी प्रकाशन आवश्यकताओं को पूरा किया गया है। इसे तुरंत {$issue} में प्रकाशित किया जाएगा। "
+"क्या आप वाकई इसे प्रकाशित करना चाहते हैं?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "publication.required.issue"
@@ -298,44 +357,96 @@ msgstr "में प्रकाशित <a href=\"{$issueUrl}\">{$issueName}<
 msgid "publication.scheduledIn"
 msgstr "में प्रकाशन के लिए निर्धारित <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "catalog.category.heading"
-msgstr "सभी आइटम"
+msgid "publication.unscheduledIn"
+msgstr ""
 
-msgid "section.any"
-msgstr "कोई खंड"
+msgid "publication.selectIssue"
+msgstr ""
 
-msgid "submission.incomplete"
-msgstr "स्वीकृति का इंतजार"
+msgid "submission.publication"
+msgstr ""
 
-msgid "submission.complete"
-msgstr "स्वीकृत"
+msgid "publication.status.published"
+msgstr ""
 
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "समीक्षा के लिए भेजें"
+msgid "submission.status.scheduled"
+msgstr ""
 
-msgid "submission.submit.titleAndSummary"
-msgstr "शीर्षक और सार"
+msgid "publication.status.unscheduled"
+msgstr ""
 
-msgid "grid.action.availableArticleGalley"
-msgstr "इस गैली को उपलब्ध कराएं"
+msgid "submission.publications"
+msgstr ""
 
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "प्रारूप स्वीकृति"
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
 
-msgid "grid.action.galleyInIssueEntry"
-msgstr "गैली अंक प्रविष्टि में दिखाई देता है"
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
 
-msgid "grid.action.workflow"
-msgstr "सबमिशन वर्कफ़्लो"
+msgid "publication.datePublished"
+msgstr ""
 
-msgid "submission.submit.newSubmissionSingle"
-msgstr "नई सबमिशन"
+msgid "publication.editDisabled"
+msgstr ""
 
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "में एक नया सबमिशन शुरू करें"
+msgid "publication.event.published"
+msgstr ""
 
-msgid "submission.title"
-msgstr "लेख का शीर्षक"
+msgid "publication.event.scheduled"
+msgstr ""
 
-msgid "submission.submit.title"
-msgstr "लेख प्रस्तुत करें"
+msgid "publication.event.unpublished"
+msgstr ""
+
+msgid "publication.event.versionPublished"
+msgstr ""
+
+msgid "publication.event.versionScheduled"
+msgstr ""
+
+msgid "publication.event.versionUnpublished"
+msgstr ""
+
+msgid "publication.invalidSubmission"
+msgstr ""
+
+msgid "publication.publish"
+msgstr ""
+
+msgid "publication.publish.requirements"
+msgstr ""
+
+msgid "publication.required.declined"
+msgstr ""
+
+msgid "publication.required.reviewStage"
+msgstr ""
+
+msgid "submission.license.description"
+msgstr ""
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+
+msgid "publication.unpublish"
+msgstr ""
+
+msgid "publication.unpublish.confirm"
+msgstr ""
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+
+msgid "publication.version.details"
+msgstr ""
+
+msgid "submission.queries.production"
+msgstr ""
+
+# (pofilter) endpunc: Different punctuation at the end
+#~ msgid "publication.issue.success"
+#~ msgstr "प्रकाशन की अंक का विवरण अद्यतन किया गया है ।"

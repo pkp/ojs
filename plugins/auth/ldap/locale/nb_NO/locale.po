@@ -18,7 +18,9 @@ msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Denne programutvidelsen gir mulighet til å autentisere og synkronisere brukerkonti mot en ekstern LDAP-datakilde."
+msgstr ""
+"Denne programutvidelsen gir mulighet til å autentisere og synkronisere "
+"brukerkonti mot en ekstern LDAP-datakilde."
 
 msgid "plugins.auth.ldap.settings"
 msgstr "LDAP-innstillinger"
@@ -27,7 +29,9 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Vertserverens navn"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "F.eks. \"ldap.example.com\" eller \"ldaps://ldap.example.com\" (for bruk av SSL)"
+msgstr ""
+"F.eks. \"ldap.example.com\" eller \"ldaps://ldap.example.com\" (for bruk av "
+"SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Serverport"
@@ -51,19 +55,30 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Managerpassord"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "Manager-DN og -passord er bare påkrevet hvis brukerprofil/passord-synkronisering eller brukeropprettings-opsjonen er slått på. Hvis LDAP bare skal brukes til autentisering kan disse opsjonene utelates."
+msgstr ""
+"Manager-DN og -passord er bare påkrevet hvis brukerprofil/passord-"
+"synkronisering eller brukeropprettings-opsjonen er slått på. Hvis LDAP bare "
+"skal brukes til autentisering kan disse opsjonene utelates."
 
 msgid "plugins.auth.ldap.settings.uid"
 msgstr "Kontonavnattributt"
 
 msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "Den attributtverdien som gir unik identifikasjon av et brukerobjekt, slik som uid eller cn eller sAMAccountName."
+msgstr ""
+"Den attributtverdien som gir unik identifikasjon av et brukerobjekt, slik "
+"som uid eller cn eller sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Passordkryptering"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Hash-format for passord lagret på serveren. SSHA anbefales."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "SASL-innstillinger (valgfritt)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Bruk SASL i stedet for enkel autentisering"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "SASL-mekanisme"
@@ -79,9 +94,3 @@ msgstr "Påkrevet autorisasjons-ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL sikkerhetsegenskaper"
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Bruk SASL i stedet for enkel autentisering"
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "Hash-format for passord lagret på serveren. SSHA anbefales."

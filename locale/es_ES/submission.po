@@ -47,11 +47,20 @@ msgstr "Nuevo envío"
 msgid "grid.action.workflow"
 msgstr "Flujo de trabajo del envío"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "El resumen debe tener {$wordCount} palabras o menos."
+
+msgid "submission.submit.noContext"
+msgstr "No se pudo encontrar este envío."
+
 msgid "submission.issueEntry"
 msgstr "Metadatos"
 
 msgid "submission.submit.whatNext.description"
-msgstr "La revista ha sido notificada acerca de su envío y se le enviará un correo electrónico de confirmación para sus registros. Cuando el editor haya revisado el envío, se contactará con usted."
+msgstr ""
+"La revista ha sido notificada acerca de su envío y se le enviará un correo "
+"electrónico de confirmación para sus registros. Cuando el editor haya "
+"revisado el envío, se contactará con usted."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "La galerada aparece en la entrada del número"
@@ -63,7 +72,8 @@ msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "La galerada del artículo \"{$galleyFormatName}\" ya está disponible."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "La galerada del artículo \"{$galleyFormatName}\" ya no está disponible."
+msgstr ""
+"La galerada del artículo \"{$galleyFormatName}\" ya no está disponible."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Identificadores públicos del envío actualizados."
@@ -85,7 +95,11 @@ msgid "submission.galleyFiles"
 msgstr "Archivos de galerada"
 
 msgid "submission.proofReadingDescription"
-msgstr "El maquetador/a carga aquí los archivos de producción listos que ha preparado para la publicación. Utilice <em>Asignar auditor</em> para designar autores/as u otros para corregir las galeradas con los archivos corregidos cargados para la aceptación previa a la publicación."
+msgstr ""
+"El maquetador/a carga aquí los archivos de producción listos que ha "
+"preparado para la publicación. Utilice <em>Asignar auditor</em> para "
+"designar autores/as u otros para corregir las galeradas con los archivos "
+"corregidos cargados para la aceptación previa a la publicación."
 
 msgid "grid.action.approveProof"
 msgstr "Aceptar esta prueba para incluirla en la galerada."
@@ -97,7 +111,9 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Título y resumen"
 
 msgid "submission.submit.upload.description"
-msgstr "Cargue los archivos asociados con este envío, incluyendo artículo, multimedia, conjuntos de datos, material gráfico, etc."
+msgstr ""
+"Cargue los archivos asociados con este envío, incluyendo artículo, "
+"multimedia, conjuntos de datos, material gráfico, etc."
 
 msgid "submission.pageProofs"
 msgstr "Corrección de pruebas"
@@ -130,7 +146,9 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Lista de verificación del envío"
 
 msgid "submission.submit.submissionChecklistDescription"
-msgstr "Debe leer y verificar que ha completado los siguientes requisitos antes de continuar."
+msgstr ""
+"Debe leer y verificar que ha completado los siguientes requisitos antes de "
+"continuar."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Declaración de privacidad"
@@ -142,13 +160,20 @@ msgid "submission.submit.form.authorRequired"
 msgstr "Se requiere por lo menos un autor."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "El nombre, los apellidos y el correo electrónico de cada autor son obligatorios."
+msgstr ""
+"El nombre, los apellidos y el correo electrónico de cada autor son "
+"obligatorios."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Por favor, introduzca el título de su artículo."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Por favor, introduzca el resumen de su artículo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"El resumen es demasiado largo, debe ajustarlo al límite de palabras de la "
+"sección."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Seleccione el rol del colaborador/a."
@@ -157,55 +182,43 @@ msgid "submission.citationFormat.notFound"
 msgstr "El formato de cita solicitado no puede recuperarse."
 
 msgid "submission.metadataDescription"
-msgstr "Estas especificaciones se basan en el conjunto de metadatos Dublin Core, un estándar internacional utilizado para describir el contenido de una revista."
+msgstr ""
+"Estas especificaciones se basan en el conjunto de metadatos Dublin Core, un "
+"estándar internacional utilizado para describir el contenido de una revista."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Esta es una vista previa y no se ha publicado. <a href=\"{$url}\">Ver envío</"
+"a>"
 
 msgid "section.any"
 msgstr "Cualquier sección"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "El resumen debe tener {$wordCount} palabras o menos."
+msgid "submission.sectionOptions"
+msgstr "Opciones de sección"
 
-msgid "submission.submit.form.wordCountAlert"
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} elementos"
+
+msgid "catalog.category.heading"
+msgstr "Todos los ítems"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"El resumen es demasiado largo, debe ajustarlo al límite de palabras de la "
-"sección."
+"Las galeradas de esta publicación no se pueden editar porque ya ha sido "
+"publicada."
 
-msgid "publication.scheduledIn"
-msgstr "Programado para publicarse en <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "galley.publicationNotFound"
+msgstr "No se pudo encontrar la publicación de esta galerada."
 
-msgid "publication.publishedIn"
-msgstr "Publicado en <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "publication.assignToissue"
+msgstr "Asignar a número"
 
-msgid "publication.required.issue"
-msgstr "La publicación debe asignarse a un número antes de poder ser publicada."
-
-msgid "publication.publish.confirmation.backIssue"
+msgid "publication.assignedToIssue"
 msgstr ""
-"Todos los requisitos de publicación se cumplen. Este artículo se publicará "
-"inmediatamente en {$issue}. ¿Está seguro de que quiere publicarlo?"
 
-msgid "publication.publish.confirmation.futureIssue"
+msgid "publication.changeIssue"
 msgstr ""
-"Todos los requisitos de publicación se cumplen. Este artículo se publicará "
-"cuando se publique {$issue}. ¿Está seguro de que quiere programarlo para "
-"publicación?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"Todos los requisitos de publicación se cumplen. ¿Está seguro de que quiere "
-"publicar?"
-
-msgid "publication.journalEntry.success"
-msgstr "Los detalles de acceso a la revista se han actualizado."
-
-msgid "publication.journalEntry"
-msgstr "Acceso a la revista"
-
-msgid "publication.invalidIssue"
-msgstr "No se pudo encontrar el número de esta publicación."
-
-msgid "publication.invalidSection"
-msgstr "No se pudo encontrar la sección de esta publicación."
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -213,37 +226,30 @@ msgstr ""
 "número. No introduzca una fecha de publicación a menos que el artículo haya "
 "sido publicado anteriormente en otro lugar y necesite cambiarla."
 
-msgid "galley.publicationNotFound"
-msgstr "No se pudo encontrar la publicación de esta galerada."
+msgid "publication.invalidSection"
+msgstr "No se pudo encontrar la sección de esta publicación."
 
-msgid "galley.editPublishedDisabled"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactivo)"
+
+msgid "publication.invalidIssue"
+msgstr "No se pudo encontrar el número de esta publicación."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"Las galeradas de esta publicación no se pueden editar porque ya ha sido "
-"publicada."
+"Todos los requisitos de publicación se cumplen. ¿Está seguro de que quiere "
+"publicar?"
 
-msgid "catalog.category.heading"
-msgstr "Todos los ítems"
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Todos los requisitos de publicación se cumplen. Este artículo se publicará "
+"cuando se publique {$issue}. ¿Está seguro de que quiere programarlo para "
+"publicación?"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} elementos"
-
-msgid "submission.sectionOptions"
-msgstr "Opciones de sección"
-
-msgid "submission.submit.noContext"
-msgstr "No se pudo encontrar este envío."
-
-msgid "publication.issue.success"
-msgstr "Los detalles de publicación del número han sido actualizados."
-
-msgid "publication.selectIssue"
-msgstr "Seleccionar un número para programarlo para publicación"
-
-msgid "publication.assignToissue"
-msgstr "Asignar a número"
-
-msgid "publication.unscheduledIn"
-msgstr "Esto no se ha programado para publicarse en ningún número."
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Todos los requisitos de publicación se cumplen. Este artículo se publicará "
+"inmediatamente en {$issue}. ¿Está seguro de que quiere publicarlo?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -251,13 +257,22 @@ msgstr ""
 "inmediatamente porque la fecha de publicación se estableció para el "
 "{$datePublished}. ¿Seguro que quiere publicarlo?"
 
-msgid "submission.viewingPreview"
+msgid "publication.required.issue"
 msgstr ""
-"Esta es una vista previa y no se ha publicado. <a href=\"{$url}\">Ver "
-"envío</a>"
+"La publicación debe asignarse a un número antes de poder ser publicada."
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inactivo)"
+msgid "publication.publishedIn"
+msgstr "Publicado en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Programado para publicarse en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Esto no se ha programado para publicarse en ningún número."
+
+msgid "publication.selectIssue"
+msgstr "Seleccionar un número para programarlo para publicación"
 
 msgid "submission.publication"
 msgstr "Publicación"
@@ -356,3 +371,11 @@ msgstr "Detalles de publicación de la versión {$version}"
 msgid "submission.queries.production"
 msgstr "Discusiones de producción"
 
+#~ msgid "publication.journalEntry.success"
+#~ msgstr "Los detalles de acceso a la revista se han actualizado."
+
+#~ msgid "publication.journalEntry"
+#~ msgstr "Acceso a la revista"
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Los detalles de publicación del número han sido actualizados."

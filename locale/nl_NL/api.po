@@ -13,8 +13,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "U kunt het tijdschrift van een inzending niet wijzigen."
+
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "U heeft geen rechten om ongepubliceerde nummers te bekijken."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Om een inzending te maken of te bewerken, moet u een verzoek indienen bij "
+"het API-eindpunt van het tijdschrift."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "U kan uitsluitend tijdschriften bekijken die ingeschakeld zijn."
@@ -23,7 +37,9 @@ msgid "api.contexts.403.notAllowed"
 msgstr "U heeft geen rechten om dit tijdschrift te bekijken."
 
 msgid "api.contexts.403.contextsDidNotMatch"
-msgstr "U kan dit tijdschrift alleen bekijken of bewerken via de API van het tijdschrift of de hele site."
+msgstr ""
+"U kan dit tijdschrift alleen bekijken of bewerken via de API van het "
+"tijdschrift of de hele site."
 
 msgid "api.contexts.403.requiresContext"
 msgstr "U kan dit tijdschrift niet bewerken via de API voor de hele site."
@@ -37,27 +53,22 @@ msgstr "U heeft geen rechten om dit tijdschrift te verwijderen."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Het tijdschrift werd niet gevonden."
 
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"U heeft geen toestemming om dit e-mailsjabloon naar een ander tijdschrift te "
+"verplaatsen."
+
 msgid "api._payments.400.invalidPaymentMethod"
 msgstr "De betaalwijze die u selecteerde wordt niet ondersteund."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr ""
+"De door u aangevraagde publicatie maakt geen deel uit van dit tijdschrift."
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr ""
 "De publicatie die u heeft aangevraagd, maakt geen deel uit van deze "
 "inzending."
 
-msgid "api.publications.403.contextsDidNotMatch"
+msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr ""
-"De door u aangevraagde publicatie maakt geen deel uit van dit tijdschrift."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr ""
-"U heeft geen toestemming om dit e-mailsjabloon naar een ander tijdschrift te "
-"verplaatsen."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Om een inzending te maken of te bewerken, moet u een verzoek indienen bij "
-"het API-eindpunt van het tijdschrift."
-
-msgid "api.submissions.403.cantChangeContext"
-msgstr "U kunt het tijdschrift van een inzending niet wijzigen."

@@ -27,7 +27,8 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "服务器主机名"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "E.g.,s\"ldap.example.com\", or \"ldaps://ldap.example.com\" (to use SSL)"
+msgstr ""
+"E.g.,s\"ldap.example.com\", or \"ldaps://ldap.example.com\" (to use SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "服务器端口"
@@ -51,7 +52,9 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "管理员密码"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "管理者DN和密码，如果用户只需要配置/密码同步或用户创建选项被启用。如果将用于LDAP的身份验证，然后仅仅这些选项可以省略。"
+msgstr ""
+"管理者DN和密码，如果用户只需要配置/密码同步或用户创建选项被启用。如果将用于"
+"LDAP的身份验证，然后仅仅这些选项可以省略。"
 
 msgid "plugins.auth.ldap.settings.uid"
 msgstr "帐户名称属性"
@@ -62,8 +65,14 @@ msgstr "该属性的值唯一标识一个对象，如用户的uid或CN或sAMAcco
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "密码加密"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "服务器存储加密密码。推荐使用SSHA形式加密。"
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "SASL的设置（可选）"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "推荐使用SASL认证（代替简单认证）"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "SASL机制"
@@ -79,9 +88,3 @@ msgstr "要求授权ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL的安全性能"
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "推荐使用SASL认证（代替简单认证）"
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "服务器存储加密密码。推荐使用SSHA形式加密。"

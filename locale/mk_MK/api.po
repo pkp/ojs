@@ -11,6 +11,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Објавата која ја побаравте не е дел од ова списание."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"Функцијата за известување преку и-меил не е овозможена за ова списание."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Не може да се смени списанието за поднесување."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Немате дозвола за гледање необјавени броеви."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"За да се направи или корегира поднесок мора да имате барање до крајната "
+"точка од API на списанието."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Може да гледате само списанија за кои ви е  овозможено."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Немате дозвола да го гледате ова списание."
+
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
 "Не може да го гледате или корегирате ова списание доколку не побарате API од "
@@ -41,28 +65,5 @@ msgstr "Публикацијата што ја барате не  е дел од
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Публикацијата што ја барате не е дел од овој поднесок."
 
-msgid "api.contexts.403.notAllowed"
-msgstr "Немате дозвола да го гледате ова списание."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Може да гледате само списанија за кои ви е  овозможено."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"За да се направи или корегира поднесок мора да имате барање до крајната "
-"точка од API на списанието."
-
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Немате дозвола за гледање необјавени броеви."
-
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Не може да се смени списанието за поднесување."
-
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Не можете да поврзете документ од оваа фаза со galley."
-
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "Објавата која ја побаравте не е дел од ова списание."
-
-msgid "api.emails.403.disabled"
-msgstr "Функцијата за известување преку и-меил не е овозможена за ова списание."

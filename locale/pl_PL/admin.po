@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
 "PO-Revision-Date: 2020-11-27 16:28+0000\n"
 "Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
-"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl_PL/>"
-"\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl_PL/"
+">\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,6 +25,22 @@ msgid "admin.settings.redirectInstructions"
 msgstr ""
 "Zamiast strony z listą obsługiwanych czasopism wyświetl stronę tego "
 "czasopisma (przykład: obsługiwane jest tylko jedno czasopismo)."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+"\n"
+"\t\tTwój OJS skonfigurowano do korzystania z wielu sposobów mierzenia jego "
+"użytkowania, co oznacza dostępność wielu statystycznych pomiarów do "
+"korzystania w zależności od potrzeby.\n"
+"\t\tJednak czasami będzie musiał być użyty tylko jeden sposób mierzenia "
+"(przykład: by zaprezentować listę najczęściej używanych artykułów). Wskaż "
+"ten sposób mierzenia. On będzie domyślny.\n"
+"\t"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Czy na pewno wyłączyć ten język? Ta decyzja może mieć wpływ na już utworzone "
+"czasopisma, jeśli z niego korzystają."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr ""
@@ -94,22 +110,44 @@ msgstr "Konfiguracja systemu OJS"
 msgid "admin.systemConfigurationDescription"
 msgstr "Konfiguracyjne ustawienia systemu OJS z pliku <tt>config.inc.php</tt>."
 
-msgid "admin.journals.journalSettings"
-msgstr "Ustawienia czasopisma"
-
-msgid "admin.journals.noneCreated"
-msgstr "Nie utworzono żadnych czasopism."
-
 msgid "admin.journals.createInstructions"
 msgstr ""
 "Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po "
 "utworzeniu czasopisma włączy się kreator ustawień, by wprowadzić wstępne "
 "ustawienia czasopisma."
 
+msgid "admin.journals.journalSettings"
+msgstr "Ustawienia czasopisma"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nie utworzono żadnych czasopism."
+
+msgid "admin.contexts.create"
+msgstr "Utwórz czasopismo"
+
 msgid "admin.journals.urlWillBe"
 msgstr ""
 "Krótkie, pojedyńcze słowo lub akronim identyfikujące czasopismo. Adres "
 "czasopisma będzie miał postać {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Tytuł jest wymagany."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Wymagane jest wskazanie położenia w systemie plików."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Położenie w systemie plików (ścieżka) może składać się z liter, cyfr, "
+"podkreśleń (_) i myślników (-). Musi zaczynać i kończyć się literą lub cyfrą."
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+"Wybrane położenie w systemie plików (ścieżka) jest już używane przez inne "
+"czasopismo."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Umieść to czasopismo na stronie listy obsługiwanych czasopism"
@@ -168,22 +206,6 @@ msgstr ""
 "scalane ({$oldAccountCount}) zostaną nieodwracalnie usunięte a zostanie "
 "tylko scalające konto użytkownika ({$newUsername})."
 
-msgid "admin.settings.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tTwój OJS skonfigurowano do korzystania z wielu sposobów mierzenia jego "
-"użytkowania, co oznacza dostępność wielu statystycznych pomiarów do "
-"korzystania w zależności od potrzeby.\n"
-"\t\tJednak czasami będzie musiał być użyty tylko jeden sposób mierzenia "
-"(przykład: by zaprezentować listę najczęściej używanych artykułów). Wskaż "
-"ten sposób mierzenia. On będzie domyślny.\n"
-"\t"
-
-msgid "admin.languages.confirmDisable"
-msgstr ""
-"Czy na pewno wyłączyć ten język? Ta decyzja może mieć wpływ na już utworzone "
-"czasopisma, jeśli z niego korzystają."
-
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Nie wybrano scalanych kont użytkowników."
 
@@ -196,39 +218,29 @@ msgstr "Powiadomienie o otwartym dostępie"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Przypomnienie o recenzji"
 
-msgid "admin.contexts.confirmDelete"
-msgstr "Czy na pewno usunąć czasopismo wraz z całą jego zawartością?"
-
-msgid "admin.contexts.create"
-msgstr "Utwórz czasopismo"
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "Tytuł jest wymagany."
-
-msgid "admin.contexts.form.pathRequired"
-msgstr "Wymagane jest wskazanie położenia w systemie plików."
-
-msgid "admin.contexts.form.pathAlphaNumeric"
+msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
-"Położenie w systemie plików (ścieżka) może składać się z liter, cyfr, "
-"podkreśleń (_) i myślników (-). Musi zaczynać i kończyć się literą lub cyfrą."
 
-msgid "admin.contexts.form.pathExists"
+msgid "admin.settings.disableBulkEmailRoles.description"
 msgstr ""
-"Wybrane położenie w systemie plików (ścieżka) jest już używane przez inne "
-"czasopismo."
 
-msgid "admin.contexts.form.edit.success"
-msgstr "Pomyślnie  edytowano {$name}."
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
 
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} utworzono pomyślnie."
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr "Czy na pewno usunąć czasopismo wraz z całą jego zawartością?"
 
-msgid "admin.settings.info.success"
-msgstr "Informacje o stronie zostały pomyślnie zaktualizowane."
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "Pomyślnie  edytowano {$name}."
 
-msgid "admin.settings.config.success"
-msgstr "Ustawienia konfiguracji strony zostały pomyślnie zaktualizowane."
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} utworzono pomyślnie."
 
-msgid "admin.settings.appearance.success"
-msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Informacje o stronie zostały pomyślnie zaktualizowane."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Ustawienia konfiguracji strony zostały pomyślnie zaktualizowane."
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."

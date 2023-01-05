@@ -35,10 +35,18 @@ msgid "author.submit.startHereTitle"
 msgstr "Start en ny indsendelse"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">Klik her</a> for at gå til trin 1 af de fem trin, som indsendelsesprocessen består af."
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Klik her</a> for at gå til trin 1 "
+"af de fem trin, som indsendelsesprocessen består af."
 
 msgid "author.submit.step1"
 msgstr "Trin 1. Påbegynd indsendelsen"
+
+msgid "author.submit.step2"
+msgstr "Trin 2. Upload af indsendelsen"
+
+msgid "author.submit.step3"
+msgstr "Trin 3. Indtastning af indsendelsens metadata"
 
 msgid "author.submit.step4"
 msgstr "Trin 4. Overførsel af supplerende filer"
@@ -52,11 +60,20 @@ msgstr "Trin 5. Bekræft indsendelsen"
 msgid "author.submit.start"
 msgstr "Start"
 
+msgid "author.submit.upload"
+msgstr "Upload indsendelse"
+
+msgid "author.submit.metadata"
+msgstr "Indtast metadata"
+
 msgid "author.submit.supplementaryFiles"
 msgstr "Overfør supplerende filer"
 
 msgid "author.submit.confirmation"
 msgstr "Bekræftelse"
+
+msgid "author.submit.nextSteps"
+msgstr "Næste trin"
 
 msgid "submission.submit.cancelSubmission"
 msgstr ""
@@ -73,7 +90,25 @@ msgid "author.submit.qualifyForWaiver"
 msgstr "Overvej at give afkald på artikelmanuskriptgebyret for denne artikel"
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "Angiv, hvorfor der skal gives afkald på gebyrer, i kommentarfeltet nedenfor."
+msgstr ""
+"Angiv, hvorfor der skal gives afkald på gebyrer, i kommentarfeltet nedenfor."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Hvis du ansøger om afkald på gebyr, skal du angive en årsag i det dertil "
+"hørende felt."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "I bedømmelsesrunde {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Under bedømmelse: Rettelser påkrævet"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Under redigering: Manuskriptredigering påkrævet"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Under redigering: Korrekturlæsning påkrævet"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Overfør manuskriptredigeret version"
@@ -97,13 +132,15 @@ msgid "author.submit.journalSectionDescription"
 msgstr "Artikler skal tilknyttes en af tidsskriftsektionerne."
 
 msgid "author.submit.verifyChecklist"
-msgstr "Du skal sikre, at alle elementer på manuskripttjeklisten er opfyldt, inden du fortsætter."
+msgstr ""
+"Du skal sikre, at alle elementer på manuskripttjeklisten er opfyldt, inden "
+"du fortsætter."
 
 msgid "author.submit.copyrightNoticeAgree"
 msgstr ""
 "Forfatterne accepterer vilkårene under 'Oplysninger om copyright', der vil "
-"gælde for dette manuskript, hvis og når det publiceres af dette tidsskrift ("
-"kommentarer til redaktøren kan tilføjes nedenfor)."
+"gælde for dette manuskript, hvis og når det publiceres af dette tidsskrift "
+"(kommentarer til redaktøren kan tilføjes nedenfor)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
@@ -119,6 +156,9 @@ msgstr "Indfør tekst (valgfri)"
 msgid "author.submit.form.sectionRequired"
 msgstr "Vælg en relevant tidsskriftssektion til denne indsendelse."
 
+msgid "author.submit.form.localeRequired"
+msgstr "Vælg et indsendelsessprog."
+
 msgid "submission.submit.privacyStatement"
 msgstr "Tidsskriftets erklæring om beskyttelse af personlige oplysninger"
 
@@ -126,6 +166,9 @@ msgid "author.submit.reorderInstructions"
 msgstr ""
 "Omrokér forfattere, så de vises i den rækkefølge, de vil være angivet i ved "
 "publiceringen."
+
+msgid "author.submit.reorder"
+msgstr "Flyt om på forfatterens navn"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Primær kontaktperson i forbindelse med redaktionel korrespondance."
@@ -137,7 +180,9 @@ msgid "author.submit.deleteAuthor"
 msgstr "Slet forfatter"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "Angiv termer for indeksering af manuskriptet, og adskil termerne med et semikolon (term1; term2; term3)."
+msgstr ""
+"Angiv termer for indeksering af manuskriptet, og adskil termerne med et "
+"semikolon (term1; term2; term3)."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
@@ -145,19 +190,28 @@ msgstr ""
 "eller karakteristika ved forskningseksempel."
 
 msgid "author.submit.languageInstructions"
-msgstr "Engelsk=en; Fransk=fr; Dansk=da. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Flere koder</a>."
+msgstr ""
+"Engelsk=en; Fransk=fr; Dansk=da. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Flere koder</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Mindst én forfatter er påkrævet."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "Fornavnet, efternavnet og e-mail-adressen på hver enkelt forfatter er påkrævet."
+msgstr ""
+"Fornavnet, efternavnet og e-mail-adressen på hver enkelt forfatter er "
+"påkrævet."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Angiv artiklens titel."
 
 msgid "author.submit.form.abstractRequired"
 msgstr "Indfør artiklens resumé."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Du har overskredet grænsen for det maksimale antal ord for resuméer i denne "
+"sektion."
 
 msgid "author.submit.submissionFile"
 msgstr "Indsendelsesfil"
@@ -176,13 +230,22 @@ msgstr ""
 "Er du sikker på, at du vil fortsætte uden at overføre en indsendelsesfil?"
 
 msgid "author.submit.supplementaryFilesInstructions"
-msgstr "Dette valgfrie trin gør det muligt at føje supplerende filer til et manuskript. Filerne, der kan være i et hvilket som helst format, kan omfatte (a) forskningsinstrumenter, (b) datasæt, der opfylder betingelserne for afhandlingens forskningsetikbedømmelse, (c) kilder, der ellers ville være utilgængelige for læsere, (d) tal og tabeller, der ikke kan integreres i selve teksten, eller andet materiale, der bidrager til værket."
+msgstr ""
+"Dette valgfrie trin gør det muligt at føje supplerende filer til et "
+"manuskript. Filerne, der kan være i et hvilket som helst format, kan omfatte "
+"(a) forskningsinstrumenter, (b) datasæt, der opfylder betingelserne for "
+"afhandlingens forskningsetikbedømmelse, (c) kilder, der ellers ville være "
+"utilgængelige for læsere, (d) tal og tabeller, der ikke kan integreres i "
+"selve teksten, eller andet materiale, der bidrager til værket."
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr "Klik på Gem for at overføre filen (hvorefter yderligere filer kan overføres)."
+msgstr ""
+"Klik på Gem for at overføre filen (hvorefter yderligere filer kan overføres)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "Er du sikker på, at du vil fortsætte uden at overføre den supplerende fil, du har valgt?"
+msgstr ""
+"Er du sikker på, at du vil fortsætte uden at overføre den supplerende fil, "
+"du har valgt?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "Der er ikke føjet nogen supplerende filer til dette manuskript."
@@ -206,7 +269,9 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Metadata til supplerende fil"
 
 msgid "author.submit.supplementaryFileDataDescription"
-msgstr "Hvis du vil indeksere dette supplerende materiale, skal du angive følgende metadata for den overførte supplerende fil."
+msgstr ""
+"Hvis du vil indeksere dette supplerende materiale, skal du angive følgende "
+"metadata for den overførte supplerende fil."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Supplerende fil"
@@ -276,11 +341,11 @@ msgstr "Offentligt id for supplerende fil"
 
 msgid "author.submit.confirmationDescription"
 msgstr ""
-"Klik på 'Afslut manuskript' for at fremsende manuskriptet til {$journalTitle}"
-". Manuskriptets primære kontaktperson modtager en bekræftelse via e-mail og "
-"kan få vist manuskriptets forløb igennem den redaktionelle proces ved at "
-"logge på tidsskriftets websted. Tak, fordi du er interesseret i at publicere "
-"din artikel i {$journalTitle}."
+"Klik på 'Afslut manuskript' for at fremsende manuskriptet til "
+"{$journalTitle}. Manuskriptets primære kontaktperson modtager en bekræftelse "
+"via e-mail og kan få vist manuskriptets forløb igennem den redaktionelle "
+"proces ved at logge på tidsskriftets websted. Tak, fordi du er interesseret "
+"i at publicere din artikel i {$journalTitle}."
 
 msgid "author.submit.noFiles"
 msgstr "Der er ikke vedhæftet nogen filer til dette manuskript."
@@ -292,7 +357,9 @@ msgid "author.submit.finishSubmission"
 msgstr "Afslut indsendelse"
 
 msgid "author.submit.submissionComplete"
-msgstr "Indsendelsen er fuldført. Tak, fordi du er interesseret i at publicere din artikel i {$journalTitle}."
+msgstr ""
+"Indsendelsen er fuldført. Tak, fordi du er interesseret i at publicere din "
+"artikel i {$journalTitle}."
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "Overfør forfatterversion"
@@ -304,45 +371,8 @@ msgid "author.article.authorRevisedFile"
 msgstr "Forfatterfil"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "Der kræves en brugerkonto for at kunne fremsende et manuskript til dette tidsskrift. Dette gør det muligt for vores redaktører at registrere dine manuskripter og kontakte dig, når dit manuskripts status ændrer sig, eller hvis du skal angive yderligere oplysninger."
-
-msgid "author.submit.step2"
-msgstr "Trin 2. Upload af indsendelsen"
-
-msgid "author.submit.step3"
-msgstr "Trin 3. Indtastning af indsendelsens metadata"
-
-msgid "author.submit.upload"
-msgstr "Upload indsendelse"
-
-msgid "author.submit.metadata"
-msgstr "Indtast metadata"
-
-msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
-"Hvis du ansøger om afkald på gebyr, skal du angive en årsag i det dertil "
-"hørende felt."
-
-msgid "author.submissions.queuedReviewSubsequent"
-msgstr "I bedømmelsesrunde {$round}"
-
-msgid "author.submissions.queuedReviewRevisions"
-msgstr "Under bedømmelse: Rettelser påkrævet"
-
-msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Under redigering: Manuskriptredigering påkrævet"
-
-msgid "author.submissions.queuedEditingProofread"
-msgstr "Under redigering: Korrekturlæsning påkrævet"
-
-msgid "author.submit.form.localeRequired"
-msgstr "Vælg et indsendelsessprog."
-
-msgid "author.submit.reorder"
-msgstr "Flyt om på forfatterens navn"
-
-msgid "author.submit.form.wordCountAlert"
-msgstr "Du har overskredet grænsen for det maksimale antal ord for resuméer i denne sektion."
-
-msgid "author.submit.nextSteps"
-msgstr "Næste trin"
+"Der kræves en brugerkonto for at kunne fremsende et manuskript til dette "
+"tidsskrift. Dette gør det muligt for vores redaktører at registrere dine "
+"manuskripter og kontakte dig, når dit manuskripts status ændrer sig, eller "
+"hvis du skal angive yderligere oplysninger."

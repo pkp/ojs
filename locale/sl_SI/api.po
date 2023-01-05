@@ -11,9 +11,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 3.9.1\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Zahtevano obvestilo ni na voljo pri tej reviji."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Članku ne morete spremeniti imena revije."
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Nimate pravice do vpogleda v neobjavljene številke revije."
@@ -22,8 +31,28 @@ msgid "api.submissions.403.contextRequired"
 msgstr ""
 "Za kreiranje ali spreminjanje članka morate narediti zahtevo na API revije."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Članku ne morete spremeniti imena revije."
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Dostopate lahko samo do revij, ki imajo omogočen dostop."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Nimate pravic za dostopati do te revije."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Do revije lahko dostopate ali spreminjati njeno vsebino le, če  dostopate "
+"preko API-ja revije ali API-ja spletišča."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Revije ne morete spreminjati preko API-ja celotnega spletišča."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nimate pravic za spreminjanje te revije."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Nimate pravic za izbris te revije."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Zahtevana revija ne obstaja."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "Nimate dovoljenja, da premaknete to e-poštno predlogo v drugo revijo."
@@ -34,34 +63,8 @@ msgstr "Izbran način plačila ni podprt."
 msgid "api.publications.403.contextsDidNotMatch"
 msgstr "Prispevek, za katerega ste zaprosili, ni del te revije."
 
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Dateteko iz te faze ne morete povezati s prelomom."
-
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Zahtevana revija ni del tega prispevka."
 
-msgid "api.contexts.404.contextNotFound"
-msgstr "Zahtevana revija ne obstaja."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Nimate pravic za izbris te revije."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Nimate pravic za spreminjanje te revije."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Revije ne morete spreminjati preko API-ja celotnega spletišča."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Do revije lahko dostopate ali spreminjati njeno vsebino le, če  dostopate "
-"preko API-ja revije ali API-ja spletišča."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "Nimate pravic za dostopati do te revije."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Dostopate lahko samo do revij, ki imajo omogočen dostop."
-
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "Zahtevano obvestilo ni na voljo pri tej reviji."
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Dateteko iz te faze ne morete povezati s prelomom."

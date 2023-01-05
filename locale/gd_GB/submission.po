@@ -69,7 +69,8 @@ msgid "grid.action.issueEntry"
 msgstr "Faic meata-dàta an tagraidh seo"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Chaidh mòr-dhuilleag an artaigil “{$galleyFormatName}” a chur ri làimh."
+msgstr ""
+"Chaidh mòr-dhuilleag an artaigil “{$galleyFormatName}” a chur ri làimh."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr ""
@@ -86,7 +87,8 @@ msgstr ""
 "<p><em>Cha bhi</em> a’ mhòr-dhuilleag seo ri làimh an luchd-leughaidh.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p><em>Bidh</em> a’ mhòr-dhuilleag seo ri làimh an luchd-leughaidh.</p>"
+msgstr ""
+"<p><em>Bidh</em> a’ mhòr-dhuilleag seo ri làimh an luchd-leughaidh.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Cuir a’ mhòr-dhuilleag seo ri làimh"
@@ -196,8 +198,8 @@ msgstr ""
 
 msgid "submission.viewingPreview"
 msgstr ""
-"’S e ro-shealladh a tha seo ’s cha deach fhoillseachadh fhathast. <a href=\""
-"{$url}\">Seall an tagradh</a>"
+"’S e ro-shealladh a tha seo ’s cha deach fhoillseachadh fhathast. <a href="
+"\"{$url}\">Seall an tagradh</a>"
 
 msgid "section.any"
 msgstr "Earrann sam bith"
@@ -219,6 +221,15 @@ msgstr ""
 msgid "galley.publicationNotFound"
 msgstr "Cha b’ urrainn dhuinn am foillseachadh dhen mhòr-dhuilleag seo a lorg."
 
+msgid "publication.assignToissue"
+msgstr "Iomruin do dh’iris"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
+
 msgid "publication.datePublished.description"
 msgstr ""
 "Thèid ceann-là an fhoillseachaidh a shuidheachadh gu fèin-obrachail nuair a "
@@ -229,11 +240,11 @@ msgstr ""
 msgid "publication.invalidSection"
 msgstr "Cha b’ urrainn dhuinn an earrann dhen fhoillseachadh seo a lorg."
 
+msgid "publication.inactiveSection"
+msgstr "{$section} (Neo-ghnìomhach)"
+
 msgid "publication.invalidIssue"
 msgstr "Cha b’ urrainn dhuinn an iris dhen fhoillseachadh seo a lorg."
-
-msgid "publication.issue.success"
-msgstr "Chaidh am mion-fhiosrachadh aig iris dhen fhoillseachadh ùrachadh."
 
 msgid "publication.publish.confirmation"
 msgstr ""
@@ -260,7 +271,8 @@ msgstr ""
 "fhoillseachadh?"
 
 msgid "publication.required.issue"
-msgstr "Feumar am foillseachadh iomruineadh do dh’iris mus gabh fhoillseachadh."
+msgstr ""
+"Feumar am foillseachadh iomruineadh do dh’iris mus gabh fhoillseachadh."
 
 msgid "publication.publishedIn"
 msgstr "Air fhoillseachadh ann an <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -272,11 +284,92 @@ msgstr ""
 msgid "publication.unscheduledIn"
 msgstr "Cha deach seo a chur air an sgeideal airson foillseachadh fhathast."
 
-msgid "publication.assignToissue"
-msgstr "Iomruin do dh’iris"
-
 msgid "publication.selectIssue"
 msgstr "Tagh iris airson a chur air an sgeideal airson foillseachadh"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Neo-ghnìomhach)"
+msgid "submission.publication"
+msgstr ""
+
+msgid "publication.status.published"
+msgstr ""
+
+msgid "submission.status.scheduled"
+msgstr ""
+
+msgid "publication.status.unscheduled"
+msgstr ""
+
+msgid "submission.publications"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+
+msgid "publication.datePublished"
+msgstr ""
+
+msgid "publication.editDisabled"
+msgstr ""
+
+msgid "publication.event.published"
+msgstr ""
+
+msgid "publication.event.scheduled"
+msgstr ""
+
+msgid "publication.event.unpublished"
+msgstr ""
+
+msgid "publication.event.versionPublished"
+msgstr ""
+
+msgid "publication.event.versionScheduled"
+msgstr ""
+
+msgid "publication.event.versionUnpublished"
+msgstr ""
+
+msgid "publication.invalidSubmission"
+msgstr ""
+
+msgid "publication.publish"
+msgstr ""
+
+msgid "publication.publish.requirements"
+msgstr ""
+
+msgid "publication.required.declined"
+msgstr ""
+
+msgid "publication.required.reviewStage"
+msgstr ""
+
+msgid "submission.license.description"
+msgstr ""
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+
+msgid "publication.unpublish"
+msgstr ""
+
+msgid "publication.unpublish.confirm"
+msgstr ""
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+
+msgid "publication.version.details"
+msgstr ""
+
+msgid "submission.queries.production"
+msgstr ""
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Chaidh am mion-fhiosrachadh aig iris dhen fhoillseachadh ùrachadh."

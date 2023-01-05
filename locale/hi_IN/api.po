@@ -13,6 +13,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
@@ -29,7 +35,8 @@ msgstr "आपके पास अप्रकाशित अंको को �
 # (pofilter) numbers: Different numbers
 # (pofilter) simplecaps: Different capitalization
 msgid "api.submissions.403.contextRequired"
-msgstr "सबमिशन बनाने या संपादित करने के लिए आपको जर्नल के एपीआई एंडपॉइंट का अनुरोध करना चाहिए."
+msgstr ""
+"सबमिशन बनाने या संपादित करने के लिए आपको जर्नल के एपीआई एंडपॉइंट का अनुरोध करना चाहिए."
 
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
@@ -46,7 +53,9 @@ msgstr "आपको इस जर्नल को देखने की अन
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
 msgid "api.contexts.403.contextsDidNotMatch"
-msgstr "जब तक आप जर्नल के एपीआई या साइट-वाइड एपीआई के लिए अनुरोध नहीं करते, आप इस जर्नल को देख या संपादित नहीं कर सकते."
+msgstr ""
+"जब तक आप जर्नल के एपीआई या साइट-वाइड एपीआई के लिए अनुरोध नहीं करते, आप इस जर्नल को "
+"देख या संपादित नहीं कर सकते."
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
@@ -88,3 +97,6 @@ msgstr "आपके द्वारा अनुरोधित प्रका
 # (pofilter) numbers: Different numbers
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "आपके द्वारा अनुरोधित प्रकाशन इस सबमिशन का हिस्सा नहीं है."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""

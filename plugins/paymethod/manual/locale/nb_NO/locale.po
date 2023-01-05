@@ -28,12 +28,6 @@ msgstr "Manuell betaling"
 msgid "plugins.paymethod.manual.settings"
 msgstr "Instrukser for manuell betaling"
 
-msgid "plugins.paymethod.manual.settings.instructions"
-msgstr "Instruks"
-
-msgid "plugins.paymethod.manual.settings.manualInstructions"
-msgstr "Instruks for gebyrinnbetaling for brukere som velger Manuell betaling av gebyr"
-
 msgid "plugins.paymethod.manual.sendNotificationOfPayment"
 msgstr "Send beskjed om betaling"
 
@@ -48,3 +42,11 @@ msgstr "Tittel"
 
 msgid "plugins.paymethod.manual.purchase.fee"
 msgstr "Betaling"
+
+#~ msgid "plugins.paymethod.manual.settings.instructions"
+#~ msgstr "Instruks"
+
+#~ msgid "plugins.paymethod.manual.settings.manualInstructions"
+#~ msgstr ""
+#~ "Instruks for gebyrinnbetaling for brukere som velger Manuell betaling av "
+#~ "gebyr"

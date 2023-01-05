@@ -38,8 +38,8 @@ msgstr "订阅"
 msgid "plugins.block.subscription.loginToVerifySubscription"
 msgstr "登录以访问订阅资源。"
 
-msgid "plugins.block.subscription.subscriptionRequired.learnMore"
-msgstr "了解更多"
-
 msgid "plugins.block.subscription.subscriptionRequired"
 msgstr "需要订阅才能访问某些资源。"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "了解更多"

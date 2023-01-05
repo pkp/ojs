@@ -11,25 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.paymethod.manual.purchase.fee"
-msgstr "Надоместок"
-
-msgid "plugins.paymethod.manual.purchase.title"
-msgstr "Наслов"
-
-msgid "plugins.paymethod.manual.notificationSent"
-msgstr "Испратено известување за плаќање"
-
-msgid "plugins.paymethod.manual.paymentNotification"
-msgstr "Известување за плаќање"
-
-msgid "plugins.paymethod.manual.sendNotificationOfPayment"
-msgstr "Испратете известување за плаќање"
-
-msgid "plugins.paymethod.manual.settings"
-msgstr "Упатство за рачно плаќање"
-
-msgid "plugins.paymethod.manual"
+msgid "plugins.paymethod.manual.displayName"
 msgstr "Рачно плаќање на надоместок"
 
 msgid "plugins.paymethod.manual.description"
@@ -37,5 +19,23 @@ msgstr ""
 "Менаџерот рачно ќе снима прием на плаќање на корисникот (надвор од овој "
 "софтвер)."
 
-msgid "plugins.paymethod.manual.displayName"
+msgid "plugins.paymethod.manual"
 msgstr "Рачно плаќање на надоместок"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Упатство за рачно плаќање"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Испратете известување за плаќање"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Известување за плаќање"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Испратено известување за плаќање"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Наслов"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Надоместок"

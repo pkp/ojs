@@ -11,8 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.rfc1807.description"
-msgstr "Cấu trúc siêu dữ liệu phù hợp với định dạng RFC1807."
-
 msgid "plugins.OAIMetadata.rfc1807.displayName"
 msgstr "Định dạng siêu dữ liệu RFC1807"
+
+msgid "plugins.OAIMetadata.rfc1807.description"
+msgstr "Cấu trúc siêu dữ liệu phù hợp với định dạng RFC1807."

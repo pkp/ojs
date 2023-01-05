@@ -14,58 +14,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Não tem permissões para ver edições ainda não publicadas."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "A publicação solicitada não se encontra nesta submissão."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "A publicação solicitada não existe nesta revista."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "O método de pagamento selecionado não é suportado."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr "Não tem permissões para mover este modelo de e-mail para outra revista."
-
-msgid "api.contexts.404.contextNotFound"
-msgstr "A revista que tentou aceder não foi encontrada."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Não tem permissões para eliminar esta revista."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Não tem permissões para editar esta revista."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Não pode editar esta revista através da API do portal."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Não pode visualizar ou editar esta revista enquanto não enviar um pedido "
-"através da API da revista ou da API do portal."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "Não tem permissões para visualizar esta revista."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Só consegue visualizar revistas que estejam ativas."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Para enviar ou editar uma submissão deve solicitar a API endpoint da revista."
-
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Não pode alterar a revista de uma submissão."
-
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr ""
-"Não é possível associar um ficheiro desta fase com um formato de publicação."
-
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "A divulgação solicitada não faz parte desta revista."
 
 msgid "api.emails.403.disabled"
 msgstr ""
 "O recurso de envio de e-mails em massa não foi ativado para esta revista."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Não pode alterar a revista de uma submissão."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Não tem permissões para ver edições ainda não publicadas."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Para enviar ou editar uma submissão deve solicitar a API endpoint da revista."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Só consegue visualizar revistas que estejam ativas."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Não tem permissões para visualizar esta revista."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Não pode visualizar ou editar esta revista enquanto não enviar um pedido "
+"através da API da revista ou da API do portal."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Não pode editar esta revista através da API do portal."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Não tem permissões para editar esta revista."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Não tem permissões para eliminar esta revista."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "A revista que tentou aceder não foi encontrada."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Não tem permissões para mover este modelo de e-mail para outra revista."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "O método de pagamento selecionado não é suportado."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "A publicação solicitada não existe nesta revista."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "A publicação solicitada não se encontra nesta submissão."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+"Não é possível associar um ficheiro desta fase com um formato de publicação."

@@ -28,14 +28,6 @@ msgstr "Pembayaran Biaya Secara Manual"
 msgid "plugins.paymethod.manual.settings"
 msgstr "Intruksi Pembayaran Secara Manual"
 
-msgid "plugins.paymethod.manual.settings.instructions"
-msgstr ""
-" Instruksi \n"
-""
-
-msgid "plugins.paymethod.manual.settings.manualInstructions"
-msgstr " Instruksi Pembayaran untuk metode pembayaran manual pilihan pengguna"
-
 msgid "plugins.paymethod.manual.sendNotificationOfPayment"
 msgstr "Kirim notifikasi pembayaran"
 
@@ -50,3 +42,10 @@ msgstr "Judul"
 
 msgid "plugins.paymethod.manual.purchase.fee"
 msgstr "Biaya"
+
+#~ msgid "plugins.paymethod.manual.settings.instructions"
+#~ msgstr " Instruksi \n"
+
+#~ msgid "plugins.paymethod.manual.settings.manualInstructions"
+#~ msgstr ""
+#~ " Instruksi Pembayaran untuk metode pembayaran manual pilihan pengguna"

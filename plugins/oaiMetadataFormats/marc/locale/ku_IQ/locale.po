@@ -11,8 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marc.description"
-msgstr "ڕێکخستنی زانیاریی ناسێنەر بە جۆرێک کە لەگەڵ MARC بگونجێت."
-
 msgid "plugins.OAIMetadata.marc.displayName"
 msgstr "ڕێکخستنی زانیاریی ناسێنەر MARC"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "ڕێکخستنی زانیاریی ناسێنەر بە جۆرێک کە لەگەڵ MARC بگونجێت."

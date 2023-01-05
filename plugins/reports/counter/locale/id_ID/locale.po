@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
 "PO-Revision-Date: 2020-08-31 02:16+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
-"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
-"reports-counter/id/>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/id/>\n"
 "Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,16 +16,48 @@ msgstr ""
 
 msgid "plugins.reports.counter.description"
 msgstr ""
-"Plugin COUNTER bisa merekam aktivitas jurnal, dengan menggunakan <a href=\""
-"http://www.projectcounter.org\">standard COUNTER</a>. Laporan ini tidak "
+"Plugin COUNTER bisa merekam aktivitas jurnal, dengan menggunakan <a href="
+"\"http://www.projectcounter.org\">standard COUNTER</a>. Laporan ini tidak "
 "memenuhi standard COUNTER jurnal. Agar sesuai dengan COUNTER, pelajrilah "
 "persyaratan pada website Project COUNTER."
 
 msgid "plugins.reports.counter"
 msgstr "Statistik COUNTER"
 
-msgid "plugins.reports.counter.migrate"
-msgstr " Log Migrasi "
+msgid "plugins.reports.counter.release"
+msgstr "Rilis COUNTER"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Laporan Situs Terdahulu"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Parameter laporan tidak valid."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Permintaan laporan tidak valid."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Tudak ditemukan laporan yang dimaksud."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Hasilnya tidak bisa diformat menjadi XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Tautan-tautan ini menghasilkan laporan jadi COUNTER berdasarkan Rilis 3.0 "
+"sebelumnya. Laporan ini mencakup semua jurnal pada situs ini. Gunakanlah "
+"Rilis terbaru bila memungkinkan."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Report JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Versi XML"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"Laporan 1 Jurnal COUNTER (R3): Permintaan Artikel Lengkap berdasarkan Bulan "
+"dan Jurnal"
 
 msgid "plugins.reports.counter.1a.title"
 msgstr ""
@@ -67,8 +99,8 @@ msgstr "YTD PDF"
 msgid "plugins.reports.counter.1a.totalForAllJournals"
 msgstr "Total untuk seluruh jurnal"
 
-msgid "plugins.reports.counter.allCustomers"
-msgstr "Semua Pelanggan"
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "Tanpa nama"
 
 msgid "plugins.reports.counter.legacyStats"
 msgstr ""
@@ -76,46 +108,14 @@ msgstr ""
 "yang tidak COUNTER-ready. Jika ingin membuat laporan COUNTER terbaru "
 "menggunakan jenis metrik OJS COUNTER terkini, gunakan tautan di atas."
 
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "Tanpa nama"
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Semua Pelanggan"
 
-msgid "plugins.reports.counter.1a.description"
-msgstr ""
-"Laporan 1 Jurnal COUNTER (R3): Permintaan Artikel Lengkap berdasarkan Bulan "
-"dan Jurnal"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "Versi XML"
-
-msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTER Report JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Tautan-tautan ini menghasilkan laporan jadi COUNTER berdasarkan Rilis 3.0 "
-"sebelumnya. Laporan ini mencakup semua jurnal pada situs ini. Gunakanlah "
-"Rilis terbaru bila memungkinkan."
-
-msgid "plugins.reports.counter.error.noXML"
-msgstr "Hasilnya tidak bisa diformat menjadi XML."
-
-msgid "plugins.reports.counter.error.noResults"
-msgstr "Tudak ditemukan laporan yang dimaksud."
-
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "Permintaan laporan tidak valid."
-
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "Parameter laporan tidak valid."
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Laporan Situs Terdahulu"
-
-msgid "plugins.reports.counter.release"
-msgstr "Rilis COUNTER"
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Laporan Artikel 1"
 
 msgid "plugins.reports.counter.jr1.title"
 msgstr "Laporan Jurnal 1"
 
-msgid "plugins.reports.counter.ar1.title"
-msgstr "Laporan Artikel 1"
+#~ msgid "plugins.reports.counter.migrate"
+#~ msgstr " Log Migrasi "

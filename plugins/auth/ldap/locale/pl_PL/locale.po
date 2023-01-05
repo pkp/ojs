@@ -31,7 +31,8 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Nazwa (lub adres IP)  serwera"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Np. \"ldap.example.com\" lub \"ldaps://ldap.example.com\" (by użyć SSL)"
+msgstr ""
+"Np. \"ldap.example.com\" lub \"ldaps://ldap.example.com\" (by użyć SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Port serwera"
@@ -44,6 +45,9 @@ msgstr "Bazowa DN"
 
 msgid "plugins.auth.ldap.settings.basedn.description"
 msgstr "Np. \"ou=people,dc=example,dc=com\""
+
+msgid "plugins.auth.ldap.settings.managerdn"
+msgstr "DN zarządcy"
 
 msgid "plugins.auth.ldap.settings.managerdn.description"
 msgstr "Np. \"cn=Manager,dc=example,dc=com\""
@@ -58,40 +62,37 @@ msgstr ""
 "synchronizacji ich kont. W pozostałych przypadkach (potwierdzanie tożsamości "
 "użytkownika, przeszukiwanie) można je pominąć."
 
-msgid "plugins.auth.ldap.settings.managerdn"
-msgstr "DN zarządcy"
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atrybut LDAP użytkownika"
 
 msgid "plugins.auth.ldap.settings.uid.description"
 msgstr ""
 "Wskazuje po czym znaleźć użytkownika (przykład: uid, cn, sAMAccountName)."
 
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Atrybut LDAP użytkownika"
-
-msgid "plugins.auth.ldap.settings.saslprop"
-msgstr "Właściwości bezpieczeństwa SASL"
-
-msgid "plugins.auth.ldap.settings.saslauthzid"
-msgstr "Wymagany ID autoryzacji"
-
-msgid "plugins.auth.ldap.settings.saslrealm"
-msgstr "Dziedzina"
-
-msgid "plugins.auth.ldap.settings.saslmech.description"
-msgstr "Np. \"DIGEST-MD5\""
-
-msgid "plugins.auth.ldap.settings.saslmech"
-msgstr "Mechanizm SASL"
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Zamiast prostego uwierzytelnienia użyj SASL"
-
-msgid "plugins.auth.ldap.settings.saslopt"
-msgstr "Ustawienia SASL (opcjonalnie)"
+msgid "plugins.auth.ldap.settings.pwhash"
+msgstr "Szyfrowanie hasła"
 
 msgid "plugins.auth.ldap.settings.pwhash.description"
 msgstr ""
 "Format szyfrowania haseł przechowywanych w serwerze LDAP (zalecany : SSHA)."
 
-msgid "plugins.auth.ldap.settings.pwhash"
-msgstr "Szyfrowanie hasła"
+msgid "plugins.auth.ldap.settings.saslopt"
+msgstr "Ustawienia SASL (opcjonalnie)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Zamiast prostego uwierzytelnienia użyj SASL"
+
+msgid "plugins.auth.ldap.settings.saslmech"
+msgstr "Mechanizm SASL"
+
+msgid "plugins.auth.ldap.settings.saslmech.description"
+msgstr "Np. \"DIGEST-MD5\""
+
+msgid "plugins.auth.ldap.settings.saslrealm"
+msgstr "Dziedzina"
+
+msgid "plugins.auth.ldap.settings.saslauthzid"
+msgstr "Wymagany ID autoryzacji"
+
+msgid "plugins.auth.ldap.settings.saslprop"
+msgstr "Właściwości bezpieczeństwa SASL"

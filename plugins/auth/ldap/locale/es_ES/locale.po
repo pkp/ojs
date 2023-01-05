@@ -2,20 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
-"Language: \n"
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Este módulo permite autentificación y sincronización de cuentas de usuario con un servidor LDAP externo."
+msgstr ""
+"Este módulo permite autentificación y sincronización de cuentas de usuario "
+"con un servidor LDAP externo."
 
 msgid "plugins.auth.ldap.settings"
 msgstr "Configuración de LDAP"
@@ -24,7 +26,9 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Nombre del servidor"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Por ejemplo, \"ldap.example.com\", o \"ldaps://ldap.example.com\" (para usar SSL)"
+msgstr ""
+"Por ejemplo, \"ldap.example.com\", o \"ldaps://ldap.example.com\" (para usar "
+"SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Puerto del servidor"
@@ -48,13 +52,33 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Contraseña del administrador"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "El gestor DN y la contraseña sólo son necesarios si están activadas las opciones de sincronización usuario/a - contraseña o creación de usuarios/as. Se pueden omitir estas opciones si se va usar LDAP únicamente para autentificación."
+msgstr ""
+"El gestor DN y la contraseña sólo son necesarios si están activadas las "
+"opciones de sincronización usuario/a - contraseña o creación de usuarios/as. "
+"Se pueden omitir estas opciones si se va usar LDAP únicamente para "
+"autentificación."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atributo del nombre de cuenta"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"El atributo cuyo valor único identifica un objeto usuario, como el uid, cn o "
+"sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Encriptación de contraseña"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Formato Hash para las contraseñas almacenadas en el servidor. Se recomienda "
+"SSHA."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "Configuración SASL (opcional)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Use SASL en vez de autentificación simple"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "Mecanismo SASL"
@@ -70,15 +94,3 @@ msgstr "ID de autorización requerida"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Propiedades de seguridad SASL"
-
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Atributo del nombre de cuenta"
-
-msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "El atributo cuyo valor único identifica un objeto usuario, como el uid, cn o sAMAccountName."
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "Formato Hash para las contraseñas almacenadas en el servidor. Se recomienda SSHA."
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Use SASL en vez de autentificación simple"

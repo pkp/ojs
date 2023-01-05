@@ -11,17 +11,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr ""
-"Yksikään artikkeli ei vastannut määritettyä artikkelin tunnistetta \""
-"{$articleId}\"."
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "PubMed XML -vientilisäosa"
 
-msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgid "plugins.importexport.pubmed.description"
 msgstr ""
-"Yksikään numero ei vastannut määritettyä numeron tunnistetta \"{$issueId}\"."
+"Vie artikkelin kuvailutietoja PubMed XML -formaatissa MEDLINE:n "
+"indeksoitavaksi."
 
-msgid "plugins.importexport.pubmed.cliError"
-msgstr "VIRHE:"
+msgid "plugins.importexport.pubmed.export"
+msgstr "Vie tiedot"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Vie numeroita"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Valitse vietävä numero."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Vie artikkeleita"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Valitse vietävät artikkelit."
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
@@ -30,25 +41,14 @@ msgstr ""
 "[articleId1] [articleId2] ...\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] numero [issueId]\n"
 
-msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Valitse vietävät artikkelit."
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "VIRHE:"
 
-msgid "plugins.importexport.pubmed.export.articles"
-msgstr "Vie artikkeleita"
-
-msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Valitse vietävä numero."
-
-msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Vie numeroita"
-
-msgid "plugins.importexport.pubmed.export"
-msgstr "Vie tiedot"
-
-msgid "plugins.importexport.pubmed.description"
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
 msgstr ""
-"Vie artikkelin kuvailutietoja PubMed XML -formaatissa MEDLINE:n "
-"indeksoitavaksi."
+"Yksikään numero ei vastannut määritettyä numeron tunnistetta \"{$issueId}\"."
 
-msgid "plugins.importexport.pubmed.displayName"
-msgstr "PubMed XML -vientilisäosa"
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr ""
+"Yksikään artikkeli ei vastannut määritettyä artikkelin tunnistetta "
+"\"{$articleId}\"."

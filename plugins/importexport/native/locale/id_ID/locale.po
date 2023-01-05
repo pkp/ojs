@@ -11,6 +11,36 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.importexport.native.displayName"
+msgstr "Plugin XML Natif"
+
+msgid "plugins.importexport.native.description"
+msgstr "Impor dan ekspor artikel dan issue dalam format XML Natif OJS."
+
+msgid "plugins.importexport.native.import"
+msgstr "Impor"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Unggah file XML untuk diimpor"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Pilih artikel untuk diekspor"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Ekspor artikel"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Ekspor Issue"
+
+msgid "plugins.importexport.native.results"
+msgstr "Hasil"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Unggahlah file pada \"Impor\" untuk melanjutkan."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Impor berhasil. Berikut daftar item yang berhasil diimpor:"
+
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Usage: {$scriptName} {$pluginName} [command] ...\n"
@@ -37,36 +67,16 @@ msgstr ""
 "{$scriptName} {$pluginName} impor [xmlFileName] [journal_path]\n"
 "\tissue_id [issueId] section_abbrev [abbrev]\n"
 
-msgid "plugins.importexport.native.import.error.publishedDateMissing"
-msgstr ""
-"Artikel \"{$articleTitle}\" terdapat dalam issue, tapi tidak memiliki "
-"tanggal terbit."
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Bagian Tak Diketahui {$param}"
 
-msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
-msgstr "Elemen identifikasi issue untuk artikel \"{$articleTitle}\" hilang."
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Pengguna yang dimaksud,  \"{$userName}\", tidak ada."
 
-msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"Issue yang ada dengan id {$issueId} sama dengan identifikasi issue yang ada "
-"\"{$issueIdentification}\".  Issue ini tidak akan diubah, tapi akan "
-"ditambahkan artikel."
-
-msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
-msgstr ""
-"Tidak ada atau lebih dari satu issue sama dengan identifikasi issue yang "
-"diberikan \"{$issueIdentification}\"."
-
-msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
-msgstr ""
-"Singkatan bagian \"{$sectionAbbrev}\" dalam issue \"{$issueTitle}\" sama "
-"dengan bagian jurnal yang ada, tapi singkatan lagi pada bagian ini tidak "
-"sama dengan singkatan lain dari bagian jurnal yang ada."
-
-msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
-msgstr ""
-"Singkatan bagian \"{$section1Abbrev}\" dan singkatan bagian \""
-"{$section2Abbrev}\" dari issue \"{$issueTitle}\" sama dengan bagian jurnal "
-"lain yang ada."
+"Bagian judul \"{$section1Title}\" dan bagian judul \"{$section2Title}\" "
+"dalam issue \"{$issueTitle}\" sam dengan bagian jurnal yang ada dan berbeda."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMatch"
 msgstr ""
@@ -74,43 +84,33 @@ msgstr ""
 "bagian jurnal yang ada, tapi judul lain pada bagian ini tidak cocok dengan "
 "judul bagian jurnal yang ada."
 
-msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
 msgstr ""
-"Bagian judul \"{$section1Title}\" dan bagian judul \"{$section2Title}\" "
-"dalam issue \"{$issueTitle}\" sam dengan bagian jurnal yang ada dan berbeda."
+"Singkatan bagian \"{$section1Abbrev}\" dan singkatan bagian "
+"\"{$section2Abbrev}\" dari issue \"{$issueTitle}\" sama dengan bagian jurnal "
+"lain yang ada."
 
-msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Pengguna yang dimaksud,  \"{$userName}\", tidak ada."
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"Singkatan bagian \"{$sectionAbbrev}\" dalam issue \"{$issueTitle}\" sama "
+"dengan bagian jurnal yang ada, tapi singkatan lagi pada bagian ini tidak "
+"sama dengan singkatan lain dari bagian jurnal yang ada."
 
-msgid "plugins.importexport.native.error.unknownSection"
-msgstr "Bagian Tak Diketahui {$param}"
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Tidak ada atau lebih dari satu issue sama dengan identifikasi issue yang "
+"diberikan \"{$issueIdentification}\"."
 
-msgid "plugins.importexport.native.importComplete"
-msgstr "Impor berhasil. Berikut daftar item yang berhasil diimpor:"
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"Issue yang ada dengan id {$issueId} sama dengan identifikasi issue yang ada "
+"\"{$issueIdentification}\".  Issue ini tidak akan diubah, tapi akan "
+"ditambahkan artikel."
 
-msgid "plugins.inportexport.native.uploadFile"
-msgstr "Unggahlah file pada \"Impor\" untuk melanjutkan."
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Elemen identifikasi issue untuk artikel \"{$articleTitle}\" hilang."
 
-msgid "plugins.importexport.native.results"
-msgstr "Hasil"
-
-msgid "plugins.importexport.native.exportIssues"
-msgstr "Ekspor Issue"
-
-msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Ekspor artikel"
-
-msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Pilih artikel untuk diekspor"
-
-msgid "plugins.importexport.native.import.instructions"
-msgstr "Unggah file XML untuk diimpor"
-
-msgid "plugins.importexport.native.import"
-msgstr "Impor"
-
-msgid "plugins.importexport.native.description"
-msgstr "Impor dan ekspor artikel dan issue dalam format XML Natif OJS."
-
-msgid "plugins.importexport.native.displayName"
-msgstr "Plugin XML Natif"
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Artikel \"{$articleTitle}\" terdapat dalam issue, tapi tidak memiliki "
+"tanggal terbit."

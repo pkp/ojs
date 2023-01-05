@@ -26,11 +26,17 @@ msgstr "Configurações"
 msgid "plugins.generic.webfeed.settings.issue"
 msgstr "Exibir canais somente nas páginas da edição."
 
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "Exibir links de canais apenas nas páginas de início e das edições."
+
 msgid "plugins.generic.webfeed.settings.all"
 msgstr "Exibir canais em todas as páginas da revista."
 
 msgid "plugins.generic.webfeed.settings.currentIssue"
 msgstr "Exibir itens da edição atual."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Exibe um número fixo dos artigos mais recentes."
 
 msgid "plugins.generic.webfeed.settings.recentArticles"
 msgstr "Número de itens a exibir"
@@ -38,9 +44,6 @@ msgstr "Número de itens a exibir"
 msgid "plugins.generic.webfeed.settings.recentItemsRequired"
 msgstr ""
 "Indique um número inteiro positivo para o número de artigos mais recentes."
-
-msgid "plugins.generic.webfeed.settings.homepage"
-msgstr "Exibir links de canais apenas nas páginas de início e das edições."
 
 msgid "plugins.generic.webfeed.atom.altText"
 msgstr "Logo Atom"
@@ -50,6 +53,3 @@ msgstr "Logo RSS1"
 
 msgid "plugins.generic.webfeed.rss2.altText"
 msgstr "Logo RSS2"
-
-msgid "plugins.generic.webfeed.settings.recent"
-msgstr "Exibe um número fixo dos artigos mais recentes."

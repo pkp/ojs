@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T11:04:36+00:00\n"
 "PO-Revision-Date: 2020-04-03 05:38+0000\n"
 "Last-Translator: Michal Jelínek <jelinek@synetix.cz>\n"
-"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/cs/>"
-"\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/auth-ldap/cs/"
+">\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,9 @@ msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem k externímu LDAP zdroji ověření."
+msgstr ""
+"Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem "
+"k externímu LDAP zdroji ověření."
 
 msgid "plugins.auth.ldap.settings"
 msgstr "nastavení LDAP"
@@ -27,7 +29,9 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "hostname serveru"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Např.: \"ldap.example.com\" nebo \"ldaps://ldap.example.com\" (při použití SSL)"
+msgstr ""
+"Např.: \"ldap.example.com\" nebo \"ldaps://ldap.example.com\" (při použití "
+"SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Port serveru"
@@ -51,19 +55,30 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Heslo správce"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "Správce DN a heslo jsou požadovány pouze pokud jsou povoleny možnosti synchronizace uživatelských profilů/hesel nebo vytváření uživatelů. Pokud bude LDAP použito pouze pro ověřování, je možné tyto možnosti vynechat."
+msgstr ""
+"Správce DN a heslo jsou požadovány pouze pokud jsou povoleny možnosti "
+"synchronizace uživatelských profilů/hesel nebo vytváření uživatelů. Pokud "
+"bude LDAP použito pouze pro ověřování, je možné tyto možnosti vynechat."
 
 msgid "plugins.auth.ldap.settings.uid"
 msgstr "Atribut jména účtu"
 
 msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "Atribut jehož hodnota jedinečně identifikuje uživatelský objekt, jako uid nebo cn nebo sAMAccountName."
+msgstr ""
+"Atribut jehož hodnota jedinečně identifikuje uživatelský objekt, jako uid "
+"nebo cn nebo sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Šifrování hesla"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Formát hash pro hesla uložená na serveru. Doporučuje se SSHA."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "SASL nastavení (volitelné)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Místo jednoduché autentizace použijte SASL"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "SASL mechanizmus"
@@ -79,9 +94,3 @@ msgstr "Požadované autorizační ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Vlastnosti bezpečnosti SASL"
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Místo jednoduché autentizace použijte SASL"
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "Formát hash pro hesla uložená na serveru. Doporučuje se SSHA."

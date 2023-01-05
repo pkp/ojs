@@ -13,59 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Sie haben keine Berechtigung, unveröffentlichte Ausgaben zu sehen."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Die Publikation, die Sie suchen, ist nicht Teil dieser EInreichung."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Die Publikation, die Sie suchen, ist nicht Teil dieser Zeitschrift."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Die von Ihnen gewählte Zahlungsmethode wird nicht unterstützt."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr ""
-"Sie haben keine Berechtigung diese E-Mail-Vorlage zu einer anderen "
-"Zeitschrift zu verschieben."
-
-msgid "api.contexts.404.contextNotFound"
-msgstr "Die Zeitschrift, nach der Sie suchen, wurde nicht gefunden."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Sie haben keine Berechtigung diese Zeitschrift zu löschen."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Sie haben keine Berechtigung diese Zeitschrift zu ändern."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Sie können diese Zeitschrift nicht von der site-wide API aus ändern."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Sie können diese Zeitschrift nicht ansehen oder ändern, außer Sie stellen "
-"eine Anfrage an die API der Zeitschrift oder die site-wide API."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "Sie haben keine Berechtigung diese Zeitschrift anzusehen."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Sie können nur Zeitschriften ansehen die freigeschaltet sind."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Um eine Einreichung zu erstellen oder zu ändern, müssen Sie eine Anfrage an "
-"den API endpoint der Zeitschrift stellen."
-
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Sie können die Zeitschrift einer Einreichung nicht ändern."
-
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr ""
-"Eine Datei aus diesem Dateistadium kann nicht mit einer Fahne verknüpft "
-"werden."
-
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Die angefragte Mitteilung ist nicht Teil dieser Zeitschrift."
 
@@ -73,3 +20,56 @@ msgid "api.emails.403.disabled"
 msgstr ""
 "Die E-Mail-Benachrichtigungsfunktion wurde nicht aktiviert für dieses "
 "Journal."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Sie können die Zeitschrift einer Einreichung nicht ändern."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Sie haben keine Berechtigung, unveröffentlichte Ausgaben zu sehen."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Um eine Einreichung zu erstellen oder zu ändern, müssen Sie eine Anfrage an "
+"den API endpoint der Zeitschrift stellen."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Sie können nur Zeitschriften ansehen die freigeschaltet sind."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Sie haben keine Berechtigung diese Zeitschrift anzusehen."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Sie können diese Zeitschrift nicht ansehen oder ändern, außer Sie stellen "
+"eine Anfrage an die API der Zeitschrift oder die site-wide API."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Sie können diese Zeitschrift nicht von der site-wide API aus ändern."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Sie haben keine Berechtigung diese Zeitschrift zu ändern."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Sie haben keine Berechtigung diese Zeitschrift zu löschen."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Die Zeitschrift, nach der Sie suchen, wurde nicht gefunden."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Sie haben keine Berechtigung diese E-Mail-Vorlage zu einer anderen "
+"Zeitschrift zu verschieben."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Die von Ihnen gewählte Zahlungsmethode wird nicht unterstützt."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Die Publikation, die Sie suchen, ist nicht Teil dieser Zeitschrift."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Die Publikation, die Sie suchen, ist nicht Teil dieser EInreichung."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+"Eine Datei aus diesem Dateistadium kann nicht mit einer Fahne verknüpft "
+"werden."

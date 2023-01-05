@@ -10,11 +10,53 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.submissions.403.contextRequired"
-msgstr "투고를 생성하거나 편집하려면 학술지 API 정보가 필히 있어야 합니다."
+msgid "api.announcements.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "당신은 투고된 학술지를 변경할 수 없습니다."
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "출판되지 않은 권을 볼 수 있는 권한이 없습니다."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "당신은 투고된 학술지를 변경할 수 없습니다."
+msgid "api.submissions.403.contextRequired"
+msgstr "투고를 생성하거나 편집하려면 학술지 API 정보가 필히 있어야 합니다."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr ""
+
+msgid "api.contexts.403.notAllowed"
+msgstr ""
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+
+msgid "api.contexts.403.requiresContext"
+msgstr ""
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr ""
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr ""
+
+msgid "api.contexts.404.contextNotFound"
+msgstr ""
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr ""
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr ""
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr ""
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""

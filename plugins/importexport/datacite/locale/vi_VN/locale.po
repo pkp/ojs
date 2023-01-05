@@ -11,6 +11,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.importexport.datacite.displayName"
+msgstr "Plugin xuất/đăng ký DataCite"
+
+msgid "plugins.importexport.datacite.description"
+msgstr ""
+"Xuất hoặc đăng ký số, bài viết, bản in và siêu dữ liệu tập tin bổ sung ở "
+"định dạng DataCite."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr ""
+"Vui lòng định cấu hình plugin xuất DataCite trước khi sử dụng lần đầu tiên."
+
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
@@ -31,12 +43,16 @@ msgstr ""
 "\t\tcác yêu cầu dịch vụ đăng ký DataCite.\n"
 "\t"
 
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Username (ký hiệu)"
+
 msgid "plugins.importexport.datacite.settings.form.usernameRequired"
 msgstr ""
 "Vui lòng nhập username(ký hiệu) bạn nhận được từ DataCite. Tên người dùng có "
 "thể không chứa dấu hai chấm."
 
-msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
+msgid ""
+"plugins.importexport.datacite.settings.form.automaticRegistration.description"
 msgstr ""
 "OJS sẽ tự động gửi DOI vào DataCite. Xin lưu ý rằng việc này có thể mất một "
 "khoảng thời gian ngắn sau khi xuất bản để xử lý (ví dụ: tùy thuộc vào cấu "
@@ -47,28 +63,22 @@ msgstr ""
 "Sử dụng tiền tố kiểm tra DataCite để đăng ký DOI. Xin đừng quên loại bỏ tùy "
 "chọn này khi xuất bản."
 
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Nhiệm vụ đăng ký tự động DataCite"
 
 msgid "plugins.importexport.datacite.cliUsage"
 msgstr ""
 "Usage: \n"
-"{$scriptName} {$pluginName} xuất [outputFileName] [journal_path] "
-"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} xuất [outputFileName] [journal_path] {issues|"
+"articles|galleys} objectId1 [objectId2] ...\n"
 "{$scriptName} {$pluginName} đăng ký [journal_path] {issues|articles|galleys} "
 "objectId1 [objectId2] ...\n"
-
-msgid "plugins.importexport.datacite.settings.form.username"
-msgstr "Username (ký hiệu)"
-
-msgid "plugins.importexport.datacite.settings.description"
-msgstr ""
-"Vui lòng định cấu hình plugin xuất DataCite trước khi sử dụng lần đầu tiên."
-
-msgid "plugins.importexport.datacite.description"
-msgstr ""
-"Xuất hoặc đăng ký số, bài viết, bản in và siêu dữ liệu tập tin bổ sung ở "
-"định dạng DataCite."
-
-msgid "plugins.importexport.datacite.displayName"
-msgstr "Plugin xuất/đăng ký DataCite"

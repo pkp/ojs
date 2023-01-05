@@ -11,24 +11,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgid "plugins.importexport.native.displayName"
+msgstr "Плагин за нативен XML"
+
+msgid "plugins.importexport.native.description"
 msgstr ""
-"Оделот насловен\"{$section1Title}\" и делот насловен \"{$section2Title}\" во "
-"\"{$issueTitle}\" издание одговара на различни постоечки делови од списанија."
+"Импортирајте и експортирајте трудови и изданија во нативниот XML формат на "
+"OJS."
 
-msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Посочениот корисник, \"{$userName}\", не постои."
+msgid "plugins.importexport.native.import"
+msgstr "Импортирај"
 
-msgid "plugins.importexport.native.error.unknownSection"
-msgstr "Непозната секција {$param}"
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Прикачи XML датотека за импортирање"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Назначи трудови за експортирање"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Експортирај трудови"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Експортирај изданија"
+
+msgid "plugins.importexport.native.results"
+msgstr "Резултати"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr ""
+"Ве молиме да ја прикачите датотеката преку \"Импортиај\" за да продолжите."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Импортирањето е успешно завршено. Следните предмети беа импортирани:"
 
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
 "Начин на користење: {$scriptName} {$pluginName} [command] ...\n"
 "Наредби:\n"
 "\timport [xmlFileName] [journal_path] [user_name] ...\n"
-"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ..."
-"\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] "
+"[articleId2] ...\n"
 "\texport [xmlFileName] [journal_path] article [articleId]\n"
 "\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
 "\texport [xmlFileName] [journal_path] issue [issueId]\n"
@@ -50,67 +72,23 @@ msgstr ""
 "{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
 "\tissue_id [issueId] section_abbrev [abbrev]\n"
 
-msgid "plugins.importexport.native.importComplete"
-msgstr "Импортирањето е успешно завршено. Следните предмети беа импортирани:"
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Непозната секција {$param}"
 
-msgid "plugins.inportexport.native.uploadFile"
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Посочениот корисник, \"{$userName}\", не постои."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"Ве молиме да ја прикачите датотеката преку \"Импортиај\" за да продолжите."
-
-msgid "plugins.importexport.native.results"
-msgstr "Резултати"
-
-msgid "plugins.importexport.native.exportIssues"
-msgstr "Експортирај изданија"
-
-msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Експортирај трудови"
-
-msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Назначи трудови за експортирање"
-
-msgid "plugins.importexport.native.import.instructions"
-msgstr "Прикачи XML датотека за импортирање"
-
-msgid "plugins.importexport.native.import"
-msgstr "Импортирај"
-
-msgid "plugins.importexport.native.description"
-msgstr ""
-"Импортирајте и експортирајте трудови и изданија во нативниот XML формат на "
-"OJS."
-
-msgid "plugins.importexport.native.displayName"
-msgstr "Плагин за нативен XML"
-
-msgid "plugins.importexport.native.import.error.publishedDateMissing"
-msgstr ""
-"Трудот \"{$articleTitle}\" е содржан во изданието, но нема датум на објава."
-
-msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
-msgstr ""
-"Недостасува елементот за идентификација на изданието за трудот \""
-"{$articleTitle}\"."
+"Оделот насловен\"{$section1Title}\" и делот насловен \"{$section2Title}\" во "
+"\"{$issueTitle}\" издание одговара на различни постоечки делови од списанија."
 
 #, fuzzy
-msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
 msgstr ""
-"Веќе постоечко издание со ИД {$issueId} се совпаѓа со дадената "
-"идентификација на издание \"{$issueIdentification}\".  Ова издание нема да "
-"биде променето, но ќе бидат додадени трудови."
-
-msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
-msgstr ""
-"Ниту едно или повеќе од едно издание се совпаѓа со дадената идентификација "
-"на издание \"{$issueIdentification}\"."
-
-#, fuzzy
-msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
-msgstr ""
-"The section abbreviation \"{$sectionAbbrev}\" in the \"{$issueTitle}\" issue "
-"matched an existing journal section, but another abbreviation of this "
-"section doesn't match with another abbreviation of the existing journal "
-"section."
+"The section title \"{$sectionTitle}\" in the \"{$issueTitle}\" issue matched "
+"an existing journal section, but another title of this section doesn't match "
+"with another title of the existing journal section."
 
 #, fuzzy
 msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
@@ -120,8 +98,30 @@ msgstr ""
 "existing journal sections."
 
 #, fuzzy
-msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
 msgstr ""
-"The section title \"{$sectionTitle}\" in the \"{$issueTitle}\" issue matched "
-"an existing journal section, but another title of this section doesn't match "
-"with another title of the existing journal section."
+"The section abbreviation \"{$sectionAbbrev}\" in the \"{$issueTitle}\" issue "
+"matched an existing journal section, but another abbreviation of this "
+"section doesn't match with another abbreviation of the existing journal "
+"section."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Ниту едно или повеќе од едно издание се совпаѓа со дадената идентификација "
+"на издание \"{$issueIdentification}\"."
+
+#, fuzzy
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"Веќе постоечко издание со ИД {$issueId} се совпаѓа со дадената "
+"идентификација на издание \"{$issueIdentification}\".  Ова издание нема да "
+"биде променето, но ќе бидат додадени трудови."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr ""
+"Недостасува елементот за идентификација на изданието за трудот "
+"\"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Трудот \"{$articleTitle}\" е содржан во изданието, но нема датум на објава."

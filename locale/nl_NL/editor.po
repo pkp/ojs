@@ -44,19 +44,27 @@ msgid "editor.me"
 msgstr "Ik"
 
 msgid "editor.publicIdentificationExists"
-msgstr "De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object (nummer, artikel, proef of aanvullend bestand). Kies een unieke identificatie."
+msgstr ""
+"De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander "
+"object (nummer, artikel, proef of aanvullend bestand). Kies een unieke "
+"identificatie."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Geen inzendingen in het archief."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "De veranderingen aan de gearchiveerde inzendingen opslaan? Inzendingen die gemarkeerd zijn voor verwijdering worden definitief uit het systeem verwijderd."
+msgstr ""
+"De veranderingen aan de gearchiveerde inzendingen opslaan? Inzendingen die "
+"gemarkeerd zijn voor verwijdering worden definitief uit het systeem "
+"verwijderd."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Weet u zeker dat u deze beslissing wilt vastleggen?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Deze inzending wordt gearchiveerd nadat de bevestigings-e-mail naar de auteur is verstuurd of de Sla e-mail over functie is gekozen."
+msgstr ""
+"Deze inzending wordt gearchiveerd nadat de bevestigings-e-mail naar de "
+"auteur is verstuurd of de Sla e-mail over functie is gekozen."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
@@ -86,10 +94,15 @@ msgid "editor.usersNotified"
 msgstr "Gebruikers ingelicht"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Stuur dit bericht naar alle gebruikers die geassocieerd zijn met dit tijdschrift ({$count} gebruikers)"
+msgstr ""
+"Stuur dit bericht naar alle gebruikers die geassocieerd zijn met dit "
+"tijdschrift ({$count} gebruikers)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Stuur dit bericht naar alle gebruikers die geassocieerd zijn aan dit tijdschrift en die aangegeven hebben op de hoogte gehouden te willen worden ({$count} gebruikers)"
+msgstr ""
+"Stuur dit bericht naar alle gebruikers die geassocieerd zijn aan dit "
+"tijdschrift en die aangegeven hebben op de hoogte gehouden te willen worden "
+"({$count} gebruikers)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "De inhoudsopgave van dit nummer opnemen:"
@@ -178,19 +191,28 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Verwijder omslagafbeelding?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "De omslagafbeelding die u wou verwijderen komt niet overeen met de omslagafbeelding voor dit nummer. Herlaad de pagina en probeer opnieuw."
+msgstr ""
+"De omslagafbeelding die u wou verwijderen komt niet overeen met de "
+"omslagafbeelding voor dit nummer. Herlaad de pagina en probeer opnieuw."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "De omslagafbeelding die u wou verwijderen kon niet worden gevonden. Ze is mogelijk al verijwderd. Probeer de pagina te herladen."
+msgstr ""
+"De omslagafbeelding die u wou verwijderen kon niet worden gevonden. Ze is "
+"mogelijk al verijwderd. Probeer de pagina te herladen."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ongeldig formaat voor de omslagafbeelding. Geldige formaten zijn .gif, .jpg of .png."
+msgstr ""
+"Ongeldig formaat voor de omslagafbeelding. Geldige formaten zijn .gif, .jpg "
+"of .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Stylesheet"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Ongeldig stylesheet formaat. Verzeker u ervan dat het opgegeven bestand geldige CSS bevat. (Merk op dat styleheets met commentaar aan het begin onbedoeld afgekeurd kunnen worden)"
+msgstr ""
+"Ongeldig stylesheet formaat. Verzeker u ervan dat het opgegeven bestand "
+"geldige CSS bevat. (Merk op dat styleheets met commentaar aan het begin "
+"onbedoeld afgekeurd kunnen worden)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Verwijder stylesheet?"
@@ -220,13 +242,19 @@ msgid "editor.issues.cover"
 msgstr "Omslag"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Alle artikels gaan terug naar de redactie-wachtrij en alle geassocieerde bestanden worden verwijderd. Weet u zeker dat u dit nummer wilt verwijderen?"
+msgstr ""
+"Alle artikels gaan terug naar de redactie-wachtrij en alle geassocieerde "
+"bestanden worden verwijderd. Weet u zeker dat u dit nummer wilt verwijderen?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Dit tijdschrift gebruikt een aangepaste ordening van de nummers. <a href=\"{$url}\" class=\"action\">Terugzetten naar de standaard</a>"
+msgstr ""
+"Dit tijdschrift gebruikt een aangepaste ordening van de nummers. <a href="
+"\"{$url}\" class=\"action\">Terugzetten naar de standaard</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Dit nummer gebruikt een aangepaste ordening van de secties. <a href=\"{$url}\" class=\"action\">Terugzetten naar de standaard.</a>"
+msgstr ""
+"Dit nummer gebruikt een aangepaste ordening van de secties. <a href="
+"\"{$url}\" class=\"action\">Terugzetten naar de standaard.</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Gegevens van het nummer"
@@ -372,8 +400,23 @@ msgstr "Laatste voltooid"
 msgid "editor.submissions.assignedTo"
 msgstr "Toegekend aan"
 
+msgid "issues.submissions.issueIds"
+msgstr ""
+
 msgid "editor.submissions.inSection"
 msgstr "In sectie"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Geplande publicatie weergeven"
+
+msgid "editor.article.publishVersion"
+msgstr "Publiceer versie"
+
+msgid "editor.article.viewMetadata"
+msgstr "Toon metadata van deze versie"
+
+msgid "editor.article.editMetadata"
+msgstr "Bewerk metadata van deze versie"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Inplannen voor publicatie in"
@@ -382,10 +425,14 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Nog toe te wijzen"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Publicatiekosten niet betaald. Vraag de auteur om betaling of scheld die kwijt om het item voor publicatie in te plannen."
+msgstr ""
+"Publicatiekosten niet betaald. Vraag de auteur om betaling of scheld die "
+"kwijt om het item voor publicatie in te plannen."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "De omslagafbeelding die u wou verwijderen kon niet worden gevonden. Ze is mogelijk al verijwderd. Probeer de pagina te herladen."
+msgstr ""
+"De omslagafbeelding die u wou verwijderen kon niet worden gevonden. Ze is "
+"mogelijk al verijwderd. Probeer de pagina te herladen."
 
 msgid "grid.action.removeArticle"
 msgstr "Verwijder artikel uit nummer"
@@ -394,7 +441,9 @@ msgid "editor.article.remove"
 msgstr "Verwijder"
 
 msgid "editor.article.remove.confirm"
-msgstr "Weet u zeker dat u dit artikel uit het nummer wil verwijderen? Het artikel zal beschikbaar blijven voor toewijzing aan een ander nummer."
+msgstr ""
+"Weet u zeker dat u dit artikel uit het nummer wil verwijderen? Het artikel "
+"zal beschikbaar blijven voor toewijzing aan een ander nummer."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Ongeldige toegangsdatum."
@@ -403,31 +452,31 @@ msgid "editor.issues.editIssueGalley"
 msgstr "Bewerk proeven van het nummer"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "De opmaakredacteur bereidt de bestanden voor elke proef voor en plaatst ze onder <span class=\"pkp_help_title\">Proeven</span> voor proeflezing."
+msgstr ""
+"De opmaakredacteur bereidt de bestanden voor elke proef voor en plaatst ze "
+"onder <span class=\"pkp_help_title\">Proeven</span> voor proeflezing."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Selecteer bestanden voor de proef"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "De afgewerkte versies in deze lijst worden door een tekstredacteur herwerkt en opgeladen onder <span class=\"pkp_help_title\">Tekstredactie</span>."
+msgstr ""
+"De afgewerkte versies in deze lijst worden door een tekstredacteur herwerkt "
+"en opgeladen onder <span class=\"pkp_help_title\">Tekstredactie</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Bestanden die al waren opgeladen voor eender welke fase in het redactieproces kunnen worden toegevoegd aan de lijst voor proeflezing door de optie \"Opnemen\" hieronder aan te vinken en op Zoeken te klikken: alle beschikbare bestanden worden dan opgelijst en kunnen worden opgenomen voor proeflezing."
+msgstr ""
+"Bestanden die al waren opgeladen voor eender welke fase in het "
+"redactieproces kunnen worden toegevoegd aan de lijst voor proeflezing door "
+"de optie \"Opnemen\" hieronder aan te vinken en op Zoeken te klikken: alle "
+"beschikbare bestanden worden dan opgelijst en kunnen worden opgenomen voor "
+"proeflezing."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander object van hetzelfde type. Kies een unieke identificatie voor objecten van hetzelfde type binnen uw tijdschrift."
+msgstr ""
+"De publieke identificatie '{$publicIdentifier}' bestaat al voor een ander "
+"object van hetzelfde type. Kies een unieke identificatie voor objecten van "
+"hetzelfde type binnen uw tijdschrift."
 
 msgid "editor.article.coverImage"
 msgstr "Omslagafbeelding"
-
-msgid "editor.article.editMetadata"
-msgstr "Bewerk metadata van deze versie"
-
-msgid "editor.article.viewMetadata"
-msgstr "Toon metadata van deze versie"
-
-msgid "editor.article.publishVersion"
-msgstr "Publiceer versie"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Geplande publicatie weergeven"

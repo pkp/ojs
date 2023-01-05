@@ -45,22 +45,34 @@ msgid "editor.me"
 msgstr "Ich"
 
 msgid "editor.publicIdentificationExists"
-msgstr "Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift."
+msgstr ""
+"Die Kennzeichnung '{$publicIdentifier}' existiert bereits für ein anderes "
+"Objekt (Ausgabe, Artikel, Fahne oder Zusatzdatei). Bitte wählen Sie "
+"eindeutige Kennzeichnungen innerhalb Ihrer Zeitschrift."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Keine Beiträge im Archiv."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Änderungen der archivierten Beiträge speichern? Beiträge, die als zu löschend gekennzeichnet sind, werden dadurch engültig aus dem System gelöscht."
+msgstr ""
+"Änderungen der archivierten Beiträge speichern? Beiträge, die als zu "
+"löschend gekennzeichnet sind, werden dadurch engültig aus dem System "
+"gelöscht."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Sind Sie sicher, dass Sie diese Entscheidung protokollieren wollen?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Dieser Beitrag wird archiviert, nachdem die Benachrichtigungs-E-Mail an die Autorin/den Autor entweder versendet wurde oder nachdem \"E-Mail überspringen\" angeklickt wurde."
+msgstr ""
+"Dieser Beitrag wird archiviert, nachdem die Benachrichtigungs-E-Mail an die "
+"Autorin/den Autor entweder versendet wurde oder nachdem \"E-Mail überspringen"
+"\" angeklickt wurde."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den ‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung zu informieren, und wählen Sie die zu überweisende Version aus."
+msgstr ""
+"Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den "
+"‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung "
+"zu informieren, und wählen Sie die zu überweisende Version aus."
 
 msgid "editor.notifyUsers"
 msgstr "Benutzer/innen benachrichtigen"
@@ -84,10 +96,14 @@ msgid "editor.usersNotified"
 msgstr "Benutzer/innen benachrichtigt"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden"
+msgstr ""
+"Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) "
+"senden"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Mitteilung an alle Benutzer/innen senden, die angegeben haben, dass Sie auf dem Laufenden gehalten werden wollen ({$count} Benutzer/innen)"
+msgstr ""
+"Mitteilung an alle Benutzer/innen senden, die angegeben haben, dass Sie auf "
+"dem Laufenden gehalten werden wollen ({$count} Benutzer/innen)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Das Inhaltsverzeichnis dieser Ausgabe anfügen:"
@@ -136,7 +152,9 @@ msgid "editor.issues.titleRequired"
 msgstr "Die Angabe \"Titel\" ist erforderlich."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Eine Kennzeichnung der Ausgabe ist erforderlich. Bitte wählen Sie zumindest eine der Optionen zur Ausgabenkennzeichnung aus."
+msgstr ""
+"Eine Kennzeichnung der Ausgabe ist erforderlich. Bitte wählen Sie zumindest "
+"eine der Optionen zur Ausgabenkennzeichnung aus."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Ausgabenkennzeichnung"
@@ -175,19 +193,28 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Titelbild entfernen?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "Das Titelbild, das Sie löschen wollten, stimmt nicht mit dem Titelbild dieser Ausgabe überein. Bitte laden Sie die Seite neu und versuchen Sie es erneut."
+msgstr ""
+"Das Titelbild, das Sie löschen wollten, stimmt nicht mit dem Titelbild "
+"dieser Ausgabe überein. Bitte laden Sie die Seite neu und versuchen Sie es "
+"erneut."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden."
+msgstr ""
+"Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. "
+"Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ungültiges Titelseitenformat. Zulässige Formate sind .gif, .jpg oder .png."
+msgstr ""
+"Ungültiges Titelseitenformat. Zulässige Formate sind .gif, .jpg oder .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Formatvorlage"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Format der Formatvorlage ungültig. Vergewissern Sie sich, dass die hochgeladene Datei eine gültige .css-Datei ist. (Beachten Sie, dass Formatvorlagen mit Eingangskommentaren abgelehnt werden können.)"
+msgstr ""
+"Format der Formatvorlage ungültig. Vergewissern Sie sich, dass die "
+"hochgeladene Datei eine gültige .css-Datei ist. (Beachten Sie, dass "
+"Formatvorlagen mit Eingangskommentaren abgelehnt werden können.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Formatvorlage entfernen?"
@@ -196,7 +223,9 @@ msgid "editor.issues.coverPageCaption"
 msgstr "Überschrift auf der Titelseite"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Erstellen Sie für diese Ausgabe eine Titelseite mit den folgenden Bestandteilen:"
+msgstr ""
+"Erstellen Sie für diese Ausgabe eine Titelseite mit den folgenden "
+"Bestandteilen:"
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Anzeigen"
@@ -222,11 +251,15 @@ msgstr ""
 "gehen dadurch zurück in die Liste der zur Veröffentlichung anstehenden "
 "Beiträge und alle Zusatzdateien werden endgültig entfernt."
 
-msgid "editor.issues.resetSectionOrder"
-msgstr "Diese Ausgabe hat eine spezielle Rubrikreihenfolge. <a href=\"{$url}\" class=\"action\">Auf den Standard zurücksetzen</a>"
-
 msgid "editor.issues.resetIssueOrder"
-msgstr "Diese Zeitschrift benutzt eine spezielle Ausgabensortierung. <a href=\"{$url}\" class=\"action\">Standard wiederherstellen</a>"
+msgstr ""
+"Diese Zeitschrift benutzt eine spezielle Ausgabensortierung. <a href="
+"\"{$url}\" class=\"action\">Standard wiederherstellen</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Diese Ausgabe hat eine spezielle Rubrikreihenfolge. <a href=\"{$url}\" class="
+"\"action\">Auf den Standard zurücksetzen</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Daten der Ausgabe"
@@ -259,13 +292,19 @@ msgid "editor.issues.confirmPublish"
 msgstr "Sind Sie sicher, dass Sie die neue Ausgabe veröffentlichen wollen?"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Sind sie sicher, dass Sie diese bereits veröffentlichte Ausgabe zurückziehen wollen?"
+msgstr ""
+"Sind sie sicher, dass Sie diese bereits veröffentlichte Ausgabe zurückziehen "
+"wollen?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Sind Sie sicher, dass Sie diese Ausgabe als aktuelle Ausgabe festlegen möchten?"
+msgstr ""
+"Sind Sie sicher, dass Sie diese Ausgabe als aktuelle Ausgabe festlegen "
+"möchten?"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "Die öffentliche Kennzeichnung für den folgenden Beitrag konnte nicht gespeichert werden:"
+msgstr ""
+"Die öffentliche Kennzeichnung für den folgenden Beitrag konnte nicht "
+"gespeichert werden:"
 
 msgid "editor.issues.noLiveIssues"
 msgstr "Keine aktuelle Ausgabe"
@@ -372,8 +411,23 @@ msgstr "Zuletzt fertiggestellt"
 msgid "editor.submissions.assignedTo"
 msgstr "Zugeteilt an Redakteur/in"
 
+msgid "issues.submissions.issueIds"
+msgstr "Zugeordnet zu Ausgabe"
+
 msgid "editor.submissions.inSection"
 msgstr "In Rubrik"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Zur Veröffentlichung vorgesehene Beiträge anzeigen"
+
+msgid "editor.article.publishVersion"
+msgstr "Version veröffentlichen"
+
+msgid "editor.article.viewMetadata"
+msgstr "Metadaten der Version ansehen"
+
+msgid "editor.article.editMetadata"
+msgstr "Metadaten der Version ändern"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Zur Veröffentlichung vorsehen in"
@@ -382,10 +436,15 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Muss noch zugewiesen werden"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Die Veröffentlichungsgebühr für diesen Artikel wurde noch nicht bezahlt. Sie können den Artikel zur Veröffentlichung einplanen, sobald die Gebühr bezahlt ist."
+msgstr ""
+"Die Veröffentlichungsgebühr für diesen Artikel wurde noch nicht bezahlt. Sie "
+"können den Artikel zur Veröffentlichung einplanen, sobald die Gebühr bezahlt "
+"ist."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden."
+msgstr ""
+"Das Titelbild, das Sie löschen wollten, konnte nicht gefunden werden. "
+"Vielleicht wurde es bereits gelöscht. Versuchen Sie, die Seite neu zu laden."
 
 msgid "grid.action.removeArticle"
 msgstr "Artikel aus der Ausgabe entfernen"
@@ -394,7 +453,9 @@ msgid "editor.article.remove"
 msgstr "Entfernen"
 
 msgid "editor.article.remove.confirm"
-msgstr "Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? Der Artikel kann danach für eine andere Ausgabe eingeplant werden."
+msgstr ""
+"Sind Sie sicher, dass Sie diesen Artikel aus der Ausgabe entfernen möchten? "
+"Der Artikel kann danach für eine andere Ausgabe eingeplant werden."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Zugangsdatum ungültig."
@@ -403,34 +464,32 @@ msgid "editor.issues.editIssueGalley"
 msgstr "Ausgabenfahne bearbeiten"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "Der oder die Layouter/in bereitet diese Dateien für jede Fahne vor und lädt sie dann zu den zugehörigen <span class=\"pkp_help_title\">Korrektur</span> zum Korrekturlesen hoch."
+msgstr ""
+"Der oder die Layouter/in bereitet diese Dateien für jede Fahne vor und lädt "
+"sie dann zu den zugehörigen <span class=\"pkp_help_title\">Korrektur</span> "
+"zum Korrekturlesen hoch."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Fahnendateien auswählen"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Endgültige Entwurfsdateien in dieser Liste werden durch eine/n Lektor/in in lektorierte Versionen umgewandelt und unter <span class=\"pkp_help_title\">Lektorat</span> hochgeladen."
+msgstr ""
+"Endgültige Entwurfsdateien in dieser Liste werden durch eine/n Lektor/in in "
+"lektorierte Versionen umgewandelt und unter <span class=\"pkp_help_title"
+"\">Lektorat</span> hochgeladen."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Alle Dateien, die bisher zu irgendeiner Phase der Einreichung hochgeladen worden sind, können zur Korrekturliste hinzugefügt werden, indem die Auswahlbox unten angeklickt wird und auf Suchen geklickt wird: Alle verfügbaren Dateien werden aufgelistet und können ausgewählt werden."
+msgstr ""
+"Alle Dateien, die bisher zu irgendeiner Phase der Einreichung hochgeladen "
+"worden sind, können zur Korrekturliste hinzugefügt werden, indem die "
+"Auswahlbox unten angeklickt wird und auf Suchen geklickt wird: Alle "
+"verfügbaren Dateien werden aufgelistet und können ausgewählt werden."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "Die öffentliche Kennung '{$publicIdentifier}' wird bereits für ein Objekt des selben Typs verwendet. Bitte wählen Sie innerhalb Ihrer Zeitschrift eindeutige Kennungen für Objekte gleichen Typs."
+msgstr ""
+"Die öffentliche Kennung '{$publicIdentifier}' wird bereits für ein Objekt "
+"des selben Typs verwendet. Bitte wählen Sie innerhalb Ihrer Zeitschrift "
+"eindeutige Kennungen für Objekte gleichen Typs."
 
 msgid "editor.article.coverImage"
 msgstr "Titelbild"
-
-msgid "editor.article.editMetadata"
-msgstr "Metadaten der Version ändern"
-
-msgid "editor.article.viewMetadata"
-msgstr "Metadaten der Version ansehen"
-
-msgid "editor.article.publishVersion"
-msgstr "Version veröffentlichen"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Zur Veröffentlichung vorgesehene Beiträge anzeigen"
-
-msgid "issues.submissions.issueIds"
-msgstr "Zugeordnet zu Ausgabe"

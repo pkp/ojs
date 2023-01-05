@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:49-07:00\n"
 "PO-Revision-Date: 2020-07-03 09:08+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
-"helene.vezina@umontreal.ca>\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -18,57 +18,13 @@ msgstr ""
 msgid "plugins.reports.counter.description"
 msgstr ""
 "Le plugiciel COUNTER permet la consignation de données de consultation de la "
-"revue suivant la <a href=\"http://www.projectcounter.org\">norme COUNTER</a>"
-". Ces rapports ne rendent pas à eux seuls une revue conforme à la norme "
+"revue suivant la <a href=\"http://www.projectcounter.org\">norme COUNTER</"
+"a>. Ces rapports ne rendent pas à eux seuls une revue conforme à la norme "
 "COUNTER. Pour offrir la conformité à COUNTER, veuillez passer en revue les "
 "exigences sur le site Web du projet COUNTER."
 
 msgid "plugins.reports.counter"
 msgstr "Rapports COUNTER"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Rapport de revue 1 (R3) : Demandes de texte intégral d'articles, par mois et "
-"par revue"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Rapport de revue 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr "Nombre de demandes de texte intégral acceptées, par mois et par revue (Année {$year})"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Date d'exécution :"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Éditeur"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Plateforme"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN imprimé"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN en ligne"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "Cumulatif de l'année en cours"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "Cumulatif annuel - HTML"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "Cumulatif annuel - PDF"
-
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Total pour toutes les revues"
-
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Les liens ci-dessous créent des rapports utilisant les données de l'ancien "
-"plugiciel COUNTER. Si vous désirez produire des rapports COUNTER à l'aide du "
-"nouvel indicateur COUNTER d'OJS, veuillez utiliser les liens ci-dessus."
 
 msgid "plugins.reports.counter.release"
 msgstr "Version de COUNTER"
@@ -105,14 +61,60 @@ msgstr ""
 "Rapport COUNTER de revue 1 (R3) : Requête sur des articles en plein texte "
 "par mois et par revue"
 
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Rapport de revue 1 (R3) : Demandes de texte intégral d'articles, par mois et "
+"par revue"
+
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Rapport de revue 1 (R3)"
+
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Nombre de demandes de texte intégral acceptées, par mois et par revue (Année "
+"{$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Date d'exécution :"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Éditeur"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Plateforme"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN imprimé"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN en ligne"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "Cumulatif de l'année en cours"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "Cumulatif annuel - HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "Cumulatif annuel - PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Total pour toutes les revues"
+
 msgid "plugins.reports.counter.1a.anonymous"
 msgstr "anonyme"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Les liens ci-dessous créent des rapports utilisant les données de l'ancien "
+"plugiciel COUNTER. Si vous désirez produire des rapports COUNTER à l'aide du "
+"nouvel indicateur COUNTER d'OJS, veuillez utiliser les liens ci-dessus."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Tous les clients"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "Rapport de revue 1"
-
 msgid "plugins.reports.counter.ar1.title"
 msgstr "Rapport d'article 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Rapport de revue 1"

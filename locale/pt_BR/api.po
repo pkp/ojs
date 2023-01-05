@@ -14,6 +14,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "A notícia que você solicitou não faz parte desta revista."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"O recurso de notificação por e-mail, não foi habilitado para esta revista."
+
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Não é possível alterar a revista de uma submissão."
 
@@ -61,12 +68,5 @@ msgstr "A publicação solicitada não faz parte desta revista."
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "A publicação solicitada não faz parte desta submissão."
 
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "A notícia que você solicitou não faz parte desta revista."
-
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Não é possível associar um arquivo deste estágio com uma composição."
-
-msgid "api.emails.403.disabled"
-msgstr ""
-"O recurso de notificação por e-mail, não foi habilitado para esta revista."

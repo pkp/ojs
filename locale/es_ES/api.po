@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
 "PO-Revision-Date: 2020-11-30 15:32+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/api/es_ES/>"
-"\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/api/es_ES/"
+">\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,98 +14,111 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.400.paramNotSupported"
-msgstr "El parámetro {$param} no está soportado."
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "El aviso que ha solicitado no forma parte de esta revista."
 
-msgid "api.403.unauthorized"
-msgstr "No tiene autorización para acceder al recurso solicitado."
-
-msgid "api.404.resourceNotFound"
-msgstr "El recurso solicitado no fue encontrado."
-
-msgid "api.404.endpointNotFound"
-msgstr "La URL solicitada no fue reconocida."
-
-msgid "api.submissions.403.csrfTokenFailure"
-msgstr "Su solicitud fue rechazada. Esto puede deberse a que su sesión ha exportado. Pruebe recargar la página e intenrtar nuevamente."
-
-msgid "api.submissions.403.requestedOthersUnpublishedSubmissions"
-msgstr "Solo puede ver envíos sin publicar a los que usted ha sido asignado."
-
-msgid "api.submissions.403.deleteSubmissionOutOfContext"
-msgstr "No puede eliminar un envío que no está asignado a este contexto."
-
-msgid "api.submissions.403.unauthorizedDeleteSubmission"
-msgstr "No tiene permisos para eliminar este envío."
-
-msgid "api.submissions.404.resourceNotFound"
-msgstr "El recurso solicitado no fue encontrado."
-
-msgid "api.submissions.400.missingRequired"
-msgstr "Su solicitud no pudo ser completada ya que le falta información requerida."
-
-msgid "api.submissions.400.invalidIssueIdentifiers"
-msgstr "El volumen, número o año requerido no es válido."
-
-msgid "api.stats.400.wrongDateFormat"
-msgstr "Su solicitud no fue válida. La fecha debe tener el formato YYYY-MM-DD."
-
-msgid "api.stats.400.wrongDateRange"
-msgstr "Su solicitud no fue válida. La fecha de inicio no puede ser posterior a la fecha de finalización."
-
-msgid "api.stats.400.wrongTimeSegmentDaily"
-msgstr "Su solicitud no fue válida. El segmento de tiempo \"diario\" sólo puede utilizarse junto a un rango de fechas (fecha de inicio y fecha de finalización) dentro de los últimos 90 días."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "La publicación que ha solicitado no forma parte de este envío."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "La publicación que ha solicitado no forma parte de esta revista."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "El método de pago que ha seleccionado no está soportado."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgid "api.emails.403.disabled"
 msgstr ""
-"No tiene permiso para mover esta plantilla de correo electrónico a otra "
-"revista."
 
-msgid "api.contexts.404.contextNotFound"
-msgstr "No se encontró la revista solicitada."
+msgid "api.submissions.403.cantChangeContext"
+msgstr "No puede cambiar la revista de un envío."
 
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "No tiene permiso para eliminar esta revista."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "No tiene permiso para editar esta revista."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "No puede editar esta revista desde la API de todo el sitio."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"No puede ver o editar esta revista a menos que haga una solicitud al API de "
-"la revista o al API de todo el sitio."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "No tiene permiso para ver esta revista."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Solo puede ver revistas que hayan sido habilitadas."
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "No tiene permiso para ver los números retirados de publicación."
 
 msgid "api.submissions.403.contextRequired"
 msgstr ""
 "Para hacer o editar un envío debe realizar una solicitud al terminal API de "
 "la revista."
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "No tiene permiso para ver los números retirados de publicación."
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Solo puede ver revistas que hayan sido habilitadas."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "No puede cambiar la revista de un envío."
+msgid "api.contexts.403.notAllowed"
+msgstr "No tiene permiso para ver esta revista."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"No puede ver o editar esta revista a menos que haga una solicitud al API de "
+"la revista o al API de todo el sitio."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "No puede editar esta revista desde la API de todo el sitio."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "No tiene permiso para editar esta revista."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "No tiene permiso para eliminar esta revista."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "No se encontró la revista solicitada."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"No tiene permiso para mover esta plantilla de correo electrónico a otra "
+"revista."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "El método de pago que ha seleccionado no está soportado."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "La publicación que ha solicitado no forma parte de esta revista."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La publicación que ha solicitado no forma parte de este envío."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Desde esta fase no puede asociar un archivo con una galerada."
 
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "El aviso que ha solicitado no forma parte de esta revista."
+#~ msgid "api.400.paramNotSupported"
+#~ msgstr "El parámetro {$param} no está soportado."
+
+#~ msgid "api.403.unauthorized"
+#~ msgstr "No tiene autorización para acceder al recurso solicitado."
+
+#~ msgid "api.404.resourceNotFound"
+#~ msgstr "El recurso solicitado no fue encontrado."
+
+#~ msgid "api.404.endpointNotFound"
+#~ msgstr "La URL solicitada no fue reconocida."
+
+#~ msgid "api.submissions.403.csrfTokenFailure"
+#~ msgstr ""
+#~ "Su solicitud fue rechazada. Esto puede deberse a que su sesión ha "
+#~ "exportado. Pruebe recargar la página e intenrtar nuevamente."
+
+#~ msgid "api.submissions.403.requestedOthersUnpublishedSubmissions"
+#~ msgstr ""
+#~ "Solo puede ver envíos sin publicar a los que usted ha sido asignado."
+
+#~ msgid "api.submissions.403.deleteSubmissionOutOfContext"
+#~ msgstr "No puede eliminar un envío que no está asignado a este contexto."
+
+#~ msgid "api.submissions.403.unauthorizedDeleteSubmission"
+#~ msgstr "No tiene permisos para eliminar este envío."
+
+#~ msgid "api.submissions.404.resourceNotFound"
+#~ msgstr "El recurso solicitado no fue encontrado."
+
+#~ msgid "api.submissions.400.missingRequired"
+#~ msgstr ""
+#~ "Su solicitud no pudo ser completada ya que le falta información requerida."
+
+#~ msgid "api.submissions.400.invalidIssueIdentifiers"
+#~ msgstr "El volumen, número o año requerido no es válido."
+
+#~ msgid "api.stats.400.wrongDateFormat"
+#~ msgstr ""
+#~ "Su solicitud no fue válida. La fecha debe tener el formato YYYY-MM-DD."
+
+#~ msgid "api.stats.400.wrongDateRange"
+#~ msgstr ""
+#~ "Su solicitud no fue válida. La fecha de inicio no puede ser posterior a "
+#~ "la fecha de finalización."
+
+#~ msgid "api.stats.400.wrongTimeSegmentDaily"
+#~ msgstr ""
+#~ "Su solicitud no fue válida. El segmento de tiempo \"diario\" sólo puede "
+#~ "utilizarse junto a un rango de fechas (fecha de inicio y fecha de "
+#~ "finalización) dentro de los últimos 90 días."

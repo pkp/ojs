@@ -11,167 +11,86 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "publication.selectIssue"
-msgstr "Velg et nummer som publikasjonen skal publiseres i"
+msgid "submission.submit.title"
+msgstr "Lever inn en artikkel"
 
-msgid "publication.assignToissue"
-msgstr "Legg til nummer"
+msgid "submission.submit.userGroup"
+msgstr "Lever inn i min rolle som ..."
 
-msgid "publication.unscheduledIn"
-msgstr "Denne har ikke blitt planlagt for publisering i et nummer."
+msgid "submission.submit.userGroupDescription"
+msgstr "Velg rolle for å leverer inn denne artikkelen."
 
-msgid "publication.scheduledIn"
-msgstr "Planlagt for publisering i <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "submission.upload.selectComponent"
+msgstr "Velg artikkelkomponent"
 
-msgid "publication.publishedIn"
-msgstr "Publisert i <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "submission.title"
+msgstr "Tittel"
 
-msgid "publication.required.issue"
-msgstr "Publikasjonen må legges til et nummer før den kan publiseres."
-
-msgid "publication.publish.confirmation.datePublishedInPast"
+msgid "submission.title.tip"
 msgstr ""
-"Alle publiseringskrav er oppfylt. Dette blir publisert med en gang fordi "
-"publiseringsdato er satt til {$datePublished}. Er du sikker på at du vil "
-"publisere dette?"
+"Denne typen innlevering er vanligvis «bilde», «tekst» eller andre "
+"multimediatyper, inkludert «programvare» og «interaktiv». Velg den som som "
+"er mest relevant for din innlevering. Du finner eksempler hos:  <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
 
-msgid "publication.publish.confirmation.backIssue"
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Start en ny innlevering i"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Ny innlevering"
+
+msgid "grid.action.workflow"
+msgstr "Arbeidsflyt"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Sammendraget må være {$wordCount} ord eller færre."
+
+msgid "submission.submit.noContext"
+msgstr "Innleveringens tidsskrift ble ikke funnet."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
 msgstr ""
-"Alle publiseringskrav er oppfylt. Dette blir publisert med en gang i {issue}"
-". Er du sikker på at du vil publisere dette?"
+"Tidsskriftet har blitt varslet om innleveringen din. Du har mottatt en e-"
+"post med bekreftelse. Så snart redaktøren har gått gjennom innleveringen, "
+"vil du bli kontaktet."
 
-msgid "publication.publish.confirmation.futureIssue"
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Oppsettet vises i utgavens innholdsfortegnelse"
+
+msgid "grid.action.issueEntry"
+msgstr "Se metadata for denne innleveringen"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Artikkeloppsettet «{$galleyFormatName}» er gjort tilgjengelig."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Artikkeloppsettet «{$galleyFormatName}» er utilgjenglig."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Den offentlige identifikatoren til innleveringen er oppdatert."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Godkjenn format"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr ""
-"Alle publiseringskrav er oppfylt. Dette blir publisert når {issue} blir "
-"publisert. Er du sikker på at du vil publisere dette når nummeret publiseres?"
+"<p>Dette oppsettet vil <em>ikke lenger være tilgjengelig</em> for leserne.</"
+"p>"
 
-msgid "publication.publish.confirmation"
+msgid "grid.issueEntry.availableGalley.message"
 msgstr ""
-"Alle publiseringskrav er oppfylt. Er du sikker på at du vil publisere dette?"
+"<p>Dette oppsettet vil <em>bli gjort tilgjengelig</em> for leserne.</p>"
 
-msgid "publication.issue.success"
-msgstr "Publikasjonens nummeropplysninger har blitt oppdatert."
+msgid "grid.action.availableArticleGalley"
+msgstr "Gjør oppsettet tilgjengelig"
 
-msgid "publication.invalidIssue"
-msgstr "Nummeret til denne publikasjonen ble ikke funnet."
-
-msgid "publication.invalidSection"
-msgstr "Seksjonen for denne publikasjonen ble ikke funnet."
-
-msgid "publication.datePublished.description"
-msgstr ""
-"Publikasjonsdatoen blir satt automatisk når nummeret blir publisert. Ikke "
-"angi publikasjonsdato med mindre artikkelen har vært publisert tidligere et "
-"annet sted og du må oppgi første publiserte dato for artikkelen."
-
-msgid "galley.publicationNotFound"
-msgstr "Publikasjonen til dette oppsettet ble ikke funnet."
-
-msgid "galley.editPublishedDisabled"
-msgstr ""
-"Oppsettene til denne publikasjonen kan ikke redigeres fordi den allerede er "
-"publisert."
-
-msgid "catalog.category.heading"
-msgstr "Alle objekter"
-
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} titler"
-
-msgid "submission.sectionOptions"
-msgstr "Seksjonsinnstillinger"
-
-msgid "section.any"
-msgstr "Alle seksjoner"
-
-msgid "submission.viewingPreview"
-msgstr ""
-"Dette er en forhåndsvisning og har ikke blitt publisert enda. <a href=\""
-"{$url}\">Se innleveringen</a>"
-
-msgid "submission.metadataDescription"
-msgstr ""
-"Disse spesifikasjonene er basert på metadatasettet Dublin Core, en "
-"internasjonal standard som bl.a. brukes til å beskrive tidsskriftinnhold."
-
-msgid "submission.citationFormat.notFound"
-msgstr "Det forespurte referanseformatet kunne ikke hentes."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Velg bidragsyterens rolle."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Sammendraget ditt er for langt. Gjør det kortere i tråd med ordgrensen for "
-"denne seksjonen."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Skriv inn sammendraget."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Skriv inn tittelen på artikkelen."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr ""
-"Skriv inn fornavn, etternavn og e-postadressen til hver enkelt forfatter."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Skriv inn minst en forfatter."
-
-msgid "submission.submit.contributorRole"
-msgstr "Bidragsyterens rolle"
-
-msgid "submission.submit.privacyStatement"
-msgstr "Erklæring om personvern"
-
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Du må lese gjennom og bekrefte at du har gjort alt på listen før du "
-"fortsetter."
-
-msgid "submission.submit.submissionChecklist"
-msgstr "Sjekkliste"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Velg et språk."
-
-msgid "submission.incomplete"
-msgstr "Avventer godkjenning"
-
-msgid "submission.complete"
-msgstr "Utført"
-
-msgid "submission.upload.fileContents"
-msgstr "Artikkelkomponent"
-
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Metadata for innleveringen ble oppdatert."
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Send til fagfellevurdering"
-
-msgid "workflow.review.externalReview"
-msgstr "Fagfellevurdering"
-
-msgid "submission.confirmSubmit"
-msgstr "Er du sikker på at du vil levere inn denne artikkelen til tidsskriftet?"
-
-msgid "submission.pageProofs"
-msgstr "Korrekturlesing"
-
-msgid "submission.submit.upload.description"
-msgstr ""
-"Last opp filer knyttet til denne innleveringen, inkludert artikkelen, "
-"metadata, datasett, illustrasjoner osv."
-
-msgid "submission.submit.titleAndSummary"
-msgstr "Tittel og sammendrag"
-
-msgid "grid.action.pageProofApproved"
-msgstr "Denne korrekturen har blitt godkjent for inkludering i oppsettet."
-
-msgid "grid.action.approveProof"
-msgstr "Godkjenn denne korrekturen for inkludering i oppsettet."
+msgid "submission.galleyFiles"
+msgstr "Oppsettfiler"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -180,85 +99,176 @@ msgstr ""
 "forfattere og andre korrekturlese oppsettet. Korrigerte filer lastes opp for "
 "godkjenning før publisering."
 
-msgid "submission.galleyFiles"
-msgstr "Oppsettfiler"
+msgid "grid.action.approveProof"
+msgstr "Godkjenn denne korrekturen for inkludering i oppsettet."
 
-msgid "grid.action.availableArticleGalley"
-msgstr "Gjør oppsettet tilgjengelig"
+msgid "grid.action.pageProofApproved"
+msgstr "Denne korrekturen har blitt godkjent for inkludering i oppsettet."
 
-msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Dette oppsettet vil <em>bli gjort tilgjengelig</em> for leserne.</p>"
+msgid "submission.submit.titleAndSummary"
+msgstr "Tittel og sammendrag"
 
-msgid "grid.issueEntry.availableGalley.removeMessage"
+msgid "submission.submit.upload.description"
 msgstr ""
-"<p>Dette oppsettet vil <em>ikke lenger være tilgjengelig</em> for "
-"leserne.</p>"
+"Last opp filer knyttet til denne innleveringen, inkludert artikkelen, "
+"metadata, datasett, illustrasjoner osv."
 
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Godkjenn format"
+msgid "submission.pageProofs"
+msgstr "Korrekturlesing"
 
-msgid "submission.event.publicIdentifiers"
-msgstr "Den offentlige identifikatoren til innleveringen er oppdatert."
-
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Artikkeloppsettet «{$galleyFormatName}» er utilgjenglig."
-
-msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Artikkeloppsettet «{$galleyFormatName}» er gjort tilgjengelig."
-
-msgid "grid.action.issueEntry"
-msgstr "Se metadata for denne innleveringen"
-
-msgid "grid.action.galleyInIssueEntry"
-msgstr "Oppsettet vises i utgavens innholdsfortegnelse"
-
-msgid "submission.submit.whatNext.description"
+msgid "submission.confirmSubmit"
 msgstr ""
-"Tidsskriftet har blitt varslet om innleveringen din. Du har mottatt en e-"
-"post med bekreftelse. Så snart redaktøren har gått gjennom innleveringen, "
-"vil du bli kontaktet."
+"Er du sikker på at du vil levere inn denne artikkelen til tidsskriftet?"
 
-msgid "submission.issueEntry"
-msgstr "Metadata"
+msgid "workflow.review.externalReview"
+msgstr "Fagfellevurdering"
 
-msgid "submission.submit.noContext"
-msgstr "Innleveringens tidsskrift ble ikke funnet."
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Send til fagfellevurdering"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Sammendraget må være {$wordCount} ord eller færre."
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadata for innleveringen ble oppdatert."
 
-msgid "grid.action.workflow"
-msgstr "Arbeidsflyt"
+msgid "submission.upload.fileContents"
+msgstr "Artikkelkomponent"
 
-msgid "submission.submit.newSubmissionSingle"
-msgstr "Ny innlevering"
+msgid "submission.complete"
+msgstr "Utført"
 
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Start en ny innlevering i"
+msgid "submission.incomplete"
+msgstr "Avventer godkjenning"
 
-msgid "submission.title.tip"
+msgid "submission.submit.form.localeRequired"
+msgstr "Velg et språk."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Sjekkliste"
+
+msgid "submission.submit.submissionChecklistDescription"
 msgstr ""
-"Denne typen innlevering er vanligvis «bilde», «tekst» eller andre "
-"multimediatyper, inkludert «programvare» og «interaktiv». Velg den som som "
-"er mest relevant for din innlevering. Du finner eksempler hos:  <a target=\""
-"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type</a>"
+"Du må lese gjennom og bekrefte at du har gjort alt på listen før du "
+"fortsetter."
 
-msgid "submission.title"
-msgstr "Tittel"
+msgid "submission.submit.privacyStatement"
+msgstr "Erklæring om personvern"
 
-msgid "submission.upload.selectComponent"
-msgstr "Velg artikkelkomponent"
+msgid "submission.submit.contributorRole"
+msgstr "Bidragsyterens rolle"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Velg rolle for å leverer inn denne artikkelen."
+msgid "submission.submit.form.authorRequired"
+msgstr "Skriv inn minst en forfatter."
 
-msgid "submission.submit.userGroup"
-msgstr "Lever inn i min rolle som ..."
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+"Skriv inn fornavn, etternavn og e-postadressen til hver enkelt forfatter."
 
-msgid "submission.submit.title"
-msgstr "Lever inn en artikkel"
+msgid "submission.submit.form.titleRequired"
+msgstr "Skriv inn tittelen på artikkelen."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Skriv inn sammendraget."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Sammendraget ditt er for langt. Gjør det kortere i tråd med ordgrensen for "
+"denne seksjonen."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Velg bidragsyterens rolle."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Det forespurte referanseformatet kunne ikke hentes."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Disse spesifikasjonene er basert på metadatasettet Dublin Core, en "
+"internasjonal standard som bl.a. brukes til å beskrive tidsskriftinnhold."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Dette er en forhåndsvisning og har ikke blitt publisert enda. <a href="
+"\"{$url}\">Se innleveringen</a>"
+
+msgid "section.any"
+msgstr "Alle seksjoner"
+
+msgid "submission.sectionOptions"
+msgstr "Seksjonsinnstillinger"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} titler"
+
+msgid "catalog.category.heading"
+msgstr "Alle objekter"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Oppsettene til denne publikasjonen kan ikke redigeres fordi den allerede er "
+"publisert."
+
+msgid "galley.publicationNotFound"
+msgstr "Publikasjonen til dette oppsettet ble ikke funnet."
+
+msgid "publication.assignToissue"
+msgstr "Legg til nummer"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Dette er tildelt <a href=\"{$issueUrl}\">{$issueName}</a>, men det er ikke "
+"planlagt publisert."
+
+msgid "publication.changeIssue"
+msgstr "Endre nummer"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Publikasjonsdatoen blir satt automatisk når nummeret blir publisert. Ikke "
+"angi publikasjonsdato med mindre artikkelen har vært publisert tidligere et "
+"annet sted og du må oppgi første publiserte dato for artikkelen."
+
+msgid "publication.invalidSection"
+msgstr "Seksjonen for denne publikasjonen ble ikke funnet."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inaktiv)"
+
+msgid "publication.invalidIssue"
+msgstr "Nummeret til denne publikasjonen ble ikke funnet."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Alle publiseringskrav er oppfylt. Er du sikker på at du vil publisere dette?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Alle publiseringskrav er oppfylt. Dette blir publisert når {issue} blir "
+"publisert. Er du sikker på at du vil publisere dette når nummeret publiseres?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Alle publiseringskrav er oppfylt. Dette blir publisert med en gang i "
+"{issue}. Er du sikker på at du vil publisere dette?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Alle publiseringskrav er oppfylt. Dette blir publisert med en gang fordi "
+"publiseringsdato er satt til {$datePublished}. Er du sikker på at du vil "
+"publisere dette?"
+
+msgid "publication.required.issue"
+msgstr "Publikasjonen må legges til et nummer før den kan publiseres."
+
+msgid "publication.publishedIn"
+msgstr "Publisert i <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Planlagt for publisering i <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Denne har ikke blitt planlagt for publisering i et nummer."
+
+msgid "publication.selectIssue"
+msgstr "Velg et nummer som publikasjonen skal publiseres i"
 
 msgid "submission.publication"
 msgstr "Publikasjon"
@@ -353,13 +363,5 @@ msgstr "Publikasjonsopplysninger i forbindelse med versjon {$version}"
 msgid "submission.queries.production"
 msgstr "Diskusjon av produksjon"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inaktiv)"
-
-msgid "publication.assignedToIssue"
-msgstr ""
-"Dette er tildelt <a href=\"{$issueUrl}\">{$issueName}</a>, men det er ikke "
-"planlagt publisert."
-
-msgid "publication.changeIssue"
-msgstr "Endre nummer"
+#~ msgid "publication.issue.success"
+#~ msgstr "Publikasjonens nummeropplysninger har blitt oppdatert."

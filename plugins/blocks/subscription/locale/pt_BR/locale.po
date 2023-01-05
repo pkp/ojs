@@ -18,7 +18,8 @@ msgid "plugins.block.subscription.displayName"
 msgstr "Dados do assinante"
 
 msgid "plugins.block.subscription.description"
-msgstr "Este plugin oferece informações sobre a assinatura nas barras laterais."
+msgstr ""
+"Este plugin oferece informações sobre a assinatura nas barras laterais."
 
 msgid "plugins.block.subscription.blockTitle"
 msgstr "Assinatura"
@@ -38,8 +39,8 @@ msgstr "Assinaturas"
 msgid "plugins.block.subscription.loginToVerifySubscription"
 msgstr "Faça login para acessar recursos somente para assinantes."
 
-msgid "plugins.block.subscription.subscriptionRequired.learnMore"
-msgstr "Saiba Mais"
-
 msgid "plugins.block.subscription.subscriptionRequired"
 msgstr "É necessária uma assinatura para acessar alguns recursos."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Saiba Mais"

@@ -45,22 +45,33 @@ msgid "editor.me"
 msgstr "Ben"
 
 msgid "editor.publicIdentificationExists"
-msgstr "Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri seçiniz."
+msgstr ""
+"Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' "
+"adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri "
+"seçiniz."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Arşivde kayıtlı gönderi yok."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Arşivlenmiş gönderilerdeki değişiklikleri kaydet. Silinmek üzere işaretli kayıtlı yazılar sistemden tamamen silinecektir."
+msgstr ""
+"Arşivlenmiş gönderilerdeki değişiklikleri kaydet. Silinmek üzere işaretli "
+"kayıtlı yazılar sistemden tamamen silinecektir."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Bu kararı kaydetmek istediğinizden emin misiniz?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. Arşivleme için \"Gönder\" veya \"E-posta Göndermeden\" seçeneklerinin hangisinin kullanıldığı fark etmez."
+msgstr ""
+"Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. "
+"Arşivleme için \"Gönder\" veya \"E-posta Göndermeden\" seçeneklerinin "
+"hangisinin kullanıldığı fark etmez."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek Dosya Gönder seçeneğini tıklayınız."
+msgstr ""
+"Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı "
+"Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek "
+"Dosya Gönder seçeneğini tıklayınız."
 
 msgid "editor.notifyUsers"
 msgstr "Kullanıcıları Bilgilendir"
@@ -84,10 +95,13 @@ msgid "editor.usersNotified"
 msgstr "Kullanıcılar bilgilendirildi"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Bu mesajı dergi ile bağlantılı tüm kullanıcılara gönder ({$count} users)"
+msgstr ""
+"Bu mesajı dergi ile bağlantılı tüm kullanıcılara gönder ({$count} users)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Bu mesajı dergi ile bağlantılı ve değişikliklerden haberdar olmak isteyen tüm kullanıcılara gönder ({$count} üye)"
+msgstr ""
+"Bu mesajı dergi ile bağlantılı ve değişikliklerden haberdar olmak isteyen "
+"tüm kullanıcılara gönder ({$count} üye)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Bu sayının içindekiler listesini ekle:"
@@ -135,7 +149,9 @@ msgid "editor.issues.titleRequired"
 msgstr "Bu sayı için bir başlık gerekli."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Sayı belirteci gereklidir. Lütfen sayı belirteçlerinden en az bir tanesini seçiniz."
+msgstr ""
+"Sayı belirteci gereklidir. Lütfen sayı belirteçlerinden en az bir tanesini "
+"seçiniz."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Sayı belirteci"
@@ -174,19 +190,28 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Kapak sayfası görselini kaldır?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "Silmek istediğiniz kapak resmi ile eşleşme sağlanamadı. Lütfen sayfayı yenileyin ve tekrar deneyin."
+msgstr ""
+"Silmek istediğiniz kapak resmi ile eşleşme sağlanamadı. Lütfen sayfayı "
+"yenileyin ve tekrar deneyin."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Silmek istediğiniz kapak resmi bulunamadı. Silinmiş olabilir. Sayfayı yenilemeyi deneyin."
+msgstr ""
+"Silmek istediğiniz kapak resmi bulunamadı. Silinmiş olabilir. Sayfayı "
+"yenilemeyi deneyin."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Geçersiz kapak sayfası biçimi. Kabul edilebilir biçimler: .gif, .jpg veya .png."
+msgstr ""
+"Geçersiz kapak sayfası biçimi. Kabul edilebilir biçimler: .gif, .jpg veya ."
+"png."
 
 msgid "editor.issues.styleFile"
 msgstr "Sayfa Sitili"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Uygunsuz sayfa sitil dosyası. Gönderdiğiniz dosyanın geçerli bir biçimlendirme dosyası olduğundan emin olunuz (CSS). (Note: Başlangıcında yorumlar olan biçimlendirme dosyaları reddedilebilir.)"
+msgstr ""
+"Uygunsuz sayfa sitil dosyası. Gönderdiğiniz dosyanın geçerli bir "
+"biçimlendirme dosyası olduğundan emin olunuz (CSS). (Note: Başlangıcında "
+"yorumlar olan biçimlendirme dosyaları reddedilebilir.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Sayfa Stilini Kaldır?"
@@ -216,13 +241,19 @@ msgid "editor.issues.cover"
 msgstr "Kapak"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Tüm yazılar yayın bekleme kuyruğuna geri gönderilecek ve tüm ilişkili dosyalar kaldırılacaktır. Bu sayıyı kaldırmak istediğinizden emin misiniz?"
+msgstr ""
+"Tüm yazılar yayın bekleme kuyruğuna geri gönderilecek ve tüm ilişkili "
+"dosyalar kaldırılacaktır. Bu sayıyı kaldırmak istediğinizden emin misiniz?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Bu dergi özel sayı sıralaması kullanır. <a href=\"{$url}\" class=\"action\">Varsayılana dön</a>"
+msgstr ""
+"Bu dergi özel sayı sıralaması kullanır. <a href=\"{$url}\" class=\"action"
+"\">Varsayılana dön</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Bu sayı özelleştirilmiş bölüm sıralaması kullanır. <a href=\"{$url}\" class=\"action\">Varsayılana dön</a>"
+msgstr ""
+"Bu sayı özelleştirilmiş bölüm sıralaması kullanır. <a href=\"{$url}\" class="
+"\"action\">Varsayılana dön</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Sayı Verisi"
@@ -368,8 +399,23 @@ msgstr "Son Tamamlanan"
 msgid "editor.submissions.assignedTo"
 msgstr "Atanan Editör"
 
+msgid "issues.submissions.issueIds"
+msgstr "Atanan Sayı"
+
 msgid "editor.submissions.inSection"
 msgstr "Bölümde"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Planlanmış Yayını Göster"
+
+msgid "editor.article.publishVersion"
+msgstr "Yayın Sürümü"
+
+msgid "editor.article.viewMetadata"
+msgstr "Sürüm Üst Verisini Göster"
+
+msgid "editor.article.editMetadata"
+msgstr "Sürüm Üst Verisini Güncelle"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Yayınlanmak üzere planlandığı sayı:"
@@ -378,10 +424,14 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Yayın Planı Yapılacak"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Yayın ücreti ödenmedi. Öğenin yayın planına alınabilmesi için yazara ödeme veya feragat bilgilendirmesi yap."
+msgstr ""
+"Yayın ücreti ödenmedi. Öğenin yayın planına alınabilmesi için yazara ödeme "
+"veya feragat bilgilendirmesi yap."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Silmek istediğiniz kapak resmi bulunamadı. Zaten silinmiş olabilir. Sayfayı yeniden yüklemeyi deneyin."
+msgstr ""
+"Silmek istediğiniz kapak resmi bulunamadı. Zaten silinmiş olabilir. Sayfayı "
+"yeniden yüklemeyi deneyin."
 
 msgid "grid.action.removeArticle"
 msgstr "Makale Sayıdan Silinsin"
@@ -390,7 +440,9 @@ msgid "editor.article.remove"
 msgstr "Sil"
 
 msgid "editor.article.remove.confirm"
-msgstr "Makaleyi bu sayıdan silmek istediğinizden emin misiniz ? Bu makale bir başka sayı içinde yayınlanabilir."
+msgstr ""
+"Makaleyi bu sayıdan silmek istediğinizden emin misiniz ? Bu makale bir başka "
+"sayı içinde yayınlanabilir."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Giriş tarihi geçerli değil."
@@ -399,22 +451,25 @@ msgid "editor.issues.editIssueGalley"
 msgstr "Sayı Dizgisini Düzenle"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "Mizanpaj editörü bu dosyaları her dizgi için hazırlar ve sağlama <span class=\"pkp_help_title\">Sağlama</span> için yükler."
+msgstr ""
+"Mizanpaj editörü bu dosyaları her dizgi için hazırlar ve sağlama <span class="
+"\"pkp_help_title\">Sağlama</span> için yükler."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Dizgi dosyalarını seç"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Bu listedeki nihai taslak dosyalar altında aşağıda yüklendi copyedited sürümleri, bir sayfa düzenleyici tarafından dönüştürülür.<span class=\"pkp_help_title\">Copyediting</span>."
+msgstr ""
+"Bu listedeki nihai taslak dosyalar altında aşağıda yüklendi copyedited "
+"sürümleri, bir sayfa düzenleyici tarafından dönüştürülür.<span class="
+"\"pkp_help_title\">Copyediting</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Zaten herhangi bir başvuru aşamasında yüklenmiş olan tüm dosyalar için aşağıdaki onay kutusunu ve tıklayarak Dahil kontrol ederek Redaksiyon liste eklenebilir. Arama: Tüm mevcut dosyalar listelenir ve dahil edilmesi için seçilebilir."
-
-msgid "editor.article.coverImage"
-msgstr "Kapak Görseli"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Planlanmış Yayını Göster"
+msgstr ""
+"Zaten herhangi bir başvuru aşamasında yüklenmiş olan tüm dosyalar için "
+"aşağıdaki onay kutusunu ve tıklayarak Dahil kontrol ederek Redaksiyon liste "
+"eklenebilir. Arama: Tüm mevcut dosyalar listelenir ve dahil edilmesi için "
+"seçilebilir."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
@@ -422,14 +477,5 @@ msgstr ""
 "zaten kullanımda. Lütfen derginiz içerisinde aynı türden öğeler için "
 "benzersiz tanımlayıcılar seçin."
 
-msgid "editor.article.editMetadata"
-msgstr "Sürüm Üst Verisini Güncelle"
-
-msgid "editor.article.viewMetadata"
-msgstr "Sürüm Üst Verisini Göster"
-
-msgid "editor.article.publishVersion"
-msgstr "Yayın Sürümü"
-
-msgid "issues.submissions.issueIds"
-msgstr "Atanan Sayı"
+msgid "editor.article.coverImage"
+msgstr "Kapak Görseli"

@@ -26,8 +26,14 @@ msgstr "Importar"
 msgid "plugins.importexport.native.import.instructions"
 msgstr "Carregar arquivo XML para importar"
 
-msgid "plugins.importexport.native.export"
-msgstr "Exportar"
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Selecione arquivos para exportar"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Exportar Artigos"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Exportar Edições"
 
 msgid "plugins.importexport.native.results"
 msgstr "Resultados"
@@ -36,22 +42,8 @@ msgid "plugins.inportexport.native.uploadFile"
 msgstr "Faça upload de um arquivo e clique em \"Importar\" para continuar."
 
 msgid "plugins.importexport.native.importComplete"
-msgstr "A importação foi concluída com êxito. Os seguintes itens foram importados:"
-
-msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
-msgstr "O título da seção \"{$section1Title}\" e o título da seção  \"{$section2Title}\" da edição \"{$issueTitle}\" são compatíveis com edições diferentes existentes na revista."
-
-msgid "plugins.importexport.native.import.error.sectionTitleMatch"
-msgstr "O título da seção \"{$sectionTitle}\" da edição \"{$issueTitle}\" é compatível com uma seção existente, mas o outro título desta seção não é compatível com o outro título da seção existente na revista."
-
-msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
-msgstr "A abreviatura da seção \"{$section1Abbrev}\" e a abreviatura da seção \"{$section2Abbrev}\" da edição \"{$issueTitle}\" são compatíveis com seções distintas existentes na revista."
-
-msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
-msgstr "A abreviatura da seção \"{$sectionAbbrev}\" da edição \"{$issueTitle}\" é compatível com uma seção existente, mas outra abreviatura desta edição não é compatível com outra abreviatura de seção existente na revista."
-
-msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Exportar Artigos"
+msgstr ""
+"A importação foi concluída com êxito. Os seguintes itens foram importados:"
 
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
@@ -80,24 +72,40 @@ msgstr ""
 "{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
 "issue_id [issueId] section_abbrev [abrev]\n"
 
-msgid "plugins.importexport.native.exportIssues"
-msgstr "Exportar Edições"
-
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Seção desconhecida {$param}"
 
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "O usuário informado, \"{$userName}\", não existe."
 
-msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"O artigo \"{$articleTitle}\"está contido em um fascículo, mas não possui "
-"data de publicação."
+"O título da seção \"{$section1Title}\" e o título da seção  "
+"\"{$section2Title}\" da edição \"{$issueTitle}\" são compatíveis com edições "
+"diferentes existentes na revista."
 
-msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
 msgstr ""
-"O elemento de identificação do fascículo está ausente no artigo \""
-"{$articleTitle}\"."
+"O título da seção \"{$sectionTitle}\" da edição \"{$issueTitle}\" é "
+"compatível com uma seção existente, mas o outro título desta seção não é "
+"compatível com o outro título da seção existente na revista."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"A abreviatura da seção \"{$section1Abbrev}\" e a abreviatura da seção "
+"\"{$section2Abbrev}\" da edição \"{$issueTitle}\" são compatíveis com seções "
+"distintas existentes na revista."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"A abreviatura da seção \"{$sectionAbbrev}\" da edição \"{$issueTitle}\" é "
+"compatível com uma seção existente, mas outra abreviatura desta edição não é "
+"compatível com outra abreviatura de seção existente na revista."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Nenhum ou mais de um fascículo corresponde à identificação do fascículo "
+"fornecido \"{$issueIdentification}\"."
 
 msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
 msgstr ""
@@ -105,10 +113,15 @@ msgstr ""
 "fascículo fornecida \"{$issueIdentification}\".  Este fascículo não será "
 "modificado, mas os artigos serão adicionados."
 
-msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
 msgstr ""
-"Nenhum ou mais de um fascículo corresponde à identificação do fascículo "
-"fornecido \"{$issueIdentification}\"."
+"O elemento de identificação do fascículo está ausente no artigo "
+"\"{$articleTitle}\"."
 
-msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Selecione arquivos para exportar"
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"O artigo \"{$articleTitle}\"está contido em um fascículo, mas não possui "
+"data de publicação."
+
+#~ msgid "plugins.importexport.native.export"
+#~ msgstr "Exportar"

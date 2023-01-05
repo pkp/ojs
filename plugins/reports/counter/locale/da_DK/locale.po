@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T11:06:06+00:00\n"
 "PO-Revision-Date: 2020-06-22 16:09+0000\n"
 "Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
-"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
-"reports-counter/da_DK/>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/da_DK/>\n"
 "Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,14 +16,49 @@ msgstr ""
 
 msgid "plugins.reports.counter.description"
 msgstr ""
-"COUNTER-pluginen muliggør rapportering om tidsskriftsaktivitet ved hjælp af <"
-"a href=\"http://www.projectcounter.org\"> COUNTER-standarden </a>. Disse "
+"COUNTER-pluginen muliggør rapportering om tidsskriftsaktivitet ved hjælp af "
+"<a href=\"http://www.projectcounter.org\"> COUNTER-standarden </a>. Disse "
 "rapporter alene gør ikke et tidsskrift COUNTER-kompatibel. For at tilbyde "
 "COUNTER-overensstemmelse skal du gennemgå kravene på Project COUNTER-"
 "webstedet."
 
 msgid "plugins.reports.counter"
 msgstr "COUNTER-rapport"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER udgivelse"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Ældre webstedsrapporter"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Rapportparametrene var ugyldige."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Rapportanmodningen er ugyldig."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Der blev ikke fundet nogle resultater for denne rapport."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Resultaterne kunne ikke formateres som XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Disse links genererer COUNTER-klare rapporter baseret på den forældede "
+"Release 3.0. Denne rapport dækker alle tidsskrifter på webstedet. Brug den "
+"nyeste udgivelse i stedet, når det er muligt."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER-rapport JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML-version"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER tidsskrift-rapport 1 (R3): fuldtekst-artikel-forespørgsler efter "
+"måned og tidsskrift"
 
 msgid "plugins.reports.counter.1a.title"
 msgstr ""
@@ -34,7 +69,9 @@ msgid "plugins.reports.counter.1a.title1"
 msgstr "Tidsskrift-rapport  1 (R3)"
 
 msgid "plugins.reports.counter.1a.title2"
-msgstr "Antal succesfulde fuldtekst-anmodninger efter måned og tidsskrift (Year {$year})"
+msgstr ""
+"Antal succesfulde fuldtekst-anmodninger efter måned og tidsskrift (Year "
+"{$year})"
 
 msgid "plugins.reports.counter.1a.dateRun"
 msgstr "Dato for kørsel:"
@@ -63,50 +100,20 @@ msgstr "YTD PDF"
 msgid "plugins.reports.counter.1a.totalForAllJournals"
 msgstr "Total for alle tidsskrifter"
 
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonym"
+
 msgid "plugins.reports.counter.legacyStats"
 msgstr ""
 "Linkene nedenfor genererer rapporter baseret på de gamle COUNTER plugin-"
 "data. Anvend linkene ovenfor, hvis du ønsker at generere en COUNTER-rapport, "
 "der bygger på de nye OJS COUNTER-metriske typer."
 
-msgid "plugins.reports.counter.release"
-msgstr "COUNTER udgivelse"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Ældre webstedsrapporter"
-
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "Rapportparametrene var ugyldige."
-
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "Rapportanmodningen er ugyldig."
-
-msgid "plugins.reports.counter.error.noResults"
-msgstr "Der blev ikke fundet nogle resultater for denne rapport."
-
-msgid "plugins.reports.counter.error.noXML"
-msgstr "Resultaterne kunne ikke formateres som XML."
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr "Disse links genererer COUNTER-klare rapporter baseret på den forældede Release 3.0. Denne rapport dækker alle tidsskrifter på webstedet. Brug den nyeste udgivelse i stedet, når det er muligt."
-
-msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTER-rapport JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML-version"
-
-msgid "plugins.reports.counter.1a.description"
-msgstr "COUNTER tidsskrift-rapport 1 (R3): fuldtekst-artikel-forespørgsler efter måned og tidsskrift"
-
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonym"
-
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Alle kunder"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "Tidsskriftsrapport 1"
-
 msgid "plugins.reports.counter.ar1.title"
 msgstr "Artikelrapport 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Tidsskriftsrapport 1"

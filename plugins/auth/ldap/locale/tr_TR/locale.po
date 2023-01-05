@@ -60,11 +60,27 @@ msgstr ""
 "senkronizasyonu seçili ise gereklidir. Eğer LDAP yalnızca siteye giriş için "
 "kimlik doğrulamada kullanılacaksa bu ayarlar gerekli değildir."
 
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Hesap adı bağlantısı"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Uid veya cn veya sAMAccountName gibi bir kullanıcı öğesini benzersiz olarak "
+"tanımlayan öznitelik."
+
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Parola şifreleme"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Sunucuda depolanan parolalar için kullanılacak hash formatı. SSHA "
+"önerilmektedir."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "SASL Ayarları (isteğe bağlı)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Basit kimlik doğrulama yerine SASL kullan"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "SASL yapısı"
@@ -80,19 +96,3 @@ msgstr "Sorgulanan kimlik doğrulama ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL güvenlik ayarları"
-
-msgid "plugins.auth.ldap.settings.uid.description"
-msgstr ""
-"Uid veya cn veya sAMAccountName gibi bir kullanıcı öğesini benzersiz olarak "
-"tanımlayan öznitelik."
-
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Hesap adı bağlantısı"
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Basit kimlik doğrulama yerine SASL kullan"
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr ""
-"Sunucuda depolanan parolalar için kullanılacak hash formatı. SSHA "
-"önerilmektedir."

@@ -20,25 +20,25 @@ msgstr "Betaling med Paypal"
 msgid "plugins.paymethod.paypal.description"
 msgstr "Betalinger vil bli behandlet ved hjelp av PayPal tjenesten."
 
-msgid "plugins.paymethod.paypal.error"
-msgstr ""
-"Det oppsto en feil under transaksjonen. Kontakt tidsskriftsadministratoren "
-"for detaljer."
-
-msgid "plugins.paymethod.paypal.settings.secret"
-msgstr "Hemmelig"
-
-msgid "plugins.paymethod.paypal.settings.clientId"
-msgstr "Klient-ID"
-
-msgid "plugins.paymethod.paypal.settings.accountName"
-msgstr "Kontonavn"
-
-msgid "plugins.paymethod.paypal.settings.testMode"
-msgstr "Testmodus"
+msgid "plugins.paymethod.paypal"
+msgstr "Betaling med PayPal"
 
 msgid "plugins.paymethod.paypal.settings"
 msgstr "PayPal-innstillinger"
 
-msgid "plugins.paymethod.paypal"
-msgstr "Betaling med PayPal"
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Testmodus"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Kontonavn"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "Klient-ID"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Hemmelig"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"Det oppsto en feil under transaksjonen. Kontakt tidsskriftsadministratoren "
+"for detaljer."

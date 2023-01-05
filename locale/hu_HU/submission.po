@@ -30,7 +30,13 @@ msgid "submission.title"
 msgstr "Cikkcím"
 
 msgid "submission.title.tip"
-msgstr "A beküldés típusa rendszerint valamelyik a következőkből 'kép', 'szöveg', vagy más médiatípus beleértve a 'szoftver' vagy az 'interaktív' kategóriát is. Kérjük, válasszon ki egyet amelyik a cikkéhez a legrelevánsabb. Példákat itt talál <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"A beküldés típusa rendszerint valamelyik a következőkből 'kép', 'szöveg', "
+"vagy más médiatípus beleértve a 'szoftver' vagy az 'interaktív' kategóriát "
+"is. Kérjük, válasszon ki egyet amelyik a cikkéhez a legrelevánsabb. Példákat "
+"itt talál <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Új beküldés indítása"
@@ -41,11 +47,20 @@ msgstr "Új beküldés"
 msgid "grid.action.workflow"
 msgstr "Beküldési munkafolyamat"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "Az absztrakt legyen {$wordCount} szó vagy kevesebb."
+
+msgid "submission.submit.noContext"
+msgstr "Nem található az ehhez a beküldéshez tartozó folyóirat."
+
 msgid "submission.issueEntry"
 msgstr "Metaadat"
 
 msgid "submission.submit.whatNext.description"
-msgstr "A folyóirat értesítette Önt a kézirata benyújtásáról, e-mailben küldött egy megerősítést is. Amint a szerkesztő átnézte a benyújtott kéziratot, felveszik Önnel a kapcsolatot."
+msgstr ""
+"A folyóirat értesítette Önt a kézirata benyújtásáról, e-mailben küldött egy "
+"megerősítést is. Amint a szerkesztő átnézte a benyújtott kéziratot, "
+"felveszik Önnel a kapcsolatot."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "A kefelenyomat a folyóiratszám bejegyzésnél jelenik meg"
@@ -53,23 +68,13 @@ msgstr "A kefelenyomat a folyóiratszám bejegyzésnél jelenik meg"
 msgid "grid.action.issueEntry"
 msgstr "A cikk metaadatainak megtekintése"
 
-msgid "submission.issueEntry.modalTitle"
-msgstr "A beküldött és a megjelentetett anyag metaadata"
-
-msgid "submission.issueEntry.submissionMetadata"
-msgstr "Beküldött"
-
-msgid "submission.issueEntry.publicationMetadata"
-msgstr "Megjelentetett"
-
-msgid "submission.issueEntry.confirm"
-msgstr "Hozzon létre egy folyóiratszámot ehhez a cikkhez az alábbi metaadatok alapján."
-
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "A cikk kefelenyomata \"{$galleyFormatName}\" elérhetővé vált."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "A cikk kefelenyomat elérhetősége \"{$galleyFormatName}\" megszüntetésre került."
+msgstr ""
+"A cikk kefelenyomat elérhetősége \"{$galleyFormatName}\" megszüntetésre "
+"került."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "A beküldés nyilvános azonosítói frissültek."
@@ -78,7 +83,8 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Formátum jóváhagyás"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Ez a megjelenítési formátum <em>többé nem elérhető</em> az olvasóknak.</p>"
+msgstr ""
+"<p>Ez a megjelenítési formátum <em>többé nem elérhető</em> az olvasóknak.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p>Ez a megjelenítési formátum <em>elérhető</em> az olvasóknak.</p>"
@@ -90,7 +96,12 @@ msgid "submission.galleyFiles"
 msgstr "Formátum fájlok"
 
 msgid "submission.proofReadingDescription"
-msgstr "A tördelő szerkesztő feltöltötte a megjelentetésre kész fájlokat, hogy publikálható legyen. Használja az <em>Ellenőr hozzárendelése</em> lehetőséget, hogy kijelölhesse a szerzőt és másokat a tördelt formátumok korrektúrázásához, a javított fájlokat jóváhagyásra fel kell tölteni a megjelentetés előtt."
+msgstr ""
+"A tördelő szerkesztő feltöltötte a megjelentetésre kész fájlokat, hogy "
+"publikálható legyen. Használja az <em>Ellenőr hozzárendelése</em> "
+"lehetőséget, hogy kijelölhesse a szerzőt és másokat a tördelt formátumok "
+"korrektúrázásához, a javított fájlokat jóváhagyásra fel kell tölteni a "
+"megjelentetés előtt."
 
 msgid "grid.action.approveProof"
 msgstr "A korrektúra jóváhagyása megjelentetési formátumként."
@@ -102,7 +113,9 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Cím és absztrakt"
 
 msgid "submission.submit.upload.description"
-msgstr "A beküldéshez feltöltött fájlok, beleértve a cikket, multimédiát, adathalmazt, műalkotást stb."
+msgstr ""
+"A beküldéshez feltöltött fájlok, beleértve a cikket, multimédiát, "
+"adathalmazt, műalkotást stb."
 
 msgid "submission.pageProofs"
 msgstr "Korrektúrázás"
@@ -135,7 +148,9 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Beküldési ellenőrzőlista"
 
 msgid "submission.submit.submissionChecklistDescription"
-msgstr "A folytatás előtt el kell olvasnia és el kell fogadnia, hogy teljesítette a lenti követelményeket."
+msgstr ""
+"A folytatás előtt el kell olvasnia és el kell fogadnia, hogy teljesítette a "
+"lenti követelményeket."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Adatvédelmi nyilatkozat"
@@ -147,13 +162,19 @@ msgid "submission.submit.form.authorRequired"
 msgstr "Legalább egy szerző kötelező."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "A vezetéknév, keresztnév és email cím megadása kötelező minden szerzőnél."
+msgstr ""
+"A vezetéknév, keresztnév és email cím megadása kötelező minden szerzőnél."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Kérjük, adja meg a cikk címét."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Kérjük, adja meg a cikk absztraktját."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Az absztrakt túl hosszú. Kérjük, rövidítse le azt az alább megadott szóhatár "
+"alá."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Kérjük, válassza ki a közreműködő szerepkörét."
@@ -162,16 +183,18 @@ msgid "submission.citationFormat.notFound"
 msgstr "A kért idézetformátumot nem lehet letölteni."
 
 msgid "submission.metadataDescription"
-msgstr "Ezek a specifikációk a Dublin Core metaadatokon alapulnak, ami egy nemzetközi szabvány a folyóirat tartalmak leírására."
+msgstr ""
+"Ezek a specifikációk a Dublin Core metaadatokon alapulnak, ami egy "
+"nemzetközi szabvány a folyóirat tartalmak leírására."
+
+msgid "submission.viewingPreview"
+msgstr ""
 
 msgid "section.any"
 msgstr "Bármelyik rovat"
 
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Az absztrakt túl hosszú. Kérjük, rövidítse le azt az alább megadott szóhatár alá."
-
-msgid "submission.abstract.wordCount.description"
-msgstr "Az absztrakt legyen {$wordCount} szó vagy kevesebb."
+msgid "submission.sectionOptions"
+msgstr "Rovat opciók"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} elemek"
@@ -179,11 +202,22 @@ msgstr "{$numTitles} elemek"
 msgid "catalog.category.heading"
 msgstr "Összes elem"
 
-msgid "submission.sectionOptions"
-msgstr "Rovat opciók"
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Ennek a cikknek a posztprintje nem szerkeszthető, mert már publikálásra "
+"került."
 
-msgid "submission.submit.noContext"
-msgstr "Nem található az ehhez a beküldéshez tartozó folyóirat."
+msgid "galley.publicationNotFound"
+msgstr "Ennek a posztprintnek a cikke nem található."
+
+msgid "publication.assignToissue"
+msgstr ""
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -191,159 +225,151 @@ msgstr ""
 "Ne adjon meg megjelentetési dátumot, hacsak nem a cikk már megjelent máshol "
 "korábban és visszadátumozása szükséges."
 
-msgid "publication.scheduledIn"
+msgid "publication.invalidSection"
+msgstr "A rovat ehhez a cikkhez nem található."
+
+msgid "publication.inactiveSection"
 msgstr ""
-"Megjelentetésre ütmezve a <a href=\"{$issueUrl}\">{$issueName}</a>-ban/ben."
 
-msgid "publication.publishedIn"
-msgstr "Megjelentetve a <a href=\"{$issueUrl}\">{$issueName}</a>-ban/ben."
+msgid "publication.invalidIssue"
+msgstr "A szám ehhez a cikkhez nem található."
 
-msgid "publication.required.issue"
-msgstr "A cikket számhoz kell rendelni mielőtt megjeleníthető."
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr ""
-"Minden publikálási feltétel teljesült és a {$issue}-ben/ben kerül "
-"megjelentetésre. Biztosan publikálni szeretné?"
+msgid "publication.publish.confirmation"
+msgstr "Minden publikálási feltétel teljesült. Biztosan publikálni szeretné?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
 "Minden publikálási feltétel teljesült és a {$issue}-val/vel együtt kerül "
 "majd publikálásra. Biztosan publikálásra szeretné ütemezni?"
 
-msgid "publication.publish.confirmation"
-msgstr "Minden publikálási feltétel teljesült. Biztosan publikálni szeretné?"
-
-msgid "publication.invalidIssue"
-msgstr "A szám ehhez a cikkhez nem található."
-
-msgid "publication.invalidSection"
-msgstr "A rovat ehhez a cikkhez nem található."
-
-msgid "galley.publicationNotFound"
-msgstr "Ennek a posztprintnek a cikke nem található."
-
-msgid "galley.editPublishedDisabled"
+msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"Ennek a cikknek a posztprintje nem szerkeszthető, mert már publikálásra "
-"került."
+"Minden publikálási feltétel teljesült és a {$issue}-ben/ben kerül "
+"megjelentetésre. Biztosan publikálni szeretné?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+
+msgid "publication.required.issue"
+msgstr "A cikket számhoz kell rendelni mielőtt megjeleníthető."
+
+msgid "publication.publishedIn"
+msgstr "Megjelentetve a <a href=\"{$issueUrl}\">{$issueName}</a>-ban/ben."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Megjelentetésre ütmezve a <a href=\"{$issueUrl}\">{$issueName}</a>-ban/ben."
+
+msgid "publication.unscheduledIn"
+msgstr ""
+
+msgid "publication.selectIssue"
+msgstr ""
 
 msgid "submission.publication"
 msgstr "Cikk"
 
-
 msgid "publication.status.published"
 msgstr "Publikált"
-
 
 msgid "submission.status.scheduled"
 msgstr "Ütemezett"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Ütemezésből visszavonva"
 
-
 msgid "submission.publications"
 msgstr "Publikációk"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Számban történő pulikáláskor a copyright  év automatikusan beállításra kerül."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
 "A copyright  év automatikusan beállításra kerül a publikáció dátuma szerint."
 
-
 msgid "publication.datePublished"
 msgstr "Publikálás dátuma"
-
 
 msgid "publication.editDisabled"
 msgstr "Ez a verzió publikálásra került és nem szerkeszthető."
 
-
 msgid "publication.event.published"
 msgstr "A cikk publikált."
-
 
 msgid "publication.event.scheduled"
 msgstr "A cikk publikálásra volt ütemezve."
 
-
 msgid "publication.event.unpublished"
 msgstr "A cikk publikálását visszavonták."
-
 
 msgid "publication.event.versionPublished"
 msgstr "Új verzió került publikálásra."
 
-
 msgid "publication.event.versionScheduled"
 msgstr "Új verzió volt publikálásra ütemezve."
-
 
 msgid "publication.event.versionUnpublished"
 msgstr "A publikálásból egy verzió el lett távolítva."
 
-
 msgid "publication.invalidSubmission"
 msgstr "Ennek a publikációnak a beküldése nem található."
-
 
 msgid "publication.publish"
 msgstr "Publikál"
 
-
 msgid "publication.publish.requirements"
-msgstr "Az alábbi feltételeknek kell teljesülnie, mielőtt publikálhatóvá válik."
-
+msgstr ""
+"Az alábbi feltételeknek kell teljesülnie, mielőtt publikálhatóvá válik."
 
 msgid "publication.required.declined"
 msgstr "Elutasított beküldés nem publikálható."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "A cikknek a technikai szerkesztés vagy előállítás fázisában kell lennie, "
 "hogy publikálható legyen."
 
-
 msgid "submission.license.description"
 msgstr ""
 "A licenc automatikusan beállításra kerül a(z) <a href='{$licenseUrl}' "
 "target='_blank'>{$licenseName}</a> számára, amikor publikálásra kerül."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "A szerzői jog automatikusan hozzárendelésre kerül a {$copyright}-hoz "
 "publikáláskor."
 
-
 msgid "submission.copyrightOther.description"
-msgstr "Szerzői jogok hozzárendelése publikált cikkekhez az alábbi fél számára."
-
+msgstr ""
+"Szerzői jogok hozzárendelése publikált cikkekhez az alábbi fél számára."
 
 msgid "publication.unpublish"
 msgstr "Publikálásból visszavonva"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Biztosan nem szeretné publikálni?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Biztosan nem szeretné publikálásra ütemezni?"
 
-
 msgid "publication.version.details"
 msgstr "A publikáció részletei ennél a verziónál: {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Publikálási megbeszélések"
 
+#~ msgid "submission.issueEntry.modalTitle"
+#~ msgstr "A beküldött és a megjelentetett anyag metaadata"
+
+#~ msgid "submission.issueEntry.submissionMetadata"
+#~ msgstr "Beküldött"
+
+#~ msgid "submission.issueEntry.publicationMetadata"
+#~ msgstr "Megjelentetett"
+
+#~ msgid "submission.issueEntry.confirm"
+#~ msgstr ""
+#~ "Hozzon létre egy folyóiratszámot ehhez a cikkhez az alábbi metaadatok "
+#~ "alapján."

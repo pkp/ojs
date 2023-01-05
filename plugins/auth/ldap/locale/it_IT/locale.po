@@ -29,7 +29,8 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Nome dell'host LDAP"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Es. \"ldap.example.com\", o \"ldaps://ldap.example.com\" (se si utilizza SSL)"
+msgstr ""
+"Es. \"ldap.example.com\", o \"ldaps://ldap.example.com\" (se si utilizza SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Porta server"
@@ -53,13 +54,27 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Password"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "Manager DN e password sono richiesti solo se la sincronizzazione profilo/password utente o le opzioni di creazione utente sono disabilitate. Se LDAP verrà usato solamente per l'autenticazione, queste opzioni possono essere tralasciate."
+msgstr ""
+"Manager DN e password sono richiesti solo se la sincronizzazione profilo/"
+"password utente o le opzioni di creazione utente sono disabilitate. Se LDAP "
+"verrà usato solamente per l'autenticazione, queste opzioni possono essere "
+"tralasciate."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Attributi del nome dell'account"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Attributi il cui valore identifica univocamente un oggetto, come ad esempio "
+"un uid o cn o sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Password criptata"
 
 msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "Formato Hash per le password conservate nel server. È raccomandato SSHA (richiede PHP >= 4.3.0)."
+msgstr ""
+"Formato Hash per le password conservate nel server. È raccomandato SSHA "
+"(richiede PHP >= 4.3.0)."
 
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "Impostazioni SASL (opzionale)"
@@ -81,9 +96,3 @@ msgstr "Richiesto ID di autorizzazione"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL proprietà di sicurezza"
-
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Attributi del nome dell'account"
-
-msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "Attributi il cui valore identifica univocamente un oggetto, come ad esempio un uid o cn o sAMAccountName."

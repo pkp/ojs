@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
 "PO-Revision-Date: 2020-04-17 18:57+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
-"generic-webFeed/ca/>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"webFeed/ca/>\n"
 "Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,22 +18,31 @@ msgid "plugins.generic.webfeed.displayName"
 msgstr "Connector de canals d'informació"
 
 msgid "plugins.generic.webfeed.description"
-msgstr "Aquest connector crea canals d'informació RSS/Atom per al número actual."
+msgstr ""
+"Aquest connector crea canals d'informació RSS/Atom per al número actual."
 
 msgid "plugins.generic.webfeed.settings"
 msgstr "Configuració"
 
 msgid "plugins.generic.webfeed.settings.issue"
-msgstr "Mostra els enllaços als canals d'informació només a les pàgines del número."
+msgstr ""
+"Mostra els enllaços als canals d'informació només a les pàgines del número."
 
 msgid "plugins.generic.webfeed.settings.homepage"
-msgstr "Mostra els enlla殳 als canals d'informaciﭯm豠a la p�na inicial i a les p�nes del n�."
+msgstr ""
+"Mostra els enlla殳 als canals d'informaciﭯm豠a la p�na inicial i a les p�nes "
+"del n�."
 
 msgid "plugins.generic.webfeed.settings.all"
-msgstr "Mostra els enllaços als canals d'informació a totes les pàgines de la revista."
+msgstr ""
+"Mostra els enllaços als canals d'informació a totes les pàgines de la "
+"revista."
 
 msgid "plugins.generic.webfeed.settings.currentIssue"
 msgstr "Mostra els elements al número actual."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Mostra un nombre fix dels elements més recents."
 
 msgid "plugins.generic.webfeed.settings.recentArticles"
 msgstr "Nombre d'elements per mostrar"
@@ -49,6 +58,3 @@ msgstr "Logotip RSS1"
 
 msgid "plugins.generic.webfeed.rss2.altText"
 msgstr "Logotip RSS2"
-
-msgid "plugins.generic.webfeed.settings.recent"
-msgstr "Mostra un nombre fix dels elements més recents."

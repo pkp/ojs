@@ -44,7 +44,10 @@ msgid "plugins.reports.counter.error.noXML"
 msgstr "Os resultados não puderam ser formatados em XML."
 
 msgid "plugins.reports.counter.1a.introduction"
-msgstr "Os links produzem relatórios prontos para COUNTER baseados na Distribuição 3.0 já obsoleta. Este relatório abarca todas as revistas no portal. Use a distribuição mais recentes, quando possível."
+msgstr ""
+"Os links produzem relatórios prontos para COUNTER baseados na Distribuição "
+"3.0 já obsoleta. Este relatório abarca todas as revistas no portal. Use a "
+"distribuição mais recentes, quando possível."
 
 msgid "plugins.reports.counter.1a.name"
 msgstr "Relatório COUNTER JR1 (R3)"
@@ -53,16 +56,22 @@ msgid "plugins.reports.counter.1a.xml"
 msgstr "Versão XML"
 
 msgid "plugins.reports.counter.1a.description"
-msgstr "Relatório de periódico COUNTER 1 (R3): solicitações de texto completo de artigos por mês e periódico"
+msgstr ""
+"Relatório de periódico COUNTER 1 (R3): solicitações de texto completo de "
+"artigos por mês e periódico"
 
 msgid "plugins.reports.counter.1a.title"
-msgstr "Relatório de periódico 1 (R3): Solicitações de texto completo de artigos por mês e revista"
+msgstr ""
+"Relatório de periódico 1 (R3): Solicitações de texto completo de artigos por "
+"mês e revista"
 
 msgid "plugins.reports.counter.1a.title1"
 msgstr "Relatório 1 (R3)"
 
 msgid "plugins.reports.counter.1a.title2"
-msgstr "Número de solicitaçõesi de texto-completo bem-sucedidas a artigos por mês e revista (Ano {$year})"
+msgstr ""
+"Número de solicitaçõesi de texto-completo bem-sucedidas a artigos por mês e "
+"revista (Ano {$year})"
 
 msgid "plugins.reports.counter.1a.dateRun"
 msgstr "Data da execução:"
@@ -95,13 +104,16 @@ msgid "plugins.reports.counter.1a.anonymous"
 msgstr "anônimo"
 
 msgid "plugins.reports.counter.legacyStats"
-msgstr "Os links a seguir geram relatórios usando dados antigos do plugin, não preparados para o COUNTER. Caso deseje relatórios COUNTER atuais com a nova métrica COUNTER do OJS, use os links anteriores."
+msgstr ""
+"Os links a seguir geram relatórios usando dados antigos do plugin, não "
+"preparados para o COUNTER. Caso deseje relatórios COUNTER atuais com a nova "
+"métrica COUNTER do OJS, use os links anteriores."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Todos os consumidores"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "Relatório de revista 1"
-
 msgid "plugins.reports.counter.ar1.title"
 msgstr "Relatório de artigo 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Relatório de revista 1"

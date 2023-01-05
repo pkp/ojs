@@ -45,22 +45,32 @@ msgid "editor.me"
 msgstr "Minä"
 
 msgid "editor.publicIdentificationExists"
-msgstr "Julkinen tunnus {$publicIdentifier} kuuluu jo toiselle kohteelle (numero, artikkeli, julkaistava tiedosto tai tiedosto). Valitse julkaisusi sisällä yksilöllinen tunniste."
+msgstr ""
+"Julkinen tunnus {$publicIdentifier} kuuluu jo toiselle kohteelle (numero, "
+"artikkeli, julkaistava tiedosto tai tiedosto). Valitse julkaisusi sisällä "
+"yksilöllinen tunniste."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Ei käsikirjoituksia arkistossa."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Tallennetaanko arkistoituihin käsikirjoituksiin tehdyt muutokset? Poistettaviksi merkityt käsikirjoitukset poistetaan pysyvästi järjestelmästä."
+msgstr ""
+"Tallennetaanko arkistoituihin käsikirjoituksiin tehdyt muutokset? "
+"Poistettaviksi merkityt käsikirjoitukset poistetaan pysyvästi järjestelmästä."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Haluatko varmasti tallentaa tämän päätöksen?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Tämä käsikirjoitus arkistoidaan sen jälkeen, kun Ilmoita kirjoittajalle -sähköposti on lähetetty tai sen Ohita sähköposti-painiketta on painettu."
+msgstr ""
+"Tämä käsikirjoitus arkistoidaan sen jälkeen, kun Ilmoita kirjoittajalle -"
+"sähköposti on lähetetty tai sen Ohita sähköposti-painiketta on painettu."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Ennen käsikirjoituksen lähettämistä teknisesti toimitettavaksi, ilmoita kirjoittajalle päätöksestä (käytä Ilmoita kirjoittajalle -linkkiä) ja valitse lähetettävä versio."
+msgstr ""
+"Ennen käsikirjoituksen lähettämistä teknisesti toimitettavaksi, ilmoita "
+"kirjoittajalle päätöksestä (käytä Ilmoita kirjoittajalle -linkkiä) ja "
+"valitse lähetettävä versio."
 
 msgid "editor.notifyUsers"
 msgstr "Ilmoita käyttäjille"
@@ -84,10 +94,14 @@ msgid "editor.usersNotified"
 msgstr "Käyttäjille ilmoitettu"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Lähetä tämä viesti kaikille tähän julkaisuun liittyville käyttäjille ({$count} käyttäjää)"
+msgstr ""
+"Lähetä tämä viesti kaikille tähän julkaisuun liittyville käyttäjille "
+"({$count} käyttäjää)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Lähetä viesti kaikille tähän julkaisuun liittyville käyttäjille, jotka ovat ilmoittaneet haluavansa vastaanottaa päivityksiä ({$count} käyttäjää)"
+msgstr ""
+"Lähetä viesti kaikille tähän julkaisuun liittyville käyttäjille, jotka ovat "
+"ilmoittaneet haluavansa vastaanottaa päivityksiä ({$count} käyttäjää)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Liitä tämän numeron sisällysluettelo:"
@@ -174,19 +188,27 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Poistetaanko kansikuva?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "Kansikuva, jonka halusit poistaa, ei vastaa tämän numeron kansikuvaa. Lataa sivu uudelleen ja yritä uudelleen."
+msgstr ""
+"Kansikuva, jonka halusit poistaa, ei vastaa tämän numeron kansikuvaa. Lataa "
+"sivu uudelleen ja yritä uudelleen."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Kansikuvaa, jonka halusit poistaa, ei löytynyt. Se on ehkä jo poistettu. Kokeile sivun uudelleenlatausta."
+msgstr ""
+"Kansikuvaa, jonka halusit poistaa, ei löytynyt. Se on ehkä jo poistettu. "
+"Kokeile sivun uudelleenlatausta."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Väärä kansilehden muoto. Hyväksytyt tiedostomuodot ovat .gif, .jpg, ja .png."
+msgstr ""
+"Väärä kansilehden muoto. Hyväksytyt tiedostomuodot ovat .gif, .jpg, ja .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Tyylitiedosto"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Virheellinen tyylitiedoston muoto. Varmista, että lähetetty tiedosto on oikeassa CSS-muodossa. (Huomaa, että jos tyylitiedoston alussa on kommentteja, se voidaan hylätä.)"
+msgstr ""
+"Virheellinen tyylitiedoston muoto. Varmista, että lähetetty tiedosto on "
+"oikeassa CSS-muodossa. (Huomaa, että jos tyylitiedoston alussa on "
+"kommentteja, se voidaan hylätä.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Poistetaanko tyylitiedosto?"
@@ -216,13 +238,19 @@ msgid "editor.issues.cover"
 msgstr "Kansi"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Kaikki artikkelit palautetaan toimitusjonoon ja kaikki niihin liittyvät tiedostot poistetaan pysyvästi. Haluatko varmasti poistaa tämän numeron?"
+msgstr ""
+"Kaikki artikkelit palautetaan toimitusjonoon ja kaikki niihin liittyvät "
+"tiedostot poistetaan pysyvästi. Haluatko varmasti poistaa tämän numeron?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Tämä julkaisu käyttää mukautettua numeroiden järjestystä. <a href=\"{$url}\" class=\"action\">Palauta oletusjärjestys</a>"
+msgstr ""
+"Tämä julkaisu käyttää mukautettua numeroiden järjestystä. <a href=\"{$url}\" "
+"class=\"action\">Palauta oletusjärjestys</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Tämän numero käyttää mukautettua osastojärjestystä. <a href=\"{$url}\" class=\"action\">Palauta oletusjärjestys</a>"
+msgstr ""
+"Tämän numero käyttää mukautettua osastojärjestystä. <a href=\"{$url}\" class="
+"\"action\">Palauta oletusjärjestys</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Numeron tiedot"
@@ -256,6 +284,9 @@ msgstr "Haluatko varmasti julkaista uuden numeron?"
 
 msgid "editor.issues.confirmUnpublish"
 msgstr "Haluatko varmasti perua tämän jo julkaistun numeron julkaisemisen?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Oletko varma, että haluat asettaa tämän numeron uusimmaksi?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Julkista tunnistetta ei voida tallentaa artikkelille:"
@@ -323,6 +354,9 @@ msgstr "Esikatselu"
 msgid "grid.action.addIssueGalley"
 msgstr "Luo numeron julkaistava tiedosto"
 
+msgid "grid.action.setCurrentIssue"
+msgstr "Aseta uusin numero"
+
 msgid "editor.navigation.issueArchive"
 msgstr "Aiemmat numerot"
 
@@ -362,8 +396,23 @@ msgstr "Viimeisin valmis"
 msgid "editor.submissions.assignedTo"
 msgstr "Osoitettu toimittajalle"
 
+msgid "issues.submissions.issueIds"
+msgstr "Osoitettu numeroon"
+
 msgid "editor.submissions.inSection"
 msgstr "Osastossa"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Näytä ajoitettu julkaistava versio"
+
+msgid "editor.article.publishVersion"
+msgstr "Julkaise versio"
+
+msgid "editor.article.viewMetadata"
+msgstr "Näytä version kuvailutiedot"
+
+msgid "editor.article.editMetadata"
+msgstr "Muokkaa version kuvailutietoja"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Ajoita julkaistavaksi (numerossa)"
@@ -372,10 +421,14 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Osoitetaan"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Julkaisumaksu maksamatta. Ilmoita kirjoittajalle, että maksu on maksettava tai siitä on luovuttava, jotta kohde voidaan ajoittaa julkaistavaksi."
+msgstr ""
+"Julkaisumaksu maksamatta. Ilmoita kirjoittajalle, että maksu on maksettava "
+"tai siitä on luovuttava, jotta kohde voidaan ajoittaa julkaistavaksi."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Kansikuvaa, jonka halusit poistaa, ei löytynyt. Se on ehkä jo poistettu. Kokeile sivun uudelleenlatausta."
+msgstr ""
+"Kansikuvaa, jonka halusit poistaa, ei löytynyt. Se on ehkä jo poistettu. "
+"Kokeile sivun uudelleenlatausta."
 
 msgid "grid.action.removeArticle"
 msgstr "Poista artikkeli numerosta"
@@ -384,7 +437,9 @@ msgid "editor.article.remove"
 msgstr "Poista"
 
 msgid "editor.article.remove.confirm"
-msgstr "Haluatko varmasti poistaa tämän artikkelin numerosta? Artikkeli on mahdollista ajoittaa toiseen numeroon."
+msgstr ""
+"Haluatko varmasti poistaa tämän artikkelin numerosta? Artikkeli on "
+"mahdollista ajoittaa toiseen numeroon."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Saatavuuspäivämäärä ei ole kelvollinen."
@@ -393,40 +448,31 @@ msgid "editor.issues.editIssueGalley"
 msgstr "Muokkaa numeron julkaistavaa tiedostoa"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "Taittaja valmistelee nämä kaikki tiedostot julkaistaviksi tiedostoiksi ja lataa ne sitten oikeaan <span class=\"pkp_help_title\">Korjausvedokset</span>-kohtaan oikolukua varten."
+msgstr ""
+"Taittaja valmistelee nämä kaikki tiedostot julkaistaviksi tiedostoiksi ja "
+"lataa ne sitten oikeaan <span class=\"pkp_help_title\">Korjausvedokset</"
+"span>-kohtaan oikolukua varten."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Valitse julkaistavat tiedostot"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Tekninen toimittaja on muuttanut tämän luettelon lopulliset luonnostiedostot teknisesti toimitetuiksi versioiksi, jotka on ladattu alla olevan <span class=\"pkp_help_title\">Tekninen toimittaminen</span>-otsikon alle."
+msgstr ""
+"Tekninen toimittaja on muuttanut tämän luettelon lopulliset luonnostiedostot "
+"teknisesti toimitetuiksi versioiksi, jotka on ladattu alla olevan <span "
+"class=\"pkp_help_title\">Tekninen toimittaminen</span>-otsikon alle."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri lähetysvaiheissa, voidaan lisätä oikolukulistalle rastittamalla Sisällytä-valintaruutu alla ja klikkaamalla Etsi: kaikki saatavilla olevat tiedostot näytetään ja voidaan valita lisättäväksi."
-
-msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Oletko varma, että haluat asettaa tämän numeron uusimmaksi?"
-
-msgid "grid.action.setCurrentIssue"
-msgstr "Aseta uusin numero"
+msgstr ""
+"Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri "
+"lähetysvaiheissa, voidaan lisätä oikolukulistalle rastittamalla Sisällytä-"
+"valintaruutu alla ja klikkaamalla Etsi: kaikki saatavilla olevat tiedostot "
+"näytetään ja voidaan valita lisättäväksi."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "Julkinen tunniste '{$publicIdentifier}' on jo käytössä. Valitse uniikki tunniste."
+msgstr ""
+"Julkinen tunniste '{$publicIdentifier}' on jo käytössä. Valitse uniikki "
+"tunniste."
 
 msgid "editor.article.coverImage"
 msgstr "Kansikuva"
-
-msgid "editor.article.editMetadata"
-msgstr "Muokkaa version kuvailutietoja"
-
-msgid "editor.article.viewMetadata"
-msgstr "Näytä version kuvailutiedot"
-
-msgid "editor.article.publishVersion"
-msgstr "Julkaise versio"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Näytä ajoitettu julkaistava versio"
-
-msgid "issues.submissions.issueIds"
-msgstr "Osoitettu numeroon"

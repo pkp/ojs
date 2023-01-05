@@ -20,28 +20,76 @@ msgid "admin.settings.redirect"
 msgstr "Aldizkarira birbideratu"
 
 msgid "admin.settings.redirectInstructions"
-msgstr "Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako."
+msgstr ""
+"Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. "
+"Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako."
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Ziur zaude hizkuntza hau kendu nahi duzula? Gerta daiteke aldizkari bat "
+"erabiltzen duela."
 
 msgid "admin.languages.primaryLocaleInstructions"
-msgstr "Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza lehenetsia."
+msgstr ""
+"Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza "
+"lehenetsia."
 
 msgid "admin.languages.supportedLocalesInstructions"
-msgstr "Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan."
+msgstr ""
+"Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako "
+"hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari "
+"guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza "
+"aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). "
+"Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko "
+"eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Markatutako localeak osatu gabe egon daitezke."
 
 msgid "admin.languages.confirmUninstall"
-msgstr "Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan."
+msgstr ""
+"Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du "
+"hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Hauta itzazu locale osagarriak sistema horretarako laguntzailea "
+"instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu "
+"behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak "
+"gehitzeari buruzko informazioa eskuratzeko."
 
 msgid "admin.auth.ojs"
 msgstr "OJS erabiltzaileen datu-basea"
 
 msgid "admin.auth.enableSyncProfiles"
-msgstr "Gaitu erabiltzaile-profilen sinkronizazioa (autentifikazioko plugin honek onartzen badu). Erabiltzaile-profilen informazioa automatikoki eguneratuko da urruneko iturburutik erabiltzaileak saioa hasten duenean, eta OJSn egiten diren profil-aldaketak (pasahitz-aldaketak barne) automatikoki eguneratuko dira urruneko iturburuan. Aukera hau ez bada gaitzen, OJS profil-informazioa eta urruneko iturburuko profil-informazioa aparte bereizita mantenduko dira."
+msgstr ""
+"Gaitu erabiltzaile-profilen sinkronizazioa (autentifikazioko plugin honek "
+"onartzen badu). Erabiltzaile-profilen informazioa automatikoki eguneratuko "
+"da urruneko iturburutik erabiltzaileak saioa hasten duenean, eta OJSn egiten "
+"diren profil-aldaketak (pasahitz-aldaketak barne) automatikoki eguneratuko "
+"dira urruneko iturburuan. Aukera hau ez bada gaitzen, OJS profil-informazioa "
+"eta urruneko iturburuko profil-informazioa aparte bereizita mantenduko dira."
 
 msgid "admin.auth.enableSyncPasswords"
-msgstr "Gaitu erabiltzailearen pasahitza aldatzea (autentifikazioko plugin honek onartzen badu). Aukera hau gaitzen bada, erabiltzaileek OJS barruan aldatu ahal izango dute pasahitza eta OJSren \"galdutako pasahitza\" eginbidea erabili ahal izango dute pasahitza ahazten zaienean. Aukera hau ez bada gaitzen, funtzio horiek ez dira erabilgarri egongo autentifikazio-iturburu hau daukaten erabiltzaileentzat."
+msgstr ""
+"Gaitu erabiltzailearen pasahitza aldatzea (autentifikazioko plugin honek "
+"onartzen badu). Aukera hau gaitzen bada, erabiltzaileek OJS barruan aldatu "
+"ahal izango dute pasahitza eta OJSren \"galdutako pasahitza\" eginbidea "
+"erabili ahal izango dute pasahitza ahazten zaienean. Aukera hau ez bada "
+"gaitzen, funtzio horiek ez dira erabilgarri egongo autentifikazio-iturburu "
+"hau daukaten erabiltzaileentzat."
 
 msgid "admin.auth.enableCreateUsers"
-msgstr "Gaitu erabiltzaileak sortzea (autentifikazioko plugin honek onartzen badu). OJSn autentifikazio-iturburu honekin sortzen diren erabiltzaileak automatikoki gehituko dira urruneko autentifikazio-iturburuan, dagoeneko sortuta ez badaude. Gainera, iturburu hori autentifikazio-iturburu lehenetsia baldin bada, erabiltzaile-erregistratzearen bidez sortutako OJS kontuak ere gehituko dira urruneko autentifikazio-iturburuan."
+msgstr ""
+"Gaitu erabiltzaileak sortzea (autentifikazioko plugin honek onartzen badu). "
+"OJSn autentifikazio-iturburu honekin sortzen diren erabiltzaileak "
+"automatikoki gehituko dira urruneko autentifikazio-iturburuan, dagoeneko "
+"sortuta ez badaude. Gainera, iturburu hori autentifikazio-iturburu "
+"lehenetsia baldin bada, erabiltzaile-erregistratzearen bidez sortutako OJS "
+"kontuak ere gehituko dira urruneko autentifikazio-iturburuan."
 
 msgid "admin.systemVersion"
 msgstr "OJS bertsioa"
@@ -52,14 +100,17 @@ msgstr "OJS konfigurazioa"
 msgid "admin.systemConfigurationDescription"
 msgstr "<tt>config.inc.php</tt> OJS konfigurazio-ezarpenak."
 
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari "
+"berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta "
+"erabiltzailearen izen-ematearekin jarraitzeko."
+
 msgid "admin.journals.journalSettings"
 msgstr "Aldizkariaren ezarpenak"
 
 msgid "admin.journals.noneCreated"
 msgstr "Ez da aldizkaririk sortu."
-
-msgid "admin.contexts.confirmDelete"
-msgstr "Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?"
 
 msgid "admin.contexts.create"
 msgstr "Sortu aldizkaria"
@@ -67,14 +118,23 @@ msgstr "Sortu aldizkaria"
 msgid "admin.journals.urlWillBe"
 msgstr "Aldizkariaren URLa {$sampleUrl} izango da."
 
+msgid "admin.contexts.form.titleRequired"
+msgstr "Titulu bat behar da."
+
 msgid "admin.contexts.form.pathRequired"
 msgstr "Bidea zehaztu behar da."
 
 msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr "Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar dira."
+msgstr ""
+"Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik "
+"onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar "
+"dira."
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Hautatutako bidea beste aldizkari batek erabiltzen du."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Gaitu aldizkari hau publikoki agertzeko gunean."
@@ -107,51 +167,62 @@ msgid "admin.mergeUsers.mergeUser"
 msgstr "Batu erabiltzailea"
 
 msgid "admin.mergeUsers.into.description"
-msgstr "Hautatu erabiltzaile bat lehengo erabiltzailearen egiletasuna, edizio-esleipenak, etab. egozteko."
+msgstr ""
+"Hautatu erabiltzaile bat lehengo erabiltzailearen egiletasuna, edizio-"
+"esleipenak, etab. egozteko."
 
 msgid "admin.mergeUsers.from.description"
-msgstr "Hautatu erabiltzaile bat beste erabiltzaile-kontu batekin batzeko (adib., bi kontu dituen erabiltzaile bat denean). Lehenengo hautatutako kontua ezabatu egingo da, eta dituen bidalketak, esleipenak, etab. bigarren kontuari egotziko zaizkio."
+msgstr ""
+"Hautatu erabiltzaile bat beste erabiltzaile-kontu batekin batzeko (adib., bi "
+"kontu dituen erabiltzaile bat denean). Lehenengo hautatutako kontua ezabatu "
+"egingo da, eta dituen bidalketak, esleipenak, etab. bigarren kontuari "
+"egotziko zaizkio."
 
 msgid "admin.mergeUsers.allUsers"
 msgstr "Inskribatutako erabiltzaile guztiak"
 
 msgid "admin.mergeUsers.confirm"
-msgstr "Ziur zaude \"{$oldUsername}\" erabiltzaile-izena duen kontua ezabatu eta \"{$newUsername}\" erabiltzaile-izena duen kontuarekin batu nahi duzula? \"{$oldUsername}\" kontua galdu egingo da. Ekintza hau ezingo da desegin."
+msgstr ""
+"Ziur zaude \"{$oldUsername}\" erabiltzaile-izena duen kontua ezabatu eta "
+"\"{$newUsername}\" erabiltzaile-izena duen kontuarekin batu nahi duzula? "
+"\"{$oldUsername}\" kontua galdu egingo da. Ekintza hau ezingo da desegin."
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Inskribatutako erabiltzailerik ez."
 
-msgid "admin.locale.maybeIncomplete"
-msgstr "Markatutako localeak osatu gabe egon daitezke."
-
-msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko."
-
-msgid "admin.journals.createInstructions"
-msgstr "Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko."
-
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Harpidetza iraungitze abisua"
 
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name} ondo editatu egin da."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} ondo sortu egin da."
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "Titulu bat behar da."
-
-msgid "admin.languages.confirmDisable"
+msgid "admin.scheduledTask.openAccessNotification"
 msgstr ""
-"Ziur zaude hizkuntza hau kendu nahi duzula? Gerta daiteke aldizkari bat "
-"erabiltzen duela."
 
-msgid "admin.settings.info.success"
-msgstr "Guneko informazioa ondo eguneratu egin da."
+msgid "admin.scheduledTask.reviewReminder"
+msgstr ""
 
-msgid "admin.settings.config.success"
-msgstr "Konfigurazioa ondo eguneratu egin da."
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
 
-msgid "admin.settings.appearance.success"
-msgstr "Itxura konfigurazioa ondo eguneratu egin da."
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr ""
+#~ "Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?"
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "{$name} ondo editatu egin da."
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} ondo sortu egin da."
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Guneko informazioa ondo eguneratu egin da."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Konfigurazioa ondo eguneratu egin da."
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Itxura konfigurazioa ondo eguneratu egin da."

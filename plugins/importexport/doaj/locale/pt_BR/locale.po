@@ -18,44 +18,46 @@ msgid "plugins.importexport.doaj.displayName"
 msgstr "Exportação para DOAJ"
 
 msgid "plugins.importexport.doaj.description"
-msgstr "Exportar revista para o DOAJ, incluindo dados da revista para inclusão."
+msgstr ""
+"Exportar revista para o DOAJ, incluindo dados da revista para inclusão."
 
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Solicitar inclusão ao DOAJ"
-
-msgid "plugins.importexport.doaj.cliUsage"
-msgstr ""
-"Uso:\n"
-"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
-""
-
-msgid "plugins.importexport.doaj.register.error.mdsError"
-msgstr ""
-"O depósito não foi bem sucedido! A API do DOAJ retornou um erro: '{$ param}'."
-
-msgid "plugins.importexport.doaj.senderTask.name"
-msgstr "Tarefa de registro automático do DOAJ"
-
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Use a API de teste do DOAJ (do ambiente de teste) para o registro. Por "
-"favor, não se esqueça de remover esta opção para a produção."
-
-msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
-msgstr ""
-"O OJS depositará artigos automaticamente no DOAJ. Observe que isso pode "
-"levar um curto período de tempo após a publicação para processar (por "
-"exemplo, dependendo da sua configuração do cronjob). Você pode verificar "
-"todos os artigos não registrados."
-
-msgid "plugins.importexport.doaj.settings.form.apiKey.description"
-msgstr "Você encontrará sua chave API na sua página de usuário no DOAJ."
-
-msgid "plugins.importexport.doaj.settings.form.apiKey"
-msgstr "Chave API do DOAJ"
 
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
 "Se você deseja registrar artigos a partir do OJS, insira sua chave API do "
 "DOAJ. Caso contrário, você poderá exportar para o formato XML do DOAJ, mas "
 "não poderá registrar seus artigos no DOAJ a partir do OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Chave API do DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Você encontrará sua chave API na sua página de usuário no DOAJ."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"O OJS depositará artigos automaticamente no DOAJ. Observe que isso pode "
+"levar um curto período de tempo após a publicação para processar (por "
+"exemplo, dependendo da sua configuração do cronjob). Você pode verificar "
+"todos os artigos não registrados."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Use a API de teste do DOAJ (do ambiente de teste) para o registro. Por "
+"favor, não se esqueça de remover esta opção para a produção."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Tarefa de registro automático do DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr ""
+"O depósito não foi bem sucedido! A API do DOAJ retornou um erro: '{$ param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"

@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
 "PO-Revision-Date: 2021-01-29 12:48+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-"
-"info@journals.uio.no>\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
+"no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -17,6 +17,9 @@ msgstr ""
 
 msgid "editor.home"
 msgstr "Startside for redaktør"
+
+msgid "editor.reassign"
+msgstr "Oppnevn på nytt"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Innleveringer og publisering"
@@ -36,6 +39,17 @@ msgstr "Publiserte utgaver"
 msgid "editor.allSections"
 msgstr "Alle tidsskriftseksjoner"
 
+msgid "editor.allEditors"
+msgstr "Alle redaktører"
+
+msgid "editor.me"
+msgstr "Meg"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Velg en annen unik identifikator, siden «{$publicIdentifier}» eksisterer "
+"allerede for et annet element (utgave, artikkel, oppsett eller fil)."
+
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Ingen innleveringer i arkivet."
 
@@ -47,17 +61,47 @@ msgstr ""
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Er du sikker på at du vil registrere denne beslutningen?"
 
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Innleveringen vil bli overført til arkivet så snart du enten har sendt e-"
+"post til forfatteren eller har klikket «Hopp over e-post»."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Før du kan sende en innlevering til språkvask, må du forsikre deg om at det "
+"er opprettet en revidert filversjon og at forfatteren er varslet via «E-post "
+"til forfatteren»."
+
 msgid "editor.notifyUsers"
 msgstr "Varsle brukere"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Alle lesere ({$count} brukere)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Alle publiserte forfattere ({$count} brukere)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Alle personlige abonnenter ({$count} brukere)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Alle institusjonelle abonnenter  ({$count} brukere)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Varsler brukere ..."
 
 msgid "editor.usersNotified"
 msgstr "Brukere varslet"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Send denne meldingen til alle brukere som er knyttet til dette tidsskriftet ({$count} brukere)"
+msgstr ""
+"Send denne meldingen til alle brukere som er knyttet til dette tidsskriftet "
+"({$count} brukere)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Send denne meldingen til de brukerne som er knyttet til dette tidsskriftet, og som har oppgitt at de ønsker å holdes orientert ({$count} brukere)"
+msgstr ""
+"Send denne meldingen til de brukerne som er knyttet til dette tidsskriftet, "
+"og som har oppgitt at de ønsker å holdes orientert ({$count} brukere)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Inkluder innholdsfortegnelsen fra denne utgaven:"
@@ -68,11 +112,8 @@ msgstr "Administrere redaktørroller"
 msgid "editor.issues.createIssue"
 msgstr "Opprett utgave"
 
-msgid "editor.issues.backIssues"
-msgstr "Tidligere utgaver"
-
-msgid "editor.issues.futureIssues"
-msgstr "Framtidige utgaver"
+msgid "editor.issues.editIssue"
+msgstr "Administrere utgave: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "Nyeste utgave"
@@ -92,6 +133,9 @@ msgstr "Publisert"
 msgid "editor.issues.unpublished"
 msgstr "Ikke publisert"
 
+msgid "editor.issues.datePublished"
+msgstr "Dato publisert"
+
 msgid "editor.issues.volumeRequired"
 msgstr "Du må legge inn en årgang. Det må være et tall."
 
@@ -100,6 +144,12 @@ msgstr "Du må legge inn et utgavenummer. Det må være et tall."
 
 msgid "editor.issues.yearRequired"
 msgstr "Du må legge inn et år. Det må være et tall."
+
+msgid "editor.issues.titleRequired"
+msgstr "Du må legge inn en tittel på utgaven."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Du må legge inn en utgaveidentifikasjon. Velg minst ett alternativ."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Utgaveidentifikasjon"
@@ -116,8 +166,8 @@ msgstr "Tilgangsstatus"
 msgid "editor.issues.accessDate"
 msgstr "Open Access-dato"
 
-msgid "editor.issues.invalidAccessDate"
-msgstr "Tilgangsdato er ikke gyldig."
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Åpne for forsinket Open Access"
 
 msgid "editor.issues.coverPage"
 msgstr "Omslagsbilde"
@@ -137,14 +187,26 @@ msgstr "Korrigert"
 msgid "editor.issues.removeCoverPage"
 msgstr "Vil du fjerne omslagsbildet?"
 
-msgid "editor.issues.invalidCoverPageFormat"
-msgstr "Ugyldig forsideformat. Aksepterte format er .gif, .jpg, eller .png."
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Last på nytt og prøv igjen. Bildet du ville slette stemte ikke overens med "
+"bildet for denne utgaven."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Bildet du ønsket å slette ble ikke funnet. Det kan allerede være slettet. "
+"Prøv å laste siden på nytt."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Ugyldig bildeformat. Tillatte format: .gif, .jpg eller .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Stilark"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Ugyldig stilarkformat. Sjekk at innsendt fil er en gyldig CSS. (Merk at stilark som innledes med kommentarer kan bli avvist.)"
+msgstr ""
+"Ugyldig stilarkformat. Sjekk at innsendt fil er en gyldig CSS. (Merk at "
+"stilark som innledes med kommentarer kan bli avvist.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Vil du fjerne stilarket?"
@@ -154,6 +216,9 @@ msgstr "Bildetekst"
 
 msgid "editor.issues.showCoverPage"
 msgstr "Lag et omslag for denne utgaven med disse elementene."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Vis"
 
 msgid "editor.issues.openAccess"
 msgstr "Open Access"
@@ -175,6 +240,11 @@ msgstr ""
 "Alle artikler vil bli sendt tilbake til språkvaskkøen, og alle tilknyttede "
 "filer vil bli fjernet for alltid. Er du sikker på at du vil fjerne denne "
 "utgaven?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Dette tidsskriftet bruker en egendefinert utgaverekkefølge.  <a href="
+"\"{$url}\" class=\"action\">«Tilbakestill til standard»</a>"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
@@ -199,6 +269,9 @@ msgstr "Offentlig ID"
 msgid "editor.issues.publishIssue"
 msgstr "Publiser utgaven"
 
+msgid "editor.issues.unpublishIssue"
+msgstr "Trekk tilbake utgaven"
+
 msgid "editor.issues.previewIssue"
 msgstr "Forhåndsvis utgaven"
 
@@ -207,6 +280,12 @@ msgstr "Forhåndsvis"
 
 msgid "editor.issues.confirmPublish"
 msgstr "Er du sikker på at du vil publisere den nye utgaven?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Er du sikker på at du ønsker å trekke tilbake denne utgaven?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Er du sikker på at du vil sette denne utgaven som den nyeste?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Kan ikke lagre offentlig ID for artikkel:"
@@ -220,11 +299,62 @@ msgstr "Åpne"
 msgid "editor.issues.pages"
 msgstr "Sider"
 
+msgid "editor.issues.galleys"
+msgstr "Oppsett"
+
+msgid "editor.issues.galley"
+msgstr "Oppsett"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Vis oppsett"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publiser oppsett med alt innhold fra utgaven."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Ingen oppsett har blitt publisert."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Du må legge inn en etikett for oppsettet."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Du må legge inn en språkpakke for oppsettet."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Det finnes allerede en offentlig identifikator for oppsettet."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Tilbake til oppsett"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Er du sikker på at du vil slette oppsettet for denne utgaven?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatorer"
+
 msgid "editor.navigation.futureIssues"
 msgstr "Framtidige utgaver"
 
+msgid "grid.action.addGalley"
+msgstr "Legg til oppsett"
+
+msgid "grid.action.publish"
+msgstr "Publiser utgave"
+
 msgid "grid.action.addIssue"
 msgstr "Opprett utgave"
+
+msgid "grid.action.viewIssue"
+msgstr "Vis"
+
+msgid "grid.action.previewIssue"
+msgstr "Forhåndsvis"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Lag oppsett"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Sett nyeste utgave"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Tidligere utgaver"
@@ -262,66 +392,33 @@ msgstr "Uker"
 msgid "editor.submissions.lastCompleted"
 msgstr "Siste utført"
 
+msgid "editor.submissions.assignedTo"
+msgstr "Tildelt redaktør"
+
+msgid "issues.submissions.issueIds"
+msgstr "Tildelt nummer"
+
+msgid "editor.submissions.inSection"
+msgstr "I seksjon"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Vis planlagt publikasjon"
+
+#, fuzzy
+msgid "editor.article.publishVersion"
+msgstr "Publiser versjon"
+
+msgid "editor.article.viewMetadata"
+msgstr "Se versjonens metadata"
+
+msgid "editor.article.editMetadata"
+msgstr "Endre metadata"
+
 msgid "editor.article.scheduleForPublication"
 msgstr "Planlegg for publisering i"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Må fylles ut"
-
-msgid "editor.article.reviewForms"
-msgstr "Vurderingsskjemaer"
-
-msgid "editor.article.selectReviewForm"
-msgstr "Velg vurderingsskjema"
-
-msgid "editor.article.confirmChangeReviewForm"
-msgstr "<b>Advarsel:</b> Hvis du endrer dette vurderingsskjemaet vil dette virke tilbake på alle svar som allerede er lagt inn av fagkonsulenter i dette skjemaet. Er du sikker på at du vil fortsette?"
-
-msgid "editor.allEditors"
-msgstr "Alle redaktører"
-
-msgid "editor.me"
-msgstr "Meg"
-
-msgid "editor.submissionReview.emailWillArchive"
-msgstr ""
-"Innleveringen vil bli overført til arkivet så snart du enten har sendt e-"
-"post til forfatteren eller har klikket «Hopp over e-post»."
-
-msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr ""
-"Før du kan sende en innlevering til språkvask, må du forsikre deg om at det "
-"er opprettet en revidert filversjon og at forfatteren er varslet via «E-post "
-"til forfatteren»."
-
-msgid "editor.notifyUsers.inProgress"
-msgstr "Varsler brukere ..."
-
-msgid "editor.issues.titleRequired"
-msgstr "Du må legge inn en tittel på utgaven."
-
-msgid "editor.issues.issueIdentificationRequired"
-msgstr "Du må legge inn en utgaveidentifikasjon. Velg minst ett alternativ."
-
-msgid "editor.issues.coverPageDisplay"
-msgstr "Vis"
-
-msgid "editor.issues.hideCoverPageArchives"
-msgstr "Ikke vis miniatyr av omslagsbildet i lister over utgaver."
-
-msgid "editor.issues.hideCoverPageCover"
-msgstr "Ikke vis omslagsbilde før innholdsfortegnelsen."
-
-msgid "editor.issues.resetIssueOrder"
-msgstr ""
-"Dette tidsskriftet bruker en egendefinert utgaverekkefølge.  <a href=\"{$url}"
-"\" class=\"action\">«Tilbakestill til standard»</a>"
-
-msgid "editor.submissions.assignedTo"
-msgstr "Tildelt redaktør"
-
-msgid "editor.submissions.inSection"
-msgstr "I seksjon"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
@@ -329,68 +426,27 @@ msgstr ""
 "utgivelsesplanen, må du enten varsle forfatteren om å betale avgiften eller "
 "frafalle kravet om betaling."
 
-msgid "editor.article.showCoverPage"
-msgstr "Lag et omslag med følgende elementer for tildenne artikkelen."
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Bildet du ønsket å slette ble ikke funnet. Det kan være slettet allerede. "
+"Prøv å laste siden på nytt."
 
-msgid "editor.article.hideCoverPageToc"
-msgstr "Ikke vis miniatyr av omslagsbilde i innholdsfortegnelsen."
-
-msgid "editor.article.hideCoverPageAbstract"
-msgstr "Ikke vis omslagsbilde i sammendragsvisningen."
+msgid "grid.action.removeArticle"
+msgstr "Fjern artikkelen fra utgaven"
 
 msgid "editor.article.remove"
 msgstr "Fjern"
 
-msgid "editor.issues.enableOpenAccessDate"
-msgstr "Åpne for forsinket Open Access"
-
-msgid "editor.issues.unpublishIssue"
-msgstr "Trekk tilbake utgaven"
-
-msgid "editor.issues.confirmUnpublish"
-msgstr "Er du sikker på at du ønsker å trekke tilbake denne utgaven?"
-
-msgid "editor.notifyUsers.allReaders"
-msgstr "Alle lesere ({$count} brukere)"
-
-msgid "editor.notifyUsers.allAuthors"
-msgstr "Alle publiserte forfattere ({$count} brukere)"
-
-msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Alle personlige abonnenter ({$count} brukere)"
-
-msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Alle institusjonelle abonnenter  ({$count} brukere)"
-
-msgid "editor.article.coverImage"
-msgstr "Omslagsbilde"
-
-msgid "editor.article.viewMetadata"
-msgstr "Se versjonens metadata"
-
-#, fuzzy
-msgid "editor.article.publishVersion"
-msgstr "Publiser versjon"
-
-msgid "editor.publicIdentificationExistsForTheSameType"
+msgid "editor.article.remove.confirm"
 msgstr ""
-"Denne offentlige identifikatoren {$publicIdentifier} finnes allerede for et "
-"element av samme type. Velg unike identifikatorer for samme type elementer i "
-"tidsskriftet ditt."
+"Er du sikker på at du vil fjerne artikkelen fra denne utgaven? Artikkelen "
+"kan legges til en annen utgave."
 
-msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr ""
-"Filer som allerede er lastet opp til innlevering, uansett stadie, kan bli "
-"lagt til listen for korrekturlesing ved å krysse av «Inkluder» under og "
-"klikke «Søk». Alle tilgjengelige filer vil bli listet opp som alternativer."
+msgid "editor.issues.invalidAccessDate"
+msgstr "Tilgangsdato er ikke gyldig."
 
-msgid "editor.submission.editorial.finalDraftDescription"
-msgstr ""
-"Språkvaskeren endrer filene i denne listen til filer for språkvask. Disse "
-"lastes opp under <span class=\"pkp_help_title\">«Språkvask»</span>."
-
-msgid "editor.submission.selectGalleyFiles"
-msgstr "Velg oppsettfil"
+msgid "editor.issues.editIssueGalley"
+msgstr "Endre oppsettet"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
@@ -398,108 +454,61 @@ msgstr ""
 "opp den passende <span class=\"pkp_help_title\">versjonen</span> for "
 "korrekturlesing."
 
-msgid "editor.issues.editIssueGalley"
-msgstr "Endre oppsettet"
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Velg oppsettfil"
 
-msgid "editor.article.remove.confirm"
+msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Er du sikker på at du vil fjerne artikkelen fra denne utgaven? Artikkelen "
-"kan legges til en annen utgave."
+"Språkvaskeren endrer filene i denne listen til filer for språkvask. Disse "
+"lastes opp under <span class=\"pkp_help_title\">«Språkvask»</span>."
 
-msgid "grid.action.removeArticle"
-msgstr "Fjern artikkelen fra utgaven"
-
-msgid "editor.article.removeCoverImageFileNotFound"
+msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
-"Bildet du ønsket å slette ble ikke funnet. Det kan være slettet allerede. "
-"Prøv å laste siden på nytt."
+"Filer som allerede er lastet opp til innlevering, uansett stadie, kan bli "
+"lagt til listen for korrekturlesing ved å krysse av «Inkluder» under og "
+"klikke «Søk». Alle tilgjengelige filer vil bli listet opp som alternativer."
 
-msgid "editor.article.editMetadata"
-msgstr "Endre metadata"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Vis planlagt publikasjon"
-
-msgid "grid.action.setCurrentIssue"
-msgstr "Sett nyeste utgave"
-
-msgid "grid.action.addIssueGalley"
-msgstr "Lag oppsett"
-
-msgid "grid.action.previewIssue"
-msgstr "Forhåndsvis"
-
-msgid "grid.action.viewIssue"
-msgstr "Vis"
-
-msgid "grid.action.publish"
-msgstr "Publiser utgave"
-
-msgid "grid.action.addGalley"
-msgstr "Legg til oppsett"
-
-msgid "editor.issues.identifiers"
-msgstr "Identifikatorer"
-
-msgid "editor.issues.confirmDeleteGalley"
-msgstr "Er du sikker på at du vil slette oppsettet for denne utgaven?"
-
-msgid "editor.issues.backToIssueGalleys"
-msgstr "Tilbake til oppsett"
-
-msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Det finnes allerede en offentlig identifikator for oppsettet."
-
-msgid "editor.issues.galleyLocaleRequired"
-msgstr "Du må legge inn en språkpakke for oppsettet."
-
-msgid "editor.issues.galleyLabelRequired"
-msgstr "Du må legge inn en etikett for oppsettet."
-
-msgid "editor.issues.noneIssueGalleys"
-msgstr "Ingen oppsett har blitt publisert."
-
-msgid "editor.issues.issueGalleysDescription"
-msgstr "Publiser oppsett med alt innhold fra utgaven."
-
-msgid "editor.issues.viewingGalley"
-msgstr "Vis oppsett"
-
-msgid "editor.issues.galley"
-msgstr "Oppsett"
-
-msgid "editor.issues.galleys"
-msgstr "Oppsett"
-
-msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Er du sikker på at du vil sette denne utgaven som den nyeste?"
-
-msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ugyldig bildeformat. Tillatte format: .gif, .jpg eller .png."
-
-msgid "editor.issues.removeCoverImageFileNotFound"
+msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"Bildet du ønsket å slette ble ikke funnet. Det kan allerede være slettet. "
-"Prøv å laste siden på nytt."
+"Denne offentlige identifikatoren {$publicIdentifier} finnes allerede for et "
+"element av samme type. Velg unike identifikatorer for samme type elementer i "
+"tidsskriftet ditt."
 
-msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr ""
-"Last på nytt og prøv igjen. Bildet du ville slette stemte ikke overens med "
-"bildet for denne utgaven."
+msgid "editor.article.coverImage"
+msgstr "Omslagsbilde"
 
-msgid "editor.issues.datePublished"
-msgstr "Dato publisert"
+#~ msgid "editor.issues.backIssues"
+#~ msgstr "Tidligere utgaver"
 
-msgid "editor.issues.editIssue"
-msgstr "Administrere utgave: {$issueIdentification}"
+#~ msgid "editor.issues.futureIssues"
+#~ msgstr "Framtidige utgaver"
 
-msgid "editor.publicIdentificationExists"
-msgstr ""
-"Velg en annen unik identifikator, siden «{$publicIdentifier}» eksisterer "
-"allerede for et annet element (utgave, artikkel, oppsett eller fil)."
+#~ msgid "editor.issues.invalidCoverPageFormat"
+#~ msgstr "Ugyldig forsideformat. Aksepterte format er .gif, .jpg, eller .png."
 
-msgid "editor.reassign"
-msgstr "Oppnevn på nytt"
+#~ msgid "editor.article.reviewForms"
+#~ msgstr "Vurderingsskjemaer"
 
-msgid "issues.submissions.issueIds"
-msgstr "Tildelt nummer"
+#~ msgid "editor.article.selectReviewForm"
+#~ msgstr "Velg vurderingsskjema"
+
+#~ msgid "editor.article.confirmChangeReviewForm"
+#~ msgstr ""
+#~ "<b>Advarsel:</b> Hvis du endrer dette vurderingsskjemaet vil dette virke "
+#~ "tilbake på alle svar som allerede er lagt inn av fagkonsulenter i dette "
+#~ "skjemaet. Er du sikker på at du vil fortsette?"
+
+#~ msgid "editor.issues.hideCoverPageArchives"
+#~ msgstr "Ikke vis miniatyr av omslagsbildet i lister over utgaver."
+
+#~ msgid "editor.issues.hideCoverPageCover"
+#~ msgstr "Ikke vis omslagsbilde før innholdsfortegnelsen."
+
+#~ msgid "editor.article.showCoverPage"
+#~ msgstr "Lag et omslag med følgende elementer for tildenne artikkelen."
+
+#~ msgid "editor.article.hideCoverPageToc"
+#~ msgstr "Ikke vis miniatyr av omslagsbilde i innholdsfortegnelsen."
+
+#~ msgid "editor.article.hideCoverPageAbstract"
+#~ msgstr "Ikke vis omslagsbilde i sammendragsvisningen."

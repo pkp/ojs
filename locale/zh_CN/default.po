@@ -23,139 +23,155 @@ msgstr "ART"
 msgid "section.default.policy"
 msgstr "栏目默认策略"
 
+msgid "default.genres.article"
+msgstr "稿件内容"
+
 msgid "default.contextSettings.checklist.notPreviouslyPublished"
-msgstr "该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编辑）."
+msgstr ""
+"该投稿还未被发表过，也没有被其他杂志接受(或者在评论中有一个解释已经提供给编"
+"辑）."
 
 msgid "default.contextSettings.checklist.fileFormat"
-msgstr "投稿文件的文件格式可以是 OpenOffice 格式，微软 Word 格式、RTF格式或者WordPerfect 格式文件。"
+msgstr ""
+"投稿文件的文件格式可以是 OpenOffice 格式，微软 Word 格式、RTF格式或者"
+"WordPerfect 格式文件。"
 
 msgid "default.contextSettings.checklist.addressesLinked"
 msgstr "条件允许，尽可能提供参考文献的URL。"
 
 msgid "default.contextSettings.checklist.submissionAppearance"
 msgstr ""
-"该文本设置为单倍行距；字号大小为12点； 采用斜体，而不是强调 (除非获得URL 地址)，所有的插图、图片以及表格放在文本的适当位置，而不一定非得是最后。"
+"该文本设置为单倍行距；字号大小为12点； 采用斜体，而不是强调 (除非获得URL 地"
+"址)，所有的插图、图片以及表格放在文本的适当位置，而不一定非得是最后。"
 
 msgid "default.contextSettings.checklist.bibliographicRequirements"
-msgstr "该文本符合<a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\" target=\"_new\">作者指南</a>里文体和书目的要求,作者指南可以在关于期刊里找到."
+msgstr ""
+"该文本符合<a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\" target=\"_new\">作者指南</a>里文体和书目的要"
+"求,作者指南可以在关于期刊里找到."
 
 msgid "default.contextSettings.privacyStatement"
-msgstr "<p>在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不提供给任何其他目的或任何其他方.</p>"
+msgstr ""
+"<p>在这个期刊网站已经输入的姓名于电子邮箱地址只用于该期刊已经阐述的目的,将不"
+"提供给任何其他目的或任何其他方.</p>"
 
 msgid "default.contextSettings.openAccessPolicy"
 msgstr "本期刊遵循内容时开放存取原则，促使其研究免费地用于公共全球知识交流."
 
-msgid "default.contextSettings.emailSignature"
-msgstr ""
-"<br/>\n"
-"________________________________________________________________________<br/>"
-"\n"
-"<a href=\"{$contextUrl}\">{$contextName}</a>"
-
 msgid "default.contextSettings.forReaders"
 msgstr ""
-"我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href=\"{$index Url}/{$journal Path}/user/"
-"register\">注册</a>链接。完成注册后，读者可以接收到期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。期刊上的<"
-"a href=\"{$index Url}/{$journal Path}/about/submissions#privacyStatement\""
-">隐私声明</a>保证读者的姓名和电子邮件地址不会被用于其他用途。"
+"我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href=\"{$index "
+"Url}/{$journal Path}/user/register\">注册</a>链接。完成注册后，读者可以接收到"
+"期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。"
+"期刊上的<a href=\"{$index Url}/{$journal Path}/about/"
+"submissions#privacyStatement\">隐私声明</a>保证读者的姓名和电子邮件地址不会被"
+"用于其他用途。"
 
 msgid "default.contextSettings.forAuthors"
 msgstr ""
-"对这份期刊感兴趣吗？我们建议您看一下<a href=\"{$indexUrl}/{$contextPath}/about\""
-">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href=\"{$indexUrl}/{$contextPath}/about/"
-"submissions#authorGuidelines\">作者指引</a>。作者在进行投稿之前必须在本期刊<a href=\""
-"{$indexUrl}/{$contextPath}/user/register\">注册</a>，而如果已经注册的话，可以简单地<a href=\""
-"{$indexUrl}/index/login\">登入</a>并且开始五个步骤的投稿流程。"
+"对这份期刊感兴趣吗？我们建议您看一下<a href=\"{$indexUrl}/{$contextPath}/"
+"about\">期刊介绍</a>页面，以了解期刊的栏目方针；也请同时看一下 <a href="
+"\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">作者指引</"
+"a>。作者在进行投稿之前必须在本期刊<a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\">注册</a>，而如果已经注册的话，可以简单地<a href=\"{$indexUrl}/"
+"index/login\">登入</a>并且开始五个步骤的投稿流程。"
 
 msgid "default.contextSettings.forLibrarians"
 msgstr ""
-"我们鼓励图书馆员将这份期刊加入其图书馆的电子期刊数据库之中。同时，这份期刊的开源码出版系统或许会适合图书馆放置他们的职员正在编辑的期刊。(请见<a "
-"href=\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+"我们鼓励图书馆员将这份期刊加入其图书馆的电子期刊数据库之中。同时，这份期刊的"
+"开源码出版系统或许会适合图书馆放置他们的职员正在编辑的期刊。(请见<a href="
+"\"http://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
 
 msgid "default.contextSettings.lockssLicense"
 msgstr ""
-"这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href="
-"\"http://lockss.stanford.edu/\">更多信息...</a>"
+"这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些"
+"图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href=\"http://"
+"lockss.stanford.edu/\">更多信息...</a>"
 
-msgid "default.groups.abbrev.externalReviewer"
-msgstr "R"
-
-msgid "default.groups.plural.externalReviewer"
-msgstr "审稿人"
-
-msgid "default.groups.name.externalReviewer"
-msgstr "审稿人"
-
-msgid "default.genres.sourceTexts"
-msgstr "源文本"
-
-msgid "default.genres.dataSet"
-msgstr "数据集"
-
-msgid "default.genres.dataAnalysis"
-msgstr "数据分析"
-
-msgid "default.genres.researchResults"
-msgstr "科研结果"
-
-msgid "default.genres.researchMaterials"
-msgstr "科研资料"
-
-msgid "default.genres.researchInstrument"
-msgstr "科研仪器"
-
-msgid "default.groups.abbrev.subscriptionManager"
-msgstr "SubM"
-
-msgid "default.groups.plural.subscriptionManager"
-msgstr "订阅管理员"
-
-msgid "default.groups.name.subscriptionManager"
-msgstr "订阅管理员"
-
-msgid "default.groups.abbrev.sectionEditor"
-msgstr "SecE"
-
-msgid "default.groups.plural.sectionEditor"
-msgstr "栏目编辑"
-
-msgid "default.groups.name.sectionEditor"
-msgstr "栏目编辑"
-
-msgid "default.groups.abbrev.guestEditor"
-msgstr "GE"
-
-msgid "default.groups.plural.guestEditor"
-msgstr "客座编辑"
-
-msgid "default.groups.name.guestEditor"
-msgstr "客座编辑"
-
-msgid "default.groups.abbrev.editor"
-msgstr "JE"
-
-msgid "default.groups.plural.editor"
-msgstr "期刊编辑"
-
-msgid "default.groups.name.editor"
-msgstr "期刊编辑"
-
-msgid "default.groups.abbrev.manager"
-msgstr "JM"
-
-msgid "default.groups.plural.manager"
-msgstr "期刊管理员"
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"该期刊利用CLOCKSS系统在参与的图书馆之间创建分布式存档系统，并允许这些图书馆创"
+"建期刊的永久档案，以进行保存和恢复。 <a href=\"http://clockss.org/\">更多... "
+"</a>"
 
 msgid "default.groups.name.manager"
 msgstr "期刊管理员"
 
-msgid "default.contextSettings.clockssLicense"
-msgstr ""
-"该期刊利用CLOCKSS系统在参与的图书馆之间创建分布式存档系统，并允许这些图书馆创建期刊的永久档案，以进行保存和恢复。 <a href=\""
-"http://clockss.org/\">更多... </a>"
+msgid "default.groups.plural.manager"
+msgstr "期刊管理员"
 
-msgid "default.genres.article"
-msgstr "稿件内容"
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "期刊编辑"
+
+msgid "default.groups.plural.editor"
+msgstr "期刊编辑"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "客座编辑"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "客座编辑"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "栏目编辑"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "栏目编辑"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "订阅管理员"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "订阅管理员"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "科研仪器"
+
+msgid "default.genres.researchMaterials"
+msgstr "科研资料"
+
+msgid "default.genres.researchResults"
+msgstr "科研结果"
 
 msgid "default.genres.transcripts"
 msgstr "成绩单"
+
+msgid "default.genres.dataAnalysis"
+msgstr "数据分析"
+
+msgid "default.genres.dataSet"
+msgstr "数据集"
+
+msgid "default.genres.sourceTexts"
+msgstr "源文本"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "审稿人"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "审稿人"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""
+"<br/>\n"
+"________________________________________________________________________<br/"
+">\n"
+"<a href=\"{$contextUrl}\">{$contextName}</a>"

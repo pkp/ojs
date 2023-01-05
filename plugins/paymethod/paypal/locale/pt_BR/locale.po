@@ -11,31 +11,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.paymethod.paypal.error"
-msgstr ""
-"Ocorreu um erro na transação. Entre em contato com o gerente da revista para "
-"obter detalhes."
-
-msgid "plugins.paymethod.paypal.settings.secret"
-msgstr "Senha"
-
-msgid "plugins.paymethod.paypal.settings.clientId"
-msgstr "ID do Cliente"
-
-msgid "plugins.paymethod.paypal.settings.accountName"
-msgstr "Nome da Conta"
-
-msgid "plugins.paymethod.paypal.settings.testMode"
-msgstr "Modo de Teste"
-
-msgid "plugins.paymethod.paypal.settings"
-msgstr "Configurações do PayPal"
-
-msgid "plugins.paymethod.paypal"
-msgstr "Pagamento via PayPal"
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Plugin de Pagamento via Paypal"
 
 msgid "plugins.paymethod.paypal.description"
 msgstr "Pagamentos processados por meio do serviço PayPal."
 
-msgid "plugins.paymethod.paypal.displayName"
-msgstr "Plugin de Pagamento via Paypal"
+msgid "plugins.paymethod.paypal"
+msgstr "Pagamento via PayPal"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Configurações do PayPal"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Modo de Teste"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Nome da Conta"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "ID do Cliente"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Senha"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"Ocorreu um erro na transação. Entre em contato com o gerente da revista para "
+"obter detalhes."

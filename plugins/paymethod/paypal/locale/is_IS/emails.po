@@ -6,3 +6,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Weblate\n"
+
+msgid "emails.paypalInvestigatePayment.subject"
+msgstr ""
+
+msgid "emails.paypalInvestigatePayment.body"
+msgstr ""
+
+msgid "emails.paypalInvestigatePayment.description"
+msgstr ""

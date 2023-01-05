@@ -11,120 +11,132 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "author.submit.submissionFile"
-msgstr "გასაგზავნი ფაილი"
-
-msgid "author.submit.form.titleRequired"
-msgstr "გთხოვთ შეიტანოთ სტატიის სათაური."
-
-msgid "author.submit.form.authorRequired"
-msgstr "სულ მცირე, ერთი ავტორი სავალდებულოა."
-
-msgid "author.submit.deleteAuthor"
-msgstr "ავტორის წაშლა"
-
-msgid "author.submit.addAuthor"
-msgstr "ავტორის დამატება"
-
-msgid "author.submit.reorder"
-msgstr "ავტორების სახელების გადაადგილება"
-
-msgid "author.submit.comments"
-msgstr "შეიტანეთ ტექსტი (არასავალდებულო)"
-
-msgid "author.submit.journalSection"
-msgstr "ჟურნალის სექცია"
-
-msgid "author.submissions.noSubmissions"
-msgstr "არ არის გაგზავნილი მასალები."
-
-msgid "author.submissions.viewStatus"
-msgstr "სტატუსის ჩვენება"
-
-msgid "author.submit.requestWaiver"
-msgstr "საფასურის გადახდის გაუქმების მოთხოვნა"
-
-msgid "author.submit.notAccepting"
-msgstr "ამჟამად ეს ჟურნალი არ იღებს მასალებს."
-
-msgid "author.submit.nextSteps"
-msgstr "შემდეგი ბიჯები"
-
-msgid "author.submit.confirmation"
-msgstr "დადასტურება"
-
-msgid "author.submit.supplementaryFiles"
-msgstr "დამატებითი ფაილების ატვირთვა"
-
-msgid "author.submit.metadata"
-msgstr "მეტა-მონაცემების შეტანა"
-
-msgid "author.submit.upload"
-msgstr "მასალის ატვირთვა"
-
-msgid "author.submit.start"
-msgstr "დაწყება"
-
-msgid "author.submit.step5"
-msgstr "ბიჯი 5. მასალის შეტანის დადასტურება"
-
-msgid "author.submit.step4a"
-msgstr "ბიჯი 4ა. დამატებითი ფაილის ატვირთვა"
-
-msgid "author.submit.step4"
-msgstr "ბიჯი 4. დამატებითი ფაილების ატვირთვა"
-
-msgid "author.submit.step3"
-msgstr "ბიჯი 3. მასალის მეტა-მონაცემების შეტანა"
-
-msgid "author.submit.step2"
-msgstr "ბიჯი 2. მასალების ატვირთვა"
-
-msgid "author.submit.step1"
-msgstr "ბიჯი 1. შეტანის დაწყება"
-
-msgid "author.submit.startHereTitle"
-msgstr "ახალი შენატანის გაგზავნა"
-
-msgid "author.submit.stepsToSubmit"
-msgstr "ხუთი ნაბიჯი გაგზავნისათვის"
-
-msgid "author.submit.submitArticle"
-msgstr "სტატიის გაგზავნა"
+msgid "author.submit"
+msgstr "ახალი შენატანი"
 
 msgid "author.track"
 msgstr "აქტიური შენატანები"
 
-msgid "author.submit"
-msgstr "ახალი შენატანი"
-
-msgid "author.submit.submissionIndexingDescription"
+msgid "author.competingInterests"
 msgstr ""
-"მიუთითეთ საკვანძო სიტყვები ამ მასალის ინდექსაციისათვის; საკვანძო სიტყვები "
-"გამოყავით წერტილმძიმით (სიტყვა1;სიტყვა2;სიტყვა3)."
+"ინტერესთა კონფლიქტი <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">ინტერესთა კონფლიქტის წესები</a>"
 
-msgid "author.submit.selectPrincipalContact"
-msgstr "ძირითადი ავტორი რედაქციასთან მიმოწერისათვის."
+msgid "author.submit.submitArticle"
+msgstr "სტატიის გაგზავნა"
 
-msgid "author.submit.reorderInstructions"
+msgid "author.submit.stepsToSubmit"
+msgstr "ხუთი ნაბიჯი გაგზავნისათვის"
+
+msgid "author.submit.startHereTitle"
+msgstr "ახალი შენატანის გაგზავნა"
+
+msgid "author.submit.startHereLink"
 msgstr ""
-"დაალაგეთ ავტორთა სახელები იმ თანმიმდევრობით, რომლითაც ისინი უნდა იყოს "
-"მითითებული სტატიაში."
+"<a href=\"{$submitUrl}\" class=\"action\">დააწკაპუნეთ აქ</a> შეტანის ხუთი "
+"ნაბიჯის პროცესზე გადასასვლელად."
 
-msgid "submission.submit.privacyStatement"
-msgstr "ჟურნალის კონფიდენციალურობის განცხადება"
+msgid "author.submit.step1"
+msgstr "ბიჯი 1. შეტანის დაწყება"
 
-msgid "author.submit.form.localeRequired"
-msgstr "გთხოვთ, აირჩიეთ შესატანი მასალის ენა."
+msgid "author.submit.step2"
+msgstr "ბიჯი 2. მასალების ატვირთვა"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "გთხოვთ, აირჩეით ჟურნალის შესაბამისი განყოფილება ამ მასალისათვის."
+msgid "author.submit.step3"
+msgstr "ბიჯი 3. მასალის მეტა-მონაცემების შეტანა"
 
-msgid "submission.submit.coverNote"
-msgstr "კომენტარები რედაქტორისათვის"
+msgid "author.submit.step4"
+msgstr "ბიჯი 4. დამატებითი ფაილების ატვირთვა"
 
-msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "გასაგრძელებლად უნდა დაეთანხმოთ საავტორო უფლებების გადაცემის წესებს."
+msgid "author.submit.step4a"
+msgstr "ბიჯი 4ა. დამატებითი ფაილის ატვირთვა"
+
+msgid "author.submit.step5"
+msgstr "ბიჯი 5. მასალის შეტანის დადასტურება"
+
+msgid "author.submit.start"
+msgstr "დაწყება"
+
+msgid "author.submit.upload"
+msgstr "მასალის ატვირთვა"
+
+msgid "author.submit.metadata"
+msgstr "მეტა-მონაცემების შეტანა"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "დამატებითი ფაილების ატვირთვა"
+
+msgid "author.submit.confirmation"
+msgstr "დადასტურება"
+
+msgid "author.submit.nextSteps"
+msgstr "შემდეგი ბიჯები"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"შეგიძლიათ ამ შეტანის დასრულება მოგვიანებით, ავტორის გვერდზე „აქტიური "
+"მასალები“-ს არჩევით."
+
+msgid "author.submit.notAccepting"
+msgstr "ამჟამად ეს ჟურნალი არ იღებს მასალებს."
+
+msgid "author.submit.requestWaiver"
+msgstr "საფასურის გადახდის გაუქმების მოთხოვნა"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "გთხოვთ, განიხილოთ ამ სტატიის შეტანის საფასურის გაუქმების შესაძლებლობა"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"გთხოვთ გამოიყენთ კომენტარების ველი ქვემოთ მიზეზების მისათითებლად, თუ რატომ "
+"უნდა გაქუმდეს საფასური."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"თუ თქვენ ითხოვთ საფასურის გაუქმებას, უნდა მიუთითოთ მიზეზი შესაბამის ველში."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "განხილვის პროცესში {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "განხილვის პროცესში: საჭიროა ცვლილება"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "განხილვის პროცესში: საჭიროა ლიტერატურული ჩასწორება"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "განხილვის პროცესში: საჭიროა კორექტურა"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "ლიტერატურულად ჩასწორებული ვერსიის ატვირთვა"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "შესწორებები კორექტურისას"
+
+msgid "author.submissions.confirmDelete"
+msgstr ""
+"დარწმუნებული ხართ, რომ გსურთ იმ მასალის წაშლა, რომლის გაგზავნა არ "
+"დასრულებულა?"
+
+msgid "author.submissions.viewStatus"
+msgstr "სტატუსის ჩვენება"
+
+msgid "author.submissions.noSubmissions"
+msgstr "არ არის გაგზავნილი მასალები."
+
+msgid "author.submit.journalSection"
+msgstr "ჟურნალის სექცია"
+
+msgid "author.submit.journalSectionDescription"
+msgstr ""
+"აირჩიეთ შესაბამისი განყოფილება მასალისათვის (იხილეთ „განყოფილებები და "
+"წესები“ გვერდზე <a href=\"{$aboutUrl}\" target=\"_new\">„ჟურნალის შესახებ“</"
+"a>)."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"გასაგრძელებლად უნდა დარწმუნდეთ, რომ შესრულებულია საკონტროლო სიის ყველა "
+"პუნქტი."
 
 msgid "author.submit.copyrightNoticeAgree"
 msgstr ""
@@ -132,95 +144,89 @@ msgstr ""
 "გამოყენებული იქნება ამ მასალასთან მიმართებაში, თუ ის გამოქვეყნდება ამ "
 "ჟურნალში (კომენტარები რედაქტორისათვის შეიძლება დაემატოს ქვემოთ)."
 
-msgid "author.submit.verifyChecklist"
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "გასაგრძელებლად უნდა დაეთანხმოთ საავტორო უფლებების გადაცემის წესებს."
+
+msgid "submission.submit.coverNote"
+msgstr "კომენტარები რედაქტორისათვის"
+
+msgid "author.submit.comments"
+msgstr "შეიტანეთ ტექსტი (არასავალდებულო)"
+
+msgid "author.submit.form.sectionRequired"
+msgstr "გთხოვთ, აირჩეით ჟურნალის შესაბამისი განყოფილება ამ მასალისათვის."
+
+msgid "author.submit.form.localeRequired"
+msgstr "გთხოვთ, აირჩიეთ შესატანი მასალის ენა."
+
+msgid "submission.submit.privacyStatement"
+msgstr "ჟურნალის კონფიდენციალურობის განცხადება"
+
+msgid "author.submit.reorderInstructions"
 msgstr ""
-"გასაგრძელებლად უნდა დარწმუნდეთ, რომ შესრულებულია საკონტროლო სიის ყველა "
-"პუნქტი."
+"დაალაგეთ ავტორთა სახელები იმ თანმიმდევრობით, რომლითაც ისინი უნდა იყოს "
+"მითითებული სტატიაში."
 
-msgid "author.submit.journalSectionDescription"
+msgid "author.submit.reorder"
+msgstr "ავტორების სახელების გადაადგილება"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "ძირითადი ავტორი რედაქციასთან მიმოწერისათვის."
+
+msgid "author.submit.addAuthor"
+msgstr "ავტორის დამატება"
+
+msgid "author.submit.deleteAuthor"
+msgstr "ავტორის წაშლა"
+
+msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"აირჩიეთ შესაბამისი განყოფილება მასალისათვის (იხილეთ „განყოფილებები და წესები“"
-" გვერდზე <a href=\"{$aboutUrl}\" target=\"_new\">„ჟურნალის შესახებ“</a>)."
-
-msgid "author.submissions.confirmDelete"
-msgstr ""
-"დარწმუნებული ხართ, რომ გსურთ იმ მასალის წაშლა, რომლის გაგზავნა არ "
-"დასრულებულა?"
-
-msgid "author.submissions.proofreadingCorrections"
-msgstr "შესწორებები კორექტურისას"
-
-msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "ლიტერატურულად ჩასწორებული ვერსიის ატვირთვა"
-
-msgid "author.submissions.queuedEditingProofread"
-msgstr "განხილვის პროცესში: საჭიროა კორექტურა"
-
-msgid "author.submissions.queuedEditingCopyedit"
-msgstr "განხილვის პროცესში: საჭიროა ლიტერატურული ჩასწორება"
-
-msgid "author.submissions.queuedReviewRevisions"
-msgstr "განხილვის პროცესში: საჭიროა ცვლილება"
-
-msgid "author.submissions.queuedReviewSubsequent"
-msgstr "განხილვის პროცესში {$round}"
-
-msgid "author.submit.mustEnterWaiverReason"
-msgstr ""
-"თუ თქვენ ითხოვთ საფასურის გაუქმებას, უნდა მიუთითოთ მიზეზი შესაბამის ველში."
-
-msgid "author.submit.addReasonsForWaiver"
-msgstr ""
-"გთხოვთ გამოიყენთ კომენტარების ველი ქვემოთ მიზეზების მისათითებლად, თუ რატომ "
-"უნდა გაქუმდეს საფასური."
-
-msgid "author.submit.qualifyForWaiver"
-msgstr "გთხოვთ, განიხილოთ ამ სტატიის შეტანის საფასურის გაუქმების შესაძლებლობა"
-
-msgid "submission.submit.cancelSubmission"
-msgstr ""
-"შეგიძლიათ ამ შეტანის დასრულება მოგვიანებით, ავტორის გვერდზე „აქტიური "
-"მასალები“-ს არჩევით."
-
-msgid "author.submit.startHereLink"
-msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">დააწკაპუნეთ აქ</a> შეტანის ხუთი "
-"ნაბიჯის პროცესზე გადასასვლელად."
-
-msgid "author.competingInterests"
-msgstr ""
-"ინტერესთა კონფლიქტი <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">ინტერესთა კონფლიქტის წესები</a>"
+"მიუთითეთ საკვანძო სიტყვები ამ მასალის ინდექსაციისათვის; საკვანძო სიტყვები "
+"გამოყავით წერტილმძიმით (სიტყვა1;სიტყვა2;სიტყვა3)."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
 "აღწერეთ თქვენი კვლევის გეო-სივრცული, ქრონოლოგიური, ან ისტორიული დაფარვა, ან/"
 "და საკვლევი ობიექტის მახასიათებლები."
 
-msgid "author.submit.addSupplementaryFile"
-msgstr "დამატებითი ფაილის დამატება"
-
-msgid "author.submit.uploadSuppFile"
-msgstr "დამატებითი ფაილის ატვირთვა"
-
-msgid "author.submit.confirmDeleteSuppFile"
-msgstr "დარწმუნებული ხართ, რომ გსურთ ამ დამატებითი ფაილის წაშლა?"
-
-msgid "author.submit.backToSupplementaryFiles"
-msgstr "დამატებით ფაილებზე დაბრუნება"
-
-msgid "author.submit.noSupplementaryFiles"
-msgstr "დამატებითი ფაილები არ იყო არჩეული ამ მასალისათვის."
-
-msgid "author.submit.forgottenSubmitSuppFile"
+msgid "author.submit.languageInstructions"
 msgstr ""
-"დარწმუნებული ხართ, რომ გსურთ არჩეული დამატებითი ფაილის ატვირთვის გარეშე "
-"გაგრძელება?"
+"English=en; French=fr; Spanish=es; Georgian=ka. <a href=\"http://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">დამატებითი კოდები</"
+"a>."
 
-msgid "author.submit.supplementaryFiles.saveToUpload"
+msgid "author.submit.form.authorRequired"
+msgstr "სულ მცირე, ერთი ავტორი სავალდებულოა."
+
+msgid "author.submit.form.authorRequiredFields"
 msgstr ""
-"დააჭირეთ ღილაკზე „დამახსოვრება“, ფაილის ასატვირთად (ამის შემდეგ შესაძლებელი "
-"იქნება სხვა ფაილების ატვირთვაც)."
+"ყოველი ავტორისათვის სავალდებულია სახელის, გვარის და ელფოსტის მისამართის "
+"შეტანა."
+
+msgid "author.submit.form.titleRequired"
+msgstr "გთხოვთ შეიტანოთ სტატიის სათაური."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "გთხოვთ, შეიტანოთ თქვენი სტატიის აბსტრაქტი."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"თქვენ გადააჭარბეთ აბსტრაქტისათვის განკუთვნილი სიტყვების მაქსიმალურ ოდენობას."
+
+msgid "author.submit.submissionFile"
+msgstr "გასაგზავნი ფაილი"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "ფაილის ატვირთვა"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "ფაილის ამოცვლა"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "ფაილი ვერ აიტვირთა."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ფაილის ატვირთვის გარეშე გაგრძელება?"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
@@ -231,64 +237,106 @@ msgstr ""
 "მკითხველისათვის, (d) სურათები და ცხრილები, რომელტა ჩასმა ტექსტში შეუძლებლია, "
 "ან სხვა სახის მასალები, რომლებიც კვლევას ფასეულობას მატებენ."
 
-msgid "author.submit.noSubmissionConfirm"
-msgstr "დარწმუნებული ხართ, რომ გსურთ ფაილის ატვირთვის გარეშე გაგრძელება?"
-
-msgid "author.submit.noSubmissionFile"
-msgstr "ფაილი ვერ აიტვირთა."
-
-msgid "author.submit.replaceSubmissionFile"
-msgstr "ფაილის ამოცვლა"
-
-msgid "author.submit.uploadSubmissionFile"
-msgstr "ფაილის ატვირთვა"
-
-msgid "author.submit.form.wordCountAlert"
+msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
-"თქვენ გადააჭარბეთ აბსტრაქტისათვის განკუთვნილი სიტყვების მაქსიმალურ ოდენობას."
+"დააჭირეთ ღილაკზე „დამახსოვრება“, ფაილის ასატვირთად (ამის შემდეგ შესაძლებელი "
+"იქნება სხვა ფაილების ატვირთვაც)."
 
-msgid "author.submit.form.abstractRequired"
-msgstr "გთხოვთ, შეიტანოთ თქვენი სტატიის აბსტრაქტი."
-
-msgid "author.submit.form.authorRequiredFields"
+msgid "author.submit.forgottenSubmitSuppFile"
 msgstr ""
-"ყოველი ავტორისათვის სავალდებულია სახელის, გვარის და ელფოსტის მისამართის "
-"შეტანა."
+"დარწმუნებული ხართ, რომ გსურთ არჩეული დამატებითი ფაილის ატვირთვის გარეშე "
+"გაგრძელება?"
 
-msgid "author.submit.languageInstructions"
+msgid "author.submit.noSupplementaryFiles"
+msgstr "დამატებითი ფაილები არ იყო არჩეული ამ მასალისათვის."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "დამატებით ფაილებზე დაბრუნება"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ამ დამატებითი ფაილის წაშლა?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "დამატებითი ფაილის ატვირთვა"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "დამატებითი ფაილის დამატება"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "დამატებითი ფაილის ჩასწორება"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "დამატებითი ფაილის მეტა-მონაცემები"
+
+msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"English=en; French=fr; Spanish=es; Georgian=ka. <a href=\"http://www.loc.gov/"
-"standards/iso639-2/php/code_list.php\" target=\"_blank\">დამატებითი "
-"კოდები</a>."
+"დამატებითი მასალების ინდექსირებისათვის მიუთითეთ შემდეგი მეტა-მონაცემები "
+"ატვირთული დამატებითი ფაილისათვის."
 
-msgid "author.submit.authorSubmitLoginMessage"
+msgid "author.submit.supplementaryFileUpload"
+msgstr "დამატებითი ფაილი"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "ფაილის ავტორი (ან მფლობელი)"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "კვლევის ხელსაწყო"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "კვლევის მასალები"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "კვლევის შედეგები"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "ტრანსკრიპტი"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "მონაცემთა ანალიზი"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "მონაცემთა ნაკრები"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "საწყისი ტექსტი"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "მოკლე აღწერა"
+
+msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"ამ ჟურნალში გამოქვეყნებისათვის საჭიროა ანგარიში. ის საშუალებას მისცემს ჩვენს "
-"რედაქტორებს თვალყური ადვენონ თქვენს მიერ გამოგზავნილი მასალებს და "
-"დაგიკავშირდნენ, როდესაც მასალის სტატუსი შეიცვლება, ან თუ საჭიროა დამატებითი "
-"ინფორმაცია."
+"ფაილის მიწოდება რეცენზენტებზე (მეტა-მონაცემების გარეშე), ვინაიდან ეს არ "
+"არღვევს ანონიმური რეცენზირების მოთხოვნებს."
 
-msgid "author.article.authorRevisedFile"
-msgstr "ავტორის ფაილი"
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "მხოლოდ ოფიციალურად გამოქვეყნებული მასალებისათვის."
 
-msgid "author.article.copyeditedFile"
-msgstr "ფაილი ლიტერატურული ჩასწორების შემდგომ"
+msgid "author.submit.suppFile.dateDescription"
+msgstr "მონაცემთა შეკრების, ან ხელსაწყოს შექმნის თარიღი."
 
-msgid "author.article.uploadAuthorVersion"
-msgstr "ავტორის ვერსიის ატვირთვა"
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "კვლევის, ან მასალის სხვა წყაროების დასახელება."
 
-msgid "author.submit.submissionComplete"
-msgstr ""
-"მასალა გაგზავნილია. გმადლობთ, რომ დაინტერესდით ჟურნალით {$journalTitle}."
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "მიუთითეთ სხვა"
 
-msgid "author.submit.finishSubmission"
-msgstr "გაგზავნის დასრულება"
+msgid "author.submit.suppFile.noFile"
+msgstr "არ არის ატვირთული ფაილები."
 
-msgid "author.submit.filesSummary"
-msgstr "მონაცემები ფაილების შესახებ"
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "გთხოვთ, შეიტანეთ ამ დამატებითი ფაილის დასახელება."
 
-msgid "author.submit.noFiles"
-msgstr "არც ერთი ფაილი არ მიემაგრა ამ გაგზავნილ მასალას."
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "გთხოვთ შეიტანოთ თემა."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "გთხოვთ შეიტანოთ აღწერა."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "დამატებითი ფაილის საჯარო იდენტიფიკატორი არ არსებობს."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "დამატებითი ფაილის საჯარო იდენტიფიკატორი"
 
 msgid "author.submit.confirmationDescription"
 msgstr ""
@@ -298,78 +346,31 @@ msgstr ""
 "დევნება მასალის სარედაქციო პროცესის გავლისას, ჟურნალის ვებ-საიტზე. გმადლობთ, "
 "რომ დაინტერესდით ჟურნალით {$journalTitle}."
 
-msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "დამატებითი ფაილის საჯარო იდენტიფიკატორი"
+msgid "author.submit.noFiles"
+msgstr "არც ერთი ფაილი არ მიემაგრა ამ გაგზავნილ მასალას."
 
-msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "დამატებითი ფაილის საჯარო იდენტიფიკატორი არ არსებობს."
+msgid "author.submit.filesSummary"
+msgstr "მონაცემები ფაილების შესახებ"
 
-msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "გთხოვთ შეიტანოთ აღწერა."
+msgid "author.submit.finishSubmission"
+msgstr "გაგზავნის დასრულება"
 
-msgid "author.submit.suppFile.form.subjectRequired"
-msgstr "გთხოვთ შეიტანოთ თემა."
-
-msgid "author.submit.suppFile.form.titleRequired"
-msgstr "გთხოვთ, შეიტანეთ ამ დამატებითი ფაილის დასახელება."
-
-msgid "author.submit.suppFile.noFile"
-msgstr "არ არის ატვირთული ფაილები."
-
-msgid "author.submit.suppFile.specifyOtherType"
-msgstr "მიუთითეთ სხვა"
-
-msgid "author.submit.suppFile.sourceDescription"
-msgstr "კვლევის, ან მასალის სხვა წყაროების დასახელება."
-
-msgid "author.submit.suppFile.dateDescription"
-msgstr "მონაცემთა შეკრების, ან ხელსაწყოს შექმნის თარიღი."
-
-msgid "author.submit.suppFile.publisherDescription"
-msgstr "მხოლოდ ოფიციალურად გამოქვეყნებული მასალებისათვის."
-
-msgid "author.submit.suppFile.availableToPeers"
+msgid "author.submit.submissionComplete"
 msgstr ""
-"ფაილის მიწოდება რეცენზენტებზე (მეტა-მონაცემების გარეშე), ვინაიდან ეს არ "
-"არღვევს ანონიმური რეცენზირების მოთხოვნებს."
+"მასალა გაგზავნილია. გმადლობთ, რომ დაინტერესდით ჟურნალით {$journalTitle}."
 
-msgid "author.submit.suppFile.briefDescription"
-msgstr "მოკლე აღწერა"
+msgid "author.article.uploadAuthorVersion"
+msgstr "ავტორის ვერსიის ატვირთვა"
 
-msgid "author.submit.suppFile.sourceText"
-msgstr "საწყისი ტექსტი"
+msgid "author.article.copyeditedFile"
+msgstr "ფაილი ლიტერატურული ჩასწორების შემდგომ"
 
-msgid "author.submit.suppFile.dataSet"
-msgstr "მონაცემთა ნაკრები"
+msgid "author.article.authorRevisedFile"
+msgstr "ავტორის ფაილი"
 
-msgid "author.submit.suppFile.dataAnalysis"
-msgstr "მონაცემთა ანალიზი"
-
-msgid "author.submit.suppFile.transcripts"
-msgstr "ტრანსკრიპტი"
-
-msgid "author.submit.suppFile.researchResults"
-msgstr "კვლევის შედეგები"
-
-msgid "author.submit.suppFile.researchMaterials"
-msgstr "კვლევის მასალები"
-
-msgid "author.submit.suppFile.researchInstrument"
-msgstr "კვლევის ხელსაწყო"
-
-msgid "author.submit.suppFile.createrOrOwner"
-msgstr "ფაილის ავტორი (ან მფლობელი)"
-
-msgid "author.submit.supplementaryFileUpload"
-msgstr "დამატებითი ფაილი"
-
-msgid "author.submit.supplementaryFileDataDescription"
+msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"დამატებითი მასალების ინდექსირებისათვის მიუთითეთ შემდეგი მეტა-მონაცემები "
-"ატვირთული დამატებითი ფაილისათვის."
-
-msgid "author.submit.supplementaryFileData"
-msgstr "დამატებითი ფაილის მეტა-მონაცემები"
-
-msgid "author.submit.editSupplementaryFile"
-msgstr "დამატებითი ფაილის ჩასწორება"
+"ამ ჟურნალში გამოქვეყნებისათვის საჭიროა ანგარიში. ის საშუალებას მისცემს ჩვენს "
+"რედაქტორებს თვალყური ადვენონ თქვენს მიერ გამოგზავნილი მასალებს და "
+"დაგიკავშირდნენ, როდესაც მასალის სტატუსი შეიცვლება, ან თუ საჭიროა დამატებითი "
+"ინფორმაცია."

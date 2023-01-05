@@ -11,15 +11,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.generic.recommendBySimilarity.advancedSearch"
-msgstr "start et avansert søk etter lignende artikler"
-
-msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
-msgstr "Du kan også {$advancedSearchLink} for denne artikkelen."
-
-msgid "plugins.generic.recommendBySimilarity.heading"
-msgstr "Lignende artikler"
-
 msgid "plugins.generic.recommendBySimilarity.displayName"
 msgstr "Anbefal lignende artikler"
 
@@ -27,3 +18,12 @@ msgid "plugins.generic.recommendBySimilarity.description"
 msgstr ""
 "Dette programtillegget legger til en liste av lignende artikler i "
 "artikkelens abstraktside."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Lignende artikler"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Du kan også {$advancedSearchLink} for denne artikkelen."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "start et avansert søk etter lignende artikler"

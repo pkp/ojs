@@ -45,22 +45,32 @@ msgid "editor.me"
 msgstr "Jo"
 
 msgid "editor.publicIdentificationExists"
-msgstr "L'identificador públic '{$publicIdentifier}' correspon a un altre objecte ja existent (número, article, galerada o fitxer addicional). Trieu identificadors únics dins de la vostra revista."
+msgstr ""
+"L'identificador públic '{$publicIdentifier}' correspon a un altre objecte ja "
+"existent (número, article, galerada o fitxer addicional). Trieu "
+"identificadors únics dins de la vostra revista."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "No hi ha cap tramesa a l’arxivament."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Voleu desar els canvis fets a les trameses arxivades? Si marqueu una tramesa per suprimir-la, s’eliminarà permanentment del sistema."
+msgstr ""
+"Voleu desar els canvis fets a les trameses arxivades? Si marqueu una tramesa "
+"per suprimir-la, s’eliminarà permanentment del sistema."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Esteu segur/a que voleu enregistrar aquesta decisió?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Aquesta tramesa s’arxivarà després d’haver enviat el correu electrònic «Notifica a l’autor/a» o d’haver premut el botó «Omet el correu electrònic»."
+msgstr ""
+"Aquesta tramesa s’arxivarà després d’haver enviat el correu electrònic "
+"«Notifica a l’autor/a» o d’haver premut el botó «Omet el correu electrònic»."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Abans d’enviar la tramesa per fer la correcció d’originals, utilitzeu l’enllaç «Notifica a l’autor/a» per informar l’autor/a de la decisió i seleccioneu la versió que s’ha d’enviar."
+msgstr ""
+"Abans d’enviar la tramesa per fer la correcció d’originals, utilitzeu "
+"l’enllaç «Notifica a l’autor/a» per informar l’autor/a de la decisió i "
+"seleccioneu la versió que s’ha d’enviar."
 
 msgid "editor.notifyUsers"
 msgstr "Notifica als usuaris/àries"
@@ -84,10 +94,14 @@ msgid "editor.usersNotified"
 msgstr "S'ha notificat als usuaris/àries"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Envia aquest missatge a tots els usuaris/àries associats amb aquesta revista ({$count} usuaris/àries)"
+msgstr ""
+"Envia aquest missatge a tots els usuaris/àries associats amb aquesta revista "
+"({$count} usuaris/àries)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Envia aquest missatge als usuaris/àries associats amb aquesta revista que hagin indicat que volen rebre actualitzacions ({$count} usuaris/àries)"
+msgstr ""
+"Envia aquest missatge als usuaris/àries associats amb aquesta revista que "
+"hagin indicat que volen rebre actualitzacions ({$count} usuaris/àries)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Inclou la taula de continguts d’aquest número:"
@@ -98,11 +112,8 @@ msgstr "Administració de l’editor/a"
 msgid "editor.issues.createIssue"
 msgstr "Crea un número"
 
-msgid "editor.issues.backIssues"
-msgstr "Números anteriors"
-
-msgid "editor.issues.futureIssues"
-msgstr "Propers números"
+msgid "editor.issues.editIssue"
+msgstr "Gestió del número: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "Número actual"
@@ -122,6 +133,9 @@ msgstr "Publicats"
 msgid "editor.issues.unpublished"
 msgstr "No publicats"
 
+msgid "editor.issues.datePublished"
+msgstr "Data de publicació"
+
 msgid "editor.issues.volumeRequired"
 msgstr "Heu d’introduir un valor numèric positiu per al volum."
 
@@ -135,7 +149,9 @@ msgid "editor.issues.titleRequired"
 msgstr "Heu d’introduir un títol per al número."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Heu d’introduir la identificació per al número. Seleccioneu com a mínim una de les opcions d’identificació per al número."
+msgstr ""
+"Heu d’introduir la identificació per al número. Seleccioneu com a mínim una "
+"de les opcions d’identificació per al número."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Identificació del número"
@@ -173,14 +189,29 @@ msgstr "Corregits"
 msgid "editor.issues.removeCoverPage"
 msgstr "Voleu eliminar la imatge de la portada?"
 
-msgid "editor.issues.invalidCoverPageFormat"
-msgstr "El format de la portada no és vàlid. Els formats admesos són .gif, .jpg i .png."
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"La imatge de portada que volíeu eliminar no coincideix amb la d'aquest "
+"número. Actualitzi la pàgina i torni-ho a provar."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser "
+"que ja s'hagués eliminat. Intenti-ho recarregant la pàgina."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Format d'imatge de portada no vàlid. Els formats acceptats són .gif, .jpg, "
+"o .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Full d’estil"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "El format del full d’estil no és vàlid. Comproveu que el fitxer que heu tramès sigui un CSS vàlid. (No s’admeten fulls d’estil amb comentaris a l’inici.)"
+msgstr ""
+"El format del full d’estil no és vàlid. Comproveu que el fitxer que heu "
+"tramès sigui un CSS vàlid. (No s’admeten fulls d’estil amb comentaris a "
+"l’inici.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Voleu eliminar el full d’estil?"
@@ -193,12 +224,6 @@ msgstr "Crear una portada per a aquest número amb els elements següents."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Visualització"
-
-msgid "editor.issues.hideCoverPageArchives"
-msgstr "No mostris una miniatura de la imatge de la portada a la llista de números."
-
-msgid "editor.issues.hideCoverPageCover"
-msgstr "No mostris la imatge de la portada abans de la taula de continguts."
 
 msgid "editor.issues.openAccess"
 msgstr "Accés lliure"
@@ -216,13 +241,20 @@ msgid "editor.issues.cover"
 msgstr "Portada"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Si feu aquesta acció, tots els articles tornaran a la cua d’edició i tots els fitxers associats s'eliminaran permanentment. Esteu segur/a que voleu eliminar aquest número?"
+msgstr ""
+"Si feu aquesta acció, tots els articles tornaran a la cua d’edició i tots "
+"els fitxers associats s'eliminaran permanentment. Esteu segur/a que voleu "
+"eliminar aquest número?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Aquesta revista utilitza una ordenació de números personalitzada. <a href=\"{$url}\" class=\"action\">Reinicia als valors predeterminats</a>"
+msgstr ""
+"Aquesta revista utilitza una ordenació de números personalitzada. <a href="
+"\"{$url}\" class=\"action\">Reinicia als valors predeterminats</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Aquest número utilitza una ordenació de seccions personalitzada. <a href=\"{$url}\" class=\"action\">Reinicia als valors predeterminats</a>"
+msgstr ""
+"Aquest número utilitza una ordenació de seccions personalitzada. <a href="
+"\"{$url}\" class=\"action\">Reinicia als valors predeterminats</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Dades del número"
@@ -257,6 +289,9 @@ msgstr "Esteu segur/a que voleu publicar el número nou?"
 msgid "editor.issues.confirmUnpublish"
 msgstr "Esteu segur/a que voleu suprimir la publicació d’aquest número?"
 
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Segur que voleu establir aquest número com a l'actual?"
+
 msgid "editor.issues.publicArticleIdExists"
 msgstr "No es pot desar l’id. pública per a l’article:"
 
@@ -288,7 +323,9 @@ msgid "editor.issues.galleyLabelRequired"
 msgstr "Heu d’introduir una etiqueta per a les galerades d'aquest número."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Heu d’introduir una configuració regional per a les galerades d'aquest número."
+msgstr ""
+"Heu d’introduir una configuració regional per a les galerades d'aquest "
+"número."
 
 msgid "editor.issues.galleyPublicIdentificationExists"
 msgstr "La identificació pública de la galerada d'aquest número ja existeix."
@@ -299,8 +336,32 @@ msgstr "Torna a les galerades del número"
 msgid "editor.issues.confirmDeleteGalley"
 msgstr "Esteu segur/a que voleu suprimir aquesta galerada del número?"
 
+msgid "editor.issues.identifiers"
+msgstr "Identificadors"
+
 msgid "editor.navigation.futureIssues"
 msgstr "Propers números"
+
+msgid "grid.action.addGalley"
+msgstr "Afegir galerada"
+
+msgid "grid.action.publish"
+msgstr "Publicar número"
+
+msgid "grid.action.addIssue"
+msgstr "Crear número"
+
+msgid "grid.action.viewIssue"
+msgstr "Visualitzar"
+
+msgid "grid.action.previewIssue"
+msgstr "Previsualitzar"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crear galerada del número"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Establir número actual"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Números anteriors"
@@ -341,8 +402,23 @@ msgstr "Darrera tramesa completa"
 msgid "editor.submissions.assignedTo"
 msgstr "Assignat a un editor/a"
 
+msgid "issues.submissions.issueIds"
+msgstr "Assignat a un número"
+
 msgid "editor.submissions.inSection"
 msgstr "A la secció"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Mostrar publicació programada"
+
+msgid "editor.article.publishVersion"
+msgstr "Publicar versió"
+
+msgid "editor.article.viewMetadata"
+msgstr "Veure les metadades de la versió"
+
+msgid "editor.article.editMetadata"
+msgstr "Editar les metadades de la versió"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Planifica per a la publicació a"
@@ -351,106 +427,92 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Encara no s’ha assignat"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "No s’ha pagat la quota de publicació. Per poder planificar l’element per a la publicació, notifiqueu a l’autor/a que ha de pagar la quota o fer l'exempció del pagament."
-
-msgid "editor.article.showCoverPage"
-msgstr "Crea una portada per a aquest article amb els elements següents:"
-
-msgid "editor.article.hideCoverPageToc"
-msgstr "No mostris una miniatura de la imatge de la portada a la taula de continguts."
-
-msgid "editor.article.hideCoverPageAbstract"
-msgstr "No mostris la imatge de la portada a la visualització del resum de l’article."
-
-msgid "editor.article.remove"
-msgstr "Elimina"
-
-msgid "editor.issues.invalidAccessDate"
-msgstr "La data d’accés no és vàlida."
-
-msgid "editor.issues.editIssue"
-msgstr "Gestió del número: {$issueIdentification}"
-
-msgid "editor.issues.datePublished"
-msgstr "Data de publicació"
-
-msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "La imatge de portada que volíeu eliminar no coincideix amb la d'aquest número. Actualitzi la pàgina i torni-ho a provar."
-
-msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina."
-
-msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Format d'imatge de portada no vàlid. Els formats acceptats són .gif, .jpg, o .png."
-
-msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Segur que voleu establir aquest número com a l'actual?"
-
-msgid "editor.issues.identifiers"
-msgstr "Identificadors"
-
-msgid "grid.action.addGalley"
-msgstr "Afegir galerada"
-
-msgid "grid.action.publish"
-msgstr "Publicar número"
-
-msgid "grid.action.addIssue"
-msgstr "Crear número"
-
-msgid "grid.action.viewIssue"
-msgstr "Visualitzar"
-
-msgid "grid.action.previewIssue"
-msgstr "Previsualitzar"
-
-msgid "grid.action.addIssueGalley"
-msgstr "Crear galerada del número"
-
-msgid "grid.action.setCurrentIssue"
-msgstr "Establir número actual"
+msgstr ""
+"No s’ha pagat la quota de publicació. Per poder planificar l’element per a "
+"la publicació, notifiqueu a l’autor/a que ha de pagar la quota o fer "
+"l'exempció del pagament."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina."
+msgstr ""
+"La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser "
+"que ja s'hagués eliminat. Intenti-ho recarregant la pàgina."
 
 msgid "grid.action.removeArticle"
 msgstr "Eliminar article del número"
 
+msgid "editor.article.remove"
+msgstr "Elimina"
+
 msgid "editor.article.remove.confirm"
-msgstr "Segur que voleu eliminar aquest article del número? L'article estarà disponible per programar-lo en un altre número."
+msgstr ""
+"Segur que voleu eliminar aquest article del número? L'article estarà "
+"disponible per programar-lo en un altre número."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "La data d’accés no és vàlida."
 
 msgid "editor.issues.editIssueGalley"
 msgstr "Editar galerada del número"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "El maquetador/a prepara aquests arxius per a cada galerada i aleshores els carrega al lloc <span class=\"pkp_help_title\">Proves</span> adequat per a la seva correcció."
+msgstr ""
+"El maquetador/a prepara aquests arxius per a cada galerada i aleshores els "
+"carrega al lloc <span class=\"pkp_help_title\">Proves</span> adequat per a "
+"la seva correcció."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Seleccionar els arxius de galerada"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "El corrector transforma els borradors finals d'aquesta llista en versions revisades i les carrega a continuació a <span class=\"pkp_help_title\">Correcció d'originals</span>."
+msgstr ""
+"El corrector transforma els borradors finals d'aquesta llista en versions "
+"revisades i les carrega a continuació a <span class=\"pkp_help_title"
+"\">Correcció d'originals</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la llista de correcció de proves marcant la casella inferior \"Incloure\" i fent clic a \"Cercar\". D'aquesta manera es llistaran tots els arxius disponibles i es podran escollir per incloure'ls."
+msgstr ""
+"Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la "
+"llista de correcció de proves marcant la casella inferior \"Incloure\" i "
+"fent clic a \"Cercar\". D'aquesta manera es llistaran tots els arxius "
+"disponibles i es podran escollir per incloure'ls."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "L'identificador públic '{$publicIdentifier}' ja existeix per a un altre objecte del mateix tipus. Esculli identificadors únics per als objectes del mateix tipus dins la seva revista."
+msgstr ""
+"L'identificador públic '{$publicIdentifier}' ja existeix per a un altre "
+"objecte del mateix tipus. Esculli identificadors únics per als objectes del "
+"mateix tipus dins la seva revista."
 
 msgid "editor.article.coverImage"
 msgstr "Imatge per a la portada"
 
-msgid "editor.article.editMetadata"
-msgstr "Editar les metadades de la versió"
+#~ msgid "editor.issues.backIssues"
+#~ msgstr "Números anteriors"
 
-msgid "editor.article.viewMetadata"
-msgstr "Veure les metadades de la versió"
+#~ msgid "editor.issues.futureIssues"
+#~ msgstr "Propers números"
 
-msgid "editor.article.publishVersion"
-msgstr "Publicar versió"
+#~ msgid "editor.issues.invalidCoverPageFormat"
+#~ msgstr ""
+#~ "El format de la portada no és vàlid. Els formats admesos són .gif, .jpg "
+#~ "i .png."
 
-msgid "editor.article.showPublicationVersion"
-msgstr "Mostrar publicació programada"
+#~ msgid "editor.issues.hideCoverPageArchives"
+#~ msgstr ""
+#~ "No mostris una miniatura de la imatge de la portada a la llista de "
+#~ "números."
 
-msgid "issues.submissions.issueIds"
-msgstr "Assignat a un número"
+#~ msgid "editor.issues.hideCoverPageCover"
+#~ msgstr "No mostris la imatge de la portada abans de la taula de continguts."
+
+#~ msgid "editor.article.showCoverPage"
+#~ msgstr "Crea una portada per a aquest article amb els elements següents:"
+
+#~ msgid "editor.article.hideCoverPageToc"
+#~ msgstr ""
+#~ "No mostris una miniatura de la imatge de la portada a la taula de "
+#~ "continguts."
+
+#~ msgid "editor.article.hideCoverPageAbstract"
+#~ msgstr ""
+#~ "No mostris la imatge de la portada a la visualització del resum de "
+#~ "l’article."

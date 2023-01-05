@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:37-07:00\n"
 "PO-Revision-Date: 2020-01-28 23:47+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
-"helene.vezina@umontreal.ca>\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "auth-ldap/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -19,7 +19,9 @@ msgid "plugins.auth.ldap.displayName"
 msgstr "Protocole LDAP"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs au moyen d'une source de données LDAP externe."
+msgstr ""
+"Ce plugiciel permet l'authentification et la synchronisation de comptes "
+"d'utilisateurs au moyen d'une source de données LDAP externe."
 
 msgid "plugins.auth.ldap.settings"
 msgstr "Paramètres LDAP"
@@ -28,7 +30,9 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Nom d'hôte du serveur"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Par ex. : \"ldap.exemple.com\", ou \"ldaps://ldap.exemple.com\" (pour utiliser SSL)"
+msgstr ""
+"Par ex. : \"ldap.exemple.com\", ou \"ldaps://ldap.exemple.com\" (pour "
+"utiliser SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Port du serveur"
@@ -59,11 +63,27 @@ msgstr ""
 "LDAP n'est utilisé que pour l'authentification, ces options peuvent être "
 "ignorées."
 
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Attribut du nom du compte"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"L'attribut dont la valeur identifie de façon unique un objet de "
+"l'utilisateur, tel que uid ou cn ou sAMAccountName."
+
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Chiffrement du mot de passe"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Format Hash pour les mots de passe conservés sur le serveur. SSHA est "
+"recommandé."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "Paramètres SASL (facultatifs)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Utiliser SASL au lieu d'une authentification simple"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "Mécanisme SASL"
@@ -79,17 +99,3 @@ msgstr "Identification d'autorisation requise"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Caractéristiques de sécurité SASL"
-
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Attribut du nom du compte"
-
-msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "L'attribut dont la valeur identifie de façon unique un objet de l'utilisateur, tel que uid ou cn ou sAMAccountName."
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Utiliser SASL au lieu d'une authentification simple"
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr ""
-"Format Hash pour les mots de passe conservés sur le serveur. SSHA est "
-"recommandé."

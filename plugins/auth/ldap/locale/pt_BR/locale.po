@@ -29,7 +29,8 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Servidor"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Ex.: \"ldap.example.com\", ou \"ldaps://ldap.example.com\" (para uso com SSL)"
+msgstr ""
+"Ex.: \"ldap.example.com\", ou \"ldaps://ldap.example.com\" (para uso com SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Porta"
@@ -53,13 +54,32 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Senha"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "O Gerente DN e a Senha são obrigatórios apenas quando se utiliza a sincronização de cadastro/senha ou as opções de criação de usuário são habilitadas. Caso o LDAP seja usado apenas para autenticação, estas opções podem ser ignoradas."
+msgstr ""
+"O Gerente DN e a Senha são obrigatórios apenas quando se utiliza a "
+"sincronização de cadastro/senha ou as opções de criação de usuário são "
+"habilitadas. Caso o LDAP seja usado apenas para autenticação, estas opções "
+"podem ser ignoradas."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atributo de nome de conta"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"O atributo cujo valor identifica de forma única um objeto usuário, como um "
+"uid ou cn ou sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Criptografia da senha"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+"Formato de hash para senhas armazenadas no servidor. SSHA é recomendado."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "Configurações SASL (opcional)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Use SASL em vez de autenticação simples"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "Mecanismo SASL"
@@ -75,15 +95,3 @@ msgstr "ID de Autorização Solicitado"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Propriedades de segurança SASL"
-
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Atributo de nome de conta"
-
-msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "O atributo cujo valor identifica de forma única um objeto usuário, como um uid ou cn ou sAMAccountName."
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "Formato de hash para senhas armazenadas no servidor. SSHA é recomendado."
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Use SASL em vez de autenticação simples"

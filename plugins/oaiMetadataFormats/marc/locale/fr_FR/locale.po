@@ -11,8 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marc.description"
-msgstr "Structure les métadonnées dans un format conforme au le format MARC."
-
 msgid "plugins.OAIMetadata.marc.displayName"
 msgstr "Format de métadonnées MARC"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "Structure les métadonnées dans un format conforme au le format MARC."

@@ -18,7 +18,8 @@ msgid "plugins.block.subscription.displayName"
 msgstr "Bloque de Suscripción"
 
 msgid "plugins.block.subscription.description"
-msgstr "Este complemento muestra información de la suscripción en la barra lateral."
+msgstr ""
+"Este complemento muestra información de la suscripción en la barra lateral."
 
 msgid "plugins.block.subscription.blockTitle"
 msgstr "Suscripción"
@@ -38,8 +39,8 @@ msgstr "Suscripciones"
 msgid "plugins.block.subscription.loginToVerifySubscription"
 msgstr "Ingrese en la revista para verificar la suscripción."
 
-msgid "plugins.block.subscription.subscriptionRequired.learnMore"
-msgstr "Saber más"
-
 msgid "plugins.block.subscription.subscriptionRequired"
 msgstr "Es necesaria una subscripción para acceder a ciertos recursos."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Saber más"

@@ -2,20 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:34+00:00\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:05:34+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:05:34+00:00\n"
-"Language: \n"
 
 msgid "plugins.generic.webfeed.displayName"
 msgstr "Web Feed dodatak"
 
 msgid "plugins.generic.webfeed.description"
-msgstr "Ovaj dodatak proizvodi RSS/Atom web syndication feeds za trenutni broj časopisa."
+msgstr ""
+"Ovaj dodatak proizvodi RSS/Atom web syndication feeds za trenutni broj "
+"časopisa."
 
 msgid "plugins.generic.webfeed.settings"
 msgstr "Podešavanja"
@@ -32,6 +34,9 @@ msgstr "Prikaži linkove na svim stranicama časopisa."
 msgid "plugins.generic.webfeed.settings.currentIssue"
 msgstr "Prikaži stavke trenutno objavljenog broja."
 
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Prikaži fiksni broj skorašnjih stavki."
+
 msgid "plugins.generic.webfeed.settings.recentArticles"
 msgstr "poslednje objavljene stavke."
 
@@ -46,6 +51,3 @@ msgstr "RSS1 logo"
 
 msgid "plugins.generic.webfeed.rss2.altText"
 msgstr "RSS2 logo"
-
-msgid "plugins.generic.webfeed.settings.recent"
-msgstr "Prikaži fiksni broj skorašnjih stavki."

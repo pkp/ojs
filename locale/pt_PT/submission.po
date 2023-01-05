@@ -33,10 +33,10 @@ msgid "submission.title.tip"
 msgstr ""
 "O tipo de submissão geralmente é 'imagem', 'texto' ou outros tipos de "
 "multimédia, incluindo 'software' ou 'interativo'. Escolha o mais relevante "
-"para a sua submissão. Podem ser encontrados exemplos  em <a target=\"_blank\""
-" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#"
-"type\"> http://dublincore.org/documents/2001/04/12/useguide / generic.shtml #"
-" type</a>"
+"para a sua submissão. Podem ser encontrados exemplos  em <a target=\"_blank"
+"\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type\"> http://dublincore.org/documents/2001/04/12/useguide / generic."
+"shtml # type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Iniciar uma Nova Submissão em"
@@ -46,6 +46,12 @@ msgstr "Nova Submissão"
 
 msgid "grid.action.workflow"
 msgstr "Fluxo de Trabalho da Submissão"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "O resumo deverá ter no máximo {$wordCount} palavras."
+
+msgid "submission.submit.noContext"
+msgstr "Esta submissão à revista não foi encontrada."
 
 msgid "submission.issueEntry"
 msgstr "Metadados"
@@ -143,7 +149,8 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Lista de Verificação da Submissão"
 
 msgid "submission.submit.submissionChecklistDescription"
-msgstr "Deve ler e validar os requisitos apresentados abaixo antes de prosseguir."
+msgstr ""
+"Deve ler e validar os requisitos apresentados abaixo antes de prosseguir."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Declaração de Privacidade"
@@ -155,13 +162,19 @@ msgid "submission.submit.form.authorRequired"
 msgstr "É obrigatório ter pelo menos um autor."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "É obrigatório o nome próprio, apelido e endereço de e-mail de cada autor."
+msgstr ""
+"É obrigatório o nome próprio, apelido e endereço de e-mail de cada autor."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Insira o título do seu artigo."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Insira o resumo do artigo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"O seu resumo é demasiado longo. Por favor reduza-o de modo a conter o limite "
+"máximo de palavras definido para esta secção."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Selecione o papel do colaborador."
@@ -170,47 +183,45 @@ msgid "submission.citationFormat.notFound"
 msgstr "O formato de citação solicitado não pôde ser recuperado."
 
 msgid "submission.metadataDescription"
-msgstr "Estas especificações são baseadas no conjunto de metadados Dublin Core, um padrão internacional usado para descrever o conteúdo da revista."
+msgstr ""
+"Estas especificações são baseadas no conjunto de metadados Dublin Core, um "
+"padrão internacional usado para descrever o conteúdo da revista."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Isto é uma visualização prévia e não foi ainda publicado.  <a href="
+"\"{$url}\">Ver submissão</a>"
 
 msgid "section.any"
 msgstr "Qualquer Secção"
 
-msgid "submission.submit.form.wordCountAlert"
+msgid "submission.sectionOptions"
+msgstr "Opções da Secção"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Itens"
+
+msgid "catalog.category.heading"
+msgstr "Todos os Itens"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"O seu resumo é demasiado longo. Por favor reduza-o de modo a conter o limite "
-"máximo de palavras definido para esta secção."
+"Os ficheiros finais de publicação não podem ser editados porque já foram "
+"publicados."
 
-msgid "submission.abstract.wordCount.description"
-msgstr "O resumo deverá ter no máximo {$wordCount} palavras."
+msgid "galley.publicationNotFound"
+msgstr "A publicação deste ficheiro final não foi encontrada."
 
-msgid "publication.scheduledIn"
-msgstr "Agendado para publicação em <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "publication.assignToissue"
+msgstr "Agendar para Número"
 
-msgid "publication.publishedIn"
-msgstr "Publicado em <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
-msgstr "A publicação deve ser agendada num número antes de ser publicada."
-
-msgid "publication.publish.confirmation.backIssue"
+msgid "publication.assignedToIssue"
 msgstr ""
-"Todos os requisitos de publicação foram cumpridos. Irá ser publicado "
-"imediatamente no {$issue}. Deseja realmente publicar?"
+"Esta submissão foi designada a  <a href=\"{$issueUrl}\">{$issueName}</a> mas "
+"não foi agendada para publicação."
 
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Todos os requisitos de publicação foram cumpridos. Irá ser publicado quando "
-"o {$issue} for publicado. Deseja realmente agendar para publicação?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"Todos os requisitos da publicação foram cumpridos. Deseja realmente publicar?"
-
-msgid "publication.invalidIssue"
-msgstr "O volume desta publicação não foi encontrada."
-
-msgid "publication.invalidSection"
-msgstr "A secção desta publicação não foi encontrada."
+msgid "publication.changeIssue"
+msgstr "Alterar Número"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -218,25 +229,28 @@ msgstr ""
 "publicado. Não insira a data de publicação a menos que o artigo tenha sido "
 "publicado anteriormente noutro local e necessite de colocar data anterior."
 
-msgid "galley.publicationNotFound"
-msgstr "A publicação deste ficheiro final não foi encontrada."
+msgid "publication.invalidSection"
+msgstr "A secção desta publicação não foi encontrada."
 
-msgid "galley.editPublishedDisabled"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inativa)"
+
+msgid "publication.invalidIssue"
+msgstr "O volume desta publicação não foi encontrada."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"Os ficheiros finais de publicação não podem ser editados porque já foram "
-"publicados."
+"Todos os requisitos da publicação foram cumpridos. Deseja realmente publicar?"
 
-msgid "catalog.category.heading"
-msgstr "Todos os Itens"
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Todos os requisitos de publicação foram cumpridos. Irá ser publicado quando "
+"o {$issue} for publicado. Deseja realmente agendar para publicação?"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} Itens"
-
-msgid "submission.sectionOptions"
-msgstr "Opções da Secção"
-
-msgid "submission.submit.noContext"
-msgstr "Esta submissão à revista não foi encontrada."
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Todos os requisitos de publicação foram cumpridos. Irá ser publicado "
+"imediatamente no {$issue}. Deseja realmente publicar?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -244,22 +258,20 @@ msgstr ""
 "de imediato porque a data de publicação foi definida para {$datePublished}. "
 "Deseja realmente publicar?"
 
-msgid "publication.selectIssue"
-msgstr "Selecione um número para agendar a publicação"
+msgid "publication.required.issue"
+msgstr "A publicação deve ser agendada num número antes de ser publicada."
 
-msgid "publication.assignToissue"
-msgstr "Agendar para Número"
+msgid "publication.publishedIn"
+msgstr "Publicado em <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Agendado para publicação em <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
 msgstr "Este artigo não foi agendado para publicação em um número."
 
-msgid "submission.viewingPreview"
-msgstr ""
-"Isto é uma visualização prévia e não foi ainda publicado.  <a href=\"{$url}\""
-">Ver submissão</a>"
-
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inativa)"
+msgid "publication.selectIssue"
+msgstr "Selecione um número para agendar a publicação"
 
 msgid "submission.publication"
 msgstr "Publicação"
@@ -338,7 +350,8 @@ msgstr ""
 "quando for publicado."
 
 msgid "submission.copyrightOther.description"
-msgstr "Atribuir direitos de autor para submissões publicadas à parte seguinte."
+msgstr ""
+"Atribuir direitos de autor para submissões publicadas à parte seguinte."
 
 msgid "publication.unpublish"
 msgstr "Despublicar"
@@ -354,11 +367,3 @@ msgstr "Deatlhes de publicação da versão {$version}"
 
 msgid "submission.queries.production"
 msgstr "Discussões da Produção"
-
-msgid "publication.changeIssue"
-msgstr "Alterar Número"
-
-msgid "publication.assignedToIssue"
-msgstr ""
-"Esta submissão foi designada a  <a href=\"{$issueUrl}\">{$issueName}</a> mas "
-"não foi agendada para publicação."

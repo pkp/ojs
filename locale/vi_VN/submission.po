@@ -11,146 +11,83 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "publication.scheduledIn"
-msgstr "Dự kiến xuất bản trong <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "submission.submit.title"
+msgstr "Gửi một bài báo mới"
 
-msgid "publication.publishedIn"
-msgstr "Đã xuất bản trong <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "submission.submit.userGroup"
+msgstr "Gửi trong vai trò như là ..."
 
-msgid "publication.required.issue"
+msgid "submission.submit.userGroupDescription"
+msgstr "Chọn tư cách mà bạn đang gửi bài báo này."
+
+msgid "submission.upload.selectComponent"
+msgstr "Chọn thành phần bài báo"
+
+msgid "submission.title"
+msgstr "Tiêu đề bài báo"
+
+msgid "submission.title.tip"
 msgstr ""
-"Ấn phẩm phải được chỉ định cho một số phát hành trước khi nó có thể được "
-"công bố."
+"Loại gửi thường là một trong 'hình ảnh', 'văn bản' hoặc các loại đa phương "
+"tiện khác bao gồm 'phần mềm' hoặc 'tương tác'. Vui lòng chọn một trong những "
+"phù hợp nhất cho trình của bạn. Có thể tìm thấy các ví dụ tại <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
 
-msgid "publication.publish.confirmation.backIssue"
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Bắt đầu một bài gửi mới"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Bài gửi mới"
+
+msgid "grid.action.workflow"
+msgstr "Quy trình gửi bài"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Tóm tắt phải là {$wordCount} từ hoặc ít hơn."
+
+msgid "submission.submit.noContext"
+msgstr "Tạp chí của bài gửi này không thể được tìm thấy."
+
+msgid "submission.issueEntry"
+msgstr "Siêu dữ liệu"
+
+msgid "submission.submit.whatNext.description"
 msgstr ""
-"Tất cả các yêu cầu xuất bản đã được đáp ứng. Điều này sẽ được công bố ngay "
-"lập tức trong {$issue}. Bạn có chắc chắn muốn xuất bản?"
+"Tạp chí đã được thông báo về bài gửi của bạn và bạn đã được gửi email xác "
+"nhận cho bài gửi của bạn. Khi biên tập viên xem xét bài gửi, họ sẽ liên lạc "
+"với bạn."
 
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Tất cả các yêu cầu xuất bản đã được đáp ứng. Điều này sẽ được công bố khi "
-"{$issue} được xuất bản. Bạn có chắc chắn muốn lên lịch trình này để xuất bản?"
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Bản in xuất hiện trong mục số phát hành"
 
-msgid "publication.publish.confirmation"
-msgstr ""
-"Tất cả các yêu cầu xuất bản đã được đáp ứng. Bạn có chắc chắn muốn xuất bản?"
+msgid "grid.action.issueEntry"
+msgstr "Xem siêu dữ liệu của bài gửi này"
 
-msgid "publication.issue.success"
-msgstr "Chi tiết của số phát hành của ấn phẩm đã được cập nhật."
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Bản in của bài báo \"{$galleyFormatName}\" đã có."
 
-msgid "publication.invalidIssue"
-msgstr "Số phát hành cho ấn phẩm này không thể được tìm thấy."
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Bản in của bài báo \"{$galleyFormatName}\" chưa có."
 
-msgid "publication.invalidSection"
-msgstr "Chuyên mục cho ấn phẩm này không thể được tìm thấy."
+msgid "submission.event.publicIdentifiers"
+msgstr "Dịnh danh công khai của bài báo đã được cập nhật."
 
-msgid "publication.datePublished.description"
-msgstr ""
-"Ngày xuất bản sẽ được đặt tự động khi số được công bố. Không nhập ngày xuất "
-"bản trừ khi bài báo đã được xuất bản trước đó ở nơi khác và bạn cần phải sao "
-"lưu nó."
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Định dạng được phê duyệt"
 
-msgid "galley.publicationNotFound"
-msgstr "Việc xuất bản của bản in này không thể được tìm thấy."
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Bản in này sẽ <em>sớm được cung cấp tới</em> độc giả.</p>"
 
-msgid "galley.editPublishedDisabled"
-msgstr "Không thể chỉnh sửa các bản in của ấn phẩm này vì nó đã được xuất bản."
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Bản in này sẽ <em>được cung cấp tới</em> độc giả.</p>"
 
-msgid "catalog.category.heading"
-msgstr "Tất cả mục"
+msgid "grid.action.availableArticleGalley"
+msgstr "Làm bản in này sẵn sàng"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} mục"
-
-msgid "submission.sectionOptions"
-msgstr "Tùy chọn chuyên mục"
-
-msgid "section.any"
-msgstr "Bất kỳ chuyên mục nào"
-
-msgid "submission.metadataDescription"
-msgstr ""
-"Các thông số kỹ thuật này dựa trên bộ siêu dữ liệu Dublin Core, một tiêu "
-"chuẩn quốc tế được sử dụng để mô tả nội dung tạp chí."
-
-msgid "submission.citationFormat.notFound"
-msgstr "Các định dạng trích dẫn được yêu cầu không thể được lấy."
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Vui lòng chọn vai trò của người đóng góp."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr ""
-"Tóm tắt của bạn quá dài. Vui lòng rút ngắn nó xuống dưới giới hạn từ được "
-"chỉ định cho phần này."
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "Vui lòng nhập tóm tắt bài báo của bạn."
-
-msgid "submission.submit.form.titleRequired"
-msgstr "Vui lòng nhập tiêu đề của bài báo của bạn."
-
-msgid "submission.submit.form.authorRequiredFields"
-msgstr "Họ, tên và địa chỉ email của mỗi tác giả là bắt buộc."
-
-msgid "submission.submit.form.authorRequired"
-msgstr "Ít nhất một tác giả được yêu cầu."
-
-msgid "submission.submit.contributorRole"
-msgstr "Vai trò của người đóng góp"
-
-msgid "submission.submit.privacyStatement"
-msgstr "Cam kết bảo mật"
-
-msgid "submission.submit.submissionChecklistDescription"
-msgstr ""
-"Bạn phải đọc và xác nhận rằng bạn đã hoàn thành các yêu cầu bên dưới trước "
-"khi tiếp tục."
-
-msgid "submission.submit.submissionChecklist"
-msgstr "Danh sách yêu cầu trước gửi bài"
-
-msgid "submission.submit.form.localeRequired"
-msgstr "Vui lòng chọn một ngôn ngữ của bài gửi."
-
-msgid "submission.incomplete"
-msgstr "Chờ phê duyệt"
-
-msgid "submission.complete"
-msgstr "Đã phê duyệt"
-
-msgid "submission.upload.fileContents"
-msgstr "Thành phần bài báo"
-
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Siêu dữ liệu của số đã được cập nhật."
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Gửi phản biện"
-
-msgid "workflow.review.externalReview"
-msgstr "Phản biện"
-
-msgid "submission.confirmSubmit"
-msgstr "Bạn có chắc chắn muốn gửi bài báo này đến tạp chí?"
-
-msgid "submission.pageProofs"
-msgstr "Hiệu đính"
-
-msgid "submission.submit.upload.description"
-msgstr ""
-"Tải lên các tập tin liên quan đến bài gửi này, bao gồm bài báo, bộ dữ liệu, "
-"các tài liệu tham khảo, v.v."
-
-msgid "submission.submit.titleAndSummary"
-msgstr "Tiêu đề và Tóm tắt"
-
-msgid "grid.action.pageProofApproved"
-msgstr "Bản in thử này đã được phê duyệt để đưa vào bản in chính thức."
-
-msgid "grid.action.approveProof"
-msgstr "Phê duyệt bản in thử này để đưa vào bản in chính thức."
+msgid "submission.galleyFiles"
+msgstr "Các tập tin bản in"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -159,89 +96,147 @@ msgstr ""
 "các tác giả và những người khác để đọc lại các bản in, với các tập tin được "
 "sửa chữa được tải lên để phê duyệt trước khi xuất bản."
 
-msgid "submission.galleyFiles"
-msgstr "Các tập tin bản in"
+msgid "grid.action.approveProof"
+msgstr "Phê duyệt bản in thử này để đưa vào bản in chính thức."
 
-msgid "grid.action.availableArticleGalley"
-msgstr "Làm bản in này sẵn sàng"
+msgid "grid.action.pageProofApproved"
+msgstr "Bản in thử này đã được phê duyệt để đưa vào bản in chính thức."
 
-msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Bản in này sẽ <em>được cung cấp tới</em> độc giả.</p>"
+msgid "submission.submit.titleAndSummary"
+msgstr "Tiêu đề và Tóm tắt"
 
-msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Bản in này sẽ <em>sớm được cung cấp tới</em> độc giả.</p>"
-
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Định dạng được phê duyệt"
-
-msgid "submission.event.publicIdentifiers"
-msgstr "Dịnh danh công khai của bài báo đã được cập nhật."
-
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Bản in của bài báo \"{$galleyFormatName}\" chưa có."
-
-msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Bản in của bài báo \"{$galleyFormatName}\" đã có."
-
-msgid "grid.action.issueEntry"
-msgstr "Xem siêu dữ liệu của bài gửi này"
-
-msgid "grid.action.galleyInIssueEntry"
-msgstr "Bản in xuất hiện trong mục số phát hành"
-
-msgid "submission.submit.whatNext.description"
+msgid "submission.submit.upload.description"
 msgstr ""
-"Tạp chí đã được thông báo về bài gửi của bạn và bạn đã được gửi email xác "
-"nhận cho bài gửi của bạn. Khi biên tập viên xem xét bài gửi, họ sẽ liên lạc "
-"với bạn."
+"Tải lên các tập tin liên quan đến bài gửi này, bao gồm bài báo, bộ dữ liệu, "
+"các tài liệu tham khảo, v.v."
 
-msgid "submission.issueEntry"
-msgstr "Siêu dữ liệu"
+msgid "submission.pageProofs"
+msgstr "Hiệu đính"
 
-msgid "submission.submit.noContext"
-msgstr "Tạp chí của bài gửi này không thể được tìm thấy."
+msgid "submission.confirmSubmit"
+msgstr "Bạn có chắc chắn muốn gửi bài báo này đến tạp chí?"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Tóm tắt phải là {$wordCount} từ hoặc ít hơn."
+msgid "workflow.review.externalReview"
+msgstr "Phản biện"
 
-msgid "grid.action.workflow"
-msgstr "Quy trình gửi bài"
+msgid "editor.submission.decision.sendExternalReview"
+msgstr "Gửi phản biện"
 
-msgid "submission.submit.newSubmissionSingle"
-msgstr "Bài gửi mới"
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Siêu dữ liệu của số đã được cập nhật."
 
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Bắt đầu một bài gửi mới"
+msgid "submission.upload.fileContents"
+msgstr "Thành phần bài báo"
 
-msgid "submission.title.tip"
+msgid "submission.complete"
+msgstr "Đã phê duyệt"
+
+msgid "submission.incomplete"
+msgstr "Chờ phê duyệt"
+
+msgid "submission.submit.form.localeRequired"
+msgstr "Vui lòng chọn một ngôn ngữ của bài gửi."
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Danh sách yêu cầu trước gửi bài"
+
+msgid "submission.submit.submissionChecklistDescription"
 msgstr ""
-"Loại gửi thường là một trong 'hình ảnh', 'văn bản' hoặc các loại đa phương "
-"tiện khác bao gồm 'phần mềm' hoặc 'tương tác'. Vui lòng chọn một trong những "
-"phù hợp nhất cho trình của bạn. Có thể tìm thấy các ví dụ tại <a target=\""
-"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type</a>"
+"Bạn phải đọc và xác nhận rằng bạn đã hoàn thành các yêu cầu bên dưới trước "
+"khi tiếp tục."
 
-msgid "submission.title"
-msgstr "Tiêu đề bài báo"
+msgid "submission.submit.privacyStatement"
+msgstr "Cam kết bảo mật"
 
-msgid "submission.upload.selectComponent"
-msgstr "Chọn thành phần bài báo"
+msgid "submission.submit.contributorRole"
+msgstr "Vai trò của người đóng góp"
 
-msgid "submission.submit.userGroupDescription"
-msgstr "Chọn tư cách mà bạn đang gửi bài báo này."
+msgid "submission.submit.form.authorRequired"
+msgstr "Ít nhất một tác giả được yêu cầu."
 
-msgid "submission.submit.userGroup"
-msgstr "Gửi trong vai trò như là ..."
+msgid "submission.submit.form.authorRequiredFields"
+msgstr "Họ, tên và địa chỉ email của mỗi tác giả là bắt buộc."
 
-msgid "submission.submit.title"
-msgstr "Gửi một bài báo mới"
+msgid "submission.submit.form.titleRequired"
+msgstr "Vui lòng nhập tiêu đề của bài báo của bạn."
 
-msgid "publication.selectIssue"
-msgstr "Chọn một số để lên lịch xuất bản"
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vui lòng nhập tóm tắt bài báo của bạn."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Tóm tắt của bạn quá dài. Vui lòng rút ngắn nó xuống dưới giới hạn từ được "
+"chỉ định cho phần này."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Vui lòng chọn vai trò của người đóng góp."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Các định dạng trích dẫn được yêu cầu không thể được lấy."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Các thông số kỹ thuật này dựa trên bộ siêu dữ liệu Dublin Core, một tiêu "
+"chuẩn quốc tế được sử dụng để mô tả nội dung tạp chí."
+
+msgid "submission.viewingPreview"
+msgstr ""
+
+msgid "section.any"
+msgstr "Bất kỳ chuyên mục nào"
+
+msgid "submission.sectionOptions"
+msgstr "Tùy chọn chuyên mục"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} mục"
+
+msgid "catalog.category.heading"
+msgstr "Tất cả mục"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Không thể chỉnh sửa các bản in của ấn phẩm này vì nó đã được xuất bản."
+
+msgid "galley.publicationNotFound"
+msgstr "Việc xuất bản của bản in này không thể được tìm thấy."
 
 msgid "publication.assignToissue"
 msgstr "Giao cho Số"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Ngày xuất bản sẽ được đặt tự động khi số được công bố. Không nhập ngày xuất "
+"bản trừ khi bài báo đã được xuất bản trước đó ở nơi khác và bạn cần phải sao "
+"lưu nó."
+
+msgid "publication.invalidSection"
+msgstr "Chuyên mục cho ấn phẩm này không thể được tìm thấy."
+
+msgid "publication.inactiveSection"
+msgstr ""
+
+msgid "publication.invalidIssue"
+msgstr "Số phát hành cho ấn phẩm này không thể được tìm thấy."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Tất cả các yêu cầu xuất bản đã được đáp ứng. Bạn có chắc chắn muốn xuất bản?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Tất cả các yêu cầu xuất bản đã được đáp ứng. Điều này sẽ được công bố khi "
+"{$issue} được xuất bản. Bạn có chắc chắn muốn lên lịch trình này để xuất bản?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Tất cả các yêu cầu xuất bản đã được đáp ứng. Điều này sẽ được công bố ngay "
+"lập tức trong {$issue}. Bạn có chắc chắn muốn xuất bản?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -249,125 +244,114 @@ msgstr ""
 "lập tức vì ngày xuất bản đã được đặt thành {$datePublished}. Bạn có chắc "
 "chắn muốn xuất bản?"
 
+msgid "publication.required.issue"
+msgstr ""
+"Ấn phẩm phải được chỉ định cho một số phát hành trước khi nó có thể được "
+"công bố."
+
+msgid "publication.publishedIn"
+msgstr "Đã xuất bản trong <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Dự kiến xuất bản trong <a href=\"{$issueUrl}\">{$issueName}</a>."
+
 msgid "publication.unscheduledIn"
 msgstr "Bài này đã không được lên kế hoạch để xuất bản trong một số."
+
+msgid "publication.selectIssue"
+msgstr "Chọn một số để lên lịch xuất bản"
 
 msgid "submission.publication"
 msgstr "Xuất bản"
 
-
 msgid "publication.status.published"
 msgstr "Đã xuất bản"
-
 
 msgid "submission.status.scheduled"
 msgstr "Đã lên lịch"
 
-
 msgid "publication.status.unscheduled"
 msgstr "Huỷ lên lịch"
 
-
 msgid "submission.publications"
 msgstr "Ấn phẩm"
-
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Năm bản quyền sẽ được đặt tự động khi điều này được xuất bản trong một Số."
 
-
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Năm bản quyền sẽ được đặt tự động dựa trên ngày xuất bản."
-
 
 msgid "publication.datePublished"
 msgstr "Ngày Xuất bản"
 
-
 msgid "publication.editDisabled"
 msgstr "Phiên bản này đã được xuất bản và không thể chỉnh sửa."
-
 
 msgid "publication.event.published"
 msgstr "Bài gửi đã được xuất bản."
 
-
 msgid "publication.event.scheduled"
 msgstr "Bài gửi đã được lên lịch để xuất bản."
-
 
 msgid "publication.event.unpublished"
 msgstr "Bài gửi chưa được xuất bản."
 
-
 msgid "publication.event.versionPublished"
 msgstr "Một phiên bản mới đã được xuất bản."
-
 
 msgid "publication.event.versionScheduled"
 msgstr "Một phiên bản mới đã được lên lịch để xuất bản."
 
-
 msgid "publication.event.versionUnpublished"
 msgstr "Một phiên bản đã bị xóa từ mục xuất bản."
-
 
 msgid "publication.invalidSubmission"
 msgstr "Bài gửi cho ấn phẩm này không thể được tìm thấy."
 
-
 msgid "publication.publish"
 msgstr "Xuất bản"
-
 
 msgid "publication.publish.requirements"
 msgstr ""
 "Các yêu cầu sau phải được đáp ứng trước khi bài này có thể được xuất bản."
 
-
 msgid "publication.required.declined"
 msgstr "Không thể xuất bản một bài bị từ chối."
-
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Bài gửi phải qua giai đoạn Sao chép hoặc Sản xuất trước khi có thể được xuất "
 "bản."
 
-
 msgid "submission.license.description"
 msgstr ""
 "Giấy phép sẽ được đặt tự động thành <a href='{$licenseUrl}' target='_blank'> "
 "{$licenseName} </a> khi giấy phép này được xuất bản."
-
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
 "Bản quyền sẽ tự động được chỉ định cho {$copyright} khi tài liệu này được "
 "xuất bản."
 
-
 msgid "submission.copyrightOther.description"
 msgstr "Chuyển nhượng bản quyền cho các bài đã xuất bản cho bên sau."
-
 
 msgid "publication.unpublish"
 msgstr "Hủy xuất bản"
 
-
 msgid "publication.unpublish.confirm"
 msgstr "Bạn có chắc chắn rằng bạn không muốn xuất bản?"
-
 
 msgid "publication.unschedule.confirm"
 msgstr "Bạn có chắc chắn rằng bạn không muốn lên lịch xuất bản?"
 
-
 msgid "publication.version.details"
 msgstr "Chi tiết xuất bản cho phiên bản {$version}"
-
 
 msgid "submission.queries.production"
 msgstr "Thảo luận về sản xuất"
 
+#~ msgid "publication.issue.success"
+#~ msgstr "Chi tiết của số phát hành của ấn phẩm đã được cập nhật."

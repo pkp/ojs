@@ -1,2 +1,57 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr ""
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr ""
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr ""
+
+msgid "api.contexts.403.notAllowed"
+msgstr ""
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+
+msgid "api.contexts.403.requiresContext"
+msgstr ""
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr ""
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr ""
+
+msgid "api.contexts.404.contextNotFound"
+msgstr ""
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr ""
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr ""
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr ""
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""

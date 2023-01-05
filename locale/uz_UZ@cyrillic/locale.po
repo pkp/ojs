@@ -1,2 +1,1926 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr ""
+
+msgid "context.current"
+msgstr ""
+
+msgid "context.select"
+msgstr ""
+
+msgid "navigation.categories"
+msgstr ""
+
+msgid "navigation.categories.browse"
+msgstr ""
+
+msgid "reviewer.article.enterReviewForm"
+msgstr ""
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr ""
+
+msgid "common.software"
+msgstr ""
+
+msgid "common.confirmComplete"
+msgstr ""
+
+msgid "common.payment"
+msgstr ""
+
+msgid "common.payments"
+msgstr ""
+
+msgid "common.homePageHeader.altText"
+msgstr ""
+
+msgid "common.journalHomepageImage.altText"
+msgstr ""
+
+msgid "navigation.journalHelp"
+msgstr ""
+
+msgid "navigation.current"
+msgstr ""
+
+msgid "navigation.otherJournals"
+msgstr ""
+
+msgid "navigation.browseByIssue"
+msgstr ""
+
+msgid "navigation.browseByAuthor"
+msgstr ""
+
+msgid "navigation.infoForAuthors"
+msgstr ""
+
+msgid "navigation.infoForLibrarians"
+msgstr ""
+
+msgid "navigation.competingInterestGuidelines"
+msgstr ""
+
+msgid "navigation.infoForAuthors.long"
+msgstr ""
+
+msgid "navigation.infoForLibrarians.long"
+msgstr ""
+
+msgid "navigation.skip.about"
+msgstr ""
+
+msgid "navigation.skip.issue"
+msgstr ""
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr ""
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr ""
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr ""
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr ""
+
+msgid "common.queue.long.submissionsInReview"
+msgstr ""
+
+msgid "common.queue.short.submissionsInReview"
+msgstr ""
+
+msgid "common.queue.long.submissionsArchives"
+msgstr ""
+
+msgid "common.queue.short.submissionsArchives"
+msgstr ""
+
+msgid "common.queue.long.active"
+msgstr ""
+
+msgid "common.queue.short.active"
+msgstr ""
+
+msgid "common.queue.long.completed"
+msgstr ""
+
+msgid "common.queue.short.completed"
+msgstr ""
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr ""
+
+msgid "section.section"
+msgstr ""
+
+msgid "section.sections"
+msgstr ""
+
+msgid "section.title"
+msgstr ""
+
+msgid "section.abbreviation"
+msgstr ""
+
+msgid "section.abbreviation.example"
+msgstr ""
+
+msgid "section.policy"
+msgstr ""
+
+msgid "article.article"
+msgstr ""
+
+msgid "article.articles"
+msgstr ""
+
+msgid "common.publication"
+msgstr ""
+
+msgid "common.publications"
+msgstr ""
+
+msgid "article.submissionId"
+msgstr ""
+
+msgid "article.title"
+msgstr ""
+
+msgid "article.authors"
+msgstr ""
+
+msgid "article.indexingInformation"
+msgstr ""
+
+msgid "article.metadata"
+msgstr ""
+
+msgid "article.journalSection"
+msgstr ""
+
+msgid "article.file"
+msgstr ""
+
+msgid "article.suppFile"
+msgstr ""
+
+msgid "article.suppFiles"
+msgstr ""
+
+msgid "article.suppFilesAbbrev"
+msgstr ""
+
+msgid "article.discipline"
+msgstr ""
+
+msgid "article.subject"
+msgstr ""
+
+msgid "article.coverage"
+msgstr ""
+
+msgid "article.type"
+msgstr ""
+
+msgid "article.language"
+msgstr ""
+
+msgid "article.sectionEditor"
+msgstr ""
+
+msgid "article.commentsToEditor"
+msgstr ""
+
+msgid "article.submission"
+msgstr ""
+
+msgid "article.submissions"
+msgstr ""
+
+msgid "article.details"
+msgstr ""
+
+msgid "article.abstract"
+msgstr ""
+
+msgid "article.coverPage.altText"
+msgstr ""
+
+msgid "article.accessLogoOpen.altText"
+msgstr ""
+
+msgid "article.accessLogoRestricted.altText"
+msgstr ""
+
+msgid "article.comments.sectionDefault"
+msgstr ""
+
+msgid "article.comments.disable"
+msgstr ""
+
+msgid "article.comments.enable"
+msgstr ""
+
+msgid "article.fontSize"
+msgstr ""
+
+msgid "article.fontSize.small.altText"
+msgstr ""
+
+msgid "article.fontSize.medium.altText"
+msgstr ""
+
+msgid "article.fontSize.large.altText"
+msgstr ""
+
+msgid "article.return"
+msgstr ""
+
+msgid "category.category"
+msgstr ""
+
+msgid "submission.submissionEditing"
+msgstr ""
+
+msgid "submission.changeSection"
+msgstr ""
+
+msgid "submission.sent"
+msgstr ""
+
+msgid "submission.editorDecision"
+msgstr ""
+
+msgid "submission.round"
+msgstr ""
+
+msgid "submission.editorReview"
+msgstr ""
+
+msgid "submission.notifyAuthor"
+msgstr ""
+
+msgid "submission.notifyEditor"
+msgstr ""
+
+msgid "submission.editorAuthorRecord"
+msgstr ""
+
+msgid "submission.reviewersVersion"
+msgstr ""
+
+msgid "submission.postReviewVersion"
+msgstr ""
+
+msgid "submission.editorVersion"
+msgstr ""
+
+msgid "submission.authorsRevisedVersion"
+msgstr ""
+
+msgid "submission.authorVersion"
+msgstr ""
+
+msgid "submission.copyediting"
+msgstr ""
+
+msgid "submission.copyedit"
+msgstr ""
+
+msgid "submission.proofreading"
+msgstr ""
+
+msgid "submission.scheduling"
+msgstr ""
+
+msgid "submission.scheduledIn"
+msgstr ""
+
+msgid "submission.scheduledIn.tba"
+msgstr ""
+
+msgid "submissions.step1"
+msgstr ""
+
+msgid "submissions.step3"
+msgstr ""
+
+msgid "submissions.queuedReview"
+msgstr ""
+
+msgid "submissions.published"
+msgstr ""
+
+msgid "submissions.initial"
+msgstr ""
+
+msgid "submissions.proofread"
+msgstr ""
+
+msgid "submissions.initialProof"
+msgstr ""
+
+msgid "submissions.postAuthor"
+msgstr ""
+
+msgid "submissions.reviewRound"
+msgstr ""
+
+msgid "submissions.proof"
+msgstr ""
+
+msgid "submissions.editorDecision"
+msgstr ""
+
+msgid "submissions.editorRuling"
+msgstr ""
+
+msgid "submission.eventLog"
+msgstr ""
+
+msgid "submissions.copyeditComplete"
+msgstr ""
+
+msgid "submissions.layoutComplete"
+msgstr ""
+
+msgid "submissions.proofreadingComplete"
+msgstr ""
+
+msgid "submission.search"
+msgstr ""
+
+msgid "journal.currentIssue"
+msgstr ""
+
+msgid "context.contexts"
+msgstr ""
+
+msgid "journal.path"
+msgstr ""
+
+msgid "context.context"
+msgstr ""
+
+msgid "journal.issn"
+msgstr ""
+
+msgid "journal.viewAllIssues"
+msgstr ""
+
+msgid "user.authorization.representationNotFound"
+msgstr ""
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr ""
+
+msgid "user.profile.profileImage"
+msgstr ""
+
+msgid "user.showAllJournals"
+msgstr ""
+
+msgid "user.registerForOtherJournals"
+msgstr ""
+
+msgid "user.reviewerPrompt"
+msgstr ""
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr ""
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+
+msgid "user.register.contextsPrompt"
+msgstr ""
+
+msgid "user.register.otherContextRoles"
+msgstr ""
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+
+msgid "user.myJournals"
+msgstr ""
+
+msgid "user.manageMySubscriptions"
+msgstr ""
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+
+msgid "user.noRoles.submitArticle"
+msgstr ""
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+
+msgid "user.noRoles.regReviewer"
+msgstr ""
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+
+msgid "user.role.manager"
+msgstr ""
+
+msgid "user.role.subEditor"
+msgstr ""
+
+msgid "user.role.subscriptionManager"
+msgstr ""
+
+msgid "user.role.managers"
+msgstr ""
+
+msgid "user.role.subEditors"
+msgstr ""
+
+msgid "user.role.subscriptionManagers"
+msgstr ""
+
+msgid "user.role.journalAssistant"
+msgstr ""
+
+msgid "user.role.journalAssistants"
+msgstr ""
+
+msgid "issue.issue"
+msgstr ""
+
+msgid "issue.issues"
+msgstr ""
+
+msgid "issue.title"
+msgstr ""
+
+msgid "issue.viewIssueIdentification"
+msgstr ""
+
+msgid "issue.volume"
+msgstr ""
+
+msgid "issue.number"
+msgstr ""
+
+msgid "issue.vol"
+msgstr ""
+
+msgid "issue.no"
+msgstr ""
+
+msgid "issue.year"
+msgstr ""
+
+msgid "issue.noIssues"
+msgstr ""
+
+msgid "issue.toc"
+msgstr ""
+
+msgid "issue.abstract"
+msgstr ""
+
+msgid "issue.coverPage.altText"
+msgstr ""
+
+msgid "issue.fullIssue"
+msgstr ""
+
+msgid "issue.nonpdf.title"
+msgstr ""
+
+msgid "issue.viewIssue"
+msgstr ""
+
+msgid "issue.return"
+msgstr ""
+
+msgid "subscriptionTypes.currency"
+msgstr ""
+
+msgid "subscriptionTypes.year"
+msgstr ""
+
+msgid "subscriptionTypes.years"
+msgstr ""
+
+msgid "subscriptionTypes.month"
+msgstr ""
+
+msgid "subscriptionTypes.months"
+msgstr ""
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr ""
+
+msgid "subscriptionTypes.format"
+msgstr ""
+
+msgid "subscriptionTypes.format.online"
+msgstr ""
+
+msgid "subscriptionTypes.format.print"
+msgstr ""
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr ""
+
+msgid "subscriptions.inactive"
+msgstr ""
+
+msgid "subscriptions.status"
+msgstr ""
+
+msgid "subscriptions.status.active"
+msgstr ""
+
+msgid "subscriptions.status.needsInformation"
+msgstr ""
+
+msgid "subscriptions.status.needsApproval"
+msgstr ""
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr ""
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr ""
+
+msgid "subscriptions.status.noSubscription"
+msgstr ""
+
+msgid "subscriptions.status.other"
+msgstr ""
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+
+msgid "submission.event.general.defaultEvent"
+msgstr ""
+
+msgid "submission.event.submissionSubmitted"
+msgstr ""
+
+msgid "submission.event.general.issueScheduled"
+msgstr ""
+
+msgid "submission.event.general.issueAssigned"
+msgstr ""
+
+msgid "submission.event.general.articlePublished"
+msgstr ""
+
+msgid "submission.event.author.authorRevision"
+msgstr ""
+
+msgid "submission.event.general.authorRevision"
+msgstr ""
+
+msgid "submission.event.editor.editorAssigned"
+msgstr ""
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr ""
+
+msgid "submission.event.editor.editorDecision"
+msgstr ""
+
+msgid "submission.event.editor.editorFile"
+msgstr ""
+
+msgid "submission.event.editor.submissionArchived"
+msgstr ""
+
+msgid "submission.event.editor.submissionRestored"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr ""
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr ""
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr ""
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr ""
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr ""
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr ""
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr ""
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr ""
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr ""
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr ""
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr ""
+
+msgid "submission.event.layout.layoutComplete"
+msgstr ""
+
+msgid "reader.subscribersOnly"
+msgstr ""
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+
+msgid "reader.openAccess"
+msgstr ""
+
+msgid "reader.subscriptionAccess"
+msgstr ""
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr ""
+
+msgid "reader.purchasePrice"
+msgstr ""
+
+msgid "comments.commentsOnArticle"
+msgstr ""
+
+msgid "comments.authenticated"
+msgstr ""
+
+msgid "search.results.orderBy"
+msgstr ""
+
+msgid "search.results.orderBy.article"
+msgstr ""
+
+msgid "search.results.orderBy.author"
+msgstr ""
+
+msgid "search.results.orderBy.date"
+msgstr ""
+
+msgid "search.results.orderBy.issue"
+msgstr ""
+
+msgid "search.results.orderBy.journal"
+msgstr ""
+
+msgid "search.results.orderBy.popularityAll"
+msgstr ""
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr ""
+
+msgid "search.results.orderBy.relevance"
+msgstr ""
+
+msgid "search.results.orderDir.asc"
+msgstr ""
+
+msgid "search.results.orderDir.desc"
+msgstr ""
+
+msgid "search.results.similarDocuments"
+msgstr ""
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr ""
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr ""
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr ""
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr ""
+
+msgid "plugins.categories.viewableFiles"
+msgstr ""
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr ""
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr ""
+
+msgid "sectionEditor.noneAssigned"
+msgstr ""
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr ""
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+
+msgid "sectionEditor.regrets"
+msgstr ""
+
+msgid "sectionEditor.regrets.link"
+msgstr ""
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr ""
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr ""
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr ""
+
+msgid "sectionEditor.regrets.regret"
+msgstr ""
+
+msgid "sectionEditor.regrets.result"
+msgstr ""
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr ""
+
+msgid "sectionEditor.review.createReviewer"
+msgstr ""
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr ""
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr ""
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr ""
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr ""
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr ""
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr ""
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr ""
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr ""
+
+msgid "submission.layout.galley.remoteURL"
+msgstr ""
+
+msgid "reviewer.pendingReviews"
+msgstr ""
+
+msgid "reviewer.completedReviews"
+msgstr ""
+
+msgid "reviewer.averageQuality"
+msgstr ""
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr ""
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr ""
+
+msgid "reviewer.article.canDoReview"
+msgstr ""
+
+msgid "reviewer.article.cannotDoReview"
+msgstr ""
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+
+msgid "reviewer.article.submissionEditor"
+msgstr ""
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr ""
+
+msgid "reviewer.article.editorToEnter"
+msgstr ""
+
+msgid "reviewer.article.sendReminder"
+msgstr ""
+
+msgid "reviewer.article.automatic"
+msgstr ""
+
+msgid "reviewer.article.recommendation"
+msgstr ""
+
+msgid "reviewer.article.submitReview"
+msgstr ""
+
+msgid "reviewer.article.reviewerComments"
+msgstr ""
+
+msgid "reviewer.article.uploadedFile"
+msgstr ""
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr ""
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+
+msgid "reviewer.article.schedule.request"
+msgstr ""
+
+msgid "reviewer.article.schedule.response"
+msgstr ""
+
+msgid "reviewer.article.schedule.submitted"
+msgstr ""
+
+msgid "reviewer.article.schedule.due"
+msgstr ""
+
+msgid "reviewer.article.decision.accept"
+msgstr ""
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr ""
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr ""
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr ""
+
+msgid "reviewer.article.decision.decline"
+msgstr ""
+
+msgid "reviewer.article.decision.seeComments"
+msgstr ""
+
+msgid "reviewer.article.schedule"
+msgstr ""
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr ""
+
+msgid "reviewer.article.reviewSchedule"
+msgstr ""
+
+msgid "reviewer.article.reviewSteps"
+msgstr ""
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr ""
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+
+msgid "reviewer.article.notifyEditorA"
+msgstr ""
+
+msgid "reviewer.article.notifyEditorB"
+msgstr ""
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+
+msgid "reviewer.competingInterests"
+msgstr ""
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr ""
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr ""
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr ""
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr ""
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr ""
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr ""
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr ""
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr ""
+
+msgid "submission.copyedit.useFile"
+msgstr ""
+
+msgid "submission.copyedit.copyeditComments"
+msgstr ""
+
+msgid "submission.copyedit.instructions"
+msgstr ""
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr ""
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr ""
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr ""
+
+msgid "submission.layout.layoutComments"
+msgstr ""
+
+msgid "submission.layout.instructions"
+msgstr ""
+
+msgid "submission.layout.referenceLinking"
+msgstr ""
+
+msgid "submission.proofreadingComments"
+msgstr ""
+
+msgid "submission.proofread.corrections"
+msgstr ""
+
+msgid "submission.proofread.instructions"
+msgstr ""
+
+msgid "submission.logType.article"
+msgstr ""
+
+msgid "submission.logType.author"
+msgstr ""
+
+msgid "submission.logType.editor"
+msgstr ""
+
+msgid "submission.logType.review"
+msgstr ""
+
+msgid "submission.logType.copyedit"
+msgstr ""
+
+msgid "submission.logType.layout"
+msgstr ""
+
+msgid "submission.logType.proofread"
+msgstr ""
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr ""
+
+msgid "submission.comments.copyeditComments"
+msgstr ""
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr ""
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr ""
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+
+msgid "submission.comments.forAuthorEditor"
+msgstr ""
+
+msgid "submission.comments.forEditor"
+msgstr ""
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr ""
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr ""
+
+msgid "user.register.selectContext"
+msgstr ""
+
+msgid "user.register.noJournals"
+msgstr ""
+
+msgid "user.register.privacyStatement"
+msgstr ""
+
+msgid "user.register.registrationDisabled"
+msgstr ""
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr ""
+
+msgid "user.register.readerDescription"
+msgstr ""
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+
+msgid "user.register.authorDescription"
+msgstr ""
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr ""
+
+msgid "user.register.reviewerDescription"
+msgstr ""
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+
+msgid "user.register.form.missingSiteConsent"
+msgstr ""
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr ""
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr ""
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+
+msgid "user.subscriptions.status"
+msgstr ""
+
+msgid "user.subscriptions.statusDescription"
+msgstr ""
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr ""
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr ""
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr ""
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr ""
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr ""
+
+msgid "user.subscriptions.renew"
+msgstr ""
+
+msgid "user.subscriptions.purchase"
+msgstr ""
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr ""
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr ""
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr ""
+
+msgid "user.subscriptions.expires"
+msgstr ""
+
+msgid "user.subscriptions.expired"
+msgstr ""
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr ""
+
+msgid "user.subscriptions.form.typeId"
+msgstr ""
+
+msgid "user.subscriptions.form.membership"
+msgstr ""
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr ""
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr ""
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr ""
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+
+msgid "user.subscriptions.form.institutionName"
+msgstr ""
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr ""
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr ""
+
+msgid "user.subscriptions.form.domain"
+msgstr ""
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+
+msgid "user.subscriptions.form.domainValid"
+msgstr ""
+
+msgid "user.subscriptions.form.ipRange"
+msgstr ""
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr ""
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr ""
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr ""
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr ""
+
+msgid "search.browseAuthorIndex"
+msgstr ""
+
+msgid "search.searchFor"
+msgstr ""
+
+msgid "search.withinJournal"
+msgstr ""
+
+msgid "search.allJournals"
+msgstr ""
+
+msgid "search.authorIndex"
+msgstr ""
+
+msgid "search.authorDetails"
+msgstr ""
+
+msgid "search.syntaxInstructions"
+msgstr ""
+
+msgid "article.pageTitle"
+msgstr ""
+
+msgid "article.pdf.title"
+msgstr ""
+
+msgid "article.download"
+msgstr ""
+
+msgid "article.pluginMissing"
+msgstr ""
+
+msgid "article.nonpdf.title"
+msgstr ""
+
+msgid "article.nonpdf.note"
+msgstr ""
+
+msgid "site.journalsHosted"
+msgstr ""
+
+msgid "site.journalView"
+msgstr ""
+
+msgid "site.journalRegister"
+msgstr ""
+
+msgid "site.journalCurrent"
+msgstr ""
+
+msgid "site.noJournals"
+msgstr ""
+
+msgid "current.current"
+msgstr ""
+
+msgid "current.noCurrentIssue"
+msgstr ""
+
+msgid "current.noCurrentIssueDesc"
+msgstr ""
+
+msgid "archive.archives"
+msgstr ""
+
+msgid "archive.archivesPageNumber"
+msgstr ""
+
+msgid "archive.browse"
+msgstr ""
+
+msgid "archive.issueUnavailable"
+msgstr ""
+
+msgid "about.statistics"
+msgstr ""
+
+msgid "about.contact"
+msgstr ""
+
+msgid "about.aboutContext"
+msgstr ""
+
+msgid "about.history"
+msgstr ""
+
+msgid "about.editorialTeam"
+msgstr ""
+
+msgid "about.editorialTeam.biography"
+msgstr ""
+
+msgid "about.editorialPolicies"
+msgstr ""
+
+msgid "about.focusAndScope"
+msgstr ""
+
+msgid "about.sectionPolicies"
+msgstr ""
+
+msgid "about.submissions"
+msgstr ""
+
+msgid "about.onlineSubmissions.login"
+msgstr ""
+
+msgid "about.onlineSubmissions.register"
+msgstr ""
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr ""
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr ""
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr ""
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr ""
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr ""
+
+msgid "about.authorGuidelines"
+msgstr ""
+
+msgid "about.submissionPreparationChecklist"
+msgstr ""
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+
+msgid "about.copyrightNotice"
+msgstr ""
+
+msgid "about.privacyStatement"
+msgstr ""
+
+msgid "about.authorFees"
+msgstr ""
+
+msgid "about.authorFeesMessage"
+msgstr ""
+
+msgid "about.peerReviewProcess"
+msgstr ""
+
+msgid "about.publicationFrequency"
+msgstr ""
+
+msgid "about.openAccessPolicy"
+msgstr ""
+
+msgid "about.delayedOpenAccess"
+msgstr ""
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr ""
+
+msgid "about.archiving"
+msgstr ""
+
+msgid "about.subscriptions"
+msgstr ""
+
+msgid "about.subscriptions.individual"
+msgstr ""
+
+msgid "about.subscriptions.institutional"
+msgstr ""
+
+msgid "about.subscriptionsContact"
+msgstr ""
+
+msgid "about.subscriptionTypes.name"
+msgstr ""
+
+msgid "about.subscriptionTypes.format"
+msgstr ""
+
+msgid "about.subscriptionTypes.duration"
+msgstr ""
+
+msgid "about.subscriptionTypes.cost"
+msgstr ""
+
+msgid "about.availableSubscriptionTypes"
+msgstr ""
+
+msgid "about.memberships"
+msgstr ""
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr ""
+
+msgid "about.aboutSoftware"
+msgstr ""
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+
+msgid "about.aboutOJSSite"
+msgstr ""
+
+msgid "help.ojsHelp"
+msgstr ""
+
+msgid "help.ojsHelpAbbrev"
+msgstr ""
+
+msgid "help.searchReturnResults"
+msgstr ""
+
+msgid "help.goToEditPage"
+msgstr ""
+
+msgid "donations.thankYou"
+msgstr ""
+
+msgid "donations.thankYouMessage"
+msgstr ""
+
+msgid "payment.loginRequired"
+msgstr ""
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+
+msgid "payment.loginRequired.forDonation"
+msgstr ""
+
+msgid "payment.paid"
+msgstr ""
+
+msgid "payment.unpaid"
+msgstr ""
+
+msgid "payment.waived"
+msgstr ""
+
+msgid "payment.payNow"
+msgstr ""
+
+msgid "payment.waive"
+msgstr ""
+
+msgid "payment.alreadyPaid"
+msgstr ""
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+
+msgid "payment.paymentReceived"
+msgstr ""
+
+msgid "payment.paymentSent"
+msgstr ""
+
+msgid "payment.authorFees"
+msgstr ""
+
+msgid "payment.type.submission"
+msgstr ""
+
+msgid "payment.type.publication"
+msgstr ""
+
+msgid "payment.type.publication.required"
+msgstr ""
+
+msgid "payment.type.fastTrack"
+msgstr ""
+
+msgid "payment.type.membership"
+msgstr ""
+
+msgid "payment.type.purchaseArticle"
+msgstr ""
+
+msgid "payment.type.purchaseIssue"
+msgstr ""
+
+msgid "payment.type.subscription"
+msgstr ""
+
+msgid "payment.type.donation"
+msgstr ""
+
+msgid "payment.requestPublicationFee"
+msgstr ""
+
+msgid "payment.notFound"
+msgstr ""
+
+msgid "payment.donation.makeDonation"
+msgstr ""
+
+msgid "payment.submission.paySubmission"
+msgstr ""
+
+msgid "payment.publication.payPublication"
+msgstr ""
+
+msgid "payment.publication.publicationPaid"
+msgstr ""
+
+msgid "payment.membership.buyMembership"
+msgstr ""
+
+msgid "payment.membership.renewMembership"
+msgstr ""
+
+msgid "payment.membership.ends"
+msgstr ""
+
+msgid "payment.subscription.purchase"
+msgstr ""
+
+msgid "payment.subscription.renew"
+msgstr ""
+
+msgid "payment.subscription.expires"
+msgstr ""
+
+msgid "installer.appInstallation"
+msgstr ""
+
+msgid "installer.ojsUpgrade"
+msgstr ""
+
+msgid "installer.updatingInstructions"
+msgstr ""
+
+msgid "installer.installationInstructions"
+msgstr ""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+
+msgid "installer.allowFileUploads"
+msgstr ""
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+
+msgid "installer.localeInstructions"
+msgstr ""
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+
+msgid "installer.installApplication"
+msgstr ""
+
+msgid "installer.upgradeApplication"
+msgstr ""
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+
+msgid "installer.installationComplete"
+msgstr ""
+
+msgid "installer.upgradeComplete"
+msgstr ""
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+
+msgid "log.author.documentRevised"
+msgstr ""
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+
+msgid "log.review.reviewerRated"
+msgstr ""
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+
+msgid "log.review.resubmit"
+msgstr ""
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+
+msgid "log.review.reviewerFile"
+msgstr ""
+
+msgid "log.editor.decision"
+msgstr ""
+
+msgid "log.editor.recommendation"
+msgstr ""
+
+msgid "log.copyedit.initiate"
+msgstr ""
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr ""
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+
+msgid "log.copyedit.copyeditorFile"
+msgstr ""
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+
+msgid "log.editor.metadataModified"
+msgstr ""
+
+msgid "log.editor.editorFile"
+msgstr ""
+
+msgid "log.editor.archived"
+msgstr ""
+
+msgid "log.editor.restored"
+msgstr ""
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+
+msgid "log.proofread.assign"
+msgstr ""
+
+msgid "log.proofread.complete"
+msgstr ""
+
+msgid "log.imported"
+msgstr ""
+
+msgid "metadata.pkp.peerReviewed"
+msgstr ""
+
+msgid "notification.type.editing"
+msgstr ""
+
+msgid "notification.type.submissionSubmitted"
+msgstr ""
+
+msgid "notification.type.editorDecisionComment"
+msgstr ""
+
+msgid "notification.type.galleyModified"
+msgstr ""
+
+msgid "notification.type.issuePublished"
+msgstr ""
+
+msgid "notification.type.newAnnouncement"
+msgstr ""
+
+msgid "notification.type.reviewerFormComment"
+msgstr ""
+
+msgid "notification.type.reviewing"
+msgstr ""
+
+msgid "notification.type.site"
+msgstr ""
+
+msgid "notification.type.submissionComment"
+msgstr ""
+
+msgid "notification.type.submissions"
+msgstr ""
+
+msgid "notification.type.userComment"
+msgstr ""
+
+msgid "notification.type.public"
+msgstr ""
+
+msgid "notification.savedIssueMetadata"
+msgstr ""
+
+msgid "notification.type.editorAssignmentTask"
+msgstr ""
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+
+msgid "notification.type.awaitingRepresentations"
+msgstr ""
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+
+msgid "user.authorization.noContext"
+msgstr ""
+
+msgid "user.authorization.sectionAssignment"
+msgstr ""
+
+msgid "user.authorization.invalidIssue"
+msgstr ""
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+
+msgid "grid.action.createContext"
+msgstr ""
+
+msgid "editor.navigation.issues"
+msgstr ""
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr ""
+
+msgid "user.profile.form.showOtherContexts"
+msgstr ""
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr ""
+
+msgid "article.view.interstitial"
+msgstr ""
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr ""
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr ""
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr ""
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr ""
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr ""
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr ""
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+
+msgid "editor.issues.backIssues"
+msgstr ""
+
+msgid "editor.issues.futureIssues"
+msgstr ""
+
+msgid "navigation.subscriptions"
+msgstr ""
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+
+msgid "catalog.sortBy"
+msgstr ""
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr ""

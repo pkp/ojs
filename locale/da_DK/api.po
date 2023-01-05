@@ -13,57 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Du har ikke tilladelse til at se ikke-publicerede numre."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Den publikation, du søgte, er ikke en del af denne indsendelse."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Den publikation, du søgte, er ikke en del af dette tidsskrift."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Den valgte betalingsmetode understøttes ikke."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr ""
-"Du har ikke tilladelse til at flytte denne e-mail-skabelon til et anden "
-"tidsskrift."
-
-msgid "api.contexts.404.contextNotFound"
-msgstr "Det tidsskrift, du rekvirerede blev ikke fundet."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Du har ikke tilladelse til at slette dette tidsskrift."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Du har ikke tilladelse til at redigere dette tidsskrift."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Du kan ikke redigere dette tidsskrift via webstedets API."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Du kan ikke se eller redigere dette tidsskrift, medmindre du fremsender en "
-"anmodning til tidsskriftets API eller til hele webstedets API."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "Du har ikke tilladelse til at se dette tidsskrift."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Du kan kun se tidsskrifter, der er aktiveret."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"For at foretage eller redigere en indsendelse skal du sende en besked til "
-"tidsskriftets API endpoint."
-
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Du kan ikke ændre en indsendelses tidsskrift."
-
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Du kan ikke knytte en fil fra dette trin til en publiceringsversion."
-
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Den meddelelse, du søgte efter, er ikke en del af dette tidsskrift."
 
@@ -71,3 +20,54 @@ msgid "api.emails.403.disabled"
 msgstr ""
 "E-mail-notifikationen er ikke blevet aktiveret i forbindelse med dette "
 "tidsskrift."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Du kan ikke ændre en indsendelses tidsskrift."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Du har ikke tilladelse til at se ikke-publicerede numre."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"For at foretage eller redigere en indsendelse skal du sende en besked til "
+"tidsskriftets API endpoint."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Du kan kun se tidsskrifter, der er aktiveret."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Du har ikke tilladelse til at se dette tidsskrift."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Du kan ikke se eller redigere dette tidsskrift, medmindre du fremsender en "
+"anmodning til tidsskriftets API eller til hele webstedets API."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Du kan ikke redigere dette tidsskrift via webstedets API."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Du har ikke tilladelse til at redigere dette tidsskrift."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Du har ikke tilladelse til at slette dette tidsskrift."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Det tidsskrift, du rekvirerede blev ikke fundet."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Du har ikke tilladelse til at flytte denne e-mail-skabelon til et anden "
+"tidsskrift."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Den valgte betalingsmetode understøttes ikke."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Den publikation, du søgte, er ikke en del af dette tidsskrift."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Den publikation, du søgte, er ikke en del af denne indsendelse."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Du kan ikke knytte en fil fra dette trin til en publiceringsversion."

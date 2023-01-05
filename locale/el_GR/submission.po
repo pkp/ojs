@@ -30,7 +30,13 @@ msgid "submission.title"
 msgstr "Τίτλος άρθρου"
 
 msgid "submission.title.tip"
-msgstr "Ο τύπος υποβολής είναι συνήθως 'εικόνα', 'κείμενο' ή τύποι πολυμέσων, όπως 'λογισμικό' ή 'διαδραστικό'. Παρακαλούμε επιλέξτε το πιο σχετικό με την υποβολή σας. Παραδείγματα μπορείτε να βρείτε στο <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Ο τύπος υποβολής είναι συνήθως 'εικόνα', 'κείμενο' ή τύποι πολυμέσων, όπως "
+"'λογισμικό' ή 'διαδραστικό'. Παρακαλούμε επιλέξτε το πιο σχετικό με την "
+"υποβολή σας. Παραδείγματα μπορείτε να βρείτε στο <a target=\"_blank\" href="
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type"
+"\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</"
+"a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Ξεκινήστε μία νέα υποβολή στο"
@@ -44,11 +50,17 @@ msgstr "Ροή εργασιών υποβολής"
 msgid "submission.abstract.wordCount.description"
 msgstr "Η περίληψη δεν πρέπει να υπερβαίνει τις {$wordCount} λέξεις."
 
+msgid "submission.submit.noContext"
+msgstr "Δεν ήταν δυνατή η εύρεση του περιοδικού που ανήκει αυτή η υποβολή."
+
 msgid "submission.issueEntry"
 msgstr "Μεταδεδομένα"
 
 msgid "submission.submit.whatNext.description"
-msgstr "Οι συντελεστές του περιοδικού ειδοποιήθηκαν για την υποβολή και σας έχει σταλεί σχετική επιβεβαίωση. Μόλις ο Επιμελητής του περιοδικού ελέγξει την υποβολή, θα επικοινωνήσει μαζί σας."
+msgstr ""
+"Οι συντελεστές του περιοδικού ειδοποιήθηκαν για την υποβολή και σας έχει "
+"σταλεί σχετική επιβεβαίωση. Μόλις ο Επιμελητής του περιοδικού ελέγξει την "
+"υποβολή, θα επικοινωνήσει μαζί σας."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Το τυπογραφικό δοκίμιο εμφανίζεται στη σχετική εγγραφή στο τεύχος"
@@ -57,10 +69,13 @@ msgid "grid.action.issueEntry"
 msgstr "Προβολή των μεταδεδομένων αυτής της υποβολής"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Το τυπογραφικό δοκίμιο του άρθρου \"{$galleyFormatName}\" είναι διαθέσιμο."
+msgstr ""
+"Το τυπογραφικό δοκίμιο του άρθρου \"{$galleyFormatName}\" είναι διαθέσιμο."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Το τυπογραφικό δοκίμιο του άρθρου \"{$galleyFormatName}\" δεν είναι διαθέσιμο."
+msgstr ""
+"Το τυπογραφικό δοκίμιο του άρθρου \"{$galleyFormatName}\" δεν είναι "
+"διαθέσιμο."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Τα δημόσια αναγνωριστικά της υποβολής επικαιροποιήθηκαν."
@@ -69,10 +84,14 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Έγκριση μορφοποίησης"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Αυτό το τυπογραφικό δοκίμιο <em>δεν θα είναι πλέον διαθέσιμο</em> στους αναγνώστες.</p>"
+msgstr ""
+"<p>Αυτό το τυπογραφικό δοκίμιο <em>δεν θα είναι πλέον διαθέσιμο</em> στους "
+"αναγνώστες.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Αυτό το τυπογραφικό δοκίμιο <em>θα είναι διαθέσιμο</em> στους αναγνώστες.</p>"
+msgstr ""
+"<p>Αυτό το τυπογραφικό δοκίμιο <em>θα είναι διαθέσιμο</em> στους αναγνώστες."
+"</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Αυτό το τυπογραφικό δοκίμιο να είναι διαθέσιμο"
@@ -81,19 +100,29 @@ msgid "submission.galleyFiles"
 msgstr "Αρχεία τυπογραφικών δοκιμίων"
 
 msgid "submission.proofReadingDescription"
-msgstr "Εδώ ο Επιμελητής Διάταξης μεταφορτώνει τα αρχεία που είναι έτοιμα για δημοσίευση. Επιλέξτε τον σύνδεσμο <em>Ανάθεση σε Eλεγκτή</em> για να αναθέσετε τη διόρθωση των τυπογραφικών δοκιμίων στους Συγγραφείς ή άλλους Χρήστες. Τα διορθωμένα αρχεία θα μεταφορτωθούν για έγκριση πριν τη δημοσίευση."
+msgstr ""
+"Εδώ ο Επιμελητής Διάταξης μεταφορτώνει τα αρχεία που είναι έτοιμα για "
+"δημοσίευση. Επιλέξτε τον σύνδεσμο <em>Ανάθεση σε Eλεγκτή</em> για να "
+"αναθέσετε τη διόρθωση των τυπογραφικών δοκιμίων στους Συγγραφείς ή άλλους "
+"Χρήστες. Τα διορθωμένα αρχεία θα μεταφορτωθούν για έγκριση πριν τη "
+"δημοσίευση."
 
 msgid "grid.action.approveProof"
-msgstr "Έγκριση αυτού του διορθωμένου δοκιμίου για συμπερίληψη στο τυπογραφικό δοκίμιο."
+msgstr ""
+"Έγκριση αυτού του διορθωμένου δοκιμίου για συμπερίληψη στο τυπογραφικό "
+"δοκίμιο."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Αυτό το διορθωμένο δοκίμιο εγκρίθηκε για συμπερίληψη στο τυπογραφικό δοκίμιο."
+msgstr ""
+"Αυτό το διορθωμένο δοκίμιο εγκρίθηκε για συμπερίληψη στο τυπογραφικό δοκίμιο."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Τίτλος και περίληψη"
 
 msgid "submission.submit.upload.description"
-msgstr "Μεταφόρτωση αρχείων της υποβολής, συμπεριλαμβανομένου κειμένου, πολυμέσων, συνόλων δεδομένων κλπ."
+msgstr ""
+"Μεταφόρτωση αρχείων της υποβολής, συμπεριλαμβανομένου κειμένου, πολυμέσων, "
+"συνόλων δεδομένων κλπ."
 
 msgid "submission.pageProofs"
 msgstr "Διόρθωση τυπογραφικών δοκιμίων"
@@ -126,7 +155,9 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Λίστα ελέγχου υποβολής"
 
 msgid "submission.submit.submissionChecklistDescription"
-msgstr "Πριν προχωρήσετε, πρέπει να διαβάσετε και να επιβεβαιώσετε ότι η υποβολή πληροί τις παρακάτω προϋποθέσεις."
+msgstr ""
+"Πριν προχωρήσετε, πρέπει να διαβάσετε και να επιβεβαιώσετε ότι η υποβολή "
+"πληροί τις παρακάτω προϋποθέσεις."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Πολιτική Προστασίας Προσωπικών Δεδομένων"
@@ -138,7 +169,9 @@ msgid "submission.submit.form.authorRequired"
 msgstr "Απαιτείται η καταχώρηση τουλάχιστον ενός Συγγραφέα."
 
 msgid "submission.submit.form.authorRequiredFields"
-msgstr "Απαιτούνται το όνομα, το επίθετο και η διεύθυνση ηλεκτρονικού ταχυδρομείου κάθε Συγγραφέα."
+msgstr ""
+"Απαιτούνται το όνομα, το επίθετο και η διεύθυνση ηλεκτρονικού ταχυδρομείου "
+"κάθε Συγγραφέα."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Παρακαλούμε εισάγετε τον τίτλο του άρθρου."
@@ -147,7 +180,9 @@ msgid "submission.submit.form.abstractRequired"
 msgstr "Παρακαλούμε εισάγετε την περίληψη του άρθρου."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Η περίληψή σας υπερβαίνει τον μέγιστο προβλεπόμενο αριθμό λέξεων για τη συγκεκριμένη ενότητα."
+msgstr ""
+"Η περίληψή σας υπερβαίνει τον μέγιστο προβλεπόμενο αριθμό λέξεων για τη "
+"συγκεκριμένη ενότητα."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Παρακαλούμε επιλέξτε την ιδιότητα του Συνεργάτη."
@@ -156,70 +191,101 @@ msgid "submission.citationFormat.notFound"
 msgstr "Το πρότυπο παραπομπής που ζητήθηκε δε μπορεί να ανακτηθεί."
 
 msgid "submission.metadataDescription"
-msgstr "Οι προδιαγραφές βασίζονται στο διεθνές πρότυπο Dublin Core, το οποίο χρησιμοποιείται για την περιγραφή περιεχομένου περιοδικών."
+msgstr ""
+"Οι προδιαγραφές βασίζονται στο διεθνές πρότυπο Dublin Core, το οποίο "
+"χρησιμοποιείται για την περιγραφή περιεχομένου περιοδικών."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"Αυτή είναι μια προεπισκόπηση και δεν έχει δημοσιευτεί ακόμα. <a href="
+"\"{$url}\">Δείτε την υποβολή</a>"
 
 msgid "section.any"
 msgstr "Όλες οι ενότητες"
 
-msgid "galley.editPublishedDisabled"
-msgstr "Δεν είναι δυνατή η επεξεργασία των τυπογραφικών δοκιμίων αυτής της έκδοσης επειδή έχει ήδη δημοσιευτεί."
-
-msgid "catalog.category.heading"
-msgstr "Όλα τα Τεκμήρια"
+msgid "submission.sectionOptions"
+msgstr "Επιλογές Ενότητας"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Τεκμήρια"
 
-msgid "submission.sectionOptions"
-msgstr "Επιλογές Ενότητας"
+msgid "catalog.category.heading"
+msgstr "Όλα τα Τεκμήρια"
 
-msgid "submission.submit.noContext"
-msgstr "Δεν ήταν δυνατή η εύρεση του περιοδικού που ανήκει αυτή η υποβολή."
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Δεν είναι δυνατή η επεξεργασία των τυπογραφικών δοκιμίων αυτής της έκδοσης "
+"επειδή έχει ήδη δημοσιευτεί."
 
-msgid "publication.selectIssue"
-msgstr "Επιλέξτε ένα τεύχος για προγραμματισμό δημοσίευσης"
+msgid "galley.publicationNotFound"
+msgstr ""
+"Δεν βρέθηκε η δημοσίευση που σχετίζεται με αυτό το τυπογραφικό δοκίμιο."
 
 msgid "publication.assignToissue"
 msgstr "Εκχώρηση σε Τεύχος"
 
-msgid "publication.unscheduledIn"
-msgstr "Αυτό δεν έχει προγραμματιστεί για δημοσίευση σε κάποιο τεύχος."
+msgid "publication.assignedToIssue"
+msgstr ""
+"Αυτό έχει ανατεθεί στο <a href=\"{$issueUrl}\">{$issueName}</a> αλλά δεν "
+"έχει προγραμματιστεί για δημοσίευση."
 
-msgid "publication.scheduledIn"
-msgstr "Προγραμματισμένο για δημοσίευση στο  <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "publication.changeIssue"
+msgstr "Αλλαγή τεύχους"
 
-msgid "publication.publishedIn"
-msgstr "Δημοσιεύτηκε στο <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
-msgstr "Η δημοσίευση πρέπει να εκχωρηθεί σε ένα τεύχος πριν από τη δημοσίευσή του."
-
-msgid "publication.publish.confirmation.datePublishedInPast"
-msgstr "Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Αυτό θα δημοσιευθεί αμέσως,επειδή η ημερομηνία δημοσίευσης έχει οριστεί την {$datePublished}. Επιβεβαιώστε ότι θέλετε να το δημοσιεύσετε."
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr "Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Αυτό θα δημοσιευτεί κατά τη δημοσίευση του τεύχους {$issue}. Επιβεβαιώστε ότι θέλετε να το προγραμματίσετε για δημοσίευση."
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr "Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Αυτό θα δημοσιευτεί αμέσως στο τεύχος {$issue}. Επιβεβαιώστε ότι θέλετε να το δημοσιεύσετε."
-
-msgid "publication.publish.confirmation"
-msgstr "Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Είστε σίγουροι ότι θέλετε να το δημοσιεύσετε;"
-
-msgid "publication.invalidIssue"
-msgstr "Δεν βρέθηκε αυτό το τεύχος στη δημοσίευση."
+msgid "publication.datePublished.description"
+msgstr ""
+"Η ημερομηνία δημοσίευσης θα οριστεί αυτόματα κατά τη δημοσίευση του τεύχους. "
+"Μην εισαγάγετε ημερομηνία δημοσίευσης, εκτός εάν το άρθρο είχε δημοσιευτεί "
+"προηγουμένως αλλού και πρέπει να το μεταχρονολογήσετε."
 
 msgid "publication.invalidSection"
 msgstr "Δεν βρέθηκε αυτή η ενότητα στη δημοσίευση."
 
-msgid "publication.datePublished.description"
-msgstr "Η ημερομηνία δημοσίευσης θα οριστεί αυτόματα κατά τη δημοσίευση του τεύχους. Μην εισαγάγετε ημερομηνία δημοσίευσης, εκτός εάν το άρθρο είχε δημοσιευτεί προηγουμένως αλλού και πρέπει να το μεταχρονολογήσετε."
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
 
-msgid "galley.publicationNotFound"
-msgstr "Δεν βρέθηκε η δημοσίευση που σχετίζεται με αυτό το τυπογραφικό δοκίμιο."
+msgid "publication.invalidIssue"
+msgstr "Δεν βρέθηκε αυτό το τεύχος στη δημοσίευση."
 
-msgid "submission.viewingPreview"
-msgstr "Αυτή είναι μια προεπισκόπηση και δεν έχει δημοσιευτεί ακόμα. <a href=\"{$url}\">Δείτε την υποβολή</a>"
+msgid "publication.publish.confirmation"
+msgstr ""
+"Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Είστε σίγουροι ότι θέλετε να το "
+"δημοσιεύσετε;"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Αυτό θα δημοσιευτεί κατά τη "
+"δημοσίευση του τεύχους {$issue}. Επιβεβαιώστε ότι θέλετε να το "
+"προγραμματίσετε για δημοσίευση."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Αυτό θα δημοσιευτεί αμέσως στο "
+"τεύχος {$issue}. Επιβεβαιώστε ότι θέλετε να το δημοσιεύσετε."
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Πληρούνται όλες οι απαιτήσεις δημοσίευσης. Αυτό θα δημοσιευθεί αμέσως,επειδή "
+"η ημερομηνία δημοσίευσης έχει οριστεί την {$datePublished}. Επιβεβαιώστε ότι "
+"θέλετε να το δημοσιεύσετε."
+
+msgid "publication.required.issue"
+msgstr ""
+"Η δημοσίευση πρέπει να εκχωρηθεί σε ένα τεύχος πριν από τη δημοσίευσή του."
+
+msgid "publication.publishedIn"
+msgstr "Δημοσιεύτηκε στο <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Προγραμματισμένο για δημοσίευση στο  <a href=\"{$issueUrl}\">{$issueName}</"
+"a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Αυτό δεν έχει προγραμματιστεί για δημοσίευση σε κάποιο τεύχος."
+
+msgid "publication.selectIssue"
+msgstr "Επιλέξτε ένα τεύχος για προγραμματισμό δημοσίευσης"
 
 msgid "submission.publication"
 msgstr "Δημοσίευση"
@@ -230,14 +296,21 @@ msgstr "Δημοσιευμένο"
 msgid "submission.status.scheduled"
 msgstr "Προγραμματισμένο"
 
+msgid "publication.status.unscheduled"
+msgstr "Απρογραμματισμένο"
+
 msgid "submission.publications"
 msgstr "Δημοσιεύσεις"
 
 msgid "publication.copyrightYearBasis.issueDescription"
-msgstr "Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα όταν δημοσιευθεί σε ένα τεύχος."
+msgstr ""
+"Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα όταν δημοσιευθεί σε ένα "
+"τεύχος."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr "Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα με βάση την ημερομηνία δημοσίευσης."
+msgstr ""
+"Το έτος πνευματικών δικαιωμάτων θα οριστεί αυτόματα με βάση την ημερομηνία "
+"δημοσίευσης."
 
 msgid "publication.datePublished"
 msgstr "Ημερομηνία Δημοσίευσης"
@@ -250,6 +323,9 @@ msgstr "Η υποβολή δημοσιεύτηκε."
 
 msgid "publication.event.scheduled"
 msgstr "Η υποβολή είχε προγραμματιστεί για δημοσίευση."
+
+msgid "publication.event.unpublished"
+msgstr "Η υποβολή δεν δημοσιεύτηκε."
 
 msgid "publication.event.versionPublished"
 msgstr "Δημοσιεύθηκε μια νέα έκδοση."
@@ -269,38 +345,28 @@ msgstr "Δημοσίευση"
 msgid "publication.publish.requirements"
 msgstr "Πρέπει να πληρούνται οι ακόλουθες προϋποθέσεις για να δημοσιευτεί."
 
-msgid "submission.queries.production"
-msgstr "Συζητήσεις Παραγωγής"
-
-msgid "publication.assignedToIssue"
-msgstr "Αυτό έχει ανατεθεί στο <a href=\"{$issueUrl}\">{$issueName}</a> αλλά δεν έχει προγραμματιστεί για δημοσίευση."
-
-msgid "publication.changeIssue"
-msgstr "Αλλαγή τεύχους"
-
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inactive)"
-
-msgid "publication.status.unscheduled"
-msgstr "Απρογραμματισμένο"
-
-msgid "publication.event.unpublished"
-msgstr "Η υποβολή δεν δημοσιεύτηκε."
-
 msgid "publication.required.declined"
 msgstr "Δεν είναι δυνατή η δημοσίευση μιας υποβολής που απορρίφθηκε."
 
 msgid "publication.required.reviewStage"
-msgstr "Η υποβολή πρέπει να βρίσκεται στα στάδια Αντιγραφής ή Παραγωγής για να μπορέσει να δημοσιευτεί."
+msgstr ""
+"Η υποβολή πρέπει να βρίσκεται στα στάδια Αντιγραφής ή Παραγωγής για να "
+"μπορέσει να δημοσιευτεί."
 
 msgid "submission.license.description"
-msgstr "Η άδεια θα οριστεί αυτόματα σε <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a> όταν αυτό δημοσιευτεί."
+msgstr ""
+"Η άδεια θα οριστεί αυτόματα σε <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> όταν αυτό δημοσιευτεί."
 
 msgid "submission.copyrightHolder.description"
-msgstr "Τα πνευματικά δικαιώματα θα εκχωρηθούν αυτόματα στο {$copyright} όταν αυτό δημοσιευτεί."
+msgstr ""
+"Τα πνευματικά δικαιώματα θα εκχωρηθούν αυτόματα στο {$copyright} όταν αυτό "
+"δημοσιευτεί."
 
 msgid "submission.copyrightOther.description"
-msgstr "Εκχωρήστε πνευματικά δικαιώματα για δημοσιευμένες υποβολές στο ακόλουθο μέρος."
+msgstr ""
+"Εκχωρήστε πνευματικά δικαιώματα για δημοσιευμένες υποβολές στο ακόλουθο "
+"μέρος."
 
 msgid "publication.unpublish"
 msgstr "Κατάργηση δημοσίευσης"
@@ -313,3 +379,6 @@ msgstr "Είστε βέβαιοι ότι δεν θέλετε αυτό να πρ�
 
 msgid "publication.version.details"
 msgstr "Λεπτομέρειες δημοσίευσης για την έκδοση {$version}"
+
+msgid "submission.queries.production"
+msgstr "Συζητήσεις Παραγωγής"

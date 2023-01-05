@@ -14,6 +14,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "editor.home"
+msgstr "Página Inicial do Editor"
+
+msgid "editor.reassign"
+msgstr "Reatribuir"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Submissões e Publicações"
+
+msgid "editor.submissionQueue"
+msgstr "Fila de Submissões"
+
 msgid "editor.submissionArchive"
 msgstr "Acervo de Submissões"
 
@@ -34,15 +46,17 @@ msgstr "Mim"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"O identificador público '{$publicIdentifier}' já existe para outro objeto ("
-"edição, artigo, composição final ou arquivo suplementar). Escolha um "
+"O identificador público '{$publicIdentifier}' já existe para outro objeto "
+"(edição, artigo, composição final ou arquivo suplementar). Escolha um "
 "identificar único dentre os disponíveis em seu periódico."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Nenhuma submissão no acervo."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Salvar alterações a submissões arquivadas? Submissões marcadas para exclusão serão excluídas permanentemente do sistema."
+msgstr ""
+"Salvar alterações a submissões arquivadas? Submissões marcadas para exclusão "
+"serão excluídas permanentemente do sistema."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Você tem certeza que deseja registrar esta decisão?"
@@ -80,10 +94,14 @@ msgid "editor.usersNotified"
 msgstr "Usuários Notificados"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Enviar esta mensagem a todos os usuários associados a esta revista ({$count} usuários)"
+msgstr ""
+"Enviar esta mensagem a todos os usuários associados a esta revista ({$count} "
+"usuários)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Enviar esta mensagem a todos os usuários associados a esta revista que indicaram desejar receber notificações ({$count} usuários)"
+msgstr ""
+"Enviar esta mensagem a todos os usuários associados a esta revista que "
+"indicaram desejar receber notificações ({$count} usuários)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Incluir sumário da edição:"
@@ -119,19 +137,24 @@ msgid "editor.issues.datePublished"
 msgstr "Data de Publicação"
 
 msgid "editor.issues.volumeRequired"
-msgstr "O volume é obrigatório para a edição, devendo ser um número positivo inteiro."
+msgstr ""
+"O volume é obrigatório para a edição, devendo ser um número positivo inteiro."
 
 msgid "editor.issues.numberRequired"
-msgstr "O número é obrigatório para a edição, devendo ser um número positivo inteiro."
+msgstr ""
+"O número é obrigatório para a edição, devendo ser um número positivo inteiro."
 
 msgid "editor.issues.yearRequired"
-msgstr "O ano é obrigatório para a edição, devendo ser um número positivo inteiro."
+msgstr ""
+"O ano é obrigatório para a edição, devendo ser um número positivo inteiro."
 
 msgid "editor.issues.titleRequired"
 msgstr "O título é obrigatório."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "A identificação da Edição é obrigatória. Escolha pelo menos uma das opções de identificação para a edição."
+msgstr ""
+"A identificação da Edição é obrigatória. Escolha pelo menos uma das opções "
+"de identificação para a edição."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Identificação da edição"
@@ -170,13 +193,19 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Remover capa?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "A imagem da capa que você solicitou para excluir não corresponde à imagem da capa dessa edição. Por favor, recarregue a página e tente denovo."
+msgstr ""
+"A imagem da capa que você solicitou para excluir não corresponde à imagem da "
+"capa dessa edição. Por favor, recarregue a página e tente denovo."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ela já pode ter sido excluída. Tente recarregar a página."
+msgstr ""
+"Não foi possível encontrar a imagem da capa que você solicitou para excluir. "
+"Ela já pode ter sido excluída. Tente recarregar a página."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png."
+msgstr ""
+"Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou ."
+"png."
 
 msgid "editor.issues.styleFile"
 msgstr "Folha de Estilos"
@@ -215,13 +244,20 @@ msgid "editor.issues.cover"
 msgstr "Capa"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Todos os artigos voltarão à fila de agendamento e todos os documentos associados serão excluídos permanentemente. Deseja realmente excluir esta edição?"
+msgstr ""
+"Todos os artigos voltarão à fila de agendamento e todos os documentos "
+"associados serão excluídos permanentemente. Deseja realmente excluir esta "
+"edição?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Esta revista utiliza ordenação personalizada de edições. <a href=\"{$url}\" class=\"action\">Restaurar para a configuração padrão</a>"
+msgstr ""
+"Esta revista utiliza ordenação personalizada de edições. <a href=\"{$url}\" "
+"class=\"action\">Restaurar para a configuração padrão</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Esta edição usa uma ordenação de seções personalizada. <a href=\"{$url}\" class=\"action\">Restaurar ordenação padrão</a>"
+msgstr ""
+"Esta edição usa uma ordenação de seções personalizada. <a href=\"{$url}\" "
+"class=\"action\">Restaurar ordenação padrão</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Dados da edição"
@@ -367,6 +403,9 @@ msgstr "Última concluída"
 msgid "editor.submissions.assignedTo"
 msgstr "Designado ao Editor"
 
+msgid "issues.submissions.issueIds"
+msgstr "Atribuído a Edição"
+
 msgid "editor.submissions.inSection"
 msgstr "Na seção"
 
@@ -389,10 +428,14 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "A agendar"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "A taxa para publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação."
+msgstr ""
+"A taxa para publicação do artigo não foi paga. Uma vez realizado o "
+"pagamento, será permitido agendar o artigo para publicação."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página."
+msgstr ""
+"Não foi possível encontrar a imagem da capa que você solicitou para excluir. "
+"Ele já pode ter sido excluída. Tente recarregar a página."
 
 msgid "grid.action.removeArticle"
 msgstr "Remover artigo da edição"
@@ -401,7 +444,9 @@ msgid "editor.article.remove"
 msgstr "Excluir"
 
 msgid "editor.article.remove.confirm"
-msgstr "Tem certeza que deseja remover este artigo da edição? O artigo estará disponível para publicação em outra edição."
+msgstr ""
+"Tem certeza que deseja remover este artigo da edição? O artigo estará "
+"disponível para publicação em outra edição."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "A data para acesso é inválida."
@@ -410,52 +455,52 @@ msgid "editor.issues.editIssueGalley"
 msgstr "Editar composição da edição"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "O editor de layout prepara estes arquivos para cada composição e em seguida transfere para o conjunto de <span class=\"pkp_help_title\">Provas</span> para leitura de prova."
+msgstr ""
+"O editor de layout prepara estes arquivos para cada composição e em seguida "
+"transfere para o conjunto de <span class=\"pkp_help_title\">Provas</span> "
+"para leitura de prova."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Selecionar arquivos da composição"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Rascunhos finais nesta lista são transformados por um Editor de Texto em versões editadas, transferidas abaixo em <span class=\"pkp_help_title\">Edição de Texto</span>."
+msgstr ""
+"Rascunhos finais nesta lista são transformados por um Editor de Texto em "
+"versões editadas, transferidas abaixo em <span class=\"pkp_help_title"
+"\">Edição de Texto</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Quaisquer arquivos que já tenham sido transferidos para qualquer etapa da submissão podem ser adicionados à listagem de Leitura de Prova marcando-se a caixa de seleção Incluir abaixo e clicando-se em Busca: todos os arquivos disponíveis serão listados e podem ser escolhidos para inclusão."
+msgstr ""
+"Quaisquer arquivos que já tenham sido transferidos para qualquer etapa da "
+"submissão podem ser adicionados à listagem de Leitura de Prova marcando-se a "
+"caixa de seleção Incluir abaixo e clicando-se em Busca: todos os arquivos "
+"disponíveis serão listados e podem ser escolhidos para inclusão."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor, escolha identificadores únicos para os objetos do mesmo tipo dentro de sua revista."
+msgstr ""
+"O identificador público '{$publicIdentifier}' já existe para outro objeto do "
+"mesmo tipo. Por favor, escolha identificadores únicos para os objetos do "
+"mesmo tipo dentro de sua revista."
 
 msgid "editor.article.coverImage"
 msgstr "Imagem de Capa"
 
-msgid "editor.home"
-msgstr "Página Inicial do Editor"
+#~ msgid "editor.issues.invalidCoverPageFormat"
+#~ msgstr ""
+#~ "Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique "
+#~ "as configurações de MimeType do servidor e permissões de pastas."
 
-msgid "editor.submissionsAndPublishing"
-msgstr "Submissões e Publicações"
+#~ msgid "editor.issues.hideCoverPageArchives"
+#~ msgstr "Não exibir miniatura da capa na lista de edições."
 
-msgid "editor.submissionQueue"
-msgstr "Fila de Submissões"
+#~ msgid "editor.issues.hideCoverPageCover"
+#~ msgstr "Não exibir imagem de capa antes do sumário."
 
-msgid "editor.issues.invalidCoverPageFormat"
-msgstr "Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique as configurações de MimeType do servidor e permissões de pastas."
+#~ msgid "editor.article.showCoverPage"
+#~ msgstr "Criar capa para este artigo com os seguintes elementos."
 
-msgid "editor.issues.hideCoverPageArchives"
-msgstr "Não exibir miniatura da capa na lista de edições."
+#~ msgid "editor.article.hideCoverPageToc"
+#~ msgstr "Não exibir miniatura da capa no sumário."
 
-msgid "editor.issues.hideCoverPageCover"
-msgstr "Não exibir imagem de capa antes do sumário."
-
-msgid "editor.article.showCoverPage"
-msgstr "Criar capa para este artigo com os seguintes elementos."
-
-msgid "editor.article.hideCoverPageToc"
-msgstr "Não exibir miniatura da capa no sumário."
-
-msgid "editor.article.hideCoverPageAbstract"
-msgstr "Não exibir capa na página de resumo de artigo."
-
-msgid "editor.reassign"
-msgstr "Reatribuir"
-
-msgid "issues.submissions.issueIds"
-msgstr "Atribuído a Edição"
+#~ msgid "editor.article.hideCoverPageAbstract"
+#~ msgstr "Não exibir capa na página de resumo de artigo."

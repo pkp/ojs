@@ -22,7 +22,9 @@ msgid "author.track"
 msgstr "Przedłożenia  rozpatrywane"
 
 msgid "author.competingInterests"
-msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Zbieżne zainteresowania</a>"
+msgstr ""
+"<a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">Zbieżne zainteresowania</a>"
 
 msgid "author.submit.submitArticle"
 msgstr "Prześlij artykuł"
@@ -34,7 +36,9 @@ msgid "author.submit.startHereTitle"
 msgstr "Prześlij tekst do opublikowania w czasopiśmie"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">Kliknij tutaj</a> aby przejść do formularza zgłoszenia."
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Kliknij tutaj</a> aby przejść do "
+"formularza zgłoszenia."
 
 msgid "author.submit.step1"
 msgstr "Krok 1. Start"
@@ -69,11 +73,22 @@ msgstr "Prześlij dodatkowe pliki"
 msgid "author.submit.confirmation"
 msgstr "Potwierdź"
 
+msgid "author.submit.nextSteps"
+msgstr "Następne kroki"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+"Możesz dokończyć zgłoszenie później. Niekompletne zgłoszenia znajdziesz w "
+"swoim panelu roboczym."
+
 msgid "author.submit.notAccepting"
 msgstr "Czasopismo nie przyjmuje obecnie nowych zgłoszeń."
 
 msgid "author.submit.requestWaiver"
 msgstr "Prośba o umorzenie płatności za publikację"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Proszę o umorzenie płatności za zgłoszenie tego tekstu"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr "Proszę uzasadnić dlaczego płatność powinna być umorzona."
@@ -114,29 +129,35 @@ msgstr "Dział czasopisma"
 msgid "author.submit.journalSectionDescription"
 msgstr "Wybierz docelowy dział dla przesyłanego tekstu."
 
-msgid "author.submit.submissionLocale"
-msgstr "Język przesyłanego tekstu"
-
-msgid "author.submit.submissionLocaleDescription"
-msgstr "Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w jakim języku został napisany tekst."
-
 msgid "author.submit.verifyChecklist"
-msgstr "Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone."
+msgstr ""
+"Aby kontynuować, upewnij się, że wszystkie elementy listy zostały zaznaczone."
 
 msgid "author.submit.copyrightNoticeAgree"
-msgstr "Zapoznałem(am) się z prawami autorskimi dotyczącymi przesyłanego tekstu (ewentualny komenatrz dla redaktora można wpisać poniżej)."
+msgstr ""
+"Zapoznałem(am) się z prawami autorskimi dotyczącymi przesyłanego tekstu "
+"(ewentualny komenatrz dla redaktora można wpisać poniżej)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "Aby kontynuować, upewnij się, że zapoznałeś(aś) się z prawami autorskimi."
+msgstr ""
+"Aby kontynuować, upewnij się, że zapoznałeś(aś) się z prawami autorskimi."
+
+msgid "submission.submit.coverNote"
+msgstr "Wiadomość dla redaktora"
 
 msgid "author.submit.comments"
 msgstr "Wpisz komentarz dla redaktora (opcjonalne)"
 
 msgid "author.submit.form.sectionRequired"
-msgstr "Aby kontynuować, upewnij się, że wybrałeś poprawny dział czasopisma dla przesyłanego tekstu."
+msgstr ""
+"Aby kontynuować, upewnij się, że wybrałeś poprawny dział czasopisma dla "
+"przesyłanego tekstu."
 
 msgid "author.submit.form.localeRequired"
 msgstr "Aby kontynuować, wybierz język w jakim został napisany tekst."
+
+msgid "submission.submit.privacyStatement"
+msgstr "Polityka prywatności czasopisma"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Zmień kolejność wyświetlania autorów."
@@ -154,13 +175,19 @@ msgid "author.submit.deleteAuthor"
 msgstr "Usuń autora"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "Podaj słowa kluczowe dla zgłoszonego tekstu. Poszczególne słowa kluczowe oddziel od siebie za pomocą średnika (słowo kluczowe; słowo kluczowe; słowo kluczowe)."
+msgstr ""
+"Podaj słowa kluczowe dla zgłoszonego tekstu. Poszczególne słowa kluczowe "
+"oddziel od siebie za pomocą średnika (słowo kluczowe; słowo kluczowe; słowo "
+"kluczowe)."
 
 msgid "author.submit.coverageInstructions"
-msgstr "Określa zasięg geograficzny, chronologiczny i historyczny przedmiotu badań."
+msgstr ""
+"Określa zasięg geograficzny, chronologiczny i historyczny przedmiotu badań."
 
 msgid "author.submit.languageInstructions"
-msgstr "Angielski=en; Polski=pl. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Pozostałe kody</a>."
+msgstr ""
+"Angielski=en; Polski=pl. <a href=\"http://www.loc.gov/standards/iso639-2/php/"
+"code_list.php\" target=\"_blank\">Pozostałe kody</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Przynajmniej jeden autor jest wymagany."
@@ -193,7 +220,12 @@ msgid "author.submit.noSubmissionConfirm"
 msgstr "Czy kontynuować bez przesłania pliku z tekstem?"
 
 msgid "author.submit.supplementaryFilesInstructions"
-msgstr "Jeżeli zajdzie taka konieczność, w tym miejscu możesz przesłać pliki pomocnicze. Dokumenty w dowolnym formacie mogą zawierać np. narzędzia badawcze, dane statystyczne, źródła które w innym wypadku były by niedostępne dla czytelników lub obrazy i tabele niemożliwe do umieszczenia w tekście."
+msgstr ""
+"Jeżeli zajdzie taka konieczność, w tym miejscu możesz przesłać pliki "
+"pomocnicze. Dokumenty w dowolnym formacie mogą zawierać np. narzędzia "
+"badawcze, dane statystyczne, źródła które w innym wypadku były by "
+"niedostępne dla czytelników lub obrazy i tabele niemożliwe do umieszczenia w "
+"tekście."
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr "Kliknij Zapisz, aby przesłać plik."
@@ -223,7 +255,9 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Metadane dla plików pomocniczych"
 
 msgid "author.submit.supplementaryFileDataDescription"
-msgstr "Aby zindeksowac dodakowy materiał, podaj następujące dane dla pomocniczego pliku."
+msgstr ""
+"Aby zindeksowac dodakowy materiał, podaj następujące dane dla pomocniczego "
+"pliku."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Plik pomocniczy"
@@ -257,7 +291,9 @@ msgstr "Krótki opis"
 
 #, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Udostępnij plik recenzentom (bez metadanych), jeżeli jego udostępnienie nie wpłynie negatywnie na proces ślepej recenzji."
+msgstr ""
+"Udostępnij plik recenzentom (bez metadanych), jeżeli jego udostępnienie nie "
+"wpłynie negatywnie na proces ślepej recenzji."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Użyj tylko z opublikowanymi materiałami."
@@ -290,7 +326,11 @@ msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Publiczny identyfikator pliku pomocniczego"
 
 msgid "author.submit.confirmationDescription"
-msgstr "Aby przesłać tekst do czasopisma {$journalTitle} kliknij Zakończ. Osoba podana jako główny autor tekstu otrzyma e-mail z potwierdzeniem przesłania tekstu. Od tej chwili możliwe jest również śledzenie statusu tekstu po zalogowaniu się na stronie czasopisma {$journalTitle}."
+msgstr ""
+"Aby przesłać tekst do czasopisma {$journalTitle} kliknij Zakończ. Osoba "
+"podana jako główny autor tekstu otrzyma e-mail z potwierdzeniem przesłania "
+"tekstu. Od tej chwili możliwe jest również śledzenie statusu tekstu po "
+"zalogowaniu się na stronie czasopisma {$journalTitle}."
 
 msgid "author.submit.noFiles"
 msgstr "Żadne pliki nie zostały dołączone."
@@ -302,7 +342,9 @@ msgid "author.submit.finishSubmission"
 msgstr "Zakończ"
 
 msgid "author.submit.submissionComplete"
-msgstr "Przesyłanie ukończone. Dziękujemy za zainteresowanie opublikowaniem tekstu w czasopiśmie {$journalTitle}."
+msgstr ""
+"Przesyłanie ukończone. Dziękujemy za zainteresowanie opublikowaniem tekstu w "
+"czasopiśmie {$journalTitle}."
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "Prześlij poprawioną wersję"
@@ -314,19 +356,14 @@ msgid "author.article.authorRevisedFile"
 msgstr "Plik autora"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "Posiadanie konta użytkownika jest wymagane, aby móc przesłać teksty do publikacji w czasopismie."
+msgstr ""
+"Posiadanie konta użytkownika jest wymagane, aby móc przesłać teksty do "
+"publikacji w czasopismie."
 
-msgid "author.submit.qualifyForWaiver"
-msgstr "Proszę o umorzenie płatności za zgłoszenie tego tekstu"
+#~ msgid "author.submit.submissionLocale"
+#~ msgstr "Język przesyłanego tekstu"
 
-msgid "author.submit.nextSteps"
-msgstr "Następne kroki"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "Możesz dokończyć zgłoszenie później. Niekompletne zgłoszenia znajdziesz w swoim panelu roboczym."
-
-msgid "submission.submit.coverNote"
-msgstr "Wiadomość dla redaktora"
-
-msgid "submission.submit.privacyStatement"
-msgstr "Polityka prywatności czasopisma"
+#~ msgid "author.submit.submissionLocaleDescription"
+#~ msgstr ""
+#~ "Czasopismo akceptuje teksty napisane w różnych językach. Wybierz w jakim "
+#~ "języku został napisany tekst."

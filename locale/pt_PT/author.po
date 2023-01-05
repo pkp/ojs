@@ -22,8 +22,8 @@ msgstr "Submissões ativas"
 
 msgid "author.competingInterests"
 msgstr ""
-"Conflito de interesses <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Política de conflito de interesses</a>"
+"Conflito de interesses <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">Política de conflito de interesses</a>"
 
 msgid "author.submit.submitArticle"
 msgstr "Submeter artigo"
@@ -35,7 +35,9 @@ msgid "author.submit.startHereTitle"
 msgstr "Iniciar nova submissão"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">Clique aqui</a> para iniciar os cinco passos do processo de submissão."
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Clique aqui</a> para iniciar os "
+"cinco passos do processo de submissão."
 
 msgid "author.submit.step1"
 msgstr "Passo 1. Iniciar submissão"
@@ -70,6 +72,9 @@ msgstr "Transferência de documentos suplementares"
 msgid "author.submit.confirmation"
 msgstr "Confirmação"
 
+msgid "author.submit.nextSteps"
+msgstr "Próximos Passos"
+
 msgid "submission.submit.cancelSubmission"
 msgstr ""
 "A submissão pode ser concluída mais tarde, clicando em Submissões Ativas na "
@@ -86,7 +91,24 @@ msgstr ""
 "Solicito consideração para isenção de Taxa de Submissão para este artigo"
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "Indique no campo de comentários abaixo a razão para a isenção de taxas."
+msgstr ""
+"Indique no campo de comentários abaixo a razão para a isenção de taxas."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Indique a razão no espaço disponível, caso tenha solicitado isenção de taxa."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Em Revisão: Ronda {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Em Revisão: Revisões Requeridas"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Em Edição: Edição de Texto solicitada"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Em Edição: Leitura de provas solicitada"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Transferir versão de Edição de Texto"
@@ -103,32 +125,24 @@ msgstr "Verificar estado"
 msgid "author.submissions.noSubmissions"
 msgstr "Nenhuma submissão."
 
-msgid "author.submit.howToSubmit"
-msgstr "Em caso de dificuldades com o processo, entre em contato com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail ou pelo telefone {$supportPhone} para suporte."
-
-msgid "author.submit.howToSubmitNoPhone"
-msgstr "Em caso de dificuldades com o processo, entre em contacto com <a href=\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail para suporte."
-
 msgid "author.submit.journalSection"
 msgstr "Secção"
 
 msgid "author.submit.journalSectionDescription"
 msgstr "Escolha a secção apropriada para a submissão."
 
-msgid "submission.submit.selectSection"
-msgstr "Escolha uma secção..."
-
-msgid "author.submit.submissionChecklist"
-msgstr "Condições para submissão"
-
 msgid "author.submit.verifyChecklist"
 msgstr "Todas as condições devem ser cumpridas antes de poder continuar."
 
 msgid "author.submit.copyrightNoticeAgree"
-msgstr "Os autores concordam com os termos da Declaração de Direitos de Autor, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir)."
+msgstr ""
+"Os autores concordam com os termos da Declaração de Direitos de Autor, que "
+"se aplicará a esta submissão caso seja publicada nesta revista (comentários "
+"ao editor podem ser incluídos a seguir)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "É obrigatório aceitar a Declaração de Direitos de Autor para continuar."
+msgstr ""
+"É obrigatório aceitar a Declaração de Direitos de Autor para continuar."
 
 msgid "submission.submit.coverNote"
 msgstr "Comentários ao Editor"
@@ -139,11 +153,19 @@ msgstr "Insira o texto (opcional)"
 msgid "author.submit.form.sectionRequired"
 msgstr "Escolha a secção apropriada para a submissão."
 
+msgid "author.submit.form.localeRequired"
+msgstr "Selecione o idioma de submissão."
+
 msgid "submission.submit.privacyStatement"
 msgstr "Política de Privacidade"
 
 msgid "author.submit.reorderInstructions"
-msgstr "Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos autores na publicação."
+msgstr ""
+"Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos "
+"autores na publicação."
+
+msgid "author.submit.reorder"
+msgstr "Reordenar nome do autor"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Contacto principal para correspondência."
@@ -161,10 +183,15 @@ msgstr ""
 "editor. Separe os termos com ponto e vírgula (termo1; termo2; termo3)."
 
 msgid "author.submit.coverageInstructions"
-msgstr "Refere-se à localização ou cobertura geográfica, cronológica ou histórica, e/ou às características de amostragem da pesquisa."
+msgstr ""
+"Refere-se à localização ou cobertura geográfica, cronológica ou histórica, e/"
+"ou às características de amostragem da pesquisa."
 
 msgid "author.submit.languageInstructions"
-msgstr "Português=pt; English=en; French=fr; Spanish=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Códigos Adicionais</a>."
+msgstr ""
+"Português=pt; English=en; French=fr; Spanish=es. <a href=\"http://www.loc."
+"gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Códigos "
+"Adicionais</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "A submissão deve ter pelo menos um autor."
@@ -177,6 +204,9 @@ msgstr "Insira o título do artigo."
 
 msgid "author.submit.form.abstractRequired"
 msgstr "Insira o resumo do artigo."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "O limite de palavras de resumo para esta secção foi excedido."
 
 msgid "author.submit.submissionFile"
 msgstr "Ficheiro submetido"
@@ -208,7 +238,8 @@ msgstr ""
 "adicionais)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "Deseja realmente continuar sem enviar os documentos suplementares escolhidos?"
+msgstr ""
+"Deseja realmente continuar sem enviar os documentos suplementares escolhidos?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "Nenhum documento suplementar anexado à submissão."
@@ -232,7 +263,9 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Metadados do Documento Suplementar"
 
 msgid "author.submit.supplementaryFileDataDescription"
-msgstr "Indique os seguintes metadados para cada documento suplementar, conforme necessário, e transfira o documento."
+msgstr ""
+"Indique os seguintes metadados para cada documento suplementar, conforme "
+"necessário, e transfira o documento."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Documento Suplementar"
@@ -337,29 +370,19 @@ msgstr ""
 "mudanças na situação da submissão, ou caso informações adicionais sejam "
 "necessárias para dar continuidade ao processo editorial."
 
-msgid "author.submit.mustEnterWaiverReason"
-msgstr "Indique a razão no espaço disponível, caso tenha solicitado isenção de taxa."
+#~ msgid "author.submit.howToSubmit"
+#~ msgstr ""
+#~ "Em caso de dificuldades com o processo, entre em contato com <a href="
+#~ "\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail ou pelo telefone "
+#~ "{$supportPhone} para suporte."
 
-msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Em Revisão: Ronda {$round}"
+#~ msgid "author.submit.howToSubmitNoPhone"
+#~ msgstr ""
+#~ "Em caso de dificuldades com o processo, entre em contacto com <a href="
+#~ "\"mailto:{$supportEmail}\">{$supportName}</a> via e-mail para suporte."
 
-msgid "author.submissions.queuedReviewRevisions"
-msgstr "Em Revisão: Revisões Requeridas"
+#~ msgid "submission.submit.selectSection"
+#~ msgstr "Escolha uma secção..."
 
-msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Em Edição: Edição de Texto solicitada"
-
-msgid "author.submissions.queuedEditingProofread"
-msgstr "Em Edição: Leitura de provas solicitada"
-
-msgid "author.submit.reorder"
-msgstr "Reordenar nome do autor"
-
-msgid "author.submit.form.wordCountAlert"
-msgstr "O limite de palavras de resumo para esta secção foi excedido."
-
-msgid "author.submit.form.localeRequired"
-msgstr "Selecione o idioma de submissão."
-
-msgid "author.submit.nextSteps"
-msgstr "Próximos Passos"
+#~ msgid "author.submit.submissionChecklist"
+#~ msgstr "Condições para submissão"

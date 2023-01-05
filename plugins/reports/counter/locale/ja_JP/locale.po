@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
 "PO-Revision-Date: 2020-09-23 00:39+0000\n"
 "Last-Translator: Emma U <emmaupkp@gmail.com>\n"
-"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
-"reports-counter/ja/>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/ja/>\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,10 +15,48 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.counter.description"
-msgstr "サイトの運用状況を記録し、<a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">COUNTER</a>準拠の報告書を作成します。"
+msgstr ""
+"サイトの運用状況を記録し、<a href=\"http://www.projectcounter.org/about.html"
+"\" target=\"_new\">COUNTER</a>準拠の報告書を作成します。"
 
 msgid "plugins.reports.counter"
 msgstr "COUNTER統計"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTERバージョン"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "過去のサイトレポート"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "レポートのパラメーターが無効です。"
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "レポートのリクエストが無効です。"
+
+#, fuzzy
+msgid "plugins.reports.counter.error.noResults"
+msgstr "レポートの条件に一致する結果が見つかりませんでした。"
+
+#, fuzzy
+msgid "plugins.reports.counter.error.noXML"
+msgstr "結果をXML形式にフォーマットできませんでした。"
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"これらのリンクは、COUNTER 3.0という古いバージョンに基づいてCOUNTER用レポート"
+"を生成します。可能な場合、 最新バージョンにアップデートしてご利用ください。"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTERレポートJR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML版"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTERジャーナルレポート1 (R3): 月別およびジャーナル別のフルテキスト論文リク"
+"エスト"
 
 msgid "plugins.reports.counter.1a.title"
 msgstr "雑誌報告書 1 (R3): 月別・雑誌別の雑誌フルテキストへのリクエスト"
@@ -56,58 +94,25 @@ msgstr "YTD PDF"
 msgid "plugins.reports.counter.1a.totalForAllJournals"
 msgstr "全雑誌の合計"
 
-msgid "plugins.reports.counter.migrate"
-msgstr "ログファイルを移行する。"
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "無名"
 
 #, fuzzy
-msgid "plugins.reports.counter.error.noXML"
-msgstr "結果をXML形式にフォーマットできませんでした。"
-
-#, fuzzy
-msgid "plugins.reports.counter.error.noResults"
-msgstr "レポートの条件に一致する結果が見つかりませんでした。"
-
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "レポートのパラメーターが無効です。"
-
-msgid "plugins.reports.counter.release"
-msgstr "COUNTERバージョン"
-
-msgid "plugins.reports.counter.jr1.title"
-msgstr "ジャーナルレポート１ (JR1)"
-
-msgid "plugins.reports.counter.ar1.title"
-msgstr "論文レポート１ (AR1)"
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"下記のリンクでプラグインの旧データに基づいてレポートを生成できます。OJSの新"
+"COUNTER手法で最新バージョン用COUNTERレポートを生成したい場合、上記のリンクを"
+"ご利用ください。"
 
 #, fuzzy
 msgid "plugins.reports.counter.allCustomers"
 msgstr "全クライアント"
 
-#, fuzzy
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"下記のリンクでプラグインの旧データに基づいてレポートを生成できます。OJSの新COUNTER手法で最新バージョン用COUNTERレポートを生成したい場合、"
-"上記のリンクをご利用ください。"
+msgid "plugins.reports.counter.ar1.title"
+msgstr "論文レポート１ (AR1)"
 
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "無名"
+msgid "plugins.reports.counter.jr1.title"
+msgstr "ジャーナルレポート１ (JR1)"
 
-msgid "plugins.reports.counter.1a.description"
-msgstr "COUNTERジャーナルレポート1 (R3): 月別およびジャーナル別のフルテキスト論文リクエスト"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML版"
-
-msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTERレポートJR1 (R3)"
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"これらのリンクは、COUNTER 3.0という古いバージョンに基づいてCOUNTER用レポートを生成します。可能な場合、 "
-"最新バージョンにアップデートしてご利用ください。"
-
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "レポートのリクエストが無効です。"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "過去のサイトレポート"
+#~ msgid "plugins.reports.counter.migrate"
+#~ msgstr "ログファイルを移行する。"

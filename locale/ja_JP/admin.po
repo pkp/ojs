@@ -11,86 +11,167 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "admin.mergeUsers.mergeUser"
-msgstr "ユーザーをマージ"
-
-msgid "admin.mergeUsers"
-msgstr "ユーザーをマージ"
-
-msgid "admin.journals.importErrors"
-msgstr "インポートに失敗しました"
-
-msgid "admin.journals.form.importPathRequired"
-msgstr "インポートパスは必須です。"
-
-msgid "admin.contexts.contextDescription"
-msgstr "ジャーナルの説明"
-
-msgid "admin.contexts.form.edit.success"
-msgstr "{$name}がが正常に変更されました。"
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name}が正常に作成されました。"
-
-msgid "admin.contexts.form.pathExists"
-msgstr "入力したパスは既に使用されています。"
-
-msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr "パスに使用できる文字列は半角英数字・ハイフン（-）・アンダーバー（_）のみです。先頭および末尾文字は必ず半角英数字を使用してください。"
-
-msgid "admin.contexts.form.pathRequired"
-msgstr "パスは必須です。"
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "タイトルは必須です。"
-
-msgid "admin.journals.urlWillBe"
-msgstr "ジャーナルを識別する短い単語または頭字語を半角英数字で入力してください。ジャーナルのURLは{$sampleUrl}となります。"
-
-msgid "admin.contexts.create"
-msgstr "ジャーナル作成"
-
-msgid "admin.journals.noneCreated"
-msgstr "ジャーナルはまだ作成されていません。"
-
-msgid "admin.journals.journalSettings"
-msgstr "ジャーナル設定"
-
-msgid "admin.systemConfigurationDescription"
-msgstr "<tt>config.inc.php</tt>のOJS設定です。"
-
-msgid "admin.systemVersion"
-msgstr "OJSバージョン"
-
-msgid "admin.settings.redirectInstructions"
-msgstr "メインサイトへのリクエストを以下のジャーナルに転送されます。単一のジャーナルがホストされている場合に有効です。"
+msgid "admin.hostedContexts"
+msgstr "ホストされているジャーナル"
 
 msgid "admin.settings.redirect"
 msgstr "ジャーナルリダイレクト"
 
-msgid "admin.settings.info.success"
-msgstr "サイト情報が正常に変更されました。"
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"メインサイトへのリクエストを以下のジャーナルに転送されます。単一のジャーナル"
+"がホストされている場合に有効です。"
 
-msgid "admin.settings.config.success"
-msgstr "サイト設定が正常に変更されました。"
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
 
-msgid "admin.settings.appearance.success"
-msgstr "外観設定が正常に変更されました。"
+msgid "admin.languages.confirmDisable"
+msgstr ""
 
-msgid "admin.hostedContexts"
-msgstr "ホストされているジャーナル"
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
 
-msgid "admin.systemConfiguration"
-msgstr "OJS設定"
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+
+msgid "admin.locale.maybeIncomplete"
+msgstr ""
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
 
 msgid "admin.auth.ojs"
 msgstr "OJSユーザーデータベース"
 
-msgid "admin.scheduledTask.reviewReminder"
-msgstr "査読リマインダー"
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+
+msgid "admin.systemVersion"
+msgstr "OJSバージョン"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS設定"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>のOJS設定です。"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+
+msgid "admin.journals.journalSettings"
+msgstr "ジャーナル設定"
+
+msgid "admin.journals.noneCreated"
+msgstr "ジャーナルはまだ作成されていません。"
+
+msgid "admin.contexts.create"
+msgstr "ジャーナル作成"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"ジャーナルを識別する短い単語または頭字語を半角英数字で入力してください。"
+"ジャーナルのURLは{$sampleUrl}となります。"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "タイトルは必須です。"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "パスは必須です。"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"パスに使用できる文字列は半角英数字・ハイフン（-）・アンダーバー（_）のみで"
+"す。先頭および末尾文字は必ず半角英数字を使用してください。"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "入力したパスは既に使用されています。"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr ""
+
+msgid "admin.contexts.contextDescription"
+msgstr "ジャーナルの説明"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+
+msgid "admin.journals.importSubscriptions"
+msgstr ""
+
+msgid "admin.journals.transcode"
+msgstr ""
+
+msgid "admin.journals.redirect"
+msgstr ""
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "インポートパスは必須です。"
+
+msgid "admin.journals.importErrors"
+msgstr "インポートに失敗しました"
+
+msgid "admin.mergeUsers"
+msgstr "ユーザーをマージ"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "ユーザーをマージ"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "全ての登録ユーザー"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "登録ユーザーがいない。"
 
-msgid "admin.mergeUsers.allUsers"
-msgstr "全ての登録ユーザー"
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr ""
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr ""
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "査読リマインダー"
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "{$name}がが正常に変更されました。"
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name}が正常に作成されました。"
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "サイト情報が正常に変更されました。"
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "サイト設定が正常に変更されました。"
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "外観設定が正常に変更されました。"

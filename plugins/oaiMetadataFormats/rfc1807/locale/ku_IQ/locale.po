@@ -11,9 +11,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.OAIMetadata.rfc1807.displayName"
+msgstr "داڕشتنی زانیاریی ناسێنەری RFC1807"
+
 msgid "plugins.OAIMetadata.rfc1807.description"
 msgstr ""
 ".زانیاریی ناسێنەری کەسی بە جۆرێک ڕێکبخە کە لەگەڵ داڕشتنی RFC1807 بگونجێت"
-
-msgid "plugins.OAIMetadata.rfc1807.displayName"
-msgstr "داڕشتنی زانیاریی ناسێنەری RFC1807"

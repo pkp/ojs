@@ -31,7 +31,11 @@ msgid "submission.title"
 msgstr "Tytuł"
 
 msgid "submission.title.tip"
-msgstr "Rodzaj to zazwyczaj 'image', 'text' lub inne rodzaje multimediów włączając w to 'software' lub 'interactive'. Jeżeli nie wiesz jak sklasyfikować rodzaj, zobacz na przykłady dostępne <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">pod tym adresem</a>"
+msgstr ""
+"Rodzaj to zazwyczaj 'image', 'text' lub inne rodzaje multimediów włączając w "
+"to 'software' lub 'interactive'. Jeżeli nie wiesz jak sklasyfikować rodzaj, "
+"zobacz na przykłady dostępne <a target=\"_blank\" href=\"http://dublincore."
+"org/documents/2001/04/12/usageguide/generic.shtml#type\">pod tym adresem</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Utwórz nowe zgłoszenie w"
@@ -42,29 +46,26 @@ msgstr "Nowe zgłoszenie"
 msgid "grid.action.workflow"
 msgstr "Obieg zgłoszenia"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "Długość abstraktu nie może przekraczać {$wordCount} wyrazów."
+
+msgid "submission.submit.noContext"
+msgstr "Nie znaleziono czasopisma do którego pasuje to zgłoszenie."
+
 msgid "submission.issueEntry"
 msgstr "Metadane"
 
 msgid "submission.submit.whatNext.description"
-msgstr "Redaktorzy czasopisma zostali poinformowani o Twoim zgłoszeniu. Na Twój adres email zostało również wysłane potwierdzenie. Po przejrzeniu zgłoszenia, redaktor skontaktuje się z Tobą."
+msgstr ""
+"Redaktorzy czasopisma zostali poinformowani o Twoim zgłoszeniu. Na Twój "
+"adres email zostało również wysłane potwierdzenie. Po przejrzeniu "
+"zgłoszenia, redaktor skontaktuje się z Tobą."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Pliki do publikacji są widoczne na stronie numeru"
 
 msgid "grid.action.issueEntry"
 msgstr "Wyświetl metadane zgłoszenia"
-
-msgid "submission.issueEntry.modalTitle"
-msgstr "Metadane zgłoszonego tekstu oraz publikacji"
-
-msgid "submission.issueEntry.submissionMetadata"
-msgstr "Zgłoszenie"
-
-msgid "submission.issueEntry.publicationMetadata"
-msgstr "Publikacja"
-
-msgid "submission.issueEntry.confirm"
-msgstr "Utwórz wpis dla tego artykułu oparty o metadane widoczne poniżej."
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Pliki do publikacji \"{$galleyFormatName}\" są dostępne."
@@ -75,8 +76,16 @@ msgstr "Pliki do publikacji \"{$galleyFormatName}\" nie są dostępne."
 msgid "submission.event.publicIdentifiers"
 msgstr "Publiczne identyfikatory zgłoszenia zaktualizowane."
 
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Zatwierdzanie formatu"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>Pliki gotowe do publikacji <em>nie będą dostępne</em> dla czytelników.</p>"
+
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Pliki gotowe do publikacji <em>będą dostępne</em> dla czytelników.</p>"
+msgstr ""
+"<p>Pliki gotowe do publikacji <em>będą dostępne</em> dla czytelników.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Udostępnij pliki gotowe do publikacji"
@@ -85,13 +94,10 @@ msgid "submission.galleyFiles"
 msgstr "Pliki do publikacji"
 
 msgid "submission.proofReadingDescription"
-msgstr "Składacz przesyła tutaj pliki gotowe do publikacji. Skorzystaj z <em>Przypisz audytora</em> w celu przypisania autorów i innych do sprawdzenia plików do publikacji."
-
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Zatwierdzanie formatu"
-
-msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Pliki gotowe do publikacji <em>nie będą dostępne</em> dla czytelników.</p>"
+msgstr ""
+"Składacz przesyła tutaj pliki gotowe do publikacji. Skorzystaj z "
+"<em>Przypisz audytora</em> w celu przypisania autorów i innych do "
+"sprawdzenia plików do publikacji."
 
 msgid "grid.action.approveProof"
 msgstr "Zatwierdź wersję po korekcie."
@@ -103,7 +109,9 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Tytuł i abstrakt"
 
 msgid "submission.submit.upload.description"
-msgstr "Prześlij pliki powiązane z tekstem, włączając w to treść, multimedia, zestawy danych, materiały ilustracyjne, etc."
+msgstr ""
+"Prześlij pliki powiązane z tekstem, włączając w to treść, multimedia, "
+"zestawy danych, materiały ilustracyjne, etc."
 
 msgid "submission.pageProofs"
 msgstr "Korekta końcowa"
@@ -136,7 +144,9 @@ msgid "submission.submit.submissionChecklist"
 msgstr "Lista kontrolna zgłoszenia"
 
 msgid "submission.submit.submissionChecklistDescription"
-msgstr "Zapoznaj się z listą kontrolną i upewnij się, że spełniasz wszystkie wymagania przed kontynuowaniem."
+msgstr ""
+"Zapoznaj się z listą kontrolną i upewnij się, że spełniasz wszystkie "
+"wymagania przed kontynuowaniem."
 
 msgid "submission.submit.privacyStatement"
 msgstr "Polityka prywatności"
@@ -156,6 +166,11 @@ msgstr "Podaj tytuł zgłaszanego tekstu."
 msgid "submission.submit.form.abstractRequired"
 msgstr "Podaj abstrakt zgłaszanego tekstu."
 
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Abstrakt jest za długi. Skróć go, uwzględniając limit wyrazów określony "
+"poniżej dla tego działu."
+
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Podaj rolę współautorów."
 
@@ -163,16 +178,20 @@ msgid "submission.citationFormat.notFound"
 msgstr "Wybrany format cytowania nie jest dostępny."
 
 msgid "submission.metadataDescription"
-msgstr "Metadane oparte są o Dublin Core - międzynarodowy standard wykorzystywany do opisywania zawartości czasopism."
+msgstr ""
+"Metadane oparte są o Dublin Core - międzynarodowy standard wykorzystywany do "
+"opisywania zawartości czasopism."
+
+msgid "submission.viewingPreview"
+msgstr ""
+"To jest wgląd do artykułu, który jeszcze nie był publikowany.<a href="
+"\"{$url}\">Wyświetl zgłoszenie</a>"
 
 msgid "section.any"
 msgstr "Dowolny dział"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Długość abstraktu nie może przekraczać {$wordCount} wyrazów."
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "Abstrakt jest za długi. Skróć go, uwzględniając limit wyrazów określony poniżej dla tego działu."
+msgid "submission.sectionOptions"
+msgstr "Opcje działu"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} pozycji"
@@ -180,53 +199,20 @@ msgstr "{$numTitles} pozycji"
 msgid "catalog.category.heading"
 msgstr "Wszystkie pozycje"
 
-msgid "publication.selectIssue"
-msgstr "Wybierz wydanie w celu zaplanowania publikacji"
+msgid "galley.editPublishedDisabled"
+msgstr "Szpalta została już opublikowana i nie może być już edytowana."
+
+msgid "galley.publicationNotFound"
+msgstr "Nie można znaleźć publikacji do której należy ta szpalta."
 
 msgid "publication.assignToissue"
 msgstr "Przydziel do wydania"
 
-msgid "publication.unscheduledIn"
-msgstr "Element nie został zaplanowany do publikacji w żadnym z wydań."
-
-msgid "publication.scheduledIn"
-msgstr "Zaplanowane do publikacji w <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.publishedIn"
-msgstr "Opublikowane w <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
+msgid "publication.assignedToIssue"
 msgstr ""
-"Publikacja musi być przydzielona do konkretnego numeru zanim zostanie "
-"opublikowana."
 
-msgid "publication.publish.confirmation.datePublishedInPast"
+msgid "publication.changeIssue"
 msgstr ""
-"Wszystkie wymagania publikacyjne zostały spełnione. Wydanie zostanie "
-"upublicznione natychmiast ponieważ data została ustawiona na {$datePublished}"
-". Czy na pewno chcesz go upublicznić?"
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr ""
-"Wszystkie wymagania publikacyjne zostały spełnione. Zostaną upublicznione "
-"natychmiast  jako {$issue}. Czy chcesz je na pewno opublikować?"
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Wszystkie dane są gotowe do publikacji. Zostaną upublicznione razem z "
-"wydaniem {$issue}. Czy chcesz zaplanować to wydanie do publikacji?"
-
-msgid "publication.publish.confirmation"
-msgstr "Wszystkie dane są gotowe do publikacji. Czy chcesz je opublikować?"
-
-msgid "publication.issue.success"
-msgstr "Szczegóły publikacji wydania zostały zaktualizowane."
-
-msgid "publication.invalidIssue"
-msgstr "Nie można odnaleźć wydania dla tej publikacji."
-
-msgid "publication.invalidSection"
-msgstr "Nie można odnaleźć działu dla tej publikacji."
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -234,116 +220,156 @@ msgstr ""
 "numeru. Nie wprowadzaj daty publikacji ręcznie chyba że artykuł został "
 "wcześniej opublikowany gdzie indziej lub potrzebujesz go antydatować."
 
-msgid "galley.publicationNotFound"
-msgstr "Nie można znaleźć publikacji do której należy ta szpalta."
-
-msgid "galley.editPublishedDisabled"
-msgstr "Szpalta została już opublikowana i nie może być już edytowana."
-
-msgid "submission.sectionOptions"
-msgstr "Opcje działu"
-
-msgid "submission.submit.noContext"
-msgstr "Nie znaleziono czasopisma do którego pasuje to zgłoszenie."
+msgid "publication.invalidSection"
+msgstr "Nie można odnaleźć działu dla tej publikacji."
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Niekatywny)"
 
-msgid "submission.viewingPreview"
+msgid "publication.invalidIssue"
+msgstr "Nie można odnaleźć wydania dla tej publikacji."
+
+msgid "publication.publish.confirmation"
+msgstr "Wszystkie dane są gotowe do publikacji. Czy chcesz je opublikować?"
+
+msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"To jest wgląd do artykułu, który jeszcze nie był publikowany.<a href=\"{$url}"
-"\">Wyświetl zgłoszenie</a>"
+"Wszystkie dane są gotowe do publikacji. Zostaną upublicznione razem z "
+"wydaniem {$issue}. Czy chcesz zaplanować to wydanie do publikacji?"
 
-msgid "submission.queries.production"
-msgstr "Dyskusja w trakcie realizacji"
-
-msgid "publication.version.details"
-msgstr "Szczegóły publikacji wersji {$version}"
-
-msgid "publication.unschedule.confirm"
-msgstr "Jesteś pewien, że nie chcesz zaplanować tego do publikacji?"
-
-msgid "publication.unpublish.confirm"
-msgstr "Jesteś pewien, że nie chcesz, aby to nie było publikowane?"
-
-msgid "publication.unpublish"
-msgstr "Nie publikuj"
-
-msgid "submission.copyrightOther.description"
+msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"Przypisz copyright dla opublikowanego zgłoszenia do następującej części."
+"Wszystkie wymagania publikacyjne zostały spełnione. Zostaną upublicznione "
+"natychmiast  jako {$issue}. Czy chcesz je na pewno opublikować?"
 
-msgid "submission.copyrightHolder.description"
+msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
-"Copyright zostanie przydzielony automatycznie do {$copyright}, kiedy "
-"zostanie opublikowane."
+"Wszystkie wymagania publikacyjne zostały spełnione. Wydanie zostanie "
+"upublicznione natychmiast ponieważ data została ustawiona na "
+"{$datePublished}. Czy na pewno chcesz go upublicznić?"
 
-msgid "submission.license.description"
+msgid "publication.required.issue"
 msgstr ""
-"Licencja zostanie automatycznie przydzielone do <a href='{$licenseUrl}' "
-"target='_blank'>{$licenseName}</a>, kiedy zostanie opublikowane."
+"Publikacja musi być przydzielona do konkretnego numeru zanim zostanie "
+"opublikowana."
 
-msgid "publication.required.reviewStage"
-msgstr ""
-"Zgłoszenie musi przejść wszystkie etapy procesu wydawniczego i produkcyjnego "
-"zanim zostanie opublikowane."
+msgid "publication.publishedIn"
+msgstr "Opublikowane w <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "publication.required.declined"
-msgstr "Odrzucone zgłoszenie nie może być opublikowane."
+msgid "publication.scheduledIn"
+msgstr "Zaplanowane do publikacji w <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "publication.publish.requirements"
-msgstr "Następujące wymagania muszą być spełnione przed publikacją."
+msgid "publication.unscheduledIn"
+msgstr "Element nie został zaplanowany do publikacji w żadnym z wydań."
 
-msgid "publication.publish"
-msgstr "Publikuj"
+msgid "publication.selectIssue"
+msgstr "Wybierz wydanie w celu zaplanowania publikacji"
 
-msgid "publication.invalidSubmission"
-msgstr "Zgłoszenie do publikacji nie zostało odnalezione."
+msgid "submission.publication"
+msgstr "Publikacja"
 
-msgid "publication.event.versionUnpublished"
-msgstr "Wersja została usunięta z publikacji."
+msgid "publication.status.published"
+msgstr "Opublikowano"
 
-msgid "publication.event.versionScheduled"
-msgstr "Nowa wersja została zaplanowana do publikacji."
+msgid "submission.status.scheduled"
+msgstr "Zaplanowano"
 
-msgid "publication.event.versionPublished"
-msgstr "Nowa wersja została opublikowana."
+msgid "publication.status.unscheduled"
+msgstr "Niezaplanowany"
 
-msgid "publication.event.unpublished"
-msgstr "Zgłoszenie nie zostało opublikowane."
-
-msgid "publication.event.scheduled"
-msgstr "Zgłoszenie zaplanowane do publikacji."
-
-msgid "publication.event.published"
-msgstr "Zgłoszenie zostało opublikowane."
-
-msgid "publication.editDisabled"
-msgstr "Wersja zostało opublikowana i nie może być edytowana."
-
-msgid "publication.datePublished"
-msgstr "Data publikacji"
-
-msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr ""
-"Data praw autorskich będzie nada automatycznie na podstawie daty publikacji."
+msgid "submission.publications"
+msgstr "Publikacje"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "Data praw autorskich zostanie nadana automatyczne, kiedy zostanie "
 "opublikowane w konkretnym wydaniu."
 
-msgid "submission.publications"
-msgstr "Publikacje"
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Data praw autorskich będzie nada automatycznie na podstawie daty publikacji."
 
-msgid "publication.status.unscheduled"
-msgstr "Niezaplanowany"
+msgid "publication.datePublished"
+msgstr "Data publikacji"
 
-msgid "submission.status.scheduled"
-msgstr "Zaplanowano"
+msgid "publication.editDisabled"
+msgstr "Wersja zostało opublikowana i nie może być edytowana."
 
-msgid "publication.status.published"
-msgstr "Opublikowano"
+msgid "publication.event.published"
+msgstr "Zgłoszenie zostało opublikowane."
 
-msgid "submission.publication"
-msgstr "Publikacja"
+msgid "publication.event.scheduled"
+msgstr "Zgłoszenie zaplanowane do publikacji."
+
+msgid "publication.event.unpublished"
+msgstr "Zgłoszenie nie zostało opublikowane."
+
+msgid "publication.event.versionPublished"
+msgstr "Nowa wersja została opublikowana."
+
+msgid "publication.event.versionScheduled"
+msgstr "Nowa wersja została zaplanowana do publikacji."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Wersja została usunięta z publikacji."
+
+msgid "publication.invalidSubmission"
+msgstr "Zgłoszenie do publikacji nie zostało odnalezione."
+
+msgid "publication.publish"
+msgstr "Publikuj"
+
+msgid "publication.publish.requirements"
+msgstr "Następujące wymagania muszą być spełnione przed publikacją."
+
+msgid "publication.required.declined"
+msgstr "Odrzucone zgłoszenie nie może być opublikowane."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Zgłoszenie musi przejść wszystkie etapy procesu wydawniczego i produkcyjnego "
+"zanim zostanie opublikowane."
+
+msgid "submission.license.description"
+msgstr ""
+"Licencja zostanie automatycznie przydzielone do <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>, kiedy zostanie opublikowane."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Copyright zostanie przydzielony automatycznie do {$copyright}, kiedy "
+"zostanie opublikowane."
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Przypisz copyright dla opublikowanego zgłoszenia do następującej części."
+
+msgid "publication.unpublish"
+msgstr "Nie publikuj"
+
+msgid "publication.unpublish.confirm"
+msgstr "Jesteś pewien, że nie chcesz, aby to nie było publikowane?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Jesteś pewien, że nie chcesz zaplanować tego do publikacji?"
+
+msgid "publication.version.details"
+msgstr "Szczegóły publikacji wersji {$version}"
+
+msgid "submission.queries.production"
+msgstr "Dyskusja w trakcie realizacji"
+
+#~ msgid "submission.issueEntry.modalTitle"
+#~ msgstr "Metadane zgłoszonego tekstu oraz publikacji"
+
+#~ msgid "submission.issueEntry.submissionMetadata"
+#~ msgstr "Zgłoszenie"
+
+#~ msgid "submission.issueEntry.publicationMetadata"
+#~ msgstr "Publikacja"
+
+#~ msgid "submission.issueEntry.confirm"
+#~ msgstr "Utwórz wpis dla tego artykułu oparty o metadane widoczne poniżej."
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Szczegóły publikacji wydania zostały zaktualizowane."

@@ -13,63 +13,64 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Vous n'avez pas la permission de consulter les numéros non publiés."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr ""
-"La publication que vous avez demandée ne fait pas partie de cette soumission."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr ""
-"La publication que vous avez demandée ne fait pas partie de cette revue."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Le mode de paiement que vous avez sélectionné n'est pas pris en charge."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr ""
-"Vous n'avez pas l'autorisation de déplacer ce modèle de courriel vers une "
-"autre revue."
-
-msgid "api.contexts.404.contextNotFound"
-msgstr "La revue que vous avez demandée n'a pas été trouvée."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Vous n'avez pas l'autorisation de supprimer cette revue."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Vous n'avez pas l'autorisation de modifier cette revue."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Vous ne pouvez pas modifier cette revue depuis l'API du site."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Vous ne pouvez pas voir ou modifier cette revue à moins d'effectuer une "
-"requête à l'API du journal ou à l'API du site."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "Vous n'avez pas l'autorisation de voir cette revue."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Vous ne pouvez afficher que les revues qui ont été activées."
-
-msgid "api.submissions.403.contextRequired"
-msgstr ""
-"Pour effectuer ou modifier une soumission, vous devez effectuer une requête "
-"au point d'accès de l'API de la revue."
-
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Vous ne pouvez pas changer la revue d'une soumission."
-
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Vous ne pouvez pas associer un fichier de cette étape avec un galley."
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "L'annonce que vous avez demandée ne fait pas partie de la revue."
 
 msgid "api.emails.403.disabled"
 msgstr ""
 "La fonctionnalité de notification de courrier n'a pas été activée pour cette "
 "revue."
 
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "L'annonce que vous avez demandée ne fait pas partie de la revue."
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Vous ne pouvez pas changer la revue d'une soumission."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Vous n'avez pas la permission de consulter les numéros non publiés."
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+"Pour effectuer ou modifier une soumission, vous devez effectuer une requête "
+"au point d'accès de l'API de la revue."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Vous ne pouvez afficher que les revues qui ont été activées."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Vous n'avez pas l'autorisation de voir cette revue."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Vous ne pouvez pas voir ou modifier cette revue à moins d'effectuer une "
+"requête à l'API du journal ou à l'API du site."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Vous ne pouvez pas modifier cette revue depuis l'API du site."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Vous n'avez pas l'autorisation de modifier cette revue."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Vous n'avez pas l'autorisation de supprimer cette revue."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "La revue que vous avez demandée n'a pas été trouvée."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Vous n'avez pas l'autorisation de déplacer ce modèle de courriel vers une "
+"autre revue."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr ""
+"Le mode de paiement que vous avez sélectionné n'est pas pris en charge."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr ""
+"La publication que vous avez demandée ne fait pas partie de cette revue."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr ""
+"La publication que vous avez demandée ne fait pas partie de cette soumission."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Vous ne pouvez pas associer un fichier de cette étape avec un galley."

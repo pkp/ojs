@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
 "PO-Revision-Date: 2021-01-16 10:53+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-"
-"info@journals.uio.no>\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
+"no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -26,74 +26,23 @@ msgstr ""
 msgid "plugins.reports.counter"
 msgstr "COUNTER-rapporter"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "Tidsskriftsrapport 1"
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER-versjon"
 
-msgid "plugins.reports.counter.ar1.title"
-msgstr "Artikkelrapport 1"
+msgid "plugins.reports.counter.olderReports"
+msgstr "Eldre rapporter"
 
-msgid "plugins.reports.counter.allCustomers"
-msgstr "Alle kunder"
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Rapportens parametre var ugyldige."
 
-msgid "plugins.reports.counter.legacyStats"
-msgstr ""
-"Lenkene under generer foreldede rapporter med eldre programtilleggsdata, som "
-"ikke er COUNTER-klare. Dersom du vil generere oppdaterte COUNTER-rapporter "
-"ved hjelp av den nye OJS COUNTER-statistikken, bruk lenkene over."
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Rapportforespørselen er ugyldig."
 
-msgid "plugins.reports.counter.1a.anonymous"
-msgstr "anonym"
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Det var ingen resultat for denne rapporten."
 
-msgid "plugins.reports.counter.1a.totalForAllJournals"
-msgstr "Totalt for alle tidsskrift"
-
-msgid "plugins.reports.counter.1a.ytdPdf"
-msgstr "YTD PDF"
-
-msgid "plugins.reports.counter.1a.ytdHtml"
-msgstr "YTD HTML"
-
-msgid "plugins.reports.counter.1a.ytdTotal"
-msgstr "YTD Totalt"
-
-msgid "plugins.reports.counter.1a.onlineIssn"
-msgstr "ISSN (online)"
-
-msgid "plugins.reports.counter.1a.printIssn"
-msgstr "ISSN (trykt utgave)"
-
-msgid "plugins.reports.counter.1a.platform"
-msgstr "Plattform"
-
-msgid "plugins.reports.counter.1a.publisher"
-msgstr "Utgiver"
-
-msgid "plugins.reports.counter.1a.dateRun"
-msgstr "Dato:"
-
-msgid "plugins.reports.counter.1a.title2"
-msgstr ""
-"Antall vellykkede forespørsler om artikler i fulltekst etter måned og "
-"tidsskrift (år {$year})"
-
-msgid "plugins.reports.counter.1a.title1"
-msgstr "Tidsskriftsrapport 1 (R3)"
-
-msgid "plugins.reports.counter.1a.title"
-msgstr ""
-"Tidsskriftsrapport 1 (R3): Forespørsler om artikler i fulltekst etter måned "
-"og tidsskrift"
-
-msgid "plugins.reports.counter.1a.description"
-msgstr ""
-"COUNTER tidsskriftsrapport  1 (R3): Forespørsler om artikler i fulltekst "
-"etter måned og tidsskrift"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "XML-versjon"
-
-msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTER-rapport JR1 (R3)"
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Resultatene kunne ikke formateres som XML."
 
 msgid "plugins.reports.counter.1a.introduction"
 msgstr ""
@@ -101,20 +50,71 @@ msgstr ""
 "Release 3.0. Rapporten dekker alle tidsskriftene på nettsiden. Bruk den "
 "nyeste versjonen i stedet, om mulig."
 
-msgid "plugins.reports.counter.error.noXML"
-msgstr "Resultatene kunne ikke formateres som XML."
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER-rapport JR1 (R3)"
 
-msgid "plugins.reports.counter.error.noResults"
-msgstr "Det var ingen resultat for denne rapporten."
+msgid "plugins.reports.counter.1a.xml"
+msgstr "XML-versjon"
 
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "Rapportforespørselen er ugyldig."
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER tidsskriftsrapport  1 (R3): Forespørsler om artikler i fulltekst "
+"etter måned og tidsskrift"
 
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "Rapportens parametre var ugyldige."
+msgid "plugins.reports.counter.1a.title"
+msgstr ""
+"Tidsskriftsrapport 1 (R3): Forespørsler om artikler i fulltekst etter måned "
+"og tidsskrift"
 
-msgid "plugins.reports.counter.olderReports"
-msgstr "Eldre rapporter"
+msgid "plugins.reports.counter.1a.title1"
+msgstr "Tidsskriftsrapport 1 (R3)"
 
-msgid "plugins.reports.counter.release"
-msgstr "COUNTER-versjon"
+msgid "plugins.reports.counter.1a.title2"
+msgstr ""
+"Antall vellykkede forespørsler om artikler i fulltekst etter måned og "
+"tidsskrift (år {$year})"
+
+msgid "plugins.reports.counter.1a.dateRun"
+msgstr "Dato:"
+
+msgid "plugins.reports.counter.1a.publisher"
+msgstr "Utgiver"
+
+msgid "plugins.reports.counter.1a.platform"
+msgstr "Plattform"
+
+msgid "plugins.reports.counter.1a.printIssn"
+msgstr "ISSN (trykt utgave)"
+
+msgid "plugins.reports.counter.1a.onlineIssn"
+msgstr "ISSN (online)"
+
+msgid "plugins.reports.counter.1a.ytdTotal"
+msgstr "YTD Totalt"
+
+msgid "plugins.reports.counter.1a.ytdHtml"
+msgstr "YTD HTML"
+
+msgid "plugins.reports.counter.1a.ytdPdf"
+msgstr "YTD PDF"
+
+msgid "plugins.reports.counter.1a.totalForAllJournals"
+msgstr "Totalt for alle tidsskrift"
+
+msgid "plugins.reports.counter.1a.anonymous"
+msgstr "anonym"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Lenkene under generer foreldede rapporter med eldre programtilleggsdata, som "
+"ikke er COUNTER-klare. Dersom du vil generere oppdaterte COUNTER-rapporter "
+"ved hjelp av den nye OJS COUNTER-statistikken, bruk lenkene over."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Alle kunder"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Artikkelrapport 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Tidsskriftsrapport 1"

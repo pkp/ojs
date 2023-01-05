@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.generic.htmlArticleGalley.displayName"
+msgstr "Composição para publicação em HTML"
+
 msgid "plugins.generic.htmlArticleGalley.description"
 msgstr ""
 "Este plugin fornece suporte de renderização para composição  de publicação "
 "em HTML."
-
-msgid "plugins.generic.htmlArticleGalley.displayName"
-msgstr "Composição para publicação em HTML"

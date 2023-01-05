@@ -29,7 +29,9 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Server-hostname"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "F.eks. \"ldap.example.com\", eller \"ldaps://ldap.example.com\" (for at bruge SSL)"
+msgstr ""
+"F.eks. \"ldap.example.com\", eller \"ldaps://ldap.example.com\" (for at "
+"bruge SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Serverport"
@@ -53,19 +55,30 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Manager password"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "Manager DN og password kræves kun hvis brugerprofilen/password-synkronisering eller mulighed for brugeroprettelse er aktiveret. Hvis LDAP udelukkende bruges til godkendelse, kan disse muligheder udelades."
+msgstr ""
+"Manager DN og password kræves kun hvis brugerprofilen/password-"
+"synkronisering eller mulighed for brugeroprettelse er aktiveret. Hvis LDAP "
+"udelukkende bruges til godkendelse, kan disse muligheder udelades."
 
 msgid "plugins.auth.ldap.settings.uid"
 msgstr "Kontonavnsattribut"
 
 msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "Det attribut, hvis værdi fungerer som unik identifikation af et brugerobjekt, såsom uid eller cn eller sAMAccountName."
+msgstr ""
+"Det attribut, hvis værdi fungerer som unik identifikation af et "
+"brugerobjekt, såsom uid eller cn eller sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Password kryptering"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr "Hash-format til adgangskoder, der er gemt på serveren. SSHA anbefales."
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "SASL indstillinger (valgfri)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr "Brug SASL i stedet for simpel godkendelse"
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "SASL mekanisme"
@@ -81,9 +94,3 @@ msgstr "Krævet godkendelses ID"
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "SASL sikkerhedsoplysninger"
-
-msgid "plugins.auth.ldap.settings.sasl"
-msgstr "Brug SASL i stedet for simpel godkendelse"
-
-msgid "plugins.auth.ldap.settings.pwhash.description"
-msgstr "Hash-format til adgangskoder, der er gemt på serveren. SSHA anbefales."

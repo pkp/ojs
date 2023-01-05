@@ -45,22 +45,32 @@ msgid "editor.me"
 msgstr "Mig själv"
 
 msgid "editor.publicIdentificationExists"
-msgstr "Den publika identifikatorn '{$publicIdentifier}' existerar redan för ett annat objekt (ett nummer, en artikel, en publiceringsversion eller en file). Vänligen välj unika identifikatorer inom tidskriften."
+msgstr ""
+"Den publika identifikatorn '{$publicIdentifier}' existerar redan för ett "
+"annat objekt (ett nummer, en artikel, en publiceringsversion eller en file). "
+"Vänligen välj unika identifikatorer inom tidskriften."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Det finns inga bidrag i arkivet."
 
 msgid "editor.submissionArchive.saveChanges"
-msgstr "Spara ändringar av arkiverade bidrag? Bidrag som markeras för borttagning kommer att raderas permanent ur systemet."
+msgstr ""
+"Spara ändringar av arkiverade bidrag? Bidrag som markeras för borttagning "
+"kommer att raderas permanent ur systemet."
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Är du säker på att du vill registrera det här beslutet?"
 
 msgid "editor.submissionReview.emailWillArchive"
-msgstr "Det här bidraget kommer att arkiveras när Meddela författare-meddelandet har skickats (eller när du klickar på Hoppa över e-postmeddelande-knappen)."
+msgstr ""
+"Det här bidraget kommer att arkiveras när Meddela författare-meddelandet har "
+"skickats (eller när du klickar på Hoppa över e-postmeddelande-knappen)."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "Innan du skickar bidraget till Manusredigering, använd Meddela författare-länken för att upplysa författaren om beslutet och välj den version som ska skickas vidare."
+msgstr ""
+"Innan du skickar bidraget till Manusredigering, använd Meddela författare-"
+"länken för att upplysa författaren om beslutet och välj den version som ska "
+"skickas vidare."
 
 msgid "editor.notifyUsers"
 msgstr "Meddela användare"
@@ -89,7 +99,10 @@ msgstr ""
 "tidskriften ({$count} användare)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "Skicka det här meddelandet till alla avändare knutna till den här tidskriften och som har anmält intresse för besked om uppdateringar. ({$count} users)"
+msgstr ""
+"Skicka det här meddelandet till alla avändare knutna till den här "
+"tidskriften och som har anmält intresse för besked om uppdateringar. "
+"({$count} users)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Inkludera det här numrets innehållsförteckning:"
@@ -137,7 +150,9 @@ msgid "editor.issues.titleRequired"
 msgstr "Titel för numret måste anges."
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "Identifiering av numret krävs. Vänligen välj minst en av numrets olika alternativ för identifiering."
+msgstr ""
+"Identifiering av numret krävs. Vänligen välj minst en av numrets olika "
+"alternativ för identifiering."
 
 msgid "editor.issues.issueIdentification"
 msgstr "Identifikator för nummer"
@@ -176,19 +191,26 @@ msgid "editor.issues.removeCoverPage"
 msgstr "Ta bort omslaget?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
-msgstr "Omslagsbilden du försökte ta bort matchade inte omslagsbilden för det här numret. Ladda om sidan och försök igen."
+msgstr ""
+"Omslagsbilden du försökte ta bort matchade inte omslagsbilden för det här "
+"numret. Ladda om sidan och försök igen."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr "Omslagsbilden du försökte ta bort kunde inte hittas. Möjligen har den redan blivit borttagen. Prova att ladda om sidan."
+msgstr ""
+"Omslagsbilden du försökte ta bort kunde inte hittas. Möjligen har den redan "
+"blivit borttagen. Prova att ladda om sidan."
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "Ogiltigt format för omslaget. Giltiga format är: .gif, .jpg, eller .png."
+msgstr ""
+"Ogiltigt format för omslaget. Giltiga format är: .gif, .jpg, eller .png."
 
 msgid "editor.issues.styleFile"
 msgstr "Stilmall"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "Ogiltigt format på stilmall. Kontrollera att filen är giltig CSS. (Observera att stilmallar med inledande kommentarer kan betraktas som ogiltiga.)"
+msgstr ""
+"Ogiltigt format på stilmall. Kontrollera att filen är giltig CSS. (Observera "
+"att stilmallar med inledande kommentarer kan betraktas som ogiltiga.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Ta bort stilmall?"
@@ -218,13 +240,20 @@ msgid "editor.issues.cover"
 msgstr "Omslag"
 
 msgid "editor.issues.confirmIssueDelete"
-msgstr "Alla artiklar kommer att skickas tillbaka till redaktionskön och alla uppladdade filer kommer att raderas. Är du säker på att du vill ta bort det här numret?"
+msgstr ""
+"Alla artiklar kommer att skickas tillbaka till redaktionskön och alla "
+"uppladdade filer kommer att raderas. Är du säker på att du vill ta bort det "
+"här numret?"
 
 msgid "editor.issues.resetIssueOrder"
-msgstr "Den här tidskriften använder anpassad sortering av nummer. <a href=\"{$url}\" class=\"action\">Återställ till defaultsortering</a>"
+msgstr ""
+"Den här tidskriften använder anpassad sortering av nummer. <a href="
+"\"{$url}\" class=\"action\">Återställ till defaultsortering</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "Det här numret använder anpassad sortering av sektioner. <a href=\"{$url}\" class=\"action\">Återställ till defaultsortering</a>"
+msgstr ""
+"Det här numret använder anpassad sortering av sektioner. <a href=\"{$url}\" "
+"class=\"action\">Återställ till defaultsortering</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Nummerdata"
@@ -302,7 +331,8 @@ msgid "editor.issues.backToIssueGalleys"
 msgstr "Tillbaka till numrets publiceringsversioner"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Är du säker på att du vill ta bort den här publiceringsversionen för nummer?"
+msgstr ""
+"Är du säker på att du vill ta bort den här publiceringsversionen för nummer?"
 
 msgid "editor.issues.identifiers"
 msgstr "Identifikatorer"
@@ -370,8 +400,23 @@ msgstr "Senast utfört"
 msgid "editor.submissions.assignedTo"
 msgstr "Tilldelad till redaktör"
 
+msgid "issues.submissions.issueIds"
+msgstr "Tilldelad till nummer"
+
 msgid "editor.submissions.inSection"
 msgstr "I sektion"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Visa publikationen som är planerad för publicering"
+
+msgid "editor.article.publishVersion"
+msgstr "Publiceringsversion"
+
+msgid "editor.article.viewMetadata"
+msgstr "Visa versionens metadata"
+
+msgid "editor.article.editMetadata"
+msgstr "Redigera versionens metadata"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Ska publiceras i"
@@ -380,10 +425,14 @@ msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Återstår att planera"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
-msgstr "Publiceringsavgiften ej betald. För att planlägga för publicering, meddela författaren att betala eller avsäga sig avgiften."
+msgstr ""
+"Publiceringsavgiften ej betald. För att planlägga för publicering, meddela "
+"författaren att betala eller avsäga sig avgiften."
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "Omslagsbilden du försökte ta bort kunde inte hittas. Möjligen har den redan blivit borttagen. Ladda om sidan och försök igen."
+msgstr ""
+"Omslagsbilden du försökte ta bort kunde inte hittas. Möjligen har den redan "
+"blivit borttagen. Ladda om sidan och försök igen."
 
 msgid "grid.action.removeArticle"
 msgstr "Ta bort artikel från nummer"
@@ -392,7 +441,9 @@ msgid "editor.article.remove"
 msgstr "Ta bort"
 
 msgid "editor.article.remove.confirm"
-msgstr "Är du säker på att du vill ta bort den här artikeln från numret? Artikeln kommer bli tillgänglig för planläggning i annat nummer."
+msgstr ""
+"Är du säker på att du vill ta bort den här artikeln från numret? Artikeln "
+"kommer bli tillgänglig för planläggning i annat nummer."
 
 msgid "editor.issues.invalidAccessDate"
 msgstr "Tillgänglighetsdatum är ogiltigt."
@@ -401,34 +452,32 @@ msgid "editor.issues.editIssueGalley"
 msgstr "Redigera numrets publiceringsversion"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
-msgstr "Layoutredaktören förbereder dessa filer för respektive publiceringsversion och laddar sedan upp lämpliga <span class=\"pkp_help_title\">Korrektur</span> för korrekturläsning."
+msgstr ""
+"Layoutredaktören förbereder dessa filer för respektive publiceringsversion "
+"och laddar sedan upp lämpliga <span class=\"pkp_help_title\">Korrektur</"
+"span> för korrekturläsning."
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Välj filer för publiceringsversion"
 
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "Slutgiltiga utkastfiler i den här listan görs om till manusredigerade versioner av en manusredaktör och laddas upp nedan under <span class=\"pkp_help_title\">Manusredigering</span>."
+msgstr ""
+"Slutgiltiga utkastfiler i den här listan görs om till manusredigerade "
+"versioner av en manusredaktör och laddas upp nedan under <span class="
+"\"pkp_help_title\">Manusredigering</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "Alla filer som redan laddats upp i något av processens steg kan läggas till i listan för Korrekturläsning genom att kryssa i rutan \"Inkludera\" nedan och klicka på Sök: alla tillgängliga filer listas och kan väljas för inkludering."
+msgstr ""
+"Alla filer som redan laddats upp i något av processens steg kan läggas till "
+"i listan för Korrekturläsning genom att kryssa i rutan \"Inkludera\" nedan "
+"och klicka på Sök: alla tillgängliga filer listas och kan väljas för "
+"inkludering."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "Den publika identifikatorn '{$publicIdentifier}' existerar redan för ett annat objekt av samma typ. already exists for another object of the same type. Vänligen välj unika identifikatorer inom tidskriften."
+msgstr ""
+"Den publika identifikatorn '{$publicIdentifier}' existerar redan för ett "
+"annat objekt av samma typ. already exists for another object of the same "
+"type. Vänligen välj unika identifikatorer inom tidskriften."
 
 msgid "editor.article.coverImage"
 msgstr "Omslagsbild"
-
-msgid "editor.article.publishVersion"
-msgstr "Publiceringsversion"
-
-msgid "editor.article.editMetadata"
-msgstr "Redigera versionens metadata"
-
-msgid "editor.article.viewMetadata"
-msgstr "Visa versionens metadata"
-
-msgid "editor.article.showPublicationVersion"
-msgstr "Visa publikationen som är planerad för publicering"
-
-msgid "issues.submissions.issueIds"
-msgstr "Tilldelad till nummer"

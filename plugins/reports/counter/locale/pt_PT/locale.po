@@ -25,8 +25,44 @@ msgstr ""
 msgid "plugins.reports.counter"
 msgstr "Estatísticas COUNTER"
 
+msgid "plugins.reports.counter.release"
+msgstr "Versão do COUNTER"
+
+msgid "plugins.reports.counter.olderReports"
+msgstr "Relatórios antigos do portal"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Os parâmetros do relatório eram inválidos."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "O pedido de relatório é inválido."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Não foram encontrados resultados para este relatório."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Os resultados não podem ser formatados como XML."
+
+msgid "plugins.reports.counter.1a.introduction"
+msgstr ""
+"Estes links geram relatórios COUNTER com base na versão obsoleta 3.0. Este "
+"relatório abrange todas as revistas do portal. Use a versão mais recente, "
+"sempre que possível."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Relatório COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.xml"
+msgstr "Versão XML"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"Relatório 1 (R3) COUNTER da Revista: Artigo com texto completo solicitados "
+"por mês e revista"
+
 msgid "plugins.reports.counter.1a.title"
-msgstr "Relatório 1 (R3): Solicitações de texto completo de artigos por mês e revista"
+msgstr ""
+"Relatório 1 (R3): Solicitações de texto completo de artigos por mês e revista"
 
 msgid "plugins.reports.counter.1a.title1"
 msgstr "Relatório 1 (R3)"
@@ -63,50 +99,20 @@ msgstr "PDF YTD"
 msgid "plugins.reports.counter.1a.totalForAllJournals"
 msgstr "Total para todas as revistas"
 
-msgid "plugins.reports.counter.legacyStats"
-msgstr "Os links em baixo geram relatórios usando os dados do antigo plugin COUNTER. Se pretende gerar relatórios COUNTER usando o novo tipo de métrica do COUNTER do OJS, use os links em cima."
-
-msgid "plugins.reports.counter.release"
-msgstr "Versão do COUNTER"
-
-msgid "plugins.reports.counter.olderReports"
-msgstr "Relatórios antigos do portal"
-
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "Os parâmetros do relatório eram inválidos."
-
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "O pedido de relatório é inválido."
-
-msgid "plugins.reports.counter.error.noResults"
-msgstr "Não foram encontrados resultados para este relatório."
-
-msgid "plugins.reports.counter.error.noXML"
-msgstr "Os resultados não podem ser formatados como XML."
-
-msgid "plugins.reports.counter.1a.introduction"
-msgstr ""
-"Estes links geram relatórios COUNTER com base na versão obsoleta 3.0. Este "
-"relatório abrange todas as revistas do portal. Use a versão mais recente, "
-"sempre que possível."
-
-msgid "plugins.reports.counter.1a.name"
-msgstr "Relatório COUNTER JR1 (R3)"
-
-msgid "plugins.reports.counter.1a.xml"
-msgstr "Versão XML"
-
-msgid "plugins.reports.counter.1a.description"
-msgstr "Relatório 1 (R3) COUNTER da Revista: Artigo com texto completo solicitados por mês e revista"
-
 msgid "plugins.reports.counter.1a.anonymous"
 msgstr "anónimo"
+
+msgid "plugins.reports.counter.legacyStats"
+msgstr ""
+"Os links em baixo geram relatórios usando os dados do antigo plugin COUNTER. "
+"Se pretende gerar relatórios COUNTER usando o novo tipo de métrica do "
+"COUNTER do OJS, use os links em cima."
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Todos os Clientes"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "Relatório de revista 1"
-
 msgid "plugins.reports.counter.ar1.title"
 msgstr "Relatório de Artigo 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Relatório de revista 1"

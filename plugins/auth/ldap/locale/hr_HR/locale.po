@@ -2,20 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T11:04:37+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:04:37+00:00\n"
-"Language: \n"
 
 msgid "plugins.auth.ldap.displayName"
 msgstr "LDAP poslužitelj"
 
 msgid "plugins.auth.ldap.description"
-msgstr "Ovaj dodatak služi za provjeru vjerodostojnosti i usklađivanje korisničkih računa preko LDAP poslužitelja."
+msgstr ""
+"Ovaj dodatak služi za provjeru vjerodostojnosti i usklađivanje korisničkih "
+"računa preko LDAP poslužitelja."
 
 msgid "plugins.auth.ldap.settings"
 msgstr "Postavke LDAP poslužitelja"
@@ -24,7 +26,8 @@ msgid "plugins.auth.ldap.settings.hostname"
 msgstr "Naziv poslužitelja"
 
 msgid "plugins.auth.ldap.settings.hostname.description"
-msgstr "Npr. \"ldap.primjer.com\", ili \"ldaps://ldap.primjer.com\" (koristeći SSL)"
+msgstr ""
+"Npr. \"ldap.primjer.com\", ili \"ldaps://ldap.primjer.com\" (koristeći SSL)"
 
 msgid "plugins.auth.ldap.settings.port"
 msgstr "Port poslužitelja"
@@ -48,13 +51,32 @@ msgid "plugins.auth.ldap.settings.managerpwd"
 msgstr "Administratorova lozinka"
 
 msgid "plugins.auth.ldap.settings.managerpwd.description"
-msgstr "Administratorov naziv domene i lozinka su obavezni  ako je omogućena sinkronizacija korisničkog profila/lozinke ili ako su omogućene opcije kreiranja korisnika. Ako će se LDAP poslužitelj koristiti isključivo za provjeru vjerodostojnosti korisničkih računa, tada ove opcije mogu biti isključene."
+msgstr ""
+"Administratorov naziv domene i lozinka su obavezni  ako je omogućena "
+"sinkronizacija korisničkog profila/lozinke ili ako su omogućene opcije "
+"kreiranja korisnika. Ako će se LDAP poslužitelj koristiti isključivo za "
+"provjeru vjerodostojnosti korisničkih računa, tada ove opcije mogu biti "
+"isključene."
+
+msgid "plugins.auth.ldap.settings.uid"
+msgstr "Atributi korisničkog imena"
+
+msgid "plugins.auth.ldap.settings.uid.description"
+msgstr ""
+"Atributi čija vrijednost jedinstveno identificira objekt korisnika, kao što "
+"je uid ili cn ili sAMAccountName."
 
 msgid "plugins.auth.ldap.settings.pwhash"
 msgstr "Enkripcija lozinke"
 
+msgid "plugins.auth.ldap.settings.pwhash.description"
+msgstr ""
+
 msgid "plugins.auth.ldap.settings.saslopt"
 msgstr "Postavke SASL sučelja (po izboru)"
+
+msgid "plugins.auth.ldap.settings.sasl"
+msgstr ""
 
 msgid "plugins.auth.ldap.settings.saslmech"
 msgstr "SASL mehanizam"
@@ -70,9 +92,3 @@ msgstr "Zatražen autorizacijski ID "
 
 msgid "plugins.auth.ldap.settings.saslprop"
 msgstr "Sigurnosne opcije SASL sučelja"
-
-msgid "plugins.auth.ldap.settings.uid"
-msgstr "Atributi korisničkog imena"
-
-msgid "plugins.auth.ldap.settings.uid.description"
-msgstr "Atributi čija vrijednost jedinstveno identificira objekt korisnika, kao što je uid ili cn ili sAMAccountName."

@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
 "PO-Revision-Date: 2020-12-09 14:51+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
-"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/api/fi_FI/>"
-"\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/api/fi_FI/"
+">\n"
 "Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,54 +14,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Pyytämäsi ilmoitus ei ole osa tätä julkaisua."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Et voi vaihtaa käsikirjoitukseen liittyvää julkaisua."
+
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Sinulla ei ole lupaa katsoa julkaisemattomia numeroita."
-
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Pyytämäsi julkaistu versio ei kuulu tähän käsikirjoitukseen."
-
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Pyytämäsi julkaistu versio ei kuulu tähän julkaisuun."
-
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Valitsemaasi maksuvaihtoehto ei tueta."
-
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr "Sinulla ei ole lupaa siirtää tätä sähköpostipohjaa toiseen julkaisuun."
-
-msgid "api.contexts.404.contextNotFound"
-msgstr "Etsimääsi julkaisua ei löytynyt."
-
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Sinulla ei ole lupaa poistaa tätä julkaisua."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Sinulla ei ole lupaa muokata tätä julkaisua."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Julkaisua ei voi muokata sivuston rajapinnasta käsin."
-
-msgid "api.contexts.403.contextsDidNotMatch"
-msgstr ""
-"Et voi katsoa tai muokata tätä julkaisua, jos et tee pyyntöä julkaisun tai "
-"sivuston rajapintaan."
-
-msgid "api.contexts.403.notAllowed"
-msgstr "Sinulla ei ole lupaa katsoa tätä julkaisua."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Voit katsoa vain julkisia julkaisuja."
 
 msgid "api.submissions.403.contextRequired"
 msgstr ""
 "Käsikirjoituksen luomiseksi tai muokkaamiseksi pitää tehdä kysely julkaisun "
 "rajapintaan."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Et voi vaihtaa käsikirjoitukseen liittyvää julkaisua."
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Voit katsoa vain julkisia julkaisuja."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Sinulla ei ole lupaa katsoa tätä julkaisua."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Et voi katsoa tai muokata tätä julkaisua, jos et tee pyyntöä julkaisun tai "
+"sivuston rajapintaan."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Julkaisua ei voi muokata sivuston rajapinnasta käsin."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Sinulla ei ole lupaa muokata tätä julkaisua."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Sinulla ei ole lupaa poistaa tätä julkaisua."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Etsimääsi julkaisua ei löytynyt."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Sinulla ei ole lupaa siirtää tätä sähköpostipohjaa toiseen julkaisuun."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Valitsemaasi maksuvaihtoehto ei tueta."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Pyytämäsi julkaistu versio ei kuulu tähän julkaisuun."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Pyytämäsi julkaistu versio ei kuulu tähän käsikirjoitukseen."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Tämän vaiheen tiedosto ei voi olla julkaistava tiedosto."
-
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "Pyytämäsi ilmoitus ei ole osa tätä julkaisua."

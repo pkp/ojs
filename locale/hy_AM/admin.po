@@ -14,27 +14,35 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Թողարկված հոդված"
 
-msgid "admin.auth.ojs"
-msgstr "OJS օգտագործողի տվյալների բազա"
+msgid "admin.settings.redirect"
+msgstr "Ամսագրի վերաուղորդում"
 
-msgid "admin.languages.download.cannotModifyRegistry"
+msgid "admin.settings.redirectInstructions"
 msgstr ""
-"Հնարավոր չէ ավելացնել նոր լեզուն լեզվի գրանցման ֆայլի մեջ, հիմնակնում  \""
-"registry/locales.xml\"-ում:"
+"Հիմնական կայքի հարցումները կուղղորդվեն այս ամսագիր: Սա կարող է օգտակար "
+"լինել, եթե կայքը, օրինակ, պարունակում է միայն մեկ ամսագիր:"
 
-msgid "admin.languages.download.cannotOpen"
-msgstr "Հնարավոր չէ բացել լեզվի նկարագիրը PKP կայքի համար:"
-
-msgid "admin.languages.download"
-msgstr "Ներբեռնել լեզուն"
-
-msgid "admin.languages.localeInstalled"
-msgstr "\"{$locale}\" լեզուն տեղակայվել է:"
-
-msgid "admin.languages.downloadFailed"
+msgid "admin.settings.defaultMetricDescription"
 msgstr ""
-"Լեզվի տեղադրումը ձախողվեց: Սխալի մասին տեղեկատվությունը նկարագրում է "
-"ձախողումը:"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Դուք վստա՞հ եք, որ ցանկանում եք ապաակտիվացնել այս լեզուն: Սա կարող է ազդել "
+"ցանկացած տեղակայված ամսագրի վրա, որն այժմ օգտագործում է լեզուն:"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Սա կլինի լռելյայն լեզուն կայքի և ընդգրկված ցանկացած ամսագրերի համար:"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Նշված լեզուները կարող են լինել թերի :"
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Վստա՞հ եք, որ ցանկանում եք հեռացնել այս լեզուն:Սա կարող է անդրադառնալ "
+"ցանկացած ամսագրի վրա, որոնք այս պահին օգտագործում են այս լեզում:"
 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
@@ -42,38 +50,11 @@ msgstr ""
 "համար: Լեզուները պետք է տեղադրվեն նախքան դրանք  ամսագրերի համար օգտագործելը: "
 "Տես OJS փաստաթղթերը նոր լեզվի համար աջակցություն/support ավելացնելու համար:"
 
-msgid "admin.languages.confirmUninstall"
+msgid "admin.auth.ojs"
+msgstr "OJS օգտագործողի տվյալների բազա"
+
+msgid "admin.auth.enableSyncProfiles"
 msgstr ""
-"Վստա՞հ եք, որ ցանկանում եք հեռացնել այս լեզուն:Սա կարող է անդրադառնալ "
-"ցանկացած ամսագրի վրա, որոնք այս պահին օգտագործում են այս լեզում:"
-
-msgid "admin.locale.maybeIncomplete"
-msgstr "Նշված լեզուները կարող են լինել թերի :"
-
-msgid "admin.languages.primaryLocaleInstructions"
-msgstr "Սա կլինի լռելյայն լեզուն կայքի և ընդգրկված ցանկացած ամսագրերի համար:"
-
-msgid "admin.languages.confirmDisable"
-msgstr ""
-"Դուք վստա՞հ եք, որ ցանկանում եք ապաակտիվացնել այս լեզուն: Սա կարող է ազդել "
-"ցանկացած տեղակայված ամսագրի վրա, որն այժմ օգտագործում է լեզուն:"
-
-msgid "admin.settings.redirectInstructions"
-msgstr ""
-"Հիմնական կայքի հարցումները կուղղորդվեն այս ամսագիր: Սա կարող է օգտակար "
-"լինել, եթե կայքը, օրինակ, պարունակում է միայն մեկ ամսագիր:"
-
-msgid "admin.settings.redirect"
-msgstr "Ամսագրի վերաուղորդում"
-
-msgid "admin.settings.info.success"
-msgstr "Կայիք տեղեկատվությունը հաջողությամբ թարմացվել է:"
-
-msgid "admin.settings.config.success"
-msgstr "Կայքի Կայքի Ձևավորման կարգավորումները հաջողությամբ թարմացվել են:"
-
-msgid "admin.settings.appearance.success"
-msgstr "Կայքի արտաքին տեսքի կարգաբերումները հաջողությամբ թարմացվել են:"
 
 msgid "admin.auth.enableSyncPasswords"
 msgstr ""
@@ -83,38 +64,6 @@ msgstr ""
 "գաղտնաբառը վերականգնելու համար: Այս գործառույթները հասանելի չեն լինի "
 "վավերացման աղբյուրով օգտագործողների համար, եթե այս տարբերակը միացված չէ:"
 
-msgid "admin.contexts.form.titleRequired"
-msgstr "Պահանջվում է վերնագիր:"
-
-msgid "admin.journals.urlWillBe"
-msgstr ""
-"Սա կլինի մեկ կարճ բառ կամ հապավում, որը   ներկայացնում է պարբերականը: "
-"Պարբերականի հղումը հետևյալն է՝ {$sampleUrl}:"
-
-msgid "admin.contexts.create"
-msgstr "Ստեղծել պարբերական:"
-
-msgid "admin.journals.noneCreated"
-msgstr "Որևէ պարբերական չի ստեղծվել:"
-
-msgid "admin.journals.journalSettings"
-msgstr "Պարբերականի կարգաբերումներ"
-
-msgid "admin.journals.createInstructions"
-msgstr ""
-"Դուք ավտոմատ կավելացվեք որպես այս պարբերականի մենեջեր:Նոր պարբերական "
-"ստեղծելուց հետո, Դուք կուղորդվեք դեպքի կարգաբերումներ ամսագրի նախնական "
-"տեղադրումը կատարելու համար:"
-
-msgid "admin.systemConfigurationDescription"
-msgstr "OJS կարգաբերման կարգավորում <tt>config.inc.php</tt>-ից:"
-
-msgid "admin.systemConfiguration"
-msgstr "OJS  կարգավորում"
-
-msgid "admin.systemVersion"
-msgstr "OJS տարբերակ"
-
 msgid "admin.auth.enableCreateUsers"
 msgstr ""
 "Ակտիվացնել օգտագործողների ստեղծումը (եթե աջակցվում է այս նույնականացման "
@@ -123,3 +72,138 @@ msgstr ""
 "չունեն: Ինչպես նաև, եթե այս աղբյուրը  լռելյայն է,  OJS  հաշիվը ստեղծվում է "
 "օգտագործողի գրանցման միջոցով,  ավտամատ կավելացվի հեռավար նույնականացման "
 "աղբյուրին:"
+
+msgid "admin.systemVersion"
+msgstr "OJS տարբերակ"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS  կարգավորում"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS կարգաբերման կարգավորում <tt>config.inc.php</tt>-ից:"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Դուք ավտոմատ կավելացվեք որպես այս պարբերականի մենեջեր:Նոր պարբերական "
+"ստեղծելուց հետո, Դուք կուղորդվեք դեպքի կարգաբերումներ ամսագրի նախնական "
+"տեղադրումը կատարելու համար:"
+
+msgid "admin.journals.journalSettings"
+msgstr "Պարբերականի կարգաբերումներ"
+
+msgid "admin.journals.noneCreated"
+msgstr "Որևէ պարբերական չի ստեղծվել:"
+
+msgid "admin.contexts.create"
+msgstr "Ստեղծել պարբերական:"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Սա կլինի մեկ կարճ բառ կամ հապավում, որը   ներկայացնում է պարբերականը: "
+"Պարբերականի հղումը հետևյալն է՝ {$sampleUrl}:"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Պահանջվում է վերնագիր:"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr ""
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr ""
+
+msgid "admin.contexts.contextDescription"
+msgstr ""
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+
+msgid "admin.journals.importSubscriptions"
+msgstr ""
+
+msgid "admin.journals.transcode"
+msgstr ""
+
+msgid "admin.journals.redirect"
+msgstr ""
+
+msgid "admin.journals.form.importPathRequired"
+msgstr ""
+
+msgid "admin.journals.importErrors"
+msgstr ""
+
+msgid "admin.mergeUsers"
+msgstr ""
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr ""
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+
+msgid "admin.mergeUsers.allUsers"
+msgstr ""
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr ""
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr ""
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr ""
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
+#~ msgid "admin.languages.download.cannotModifyRegistry"
+#~ msgstr ""
+#~ "Հնարավոր չէ ավելացնել նոր լեզուն լեզվի գրանցման ֆայլի մեջ, հիմնակնում  "
+#~ "\"registry/locales.xml\"-ում:"
+
+#~ msgid "admin.languages.download.cannotOpen"
+#~ msgstr "Հնարավոր չէ բացել լեզվի նկարագիրը PKP կայքի համար:"
+
+#~ msgid "admin.languages.download"
+#~ msgstr "Ներբեռնել լեզուն"
+
+#~ msgid "admin.languages.localeInstalled"
+#~ msgstr "\"{$locale}\" լեզուն տեղակայվել է:"
+
+#~ msgid "admin.languages.downloadFailed"
+#~ msgstr ""
+#~ "Լեզվի տեղադրումը ձախողվեց: Սխալի մասին տեղեկատվությունը նկարագրում է "
+#~ "ձախողումը:"
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Կայիք տեղեկատվությունը հաջողությամբ թարմացվել է:"
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Կայքի Կայքի Ձևավորման կարգավորումները հաջողությամբ թարմացվել են:"
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Կայքի արտաքին տեսքի կարգաբերումները հաջողությամբ թարմացվել են:"

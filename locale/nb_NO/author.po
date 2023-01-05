@@ -20,11 +20,20 @@ msgstr "Ny innlevering"
 msgid "author.track"
 msgstr "Aktive innleveringer"
 
+msgid "author.competingInterests"
+msgstr ""
+"Interessekonflikter <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">«Retningslinjer for erklæring om "
+"interessekonflikter»</a>"
+
 msgid "author.submit.submitArticle"
 msgstr "Send inn en artikkel"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "Fem trinn i innleveringen"
+
+msgid "author.submit.startHereTitle"
+msgstr "Start en ny innlevering"
 
 msgid "author.submit.startHereLink"
 msgstr ""
@@ -64,13 +73,41 @@ msgstr "Last opp supplerende filer"
 msgid "author.submit.confirmation"
 msgstr "Bekreftelse"
 
+msgid "author.submit.nextSteps"
+msgstr "Neste steg"
+
 msgid "submission.submit.cancelSubmission"
 msgstr ""
-"Du kan fullføre denne innleveringen ved en senere anledning om du velger «"
-"Aktive innleveringer» fra forfattersiden."
+"Du kan fullføre denne innleveringen ved en senere anledning om du velger "
+"«Aktive innleveringer» fra forfattersiden."
 
 msgid "author.submit.notAccepting"
 msgstr "Dette tidsskriftet tar for øyeblikket ikke imot bidrag."
+
+msgid "author.submit.requestWaiver"
+msgstr "Be om gebyrfritak"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Vurder å gi gebyrfritak for denne artikkelen"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Oppgi hvorfor du ber om gebyrfritak i feltet under."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Om du ber om fritak fra forfattergebyret, må du oppgi en grunn i feltet."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "I vurderingsrunde {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Under vurdering: Innleveringen må bearbeides"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Under redigering: Språkvask forespurt"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Under redigering: Korrekturlesing ønsket"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Last opp språkvasket versjon"
@@ -87,25 +124,13 @@ msgstr "Vis status"
 msgid "author.submissions.noSubmissions"
 msgstr "Ingen innleveringer."
 
-msgid "author.submit.howToSubmit"
-msgstr "Forfattere skal sende inn bidragene til dette tidsskriftet på nettet, gjennom en femtrinns prosess for opplasting av manuskript og annen relevant informasjon (med mulighet for også å laste opp tilleggsfiler, som for eksempel forskningsdata og -instrument). Hvis det oppstår problemer med denne prosessen, vennligst kontakt teknisk kontaktperson (<a href=\"mailto:{$supportEmail}\">{$supportName}</a>) med e-post, eller på telefon {$supportPhone}, for å få hjelp."
-
 msgid "author.submit.journalSection"
 msgstr "Tidsskriftseksjon"
 
 msgid "author.submit.journalSectionDescription"
 msgstr ""
-"Velg en passende seksjon (se «Seksjoner» og «Retningslinjer» i <a href=\""
-"{$aboutUrl}\">«Om»</a> tidsskriftet)."
-
-msgid "submission.submit.selectSection"
-msgstr "Vennligst velg en seksjon ..."
-
-msgid "submission.submit.submissionChecklist"
-msgstr "Sjekkliste for klargjøring av manuskript"
-
-msgid "submission.submit.submissionChecklistDescription"
-msgstr "Bekreft at manuskriptet du sender inn er klargjort for vurdering hos dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til redaktøren kan legges til nedenfor)."
+"Velg en passende seksjon (se «Seksjoner» og «Retningslinjer» i <a href="
+"\"{$aboutUrl}\">«Om»</a> tidsskriftet)."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -133,11 +158,17 @@ msgstr ""
 "Velg en passende tidsskriftseksjon for denne innleveringen (se «Seksjoner» "
 "og «Retningslinjer» i <a href=\"{$aboutUrl}\">«Om»</a> tidsskriftet)."
 
+msgid "author.submit.form.localeRequired"
+msgstr "Angi språk på innleveringen."
+
 msgid "submission.submit.privacyStatement"
 msgstr "Erklæring om personvern"
 
 msgid "author.submit.reorderInstructions"
 msgstr "Bruk pilene for å endre rekkefølgen forfatterne skal vises i."
+
+msgid "author.submit.reorder"
+msgstr "Endre rekkefølgen på forfatterne"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Kontaktperson for redaksjonell korrespondanse."
@@ -172,6 +203,12 @@ msgstr "Du må oppgi fornavn, etternavn og e-postadresse for hver forfatter."
 msgid "author.submit.form.titleRequired"
 msgstr "Skriv inn tittelen på artikkelen din."
 
+msgid "author.submit.form.abstractRequired"
+msgstr "Skriv inn sammendraget til artikkelen din."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Du har lagt inn for mange ord."
+
 msgid "author.submit.submissionFile"
 msgstr "Innleveringsfil"
 
@@ -194,6 +231,15 @@ msgstr ""
 "datasett (som må være forskningsetisk vurdert og sikret), (c) kilder som "
 "ellers ikke ville vært tilgjengelig for leserne eller (d) figurer eller "
 "tabeller som ikke kan integreres i selve teksten."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Klikk «Lagre» for å laste opp filen (flere filer kan lastes opp senere)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Er du sikke på at du vil fortsette uten å laste opp den supplerende filen du "
+"valgte?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "Ingen supplerende filer er lagt til."
@@ -251,9 +297,6 @@ msgstr "Kildetekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Kort beskrivelse"
 
-msgid "author.submit.suppFile.contributorOrSponsor"
-msgstr "Bidragsyter eller kilde til støtte"
-
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
 "Vis fram filen til fagfellene (uten metadata), siden det ikke vil "
@@ -309,9 +352,6 @@ msgid "author.submit.submissionComplete"
 msgstr ""
 "Innleveringen er fullført. Takk for at du vil publisere hos {$journalTitle}."
 
-msgid "author.submit.expedite"
-msgstr "Hvis dette manuskriptet er i et format som er klart for publisering uten ytterligere vurdering eller redigering, kan det sendes rett til det siste stadiet i manuskriptarbeidskøen ved å <a href=\"{$expediteUrl}\" class=\"action\">Klikke her</a>. (NB: Bare ansvarlig redaktør har denne valgmuligheten for sin manuskriptbehandling.)"
-
 msgid "author.article.uploadAuthorVersion"
 msgstr "Last opp forfatterens versjon"
 
@@ -321,39 +361,6 @@ msgstr "Språkvasket fil"
 msgid "author.article.authorRevisedFile"
 msgstr "Forfatterens fil"
 
-msgid "author.competingInterests"
-msgstr ""
-"Interessekonflikter <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">«Retningslinjer for erklæring om "
-"interessekonflikter»</a>"
-
-msgid "author.submit.startHereTitle"
-msgstr "Start en ny innlevering"
-
-msgid "author.submit.requestWaiver"
-msgstr "Be om gebyrfritak"
-
-msgid "author.submit.qualifyForWaiver"
-msgstr "Vurder å gi gebyrfritak for denne artikkelen"
-
-msgid "author.submit.addReasonsForWaiver"
-msgstr "Oppgi hvorfor du ber om gebyrfritak i feltet under."
-
-msgid "author.submit.howToSubmitNoPhone"
-msgstr "Trenger du hjelp? Kontakt <a href=\"mailto:{$supportEmail}\">{$supportName}</a>"
-
-msgid "author.submit.form.abstractRequired"
-msgstr "Skriv inn sammendraget til artikkelen din."
-
-msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr ""
-"Klikk «Lagre» for å laste opp filen (flere filer kan lastes opp senere)."
-
-msgid "author.submit.forgottenSubmitSuppFile"
-msgstr ""
-"Er du sikke på at du vil fortsette uten å laste opp den supplerende filen du "
-"valgte?"
-
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
 "For å sende inn bidrag til dette tidsskriftet må du ha en brukerkonto. Ved "
@@ -361,30 +368,40 @@ msgstr ""
 "deg når redaksjonsprosessen krever det, eller hvis de trenger mer "
 "informasjon fra deg."
 
-msgid "author.submit.mustEnterWaiverReason"
-msgstr ""
-"Om du ber om fritak fra forfattergebyret, må du oppgi en grunn i feltet."
+#~ msgid "author.submit.howToSubmit"
+#~ msgstr ""
+#~ "Forfattere skal sende inn bidragene til dette tidsskriftet på nettet, "
+#~ "gjennom en femtrinns prosess for opplasting av manuskript og annen "
+#~ "relevant informasjon (med mulighet for også å laste opp tilleggsfiler, "
+#~ "som for eksempel forskningsdata og -instrument). Hvis det oppstår "
+#~ "problemer med denne prosessen, vennligst kontakt teknisk kontaktperson "
+#~ "(<a href=\"mailto:{$supportEmail}\">{$supportName}</a>) med e-post, eller "
+#~ "på telefon {$supportPhone}, for å få hjelp."
 
-msgid "author.submissions.queuedReviewSubsequent"
-msgstr "I vurderingsrunde {$round}"
+#~ msgid "submission.submit.selectSection"
+#~ msgstr "Vennligst velg en seksjon ..."
 
-msgid "author.submissions.queuedReviewRevisions"
-msgstr "Under vurdering: Innleveringen må bearbeides"
+#~ msgid "submission.submit.submissionChecklist"
+#~ msgstr "Sjekkliste for klargjøring av manuskript"
 
-msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Under redigering: Språkvask forespurt"
+#~ msgid "submission.submit.submissionChecklistDescription"
+#~ msgstr ""
+#~ "Bekreft at manuskriptet du sender inn er klargjort for vurdering hos "
+#~ "dette tidsskriftet, ved å krysse av for følgende (øvrige kommentarer til "
+#~ "redaktøren kan legges til nedenfor)."
 
-msgid "author.submissions.queuedEditingProofread"
-msgstr "Under redigering: Korrekturlesing ønsket"
+#~ msgid "author.submit.suppFile.contributorOrSponsor"
+#~ msgstr "Bidragsyter eller kilde til støtte"
 
-msgid "author.submit.reorder"
-msgstr "Endre rekkefølgen på forfatterne"
+#~ msgid "author.submit.expedite"
+#~ msgstr ""
+#~ "Hvis dette manuskriptet er i et format som er klart for publisering uten "
+#~ "ytterligere vurdering eller redigering, kan det sendes rett til det siste "
+#~ "stadiet i manuskriptarbeidskøen ved å <a href=\"{$expediteUrl}\" class="
+#~ "\"action\">Klikke her</a>. (NB: Bare ansvarlig redaktør har denne "
+#~ "valgmuligheten for sin manuskriptbehandling.)"
 
-msgid "author.submit.form.wordCountAlert"
-msgstr "Du har lagt inn for mange ord."
-
-msgid "author.submit.form.localeRequired"
-msgstr "Angi språk på innleveringen."
-
-msgid "author.submit.nextSteps"
-msgstr "Neste steg"
+#~ msgid "author.submit.howToSubmitNoPhone"
+#~ msgstr ""
+#~ "Trenger du hjelp? Kontakt <a href=\"mailto:"
+#~ "{$supportEmail}\">{$supportName}</a>"

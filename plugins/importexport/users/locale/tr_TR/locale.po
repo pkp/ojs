@@ -27,31 +27,41 @@ msgstr ""
 "\timport [xmlFileName] [journal_path]\n"
 "\texport [xmlFileName] [journal_path]\n"
 "\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
-""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Örnekler:\n"
+"\tKullanıcıları myImportFile.xml dosyasından içe aktar:\n"
+"\t{$scriptName} {$pluginName} myImportFile.xml myJournal'ı içe aktar\n"
+"\n"
+"\tTüm kullanıcıları myJournal'dan dışa aktar:\n"
+"\t{$scriptName} {$pluginName} myExportFile.xml myJournal'dan ihraç et\n"
+"\n"
+"\tKullanıcıları ID'leri ile dışa aktar:\n"
+"\t{$scriptName} {$pluginName} myExportFile.xml myJournal 1 2 ihraç et\n"
 
 msgid "plugins.importexport.users.import.importUsers"
 msgstr "Kullanıcı verilerini Ekle"
 
 msgid "plugins.importexport.users.import.instructions"
-msgstr "Bu dergiye eklenecek kullanıcı bilgilerini içeren veri dosyasını seçiniz. Dergi yardım sayfalarından ilgili dosya yapısı ile ilgili bilgilere bakınız.<br /><br />Not: veri alınırken sistemde kayıtlı kullanıcı adı veya e-posta adresi ile aynı olan kullanıcılar yendiden kaydedilmez, eğer bu kullanıcıların ek rolleri tanımlı ise, bu roller kayıtlı kullanıcıya eklenir."
-
-msgid "plugins.importexport.users.import.failedToImportUser"
-msgstr "Kullanıcı verisi alınamadı"
-
-msgid "plugins.importexport.users.import.failedToImportRole"
-msgstr "Kullanıcının rolünü belirlemede hata oluştu"
+msgstr ""
+"Bu dergiye eklenecek kullanıcı bilgilerini içeren veri dosyasını seçiniz. "
+"Dergi yardım sayfalarından ilgili dosya yapısı ile ilgili bilgilere bakınız."
+"<br /><br />Not: veri alınırken sistemde kayıtlı kullanıcı adı veya e-posta "
+"adresi ile aynı olan kullanıcılar yendiden kaydedilmez, eğer bu "
+"kullanıcıların ek rolleri tanımlı ise, bu roller kayıtlı kullanıcıya eklenir."
 
 msgid "plugins.importexport.users.import.dataFile"
 msgstr "Kullanıcı veri dosyası"
 
 msgid "plugins.importexport.users.import.sendNotify"
-msgstr "Sistme kaydedilen her kullanıcıya kullanıcı adı ve şifrelerini içeren bir mesaj gönder."
+msgstr ""
+"Sistme kaydedilen her kullanıcıya kullanıcı adı ve şifrelerini içeren bir "
+"mesaj gönder."
 
 msgid "plugins.importexport.users.import.continueOnError"
 msgstr "Bir hata oluşur ise diğer kullanıcıları yüklemeyi sürdür."
-
-msgid "plugins.importexport.users.import.noFileError"
-msgstr "Sisteme dosya göndermediniz!"
 
 msgid "plugins.importexport.users.import.usersWereImported"
 msgstr "Aşağıdaki kullanıcılar sisteme başarı ile eklendi"
@@ -63,6 +73,15 @@ msgid "plugins.importexport.users.import.confirmUsers"
 msgstr ""
 "Bu kullanıcıların sisteme eklenmesini istediğiniz kullanıcılar olduğunu "
 "onaylayınız"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Uyarı"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"{$importHash} ile şifreli şifreler kullanılamıyor; OJS, {$ojsHash} "
+"kullanacak şekilde yapılandırıldı. Devam ederseniz, içe aktarılan "
+"kullanıcıların şifrelerini sıfırlamanız gerekir."
 
 msgid "plugins.importexport.users.unknownPress"
 msgstr "Bilinmeyen bir dergi yolu \"{$journalPath}\" belirtildi."
@@ -79,30 +98,23 @@ msgstr "Tümünü ver"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Veriler verilmeye hazırlanırken hata oldu"
 
-msgid "plugins.importexport.users.cliUsage.examples"
-msgstr ""
-"\n"
-"Örnekler:\n"
-"\tKullanıcıları myImportFile.xml dosyasından içe aktar:\n"
-"\t{$scriptName} {$pluginName} myImportFile.xml myJournal'ı içe aktar\n"
-"\n"
-"\tTüm kullanıcıları myJournal'dan dışa aktar:\n"
-"\t{$scriptName} {$pluginName} myExportFile.xml myJournal'dan ihraç et\n"
-"\n"
-"\tKullanıcıları ID'leri ile dışa aktar:\n"
-"\t{$scriptName} {$pluginName} myExportFile.xml myJournal 1 2 ihraç et\n"
-
-msgid "plugins.importexport.users.import.warning"
-msgstr "Uyarı"
-
-msgid "plugins.importexport.users.import.encryptionMismatch"
-msgstr "{$importHash} ile şifreli şifreler kullanılamıyor; OJS, {$ojsHash} kullanacak şekilde yapılandırıldı. Devam ederseniz, içe aktarılan kullanıcıların şifrelerini sıfırlamanız gerekir."
-
 msgid "plugins.importexport.users.importComplete"
-msgstr "İçe aktarma başarıyla tamamlandı. Kullanılmayan kullanıcı adları ve e-posta adresleri olan kullanıcılar, birlikte gelen kullanıcı grupları ile birlikte içe aktarılmıştır."
+msgstr ""
+"İçe aktarma başarıyla tamamlandı. Kullanılmayan kullanıcı adları ve e-posta "
+"adresleri olan kullanıcılar, birlikte gelen kullanıcı grupları ile birlikte "
+"içe aktarılmıştır."
 
 msgid "plugins.importexport.users.results"
 msgstr "Sonuçlar"
 
 msgid "plugins.importexport.users.uploadFile"
 msgstr "Devam etmek için lütfen \"İçe Aktar\"ın altında bir dosya yükleyin."
+
+#~ msgid "plugins.importexport.users.import.failedToImportUser"
+#~ msgstr "Kullanıcı verisi alınamadı"
+
+#~ msgid "plugins.importexport.users.import.failedToImportRole"
+#~ msgstr "Kullanıcının rolünü belirlemede hata oluştu"
+
+#~ msgid "plugins.importexport.users.import.noFileError"
+#~ msgstr "Sisteme dosya göndermediniz!"

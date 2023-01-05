@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:20+00:00\n"
-"Language: \n"
 
 msgid "author.submit"
 msgstr "Bidalketa berria"
@@ -18,7 +18,9 @@ msgid "author.track"
 msgstr "Bidalketa aktiboak"
 
 msgid "author.competingInterests"
-msgstr "Interes-gatazka <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Interes-gatazketako politika</a> "
+msgstr ""
+"Interes-gatazka <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">Interes-gatazketako politika</a> "
 
 msgid "author.submit.submitArticle"
 msgstr "Bidali artikulu bat"
@@ -30,7 +32,9 @@ msgid "author.submit.startHereTitle"
 msgstr "Hasi bidalketa berria"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">Egin klik hemen</a> bidalketa-prozesuaren bost urratsetatik lehenengora joateko."
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Egin klik hemen</a> bidalketa-"
+"prozesuaren bost urratsetatik lehenengora joateko."
 
 msgid "author.submit.step1"
 msgstr "1. urratsa. Bidalketa hasi"
@@ -53,11 +57,11 @@ msgstr "5. urratsa. Bidalketa berretsi"
 msgid "author.submit.start"
 msgstr "Hasi"
 
-msgid "author.submit.metadata"
-msgstr "2. Metadatuak sartu"
-
 msgid "author.submit.upload"
 msgstr "3. Bidalketa kargatu"
+
+msgid "author.submit.metadata"
+msgstr "2. Metadatuak sartu"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Fitxategi osagarriak kargatu"
@@ -65,8 +69,13 @@ msgstr "Fitxategi osagarriak kargatu"
 msgid "author.submit.confirmation"
 msgstr "Berretsi"
 
+msgid "author.submit.nextSteps"
+msgstr ""
+
 msgid "submission.submit.cancelSubmission"
-msgstr "Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa aktiboak hautatuta."
+msgstr ""
+"Bidalketa hau geroago osa dezakezu, Egilearen hasierako orrian Bidalketa "
+"aktiboak hautatuta."
 
 msgid "author.submit.notAccepting"
 msgstr "Aldizkariak ez du bidalketarik onartzen orain."
@@ -75,7 +84,31 @@ msgid "author.submit.requestWaiver"
 msgstr "Eskatu salbuespena"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Mesedez, kontsidera ezazue artikulu hau bidalketa-tarifa ordaintzetik salbuestea"
+msgstr ""
+"Mesedez, kontsidera ezazue artikulu hau bidalketa-tarifa ordaintzetik "
+"salbuestea"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Mesedez, erabili beheko iruzkin-laukia tarifak zergatik salbuetsi behar "
+"diren azaltzeko."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Salbuespen bat eskatu nahi baduzu, arrazoiren bat idatzi behar duzu "
+"horretarako jarritako lekuan."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Ebaluazio-fasean {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Ebaluatzen: ebaluazioak behar dira"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Editatzen: Zuzenketak egiteko eskatu da."
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Editatzen: proba-zuzenketa eskatu da."
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Kargatu zuzendutako bertsioa"
@@ -92,32 +125,29 @@ msgstr "Ikusi egoera"
 msgid "author.submissions.noSubmissions"
 msgstr "Bidalketarik ez."
 
-msgid "author.submit.howToSubmit"
-msgstr "Zailtasunik baduzu,  <a href=\"mailto:{$supportEmail}\">{$supportName}</a> ({$supportPhone}) da laguntza emateko kontaktua "
-
-msgid "author.submit.howToSubmitNoPhone"
-msgstr "Zailtasunik baduzu,  <a href=\"mailto:{$supportEmail}\">{$supportName}</a> da laguntza emateko kontaktua "
-
 msgid "author.submit.journalSection"
 msgstr "Aldizkariaren atala"
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Hautatu zein Ataletara bidali nahi duzun (ikusi Atalak eta Politikak <a href=\"{$aboutUrl}\" target=\"_new\">Aldizkariari buruz</a> orrian)."
-
-msgid "submission.submit.selectSection"
-msgstr "Hautatu atal bat."
-
-msgid "author.submit.submissionChecklist"
-msgstr "Bidalketa prestatzeko zerrenda"
+msgstr ""
+"Hautatu zein Ataletara bidali nahi duzun (ikusi Atalak eta Politikak <a href="
+"\"{$aboutUrl}\" target=\"_new\">Aldizkariari buruz</a> orrian)."
 
 msgid "author.submit.verifyChecklist"
-msgstr "Jarraitu ahal izateko, bidalketa prestatzeko zerrendako puntu guztiak osatuta daudela ziurtatu behar duzu."
+msgstr ""
+"Jarraitu ahal izateko, bidalketa prestatzeko zerrendako puntu guztiak "
+"osatuta daudela ziurtatu behar duzu."
 
 msgid "author.submit.copyrightNoticeAgree"
-msgstr "Egileek onartzen dituzte Copyright informazio honetako baldintza guztiak. Baldintza horiek artikulua aldizkari honetan argitaratzen denean, argitaratzen bada, aplikatuko dira (editorearentzako oharrak behean gehi daitezke)."
+msgstr ""
+"Egileek onartzen dituzte Copyright informazio honetako baldintza guztiak. "
+"Baldintza horiek artikulua aldizkari honetan argitaratzen denean, "
+"argitaratzen bada, aplikatuko dira (editorearentzako oharrak behean gehi "
+"daitezke)."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "Jarraitu ahal izateko, Copyright informazioko baldintzak onartu behar dituzu."
+msgstr ""
+"Jarraitu ahal izateko, Copyright informazioko baldintzak onartu behar dituzu."
 
 msgid "submission.submit.coverNote"
 msgstr "Editorearentzako oharrak"
@@ -128,11 +158,19 @@ msgstr "Idatzi testua (aukerakoa)"
 msgid "author.submit.form.sectionRequired"
 msgstr "Hautatu bidalketari dagokion atala."
 
+msgid "author.submit.form.localeRequired"
+msgstr "Mesedez, aukeratu aurkezpenaren hizkuntza."
+
 msgid "submission.submit.privacyStatement"
 msgstr "Aldizkariaren Pribatutasun-deklarazioa"
 
 msgid "author.submit.reorderInstructions"
-msgstr "Berrordenatu egileak argitalpenean zerrendatuko diren ordena berean azaltzeko."
+msgstr ""
+"Berrordenatu egileak argitalpenean zerrendatuko diren ordena berean "
+"azaltzeko."
+
+msgid "author.submit.reorder"
+msgstr "Berriz eskatu egilearen izena"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Korrespondentzia editorialerako kontaktu nagusia."
@@ -144,25 +182,36 @@ msgid "author.submit.deleteAuthor"
 msgstr "Ezabatu egilea"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "Sartu bidalketa indexatzeko hitzak edo terminoak, puntu eta komaz bereizita (1terminoa; 2terminoa; 3terminoa)."
+msgstr ""
+"Sartu bidalketa indexatzeko hitzak edo terminoak, puntu eta komaz bereizita "
+"(1terminoa; 2terminoa; 3terminoa)."
 
 msgid "author.submit.coverageInstructions"
-msgstr "Kokapen geo-espaziala, garai kronologikoa edo historikoa, eta/edo ikerketaren ezaugarriak."
+msgstr ""
+"Kokapen geo-espaziala, garai kronologikoa edo historikoa, eta/edo "
+"ikerketaren ezaugarriak."
 
 msgid "author.submit.languageInstructions"
-msgstr "euskara=eu; ingelesa=en; frantsesa=fr; gaztelania=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Kode gehiago</a>."
+msgstr ""
+"euskara=eu; ingelesa=en; frantsesa=fr; gaztelania=es. <a href=\"http://www."
+"loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Kode "
+"gehiago</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Egile bat behintzat adierazi behar da."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "Egile bakoitzaren izena, abizena eta helbide elektronikoa eman behar dira."
+msgstr ""
+"Egile bakoitzaren izena, abizena eta helbide elektronikoa eman behar dira."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Sartu zure artikuluaren titulua."
 
 msgid "author.submit.form.abstractRequired"
 msgstr "Sartu zure artikuluaren laburpena."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Laburpenetarako gehienezko hitz kopurua gainditu duzu atal honetan."
 
 msgid "author.submit.submissionFile"
 msgstr "Bidalketa-fitxategia"
@@ -179,8 +228,25 @@ msgstr "Ez da bidalketa-fitxategirik kargatu."
 msgid "author.submit.noSubmissionConfirm"
 msgstr "Ziur zaude bidalketa-fitxategirik kargatu gabe jarraitu nahi duzula?"
 
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Aukerako pauso honek aurkezpenari Fitxategi Osagarriak gehitzeko aukera "
+"ematen du. Artxiboak zeinahi formatutan egon daitezke, eta hauek izan "
+"ditzakete, besteak beste: (a)bilaketa-tresnak, (b) datu multzoak, "
+"ikerlanaren bilaketaren ebaluazio etikoa betetzen duena, (c) "
+"irakurlearentzat beste edozein modutara eskuragarri egongo ez liratekeen "
+"iturriak, (d) irudiak eta taulak ezin dira sartu testuan bertan, ezta lanari "
+"ekarpenak egiteko beste materialak ere."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Egin klik “Gorde” botoian fitxategia kargatzeko (horren ondoren fitxategi "
+"osagarriak kargatu daitezke)."
+
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "Ziur zaude aukeratu duzun fitxategi osagarria kargatu gabe jarraitu nahi duzula?"
+msgstr ""
+"Ziur zaude aukeratu duzun fitxategi osagarria kargatu gabe jarraitu nahi "
+"duzula?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "Bidalketari ez zaio fitxategi osagarririk gehitu."
@@ -204,7 +270,9 @@ msgid "author.submit.supplementaryFileData"
 msgstr "Fitxategi osagarriaren metadatuak"
 
 msgid "author.submit.supplementaryFileDataDescription"
-msgstr "Material osagarria indexatzeko, adierazi kargatutako fitxategi osagarriaren metadatuak."
+msgstr ""
+"Material osagarria indexatzeko, adierazi kargatutako fitxategi osagarriaren "
+"metadatuak."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Fitxategi osagarria"
@@ -238,7 +306,9 @@ msgstr "Azalpen laburra"
 
 #, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Aurkeztu fitxategia ebaluatzaileei (metadaturik gabe), ez du arriskurik ebaluazio anonimoarentzat."
+msgstr ""
+"Aurkeztu fitxategia ebaluatzaileei (metadaturik gabe), ez du arriskurik "
+"ebaluazio anonimoarentzat."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Formalki argitaratutako materialekin bakarrik erabili."
@@ -271,7 +341,12 @@ msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Fitxategi osagarriaren identifikatzaile publikoa"
 
 msgid "author.submit.confirmationDescription"
-msgstr "Eskuizkribua  {$journalTitle} aldizkarira bidaltzeko, sakatu 'Amaitu bidalketa'. Bidalketa egin duen kontaktu nagusiak hartu-agiri bat jasoko du posta elektronikoz eta bidalketak prozesu editorialean daraman martxa jarraitu ahal izango du. Eskerrik asko {$journalTitle} aldizkarian argitaratzeko duzun interesagatik."
+msgstr ""
+"Eskuizkribua  {$journalTitle} aldizkarira bidaltzeko, sakatu 'Amaitu "
+"bidalketa'. Bidalketa egin duen kontaktu nagusiak hartu-agiri bat jasoko du "
+"posta elektronikoz eta bidalketak prozesu editorialean daraman martxa "
+"jarraitu ahal izango du. Eskerrik asko {$journalTitle} aldizkarian "
+"argitaratzeko duzun interesagatik."
 
 msgid "author.submit.noFiles"
 msgstr "Bidalketa honi ez zaio fitxategirik erantsi."
@@ -283,7 +358,9 @@ msgid "author.submit.finishSubmission"
 msgstr "Amaitu bidalketa"
 
 msgid "author.submit.submissionComplete"
-msgstr "Bidalketa osatu da. Eskerrik asko {$journalTitle} aldizkarian argitaratzeko duzun interesagatik."
+msgstr ""
+"Bidalketa osatu da. Eskerrik asko {$journalTitle} aldizkarian argitaratzeko "
+"duzun interesagatik."
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "Kargatu Egilearen bertsioa"
@@ -295,37 +372,24 @@ msgid "author.article.authorRevisedFile"
 msgstr "Egilearen fitxategia"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "Aldizkari honetara bidalketak egiteko, erabiltzaile-kontua eduki behar da. Horrela, editoreek zure bidalketen jarraipena egin ahal izango dute eta zurekin harremanetan jarri ahal izango dira lanaren egoeraren berri emateko eta informazio osagarria eskatzeko."
+msgstr ""
+"Aldizkari honetara bidalketak egiteko, erabiltzaile-kontua eduki behar da. "
+"Horrela, editoreek zure bidalketen jarraipena egin ahal izango dute eta "
+"zurekin harremanetan jarri ahal izango dira lanaren egoeraren berri emateko "
+"eta informazio osagarria eskatzeko."
 
-msgid "author.submit.addReasonsForWaiver"
-msgstr "Mesedez, erabili beheko iruzkin-laukia tarifak zergatik salbuetsi behar diren azaltzeko."
+#~ msgid "author.submit.howToSubmit"
+#~ msgstr ""
+#~ "Zailtasunik baduzu,  <a href=\"mailto:{$supportEmail}\">{$supportName}</"
+#~ "a> ({$supportPhone}) da laguntza emateko kontaktua "
 
-msgid "author.submit.mustEnterWaiverReason"
-msgstr "Salbuespen bat eskatu nahi baduzu, arrazoiren bat idatzi behar duzu horretarako jarritako lekuan."
+#~ msgid "author.submit.howToSubmitNoPhone"
+#~ msgstr ""
+#~ "Zailtasunik baduzu,  <a href=\"mailto:{$supportEmail}\">{$supportName}</"
+#~ "a> da laguntza emateko kontaktua "
 
-msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Ebaluazio-fasean {$round}"
+#~ msgid "submission.submit.selectSection"
+#~ msgstr "Hautatu atal bat."
 
-msgid "author.submissions.queuedReviewRevisions"
-msgstr "Ebaluatzen: ebaluazioak behar dira"
-
-msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Editatzen: Zuzenketak egiteko eskatu da."
-
-msgid "author.submissions.queuedEditingProofread"
-msgstr "Editatzen: proba-zuzenketa eskatu da."
-
-msgid "author.submit.form.localeRequired"
-msgstr "Mesedez, aukeratu aurkezpenaren hizkuntza."
-
-msgid "author.submit.reorder"
-msgstr "Berriz eskatu egilearen izena"
-
-msgid "author.submit.form.wordCountAlert"
-msgstr "Laburpenetarako gehienezko hitz kopurua gainditu duzu atal honetan."
-
-msgid "author.submit.supplementaryFilesInstructions"
-msgstr "Aukerako pauso honek aurkezpenari Fitxategi Osagarriak gehitzeko aukera ematen du. Artxiboak zeinahi formatutan egon daitezke, eta hauek izan ditzakete, besteak beste: (a)bilaketa-tresnak, (b) datu multzoak, ikerlanaren bilaketaren ebaluazio etikoa betetzen duena, (c) irakurlearentzat beste edozein modutara eskuragarri egongo ez liratekeen iturriak, (d) irudiak eta taulak ezin dira sartu testuan bertan, ezta lanari ekarpenak egiteko beste materialak ere."
-
-msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr "Egin klik “Gorde” botoian fitxategia kargatzeko (horren ondoren fitxategi osagarriak kargatu daitezke)."
+#~ msgid "author.submit.submissionChecklist"
+#~ msgstr "Bidalketa prestatzeko zerrenda"
