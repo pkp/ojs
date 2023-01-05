@@ -13,2235 +13,794 @@ msgstr ""
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Pabeigta galīgā teksta rediģēšana"
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Šī žurnāla saturs netiek publicēts tiešsaistē."
 
-msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Pabeigta sākotnējā teksta rediģēšana"
+msgid "context.current"
+msgstr "Jaunākais žurnāls:"
 
-msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Teksta redaktora labotā datne atjaunināta"
+msgid "context.select"
+msgstr "Pārslēgties uz citu žurnālu:"
 
-msgid "submission.event.copyedit.copyeditInitiated"
-msgstr "Uzdots sākt teksta rediģēšanu"
+msgid "navigation.categories"
+msgstr "Kategorijas"
 
-msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Iesniegtajam materiālam noņemts teksta redaktors"
+msgid "navigation.categories.browse"
+msgstr "Pārlūkot"
 
-msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Iesniegtajam materiālam norīkots teksta redaktors"
+msgid "reviewer.article.enterReviewForm"
+msgstr "Noklikšķiniet uz ikonas, lai aizpildītu recenzijas veidlapu."
 
-msgid "submission.event.editor.submissionRestored"
-msgstr "Iesniegtais materiāls atjaunots no arhīva"
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Lūdzu, aizpildiet obligātos laukus."
 
-msgid "submission.event.editor.submissionArchived"
-msgstr "Iesniegtais materiāls nosūtīts arhivēšanai"
-
-msgid "submission.event.editor.editorFile"
-msgstr "Redaktora datne atjaunināta"
-
-msgid "submission.event.editor.editorDecision"
-msgstr "Iesniegts redaktora lēmums"
-
-msgid "submission.event.editor.editorUnassigned"
-msgstr "Iesniegtajam materiālam noņemts redaktors"
-
-msgid "submission.event.editor.editorAssigned"
-msgstr "Iesniegtajam materiālam piešķirts redaktors"
-
-msgid "submission.event.general.authorRevision"
-msgstr "Autora labotā datne atjaunināta"
-
-msgid "submission.event.author.authorRevision"
-msgstr "Iesniegti autora labojumi"
-
-msgid "submission.event.general.articlePublished"
-msgstr "Raksts publicēts"
-
-msgid "submission.event.general.issueAssigned"
-msgstr "Iesniegtais materiāls piešķirts izdevumam"
-
-msgid "submission.event.general.issueScheduled"
-msgstr "Iesniegtais materiāls nosūtīts uz izdevuma plānošanas rindu"
-
-msgid "submission.event.submissionSubmitted"
-msgstr "Raksts iesniegts"
-
-msgid "submission.event.general.defaultEvent"
-msgstr "Iesniegšanas notikums"
-
-msgid "subscriptions.institutionalOnlinePaymentDescription"
-msgstr ""
-"<strong>Piezīme:</strong> Iestāžu abonementiem, kas iegādāti tiešsaistē, "
-"pirms abonementa aktivizēšanas ir jāapstiprina domēna un IP diapazoni."
-
-msgid "subscriptions.institutionalDescription"
-msgstr ""
-"Iestāžu abonementiem nav nepieciešama pieteikšanās. Lai nodrošinātu piekļuvi "
-"abonētajam saturam, tiek izmantots lietotāja domēns un/vai IP adrese."
-
-msgid "subscriptions.individualDescription"
-msgstr "Lai piekļūtu abonētajam saturam, nepieciešams individuāls abonements."
-
-msgid "subscriptions.status.other"
-msgstr "Cits, skat. piezīmes"
-
-msgid "subscriptions.status.noSubscription"
-msgstr "Jums nav aktīva abonementa."
-
-msgid "subscriptions.status.awaitingOnlinePayment"
-msgstr "Gaida tiešsaistes maksājumu"
-
-msgid "subscriptions.status.awaitingManualPayment"
-msgstr "Gaida manuālo maksājumu"
-
-msgid "subscriptions.status.needsApproval"
-msgstr "Nepieciešams apstiprinājums"
-
-msgid "subscriptions.status.needsInformation"
-msgstr "Nepieciešama informācija"
-
-msgid "subscriptions.status.active"
-msgstr "Aktīvs"
-
-msgid "subscriptions.status"
-msgstr "Statuss"
-
-msgid "subscriptions.inactive"
-msgstr "Neaktīvs"
-
-msgid "subscriptionTypes.format.printOnline"
-msgstr "Drukāts un tiešsaistē"
-
-msgid "subscriptionTypes.format.print"
-msgstr "Drukāts"
-
-msgid "subscriptionTypes.format.online"
-msgstr "Tiešsaiste"
-
-msgid "subscriptionTypes.format"
-msgstr "Formāts"
-
-msgid "subscriptionTypes.nonExpiring"
-msgstr "Beztermiņa"
-
-msgid "subscriptionTypes.months"
-msgstr "mēneši"
-
-msgid "subscriptionTypes.month"
-msgstr "mēnesis"
-
-msgid "subscriptionTypes.years"
-msgstr "gadi"
-
-msgid "subscriptionTypes.year"
-msgstr "gads"
-
-msgid "subscriptionTypes.currency"
-msgstr "Valūta"
-
-msgid "issue.return"
-msgstr "Atgriezties pie izdevuma informācijas"
-
-msgid "issue.viewIssue"
-msgstr "Skatīt izdevumu"
-
-msgid "issue.nonpdf.title"
-msgstr "Izdevuma lejupielāde"
-
-msgid "issue.fullIssue"
-msgstr "Pilns izdevuma numurs"
-
-msgid "issue.coverPage.altText"
-msgstr "Titullapa"
-
-msgid "issue.abstract"
-msgstr "Kopsavilkums"
-
-msgid "issue.toc"
-msgstr "Saturs"
-
-msgid "issue.noIssues"
-msgstr "Nav izdevumu"
-
-msgid "issue.year"
-msgstr "Gads"
-
-msgid "issue.no"
-msgstr "Nr."
-
-msgid "issue.vol"
-msgstr "Sēj."
-
-msgid "issue.number"
-msgstr "Numurs"
-
-msgid "issue.volume"
-msgstr "Sējums"
-
-msgid "issue.viewIssueIdentification"
-msgstr "Skatīt {$identification}"
-
-msgid "issue.title"
-msgstr "Nosaukums"
-
-msgid "issue.issues"
-msgstr "Izdevumi"
-
-msgid "issue.issue"
-msgstr "Izdevums"
-
-msgid "user.role.journalAssistants"
-msgstr "Žurnāla palīgi"
-
-msgid "user.role.journalAssistant"
-msgstr "Žurnāla palīgs"
-
-msgid "submissions.proof"
-msgstr "Korektūra"
-
-msgid "submissions.reviewRound"
-msgstr "Recenzēšanas kārta"
-
-msgid "submissions.postAuthor"
-msgstr "Pēc autora"
-
-msgid "submissions.initialProof"
-msgstr "Sākotnējā korektūra"
-
-msgid "submissions.proofread"
-msgstr "Korektūra"
-
-msgid "submissions.initial"
-msgstr "Sākotnējais"
-
-msgid "submissions.published"
-msgstr "Publicēts"
-
-msgid "submissions.queuedReview"
-msgstr "Tiek recenzēts"
-
-msgid "submissions.step3"
-msgstr "Trešais solis"
-
-msgid "submissions.step1"
-msgstr "Pirmais solis"
-
-msgid "submission.scheduledIn.tba"
-msgstr "(TBA)"
-
-msgid "submission.scheduledIn"
-msgstr "Ieplānots publicēt {$issueName}."
-
-msgid "submission.scheduling"
-msgstr "Ieplānošana"
-
-msgid "submission.proofreading"
-msgstr "Korektūra"
-
-msgid "submission.copyedit"
-msgstr "Rediģēt"
-
-msgid "submission.copyediting"
-msgstr "Rediģēšana"
-
-msgid "submission.authorVersion"
-msgstr "Autora versija"
-
-msgid "submission.authorsRevisedVersion"
-msgstr "Autora pārskatītā datnes versija"
-
-msgid "submission.editorVersion"
-msgstr "Redaktora versija"
-
-msgid "submission.postReviewVersion"
-msgstr "Datnes versija pēc recenzēšanas"
-
-msgid "submission.reviewersVersion"
-msgstr "Datnes versija ar recenzenta komentāriem"
-
-msgid "submission.editorAuthorRecord"
-msgstr "Redaktora/autora e-pasta ieraksts"
-
-msgid "submission.notifyEditor"
-msgstr "Paziņot redaktoram"
-
-msgid "submission.notifyAuthor"
-msgstr "Paziņot autoram"
-
-msgid "submission.editorReview"
-msgstr "Redaktora pārskats"
-
-msgid "submission.round"
-msgstr "Kārta&nbsp;{$round}"
-
-msgid "submission.editorDecision"
-msgstr "Redaktora lēmums"
-
-msgid "submission.sent"
-msgstr "Nosūtīts"
-
-msgid "submission.changeSection"
-msgstr "Mainīt uz"
-
-msgid "submission.submissionEditing"
-msgstr "Iesniegtā materiāla rediģēšana"
-
-msgid "article.return"
-msgstr "Atgriezties pie informācijas par rakstu"
-
-msgid "article.fontSize.large.altText"
-msgstr "Liels"
-
-msgid "article.fontSize.medium.altText"
-msgstr "Vidējs"
-
-msgid "article.fontSize.small.altText"
-msgstr "Mazs"
-
-msgid "article.fontSize"
-msgstr "Fonta lielums"
-
-msgid "article.comments.enable"
-msgstr "Iespējot"
-
-msgid "article.comments.disable"
-msgstr "Atspējot"
-
-msgid "article.comments.sectionDefault"
-msgstr "Noklusējuma"
-
-msgid "article.accessLogoRestricted.altText"
-msgstr "Ierobežota piekļuve"
-
-msgid "article.accessLogoOpen.altText"
-msgstr "Atvērtā piekļuve"
-
-msgid "article.coverPage.altText"
-msgstr "Vāka attēls"
-
-msgid "article.abstract"
-msgstr "Kopsavilkums"
-
-msgid "article.details"
-msgstr "Sīkāka informācija"
-
-msgid "article.submissions"
-msgstr "Iesniegtie materiāli"
-
-msgid "article.submission"
-msgstr "Iesniegtais materiāls"
-
-msgid "article.commentsToEditor"
-msgstr "Autora komentāri"
-
-msgid "article.sectionEditor"
-msgstr "SE"
-
-msgid "article.language"
-msgstr "Valoda"
-
-msgid "article.type"
-msgstr "Tips, metode vai pieeja"
-
-msgid "article.coverage"
-msgstr "Aptvērums"
-
-msgid "article.subject"
-msgstr "Atslēgvārdi"
-
-msgid "article.discipline"
-msgstr "Akadēmiskā nozare un apakšnozares"
-
-msgid "article.suppFilesAbbrev"
-msgstr "Papildu datnes"
-
-msgid "article.suppFiles"
-msgstr "Papildu datne(s)"
-
-msgid "article.suppFile"
-msgstr "Papildu datne"
-
-msgid "article.file"
-msgstr "Datne"
-
-msgid "article.journalSection"
-msgstr "Žurnāla sadaļa"
-
-msgid "article.metadata"
-msgstr "Metadati"
-
-msgid "article.indexingInformation"
-msgstr "Informācija par indeksēšanu"
-
-msgid "article.authors"
-msgstr "Autori"
-
-msgid "article.title"
-msgstr "Nosaukums"
-
-msgid "article.submissionId"
-msgstr "Iesniegtā materiāla ID"
-
-msgid "common.publications"
-msgstr "Raksti"
-
-msgid "common.publication"
-msgstr "Raksts"
-
-msgid "article.articles"
-msgstr "Raksti"
-
-msgid "article.article"
-msgstr "Raksts"
-
-msgid "section.policy"
-msgstr "Sadaļas politika"
-
-msgid "section.abbreviation.example"
-msgstr "(Piemēram, Raksti=RKS)"
-
-msgid "section.abbreviation"
-msgstr "Saīsinājums"
-
-msgid "section.title"
-msgstr "Sadaļas nosaukums"
-
-msgid "section.sections"
-msgstr "Sadaļas"
-
-msgid "user.role.subscriptionManagers"
-msgstr "Abonēšanas pārvaldnieki"
-
-msgid "user.role.subEditors"
-msgstr "Sadaļu redaktori"
-
-msgid "user.role.managers"
-msgstr "Žurnālu pārvaldnieki"
-
-msgid "user.role.subscriptionManager"
-msgstr "Abonēšanas pārvaldnieks"
-
-msgid "user.role.subEditor"
-msgstr "Sadaļas redaktors"
-
-msgid "user.role.manager"
-msgstr "Žurnāla pārvaldnieks"
-
-msgid "user.noRoles.regReviewerClosed"
-msgstr ""
-"Reģistrēties kā recenzentam: Recenzentu reģistrācija pašlaik ir atspējota."
-
-msgid "user.noRoles.regReviewer"
-msgstr "Reģistrēties kā recenzentam"
-
-msgid "user.noRoles.submitArticleRegClosed"
-msgstr "Iesniegt rakstu: Autoru reģistrācija pašlaik ir atspējota."
-
-msgid "user.noRoles.submitArticle"
-msgstr "Iesniegt priekšlikumu"
-
-msgid "user.noRoles.noRolesForJournal"
-msgstr ""
-"Jūsu kontam pašlaik nav nevienas lomas šajā žurnālā. Lūdzu, izvēlieties kādu "
-"no turpmāk minētajām darbībām:"
-
-msgid "user.noRoles.chooseJournal"
-msgstr ""
-"Jūsu konts pašlaik nav saistīts ne ar vienu žurnālu. Lūdzu, izvēlieties "
-"žurnālu:"
-
-msgid "user.manageMySubscriptions"
-msgstr "Pārvaldīt manus abonementus"
-
-msgid "user.myJournals"
-msgstr "Mani žurnāli"
-
-msgid "user.register.noContextReviewerInterests"
-msgstr ""
-"Ja vēlaties kļūt par kāda žurnāla recenzentu, lūdzu, ievadiet savas "
-"tematiskās intereses."
-
-msgid "user.register.otherContextRoles"
-msgstr "Pieprasīt šādas lomas."
-
-msgid "user.register.contextsPrompt"
-msgstr "Kuros šīs vietnes žurnālos vēlaties reģistrēties?"
-
-msgid "user.reviewerPrompt.optin"
-msgstr ""
-"Jā, es labprāt atsaukšos aicinājumam recenzēt šim žurnālam iesniegtos darbus."
-
-msgid "user.reviewerPrompt.userGroup"
-msgstr "Jā, pieprasīt {$userGroup} lomu."
-
-msgid "user.reviewerPrompt"
-msgstr "Vai vēlaties recenzēt šim žurnālam iesniegtos darbus?"
-
-msgid "user.registerForOtherJournals"
-msgstr "Reģistrēties citiem žurnāliem"
-
-msgid "user.showAllJournals"
-msgstr "Rādīt manus žurnālus"
-
-msgid "user.profile.profileImage"
-msgstr "Profila attēls"
-
-msgid "user.noRoles.selectUsersWithoutRoles"
-msgstr "Iekļaut lietotājus bez lomām šajā žurnālā."
-
-msgid "user.authorization.representationNotFound"
-msgstr "Pieprasītais saliktnis nav atrasts."
-
-msgid "journal.viewAllIssues"
-msgstr "Skatīt visus izdevumus"
-
-msgid "journal.issn"
-msgstr "ISSN"
-
-msgid "context.context"
-msgstr "Žurnāls"
-
-msgid "journal.path"
-msgstr "Ceļš"
-
-msgid "context.contexts"
-msgstr "Žurnāli"
-
-msgid "journal.currentIssue"
-msgstr "Jaunākais izdevums"
-
-msgid "submission.search"
-msgstr "Rakstu meklēšana"
-
-msgid "submissions.proofreadingComplete"
-msgstr "Korektūra"
-
-msgid "submissions.layoutComplete"
-msgstr "Rediģēts makets"
-
-msgid "submissions.copyeditComplete"
-msgstr "Rediģēts"
-
-msgid "submission.eventLog"
-msgstr "Norises reģistrs"
-
-msgid "submissions.editorRuling"
-msgstr "Redaktora spriedums"
-
-msgid "submissions.editorDecision"
-msgstr "Redaktora lēmums"
-
-msgid "section.section"
-msgstr "Sadaļa"
-
-msgid "submissionGroup.assignedSubEditors"
-msgstr "Piešķirtie redaktori"
-
-msgid "common.queue.short.completed"
-msgstr "Arhīvs"
-
-msgid "common.queue.long.completed"
-msgstr "Arhīvs"
-
-msgid "common.queue.short.active"
-msgstr "Aktīvi"
-
-msgid "common.queue.long.active"
-msgstr "Aktīvi"
-
-msgid "common.queue.short.submissionsArchives"
-msgstr "Arhīvi"
-
-msgid "common.queue.long.submissionsArchives"
-msgstr "Arhīvi"
-
-msgid "common.queue.short.submissionsInReview"
-msgstr "Recenzēšanā"
-
-msgid "common.queue.long.submissionsInReview"
-msgstr "Iesniegtie materiāli recenzēšanā"
-
-msgid "common.queue.short.submissionsInEditing"
-msgstr "Rediģēšanā"
-
-msgid "common.queue.long.submissionsInEditing"
-msgstr "Iesniegtie materiāli rediģēšanā"
-
-msgid "common.queue.short.submissionsUnassigned"
-msgstr "Nav piešķirts"
-
-msgid "common.queue.long.submissionsUnassigned"
-msgstr "Nav piešķirts"
-
-msgid "navigation.skip.issue"
-msgstr "Pāriet uz jaunāko izdevumu"
-
-msgid "navigation.skip.about"
-msgstr "Pāriet uz sadaļu par žurnālu"
-
-msgid "navigation.infoForLibrarians.long"
-msgstr "Informācija bibliotekāriem"
-
-msgid "navigation.infoForAuthors.long"
-msgstr "Informācija autoriem"
-
-msgid "navigation.competingInterestGuidelines"
-msgstr "Konkurējošu interešu pamatnostādnes"
-
-msgid "navigation.infoForLibrarians"
-msgstr "Bibliotekāriem"
-
-msgid "navigation.infoForAuthors"
-msgstr "Autoriem"
-
-msgid "navigation.browseByAuthor"
-msgstr "Pēc autora"
-
-msgid "navigation.browseByIssue"
-msgstr "Pēc izdevuma"
-
-msgid "navigation.otherJournals"
-msgstr "Citi žurnāli"
-
-msgid "navigation.current"
-msgstr "Jaunākais"
-
-msgid "navigation.journalHelp"
-msgstr "Žurnāla palīdzība"
-
-msgid "doi.manager.settings.publications"
-msgstr "Raksti"
-
-msgid "common.journalHomepageImage.altText"
-msgstr "Žurnāla sākumlapas attēls"
-
-msgid "common.homePageHeader.altText"
-msgstr "Sākumlapas galvene"
-
-msgid "common.payments"
-msgstr "Maksājumi"
-
-msgid "common.payment"
-msgstr "Maksājums"
+msgid "common.software"
+msgstr "Atvērtā žurnālu sistēma (Open Journal Systems)"
 
 msgid "common.confirmComplete"
 msgstr ""
 "Vai tiešām vēlaties atzīmēt šo uzdevumu kā pabeigtu? Iespējams, pēc tam "
 "nevarēsit veikt izmaiņas."
 
-msgid "common.software"
-msgstr "Atvērtā žurnālu sistēma (Open Journal Systems)"
+msgid "common.payment"
+msgstr "Maksājums"
 
-msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr "Lūdzu, aizpildiet obligātos laukus."
+msgid "common.payments"
+msgstr "Maksājumi"
 
-msgid "reviewer.article.enterReviewForm"
-msgstr "Noklikšķiniet uz ikonas, lai aizpildītu recenzijas veidlapu."
+msgid "common.homePageHeader.altText"
+msgstr "Sākumlapas galvene"
 
-msgid "navigation.categories.browse"
-msgstr "Pārlūkot"
+msgid "common.journalHomepageImage.altText"
+msgstr "Žurnāla sākumlapas attēls"
 
-msgid "navigation.categories"
-msgstr "Kategorijas"
+msgid "doi.manager.settings.publications"
+msgstr "Raksti"
 
-msgid "context.select"
-msgstr "Pārslēgties uz citu žurnālu:"
+msgid "navigation.journalHelp"
+msgstr "Žurnāla palīdzība"
 
-msgid "context.current"
-msgstr "Jaunākais žurnāls:"
-
-msgid "user.authorization.journalDoesNotPublish"
-msgstr "Šī žurnāla saturs netiek publicēts tiešsaistē."
-
-msgid "archive.archives"
-msgstr "Arhīvi"
-
-msgid "current.noCurrentIssueDesc"
-msgstr "Šis žurnāls nav publicējis nevienu numuru."
-
-msgid "current.noCurrentIssue"
-msgstr "Nav jaunāko izdevumu"
-
-msgid "current.current"
+msgid "navigation.current"
 msgstr "Jaunākais"
 
-msgid "site.noJournals"
-msgstr "Nav pieejamu žurnālu."
-
-msgid "site.journalCurrent"
-msgstr "Jaunākais izdevums"
-
-msgid "site.journalRegister"
-msgstr "Reģistrēties"
-
-msgid "site.journalView"
-msgstr "Skatīt žurnālu"
-
-msgid "site.journalsHosted"
-msgstr "Šajā vietnē izvietotie žurnāli"
-
-msgid "article.nonpdf.note"
-msgstr ""
-"Atlasītā faila lejupielādei jāsākas automātiski. Ja tā nenotiek, "
-"noklikšķiniet uz tālāk norādītās saites. Ņemiet vērā, ka šī faila skatīšanai "
-"var būt nepieciešams īpašs skatītājs vai spraudnis.<br /><br />Ja fails "
-"netiek lejupielādēts automātiski, <a href=\"{$url}\">klikšķiniet šeit</a>."
-
-msgid "article.nonpdf.title"
-msgstr "Raksta lejupielāde"
-
-msgid "article.pluginMissing"
-msgstr ""
-"<p>Ja jūsu tīmekļa pārlūkprogrammā ir instalēts PDF lasītāja spraudnis ("
-"piemēram, jaunākās <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
-"Reader</a>), atlasītajam PDF failam ir jāielādējas šeit.</p>"
-
-msgid "article.download"
-msgstr "Lejupielādēt šo PDF failu"
-
-msgid "article.pdf.title"
-msgstr "Portatīvo dokumentu formāts (PDF)"
+msgid "navigation.otherJournals"
+msgstr "Citi žurnāli"
 
-msgid "article.pageTitle"
-msgstr "{$title} skats"
+msgid "navigation.browseByIssue"
+msgstr "Pēc izdevuma"
 
-msgid "search.syntaxInstructions"
-msgstr ""
-"Meklēšanas padomi: <ul>\n"
-"<li>Search terms are case-insensitive</li>\n"
-"<li>Common words are ignored</li>\n"
-"<li>By default only articles containing <em>all</em> terms in the query are "
-"returned (i.e., <em>AND</em> is implied)</li>\n"
-"<li>Combine multiple words with <em>OR</em> to find articles containing "
-"either term; e.g., <em>education OR research</em></li>\n"
-"<li>Use parentheses to create more complex queries; e.g., <em>archive (("
-"journal OR conference) NOT theses)</em></li>\n"
-"<li>Search for an exact phrase by putting it in quotes; e.g., <em>\"open "
-"access publishing\"</em></li>\n"
-"<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; "
-"e.g. <em>online -politics</em> or <em>online NOT politics</em></li>\n"
-"<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of "
-"characters; e.g., <em>soci* morality</em> would match documents containing \""
-"sociological\" or \"societal\"</li>\n"
-"</ul>"
+msgid "navigation.browseByAuthor"
+msgstr "Pēc autora"
 
-msgid "search.authorDetails"
-msgstr "Autora informācija"
+msgid "navigation.infoForAuthors"
+msgstr "Autoriem"
 
-msgid "search.authorIndex"
-msgstr "Pārlūkot autoru rādītāju"
+msgid "navigation.infoForLibrarians"
+msgstr "Bibliotekāriem"
 
-msgid "search.allJournals"
-msgstr "Visi žurnāli"
+msgid "navigation.competingInterestGuidelines"
+msgstr "Konkurējošu interešu pamatnostādnes"
 
-msgid "search.withinJournal"
-msgstr "Ietvaros"
+msgid "navigation.infoForAuthors.long"
+msgstr "Informācija autoriem"
 
-msgid "search.searchFor"
-msgstr "Meklēt rakstus par"
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informācija bibliotekāriem"
 
-msgid "search.browseAuthorIndex"
-msgstr "Pārlūkot autoru rādītāju"
+msgid "navigation.skip.about"
+msgstr "Pāriet uz sadaļu par žurnālu"
 
-msgid "user.subscriptions.form.addIpRange"
-msgstr "Pievienot"
+msgid "navigation.skip.issue"
+msgstr "Pāriet uz jaunāko izdevumu"
 
-msgid "user.subscriptions.form.deleteIpRange"
-msgstr "Dzēst"
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nav piešķirts"
 
-msgid "user.subscriptions.form.ipRangeValid"
-msgstr "Lūdzu, ievadiet derīgu IP diapazonu."
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nav piešķirts"
 
-msgid "user.subscriptions.form.ipRangeInstructions"
-msgstr ""
-"Ja šeit tiek ievadīti IP diapazoni, domēna norādīšana nav obligāta.<br />"
-"Derīgas vērtības ir IP adrese (piemēram, 142.58.103.1), IP diapazons ("
-"piemēram, 142.58.103.1 - 142.58.103.4), IP diapazons ar aizstājējzīmi '*' ("
-"piemēram, 142.58.*.*) un IP diapazons ar CIDR (piemēram, 142.58.100.0/24)."
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Iesniegtie materiāli rediģēšanā"
 
-msgid "user.subscriptions.form.ipRangeItem"
-msgstr "&#8226;"
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Rediģēšanā"
 
-msgid "user.subscriptions.form.ipRange"
-msgstr "IP diapazoni"
+msgid "common.queue.long.submissionsInReview"
+msgstr "Iesniegtie materiāli recenzēšanā"
 
-msgid "user.subscriptions.form.domainValid"
-msgstr "Lūdzu, ievadiet derīgu domēnu."
+msgid "common.queue.short.submissionsInReview"
+msgstr "Recenzēšanā"
 
-msgid "user.subscriptions.form.domainIPRangeRequired"
-msgstr ""
-"Atlasītajam abonementa tipam ir nepieciešams domēns un/vai IP diapazons "
-"abonementa autentifikācijai."
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arhīvi"
 
-msgid "user.subscriptions.form.domainInstructions"
-msgstr ""
-"Ja šeit tiek ievadīts domēns, IP diapazoni nav obligāti.<br />Derīgas "
-"vērtības ir domēna vārdi (piemēram, lib.sfu.ca)."
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arhīvi"
 
-msgid "user.subscriptions.form.domain"
-msgstr "Domēna adrese"
+msgid "common.queue.long.active"
+msgstr "Aktīvi"
 
-msgid "user.subscriptions.form.institutionMailingAddress"
-msgstr "Pasta adrese"
+msgid "common.queue.short.active"
+msgstr "Aktīvi"
 
-msgid "user.subscriptions.form.institutionNameRequired"
-msgstr "Ir jānorāda iestādes nosaukums."
+msgid "common.queue.long.completed"
+msgstr "Arhīvs"
 
-msgid "user.subscriptions.form.institutionName"
-msgstr "Iestādes nosaukums"
+msgid "common.queue.short.completed"
+msgstr "Arhīvs"
 
-msgid "user.subscriptions.form.membershipInstructions"
-msgstr ""
-"Informācija par dalību, ja tā ir nepieciešama izvēlētajam abonēšanas veidam."
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Piešķirtie redaktori"
 
-msgid "user.subscriptions.form.subscriptionExists"
-msgstr "Šim lietotāja kontam jau ir individuāls abonements."
+msgid "section.section"
+msgstr "Sadaļa"
 
-msgid "user.subscriptions.form.typeIdValid"
-msgstr "Lūdzu, izvēlieties derīgu abonēšanas veidu."
+msgid "section.sections"
+msgstr "Sadaļas"
 
-msgid "user.subscriptions.form.membershipRequired"
-msgstr "Izvēlētajam abonēšanas veidam ir nepieciešama dalības informācija."
+msgid "section.title"
+msgstr "Sadaļas nosaukums"
 
-msgid "user.subscriptions.form.membership"
-msgstr "Dalība"
+msgid "section.abbreviation"
+msgstr "Saīsinājums"
 
-msgid "user.subscriptions.form.typeId"
-msgstr "Abonēšanas veids"
+msgid "section.abbreviation.example"
+msgstr "(Piemēram, Raksti=RKS)"
 
-msgid "user.subscriptions.viewSubscriptionTypes"
-msgstr "Skatīt pieejamos abonēšanas veidus"
+msgid "section.policy"
+msgstr "Sadaļas politika"
 
-msgid "user.subscriptions.expired"
-msgstr "Derīguma termiņš beidzies: {$date}"
-
-msgid "user.subscriptions.expires"
-msgstr "Derīguma termiņš beidzas: {$date}"
-
-msgid "user.subscriptions.purchaseInstitutionalSubscription"
-msgstr "Iegādāties iestāžu abonementu"
-
-msgid "user.subscriptions.purchaseIndividualSubscription"
-msgstr "Iegādāties individuālo abonementu"
-
-msgid "user.subscriptions.purchaseNewSubscription"
-msgstr "Iegādāties jaunu abonementu"
-
-msgid "user.subscriptions.purchase"
-msgstr "Iegāde"
-
-msgid "user.subscriptions.renew"
-msgstr "Atjaunot"
-
-msgid "user.subscriptions.institutionalSubscriptions"
-msgstr "Iestāžu abonementi"
-
-msgid "user.subscriptions.individualSubscriptions"
-msgstr "Individuālais abonements"
-
-msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
-msgstr "Tiešsaistes maksājums ir uzsākts, bet ticis atcelts vai nav pabeigts"
-
-msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "Manuāls maksājums ir uzsākts, bet vēl nav saņemts"
-
-msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Pirms abonementa aktivizēšanas tas ir jāpārskata"
-
-msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "Pirms abonementa aktivizēšanas ir nepieciešama papildu informācija"
-
-msgid "user.subscriptions.statusDescription"
-msgstr "Apraksts"
-
-msgid "user.subscriptions.status"
-msgstr "Statuss"
-
-msgid "user.subscriptions.statusInformation"
-msgstr ""
-"Aktīvie abonementi un abonementi, kuru derīguma termiņš ir beidzies, ir "
-"redzami zemāk kopā ar to derīguma termiņu. Turklāt katram abonementam var "
-"būt pievienota šāda statusa informācija."
-
-msgid "user.subscriptions.subscriptionStatus"
-msgstr "Abonēšanas statuss"
-
-msgid "user.subscriptions.mySubscriptions"
-msgstr "Mani abonementi"
-
-msgid "user.register.form.missingSiteConsent"
-msgstr "Jums ir jāpiekrīt šīs vietnes privātuma atrunai."
-
-msgid "user.register.form.missingContextConsent"
-msgstr ""
-"Jums ir jāpiekrīt katra žurnāla, kurā reģistrējaties, privātuma atrunai."
-
-msgid "user.register.form.privacyConsentThisContext"
-msgstr ""
-"Jā, es piekrītu, ka mani dati tiek vākti un glabāti saskaņā ar šī žurnāla <a "
-"href=\"{$privacyUrl}\" target=\"_blank\">privātuma atrunu</a>."
-
-msgid "user.register.form.emailConsentAllContexts"
-msgstr ""
-"Jā, es vēlos saņemt paziņojumus par jaunām publikācijām un paziņojumiem "
-"visos žurnālos, kuros esmu reģistrējies."
-
-msgid "user.register.reviewerInterests"
-msgstr ""
-"Noteikt recenzēšanas intereses ( būtiskās jomas un pētniecības metodes):"
-
-msgid "user.register.reviewerDescription"
-msgstr "Gatavība veikt vietnē iesniegto darbu recenzēšanu."
-
-msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Gatavība veikt žurnālam iesniegto darbu recenzēšanu."
-
-msgid "user.register.authorDescription"
-msgstr "Var iesniegt materiālus žurnālam."
-
-msgid "user.register.openAccessNotificationDescription"
-msgstr "Paziņojums pa e-pastu, kad žurnāla numurs ir atvērtā pieejā."
-
-msgid "user.register.readerDescription"
-msgstr "Paziņojums pa e-pastu par žurnāla numura publicēšanu."
-
-msgid "user.register.form.passwordLengthTooShort"
-msgstr "Ievadītā parole nav pietiekami gara."
-
-msgid "user.register.registrationDisabled"
-msgstr "Šis žurnāls pašlaik nepieņem lietotāju reģistrāciju."
-
-msgid "user.register.privacyStatement"
-msgstr "Privātuma atruna"
-
-msgid "user.register.noJournals"
-msgstr "Šajā vietnē nav žurnālu, kuros var reģistrēties."
-
-msgid "user.register.selectContext"
-msgstr "Izvēlieties žurnālu, kurā reģistrēties:"
-
-msgid "submission.comments.saveAndEmailEditor"
-msgstr "Saglabāt un nosūtīt e-pastu redaktoram"
-
-msgid "submission.comments.saveAndEmailAuthor"
-msgstr "Saglabāt un nosūtīt e-pastu autoram"
-
-msgid "submission.comments.forEditor"
-msgstr "Redaktoram"
-
-msgid "submission.comments.forAuthorEditor"
-msgstr "Autoram un redaktoram"
-
-msgid "submission.comments.blindCcReviewers"
-msgstr ""
-"Pēc nosūtīšanas iesniedziet rediģējamu anonīmu kopiju, ko nosūtīt "
-"recenzentiem."
-
-msgid "submission.comments.cannotShareWithAuthor"
-msgstr "Redaktoram"
-
-msgid "submission.comments.canShareWithAuthor"
-msgstr "Autoram un redaktoram"
-
-msgid "submission.comments.viewableDescription"
-msgstr ""
-"Šos komentārus var kopīgot ar autoru.<br />\n"
-"(Pēc saglabāšanas var pievienot papildu komentārus.)"
-
-msgid "submission.comments.copyeditComments"
-msgstr "Teksta rediģēšanas komentāri"
-
-msgid "submission.comments.editorAuthorCorrespondence"
-msgstr "Redaktora/autora sarakste"
-
-msgid "submission.logType.proofread"
-msgstr "Korektūra"
-
-msgid "submission.logType.layout"
-msgstr "Maketēšana"
-
-msgid "submission.logType.copyedit"
-msgstr "Teksta rediģēšana"
-
-msgid "submission.logType.review"
-msgstr "Recenzēšana"
-
-msgid "submission.logType.editor"
-msgstr "Redaktors"
-
-msgid "submission.logType.author"
-msgstr "Autors"
-
-msgid "submission.logType.article"
+msgid "article.article"
 msgstr "Raksts"
 
-msgid "submission.proofread.instructions"
-msgstr "Pārbaudes instrukcijas"
+msgid "article.articles"
+msgstr "Raksti"
 
-msgid "submission.proofread.corrections"
-msgstr "Korektūras labojumi"
+msgid "common.publication"
+msgstr "Raksts"
 
-msgid "submission.proofreadingComments"
-msgstr "Korektūras komentāri"
+msgid "common.publications"
+msgstr "Raksti"
 
-msgid "submission.layout.referenceLinking"
-msgstr "Atsauču sasaiste"
+msgid "article.submissionId"
+msgstr "Iesniegtā materiāla ID"
 
-msgid "submission.layout.instructions"
-msgstr "Maketa instrukcijas"
+msgid "article.title"
+msgstr "Nosaukums"
 
-msgid "submission.layout.layoutComments"
-msgstr "Maketa piezīmes"
+msgid "article.authors"
+msgstr "Autori"
 
-msgid "submission.layout.replaceLayoutEditor"
-msgstr "Aizstāt maketētāju"
+msgid "article.indexingInformation"
+msgstr "Informācija par indeksēšanu"
 
-msgid "submission.layout.assignLayoutEditor"
-msgstr "Piešķirt maketētāju"
+msgid "article.metadata"
+msgstr "Metadati"
 
-msgid "submission.layout.galleyPublicIdentificationExists"
-msgstr "Publiskā saliktņa identifikācija jau pastāv."
+msgid "article.journalSection"
+msgstr "Žurnāla sadaļa"
 
-msgid "submission.layout.noLayoutFile"
-msgstr ""
-"Nav (augšupielādējiet galīgo rediģēto versiju kā maketa versiju pirms "
-"pieprasījuma nosūtīšanas)"
+msgid "article.file"
+msgstr "Datne"
 
-msgid "submission.copyedit.instructions"
-msgstr "Teksta rediģēšanas instrukcijas"
+msgid "article.suppFile"
+msgstr "Papildu datne"
 
-msgid "submission.copyedit.copyeditComments"
-msgstr "Teksta rediģēšanas komentāri"
-
-msgid "submission.copyedit.useFile"
-msgstr "Izmantot failu"
+msgid "article.suppFiles"
+msgstr "Papildu datne(s)"
 
-msgid "submission.copyedit.selectCopyeditor"
-msgstr "Piešķirt teksta redaktoru"
-
-msgid "submission.copyedit.copyeditVersion"
-msgstr "Red. versija"
-
-msgid "submission.copyedit.finalCopyedit"
-msgstr "Galīgā rediģētā versija"
-
-msgid "submission.copyedit.editorAuthorReview"
-msgstr "Autora rediģētā versija"
+msgid "article.suppFilesAbbrev"
+msgstr "Papildu datnes"
 
-msgid "submission.copyedit.editorsCopyedit"
-msgstr "Redaktora rediģētā versija"
+msgid "article.discipline"
+msgstr "Akadēmiskā nozare un apakšnozares"
 
-msgid "submission.copyedit.initialCopyedit"
-msgstr "Sākotnējā teksta rediģēšana"
-
-msgid "submission.copyedit.mustUploadFileForCopyedit"
-msgstr ""
-"Pieprasījuma e-pastu nevar nosūtīt, kamēr fails nav augšupielādēts teksta "
-"rediģēšanai."
-
-msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
-msgstr ""
-"Pieprasījuma e-pastu nevar nosūtīt, kamēr nav atlasīts fails teksta "
-"rediģēšanai redaktora lēmuma un/vai recenzēšanas lapā."
-
-msgid "submission.review.mustUploadFileForReview"
-msgstr ""
-"Pieprasījuma e-pastu nevar nosūtīt, kamēr nav izveidota recenzētā versija."
-
-msgid "author.submit.uploadInstructions"
-msgstr ""
-"\n"
-"<p>Lai augšupielādētu manuskriptu šajā žurnālā, izpildiet šādas darbības.</p>"
-"\n"
-"<ol>\n"
-"<li>Šajā lapā noklikšķiniet uz Browse (Pārlūkot) (vai Choose File ("
-"Izvēlēties failu)), kas atver logu Izvēlēties failu, lai atrastu failu "
-"datora cietajā diskā.</li>\n"
-"<li>Atrodiet failu, kuru vēlaties iesniegt, un to iezīmējiet.</li>\n"
-"<li>Logā Choose File (Izvēlēties failu) noklikšķiniet uz Open (Atvērt), kas "
-"šajā lapā ievietos faila nosaukumu.</li>\n"
-"<li>Šajā lapā noklikšķiniet uz Upload (Augšupielādēt), kas augšupielādē "
-"failu no datora žurnāla tīmekļa vietnē un pārdēvē to atbilstoši žurnāla "
-"noteikumiem.</li>\n"
-"<li>Kad manuskripts ir augšupielādēts, lapas apakšā noklikšķiniet uz Save "
-"and Continue (Saglabāt un turpināt).</li>\n"
-"</ol>"
+msgid "article.subject"
+msgstr "Atslēgvārdi"
 
-msgid "proofreader.noProofreadingAssignments"
-msgstr "Nav korektūras piešķires"
+msgid "article.coverage"
+msgstr "Aptvērums"
 
-msgid "copyeditor.article.copyeditorFinalFile"
-msgstr "Maketētāja datne"
+msgid "article.type"
+msgstr "Tips, metode vai pieeja"
 
-msgid "copyeditor.article.copyeditorFile"
-msgstr "Maketētāja datne"
+msgid "article.language"
+msgstr "Valoda"
 
-msgid "copyeditor.article.fileToCopyedit"
-msgstr "Datne maketam"
+msgid "article.sectionEditor"
+msgstr "SE"
 
-msgid "reviewer.article.confirmDecision"
-msgstr ""
-"Kad būsiet reģistrējis lēmumu, vairs nevarēsiet veikt izmaiņas šajā "
-"recenzijā. Vai tiešām vēlaties turpināt?"
+msgid "article.commentsToEditor"
+msgstr "Autora komentāri"
 
-msgid "reviewer.article.mustSelectDecision"
-msgstr ""
-"Nav atlasīts neviens ieteikums. Jums ir jāizvēlas ieteikums, ko iesniegt."
+msgid "article.submission"
+msgstr "Iesniegtais materiāls"
 
-msgid "reviewer.article.selectRecommendation.byEditor"
-msgstr "Iestatiet vai pielāgojiet recenzenta ieteikumu."
+msgid "article.submissions"
+msgstr "Iesniegtie materiāli"
 
-msgid "reviewer.article.selectRecommendation"
-msgstr ""
-"Izvēlieties ieteikumu un iesniedziet recenziju, lai pabeigtu procesu. Pirms "
-"ieteikuma izvēles ir jāievada recenzija vai jāaugšupielādē fails."
+msgid "article.details"
+msgstr "Sīkāka informācija"
 
-msgid "reviewer.article.uploadFile"
-msgstr ""
-"Turklāt varat augšupielādēt failus, lai redaktors un/vai autors varētu ar "
-"tiem iepazīties."
+msgid "article.abstract"
+msgstr "Kopsavilkums"
 
-msgid "reviewer.article.enterReviewA"
-msgstr ""
-"Noklikšķiniet uz ikonas, lai ievadītu (vai ielīmētu) savu recenziju par šo "
-"iesniegto materiālu."
+msgid "article.coverPage.altText"
+msgstr "Vāka attēls"
 
-msgid "reviewer.competingInterests"
-msgstr "Interešu konflikts"
+msgid "article.accessLogoOpen.altText"
+msgstr "Atvērtā piekļuve"
 
-msgid "reviewer.article.enterCompetingInterests"
-msgstr ""
-"Norādiet, vai jums ir vai nav interešu konflikts attiecībā uz šo pētījumu ("
-"skatīt <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">IK&nbsp;politika</a>)."
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ierobežota piekļuve"
 
-msgid "reviewer.article.downloadSubmission"
-msgstr ""
-"Noklikšķiniet uz failu nosaukumiem, lai lejupielādētu un pārskatītu (ekrānā "
-"vai izdrukājot) ar šo iesniegto materiālu saistītos failus."
+msgid "article.comments.sectionDefault"
+msgstr "Noklusējuma"
 
-msgid "reviewer.article.consultGuidelines"
-msgstr ""
-"Ja gatavojaties veikt recenzēšanu, iepazīstieties ar recenzēšanas vadlīnijām."
+msgid "article.comments.disable"
+msgstr "Atspējot"
 
-msgid "reviewer.article.notifyEditorB"
-msgstr "par to, vai veiksiet recenzēšanu."
+msgid "article.comments.enable"
+msgstr "Iespējot"
 
-msgid "reviewer.article.notifyEditorA"
-msgstr "Paziņot iesniegtā materiāla redaktoram"
+msgid "article.fontSize"
+msgstr "Fonta lielums"
 
-msgid "reviewer.article.reviewGuidelinesDescription"
-msgstr ""
-"Recenzēšanas vadlīnijās recenzentiem tiks sniegti kritēriji, pēc kuriem tie "
-"varēs novērtēt iesniegtā materiāla piemērotību publicēšanai žurnālā, un "
-"tajās var iekļaut īpašus norādījumus, kā sagatavot efektīvu un noderīgu "
-"recenziju. Veicot recenzēšanu, recenzentiem tiek piedāvāti divi atvērti "
-"teksta lauki - pirmais \"autoram un redaktoram\" un otrais \"redaktoram\". "
-"Žurnāla pārvaldnieks var arī izveidot recenziju veidlapu sadaļā \"Recenziju "
-"veidlapas\". Visos gadījumos redaktoriem būs iespēja iekļaut recenzijas "
-"sarakstē ar autoru."
+msgid "article.fontSize.small.altText"
+msgstr "Mazs"
 
-msgid "reviewer.article.reviewerGuidelines"
-msgstr "Recenzēšanas vadlīnijas"
+msgid "article.fontSize.medium.altText"
+msgstr "Vidējs"
 
-msgid "reviewer.article.reviewSteps"
-msgstr "Recenzēšanas soļi"
+msgid "article.fontSize.large.altText"
+msgstr "Liels"
 
-msgid "reviewer.article.reviewSchedule"
-msgstr "Recenzēšanas grafiks"
+msgid "article.return"
+msgstr "Atgriezties pie informācijas par rakstu"
 
-msgid "reviewer.article.submissionToBeReviewed"
-msgstr "Iesniegtais materiāls recenzēšanai"
+msgid "submission.submissionEditing"
+msgstr "Iesniegtā materiāla rediģēšana"
 
-msgid "reviewer.article.schedule"
-msgstr "Grafiks"
+msgid "submission.changeSection"
+msgstr "Mainīt uz"
 
-msgid "reviewer.article.decision.seeComments"
-msgstr "Skatīt komentārus"
+msgid "submission.sent"
+msgstr "Nosūtīts"
 
-msgid "reviewer.article.decision.decline"
-msgstr "Noraidīt iesniegto materiālu"
+msgid "submission.editorDecision"
+msgstr "Redaktora lēmums"
 
-msgid "reviewer.article.decision.resubmitElsewhere"
-msgstr "Atkārtoti iesniegt citur"
+msgid "submission.round"
+msgstr "Kārta&nbsp;{$round}"
 
-msgid "reviewer.article.decision.resubmitHere"
-msgstr "Atkārtoti iesniegt recenzēšanai"
+msgid "submission.editorReview"
+msgstr "Redaktora pārskats"
 
-msgid "reviewer.article.decision.pendingRevisions"
-msgstr "Nepieciešamās korekcijas"
+msgid "submission.notifyAuthor"
+msgstr "Paziņot autoram"
 
-msgid "reviewer.article.decision.accept"
-msgstr "Iesniegtais materiāls pieņemts"
-
-msgid "reviewer.article.schedule.due"
-msgstr "Recenzijas temiņš"
-
-msgid "reviewer.article.schedule.submitted"
-msgstr "Iesniegta recenzija"
-
-msgid "reviewer.article.schedule.response"
-msgstr "Jūsu atbilde"
-
-msgid "reviewer.article.schedule.request"
-msgstr "Redaktora lūgums"
-
-msgid "reviewer.article.reviewersAnnotatedVersionDescription"
-msgstr ""
-"(Ja vēlaties komentēt failu redaktoram, saglabājiet to cietajā diskā un "
-"izmantojiet Browse/Upload.)"
-
-msgid "reviewer.article.reviewersAnnotatedVersion"
-msgstr "Versija, ko augšupielādējis recenzents"
-
-msgid "reviewer.article.uploadedFile"
-msgstr "Augšupielādētās datnes"
-
-msgid "reviewer.article.reviewerComments"
-msgstr "Komentāri"
-
-msgid "reviewer.article.submitReview"
-msgstr "Iesniegt recenziju redaktoram"
-
-msgid "reviewer.article.recommendation"
-msgstr "Ieteikums"
-
-msgid "reviewer.article.automatic"
-msgstr "(Auto)"
-
-msgid "reviewer.article.sendReminder"
-msgstr "Nosūtīt atgādinājumu"
-
-msgid "reviewer.article.editorToEnter"
-msgstr "Ievadīt redaktoru"
-
-msgid "reviewer.article.reviewerCommentsDescription"
-msgstr "Ierakstiet vai ielīmējiet recenzijas komentārus šeit"
-
-msgid "reviewer.article.submissionEditor"
-msgstr "Iesniegto materiālu redaktors"
-
-msgid "reviewer.article.restrictedFileAccess"
-msgstr ""
-"Iesniegtais materiāls būs pieejams, ja un kad recenzents piekritīs veikt "
-"pārskatīšanu"
-
-msgid "reviewer.article.cannotDoReview"
-msgstr "Nav iespējams veikt recenzēšanu"
-
-msgid "reviewer.article.canDoReview"
-msgstr "Veiks recenzēšanu"
-
-msgid "reviewer.article.notifyTheEditor"
+msgid "submission.notifyEditor"
 msgstr "Paziņot redaktoram"
 
-msgid "reviewer.article.fileToBeReviewed"
-msgstr "Izskatāmā datne"
+msgid "submission.editorAuthorRecord"
+msgstr "Redaktora/autora e-pasta ieraksts"
 
-msgid "reviewer.averageQuality"
-msgstr "Vērtējums"
+msgid "submission.reviewersVersion"
+msgstr "Datnes versija ar recenzenta komentāriem"
 
-msgid "reviewer.completedReviews"
-msgstr "Gatavs"
+msgid "submission.postReviewVersion"
+msgstr "Datnes versija pēc recenzēšanas"
 
-msgid "reviewer.pendingReviews"
-msgstr "Raksti, kas gaida recenzēšanu"
+msgid "submission.editorVersion"
+msgstr "Redaktora versija"
 
-msgid "submission.layout.galley.remoteURL"
-msgstr "Attālināti izvietotā satura URL"
+msgid "submission.authorsRevisedVersion"
+msgstr "Autora pārskatītā datnes versija"
 
-msgid "submission.layout.galley.remotelyHostedContent"
-msgstr "Šis saliktnis būs pieejams atsevišķā tīmekļa vietnē."
+msgid "submission.authorVersion"
+msgstr "Autora versija"
 
-msgid "submission.layout.imageInvalid"
-msgstr "Nederīgs attēla formāts. Pieļaujamie formāti ir .gif, .jpg un .png."
+msgid "submission.copyediting"
+msgstr "Rediģēšana"
 
-msgid "layoutEditor.galley.uploadSuppFile"
-msgstr "Augšupielādēt papildu datni"
+msgid "submission.copyedit"
+msgstr "Rediģēt"
 
-msgid "layoutEditor.galley.replaceGalley"
-msgstr "Aizvietot datni"
+msgid "submission.proofreading"
+msgstr "Korektūra"
 
-msgid "layoutEditor.galley.uploadGalleyFormat"
-msgstr "Augšupielādēt saliktņa formātu"
+msgid "submission.scheduling"
+msgstr "Ieplānošana"
 
-msgid "layoutEditor.layoutEditingAssignments"
-msgstr "Maketēšanas piešķīrumi"
+msgid "submission.scheduledIn"
+msgstr "Ieplānots publicēt {$issueName}."
 
-msgid "layoutEditor.noActiveAssignments"
-msgstr "Nav aktīvu redakcijas piešķīrumu."
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
 
-msgid "layoutEditor.completedEditorialAssignments"
-msgstr "Pabeigtie redakcijas piešķīrumi"
+msgid "submissions.step1"
+msgstr "Pirmais solis"
 
-msgid "layoutEditor.activeEditorialAssignments"
-msgstr "Aktīvie redakcijas piešķīrumi"
+msgid "submissions.step3"
+msgstr "Trešais solis"
 
-msgid "sectionEditor.review.createReviewer"
-msgstr "Izveidot jaunu recenzentu"
+msgid "submissions.queuedReview"
+msgstr "Tiek recenzēts"
 
-msgid "sectionEditor.review.enrollReviewer"
-msgstr "Esoša lietotāja reģistrēšana par recenzentu"
+msgid "submissions.published"
+msgstr "Publicēts"
 
-msgid "sectionEditor.regrets.result"
-msgstr "Rezultāts"
+msgid "submissions.initial"
+msgstr "Sākotnējais"
 
-msgid "sectionEditor.regrets.regret"
-msgstr "Izteikt nožēlu"
+msgid "submissions.proofread"
+msgstr "Korektūra"
 
-msgid "sectionEditor.regrets.regretsAndCancels"
-msgstr "Recenzenta nožēla un atcelšana"
+msgid "submissions.initialProof"
+msgstr "Sākotnējā korektūra"
 
-msgid "sectionEditor.regrets.decisionRound"
-msgstr "Redaktora lēmums, kārta {$round}"
+msgid "submissions.postAuthor"
+msgstr "Pēc autora"
 
-msgid "sectionEditor.regrets.reviewRound"
-msgstr "Recenzēšana, kārta {$round}"
+msgid "submissions.reviewRound"
+msgstr "Recenzēšanas kārta"
 
-msgid "sectionEditor.regrets.link"
-msgstr "Skatīt nožēlas, atcelšanas, iepriekšējās kārtas"
+msgid "submissions.proof"
+msgstr "Korektūra"
 
-msgid "sectionEditor.regrets"
-msgstr "Nožēla"
+msgid "submissions.editorDecision"
+msgstr "Redaktora lēmums"
 
-msgid "sectionEditor.regrets.title"
-msgstr "#{$submissionId} Recenzenta nožēla, atcelšana un iepriekšējās kārtas"
+msgid "submissions.editorRuling"
+msgstr "Redaktora spriedums"
 
-msgid "sectionEditor.regrets.breadcrumb"
-msgstr "Nožēla"
+msgid "submission.eventLog"
+msgstr "Norises reģistrs"
 
-msgid "sectionEditor.proofreader.confirmRenotify"
+msgid "submissions.copyeditComplete"
+msgstr "Rediģēts"
+
+msgid "submissions.layoutComplete"
+msgstr "Rediģēts makets"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korektūra"
+
+msgid "submission.search"
+msgstr "Rakstu meklēšana"
+
+msgid "journal.currentIssue"
+msgstr "Jaunākais izdevums"
+
+msgid "context.contexts"
+msgstr "Žurnāli"
+
+msgid "journal.path"
+msgstr "Ceļš"
+
+msgid "context.context"
+msgstr "Žurnāls"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Skatīt visus izdevumus"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Pieprasītais saliktnis nav atrasts."
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Iekļaut lietotājus bez lomām šajā žurnālā."
+
+msgid "user.profile.profileImage"
+msgstr "Profila attēls"
+
+msgid "user.showAllJournals"
+msgstr "Rādīt manus žurnālus"
+
+msgid "user.registerForOtherJournals"
+msgstr "Reģistrēties citiem žurnāliem"
+
+msgid "user.reviewerPrompt"
+msgstr "Vai vēlaties recenzēt šim žurnālam iesniegtos darbus?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Jā, pieprasīt {$userGroup} lomu."
+
+msgid "user.reviewerPrompt.optin"
 msgstr ""
-"Atkārtoti paziņojot šim korektoram, viņa uzdevums tiks sākts no jauna. Vai "
-"esat pārliecināts, ka vēlaties to darīt?"
+"Jā, es labprāt atsaukšos aicinājumam recenzēt šim žurnālam iesniegtos darbus."
 
-msgid "sectionEditor.layout.confirmRenotify"
+msgid "user.register.contextsPrompt"
+msgstr "Kuros šīs vietnes žurnālos vēlaties reģistrēties?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Pieprasīt šādas lomas."
+
+msgid "user.register.noContextReviewerInterests"
 msgstr ""
-"Atkārtoti paziņojot šim maketētājam, viņa uzdevums tiks sākts no jauna. Vai "
-"esat pārliecināts, ka vēlaties to darīt?"
+"Ja vēlaties kļūt par kāda žurnāla recenzentu, lūdzu, ievadiet savas "
+"tematiskās intereses."
 
-msgid "sectionEditor.author.confirmRenotify"
+msgid "user.myJournals"
+msgstr "Mani žurnāli"
+
+msgid "user.manageMySubscriptions"
+msgstr "Pārvaldīt manus abonementus"
+
+msgid "user.noRoles.chooseJournal"
 msgstr ""
-"Atkārtoti paziņojot šim autoram, viņa uzdevums tiks sākts no jauna. Vai esat "
-"pārliecināts, ka vēlaties to darīt?"
+"Jūsu konts pašlaik nav saistīts ne ar vienu žurnālu. Lūdzu, izvēlieties "
+"žurnālu:"
 
-msgid "sectionEditor.copyedit.confirmRenotify"
+msgid "user.noRoles.noRolesForJournal"
 msgstr ""
-"Atkārtoti paziņojot šim teksta redaktoram, viņa uzdevums tiks sākts no "
-"jauna. Vai esat pārliecināts, ka vēlaties to darīt?"
+"Jūsu kontam pašlaik nav nevienas lomas šajā žurnālā. Lūdzu, izvēlieties kādu "
+"no turpmāk minētajām darbībām:"
 
-msgid "sectionEditor.noneAssigned"
-msgstr "Nav piešķirts neviens iesniegtais materiāls."
+msgid "user.noRoles.submitArticle"
+msgstr "Iesniegt priekšlikumu"
 
-msgid "sectionEditor.completedEditorialAssignments"
-msgstr "Pabeigtie redaktoru piešķīrumi"
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Iesniegt rakstu: Autoru reģistrācija pašlaik ir atspējota."
 
-msgid "sectionEditor.activeEditorialAssignments"
-msgstr "Aktīvie redaktoru piešķīrumi"
+msgid "user.noRoles.regReviewer"
+msgstr "Reģistrēties kā recenzentam"
 
-msgid "manager.setup.basicEditorialStepsDescription"
+msgid "user.noRoles.regReviewerClosed"
 msgstr ""
-"Soļi: Iesniegto materiālu rinda &gt; Iesniegto materiālu recenzēšana &gt; "
-"Iesniegto materiālu rediģēšana &gt; Satura rādītājs. <br /><br />\n"
-"Izvēlieties modeli šo rediģēšanas procesa aspektu apstrādei. (Lai ieceltu "
-"atbildīgo redaktoru un sadaļu redaktorus, apmeklējiet sadaļu Redaktori "
-"žurnāla pārvaldībā.)"
+"Reģistrēties kā recenzentam: Recenzentu reģistrācija pašlaik ir atspējota."
 
-msgid "plugins.categories.generic.description"
-msgstr ""
-"Vispārīgos spraudņus izmanto, lai paplašinātu Open Journal Systems dažādos "
-"veidos, kurus neatbalsta citas spraudņu kategorijas."
+msgid "user.role.manager"
+msgstr "Žurnāla pārvaldnieks"
 
-msgid "plugins.categories.auth.description"
-msgstr ""
-"Autorizācijas spraudņi ļauj Open Journal Systems deleģēt lietotāju "
-"autentifikācijas uzdevumus citām sistēmām, piemēram, LDAP serveriem."
+msgid "user.role.subEditor"
+msgstr "Sadaļas redaktors"
 
-msgid "plugins.categories.viewableFiles.description"
-msgstr ""
-"Rakstu saliktņa spraudņi papildina atbalstu dažādu dokumentu tipu "
-"atspoguļošanai rakstu saliktņos."
+msgid "user.role.subscriptionManager"
+msgstr "Abonēšanas pārvaldnieks"
 
-msgid "plugins.categories.viewableFiles"
-msgstr "Rakstu saliktņu spraudņi"
+msgid "user.role.managers"
+msgstr "Žurnālu pārvaldnieki"
 
-msgid "subscriptionManager.subscriptionTypes"
-msgstr "Abonementu veidi"
+msgid "user.role.subEditors"
+msgstr "Sadaļu redaktori"
 
-msgid "subscriptionManager.institutionalSubscriptions"
-msgstr "Iestāžu abonementi"
+msgid "user.role.subscriptionManagers"
+msgstr "Abonēšanas pārvaldnieki"
 
-msgid "subscriptionManager.individualSubscriptions"
-msgstr "Individuāli abonementi"
+msgid "user.role.journalAssistant"
+msgstr "Žurnāla palīgs"
 
-msgid "subscriptionManager.subscriptionManagement"
-msgstr "Abonementu pārvaldība"
+msgid "user.role.journalAssistants"
+msgstr "Žurnāla palīgi"
 
-msgid "admin.overwriteConfigFileInstructions"
-msgstr ""
-"<h4>PIEZĪME!</h4>\n"
-"<p>Sistēma nevarēja automātiski pārrakstīt konfigurācijas failu.Lai "
-"piemērotu konfigurācijas izmaiņas, ir jāatver <tt>config.inc.php</tt>"
-"piemērotā teksta redaktorā un jāaizstāj saturs ar turpmāk norādītā teksta "
-"lauka saturu.</p>"
-
-msgid "search.results.similarDocuments"
-msgstr "līdzīgi dokumenti"
-
-msgid "search.results.orderDir.desc"
-msgstr "Dilstošā secībā"
-
-msgid "search.results.orderDir.asc"
-msgstr "Augošā secībā"
-
-msgid "search.results.orderBy.relevance"
-msgstr "Atbilstība"
-
-msgid "search.results.orderBy.popularityMonth"
-msgstr "Popularitāte (pēdējā mēneša laikā)"
-
-msgid "search.results.orderBy.popularityAll"
-msgstr "Popularitāte (visos laikos)"
-
-msgid "search.results.orderBy.journal"
-msgstr "Žurnāla nosaukums"
-
-msgid "search.results.orderBy.issue"
+msgid "issue.issue"
 msgstr "Izdevums"
 
-msgid "search.results.orderBy.date"
-msgstr "Publicēšanas datums"
+msgid "issue.issues"
+msgstr "Izdevumi"
 
-msgid "search.results.orderBy.author"
-msgstr "Autors"
+msgid "issue.title"
+msgstr "Nosaukums"
 
-msgid "search.results.orderBy.article"
-msgstr "Raksta virsraksts"
+msgid "issue.viewIssueIdentification"
+msgstr "Skatīt {$identification}"
 
-msgid "search.results.orderBy"
-msgstr "Sakārtot rezultātus pēc"
+msgid "issue.volume"
+msgstr "Sējums"
 
-msgid "comments.authenticated"
-msgstr "ar <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+msgid "issue.number"
+msgstr "Numurs"
 
-msgid "comments.commentsOnArticle"
-msgstr "Komentāri šim rakstam"
+msgid "issue.vol"
+msgstr "Sēj."
 
-msgid "reader.purchasePrice"
-msgstr "({$currency} {$price})"
+msgid "issue.no"
+msgstr "Nr."
 
-msgid "reader.subscriptionOrFeeAccess"
-msgstr "Nepieciešams abonements vai maksa"
+msgid "issue.year"
+msgstr "Gads"
 
-msgid "reader.subscriptionAccess"
-msgstr "Nepieciešama abonēšana"
+msgid "issue.noIssues"
+msgstr "Nav izdevumu"
 
-msgid "reader.openAccess"
-msgstr "Atvērtā piekļuve"
+msgid "issue.toc"
+msgstr "Saturs"
+
+msgid "issue.abstract"
+msgstr "Kopsavilkums"
+
+msgid "issue.coverPage.altText"
+msgstr "Titullapa"
+
+msgid "issue.fullIssue"
+msgstr "Pilns izdevuma numurs"
+
+msgid "issue.nonpdf.title"
+msgstr "Izdevuma lejupielāde"
+
+msgid "issue.viewIssue"
+msgstr "Skatīt izdevumu"
+
+msgid "issue.return"
+msgstr "Atgriezties pie izdevuma informācijas"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Nevar izveidot DOI šādam numuram: {$itemTitle}. Tas nepastāv pašreizējā "
+"žurnāla kontekstā."
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"Nevarēja iestatīt DOI statusu uz neaktīvu izdevumam {$itemTitle}. DOI "
+"statusam jābūt \"Reģistrēts\" vai \"Iesniegts\"."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"Neizdevās atzīmēt DOI, kas reģistrēts {$pubObjectTitle}. Pirms statusa "
+"atjaunināšanas izdevums ir jāpublicē."
+
+msgid "subscriptionTypes.currency"
+msgstr "Valūta"
+
+msgid "subscriptionTypes.year"
+msgstr "gads"
+
+msgid "subscriptionTypes.years"
+msgstr "gadi"
+
+msgid "subscriptionTypes.month"
+msgstr "mēnesis"
+
+msgid "subscriptionTypes.months"
+msgstr "mēneši"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Beztermiņa"
+
+msgid "subscriptionTypes.format"
+msgstr "Formāts"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Tiešsaiste"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Drukāts"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Drukāts un tiešsaistē"
+
+msgid "subscriptions.inactive"
+msgstr "Neaktīvs"
+
+msgid "subscriptions.status"
+msgstr "Statuss"
+
+msgid "subscriptions.status.active"
+msgstr "Aktīvs"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Nepieciešama informācija"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Nepieciešams apstiprinājums"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Gaida manuālo maksājumu"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Gaida tiešsaistes maksājumu"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Jums nav aktīva abonementa."
+
+msgid "subscriptions.status.other"
+msgstr "Cits, skat. piezīmes"
+
+msgid "subscriptions.individualDescription"
+msgstr "Lai piekļūtu abonētajam saturam, nepieciešams individuāls abonements."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Iestāžu abonementiem nav nepieciešama pieteikšanās. Lai nodrošinātu piekļuvi "
+"abonētajam saturam, tiek izmantots lietotāja domēns un/vai IP adrese."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Piezīme:</strong> Iestāžu abonementiem, kas iegādāti tiešsaistē, "
+"pirms abonementa aktivizēšanas ir jāapstiprina domēna un IP diapazoni."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Iesniegšanas notikums"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Raksts iesniegts"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Iesniegtais materiāls nosūtīts uz izdevuma plānošanas rindu"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Iesniegtais materiāls piešķirts izdevumam"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Raksts publicēts"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Iesniegti autora labojumi"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Autora labotā datne atjaunināta"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Iesniegtajam materiālam piešķirts redaktors"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Iesniegtajam materiālam noņemts redaktors"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Iesniegts redaktora lēmums"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Redaktora datne atjaunināta"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Iesniegtais materiāls nosūtīts arhivēšanai"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Iesniegtais materiāls atjaunots no arhīva"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Iesniegtajam materiālam norīkots teksta redaktors"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Iesniegtajam materiālam noņemts teksta redaktors"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Uzdots sākt teksta rediģēšanu"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Teksta redaktora labotā datne atjaunināta"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Pabeigta sākotnējā teksta rediģēšana"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Pabeigta galīgā teksta rediģēšana"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Rediģētā datne atjaunināta"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Iesniegtajam materiālam piešķirts korektors"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Iesniegtajam materiālam atcelts korektors"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Korektūra uzsākta"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Koriģētā datne atjaunināta"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Korektūra pabeigta"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Iesniegtajam materiālam piešķirts maketētājs"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Iesniegtajam materiālam atcelts maketētājs"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Maketēšana uzsākta"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Maketa saliktnis atjaunināts"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Makets pabeigts"
+
+msgid "reader.subscribersOnly"
+msgstr "Tikai abonentiem"
 
 msgid "reader.subscriptionRequiredLoginText"
 msgstr ""
 "Lai piekļūtu vienumam, nepieciešams abonements. Lai apstiprinātu abonementu, "
 "autorizējieties žurnālā."
 
-msgid "reader.subscribersOnly"
-msgstr "Tikai abonentiem"
+msgid "reader.openAccess"
+msgstr "Atvērtā piekļuve"
 
-msgid "submission.event.layout.layoutComplete"
-msgstr "Makets pabeigts"
+msgid "reader.subscriptionAccess"
+msgstr "Nepieciešama abonēšana"
 
-msgid "submission.event.layout.layoutGalleyCreated"
-msgstr "Maketa saliktnis atjaunināts"
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Nepieciešams abonements vai maksa"
 
-msgid "submission.event.layout.layoutInitiated"
-msgstr "Maketēšana uzsākta"
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
 
-msgid "submission.event.layout.layoutEditorUnassigned"
-msgstr "Iesniegtajam materiālam atcelts maketētājs"
+msgid "comments.commentsOnArticle"
+msgstr "Komentāri šim rakstam"
 
-msgid "submission.event.layout.layoutEditorAssigned"
-msgstr "Iesniegtajam materiālam piešķirts maketētājs"
+msgid "comments.authenticated"
+msgstr "ar <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
-msgid "submission.event.proofread.proofreadCompleted"
-msgstr "Korektūra pabeigta"
+msgid "search.results.orderBy"
+msgstr "Sakārtot rezultātus pēc"
 
-msgid "submission.event.proofread.proofreadRevision"
-msgstr "Koriģētā datne atjaunināta"
+msgid "search.results.orderBy.article"
+msgstr "Raksta virsraksts"
 
-msgid "submission.event.proofread.proofreadInitiated"
-msgstr "Korektūra uzsākta"
+msgid "search.results.orderBy.author"
+msgstr "Autors"
 
-msgid "submission.event.proofread.proofreaderUnassigned"
-msgstr "Iesniegtajam materiālam atcelts korektors"
+msgid "search.results.orderBy.date"
+msgstr "Publicēšanas datums"
 
-msgid "submission.event.proofread.proofreaderAssigned"
-msgstr "Iesniegtajam materiālam piešķirts korektors"
+msgid "search.results.orderBy.issue"
+msgstr "Izdevums"
 
-msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Rediģētā datne atjaunināta"
+msgid "search.results.orderBy.journal"
+msgstr "Žurnāla nosaukums"
 
-msgid "notification.type.issuePublished"
-msgstr "Žurnāla numurs ir publicēts."
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularitāte (visos laikos)"
 
-msgid "notification.type.galleyModified"
-msgstr "Ir pārveidots \"{$title}\" saliktnis."
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularitāte (pēdējā mēneša laikā)"
 
-msgid "notification.type.editorDecisionComment"
-msgstr "Ir atstāts komentārs par redaktora lēmumu attiecībā uz \"{$title}\"."
+msgid "search.results.orderBy.relevance"
+msgstr "Atbilstība"
 
-msgid "notification.type.submissionSubmitted"
-msgstr "Ir iesniegts jauns raksts \"{$title}\"."
+msgid "search.results.orderDir.asc"
+msgstr "Augošā secībā"
 
-msgid "notification.type.editing"
-msgstr "Rediģēšanas darbības"
+msgid "search.results.orderDir.desc"
+msgstr "Dilstošā secībā"
 
-msgid "metadata.pkp.peerReviewed"
-msgstr "Recenzēts raksts"
+msgid "search.results.similarDocuments"
+msgstr "līdzīgi dokumenti"
 
-msgid "log.imported"
-msgstr "{$userName} ir importējis rakstu {$submissionId}."
-
-msgid "log.proofread.complete"
-msgstr "{$proofreaderName} ir iesniedzis {$submissionId} plānošanai."
-
-msgid "log.proofread.assign"
+msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
-"{$assignerName} ir norīkojis {$proofreaderName} veikt iesniegtā materiāla "
-"{$submissionId} korektūru."
-
-msgid "log.editor.editorAssigned"
-msgstr "{$editorName} ir piešķirts kā redaktors materiālam{$submissionId}."
-
-msgid "log.editor.restored"
-msgstr "Iesniegtais materiāls {$submissionId} ir atjaunots rindā."
-
-msgid "log.editor.archived"
-msgstr "Iesniegtais materiāls {$submissionId} ir arhivēts."
-
-msgid "log.editor.editorFile"
-msgstr "Ir augšupielādēta iesniegtā materiāla faila redaktora versija."
-
-msgid "log.editor.metadataModified"
-msgstr "Šī raksta metadatus modificēja {$editorName}."
-
-msgid "log.layout.layoutEditComplete"
-msgstr ""
-"{$editorName} ir pabeidzis iesniegtā materiāla {$submissionId} maketēšanu."
-
-msgid "log.layout.layoutEditorUnassigned"
-msgstr ""
-"{$editorName} ir atbrīvots no iesniegtā materiāla {$submissionId} "
-"maketēšanas."
-
-msgid "log.layout.layoutEditorAssigned"
-msgstr ""
-"{$editorName} ir nozīmēts iesniegtā materiāla {$submissionId} maketēšanai."
-
-msgid "log.copyedit.authorFile"
-msgstr "Ir augšupielādēta iesniegtā materiāla autora rediģēta faila versija."
-
-msgid "log.copyedit.copyeditorFile"
-msgstr "Ir augšupielādēta iesniegtā materiāla faila rediģētā versija."
-
-msgid "log.copyedit.copyeditorAssigned"
-msgstr ""
-"{$copyeditorName} ir nozīmēts iesniegtā materiāla {$submissionId} teksta "
-"rediģēšanai."
-
-msgid "log.copyedit.finalEditComplete"
-msgstr ""
-"{$copyeditorName} ir pabeidzis iesniegtā materiāla {$submissionId} galīgo "
-"teksta rediģēšanu."
-
-msgid "log.copyedit.initialEditComplete"
-msgstr ""
-"{$copyeditorName} ir pabeidzis iesniegtā materiāla {$submissionId} sākotnējo "
-"teksta rediģēšanu."
-
-msgid "log.copyedit.copyeditFileSet"
-msgstr "Ir izvēlēts noklusējuma rediģējamais fails."
-
-msgid "log.copyedit.initiate"
-msgstr ""
-"Iesniegtā materiāla {$submissionId} teksta rediģēšanu uzsācis "
-"{$copyeditorName}."
-
-msgid "log.editor.recommendation"
-msgstr ""
-"Redaktora ieteikumu ({$decision}) par rakstu {$submissionId} ir reģistrējis "
-"{$editorName}."
-
-msgid "log.editor.decision"
-msgstr ""
-"Redaktora lēmumu ({$decision}) par rakstu {$submissionId} ir reģistrējis "
-"{$editorName}."
-
-msgid "log.review.reviewerFile"
-msgstr "Ir augšupielādēts recenzenta fails."
-
-msgid "log.review.reviewFileByProxy"
-msgstr ""
-"Redaktors {$userName} recenzenta {$reviewerName} vārdā ir augšupielādējis "
-"materiāla {$submissionId} {$round} kārtas recenzēto failu."
-
-msgid "log.review.reviewAcceptedByProxy"
-msgstr ""
-"{$userName} ir akceptējis materiāla {$submissionId} {$round} kārtas "
-"pārskatīšanu {$reviewerName} vārdā."
-
-msgid "log.review.reviewDeclinedByProxy"
-msgstr ""
-"{$userName} ir atteicies no materiāla {$submissionId} {$round} kārtas "
-"pārskatīšanas {$reviewerName} vārdā."
-
-msgid "log.review.reviewAccepted"
-msgstr ""
-"{$reviewerName} ir akceptējis materiāla {$submissionId} {$round} kārtas "
-"pārskatīšanu."
-
-msgid "log.review.reviewDeclined"
-msgstr ""
-"{$reviewerName} ir atteicies no materiāla {$submissionId} {$round} kārtas "
-"pārskatīšanas."
-
-msgid "log.review.resubmit"
-msgstr "Materiāls {$submissionId} ir atkārtoti iesniegts pārskatīšanai."
-
-msgid "log.review.reviewRecommendationSetByProxy"
-msgstr ""
-"Redaktors {$editorName} recenzenta {$reviewerName} vārdā ir sagatavojis "
-"ieteikumu iesniegtā materiāla {$submissionId} {$round} recenzēšanas kārtai."
-
-msgid "log.review.reviewRecommendationSet"
-msgstr ""
-"Rekomendācija iesniegtā materiāla {$submissionId} {$round} kārtas "
-"recenzijai, ko veic {$reviewerName}, ir sagatavota."
-
-msgid "log.review.reviewDueDateSet"
-msgstr ""
-"Iesniegtā materiāla {$submissionId} {$round} kārtas recenzijas, ko veic "
-"{$reviewerName}, termiņš iestatīts uz {$dueDate}."
-
-msgid "log.review.reviewerRated"
-msgstr ""
-"{$reviewerName} ir piešķirts par {$round} kārtas recenzentu iesniegtajam "
-"materiālam {$submissionId}."
-
-msgid "log.review.reviewInitiated"
-msgstr ""
-"{$reviewerName} uzsāka {$submissionId} iesniegtā materiāla {$round} kārtas "
-"recenzēšanu."
-
-msgid "log.review.reviewerUnassigned"
-msgstr ""
-"{$reviewerName} ir atcelts no iesniegtā materiāla {$submissionId} "
-"recenzēšanas {$round} kārtā."
-
-msgid "log.author.documentRevised"
-msgstr ""
-"{$authorName} pārskatīja rakstu {$submissionId}. Jaunais faila ID ir "
-"{$fileId}."
-
-msgid "site.upgradeAvailable.manager"
-msgstr ""
-"Ir pieejama jauna OJS versija! Pašlaik jūs izmantojat OJS {$currentVersion}. "
-"Jaunākā versija ir OJS {$latestVersion}. Lūdzu, sazinieties ar vietnes "
-"administratoru ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
-">{$siteAdminEmail}</a>) lai informētu par jauno versiju. Sīkāka informācija "
-"ir atrodama <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\""
-">šeit</a>."
-
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Ir pieejama jauna OJS versija! Pašlaik jūs izmantojat OJS {$currentVersion}. "
-"Jaunākā versija ir OJS {$latestVersion}. Lūdzu, apmeklējiet <a href=\""
-"http://pkp.sfu.ca/ojs_download\" target=\"_new\">šo lapu</a>, lai "
-"lejupielādētu jaunāko versiju un atrastu atjaunināšanas norādījumus."
-
-msgid "installer.upgradeComplete"
-msgstr ""
-"<p>OJS atjaunināšana uz versiju {$version} ir veiksmīgi pabeigta.</p>\n"
-"<p>Neaizmirstiet iestatījumu \"instalēts\" konfigurācijas failā "
-"config.inc.php iestatīt atpakaļ uz <em>Ieslēgts (On)</em>.</p>\n"
-"<p>Ja vēl neesat reģistrējies un vēlaties saņemt jaunumus un atjauninājumus, "
-"<strong>reģistrējieties vietnē <a href=\"http://pkp.sfu.ca/ojs/register\" "
-"target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Ja jums ir "
-"jautājumi vai komentāri, lūdzu, apmeklējiet <a href=\"http://forum.pkp.sfu."
-"ca\" target=\"_new\">atbalsta forumu</a>.</p>"
-
-msgid "installer.installationComplete"
-msgstr ""
-"<p>OJS instalēšana ir veiksmīgi pabeigta.</p>\n"
-"<p>Lai sāktu izmantot sistēmu, <a href=\"{$loginUrl}\">pierakstieties</a>, "
-"izmantojot iepriekšējā lapā ievadīto lietotājvārdu un paroli.</p>\n"
-"<p>Ja vēlaties kļūt par daļu no PKP kopienas, varat:</p>\n"
-"<ol>\n"
-"\t<li>lasīt <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blogu</a> "
-"un sekot līdzi <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS "
-"plūsmai</a>, lai saņemtu jaunumus un atjauninājumus,</li>\n"
-"\t<li>apmeklēt <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">atbalsta "
-"forumu</a>, ja jums ir jautājumi vai komentāri.</li>\n"
-"</ol>"
-
-msgid "catalog.sortBy.categoryDescription"
-msgstr "Izvēlieties, kā sakārtot šīs kategorijas rakstus."
-
-msgid "catalog.sortBy"
-msgstr "Rakstu secība"
-
-msgid "log.editor.submissionExpedited"
-msgstr "{$editorName} uzsāk raksta {$submissionId} rediģēšanu."
-
-msgid "navigation.subscriptions"
-msgstr "Abonementi"
-
-msgid "editor.issues.futureIssues"
-msgstr "Turpmākie izdevumi"
-
-msgid "editor.issues.backIssues"
-msgstr "Agrākie izdevumi"
-
-msgid "installer.overwriteConfigFileInstructions"
-msgstr ""
-"<h4>SVARĪGI!</h4>\n"
-"<p>Instalētājs nevarēja automātiski pārrakstīt konfigurācijas failu. Pirms "
-"mēģināt izmantot sistēmu, lūdzu, atveriet <tt>config.inc.php</tt> piemērotā "
-"teksta redaktorā un nomainiet tā saturu ar turpmāk norādītā teksta lauka "
-"saturu.</p>"
-
-msgid "installer.reinstallAfterDatabaseError"
-msgstr ""
-"<strong>Brīdinājums:</strong> ja datubāzes instalēšanas process daļēji "
-"neizdevās, pirms mēģināt atkārtoti instalēt datu bāzi, iespējams, būs "
-"jāatmet OJS datu bāze vai datu bāzes tabulas."
-
-msgid "installer.upgradeApplication"
-msgstr "Atjaunināt Open Journal Systems"
-
-msgid "installer.installApplication"
-msgstr "Uzstādīt Open Journal Systems"
-
-msgid "installer.databaseSettingsInstructions"
-msgstr ""
-"OJS datu glabāšanai nepieciešama piekļuve SQL datubāzei. Atbalstāmo datubāzu "
-"sarakstu skatiet iepriekš sistēmas prasībās. Tālāk esošajos laukos norādiet "
-"iestatījumus, kas jāizmanto, lai izveidotu savienojumu ar datubāzi."
-
-msgid "installer.filesDirInstructions"
-msgstr ""
-"Ievadiet pilnu ceļa nosaukumu uz esošo direktoriju, kurā tiks glabāti "
-"augšupielādētie faili. Šim direktorijam nevajadzētu būt tieši pieejamam "
-"tīmeklī. <strong>Pirms instalēšanas pārliecinieties, ka šis direktorijs "
-"pastāv un ir rakstāms.</strong> Windows ceļu nosaukumos jāizmanto "
-"slīpsvītras, piemēram, \"C:/myjournal/files\"."
-
-msgid "installer.localeInstructions"
-msgstr ""
-"Galvenā valoda, kas jāizmanto šai sistēmai. Lūdzu, skatiet OJS "
-"dokumentāciju, ja jūs interesē atbalsts valodām, kuras šeit nav norādītas."
-
-msgid "installer.maxFileUploadSize"
-msgstr ""
-"Jūsu serveris pašlaik ļauj augšupielādēt failus, kuru maksimālais izmērs ir: "
-"<strong>{$maxFileUploadSize}</strong>"
-
-msgid "installer.allowFileUploads"
-msgstr ""
-"Jūsu serveris pašlaik ļauj augšupielādēt failus: "
-"<strong>{$allowFileUploads}</strong>"
-
-msgid "installer.localeSettingsInstructions"
-msgstr ""
-"Lai pilnībā atbalstītu Unicode (UTF-8), visiem rakstzīmju kopas "
-"iestatījumiem atlasiet UTF-8. Lūdzu, ņemiet vērā, ka pilnīgam Unicode "
-"atbalstam nepieciešama PHP kompilācija ar <a href=\"http://www.php.net/"
-"mbstring\" target=\"_blank\">mbstring</a> bibliotēkas atbalstu (pēc "
-"noklusējuma iespējota jaunākajās PHP instalācijās). Ja jūsu serveris "
-"neatbilst šīm prasībām, var rasties problēmas, izmantojot paplašinātas "
-"rakstzīmju kopas.\n"
-"<br /><br />\n"
-"Jūsu serveris pašlaik atbalsta mbstring: <strong>{$supportsMBString}</strong>"
-
-msgid "installer.upgradeInstructions"
-msgstr ""
-"<h4>OJS versija {$version}</h4>\n"
-"\n"
-"<p>Paldies, ka lejupielādējāt Public Knowledge Project <strong>Open Journal "
-"Systems</strong>. Pirms turpināt, lūdzu, izlasiet <a href=\"{$baseUrl}/docs/"
-"README.md\">README</a> un <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> "
-"failus, kas iekļauti kopā ar šo programmatūru. Lai iegūtu vairāk "
-"informācijas par Public Knowledge Project un tā programmatūras projektiem, "
-"lūdzu, apmeklējiet <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP "
-"tīmekļa vietni</a>. Ja jums ir ziņojumi par kļūdām vai tehniskā atbalsta "
-"jautājumi par Open Journal Systems, skatiet <a href=\"http://forum.pkp.sfu."
-"ca\" target=\"_blank\">atbalsta forumu</a> vai apmeklējiet PKP tiešsaistes "
-"<a href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\" > kļūdu "
-"ziņojumu sistēmu</a>. Lai gan atbalsta forums ir ieteicamā saziņas metode, "
-"varat arī rakstīt komandai uz adresi <a href=\"mailto:pkp.contact@gmail.com\""
-">pkp.contact@gmail.com</a>.</p>\n"
-"<p>Ir <strong>stingri ieteicams</strong> pirms turpināšanas dublēt datu "
-"bāzi, failu direktoriju un OJS instalācijas direktoriju.</p>"
-
-msgid "installer.preInstallationInstructions"
-msgstr ""
-"\n"
-"<h4>Pirmsinstalācijas soļi</h4>\n"
-"\n"
-"\n"
-"<p>1. Šiem failiem un direktorijiem (kā arī to saturam) jābūt rakstāmiem:</p>"
-"\n"
-"<ul>\n"
-"\t<li><tt>config.inc.php</tt> ir rakstāms (nav obligāts): "
-"{$writable_config}</li>\n"
-"\t<li><tt>public/</tt> ir rakstāms: {$writable_public}</li>\n"
-"\t<li><tt>cache/</tt> ir rakstāms: {$writable_cache}</li>\n"
-"\t<li><tt>cache/t_cache/</tt> ir rakstāms: {$writable_templates_cache}</li>\n"
-"\t<li><tt>cache/t_compile/</tt> ir rakstāms: "
-"{$writable_templates_compile}</li>\n"
-"\t<li><tt>cache/_db</tt> ir rakstāms: {$writable_db_cache}</li>\n"
-"</ul>\n"
-"\n"
-"<p>2. Ir jāizveido un jāpadara rakstāms direktorijs, kurā glabāt "
-"augšupielādētos failus (skatiet tālāk “Faila iestatījumi”)..</p>"
-
-msgid "installer.installationInstructions"
-msgstr ""
-"<h4>OJS versija {$version}</h4>\n"
-"\n"
-"<p>Paldies, ka lejupielādējāt Public Knowledge Project <strong>Open Journal "
-"Systems</strong>. Pirms turpināt, lūdzu, izlasiet <a href=\"{$baseUrl}/docs/"
-"README.md\">README</a> failu, kas iekļauts kopā ar šo programmatūru. Lai "
-"iegūtu vairāk informācijas par Public Knowledge Project un tā programmatūras "
-"projektiem, lūdzu, apmeklējiet <a href=\"https://pkp.sfu.ca/\" target="
-"\"_blank\">PKP tīmekļa vietni</a>. Ja jums ir ziņojumi par kļūdām vai "
-"tehniskā atbalsta jautājumi par Open Journal Systems, skatiet <a href=\"https"
-"://forum.pkp.sfu.ca\" target=\"_blank\">atbalsta forumu</a> vai apmeklējiet "
-"PKP tiešsaistes <a href=\"https://github.com/pkp/pkp-lib#issues\" target="
-"\"_blank\">kļūdu ziņojumu sistēmu</a>. Lai gan atbalsta forums ir ieteicamā "
-"saziņas metode, varat arī rakstīt komandai <a href=\"mailto:pkp.contact@gmail"
-".com\">pkp.contact@gmail.com</a>.</p>\n"
-"\n"
-"<h4>Ieteicamās sistēmas prasības</h4>\n"
-"\n"
-"<ul>\n"
-"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
-"{$phpRequiredVersion}; jūs pašlaik izmantojat PHP "
-"{$phpVersion}{$wrongPhpText}</li>\n"
-"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
-"vai <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
-">= 9.1.5</li>\n"
-"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
-"1.3.2x vai >= 2.0.4x vai Microsoft IIS 6</li>\n"
-"\t<li>Operētājsistēma: jebkura operētājsistēma, kas atbalsta iepriekš minēto "
-"programmatūru, tostarp <a href=\"https://www.linux.org/\" target=\"_blank\""
-">Linux</a>, <a href=\"https://www.bsd.org\" target=\"_blank\">BSD</a>, <a "
-"href=\"https://www.oracle.com/solaris/\" target=\"_blank\">Solaris</a>, <a "
-"href=\"https://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href="
-"\"https://www.microsoft.com/\">Windows</a></li>\n"
-"</ul>\n"
-"\n"
-"<p>Tā kā PKP nav resursu, lai pārbaudītu visas iespējamās programmatūras "
-"versiju un platformu kombinācijas, netiek garantēta pareiza darbība vai "
-"atbalsts.</p>\n"
-"\n"
-"<p>Izmaiņas šajos iestatījumos var veikt pēc instalēšanas, rediģējot failu "
-"<tt>config.inc.php</tt> OJS bāzes direktorijā vai izmantojot vietnes "
-"administrēšanas tīmekļa saskarni.</p>\n"
-"\n"
-"<h4>Atbalstītās datubāzu sistēmas</h4>\n"
-"\n"
-"Pašlaik OJS ir pārbaudīta tikai ar MySQL un PostgreSQL, lai gan citas <a "
-"href=\"https://adodb.org\" target=\"_blank\">ADOdb</a> atbalstītās datubāzu "
-"pārvaldības sistēmas var darboties (pilnībā vai daļēji). OJS komandai var "
-"nosūtīt ziņojumus par savietojamību un/vai koda labojumus alternatīvām "
-"DBVS.</p>\n"
-
-msgid "installer.updatingInstructions"
-msgstr ""
-"Ja vēlaties atjaunināt esošo OJS instalāciju, <a href=\"{$upgradeUrl}\">"
-"klikšķiniet šeit</a>, lai turpinātu."
-
-msgid "installer.ojsUpgrade"
-msgstr "OJS atjaunināšana"
-
-msgid "installer.appInstallation"
-msgstr "OJS uzstādīšana"
-
-msgid "payment.subscription.expires"
-msgstr "Derīguma termiņš beidzas"
-
-msgid "payment.subscription.renew"
-msgstr "Atjaunot abonementu"
-
-msgid "payment.subscription.purchase"
-msgstr "Iegādāties abonementu"
-
-msgid "payment.membership.ends"
-msgstr "Beidzas"
-
-msgid "payment.publication.publicationPaid"
-msgstr "Samaksāta publicēšanas maksa"
-
-msgid "payment.publication.payPublication"
-msgstr "Maksāt par publicēšanu"
-
-msgid "payment.submission.paySubmission"
-msgstr "Maksāt iesniegšanas maksu"
-
-msgid "payment.donation.makeDonation"
-msgstr "Veikt ziedojumu"
-
-msgid "payment.notFound"
-msgstr ""
-"Maksājums ir pieprasīts, bet pieprasījuma termiņš ir beidzies. Sazinieties "
-"ar žurnāla pārvaldnieku, lai saņemtu sīkāku informāciju."
-
-msgid "payment.requestPublicationFee"
-msgstr "Pieprasīt publicēšanas maksu ({$feeAmount})"
-
-msgid "payment.type.donation"
-msgstr "Ziedojumi"
-
-msgid "payment.type.subscription"
-msgstr "Abonēšanas maksa"
-
-msgid "payment.type.purchaseIssue"
-msgstr "Pirkuma maksa par numuru"
-
-msgid "payment.type.purchaseArticle"
-msgstr "Pirkuma maksa par rakstu"
-
-msgid "payment.type.fastTrack"
-msgstr "Ātrā pārskatīšanas maksa"
-
-msgid "payment.type.publication.required"
-msgstr "Jāsamaksā maksa par publikāciju ."
-
-msgid "payment.type.publication"
-msgstr "Publicēšanas maksa"
-
-msgid "payment.type.submission"
-msgstr "Iesniegšanas maksa"
-
-msgid "payment.authorFees"
-msgstr "Autora maksa"
-
-msgid "payment.paymentSent"
-msgstr "Maksājums jau ir nosūtīts"
-
-msgid "payment.paymentReceived"
-msgstr "Maksājums saņemts"
-
-msgid "payment.alreadyPaidMessage"
-msgstr ""
-"Ja esat jau nosūtījis maksājumu žurnālam, atzīmējiet šo lodziņu, lai "
-"pabeigtu iesniegšanas procesu.  Iesniegtais materiāls netiks izskatīts, "
-"kamēr nebūs saņemts maksājums.  Noklikšķiniet uz MAKSĀT TAGAD , lai skatītu "
-"maksājuma instrukcijas."
-
-msgid "payment.alreadyPaid"
-msgstr "Jau samaksāts"
-
-msgid "payment.waive"
-msgstr "Atteikšanās"
-
-msgid "payment.payNow"
-msgstr "Maksāt tagad"
-
-msgid "payment.waived"
-msgstr "Atteikts"
-
-msgid "payment.unpaid"
-msgstr "Neapmaksāts"
-
-msgid "payment.paid"
-msgstr "Apmaksāts"
-
-msgid "payment.loginRequired.forDonation"
-msgstr "Lai veiktu ziedojumu, jums ir jāpiereģistrējas."
-
-msgid "payment.loginRequired.forIssue"
-msgstr ""
-"Lai piekļūtu šim produktam, ir nepieciešams abonements vai numura iegāde. "
-"Lai pārbaudītu abonementu, piekļūtu iepriekšējam pirkumam vai iegādātos "
-"numuru, autorizējieties žurnālā."
-
-msgid "payment.loginRequired.forArticle"
-msgstr ""
-"Lai piekļūtu šim produktam, nepieciešams abonements vai raksta iegāde. Lai "
-"pārbaudītu abonementu, piekļūtu iepriekšējam pirkumam vai iegādātos rakstu, "
-"pierakstieties žurnālā."
-
-msgid "payment.loginRequired"
-msgstr "Lai veiktu maksājumu, jums ir jāpiereģistrējas."
-
-msgid "donations.thankYouMessage"
-msgstr "Paldies par ieguldījumu.  Jūsu ieguldījums ir ļoti novērtēts."
-
-msgid "donations.thankYou"
-msgstr "Paldies"
-
-msgid "help.goToEditPage"
-msgstr "Mainīt {$sectionTitle}"
-
-msgid "help.searchReturnResults"
-msgstr "Atgriezties pie meklēšanas rezultātiem"
-
-msgid "help.ojsHelpAbbrev"
-msgstr "OJS palīdzība"
-
-msgid "help.ojsHelp"
-msgstr "Open Journal Systems palīdzība"
-
-msgid "about.aboutOJSSite"
-msgstr ""
-"Šī vietne izmanto Open Journal Systems {$ojsVersion}, kas ir atvērtā "
-"pirmkoda žurnālu pārvaldības un publicēšanas programmatūra, ko saskaņā ar "
-"GNU Vispārējo publisko licenci izstrādājis, atbalsta un brīvi izplata Public "
-"Knowledge Project. Apmeklējiet PKP tīmekļa vietni, lai <a href=\"http://pkp."
-"sfu.ca/\">uzzinātu vairāk par šo programmatūru</a>. Ar jautājumiem par "
-"žurnālu un materiālu iesniegšanu, lūdzu, sazinieties tieši ar vietni."
-
-msgid "about.aboutOJSJournal"
-msgstr ""
-"Šis žurnāls izmanto Open Journal Systems {$ojsVersion}, kas ir atvērtā "
-"pirmkoda žurnālu pārvaldības un publicēšanas programmatūra, ko saskaņā ar "
-"GNU Vispārējo publisko licenci izstrādājis, atbalsta un brīvi izplata Public "
-"Knowledge Project. Apmeklējiet PKP tīmekļa vietni, lai <a href=\"http://pkp."
-"sfu.ca/\">uzzinātu vairāk par šo programmatūru</a>. Ar jautājumiem par "
-"žurnālu un materiālu iesniegšanu, lūdzu, <a href=\"{$contactUrl}\""
-">sazinieties tieši ar žurnālu</a>."
-
-msgid "about.aboutSoftware"
-msgstr "Par Open Journal Systems"
-
-msgid "about.aboutThisPublishingSystem.altText"
-msgstr "OJS rediģēšanas un publicēšanas process"
-
-msgid "about.aboutThisPublishingSystem"
-msgstr ""
-"Plašāka informācija par publicēšanas sistēmu, platformu un darba plūsmu OJS/"
-"PKP."
-
-msgid "payment.membership.renewMembership"
-msgstr "Atjaunot individuālo dalību"
-
-msgid "payment.membership.buyMembership"
-msgstr "Iegādāties individuālo dalību"
-
-msgid "payment.type.membership"
-msgstr "Individuālā dalības maksa"
-
-msgid "about.memberships"
-msgstr "Dalība"
-
-msgid "about.availableSubscriptionTypes"
-msgstr "Abonēšanas veidi"
-
-msgid "about.subscriptionTypes.cost"
-msgstr "Izmaksas"
-
-msgid "about.subscriptionTypes.duration"
-msgstr "Ilgums"
-
-msgid "about.subscriptionTypes.format"
-msgstr "Formāts"
-
-msgid "about.subscriptionTypes.name"
-msgstr "Nosaukums"
-
-msgid "about.subscriptionsContact"
-msgstr "Abonēšanas kontaktinformācija"
-
-msgid "about.subscriptions.institutional"
+"<h4>PIEZĪME!</h4>\n"
+"<p>Sistēma nevarēja automātiski pārrakstīt konfigurācijas failu.Lai "
+"piemērotu konfigurācijas izmaiņas, ir jāatver <tt>config.inc.php</"
+"tt>piemērotā teksta redaktorā un jāaizstāj saturs ar turpmāk norādītā teksta "
+"lauka saturu.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Abonementu pārvaldība"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individuāli abonementi"
+
+msgid "subscriptionManager.institutionalSubscriptions"
 msgstr "Iestāžu abonementi"
 
-msgid "about.subscriptions.individual"
-msgstr "Individuālie abonementi"
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Abonementu veidi"
 
-msgid "about.subscriptions"
-msgstr "Abonementi"
+msgid "plugins.categories.viewableFiles"
+msgstr "Rakstu saliktņu spraudņi"
 
-msgid "about.archiving"
-msgstr "Arhivēšana"
-
-msgid "about.delayedOpenAccessDescription2"
-msgstr "mēnesi(-šus) pēc numura publicēšanas."
-
-msgid "about.delayedOpenAccessDescription1"
-msgstr "Šī žurnāla saturs būs pieejams atvērtās piekļuves formātā"
-
-msgid "about.delayedOpenAccess"
-msgstr "Atvērtā piekļuve ar embargo periodu"
-
-msgid "about.openAccessPolicy"
-msgstr "Atvērtās piekļuves politika"
-
-msgid "about.publicationFrequency"
-msgstr "Publicēšanas biežums"
-
-msgid "about.peerReviewProcess"
-msgstr "Recenzēšanas process"
-
-msgid "about.authorFeesMessage"
-msgstr "Šis žurnāls iekasē šādu autora maksu."
-
-msgid "about.authorFees"
-msgstr "Autora maksa"
-
-msgid "about.privacyStatement"
-msgstr "Privātuma atruna"
-
-msgid "about.copyrightNotice"
-msgstr "Paziņojums par autortiesībām"
-
-msgid "about.submissionPreparationChecklist.description"
+msgid "plugins.categories.viewableFiles.description"
 msgstr ""
-"Iesniegšanas procesā autoriem ir jāatzīmē, vai materiāls atbilst visiem "
-"turpmāk minētajiem punktiem. Autoriem, kas neievēro šīs vadlīnijas, "
-"iesniegtie materiāli var tikt nosūtīti atpakaļ."
+"Rakstu saliktņa spraudņi papildina atbalstu dažādu dokumentu tipu "
+"atspoguļošanai rakstu saliktņos."
 
-msgid "about.submissionPreparationChecklist"
-msgstr "Kontrolsaraksts materiāla sagatavošanai pirms iesniegšanas"
-
-msgid "about.authorGuidelines"
-msgstr "Vadlīnijas autoriem"
-
-msgid "about.onlineSubmissions.viewSubmissions"
-msgstr "skatiet iesniegtos materiālus gaidīšanas rindā"
-
-msgid "about.onlineSubmissions.newSubmission"
-msgstr "Iesniegt jaunu materiālu"
-
-msgid "about.onlineSubmissions.submitToSection"
-msgstr "Iesniedziet materiālu <a href=\"{$url}\">{$name}</a> sadaļā."
-
-msgid "about.onlineSubmissions.submissionActions"
-msgstr "{$newSubmission} vai {$viewSubmissions}."
-
-msgid "about.onlineSubmissions.registrationRequired"
-msgstr "{$login} vai {$register}, lai iesniegtu materiālu."
-
-msgid "about.onlineSubmissions.register"
-msgstr "Reģistrēties"
-
-msgid "about.onlineSubmissions.login"
-msgstr "Pieslēgties"
-
-msgid "about.submissions"
-msgstr "Iesniegtie materiāli"
-
-msgid "about.sectionPolicies"
-msgstr "Sadaļas politika"
-
-msgid "about.focusAndScope"
-msgstr "Mērķis un darbības joma"
-
-msgid "about.editorialPolicies"
-msgstr "Redakcijas politika"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biogrāfija"
-
-msgid "about.editorialTeam"
-msgstr "Redkolēģija"
-
-msgid "about.history"
-msgstr "Žurnāla vēsture"
-
-msgid "about.aboutContext"
-msgstr "Par žurnālu"
-
-msgid "about.contact"
-msgstr "Kontaktinformācija"
-
-msgid "about.statistics"
-msgstr "Statistika"
-
-msgid "archive.issueUnavailable"
-msgstr "Izdevums nav pieejams"
-
-msgid "archive.browse"
-msgstr "Pārlūkot vecākos izdevumus"
-
-msgid "archive.archivesPageNumber"
-msgstr "Arhīvi - {$pageNumber} lapa"
-
-msgid "editor.submissionEditing.notes"
+msgid "plugins.categories.auth.description"
 msgstr ""
-"\n"
-"\t<ol>\n"
-"\t<li>Izceltie elementi norāda, ka redaktoram ir jāveic darbība, kas "
-"apzīmēta šādi:\n"
-"\t\t<ul>\n"
-"\t\t\t<li class=\"highlightCopyediting\">Nepieciešama darbība teksta "
-"rediģēšanas posmā</li>\n"
-"\t\t\t<li class=\"highlightLayoutEditing\">Nepieciešama darbība maketēšanas "
-"posmā</li>\n"
-"\t\t\t<li class=\"higlightProofreading\">Nepieciešama darbība korektūras "
-"posmā</li>\n"
-"\t\t</ul>\n"
-"\t</li>\n"
-"</ol>"
+"Autorizācijas spraudņi ļauj Open Journal Systems deleģēt lietotāju "
+"autentifikācijas uzdevumus citām sistēmām, piemēram, LDAP serveriem."
 
-msgid "editor.submissionReview.notes"
+msgid "plugins.categories.generic.description"
 msgstr ""
-"\n"
-"\t<ol>\n"
-"\t<li>Izceltie elementi norāda, ka redaktoram ir jāveic darbība, kas "
-"apzīmēta šādi:\n"
-"\t\t<ul>\n"
-"\t\t\t<li class=\"highlightReviewerNotNotified\">Recenzents ir piešķirts, "
-"bet par to nav paziņots pa e-pastu</li>\n"
-"\t\t\t<li class=\"highlightNoDecision\">Visi recenzenti ir iesnieguši savus "
-"komentārus, bet lēmums nav reģistrēts</li>\n"
-"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autors ir augšupielādējis "
-"pārskatītu manuskriptu</li>\n"
-"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Recenzents ir "
-"nokavējis recenzēšanas uzaicinājuma apstiprināšanu</li>\n"
-"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Recenzents ir "
-"nokavējis recenzijas pabeigšanu</li>\n"
-"\t\t</ul>\n"
-"\t</li>\n"
-"\t<li>Sadaļa \"Termiņš\" tiek aizpildīta, kad recenzents pieņem uzaicinājumu "
-"recenzēt; tā parāda nedēļu skaitu līdz recenzēšanas termiņa beigām vai (-) "
-"nedēļu skaitu, par kurām termiņš ir nokavēts.</li>\n"
-"</ol>"
-
-msgid "manager.people.noAdministrativeRights"
-msgstr ""
-"Atvainojiet, jums nav administratora tiesību attiecībā uz šo lietotāju. Tas "
-"var būt tāpēc, ka:\n"
-"\t\t<ul>\n"
-"\t\t\t<li>Lietotājs ir vietnes administrators</li>\n"
-"\t\t\t<li>Lietotājs ir aktīvs žurnālos, kurus jūs nepārvaldāt.</li>\n"
-"\t\t</ul>\n"
-"\tŠis uzdevums jāveic vietnes administratoram.\n"
-"\t"
-
-msgid "manager.people.confirmDisable"
-msgstr ""
-"Atslēgt šo lietotāju? Tas neļaus lietotājam pieteikties sistēmā.\n"
-"\n"
-"Pēc izvēles varat lietotājam norādīt iemeslu, kāpēc viņa konts ir atspējots."
-
-msgid "manager.setup.referenceLinkingDescription"
-msgstr ""
-"<p>Lai lasītāji varētu atrast autora citēto darbu tiešsaistes versijas, ir "
-"pieejamas šādas iespējas.</p>\n"
-"\n"
-"<ol>\n"
-"\t<li><strong>Pievienot Lasīšanas rīku (Add a Reading Tool)</strong><p>"
-"Žurnāla administrators var pievienot \"Atrast atsauces\" (Find References) "
-"lasīšanas rīkiem, kas tiek pievienoti publicētajiem materiāliem - tas ļauj "
-"lasītājiem ielīmēt atsauces nosaukumu un pēc tam meklēt citēto darbu "
-"iepriekš atlasītās zinātniskās datubāzēs.</p></li>\n"
-"\t<li><strong> Saites iestrādāšana atsaucēs (Embed Links in the "
-"References)</strong><p>Maketētājs var pievienot saiti uz atsaucēm, kas "
-"atrodamas tiešsaistē, izmantojot šādus norādījumus (kurus var "
-"rediģēt).</p></li>\n"
-"</ol>"
+"Vispārīgos spraudņus izmanto, lai paplašinātu Open Journal Systems dažādos "
+"veidos, kurus neatbalsta citas spraudņu kategorijas."
 
 msgid "manager.setup.copyrightNotice.sample"
 msgstr ""
@@ -2251,8 +810,8 @@ msgstr ""
 "Autori, kas publicējas šajā žurnālā, piekrīt šādiem noteikumiem:\n"
 "<ol type=\"a\">\n"
 "\t<li>Autori saglabā autortiesības un piešķir žurnālam pirmpublicēšanas "
-"tiesības, vienlaikus licencējot darbu ar <a target=\"_new\" href=\"http"
-"://creativecommons.org/licenses/by/4.0/\">Creative Commons attiecinājuma "
+"tiesības, vienlaikus licencējot darbu ar <a target=\"_new\" href=\"http://"
+"creativecommons.org/licenses/by/4.0/\">Creative Commons attiecinājuma "
 "licenci</a>, kas ļauj citiem dalīties ar darbu, norādot darba autorību un "
 "sākotnējo publikāciju šajā žurnālā.</li>\n"
 "\t<li>Autori var noslēgt atsevišķus papildu līgumus par žurnālā publicētās "
@@ -2289,124 +848,1565 @@ msgstr ""
 "Access</a>).</li>\n"
 "</ol>"
 
-msgid "grid.catalogEntry.availableRepresentation.notApproved"
-msgstr "Tiek gaidīts apstiprinājums"
-
-msgid "grid.catalogEntry.availableRepresentation.approved"
-msgstr "Apstiprināts"
-
-msgid "article.view.interstitial"
-msgstr "Lūdzu, izvēlieties rakstu failu, lai to lejupielādētu."
-
-msgid "user.profile.form.hideOtherContexts"
-msgstr "Paslēpt citus žurnālus"
-
-msgid "user.profile.form.showOtherContexts"
-msgstr "Reģistrēties citos žurnālos"
-
-msgid "notification.type.approveSubmissionTitle"
-msgstr "Tiek gaidīts apstiprinājums."
-
-msgid "notification.type.approveSubmission"
+msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
-"Šis iesniegtais materiāls pašlaik gaida apstiprinājumu, pirms tas tiks "
-"publicēts šajā izdevumā."
+"Soļi: Iesniegto materiālu rinda &gt; Iesniegto materiālu recenzēšana &gt; "
+"Iesniegto materiālu rediģēšana &gt; Satura rādītājs. <br /><br />\n"
+"Izvēlieties modeli šo rediģēšanas procesa aspektu apstrādei. (Lai ieceltu "
+"atbildīgo redaktoru un sadaļu redaktorus, apmeklējiet sadaļu Redaktori "
+"žurnāla pārvaldībā.)"
 
-msgid "editor.navigation.issues"
-msgstr "Žurnāla numuri"
-
-msgid "grid.action.createContext"
-msgstr "Izveidot jaunu žurnālu"
-
-msgid "user.authorization.invalidCopyditorSubmission"
+msgid "manager.setup.referenceLinkingDescription"
 msgstr ""
-"Nederīgs teksta redaktora iesniegums vai nav pieprasīts teksta redaktora "
-"iesniegums!"
+"<p>Lai lasītāji varētu atrast autora citēto darbu tiešsaistes versijas, ir "
+"pieejamas šādas iespējas.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Pievienot Lasīšanas rīku (Add a Reading Tool)</"
+"strong><p>Žurnāla administrators var pievienot \"Atrast atsauces\" (Find "
+"References) lasīšanas rīkiem, kas tiek pievienoti publicētajiem materiāliem "
+"- tas ļauj lasītājiem ielīmēt atsauces nosaukumu un pēc tam meklēt citēto "
+"darbu iepriekš atlasītās zinātniskās datubāzēs.</p></li>\n"
+"\t<li><strong> Saites iestrādāšana atsaucēs (Embed Links in the References)</"
+"strong><p>Maketētājs var pievienot saiti uz atsaucēm, kas atrodamas "
+"tiešsaistē, izmantojot šādus norādījumus (kurus var rediģēt).</p></li>\n"
+"</ol>"
 
-msgid "user.authorization.invalidIssue"
-msgstr "Pieprasīts nederīgs izdevums!"
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Atslēgt šo lietotāju? Tas neļaus lietotājam pieteikties sistēmā.\n"
+"\n"
+"Pēc izvēles varat lietotājam norādīt iemeslu, kāpēc viņa konts ir atspējots."
 
-msgid "user.authorization.sectionAssignment"
-msgstr "Jūs mēģināt piekļūt rakstam, kas nav no jūsu sadaļas."
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Atvainojiet, jums nav administratora tiesību attiecībā uz šo lietotāju. Tas "
+"var būt tāpēc, ka:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Lietotājs ir vietnes administrators</li>\n"
+"\t\t\t<li>Lietotājs ir aktīvs žurnālos, kurus jūs nepārvaldāt.</li>\n"
+"\t\t</ul>\n"
+"\tŠis uzdevums jāveic vietnes administratoram.\n"
+"\t"
 
-msgid "user.authorization.noContext"
-msgstr "Netika atrasts neviens žurnāls, kas atbilstu jūsu pieprasījumam."
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Izceltie elementi norāda, ka redaktoram ir jāveic darbība, kas "
+"apzīmēta šādi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Recenzents ir piešķirts, "
+"bet par to nav paziņots pa e-pastu</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Visi recenzenti ir iesnieguši savus "
+"komentārus, bet lēmums nav reģistrēts</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autors ir augšupielādējis "
+"pārskatītu manuskriptu</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Recenzents ir "
+"nokavējis recenzēšanas uzaicinājuma apstiprināšanu</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Recenzents ir "
+"nokavējis recenzijas pabeigšanu</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>Sadaļa \"Termiņš\" tiek aizpildīta, kad recenzents pieņem uzaicinājumu "
+"recenzēt; tā parāda nedēļu skaitu līdz recenzēšanas termiņa beigām vai (-) "
+"nedēļu skaitu, par kurām termiņš ir nokavēts.</li>\n"
+"</ol>"
 
-msgid "user.authorization.copyeditorAssignmentMissing"
-msgstr "Piekļuve liegta! Jūs neesat piešķirts šim rakstam kā teksta redaktors."
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Izceltie elementi norāda, ka redaktoram ir jāveic darbība, kas "
+"apzīmēta šādi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Nepieciešama darbība teksta "
+"rediģēšanas posmā</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Nepieciešama darbība maketēšanas "
+"posmā</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Nepieciešama darbība korektūras "
+"posmā</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
 
-msgid "notification.type.awaitingRepresentations"
-msgstr "Tiek gaidīti saliktņi."
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktīvie redaktoru piešķīrumi"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Pabeigtie redaktoru piešķīrumi"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Nav piešķirts neviens iesniegtais materiāls."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Atkārtoti paziņojot šim teksta redaktoram, viņa uzdevums tiks sākts no "
+"jauna. Vai esat pārliecināts, ka vēlaties to darīt?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Atkārtoti paziņojot šim autoram, viņa uzdevums tiks sākts no jauna. Vai esat "
+"pārliecināts, ka vēlaties to darīt?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Atkārtoti paziņojot šim maketētājam, viņa uzdevums tiks sākts no jauna. Vai "
+"esat pārliecināts, ka vēlaties to darīt?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Atkārtoti paziņojot šim korektoram, viņa uzdevums tiks sākts no jauna. Vai "
+"esat pārliecināts, ka vēlaties to darīt?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Nožēla"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Recenzenta nožēla, atcelšana un iepriekšējās kārtas"
+
+msgid "sectionEditor.regrets"
+msgstr "Nožēla"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Skatīt nožēlas, atcelšanas, iepriekšējās kārtas"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Recenzēšana, kārta {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Redaktora lēmums, kārta {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Recenzenta nožēla un atcelšana"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Izteikt nožēlu"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Rezultāts"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Esoša lietotāja reģistrēšana par recenzentu"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Izveidot jaunu recenzentu"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktīvie redakcijas piešķīrumi"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Pabeigtie redakcijas piešķīrumi"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Nav aktīvu redakcijas piešķīrumu."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Maketēšanas piešķīrumi"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Augšupielādēt saliktņa formātu"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Aizvietot datni"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Augšupielādēt papildu datni"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Nederīgs attēla formāts. Pieļaujamie formāti ir .gif, .jpg un .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Šis saliktnis būs pieejams atsevišķā tīmekļa vietnē."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Attālināti izvietotā satura URL"
+
+msgid "reviewer.pendingReviews"
+msgstr "Raksti, kas gaida recenzēšanu"
+
+msgid "reviewer.completedReviews"
+msgstr "Gatavs"
+
+msgid "reviewer.averageQuality"
+msgstr "Vērtējums"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Izskatāmā datne"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Paziņot redaktoram"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Veiks recenzēšanu"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Nav iespējams veikt recenzēšanu"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Iesniegtais materiāls būs pieejams, ja un kad recenzents piekritīs veikt "
+"pārskatīšanu"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Iesniegto materiālu redaktors"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Ierakstiet vai ielīmējiet recenzijas komentārus šeit"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Ievadīt redaktoru"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Nosūtīt atgādinājumu"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Ieteikums"
+
+msgid "reviewer.article.submitReview"
+msgstr "Iesniegt recenziju redaktoram"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Komentāri"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Augšupielādētās datnes"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versija, ko augšupielādējis recenzents"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Ja vēlaties komentēt failu redaktoram, saglabājiet to cietajā diskā un "
+"izmantojiet Browse/Upload.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Redaktora lūgums"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Jūsu atbilde"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Iesniegta recenzija"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Recenzijas temiņš"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Iesniegtais materiāls pieņemts"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Nepieciešamās korekcijas"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Atkārtoti iesniegt recenzēšanai"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Atkārtoti iesniegt citur"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Noraidīt iesniegto materiālu"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Skatīt komentārus"
+
+msgid "reviewer.article.schedule"
+msgstr "Grafiks"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Iesniegtais materiāls recenzēšanai"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Recenzēšanas grafiks"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Recenzēšanas soļi"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Recenzēšanas vadlīnijas"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Recenzēšanas vadlīnijās recenzentiem tiks sniegti kritēriji, pēc kuriem tie "
+"varēs novērtēt iesniegtā materiāla piemērotību publicēšanai žurnālā, un "
+"tajās var iekļaut īpašus norādījumus, kā sagatavot efektīvu un noderīgu "
+"recenziju. Veicot recenzēšanu, recenzentiem tiek piedāvāti divi atvērti "
+"teksta lauki - pirmais \"autoram un redaktoram\" un otrais \"redaktoram\". "
+"Žurnāla pārvaldnieks var arī izveidot recenziju veidlapu sadaļā \"Recenziju "
+"veidlapas\". Visos gadījumos redaktoriem būs iespēja iekļaut recenzijas "
+"sarakstē ar autoru."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Paziņot iesniegtā materiāla redaktoram"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "par to, vai veiksiet recenzēšanu."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Ja gatavojaties veikt recenzēšanu, iepazīstieties ar recenzēšanas vadlīnijām."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Noklikšķiniet uz failu nosaukumiem, lai lejupielādētu un pārskatītu (ekrānā "
+"vai izdrukājot) ar šo iesniegto materiālu saistītos failus."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Norādiet, vai jums ir vai nav interešu konflikts attiecībā uz šo pētījumu "
+"(skatīt <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">IK&nbsp;politika</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Interešu konflikts"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Noklikšķiniet uz ikonas, lai ievadītu (vai ielīmētu) savu recenziju par šo "
+"iesniegto materiālu."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Turklāt varat augšupielādēt failus, lai redaktors un/vai autors varētu ar "
+"tiem iepazīties."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Izvēlieties ieteikumu un iesniedziet recenziju, lai pabeigtu procesu. Pirms "
+"ieteikuma izvēles ir jāievada recenzija vai jāaugšupielādē fails."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Iestatiet vai pielāgojiet recenzenta ieteikumu."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Nav atlasīts neviens ieteikums. Jums ir jāizvēlas ieteikums, ko iesniegt."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Kad būsiet reģistrējis lēmumu, vairs nevarēsiet veikt izmaiņas šajā "
+"recenzijā. Vai tiešām vēlaties turpināt?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Datne maketam"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Maketētāja datne"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Maketētāja datne"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Nav korektūras piešķires"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Lai augšupielādētu manuskriptu šajā žurnālā, izpildiet šādas darbības.</"
+"p>\n"
+"<ol>\n"
+"<li>Šajā lapā noklikšķiniet uz Browse (Pārlūkot) (vai Choose File "
+"(Izvēlēties failu)), kas atver logu Izvēlēties failu, lai atrastu failu "
+"datora cietajā diskā.</li>\n"
+"<li>Atrodiet failu, kuru vēlaties iesniegt, un to iezīmējiet.</li>\n"
+"<li>Logā Choose File (Izvēlēties failu) noklikšķiniet uz Open (Atvērt), kas "
+"šajā lapā ievietos faila nosaukumu.</li>\n"
+"<li>Šajā lapā noklikšķiniet uz Upload (Augšupielādēt), kas augšupielādē "
+"failu no datora žurnāla tīmekļa vietnē un pārdēvē to atbilstoši žurnāla "
+"noteikumiem.</li>\n"
+"<li>Kad manuskripts ir augšupielādēts, lapas apakšā noklikšķiniet uz Save "
+"and Continue (Saglabāt un turpināt).</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Pieprasījuma e-pastu nevar nosūtīt, kamēr nav izveidota recenzētā versija."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Pieprasījuma e-pastu nevar nosūtīt, kamēr nav atlasīts fails teksta "
+"rediģēšanai redaktora lēmuma un/vai recenzēšanas lapā."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Pieprasījuma e-pastu nevar nosūtīt, kamēr fails nav augšupielādēts teksta "
+"rediģēšanai."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Sākotnējā teksta rediģēšana"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Redaktora rediģētā versija"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Autora rediģētā versija"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Galīgā rediģētā versija"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Red. versija"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Piešķirt teksta redaktoru"
+
+msgid "submission.copyedit.useFile"
+msgstr "Izmantot failu"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Teksta rediģēšanas komentāri"
+
+msgid "submission.copyedit.instructions"
+msgstr "Teksta rediģēšanas instrukcijas"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Nav (augšupielādējiet galīgo rediģēto versiju kā maketa versiju pirms "
+"pieprasījuma nosūtīšanas)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Publiskā saliktņa identifikācija jau pastāv."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Piešķirt maketētāju"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Aizstāt maketētāju"
+
+msgid "submission.layout.layoutComments"
+msgstr "Maketa piezīmes"
+
+msgid "submission.layout.instructions"
+msgstr "Maketa instrukcijas"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Atsauču sasaiste"
+
+msgid "submission.proofreadingComments"
+msgstr "Korektūras komentāri"
+
+msgid "submission.proofread.corrections"
+msgstr "Korektūras labojumi"
+
+msgid "submission.proofread.instructions"
+msgstr "Pārbaudes instrukcijas"
+
+msgid "submission.logType.article"
+msgstr "Raksts"
+
+msgid "submission.logType.author"
+msgstr "Autors"
+
+msgid "submission.logType.editor"
+msgstr "Redaktors"
+
+msgid "submission.logType.review"
+msgstr "Recenzēšana"
+
+msgid "submission.logType.copyedit"
+msgstr "Teksta rediģēšana"
+
+msgid "submission.logType.layout"
+msgstr "Maketēšana"
+
+msgid "submission.logType.proofread"
+msgstr "Korektūra"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Redaktora/autora sarakste"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Teksta rediģēšanas komentāri"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Šos komentārus var kopīgot ar autoru.<br />\n"
+"(Pēc saglabāšanas var pievienot papildu komentārus.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Autoram un redaktoram"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Redaktoram"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Pēc nosūtīšanas iesniedziet rediģējamu anonīmu kopiju, ko nosūtīt "
+"recenzentiem."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Autoram un redaktoram"
+
+msgid "submission.comments.forEditor"
+msgstr "Redaktoram"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Saglabāt un nosūtīt e-pastu autoram"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Saglabāt un nosūtīt e-pastu redaktoram"
+
+msgid "user.register.selectContext"
+msgstr "Izvēlieties žurnālu, kurā reģistrēties:"
+
+msgid "user.register.noJournals"
+msgstr "Šajā vietnē nav žurnālu, kuros var reģistrēties."
+
+msgid "user.register.privacyStatement"
+msgstr "Privātuma atruna"
+
+msgid "user.register.registrationDisabled"
+msgstr "Šis žurnāls pašlaik nepieņem lietotāju reģistrāciju."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Ievadītā parole nav pietiekami gara."
+
+msgid "user.register.readerDescription"
+msgstr "Paziņojums pa e-pastu par žurnāla numura publicēšanu."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "Paziņojums pa e-pastu, kad žurnāla numurs ir atvērtā pieejā."
+
+msgid "user.register.authorDescription"
+msgstr "Var iesniegt materiālus žurnālam."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Gatavība veikt žurnālam iesniegto darbu recenzēšanu."
+
+msgid "user.register.reviewerDescription"
+msgstr "Gatavība veikt vietnē iesniegto darbu recenzēšanu."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Noteikt recenzēšanas intereses ( būtiskās jomas un pētniecības metodes):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Jā, es vēlos saņemt paziņojumus par jaunām publikācijām un paziņojumiem "
+"visos žurnālos, kuros esmu reģistrējies."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Jā, es piekrītu, ka mani dati tiek vākti un glabāti saskaņā ar šī žurnāla <a "
+"href=\"{$privacyUrl}\" target=\"_blank\">privātuma atrunu</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Jums ir jāpiekrīt katra žurnāla, kurā reģistrējaties, privātuma atrunai."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Jums ir jāpiekrīt šīs vietnes privātuma atrunai."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Mani abonementi"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Abonēšanas statuss"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Aktīvie abonementi un abonementi, kuru derīguma termiņš ir beidzies, ir "
+"redzami zemāk kopā ar to derīguma termiņu. Turklāt katram abonementam var "
+"būt pievienota šāda statusa informācija."
+
+msgid "user.subscriptions.status"
+msgstr "Statuss"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Apraksts"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Pirms abonementa aktivizēšanas ir nepieciešama papildu informācija"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Pirms abonementa aktivizēšanas tas ir jāpārskata"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuāls maksājums ir uzsākts, bet vēl nav saņemts"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Tiešsaistes maksājums ir uzsākts, bet ticis atcelts vai nav pabeigts"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individuālais abonements"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Iestāžu abonementi"
+
+msgid "user.subscriptions.renew"
+msgstr "Atjaunot"
+
+msgid "user.subscriptions.purchase"
+msgstr "Iegāde"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Iegādāties jaunu abonementu"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Iegādāties individuālo abonementu"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Iegādāties iestāžu abonementu"
+
+msgid "user.subscriptions.expires"
+msgstr "Derīguma termiņš beidzas: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Derīguma termiņš beidzies: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Skatīt pieejamos abonēšanas veidus"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Abonēšanas veids"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Dalība"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Izvēlētajam abonēšanas veidam ir nepieciešama dalības informācija."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas veidu."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Šim lietotāja kontam jau ir individuāls abonements."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Informācija par dalību, ja tā ir nepieciešama izvēlētajam abonēšanas veidam."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Ir jānorāda iestādes nosaukums."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Pasta adrese"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domēna adrese"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Ja šeit tiek ievadīts domēns, IP diapazoni nav obligāti.<br />Derīgas "
+"vērtības ir domēna vārdi (piemēram, lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Atlasītajam abonementa tipam ir nepieciešams domēns un/vai IP diapazons "
+"abonementa autentifikācijai."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Lūdzu, ievadiet derīgu domēnu."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP diapazoni"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ja šeit tiek ievadīti IP diapazoni, domēna norādīšana nav obligāta.<br /"
+">Derīgas vērtības ir IP adrese (piemēram, 142.58.103.1), IP diapazons "
+"(piemēram, 142.58.103.1 - 142.58.103.4), IP diapazons ar aizstājējzīmi "
+"'*' (piemēram, 142.58.*.*) un IP diapazons ar CIDR (piemēram, "
+"142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Lūdzu, ievadiet derīgu IP diapazonu."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Dzēst"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Pievienot"
+
+msgid "search.browseAuthorIndex"
+msgstr "Pārlūkot autoru rādītāju"
+
+msgid "search.searchFor"
+msgstr "Meklēt rakstus par"
+
+msgid "search.withinJournal"
+msgstr "Ietvaros"
+
+msgid "search.allJournals"
+msgstr "Visi žurnāli"
+
+msgid "search.authorIndex"
+msgstr "Pārlūkot autoru rādītāju"
+
+msgid "search.authorDetails"
+msgstr "Autora informācija"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Meklēšanas padomi: <ul>\n"
+"<li>Search terms are case-insensitive</li>\n"
+"<li>Common words are ignored</li>\n"
+"<li>By default only articles containing <em>all</em> terms in the query are "
+"returned (i.e., <em>AND</em> is implied)</li>\n"
+"<li>Combine multiple words with <em>OR</em> to find articles containing "
+"either term; e.g., <em>education OR research</em></li>\n"
+"<li>Use parentheses to create more complex queries; e.g., <em>archive "
+"((journal OR conference) NOT theses)</em></li>\n"
+"<li>Search for an exact phrase by putting it in quotes; e.g., <em>\"open "
+"access publishing\"</em></li>\n"
+"<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; "
+"e.g. <em>online -politics</em> or <em>online NOT politics</em></li>\n"
+"<li>Use <strong>*</strong> in a term as a wildcard to match any sequence of "
+"characters; e.g., <em>soci* morality</em> would match documents containing "
+"\"sociological\" or \"societal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "{$title} skats"
+
+msgid "article.pdf.title"
+msgstr "Portatīvo dokumentu formāts (PDF)"
+
+msgid "article.download"
+msgstr "Lejupielādēt šo PDF failu"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Ja jūsu tīmekļa pārlūkprogrammā ir instalēts PDF lasītāja spraudnis "
+"(piemēram, jaunākās <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>), atlasītajam PDF failam ir jāielādējas šeit.</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Raksta lejupielāde"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Atlasītā faila lejupielādei jāsākas automātiski. Ja tā nenotiek, "
+"noklikšķiniet uz tālāk norādītās saites. Ņemiet vērā, ka šī faila skatīšanai "
+"var būt nepieciešams īpašs skatītājs vai spraudnis.<br /><br />Ja fails "
+"netiek lejupielādēts automātiski, <a href=\"{$url}\">klikšķiniet šeit</a>."
+
+msgid "site.journalsHosted"
+msgstr "Šajā vietnē izvietotie žurnāli"
+
+msgid "site.journalView"
+msgstr "Skatīt žurnālu"
+
+msgid "site.journalRegister"
+msgstr "Reģistrēties"
+
+msgid "site.journalCurrent"
+msgstr "Jaunākais izdevums"
+
+msgid "site.noJournals"
+msgstr "Nav pieejamu žurnālu."
+
+msgid "current.current"
+msgstr "Jaunākais"
+
+msgid "current.noCurrentIssue"
+msgstr "Nav jaunāko izdevumu"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Šis žurnāls nav publicējis nevienu numuru."
+
+msgid "archive.archives"
+msgstr "Arhīvi"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arhīvi - {$pageNumber} lapa"
+
+msgid "archive.browse"
+msgstr "Pārlūkot vecākos izdevumus"
+
+msgid "archive.issueUnavailable"
+msgstr "Izdevums nav pieejams"
+
+msgid "about.statistics"
+msgstr "Statistika"
+
+msgid "about.contact"
+msgstr "Kontaktinformācija"
+
+msgid "about.aboutContext"
+msgstr "Par žurnālu"
+
+msgid "about.history"
+msgstr "Žurnāla vēsture"
+
+msgid "about.editorialTeam"
+msgstr "Redkolēģija"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biogrāfija"
+
+msgid "about.editorialPolicies"
+msgstr "Redakcijas politika"
+
+msgid "about.focusAndScope"
+msgstr "Mērķis un darbības joma"
+
+msgid "about.sectionPolicies"
+msgstr "Sadaļas politika"
+
+msgid "about.submissions"
+msgstr "Iesniegtie materiāli"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Pieslēgties"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Reģistrēties"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} vai {$register}, lai iesniegtu materiālu."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} vai {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Iesniedziet materiālu <a href=\"{$url}\">{$name}</a> sadaļā."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Iesniegt jaunu materiālu"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "skatiet iesniegtos materiālus gaidīšanas rindā"
+
+msgid "about.authorGuidelines"
+msgstr "Vadlīnijas autoriem"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Kontrolsaraksts materiāla sagatavošanai pirms iesniegšanas"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Iesniegšanas procesā autoriem ir jāatzīmē, vai materiāls atbilst visiem "
+"turpmāk minētajiem punktiem. Autoriem, kas neievēro šīs vadlīnijas, "
+"iesniegtie materiāli var tikt nosūtīti atpakaļ."
+
+msgid "about.copyrightNotice"
+msgstr "Paziņojums par autortiesībām"
+
+msgid "about.privacyStatement"
+msgstr "Privātuma atruna"
+
+msgid "about.authorFees"
+msgstr "Autora maksa"
+
+msgid "about.authorFeesMessage"
+msgstr "Šis žurnāls iekasē šādu autora maksu."
+
+msgid "about.peerReviewProcess"
+msgstr "Recenzēšanas process"
+
+msgid "about.publicationFrequency"
+msgstr "Publicēšanas biežums"
+
+msgid "about.openAccessPolicy"
+msgstr "Atvērtās piekļuves politika"
+
+msgid "about.delayedOpenAccess"
+msgstr "Atvērtā piekļuve ar embargo periodu"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Šī žurnāla saturs būs pieejams atvērtās piekļuves formātā"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mēnesi(-šus) pēc numura publicēšanas."
+
+msgid "about.archiving"
+msgstr "Arhivēšana"
+
+msgid "about.subscriptions"
+msgstr "Abonementi"
+
+msgid "about.subscriptions.individual"
+msgstr "Individuālie abonementi"
+
+msgid "about.subscriptions.institutional"
+msgstr "Iestāžu abonementi"
+
+msgid "about.subscriptionsContact"
+msgstr "Abonēšanas kontaktinformācija"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nosaukums"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formāts"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Ilgums"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Izmaksas"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Abonēšanas veidi"
+
+msgid "about.memberships"
+msgstr "Dalība"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Plašāka informācija par publicēšanas sistēmu, platformu un darba plūsmu OJS/"
+"PKP."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS rediģēšanas un publicēšanas process"
+
+msgid "about.aboutSoftware"
+msgstr "Par Open Journal Systems"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Šis žurnāls izmanto Open Journal Systems {$ojsVersion}, kas ir atvērtā "
+"pirmkoda žurnālu pārvaldības un publicēšanas programmatūra, ko saskaņā ar "
+"GNU Vispārējo publisko licenci izstrādājis, atbalsta un brīvi izplata Public "
+"Knowledge Project. Apmeklējiet PKP tīmekļa vietni, lai <a href=\"http://pkp."
+"sfu.ca/\">uzzinātu vairāk par šo programmatūru</a>. Ar jautājumiem par "
+"žurnālu un materiālu iesniegšanu, lūdzu, <a href="
+"\"{$contactUrl}\">sazinieties tieši ar žurnālu</a>."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Šī vietne izmanto Open Journal Systems {$ojsVersion}, kas ir atvērtā "
+"pirmkoda žurnālu pārvaldības un publicēšanas programmatūra, ko saskaņā ar "
+"GNU Vispārējo publisko licenci izstrādājis, atbalsta un brīvi izplata Public "
+"Knowledge Project. Apmeklējiet PKP tīmekļa vietni, lai <a href=\"http://pkp."
+"sfu.ca/\">uzzinātu vairāk par šo programmatūru</a>. Ar jautājumiem par "
+"žurnālu un materiālu iesniegšanu, lūdzu, sazinieties tieši ar vietni."
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems palīdzība"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS palīdzība"
+
+msgid "help.searchReturnResults"
+msgstr "Atgriezties pie meklēšanas rezultātiem"
+
+msgid "help.goToEditPage"
+msgstr "Mainīt {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Paldies"
+
+msgid "donations.thankYouMessage"
+msgstr "Paldies par ieguldījumu.  Jūsu ieguldījums ir ļoti novērtēts."
+
+msgid "payment.loginRequired"
+msgstr "Lai veiktu maksājumu, jums ir jāpiereģistrējas."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Lai piekļūtu šim produktam, nepieciešams abonements vai raksta iegāde. Lai "
+"pārbaudītu abonementu, piekļūtu iepriekšējam pirkumam vai iegādātos rakstu, "
+"pierakstieties žurnālā."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Lai piekļūtu šim produktam, ir nepieciešams abonements vai numura iegāde. "
+"Lai pārbaudītu abonementu, piekļūtu iepriekšējam pirkumam vai iegādātos "
+"numuru, autorizējieties žurnālā."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Lai veiktu ziedojumu, jums ir jāpiereģistrējas."
+
+msgid "payment.paid"
+msgstr "Apmaksāts"
+
+msgid "payment.unpaid"
+msgstr "Neapmaksāts"
+
+msgid "payment.waived"
+msgstr "Atteikts"
+
+msgid "payment.payNow"
+msgstr "Maksāt tagad"
+
+msgid "payment.waive"
+msgstr "Atteikšanās"
+
+msgid "payment.alreadyPaid"
+msgstr "Jau samaksāts"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Ja esat jau nosūtījis maksājumu žurnālam, atzīmējiet šo lodziņu, lai "
+"pabeigtu iesniegšanas procesu.  Iesniegtais materiāls netiks izskatīts, "
+"kamēr nebūs saņemts maksājums.  Noklikšķiniet uz MAKSĀT TAGAD , lai skatītu "
+"maksājuma instrukcijas."
+
+msgid "payment.paymentReceived"
+msgstr "Maksājums saņemts"
+
+msgid "payment.paymentSent"
+msgstr "Maksājums jau ir nosūtīts"
+
+msgid "payment.authorFees"
+msgstr "Autora maksa"
+
+msgid "payment.type.submission"
+msgstr "Iesniegšanas maksa"
+
+msgid "payment.type.publication"
+msgstr "Publicēšanas maksa"
+
+msgid "payment.type.publication.required"
+msgstr "Jāsamaksā maksa par publikāciju ."
+
+msgid "payment.type.fastTrack"
+msgstr "Ātrā pārskatīšanas maksa"
+
+msgid "payment.type.membership"
+msgstr "Individuālā dalības maksa"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Pirkuma maksa par rakstu"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Pirkuma maksa par numuru"
+
+msgid "payment.type.subscription"
+msgstr "Abonēšanas maksa"
+
+msgid "payment.type.donation"
+msgstr "Ziedojumi"
+
+msgid "payment.requestPublicationFee"
+msgstr "Pieprasīt publicēšanas maksu ({$feeAmount})"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Publicēšanas maksa nav iespējota."
+
+msgid "payment.notFound"
+msgstr ""
+"Maksājums ir pieprasīts, bet pieprasījuma termiņš ir beidzies. Sazinieties "
+"ar žurnāla pārvaldnieku, lai saņemtu sīkāku informāciju."
+
+msgid "payment.donation.makeDonation"
+msgstr "Veikt ziedojumu"
+
+msgid "payment.submission.paySubmission"
+msgstr "Maksāt iesniegšanas maksu"
+
+msgid "payment.publication.payPublication"
+msgstr "Maksāt par publicēšanu"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Samaksāta publicēšanas maksa"
+
+msgid "payment.membership.buyMembership"
+msgstr "Iegādāties individuālo dalību"
+
+msgid "payment.membership.renewMembership"
+msgstr "Atjaunot individuālo dalību"
+
+msgid "payment.membership.ends"
+msgstr "Beidzas"
+
+msgid "payment.subscription.purchase"
+msgstr "Iegādāties abonementu"
+
+msgid "payment.subscription.renew"
+msgstr "Atjaunot abonementu"
+
+msgid "payment.subscription.expires"
+msgstr "Derīguma termiņš beidzas"
+
+msgid "installer.appInstallation"
+msgstr "OJS uzstādīšana"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS atjaunināšana"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Ja vēlaties atjaunināt esošo OJS instalāciju, <a href="
+"\"{$upgradeUrl}\">klikšķiniet šeit</a>, lai turpinātu."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS versija {$version}</h4>\n"
+"\n"
+"<p>Paldies, ka lejupielādējāt Public Knowledge Project <strong>Open Journal "
+"Systems</strong>. Pirms turpināt, lūdzu, izlasiet <a href=\"{$baseUrl}/docs/"
+"README.md\">README</a> failu, kas iekļauts kopā ar šo programmatūru. Lai "
+"iegūtu vairāk informācijas par Public Knowledge Project un tā programmatūras "
+"projektiem, lūdzu, apmeklējiet <a href=\"https://pkp.sfu.ca/\" target="
+"\"_blank\">PKP tīmekļa vietni</a>. Ja jums ir ziņojumi par kļūdām vai "
+"tehniskā atbalsta jautājumi par Open Journal Systems, skatiet <a href="
+"\"https://forum.pkp.sfu.ca\" target=\"_blank\">atbalsta forumu</a> vai "
+"apmeklējiet PKP tiešsaistes <a href=\"https://github.com/pkp/pkp-lib#issues"
+"\" target=\"_blank\">kļūdu ziņojumu sistēmu</a>. Lai gan atbalsta forums ir "
+"ieteicamā saziņas metode, varat arī rakstīt komandai <a href=\"mailto:pkp."
+"contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Ieteicamās sistēmas prasības</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; jūs pašlaik izmantojat PHP {$phpVersion}"
+"{$wrongPhpText}</li>\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"vai <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
+">= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x vai >= 2.0.4x vai Microsoft IIS 6</li>\n"
+"\t<li>Operētājsistēma: jebkura operētājsistēma, kas atbalsta iepriekš minēto "
+"programmatūru, tostarp <a href=\"https://www.linux.org/\" target=\"_blank"
+"\">Linux</a>, <a href=\"https://www.bsd.org\" target=\"_blank\">BSD</a>, <a "
+"href=\"https://www.oracle.com/solaris/\" target=\"_blank\">Solaris</a>, <a "
+"href=\"https://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href="
+"\"https://www.microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Tā kā PKP nav resursu, lai pārbaudītu visas iespējamās programmatūras "
+"versiju un platformu kombinācijas, netiek garantēta pareiza darbība vai "
+"atbalsts.</p>\n"
+"\n"
+"<p>Izmaiņas šajos iestatījumos var veikt pēc instalēšanas, rediģējot failu "
+"<tt>config.inc.php</tt> OJS bāzes direktorijā vai izmantojot vietnes "
+"administrēšanas tīmekļa saskarni.</p>\n"
+"\n"
+"<h4>Atbalstītās datubāzu sistēmas</h4>\n"
+"\n"
+"Pašlaik OJS ir pārbaudīta tikai ar MySQL un PostgreSQL, lai gan citas <a "
+"href=\"https://adodb.org\" target=\"_blank\">ADOdb</a> atbalstītās datubāzu "
+"pārvaldības sistēmas var darboties (pilnībā vai daļēji). OJS komandai var "
+"nosūtīt ziņojumus par savietojamību un/vai koda labojumus alternatīvām DBVS."
+"</p>\n"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Pirmsinstalācijas soļi</h4>\n"
+"\n"
+"\n"
+"<p>1. Šiem failiem un direktorijiem (kā arī to saturam) jābūt rakstāmiem:</"
+"p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> ir rakstāms (nav obligāts): {$writable_config}"
+"</li>\n"
+"\t<li><tt>public/</tt> ir rakstāms: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> ir rakstāms: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> ir rakstāms: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> ir rakstāms: {$writable_templates_compile}</"
+"li>\n"
+"\t<li><tt>cache/_db</tt> ir rakstāms: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Ir jāizveido un jāpadara rakstāms direktorijs, kurā glabāt "
+"augšupielādētos failus (skatiet tālāk “Faila iestatījumi”)..</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS versija {$version}</h4>\n"
+"\n"
+"<p>Paldies, ka lejupielādējāt Public Knowledge Project <strong>Open Journal "
+"Systems</strong>. Pirms turpināt, lūdzu, izlasiet <a href=\"{$baseUrl}/docs/"
+"README.md\">README</a> un <a href=\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> "
+"failus, kas iekļauti kopā ar šo programmatūru. Lai iegūtu vairāk "
+"informācijas par Public Knowledge Project un tā programmatūras projektiem, "
+"lūdzu, apmeklējiet <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP "
+"tīmekļa vietni</a>. Ja jums ir ziņojumi par kļūdām vai tehniskā atbalsta "
+"jautājumi par Open Journal Systems, skatiet <a href=\"http://forum.pkp.sfu.ca"
+"\" target=\"_blank\">atbalsta forumu</a> vai apmeklējiet PKP tiešsaistes <a "
+"href=\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\" > kļūdu "
+"ziņojumu sistēmu</a>. Lai gan atbalsta forums ir ieteicamā saziņas metode, "
+"varat arī rakstīt komandai uz adresi <a href=\"mailto:pkp.contact@gmail.com"
+"\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Ir <strong>stingri ieteicams</strong> pirms turpināšanas dublēt datu "
+"bāzi, failu direktoriju un OJS instalācijas direktoriju.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Lai pilnībā atbalstītu Unicode (UTF-8), visiem rakstzīmju kopas "
+"iestatījumiem atlasiet UTF-8. Lūdzu, ņemiet vērā, ka pilnīgam Unicode "
+"atbalstam nepieciešama PHP kompilācija ar <a href=\"http://www.php.net/"
+"mbstring\" target=\"_blank\">mbstring</a> bibliotēkas atbalstu (pēc "
+"noklusējuma iespējota jaunākajās PHP instalācijās). Ja jūsu serveris "
+"neatbilst šīm prasībām, var rasties problēmas, izmantojot paplašinātas "
+"rakstzīmju kopas.\n"
+"<br /><br />\n"
+"Jūsu serveris pašlaik atbalsta mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Jūsu serveris pašlaik ļauj augšupielādēt failus: <strong>{$allowFileUploads}"
+"</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Jūsu serveris pašlaik ļauj augšupielādēt failus, kuru maksimālais izmērs ir: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Galvenā valoda, kas jāizmanto šai sistēmai. Lūdzu, skatiet OJS "
+"dokumentāciju, ja jūs interesē atbalsts valodām, kuras šeit nav norādītas."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Ievadiet pilnu ceļa nosaukumu uz esošo direktoriju, kurā tiks glabāti "
+"augšupielādētie faili. Šim direktorijam nevajadzētu būt tieši pieejamam "
+"tīmeklī. <strong>Pirms instalēšanas pārliecinieties, ka šis direktorijs "
+"pastāv un ir rakstāms.</strong> Windows ceļu nosaukumos jāizmanto "
+"slīpsvītras, piemēram, \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS datu glabāšanai nepieciešama piekļuve SQL datubāzei. Atbalstāmo datubāzu "
+"sarakstu skatiet iepriekš sistēmas prasībās. Tālāk esošajos laukos norādiet "
+"iestatījumus, kas jāizmanto, lai izveidotu savienojumu ar datubāzi."
+
+msgid "installer.installApplication"
+msgstr "Uzstādīt Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Atjaunināt Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Brīdinājums:</strong> ja datubāzes instalēšanas process daļēji "
+"neizdevās, pirms mēģināt atkārtoti instalēt datu bāzi, iespējams, būs "
+"jāatmet OJS datu bāze vai datu bāzes tabulas."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>SVARĪGI!</h4>\n"
+"<p>Instalētājs nevarēja automātiski pārrakstīt konfigurācijas failu. Pirms "
+"mēģināt izmantot sistēmu, lūdzu, atveriet <tt>config.inc.php</tt> piemērotā "
+"teksta redaktorā un nomainiet tā saturu ar turpmāk norādītā teksta lauka "
+"saturu.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS instalēšana ir veiksmīgi pabeigta.</p>\n"
+"<p>Lai sāktu izmantot sistēmu, <a href=\"{$loginUrl}\">pierakstieties</a>, "
+"izmantojot iepriekšējā lapā ievadīto lietotājvārdu un paroli.</p>\n"
+"<p>Ja vēlaties kļūt par daļu no PKP kopienas, varat:</p>\n"
+"<ol>\n"
+"\t<li>lasīt <a href=\"http://pkp.sfu.ca/blog\" target=\"_new\">PKP blogu</a> "
+"un sekot līdzi <a href=\"http://pkp.sfu.ca/blog/feed\" target=\"_new\">RSS "
+"plūsmai</a>, lai saņemtu jaunumus un atjauninājumus,</li>\n"
+"\t<li>apmeklēt <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">atbalsta "
+"forumu</a>, ja jums ir jautājumi vai komentāri.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>OJS atjaunināšana uz versiju {$version} ir veiksmīgi pabeigta.</p>\n"
+"<p>Neaizmirstiet iestatījumu \"instalēts\" konfigurācijas failā config.inc."
+"php iestatīt atpakaļ uz <em>Ieslēgts (On)</em>.</p>\n"
+"<p>Ja vēl neesat reģistrējies un vēlaties saņemt jaunumus un atjauninājumus, "
+"<strong>reģistrējieties vietnē <a href=\"http://pkp.sfu.ca/ojs/register\" "
+"target=\"_new\">http://pkp.sfu.ca/ojs/register</a>.</strong> Ja jums ir "
+"jautājumi vai komentāri, lūdzu, apmeklējiet <a href=\"http://forum.pkp.sfu.ca"
+"\" target=\"_new\">atbalsta forumu</a>.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Ir pieejama jauna OJS versija! Pašlaik jūs izmantojat OJS {$currentVersion}. "
+"Jaunākā versija ir OJS {$latestVersion}. Lūdzu, apmeklējiet <a href=\"http://"
+"pkp.sfu.ca/ojs_download\" target=\"_new\">šo lapu</a>, lai lejupielādētu "
+"jaunāko versiju un atrastu atjaunināšanas norādījumus."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Ir pieejama jauna OJS versija! Pašlaik jūs izmantojat OJS {$currentVersion}. "
+"Jaunākā versija ir OJS {$latestVersion}. Lūdzu, sazinieties ar vietnes "
+"administratoru ({$siteAdminName}, <a href=\"mailto:"
+"{$siteAdminEmail}\">{$siteAdminEmail}</a>) lai informētu par jauno versiju. "
+"Sīkāka informācija ir atrodama <a href=\"http://pkp.sfu.ca/ojs_download\" "
+"target=\"_new\">šeit</a>."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} pārskatīja rakstu {$submissionId}. Jaunais faila ID ir "
+"{$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} ir atcelts no iesniegtā materiāla {$submissionId} "
+"recenzēšanas {$round} kārtā."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"{$reviewerName} uzsāka {$submissionId} iesniegtā materiāla {$round} kārtas "
+"recenzēšanu."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} ir piešķirts par {$round} kārtas recenzentu iesniegtajam "
+"materiālam {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Iesniegtā materiāla {$submissionId} {$round} kārtas recenzijas, ko veic "
+"{$reviewerName}, termiņš iestatīts uz {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Rekomendācija iesniegtā materiāla {$submissionId} {$round} kārtas "
+"recenzijai, ko veic {$reviewerName}, ir sagatavota."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Redaktors {$editorName} recenzenta {$reviewerName} vārdā ir sagatavojis "
+"ieteikumu iesniegtā materiāla {$submissionId} {$round} recenzēšanas kārtai."
+
+msgid "log.review.resubmit"
+msgstr "Materiāls {$submissionId} ir atkārtoti iesniegts pārskatīšanai."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} ir atteicies no materiāla {$submissionId} {$round} kārtas "
+"pārskatīšanas."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} ir akceptējis materiāla {$submissionId} {$round} kārtas "
+"pārskatīšanu."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} ir atteicies no materiāla {$submissionId} {$round} kārtas "
+"pārskatīšanas {$reviewerName} vārdā."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} ir akceptējis materiāla {$submissionId} {$round} kārtas "
+"pārskatīšanu {$reviewerName} vārdā."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Redaktors {$userName} recenzenta {$reviewerName} vārdā ir augšupielādējis "
+"materiāla {$submissionId} {$round} kārtas recenzēto failu."
+
+msgid "log.review.reviewerFile"
+msgstr "Ir augšupielādēts recenzenta fails."
+
+msgid "log.editor.decision"
+msgstr ""
+"Redaktora lēmumu ({$decision}) par rakstu {$submissionId} ir reģistrējis "
+"{$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Redaktora ieteikumu ({$decision}) par rakstu {$submissionId} ir reģistrējis "
+"{$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Iesniegtā materiāla {$submissionId} teksta rediģēšanu uzsācis "
+"{$copyeditorName}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Ir izvēlēts noklusējuma rediģējamais fails."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} ir pabeidzis iesniegtā materiāla {$submissionId} sākotnējo "
+"teksta rediģēšanu."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} ir pabeidzis iesniegtā materiāla {$submissionId} galīgo "
+"teksta rediģēšanu."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} ir nozīmēts iesniegtā materiāla {$submissionId} teksta "
+"rediģēšanai."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Ir augšupielādēta iesniegtā materiāla faila rediģētā versija."
+
+msgid "log.copyedit.authorFile"
+msgstr "Ir augšupielādēta iesniegtā materiāla autora rediģēta faila versija."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} ir nozīmēts iesniegtā materiāla {$submissionId} maketēšanai."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} ir atbrīvots no iesniegtā materiāla {$submissionId} "
+"maketēšanas."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} ir pabeidzis iesniegtā materiāla {$submissionId} maketēšanu."
+
+msgid "log.editor.metadataModified"
+msgstr "Šī raksta metadatus modificēja {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "Ir augšupielādēta iesniegtā materiāla faila redaktora versija."
+
+msgid "log.editor.archived"
+msgstr "Iesniegtais materiāls {$submissionId} ir arhivēts."
+
+msgid "log.editor.restored"
+msgstr "Iesniegtais materiāls {$submissionId} ir atjaunots rindā."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} ir piešķirts kā redaktors materiālam{$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} ir norīkojis {$proofreaderName} veikt iesniegtā materiāla "
+"{$submissionId} korektūru."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} ir iesniedzis {$submissionId} plānošanai."
+
+msgid "log.imported"
+msgstr "{$userName} ir importējis rakstu {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Recenzēts raksts"
+
+msgid "notification.type.editing"
+msgstr "Rediģēšanas darbības"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Ir iesniegts jauns raksts \"{$title}\"."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Ir atstāts komentārs par redaktora lēmumu attiecībā uz \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "Ir pārveidots \"{$title}\" saliktnis."
+
+msgid "notification.type.issuePublished"
+msgstr "Žurnāla numurs ir publicēts."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Ir izveidots jauns paziņojums."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Ir iesniegta recenzijas veidlapa par \"{$title}.\""
+
+msgid "notification.type.reviewing"
+msgstr "Recenzēšanas norises"
+
+msgid "notification.type.site"
+msgstr "Vietnes norises"
+
+msgid "notification.type.submissionComment"
+msgstr "Redaktors ir komentējis \"{$title}.\""
+
+msgid "notification.type.submissions"
+msgstr "Iesniegšanas norises"
+
+msgid "notification.type.userComment"
+msgstr "Lasītājs ir komentējis \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Publiskie paziņojumi"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Žurnāla numura publicēšanas metadati saglabāti."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Ir iesniegts jauns raksts, kuram jāpiešķir redaktors."
 
 msgid "notification.type.assignProductionUser"
 msgstr ""
 "Piešķirt lietotāju saliktņu izveidei, izmantojot saiti Piešķirt (Assign) "
 "dalībnieku sarakstā."
 
-msgid "notification.type.editorAssignmentTask"
-msgstr "Ir iesniegts jauns raksts, kuram jāpiešķir redaktors."
+msgid "notification.type.awaitingRepresentations"
+msgstr "Tiek gaidīti saliktņi."
 
-msgid "notification.savedIssueMetadata"
-msgstr "Žurnāla numura publicēšanas metadati saglabāti."
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Piekļuve liegta! Jūs neesat piešķirts šim rakstam kā teksta redaktors."
 
-msgid "notification.type.public"
-msgstr "Publiskie paziņojumi"
+msgid "user.authorization.noContext"
+msgstr "Netika atrasts neviens žurnāls, kas atbilstu jūsu pieprasījumam."
 
-msgid "notification.type.userComment"
-msgstr "Lasītājs ir komentējis \"{$title}\""
+msgid "user.authorization.sectionAssignment"
+msgstr "Jūs mēģināt piekļūt rakstam, kas nav no jūsu sadaļas."
 
-msgid "notification.type.submissions"
-msgstr "Iesniegšanas norises"
+msgid "user.authorization.invalidIssue"
+msgstr "Pieprasīts nederīgs izdevums!"
 
-msgid "notification.type.submissionComment"
-msgstr "Redaktors ir komentējis \"{$title}.\""
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Nederīgs teksta redaktora iesniegums vai nav pieprasīts teksta redaktora "
+"iesniegums!"
 
-msgid "notification.type.site"
-msgstr "Vietnes norises"
+msgid "grid.action.createContext"
+msgstr "Izveidot jaunu žurnālu"
 
-msgid "notification.type.reviewing"
-msgstr "Recenzēšanas norises"
+msgid "editor.navigation.issues"
+msgstr "Žurnāla numuri"
 
-msgid "notification.type.reviewerFormComment"
-msgstr "Ir iesniegta recenzijas veidlapa par \"{$title}.\""
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Šis iesniegtais materiāls pašlaik gaida apstiprinājumu, pirms tas tiks "
+"publicēts šajā izdevumā."
 
-msgid "notification.type.newAnnouncement"
-msgstr "Ir izveidots jauns paziņojums."
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Tiek gaidīts apstiprinājums."
 
-msgid "payment.requestPublicationFee.notEnabled"
-msgstr "Publicēšanas maksa nav iespējota."
+msgid "user.profile.form.showOtherContexts"
+msgstr "Reģistrēties citos žurnālos"
 
-msgid "search.cli.rebuildIndex.unknownJournal"
-msgstr "Norādīto žurnāla ceļu “{$journalPath}” nevarēja atrisināt uz žurnālu."
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Paslēpt citus žurnālus"
+
+msgid "article.view.interstitial"
+msgstr "Lūdzu, izvēlieties rakstu failu, lai to lejupielādētu."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Apstiprināts"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Tiek gaidīts apstiprinājums"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Saliktņa apstiprinājums"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Apstiprināt šo saliktni publicēšanai.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Noņemt šī saliktņa apstiprinājumu.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\" indeksēšana"
 
 msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
 msgstr ""
 "Šī meklēšanas implementācija neļauj veikt katra žurnāla atkārtotu "
 "indeksēšanu."
 
-msgid "search.cli.rebuildIndex.indexing"
-msgstr "\"{$journalName}\" indeksēšana"
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Norādīto žurnāla ceļu “{$journalPath}” nevarēja atrisināt uz žurnālu."
 
-msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
-msgstr "<p>Noņemt šī saliktņa apstiprinājumu.</p>"
+msgid "editor.issues.backIssues"
+msgstr "Agrākie izdevumi"
 
-msgid "grid.catalogEntry.approvedRepresentation.message"
-msgstr "<p>Apstiprināt šo saliktni publicēšanai.</p>"
+msgid "editor.issues.futureIssues"
+msgstr "Turpmākie izdevumi"
 
-msgid "grid.catalogEntry.approvedRepresentation.title"
-msgstr "Saliktņa apstiprinājums"
+msgid "navigation.subscriptions"
+msgstr "Abonementi"
 
-msgid "doi.issue.incorrectContext"
-msgstr ""
-"Nevar izveidot DOI šādam numuram: {$itemTitle}. Tas nepastāv pašreizējā "
-"žurnāla kontekstā."
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} uzsāk raksta {$submissionId} rediģēšanu."
 
-msgid "doi.issue.incorrectStaleStatus"
-msgstr ""
-"Nevarēja iestatīt DOI statusu uz neaktīvu izdevumam {$itemTitle}. DOI "
-"statusam jābūt \"Reģistrēts\" vai \"Iesniegts\"."
+msgid "catalog.sortBy"
+msgstr "Rakstu secība"
 
-msgid "doi.issue.notPublished"
-msgstr ""
-"Neizdevās atzīmēt DOI, kas reģistrēts {$pubObjectTitle}. Pirms statusa "
-"atjaunināšanas izdevums ir jāpublicē."
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Izvēlieties, kā sakārtot šīs kategorijas rakstus."

@@ -11,34 +11,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.doaj.cliUsage"
+msgid "plugins.importexport.doaj.displayName"
+msgstr "Complemento de exportación DOAJ"
+
+msgid "plugins.importexport.doaj.description"
 msgstr ""
-"Uso:\n"
-"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
-"objectId1 [objectId2] ...\n"
+"Exporta a revista ao DOAJ e envía información acerca dela ao representante "
+"do DOAJ."
 
-msgid "plugins.importexport.doaj.register.error.mdsError"
-msgstr "O depósito non tivo éxito! A API DOAJ informou dun erro: '{$param}'."
-
-msgid "plugins.importexport.doaj.senderTask.name"
-msgstr "Tarefa de rexistro automático de DOAJ"
-
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Utilice a API de proba de DOAJ (ambiente de proba) para o rexistro. Non se "
-"esqueza de desactivar esta opción na versión de produción."
-
-msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
-msgstr ""
-"OJS depositará os artigos automaticamente en DOAJ. Teña en conta que este "
-"proceso pode demorarse algún tempo tras a publicación (p.ex. en función da "
-"súa configuración cron). Pode comprobar todos os artigos non rexistrados."
-
-msgid "plugins.importexport.doaj.settings.form.apiKey.description"
-msgstr "Atopará a clave API na súa páxina de usuario/a de DOAJ."
-
-msgid "plugins.importexport.doaj.settings.form.apiKey"
-msgstr "Clave API DOAJ"
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Contacta con DOAJ para inclusión"
 
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
@@ -46,13 +28,32 @@ msgstr ""
 "DOAJ. De non facelo, aínda poderá exportalos ao formato DOAJ XML, pero non "
 "poderá rexistrar os artigos con DOAJ desde OJS."
 
-msgid "plugins.importexport.doaj.export.contact"
-msgstr "Contacta con DOAJ para inclusión"
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "Clave API DOAJ"
 
-msgid "plugins.importexport.doaj.description"
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Atopará a clave API na súa páxina de usuario/a de DOAJ."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr ""
-"Exporta a revista ao DOAJ e envía información acerca dela ao representante "
-"do DOAJ."
+"OJS depositará os artigos automaticamente en DOAJ. Teña en conta que este "
+"proceso pode demorarse algún tempo tras a publicación (p.ex. en función da "
+"súa configuración cron). Pode comprobar todos os artigos non rexistrados."
 
-msgid "plugins.importexport.doaj.displayName"
-msgstr "Complemento de exportación DOAJ"
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Utilice a API de proba de DOAJ (ambiente de proba) para o rexistro. Non se "
+"esqueza de desactivar esta opción na versión de produción."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Tarefa de rexistro automático de DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "O depósito non tivo éxito! A API DOAJ informou dun erro: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Uso:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"

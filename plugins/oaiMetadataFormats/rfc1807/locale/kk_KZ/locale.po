@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.rfc1807.description"
-msgstr "Метадеректерді RFC 1807 форматына сәйкес етіп құрылымдайды."
-
 msgid "plugins.OAIMetadata.rfc1807.displayName"
 msgstr "\"RFC1807 метадеректер форматы\" модулі"
+
+msgid "plugins.OAIMetadata.rfc1807.description"
+msgstr "Метадеректерді RFC 1807 форматына сәйкес етіп құрылымдайды."

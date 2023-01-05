@@ -13,34 +13,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Не можете да свържете файл на този етап с типография."
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Търсеният текст не е част от това списание."
 
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Публикацията, която търсите, не е част от тези изпратени материали."
+msgid "api.emails.403.disabled"
+msgstr "Функцията за известяване по имейл не е активирана за това списание."
 
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Публикацията, която търсите, не е част от това списание."
+msgid "api.submissions.400.wrongContext"
+msgstr "Материалите, които търсите, не са в това списание."
 
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Избраният метод за плащане не се поддържа."
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Не можете да променяте дневника на подаване на материали."
 
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr "Нямате права да премествате този шаблон за имейли към друго списание."
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Нямате права да преглеждате непубликувани броеве."
 
-msgid "api.contexts.404.contextNotFound"
-msgstr "Списанието, което търсите не е намерено."
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Можете да разглеждате само списания, които са активирани."
 
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Нямате права да изтриете това списание."
-
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Нямате права да редактирате това списание."
-
-msgid "api.contexts.403.requiresContext"
-msgstr ""
-"Не можете да редактирате това списание чрез програмния интерфейс (API) за "
-"целия сайт."
+msgid "api.contexts.403.notAllowed"
+msgstr "Нямате права да разглеждате това списание."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
@@ -48,42 +40,51 @@ msgstr ""
 "направите коректна заявка към програмния интерфейс (API) на списанието или "
 "коректна заявка към програмния интерфейс (API) на сайта."
 
-msgid "api.contexts.403.notAllowed"
-msgstr "Нямате права да разглеждате това списание."
-
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Можете да разглеждате само списания, които са активирани."
-
-msgid "api.submissions.403.contextRequired"
+msgid "api.contexts.403.requiresContext"
 msgstr ""
-"За да направите или редактирате изпращане на материали, трябва да направите "
-"заявка към крайната точка на програмния интерфейс (API) на списанието."
+"Не можете да редактирате това списание чрез програмния интерфейс (API) за "
+"целия сайт."
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Нямате права да преглеждате непубликувани броеве."
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Нямате права да редактирате това списание."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Не можете да променяте дневника на подаване на материали."
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Нямате права да изтриете това списание."
 
-msgid "api.emails.403.disabled"
-msgstr "Функцията за известяване по имейл не е активирана за това списание."
+msgid "api.contexts.404.contextNotFound"
+msgstr "Списанието, което търсите не е намерено."
 
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "Търсеният текст не е част от това списание."
+msgid "api.dois.400.contextsNotMatched"
+msgstr "DOI, който поискахте, не е част от това списание."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "За това списание няма конфигурирана агенция по регистрация на DOI."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
 "Някои елементи не бяха депозирани успешно. Моля, проверете отделните "
 "елементи за конкретни съобщения за грешки."
 
-msgid "api.dois.400.noRegistrationAgencyConfigured"
-msgstr "За това списание няма конфигурирана агенция по регистрация на DOI."
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Нямате права да премествате този шаблон за имейли към друго списание."
 
-msgid "api.dois.400.contextsNotMatched"
-msgstr "DOI, който поискахте, не е част от това списание."
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Избраният метод за плащане не се поддържа."
 
-msgid "api.submissions.400.wrongContext"
-msgstr "Материалите, които търсите, не са в това списание."
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Публикацията, която търсите, не е част от това списание."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Публикацията, която търсите, не е част от тези изпратени материали."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Не можете да свържете файл на този етап с типография."
 
 msgid "api.submission.400.inactiveSection"
 msgstr "В този раздел вече не се подават/получават материали за публикуване."
+
+#~ msgid "api.submissions.403.contextRequired"
+#~ msgstr ""
+#~ "За да направите или редактирате изпращане на материали, трябва да "
+#~ "направите заявка към крайната точка на програмния интерфейс (API) на "
+#~ "списанието."

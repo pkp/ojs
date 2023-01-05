@@ -11,41 +11,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Seleccionar artigos para exportar."
-
-msgid "plugins.importexport.pubmed.export.articles"
-msgstr "Exportar os artigos"
-
-msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Seleccionar un número para exportar."
-
-msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Exportar os números"
-
-msgid "plugins.importexport.pubmed.export"
-msgstr "Exportar datos"
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "Complemento de exportación XML PubMed"
 
 msgid "plugins.importexport.pubmed.description"
 msgstr ""
 "Exportar os metadatos do artigo en formato XML PubMed para Indexación en "
 "MEDLINE."
 
-msgid "plugins.importexport.pubmed.displayName"
-msgstr "Complemento de exportación XML PubMed"
+msgid "plugins.importexport.pubmed.export"
+msgstr "Exportar datos"
 
-msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr "Ningún artigo corresponde ao ID do artigo indicado \"{$articleId}\"."
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Exportar os números"
 
-msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr "Ningún número  coincide co ID de número indicado \"{$issueId}\"."
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Seleccionar un número para exportar."
 
-msgid "plugins.importexport.pubmed.cliError"
-msgstr "ERRO:"
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Exportar os artigos"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Seleccionar artigos para exportar."
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
 "Uso: \n"
-"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1]"
-" [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos "
+"[articleId1] [articleId2] ...\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]\n"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ERRO:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Ningún número  coincide co ID de número indicado \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Ningún artigo corresponde ao ID do artigo indicado \"{$articleId}\"."

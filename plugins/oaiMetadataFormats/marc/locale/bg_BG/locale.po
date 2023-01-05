@@ -12,9 +12,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.OAIMetadata.marc.displayName"
+msgstr "Формат за метаданни MARC"
+
 msgid "plugins.OAIMetadata.marc.description"
 msgstr ""
 "Структурира метаданните по начин, който е в съответствие с MARC формата."
-
-msgid "plugins.OAIMetadata.marc.displayName"
-msgstr "Формат за метаданни MARC"

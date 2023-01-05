@@ -13,14 +13,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr "Ոչ մի հոդված չի համապատասխանում նշված \"{$articleId}\" հոդվածի ID-ին:"
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "PubMed XML արտահանման փլագին"
 
-msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr "Ոչ մի թողարկում չի համընկնում նշված թողարկման ID -ին՝ \"{$issueId}\":"
+msgid "plugins.importexport.pubmed.description"
+msgstr ""
+"Արտահանեք հոդվածի մետատվյալները PubMed XML ձևաչափով՝ MEDLINE-ում "
+"ինդեքսավորելու համար:"
 
-msgid "plugins.importexport.pubmed.cliError"
-msgstr "ՍԽԱԼ։"
+msgid "plugins.importexport.pubmed.export"
+msgstr "Արտահանեք տվյալները"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Արտահանեք թողարկումները"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Ընտրեք թողարկումը արտահանելու համար:"
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Արտահանեք հոդվածները"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Ընտրեք հոդվածները արտահանելու համար։"
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
@@ -29,25 +43,11 @@ msgstr ""
 "[articleId1] [articleId2] ...\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
 
-msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Ընտրեք հոդվածները արտահանելու համար։"
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ՍԽԱԼ։"
 
-msgid "plugins.importexport.pubmed.export.articles"
-msgstr "Արտահանեք հոդվածները"
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Ոչ մի թողարկում չի համընկնում նշված թողարկման ID -ին՝ \"{$issueId}\":"
 
-msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Ընտրեք թողարկումը արտահանելու համար:"
-
-msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Արտահանեք թողարկումները"
-
-msgid "plugins.importexport.pubmed.export"
-msgstr "Արտահանեք տվյալները"
-
-msgid "plugins.importexport.pubmed.description"
-msgstr ""
-"Արտահանեք հոդվածի մետատվյալները PubMed XML ձևաչափով՝ MEDLINE-ում "
-"ինդեքսավորելու համար:"
-
-msgid "plugins.importexport.pubmed.displayName"
-msgstr "PubMed XML արտահանման փլագին"
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Ոչ մի հոդված չի համապատասխանում նշված \"{$articleId}\" հոդվածի ID-ին:"

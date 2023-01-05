@@ -16,61 +16,27 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.reports.counter.description"
-msgstr "計數器外掛程式允許紀錄以及提供<a href=\"http://www.projectcounter.org/about.html\" target=\"_new\">計數器</a>-報告網站活動。"
+msgstr ""
+"計數器外掛程式允許紀錄以及提供<a href=\"http://www.projectcounter.org/about."
+"html\" target=\"_new\">計數器</a>-報告網站活動。"
 
 msgid "plugins.reports.counter"
 msgstr "計數器統計"
 
-msgid "plugins.reports.counter.clearLog"
-msgstr "清除紀錄"
+msgid "plugins.reports.counter.release"
+msgstr "計數器版本"
 
-msgid "plugins.reports.counter.confirmClear"
-msgstr "你確定你希望清除掉這分紀錄？這個動作無法復原。"
-
-msgid "plugins.reports.counter.browseLog"
-msgstr "瀏覽紀錄"
-
-msgid "plugins.reports.counter.browseLog.logBrowser"
-msgstr "紀錄瀏覽器"
-
-msgid "plugins.reports.counter.entry.timestamp"
-msgstr "時間郵戳"
-
-msgid "plugins.reports.counter.entry.site"
-msgstr "網站"
-
-msgid "plugins.reports.counter.entry.journal"
-msgstr "期刊"
-
-msgid "plugins.reports.counter.entry.user"
-msgstr "使用者"
-
-msgid "plugins.reports.counter.sessionNumber"
-msgstr "Session #{$sessionNumber}"
-
-msgid "plugins.reports.counter.entry.type"
-msgstr "類型"
-
-msgid "plugins.reports.counter.entry.type.article"
-msgstr "文章"
-
-msgid "plugins.reports.counter.entry.type.search"
-msgstr "搜尋"
-
-msgid "plugins.reports.counter.entry.value"
-msgstr "值"
-
-msgid "plugins.reports.counter.error.noXML"
-msgstr "結果無法被格式化為XML。"
-
-msgid "plugins.reports.counter.error.noResults"
-msgstr "搜查不到此報告。"
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "報告的參數無效。"
 
 msgid "plugins.reports.counter.error.badRequest"
 msgstr "報告請求無効。"
 
-msgid "plugins.reports.counter.release"
-msgstr "計數器版本"
+msgid "plugins.reports.counter.error.noResults"
+msgstr "搜查不到此報告。"
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "結果無法被格式化為XML。"
 
 msgid "plugins.reports.counter.1a.name"
 msgstr "計數器報告JR1 (R3)"
@@ -78,14 +44,50 @@ msgstr "計數器報告JR1 (R3)"
 msgid "plugins.reports.counter.1a.description"
 msgstr "計數器期刊報告1 (R3): 按月份及期刊文章全文申請"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "期刊報告1"
-
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "報告的參數無效。"
+msgid "plugins.reports.counter.allCustomers"
+msgstr "全部顧客"
 
 msgid "plugins.reports.counter.ar1.title"
 msgstr "文章報告1"
 
-msgid "plugins.reports.counter.allCustomers"
-msgstr "全部顧客"
+msgid "plugins.reports.counter.jr1.title"
+msgstr "期刊報告1"
+
+#~ msgid "plugins.reports.counter.clearLog"
+#~ msgstr "清除紀錄"
+
+#~ msgid "plugins.reports.counter.confirmClear"
+#~ msgstr "你確定你希望清除掉這分紀錄？這個動作無法復原。"
+
+#~ msgid "plugins.reports.counter.browseLog"
+#~ msgstr "瀏覽紀錄"
+
+#~ msgid "plugins.reports.counter.browseLog.logBrowser"
+#~ msgstr "紀錄瀏覽器"
+
+#~ msgid "plugins.reports.counter.entry.timestamp"
+#~ msgstr "時間郵戳"
+
+#~ msgid "plugins.reports.counter.entry.site"
+#~ msgstr "網站"
+
+#~ msgid "plugins.reports.counter.entry.journal"
+#~ msgstr "期刊"
+
+#~ msgid "plugins.reports.counter.entry.user"
+#~ msgstr "使用者"
+
+#~ msgid "plugins.reports.counter.sessionNumber"
+#~ msgstr "Session #{$sessionNumber}"
+
+#~ msgid "plugins.reports.counter.entry.type"
+#~ msgstr "類型"
+
+#~ msgid "plugins.reports.counter.entry.type.article"
+#~ msgstr "文章"
+
+#~ msgid "plugins.reports.counter.entry.type.search"
+#~ msgstr "搜尋"
+
+#~ msgid "plugins.reports.counter.entry.value"
+#~ msgstr "值"

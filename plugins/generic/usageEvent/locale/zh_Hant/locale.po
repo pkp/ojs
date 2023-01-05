@@ -15,3 +15,6 @@ msgstr ""
 
 msgid "plugins.generic.usageEvent.displayName"
 msgstr "使用方式事件"
+
+msgid "plugins.generic.usageEvent.description"
+msgstr ""

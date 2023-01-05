@@ -16,15 +16,6 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Tijdschriften"
 
-msgid "admin.settings.appearance.success"
-msgstr "De instellingen voor de weergave van de site zijn bijgewerkt."
-
-msgid "admin.settings.config.success"
-msgstr "De instellingen voor de configuratie van de site zijn bijgewerkt."
-
-msgid "admin.settings.info.success"
-msgstr "De website-informatie is bijgewerkt."
-
 msgid "admin.settings.redirect"
 msgstr "Doorverwijzen naar tijdschrift"
 
@@ -39,19 +30,32 @@ msgstr ""
 "tijdschriften die deze taal momenteel gebruiken."
 
 msgid "admin.languages.primaryLocaleInstructions"
-msgstr "Dit wordt de standaard taalkeuze voor de site en de tijdschriften daarin."
+msgstr ""
+"Dit wordt de standaard taalkeuze voor de site en de tijdschriften daarin."
 
 msgid "admin.languages.supportedLocalesInstructions"
-msgstr "Selecteer de talen die de site moet ondersteunen. De geselecteerde talen zijn beschikbaar voor alle tijdschriften in de site en zullen ook verschijnen in een taalkeuzemenu  op alle pagina's van de site (dat kan overruled worden voor specifieke tijdschriften). Als er slechts één taal geselecteerd wordt zal er geen taalkeuzemenu getoond worden en zijn er geen taalinstellingen bij de tijdschriften."
+msgstr ""
+"Selecteer de talen die de site moet ondersteunen. De geselecteerde talen "
+"zijn beschikbaar voor alle tijdschriften in de site en zullen ook "
+"verschijnen in een taalkeuzemenu  op alle pagina's van de site (dat kan "
+"overruled worden voor specifieke tijdschriften). Als er slechts één taal "
+"geselecteerd wordt zal er geen taalkeuzemenu getoond worden en zijn er geen "
+"taalinstellingen bij de tijdschriften."
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "De gemarkeerde talen kunnen onvolledig zijn."
 
 msgid "admin.languages.confirmUninstall"
-msgstr "Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de tijdschriften in de site die deze taal gebruiken."
+msgstr ""
+"Weet u zeker dat u deze taal wilt de-installeren? Dit beïnvloedt de "
+"tijdschriften in de site die deze taal gebruiken."
 
 msgid "admin.languages.installNewLocalesInstructions"
-msgstr "Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning voor nieuwe talen."
+msgstr ""
+"Selecteer aanvullende talen voor gebruik in dit systeem. De talen moeten "
+"geïnstalleerd worden voor ze door te tijdschriften gebruikt kunnen worden. "
+"Zie de OJS documentatie voor informatie over het toevoegen van ondersteuning "
+"voor nieuwe talen."
 
 msgid "admin.systemVersion"
 msgstr "OJS versie"
@@ -63,7 +67,10 @@ msgid "admin.systemConfigurationDescription"
 msgstr "OJS instellingen uit <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
-msgstr "U wordt automatisch ingesteld als tijdschriftbeheerder. Log in als beheerder als het tijdschrift is aangemaakt om verder te gaan met het inrichten en om gebruikers toe te voegen."
+msgstr ""
+"U wordt automatisch ingesteld als tijdschriftbeheerder. Log in als beheerder "
+"als het tijdschrift is aangemaakt om verder te gaan met het inrichten en om "
+"gebruikers toe te voegen."
 
 msgid "admin.journals.journalSettings"
 msgstr "Instellingen tijdschrift"
@@ -86,10 +93,15 @@ msgid "admin.contexts.form.pathRequired"
 msgstr "Een pad is verplicht."
 
 msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr "Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens bevatten en moet beginnen en eindigen met een alfanuermiek teken."
+msgstr ""
+"Het pad mag alleen alfanumerieke tekens, liggende streepjes en koppeltekens "
+"bevatten en moet beginnen en eindigen met een alfanuermiek teken."
 
 msgid "admin.contexts.form.pathExists"
 msgstr "Het opgegeven pad is al in gebruik voor een ander tijdschrift."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Toon dit tijdschrift op de site"
@@ -122,16 +134,26 @@ msgid "admin.mergeUsers.mergeUser"
 msgstr "Voeg gebruiker samen"
 
 msgid "admin.mergeUsers.into.description"
-msgstr "Kies de gebruiker aan wie de auteursgegevens, redactietaken enz. van de vorige gebruiker toegekend moeten worden."
+msgstr ""
+"Kies de gebruiker aan wie de auteursgegevens, redactietaken enz. van de "
+"vorige gebruiker toegekend moeten worden."
 
 msgid "admin.mergeUsers.from.description"
-msgstr "Kies de gebruiker wiens gevens overgeheveld moeten worden naar een ander gebruikersaccount (bijvoorbeeld wanneer iemand twee gebruikersaccounts heeft). Het geselceteerde account zal verwijderd worden en alle inzendingen, taken enzovoorts worden overgedragen naar het tweede account."
+msgstr ""
+"Kies de gebruiker wiens gevens overgeheveld moeten worden naar een ander "
+"gebruikersaccount (bijvoorbeeld wanneer iemand twee gebruikersaccounts "
+"heeft). Het geselceteerde account zal verwijderd worden en alle inzendingen, "
+"taken enzovoorts worden overgedragen naar het tweede account."
 
 msgid "admin.mergeUsers.allUsers"
 msgstr "Alle ingeschreven gebruikers"
 
 msgid "admin.mergeUsers.confirm"
-msgstr "Weet u zeker dat u de geselecteerde {$oldAccountCount} account(s) wilt samenvoegen met gebruikersnaam \"{$newUsername}\"? de geselecteerde {$oldAccountCount} account(s) bestaan dan niet meer. Deze actie kan niet ongedaan gemaakt worden."
+msgstr ""
+"Weet u zeker dat u de geselecteerde {$oldAccountCount} account(s) wilt "
+"samenvoegen met gebruikersnaam \"{$newUsername}\"? de geselecteerde "
+"{$oldAccountCount} account(s) bestaan dan niet meer. Deze actie kan niet "
+"ongedaan gemaakt worden."
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Geen gebruikers."
@@ -144,3 +166,43 @@ msgstr "Open Access verwittiging"
 
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Review herinnering"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr ""
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
+msgid "admin.siteManagement.description"
+msgstr ""
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "De instellingen voor de weergave van de site zijn bijgewerkt."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "De instellingen voor de configuratie van de site zijn bijgewerkt."
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "De website-informatie is bijgewerkt."

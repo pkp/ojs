@@ -15,6 +15,57 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "manager.distribution.access"
+msgstr "Akses"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Tentukan tanggal hak cipta bawaan untuk artikel. Pengaturan ini dapat "
+"dikesampingkan berdasarkan kasus per kasus. Jika Anda \"menerbitkan apa "
+"adanya\", jangan gunakan tanggal publikasi nomor terbitan."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Gunakan tanggal nomor terbitan"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Gunakan tanggal publikasi artikel"
+
+msgid "manager.distribution.publication"
+msgstr "Publikasi"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Mode Publikasi"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS tidak akan digunakan untuk menerbitkan konten jurnal secara online."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Jurnal akan mendukung Open Access untuk konten jurnal."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Jurnal akan mensyaratkan langganan untuk mengakses beberapa atau semua "
+"konten jurnal."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Ijinkan Digital Object Identifiers (DOIs) diberikan pada tulisan yang "
+"diterbitkan di jurnal ini."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Silahkan pilih artikel yang ingin diberi DOI. Umumnya jurnal memberikan doi "
+"untuk artikel, namun bisa juga doi diberikan pada item yang diterbitkan."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Gunakan format bawaan.<br />%j.v%vi%i untuk nomor terbitan<br />%j.v%vi%i.%a "
+"untuk artikel<br />%j.v%vi%i.%a.g%g untuk galley."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Pada tahap copyediting"
+
 msgid "manager.website.archiving"
 msgstr "Pengarsipan"
 
@@ -132,6 +183,9 @@ msgstr ""
 "Aktifkan pembayaran untuk Langganan, di mana tipe, biaya, durasi dan "
 "langganan diatur oleh Manajer (Langganan) Jurnal."
 
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Yakin ingin menghapus langganan ini?"
+
 msgid "manager.payment.options.enablePayments"
 msgstr ""
 "Klik di sini untuk memungkinkan modul Pembayaran. Anda harus mengkonfigurasi "
@@ -193,6 +247,9 @@ msgstr ""
 
 msgid "manager.payment.records"
 msgstr "Rekam"
+
+msgid "manager.paymentTypes"
+msgstr "Jenis Pembayaran"
 
 msgid "manager.payment.userName"
 msgstr "ID Pembayaran"
@@ -279,6 +336,11 @@ msgstr "Item hanya bisa diserahkan oleh editor dan editor bagian."
 
 msgid "manager.sections.editors"
 msgstr "Editor Bagian"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Minimal satu seksi sudah aktif. Kunjungi pengaturan alur kerja untuk menutup "
+"semua naskah masuk ke jurnal ini."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Judul singkat diperlukan untuk bagian ini"
@@ -406,11 +468,8 @@ msgstr ""
 msgid "manager.setup.announcements"
 msgstr "Pengumuman"
 
-msgid "manager.setup.enableAnnouncements.description"
-msgstr ""
-"Pengumuman bisa diterbitkan untuk menginformasikan kepada pembaca tentang "
-"berita dan agenda jurnal. Pengumuman yang diterbitkan akan ditampilkan di "
-"halaman Pengumuman."
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Pengantar"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
@@ -439,25 +498,11 @@ msgstr ""
 "dapat digunakan untuk mendeskripsikan perubahan pada judul, Dewan editorial, "
 "dan item lain yang relevan dengan penerbitan jurnal."
 
-msgid "manager.setup.metadata.coverage"
-msgstr "Cakupan"
-
-msgid "manager.setup.metadata.coverage.description"
-msgstr ""
-"Mengacu ke lokasi geospasial, cakupan kronologis atau historis, dan/atau "
-"karakteristik sampel riset."
-
 msgid "manager.setup.currentIssue"
 msgstr "Terbitan Terkini"
 
 msgid "manager.setup.customizingTheLook"
 msgstr "Langkah 5. Menyesuaikan Tampilan"
-
-msgid "manager.setup.customTags"
-msgstr "Tag Khusus"
-
-msgid "manager.setup.customTagsDescription"
-msgstr "Tag HTML untuk dimasukkan di header setiap halaman (contoh: META tag)."
 
 msgid "manager.setup.details"
 msgstr "Detail"
@@ -520,6 +565,20 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Aktifkan pengumuman"
 
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Pengumuman bisa diterbitkan untuk menginformasikan kepada pembaca tentang "
+"berita dan agenda jurnal. Pengumuman yang diterbitkan akan ditampilkan di "
+"halaman Pengumuman."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Tampilkan di Halamam Beranda"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Berapa jumlah pengumuman yang akan ditampilkan di halaman beranda. Kosongkan "
+"bila tidak ingin menampilkan pengumuman."
+
 msgid "manager.setup.enableUserRegistration"
 msgstr "Penunjung dapat membuat akun pengguna."
 
@@ -580,6 +639,9 @@ msgstr "Panduan"
 msgid "manager.setup.guidingSubmissions"
 msgstr "Langkah 3. Memandu Penyerahan"
 
+msgid "manager.setup.identity"
+msgstr "Identitas Jurnal"
+
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
 "Untuk jurnal yang menawarkan kebijakan Open Access segera atau delayed, "
@@ -620,6 +682,12 @@ msgstr ""
 
 msgid "manager.setup.itemsPerPage"
 msgstr "Item per halaman"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Batasi jumlah item (contoh, naskah masuk, pengguna, atau tugas penyuntingan) "
+"yang tampil dalam daftar sebelum menampilkan item berikutnya pada halaman "
+"lain."
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Singkatan Jurnal"
@@ -664,6 +732,11 @@ msgstr ""
 
 msgid "manager.setup.contextInitials"
 msgstr "Inisial Jurnal"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Pilih negara di mana jurnal berada, atau negara alamat korespondensi jurnal "
+"atau penerbit."
 
 msgid "manager.setup.journalLayout"
 msgstr "Layout Jurnal"
@@ -714,11 +787,45 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Nama Jurnal"
 
+msgid "manager.setup.keyInfo"
+msgstr "Informasi Kunci"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Tuliskan gambaran singkat tentng jurnal Anda dan sebutkan editor, direktur "
+"pelaksana dan anggota tim redaksi lainnya."
+
 msgid "manager.setup.labelName"
 msgstr "Nama Label"
 
 msgid "manager.setup.lists"
 msgstr "Daftar"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Aktifkan plugin PKP PN"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
+"setiap jurnal yang memenuhi sejumlah kriteria dasar."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Buka <button>pengaturan plugin</button> untuk menyetujui syarat penggunaan "
+"PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
+"setiap jurnal yang memenuhi sejumlah kriteria dasar. Plugin PKP PN untuk OJS "
+"3 sedang dalam tahap pengembangan dan akan tersedia di galeri plugin "
+"secepatnya."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS dan CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
@@ -826,14 +933,11 @@ msgstr ""
 msgid "manager.setup.numPageLinks"
 msgstr "Tautan Halaman"
 
-msgid "manager.setup.publishingMode"
-msgstr "Akses ke Konten Jurnal"
+msgid "manager.setup.numPageLinks.description"
+msgstr "Batasi jumlah tautan yang tampil di daftar halaman berikutnya."
 
 msgid "manager.setup.onlineIssn"
 msgstr "ISSN Online"
-
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Jurnal akan mendukung Open Access untuk konten jurnal."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Pilihan Nomor Halaman"
@@ -912,6 +1016,9 @@ msgstr ""
 "Editor akan menilai reviewer dengan skala kualitas lima poin setiap selesai "
 "mereview."
 
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Batasi Akses File"
+
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
 "Reviewer akan memiliki akses ke file naskah hanya setelah setuju untuk "
@@ -933,6 +1040,9 @@ msgstr ""
 "email atau menambahkan CCs atau BCCs sebelum mengirimkan undangan kepada "
 "Reviewer."
 
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Sertakan tautan aman dalam email undangan kepada reviewer."
+
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Rating Review"
 
@@ -950,6 +1060,11 @@ msgstr ""
 "Bantu mesin pencarian seperti Google untuk menemukan dan menampilkan sitis "
 "Anda. Disarankan untuk mengirimkan <a href=\"{$sitemapUrl}\" target=\"_blank"
 "\">sitemap</a> Anda."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Tuliskan gambaran ringkas (50-300 karakter) tentang jurnal yang dapat "
+"ditampilkan oleh mesih pencarian saat mengurutkan jurnal di hasil pencarian."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Bagian dan Editor Bagian"
@@ -974,6 +1089,12 @@ msgstr "Bagian jurnal di mana item akan dipertimbangkan."
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Selalu tampilkan tautan galley dan tunjukkan bahwa akses dibatasi."
 
+msgid "manager.setup.siteAccess.view"
+msgstr "Akses Situs"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Buka Isi Artikel"
+
 msgid "manager.setup.stepsToJournalSite"
 msgstr "5 Langkah ke Website Jurnal"
 
@@ -997,14 +1118,24 @@ msgstr "Penyerahan Naskah"
 msgid "manager.setup.submissions.description"
 msgstr "Panduan Penulis, hak cipta, dan pengindeksan (termasuk registrasi)."
 
-msgid "manager.distribution.publishingMode.subscription"
+msgid "manager.setup.disableSubmissions.description"
 msgstr ""
-"Jurnal akan mensyaratkan langganan untuk mengakses beberapa atau semua "
-"konten jurnal."
+"Blok pengguna dari pengiriman artikel baru ke jurnal. Pengiriman naskah "
+"dapat dimatikan per seksi jurnal melalui halaman pengaturan <a href="
+"\"{$url}\">seksi jurnal</a>."
 
-msgid "manager.distribution.publishingMode.none"
+msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
-"OJS tidak akan digunakan untuk menerbitkan konten jurnal secara online."
+"Jurnal saat ini tidak menerima naskah. Buka pengaturan alur kerja untuk "
+"membuka penerimaan naskah."
+
+msgid "manager.setup.enableOai"
+msgstr "Aktifkan OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Berikan metadata ke layanan pengindeks pihak ketiga melalui <a href="
+"\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr "(Contoh: Survey; Wawancara; Analisis Sastra)"
@@ -1093,9 +1224,6 @@ msgstr "Telah di-peer review"
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Pembaca terdaftar"
 
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Pengguna terdaftar"
-
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "No. Ditugaskan"
 
@@ -1165,29 +1293,23 @@ msgstr ""
 "berakhir langganan, tetapi masih bisa mengakses ke isi langganan yang "
 "diterbitkan sebelum tanggal berakhir langganan."
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
-msgstr "Beritahu pelanggan melalui email"
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Bulan"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
-msgstr "bulan setelah langganan berakhir."
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Pekan"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
-msgstr "Beritahu pelanggan melalui email"
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Beritahu pelanggan melalui email setelah masa langganan habis"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
-msgstr "minggu setelah langganan berakhir."
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Beritahu pelanggan melalui email setelah masa langganan habis."
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
-msgstr "Beritahu pelanggan melalui email"
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Beritahu pelanggan melalui email sebelum langganan habis."
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
-msgstr "bulan sebelum langganan berakhir."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
-msgstr "Beritahu pelanggan melalui email"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
-msgstr "minggu sebelum masa berakhir langganan."
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Beritahu pelanggan melalui email sebelum masa langganan habis."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Pengingat masa berakhir langganan"
@@ -1332,6 +1454,9 @@ msgstr "Langganan Individu"
 msgid "manager.institutionalSubscriptions"
 msgstr "Langganan Institusi"
 
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Yakin ingin memperbaharui langganan ini?"
+
 msgid "manager.subscriptions.confirmDelete"
 msgstr "Apakah Anda yakin ingin menghapus langganan ini?"
 
@@ -1392,6 +1517,12 @@ msgstr "Tipe langganan harus ada."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Pilih tipe langganan yang valid."
 
+msgid "manager.subscriptions.form.institution"
+msgstr "Institusi"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Pilih institusi yang valid."
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Tanggal Mulai"
 
@@ -1406,6 +1537,12 @@ msgstr "Tanggal Akhir"
 
 msgid "manager.subscriptions.form.dateEndRequired"
 msgstr "Tanggal akhir langganan harus ada."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Jenis langganan ini bersifat selamanya, abaikan tanggal mulai."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Jenis langganan ini bersifat selamanya, abaikan tanggal berakhir."
 
 msgid "manager.subscriptions.form.dateEndValid"
 msgstr "Pilih tanggal akhir langganan yang valid."
@@ -1512,6 +1649,9 @@ msgstr "Pengguna ini sudah memiliki langganan untuk jurnal ini."
 
 msgid "manager.subscriptions.form.typeRequired"
 msgstr "Tipe langganan harus dibuat sebelum langganan baru dapat dibuat."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Institusi harus dibuat terlebih dahulu sebelum membuat langganan baru."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Rentang IP"
@@ -1702,8 +1842,16 @@ msgstr "Tidak ada tipe langganan telah dibuat."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Tipe langganan sukses dibuat."
 
-msgid "manager.distribution.access"
-msgstr "Akses"
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Tautkan ke halaman yang menguraikan langganan yang Anda tawarkan."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Tautkan ke halaman yang menerangkan langganan pengunjung sekarang dan "
+"terdahulu."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Tautan ino hanya akan ditampilkan ketika pengunjung telah logged in."
 
 msgid "manager.setup.categories"
 msgstr "Kategori"
@@ -1761,6 +1909,20 @@ msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
 "Anda yakin hendak melakukan reset permission untuk data yang telah melekat "
 "di artikel? Tindakan ini tidak bisa dibatalkan."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Hapus pernyataan hak cipta dan informasi lisensi untuk setiap artikel yang "
+"diterbitkan, kembalikan ke pengaturan bawaan jurnal saat ini. Proses ini "
+"akan menghapus secara permanen semua informasi hak cipta dan lisensi "
+"terdahulu yang melekat pada artikel. Pada beberapa kasus, tidak memungkinkan "
+"secara hukum melisensikan ulang artikel yang telah diterbitkan dengan "
+"lisensi yang berbeda. Harap berhati-hati saat menggunakan tool ini dan "
+"berkonsultasi dengan pakar hukum jika Anda ragu hak cipta apa yang Anda "
+"terapkan atas artikel yang diterbitkan dalam jurnal Anda."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Ijin artikel berhasil diatur ulang."
 
 msgid "grid.genres.title.short"
 msgstr "Komponen"
@@ -1842,6 +2004,9 @@ msgstr "Tandai terdaftar"
 msgid "plugins.importexport.common.action.register"
 msgstr "Daftar"
 
+msgid "plugins.importexport.common.validation"
+msgstr "Validasi XML sebelum proses ekspor dan registrasi."
+
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Tidak ada objek yang dipilih."
 
@@ -1854,6 +2019,9 @@ msgstr "Invalid XML:"
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
 msgstr "File output {$param} tidak writable."
 
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "File yang dimasukkan {$param} tidak dapat dibaca."
+
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr ""
 "Registrasi tidak berhasil! Server registrasi DOI memberikan error: "
@@ -1861,6 +2029,12 @@ msgstr ""
 
 msgid "plugins.importexport.common.register.success"
 msgstr "Registrasi berhasil!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validasi berhasil!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validasi gagal."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI tidak ditemukan untuk jurnal dengan path {$path}."
@@ -1871,226 +2045,92 @@ msgstr "Objek yang Anda cari tidak dapat ditemukan."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Kirim salinan ke kontak utama yang disebutkan di Pengaturan Jurnal."
 
-msgid "manager.distribution.publishingMode"
-msgstr "Mode Publikasi"
-
-msgid "manager.distribution.publication"
-msgstr "Publikasi"
-
-msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr "Gunakan tanggal publikasi artikel"
-
-msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Gunakan tanggal nomor terbitan"
-
-msgid "manager.setup.numPageLinks.description"
-msgstr "Batasi jumlah tautan yang tampil di daftar halaman berikutnya."
-
-msgid "manager.setup.plnPluginEnable"
-msgstr "Aktifkan plugin PKP PN"
-
-msgid "manager.setup.plnPluginArchiving"
-msgstr "PKP Preservation Network (PN)"
-
-msgid "manager.setup.resetPermissions.description"
+msgid "stats.contextStats"
 msgstr ""
-"Hapus pernyataan hak cipta dan informasi lisensi untuk setiap artikel yang "
-"diterbitkan, kembalikan ke pengaturan bawaan jurnal saat ini. Proses ini "
-"akan menghapus secara permanen semua informasi hak cipta dan lisensi "
-"terdahulu yang melekat pada artikel. Pada beberapa kasus, tidak memungkinkan "
-"secara hukum melisensikan ulang artikel yang telah diterbitkan dengan "
-"lisensi yang berbeda. Harap berhati-hati saat menggunakan tool ini dan "
-"berkonsultasi dengan pakar hukum jika Anda ragu hak cipta apa yang Anda "
-"terapkan atas artikel yang diterbitkan dalam jurnal Anda."
 
-msgid "stats.publications.galleys"
-msgstr "File"
+msgid "stats.context.tooltip.text"
+msgstr ""
 
-msgid "stats.publications.abstracts"
-msgstr "Abstrak"
+msgid "stats.context.tooltip.label"
+msgstr ""
 
-msgid "stats.publications.countOfTotal"
-msgstr "{$count} dari {$total} artikel"
+msgid "stats.context.downloadReport.description"
+msgstr ""
 
-msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr "Total file dilihat berdasarkan tanggal"
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr ""
 
-msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr "Total abstrak dilihat berdasarkan tanggal"
+msgid "stats.context.downloadReport.downloadContext"
+msgstr ""
+
+msgid "stats.issueStats"
+msgstr ""
+
+msgid "stats.issues.details"
+msgstr ""
+
+msgid "stats.issues.searchIssueDescription"
+msgstr ""
+
+msgid "stats.issues.none"
+msgstr ""
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr ""
+
+msgid "stats.issues.countOfTotal"
+msgstr ""
+
+msgid "stats.issues.tooltip.label"
+msgstr ""
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+
+msgid "stats.publicationStats"
+msgstr "Statistik Artikel"
+
+msgid "stats.publications.details"
+msgstr "Rincian Artikel"
 
 msgid "stats.publications.none"
 msgstr ""
 "Tidak ditemukan artikel dengan statistik pemakaian yang sesuai dengan "
 "parameter ini."
 
-msgid "stats.publications.details"
-msgstr "Rincian Artikel"
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Total abstrak dilihat berdasarkan tanggal"
 
-msgid "stats.publicationStats"
-msgstr "Statistik Artikel"
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Total file dilihat berdasarkan tanggal"
 
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "File yang dimasukkan {$param} tidak dapat dibaca."
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} dari {$total} artikel"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validasi XML sebelum proses ekspor dan registrasi."
+msgid "stats.publications.abstracts"
+msgstr "Abstrak"
 
-msgid "manager.setup.resetPermissions.success"
-msgstr "Ijin artikel berhasil diatur ulang."
+msgid "stats.publications.galleys"
+msgstr "File"
 
-msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Tautan ino hanya akan ditampilkan ketika pengunjung telah logged in."
-
-msgid "manager.navigationMenus.mySubscriptions.description"
+msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Tautkan ke halaman yang menerangkan langganan pengunjung sekarang dan "
-"terdahulu."
 
-msgid "manager.navigationMenus.subscriptions.description"
-msgstr "Tautkan ke halaman yang menguraikan langganan yang Anda tawarkan."
-
-msgid "manager.subscriptions.form.dateEndEmpty"
-msgstr "Jenis langganan ini bersifat selamanya, abaikan tanggal berakhir."
-
-msgid "manager.subscriptions.form.dateStartEmpty"
-msgstr "Jenis langganan ini bersifat selamanya, abaikan tanggal mulai."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Beritahu pelanggan melalui email sebelum langganan habis."
-
-msgid "manager.distribution.copyrightYearBasis.description"
+msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr ""
-"Tentukan tanggal hak cipta bawaan untuk artikel. Pengaturan ini dapat "
-"dikesampingkan berdasarkan kasus per kasus. Jika Anda \"menerbitkan apa "
-"adanya\", jangan gunakan tanggal publikasi nomor terbitan."
 
-msgid "manager.subscriptions.confirmRenew"
-msgstr "Yakin ingin memperbaharui langganan ini?"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Beritahu pelanggan melalui email sebelum masa langganan habis."
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Beritahu pelanggan melalui email setelah masa langganan habis."
-
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Beritahu pelanggan melalui email setelah masa langganan habis"
-
-msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} Pekan"
-
-msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} Bulan"
-
-msgid "manager.setup.enableOai.description"
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
-"Berikan metadata ke layanan pengindeks pihak ketiga melalui <a href="
-"\"https://www.openarchives.org/\">Open Archives Initiative</a>."
 
-msgid "manager.setup.enableOai"
-msgstr "Aktifkan OAI"
-
-msgid "manager.setup.siteAccess.viewContent"
-msgstr "Buka Isi Artikel"
-
-msgid "manager.setup.siteAccess.view"
-msgstr "Akses Situs"
-
-msgid "manager.setup.searchDescription.description"
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
-"Tuliskan gambaran ringkas (50-300 karakter) tentang jurnal yang dapat "
-"ditampilkan oleh mesih pencarian saat mengurutkan jurnal di hasil pencarian."
-
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "Sertakan tautan aman dalam email undangan kepada reviewer."
-
-msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "Batasi Akses File"
-
-msgid "manager.setup.otherLockss"
-msgstr "LOCKSS dan CLOCKSS"
-
-msgid "manager.setup.plnPluginNotInstalled"
-msgstr ""
-"PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
-"setiap jurnal yang memenuhi sejumlah kriteria dasar. Plugin PKP PN untuk OJS "
-"3 sedang dalam tahap pengembangan dan akan tersedia di galeri plugin "
-"secepatnya."
-
-msgid "manager.setup.plnSettingsDescription"
-msgstr ""
-"Buka <button>pengaturan plugin</button> untuk menyetujui syarat penggunaan "
-"PKP PN."
-
-msgid "manager.setup.plnDescription"
-msgstr ""
-"PKP Preservation Network (PN) memberikan layanan penyimpanan gratis bagi "
-"setiap jurnal yang memenuhi sejumlah kriteria dasar."
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Tuliskan gambaran singkat tentng jurnal Anda dan sebutkan editor, direktur "
-"pelaksana dan anggota tim redaksi lainnya."
-
-msgid "manager.setup.keyInfo"
-msgstr "Informasi Kunci"
-
-msgid "manager.setup.itemsPerPage.description"
-msgstr ""
-"Batasi jumlah item (contoh, naskah masuk, pengguna, atau tugas penyuntingan) "
-"yang tampil dalam daftar sebelum menampilkan item berikutnya pada halaman "
-"lain."
-
-msgid "manager.setup.identity"
-msgstr "Identitas Jurnal"
-
-msgid "manager.setup.numAnnouncementsHomepage.description"
-msgstr ""
-"Berapa jumlah pengumuman yang akan ditampilkan di halaman beranda. Kosongkan "
-"bila tidak ingin menampilkan pengumuman."
-
-msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Tampilkan di Halamam Beranda"
-
-msgid "manager.setup.announcementsIntroduction"
-msgstr "Pengantar"
-
-msgid "manager.paymentTypes"
-msgstr "Jenis Pembayaran"
-
-msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Yakin ingin menghapus langganan ini?"
-
-msgid "plugins.importexport.common.validation.fail"
-msgstr "Validasi gagal."
-
-msgid "plugins.importexport.common.validation.success"
-msgstr "Validasi berhasil!"
-
-msgid "manager.setup.disableSubmissions.notAccepting"
-msgstr ""
-"Jurnal saat ini tidak menerima naskah. Buka pengaturan alur kerja untuk "
-"membuka penerimaan naskah."
-
-msgid "manager.setup.disableSubmissions.description"
-msgstr ""
-"Blok pengguna dari pengiriman artikel baru ke jurnal. Pengiriman naskah "
-"dapat dimatikan per seksi jurnal melalui halaman pengaturan <a href="
-"\"{$url}\">seksi jurnal</a>."
-
-msgid "manager.sections.confirmDeactivateSection.error"
-msgstr ""
-"Minimal satu seksi sudah aktif. Kunjungi pengaturan alur kerja untuk menutup "
-"semua naskah masuk ke jurnal ini."
-
-msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
-
-msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "Proses gagal memparsing galei terbitan"
-
-msgid "plugins.importexport.native.export.issues.results"
-msgstr "Ekspor Terbitan"
+"Kirim salinan email pernytaan naskah telah diterima ke kontak utama jurnal."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
@@ -2099,46 +2139,95 @@ msgstr ""
 "Belum ada kontak utama yang disertakan pada jurnal ini. Kontak utama dapat "
 "ditambahkan melalui menu <a href=\"{$url}\">pengaturan jurnal</a>."
 
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
-msgstr ""
-"Kirim salinan email pernytaan naskah telah diterima ke kontak utama jurnal."
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Ekspor Terbitan"
 
-msgid "manager.setup.selectCountry"
-msgstr ""
-"Pilih negara di mana jurnal berada, atau negara alamat korespondensi jurnal "
-"atau penerbit."
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "Nama website bila terdapat lebih dari satu jurnal yang dikelola"
-
-msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr "Mata uang pembayaran, misalnya Rupiah"
-
-msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr "Jumlah pembayaran"
-
-msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr "Nama jenis pembayaran"
-
-msgid "emailTemplate.variable.context.contactEmail"
-msgstr "Alamat email narahubung utama jurnal"
-
-msgid "emailTemplate.variable.context.contextSignature"
-msgstr "Tanta tanfan email jurnal untuk email otomatis"
-
-msgid "emailTemplate.variable.context.contactName"
-msgstr "Nama narahubung utama jurnal"
-
-msgid "emailTemplate.variable.context.contextUrl"
-msgstr "URL yang mengarak ke halaman beranda jurnal"
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Proses gagal memparsing galei terbitan"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Nama Jurnal"
 
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL yang mengarak ke halaman beranda jurnal"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Nama narahubung utama jurnal"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Tanta tanfan email jurnal untuk email otomatis"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Alamat email narahubung utama jurnal"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Nama jenis pembayaran"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Jumlah pembayaran"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Mata uang pembayaran, misalnya Rupiah"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nama website bila terdapat lebih dari satu jurnal yang dikelola"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Nama, afiliasi, nomor telepon, dan alamat email pelanggan"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Rincian kontak pengelola pendaftaran"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL halaman langgan"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Tanggal berakhir langgan"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Ringakasan jenis, nama, durasi, dan biaya langgan"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informasi tentang keanggotaan pelanggan"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "mailable.validateEmailContext.name"
+msgstr "validasi Email (Registrasi Jurnal)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Email ini secara otomatis dikirim ke pengguna baru ketika mereka mendaftar "
+"ke jurnal apabila pengaturan mengharuskan validasi alamat email."
+
 msgid "doi.displayName"
 msgstr "DOI"
 
+msgid "doi.description"
+msgstr ""
+"Plugin ini memampukan pemberian Digital Object Identifiers ke terbitan, "
+"artikel dan galai di OJS."
+
 msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
 msgstr "DOI"
 
 msgid "doi.manager.settings.description"
@@ -2146,21 +2235,16 @@ msgstr ""
 "Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs "
 "dalam OJS:"
 
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr ""
-"Silahkan pilih artikel yang ingin diberi DOI. Umumnya jurnal memberikan doi "
-"untuk artikel, namun bisa juga doi diberikan pada item yang diterbitkan."
-
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Silahkan pilih objek penerbitan yang akan memiliki penugasan Digital Object "
 "Identifiers (DOI):"
 
-msgid "doi.manager.settings.enableSubmissionDoi"
-msgstr "Artikel"
-
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Galei Artikel"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Galei Artikel, misalnya PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Awalan DOI"
@@ -2175,6 +2259,11 @@ msgstr ""
 "tahun, %a untuk ID artikel OJS, %g untuk ID galley OJS, %f untuk ID file "
 "OJS, %p untuk nomor halaman dan %x untuk \"identifikasi kustom.\" "
 
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/"
+"vol3iss2pp230"
+
 msgid "doi.manager.settings.doiSuffixPattern.issues"
 msgstr "untuk terbitan"
 
@@ -2183,11 +2272,6 @@ msgstr "untuk artikel"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "untuk galai"
-
-msgid "doi.manager.settings.doiSuffixPattern.example"
-msgstr ""
-"Sebagai contoh, vol%viss%ipp%p dapat menciptakan DOI seperti 10.1234/"
-"vol3iss2pp230"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr "Silahkan masukkan pola akhiran DOI untuk terbitan."
@@ -2201,112 +2285,18 @@ msgstr "Silahkan masukkan pola akhiran DOI untuk galai."
 msgid "doi.manager.settings.doiReassign"
 msgstr "Pemberian DOI kembali"
 
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Jika Anda mengubah konfigurasi DOI Anda, DOI yang telah diberikan tidak akan "
+"terdampak. Setelah konfigurasi DOI disimpan, gunakan tombol ini untuk "
+"menghapus semua DOI yang ada sehingga pengaturan baru akan diberlakukan pada "
+"objek yang ada."
+
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Anda yakin untuk menghapus semua DOI yang ada?"
 
-msgid "doi.editor.doi"
-msgstr "DOI"
-
-msgid "doi.editor.doiObjectTypeIssue"
-msgstr "terbitan"
-
-msgid "doi.editor.doiObjectTypeSubmission"
-msgstr "artikel"
-
-msgid "doi.editor.doiObjectTypeGalley"
-msgstr "galley"
-
-msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr ""
-"Akhiran DOI yang dimasukkan telah digunakan oleh item penerbitan lain. "
-"Silahkan masukkan akhiran DOI unik untuk masing-masing item."
-
-msgid "doi.editor.preview.objects"
-msgstr "Butir"
-
-msgid "doi.editor.preview.galleys"
-msgstr "Galai: {$galleyLabel}"
-
-msgid "doi.editor.preview.publication.none"
-msgstr "DOI belum diberikan untuk publikasi ini."
-
-msgid "doi.editor.preview.publication"
-msgstr "DOI untuk publikasi ini adalah {$doi}."
-
-msgid "doi.editor.missingPrefix"
-msgstr "DOI harus diawali dengan {$doiPrefix}."
-
-msgid "doi.editor.assignDoi.assigned"
-msgstr ""
-"DOI {$pubId} telah ditetapkan. Untuk mengedit DOI, kunjungi <a href="
-"\"{$doiManagementLink}\">halaman Pengaturan DOI</a>."
-
-msgid "doi.editor.assignDoi.pattern"
-msgstr ""
-"DOI {$pubId} tidak dapat diberikan karena berisi pola yang belum "
-"terselesaikan."
-
-msgid "doi.editor.assignDoi.emptySuffix"
-msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
-
-msgid "doi.editor.assignDoi"
-msgstr "Berikan DOI {$pubId} untuk {$pubObjectType} ini"
-
-msgid "doi.editor.clearIssueObjectsDoi.description"
-msgstr ""
-"Gunakan opsi berikut untuk menghapus DOI dari semua objek (artikel dan "
-"galai) yang saat ini dijadwalkan untuk terbitan ini."
-
-msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr "Anda yakin ingin menghapus DOI dari objek terbitan yang ada?"
-
-msgid "doi.editor.clearIssueObjectsDoi"
-msgstr "Kosongkan Objek Terbitan DOI"
-
-msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr "Anda yakin ingin menghapus DOI yang ada?"
-
-msgid "doi.editor.clearObjectsDoi"
-msgstr "Kosongkan"
-
-msgid "doi.editor.assigned"
-msgstr "DOI diberikan untuk {$pubObjectType} ini."
-
-msgid "doi.editor.canBeAssigned"
-msgstr ""
-"Apa yang Anda lihat adalah pratinjau dari DOI. Pilih kotak centang dan "
-"simpan formulir untuk menetapkan DOI."
-
-msgid "doi.editor.patternNotResolved"
-msgstr "DOI tidak dapat diberikan karena berisi pola yang tidak terselesaikan."
-
-msgid "doi.editor.missingParts"
-msgstr ""
-"Anda tidak dapat membuat DOI karena satu atau lebih bagian dari pola DOI "
-"kehilangan data. Anda mungkin perlu menetapkan publikasi ke terbitan "
-"tertentu, mengatur ID penerbit atau memasukkan nomor halaman."
-
-msgid "doi.editor.missingIssue"
-msgstr ""
-"Anda tidak dapat membuat DOI sampai publikasi ini ditetapkan ke dalam "
-"terbitan tertentu."
-
-msgid "doi.editor.customSuffixMissing"
-msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
-
-msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr "Galai"
-
-msgid "doi.editor.doi.assignDoi"
-msgstr "Memberikan"
-
-msgid "doi.editor.doi.description"
-msgstr "DOI mesti diawali dengan {$prefix}."
-
-msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr ""
-"Apakah Anda yakin ingin memberikan DOI ke semua objek yang diterbitkan yang "
-"belum memiliki DOI?"
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Berikan DOI"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
@@ -2316,23 +2306,140 @@ msgstr ""
 "sebelum memulai tindakan ini. Pemberian DOI mungkin membutuhkan waktu lama, "
 "tergantung pada jumlah objek yang diterbitkan dalam jurnal."
 
-msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr "Berikan DOI"
-
-msgid "doi.manager.settings.doiReassign.description"
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
-"Jika Anda mengubah konfigurasi DOI Anda, DOI yang telah diberikan tidak akan "
-"terdampak. Setelah konfigurasi DOI disimpan, gunakan tombol ini untuk "
-"menghapus semua DOI yang ada sehingga pengaturan baru akan diberlakukan pada "
-"objek yang ada."
+"Apakah Anda yakin ingin memberikan DOI ke semua objek yang diterbitkan yang "
+"belum memiliki DOI?"
 
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Artikel"
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Agen Registrasi"
 
-msgid "doi.description"
+msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
-"Plugin ini memampukan pemberian Digital Object Identifiers ke terbitan, "
-"artikel dan galai di OJS."
+"Silajan pilih agen pendaftaran yang akan digunakan untuk mendepositkan DOI."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Tidak ada"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI mesti diawali dengan {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Memberikan"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "terbitan"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "artikel"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "Galai"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Anda tidak dapat membuat DOI sampai publikasi ini ditetapkan ke dalam "
+"terbitan tertentu."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Anda tidak dapat membuat DOI karena satu atau lebih bagian dari pola DOI "
+"kehilangan data. Anda mungkin perlu menetapkan publikasi ke terbitan "
+"tertentu, mengatur ID penerbit atau memasukkan nomor halaman."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI tidak dapat diberikan karena berisi pola yang tidak terselesaikan."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Apa yang Anda lihat adalah pratinjau dari DOI. Pilih kotak centang dan "
+"simpan formulir untuk menetapkan DOI."
+
+msgid "doi.editor.assigned"
+msgstr "DOI diberikan untuk {$pubObjectType} ini."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Akhiran DOI yang dimasukkan telah digunakan oleh item penerbitan lain. "
+"Silahkan masukkan akhiran DOI unik untuk masing-masing item."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Kosongkan"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Anda yakin ingin menghapus DOI yang ada?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Kosongkan Objek Terbitan DOI"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Anda yakin ingin menghapus DOI dari objek terbitan yang ada?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Gunakan opsi berikut untuk menghapus DOI dari semua objek (artikel dan "
+"galai) yang saat ini dijadwalkan untuk terbitan ini."
+
+msgid "doi.editor.assignDoi"
+msgstr "Berikan DOI {$pubId} untuk {$pubObjectType} ini"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI tidak dapat diberikan karena sufiks kustom tidak ada."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId} tidak dapat diberikan karena berisi pola yang belum "
+"terselesaikan."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} telah ditetapkan. Untuk mengedit DOI, kunjungi <a href="
+"\"{$doiManagementLink}\">halaman Pengaturan DOI</a>."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} akan diberikan pada saat publikasi."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI harus diawali dengan {$doiPrefix}."
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI untuk publikasi ini adalah {$doi}."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI belum diberikan untuk publikasi ini."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Galai: {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "Butir"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Galley yang Anda minta bukan bagian dari publikasi ini."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Hanya DOI yang dapat diubah setelah publikasi/galley telah diterbitkan"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "DOI yang dimasukkan tidak valid"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Hanya DOI yang dapat diedit setelah publikasi telah diterbitkan"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Nomor terbitan yang diminta tidak ditemukan"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI Artikel"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI Edisi"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
@@ -2340,140 +2447,186 @@ msgstr ""
 "sebelum masuk ke tahap review, dengan alasan naskash tidak memenuhi "
 "ketentuan jurnal."
 
-msgid "doi.manager.issueDois"
-msgstr "DOI Edisi"
-
-msgid "doi.manager.submissionDois"
-msgstr "DOI Artikel"
-
-msgid "api.issue.404.issuesNotFound"
-msgstr "Nomor terbitan yang diminta tidak ditemukan"
-
-msgid "api.issue.403.canEditPublishedDoi"
-msgstr "Hanya DOI yang dapat diedit setelah publikasi telah diterbitkan"
-
-msgid "api.issue.400.invalidDoi"
-msgstr "DOI yang dimasukkan tidak valid"
-
-msgid "api.galley.403.canEditPublishedDoi"
-msgstr "Hanya DOI yang dapat diubah setelah publikasi/galley telah diterbitkan"
-
-msgid "api.galley.403.publicationDidNotMatch"
-msgstr "Galley yang Anda minta bukan bagian dari publikasi ini."
-
-msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr "DOI {$pubId} akan diberikan pada saat publikasi."
-
-msgid "doi.manager.settings.registrationAgency.none"
-msgstr "Tidak ada"
-
-msgid "doi.manager.settings.registrationAgency.description"
-msgstr ""
-"Silajan pilih agen pendaftaran yang akan digunakan untuk mendepositkan DOI."
-
-msgid "doi.manager.settings.registrationAgency"
-msgstr "Agen Registrasi"
-
-msgid "doi.manager.displayName"
-msgstr "DOI"
-
-msgid "mailable.validateEmailContext.description"
-msgstr ""
-"Email ini secara otomatis dikirim ke pengguna baru ketika mereka mendaftar "
-"ke jurnal apabila pengaturan mengharuskan validasi alamat email."
-
-msgid "mailable.validateEmailContext.name"
-msgstr "validasi Email (Registrasi Jurnal)"
-
-msgid "emailTemplate.variable.subscription.membership"
-msgstr "Informasi tentang keanggotaan pelanggan"
-
-msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr "Ringakasan jenis, nama, durasi, dan biaya langgan"
-
-msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr "Tanggal berakhir langgan"
-
-msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr "URL halaman langgan"
-
-msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr "Rincian kontak pengelola pendaftaran"
-
-msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr "Nama, afiliasi, nomor telepon, dan alamat email pelanggan"
-
-msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "Pada tahap copyediting"
-
-msgid "doi.manager.settings.doiSuffixLegacy"
-msgstr ""
-"Gunakan format bawaan.<br />%j.v%vi%i untuk nomor terbitan<br />%j.v%vi%i.%a "
-"untuk artikel<br />%j.v%vi%i.%a.g%g untuk galley."
-
-msgid "manager.setup.enableDois.description"
-msgstr ""
-"Ijinkan Digital Object Identifiers (DOIs) diberikan pada tulisan yang "
-"diterbitkan di jurnal ini."
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tJurnal Anda diatur untuk mencatat lebih dari satu parameter penggunaan. "
-"Statistik penggunaan akan ditampilkan dalam beberapa konteks.\n"
-"\t\tTerdapat kondisi tertentu yang mengharuskan pemakaian satu parameter "
-"saja, misalnya untuk menampilkan urutan naskah yang paling banyak dibaca "
-"atau membuat peringkat\n"
-"\t\thasil pencarian. Silakan pilih salah satu paket parameter sebagai "
-"default.\n"
-"\t"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Persempit hasil berdasar konteks (terbitan dan/atau artikel)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Persempit hasil berdasar tipe objek (jurnal, terbitan, artikel, tipe file) "
-"dan/atau satu atau lebih id objek."
-
-msgid "doi.manager.settings.galleysWithDescription"
-msgstr "Galei Artikel, misalnya PDF"
-
-msgid "mailable.subscriptionNotify.description"
-msgstr "Email ini memberitahu pembaca terdaftar bahwa Manajer telah membuat akses langganan untuk mereka.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
-
-msgid "mailable.subscriptionExpiresSoon.description"
-msgstr "Email ini memberitahu seorang pelanggan bahwa langganannya hampir berakhir.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
-
-msgid "mailable.subscriptionExpired.description"
-msgstr "Email ini memberitahu seorang pelanggan bahwa langganannya telah berakhir.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
-
-msgid "mailable.subscriptionExpiredLast.description"
-msgstr "Email ini memberitahu seorang pelanggan bahwa langganannya telah berakhir.  Email ini memberikan URL jurnal beserta petunjuk aksesnya."
-
-msgid "mailable.subscriptionPurchaseIndividual.description"
-msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu telah dibeli online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
-
-msgid "mailable.subscriptionPurchaseInstitutional.description"
-msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi telah dibeli online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
-
-msgid "mailable.subscriptionRenewIndividual.description"
-msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang diperbaharui."
-
-msgid "mailable.subscriptionRenewInstitutional.description"
-msgstr "Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang diperbaharui."
-
-msgid "mailable.openAccessNotify.description"
-msgstr "Email ini dikirimkan ke pembaca terdaftar yang meminta untuk dikirimkan email pemberitahuan saat suatu terbitan menjadi Open Access."
-
-msgid "manager.subscriptions.form.institution"
-msgstr "Institusi"
-
-msgid "manager.subscriptions.form.institutionIdValid"
-msgstr "Pilih institusi yang valid."
-
-msgid "manager.subscriptions.form.institutionRequired"
-msgstr "Institusi harus dibuat terlebih dahulu sebelum membuat langganan baru."
-
 msgid "manager.institutions.noContext"
 msgstr "Jurnal institusi ini tidak ditemukan."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Email ini memberitahu pembaca terdaftar bahwa Manajer telah membuat akses "
+"langganan untuk mereka.  Email ini memberikan URL jurnal beserta petunjuk "
+"aksesnya."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+"Email ini memberitahu seorang pelanggan bahwa langganannya hampir berakhir.  "
+"Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+"Email ini memberitahu seorang pelanggan bahwa langganannya telah berakhir.  "
+"Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"Email ini memberitahu seorang pelanggan bahwa langganannya telah berakhir.  "
+"Email ini memberikan URL jurnal beserta petunjuk aksesnya."
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu "
+"telah dibeli online.  Email ini memberikan ringkasan informasi tentang "
+"langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi "
+"telah dibeli online.  Email ini memberikan ringkasan informasi tentang "
+"langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr ""
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu "
+"telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang "
+"langganan tersebut beserta tautan untuk mengakses langganan yang "
+"diperbaharui."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr ""
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi "
+"telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang "
+"langganan tersebut beserta tautan untuk mengakses langganan yang "
+"diperbaharui."
+
+msgid "mailable.openAccessNotify.name"
+msgstr ""
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Email ini dikirimkan ke pembaca terdaftar yang meminta untuk dikirimkan "
+"email pemberitahuan saat suatu terbitan menjadi Open Access."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr ""
+
+msgid "mailable.lockssNewArchive.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+#~ msgid "manager.setup.metadata.coverage"
+#~ msgstr "Cakupan"
+
+#~ msgid "manager.setup.metadata.coverage.description"
+#~ msgstr ""
+#~ "Mengacu ke lokasi geospasial, cakupan kronologis atau historis, dan/atau "
+#~ "karakteristik sampel riset."
+
+#~ msgid "manager.setup.customTags"
+#~ msgstr "Tag Khusus"
+
+#~ msgid "manager.setup.customTagsDescription"
+#~ msgstr ""
+#~ "Tag HTML untuk dimasukkan di header setiap halaman (contoh: META tag)."
+
+#~ msgid "manager.setup.publishingMode"
+#~ msgstr "Akses ke Konten Jurnal"
+
+#~ msgid "manager.statistics.statistics.registeredUsers"
+#~ msgstr "Pengguna terdaftar"
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderAfterMonths1"
+#~ msgstr "Beritahu pelanggan melalui email"
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderAfterMonths2"
+#~ msgstr "bulan setelah langganan berakhir."
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks1"
+#~ msgstr "Beritahu pelanggan melalui email"
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks2"
+#~ msgstr "minggu setelah langganan berakhir."
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths1"
+#~ msgstr "Beritahu pelanggan melalui email"
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
+#~ msgstr "bulan sebelum langganan berakhir."
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks1"
+#~ msgstr "Beritahu pelanggan melalui email"
+
+#~ msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
+#~ msgstr "minggu sebelum masa berakhir langganan."
+
+#~ msgid "doi.manager.settings.enableSubmissionDoi"
+#~ msgstr "Artikel"
+
+#~ msgid "doi.editor.doiObjectTypeGalley"
+#~ msgstr "galley"
+
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Artikel"
+
+#~ msgid "manager.statistics.defaultMetricDescription"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tJurnal Anda diatur untuk mencatat lebih dari satu parameter "
+#~ "penggunaan. Statistik penggunaan akan ditampilkan dalam beberapa "
+#~ "konteks.\n"
+#~ "\t\tTerdapat kondisi tertentu yang mengharuskan pemakaian satu parameter "
+#~ "saja, misalnya untuk menampilkan urutan naskah yang paling banyak dibaca "
+#~ "atau membuat peringkat\n"
+#~ "\t\thasil pencarian. Silakan pilih salah satu paket parameter sebagai "
+#~ "default.\n"
+#~ "\t"
+
+#~ msgid "manager.statistics.reports.filters.byContext.description"
+#~ msgstr "Persempit hasil berdasar konteks (terbitan dan/atau artikel)."
+
+#~ msgid "manager.statistics.reports.filters.byObject.description"
+#~ msgstr ""
+#~ "Persempit hasil berdasar tipe objek (jurnal, terbitan, artikel, tipe "
+#~ "file) dan/atau satu atau lebih id objek."

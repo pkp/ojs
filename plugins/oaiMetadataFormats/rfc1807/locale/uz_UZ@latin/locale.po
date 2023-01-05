@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.rfc1807.description"
-msgstr "Metadata tuzilmalari RFC1807 formatiga mos keladi."
-
 msgid "plugins.OAIMetadata.rfc1807.displayName"
 msgstr "RFC1807 metadata formati"
+
+msgid "plugins.OAIMetadata.rfc1807.description"
+msgstr "Metadata tuzilmalari RFC1807 formatiga mos keladi."

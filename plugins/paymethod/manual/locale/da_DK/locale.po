@@ -6,8 +6,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T11:05:56+00:00\n"
 "PO-Revision-Date: 2022-09-07 06:50+0000\n"
 "Last-Translator: Jesper B. Thestrup <jbt@kb.dk>\n"
-"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
-"paymethod-manual/da_DK/>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/paymethod-"
+"manual/da_DK/>\n"
 "Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,12 +29,6 @@ msgstr "Manuel betaling af gebyr"
 msgid "plugins.paymethod.manual.settings"
 msgstr "Manuelle betalingsinstruktioner"
 
-msgid "plugins.paymethod.manual.purchase.title"
-msgstr "Titel"
-
-msgid "plugins.paymethod.manual.purchase.fee"
-msgstr "Gebyr"
-
 msgid "plugins.paymethod.manual.sendNotificationOfPayment"
 msgstr "Send meddelelse om betaling"
 
@@ -43,6 +37,12 @@ msgstr "Meddelelse om betaling"
 
 msgid "plugins.paymethod.manual.notificationSent"
 msgstr "Meddelelse om betaling sendt"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Titel"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Gebyr"
 
 msgid "plugins.paymethod.manual.manualPaymentNotify.name"
 msgstr "Underretning om manuel betaling"

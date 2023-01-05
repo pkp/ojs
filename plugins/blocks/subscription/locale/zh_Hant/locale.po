@@ -24,6 +24,9 @@ msgstr "訂閱"
 msgid "plugins.block.subscription.expires"
 msgstr "過期"
 
+msgid "plugins.block.subscription.providedBy"
+msgstr ""
+
 msgid "plugins.block.subscription.comingFromIP"
 msgstr "從{$ip}取用內容"
 

@@ -16,6 +16,53 @@ msgstr ""
 "%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "manager.distribution.access"
+msgstr "Dostop"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Določite, kako bo izbran privzet datum avtorskih pravic članka. Ta je lahko "
+"spremenjen pri vsakem članku posebej. Če uporabljate sistem \"publish as you "
+"go\", ne uporabljajte datuma objave številke."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Uporabi datum izdaje številke"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Uporabi datum objave članka"
+
+msgid "manager.distribution.publication"
+msgstr "Objava"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Način objavljanja"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS ne bo uporabljen za objavljanje vsebin revije online."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Revija bo imela prost dostop do vsebine."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Revija bo zahtevala naročnino za dostop do delov ali celotne revije."
+
+msgid "manager.setup.enableDois.description"
+msgstr "Dovoli, da se DOI-ji dodelijo delom ustvarjenim v tej reviji."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji. Večina revij "
+"dodeljuje DOI-je člankom, vendar lahko dodeljujete DOI-je tudi drugim "
+"obljavljenim postavkam."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Uporabi privzeti vzorec.<br />%j.v%vi%i za številke<br />%j.v%vi%i.%a za "
+"članke<br />%j.v%vi%i.%a.g%g za prelome."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "V fazi lektoriranja"
+
 msgid "manager.website.archiving"
 msgstr "Arhiviranje"
 
@@ -127,6 +174,9 @@ msgstr ""
 "To bo aktiviralo modul za plačilo naročnin, kjer bodo uredniki revij lahko "
 "urejali tipe naročnin, pristojbine in trajanje naročnin."
 
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Ste prepričani, da želite odstraniti to naročnino?"
+
 msgid "manager.payment.options.enablePayments"
 msgstr ""
 "Kliknite za vključitev plačilnega modula. Nastavitve za plačevanje morate "
@@ -184,6 +234,9 @@ msgstr ""
 
 msgid "manager.payment.records"
 msgstr "Zapisi"
+
+msgid "manager.paymentTypes"
+msgstr "Načini plačila"
 
 msgid "manager.payment.userName"
 msgstr "ID plačila"
@@ -272,6 +325,11 @@ msgstr "Samo uredniki (rubrik) lahko oddajajo prispevke za to rubriko."
 msgid "manager.sections.editors"
 msgstr "Uredniki rubrik"
 
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Vsaj ena rubrik amora biti aktivna. Če želite preprečiti oddajo novih "
+"prispevkov, to naredite med nastavitvami delovnega toka."
+
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Za rubriko je potreben skrajšan naslov"
 
@@ -344,11 +402,6 @@ msgstr "Kolofon"
 msgid "manager.setup.editorialTeam"
 msgstr "Uredništvo"
 
-msgid "manager.setup.editorialTeam.description"
-msgstr ""
-"Naštejte urednike, odgovorne urednike in ostale posameznike, ki sodelujejo "
-"pri reviji."
-
 msgid "manager.setup.homepageContent"
 msgstr "Vsebina domače strani revije"
 
@@ -357,9 +410,6 @@ msgstr ""
 "Domača stran revije privzeto vsebuje navigacijske povezave. Dodatne vsebine "
 "domače strani lahko dodate s pomočjo ene ali več spodnjih močnosti, ki se "
 "bodo prikazale v prikazanem vrstnem redu."
-
-msgid "manager.setup.layout"
-msgstr "Izgled revije"
 
 msgid "manager.setup.useStyleSheet"
 msgstr "Stilska tablica revije"
@@ -405,18 +455,12 @@ msgstr ""
 msgid "manager.setup.announcements"
 msgstr "Obvestila"
 
-msgid "manager.setup.announcementsDescription"
-msgstr ""
-"Obvestila lahko uporabljate za obveščanje bralcev o novostih in dogodkih "
-"glede revije. Obvestila bodo vidna na strani Obvestila."
-
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Dodatne informacije"
 
-msgid "manager.setup.announcementsIntroductionDescription"
+msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
-"Vpišite dodatne informacije, ki jih želite bralcem prikazati na strani z "
-"obvestili."
+"Vnesite informacije, za katere želite, da se prikažejo na strani z obvestili."
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Pojavlja se na strani O reviji) "
@@ -440,40 +484,11 @@ msgstr ""
 "spremembe naslovov, uredniškega odbora in ostalih stvari, ki so pomembne za "
 "zgodovino revije."
 
-msgid "manager.setup.copyeditInstructions"
-msgstr "Lektorska navodila"
-
-msgid "manager.setup.copyeditInstructionsDescription"
-msgstr ""
-"Lektorska navodila bodo na voljo lektorjem, avtorjem in urednikom rubrik me "
-"procesom urejanja prispevkov. Spodaj so privzeta navodila v HTML formatu in "
-"jih lahko urednik revije kadarkoli spremeni (v HTML formatu ali kot prosto "
-"besedilo)."
-
-msgid "manager.setup.copyrightNotice"
-msgstr "Avtorske pravice"
-
-msgid "manager.setup.metadata.coverage"
-msgstr "Obseg"
-
-msgid "manager.setup.metadata.coverage.description"
-msgstr ""
-"Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/"
-"ali karakteristike raziskovanega vzorca."
-
 msgid "manager.setup.currentIssue"
 msgstr "Trenutna številka"
 
 msgid "manager.setup.customizingTheLook"
 msgstr "Korak 5. Prilagajanje izgleda"
-
-msgid "manager.setup.customTags"
-msgstr "Posebne HTML oznake"
-
-msgid "manager.setup.customTagsDescription"
-msgstr ""
-"Posebne HTML oznake glave bodo vpisane v glavo vsake strani te revije (npr. "
-"META oznake)."
 
 msgid "manager.setup.details"
 msgstr "Podrobnosti"
@@ -511,17 +526,15 @@ msgstr "Odločitev urednika"
 msgid "manager.setup.emailBounceAddress"
 msgstr "Naslov za obvestilo o neuspeli dostavi"
 
-msgid "manager.setup.emailBounceAddressDescription"
-msgstr ""
-"Vsaka nedostavljena e-pošta bo povzročil sporočilo z napako na ta e-poštni "
-"naslov."
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Vsak nedostavljen email se bo sporočil kot napaka na ta naslov."
 
-msgid "manager.setup.emailBounceAddressDisabled"
+msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
-"<strong>Obvestilo:</strong> Za aktiviranje te možnosti mora administrator "
-"spletišča omogočiti <tt>allow_envelope_sender</tt> opcijo v OJS nastavitveni "
-"datoteki. Za podporo te možnosti so morda potrebne dodatne nastavitve "
-"strežnika, kot lahko razberete iz OJS dokumentacije."
+"Če želite, da se pošljejo nedostavljeni emaili na \"bounce naslov\", mora "
+"administrator omogočiti opcijo <code>allow_envelope_sender</code> v "
+"konfiguracijski datoteki. Morda bodo potrebne tudi spremembe strežniških "
+"nastavitev, kot je opisano v OJS dokumentaciji."
 
 msgid "manager.setup.emails"
 msgstr "Identifikacija e-poštnega naslova"
@@ -529,21 +542,24 @@ msgstr "Identifikacija e-poštnega naslova"
 msgid "manager.setup.emailSignature"
 msgstr "Podpis"
 
-msgid "manager.setup.emailSignatureDescription"
+msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Predpripravlje e-pošte, ki so poslane avtomatsko v imenu revije, bodo imele "
-"na dnu spodnji podpis. Vsebino predpripravljenih e-pošt lahko pripravite pod "
-"Upravljanje revije."
+"Avtomatični emaili, ki jih bo poslal sistem v imenu revije, bodo imeli na "
+"koncu dodan spodnji podpis."
 
-msgid "manager.setup.enableAnnouncements"
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Omogoči obvestila"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr "Z objavo obvestil lahko obvestite bralce o novicah in dogodkih revije."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Prikaži na domači strani"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
-"Omogoči, da uredniki revije na spletno stran revije dodajajo obvestila."
-
-msgid "manager.setup.enableAnnouncementsHomepage1"
-msgstr "Prikaži"
-
-msgid "manager.setup.enableAnnouncementsHomepage2"
-msgstr "zadnjih obvestil na domači strani revije."
+"Koliko obvestil naj se prikaže na domači strani. Pustite prazno, če obvestil "
+"ne želite prikazovati."
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Uporabniki se lahko sami registrirajo pri reviji."
@@ -605,6 +621,9 @@ msgstr "Navodila"
 msgid "manager.setup.guidingSubmissions"
 msgstr "korak 3. Vodenje oddajanja prispevka"
 
+msgid "manager.setup.identity"
+msgstr "Identiteta revije"
+
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
 "Za revije, ki nudijo prost dostop ali prost dostop z zamikom, v primernem "
@@ -647,6 +666,11 @@ msgstr ""
 msgid "manager.setup.itemsPerPage"
 msgstr "Postavk na stran"
 
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Omejite število postavk (npr. člankov, uporabnikov, številk revij), ki naj "
+"se prikažejo na eni strani, ostale bodo na naslednjih straneh."
+
 msgid "manager.setup.journalAbbreviation"
 msgstr "Kratica za revijo"
 
@@ -655,11 +679,6 @@ msgstr "Arhiviranje revije"
 
 msgid "manager.setup.contextSummary"
 msgstr "Povzetek revije"
-
-msgid "manager.setup.contextSummary.description"
-msgstr ""
-"Kratek opis revije, ki se bo prikazoval na seznamu vseh revij na tem "
-"spletišču."
 
 msgid "manager.setup.contextAbout"
 msgstr "O reviji"
@@ -671,18 +690,6 @@ msgstr ""
 "revije, izjava o avtorskih pravicah, politiko sponzorstva, zgodovino revije, "
 "izjavo o vrovanju osebnih podatkov in vključitev v LOCKSS ali CLOCKSS sistem "
 "arhiviranja."
-
-msgid "manager.setup.favicon"
-msgstr "Favicon revije"
-
-msgid "manager.setup.faviconDescription"
-msgstr ""
-"Dodajte favikon revije, ki se bo prikazoval poleg navigacijske vrstice, ko "
-"bodo uporabniki obiskali vašo spletno stran."
-
-msgid "manager.setup.faviconInvalid"
-msgstr ""
-"Napačen format slike za favicon.Dovoljeni formati so .ico, .png, and .gif."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Vsebina domače strani revije"
@@ -708,6 +715,11 @@ msgstr ""
 
 msgid "manager.setup.contextInitials"
 msgstr "Inicialke revije"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Izberite državo lokacije revije, oziroma državo naslova revije ali "
+"izdajatelja."
 
 msgid "manager.setup.journalLayout"
 msgstr "Izgled revije"
@@ -756,47 +768,22 @@ msgstr ""
 "Mahen logo oziroma grafična predstavitev revije, ki se bo uporabila na "
 "seznamu revij na tem spletišču."
 
-msgid "manager.setup.journalThumbnail.altText"
-msgstr "Nadomestno besedilo za sličico"
-
 msgid "manager.setup.contextTitle"
 msgstr "Naslov revije"
+
+msgid "manager.setup.keyInfo"
+msgstr "Ključne informacije"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Vnesite kratek opis revije in naštejte urednike, odgovorne urednike in "
+"ostale člane uredniškega odbora."
 
 msgid "manager.setup.labelName"
 msgstr "Ime oznake"
 
-msgid "manager.setup.layoutInstructions"
-msgstr "Navodila za prelom"
-
-msgid "manager.setup.layoutInstructionsDescription"
-msgstr ""
-"Tukaj lahko priložite navodila za prelom prispevkov objavljenih v reviji. "
-"Pripravljena so Lahko kot navadno besedilo ali HTML. Vidna bodo grafičnim "
-"urednikom in urednikom rubrik med urejanjem prispevkov. (Vsaka revija ima "
-"lahko svoj format datotek, bibilografske standarde, stilske tabele, itd, "
-"privzeto niso na voljo nobena navodila)"
-
-msgid "manager.setup.layoutTemplates"
-msgstr "Predloge preloma"
-
-msgid "manager.setup.layoutTemplatesDescription"
-msgstr ""
-"Za vsak standarden tip elementa v reviji (prispevek, prikaz knjige, itd.) "
-"lahko naložite predloge za prelom za katerikoli format datotek (npr. pdf, "
-"doc, itd.). Te predloge določajo pisavo, velikost črk, zamikov, itd. in "
-"služijo grafičnim urednikom in korektorjem kot smernice za pripravo preloma."
-
-msgid "manager.setup.layoutTemplates.file"
-msgstr "Datoteka predloge"
-
-msgid "manager.setup.layoutTemplates.title"
-msgstr "Naslov"
-
 msgid "manager.setup.lists"
 msgstr "Izpis seznama"
-
-msgid "manager.setup.enableArchive"
-msgstr "Omogoči arhiviranje"
 
 msgid "manager.setup.plnPluginEnable"
 msgstr "PKP PN vtičnik je omogočen"
@@ -871,9 +858,6 @@ msgstr ""
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
 
-msgid "manager.setup.Issn"
-msgstr "ISSN"
-
 msgid "manager.setup.look"
 msgstr "Izgled"
 
@@ -933,14 +917,11 @@ msgstr ""
 msgid "manager.setup.numPageLinks"
 msgstr "Število prikazanih strani"
 
-msgid "manager.setup.onlineAccessManagement"
-msgstr "Dostop do vsebine revije"
+msgid "manager.setup.numPageLinks.description"
+msgstr "Omejite število prikazanih povezav do nadaljnjih strani v seznamu."
 
 msgid "manager.setup.onlineIssn"
 msgstr "E-ISSN"
-
-msgid "manager.setup.openAccess"
-msgstr "Revija bo imela odprt dostop do vsebine."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Določanje številke strani"
@@ -965,9 +946,6 @@ msgstr ""
 "HTML formatu, ki jih lahko kadarkoli glavni urednik revije spremeni (HTML "
 "ali navadno besedilo)."
 
-msgid "manager.setup.provideRefLinkInstructions"
-msgstr "Podajte navodila za grafičnega urednika."
-
 msgid "manager.setup.publicationSchedule"
 msgstr "Urnik izdajanja"
 
@@ -988,14 +966,8 @@ msgstr "Identifikacija vsebine revije"
 msgid "manager.setup.publisher"
 msgstr "Izdajatelj"
 
-msgid "manager.setup.publisherDescription"
-msgstr "Ime organizacije, ki izdaja revijo, ki bo napisano na strani O reviji"
-
 msgid "manager.setup.referenceLinking"
 msgstr "Bibliografske povezave"
-
-msgid "manager.setup.refLinkInstructions.description"
-msgstr "Navodila za grafično oblikovanje povezav za citiranje"
 
 msgid "manager.setup.restrictArticleAccess"
 msgstr ""
@@ -1009,14 +981,6 @@ msgstr ""
 
 msgid "manager.setup.reviewGuidelines"
 msgstr "Navodila recenzentom"
-
-msgid "manager.setup.reviewGuidelinesDescription"
-msgstr ""
-"Napišite kratka navodila recenzentom s smernicami za oceno primernosti "
-"prispevkov za objavo v reviji. Vsebujejo lahko tudi dodatna navodila za "
-"izvedbo učinkovite in uporane recenzije. Med postopkom recenzije lahko "
-"recenzenti podajo komentarje za avtorja in urendika ter posebej samo za "
-"urednika."
 
 msgid "manager.setup.reviewOptions"
 msgstr "Nastavitve recenzije"
@@ -1044,6 +1008,11 @@ msgstr ""
 "Recenzenti bodo imeli dostop do oddanega prispevka šele po tem, ko bodo "
 "sprejeli recenzijo tega prispevka"
 
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Recenzenti ne bodo dobili dostopa do članka dokler se ne bodo strinjali z "
+"opravljanjem recenzije."
+
 msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Dostop za recenzente"
 
@@ -1054,6 +1023,9 @@ msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Recenzentom se lahko pošlje posebno povezavo v email povabilu, ki jih bo "
 "avtomatično prijavil v sistem, ko kliknejo na povezavo."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Vključi varno povezavo v email povabilo recenzentom."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Ocene recenzentov"
@@ -1067,10 +1039,16 @@ msgstr "Recenzijska politika"
 msgid "manager.setup.searchEngineIndexing"
 msgstr "Indeksiranje revije za iskalnike"
 
-msgid "manager.setup.searchEngineIndexingDescription"
+msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
-"Opišite na kratko revijo in relevantne ključne besede (ločene s podpičji), "
-"ki bodo pomagali uporabnikom raznih iskalnikov najti to revijo."
+"Pomagajte iskalnim strojem kot je Google, da lažje odkrijejo in prikažejo "
+"vašo stran. Vabljeni ste, da prijavite vaš <a href=\"{$sitemapUrl}\" target="
+"\"_blank\">zemljevid strani</a>."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Podajte kratek opis (50-300 znakov) revije, ki ga lahko iskalniki prikažejo "
+"poleg vape revije na seznamu zadetkov."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "rubrike in uredniki rubrik"
@@ -1086,15 +1064,6 @@ msgstr ""
 "knjig,...) pojdite na Upravljanje rubrik.<br /><br />Avtorji bodo ob oddaji "
 "prispevkov za revijo določili..."
 
-msgid "manager.setup.securitySettings"
-msgstr "Nastavitve varnosti in dostopa"
-
-msgid "manager.setup.securitySettingsDescription"
-msgstr ""
-"OJS omogoča več varnostnih opcij, ki se lahko uporabijo za omejitev dostopa "
-"do vsebine revije in dostopa do informacij o poteku urejanja posameznih "
-"prispevkov, ki se lahko uporabijo za kasnejše revidiranje postopkov dela."
-
 msgid "manager.setup.selectEditorDescription"
 msgstr "Urednik revije, ki bo to videl skozi uredniški postopek."
 
@@ -1104,6 +1073,12 @@ msgstr "rubrika revije, za katero bo prispevek predviden."
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr ""
 "Vedno pokaži povezavo na celoten prispevek, z oznako omejenega pristopa."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Dostop do spletišča"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Poglej vsebino članka"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Pet korakov za postavitev spletne strani revije"
@@ -1126,17 +1101,24 @@ msgstr "Oddani prispevki"
 msgid "manager.setup.submissions.description"
 msgstr "Navodila avtorjem, avtorske pravice in indeksiranje vsebine revije."
 
-msgid "manager.setup.subscription"
-msgstr "Revija bo zahtevala naročnino za dostop do določenih ali vseh vsebin."
-
-msgid "manager.setup.subscriptionDescription"
+msgid "manager.setup.disableSubmissions.description"
 msgstr ""
-"To zahteva dodelitev vloge urednika naročnin, ki ima dostop do modula za "
-"naročnine in vsebuje tudi opcije za odprt dostop do vsebin, arhiviranje in e-"
-"poštnega obveščanje."
+"Preprečite uporabnikom oddajo novih prispevkov v revijo. Oddajo lahko "
+"onemogočite za vsako rubriko posebej pri nastavitvah <a href="
+"\"{$url}\">rubrik revije</a>."
 
-msgid "manager.setup.noPublishing"
-msgstr "OJS ne bo uporabljen za izdajanje revije na spletu."
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Revija trenutno ne sprejema prispevkov. Oddajo lahko omogočite nastavitvah "
+"delovnega toka."
+
+msgid "manager.setup.enableOai"
+msgstr "Omogoči OAI dostop do vsebin"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Podajte metapodatke za storitve indeksiranja drugih proizvajalcev skozi <a "
+"href=\"https://www.openarchives.org/\">Open Archives iniciativo</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr ""
@@ -1167,9 +1149,6 @@ msgstr "Sličica"
 
 msgid "manager.setup.useImageTitle"
 msgstr "Slika naslova"
-
-msgid "manager.setup.useJournalStyleSheet"
-msgstr "Stilska tablica revije"
 
 msgid "manager.setup.userRegistration"
 msgstr "Registracija uporabnikov"
@@ -1230,9 +1209,6 @@ msgstr "Opravljenih recenzij"
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Registriranih bralcev"
 
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Registriranih uporabnikov"
-
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Število recenzentov"
 
@@ -1269,14 +1245,6 @@ msgstr "Vpogledi na stran s kazalom"
 msgid "manager.subscriptionPolicies"
 msgstr "Naročniška politika"
 
-msgid "manager.subscriptionPolicies.authorSelfArchive"
-msgstr "Politika avtorjevega samo-arhiviranja"
-
-msgid "manager.subscriptionPolicies.authorSelfArchiveDescription"
-msgstr ""
-"Spodnja politika avtorjevega samo-arhiviranja bo objavljena na strani O "
-"reviji pod Politikami."
-
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "Prost dostop z zamikom"
 
@@ -1307,6 +1275,24 @@ msgid "manager.subscriptionPolicies.expiryPartialDescription"
 msgstr ""
 "Bralcem je zavrnjen dostop do vsebin, ki izidejo po datumu izteka naročnine, "
 "obdržijo pa dostop do vsebin, ki so bile objavljene pred iztekom naročnine."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mesecev"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} tednov"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Pošlji email obvestilo naročniku, ko poteče naročnina"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Pošlji email obvestilo naročniku, ko poteče naročnina."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Pošlji email obvestilo naročniku pred potekom naročnine."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Pošlji email obvestilo naročniku pred potekom naročnine."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Opomniki o izteku naročnine"
@@ -1456,6 +1442,9 @@ msgstr "Individualne naročnine"
 msgid "manager.institutionalSubscriptions"
 msgstr "Institucionalne naročnine"
 
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Ste prepričani, da želite obnoviti naročnino?"
+
 msgid "manager.subscriptions.confirmDelete"
 msgstr "Ste prepričani, da želite zbrisati to naročnino?"
 
@@ -1516,6 +1505,12 @@ msgstr "Tip naročnine je obvezen."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Prosimo izberite veljaven tip naročnine."
 
+msgid "manager.subscriptions.form.institution"
+msgstr "Institucija"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Prosimo izberite veljavno institucijo."
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Datum začetka"
 
@@ -1530,6 +1525,14 @@ msgstr "Datum prenehanja"
 
 msgid "manager.subscriptions.form.dateEndRequired"
 msgstr "Datum prenehanja naročnine je obvezen."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"To je časovno neomejena naročnina; prosimo ne določite začetnega datuma."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"To je časovno neomejena naročnina; prosimo ne določite končnega datuma."
 
 msgid "manager.subscriptions.form.dateEndValid"
 msgstr "Prosimo izberite veljaven datum prenehanja naročnine."
@@ -1639,6 +1642,9 @@ msgstr "Ta uporabnik ima že veljavno naročnino za to revijo."
 
 msgid "manager.subscriptions.form.typeRequired"
 msgstr "Pred novo naročnino mora biti ustvarjen nov tip naročnine."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "preden lahko uredite naročnino mora biti ustvarjena institucija."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP območje"
@@ -1829,8 +1835,16 @@ msgstr "Nobenega tipa naročnine ni bilo ustvarjenega."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Tip naročnine je bil uspešno ustvarjen."
 
-msgid "manager.distribution.access"
-msgstr "Dostop"
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Povezava do strani, kjer imate opis naročnin, ki jih omogočate."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Povezava do strani, kjer so opisane vse naročnine uporabnika, sedanja in "
+"pretekle."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Povezava bo prikazana le, ko bo uporabnik prijavljen."
 
 msgid "manager.setup.categories"
 msgstr "Kategorije"
@@ -1893,6 +1907,9 @@ msgstr ""
 "primeru, da revija spremeni politiko novih prispevkov. Za ponastavitev "
 "shranjenih dovoljenj, ki so že zapisane poleg objavljenih vsebin, uporabite "
 "spodnji gumb."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Dovoljenja članka so bila uspešno ponastavljena."
 
 msgid "grid.genres.title.short"
 msgstr "Komponente"
@@ -1988,6 +2005,9 @@ msgstr "Napačen XML:"
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
 msgstr "V izhodno datoteko {$param} ni mogoče pisati."
 
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Vhodna datoteka {$param} ni berljiva."
+
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr ""
 "Registracija ni bila uspešna! Registracijski strežnik za DOI je vrnil "
@@ -1995,6 +2015,12 @@ msgstr ""
 
 msgid "plugins.importexport.common.register.success"
 msgstr "Registracija je bila uspešna!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Preverjanje uspešno!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Preverjanje ni uspelo."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Revija s potjo {$path} nima DOI prefiksa."
@@ -2006,242 +2032,101 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
 "Pošlji kopijo glavnemu kontaktu revije, ki je določen v nastavitvah revije."
 
-msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Ste prepričani, da želite odstraniti to naročnino?"
+msgid "stats.contextStats"
+msgstr "Statistike revije"
 
-msgid "manager.paymentTypes"
-msgstr "Načini plačila"
+msgid "stats.context.tooltip.text"
+msgstr "Število obiskovalcev, ki je videlo osnovno stran revije."
 
-msgid "manager.setup.porticoEnable"
+msgid "stats.context.tooltip.label"
+msgstr "O statistikah revije"
+
+msgid "stats.context.downloadReport.description"
 msgstr ""
-"Omogoči Portico za hranjene in distribucijo vsebine revije po knjižnicah "
-"vključenih v Portico."
+"Prenesi CVS/Excel tabelo s statistikami uporabe za to revijo, ki ustrezajo "
+"spodnjim parametrom."
 
-msgid "manager.setup.porticoTitle"
-msgstr "Portico"
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Število vpogledov v osnovno stran revije."
 
-msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} mesecev"
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Prenos revije"
 
-msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} tednov"
+msgid "stats.issueStats"
+msgstr "Statistike številk"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Pošlji email obvestilo naročniku, ko poteče naročnina"
+msgid "stats.issues.details"
+msgstr "Vpogledi in prenosi"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Pošlji email obvestilo naročniku, ko poteče naročnina."
+msgid "stats.issues.searchIssueDescription"
+msgstr "Išči številko po naslovu, zvezku in številki"
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Pošlji email obvestilo naročniku pred potekom naročnine."
+msgid "stats.issues.none"
+msgstr "Nobena številka s statistikami ne ustreza danim parametrom."
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Pošlji email obvestilo naročniku pred potekom naročnine."
-
-msgid "manager.subscriptions.confirmRenew"
-msgstr "Ste prepričani, da želite obnoviti naročnino?"
-
-msgid "manager.navigationMenus.subscriptions.description"
-msgstr "Povezava do strani, kjer imate opis naročnin, ki jih omogočate."
-
-msgid "manager.navigationMenus.mySubscriptions.description"
+msgid "stats.issues.downloadReport.description"
 msgstr ""
-"Povezava do strani, kjer so opisane vse naročnine uporabnika, sedanja in "
-"pretekle."
+"Prenesi CSV/Exel datoteko s statistikami uporabe za številke, ki ustrezajo "
+"spodnjim parametrom."
 
-msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Povezava bo prikazana le, ko bo uporabnik prijavljen."
-
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "Vhodna datoteka {$param} ni berljiva."
-
-msgid "manager.setup.enableOai"
-msgstr "Omogoči OAI dostop do vsebin"
-
-msgid "manager.subscriptions.form.dateStartEmpty"
+msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
-"To je časovno neomejena naročnina; prosimo ne določite začetnega datuma."
+"Število vpogledov v kazalo vsebine in prenosov prelomov številke za vsako "
+"številko."
 
-msgid "manager.subscriptions.form.dateEndEmpty"
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Prenešene številke"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} od {$total} številk"
+
+msgid "stats.issues.tooltip.label"
+msgstr "O statistikah številk"
+
+msgid "stats.issues.tooltip.text"
 msgstr ""
-"To je časovno neomejena naročnina; prosimo ne določite končnega datuma."
+"<strong>Vpogledi</strong>: Število obiskovalcev, ki so vpogledali v kazalo "
+"vsebine posamezne številke.<br><strong>Prenosi/strong>: število prenosov "
+"preloma številke, če obstaja."
 
-msgid "stats.publishedSubmissions.details"
+msgid "stats.publicationStats"
+msgstr "Statistika članka"
+
+msgid "stats.publications.details"
 msgstr "Podrobnosti članka"
-
-msgid "stats.publishedSubmissions.none"
-msgstr "Najdenih ni bilo nobenih člankov."
-
-msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
-msgstr "Skupno število vpogledov v povzetek posameznega članka po datumih"
-
-msgid "stats.publications.galleys"
-msgstr "Datoteke"
-
-msgid "stats.publications.abstracts"
-msgstr "Povzetki"
-
-msgid "stats.publications.countOfTotal"
-msgstr "{$count} od {$total} člankov"
-
-msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr "Skupno število vpogeldov v datoteko do datuma"
-
-msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr "Skupno število vpogledov v povzetek do datuma"
 
 msgid "stats.publications.none"
 msgstr ""
 "Najden ni bil noben članek, ki bi ustrezal parametrom za statistike uporabe."
 
-msgid "stats.publications.details"
-msgstr "Podrobnosti članka"
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Skupno število vpogledov v povzetek do datuma"
 
-msgid "stats.publicationStats"
-msgstr "Statistika članka"
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Skupno število vpogeldov v datoteko do datuma"
 
-msgid "manager.setup.resetPermissions.success"
-msgstr "Dovoljenja članka so bila uspešno ponastavljena."
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} od {$total} člankov"
 
-msgid "manager.setup.enableOai.description"
+msgid "stats.publications.abstracts"
+msgstr "Povzetki"
+
+msgid "stats.publications.galleys"
+msgstr "Datoteke"
+
+msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Podajte metapodatke za storitve indeksiranja drugih proizvajalcev skozi <a "
-"href=\"https://www.openarchives.org/\">Open Archives iniciativo</a>."
+"Prenesi CSV/Exel datoteko s statistikami uporabe za članke, ki ustrezajo "
+"spodnjim parametrom."
 
-msgid "manager.setup.siteAccess.viewContent"
-msgstr "Poglej vsebino članka"
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Prenešeni članki"
 
-msgid "manager.setup.siteAccess.view"
-msgstr "Dostop do spletišča"
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Število vpogledov v povzetek in število prenosov za vsak članek."
 
-msgid "manager.setup.searchDescription.description"
-msgstr ""
-"Podajte kratek opis (50-300 znakov) revije, ki ga lahko iskalniki prikažejo "
-"poleg vape revije na seznamu zadetkov."
-
-msgid "manager.setup.searchEngineIndexing.description"
-msgstr ""
-"Pomagajte iskalnim strojem kot je Google, da lažje odkrijejo in prikažejo "
-"vašo stran. Vabljeni ste, da prijavite vaš <a href=\"{$sitemapUrl}\" target="
-"\"_blank\">zemljevid strani</a>."
-
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "Vključi varno povezavo v email povabilo recenzentom."
-
-msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
-msgstr ""
-"Recenzenti ne bodo dobili dostopa do članka dokler se ne bodo strinjali z "
-"opravljanjem recenzije."
-
-msgid "manager.setup.numPageLinks.description"
-msgstr "Omejite število prikazanih povezav do nadaljnjih strani v seznamu."
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Vnesite kratek opis revije in naštejte urednike, odgovorne urednike in "
-"ostale člane uredniškega odbora."
-
-msgid "manager.setup.keyInfo"
-msgstr "Ključne informacije"
-
-msgid "manager.setup.itemsPerPage.description"
-msgstr ""
-"Omejite število postavk (npr. člankov, uporabnikov, številk revij), ki naj "
-"se prikažejo na eni strani, ostale bodo na naslednjih straneh."
-
-msgid "manager.setup.identity"
-msgstr "Identiteta revije"
-
-msgid "manager.setup.numAnnouncementsHomepage.description"
-msgstr ""
-"Koliko obvestil naj se prikaže na domači strani. Pustite prazno, če obvestil "
-"ne želite prikazovati."
-
-msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Prikaži na domači strani"
-
-msgid "manager.setup.enableAnnouncements.description"
-msgstr "Z objavo obvestil lahko obvestite bralce o novicah in dogodkih revije."
-
-msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Omogoči obvestila"
-
-msgid "manager.setup.emailSignature.description"
-msgstr ""
-"Avtomatični emaili, ki jih bo poslal sistem v imenu revije, bodo imeli na "
-"koncu dodan spodnji podpis."
-
-msgid "manager.setup.emailBounceAddress.disabled"
-msgstr ""
-"Če želite, da se pošljejo nedostavljeni emaili na \"bounce naslov\", mora "
-"administrator omogočiti opcijo <code>allow_envelope_sender</code> v "
-"konfiguracijski datoteki. Morda bodo potrebne tudi spremembe strežniških "
-"nastavitev, kot je opisano v OJS dokumentaciji."
-
-msgid "manager.setup.emailBounceAddress.description"
-msgstr "Vsak nedostavljen email se bo sporočil kot napaka na ta naslov."
-
-msgid "manager.setup.announcementsIntroduction.description"
-msgstr ""
-"Vnesite informacije, za katere želite, da se prikažejo na strani z obvestili."
-
-msgid "manager.distribution.publishingMode.subscription"
-msgstr "Revija bo zahtevala naročnino za dostop do delov ali celotne revije."
-
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Revija bo imela prost dostop do vsebine."
-
-msgid "manager.distribution.publishingMode.none"
-msgstr "OJS ne bo uporabljen za objavljanje vsebin revije online."
-
-msgid "manager.distribution.publishingMode"
-msgstr "Način objavljanja"
-
-msgid "manager.distribution.publication"
-msgstr "Objava"
-
-msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr "Uporabi datum objave članka"
-
-msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Uporabi datum izdaje številke"
-
-msgid "manager.distribution.copyrightYearBasis.description"
-msgstr ""
-"Določite, kako bo izbran privzet datum avtorskih pravic članka. Ta je lahko "
-"spremenjen pri vsakem članku posebej. Če uporabljate sistem \"publish as you "
-"go\", ne uporabljajte datuma objave številke."
-
-msgid "plugins.importexport.common.validation.fail"
-msgstr "Preverjanje ni uspelo."
-
-msgid "plugins.importexport.common.validation.success"
-msgstr "Preverjanje uspešno!"
-
-msgid "manager.setup.disableSubmissions.notAccepting"
-msgstr ""
-"Revija trenutno ne sprejema prispevkov. Oddajo lahko omogočite nastavitvah "
-"delovnega toka."
-
-msgid "manager.setup.disableSubmissions.description"
-msgstr ""
-"Preprečite uporabnikom oddajo novih prispevkov v revijo. Oddajo lahko "
-"onemogočite za vsako rubriko posebej pri nastavitvah <a href="
-"\"{$url}\">rubrik revije</a>."
-
-msgid "manager.sections.confirmDeactivateSection.error"
-msgstr ""
-"Vsaj ena rubrik amora biti aktivna. Če želite preprečiti oddajo novih "
-"prispevkov, to naredite med nastavitvami delovnega toka."
-
-msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "Proces razčlenjevanja prelomov številk se ni končal uspešno"
-
-msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
-
-msgid "plugins.importexport.native.export.issues.results"
-msgstr "Rezultati izvoza številk"
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "Pošlji kopijo emaila s potrditvijo oddaje na primarni kontakt revije."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
@@ -2250,39 +2135,82 @@ msgstr ""
 "Za revijo ni določenega primarnega kontakta. Primarni kontakt lahko določite "
 "na <a href=\"{$url}\">nastavitvah revije</a>."
 
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
-msgstr "Pošlji kopijo emaila s potrditvijo oddaje na primarni kontakt revije."
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Rezultati izvoza številk"
 
-msgid "manager.setup.selectCountry"
-msgstr ""
-"Izberite državo lokacije revije, oziroma državo naslova revije ali "
-"izdajatelja."
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "Ime spletne strani, če je na njej več kot ena revija"
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Proces razčlenjevanja prelomov številk se ni končal uspešno"
 
-msgid "emailTemplate.variable.context.contactEmail"
-msgstr "Email naslov glavnega kontakta revije"
-
-msgid "emailTemplate.variable.context.contextSignature"
-msgstr "Noga avtomatskih emailov revije"
-
-msgid "emailTemplate.variable.context.contactName"
-msgstr "Ime glavnega kontakta revije"
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Ime revije"
 
 msgid "emailTemplate.variable.context.contextUrl"
 msgstr "URL do domače strani revije"
 
-msgid "emailTemplate.variable.context.contextName"
-msgstr "Ime revije"
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Ime glavnega kontakta revije"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "začetnice revije"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Noga avtomatskih emailov revije"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Email naslov glavnega kontakta revije"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Ime tipa plačila"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Znesek plačila"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Valuta zneska plačila, kot je EUR"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Ime spletne strani, če je na njej več kot ena revija"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Naročnikovo ime, ustanova, telefonska številka in email naslov"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Kontaktni podatki urednika za naročnine"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL do strani z naročninami"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "The date when the subscription ends"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "A summary of the subscription's type, name, duration and cost"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Information about the subscriber's membership"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Ime institucije"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Poštni naslov institucije"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domena"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP razponi za avtentikacijo naročnine"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Potrdi email (registracija pri reviji)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
 "Ta email se avtomatično pošlje, ko se nov uporabnik registrira pri reviji, "
 "če je v nastavitvah nastavljena validacija email naslovov."
-
-msgid "mailable.validateEmailContext.name"
-msgstr "Potrdi email (registracija pri reviji)"
 
 msgid "doi.displayName"
 msgstr "DOI"
@@ -2294,23 +2222,20 @@ msgstr ""
 msgid "doi.readerDisplayName"
 msgstr "DOI"
 
+msgid "doi.manager.displayName"
+msgstr "DOI-ji"
+
 msgid "doi.manager.settings.description"
 msgstr "Za upravljanje in uporabo DOI-jev prosimo nastavite DOI vtičnik:"
-
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr ""
-"Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji. Večina revij "
-"dodeljuje DOI-je člankom, vendar lahko dodeljujete DOI-je tudi drugim "
-"obljavljenim postavkam."
 
 msgid "doi.manager.settings.explainDois"
 msgstr "Prosimo izberite objekte, ki se jim bodo dodelili DOI-ji:"
 
-msgid "doi.manager.settings.enableSubmissionDoi"
-msgstr "Prispevki"
-
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Prelomi prispevka"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Prelomi prispevka, npr. PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI predpona"
@@ -2375,8 +2300,25 @@ msgstr ""
 "Ste prepričani, da želite dodeliti DOI-je vsem izdanim objektom, ki še "
 "nimajo dodeljenega DOI-ja?"
 
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registracijska agencija"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Prosimo izberite registracijsko agencijo, pri kateri želite deponirati DOI-"
+"je."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ne obstaja"
+
 msgid "doi.editor.doi"
 msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI se mora začeti z {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Dodeli"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "številka"
@@ -2390,6 +2332,15 @@ msgstr "prelom"
 msgid "doi.editor.customSuffixMissing"
 msgstr ""
 "DOI-ja ni mogoče dodeliti, ker manjka pripona za identifikator po meri."
+
+msgid "doi.editor.missingIssue"
+msgstr "DOI ne morete zgenerirati, dokler članek ni dodeljen številki revije."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"DOI oznake ne morete določiti, ker manjka eden ali več podatkov uporabljenih "
+"v vzorcu za določanje oznake. Običajno morate dodeliti članek v številko "
+"revije, določiti ID izdajatelja ali številke strani."
 
 msgid "doi.editor.patternNotResolved"
 msgstr ""
@@ -2444,56 +2395,26 @@ msgstr ""
 "DOI {$pubId} je bil dodeljen. Za spreminjanje DOI-ja obiščite stran <a href="
 "\"{$doiManagementLink}\">Upravljanje z DOI</a>."
 
-msgid "doi.editor.missingParts"
-msgstr ""
-"DOI oznake ne morete določiti, ker manjka eden ali več podatkov uporabljenih "
-"v vzorcu za določanje oznake. Običajno morate dodeliti članek v številko "
-"revije, določiti ID izdajatelja ali številke strani."
-
-msgid "doi.editor.missingIssue"
-msgstr "DOI ne morete zgenerirati, dokler članek ni dodeljen številki revije."
-
-msgid "doi.editor.doi.assignDoi"
-msgstr "Dodeli"
-
-msgid "doi.editor.doi.description"
-msgstr "DOI se mora začeti z {$prefix}."
-
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Članki"
-
-msgid "doi.editor.preview.objects"
-msgstr "Postavka"
-
-msgid "doi.editor.preview.galleys"
-msgstr "Prelom: {$galleyLabel}"
-
-msgid "doi.editor.preview.publication.none"
-msgstr "DOI še ni bil dodeljen za ta članek."
-
-msgid "doi.editor.preview.publication"
-msgstr "DOI za ta članek bo {$doi}."
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI, ki bo dodeljen ob izdaji: {$pubId}."
 
 msgid "doi.editor.missingPrefix"
 msgstr "DOI se mora začeti z {$doiPrefix}."
 
-msgid "doi.manager.displayName"
-msgstr "DOI-ji"
+msgid "doi.editor.preview.publication"
+msgstr "DOI za ta članek bo {$doi}."
 
-msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr "Valuta zneska plačila, kot je EUR"
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI še ni bil dodeljen za ta članek."
 
-msgid "doi.manager.issueDois"
-msgstr "DOI številke"
+msgid "doi.editor.preview.galleys"
+msgstr "Prelom: {$galleyLabel}"
 
-msgid "doi.manager.submissionDois"
-msgstr "DOI prispevka"
+msgid "doi.editor.preview.objects"
+msgstr "Postavka"
 
-msgid "api.issue.404.issuesNotFound"
-msgstr "Zahtevane številke ni bilo mogoče najti"
-
-msgid "api.issue.403.canEditPublishedDoi"
-msgstr "Po izdaji revije je možno spreminjati le DOI-je"
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Zahtevani prelom ni del te izdaje."
 
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr "Po izdaji revije/preloma je možno spreminjati le DOI-je"
@@ -2501,39 +2422,17 @@ msgstr "Po izdaji revije/preloma je možno spreminjati le DOI-je"
 msgid "api.issue.400.invalidDoi"
 msgstr "Podani DOI ni veljaven"
 
-msgid "api.galley.403.publicationDidNotMatch"
-msgstr "Zahtevani prelom ni del te izdaje."
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Po izdaji revije je možno spreminjati le DOI-je"
 
-msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr "DOI, ki bo dodeljen ob izdaji: {$pubId}."
+msgid "api.issue.404.issuesNotFound"
+msgstr "Zahtevane številke ni bilo mogoče najti"
 
-msgid "doi.manager.settings.registrationAgency.description"
-msgstr ""
-"Prosimo izberite registracijsko agencijo, pri kateri želite deponirati DOI-"
-"je."
+msgid "doi.manager.submissionDois"
+msgstr "DOI prispevka"
 
-msgid "doi.manager.settings.registrationAgency"
-msgstr "Registracijska agencija"
-
-msgid "doi.manager.settings.registrationAgency.none"
-msgstr "Ne obstaja"
-
-msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr "Znesek plačila"
-
-msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr "Ime tipa plačila"
-
-msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "V fazi lektoriranja"
-
-msgid "doi.manager.settings.doiSuffixLegacy"
-msgstr ""
-"Uporabi privzeti vzorec.<br />%j.v%vi%i za številke<br />%j.v%vi%i.%a za "
-"članke<br />%j.v%vi%i.%a.g%g za prelome."
-
-msgid "manager.setup.enableDois.description"
-msgstr "Dovoli, da se DOI-ji dodelijo delom ustvarjenim v tej reviji."
+msgid "doi.manager.issueDois"
+msgstr "DOI številke"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
@@ -2541,202 +2440,96 @@ msgstr ""
 "pričetkom recenzije, ker prispevek na zadostuje zahtevam za objavo v tej "
 "reviji."
 
-msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr "Kontaktni podatki urednika za naročnine"
-
-msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr "Naročnikovo ime, ustanova, telefonska številka in email naslov"
-
-msgid "doi.manager.settings.galleysWithDescription"
-msgstr "Prelomi prispevka, npr. PDF"
-
-msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr "URL do strani z naročninami"
-
-msgid "emailTemplate.variable.subscription.membership"
-msgstr "Information about the subscriber's membership"
-
-msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr "A summary of the subscription's type, name, duration and cost"
-
-msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr "The date when the subscription ends"
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVaša OJS namestitev beleži več kot le eno metriko uporabe, ki so "
-"prikazane v različnih kontekstih.\n"
-"V nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni red "
-"najbolj branih člankov ali vrstni red iskalnih rezultatov. Prosimo izberite "
-"eno od konfiguriranih metrik kot privzeto.\n"
-"\t"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr ""
-"Zožaj območje rezultato z izbiro konteksta (številke in/ali prispevki)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Zožaj območje rezultato z izbiro tipa objekta (revija, številka, prispevek, "
-"tip datoteke) in/ali eno ali več IDjev objekta/ov."
-
-msgid "mailable.subscriptionNotify.description"
-msgstr "This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access."
-
-msgid "mailable.subscriptionExpiresSoon.description"
-msgstr "This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access."
-
-msgid "mailable.subscriptionExpired.description"
-msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
-
-msgid "mailable.subscriptionExpiredLast.description"
-msgstr "This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access."
-
-msgid "mailable.subscriptionPurchaseIndividual.description"
-msgstr "This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
-
-msgid "mailable.subscriptionPurchaseInstitutional.description"
-msgstr "This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription."
-
-msgid "mailable.subscriptionRenewIndividual.description"
-msgstr "This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
-
-msgid "mailable.subscriptionRenewInstitutional.description"
-msgstr "This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription."
-
-msgid "mailable.openAccessNotify.description"
-msgstr "This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access."
-
-msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "začetnice revije"
-
-msgid "mailable.issuePublishNotify.name"
-msgstr "Obvestilo o izdani številki"
-
-msgid "manager.subscriptions.form.institution"
-msgstr "Institucija"
-
-msgid "manager.subscriptions.form.institutionIdValid"
-msgstr "Prosimo izberite veljavno institucijo."
-
-msgid "mailable.issuePublishNotify.description"
-msgstr ""
-"Ta email je avtomatično poslan vsem registriranim uporabnikom, ko je "
-"objavljena nova številka revije."
-
-msgid "stats.issues.details"
-msgstr "Vpogledi in prenosi"
-
-msgid "stats.issues.searchIssueDescription"
-msgstr "Išči številko po naslovu, zvezku in številki"
-
-msgid "stats.issues.none"
-msgstr "Nobena številka s statistikami ne ustreza danim parametrom."
-
-msgid "stats.issueStats"
-msgstr "Statistike številk"
-
-msgid "stats.issues.downloadReport.description"
-msgstr ""
-"Prenesi CSV/Exel datoteko s statistikami uporabe za številke, ki ustrezajo "
-"spodnjim parametrom."
-
-msgid "manager.subscriptions.form.institutionRequired"
-msgstr "preden lahko uredite naročnino mora biti ustvarjena institucija."
-
-msgid "stats.issues.countOfTotal"
-msgstr "{$count} od {$total} številk"
-
-msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
-"Število vpogledov v kazalo vsebine in prenosov prelomov številke za vsako "
-"številko."
-
-msgid "stats.issues.downloadReport.downloadIssues"
-msgstr "Prenešene številke"
-
-msgid "stats.issues.tooltip.label"
-msgstr "O statistikah številk"
-
-msgid "stats.issues.tooltip.text"
-msgstr ""
-"<strong>Vpogledi</strong>: Število obiskovalcev, ki so vpogledali v kazalo "
-"vsebine posamezne številke.<br><strong>Prenosi/strong>: število prenosov "
-"preloma številke, če obstaja."
-
 msgid "manager.institutions.noContext"
 msgstr "Revijo te insitucije ni bilo mogoče najti."
 
 msgid "mailable.subscriptionNotify.name"
 msgstr "Obvestilo o naročnini"
 
-msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr "Nakup instuticionalne naročnine"
-
-msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr "Obnova institucionalne naročnine"
-
-msgid "mailable.subscriptionRenewIndividual.name"
-msgstr "Obnova individualne naročnine"
-
-msgid "mailable.openAccessNotify.name"
-msgstr "Obvestilo o prostem dostopu"
-
-msgid "stats.contextStats"
-msgstr "Statistike revije"
-
-msgid "stats.context.tooltip.text"
-msgstr "Število obiskovalcev, ki je videlo osnovno stran revije."
-
-msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Ime institucije"
-
-msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domena"
-
-msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "IP razponi za avtentikacijo naročnine"
-
-msgid "stats.context.tooltip.label"
-msgstr "O statistikah revije"
-
-msgid "stats.context.downloadReport.description"
+msgid "mailable.subscriptionNotify.description"
 msgstr ""
-"Prenesi CVS/Excel tabelo s statistikami uporabe za to revijo, ki ustrezajo "
-"spodnjim parametrom."
-
-msgid "stats.context.downloadReport.downloadContext.description"
-msgstr "Število vpogledov v osnovno stran revije."
-
-msgid "stats.context.downloadReport.downloadContext"
-msgstr "Prenos revije"
-
-msgid "mailable.subscriptionExpired.name"
-msgstr "Naročnina je potekla"
-
-msgid "mailable.subscriptionExpiredLast.name"
-msgstr "Subscription Expired Last"
+"This email notifies a registered reader that the Manager has created a "
+"subscription for them. It provides the journal's URL along with instructions "
+"for access."
 
 msgid "mailable.subscriptionExpiresSoon.name"
 msgstr "Naročnina bo kmalu potekla"
 
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+"This email notifies a subscriber that their subscription will soon expire. "
+"It provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Naročnina je potekla"
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+"This email notifies a subscriber that their subscription has expired. It "
+"provides the journal's URL along with instructions for access."
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Subscription Expired Last"
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"This email notifies a subscriber that their subscription has expired. It "
+"provides the journal's URL along with instructions for access."
+
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Nakup individualne naročnine"
 
-msgid "stats.publications.downloadReport.description"
+msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
-"Prenesi CSV/Exel datoteko s statistikami uporabe za članke, ki ustrezajo "
-"spodnjim parametrom."
+"This email notifies the Subscription Manager that an individual subscription "
+"has been purchased online. It provides summary information about the "
+"subscription and a quick access link to the purchased subscription."
 
-msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr "Prenešeni članki"
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Nakup instuticionalne naročnine"
 
-msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr "Število vpogledov v povzetek in število prenosov za vsak članek."
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"This email notifies the Subscription Manager that an institutional "
+"subscription has been purchased online. It provides summary information "
+"about the subscription and a quick access link to the purchased subscription."
 
-msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Poštni naslov institucije"
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Obnova individualne naročnine"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"This email notifies the Subscription Manager that an individual subscription "
+"has been renewed online. It provides summary information about the "
+"subscription and a quick access link to the renewed subscription."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Obnova institucionalne naročnine"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"This email notifies the Subscription Manager that an institutional "
+"subscription has been renewed online. It provides summary information about "
+"the subscription and a quick access link to the renewed subscription."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Obvestilo o prostem dostopu"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"This email is sent to registered readers who have requested to receive a "
+"notification email when an issue becomes open access."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Obvestilo o izdani številki"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Ta email je avtomatično poslan vsem registriranim uporabnikom, ko je "
+"objavljena nova številka revije."
+
+msgid "manager.manageEmails.description"
+msgstr "Urejanje email sporočil poslanih iz te revije."
 
 msgid "mailable.layoutComplete.name"
 msgstr "Prelom končan"
@@ -2747,14 +2540,6 @@ msgstr "Zahteva za arhiviranje"
 msgid "mailable.lockssNewArchive.name"
 msgstr "Zahteva za arhiviranje (novo)"
 
-msgid "manager.manageEmails.description"
-msgstr "Urejanje email sporočil poslanih iz te revije."
-
-msgid "mailable.submissionNeedsEditor.description"
-msgstr ""
-"Ta email se avtomatično pošlje glavnim urednikom, ko je oddan nov prispevek, "
-"ki mu ni dodoljen noben urednik."
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ustvarjena nova različica"
 
@@ -2762,3 +2547,245 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 "Ta email avtomatično obvesti dodeljene urednike o ustvarjeni novi različici "
 "prispevka."
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Ta email se avtomatično pošlje glavnim urednikom, ko je oddan nov prispevek, "
+"ki mu ni dodoljen noben urednik."
+
+#~ msgid "manager.setup.editorialTeam.description"
+#~ msgstr ""
+#~ "Naštejte urednike, odgovorne urednike in ostale posameznike, ki "
+#~ "sodelujejo pri reviji."
+
+#~ msgid "manager.setup.layout"
+#~ msgstr "Izgled revije"
+
+#~ msgid "manager.setup.announcementsDescription"
+#~ msgstr ""
+#~ "Obvestila lahko uporabljate za obveščanje bralcev o novostih in dogodkih "
+#~ "glede revije. Obvestila bodo vidna na strani Obvestila."
+
+#~ msgid "manager.setup.announcementsIntroductionDescription"
+#~ msgstr ""
+#~ "Vpišite dodatne informacije, ki jih želite bralcem prikazati na strani z "
+#~ "obvestili."
+
+#~ msgid "manager.setup.copyeditInstructions"
+#~ msgstr "Lektorska navodila"
+
+#~ msgid "manager.setup.copyeditInstructionsDescription"
+#~ msgstr ""
+#~ "Lektorska navodila bodo na voljo lektorjem, avtorjem in urednikom rubrik "
+#~ "me procesom urejanja prispevkov. Spodaj so privzeta navodila v HTML "
+#~ "formatu in jih lahko urednik revije kadarkoli spremeni (v HTML formatu "
+#~ "ali kot prosto besedilo)."
+
+#~ msgid "manager.setup.copyrightNotice"
+#~ msgstr "Avtorske pravice"
+
+#~ msgid "manager.setup.metadata.coverage"
+#~ msgstr "Obseg"
+
+#~ msgid "manager.setup.metadata.coverage.description"
+#~ msgstr ""
+#~ "Nanaša se na geoprostorsko lokacijo, kronološki ali zgodovinski obseg, in/"
+#~ "ali karakteristike raziskovanega vzorca."
+
+#~ msgid "manager.setup.customTags"
+#~ msgstr "Posebne HTML oznake"
+
+#~ msgid "manager.setup.customTagsDescription"
+#~ msgstr ""
+#~ "Posebne HTML oznake glave bodo vpisane v glavo vsake strani te revije "
+#~ "(npr. META oznake)."
+
+#~ msgid "manager.setup.emailBounceAddressDescription"
+#~ msgstr ""
+#~ "Vsaka nedostavljena e-pošta bo povzročil sporočilo z napako na ta e-"
+#~ "poštni naslov."
+
+#~ msgid "manager.setup.emailBounceAddressDisabled"
+#~ msgstr ""
+#~ "<strong>Obvestilo:</strong> Za aktiviranje te možnosti mora administrator "
+#~ "spletišča omogočiti <tt>allow_envelope_sender</tt> opcijo v OJS "
+#~ "nastavitveni datoteki. Za podporo te možnosti so morda potrebne dodatne "
+#~ "nastavitve strežnika, kot lahko razberete iz OJS dokumentacije."
+
+#~ msgid "manager.setup.emailSignatureDescription"
+#~ msgstr ""
+#~ "Predpripravlje e-pošte, ki so poslane avtomatsko v imenu revije, bodo "
+#~ "imele na dnu spodnji podpis. Vsebino predpripravljenih e-pošt lahko "
+#~ "pripravite pod Upravljanje revije."
+
+#~ msgid "manager.setup.enableAnnouncements"
+#~ msgstr ""
+#~ "Omogoči, da uredniki revije na spletno stran revije dodajajo obvestila."
+
+#~ msgid "manager.setup.enableAnnouncementsHomepage1"
+#~ msgstr "Prikaži"
+
+#~ msgid "manager.setup.enableAnnouncementsHomepage2"
+#~ msgstr "zadnjih obvestil na domači strani revije."
+
+#~ msgid "manager.setup.contextSummary.description"
+#~ msgstr ""
+#~ "Kratek opis revije, ki se bo prikazoval na seznamu vseh revij na tem "
+#~ "spletišču."
+
+#~ msgid "manager.setup.favicon"
+#~ msgstr "Favicon revije"
+
+#~ msgid "manager.setup.faviconDescription"
+#~ msgstr ""
+#~ "Dodajte favikon revije, ki se bo prikazoval poleg navigacijske vrstice, "
+#~ "ko bodo uporabniki obiskali vašo spletno stran."
+
+#~ msgid "manager.setup.faviconInvalid"
+#~ msgstr ""
+#~ "Napačen format slike za favicon.Dovoljeni formati so .ico, .png, and .gif."
+
+#~ msgid "manager.setup.journalThumbnail.altText"
+#~ msgstr "Nadomestno besedilo za sličico"
+
+#~ msgid "manager.setup.layoutInstructions"
+#~ msgstr "Navodila za prelom"
+
+#~ msgid "manager.setup.layoutInstructionsDescription"
+#~ msgstr ""
+#~ "Tukaj lahko priložite navodila za prelom prispevkov objavljenih v reviji. "
+#~ "Pripravljena so Lahko kot navadno besedilo ali HTML. Vidna bodo grafičnim "
+#~ "urednikom in urednikom rubrik med urejanjem prispevkov. (Vsaka revija ima "
+#~ "lahko svoj format datotek, bibilografske standarde, stilske tabele, itd, "
+#~ "privzeto niso na voljo nobena navodila)"
+
+#~ msgid "manager.setup.layoutTemplates"
+#~ msgstr "Predloge preloma"
+
+#~ msgid "manager.setup.layoutTemplatesDescription"
+#~ msgstr ""
+#~ "Za vsak standarden tip elementa v reviji (prispevek, prikaz knjige, itd.) "
+#~ "lahko naložite predloge za prelom za katerikoli format datotek (npr. pdf, "
+#~ "doc, itd.). Te predloge določajo pisavo, velikost črk, zamikov, itd. in "
+#~ "služijo grafičnim urednikom in korektorjem kot smernice za pripravo "
+#~ "preloma."
+
+#~ msgid "manager.setup.layoutTemplates.file"
+#~ msgstr "Datoteka predloge"
+
+#~ msgid "manager.setup.layoutTemplates.title"
+#~ msgstr "Naslov"
+
+#~ msgid "manager.setup.enableArchive"
+#~ msgstr "Omogoči arhiviranje"
+
+#~ msgid "manager.setup.Issn"
+#~ msgstr "ISSN"
+
+#~ msgid "manager.setup.onlineAccessManagement"
+#~ msgstr "Dostop do vsebine revije"
+
+#~ msgid "manager.setup.openAccess"
+#~ msgstr "Revija bo imela odprt dostop do vsebine."
+
+#~ msgid "manager.setup.provideRefLinkInstructions"
+#~ msgstr "Podajte navodila za grafičnega urednika."
+
+#~ msgid "manager.setup.publisherDescription"
+#~ msgstr ""
+#~ "Ime organizacije, ki izdaja revijo, ki bo napisano na strani O reviji"
+
+#~ msgid "manager.setup.refLinkInstructions.description"
+#~ msgstr "Navodila za grafično oblikovanje povezav za citiranje"
+
+#~ msgid "manager.setup.reviewGuidelinesDescription"
+#~ msgstr ""
+#~ "Napišite kratka navodila recenzentom s smernicami za oceno primernosti "
+#~ "prispevkov za objavo v reviji. Vsebujejo lahko tudi dodatna navodila za "
+#~ "izvedbo učinkovite in uporane recenzije. Med postopkom recenzije lahko "
+#~ "recenzenti podajo komentarje za avtorja in urendika ter posebej samo za "
+#~ "urednika."
+
+#~ msgid "manager.setup.searchEngineIndexingDescription"
+#~ msgstr ""
+#~ "Opišite na kratko revijo in relevantne ključne besede (ločene s "
+#~ "podpičji), ki bodo pomagali uporabnikom raznih iskalnikov najti to revijo."
+
+#~ msgid "manager.setup.securitySettings"
+#~ msgstr "Nastavitve varnosti in dostopa"
+
+#~ msgid "manager.setup.securitySettingsDescription"
+#~ msgstr ""
+#~ "OJS omogoča več varnostnih opcij, ki se lahko uporabijo za omejitev "
+#~ "dostopa do vsebine revije in dostopa do informacij o poteku urejanja "
+#~ "posameznih prispevkov, ki se lahko uporabijo za kasnejše revidiranje "
+#~ "postopkov dela."
+
+#~ msgid "manager.setup.subscription"
+#~ msgstr ""
+#~ "Revija bo zahtevala naročnino za dostop do določenih ali vseh vsebin."
+
+#~ msgid "manager.setup.subscriptionDescription"
+#~ msgstr ""
+#~ "To zahteva dodelitev vloge urednika naročnin, ki ima dostop do modula za "
+#~ "naročnine in vsebuje tudi opcije za odprt dostop do vsebin, arhiviranje "
+#~ "in e-poštnega obveščanje."
+
+#~ msgid "manager.setup.noPublishing"
+#~ msgstr "OJS ne bo uporabljen za izdajanje revije na spletu."
+
+#~ msgid "manager.setup.useJournalStyleSheet"
+#~ msgstr "Stilska tablica revije"
+
+#~ msgid "manager.statistics.statistics.registeredUsers"
+#~ msgstr "Registriranih uporabnikov"
+
+#~ msgid "manager.subscriptionPolicies.authorSelfArchive"
+#~ msgstr "Politika avtorjevega samo-arhiviranja"
+
+#~ msgid "manager.subscriptionPolicies.authorSelfArchiveDescription"
+#~ msgstr ""
+#~ "Spodnja politika avtorjevega samo-arhiviranja bo objavljena na strani O "
+#~ "reviji pod Politikami."
+
+#~ msgid "manager.setup.porticoEnable"
+#~ msgstr ""
+#~ "Omogoči Portico za hranjene in distribucijo vsebine revije po knjižnicah "
+#~ "vključenih v Portico."
+
+#~ msgid "manager.setup.porticoTitle"
+#~ msgstr "Portico"
+
+#~ msgid "stats.publishedSubmissions.details"
+#~ msgstr "Podrobnosti članka"
+
+#~ msgid "stats.publishedSubmissions.none"
+#~ msgstr "Najdenih ni bilo nobenih člankov."
+
+#~ msgid "stats.publishedSubmissions.totalAbstractViews.timeSegment"
+#~ msgstr "Skupno število vpogledov v povzetek posameznega članka po datumih"
+
+#~ msgid "doi.manager.settings.enableSubmissionDoi"
+#~ msgstr "Prispevki"
+
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Članki"
+
+#~ msgid "manager.statistics.defaultMetricDescription"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tVaša OJS namestitev beleži več kot le eno metriko uporabe, ki so "
+#~ "prikazane v različnih kontekstih.\n"
+#~ "V nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni "
+#~ "red najbolj branih člankov ali vrstni red iskalnih rezultatov. Prosimo "
+#~ "izberite eno od konfiguriranih metrik kot privzeto.\n"
+#~ "\t"
+
+#~ msgid "manager.statistics.reports.filters.byContext.description"
+#~ msgstr ""
+#~ "Zožaj območje rezultato z izbiro konteksta (številke in/ali prispevki)."
+
+#~ msgid "manager.statistics.reports.filters.byObject.description"
+#~ msgstr ""
+#~ "Zožaj območje rezultato z izbiro tipa objekta (revija, številka, "
+#~ "prispevek, tip datoteke) in/ali eno ali več IDjev objekta/ov."

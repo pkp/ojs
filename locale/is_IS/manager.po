@@ -12,389 +12,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "manager.section.submissionsToThisSection"
-msgstr "Innsent efni í þennan kafla tímaritsins"
+msgid "manager.distribution.access"
+msgstr "Aðgangur"
 
-msgid "manager.setup.discipline"
-msgstr "Fræðasvið og undirsvið"
-
-msgid "manager.setup.form.contactNameRequired"
-msgstr "Nafn aðaltengiliðar er áskilið."
-
-msgid "manager.setup.form.contactEmailRequired"
-msgstr "Netfang aðaltengiliðar er áskilið."
-
-msgid "manager.setup.form.issnInvalid"
-msgstr "Tilgreint ISSN er ógilt."
-
-msgid "manager.setup.forAuthorsToIndexTheirWork"
-msgstr "Fyrir höfunda til að lykla verk sín"
-
-msgid "manager.setup.focusAndScope.description"
+msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
-"Lýsir fyrir höfundum, lesendum og ritrýnum breidd í greinum og öðru efni sem "
-"tímaritið hyggst birta."
+"Veldu hvernig dagsetning höfundaréttar er valin fyrir grein.  Þetta er hægt "
+"að yfirskrifa í hverju tilfelli.  Ef greinar eru gefnar út jafnóðum, er ekki "
+"notaður útgáfudagur tölublaðs."
 
-msgid "manager.setup.focusAndScope"
-msgstr "Áhersla og umfang"
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Nota útgáfudag tölublaðsins"
 
-msgid "manager.setup.enableUserRegistration"
-msgstr "Gestir geta stofnað notendaaðgang hjá tímaritinu."
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Nota útgáfudag greinar"
 
-msgid "manager.setup.numAnnouncementsHomepage.description"
+msgid "manager.distribution.publication"
+msgstr "Útgáfa"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Útgáfuháttur"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS verður ekki notað til að birta innihald tímaritsins á vefnum."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Tímaritið er í opnum aðgangi."
+
+msgid "manager.distribution.publishingMode.subscription"
 msgstr ""
-"Fjöldi tilkynninga sem á að birta á forsíðu. Ef þetta er skilið eftir tómt "
-"birtast engar tilkynningar á forsíðunni."
+"Tímaritið krefst áskriftar til að fá aðgang að innihaldi í heild eða að "
+"hluta."
 
-msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Sýna á forsíðu"
-
-msgid "manager.setup.enableAnnouncements.description"
+msgid "manager.setup.enableDois.description"
 msgstr ""
-"Hægt er að birta tilkynningar til að upplýsa lesendur tímaritsins um "
-"nýjungar og viðburði, eða til að kalla eftir efni. Sendar tilkynningar "
-"birtast á tilkynningasíðunni."
 
-msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Virkja tilkynningar"
-
-#, fuzzy
-msgid "manager.setup.emailSignature.description"
+msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
-"Tölvupóstar sem kerfið sendir fyrir hönd tímaritsins munu hafa eftirfarnadi "
-"undirskrift neðst í tölvupóstinum."
 
-msgid "manager.setup.emailSignature"
-msgstr "Undirskrift"
-
-msgid "manager.setup.emails"
-msgstr "Netfang - auðkenni"
-
-msgid "manager.setup.emailBounceAddress.disabled"
+msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
-"Svo hægt sé að senda óskilapóst á tiltekið netfang, þarf kerfisstjóri "
-"síðunnar að virkja  <code>allow_envelope_sender</code> valkostinn í "
-"stillingum vefsíðunnar. Mögulega þarf einnig stillingar á vefþjóni, eins og "
-"bent er á í skjölun OJS kerfisins."
 
-msgid "manager.setup.emailBounceAddress.description"
-msgstr "Allur óskilapóstur mun skila villuboðum á þetta netfang."
-
-msgid "manager.setup.emailBounceAddress"
-msgstr "Óskilapóstur - netfang"
-
-msgid "manager.setup.editorDecision"
-msgstr "Ákvörðun ritstjóra"
-
-msgid "manager.setup.displayCurrentIssue"
-msgstr "Bæta við efnisyfirliti fyrir nýjasta tölublaðið (ef í boði)."
-
-msgid "manager.setup.disciplineProvideExamples"
-msgstr "Skráðu dæmi um viðeigandi fræðasvið fyrir þetta tímarit"
-
-msgid "manager.setup.disciplineExamples"
+msgid "doi.manager.settings.doiCreationTime.copyedit"
 msgstr ""
-"(T.d. Ferðamálafræði,  Hagfræði, Félagvísindi, Náttúruvísindi, Mannfræði)"
 
-msgid "manager.setup.disciplineDescription"
+msgid "manager.website.archiving"
+msgstr "Útgefið efni"
+
+msgid "manager.files.note"
 msgstr ""
-"Gagnlegt þegar tímaritið er þverfaglegt og/eða höfundar senda inn efni sem "
-"nær yfir fleiri en eitt fræðasvið."
+"ATH: Vafrinn fyrir skrár er þróðu virkni sem gerir mögulegt að vinna beint "
+"með skrár og möppur sem eru tengar við tímaritið."
 
-msgid "manager.setup.disableUserRegistration"
+msgid "manager.journalManagement"
+msgstr "Umsjón með tímariti"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Innsendingar"
+
+msgid "manager.language.forms"
+msgstr "Eyðublöð"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
-"Framkvæmdastjóri tímarits mun skrá alla notendur. Ristjórar og "
-"kaflaritstjórar geta skráð ritrýna sem notendur."
-
-msgid "manager.setup.details.description"
-msgstr "Heiti tímarits, ISSN, tengiliðir, stuðningsaðilar og leitarvélar."
-
-msgid "manager.setup.details"
-msgstr "Nánar"
-
-msgid "manager.setup.customizingTheLook"
-msgstr "Skref 5. Stilla útlit"
-
-msgid "manager.setup.currentIssue"
-msgstr "Nýjast"
-
-msgid "manager.setup.historyDescription"
-msgstr ""
-"Þessi texti birtist í \"Um\" hluta vefsíðu tímaritsins og má nota til að "
-"lýsa breytingum á titlum, ristjórn og öðrum atriðum sem eiga við um sögu "
-"tímaritsins."
-
-msgid "manager.setup.history"
-msgstr "Saga tímaritsins"
-
-msgid "manager.setup.competingInterests.requireReviewers"
-msgstr ""
-"Biðja ritrýna að skrá yfirlýsingu vegna hagsmunaárekstra með hverri rtirýni "
-"sem þeir senda inn."
-
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Biðja höfunda sem senda inn efni að skrá um leið yfirlýsingu vegna "
-"hagsmunaárekstra."
-
-msgid "manager.setup.appearInAboutJournal"
-msgstr "(Sem á að birtast í \"Um tímaritið\") "
-
-msgid "manager.setup.announcementsIntroduction.description"
-msgstr "Settu inn þær upplýsingar sem þú vilt að birtist á tilkynningasíðunni."
-
-msgid "manager.setup.announcementsIntroduction"
-msgstr "Inngangur"
-
-msgid "manager.setup.announcements"
-msgstr "Tilkynningar"
-
-msgid "manager.setup.alternateHeaderDescription"
-msgstr ""
-"Í stað titils og merkis, er hægt að setja inn HTML útgáfu af hasunum í "
-"textaboxið fyrir neðan.  Skildu textaboxið eftir tómt ef þetta er óþarft."
-
-msgid "manager.setup.alternateHeader"
-msgstr "Auka haus"
-
-msgid "manager.setup.addSponsor"
-msgstr "Bæta við styrktarfélagi"
-
-msgid "manager.setup.addReviewerDatabaseLink"
-msgstr "Bæta við nýjum gagnagrunnstengli"
-
-msgid "manager.setup.addNavItem"
-msgstr "Bæta við atriði"
-
-msgid "manager.setup.addItemtoAboutJournal"
-msgstr "Bæta við atriði sem birtist í \"Um tímaritið\""
-
-msgid "manager.setup.addItem"
-msgstr "Bæta við atriði"
-
-msgid "manager.setup.addChecklistItem"
-msgstr "Bæta við atriði á gátlista"
-
-msgid "manager.setup.addAboutItem"
-msgstr "Bæta við atriði í \"Um tímaritið\""
-
-msgid "manager.setup.aboutItemContent"
-msgstr "Innihald"
-
-msgid "manager.setup.pageHeader"
-msgstr "Haus tímarits"
-
-msgid "manager.setup.contextName"
-msgstr "Nafn tímarits"
-
-msgid "manager.setup.useStyleSheet"
-msgstr "Stílblað tímarits"
-
-msgid "manager.setup.homepageContentDescription"
-msgstr ""
-"Forsíða tímaritsins hefur sjálfgefnar valmyndir.  Hægt er að bæta við "
-"viðbótarefni með því að nota einn eða alla eftirfarandi valmöguleika, sem "
-"munu birtast í þeirri röð sem þeir eru sýndir."
-
-msgid "manager.setup.homepageContent"
-msgstr "Innihald forsíðu tímarits"
-
-msgid "manager.setup.editorialTeam"
-msgstr "Ritstjórnarteymi"
-
-msgid "manager.setup.masthead"
-msgstr "Síðuhaus"
-
-msgid "manager.setup"
-msgstr "Stillingar tímarits"
-
-msgid "manager.sections.wordCountInstructions"
-msgstr ""
-"Takmakra orðafjölda  í útdrætti fyrir þennan kafla (0 fyrir ótakmarkað)"
-
-msgid "manager.sections.wordCount"
-msgstr "Fjöldi orða"
-
-msgid "manager.sections.unassigned"
-msgstr "Kaflaritstjórar í boði"
-
-msgid "manager.sections.submissionReview"
-msgstr "Verður ekki ritrýnt"
-
-msgid "manager.sections.submissionIndexing"
-msgstr "Verður ekki tekið með í lyklun tímaritsins"
-
-msgid "manager.sections.reviewed"
-msgstr "Ritrýnt"
-
-msgid "manager.sections.readingTools"
-msgstr "Lestól"
-
-msgid "manager.sections.policy"
-msgstr "Stefna kafla"
-
-msgid "manager.sections.open"
-msgstr "Opnar innsendingar"
-
-msgid "manager.sections.noneCreated"
-msgstr "Enginn kafli hefur verið búinn til."
-
-msgid "manager.sections.identifyTypeExamples"
-msgstr "(Til dæmis, \"Ritrýnd grein\", \"Bókarýni\", \"Greinar\", o.s.frv.)"
-
-msgid "manager.sections.identifyType"
-msgstr "Auðkenna atriði gefin út í þessum kafla sem"
-
-msgid "manager.sections.indexed"
-msgstr "Lyklað"
-
-msgid "manager.sections.hideTocTitle"
-msgstr "Sleppa titli kaflans í efnisyfirliti tölublaðs."
-
-msgid "manager.sections.hideTocAuthor"
-msgstr "Sleppa nöfnum höfunda fyrir atriði kaflanns í efnisyfirliti tölublaðs."
-
-msgid "manager.sections.form.titleRequired"
-msgstr "Það þarf að vera titill á þessum kafla."
-
-msgid "manager.sections.form.reviewFormId"
-msgstr "Vinsamlega athugaðu hvort þú hafir valið gilt ritrýnieyðublað."
-
-msgid "manager.sections.form.mustAllowPermission"
-msgstr ""
-"Vinsamlega athugaðu að a.m.k. eitt gátbox sé valið fyrir hvern kaflaritsjóra."
-
-msgid "manager.sections.form.abbrevRequired"
-msgstr "Það þarf skammstöfun á titli fyrir þennan kafla"
-
-msgid "manager.sections.confirmDeactivateSection.error"
-msgstr ""
-"Að minnsta kosti einn kafli þarf að vera virkur.  Farðu í stillingar á "
-"verkferlum til að afvirkja innsendingar til þessa tímarits."
-
-msgid "manager.sections.editors"
-msgstr "Kaflaritstjórar"
-
-msgid "manager.sections.editorRestriction"
-msgstr "Eingöngu ritstjórar og kaflaritstjórar geta sent inn atriði."
-
-msgid "manager.section.sectionEditorInstructions"
-msgstr ""
-"Bæta við kaflaritstjóra til að allar innsendingar á kaflann sé sjálfkrafa "
-"úthlutað á hann. (Annars er hægt að úthluta kaflaritstjóra handvirkt eftir "
-"að búið er að senda inn efni.) Ef kaflaritstjóra er bætt við, er einnig hægt "
-"að úthluta sjálfkrafa eftirliti með ritrýni og/eða undirbúningi á útgáfu "
-"efnis (yfirferð texta, umbrot og prófarkalestur) í þessum kafla. "
-"Kaflaritstjórar eru búnir til með því að smella á \"Kaflaritstjóri\" undir "
-"\"Hlutverk\" í \"Umsjón með tímariti\"."
-
-msgid "manager.sections.create"
-msgstr "Búa til kafla"
-
-msgid "manager.sections.alertDelete"
-msgstr ""
-"Áður en hægt er að eyða þessu kafla, verður að færa greinar sem voru sendar "
-"inn á kaflann yfir á aðra kafla."
-
-msgid "manager.sections.confirmDelete"
-msgstr "Ertu viss um að þú viljir eyða þessum kafla?"
-
-msgid "manager.sections.assigned"
-msgstr "Ritstjórar þessa kafla"
-
-msgid "manager.sections.abstractsNotRequired"
-msgstr "Krefst ekki útdráttar"
-
-msgid "manager.people.roleEnrollment"
-msgstr "{$role} skráning"
-
-msgid "manager.people.mergeUsers.into.description"
-msgstr ""
-"Veldu notanda sem á að færa allt yfir á frá fyrri notanda (höfundur, "
-"úthlutanir o.s.frv.)."
-
-msgid "manager.people.mergeUsers.from.description"
-msgstr ""
-"Veldu notanda (eða notendur) til að sameinast/fella saman í notandareikning "
-"(t.d. þegar einhver er með tvo notendareikninga). Notandanum sem er valinn "
-"fyrst verður eytt og allar innsendingar, úthlutanir á verkefni o.s.frv. "
-"verða tengd á seinni notandann."
-
-msgid "manager.people.enrollSyncJournal"
-msgstr "Hjá tímariti"
-
-msgid "manager.people.enrollExistingUser"
-msgstr "Skrá notanda sem er til"
-
-msgid "manager.people.emailUsers.selectTemplate"
-msgstr "Velja sniðmát"
-
-msgid "manager.people.confirmRemove"
-msgstr ""
-"Fjarlægja notandann frá þessu tímariti? Þessi aðgerð afskráir notandann úr "
-"öllum hlutverkum hjá tímaritinu."
-
-msgid "manager.people.allUsers"
-msgstr "Allir skráðir notendur"
-
-msgid "manager.people.showNoRole"
-msgstr "Sýna notendur án hlutverks"
-
-msgid "manager.people.allSiteUsers"
-msgstr "Skrá notanda frá þessari vefsíðu í tímaritið"
-
-msgid "manager.people.allJournals"
-msgstr "Öll tímrit"
-
-msgid "manager.people.allEnrolledUsers"
-msgstr "Notendur skráðir hjá þessu tímariti"
-
-msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Ertu viss um að þú viljir eyða þessari áskrift?"
-
-msgid "manager.payment.options"
-msgstr "Valkostir"
-
-msgid "manager.payment.notFound"
-msgstr "Fannst ekki"
-
-msgid "manager.payment.noPayments"
-msgstr "Engar greiðslur"
-
-msgid "manager.payment.enable"
-msgstr "Virkja"
-
-msgid "manager.payment.editSubscription"
-msgstr "Breyta áskrift"
-
-msgid "manager.payment.details"
-msgstr "Nánar"
-
-msgid "manager.payment.description"
-msgstr "Lýsing"
-
-msgid "manager.payment.authorFees"
-msgstr "Höfundagjöld"
-
-msgid "manager.payment.amount"
-msgstr "Upphæð"
-
-msgid "manager.managementPages"
-msgstr "Umsjónarsíður"
-
-msgid "manager.payment.addPayment"
-msgstr "Bæta við greiðslu"
-
-msgid "manager.payment.action"
-msgstr "Aðgerð"
-
-msgid "manager.languages.primaryLocaleInstructions"
-msgstr "Þetta verður sjálfgefið tungumál fyrir vefsíðu tímaritsins."
-
-msgid "manager.languages.noneAvailable"
-msgstr ""
-"Því miður eru engin viðbótartungumál í boði.  Hafðu samband við umsjónarmann "
-"vefsins ef þú óskar eftir að nota viðbótartungumál fyrir þetta tímarit."
+"Þetta yfirskrifar allar sértækar stillingar tímaritsins sem valdar voru "
+"fyrir þetta tungumál"
 
 msgid "manager.languages.languageInstructions"
 msgstr ""
@@ -406,190 +91,807 @@ msgstr ""
 "upp.  Skoðaðu skjölun OJS fyrir leiðbeiningar um að hvernig bæta skal við "
 "stuðningi fyrir ný tungumál."
 
-msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgid "manager.languages.noneAvailable"
 msgstr ""
-"Þetta yfirskrifar allar sértækar stillingar tímaritsins sem valdar voru "
-"fyrir þetta tungumál"
+"Því miður eru engin viðbótartungumál í boði.  Hafðu samband við umsjónarmann "
+"vefsins ef þú óskar eftir að nota viðbótartungumál fyrir þetta tímarit."
 
-msgid "manager.language.forms"
-msgstr "Eyðublöð"
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Þetta verður sjálfgefið tungumál fyrir vefsíðu tímaritsins."
 
-msgid "manager.language.submissions"
-msgstr "Innsendingar"
+msgid "manager.managementPages"
+msgstr "Umsjónarsíður"
 
-msgid "manager.language.ui"
-msgstr "UI"
+msgid "manager.payment.action"
+msgstr "Aðgerð"
 
-msgid "manager.journalManagement"
-msgstr "Umsjón með tímariti"
+msgid "manager.payment.addPayment"
+msgstr "Bæta við greiðslu"
 
-msgid "manager.files.note"
+msgid "manager.payment.amount"
+msgstr "Upphæð"
+
+msgid "manager.payment.authorFees"
+msgstr "Höfundagjöld"
+
+msgid "manager.payment.authorFeesDescription"
 msgstr ""
-"ATH: Vafrinn fyrir skrár er þróðu virkni sem gerir mögulegt að vinna beint "
-"með skrár og möppur sem eru tengar við tímaritið."
 
-msgid "manager.website.archiving"
-msgstr "Útgefið efni"
-
-msgid "manager.distribution.publishingMode.subscription"
+msgid "manager.payment.currencymessage"
 msgstr ""
-"Tímaritið krefst áskriftar til að fá aðgang að innihaldi í heild eða að "
-"hluta."
 
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Tímaritið er í opnum aðgangi."
+msgid "manager.payment.description"
+msgstr "Lýsing"
 
-msgid "manager.distribution.publishingMode.none"
-msgstr "OJS verður ekki notað til að birta innihald tímaritsins á vefnum."
+msgid "manager.payment.details"
+msgstr "Nánar"
 
-msgid "manager.distribution.publishingMode"
-msgstr "Útgáfuháttur"
+msgid "manager.payment.editSubscription"
+msgstr "Breyta áskrift"
 
-msgid "manager.distribution.publication"
-msgstr "Útgáfa"
+msgid "manager.payment.enable"
+msgstr "Virkja"
 
-msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr "Nota útgáfudag greinar"
-
-msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Nota útgáfudag tölublaðsins"
-
-msgid "manager.distribution.copyrightYearBasis.description"
+msgid "manager.payment.feePaymentOptions"
 msgstr ""
-"Veldu hvernig dagsetning höfundaréttar er valin fyrir grein.  Þetta er hægt "
-"að yfirskrifa í hverju tilfelli.  Ef greinar eru gefnar út jafnóðum, er ekki "
-"notaður útgáfudagur tölublaðs."
 
-msgid "manager.distribution.access"
-msgstr "Aðgangur"
-
-msgid "manager.setup.subjectExamples"
-msgstr "(T.d., Ferðamál, Áfangastaðir, Markaðssetning, Sjálfbær ferðamennska)"
-
-msgid "manager.setup.subjectKeywordTopic"
-msgstr "Lykilorð"
-
-msgid "manager.setup.stepsToJournalSite"
-msgstr "Fimm skref fyrir vefsíðu tímarits"
-
-msgid "manager.setup.siteAccess.viewContent"
-msgstr "Skoða grein"
-
-msgid "manager.setup.siteAccess.view"
-msgstr "Aðgangur síðu"
-
-msgid "manager.setup.showGalleyLinksDescription"
-msgstr "Sýna alltaf galleytengla og gefa til kynna takmarkaðan aðgang."
-
-msgid "manager.setup.selectSectionDescription"
-msgstr "Kafli tímaritsins sem þetta atriði verður skoðað fyrir."
-
-msgid "manager.setup.selectEditorDescription"
-msgstr "Ritstjóri sem hefur umsjón með efninu í gengum ritstjórnarferlið."
-
-msgid "manager.setup.sectionsDescription"
+msgid "manager.payment.form.numeric"
 msgstr ""
-"Til að búa til eða breyta köflum fyrir tímaritið (t.d., Ritrýndar greinar, "
-"Bókarýni, o.s.frv.), farðu í umsjón með köflum.<br /><br />Höfundar á "
-"innsendu efni velji..."
 
-msgid "manager.setup.sectionsDefaultSectionDescription"
+msgid "manager.payment.generalFees"
 msgstr ""
-"(Ef engum köflum er bætt við, þá er allt efni sjálfkrafa sent inn í "
-"greinakaflann.)"
 
-msgid "manager.setup.sectionsAndSectionEditors"
-msgstr "Kaflar og kaflaritstjórar"
-
-msgid "manager.setup.searchDescription.description"
+msgid "manager.payment.generalFeesDescription"
 msgstr ""
-"Skráðu stutta lýsingu (50-300 stafir) á tímaritinu sem leitarvélar geta sýnt "
-"þegar síðan kemur upp í leitarniðurstöðum."
 
-msgid "manager.setup.searchEngineIndexing.description"
+msgid "manager.payment.generalOptions"
 msgstr ""
-"Hjálpaðu leitarvélum eins og Google að finna og sýna síðuna þína. Við "
-"hvetjum þig til að senda inn <a href=\"{$sitemapUrl}\" target=\"_blank"
-"\">vefsíðutré</a>."
 
-msgid "manager.setup.searchEngineIndexing"
-msgstr "Lyklun fyrir leit"
+msgid "manager.payment.noPayments"
+msgstr "Engar greiðslur"
 
-msgid "manager.setup.reviewPolicy"
-msgstr "Ritrýnistefna"
+msgid "manager.payment.notFound"
+msgstr "Fannst ekki"
 
-msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "Áminningar til ritrýna"
+msgid "manager.payment.options"
+msgstr "Valkostir"
 
-msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr "Einkunnargjöf fyrir ritrýni"
-
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "Bæta öruggum tengli við tölvupóst til ritrýna."
-
-#, fuzzy
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr ""
-"Hægt er að senda ritrýnum öruggan tengil í tölvupósti. Það gerir þeim kleift "
-"að fá aðgang að ritrýni án þess að skrá sig inn. Fyrir aðgang að öðrum síðum "
-"þarf að skrá sig inn."
 
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Flýtiaðgangur fyrir ritrýna"
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Ertu viss um að þú viljir eyða þessari áskrift?"
 
-msgid "manager.setup.reviewOptions.reviewerAccess"
-msgstr "Aðgangur ritrýna"
-
-msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgid "manager.payment.options.enablePayments"
 msgstr ""
-"Ritrýnar fá ekki aðgang að innsendu efni fyrr en þeir hafa samþykkt að "
-"ritrýna það."
 
-msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "Takmarka aðgang að skrám"
-
-msgid "manager.setup.reviewOptions.onQuality"
+msgid "manager.payment.options.fee"
 msgstr ""
-"Ritstjórar gefa ritrýnum einkunn á fimm punkta skala eftir hverja ritrýni."
 
-msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "Vikur til að ljúka ritrýni"
-
-msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgid "manager.payment.options.feeDescription"
 msgstr ""
-"Til að senda sjálfvirkar áminningar í tölvupósti þarf umsjónaraðili síðunnar "
-"að virkja <tt>scheduled_tasks</tt> valkostinn í OJS skráarstillingum. Það "
-"gæti verið þörf á viðbótarþjóni eins og kemur fram í OJS skjöluninni."
 
-msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Sjálfvirkar áminningar í tölvupósti"
-
-msgid "manager.setup.reviewOptions"
-msgstr "Valkostir ritrýni"
-
-msgid "manager.setup.reviewGuidelines"
-msgstr "Leiðbeiningar um ritrýni"
-
-msgid "manager.setup.restrictSiteAccess"
+msgid "manager.payment.options.feeName"
 msgstr ""
-"Notendur verða að vera skráðir og innskráðir til að skoða vefsíðu "
+
+msgid "manager.payment.options.membershipFee"
+msgstr ""
+
+msgid "manager.payment.options.onlypdf"
+msgstr ""
+
+msgid "manager.payment.options.publicationFee"
+msgstr ""
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr ""
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr ""
+
+msgid "manager.payment.options.text"
+msgstr ""
+
+msgid "manager.payment.paymentId"
+msgstr ""
+
+msgid "manager.payment.paymentMethod"
+msgstr ""
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+
+msgid "manager.payment.paymentMethods"
+msgstr ""
+
+msgid "manager.payment.paymentType"
+msgstr ""
+
+msgid "manager.payment.readerFees"
+msgstr ""
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+
+msgid "manager.payment.records"
+msgstr ""
+
+msgid "manager.paymentTypes"
+msgstr ""
+
+msgid "manager.payment.userName"
+msgstr ""
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Notendur skráðir hjá þessu tímariti"
+
+msgid "manager.people.allJournals"
+msgstr "Öll tímrit"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Skrá notanda frá þessari vefsíðu í tímaritið"
+
+msgid "manager.people.showNoRole"
+msgstr "Sýna notendur án hlutverks"
+
+msgid "manager.people.allUsers"
+msgstr "Allir skráðir notendur"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Fjarlægja notandann frá þessu tímariti? Þessi aðgerð afskráir notandann úr "
+"öllum hlutverkum hjá tímaritinu."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Velja sniðmát"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Skrá notanda sem er til"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Hjá tímariti"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Veldu notanda (eða notendur) til að sameinast/fella saman í notandareikning "
+"(t.d. þegar einhver er með tvo notendareikninga). Notandanum sem er valinn "
+"fyrst verður eytt og allar innsendingar, úthlutanir á verkefni o.s.frv. "
+"verða tengd á seinni notandann."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Veldu notanda sem á að færa allt yfir á frá fyrri notanda (höfundur, "
+"úthlutanir o.s.frv.)."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} skráning"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Krefst ekki útdráttar"
+
+msgid "manager.sections.assigned"
+msgstr "Ritstjórar þessa kafla"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Ertu viss um að þú viljir eyða þessum kafla?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Áður en hægt er að eyða þessu kafla, verður að færa greinar sem voru sendar "
+"inn á kaflann yfir á aðra kafla."
+
+msgid "manager.sections.create"
+msgstr "Búa til kafla"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Bæta við kaflaritstjóra til að allar innsendingar á kaflann sé sjálfkrafa "
+"úthlutað á hann. (Annars er hægt að úthluta kaflaritstjóra handvirkt eftir "
+"að búið er að senda inn efni.) Ef kaflaritstjóra er bætt við, er einnig hægt "
+"að úthluta sjálfkrafa eftirliti með ritrýni og/eða undirbúningi á útgáfu "
+"efnis (yfirferð texta, umbrot og prófarkalestur) í þessum kafla. "
+"Kaflaritstjórar eru búnir til með því að smella á \"Kaflaritstjóri\" undir "
+"\"Hlutverk\" í \"Umsjón með tímariti\"."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Eingöngu ritstjórar og kaflaritstjórar geta sent inn atriði."
+
+msgid "manager.sections.editors"
+msgstr "Kaflaritstjórar"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Að minnsta kosti einn kafli þarf að vera virkur.  Farðu í stillingar á "
+"verkferlum til að afvirkja innsendingar til þessa tímarits."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Það þarf skammstöfun á titli fyrir þennan kafla"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Vinsamlega athugaðu að a.m.k. eitt gátbox sé valið fyrir hvern kaflaritsjóra."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Vinsamlega athugaðu hvort þú hafir valið gilt ritrýnieyðublað."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Það þarf að vera titill á þessum kafla."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Sleppa nöfnum höfunda fyrir atriði kaflanns í efnisyfirliti tölublaðs."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Sleppa titli kaflans í efnisyfirliti tölublaðs."
+
+msgid "manager.sections.identifyType"
+msgstr "Auðkenna atriði gefin út í þessum kafla sem"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr "(Til dæmis, \"Ritrýnd grein\", \"Bókarýni\", \"Greinar\", o.s.frv.)"
+
+msgid "manager.sections.indexed"
+msgstr "Lyklað"
+
+msgid "manager.sections.noneCreated"
+msgstr "Enginn kafli hefur verið búinn til."
+
+msgid "manager.sections.open"
+msgstr "Opnar innsendingar"
+
+msgid "manager.sections.policy"
+msgstr "Stefna kafla"
+
+msgid "manager.sections.readingTools"
+msgstr "Lestól"
+
+msgid "manager.sections.reviewed"
+msgstr "Ritrýnt"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Verður ekki tekið með í lyklun tímaritsins"
+
+msgid "manager.sections.submissionReview"
+msgstr "Verður ekki ritrýnt"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Innsent efni í þennan kafla tímaritsins"
+
+msgid "manager.sections.unassigned"
+msgstr "Kaflaritstjórar í boði"
+
+msgid "manager.sections.wordCount"
+msgstr "Fjöldi orða"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Takmakra orðafjölda  í útdrætti fyrir þennan kafla (0 fyrir ótakmarkað)"
+
+msgid "manager.setup"
+msgstr "Stillingar tímarits"
+
+msgid "manager.setup.masthead"
+msgstr "Síðuhaus"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Ritstjórnarteymi"
+
+msgid "manager.setup.homepageContent"
+msgstr "Innihald forsíðu tímarits"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Forsíða tímaritsins hefur sjálfgefnar valmyndir.  Hægt er að bæta við "
+"viðbótarefni með því að nota einn eða alla eftirfarandi valmöguleika, sem "
+"munu birtast í þeirri röð sem þeir eru sýndir."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Stílblað tímarits"
+
+msgid "manager.setup.contextName"
+msgstr "Nafn tímarits"
+
+msgid "manager.setup.pageHeader"
+msgstr "Haus tímarits"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Innihald"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Bæta við atriði í \"Um tímaritið\""
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Bæta við atriði á gátlista"
+
+msgid "manager.setup.addItem"
+msgstr "Bæta við atriði"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Bæta við atriði sem birtist í \"Um tímaritið\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Bæta við atriði"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Bæta við nýjum gagnagrunnstengli"
+
+msgid "manager.setup.addSponsor"
+msgstr "Bæta við styrktarfélagi"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Auka haus"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Í stað titils og merkis, er hægt að setja inn HTML útgáfu af hasunum í "
+"textaboxið fyrir neðan.  Skildu textaboxið eftir tómt ef þetta er óþarft."
+
+msgid "manager.setup.announcements"
+msgstr "Tilkynningar"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Inngangur"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Settu inn þær upplýsingar sem þú vilt að birtist á tilkynningasíðunni."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Sem á að birtast í \"Um tímaritið\") "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Biðja höfunda sem senda inn efni að skrá um leið yfirlýsingu vegna "
+"hagsmunaárekstra."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Biðja ritrýna að skrá yfirlýsingu vegna hagsmunaárekstra með hverri rtirýni "
+"sem þeir senda inn."
+
+msgid "manager.setup.history"
+msgstr "Saga tímaritsins"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Þessi texti birtist í \"Um\" hluta vefsíðu tímaritsins og má nota til að "
+"lýsa breytingum á titlum, ristjórn og öðrum atriðum sem eiga við um sögu "
 "tímaritsins."
 
-msgid "manager.setup.restrictArticleAccess"
+msgid "manager.setup.currentIssue"
+msgstr "Nýjast"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Skref 5. Stilla útlit"
+
+msgid "manager.setup.details"
+msgstr "Nánar"
+
+msgid "manager.setup.details.description"
+msgstr "Heiti tímarits, ISSN, tengiliðir, stuðningsaðilar og leitarvélar."
+
+msgid "manager.setup.disableUserRegistration"
 msgstr ""
-"Notendur verða að vera skráðir og innskáðir til að geta skoðað efni í opnum "
-"aðgangi."
+"Framkvæmdastjóri tímarits mun skrá alla notendur. Ristjórar og "
+"kaflaritstjórar geta skráð ritrýna sem notendur."
 
-msgid "manager.setup.referenceLinking"
-msgstr "Tenglar á heimildir"
+msgid "manager.setup.discipline"
+msgstr "Fræðasvið og undirsvið"
 
-msgid "manager.setup.publisher"
-msgstr "Útgefandi"
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Gagnlegt þegar tímaritið er þverfaglegt og/eða höfundar senda inn efni sem "
+"nær yfir fleiri en eitt fræðasvið."
 
-msgid "manager.setup.publicIdentifier"
-msgstr "Auðkenna innihald tímarits"
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(T.d. Ferðamálafræði,  Hagfræði, Félagvísindi, Náttúruvísindi, Mannfræði)"
 
-msgid "manager.setup.publicationScheduling"
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Skráðu dæmi um viðeigandi fræðasvið fyrir þetta tímarit"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Bæta við efnisyfirliti fyrir nýjasta tölublaðið (ef í boði)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Ákvörðun ritstjóra"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Óskilapóstur - netfang"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Allur óskilapóstur mun skila villuboðum á þetta netfang."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Svo hægt sé að senda óskilapóst á tiltekið netfang, þarf kerfisstjóri "
+"síðunnar að virkja  <code>allow_envelope_sender</code> valkostinn í "
+"stillingum vefsíðunnar. Mögulega þarf einnig stillingar á vefþjóni, eins og "
+"bent er á í skjölun OJS kerfisins."
+
+msgid "manager.setup.emails"
+msgstr "Netfang - auðkenni"
+
+msgid "manager.setup.emailSignature"
+msgstr "Undirskrift"
+
+#, fuzzy
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Tölvupóstar sem kerfið sendir fyrir hönd tímaritsins munu hafa eftirfarnadi "
+"undirskrift neðst í tölvupóstinum."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Virkja tilkynningar"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Hægt er að birta tilkynningar til að upplýsa lesendur tímaritsins um "
+"nýjungar og viðburði, eða til að kalla eftir efni. Sendar tilkynningar "
+"birtast á tilkynningasíðunni."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Sýna á forsíðu"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Fjöldi tilkynninga sem á að birta á forsíðu. Ef þetta er skilið eftir tómt "
+"birtast engar tilkynningar á forsíðunni."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Gestir geta stofnað notendaaðgang hjá tímaritinu."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Áhersla og umfang"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Lýsir fyrir höfundum, lesendum og ritrýnum breidd í greinum og öðru efni sem "
+"tímaritið hyggst birta."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Fyrir höfunda til að lykla verk sín"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Tilgreint ISSN er ógilt."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Netfang aðaltengiliðar er áskilið."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Nafn aðaltengiliðar er áskilið."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Upphafsstafir tímaritsins eru áskildir."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Titill tímaritsins er áskilinn."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Fjöldi ritrýna per innsendingu er áskilinn."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Netfang fyrir aðstoð er áskilið."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Nafn aðstoðaraðila er áskilið."
+
+msgid "manager.setup.generalInformation"
+msgstr "Almennar upplýsingar"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Skref 1.  Fara yfir smáatriðin"
+
+msgid "manager.setup.guidelines"
+msgstr "Leiðbeiningar"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Skref 3. Leiðbeina varðandi innsendingar"
+
+msgid "manager.setup.identity"
+msgstr "Kenni tímarits"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Fyrir tímarit sem veita umsvifalausan eða seinkaðan opinn aðgang, bættu við "
+"Creative Commons leyfi fyrir öll útgefin verk á viðeigandi tímapunkti."
+
+msgid "manager.setup.information"
+msgstr "Upplýsingar"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Stutt lýsing á tímaritinu fyrir ritrýna, bókasafnsfræðinga, mögulega höfunda "
+"og lesendur. Þetta er gert aðgengilegt á hliðarstiku þegar uppýsingablokk "
+"hefur verið bætt við."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Fyrir höfunda"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Fyrir bókasafnsfræðinga"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Til lesenda"
+
+msgid "manager.setup.initialIssue"
+msgstr "Upphafstölublað"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Háð vali á sniði, skilgreindu tölublað, bindi og/eða ár fyrsta tölublaðsins "
+"sem er gefið út með OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Stofnun"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Hægt er að bæta við atriðum á valmynd í þessu setti  sem birtist efst á "
+"síðunni (Forsíða, Um tímaritið, Forsíða notanda, o.s.frv.) ."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Atriði per síðu"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Takmarka fjölda atriða (t.d. innsendingar, notendur eða "
+"ritstjórnarúthlutanir) sem sjást á lista áður en eftirfarandi atriði eru "
+"sýnd á annari blaðsíðu."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Skammstöfun á heiti tímrits"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Útgefið efni"
+
+msgid "manager.setup.contextSummary"
+msgstr "Samantekt"
+
+msgid "manager.setup.contextAbout"
+msgstr "Um tímaritið"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Skráðu allar upplýsingar um tímaritið sem gætu skipt máli fyrir lesendur, "
+"höfunda eða ritrýna. Þetta gæti t.d. verið stefna um opinn aðgang, áherslur "
+"og efnissvið tímaritsins, höfundaréttur, stuðningsaðilar, saga tímaritsins, "
+"persónuvernd og þátttaka í geymslukerfum eins og LOCKSS eða CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Innihald á forsíðu tímarits"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Forsíðan samanstendur af valmyndum. Viðbótarinnihaldi á forsíðu er hægt að "
+"bæta við með því að nota einhvern eða alla eftirfarandi valkosti. Þeir "
+"birtast í þeirri röð sem þeir eru í.  ATH að nýjasta tölublaðið er alltaf "
+"aðgengilegt í gengum viðkomandi tengil á valstikunni."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Haus á forsíðu"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Haus á forsíðu"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Hægt er að hlaða upp myndrænni útgáfu fyrir titil tímarits ásamt merki (sem ."
+"gif, .jpg eða .png skrá), sem kemur i stað textaútgáfunnar sem annars "
+"birtist."
+
+msgid "manager.setup.contextInitials"
+msgstr "Upphafsstafir tímarits"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Veldu landið þar sem tímaritið er staðsett, eða þar sem útgefandi er með "
+"póstfang."
+
+msgid "manager.setup.journalLayout"
+msgstr "Útlit tímrits"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Veldu þema og útlitsatriði hér. Hægt er að hlaða upp stílsniði sem má nota "
+"til að yfirskrifa sjálfgefin stílgögn í kerfinu og stílsnið þema (ef þema er "
+"valið)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Merki tímarits"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Merki tímarits"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Síðufótur"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Þetta birtist í síðufót tímaritsins. Til að breyta eða uppfæra síðufótinn, "
+"afritaðu hingað HTML kóðann í textaboxinu fyrir neðan.  Dæmi gætu verið "
+"önnur valstika, teljari o.s.frv.  Síðufóturinn birtist á öllum síðum."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Skref 2. Stefnur tímartitsins"
+
+msgid "manager.setup.journalSetup"
+msgstr "Uppsetning á tímariti"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Uppsentingarnar fyrir tímaritið hafa verið uppfærðar."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Ógilt snið á stílsniði.  Gilt snið er .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Þema tímarits"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Smámynd tímarits"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Lítið merki eða tákn fyrir tímaritið sem hægt er að nota á lista yfir "
+"tímarit."
+
+msgid "manager.setup.contextTitle"
+msgstr "Titill tímarits"
+
+msgid "manager.setup.keyInfo"
+msgstr "Lykilupplýsingar"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Skráðu stutta lýsingu á tímaritinu og einnig hverjir eru ritstjórar, "
+"framkvæmdastjórar og aðrir í ritstjórnarteyminu."
+
+msgid "manager.setup.labelName"
+msgstr "Titill merkimiða"
+
+msgid "manager.setup.lists"
+msgstr "Listar"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Virkja PKP PN viðbótina"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Skoða <button>stillingar á viðbótum</button> til að samþykkja skilmála fyrir "
+"notkun á PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr ""
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS og CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Lýsing á LOCKSS leyfi"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Lýsing á CLOCKSS leyfi"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Útlit"
+
+msgid "manager.setup.look.description"
+msgstr "Forsíðuhaus, efni, haus tímarits, síðufótur, valmyndir og stílsnið."
+
+msgid "manager.setup.management"
+msgstr "Umsjón"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Aðgangur og öryggi, verkraðir, tilkynningar, yfirferð á texta, umbrot og "
+"prófarkalestur."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Umsjón með grunnskrefum ristjórnar"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Umsjón og uppsetning útgáfu"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Skref 4. Umsjón með tímaritinu"
+
+msgid "manager.setup.navigationBar"
+msgstr "Valmynd"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Bæta við eða fjarlægja atriði á valmynd."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL er full vefslóð  (t.d., \"http://www.example.com\") frekar en hluti af "
+"vefsíðuslóð (t.d., \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Engri mynd hefur verið hlaðið upp."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Engu stílsniði hefur verið hlaðið upp."
+
+msgid "manager.setup.note"
+msgstr "Til minnis"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>ATH:</strong> Staðfesting á innsendingu í tölvupósti er óvirk.  Til "
+"að nota þessa aðgerð þarf að virkja \"Submission Ack\" tölvupóst í "
+"\"Tölvupóstar\"."
+
+msgid "manager.setup.numPageLinks"
+msgstr ""
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+
+msgid "manager.setup.onlineIssn"
+msgstr "eISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Val fyrir blaðsíðunúmer"
+
+msgid "manager.setup.policies"
+msgstr "Stefnur"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Áherslur, ritrýni, kaflar, persónuvernd, öryggi og önnur viðbótaratriði í "
+"\"Um tímaritið\"."
+
+msgid "manager.setup.printIssn"
+msgstr "Prent ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Leiðbeiningar um prófarkalestur"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Leiðbeiningar um prófarkalestur eru aðgengilegar prófarkalesurum, höfundum, "
+"setjurum og kaflaritstjórum við undirbúning útgáfu á innsendu efni.  Fyrir "
+"neðan eru sjálfgefnar leiðbeiningar í HTML, sem má breyta eða skipta út "
+"hvenær sem er (Í HTML eða sem texta)."
+
+msgid "manager.setup.publicationSchedule"
 msgstr "Verkröð útgáfu"
 
 msgid "manager.setup.publicationScheduleDescription"
@@ -600,323 +902,979 @@ msgstr ""
 "bindis. Upplýsið lesendur í \"Um tímaritið\", um hvaða kerfið þetta tímarit "
 "notar og áætlaðan fjölda útgáfa."
 
-msgid "manager.setup.publicationSchedule"
+msgid "manager.setup.publicationScheduling"
 msgstr "Verkröð útgáfu"
 
-msgid "manager.setup.proofingInstructionsDescription"
+msgid "manager.setup.publicIdentifier"
+msgstr "Auðkenna innihald tímarits"
+
+msgid "manager.setup.publisher"
+msgstr "Útgefandi"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Tenglar á heimildir"
+
+msgid "manager.setup.restrictArticleAccess"
 msgstr ""
-"Leiðbeiningar um prófarkalestur eru aðgengilegar prófarkalesurum, höfundum, "
-"setjurum og kaflaritstjórum við undirbúning útgáfu á innsendu efni.  Fyrir "
-"neðan eru sjálfgefnar leiðbeiningar í HTML, sem má breyta eða skipta út "
-"hvenær sem er (Í HTML eða sem texta)."
+"Notendur verða að vera skráðir og innskáðir til að geta skoðað efni í opnum "
+"aðgangi."
 
-msgid "manager.setup.proofingInstructions"
-msgstr "Leiðbeiningar um prófarkalestur"
-
-msgid "manager.setup.printIssn"
-msgstr "Prent ISSN"
-
-msgid "manager.setup.policies.description"
+msgid "manager.setup.restrictSiteAccess"
 msgstr ""
-"Áherslur, ritrýni, kaflar, persónuvernd, öryggi og önnur viðbótaratriði í "
-"\"Um tímaritið\"."
+"Notendur verða að vera skráðir og innskráðir til að skoða vefsíðu "
+"tímaritsins."
 
-msgid "manager.setup.policies"
-msgstr "Stefnur"
+msgid "manager.setup.reviewGuidelines"
+msgstr "Leiðbeiningar um ritrýni"
 
-msgid "manager.setup.pageNumberIdentifier"
-msgstr "Val fyrir blaðsíðunúmer"
+msgid "manager.setup.reviewOptions"
+msgstr "Valkostir ritrýni"
 
-msgid "manager.setup.onlineIssn"
-msgstr "eISSN"
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Sjálfvirkar áminningar í tölvupósti"
 
-msgid "manager.setup.notifications.submissionAckDisabled"
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
-"<strong>ATH:</strong> Staðfesting á innsendingu í tölvupósti er óvirk.  Til "
-"að nota þessa aðgerð þarf að virkja \"Submission Ack\" tölvupóst í "
-"\"Tölvupóstar\"."
+"Til að senda sjálfvirkar áminningar í tölvupósti þarf umsjónaraðili síðunnar "
+"að virkja <tt>scheduled_tasks</tt> valkostinn í OJS skráarstillingum. Það "
+"gæti verið þörf á viðbótarþjóni eins og kemur fram í OJS skjöluninni."
 
-msgid "manager.setup.note"
-msgstr "Til minnis"
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Vikur til að ljúka ritrýni"
 
-msgid "manager.setup.noStyleSheetUploaded"
-msgstr "Engu stílsniði hefur verið hlaðið upp."
-
-msgid "manager.setup.noImageFileUploaded"
-msgstr "Engri mynd hefur verið hlaðið upp."
-
-msgid "manager.setup.navItemIsAbsolute"
+msgid "manager.setup.reviewOptions.onQuality"
 msgstr ""
-"URL er full vefslóð  (t.d., \"http://www.example.com\") frekar en hluti af "
-"vefsíðuslóð (t.d., \"/manager/setup\")"
+"Ritstjórar gefa ritrýnum einkunn á fimm punkta skala eftir hverja ritrýni."
 
-msgid "manager.setup.navigationBarDescription"
-msgstr "Bæta við eða fjarlægja atriði á valmynd."
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Takmarka aðgang að skrám"
 
-msgid "manager.setup.navigationBar"
-msgstr "Valmynd"
-
-msgid "manager.setup.managingTheJournal"
-msgstr "Skref 4. Umsjón með tímaritinu"
-
-msgid "manager.setup.managingPublishingSetup"
-msgstr "Umsjón og uppsetning útgáfu"
-
-msgid "manager.setup.managementOfBasicEditorialSteps"
-msgstr "Umsjón með grunnskrefum ristjórnar"
-
-msgid "manager.setup.management.description"
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
-"Aðgangur og öryggi, verkraðir, tilkynningar, yfirferð á texta, umbrot og "
-"prófarkalestur."
+"Ritrýnar fá ekki aðgang að innsendu efni fyrr en þeir hafa samþykkt að "
+"ritrýna það."
 
-msgid "manager.setup.management"
-msgstr "Umsjón"
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Aðgangur ritrýna"
 
-msgid "manager.setup.look.description"
-msgstr "Forsíðuhaus, efni, haus tímarits, síðufótur, valmyndir og stílsnið."
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Flýtiaðgangur fyrir ritrýna"
 
-msgid "manager.setup.look"
-msgstr "Útlit"
-
-msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
-
-msgid "manager.setup.clockssLicenseLabel"
-msgstr "Lýsing á CLOCKSS leyfi"
-
-msgid "manager.setup.lockssTitle"
-msgstr "LOCKSS"
-
-msgid "manager.setup.lockssLicenseLabel"
-msgstr "Lýsing á LOCKSS leyfi"
-
-msgid "manager.setup.otherLockss"
-msgstr "LOCKSS og CLOCKSS"
-
-msgid "manager.setup.plnSettingsDescription"
+#, fuzzy
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"Skoða <button>stillingar á viðbótum</button> til að samþykkja skilmála fyrir "
-"notkun á PKP PN."
+"Hægt er að senda ritrýnum öruggan tengil í tölvupósti. Það gerir þeim kleift "
+"að fá aðgang að ritrýni án þess að skrá sig inn. Fyrir aðgang að öðrum síðum "
+"þarf að skrá sig inn."
 
-msgid "manager.setup.plnPluginEnable"
-msgstr "Virkja PKP PN viðbótina"
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Bæta öruggum tengli við tölvupóst til ritrýna."
 
-msgid "manager.setup.lists"
-msgstr "Listar"
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Einkunnargjöf fyrir ritrýni"
 
-msgid "manager.setup.labelName"
-msgstr "Titill merkimiða"
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Áminningar til ritrýna"
 
-msgid "manager.setup.keyInfo.description"
+msgid "manager.setup.reviewPolicy"
+msgstr "Ritrýnistefna"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Lyklun fyrir leit"
+
+msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
-"Skráðu stutta lýsingu á tímaritinu og einnig hverjir eru ritstjórar, "
-"framkvæmdastjórar og aðrir í ritstjórnarteyminu."
+"Hjálpaðu leitarvélum eins og Google að finna og sýna síðuna þína. Við "
+"hvetjum þig til að senda inn <a href=\"{$sitemapUrl}\" target=\"_blank"
+"\">vefsíðutré</a>."
 
-msgid "manager.setup.keyInfo"
-msgstr "Lykilupplýsingar"
-
-msgid "manager.setup.contextTitle"
-msgstr "Titill tímarits"
-
-msgid "manager.setup.journalThumbnail.description"
+msgid "manager.setup.searchDescription.description"
 msgstr ""
-"Lítið merki eða tákn fyrir tímaritið sem hægt er að nota á lista yfir "
-"tímarit."
+"Skráðu stutta lýsingu (50-300 stafir) á tímaritinu sem leitarvélar geta sýnt "
+"þegar síðan kemur upp í leitarniðurstöðum."
 
-msgid "manager.setup.journalThumbnail"
-msgstr "Smámynd tímarits"
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Kaflar og kaflaritstjórar"
 
-msgid "manager.setup.journalTheme"
-msgstr "Þema tímarits"
-
-msgid "manager.setup.journalStyleSheetInvalid"
-msgstr "Ógilt snið á stílsniði.  Gilt snið er .css."
-
-msgid "manager.setup.journalSetupUpdated"
-msgstr "Uppsentingarnar fyrir tímaritið hafa verið uppfærðar."
-
-msgid "manager.setup.journalSetup"
-msgstr "Uppsetning á tímariti"
-
-msgid "manager.setup.journalPolicies"
-msgstr "Skref 2. Stefnur tímartitsins"
-
-msgid "manager.setup.journalPageFooterDescription"
+msgid "manager.setup.sectionsDefaultSectionDescription"
 msgstr ""
-"Þetta birtist í síðufót tímaritsins. Til að breyta eða uppfæra síðufótinn, "
-"afritaðu hingað HTML kóðann í textaboxinu fyrir neðan.  Dæmi gætu verið "
-"önnur valstika, teljari o.s.frv.  Síðufóturinn birtist á öllum síðum."
+"(Ef engum köflum er bætt við, þá er allt efni sjálfkrafa sent inn í "
+"greinakaflann.)"
 
-msgid "manager.setup.journalPageFooter"
-msgstr "Síðufótur"
-
-msgid "manager.setup.journalLogo.altText"
-msgstr "Merki tímarits"
-
-msgid "manager.setup.journalLogo"
-msgstr "Merki tímarits"
-
-msgid "manager.setup.journalLayoutDescription"
+msgid "manager.setup.sectionsDescription"
 msgstr ""
-"Veldu þema og útlitsatriði hér. Hægt er að hlaða upp stílsniði sem má nota "
-"til að yfirskrifa sjálfgefin stílgögn í kerfinu og stílsnið þema (ef þema er "
-"valið)."
+"Til að búa til eða breyta köflum fyrir tímaritið (t.d., Ritrýndar greinar, "
+"Bókarýni, o.s.frv.), farðu í umsjón með köflum.<br /><br />Höfundar á "
+"innsendu efni velji..."
 
-msgid "manager.setup.journalLayout"
-msgstr "Útlit tímrits"
+msgid "manager.setup.selectEditorDescription"
+msgstr "Ritstjóri sem hefur umsjón með efninu í gengum ritstjórnarferlið."
 
-msgid "manager.setup.selectCountry"
+msgid "manager.setup.selectSectionDescription"
+msgstr "Kafli tímaritsins sem þetta atriði verður skoðað fyrir."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Sýna alltaf galleytengla og gefa til kynna takmarkaðan aðgang."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Aðgangur síðu"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Skoða grein"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Fimm skref fyrir vefsíðu tímarits"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(T.d., Ferðamál, Áfangastaðir, Markaðssetning, Sjálfbær ferðamennska)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Lykilorð"
+
+msgid "manager.setup.subjectProvideExamples"
 msgstr ""
-"Veldu landið þar sem tímaritið er staðsett, eða þar sem útgefandi er með "
-"póstfang."
+"Gefðu dæmi um lykilorð eða umfjöllunarefni til leiðbeininga fyrir höfunda"
 
-msgid "manager.setup.contextInitials"
-msgstr "Upphafsstafir tímarits"
+msgid "manager.setup.submissionGuidelines"
+msgstr "Leiðbeiningar um innsendingu á efni"
 
-msgid "manager.setup.journalHomepageHeaderDescription"
+msgid "manager.setup.submissions"
+msgstr "Innsent efni"
+
+msgid "manager.setup.submissions.description"
 msgstr ""
-"Hægt er að hlaða upp myndrænni útgáfu fyrir titil tímarits ásamt merki (sem ."
-"gif, .jpg eða .png skrá), sem kemur i stað textaútgáfunnar sem annars "
-"birtist."
+"Leiðbeiningar fyrir höfunda, höfundaréttur og lyklun (þ.m.t. skráning)."
 
-msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "Haus á forsíðu"
-
-msgid "manager.setup.journalHomepageHeader"
-msgstr "Haus á forsíðu"
-
-msgid "manager.setup.journalHomepageContentDescription"
+msgid "manager.setup.disableSubmissions.description"
 msgstr ""
-"Forsíðan samanstendur af valmyndum. Viðbótarinnihaldi á forsíðu er hægt að "
-"bæta við með því að nota einhvern eða alla eftirfarandi valkosti. Þeir "
-"birtast í þeirri röð sem þeir eru í.  ATH að nýjasta tölublaðið er alltaf "
-"aðgengilegt í gengum viðkomandi tengil á valstikunni."
+"Koma í veg fyrir að notendur sendi inn nýjar greinar til tímaritsins. Hægt "
+"er að afvirkja innsendingu til einstakra kafla í tímritinu undir  <a href="
+"\"{$url}\">Stillingar tímarits</a> stillingasíðunni."
 
-msgid "manager.setup.journalHomepageContent"
-msgstr "Innihald á forsíðu tímarits"
-
-msgid "manager.setup.contextAbout.description"
+msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
-"Skráðu allar upplýsingar um tímaritið sem gætu skipt máli fyrir lesendur, "
-"höfunda eða ritrýna. Þetta gæti t.d. verið stefna um opinn aðgang, áherslur "
-"og efnissvið tímaritsins, höfundaréttur, stuðningsaðilar, saga tímaritsins, "
-"persónuvernd og þátttaka í geymslukerfum eins og LOCKSS eða CLOCKSS."
+"Tímaritið tekur ekki á móti greinum í augnablikinu.  Farðu í stillingar á "
+"verkferlum til að leyfa innsendingar."
 
-msgid "manager.setup.contextAbout"
-msgstr "Um tímaritið"
+msgid "manager.setup.enableOai"
+msgstr "Virkja OAI"
 
-msgid "manager.setup.contextSummary"
-msgstr "Samantekt"
-
-msgid "manager.setup.journalArchiving"
-msgstr "Útgefið efni"
-
-msgid "manager.setup.journalAbbreviation"
-msgstr "Skammstöfun á heiti tímrits"
-
-msgid "manager.setup.itemsPerPage.description"
+msgid "manager.setup.enableOai.description"
 msgstr ""
-"Takmarka fjölda atriða (t.d. innsendingar, notendur eða "
-"ritstjórnarúthlutanir) sem sjást á lista áður en eftirfarandi atriði eru "
-"sýnd á annari blaðsíðu."
 
-msgid "manager.setup.itemsPerPage"
-msgstr "Atriði per síðu"
-
-msgid "manager.setup.itemsDescription"
+msgid "manager.setup.typeExamples"
 msgstr ""
-"Hægt er að bæta við atriðum á valmynd í þessu setti  sem birtist efst á "
-"síðunni (Forsíða, Um tímaritið, Forsíða notanda, o.s.frv.) ."
 
-msgid "manager.setup.institution"
-msgstr "Stofnun"
-
-msgid "manager.setup.initialIssueDescription"
+msgid "manager.setup.typeMethodApproach"
 msgstr ""
-"Háð vali á sniði, skilgreindu tölublað, bindi og/eða ár fyrsta tölublaðsins "
-"sem er gefið út með OJS:"
 
-msgid "manager.setup.initialIssue"
-msgstr "Upphafstölublað"
-
-msgid "manager.setup.information.forReaders"
-msgstr "Til lesenda"
-
-msgid "manager.setup.information.forLibrarians"
-msgstr "Fyrir bókasafnsfræðinga"
-
-msgid "manager.setup.information.forAuthors"
-msgstr "Fyrir höfunda"
-
-msgid "manager.setup.information.description"
+msgid "manager.setup.typeProvideExamples"
 msgstr ""
-"Stutt lýsing á tímaritinu fyrir ritrýna, bókasafnsfræðinga, mögulega höfunda "
-"og lesendur. Þetta er gert aðgengilegt á hliðarstiku þegar uppýsingablokk "
-"hefur verið bætt við."
 
-msgid "manager.setup.information"
-msgstr "Upplýsingar"
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Einkvæmt auðkenni"
 
-msgid "manager.setup.includeCreativeCommons"
+msgid "manager.setup.uniqueIdentifierDescription"
 msgstr ""
-"Fyrir tímarit sem veita umsvifalausan eða seinkaðan opinn aðgang, bættu við "
-"Creative Commons leyfi fyrir öll útgefin verk á viðeigandi tímapunkti."
+"Greinar og efni má merkja með auðkennisnúmeri eða -streng, ef nota á "
+"skráningarkerfi eins og DOI kerfi."
 
-msgid "manager.setup.identity"
-msgstr "Kenni tímarits"
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Tímaritið mun nota ritstjórn."
 
-msgid "manager.setup.guidingSubmissions"
-msgstr "Skref 3. Leiðbeina varðandi innsendingar"
+msgid "manager.setup.useThumbnail"
+msgstr "Smámynd"
 
-msgid "manager.setup.guidelines"
-msgstr "Leiðbeiningar"
+msgid "manager.setup.useImageTitle"
+msgstr "Titilmynd"
 
-msgid "manager.setup.gettingDownTheDetails"
-msgstr "Skref 1.  Fara yfir smáatriðin"
+msgid "manager.setup.userRegistration"
+msgstr "Skráning notenda"
 
-msgid "manager.setup.generalInformation"
-msgstr "Almennar upplýsingar"
+msgid "manager.setup.useTextTitle"
+msgstr "Titill - texti"
 
-msgid "manager.setup.form.supportNameRequired"
-msgstr "Nafn aðstoðaraðila er áskilið."
+msgid "manager.statistics.statistics"
+msgstr "Tölfræði"
 
-msgid "manager.setup.form.supportEmailRequired"
-msgstr "Netfang fyrir aðstoð er áskilið."
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Skoðun greinar (fyrir höfunda)"
 
-msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "Fjöldi ritrýna per innsendingu er áskilinn."
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Samþykkja"
 
-msgid "manager.setup.form.journalTitleRequired"
-msgstr "Titill tímaritsins er áskilinn."
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Hafna"
 
-msgid "manager.setup.form.journalInitialsRequired"
-msgstr "Upphafsstafir tímaritsins eru áskildir."
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Senda inn aftur"
 
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "Heiti vefsíðu þegar fleiri en eitt tímarit eru hýst"
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Dagar til að ritrýna"
 
-msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Dagar til útgáfu"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS reiknar eftirfarandi tölfræði fyrir hvert tímarit. \"Dagar til að ritrýna"
+"\" er reiknað frá innsendingardegi ( eða úthlutun á ritrýniútgáfu) að fyrstu "
+"ákvörðun ritstjóra en\"Dagar til útgáfu\" er mælt frá því að samþykkt grein "
+"var upphaflega send inn þar til hún er gefin út."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Útgefin atriði"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Merkja atriði sem eiga að vera aðgengileg lesendum í \"Um tímaritið\"."
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"ATh: Prósentutala fyrir ritrýndar greinar leggjast ekki endilega saman upp í "
+"100%, þar sem efni sem er sent inn aftur er ýmist samþykkt, hafnað eða enn í "
+"vinnslu."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Útgefin tölublöð"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Heildarfjöldi innsendinga"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Ritrýnt"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Skráðir lesendur"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Fj. úthlutað"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Ritrýnar"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Ritstjórastig"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Fj. ritrýninga"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr "Veldu þann kafla sem á að nota í tölfræði um ritrýni."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Áskriftir"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Niðurhal greina"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Skoðun útdrátta greina"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Skoðun og niðurhal útdrátta"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Skoðun forsíðu tímarits"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Skoðun efnisyfirlits tölublaðs"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Stefna um áskriftir"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Seinkaður opinn aðgangur"
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Vinsamlega notaðu gátreitinn."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Áskrift rennur út"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Þegar áskrift rennur út er hægt að taka allan aðgang af lesendum, eða leyfa "
+"þeim að halda aðgangi að áskriftarháðu efni sem veittur var aðgangur að áður "
+"en áskrift rann út."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Rennur út að fullu"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Lesendum er neitað um aðgang að öllu áskriftarefni þegar áskrift rennur út."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Rennur út að hluta"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Lesendum er neitað um aðgang að nýju útgefnu efni, en halda aðgangi að efni "
+"sem gefið var út áður en áskriftin rann út."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Mánuðir"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Vikur"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
 msgstr ""
 "Senda tilkynningu  í tölvupósti á áskrifendur eftir að áskrift rennur út"
 
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Senda tilkynningu  í tölvupósti á áskrifendur eftir að áskrift rennur út."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Senda tilkynningu  í tölvupósti á áskrifendur áður en áskrift rennur út."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Senda tilkynningu  í tölvupósti á áskrifendur áður en áskrift rennur út."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Áminningar um útrunna áskrift"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr ""
+
+msgid "manager.subscriptions"
+msgstr ""
+
+msgid "manager.individualSubscriptions"
+msgstr ""
+
+msgid "manager.institutionalSubscriptions"
+msgstr ""
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr ""
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr ""
+
+msgid "manager.subscriptions.summary"
+msgstr ""
+
+msgid "manager.subscriptions.create"
+msgstr ""
+
+msgid "manager.subscriptions.createTitle"
+msgstr ""
+
+msgid "manager.subscriptions.renew"
+msgstr ""
+
+msgid "manager.subscriptions.dateEnd"
+msgstr ""
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr ""
+
+msgid "manager.subscriptions.dateStart"
+msgstr ""
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr ""
+
+msgid "manager.subscriptions.domain"
+msgstr ""
+
+msgid "manager.subscriptions.edit"
+msgstr ""
+
+msgid "manager.subscriptions.editTitle"
+msgstr ""
+
+msgid "manager.subscriptions.withStatus"
+msgstr ""
+
+msgid "manager.subscriptions.allStatus"
+msgstr ""
+
+msgid "manager.subscriptions.form.status"
+msgstr ""
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeId"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.institution"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.userId"
+msgstr ""
+
+msgid "manager.subscriptions.form.userContact"
+msgstr ""
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.membership"
+msgstr ""
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr ""
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.notes"
+msgstr ""
+
+msgid "manager.subscriptions.form.domain"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr ""
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr ""
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr ""
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr ""
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
+
+msgid "manager.subscriptions.ipRange"
+msgstr ""
+
+msgid "manager.subscriptions.membership"
+msgstr ""
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr ""
+
+msgid "manager.subscriptions.notes"
+msgstr ""
+
+msgid "manager.subscriptions.noneCreated"
+msgstr ""
+
+msgid "manager.subscriptions.selectContact"
+msgstr ""
+
+msgid "manager.subscriptions.selectUser"
+msgstr ""
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+
+msgid "manager.subscriptions.select"
+msgstr ""
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr ""
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr ""
+
+msgid "manager.subscriptions.user"
+msgstr ""
+
+msgid "manager.subscriptions.contact"
+msgstr ""
+
+msgid "manager.subscriptions.institutionName"
+msgstr ""
+
+msgid "manager.subscriptionTypes"
+msgstr ""
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+
+msgid "manager.subscriptionTypes.cost"
+msgstr ""
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.individual"
+msgstr ""
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr ""
+
+msgid "manager.subscriptionTypes.create"
+msgstr ""
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr ""
+
+msgid "manager.subscriptionTypes.duration"
+msgstr ""
+
+msgid "manager.subscriptionTypes.edit"
+msgstr ""
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.name"
+msgstr ""
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr ""
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr ""
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr ""
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr ""
+
+msgid "manager.setup.categories"
+msgstr "Flokkar"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Veldu þá flokka sem best eiga við af listanum fyrir neðan.  Lesendur geta "
+"vafrað eftir flokkum í öllu tímaritinu."
+
+msgid "grid.category.path"
+msgstr "Slóð"
+
+msgid "grid.action.addSection"
+msgstr "Bæta við kafla"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Greinum í útgefnum tölublöðum er raðað eftir köflum, þá oftast eftir þema "
+"eða tegund efnis (t.d. ritrýndar greinar, rannsóknir, o.s.frv.)."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Hlutverk eru hópar af notendum tímaritsins sem fá aðgangsheimildir og aðgang "
+"að verkferlum sem tengjast hlutverkinu. Það eru fimm mismunadi heimildir:  "
+"Stjórnendur tímaritsins sem hafa fullan aðgang að öllu (bæði efni og "
+"stilingum); Kaflaritstjórar sem hafa fullan aðgang að úthlutuðu efni. "
+"Aðstoðafólk sem hefur takmarkaðan aðgang að innsendu efni sem þeim hefur "
+"verið úthlutað af ritstjóra; Ritrýnar geta séð og sent inn ritrýni á efni "
+"sem þeim hefur verið úthlutað; og höfundar sem geta séð og brugðist við "
+"takmörkuðum upplýsingum um þeirra eigið efni. Þar til viðbótar eru fimm "
+"mismunandi þrepaúthlutanir sem hægt er að gefa hlutverkum aðgang að: Innsent "
+"efni, Innri rýni, Ritrýni, Ritstjórn og Framleiðsla."
+
+msgid "manager.publication.library"
+msgstr "Safn úgefanda"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Byggja ártal höfundaréttar nýrra greina á"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Grein: sjálfgefið ár verður tekið frá útgáfudagsetnigu greinar, eins og í "
+"\"Birt jafnóðum\"."
+
 msgid "manager.setup.copyrightYearBasis.issue"
 msgstr ""
 "Tölublað: sjálfgefið ár verður tekið frá útgáfudagsetningu tölublaðsins."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Endurstilla heimildir fyrir greinar"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Ertu viss um að þú viljir endurstilla heimildir fyrir allar greinar?  Þessa "
+"aðgerð er ekki hægt að afturkalla."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Fjarlægja höfundaréttaryfirlýsingu og upplýsingar um leyfi fyrir allar "
+"útgefnar greinar og breyta þeim í sjálfgefnar stillingu sem gildir fyrir "
+"tímaritið. Þetta mun varanlega fjarlægja höfundarétt og leyfi sem búið er að "
+"skrá á greinar. Í einhverjum tilfellum gæti verið ólöglegt að setja nýtt "
+"leyfi á verk sem búið er að birta undir öðrum leyfisskilmálum.  Vinsamlega "
+"farðu varlega þegar þú notar þetta tól og hafðu samráð við sérfræðing í "
+"lögum ef þú ert óviss um hvaða réttindi þú átt að greinum sem eru gefnar út "
+"í tímaritinu."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Það tókst að endurstilla leyfi á greinum."
+
+msgid "grid.genres.title.short"
+msgstr "Hlutar"
+
+msgid "grid.genres.title"
+msgstr "Hlutar greina"
+
+msgid "grid.genres.description"
+msgstr ""
+"Þessir hlutar eru notaðir til að gefa skrám heiti og eru þeir sýndir í "
+"fellivalmynd þegar skrám er hlaðið upp. Tegund sem fær ## leyfir notandanum "
+"að tengja skrána við alla innsendinguna 99Z eða tiltekinn hluta eftir númeri "
+"(t.d. 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Stillingar"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Stillingar fyir DOI viðbót"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Greinar"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Tölublöð"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galley - Lokaprófarkir"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Skilyrði fyrir viðbót ekki uppfyllt"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
 msgstr ""
 "Til að nota þessa viðbót  farðu í \"Public Identifier\" viðbótaflokkinn, "
 "virkjaðu og settu DOI viðbótina og tilgreindu gilt DOI forskeyti þar."
 
-msgid "stats.publicationStats"
-msgstr "Greina tölfræði"
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Viðbótin er ekki sett upp að fullu."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Lykilorð"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Vinsamlega athugaðu að lykilorðið verður vistað sem texti, þ.e.a.s. ekki "
+"dulkóðað."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Hvaða tölublað sem er"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Hvaða staða sem er"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Ekki lagt inn"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Merkt sem skráð"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Skráð"
+
+msgid "plugins.importexport.common.action"
+msgstr "Aðgerð"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Flytja út"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Merkja sem skráð"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Skrá"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Staðfestu XML áður en það er flutt út og skráð."
 
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Ekkert valið."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Gat ekki breytt völdum hlutum."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Ógilt XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr ""
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr ""
 
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr ""
@@ -941,6 +1899,57 @@ msgstr "Tilgreindir hlutir fundust ekki."
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "Senda afrit á aðaltengilið, sem er tilgreindur í stillingum tímarits."
 
+msgid "stats.contextStats"
+msgstr ""
+
+msgid "stats.context.tooltip.text"
+msgstr ""
+
+msgid "stats.context.tooltip.label"
+msgstr ""
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr ""
+
+msgid "stats.issueStats"
+msgstr ""
+
+msgid "stats.issues.details"
+msgstr ""
+
+msgid "stats.issues.searchIssueDescription"
+msgstr ""
+
+msgid "stats.issues.none"
+msgstr ""
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr ""
+
+msgid "stats.issues.countOfTotal"
+msgstr ""
+
+msgid "stats.issues.tooltip.label"
+msgstr ""
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+
+msgid "stats.publicationStats"
+msgstr "Greina tölfræði"
+
 msgid "stats.publications.details"
 msgstr "Nánar um grein"
 
@@ -962,6 +1971,15 @@ msgstr "Útdrættir"
 msgid "stats.publications.galleys"
 msgstr "Skrár"
 
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr ""
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
 "Senda afrit af staðfestingu í tölvupósti  fyrir innsent efni á aðaltengilið "
@@ -977,6 +1995,9 @@ msgstr ""
 msgid "plugins.importexport.native.export.issues.results"
 msgstr "Flytja út niðurstöðu tölublaða"
 
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Ferlinu tókst ekki að þátta tölublaðsgalley"
 
@@ -989,11 +2010,56 @@ msgstr "Vefslóð á forsíðu tímaritsins"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Nafn aðaltengiliðar tímaritsins"
 
-msgid "emailTemplate.variable.context.principalContactSignature"
-msgstr "Undirskrift í sjálfvirkum tölvupóstum frá tímaritinu"
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr ""
 
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Netfang aðaltengiliðar tímaritsins"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr ""
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Heiti vefsíðu þegar fleiri en eitt tímarit eru hýst"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Staðfesta netfang (nýskráning hjá tímariti)"
@@ -1003,355 +2069,296 @@ msgstr ""
 "Þessi tölvupóstur er sjálfkrafa sendur á nýja notendur þegar þeir nýskrá sig "
 "hjá tímaritinu og þegar stillingar kalla á að netfang sé staðfest."
 
-msgid "plugins.importexport.common.invalidXML"
-msgstr "Ógilt XML:"
-
-msgid "plugins.importexport.common.error.validation"
-msgstr "Gat ekki breytt völdum hlutum."
-
-msgid "plugins.importexport.common.validation"
-msgstr "Staðfestu XML áður en það er flutt út og skráð."
-
-msgid "plugins.importexport.common.action.register"
-msgstr "Skrá"
-
-msgid "plugins.importexport.common.action.markRegistered"
-msgstr "Merkja sem skráð"
-
-msgid "plugins.importexport.common.action.export"
-msgstr "Flytja út"
-
-msgid "plugins.importexport.common.action"
-msgstr "Aðgerð"
-
-msgid "plugins.importexport.common.status.registered"
-msgstr "Skráð"
-
-msgid "plugins.importexport.common.status.markedRegistered"
-msgstr "Merkt sem skráð"
-
-msgid "plugins.importexport.common.status.notDeposited"
-msgstr "Ekki lagt inn"
-
-msgid "plugins.importexport.common.status.any"
-msgstr "Hvaða staða sem er"
-
-msgid "plugins.importexport.common.filter.issue"
-msgstr "Hvaða tölublað sem er"
-
-msgid "plugins.importexport.common.settings.form.password.description"
+msgid "doi.displayName"
 msgstr ""
-"Vinsamlega athugaðu að lykilorðið verður vistað sem texti, þ.e.a.s. ekki "
-"dulkóðað."
 
-msgid "plugins.importexport.common.settings.form.password"
-msgstr "Lykilorð"
-
-msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "Viðbótin er ekki sett upp að fullu."
-
-msgid "plugins.importexport.common.missingRequirements"
-msgstr "Skilyrði fyrir viðbót ekki uppfyllt"
-
-msgid "plugins.importexport.common.export.representations"
-msgstr "Galley - Lokaprófarkir"
-
-msgid "plugins.importexport.common.export.issues"
-msgstr "Tölublöð"
-
-msgid "plugins.importexport.common.export.articles"
-msgstr "Greinar"
-
-msgid "plugins.importexport.common.settings.DOIPluginSettings"
-msgstr "Stillingar fyir DOI viðbót"
-
-msgid "plugins.importexport.common.settings"
-msgstr "Stillingar"
-
-msgid "grid.genres.description"
+msgid "doi.description"
 msgstr ""
-"Þessir hlutar eru notaðir til að gefa skrám heiti og eru þeir sýndir í "
-"fellivalmynd þegar skrám er hlaðið upp. Tegund sem fær ## leyfir notandanum "
-"að tengja skrána við alla innsendinguna 99Z eða tiltekinn hluta eftir númeri "
-"(t.d. 02)."
 
-msgid "grid.genres.title"
-msgstr "Hlutar greina"
-
-msgid "grid.genres.title.short"
-msgstr "Hlutar"
-
-msgid "manager.setup.resetPermissions.success"
-msgstr "Það tókst að endurstilla leyfi á greinum."
-
-msgid "manager.setup.resetPermissions.description"
+msgid "doi.readerDisplayName"
 msgstr ""
-"Fjarlægja höfundaréttaryfirlýsingu og upplýsingar um leyfi fyrir allar "
-"útgefnar greinar og breyta þeim í sjálfgefnar stillingu sem gildir fyrir "
-"tímaritið. Þetta mun varanlega fjarlægja höfundarétt og leyfi sem búið er að "
-"skrá á greinar. Í einhverjum tilfellum gæti verið ólöglegt að setja nýtt "
-"leyfi á verk sem búið er að birta undir öðrum leyfisskilmálum.  Vinsamlega "
-"farðu varlega þegar þú notar þetta tól og hafðu samráð við sérfræðing í "
-"lögum ef þú ert óviss um hvaða réttindi þú átt að greinum sem eru gefnar út "
-"í tímaritinu."
 
-msgid "manager.setup.resetPermissions.confirm"
+msgid "doi.manager.displayName"
 msgstr ""
-"Ertu viss um að þú viljir endurstilla heimildir fyrir allar greinar?  Þessa "
-"aðgerð er ekki hægt að afturkalla."
 
-msgid "manager.setup.resetPermissions"
-msgstr "Endurstilla heimildir fyrir greinar"
-
-msgid "manager.setup.copyrightYearBasis.article"
+msgid "doi.manager.settings.description"
 msgstr ""
-"Grein: sjálfgefið ár verður tekið frá útgáfudagsetnigu greinar, eins og í "
-"\"Birt jafnóðum\"."
 
-msgid "manager.setup.copyrightYearBasis"
-msgstr "Byggja ártal höfundaréttar nýrra greina á"
-
-msgid "manager.publication.library"
-msgstr "Safn úgefanda"
-
-msgid "settings.roles.gridDescription"
+msgid "doi.manager.settings.explainDois"
 msgstr ""
-"Hlutverk eru hópar af notendum tímaritsins sem fá aðgangsheimildir og aðgang "
-"að verkferlum sem tengjast hlutverkinu. Það eru fimm mismunadi heimildir:  "
-"Stjórnendur tímaritsins sem hafa fullan aðgang að öllu (bæði efni og "
-"stilingum); Kaflaritstjórar sem hafa fullan aðgang að úthlutuðu efni. "
-"Aðstoðafólk sem hefur takmarkaðan aðgang að innsendu efni sem þeim hefur "
-"verið úthlutað af ritstjóra; Ritrýnar geta séð og sent inn ritrýni á efni "
-"sem þeim hefur verið úthlutað; og höfundar sem geta séð og brugðist við "
-"takmörkuðum upplýsingum um þeirra eigið efni. Þar til viðbótar eru fimm "
-"mismunandi þrepaúthlutanir sem hægt er að gefa hlutverkum aðgang að: Innsent "
-"efni, Innri rýni, Ritrýni, Ritstjórn og Framleiðsla."
 
-msgid "manager.setup.section.description"
+msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr ""
-"Greinum í útgefnum tölublöðum er raðað eftir köflum, þá oftast eftir þema "
-"eða tegund efnis (t.d. ritrýndar greinar, rannsóknir, o.s.frv.)."
 
-msgid "grid.action.addSection"
-msgstr "Bæta við kafla"
-
-msgid "grid.category.path"
-msgstr "Slóð"
-
-msgid "manager.setup.categories.description"
+msgid "doi.manager.settings.galleysWithDescription"
 msgstr ""
-"Veldu þá flokka sem best eiga við af listanum fyrir neðan.  Lesendur geta "
-"vafrað eftir flokkum í öllu tímaritinu."
 
-msgid "manager.setup.categories"
-msgstr "Flokkar"
-
-msgid "manager.subscriptionPolicies.expiryReminders"
-msgstr "Áminningar um útrunna áskrift"
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgid "doi.manager.settings.doiPrefix"
 msgstr ""
-"Senda tilkynningu  í tölvupósti á áskrifendur áður en áskrift rennur út."
 
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgid "doi.manager.settings.doiPrefixPattern"
 msgstr ""
-"Senda tilkynningu  í tölvupósti á áskrifendur áður en áskrift rennur út."
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
-"Senda tilkynningu  í tölvupósti á áskrifendur eftir að áskrift rennur út."
 
-msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} Vikur"
-
-msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} Mánuðir"
-
-msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
-"Lesendum er neitað um aðgang að nýju útgefnu efni, en halda aðgangi að efni "
-"sem gefið var út áður en áskriftin rann út."
 
-msgid "manager.subscriptionPolicies.expiryPartial"
-msgstr "Rennur út að hluta"
-
-msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgid "doi.manager.settings.doiSuffixPattern.issues"
 msgstr ""
-"Lesendum er neitað um aðgang að öllu áskriftarefni þegar áskrift rennur út."
 
-msgid "manager.subscriptionPolicies.expiryFull"
-msgstr "Rennur út að fullu"
-
-msgid "manager.subscriptionPolicies.expiryDescription"
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
 msgstr ""
-"Þegar áskrift rennur út er hægt að taka allan aðgang af lesendum, eða leyfa "
-"þeim að halda aðgangi að áskriftarháðu efni sem veittur var aðgangur að áður "
-"en áskrift rann út."
 
-msgid "manager.subscriptionPolicies.expiry"
-msgstr "Áskrift rennur út"
-
-msgid ""
-"manager.subscriptionPolicies."
-"enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr "Vinsamlega notaðu gátreitinn."
-
-msgid "manager.subscriptionPolicies.delayedOpenAccess"
-msgstr "Seinkaður opinn aðgangur"
-
-msgid "manager.subscriptionPolicies"
-msgstr "Stefna um áskriftir"
-
-msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Skoðun efnisyfirlits tölublaðs"
-
-msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr "Skoðun forsíðu tímarits"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Skoðun og niðurhal útdrátta"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "Skoðun útdrátta greina"
-
-msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "Niðurhal greina"
-
-msgid "manager.statistics.statistics.subscriptions"
-msgstr "Áskriftir"
-
-msgid "manager.statistics.statistics.selectSections"
-msgstr "Veldu þann kafla sem á að nota í tölfræði um ritrýni."
-
-msgid "manager.statistics.statistics.reviewsPerReviewer"
-msgstr "Fj. ritrýninga"
-
-msgid "manager.statistics.statistics.reviewerScore"
-msgstr "Ritstjórastig"
-
-msgid "manager.statistics.statistics.reviewers"
-msgstr "Ritrýnar"
-
-msgid "manager.statistics.statistics.reviewerCount"
-msgstr "Fj. úthlutað"
-
-msgid "manager.statistics.statistics.registeredReaders"
-msgstr "Skráðir lesendur"
-
-msgid "manager.statistics.statistics.peerReviewed"
-msgstr "Ritrýnt"
-
-msgid "manager.statistics.statistics.numSubmissions"
-msgstr "Heildarfjöldi innsendinga"
-
-msgid "manager.statistics.statistics.numIssues"
-msgstr "Útgefin tölublöð"
-
-msgid "manager.statistics.statistics.note"
+msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr ""
-"ATh: Prósentutala fyrir ritrýndar greinar leggjast ekki endilega saman upp í "
-"100%, þar sem efni sem er sent inn aftur er ýmist samþykkt, hafnað eða enn í "
-"vinnslu."
 
-msgid "manager.statistics.statistics.makePublic"
-msgstr "Merkja atriði sem eiga að vera aðgengileg lesendum í \"Um tímaritið\"."
-
-msgid "manager.statistics.statistics.itemsPublished"
-msgstr "Útgefin atriði"
-
-msgid "manager.statistics.statistics.description"
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
 msgstr ""
-"OJS reiknar eftirfarandi tölfræði fyrir hvert tímarit. \"Dagar til að ritrýna"
-"\" er reiknað frá innsendingardegi ( eða úthlutun á ritrýniútgáfu) að fyrstu "
-"ákvörðun ritstjóra en\"Dagar til útgáfu\" er mælt frá því að samþykkt grein "
-"var upphaflega send inn þar til hún er gefin út."
 
-msgid "manager.statistics.statistics.daysToPublication"
-msgstr "Dagar til útgáfu"
-
-msgid "manager.statistics.statistics.daysPerReview"
-msgstr "Dagar til að ritrýna"
-
-msgid "manager.statistics.statistics.count.revise"
-msgstr "Senda inn aftur"
-
-msgid "manager.statistics.statistics.count.decline"
-msgstr "Hafna"
-
-msgid "manager.statistics.statistics.count.accept"
-msgstr "Samþykkja"
-
-msgid "manager.statistics.statistics.articleViews"
-msgstr "Skoðun greinar (fyrir höfunda)"
-
-msgid "manager.statistics.statistics"
-msgstr "Tölfræði"
-
-msgid "manager.setup.useTextTitle"
-msgstr "Titill - texti"
-
-msgid "manager.setup.userRegistration"
-msgstr "Skráning notenda"
-
-msgid "manager.setup.useImageTitle"
-msgstr "Titilmynd"
-
-msgid "manager.setup.useThumbnail"
-msgstr "Smámynd"
-
-msgid "manager.setup.useEditorialReviewBoard"
-msgstr "Tímaritið mun nota ritstjórn."
-
-msgid "manager.setup.uniqueIdentifierDescription"
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
 msgstr ""
-"Greinar og efni má merkja með auðkennisnúmeri eða -streng, ef nota á "
-"skráningarkerfi eins og DOI kerfi."
 
-msgid "manager.setup.uniqueIdentifier"
-msgstr "Einkvæmt auðkenni"
-
-msgid "manager.setup.enableOai"
-msgstr "Virkja OAI"
-
-msgid "manager.setup.disableSubmissions.notAccepting"
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
 msgstr ""
-"Tímaritið tekur ekki á móti greinum í augnablikinu.  Farðu í stillingar á "
-"verkferlum til að leyfa innsendingar."
 
-msgid "manager.setup.disableSubmissions.description"
+msgid "doi.manager.settings.doiReassign"
 msgstr ""
-"Koma í veg fyrir að notendur sendi inn nýjar greinar til tímaritsins. Hægt "
-"er að afvirkja innsendingu til einstakra kafla í tímritinu undir  <a href="
-"\"{$url}\">Stillingar tímarits</a> stillingasíðunni."
 
-msgid "manager.setup.submissions.description"
+msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
-"Leiðbeiningar fyrir höfunda, höfundaréttur og lyklun (þ.m.t. skráning)."
 
-msgid "manager.setup.submissions"
-msgstr "Innsent efni"
-
-msgid "manager.setup.submissionGuidelines"
-msgstr "Leiðbeiningar um innsendingu á efni"
-
-msgid "manager.setup.subjectProvideExamples"
+msgid "doi.manager.settings.doiReassign.confirm"
 msgstr ""
-"Gefðu dæmi um lykilorð eða umfjöllunarefni til leiðbeininga fyrir höfunda"
 
-msgid "manager.statistics.reports.filters.byObject.description"
+msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr ""
-"Þrengdu niðurstöðurnar út frá tegund (tímarit, tölublað, grein, "
-"skráartegund) og/eða auðkennum."
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Þrengdu niðurstöðurnar út frá samhengi (tölublöð og/eða greinar)."
-
-msgid "manager.statistics.defaultMetricDescription"
+msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
-"\n"
-"\t\tTímaritið er sett upp til að nota meira en einn notkunarmælikvarða.  "
-"Tölfræði um notkun verður sýnd í fleiru en einu samhengi. \n"
-"\t\tÞað eru tilfelli þar sem einföld notkunartölfræði er notuð, t.d. til að "
-"sýna mest skoðuðu greinanar eða til raða þeim eftir fjölda leita. \n"
-"\t\tVinsamlega veldu einn uppsettan mælikvarða sem sjálfgefinn.\n"
-"\t"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr ""
+
+msgid "doi.editor.doi"
+msgstr ""
+
+msgid "doi.editor.doi.description"
+msgstr ""
+
+msgid "doi.editor.doi.assignDoi"
+msgstr ""
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr ""
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr ""
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr ""
+
+msgid "doi.editor.customSuffixMissing"
+msgstr ""
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+
+msgid "doi.editor.missingParts"
+msgstr ""
+
+msgid "doi.editor.patternNotResolved"
+msgstr ""
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+
+msgid "doi.editor.assigned"
+msgstr ""
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr ""
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr ""
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr ""
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+
+msgid "doi.editor.assignDoi"
+msgstr ""
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr ""
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr ""
+
+msgid "doi.editor.missingPrefix"
+msgstr ""
+
+msgid "doi.editor.preview.publication"
+msgstr ""
+
+msgid "doi.editor.preview.publication.none"
+msgstr ""
+
+msgid "doi.editor.preview.galleys"
+msgstr ""
+
+msgid "doi.editor.preview.objects"
+msgstr ""
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr ""
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+
+msgid "api.issue.400.invalidDoi"
+msgstr ""
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+
+msgid "api.issue.404.issuesNotFound"
+msgstr ""
+
+msgid "doi.manager.submissionDois"
+msgstr ""
+
+msgid "doi.manager.issueDois"
+msgstr ""
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+
+msgid "manager.institutions.noContext"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.name"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpired.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr ""
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr ""
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+
+msgid "mailable.openAccessNotify.name"
+msgstr ""
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.name"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr ""
+
+msgid "mailable.lockssNewArchive.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+#~ msgid "emailTemplate.variable.context.principalContactSignature"
+#~ msgstr "Undirskrift í sjálfvirkum tölvupóstum frá tímaritinu"
+
+#~ msgid "manager.statistics.reports.filters.byObject.description"
+#~ msgstr ""
+#~ "Þrengdu niðurstöðurnar út frá tegund (tímarit, tölublað, grein, "
+#~ "skráartegund) og/eða auðkennum."
+
+#~ msgid "manager.statistics.reports.filters.byContext.description"
+#~ msgstr "Þrengdu niðurstöðurnar út frá samhengi (tölublöð og/eða greinar)."
+
+#~ msgid "manager.statistics.defaultMetricDescription"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tTímaritið er sett upp til að nota meira en einn notkunarmælikvarða.  "
+#~ "Tölfræði um notkun verður sýnd í fleiru en einu samhengi. \n"
+#~ "\t\tÞað eru tilfelli þar sem einföld notkunartölfræði er notuð, t.d. til "
+#~ "að sýna mest skoðuðu greinanar eða til raða þeim eftir fjölda leita. \n"
+#~ "\t\tVinsamlega veldu einn uppsettan mælikvarða sem sjálfgefinn.\n"
+#~ "\t"

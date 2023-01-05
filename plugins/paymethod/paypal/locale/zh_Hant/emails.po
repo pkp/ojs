@@ -15,5 +15,8 @@ msgstr ""
 msgid "emails.paypalInvestigatePayment.subject"
 msgstr "不尋常PayPal活動"
 
+msgid "emails.paypalInvestigatePayment.body"
+msgstr ""
+
 msgid "emails.paypalInvestigatePayment.description"
 msgstr "此電郵會通知期刊的優先聯絡人PayPal插件有可疑情況，需要人員介入。"

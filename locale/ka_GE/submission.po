@@ -12,28 +12,80 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "რეცენზიაზე გაგზავნა"
+msgid "submission.submit.userGroup"
+msgstr "გაგზავნა, ჩემი როლის გამოყენებით …"
 
-msgid "workflow.review.externalReview"
-msgstr "რეცენზია"
+msgid "submission.upload.selectComponent"
+msgstr "სტატიის კომპონენტის არჩევა"
 
-msgid "submission.pageProofs"
-msgstr "კორექტურა"
+msgid "submission.title"
+msgstr "სტატიის სათაური"
 
-msgid "submission.submit.upload.description"
+msgid "submission.title.tip"
 msgstr ""
-"ფაილების ატვირთვა, რომლებიც დაკავშირებულია ამ მასალასთან: სტატიები, "
-"მულტიმედია, მონაცემთა ნაკრები, ხელოვნების ნიმუშები და ა.შ."
+"მასალის ტიპი, როგორც წესი, „გამოსახულება“, „ტექსტი“, ან მულტიმედიის სხვა "
+"ტიპი, „პროგრამული უზრუნველყოფის“, ან „ინტერაქტივის“ ჩათვლით. გთხოვთ აირჩიოთ "
+"ერთ-ერთი ყველაზე ხელსაყრელი ტიპი თქვენი მასალისათვის. მაგალითები შეგიძლიათ "
+"ნახოთ აქ: <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
-msgid "submission.submit.titleAndSummary"
-msgstr "დასახელება და აბსტრაქტი"
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "ახალი მასალის გაგზავნა"
 
-msgid "grid.action.pageProofApproved"
-msgstr "ეს მონახაზი მოწონებულია გალერეაში დასამატებლად."
+msgid "submission.submit.newSubmissionSingle"
+msgstr "ახალი მასალა"
 
-msgid "grid.action.approveProof"
-msgstr "ამ მონახაზის მოწონება გალერეაში ჩართვისათვის."
+msgid "grid.action.workflow"
+msgstr "გაგზავნის პროცესი"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "აბსტრაქტი უნდა შეიცავდეს არაუმეტეს {$wordCount} სიტყვას."
+
+msgid "submission.submit.noContext"
+msgstr "ამ მასალისთვის ვერ მოიძებნა ჟურნალი."
+
+msgid "submission.issueEntry"
+msgstr "მეტა-მონაცემები"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"ჟურნალს ეცნობა თქვენი მასალის გამოგზავნის შესახებ, დამადასტურებელი წერილი "
+"გამოიგზავნა ელფოსტაზე. როგორც კი რედაქტორი ნახავს თქვენს მასალას, ჩვენ "
+"დაგიკავშირდებით."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "გალერეა გამოჩნდა გამოცემაში"
+
+msgid "grid.action.issueEntry"
+msgstr "ამ მასალის მეტა-მონაცემების ჩვენება"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "სტატიების გალერეა „{$galleyFormatName}“ ხელმისაწვდომი გახდა."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "სტატიების გალერეა „{$galleyFormatName}“ მიუწვდომელი გახდა."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "გაგზავნილი მასალის ღია იდენტიფიკატორები განახლებულია."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "ფორმატი მიღებულია"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>ეს გალერეა <em>აღარ შეიძლება იყოს ხელმისაწვდომი</em> მკითხველებისათვის.</"
+"p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr ""
+"<p>ეს გალერეა <em>შეიძლება გახდეს ხელმისაწვდომი</em> მკითხველებისათვის.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "გახდეს ეს გალერეა ხელმისაწვდომი"
+
+msgid "submission.galleyFiles"
+msgstr "გალერეის ფაილები"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -42,220 +94,87 @@ msgstr ""
 "სხვა მომხმარებლების  განსასაზღვრად გალერეების კორექტურისათვის, ჩასწორებული "
 "ფაილების ატვირთვით და მათი მოწონებით გამოქვეყნების წინ."
 
-msgid "submission.galleyFiles"
-msgstr "გალერეის ფაილები"
+msgid "grid.action.approveProof"
+msgstr "ამ მონახაზის მოწონება გალერეაში ჩართვისათვის."
 
-msgid "grid.action.availableArticleGalley"
-msgstr "გახდეს ეს გალერეა ხელმისაწვდომი"
+msgid "grid.action.pageProofApproved"
+msgstr "ეს მონახაზი მოწონებულია გალერეაში დასამატებლად."
 
-msgid "grid.issueEntry.availableGalley.message"
+msgid "submission.submit.titleAndSummary"
+msgstr "დასახელება და აბსტრაქტი"
+
+msgid "submission.submit.upload.description"
 msgstr ""
-"<p>ეს გალერეა <em>შეიძლება გახდეს ხელმისაწვდომი</em> მკითხველებისათვის.</p>"
+"ფაილების ატვირთვა, რომლებიც დაკავშირებულია ამ მასალასთან: სტატიები, "
+"მულტიმედია, მონაცემთა ნაკრები, ხელოვნების ნიმუშები და ა.შ."
 
-msgid "grid.issueEntry.availableGalley.removeMessage"
+msgid "submission.pageProofs"
+msgstr "კორექტურა"
+
+msgid "workflow.review.externalReview"
+msgstr "რეცენზია"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "გამოცემის მეტა-მონაცემები მასალისათვის განახლდა."
+
+msgid "submission.upload.fileContents"
+msgstr "სტატიის კომპონენტები"
+
+msgid "submission.complete"
+msgstr "მიღებულია"
+
+msgid "submission.incomplete"
+msgstr "დაელოდეთ მიღებას"
+
+#, fuzzy
+msgid "submission.submit.submissionChecklist"
+msgstr "მასალის გაგზავნის საკონტროლო სია"
+
+msgid "submission.submit.privacyStatement"
+msgstr "კონფიდენციალურობის განაცხადი"
+
+msgid "submission.submit.contributorRole"
+msgstr "გამგზავნის როლი"
+
+msgid "submission.citationFormat.notFound"
 msgstr ""
-"<p>ეს გალერეა <em>აღარ შეიძლება იყოს ხელმისაწვდომი</em> "
-"მკითხველებისათვის.</p>"
+"ვერ მოხერხდა ბიბლიოგრაფიული ბმულების გაფორმების მოთხოვნილი ფორმატის მიღება."
 
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "ფორმატი მიღებულია"
-
-msgid "submission.event.publicIdentifiers"
-msgstr "გაგზავნილი მასალის ღია იდენტიფიკატორები განახლებულია."
-
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "სტატიების გალერეა „{$galleyFormatName}“ მიუწვდომელი გახდა."
-
-msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "სტატიების გალერეა „{$galleyFormatName}“ ხელმისაწვდომი გახდა."
-
-msgid "grid.action.issueEntry"
-msgstr "ამ მასალის მეტა-მონაცემების ჩვენება"
-
-msgid "grid.action.galleyInIssueEntry"
-msgstr "გალერეა გამოჩნდა გამოცემაში"
-
-msgid "submission.submit.whatNext.description"
+msgid "submission.metadataDescription"
 msgstr ""
-"ჟურნალს ეცნობა თქვენი მასალის გამოგზავნის შესახებ, დამადასტურებელი წერილი "
-"გამოიგზავნა ელფოსტაზე. როგორც კი რედაქტორი ნახავს თქვენს მასალას, ჩვენ "
-"დაგიკავშირდებით."
+"ეს სპეციფიკაციები დაფუძნებულია Dublin Core-ის მეტა-მონაცემებზე — "
+"საერთაშორისო სტანდარტზე, რომელიც გამოიყენება ჟურნალის შიგთავსის აღწერისათვის."
 
-msgid "submission.issueEntry"
-msgstr "მეტა-მონაცემები"
+msgid "section.any"
+msgstr "ნებისმიერი სექცია"
 
-msgid "submission.submit.noContext"
-msgstr "ამ მასალისთვის ვერ მოიძებნა ჟურნალი."
+msgid "submission.sectionOptions"
+msgstr "სექციის პარამეტრები"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "აბსტრაქტი უნდა შეიცავდეს არაუმეტეს {$wordCount} სიტყვას."
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} ელემენტი"
 
-msgid "grid.action.workflow"
-msgstr "გაგზავნის პროცესი"
+msgid "catalog.category.heading"
+msgstr "ყველა კატეგორია"
 
-msgid "submission.submit.newSubmissionSingle"
-msgstr "ახალი მასალა"
-
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "ახალი მასალის გაგზავნა"
-
-msgid "submission.title.tip"
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"მასალის ტიპი, როგორც წესი, „გამოსახულება“, „ტექსტი“, ან მულტიმედიის სხვა "
-"ტიპი, „პროგრამული უზრუნველყოფის“, ან „ინტერაქტივის“ ჩათვლით. გთხოვთ აირჩიოთ "
-"ერთ-ერთი ყველაზე ხელსაყრელი ტიპი თქვენი მასალისათვის. მაგალითები შეგიძლიათ "
-"ნახოთ აქ: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/"
-"04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/"
-"04/12/usageguide/generic.shtml#type</a>"
+"ამ პუბლიკაციის გალერეების ჩასწორება არ შეიძლება, ვინაიდან ის უკვე "
+"გამოქვეყნებულია."
 
-msgid "submission.title"
-msgstr "სტატიის სათაური"
+msgid "galley.publicationNotFound"
+msgstr "ვერ მოიძებნა ამ გალერეის პუბლიკაცია."
 
-msgid "submission.upload.selectComponent"
-msgstr "სტატიის კომპონენტის არჩევა"
+msgid "publication.assignToissue"
+msgstr "გამოცემაზე მინიჭება"
 
-msgid "submission.submit.userGroup"
-msgstr "გაგზავნა, ჩემი როლის გამოყენებით …"
-
-msgid "submission.queries.production"
-msgstr "პუბლიკაციის განხილვა"
-
-msgid "publication.version.details"
-msgstr "ინფორმაცია პუბლიკაციის შესახებ ვერსიისათვის: {$version}"
-
-msgid "publication.unschedule.confirm"
-msgstr "დარწმუნებული ხართ, რომ არ გსურთ ამ მასალის დაგეგმვა გამოქვეყნებისათვის?"
-
-msgid "publication.unpublish.confirm"
-msgstr "დარწმუნებული ხართ, რომ გსურთ ამ მასალის გამოქვეყნება?"
-
-msgid "publication.unpublish"
-msgstr "გამოქვეყნებიდან მოხსნა"
-
-msgid "submission.copyrightOther.description"
+msgid "publication.assignedToIssue"
 msgstr ""
-"საავტორო უფლების მინიჭება გამოქვეყნებულ მასალებზე შემდეგი ფორმულირების "
-"მითითებით."
+"ეს მასალა მიენიჭა <a href=\"{$issueUrl}\">«{$issueName}»</a> გამოცემას, "
+"მაგრამ ის არ იყო დაგეგმილი გამოცემისათვის."
 
-msgid "submission.copyrightHolder.description"
-msgstr "ავტომატურად პუბლიკაციისას მიენიჭება საავტორო უფლება {$copyright}."
-
-msgid "submission.license.description"
-msgstr ""
-"გამოქვეყნებისას ავტომატურად მიენიჭება ლიცენზია <a href='{$licenseUrl}' "
-"target='_blank'>{$licenseName}</a>."
-
-msgid "publication.required.reviewStage"
-msgstr ""
-"გამოქვეყნების წინ მასალა უნდა იყოს „ლიტერატურული ჩასწორების“, ან "
-"„გამოქვეყნებულია“ ეტაპზე."
-
-msgid "publication.required.declined"
-msgstr "დაწუნებული მასალის გამოქვეყენება არ შეიძლება."
-
-msgid "publication.publish.requirements"
-msgstr "გამოქვეყნების წინ აუცილებელია შემდეგი მოთხოვნების შესრულება."
-
-msgid "publication.publish"
-msgstr "გამოქვეყნება"
-
-msgid "publication.invalidSubmission"
-msgstr "მასალა ამ პუბლიკაციისათვის ვერ მოიძებნა."
-
-msgid "publication.event.versionUnpublished"
-msgstr "ვერსია მოხსნილია გამოქვეყნებიდან."
-
-msgid "publication.event.versionScheduled"
-msgstr "ახალი ვერსია დაგეგმილია გამოქვეყნებისათვის."
-
-msgid "publication.event.versionPublished"
-msgstr "გამოქვეყნდა ახალი ვერსია."
-
-msgid "publication.event.unpublished"
-msgstr "მასალა მოხსნილია გამოქვეყნებიდან."
-
-msgid "publication.event.scheduled"
-msgstr "მასალა დაგეგმილია გამოსაქვეყნებლად."
-
-msgid "publication.event.published"
-msgstr "მასალა გამოქვეყნდა."
-
-msgid "publication.editDisabled"
-msgstr "ეს ვერსია გამოქვეყნდა, მისი ჩასწორება შეუძლებელია."
-
-msgid "publication.datePublished"
-msgstr "გამოქვეყნების თარიღი"
-
-msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr ""
-"კოპირაიტის წელი მითითებული იქნება ავტომატურად, გამოქვეყნების თარიღის "
-"მიხედვით."
-
-msgid "publication.copyrightYearBasis.issueDescription"
-msgstr ""
-"კოპირაიტის წელი მითითებული იქნება ავტომატურად გამოცემის გამოქვეყნებისთანავე."
-
-msgid "submission.publications"
-msgstr "პუბლიკაციები"
-
-msgid "publication.status.unscheduled"
-msgstr "მოხსნილია გეგმიდან"
-
-msgid "submission.status.scheduled"
-msgstr "დაგეგმილია"
-
-msgid "publication.status.published"
-msgstr "გამოქვეყნებულია"
-
-msgid "submission.publication"
-msgstr "გამოქვეყნება"
-
-msgid "publication.selectIssue"
-msgstr "აირჩიეთ გამოცემა, რათა დაგეგმოთ გამოქვყენება"
-
-msgid "publication.unscheduledIn"
-msgstr "არ არის დაგეგმილი გამოსაქვეყნებლად გამოცემაში."
-
-msgid "publication.scheduledIn"
-msgstr "დაგეგმილია გამოსაქვეყნებლად: <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.publishedIn"
-msgstr "გამოქვეყნებულია: <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
-msgstr "პუბლიკაცია უნდა მიენიჭოს გამოცემაში მის გამოქვეყნებამდე."
-
-msgid "publication.publish.confirmation.datePublishedInPast"
-msgstr ""
-"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. მასალა დაუყოვნებლივ "
-"გამოქვეყნდება, ვინაიდან მითითებულია გამოქვეყნების თარიღი {$datePublished}. "
-"დარწმუნებული ხართ, რომ გსურთ ამ მასალის გამოქვეყნება?"
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr ""
-"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. მასალა დაუყოვნებლივ "
-"გამოქვეყნდება გამოცემაში „{$issue}“. დარწმუნებული ხართ, რომ გსურთ ამ მასალის "
-"გამოქვეყნება?"
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. მასალა გამოქვეყნდება "
-"გამოცემის „{$issue}“ გამოქვეყნებისას. დარწმუნებული ხართ, რომ გსურთ ამ "
-"მასალის გამოქვეყნება?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. დარწმუნებული ხართ, რომ "
-"გსურთ ამ მასალის გამოქვეყნება?"
-
-msgid "publication.invalidIssue"
-msgstr "ვერ მოხერხდა ამ პუბლიკაციის გამოცემის ნახვა."
-
-msgid "publication.inactiveSection"
-msgstr "{$section} (გაგზავნა გამორთულია)"
-
-msgid "publication.invalidSection"
-msgstr "ვერ მოხერხდა ამ პუბლიკაციისათვის განყოფილების ნახვა."
+msgid "publication.changeIssue"
+msgstr "გამოცემის შეცვლა"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -264,67 +183,146 @@ msgstr ""
 "როდესაც სტატია სადმე უკვე გამოქვეყნდა და თქვენ გჭირდებათ თარიღის წარსულში "
 "დამატება."
 
-msgid "publication.changeIssue"
-msgstr "გამოცემის შეცვლა"
+msgid "publication.invalidSection"
+msgstr "ვერ მოხერხდა ამ პუბლიკაციისათვის განყოფილების ნახვა."
 
-msgid "publication.assignedToIssue"
+msgid "publication.inactiveSection"
+msgstr "{$section} (გაგზავნა გამორთულია)"
+
+msgid "publication.invalidIssue"
+msgstr "ვერ მოხერხდა ამ პუბლიკაციის გამოცემის ნახვა."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"ეს მასალა მიენიჭა <a href=\"{$issueUrl}\">«{$issueName}»</a> გამოცემას, "
-"მაგრამ ის არ იყო დაგეგმილი გამოცემისათვის."
+"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. დარწმუნებული ხართ, რომ "
+"გსურთ ამ მასალის გამოქვეყნება?"
 
-msgid "publication.assignToissue"
-msgstr "გამოცემაზე მინიჭება"
-
-msgid "galley.publicationNotFound"
-msgstr "ვერ მოიძებნა ამ გალერეის პუბლიკაცია."
-
-msgid "galley.editPublishedDisabled"
+msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"ამ პუბლიკაციის გალერეების ჩასწორება არ შეიძლება, ვინაიდან ის უკვე "
-"გამოქვეყნებულია."
+"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. მასალა გამოქვეყნდება "
+"გამოცემის „{$issue}“ გამოქვეყნებისას. დარწმუნებული ხართ, რომ გსურთ ამ "
+"მასალის გამოქვეყნება?"
 
-msgid "catalog.category.heading"
-msgstr "ყველა კატეგორია"
-
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} ელემენტი"
-
-msgid "submission.sectionOptions"
-msgstr "სექციის პარამეტრები"
-
-msgid "section.any"
-msgstr "ნებისმიერი სექცია"
-
-msgid "submission.metadataDescription"
+msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"ეს სპეციფიკაციები დაფუძნებულია Dublin Core-ის მეტა-მონაცემებზე — "
-"საერთაშორისო სტანდარტზე, რომელიც გამოიყენება ჟურნალის შიგთავსის აღწერისათვის."
+"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. მასალა დაუყოვნებლივ "
+"გამოქვეყნდება გამოცემაში „{$issue}“. დარწმუნებული ხართ, რომ გსურთ ამ მასალის "
+"გამოქვეყნება?"
 
-msgid "submission.citationFormat.notFound"
+msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
-"ვერ მოხერხდა ბიბლიოგრაფიული ბმულების გაფორმების მოთხოვნილი ფორმატის მიღება."
+"ყველა მოთხოვნა ამ პუბლიკაციისათვის შესრულებულია. მასალა დაუყოვნებლივ "
+"გამოქვეყნდება, ვინაიდან მითითებულია გამოქვეყნების თარიღი {$datePublished}. "
+"დარწმუნებული ხართ, რომ გსურთ ამ მასალის გამოქვეყნება?"
 
-msgid "submission.submit.contributorRole"
-msgstr "გამგზავნის როლი"
+msgid "publication.required.issue"
+msgstr "პუბლიკაცია უნდა მიენიჭოს გამოცემაში მის გამოქვეყნებამდე."
 
-msgid "submission.submit.privacyStatement"
-msgstr "კონფიდენციალურობის განაცხადი"
+msgid "publication.publishedIn"
+msgstr "გამოქვეყნებულია: <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-#, fuzzy
-msgid "submission.submit.submissionChecklist"
-msgstr "მასალის გაგზავნის საკონტროლო სია"
+msgid "publication.scheduledIn"
+msgstr "დაგეგმილია გამოსაქვეყნებლად: <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "submission.incomplete"
-msgstr "დაელოდეთ მიღებას"
+msgid "publication.unscheduledIn"
+msgstr "არ არის დაგეგმილი გამოსაქვეყნებლად გამოცემაში."
 
-msgid "submission.complete"
-msgstr "მიღებულია"
+msgid "publication.selectIssue"
+msgstr "აირჩიეთ გამოცემა, რათა დაგეგმოთ გამოქვყენება"
 
-msgid "submission.upload.fileContents"
-msgstr "სტატიის კომპონენტები"
+msgid "submission.publication"
+msgstr "გამოქვეყნება"
 
-msgid "submission.event.issueMetadataUpdated"
-msgstr "გამოცემის მეტა-მონაცემები მასალისათვის განახლდა."
+msgid "publication.status.published"
+msgstr "გამოქვეყნებულია"
+
+msgid "submission.status.scheduled"
+msgstr "დაგეგმილია"
+
+msgid "publication.status.unscheduled"
+msgstr "მოხსნილია გეგმიდან"
+
+msgid "submission.publications"
+msgstr "პუბლიკაციები"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"კოპირაიტის წელი მითითებული იქნება ავტომატურად გამოცემის გამოქვეყნებისთანავე."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"კოპირაიტის წელი მითითებული იქნება ავტომატურად, გამოქვეყნების თარიღის "
+"მიხედვით."
+
+msgid "publication.datePublished"
+msgstr "გამოქვეყნების თარიღი"
+
+msgid "publication.editDisabled"
+msgstr "ეს ვერსია გამოქვეყნდა, მისი ჩასწორება შეუძლებელია."
+
+msgid "publication.event.published"
+msgstr "მასალა გამოქვეყნდა."
+
+msgid "publication.event.scheduled"
+msgstr "მასალა დაგეგმილია გამოსაქვეყნებლად."
+
+msgid "publication.event.unpublished"
+msgstr "მასალა მოხსნილია გამოქვეყნებიდან."
+
+msgid "publication.event.versionPublished"
+msgstr "გამოქვეყნდა ახალი ვერსია."
+
+msgid "publication.event.versionScheduled"
+msgstr "ახალი ვერსია დაგეგმილია გამოქვეყნებისათვის."
+
+msgid "publication.event.versionUnpublished"
+msgstr "ვერსია მოხსნილია გამოქვეყნებიდან."
+
+msgid "publication.invalidSubmission"
+msgstr "მასალა ამ პუბლიკაციისათვის ვერ მოიძებნა."
+
+msgid "publication.publish"
+msgstr "გამოქვეყნება"
+
+msgid "publication.publish.requirements"
+msgstr "გამოქვეყნების წინ აუცილებელია შემდეგი მოთხოვნების შესრულება."
+
+msgid "publication.required.declined"
+msgstr "დაწუნებული მასალის გამოქვეყენება არ შეიძლება."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"გამოქვეყნების წინ მასალა უნდა იყოს „ლიტერატურული ჩასწორების“, ან "
+"„გამოქვეყნებულია“ ეტაპზე."
+
+msgid "submission.license.description"
+msgstr ""
+"გამოქვეყნებისას ავტომატურად მიენიჭება ლიცენზია <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>."
+
+msgid "submission.copyrightHolder.description"
+msgstr "ავტომატურად პუბლიკაციისას მიენიჭება საავტორო უფლება {$copyright}."
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"საავტორო უფლების მინიჭება გამოქვეყნებულ მასალებზე შემდეგი ფორმულირების "
+"მითითებით."
+
+msgid "publication.unpublish"
+msgstr "გამოქვეყნებიდან მოხსნა"
+
+msgid "publication.unpublish.confirm"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ამ მასალის გამოქვეყნება?"
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+"დარწმუნებული ხართ, რომ არ გსურთ ამ მასალის დაგეგმვა გამოქვეყნებისათვის?"
+
+msgid "publication.version.details"
+msgstr "ინფორმაცია პუბლიკაციის შესახებ ვერსიისათვის: {$version}"
+
+msgid "submission.queries.production"
+msgstr "პუბლიკაციის განხილვა"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "მიმოხილვაში დაბრუნება"
@@ -362,6 +360,39 @@ msgstr ""
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "აირჩიეთ ფაილები, რომლებიც უნდა გაიგზავნოს განხილვის ეტაპზე."
 
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+
 msgid "submission.submit.form.authorRequired"
 msgstr "საჭიროა სულ მცირე ერთი ავტორი."
 
@@ -378,3 +409,6 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "გთხოვთ, აირჩიეთ გამგზავნის როლი."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "რეცენზიაზე გაგზავნა"

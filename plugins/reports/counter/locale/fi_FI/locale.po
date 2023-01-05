@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "PO-Revision-Date: 2020-12-12 08:52+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
-"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/"
-"reports-counter/fi_FI/>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/fi_FI/>\n"
 "Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,44 +11,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "Julkaisuraportti 1"
+msgid "plugins.reports.counter.description"
+msgstr ""
+"COUNTER-lisäosalla voi luoda <a href=\"http://www.projectcounter.org"
+"\">COUNTER-standardin</a> mukaisia raportteja. Nämä raportit eivät itsessään "
+"tee lehdestä COUNTER-yhteensopivaa. Yhteensopivuuden saavuttamiseksi, "
+"tarkista sitä koskevat vaatimukset COUNTER-standardin kotisivulta."
 
-msgid "plugins.reports.counter.ar1.title"
-msgstr "Artikkeliraportti 1"
+msgid "plugins.reports.counter"
+msgstr "COUNTER-raportit"
 
-msgid "plugins.reports.counter.allCustomers"
-msgstr "Kaikki asiakkaat"
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER-versio"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Raportin parametrit olivat virheelliset."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Virheellinen pyyntö."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Raporttiin ei löydetty tuloksia."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Tuloksia ei voitu muuntaa XML-muotoon."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Report JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
 "COUNTER Journal Report 1 (R3): Artikkeleiden kokotekstien latausmäärät "
 "kuukauden ja julkaisun mukaan jaoteltuna"
 
-msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTER Report JR1 (R3)"
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Kaikki asiakkaat"
 
-msgid "plugins.reports.counter.error.noXML"
-msgstr "Tuloksia ei voitu muuntaa XML-muotoon."
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Artikkeliraportti 1"
 
-msgid "plugins.reports.counter.error.noResults"
-msgstr "Raporttiin ei löydetty tuloksia."
-
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "Virheellinen pyyntö."
-
-msgid "plugins.reports.counter.error.badParameters"
-msgstr "Raportin parametrit olivat virheelliset."
-
-msgid "plugins.reports.counter.release"
-msgstr "COUNTER-versio"
-
-msgid "plugins.reports.counter"
-msgstr "COUNTER-raportit"
-
-msgid "plugins.reports.counter.description"
-msgstr ""
-"COUNTER-lisäosalla voi luoda <a href=\"http://www.projectcounter.org\""
-">COUNTER-standardin</a> mukaisia raportteja. Nämä raportit eivät itsessään "
-"tee lehdestä COUNTER-yhteensopivaa. Yhteensopivuuden saavuttamiseksi, "
-"tarkista sitä koskevat vaatimukset COUNTER-standardin kotisivulta."
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Julkaisuraportti 1"

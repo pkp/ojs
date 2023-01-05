@@ -11,8 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.generic.dublinCoreMeta.description"
-msgstr "此插件内嵌便于文章被索引的DC元数据标签。"
-
 msgid "plugins.generic.dublinCoreMeta.name"
 msgstr "DC元数据插件索引"
+
+msgid "plugins.generic.dublinCoreMeta.description"
+msgstr "此插件内嵌便于文章被索引的DC元数据标签。"

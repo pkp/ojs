@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marc.description"
-msgstr "метадеректерді Marc форматына сәйкес келетін етіп құрылымдайды."
-
 msgid "plugins.OAIMetadata.marc.displayName"
 msgstr "\"MARC метадеректер форматы\" модулі"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "метадеректерді Marc форматына сәйкес келетін етіп құрылымдайды."

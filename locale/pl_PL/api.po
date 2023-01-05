@@ -13,60 +13,46 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Żądana publikacja nie jest częścią tego przedłożenia."
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "To ogłoszenie nie należy do tego czasopisma."
 
-msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Żądana publikacja nie jest częścią tego czasopisma."
+msgid "api.emails.403.disabled"
+msgstr "W tym czasopiśmie nie włączono funkcji powiadamiania mailowego."
 
-msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Wybrana metoda płatności nie jest obsługiwana."
+msgid "api.submissions.400.wrongContext"
+msgstr "Żądane zgłoszenie nie znajduje się w tym czasopiśmie."
 
-msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr ""
-"Nie masz pozwolenia do przenoszenia tego szablonu e-mail do innego "
-"czasopisma."
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Nie można zmienić czasopisma do którego należy to zgłoszenie."
 
-msgid "api.contexts.404.contextNotFound"
-msgstr "Nie znaleziono szukanego czasopisma."
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Nie jesteś uprawniony do podglądu nieopublikowanych wydań."
 
-msgid "api.contexts.403.notAllowedDelete"
-msgstr "Nie masz pozwolenia do usunięcia tego czasopisma."
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Możesz wyświetlać tylko czasopisma, które zostały aktywowane."
 
-msgid "api.contexts.403.notAllowedEdit"
-msgstr "Nie masz pozwolenia do edycji tego czasopisma."
-
-msgid "api.contexts.403.requiresContext"
-msgstr "Nie możesz edytować tego czasopisma przez API ogólne."
+msgid "api.contexts.403.notAllowed"
+msgstr "Nie masz pozwolenia do przeglądania tego czasopisma."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
 "Nie możesz wyświetlać ani edytować tego czasopisma, dopóki nie wyślesz "
 "żądania do API mu przeznaczonemu lub API ogólnego."
 
-msgid "api.contexts.403.notAllowed"
-msgstr "Nie masz pozwolenia do przeglądania tego czasopisma."
+msgid "api.contexts.403.requiresContext"
+msgstr "Nie możesz edytować tego czasopisma przez API ogólne."
 
-msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Możesz wyświetlać tylko czasopisma, które zostały aktywowane."
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Nie masz pozwolenia do edycji tego czasopisma."
 
-msgid "api.submissions.403.unpublishedIssues"
-msgstr "Nie jesteś uprawniony do podglądu nieopublikowanych wydań."
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Nie masz pozwolenia do usunięcia tego czasopisma."
 
-msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Na tym etapie publikacji nie można powiązać pliku z gotową szpaltą."
+msgid "api.contexts.404.contextNotFound"
+msgstr "Nie znaleziono szukanego czasopisma."
 
-msgid "api.submissions.403.cantChangeContext"
-msgstr "Nie można zmienić czasopisma do którego należy to zgłoszenie."
-
-msgid "api.announcements.400.contextsNotMatched"
-msgstr "To ogłoszenie nie należy do tego czasopisma."
-
-msgid "api.submissions.400.wrongContext"
-msgstr "Żądane zgłoszenie nie znajduje się w tym czasopiśmie."
-
-msgid "api.emails.403.disabled"
-msgstr "W tym czasopiśmie nie włączono funkcji powiadamiania mailowego."
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Żądane DOI nie należy do tego czasopisma."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr "Dla tego czasopisma nie wybrano żadnej agencji rejestrującej DOI."
@@ -76,5 +62,22 @@ msgstr ""
 "Niektóre DOI nie zostały zarejestrowane poprawnie. Proszę sprawdzić "
 "poszczególne elementy i ustalić przyczynę błędów."
 
-msgid "api.dois.400.contextsNotMatched"
-msgstr "Żądane DOI nie należy do tego czasopisma."
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Nie masz pozwolenia do przenoszenia tego szablonu e-mail do innego "
+"czasopisma."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Wybrana metoda płatności nie jest obsługiwana."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Żądana publikacja nie jest częścią tego czasopisma."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Żądana publikacja nie jest częścią tego przedłożenia."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Na tym etapie publikacji nie można powiązać pliku z gotową szpaltą."
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

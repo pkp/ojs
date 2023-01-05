@@ -42,6 +42,12 @@ msgstr "Naskah Baru"
 msgid "grid.action.workflow"
 msgstr "Alur Penyerahan Naskah"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstrak harus berjumlah {$wordCount} kata atau kurang."
+
+msgid "submission.submit.noContext"
+msgstr "Jurnal untuk naskah yang diserahkan tidak dapat ditemukan."
+
 msgid "submission.issueEntry"
 msgstr "Metadata"
 
@@ -108,9 +114,6 @@ msgstr "Mengoreksi"
 msgid "workflow.review.externalReview"
 msgstr "Ulasan"
 
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Kirim untuk Ulasan"
-
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Metadata naskah yang diserahkan telah diperbaharui."
 
@@ -137,27 +140,39 @@ msgid "submission.citationFormat.notFound"
 msgstr "Format sitasi yang diminta tidak ditemukan."
 
 msgid "submission.metadataDescription"
-msgstr "Spesifikasi ini dibuat berdasarkan set metadata Dublin Core, suatu standar internasional untuk mendeskripsikan isi jurnal."
+msgstr ""
+"Spesifikasi ini dibuat berdasarkan set metadata Dublin Core, suatu standar "
+"internasional untuk mendeskripsikan isi jurnal."
 
 msgid "section.any"
 msgstr "Bagian Mana Saja"
 
-msgid "publication.publish.confirmation.futureIssue"
+msgid "submission.sectionOptions"
+msgstr "Pilih Bagian"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} butir"
+
+msgid "catalog.category.heading"
+msgstr "Semua butir"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Seluruh prasyarat penerbitan telah terpenuhi. Ini akan diterbitkan saat "
-"{$issue} diterbitkan. Apakah Anda yakin ingin menjadwalkan ini untuk "
-"diterbitkan?"
+"Galai dari publikasi ini tidak dapat disunting karena telah diterbitkan."
 
-msgid "publication.publish.confirmation"
+msgid "galley.publicationNotFound"
+msgstr "Publikasi untuk galai ini tidak dapat ditemukan."
+
+msgid "publication.assignToissue"
+msgstr "Dimasukkan ke dalam Terbitan"
+
+msgid "publication.assignedToIssue"
 msgstr ""
-"Seluruh prasyarat penerbitan telah terpenuhi. Anda yakin ingin menerbitkan "
-"ini?"
+"Naskah ini telah dimasukkan ke <a href=\"{$issueUrl}\">{$issueName}</a> "
+"namun belum dijadwalkan untuk terbit."
 
-msgid "publication.invalidIssue"
-msgstr "Terbitan untuk penerbitan ini tidak dapat ditemukan."
-
-msgid "publication.invalidSection"
-msgstr "Bagian untuk penerbitan ini tidak dapat ditemukan."
+msgid "publication.changeIssue"
+msgstr "Ubah Terbitan"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -165,58 +180,53 @@ msgstr ""
 "Jangan memasukkan tanggal publikasi kecuali artikel tersebut telah "
 "diterbitkan di tempat lain dan Anda perlu memajukan tanggalnya."
 
-msgid "galley.publicationNotFound"
-msgstr "Publikasi untuk galai ini tidak dapat ditemukan."
+msgid "publication.invalidSection"
+msgstr "Bagian untuk penerbitan ini tidak dapat ditemukan."
 
-msgid "galley.editPublishedDisabled"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Tidak aktif)"
+
+msgid "publication.invalidIssue"
+msgstr "Terbitan untuk penerbitan ini tidak dapat ditemukan."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"Galai dari publikasi ini tidak dapat disunting karena telah diterbitkan."
+"Seluruh prasyarat penerbitan telah terpenuhi. Anda yakin ingin menerbitkan "
+"ini?"
 
-msgid "catalog.category.heading"
-msgstr "Semua butir"
-
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} butir"
-
-msgid "submission.sectionOptions"
-msgstr "Pilih Bagian"
-
-msgid "submission.abstract.wordCount.description"
-msgstr "Abstrak harus berjumlah {$wordCount} kata atau kurang."
-
-msgid "publication.scheduledIn"
-msgstr "Dijadwalkan untuk terbit di <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.publishedIn"
-msgstr "Diterbitkan di <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
+msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Publikasi ini harus dimasukkan dalam sebuah nomor terbitan sebelum dapat "
-"dipublikasikan."
+"Seluruh prasyarat penerbitan telah terpenuhi. Ini akan diterbitkan saat "
+"{$issue} diterbitkan. Apakah Anda yakin ingin menjadwalkan ini untuk "
+"diterbitkan?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
 "Semua persyaratan publikasi telah terpenuhi. Naskah ini akan segera "
 "diterbitkan dalam {$issue}. Anda yakin ingin menerbitkan?"
 
-msgid "submission.submit.noContext"
-msgstr "Jurnal untuk naskah yang diserahkan tidak dapat ditemukan."
-
-msgid "publication.selectIssue"
-msgstr "Tetapkan terbitan untuk dipublikasikan"
-
-msgid "publication.assignToissue"
-msgstr "Dimasukkan ke dalam Terbitan"
-
-msgid "publication.unscheduledIn"
-msgstr "Naskah ini belum dijadwalkan terbit dalam satu terbitan."
-
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "Seluruh syarat publikasi telah terpenuhi. Naskah ini akan diterbitkan segera "
 "karena tanggal publikasi telah ditetapkan pada {$datePublished}. Yakin ingin "
 "menerbitkannya?"
+
+msgid "publication.required.issue"
+msgstr ""
+"Publikasi ini harus dimasukkan dalam sebuah nomor terbitan sebelum dapat "
+"dipublikasikan."
+
+msgid "publication.publishedIn"
+msgstr "Diterbitkan di <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Dijadwalkan untuk terbit di <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Naskah ini belum dijadwalkan terbit dalam satu terbitan."
+
+msgid "publication.selectIssue"
+msgstr "Tetapkan terbitan untuk dipublikasikan"
 
 msgid "submission.publication"
 msgstr "Publikasi"
@@ -311,19 +321,29 @@ msgstr "Rincian publikasi naskah versi {$version}"
 msgid "submission.queries.production"
 msgstr "Diskusi Produksi"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Tidak aktif)"
+msgid "editor.submission.decision.backToReview"
+msgstr "Periska Kembali"
 
-msgid "publication.changeIssue"
-msgstr "Ubah Terbitan"
-
-msgid "publication.assignedToIssue"
+msgid "editor.submission.decision.backToReview.description"
 msgstr ""
-"Naskah ini telah dimasukkan ke <a href=\"{$issueUrl}\">{$issueName}</a> "
-"namun belum dijadwalkan untuk terbit."
+"Batalkan keputisan menerima naskah ini dan kirim kembali ke tahap review."
 
-msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Pilih file yang akan dikirim ke tahap review."
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} membatalkan keputusan untuk menerima naskah ini dan "
+"mengirimnya kembali ke tahap review."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Kirim Kembali ke Review"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Naskah, {$title}, telah dikembalikan ke tahap review."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Kirim email pemberitahuan kepada penulis bahwa naskahnya sedang dikembalikan "
+"ke tahap review. Jelaskan alasan pengembalian tersebut dan sampaikan langkah "
+"review berikutnya yang akan diambil."
 
 #, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
@@ -333,34 +353,13 @@ msgstr ""
 "berapa lama proses review akan berlangsung dan kapan mereka akan mendapatkan "
 "kabar lanjutan dari editor."
 
-msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Pilih file yang akan dikirim ke tahap review."
+
+msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"Kirim email pemberitahuan kepada penulis bahwa naskahnya sedang dikembalikan "
-"ke tahap review. Jelaskan alasan pengembalian tersebut dan sampaikan langkah "
-"review berikutnya yang akan diambil."
-
-msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "Naskah, {$title}, telah dikembalikan ke tahap review."
-
-msgid "editor.submission.decision.backToReview.completed"
-msgstr "Kirim Kembali ke Review"
-
-msgid "editor.submission.decision.backToReview.log"
-msgstr ""
-"{$editorName} membatalkan keputusan untuk menerima naskah ini dan "
-"mengirimnya kembali ke tahap review."
-
-msgid "editor.submission.decision.backToReview.description"
-msgstr ""
-"Batalkan keputisan menerima naskah ini dan kirim kembali ke tahap review."
-
-msgid "editor.submission.decision.backToReview"
-msgstr "Periska Kembali"
-
-msgid "doi.submission.incorrectContext"
-msgstr ""
-"Tidak dapat memberikan DOI untuk naskah: {$pubObjectTitle}. Naskah tidak "
-"ditemukan pada jurnal ini."
+"Tidak dapat memberikan DOI untuk naskah: {$pubObjectTitle}. Naskah harus "
+"dimasukkan ke dalam edisi agar dapat diberi DOI."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
@@ -368,10 +367,34 @@ msgstr ""
 "{$itemTitle}. Naskah harus dimasukkan terlebih dahulu ke dalam sebuah edisi "
 "baru bisa diberi DOI."
 
-msgid "doi.submission.issueMissing.publication"
+msgid "doi.submission.incorrectContext"
 msgstr ""
-"Tidak dapat memberikan DOI untuk naskah: {$pubObjectTitle}. Naskah harus "
-"dimasukkan ke dalam edisi agar dapat diberi DOI."
+"Tidak dapat memberikan DOI untuk naskah: {$pubObjectTitle}. Naskah tidak "
+"ditemukan pada jurnal ini."
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Dibutuhkan setidaknya satu penulis."
@@ -389,3 +412,6 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Silakan pilih peran kontributor."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Kirim untuk Ulasan"

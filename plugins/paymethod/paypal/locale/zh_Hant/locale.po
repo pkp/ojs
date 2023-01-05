@@ -12,11 +12,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "plugins.paymethod.paypal.description"
-msgstr "費用會透過Paypal服務支付。"
-
 msgid "plugins.paymethod.paypal.displayName"
 msgstr "Paypal支付費用"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "費用會透過Paypal服務支付。"
 
 msgid "plugins.paymethod.paypal"
 msgstr "Paypal支付費用"

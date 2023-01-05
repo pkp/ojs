@@ -13,135 +13,80 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "publication.selectIssue"
-msgstr "Selectați un număr pentru publicare"
+msgid "submission.submit.userGroup"
+msgstr "Trimit manuscrisul în calitate de ..."
 
-msgid "publication.assignToissue"
-msgstr "Atribuire la număr"
+msgid "submission.upload.selectComponent"
+msgstr "Selectați componenta manuscrisului"
 
-msgid "publication.unscheduledIn"
-msgstr "Acest articol nu a fost încă alocat unui număr de revistă."
+msgid "submission.title"
+msgstr "Titlu manuscris"
 
-msgid "publication.scheduledIn"
-msgstr "Programat spre publicare în <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.publishedIn"
-msgstr "Publicat în <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
+msgid "submission.title.tip"
 msgstr ""
-"Publicația trebuie să fie atribuită unui număr înainte de a putea fi "
-"publicată."
+"De obicei, înregistrarea unui manuscris presupune folosirea unor tipuri de "
+"fișiere 'image', 'text', sau alte tipuri de fișiere multimedia 'software' "
+"sau 'interactive'.  Vă rugăm să alegeți cel mai relevant tip  pentru "
+"înregistrarea dvs.  Exemple pot fi găsite la <a target=\"_blank\" href="
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type"
+"\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</"
+"a>"
 
-msgid "publication.publish.confirmation.datePublishedInPast"
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Demarați o nouă înregistrare de manuscris în"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Înregistrare nouă"
+
+msgid "grid.action.workflow"
+msgstr "Fluxul de lucru pentru înregistrare"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Rezumatul trebuie să conțină maxim {$wordCount} cuvinte."
+
+msgid "submission.submit.noContext"
+msgstr "Jurnalul acestei înregistrări nu a fost găsit."
+
+msgid "submission.issueEntry"
+msgstr "Metadate"
+
+msgid "submission.submit.whatNext.description"
 msgstr ""
-"Toate cerințele de publicare au fost îndeplinite. Conținutul va fi publicată "
-"imediat, deoarece data publicării a fost setată la {$datePublished}. Sigur "
-"doriți să publicați acest conținut?"
+"Jurnalul a fost notificat cu privire la înregistrarea dvs. și ați primit o "
+"confirmare prin e-mail în acest sens. După ce editorul va examina "
+"înregistrarea, reprezentanții revistei vă vor contacta."
 
-msgid "publication.publish.confirmation.backIssue"
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Conținutul apare la începutul numărului"
+
+msgid "grid.action.issueEntry"
+msgstr "Vizualizare metadate înregistrare"
+
+msgid "submission.event.articleGalleyMadeAvailable"
 msgstr ""
-"Toate cerințele de publicare au fost îndeplinite. Conținutul va fi publicat "
-"imediat în  {$issue}. Sigur doriți să publicați acest conținut?"
+"Conținutul editat al articolului \"{$galleyFormatName}\" este disponibil."
 
-msgid "publication.publish.confirmation.futureIssue"
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Conținutul articolului\"{$galleyFormatName}\" nu este disponibil."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Identificatorii publici ai înregistrării au fost actualizați."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Aprobarea formatului"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr ""
-"Toate cerințele de publicare au fost îndeplinite. Conținutul va fi "
-"disponibil când se publică {$issue}. Sigur doriți să programați acest lucru "
-"pentru publicare?"
+"<p>Acest conținut <em>nu va mai fi pus la dispoziția </em> cititorilor.</p>"
 
-msgid "publication.publish.confirmation"
-msgstr ""
-"Toate cerințele de publicare au fost îndeplinite. Sigur doriți să publicați "
-"acest conținut?"
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Acest conținut <em>este disponibil</em> pentru cititori.</p>"
 
-msgid "publication.issue.success"
-msgstr "Detaliile numărului publicat au fost actualizate."
+msgid "grid.action.availableArticleGalley"
+msgstr "Pune la dispoziție acest conținut"
 
-msgid "publication.invalidIssue"
-msgstr "Numărul pentru această publicație nu a fost găsit."
-
-msgid "publication.invalidSection"
-msgstr "Secțiunea pentru această publicație nu a putut fi găsită."
-
-msgid "publication.datePublished.description"
-msgstr ""
-"Data publicării va fi setată automat la publicarea numărului. Nu introduceți "
-"o dată de publicare, cu excepția cazului în care articolul a fost anterior "
-"publicat."
-
-msgid "galley.publicationNotFound"
-msgstr "Publicarea pentru acest conținut nu a putut fi găsită."
-
-msgid "galley.editPublishedDisabled"
-msgstr ""
-"Conținutul acestei publicații nu pot fi editat, deoarece a fost deja "
-"publicat."
-
-msgid "catalog.category.heading"
-msgstr "Toate elementele"
-
-msgid "catalog.browseTitles"
-msgstr "Elemente {$numTitles} |"
-
-msgid "submission.sectionOptions"
-msgstr "Opțiuni secțiune"
-
-msgid "section.any"
-msgstr "Orice secțiune"
-
-msgid "submission.metadataDescription"
-msgstr ""
-"Aceste specificații se bazează pe setul de metadate Dublin Core, un standard "
-"internațional utilizat pentru a descrie conținutul jurnalului."
-
-msgid "submission.citationFormat.notFound"
-msgstr "Formatul de citare solicitat nu a putut fi preluat."
-
-msgid "submission.submit.contributorRole"
-msgstr "Rolul contributorului"
-
-msgid "submission.submit.privacyStatement"
-msgstr "Declarație de confidențialitate"
-
-#, fuzzy
-msgid "submission.submit.submissionChecklist"
-msgstr "Lista de verificare pentru înregistrarea manuscrisului"
-
-msgid "submission.incomplete"
-msgstr "Așteptați decizia"
-
-msgid "submission.complete"
-msgstr "Aprobat"
-
-msgid "submission.upload.fileContents"
-msgstr "Componenta articolului"
-
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Metadatele privind înregistrarea numărului au fost actualizate."
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Trimite pentru revizie"
-
-msgid "workflow.review.externalReview"
-msgstr "Revizie"
-
-msgid "submission.pageProofs"
-msgstr "Corectare"
-
-msgid "submission.submit.upload.description"
-msgstr ""
-"Încărcare fișiere asociate cu înregistrarea (manuscrisul, imagini, seturi de "
-"date, etc.)."
-
-msgid "submission.submit.titleAndSummary"
-msgstr "Titlu și Rezumat"
-
-msgid "grid.action.pageProofApproved"
-msgstr "Această corectură a fost aprobată pentru a fi inclusă în conținut."
-
-msgid "grid.action.approveProof"
-msgstr "Aprobați această corectură pentru includerea în conținut."
+msgid "submission.galleyFiles"
+msgstr "Fișiere conținut"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -150,79 +95,140 @@ msgstr ""
 "alți corectori pentru a corecta conținutul, cu fișiere corectate încărcate "
 "pentru aprobare înainte de publicare."
 
-msgid "submission.galleyFiles"
-msgstr "Fișiere conținut"
+msgid "grid.action.approveProof"
+msgstr "Aprobați această corectură pentru includerea în conținut."
 
-msgid "grid.action.availableArticleGalley"
-msgstr "Pune la dispoziție acest conținut"
+msgid "grid.action.pageProofApproved"
+msgstr "Această corectură a fost aprobată pentru a fi inclusă în conținut."
 
-msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Acest conținut <em>este disponibil</em> pentru cititori.</p>"
+msgid "submission.submit.titleAndSummary"
+msgstr "Titlu și Rezumat"
 
-msgid "grid.issueEntry.availableGalley.removeMessage"
+msgid "submission.submit.upload.description"
 msgstr ""
-"<p>Acest conținut <em>nu va mai fi pus la dispoziția </em> cititorilor.</p>"
+"Încărcare fișiere asociate cu înregistrarea (manuscrisul, imagini, seturi de "
+"date, etc.)."
 
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Aprobarea formatului"
+msgid "submission.pageProofs"
+msgstr "Corectare"
 
-msgid "submission.event.publicIdentifiers"
-msgstr "Identificatorii publici ai înregistrării au fost actualizați."
+msgid "workflow.review.externalReview"
+msgstr "Revizie"
 
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Conținutul articolului\"{$galleyFormatName}\" nu este disponibil."
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadatele privind înregistrarea numărului au fost actualizate."
 
-msgid "submission.event.articleGalleyMadeAvailable"
+msgid "submission.upload.fileContents"
+msgstr "Componenta articolului"
+
+msgid "submission.complete"
+msgstr "Aprobat"
+
+msgid "submission.incomplete"
+msgstr "Așteptați decizia"
+
+#, fuzzy
+msgid "submission.submit.submissionChecklist"
+msgstr "Lista de verificare pentru înregistrarea manuscrisului"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declarație de confidențialitate"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rolul contributorului"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Formatul de citare solicitat nu a putut fi preluat."
+
+msgid "submission.metadataDescription"
 msgstr ""
-"Conținutul editat al articolului \"{$galleyFormatName}\" este disponibil."
+"Aceste specificații se bazează pe setul de metadate Dublin Core, un standard "
+"internațional utilizat pentru a descrie conținutul jurnalului."
 
-msgid "grid.action.issueEntry"
-msgstr "Vizualizare metadate înregistrare"
+msgid "section.any"
+msgstr "Orice secțiune"
 
-msgid "grid.action.galleyInIssueEntry"
-msgstr "Conținutul apare la începutul numărului"
+msgid "submission.sectionOptions"
+msgstr "Opțiuni secțiune"
 
-msgid "submission.submit.whatNext.description"
+msgid "catalog.browseTitles"
+msgstr "Elemente {$numTitles} |"
+
+msgid "catalog.category.heading"
+msgstr "Toate elementele"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Jurnalul a fost notificat cu privire la înregistrarea dvs. și ați primit o "
-"confirmare prin e-mail în acest sens. După ce editorul va examina "
-"înregistrarea, reprezentanții revistei vă vor contacta."
+"Conținutul acestei publicații nu pot fi editat, deoarece a fost deja "
+"publicat."
 
-msgid "submission.issueEntry"
-msgstr "Metadate"
+msgid "galley.publicationNotFound"
+msgstr "Publicarea pentru acest conținut nu a putut fi găsită."
 
-msgid "submission.submit.noContext"
-msgstr "Jurnalul acestei înregistrări nu a fost găsit."
+msgid "publication.assignToissue"
+msgstr "Atribuire la număr"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Rezumatul trebuie să conțină maxim {$wordCount} cuvinte."
-
-msgid "grid.action.workflow"
-msgstr "Fluxul de lucru pentru înregistrare"
-
-msgid "submission.submit.newSubmissionSingle"
-msgstr "Înregistrare nouă"
-
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Demarați o nouă înregistrare de manuscris în"
-
-msgid "submission.title.tip"
+msgid "publication.assignedToIssue"
 msgstr ""
-"De obicei, înregistrarea unui manuscris presupune folosirea unor tipuri de "
-"fișiere 'image', 'text', sau alte tipuri de fișiere multimedia 'software' "
-"sau 'interactive'.  Vă rugăm să alegeți cel mai relevant tip  pentru "
-"înregistrarea dvs.  Exemple pot fi găsite la <a target=\"_blank\" href=\""
-"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
-">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+"Acesta a fost atribuit  lui<a href=\"{$issueUrl}\">{$issueName}</a>, dar nu "
+"a fost programat pentru publicare."
 
-msgid "submission.title"
-msgstr "Titlu manuscris"
+msgid "publication.changeIssue"
+msgstr "Schimbă articolul"
 
-msgid "submission.upload.selectComponent"
-msgstr "Selectați componenta manuscrisului"
+msgid "publication.datePublished.description"
+msgstr ""
+"Data publicării va fi setată automat la publicarea numărului. Nu introduceți "
+"o dată de publicare, cu excepția cazului în care articolul a fost anterior "
+"publicat."
 
-msgid "submission.submit.userGroup"
-msgstr "Trimit manuscrisul în calitate de ..."
+msgid "publication.invalidSection"
+msgstr "Secțiunea pentru această publicație nu a putut fi găsită."
+
+msgid "publication.inactiveSection"
+msgstr "{$secție} (inactiv)"
+
+msgid "publication.invalidIssue"
+msgstr "Numărul pentru această publicație nu a fost găsit."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Toate cerințele de publicare au fost îndeplinite. Sigur doriți să publicați "
+"acest conținut?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Toate cerințele de publicare au fost îndeplinite. Conținutul va fi "
+"disponibil când se publică {$issue}. Sigur doriți să programați acest lucru "
+"pentru publicare?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Toate cerințele de publicare au fost îndeplinite. Conținutul va fi publicat "
+"imediat în  {$issue}. Sigur doriți să publicați acest conținut?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Toate cerințele de publicare au fost îndeplinite. Conținutul va fi publicată "
+"imediat, deoarece data publicării a fost setată la {$datePublished}. Sigur "
+"doriți să publicați acest conținut?"
+
+msgid "publication.required.issue"
+msgstr ""
+"Publicația trebuie să fie atribuită unui număr înainte de a putea fi "
+"publicată."
+
+msgid "publication.publishedIn"
+msgstr "Publicat în <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Programat spre publicare în <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Acest articol nu a fost încă alocat unui număr de revistă."
+
+msgid "publication.selectIssue"
+msgstr "Selectați un număr pentru publicare"
 
 msgid "submission.publication"
 msgstr "Publicare"
@@ -245,7 +251,8 @@ msgstr ""
 "publicat într-un număr."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr "Anul drepturilor de autor va fi setat automat pe baza datei publicării."
+msgstr ""
+"Anul drepturilor de autor va fi setat automat pe baza datei publicării."
 
 msgid "publication.datePublished"
 msgstr "Data publicării"
@@ -320,21 +327,62 @@ msgstr "Detalii de publicare pentru versiunea {$version}"
 msgid "submission.queries.production"
 msgstr "Discuții producție"
 
-msgid "publication.inactiveSection"
-msgstr "{$secție} (inactiv)"
-
-msgid "publication.changeIssue"
-msgstr "Schimbă articolul"
-
-msgid "publication.assignedToIssue"
+msgid "editor.submission.decision.backToReview"
 msgstr ""
-"Acesta a fost atribuit  lui<a href=\"{$issueUrl}\">{$issueName}</a>, dar nu "
-"a fost programat pentru publicare."
 
-msgid "submission.viewingPreview"
+msgid "editor.submission.decision.backToReview.description"
 msgstr ""
-"Aceasta este o previzualizare și nu a fost publicată. <a href=\"{$url}\">"
-"Vedeți contribuția</a>"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Este necesar cel puțin un autor."
@@ -352,3 +400,14 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Vă rugăm să selectați rolul contributorului."
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Detaliile numărului publicat au fost actualizate."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Trimite pentru revizie"
+
+#~ msgid "submission.viewingPreview"
+#~ msgstr ""
+#~ "Aceasta este o previzualizare și nu a fost publicată. <a href="
+#~ "\"{$url}\">Vedeți contribuția</a>"

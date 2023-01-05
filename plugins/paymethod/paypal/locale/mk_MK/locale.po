@@ -11,31 +11,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.paymethod.paypal.error"
-msgstr ""
-"Настана грешка во трансакцијата. За детали, контактирајте го менаџерот на "
-"списанието."
-
-msgid "plugins.paymethod.paypal.settings.secret"
-msgstr "Тајна"
-
-msgid "plugins.paymethod.paypal.settings.clientId"
-msgstr "ID на клиент"
-
-msgid "plugins.paymethod.paypal.settings.accountName"
-msgstr "Име на сметка"
-
-msgid "plugins.paymethod.paypal.settings.testMode"
-msgstr "Режим на тестирање"
-
-msgid "plugins.paymethod.paypal.settings"
-msgstr "Поставки за плаќање на Paypal"
-
-msgid "plugins.paymethod.paypal"
+msgid "plugins.paymethod.paypal.displayName"
 msgstr "Плаќање на провизии за Paypal"
 
 msgid "plugins.paymethod.paypal.description"
 msgstr "Плаќањата ќе бидат обработени со користење на услугата PayPal."
 
-msgid "plugins.paymethod.paypal.displayName"
+msgid "plugins.paymethod.paypal"
 msgstr "Плаќање на провизии за Paypal"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Поставки за плаќање на Paypal"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Режим на тестирање"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Име на сметка"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "ID на клиент"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Тајна"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"Настана грешка во трансакцијата. За детали, контактирајте го менаџерот на "
+"списанието."

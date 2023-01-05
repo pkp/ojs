@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-12-30 07:02+0000\n"
 "Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
-"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/admin/ms_MY/>"
-"\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/admin/ms_MY/"
+">\n"
 "Language: ms_MY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,22 +16,25 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "admin.hostedContexts"
+msgstr "Jurnal yang Dihoskan"
+
+msgid "admin.settings.redirect"
+msgstr "Ubah hala jurnal"
+
 msgid "admin.settings.redirectInstructions"
 msgstr ""
 "Permintaan ke laman utama akan dialihkan ke jurnal ini. Ini mungkin berguna "
 "jika laman ini hanya menghoskan satu jurnal sahaja."
 
-msgid "admin.settings.redirect"
-msgstr "Ubah hala jurnal"
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Adakah anda pasti mahu melumpuhkan tempat ini? Ini boleh menjejaskan mana-"
+"mana jurnal yang dihoskan pada masa ini menggunakan tempat tersebut."
 
-msgid "admin.hostedContexts"
-msgstr "Jurnal yang Dihoskan"
-
-msgid "admin.scheduledTask.openAccessNotification"
-msgstr "Pemberitahuan Akses Terbuka"
-
-msgid "admin.scheduledTask.reviewReminder"
-msgstr "Peringatan Ulasan"
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Ini akan menjadi bahasa lalai untuk tapak dan mana-mana jurnal yang dihoskan."
 
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr ""
@@ -42,141 +45,13 @@ msgstr ""
 "dipilih, menu togol bahasa tidak akan muncul dan tetapan bahasa lanjutan "
 "tidak akan tersedia untuk jurnal."
 
-msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgid "admin.locale.maybeIncomplete"
+msgstr "Tempat yang ditanda mungkin tidak lengkap."
+
+msgid "admin.languages.confirmUninstall"
 msgstr ""
-"Ciri e-mel pukal telah dilumpuhkan untuk jurnal ini. Aktifkan ciri ini di <a "
-"href=\"{$siteSettingsUrl}\"> Pentadbir> Tetapan Laman </a>."
-
-msgid "admin.settings.disableBulkEmailRoles.description"
-msgstr ""
-"Pengurus jurnal tidak akan dapat menghantar e-mel pukal kepada mana-mana "
-"peranan yang dipilih di bawah. Gunakan tetapan ini untuk mengehadkan "
-"penyalahgunaan ciri pemberitahuan e-mel. Contohnya, mungkin lebih selamat "
-"untuk melumpuhkan e-mel pukal kepada pembaca, pengarang atau kumpulan "
-"pengguna besar lain yang tidak bersetuju menerima e-mel "
-"sedemikian.<br><br>Ciri e-mel pukal boleh dilumpuhkan sepenuhnya untuk "
-"jurnal ini dalam <a href=\"{$siteSettingsUrl}\">Pentadbir > Tetapan "
-"Tapak</a>."
-
-msgid "admin.settings.enableBulkEmails.description"
-msgstr ""
-"Pilih jurnal yang dihoskan yang sepatutnya dibenarkan untuk menghantar e-mel "
-"pukal. Apabila ciri ini didayakan, pengurus jurnal akan dapat menghantar e-"
-"mel kepada semua pengguna yang berdaftar dengan jurnal "
-"mereka.<br><br>Penyalahgunaan ciri ini untuk menghantar e-mel yang tidak "
-"diminta mungkin melanggar undang-undang anti-spam di sesetengah bidang kuasa "
-"dan boleh mengakibatkan dalam e-mel pelayan anda disekat sebagai spam. "
-"Dapatkan nasihat teknikal sebelum mendayakan ciri ini dan pertimbangkan "
-"untuk berunding dengan pengurus jurnal untuk memastikan ia digunakan dengan "
-"sewajarnya.<br><br>Sekatan lanjut mengenai ciri ini boleh didayakan untuk "
-"setiap jurnal dengan melawati wizard tetapannya dalam senarai <a href= \""
-"{$hostedContextsUrl}\">Jurnal Dihoskan</a>."
-
-msgid "admin.scheduledTask.subscriptionExpiryReminder"
-msgstr "Peringatan Tamat Tempoh Langganan"
-
-msgid "admin.mergeUsers.noneEnrolled"
-msgstr "Tiada pengguna yang berdaftar."
-
-msgid "admin.mergeUsers.confirm"
-msgstr ""
-"Adakah anda pasti mahu menggabungkan {$oldAccountCount} akaun yang dipilih "
-"ke dalam akaun dengan nama pengguna \"{$newUsername}\"? Akaun "
-"{$oldAccountCount} yang dipilih tidak akan wujud selepas itu. Tindakan ini "
-"tidak boleh diterbalikkan."
-
-msgid "admin.mergeUsers.allUsers"
-msgstr "Semua Pengguna Yang Berdaftar"
-
-msgid "admin.mergeUsers.from.description"
-msgstr ""
-"Pilih pengguna (atau beberapa) untuk bergabung ke akaun pengguna lain ("
-"misalnya, Apabila seseorang mempunyai dua akaun pengguna). Akaun yang "
-"dipilih terlebih dahulu akan dihapus dan setiap penyerahan, tugasan, dan "
-"lain-lain akan dikaitkan dengan akaun kedua."
-
-msgid "admin.mergeUsers.into.description"
-msgstr ""
-"Pilih pengguna yang akan mempunyai hak penulisan pengguna sebelumnya, "
-"seperti penyuntingan tugasan, dll."
-
-msgid "admin.mergeUsers.mergeUser"
-msgstr "Gabungkan Pengguna"
-
-msgid "admin.mergeUsers"
-msgstr "Gabungkan Pengguna"
-
-msgid "admin.journals.importErrors"
-msgstr "Pengimportan gagal diselesaikan dengan jayanya"
-
-msgid "admin.journals.form.importPathRequired"
-msgstr "Laluan URL import diperlukan."
-
-msgid "admin.journals.redirect"
-msgstr "Janakan kod untuk memetakan URL OJS 1 ke URL OJS 2"
-
-msgid "admin.journals.transcode"
-msgstr "Metadata artikel transkod dari ISO8859-1"
-
-msgid "admin.journals.importSubscriptions"
-msgstr "Import langganan"
-
-msgid "admin.journal.pathImportInstructions"
-msgstr ""
-"Laluan URL jurnal yang sudah ada atau laluan yang hendak dibuat (contoh: \""
-"ojs\")."
-
-msgid "admin.contexts.contextDescription"
-msgstr "Butiran jurnal"
-
-msgid "admin.journals.enableJournalInstructions"
-msgstr "Dayakan jurnal ini untuk muncul secara terbuka di laman web ini"
-
-msgid "admin.contexts.form.primaryLocaleNotSupported"
-msgstr "Bahasa utama mestilah bahasa yang disokong oleh jurnal."
-
-msgid "admin.contexts.form.pathExists"
-msgstr "Laluan URL yang anda berikan sudah digunakan oleh jurnal lain."
-
-msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr ""
-"Laluan URL hanya boleh merangkumi huruf, angka dan watak _ dan -. Ia mesti "
-"bermula dan diakhiri dengan huruf atau angka."
-
-msgid "admin.contexts.form.pathRequired"
-msgstr "Laluan URL diperlukan."
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "Tajuk diperlukan."
-
-msgid "admin.journals.urlWillBe"
-msgstr ""
-"Ini mestilah satu kata pendek atau akronim yang mengenal pasti jurnal. URL "
-"jurnal adalah {$sampleUrl}."
-
-msgid "admin.contexts.create"
-msgstr "Cipta Jurnal"
-
-msgid "admin.journals.noneCreated"
-msgstr "Tidak ada jurnal yang dibuat."
-
-msgid "admin.journals.journalSettings"
-msgstr "Tetapan Jurnal"
-
-msgid "admin.journals.createInstructions"
-msgstr ""
-"Anda secara automatik akan didaftarkan sebagai pengurus jurnal ini. Selepas "
-"mencipta jurnal baharu, anda akan dialihkan ke wizard tetapannya, untuk "
-"melengkapkan persediaan jurnal awal."
-
-msgid "admin.systemConfigurationDescription"
-msgstr "Tetapan konfigurasi OJS dari <tt> config.inc.php </tt>."
-
-msgid "admin.systemConfiguration"
-msgstr "Konfigurasi OJS"
-
-msgid "admin.systemVersion"
-msgstr "Versi OJS"
+"Adakah anda pasti mahu menyahpasang tempat ini? Ini boleh menjejaskan mana-"
+"mana jurnal yang dihoskan pada masa ini menggunakan tempat tersebut."
 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
@@ -185,31 +60,156 @@ msgstr ""
 "dihoskan. Lihat dokumentasi OJS untuk mendapatkan maklumat tentang menambah "
 "sokongan untuk bahasa baharu."
 
-msgid "admin.languages.confirmUninstall"
+msgid "admin.systemVersion"
+msgstr "Versi OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurasi OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Tetapan konfigurasi OJS dari <tt> config.inc.php </tt>."
+
+msgid "admin.journals.createInstructions"
 msgstr ""
-"Adakah anda pasti mahu menyahpasang tempat ini? Ini boleh menjejaskan mana-"
-"mana jurnal yang dihoskan pada masa ini menggunakan tempat tersebut."
+"Anda secara automatik akan didaftarkan sebagai pengurus jurnal ini. Selepas "
+"mencipta jurnal baharu, anda akan dialihkan ke wizard tetapannya, untuk "
+"melengkapkan persediaan jurnal awal."
 
-msgid "admin.locale.maybeIncomplete"
-msgstr "Tempat yang ditanda mungkin tidak lengkap."
+msgid "admin.journals.journalSettings"
+msgstr "Tetapan Jurnal"
 
-msgid "admin.languages.primaryLocaleInstructions"
+msgid "admin.journals.noneCreated"
+msgstr "Tidak ada jurnal yang dibuat."
+
+msgid "admin.contexts.create"
+msgstr "Cipta Jurnal"
+
+msgid "admin.journals.urlWillBe"
 msgstr ""
-"Ini akan menjadi bahasa lalai untuk tapak dan mana-mana jurnal yang dihoskan."
+"Ini mestilah satu kata pendek atau akronim yang mengenal pasti jurnal. URL "
+"jurnal adalah {$sampleUrl}."
 
-msgid "admin.languages.confirmDisable"
+msgid "admin.contexts.form.titleRequired"
+msgstr "Tajuk diperlukan."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Laluan URL diperlukan."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
 msgstr ""
-"Adakah anda pasti mahu melumpuhkan tempat ini? Ini boleh menjejaskan mana-"
-"mana jurnal yang dihoskan pada masa ini menggunakan tempat tersebut."
+"Laluan URL hanya boleh merangkumi huruf, angka dan watak _ dan -. Ia mesti "
+"bermula dan diakhiri dengan huruf atau angka."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "ID isu tidak sepadan dengan ID bersekutu."
+msgid "admin.contexts.form.pathExists"
+msgstr "Laluan URL yang anda berikan sudah digunakan oleh jurnal lain."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Bahasa utama mestilah bahasa yang disokong oleh jurnal."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Dayakan jurnal ini untuk muncul secara terbuka di laman web ini"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Butiran jurnal"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Laluan URL jurnal yang sudah ada atau laluan yang hendak dibuat (contoh: "
+"\"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Import langganan"
+
+msgid "admin.journals.transcode"
+msgstr "Metadata artikel transkod dari ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Janakan kod untuk memetakan URL OJS 1 ke URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Laluan URL import diperlukan."
+
+msgid "admin.journals.importErrors"
+msgstr "Pengimportan gagal diselesaikan dengan jayanya"
+
+msgid "admin.mergeUsers"
+msgstr "Gabungkan Pengguna"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Gabungkan Pengguna"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Pilih pengguna yang akan mempunyai hak penulisan pengguna sebelumnya, "
+"seperti penyuntingan tugasan, dll."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Pilih pengguna (atau beberapa) untuk bergabung ke akaun pengguna lain "
+"(misalnya, Apabila seseorang mempunyai dua akaun pengguna). Akaun yang "
+"dipilih terlebih dahulu akan dihapus dan setiap penyerahan, tugasan, dan "
+"lain-lain akan dikaitkan dengan akaun kedua."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Semua Pengguna Yang Berdaftar"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Adakah anda pasti mahu menggabungkan {$oldAccountCount} akaun yang dipilih "
+"ke dalam akaun dengan nama pengguna \"{$newUsername}\"? Akaun "
+"{$oldAccountCount} yang dipilih tidak akan wujud selepas itu. Tindakan ini "
+"tidak boleh diterbalikkan."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Tiada pengguna yang berdaftar."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Peringatan Tamat Tempoh Langganan"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Pemberitahuan Akses Terbuka"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Peringatan Ulasan"
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
 msgstr "ID bukan integer."
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
 msgstr "ID galley bukan integer."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "ID isu tidak sepadan dengan ID bersekutu."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Pilih jurnal yang dihoskan yang sepatutnya dibenarkan untuk menghantar e-mel "
+"pukal. Apabila ciri ini didayakan, pengurus jurnal akan dapat menghantar e-"
+"mel kepada semua pengguna yang berdaftar dengan jurnal mereka."
+"<br><br>Penyalahgunaan ciri ini untuk menghantar e-mel yang tidak diminta "
+"mungkin melanggar undang-undang anti-spam di sesetengah bidang kuasa dan "
+"boleh mengakibatkan dalam e-mel pelayan anda disekat sebagai spam. Dapatkan "
+"nasihat teknikal sebelum mendayakan ciri ini dan pertimbangkan untuk "
+"berunding dengan pengurus jurnal untuk memastikan ia digunakan dengan "
+"sewajarnya.<br><br>Sekatan lanjut mengenai ciri ini boleh didayakan untuk "
+"setiap jurnal dengan melawati wizard tetapannya dalam senarai <a href= "
+"\"{$hostedContextsUrl}\">Jurnal Dihoskan</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Pengurus jurnal tidak akan dapat menghantar e-mel pukal kepada mana-mana "
+"peranan yang dipilih di bawah. Gunakan tetapan ini untuk mengehadkan "
+"penyalahgunaan ciri pemberitahuan e-mel. Contohnya, mungkin lebih selamat "
+"untuk melumpuhkan e-mel pukal kepada pembaca, pengarang atau kumpulan "
+"pengguna besar lain yang tidak bersetuju menerima e-mel sedemikian."
+"<br><br>Ciri e-mel pukal boleh dilumpuhkan sepenuhnya untuk jurnal ini dalam "
+"<a href=\"{$siteSettingsUrl}\">Pentadbir > Tetapan Tapak</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Ciri e-mel pukal telah dilumpuhkan untuk jurnal ini. Aktifkan ciri ini di <a "
+"href=\"{$siteSettingsUrl}\"> Pentadbir> Tetapan Laman </a>."
 
 msgid "admin.siteManagement.description"
 msgstr ""

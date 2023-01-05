@@ -13,6 +13,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "api.announcements.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.emails.403.disabled"
+msgstr ""
+
+msgid "api.submissions.400.wrongContext"
+msgstr ""
+
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
@@ -40,7 +49,9 @@ msgstr "आपको इस जर्नल को देखने की अन
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
 msgid "api.contexts.403.contextsDidNotMatch"
-msgstr "जब तक आप जर्नल के एपीआई या साइट-वाइड एपीआई के लिए अनुरोध नहीं करते, आप इस जर्नल को देख या संपादित नहीं कर सकते."
+msgstr ""
+"जब तक आप जर्नल के एपीआई या साइट-वाइड एपीआई के लिए अनुरोध नहीं करते, आप इस जर्नल को "
+"देख या संपादित नहीं कर सकते."
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
@@ -63,6 +74,15 @@ msgstr "आपके पास इस जर्नल को हटाने क
 msgid "api.contexts.404.contextNotFound"
 msgstr "आपके द्वारा अनुरोधित जर्नल नहीं मिली."
 
+msgid "api.dois.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) numbers: Different numbers
 msgid "api.emailTemplates.403.notAllowedChangeContext"
@@ -82,3 +102,9 @@ msgstr "आपके द्वारा अनुरोधित प्रका
 # (pofilter) numbers: Different numbers
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "आपके द्वारा अनुरोधित प्रकाशन इस सबमिशन का हिस्सा नहीं है."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

@@ -15,37 +15,39 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.reports.counter.description"
-msgstr "计数器插件提供关于站点活动的记录和<a href=\"http://www.projectcounter.org\">计数</a>报告."
+msgstr ""
+"计数器插件提供关于站点活动的记录和<a href=\"http://www.projectcounter.org\">"
+"计数</a>报告."
 
 msgid "plugins.reports.counter"
 msgstr "计数器统计"
 
-msgid "plugins.reports.counter.allCustomers"
-msgstr "所有顾客"
-
-msgid "plugins.reports.counter.1a.description"
-msgstr "计数器期刊报告1 (R3)：按月份和期刊分类的全文文章请求"
-
-msgid "plugins.reports.counter.1a.name"
-msgstr "计数器报告 JR1 (R3)"
-
-msgid "plugins.reports.counter.error.noXML"
-msgstr "结果无法被格式化为XML。"
-
-msgid "plugins.reports.counter.error.noResults"
-msgstr "找不到该报告的结果。"
-
-msgid "plugins.reports.counter.error.badRequest"
-msgstr "报告请求无效。"
+msgid "plugins.reports.counter.release"
+msgstr "计数器版本"
 
 msgid "plugins.reports.counter.error.badParameters"
 msgstr "报告参数无效。"
 
-msgid "plugins.reports.counter.release"
-msgstr "计数器版本"
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "报告请求无效。"
 
-msgid "plugins.reports.counter.jr1.title"
-msgstr "期刊报告 1"
+msgid "plugins.reports.counter.error.noResults"
+msgstr "找不到该报告的结果。"
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "结果无法被格式化为XML。"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "计数器报告 JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "计数器期刊报告1 (R3)：按月份和期刊分类的全文文章请求"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "所有顾客"
 
 msgid "plugins.reports.counter.ar1.title"
 msgstr "文章报告 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "期刊报告 1"

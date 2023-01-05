@@ -12,8 +12,29 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "plugins.generic.webfeed.displayName"
+msgstr ""
+
+msgid "plugins.generic.webfeed.description"
+msgstr ""
+
 msgid "plugins.generic.webfeed.settings"
 msgstr "設定"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr ""
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr ""
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr ""
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr ""
 
 msgid "plugins.generic.webfeed.settings.recentArticles"
 msgstr "顯示項目數量"

@@ -24,7 +24,13 @@ msgid "submission.title"
 msgstr "Artikkelin otsikko"
 
 msgid "submission.title.tip"
-msgstr "Käsikirjoitustiedosto on yleensä muodoltaan \"kuva\", \"teksti\" tai muu multimediamuoto kuten \"ohjelmisto\" tai \"interaktiivinen\".  Valitse käsikirjoituksesi kannalta oleellisin muoto.  Esimerkkejä löytyy osoitteesta <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Käsikirjoitustiedosto on yleensä muodoltaan \"kuva\", \"teksti\" tai muu "
+"multimediamuoto kuten \"ohjelmisto\" tai \"interaktiivinen\".  Valitse "
+"käsikirjoituksesi kannalta oleellisin muoto.  Esimerkkejä löytyy osoitteesta "
+"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Aloita uusi käsikirjoituksen lähetys julkaisuun"
@@ -35,11 +41,20 @@ msgstr "Uusi käsikirjoitus"
 msgid "grid.action.workflow"
 msgstr "Käsikirjoituksen työnkulku"
 
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstraktin tulee olla korkeintaan {$wordCount} sanaa."
+
+msgid "submission.submit.noContext"
+msgstr "Käsikirjoitusta vastaavaa julkaisua ei löytynyt."
+
 msgid "submission.issueEntry"
 msgstr "Metatiedot"
 
 msgid "submission.submit.whatNext.description"
-msgstr "Julkaisulle on ilmoitettu käsikirjoituksestasi ja sinulle on lähetetty sähköpostitse vahvistus säilytettäväksi. Toimittajan arvioitua käsikirjoituksen sinuun otetaan yhteyttä."
+msgstr ""
+"Julkaisulle on ilmoitettu käsikirjoituksestasi ja sinulle on lähetetty "
+"sähköpostitse vahvistus säilytettäväksi. Toimittajan arvioitua "
+"käsikirjoituksen sinuun otetaan yhteyttä."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Julkaistava tiedosto näkyy numeron tiedoissa"
@@ -48,10 +63,13 @@ msgid "grid.action.issueEntry"
 msgstr "Katsele tämän käsikirjoituksen metatietoja"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" on nyt saatavilla."
+msgstr ""
+"Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" on nyt saatavilla."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" ei ole enää saatavilla."
+msgstr ""
+"Artikkelin julkaistava tiedosto \"{$galleyFormatName}\" ei ole enää "
+"saatavilla."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Käsikirjoituksen julkiset tunnisteet päivitetty."
@@ -60,7 +78,8 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Muodon hyväksyntä"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Tätä julkaistavaa tiedostoa <em>ei enää näytetä</em> lukijoille.</p>"
+msgstr ""
+"<p>Tätä julkaistavaa tiedostoa <em>ei enää näytetä</em> lukijoille.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p>Tämä julkaistava tiedosto <em>näytetään</em> lukijoille.</p>"
@@ -72,28 +91,33 @@ msgid "submission.galleyFiles"
 msgstr "Julkaistavat tiedostot"
 
 msgid "submission.proofReadingDescription"
-msgstr "Taittaja lataa tuotantovalmiit tiedostot, jotka on tässä kohtaa valmisteltu julkaisemista varten. Käytä <em>Valitse tarkastaja</em>-painiketta valitaksesi kirjoittajia ja muita henkilöitä oikolukemaan julkaistavat tiedostot, jotka on korjattu ja ladattu hyväksyttäväksi ennen julkaisemista."
+msgstr ""
+"Taittaja lataa tuotantovalmiit tiedostot, jotka on tässä kohtaa valmisteltu "
+"julkaisemista varten. Käytä <em>Valitse tarkastaja</em>-painiketta "
+"valitaksesi kirjoittajia ja muita henkilöitä oikolukemaan julkaistavat "
+"tiedostot, jotka on korjattu ja ladattu hyväksyttäväksi ennen julkaisemista."
 
 msgid "grid.action.approveProof"
-msgstr "Hyväksy tämä korjausvedos sisällytettäväksi julkaistaviin tiedostoihin."
+msgstr ""
+"Hyväksy tämä korjausvedos sisällytettäväksi julkaistaviin tiedostoihin."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Tämä korjausvedos on hyväksytty sisällytettäviksi julkaistaviin tiedostoihin."
+msgstr ""
+"Tämä korjausvedos on hyväksytty sisällytettäviksi julkaistaviin tiedostoihin."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Otsikko ja abstrakti"
 
 msgid "submission.submit.upload.description"
-msgstr "Lataa tähän käsikirjoitukseen liittyvät tiedostot, mukaan lukien itse artikkeli, multimediatiedostot, tietoaineistot, kuvamateriaali jne."
+msgstr ""
+"Lataa tähän käsikirjoitukseen liittyvät tiedostot, mukaan lukien itse "
+"artikkeli, multimediatiedostot, tietoaineistot, kuvamateriaali jne."
 
 msgid "submission.pageProofs"
 msgstr "Oikoluku"
 
 msgid "workflow.review.externalReview"
 msgstr "Arviointi"
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Lähetä arvioitavaksi"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Käsikirjoituksen numeron metatiedot päivitettiin."
@@ -121,46 +145,40 @@ msgid "submission.citationFormat.notFound"
 msgstr "Pyydettyä viittausmuotoa ei voitu noutaa."
 
 msgid "submission.metadataDescription"
-msgstr "Nämä määritykset perustuvat Dublin Core -metatietosanastostandardiin. Se on kansainvälinen standardi, jolla kuvataan julkaisun sisältöä."
+msgstr ""
+"Nämä määritykset perustuvat Dublin Core -metatietosanastostandardiin. Se on "
+"kansainvälinen standardi, jolla kuvataan julkaisun sisältöä."
 
 msgid "section.any"
 msgstr "Kaikki osastot"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Abstraktin tulee olla korkeintaan {$wordCount} sanaa."
+msgid "submission.sectionOptions"
+msgstr "Osaston valinnat"
 
-msgid "publication.scheduledIn"
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} nimikettä"
+
+msgid "catalog.category.heading"
+msgstr "Kaikki nimikkeet"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Ajoitettu julkaistavaksi numerossa <a href=\"{$issueUrl}\">{$issueName}</a>."
+"Julkaistavia tiedostoja ei voi muokata, koska tämä käsikirjoituksen versio "
+"on jo julkaistu."
 
-msgid "publication.publishedIn"
-msgstr "Julkaistu numerossa <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "galley.publicationNotFound"
+msgstr "Julkaistavaa tiedostoa vastaavaa julkaistavaa versiota ei löytynyt."
 
-msgid "publication.required.issue"
-msgstr "Artikkeli pitää lisätä numeroon ennen kuin sen voi julkaista."
+msgid "publication.assignToissue"
+msgstr "Lisää numeroon"
 
-msgid "publication.publish.confirmation.backIssue"
+msgid "publication.assignedToIssue"
 msgstr ""
-"Kaikki julkaisuvaatimukset täyttyvät. Tämä julkaistaan välittömästi "
-"numerossa {$issue}. Oletko varma, että haluat julkaista tämän?"
+"Osoitettu numeroon <a href=\"{$issueUrl}\">{$issueName}</a>, mutta ei "
+"ajoitettu julkaistavaksi."
 
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Kaikki julkaisuvaatimukset täyttyvät. Tämä julkaistaan, kun numero {$issue} "
-"julkaistaan. Oletko varma, että haluat ajoittaa tämän julkaistavaksi?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"Kaikki julkaisuvaatimukset täyttyvät. Haluatko varmasti julkaista tämän?"
-
-msgid "publication.issue.success"
-msgstr "Julkaistavan version numeron tiedot on päivitetty."
-
-msgid "publication.invalidIssue"
-msgstr "Julkaistun version numeroa ei löytynyt."
-
-msgid "publication.invalidSection"
-msgstr "Julkaistun version osastoa ei löytynyt."
+msgid "publication.changeIssue"
+msgstr "Vaihda numero"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -168,25 +186,28 @@ msgstr ""
 "anna julkaisuajankohtaa, ellei sinun pidä tarkoituksella antaa artikkelille "
 "varhaisempaa julkaisupäivää."
 
-msgid "galley.publicationNotFound"
-msgstr "Julkaistavaa tiedostoa vastaavaa julkaistavaa versiota ei löytynyt."
+msgid "publication.invalidSection"
+msgstr "Julkaistun version osastoa ei löytynyt."
 
-msgid "galley.editPublishedDisabled"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
+
+msgid "publication.invalidIssue"
+msgstr "Julkaistun version numeroa ei löytynyt."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"Julkaistavia tiedostoja ei voi muokata, koska tämä käsikirjoituksen versio "
-"on jo julkaistu."
+"Kaikki julkaisuvaatimukset täyttyvät. Haluatko varmasti julkaista tämän?"
 
-msgid "catalog.category.heading"
-msgstr "Kaikki nimikkeet"
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Kaikki julkaisuvaatimukset täyttyvät. Tämä julkaistaan, kun numero {$issue} "
+"julkaistaan. Oletko varma, että haluat ajoittaa tämän julkaistavaksi?"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} nimikettä"
-
-msgid "submission.sectionOptions"
-msgstr "Osaston valinnat"
-
-msgid "submission.submit.noContext"
-msgstr "Käsikirjoitusta vastaavaa julkaisua ei löytynyt."
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Kaikki julkaisuvaatimukset täyttyvät. Tämä julkaistaan välittömästi "
+"numerossa {$issue}. Oletko varma, että haluat julkaista tämän?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -194,14 +215,21 @@ msgstr ""
 "julkaisupäiväksi on asetettu {$datePublished}. Oletko varma, että haluat "
 "julkaista tämän?"
 
-msgid "publication.selectIssue"
-msgstr "Valitse numero julkaisun ajoittamiseksi"
+msgid "publication.required.issue"
+msgstr "Artikkeli pitää lisätä numeroon ennen kuin sen voi julkaista."
 
-msgid "publication.assignToissue"
-msgstr "Lisää numeroon"
+msgid "publication.publishedIn"
+msgstr "Julkaistu numerossa <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Ajoitettu julkaistavaksi numerossa <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
 msgstr "Tätä ei ole ajoitettu julkaistavaksi missään numerossa."
+
+msgid "publication.selectIssue"
+msgstr "Valitse numero julkaisun ajoittamiseksi"
 
 msgid "submission.publication"
 msgstr "Julkaistu versio"
@@ -292,16 +320,62 @@ msgstr "Version {$version} tiedot"
 msgid "submission.queries.production"
 msgstr "Tuotantoon liittyvät keskustelut"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inactive)"
-
-msgid "publication.changeIssue"
-msgstr "Vaihda numero"
-
-msgid "publication.assignedToIssue"
+msgid "editor.submission.decision.backToReview"
 msgstr ""
-"Osoitettu numeroon <a href=\"{$issueUrl}\">{$issueName}</a>, mutta ei "
-"ajoitettu julkaistavaksi."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Vähintään yksi kirjoittaja vaaditaan."
@@ -317,3 +391,9 @@ msgstr "Abstrakti on liian pitkä. Tarkista pituus ja yritä uudelleen."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Valitse tekijän rooli."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Lähetä arvioitavaksi"
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Julkaistavan version numeron tiedot on päivitetty."

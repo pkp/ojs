@@ -12,14 +12,14 @@ msgstr "ご希望のお知らせは本誌には掲載されておりません。
 msgid "api.emails.403.disabled"
 msgstr "ご要望のあったお知らせは本誌には掲載されていません。"
 
+msgid "api.submissions.400.wrongContext"
+msgstr ""
+
 msgid "api.submissions.403.cantChangeContext"
 msgstr "投稿したジャーナルを変更することはできません。"
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "未発表の号の閲覧権限はありません。"
-
-msgid "api.submissions.403.contextRequired"
-msgstr "投稿を行う、または編集するには、ジャーナルのAPIエンドポイントにリクエストする必要があります。"
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "有効化されたジャーナルしか表示できません。"
@@ -28,7 +28,9 @@ msgid "api.contexts.403.notAllowed"
 msgstr "このジャーナルを閲覧する権限がありません。"
 
 msgid "api.contexts.403.contextsDidNotMatch"
-msgstr "ジャーナルのAPIまたはサイト全体のAPIにリクエストをしない限り、このジャーナルを表示または編集することはできません。"
+msgstr ""
+"ジャーナルのAPIまたはサイト全体のAPIにリクエストをしない限り、このジャーナル"
+"を表示または編集することはできません。"
 
 msgid "api.contexts.403.requiresContext"
 msgstr "サイト全体のAPIからこのジャーナルを編集することはできません。"
@@ -41,6 +43,15 @@ msgstr "このジャーナルを削除する権限がありません。"
 
 msgid "api.contexts.404.contextNotFound"
 msgstr "ご希望のジャーナルが見つかりませんでした。"
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr ""
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "このメールテンプレートを別のジャーナルに移す権限はありません。"
@@ -56,3 +67,11 @@ msgstr "ご要望のあった出版物は、この投稿の一部ではありま
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "このファイルステージのファイルをゲラ刷りと関連付けることはできません。"
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""
+
+#~ msgid "api.submissions.403.contextRequired"
+#~ msgstr ""
+#~ "投稿を行う、または編集するには、ジャーナルのAPIエンドポイントにリクエスト"
+#~ "する必要があります。"

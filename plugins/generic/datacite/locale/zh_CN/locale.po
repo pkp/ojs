@@ -21,12 +21,21 @@ msgstr "DataCite 导出/注册插件"
 msgid "plugins.importexport.datacite.description"
 msgstr "导出或者注册DataCite格式的期次，文章，初次排版和附加文件元数据。"
 
+msgid "plugins.importexport.datacite.settings.description"
+msgstr "首次使用之前，请配置DataCite导出插件。"
+
+msgid "plugins.importexport.datacite.settings.label"
+msgstr ""
+
+msgid "plugins.importexport.datacite.registrationAgency.name"
+msgstr ""
+
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\t如果您希望在Datacite注册DOI，请联系代管人\n"
-"\t\t<a href=\"https://datacite.org/contact.html\" target=\"_blank\">"
-"DataCite\n"
+"\t\t<a href=\"https://datacite.org/contact.html\" target=\"_blank"
+"\">DataCite\n"
 "\t\t主页</a>，他会建议你去加入当地 DataCite 会员。一旦您成为其中的会员，\n"
 "\t\t您将获得永久的 DOI 和注册相关元数据的服务。如果您没有自己的用户名\n"
 "\t\t和密码，您仍可以导出 DataCiteXML 格式。但是在 OJS 中 DataCite 无法注\n"
@@ -39,33 +48,43 @@ msgstr "用户名（符号）"
 msgid "plugins.importexport.datacite.settings.form.usernameRequired"
 msgstr "请输入 DataCite 分配的用户名（符号）。用户名不能包含冒号。"
 
-msgid "plugins.importexport.datacite.cliUsage"
+msgid ""
+"plugins.importexport.datacite.settings.form.automaticRegistration.description"
 msgstr ""
-"用法：\n"
-"{$scriptName} {$pluginName} 导出 [outputFileName] [journal_path] "
-"{issues|articles|galleys} objectId1 [objectId2] ...\n"
-"{$scriptName} {$pluginName} 注册 [journal_path] {issues|articles|galleys} "
-"objectId1 [objectId2] ...\n"
-
-msgid "plugins.importexport.datacite.senderTask.name"
-msgstr "DataCite 自动注册任务"
+"OJS 将自动将 DOI 存入 DataCite。 请注意，这可能需要在发布后用一小段时间来处理"
+"（这可能取决于您的 cronjob 配置）。 您可以检查所有未注册的DOI。"
 
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr "使用 DataCite 测试前缀进行DOI注册。 请不要忘记在生产环境中删除此选项。"
 
-msgid "plugins.importexport.datacite.settings.form.automaticRegistration.description"
-msgstr ""
-"OJS 将自动将 DOI 存入 DataCite。 请注意，这可能需要在发布后用一小段时间来处理（这可能取决于您的 cronjob 配置）。 "
-"您可以检查所有未注册的DOI。"
-
-msgid "plugins.importexport.datacite.settings.description"
-msgstr "首次使用之前，请配置DataCite导出插件。"
-
-msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
-msgstr "测试 DOI 前缀"
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "测试用户名"
 
 msgid "plugins.importexport.datacite.settings.form.testPassword"
 msgstr "测试密码"
 
-msgid "plugins.importexport.datacite.settings.form.testUsername"
-msgstr "测试用户名"
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "测试 DOI 前缀"
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite 自动注册任务"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"用法：\n"
+"{$scriptName} {$pluginName} 导出 [outputFileName] [journal_path] {issues|"
+"articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} 注册 [journal_path] {issues|articles|galleys} "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.generic.datacite.displayName"
+msgstr ""
+
+msgid "plugins.generic.datacite.description"
+msgstr ""
+
+msgid "plugins.generic.datacite.registrationAgency.name"
+msgstr ""
+
+msgid "plugins.generic.datacite.deposit.unsuccessful"
+msgstr ""

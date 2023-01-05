@@ -23,32 +23,35 @@ msgstr "将期刊导出到DAOJ，并且将期刊信息电邮给DAOJ的成员。"
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "联系DOAJ列入"
 
-msgid "plugins.importexport.doaj.cliUsage"
+msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
-"用法:\n"
-"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
-""
-
-msgid "plugins.importexport.doaj.register.error.mdsError"
-msgstr "存入失败！ DOAJ API 返回错误：'{$param}'。"
-
-msgid "plugins.importexport.doaj.senderTask.name"
-msgstr "DOAJ 自动注册任务"
-
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr "使用 DOAJ 测试 API（测试环境）进行注册。 请不要忘记在生产环境中删除此选项。"
-
-msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
-msgstr ""
-"OJS 将自动将文章存入 DOAJ。 请注意，发布后可能需要很短的时间来处理（例如，取决于您的 cronjob 配置）。 您可以检查所有未注册的文章。"
-
-msgid "plugins.importexport.doaj.settings.form.apiKey.description"
-msgstr "您可以在 DOAJ 用户页面上找到 API 密钥。"
+"如果您想从 OJS 中注册文章，请输入您的 DOAJ API 密钥。 否则，您仍然可以导出为 "
+"DOAJ XML 格式，但是您无法从 OJS 中向 DOAJ 注册您的文章。"
 
 msgid "plugins.importexport.doaj.settings.form.apiKey"
 msgstr "DOAJ API 密钥"
 
-msgid "plugins.importexport.doaj.registrationIntro"
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "您可以在 DOAJ 用户页面上找到 API 密钥。"
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr ""
-"如果您想从 OJS 中注册文章，请输入您的 DOAJ API 密钥。 否则，您仍然可以导出为 DOAJ XML 格式，但是您无法从 OJS 中向 "
-"DOAJ 注册您的文章。"
+"OJS 将自动将文章存入 DOAJ。 请注意，发布后可能需要很短的时间来处理（例如，取"
+"决于您的 cronjob 配置）。 您可以检查所有未注册的文章。"
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"使用 DOAJ 测试 API（测试环境）进行注册。 请不要忘记在生产环境中删除此选项。"
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ 自动注册任务"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "存入失败！ DOAJ API 返回错误：'{$param}'。"
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"用法:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"

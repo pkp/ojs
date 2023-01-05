@@ -7,8 +7,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
 "PO-Revision-Date: 2022-09-26 13:01+0000\n"
 "Last-Translator: rl <biuro@fimagis.pl>\n"
-"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl_PL/>"
-"\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl_PL/"
+">\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +27,11 @@ msgid "admin.settings.redirectInstructions"
 msgstr ""
 "Zamiast strony z listą obsługiwanych czasopism wyświetl stronę tego "
 "czasopisma (przykład: obsługiwane jest tylko jedno czasopismo)."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Czy na pewno wyłączyć ten język? Ta decyzja może mieć wpływ na już utworzone "
+"czasopisma, jeśli z niego korzystają."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr ""
@@ -65,22 +70,46 @@ msgstr "Konfiguracja systemu OJS"
 msgid "admin.systemConfigurationDescription"
 msgstr "Konfiguracyjne ustawienia systemu OJS z pliku <tt>config.inc.php</tt>."
 
-msgid "admin.journals.journalSettings"
-msgstr "Ustawienia czasopisma"
-
-msgid "admin.journals.noneCreated"
-msgstr "Nie utworzono żadnych czasopism."
-
 msgid "admin.journals.createInstructions"
 msgstr ""
 "Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po "
 "utworzeniu czasopisma włączy się kreator ustawień, by wprowadzić wstępne "
 "ustawienia czasopisma."
 
+msgid "admin.journals.journalSettings"
+msgstr "Ustawienia czasopisma"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nie utworzono żadnych czasopism."
+
+msgid "admin.contexts.create"
+msgstr "Utwórz czasopismo"
+
 msgid "admin.journals.urlWillBe"
 msgstr ""
 "Krótkie, pojedyńcze słowo lub akronim identyfikujące czasopismo. Adres "
 "czasopisma będzie miał postać {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Tytuł jest wymagany."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Wymagane jest wskazanie położenia w systemie plików."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Położenie w systemie plików (ścieżka) może składać się z liter, cyfr, "
+"podkreśleń (_) i myślników (-). Musi zaczynać i kończyć się literą lub cyfrą."
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+"Wybrane położenie w systemie plików (ścieżka) jest już używane przez inne "
+"czasopismo."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Podstawowa lokalizacja musi być jedną z lokalizacji obsługiwanych przez "
+"czasopismo."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Umieść to czasopismo na stronie listy obsługiwanych czasopism"
@@ -139,11 +168,6 @@ msgstr ""
 "scalane ({$oldAccountCount}) zostaną nieodwracalnie usunięte a zostanie "
 "tylko scalające konto użytkownika ({$newUsername})."
 
-msgid "admin.languages.confirmDisable"
-msgstr ""
-"Czy na pewno wyłączyć ten język? Ta decyzja może mieć wpływ na już utworzone "
-"czasopisma, jeśli z niego korzystają."
-
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Nie wybrano scalanych kont użytkowników."
 
@@ -156,58 +180,15 @@ msgstr "Powiadomienie o otwartym dostępie"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Przypomnienie o recenzji"
 
-msgid "admin.contexts.confirmDelete"
-msgstr "Czy na pewno usunąć czasopismo wraz z całą jego zawartością?"
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "ID wydania nie jest daną integer."
 
-msgid "admin.contexts.create"
-msgstr "Utwórz czasopismo"
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "ID pliku wydania nie jest daną Integer."
 
-msgid "admin.contexts.form.titleRequired"
-msgstr "Tytuł jest wymagany."
-
-msgid "admin.contexts.form.pathRequired"
-msgstr "Wymagane jest wskazanie położenia w systemie plików."
-
-msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr ""
-"Położenie w systemie plików (ścieżka) może składać się z liter, cyfr, "
-"podkreśleń (_) i myślników (-). Musi zaczynać i kończyć się literą lub cyfrą."
-
-msgid "admin.contexts.form.pathExists"
-msgstr ""
-"Wybrane położenie w systemie plików (ścieżka) jest już używane przez inne "
-"czasopismo."
-
-msgid "admin.contexts.form.edit.success"
-msgstr "Pomyślnie  edytowano {$name}."
-
-msgid "admin.contexts.form.create.success"
-msgstr "{$name} utworzono pomyślnie."
-
-msgid "admin.settings.info.success"
-msgstr "Informacje o stronie zostały pomyślnie zaktualizowane."
-
-msgid "admin.settings.config.success"
-msgstr "Ustawienia konfiguracji strony zostały pomyślnie zaktualizowane."
-
-msgid "admin.settings.appearance.success"
-msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."
-
-msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
-msgstr ""
-"Funkcja masowej poczty e-mail została wyłączona dla tego czasopisma. Włącz "
-"tę funkcję w <a href=\"{$siteSettingsUrl}\">Administrator > Ustawienia "
-"strony internetowej</a>."
-
-msgid "admin.settings.disableBulkEmailRoles.description"
-msgstr ""
-"Administrator czasopisma nie będzie mógł masowo wysyłać wiadomości e-mail do "
-"ról niżej wskazanych. Użyj tego ustawienia, by zmniejszyć ryzyko "
-"interpretowania przez innych funkcjonalności masowego wysyłania jako źródła "
-"niechcianej poczty. Najlepiej jak odbiorcami takiej metody wysyłania będą "
-"ci, którzy są jej świadomi i się na to zgodzili.<br><br>Masowe wysyłanie w "
-"ramach czasopisma może być całkowicie wyłączone w <a href=\""
-"{$siteSettingsUrl}\">Administracja > Ustawienia systemu</a>."
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Issue ID nie pasuje do Assoc ID."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -223,31 +204,25 @@ msgstr ""
 "niezależnie dla każdego <a href=\"{$hostedContextsUrl}\">obsługiwanego "
 "czasopisma</a>."
 
-msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgid "admin.settings.disableBulkEmailRoles.description"
 msgstr ""
-"Podstawowa lokalizacja musi być jedną z lokalizacji obsługiwanych przez "
-"czasopismo."
+"Administrator czasopisma nie będzie mógł masowo wysyłać wiadomości e-mail do "
+"ról niżej wskazanych. Użyj tego ustawienia, by zmniejszyć ryzyko "
+"interpretowania przez innych funkcjonalności masowego wysyłania jako źródła "
+"niechcianej poczty. Najlepiej jak odbiorcami takiej metody wysyłania będą "
+"ci, którzy są jej świadomi i się na to zgodzili.<br><br>Masowe wysyłanie w "
+"ramach czasopisma może być całkowicie wyłączone w <a href="
+"\"{$siteSettingsUrl}\">Administracja > Ustawienia systemu</a>."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
-msgstr "ID wydania nie jest daną integer."
-
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
-msgstr "ID pliku wydania nie jest daną Integer."
-
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "Issue ID nie pasuje do Assoc ID."
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Funkcja masowej poczty e-mail została wyłączona dla tego czasopisma. Włącz "
+"tę funkcję w <a href=\"{$siteSettingsUrl}\">Administrator > Ustawienia "
+"strony internetowej</a>."
 
 msgid "admin.siteManagement.description"
 msgstr ""
 "Dodaj, edytuj lub usuń tytuły czasopism, zarządzaj ustawieniami instalacji."
-
-msgid "admin.settings.statistics.institutions.description"
-msgstr ""
-"Włącz statystyki instytucjonalne, jeśli chcesz, aby czasopisma w tej "
-"witrynie mogły zbierać statystyki użytkowania według instytucji. Aby "
-"korzystać z tej funkcji, czasopisma będą musiały dodać instytucję i jej "
-"zakresy adresów IP. Włączenie statystyk instytucjonalnych może znacznie "
-"zwiększyć rozmiar bazy danych."
 
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
@@ -261,6 +236,14 @@ msgstr ""
 "czasopismo może wybrać kraj i region lub tylko kraj. Czasopismo nie będzie w "
 "stanie śledzić kraju, regionu i miasta."
 
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Włącz statystyki instytucjonalne, jeśli chcesz, aby czasopisma w tej "
+"witrynie mogły zbierać statystyki użytkowania według instytucji. Aby "
+"korzystać z tej funkcji, czasopisma będą musiały dodać instytucję i jej "
+"zakresy adresów IP. Włączenie statystyk instytucjonalnych może znacznie "
+"zwiększyć rozmiar bazy danych."
+
 msgid "admin.settings.statistics.sushi.public.description"
 msgstr ""
 "Określa, czy punkty końcowe API SUSHI mają być publicznie dostępne dla "
@@ -268,3 +251,21 @@ msgstr ""
 "każdy dziennik może zastąpić to ustawienie, aby ich statystyki stały się "
 "prywatne. Jeśli jednak wyłączysz publiczny interfejs API, czasopisma nie "
 "będą mogły upublicznić własnego interfejsu API."
+
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr "Czy na pewno usunąć czasopismo wraz z całą jego zawartością?"
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "Pomyślnie  edytowano {$name}."
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} utworzono pomyślnie."
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Informacje o stronie zostały pomyślnie zaktualizowane."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Ustawienia konfiguracji strony zostały pomyślnie zaktualizowane."
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."

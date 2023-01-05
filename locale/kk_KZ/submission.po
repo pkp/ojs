@@ -14,110 +14,82 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "publication.publish.confirmation"
+msgid "submission.submit.userGroup"
+msgstr "Менің топтағы рөлімді ескере отырып жіберу."
+
+msgid "submission.upload.selectComponent"
+msgstr "Мақала компонентін таңдаңыз"
+
+msgid "submission.title"
+msgstr "Мақаланың атауы"
+
+msgid "submission.title.tip"
 msgstr ""
-"Мақаланы жариялауға қойылатын барлық талаптар орындалды. Бұл мақаланы "
-"жариялау керек пе?"
+"Материал сурет, мәтін, бағдарламалық жасақтама немесе өзге де мультимедиялық "
+"типте болуы мүмкін. Сәйкес келетін материалдың типін таңдауыңызды сұраймыз. "
+"Ұқсас мысалдарды келесі сілтемеге өтіп қарай аласыз <a target=\"_blank\" "
+"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type</a>"
 
-msgid "publication.invalidIssue"
-msgstr "Бұл мақаланың қай журнал басылымында жарияланғанын табу мүмкін емес."
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Жаңа материалды жіберуді бастаңыз"
 
-msgid "publication.inactiveSection"
-msgstr "\"{$section} \" (мақаланы редакцияға жіберу мүмкіндігі сөндірулі)"
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Жаңа материал"
 
-msgid "publication.invalidSection"
-msgstr "Бұл мақаланың жарияланған журнал бөлімін табу мүмкін емес."
+msgid "grid.action.workflow"
+msgstr "Жіберу процессі"
 
-msgid "publication.datePublished.description"
+msgid "submission.abstract.wordCount.description"
+msgstr "Аңдатпаның сөз саны {$wordCount} аспауы тиіс."
+
+msgid "submission.submit.noContext"
+msgstr "Бұл материалдың қай журналға тиесілі екенін табу мүмкін емес."
+
+msgid "submission.issueEntry"
+msgstr "Метадеректер"
+
+msgid "submission.submit.whatNext.description"
 msgstr ""
-"Журнал басылымы жарияланған кезде жариялау күні автоматты түрде орнатылады. "
-"Мақала бұрын жарияланған жағдайларды қоспағанда, жариялау күнін өз "
-"бетіңізбен енгізбеңіз."
+"Журнал редакциясы сіз жіберген материал туралы хабарланды, жазбаны растау "
+"хабарламасы сіздің электрондық поштаңызға жіберілді. Редактор сіздің "
+"материалыңызды қабылдағаннан кейін сізге кейін хабарласады."
 
-msgid "publication.changeIssue"
-msgstr "Журнал басылымын өзгерту"
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Журнал басылымында жаңа электрондық жазба енгізілді"
 
-msgid "publication.assignedToIssue"
+msgid "grid.action.issueEntry"
+msgstr "Бұл материал үшін метадеректерді көрсету"
+
+msgid "submission.event.articleGalleyMadeAvailable"
 msgstr ""
-"Бұл мақала <a href=\"{$issueUrl}\">«{$issueName}»</a> журнал басылымына "
-"тағайындалды, бірақ мақаланы жариялау әлі жоспарланған жоқ."
+"\"{$galleyFormatName}\" электрондық жазбасын барлық журнал оқырмандары көре "
+"алады."
 
-msgid "publication.assignToissue"
-msgstr "Журнал басылымына жоспарлау"
-
-msgid "galley.publicationNotFound"
-msgstr "Электрондық жазбаның мақаласы табылған жоқ."
-
-msgid "galley.editPublishedDisabled"
+msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr ""
-"Бұл мақаланың электрондық жазбасын өңдеуге болмайды, себебі жарияланған "
-"мақаланы өзгертуге болмайды."
+"\"{$galleyFormatName}\" электрондық жазбасын журнал оқырмандары көре алмайды."
 
-msgid "catalog.category.heading"
-msgstr "Барлық категориялар"
+msgid "submission.event.publicIdentifiers"
+msgstr "Жіберілген материалдың ашық идентификаторлары жаңартылды."
 
-msgid "catalog.browseTitles"
-msgstr "Атаулар саны: {$numTitles}"
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Пішімді растау"
 
-msgid "submission.sectionOptions"
-msgstr "Бөлім параметрлері"
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Бұл электрондық жазбаны оқырмандар <em>көре алмайды</em>.</p>"
 
-msgid "section.any"
-msgstr "Кез-келген бөлім"
-
-msgid "submission.metadataDescription"
+msgid "grid.issueEntry.availableGalley.message"
 msgstr ""
-"Бұл ерекшеліктер Dublin Core метадеректер жиынтығына негізделген. Dublin "
-"Core - журнал мазмұнын сипаттау үшін қолданылатын халықаралық стандарт."
+"<p>Бұл электрондық жазбаны оқырмандарға <em>көрінетіндей етуге</em> болады.</"
+"p>"
 
-msgid "submission.citationFormat.notFound"
-msgstr ""
-"Библиографиялық сілтемелерді рәсімдеудің сұралған форматын алу мүмкін емес."
+msgid "grid.action.availableArticleGalley"
+msgstr "Электрондық жазбаны қол жетімді ету"
 
-msgid "submission.submit.contributorRole"
-msgstr "Жіберушінің рөлі"
-
-msgid "submission.submit.privacyStatement"
-msgstr "Құпиялылық туралы мәлімдеме"
-
-#, fuzzy
-msgid "submission.submit.submissionChecklist"
-msgstr "Мақаланы редакцияға жіберудің бақылау тізімі"
-
-msgid "submission.incomplete"
-msgstr "Мақұлдауды күтуде"
-
-msgid "submission.complete"
-msgstr "Мақұлданды"
-
-msgid "submission.upload.fileContents"
-msgstr "Мақала компоненті"
-
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Материалға арналған метадеректер жаңартылды."
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Рецензиға жіберу"
-
-msgid "workflow.review.externalReview"
-msgstr "Рецензиялау"
-
-msgid "submission.pageProofs"
-msgstr "Корректура"
-
-msgid "submission.submit.upload.description"
-msgstr ""
-"Осы материалға қатысты файлдарды жүктеңіз: мақала, медиа, деректер жиынтығы, "
-"өнер туындылары және т.б."
-
-msgid "submission.submit.titleAndSummary"
-msgstr "Атауы және аңдатпа"
-
-msgid "grid.action.pageProofApproved"
-msgstr "Бұл жоба электрондық жазбаға қосу үшін мақұлданды."
-
-msgid "grid.action.approveProof"
-msgstr "Бұл жобаны электрондық жазбаға қосу үшін мақұлдаңыз."
+msgid "submission.galleyFiles"
+msgstr "Электрондық жазба файлдары"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -126,95 +98,117 @@ msgstr ""
 "түзетілген файлдарды жүктеу үшін <em>Аудитор тағайындау </em> мүмуіншілігін "
 "пайдаланыңыз."
 
-msgid "submission.galleyFiles"
-msgstr "Электрондық жазба файлдары"
+msgid "grid.action.approveProof"
+msgstr "Бұл жобаны электрондық жазбаға қосу үшін мақұлдаңыз."
 
-msgid "grid.action.availableArticleGalley"
-msgstr "Электрондық жазбаны қол жетімді ету"
+msgid "grid.action.pageProofApproved"
+msgstr "Бұл жоба электрондық жазбаға қосу үшін мақұлданды."
 
-msgid "grid.issueEntry.availableGalley.message"
+msgid "submission.submit.titleAndSummary"
+msgstr "Атауы және аңдатпа"
+
+msgid "submission.submit.upload.description"
 msgstr ""
-"<p>Бұл электрондық жазбаны оқырмандарға <em>көрінетіндей етуге</em> "
-"болады.</p>"
+"Осы материалға қатысты файлдарды жүктеңіз: мақала, медиа, деректер жиынтығы, "
+"өнер туындылары және т.б."
 
-msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Бұл электрондық жазбаны оқырмандар <em>көре алмайды</em>.</p>"
+msgid "submission.pageProofs"
+msgstr "Корректура"
 
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Пішімді растау"
+msgid "workflow.review.externalReview"
+msgstr "Рецензиялау"
 
-msgid "submission.event.publicIdentifiers"
-msgstr "Жіберілген материалдың ашық идентификаторлары жаңартылды."
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Материалға арналған метадеректер жаңартылды."
 
-msgid "submission.event.articleGalleyMadeUnavailable"
+msgid "submission.upload.fileContents"
+msgstr "Мақала компоненті"
+
+msgid "submission.complete"
+msgstr "Мақұлданды"
+
+msgid "submission.incomplete"
+msgstr "Мақұлдауды күтуде"
+
+#, fuzzy
+msgid "submission.submit.submissionChecklist"
+msgstr "Мақаланы редакцияға жіберудің бақылау тізімі"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Құпиялылық туралы мәлімдеме"
+
+msgid "submission.submit.contributorRole"
+msgstr "Жіберушінің рөлі"
+
+msgid "submission.citationFormat.notFound"
 msgstr ""
-"\"{$galleyFormatName}\" электрондық жазбасын журнал оқырмандары көре алмайды."
+"Библиографиялық сілтемелерді рәсімдеудің сұралған форматын алу мүмкін емес."
 
-msgid "submission.event.articleGalleyMadeAvailable"
+msgid "submission.metadataDescription"
 msgstr ""
-"\"{$galleyFormatName}\" электрондық жазбасын барлық журнал оқырмандары көре "
-"алады."
+"Бұл ерекшеліктер Dublin Core метадеректер жиынтығына негізделген. Dublin "
+"Core - журнал мазмұнын сипаттау үшін қолданылатын халықаралық стандарт."
 
-msgid "grid.action.issueEntry"
-msgstr "Бұл материал үшін метадеректерді көрсету"
+msgid "section.any"
+msgstr "Кез-келген бөлім"
 
-msgid "grid.action.galleyInIssueEntry"
-msgstr "Журнал басылымында жаңа электрондық жазба енгізілді"
+msgid "submission.sectionOptions"
+msgstr "Бөлім параметрлері"
 
-msgid "submission.submit.whatNext.description"
+msgid "catalog.browseTitles"
+msgstr "Атаулар саны: {$numTitles}"
+
+msgid "catalog.category.heading"
+msgstr "Барлық категориялар"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Журнал редакциясы сіз жіберген материал туралы хабарланды, жазбаны растау "
-"хабарламасы сіздің электрондық поштаңызға жіберілді. Редактор сіздің "
-"материалыңызды қабылдағаннан кейін сізге кейін хабарласады."
+"Бұл мақаланың электрондық жазбасын өңдеуге болмайды, себебі жарияланған "
+"мақаланы өзгертуге болмайды."
 
-msgid "submission.issueEntry"
-msgstr "Метадеректер"
+msgid "galley.publicationNotFound"
+msgstr "Электрондық жазбаның мақаласы табылған жоқ."
 
-msgid "submission.submit.noContext"
-msgstr "Бұл материалдың қай журналға тиесілі екенін табу мүмкін емес."
+msgid "publication.assignToissue"
+msgstr "Журнал басылымына жоспарлау"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Аңдатпаның сөз саны {$wordCount} аспауы тиіс."
-
-msgid "grid.action.workflow"
-msgstr "Жіберу процессі"
-
-msgid "submission.submit.newSubmissionSingle"
-msgstr "Жаңа материал"
-
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Жаңа материалды жіберуді бастаңыз"
-
-msgid "submission.title.tip"
+msgid "publication.assignedToIssue"
 msgstr ""
-"Материал сурет, мәтін, бағдарламалық жасақтама немесе өзге де мультимедиялық "
-"типте болуы мүмкін. Сәйкес келетін материалдың типін таңдауыңызды сұраймыз. "
-"Ұқсас мысалдарды келесі сілтемеге өтіп қарай аласыз <a target=\"_blank\" "
-"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#"
-"type\">http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type</a>"
+"Бұл мақала <a href=\"{$issueUrl}\">«{$issueName}»</a> журнал басылымына "
+"тағайындалды, бірақ мақаланы жариялау әлі жоспарланған жоқ."
 
-msgid "submission.title"
-msgstr "Мақаланың атауы"
+msgid "publication.changeIssue"
+msgstr "Журнал басылымын өзгерту"
 
-msgid "submission.upload.selectComponent"
-msgstr "Мақала компонентін таңдаңыз"
-
-msgid "submission.submit.userGroup"
-msgstr "Менің топтағы рөлімді ескере отырып жіберу."
-
-msgid "publication.publish.confirmation.backIssue"
+msgid "publication.datePublished.description"
 msgstr ""
-"Жариялауға қойылатын барлық талаптар орындалды. Материал дәл қазір \"{$issue}"
-" \" басылымында жарияланады. Жалғастыру керек пе?"
+"Журнал басылымы жарияланған кезде жариялау күні автоматты түрде орнатылады. "
+"Мақала бұрын жарияланған жағдайларды қоспағанда, жариялау күнін өз "
+"бетіңізбен енгізбеңіз."
+
+msgid "publication.invalidSection"
+msgstr "Бұл мақаланың жарияланған журнал бөлімін табу мүмкін емес."
+
+msgid "publication.inactiveSection"
+msgstr "\"{$section} \" (мақаланы редакцияға жіберу мүмкіндігі сөндірулі)"
+
+msgid "publication.invalidIssue"
+msgstr "Бұл мақаланың қай журнал басылымында жарияланғанын табу мүмкін емес."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Мақаланы жариялауға қойылатын барлық талаптар орындалды. Бұл мақаланы "
+"жариялау керек пе?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
 "Мақаланы жариялауға қойылатын барлық талаптар орындалды. Мақала \"{$issue}\" "
 "басылымның бірге жарияланады. Сіз бұл мақаланы жариялауға жоспарлау керек пе?"
 
-msgid "publication.publishedIn"
-msgstr "<a href=\"{$issueUrl}\"> {$issueUrl} </a> жарияланды."
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Жариялауға қойылатын барлық талаптар орындалды. Материал дәл қазір "
+"\"{$issue} \" басылымында жарияланады. Жалғастыру керек пе?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -222,111 +216,137 @@ msgstr ""
 "себебі жариялану күні {$datePublished} болып орнатылған. Бұл материалды "
 "шынымен жариялағыңыз келе ме?"
 
+msgid "publication.required.issue"
+msgstr "Мақала шығарылмастан бұрын басылымға тағайындалуы керек."
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\"> {$issueUrl} </a> жарияланды."
+
 msgid "publication.scheduledIn"
 msgstr ""
 "<a href=\"{$issueUrl}\">{$issueName} </a> сайтында жариялануы жоспарланған."
 
-msgid "submission.license.description"
+msgid "publication.unscheduledIn"
+msgstr "Бұл нөмірде жариялануы жоспарланбаған."
+
+msgid "publication.selectIssue"
+msgstr "Жариялауды жоспарлау үшін журнал басылымын таңдаңыз"
+
+msgid "submission.publication"
+msgstr "Басылым"
+
+msgid "publication.status.published"
+msgstr "Жариялаған"
+
+msgid "submission.status.scheduled"
+msgstr "Жоспарланған"
+
+msgid "publication.status.unscheduled"
+msgstr "Жоспардан алынды"
+
+msgid "submission.publications"
+msgstr "Басылымдар"
+
+msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
-"Автоматты түрде, жарияланғаннан кейін <a href='{$licenseUrl}' "
-"target='_blank'> {$licenseName} </a> лицензиясы тағайындалады."
+"Басылым жарияланған кезде авторлық құқық жылы автоматты түрде орнатылады."
 
-msgid "submission.queries.production"
-msgstr "Басылым туралы пікірталастар"
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Авторлық құқық жылы жариялану күніне байланысты автоматты түрде орнатылады."
 
-msgid "publication.version.details"
-msgstr "{$version} нұсқасы үшін ақпарат жариялануда"
+msgid "publication.datePublished"
+msgstr "Жарияланған күні"
 
-msgid "publication.unschedule.confirm"
-msgstr "Сіз бұл жазбаны жариялауды жоспарлағыңыз келмейтініне сенімдісіз бе?"
+msgid "publication.editDisabled"
+msgstr "Бұл нұсқа жарияланды және оны өңдеу мүмкін емес."
 
-msgid "publication.unpublish.confirm"
-msgstr "Бұл материалды жариялағыңыз келмейтініне сенімдісіз бе?"
+msgid "publication.event.published"
+msgstr "Материал жарияланды."
 
-msgid "publication.unpublish"
-msgstr "Жариялаудан бас тарту"
+msgid "publication.event.scheduled"
+msgstr "Материалды жариялау жоспарланған."
 
-msgid "submission.copyrightOther.description"
-msgstr "Жарияланған материалға авторлық құқықты келесі тұжырыммен бекітіңіз."
+msgid "publication.event.unpublished"
+msgstr "Материал басылымнан алынып тасталды."
 
-msgid "submission.copyrightHolder.description"
-msgstr "Авторлық құқық {$copyright} жарияланғаннан кейін бекітіледі."
+msgid "publication.event.versionPublished"
+msgstr "Жаңа нұсқа жарияланды."
+
+msgid "publication.event.versionScheduled"
+msgstr "Жаңа нұсқа жариялауға жоспарланған."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Нұсқа жариялаудан алынып тасталды."
+
+msgid "publication.invalidSubmission"
+msgstr "Бұл басылымға арналған материал табылмады."
+
+msgid "publication.publish"
+msgstr "Жариялау"
+
+msgid "publication.publish.requirements"
+msgstr "Жарияламас бұрын келесі талаптарды орындау қажет."
+
+msgid "publication.required.declined"
+msgstr "Қабылданбаған материалды жариялау мүмкін емес."
 
 msgid "publication.required.reviewStage"
 msgstr ""
 "Материал жарияланар алдында «Әдеби редакциялау» немесе «Баспа ісі» сатысында "
 "болуы керек."
 
-msgid "publication.required.declined"
-msgstr "Қабылданбаған материалды жариялау мүмкін емес."
-
-msgid "publication.publish.requirements"
-msgstr "Жарияламас бұрын келесі талаптарды орындау қажет."
-
-msgid "publication.publish"
-msgstr "Жариялау"
-
-msgid "publication.invalidSubmission"
-msgstr "Бұл басылымға арналған материал табылмады."
-
-msgid "publication.event.versionUnpublished"
-msgstr "Нұсқа жариялаудан алынып тасталды."
-
-msgid "publication.event.versionScheduled"
-msgstr "Жаңа нұсқа жариялауға жоспарланған."
-
-msgid "publication.event.versionPublished"
-msgstr "Жаңа нұсқа жарияланды."
-
-msgid "publication.event.unpublished"
-msgstr "Материал басылымнан алынып тасталды."
-
-msgid "publication.event.scheduled"
-msgstr "Материалды жариялау жоспарланған."
-
-msgid "publication.event.published"
-msgstr "Материал жарияланды."
-
-msgid "publication.editDisabled"
-msgstr "Бұл нұсқа жарияланды және оны өңдеу мүмкін емес."
-
-msgid "publication.datePublished"
-msgstr "Жарияланған күні"
-
-msgid "publication.copyrightYearBasis.submissionDescription"
+msgid "submission.license.description"
 msgstr ""
-"Авторлық құқық жылы жариялану күніне байланысты автоматты түрде орнатылады."
+"Автоматты түрде, жарияланғаннан кейін <a href='{$licenseUrl}' "
+"target='_blank'> {$licenseName} </a> лицензиясы тағайындалады."
 
-msgid "publication.copyrightYearBasis.issueDescription"
+msgid "submission.copyrightHolder.description"
+msgstr "Авторлық құқық {$copyright} жарияланғаннан кейін бекітіледі."
+
+msgid "submission.copyrightOther.description"
+msgstr "Жарияланған материалға авторлық құқықты келесі тұжырыммен бекітіңіз."
+
+msgid "publication.unpublish"
+msgstr "Жариялаудан бас тарту"
+
+msgid "publication.unpublish.confirm"
+msgstr "Бұл материалды жариялағыңыз келмейтініне сенімдісіз бе?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Сіз бұл жазбаны жариялауды жоспарлағыңыз келмейтініне сенімдісіз бе?"
+
+msgid "publication.version.details"
+msgstr "{$version} нұсқасы үшін ақпарат жариялануда"
+
+msgid "submission.queries.production"
+msgstr "Басылым туралы пікірталастар"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Шолуға қайта оралу"
+
+msgid "editor.submission.decision.backToReview.description"
 msgstr ""
-"Басылым жарияланған кезде авторлық құқық жылы автоматты түрде орнатылады."
+"Бұл материалды қабылдау туралы шешімді өзгертіп, оны тексеру кезеңіне қайта "
+"жіберіңіз."
 
-msgid "submission.publications"
-msgstr "Басылымдар"
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} бұл материалды қабылдау шешімін өзгертіп, оны қайта қарау "
+"кезеңіне жіберді."
 
-msgid "publication.status.unscheduled"
-msgstr "Жоспардан алынды"
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Қайта қарауға жіберілді"
 
-msgid "submission.status.scheduled"
-msgstr "Жоспарланған"
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} атты материалы қайта қарау кезеңіне жіберілді."
 
-msgid "publication.status.published"
-msgstr "Жариялаған"
-
-msgid "submission.publication"
-msgstr "Басылым"
-
-msgid "publication.selectIssue"
-msgstr "Жариялауды жоспарлау үшін журнал басылымын таңдаңыз"
-
-msgid "publication.unscheduledIn"
-msgstr "Бұл нөмірде жариялануы жоспарланбаған."
-
-msgid "publication.required.issue"
-msgstr "Мақала шығарылмастан бұрын басылымға тағайындалуы керек."
-
-msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Тексеру кезеңіне жіберілетін файлдарды таңдаңыз."
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Авторларға олардың материалы қайта қарау кезеңіне жіберілетінін хабарлау "
+"үшін электрондық хат жіберіңіз. Неліктен бұл шешім қабылданғанын "
+"түсіндіріңіз және авторға материалдың әрі қарай өтетін кезеңдері  жайлы "
+"хабарлаңыз."
 
 #, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
@@ -336,31 +356,41 @@ msgstr ""
 "уақытқа созылатынын және олар редакторлардан қашан хабар күтетінін "
 "көрсетіңіз."
 
-msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Тексеру кезеңіне жіберілетін файлдарды таңдаңыз."
+
+msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"Авторларға олардың материалы қайта қарау кезеңіне жіберілетінін хабарлау "
-"үшін электрондық хат жіберіңіз. Неліктен бұл шешім қабылданғанын "
-"түсіндіріңіз және авторға материалдың әрі қарай өтетін кезеңдері  жайлы "
-"хабарлаңыз."
 
-msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "{$title} атты материалы қайта қарау кезеңіне жіберілді."
-
-msgid "editor.submission.decision.backToReview.completed"
-msgstr "Қайта қарауға жіберілді"
-
-msgid "editor.submission.decision.backToReview.log"
+msgid "doi.submission.issueMissing.representation"
 msgstr ""
-"{$editorName} бұл материалды қабылдау шешімін өзгертіп, оны қайта қарау "
-"кезеңіне жіберді."
 
-msgid "editor.submission.decision.backToReview.description"
+msgid "doi.submission.incorrectContext"
 msgstr ""
-"Бұл материалды қабылдау туралы шешімді өзгертіп, оны тексеру кезеңіне қайта "
-"жіберіңіз."
 
-msgid "editor.submission.decision.backToReview"
-msgstr "Шолуға қайта оралу"
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Кем дегенде бір авторды көрсету қажет."
@@ -378,3 +408,6 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Жіберушінің рөлін таңдаңыз."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Рецензиға жіберу"

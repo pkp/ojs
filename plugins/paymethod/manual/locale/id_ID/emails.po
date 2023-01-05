@@ -31,3 +31,6 @@ msgid "emails.manualPaymentNotification.description"
 msgstr ""
 "Email ini digunakan untuk memberitahukan kontak manajer jurnal bahwa "
 "pembayaran manual dibutuhkan."
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr ""
