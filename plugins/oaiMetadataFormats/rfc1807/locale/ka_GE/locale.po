@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.OAIMetadata.rfc1807.displayName"
+msgstr "მოდული „RFC1807 მეტამონაცემების ფორმატი“"
+
 msgid "plugins.OAIMetadata.rfc1807.description"
 msgstr ""
 "აწესრიგებს მეტამონაცემებს იმ სახით, რომ ისინი შეესაბამებოდნენ RFC1807-ის "
 "ფორმატს."
-
-msgid "plugins.OAIMetadata.rfc1807.displayName"
-msgstr "მოდული „RFC1807 მეტამონაცემების ფორმატი“"

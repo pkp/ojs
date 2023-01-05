@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marcxml.description"
-msgstr "Метадеректерді MARC21 форматына сәйкес келетін етіп құрылымдайды."
-
 msgid "plugins.OAIMetadata.marcxml.displayName"
 msgstr "\"MARC21 метадеректер форматы\" модулі"
+
+msgid "plugins.OAIMetadata.marcxml.description"
+msgstr "Метадеректерді MARC21 форматына сәйкес келетін етіп құрылымдайды."

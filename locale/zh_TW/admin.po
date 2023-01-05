@@ -13,8 +13,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "admin.hostedContexts"
+msgstr "支援期刊"
+
 msgid "admin.settings.redirect"
 msgstr "更改期刊導向"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"在主要網站提出之請求會傳送至此期刊。此功能適用於例如網站僅支援一本期刊。"
 
 msgid "admin.languages.confirmDisable"
 msgstr "是否確認解除此區性？如解除，現時使用此區性之期刊將會受到影響。"
@@ -22,14 +29,11 @@ msgstr "是否確認解除此區性？如解除，現時使用此區性之期刊
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "這是網站及任何支援的期刊之默認語言。"
 
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+
 msgid "admin.locale.maybeIncomplete"
 msgstr "標示的區性可能尚未完成。"
-
-msgid "admin.hostedContexts"
-msgstr "支援期刊"
-
-msgid "admin.settings.redirectInstructions"
-msgstr "在主要網站提出之請求會傳送至此期刊。此功能適用於例如網站僅支援一本期刊。"
 
 msgid "admin.languages.confirmUninstall"
 msgstr "是否確認解除安裝此區性？如解除，現時使用此區性之期刊將會受到影響。"
@@ -49,7 +53,8 @@ msgid "admin.systemConfigurationDescription"
 msgstr "<tt>config.inc.php</tt>內的OJS配置設定。"
 
 msgid "admin.journals.createInstructions"
-msgstr "你會自動被註冊成此期刊的主管。在創建新期刊後，你會被帶至相關設定精靈以完成基"
+msgstr ""
+"你會自動被註冊成此期刊的主管。在創建新期刊後，你會被帶至相關設定精靈以完成基"
 "本期刊設置。"
 
 msgid "admin.journals.journalSettings"
@@ -79,6 +84,9 @@ msgstr "你提供的路徑已被其他期刊使用。"
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "主要區性必須為期刊其中所支援的區性之一。"
 
+msgid "admin.journals.enableJournalInstructions"
+msgstr "允許此期刊在此網站開放至公眾瀏覽"
+
 msgid "admin.contexts.contextDescription"
 msgstr "期刊描述"
 
@@ -87,9 +95,6 @@ msgstr "現存期刊路徑或創建路徑（例如\"ojs\"）。"
 
 msgid "admin.journals.importSubscriptions"
 msgstr "導入訂閱"
-
-msgid "admin.journals.enableJournalInstructions"
-msgstr "允許此期刊在此網站開放至公眾瀏覽"
 
 msgid "admin.journals.transcode"
 msgstr "從ISO8859-1為文章元資料為進行轉碼"
@@ -113,7 +118,8 @@ msgid "admin.mergeUsers.into.description"
 msgstr "請選擇一個用戶，以轉移上一個用戶的作者身份、編輯分配等等。"
 
 msgid "admin.mergeUsers.from.description"
-msgstr "請選擇一個（或多個）用戶，以合併至另一用戶（例如：當同一人擁有多個用戶）。先"
+msgstr ""
+"請選擇一個（或多個）用戶，以合併至另一用戶（例如：當同一人擁有多個用戶）。先"
 "選擇的用戶將被刪除，相關的投稿、配置等等將會轉移至第二個用戶。"
 
 msgid "admin.mergeUsers.allUsers"
@@ -136,18 +142,35 @@ msgstr "開放取用通知"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "審稿提示"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
-msgstr "期數校對樣本ID不是整數。"
-
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
 msgstr "期數ID不是整數。"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "期數校對樣本ID不是整數。"
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
 msgstr "期數ID與assoc ID不相符。"
 
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
-msgstr "此期刊的批量發送電郵已被解除。請到<a href=\"{$siteSettingsUrl}\">管理員 > "
-"網站設定</a>啟動此功能。"
+msgstr ""
+"此期刊的批量發送電郵已被解除。請到<a href=\"{$siteSettingsUrl}\">管理員 > 網"
+"站設定</a>啟動此功能。"
 
 msgid "admin.siteManagement.description"
 msgstr "從此網站新增、編輯或移除期刊及管理網站層面設定。"
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""

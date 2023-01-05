@@ -12,6 +12,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "plugins.reports.counter.description"
+msgstr ""
+
+msgid "plugins.reports.counter"
+msgstr "計數器報告"
+
 msgid "plugins.reports.counter.release"
 msgstr "計數器釋放"
 
@@ -29,9 +35,6 @@ msgstr "結果未能採用XML格式。"
 
 msgid "plugins.reports.counter.1a.name"
 msgstr "計數器報告JR1 (R3)"
-
-msgid "plugins.reports.counter"
-msgstr "計數器報告"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr "JR1 (R3)期刊報告1 (R3)：按月份及期刊全文文章請求"

@@ -19,6 +19,9 @@ msgstr "新增投稿"
 msgid "author.track"
 msgstr "現有投稿"
 
+msgid "author.competingInterests"
+msgstr ""
+
 msgid "author.submit.submitArticle"
 msgstr "提交文章"
 
@@ -29,7 +32,8 @@ msgid "author.submit.startHereTitle"
 msgstr "開始新增投稿"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">按此</a>前往5個提交步驟中的第1步。"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">按此</a>前往5個提交步驟中的第1步。"
 
 msgid "author.submit.step1"
 msgstr "第1步：開始新增投稿"
@@ -61,14 +65,8 @@ msgstr "輸入元資料"
 msgid "author.submit.supplementaryFiles"
 msgstr "補充檔案"
 
-msgid "author.submit.confirmation"
-msgstr "確認"
-
 msgid "author.submit.nextSteps"
 msgstr "下一步"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "你可以日後在作者主頁從現有投稿選取投稿，再完成此投稿。"
 
 msgid "author.submit.notAccepting"
 msgstr "此期刊現時停止徵稿。"
@@ -91,11 +89,11 @@ msgstr "第{$round}輪審稿"
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "審稿：需要修改"
 
-msgid "author.submissions.queuedEditingProofread"
-msgstr "編輯：要求校對"
-
 msgid "author.submissions.queuedEditingCopyedit"
 msgstr "編輯：要求審稿"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "編輯：要求校對"
 
 msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "上載已審稿稿件"
@@ -121,10 +119,6 @@ msgstr "文章必須選取期刊中的其中一個分類。"
 msgid "author.submit.verifyChecklist"
 msgstr "你必須確認已符合所有投稿清單的項目才可繼續。"
 
-msgid "author.submit.copyrightNoticeAgree"
-msgstr "作者同意此版權通知之條款，條文將應用在此投稿及屆時在此期刊出版的稿件（在下方"
-"可添加致編輯的意見）。"
-
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr "你必須同意版權通知之條款才可繼續。"
 
@@ -134,14 +128,8 @@ msgstr "致編輯的意見"
 msgid "author.submit.comments"
 msgstr "輸入內容（非必須）"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "請為投稿選擇一個合適的分類。"
-
 msgid "author.submit.form.localeRequired"
 msgstr "請選擇投稿的語言。"
-
-msgid "submission.submit.privacyStatement"
-msgstr "期刊隱私權聲明"
 
 msgid "author.submit.reorderInstructions"
 msgstr "重新排列作者以顯示出版時的次序。"
@@ -158,8 +146,14 @@ msgstr "添加作者"
 msgid "author.submit.deleteAuthor"
 msgstr "刪除作者"
 
+msgid "author.submit.submissionIndexingDescription"
+msgstr "提供字詞作為索引用途；字詞間請使用分號分隔（字詞1;字詞2;字詞3）。"
+
 msgid "author.submit.coverageInstructions"
 msgstr "參考研究樣本的地域、時序或歷史覆蓋，以及/或者特徵。"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
 
 msgid "author.submit.form.authorRequired"
 msgstr "必須提供最少一個作者。"
@@ -188,6 +182,12 @@ msgstr "取代投稿檔案"
 msgid "author.submit.noSubmissionFile"
 msgstr "未能上載投稿檔案。"
 
+msgid "author.submit.noSubmissionConfirm"
+msgstr "是否確認未有上載投稿檔案，並繼續？"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr "按儲存以上載檔案（接着能夠附加檔案）。"
 
@@ -209,8 +209,14 @@ msgstr "上載附加檔案"
 msgid "author.submit.addSupplementaryFile"
 msgstr "添加附加檔案"
 
+msgid "author.submit.editSupplementaryFile"
+msgstr "編輯附加檔案"
+
 msgid "author.submit.supplementaryFileData"
 msgstr "附加檔案元資料"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "提供以下附加檔案的元資料，以把附加檔案編入索引。"
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "附加檔案"
@@ -260,6 +266,9 @@ msgstr "標明其他"
 msgid "author.submit.suppFile.noFile"
 msgstr "無檔案成功上載。"
 
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "請輸入此附加檔案標題。"
+
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "請輸入學科。"
 
@@ -271,15 +280,6 @@ msgstr "已有公眾附加檔案識別。"
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "公眾附加檔案識別碼"
-
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"按完成投稿以提交你的稿件至{$journalTitle}。此投稿的優先聯絡將收到一封電郵確認"
-"通知，以及可透過登入期刊網站以查閱投稿的文章編審進程。感謝您投稿至{$journalTi"
-"tle}。"
-
-msgid "author.submit.noFiles"
-msgstr "無任何檔案附加至此投稿。"
 
 msgid "author.submit.filesSummary"
 msgstr "檔案概要"
@@ -299,21 +299,33 @@ msgstr "已經編審檔案"
 msgid "author.article.authorRevisedFile"
 msgstr "作者檔案"
 
-msgid "author.submit.submissionIndexingDescription"
-msgstr "提供字詞作為索引用途；字詞間請使用分號分隔（字詞1;字詞2;字詞3）。"
-
-msgid "author.submit.noSubmissionConfirm"
-msgstr "是否確認未有上載投稿檔案，並繼續？"
-
-msgid "author.submit.editSupplementaryFile"
-msgstr "編輯附加檔案"
-
-msgid "author.submit.supplementaryFileDataDescription"
-msgstr "提供以下附加檔案的元資料，以把附加檔案編入索引。"
-
-msgid "author.submit.suppFile.form.titleRequired"
-msgstr "請輸入此附加檔案標題。"
-
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "用戶需要一個帳戶以投稿至此期刊。編輯會透過帳戶追蹤您的投稿及聯絡您，例如通知"
+msgstr ""
+"用戶需要一個帳戶以投稿至此期刊。編輯會透過帳戶追蹤您的投稿及聯絡您，例如通知"
 "您投稿狀態的變更，或需要您提供額外的資訊。"
+
+#~ msgid "author.submit.confirmation"
+#~ msgstr "確認"
+
+#~ msgid "submission.submit.cancelSubmission"
+#~ msgstr "你可以日後在作者主頁從現有投稿選取投稿，再完成此投稿。"
+
+#~ msgid "author.submit.copyrightNoticeAgree"
+#~ msgstr ""
+#~ "作者同意此版權通知之條款，條文將應用在此投稿及屆時在此期刊出版的稿件（在下"
+#~ "方可添加致編輯的意見）。"
+
+#~ msgid "author.submit.form.sectionRequired"
+#~ msgstr "請為投稿選擇一個合適的分類。"
+
+#~ msgid "submission.submit.privacyStatement"
+#~ msgstr "期刊隱私權聲明"
+
+#~ msgid "author.submit.confirmationDescription"
+#~ msgstr ""
+#~ "按完成投稿以提交你的稿件至{$journalTitle}。此投稿的優先聯絡將收到一封電郵"
+#~ "確認通知，以及可透過登入期刊網站以查閱投稿的文章編審進程。感謝您投稿至"
+#~ "{$journalTitle}。"
+
+#~ msgid "author.submit.noFiles"
+#~ msgstr "無任何檔案附加至此投稿。"

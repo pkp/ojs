@@ -12,11 +12,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "api.emails.403.disabled"
-msgstr "此期刊的電郵通知功能尚未生效。"
-
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "您要求的公告並非此期刊的一部分。"
+
+msgid "api.emails.403.disabled"
+msgstr "此期刊的電郵通知功能尚未生效。"
 
 msgid "api.submissions.400.wrongContext"
 msgstr "您要求的投稿並不在此期刊。"
@@ -33,11 +33,11 @@ msgstr "您只可查閱所允許的期刊。"
 msgid "api.contexts.403.notAllowed"
 msgstr "您沒有查看此期刊的權限。"
 
-msgid "api.contexts.403.requiresContext"
-msgstr "您不能透過網站的API修改此期刊。"
-
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr "您不能查看或修改此期刊，除非您提出期刊API或網站API的請求。"
+
+msgid "api.contexts.403.requiresContext"
+msgstr "您不能透過網站的API修改此期刊。"
 
 msgid "api.contexts.403.notAllowedEdit"
 msgstr "您沒有修改此期刊的權限。"
@@ -68,3 +68,9 @@ msgstr "您所查詢的出版物並不是此期刊的一部分。"
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "您所查詢的出版物並不是此投稿的一部分。"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

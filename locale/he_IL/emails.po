@@ -12,51 +12,77 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "emails.lockssNewArchive.subject"
-msgstr "בקשת ארכיון עבור {contextName$}"
+msgid "emails.passwordResetConfirm.subject"
+msgstr "אישור איפוס סיסמה"
 
-msgid "emails.lockssExistingArchive.description"
+msgid "emails.passwordResetConfirm.body"
 msgstr ""
-"הודעת דוא\"ל זו מבקשת משומר ארכיב LOCKSS לשקול לכלול את כתב העת הזה בארכיון "
-"שלו. הוא מספק את כתובת האתר למניפסט המו\"ל של LOCKSS."
+"קיבלנו בקשתך לשנות סיסמה לאתר  {$siteTitle} \n"
+"<br />\n"
+"<br />\n"
+"אם לא הגשת בקשה זו, אנא התעלם מאימייל זה והסיסמה שלך לא תשתנה. אם ברצונך "
+"לאפס את הסיסמה שלך, לחץ על כתובת האתר הבאה.<br />\n"
+"<br />\n"
+"איפוס סיסמה: {$passwordResetUrl}\n"
+"<br />\n"
+"{$siteContactName}"
 
-msgid "emails.lockssExistingArchive.body"
+msgid "emails.passwordReset.subject"
+msgstr "איפוס סיסמה"
+
+msgid "emails.passwordReset.body"
 msgstr ""
-"לכבוד [ספרן אוניברסיטאי]<br />\n"
+"איפוס סיסמתך בוצע בהצלחה. שמור על פרטי שם משתמש וסיסמה כי צריכים אותם לכל "
+"עבודה עם כתב העת. <br />\n"
 "<br />\n"
-"{$contextName} הוא כתב עת שעבורו חבר הפקולטה שלך, [שם החבר], משמש כ [תואר "
-"תפקיד]. היומן מבקש להקים ארכיון תואם LOCKSS עתכם ועם וספריות אוניברסיטאיות "
-"אחרות.<br />\n"
+"שם משתמש: {$recipientUsername}<br />\n"
+"סיסמה:  {$password}<br />\n"
 "<br />\n"
-"[תיאור קצר של כתב העת]<br />\n"
+"{$siteContactName}"
+
+msgid "emails.userRegister.subject"
+msgstr "רישום כתב עת"
+
+msgid "emails.userRegister.body"
+msgstr ""
+"{$recipientName}<br />\n"
 "<br />\n"
-"כתובת האתר ל-LOCKSS לכתב עת שלנו היא: {$contextUrl} / gateway / lockss <br />"
-"\n"
+"נרשמת בהצלחה {$contextName}. כללנו את שם המשתמש והסיסמה שלכם בהודעת דוא\"ל "
+"זו, הדרושים לכל עבודה עם כתב עת זה דרך אתר האינטרנט שלה. בכל שלב, אתה יכול "
+"לבקש הסרה מרשימת המשתמשים של כתב העת על ידי יצירת קשר איתי.<br />\n"
 "<br />\n"
-"אנו מבינים שאתה כבר משתתף ב- LOCKSS. אם נוכל לספק מטא-נתונים נוספים למטרות "
-"רישום כתב העת שלנו בגירסת LOCKSS שלך, נשמח לספק אותה.<br />\n"
+"שם משתמש: {$recipientUsername}<br />\n"
+"סיסמה: {$password}<br />\n"
 "<br />\n"
-"בתודה,<br />\n"
+"תודה,<br />\n"
 "{$signature}"
 
-msgid "emails.lockssExistingArchive.subject"
-msgstr "בקשת ארכיון עבור {$contextName}"
+#, fuzzy
+msgid "emails.userValidateContext.subject"
+msgstr "אמת את חשבונך"
 
 #, fuzzy
-msgid "emails.issuePublishNotify.body"
+msgid "emails.userValidateContext.body"
 msgstr ""
-"קוראים: <br />\n"
+"{$recipientName}\n"
 "<br />\n"
-"{$contextName} פרסם זה עתה את הגיליון החדש ב- {$contextUrl}. אנו מזמינים "
-"אתכם לסקור את תוכן העניינים כאן ואז לבקר באתר האינטרנט שלנו כדי לסקור מאמרים "
-"ופריטים מעניינים. <br />\n"
 "<br />\n"
-"תודה על ההתעניינות המתמשכת בעבודה שלנו, <br />\n"
+"יצרת חשבון עם {$contextName}, אך לפני שתוכל להתחיל להשתמש בו, עליך לאמת את "
+"חשבון הדוא\"ל שלך. לשם כך, פשוט לחץ על הקישור שלהלן:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"תודה,<br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.issuePublishNotify.subject"
-msgstr "גיליון חדש פורסם"
+msgid "emails.userValidateSite.subject"
+msgstr ""
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+
+msgid "emails.reviewerRegister.subject"
+msgstr "הרשמה כסוקר עם {$contextName}"
 
 msgid "emails.reviewerRegister.body"
 msgstr ""
@@ -75,71 +101,51 @@ msgstr ""
 "תודה לך, <br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.subject"
-msgstr "הרשמה כסוקר עם {$contextName}"
+#, fuzzy
+msgid "emails.issuePublishNotify.subject"
+msgstr "גיליון חדש פורסם"
 
 #, fuzzy
-msgid "emails.userValidateContext.body"
+msgid "emails.issuePublishNotify.body"
 msgstr ""
-"{$recipientName}\n"
+"קוראים: <br />\n"
 "<br />\n"
+"{$contextName} פרסם זה עתה את הגיליון החדש ב- {$contextUrl}. אנו מזמינים "
+"אתכם לסקור את תוכן העניינים כאן ואז לבקר באתר האינטרנט שלנו כדי לסקור מאמרים "
+"ופריטים מעניינים. <br />\n"
 "<br />\n"
-"יצרת חשבון עם {$contextName}, אך לפני שתוכל להתחיל להשתמש בו, עליך לאמת את "
-"חשבון הדוא\"ל שלך. לשם כך, פשוט לחץ על הקישור שלהלן:<br />\n"
-"<br />\n"
-"{$activateUrl}<br />\n"
-"<br />\n"
-"תודה,<br />\n"
+"תודה על ההתעניינות המתמשכת בעבודה שלנו, <br />\n"
 "{$signature}"
 
-#, fuzzy
-msgid "emails.userValidateContext.subject"
-msgstr "אמת את חשבונך"
+msgid "emails.lockssExistingArchive.subject"
+msgstr "בקשת ארכיון עבור {$contextName}"
 
-msgid "emails.userRegister.body"
+msgid "emails.lockssExistingArchive.body"
 msgstr ""
-"{$recipientName}<br />\n"
+"לכבוד [ספרן אוניברסיטאי]<br />\n"
 "<br />\n"
-"נרשמת בהצלחה {$contextName}. כללנו את שם המשתמש והסיסמה שלכם בהודעת דוא\"ל "
-"זו, הדרושים לכל עבודה עם כתב עת זה דרך אתר האינטרנט שלה. בכל שלב, אתה יכול "
-"לבקש הסרה מרשימת המשתמשים של כתב העת על ידי יצירת קשר איתי.<br />\n"
+"{$contextName} הוא כתב עת שעבורו חבר הפקולטה שלך, [שם החבר], משמש כ [תואר "
+"תפקיד]. היומן מבקש להקים ארכיון תואם LOCKSS עתכם ועם וספריות אוניברסיטאיות "
+"אחרות.<br />\n"
 "<br />\n"
-"שם משתמש: {$recipientUsername}<br />\n"
-"סיסמה: {$password}<br />\n"
+"[תיאור קצר של כתב העת]<br />\n"
 "<br />\n"
-"תודה,<br />\n"
+"כתובת האתר ל-LOCKSS לכתב עת שלנו היא: {$contextUrl} / gateway / lockss <br /"
+">\n"
+"<br />\n"
+"אנו מבינים שאתה כבר משתתף ב- LOCKSS. אם נוכל לספק מטא-נתונים נוספים למטרות "
+"רישום כתב העת שלנו בגירסת LOCKSS שלך, נשמח לספק אותה.<br />\n"
+"<br />\n"
+"בתודה,<br />\n"
 "{$signature}"
 
-msgid "emails.userRegister.subject"
-msgstr "רישום כתב עת"
-
-msgid "emails.passwordReset.body"
+msgid "emails.lockssExistingArchive.description"
 msgstr ""
-"איפוס סיסמתך בוצע בהצלחה. שמור על פרטי שם משתמש וסיסמה כי צריכים אותם לכל "
-"עבודה עם כתב העת. <br />\n"
-"<br />\n"
-"שם משתמש: {$recipientUsername}<br />\n"
-"סיסמה:  {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
+"הודעת דוא\"ל זו מבקשת משומר ארכיב LOCKSS לשקול לכלול את כתב העת הזה בארכיון "
+"שלו. הוא מספק את כתובת האתר למניפסט המו\"ל של LOCKSS."
 
-msgid "emails.passwordReset.subject"
-msgstr "איפוס סיסמה"
-
-msgid "emails.passwordResetConfirm.body"
-msgstr ""
-"קיבלנו בקשתך לשנות סיסמה לאתר  {$siteTitle} \n"
-"<br />\n"
-"<br />\n"
-"אם לא הגשת בקשה זו, אנא התעלם מאימייל זה והסיסמה שלך לא תשתנה. אם ברצונך "
-"לאפס את הסיסמה שלך, לחץ על כתובת האתר הבאה.<br />\n"
-"<br />\n"
-"איפוס סיסמה: {$passwordResetUrl}\n"
-"<br />\n"
-"{$siteContactName}"
-
-msgid "emails.passwordResetConfirm.subject"
-msgstr "אישור איפוס סיסמה"
+msgid "emails.lockssNewArchive.subject"
+msgstr "בקשת ארכיון עבור {contextName$}"
 
 msgid "emails.lockssNewArchive.body"
 msgstr ""
@@ -164,9 +170,46 @@ msgstr ""
 "בתודה,<br />\n"
 "{$signature}"
 
+msgid "emails.lockssNewArchive.description"
+msgstr ""
+"דוא\"ל זה מעודד את המקבל להשתתף ביוזמת LOCKSS ולכלול את כתב העת הזה בארכיון. "
+"הוא מספק מידע על יוזמת LOCKSS ועל דרכים להיות מעורבים."
+
 #, fuzzy
-msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "בקשה לסקירת מאמר"
+msgid "emails.submissionAckNotAuthor.subject"
+msgstr "אישור הגשה"
+
+#, fuzzy
+msgid "emails.submissionAckNotAuthor.body"
+msgstr ""
+"שלום,<br />\n"
+"<br />\n"
+"{$submitterName} הגיש כתב יד {$sumbissionTitle} ל{$contextName}.<br />\n"
+"<br />\n"
+"בכל שאלה ניתן לפנות אלי. תודה על פנייתך לכתב עת זה.<br />\n"
+"<br />\n"
+"{$contextSignature}"
+
+#, fuzzy
+msgid "emails.editorAssign.subject"
+msgstr "הקצאת עריכה"
+
+#, fuzzy
+msgid "emails.editorAssign.body"
+msgstr ""
+"{$recipientName}:<br />\n"
+"<br />\n"
+"כתב יד {$submissionTitle} ל{$contextName} שויך אליך לטיפול בשלבי העריכה.<br /"
+">\n"
+"<br />\n"
+"אתר הגשה: {$submissionUrl}<br />\n"
+"שם משתמש: {$recipientUsername}<br />\n"
+"<br />\n"
+"תודה."
+
+#, fuzzy
+msgid "emails.reviewRequest.subject"
+msgstr "בקשה לביקורת מאמר"
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -194,138 +237,8 @@ msgstr ""
 "{$submissionAbstract}"
 
 #, fuzzy
-msgid "emails.reviewRequest.subject"
-msgstr "בקשה לביקורת מאמר"
-
-#, fuzzy
-msgid "emails.editorAssign.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"כתב יד {$submissionTitle} ל{$contextName} שויך אליך לטיפול בשלבי העריכה.<br "
-"/>\n"
-"<br />\n"
-"אתר הגשה: {$submissionUrl}<br />\n"
-"שם משתמש: {$recipientUsername}<br />\n"
-"<br />\n"
-"תודה."
-
-#, fuzzy
-msgid "emails.editorAssign.subject"
-msgstr "הקצאת עריכה"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"שלום,<br />\n"
-"<br />\n"
-"{$submitterName} הגיש כתב יד {$sumbissionTitle} ל{$contextName}.<br />\n"
-"<br />\n"
-"בכל שאלה ניתן לפנות אלי. תודה על פנייתך לכתב עת זה.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "אישור הגשה"
-
-msgid "emails.lockssNewArchive.description"
-msgstr ""
-"דוא\"ל זה מעודד את המקבל להשתתף ביוזמת LOCKSS ולכלול את כתב העת הזה בארכיון. "
-"הוא מספק מידע על יוזמת LOCKSS ועל דרכים להיות מעורבים."
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.body"
-msgstr ""
-"{$authors}: \n"
-"<br />\n"
-"הגענו להחלטה לגבי הגשה שלך ל{$contextName}: {$submissionTitle}\n"
-"<br />\n"
-"החלטה שלנו: קבל הגשה"
-
-#, fuzzy
-msgid "emails.editorDecisionAccept.subject"
-msgstr "החלטת העורך"
-
-msgid "emails.reviewCancel.body"
-msgstr ""
-"{$recipientName}:\n"
-"<br />\n"
-"החלטנו בשלב זה לבטל את בקשתנו שתבדוק את ההגשה \"{$submissionTitle}\" "
-"ל{$contextName}. אנו מתנצלים על אי הנוחות שעלולה לגרום לך ומקווים שנוכל לבקש "
-"ממך לסייע בתהליך הסקירה של כתב עת זה בעתיד.<br />\n"
-"<br />\n"
-"אם יש לך שאלות, אנא צור איתי קשר."
-
-msgid "emails.reviewCancel.subject"
-msgstr "ביטול בקשה לסקירה"
-
-#, fuzzy
-msgid "emails.reviewRequestSubsequent.subject"
-msgstr "בקשת סקירת מאמר"
-
-#, fuzzy
-msgid "emails.reviewRemindAuto.subject"
-msgstr "תזכורת הגשת ביקורת אוטומטית"
-
-#, fuzzy
-msgid "emails.reviewRemind.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"זוהי תזכורת לבקשתנו לחוות דעתך על ההגשה \"{$submissionTitle} ל{$contextName}"
-". קוינו לקבל את חוות הדעת עד {$reviewDueDate}, ונשמח לקבל את זה בהקדם.<br />\n"
-"<br />\n"
-"אם אין ברשותך שם משתמש וסיסמתך לאתר כתב העת, ניתן לאפס אותו עם לינק זה (ישלח "
-"אליך בדוא\"ל עם שם משתמש שלך). {$passwordResetUrl}<br />\n"
-"<br />\n"
-"אתר הגשה: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"נא לאשר הסכמתך לסקור את המאמר ולהגיש חוות דעת. מחכים לשמוע ממך.<br />\n"
-"<br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.reviewRemind.subject"
-msgstr "תזכורת שליחת חוות דעת"
-
-msgid "emails.reviewDecline.body"
-msgstr ""
-"לעורכים:<br />\n"
-"<br />\n"
-"לצערי בשלב זה איני יכול לסקור את ההגשה \"{$submissionTitle} ל{$contextName}. "
-"תודה שחשבתם עלי, ולא להסס לבקש שוב.<br />\n"
-"<br />\n"
-"{$senderName}"
-
-msgid "emails.reviewDecline.subject"
-msgstr "אינו יכול לבדוק"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"לעורכים:<br />\n"
-"<br />\n"
-"אני מסכים לבדוק ההגשה \"{$submissionTitle}\" ל{$contextName}. תודה שפניתם "
-"אלי ואני מתכנן להחזיר את חוות הדעת עד {$reviewDueDate}, אם לא לפני.<br />\n"
-"<br />\n"
-"{$senderName}"
-
-msgid "emails.reviewConfirm.subject"
-msgstr "יכול לבדוק"
-
-#, fuzzy
-msgid "emails.reviewReinstate.body"
-msgstr ""
-"{$recipientName}:\n"
-"ברצוננו להחזיר את בקשתנו שתבדוק את ההגשה \"{$submissionTitle}\" "
-"ל{$contextName}. אנו מקווים כי תוכלו לסייע בתהליך הסקירה של כתב העת הזה<br />"
-"\n"
-"<br />\n"
-"אם יש לך שאלות, אנא צור איתי קשר."
-
-#, fuzzy
-msgid "emails.reviewReinstate.subject"
-msgstr "בקשה לבדיקה חודשה"
+msgid "emails.reviewResponseOverdueAuto.subject"
+msgstr "בקשה לסקירת מאמר"
 
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
@@ -342,8 +255,8 @@ msgstr ""
 "<br />\n"
 "חוות הדעת עצמו צריך להגיש עד {$reviewDueDate}.<br />\n"
 "<br />\n"
-"אם אין ברשותך שם משתמש וסיסמתך לאתר כתב העת, אפשר לאפס את הסיסמה (ישלח לדוא\""
-"ל שלך יחד עם שם משתמש שלך). {$passwordResetUrl}<br />\n"
+"אם אין ברשותך שם משתמש וסיסמתך לאתר כתב העת, אפשר לאפס את הסיסמה (ישלח לדוא"
+"\"ל שלך יחד עם שם משתמש שלך). {$passwordResetUrl}<br />\n"
 "<br />\n"
 "אתר הגשה: {$submissionUrl}<br />\n"
 "<br />\n"
@@ -354,6 +267,10 @@ msgstr ""
 "\"{$submissionTitle}\"<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
+
+#, fuzzy
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "בקשת סקירת מאמר"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -367,8 +284,8 @@ msgstr ""
 "נשמח אם היית יכול לעזור בהערכתו.<br />\n"
 "<br />\n"
 "נא להיכנס לאתר עד {$responseDueDate} כדי לציין אם תתחיל בבדיקה או לא, כמו גם "
-"לגשת להגשה ולהקליט את הביקורת וההמלצה שלך. אתר האינטרנט הוא {$contextUrl}<br "
-"/>\n"
+"לגשת להגשה ולהקליט את הביקורת וההמלצה שלך. אתר האינטרנט הוא {$contextUrl}"
+"<br />\n"
 "<br />\n"
 "תאריך הגשת הביקורת הוא  {$reviewDueDate}.<br />\n"
 "<br />\n"
@@ -385,3 +302,201 @@ msgstr ""
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
 "{$submissionAbstract}"
+
+msgid "emails.reviewCancel.subject"
+msgstr "ביטול בקשה לסקירה"
+
+msgid "emails.reviewCancel.body"
+msgstr ""
+"{$recipientName}:\n"
+"<br />\n"
+"החלטנו בשלב זה לבטל את בקשתנו שתבדוק את ההגשה \"{$submissionTitle}\" "
+"ל{$contextName}. אנו מתנצלים על אי הנוחות שעלולה לגרום לך ומקווים שנוכל לבקש "
+"ממך לסייע בתהליך הסקירה של כתב עת זה בעתיד.<br />\n"
+"<br />\n"
+"אם יש לך שאלות, אנא צור איתי קשר."
+
+#, fuzzy
+msgid "emails.reviewReinstate.subject"
+msgstr "בקשה לבדיקה חודשה"
+
+#, fuzzy
+msgid "emails.reviewReinstate.body"
+msgstr ""
+"{$recipientName}:\n"
+"ברצוננו להחזיר את בקשתנו שתבדוק את ההגשה \"{$submissionTitle}\" "
+"ל{$contextName}. אנו מקווים כי תוכלו לסייע בתהליך הסקירה של כתב העת הזה<br /"
+">\n"
+"<br />\n"
+"אם יש לך שאלות, אנא צור איתי קשר."
+
+msgid "emails.reviewConfirm.subject"
+msgstr "יכול לבדוק"
+
+msgid "emails.reviewConfirm.body"
+msgstr ""
+"לעורכים:<br />\n"
+"<br />\n"
+"אני מסכים לבדוק ההגשה \"{$submissionTitle}\" ל{$contextName}. תודה שפניתם "
+"אלי ואני מתכנן להחזיר את חוות הדעת עד {$reviewDueDate}, אם לא לפני.<br />\n"
+"<br />\n"
+"{$senderName}"
+
+msgid "emails.reviewDecline.subject"
+msgstr "אינו יכול לבדוק"
+
+msgid "emails.reviewDecline.body"
+msgstr ""
+"לעורכים:<br />\n"
+"<br />\n"
+"לצערי בשלב זה איני יכול לסקור את ההגשה \"{$submissionTitle} ל{$contextName}. "
+"תודה שחשבתם עלי, ולא להסס לבקש שוב.<br />\n"
+"<br />\n"
+"{$senderName}"
+
+#, fuzzy
+msgid "emails.reviewRemind.subject"
+msgstr "תזכורת שליחת חוות דעת"
+
+#, fuzzy
+msgid "emails.reviewRemind.body"
+msgstr ""
+"{$recipientName}:<br />\n"
+"<br />\n"
+"זוהי תזכורת לבקשתנו לחוות דעתך על ההגשה \"{$submissionTitle} "
+"ל{$contextName}. קוינו לקבל את חוות הדעת עד {$reviewDueDate}, ונשמח לקבל את "
+"זה בהקדם.<br />\n"
+"<br />\n"
+"אם אין ברשותך שם משתמש וסיסמתך לאתר כתב העת, ניתן לאפס אותו עם לינק זה (ישלח "
+"אליך בדוא\"ל עם שם משתמש שלך). {$passwordResetUrl}<br />\n"
+"<br />\n"
+"אתר הגשה: {$reviewAssignmentUrl}<br />\n"
+"<br />\n"
+"נא לאשר הסכמתך לסקור את המאמר ולהגיש חוות דעת. מחכים לשמוע ממך.<br />\n"
+"<br />\n"
+"{$signature}"
+
+#, fuzzy
+msgid "emails.reviewRemindAuto.subject"
+msgstr "תזכורת הגשת ביקורת אוטומטית"
+
+msgid "emails.reviewRemindAuto.body"
+msgstr ""
+
+#, fuzzy
+msgid "emails.editorDecisionAccept.subject"
+msgstr "החלטת העורך"
+
+#, fuzzy
+msgid "emails.editorDecisionAccept.body"
+msgstr ""
+"{$authors}: \n"
+"<br />\n"
+"הגענו להחלטה לגבי הגשה שלך ל{$contextName}: {$submissionTitle}\n"
+"<br />\n"
+"החלטה שלנו: קבל הגשה"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr ""
+
+msgid "emails.editorDecisionSkipReview.body"
+msgstr ""
+
+msgid "emails.layoutRequest.subject"
+msgstr ""
+
+msgid "emails.layoutRequest.body"
+msgstr ""
+
+msgid "emails.layoutComplete.subject"
+msgstr ""
+
+msgid "emails.layoutComplete.body"
+msgstr ""
+
+msgid "emails.emailLink.subject"
+msgstr ""
+
+msgid "emails.emailLink.body"
+msgstr ""
+
+msgid "emails.emailLink.description"
+msgstr ""
+
+msgid "emails.subscriptionNotify.subject"
+msgstr ""
+
+msgid "emails.subscriptionNotify.body"
+msgstr ""
+
+msgid "emails.openAccessNotify.subject"
+msgstr ""
+
+msgid "emails.openAccessNotify.body"
+msgstr ""
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr ""
+
+msgid "emails.subscriptionBeforeExpiry.body"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiry.body"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiryLast.body"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseIndl.body"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseInstl.body"
+msgstr ""
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr ""
+
+msgid "emails.subscriptionRenewIndl.body"
+msgstr ""
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr ""
+
+msgid "emails.subscriptionRenewInstl.body"
+msgstr ""
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr ""
+
+msgid "emails.citationEditorAuthorQuery.body"
+msgstr ""
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr ""
+
+msgid "emails.revisedVersionNotify.body"
+msgstr ""
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr ""
+
+msgid "emails.statisticsReportNotification.body"
+msgstr ""
+
+msgid "emails.announcement.subject"
+msgstr ""
+
+msgid "emails.announcement.body"
+msgstr ""

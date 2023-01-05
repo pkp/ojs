@@ -19,8 +19,8 @@ msgstr "人工支付通知"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"人工支付需要被{$contextName}期刊的{$senderName}来处理（用户名&quot;{$senderUsername}&quot;）。<br />"
-"\n"
+"人工支付需要被{$contextName}期刊的{$senderName}来处理（用户名&quot;"
+"{$senderUsername}&quot;）。<br />\n"
 "<br />\n"
 "被支付的项目：&quot;{$paymentName}&quot;。<br />\n"
 "费用：{$paymentAmount} ({$paymentCurrencyCode})。<br />\n"
@@ -29,3 +29,6 @@ msgstr ""
 
 msgid "emails.manualPaymentNotification.description"
 msgstr "这封电子邮件用来通知期刊管理员去处理一个人工支付请求。"
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr ""

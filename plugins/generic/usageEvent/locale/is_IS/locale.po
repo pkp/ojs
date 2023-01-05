@@ -6,3 +6,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Weblate\n"
+
+msgid "plugins.generic.usageEvent.displayName"
+msgstr ""
+
+msgid "plugins.generic.usageEvent.description"
+msgstr ""

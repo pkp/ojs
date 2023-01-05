@@ -16,55 +16,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.newSubmissionSingle"
-msgstr "Ny indsendelse"
-
-msgid "submission.submit.submissionChecklist"
-msgstr "Indsendelsestjekliste"
-
-msgid "submission.upload.fileContents"
-msgstr "Artikelkomponent"
+msgid "submission.submit.userGroup"
+msgstr "Indsend i min rolle som..."
 
 msgid "submission.upload.selectComponent"
 msgstr "Vælg artikelelement"
 
-msgid "submission.submit.whatNext.description"
-msgstr "Tidsskriftet er blevet underrettet om din indsendelse, og du har modtaget en e-mailbekræftelse. Så snart redaktionen har gennemset indsendelsen, vil du blive kontaktet."
-
-msgid "submission.metadataDescription"
-msgstr ""
-"Disse specifikationer er baseret på Dublin Core, en international metadata-"
-"standard til beskrivelse af tidsskrifters indhold."
-
-msgid "workflow.review.externalReview"
-msgstr "Bedømmelse"
-
-msgid "submission.issueEntry"
-msgstr "Metadata"
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Send til bedømmelse"
-
 msgid "submission.title"
 msgstr "Artiklens titel"
 
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Indsendelsens nummer-metadata blev opdateret."
-
-msgid "submission.submit.contributorRole"
-msgstr "Bidragyders rolle"
-
-msgid "submission.submit.userGroup"
-msgstr "Indsend i min rolle som..."
-
 msgid "submission.title.tip"
-msgstr "Indsendelsestypen er som regel enten 'billede', 'tekst' eller anden multimedietype.  Vælg den, der er mest relevant i forbindelse med din indsendelse.  Eksempler kan ses her: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Indsendelsestypen er som regel enten 'billede', 'tekst' eller anden "
+"multimedietype.  Vælg den, der er mest relevant i forbindelse med din "
+"indsendelse.  Eksempler kan ses her: <a target=\"_blank\" href=\"http://"
+"dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://"
+"dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Påbegynd en ny indsendelse"
 
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Ny indsendelse"
+
 msgid "grid.action.workflow"
 msgstr "Indsendelses-workflow"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Resumeet skal være på {$wordCount} ord eller derunder."
+
+msgid "submission.submit.noContext"
+msgstr "Denne indsendelses tidsskrift blev ikke fundet."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Tidsskriftet er blevet underrettet om din indsendelse, og du har modtaget en "
+"e-mailbekræftelse. Så snart redaktionen har gennemset indsendelsen, vil du "
+"blive kontaktet."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Publiceringsversionen fremvises i nummeradgangen"
@@ -78,7 +69,9 @@ msgstr ""
 "tilgængelig."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Artiklens publiceringsversion \"{$galleyFormatName}\" er ikke længere tilgængelig."
+msgstr ""
+"Artiklens publiceringsversion \"{$galleyFormatName}\" er ikke længere "
+"tilgængelig."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Indsendelsens 'public identifiers' blev opdateret."
@@ -92,7 +85,9 @@ msgstr ""
 "em> for læsere.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Denne publiceringsversion <em>vil blive gjort tilgængelig</em> for læsere.</p>"
+msgstr ""
+"<p>Denne publiceringsversion <em>vil blive gjort tilgængelig</em> for læsere."
+"</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Gør denne publiceringsversion tilgængelig"
@@ -101,13 +96,18 @@ msgid "submission.galleyFiles"
 msgstr "Publiceringsklare filer"
 
 msgid "submission.proofReadingDescription"
-msgstr "Layoutredaktøren uploader de produktionklare filer, der er blevet færdiggjort til publicering her. Brug <em>Tilføj auditør</em> for at vælge forfattere og andre til korrekturlæsning af filerne, med de tilrettede filer uploadet til godkendelse forud for publicering."
+msgstr ""
+"Layoutredaktøren uploader de produktionklare filer, der er blevet "
+"færdiggjort til publicering her. Brug <em>Tilføj auditør</em> for at vælge "
+"forfattere og andre til korrekturlæsning af filerne, med de tilrettede filer "
+"uploadet til godkendelse forud for publicering."
 
 msgid "grid.action.approveProof"
 msgstr "Godkend, at korrektur indgår som publiceringsversion ."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Denne korrektur er blevet godkendt til at indgå som publiceringsversion."
+msgstr ""
+"Denne korrektur er blevet godkendt til at indgå som publiceringsversion."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Titel og resumé"
@@ -120,54 +120,68 @@ msgstr ""
 msgid "submission.pageProofs"
 msgstr "Korrekturlæsning"
 
+msgid "workflow.review.externalReview"
+msgstr "Bedømmelse"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Indsendelsens nummer-metadata blev opdateret."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikelkomponent"
+
 msgid "submission.complete"
 msgstr "Godkendt"
 
 msgid "submission.incomplete"
 msgstr "Mangler godkendelse"
 
+msgid "submission.submit.submissionChecklist"
+msgstr "Indsendelsestjekliste"
+
 msgid "submission.submit.privacyStatement"
 msgstr "Erklæring om beskyttelse af personlige oplysninger"
+
+msgid "submission.submit.contributorRole"
+msgstr "Bidragyders rolle"
 
 msgid "submission.citationFormat.notFound"
 msgstr "Det ønskede citationsformat kunne ikke genfindes."
 
+msgid "submission.metadataDescription"
+msgstr ""
+"Disse specifikationer er baseret på Dublin Core, en international metadata-"
+"standard til beskrivelse af tidsskrifters indhold."
+
 msgid "section.any"
 msgstr "Enhver sektion"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "Resumeet skal være på {$wordCount} ord eller derunder."
+msgid "submission.sectionOptions"
+msgstr "Sektionsindstillinger"
 
-msgid "publication.scheduledIn"
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} numre"
+
+msgid "catalog.category.heading"
+msgstr "Alle numre"
+
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Planlagt til at blive publiceret i <a href=\"{$issueUrl}\">{$issueName}</a>."
+"Publiceringsversionerne i denne udgave kan ikke redigeres, da de allerede er "
+"blevet udgivet."
 
-msgid "publication.publishedIn"
-msgstr "Publiceret i <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgid "galley.publicationNotFound"
+msgstr "Udgaven til denne publiceringsversion blev ikke fundet."
 
-msgid "publication.required.issue"
-msgstr "Artiklen skal placeres i et nummer inden den kan publiceres."
+msgid "publication.assignToissue"
+msgstr "Angiv nummer"
 
-msgid "publication.publish.confirmation.backIssue"
+msgid "publication.assignedToIssue"
 msgstr ""
-"Alle publikationskrav er opfyldt. Dette publiceres, så snart {$issue} "
-"offentliggøres. Er du sikker på, at du vil publicere dette?"
+"Dette er tildelt <a href=\"{$issueUrl}\">{$issueName}</a>, men det er ikke "
+"planlagt publiceret."
 
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Alle publikationskrav er opfyldt. Dette publiceres, når {$issue} "
-"offentliggøres. Er du sikker på, at du vil knytte dette til publicering af "
-"nummeret?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"Alle publikationskrav er opfyldt. Er du sikker på, at du vil publicere dette?"
-
-msgid "publication.invalidIssue"
-msgstr "Nummeret til denne publikation blev ikke fundet."
-
-msgid "publication.invalidSection"
-msgstr "Sektionen til denne publikation blev ikke fundet."
+msgid "publication.changeIssue"
+msgstr "Skift nummer"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -176,34 +190,29 @@ msgstr ""
 "offentliggjort et andet sted, og du er nødt til at forsyne den med en "
 "tidligere dato."
 
-msgid "galley.publicationNotFound"
-msgstr "Udgaven til denne publiceringsversion blev ikke fundet."
+msgid "publication.invalidSection"
+msgstr "Sektionen til denne publikation blev ikke fundet."
 
-msgid "galley.editPublishedDisabled"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inaktiv)"
+
+msgid "publication.invalidIssue"
+msgstr "Nummeret til denne publikation blev ikke fundet."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"Publiceringsversionerne i denne udgave kan ikke redigeres, da de allerede er "
-"blevet udgivet."
+"Alle publikationskrav er opfyldt. Er du sikker på, at du vil publicere dette?"
 
-msgid "catalog.category.heading"
-msgstr "Alle numre"
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Alle publikationskrav er opfyldt. Dette publiceres, når {$issue} "
+"offentliggøres. Er du sikker på, at du vil knytte dette til publicering af "
+"nummeret?"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} numre"
-
-msgid "submission.sectionOptions"
-msgstr "Sektionsindstillinger"
-
-msgid "submission.submit.noContext"
-msgstr "Denne indsendelses tidsskrift blev ikke fundet."
-
-msgid "publication.selectIssue"
-msgstr "Vælg et nummer som planlægges udgivet"
-
-msgid "publication.assignToissue"
-msgstr "Angiv nummer"
-
-msgid "publication.unscheduledIn"
-msgstr "Dette er ikke planlagt udgivet i et bestemt nummer."
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Alle publikationskrav er opfyldt. Dette publiceres, så snart {$issue} "
+"offentliggøres. Er du sikker på, at du vil publicere dette?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -211,8 +220,21 @@ msgstr ""
 "udgivelsesdatoen er sat til {$datePublished}. Er du sikker på, at du ønsker "
 "at udgive det?"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inaktiv)"
+msgid "publication.required.issue"
+msgstr "Artiklen skal placeres i et nummer inden den kan publiceres."
+
+msgid "publication.publishedIn"
+msgstr "Publiceret i <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Planlagt til at blive publiceret i <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Dette er ikke planlagt udgivet i et bestemt nummer."
+
+msgid "publication.selectIssue"
+msgstr "Vælg et nummer som planlægges udgivet"
 
 msgid "submission.publication"
 msgstr "Publikation"
@@ -279,8 +301,8 @@ msgstr ""
 
 msgid "submission.license.description"
 msgstr ""
-"Licensen indstilles automatisk til <a href='{$licenseUrl}' target='_blank'>{$"
-" licensnavn}</a>, når dette publiceres."
+"Licensen indstilles automatisk til <a href='{$licenseUrl}' "
+"target='_blank'>{$ licensnavn}</a>, når dette publiceres."
 
 msgid "submission.copyrightHolder.description"
 msgstr "Copyright tildeles automatisk {$copyright}, når dette publiceres."
@@ -306,29 +328,31 @@ msgstr "Publikationsoplysninger i forbindelse med version {$version}"
 msgid "submission.queries.production"
 msgstr "Drøftelser under produktion"
 
-msgid "publication.assignedToIssue"
-msgstr ""
-"Dette er tildelt <a href=\"{$issueUrl}\">{$issueName}</a>, men det er ikke "
-"planlagt publiceret."
-
-msgid "publication.changeIssue"
-msgstr "Skift nummer"
-
-msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "Indsendelsen, {$title}, blev sendt tilbage til bedømmelsestrinnet."
-
-msgid "editor.submission.decision.backToReview.log"
-msgstr ""
-"{$editorName} tilbagekaldte beslutningen om at acceptere denne indsendelse "
-"og sendte den tilbage til bedømmelsestrinnet."
+msgid "editor.submission.decision.backToReview"
+msgstr "Tilbage til bedømmelse"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
 "Omgør beslutningen om at acceptere denne indsendelse og send den tilbage til "
 "bedømmelsestrinnet."
 
-msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Vælg filer som skal sendes til bedømmelsestrinnet."
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} tilbagekaldte beslutningen om at acceptere denne indsendelse "
+"og sendte den tilbage til bedømmelsestrinnet."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Sendt tilbage til bedømmelse"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Indsendelsen, {$title}, blev sendt tilbage til bedømmelsestrinnet."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Send en e-mail til forfatterne for at fortælle dem, at deres indsendelse "
+"sendes tilbage til bedømmelsestrinnet. Forklar, hvorfor denne beslutning "
+"blev truffet, og informer forfatterne om, hvilken yderligere bedømmelse, der "
+"vil blive foretaget."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
@@ -338,23 +362,13 @@ msgstr ""
 "kan forvente at høre fra redaktørerne igen. Denne e-mail vil først blive "
 "sendt, når beslutningen er registreret."
 
-msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
-msgstr ""
-"Send en e-mail til forfatterne for at fortælle dem, at deres indsendelse "
-"sendes tilbage til bedømmelsestrinnet. Forklar, hvorfor denne beslutning "
-"blev truffet, og informer forfatterne om, hvilken yderligere bedømmelse, der "
-"vil blive foretaget."
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Vælg filer som skal sendes til bedømmelsestrinnet."
 
-msgid "editor.submission.decision.backToReview.completed"
-msgstr "Sendt tilbage til bedømmelse"
-
-msgid "editor.submission.decision.backToReview"
-msgstr "Tilbage til bedømmelse"
-
-msgid "doi.submission.incorrectContext"
+msgid "doi.submission.issueMissing.publication"
 msgstr ""
 "Kunne ikke generere et DOI til den følgende indsendelse: {$pubObjectTitle}. "
-"Den eksisterer ikke i sammenhæng med det nuværende tidsskrift."
+"Indsendelsen skal tilknyttes et nummer, før et DOI kan genereres."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
@@ -362,10 +376,10 @@ msgstr ""
 "følgende indsendelse: {$itemTitle}. Indsendelsen skal tilknyttes et nummer, "
 "før et DOI kan genereres."
 
-msgid "doi.submission.issueMissing.publication"
+msgid "doi.submission.incorrectContext"
 msgstr ""
 "Kunne ikke generere et DOI til den følgende indsendelse: {$pubObjectTitle}. "
-"Indsendelsen skal tilknyttes et nummer, før et DOI kan genereres."
+"Den eksisterer ikke i sammenhæng med det nuværende tidsskrift."
 
 msgid "submission.layout.viewGalley"
 msgstr "Vis publiceringsklare filer"
@@ -374,6 +388,33 @@ msgid "galley.cantEditPublished"
 msgstr ""
 "Denne publiceringsklare fil kan ikke ændres da den allerede er blevet "
 "publiceret."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Læs og forstå venligst ophavsretsbetingelserne for at indsende til dette "
+"tidsskrift."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Du har ikke lov til at indsende et manuskript til dette tidsskrift, idet "
+"forfattere skal registreres først af redaktionen. Hvis du mener, dette er en "
+"fejl, så kontakt venligst <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Du har ikke lov til at indsende et manuskript til dette tidsskrift, idet "
+"indsendelser til alle sektioner hos dette tidsskrift er blevet deaktiveret "
+"eller begrænset. Hvis du mener, dette er en fejl, så kontakt venligst <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr "Denne indsendelses sektion kunne ikke findes."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Kun redaktionen kan indsende et manuskript til denne sektion."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Mindst en forfatter er påkrævet."
@@ -392,26 +433,5 @@ msgstr ""
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Vælg bidragyderens rolle."
 
-msgid "submission.copyright.description"
-msgstr ""
-"Læs og forstå venligst ophavsretsbetingelserne for at indsende til dette "
-"tidsskrift."
-
-msgid "submission.wizard.noSectionAllowed.description"
-msgstr ""
-"Du har ikke lov til at indsende et manuskript til dette tidsskrift, idet "
-"indsendelser til alle sektioner hos dette tidsskrift er blevet deaktiveret "
-"eller begrænset. Hvis du mener, dette er en fejl, så kontakt venligst <a "
-"href='mailto:{$email}'>{$name}</a>."
-
-msgid "submission.wizard.notAllowed.description"
-msgstr ""
-"Du har ikke lov til at indsende et manuskript til dette tidsskrift, idet "
-"forfattere skal registreres først af redaktionen. Hvis du mener, dette er en "
-"fejl, så kontakt venligst <a href='mailto:{$email}'>{$name}</a>."
-
-msgid "submission.sectionNotFound"
-msgstr "Denne indsendelses sektion kunne ikke findes."
-
-msgid "submission.sectionRestrictedToEditors"
-msgstr "Kun redaktionen kan indsende et manuskript til denne sektion."
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Send til bedømmelse"

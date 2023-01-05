@@ -16,11 +16,68 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "manager.distribution.access"
+msgstr "Zugriff"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Bitte wählen Sie aus, wie das Standard Copyright Datum für einen Artikel "
+"ausgewählt werden soll. Dieser Standard kann von Fall zu Fall überschrieben "
+"werden. Praktizieren Sie \"publish as you go\", nutzen Sie nicht das "
+"Publikationsdatum der Ausgabe."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr ""
+"Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe "
+"abgeleitet"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr ""
+"Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels "
+"abgeleitet, wie bei \"publish-as-you-go\"."
+
+msgid "manager.distribution.publication"
+msgstr "Veröffentlichung"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Veröffentlichungsart"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS wird nicht verwendet, um die Zeitschrifteninhalte online zu "
+"veröffentlichen."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Die Zeitschrift bietet freien Zugang (Open Access) zu ihren Inhalten."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Einige oder alle Inhalte der Zeitschrift sind nur für Abonnent/innen "
+"zugänglich."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Digital Object Identifier (DOIs) zu Artikeln, Heften, und Fahnen zuweisen."
+
+#, fuzzy
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Bitte wählen Sie, welchen Objekten DOI zugewiesen werden sollen."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Standard-Patterns verwenden.<br />%j.v%vi%i für Hefte<br />%j.v%vi%i.%a für "
+"Artikel<br />%j.v%vi%i.%a.g%g für Fahnen."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Im Schritt \"Lektorat\""
+
 msgid "manager.website.archiving"
 msgstr "Archivierung"
 
 msgid "manager.files.note"
-msgstr "Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse."
+msgstr ""
+"Anmerkung: Der Dateinavigator ermöglicht die unmittelbare Betrachtung und "
+"Bearbeitung der mit einer Zeitschrift verbundenen Dateien und Verzeichnisse."
 
 msgid "manager.journalManagement"
 msgstr "Zeitschriftenverwaltung"
@@ -52,7 +109,10 @@ msgstr ""
 "bezüglich der Unterstützung weiterer Sprachen."
 
 msgid "manager.languages.noneAvailable"
-msgstr "Leider ist keine weitere Sprache verfügbar. Setzen Sie sich mit Ihrer Administratorin/Ihrem Administrator in Verbindung, wenn Sie in der Zeitschrift weitere Sprachen verwenden möchten."
+msgstr ""
+"Leider ist keine weitere Sprache verfügbar. Setzen Sie sich mit Ihrer "
+"Administratorin/Ihrem Administrator in Verbindung, wenn Sie in der "
+"Zeitschrift weitere Sprachen verwenden möchten."
 
 msgid "manager.languages.primaryLocaleInstructions"
 msgstr "Dies ist die Standardsprache der Zeitschriften-Website."
@@ -73,10 +133,18 @@ msgid "manager.payment.authorFees"
 msgstr "Autor/innengebühren"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen unter \"1. Schritt\" der Beitragseinreichung, im \"Über uns\" der Zeitschrift unter \"Zur Zeitschrift\" sowie an allen Stellen, an denen eine Zahlung erforderlich ist."
+msgstr ""
+"Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den "
+"Gebühren, die weiter unten bearbeitet werden können) erscheinen unter \"1. "
+"Schritt\" der Beitragseinreichung, im \"Über uns\" der Zeitschrift unter "
+"\"Zur Zeitschrift\" sowie an allen Stellen, an denen eine Zahlung "
+"erforderlich ist."
 
 msgid "manager.payment.currencymessage"
-msgstr "OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das Abonnement bezahlt wird, der hier festgelegten entspricht."
+msgstr ""
+"OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für "
+"Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das "
+"Abonnement bezahlt wird, der hier festgelegten entspricht."
 
 msgid "manager.payment.description"
 msgstr "Beschreibung"
@@ -94,7 +162,9 @@ msgid "manager.payment.feePaymentOptions"
 msgstr "Zahlungsoptionen"
 
 msgid "manager.payment.form.numeric"
-msgstr "Alle Kosten müssen durch positive Zahlenwerte ausgedrückt werden, Dezimalstellen sind möglich."
+msgstr ""
+"Alle Kosten müssen durch positive Zahlenwerte ausgedrückt werden, "
+"Dezimalstellen sind möglich."
 
 msgid "manager.payment.generalFees"
 msgstr "Allgemeine Gebühren"
@@ -117,13 +187,19 @@ msgid "manager.payment.options"
 msgstr "Optionen"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
-msgstr "Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet."
+msgstr ""
+"Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/"
+"innen werden durch die Abonnementverwaltung verwaltet."
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?"
 
 msgid "manager.payment.options.enablePayments"
-msgstr "Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können."
+msgstr ""
+"Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die "
+"Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, "
+"dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu "
+"können."
 
 msgid "manager.payment.options.fee"
 msgstr "Gebühr"
@@ -171,7 +247,11 @@ msgid "manager.payment.readerFees"
 msgstr "Leser/innen-Gebühren"
 
 msgid "manager.payment.readerFeesDescription"
-msgstr "Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen im \"Über uns\" der Zeitschrift unter \"Zur Zeitschrift\" und an allen Stellen, an denen eine Zahlung erforderlich ist."
+msgstr ""
+"Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den "
+"Gebühren, die weiter unten bearbeitet werden können) erscheinen im \"Über uns"
+"\" der Zeitschrift unter \"Zur Zeitschrift\" und an allen Stellen, an denen "
+"eine Zahlung erforderlich ist."
 
 msgid "manager.payment.records"
 msgstr "Protokoll"
@@ -198,7 +278,9 @@ msgid "manager.people.allUsers"
 msgstr "Alle eingetragenen Benutzer/innen"
 
 msgid "manager.people.confirmRemove"
-msgstr "Diese/n Benutze/in aus dieser Zeitschrift streichen? Die Benutzerin/der Benutzer wird dadurch keine Funktion in dieser Zeitschrift mehr haben."
+msgstr ""
+"Diese/n Benutze/in aus dieser Zeitschrift streichen? Die Benutzerin/der "
+"Benutzer wird dadurch keine Funktion in dieser Zeitschrift mehr haben."
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Eine Vorlage auswählen"
@@ -210,16 +292,26 @@ msgid "manager.people.enrollSyncJournal"
 msgstr "Mit der Zeitschrift"
 
 msgid "manager.people.mergeUsers.from.description"
-msgstr "Wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Konto zusammengeführt werden sollen (wenn jemand z.B. zwei Konten hat). Das zuerst ausgewählte Konto wird gelöscht, seine Beiträge, Aufgaben usw. werden dem zweiten Konto zugeschrieben."
+msgstr ""
+"Wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Konto "
+"zusammengeführt werden sollen (wenn jemand z.B. zwei Konten hat). Das zuerst "
+"ausgewählte Konto wird gelöscht, seine Beiträge, Aufgaben usw. werden dem "
+"zweiten Konto zugeschrieben."
 
 msgid "manager.people.mergeUsers.into.description"
-msgstr "Wählen Sie ein Benutzer/innen-Konto, dem die Autor/innenschaft, die Aufgaben usw. der/des vorherigen Benutzer/in zugeschrieben werden sollen."
+msgstr ""
+"Wählen Sie ein Benutzer/innen-Konto, dem die Autor/innenschaft, die Aufgaben "
+"usw. der/des vorherigen Benutzer/in zugeschrieben werden sollen."
 
 msgid "manager.people.roleEnrollment"
 msgstr "{$role} eintragen"
 
 msgid "manager.people.syncUserDescription"
-msgstr "Mit der Synchronisierung werden alle in einer anderen Zeitschrift in einer bestimmten Funktion eingeschriebenen Benutzer/innen in dieser Zeitschrift mit eben dieser Funktion eingetragen. So können Zeitschriften eine bestimmte Benutzer/innen-Gruppe (z.B. Gutachter/innen) miteinander abgleichen."
+msgstr ""
+"Mit der Synchronisierung werden alle in einer anderen Zeitschrift in einer "
+"bestimmten Funktion eingeschriebenen Benutzer/innen in dieser Zeitschrift "
+"mit eben dieser Funktion eingetragen. So können Zeitschriften eine bestimmte "
+"Benutzer/innen-Gruppe (z.B. Gutachter/innen) miteinander abgleichen."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Zusammenfassungen sind nicht verpflichtend"
@@ -232,34 +324,56 @@ msgstr "Sind Sie sicher, dass Sie diese Rubrik endgültig entfernen wollen?"
 
 #, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Bevor diese Rubrik entfernt werden kann, müssen Sie Artikel aus dieser Rubrik in andere Rubriken verschieben."
+msgstr ""
+"Bevor diese Rubrik entfernt werden kann, müssen Sie Artikel aus dieser "
+"Rubrik in andere Rubriken verschieben."
 
 msgid "manager.sections.create"
 msgstr "Eine Rubrik erstellen"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Fügen Sie dieser Rubrik eine/n Rubrikredakteur/in aus den zur Verfügung stehenden Rubrikredakteur/innen hinzu. Sobald er/sie hinzugefügt worden ist, geben Sie an, ob die/der Rubrikredakteur/in den BEGUTACHTUNGS- (Peer Review) oder den REDAKTIONSPROZESS (Lektorat, Layout und Korrekturlektorat) von Beiträgen zu dieser Rubrik durchführen soll. Rubrikredakteur/innen können Sie anlegen, in dem Sie auf <a href=\"{$sectionEditorsUrl}\">Rubrikredakteur/innen</a> unter Funktionen in der Zeitschriftenverwaltung klicken."
+msgstr ""
+"Fügen Sie dieser Rubrik eine/n Rubrikredakteur/in aus den zur Verfügung "
+"stehenden Rubrikredakteur/innen hinzu. Sobald er/sie hinzugefügt worden ist, "
+"geben Sie an, ob die/der Rubrikredakteur/in den BEGUTACHTUNGS- (Peer Review) "
+"oder den REDAKTIONSPROZESS (Lektorat, Layout und Korrekturlektorat) von "
+"Beiträgen zu dieser Rubrik durchführen soll. Rubrikredakteur/innen können "
+"Sie anlegen, in dem Sie auf <a href=\"{$sectionEditorsUrl}\">Rubrikredakteur/"
+"innen</a> unter Funktionen in der Zeitschriftenverwaltung klicken."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Beiträge können nur von Redakteur/innen und Rubrikredakteur/innen eingereicht werden."
+msgstr ""
+"Beiträge können nur von Redakteur/innen und Rubrikredakteur/innen "
+"eingereicht werden."
 
 msgid "manager.sections.editors"
 msgstr "Rubrikredakteur/innen"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Mindestens eine Rubrik muss aktiv sein. Gehen Sie zu Workflow-Einstellungen, "
+"um alle Einreichungen für diese Zeitschrift zu deaktivieren."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Ein Kürzel für den Rubriktitel ist erforderlich"
 
 msgid "manager.sections.form.mustAllowPermission"
-msgstr "Bitte stellen Sie sicher, dass mindestens ein Kontrollkästchen für jede Zuteilung einer Rubrikredakteurin/eines Rubrikredakteurs angekreuzt ist."
+msgstr ""
+"Bitte stellen Sie sicher, dass mindestens ein Kontrollkästchen für jede "
+"Zuteilung einer Rubrikredakteurin/eines Rubrikredakteurs angekreuzt ist."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "Bitte stellen Sie sicher, dass Sie ein gültiges Begutachtungsformular gewählt haben."
+msgstr ""
+"Bitte stellen Sie sicher, dass Sie ein gültiges Begutachtungsformular "
+"gewählt haben."
 
 msgid "manager.sections.form.titleRequired"
 msgstr "Ein Rubriktitel ist erforderlich."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Autor/innennamen zu Beiträgen in dieser Rubrik nicht im Inhaltsverzeichnis aufführen."
+msgstr ""
+"Autor/innennamen zu Beiträgen in dieser Rubrik nicht im Inhaltsverzeichnis "
+"aufführen."
 
 msgid "manager.sections.hideTocTitle"
 msgstr "Diese Rubrik nicht im Inhaltsverzeichnis der Ausgabe aufführen."
@@ -268,7 +382,9 @@ msgid "manager.sections.identifyType"
 msgstr "Beiträge in dieser Rubrik kennzeichnen als"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "(z.B. \"Begutachteter Artikel\", \"Nicht begutachteter Artikel\", \"Artikel auf Aufforderung\" usw.)"
+msgstr ""
+"(z.B. \"Begutachteter Artikel\", \"Nicht begutachteter Artikel\", \"Artikel "
+"auf Aufforderung\" usw.)"
 
 msgid "manager.sections.indexed"
 msgstr "Indiziert"
@@ -321,7 +437,11 @@ msgid "manager.setup.homepageContent"
 msgstr "Inhalte der Zeitschriften-Homepage"
 
 msgid "manager.setup.homepageContentDescription"
-msgstr "Die Zeitschriften-Homepage besteht standardmäßig aus Navigations-Links. Zusätzliche Inhalte können hinzugefügt werden, indem eine oder alle der folgenden Optionen ausgewählt werden. Sie werden in der angezeigten Reihenfolge auftauchen."
+msgstr ""
+"Die Zeitschriften-Homepage besteht standardmäßig aus Navigations-Links. "
+"Zusätzliche Inhalte können hinzugefügt werden, indem eine oder alle der "
+"folgenden Optionen ausgewählt werden. Sie werden in der angezeigten "
+"Reihenfolge auftauchen."
 
 msgid "manager.setup.useStyleSheet"
 msgstr "Style sheet der Zeitschrift"
@@ -360,37 +480,43 @@ msgid "manager.setup.alternateHeader"
 msgstr "Alternative Kopfzeile"
 
 msgid "manager.setup.alternateHeaderDescription"
-msgstr "Anstelle von Zeitschriftentitel und -logo können Sie auch eine HTML-Version der Kopfzeile in das nachstehende Feld eingeben. Falls dies nicht gewünscht ist, lassen Sie das Feld frei."
-
-msgid "manager.setup.enableAnnouncements.description"
-msgstr "Sie können die Leser/innen über die Zeitschrift betreffende Neuigkeiten und Ereignisse auf der Mitteilungsseite der Zeitschrift informieren."
-
-msgid "manager.setup.announcementsIntroduction.description"
-msgstr "Geben Sie zusätzliche Informationen ein, die den Leser/innen auf der Mitteilungsseite angezeigt werden."
+msgstr ""
+"Anstelle von Zeitschriftentitel und -logo können Sie auch eine HTML-Version "
+"der Kopfzeile in das nachstehende Feld eingeben. Falls dies nicht gewünscht "
+"ist, lassen Sie das Feld frei."
 
 msgid "manager.setup.announcements"
 msgstr "Mitteilungen"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Zusätzliche Informationen"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Geben Sie zusätzliche Informationen ein, die den Leser/innen auf der "
+"Mitteilungsseite angezeigt werden."
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Erscheint unter \"Über uns\")"
 
 msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten."
+msgstr ""
+"Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, "
+"zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten."
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine Erklärung zu möglicherweise bestehenden Interessenkonflikten."
+msgstr ""
+"Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine "
+"Erklärung zu möglicherweise bestehenden Interessenkonflikten."
 
 msgid "manager.setup.history"
 msgstr "Zeitschriften-Geschichte"
 
 msgid "manager.setup.historyDescription"
-msgstr "Dieser Text erscheint auf der \"Über uns\"-Seite der Zeitschrift und kann genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben."
-
-msgid "manager.setup.metadata.coverage"
-msgstr "Themenbereich"
-
-msgid "manager.setup.metadata.coverage.description"
-msgstr "Bezieht sich auf den räumlich-geografischen, auf den zeitlichen Bereich und auf die Eigenschaften des Fachgebiets."
+msgstr ""
+"Dieser Text erscheint auf der \"Über uns\"-Seite der Zeitschrift und kann "
+"genutzt werden, um Änderungen des Titels, in der Besetzung des Beirats und "
+"in anderen wesentlichen Belangen der Zeitschriftengeschichte zu beschreiben."
 
 msgid "manager.setup.currentIssue"
 msgstr "Aktuelle Ausgabe"
@@ -398,20 +524,17 @@ msgstr "Aktuelle Ausgabe"
 msgid "manager.setup.customizingTheLook"
 msgstr "5. Schritt: Individuelle Gestaltung der Zeitschrift"
 
-msgid "manager.setup.customTags"
-msgstr "Tags anpassen"
-
-msgid "manager.setup.customTagsDescription"
-msgstr "HTML-Kopfzeilen, die auf jeder Seite erscheinen (z.B. META-Einträge)."
-
 msgid "manager.setup.details"
 msgstr "Angaben zur Zeitschrift"
 
 msgid "manager.setup.details.description"
-msgstr "Name der Zeitschrift, ISSN, Kontakte, Unterstützer/innen und Suchmaschinen."
+msgstr ""
+"Name der Zeitschrift, ISSN, Kontakte, Unterstützer/innen und Suchmaschinen."
 
 msgid "manager.setup.disableUserRegistration"
-msgstr "Zeitschriftenverwalter/innen registrieren alle Benutzer/innen; Redakteur/innen und Rubrikredakteur/innen können nur Gutachter/innen registrieren."
+msgstr ""
+"Zeitschriftenverwalter/innen registrieren alle Benutzer/innen; Redakteur/"
+"innen und Rubrikredakteur/innen können nur Gutachter/innen registrieren."
 
 msgid "manager.setup.discipline"
 msgstr "Fachgebiet und Untergebiet"
@@ -422,13 +545,16 @@ msgstr ""
 "disziplinübergreifende Themen behandeln."
 
 msgid "manager.setup.disciplineExamples"
-msgstr "(z.B. Geschichte; Erziehungswissenschaften; Soziologie; Psychologie; Kulturwissenschaften; Jura)"
+msgstr ""
+"(z.B. Geschichte; Erziehungswissenschaften; Soziologie; Psychologie; "
+"Kulturwissenschaften; Jura)"
 
 msgid "manager.setup.disciplineProvideExamples"
 msgstr "Geben Sie Beispiele für die relevanten Fachgebiete der Zeitschrift an"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr "Fügen Sie das Inhaltsverzeichnis (falls vorhanden) der aktuellen Ausgabe ein."
+msgstr ""
+"Fügen Sie das Inhaltsverzeichnis (falls vorhanden) der aktuellen Ausgabe ein."
 
 msgid "manager.setup.editorDecision"
 msgstr "Redaktionsentscheidung"
@@ -437,7 +563,9 @@ msgid "manager.setup.emailBounceAddress"
 msgstr "Antwortadresse"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr "Jede E-Mail, die nicht zugestellt werden kann, erzeugt eine Fehlermeldung, die an diese Adresse geschickt wird."
+msgstr ""
+"Jede E-Mail, die nicht zugestellt werden kann, erzeugt eine Fehlermeldung, "
+"die an diese Adresse geschickt wird."
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
@@ -449,30 +577,59 @@ msgstr ""
 msgid "manager.setup.emails"
 msgstr "E-Mail-Kennzeichnung"
 
-#, fuzzy
-msgid "manager.setup.emailSignature.description"
-msgstr "Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter \"Zeitschriftenverwaltung\" bearbeitet werden."
-
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
+
+#, fuzzy
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Alle E-Mail-Vorlagen, die vom System im Namen der Zeitschrift verschickt "
+"werden, tragen die folgende Signatur. Die E-Mail-Vorlagen können unter "
+"\"Zeitschriftenverwaltung\" bearbeitet werden."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Mitteilungen aktivieren"
 
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Sie können die Leser/innen über die Zeitschrift betreffende Neuigkeiten und "
+"Ereignisse auf der Mitteilungsseite der Zeitschrift informieren."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Auf der Homepage anzeigen"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Anzahl der Mitteilungen, die auf der Homepage angezeigt werden sollen. "
+"Lassen Sie dieses Feld leer, wenn keine angezeigt werden sollen."
+
 msgid "manager.setup.enableUserRegistration"
-msgstr "Besucher/innen können einen Benutzeraccount bei der Zeitschrift registrieren."
+msgstr ""
+"Besucher/innen können einen Benutzeraccount bei der Zeitschrift registrieren."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Konzept"
 
 msgid "manager.setup.focusAndScope.description"
-msgstr "Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Artikel und anderer hier zu veröffentlichenden Werke."
+msgstr ""
+"Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die "
+"Bandbreite der Artikel und anderer hier zu veröffentlichenden Werke."
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Indizierung von Arbeiten für Autor/innen"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "OJS unterstützt das Protocol for Metadata Harvesting der <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit \"z.B.\" oder \"zum Beispiel\") gekennzeichnet sein."
+msgstr ""
+"OJS unterstützt das Protocol for Metadata Harvesting der <a href=\"http://"
+"www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a>, das "
+"den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die "
+"Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen "
+"Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die "
+"Kategorien für die Indizierung auswählen und den Autor/innen passende "
+"Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, "
+"wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; "
+"Begriff2). Die Einträge sollten als Beispiele (mit \"z.B.\" oder \"zum "
+"Beispiel\") gekennzeichnet sein."
 
 msgid "manager.setup.form.issnInvalid"
 msgstr "Die angegebene ISSN ist ungültig."
@@ -493,7 +650,8 @@ msgid "manager.setup.form.numReviewersPerSubmission"
 msgstr "Die Zahl der Gutachter/innen pro Beitrag wird benötigt."
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr "Die E-Mail-Adresse des Kontakts bei technischen Fragen ist erforderlich."
+msgstr ""
+"Die E-Mail-Adresse des Kontakts bei technischen Fragen ist erforderlich."
 
 msgid "manager.setup.form.supportNameRequired"
 msgstr "Der Name des Support-Kontakts ist erforderlich."
@@ -510,14 +668,23 @@ msgstr "Richtlinien"
 msgid "manager.setup.guidingSubmissions"
 msgstr "3. Schritt: Beitragseinreichung"
 
+msgid "manager.setup.identity"
+msgstr "Zeitschriftenidentität"
+
 msgid "manager.setup.includeCreativeCommons"
-msgstr "Für Zeitschriften, die unmittelbaren oder verzögerten Open Access liefern, allen veröffentlichten Werken zu gegebener Zeit eine Creative-Commons-Lizenz hinzufügen."
+msgstr ""
+"Für Zeitschriften, die unmittelbaren oder verzögerten Open Access liefern, "
+"allen veröffentlichten Werken zu gegebener Zeit eine Creative-Commons-Lizenz "
+"hinzufügen."
 
 msgid "manager.setup.information"
 msgstr "Informationen"
 
 msgid "manager.setup.information.description"
-msgstr "Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/innen und Leser/innen finden sich unter \"Informationen\" in der Seitenleiste."
+msgstr ""
+"Kurzbeschreibungen der Zeitschrift für Bibliothekar/innen, potentielle Autor/"
+"innen und Leser/innen finden sich unter \"Informationen\" in der "
+"Seitenleiste."
 
 msgid "manager.setup.information.forAuthors"
 msgstr "Für Autor/innen"
@@ -532,19 +699,26 @@ msgid "manager.setup.initialIssue"
 msgstr "Startausgabe"
 
 msgid "manager.setup.initialIssueDescription"
-msgstr "Geben Sie der Startausgabe (je nach gewähltem Format) eine eindeutige Bezeichnung:"
+msgstr ""
+"Geben Sie der Startausgabe (je nach gewähltem Format) eine eindeutige "
+"Bezeichnung:"
 
 msgid "manager.setup.institution"
 msgstr "Institution"
 
 msgid "manager.setup.itemsDescription"
 msgstr ""
-"Es können jederzeit Einträge in die Navigationsleiste (Standard: \""
-"Startseite\", \"Über uns\", \"Benutzer/innen\") am Kopf der Seite "
-"hinzugefügt werden."
+"Es können jederzeit Einträge in die Navigationsleiste (Standard: \"Startseite"
+"\", \"Über uns\", \"Benutzer/innen\") am Kopf der Seite hinzugefügt werden."
 
 msgid "manager.setup.itemsPerPage"
 msgstr "Einträge pro Seite"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Begrenzen Sie die Anzahl an Objekten (z.B. Einreichungen, Nutzer oder "
+"Zuweisungen durch die Redaktion), die in einer Liste angezeigt werden "
+"sollen, bevor weitere auf einer Folgeseite angezeigt werden."
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Abkürzung des Zeitschriftennamens"
@@ -559,13 +733,24 @@ msgid "manager.setup.contextAbout"
 msgstr "Über uns"
 
 msgid "manager.setup.contextAbout.description"
-msgstr "Nehmen Sie alle Informationen über Ihre Zeitschrift mit auf, die von Interesse für Leser/innen, Autor/innen oder Gutachter/innen sein könnten. Hierzu könnten Ihre Open-Access-Policy, das Konzept Ihrer Zeitschrift, Copyright-Angaben, Informationen über Sponsoren, die Geschichte der Zeitschrift, Angaben zum Datenschutz und die Beteiligung an LOCKSS- oder CLOCKSS-Archivierungssystemen gehören."
+msgstr ""
+"Nehmen Sie alle Informationen über Ihre Zeitschrift mit auf, die von "
+"Interesse für Leser/innen, Autor/innen oder Gutachter/innen sein könnten. "
+"Hierzu könnten Ihre Open-Access-Policy, das Konzept Ihrer Zeitschrift, "
+"Copyright-Angaben, Informationen über Sponsoren, die Geschichte der "
+"Zeitschrift, Angaben zum Datenschutz und die Beteiligung an LOCKSS- oder "
+"CLOCKSS-Archivierungssystemen gehören."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Inhalt der Eingangsseite der Zeitschrift"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, dass die aktuelle Ausgabe der Zeitschrift immer über den \"Aktuelle Ausgabe\"-Link in der Navigationsleiste zu erreichen ist."
+msgstr ""
+"Standardmäßig besteht die Eingangsseite nur aus Navigationslinks. "
+"Zusätzlicher Inhalt kann mit einer der folgenden Optionen hinzugefügt "
+"werden. Er erscheint in der Reihenfolge der Optionen. Bitte beachten Sie, "
+"dass die aktuelle Ausgabe der Zeitschrift immer über den \"Aktuelle Ausgabe"
+"\"-Link in der Navigationsleiste zu erreichen ist."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Kopfzeile der Startseite"
@@ -574,16 +759,28 @@ msgid "manager.setup.journalHomepageHeader.altText"
 msgstr "Kopfzeile der Startseite der Zeitschrift"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder .png-Dateien) können für die Startseite hochgeladen werden (ansonsten erscheint eine Textversion)."
+msgstr ""
+"Grafische Versionen von Zeitschriftentitel und -logo (als .gif-, .jpg- oder ."
+"png-Dateien) können für die Startseite hochgeladen werden (ansonsten "
+"erscheint eine Textversion)."
 
 msgid "manager.setup.contextInitials"
 msgstr "Kürzel der Zeitschrift"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Wählen Sie das Land, in dem diese Zeitschrift beheimatet ist, oder das Land "
+"der Postanschrift der Zeitschrift oder des Verlags."
 
 msgid "manager.setup.journalLayout"
 msgstr "Zeitschriftenlayout"
 
 msgid "manager.setup.journalLayoutDescription"
-msgstr "Entscheiden Sie sich für eine Designvorlage für Ihre Zeitschrift und wählen Sie hier mögliche Layout-Bestandteile aus. Sie können auch ein Zeitschriften-Style Sheet hochladen, mit dessen Hilfe Sie die durch die System- und Themen-Style Sheets vorgegebenen Einstellungen ersetzen können."
+msgstr ""
+"Entscheiden Sie sich für eine Designvorlage für Ihre Zeitschrift und wählen "
+"Sie hier mögliche Layout-Bestandteile aus. Sie können auch ein Zeitschriften-"
+"Style Sheet hochladen, mit dessen Hilfe Sie die durch die System- und Themen-"
+"Style Sheets vorgegebenen Einstellungen ersetzen können."
 
 msgid "manager.setup.journalLogo"
 msgstr "Logo der Zeitschrift"
@@ -595,7 +792,11 @@ msgid "manager.setup.journalPageFooter"
 msgstr "Fußzeile der Zeitschrift"
 
 msgid "manager.setup.journalPageFooterDescription"
-msgstr "Dies ist die Fußzeile Ihrer Zeitschrift. Sollten Sie sie ändern oder aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachstehende Textfeld. Beispiele könnten eine zusätzliche Navigationszeile oder ein Zähler sein. Diese Fußzeile wird auf allen Seiten erscheinen."
+msgstr ""
+"Dies ist die Fußzeile Ihrer Zeitschrift. Sollten Sie sie ändern oder "
+"aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachstehende "
+"Textfeld. Beispiele könnten eine zusätzliche Navigationszeile oder ein "
+"Zähler sein. Diese Fußzeile wird auf allen Seiten erscheinen."
 
 msgid "manager.setup.journalPolicies"
 msgstr "2. Schritt: Zeitschriftenrichtlinien und Publikationsprozess"
@@ -607,7 +808,9 @@ msgid "manager.setup.journalSetupUpdated"
 msgstr "Die Konfiguration Ihrer Zeitschrift wurde aktualisiert."
 
 msgid "manager.setup.journalStyleSheetInvalid"
-msgstr "Das Format des Zeitschriften-Style Sheets ist ungültig. Das gültige Format ist .css."
+msgstr ""
+"Das Format des Zeitschriften-Style Sheets ist ungültig. Das gültige Format "
+"ist .css."
 
 msgid "manager.setup.journalTheme"
 msgstr "Zeitschriften-Designvorlage"
@@ -616,10 +819,20 @@ msgid "manager.setup.journalThumbnail"
 msgstr "Vorschaubild der Zeitschrift"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "Ein kleines Logo oder Symbol Ihrer Zeitschrift, das in der Liste der Zeitschriften angezeigt werden kann."
+msgstr ""
+"Ein kleines Logo oder Symbol Ihrer Zeitschrift, das in der Liste der "
+"Zeitschriften angezeigt werden kann."
 
 msgid "manager.setup.contextTitle"
 msgstr "Titel der Zeitschrift"
+
+msgid "manager.setup.keyInfo"
+msgstr "Schlüsselinformation"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Geben Sie eine kurze Beschreibung Ihrer Zeitschrift ein und benennen Sie "
+"Redakteure, Direktoren und andere Mitglieder Ihres Redaktionsteams."
 
 msgid "manager.setup.labelName"
 msgstr "Seitenbenennung"
@@ -631,7 +844,9 @@ msgid "manager.setup.plnPluginEnable"
 msgstr "PKP-PN-Plugin aktiviert"
 
 msgid "manager.setup.plnDescription"
-msgstr "Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt."
+msgstr ""
+"Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede "
+"OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
@@ -642,7 +857,11 @@ msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
-msgstr "Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt. Das PKP-PN-Plugin für OJS 3 wird momentan entwickelt und wird bald in der Plugin-Gallerie verfügbar sein."
+msgstr ""
+"Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede "
+"OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt. Das PKP-"
+"PN-Plugin für OJS 3 wird momentan entwickelt und wird bald in der Plugin-"
+"Gallerie verfügbar sein."
 
 msgid "manager.setup.otherLockss"
 msgstr "Einstellungen für alternative Archivierungen"
@@ -650,11 +869,14 @@ msgstr "Einstellungen für alternative Archivierungen"
 msgid "manager.setup.lockssEnable"
 msgstr ""
 "Aktivieren Sie LOCKSS und speichern und verteilen Sie den Inhalt der "
-"Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über ein <a href=\""
-"{$lockssUrl}\" target=\"_blank\">LOCKSS-Manifest</a>."
+"Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über ein <a href="
+"\"{$lockssUrl}\" target=\"_blank\">LOCKSS-Manifest</a>."
 
 msgid "manager.setup.lockssLicenseDescription"
-msgstr "Eine LOCKSS-Lizenz wird in \"Über uns\" unter Archivierung erscheinen: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS-Lizenz</a>"
+msgstr ""
+"Eine LOCKSS-Lizenz wird in \"Über uns\" unter Archivierung erscheinen: <a "
+"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
+"\"_blank\">LOCKSS-Lizenz</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Beschreibung der LOCKSS-Lizenz"
@@ -664,24 +886,30 @@ msgstr ""
 "Identifizieren Sie 6 bis 10 Bibliotheken, die die Zeitschrift registrieren "
 "und archivieren sollen. Wenden Sie sich zum Beispiel an Einrichtungen, in "
 "denen Mitglieder der Redaktion oder des Beirats arbeiten und/oder "
-"Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href=\""
-"http://www.lockss.org/community/\" target=\"_blank\">the LOCKSS "
-"community</a>."
+"Einrichtungen, die bereits an LOCKSS beteiligt sind. Siehe <a href=\"http://"
+"www.lockss.org/community/\" target=\"_blank\">the LOCKSS community</a>."
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
-msgstr "Aktivieren Sie CLOCKSS und speichern und verteilen Sie den Inhalt der Zeitschrift bei den an CLOCKSS teilnehmenden Bibliotheken über ein <a href=\"{$clockssUrl}\" target=\"_blank\">CLOCKSS-Manifest</a>."
+msgstr ""
+"Aktivieren Sie CLOCKSS und speichern und verteilen Sie den Inhalt der "
+"Zeitschrift bei den an CLOCKSS teilnehmenden Bibliotheken über ein <a href="
+"\"{$clockssUrl}\" target=\"_blank\">CLOCKSS-Manifest</a>."
 
 msgid "manager.setup.clockssLicenseDescription"
-msgstr "Eine CLOCKSS-Lizenz wird in \"Über uns\" unter Archivierung erscheinen: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS-Lizenz</a>"
+msgstr ""
+"Eine CLOCKSS-Lizenz wird in \"Über uns\" unter Archivierung erscheinen: <a "
+"href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS-Lizenz</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Beschreibung der CLOCKSS-Lizenz"
 
 msgid "manager.setup.clockssRegister"
-msgstr "Registrieren Sie sich für den CLOCKSS-Dienst, indem Sie <a href=\"http://clockss.org/\" target=\"_blank\">die CLOCKSS-Website</a> besuchen."
+msgstr ""
+"Registrieren Sie sich für den CLOCKSS-Dienst, indem Sie <a href=\"http://"
+"clockss.org/\" target=\"_blank\">die CLOCKSS-Website</a> besuchen."
 
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
@@ -690,13 +918,17 @@ msgid "manager.setup.look"
 msgstr "Gestaltung"
 
 msgid "manager.setup.look.description"
-msgstr "Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet."
+msgstr ""
+"Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, "
+"Navigationsleiste und Style Sheet."
 
 msgid "manager.setup.management"
 msgstr "Management"
 
 msgid "manager.setup.management.description"
-msgstr "Zugang und Sicherheit, Planung, Ankündigungen, Lektorat, Layout und Korrekturlektorat."
+msgstr ""
+"Zugang und Sicherheit, Planung, Ankündigungen, Lektorat, Layout und "
+"Korrekturlektorat."
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
 msgstr "Grundlegende Schritte bei der redaktionellen Arbeit"
@@ -711,13 +943,19 @@ msgid "manager.setup.navigationBar"
 msgstr "Navigationsleiste"
 
 msgid "manager.setup.navigationBarDescription"
-msgstr "Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu."
+msgstr ""
+"Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu."
 
 msgid "manager.setup.navItemIsAbsolute"
-msgstr "Die URL ist eine absolute Adresse (z.B. \"http://www.example.com\"), keine relative URL (z.B.\"/manager/setup\")"
+msgstr ""
+"Die URL ist eine absolute Adresse (z.B. \"http://www.example.com\"), keine "
+"relative URL (z.B.\"/manager/setup\")"
 
 msgid "manager.setup.navItemIsLiteral"
-msgstr "Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. \"Einrichtung der Zeitschrift\") und nicht aus einem Lokalisierungsschlüssel (z.B. \"manager.setup\")"
+msgstr ""
+"Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. \"Einrichtung "
+"der Zeitschrift\") und nicht aus einem Lokalisierungsschlüssel (z.B. "
+"\"manager.setup\")"
 
 msgid "manager.setup.noImageFileUploaded"
 msgstr "Keine Grafikdatei hochgeladen."
@@ -731,20 +969,18 @@ msgstr "Anmerkung"
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
 "<strong>Anmerkung:</strong> Die Funktion \"Eingangsbestätigung per E-Mail\" "
-"ist deaktiviert.  Um diese Funktion zu nutzen, aktivieren Sie \""
-"SUBMISSION_ACK email\" in E-Mails."
+"ist deaktiviert.  Um diese Funktion zu nutzen, aktivieren Sie "
+"\"SUBMISSION_ACK email\" in E-Mails."
 
 msgid "manager.setup.numPageLinks"
 msgstr "Links"
 
-msgid "manager.setup.publishingMode"
-msgstr "Zugang zum Zeitschrifteninhalt"
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Begrenzen Sie die Zahl der angezeigten Links auf Folgeseiten in einer Liste."
 
 msgid "manager.setup.onlineIssn"
 msgstr "ISSN Internet"
-
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Die Zeitschrift bietet freien Zugang (Open Access) zu ihren Inhalten."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Seitenzahl-Option"
@@ -764,13 +1000,24 @@ msgid "manager.setup.proofingInstructions"
 msgstr "Anweisungen für das Korrekturlektorat"
 
 msgid "manager.setup.proofingInstructionsDescription"
-msgstr "Die Anweisungen für das Korrekturlektorat werden den Korrekturlektor/innen, Autor/innen, Layouter/innen und Rubrikredakteur/innen während der redaktionellen Bearbeitung des Beitrags übermittelt. Nachstehend finden Sie einen Standardsatz von Anweisungen in HTML-Format, die jederzeit von der Zeitschriftenverwaltung geändert werden können (in HTML oder einfachem Text)."
+msgstr ""
+"Die Anweisungen für das Korrekturlektorat werden den Korrekturlektor/innen, "
+"Autor/innen, Layouter/innen und Rubrikredakteur/innen während der "
+"redaktionellen Bearbeitung des Beitrags übermittelt. Nachstehend finden Sie "
+"einen Standardsatz von Anweisungen in HTML-Format, die jederzeit von der "
+"Zeitschriftenverwaltung geändert werden können (in HTML oder einfachem Text)."
 
 msgid "manager.setup.publicationSchedule"
 msgstr "Terminkalender der Veröffentlichung"
 
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Die Beiträge der Zeitschrift können zusammen veröffentlicht werden, als Teil einer Ausgabe mit eigenem Inhaltsverzeichnis. Es können auch einzelne fertige Artikel durch Anfügen an das Inhaltsverzeichnis der \"aktuellen Ausgabe\" veröffentlicht werden. Erläutern Sie den Leser/innen unter \"Über uns\" das Veröffentlichungssystem und die vorgesehene Erscheinungsfrequenz der Zeitschrift."
+msgstr ""
+"Die Beiträge der Zeitschrift können zusammen veröffentlicht werden, als Teil "
+"einer Ausgabe mit eigenem Inhaltsverzeichnis. Es können auch einzelne "
+"fertige Artikel durch Anfügen an das Inhaltsverzeichnis der \"aktuellen "
+"Ausgabe\" veröffentlicht werden. Erläutern Sie den Leser/innen unter \"Über "
+"uns\" das Veröffentlichungssystem und die vorgesehene Erscheinungsfrequenz "
+"der Zeitschrift."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Veröffentlichungstermine festlegen"
@@ -785,10 +1032,14 @@ msgid "manager.setup.referenceLinking"
 msgstr "Verlinkung von Literaturverweisen"
 
 msgid "manager.setup.restrictArticleAccess"
-msgstr "Benutzer/innen müssen registriert und angemeldet sein, um Open-Access-Inhalte aufrufen zu können."
+msgstr ""
+"Benutzer/innen müssen registriert und angemeldet sein, um Open-Access-"
+"Inhalte aufrufen zu können."
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr "Benutzer/innen müssen registriert und angemeldet sein, um die Zeitschriftenseite aufrufen zu können."
+msgstr ""
+"Benutzer/innen müssen registriert und angemeldet sein, um die "
+"Zeitschriftenseite aufrufen zu können."
 
 msgid "manager.setup.reviewGuidelines"
 msgstr "Begutachtungsrichtlinien"
@@ -801,8 +1052,8 @@ msgstr "Automatische E-Mail-Erinnerungen"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
-"Um automatisierte Erinnerungen per E-Mail zu senden, muss die/der "
-"Website-Administrator/in die <tt>scheduled_tasks</tt>-Option in der "
+"Um automatisierte Erinnerungen per E-Mail zu senden, muss die/der Website-"
+"Administrator/in die <tt>scheduled_tasks</tt>-Option in der "
 "Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können "
 "erforderlich sein, siehe OJS-Dokumentation."
 
@@ -810,7 +1061,12 @@ msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Vorgesehener Zeitaufwand (in Wochen) für eine Begutachtung"
 
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr "Redakteur/innen bewerten die Gutachter/innen nach jeder Begutachtung auf einer fünfstufigen Skala."
+msgstr ""
+"Redakteur/innen bewerten die Gutachter/innen nach jeder Begutachtung auf "
+"einer fünfstufigen Skala."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Eingeschränkter Dateizugriff"
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
@@ -825,7 +1081,15 @@ msgstr "Ein-Klick-Zugang für Gutachter/innen"
 
 #, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen."
+msgstr ""
+"<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen "
+"enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit "
+"Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus "
+"Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung "
+"weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Sicheren Link in die Einladungs-E-Mail für Gutachter/innen einfügen."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Bewertung der Gutachterin/des Gutachters"
@@ -836,23 +1100,34 @@ msgstr "Erinnerung für Gutachter/innen"
 msgid "manager.setup.reviewPolicy"
 msgstr "Begutachtungsgrundsätze"
 
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Für Suchmaschinen indizieren"
+
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
 "Helfen Sie Google und anderen Suchmaschinen Ihre Seite zu etndecken und "
-"anzuzeigen. Reichen Sie Ihre  <a href=\"{$sitemapUrl}\" target=\"_blank\""
-">sitemap</a> ein."
+"anzuzeigen. Reichen Sie Ihre  <a href=\"{$sitemapUrl}\" target=\"_blank"
+"\">sitemap</a> ein."
 
-msgid "manager.setup.searchEngineIndexing"
-msgstr "Für Suchmaschinen indizieren"
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Geben Sie eine kurze Beschreibung (50-300 Zeichen) der Zeitschrift, die "
+"Suchmaschinen anzeigen können, wenn die Zeitschrift in den Suchergebnissen "
+"aufgelistet wird."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Rubriken und Rubrikredakteur/innen"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(Falls keine Rubrik angegeben wird, werden die Beiträge standardmäßig für die Rubrik Artikel eingereicht.)"
+msgstr ""
+"(Falls keine Rubrik angegeben wird, werden die Beiträge standardmäßig für "
+"die Rubrik Artikel eingereicht.)"
 
 msgid "manager.setup.sectionsDescription"
-msgstr "Gehen Sie zur Rubrikverwaltung, um Zeitschriftenrubriken einzurichten oder zu verändern (z.B. Artikel, Rezensionen usw.).<br /><br /> Wenn Beiträge eingereicht werden, schlagen die Autor/innen eine Rubrik vor."
+msgstr ""
+"Gehen Sie zur Rubrikverwaltung, um Zeitschriftenrubriken einzurichten oder "
+"zu verändern (z.B. Artikel, Rezensionen usw.).<br /><br /> Wenn Beiträge "
+"eingereicht werden, schlagen die Autor/innen eine Rubrik vor."
 
 msgid "manager.setup.selectEditorDescription"
 msgstr "Redakteur/in, die/der den Beitrag betreut."
@@ -861,13 +1136,21 @@ msgid "manager.setup.selectSectionDescription"
 msgstr "Die Rubrik der Zeitschrift, für die der Beitrag in Frage kommt."
 
 msgid "manager.setup.showGalleyLinksDescription"
-msgstr "Links auf die Fahne immer anzeigen und beschränkten Zugang kennzeichnen."
+msgstr ""
+"Links auf die Fahne immer anzeigen und beschränkten Zugang kennzeichnen."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Seitenzugriff"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Artikelinhalt ansehen"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Fünf Schritte zu einer Zeitschrift"
 
 msgid "manager.setup.subjectExamples"
-msgstr "(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)"
+msgstr ""
+"(z.B. Photosynthese; Schwarze Löcher; Vier-Farben-Theorem; Bayes' Theorie)"
 
 msgid "manager.setup.subjectKeywordTopic"
 msgstr "Schlagwörter"
@@ -884,31 +1167,50 @@ msgid "manager.setup.submissions"
 msgstr "Beitragseinreichung"
 
 msgid "manager.setup.submissions.description"
-msgstr "Richtlinien für Autor/innen, Copyright und Indizierung (einschließlich Registrierung)."
+msgstr ""
+"Richtlinien für Autor/innen, Copyright und Indizierung (einschließlich "
+"Registrierung)."
 
-msgid "manager.distribution.publishingMode.subscription"
-msgstr "Einige oder alle Inhalte der Zeitschrift sind nur für Abonnent/innen zugänglich."
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Verhindern Sie, dass Nutzer/innen neue Artikel für diese Zeitschrift "
+"einreichen. Auf der Seite  <a href=\"{$url}\">journal sections</a> können "
+"Einreichungen für individuelle Rubriken deaktiviert werden."
 
-msgid "manager.distribution.publishingMode.none"
-msgstr "OJS wird nicht verwendet, um die Zeitschrifteninhalte online zu veröffentlichen."
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Diese Zeitschrift nimmt derzeit keine Einreichungen entgegen. Gehen Sie zu "
+"Workflow-Einstellungen, um Einreichungen zu aktivieren."
 
 msgid "manager.setup.enableOai"
 msgstr "OAI-Zugang zu den Inhalten aktivieren"
 
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Stellen Sie Metadaten für Indizierungsservices von Dritten über <a href="
+"\"https://www.openarchives.org/\">Open Archives Initiative</a> zur Verfügung."
+
 msgid "manager.setup.typeExamples"
-msgstr "(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; Umfrage/Interview)"
+msgstr ""
+"(z.B. historische Untersuchung; quasi-experimentell; Literaturanalyse; "
+"Umfrage/Interview)"
 
 msgid "manager.setup.typeMethodApproach"
 msgstr "Forschungsansatz, -methode oder -verfahren"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben."
+msgstr ""
+"Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -"
+"verfahren angeben."
 
 msgid "manager.setup.uniqueIdentifier"
 msgstr "Eindeutige Kennung"
 
 msgid "manager.setup.uniqueIdentifierDescription"
-msgstr "Artikel und Ausgaben können mit einer Identifikationsnummer oder einer Zeichenkette gekennzeichnet werden, wobei ein System, z.B. das DOI (Digital Object Identifier)-System, verwendet werden sollte."
+msgstr ""
+"Artikel und Ausgaben können mit einer Identifikationsnummer oder einer "
+"Zeichenkette gekennzeichnet werden, wobei ein System, z.B. das DOI (Digital "
+"Object Identifier)-System, verwendet werden sollte."
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Die Zeitschrift hat eine Redaktion bzw. ein Herausgeber/innengremium."
@@ -947,7 +1249,12 @@ msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Tage bis zur Veröffentlichung"
 
 msgid "manager.statistics.statistics.description"
-msgstr "OJS berechnet folgende Statistiken für jede Zeitschrift: \"Tage bis zur Begutachtung\" wird vom Beitragseingang (oder dem Eingang der zu begutachtenden Version) bis zur ersten Redaktionsentscheidung berechnet, während die \"Tage bis zur Veröffentlichung\" der angenommenen Beiträge vom Hochladen des Originals bis zur Veröffentlichung berechnet werden."
+msgstr ""
+"OJS berechnet folgende Statistiken für jede Zeitschrift: \"Tage bis zur "
+"Begutachtung\" wird vom Beitragseingang (oder dem Eingang der zu "
+"begutachtenden Version) bis zur ersten Redaktionsentscheidung berechnet, "
+"während die \"Tage bis zur Veröffentlichung\" der angenommenen Beiträge vom "
+"Hochladen des Originals bis zur Veröffentlichung berechnet werden."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Veröffentlichte Beiträge"
@@ -956,7 +1263,10 @@ msgid "manager.statistics.statistics.makePublic"
 msgstr "Mitteilungen, die den Leser/innen in \"Über uns\" vermittelt werden."
 
 msgid "manager.statistics.statistics.note"
-msgstr "Anmerkung: Die Prozentsätze der Gutachter/innenempfehlungen summieren sich nicht notwendigerweise auf 100 %, weil erneut eingereichte Beiträge entweder angenommen, abgelehnt oder noch in Bearbeitung sein können."
+msgstr ""
+"Anmerkung: Die Prozentsätze der Gutachter/innenempfehlungen summieren sich "
+"nicht notwendigerweise auf 100 %, weil erneut eingereichte Beiträge entweder "
+"angenommen, abgelehnt oder noch in Bearbeitung sein können."
 
 msgid "manager.statistics.statistics.numIssues"
 msgstr "Erschienene Ausgaben"
@@ -969,9 +1279,6 @@ msgstr "Peer Review abgeschlossen"
 
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Eingetragene Leser/innen"
-
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Eingetragene Benutzer/innen"
 
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Anzahl der Gutachter/innen"
@@ -986,7 +1293,9 @@ msgid "manager.statistics.statistics.reviewsPerReviewer"
 msgstr "Anzahl der Gutachten pro Gutachter/in"
 
 msgid "manager.statistics.statistics.selectSections"
-msgstr "Wählen Sie die Rubriken für die Berechnung der Peer-Review-Statistiken der Zeitschrift aus."
+msgstr ""
+"Wählen Sie die Rubriken für die Berechnung der Peer-Review-Statistiken der "
+"Zeitschrift aus."
 
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Abonnements"
@@ -1012,26 +1321,37 @@ msgstr "Abonnementrichtlinien"
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "Verzögerter Open Access"
 
-msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionExpiryReminderBeforeMonthsValid"
 msgstr "Bitte nutzen Sie die vorgesehene Checkbox."
 
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Ende des Abonnements"
 
 msgid "manager.subscriptionPolicies.expiryDescription"
-msgstr "Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen Abonnement-Inhalten verwehrt werden, oder sie können weiterhin Zugang zu Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht wurden."
+msgstr ""
+"Zum Ende des Abonnements kann den Leser/innen der Zugang zu sämtlichen "
+"Abonnement-Inhalten verwehrt werden, oder sie können weiterhin Zugang zu "
+"Abonnement-Inhalten erhalten, die vor dem Abonnement-Ende veröffentlicht "
+"wurden."
 
 msgid "manager.subscriptionPolicies.expiryFull"
 msgstr "Volles Abonnement-Ende"
 
 msgid "manager.subscriptionPolicies.expiryFullDescription"
-msgstr "Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet."
+msgstr ""
+"Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn "
+"ihr Abonnement endet."
 
 msgid "manager.subscriptionPolicies.expiryPartial"
 msgstr "Teilweises Abonnement-Ende"
 
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
-msgstr "Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden."
+msgstr ""
+"Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten "
+"verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die "
+"vor ihrem Abonnement-Ende veröffentlicht wurden."
 
 msgid "manager.subscriptionPolicies.xMonths"
 msgstr "{$x} Monate"
@@ -1055,73 +1375,135 @@ msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Erinnerung an das Auslaufen des Abonnements"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "Automatische E-Mails zur Erinnerung (verfügbar unter den Standard-E-Mails des OJS) können den Abonnent/innen sowohl vor als auch nach dem Ablauf des Abonnements zugehen."
+msgstr ""
+"Automatische E-Mails zur Erinnerung (verfügbar unter den Standard-E-Mails "
+"des OJS) können den Abonnent/innen sowohl vor als auch nach dem Ablauf des "
+"Abonnements zugehen."
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr "<strong>Anmerkung:</strong> Hierzu muss die/der Website-Administrator/in <tt>scheduled_tasks</tt> in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation."
+msgstr ""
+"<strong>Anmerkung:</strong> Hierzu muss die/der Website-Administrator/in "
+"<tt>scheduled_tasks</tt> in der Konfigurationsdatei von OJS aktivieren. "
+"Weitere Servereinstellungen können erforderlich sein (und sind nicht "
+"unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation."
 
 msgid "manager.subscriptionPolicies.expirySelectOne"
 msgstr "Wählen Sie aus:"
 
 msgid "manager.subscriptionPolicies.htmlInstructions"
-msgstr "Falls Sie im Textfeld HTML verwenden (für Schriftart, -farbe usw.) beachten Sie, dass Zeilenwechsel im Text automatisch als <tt>&lt;br&gt;</tt> behandelt werden. Der HTML-Editor arbeitet mit Firefox-Browsern."
+msgstr ""
+"Falls Sie im Textfeld HTML verwenden (für Schriftart, -farbe usw.) beachten "
+"Sie, dass Zeilenwechsel im Text automatisch als <tt>&lt;br&gt;</tt> "
+"behandelt werden. Der HTML-Editor arbeitet mit Firefox-Browsern."
 
-msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgid ""
+"manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
 msgstr ""
 "Bitte eine gültige Anzahl \"Monat(e) nach Ablauf des Abonnements\" eintragen."
 
-msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
-msgstr "Bitte eine gültige Zahl vor \"Monat(e) vor Ablauf des Abonnements\" eintragen."
+msgid ""
+"manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Bitte eine gültige Zahl vor \"Monat(e) vor Ablauf des Abonnements\" "
+"eintragen."
 
-msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgid ""
+"manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
 msgstr ""
 "Bitte eine gültige Zahl vor \"Woche(n) nach Ablauf des Abonnements\" "
 "eintragen."
 
-msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
-msgstr "Bitte eine gültige Zahl vor \"Woche(n) vor Ablauf des Abonnements\" eintragen."
+msgid ""
+"manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Bitte eine gültige Zahl vor \"Woche(n) vor Ablauf des Abonnements\" "
+"eintragen."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
-msgstr "Eingetragene Benutzer/innen können sich das Inhaltsverzeichnis einer Ausgabe per E-Mail zuschicken lassen, sobald sie frei zugänglich ist."
+msgstr ""
+"Eingetragene Benutzer/innen können sich das Inhaltsverzeichnis einer Ausgabe "
+"per E-Mail zuschicken lassen, sobald sie frei zugänglich ist."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr "<strong>Anmerkung:</strong>Hierfür muss die/der Website-Adminstrator/in die <tt>scheduled_tasks</tt>-Option in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation."
+msgstr ""
+"<strong>Anmerkung:</strong>Hierfür muss die/der Website-Adminstrator/in die "
+"<tt>scheduled_tasks</tt>-Option in der Konfigurationsdatei von OJS "
+"aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind "
+"nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation."
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
 msgstr "Online-Zahlungs-Benachrichtigungen"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr "An die Abonnementverwalter/innen können automatische Mailbenachrichtigungen (verfügbar für Zeitschriftenverwalter/innen in den OJS-E-Mail-Vorlagen) verschickt werden bei Vervollständigung der Online-Zahlung von Abonnements."
+msgstr ""
+"An die Abonnementverwalter/innen können automatische Mailbenachrichtigungen "
+"(verfügbar für Zeitschriftenverwalter/innen in den OJS-E-Mail-Vorlagen) "
+"verschickt werden bei Vervollständigung der Online-Zahlung von Abonnements."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "Abonnementverwalter/innen per E-Mail über den Online-Erwerb von individuellen Abonnements informieren."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Abonnementverwalter/innen per E-Mail über den Online-Erwerb von "
+"individuellen Abonnements informieren."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr "Abonnementverwalter/innen per E-Mail über den Online-Erwerb von institutionellen Abonnements informieren (empfohlen)."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Abonnementverwalter/innen per E-Mail über den Online-Erwerb von "
+"institutionellen Abonnements informieren (empfohlen)."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines individuellen Abonnements informieren."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines "
+"individuellen Abonnements informieren."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr "Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines institutionellen Abonnements informieren."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines "
+"institutionellen Abonnements informieren."
 
-msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
-msgstr "<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements sind die Bewilligung der Domain und der IP-Bereiche und die Aktivierung des Abonnements durch die Abonnementverwalter/innen erforderlich."
+msgid ""
+"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements "
+"sind die Bewilligung der Domain und der IP-Bereiche und die Aktivierung des "
+"Abonnements durch die Abonnementverwalter/innen erforderlich."
 
 msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
-msgstr "<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter unter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements."
+msgstr ""
+"<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die "
+"Zeitschriftenverwalterin/der Zeitschriftenverwalter unter Leser/"
+"innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen "
+"für Abonnements."
 
 msgid "manager.subscriptionPolicies.openAccessOptions"
 msgstr "Open-Access-Optionen für Abonnement-Zeitschriften"
 
 msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
-msgstr "Zeitschriften mit Abonnement können \"verzögerten Open Access\" und/oder \"Selbstarchivierung durch die/den Autor/in\" anbieten und damit die Leser/innenschaft vergrößern und die Häufigkeit, in der Beiträge zitiert werden, heraufsetzen."
+msgstr ""
+"Zeitschriften mit Abonnement können \"verzögerten Open Access\" und/oder "
+"\"Selbstarchivierung durch die/den Autor/in\" anbieten und damit die Leser/"
+"innenschaft vergrößern und die Häufigkeit, in der Beiträge zitiert werden, "
+"heraufsetzen."
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
 msgstr "Informationen zum Abonnement"
 
-msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
-msgstr "Die Abonnementtypen und die Gebührenstruktur erscheinen automatisch unter \"Abonnement\" auf der \"Über uns\"-Seite, zusammen mit dem Namen der Abonnementverwalterin/des Abonnementverwalters und ihren/seinen Kontaktdaten. Zusätzliche Informationen zu den Abonnements, wie z.B. über Zahlungsweisen oder Unterstützungmöglichkeiten für Abonnent/innen in Entwicklungsländern, können nachfolgend angegeben werden."
+msgid ""
+"manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Die Abonnementtypen und die Gebührenstruktur erscheinen automatisch unter "
+"\"Abonnement\" auf der \"Über uns\"-Seite, zusammen mit dem Namen der "
+"Abonnementverwalterin/des Abonnementverwalters und ihren/seinen "
+"Kontaktdaten. Zusätzliche Informationen zu den Abonnements, wie z.B. über "
+"Zahlungsweisen oder Unterstützungmöglichkeiten für Abonnent/innen in "
+"Entwicklungsländern, können nachfolgend angegeben werden."
 
 msgid "manager.subscriptionPolicies.subscriptionContact"
 msgstr "Abonnementverwalter/in"
@@ -1204,6 +1586,12 @@ msgstr "Ein Abonnementtyp ist erforderlich."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Wählen Sie einen gültigen Abonnementtyp."
 
+msgid "manager.subscriptions.form.institution"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr ""
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Anfangsdatum"
 
@@ -1220,7 +1608,8 @@ msgid "manager.subscriptions.form.dateEndRequired"
 msgstr "Ein Enddatum des Abonnements ist erforderlich."
 
 msgid "manager.subscriptions.form.dateStartEmpty"
-msgstr "Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Startdatum an."
+msgstr ""
+"Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Startdatum an."
 
 msgid "manager.subscriptions.form.dateEndEmpty"
 msgstr "Dieser Abonnementtyp läuft nicht ab; bitte geben Sie kein Enddatum an."
@@ -1229,7 +1618,9 @@ msgid "manager.subscriptions.form.dateEndValid"
 msgstr "Wählen Sie ein gültiges Enddatum des Abonnements."
 
 msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr "Hinweis: Alle unten stehenden Veränderungen betreffen Nutzer/innenprofil systemweit."
+msgstr ""
+"Hinweis: Alle unten stehenden Veränderungen betreffen Nutzer/innenprofil "
+"systemweit."
 
 msgid "manager.subscriptions.form.userId"
 msgstr "Benutzer/in"
@@ -1247,7 +1638,9 @@ msgid "manager.subscriptions.form.userCountryValid"
 msgstr "Bitte wählen Sie ein gültiges Land aus."
 
 msgid "manager.subscriptions.form.notifyEmail"
-msgstr "Senden Sie der Benutzerin/dem Benutzer eine Bestätigungs-E-Mail mit ihrem Benutzer/innen-Namen und den Einzelheiten des Abonnements."
+msgstr ""
+"Senden Sie der Benutzerin/dem Benutzer eine Bestätigungs-E-Mail mit ihrem "
+"Benutzer/innen-Namen und den Einzelheiten des Abonnements."
 
 msgid "manager.subscriptions.form.notifyEmailValid"
 msgstr "Bitte im Kästchen ankreuzen."
@@ -1259,7 +1652,10 @@ msgid "manager.subscriptions.form.referenceNumber"
 msgstr "Referenznummer"
 
 msgid "manager.subscriptions.form.membershipInstructions"
-msgstr "Geben Sie Informationen über Mitgliedschaften ein, falls es sich um einen Abonnementtyp handelt, der nur für Mitglieder eines Verbands oder einer Organisation zugänglich ist."
+msgstr ""
+"Geben Sie Informationen über Mitgliedschaften ein, falls es sich um einen "
+"Abonnementtyp handelt, der nur für Mitglieder eines Verbands oder einer "
+"Organisation zugänglich ist."
 
 msgid "manager.subscriptions.form.membershipRequired"
 msgstr "Der gewählte Abonnementtyp erfordert Auskünfte über Mitgliedschaften."
@@ -1285,7 +1681,9 @@ msgstr ""
 "optional.<br />Gültige Werte sind Domainnamen (z.B. lib.sfu.ca)."
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
-msgstr "Der gewählte Abonnementtyp macht die Angabe eines IP-Bereichs und/oder eines Domainnamens erforderlich."
+msgstr ""
+"Der gewählte Abonnementtyp macht die Angabe eines IP-Bereichs und/oder eines "
+"Domainnamens erforderlich."
 
 msgid "manager.subscriptions.form.domainValid"
 msgstr "Geben Sie eine gültige Domain ein."
@@ -1298,10 +1696,10 @@ msgstr "&#8226;"
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr ""
-"Wenn ein IP-Bereich eingegeben wurde, ist die Angabe der Domain optional.<br "
-"/>Gültige Werte sind IP-Nummern (z.B. 142.58.03.1), ein Bereich von IP-"
-"Nummern (z.B. 142.58.103.1 - 142.58.103.4), eine Platzhalter-IP-Nummer "
-"(z.B.142.58.103.*) oder eine beliebige Kombination der drei Formen, jeweils "
+"Wenn ein IP-Bereich eingegeben wurde, ist die Angabe der Domain optional."
+"<br />Gültige Werte sind IP-Nummern (z.B. 142.58.03.1), ein Bereich von IP-"
+"Nummern (z.B. 142.58.103.1 - 142.58.103.4), eine Platzhalter-IP-Nummer (z."
+"B.142.58.103.*) oder eine beliebige Kombination der drei Formen, jeweils "
 "durch \";\" getrennt (z.B.142.58.103.* - 142.58.107.* ; 142.58.108.1 ; "
 "142.58.106.*)."
 
@@ -1318,13 +1716,21 @@ msgid "manager.subscriptions.form.saveAndCreateAnother"
 msgstr "Speichern und ein weiteres Abonnement erstellen"
 
 msgid "manager.subscriptions.form.subscriptionContactRequired"
-msgstr "Um der Benutzerin/dem Benutzer eine Benachrichtigung per E-Mail zuschicken zu können, müssen Name und E-Mail-Adresse der Abonnementverwaltung bei der Einrichtung der Zeitschrift festgelegt werden."
+msgstr ""
+"Um der Benutzerin/dem Benutzer eine Benachrichtigung per E-Mail zuschicken "
+"zu können, müssen Name und E-Mail-Adresse der Abonnementverwaltung bei der "
+"Einrichtung der Zeitschrift festgelegt werden."
 
 msgid "manager.subscriptions.form.subscriptionExists"
 msgstr "Diese/r Benutzer/in hat diese Zeitschrift bereits abonniert."
 
 msgid "manager.subscriptions.form.typeRequired"
-msgstr "Eine Abonnement-Art muss angelegt werden, bevor neue Abonnements vollzogen werden können."
+msgstr ""
+"Eine Abonnement-Art muss angelegt werden, bevor neue Abonnements vollzogen "
+"werden können."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP-Bereich"
@@ -1348,7 +1754,10 @@ msgid "manager.subscriptions.selectUser"
 msgstr "Benutzer/in auswählen"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
-msgstr "Die Zeitschriftenverwalter/innen, Redakteur/innen, Rubrikredakteur/innen, Layouter/innen, Lektor/innen und Korrekturlektor/innen haben automatisch die Zugangsprivilegien von Abonnent/innen."
+msgstr ""
+"Die Zeitschriftenverwalter/innen, Redakteur/innen, Rubrikredakteur/innen, "
+"Layouter/innen, Lektor/innen und Korrekturlektor/innen haben automatisch die "
+"Zugangsprivilegien von Abonnent/innen."
 
 msgid "manager.subscriptions.select"
 msgstr "Auswählen"
@@ -1372,7 +1781,9 @@ msgid "manager.subscriptionTypes"
 msgstr "Abonnementarten"
 
 msgid "manager.subscriptionTypes.confirmDelete"
-msgstr "Achtung! Sind Sie sicher, dass Sie diesen Abonnementtyp entfernen wollen? Alle Abonnements dieses Typs werden damit ebenfalls gelöscht."
+msgstr ""
+"Achtung! Sind Sie sicher, dass Sie diesen Abonnementtyp entfernen wollen? "
+"Alle Abonnements dieses Typs werden damit ebenfalls gelöscht."
 
 msgid "manager.subscriptionTypes.cost"
 msgstr "Kosten"
@@ -1405,7 +1816,9 @@ msgid "manager.subscriptionTypes.form.cost"
 msgstr "Kosten"
 
 msgid "manager.subscriptionTypes.form.costInstructions"
-msgstr "Geben Sie bitte nur einen numerischen Wert (z.B. 40 oder 40,00) und keinen zusätzlichen Text (z.B. \"EUR\") ein."
+msgstr ""
+"Geben Sie bitte nur einen numerischen Wert (z.B. 40 oder 40,00) und keinen "
+"zusätzlichen Text (z.B. \"EUR\") ein."
 
 msgid "manager.subscriptionTypes.form.costNumeric"
 msgstr "Die Kostenangabe muss ein positiver numerischer Wert sein."
@@ -1484,7 +1897,9 @@ msgid "manager.subscriptionTypes.form.options"
 msgstr "Optionen"
 
 msgid "manager.subscriptionTypes.form.public"
-msgstr "Dieser Abonnementtyp ist nicht öffentlich sichtbar (z.B. unter \"Abonnements\" im \"Über uns\")."
+msgstr ""
+"Dieser Abonnementtyp ist nicht öffentlich sichtbar (z.B. unter \"Abonnements"
+"\" im \"Über uns\")."
 
 msgid "manager.subscriptionTypes.form.publicValid"
 msgstr "Bitte im Kästchen ankreuzen."
@@ -1510,23 +1925,25 @@ msgstr "Es wurden keine neuen Abonnementtypen erstellt."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Abonnementtyp erfolgreich erstellt."
 
-msgid "manager.distribution.access"
-msgstr "Zugriff"
-
 msgid "manager.navigationMenus.subscriptions.description"
 msgstr "Verlinken Sie eine Seite, die die angebotenen Abonnements beschreibt."
 
 msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr "Verlinken Sie eine Seite, die die aktuellen und früheren Abonnements der Besucherin/des Besuchers beschreibt."
+msgstr ""
+"Verlinken Sie eine Seite, die die aktuellen und früheren Abonnements der "
+"Besucherin/des Besuchers beschreibt."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Dieser Link wird nur angezeigt, wenn eine Nutzerin/ein Nutzer eingeloggt ist."
+msgstr ""
+"Dieser Link wird nur angezeigt, wenn eine Nutzerin/ein Nutzer eingeloggt ist."
 
 msgid "manager.setup.categories"
 msgstr "Kategorien"
 
 msgid "manager.setup.categories.description"
-msgstr "Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen."
+msgstr ""
+"Wählen Sie die passendsten Kategorien aus der oben angezeigten Menge. Leser/"
+"innen können die gesamte Zeitschriftenmenge dann nach Kategorien durchsehen."
 
 msgid "grid.category.path"
 msgstr "Pfad"
@@ -1535,10 +1952,26 @@ msgid "grid.action.addSection"
 msgstr "Rubrik hinzufügen"
 
 msgid "manager.setup.section.description"
-msgstr "Artikel innerhalb veröffentlichter Ausgaben einer Zeitschrift sind in Rubriken organisiert, normalerweise anhand eines Themas oder Inhaltstyps (z.B. Überblicksartikel, Forschung etc.)."
+msgstr ""
+"Artikel innerhalb veröffentlichter Ausgaben einer Zeitschrift sind in "
+"Rubriken organisiert, normalerweise anhand eines Themas oder Inhaltstyps (z."
+"B. Überblicksartikel, Forschung etc.)."
 
 msgid "settings.roles.gridDescription"
-msgstr "Rollen sind Nutzergruppen der Zeitschrift, die Zugang zu verschiedenen Rechteleveln und damit verbundenen Workflows erhalten. Es gibt fünf verschiedene Rechtelevel: Zeitschriftenverwalter/innen haben kompletten Zugriff auf die Zeitschrift (alle Inhalte und Einstellungen); Rubrikredakteur/innen haben kompletten Zugriff auf alle ihnen zugewiesenen Einreichungen; Zeitschriftenassistent/innen haben begrenzten Zugriff auf alle Einreichungen, die ihnen explizit durch eine/n Redakteur/in zugewiesen worden sind. Gutachter/innen können die ihnen zugewiesenen Beiträge sehen und begutachten, und Autor/innen können im begrenzten Umfang Informationen über ihre eigenen Einreichungen sehen und bearbeiten. Zusätzlich gibt es fünf verschiedene Phasen, auf die Rollen Zugriff erhalten können: Einreichung, Interne Begutachtung, Externe Begutachtung, Lektorat und Produktion."
+msgstr ""
+"Rollen sind Nutzergruppen der Zeitschrift, die Zugang zu verschiedenen "
+"Rechteleveln und damit verbundenen Workflows erhalten. Es gibt fünf "
+"verschiedene Rechtelevel: Zeitschriftenverwalter/innen haben kompletten "
+"Zugriff auf die Zeitschrift (alle Inhalte und Einstellungen); "
+"Rubrikredakteur/innen haben kompletten Zugriff auf alle ihnen zugewiesenen "
+"Einreichungen; Zeitschriftenassistent/innen haben begrenzten Zugriff auf "
+"alle Einreichungen, die ihnen explizit durch eine/n Redakteur/in zugewiesen "
+"worden sind. Gutachter/innen können die ihnen zugewiesenen Beiträge sehen "
+"und begutachten, und Autor/innen können im begrenzten Umfang Informationen "
+"über ihre eigenen Einreichungen sehen und bearbeiten. Zusätzlich gibt es "
+"fünf verschiedene Phasen, auf die Rollen Zugriff erhalten können: "
+"Einreichung, Interne Begutachtung, Externe Begutachtung, Lektorat und "
+"Produktion."
 
 msgid "manager.publication.library"
 msgstr "Bibliothek"
@@ -1547,10 +1980,14 @@ msgid "manager.setup.copyrightYearBasis"
 msgstr "Basiere das Copyright-Jahr eines neuen Artikels auf"
 
 msgid "manager.setup.copyrightYearBasis.article"
-msgstr "Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels abgeleitet, wie bei \"publish-as-you-go\"."
+msgstr ""
+"Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels "
+"abgeleitet, wie bei \"publish-as-you-go\"."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe abgeleitet."
+msgstr ""
+"Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe "
+"abgeleitet."
 
 msgid "manager.setup.resetPermissions"
 msgstr "Artikelrechte zurücksetzen"
@@ -1561,6 +1998,22 @@ msgstr ""
 "sind, zurücksetzen möchten? Diese Aktion kann nicht rückgängig gemacht "
 "werden."
 
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Entfernen Sie die Urheberrechtserklärung und die Lizenzinformationen für "
+"jeden veröffentlichten Artikel, um sie auf die aktuellen "
+"Standardeinstellungen der Zeitschrift zurückzusetzen. Dadurch werden alle "
+"früheren Copyright- und Lizenzinformationen, die den Artikeln beigefügt "
+"waren, dauerhaft entfernt. In einigen Fällen ist es Ihnen gesetzlich nicht "
+"gestattet, Werke, die unter einer anderen Lizenz veröffentlicht wurden, neu "
+"zu lizenzieren. Bitte seien Sie vorsichtig bei der Verwendung dieses Tools "
+"und konsultieren Sie juristischen Beistand, wenn Sie sich nicht sicher sind, "
+"welche Rechte Sie an den in Ihrer Zeitschrift veröffentlichten Artikeln "
+"haben."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Artikelrechte wurden erfolgreich zurückgesetzt."
+
 msgid "grid.genres.title.short"
 msgstr "Bestandteile"
 
@@ -1568,7 +2021,12 @@ msgid "grid.genres.title"
 msgstr "Artikelbestandteile"
 
 msgid "grid.genres.description"
-msgstr "Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei entweder mit der kompletten Einreichung 99Z oder einem bestimmten Bestandteil, identifiziert anhand der Nummer (z.B. 02), zu verknüpfen."
+msgstr ""
+"Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in "
+"einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die "
+"mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei "
+"entweder mit der kompletten Einreichung 99Z oder einem bestimmten "
+"Bestandteil, identifiziert anhand der Nummer (z.B. 02), zu verknüpfen."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Einstellungen"
@@ -1589,19 +2047,27 @@ msgid "plugins.importexport.common.missingRequirements"
 msgstr "Plugin-Anforderungen nicht erfüllt"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "Um dieses Plugin zu benutzen, gehen Sie in die Plugin-Kategorie \"Öffentliche Kennungen\", aktivieren und konfigurieren Sie das DOI-Plugin und geben Sie dort einen gültigen DOI-Präfix an."
+msgstr ""
+"Um dieses Plugin zu benutzen, gehen Sie in die Plugin-Kategorie "
+"\"Öffentliche Kennungen\", aktivieren und konfigurieren Sie das DOI-Plugin "
+"und geben Sie dort einen gültigen DOI-Präfix an."
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
 msgstr "Dieses Plugin ist noch nicht vollständig eingerichtet."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "Es wurde noch kein DOI erzeugt. Die Veröffentlichung der Ausgabe und die Ansicht der öffentlichen {$pubObjectType}-Seite wird automatisch eindeutige DOI für diese/n {$pubObjectType}."
+msgstr ""
+"Es wurde noch kein DOI erzeugt. Die Veröffentlichung der Ausgabe und die "
+"Ansicht der öffentlichen {$pubObjectType}-Seite wird automatisch eindeutige "
+"DOI für diese/n {$pubObjectType}."
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Passwort"
 
 msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, gespeichert wird."
+msgstr ""
+"Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, "
+"gespeichert wird."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Jede Ausgabe"
@@ -1649,10 +2115,18 @@ msgid "plugins.importexport.common.export.error.inputFileNotReadable"
 msgstr "Die Eingabedatei {$param} is nicht lesbar."
 
 msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat einen Fehler zurückgeliefert: '{$param}'."
+msgstr ""
+"Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat "
+"einen Fehler zurückgeliefert: '{$param}'."
 
 msgid "plugins.importexport.common.register.success"
 msgstr "Registrierung erfolgreich!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Überprüfung erfolgreich!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Überprüfung fehlgeschlagen."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}."
@@ -1661,103 +2135,74 @@ msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "Die angegebenen Objekte konnten nicht gefunden werden."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten Hauptkontakt senden."
-
-msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr ""
-"Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels "
-"abgeleitet, wie bei \"publish-as-you-go\"."
+"Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten "
+"Hauptkontakt senden."
 
-msgid "manager.distribution.copyrightYearBasis.issue"
+msgid "stats.contextStats"
 msgstr ""
-"Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe "
-"abgeleitet"
 
-msgid "manager.setup.identity"
-msgstr "Zeitschriftenidentität"
-
-msgid "manager.setup.numAnnouncementsHomepage.description"
+msgid "stats.context.tooltip.text"
 msgstr ""
-"Anzahl der Mitteilungen, die auf der Homepage angezeigt werden sollen. "
-"Lassen Sie dieses Feld leer, wenn keine angezeigt werden sollen."
 
-msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Auf der Homepage anzeigen"
-
-msgid "manager.setup.announcementsIntroduction"
-msgstr "Zusätzliche Informationen"
-
-msgid "manager.distribution.publishingMode"
-msgstr "Veröffentlichungsart"
-
-msgid "manager.distribution.publication"
-msgstr "Veröffentlichung"
-
-msgid "manager.setup.itemsPerPage.description"
+msgid "stats.context.tooltip.label"
 msgstr ""
-"Begrenzen Sie die Anzahl an Objekten (z.B. Einreichungen, Nutzer oder "
-"Zuweisungen durch die Redaktion), die in einer Liste angezeigt werden "
-"sollen, bevor weitere auf einer Folgeseite angezeigt werden."
 
-msgid "manager.distribution.copyrightYearBasis.description"
+msgid "stats.context.downloadReport.description"
 msgstr ""
-"Bitte wählen Sie aus, wie das Standard Copyright Datum für einen Artikel "
-"ausgewählt werden soll. Dieser Standard kann von Fall zu Fall überschrieben "
-"werden. Praktizieren Sie \"publish as you go\", nutzen Sie nicht das "
-"Publikationsdatum der Ausgabe."
 
-msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "Eingeschränkter Dateizugriff"
-
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "Sicheren Link in die Einladungs-E-Mail für Gutachter/innen einfügen."
-
-msgid "manager.setup.userAccess.success"
-msgstr "Die Nutzerzugriffsdetails für diese Zeitschrift wurden aktualisiert."
-
-msgid "manager.setup.enableOai.description"
+msgid "stats.context.downloadReport.downloadContext.description"
 msgstr ""
-"Stellen Sie Metadaten für Indizierungsservices von Dritten über <a href=\""
-"https://www.openarchives.org/\">Open Archives Initiative</a> zur Verfügung."
 
-msgid "manager.setup.siteAccess.viewContent"
-msgstr "Artikelinhalt ansehen"
-
-msgid "manager.setup.siteAccess.view"
-msgstr "Seitenzugriff"
-
-msgid "manager.setup.searchDescription.description"
+msgid "stats.context.downloadReport.downloadContext"
 msgstr ""
-"Geben Sie eine kurze Beschreibung (50-300 Zeichen) der Zeitschrift, die "
-"Suchmaschinen anzeigen können, wenn die Zeitschrift in den Suchergebnissen "
-"aufgelistet wird."
 
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Die Suchmaschinenindex-Einstellungen wurden aktualisiert."
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "Die Datenschutzerklärung wurde aktualisiert."
-
-msgid "manager.setup.numPageLinks.description"
+msgid "stats.issueStats"
 msgstr ""
-"Begrenzen Sie die Zahl der angezeigten Links auf Folgeseiten in einer Liste."
 
-msgid "manager.setup.masthead.success"
-msgstr "Das Impressum dieser Zeitschrift wurde aktualisiert."
-
-msgid "manager.setup.lists.success"
-msgstr "Die Listeneinstellung dieser Zeitschrift wurde aktualisiert."
-
-msgid "manager.setup.keyInfo.description"
+msgid "stats.issues.details"
 msgstr ""
-"Geben Sie eine kurze Beschreibung Ihrer Zeitschrift ein und benennen Sie "
-"Redakteure, Direktoren und andere Mitglieder Ihres Redaktionsteams."
 
-msgid "manager.setup.keyInfo"
-msgstr "Schlüsselinformation"
+msgid "stats.issues.searchIssueDescription"
+msgstr ""
+
+msgid "stats.issues.none"
+msgstr ""
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr ""
+
+msgid "stats.issues.countOfTotal"
+msgstr ""
+
+msgid "stats.issues.tooltip.label"
+msgstr ""
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
 
 msgid "stats.publicationStats"
 msgstr "Artikelstatistik"
+
+msgid "stats.publications.details"
+msgstr "Artikeldetails"
+
+msgid "stats.publications.none"
+msgstr ""
+"Es wurden keine Artikel mit Nutzungsstatistiken gefunden, die diesen "
+"Parametern entsprechen."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Anzahl der Abstract-Aufrufe nach Datum"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Anzahl der Dateiansichten nach Datum"
 
 msgid "stats.publications.countOfTotal"
 msgstr "{$count} von {$total} Artikeln"
@@ -1765,112 +2210,102 @@ msgstr "{$count} von {$total} Artikeln"
 msgid "stats.publications.abstracts"
 msgstr "Zusammenfassungen"
 
-msgid "stats.publications.details"
-msgstr "Artikeldetails"
-
-msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr "Anzahl der Dateiansichten nach Datum"
-
 msgid "stats.publications.galleys"
 msgstr "Dateien"
 
-msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr "Anzahl der Abstract-Aufrufe nach Datum"
-
-msgid "stats.publications.none"
+msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Es wurden keine Artikel mit Nutzungsstatistiken gefunden, die diesen "
-"Parametern entsprechen."
 
-msgid "manager.setup.resetPermissions.success"
-msgstr "Artikelrechte wurden erfolgreich zurückgesetzt."
-
-msgid "manager.setup.resetPermissions.description"
+msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr ""
-"Entfernen Sie die Urheberrechtserklärung und die Lizenzinformationen für "
-"jeden veröffentlichten Artikel, um sie auf die aktuellen "
-"Standardeinstellungen der Zeitschrift zurückzusetzen. Dadurch werden alle "
-"früheren Copyright- und Lizenzinformationen, die den Artikeln beigefügt "
-"waren, dauerhaft entfernt. In einigen Fällen ist es Ihnen gesetzlich nicht "
-"gestattet, Werke, die unter einer anderen Lizenz veröffentlicht wurden, neu "
-"zu lizenzieren. Bitte seien Sie vorsichtig bei der Verwendung dieses Tools "
-"und konsultieren Sie juristischen Beistand, wenn Sie sich nicht sicher sind, "
-"welche Rechte Sie an den in Ihrer Zeitschrift veröffentlichten Artikeln "
-"haben."
 
-msgid "plugins.importexport.common.validation.fail"
-msgstr "Überprüfung fehlgeschlagen."
-
-msgid "plugins.importexport.common.validation.success"
-msgstr "Überprüfung erfolgreich!"
-
-msgid "manager.setup.disableSubmissions.notAccepting"
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
-"Diese Zeitschrift nimmt derzeit keine Einreichungen entgegen. Gehen Sie zu "
-"Workflow-Einstellungen, um Einreichungen zu aktivieren."
-
-msgid "manager.setup.disableSubmissions.description"
-msgstr ""
-"Verhindern Sie, dass Nutzer/innen neue Artikel für diese Zeitschrift "
-"einreichen. Auf der Seite  <a href=\"{$url}\">journal sections</a> können "
-"Einreichungen für individuelle Rubriken deaktiviert werden."
-
-msgid "manager.sections.confirmDeactivateSection.error"
-msgstr ""
-"Mindestens eine Rubrik muss aktiv sein. Gehen Sie zu Workflow-Einstellungen, "
-"um alle Einreichungen für diese Zeitschrift zu deaktivieren."
-
-msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "Fehler beim Parsen der Ausgabefahnen"
-
-msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
-
-msgid "plugins.importexport.native.export.issues.results"
-msgstr "Ausgaben exportieren Ergebnisse"
-
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
-msgstr ""
-"Für diese Zeitschrift wurde kein Hauptkontakt definiert. Sie können einen "
-"Hauptkontakt in den <a href=\"{$url}\">Zeitschrifteneinstellungen</a> "
-"einfügen."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
 "Eine Kopie der E-Mail mit der Bestätigung der Einreichung an den "
 "Hauptkontakt dieser Zeitschrift schicken."
 
-msgid "manager.setup.selectCountry"
+msgid ""
+"manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
+"description"
 msgstr ""
-"Wählen Sie das Land, in dem diese Zeitschrift beheimatet ist, oder das Land "
-"der Postanschrift der Zeitschrift oder des Verlags."
+"Für diese Zeitschrift wurde kein Hauptkontakt definiert. Sie können einen "
+"Hauptkontakt in den <a href=\"{$url}\">Zeitschrifteneinstellungen</a> "
+"einfügen."
 
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "Der Name der Website wenn mehr als eine Zeitschrift gehostet wird"
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Ausgaben exportieren Ergebnisse"
 
-msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr "Die Währung des zu zahlenden Betrags, z.B. USD"
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
-msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr "Der zu zahlende Betrag"
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Fehler beim Parsen der Ausgabefahnen"
 
-msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr "Der Name der Bezahlungsart"
-
-msgid "emailTemplate.variable.context.contactEmail"
-msgstr "Die E-Mail-Adresse des Hauptkontakts der Zeitschrift"
-
-msgid "emailTemplate.variable.context.contextSignature"
-msgstr "Die E-Mail-Signatur für automatische E-Mails der Zeitschrift"
-
-msgid "emailTemplate.variable.context.contactName"
-msgstr "Der Name des Hauptkontakts der Zeitschrift"
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Der Name der Zeitschrift"
 
 msgid "emailTemplate.variable.context.contextUrl"
 msgstr "Die Homepage-URL der Zeitschrift"
 
-msgid "emailTemplate.variable.context.contextName"
-msgstr "Der Name der Zeitschrift"
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Der Name des Hauptkontakts der Zeitschrift"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Die E-Mail-Signatur für automatische E-Mails der Zeitschrift"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Die E-Mail-Adresse des Hauptkontakts der Zeitschrift"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Der Name der Bezahlungsart"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Der zu zahlende Betrag"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Die Währung des zu zahlenden Betrags, z.B. USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Der Name der Website wenn mehr als eine Zeitschrift gehostet wird"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "mailable.validateEmailContext.name"
+msgstr "E-Mail überprüfen (Zeitschrift Registrierung)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
@@ -1878,42 +2313,51 @@ msgstr ""
 "mit einer Zeitschrift registrieren, die die Überprüfung der E-Mail Adresse "
 "verlangt."
 
-msgid "mailable.validateEmailContext.name"
-msgstr "E-Mail überprüfen (Zeitschrift Registrierung)"
-
 msgid "doi.displayName"
 msgstr "DOI"
 
 msgid "doi.description"
-msgstr "Dieses Plugin ermöglicht die Zuweisung von DOIs (persistent identifiers) zu Ausgaben, Artikeln und Fahnen in OJS."
+msgstr ""
+"Dieses Plugin ermöglicht die Zuweisung von DOIs (persistent identifiers) zu "
+"Ausgaben, Artikeln und Fahnen in OJS."
 
 msgid "doi.readerDisplayName"
 msgstr "DOI"
 
-msgid "doi.manager.settings.description"
-msgstr "Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und benutzen können:"
+msgid "doi.manager.displayName"
+msgstr "DOIs"
 
-#, fuzzy
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Bitte wählen Sie, welchen Objekten DOI zugewiesen werden sollen."
+msgid "doi.manager.settings.description"
+msgstr ""
+"Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und "
+"benutzen können:"
 
 msgid "doi.manager.settings.explainDois"
-msgstr "Bitte wählen Sie die Publikationsobjekte, denen Digital Object Identifiers (DOI) zugewiesen werden:"
-
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Artikel"
+msgstr ""
+"Bitte wählen Sie die Publikationsobjekte, denen Digital Object Identifiers "
+"(DOI) zugewiesen werden:"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Fahnen"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr ""
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI-Präfix"
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr "Der DOI-Präfix ist verpflichtend und muss im Format 10.xxxx angegeben werden."
+msgstr ""
+"Der DOI-Präfix ist verpflichtend und muss im Format 10.xxxx angegeben werden."
 
 msgid "doi.manager.settings.doiSuffixPattern"
-msgstr "Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die Seitenzahl und %x für die \"benutzerdefinierte Kennung\" (muss in Schritt 4.3 der Zeitschrifteneinrichtung aktiviert werden)."
+msgstr ""
+"Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. "
+"Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des "
+"Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-"
+"Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die "
+"Seitenzahl und %x für die \"benutzerdefinierte Kennung\" (muss in Schritt "
+"4.3 der Zeitschrifteneinrichtung aktiviert werden)."
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "vol%viss%ipp%p würde z.B. einen DOI 10.1234/vol3iss2pp230 erzeugen."
@@ -1940,7 +2384,11 @@ msgid "doi.manager.settings.doiReassign"
 msgstr "DOI neu zuweisen"
 
 msgid "doi.manager.settings.doiReassign.description"
-msgstr "Wenn Sie Ihre DOI-Konfiguration ändern, sind bereits vergebene DOI nicht betroffen. Sobald die DOI-Konfiguration gespeichert wird, nutzen Sie diesen Knopf, um alle existierenden DOI zu löschen, so dass die neuen Einstellungen auch bereits existierende Objekte mit betreffen."
+msgstr ""
+"Wenn Sie Ihre DOI-Konfiguration ändern, sind bereits vergebene DOI nicht "
+"betroffen. Sobald die DOI-Konfiguration gespeichert wird, nutzen Sie diesen "
+"Knopf, um alle existierenden DOI zu löschen, so dass die neuen Einstellungen "
+"auch bereits existierende Objekte mit betreffen."
 
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Sind Sie sicher, dass Sie alle existierenden DOI löschen möchten?"
@@ -1949,13 +2397,38 @@ msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "DOI zuweisen"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
-msgstr "DOIs an alle Journalobjekte zuweisen, denen bisher noch keine DOI zugewiesen waren. Diese Aktion kann nicht mit einer individuellen Suffix-Konfiguration genutzt werden. Wenn Sie oben die DOI-Konfiguration verändert haben, speichern Sie bitte Ihre Änderungen, bevor Sie diese Aktion ausführen. DOI zuzuweisen kann eine Weile dauern, abhängig von der Anzahl im Journal publizierter Objekte."
+msgstr ""
+"DOIs an alle Journalobjekte zuweisen, denen bisher noch keine DOI zugewiesen "
+"waren. Diese Aktion kann nicht mit einer individuellen Suffix-Konfiguration "
+"genutzt werden. Wenn Sie oben die DOI-Konfiguration verändert haben, "
+"speichern Sie bitte Ihre Änderungen, bevor Sie diese Aktion ausführen. DOI "
+"zuzuweisen kann eine Weile dauern, abhängig von der Anzahl im Journal "
+"publizierter Objekte."
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr "Sind Sie sicher, dass Sie allen veröffentlichten Objekten einen DOI zuweisen möchten, die bisher noch keine DOI zugewiesen bekommen haben?"
+msgstr ""
+"Sind Sie sicher, dass Sie allen veröffentlichten Objekten einen DOI zuweisen "
+"möchten, die bisher noch keine DOI zugewiesen bekommen haben?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registrierungsagentur"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Bitte wählen Sie die Registrierungsagentur aus, die Sie verwenden wollen um "
+"DOIs abzuliefern."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Keine"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "Die DOI muss mit {$prefix} beginnen."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Zuweisen"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "Ausgabe"
@@ -1969,17 +2442,35 @@ msgstr "Fahne"
 msgid "doi.editor.customSuffixMissing"
 msgstr "Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt."
 
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Sie können keine DOI generieren, solange der Beitrag keiner Ausgabe "
+"zugewiesen ist."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Sie können keine DOI generieren, denn einem oder mehreren Teilen der URN "
+"fehlen Daten. Sie müssen die Veröffentlichung einer Ausgabe zuweisen, eine "
+"Verlags ID angeben oder Seitenzahlen eintragen."
+
 msgid "doi.editor.patternNotResolved"
-msgstr "Es kann kein DOI zugewiesen werden, weil ein ungültiges Muster verwendet wird."
+msgstr ""
+"Es kann kein DOI zugewiesen werden, weil ein ungültiges Muster verwendet "
+"wird."
 
 msgid "doi.editor.canBeAssigned"
-msgstr "Sie sehen eine Voransicht des DOI. Wählen Sie die Checkbox und speichern Sie das Formular, um den DOI zuzuweisen."
+msgstr ""
+"Sie sehen eine Voransicht des DOI. Wählen Sie die Checkbox und speichern Sie "
+"das Formular, um den DOI zuzuweisen."
 
 msgid "doi.editor.assigned"
 msgstr "Der DOI ist diesem Objekt vom Typ {$pubObjectType} zugewiesen."
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr "Der angegebene DOI-Suffix wird bereits für ein anderes veröffentlichtes Element benutzt. Bitte vergeben Sie einen eindeutigen DOI-Suffix für jedes Element."
+msgstr ""
+"Der angegebene DOI-Suffix wird bereits für ein anderes veröffentlichtes "
+"Element benutzt. Bitte vergeben Sie einen eindeutigen DOI-Suffix für jedes "
+"Element."
 
 msgid "doi.editor.clearObjectsDoi"
 msgstr "DOI entfernen"
@@ -1991,10 +2482,14 @@ msgid "doi.editor.clearIssueObjectsDoi"
 msgstr "DOI für die Objekte der Ausgabe entfernen"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr "Sind Sie sicher, dass Sie die DOI der existierenden Objekte der Ausgabe entfernen möchten?"
+msgstr ""
+"Sind Sie sicher, dass Sie die DOI der existierenden Objekte der Ausgabe "
+"entfernen möchten?"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
-msgstr "Nutzen Sie die folgende Option, um die DOI aller Objekte (Artikel und Fahnen), die momentan dieser Ausgabe zugeordnet sind, zu entfernen."
+msgstr ""
+"Nutzen Sie die folgende Option, um die DOI aller Objekte (Artikel und "
+"Fahnen), die momentan dieser Ausgabe zugeordnet sind, zu entfernen."
 
 msgid "doi.editor.assignDoi"
 msgstr "DOI {$pubId} zu diesem Objekt vom Typ {$pubObjectType} zuweisen"
@@ -2003,122 +2498,211 @@ msgid "doi.editor.assignDoi.emptySuffix"
 msgstr "Es kann kein DOI zugewiesen werden, weil der angepasste Suffix fehlt."
 
 msgid "doi.editor.assignDoi.pattern"
-msgstr "DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster verwendet wird."
+msgstr ""
+"DOI {$pubId} kann nicht zugewiesen werden, weil ein ungültiges Muster "
+"verwendet wird."
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
 "DOI {$pubId} wurde zugewiesen. Um die DOI zu bearbeiten, rufen Sie die <a "
 "href=\"{$doiManagementLink}\">DOI Management Seite</a> auf."
 
-msgid "doi.editor.preview.objects"
-msgstr "Element"
-
-msgid "doi.editor.preview.galleys"
-msgstr "Fahne: {$galleyLabel}"
-
-msgid "doi.editor.preview.publication.none"
-msgstr "Dieser Publikation wurde keine DOI zugeordnet."
-
-msgid "doi.editor.preview.publication"
-msgstr "Die DOI für diese Veröffentlichung wird {$doi} sein."
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "Die DOI {$pubId} wird bei der Veröffentlichung zugewiesen."
 
 msgid "doi.editor.missingPrefix"
 msgstr "Die DOI muss mit {$doiprefix} beginnen."
 
-msgid "doi.editor.missingParts"
-msgstr ""
-"Sie können keine DOI generieren, denn einem oder mehreren Teilen der URN "
-"fehlen Daten. Sie müssen die Veröffentlichung einer Ausgabe zuweisen, eine "
-"Verlags ID angeben oder Seitenzahlen eintragen."
+msgid "doi.editor.preview.publication"
+msgstr "Die DOI für diese Veröffentlichung wird {$doi} sein."
 
-msgid "doi.editor.missingIssue"
-msgstr ""
-"Sie können keine DOI generieren, solange der Beitrag keiner Ausgabe "
-"zugewiesen ist."
+msgid "doi.editor.preview.publication.none"
+msgstr "Dieser Publikation wurde keine DOI zugeordnet."
 
-msgid "doi.editor.doi.assignDoi"
-msgstr "Zuweisen"
+msgid "doi.editor.preview.galleys"
+msgstr "Fahne: {$galleyLabel}"
 
-msgid "doi.editor.doi.description"
-msgstr "Die DOI muss mit {$prefix} beginnen."
+msgid "doi.editor.preview.objects"
+msgstr "Element"
 
-msgid "doi.manager.issueDois"
-msgstr "Heft DOIs"
-
-msgid "doi.manager.submissionDois"
-msgstr "Artikel DOIs"
-
-msgid "api.issue.404.issuesNotFound"
-msgstr "Die Hefte, nach denen Sie gesucht haben, konnten nicht gefunden werden"
-
-msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
-"Nur DOIs können bearbeitet werden, nachdem eine Publikation veröffentlicht "
-"wurde"
-
-msgid "api.issue.400.invalidDoi"
-msgstr "Die vorgeschlagene DOI ist nicht gültig"
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Die Fahne, nach der Sie suchen, ist nicht Teil dieser Publikation."
 
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
 "Nur DOIs können bearbeitet werden, nachdem eine Publikation/Fahne "
 "veröffentlicht wurde"
 
-msgid "api.galley.403.publicationDidNotMatch"
-msgstr "Die Fahne, nach der Sie suchen, ist nicht Teil dieser Publikation."
+msgid "api.issue.400.invalidDoi"
+msgstr "Die vorgeschlagene DOI ist nicht gültig"
 
-msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr "Die DOI {$pubId} wird bei der Veröffentlichung zugewiesen."
-
-msgid "doi.manager.settings.registrationAgency.none"
-msgstr "Keine"
-
-msgid "doi.manager.settings.registrationAgency.description"
+msgid "api.issue.403.canEditPublishedDoi"
 msgstr ""
-"Bitte wählen Sie die Registrierungsagentur aus, die Sie verwenden wollen um "
-"DOIs abzuliefern."
+"Nur DOIs können bearbeitet werden, nachdem eine Publikation veröffentlicht "
+"wurde"
 
-msgid "doi.manager.settings.registrationAgency"
-msgstr "Registrierungsagentur"
+msgid "api.issue.404.issuesNotFound"
+msgstr "Die Hefte, nach denen Sie gesucht haben, konnten nicht gefunden werden"
 
-msgid "doi.manager.displayName"
-msgstr "DOIs"
+msgid "doi.manager.submissionDois"
+msgstr "Artikel DOIs"
 
-msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "Im Schritt \"Lektorat\""
+msgid "doi.manager.issueDois"
+msgstr "Heft DOIs"
 
-msgid "doi.manager.settings.doiSuffixLegacy"
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
-"Standard-Patterns verwenden.<br />%j.v%vi%i für Hefte<br />%j.v%vi%i.%a für "
-"Artikel<br />%j.v%vi%i.%a.g%g für Fahnen."
 
-msgid "manager.setup.enableDois.description"
+msgid "manager.institutions.noContext"
 msgstr ""
-"Digital Object Identifier (DOIs) zu Artikeln, Heften, und Fahnen zuweisen."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr ""
 
 msgid "mailable.subscriptionNotify.description"
-msgstr "Diese E-Mail benachrichtigt eine/n registrierte/n Leser/in, dass die/der Abonnementverwalter/in für sie/ihn ein Abonnement angelegt hat. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+msgstr ""
+"Diese E-Mail benachrichtigt eine/n registrierte/n Leser/in, dass die/der "
+"Abonnementverwalter/in für sie/ihn ein Abonnement angelegt hat. Sie liefert "
+"die URL der Zeitschrift und Zugriffsinformationen."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpiresSoon.description"
-msgstr "Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement demnächst abläuft. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+msgstr ""
+"Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein "
+"Abonnement demnächst abläuft. Sie liefert die URL der Zeitschrift und "
+"Zugriffsinformationen."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpired.description"
-msgstr "Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+msgstr ""
+"Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein "
+"Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und "
+"Zugriffsinformationen."
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpiredLast.description"
-msgstr "Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und Zugriffsinformationen."
+msgstr ""
+"Diese E-Mail informiert eine/n Abonnentin/Abonnenten, dass ihr/sein "
+"Abonnement abgelaufen ist. Sie liefert die URL der Zeitschrift und "
+"Zugriffsinformationen."
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr ""
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
-msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement."
+msgstr ""
+"Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein "
+"individuelles Abonnement online erworben worden ist. Sie liefert "
+"Informationen über das Abonnement und einen Link zum schnellen Zugriff auf "
+"das abgeschlossene Abonnement."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr ""
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
-msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement."
+msgstr ""
+"Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein "
+"institutionelles Abonnement online erworben worden ist. Sie liefert "
+"Informationen über das Abonnement und einen Link zum schnellen Zugriff auf "
+"das abgeschlossene Abonnement."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr ""
 
 msgid "mailable.subscriptionRenewIndividual.description"
-msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement."
+msgstr ""
+"Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein "
+"individuelles Abonement online erneuert worden ist. Sie liefert "
+"Informationen über das Abonnement und einen Link zum schnellen Zugriff auf "
+"das erneuerte Abonnement."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr ""
 
 msgid "mailable.subscriptionRenewInstitutional.description"
-msgstr "Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement."
+msgstr ""
+"Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein "
+"institutionelles Abonement online erneuert worden ist. Sie liefert "
+"Informationen über das Abonnement und einen Link zum schnellen Zugriff auf "
+"das erneuerte Abonnement."
+
+msgid "mailable.openAccessNotify.name"
+msgstr ""
 
 msgid "mailable.openAccessNotify.description"
-msgstr "Diese E-Mail wird an registrierte Leser/innen gesendet, die darum gebeten haben, informiert zu werden, wenn eine Ausgabe frei verfügbar wird."
+msgstr ""
+"Diese E-Mail wird an registrierte Leser/innen gesendet, die darum gebeten "
+"haben, informiert zu werden, wenn eine Ausgabe frei verfügbar wird."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr ""
+
+msgid "mailable.lockssNewArchive.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+#~ msgid "manager.setup.metadata.coverage"
+#~ msgstr "Themenbereich"
+
+#~ msgid "manager.setup.metadata.coverage.description"
+#~ msgstr ""
+#~ "Bezieht sich auf den räumlich-geografischen, auf den zeitlichen Bereich "
+#~ "und auf die Eigenschaften des Fachgebiets."
+
+#~ msgid "manager.setup.customTags"
+#~ msgstr "Tags anpassen"
+
+#~ msgid "manager.setup.customTagsDescription"
+#~ msgstr ""
+#~ "HTML-Kopfzeilen, die auf jeder Seite erscheinen (z.B. META-Einträge)."
+
+#~ msgid "manager.setup.publishingMode"
+#~ msgstr "Zugang zum Zeitschrifteninhalt"
+
+#~ msgid "manager.statistics.statistics.registeredUsers"
+#~ msgstr "Eingetragene Benutzer/innen"
+
+#~ msgid "manager.setup.userAccess.success"
+#~ msgstr ""
+#~ "Die Nutzerzugriffsdetails für diese Zeitschrift wurden aktualisiert."
+
+#~ msgid "manager.setup.searchEngineIndexing.success"
+#~ msgstr "Die Suchmaschinenindex-Einstellungen wurden aktualisiert."
+
+#~ msgid "manager.setup.privacyStatement.success"
+#~ msgstr "Die Datenschutzerklärung wurde aktualisiert."
+
+#~ msgid "manager.setup.masthead.success"
+#~ msgstr "Das Impressum dieser Zeitschrift wurde aktualisiert."
+
+#~ msgid "manager.setup.lists.success"
+#~ msgstr "Die Listeneinstellung dieser Zeitschrift wurde aktualisiert."
+
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Artikel"

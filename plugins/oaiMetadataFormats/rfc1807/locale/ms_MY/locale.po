@@ -12,8 +12,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.rfc1807.description"
-msgstr "Menstrukturkan metadata dengan cara yang selaras dengan format RFC1807."
-
 msgid "plugins.OAIMetadata.rfc1807.displayName"
 msgstr "Format Metadata RFC1807"
+
+msgid "plugins.OAIMetadata.rfc1807.description"
+msgstr ""
+"Menstrukturkan metadata dengan cara yang selaras dengan format RFC1807."

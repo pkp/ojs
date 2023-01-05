@@ -11,19 +11,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.generic.recommendBySimilarity.advancedSearch"
-msgstr "iniciar uma pesquisa avançada por similaridade"
-
-msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
-msgstr "Você também pode {$advancedSearchLink} para este artigo."
-
-msgid "plugins.generic.recommendBySimilarity.heading"
-msgstr "Artigos Semelhantes"
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Recomendar artigos semelhantes"
 
 msgid "plugins.generic.recommendBySimilarity.description"
 msgstr ""
 "Este plugin adiciona uma lista de artigos semelhantes à página de resumo do "
 "artigo."
 
-msgid "plugins.generic.recommendBySimilarity.displayName"
-msgstr "Recomendar artigos semelhantes"
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Artigos Semelhantes"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Você também pode {$advancedSearchLink} para este artigo."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "iniciar uma pesquisa avançada por similaridade"

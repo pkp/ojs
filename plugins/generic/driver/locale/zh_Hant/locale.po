@@ -12,5 +12,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "plugins.generic.driver.displayName"
+msgstr ""
+
 msgid "plugins.generic.driver.description"
-msgstr "DRIVER插件按DRIVER Guidelines 2.0延伸OAI-PMH介面，有助OJS期刊合符DRIVER規格。"
+msgstr ""
+"DRIVER插件按DRIVER Guidelines 2.0延伸OAI-PMH介面，有助OJS期刊合符DRIVER規格。"

@@ -27,7 +27,13 @@ msgid "submission.title"
 msgstr "Titre de l'article"
 
 msgid "submission.title.tip"
-msgstr "Par type de soumission, on entend « image », « texte » ou d'autres formats multimédias, y compris « logiciel » et « ressource interactive ». Veuillez choisir le type qui correspond le mieux à votre soumission. Vous trouverez des exemples au <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Par type de soumission, on entend « image », « texte » ou d'autres formats "
+"multimédias, y compris « logiciel » et « ressource interactive ». Veuillez "
+"choisir le type qui correspond le mieux à votre soumission. Vous trouverez "
+"des exemples au <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Commencer une nouvelle soumission dans"
@@ -48,7 +54,10 @@ msgid "submission.issueEntry"
 msgstr "Métadonnées"
 
 msgid "submission.submit.whatNext.description"
-msgstr "La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée."
+msgstr ""
+"La revue a été informée de votre soumission et vous a envoyé par courriel "
+"une confirmation pour vos dossiers. Un rédacteur communiquera avec vous "
+"lorsque votre soumission aura été examinée."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Les épreuves se trouvent dans le dossier du numéro"
@@ -76,8 +85,8 @@ msgstr ""
 
 msgid "grid.issueEntry.availableGalley.message"
 msgstr ""
-"<p>Ces épreuves <em>seront mises à la disposition</em> des lecteurs-"
-"trices.</p>"
+"<p>Ces épreuves <em>seront mises à la disposition</em> des lecteurs-trices.</"
+"p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Rendre ces épreuves disponibles"
@@ -103,16 +112,15 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Titre et résumé"
 
 msgid "submission.submit.upload.description"
-msgstr "Téléverser les fichier associés à cette soumission, incluant l'article, les fichiers multimédias, les ensembles de données, les oeuvres d'art, etc."
+msgstr ""
+"Téléverser les fichier associés à cette soumission, incluant l'article, les "
+"fichiers multimédias, les ensembles de données, les oeuvres d'art, etc."
 
 msgid "submission.pageProofs"
 msgstr "Correction d'épreuve"
 
 msgid "workflow.review.externalReview"
 msgstr "Évaluation"
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Envoyer en évaluation"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Les métadonnées du numéro de la soumission ont été mises à jour."
@@ -140,7 +148,9 @@ msgid "submission.citationFormat.notFound"
 msgstr "Le format de citation n'a pas été repéré."
 
 msgid "submission.metadataDescription"
-msgstr "Ces spécifications sont basées sur le schéma de métadonnées du Dublin Core, une norme internationale utilisée pour décrire les contenus d'une revue."
+msgstr ""
+"Ces spécifications sont basées sur le schéma de métadonnées du Dublin Core, "
+"une norme internationale utilisée pour décrire les contenus d'une revue."
 
 msgid "section.any"
 msgstr "Toute rubrique"
@@ -155,10 +165,23 @@ msgid "catalog.category.heading"
 msgstr "Tous les titres"
 
 msgid "galley.editPublishedDisabled"
-msgstr "Les épreuves de cette publication ne peuvent pas être modifiées car elles ont déjà été publiées."
+msgstr ""
+"Les épreuves de cette publication ne peuvent pas être modifiées car elles "
+"ont déjà été publiées."
 
 msgid "galley.publicationNotFound"
 msgstr "La publication de ces épreuves est introuvable."
+
+msgid "publication.assignToissue"
+msgstr "Assigner à un numéro"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Cet article a été assigné au <a href=\"{$issueUrl}\">{$issueName}</a>, mais "
+"sa publication n'a pas été programmée."
+
+msgid "publication.changeIssue"
+msgstr "Changer de numéro"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -169,11 +192,16 @@ msgstr ""
 msgid "publication.invalidSection"
 msgstr "La rubrique de cette publication est introuvable."
 
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
+
 msgid "publication.invalidIssue"
 msgstr "Le numéro de cette publication est introuvable."
 
 msgid "publication.publish.confirmation"
-msgstr "Toutes les exigences de publication ont été remplies. Êtes-vous certain-e de vouloir publier ceci ?"
+msgstr ""
+"Toutes les exigences de publication ont été remplies. Êtes-vous certain-e de "
+"vouloir publier ceci ?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
@@ -186,8 +214,15 @@ msgstr ""
 "Toutes les exigences de publication ont été remplies. Ceci sera publié "
 "immédiatement dans le {$issue}. Êtes-vous certain-e de vouloir publier ceci ?"
 
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Toutes les exigences de publication ont été remplies. Ceci sera publié "
+"immédiatement car la date de publication a été fixée au {$datePublished}. "
+"Êtes-vous certain-e de vouloir publier ceci ?"
+
 msgid "publication.required.issue"
-msgstr "La publication doit être assignée à un numéro avant de pouvoir être publiée."
+msgstr ""
+"La publication doit être assignée à un numéro avant de pouvoir être publiée."
 
 msgid "publication.publishedIn"
 msgstr "Publié-e dans le <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -196,25 +231,11 @@ msgid "publication.scheduledIn"
 msgstr ""
 "Publication programmée dans le <a href=\"{$issueUrl}\">{$issueName}</a>."
 
-msgid "publication.issue.success"
-msgstr ""
-"Les renseignements relatifs au numéro de cette publication ont été mis à "
-"jour."
-
-msgid "publication.selectIssue"
-msgstr "Choisir un numéro pour programmer la publication"
-
 msgid "publication.unscheduledIn"
 msgstr "Ceci n'a pas été programmé pour publication dans un numéro."
 
-msgid "publication.assignToissue"
-msgstr "Assigner à un numéro"
-
-msgid "publication.publish.confirmation.datePublishedInPast"
-msgstr ""
-"Toutes les exigences de publication ont été remplies. Ceci sera publié "
-"immédiatement car la date de publication a été fixée au {$datePublished}. "
-"Êtes-vous certain-e de vouloir publier ceci ?"
+msgid "publication.selectIssue"
+msgstr "Choisir un numéro pour programmer la publication"
 
 msgid "submission.publication"
 msgstr "Publication"
@@ -316,48 +337,30 @@ msgstr "Renseignements de publication pour la version {$version}"
 msgid "submission.queries.production"
 msgstr "Discussions sur la production"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inactive)"
-
-msgid "publication.changeIssue"
-msgstr "Changer de numéro"
-
-msgid "publication.assignedToIssue"
-msgstr ""
-"Cet article a été assigné au <a href=\"{$issueUrl}\">{$issueName}</a>, mais "
-"sa publication n'a pas été programmée."
-
 msgid "editor.submission.decision.backToReview"
 msgstr "Revenir à l'évaluation"
-
-msgid "editor.submission.decision.backToReview.completed"
-msgstr "Retourné-e à l'étape d'évaluation"
-
-msgid "editor.submission.decision.backToReview.log"
-msgstr ""
-"{$editorName} a annulé la décision d'accepter cette soumission et l'a remise "
-"à l'étape d'évaluation."
-
-msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "La soumission, {$title}, a été retournée à l'étape d'évaluation."
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
 "Revenir sur la décision d'accepter cette soumission et la remettre à l'étape "
 "d'évaluation."
 
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} a annulé la décision d'accepter cette soumission et l'a remise "
+"à l'étape d'évaluation."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Retourné-e à l'étape d'évaluation"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "La soumission, {$title}, a été retournée à l'étape d'évaluation."
+
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envoyer un courriel aux auteur.e.s pour les informer que leur soumission est "
 "retournée à l'étape d'évaluation. Expliquer pourquoi cette décision a été "
 "prise et informer l'auteur.e quel suivi d'évaluation sera fait."
-
-msgid "submission.layout.viewGalley"
-msgstr "Afficher les épreuves"
-
-msgid "galley.cantEditPublished"
-msgstr ""
-"Ces épreuves ne peuvent pas être éditées car elles ont déjà été publiées."
 
 #, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
@@ -368,17 +371,6 @@ msgstr ""
 "de la date à laquelle ils doivent s'attendre à recevoir une nouvelle "
 "communication de la part des rédacteurs et rédactrices."
 
-msgid "doi.submission.incorrectContext"
-msgstr ""
-"Impossible de créer un DOI pour la soumission suivante : {$pubObjectTitle}. "
-"Elle n'existe pas dans le contexte actuel de la revue."
-
-msgid "doi.submission.issueMissing.representation"
-msgstr ""
-"Impossible de créer un DOI pour les épreuves de {$pubObjectTitle} pour la "
-"soumission suivante : {$itemTitle}. La soumission doit être assignée à un "
-"numéro avant qu'un DOI puisse être généré."
-
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Sélectionner les fichiers devant être envoyés à l'étape d'évaluation."
 
@@ -387,6 +379,42 @@ msgstr ""
 "Impossible de créer un DOI pour la soumission suivante : {$pubObjectTitle}. "
 "La soumission doit être assignée à un numéro avant qu'un DOI puisse être "
 "généré."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Impossible de créer un DOI pour les épreuves de {$pubObjectTitle} pour la "
+"soumission suivante : {$itemTitle}. La soumission doit être assignée à un "
+"numéro avant qu'un DOI puisse être généré."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Impossible de créer un DOI pour la soumission suivante : {$pubObjectTitle}. "
+"Elle n'existe pas dans le contexte actuel de la revue."
+
+msgid "submission.layout.viewGalley"
+msgstr "Afficher les épreuves"
+
+msgid "galley.cantEditPublished"
+msgstr ""
+"Ces épreuves ne peuvent pas être éditées car elles ont déjà été publiées."
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Au moins un-e auteur-e est requis-e."
@@ -398,7 +426,17 @@ msgid "submission.submit.form.abstractRequired"
 msgstr "Veuillez inscrire le résumé de votre article."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée pour cette rubrique."
+msgstr ""
+"Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée "
+"pour cette rubrique."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Sélectionner le rôle du,de la contributeur-trice."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Envoyer en évaluation"
+
+#~ msgid "publication.issue.success"
+#~ msgstr ""
+#~ "Les renseignements relatifs au numéro de cette publication ont été mis à "
+#~ "jour."

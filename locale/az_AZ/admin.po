@@ -16,6 +16,14 @@ msgstr ""
 msgid "admin.hostedContexts"
 msgstr "Nəşr olunan jurnallar"
 
+msgid "admin.settings.redirect"
+msgstr "Jurnalın yönləndirməsi"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Saytın əsas səhifəsi bu jurnalın əsas səhifəsi olacaq. Bu, məsələn, saytda "
+"yalnız bir jurnal varsa faydalıdır."
+
 msgid "admin.languages.confirmDisable"
 msgstr ""
 "Bu dili deaktiv etmək istədiyinizə əminsiniz? Bu, hazırda ondan istifadə "
@@ -48,6 +56,46 @@ msgstr ""
 "dillərə dəstəyin əlavə edilməsi haqqında məlumat üçün OSJ-nın sənədlərinə "
 "baxın."
 
+msgid "admin.systemVersion"
+msgstr "OJS versiyası"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfiqurasiyası"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt> faylında OJS-ın konfiqurasiya parametrləri"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Siz avtomatik olaraq bu jurnalın administratoru kimi qeydiyyatdan "
+"keçəcəksiniz. Yeni jurnal yaratdıqdan sonra jurnalın ilkin parametrlərini "
+"tamamlamaq üçün onun parametrlər səhifəsinə yönləndiriləcəksiniz."
+
+msgid "admin.journals.journalSettings"
+msgstr "Jurnalın parametrləri"
+
+msgid "admin.journals.noneCreated"
+msgstr "Hələ heç bir jurnal yaradılmayıb."
+
+msgid "admin.contexts.create"
+msgstr "Jurnalı yaradın"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Bu jurnalı təsvir edən qısa söz və ya abbreviatura olmalıdır. Jurnalın URL-i "
+"{$sampleUrl} olacaq."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Başlıq tələb olunur."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Yol tələb olunur."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Yolda yalnız hərflər, rəqəmlər və alt xətt _ və defis - ola bilər. Onun "
+"yalnız əvvəlində və sonunda hərf və ya rəqəm ola bilər."
+
 msgid "admin.contexts.form.pathExists"
 msgstr "Əlavə etdiyiniz yol başqa jurnal tərəfindən istifadə olunur."
 
@@ -66,52 +114,12 @@ msgstr "Mövcud jurnal yolu və ya yaradılacaq yol (Məs. \"ojs\")."
 msgid "admin.journals.importSubscriptions"
 msgstr "Abunəlikləri idxal edin"
 
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1-dən məqalə metadatasını çevirin"
+
 msgid "admin.journals.redirect"
 msgstr ""
 "OJS 1 URL adreslerinin OJS 2 URL adreslərinə uyğunlaşdırmaq üçün kod yaradın"
-
-msgid "admin.journals.journalSettings"
-msgstr "Jurnalın parametrləri"
-
-msgid "admin.journals.noneCreated"
-msgstr "Hələ heç bir jurnal yaradılmayıb."
-
-msgid "admin.systemVersion"
-msgstr "OJS versiyası"
-
-msgid "admin.systemConfiguration"
-msgstr "OJS konfiqurasiyası"
-
-msgid "admin.systemConfigurationDescription"
-msgstr "<tt>config.inc.php</tt> faylında OJS-ın konfiqurasiya parametrləri"
-
-msgid "admin.journals.createInstructions"
-msgstr ""
-"Siz avtomatik olaraq bu jurnalın administratoru kimi qeydiyyatdan "
-"keçəcəksiniz. Yeni jurnal yaratdıqdan sonra jurnalın ilkin parametrlərini "
-"tamamlamaq üçün onun parametrlər səhifəsinə yönləndiriləcəksiniz."
-
-msgid "admin.contexts.form.titleRequired"
-msgstr "Başlıq tələb olunur."
-
-msgid "admin.contexts.create"
-msgstr "Jurnalı yaradın"
-
-msgid "admin.journals.urlWillBe"
-msgstr ""
-"Bu jurnalı təsvir edən qısa söz və ya abbreviatura olmalıdır. Jurnalın URL-i "
-"{$sampleUrl} olacaq."
-
-msgid "admin.contexts.form.pathRequired"
-msgstr "Yol tələb olunur."
-
-msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr ""
-"Yolda yalnız hərflər, rəqəmlər və alt xətt _ və defis - ola bilər. Onun "
-"yalnız əvvəlində və sonunda hərf və ya rəqəm ola bilər."
-
-msgid "admin.journals.transcode"
-msgstr "ISO8859-1-dən məqalə metadatasını çevirin"
 
 msgid "admin.journals.form.importPathRequired"
 msgstr "İdxal yolu tələb olunur."
@@ -124,6 +132,18 @@ msgstr "İstifadəçiləri birləşdirin"
 
 msgid "admin.mergeUsers.mergeUser"
 msgstr "İstifadəçini birləşdirin"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Əvvəlki istifadəçinin müəllifliyinin, redaksiya tapşırıqlarının və s.-nin "
+"köçürüləcəyi istifadəçini seçin."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Başqa bir istifadəçi hesabına birləşmək üçün istifadəçi (və ya bir neçə) "
+"seçin (məsələn, kiminsə iki istifadəçi hesabı olduqda). Birinci seçilmiş "
+"hesab(lar) silinəcək və bütün əlaqəli məqalələr, redaksiya tapşırıqları və "
+"s. ikinci hesaba əlavə olunacaq."
 
 msgid "admin.mergeUsers.allUsers"
 msgstr "Bütün qeydiyyatlı istifadəçilər"
@@ -152,37 +172,9 @@ msgstr "Buraxılışın İD-si tam ədəd deyil."
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
 msgstr "Buraxılışın qalereyasının İD-si tam ədəd deyil."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
 msgstr "Buraxılışın ID-si onun əlaqəli ID-si ilə uyğun gəlmir."
-
-msgid "admin.mergeUsers.into.description"
-msgstr ""
-"Əvvəlki istifadəçinin müəllifliyinin, redaksiya tapşırıqlarının və s.-nin "
-"köçürüləcəyi istifadəçini seçin."
-
-msgid "admin.mergeUsers.from.description"
-msgstr ""
-"Başqa bir istifadəçi hesabına birləşmək üçün istifadəçi (və ya bir neçə) "
-"seçin (məsələn, kiminsə iki istifadəçi hesabı olduqda). Birinci seçilmiş "
-"hesab(lar) silinəcək və bütün əlaqəli məqalələr, redaksiya tapşırıqları və "
-"s. ikinci hesaba əlavə olunacaq."
-
-msgid "admin.settings.disableBulkEmailRoles.description"
-msgstr ""
-"Jurnalın administratoru aşağıda seçilmiş rollardan heç birinə kütləvi e-poçt "
-"göndərə bilməyəcək. E-poçt bildirişi funksiyasından sui-istifadəni "
-"məhdudlaşdırmaq üçün bu parametrdən istifadə edin. Məsələn, oxuculara, "
-"müəlliflərə və ya bu cür məktubları qəbul etməyə razılıq verməyən digər "
-"böyük istifadəçi qruplarına kütləvi göndərişi söndürmək daha təhlükəsiz ola "
-"bilər.<br><br>Kütləvi e-poçt funksiyası bu jurnal üçün <a href=\""
-"{$siteSettingsUrl}\">Admin > Site Settings</a> bölməsində tamamilə deaktiv "
-"edilə bilər."
-
-msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
-msgstr ""
-"Kütləvi e-poçt funksiyası bu jurnal üçün deaktiv edilib. <a href=\""
-"{$siteSettingsUrl}\">Admin > Site Settings</a> bölməsində bu funksiyanı "
-"aktiv edin."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -197,15 +189,33 @@ msgstr ""
 "jurnal üçün onun siyahısında onun parametrlər sihirbazına baş çəkməklə "
 "aktivləşdirilə bilər <a href=\"{$hostedContextsUrl}\">Hosted Journals</a>."
 
-msgid "admin.settings.redirect"
-msgstr "Jurnalın yönləndirməsi"
-
-msgid "admin.settings.redirectInstructions"
+msgid "admin.settings.disableBulkEmailRoles.description"
 msgstr ""
-"Saytın əsas səhifəsi bu jurnalın əsas səhifəsi olacaq. Bu, məsələn, saytda "
-"yalnız bir jurnal varsa faydalıdır."
+"Jurnalın administratoru aşağıda seçilmiş rollardan heç birinə kütləvi e-poçt "
+"göndərə bilməyəcək. E-poçt bildirişi funksiyasından sui-istifadəni "
+"məhdudlaşdırmaq üçün bu parametrdən istifadə edin. Məsələn, oxuculara, "
+"müəlliflərə və ya bu cür məktubları qəbul etməyə razılıq verməyən digər "
+"böyük istifadəçi qruplarına kütləvi göndərişi söndürmək daha təhlükəsiz ola "
+"bilər.<br><br>Kütləvi e-poçt funksiyası bu jurnal üçün <a href="
+"\"{$siteSettingsUrl}\">Admin > Site Settings</a> bölməsində tamamilə deaktiv "
+"edilə bilər."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Kütləvi e-poçt funksiyası bu jurnal üçün deaktiv edilib. <a href="
+"\"{$siteSettingsUrl}\">Admin > Site Settings</a> bölməsində bu funksiyanı "
+"aktiv edin."
 
 msgid "admin.siteManagement.description"
 msgstr ""
 "Bu saytdan jurnalları əlavə edin, redaktə edin və ya silin və bütün sayt "
 "parametrlərini idarə edin."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""

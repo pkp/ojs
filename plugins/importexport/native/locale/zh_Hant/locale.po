@@ -42,6 +42,9 @@ msgstr "請在「導入」以下上載一個檔案再繼續。"
 msgid "plugins.importexport.native.importComplete"
 msgstr "導入完成及成功。以下項目已導入："
 
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "未知分類 {$param}"
 
@@ -50,31 +53,31 @@ msgstr "必須透過--user_name或-u command參數提供予用戶。"
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"在\"{$issueTitle}\" 一期此分類標題 \"{$section1Title}\" 及分類標題 \""
-"{$section2Title}\" 跟現有期刊不同分類相符。"
+"在\"{$issueTitle}\" 一期此分類標題 \"{$section1Title}\" 及分類標題 "
+"\"{$section2Title}\" 跟現有期刊不同分類相符。"
 
 msgid "plugins.importexport.native.import.error.sectionTitleMatch"
 msgstr ""
-"在\"{$issueTitle}\" 一期此分類標題 \"{$section1Title}\" "
-"跟現有期刊分類相符，但此分類另一標題跟另一現有期刊分類並不相符。"
-
-msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
-msgstr ""
-"在\"{$issueTitle}\"一期的分類簡稱\"{$section1Abbrev}\" "
-"跟現有期刊分類簡稱相符，但此分類另一簡稱跟另一現有期刊分類簡稱並不相符。"
+"在\"{$issueTitle}\" 一期此分類標題 \"{$section1Title}\" 跟現有期刊分類相符，"
+"但此分類另一標題跟另一現有期刊分類並不相符。"
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
 msgstr ""
-"在\"{$issueTitle}\"一期的分類簡稱\"{$section1Abbrev}\"與分類簡稱\""
-"{$section1Abbrev}\"跟現有期刊不同分類簡稱相符。"
+"在\"{$issueTitle}\"一期的分類簡稱\"{$section1Abbrev}\"與分類簡稱"
+"\"{$section1Abbrev}\"跟現有期刊不同分類簡稱相符。"
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"在\"{$issueTitle}\"一期的分類簡稱\"{$section1Abbrev}\" 跟現有期刊分類簡稱相"
+"符，但此分類另一簡稱跟另一現有期刊分類簡稱並不相符。"
 
 msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
 msgstr "沒有或多於一期跟所提供的一期認證\"{$issueIdentification}\"相符。"
 
 msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
 msgstr ""
-"現有一期的id {$issueId}與所提供的一期認證\"{$issueIdentification}\"相符"
-"。此期不會被修改，但仍可添加文章。"
+"現有一期的id {$issueId}與所提供的一期認證\"{$issueIdentification}\"相符。此期"
+"不會被修改，但仍可添加文章。"
 
 msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
 msgstr "文章\"{$articleTitle}\"欠缺期號認證部分。"

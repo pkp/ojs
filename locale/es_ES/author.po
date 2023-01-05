@@ -22,8 +22,8 @@ msgstr "Envíos activos"
 
 msgid "author.competingInterests"
 msgstr ""
-"Conflicto de intereses <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+"Conflicto de intereses <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
 
 msgid "author.submit.submitArticle"
 msgstr "Enviar un artículo"
@@ -35,7 +35,9 @@ msgid "author.submit.startHereTitle"
 msgstr "Empezar un nuevo envío"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">Haga clic aquí</a> para ir al primer paso del proceso de envío en cinco pasos."
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Haga clic aquí</a> para ir al "
+"primer paso del proceso de envío en cinco pasos."
 
 msgid "author.submit.step1"
 msgstr "Paso 1. Empezar el envío"
@@ -67,6 +69,9 @@ msgstr "Introducir los metadatos"
 msgid "author.submit.supplementaryFiles"
 msgstr "Cargar los archivos complementarios"
 
+msgid "author.submit.nextSteps"
+msgstr "Siguientes pasos"
+
 msgid "author.submit.notAccepting"
 msgstr "La revista no acepta envíos en este momento."
 
@@ -78,10 +83,14 @@ msgstr ""
 "Considere la posibilidad de exención de la cuota de envío para este artículo"
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "Deje un comentario en la casilla que encontrará a continuación para indicar por qué no se deberían aplicar las cuotas."
+msgstr ""
+"Deje un comentario en la casilla que encontrará a continuación para indicar "
+"por qué no se deberían aplicar las cuotas."
 
 msgid "author.submit.mustEnterWaiverReason"
-msgstr "Si solicita una exención de cuotas, deberá introducir un motivo en el espacio que se le proporciona."
+msgstr ""
+"Si solicita una exención de cuotas, deberá introducir un motivo en el "
+"espacio que se le proporciona."
 
 msgid "author.submissions.queuedReviewSubsequent"
 msgstr "En ronda de revisión {$round}"
@@ -110,29 +119,21 @@ msgstr "Ver estado"
 msgid "author.submissions.noSubmissions"
 msgstr "Sin envíos."
 
-msgid "author.submit.howToSubmit"
-msgstr "¿Necesita ayuda? Póngase en contacto con <a href=\"mailto:{$supportEmail}\">{$supportName}</a> para recibir asistencia ({$supportPhone})."
-
-msgid "author.submit.howToSubmitNoPhone"
-msgstr "¿Necesita ayuda? Póngase en contacto con <a href=\"mailto:{$supportEmail}\">{$supportName}</a> para recibir asistencia."
-
 msgid "author.submit.journalSection"
 msgstr "Sección de la revista"
 
 msgid "author.submit.journalSectionDescription"
 msgstr "Los artículos deben enviarse a una de las secciones de la revista."
 
-msgid "submission.submit.selectSection"
-msgstr "Seleccione una sección..."
-
-msgid "author.submit.submissionChecklist"
-msgstr "Lista de comprobación del envío"
-
 msgid "author.submit.verifyChecklist"
-msgstr "Antes de continuar, debe asegurarse de que se cumplen todos los requisitos de la lista de comprobación."
+msgstr ""
+"Antes de continuar, debe asegurarse de que se cumplen todos los requisitos "
+"de la lista de comprobación."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "Debe aceptar las condiciones del aviso de derechos de autor/a antes de continuar."
+msgstr ""
+"Debe aceptar las condiciones del aviso de derechos de autor/a antes de "
+"continuar."
 
 msgid "submission.submit.coverNote"
 msgstr "Comentarios para el editor/a"
@@ -144,7 +145,9 @@ msgid "author.submit.form.localeRequired"
 msgstr "Seleccione el idioma del envío."
 
 msgid "author.submit.reorderInstructions"
-msgstr "Reordenar a los autores/as para que aparezcan en el orden en el que serán enumerados en la publicación."
+msgstr ""
+"Reordenar a los autores/as para que aparezcan en el orden en el que serán "
+"enumerados en la publicación."
 
 msgid "author.submit.reorder"
 msgstr "Reordenar el nombre del autor/a"
@@ -159,19 +162,27 @@ msgid "author.submit.deleteAuthor"
 msgstr "Eliminar autor/a"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "Proporcione términos para indexar el envío y sepárelos con un punto y coma (término1; término2; término3)."
+msgstr ""
+"Proporcione términos para indexar el envío y sepárelos con un punto y coma "
+"(término1; término2; término3)."
 
 msgid "author.submit.coverageInstructions"
-msgstr "Se refiere a la localización geográfica, a la cobertura cronológica o histórica o a las características de la muestra de investigación."
+msgstr ""
+"Se refiere a la localización geográfica, a la cobertura cronológica o "
+"histórica o a las características de la muestra de investigación."
 
 msgid "author.submit.languageInstructions"
-msgstr "Inglés=en; francés=fr; español=es. <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Códigos adicionales</a>."
+msgstr ""
+"Inglés=en; francés=fr; español=es. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Códigos adicionales</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Inserte al menos un autor/a."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "Inserte el nombre, apellidos y dirección de correo electrónico de cada autor/a."
+msgstr ""
+"Inserte el nombre, apellidos y dirección de correo electrónico de cada autor/"
+"a."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Introduzca el título del artículo."
@@ -180,7 +191,8 @@ msgid "author.submit.form.abstractRequired"
 msgstr "Introduzca el resumen del artículo."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "Ha superado el límite máximo de palabras para resúmenes en esta sección."
+msgstr ""
+"Ha superado el límite máximo de palabras para resúmenes en esta sección."
 
 msgid "author.submit.submissionFile"
 msgstr "Archivo de envío"
@@ -198,13 +210,24 @@ msgid "author.submit.noSubmissionConfirm"
 msgstr "¿Está seguro/a de que desea continuar sin cargar un archivo de envío?"
 
 msgid "author.submit.supplementaryFilesInstructions"
-msgstr "Este paso opcional permite añadir archivos complementarios al envío. Estos archivos, que pueden estar en cualquier formato, pueden incluir (a) herramientas de investigación; (b) conjuntos de datos que cumplan con los términos establecidos por la revisión ética de la investigación; (c) fuentes que de otro modo no estarían disponibles para los lectores/as, (d) figuras y tablas que no se puedan integrar en el texto u otros materiales que se añadan a la contribución del trabajo."
+msgstr ""
+"Este paso opcional permite añadir archivos complementarios al envío. Estos "
+"archivos, que pueden estar en cualquier formato, pueden incluir (a) "
+"herramientas de investigación; (b) conjuntos de datos que cumplan con los "
+"términos establecidos por la revisión ética de la investigación; (c) fuentes "
+"que de otro modo no estarían disponibles para los lectores/as, (d) figuras y "
+"tablas que no se puedan integrar en el texto u otros materiales que se "
+"añadan a la contribución del trabajo."
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr "Haga clic en Guardar para cargar el archivo (después se podrán cargar los archivos adicionales)."
+msgstr ""
+"Haga clic en Guardar para cargar el archivo (después se podrán cargar los "
+"archivos adicionales)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "¿Está seguro/a de que desea continuar sin cargar el archivo complementario que ha seleccionado?"
+msgstr ""
+"¿Está seguro/a de que desea continuar sin cargar el archivo complementario "
+"que ha seleccionado?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "No se han añadido archivos complementarios a este envío."
@@ -264,7 +287,9 @@ msgstr "Descripción breve"
 
 #, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Presentar el archivo (sin metadatos) a los revisores/as para asegurar que el archivo sea objeto de evaluación anónima."
+msgstr ""
+"Presentar el archivo (sin metadatos) a los revisores/as para asegurar que el "
+"archivo sea objeto de evaluación anónima."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Utilizar sólo con materiales publicados formalmente."
@@ -315,7 +340,25 @@ msgid "author.article.authorRevisedFile"
 msgstr "Archivo del autor/a"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "Es necesario disponer de una cuenta de usuario/a para realizar envíos a la revista. Esto permite que nuestros editores/as hagan un seguimiento de sus envíos y puedan contactarle cuando cambie el estado de los mismos o si es necesario proporcionar información adicional."
+msgstr ""
+"Es necesario disponer de una cuenta de usuario/a para realizar envíos a la "
+"revista. Esto permite que nuestros editores/as hagan un seguimiento de sus "
+"envíos y puedan contactarle cuando cambie el estado de los mismos o si es "
+"necesario proporcionar información adicional."
 
-msgid "author.submit.nextSteps"
-msgstr "Siguientes pasos"
+#~ msgid "author.submit.howToSubmit"
+#~ msgstr ""
+#~ "¿Necesita ayuda? Póngase en contacto con <a href=\"mailto:"
+#~ "{$supportEmail}\">{$supportName}</a> para recibir asistencia "
+#~ "({$supportPhone})."
+
+#~ msgid "author.submit.howToSubmitNoPhone"
+#~ msgstr ""
+#~ "¿Necesita ayuda? Póngase en contacto con <a href=\"mailto:"
+#~ "{$supportEmail}\">{$supportName}</a> para recibir asistencia."
+
+#~ msgid "submission.submit.selectSection"
+#~ msgstr "Seleccione una sección..."
+
+#~ msgid "author.submit.submissionChecklist"
+#~ msgstr "Lista de comprobación del envío"

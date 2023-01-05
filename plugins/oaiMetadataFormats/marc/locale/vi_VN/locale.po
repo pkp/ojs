@@ -11,8 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marc.description"
-msgstr "Cấu trúc siêu dữ liệu phù hợp với định dạng MARC."
-
 msgid "plugins.OAIMetadata.marc.displayName"
 msgstr "Định dạng siêu dữ liệu MARC"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "Cấu trúc siêu dữ liệu phù hợp với định dạng MARC."

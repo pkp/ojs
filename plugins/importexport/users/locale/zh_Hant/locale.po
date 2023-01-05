@@ -18,8 +18,17 @@ msgstr "用戶XML插件"
 msgid "plugins.importexport.users.description"
 msgstr "導入及導出用戶"
 
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+
 msgid "plugins.importexport.users.import.importUsers"
 msgstr "導入用戶"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
 
 msgid "plugins.importexport.users.import.dataFile"
 msgstr "用戶數據檔案"
@@ -42,6 +51,9 @@ msgstr "確認這些都是您想導入至系統的用戶"
 msgid "plugins.importexport.users.import.warning"
 msgstr "警告"
 
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+
 msgid "plugins.importexport.users.unknownPress"
 msgstr "標示了未知期刊路徑\"{$journalPath}\"。"
 
@@ -58,7 +70,8 @@ msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "導出時發生錯誤"
 
 msgid "plugins.importexport.users.importComplete"
-msgstr "成功完成導入。未有重覆用戶名稱及電郵地址的用戶，與相應的用戶分組已一同導入。"
+msgstr ""
+"成功完成導入。未有重覆用戶名稱及電郵地址的用戶，與相應的用戶分組已一同導入。"
 
 msgid "plugins.importexport.users.results"
 msgstr "結果"

@@ -17,7 +17,11 @@ msgid "manager.distribution.access"
 msgstr "Toegang"
 
 msgid "manager.distribution.copyrightYearBasis.description"
-msgstr "Kies hoe een standaard jaartal voor het auteursrecht voor een artikel wordt bepaald. Er kunnen steeds afwijkingen van deze standaardinstelling worden gemaakt. Wanneer met \"publish as you go\" wordt gepubliceerd, gebruik dan niet de publicatiedatum van het nummer."
+msgstr ""
+"Kies hoe een standaard jaartal voor het auteursrecht voor een artikel wordt "
+"bepaald. Er kunnen steeds afwijkingen van deze standaardinstelling worden "
+"gemaakt. Wanneer met \"publish as you go\" wordt gepubliceerd, gebruik dan "
+"niet de publicatiedatum van het nummer."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Gebruik de publicatiedatum van het nummer voor het auteursrecht"
@@ -32,19 +36,38 @@ msgid "manager.distribution.publishingMode"
 msgstr "Publicatiewijze"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te publiceren."
+msgstr ""
+"OJS zal niet gebruikt worden om de inhoud van het tijdschrift online te "
+"publiceren."
 
 msgid "manager.distribution.publishingMode.openAccess"
 msgstr "Het tijdschrift biedt vrije toegang (open access) tot de inhoud."
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "Het tijdschrift vereist een abonnement om toegang tot een deel van of al het materiaal te krijgen."
+msgstr ""
+"Het tijdschrift vereist een abonnement om toegang tot een deel van of al het "
+"materiaal te krijgen."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+
+#, fuzzy
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr "Kies de objecten waar DOI's aan toegekend moeten worden."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr ""
 
 msgid "manager.website.archiving"
 msgstr "Archivering"
 
 msgid "manager.files.note"
-msgstr "Noot: De bestandenbrowser is een geavanceerde functie waarmee u de bestanden en mappen van dit tijdschrift direct kunt bekijken en manipuleren."
+msgstr ""
+"Noot: De bestandenbrowser is een geavanceerde functie waarmee u de bestanden "
+"en mappen van dit tijdschrift direct kunt bekijken en manipuleren."
 
 msgid "manager.journalManagement"
 msgstr "Tijdschriftbeheer"
@@ -59,13 +82,24 @@ msgid "manager.language.forms"
 msgstr "Formulieren"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
-msgstr "Dit vervangt alle taalspecifieke tijdschriftinstellingen die u had voor deze taal"
+msgstr ""
+"Dit vervangt alle taalspecifieke tijdschriftinstellingen die u had voor deze "
+"taal"
 
 msgid "manager.languages.languageInstructions"
-msgstr "OJS kan in een aantal verschillende talen aan de gebruikers aangeboden worden. OJS kan ook meertalig werken, waarbij de gebruikers kunnen schakelen tussen verschillende talen. Bepaalde gegevens kunnen in verschillende bijkomende talen ingevoerd worden.<br /><br />Als een door OJS ondersteunde taal hieronder niet getoond wordt, vraag dan uw sitebeheerder om die taal te installeren in de sitebeheer interface. Consulteer de OJS documentatie voor het toevoegen van ondersteuning van nieuwe talen."
+msgstr ""
+"OJS kan in een aantal verschillende talen aan de gebruikers aangeboden "
+"worden. OJS kan ook meertalig werken, waarbij de gebruikers kunnen schakelen "
+"tussen verschillende talen. Bepaalde gegevens kunnen in verschillende "
+"bijkomende talen ingevoerd worden.<br /><br />Als een door OJS ondersteunde "
+"taal hieronder niet getoond wordt, vraag dan uw sitebeheerder om die taal te "
+"installeren in de sitebeheer interface. Consulteer de OJS documentatie voor "
+"het toevoegen van ondersteuning van nieuwe talen."
 
 msgid "manager.languages.noneAvailable"
-msgstr "Sorry, er zijn geen andere talen beschikbaar. Neem contact op met uw sitebeheerder als u meer talen wilt gebruiken bij dit tijdschrift."
+msgstr ""
+"Sorry, er zijn geen andere talen beschikbaar. Neem contact op met uw "
+"sitebeheerder als u meer talen wilt gebruiken bij dit tijdschrift."
 
 msgid "manager.languages.primaryLocaleInstructions"
 msgstr "Dit wordt de standaardtaal voor de site van het tijdschrift."
@@ -86,10 +120,16 @@ msgid "manager.payment.authorFees"
 msgstr "Betaling door de auteur"
 
 msgid "manager.payment.authorFeesDescription"
-msgstr "De geselecteerde opties worden met hun beschrijving en kosten getoond in stap 1 van de inzendingsprocecure en in Over het tijdschrift en op de plaatsen waar betaling vereist is."
+msgstr ""
+"De geselecteerde opties worden met hun beschrijving en kosten getoond in "
+"stap 1 van de inzendingsprocecure en in Over het tijdschrift en op de "
+"plaatsen waar betaling vereist is."
 
 msgid "manager.payment.currencymessage"
-msgstr "OJS converteert valuta niet. Als u betalingen voor abonnementen accepteert, verzeker u ervan dat de valuta van het abonnement overeenkomt met de opgegeven valuta."
+msgstr ""
+"OJS converteert valuta niet. Als u betalingen voor abonnementen accepteert, "
+"verzeker u ervan dat de valuta van het abonnement overeenkomt met de "
+"opgegeven valuta."
 
 msgid "manager.payment.description"
 msgstr "Beschrijving"
@@ -107,14 +147,18 @@ msgid "manager.payment.feePaymentOptions"
 msgstr "Betalingsopties"
 
 msgid "manager.payment.form.numeric"
-msgstr "Alle prijzen moeten positieve numerieke waarden zijn (decimalen zijn toegestaan)"
+msgstr ""
+"Alle prijzen moeten positieve numerieke waarden zijn (decimalen zijn "
+"toegestaan)"
 
 msgid "manager.payment.generalFees"
 msgstr "Algemene betalingen"
 
 #, fuzzy
 msgid "manager.payment.generalFeesDescription"
-msgstr "Het verenigingslidmaatschap verschijnt in Over dit Tijdschrift onder Beleid en de schenkingen-link verschijnt boven de zoekfunctie in de rechterkolom."
+msgstr ""
+"Het verenigingslidmaatschap verschijnt in Over dit Tijdschrift onder Beleid "
+"en de schenkingen-link verschijnt boven de zoekfunctie in de rechterkolom."
 
 msgid "manager.payment.generalOptions"
 msgstr "Algemene opties"
@@ -129,13 +173,18 @@ msgid "manager.payment.options"
 msgstr "Opties"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
-msgstr "Dit zal betaling voor abonnementen activeren. De types, kosten, duur en abonnees worden beheerd door de abonnementenbeheerder."
+msgstr ""
+"Dit zal betaling voor abonnementen activeren. De types, kosten, duur en "
+"abonnees worden beheerd door de abonnementenbeheerder."
 
 msgid "subscriptionManager.subscription.confirmRemove"
 msgstr "Weet u zeker dat u dit abonnement wil verwijderen?"
 
 msgid "manager.payment.options.enablePayments"
-msgstr "Klik hier om de betalingsmodule in te schakelen.  U moet de betalingsinstellingen configureren door het formulier hieronder in te vullen. Merk op dat gebruikers in moeten loggen om betalingen te kunnen doen."
+msgstr ""
+"Klik hier om de betalingsmodule in te schakelen.  U moet de "
+"betalingsinstellingen configureren door het formulier hieronder in te "
+"vullen. Merk op dat gebruikers in moeten loggen om betalingen te kunnen doen."
 
 msgid "manager.payment.options.fee"
 msgstr "Betaling"
@@ -183,7 +232,10 @@ msgid "manager.payment.readerFees"
 msgstr "Betaling door de lezer"
 
 msgid "manager.payment.readerFeesDescription"
-msgstr "De geselecteerde opties worden met hun beschrijving (die hieronder aangepast kan worden) en kosten getoond in stap 1 van de inzendingsprocedure en in Over het tijdschrift en op de plaatsen waar betaling vereist is."
+msgstr ""
+"De geselecteerde opties worden met hun beschrijving (die hieronder aangepast "
+"kan worden) en kosten getoond in stap 1 van de inzendingsprocedure en in "
+"Over het tijdschrift en op de plaatsen waar betaling vereist is."
 
 msgid "manager.payment.records"
 msgstr "Geregistreerde betalingen"
@@ -210,7 +262,9 @@ msgid "manager.people.allUsers"
 msgstr "Alle ingeschreven gebruikers"
 
 msgid "manager.people.confirmRemove"
-msgstr "Verwijder deze gebruiker bij dit tijdschrift? De gebruiker heeft dan geen rollen meer bij het tijdschrift."
+msgstr ""
+"Verwijder deze gebruiker bij dit tijdschrift? De gebruiker heeft dan geen "
+"rollen meer bij het tijdschrift."
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Kies een sjabloon"
@@ -229,7 +283,9 @@ msgstr ""
 "tweede gebruiker."
 
 msgid "manager.people.mergeUsers.into.description"
-msgstr "Kies de gebruiker die de de auteurschappen, redactietaken, enz. van de vorige gebruiker krijgt."
+msgstr ""
+"Kies de gebruiker die de de auteurschappen, redactietaken, enz. van de "
+"vorige gebruiker krijgt."
 
 msgid "manager.people.roleEnrollment"
 msgstr "{$role} Inschrijving"
@@ -238,8 +294,8 @@ msgid "manager.people.syncUserDescription"
 msgstr ""
 "Synchronisatie zorgt ervoor dat alle gebruikers die ingeschreven staan in "
 "het gekozen tijdschrift in dezelfde rol ingeschreven worden in dit "
-"tijdschrift. Deze functie maakt het mogelijk om dezelfde groep gebruikers ("
-"bv. reviewers) te synchroniseren tussen tijdschriften."
+"tijdschrift. Deze functie maakt het mogelijk om dezelfde groep gebruikers "
+"(bv. reviewers) te synchroniseren tussen tijdschriften."
 
 msgid "manager.sections.abstractsNotRequired"
 msgstr "Samenvattingen niet verplicht stellen"
@@ -252,19 +308,30 @@ msgstr "Weet u zeker dat u deze sectie wilt verwijderen?"
 
 #, fuzzy
 msgid "manager.sections.alertDelete"
-msgstr "Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikels verplaatsen naar andere secties."
+msgstr ""
+"Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde "
+"artikels verplaatsen naar andere secties."
 
 msgid "manager.sections.create"
 msgstr "Sectie aanmaken"
 
 msgid "manager.section.sectionEditorInstructions"
-msgstr "Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. Sectieredacteurs worden toegevoegd door te klikken op Sectieredacteurs bij Rollen in Tijdschriftbeheer."
+msgstr ""
+"Voeg een sectieredacteur toe aan deze sectie. Bepaal na het toevoegen of de "
+"sectieredacteur de REVIEW (peer review) en/of REDACTIE (tekstbewerken, "
+"opmaak en proeflezen) gaat regelen voor inzendingen voor deze sectie. "
+"Sectieredacteurs worden toegevoegd door te klikken op Sectieredacteurs bij "
+"Rollen in Tijdschriftbeheer."
 
 msgid "manager.sections.editorRestriction"
-msgstr "Items kunnen alleen door redacteurs en sectieredacteurs ingezonden worden."
+msgstr ""
+"Items kunnen alleen door redacteurs en sectieredacteurs ingezonden worden."
 
 msgid "manager.sections.editors"
 msgstr "Sectieredacteurs"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Een korte titel voor de sectie is verplicht"
@@ -281,16 +348,20 @@ msgid "manager.sections.form.titleRequired"
 msgstr "Een titel voor de sectie is verplicht."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Auteursnamen weglaten bij de secties van de inhoudsopgave van het nummer."
+msgstr ""
+"Auteursnamen weglaten bij de secties van de inhoudsopgave van het nummer."
 
 msgid "manager.sections.hideTocTitle"
-msgstr "De titel van deze sectie niet opnemen in de inhoudsopgave van dit nummer."
+msgstr ""
+"De titel van deze sectie niet opnemen in de inhoudsopgave van dit nummer."
 
 msgid "manager.sections.identifyType"
 msgstr "Identificeer publicaties in deze sectie als a(n)"
 
 msgid "manager.sections.identifyTypeExamples"
-msgstr "(Bijvoorbeeld \"Peer-reviewed artikel\", \"Niet-beoordeelde boekreview\", \"Commentaar op uitnodiging\", enz.)"
+msgstr ""
+"(Bijvoorbeeld \"Peer-reviewed artikel\", \"Niet-beoordeelde boekreview\", "
+"\"Commentaar op uitnodiging\", enz.)"
 
 msgid "manager.sections.indexed"
 msgstr "Geïndexeerd"
@@ -341,7 +412,10 @@ msgid "manager.setup.homepageContent"
 msgstr "Inhoud van de homepage van het tijdschrift"
 
 msgid "manager.setup.homepageContentDescription"
-msgstr "De homepage van het tijdschrift bevat standaard alleen navigatielinks. Bijkomende inhoud voor de homepage kan worden toegevoegd via één of meer van volgende opties, die zullen verschijnen in de aangegeven volgorde."
+msgstr ""
+"De homepage van het tijdschrift bevat standaard alleen navigatielinks. "
+"Bijkomende inhoud voor de homepage kan worden toegevoegd via één of meer van "
+"volgende opties, die zullen verschijnen in de aangegeven volgorde."
 
 msgid "manager.setup.useStyleSheet"
 msgstr "Stylesheet van het tijdschrift"
@@ -380,7 +454,10 @@ msgid "manager.setup.alternateHeader"
 msgstr "Alternatieve kop"
 
 msgid "manager.setup.alternateHeaderDescription"
-msgstr "Als alternatief voor titel en logo kan in het tekstvak hieronder een HTML versie van de kop opgegeven worden. Laat het tekstvak leeg als dit niet van toepassing is."
+msgstr ""
+"Als alternatief voor titel en logo kan in het tekstvak hieronder een HTML "
+"versie van de kop opgegeven worden. Laat het tekstvak leeg als dit niet van "
+"toepassing is."
 
 msgid "manager.setup.announcements"
 msgstr "Nieuwsberichten"
@@ -389,22 +466,31 @@ msgid "manager.setup.announcementsIntroduction"
 msgstr "Bijkomende informatie"
 
 msgid "manager.setup.announcementsIntroduction.description"
-msgstr "Andere informatie die op de Nieuwsberichten pagina getoond moet worden aan de lezers."
+msgstr ""
+"Andere informatie die op de Nieuwsberichten pagina getoond moet worden aan "
+"de lezers."
 
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Om op te nemen in Over dit Tijdschrift) "
 
 msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "Verplicht auteurs een verklaring omtrent  strijdige belangen in te dienen met hun inzending."
+msgstr ""
+"Verplicht auteurs een verklaring omtrent  strijdige belangen in te dienen "
+"met hun inzending."
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr "Verplicht reviewers een verklaring inzake strijdige belangen in te dienen met iedere review die ze insturen."
+msgstr ""
+"Verplicht reviewers een verklaring inzake strijdige belangen in te dienen "
+"met iedere review die ze insturen."
 
 msgid "manager.setup.history"
 msgstr "Geschiedenis van het tijdschrift"
 
 msgid "manager.setup.historyDescription"
-msgstr "Deze tekst verschijnt in de \"Over\" sectie van de website van het tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, de redactie en andere relevante historische feiten te beschrijven."
+msgstr ""
+"Deze tekst verschijnt in de \"Over\" sectie van de website van het "
+"tijdschrift en kan gebruikt worden om de veranderingen in het tijdschrift, "
+"de redactie en andere relevante historische feiten te beschrijven."
 
 msgid "manager.setup.currentIssue"
 msgstr "Huidig nummer"
@@ -419,22 +505,30 @@ msgid "manager.setup.details.description"
 msgstr "Naam van het tijdschrift, ISSN, contacten, sponsors, en zoekmachines."
 
 msgid "manager.setup.disableUserRegistration"
-msgstr "De tijdschriftbeheerder kan alle gebruikers registreren, redacteurs en sectieredacteurs kunnen alleen reviewers registreren."
+msgstr ""
+"De tijdschriftbeheerder kan alle gebruikers registreren, redacteurs en "
+"sectieredacteurs kunnen alleen reviewers registreren."
 
 msgid "manager.setup.discipline"
 msgstr "Academische discipline en subdisciplines"
 
 msgid "manager.setup.disciplineDescription"
-msgstr "Van toepassing als het tijdschrift disciplinaire grenzen overschrijdt en/of als auteurs multidisciplinaire stukken insturen."
+msgstr ""
+"Van toepassing als het tijdschrift disciplinaire grenzen overschrijdt en/of "
+"als auteurs multidisciplinaire stukken insturen."
 
 msgid "manager.setup.disciplineExamples"
-msgstr "(bv. Geschiedenis; Onderwijs; Sociologie; psychologie; Culturele studies; Rechten)"
+msgstr ""
+"(bv. Geschiedenis; Onderwijs; Sociologie; psychologie; Culturele studies; "
+"Rechten)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "Geef voorbeelden van relevante academische disciplins voor dit tijdschrift"
+msgstr ""
+"Geef voorbeelden van relevante academische disciplins voor dit tijdschrift"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr "De inhoudsopgave van het huidige nummer toevoegen (indien beschikbaar)."
+msgstr ""
+"De inhoudsopgave van het huidige nummer toevoegen (indien beschikbaar)."
 
 msgid "manager.setup.editorDecision"
 msgstr "Beslissing redacteur"
@@ -443,15 +537,17 @@ msgid "manager.setup.emailBounceAddress"
 msgstr "Retouradres voor onbestelbare e-mail"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr "E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op dit adres."
+msgstr ""
+"E-mails die niet afgeleverd kunnen worden, resulteren in een foutbericht op "
+"dit adres."
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
-"Om deze optie te activeren moet de beheerder de "
-"<code>allow_envelope_sender</code> optie in het OJS configuratiebestand "
-"inschakelen. Bijkomende serverconfiguratie kan noodzakelijk zijn om deze "
-"optie te gebruiken (die niet op alle servers ondersteund wordt) zoals "
-"aangegeven in de OJS documentatie."
+"Om deze optie te activeren moet de beheerder de <code>allow_envelope_sender</"
+"code> optie in het OJS configuratiebestand inschakelen. Bijkomende "
+"serverconfiguratie kan noodzakelijk zijn om deze optie te gebruiken (die "
+"niet op alle servers ondersteund wordt) zoals aangegeven in de OJS "
+"documentatie."
 
 msgid "manager.setup.emails"
 msgstr "E-mail identificatie"
@@ -461,22 +557,56 @@ msgstr "Ondertekening"
 
 #, fuzzy
 msgid "manager.setup.emailSignature.description"
-msgstr "De voorbewerkte e-mails die door het systeem namens het tijdschrift verzonden worden, krijgen de volgende ondertekening toegevoegd aan het einde. De tekst van de voorbwerkte e-mails kan aangepast worden bij tijdschriftbeheer."
+msgstr ""
+"De voorbewerkte e-mails die door het systeem namens het tijdschrift "
+"verzonden worden, krijgen de volgende ondertekening toegevoegd aan het "
+"einde. De tekst van de voorbwerkte e-mails kan aangepast worden bij "
+"tijdschriftbeheer."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Aankondigingen inschakelen"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Er kunnen aankondigingen worden gepubliceerd om lezers te informeren over "
+"nieuws en evenementen in tijdschriften. Gepubliceerde aankondigingen worden "
+"weergegeven op de pagina Aankondigingen."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Weergeven op startpagina"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Hoeveel aankondigingen er op de startpagina moeten worden weergegeven. Laat "
+"dit leeg om er geen te weergeven."
 
 msgid "manager.setup.enableUserRegistration"
-msgstr "Bezoekers kunnen een gebruikersaccount registreren bij het tijdschrift."
+msgstr ""
+"Bezoekers kunnen een gebruikersaccount registreren bij het tijdschrift."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Focus en missie"
 
 msgid "manager.setup.focusAndScope.description"
-msgstr "Geef voor auteurs, lezers en bibliothecarissen een beschrijving van het soort artikels en andere objecten die het tijdschrift zal publiceren."
+msgstr ""
+"Geef voor auteurs, lezers en bibliothecarissen een beschrijving van het "
+"soort artikels en andere objecten die het tijdschrift zal publiceren."
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Voor auteurs ter indexering van hun werk"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
-msgstr "OJS houdt zich aan het <a href=\"http://www.openarchives.org/\" target=\"_blank\">Open Archives Initiative</a> Protocol voor Metadata Harvesting, de standaard voor het leveren van goed geïndexeerde toegang tot elektronische wetenschappelijke informatie op wereldschaal. Alle auteurs gebruiken een soortgelijk sjabloon voor het leveren van metadata bij hun inzendingen. De tijdschriftbeheerder selecteert de categorieën voor indexering en levert de auteurs relevante voorbeelden om hen te helpen bij het indexeren van hun werk. Categorieën moeten gescheiden door een puntkomma (bv., term1; term2). De voorbeelden worden als zodanig geïntroduceerd door het gebruik van termen als \"bv.\"  of \"voorbeeld\"."
+msgstr ""
+"OJS houdt zich aan het <a href=\"http://www.openarchives.org/\" target="
+"\"_blank\">Open Archives Initiative</a> Protocol voor Metadata Harvesting, "
+"de standaard voor het leveren van goed geïndexeerde toegang tot "
+"elektronische wetenschappelijke informatie op wereldschaal. Alle auteurs "
+"gebruiken een soortgelijk sjabloon voor het leveren van metadata bij hun "
+"inzendingen. De tijdschriftbeheerder selecteert de categorieën voor "
+"indexering en levert de auteurs relevante voorbeelden om hen te helpen bij "
+"het indexeren van hun werk. Categorieën moeten gescheiden door een puntkomma "
+"(bv., term1; term2). De voorbeelden worden als zodanig geïntroduceerd door "
+"het gebruik van termen als \"bv.\"  of \"voorbeeld\"."
 
 msgid "manager.setup.form.issnInvalid"
 msgstr "Het opgegeven ISSN nummer is niet geldig."
@@ -518,13 +648,19 @@ msgid "manager.setup.identity"
 msgstr "Identiteit van het tijdschrift"
 
 msgid "manager.setup.includeCreativeCommons"
-msgstr "Voeg een Creative Commons licentie toe aan alle gepubliceerde materialen voor tijdschriften die onmiddellijke of vertraagde open access toegang aanbieden."
+msgstr ""
+"Voeg een Creative Commons licentie toe aan alle gepubliceerde materialen "
+"voor tijdschriften die onmiddellijke of vertraagde open access toegang "
+"aanbieden."
 
 msgid "manager.setup.information"
 msgstr "Informatie"
 
 msgid "manager.setup.information.description"
-msgstr "Korte beschrijvingen van het tijdschrift voor bibliothecarissen en mogelijke auteurs en lezers zijn beschikbaar in de \"Informatie\" sectie van de sidebar."
+msgstr ""
+"Korte beschrijvingen van het tijdschrift voor bibliothecarissen en mogelijke "
+"auteurs en lezers zijn beschikbaar in de \"Informatie\" sectie van de "
+"sidebar."
 
 msgid "manager.setup.information.forAuthors"
 msgstr "Voor auteurs"
@@ -539,19 +675,25 @@ msgid "manager.setup.initialIssue"
 msgstr "Eerste nummer"
 
 msgid "manager.setup.initialIssueDescription"
-msgstr "Identificeer, afhankelijk van de gekozen vorm, nummer, volume en/of jaar van het eerste nummer dat met OJS gepubliceerd gaat worden:"
+msgstr ""
+"Identificeer, afhankelijk van de gekozen vorm, nummer, volume en/of jaar van "
+"het eerste nummer dat met OJS gepubliceerd gaat worden:"
 
 msgid "manager.setup.institution"
 msgstr "Instituut"
 
 msgid "manager.setup.itemsDescription"
-msgstr "Onderdelen voor de navigatiebalk kunnen toegevoegd worden aan de huidige set die bovenaan de pagina getoond wordt (Home, Over, Gebruiker, enz.)."
+msgstr ""
+"Onderdelen voor de navigatiebalk kunnen toegevoegd worden aan de huidige set "
+"die bovenaan de pagina getoond wordt (Home, Over, Gebruiker, enz.)."
 
 msgid "manager.setup.itemsPerPage"
 msgstr "Items per pagina"
 
 msgid "manager.setup.itemsPerPage.description"
-msgstr "Beperk het aantal items (bv. inzendingen, gebruikers of redactietaken) die per pagina worden getoond."
+msgstr ""
+"Beperk het aantal items (bv. inzendingen, gebruikers of redactietaken) die "
+"per pagina worden getoond."
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Tijdschrift-afkorting"
@@ -566,13 +708,22 @@ msgid "manager.setup.contextAbout"
 msgstr "Over het tijdschrift"
 
 msgid "manager.setup.contextAbout.description"
-msgstr "Geef informatie over het tijdschrift die van belang kan zijn voor lezers, auteurs of reviewers, over bijvoorbeeld open access beleid, focus en doel van het tijdschrift, copyright verklaring, bekendmaking van sponsors, geschiedenis van het tijdschrift, privacy verklaring, en eventuele opname in archiveringssystemen zoals LOCKSS of CLOCKSS."
+msgstr ""
+"Geef informatie over het tijdschrift die van belang kan zijn voor lezers, "
+"auteurs of reviewers, over bijvoorbeeld open access beleid, focus en doel "
+"van het tijdschrift, copyright verklaring, bekendmaking van sponsors, "
+"geschiedenis van het tijdschrift, privacy verklaring, en eventuele opname in "
+"archiveringssystemen zoals LOCKSS of CLOCKSS."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Inhoud van de homepage van het tijdschrift"
 
 msgid "manager.setup.journalHomepageContentDescription"
-msgstr "Standaard bestaat de homepage uit navigatielinks. Bijkomende onderdelen kunnen toegevoegd worden door een of meer van de volgende opties te kiezen. De onderdelen verschijnen in de getoonde volgorde. Het huidige nummer is altijd te bereiken via de 'Huidig nummer' link in de navigatiebalk."
+msgstr ""
+"Standaard bestaat de homepage uit navigatielinks. Bijkomende onderdelen "
+"kunnen toegevoegd worden door een of meer van de volgende opties te kiezen. "
+"De onderdelen verschijnen in de getoonde volgorde. Het huidige nummer is "
+"altijd te bereiken via de 'Huidig nummer' link in de navigatiebalk."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Kop van de homepage van het tijdschrift"
@@ -581,16 +732,25 @@ msgid "manager.setup.journalHomepageHeader.altText"
 msgstr "Tijdschrift homepage kop"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
-msgstr "Een grafische versie van de titel en het logo van het tijdschrift kan (als .gif, .jpg of .png bestand) geladen worden. Die versie vervangt de tekstversie op de homepage van het tijdschrift."
+msgstr ""
+"Een grafische versie van de titel en het logo van het tijdschrift kan (als ."
+"gif, .jpg of .png bestand) geladen worden. Die versie vervangt de "
+"tekstversie op de homepage van het tijdschrift."
 
 msgid "manager.setup.contextInitials"
 msgstr "Tijdschrift-initialen"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
 
 msgid "manager.setup.journalLayout"
 msgstr "Opmaak van het tijdschrift"
 
 msgid "manager.setup.journalLayoutDescription"
-msgstr "Kies hier een thema en opmaakonderdelen voor het tijdschrift. Er kan ook een stylesheet geladen worden. Daarmee kunnen opmaakelementen van de systeem-stylesheet en de stylesheet van het thema (indien gekozen) vervangen wrorden."
+msgstr ""
+"Kies hier een thema en opmaakonderdelen voor het tijdschrift. Er kan ook een "
+"stylesheet geladen worden. Daarmee kunnen opmaakelementen van de systeem-"
+"stylesheet en de stylesheet van het thema (indien gekozen) vervangen wrorden."
 
 msgid "manager.setup.journalLogo"
 msgstr "Tijdschrift logo"
@@ -602,7 +762,11 @@ msgid "manager.setup.journalPageFooter"
 msgstr "Tijdschriftpagina voettekst"
 
 msgid "manager.setup.journalPageFooterDescription"
-msgstr "Dit is de voettekst van uw tijdschrift. De voettekst kan veranderd worden door de HTML code ervan in het tekstvak hieronder in te voeren. Voorbeelden van een voettekst zijn een navigatiebalk, een teller, enz. Deze voettekst verschijnt op iedere pagina."
+msgstr ""
+"Dit is de voettekst van uw tijdschrift. De voettekst kan veranderd worden "
+"door de HTML code ervan in het tekstvak hieronder in te voeren. Voorbeelden "
+"van een voettekst zijn een navigatiebalk, een teller, enz. Deze voettekst "
+"verschijnt op iedere pagina."
 
 msgid "manager.setup.journalPolicies"
 msgstr "Stap 2. Beleid van het tijdschrift"
@@ -623,7 +787,9 @@ msgid "manager.setup.journalThumbnail"
 msgstr "Miniatuur voor het tijdschrift"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "Een klein logo of afbeelding van het tijdschrift dat kan worden gebruikt in een overzicht van tijdschriften."
+msgstr ""
+"Een klein logo of afbeelding van het tijdschrift dat kan worden gebruikt in "
+"een overzicht van tijdschriften."
 
 msgid "manager.setup.contextTitle"
 msgstr "Tijdschrifttitel"
@@ -632,7 +798,9 @@ msgid "manager.setup.keyInfo"
 msgstr "Belangrijke informatie"
 
 msgid "manager.setup.keyInfo.description"
-msgstr "Geef een korte beschrijving van het tijdschrift en een overzicht van redacteurs, hoofdredacteurs en andere medewerkers aan dit tijdschrift."
+msgstr ""
+"Geef een korte beschrijving van het tijdschrift en een overzicht van "
+"redacteurs, hoofdredacteurs en andere medewerkers aan dit tijdschrift."
 
 msgid "manager.setup.labelName"
 msgstr "Label naam"
@@ -644,7 +812,9 @@ msgid "manager.setup.plnPluginEnable"
 msgstr "Schakel PKP PN plugin in"
 
 msgid "manager.setup.plnDescription"
-msgstr "Het PKP Preservation Network (PN) biedt gratis archiveringsdiensten aan voor alle OJS tijdschriften die aan enkele basiscriteria voldoen."
+msgstr ""
+"Het PKP Preservation Network (PN) biedt gratis archiveringsdiensten aan voor "
+"alle OJS tijdschriften die aan enkele basiscriteria voldoen."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
@@ -655,7 +825,11 @@ msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
-msgstr "Het PKP Preservation Network (PN) biedt gratis archiveringsdiensten aan voor alle OJS tijdschriften die aan enkele basiscriteria voldoen. De PKP PN plugin voor OJS 3 wordt momenteel ontwikkeld en zal binnenkort worden beschikbaar gemaakt."
+msgstr ""
+"Het PKP Preservation Network (PN) biedt gratis archiveringsdiensten aan voor "
+"alle OJS tijdschriften die aan enkele basiscriteria voldoen. De PKP PN "
+"plugin voor OJS 3 wordt momenteel ontwikkeld en zal binnenkort worden "
+"beschikbaar gemaakt."
 
 msgid "manager.setup.otherLockss"
 msgstr "Andere archiveringsopties"
@@ -663,11 +837,14 @@ msgstr "Andere archiveringsopties"
 msgid "manager.setup.lockssEnable"
 msgstr ""
 "Gebruik LOCKSS voor het opslaan en distribueren van de inhoud van het "
-"tijdschrift bij deelnemende bibliotheken via een LOCKSS <a href=\""
-"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> pagina."
+"tijdschrift bij deelnemende bibliotheken via een LOCKSS <a href="
+"\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> pagina."
 
 msgid "manager.setup.lockssLicenseDescription"
-msgstr "Een LOCKSS licentie zal worden getoond in Over het tijdschrift, onder de hoofding Archivering: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS licentie</a>"
+msgstr ""
+"Een LOCKSS licentie zal worden getoond in Over het tijdschrift, onder de "
+"hoofding Archivering: <a href=\"http://www.lockss.org/community/publishers-"
+"titles-gln/\" target=\"_blank\">LOCKSS licentie</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Beschrijving van de LOCKSS licentie"
@@ -683,16 +860,24 @@ msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
-msgstr "Schakel CLOCKSS in om tijdschriftinhoud te bewaren en verspreiden bij bibliotheken die deelnemen in CLOCKSS, via een <a href=\"{$clockssUrl}\" target=\"_blank\">Uitgeversmanifest</a> page."
+msgstr ""
+"Schakel CLOCKSS in om tijdschriftinhoud te bewaren en verspreiden bij "
+"bibliotheken die deelnemen in CLOCKSS, via een <a href=\"{$clockssUrl}\" "
+"target=\"_blank\">Uitgeversmanifest</a> page."
 
 msgid "manager.setup.clockssLicenseDescription"
-msgstr "Een CLOCKSS licentie zal worden getoond in Over het tijdschrift, onder de hoofding Archivering: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS licentie</a>"
+msgstr ""
+"Een CLOCKSS licentie zal worden getoond in Over het tijdschrift, onder de "
+"hoofding Archivering: <a href=\"http://clockss.org/\" target=\"_blank"
+"\">CLOCKSS licentie</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Beschrijving van de CLOCKSS licentie"
 
 msgid "manager.setup.clockssRegister"
-msgstr "Registreer voor de CLOCKSS dienst op de  <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS website</a>."
+msgstr ""
+"Registreer voor de CLOCKSS dienst op de  <a href=\"http://clockss.org/\" "
+"target=\"_blank\">CLOCKSS website</a>."
 
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
@@ -701,13 +886,17 @@ msgid "manager.setup.look"
 msgstr "Uiterlijk"
 
 msgid "manager.setup.look.description"
-msgstr "Kop startpagina, inhoud, kop tijdschrift, voettekst, navigatiebalk en stylesheet."
+msgstr ""
+"Kop startpagina, inhoud, kop tijdschrift, voettekst, navigatiebalk en "
+"stylesheet."
 
 msgid "manager.setup.management"
 msgstr "Beheer"
 
 msgid "manager.setup.management.description"
-msgstr "Toegang en beveiliging, planning, nieuwsberichten, redactie, opmaak et proeflezen."
+msgstr ""
+"Toegang en beveiliging, planning, nieuwsberichten, redactie, opmaak et "
+"proeflezen."
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
 msgstr "Beheer van de basis-redactiestappen"
@@ -725,10 +914,14 @@ msgid "manager.setup.navigationBarDescription"
 msgstr "Toevoegen of verwijderen van extra navigatiebalk-onderdelen."
 
 msgid "manager.setup.navItemIsAbsolute"
-msgstr "URL is een absolute URL (bv \"http://www.example.com\"), geen relatief pad (bv. \"/manager/setup\")"
+msgstr ""
+"URL is een absolute URL (bv \"http://www.example.com\"), geen relatief pad "
+"(bv. \"/manager/setup\")"
 
 msgid "manager.setup.navItemIsLiteral"
-msgstr "De waarde is een letterlijke tekst (bv. \"Tijdschrift inrichten\"), geen localisatiesleutel (bv. \"manager.setup\")"
+msgstr ""
+"De waarde is een letterlijke tekst (bv. \"Tijdschrift inrichten\"), geen "
+"localisatiesleutel (bv. \"manager.setup\")"
 
 msgid "manager.setup.noImageFileUploaded"
 msgstr "Geen afbeeldingsbestand geladen."
@@ -761,7 +954,9 @@ msgid "manager.setup.policies"
 msgstr "Beleid"
 
 msgid "manager.setup.policies.description"
-msgstr "Focus, peer review, secties, privacy, beveiliging en andere gegevens over het tijdschrift."
+msgstr ""
+"Focus, peer review, secties, privacy, beveiliging en andere gegevens over "
+"het tijdschrift."
 
 msgid "manager.setup.printIssn"
 msgstr "ISSN gedrukte versie"
@@ -770,13 +965,24 @@ msgid "manager.setup.proofingInstructions"
 msgstr "Instructies voor proeflezen"
 
 msgid "manager.setup.proofingInstructionsDescription"
-msgstr "De instructies voor proeflezen worden beschikbaar gesteld aan proeflezers, auteurs, opmaakredacteurs en sectieredacteurs tijdens de inzendingsbewerking-fase. Hieronder een standaard set instructies in HTML, die door de tijdschriftbeheerder op ieder moment veranderd of vervangen kan worden  (in HTML of tekst)."
+msgstr ""
+"De instructies voor proeflezen worden beschikbaar gesteld aan proeflezers, "
+"auteurs, opmaakredacteurs en sectieredacteurs tijdens de inzendingsbewerking-"
+"fase. Hieronder een standaard set instructies in HTML, die door de "
+"tijdschriftbeheerder op ieder moment veranderd of vervangen kan worden  (in "
+"HTML of tekst)."
 
 msgid "manager.setup.publicationSchedule"
 msgstr "Publicatieschema"
 
 msgid "manager.setup.publicationScheduleDescription"
-msgstr "Artikels kunnen collectief gepubliceerd worden als onderdeel van een nummer met een eigen inhoudsopgave. Het is ook mogelijk om artikels te publiceren zodra ze gereed zijn door ze toe te voegen aan de inhoudsopgave van het \"actuele\" volume. Geef lezers in Over dit tijdschrift inzicht in het systeem dat door dit tijdschrift gebruikt wordt en in de verwachte verschijningsfrequentie."
+msgstr ""
+"Artikels kunnen collectief gepubliceerd worden als onderdeel van een nummer "
+"met een eigen inhoudsopgave. Het is ook mogelijk om artikels te publiceren "
+"zodra ze gereed zijn door ze toe te voegen aan de inhoudsopgave van het "
+"\"actuele\" volume. Geef lezers in Over dit tijdschrift inzicht in het "
+"systeem dat door dit tijdschrift gebruikt wordt en in de verwachte "
+"verschijningsfrequentie."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Publicatieplanning"
@@ -791,10 +997,14 @@ msgid "manager.setup.referenceLinking"
 msgstr "Linken van referenties"
 
 msgid "manager.setup.restrictArticleAccess"
-msgstr "Gebruikers moeten geregistreerd en ingelogd zijn om open access materiaal te bekijken."
+msgstr ""
+"Gebruikers moeten geregistreerd en ingelogd zijn om open access materiaal te "
+"bekijken."
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr "Gebruikers moeten geregistreerd en ingelogd zijn om het tijdschrift te bekijken."
+msgstr ""
+"Gebruikers moeten geregistreerd en ingelogd zijn om het tijdschrift te "
+"bekijken."
 
 msgid "manager.setup.reviewGuidelines"
 msgstr "Review richtlijnen"
@@ -803,7 +1013,10 @@ msgid "manager.setup.reviewOptions"
 msgstr "Opties voor reviews"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "Automatische herinnerings-e-mails (beschikbaar in de standaard e-mails van OJS) kunnen op twee momenten naar de reviewer gestuurd worden (de redacteur kan de reviewer altijd direct e-mailen)"
+msgstr ""
+"Automatische herinnerings-e-mails (beschikbaar in de standaard e-mails van "
+"OJS) kunnen op twee momenten naar de reviewer gestuurd worden (de redacteur "
+"kan de reviewer altijd direct e-mailen)"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
@@ -816,13 +1029,17 @@ msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "De vastgestelde tijd voor een review"
 
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr "Redacteurs beoordelen de reviewers op een vijfpuntsschaal op kwaliteit na iedere review."
+msgstr ""
+"Redacteurs beoordelen de reviewers op een vijfpuntsschaal op kwaliteit na "
+"iedere review."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Beperk de toegang tot bestanden"
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
-msgstr "Reviewers hebben pas toegang tot een inzending nadat ze toegestemd hebben om die te beoordelen."
+msgstr ""
+"Reviewers hebben pas toegang tot een inzending nadat ze toegestemd hebben om "
+"die te beoordelen."
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Toegang voor reviewers"
@@ -832,7 +1049,13 @@ msgstr "Schakel één-klik toegang voor reviewers in"
 
 #, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr "<strong>Noot:</strong> De uitnodigings-e-mail voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteurs geen e-mailadressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigingen aan reviewers als deze optie is ingeschakeld."
+msgstr ""
+"<strong>Noot:</strong> De uitnodigings-e-mail voor reviewers zal een "
+"speciale URL bevatten die uitgenodigde reviewers meteen naar de review-"
+"pagina voor de betreffende inzending brengt (toegang tot andere pagina's "
+"vereist inloggen). Om redenen van beveiliging kunnen redacteurs geen e-"
+"mailadressen veranderen of CC's of BCC's toevoegen voor het verzenden van "
+"uitnodigingen aan reviewers als deze optie is ingeschakeld."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Voeg een veilige link toe aan de uitnodigings-e-mail voor reviewers."
@@ -852,20 +1075,27 @@ msgstr "Zoek-indexering"
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
 "Help zoekmachines zoals Google uw site te ontdekken en weer te geven. U "
-"wordt aangemoedigd om uw <a href=\"{$sitemapUrl}\" target=\"_blank\""
-">sitemap</a> in te dienen."
+"wordt aangemoedigd om uw <a href=\"{$sitemapUrl}\" target=\"_blank"
+"\">sitemap</a> in te dienen."
 
 msgid "manager.setup.searchDescription.description"
-msgstr "Geef een korte beschrijving van het tijdschrift (50-300 lettertekens) die zoekmachines kunnen tonen in de weergave van zoekresultaten."
+msgstr ""
+"Geef een korte beschrijving van het tijdschrift (50-300 lettertekens) die "
+"zoekmachines kunnen tonen in de weergave van zoekresultaten."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Secties en Sectieredacteurs"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(Als er geen sectie wordt opgegeven, wordt het stuk ingezonden voor de artikels-sectie)"
+msgstr ""
+"(Als er geen sectie wordt opgegeven, wordt het stuk ingezonden voor de "
+"artikels-sectie)"
 
 msgid "manager.setup.sectionsDescription"
-msgstr "Ga naar Sectiebeheer om secties voor het tijdschrift aan te maken of te wijzigen (bv. Artikels, Boekreviews, enz.).<br /><br />Auteurs geven bij de inzending van stukken het volgende aan..."
+msgstr ""
+"Ga naar Sectiebeheer om secties voor het tijdschrift aan te maken of te "
+"wijzigen (bv. Artikels, Boekreviews, enz.).<br /><br />Auteurs geven bij de "
+"inzending van stukken het volgende aan..."
 
 msgid "manager.setup.selectEditorDescription"
 msgstr "De redacteur die het door het redactieproces zal leiden."
@@ -886,7 +1116,9 @@ msgid "manager.setup.stepsToJournalSite"
 msgstr "Een tijdschrift website in vijf stappen"
 
 msgid "manager.setup.subjectExamples"
-msgstr "(Bv. Fotosynthese; Zwarte gaten; Vier-kleuren kaart vraagstuk; Bayesiaanse Theorie)"
+msgstr ""
+"(Bv. Fotosynthese; Zwarte gaten; Vier-kleuren kaart vraagstuk; Bayesiaanse "
+"Theorie)"
 
 msgid "manager.setup.subjectKeywordTopic"
 msgstr "Trefwoorden"
@@ -903,26 +1135,41 @@ msgstr "Inzendingen"
 msgid "manager.setup.submissions.description"
 msgstr "Auteursrichtlijnen, copyright, and indexering (inclusief registratie)."
 
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+
 msgid "manager.setup.enableOai"
 msgstr "Schakel OAI in"
 
 msgid "manager.setup.enableOai.description"
-msgstr "Geef metadata voor externe indexeringsdiensten via het <a href=\"https://www.openarchives.org/\">Open Archives Initiative</a>."
+msgstr ""
+"Geef metadata voor externe indexeringsdiensten via het <a href=\"https://www."
+"openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.typeExamples"
-msgstr "(Bv. Historisch onderzoek; Quasi-Experimenteel; Literaire Analyse; Enquete/Interview)"
+msgstr ""
+"(Bv. Historisch onderzoek; Quasi-Experimenteel; Literaire Analyse; Enquete/"
+"Interview)"
 
 msgid "manager.setup.typeMethodApproach"
 msgstr "Type (methode/benadering)"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "Geef voorbeelden van relevante onderzoekstypes, -methodes en -benaderingen voor dit veld"
+msgstr ""
+"Geef voorbeelden van relevante onderzoekstypes, -methodes en -benaderingen "
+"voor dit veld"
 
 msgid "manager.setup.uniqueIdentifier"
 msgstr "Unieke identificatie"
 
 msgid "manager.setup.uniqueIdentifierDescription"
-msgstr "Artikels en nummers kunnen gelabeld worden met een identificatienummer of -tekst, gebruikmakend van een registratiesysteem als het Digital Object Identifier System (DOI)."
+msgstr ""
+"Artikels en nummers kunnen gelabeld worden met een identificatienummer of -"
+"tekst, gebruikmakend van een registratiesysteem als het Digital Object "
+"Identifier System (DOI)."
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Dit tijdschrift zal een redactie/review team gebruiken."
@@ -961,7 +1208,12 @@ msgid "manager.statistics.statistics.daysToPublication"
 msgstr "Dagen tot publicatie"
 
 msgid "manager.statistics.statistics.description"
-msgstr "OJS berekent de volgende statistieken voor ieder tijdschrift. \"Dagen voor een review\" wordt berekend van de datum van inzending (of aanwijzen van de review-versie) tot de initiele beslissing van de redacteur, terwijl \"Dagen tot publicatie\" voor geaccepteerde inzendingen wordt gemeten van de oorsponkelijke inzenddatum tot de publicatie."
+msgstr ""
+"OJS berekent de volgende statistieken voor ieder tijdschrift. \"Dagen voor "
+"een review\" wordt berekend van de datum van inzending (of aanwijzen van de "
+"review-versie) tot de initiele beslissing van de redacteur, terwijl \"Dagen "
+"tot publicatie\" voor geaccepteerde inzendingen wordt gemeten van de "
+"oorsponkelijke inzenddatum tot de publicatie."
 
 msgid "manager.statistics.statistics.itemsPublished"
 msgstr "Gepubliceerde items"
@@ -970,7 +1222,10 @@ msgid "manager.statistics.statistics.makePublic"
 msgstr "Vink de gegevens aan die lezers kunnen zien in Over dit tijdschrift."
 
 msgid "manager.statistics.statistics.note"
-msgstr "Noot: Percentages voor gereviewde inzendingen komen mogelijk niet uit op 100%, omdat opnieuw ingestuurde items geaccepteerd, geweigerd of nog in bewerking zijn."
+msgstr ""
+"Noot: Percentages voor gereviewde inzendingen komen mogelijk niet uit op "
+"100%, omdat opnieuw ingestuurde items geaccepteerd, geweigerd of nog in "
+"bewerking zijn."
 
 msgid "manager.statistics.statistics.numIssues"
 msgstr "Gepubliceerde nummers"
@@ -983,9 +1238,6 @@ msgstr "Peer reviews"
 
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Geregistreerde lezers"
-
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Geregistreerde gebruikers"
 
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Aantal toegekend"
@@ -1000,7 +1252,9 @@ msgid "manager.statistics.statistics.reviewsPerReviewer"
 msgstr "Aantal reviews"
 
 msgid "manager.statistics.statistics.selectSections"
-msgstr "Kies de secties voor het berekenen van de peer-review statistieken van dit tijdschrift."
+msgstr ""
+"Kies de secties voor het berekenen van de peer-review statistieken van dit "
+"tijdschrift."
 
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Abonnees"
@@ -1026,20 +1280,25 @@ msgstr "Abonnementenbeleid"
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "Vertraagde Open Access"
 
-msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionExpiryReminderBeforeMonthsValid"
 msgstr "Gebruik de voorziene checkbox."
 
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Afloop van het abonnement"
 
 msgid "manager.subscriptionPolicies.expiryDescription"
-msgstr "Als het abonnement afloopt kunnen gebruikers de toegang tot alle inhoud verliezen of toegang houden tot de de inhoud voorafgaand aan de afloopdatum."
+msgstr ""
+"Als het abonnement afloopt kunnen gebruikers de toegang tot alle inhoud "
+"verliezen of toegang houden tot de de inhoud voorafgaand aan de afloopdatum."
 
 msgid "manager.subscriptionPolicies.expiryFull"
 msgstr "Volledig verlopen"
 
 msgid "manager.subscriptionPolicies.expiryFullDescription"
-msgstr "Lezers krijgen geen enkele toegang tot de inhoud als het abonnement afloopt."
+msgstr ""
+"Lezers krijgen geen enkele toegang tot de inhoud als het abonnement afloopt."
 
 msgid "manager.subscriptionPolicies.expiryPartial"
 msgstr "Gedeeltelijke verlopen"
@@ -1071,10 +1330,17 @@ msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Herinneringen bij afloop van het abonnement"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
-msgstr "Geautomatiseerde herinnerings-e-mails (die bij Voorbereide e-mails door de tijdschriftbeheerder gewijzigd kunnen worden) kunnen voor en na het aflopen van een abonnement naar de abonnees gestuurd worden."
+msgstr ""
+"Geautomatiseerde herinnerings-e-mails (die bij Voorbereide e-mails door de "
+"tijdschriftbeheerder gewijzigd kunnen worden) kunnen voor en na het aflopen "
+"van een abonnement naar de abonnees gestuurd worden."
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr "<strong>Noot:</strong> Om deze opties te activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. Aanvullende serverconfiguratie is mogelijk nodig (wat wellicht niet op alle servers mogelijk is), zoals vermeld in de OJS documentatie."
+msgstr ""
+"<strong>Noot:</strong> Om deze opties te activeren moet de sitebeheerder de "
+"<tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. "
+"Aanvullende serverconfiguratie is mogelijk nodig (wat wellicht niet op alle "
+"servers mogelijk is), zoals vermeld in de OJS documentatie."
 
 msgid "manager.subscriptionPolicies.expirySelectOne"
 msgstr "Kies een van de volgende:"
@@ -1085,58 +1351,104 @@ msgstr ""
 "waarbij \"returns\" opgevat worden als <tt>&lt;br&gt;</tt>; HTML bewerken "
 "werkt in de Firefox browser."
 
-msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
-msgstr "Geef een geldige waarde voor het aantal maanden nadat het abonnement afloopt."
+msgid ""
+"manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Geef een geldige waarde voor het aantal maanden nadat het abonnement afloopt."
 
-msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
-msgstr "Geef een geldige waarde voor het aantal maanden voordat het abonnement afloopt."
+msgid ""
+"manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Geef een geldige waarde voor het aantal maanden voordat het abonnement "
+"afloopt."
 
-msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
-msgstr "Geef een geldige waarde voor het aantal weken nadat het abonnement afloopt."
+msgid ""
+"manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Geef een geldige waarde voor het aantal weken nadat het abonnement afloopt."
 
-msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
-msgstr "Geef een geldige waarde voor het aantal weken voordat het abonnement afloopt."
+msgid ""
+"manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Geef een geldige waarde voor het aantal weken voordat het abonnement afloopt."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
-msgstr "Geregistreerde gebruikers kunnen de inhoudsopgave toegestuurd krijgen zodra een nummer als open access beschikbaar komt."
+msgstr ""
+"Geregistreerde gebruikers kunnen de inhoudsopgave toegestuurd krijgen zodra "
+"een nummer als open access beschikbaar komt."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr "<strong>Noot:</strong>Om deze optie te activeren moet de sitebeheerder de <tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. Extra serverconfiguratie is mogelijk nodig om deze functionaliteit te kunnen gebruiken (niet op alle servers mogelijk). Zie de OJS documentatie."
+msgstr ""
+"<strong>Noot:</strong>Om deze optie te activeren moet de sitebeheerder de "
+"<tt>scheduled_tasks</tt> optie in het OJS configuratiebestand inschakelen. "
+"Extra serverconfiguratie is mogelijk nodig om deze functionaliteit te kunnen "
+"gebruiken (niet op alle servers mogelijk). Zie de OJS documentatie."
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
 msgstr "Berichten over online betalingen"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr "Automatische e-mailberichten (aan te passen door de tijdschriftbeheerders  bij de OJS voorbereide e-mails) die gestuurd kunnen worden aan de abonnementenbeheerder bij het voltooien van online betalingen van abonnementen."
+msgstr ""
+"Automatische e-mailberichten (aan te passen door de tijdschriftbeheerders  "
+"bij de OJS voorbereide e-mails) die gestuurd kunnen worden aan de "
+"abonnementenbeheerder bij het voltooien van online betalingen van "
+"abonnementen."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr "Bericht de abonnementenbeheerder met een e-mail als een individueel abonnement online gekocht wordt."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Bericht de abonnementenbeheerder met een e-mail als een individueel "
+"abonnement online gekocht wordt."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr "Bericht de abonnementenbeheerder met een e-mail als een institutioneel abonnement online gekocht wordt."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Bericht de abonnementenbeheerder met een e-mail als een institutioneel "
+"abonnement online gekocht wordt."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr "Bericht de abonnementenbeheerder met een e-mail als een idividueel abonnement online verlengd wordt."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Bericht de abonnementenbeheerder met een e-mail als een idividueel "
+"abonnement online verlengd wordt."
 
-msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr "Bericht de abonnementenbeheerder met een e-mail als een institutioneel abonnement online verlengd wordt."
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Bericht de abonnementenbeheerder met een e-mail als een institutioneel "
+"abonnement online verlengd wordt."
 
-msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
-msgstr "<strong>Noot:</strong> Institutionele abonnementen die online gekocht worden vereisen goedkeuring van het opgegeven domein en IP reeksen en activatie van het abonnement door de abonnementenbeheerder."
+msgid ""
+"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Noot:</strong> Institutionele abonnementen die online gekocht worden "
+"vereisen goedkeuring van het opgegeven domein en IP reeksen en activatie van "
+"het abonnement door de abonnementenbeheerder."
 
 msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
-msgstr "<strong>Noot:</strong> Om deze opties in te schakelen moet de tijdschriftbeheerder de online betalingen module, inclusief online betalingen voor abonnementen inschakelen bij Kosten voor Lezers."
+msgstr ""
+"<strong>Noot:</strong> Om deze opties in te schakelen moet de "
+"tijdschriftbeheerder de online betalingen module, inclusief online "
+"betalingen voor abonnementen inschakelen bij Kosten voor Lezers."
 
 msgid "manager.subscriptionPolicies.openAccessOptions"
 msgstr "Open Access opties voor tijdschriften met abonnement"
 
 msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
-msgstr "Tijdschriften met abonnement kunnen \"vertraagde open access\" bieden voor hun gepubliceerde inhoud en ze kunnen publicatie door de auteurs toestaan. Beide verhogen de lezersaantallen en citaties."
+msgstr ""
+"Tijdschriften met abonnement kunnen \"vertraagde open access\" bieden voor "
+"hun gepubliceerde inhoud en ze kunnen publicatie door de auteurs toestaan. "
+"Beide verhogen de lezersaantallen en citaties."
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
 msgstr "Abonnementen informatie"
 
-msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgid ""
+"manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
 msgstr ""
 "De abonnementsvormen en prijsstructuur worden automatisch getoond bij "
 "Abonnementen en Over dit tijdschrift, samen met de naam en contactinformatie "
@@ -1147,7 +1459,9 @@ msgid "manager.subscriptionPolicies.subscriptionContact"
 msgstr "Abonnementenbeheerder"
 
 msgid "manager.subscriptionPolicies.subscriptionContactDescription"
-msgstr "De contactpersoon die genoemd wordt onder Abonnementen bij Over dit tijdschrift."
+msgstr ""
+"De contactpersoon die genoemd wordt onder Abonnementen bij Over dit "
+"tijdschrift."
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
 msgstr "Geef een geldig e-mailadres op."
@@ -1224,6 +1538,12 @@ msgstr "Er moet een abonnementsvorm opgegeven worden."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Kies een geldige abonnementsvorm."
 
+msgid "manager.subscriptions.form.institution"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr ""
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Startdatum"
 
@@ -1249,7 +1569,9 @@ msgid "manager.subscriptions.form.dateEndValid"
 msgstr "Kies een geldige einddatum voor het abonnement."
 
 msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr "Noot: alle veranderingen hieronder zijn aan het systeembrede profiel van de gebruiker."
+msgstr ""
+"Noot: alle veranderingen hieronder zijn aan het systeembrede profiel van de "
+"gebruiker."
 
 msgid "manager.subscriptions.form.userId"
 msgstr "Gebruiker"
@@ -1267,7 +1589,8 @@ msgid "manager.subscriptions.form.userCountryValid"
 msgstr "Kies een geldig land."
 
 msgid "manager.subscriptions.form.notifyEmail"
-msgstr "Stuur de gebruiker een e-mail met zijn gebruikersnaam en abonnementsgegevens."
+msgstr ""
+"Stuur de gebruiker een e-mail met zijn gebruikersnaam en abonnementsgegevens."
 
 msgid "manager.subscriptions.form.notifyEmailValid"
 msgstr "Gebruik het aankruisvak."
@@ -1279,7 +1602,9 @@ msgid "manager.subscriptions.form.referenceNumber"
 msgstr "Referentienummer"
 
 msgid "manager.subscriptions.form.membershipInstructions"
-msgstr "Geef lidmaatschapsinformatie op als de abonnementsvorm vereist dat de abonnees lid zijn van een vereniging of organisatie."
+msgstr ""
+"Geef lidmaatschapsinformatie op als de abonnementsvorm vereist dat de "
+"abonnees lid zijn van een vereniging of organisatie."
 
 msgid "manager.subscriptions.form.membershipRequired"
 msgstr "Voor de gekozen abonnementsvorm is lidmaatschapsinformatie nodig."
@@ -1301,8 +1626,8 @@ msgstr "Postadres"
 
 msgid "manager.subscriptions.form.domainInstructions"
 msgstr ""
-"Als hier een domein wordt ingevoerd, zijn IP-bereiken optioneel. <br />"
-"Geldige waarden zijn domeinnamen (bijv. lib.sfu.ca)."
+"Als hier een domein wordt ingevoerd, zijn IP-bereiken optioneel. <br /"
+">Geldige waarden zijn domeinnamen (bijv. lib.sfu.ca)."
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
 msgstr ""
@@ -1320,10 +1645,10 @@ msgstr "&#8226;"
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr ""
-"Als hier IP-bereiken worden ingevoerd, is het domein optioneel. <br />"
-"Geldige waarden zijn onder meer een IP-adres (bijv. 142.58.103.1), IP-bereik "
-"(bijv. 142.58.103.1 - 142.58.103.4), IP-bereik met jokerteken '*' ( bijv. "
-"142.58. *. *), en een IP-bereik met CIDR (bijv. 142.58.100.0/24)."
+"Als hier IP-bereiken worden ingevoerd, is het domein optioneel. <br /"
+">Geldige waarden zijn onder meer een IP-adres (bijv. 142.58.103.1), IP-"
+"bereik (bijv. 142.58.103.1 - 142.58.103.4), IP-bereik met jokerteken "
+"'*' ( bijv. 142.58. *. *), en een IP-bereik met CIDR (bijv. 142.58.100.0/24)."
 
 msgid "manager.subscriptions.form.ipRangeValid"
 msgstr "Geef een geldige IP-nummerreeks op."
@@ -1338,13 +1663,21 @@ msgid "manager.subscriptions.form.saveAndCreateAnother"
 msgstr "Opslaan en nog een aanmaken"
 
 msgid "manager.subscriptions.form.subscriptionContactRequired"
-msgstr "Om de gebruiker een bevestigings-e-mail te sturen moeten de naam en e-mailadres van de contactpersoon voor abonnementen ingevuld zijn in de instellingen van het tijdschrift."
+msgstr ""
+"Om de gebruiker een bevestigings-e-mail te sturen moeten de naam en e-"
+"mailadres van de contactpersoon voor abonnementen ingevuld zijn in de "
+"instellingen van het tijdschrift."
 
 msgid "manager.subscriptions.form.subscriptionExists"
 msgstr "Deze gebruiker heeft al een abonnement op dit tijdschrift."
 
 msgid "manager.subscriptions.form.typeRequired"
-msgstr "Er moet een abonnementsoort gemaakt worden voor abonnementen afgesloten kunnen worden."
+msgstr ""
+"Er moet een abonnementsoort gemaakt worden voor abonnementen afgesloten "
+"kunnen worden."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP reeks"
@@ -1395,7 +1728,10 @@ msgid "manager.subscriptionTypes"
 msgstr "Abonnementsoorten"
 
 msgid "manager.subscriptionTypes.confirmDelete"
-msgstr "Let op! Alle abonnementen met deze abonnementsvorm worden ook verwijderd. Aeet u zeker dat u door wilt gaan met het verwijderen van deze abonnementsvorm?"
+msgstr ""
+"Let op! Alle abonnementen met deze abonnementsvorm worden ook verwijderd. "
+"Aeet u zeker dat u door wilt gaan met het verwijderen van deze "
+"abonnementsvorm?"
 
 msgid "manager.subscriptionTypes.cost"
 msgstr "Prijs"
@@ -1535,7 +1871,9 @@ msgid "manager.navigationMenus.subscriptions.description"
 msgstr "Link naar een pagina met informatie over abonnementen."
 
 msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr "Link naar een pagina die een overzicht biedt van de huidige en eerdere abonnementen van een bezoeker."
+msgstr ""
+"Link naar een pagina die een overzicht biedt van de huidige en eerdere "
+"abonnementen van een bezoeker."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
 msgstr "Deze link zal alleen worden getoond wanneer een bezoeker ingelogd is."
@@ -1544,7 +1882,9 @@ msgid "manager.setup.categories"
 msgstr "Categorieën"
 
 msgid "manager.setup.categories.description"
-msgstr "Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren."
+msgstr ""
+"Kies de meest toepasselijke categorieën uit de hierboven getoonde set. "
+"Lezers kunnen op categorie door de tijdschriften bladeren."
 
 msgid "grid.category.path"
 msgstr "Pad"
@@ -1559,7 +1899,19 @@ msgstr ""
 "onderzoek, enz.)."
 
 msgid "settings.roles.gridDescription"
-msgstr "Rollen zijn gebruikersgroepen voor een tijdschrift, aan wie verschillende toegangs- en beheersrechten worden toegekend in het tijdschrift. Er zijn vijf verschillende toegangsniveaus: tijdschriftbeheerders hebben volledige toegang tot het tijdschrift (zowel inhoud als instellingen); sectieredacteurs hebben volledige toegang tot alle toegewezen inzendingen; tijdschriftassistenten hebben beperkte toegang tot alle inzendingen die hen expliciet werden toegewezen door een redacteur; reviewers kunnen de inzendingen die hen werden toegewezen bekijken en beoordelen; auteurs kunnen hun eigen inzendingen bekijken en beperkt aanpassen. Daarnaast zijn er vijf verschillende stappen in het redactieproces waartoe gebruikersrollen toegang kunnen worden verleend: inzending, interne review, review, redactie en productie."
+msgstr ""
+"Rollen zijn gebruikersgroepen voor een tijdschrift, aan wie verschillende "
+"toegangs- en beheersrechten worden toegekend in het tijdschrift. Er zijn "
+"vijf verschillende toegangsniveaus: tijdschriftbeheerders hebben volledige "
+"toegang tot het tijdschrift (zowel inhoud als instellingen); "
+"sectieredacteurs hebben volledige toegang tot alle toegewezen inzendingen; "
+"tijdschriftassistenten hebben beperkte toegang tot alle inzendingen die hen "
+"expliciet werden toegewezen door een redacteur; reviewers kunnen de "
+"inzendingen die hen werden toegewezen bekijken en beoordelen; auteurs kunnen "
+"hun eigen inzendingen bekijken en beperkt aanpassen. Daarnaast zijn er vijf "
+"verschillende stappen in het redactieproces waartoe gebruikersrollen toegang "
+"kunnen worden verleend: inzending, interne review, review, redactie en "
+"productie."
 
 msgid "manager.publication.library"
 msgstr "Bibliotheek van de uitgever"
@@ -1573,7 +1925,9 @@ msgstr ""
 "de publicatiedatum, zoals bij \"publish-as-you-go\"."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr "Nummer: het jaartal voor het auteursrecht zal standaard worden afgeleid van de publicatiedatum van het nummer."
+msgstr ""
+"Nummer: het jaartal voor het auteursrecht zal standaard worden afgeleid van "
+"de publicatiedatum van het nummer."
 
 msgid "manager.setup.resetPermissions"
 msgstr "Artikel-toestemmingen terugzetten"
@@ -1604,7 +1958,12 @@ msgid "grid.genres.title"
 msgstr "Onderdelen van een artikel"
 
 msgid "grid.genres.description"
-msgstr "Deze onderdelen worden gebruikt voor de naamgeving van bestanden en worden aangeboden in een drop-down keuzemenu bij het opladen van bestanden. De tekstsoorten die met ## worden aangeduid, laten de gebruiker toe om het bestand te associëren met ofwel de hele inzending 99Z, ofwel een welbepaald genummerd onderdeel (bv. 02)."
+msgstr ""
+"Deze onderdelen worden gebruikt voor de naamgeving van bestanden en worden "
+"aangeboden in een drop-down keuzemenu bij het opladen van bestanden. De "
+"tekstsoorten die met ## worden aangeduid, laten de gebruiker toe om het "
+"bestand te associëren met ofwel de hele inzending 99Z, ofwel een welbepaald "
+"genummerd onderdeel (bv. 02)."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Instellingen"
@@ -1625,19 +1984,26 @@ msgid "plugins.importexport.common.missingRequirements"
 msgstr "Plugin systeemvereisten voldoen niet"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr "GA, om deze plugin te gebruiken, naar de \"Publieke identificatie\" plugin categorie, schakel de DOI plugin in en configureer die specificeer een geldig DOI voorvoegsel."
+msgstr ""
+"GA, om deze plugin te gebruiken, naar de \"Publieke identificatie\" plugin "
+"categorie, schakel de DOI plugin in en configureer die specificeer een "
+"geldig DOI voorvoegsel."
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
 msgstr "De plugin is niet volledig ingesteld."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr "Er zijn geen publicatie-objecten geselecteerd voor toewijzing van een DOI in de DOI publieke identificatieplugin. Daarom kan deze plugin geen inhoud deponeren of eporteren."
+msgstr ""
+"Er zijn geen publicatie-objecten geselecteerd voor toewijzing van een DOI in "
+"de DOI publieke identificatieplugin. Daarom kan deze plugin geen inhoud "
+"deponeren of eporteren."
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Wachtwoord"
 
 msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Merk op dat het wachtwoord als tekst wordt opgeslagen; niet versleuteld."
+msgstr ""
+"Merk op dat het wachtwoord als tekst wordt opgeslagen; niet versleuteld."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Eender welk nummer"
@@ -1685,10 +2051,18 @@ msgid "plugins.importexport.common.export.error.inputFileNotReadable"
 msgstr "Het invoerbestand {$param} is niet leesbaar."
 
 msgid "plugins.importexport.common.register.error.mdsError"
-msgstr "Registratie niet gelukt. De DOI registratieserver gaf een foutmelding terug: '{$param}'."
+msgstr ""
+"Registratie niet gelukt. De DOI registratieserver gaf een foutmelding terug: "
+"'{$param}'."
 
 msgid "plugins.importexport.common.register.success"
 msgstr "Registratie succesvol!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr ""
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr ""
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "DOI prefix ontbreekt voor het tijdschrift met het pad {$path}."
@@ -1697,75 +2071,203 @@ msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "De opgegeven objecten konden niet worden gevonden."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
-msgstr "Stuur een kopie naar het hoofdcontact voor het tijdschrift, zoals vastgelegd in de instellingen voor het tijdschrift."
+msgstr ""
+"Stuur een kopie naar het hoofdcontact voor het tijdschrift, zoals vastgelegd "
+"in de instellingen voor het tijdschrift."
 
-msgid "stats.publications.galleys"
-msgstr "Bestanden"
+msgid "stats.contextStats"
+msgstr ""
 
-msgid "stats.publications.abstracts"
-msgstr "Samenvattingen"
+msgid "stats.context.tooltip.text"
+msgstr ""
 
-msgid "stats.publications.countOfTotal"
-msgstr "{$count} van {$total} artikelen"
+msgid "stats.context.tooltip.label"
+msgstr ""
 
-msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr "Totaal aantal bestandsweergaven op datum"
+msgid "stats.context.downloadReport.description"
+msgstr ""
 
-msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr "Totaal aantal weergaven van de samenvatting op datum"
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr ""
+
+msgid "stats.issueStats"
+msgstr ""
+
+msgid "stats.issues.details"
+msgstr ""
+
+msgid "stats.issues.searchIssueDescription"
+msgstr ""
+
+msgid "stats.issues.none"
+msgstr ""
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr ""
+
+msgid "stats.issues.countOfTotal"
+msgstr ""
+
+msgid "stats.issues.tooltip.label"
+msgstr ""
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+
+msgid "stats.publicationStats"
+msgstr "Artikelstatistieken"
+
+msgid "stats.publications.details"
+msgstr "Artikelgegevens"
 
 msgid "stats.publications.none"
 msgstr ""
 "Er zijn geen artikelen gevonden met gebruiksstatistieken die overeenkomen "
 "met deze parameters."
 
-msgid "stats.publications.details"
-msgstr "Artikelgegevens"
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Totaal aantal weergaven van de samenvatting op datum"
 
-msgid "stats.publicationStats"
-msgstr "Artikelstatistieken"
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Totaal aantal bestandsweergaven op datum"
 
-msgid "manager.setup.numAnnouncementsHomepage.description"
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} van {$total} artikelen"
+
+msgid "stats.publications.abstracts"
+msgstr "Samenvattingen"
+
+msgid "stats.publications.galleys"
+msgstr "Bestanden"
+
+msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Hoeveel aankondigingen er op de startpagina moeten worden weergegeven. Laat "
-"dit leeg om er geen te weergeven."
 
-msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Weergeven op startpagina"
-
-msgid "manager.setup.enableAnnouncements.description"
+msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr ""
-"Er kunnen aankondigingen worden gepubliceerd om lezers te informeren over "
-"nieuws en evenementen in tijdschriften. Gepubliceerde aankondigingen worden "
-"weergegeven op de pagina Aankondigingen."
 
-msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Aankondigingen inschakelen"
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+
+msgid ""
+"manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
+"description"
+msgstr ""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr ""
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr ""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr ""
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "mailable.validateEmailContext.name"
+msgstr ""
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
 
 msgid "doi.displayName"
 msgstr "DOI"
 
 msgid "doi.description"
-msgstr "Deze plugin maakt het mogelijk om Digital Object Identifiers toe te kennen aan nummers, artikels en proeven in OJS."
+msgstr ""
+"Deze plugin maakt het mogelijk om Digital Object Identifiers toe te kennen "
+"aan nummers, artikels en proeven in OJS."
 
 msgid "doi.readerDisplayName"
 msgstr "DOI"
 
-msgid "doi.manager.settings.description"
-msgstr "Configureer de DOI plugin om DOIs in OJS te kunnen beheren en gebruiken:"
+msgid "doi.manager.displayName"
+msgstr ""
 
-#, fuzzy
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Kies de objecten waar DOI's aan toegekend moeten worden."
+msgid "doi.manager.settings.description"
+msgstr ""
+"Configureer de DOI plugin om DOIs in OJS te kunnen beheren en gebruiken:"
 
 msgid "doi.manager.settings.explainDois"
-msgstr "Kies de objecten waaraan Digital Object Identifiers (DOI) toegekend worden:"
-
-msgid "doi.manager.settings.enableSubmissionDoi"
-msgstr "Artikels"
+msgstr ""
+"Kies de objecten waaraan Digital Object Identifiers (DOI) toegekend worden:"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Proeven"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr ""
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI voorvoegsel"
@@ -1774,10 +2276,17 @@ msgid "doi.manager.settings.doiPrefixPattern"
 msgstr "Het DOI voorvoegsel is verplicht en heeft de volgende vorm: 10.xxxx."
 
 msgid "doi.manager.settings.doiSuffixPattern"
-msgstr "Gebruik onderstaand patroon om DOI achtervoegsels te genereren. Gebruik %j voor de initialen van het tijdschrift, %v voor het bandnummer, %i voor het nummer, %Y voor het jaar, %a voor het OJS ID van het artikel, %g voor het OJS ID van de proef, %f voor het OJS ID van het bestand, *p voor het paginanummer en %x voor \"Aangepaste identificatie\"."
+msgstr ""
+"Gebruik onderstaand patroon om DOI achtervoegsels te genereren. Gebruik %j "
+"voor de initialen van het tijdschrift, %v voor het bandnummer, %i voor het "
+"nummer, %Y voor het jaar, %a voor het OJS ID van het artikel, %g voor het "
+"OJS ID van de proef, %f voor het OJS ID van het bestand, *p voor het "
+"paginanummer en %x voor \"Aangepaste identificatie\"."
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
-msgstr "Bijvoorbeeld vol%viss%ipp%p kan resulteren in een DOI als 10.1234/vol3iss2pp230"
+msgstr ""
+"Bijvoorbeeld vol%viss%ipp%p kan resulteren in een DOI als 10.1234/"
+"vol3iss2pp230"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
 msgstr "voor nummers"
@@ -1801,7 +2310,11 @@ msgid "doi.manager.settings.doiReassign"
 msgstr "DOI's opnieuw toekennen"
 
 msgid "doi.manager.settings.doiReassign.description"
-msgstr "Als u de DOI configuratie verandert, heeft dat geen gevolgen voor reeds toegekende DOI's. Nadat de gewijzigde DOI configuratie is opgeslagen kunt u deze knop gebruiken om alle bestaande DOI's te wissen om de nieuwe instellingen ook toe te passen op bestaande objecten."
+msgstr ""
+"Als u de DOI configuratie verandert, heeft dat geen gevolgen voor reeds "
+"toegekende DOI's. Nadat de gewijzigde DOI configuratie is opgeslagen kunt u "
+"deze knop gebruiken om alle bestaande DOI's te wissen om de nieuwe "
+"instellingen ook toe te passen op bestaande objecten."
 
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Weet u zeker dat u alle bestaande DOI's wilt verwijderen?"
@@ -1810,13 +2323,36 @@ msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "Ken DOI's toe"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
-msgstr "Ken DOI's toe aan alle gepubliceerde objecten in het tijdschrift die nog geen DOI hebben. Deze actie kan niet worden gebruikt als een individueel achtervoegsel werd ingesteld. Als bovenstaande DOI configuratie werd gewijzigd, sla dan de wijzigingen op alvorens deze actie uit te voeren. Het toekennen van DOI's kan lang duren, afhankelijk van het aantal gepubliceerde objecten in het tijdschrift."
+msgstr ""
+"Ken DOI's toe aan alle gepubliceerde objecten in het tijdschrift die nog "
+"geen DOI hebben. Deze actie kan niet worden gebruikt als een individueel "
+"achtervoegsel werd ingesteld. Als bovenstaande DOI configuratie werd "
+"gewijzigd, sla dan de wijzigingen op alvorens deze actie uit te voeren. Het "
+"toekennen van DOI's kan lang duren, afhankelijk van het aantal gepubliceerde "
+"objecten in het tijdschrift."
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr "Weet u zeker dat u DOI's wilt toekennen aan alle gepubliceerde objecten die nog geen DOI hebben?"
+msgstr ""
+"Weet u zeker dat u DOI's wilt toekennen aan alle gepubliceerde objecten die "
+"nog geen DOI hebben?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr ""
 
 msgid "doi.editor.doi"
 msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "De DOI moet beginnen met {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Toewijzen"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "nummer"
@@ -1830,17 +2366,32 @@ msgstr "proef"
 msgid "doi.editor.customSuffixMissing"
 msgstr "De DOI kan niet worden toegekend omdat het achtervoegsel ontbreekt."
 
+msgid "doi.editor.missingIssue"
+msgstr ""
+"U kunt pas een DOI genereren als deze publicatie aan een nummer is "
+"toegewezen."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"U kunt geen DOI genereren omdat er gegevens ontbreken in een of meer delen "
+"van het DOI-patroon. Mogelijk moet u de publicatie aan een nummer toewijzen, "
+"een uitgever-ID instellen of paginanummers invoeren."
+
 msgid "doi.editor.patternNotResolved"
 msgstr "De DOI kan niet worden toegekend omdat het een ongeldig patroon bevat."
 
 msgid "doi.editor.canBeAssigned"
-msgstr "U ziet een voorbeeld van de DOI. Selecteer de checkbox en dien het formulier in om de DOI toe te kennen."
+msgstr ""
+"U ziet een voorbeeld van de DOI. Selecteer de checkbox en dien het formulier "
+"in om de DOI toe te kennen."
 
 msgid "doi.editor.assigned"
 msgstr "De DOI werd toegekend aan dit {$pubObjectType}."
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr "het opgegeven DOI voorvoegsel is al in gebruik bij een ander gepubliceerd item. Kies een uniek DOI voorvoegsel voor ieder item."
+msgstr ""
+"het opgegeven DOI voorvoegsel is al in gebruik bij een ander gepubliceerd "
+"item. Kies een uniek DOI voorvoegsel voor ieder item."
 
 msgid "doi.editor.clearObjectsDoi"
 msgstr "Verwijder DOI"
@@ -1852,81 +2403,186 @@ msgid "doi.editor.clearIssueObjectsDoi"
 msgstr "Verwijder DOI's van de objecten in dit nummer"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr "Weet u zeker dat u de bestaande DOI's voor de objecten in dit nummer wilt verwijderen?"
+msgstr ""
+"Weet u zeker dat u de bestaande DOI's voor de objecten in dit nummer wilt "
+"verwijderen?"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
-msgstr "Gebruik de volgende optie om DOI's van alle objecten (artikels en proeven) te verwijderen die ingepland zijn voor dit nummer."
+msgstr ""
+"Gebruik de volgende optie om DOI's van alle objecten (artikels en proeven) "
+"te verwijderen die ingepland zijn voor dit nummer."
 
 msgid "doi.editor.assignDoi"
 msgstr "Ken de DOI {$pubId} toe aan dit {$pubObjectType}"
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr "De DOI kan niet worden toegekend omdat het aangepaste achtervoegsel ontbreekt."
+msgstr ""
+"De DOI kan niet worden toegekend omdat het aangepaste achtervoegsel "
+"ontbreekt."
 
 msgid "doi.editor.assignDoi.pattern"
-msgstr "De DOI {$pubId} kan niet worden toegekend omdat het een ongeldig patroon bevat."
+msgstr ""
+"De DOI {$pubId} kan niet worden toegekend omdat het een ongeldig patroon "
+"bevat."
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr "De URN {$pubId} werd toegekend."
 
-msgid "doi.editor.preview.objects"
-msgstr "Onderdeel"
-
-msgid "doi.editor.preview.galleys"
-msgstr "Galley: {$galleyLabel}"
-
-msgid "doi.editor.preview.publication.none"
-msgstr "Aan deze publicatie is geen DOI toegewezen."
-
-msgid "doi.editor.preview.publication"
-msgstr "De DOI voor deze publicatie is {$doi}."
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr ""
 
 msgid "doi.editor.missingPrefix"
 msgstr "De DOI moet beginnen met {$doiPrefix}."
 
-msgid "doi.editor.missingParts"
+msgid "doi.editor.preview.publication"
+msgstr "De DOI voor deze publicatie is {$doi}."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Aan deze publicatie is geen DOI toegewezen."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "Onderdeel"
+
+msgid "api.galley.403.publicationDidNotMatch"
 msgstr ""
-"U kunt geen DOI genereren omdat er gegevens ontbreken in een of meer delen "
-"van het DOI-patroon. Mogelijk moet u de publicatie aan een nummer toewijzen, "
-"een uitgever-ID instellen of paginanummers invoeren."
 
-msgid "doi.editor.missingIssue"
+msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
-"U kunt pas een DOI genereren als deze publicatie aan een nummer is "
-"toegewezen."
 
-msgid "doi.editor.doi.assignDoi"
-msgstr "Toewijzen"
+msgid "api.issue.400.invalidDoi"
+msgstr ""
 
-msgid "doi.editor.doi.description"
-msgstr "De DOI moet beginnen met {$prefix}."
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
 
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Artikelen"
+msgid "api.issue.404.issuesNotFound"
+msgstr ""
+
+msgid "doi.manager.submissionDois"
+msgstr ""
+
+msgid "doi.manager.issueDois"
+msgstr ""
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+
+msgid "manager.institutions.noContext"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.name"
+msgstr ""
 
 msgid "mailable.subscriptionNotify.description"
-msgstr "Deze e-mail bericht een geregistreerde lezer dat de beheerder een abonnement heeft gecreëerd. Het bevat de URL van het tijdschrift en instructies om toegang te krijgen."
+msgstr ""
+"Deze e-mail bericht een geregistreerde lezer dat de beheerder een abonnement "
+"heeft gecreëerd. Het bevat de URL van het tijdschrift en instructies om "
+"toegang te krijgen."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpiresSoon.description"
-msgstr "Deze e-mail bericht een abonnee dat zijn abonnement binnenkort verloopt. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+msgstr ""
+"Deze e-mail bericht een abonnee dat zijn abonnement binnenkort verloopt. De "
+"URL van het tijdschrift en instructies om toegang te krijgen worden "
+"meegestuurd."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpired.description"
-msgstr "Deze e-mail bericht een abonnee dat zijn abonnement is verlopen. De URL van het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+msgstr ""
+"Deze e-mail bericht een abonnee dat zijn abonnement is verlopen. De URL van "
+"het tijdschrift en instructies om toegang te krijgen worden meegestuurd."
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpiredLast.description"
-msgstr "Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De URL van het tijdschrift en instructies voor toegang worden meegeleverd."
+msgstr ""
+"Deze e-mail herinnert een abonnee eraan dat zijn abonnement verlopen is. De "
+"URL van het tijdschrift en instructies voor toegang worden meegeleverd."
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr ""
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven."
+msgstr ""
+"Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel "
+"abonnement online werd gekocht. Er wordt een samenvatting van het abonnement "
+"en een snelle toegangslink tot het gekochte abonnement gegeven."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr ""
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd gekocht. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het gekochte abonnement gegeven."
+msgstr ""
+"Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel "
+"abonnement online werd gekocht. Er wordt een samenvatting van het abonnement "
+"en een snelle toegangslink tot het gekochte abonnement gegeven."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr ""
 
 msgid "mailable.subscriptionRenewIndividual.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
+msgstr ""
+"Deze e-mail herinnert de abonnementenbeheerder eraan dat een individueel "
+"abonnement online werd verlengd. Er wordt een samenvatting van het "
+"abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr ""
 
 msgid "mailable.subscriptionRenewInstitutional.description"
-msgstr "Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel abonnement online werd verlengd. Er wordt een samenvatting van het abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
+msgstr ""
+"Deze e-mail herinnert de abonnementenbeheerder eraan dat een institutioneel "
+"abonnement online werd verlengd. Er wordt een samenvatting van het "
+"abonnement en een snelle toegangslink tot het verlengde abonnement gegeven."
+
+msgid "mailable.openAccessNotify.name"
+msgstr ""
 
 msgid "mailable.openAccessNotify.description"
-msgstr "Deze e-mail wordt verstuurd naar geregistreerde gebruikers die aangegeven hebben een e-mail te willen ontvangen als een nummer open access wordt."
+msgstr ""
+"Deze e-mail wordt verstuurd naar geregistreerde gebruikers die aangegeven "
+"hebben een e-mail te willen ontvangen als een nummer open access wordt."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr ""
+
+msgid "mailable.lockssNewArchive.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+#~ msgid "manager.statistics.statistics.registeredUsers"
+#~ msgstr "Geregistreerde gebruikers"
+
+#~ msgid "doi.manager.settings.enableSubmissionDoi"
+#~ msgstr "Artikels"
+
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Artikelen"

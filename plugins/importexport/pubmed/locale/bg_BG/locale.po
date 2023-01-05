@@ -12,18 +12,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr ""
-"Нито една статия не съответства на посочения идентификационен номер на "
-"статия \"{$articleId}\"."
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "Плъгин за PubMed XML експорт"
 
-msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgid "plugins.importexport.pubmed.description"
 msgstr ""
-"Нито един брой не съответства на посочения идентификационен номер на брой \""
-"{$issueId}\"."
+"Експортиране на метаданните на статиите в PubMed XML формат за индексиране в "
+"MEDLINE."
 
-msgid "plugins.importexport.pubmed.cliError"
-msgstr "ГРЕШКА:"
+msgid "plugins.importexport.pubmed.export"
+msgstr "Експорт на данни"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Експорт на броеве"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Изберете брой за експорт."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Експорт на статии"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Изберете статии за експорт."
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
@@ -32,25 +42,15 @@ msgstr ""
 "[articleId1] [articleId2] ...\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
 
-msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Изберете статии за експорт."
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ГРЕШКА:"
 
-msgid "plugins.importexport.pubmed.export.articles"
-msgstr "Експорт на статии"
-
-msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Изберете брой за експорт."
-
-msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Експорт на броеве"
-
-msgid "plugins.importexport.pubmed.export"
-msgstr "Експорт на данни"
-
-msgid "plugins.importexport.pubmed.description"
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
 msgstr ""
-"Експортиране на метаданните на статиите в PubMed XML формат за индексиране в "
-"MEDLINE."
+"Нито един брой не съответства на посочения идентификационен номер на брой "
+"\"{$issueId}\"."
 
-msgid "plugins.importexport.pubmed.displayName"
-msgstr "Плъгин за PubMed XML експорт"
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr ""
+"Нито една статия не съответства на посочения идентификационен номер на "
+"статия \"{$articleId}\"."

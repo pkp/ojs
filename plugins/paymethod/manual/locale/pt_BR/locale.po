@@ -27,18 +27,6 @@ msgstr "Registro de pagamento"
 msgid "plugins.paymethod.manual.settings"
 msgstr "Configurações para controle de pagamento"
 
-msgid "plugins.paymethod.manual.settings.instructions"
-msgstr "Instruções"
-
-msgid "plugins.paymethod.manual.settings.manualInstructions"
-msgstr "Instruções para usuários que escolhem o método de pagamento manual"
-
-msgid "plugins.paymethod.manual.purchase.title"
-msgstr "Título"
-
-msgid "plugins.paymethod.manual.purchase.fee"
-msgstr "Taxa"
-
 msgid "plugins.paymethod.manual.sendNotificationOfPayment"
 msgstr "Enviar notificação de pagamento"
 
@@ -48,5 +36,17 @@ msgstr "Notificação de pagamento"
 msgid "plugins.paymethod.manual.notificationSent"
 msgstr "Notificação de pagamento enviada"
 
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Título"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Taxa"
+
 msgid "plugins.paymethod.manual.manualPaymentNotify.name"
 msgstr "Notificação de Pagamento Manual"
+
+#~ msgid "plugins.paymethod.manual.settings.instructions"
+#~ msgstr "Instruções"
+
+#~ msgid "plugins.paymethod.manual.settings.manualInstructions"
+#~ msgstr "Instruções para usuários que escolhem o método de pagamento manual"

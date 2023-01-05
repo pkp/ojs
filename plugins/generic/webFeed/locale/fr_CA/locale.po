@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:43-07:00\n"
 "PO-Revision-Date: 2020-01-28 23:48+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
-"helene.vezina@umontreal.ca>\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-webFeed/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -29,11 +29,19 @@ msgstr "Paramètres"
 msgid "plugins.generic.webfeed.settings.issue"
 msgstr "Afficher les liens du fil sur les pages du numéro seulement."
 
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Afficher les liens du fil sur la page d'accueil et sur les pages des numéros "
+"uniquement."
+
 msgid "plugins.generic.webfeed.settings.all"
 msgstr "Afficher les liens du fil sur toutes les pages de la revue."
 
 msgid "plugins.generic.webfeed.settings.currentIssue"
 msgstr "Afficher les éléments du numéro courant."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Afficher un nombre fixe des éléments les plus récents."
 
 msgid "plugins.generic.webfeed.settings.recentArticles"
 msgstr "Nombre d'éléments à afficher"
@@ -50,11 +58,3 @@ msgstr "Logo RSS1"
 
 msgid "plugins.generic.webfeed.rss2.altText"
 msgstr "Logo RSS2"
-
-msgid "plugins.generic.webfeed.settings.homepage"
-msgstr ""
-"Afficher les liens du fil sur la page d'accueil et sur les pages des numéros "
-"uniquement."
-
-msgid "plugins.generic.webfeed.settings.recent"
-msgstr "Afficher un nombre fixe des éléments les plus récents."

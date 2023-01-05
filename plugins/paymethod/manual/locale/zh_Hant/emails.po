@@ -15,5 +15,11 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "手動付款通知"
 
+msgid "emails.manualPaymentNotification.body"
+msgstr ""
+
+msgid "emails.manualPaymentNotification.description"
+msgstr ""
+
 msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
 msgstr "已付款用戶的用戶名稱"

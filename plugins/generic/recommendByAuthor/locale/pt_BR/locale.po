@@ -11,6 +11,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Artigos recomendados por Autor"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Este plugin insere uma lista de artigos pelo mesmo autor na página do resumo "
+"do artigo."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Artigos mais lidos pelo mesmo(s) autor(es)"
+
 msgid "plugins.generic.recommendByAuthor.noMetric"
 msgstr ""
 "Obs .: Este plugin requer que pelo menos um plugin de estatísticas / "
@@ -18,14 +29,3 @@ msgstr ""
 "uma métrica, selecione também uma métrica principal na página de "
 "configurações do site do administrador e / ou nas páginas de configurações "
 "do gerente da revista."
-
-msgid "plugins.generic.recommendByAuthor.heading"
-msgstr "Artigos mais lidos pelo mesmo(s) autor(es)"
-
-msgid "plugins.generic.recommendByAuthor.description"
-msgstr ""
-"Este plugin insere uma lista de artigos pelo mesmo autor na página do resumo "
-"do artigo."
-
-msgid "plugins.generic.recommendByAuthor.displayName"
-msgstr "Artigos recomendados por Autor"

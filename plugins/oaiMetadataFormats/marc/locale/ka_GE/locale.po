@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.OAIMetadata.marc.displayName"
+msgstr "მოდული „MARC მეტამონაცემების ფორმატი“"
+
 msgid "plugins.OAIMetadata.marc.description"
 msgstr ""
 "აწესრიგებს მეტამონაცემებს იმ სახით, რომ ისინი შეესაბამებოდნენ MARC-ის "
 "ფორმატს."
-
-msgid "plugins.OAIMetadata.marc.displayName"
-msgstr "მოდული „MARC მეტამონაცემების ფორმატი“"

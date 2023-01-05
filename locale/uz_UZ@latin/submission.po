@@ -14,73 +14,79 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.13.1\n"
 
-msgid "submission.submit.newSubmissionSingle"
-msgstr "Yangi material yuborish"
+msgid "submission.submit.userGroup"
+msgstr "Mening rolimdan foydalanib yuboring ..."
 
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Yangi material yuborishni boshlang"
+msgid "submission.upload.selectComponent"
+msgstr "Maqola komponentini tanlang"
+
+msgid "submission.title"
+msgstr "Maqola nomi"
 
 msgid "submission.title.tip"
 msgstr ""
 "Material turi odatda \"rasm\", \"matn\" yoki boshqa turdagi ommaviy axborot "
 "vositalaridan, shu jumladan \"dasturiy ta'minot\" yoki \"interaktiv\" "
 "narsalardan iborat. Iltimos, materialingizga eng mos keladiganini tanlang. "
-"Masalan: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/"
-"12/usageguide/generic.shtml#type\"> http://dublincore.org/documents/ 2001 /"
-"04/12/usageguide/generic.shtml#type </a>"
+"Masalan: <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\"> http://dublincore.org/"
+"documents/ 2001 /04/12/usageguide/generic.shtml#type </a>"
 
-msgid "submission.title"
-msgstr "Maqola nomi"
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Yangi material yuborishni boshlang"
 
-msgid "submission.upload.selectComponent"
-msgstr "Maqola komponentini tanlang"
-
-msgid "submission.submit.userGroup"
-msgstr "Mening rolimdan foydalanib yuboring ..."
-
-msgid "submission.submit.noContext"
-msgstr "Ushbu material uchun jurnal topilmadi."
-
-msgid "submission.abstract.wordCount.description"
-msgstr "Annotatsiya {$ wordCount} yoki undan kam so'z bo'lishi kerak."
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Yangi material yuborish"
 
 msgid "grid.action.workflow"
 msgstr "Material yuborish jarayoni"
 
-msgid "submission.incomplete"
-msgstr "Tasdiqlashni kutmoqdaman"
+msgid "submission.abstract.wordCount.description"
+msgstr "Annotatsiya {$ wordCount} yoki undan kam so'z bo'lishi kerak."
 
-msgid "submission.complete"
-msgstr "Tasdiqlangan"
+msgid "submission.submit.noContext"
+msgstr "Ushbu material uchun jurnal topilmadi."
 
-msgid "submission.upload.fileContents"
-msgstr "Maqola komponenti"
+msgid "submission.issueEntry"
+msgstr "Metadata"
 
-msgid "submission.event.issueMetadataUpdated"
-msgstr "Hikoya uchun metama'lumotlar yangilandi."
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Ko'rib chiqish uchun yuboring"
-
-msgid "workflow.review.externalReview"
-msgstr "Taqriz"
-
-msgid "submission.pageProofs"
-msgstr "Tekshirish"
-
-msgid "submission.submit.upload.description"
+msgid "submission.submit.whatNext.description"
 msgstr ""
-"Ushbu materialga tegishli fayllarni yuklab oling: maqola, ommaviy axborot "
-"vositalari, ma'lumotlar to'plamlari, san'at asarlari va boshqalar."
+"Jurnal sizning materialingizni taqdim etganingiz to'g'risida xabar beradi, "
+"yozuvingizni tasdiqlash elektron pochtangizga yuboriladi. Muharrir sizning "
+"materialingizni ko'rib chiqishi bilanoq, biz siz bilan bog'lanamiz."
 
-msgid "submission.submit.titleAndSummary"
-msgstr "Sarlavha va izoh"
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Galley nashrda paydo bo'ldi"
 
-msgid "grid.action.pageProofApproved"
-msgstr "Ushbu qoralama oshxonaga kiritish uchun ma'qullandi."
+msgid "grid.action.issueEntry"
+msgstr "Ushbu material uchun metadata ko'rsating"
 
-msgid "grid.action.approveProof"
-msgstr "Ushbu qoralamani oshxonaga kiritish uchun tasdiqlang."
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "{$ GalleyFormatName}\" maqolasi mavjud."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "\"{$galleyFormatName}\" maqolasining paneli endi mavjud emas."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Yuborilgan ochiq identifikatorlar yangilandi."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formatni tasdiqlash"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p> Ushbu oshxona <em> ni endi o'quvchilarga taqdim etish </em> mumkin emas. "
+"</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p> Ushbu zali <em> o'quvchilarga taqdim etilishi </em> mumkin. </p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Ushbu oshxonani tayyorlang"
+
+msgid "submission.galleyFiles"
+msgstr "Galley fayllari"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -90,183 +96,85 @@ msgstr ""
 "boshqa foydalanuvchilarni aniqlash uchun <em> Auditorni tayinlash </em> dan "
 "foydalaning."
 
-msgid "submission.galleyFiles"
-msgstr "Galley fayllari"
+msgid "grid.action.approveProof"
+msgstr "Ushbu qoralamani oshxonaga kiritish uchun tasdiqlang."
 
-msgid "grid.action.availableArticleGalley"
-msgstr "Ushbu oshxonani tayyorlang"
+msgid "grid.action.pageProofApproved"
+msgstr "Ushbu qoralama oshxonaga kiritish uchun ma'qullandi."
 
-msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p> Ushbu zali <em> o'quvchilarga taqdim etilishi </em> mumkin. </p>"
+msgid "submission.submit.titleAndSummary"
+msgstr "Sarlavha va izoh"
 
-msgid "grid.issueEntry.availableGalley.removeMessage"
+msgid "submission.submit.upload.description"
 msgstr ""
-"<p> Ushbu oshxona <em> ni endi o'quvchilarga taqdim etish </em> mumkin emas. "
-"</p>"
+"Ushbu materialga tegishli fayllarni yuklab oling: maqola, ommaviy axborot "
+"vositalari, ma'lumotlar to'plamlari, san'at asarlari va boshqalar."
 
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "Formatni tasdiqlash"
+msgid "submission.pageProofs"
+msgstr "Tekshirish"
 
-msgid "submission.event.publicIdentifiers"
-msgstr "Yuborilgan ochiq identifikatorlar yangilandi."
+msgid "workflow.review.externalReview"
+msgstr "Taqriz"
 
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "\"{$galleyFormatName}\" maqolasining paneli endi mavjud emas."
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Hikoya uchun metama'lumotlar yangilandi."
 
-msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "{$ GalleyFormatName}\" maqolasi mavjud."
+msgid "submission.upload.fileContents"
+msgstr "Maqola komponenti"
 
-msgid "grid.action.issueEntry"
-msgstr "Ushbu material uchun metadata ko'rsating"
+msgid "submission.complete"
+msgstr "Tasdiqlangan"
 
-msgid "grid.action.galleyInIssueEntry"
-msgstr "Galley nashrda paydo bo'ldi"
+msgid "submission.incomplete"
+msgstr "Tasdiqlashni kutmoqdaman"
 
-msgid "submission.submit.whatNext.description"
+msgid "submission.submit.submissionChecklist"
+msgstr "Taqdim etish ro'yxati"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Maxfiylik bayonoti"
+
+msgid "submission.submit.contributorRole"
+msgstr "Ishtirokchining roli"
+
+msgid "submission.citationFormat.notFound"
+msgstr "So'ralgan iqtibos formatini olib bo'lmadi."
+
+msgid "submission.metadataDescription"
 msgstr ""
-"Jurnal sizning materialingizni taqdim etganingiz to'g'risida xabar beradi, "
-"yozuvingizni tasdiqlash elektron pochtangizga yuboriladi. Muharrir sizning "
-"materialingizni ko'rib chiqishi bilanoq, biz siz bilan bog'lanamiz."
+"Bu spetsifikatsiyalar Dublin Core metadata to'plamiga asoslangan bo'lib, u "
+"jurnal tarkibini tavsiflash uchun ishlatiladi."
 
-msgid "submission.issueEntry"
-msgstr "Metadata"
+msgid "section.any"
+msgstr "Har qanday bo'lim"
 
-msgid "publication.version.details"
-msgstr "{$ Version} versiyasi uchun nashr tafsilotlari"
+msgid "submission.sectionOptions"
+msgstr "Bo'lim variantlari"
 
-msgid "publication.unschedule.confirm"
-msgstr "Ishonchingiz komilki, bu nashrga chiqarilishini xohlamaysizmi?"
+msgid "catalog.browseTitles"
+msgstr "{$ numTitles} elementlar"
 
-msgid "publication.unpublish.confirm"
-msgstr "Ishonchingiz komilki, siz buni nashr qilishni xohlamaysizmi?"
+msgid "catalog.category.heading"
+msgstr "Barcha narsalar"
 
-msgid "publication.unpublish"
-msgstr "Nashrdan chiqarish"
-
-msgid "submission.copyrightOther.description"
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Quyidagi partiyaga e'lon qilingan materiallar uchun mualliflik huquqini "
-"bering."
+"Bu nashrning galereyalarini tahrir qilib bo'lmaydi, chunki u allaqachon "
+"nashr etilgan."
 
-msgid "submission.copyrightHolder.description"
-msgstr "Mualliflik huquqi avtomatik ravishda {$ copyright} ga yuklanadi."
+msgid "galley.publicationNotFound"
+msgstr "Bu oshxona uchun nashr topilmadi."
 
-msgid "submission.license.description"
+msgid "publication.assignToissue"
+msgstr "Chiqarishni tayinlash"
+
+msgid "publication.assignedToIssue"
 msgstr ""
-"Bu chop etilgach, litsenziya avtomatik ravishda <a href='{$licenseUrl}' "
-"target='_blank'>{$licenseName}</a>ga o'rnatiladi."
+"Bu <a href=\"{$issueUrl}\"> {$ issueName} </a> ga tayinlangan, lekin uni "
+"nashr qilish rejalashtirilmagan."
 
-msgid "publication.required.reviewStage"
-msgstr ""
-"Arizani nashr etishdan oldin nusxa ko'chirish yoki ishlab chiqarish "
-"bosqichida bo'lishi kerak."
-
-msgid "publication.required.declined"
-msgstr "Rad etilgan arizani e'lon qilib bo'lmaydi."
-
-msgid "publication.publish.requirements"
-msgstr "Buni nashr qilishdan oldin quyidagi talablar bajarilishi kerak."
-
-msgid "publication.publish"
-msgstr "Nashr qilish"
-
-msgid "publication.invalidSubmission"
-msgstr "Bu nashrga ariza topilmadi."
-
-msgid "publication.event.versionUnpublished"
-msgstr "Bir versiya nashrdan olib tashlandi."
-
-msgid "publication.event.versionScheduled"
-msgstr "Yangi versiya nashrga chiqarilishi rejalashtirilgan edi."
-
-msgid "publication.event.versionPublished"
-msgstr "Yangi versiya nashr etildi."
-
-msgid "publication.event.unpublished"
-msgstr "Taqdimot e'lon qilinmadi."
-
-msgid "publication.event.scheduled"
-msgstr "Taqdimot chop etilishi rejalashtirilgan edi."
-
-msgid "publication.event.published"
-msgstr "Taqdimot e'lon qilindi."
-
-msgid "publication.editDisabled"
-msgstr "Bu versiya chop etilgan va uni tahrir qilib bo'lmaydi."
-
-msgid "publication.datePublished"
-msgstr "Chop etilgan sana"
-
-msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr ""
-"Mualliflik huquqi yili avtomatik ravishda nashr qilingan sanaga qarab "
-"belgilanadi."
-
-msgid "publication.copyrightYearBasis.issueDescription"
-msgstr ""
-"Mualliflik huquqi yili bu nashrda chop etilganda avtomatik ravishda "
-"o'rnatiladi."
-
-msgid "submission.publications"
-msgstr "Nashrlar"
-
-msgid "publication.status.unscheduled"
-msgstr "Rejadan tashqari"
-
-msgid "submission.status.scheduled"
-msgstr "Rejalashtirilgan"
-
-msgid "publication.status.published"
-msgstr "Nashr qilingan"
-
-msgid "submission.publication"
-msgstr "Nashr"
-
-msgid "publication.selectIssue"
-msgstr "Nashr qilishni rejalashtirish uchun muammoni tanlang"
-
-msgid "publication.unscheduledIn"
-msgstr "Bu nashrda chop etilishi rejalashtirilmagan."
-
-msgid "publication.scheduledIn"
-msgstr ""
-"<a href=\"{$issueUrl}\">{$ issueName}</a>da nashr qilish rejalashtirilgan."
-
-msgid "publication.publishedIn"
-msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> da nashr etilgan."
-
-msgid "publication.required.issue"
-msgstr "Nashrni nashr etishdan oldin uni nashr qilish kerak."
-
-msgid "publication.publish.confirmation.datePublishedInPast"
-msgstr ""
-"Nashrning barcha talablari bajarildi. Bu darhol e'lon qilinadi, chunki nashr "
-"qilingan sana {$ datePublished} qilib belgilandi. Haqiqatan ham buni nashr "
-"qilmoqchimisiz?"
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr ""
-"Nashrning barcha talablari bajarildi. Bu darhol {$ issue} da e'lon qilinadi. "
-"Haqiqatan ham buni nashr qilmoqchimisiz?"
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Nashrning barcha talablari bajarildi. Bu {$ issue} nashr qilinganida e'lon "
-"qilinadi. Haqiqatan ham buni nashrga rejalashtirmoqchimisiz?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"Nashrning barcha talablari bajarildi. Haqiqatan ham buni nashr "
-"qilmoqchimisiz?"
-
-msgid "publication.invalidIssue"
-msgstr "Bu nashr uchun muammo topilmadi."
-
-msgid "publication.inactiveSection"
-msgstr "{$ section} (faol emas)"
-
-msgid "publication.invalidSection"
-msgstr "Bu nashr uchun bo'lim topilmadi."
+msgid "publication.changeIssue"
+msgstr "Muammoni o'zgartirish"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -274,66 +182,172 @@ msgstr ""
 "Maqola ilgari boshqa joyda chop etilmaguncha va uni kechiktirish kerak "
 "bo'lmaguncha, nashr qilinadigan sanani kiritmang."
 
-msgid "publication.changeIssue"
-msgstr "Muammoni o'zgartirish"
+msgid "publication.invalidSection"
+msgstr "Bu nashr uchun bo'lim topilmadi."
 
-msgid "publication.assignedToIssue"
+msgid "publication.inactiveSection"
+msgstr "{$ section} (faol emas)"
+
+msgid "publication.invalidIssue"
+msgstr "Bu nashr uchun muammo topilmadi."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"Bu <a href=\"{$issueUrl}\"> {$ issueName} </a> ga tayinlangan, lekin uni "
-"nashr qilish rejalashtirilmagan."
+"Nashrning barcha talablari bajarildi. Haqiqatan ham buni nashr "
+"qilmoqchimisiz?"
 
-msgid "publication.assignToissue"
-msgstr "Chiqarishni tayinlash"
-
-msgid "galley.publicationNotFound"
-msgstr "Bu oshxona uchun nashr topilmadi."
-
-msgid "galley.editPublishedDisabled"
+msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Bu nashrning galereyalarini tahrir qilib bo'lmaydi, chunki u allaqachon "
-"nashr etilgan."
+"Nashrning barcha talablari bajarildi. Bu {$ issue} nashr qilinganida e'lon "
+"qilinadi. Haqiqatan ham buni nashrga rejalashtirmoqchimisiz?"
 
-msgid "catalog.category.heading"
-msgstr "Barcha narsalar"
-
-msgid "catalog.browseTitles"
-msgstr "{$ numTitles} elementlar"
-
-msgid "submission.sectionOptions"
-msgstr "Bo'lim variantlari"
-
-msgid "section.any"
-msgstr "Har qanday bo'lim"
-
-msgid "submission.metadataDescription"
+msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"Bu spetsifikatsiyalar Dublin Core metadata to'plamiga asoslangan bo'lib, u "
-"jurnal tarkibini tavsiflash uchun ishlatiladi."
+"Nashrning barcha talablari bajarildi. Bu darhol {$ issue} da e'lon qilinadi. "
+"Haqiqatan ham buni nashr qilmoqchimisiz?"
 
-msgid "submission.citationFormat.notFound"
-msgstr "So'ralgan iqtibos formatini olib bo'lmadi."
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Nashrning barcha talablari bajarildi. Bu darhol e'lon qilinadi, chunki nashr "
+"qilingan sana {$ datePublished} qilib belgilandi. Haqiqatan ham buni nashr "
+"qilmoqchimisiz?"
 
-msgid "submission.submit.contributorRole"
-msgstr "Ishtirokchining roli"
+msgid "publication.required.issue"
+msgstr "Nashrni nashr etishdan oldin uni nashr qilish kerak."
 
-msgid "submission.submit.privacyStatement"
-msgstr "Maxfiylik bayonoti"
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> da nashr etilgan."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<a href=\"{$issueUrl}\">{$ issueName}</a>da nashr qilish rejalashtirilgan."
+
+msgid "publication.unscheduledIn"
+msgstr "Bu nashrda chop etilishi rejalashtirilmagan."
+
+msgid "publication.selectIssue"
+msgstr "Nashr qilishni rejalashtirish uchun muammoni tanlang"
+
+msgid "submission.publication"
+msgstr "Nashr"
+
+msgid "publication.status.published"
+msgstr "Nashr qilingan"
+
+msgid "submission.status.scheduled"
+msgstr "Rejalashtirilgan"
+
+msgid "publication.status.unscheduled"
+msgstr "Rejadan tashqari"
+
+msgid "submission.publications"
+msgstr "Nashrlar"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Mualliflik huquqi yili bu nashrda chop etilganda avtomatik ravishda "
+"o'rnatiladi."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Mualliflik huquqi yili avtomatik ravishda nashr qilingan sanaga qarab "
+"belgilanadi."
+
+msgid "publication.datePublished"
+msgstr "Chop etilgan sana"
+
+msgid "publication.editDisabled"
+msgstr "Bu versiya chop etilgan va uni tahrir qilib bo'lmaydi."
+
+msgid "publication.event.published"
+msgstr "Taqdimot e'lon qilindi."
+
+msgid "publication.event.scheduled"
+msgstr "Taqdimot chop etilishi rejalashtirilgan edi."
+
+msgid "publication.event.unpublished"
+msgstr "Taqdimot e'lon qilinmadi."
+
+msgid "publication.event.versionPublished"
+msgstr "Yangi versiya nashr etildi."
+
+msgid "publication.event.versionScheduled"
+msgstr "Yangi versiya nashrga chiqarilishi rejalashtirilgan edi."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Bir versiya nashrdan olib tashlandi."
+
+msgid "publication.invalidSubmission"
+msgstr "Bu nashrga ariza topilmadi."
+
+msgid "publication.publish"
+msgstr "Nashr qilish"
+
+msgid "publication.publish.requirements"
+msgstr "Buni nashr qilishdan oldin quyidagi talablar bajarilishi kerak."
+
+msgid "publication.required.declined"
+msgstr "Rad etilgan arizani e'lon qilib bo'lmaydi."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Arizani nashr etishdan oldin nusxa ko'chirish yoki ishlab chiqarish "
+"bosqichida bo'lishi kerak."
+
+msgid "submission.license.description"
+msgstr ""
+"Bu chop etilgach, litsenziya avtomatik ravishda <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>ga o'rnatiladi."
+
+msgid "submission.copyrightHolder.description"
+msgstr "Mualliflik huquqi avtomatik ravishda {$ copyright} ga yuklanadi."
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"Quyidagi partiyaga e'lon qilingan materiallar uchun mualliflik huquqini "
+"bering."
+
+msgid "publication.unpublish"
+msgstr "Nashrdan chiqarish"
+
+msgid "publication.unpublish.confirm"
+msgstr "Ishonchingiz komilki, siz buni nashr qilishni xohlamaysizmi?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Ishonchingiz komilki, bu nashrga chiqarilishini xohlamaysizmi?"
+
+msgid "publication.version.details"
+msgstr "{$ Version} versiyasi uchun nashr tafsilotlari"
 
 #, fuzzy
 msgid "submission.queries.production"
 msgstr "Ishlab chiqarish muhokamalari"
 
-msgid "submission.submit.submissionChecklist"
-msgstr "Taqdim etish ro'yxati"
+msgid "editor.submission.decision.backToReview"
+msgstr "Ko'rib chiqish sahifasiga qaytish"
 
-msgid "submission.submit.form.localeRequired"
-msgstr "Iltimos, yuborish tilini tanlang."
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Ushbu taqdimnomani qabul qilish qarorini bekor qiling va uni qayta ko‘rib "
+"chiqish bosqichiga yuboring."
 
-msgid "submission.layout.viewGalley"
-msgstr "Galleyni ko'rish"
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} ushbu yuborishni qabul qilish qarorini bekor qildi va uni "
+"qayta ko‘rib chiqish bosqichiga yubordi."
 
-msgid "galley.cantEditPublished"
-msgstr "Bu galleyni tahrirlab bo‘lmaydi, chunki u allaqachon chop etilgan."
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Ko'rib chiqish uchun yuborildi"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} taqdimoti koʻrib chiqish bosqichiga qaytarildi."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Mualliflarga e-pochta orqali xabar yuboring, ularning taqdimoti ko'rib "
+"chiqish bosqichiga qaytarilmoqda. Nima uchun bunday qaror qabul "
+"qilinganligini tushuntiring va muallifga keyingi tekshiruv o'tkazilishi "
+"haqida xabar bering."
 
 #, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
@@ -343,13 +357,13 @@ msgstr ""
 "jarayoni qancha davom etishi va qachon muharrirlardan yana eshitishlarini "
 "kutishlari haqida ma'lumot bering."
 
-msgid "editor.submission.decision.backToReview.completed"
-msgstr "Ko'rib chiqish uchun yuborildi"
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Ko'rib chiqish bosqichiga yuborilishi kerak bo'lgan fayllarni tanlang."
 
-msgid "doi.submission.incorrectContext"
+msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"Quyidagi yuborish uchun DOI yaratib bo‘lmadi: {$pubObjectTitle}. Joriy "
-"jurnal kontekstida u mavjud emas."
+"Quyidagi yuborish uchun DOI yaratib bo‘lmadi: {$pubObjectTitle}. DOI "
+"yaratilishidan oldin taqdimnoma muammoga tayinlanishi kerak."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
@@ -357,36 +371,34 @@ msgstr ""
 "bo‘lmadi: {$itemTitle}. DOI yaratilishidan oldin taqdimnoma muammoga "
 "tayinlanishi kerak."
 
-msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Ko'rib chiqish bosqichiga yuborilishi kerak bo'lgan fayllarni tanlang."
-
-msgid "editor.submission.decision.backToReview.log"
+msgid "doi.submission.incorrectContext"
 msgstr ""
-"{$editorName} ushbu yuborishni qabul qilish qarorini bekor qildi va uni "
-"qayta ko‘rib chiqish bosqichiga yubordi."
+"Quyidagi yuborish uchun DOI yaratib bo‘lmadi: {$pubObjectTitle}. Joriy "
+"jurnal kontekstida u mavjud emas."
 
-msgid "editor.submission.decision.backToReview"
-msgstr "Ko'rib chiqish sahifasiga qaytish"
+msgid "submission.layout.viewGalley"
+msgstr "Galleyni ko'rish"
 
-msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "{$title} taqdimoti koʻrib chiqish bosqichiga qaytarildi."
+msgid "galley.cantEditPublished"
+msgstr "Bu galleyni tahrirlab bo‘lmaydi, chunki u allaqachon chop etilgan."
 
-msgid "doi.submission.issueMissing.publication"
+msgid "submission.copyright.description"
 msgstr ""
-"Quyidagi yuborish uchun DOI yaratib bo‘lmadi: {$pubObjectTitle}. DOI "
-"yaratilishidan oldin taqdimnoma muammoga tayinlanishi kerak."
 
-msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgid "submission.wizard.notAllowed.description"
 msgstr ""
-"Mualliflarga e-pochta orqali xabar yuboring, ularning taqdimoti ko'rib "
-"chiqish bosqichiga qaytarilmoqda. Nima uchun bunday qaror qabul "
-"qilinganligini tushuntiring va muallifga keyingi tekshiruv o'tkazilishi "
-"haqida xabar bering."
 
-msgid "editor.submission.decision.backToReview.description"
+msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
-"Ushbu taqdimnomani qabul qilish qarorini bekor qiling va uni qayta ko‘rib "
-"chiqish bosqichiga yuboring."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Hech bo'lmaganda bitta muallif kerak."
@@ -404,3 +416,9 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Iltimos, ishtirokchining rolini tanlang."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Ko'rib chiqish uchun yuboring"
+
+#~ msgid "submission.submit.form.localeRequired"
+#~ msgstr "Iltimos, yuborish tilini tanlang."

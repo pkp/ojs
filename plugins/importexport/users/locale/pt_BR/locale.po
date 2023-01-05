@@ -27,31 +27,41 @@ msgstr ""
 "\timport [xmlFileName] [journal_path]\n"
 "\texport [xmlFileName] [journal_path]\n"
 "\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
-""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Exemplos:\n"
+"\tImportar usuários para o myJournal do myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExportar todos os usuários de myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExportar usuários especificados pelo seu ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
 
 msgid "plugins.importexport.users.import.importUsers"
 msgstr "Importar Cadastros"
 
 msgid "plugins.importexport.users.import.instructions"
-msgstr "Escolha um documento XML contendo as informações de cadastro para importação nesta revista. Veja a ajuda do sistema para detalhes sobre o formato do documento.<br /><br />Caso o documento possua logins ou e-mails já cadastrados no sistema, os dados cadastrais não serão importados e quaisquer funções adicionais serão designadas aos cadastros existentes."
-
-msgid "plugins.importexport.users.import.failedToImportUser"
-msgstr "Falha na importação de cadastro"
-
-msgid "plugins.importexport.users.import.failedToImportRole"
-msgstr "Falha ao designar função ao cadastro"
+msgstr ""
+"Escolha um documento XML contendo as informações de cadastro para importação "
+"nesta revista. Veja a ajuda do sistema para detalhes sobre o formato do "
+"documento.<br /><br />Caso o documento possua logins ou e-mails já "
+"cadastrados no sistema, os dados cadastrais não serão importados e quaisquer "
+"funções adicionais serão designadas aos cadastros existentes."
 
 msgid "plugins.importexport.users.import.dataFile"
 msgstr "Arquivo de dados do Usuário"
 
 msgid "plugins.importexport.users.import.sendNotify"
-msgstr "Enviar notificação via e-mail para cada cadastro importado, com login e senha do usuário."
+msgstr ""
+"Enviar notificação via e-mail para cada cadastro importado, com login e "
+"senha do usuário."
 
 msgid "plugins.importexport.users.import.continueOnError"
 msgstr "Continuar a importação de outros cadastros caso ocorra uma falha."
-
-msgid "plugins.importexport.users.import.noFileError"
-msgstr "Nenhum arquivo enviado!"
 
 msgid "plugins.importexport.users.import.usersWereImported"
 msgstr "Os seguintes cadastros foram importados com sucesso para o sistema"
@@ -61,6 +71,15 @@ msgstr "Erros ocorridos durante a importação"
 
 msgid "plugins.importexport.users.import.confirmUsers"
 msgstr "Deseja importar os usuários listados para o sistema"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Aviso"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Não é possível criptografados com {$importHash}; o sisema está configurado "
+"para utilizar {$ompHash}. Caso continue, será necessário recriar todas as "
+"senhas de usuários importados."
 
 msgid "plugins.importexport.users.unknownPress"
 msgstr "Caminho de periódico inválido: \"{$pressPath}\"."
@@ -77,30 +96,23 @@ msgstr "Exportar Todos"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Error ocorridos durante a exportação"
 
-msgid "plugins.importexport.users.import.warning"
-msgstr "Aviso"
-
-msgid "plugins.importexport.users.import.encryptionMismatch"
-msgstr "Não é possível criptografados com {$importHash}; o sisema está configurado para utilizar {$ompHash}. Caso continue, será necessário recriar todas as senhas de usuários importados."
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"A importação foi concluída com êxito. Usuários com nomes de usuários e "
+"endereços de e-mail que ainda não estão em uso foram importados, juntamente "
+"com os grupos de usuários que os acompanham."
 
 msgid "plugins.importexport.users.results"
 msgstr "Resultados"
 
-msgid "plugins.importexport.users.importComplete"
-msgstr "A importação foi concluída com êxito. Usuários com nomes de usuários e endereços de e-mail que ainda não estão em uso foram importados, juntamente com os grupos de usuários que os acompanham."
-
-msgid "plugins.importexport.users.cliUsage.examples"
-msgstr ""
-"\n"
-"Exemplos:\n"
-"\tImportar usuários para o myJournal do myImportFile.xml:\n"
-"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
-"\n"
-"\tExportar todos os usuários de myJournal:\n"
-"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
-"\n"
-"\tExportar usuários especificados pelo seu ID:\n"
-"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
-
 msgid "plugins.importexport.users.uploadFile"
 msgstr "Faça a transferência de um arquivo em \"Importar\" para continuar."
+
+#~ msgid "plugins.importexport.users.import.failedToImportUser"
+#~ msgstr "Falha na importação de cadastro"
+
+#~ msgid "plugins.importexport.users.import.failedToImportRole"
+#~ msgstr "Falha ao designar função ao cadastro"
+
+#~ msgid "plugins.importexport.users.import.noFileError"
+#~ msgstr "Nenhum arquivo enviado!"

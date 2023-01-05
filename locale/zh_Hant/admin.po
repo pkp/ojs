@@ -18,20 +18,27 @@ msgstr "寄存期刊"
 msgid "admin.settings.redirect"
 msgstr "期刊重新導向"
 
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"前往主頁的要求將重新導向至此期刊。此功能在，例如網站只寄存一本期刊時有用。"
+
 msgid "admin.languages.confirmDisable"
 msgstr "是否確認取消此區性？此會影響所有現正使用此區性的期刊。"
 
-msgid "admin.settings.redirectInstructions"
-msgstr "前往主頁的要求將重新導向至此期刊。此功能在，例如網站只寄存一本期刊時有用。"
-
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "這將會是網站和任何寄存期刊的默認語言。"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "標誌的區性可能尚未完成。"
 
 msgid "admin.languages.confirmUninstall"
 msgstr "是否確認解除此區性的安裝？此會影響所有現正使用此區性的期刊。"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
 
 msgid "admin.systemVersion"
 msgstr "OJS版本"
@@ -41,6 +48,11 @@ msgstr "OJS配置"
 
 msgid "admin.systemConfigurationDescription"
 msgstr "<tt>config.inc.php</tt>的OJS配置設定。"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"您將會被加入為此期刊的管理員。創建新期刊後，將引導您到設定精靈，完成最初的期"
+"刊設置。"
 
 msgid "admin.journals.journalSettings"
 msgstr "期刊設定"
@@ -81,6 +93,12 @@ msgstr "現有期刊路徑或用作創建的路徑（例如：「ojs」）。"
 msgid "admin.journals.importSubscriptions"
 msgstr "導入訂閱"
 
+msgid "admin.journals.transcode"
+msgstr ""
+
+msgid "admin.journals.redirect"
+msgstr ""
+
 msgid "admin.journals.form.importPathRequired"
 msgstr "必須提供導入路徑。"
 
@@ -92,6 +110,21 @@ msgstr "合併用戶"
 
 msgid "admin.mergeUsers.mergeUser"
 msgstr "合併用戶"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+
+msgid "admin.mergeUsers.allUsers"
+msgstr ""
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr ""
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "訂閱過期提示"
@@ -108,9 +141,27 @@ msgstr "此期ID不是整數。"
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
 msgstr "此期校對樣本ID不是整數。"
 
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
 msgid "admin.siteManagement.description"
 msgstr "從此網站增添、編輯或移除期刊及管理全網站設定。"
 
-msgid "admin.journals.createInstructions"
-msgstr "您將會被加入為此期刊的管理員。創建新期刊後，將引導您到設定精靈，完成最初的期"
-"刊設置。"
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""

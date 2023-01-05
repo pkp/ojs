@@ -11,10 +11,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
+msgid "plugins.generic.dublinCoreMeta.name"
+msgstr "Plugin Indexação Dublin Core"
+
 msgid "plugins.generic.dublinCoreMeta.description"
 msgstr ""
 "Este plugin incorpora as meta tags do Dublin Core nas visualizações de "
 "artigos para fins de indexação."
-
-msgid "plugins.generic.dublinCoreMeta.name"
-msgstr "Plugin Indexação Dublin Core"

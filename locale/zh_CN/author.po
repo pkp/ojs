@@ -24,8 +24,8 @@ msgstr "待处理稿件"
 
 msgid "author.competingInterests"
 msgstr ""
-"利益冲突 <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">CI 政策</a>"
+"利益冲突 <a target=\"_new\" class=\"action\" href="
+"\"{$competingInterestGuidelinesUrl}\">CI 政策</a>"
 
 msgid "author.submit.submitArticle"
 msgstr "提交文章"
@@ -37,8 +37,9 @@ msgid "author.submit.startHereTitle"
 msgstr "开始投新稿件"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">点击这里</a> "
-"开始五个步骤投稿的第一步。"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">点击这里</a> 开始五个步骤投稿的第一"
+"步。"
 
 msgid "author.submit.step1"
 msgstr "步骤一、开始投稿"
@@ -70,11 +71,8 @@ msgstr "输入元数据"
 msgid "author.submit.supplementaryFiles"
 msgstr "上传附件"
 
-msgid "author.submit.confirmation"
-msgstr "确认"
-
-msgid "submission.submit.cancelSubmission"
-msgstr "您可以以后通过在作者首页中选择待处理稿件来完成投稿."
+msgid "author.submit.nextSteps"
+msgstr "接下来的步骤"
 
 msgid "author.submit.notAccepting"
 msgstr "该期刊此刻不接受投稿。"
@@ -118,23 +116,11 @@ msgstr "查看状态"
 msgid "author.submissions.noSubmissions"
 msgstr "无稿件。"
 
-msgid "author.submit.howToSubmit"
-msgstr "遇到困难? 联系<a href=\"mailto:{$supportEmail}\">{$supportName}</a> 获得帮助({$supportPhone})."
-
-msgid "author.submit.howToSubmitNoPhone"
-msgstr "遇到困难? 联系<a href=\"mailto:{$supportEmail}\">{$supportName}</a> 活得帮助."
-
 msgid "author.submit.journalSection"
 msgstr "期刊栏目"
 
 msgid "author.submit.journalSectionDescription"
 msgstr "文章必须选择投到期刊的一个栏目。"
-
-msgid "submission.submit.selectSection"
-msgstr "请选择一个栏目..."
-
-msgid "author.submit.submissionChecklist"
-msgstr "投稿清单"
 
 msgid "author.submit.verifyChecklist"
 msgstr "您必须确定已经完成投稿清单中的所有的项目，才能继续下一步。"
@@ -148,11 +134,8 @@ msgstr "致编辑的说明"
 msgid "author.submit.comments"
 msgstr "输入文本(可选)"
 
-msgid "author.submit.form.sectionRequired"
-msgstr "请为稿件选择一个合适的期刊栏目。"
-
-msgid "submission.submit.privacyStatement"
-msgstr "本期刊的隐私声明"
+msgid "author.submit.form.localeRequired"
+msgstr "请选择投稿的语言。"
 
 msgid "author.submit.reorderInstructions"
 msgstr "重新排列作者在发表文章中的顺序。"
@@ -170,8 +153,9 @@ msgid "author.submit.deleteAuthor"
 msgstr "删除作者"
 
 msgid "author.submit.submissionIndexingDescription"
-msgstr "提供能够为稿件提供索引的词汇，以分号（;）来分隔多个词汇（如，词汇1; 词汇2; "
-"词汇3）。"
+msgstr ""
+"提供能够为稿件提供索引的词汇，以分号（;）来分隔多个词汇（如，词汇1; 词汇2; 词"
+"汇3）。"
 
 msgid "author.submit.coverageInstructions"
 msgstr "指出研究样本的地理空间位置、年代或历史涵盖范围和/或特点。"
@@ -215,8 +199,8 @@ msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
 "这个可选的投稿步骤，让作者可以为投稿添加补充文档。补充文件可以是任何格式，可"
 "以包括(a)研究设备或方法；(b) 资料或数据组，依循研究工作的研究伦理审核； (c) "
-"舍此无法提供给读者的资料来源；(d) "
-"无法纳入文章本文之中的图表或表格，或者其他任何增加文章内容的资料。"
+"舍此无法提供给读者的资料来源；(d) 无法纳入文章本文之中的图表或表格，或者其他"
+"任何增加文章内容的资料。"
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr "点击保存上传文件 (之后补充文件可以被上传)。"
@@ -311,15 +295,6 @@ msgstr "公共补充文件标识已经存在。"
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "公共附件标识"
 
-msgid "author.submit.confirmationDescription"
-msgstr ""
-"点击「完成投稿」以将您的稿件投给{$journalTitle} 。投稿主要联系人将会收到一封"
-"电子邮件确认信，并且在登录期刊网站后能够查看您的稿件正经历哪些编辑流程。"
-"感谢您向 {$journalTitle} 投稿。"
-
-msgid "author.submit.noFiles"
-msgstr "本投稿没有包含附件。"
-
 msgid "author.submit.filesSummary"
 msgstr "文档简介"
 
@@ -339,11 +314,43 @@ msgid "author.article.authorRevisedFile"
 msgstr "作者文件"
 
 msgid "author.submit.authorSubmitLoginMessage"
-msgstr "投稿需要拥有本期刊的帐户。这个帐户用于编辑跟踪您的稿件，当稿件的状态改变或者"
+msgstr ""
+"投稿需要拥有本期刊的帐户。这个帐户用于编辑跟踪您的稿件，当稿件的状态改变或者"
 "编辑需要您提供信息的时候通知您。"
 
-msgid "author.submit.form.localeRequired"
-msgstr "请选择投稿的语言。"
+#~ msgid "author.submit.confirmation"
+#~ msgstr "确认"
 
-msgid "author.submit.nextSteps"
-msgstr "接下来的步骤"
+#~ msgid "submission.submit.cancelSubmission"
+#~ msgstr "您可以以后通过在作者首页中选择待处理稿件来完成投稿."
+
+#~ msgid "author.submit.howToSubmit"
+#~ msgstr ""
+#~ "遇到困难? 联系<a href=\"mailto:{$supportEmail}\">{$supportName}</a> 获得帮"
+#~ "助({$supportPhone})."
+
+#~ msgid "author.submit.howToSubmitNoPhone"
+#~ msgstr ""
+#~ "遇到困难? 联系<a href=\"mailto:{$supportEmail}\">{$supportName}</a> 活得帮"
+#~ "助."
+
+#~ msgid "submission.submit.selectSection"
+#~ msgstr "请选择一个栏目..."
+
+#~ msgid "author.submit.submissionChecklist"
+#~ msgstr "投稿清单"
+
+#~ msgid "author.submit.form.sectionRequired"
+#~ msgstr "请为稿件选择一个合适的期刊栏目。"
+
+#~ msgid "submission.submit.privacyStatement"
+#~ msgstr "本期刊的隐私声明"
+
+#~ msgid "author.submit.confirmationDescription"
+#~ msgstr ""
+#~ "点击「完成投稿」以将您的稿件投给{$journalTitle} 。投稿主要联系人将会收到一"
+#~ "封电子邮件确认信，并且在登录期刊网站后能够查看您的稿件正经历哪些编辑流程。"
+#~ "感谢您向 {$journalTitle} 投稿。"
+
+#~ msgid "author.submit.noFiles"
+#~ msgstr "本投稿没有包含附件。"

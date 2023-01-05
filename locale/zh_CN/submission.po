@@ -12,279 +12,338 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "submission.title.tip"
-msgstr ""
-"稿件类型通常会是“图像”、“文本”或者其他诸如“软件”或者“交互式视频”等。请选择跟您的稿件最贴近的类型。更多类型可参考<a target=\""
-"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
-"generic.shtml#type</a>"
-
-msgid "submission.event.publicIdentifiers"
-msgstr "稿件的公开标识符已更新。"
-
-msgid "grid.action.issueEntry"
-msgstr "查看稿件元数据"
-
-msgid "submission.submit.whatNext.description"
-msgstr "该期刊已收到您提交的稿件通知，并且已通过电子邮件发送确认。 编辑审核完提交的内容后，他们将与您联系。"
-
-msgid "submission.issueEntry"
-msgstr "元数据"
-
-msgid "submission.submit.noContext"
-msgstr "找不到此投稿的期刊。"
-
-msgid "submission.abstract.wordCount.description"
-msgstr "摘要不得超过 {$wordCount} 个字。"
-
-msgid "grid.action.workflow"
-msgstr "稿件工作流"
-
-msgid "submission.submit.newSubmissionSingle"
-msgstr "新稿件"
-
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "开始一次新的提交"
-
-msgid "submission.title"
-msgstr "文章标题"
+msgid "submission.submit.userGroup"
+msgstr "以下列角色提交……"
 
 msgid "submission.upload.selectComponent"
 msgstr "选择文章组件"
 
-msgid "submission.submit.userGroup"
-msgstr "以下列角色提交……"
+msgid "submission.title"
+msgstr "文章标题"
 
-msgid "publication.selectIssue"
-msgstr "选择一个期次安排出版"
+msgid "submission.title.tip"
+msgstr ""
+"稿件类型通常会是“图像”、“文本”或者其他诸如“软件”或者“交互式视频”等。请选择跟"
+"您的稿件最贴近的类型。更多类型可参考<a target=\"_blank\" href=\"http://"
+"dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://"
+"dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
-msgid "publication.assignToissue"
-msgstr "分配期次"
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "开始一次新的提交"
 
-msgid "publication.unscheduledIn"
-msgstr "尚未计划将其发布在某一期中。"
+msgid "submission.submit.newSubmissionSingle"
+msgstr "新稿件"
 
-msgid "publication.scheduledIn"
-msgstr "安排于 <a href=\"{$issueUrl}\">{$issueName}</a> 。"
+msgid "grid.action.workflow"
+msgstr "稿件工作流"
 
-msgid "publication.publishedIn"
-msgstr "发布在 <a href=\"{$issueUrl}\">{$issueName}</a>。"
+msgid "submission.abstract.wordCount.description"
+msgstr "摘要不得超过 {$wordCount} 个字。"
 
-msgid "publication.required.issue"
-msgstr "在发布之前，必须先将该文章分配一个期次。"
+msgid "submission.submit.noContext"
+msgstr "找不到此投稿的期刊。"
 
-msgid "publication.publish.confirmation.datePublishedInPast"
-msgstr "已符合所有发布标准。本文将发布在{$ datePublished}的期刊。您确定要发布吗？"
+msgid "submission.issueEntry"
+msgstr "元数据"
 
-msgid "publication.publish.confirmation.backIssue"
-msgstr "已符合所有发布标准。将发布在{$ issue}。您确定要发布吗？"
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"该期刊已收到您提交的稿件通知，并且已通过电子邮件发送确认。 编辑审核完提交的内"
+"容后，他们将与您联系。"
 
-msgid "publication.publish.confirmation.futureIssue"
-msgstr "已符合所有发布标准。这将在{$ issue}发布。您确定要发布吗？"
+msgid "grid.action.galleyInIssueEntry"
+msgstr "当期文章校样"
 
-msgid "publication.publish.confirmation"
-msgstr "已符合所有发布标准。您要发布吗？"
+msgid "grid.action.issueEntry"
+msgstr "查看稿件元数据"
 
-msgid "publication.issue.success"
-msgstr "出版物的期次细节已更新。"
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "稿件文章 \"{$galleyFormatName}\" 校样生成。"
 
-msgid "publication.invalidIssue"
-msgstr "未发现出版物的期次。"
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "稿件文章 \"{$galleyFormatName}\" 校样未生成。"
 
-msgid "publication.invalidSection"
-msgstr "未发现出版物的栏目。"
+msgid "submission.event.publicIdentifiers"
+msgstr "稿件的公开标识符已更新。"
 
-msgid "publication.datePublished.description"
-msgstr "出版日期会在期刊发行时自动设定。除非文章以前发表过或者在做回溯数据，否则不要人为设定。"
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "格式合格"
 
-msgid "galley.publicationNotFound"
-msgstr "未发现此校样的正式出版物。"
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>此校样对读者 <em>不可用</em>。</p>"
 
-msgid "galley.editPublishedDisabled"
-msgstr "此出版物已出版，所以校样已不能编辑。"
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>此校样读者 <em>可用</em>。</p>"
 
-msgid "catalog.category.heading"
-msgstr "所有项"
+msgid "grid.action.availableArticleGalley"
+msgstr "启用此校样"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} 项"
+msgid "submission.galleyFiles"
+msgstr "校样文件"
 
-msgid "submission.sectionOptions"
-msgstr "栏目选项"
+msgid "submission.proofReadingDescription"
+msgstr ""
+"美工编辑上传了准备发布时用的校样文件。请通过<em>分配任务</em>提醒作者和其他人"
+"对校样进行最后审核校对，如有修改，清在发布之前上传更正的文件。"
 
-msgid "section.any"
-msgstr "任意栏目"
+msgid "grid.action.approveProof"
+msgstr "批准此用于校样的文件。"
 
-msgid "submission.metadataDescription"
-msgstr "这些规范基于都柏林核心元数据集（一种用于描述期刊内容的国际标准）。"
+msgid "grid.action.pageProofApproved"
+msgstr "此校样文件已批准。"
 
-msgid "submission.citationFormat.notFound"
-msgstr "请求的引用格式无法进行检索。"
+msgid "submission.submit.titleAndSummary"
+msgstr "标题和摘要"
 
-msgid "submission.submit.contributorRole"
-msgstr "合作者"
+msgid "submission.submit.upload.description"
+msgstr "上传跟稿件相关的文件，包括文章原文、多媒体、数据集、艺术插图等等。"
 
-msgid "submission.submit.privacyStatement"
-msgstr "隐私声明"
+msgid "submission.pageProofs"
+msgstr "校对"
+
+msgid "workflow.review.externalReview"
+msgstr "审核"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "稿件的期刊元数据已更新。"
+
+msgid "submission.upload.fileContents"
+msgstr "文章组成"
+
+msgid "submission.complete"
+msgstr "已批准"
+
+msgid "submission.incomplete"
+msgstr "等待批复中"
 
 #, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "稿件清单"
 
-msgid "submission.incomplete"
-msgstr "等待批复中"
+msgid "submission.submit.privacyStatement"
+msgstr "隐私声明"
 
-msgid "submission.complete"
-msgstr "已批准"
+msgid "submission.submit.contributorRole"
+msgstr "合作者"
 
-msgid "submission.upload.fileContents"
-msgstr "文章组成"
+msgid "submission.citationFormat.notFound"
+msgstr "请求的引用格式无法进行检索。"
 
-msgid "submission.event.issueMetadataUpdated"
-msgstr "稿件的期刊元数据已更新。"
+msgid "submission.metadataDescription"
+msgstr "这些规范基于都柏林核心元数据集（一种用于描述期刊内容的国际标准）。"
 
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "送审"
+msgid "section.any"
+msgstr "任意栏目"
 
-msgid "workflow.review.externalReview"
-msgstr "审核"
+msgid "submission.sectionOptions"
+msgstr "栏目选项"
 
-msgid "submission.pageProofs"
-msgstr "校对"
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} 项"
 
-msgid "submission.submit.upload.description"
-msgstr "上传跟稿件相关的文件，包括文章原文、多媒体、数据集、艺术插图等等。"
+msgid "catalog.category.heading"
+msgstr "所有项"
 
-msgid "submission.submit.titleAndSummary"
-msgstr "标题和摘要"
+msgid "galley.editPublishedDisabled"
+msgstr "此出版物已出版，所以校样已不能编辑。"
 
-msgid "grid.action.pageProofApproved"
-msgstr "此校样文件已批准。"
+msgid "galley.publicationNotFound"
+msgstr "未发现此校样的正式出版物。"
 
-msgid "grid.action.approveProof"
-msgstr "批准此用于校样的文件。"
+msgid "publication.assignToissue"
+msgstr "分配期次"
 
-msgid "submission.proofReadingDescription"
+msgid "publication.assignedToIssue"
 msgstr ""
-"美工编辑上传了准备发布时用的校样文件。请通过<em>分配任务</em>提醒作者和其他人对校样进行最后审核校对，如有修改，清在发布之前上传更正的文件。"
-
-msgid "submission.galleyFiles"
-msgstr "校样文件"
-
-msgid "grid.action.availableArticleGalley"
-msgstr "启用此校样"
-
-msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>此校样读者 <em>可用</em>。</p>"
-
-msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>此校样对读者 <em>不可用</em>。</p>"
-
-msgid "grid.issueEntry.availableGalley.title"
-msgstr "格式合格"
-
-msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "稿件文章 \"{$galleyFormatName}\" 校样未生成。"
-
-msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "稿件文章 \"{$galleyFormatName}\" 校样生成。"
-
-msgid "grid.action.galleyInIssueEntry"
-msgstr "当期文章校样"
-
-msgid "submission.copyrightHolder.description"
-msgstr "版权将在期刊出版后自动设定为{$copyright}。"
-
-msgid "submission.license.description"
-msgstr ""
-"许可证在文章发表后将被自动设置为 <a href='{$licenseUrl}' target='_blank'>{$licenseName}</a>。"
-
-msgid "publication.required.reviewStage"
-msgstr "稿件必须处于文本编辑或出版阶段才能出版。"
-
-msgid "publication.required.declined"
-msgstr "被退稿的稿件无法出版。"
-
-msgid "publication.publish.requirements"
-msgstr "在出版之前，必须满足以下标准。"
-
-msgid "publication.publish"
-msgstr "出版"
-
-msgid "publication.invalidSubmission"
-msgstr "找不到此出版物的稿件。"
-
-msgid "publication.event.versionUnpublished"
-msgstr "版本已从出版物中删除。"
-
-msgid "publication.event.versionScheduled"
-msgstr "新的版本已计划出版。"
-
-msgid "publication.event.versionPublished"
-msgstr "新的版本已出版。"
-
-msgid "publication.event.unpublished"
-msgstr "稿件尚未出版。"
-
-msgid "publication.event.scheduled"
-msgstr "稿件已安排出版。"
-
-msgid "publication.event.published"
-msgstr "该稿件已发布。"
-
-msgid "publication.editDisabled"
-msgstr "此版本已发布，无法编辑。"
-
-msgid "publication.datePublished"
-msgstr "发布日期"
-
-msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr "版权年份将根据发布日期自动设置。"
-
-msgid "publication.copyrightYearBasis.issueDescription"
-msgstr "在某个期次发布后，它的版权年份将自动设置。"
-
-msgid "submission.publications"
-msgstr "出版物"
-
-msgid "publication.status.unscheduled"
-msgstr "未计划"
-
-msgid "submission.status.scheduled"
-msgstr "已计划"
-
-msgid "publication.status.published"
-msgstr "已出版"
-
-msgid "submission.publication"
-msgstr "出版物"
-
-msgid "publication.inactiveSection"
-msgstr "{$section}（不活跃）"
-
-msgid "submission.queries.production"
-msgstr "出版讨论"
-
-msgid "publication.version.details"
-msgstr "出版物版本{$version}"
-
-msgid "publication.unschedule.confirm"
-msgstr "您确定不希望此计划出版吗？"
-
-msgid "publication.unpublish.confirm"
-msgstr "您确定不希望出版此内容吗？"
-
-msgid "publication.unpublish"
-msgstr "取消出版"
-
-msgid "submission.copyrightOther.description"
-msgstr "已将发表文章的版权分配给以下各方。"
+"此文章已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
 
 msgid "publication.changeIssue"
 msgstr "更换期次"
 
-msgid "publication.assignedToIssue"
-msgstr "此文章已分配给<a href=\"{$issueUrl}\">{$issueName}</a>，但是尚未安排发布。"
+msgid "publication.datePublished.description"
+msgstr ""
+"出版日期会在期刊发行时自动设定。除非文章以前发表过或者在做回溯数据，否则不要"
+"人为设定。"
+
+msgid "publication.invalidSection"
+msgstr "未发现出版物的栏目。"
+
+msgid "publication.inactiveSection"
+msgstr "{$section}（不活跃）"
+
+msgid "publication.invalidIssue"
+msgstr "未发现出版物的期次。"
+
+msgid "publication.publish.confirmation"
+msgstr "已符合所有发布标准。您要发布吗？"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr "已符合所有发布标准。这将在{$ issue}发布。您确定要发布吗？"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr "已符合所有发布标准。将发布在{$ issue}。您确定要发布吗？"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"已符合所有发布标准。本文将发布在{$ datePublished}的期刊。您确定要发布吗？"
+
+msgid "publication.required.issue"
+msgstr "在发布之前，必须先将该文章分配一个期次。"
+
+msgid "publication.publishedIn"
+msgstr "发布在 <a href=\"{$issueUrl}\">{$issueName}</a>。"
+
+msgid "publication.scheduledIn"
+msgstr "安排于 <a href=\"{$issueUrl}\">{$issueName}</a> 。"
+
+msgid "publication.unscheduledIn"
+msgstr "尚未计划将其发布在某一期中。"
+
+msgid "publication.selectIssue"
+msgstr "选择一个期次安排出版"
+
+msgid "submission.publication"
+msgstr "出版物"
+
+msgid "publication.status.published"
+msgstr "已出版"
+
+msgid "submission.status.scheduled"
+msgstr "已计划"
+
+msgid "publication.status.unscheduled"
+msgstr "未计划"
+
+msgid "submission.publications"
+msgstr "出版物"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "在某个期次发布后，它的版权年份将自动设置。"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "版权年份将根据发布日期自动设置。"
+
+msgid "publication.datePublished"
+msgstr "发布日期"
+
+msgid "publication.editDisabled"
+msgstr "此版本已发布，无法编辑。"
+
+msgid "publication.event.published"
+msgstr "该稿件已发布。"
+
+msgid "publication.event.scheduled"
+msgstr "稿件已安排出版。"
+
+msgid "publication.event.unpublished"
+msgstr "稿件尚未出版。"
+
+msgid "publication.event.versionPublished"
+msgstr "新的版本已出版。"
+
+msgid "publication.event.versionScheduled"
+msgstr "新的版本已计划出版。"
+
+msgid "publication.event.versionUnpublished"
+msgstr "版本已从出版物中删除。"
+
+msgid "publication.invalidSubmission"
+msgstr "找不到此出版物的稿件。"
+
+msgid "publication.publish"
+msgstr "出版"
+
+msgid "publication.publish.requirements"
+msgstr "在出版之前，必须满足以下标准。"
+
+msgid "publication.required.declined"
+msgstr "被退稿的稿件无法出版。"
+
+msgid "publication.required.reviewStage"
+msgstr "稿件必须处于文本编辑或出版阶段才能出版。"
+
+msgid "submission.license.description"
+msgstr ""
+"许可证在文章发表后将被自动设置为 <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>。"
+
+msgid "submission.copyrightHolder.description"
+msgstr "版权将在期刊出版后自动设定为{$copyright}。"
+
+msgid "submission.copyrightOther.description"
+msgstr "已将发表文章的版权分配给以下各方。"
+
+msgid "publication.unpublish"
+msgstr "取消出版"
+
+msgid "publication.unpublish.confirm"
+msgstr "您确定不希望出版此内容吗？"
+
+msgid "publication.unschedule.confirm"
+msgstr "您确定不希望此计划出版吗？"
+
+msgid "publication.version.details"
+msgstr "出版物版本{$version}"
+
+msgid "submission.queries.production"
+msgstr "出版讨论"
+
+msgid "editor.submission.decision.backToReview"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "至少要有一位作者。"
@@ -300,3 +359,9 @@ msgstr "您的摘要太长了。请按照要求作必要删减。"
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "选择合作者的角色。"
+
+#~ msgid "publication.issue.success"
+#~ msgstr "出版物的期次细节已更新。"
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "送审"

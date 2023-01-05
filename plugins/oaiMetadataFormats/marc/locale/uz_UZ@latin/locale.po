@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marc.description"
-msgstr "Metadata tuzilmalari MARC formatiga mos keladi."
-
 msgid "plugins.OAIMetadata.marc.displayName"
 msgstr "MARC metadata formati"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "Metadata tuzilmalari MARC formatiga mos keladi."

@@ -62,19 +62,19 @@ msgstr "Farge"
 msgid "plugins.themes.default.option.colour.description"
 msgstr "Velg bakgrunnsfargen til nettstedets sidehode."
 
-msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr "Vis startsidebildet som bakgrunnsbilde i sidehodet."
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Vis tidsskriftssammendraget på hovedsiden."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Sidehodets bakgrunnsbilde"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
 "Når et forsidebilde har blitt lastet opp, skal det vises i bakgrunnen på "
 "sidehodet i stedet for den vanlige plasseringen på hovedsiden."
 
-msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
-msgstr "Sidehodets bakgrunnsbilde"
-
-msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr "Vis tidsskriftssammendraget på hovedsiden."
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Vis startsidebildet som bakgrunnsbilde i sidehodet."
 
 msgid "plugins.themes.default.option.displayStats.label"
 msgstr "Visningsvalg for bruksstatistikk"

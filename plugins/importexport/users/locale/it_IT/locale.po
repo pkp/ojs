@@ -27,7 +27,6 @@ msgstr ""
 "\timport [xmlFileName] [journal_path]\n"
 "\texport [xmlFileName] [journal_path]\n"
 "\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
-""
 
 msgid "plugins.importexport.users.cliUsage.examples"
 msgstr ""
@@ -39,31 +38,29 @@ msgstr ""
 "\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
 "\tEsporta gli utenti specificando il loro ID:\n"
 "\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
-""
 
 msgid "plugins.importexport.users.import.importUsers"
 msgstr "Importa Utenti"
 
 msgid "plugins.importexport.users.import.instructions"
-msgstr "Seleziona un file di dati XML contenente informazioni sull'utente da importare in questo press. Vedi l'help del press per dettagli sul formato di questo file.<br /><br />Nota che se il importato file contiene ogni username o indirizzo email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e ogni nuovo ruolo da creare sar&#x00E0; assegnato agli utenti esisenti."
-
-msgid "plugins.importexport.users.import.failedToImportUser"
-msgstr "Importazione utente fallita"
-
-msgid "plugins.importexport.users.import.failedToImportRole"
-msgstr "Assegnazionee ruolo all'utene fallita"
+msgstr ""
+"Seleziona un file di dati XML contenente informazioni sull'utente da "
+"importare in questo press. Vedi l'help del press per dettagli sul formato di "
+"questo file.<br /><br />Nota che se il importato file contiene ogni username "
+"o indirizzo email gi&#x00E0; esistente nel sistema, i dati per quegli utenti "
+"non saranno importati e ogni nuovo ruolo da creare sar&#x00E0; assegnato "
+"agli utenti esisenti."
 
 msgid "plugins.importexport.users.import.dataFile"
 msgstr "File di Dati utente"
 
 msgid "plugins.importexport.users.import.sendNotify"
-msgstr "invia un email di notifica ad ogni utente importato contenente la username e password."
+msgstr ""
+"invia un email di notifica ad ogni utente importato contenente la username e "
+"password."
 
 msgid "plugins.importexport.users.import.continueOnError"
 msgstr "Continua a importare altri utenti se si presenta un erore."
-
-msgid "plugins.importexport.users.import.noFileError"
-msgstr "Nessun file uploaded!"
 
 msgid "plugins.importexport.users.import.usersWereImported"
 msgstr "I seguenti utenti sono stati importati nel sistema con successo"
@@ -73,6 +70,15 @@ msgstr "Si sono presentati errori durante l'importazione"
 
 msgid "plugins.importexport.users.import.confirmUsers"
 msgstr "Conferma che questi sono gli utenti che vuoi importare nel sistema"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Attenzione"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Non si possono usare password criptate con {$importHash}; OMP è configurato "
+"per usare {$ompHash}. Se continui, dovrai resettare le password degli utenti "
+"importati."
 
 msgid "plugins.importexport.users.unknownPress"
 msgstr "È stata specificata una path del press sconosciuta \"{$pressPath}\"."
@@ -89,17 +95,22 @@ msgstr "Esporta tutti"
 msgid "plugins.importexport.users.export.errorsOccurred"
 msgstr "Si sono presentati errori durante l'esportazione"
 
-msgid "plugins.importexport.users.import.warning"
-msgstr "Attenzione"
-
-msgid "plugins.importexport.users.import.encryptionMismatch"
-msgstr "Non si possono usare password criptate con {$importHash}; OMP è configurato per usare {$ompHash}. Se continui, dovrai resettare le password degli utenti importati."
-
 msgid "plugins.importexport.users.importComplete"
-msgstr "L'import è finito con successo. Gli utenti con usernames and email che non sono ancora in uso sono stati importati, insieme ai gruppi di utenti."
+msgstr ""
+"L'import è finito con successo. Gli utenti con usernames and email che non "
+"sono ancora in uso sono stati importati, insieme ai gruppi di utenti."
 
 msgid "plugins.importexport.users.results"
 msgstr "Risultati"
 
 msgid "plugins.importexport.users.uploadFile"
 msgstr "Carica un file nell'area  \"Importa\" per continuare."
+
+#~ msgid "plugins.importexport.users.import.failedToImportUser"
+#~ msgstr "Importazione utente fallita"
+
+#~ msgid "plugins.importexport.users.import.failedToImportRole"
+#~ msgstr "Assegnazionee ruolo all'utene fallita"
+
+#~ msgid "plugins.importexport.users.import.noFileError"
+#~ msgstr "Nessun file uploaded!"

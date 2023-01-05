@@ -33,6 +33,9 @@ msgstr "導出文章"
 msgid "plugins.importexport.pubmed.export.selectArticle"
 msgstr "選擇文章導出。"
 
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+
 msgid "plugins.importexport.pubmed.cliError"
 msgstr "錯誤："
 

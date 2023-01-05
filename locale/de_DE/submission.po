@@ -26,7 +26,13 @@ msgid "submission.title"
 msgstr "Artikeltitel"
 
 msgid "submission.title.tip"
-msgstr "Der Einreichungstyp ist normalerweise 'image', 'text' oder Multimediatypen inklusive 'software' oder 'interactive'.  Bitte wählen Sie den für Ihre Einreichung passendsten Typ aus. Beispiele finden Sie unter <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+msgstr ""
+"Der Einreichungstyp ist normalerweise 'image', 'text' oder Multimediatypen "
+"inklusive 'software' oder 'interactive'.  Bitte wählen Sie den für Ihre "
+"Einreichung passendsten Typ aus. Beispiele finden Sie unter <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Eine neue Einreichung beginnen in"
@@ -40,11 +46,17 @@ msgstr "Einreichungsworkflow"
 msgid "submission.abstract.wordCount.description"
 msgstr "Das Abstract darf höchstens {$wordCount} Wörter enthalten."
 
+msgid "submission.submit.noContext"
+msgstr "Die Zeitschrift für diese Einreichung konnte nicht gefunden werden."
+
 msgid "submission.issueEntry"
 msgstr "Metadaten"
 
 msgid "submission.submit.whatNext.description"
-msgstr "Die Zeitschrift wurde über Ihre Einreichung informiert, und Sie haben eine Bestätigung per E-Mail erhalten. Sobald die/der Redakteur/in die Einreichung begutachtet hat, werden Sie benachrichtigt."
+msgstr ""
+"Die Zeitschrift wurde über Ihre Einreichung informiert, und Sie haben eine "
+"Bestätigung per E-Mail erhalten. Sobald die/der Redakteur/in die Einreichung "
+"begutachtet hat, werden Sie benachrichtigt."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Fahne in der Ausgabe angezeigt"
@@ -56,7 +68,8 @@ msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Die Artikelfahne \"{$galleyFormatName}\" wird verfügbar gemacht."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Die Artikelfahne \"{$galleyFormatName}\" wird nicht mehr verfügbar sein."
+msgstr ""
+"Die Artikelfahne \"{$galleyFormatName}\" wird nicht mehr verfügbar sein."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Die Identifier des Beitrags wurden aktualisiert."
@@ -94,16 +107,15 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Titel und Abstract"
 
 msgid "submission.submit.upload.description"
-msgstr "Dateien, die zu dieser Einreichung gehören, hochladen: Artikel, Multimediadateien, Datensätze, Illustrationen etc."
+msgstr ""
+"Dateien, die zu dieser Einreichung gehören, hochladen: Artikel, "
+"Multimediadateien, Datensätze, Illustrationen etc."
 
 msgid "submission.pageProofs"
 msgstr "Korrekturlesen"
 
 msgid "workflow.review.externalReview"
 msgstr "Gutachten"
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "In Begutachtung schicken"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Die Metadaten der Ausgabe dieser Einreichung wurden aktualisiert."
@@ -131,50 +143,40 @@ msgid "submission.citationFormat.notFound"
 msgstr "Das angeforderte Zitationsformat konnte nicht abgerufen werden."
 
 msgid "submission.metadataDescription"
-msgstr "Diese Spezifikationen basieren auf dem Dublin-Core-Metadaten-Schema, einem internationalen Standard zur Beschreibung von Zeitschrifteninhalten."
+msgstr ""
+"Diese Spezifikationen basieren auf dem Dublin-Core-Metadaten-Schema, einem "
+"internationalen Standard zur Beschreibung von Zeitschrifteninhalten."
 
 msgid "section.any"
 msgstr "Alle Rubriken"
+
+msgid "submission.sectionOptions"
+msgstr "Rubrikenoptionen"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Elemente"
+
+msgid "catalog.category.heading"
+msgstr "Alle Elemente"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
 "Die Fahnen dieser Publikation können nicht bearbeitet werden, weil sie "
 "bereits veröffentlicht wurde."
 
-msgid "publication.scheduledIn"
+msgid "galley.publicationNotFound"
+msgstr "Die Veröffentlichung zu dieser Fahne konnte nicht gefunden werden."
+
+msgid "publication.assignToissue"
+msgstr "Einer Ausgabe zuordnen"
+
+msgid "publication.assignedToIssue"
 msgstr ""
-"Vorgesehen zur  Veröffentlichung in <a href=\"{$issueUrl}\">{$issueName}</a>."
+"Dieser Artikel wurde  <a href=\"{$issueUrl}\">{$issueName}</a> zugeordnet, "
+"aber noch nicht zur Veröffentlichung vorgesehen."
 
-msgid "publication.publishedIn"
-msgstr "Veröffentlicht in <a href=\"{$issueUrl}\">{$issueName}</a>."
-
-msgid "publication.required.issue"
-msgstr ""
-"Der Beitrag muss einer Ausgabe zugeordnet werden, bevor er veröffentlicht "
-"werden kann."
-
-msgid "publication.publish.confirmation.backIssue"
-msgstr ""
-"Alle Bedingungen für die Veröffentlichung sind erfüllt. Dies wird sofort in "
-"{$issue} veröffentlicht. Sind Sie sicher, dass Sie dies veröffentlichen "
-"wollen?"
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"Alle Bedingungen für die Veröffentlichung sind erfüllt. Dies wird "
-"veröffentlicht, wenn {$issue} veröffentlicht wird. Sind Sie sicher, dass Sie "
-"dies zur Veröffentlichung einplanen wollen?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"Alle Bedingungen für die Veröffentichung sind erfüllt. Sind Sie sicher, dass "
-"Sie dies veröffentlichen wollen?"
-
-msgid "publication.invalidIssue"
-msgstr "Die Ausgabe für diese Veröffentlichung konnte nicht gefunden werden."
-
-msgid "publication.invalidSection"
-msgstr "Die Rubrik für diese Veröffentlichung konnte nicht gefunden werden."
+msgid "publication.changeIssue"
+msgstr "Ausgabe ändern"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -182,37 +184,57 @@ msgstr ""
 "veröffentlicht wird. Geben Sie kein Veröffentlichungsdatum ein, außer der "
 "Artikel wurde zuvor woanders publiziert und Sie wollen ihn rückdatieren."
 
-msgid "galley.publicationNotFound"
-msgstr "Die Veröffentlichung zu dieser Fahne konnte nicht gefunden werden."
+msgid "publication.invalidSection"
+msgstr "Die Rubrik für diese Veröffentlichung konnte nicht gefunden werden."
 
-msgid "catalog.category.heading"
-msgstr "Alle Elemente"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inaktiv)"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} Elemente"
+msgid "publication.invalidIssue"
+msgstr "Die Ausgabe für diese Veröffentlichung konnte nicht gefunden werden."
 
-msgid "submission.sectionOptions"
-msgstr "Rubrikenoptionen"
-
-msgid "submission.submit.noContext"
-msgstr "Die Zeitschrift für diese Einreichung konnte nicht gefunden werden."
-
-msgid "publication.selectIssue"
-msgstr "Wählen Sie eine Ausgabe zur Planung der Veröffentlichung"
-
-msgid "publication.assignToissue"
-msgstr "Einer Ausgabe zuordnen"
-
-msgid "publication.unscheduledIn"
+msgid "publication.publish.confirmation"
 msgstr ""
-"Dieser Artikel wurde nicht für die Veröffentlichung in einer Ausgabe "
-"vorgesehen."
+"Alle Bedingungen für die Veröffentichung sind erfüllt. Sind Sie sicher, dass "
+"Sie dies veröffentlichen wollen?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Alle Bedingungen für die Veröffentlichung sind erfüllt. Dies wird "
+"veröffentlicht, wenn {$issue} veröffentlicht wird. Sind Sie sicher, dass Sie "
+"dies zur Veröffentlichung einplanen wollen?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Alle Bedingungen für die Veröffentlichung sind erfüllt. Dies wird sofort in "
+"{$issue} veröffentlicht. Sind Sie sicher, dass Sie dies veröffentlichen "
+"wollen?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "Alle Vorraussetzungen für die Veröffentlichung wurden erfüllt. Dies wird "
 "sofort veröffentlicht, da das Veröffentlichungsdatum auf {$datePublished} "
 "gesetzt wurde. Sind Sie sicher, dass Sie dies veröffentlichen möchten?"
+
+msgid "publication.required.issue"
+msgstr ""
+"Der Beitrag muss einer Ausgabe zugeordnet werden, bevor er veröffentlicht "
+"werden kann."
+
+msgid "publication.publishedIn"
+msgstr "Veröffentlicht in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Vorgesehen zur  Veröffentlichung in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr ""
+"Dieser Artikel wurde nicht für die Veröffentlichung in einer Ausgabe "
+"vorgesehen."
+
+msgid "publication.selectIssue"
+msgstr "Wählen Sie eine Ausgabe zur Planung der Veröffentlichung"
 
 msgid "submission.publication"
 msgstr "Veröffentlichung"
@@ -285,8 +307,8 @@ msgstr ""
 
 msgid "submission.license.description"
 msgstr ""
-"Die Lizenz wird bei Veröffentlichung  automatisch auf <a href='{$licenseUrl}"
-"' target='_blank'>{$licenseName}</a> gesetzt."
+"Die Lizenz wird bei Veröffentlichung  automatisch auf <a "
+"href='{$licenseUrl}' target='_blank'>{$licenseName}</a> gesetzt."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
@@ -312,19 +334,62 @@ msgstr "Veröffentlichungsdetails für Version {$version}"
 msgid "submission.queries.production"
 msgstr "Diskussion zur Produktion"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inaktiv)"
-
-msgid "publication.changeIssue"
-msgstr "Ausgabe ändern"
-
-msgid "publication.assignedToIssue"
-msgstr ""
-"Dieser Artikel wurde  <a href=\"{$issueUrl}\">{$issueName}</a> zugeordnet, "
-"aber noch nicht zur Veröffentlichung vorgesehen."
-
 msgid "editor.submission.decision.backToReview"
 msgstr "Zurück zur Begutachtung"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Mindestens ein/e Autor/in muss angegeben werden."
@@ -336,7 +401,12 @@ msgid "submission.submit.form.abstractRequired"
 msgstr "Bitte geben Sie das Abstract Ihres Artikels an."
 
 msgid "submission.submit.form.wordCountAlert"
-msgstr "Ihr Abstract ist zu lang. Bitte kürzen Sie es auf eine Länge, die unter der Höchstgrenze für diese Rubrik liegt."
+msgstr ""
+"Ihr Abstract ist zu lang. Bitte kürzen Sie es auf eine Länge, die unter der "
+"Höchstgrenze für diese Rubrik liegt."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Bitte wählen Sie die Rolle der Beiträgerin/des Beiträgers aus."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "In Begutachtung schicken"

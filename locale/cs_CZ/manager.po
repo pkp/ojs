@@ -15,6 +15,59 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13.1\n"
 
+msgid "manager.distribution.access"
+msgstr "Přístup"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Zvolte, jak má být vybráno výchozí datum autorských práv článku. Tato "
+"výchozí hodnota může být v některých případech přepsána. Pokud „publikujete "
+"za běhu“, nepoužívejte datum vydání čísla."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Použijte datum vydání čísla"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Použijte datum zveřejnění článku"
+
+msgid "manager.distribution.publication"
+msgstr "Zveřejnění"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Režim vydávání"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS nebude používán pro online publikování obsahu časopisu."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Časopis bude poskytovat otevřený přístup ke svému obsahu."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Časopis bude vyžadovat pro přístup k některým částem nebo k celému obsahu "
+"předplatné."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Povolit přidělování identifikátorů digitálních objektů (DOI) pracím "
+"publikovaným v tomto časopise."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Vyberte, kterým položkám bude přiřazen DOI. Většina časopisů přiděluje DOI "
+"článkům, ale můžete si přát přidělit DOI všem publikovaným položkám."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Použití výchozích vzorů. <br />%j.v%vi%i pro čísla<br />%j.v%vi%i.%a pro "
+"články<br />%j.v%vi%i.%a.g%g pro sazebnice."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Po dosažení copyeditovací fáze"
+
+msgid "manager.website.archiving"
+msgstr "Archivace"
+
 msgid "manager.files.note"
 msgstr ""
 "Poznámka: Prohlížeč souborů je pokročilý nástroj, který umožňuje zobrazení a "
@@ -22,6 +75,15 @@ msgstr ""
 
 msgid "manager.journalManagement"
 msgstr "Správa časopisu"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Příspěvky"
+
+msgid "manager.language.forms"
+msgstr "Formuláře"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
@@ -115,6 +177,9 @@ msgstr ""
 "Toto aktivuje platby předplatného; typy, ceny, trvání a předplatitelé jsou "
 "spravováni manažerem předplatného."
 
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Jste si jisti, že chcete smazat toto předplatné?"
+
 msgid "manager.payment.options.enablePayments"
 msgstr ""
 "Klikněte zde pro povolení modulu plateb. Musíte nakonfigurovat nastavení "
@@ -141,6 +206,9 @@ msgstr "Pulikování článku"
 
 msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Koupit článek"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Zakoupit přístup k číslu"
 
 msgid "manager.payment.options.text"
 msgstr "Popis metody platby"
@@ -174,6 +242,9 @@ msgstr ""
 msgid "manager.payment.records"
 msgstr "Záznamy"
 
+msgid "manager.paymentTypes"
+msgstr "Typy platby"
+
 msgid "manager.payment.userName"
 msgstr "ID platby"
 
@@ -185,6 +256,9 @@ msgstr "Všechny časopisy"
 
 msgid "manager.people.allSiteUsers"
 msgstr "Zapsat uživatele z těchto stránek do tohoto časopisu"
+
+msgid "manager.people.showNoRole"
+msgstr "Zobrazit uživatele bez žádné role"
 
 msgid "manager.people.allUsers"
 msgstr "Všichni zapsaní uživatelé"
@@ -231,6 +305,14 @@ msgstr "Nepožadovat abstrakty"
 msgid "manager.sections.assigned"
 msgstr "Editoři této sekce"
 
+msgid "manager.sections.confirmDelete"
+msgstr "Jste si jisti, že chcete natrvalo vymazat tuto sekci?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Než budete moci smazat tuto sekci, musíte přesunout všechny články z této "
+"sekce do jiných sekcí."
+
 msgid "manager.sections.create"
 msgstr "Vytvořit sekci"
 
@@ -248,6 +330,11 @@ msgstr "Položky mohou být zaslány pouze editory a editory sekcí."
 
 msgid "manager.sections.editors"
 msgstr "Editoři sekce"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Je třeba, aby byla aktivní alespoň jedna sekce. Chcete-li zakázat všechny "
+"příspěvky do tohoto časopisu, přejděte do nastavení workflow."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Je vyžadován zkrácený název pro tuto sekci"
@@ -307,8 +394,38 @@ msgstr "Příspěvky zaslané do této sekce časopisu"
 msgid "manager.sections.unassigned"
 msgstr "Dostupní editoři sekce"
 
+msgid "manager.sections.wordCount"
+msgstr "Počet slov"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Omezit počet slov abstraktu pro tuto sekci na (0 pro žádný limit)"
+
 msgid "manager.setup"
 msgstr "Nastavení"
+
+msgid "manager.setup.masthead"
+msgstr "Hlavní titulek"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Tým redaktorů"
+
+msgid "manager.setup.homepageContent"
+msgstr "Obsah domovské stránky časopisu"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Domovská stránka časopisu ve výchozím nastavení obsahuje navigační odkazy. "
+"Další obsah domovské stránky lze přidat pomocí jedné nebo více následujících "
+"možností, které se zobrazí v uvedeném pořadí."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Style sheet časopisu"
+
+msgid "manager.setup.contextName"
+msgstr "Jméno časopisu"
+
+msgid "manager.setup.pageHeader"
+msgstr "Hlavička stránky časopisu"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "Obsah"
@@ -345,10 +462,8 @@ msgstr ""
 msgid "manager.setup.announcements"
 msgstr "Oznámení"
 
-msgid "manager.setup.enableAnnouncements.description"
-msgstr ""
-"Mohou být publikována oznámení informující čtenáře o událostech a novinkách "
-"spojených s časopisem. Vydaná oznámení se zobrazí na stránce Oznámení."
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Úvod"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
@@ -368,30 +483,20 @@ msgstr ""
 "Požadovat od recenzentů, aby s každým svým posudkem zasílali soubor s "
 "prohlášením o střetu zájmů."
 
-msgid "manager.setup.copyrightNotice"
-msgstr "Oznámení o copyrightu"
+msgid "manager.setup.history"
+msgstr "Historie časopisu"
 
-msgid "manager.setup.metadata.coverage"
-msgstr "Pokrytí"
-
-msgid "manager.setup.metadata.coverage.description"
+msgid "manager.setup.historyDescription"
 msgstr ""
-"Odkazuje na zeměpisnou lokalitu, chronologické nebo historické pokrytí, a/"
-"nebo charakteristiky výzkumného souboru."
+"Tento text se zobrazí v části \"O časopisu\" webových stránek časopisu a "
+"může být použit pro popis změn v názvu, redakční radě a dalších položkách "
+"souvisejících s historií časopisu."
 
 msgid "manager.setup.currentIssue"
 msgstr "Aktuální číslo"
 
 msgid "manager.setup.customizingTheLook"
 msgstr "Krok 5. Úprava vzhledu"
-
-msgid "manager.setup.customTags"
-msgstr "Uživatelské tagy (štítky)"
-
-msgid "manager.setup.customTagsDescription"
-msgstr ""
-"Uživatelské HTML tagy pro záhlaví, které mají být vloženy do záhlaví každé "
-"stránky (například META tagy)."
 
 msgid "manager.setup.details"
 msgstr "Detaily"
@@ -453,11 +558,29 @@ msgstr ""
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Umožnit manažerům časopisu přidávat oznámení časopisu"
 
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Mohou být publikována oznámení informující čtenáře o událostech a novinkách "
+"spojených s časopisem. Vydaná oznámení se zobrazí na stránce Oznámení."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Zobrazit na úvodní stránce"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Kolik oznámení se zobrazí na úvodní stránce. Pokud nechcete žádné, nechte "
+"pole prázdné."
+
 msgid "manager.setup.enableUserRegistration"
 msgstr "Uřivatelé si mohou do časopisu zaregistrovat uživatelský účet."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Zaměření a záběr"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Popište autorům, čtenářům a knihovníkům zaměření článků a dalších položek, "
+"které časopis publikuje."
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Autorům pro indexaci jejich práce"
@@ -473,6 +596,9 @@ msgstr ""
 "relevantní příklady, které jim pomohou při indexaci jejich prací. Jednotlivé "
 "termíny je nutné oddělovat středníkem (např.: termín1; termín2). Položky by "
 "měly být uvozeny příklady s použitím „např.“ nebo „například“."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Zadané ISSN není platné."
 
 msgid "manager.setup.form.contactEmailRequired"
 msgstr "Je vyžadován e-mail hlavního kontaktu."
@@ -506,6 +632,14 @@ msgstr "Instrukce"
 
 msgid "manager.setup.guidingSubmissions"
 msgstr "Krok 3. Instrukce pro příspěvky"
+
+msgid "manager.setup.identity"
+msgstr "Identita časopisu"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Pro časopisy, které nabízejí okamžitý nebo zpožděný otevřený přístup, uveďte "
+"ve vhodnou dobu licenci Creative Commons ke všem publikovaným pracím."
 
 msgid "manager.setup.information"
 msgstr "Informace"
@@ -543,11 +677,32 @@ msgstr ""
 msgid "manager.setup.itemsPerPage"
 msgstr "Položek na stránku"
 
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Před zobrazením dalších položek na jiné stránce omezte počet položek "
+"(například příspěvky, uživatelé nebo práva), které se mají zobrazit v "
+"seznamu."
+
 msgid "manager.setup.journalAbbreviation"
 msgstr "Zkratka časopisu"
 
 msgid "manager.setup.journalArchiving"
 msgstr "Archivace časopisu"
+
+msgid "manager.setup.contextSummary"
+msgstr "Souhrn informací o časopise"
+
+msgid "manager.setup.contextAbout"
+msgstr "O časopise"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Zahrňte de veškeré informace o vašem časopise, které mohou být zajímavé pro "
+"čtenáře, autory nebo recenzenty. Tyto informace by měly zahrnovat vaše "
+"zásady otevřeného přístupu, zaměření a rozsah časopisu, oznámení o "
+"autorských právech, povolení sponzoringu, historii časopisu, prohlášení o "
+"ochraně osobních údajů a zařazení do libovolného archivního systému LOCKSS "
+"nebo CLOCKSS."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Obsah domácí stránky časopisu"
@@ -573,6 +728,11 @@ msgstr ""
 
 msgid "manager.setup.contextInitials"
 msgstr "Iniciály časopisu"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Vyberte zemi, kde se tento časopis nachází, nebo zemi ve které má časopis či "
+"jeho vydavatel oficiální adresu."
 
 msgid "manager.setup.journalLayout"
 msgstr "Rozložení časopisu"
@@ -613,8 +773,24 @@ msgstr "Neplatný formát souboru stylu časopisu. Podporovaný formát je .css.
 msgid "manager.setup.journalTheme"
 msgstr "Téma vzhledu časopisu"
 
+msgid "manager.setup.journalThumbnail"
+msgstr "Náhled časopisu"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Malé logo či obrázek reprezentující časopis, který může být využit v seznamu "
+"časopisů."
+
 msgid "manager.setup.contextTitle"
 msgstr "Název časopisu"
+
+msgid "manager.setup.keyInfo"
+msgstr "Klíčová informace"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Uveďte krátký popis vašeho deníku a identifikujte editory, manažery a další "
+"členy vašeho redakčního týmu."
 
 msgid "manager.setup.labelName"
 msgstr "Název popisku"
@@ -622,11 +798,46 @@ msgstr "Název popisku"
 msgid "manager.setup.lists"
 msgstr "Seznamy"
 
+msgid "manager.setup.plnPluginEnable"
+msgstr "Plugin PKP PN byl povolen"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) poskytuje bezplatné archivační služby pro "
+"všechny časopisy OJS, které splňují několik základních kritérií."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Klikněte na odkaz <button>Nastavení</button> k přijetí podmínek používání "
+"PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Archivační síť (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) poskytuje bezplatné archivační služby pro "
+"všechny časopisy OJS, které splňují několik základních kritérií. Chcete-li "
+"archivovat svůj časopis v PN, požádejte správce o instalaci pluginu PKP|PN z "
+"Galerie pluginů."
+
+msgid "manager.setup.otherLockss"
+msgstr "Jiné archivační možnosti"
+
 msgid "manager.setup.lockssEnable"
 msgstr ""
 "Umožněte technologii LOCKSS ukládat a distribuovat obsah časopisu v "
 "zúčastněných knihovnách přes LOCKSS stránku <a href=\"{$lockssUrl}\" target="
 "\"_blank\">Seznam vydavatelů</a>."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Licence LOCKSS se objeví v O časopise pod Archivace: <a href=\"http://www."
+"lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Licence "
+"LOCKSS</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Popis licence LOCKSS"
 
 msgid "manager.setup.lockssRegister"
 msgstr ""
@@ -635,6 +846,31 @@ msgstr ""
 "rady a/nebo na instituce, které se již účastní LOCKSS. Viz <a href=\"https://"
 "www.lockss.org/join-lockss/partner-communities\" target=\"_blank\">komunita "
 "LOCKSS</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Povolte službě CLOCKSS ukládat a distribuovat obsah časopisu v zúčastněných "
+"knihovnách prostřednictvím stránky <a href=\"{$clockssUrl}\" target=\"_blank"
+"\">stránky Manifest vydavatele </a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Licence CLOCKSS se objeví v sekci O časopise v sekci Archivování: <a href="
+"\"https://clockss.org\" target=\"_blank\"> Licence CLOCKSS </a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Popis licence CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Přihlaste se k službě CLOCKSS na adrese <a href=\"https://clockss.org\" "
+"target=\"_blank\"> webu CLOCKSS </a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
 msgstr "Vzhled"
@@ -695,14 +931,13 @@ msgstr ""
 msgid "manager.setup.numPageLinks"
 msgstr "Odkazů na stránky"
 
-msgid "manager.setup.publishingMode"
-msgstr "Přístup k obsahu časopisu"
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Omezte počet odkazů, které se mají zobrazit na následujících stránkách v "
+"seznamu."
 
 msgid "manager.setup.onlineIssn"
 msgstr "Online ISSN"
-
-msgid "manager.distribution.publishingMode.openAccess"
-msgstr "Časopis bude poskytovat otevřený přístup ke svému obsahu."
 
 msgid "manager.setup.pageNumberIdentifier"
 msgstr "Možnost číslování stránek"
@@ -787,6 +1022,9 @@ msgstr ""
 "Editor bude hodnotit recenzenty na pětistupňové škále kvality po každé "
 "recenzi."
 
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Omezte přístup k souborům"
+
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
 "Recenzenti budou mít přístup k souboru s příspěvkem pouze poté, co "
@@ -802,6 +1040,9 @@ msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
 "Recenzentům lze v e-mailové pozvánce zaslat zabezpečený odkaz, který je po "
 "kliknutí na něj automaticky přihlásí."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Zahrnout zabezpečený odkaz do e-mailové pozvánky recenzentům."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Hodnocení recenzenta"
@@ -820,6 +1061,11 @@ msgstr ""
 "Pomozte vyhledávačům, jako je například Google, objevit a zobrazit vaše "
 "stránky. Doporučujeme vám odeslat soubor <a href=\"{$sitemapUrl}\" target="
 "\"_blank\">sitemap</a>."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Uveďte stručný popis (50–300 znaků) časopisu, který mohou vyhledávače "
+"zobrazit při zařazení časopisu do výsledků vyhledávání."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Sekce a editoři sekcí"
@@ -844,6 +1090,12 @@ msgstr "Sekci časopisu, pro kterou je příspěvek zamýšlen."
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Vždy zobrazovat odkazy sazebnice a indikovat omezený přístup."
 
+msgid "manager.setup.siteAccess.view"
+msgstr "Přístup na stránky"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Zobrazit obsah článku"
+
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Pět kroků k webové stránce časopisu"
 
@@ -865,10 +1117,24 @@ msgstr "Příspěvky"
 msgid "manager.setup.submissions.description"
 msgstr "Instrukce pro autory, copyright a indexace (včetně registrace)."
 
-msgid "manager.distribution.publishingMode.subscription"
+msgid "manager.setup.disableSubmissions.description"
 msgstr ""
-"Časopis bude vyžadovat pro přístup k některým částem nebo k celému obsahu "
-"předplatné."
+"Zamezte uživatelům zasílání nových článků do tohoto časopisu. Na stránce "
+"nastavení <a href=\"{$url}\">sekce časopisu</a> lze zakázat odesílání "
+"příspěvků do jednotlivých sekcí časopisu."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Tento časopis v tomto okamžiku nepřijímá příspěvky. Přejděte do nastavení "
+"workflow a povolte příspěvky."
+
+msgid "manager.setup.enableOai"
+msgstr "Povolit OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Poskytujte metadata indexovacím službám třetích stran prostřednictvím <a "
+"href=\"https://www.openarchives.org/\">iniciativy Open Archives</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr ""
@@ -893,6 +1159,9 @@ msgstr ""
 
 msgid "manager.setup.useEditorialReviewBoard"
 msgstr "Časopis bude využívat redakční/recenzní radu."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Náhled"
 
 msgid "manager.setup.useImageTitle"
 msgstr "Obrázek názvu"
@@ -956,9 +1225,6 @@ msgstr "Recenzovaných"
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "Registrovaní čtenáři"
 
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Registrovaní uživatelé"
-
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Počet přidělených"
 
@@ -979,11 +1245,31 @@ msgstr ""
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "Předplatné"
 
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Stažení souborů článku"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Počet přečtení stránky abstraktu daného článku"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Abstrakty článku a stažení"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Počet přečtení hlavní stránky časopisu"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Obsah čísla s počty přístupů"
+
 msgid "manager.subscriptionPolicies"
 msgstr "Pravidla předplatného"
 
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
 msgstr "Zpožděný otevřený přístup"
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Použijte, prosím, zaškrtávací políčka."
 
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Vypršení předplatného"
@@ -1010,6 +1296,24 @@ msgstr ""
 "Čtenáři mají zakázaný přístup k nově publikovanému předplacenému obsahu, ale "
 "zůstává jim povolen přístup k předplacenému obsahu vydanému před datem "
 "vypršení předplatného."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} měsíců"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} týdnů"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Upozornit předplatitele emailem po vypršení předplatného"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Upozornit předplatitele emailem po vypršení předplatného."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Upozornit předplatitele emailem před vypršením předplatného."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Upozornit předplatitele emailem před vypršením předplatného."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Připomenutí vypršení předplatného"
@@ -1068,6 +1372,56 @@ msgstr ""
 "Podpora těchto funkcí může vyžadovat dodatečnou konfiguraci serveru (nemusí "
 "být realizovatelná na všech serverech) tak, jak je uvedeno v OJS documentaci."
 
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Oznámení o online platbě"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Automatická e-mailová oznámení (dostupná pro editaci manažerovi časopisu v "
+"Připravených emailech OJS) mohou být zasílána manažerovi předplatného po "
+"provedení online platby předplatného."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Informovat manažera předplatného e-mailem po provedení online koupě "
+"individuálního předplatného."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Informovat manažera předplatného e-mailem po provedení online koupě "
+"institucionálního předplatného (doporučeno)."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Informovat manažera předplatného e-mailem po provedení online obnovy "
+"individuálního předplatného."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Informovat manažera předplatného e-mailem po provedení online obnovy "
+"institucionálního předplatného."
+
+msgid ""
+"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Poznámka:</strong> Institucionální předplatné zakoupené online "
+"vyžaduje schválení uvedené domény a IP rozsahu a aktivaci předplatného "
+"manažerem předplatného."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Poznámka:</strong> Pro zapnutí těchto možností musí manažer časopisu "
+"zapnout modul pro online platby včetně online plateb předplatného pod "
+"Čtenářskými poplatky."
+
 msgid "manager.subscriptionPolicies.openAccessOptions"
 msgstr "Možnosti otevřeného přístupu pro časpisy s předplatným"
 
@@ -1100,14 +1454,29 @@ msgstr "Vložte prosím platný e-mail."
 msgid "manager.subscriptions"
 msgstr "Předplatné"
 
+msgid "manager.individualSubscriptions"
+msgstr "Individuální předplatné"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institucionální předplatné"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Jste si jisti, že chcete obnovit toto předplatné?"
+
 msgid "manager.subscriptions.confirmDelete"
 msgstr "Jste si jisti, že chcete smazat toto předplatné?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Souhrn předplatného"
 
 msgid "manager.subscriptions.create"
 msgstr "Vytvořit nové předplatné"
 
 msgid "manager.subscriptions.createTitle"
 msgstr "Vytvořit"
+
+msgid "manager.subscriptions.renew"
+msgstr "Obnovit"
 
 msgid "manager.subscriptions.dateEnd"
 msgstr "Konec"
@@ -1130,14 +1499,35 @@ msgstr "Editovat předplatné"
 msgid "manager.subscriptions.editTitle"
 msgstr "Editovat"
 
-msgid "manager.subscriptions.form.dateEnd"
-msgstr "Datum konce"
+msgid "manager.subscriptions.withStatus"
+msgstr "Se stavem"
 
-msgid "manager.subscriptions.form.dateEndRequired"
-msgstr "Je vyžadován datum konce předplatného."
+msgid "manager.subscriptions.allStatus"
+msgstr "Vše"
 
-msgid "manager.subscriptions.form.dateEndValid"
-msgstr "Zvolte prosím platné datum konce předplatného."
+msgid "manager.subscriptions.form.status"
+msgstr "Stav"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Je vyžadován stav předpaltného."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Zvolte prosím platný stav předplatného."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Typ předplatného"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Je vyžadován typ předplatného."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Zvolte, prosím, platný typ předplatného."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Instituce"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Zvolte, prosím, platnou instituci."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Datum začátku"
@@ -1148,8 +1538,79 @@ msgstr "Je vyžadován datum začátku předplatného."
 msgid "manager.subscriptions.form.dateStartValid"
 msgstr "Zvolte prosím platné datum začátku předplatného."
 
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Datum konce"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Je vyžadován datum konce předplatného."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Toto je typ předplatného bez data platnosti; prosím nezadávejte datum "
+"zahájení."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Toto je typ předplatného bez data platnosti; prosím neuvádějte datum "
+"ukončení."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Zvolte prosím platné datum konce předplatného."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Poznámka: Všechny níže provedené změny se týkají profilu uživatele v celém "
+"systému."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Uživatel"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontakt"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Je vyžadován uživatel."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Zvolte prosím platného uživatele."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Zvolte prosím platnou zemi."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Poslat uživateli email s uživatelským jménem a detaily předplatného."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Použijte prosím nabízené zaškrtávací políčko."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Členství"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referenční číslo"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Vložte informaci o členství, pokud typ předplatného vyžaduje, aby "
+"předplatitel patřil do nějaké asociace nebo organizace."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Zvolený typ předplatného vyžaduje informaci o členství."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Poznámky"
+
 msgid "manager.subscriptions.form.domain"
 msgstr "Doména"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Název instituce"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Je vyžadován název instituce."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Poštovní adresa"
 
 msgid "manager.subscriptions.form.domainInstructions"
 msgstr ""
@@ -1167,6 +1628,9 @@ msgstr "Vložte prosím platnou doménu."
 msgid "manager.subscriptions.form.ipRange"
 msgstr "IP rozsah"
 
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr ""
 "Vložte IP rozsah, pokud se jedná o typ předplatného pro instituce. Pokud je "
@@ -1179,22 +1643,11 @@ msgstr ""
 msgid "manager.subscriptions.form.ipRangeValid"
 msgstr "Vložte prosím platný rozsah IP."
 
-msgid "manager.subscriptions.form.membership"
-msgstr "Členství"
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Smazat"
 
-msgid "manager.subscriptions.form.membershipInstructions"
-msgstr ""
-"Vložte informaci o členství, pokud typ předplatného vyžaduje, aby "
-"předplatitel patřil do nějaké asociace nebo organizace."
-
-msgid "manager.subscriptions.form.membershipRequired"
-msgstr "Zvolený typ předplatného vyžaduje informaci o členství."
-
-msgid "manager.subscriptions.form.notifyEmail"
-msgstr "Poslat uživateli email s uživatelským jménem a detaily předplatného."
-
-msgid "manager.subscriptions.form.notifyEmailValid"
-msgstr "Použijte prosím nabízené zaškrtávací políčko."
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Přidat"
 
 msgid "manager.subscriptions.form.saveAndCreateAnother"
 msgstr "Uložit a vytvořit další"
@@ -1207,23 +1660,11 @@ msgstr ""
 msgid "manager.subscriptions.form.subscriptionExists"
 msgstr "Tento uživatel již má pro tento časopis předplatné."
 
-msgid "manager.subscriptions.form.typeId"
-msgstr "Typ předplatného"
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Před pořízením nového předplatného musí být vytvořen typ předplatného."
 
-msgid "manager.subscriptions.form.typeIdRequired"
-msgstr "Je vyžadován typ předplatného."
-
-msgid "manager.subscriptions.form.typeIdValid"
-msgstr "Zvolte, prosím, platný typ předplatného."
-
-msgid "manager.subscriptions.form.userId"
-msgstr "Uživatel"
-
-msgid "manager.subscriptions.form.userIdRequired"
-msgstr "Je vyžadován uživatel."
-
-msgid "manager.subscriptions.form.userIdValid"
-msgstr "Zvolte prosím platného uživatele."
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Před provedením nového předplatného musí být vytvořena instituce."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Rozsah IP"
@@ -1231,16 +1672,28 @@ msgstr "Rozsah IP"
 msgid "manager.subscriptions.membership"
 msgstr "Členství"
 
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referenční číslo"
+
+msgid "manager.subscriptions.notes"
+msgstr "Poznámky"
+
 msgid "manager.subscriptions.noneCreated"
 msgstr "Žádné předplatné"
 
-msgid "manager.subscriptions.select"
-msgstr "Vybrat"
+msgid "manager.subscriptions.selectContact"
+msgstr "Zvolte kontakt pro předplatné"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Vybrat uživatele"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
 "Práva předplatitelského přístupu jsou automaticky garantována pro manažery "
 "časopisu, editory, sekční editory, typografy, redaktory a korektory."
+
+msgid "manager.subscriptions.select"
+msgstr "Vybrat"
 
 msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
 msgstr "Předplatné bylo úspěšně vytvořeno."
@@ -1250,6 +1703,12 @@ msgstr "Typ předplatného"
 
 msgid "manager.subscriptions.user"
 msgstr "Uživatel"
+
+msgid "manager.subscriptions.contact"
+msgstr "Kontaktní jméno"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Název instituce"
 
 msgid "manager.subscriptionTypes"
 msgstr "Typy předplatného"
@@ -1261,6 +1720,15 @@ msgstr ""
 
 msgid "manager.subscriptionTypes.cost"
 msgstr "Cena"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Předplatné"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individuální"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucionální"
 
 msgid "manager.subscriptionTypes.create"
 msgstr "Vytvořit nový typ předplatného"
@@ -1301,6 +1769,18 @@ msgstr "Vyberte prosím platnou měnu."
 msgid "manager.subscriptionTypes.form.description"
 msgstr "Popis"
 
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Vyprší po"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "měsíce (např.: 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nikdy nevyprší"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Použijte, prosím, nabízené možnosti."
+
 msgid "manager.subscriptionTypes.form.duration"
 msgstr "Trvání"
 
@@ -1322,6 +1802,12 @@ msgstr "Je vyžadován formát typu předplatného."
 msgid "manager.subscriptionTypes.form.formatValid"
 msgstr "Vyberte prosím platný formát typu předplatného."
 
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Předplatné"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuální (uživatelé jsou ověřování pomocí přihlášení)"
+
 msgid "manager.subscriptionTypes.form.institutional"
 msgstr ""
 "Institucionální předplatitelé (uživatelé jsou ověřováni prostřednictvím "
@@ -1337,6 +1823,9 @@ msgstr ""
 
 msgid "manager.subscriptionTypes.form.membershipValid"
 msgstr "Použijte prosím poskytnuté políčko."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Možnosti"
 
 msgid "manager.subscriptionTypes.form.public"
 msgstr ""
@@ -1367,233 +1856,15 @@ msgstr "Nebyly vytvořeny žádné typy předplatného."
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Typ předplatného byl úspěšně vytvořen."
 
-msgid "manager.subscriptions.renew"
-msgstr "Obnovit"
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Odkaz na stránku, kde jsou popsány nabídky vašeho předplatného."
 
-msgid "manager.subscriptions.form.status"
-msgstr "Stav"
-
-msgid "manager.subscriptions.form.userContact"
-msgstr "Kontakt"
-
-msgid "manager.subscriptions.form.notes"
-msgstr "Poznámky"
-
-msgid "manager.subscriptions.form.deleteIpRange"
-msgstr "Smazat"
-
-msgid "manager.subscriptions.form.addIpRange"
-msgstr "Přidat"
-
-msgid "manager.subscriptions.notes"
-msgstr "Poznámky"
-
-msgid "manager.subscriptions.selectUser"
-msgstr "Vybrat uživatele"
-
-msgid "manager.subscriptionTypes.subscriptions"
-msgstr "Předplatné"
-
-msgid "manager.subscriptionTypes.individual"
-msgstr "Individuální"
-
-msgid "manager.subscriptionTypes.institutional"
-msgstr "Institucionální"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
-msgstr "Nikdy nevyprší"
-
-msgid "manager.subscriptionTypes.form.options"
-msgstr "Možnosti"
-
-msgid "manager.language.ui"
-msgstr "UI"
-
-msgid "manager.language.forms"
-msgstr "Formuláře"
-
-msgid "manager.people.showNoRole"
-msgstr "Zobrazit uživatele bez žádné role"
-
-msgid "manager.setup.history"
-msgstr "Historie časopisu"
-
-msgid "manager.individualSubscriptions"
-msgstr "Individuální předplatné"
-
-msgid "manager.institutionalSubscriptions"
-msgstr "Institucionální předplatné"
-
-msgid "manager.subscriptions.summary"
-msgstr "Souhrn předplatného"
-
-msgid "manager.subscriptions.withStatus"
-msgstr "Se stavem"
-
-msgid "manager.subscriptions.allStatus"
-msgstr "Vše"
-
-msgid "manager.subscriptions.form.statusRequired"
-msgstr "Je vyžadován stav předpaltného."
-
-msgid "manager.subscriptions.form.statusValid"
-msgstr "Zvolte prosím platný stav předplatného."
-
-msgid "manager.subscriptions.form.userCountryValid"
-msgstr "Zvolte prosím platnou zemi."
-
-msgid "manager.subscriptions.form.referenceNumber"
-msgstr "Referenční číslo"
-
-msgid "manager.subscriptions.form.institutionName"
-msgstr "Název instituce"
-
-msgid "manager.subscriptions.form.institutionNameRequired"
-msgstr "Je vyžadován název instituce."
-
-msgid "manager.subscriptions.form.institutionMailingAddress"
-msgstr "Poštovní adresa"
-
-msgid "manager.subscriptions.form.ipRangeItem"
-msgstr "&#8226;"
-
-msgid "manager.subscriptions.referenceNumber"
-msgstr "Referenční číslo"
-
-msgid "manager.subscriptions.contact"
-msgstr "Kontaktní jméno"
-
-msgid "manager.subscriptions.institutionName"
-msgstr "Název instituce"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
-msgstr "Vyprší po"
-
-msgid "manager.subscriptionTypes.form.subscriptions"
-msgstr "Předplatné"
-
-msgid "manager.sections.wordCount"
-msgstr "Počet slov"
-
-msgid "manager.sections.wordCountInstructions"
-msgstr "Omezit počet slov abstraktu pro tuto sekci na (0 pro žádný limit)"
-
-msgid "manager.setup.historyDescription"
+msgid "manager.navigationMenus.mySubscriptions.description"
 msgstr ""
-"Tento text se zobrazí v části \"O časopisu\" webových stránek časopisu a "
-"může být použit pro popis změn v názvu, redakční radě a dalších položkách "
-"souvisejících s historií časopisu."
+"Odkaz na stránku popisující návštěvníkovo současné i minulá předplatná."
 
-msgid "manager.distribution.publishingMode.none"
-msgstr "OJS nebude používán pro online publikování obsahu časopisu."
-
-msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
-msgstr "Oznámení o online platbě"
-
-msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
-msgstr ""
-"Automatická e-mailová oznámení (dostupná pro editaci manažerovi časopisu v "
-"Připravených emailech OJS) mohou být zasílána manažerovi předplatného po "
-"provedení online platby předplatného."
-
-msgid ""
-"manager.subscriptionPolicies."
-"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
-msgstr ""
-"Informovat manažera předplatného e-mailem po provedení online koupě "
-"individuálního předplatného."
-
-msgid ""
-"manager.subscriptionPolicies."
-"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
-msgstr ""
-"Informovat manažera předplatného e-mailem po provedení online koupě "
-"institucionálního předplatného (doporučeno)."
-
-msgid ""
-"manager.subscriptionPolicies."
-"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr ""
-"Informovat manažera předplatného e-mailem po provedení online obnovy "
-"individuálního předplatného."
-
-msgid ""
-"manager.subscriptionPolicies."
-"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
-msgstr ""
-"Informovat manažera předplatného e-mailem po provedení online obnovy "
-"institucionálního předplatného."
-
-msgid "manager.subscriptionTypes.form.nonExpiringValid"
-msgstr "Použijte, prosím, nabízené možnosti."
-
-msgid ""
-"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
-msgstr ""
-"<strong>Poznámka:</strong> Institucionální předplatné zakoupené online "
-"vyžaduje schválení uvedené domény a IP rozsahu a aktivaci předplatného "
-"manažerem předplatného."
-
-msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
-msgstr ""
-"<strong>Poznámka:</strong> Pro zapnutí těchto možností musí manažer časopisu "
-"zapnout modul pro online platby včetně online plateb předplatného pod "
-"Čtenářskými poplatky."
-
-msgid "manager.subscriptions.form.userProfileInstructions"
-msgstr ""
-"Poznámka: Všechny níže provedené změny se týkají profilu uživatele v celém "
-"systému."
-
-msgid "manager.subscriptions.form.typeRequired"
-msgstr "Před pořízením nového předplatného musí být vytvořen typ předplatného."
-
-msgid "manager.subscriptions.selectContact"
-msgstr "Zvolte kontakt pro předplatné"
-
-msgid "manager.subscriptionTypes.form.nonExpiring.months"
-msgstr "měsíce (např.: 12)"
-
-msgid "manager.subscriptionTypes.form.individual"
-msgstr "Individuální (uživatelé jsou ověřování pomocí přihlášení)"
-
-msgid "manager.sections.confirmDelete"
-msgstr "Jste si jisti, že chcete natrvalo vymazat tuto sekci?"
-
-msgid "manager.sections.alertDelete"
-msgstr ""
-"Než budete moci smazat tuto sekci, musíte přesunout všechny články z této "
-"sekce do jiných sekcí."
-
-msgid "manager.setup.resetPermissions"
-msgstr "Resetovat oprávnění k článku"
-
-msgid "manager.setup.journalThumbnail"
-msgstr "Náhled časopisu"
-
-msgid "manager.setup.useThumbnail"
-msgstr "Náhled"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "Počet přečtení stránky abstraktu daného článku"
-
-msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "Abstrakty článku a stažení"
-
-msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr "Počet přečtení hlavní stránky časopisu"
-
-msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "Stažení souborů článku"
-
-msgid "manager.language.submissions"
-msgstr "Příspěvky"
-
-msgid "manager.payment.options.purchaseIssueFee"
-msgstr "Zakoupit přístup k číslu"
-
-msgid "manager.setup.copyrightYearBasis"
-msgstr "Nastavit rok copyrightu nového článku na"
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Tento odkaz se zobrazí pouze v případě, že je návštěvník přihlášený."
 
 msgid "manager.setup.categories"
 msgstr "Kategorie"
@@ -1602,144 +1873,6 @@ msgid "manager.setup.categories.description"
 msgstr ""
 "Zvolte nejvíce vhodné kategorie z nabídky výše. Čtenáři boudou moci "
 "procházet podle těchto kategorií z kompletní sady časopisů."
-
-msgid "plugins.importexport.common.settings"
-msgstr "Nastavení"
-
-msgid "plugins.importexport.common.error.DOIsNotAvailable"
-msgstr ""
-"Aby bylo možné používat tento plugin, jděte prosím do kategorie pluginů "
-"Veřejné identifikátory, povolte a nastavte plugin DOI a specifikujte tam "
-"platný prefix DOI."
-
-msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr "Plugin není plně nastavený."
-
-msgid "plugins.importexport.common.settings.form.password"
-msgstr "Heslo"
-
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Upozornění: heslo bude uloženo jako prostý text, nebude tedy zašifrováno."
-
-msgid "plugins.importexport.common.action.register"
-msgstr "Registrace"
-
-msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "Do výstupního souboru {$param} nejde zapisovat."
-
-msgid "plugins.importexport.common.register.error.mdsError"
-msgstr ""
-"Registrace nebyla úspěšná! Registrační server DOI vrátil následující chybu: "
-"'{$param}'."
-
-msgid "plugins.importexport.common.register.success"
-msgstr "Registrace byla úspěšná!"
-
-msgid "manager.website.archiving"
-msgstr "Archivace"
-
-msgid "manager.setup.masthead"
-msgstr "Hlavní titulek"
-
-msgid "manager.setup.editorialTeam"
-msgstr "Tým redaktorů"
-
-msgid "manager.setup.homepageContent"
-msgstr "Obsah domovské stránky časopisu"
-
-msgid "manager.setup.homepageContentDescription"
-msgstr ""
-"Domovská stránka časopisu ve výchozím nastavení obsahuje navigační odkazy. "
-"Další obsah domovské stránky lze přidat pomocí jedné nebo více následujících "
-"možností, které se zobrazí v uvedeném pořadí."
-
-msgid "manager.setup.useStyleSheet"
-msgstr "Style sheet časopisu"
-
-msgid "manager.setup.contextName"
-msgstr "Jméno časopisu"
-
-msgid "manager.setup.pageHeader"
-msgstr "Hlavička stránky časopisu"
-
-msgid "manager.setup.focusAndScope.description"
-msgstr ""
-"Popište autorům, čtenářům a knihovníkům zaměření článků a dalších položek, "
-"které časopis publikuje."
-
-msgid "manager.setup.form.issnInvalid"
-msgstr "Zadané ISSN není platné."
-
-msgid "manager.setup.contextSummary"
-msgstr "Souhrn informací o časopise"
-
-msgid "manager.setup.contextAbout"
-msgstr "O časopise"
-
-msgid "manager.setup.contextAbout.description"
-msgstr ""
-"Zahrňte de veškeré informace o vašem časopise, které mohou být zajímavé pro "
-"čtenáře, autory nebo recenzenty. Tyto informace by měly zahrnovat vaše "
-"zásady otevřeného přístupu, zaměření a rozsah časopisu, oznámení o "
-"autorských právech, povolení sponzoringu, historii časopisu, prohlášení o "
-"ochraně osobních údajů a zařazení do libovolného archivního systému LOCKSS "
-"nebo CLOCKSS."
-
-msgid "manager.setup.includeCreativeCommons"
-msgstr ""
-"Pro časopisy, které nabízejí okamžitý nebo zpožděný otevřený přístup, uveďte "
-"ve vhodnou dobu licenci Creative Commons ke všem publikovaným pracím."
-
-msgid "manager.setup.journalThumbnail.description"
-msgstr ""
-"Malé logo či obrázek reprezentující časopis, který může být využit v seznamu "
-"časopisů."
-
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Licence LOCKSS se objeví v O časopise pod Archivace: <a href=\"http://www."
-"lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Licence "
-"LOCKSS</a>"
-
-msgid "manager.setup.lockssLicenseLabel"
-msgstr "Popis licence LOCKSS"
-
-msgid "manager.setup.lockssTitle"
-msgstr "LOCKSS"
-
-msgid "manager.setup.clockssEnable"
-msgstr ""
-"Povolte službě CLOCKSS ukládat a distribuovat obsah časopisu v zúčastněných "
-"knihovnách prostřednictvím stránky <a href=\"{$clockssUrl}\" target=\"_blank"
-"\">stránky Manifest vydavatele </a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Licence CLOCKSS se objeví v sekci O časopise v sekci Archivování: <a href="
-"\"https://clockss.org\" target=\"_blank\"> Licence CLOCKSS </a>"
-
-msgid "manager.setup.clockssLicenseLabel"
-msgstr "Popis licence CLOCKSS"
-
-msgid "manager.setup.clockssRegister"
-msgstr ""
-"Přihlaste se k službě CLOCKSS na adrese <a href=\"https://clockss.org\" "
-"target=\"_blank\"> webu CLOCKSS </a>."
-
-msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
-
-msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Obsah čísla s počty přístupů"
-
-msgid ""
-"manager.subscriptionPolicies."
-"enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr "Použijte, prosím, zaškrtávací políčka."
-
-msgid "manager.distribution.access"
-msgstr "Přístup"
 
 msgid "grid.category.path"
 msgstr "Cesta"
@@ -1768,6 +1901,9 @@ msgstr ""
 msgid "manager.publication.library"
 msgstr "Knihovna vydavatele"
 
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Nastavit rok copyrightu nového článku na"
+
 msgid "manager.setup.copyrightYearBasis.article"
 msgstr ""
 "Článek: výchozí rok vydání bude odvozen z data publikace článku, podobně "
@@ -1776,10 +1912,27 @@ msgstr ""
 msgid "manager.setup.copyrightYearBasis.issue"
 msgstr "Číslo: výchozí rok vydání bude odvozen z data vydání čísla."
 
+msgid "manager.setup.resetPermissions"
+msgstr "Resetovat oprávnění k článku"
+
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
 "Jste si jisti, že chcete resetovat údaje o oprávnění u všech článků? Tuto "
 "akci nelze vrátit zpět."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Odstraňte prohlášení o autorských právech a informace o licenci u každého "
+"publikovaného článku a vraťte je zpět na aktuální výchozí nastavení "
+"časopisu. Tím se trvale odstraní všechny předchozí informace o autorských "
+"právech a licencích připojené k článkům. V některých případech nemusí být "
+"legálně povoleno opětovné licencování díla, které bylo publikováno pod jinou "
+"licencí. Při používání tohoto nástroje buďte opatrní a pokud si nejste "
+"jisti, jaká máte práva k článkům zveřejněným ve vašem časopise, obraťte se "
+"na právníka."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Oprávnění k článku byla úspěšně resetována."
 
 msgid "grid.genres.title.short"
 msgstr "Komponenty"
@@ -1793,6 +1946,9 @@ msgstr ""
 "v rozbalovací nabídce při nahrávání souborů. Žánry označené ## umožňují "
 "uživateli přiřadit soubor buď s celým příspěvkem 99Z, nebo s určitou "
 "komponentou podle čísla (např. 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Nastavení"
 
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
 msgstr "Nastavení pluginu DOI"
@@ -1809,10 +1965,26 @@ msgstr "Sazebnice"
 msgid "plugins.importexport.common.missingRequirements"
 msgstr "Nevyhovuje požadavkům pluginu"
 
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Aby bylo možné používat tento plugin, jděte prosím do kategorie pluginů "
+"Veřejné identifikátory, povolte a nastavte plugin DOI a specifikujte tam "
+"platný prefix DOI."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Plugin není plně nastavený."
+
 msgid "plugins.importexport.common.error.noDOIContentObjects"
 msgstr ""
 "Nebyly vybrány žádné objekty pro přiřazení DOI v rámci pluginu DOI, takže v "
 "tomto pluginu není žádná možnost ukládání či exportu."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Heslo"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Upozornění: heslo bude uloženo jako prostý text, nebude tedy zašifrováno."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Libovolné číslo"
@@ -1838,6 +2010,12 @@ msgstr "Export"
 msgid "plugins.importexport.common.action.markRegistered"
 msgstr "Označit registrované"
 
+msgid "plugins.importexport.common.action.register"
+msgstr "Registrace"
+
+msgid "plugins.importexport.common.validation"
+msgstr "Validujte XML před exportem a registrací."
+
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Nebyly vybrány žádné objekty."
 
@@ -1846,6 +2024,26 @@ msgstr "Vybrané objekty nelze konvertovat."
 
 msgid "plugins.importexport.common.invalidXML"
 msgstr "Neplatné XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Do výstupního souboru {$param} nejde zapisovat."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Vstupní soubor {$param} není čitelný."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Registrace nebyla úspěšná! Registrační server DOI vrátil následující chybu: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registrace byla úspěšná!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validace byla úspěšná!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validace selhala."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Prefix DOI chybí pro časopis na adrese {$path}."
@@ -1857,266 +2055,102 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
 "Odeslání kopie primárnímu kontaktu, identifikovanému v Nastavení časopisu."
 
-msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Jste si jisti, že chcete smazat toto předplatné?"
+msgid "stats.contextStats"
+msgstr "Statistiky časopisu"
 
-msgid "manager.paymentTypes"
-msgstr "Typy platby"
+msgid "stats.context.tooltip.text"
+msgstr "Počet návštěvníků kteří si zobrazili titulní stránku časopisu."
 
-msgid "manager.setup.plnPluginEnable"
-msgstr "Plugin PKP PN byl povolen"
+msgid "stats.context.tooltip.label"
+msgstr "O statistikách časopisu"
 
-msgid "manager.setup.plnDescription"
+msgid "stats.context.downloadReport.description"
 msgstr ""
-"PKP Preservation Network (PN) poskytuje bezplatné archivační služby pro "
-"všechny časopisy OJS, které splňují několik základních kritérií."
+"Stáhněte si tabulku CSV/Excel se statistikami používání tohoto časopisu, "
+"které odpovídají následujícím parametrům."
 
-msgid "manager.setup.plnSettingsDescription"
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Počet zobrazení titulní stránky časopisu."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Stáhnout obsah časopisu"
+
+msgid "stats.issueStats"
+msgstr "Statistiky čísla"
+
+msgid "stats.issues.details"
+msgstr "Náhledy a stažení"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Vyhledávání názvu, svazku a čísla vydání"
+
+msgid "stats.issues.none"
 msgstr ""
-"Klikněte na odkaz <button>Nastavení</button> k přijetí podmínek používání "
-"PKP PN."
+"Nebyly zjištěny žádná vydání se statistikami používání, které by odpovídaly "
+"těmto parametrům."
 
-msgid "manager.setup.plnPluginArchiving"
-msgstr "PKP Archivační síť (PN)"
-
-msgid "manager.setup.plnPluginNotInstalled"
+msgid "stats.issues.downloadReport.description"
 msgstr ""
-"PKP Preservation Network (PN) poskytuje bezplatné archivační služby pro "
-"všechny časopisy OJS, které splňují několik základních kritérií. Chcete-li "
-"archivovat svůj časopis v PN, požádejte správce o instalaci pluginu PKP|PN z "
-"Galerie pluginů."
+"Stáhněte si tabulku CSV/Excel se statistikami použití pro vydání, která "
+"odpovídají následujícím parametrům."
 
-msgid "manager.setup.otherLockss"
-msgstr "Jiné archivační možnosti"
-
-msgid "manager.setup.porticoEnable"
+msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
-"Povolte službu Portico k ukládání a distribuci obsahu časopisu knihovnám, "
-"které se účastní v projektu Portico."
+"Počet zobrazení tabulky s obsahem a stažení sazebnic jednotlivých čísel."
 
-msgid "manager.setup.porticoTitle"
-msgstr "Portico"
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Stáhnout vydání"
 
-msgid "manager.subscriptionPolicies.xWeeks"
-msgstr "{$x} týdnů"
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} z {$total} vydání"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Upozornit předplatitele emailem po vypršení předplatného"
+msgid "stats.issues.tooltip.label"
+msgstr "O statistikách vydání"
 
-msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr "Upozornit předplatitele emailem po vypršení předplatného."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr "Upozornit předplatitele emailem před vypršením předplatného."
-
-msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr "Upozornit předplatitele emailem před vypršením předplatného."
-
-msgid "manager.subscriptions.confirmRenew"
-msgstr "Jste si jisti, že chcete obnovit toto předplatné?"
-
-msgid "manager.navigationMenus.subscriptions.description"
-msgstr "Odkaz na stránku, kde jsou popsány nabídky vašeho předplatného."
-
-msgid "manager.navigationMenus.mySubscriptions.description"
+msgid "stats.issues.tooltip.text"
 msgstr ""
-"Odkaz na stránku popisující návštěvníkovo současné i minulá předplatná."
-
-msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Tento odkaz se zobrazí pouze v případě, že je návštěvník přihlášený."
-
-msgid "plugins.importexport.common.validation"
-msgstr "Validujte XML před exportem a registrací."
-
-msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "Vstupní soubor {$param} není čitelný."
-
-msgid "manager.subscriptionPolicies.xMonths"
-msgstr "{$x} měsíců"
-
-msgid "manager.setup.editorialTeam.description"
-msgstr ""
-"Seznam redaktorů, vedoucích správců a ostatních osobností spojených s tímto "
-"časopisem."
-
-msgid "stats.publications.galleys"
-msgstr "Soubory"
-
-msgid "stats.publications.abstracts"
-msgstr "Abstrakty"
-
-msgid "stats.publications.countOfTotal"
-msgstr "{$count} z {$total} článků"
-
-msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr "Celkový počet zobrazení souborů podle data"
-
-msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr "Celkový počet zobrazení podle data"
-
-msgid "stats.publications.none"
-msgstr "Nebyly nalezeny žádné články odpovídající těmto parametrům."
-
-msgid "stats.publications.details"
-msgstr "Detaily článku"
+"<strong>Náhledy</strong>: Počet návštěvníků zobrazujících obsah vydání."
+"<br><strong>Stažení</strong>: Počet stažení sazebnic vydání, pokud existuje."
 
 msgid "stats.publicationStats"
 msgstr "Statistiky článku"
 
-msgid "manager.setup.resetPermissions.success"
-msgstr "Oprávnění k článku byla úspěšně resetována."
+msgid "stats.publications.details"
+msgstr "Detaily článku"
 
-msgid "manager.setup.resetPermissions.description"
+msgid "stats.publications.none"
+msgstr "Nebyly nalezeny žádné články odpovídající těmto parametrům."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Celkový počet zobrazení podle data"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Celkový počet zobrazení souborů podle data"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} z {$total} článků"
+
+msgid "stats.publications.abstracts"
+msgstr "Abstrakty"
+
+msgid "stats.publications.galleys"
+msgstr "Soubory"
+
+msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Odstraňte prohlášení o autorských právech a informace o licenci u každého "
-"publikovaného článku a vraťte je zpět na aktuální výchozí nastavení "
-"časopisu. Tím se trvale odstraní všechny předchozí informace o autorských "
-"právech a licencích připojené k článkům. V některých případech nemusí být "
-"legálně povoleno opětovné licencování díla, které bylo publikováno pod jinou "
-"licencí. Při používání tohoto nástroje buďte opatrní a pokud si nejste "
-"jisti, jaká máte práva k článkům zveřejněným ve vašem časopise, obraťte se "
-"na právníka."
+"Stáhněte si tabulku CSV/Excel se statistikami používání článků, které "
+"odpovídají následujícím parametrům."
 
-msgid "manager.subscriptions.form.dateEndEmpty"
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Stažené články"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Počet zobrazení abstraktů a stažení souborů pro každý článek."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
-"Toto je typ předplatného bez data platnosti; prosím neuvádějte datum "
-"ukončení."
-
-msgid "manager.subscriptions.form.dateStartEmpty"
-msgstr ""
-"Toto je typ předplatného bez data platnosti; prosím nezadávejte datum "
-"zahájení."
-
-msgid "manager.setup.userAccess.success"
-msgstr "Podrobnosti o přístupu uživatelů k tomuto deníku byly aktualizovány."
-
-msgid "manager.setup.enableOai.description"
-msgstr ""
-"Poskytujte metadata indexovacím službám třetích stran prostřednictvím <a "
-"href=\"https://www.openarchives.org/\">iniciativy Open Archives</a>."
-
-msgid "manager.setup.enableOai"
-msgstr "Povolit OAI"
-
-msgid "manager.setup.siteAccess.viewContent"
-msgstr "Zobrazit obsah článku"
-
-msgid "manager.setup.siteAccess.view"
-msgstr "Přístup na stránky"
-
-msgid "manager.setup.searchDescription.description"
-msgstr ""
-"Uveďte stručný popis (50–300 znaků) časopisu, který mohou vyhledávače "
-"zobrazit při zařazení časopisu do výsledků vyhledávání."
-
-msgid "manager.setup.searchEngineIndexing.success"
-msgstr "Nastavení pro vyhledávače bylo aktualizováno."
-
-msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "Zahrnout zabezpečený odkaz do e-mailové pozvánky recenzentům."
-
-msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "Omezte přístup k souborům"
-
-msgid "manager.setup.privacyStatement.success"
-msgstr "Prohlášení o ochraně osobních údajů bylo aktualizováno."
-
-msgid "manager.setup.numPageLinks.description"
-msgstr ""
-"Omezte počet odkazů, které se mají zobrazit na následujících stránkách v "
-"seznamu."
-
-msgid "manager.setup.masthead.success"
-msgstr "Podrobnosti o vedení v tomto deníku byly aktualizovány."
-
-msgid "manager.setup.lists.success"
-msgstr "Nastavení seznamu pro tento deník byla aktualizována."
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Uveďte krátký popis vašeho deníku a identifikujte editory, manažery a další "
-"členy vašeho redakčního týmu."
-
-msgid "manager.setup.keyInfo"
-msgstr "Klíčová informace"
-
-msgid "manager.setup.itemsPerPage.description"
-msgstr ""
-"Před zobrazením dalších položek na jiné stránce omezte počet položek "
-"(například příspěvky, uživatelé nebo práva), které se mají zobrazit v "
-"seznamu."
-
-msgid "manager.setup.information.success"
-msgstr "Informace pro tento časopis byly aktualizovány."
-
-msgid "manager.setup.identity"
-msgstr "Identita časopisu"
-
-msgid "manager.setup.numAnnouncementsHomepage.description"
-msgstr ""
-"Kolik oznámení se zobrazí na úvodní stránce. Pokud nechcete žádné, nechte "
-"pole prázdné."
-
-msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Zobrazit na úvodní stránce"
-
-msgid "manager.setup.contact.success"
-msgstr "Kontaktní údaje pro tento časopis byly aktualizovány."
-
-msgid "manager.setup.archiving.success"
-msgstr "Podrobnosti o archivaci tohoto časopisu byly aktualizovány."
-
-msgid "manager.setup.announcementsIntroduction"
-msgstr "Úvod"
-
-msgid "manager.setup.announcements.success"
-msgstr "Nastavení oznámení byla aktualizována."
-
-msgid "manager.payment.success"
-msgstr "Nastavení plateb bylo aktualizováno."
-
-msgid "manager.distribution.publishingMode.success"
-msgstr "Podrobnosti o vydání byly aktualizovány."
-
-msgid "manager.distribution.publishingMode"
-msgstr "Režim vydávání"
-
-msgid "manager.distribution.publication"
-msgstr "Zveřejnění"
-
-msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr "Použijte datum zveřejnění článku"
-
-msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Použijte datum vydání čísla"
-
-msgid "manager.distribution.copyrightYearBasis.description"
-msgstr ""
-"Zvolte, jak má být vybráno výchozí datum autorských práv článku. Tato "
-"výchozí hodnota může být v některých případech přepsána. Pokud „publikujete "
-"za běhu“, nepoužívejte datum vydání čísla."
-
-msgid "plugins.importexport.common.validation.fail"
-msgstr "Validace selhala."
-
-msgid "plugins.importexport.common.validation.success"
-msgstr "Validace byla úspěšná!"
-
-msgid "manager.setup.disableSubmissions.notAccepting"
-msgstr ""
-"Tento časopis v tomto okamžiku nepřijímá příspěvky. Přejděte do nastavení "
-"workflow a povolte příspěvky."
-
-msgid "manager.setup.disableSubmissions.description"
-msgstr ""
-"Zamezte uživatelům zasílání nových článků do tohoto časopisu. Na stránce "
-"nastavení <a href=\"{$url}\">sekce časopisu</a> lze zakázat odesílání "
-"příspěvků do jednotlivých sekcí časopisu."
-
-msgid "manager.sections.confirmDeactivateSection.error"
-msgstr ""
-"Je třeba, aby byla aktivní alespoň jedna sekce. Chcete-li zakázat všechny "
-"příspěvky do tohoto časopisu, přejděte do nastavení workflow."
+"Zaslat kopii e-mailu s potvrzením o odeslání primárnímu kontaktu tohoto "
+"časopisu."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
@@ -2125,10 +2159,8 @@ msgstr ""
 "Pro tento časopis nebyl definován žádný primární kontakt. Primární kontakt "
 "můžete zadat v <a href=\"{$url}\">nastavení deníku</a>."
 
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
-msgstr ""
-"Zaslat kopii e-mailu s potvrzením o odeslání primárnímu kontaktu tohoto "
-"časopisu."
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Export výsledků čísla"
 
 msgid "plugins.importexport.issue.cli.display"
 msgstr "\"{$issueId}\" – \"{$issueIdentification}\""
@@ -2136,48 +2168,73 @@ msgstr "\"{$issueId}\" – \"{$issueIdentification}\""
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Procesu se nepovedlo analyzovat sazebnice čísla"
 
-msgid "plugins.importexport.native.export.issues.results"
-msgstr "Export výsledků čísla"
-
-msgid "manager.setup.selectCountry"
-msgstr ""
-"Vyberte zemi, kde se tento časopis nachází, nebo zemi ve které má časopis či "
-"jeho vydavatel oficiální adresu."
-
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "Název webové stránky, pokud je hostován více než jeden časopis"
-
-msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr "Měna částky platby, například USD"
-
-msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr "Výše platby"
-
-msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr "Název typu platby"
-
-msgid "emailTemplate.variable.context.contactEmail"
-msgstr "E-mailová adresa hlavního kontaktu časopisu"
-
-msgid "emailTemplate.variable.context.contextSignature"
-msgstr "E-mailový podpis časopisu pro automatické e-maily"
-
-msgid "emailTemplate.variable.context.contactName"
-msgstr "Jméno hlavního kontaktu časopisu"
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Název časopisu"
 
 msgid "emailTemplate.variable.context.contextUrl"
 msgstr "Adresa URL domovské stránky časopisu"
 
-msgid "emailTemplate.variable.context.contextName"
-msgstr "Název časopisu"
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Jméno hlavního kontaktu časopisu"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "iniciály časopisu"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "E-mailový podpis časopisu pro automatické e-maily"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "E-mailová adresa hlavního kontaktu časopisu"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Název typu platby"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Výše platby"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Měna částky platby, například USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Název webové stránky, pokud je hostován více než jeden časopis"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Jméno, příslušnost, telefonní číslo a e-mailová adresa předplatitele"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Kontaktní údaje správce předplatného"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL adresa stránky s předplatným"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Datum ukončení předplatného"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Shrnutí typu, názvu, doby trvání a ceny předplatného"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informace o členství předplatitele"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Jméno instituce"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "E-mailová adresa instituce"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Doména"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Rozsahy IP adres pro autentizaci předplatného"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validace emailu (Registrace časopisu)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
 "Tento e-mail je automaticky odeslán novému uživateli při registraci do "
 "časopisu, když nastavení vyžaduje ověření e-mailové adresy."
-
-msgid "mailable.validateEmailContext.name"
-msgstr "Validace emailu (Registrace časopisu)"
 
 msgid "doi.displayName"
 msgstr "DOI"
@@ -2190,26 +2247,24 @@ msgstr ""
 msgid "doi.readerDisplayName"
 msgstr "DOI"
 
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
 msgid "doi.manager.settings.description"
 msgstr ""
 "Naonfigurujte, prosím, plugin DOI, abyste mohli spravovat a používat DOI v "
 "OJS:"
-
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr ""
-"Vyberte, kterým položkám bude přiřazen DOI. Většina časopisů přiděluje DOI "
-"článkům, ale můžete si přát přidělit DOI všem publikovaným položkám."
 
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Zvolte, prosím, publikační objekty, které mají mít přiděleny Digital Object "
 "Identifiers (DOI):"
 
-msgid "doi.manager.settings.enableSubmissionDoi"
-msgstr "Články"
-
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Sazebnice článku"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Sazebnice článku, jako publikovaná PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefix DOI"
@@ -2264,8 +2319,39 @@ msgstr ""
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Jste si jisti, že chcete smazat všechny existující identifikátory DOI?"
 
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Přiřadit čísla DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Přiřadit DOI všem objektům všech publikovaných časopisů, které doposud "
+"neměly přiřazeno DOI. Tato akce nemůže být použita v případě individuální "
+"konfigurace přípon. Pokud jste změnili konfiguraci DOI výše, je třeba před "
+"zahájením této akce uložit změny. Přiřazení DOI může trvat dlouho v "
+"závislosti na počtu publikovaných objektů v časopise."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Jste si jisti, že chcete přidělit DOI všem publikovaným objektům, které "
+"doposud neměly přiděleno DOI?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registrační agentura"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "Vyberte registrační agenturu, kterou chcete použít při ukládání DOI."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Žádná"
+
 msgid "doi.editor.doi"
 msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI musí začínat {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Přiřadit"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "číslo"
@@ -2278,6 +2364,16 @@ msgstr "sazebnice"
 
 msgid "doi.editor.customSuffixMissing"
 msgstr "DOI nelze přiřadit, protože chybí vlastní suffix."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Dokud nebude tato publikace přiřazena k číslu, nemůžete vygenerovat DOI."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Nelze vygenerovat DOI, protože v jedné nebo více částech DOI vzoru chybí "
+"data. Možná budete muset publikaci přiřadit problém, nastavit ID vydavatele "
+"nebo zadat čísla stránek."
 
 msgid "doi.editor.patternNotResolved"
 msgstr "DOI nemůže být přiděleno, protože obsahuje neplatný vzorec."
@@ -2326,170 +2422,87 @@ msgstr ""
 "DOI {$pubId} bylo přiřazeno. Pro editaci DOI použijte <a href="
 "\"{$doiManagementLink}\">stránku pro správu DOI</a>."
 
-msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr "Přiřadit čísla DOI"
-
-msgid "doi.manager.settings.doiAssignJournalWide.description"
-msgstr ""
-"Přiřadit DOI všem objektům všech publikovaných časopisů, které doposud "
-"neměly přiřazeno DOI. Tato akce nemůže být použita v případě individuální "
-"konfigurace přípon. Pokud jste změnili konfiguraci DOI výše, je třeba před "
-"zahájením této akce uložit změny. Přiřazení DOI může trvat dlouho v "
-"závislosti na počtu publikovaných objektů v časopise."
-
-msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr ""
-"Jste si jisti, že chcete přidělit DOI všem publikovaným objektům, které "
-"doposud neměly přiděleno DOI?"
-
-msgid "doi.editor.preview.objects"
-msgstr "Položka"
-
-msgid "doi.editor.preview.galleys"
-msgstr "Sazebnice: {$galleyLabel}"
-
-msgid "doi.editor.preview.publication.none"
-msgstr "Do této publikace nebyl přiřazen DOI."
-
-msgid "doi.editor.preview.publication"
-msgstr "DOI pro tuto publikaci bude {$doi}."
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} bude přiřazen při zveřejnění.."
 
 msgid "doi.editor.missingPrefix"
 msgstr "DOI musí začínat {$doiPrefix}."
 
-msgid "doi.editor.missingParts"
-msgstr ""
-"Nelze vygenerovat DOI, protože v jedné nebo více částech DOI vzoru chybí "
-"data. Možná budete muset publikaci přiřadit problém, nastavit ID vydavatele "
-"nebo zadat čísla stránek."
+msgid "doi.editor.preview.publication"
+msgstr "DOI pro tuto publikaci bude {$doi}."
 
-msgid "doi.editor.missingIssue"
-msgstr ""
-"Dokud nebude tato publikace přiřazena k číslu, nemůžete vygenerovat DOI."
+msgid "doi.editor.preview.publication.none"
+msgstr "Do této publikace nebyl přiřazen DOI."
 
-msgid "doi.editor.doi.assignDoi"
-msgstr "Přiřadit"
+msgid "doi.editor.preview.galleys"
+msgstr "Sazebnice: {$galleyLabel}"
 
-msgid "doi.editor.doi.description"
-msgstr "DOI musí začínat {$prefix}."
-
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Články"
-
-msgid "doi.manager.issueDois"
-msgstr "DOI vydání"
-
-msgid "doi.manager.submissionDois"
-msgstr "DOI článku"
-
-msgid "api.issue.404.issuesNotFound"
-msgstr "Vámi požadované číslo nebylo nalezeno"
-
-msgid "api.issue.403.canEditPublishedDoi"
-msgstr "Po zveřejnění publikace lze upravovat pouze DOI"
-
-msgid "api.issue.400.invalidDoi"
-msgstr "Zadaný DOI není platný"
-
-msgid "api.galley.403.canEditPublishedDoi"
-msgstr "Po zveřejnění publikace/sazebnice lze upravovat pouze DOI"
+msgid "doi.editor.preview.objects"
+msgstr "Položka"
 
 msgid "api.galley.403.publicationDidNotMatch"
 msgstr "Vámi požadovaná sazebnice není součástí této publikace."
 
-msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr "DOI {$pubId} bude přiřazen při zveřejnění.."
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Po zveřejnění publikace/sazebnice lze upravovat pouze DOI"
 
-msgid "doi.manager.settings.registrationAgency.none"
-msgstr "Žádná"
+msgid "api.issue.400.invalidDoi"
+msgstr "Zadaný DOI není platný"
 
-msgid "doi.manager.settings.registrationAgency.description"
-msgstr "Vyberte registrační agenturu, kterou chcete použít při ukládání DOI."
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Po zveřejnění publikace lze upravovat pouze DOI"
 
-msgid "doi.manager.settings.registrationAgency"
-msgstr "Registrační agentura"
+msgid "api.issue.404.issuesNotFound"
+msgstr "Vámi požadované číslo nebylo nalezeno"
 
-msgid "doi.manager.displayName"
-msgstr "DOI"
+msgid "doi.manager.submissionDois"
+msgstr "DOI článku"
 
-msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "Po dosažení copyeditovací fáze"
-
-msgid "doi.manager.settings.doiSuffixLegacy"
-msgstr ""
-"Použití výchozích vzorů. <br />%j.v%vi%i pro čísla<br />%j.v%vi%i.%a pro "
-"články<br />%j.v%vi%i.%a.g%g pro sazebnice."
-
-msgid "manager.setup.enableDois.description"
-msgstr ""
-"Povolit přidělování identifikátorů digitálních objektů (DOI) pracím "
-"publikovaným v tomto časopise."
+msgid "doi.manager.issueDois"
+msgstr "DOI vydání"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
 "Tento e-mail oznamuje autorovi, že jeho příspěvek byl odmítnut ještě před "
 "recenzním řízením, protože nesplňuje požadavky pro zveřejnění v časopise."
 
-msgid "emailTemplate.variable.subscription.membership"
-msgstr "Informace o členství předplatitele"
+msgid "manager.institutions.noContext"
+msgstr "Časopis této instituce nelze nalézt."
 
-msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr "Shrnutí typu, názvu, doby trvání a ceny předplatného"
-
-msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr "Datum ukončení předplatného"
-
-msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr "URL adresa stránky s předplatným"
-
-msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr "Kontaktní údaje správce předplatného"
-
-msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr "Jméno, příslušnost, telefonní číslo a e-mailová adresa předplatitele"
-
-msgid "doi.manager.settings.galleysWithDescription"
-msgstr "Sazebnice článku, jako publikovaná PDF"
-
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Zúžení výsledků podle kontextu (vydání a/nebo článek)."
-
-msgid "manager.statistics.defaultMetricDescription"
-msgstr ""
-"\n"
-"\t\tVáš časopis je nakonfigurován k využívaní více metrik. Statistiky "
-"čtenosti budou zobrazovány ve více souvislostech.\n"
-"\t\tExistují případy, kdy je třeba použít jedinou statistiku využívání, "
-"např. pro zobrazení seřazeného seznamu nejpoužívanějších článků nebo pro "
-"hodnocení\n"
-"\t\tvýsledků vyhledávání. Jako výchozí vyberte jednu z nakonfigurovaných "
-"metrik.\n"
-"\t"
-
-msgid "manager.statistics.reports.filters.byObject.description"
-msgstr ""
-"Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, "
-"ostatní sazebnice) a/nebo podle jednoho, nebo více id."
+msgid "mailable.subscriptionNotify.name"
+msgstr "Upozornění na předplatné"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
 "Tento email informuje registrovaného čtenáře, že pro něj manažer vytvořil "
 "předplatné. Obsahuje URL časopisu a přístupové instrukce."
 
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Předplatné brzy vyprší"
+
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
 "Tento email informuje předplatitele, že jeho předplatné brzy vyprší. "
 "Obsahuje URL časopisu a instrukce pro přístup."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Předplatné vypršelo"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
 "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje "
 "URL časopisu a instrukce pro přístup."
 
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Předplatné vypršelo naposledy"
+
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
 "Tento email informuje předplatitele, že jeho předplatné vypršelo. Obsahuje "
 "URL časopisu a instrukce pro přístup."
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Nákup individuálního předplatného"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2497,11 +2510,17 @@ msgstr ""
 "bylo zakoupeno online. Poskytuje souhrnné informace o předplatném a rychlý "
 "přístup k zakoupenému předplatnému."
 
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Nákup institucionálního předplatného"
+
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
 "Tento e-mail upozorňuje Správce předplatného, že bylo zakoupeno "
 "institucionální předplatné online. Poskytuje souhrnné informace o "
 "předplatném a rychlý přístup k zakoupenému předplatnému."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Obnovení individuálního předplatného"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2509,70 +2528,22 @@ msgstr ""
 "obnoveno online. Poskytuje souhrnné informace o předplatném a rychlý přístup "
 "k obnovenému předplatnému."
 
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Obnovení institucionálního předplatného"
+
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
 "Tento e-mail informuje správce předplatného o obnovení institucionálního "
 "předplatného online. Poskytuje souhrnné informace o předplatném a rychlý "
 "přístup k obnovenému předplatnému."
 
+msgid "mailable.openAccessNotify.name"
+msgstr "Upozornění na otevřený přístup"
+
 msgid "mailable.openAccessNotify.description"
 msgstr ""
 "Tento email je posílán čtenářům, kteří požádali o zasílání upozornění na "
 "přechod čísla časopisu do otevřeného přístupu."
-
-msgid "manager.subscriptions.form.institution"
-msgstr "Instituce"
-
-msgid "manager.subscriptions.form.institutionIdValid"
-msgstr "Zvolte, prosím, platnou instituci."
-
-msgid "manager.subscriptions.form.institutionRequired"
-msgstr "Před provedením nového předplatného musí být vytvořena instituce."
-
-msgid "manager.institutions.noContext"
-msgstr "Časopis této instituce nelze nalézt."
-
-msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "E-mailová adresa instituce"
-
-msgid "emailTemplate.variable.subscription.domain"
-msgstr "Doména"
-
-msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Rozsahy IP adres pro autentizaci předplatného"
-
-msgid "mailable.subscriptionExpired.name"
-msgstr "Předplatné vypršelo"
-
-msgid "mailable.subscriptionExpiredLast.name"
-msgstr "Předplatné vypršelo naposledy"
-
-msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr "Nákup individuálního předplatného"
-
-msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr "Nákup institucionálního předplatného"
-
-msgid "mailable.subscriptionRenewIndividual.name"
-msgstr "Obnovení individuálního předplatného"
-
-msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr "Obnovení institucionálního předplatného"
-
-msgid "mailable.openAccessNotify.name"
-msgstr "Upozornění na otevřený přístup"
-
-msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "iniciály časopisu"
-
-msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Jméno instituce"
-
-msgid "mailable.subscriptionNotify.name"
-msgstr "Upozornění na předplatné"
-
-msgid "mailable.subscriptionExpiresSoon.name"
-msgstr "Předplatné brzy vyprší"
 
 msgid "mailable.issuePublishNotify.name"
 msgstr "Oznámení o zveřejnění čísla"
@@ -2582,78 +2553,8 @@ msgstr ""
 "Tento e-mail je automaticky zasílán registrovaným uživatelům při zveřejnění "
 "nového čísla."
 
-msgid "stats.publications.downloadReport.description"
-msgstr ""
-"Stáhněte si tabulku CSV/Excel se statistikami používání článků, které "
-"odpovídají následujícím parametrům."
-
-msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr "Stažené články"
-
-msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr "Počet zobrazení abstraktů a stažení souborů pro každý článek."
-
-msgid "stats.issueStats"
-msgstr "Statistiky čísla"
-
-msgid "stats.issues.details"
-msgstr "Náhledy a stažení"
-
-msgid "stats.issues.searchIssueDescription"
-msgstr "Vyhledávání názvu, svazku a čísla vydání"
-
-msgid "stats.issues.none"
-msgstr ""
-"Nebyly zjištěny žádná vydání se statistikami používání, které by odpovídaly "
-"těmto parametrům."
-
-msgid "stats.issues.downloadReport.description"
-msgstr ""
-"Stáhněte si tabulku CSV/Excel se statistikami použití pro vydání, která "
-"odpovídají následujícím parametrům."
-
-msgid "stats.issues.downloadReport.downloadIssues"
-msgstr "Stáhnout vydání"
-
-msgid "stats.issues.countOfTotal"
-msgstr "{$count} z {$total} vydání"
-
-msgid "stats.issues.tooltip.label"
-msgstr "O statistikách vydání"
-
-msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
-"Počet zobrazení tabulky s obsahem a stažení sazebnic jednotlivých čísel."
-
-msgid "stats.issues.tooltip.text"
-msgstr ""
-"<strong>Náhledy</strong>: Počet návštěvníků zobrazujících obsah vydání."
-"<br><strong>Stažení</strong>: Počet stažení sazebnic vydání, pokud existuje."
-
-msgid "stats.contextStats"
-msgstr "Statistiky časopisu"
-
-msgid "stats.context.tooltip.label"
-msgstr "O statistikách časopisu"
-
-msgid "stats.context.downloadReport.description"
-msgstr ""
-"Stáhněte si tabulku CSV/Excel se statistikami používání tohoto časopisu, "
-"které odpovídají následujícím parametrům."
-
-msgid "stats.context.downloadReport.downloadContext.description"
-msgstr "Počet zobrazení titulní stránky časopisu."
-
-msgid "stats.context.downloadReport.downloadContext"
-msgstr "Stáhnout obsah časopisu"
-
-msgid "stats.context.tooltip.text"
-msgstr "Počet návštěvníků kteří si zobrazili titulní stránku časopisu."
-
-msgid "manager.emails.confirmResetAll"
-msgstr ""
-"Jste si jisti, že chcete resetovat všechny šablony e-mailů v tomto časopisu? "
-"Ztratíte tak veškerá přizpůsobení, která jste dopsud udělali."
+msgid "manager.manageEmails.description"
+msgstr "Upravit zprávy odeslané v e-mailech z tohoto deníku."
 
 msgid "mailable.layoutComplete.name"
 msgstr "Dokončené sazebnice"
@@ -2663,26 +2564,6 @@ msgstr "Požadavek na archiv"
 
 msgid "mailable.lockssNewArchive.name"
 msgstr "Požadavek na archiv (nový)"
-
-msgid "manager.manageEmails.description"
-msgstr "Upravit zprávy odeslané v e-mailech z tohoto deníku."
-
-msgid "manager.setup.submissionPreparationChecklist"
-msgstr "Zaškrtávací seznam pro přípravu příspěvku"
-
-msgid "manager.setup.submissionPreparationChecklistDescription"
-msgstr ""
-"V průběhu podávání příspěvku do časopisu jsou autoři nejdříve požádáni, aby "
-"zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu příspěvku a "
-"potvrdili tak jejich splnění; poté mohou postupovat dále. Zaškrtávací seznam "
-"je také zobrazen v Pokyny autorům v části O časopisu. Seznam můžete upravit "
-"níže, pamatujte ale, že aby autoři mohli pokračovat dále v odesílání svého "
-"příspěvku, budou muset zaškrtnutím potvrdit všechny položky tohoto seznamu."
-
-msgid "manager.section.noSectionEditors"
-msgstr ""
-"Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně "
-"jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role."
 
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Byla vytvořena nová verze"
@@ -2696,3 +2577,124 @@ msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "Tento e-mail je zasílán manažerům časopisů, když je podána nová příspěvek a "
 "nemá přiřazeny redaktory."
+
+#~ msgid "manager.setup.copyrightNotice"
+#~ msgstr "Oznámení o copyrightu"
+
+#~ msgid "manager.setup.metadata.coverage"
+#~ msgstr "Pokrytí"
+
+#~ msgid "manager.setup.metadata.coverage.description"
+#~ msgstr ""
+#~ "Odkazuje na zeměpisnou lokalitu, chronologické nebo historické pokrytí, a/"
+#~ "nebo charakteristiky výzkumného souboru."
+
+#~ msgid "manager.setup.customTags"
+#~ msgstr "Uživatelské tagy (štítky)"
+
+#~ msgid "manager.setup.customTagsDescription"
+#~ msgstr ""
+#~ "Uživatelské HTML tagy pro záhlaví, které mají být vloženy do záhlaví "
+#~ "každé stránky (například META tagy)."
+
+#~ msgid "manager.setup.publishingMode"
+#~ msgstr "Přístup k obsahu časopisu"
+
+#~ msgid "manager.statistics.statistics.registeredUsers"
+#~ msgstr "Registrovaní uživatelé"
+
+#~ msgid "manager.setup.porticoEnable"
+#~ msgstr ""
+#~ "Povolte službu Portico k ukládání a distribuci obsahu časopisu knihovnám, "
+#~ "které se účastní v projektu Portico."
+
+#~ msgid "manager.setup.porticoTitle"
+#~ msgstr "Portico"
+
+#~ msgid "manager.setup.editorialTeam.description"
+#~ msgstr ""
+#~ "Seznam redaktorů, vedoucích správců a ostatních osobností spojených s "
+#~ "tímto časopisem."
+
+#~ msgid "manager.setup.userAccess.success"
+#~ msgstr ""
+#~ "Podrobnosti o přístupu uživatelů k tomuto deníku byly aktualizovány."
+
+#~ msgid "manager.setup.searchEngineIndexing.success"
+#~ msgstr "Nastavení pro vyhledávače bylo aktualizováno."
+
+#~ msgid "manager.setup.privacyStatement.success"
+#~ msgstr "Prohlášení o ochraně osobních údajů bylo aktualizováno."
+
+#~ msgid "manager.setup.masthead.success"
+#~ msgstr "Podrobnosti o vedení v tomto deníku byly aktualizovány."
+
+#~ msgid "manager.setup.lists.success"
+#~ msgstr "Nastavení seznamu pro tento deník byla aktualizována."
+
+#~ msgid "manager.setup.information.success"
+#~ msgstr "Informace pro tento časopis byly aktualizovány."
+
+#~ msgid "manager.setup.contact.success"
+#~ msgstr "Kontaktní údaje pro tento časopis byly aktualizovány."
+
+#~ msgid "manager.setup.archiving.success"
+#~ msgstr "Podrobnosti o archivaci tohoto časopisu byly aktualizovány."
+
+#~ msgid "manager.setup.announcements.success"
+#~ msgstr "Nastavení oznámení byla aktualizována."
+
+#~ msgid "manager.payment.success"
+#~ msgstr "Nastavení plateb bylo aktualizováno."
+
+#~ msgid "manager.distribution.publishingMode.success"
+#~ msgstr "Podrobnosti o vydání byly aktualizovány."
+
+#~ msgid "doi.manager.settings.enableSubmissionDoi"
+#~ msgstr "Články"
+
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Články"
+
+#~ msgid "manager.statistics.reports.filters.byContext.description"
+#~ msgstr "Zúžení výsledků podle kontextu (vydání a/nebo článek)."
+
+#~ msgid "manager.statistics.defaultMetricDescription"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tVáš časopis je nakonfigurován k využívaní více metrik. Statistiky "
+#~ "čtenosti budou zobrazovány ve více souvislostech.\n"
+#~ "\t\tExistují případy, kdy je třeba použít jedinou statistiku využívání, "
+#~ "např. pro zobrazení seřazeného seznamu nejpoužívanějších článků nebo pro "
+#~ "hodnocení\n"
+#~ "\t\tvýsledků vyhledávání. Jako výchozí vyberte jednu z nakonfigurovaných "
+#~ "metrik.\n"
+#~ "\t"
+
+#~ msgid "manager.statistics.reports.filters.byObject.description"
+#~ msgstr ""
+#~ "Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf "
+#~ "sazebnice, ostatní sazebnice) a/nebo podle jednoho, nebo více id."
+
+#~ msgid "manager.emails.confirmResetAll"
+#~ msgstr ""
+#~ "Jste si jisti, že chcete resetovat všechny šablony e-mailů v tomto "
+#~ "časopisu? Ztratíte tak veškerá přizpůsobení, která jste dopsud udělali."
+
+#~ msgid "manager.setup.submissionPreparationChecklist"
+#~ msgstr "Zaškrtávací seznam pro přípravu příspěvku"
+
+#~ msgid "manager.setup.submissionPreparationChecklistDescription"
+#~ msgstr ""
+#~ "V průběhu podávání příspěvku do časopisu jsou autoři nejdříve požádáni, "
+#~ "aby zaškrtli všechny položky v Zaškrtávacím seznamu pro přípravu "
+#~ "příspěvku a potvrdili tak jejich splnění; poté mohou postupovat dále. "
+#~ "Zaškrtávací seznam je také zobrazen v Pokyny autorům v části O časopisu. "
+#~ "Seznam můžete upravit níže, pamatujte ale, že aby autoři mohli pokračovat "
+#~ "dále v odesílání svého příspěvku, budou muset zaškrtnutím potvrdit "
+#~ "všechny položky tohoto seznamu."
+
+#~ msgid "manager.section.noSectionEditors"
+#~ msgstr ""
+#~ "Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně "
+#~ "jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role."

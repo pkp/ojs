@@ -11,8 +11,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.OAIMetadata.marcxml.description"
-msgstr "Muodostaa MARC21-formaatin mukaista metadataa."
-
 msgid "plugins.OAIMetadata.marcxml.displayName"
 msgstr "MARC21-kuvailumuoto"
+
+msgid "plugins.OAIMetadata.marcxml.description"
+msgstr "Muodostaa MARC21-formaatin mukaista metadataa."

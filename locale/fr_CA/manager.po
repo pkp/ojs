@@ -51,6 +51,25 @@ msgstr ""
 "La revue exigera un abonnement pour accéder à une partie ou à l'intégralité "
 "de son contenu."
 
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Assigner des Identificateurs d'objets numériques (DOIs) aux articles, "
+"numéros et épreuves."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Veuillez choisir les objets auxquels des DOIs seront attribués. La plupart "
+"des revues attribuent des DOI aux articles, mais vous voudrez peut-être "
+"attribuer des DOI à tous les éléments publiés."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Utiliser les modèles par défaut.<br />%j.v%vi%i pour les numéros<br />%j.v%vi"
+"%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr ""
+
 msgid "manager.website.archiving"
 msgstr "Archivage"
 
@@ -330,6 +349,11 @@ msgstr ""
 
 msgid "manager.sections.editors"
 msgstr "Rédacteurs-trices de rubrique"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Au moins une rubrique doit être active. Consulter les paramètres de flux des "
+"travaux pour désactiver toutes les soumissions à cette revue."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Un titre abrégé est obligatoire pour la rubrique"
@@ -746,6 +770,11 @@ msgstr ""
 msgid "manager.setup.contextInitials"
 msgstr "Acronyme ou identifiant de la revue"
 
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Sélectionner le pays où se trouve cette revue, ou le pays de l'adresse "
+"postale du journal ou de l'éditeur."
+
 msgid "manager.setup.journalLayout"
 msgstr "Mise en page de la revue"
 
@@ -1153,6 +1182,18 @@ msgstr ""
 "Directives aux auteurs-es, droit d'auteur et indexation (comprenant "
 "l'inscription)."
 
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Empêcher les utilisateurs-trices de soumettre de nouveaux articles à la "
+"revue. Les soumissions peuvent être désactivées pour des rubriques "
+"individuelles sur la page des paramètres des <a href=\"{$url}\"> rubriques "
+"de revue</a>."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Cette revue n'accepte pas de soumissions pour le moment. Consulter les "
+"paramètres de flux des travaux pour autoriser les soumissions."
+
 msgid "manager.setup.enableOai"
 msgstr "Permettre l'accès OAI au contenu"
 
@@ -1253,9 +1294,6 @@ msgstr "Évalué-e-s par les pairs"
 
 msgid "manager.statistics.statistics.registeredReaders"
 msgstr "lecteurs-trices inscrits-es"
-
-msgid "manager.statistics.statistics.registeredUsers"
-msgstr "Utilisateurs-trices inscrits-es"
 
 msgid "manager.statistics.statistics.reviewerCount"
 msgstr "Nb. d'assignations"
@@ -1572,6 +1610,12 @@ msgstr "Le type d'abonnement est obligatoire."
 msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Veuillez sélectionner un type d'abonnement valide."
 
+msgid "manager.subscriptions.form.institution"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr ""
+
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Date de début"
 
@@ -1709,6 +1753,9 @@ msgid "manager.subscriptions.form.typeRequired"
 msgstr ""
 "Un type d'abonnement doit être créé avant que de nouveaux abonnements "
 "puissent être effectués."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Plage d'adresses IP"
@@ -2097,6 +2144,12 @@ msgstr ""
 msgid "plugins.importexport.common.register.success"
 msgstr "Enregistrement réussi !"
 
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validation réussie !"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "La validation a échoué."
+
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr ""
 "Le préfixe du DOI est manquant pour la revue ayant le chemin d'accès {$path}."
@@ -2108,6 +2161,57 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
 "Envoyer une copie à la personne-ressource principale identifiée dans les "
 "paramètres de la revue."
+
+msgid "stats.contextStats"
+msgstr ""
+
+msgid "stats.context.tooltip.text"
+msgstr ""
+
+msgid "stats.context.tooltip.label"
+msgstr ""
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr ""
+
+msgid "stats.issueStats"
+msgstr ""
+
+msgid "stats.issues.details"
+msgstr ""
+
+msgid "stats.issues.searchIssueDescription"
+msgstr ""
+
+msgid "stats.issues.none"
+msgstr ""
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr ""
+
+msgid "stats.issues.countOfTotal"
+msgstr ""
+
+msgid "stats.issues.tooltip.label"
+msgstr ""
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+
+msgid "stats.publicationStats"
+msgstr "Statistiques de l'article"
 
 msgid "stats.publications.details"
 msgstr "Renseignements sur l'article"
@@ -2132,34 +2236,19 @@ msgstr "Résumés"
 msgid "stats.publications.galleys"
 msgstr "Fichiers"
 
-msgid "stats.publicationStats"
-msgstr "Statistiques de l'article"
-
-msgid "plugins.importexport.common.validation.fail"
-msgstr "La validation a échoué."
-
-msgid "plugins.importexport.common.validation.success"
-msgstr "Validation réussie !"
-
-msgid "manager.setup.disableSubmissions.notAccepting"
+msgid "stats.publications.downloadReport.description"
 msgstr ""
-"Cette revue n'accepte pas de soumissions pour le moment. Consulter les "
-"paramètres de flux des travaux pour autoriser les soumissions."
 
-msgid "manager.setup.disableSubmissions.description"
+msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr ""
-"Empêcher les utilisateurs-trices de soumettre de nouveaux articles à la "
-"revue. Les soumissions peuvent être désactivées pour des rubriques "
-"individuelles sur la page des paramètres des <a href=\"{$url}\"> rubriques "
-"de revue</a>."
 
-msgid "manager.sections.confirmDeactivateSection.error"
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
-"Au moins une rubrique doit être active. Consulter les paramètres de flux des "
-"travaux pour désactiver toutes les soumissions à cette revue."
 
-msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Envoyer une copie de l'accusé de réception de la soumission à l'adresse "
+"courriel de la personne-ressource principale de la revue."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
@@ -2169,57 +2258,83 @@ msgstr ""
 "pouvez saisir une personne-ressource principale dans les  <a href="
 "\"{$url}\">paramètres de la revue</a>."
 
-msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
-msgstr ""
-"Envoyer une copie de l'accusé de réception de la soumission à l'adresse "
-"courriel de la personne-ressource principale de la revue."
-
 msgid "plugins.importexport.native.export.issues.results"
 msgstr "Exporter les résultats des numéros"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Erreur lors du traitement des épreuves du numéro"
 
-msgid "manager.setup.selectCountry"
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Le nom de la revue"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "L'URL de la page d'accueil de la revue"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Le nom du contact principal de la revue"
+
+msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
-"Sélectionner le pays où se trouve cette revue, ou le pays de l'adresse "
-"postale du journal ou de l'éditeur."
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "La signature des courriels automatisés de la revue"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "L'adresse de courriel du contact principal de la revue"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Le nom du mode de paiement"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Montant dû"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Devise du montant dû (CAD, par exemple)"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nom du site pour l'installation de plus d'une revue"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validez l'adresse courriel (enregistrement de la revue)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
 "Ce courriel est envoyé automatiquement à un nouveau membre de la revue "
 "lorsque les paramètres exigent que l'adresse courriel des nouveaux membres "
 "soit validée."
-
-msgid "mailable.validateEmailContext.name"
-msgstr "Validez l'adresse courriel (enregistrement de la revue)"
-
-msgid "emailTemplate.variable.site.siteTitle"
-msgstr "Nom du site pour l'installation de plus d'une revue"
-
-msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr "Devise du montant dû (CAD, par exemple)"
-
-msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr "Montant dû"
-
-msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr "Le nom du mode de paiement"
-
-msgid "emailTemplate.variable.context.contactEmail"
-msgstr "L'adresse de courriel du contact principal de la revue"
-
-msgid "emailTemplate.variable.context.contextSignature"
-msgstr "La signature des courriels automatisés de la revue"
-
-msgid "emailTemplate.variable.context.contactName"
-msgstr "Le nom du contact principal de la revue"
-
-msgid "emailTemplate.variable.context.contextUrl"
-msgstr "L'URL de la page d'accueil de la revue"
-
-msgid "emailTemplate.variable.context.contextName"
-msgstr "Le nom de la revue"
 
 msgid "doi.displayName"
 msgstr "DOI"
@@ -2232,23 +2347,23 @@ msgstr ""
 msgid "doi.readerDisplayName"
 msgstr "DOI"
 
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
 msgid "doi.manager.settings.description"
 msgstr ""
 "Veuillez configurer le plugiciel DOI pour être en mesure d'utiliser et gérer "
 "les DOIs dans OJS :"
 
-msgid "doi.manager.settings.doiObjectsRequired"
-msgstr ""
-"Veuillez choisir les objets auxquels des DOIs seront attribués. La plupart "
-"des revues attribuent des DOI aux articles, mais vous voudrez peut-être "
-"attribuer des DOI à tous les éléments publiés."
-
 msgid "doi.manager.settings.explainDois"
 msgstr ""
 "Veuillez choisir les objets publiés auxquels seront attribués des DOI :"
 
-msgid "doi.manager.settings.enablePublicationDoi"
-msgstr "Articles"
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Épreuves"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr ""
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Préfixe DOI"
@@ -2268,9 +2383,6 @@ msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
 "Par exemple, vol%viss%ipp%p pourrait créer un suffixe DOI tel que 10.1234/"
 "vol3iss2pp230"
-
-msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr "Épreuves"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
 msgstr "pour les numéros"
@@ -2303,8 +2415,40 @@ msgstr ""
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Êtes-vous certain-e de vouloir supprimer tous les DOIs existants ?"
 
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Attribuer des DOIs"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Attribuer des DOI à tous les objets de revues publiés pour lesquels aucun "
+"DOI n'a été attribué. Cette action ne peut pas être utilisée avec la "
+"configuration du suffixe individuel. Si vous avez modifié la configuration "
+"DOI ci-dessus, veuillez enregistrer vos modifications avant de lancer cette "
+"action. L'attribution de DOI peut prendre beaucoup de temps, en fonction du "
+"nombre d'objets publiés dans la revue."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Êtes-vous certain-e de vouloir attribuer des DOIs à tous les objets publiés "
+"n'ayant pas de DOI attribués ?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr ""
+
 msgid "doi.editor.doi"
 msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "Le DOI doit débuter par {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Attribuer"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "numéro"
@@ -2318,6 +2462,18 @@ msgstr "épreuves"
 msgid "doi.editor.customSuffixMissing"
 msgstr ""
 "Le DOI ne peut pas être attribué car le suffixe personnalisé est manquant."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"Vous ne pouvez pas générer un DOI tant que cette publication n'a pas été "
+"affectée à un numéro."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Vous ne pouvez pas générer un DOI car une ou plusieurs parties du modèle DOI "
+"requièrent davantage de données. Vous devrez peut-être affecter la "
+"publication à un numéro, définir un ID d'éditeur ou encore saisir des "
+"numéros de page."
 
 msgid "doi.editor.patternNotResolved"
 msgstr ""
@@ -2370,103 +2526,95 @@ msgstr ""
 "Le DOI {$pubId} a été attribué. Pour modifier le DOI,  veuillez visiter la "
 "page de <a href=\"{$doiManagementLink}\">gestion des DOI</a>."
 
-msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr "Attribuer des DOIs"
-
-msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgid "doi.editor.assignDoi.toBeAssigned"
 msgstr ""
-"Attribuer des DOI à tous les objets de revues publiés pour lesquels aucun "
-"DOI n'a été attribué. Cette action ne peut pas être utilisée avec la "
-"configuration du suffixe individuel. Si vous avez modifié la configuration "
-"DOI ci-dessus, veuillez enregistrer vos modifications avant de lancer cette "
-"action. L'attribution de DOI peut prendre beaucoup de temps, en fonction du "
-"nombre d'objets publiés dans la revue."
-
-msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr ""
-"Êtes-vous certain-e de vouloir attribuer des DOIs à tous les objets publiés "
-"n'ayant pas de DOI attribués ?"
-
-msgid "doi.editor.doi.assignDoi"
-msgstr "Attribuer"
-
-msgid "doi.editor.doi.description"
-msgstr "Le DOI doit débuter par {$prefix}."
-
-msgid "doi.editor.missingParts"
-msgstr ""
-"Vous ne pouvez pas générer un DOI car une ou plusieurs parties du modèle DOI "
-"requièrent davantage de données. Vous devrez peut-être affecter la "
-"publication à un numéro, définir un ID d'éditeur ou encore saisir des "
-"numéros de page."
-
-msgid "doi.editor.missingIssue"
-msgstr ""
-"Vous ne pouvez pas générer un DOI tant que cette publication n'a pas été "
-"affectée à un numéro."
-
-msgid "doi.editor.preview.objects"
-msgstr "Élément"
-
-msgid "doi.editor.preview.galleys"
-msgstr "Épreuves : {$galleyLabel}"
-
-msgid "doi.editor.preview.publication.none"
-msgstr "Un DOI n'a pas été assigné à cette publication."
-
-msgid "doi.editor.preview.publication"
-msgstr "Le DOI pour cette publication sera {$doi}."
 
 msgid "doi.editor.missingPrefix"
 msgstr "Le DOI doit débuter par {$doiPrefix}."
 
-msgid "doi.manager.displayName"
-msgstr "DOIs"
+msgid "doi.editor.preview.publication"
+msgstr "Le DOI pour cette publication sera {$doi}."
 
-msgid "doi.manager.settings.doiSuffixLegacy"
+msgid "doi.editor.preview.publication.none"
+msgstr "Un DOI n'a pas été assigné à cette publication."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Épreuves : {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "Élément"
+
+msgid "api.galley.403.publicationDidNotMatch"
 msgstr ""
-"Utiliser les modèles par défaut.<br />%j.v%vi%i pour les numéros<br />%j.v%vi"
-"%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
 
-msgid "manager.setup.enableDois.description"
+msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
-"Assigner des Identificateurs d'objets numériques (DOIs) aux articles, "
-"numéros et épreuves."
 
-msgid "manager.statistics.defaultMetricDescription"
+msgid "api.issue.400.invalidDoi"
 msgstr ""
-"\n"
-"\t\tVotre revue est paramétrée pour enregistrer plus d'une mesure "
-"d'utilisation. Les statistiques d'utilisation seront affichées dans "
-"plusieurs contextes.\n"
-"Il y a des cas où une statistique d'utilisation unique doit être utilisée, "
-"par exemple pour afficher une liste ordonnée des articles les plus consultés "
-"ou pour classer des résultats de recherche. Veuillez sélectionner l'une des "
-"mesures paramétrées par défaut.\n"
-"\t"
 
-msgid "manager.statistics.reports.filters.byContext.description"
-msgstr "Affiner les résultats par contexte (numéro et/ou article)."
-
-msgid "manager.statistics.reports.filters.byObject.description"
+msgid "api.issue.403.canEditPublishedDoi"
 msgstr ""
-"Affiner les résultats par type d'objet (revue, numéro, article, fichiers) et/"
-"ou par un ou plusieurs identifiants (ID) d'objet."
+
+msgid "api.issue.404.issuesNotFound"
+msgstr ""
+
+msgid "doi.manager.submissionDois"
+msgstr ""
+
+msgid "doi.manager.issueDois"
+msgstr ""
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+
+msgid "manager.institutions.noContext"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.name"
+msgstr ""
 
 msgid "mailable.subscriptionNotify.description"
-msgstr "Ce courriel avise un,une lecteur-trice inscrit-e que le,la directeur-trice de la revue lui a créé un abonnement. Il fournit l'adresse URL de la revue ainsi que les instructions pour y accéder."
+msgstr ""
+"Ce courriel avise un,une lecteur-trice inscrit-e que le,la directeur-trice "
+"de la revue lui a créé un abonnement. Il fournit l'adresse URL de la revue "
+"ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpiresSoon.description"
-msgstr "Ce courriel avise un-e abonné-e que son abonnement expirera sous peu. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder."
+msgstr ""
+"Ce courriel avise un-e abonné-e que son abonnement expirera sous peu. Il "
+"fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpired.description"
-msgstr "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder."
+msgstr ""
+"Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit "
+"l'adresse URL de la revue, ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr ""
 
 msgid "mailable.subscriptionExpiredLast.description"
-msgstr "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder."
+msgstr ""
+"Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne "
+"l'adresse URL de la revue ainsi que les instructions pour y accéder."
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr ""
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
-msgstr "Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
+msgstr ""
+"Ce courriel informe le,la responsable des abonnements qu'un abonnement "
+"individuel a été souscrit en ligne. Il fournit des renseignements sommaires "
+"sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr ""
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2474,11 +2622,17 @@ msgstr ""
 "institutionnel a été souscrit en ligne. Il fournit des renseignements "
 "sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
 
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr ""
+
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
 "Ce courriel informe le,la responsable des abonnements qu'un abonnement "
 "individuel a été renouvelé en ligne. Il fournit des renseignements sommaires "
 "sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr ""
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2486,5 +2640,64 @@ msgstr ""
 "institutionnel a été renouvelé en ligne. Il fournit des renseignements "
 "sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
 
+msgid "mailable.openAccessNotify.name"
+msgstr ""
+
 msgid "mailable.openAccessNotify.description"
-msgstr "Ce courriel est envoyé aux lecteurs-trices inscrits-es qui ont demandé à recevoir un avis par courriel quand un numéro devient disponible en libre accès."
+msgstr ""
+"Ce courriel est envoyé aux lecteurs-trices inscrits-es qui ont demandé à "
+"recevoir un avis par courriel quand un numéro devient disponible en libre "
+"accès."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr ""
+
+msgid "mailable.lockssNewArchive.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+#~ msgid "manager.statistics.statistics.registeredUsers"
+#~ msgstr "Utilisateurs-trices inscrits-es"
+
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Articles"
+
+#~ msgid "manager.statistics.defaultMetricDescription"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tVotre revue est paramétrée pour enregistrer plus d'une mesure "
+#~ "d'utilisation. Les statistiques d'utilisation seront affichées dans "
+#~ "plusieurs contextes.\n"
+#~ "Il y a des cas où une statistique d'utilisation unique doit être "
+#~ "utilisée, par exemple pour afficher une liste ordonnée des articles les "
+#~ "plus consultés ou pour classer des résultats de recherche. Veuillez "
+#~ "sélectionner l'une des mesures paramétrées par défaut.\n"
+#~ "\t"
+
+#~ msgid "manager.statistics.reports.filters.byContext.description"
+#~ msgstr "Affiner les résultats par contexte (numéro et/ou article)."
+
+#~ msgid "manager.statistics.reports.filters.byObject.description"
+#~ msgstr ""
+#~ "Affiner les résultats par type d'objet (revue, numéro, article, fichiers) "
+#~ "et/ou par un ou plusieurs identifiants (ID) d'objet."

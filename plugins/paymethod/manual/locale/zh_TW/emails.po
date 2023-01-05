@@ -16,6 +16,9 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "手動付款通知"
 
+msgid "emails.manualPaymentNotification.body"
+msgstr ""
+
 msgid "emails.manualPaymentNotification.description"
 msgstr "此電郵樣式用作通知期刊主管有一手動付款的請求。"
 

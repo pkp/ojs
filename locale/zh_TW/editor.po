@@ -40,6 +40,9 @@ msgstr "所有編輯"
 msgid "editor.me"
 msgstr "我"
 
+msgid "editor.publicIdentificationExists"
+msgstr ""
+
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "現典藏庫無投稿。"
 
@@ -53,7 +56,8 @@ msgid "editor.submissionReview.emailWillArchive"
 msgstr "此投稿將會在發送通知作者的電郵或按跳過電郵按鈕後被典藏。"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
-msgstr "發送投稿去審稿前，請使用通知作者連結去通知作者期刊決定及選擇發送的版本。"
+msgstr ""
+"發送投稿去審稿前，請使用通知作者連結去通知作者期刊決定及選擇發送的版本。"
 
 msgid "editor.notifyUsers"
 msgstr "通知用戶"
@@ -80,7 +84,8 @@ msgid "editor.notifyUsers.allUsers"
 msgstr "發送此訊息至所有與此期刊關聯的用戶 ({$count} users)"
 
 msgid "editor.notifyUsers.interestedUsers"
-msgstr "發送此訊息至所有與此期刊關聯並指明希望收到最新資訊的用戶 ({$count} users)"
+msgstr ""
+"發送此訊息至所有與此期刊關聯並指明希望收到最新資訊的用戶 ({$count} users)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "包括此期的目錄："
@@ -160,11 +165,15 @@ msgstr "已上載"
 msgid "editor.issues.remove"
 msgstr "移除"
 
+msgid "editor.issues.proofed"
+msgstr ""
+
 msgid "editor.issues.removeCoverPage"
 msgstr "移除封面圖像？"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
-msgstr "您所要求刪除的封面圖像與另一期刊的一期相同。請確保您現正在正確的期刊工作、您"
+msgstr ""
+"您所要求刪除的封面圖像與另一期刊的一期相同。請確保您現正在正確的期刊工作、您"
 "正使用正確的期ID及重試。"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
@@ -180,7 +189,8 @@ msgid "editor.issues.styleFile"
 msgstr "樣式表(Stylesheet)"
 
 msgid "editor.issues.invalidStyleFormat"
-msgstr "樣式表(stylesheet)格式。請確認所提交的檔案為有效的CSS。（備註：樣式表的開始如"
+msgstr ""
+"樣式表(stylesheet)格式。請確認所提交的檔案為有效的CSS。（備註：樣式表的開始如"
 "有注釋或會被拒。）"
 
 msgid "editor.issues.removeStyleFile"
@@ -210,11 +220,16 @@ msgstr "取用"
 msgid "editor.issues.cover"
 msgstr "封面"
 
+msgid "editor.issues.confirmIssueDelete"
+msgstr "所有文章將回到編輯佇列及所有相關檔案將被永遠刪除。是否確認移除此期？"
+
 msgid "editor.issues.resetIssueOrder"
-msgstr "此期刊使用自訂期刊次序。<a href=\"{$url}\" class=\"action\">重置至默認</a>"
+msgstr ""
+"此期刊使用自訂期刊次序。<a href=\"{$url}\" class=\"action\">重置至默認</a>"
 
 msgid "editor.issues.resetSectionOrder"
-msgstr "此期使用自訂分類次序。<a href=\"{$url}\" class=\"action\">重置至默認</a>"
+msgstr ""
+"此期使用自訂分類次序。<a href=\"{$url}\" class=\"action\">重置至默認</a>"
 
 msgid "editor.issues.issueData"
 msgstr "每期數據"
@@ -264,11 +279,17 @@ msgstr "開放"
 msgid "editor.issues.pages"
 msgstr "頁"
 
+msgid "editor.issues.galleys"
+msgstr "此期校對樣本"
+
 msgid "editor.issues.galley"
 msgstr "此期校對樣本"
 
 msgid "editor.issues.viewingGalley"
 msgstr "查看此期校對樣本"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "出版校對樣本與全期內容。"
 
 msgid "editor.issues.noneIssueGalleys"
 msgstr "沒有出版任何校對樣本。"
@@ -284,6 +305,9 @@ msgstr "此期校對樣本公開認證已存在。"
 
 msgid "editor.issues.backToIssueGalleys"
 msgstr "回到此期校對樣本"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "是否確認刪除此期校對樣本？"
 
 msgid "editor.issues.identifiers"
 msgstr "識別碼"
@@ -407,28 +431,19 @@ msgstr ""
 msgid "editor.submission.selectGalleyFiles"
 msgstr "選擇校對樣本檔案"
 
-msgid "editor.issues.confirmIssueDelete"
-msgstr "所有文章將回到編輯佇列及所有相關檔案將被永遠刪除。是否確認移除此期？"
-
-msgid "editor.issues.galleys"
-msgstr "此期校對樣本"
-
-msgid "editor.issues.issueGalleysDescription"
-msgstr "出版校對樣本與全期內容。"
-
-msgid "editor.issues.confirmDeleteGalley"
-msgstr "是否確認刪除此期校對樣本？"
-
 msgid "editor.submission.editorial.finalDraftDescription"
-msgstr "在此列表最終稿件檔案將由審稿員編輯至另一版本，然後上載至<span class="
+msgstr ""
+"在此列表最終稿件檔案將由審稿員編輯至另一版本，然後上載至<span class="
 "\"pkp_help_title\">審稿</span>之下。"
 
 msgid "editor.submission.proof.manageProofFilesDescription"
-msgstr "在所有投稿步驟中任何已上載檔案，也可透過剔選以下勾選框添加至校對列表及點選搜"
+msgstr ""
+"在所有投稿步驟中任何已上載檔案，也可透過剔選以下勾選框添加至校對列表及點選搜"
 "尋：所有可供選擇檔案將被列出及可選取。"
 
 msgid "editor.publicIdentificationExistsForTheSameType"
-msgstr "公開識別碼'{$publicIdentifier}'已被另一同類項目使用。請為此期刊的這類項目提供"
+msgstr ""
+"公開識別碼'{$publicIdentifier}'已被另一同類項目使用。請為此期刊的這類項目提供"
 "獨一無二的識別碼。"
 
 msgid "editor.article.coverImage"

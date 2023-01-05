@@ -11,16 +11,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-msgid "plugins.reports.subscriptions.ipRanges"
-msgstr "IP-områder"
-
-msgid "plugins.reports.subscriptions.institutionMailingAddress"
-msgstr "Institusjonens postadresse"
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Abonnementsrapport"
 
 msgid "plugins.reports.subscriptions.description"
 msgstr ""
 "Dette programtillegget genererer en CSV-rapport med en liste over "
 "abonnementer med tilhørende informasjon."
 
-msgid "plugins.reports.subscriptions.displayName"
-msgstr "Abonnementsrapport"
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Institusjonens postadresse"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP-områder"

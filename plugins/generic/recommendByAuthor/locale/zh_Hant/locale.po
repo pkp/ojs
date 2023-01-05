@@ -20,3 +20,6 @@ msgstr "此插件會在文章摘要頁面加添一個同一作者文章的列表
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "同作者最多閱覽文章"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""

@@ -15,41 +15,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
+msgid "submission.submit.userGroup"
+msgstr "Invia usando il mio ruolo come ..."
+
 msgid "submission.upload.selectComponent"
 msgstr "Selezionare il tipo di proposta"
 
 msgid "submission.title"
 msgstr "Titolo dell'articolo"
 
+msgid "submission.title.tip"
+msgstr ""
+"Il tipo di proposta è di solito  'immagine', 'testo', o un altro tipo "
+"multimediale come 'software' o 'interativo'. Per favore scegli il più "
+"rilevante per la tua propostoa. Esempio possono essere trovati qui: <a "
+"target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Inizia una nuova proposta in"
+
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Nuova proposta"
+
+msgid "grid.action.workflow"
+msgstr "Flusso di lavoro per una proposta"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "L'abstract deve essere di {$wordCount} parole o meno."
+
+msgid "submission.submit.noContext"
+msgstr "Non è possibile trovare la testata selezionata per la sottomissione."
 
 msgid "submission.issueEntry"
 msgstr "Metadati"
 
 msgid "submission.submit.whatNext.description"
-msgstr "La redazione ha ricevuto notifica della tua proposta e ti è stata inviata una email di conferma. Appena gli editor avranno visionato la tua proposta sarai contattato."
-
-msgid "workflow.review.externalReview"
-msgstr "Revisione"
-
-msgid "editor.submission.decision.sendExternalReview"
-msgstr "Invia questa proposta al revisore esterno"
-
-msgid "submission.upload.fileContents"
-msgstr "File della proposta"
-
-msgid "submission.submit.userGroup"
-msgstr "Invia usando il mio ruolo come ..."
-
-msgid "submission.title.tip"
-msgstr "Il tipo di proposta è di solito  'immagine', 'testo', o un altro tipo multimediale come 'software' o 'interativo'. Per favore scegli il più rilevante per la tua propostoa. Esempio possono essere trovati qui: <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
-
-msgid "submission.submit.newSubmissionMultiple"
-msgstr "Inizia una nuova proposta in"
-
-msgid "grid.action.workflow"
-msgstr "Flusso di lavoro per una proposta"
+msgstr ""
+"La redazione ha ricevuto notifica della tua proposta e ti è stata inviata "
+"una email di conferma. Appena gli editor avranno visionato la tua proposta "
+"sarai contattato."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "La gabbia appare all'interno del fascicolo"
@@ -58,10 +64,12 @@ msgid "grid.action.issueEntry"
 msgstr "Vedi i metadati della proposta"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "La gabbia \"{$galleyFormatName}\" di questo articolo è resa disponibile."
+msgstr ""
+"La gabbia \"{$galleyFormatName}\" di questo articolo è resa disponibile."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "La gabbia \"{$galleyFormatName}\" di questo articolo è resa indisponibile."
+msgstr ""
+"La gabbia \"{$galleyFormatName}\" di questo articolo è resa indisponibile."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "L'identificativo pubblico di questa proposta è aggiornato."
@@ -97,13 +105,21 @@ msgid "submission.submit.titleAndSummary"
 msgstr "Titolo e abstract"
 
 msgid "submission.submit.upload.description"
-msgstr "Carica i file associati con questa proposta, inclusi l'articolo, i set di dati, le immagini, etc."
+msgstr ""
+"Carica i file associati con questa proposta, inclusi l'articolo, i set di "
+"dati, le immagini, etc."
 
 msgid "submission.pageProofs"
 msgstr "Correzione di bozze"
 
+msgid "workflow.review.externalReview"
+msgstr "Revisione"
+
 msgid "submission.event.issueMetadataUpdated"
 msgstr "I metadati di questa proposta sono stati aggiornati."
+
+msgid "submission.upload.fileContents"
+msgstr "File della proposta"
 
 msgid "submission.complete"
 msgstr "Approvata"
@@ -125,55 +141,40 @@ msgid "submission.citationFormat.notFound"
 msgstr "Il formato di citazione richiesto non è stato trovato."
 
 msgid "submission.metadataDescription"
-msgstr "Le specifiche sono basate sul set del Dublin Core, uno standard internazionale usato per descrivere i contenuti delle riviste."
+msgstr ""
+"Le specifiche sono basate sul set del Dublin Core, uno standard "
+"internazionale usato per descrivere i contenuti delle riviste."
 
 msgid "section.any"
 msgstr "Qualsiasi sezione"
 
-msgid "submission.abstract.wordCount.description"
-msgstr "L'abstract deve essere di {$wordCount} parole o meno."
+msgid "submission.sectionOptions"
+msgstr "Opzioni di sezione"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} items"
 
 msgid "catalog.category.heading"
 msgstr "Tutti gli items"
 
-msgid "submission.submit.noContext"
-msgstr "Non è possibile trovare la testata selezionata per la sottomissione."
-
-msgid "publication.scheduledIn"
+msgid "galley.editPublishedDisabled"
 msgstr ""
-"Pianificato per la pubblicazione nell'uscita <a href=\"{$issueUrl}\""
-">{$issueName}2</a>."
+"I file di pubblicazione di questo articolo non possono essere modificati "
+"perché è già stato pubblicato."
 
-msgid "publication.publishedIn"
-msgstr "Pubblicato in <a href=\"{$issueUrl}\">{$issueName}2</a>."
+msgid "galley.publicationNotFound"
+msgstr "Non è possibile trovare l'articolo per questi file di stampa."
 
-msgid "publication.required.issue"
+msgid "publication.assignToissue"
+msgstr "Assegna ad un'uscita"
+
+msgid "publication.assignedToIssue"
 msgstr ""
-"Questo articolo deve essere assegnato ad un'uscita prima di poter essere "
-"pubblicato."
+"Assegnato all'uscita<a href=\"{$issueUrl}\">{$issueName}</a> ma non ancora "
+"pianificato per la pubblicazione."
 
-msgid "publication.publish.confirmation.backIssue"
-msgstr ""
-"I requisiti di pubblicazione sono corretti. Questo articolo sarà pubblicato "
-"immediatamente nell'uscita {$issue}. Sei sicuro di voler pubblicare questo "
-"articolo?"
-
-msgid "publication.publish.confirmation.futureIssue"
-msgstr ""
-"I requisiti di pubblicazione sono corretti. Questo articolo sarà pubblicato "
-"alla pubblicazione di {$issue}. Sei sicuro di voler pianificare la "
-"pubblicazione di questo articolo?"
-
-msgid "publication.publish.confirmation"
-msgstr ""
-"I requisiti di pubblicazione sono corretti. Sei sicuro di voler pubblicare "
-"questo articolo?"
-
-msgid "publication.invalidIssue"
-msgstr "Non è possibile trovare l'uscita per questo articolo."
-
-msgid "publication.invalidSection"
-msgstr "Non è possibile trovare la sezione per questo articolo."
+msgid "publication.changeIssue"
+msgstr "Cambia uscita"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -181,33 +182,31 @@ msgstr ""
 "pubblicata. Non inserire una data di pubblicazione a meno che l'articolo non "
 "sia già stato pubblicato ed hai necessità di retrodatarlo."
 
-msgid "galley.publicationNotFound"
-msgstr "Non è possibile trovare l'articolo per questi file di stampa."
+msgid "publication.invalidSection"
+msgstr "Non è possibile trovare la sezione per questo articolo."
 
-msgid "galley.editPublishedDisabled"
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inattiva)"
+
+msgid "publication.invalidIssue"
+msgstr "Non è possibile trovare l'uscita per questo articolo."
+
+msgid "publication.publish.confirmation"
 msgstr ""
-"I file di pubblicazione di questo articolo non possono essere modificati "
-"perché è già stato pubblicato."
+"I requisiti di pubblicazione sono corretti. Sei sicuro di voler pubblicare "
+"questo articolo?"
 
-msgid "catalog.browseTitles"
-msgstr "{$numTitles} items"
-
-msgid "submission.sectionOptions"
-msgstr "Opzioni di sezione"
-
-msgid "publication.issue.success"
-msgstr "I dettagli di pubblicazione del fascicolo sono stati aggiornati."
-
-msgid "publication.selectIssue"
-msgstr "Seleziona l'uscita per la quale pianificare la pubblicazione"
-
-msgid "publication.assignToissue"
-msgstr "Assegna ad un'uscita"
-
-msgid "publication.unscheduledIn"
+msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Questo articolo non è stato pianificato per la pubblicazione in nessuna "
-"uscita."
+"I requisiti di pubblicazione sono corretti. Questo articolo sarà pubblicato "
+"alla pubblicazione di {$issue}. Sei sicuro di voler pianificare la "
+"pubblicazione di questo articolo?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"I requisiti di pubblicazione sono corretti. Questo articolo sarà pubblicato "
+"immediatamente nell'uscita {$issue}. Sei sicuro di voler pubblicare questo "
+"articolo?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -215,8 +214,26 @@ msgstr ""
 "pubblicato immediatamente in quanto la data di pubblicazione è stata fissata "
 "per il {$datePublished}. Confermi la pubblicazione?"
 
-msgid "publication.inactiveSection"
-msgstr "{$section} (Inattiva)"
+msgid "publication.required.issue"
+msgstr ""
+"Questo articolo deve essere assegnato ad un'uscita prima di poter essere "
+"pubblicato."
+
+msgid "publication.publishedIn"
+msgstr "Pubblicato in <a href=\"{$issueUrl}\">{$issueName}2</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Pianificato per la pubblicazione nell'uscita <a href="
+"\"{$issueUrl}\">{$issueName}2</a>."
+
+msgid "publication.unscheduledIn"
+msgstr ""
+"Questo articolo non è stato pianificato per la pubblicazione in nessuna "
+"uscita."
+
+msgid "publication.selectIssue"
+msgstr "Seleziona l'uscita per la quale pianificare la pubblicazione"
 
 msgid "submission.publication"
 msgstr "Pubblicazione"
@@ -230,10 +247,18 @@ msgstr "Pianificato"
 msgid "publication.status.unscheduled"
 msgstr "Rimosso dalla pianficazione"
 
+msgid "submission.publications"
+msgstr "Pubblicazioni"
+
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
 "L'anno di copyright sarà configurato automaticamente quando questo articolo "
 "sarà assegnato ad un'uscita."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"L'anno di copyright verrà definito automaticamente in base alla data di "
+"pubblicazione."
 
 msgid "publication.datePublished"
 msgstr "Data di pubblicazione"
@@ -276,6 +301,19 @@ msgstr ""
 "Per essere pubblicato un'articolo deve essere nella fase di copy-editing o "
 "produzione."
 
+msgid "submission.license.description"
+msgstr ""
+"La licenza sarà conforme a <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> al momento della pubblicazione."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Il copyright sarà assegnato automaticamente a {$copyright} alla "
+"pubblicazione."
+
+msgid "submission.copyrightOther.description"
+msgstr "Assegnare il copyright degli articoli pubblicati al seguente soggetto."
+
 msgid "publication.unpublish"
 msgstr "Rimuovi dalla pubblicazione"
 
@@ -291,53 +329,30 @@ msgstr "Dettagli di pubblicazione per la versione {$version}"
 msgid "submission.queries.production"
 msgstr "Discussioni durante la produzione"
 
-msgid "submission.copyrightOther.description"
-msgstr "Assegnare il copyright degli articoli pubblicati al seguente soggetto."
+msgid "editor.submission.decision.backToReview"
+msgstr "Torna alla revisione"
 
-msgid "submission.copyrightHolder.description"
+msgid "editor.submission.decision.backToReview.description"
 msgstr ""
-"Il copyright sarà assegnato automaticamente a {$copyright} alla "
-"pubblicazione."
+"Modifica la decisione di accettare questa proposta e riportala alla "
+"revisione."
 
-msgid "submission.license.description"
+msgid "editor.submission.decision.backToReview.log"
 msgstr ""
-"La licenza sarà conforme a <a href='{$licenseUrl}' "
-"target='_blank'>{$licenseName}</a> al momento della pubblicazione."
+"{$editorName} ha modificato la decisione di accettare questa proposta e la "
+"ha riportato alla fase di revisione."
 
-msgid "publication.copyrightYearBasis.submissionDescription"
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Ritornata alla revisione"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "La proposta, {$title}, è stata riportata alla fase di revisione."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
-"L'anno di copyright verrà definito automaticamente in base alla data di "
-"pubblicazione."
-
-msgid "submission.publications"
-msgstr "Pubblicazioni"
-
-msgid "publication.changeIssue"
-msgstr "Cambia uscita"
-
-msgid "publication.assignedToIssue"
-msgstr ""
-"Assegnato all'uscita<a href=\"{$issueUrl}\">{$issueName}</a> ma non ancora "
-"pianificato per la pubblicazione."
-
-msgid "doi.submission.incorrectContext"
-msgstr ""
-"Non è stato possibile creare un DOI per il seguente articolo: "
-"{$pubObjectTitle}. Non esiste nel sito della rivista."
-
-msgid "doi.submission.issueMissing.representation"
-msgstr ""
-"Non è stato possibile creare un DOI per una galley, {$pubObjectTitle}, del "
-"seguente articolo: {$itemTitle}. L'articolo deve essere assegnato ad una "
-"uscita affinché il DOI sia generato."
-
-msgid "doi.submission.issueMissing.publication"
-msgstr ""
-"Non è stato possibile creare un DOI per questo articolo: {$pubObjectTitle}. "
-"L'articolo deve essere assegnato ad una uscita affinché il DOI sia generato."
-
-msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Seleziona i file che devono essere resi disponibili per la revisione."
+"Invia una email agli autori per informarli che la loro sottomissione è stata "
+"riportata alla fase di revisione. Spiega la motivazione di questa decisione "
+"e informa gli autori sul nuovo processo di revisione che verrà effettuato."
 
 #, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
@@ -347,30 +362,48 @@ msgstr ""
 "agli autori sulla possibile durata del processo di revisione e quando posso "
 "aspettarsi una nuova risposta dall'editor."
 
-msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Seleziona i file che devono essere resi disponibili per la revisione."
+
+msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"Invia una email agli autori per informarli che la loro sottomissione è stata "
-"riportata alla fase di revisione. Spiega la motivazione di questa decisione "
-"e informa gli autori sul nuovo processo di revisione che verrà effettuato."
+"Non è stato possibile creare un DOI per questo articolo: {$pubObjectTitle}. "
+"L'articolo deve essere assegnato ad una uscita affinché il DOI sia generato."
 
-msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "La proposta, {$title}, è stata riportata alla fase di revisione."
-
-msgid "editor.submission.decision.backToReview.completed"
-msgstr "Ritornata alla revisione"
-
-msgid "editor.submission.decision.backToReview.log"
+msgid "doi.submission.issueMissing.representation"
 msgstr ""
-"{$editorName} ha modificato la decisione di accettare questa proposta e la "
-"ha riportato alla fase di revisione."
+"Non è stato possibile creare un DOI per una galley, {$pubObjectTitle}, del "
+"seguente articolo: {$itemTitle}. L'articolo deve essere assegnato ad una "
+"uscita affinché il DOI sia generato."
 
-msgid "editor.submission.decision.backToReview.description"
+msgid "doi.submission.incorrectContext"
 msgstr ""
-"Modifica la decisione di accettare questa proposta e riportala alla "
-"revisione."
+"Non è stato possibile creare un DOI per il seguente articolo: "
+"{$pubObjectTitle}. Non esiste nel sito della rivista."
 
-msgid "editor.submission.decision.backToReview"
-msgstr "Torna alla revisione"
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
 
 msgid "submission.submit.form.authorRequired"
 msgstr "E' necessario indicare almeno un autore."
@@ -388,3 +421,9 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Selezione il ruolo dell'autore."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Invia questa proposta al revisore esterno"
+
+#~ msgid "publication.issue.success"
+#~ msgstr "I dettagli di pubblicazione del fascicolo sono stati aggiornati."
