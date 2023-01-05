@@ -340,18 +340,3 @@ msgstr "未能為投稿{$itemTitle}的校對樣本{$pubObjectTitle}創建DOI。�
 
 msgid "doi.submission.incorrectContext"
 msgstr "未能為此投稿{$pubObjectTitle}創建DOI。此期刊現查無此投稿。"
-
-msgid "submission.submit.form.authorRequired"
-msgstr "必須提供最少一個作者。"
-
-msgid "submission.submit.form.titleRequired"
-msgstr "請輸入您的文章標題。"
-
-msgid "submission.submit.form.abstractRequired"
-msgstr "請輸入您的文章摘要。"
-
-msgid "submission.submit.form.wordCountAlert"
-msgstr "您的文章摘要過長。請勿超越此部分的字數上限。"
-
-msgid "submission.submit.form.contributorRoleRequired"
-msgstr "請選擇投稿人身份。"
