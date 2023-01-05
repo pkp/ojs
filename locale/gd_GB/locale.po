@@ -1,3 +1,5 @@
+msgid ""
+msgstr ""
 "Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
 "Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/locale/gd_GB/"
 ">\n"
