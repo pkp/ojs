@@ -48,7 +48,7 @@ session_lifetime = 30
 ; SameSite configuration for the cookie, see possible values and explanations
 ; at https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
 ; To set the "Secure" attribute for the cookie see the setting force_ssl at the [security] group
-session_samesite = lax
+session_samesite = Lax
 
 ; Enable support for running scheduled tasks
 ; Set this to On if you have set up the scheduled tasks script to
