@@ -1,11 +1,12 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
+# Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:43-07:00\n"
-"PO-Revision-Date: 2022-08-10 03:31+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2023-01-09 21:02+0000\n"
+"Last-Translator: Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -1669,7 +1670,7 @@ msgid "about.history"
 msgstr "Histórico do periódico"
 
 msgid "about.editorialTeam"
-msgstr "Equipe Editorial"
+msgstr "Corpo Editorial"
 
 msgid "about.editorialTeam.biography"
 msgstr "Biografia"
@@ -1684,7 +1685,7 @@ msgid "about.sectionPolicies"
 msgstr "Políticas de Seção"
 
 msgid "about.submissions"
-msgstr "Submissões"
+msgstr "Submissão"
 
 msgid "about.onlineSubmissions.login"
 msgstr "Acesso"
