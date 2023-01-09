@@ -101,6 +101,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                 'galley' => $galley,
                 'isLatestPublication' => $article->getData('currentPublicationId') === $galley->getData('publicationId'),
                 'galleyPublication' => $galleyPublication,
+                'submissionFile' => $submissionFile,
             ]);
             $templateMgr->display($this->getTemplateResource('display.tpl'));
 
