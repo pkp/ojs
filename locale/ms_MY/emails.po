@@ -120,9 +120,6 @@ msgstr ""
 "Terima kasih, <br />\n"
 "{$signature}"
 
-msgid "emails.reviewerRegister.subject"
-msgstr "Pendaftaran sebagai Pengulas dengan {$contextName}"
-
 #, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""

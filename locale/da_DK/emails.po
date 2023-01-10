@@ -32,9 +32,6 @@ msgstr ""
 "<br />\n"
 "Mvh. {$siteContactName}"
 
-msgid "emails.passwordResetConfirm.description"
-msgstr "Denne e-mail sendes til registrerede brugere, når de angiver, at de har glemt deres adgangskode eller ikke kan logge på. Den indeholder en URL-adresse, de kan følge for at nulstille deres adgangskode."
-
 msgid "emails.userRegister.subject"
 msgstr "Tidsskriftsregistrering"
 
