@@ -1,7 +1,7 @@
 OJS 3.4.0 Release Notes
 Git tag: 3_4_0-0
 
-Release date: 
+Release date:
 ==============================
 
 Configuration Changes
@@ -34,6 +34,10 @@ New config.inc.php section for queues is added, with the following parameters:
     - default_connection (default value: database), being the default queue driver to be used;
     - default_queue (default value: queue), being the default queue to be used if someone forgot to associate a queue during Queue::push()
     - disable_jobs_run_at_shutdown (default value: off), being a flag to disable the jobs to run at php shutdown
+
+- The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
+
+- The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
 
 New Features
 ------------
