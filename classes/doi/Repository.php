@@ -28,7 +28,7 @@ use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\db\DAORegistry;
 use PKP\doi\Collector;
-use PKP\doi\exceptions\DoiActionException;
+use PKP\doi\exceptions\DoiException;
 use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Representation;
@@ -52,7 +52,7 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given publication.
      *
-     * @throws DoiActionException
+     * @throws DoiException
      */
     public function mintPublicationDoi(Publication $publication, Submission $submission, Context $context): int
     {
@@ -64,25 +64,25 @@ class Repository extends \PKP\doi\Repository
         // If not using default suffix, additional checks are required
         $issueId = $publication->getData('issueId');
         if ($issueId === null) {
-            throw new DoiActionException(
+            throw new DoiException(
+                DoiException::PUBLICATION_MISSING_ISSUE,
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $publication->getLocalizedFullTitle(),
-                DoiActionException::PUBLICATION_MISSING_ISSUE
+                $publication->getLocalizedFullTitle()
             );
         }
 
         $issue = Repo::issue()->get($publication->getData('issueId'));
         if ($issue === null) {
-            throw new DoiActionException(
+            throw new DoiException(
+                DoiException::PUBLICATION_MISSING_ISSUE,
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $publication->getLocalizedFullTitle(),
-                DoiActionException::PUBLICATION_MISSING_ISSUE
+                $publication->getLocalizedFullTitle()
             );
         } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            throw new DoiActionException(
+            throw new DoiException(
+                DoiException::PUBLICATION_MISSING_ISSUE,
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $publication->getLocalizedFullTitle(),
-                DoiActionException::PUBLICATION_MISSING_ISSUE
+                $publication->getLocalizedFullTitle()
             );
         }
 
@@ -94,7 +94,7 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given galley
      *
-     * @throws DoiActionException
+     * @throws DoiException
      */
     public function mintGalleyDoi(Galley $galley, Publication $publication, Submission $submission, Context $context): int
     {
@@ -107,16 +107,16 @@ class Repository extends \PKP\doi\Repository
         $issue = Repo::issue()->getBySubmissionId($submission->getId());
 
         if ($issue === null) {
-            throw new DoiActionException(
+            throw new DoiException(
+                DoiException::REPRESENTATION_MISSING_ISSUE,
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $galley->getLabel(),
-                DoiActionException::REPRESENTATION_MISSING_ISSUE
+                $galley->getLabel()
             );
         } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            throw new DoiActionException(
+            throw new DoiException(
+                DoiException::REPRESENTATION_MISSING_ISSUE,
                 $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $galley->getLabel(),
-                DoiActionException::REPRESENTATION_MISSING_ISSUE
+                $galley->getLabel()
             );
         }
 
@@ -128,15 +128,15 @@ class Repository extends \PKP\doi\Repository
     /**
      * Create a DOI for the given Issue
      *
-     * @throws DoiActionException
+     * @throws DoiException
      */
     public function mintIssueDoi(Issue $issue, Context $context): int
     {
         if ($context->getId() != $issue->getJournalId()) {
-            throw new DoiActionException(
+            throw new DoiException(
+                DoiException::INCORRECT_ISSUE_CONTEXT,
                 $issue->getLocalizedTitle(),
-                $issue->getLocalizedTitle(),
-                DoiActionException::INCORRECT_ISSUE_CONTEXT
+                $issue->getLocalizedTitle()
             );
         }
 

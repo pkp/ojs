@@ -10,7 +10,7 @@ use APP\journal\JournalDAO;
 use APP\publication\Publication;
 use Illuminate\Support\Collection;
 use PKP\db\DAORegistry;
-use PKP\doi\exceptions\DoiActionException;
+use PKP\doi\exceptions\DoiException;
 use PKP\plugins\Hook;
 use PKP\services\PKPSchemaService;
 use PKP\validation\ValidatorFactory;
@@ -300,7 +300,7 @@ class Repository
     /**
      * Creates a DOI for the given issue
      *
-     * @return DoiActionException[]
+     * @return DoiException[]
      */
     public function createDoi(Issue $issue): array
     {
@@ -315,7 +315,7 @@ class Repository
                 $doiId = Repo::doi()->mintIssueDoi($issue, $context);
                 $issue->setData('doiId', $doiId);
                 $this->dao->update($issue);
-            } catch (DoiActionException $exception) {
+            } catch (DoiException $exception) {
                 $doiCreationFailures[] = $exception;
             }
         }

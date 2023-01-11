@@ -49,7 +49,8 @@
 				"validation": [
 					"in:publication,representation,issue"
 				]
-			}
+			},
+		  	"default": ["publication"]
 		},
 		"doiCreationTime": {
 			"type": "string",
