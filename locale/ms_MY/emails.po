@@ -31,20 +31,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Tetapan Semula Kata Laluan"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Kata laluan anda berjaya ditetapkan semula untuk digunakan dengan laman web "
-"{$siteTitle}. Harap simpan nama pengguna dan kata laluan ini, kerana perlu "
-"untuk semua kerja dengan jurnal. <br />\n"
-"<br />\n"
-"Nama pengguna anda: {$recipientUsername} <br />\n"
-"Kata Laluan: {$password} <br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Pendaftaran Jurnal"
 
@@ -118,102 +104,6 @@ msgstr ""
 "Kata Laluan: {$password} <br />\n"
 "<br />\n"
 "Terima kasih, <br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.body"
-msgstr ""
-"{$recipientName} <br />\n"
-"<br />\n"
-"Anda telah membuat akaun dengan {$contextName}, tetapi sebelum anda dapat "
-"menggunakannya, anda perlu mengesahkan akaun e-mel anda. Untuk melakukannya, "
-"ikuti pautan di bawah: <br />\n"
-"<br />\n"
-"{$activateUrl} <br />\n"
-"<br />\n"
-"Terima kasih, <br />\n"
-"{$signature}"
-
-#, fuzzy
-msgid "emails.userValidateContext.subject"
-msgstr "Sahkan Akaun Anda"
-
-msgid "emails.passwordResetConfirm.body"
-msgstr ""
-"Kami telah menerima permintaan untuk menetapkan semula kata laluan anda "
-"untuk laman web {$siteTitle}. <br />\n"
-"<br />\n"
-"Sekiranya anda tidak membuat permintaan ini, abaikan e-mel ini dan kata "
-"laluan anda tidak akan diubah. Sekiranya anda ingin menetapkan semula kata "
-"laluan anda, klik pada URL di bawah. <br />\n"
-"<br />\n"
-"Tetapkan semula kata laluan saya: {$passwordResetUrl} <br />\n"
-"<br />\n"
-"{$siteContactName}"
-
-msgid "emails.userRegister.body"
-msgstr ""
-"{$recipientName} <br />\n"
-"<br />\n"
-"Anda kini telah didaftarkan sebagai pengguna dengan {$contextName}. Kami "
-"telah memasukkan nama pengguna dan kata laluan anda dalam e-mel ini, yang "
-"diperlukan untuk semua pekerjaan dengan jurnal ini melalui laman webnya. "
-"Pada bila-bila masa, anda boleh meminta untuk dikeluarkan dari daftar "
-"pengguna jurnal dengan menghubungi saya. <br />\n"
-"<br />\n"
-"Nama pengguna: {$recipientUsername} <br />\n"
-"Kata Laluan: {$password} <br />\n"
-"<br />\n"
-"Terima kasih, <br />\n"
-"{$signature}"
-
-msgid "emails.userRegister.subject"
-msgstr "Pendaftaran Jurnal"
-
-msgid "emails.passwordResetConfirm.subject"
-msgstr "Pengesahan Tetapan Semula Kata Laluan"
-
-#, fuzzy
-msgid "emails.reviewRequest.subject"
-msgstr "Permintaan Ulasan Artikel"
-
-#, fuzzy
-msgid "emails.editorAssign.subject"
-msgstr "Tugasan Editorial"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Ucapan Terima Kasih"
-
-msgid "emails.lockssNewArchive.description"
-msgstr ""
-"E-mel ini mendorong penerima untuk mengambil bahagian dalam inisiatif LOCKSS "
-"dan memasukkan jurnal ini dalam arkib. Ia memberikan maklumat mengenai "
-"inisiatif LOCKSS dan cara untuk menyertai."
-
-msgid "emails.lockssNewArchive.subject"
-msgstr "Permintaan Mengarkibkan untuk {$contextName}"
-
-msgid "emails.lockssExistingArchive.description"
-msgstr ""
-"E-mel ini meminta penjaga arkib LOCKSS mempertimbangkan untuk memasukkan "
-"jurnal ini dalam arkib mereka. Ia memberikan URL ke jurnal LOCKSS Publisher "
-"Manifest."
-
-msgid "emails.lockssExistingArchive.subject"
-msgstr "Permintaan Mengarkibkan untuk {$contextName}"
-
-#, fuzzy
-msgid "emails.issuePublishNotify.body"
-msgstr ""
-"Pembaca: <br />\n"
-"<br />\n"
-"{$contextName} baru sahaja menerbitkan terbitan terbarunya di {$contextUrl}. "
-"Kami menjemput anda untuk melihat Isi Kandungan di sini dan kemudian "
-"mengunjungi laman web kami untuk meninjau artikel dan item yang menarik. <br "
-"/>\n"
-"<br />\n"
-"Terima kasih atas minat berterusan dalam kerja kami, <br />\n"
 "{$signature}"
 
 #, fuzzy

@@ -29,20 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Resetare parolă"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Parola dv. a fost resetată cu succes pentru utilizare pe site-ul "
-"{$siteTitle}. Rețineți numele de utilizator și parola, necesare activității "
-"la acest jurnal.<br />\n"
-"<br />\n"
-"Numele: {$recipientUsername}<br />\n"
-"Parola: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Înregistrare jurnal"
 

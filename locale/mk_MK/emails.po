@@ -29,20 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Ресетирај лозинка"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Вашата лозинка е успешно ресетирана за употреба на {$siteTitle} веб-"
-"страницата. Ве молиме запомнетете го ова корисничко име и лозинка, бидејќи "
-"ви се потребни  за сета работа со списанието.<br />\n"
-"<br />\n"
-"Вашето корисничко име: {$recipientUsername}<br />\n"
-"Лозинка: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Регистрација на списание"
 

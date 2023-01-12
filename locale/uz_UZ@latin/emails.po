@@ -30,20 +30,6 @@ msgstr ""
 "<br/>\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Parolni tiklash"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Parolingiz {$siteTitle} veb -saytida foydalanish uchun muvaffaqiyatli "
-"tiklandi. Iltimos, bu foydalanuvchi nomi va parolni saqlang, chunki bu "
-"jurnal bilan ishlash uchun zarurdir. <br />\n"
-"<br/>\n"
-"Foydalanuvchi nomingiz: {$recipientUsername} <br />\n"
-"Parol: {$password} <br />\n"
-"<br/>\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Jurnalni ro'yxatdan o'tkazish"
 

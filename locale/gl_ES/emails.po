@@ -28,20 +28,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Cambio de contrasinal"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"O seu contrasinal para o sitio web {$siteTitle} foi restablecido con éxito. "
-"Lembre este nome de usuario e este contrasinal, xa que os necesitará para "
-"acceder á revista e traballar con ela.<br />\n"
-"<br />\n"
-"Nome de usuario/a: {$recipientUsername}<br />\n"
-"Contrasinal: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Rexistro dun novo usuario"
 
