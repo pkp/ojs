@@ -29,20 +29,6 @@ msgstr ""
 "<br />\n"
 "{$siteContactName}"
 
-msgid "emails.passwordReset.subject"
-msgstr "Գաղտնաբառի վերականգնում"
-
-msgid "emails.passwordReset.body"
-msgstr ""
-"Ձեր գաղտնաբառը հաջողությամբ վերականգնվել է {$siteTitle} վեբ կայքի հետ "
-"օգտագործելու համար: Խնդրում ենք պահպանել այս օգտվողի անունը և գաղտնաբառը, "
-"քանի որ դա անհրաժեշտ է ամսագրի հետ աշխատանքի համար.<br />\n"
-"<br />\n"
-"Ձեր օգտանունը: {$recipientUsername}<br />\n"
-"Գաղտնաբառ: {$password}<br />\n"
-"<br />\n"
-"{$siteContactName}"
-
 msgid "emails.userRegister.subject"
 msgstr "Ամսագրի գրանցում"
 
