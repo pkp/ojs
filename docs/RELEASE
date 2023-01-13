@@ -29,6 +29,10 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 - email.smtp_oauth_clientsecret
 - email.smtp_oauth_refreshtoken
 
+- The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
+
+- The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
 3.3.0-13 Build
 --------------
 	#8299: Use helper method in galley grids
@@ -139,7 +143,7 @@ New config.inc.php parameters added for OAuth-based SMTP authorization:
 	#7378: Resolve reflected XSS issues
 	#7363: Cancelled review assignments included in count of active reviews
 	#7344: CSS file mimetype not correctly recognized
-	#7168: Unable to pick a year in the advanced filters of the search form 
+	#7168: Unable to pick a year in the advanced filters of the search form
 	#7277: Discussion participants include declined open reviewers
 	#7275: Can't upgrade to 3.2.x on PHP 8 due to use of get_magic_quotes_runtime
 	#7236: Copyright info not published using quicksubmit plugin
