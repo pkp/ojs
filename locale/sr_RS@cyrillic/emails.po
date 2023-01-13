@@ -38,9 +38,6 @@ msgstr ""
 msgid "emails.passwordResetConfirm.description"
 msgstr ""
 
-msgid "emails.passwordReset.description"
-msgstr ""
-
 msgid "emails.userRegister.subject"
 msgstr ""
 
