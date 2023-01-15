@@ -212,10 +212,11 @@
 							{translate key="submission.authorBiography"}
 						{/if}
 					</h2>
+					<ul class="authors">
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
-							<section class="sub_item">
-								<h3 class="label">
+							<li class="sub_item">
+								<span class="label">
 									{if $author->getLocalizedData('affiliation')}
 										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
 										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedData('affiliation')|escape}</span>{/capture}
@@ -223,13 +224,14 @@
 									{else}
 										{$author->getFullName()|escape}
 									{/if}
-								</h3>
-								<div class="value">
+								</span>
+								<span class="value">
 									{$author->getLocalizedData('biography')|strip_unsafe_html}
-								</div>
-							</section>
+								</span>
+							</li>
 						{/if}
 					{/foreach}
+					</ul>
 				</section>
 			{/if}
 
