@@ -305,11 +305,11 @@ describe('Data suite: Amwandenga', function() {
 		// Metadata
 		cy.get('#metadata-button').click();
 		cy.get('#metadata-keywords-control-en_US').type('Professional Development', {delay: 0});
-		cy.wait(500);
+		cy.get('.autosuggest__results-item').contains('Professional Development');
 		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
 		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
 		cy.get('#metadata-keywords-control-en_US').type('Social Transformation', {delay: 0});
-		cy.wait(500);
+		cy.get('.autosuggest__results-item').contains('Social Transformation');
 		cy.get('#metadata-keywords-control-en_US').type('{enter}', {delay: 0});
 		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
 		cy.get('#metadata button').contains('Save').click();
