@@ -45,6 +45,11 @@ session_cookie_name = OJSSID
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
 
+; SameSite configuration for the cookie, see possible values and explanations
+; at https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+; To set the "Secure" attribute for the cookie see the setting force_ssl at the [security] group
+session_samesite = Lax
+
 ; Enable support for running scheduled tasks
 ; Set this to On if you have set up the scheduled tasks script to
 ; execute periodically
@@ -251,7 +256,8 @@ filename_revision_match = 70
 
 [security]
 
-; Force SSL connections site-wide
+; Force SSL connections site-wide and also sets the "Secure" flag for session cookies
+; See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure
 force_ssl = Off
 
 ; Force SSL connections for login only
@@ -533,7 +539,7 @@ default_queue = "queue"
 ; When enabled, jobs will be processed at the end of each web
 ; request to the application.
 ;
-; Use of the built-in job runner is highly discouraged for high-volume 
+; Use of the built-in job runner is highly discouraged for high-volume
 ; sites. Instead, a worker daemon or cron job should be configured
 ; to process jobs off the application's main thread.
 ;
@@ -548,7 +554,7 @@ job_runner_max_jobs = 30
 ; The maximum number of seconds the built-in job runner should spend
 ; running jobs in a single request.
 ;
-; This should be less than the max_execution_time the server has 
+; This should be less than the max_execution_time the server has
 ; configured for PHP.
 ;
 ; Lower this setting if jobs are failing due to timeouts.
@@ -557,12 +563,12 @@ job_runner_max_execution_time = 30
 ; The maximum consumerable memory that should be spent by the built-in
 ; job runner when running jobs.
 ;
-; Set as a percentage, such as 80%: 
+; Set as a percentage, such as 80%:
 ;
 ; job_runner_max_memory = 80
 ;
 ; Or set as a fixed value in megabytes:
-; 
+;
 ; job_runner_max_memory = 128M
 ;
 ; When setting a fixed value in megabytes, this should be less than the
