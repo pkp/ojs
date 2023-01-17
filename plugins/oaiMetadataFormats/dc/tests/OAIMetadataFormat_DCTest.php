@@ -28,6 +28,8 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\Section;
 use APP\oai\ojs\OAIDAO;
+use APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormat_DC;
+use APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormatPlugin_DC;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
