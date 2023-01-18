@@ -18,7 +18,7 @@
 
 namespace APP\submission;
 
-use PKP\db\DAORegistry;
+use APP\facades\Repo;
 use PKP\submission\PKPSubmissionMetadataFormImplementation;
 
 class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImplementation
@@ -28,8 +28,7 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
      */
     public function _getAbstractsRequired($submission)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-        $section = $sectionDao->getById($submission->getCurrentPublication()->getData('sectionId'));
+        $section = Repo::section()->get($submission->getCurrentPublication()->getData('sectionId'), $submission->getData('contextId'));
         return !$section->getAbstractsNotRequired();
     }
 
@@ -40,8 +39,7 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
     public function addChecks($submission)
     {
         parent::addChecks($submission);
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-        $section = $sectionDao->getById($submission->getCurrentPublication()->getData('sectionId'));
+        $section = Repo::section()->get($submission->getCurrentPublication()->getData('sectionId'), $submission->getData('contextId'));
         $wordCount = $section->getAbstractWordCount();
         if (isset($wordCount) && $wordCount > 0) {
             $this->_parentForm->addCheck(new \PKP\form\validation\FormValidatorCustom($this->_parentForm, 'abstract', 'required', 'submission.submit.form.wordCountAlert', function ($abstract) use ($wordCount) {

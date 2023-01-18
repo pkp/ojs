@@ -188,8 +188,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         }
 
         if ($publication) {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-            $section = $sectionDao->getById($publication->getData('sectionId'));
+            $section = Repo::section()->get($publication->getData('sectionId'));
             $templateMgr->addHeader('dublinCoreArticleType', '<meta name="DC.Type.articleType" content="' . htmlspecialchars($section->getTitle($journal->getPrimaryLocale())) . '"/>');
         }
 

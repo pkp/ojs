@@ -83,7 +83,7 @@ class IssueEntryForm extends FormComponent
         }
 
         // Section options
-        $sections = \Services::get('section')->getSectionList($publicationContext->getId());
+        $sections = Repo::section()->getSectionList($publicationContext->getId());
         $sectionOptions = [];
         foreach ($sections as $section) {
             $sectionOptions[] = [

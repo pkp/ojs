@@ -20,7 +20,6 @@
 namespace APP\core;
 
 use APP\facades\Repo;
-use APP\journal\SectionDAO;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -140,7 +139,6 @@ class Application extends PKPApplication
             'MetricsDAO' => 'APP\statistics\MetricsDAO',
             'OAIDAO' => 'APP\oai\ojs\OAIDAO',
             'OJSCompletedPaymentDAO' => 'APP\payment\ojs\OJSCompletedPaymentDAO',
-            'SectionDAO' => 'APP\journal\SectionDAO',
             'SubscriptionDAO' => 'APP\subscription\SubscriptionDAO',
             'SubscriptionTypeDAO' => 'APP\subscription\SubscriptionTypeDAO',
             'TemporaryTotalsDAO' => 'APP\statistics\TemporaryTotalsDAO',
@@ -183,16 +181,6 @@ class Application extends PKPApplication
     public static function getContextDAO()
     {
         return DAORegistry::getDAO('JournalDAO');
-    }
-
-    /**
-     * Get the section DAO.
-     *
-     * @return SectionDAO
-     */
-    public static function getSectionDAO()
-    {
-        return DAORegistry::getDAO('SectionDAO');
     }
 
     /**

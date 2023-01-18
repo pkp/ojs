@@ -17,7 +17,6 @@ namespace APP\plugins\importexport\native\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use PKP\db\DAORegistry;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
 class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter
@@ -45,8 +44,7 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
         $context = $deployment->getContext();
         $sectionAbbrev = $node->getAttribute('section_ref');
         if ($sectionAbbrev !== '') {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-            $section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
+            $section = Repo::section()->getCollector()->filterByContextIds([$context->getId()])->filterByAbbrevs([$sectionAbbrev])->getMany()->first();
             if (!$section) {
                 $deployment->addError(Application::ASSOC_TYPE_SUBMISSION, null, __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
             } else {
@@ -70,8 +68,7 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
 
         $sectionAbbrev = $node->getAttribute('section_ref');
         if ($sectionAbbrev !== '') {
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-            $section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
+            $section = Repo::section()->getCollector()->filterByContextIds([$context->getId()])->filterByAbbrevs([$sectionAbbrev])->getMany()->first();
             if (!$section) {
                 $deployment->addError(Application::ASSOC_TYPE_PUBLICATION, $publication->getId(), __('plugins.importexport.native.error.unknownSection', ['param' => $sectionAbbrev]));
             } else {

@@ -81,7 +81,6 @@ class ArticleReportPlugin extends ReportPlugin
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
         $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
@@ -149,7 +148,7 @@ class ArticleReportPlugin extends ReportPlugin
             // Load section title information
             $sectionId = $publication->getData('sectionId');
             if (!isset($sectionTitles[$sectionId])) {
-                $section = $sectionDao->getById($sectionId);
+                $section = Repo::section()->get($sectionId);
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
 

@@ -71,9 +71,8 @@ class ArticleTombstoneManager
             ->filterByStatus([Submission::STATUS_PUBLISHED])
             ->getMany();
 
-        $sectionDao = DAORegistry::getDAO('SectionDAO');
         foreach ($submissions as $submission) {
-            $section = $sectionDao->getById($submission->getSectionId());
+            $section = Repo::section()->get($submission->getSectionId());
             $this->insertArticleTombstone($submission, $context, $section);
         }
     }

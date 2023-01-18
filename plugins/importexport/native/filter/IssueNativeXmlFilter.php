@@ -271,8 +271,7 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
      */
     public function addSections($doc, $issueNode, $issue)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-        $sections = $sectionDao->getByIssueId($issue->getId());
+        $sections = Repo::section()->getByIssueId($issue->getId());
         $deployment = $this->getDeployment();
         $journal = $deployment->getContext();
 

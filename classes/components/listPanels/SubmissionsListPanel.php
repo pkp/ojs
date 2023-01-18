@@ -15,6 +15,7 @@
 namespace APP\components\listPanels;
 
 use APP\components\forms\FieldSelectIssues;
+use APP\facades\Repo;
 use PKP\components\forms\FieldAutosuggestPreset;
 use PKP\components\listPanels\PKPSubmissionsListPanel;
 
@@ -103,7 +104,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel
         $request = \Application::get()->getRequest();
         $context = $request->getContext();
 
-        $sections = \Services::get('section')->getSectionList($context->getId(), $activeOnly);
+        $sections = Repo::section()->getSectionList($context->getId(), $activeOnly);
 
         // Use an autosuggest field if the list of submissions is too long
         if (count($sections) > 5) {

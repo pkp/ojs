@@ -7,7 +7,6 @@ use APP\facades\Repo;
 use APP\file\IssueFileManager;
 use APP\file\PublicFileManager;
 use APP\journal\JournalDAO;
-use APP\journal\SectionDAO;
 use APP\publication\Publication;
 use Illuminate\Support\Collection;
 use PKP\db\DAORegistry;
@@ -164,8 +163,7 @@ class Repository
         $issueId = $issue->getId();
 
         // Delete issue-specific ordering if it exists.
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-        $sectionDao->deleteCustomSectionOrdering($issueId);
+        Repo::section()->deleteCustomSectionOrdering($issueId);
 
         // Delete published issue galleys and issue files
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */

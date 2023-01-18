@@ -8,7 +8,6 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalleyDAO;
 use APP\journal\Journal;
-use APP\journal\SectionDAO;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use Illuminate\Support\LazyCollection;
@@ -169,23 +168,25 @@ class Schema extends \PKP\core\maps\Schema
                     break;
                 case 'sections':
                     $data = [];
-                    /** @var SectionDAO $sectionDao */
-                    $sectionDao = DAORegistry::getDAO('SectionDAO');
-                    $sections = $sectionDao->getByIssueId($issue->getId());
+                    $sections = Repo::section()->getByIssueId($issue->getId());
+                    //$sectionProperties = Repo::section()->getSchemaMap()->summarizeMany($sections);
+                    //$output[$prop] = $sectionProperties;
+
                     $request = Application::get()->getRequest();
                     if (!empty($sections)) {
+                        $seq = 1;
                         foreach ($sections as $section) {
                             $sectionProperties = Services::get('section')->getSummaryProperties($section, [
                                 'request' => $request
                             ]);
-                            $customSequence = $sectionDao->getCustomSectionOrder($issue->getId(), $section->getId());
-                            if ($customSequence) {
-                                $sectionProperties['seq'] = $customSequence;
-                            }
+                            // Repo::section()->getByIssueId($issue->getId()) considers custom section order
+                            $sectionProperties['seq'] = $seq;
+                            $seq++;
                             $data[] = $sectionProperties;
                         }
                     }
                     $output[$prop] = $data;
+
                     break;
                 case 'identification':
                     $output[$prop] = $issue->getIssueIdentification();
