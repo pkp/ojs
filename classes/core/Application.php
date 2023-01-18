@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Application
+ *
  * @ingroup core
  *
  * @see PKPApplication
@@ -23,6 +24,7 @@ use APP\journal\SectionDAO;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
+use PKP\log\contracts\SubmissionIntroducerEventEntry;
 use PKP\security\Role;
 use PKP\submission\RepresentationDAOInterface;
 
@@ -277,5 +279,10 @@ class Application extends PKPApplication
     public static function getPaymentManager($context)
     {
         return new \APP\payment\ojs\OJSPaymentManager($context);
+    }
+
+    public function getSubmissionIntroducerEventEntry(): SubmissionIntroducerEventEntry
+    {
+        return new SubmissionIntroducerEventEntry($this);
     }
 }

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportPlugin
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Native XML import/export plugin
@@ -132,7 +133,10 @@ class NativeImportExportPlugin extends \PKP\plugins\importexport\native\PKPNativ
      */
     public function getAppSpecificDeployment($context, $user)
     {
-        return new NativeImportExportDeployment($context, $user);
+        $nativeImportExportDeployment = new NativeImportExportDeployment($context, $user);
+        $nativeImportExportDeployment->setImportExportPlugin($this);
+
+        return $nativeImportExportDeployment;
     }
 
     /**
