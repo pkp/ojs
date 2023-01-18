@@ -13,9 +13,7 @@ module.exports = {
 		config.plugins.delete('prefetch');
 
 		// Don't copy the /public dir
-		config.plugin('copy').tap(() => {
-			return [];
-		});
+		config.plugins.delete('copy');
 	},
 	configureWebpack: {
 		// Don't create a map file for the js package
