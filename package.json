@@ -35,7 +35,7 @@
     "@vue/cli-plugin-eslint": "^5.0.0",
     "@vue/cli-service": "^5.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
-    "cypress": "^10.11.0",
+    "cypress": "^11.2.0",
     "cypress-failed-log": "^2.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-wait-until": "^1.7.1",
