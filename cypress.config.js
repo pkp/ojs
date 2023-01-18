@@ -29,7 +29,12 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return require('./lib/pkp/cypress/plugins/index.js')(on, config)
     },
-    specPattern: 'cypress/tests/**/*.cy.{js,jsx,ts,tsx}',
+    specPattern: [
+      'cypress/tests/data/**/*.cy.{js,jsx,ts,tsx}',
+      'cypress/tests/integration/**/*.cy.{js,jsx,ts,tsx}',
+      'lib/pkp/cypress/tests/**/*.cy.{js,jsx,ts,tsx}',
+    ],
+    experimentalRunAllSpecs: true,
   },
   // Allow cypress to interact with iframes
   chromeWebSecurity: false
