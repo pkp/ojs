@@ -14,6 +14,8 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
+use Illuminate\Database\MySqlConnection;
+use Illuminate\Database\PostgresConnection;
 use Illuminate\Support\Facades\DB;
 
 class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightCheckMigration
@@ -81,7 +83,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
 
             // Clean orphaned issue_galleys entries by file_id
             $orphanedIds = DB::table('issue_galleys AS ig')->leftJoin('issue_files AS i_f', 'i_f.file_id', '=', 'ig.file_id')->whereNull('i_f.file_id')->distinct()->pluck('ig.file_id');
-            foreach ($orphanedIds as $issueId) {
+            foreach ($orphanedIds as $fileId) {
                 DB::table('issue_galleys')->where('file_id', '=', $fileId)->delete();
             }
 
@@ -115,16 +117,15 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
                 DB::table('custom_section_orders')->where('section_id', '=', $sectionId)->delete();
             }
 
-            // Clean orphaned publications entries by submission_id
-            $orphanedIds = DB::table('publications AS p')->leftJoin('submissions AS s', 's.submission_id', '=', 'p.submission_id')->whereNull('s.submission_id')->distinct()->pluck('p.submission_id');
-            foreach ($orphanedIds as $submissionId) {
-                DB::table('publications')->where('submission_id', '=', $submissionId)->delete();
-            }
-
             // Clean orphaned publications entries by primary_contact_id
-            $orphanedIds = DB::table('publications AS p')->leftJoin('users AS u', 'p.primary_contact_id', '=', 'u.user_id')->whereNull('u.user_id')->whereNotNull('p.primary_contact_id')->distinct()->pluck('p.primary_contact_id');
-            foreach ($orphanedIds as $userId) {
-                DB::table('publications')->where('primary_contact_id', '=', $userId)->update(['primary_contact_id' => null]);
+            switch (true) {
+                case DB::connection() instanceof MySqlConnection:
+                    DB::statement('UPDATE publications p LEFT JOIN users u ON (p.primary_contact_id = u.user_id) SET p.primary_contact_id = NULL WHERE u.user_id IS NULL');
+                    break;
+                case DB::connection() instanceof PostgresConnection:
+                    DB::statement('UPDATE publications SET primary_contact_id = NULL WHERE publication_id IN (SELECT publication_id FROM publications p LEFT JOIN users u ON (p.primary_contact_id = u.user_id) WHERE u.user_id IS NULL AND p.primary_contact_id IS NOT NULL)');
+                    break;
+                default: throw new \Exception('Unknown database connection type!');
             }
 
             // Clean orphaned publication_galleys entries by publication_id
