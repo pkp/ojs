@@ -18,7 +18,7 @@
  * @brief Test class for OAIMetadataFormat_DC.
  */
 
-namespace APP\plugins\oaiMetadataFormats\dc;
+namespace APP\plugins\oaiMetadataFormats\dc\tests;
 
 use APP\author\Author;
 use APP\core\Application;
@@ -28,6 +28,8 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\Section;
 use APP\oai\ojs\OAIDAO;
+use APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormat_DC;
+use APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormatPlugin_DC;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
@@ -72,7 +74,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
 
     /**
      * @covers OAIMetadataFormat_DC
-     * @covers Dc11SchemaArticleAdapter
+     * @covers \APP\plugins\metadata\dc11\filter\Dc11SchemaArticleAdapter
      */
     public function testToXml()
     {
