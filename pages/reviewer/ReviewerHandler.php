@@ -16,6 +16,7 @@
 
 namespace APP\pages\reviewer;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 use APP\submission\Submission;
@@ -96,8 +97,8 @@ class ReviewerHandler extends PKPReviewerHandler
             return;
         } // e.g. deleted review assignment
 
-        $reviewSubmission = Repo::submission()->get($reviewAssignment->getSubmissionId());
-        if (!$reviewSubmission) {
+        $reviewSubmission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
+        if (!$reviewSubmission || ($reviewSubmission->getId() != $reviewAssignment->getSubmissionId())) {
             return;
         } // e.g. deleted review assignment
 
@@ -123,7 +124,6 @@ class ReviewerHandler extends PKPReviewerHandler
         // Register the user object in the session
         $reason = null;
         if (Validation::registerUserSession($user, $reason)) {
-            // TODO:: WHAT ARE THOSE?
             $this->submission = $reviewSubmission;
             $this->user = $user;
         }
