@@ -45,7 +45,7 @@ class ContextEmailVariable extends PKPContextEmailVariable
         $values = array_merge(
             parent::values($locale),
             [
-                static::CONTEXT_ACRONYM => $this->context->getLocalizedData('acronym'),
+                static::CONTEXT_ACRONYM => htmlspecialchars($this->context->getLocalizedData('acronym')),
             ],
         );
 
