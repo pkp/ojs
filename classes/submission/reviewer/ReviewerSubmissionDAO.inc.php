@@ -45,6 +45,8 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 	function getReviewerSubmission($reviewId) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
+		// Each column of review_assignments table is taken separately intentionaly so that
+		// same named columns like stage_id from different tables is treated separately in _fromRow function
 		$result = $this->retrieve(
 			'SELECT	a.*,
 				r.review_id,
