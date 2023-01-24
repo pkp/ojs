@@ -1,12 +1,13 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2022-10-18 21:01+0000\n"
-"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
+"PO-Revision-Date: 2023-01-24 13:28+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -129,8 +130,8 @@ msgstr ""
 #, fuzzy
 msgid "author.submit.verifyChecklist"
 msgstr ""
-"Før du går videre må du sørge for at alle momentene i sjekklisten for "
-"klargjøring av innlevering er utført og krysset av."
+"Før du går videre må du sørge for at din innlevering tilfredsstiller alle "
+"punktene i sjekklisten for klargjøring av innleveringer."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
