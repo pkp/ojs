@@ -45,9 +45,37 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 	function getReviewerSubmission($reviewId) {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
+		// Each column of review_assignments table is taken separately intentionaly so that
+		// same named columns like stage_id from different tables is treated separately in _fromRow function
 		$result = $this->retrieve(
 			'SELECT	a.*,
-				r.*,
+				r.review_id,
+				r.submission_id,
+				r.reviewer_id,
+				r.competing_interests,
+				r.recommendation,
+				r.date_assigned,
+				r.date_notified,
+				r.date_confirmed,
+				r.date_completed,
+				r.date_acknowledged,
+				r.date_due,
+				r.date_response_due,
+				r.last_modified as last_modified_ra,
+				r.reminder_was_automatic,
+				r.declined,
+				r.cancelled,
+				r.reviewer_file_id,
+				r.date_rated,
+				r.date_reminded,
+				r.quality,
+				r.review_round_id,
+				r.stage_id as stage_id_ra,
+				r.review_method,
+				r.round,
+				r.step,
+				r.review_form_id,
+				r.unconsidered,
 				p.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -114,6 +142,7 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 		$reviewerSubmission->setRound($row['round']);
 		$reviewerSubmission->setStep($row['step']);
 		$reviewerSubmission->setStageId($row['stage_id']);
+		$reviewerSubmission->setReviewAssignmentStageId($row['stage_id_ra']);
 		$reviewerSubmission->setReviewMethod($row['review_method']);
 
 		HookRegistry::call('ReviewerSubmissionDAO::_fromRow', array(&$reviewerSubmission, &$row));
@@ -122,9 +151,9 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 
 	/**
 	 * Update an existing review submission.
-	 * @param $reviewSubmission ReviewSubmission
+	 * @param ReviewerSubmission $reviewSubmission
 	 */
-	function updateReviewerSubmission($reviewerSubmission) {
+	function updateReviewerSubmission(ReviewerSubmission $reviewerSubmission) {
 		$this->update(
 			sprintf('UPDATE review_assignments
 				SET	submission_id = ?,
@@ -156,7 +185,7 @@ class ReviewerSubmissionDAO extends SubmissionDAO {
 			[
 				(int) $reviewerSubmission->getId(),
 				(int) $reviewerSubmission->getReviewerId(),
-				(int) $reviewerSubmission->getStageId(),
+				(int) $reviewerSubmission->getReviewAssignmentStageId(),
 				(int) $reviewerSubmission->getReviewMethod(),
 				(int) $reviewerSubmission->getRound(),
 				(int) $reviewerSubmission->getStep(),
