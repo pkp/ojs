@@ -16,8 +16,6 @@
 	<email key="USER_VALIDATE_SITE" name="mailable.validateEmailSite.name" subject="emails.userValidateSite.subject" body="emails.userValidateSite.body"/>
 	<email key="REVIEWER_REGISTER" name="mailable.reviewerRegister.name" subject="emails.reviewerRegister.subject" body="emails.reviewerRegister.body"/>
 	<email key="ISSUE_PUBLISH_NOTIFY" name="mailable.issuePublishNotify.name" subject="emails.issuePublishNotify.subject" body="emails.issuePublishNotify.body"/>
-	<email key="LOCKSS_EXISTING_ARCHIVE" name="mailable.lockssExistingArchive.name" subject="emails.lockssExistingArchive.subject" description="emails.lockssExistingArchive.description" body="emails.lockssExistingArchive.body"/>
-	<email key="LOCKSS_NEW_ARCHIVE" name="mailable.lockssNewArchive.name" subject="emails.lockssNewArchive.subject" description="emails.lockssNewArchive.description" body="emails.lockssNewArchive.body"/>
 	<email key="SUBMISSION_ACK" name="mailable.submissionAck.name" subject="emails.submissionAck.subject" body="emails.submissionAck.body"/>
 	<email key="SUBMISSION_ACK_NOT_USER" name="mailable.submissionAckNotAuthor.name" subject="emails.submissionAckNotAuthor.subject" body="emails.submissionAckNotAuthor.body"/>
 	<email key="REVIEW_CANCEL" name="mailable.reviewerUnassign.name" subject="emails.reviewCancel.subject" body="emails.reviewCancel.body"/>

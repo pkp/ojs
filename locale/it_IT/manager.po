@@ -2630,12 +2630,6 @@ msgstr "Modificare i messaggi inviati nelle e-mail da questa rivista."
 msgid "mailable.layoutComplete.name"
 msgstr "Gabbia completa"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Richiesta di archiviazione"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Richiesta di archiviazione (Nuova)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr ""
 

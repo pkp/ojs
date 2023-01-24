@@ -2540,12 +2540,6 @@ msgstr ""
 msgid "mailable.layoutComplete.name"
 msgstr ""
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr ""
-
-msgid "mailable.lockssNewArchive.name"
-msgstr ""
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr ""
 

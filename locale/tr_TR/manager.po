@@ -2546,12 +2546,6 @@ msgstr "Bu dergiden gönderilen e-postaların içeriklerini düzenleyin."
 msgid "mailable.layoutComplete.name"
 msgstr "Dizgi Tamamlandı"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Arşiv Talebi"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Arşiv Talebi (Yeni)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Yeni Sürüm Oluşturuldu"
 

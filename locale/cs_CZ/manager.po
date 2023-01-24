@@ -2559,12 +2559,6 @@ msgstr "Upravit zprávy odeslané v e-mailech z tohoto deníku."
 msgid "mailable.layoutComplete.name"
 msgstr "Dokončené sazebnice"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Požadavek na archiv"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Požadavek na archiv (nový)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Byla vytvořena nová verze"
 

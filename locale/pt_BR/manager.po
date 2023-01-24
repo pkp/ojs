@@ -2628,12 +2628,6 @@ msgstr "Edite as mensagens enviadas nos e-mails desta revista."
 msgid "mailable.layoutComplete.name"
 msgstr "Composições Completas"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Solicitação de Arquivo"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Solicitação de Arquivo (Novo)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Nova Versão Criada"
 
