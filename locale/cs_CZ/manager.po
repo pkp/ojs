@@ -2178,7 +2178,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "Jméno hlavního kontaktu časopisu"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "iniciály časopisu"
+msgstr "Iniciály časopisu"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "E-mailový podpis časopisu pro automatické e-maily"
@@ -2571,6 +2571,12 @@ msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "Tento e-mail je zasílán manažerům časopisů, když je podána nová příspěvek a "
 "nemá přiřazeny redaktory."
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Požadavek na archiv"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Požadavek na archiv (nový)"
 
 #~ msgid "manager.setup.copyrightNotice"
 #~ msgstr "Oznámení o copyrightu"
