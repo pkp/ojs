@@ -18,6 +18,7 @@ namespace APP\mail\variables;
 use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\subscription\Subscription;
+use PKP\core\PKPString;
 use PKP\mail\Mailable;
 use PKP\mail\variables\Variable;
 use PKP\user\User;
@@ -62,10 +63,10 @@ class SubscriptionEmailVariable extends Variable
         $context = $this->getContext();
         return
         [
-            self::SUBSCRIBER_DETAILS => $this->subscriber->getSignature($locale) ?? '',
+            self::SUBSCRIBER_DETAILS => PKPString::stripUnsafeHtml($this->subscriber->getSignature($locale) ?? ''),
             self::SUBSCRIPTION_SIGNATURE => $this->getSubscriptionSignature($context),
             self::EXPIRY_DATE => $this->subscription->getDateEnd(),
-            self::MEMBERSHIP => $this->subscription->getMembership(),
+            self::MEMBERSHIP => htmlspecialchars($this->subscription->getMembership()),
         ];
     }
 
@@ -75,10 +76,10 @@ class SubscriptionEmailVariable extends Variable
      */
     protected function getSubscriptionSignature(Journal $context): string
     {
-        $subscriptionName = $context->getData('subscriptionName');
-        $subscriptionEmail = $context->getData('subscriptionEmail');
-        $subscriptionPhone = $context->getData('subscriptionPhone');
-        $subscriptionMailingAddress = $context->getData('subscriptionMailingAddress');
+        $subscriptionName = htmlspecialchars($context->getData('subscriptionName'));
+        $subscriptionEmail = htmlspecialchars($context->getData('subscriptionEmail'));
+        $subscriptionPhone = htmlspecialchars($context->getData('subscriptionPhone'));
+        $subscriptionMailingAddress = PKPString::stripUnsafeHtml($context->getData('subscriptionMailingAddress'));
         $subscriptionContactSignature = $subscriptionName;
 
         if ($subscriptionMailingAddress != '') {
