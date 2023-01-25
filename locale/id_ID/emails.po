@@ -144,7 +144,7 @@ msgstr ""
 "memilih \"Kirim ke Taha Review\" lalu tugaskan seorang mitra bestari dengan "
 "mengklik \"Tambahkan Mitra Bestari\".</p><p>Jika tidak sesuai dengan "
 "ketentuan jurnal, silakan naskah ditolak.</p><p>Terima kasih.</p><p>Salam "
-"hormat,</p>{$signature}"
+"hormat,</p>{$contextSignature}"
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"

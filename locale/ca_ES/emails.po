@@ -130,6 +130,7 @@ msgstr ""
 "<br />\n"
 "{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Heu estat assignats com a editor/a en una tramesa per a {$contextName}"
 

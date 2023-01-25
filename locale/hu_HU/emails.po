@@ -152,7 +152,7 @@ msgstr ""
 "Felhasználónév: {$recipientUsername}<br />\n"
 "<br />\n"
 "Köszönettel,<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"

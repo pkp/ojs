@@ -136,6 +136,7 @@ msgstr ""
 "d'avoir pensé à la revue {$contextName} pour la publication de vos travaux.</"
 "p><p>Cordialement,</p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 "Vous avez été assigné-e en tant que rédacteur-trice pour la soumission "

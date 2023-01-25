@@ -133,6 +133,7 @@ msgstr ""
 "iletişime geçin.</p><p>Dergimizi tercih ettiğiniz için teşekkür ederiz.</"
 "p><p>Saygılarımla,</p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 "{$contextName} için gönderilen bir aday makaleye editör olarak atandınız"
@@ -146,7 +147,7 @@ msgstr ""
 "\"Değerlendirmeye Gönder\" seçeneği ile aday makaleyi değerlendirme "
 "aşamasına alınız ve \"Hakem Ata\" kısmından hakem atayınız.</p><p>Aday "
 "makale dergimiz için uygun değilse, lütfen aday makaleyi reddediniz.</"
-"p><p>Şimdiden teşekkür ederiz.</p><p>Saygılarımızla,</p>{$signature}"
+"p><p>Şimdiden teşekkür ederiz.</p><p>Saygılarımızla,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Hakemlik daveti"

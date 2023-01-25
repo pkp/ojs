@@ -131,6 +131,7 @@ msgstr ""
 "<br />\n"
 "{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Kot urednik ste dodeljeni na prispevek {$contextName}"
 
@@ -143,7 +144,7 @@ msgstr ""
 "premaknite v fazo recenzije s klikom na \"Pošlji v recenzijo\" in določite "
 "recenzente s klikom na \"Dodaj recenzenta\".</p><p>Če prispevek ni primeren "
 "za to revijo, ga prosim zavrnite.</p><p>Hvala že vnaprej.</p><p>S "
-"spoštovanjem,</p>{$signature}"
+"spoštovanjem,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Prošnja za recenzijo prispevka"

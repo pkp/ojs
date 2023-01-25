@@ -136,6 +136,7 @@ msgstr ""
 "tidsskrift til at udgive dit arbejde i.</p><p>Med venlig hilsen</"
 "p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 "Du er blevet tilmeldt som redaktør på en indsendelse til {$contextName}"
@@ -150,7 +151,7 @@ msgstr ""
 "klikke på \"Send til bedømmelse\" og tildel dernæst bedømmer(e) ved at "
 "klikke på \"Tilføj bedømmer\".</p><p>Hvis indsendelsen ikke passer til dette "
 "tidsskrift, så afvis indsendelsen.</p><p>Tak på forhånd.</p><p>Med venlig "
-"hilsen</p>{$signature}"
+"hilsen</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Forespørgsel om bedømmelse af artikel"

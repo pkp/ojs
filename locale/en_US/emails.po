@@ -132,7 +132,7 @@ msgstr ""
 "<p>If the submission is not appropriate for this journal, please decline the submission.</p>"
 "<p>Thank you in advance.</p>"
 "<p>Kind regards,</p>"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.editorAssignReview.body"
 msgstr ""

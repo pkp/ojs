@@ -146,6 +146,7 @@ msgstr ""
 "qualsiasi chiarimento e la ringraziamo per la sua collaborazione.</p>\n"
 "<p>{$contextSignature}</p>"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 "Sei stato assegnato come Editor per una proposta inviata a {$contextName}"
@@ -167,7 +168,7 @@ msgstr ""
 "invitiamo a declinarla utilizzando il pulsante \"Declina proposta\".</p>\n"
 "<p>Grazie per la sua collaborazione.</p>\n"
 "<p>Cordiali saluti,</p>\n"
-"<p>{$signature}</p>"
+"<p>{$contextSignature}</p>"
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"
