@@ -54,7 +54,7 @@ describe('Data suite tests', function() {
 		cy.clickDecision('Send for Review');
 		cy.recordDecisionSendToReview('Send for Review', submission.authors, [submission.title]);
 		cy.isActiveStageTab('Review');
-		cy.assignReviewer('Julie Janssen');
+		cy.assignReviewer('Julie Janssen', 'Anonymous Reviewer/Disclosed Author');
 		cy.assignReviewer('Paul Hudson');
 	});
 });

@@ -18,6 +18,14 @@ module.exports = defineConfig({
     defaultGenre: 'Article Text',
     authorUserGroupId: 14,
     translatorUserGroupId: 15,
+    dataAvailabilityTest: {
+      submission: {
+        title: 'Sodium butyrate improves growth performance of weaned piglets during the first period after weaning',
+        authorFamilyName: 'Christopher'
+      },
+      anonymousReviewer: 'phudson',
+      anonymousDisclosedReviewer: 'jjanssen'
+    }
   },
   watchForFileChanges: false,
   defaultCommandTimeout: 10000,
