@@ -47,24 +47,6 @@ msgstr ""
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 
-msgid "emails.lockssExistingArchive.subject"
-msgstr ""
-
-msgid "emails.lockssExistingArchive.body"
-msgstr ""
-
-msgid "emails.lockssExistingArchive.description"
-msgstr ""
-
-msgid "emails.lockssNewArchive.subject"
-msgstr ""
-
-msgid "emails.lockssNewArchive.body"
-msgstr ""
-
-msgid "emails.lockssNewArchive.description"
-msgstr ""
-
 msgid "emails.submissionAckNotAuthor.subject"
 msgstr ""
 

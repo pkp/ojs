@@ -2597,12 +2597,6 @@ msgstr "Rediger de beskeder, der sendes i e-mails fra dette tidsskrift."
 msgid "mailable.layoutComplete.name"
 msgstr "Publiceringsversion færdiggjort"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Arkiver anmodningen"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Arkiver anmodningen (ny)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ny version dannet"
 

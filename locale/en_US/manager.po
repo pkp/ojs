@@ -2125,12 +2125,6 @@ msgstr "Edit the messages sent in emails from this journal."
 msgid "mailable.layoutComplete.name"
 msgstr "Galleys Complete"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Archive Request"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Archive Request (New)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "New Version Created"
 

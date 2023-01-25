@@ -114,24 +114,6 @@ msgstr ""
 "fyrir þinn áhuga á að fylgjast með tímaritinu. </p><p>Með kærri kveðju,</"
 "p>{$signature}"
 
-msgid "emails.lockssExistingArchive.subject"
-msgstr "Beiðni um geymslu (Archiving) á {$contextName}"
-
-msgid "emails.lockssExistingArchive.body"
-msgstr ""
-
-msgid "emails.lockssExistingArchive.description"
-msgstr ""
-
-msgid "emails.lockssNewArchive.subject"
-msgstr "Beiðni um geymslu (Archiving) á {$contextName}"
-
-msgid "emails.lockssNewArchive.body"
-msgstr ""
-
-msgid "emails.lockssNewArchive.description"
-msgstr ""
-
 msgid "emails.submissionAckNotAuthor.subject"
 msgstr "Staðfesting á innsendingu"
 

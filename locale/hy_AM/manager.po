@@ -2623,12 +2623,6 @@ msgstr "Խմբագրել այս ամսագրից ուղարկված նամակն
 msgid "mailable.layoutComplete.name"
 msgstr "Շարվածքները ամբողջական են"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Արխիվային հարցում"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Արխիվային հարցում (Նոր)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ստեղծվել է նոր տարբերակը"
 
