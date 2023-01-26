@@ -89,4 +89,19 @@ class I7265_EditorialDecisions extends \PKP\migration\upgrade\v3_4_0\I7265_Edito
                 'decision' => 17, // APP\decision\Decision::REVERT_DECLINE
             ]);
     }
+
+    protected function getContextTable(): string
+    {
+        return 'journals';
+    }
+
+    protected function getContextSettingsTable(): string
+    {
+        return 'journal_settings';
+    }
+
+    protected function getContextIdColumn(): string
+    {
+        return 'journal_id';
+    }
 }
