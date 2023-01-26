@@ -135,6 +135,7 @@ msgstr ""
 "para publicar o seu trabalho.</p><br /><p>Atenciosamente,</"
 "p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Você foi designado como editor em uma submissão para {$contextName}"
 
@@ -148,7 +149,7 @@ msgstr ""
 "e, em seguida, atribua avaliadores clicando em \"Adicionar Avaliador\".</"
 "p><p>Se a submissão não for apropriada para este periódico, recuse a "
 "submissão.</p><p>Agradecemos antecipadamente.</p> <p>Atenciosamente,</"
-"p>{$signature}"
+"p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "A revista {$contextName} solicita avaliação de artigo"

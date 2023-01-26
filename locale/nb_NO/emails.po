@@ -133,6 +133,7 @@ msgstr ""
 "tidsskrift til for arbeidet ditt.</p><p>Med vennlig hilsen</"
 "p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Du er oppnevnt til redaktør for en innlevering til {$contextName}"
 
@@ -145,7 +146,7 @@ msgstr ""
 "det videre til vurdering ved å klikke på \"Send til fagfellevurdering\" og "
 "oppnevn fagfeller ved å klikke på \"Legg til fagfelle\".</p><p>Hvis "
 "innleveringen ikke passer til dette tidsskriftet, så avvis innleveringen.</"
-"p><p>På forhånd takk.</p><p>Med vennlig hilsen</p>{$signature}"
+"p><p>På forhånd takk.</p><p>Med vennlig hilsen</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Forespørsel om fagfellevurdering"

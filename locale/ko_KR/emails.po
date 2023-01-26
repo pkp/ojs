@@ -53,6 +53,7 @@ msgstr ""
 msgid "emails.submissionAckNotAuthor.body"
 msgstr ""
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 

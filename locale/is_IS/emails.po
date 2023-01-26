@@ -127,6 +127,7 @@ msgstr ""
 "innsendingu.</p><p> Annars þökkum við fyrir áhuga ykkar á að birta verk "
 "ykkar í tímaritinu okkar.</p><p>Kærar kveðjur,</p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Þér hefur verið úthlutað sem ritstjóra á innsendingu í  {$contextName}"
 
@@ -139,7 +140,7 @@ msgstr ""
 "ritrýniþrep með því að velja  \"Senda í ritrýni\" og úthluta ritrýni með því "
 "að smella á \"Bæta við ritirýni\".</p><p>Ef þessi innsending hentar ekki "
 "fyrir tímaritið þá vinsamlega hafnaðu henni.</p><p>Með fyrirfram þökk.</"
-"p><p>Bestu kveðjur,</p>{$signature}"
+"p><p>Bestu kveðjur,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Boð um ritrýni"

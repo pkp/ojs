@@ -132,6 +132,7 @@ msgstr ""
 "a escolhada da nossa revista para publicar o seu trabalho.</p><br /"
 "><p>Atentamente,</p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Foi designado como editor para uma submissão de {$contextName}"
 
@@ -145,7 +146,7 @@ msgstr ""
 "revisão selecionando \"Enviar para Revisão\" e depois designando revisores "
 "ao clicar em \"Adicionar Revisor\"</p><p>Se a submissão não for apropriada "
 "para esta revista, rejeite a submissão.</p><p>Agradecendo desde já a sua "
-"atenção.</p><p>Atentamente,</p>{$signature}"
+"atenção.</p><p>Atentamente,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Convite para revisão de artigo"

@@ -130,6 +130,7 @@ msgstr ""
 "prosím.</p><p>Děkuji, že zvažujete náš časopis jako místo pro publikaci své "
 "práce.</p><p>S pozdravem,</p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Byl /a jste přiřazen jako editor příspěvku pro {$contextName}"
 
@@ -143,7 +144,7 @@ msgstr ""
 "recenzního řízení výběrem možnosti „Odeslat k recenznímu řízení“ a poté "
 "přidejte recenzenty kliknutím na „Přidat recenzenta“. </p><p>Pokud podle vás "
 "není příspěvek vhodný pro tento časopis, odmítněte jej, prosím.</p><p>Předem "
-"děkujeme.</p><p>S pozdravem,</p>{$signature}"
+"děkujeme.</p><p>S pozdravem,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Pozvánka k recenzi"

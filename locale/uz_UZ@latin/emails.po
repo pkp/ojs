@@ -134,6 +134,7 @@ msgstr ""
 "joyingiz sifatida ko‘rganingiz uchun tashakkur.</p><p>Hurmat bilan,</"
 "p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Siz {$contextName} ga yuborilgan muharrir sifatida tayinlangansiz"
 
@@ -147,7 +148,7 @@ msgstr ""
 "yoʻnaltiring. \" va keyin \"Tarzchi qo'shish\" tugmasini bosish orqali "
 "sharhlovchilarni tayinlang.</p><p>Agar taqdim etilgan maqola ushbu jurnalga "
 "mos kelmasa, taqdim etishni rad eting.</p><p>Oldindan rahmat.</p> <p>Hurmat "
-"bilan,</p>{$signature}"
+"bilan,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Ko'rib chiqish uchun taklif"

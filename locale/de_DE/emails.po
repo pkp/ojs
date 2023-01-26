@@ -154,7 +154,7 @@ msgstr ""
 "Vielen Dank für die Bearbeitung.\n"
 "\n"
 "Mit freundlichen Grüßen,\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.reviewRequest.subject"

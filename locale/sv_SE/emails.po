@@ -132,6 +132,7 @@ msgstr ""
 "medförfattare till detta bidrag.</p><p>Vänliga hälsningar,</"
 "p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Du har blivit utsedd till redaktör för ett bidrag i {$contextName}"
 
@@ -144,7 +145,7 @@ msgstr ""
 "granskning genom att välja \"Skicka till granskning\" och lägga till "
 "granskare med \"Lägg till granskare\".</p><p>Om inte bidraget är lämpligt "
 "för tidskriften kan du avslå det. </p><p>Tack på förhand.</p><p>Vänliga "
-"hälsningar,</p>{$signature}"
+"hälsningar,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"

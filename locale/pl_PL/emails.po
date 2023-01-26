@@ -133,6 +133,7 @@ msgstr ""
 "<br />\n"
 "{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Zostałeś przypisany jako redaktor do zgłoszenia w {$contextName}"
 

@@ -131,6 +131,7 @@ msgstr ""
 "p><p> Terima kasih kerana mempertimbangkan jurnal ini sebagai tempat kerja "
 "anda.</p>{$contextSignature}"
 
+#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 "Anda telah ditugaskan sebagai editor pada penyerahan kepada {$contextName}"
@@ -145,7 +146,7 @@ msgstr ""
 "peringkat semakan dengan memilih \"Hantar ke Semakan\" dan kemudian tetapkan "
 "penyemak dengan mengklik \"Tambah Penyemak\".</p><p>Jika penyerahan tidak "
 "sesuai untuk jurnal ini, sila tolak penyerahan.</p><p>Terima kasih terlebih "
-"dahulu.</p><p>Sekian,</p>{$signature}"
+"dahulu.</p><p>Sekian,</p>{$contextSignature}"
 
 msgid "emails.reviewRequest.subject"
 msgstr "Jemputan untuk menyemak"
