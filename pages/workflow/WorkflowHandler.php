@@ -15,7 +15,6 @@
 
 namespace APP\pages\workflow;
 
-use APP\components\forms\publication\TitleAbstractForm;
 use APP\core\Application;
 use APP\core\Services;
 use APP\decision\types\Accept;
@@ -25,6 +24,7 @@ use APP\journal\SectionDAO;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\components\forms\publication\TitleAbstractForm;
 use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\decision\types\BackFromCopyediting;
@@ -314,7 +314,10 @@ class WorkflowHandler extends PKPWorkflowHandler
             $latestPublicationApiUrl,
             $locales,
             $latestPublication,
-            $section
+            $section->getData('wordCount')
+                ? (int) $section->getData('wordCount')
+                : 0,
+            !$section->getData('abstractsNotRequired')
         );
     }
 }
