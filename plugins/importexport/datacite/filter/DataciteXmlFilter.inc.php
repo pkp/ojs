@@ -169,8 +169,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 			$subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
 		} elseif (!empty($article) && !empty($publication)) {
 			$subjects = array_merge(
-				$this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
-				$this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
+				(array) $this->getPrimaryTranslation($publication->getData('keywords'), $objectLocalePrecedence),
+				(array) $this->getPrimaryTranslation($publication->getData('subjects'), $objectLocalePrecedence)
 			);
 		}
 		if (!empty($subjects)) {
