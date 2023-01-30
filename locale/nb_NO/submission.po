@@ -1,7 +1,7 @@
-# Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Tormod Strømme <tormod.stromme@uib.no>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-18 15:34+0000\n"
+"PO-Revision-Date: 2023-01-24 13:02+0000\n"
 "Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nb_NO/>\n"
@@ -126,9 +126,8 @@ msgstr "Utført"
 msgid "submission.incomplete"
 msgstr "Avventer godkjenning"
 
-#, fuzzy
 msgid "submission.submit.submissionChecklist"
-msgstr "Sjekkliste"
+msgstr "Sjekkliste for innleveringer"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Erklæring om personvern"

@@ -568,10 +568,8 @@ msgstr "Signatur"
 #, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"De forberedte e-postene som blir sendt av systemet på vegne av tidsskriftet "
-"kommer til å ha følgende signatur nederst. Selve meldingstekstene til de "
-"forberedte e-postene er tilgjengelig for redigering under "
-"Tidsskriftadministrasjon."
+"Automatiske eposter sendt på vegne av tidsskriftet kommer til å ha følgende "
+"signatur nederst."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Aktiver mulighet for å lage oppslag"
@@ -2061,16 +2059,20 @@ msgstr ""
 "Send en kopi til kontaktpersonen som er angitt i tidsskriftsinnstillingene."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Tidsskriftsstatistikk"
 
+#, fuzzy
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Antall besøkere på tidsskriftets hjemmeside."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Om tidsskriftsstatistikken"
 
+#, fuzzy
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Last ned et CSV/Excel-ark med bruksstatistikk for dette tidsskriftet basert "
+"på følgende parametere."
 
 msgid "stats.context.downloadReport.downloadContext.description"
 msgstr ""
@@ -2566,6 +2568,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr ""
+
+msgid "mailable.lockssNewArchive.name"
 msgstr ""
 
 #~ msgid "manager.groups"

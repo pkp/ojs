@@ -1,11 +1,11 @@
-# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022, 2023.
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-10-19 13:01+0000\n"
+"PO-Revision-Date: 2023-01-09 16:02+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "tr_TR/>\n"
@@ -118,9 +118,8 @@ msgstr "Değerlendir"
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Gönderinin konu üst verileri güncellendi."
 
-#, fuzzy
 msgid "submission.upload.fileContents"
-msgstr "Yüklenecek Dosya İçeriği"
+msgstr "Aday Makale Bileşeni"
 
 msgid "submission.complete"
 msgstr "Onaylandı"
@@ -375,9 +374,15 @@ msgstr "Bu dizgi daha önce yayımlandığı için düzenlenemez."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Lütfen bu dergiye gönderilen aday makaleler için telif hakkı şartlarını "
+"okuyun ve anlayın."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Bu dergiye makale göndermenize izin verilmiyor çünkü yazarların editör "
+"kadrosu tarafından kaydedilmesi gerekiyor. Bunun bir hata olduğunu "
+"düşünüyorsanız, lütfen <a href='mailto:{$email}'>{$name}</a> ile iletişime "
+"geçin."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
