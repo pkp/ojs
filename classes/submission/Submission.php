@@ -64,8 +64,13 @@ class Submission extends PKPSubmission
             case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
                 switch ($context->getData('copyrightHolderType')) {
                     case 'author':
+                        // Override based on context settings
+                        if (!$publication) {
+                            $publication = $this->getCurrentPublication();
+                        }
+
                         $authorUserGroups = Repo::userGroup()->getCollector()->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])->filterByContextIds([$context->getId()])->getMany();
-                        $fieldValue = [$context->getPrimaryLocale() => $this->getAuthorString($authorUserGroups)];
+                        $fieldValue = [$context->getPrimaryLocale() => $publication->getAuthorString($authorUserGroups)];
                         break;
                     case 'context':
                     case null:
@@ -84,6 +89,7 @@ class Submission extends PKPSubmission
                 if (!$publication) {
                     $publication = $this->getCurrentPublication();
                 }
+
                 if ($publication) {
                     switch ($context->getData('copyrightYearBasis')) {
                         case 'submission':

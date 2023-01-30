@@ -78,6 +78,7 @@ class ArticleSearch extends SubmissionSearch
         }
 
         $i = 0; // Used to prevent ties from clobbering each other
+        $authorUserGroups = Repo::userGroup()->getCollector()->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])->getMany();
         foreach ($unorderedResults as $submissionId => $data) {
             // Exclude unwanted IDs.
             if (in_array($submissionId, $exclude)) {
@@ -87,7 +88,7 @@ class ArticleSearch extends SubmissionSearch
             switch ($orderBy) {
                 case 'authors':
                     $submission = Repo::submission()->get($submissionId);
-                    $orderKey = $submission->getAuthorString();
+                    $orderKey = $submission->getCurrentPublication()->getAuthorString($authorUserGroups);
                     break;
 
                 case 'title':
