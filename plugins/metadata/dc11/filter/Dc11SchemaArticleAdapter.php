@@ -86,8 +86,9 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         /** @var Journal */
         $journal = $oaiDao->getJournal($article->getData('contextId'));
         $section = $oaiDao->getSection($article->getSectionId());
+        $publication = $article->getCurrentPublication();
         if ($article instanceof Submission) { /** @var Submission $article */
-            $issue = $oaiDao->getIssue($article->getCurrentPublication()->getData('issueId'));
+            $issue = $oaiDao->getIssue($publication->getData('issueId'));
         } else {
             $issue = null;
         }
@@ -98,8 +99,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $this->_addLocalizedElements($dc11Description, 'dc:title', $article->getFullTitle(null));
 
         // Creator
-        $authors = Repo::author()->getSubmissionAuthors($article);
-        foreach ($authors as $author) {
+        foreach ($publication->getData('authors') as $author) {
             $dc11Description->addStatement('dc:creator', $author->getFullName(false, true));
         }
 
@@ -108,8 +108,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $supportedLocales = $journal->getSupportedFormLocales();
         $subjects = array_merge_recursive(
-            (array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
-            (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
+            (array) $submissionKeywordDao->getKeywords($publication->getId(), $supportedLocales),
+            (array) $submissionSubjectDao->getSubjects($publication->getId(), $supportedLocales)
         );
         $this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 
@@ -155,7 +155,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $dc11Description->addStatement('dc:type', $driverVersion, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 
         $galleys = Repo::galley()->getCollector()
-            ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+            ->filterByPublicationIds([$publication->getId()])
             ->getMany();
 
         // Format

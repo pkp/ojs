@@ -17,7 +17,6 @@
 namespace APP\plugins\oaiMetadataFormats\rfc1807;
 
 use APP\core\Application;
-use APP\facades\Repo;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
 use PKP\oai\OAIMetadataFormat;
@@ -38,6 +37,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         $issue = & $record->getData('issue');
         $galleys = & $record->getData('galleys');
 
+        $publication = $article->getCurrentPublication();
+
         // Publisher
         $publisher = $journal->getLocalizedName(); // Default
         $publisherInstitution = $journal->getData('publisherInstitution');
@@ -54,8 +55,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Format creators
         $creators = [];
-        $authors = Repo::author()->getSubmissionAuthors($article);
-        foreach ($authors as $author) {
+        foreach ($publication->getAuthors() as $author) {
             $authorName = $author->getFullName(false, true);
             $affiliation = $author->getLocalizedAffiliation();
             if (!empty($affiliation)) {
@@ -69,7 +69,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $subjects = array_merge_recursive(
-            (array) $submissionKeywordDao->getKeywords($article->getCurrentPublication()->getId(), $supportedLocales),
+            (array) $submissionKeywordDao->getKeywords($publication->getId(), $supportedLocales),
             (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
         );
         $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
