@@ -441,7 +441,11 @@ class DataciteXmlFilter extends NativeExportFilter {
 			default:
 				assert(false);
 		}
-		if (!empty($resourceType)) {
+		if ($resourceType == 'Article') {
+			// Create the resourceType element.
+			$resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
+			$resourceTypeNode->setAttribute('resourceTypeGeneral', 'JournalArticle');
+		} elseif  ($resourceType == 'Journal Issue') {
 			// Create the resourceType element.
 			$resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType', $resourceType);
 			$resourceTypeNode->setAttribute('resourceTypeGeneral', 'Text');
