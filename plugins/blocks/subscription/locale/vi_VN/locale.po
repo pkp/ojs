@@ -30,7 +30,7 @@ msgid "plugins.block.subscription.providedBy"
 msgstr "Cung cấp truy cập: {$institutionName}"
 
 msgid "plugins.block.subscription.comingFromIP"
-msgstr "Truy cập từ : {$ip}"
+msgstr "Truy cập từ : {$ip}"
 
 msgid "plugins.block.subscription.about"
 msgstr "Đăng ký thuê bao"
