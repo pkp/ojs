@@ -229,8 +229,6 @@ describe('Data suite: Amwandenga', function() {
 			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
 			.parents('.submissionWizard__reviewPanel')
-			.find('h4').contains('Categories').siblings('.submissionWizard__reviewPanel__item__value').contains('None selected')
-			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Comments for the Editor').siblings('.submissionWizard__reviewPanel__item__value').contains('None');
 		cy.get('h3').contains('For the Editors (French/Français (Canada))') // FIXME: Should be French
 			.parents('.submissionWizard__reviewPanel')
