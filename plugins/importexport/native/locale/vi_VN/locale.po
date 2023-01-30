@@ -79,7 +79,7 @@ msgstr "Người dùng được chỉ định, \"{$userName}\", không tồn t�
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
 "Tiêu đề của chuyên mục \"{$section1Title}\" và tiêu đề của chuyên mục "
-"\"{$section2Title}\" trong số \"{$issueTitle}\" phù hợp với sự  khác nhau "
+"\"{$section2Title}\" trong số \"{$issueTitle}\" phù hợp với sự  khác nhau "
 "của các chuyên mục hiện có của tạp chí."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMatch"
@@ -91,8 +91,8 @@ msgstr ""
 msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
 msgstr ""
 "Viết tắt của chuyên mục \"{$section1Abbrev}\" và viết tắt của chuyên mục "
-"\"{$section2Abbrev}\" của số \"{$issueTitle}\" phù hợp trong sự khác nhau "
-"với các chuyên mục hiện có của tạp chí."
+"\"{$section2Abbrev}\" của số \"{$issueTitle}\" phù hợp trong sự khác nhau "
+"với các chuyên mục hiện có của tạp chí."
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
 msgstr ""
@@ -107,7 +107,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
 msgstr ""
-"Số xuất bản hiện tại với id {$issueId} phù hợp với nhận dạng số xuất bản đã "
+"Số xuất bản hiện tại với id {$issueId} phù hợp với nhận dạng số xuất bản đã "
 "cho \"{$issueIdentification}\".  Số xuất bản này sẽ không được sửa đổi, "
 "nhưng các bài báo có thể được thêm vào."
 

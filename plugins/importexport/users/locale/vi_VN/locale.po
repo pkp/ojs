@@ -93,7 +93,7 @@ msgid "plugins.importexport.users.export.exportAllUsers"
 msgstr "Xuất tất cả"
 
 msgid "plugins.importexport.users.export.errorsOccurred"
-msgstr "Đã có lỗi xảy ra khi Xuất dữ liệu người dùng"
+msgstr "Đã có lỗi xảy ra khi Xuất dữ liệu người dùng"
 
 msgid "plugins.importexport.users.importComplete"
 msgstr ""
