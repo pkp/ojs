@@ -113,6 +113,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $publication->setData('languages', 'en_US');
         $publication->setData('copyrightHolder', 'article-copyright');
         $publication->setData('copyrightYear', 'year');
+        $publication->setData('authors', collect([$author]));
 
         // Article
         /** @var Submission|MockObject */
@@ -237,16 +238,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->method('getIssue')
             ->will($this->returnValue($issue));
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
-
-        /** @var AuthorRepository|MockObject */
-        $mockAuthorRepository = $this->getMockBuilder(AuthorRepository::class)
-            ->disableOriginalConstructor()
-            ->onlyMethods(['getSubmissionAuthors'])
-            ->getMock();
-        $mockAuthorRepository->expects($this->any())
-            ->method('getSubmissionAuthors')
-            ->will($this->returnValue(LazyCollection::wrap([$author])));
-        app()->instance(AuthorRepository::class, $mockAuthorRepository);
 
         /** @var GalleyCollector|MockObject */
         $mockGalleyCollector = $this->getMockBuilder(GalleyCollector::class)

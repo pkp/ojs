@@ -64,7 +64,8 @@ class Submission extends PKPSubmission
             case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
                 switch ($context->getData('copyrightHolderType')) {
                     case 'author':
-                        $fieldValue = [$context->getPrimaryLocale() => $this->getAuthorString()];
+                        $authorUserGroups = Repo::userGroup()->getCollector()->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])->filterByContextIds([$context->getId()])->getMany();
+                        $fieldValue = [$context->getPrimaryLocale() => $this->getAuthorString($authorUserGroups)];
                         break;
                     case 'context':
                     case null:

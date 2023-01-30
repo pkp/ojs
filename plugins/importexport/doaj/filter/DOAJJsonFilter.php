@@ -155,7 +155,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
             'content_type' => 'html'
         ];
         // Authors: name and affiliation
-        $articleAuthors = Repo::author()->getSubmissionAuthors($pubObject);
+        $articleAuthors = $publication->getData('authors');
         if ($articleAuthors->isNotEmpty()) {
             $article['bibjson']['author'] = [];
 

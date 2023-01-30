@@ -68,7 +68,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
                 if (empty($title)) {
                     $title = __('common.untitled');
                 }
-                $authorsInTitle = $submission->getShortAuthorString();
+                $authorsInTitle = $publication->getShortAuthorString();
                 $title = $authorsInTitle . '; ' . $title;
                 return [
                     new LinkAction(

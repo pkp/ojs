@@ -70,7 +70,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
     // View level hook implementations.
     //
     /**
-     * @copydoc templates/article/footer.tpl
+     * Add content to the article footer.
      */
     public function callbackTemplateArticlePageFooter($hookName, $params)
     {
@@ -79,7 +79,8 @@ class RecommendByAuthorPlugin extends GenericPlugin
 
         // Find articles of the same author(s).
         $displayedArticle = $smarty->getTemplateVars('article');
-        $authors = Repo::author()->getSubmissionAuthors($displayedArticle);
+        $displayedPublication = $smarty->getTemplateVars('publication');
+        $authors = $displayedPublication->getData('authors');
         $foundArticles = [];
         foreach ($authors as $author) { /** @var Author $author */
             // The following article search is by name only as authors are
