@@ -150,29 +150,28 @@ class SearchHandler extends Handler
             $rangeInfo
         );
 
-        // Prepare and display the search template.
         $this->setupTemplate($request);
+
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->setCacheability(TemplateManager::CACHEABILITY_NO_STORE);
 
-        // Result set ordering options.
-        $orderByOptions = $articleSearch->getResultSetOrderingOptions($request);
-        $templateMgr->assign('searchResultOrderOptions', $orderByOptions);
-        $orderDirOptions = $articleSearch->getResultSetOrderingDirectionOptions();
-        $templateMgr->assign('searchResultOrderDirOptions', $orderDirOptions);
-
-        // Result set ordering selection.
-        [$orderBy, $orderDir] = $articleSearch->getResultSetOrdering($request);
-        $templateMgr->assign('orderBy', $orderBy);
-        $templateMgr->assign('orderDir', $orderDir);
-
-        // Similar documents.
-        $templateMgr->assign('simDocsEnabled', true);
-
-        // Result set display.
         $this->_assignSearchFilters($request, $templateMgr, $searchFilters);
-        $templateMgr->assign('results', $results);
-        $templateMgr->assign('error', $error);
+        [$orderBy, $orderDir] = $articleSearch->getResultSetOrdering($request);
+
+        $templateMgr->assign([
+            'orderBy' => $orderBy,
+            'orderDir' => $orderDir,
+            'simDocsEnabled' => true,
+            'results' => $results,
+            'error' => $error,
+            'authorUserGroups' => Repo::userGroup()->getCollector()
+                ->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
+                ->filterByContextIds($searchFilters['searchJournal'] ? [$searchFilters['searchJournal']->getId()] : null)
+                ->getMany(),
+            'searchResultOrderOptions' => $articleSearch->getResultSetOrderingOptions($request),
+            'searchResultOrderDirOptions' => $articleSearch->getResultSetOrderingDirectionOptions(),
+        ]);
+
         $templateMgr->display('frontend/pages/search.tpl');
     }
 
