@@ -138,7 +138,7 @@ class SubmissionHandler extends PKPSubmissionHandler
         );
     }
 
-    protected function getForTheEditorsForm(string $publicationApiUrl, array $locales, Publication $publication, Submission $submission, Context $context, string $suggestionUrlBase): ForTheEditors
+    protected function getForTheEditorsForm(string $publicationApiUrl, array $locales, Publication $publication, Submission $submission, Context $context, string $suggestionUrlBase, LazyCollection $categories): ForTheEditors
     {
         return new ForTheEditors(
             $publicationApiUrl,
@@ -146,7 +146,8 @@ class SubmissionHandler extends PKPSubmissionHandler
             $publication,
             $submission,
             $context,
-            $suggestionUrlBase
+            $suggestionUrlBase,
+            $categories
         );
     }
 
