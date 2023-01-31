@@ -489,8 +489,11 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             default:
                 assert(false);
         }
-        if (!empty($resourceType)) {
-            // Create the resourceType element.
+        if ($resourceType == 'Article') {
+            // Create the resourceType element for Article and Galley.
+            $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
+            $resourceTypeNode->setAttribute('resourceTypeGeneral', 'JournalArticle');
+        } elseif ($resourceType == 'Journal Issue') {
             $resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType', $resourceType);
             $resourceTypeNode->setAttribute('resourceTypeGeneral', 'Text');
         } else {
