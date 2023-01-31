@@ -51,9 +51,7 @@ class AuthorDashboardHandler extends PKPAuthorDashboardHandler
             $latestPublicationApiUrl,
             $locales,
             $latestPublication,
-            $section->getData('wordCount')
-                ? (int) $section->getData('wordCount')
-                : 0,
+            (int) $section->getData('wordCount'),
             !$section->getData('abstractsNotRequired')
         );
     }

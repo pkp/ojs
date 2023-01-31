@@ -136,9 +136,7 @@ class SubmissionHandler extends PKPSubmissionHandler
             $publication,
             $context,
             $suggestionUrlBase,
-            $section->getData('wordCount')
-                ? (int) $section->getData('wordCount')
-                : 0,
+            (int) $section->getData('wordCount'),
             !$section->getData('abstractsNotRequired')
         );
     }
