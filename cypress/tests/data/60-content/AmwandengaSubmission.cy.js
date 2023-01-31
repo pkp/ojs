@@ -93,14 +93,15 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('input[name="privacyConsent"]').check();
 		cy.contains('Begin Submission').click();
 
+
 		// The submission wizard has loaded
-		cy.contains('Make a Submission: Upload Files');
+		cy.contains('Make a Submission: Details');
 		cy.get('.submissionWizard__submissionDetails').contains('Mwandenga');
 		cy.get('.submissionWizard__submissionDetails').contains(submission.title);
 		cy.contains('Submitting to the Articles section in English');
-		cy.get('.pkpSteps__step__label--current').contains('Upload Files');
+		cy.get('.pkpSteps__step__label--current').contains('Details');
+		cy.get('.pkpSteps__step__label').contains('Upload Files');
 		cy.get('.pkpSteps__step__label').contains('Contributors');
-		cy.get('.pkpSteps__step__label').contains('Details');
 		cy.get('.pkpSteps__step__label').contains('For the Editors');
 		cy.get('.pkpSteps__step__label').contains('Review');
 
@@ -110,7 +111,15 @@ describe('Data suite: Amwandenga', function() {
 				submission.id = parseInt(search.split('=')[1]);
 			});
 
+		// Enter details
+		cy.get('h2').contains('Submission Details');
+		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
+		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
+
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
 		// Upload files and set file genres
+		cy.contains('Make a Submission: Upload Files');
 		cy.get('h2').contains('Upload Files');
 		cy.get('h2').contains('Files');
 		cy.uploadSubmissionFiles(submission.files);
@@ -175,15 +184,6 @@ describe('Data suite: Amwandenga', function() {
 
 		cy.get('.submissionWizard__footer button').contains('Continue').click();
 
-		// Enter details
-		cy.contains('Make a Submission: Details');
-		cy.get('.pkpSteps__step__label--current').contains('Details');
-		cy.get('h2').contains('Submission Details');
-		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
-		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
-
-		cy.get('.submissionWizard__footer button').contains('Continue').click();
-
 		// For the Editors
 		cy.contains('Make a Submission: For the Editors');
 		cy.get('.pkpSteps__step__label--current').contains('For the Editors');
@@ -219,20 +219,20 @@ describe('Data suite: Amwandenga', function() {
 			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Title').siblings('.submissionWizard__reviewPanel__item__value').contains(submission.title)
 			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
+			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Abstract').siblings('.submissionWizard__reviewPanel__item__value').contains(submission.abstract);
 		cy.get('h3').contains('Details (French/Français (Canada))') // FIXME: Should be French
 			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Title').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
 			.parents('.submissionWizard__reviewPanel')
+			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
+			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Abstract').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided');
 		cy.get('h3').contains('For the Editors (English/English)') // FIXME: Should be English
 			.parents('.submissionWizard__reviewPanel')
-			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
-			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Comments for the Editor').siblings('.submissionWizard__reviewPanel__item__value').contains('None');
 		cy.get('h3').contains('For the Editors (French/Français (Canada))') // FIXME: Should be French
-			.parents('.submissionWizard__reviewPanel')
-			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided');
 
 		// Save for later
 		cy.get('button').contains('Save for Later').click();
