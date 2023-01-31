@@ -14,6 +14,7 @@
 
 namespace APP\plugins\blocks\languageToggle;
 
+use APP\core\Application;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
 use PKP\plugins\BlockPlugin;
@@ -70,8 +71,9 @@ class LanguageToggleBlockPlugin extends BlockPlugin
         $templateMgr->assign('isPostRequest', $request->isPost());
 
         if (!SessionManager::isDisabled()) {
+            $request ??= Application::get()->getRequest();
             $context = $request->getContext();
-            $locales = Locale::getFormattedDisplayNamesFromOnlySpecifiedLocales(
+            $locales = Locale::getFormattedDisplayNames(
                 isset($context)
                     ? $context->getSupportedLocales()
                     : $request->getSite()->getSupportedLocales(),
