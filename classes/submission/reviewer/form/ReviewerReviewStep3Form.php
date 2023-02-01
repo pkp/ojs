@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerReviewStep3Form
+ *
  * @ingroup submission_reviewer_form
  *
  * @brief Form for Step 3 of a review in OJS.
@@ -15,6 +16,9 @@
 
 namespace APP\submission\reviewer\form;
 
+use APP\submission\Submission;
+use PKP\core\PKPRequest;
+use PKP\submission\reviewAssignment\ReviewAssignment;
 use PKP\submission\reviewer\form\PKPReviewerReviewStep3Form;
 
 class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
@@ -22,9 +26,9 @@ class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
     /**
      * @copydoc PKPReviewerReviewStep3Form::__construct()
      */
-    public function __construct($request, $reviewerSubmission, $reviewAssignment)
+    public function __construct(PKPRequest $request, Submission $reviewSubmission, ReviewAssignment $reviewAssignment)
     {
-        parent::__construct($request, $reviewerSubmission, $reviewAssignment);
+        parent::__construct($request, $reviewSubmission, $reviewAssignment);
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function ($recommendation) {
             return isset($recommendation);
         }));

@@ -32,10 +32,7 @@ class ContextEmailVariable extends PKPContextEmailVariable
         return array_merge(
             parent::descriptions(),
             [
-                self::CONTEXT_NAME => __('emailTemplate.variable.context.contextName'),
-                self::CONTEXT_URL => __('emailTemplate.variable.context.contextUrl'),
-                self::CONTEXT_SIGNATURE => __('emailTemplate.variable.context.contextSignature'),
-                self::CONTEXT_ACRONYM => __('emailTemplate.variable.context.contextAcronym'),
+                static::CONTEXT_ACRONYM => __('emailTemplate.variable.context.contextAcronym'),
             ]
         );
     }
@@ -45,14 +42,17 @@ class ContextEmailVariable extends PKPContextEmailVariable
      */
     public function values(string $locale): array
     {
-        return array_merge(
+        $values = array_merge(
             parent::values($locale),
             [
-                self::CONTEXT_NAME => $this->context->getLocalizedData('name', $locale),
-                self::CONTEXT_URL => $this->getContextUrl(),
-                self::CONTEXT_SIGNATURE => $this->getContextSignature(),
-                self::CONTEXT_ACRONYM => $this->context->getLocalizedData('acronym'),
-            ]
+                static::CONTEXT_ACRONYM => htmlspecialchars($this->context->getLocalizedData('acronym')),
+            ],
         );
+
+        // Pass the values into the context signature so variables
+        // used in the signature can be rendered.
+        $values[static::CONTEXT_SIGNATURE] = $this->getContextSignature($values);
+
+        return $values;
     }
 }

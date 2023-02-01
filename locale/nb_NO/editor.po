@@ -1,11 +1,12 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2022-08-18 10:23+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2023-01-24 13:28+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -82,7 +83,7 @@ msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Alle personlige abonnenter ({$count} brukere)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Alle institusjonelle abonnenter  ({$count} brukere)"
+msgstr "Alle institusjonelle abonnenter ({$count} brukere)"
 
 msgid "editor.notifyUsers.inProgress"
 msgstr "Varsler brukere ..."
@@ -246,8 +247,8 @@ msgstr ""
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
-"Dette tidsskriftet bruker en egendefinert utgaverekkefølge.  <a href="
-"\"{$url}\" class=\"action\">«Tilbakestill til standard»</a>"
+"Dette tidsskriftet bruker en egendefinert utgaverekkefølge. <a href=\"{$url}"
+"\" class=\"action\">Tilbakestill til standard</a>"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
@@ -407,7 +408,6 @@ msgstr "I seksjon"
 msgid "editor.article.showPublicationVersion"
 msgstr "Vis planlagt publikasjon"
 
-#, fuzzy
 msgid "editor.article.publishVersion"
 msgstr "Publiser versjon"
 

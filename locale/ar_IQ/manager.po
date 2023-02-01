@@ -2481,12 +2481,6 @@ msgstr "تعديل الرسائل المرسلة بالبريد الالكترو
 msgid "mailable.layoutComplete.name"
 msgstr "الألواح الطباعية مكتملة"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "طلب الأرشفة"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "طلب الأرشفة (جديد)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "إصدار جديد تم إنشاؤه"
 

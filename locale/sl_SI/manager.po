@@ -2534,12 +2534,6 @@ msgstr "Urejanje email sporočil poslanih iz te revije."
 msgid "mailable.layoutComplete.name"
 msgstr "Prelom končan"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Zahteva za arhiviranje"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Zahteva za arhiviranje (novo)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ustvarjena nova različica"
 

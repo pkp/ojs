@@ -16,10 +16,9 @@
 	<email key="USER_VALIDATE_SITE" name="mailable.validateEmailSite.name" subject="emails.userValidateSite.subject" body="emails.userValidateSite.body"/>
 	<email key="REVIEWER_REGISTER" name="mailable.reviewerRegister.name" subject="emails.reviewerRegister.subject" body="emails.reviewerRegister.body"/>
 	<email key="ISSUE_PUBLISH_NOTIFY" name="mailable.issuePublishNotify.name" subject="emails.issuePublishNotify.subject" body="emails.issuePublishNotify.body"/>
-	<email key="LOCKSS_EXISTING_ARCHIVE" name="mailable.lockssExistingArchive.name" subject="emails.lockssExistingArchive.subject" description="emails.lockssExistingArchive.description" body="emails.lockssExistingArchive.body"/>
-	<email key="LOCKSS_NEW_ARCHIVE" name="mailable.lockssNewArchive.name" subject="emails.lockssNewArchive.subject" description="emails.lockssNewArchive.description" body="emails.lockssNewArchive.body"/>
 	<email key="SUBMISSION_ACK" name="mailable.submissionAck.name" subject="emails.submissionAck.subject" body="emails.submissionAck.body"/>
 	<email key="SUBMISSION_ACK_NOT_USER" name="mailable.submissionAckNotAuthor.name" subject="emails.submissionAckNotAuthor.subject" body="emails.submissionAckNotAuthor.body"/>
+	<email key="EDITOR_ASSIGN" name="mailable.editorAssign.name" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
 	<email key="REVIEW_CANCEL" name="mailable.reviewerUnassign.name" subject="emails.reviewCancel.subject" body="emails.reviewCancel.body"/>
 	<email key="REVIEW_REINSTATE" name="mailable.reviewerReinstate.name" subject="emails.reviewReinstate.subject" body="emails.reviewReinstate.body"/>
 	<email key="REVIEW_RESEND_REQUEST" name="mailable.reviewerResendRequest.name" subject="emails.reviewResendRequest.subject" body="emails.reviewResendRequest.body"/>
@@ -68,9 +67,9 @@
 	<email key="DISCUSSION_NOTIFICATION_PRODUCTION" name="mailable.discussionProduction.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
 	<email key="COPYEDIT_REQUEST" name="mailable.copyeditRequest.name" alternateTo="DISCUSSION_NOTIFICATION_COPYEDITING" subject="emails.copyeditRequest.subject" body="emails.copyeditRequest.body"/>
 	<email key="CITATION_EDITOR_AUTHOR_QUERY" name="mailable.citationAuthorQuery.name" alternateTo="DISCUSSION_NOTIFICATION_COPYEDITING" subject="emails.citationEditorAuthorQuery.subject" body="emails.citationEditorAuthorQuery.body"/>
-	<email key="EDITOR_ASSIGN_SUBMISSION" name="mailable.editorAssign.name" alternateTo="DISCUSSION_NOTIFICATION_SUBMISSION" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
-	<email key="EDITOR_ASSIGN_REVIEW" name="mailable.editorAssign.name" alternateTo="DISCUSSION_NOTIFICATION_REVIEW" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
-	<email key="EDITOR_ASSIGN_PRODUCTION" name="mailable.editorAssign.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
+	<email key="EDITOR_ASSIGN_SUBMISSION" name="mailable.editorAssignedManual.name" alternateTo="DISCUSSION_NOTIFICATION_SUBMISSION" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
+	<email key="EDITOR_ASSIGN_REVIEW" name="mailable.editorAssignedManual.name" alternateTo="DISCUSSION_NOTIFICATION_REVIEW" subject="emails.editorAssign.subject" body="emails.editorAssignReview.body"/>
+	<email key="EDITOR_ASSIGN_PRODUCTION" name="mailable.editorAssignedManual.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.editorAssign.subject" body="emails.editorAssignProduction.body"/>
 	<email key="LAYOUT_REQUEST" name="mailable.layoutRequest.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutRequest.subject" body="emails.layoutRequest.body"/>
 	<email key="LAYOUT_COMPLETE" name="mailable.layoutComplete.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.layoutComplete.subject" body="emails.layoutComplete.body"/>
 	<email key="VERSION_CREATED" name="mailable.versionCreated.name" subject="emails.versionCreated.subject" body="emails.versionCreated.body"/>

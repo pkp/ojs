@@ -15,13 +15,8 @@
 
 namespace APP\plugins\generic\datacite\classes\form;
 
-use APP\core\Application;
-use PKP\core\PKPApplication;
 use PKP\form\Form;
 use PKP\form\validation\FormValidator;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxModal;
-use PKP\plugins\PluginRegistry;
 
 class DataciteSettingsForm extends Form
 {
@@ -67,26 +62,6 @@ class DataciteSettingsForm extends Form
     {
         $this->_contextId = $contextId;
         $this->_plugin = $plugin;
-
-        parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
-
-        // DOI plugin settings action link
-        $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-        if (isset($pubIdPlugins['doipubidplugin'])) {
-            $application = Application::get();
-            $request = $application->getRequest();
-            $dispatcher = $application->getDispatcher();
-            $doiPluginSettingsLinkAction = new LinkAction(
-                'settings',
-                new AjaxModal(
-                    $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, ['plugin' => 'doipubidplugin', 'category' => 'pubIds']),
-                    __('plugins.importexport.common.settings.DOIPluginSettings')
-                ),
-                __('plugins.importexport.common.settings.DOIPluginSettings'),
-                null
-            );
-            $this->setData('doiPluginSettingsLinkAction', $doiPluginSettingsLinkAction);
-        }
 
         // Add form validation checks.
         // The username is used in HTTP basic authentication and according to RFC2617 it therefore may not contain a colon.

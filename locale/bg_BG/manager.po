@@ -2612,12 +2612,6 @@ msgstr "Редактиране на съобщенията, изпратени �
 msgid "mailable.layoutComplete.name"
 msgstr "Типографското оформление е завършено"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Запитване за архив"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Запитване за архив (нов)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Създадена е нова версия"
 

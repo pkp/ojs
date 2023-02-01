@@ -2589,12 +2589,6 @@ msgstr "Edite as mensagens de email enviadas pela revista."
 msgid "mailable.layoutComplete.name"
 msgstr "Número Completo"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Pedido de Arquivo"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Pedido de Arquivo (Novo)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Criada Nova Versão"
 

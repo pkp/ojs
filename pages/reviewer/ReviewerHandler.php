@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerHandler
+ *
  * @ingroup pages_reviewer
  *
  * @brief Handle requests for reviewer functions.
@@ -15,9 +16,10 @@
 
 namespace APP\pages\reviewer;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
-use APP\submission\reviewer\ReviewerSubmission;
+use APP\submission\Submission;
 use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
 use PKP\pages\reviewer\PKPReviewerHandler;
@@ -27,6 +29,7 @@ use PKP\security\Role;
 use PKP\security\Validation;
 use PKP\session\SessionManager;
 use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\submission\reviewAssignment\ReviewAssignmentDAO;
 use PKP\submission\reviewer\form\ReviewerReviewForm;
 
 class ReviewerHandler extends PKPReviewerHandler
@@ -88,9 +91,14 @@ class ReviewerHandler extends PKPReviewerHandler
             return;
         }
 
-        $reviewerSubmissionDao = DAORegistry::getDAO('ReviewerSubmissionDAO'); /** @var ReviewerSubmissionDAO $reviewerSubmissionDao */
-        $reviewerSubmission = $reviewerSubmissionDao->getReviewerSubmission($reviewId);
-        if (!$reviewerSubmission) {
+        $reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO'); /** @var ReviewAssignmentDAO $reviewAssignmentDao */
+        $reviewAssignment = $reviewAssignmentDao->getById($reviewId);
+        if (!$reviewAssignment) {
+            return;
+        } // e.g. deleted review assignment
+
+        $reviewSubmission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
+        if (!$reviewSubmission || ($reviewSubmission->getId() != $reviewAssignment->getSubmissionId())) {
             return;
         } // e.g. deleted review assignment
 
@@ -100,7 +108,7 @@ class ReviewerHandler extends PKPReviewerHandler
         $accessKeyHash = $accessKeyManager->generateKeyHash($accessKeyCode);
         $accessKey = $accessKeyManager->validateKey(
             $context->getId(),
-            $reviewerSubmission->getReviewerId(),
+            $reviewAssignment->getReviewerId(),
             $accessKeyHash
         );
         if (!$accessKey) {
@@ -116,7 +124,7 @@ class ReviewerHandler extends PKPReviewerHandler
         // Register the user object in the session
         $reason = null;
         if (Validation::registerUserSession($user, $reason)) {
-            $this->submission = $reviewerSubmission;
+            $this->submission = $reviewSubmission;
             $this->user = $user;
         }
     }
@@ -127,13 +135,13 @@ class ReviewerHandler extends PKPReviewerHandler
     public function getReviewForm(
         int $step,
         PKPRequest $request,
-        ReviewerSubmission $reviewerSubmission,
+        Submission $reviewSubmission,
         ReviewAssignment $reviewAssignment
     ): ReviewerReviewForm {
         switch ($step) {
             case 3:
-                return new ReviewerReviewStep3Form($request, $reviewerSubmission, $reviewAssignment);
+                return new ReviewerReviewStep3Form($request, $reviewSubmission, $reviewAssignment);
         }
-        return parent::getReviewForm($step, $request, $reviewerSubmission, $reviewAssignment);
+        return parent::getReviewForm($step, $request, $reviewSubmission, $reviewAssignment);
     }
 }

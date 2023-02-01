@@ -84,7 +84,7 @@ msgstr ""
 "{$activateUrl}<br />\n"
 "<br />\n"
 "Thank you,<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 msgid "emails.userValidateSite.subject"
 msgstr ""
@@ -153,92 +153,6 @@ msgstr ""
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
-msgid "emails.lockssExistingArchive.subject"
-msgstr "के लिए अनुरोध प्राप्त करना {$contextName}"
-
-# (pofilter) brackets: Added '[', ']', '{', '}', '(', ')'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$signature}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
-# (pofilter) startcaps: Different capitalization at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.lockssExistingArchive.body"
-msgstr ""
-"Dear [University Librarian]<br />\n"
-"<br />\n"
-"{$contextName} &amp;lt;{$contextUrl}&amp;gt;, एक जर्नल है जिसके लिए आपके संकाय का "
-"एक सदस्य, [सदस्य का नाम], [स्थिति का शीर्षक] के रूप में कार्य करता है। जर्नल इस और अन्य "
-"विश्वविद्यालय पुस्तकालयों के साथ एक LOCKSS (लोट्स ऑफ कपीज कीप स्टफ सेफ) स्थापित करने की "
-"मांग कर रहा है।<br />\n"
-"<br />\n"
-"[जर्नल का संक्षिप्त विवरण]<br />\n"
-"<br />\n"
-"हमारी जर्नल के लिए LOCKSS प्रकाशक घोषणापत्र का URL है:{$contextUrl}/gateway/"
-"lockss<br />\n"
-"<br />\n"
-"हम समझते हैं कि आप पहले से ही LOCKSS में भाग ले रहे हैं। यदि हम LOCKSS के अपने संस्करण के "
-"साथ हमारी जर्नल को पंजीकृत करने के प्रयोजनों के लिए कोई अतिरिक्त मेटाडेटा प्रदान कर सकते "
-"हैं, तो हमें यह प्रदान करके खुशी होगी.<br />\n"
-"<br />\n"
-"Thank you,<br />\n"
-"{$signature}"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.lockssExistingArchive.description"
-msgstr ""
-"यह ईमेल LOCKSS संग्रह के रक्षक को इस जर्नल में उनके संग्रह में शामिल करने पर विचार करने का "
-"अनुरोध करता है। यह जर्नल के LOCKSS प्रकाशक घोषणापत्र को URL प्रदान करता है."
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
-msgid "emails.lockssNewArchive.subject"
-msgstr "के लिए अनुरोध प्राप्त करना {$contextName}"
-
-# (pofilter) brackets: Added '[', ']', '{', '}', '(', ')'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextUrl}, {$signature}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
-# (pofilter) urls: Different URLs
-# (pofilter) xmltags: Added XML tags
-msgid "emails.lockssNewArchive.body"
-msgstr ""
-"प्रिय [विश्वविद्यालय पुस्तकालय]<br />\n"
-"<br />\n"
-"{$contextName} &amp;lt;{$contextUrl}&amp;gt;, एक ऐसी जर्नल है जिसके लिए आपके "
-"संकाय का एक सदस्य, [सदस्य का नाम] [स्थिति का शीर्षक] के रूप में कार्य करता है। जर्नल इस "
-"और अन्य विश्वविद्यालय पुस्तकालयों के साथ एक LOCKSS (बहुत सारी सामग्री सुरक्षित रखें) को "
-"सुरक्षित रखने की मांग कर रहा है.<br />\n"
-"<br />\n"
-"[Brief description of journal]<br />\n"
-"<br />\n"
-"The LOCKSS Program &amp;lt;http://lockss.org/&amp;gt;, एक अंतरराष्ट्रीय "
-"पुस्तकालय / प्रकाशक पहल, एक वितरित संरक्षण और संग्रह भंडार का एक कार्य उदाहरण है, "
-"अतिरिक्त विवरण नीचे हैं। सॉफ्टवेयर, जो एक साधारण व्यक्तिगत कंप्यूटर पर चलता है, मुफ्त है; "
-"प्रणाली को आसानी से ऑन-लाइन लाया जाता है; बहुत कम चल रहे रखरखाव की आवश्यकता है.<br /"
-">\n"
-"<br />\n"
-"हमारी जर्नल के संग्रह में सहायता करने के लिए, हम आपको अपने संकाय द्वारा और दुनिया भर के "
-"अन्य विद्वानों द्वारा उत्पादित शीर्षकों को इकट्ठा करने और संरक्षित करने में मदद करने के लिए, "
-"LOCKSS समुदाय का सदस्य बनने के लिए आमंत्रित करते हैं। ऐसा करने के लिए, कृपया यह जानने के "
-"लिए कि यह सिस्टम कैसे संचालित होता है, जानकारी के लिए कृपया अपने कर्मचारियों पर किसी "
-"LOCKSS साइट पर जाएं। मैं इस जर्नल के लिए इस संग्रह का समर्थन प्रदान करने की व्यवहार्यता "
-"पर आपकी ओर से सुनने के लिए उत्सुक हूं.<br />\n"
-"<br />\n"
-"Thank you,<br />\n"
-"{$signature}"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.lockssNewArchive.description"
-msgstr ""
-"यह ईमेल प्राप्तकर्ता को LOCKSS पहल में भाग लेने और संग्रह में इस जर्नल को शामिल करने के लिए "
-"प्रोत्साहित करता है। यह LOCKSS पहल और शामिल होने के तरीकों के बारे में जानकारी प्रदान "
-"करता है."
-
-#, fuzzy
 msgid "emails.submissionAckNotAuthor.subject"
 msgstr "सबमिशन स्वीकृति"
 
@@ -361,7 +275,7 @@ msgstr ""
 "<br />\n"
 "इस अनुरोध पर विचार करने के लिए धन्यवाद.<br />\n"
 "<br />\n"
-"{$signature}<br />\n"
+"{$contextSignature}<br />\n"
 "<br />\n"
 "&quot;{$submissionTitle}&quot;<br />\n"
 "<br />\n"
@@ -574,7 +488,7 @@ msgstr ""
 "कृपया जर्नल के काम में इस महत्वपूर्ण योगदान को पूरा करने की अपनी क्षमता की पुष्टि करें। "
 "तुम्हारे उत्तर की प्रतीक्षा है मुझे.<br />\n"
 "<br />\n"
-"{$signature}"
+"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.subject"

@@ -1798,7 +1798,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "The name of the journal's primary contact"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "the journal initials"
+msgstr "The journal initials"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "The journal's email signature for automated emails"
@@ -2124,12 +2124,6 @@ msgstr "Edit the messages sent in emails from this journal."
 
 msgid "mailable.layoutComplete.name"
 msgstr "Galleys Complete"
-
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Archive Request"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Archive Request (New)"
 
 msgid "mailable.publicationVersionNotify.name"
 msgstr "New Version Created"

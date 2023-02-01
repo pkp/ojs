@@ -2226,7 +2226,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "Ամսագրի հիմնական կոնտակտի անվանումը"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "ամսագրի սկզբնատառերը"
+msgstr "Ամսագրի սկզբնատառերը"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Ամսագրի էլեկտրոնային ստորագրությունը ավտոմատացված նամակների համար"
@@ -2623,12 +2623,6 @@ msgstr "Խմբագրել այս ամսագրից ուղարկված նամակն
 msgid "mailable.layoutComplete.name"
 msgstr "Շարվածքները ամբողջական են"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Արխիվային հարցում"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Արխիվային հարցում (Նոր)"
-
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ստեղծվել է նոր տարբերակը"
 
@@ -2641,6 +2635,12 @@ msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "Այս նամակն ուղարկվում է ամսագրի կառավարիչներին, երբ նոր ներկայացում է "
 "կատարվում, և չկան նշանակված խմբագիրներ:"
+
+msgid "mailable.lockssExistingArchive.name"
+msgstr "Արխիվային հարցում"
+
+msgid "mailable.lockssNewArchive.name"
+msgstr "Արխիվային հարցում (Նոր)"
 
 #~ msgid "manager.setup.submissionPreparationChecklistDescription"
 #~ msgstr ""

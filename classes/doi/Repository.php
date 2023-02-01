@@ -22,6 +22,7 @@ use APP\journal\JournalDAO;
 use APP\plugins\PubIdPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\DataObject;
@@ -188,20 +189,17 @@ class Repository extends \PKP\doi\Repository
     }
 
     /**
-     * Gets all relevant DOI IDs related to a submission (article, galley)
-     * NB: Assumes current publication only and only enabled DOI types
+     * Gets all DOI IDs related to a submission
      *
-     * @throws \Exception
-     *
-     * @return array DOI IDs
+     * @return array<int> DOI IDs
      */
     public function getDoisForSubmission(int $submissionId): array
     {
-        $doiIds = [];
+        $doiIds = Collection::make();
 
         $submission = Repo::submission()->get($submissionId);
         /** @var Publication[] $publications */
-        $publications = [$submission->getCurrentPublication()];
+        $publications = $submission->getData('publications');
 
 
         /** @var JournalDAO $contextDao */
@@ -212,7 +210,7 @@ class Repository extends \PKP\doi\Repository
         foreach ($publications as $publication) {
             $publicationDoiId = $publication->getData('doiId');
             if (!empty($publicationDoiId) && $context->isDoiTypeEnabled(self::TYPE_PUBLICATION)) {
-                $doiIds[] = $publicationDoiId;
+                $doiIds->add($publicationDoiId);
             }
 
             // Galleys
@@ -223,12 +221,12 @@ class Repository extends \PKP\doi\Repository
             foreach ($galleys as $galley) {
                 $galleyDoiId = $galley->getData('doiId');
                 if (!empty($galleyDoiId) && $context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
-                    $doiIds[] = $galleyDoiId;
+                    $doiIds->add($galleyDoiId);
                 }
             }
         }
 
-        return $doiIds;
+        return $doiIds->unique()->toArray();
     }
 
     /**
@@ -238,6 +236,9 @@ class Repository extends \PKP\doi\Repository
      * @param $enabledDoiTypesOnly
      *
      * @throws \Exception
+     *
+     * @return array<int> DOI IDs
+     *
      */
     public function getDoisForIssue(int $issueId, $enabledDoiTypesOnly = false): array
     {
@@ -291,6 +292,25 @@ class Repository extends \PKP\doi\Repository
             // Mark issue DOIs as submitted
             Repo::doi()->markSubmitted($issueData['doiIds']);
         }
+    }
+
+    /**
+     * Checks whether a DOI object is referenced by ID on any pub objects for a given pub object type.
+     *
+     * @param string $pubObjectType One of Repo::doi()::TYPE_* constants
+     */
+    public function isAssigned(int $doiId, string $pubObjectType): bool
+    {
+        $isAssigned = match ($pubObjectType) {
+            Repo::doi()::TYPE_REPRESENTATION => Repo::galley()
+                ->getCollector()
+                ->filterByDoiIds([$doiId])
+                ->getIds()
+                ->count(),
+            default => false,
+        };
+
+        return $isAssigned || parent::isAssigned($doiId, $pubObjectType);
     }
 
     /**
