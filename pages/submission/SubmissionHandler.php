@@ -15,7 +15,6 @@
 
 namespace APP\pages\submission;
 
-use APP\components\forms\publication\TitleAbstractForm;
 use APP\components\forms\submission\ReconfigureSubmission;
 use APP\components\forms\submission\StartSubmission;
 use APP\core\Application;
@@ -26,6 +25,8 @@ use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Illuminate\Support\LazyCollection;
 use PKP\components\forms\FormComponent;
+use PKP\components\forms\publication\Details;
+use PKP\components\forms\publication\TitleAbstractForm;
 use PKP\components\forms\submission\ForTheEditors;
 use PKP\context\Context;
 use PKP\facades\Locale;
@@ -124,17 +125,19 @@ class SubmissionHandler extends PKPSubmissionHandler
         );
     }
 
-    protected function getTitleAbstractForm(string $publicationApiUrl, array $locales, Publication $publication, Context $context, array $sections): TitleAbstractForm
+    protected function getDetailsForm(string $publicationApiUrl, array $locales, Publication $publication, Context $context, array $sections, string $suggestionUrlBase): TitleAbstractForm
     {
         /** @var Section $section */
         $section = collect($sections)->first(fn ($section) => $section->getId() === $publication->getData('sectionId'));
 
-        return new TitleAbstractForm(
+        return new Details(
             $publicationApiUrl,
             $locales,
             $publication,
-            $section,
-            true
+            $context,
+            $suggestionUrlBase,
+            (int) $section->getData('wordCount'),
+            !$section->getData('abstractsNotRequired')
         );
     }
 

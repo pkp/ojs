@@ -47,6 +47,7 @@ Cypress.Commands.add('createSubmissionWithApi', (data, csrfToken) => {
 				return;
 			}
 			cy.visit('/index.php/publicknowledge/submission?id=' + submissionId);
+			cy.get('button:contains("Continue")').click();
 
 			// Must use the UI to upload files until we upgrade Cypress
 			// to 7.4.0 or higher.
