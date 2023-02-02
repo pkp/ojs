@@ -24,7 +24,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm
     /**
      * @copydoc PKPNotificationSettingsForm::getNotificationSettingsCategories()
      */
-    public function getNotificationSettingCategories(Context $context)
+    public function getNotificationSettingCategories(?Context $context = null)
     {
         $categories = parent::getNotificationSettingCategories($context);
         for ($i = 0; $i < count($categories); $i++) {
