@@ -85,8 +85,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#startSubmission-sectionId-error').contains('This field is required.');
 		cy.get('#startSubmission-locale-error').contains('This field is required.');
 		cy.get('#startSubmission-submissionRequirements-error').contains('This field is required.');
-		cy.get('#startSubmission-privacyConsent-error').contains('This field is required.');
-		cy.get('input[name="title"]').type(submission.title, {delay: 0});
+		cy.get('#startSubmission-privacyConsent-error').contains('This field is required.');		
+		cy.setTinyMceContent('startSubmission-title-control', submission.title);
 		cy.get('label:contains("Articles")').click();
 		cy.get('label:contains("English")').click();
 		cy.get('input[name="submissionRequirements"]').check();
@@ -283,19 +283,19 @@ describe('Data suite: Amwandenga', function() {
 		submission.subtitle = 'A Review Of The Literature And Empirical Evidence';
 		cy.get('#titleAbstract input[name=prefix-en_US]').type(submission.prefix, {delay: 0});
 		cy.get('#titleAbstract input[name=subtitle-en_US]').type(submission.subtitle, {delay: 0});
-		cy.get('#titleAbstract input[name=title-en_US]').clear();
+		cy.setTinyMceContent('titleAbstract-title-control-en_US', '');
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract.repeat(10));
-		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
+		cy.get('#titleAbstract-title-control-en_US').click({force:true}); // Ensure blur event is fired
 		cy.get('#titleAbstract input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 
 		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('This field is required.');
-		cy.get('#titleAbstract input[name=title-en_US').type(submission.title, {delay: 0});
+		cy.setTinyMceContent('titleAbstract-title-control-en_US', submission.title);
 		cy.get('#titleAbstract button').contains('Save').click();
 
 		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract);
-		cy.get('#titleAbstract-title-control-en_US').click(); // Ensure blur event is fired
+		cy.get('#titleAbstract-title-control-en_US').click({force:true}); // Ensure blur event is fired
 		cy.get('input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
@@ -469,7 +469,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('This version has been published and can not be edited.').should('not.exist');
 
 		// Edit unpublished version's title
-		cy.get('input[name=title-en_US').type(' Version 2', {delay: 0});
+		cy.setTinyMceContent('titleAbstract-title-control-en_US', ' Version 2');
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
