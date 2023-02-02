@@ -1848,6 +1848,9 @@ msgstr "Domain"
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP ranges for subscription authentication"
 
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL to the payment page"
+
 msgid "mailable.validateEmailContext.name"
 msgstr "Validate Email (Journal Registration)"
 
@@ -2134,3 +2137,9 @@ msgstr "This email automatically notifies assigned editors when a new version of
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "This email is sent to journal managers when a new submission is made and no editors are assigned."
+
+msgid "mailable.paymentRequest.name"
+msgstr "Payment Request"
+
+msgid "mailable.paymentRequest.description"
+msgstr "This email automatically notifies authors of the submission about the required payment."

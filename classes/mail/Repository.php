@@ -32,7 +32,8 @@ class Repository extends \PKP\mail\Repository
             mailables\SubscriptionPurchaseIndividual::class,
             mailables\SubscriptionPurchaseInstitutional::class,
             mailables\SubscriptionRenewIndividual::class,
-            mailables\SubscriptionRenewInstitutional::class
+            mailables\SubscriptionRenewInstitutional::class,
+            mailables\PaymentRequest::class,
         ]));
     }
 }

@@ -15,10 +15,13 @@ namespace APP\decision\types\traits;
 
 use APP\components\forms\decision\RequestPaymentDecisionForm;
 use APP\core\Application;
+use APP\facades\Repo;
+use APP\mail\mailables\PaymentRequest;
 use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Validator;
 use PKP\context\Context;
 use PKP\decision\steps\Form;
@@ -83,6 +86,15 @@ trait RequestPayment
                 $queuedPayment->getId(),
                 Notification::NOTIFICATION_LEVEL_TASK
             );
+
+            $mailable = new PaymentRequest($context, $submission, $queuedPayment);
+            $template = Repo::emailTemplate()->getByKey($context->getId(), $mailable::getEmailTemplateKey());
+            $mailable->from($context->getData('contactEmail'), $context->getData('contactName'))
+                ->recipients([Repo::user()->get($authorId)])
+                ->subject($template->getLocalizedData('subject'))
+                ->body($template->getLocalizedData('body'));
+
+            Mail::send($mailable);
         }
     }
 }
