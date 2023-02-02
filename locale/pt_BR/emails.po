@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2023-02-01 14:38+0000\n"
+"PO-Revision-Date: 2023-02-02 21:32+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
@@ -294,7 +294,6 @@ msgstr ""
 "dúvida, por favor, entre em contato comigo.</p><p> Atenciosamente, </"
 "p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewConfirm.subject"
 msgstr "Disponível para realizar avaliação"
 
