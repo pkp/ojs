@@ -48,6 +48,14 @@ describe('Article View Metadata - DC Plugin', function() {
 					userGroupId: Cypress.env('authorUserGroupId')
 				}
 			],
+			files: [
+				{
+					'file': 'dummy.pdf',
+					'fileName': 'Test prefixTest titleTest subtitle.pdf',
+					'mimeType': 'application/pdf',
+					'genre': Cypress.env('defaultGenre')
+				}
+			],
 			localeTitles: {
 				fr_CA: {
 					title: "Test title FR",
