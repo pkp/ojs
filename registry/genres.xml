@@ -16,7 +16,7 @@
   * These are defined in lib/pkp/classes/submission/Genre.php.
   -->
 <genres>
-	<genre key="SUBMISSION" category="1" dependent="0" supplementary="0" localeKey="default.genres.article" />
+	<genre key="SUBMISSION" category="1" dependent="0" supplementary="0" required="1" localeKey="default.genres.article" />
 	<genre key="RESEARCHINSTRUMENT" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchInstrument" />
 	<genre key="RESEARCHMATERIALS" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchMaterials" />
 	<genre key="RESEARCHRESULTS" category="3" dependent="0" supplementary="1" localeKey="default.genres.researchResults" />
