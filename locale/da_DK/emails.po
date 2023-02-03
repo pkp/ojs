@@ -1,11 +1,11 @@
 # Jesper B. Thestrup <jbt@kb.dk>, 2022.
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-12-15 08:02+0000\n"
+"PO-Revision-Date: 2023-02-04 04:48+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/emails/da_DK/"
 ">\n"
@@ -136,10 +136,9 @@ msgstr ""
 "tidsskrift til at udgive dit arbejde i.</p><p>Med venlig hilsen</"
 "p>{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
-"Du er blevet tilmeldt som redaktør på en indsendelse til {$contextName}"
+"Du er blevet tilknyttet som redaktør på en indsendelse til {$contextName}"
 
 msgid "emails.editorAssign.body"
 msgstr ""
@@ -984,3 +983,26 @@ msgstr ""
 
 #~ msgid "emails.editorDecisionBackToCopyediting.subject"
 #~ msgstr "Din indsendelse er blevet sendt tilbage til kopiredigering"
+
+msgid "emails.editorAssignReview.body"
+msgstr ""
+"<p>Kære {$recipientName}</p><p>Du er blevet tilknyttet den følgende "
+"indsendelse for at følge den gennem fagfællebedømmelsen.</p><p><a href=\""
+"{$submissionUrl}\">{$submissionTitle}</a><br "
+"/>{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Log venligst "
+"ind for at <a href=\"{$submissionUrl}\">se indsendelsen</a> og tildele "
+"kvalificerede bedømmere. Du kan tilknytte en bedømmer ved at klikke på "
+"\"Tilføj bedømmer\".</p><p>På forhånd tak.</p><p>Med venlig "
+"hilsen</p>{$signature}"
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+"<p>Kære {$recipientName}</p><p>Du er blevet tilknyttet den følgende "
+"indsendelse for at følge den gennem produktionstrinnet.</p><p><a href=\""
+"{$submissionUrl}\">{$submissionTitle}</a><br "
+"/>{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Log venligst "
+"ind for at <a href=\"{$submissionUrl}\">se indsendelsen</a>. Når de "
+"produktionsklare filer er tilgængelige, bedes du uploade dem under "
+"<strong>Publikation > Publiceringsversioner</strong> fanen. Dernæst bedes du "
+"planlægge publicering ved at klikke på <strong>Planlæg publicering</strong> "
+"knappen.</p><p>På forhånd tak.</p><p>Med venlig hilsen</p>{$signature}"
