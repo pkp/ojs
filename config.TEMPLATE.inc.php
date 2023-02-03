@@ -291,7 +291,7 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 
 ; Allowed HTML tags for submission titles only
 ; Unspecified attributes will be stripped.
-allowed_title_html = "strong,em,b,i,sup,sub"
+allowed_title_html = "strong,em,b,sup,sub"
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
 
