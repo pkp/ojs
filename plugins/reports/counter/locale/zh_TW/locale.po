@@ -20,34 +20,34 @@ msgid "plugins.reports.counter"
 msgstr "計數器統計"
 
 msgid "plugins.reports.counter.release"
-msgstr ""
+msgstr "計數器版本"
 
 msgid "plugins.reports.counter.olderReports"
 msgstr ""
 
 msgid "plugins.reports.counter.error.badParameters"
-msgstr ""
+msgstr "報告的參數無效。"
 
 msgid "plugins.reports.counter.error.badRequest"
-msgstr ""
+msgstr "報告請求無効。"
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr ""
+msgstr "搜查不到此報告。"
 
 msgid "plugins.reports.counter.error.noXML"
-msgstr ""
+msgstr "結果無法被格式化為XML。"
 
 msgid "plugins.reports.counter.1a.introduction"
 msgstr ""
 
 msgid "plugins.reports.counter.1a.name"
-msgstr ""
+msgstr "計數器報告JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.xml"
 msgstr ""
 
 msgid "plugins.reports.counter.1a.description"
-msgstr ""
+msgstr "計數器期刊報告1 (R3): 按月份及期刊文章全文申請"
 
 msgid "plugins.reports.counter.1a.title"
 msgstr "期刊報告 1 (R3): 調閱全文文章的月份和期刊。"
@@ -92,13 +92,13 @@ msgid "plugins.reports.counter.legacyStats"
 msgstr ""
 
 msgid "plugins.reports.counter.allCustomers"
-msgstr ""
+msgstr "全部顧客"
 
 msgid "plugins.reports.counter.ar1.title"
-msgstr ""
+msgstr "文章報告1"
 
 msgid "plugins.reports.counter.jr1.title"
-msgstr ""
+msgstr "期刊報告1"
 
 #~ msgid "plugins.reports.counter.clearLog"
 #~ msgstr "清除紀錄"
