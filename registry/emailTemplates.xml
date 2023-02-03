@@ -25,9 +25,9 @@
 	<email key="REVIEW_REQUEST" name="mailable.reviewRequest.name" subject="emails.reviewRequest.subject" body="emails.reviewRequest.body"/>
 	<email key="REVIEW_REQUEST_SUBSEQUENT" name="mailable.reviewRequestSubsequent.name" subject="emails.reviewRequestSubsequent.subject" body="emails.reviewRequestSubsequent.body"/>
 	<email key="REVIEW_RESPONSE_OVERDUE_AUTO" name="mailable.reviewResponseOverdueAuto.name" subject="emails.reviewResponseOverdueAuto.subject" body="emails.reviewResponseOverdueAuto.body"/>
-	<email key="REVIEW_CONFIRM" name="mailable.reviewAcknowledgement.name" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
+	<email key="REVIEW_CONFIRM" name="mailable.reviewConfirm.name" subject="emails.reviewConfirm.subject" body="emails.reviewConfirm.body"/>
 	<email key="REVIEW_DECLINE" name="mailable.reviewDecline.name" subject="emails.reviewDecline.subject" body="emails.reviewDecline.body"/>
-	<email key="REVIEW_ACK" name="mailable.decision.reviewAck.name" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
+	<email key="REVIEW_ACK" name="mailable.reviewAcknowledgement.name" subject="emails.reviewAck.subject" body="emails.reviewAck.body"/>
 	<email key="REVIEW_REMIND" name="mailable.reviewRemind.name" subject="emails.reviewRemind.subject" body="emails.reviewRemind.body"/>
 	<email key="REVIEW_REMIND_AUTO" name="mailable.reviewRemindAuto.name" subject="emails.reviewRemindAuto.subject" body="emails.reviewRemindAuto.body"/>
 	<email key="REVIEW_COMPLETE" name="mailable.reviewComplete.name" subject="emails.reviewComplete.subject" body="emails.reviewComplete.body"/>

@@ -55,7 +55,6 @@ class SkipExternalReview extends PKPSkipExternalReview
                 case self::ACTION_PAYMENT:
                     $this->requestPayment($submission, $editor, $context);
                     break;
-                    break;
             }
         }
     }
