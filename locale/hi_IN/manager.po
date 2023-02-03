@@ -11,7 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
 
 msgid "manager.distribution.access"
 msgstr "एक्सेस"
@@ -71,8 +70,8 @@ msgstr ""
 msgid "manager.website.archiving"
 msgstr "संग्रह"
 
+# (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 msgid "manager.files.note"
 msgstr ""
 "सूचना:  फाइल ब्राउज़र एक उन्नत सुविधा है जो किसी जर्नल से जुड़ी फाइलों और निर्देशिकाओं को "
@@ -367,9 +366,8 @@ msgstr "सार की आवश्यकता नहीं है"
 msgid "manager.sections.assigned"
 msgstr "इस अनुभाग के संपादक"
 
-# (pofilter) doublespacing: Different use of double spaces
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) simplecaps: Different capitalization
 msgid "manager.sections.confirmDelete"
 msgstr "क्या आप वाकई इस अनुभाग को स्थायी रूप से हटाना चाहते हैं??"
 
@@ -602,8 +600,14 @@ msgstr ""
 msgid "manager.setup.history"
 msgstr "जर्नल इतिहास"
 
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 msgid "manager.setup.historyDescription"
 msgstr ""
+"यह पाठ जर्नल वेबसाइट के \"About\" अनुभाग में दिखाई देगा और इसका उपयोग "
+"शीर्षक, संपादकीय बोर्ड और जर्नल के प्रकाशन इतिहास की प्रासंगिकता के अन्य "
+"मदों में परिवर्तन का वर्णन करने के लिए किया जा सकता है।."
 
 # (pofilter) endwhitespace: Different whitespace at the end
 # (pofilter) simplecaps: Different capitalization
@@ -684,7 +688,6 @@ msgstr "हस्ताक्षर"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "जर्नल की ओर से सिस्टम द्वारा भेजे गए तैयार ईमेल में अंत में जोड़े गए निम्नलिखित हस्ताक्षर होंगे।"
@@ -1157,11 +1160,23 @@ msgstr "नेविगेशन बार"
 msgid "manager.setup.navigationBarDescription"
 msgstr "अतिरिक्त नेविगेशन बार आइटम जोड़ें या निकालें।"
 
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
+# (pofilter) startcaps: Different capitalization at the start
+# (pofilter) urls: Different URLs
 msgid "manager.setup.navItemIsAbsolute"
 msgstr ""
+"URL साइट के सापेक्ष पथ के बजाय एक पूर्ण URL (उदा।, \"http://www.example."
+"com\") है (जैसे,\"/manager/setup\")"
 
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\', '\')
 msgid "manager.setup.navItemIsLiteral"
 msgstr ""
+"लेबल मान एक स्थानीयकरण संदेश कुंजी के बजाय एक शाब्दिक स्ट्रिंग (उदा।, "
+"\"जर्नल सेटअप\") है (जैसे, \"manager.setup\")"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "manager.setup.noImageFileUploaded"
@@ -1416,8 +1431,8 @@ msgstr "जमा करने के निर्देश"
 msgid "manager.setup.submissions"
 msgstr "सबमिशन्स"
 
+# (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 msgid "manager.setup.submissions.description"
 msgstr "लेखक के दिशानिर्देश, कॉपीराइट और अनुक्रमण (पंजीकरण सहित)।"
 
@@ -1491,11 +1506,9 @@ msgstr "शीर्षक पाठ"
 msgid "manager.statistics.statistics"
 msgstr "जर्नल सांख्यिकी"
 
-# (pofilter) endwhitespace: Different whitespace at the end
-# (pofilter) startwhitespace: Different whitespace at the start
-# (pofilter) newlines: Different line endings
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
-# (pofilter) tabs: Different tabs
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) simplecaps: Different capitalization
 msgid "manager.statistics.statistics.articleViews"
 msgstr "आलेख देखें मायने रखता है (केवल लेखकों के लिए)"
 
@@ -1598,9 +1611,6 @@ msgstr "जर्नल मुख्य पृष्ठ दृश्य"
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
 msgstr "सामग्री पृष्ठ दृश्य की अंक तालिका"
 
-# (pofilter) brackets: Added '(', ')'
-# (pofilter) doublespacing: Different use of double spaces
-# (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
 msgid "manager.subscriptionPolicies"
 msgstr "सदस्यता नीतियाँ"

@@ -11,7 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.hostedContexts"
@@ -151,8 +150,12 @@ msgstr "इस पत्रिका को साइट पर सार्व�
 msgid "admin.contexts.contextDescription"
 msgstr "जर्नल विवरण"
 
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) doublequoting: Different quotation marks
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) escapes: Escapes in original () don't match escapes in translation ('\')
 msgid "admin.journal.pathImportInstructions"
-msgstr ""
+msgstr "मौजूदा जर्नल पथ या पथ बनाने के लिए (जैसे, \"ojs\")।"
 
 # (pofilter) simplecaps: Different capitalization
 msgid "admin.journals.importSubscriptions"
