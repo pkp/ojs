@@ -36,7 +36,6 @@
 	<migration class="PKP\migration\install\ReviewsMigration" />
 	<migration class="PKP\migration\install\TemporaryFilesMigration" />
 	<migration class="PKP\migration\install\TombstoneMigration" />
-	<migration class="PKP\migration\install\ViewsMigration" />
 	<migration class="PKP\migration\install\DoiMigration" />
 	<migration class="PKP\migration\install\InstitutionsMigration" />
 
