@@ -1,18 +1,19 @@
 # Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
+# Kay Pepping <openjournalsnl@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2021-07-02 12:29+0000\n"
-"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"PO-Revision-Date: 2023-02-01 17:33+0000\n"
+"Last-Translator: Kay Pepping <openjournalsnl@gmail.com>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/locale/nl/>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr ""
@@ -1012,13 +1013,13 @@ msgid "layoutEditor.layoutEditingAssignments"
 msgstr "Opmaakredactietaken"
 
 msgid "layoutEditor.galley.uploadGalleyFormat"
-msgstr "Proef laden"
+msgstr "Drukproef uploaden"
 
 msgid "layoutEditor.galley.replaceGalley"
 msgstr "Vervang bestand"
 
 msgid "layoutEditor.galley.uploadSuppFile"
-msgstr "Aanvullend bestand laden"
+msgstr "Aanvullend bestand uploaden"
 
 msgid "submission.layout.imageInvalid"
 msgstr "Ongeldig afbeeldingsformaat. Toegestaan zijn .gif, .jpg, en .png."
@@ -1077,7 +1078,7 @@ msgid "reviewer.article.submitReview"
 msgstr "Stuur review naar redacteur"
 
 msgid "reviewer.article.reviewerComments"
-msgstr "Comentaar"
+msgstr "Commentaar"
 
 msgid "reviewer.article.uploadedFile"
 msgstr "Geladen bestanden"
@@ -1270,7 +1271,7 @@ msgstr "Instructies voor tekstredactie"
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
-"Geen (laad de laatste tekstredactieversie als opmaakversie voorafgaand aan "
+"Geen (upload de laatste tekstredactieversie als opmaakversie voorafgaand aan "
 "het versturen van het verzoek)"
 
 msgid "submission.layout.galleyPublicIdentificationExists"
@@ -1396,7 +1397,7 @@ msgstr "Geef review-interesses (kennisgebieden en onderzoeksmethodes):"
 msgid "user.register.form.emailConsentAllContexts"
 msgstr ""
 "Ja, ik krijg graag meldingen van nieuwe publicaties en aankondigingen voor "
-"alle tijschriften waarbij ik ben geregistreerd."
+"alle tijdschriften waarbij ik ben geregistreerd."
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""

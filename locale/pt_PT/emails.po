@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2023-01-02 09:02+0000\n"
+"PO-Revision-Date: 2023-02-01 14:38+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/emails/pt_PT/>\n"
@@ -132,7 +132,6 @@ msgstr ""
 "a escolhada da nossa revista para publicar o seu trabalho.</p><br /"
 "><p>Atentamente,</p>{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Foi designado como editor para uma submissão de {$contextName}"
 
