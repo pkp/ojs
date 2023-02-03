@@ -1,11 +1,11 @@
-# M. Ali <vorteem@gmail.com>, 2022.
+# M. Ali <vorteem@gmail.com>, 2022, 2023.
 # Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2022-12-17 16:02+0000\n"
+"PO-Revision-Date: 2023-02-04 04:48+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/emails/ar_IQ/"
 ">\n"
@@ -129,7 +129,6 @@ msgstr ""
 "العمل، يرجى التواصل معي.</p><p>شكرًا لاعتبارك هذه المجلة مضمارًا لعملك.</"
 "p><p>أطيب التحايا،</p>{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "لقد تم تعيينك كمحرر لطلب التقديم الموجه إلى {$contextName}"
 
@@ -661,3 +660,24 @@ msgstr ""
 
 #~ msgid "emails.editorDecisionBackToCopyediting.subject"
 #~ msgstr "طلب تقديمك تمت إعادته إلى التدقيق"
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+"<p>عزيزي {$recipientName}،</p><p>لقد تم تكليفك بطلب التقديم الآتي لمتابعته "
+"خلال مرحلة الإنتاج.</p><p><a href=\"{$submissionUrl}\">{$submissionTitle}</"
+"a><br />{$authors}</p><p><b>الملخص</b></p>{$submissionAbstract}<p>يرجى تسجيل "
+"الدخول <a href=\"{$submissionUrl}\">لمعاينة طلب التقديم</a>. بمجرد توافر "
+"الملفات الجاهزة للإنتاج، إرفعها من خلال مقطع <strong>الألواح الطباعية "
+"للإنتاج</strong>. بعدها قم بجدولة العمل للنشر عبر النقر على زر "
+"<strong>الجدولة للنشر</strong>.</p><p>شكرًا مقدمًا.</p><p>أطيب "
+"التحايا،</p>{$signature}"
+
+msgid "emails.editorAssignReview.body"
+msgstr ""
+"<p>عزيزي {$recipientName}،</p><p>لقد تم تكليفك بطلب التقديم الآتي لمتابعته "
+"خلال عملية التحكيم المناظر.</p><p><a href=\"{$submissionUrl}\""
+">{$submissionTitle}</a><br "
+"/>{$authors}</p><p><b>الملخص</b></p>{$submissionAbstract}<p>يرجى تسجيل "
+"الدخول <a href=\"{$submissionUrl}\">لمعاينة طلب التقديم</a> وتعيين المحكمين "
+"المؤهلين له. يمكنك تعيين المحكم عبر النقر على \"إضافة محكم\".</p><p>شكرًا "
+"مقدمًا.</p><p>أطيب التحايا،</p>{$signature}"
