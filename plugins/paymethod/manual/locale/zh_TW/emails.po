@@ -1,0 +1,22 @@
+# Emma U <emmaupkp@gmail.com>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-16 09:38+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/paymethod-manual-emails/zh_TW/>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "emails.manualPaymentNotification.subject"
+msgstr "手動付款通知"
+
+msgid "emails.manualPaymentNotification.body"
+msgstr ""
+
+msgid "emails.manualPaymentNotification.description"
+msgstr "此電郵樣式用作通知期刊主管有一手動付款的請求。"

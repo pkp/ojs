@@ -1,0 +1,332 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/submission/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "submission.submit.title"
+msgstr ""
+
+msgid "submission.submit.userGroup"
+msgstr "以……身份提交"
+
+msgid "submission.submit.userGroupDescription"
+msgstr ""
+
+msgid "submission.upload.selectComponent"
+msgstr "選擇文章部分"
+
+msgid "submission.title"
+msgstr "文章標題"
+
+msgid "submission.title.tip"
+msgstr ""
+"投稿種類通常會有「圖像」、「文字」或其他多媒類別，包括「軟件」或「互動項目」。"
+"請選取一個與您投稿最相近的類別。例子：<a target=\"_blank\" href=\"http://"
+"dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\">http://"
+"dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "開始投稿"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "新投稿"
+
+msgid "grid.action.workflow"
+msgstr "投稿程序"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "摘要字數上限為 {$wordCount} 字。"
+
+msgid "submission.submit.noContext"
+msgstr "未能找到您所投稿的期刊。"
+
+msgid "submission.issueEntry"
+msgstr "元資料"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"期刊已收到您的投稿，您也會收到投稿記錄的電郵確認。當編輯開始審查稿件時，他們將"
+"聯絡您。"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr ""
+
+msgid "grid.action.issueEntry"
+msgstr "查看此投稿元資料"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "文章樣對樣本「{$galleyFormatName}」現可供查看。"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "文章樣對樣本「{$galleyFormatName}」現已收藏，不會供人查看。"
+
+msgid "submission.event.publicIdentifiers"
+msgstr "已更新投稿的公開識別碼。"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "格式核准"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr ""
+
+msgid "grid.action.availableArticleGalley"
+msgstr "更變此校對樣本供讀者查看"
+
+msgid "submission.galleyFiles"
+msgstr "校對樣本檔案"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"版面編輯會在此上載準備出版的檔案。使用<em>分配審查人員</"
+"em>來配置作者及其他用戶去校對稿件，並在出版前提供正確的檔案供核准。"
+
+msgid "grid.action.approveProof"
+msgstr "核准及在校對樣本包含此稿件。"
+
+msgid "grid.action.pageProofApproved"
+msgstr "此稿件已被核准，可包含在校對樣本中。"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "標題及摘要"
+
+msgid "submission.submit.upload.description"
+msgstr "上載與此投稿相關的檔案，包括文章、多媒體、數據集、插圖等等。"
+
+msgid "submission.pageProofs"
+msgstr "校對中"
+
+msgid "submission.confirmSubmit"
+msgstr ""
+
+msgid "workflow.review.externalReview"
+msgstr "評審"
+
+msgid "editor.submission.decision.sendExternalReview"
+msgstr ""
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "此投稿一期的元資料已更新。"
+
+msgid "submission.upload.fileContents"
+msgstr "文章組成部分"
+
+msgid "submission.complete"
+msgstr "已批准"
+
+msgid "submission.incomplete"
+msgstr "等待批准"
+
+msgid "submission.submit.form.localeRequired"
+msgstr ""
+
+msgid "submission.submit.submissionChecklist"
+msgstr "投稿核對清單"
+
+msgid "submission.submit.submissionChecklistDescription"
+msgstr ""
+
+msgid "submission.submit.privacyStatement"
+msgstr "隱私聲明"
+
+msgid "submission.submit.contributorRole"
+msgstr "投稿人身份"
+
+msgid "submission.submit.form.authorRequired"
+msgstr "必須提供最少一個作者。"
+
+msgid "submission.submit.form.authorRequiredFields"
+msgstr ""
+
+msgid "submission.submit.form.titleRequired"
+msgstr "請輸入您的文章標題。"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "請輸入您的文章摘要。"
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr "您的文章摘要過長。請勿超越此部分的字數上限。"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "請選擇投稿人身份。"
+
+msgid "submission.citationFormat.notFound"
+msgstr "未能取得所要求的引文格式。"
+
+msgid "submission.metadataDescription"
+msgstr "這些規格均基於都柏林核心元資料標準，一個用於描述期刊內容的國際標準。"
+
+msgid "submission.viewingPreview"
+msgstr ""
+
+msgid "section.any"
+msgstr "任何分類"
+
+msgid "submission.sectionOptions"
+msgstr "分類選項"
+
+msgid "catalog.browseTitles"
+msgstr ""
+
+msgid "catalog.category.heading"
+msgstr "所有項目"
+
+msgid "galley.editPublishedDisabled"
+msgstr "由於狀態為已出版，所以未能更改此出版項目的校對樣本。"
+
+msgid "galley.publicationNotFound"
+msgstr "未能找到此出版項目的校對樣本。"
+
+msgid "publication.assignToissue"
+msgstr "分配至其中一期"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"此已分配至<a href=\"{$issueUrl}\">{$issueName}</"
+"a>一期，但此期尚未安排正式出版日子。"
+
+msgid "publication.changeIssue"
+msgstr "更改期號"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"出版日期將自動定為該期的出版日期。請勿輸入一個出版日期，除非文章已在其他地方出"
+"版而您需要輸入當初的日期。"
+
+msgid "publication.invalidSection"
+msgstr "未能找到此出版項目的分類。"
+
+msgid "publication.inactiveSection"
+msgstr ""
+
+msgid "publication.invalidIssue"
+msgstr "未能找到此出版項目的期號。"
+
+msgid "publication.publish.confirmation"
+msgstr "已完成所有出版要求。是否確認出版此項目？"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"已完成所有出版要求。當{$issue}"
+"期出版時，此項目會一同出版，是否確認安排到時候出版此項目？"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"已完成所有出版要求。此項目會立即在{$issue}"
+"期出版，是否確認安排到時候出版此項目？"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"已完成所有出版要求。由於出版日期為{$datePublished}"
+"，此項目將會立即出版，是否確認出版此項目？"
+
+msgid "publication.required.issue"
+msgstr "必須在出版前分配出版項目至其中一期。"
+
+msgid "publication.publishedIn"
+msgstr "在<a href=\"{$issueUrl}\">{$issueName}</a>出版。"
+
+msgid "publication.scheduledIn"
+msgstr "安排在 <a href=\"{$issueUrl}\">{$issueName}</a>出版。"
+
+msgid "publication.unscheduledIn"
+msgstr "此尚未安排在任何一期出版。"
+
+msgid "publication.selectIssue"
+msgstr "選擇一期以安排出版"
+
+msgid "submission.publication"
+msgstr "出版項目"
+
+msgid "publication.status.published"
+msgstr "已出版"
+
+msgid "submission.status.scheduled"
+msgstr "已安排"
+
+msgid "publication.status.unscheduled"
+msgstr "取消安排"
+
+msgid "submission.publications"
+msgstr "出版項目"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "當此項目在其中一期出版時，版權年份將自動設定。"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "版權年份將自動按出版日期設定。"
+
+msgid "publication.datePublished"
+msgstr "出版日期"
+
+msgid "publication.editDisabled"
+msgstr "此版本已出版及不能修改。"
+
+msgid "publication.event.published"
+msgstr "投稿已出版。"
+
+msgid "publication.event.scheduled"
+msgstr "投稿已安排出版。"
+
+msgid "publication.event.unpublished"
+msgstr "投稿出版狀態已取消。"
+
+msgid "publication.event.versionPublished"
+msgstr "已出版一個更新版本。"
+
+msgid "publication.event.versionScheduled"
+msgstr "已安排出版一個更新版本。"
+
+msgid "publication.event.versionUnpublished"
+msgstr "已從出版項目移除一個版本。"
+
+msgid "publication.invalidSubmission"
+msgstr "未能找到此出版項目的投稿。"
+
+msgid "publication.publish"
+msgstr "出版"
+
+msgid "publication.publish.requirements"
+msgstr "出版前必須完成以下要求。"
+
+msgid "publication.required.declined"
+msgstr "未能出版被拒的投稿。"
+
+msgid "publication.required.reviewStage"
+msgstr "出版項目出版前必須先經過審稿及製作步驟。"
+
+msgid "submission.license.description"
+msgstr ""
+"此項目出版時，將自動設定為<a href='{$licenseUrl}' target='_blank'>"
+"{$licenseName}</a>。"
+
+msgid "submission.copyrightHolder.description"
+msgstr "此項目出版時，版權將自動設定為{$copyright}。"
+
+msgid "submission.copyrightOther.description"
+msgstr "設定出版項目的版權屬以下單位。"
+
+msgid "publication.unpublish"
+msgstr "取消已出版狀態"
+
+msgid "publication.unpublish.confirm"
+msgstr "是否確認取消此出版狀態？"
+
+msgid "publication.unschedule.confirm"
+msgstr "是否取消安排出版此項目？"
+
+msgid "publication.version.details"
+msgstr "{$version}版本出版細節"
+
+msgid "submission.queries.production"
+msgstr "製作討論"

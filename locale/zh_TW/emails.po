@@ -1,0 +1,507 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/emails/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "emails.notification.subject"
+msgstr ""
+
+msgid "emails.notification.body"
+msgstr ""
+
+msgid "emails.notification.description"
+msgstr ""
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr "密碼重置確認"
+
+msgid "emails.passwordResetConfirm.body"
+msgstr ""
+
+msgid "emails.passwordResetConfirm.description"
+msgstr ""
+
+msgid "emails.passwordReset.subject"
+msgstr ""
+
+msgid "emails.passwordReset.body"
+msgstr ""
+
+msgid "emails.passwordReset.description"
+msgstr ""
+
+msgid "emails.userRegister.subject"
+msgstr "期刊註冊"
+
+msgid "emails.userRegister.body"
+msgstr ""
+
+msgid "emails.userRegister.description"
+msgstr ""
+
+msgid "emails.userValidate.subject"
+msgstr ""
+
+msgid "emails.userValidate.body"
+msgstr ""
+
+msgid "emails.userValidate.description"
+msgstr ""
+
+msgid "emails.reviewerRegister.subject"
+msgstr ""
+
+msgid "emails.reviewerRegister.body"
+msgstr ""
+
+msgid "emails.reviewerRegister.description"
+msgstr ""
+
+msgid "emails.publishNotify.subject"
+msgstr ""
+
+msgid "emails.publishNotify.body"
+msgstr ""
+
+msgid "emails.publishNotify.description"
+msgstr ""
+
+msgid "emails.lockssExistingArchive.subject"
+msgstr ""
+
+msgid "emails.lockssExistingArchive.body"
+msgstr ""
+
+msgid "emails.lockssExistingArchive.description"
+msgstr ""
+
+msgid "emails.lockssNewArchive.subject"
+msgstr ""
+
+msgid "emails.lockssNewArchive.body"
+msgstr ""
+
+msgid "emails.lockssNewArchive.description"
+msgstr ""
+
+msgid "emails.submissionAck.subject"
+msgstr ""
+
+msgid "emails.submissionAck.body"
+msgstr ""
+
+msgid "emails.submissionAck.description"
+msgstr ""
+
+msgid "emails.submissionAckNotUser.subject"
+msgstr ""
+
+msgid "emails.submissionAckNotUser.body"
+msgstr ""
+
+msgid "emails.submissionAckNotUser.description"
+msgstr ""
+
+msgid "emails.editorAssign.subject"
+msgstr ""
+
+msgid "emails.editorAssign.body"
+msgstr ""
+
+msgid "emails.editorAssign.description"
+msgstr ""
+
+msgid "emails.reviewRequest.subject"
+msgstr "邀請評審"
+
+msgid "emails.reviewRequest.body"
+msgstr ""
+
+msgid "emails.reviewRequest.description"
+msgstr ""
+
+msgid "emails.reviewRequestRemindAuto.subject"
+msgstr ""
+
+msgid "emails.reviewRequestRemindAuto.body"
+msgstr ""
+
+msgid "emails.reviewRequestRemindAuto.description"
+msgstr ""
+
+msgid "emails.reviewRequestOneclick.subject"
+msgstr ""
+
+msgid "emails.reviewRequestOneclick.body"
+msgstr ""
+
+msgid "emails.reviewRequestOneclick.description"
+msgstr ""
+
+msgid "emails.reviewRequestRemindAutoOneclick.subject"
+msgstr ""
+
+msgid "emails.reviewRequestRemindAutoOneclick.body"
+msgstr ""
+
+msgid "emails.reviewRequestRemindAutoOneclick.description"
+msgstr ""
+
+msgid "emails.reviewRequestAttached.subject"
+msgstr ""
+
+msgid "emails.reviewRequestAttached.body"
+msgstr ""
+
+msgid "emails.reviewRequestAttached.description"
+msgstr ""
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "要求評審已修改的投稿"
+
+msgid "emails.reviewRequestSubsequent.body"
+msgstr ""
+
+msgid "emails.reviewRequestSubsequent.description"
+msgstr ""
+
+msgid "emails.reviewRequestOneclickSubsequent.subject"
+msgstr ""
+
+msgid "emails.reviewRequestOneclickSubsequent.body"
+msgstr ""
+
+msgid "emails.reviewRequestOneclickSubsequent.description"
+msgstr ""
+
+msgid "emails.reviewRequestAttachedSubsequent.subject"
+msgstr ""
+
+msgid "emails.reviewRequestAttachedSubsequent.body"
+msgstr ""
+
+msgid "emails.reviewRequestAttachedSubsequent.description"
+msgstr ""
+
+msgid "emails.reviewCancel.subject"
+msgstr "已取消提出評審要求"
+
+msgid "emails.reviewCancel.body"
+msgstr ""
+
+msgid "emails.reviewCancel.description"
+msgstr ""
+
+msgid "emails.reviewReinstate.subject"
+msgstr ""
+
+msgid "emails.reviewReinstate.body"
+msgstr ""
+
+msgid "emails.reviewReinstate.description"
+msgstr ""
+
+msgid "emails.reviewConfirm.subject"
+msgstr "能夠評審"
+
+msgid "emails.reviewConfirm.body"
+msgstr ""
+
+msgid "emails.reviewConfirm.description"
+msgstr ""
+
+msgid "emails.reviewDecline.subject"
+msgstr "未能評審"
+
+msgid "emails.reviewDecline.body"
+msgstr ""
+
+msgid "emails.reviewDecline.description"
+msgstr ""
+
+msgid "emails.reviewAck.subject"
+msgstr ""
+
+msgid "emails.reviewAck.body"
+msgstr ""
+
+msgid "emails.reviewAck.description"
+msgstr ""
+
+msgid "emails.reviewRemind.subject"
+msgstr "提示請求完成評審"
+
+msgid "emails.reviewRemind.body"
+msgstr ""
+
+msgid "emails.reviewRemind.description"
+msgstr ""
+
+msgid "emails.reviewRemindOneclick.subject"
+msgstr ""
+
+msgid "emails.reviewRemindOneclick.body"
+msgstr ""
+
+msgid "emails.reviewRemindOneclick.description"
+msgstr ""
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "提示請求完成評審"
+
+msgid "emails.reviewRemindAuto.body"
+msgstr ""
+
+msgid "emails.reviewRemindAuto.description"
+msgstr ""
+
+msgid "emails.reviewRemindAutoOneclick.subject"
+msgstr ""
+
+msgid "emails.reviewRemindAutoOneclick.body"
+msgstr ""
+
+msgid "emails.reviewRemindAutoOneclick.description"
+msgstr ""
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr ""
+
+msgid "emails.editorDecisionAccept.body"
+msgstr ""
+
+msgid "emails.editorDecisionAccept.description"
+msgstr ""
+
+msgid "emails.editorDecisionSendToExternal.subject"
+msgstr ""
+
+msgid "emails.editorDecisionSendToExternal.body"
+msgstr ""
+
+msgid "emails.editorDecisionSendToExternal.description"
+msgstr ""
+
+msgid "emails.editorDecisionSendToProduction.subject"
+msgstr ""
+
+msgid "emails.editorDecisionSendToProduction.body"
+msgstr ""
+
+msgid "emails.editorDecisionSendToProduction.description"
+msgstr ""
+
+msgid "emails.editorDecisionRevisions.subject"
+msgstr ""
+
+msgid "emails.editorDecisionRevisions.body"
+msgstr ""
+
+msgid "emails.editorDecisionRevisions.description"
+msgstr ""
+
+msgid "emails.editorDecisionResubmit.subject"
+msgstr ""
+
+msgid "emails.editorDecisionResubmit.body"
+msgstr ""
+
+msgid "emails.editorDecisionResubmit.description"
+msgstr ""
+
+msgid "emails.editorDecisionDecline.subject"
+msgstr ""
+
+msgid "emails.editorDecisionDecline.body"
+msgstr ""
+
+msgid "emails.editorDecisionDecline.description"
+msgstr ""
+
+msgid "emails.editorRecommendation.subject"
+msgstr ""
+
+msgid "emails.editorRecommendation.body"
+msgstr ""
+
+msgid "emails.editorRecommendation.description"
+msgstr ""
+
+msgid "emails.copyeditRequest.subject"
+msgstr ""
+
+msgid "emails.copyeditRequest.body"
+msgstr ""
+
+msgid "emails.copyeditRequest.description"
+msgstr ""
+
+msgid "emails.layoutRequest.subject"
+msgstr ""
+
+msgid "emails.layoutRequest.body"
+msgstr ""
+
+msgid "emails.layoutRequest.description"
+msgstr ""
+
+msgid "emails.layoutComplete.subject"
+msgstr "校對樣本完成"
+
+msgid "emails.layoutComplete.body"
+msgstr ""
+
+msgid "emails.layoutComplete.description"
+msgstr ""
+
+msgid "emails.emailLink.subject"
+msgstr "或有興趣的文章"
+
+msgid "emails.emailLink.body"
+msgstr ""
+
+msgid "emails.emailLink.description"
+msgstr ""
+
+msgid "emails.subscriptionNotify.subject"
+msgstr "訂閱通知"
+
+msgid "emails.subscriptionNotify.body"
+msgstr ""
+
+msgid "emails.subscriptionNotify.description"
+msgstr ""
+
+msgid "emails.openAccessNotify.subject"
+msgstr "發布即時開放取用"
+
+msgid "emails.openAccessNotify.body"
+msgstr ""
+
+msgid "emails.openAccessNotify.description"
+msgstr ""
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "通知訂閱到期"
+
+msgid "emails.subscriptionBeforeExpiry.body"
+msgstr ""
+
+msgid "emails.subscriptionBeforeExpiry.description"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "訂閱過期"
+
+msgid "emails.subscriptionAfterExpiry.body"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiry.description"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "訂閱過期 - 最後提示"
+
+msgid "emails.subscriptionAfterExpiryLast.body"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiryLast.description"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "訂閱付費：個體"
+
+msgid "emails.subscriptionPurchaseIndl.body"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseIndl.description"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "訂閱付費：院校"
+
+msgid "emails.subscriptionPurchaseInstl.body"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseInstl.description"
+msgstr ""
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "訂閱更新：個體"
+
+msgid "emails.subscriptionRenewIndl.body"
+msgstr ""
+
+msgid "emails.subscriptionRenewIndl.description"
+msgstr ""
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "訂閱更新：院校"
+
+msgid "emails.subscriptionRenewInstl.body"
+msgstr ""
+
+msgid "emails.subscriptionRenewInstl.description"
+msgstr ""
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "引文編輯"
+
+msgid "emails.citationEditorAuthorQuery.body"
+msgstr ""
+
+msgid "emails.citationEditorAuthorQuery.description"
+msgstr ""
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "已上載修正版本"
+
+msgid "emails.revisedVersionNotify.body"
+msgstr ""
+
+msgid "emails.revisedVersionNotify.description"
+msgstr ""
+
+msgid "emails.notificationCenterDefault.subject"
+msgstr ""
+
+msgid "emails.notificationCenterDefault.body"
+msgstr ""
+
+msgid "emails.notificationCenterDefault.description"
+msgstr ""
+
+msgid "emails.editorDecisionInitialDecline.subject"
+msgstr ""
+
+msgid "emails.editorDecisionInitialDecline.body"
+msgstr ""
+
+msgid "emails.editorDecisionInitialDecline.description"
+msgstr ""
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "{$year}年{$month}月的編輯記錄"
+
+msgid "emails.statisticsReportNotification.body"
+msgstr ""
+
+msgid "emails.statisticsReportNotification.description"
+msgstr ""
+
+msgid "emails.announcement.subject"
+msgstr ""
+
+msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.announcement.description"
+msgstr ""

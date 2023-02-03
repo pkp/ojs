@@ -1,0 +1,168 @@
+# Emma U <emmaupkp@gmail.com>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-16 06:38+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/admin/zh_TW/>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "admin.hostedContexts"
+msgstr "支援期刊"
+
+msgid "admin.settings.redirect"
+msgstr "更改期刊導向"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"在主要網站提出之請求會傳送至此期刊。此功能適用於例如網站僅支援一本期刊。"
+
+msgid "admin.settings.defaultMetricDescription"
+msgstr ""
+
+msgid "admin.languages.confirmDisable"
+msgstr "是否確認解除此區性？如解除，現時使用此區性之期刊將會受到影響。"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "這是網站及任何支援的期刊之默認語言。"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "標示的區性可能尚未完成。"
+
+msgid "admin.languages.confirmUninstall"
+msgstr "是否確認解除安裝此區性？如解除，現時使用此區性之期刊將會受到影響。"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"選取任何額外區性以安裝相關支援至本系統。必須先安裝區性，才可在所支援的期刊使用"
+"。請查閱OJS documentation以了解添加新語言的詳情。"
+
+msgid "admin.auth.ojs"
+msgstr ""
+
+msgid "admin.auth.enableSyncProfiles"
+msgstr ""
+
+msgid "admin.auth.enableSyncPasswords"
+msgstr ""
+
+msgid "admin.auth.enableCreateUsers"
+msgstr ""
+
+msgid "admin.systemVersion"
+msgstr "OJS版本"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS配置"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>內的OJS配置設定。"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"你會自動被註冊成此期刊的主管。在創建新期刊後，你會被帶至相關設定精靈以完成基本"
+"期刊設置。"
+
+msgid "admin.journals.journalSettings"
+msgstr "期刊設定"
+
+msgid "admin.journals.noneCreated"
+msgstr "無期刊被創建。"
+
+msgid "admin.contexts.create"
+msgstr "創建期刊"
+
+msgid "admin.journals.urlWillBe"
+msgstr "這是一個簡短的縮寫，以辨識這本期刊。這本期刊的網址會是{$sampleUrl}。"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "必須提供標題。"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "必須提供路徑。"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr "路徑只可包含字母、數字、符號_及-。開首和結尾必須為字母或數字。"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "你提供的路徑已被其他期刊使用。"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "主要區性必須為期刊其中所支援的區性之一。"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "允許此期刊在此網站開放至公眾瀏覽"
+
+msgid "admin.contexts.contextDescription"
+msgstr "期刊描述"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "現存期刊路徑或創建路徑（例如\"ojs\"）。"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "導入訂閱"
+
+msgid "admin.journals.transcode"
+msgstr "從ISO8859-1為文章元資料為進行轉碼"
+
+msgid "admin.journals.redirect"
+msgstr "產生代碼把OJS 1的URL變址至OJS 2的URL"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "必須提供導入路徑。"
+
+msgid "admin.journals.importErrors"
+msgstr "完全導入失敗"
+
+msgid "admin.mergeUsers"
+msgstr "合併多個用戶"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "合併用戶"
+
+msgid "admin.mergeUsers.into.description"
+msgstr "請選擇一個用戶，以轉移上一個用戶的作者身份、編輯分配等等。"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"請選擇一個（或多個）用戶，以合併至另一用戶（例如：當同一人擁有多個用戶）。先選"
+"擇的用戶將被刪除，相關的投稿、配置等等將會轉移至第二個用戶。"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "所有登記用戶"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"你是否希望合併所選取的 {$oldAccountCount}個用戶至另一用戶\"{$newUsername}"
+"\"？屆時你所選取的 {$oldAccountCount}個用戶將會被刪除。這個動作不可逆轉。"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "沒有登記用戶。"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "訂閱期滿提示"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "開放取用通知"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "審稿提示"
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"此期刊的批量發送電郵已被解除。請到<a href=\"{$siteSettingsUrl}\">管理員 > "
+"網站設定</a>啟動此功能。"

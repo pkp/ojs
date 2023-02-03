@@ -1,0 +1,325 @@
+# Weblate Admin <alec@smecher.bc.ca>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-16 09:38+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/author/zh_TW/>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "author.submit"
+msgstr "新增投稿"
+
+msgid "author.track"
+msgstr "現有投稿"
+
+msgid "author.competingInterests"
+msgstr ""
+
+msgid "author.submit.submitArticle"
+msgstr "提交文章"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "5個提交步驟"
+
+msgid "author.submit.startHereTitle"
+msgstr "開始新增投稿"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">按此</a>前往5個提交步驟中的第1步。"
+
+msgid "author.submit.step1"
+msgstr "第1步：開始新增投稿"
+
+msgid "author.submit.step2"
+msgstr "第2步：上傳稿件"
+
+msgid "author.submit.step3"
+msgstr "第3步：輸入投稿的元資料"
+
+msgid "author.submit.step4"
+msgstr "第4步：上傳補充檔案"
+
+msgid "author.submit.step4a"
+msgstr "第4a步：新增補充檔案"
+
+msgid "author.submit.step5"
+msgstr "第5步：確認投稿"
+
+msgid "author.submit.start"
+msgstr "開始"
+
+msgid "author.submit.upload"
+msgstr "上傳稿件"
+
+msgid "author.submit.metadata"
+msgstr "輸入元資料"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "補充檔案"
+
+msgid "author.submit.confirmation"
+msgstr ""
+
+msgid "author.submit.nextSteps"
+msgstr "下一步"
+
+msgid "submission.submit.cancelSubmission"
+msgstr ""
+
+msgid "author.submit.notAccepting"
+msgstr "此期刊現時停止徵稿。"
+
+msgid "author.submit.requestWaiver"
+msgstr "申請豁免"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "請考慮豁免此文章的投稿費用"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "請在意見欄說明應豁免費用的原因。"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "如你想申請豁免，你必須在下方輸入原因。"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "第{$round}輪審稿"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "審稿：需要修改"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "編輯：要求審稿"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "編輯：要求校對"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "上載已審稿稿件"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "現正校對修改項目"
+
+msgid "author.submissions.confirmDelete"
+msgstr "是否確定刪除此未完成投稿？"
+
+msgid "author.submissions.viewStatus"
+msgstr "查看狀態"
+
+msgid "author.submissions.noSubmissions"
+msgstr "沒有投稿。"
+
+msgid "author.submit.journalSection"
+msgstr "期刊內容分類"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "文章必須選取期刊中的其中一個分類。"
+
+msgid "author.submit.verifyChecklist"
+msgstr "你必須確認已符合所有投稿清單的項目才可繼續。"
+
+msgid "author.submit.copyrightNoticeAgree"
+msgstr ""
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "你必須同意版權通知之條款才可繼續。"
+
+msgid "submission.submit.coverNote"
+msgstr "致編輯的意見"
+
+msgid "author.submit.comments"
+msgstr "輸入內容（非必須）"
+
+msgid "author.submit.form.sectionRequired"
+msgstr ""
+
+msgid "author.submit.form.localeRequired"
+msgstr "請選擇投稿的語言。"
+
+msgid "submission.submit.privacyStatement"
+msgstr ""
+
+msgid "author.submit.reorderInstructions"
+msgstr "重新排列作者以顯示出版時的次序。"
+
+msgid "author.submit.reorder"
+msgstr "重新排列作者姓名"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "編審通信時的優先聯絡人。"
+
+msgid "author.submit.addAuthor"
+msgstr "添加作者"
+
+msgid "author.submit.deleteAuthor"
+msgstr "刪除作者"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "提供字詞作為索引用途；字詞間請使用分號分隔（字詞1;字詞2;字詞3）。"
+
+msgid "author.submit.coverageInstructions"
+msgstr "參考研究樣本的地域、時序或歷史覆蓋，以及/或者特徵。"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+
+msgid "author.submit.form.authorRequired"
+msgstr "必須提供最少一個作者。"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "必須提供每個作者的姓、名及電郵地址。"
+
+msgid "author.submit.form.titleRequired"
+msgstr "請輸入你的文章標題。"
+
+msgid "author.submit.form.abstractRequired"
+msgstr "請輸入你的文章摘要。"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "你已超越此分類的文章摘要字數上限。"
+
+msgid "author.submit.submissionFile"
+msgstr "投稿檔案"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "上載投稿檔案"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "取代投稿檔案"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "未能上載投稿檔案。"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "是否確認未有上載投稿檔案，並繼續？"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "按儲存以上載檔案（接着能夠附加檔案）。"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "是否確認未有上載附加檔案，並繼續？"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "此投稿未有添加任何附加檔案。"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "返回附加檔案"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "是否確認刪除此附加檔案？"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "上載附加檔案"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "添加附加檔案"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "編輯附加檔案"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "附加檔案元資料"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "提供以下附加檔案的元資料，以把附加檔案編入索引。"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "附加檔案"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "檔案創建人（或擁有人）"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "研究工具"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "研究資料"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "研究結果"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "文字記錄"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "數據分析"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "數據集"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "原文"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "簡略說明"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "提供此檔案（不包含元資料）予評審員，因為此並不會影響匿名評審。"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "僅在正式出版物使用。"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "收集數據及創建工具日期。"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "研究名稱或其他來源。"
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "標明其他"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "無檔案成功上載。"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "請輸入此附加檔案標題。"
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "請輸入學科。"
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "請輸入說明。"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "已有公眾附加檔案識別。"
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "公眾附加檔案識別碼"
+
+msgid "author.submit.confirmationDescription"
+msgstr ""
+
+msgid "author.submit.noFiles"
+msgstr ""
+
+msgid "author.submit.filesSummary"
+msgstr "檔案概要"
+
+msgid "author.submit.finishSubmission"
+msgstr "完成投稿"
+
+msgid "author.submit.submissionComplete"
+msgstr "投稿完成。感謝您投稿至{$journalTitle}。"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "上載作者版本"
+
+msgid "author.article.copyeditedFile"
+msgstr "已經編審檔案"
+
+msgid "author.article.authorRevisedFile"
+msgstr "作者檔案"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"用戶需要一個帳戶以投稿至此期刊。編輯會透過帳戶追蹤您的投稿及聯絡您，例如通知您"
+"投稿狀態的變更，或需要您提供額外的資訊。"

@@ -1,0 +1,63 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/api/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "您要求的公告並非此期刊的一部分。"
+
+msgid "api.emails.403.disabled"
+msgstr "此期刊的電郵通知功能尚未生效。"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "您不能改變投稿的期刊。"
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "您沒有閱覽未出版期號的權限。"
+
+msgid "api.submissions.403.contextRequired"
+msgstr ""
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "您只可查閱所允許的期刊。"
+
+msgid "api.contexts.403.notAllowed"
+msgstr "您沒有查看此期刊的權限。"
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr "您不能查看或修改此期刊，除非您提出期刊API或網站API的請求。"
+
+msgid "api.contexts.403.requiresContext"
+msgstr "您不能透過網站的API修改此期刊。"
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "您沒有修改此期刊的權限。"
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "您沒有權限刪除此期刊。"
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "未能找到您所查詢的期刊。"
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "您沒有移動此電郵樣式至另一期刊的權限。"
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "未能支援您所選取的付款方式。"
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "您所查詢的出版物並不是此期刊的一部分。"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "您所查詢的出版物並不是此投稿的一部分。"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr ""

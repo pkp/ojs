@@ -1,0 +1,160 @@
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-20 06:38+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/default/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "section.default.title"
+msgstr "文章"
+
+msgid "section.default.abbrev"
+msgstr "文"
+
+msgid "section.default.policy"
+msgstr "分類默認政策"
+
+msgid "default.genres.article"
+msgstr "文章正文內容"
+
+msgid "default.contextSettings.checklist.notPreviouslyPublished"
+msgstr ""
+
+msgid "default.contextSettings.checklist.fileFormat"
+msgstr ""
+
+msgid "default.contextSettings.checklist.addressesLinked"
+msgstr ""
+
+msgid "default.contextSettings.checklist.submissionAppearance"
+msgstr ""
+
+msgid "default.contextSettings.checklist.bibliographicRequirements"
+msgstr ""
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>在此期刊網站內提供的姓名及電郵地址只會按期刊所列明的用途使用，並不會提供作"
+"其他用途或予第三方。</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"此期刊本着促進大眾自由及免費取用學術研究，以支持更廣泛全球學術交流的原則，所刊"
+"載內容為即時開放取用（Immediate Open Access）。"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"我們鼓勵用戶註冊此期刊出版通知服務。請使用期刊主頁上方的<a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">註冊</"
+"a>連結。註冊後，您會透過電郵收到每新一期的目錄。此列表也讓期刊可宣稱擁有一定"
+"程度的支持及讀者。請參見說明確保用戶的姓名及電郵不會用作其他用途的<a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">隱私聲明</a>。"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"想投稿至本期刊？我們建議您先查看<a href=\"{$indexUrl}/{$contextPath}/"
+"about\">關於期刊</a>頁面了解期刊分類政策，以及<a href=\"{$indexUrl}/"
+"{$contextPath}/about/submissions#authorGuidelines\">作者指引</"
+"a>。作者需要先在期刊網站<a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\">註冊</a>投稿，如果你經是註冊用戶，可直接<a href=\"{$indexUrl}/"
+"index/login\">登入</a>，開始投稿的5個步驟。"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"我們鼓勵圖書館管理員把此期刊列入圖書館的電子期刊館藏。同時作為開源軟體，此期刊"
+"的出版系統亦適合圖書館為學院教職員設置他們編輯的期刊（見<a href=\"https://"
+"pkp.sfu.ca/ojs\">Open Journal Systems</a>）。"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"此期刊應用LOCKSS系統來建立一個分散存檔典藏系統，為參與的圖書館建立期刊的永久資"
+"料庫，作為保存及修復的用途。<a href=\"https://www.lockss.org\">更多……</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"此期刊應用CLOCKSS系統來建立一個分散存檔典藏系統，為參與的圖書館建立期刊的永久"
+"資料庫，作為保存及修復的用途。<a href=\"https://clockss.org\">更多……</a>"
+
+msgid "default.groups.name.manager"
+msgstr "期刊管理員"
+
+msgid "default.groups.plural.manager"
+msgstr "期刊管理員們"
+
+msgid "default.groups.abbrev.manager"
+msgstr "期管"
+
+msgid "default.groups.name.editor"
+msgstr "期刊編輯"
+
+msgid "default.groups.plural.editor"
+msgstr "期刊編輯們"
+
+msgid "default.groups.abbrev.editor"
+msgstr "期編"
+
+msgid "default.groups.name.guestEditor"
+msgstr "客席編輯"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "客席編輯們"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "客編"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "分類編輯"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "分類編輯們"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "分類編"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "訂閱管理員"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "訂閱管理員們"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "訂閱管"
+
+msgid "default.genres.researchInstrument"
+msgstr "研究工具"
+
+msgid "default.genres.researchMaterials"
+msgstr "研究資料"
+
+msgid "default.genres.researchResults"
+msgstr "研究結果"
+
+msgid "default.genres.transcripts"
+msgstr "文字記錄"
+
+msgid "default.genres.dataAnalysis"
+msgstr "數據分析"
+
+msgid "default.genres.dataSet"
+msgstr "數據集"
+
+msgid "default.genres.sourceTexts"
+msgstr "源文本"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "評審員"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "評審員們"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "評審"
+
+msgid "default.contextSettings.emailSignature"
+msgstr ""

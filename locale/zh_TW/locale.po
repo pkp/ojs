@@ -1,0 +1,2028 @@
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-30 09:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/locale/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "此期刊不在網上出版內容。"
+
+msgid "context.current"
+msgstr "當期期刊："
+
+msgid "context.select"
+msgstr "切換至另一期刊："
+
+msgid "navigation.categories"
+msgstr "類別"
+
+msgid "navigation.categories.browse"
+msgstr "瀏覽"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "點選圖示填寫評審表格。"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "請填寫要求項目。"
+
+msgid "common.software"
+msgstr ""
+
+msgid "common.confirmComplete"
+msgstr "是否標誌此工序為完成？您之後或未能作其他改變。"
+
+msgid "common.payment"
+msgstr "付款"
+
+msgid "common.payments"
+msgstr "付款"
+
+msgid "common.homePageHeader.altText"
+msgstr "主頁標頭(Header)"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "期刊主頁圖像"
+
+msgid "navigation.journalHelp"
+msgstr "期刊求助"
+
+msgid "navigation.current"
+msgstr "當期期刊"
+
+msgid "navigation.otherJournals"
+msgstr "其他期刊"
+
+msgid "navigation.browseByIssue"
+msgstr "按期號"
+
+msgid "navigation.browseByAuthor"
+msgstr "按作者"
+
+msgid "navigation.infoForAuthors"
+msgstr "供作者之用"
+
+msgid "navigation.infoForLibrarians"
+msgstr "供圖書館管理員之用"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "利益衝突指引"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "作者投稿須知"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "圖書館管理員須知"
+
+msgid "navigation.skip.about"
+msgstr "跳轉至關於期刊"
+
+msgid "navigation.skip.issue"
+msgstr "跳轉至當期期刊"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "未有分配"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "未有分配"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "投稿尚待編輯完成"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "編輯中"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "投稿尚待評審完成"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "評審中"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "各期目錄"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "各期目錄"
+
+msgid "common.queue.long.active"
+msgstr "處理中"
+
+msgid "common.queue.short.active"
+msgstr "處理中"
+
+msgid "common.queue.long.completed"
+msgstr "各期目錄"
+
+msgid "common.queue.short.completed"
+msgstr "各期目錄"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "分配編輯"
+
+msgid "section.section"
+msgstr "分類"
+
+msgid "section.sections"
+msgstr "分類"
+
+msgid "section.title"
+msgstr "分類名稱"
+
+msgid "section.abbreviation"
+msgstr "簡稱"
+
+msgid "section.abbreviation.example"
+msgstr "例如：文章, Article為ART"
+
+msgid "section.policy"
+msgstr "分類政策"
+
+msgid "article.article"
+msgstr "文章"
+
+msgid "article.articles"
+msgstr "文章"
+
+msgid "common.publication"
+msgstr "文章"
+
+msgid "common.publications"
+msgstr "文章"
+
+msgid "article.submissionId"
+msgstr "投稿ID"
+
+msgid "article.title"
+msgstr "標題"
+
+msgid "article.authors"
+msgstr "作者"
+
+msgid "article.indexingInformation"
+msgstr "索引資訊"
+
+msgid "article.metadata"
+msgstr "元資料"
+
+msgid "article.journalSection"
+msgstr "期刊內容分類"
+
+msgid "article.file"
+msgstr "檔案"
+
+msgid "article.suppFile"
+msgstr "附加檔案"
+
+msgid "article.suppFiles"
+msgstr "附加檔案"
+
+msgid "article.suppFilesAbbrev"
+msgstr ""
+
+msgid "article.discipline"
+msgstr "學術領域及分支領域"
+
+msgid "article.subject"
+msgstr "關鍵字詞"
+
+msgid "article.coverage"
+msgstr "幅蓋"
+
+msgid "article.type"
+msgstr "類別、方法及方式"
+
+msgid "article.language"
+msgstr "語言"
+
+msgid "article.sectionEditor"
+msgstr ""
+
+msgid "article.commentsToEditor"
+msgstr "作者意見"
+
+msgid "article.submission"
+msgstr "投稿"
+
+msgid "article.submissions"
+msgstr "投稿"
+
+msgid "article.details"
+msgstr "詳細資訊"
+
+msgid "article.abstract"
+msgstr "摘要"
+
+msgid "article.coverPage.altText"
+msgstr "封面圖像"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "開放取用"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "限制取用"
+
+msgid "article.comments.sectionDefault"
+msgstr "默認"
+
+msgid "article.comments.disable"
+msgstr "取消"
+
+msgid "article.comments.enable"
+msgstr "啓用"
+
+msgid "article.fontSize"
+msgstr "字體大小"
+
+msgid "article.fontSize.small.altText"
+msgstr "小"
+
+msgid "article.fontSize.medium.altText"
+msgstr "中"
+
+msgid "article.fontSize.large.altText"
+msgstr "大"
+
+msgid "article.return"
+msgstr "返回文章詳細資訊"
+
+msgid "category.category"
+msgstr ""
+
+msgid "submission.submissionEditing"
+msgstr "投稿編輯"
+
+msgid "submission.changeSection"
+msgstr "更變至"
+
+msgid "submission.sent"
+msgstr "已發送"
+
+msgid "submission.editorDecision"
+msgstr "編輯決定"
+
+msgid "submission.round"
+msgstr ""
+
+msgid "submission.editorReview"
+msgstr "編輯評審"
+
+msgid "submission.notifyAuthor"
+msgstr "通知作者"
+
+msgid "submission.notifyEditor"
+msgstr "通佑編輯"
+
+msgid "submission.editorAuthorRecord"
+msgstr "編輯／作者電郵記錄"
+
+msgid "submission.reviewersVersion"
+msgstr "評審完註解版本檔案"
+
+msgid "submission.postReviewVersion"
+msgstr "評審後版本檔案"
+
+msgid "submission.editorVersion"
+msgstr "編輯版本"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "作者修改後版本檔案"
+
+msgid "submission.authorVersion"
+msgstr "作者版本"
+
+msgid "submission.copyediting"
+msgstr "審稿中"
+
+msgid "submission.copyedit"
+msgstr "審稿"
+
+msgid "submission.proofreading"
+msgstr "校對中"
+
+msgid "submission.scheduling"
+msgstr "安排中"
+
+msgid "submission.scheduledIn"
+msgstr "安排在{$issueName}出版。"
+
+msgid "submission.scheduledIn.tba"
+msgstr "（待公佈）"
+
+msgid "submissions.step1"
+msgstr "第1步"
+
+msgid "submissions.step3"
+msgstr "第3步"
+
+msgid "submissions.queuedReview"
+msgstr "評審中"
+
+msgid "submissions.published"
+msgstr "已出版"
+
+msgid "submissions.initial"
+msgstr "最初"
+
+msgid "submissions.proofread"
+msgstr "校對"
+
+msgid "submissions.initialProof"
+msgstr "最初版本"
+
+msgid "submissions.postAuthor"
+msgstr ""
+
+msgid "submissions.reviewRound"
+msgstr "評審次數"
+
+msgid "submissions.proof"
+msgstr "校樣"
+
+msgid "submissions.editorDecision"
+msgstr "編輯決定"
+
+msgid "submissions.editorRuling"
+msgstr "編輯原則"
+
+msgid "submission.eventLog"
+msgstr "事件日誌"
+
+msgid "submissions.copyeditComplete"
+msgstr "已審稿"
+
+msgid "submissions.layoutComplete"
+msgstr "已編輯版面設計"
+
+msgid "submissions.proofreadingComplete"
+msgstr "校對"
+
+msgid "submission.search"
+msgstr "文章搜尋"
+
+msgid "journal.currentIssue"
+msgstr "當期期刊"
+
+msgid "context.contexts"
+msgstr "期刊"
+
+msgid "journal.path"
+msgstr "路徑"
+
+msgid "context.context"
+msgstr "期刊"
+
+msgid "journal.issn"
+msgstr "國際標準期刊號(ISSN)"
+
+msgid "journal.viewAllIssues"
+msgstr "各期目錄"
+
+msgid "user.authorization.representationNotFound"
+msgstr "未能找到您所查詢的校對樣本。"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "包括在此期刊沒有特定身份的用戶。"
+
+msgid "user.profile.profileImage"
+msgstr "頭像"
+
+msgid "user.showAllJournals"
+msgstr "顯示我的期刊"
+
+msgid "user.registerForOtherJournals"
+msgstr "註冊其他期刊"
+
+msgid "user.reviewerPrompt"
+msgstr "您是否願意評審此期刊的投稿？"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr ""
+
+msgid "user.reviewerPrompt.optin"
+msgstr "是，我希望期刊在有投稿需要我評審時聯絡我。"
+
+msgid "user.register.contextsPrompt"
+msgstr "您希望在此網站哪一本期刊註冊？"
+
+msgid "user.register.otherContextRoles"
+msgstr "要求成為以下身份。"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "如您有興趣成為任何一本期刊的評審員，請輸入您有興趣的學術領域。"
+
+msgid "user.myJournals"
+msgstr "我的期刊"
+
+msgid "user.manageMySubscriptions"
+msgstr "管理我的訂閱"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "您的戶口尚未有跟任何期刊有關聯。請選擇一本期刊："
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "您的帳戶在此期刊尚未有任何身份。請從以下選取想執行的項目："
+
+msgid "user.noRoles.submitArticle"
+msgstr "提交一份計劃"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "投稿：現在未有開放作者註冊。"
+
+msgid "user.noRoles.regReviewer"
+msgstr "註冊為評審員"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "註冊為評審員：現在未有開放評審員註冊。"
+
+msgid "user.role.manager"
+msgstr "期刊管理員"
+
+msgid "user.role.subEditor"
+msgstr "分類編輯"
+
+msgid "user.role.subscriptionManager"
+msgstr "訂閱管理員"
+
+msgid "user.role.managers"
+msgstr "期刊管理員"
+
+msgid "user.role.subEditors"
+msgstr "分類編輯"
+
+msgid "user.role.subscriptionManagers"
+msgstr "訂閱管理員"
+
+msgid "user.role.journalAssistant"
+msgstr "期刊助理"
+
+msgid "user.role.journalAssistants"
+msgstr "期刊助理"
+
+msgid "issue.issue"
+msgstr "期號"
+
+msgid "issue.issues"
+msgstr "期號"
+
+msgid "issue.title"
+msgstr "標題"
+
+msgid "issue.viewIssueIdentification"
+msgstr "查看{$identification}"
+
+msgid "issue.volume"
+msgstr "卷號"
+
+msgid "issue.number"
+msgstr "編號"
+
+msgid "issue.vol"
+msgstr "卷"
+
+msgid "issue.no"
+msgstr "期"
+
+msgid "issue.year"
+msgstr "年"
+
+msgid "issue.noIssues"
+msgstr "未有期號"
+
+msgid "issue.toc"
+msgstr "目錄"
+
+msgid "issue.abstract"
+msgstr "摘要"
+
+msgid "issue.coverPage.altText"
+msgstr "封面"
+
+msgid "issue.fullIssue"
+msgstr "全期"
+
+msgid "issue.nonpdf.title"
+msgstr "下載此期"
+
+msgid "issue.viewIssue"
+msgstr "查看期號"
+
+msgid "issue.return"
+msgstr "返回該期"
+
+msgid "subscriptionTypes.currency"
+msgstr "貨幣"
+
+msgid "subscriptionTypes.year"
+msgstr "年份"
+
+msgid "subscriptionTypes.years"
+msgstr "年份"
+
+msgid "subscriptionTypes.month"
+msgstr "月份"
+
+msgid "subscriptionTypes.months"
+msgstr "月份"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "不會過期"
+
+msgid "subscriptionTypes.format"
+msgstr "格式"
+
+msgid "subscriptionTypes.format.online"
+msgstr "網上"
+
+msgid "subscriptionTypes.format.print"
+msgstr "印刷"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "印刷及網上"
+
+msgid "subscriptions.inactive"
+msgstr "閒置"
+
+msgid "subscriptions.status"
+msgstr "狀態"
+
+msgid "subscriptions.status.active"
+msgstr "處理中"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "需要資料"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "需要批准"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "尚待手動付款"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "尚待網上付款"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "您未有一個現行訂閱方案。"
+
+msgid "subscriptions.status.other"
+msgstr "其他，見備註"
+
+msgid "subscriptions.individualDescription"
+msgstr "個體訂閱需要先登入才可取用訂閱內容。"
+
+msgid "subscriptions.institutionalDescription"
+msgstr "院校訂閱不需要登入。用戶可透過網域及／或IP地址來取用訂閱內容。"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>備註：</"
+"strong>透過網上付款的院校訂閱在啟用訂閱前需要先獲得網域及IP範圍的認可。"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "提交事件"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "已提交文章"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "投稿已發送至安排出版佇列"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "已分配投稿至其中一期"
+
+msgid "submission.event.general.articlePublished"
+msgstr "已出版文章"
+
+msgid "submission.event.author.authorRevision"
+msgstr "作者已提交修正"
+
+msgid "submission.event.general.authorRevision"
+msgstr "已更新作者修正檔案"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "已分配編輯至投稿"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "取消分配編輯予投稿"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "已提交編輯決定"
+
+msgid "submission.event.editor.editorFile"
+msgstr "已更新編輯檔案"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "投稿已典藏"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "投稿從典藏中恢復"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "已分配審稿員予投稿"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "已取消分配審稿員予投稿"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "開始分配審稿"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "審稿員修正檔案已更新"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "已完成初步審稿"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "完成最終審稿"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "已更新審稿檔案"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "已分配校對員予投稿"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "已取消分配校對員予投稿"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "開始分配校對"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "校對員修正檔案已更新"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "完成分配校對"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "已分配版面設計編輯予投稿"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "已取消分配版面設計編輯予投稿"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "開始分配版面設計"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "已更新版面校對樣本"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "完成版面分配"
+
+msgid "reader.subscribersOnly"
+msgstr "只限訂閱者"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "需要訂閱才可閱覽項目。請登入期刊認證訂閱權限。"
+
+msgid "reader.openAccess"
+msgstr "開放取用"
+
+msgid "reader.subscriptionAccess"
+msgstr "需要訂閱"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "需要訂閱或費用"
+
+msgid "reader.purchasePrice"
+msgstr ""
+
+msgid "comments.commentsOnArticle"
+msgstr "對此文章的意見"
+
+msgid "comments.authenticated"
+msgstr ""
+
+msgid "search.results.orderBy"
+msgstr "次序排列按"
+
+msgid "search.results.orderBy.article"
+msgstr "文章標題"
+
+msgid "search.results.orderBy.author"
+msgstr "作者"
+
+msgid "search.results.orderBy.date"
+msgstr "出版日期"
+
+msgid "search.results.orderBy.issue"
+msgstr "期號"
+
+msgid "search.results.orderBy.journal"
+msgstr "期刊名稱"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "受歡迎程度（所有時期）"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "受歡迎程度（上一個月）"
+
+msgid "search.results.orderBy.relevance"
+msgstr "相關程度"
+
+msgid "search.results.orderDir.asc"
+msgstr "從小至大"
+
+msgid "search.results.orderDir.desc"
+msgstr "從大至小"
+
+msgid "search.results.similarDocuments"
+msgstr "類似文件"
+
+msgid "admin.auth.defaultSourceDescription"
+msgstr ""
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "訂閱管理"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "個體訂閱"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "院校訂閱"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "訂閱種類"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "文章校對樣本插件"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr "文章校對樣本插件額外支援顯示各種文件種類如文章校對樣本。"
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+
+msgid "plugins.categories.generic.description"
+msgstr "一般插件用來在尚未有其他插件支援的不同方面擴展Open Journal Systems。"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"步驟：投稿佇列&gt;投稿評審&gt;投稿編輯&gt;目錄<br />"
+"<br />"
+"\n"
+"選取一個模組來處理這些編輯過程。（前往期刊管理的編輯頁面，選定一個管理編輯及"
+"分類編輯。）"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"限制此用戶？此會限制用戶登入系統。\n"
+"\n"
+"您也可選擇向用會提供限制帳戶的理由。"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "處理中的編輯工作分配"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "完成編輯工作分配"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "未有分配投稿。"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr "現正再次通知審稿員會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr "現正再次通知作者會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr "現正再次通知版面設計編輯會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr "現正再次通知校對員會重置分配的工作。是否確認執行？"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "抱歉"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+
+msgid "sectionEditor.regrets"
+msgstr ""
+
+msgid "sectionEditor.regrets.link"
+msgstr ""
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "同行評審，第{$round}輪"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "編輯決定，第{$round}輪"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr ""
+
+msgid "sectionEditor.regrets.regret"
+msgstr ""
+
+msgid "sectionEditor.regrets.result"
+msgstr "結果"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "登記一個現有用戶為評審員"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "創建新評審員"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "處理中的編輯工作"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "完編輯工作分配"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "未有處理中的編輯工作。"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "版面設計編輯工作"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "上載校對樣本格式"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "取代檔案"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "上載附件檔案"
+
+msgid "submission.layout.imageInvalid"
+msgstr "圖片檔案無效。接受格式有.gif、 .jpg及 .png。"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "校對樣本將會在另一網站可查看。"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "遠程存放內容網址"
+
+msgid "reviewer.pendingReviews"
+msgstr "文章尚待評審"
+
+msgid "reviewer.completedReviews"
+msgstr "完成"
+
+msgid "reviewer.averageQuality"
+msgstr "評價"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "尚待評審檔案"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "通佑編輯"
+
+msgid "reviewer.article.canDoReview"
+msgstr "會進行評審"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "未能進行評審"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "如果評審員同意進行評審，將可查閱投稿"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "投稿編輯"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "在此輸入或貼上評審意見"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "待編輯輸入"
+
+msgid "reviewer.article.sendReminder"
+msgstr "發送提示"
+
+msgid "reviewer.article.automatic"
+msgstr "（自動）"
+
+msgid "reviewer.article.recommendation"
+msgstr "推薦"
+
+msgid "reviewer.article.submitReview"
+msgstr "提交評審予編輯"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "意見"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "上載檔案"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "評審員上載版本"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr "（如您希望在檔案提供註解給編輯，請儲存在您的硬碟及使用瀏覽／上載。）"
+
+msgid "reviewer.article.schedule.request"
+msgstr "編輯要求"
+
+msgid "reviewer.article.schedule.response"
+msgstr "您的回應"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "已提交評審"
+
+msgid "reviewer.article.schedule.due"
+msgstr "評審到期"
+
+msgid "reviewer.article.decision.accept"
+msgstr "接受投稿"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "需要修改"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "重新提交予評審"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "在其他地方重新提交"
+
+msgid "reviewer.article.decision.decline"
+msgstr "拒絕投稿"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "見意見欄"
+
+msgid "reviewer.article.schedule"
+msgstr "進度"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "尚待評審投稿"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "檢查進度"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "檢查步驟"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "評審員指引"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"評審員指引會為評審員提供決定投稿是否適合在期刊出版的準則，也可包括任何關於有效"
+"及有建設性評審的特別指引。評審時，評審員會有兩個文字框，第一個為「致作者及編輯"
+"」，第二個為「致編輯」。此外，期刊管理員也可在同行評審表格下創建評審表格。在任"
+"何情況下，編輯也可選擇與作者分享評審內容。"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "通知負責相關投稿的編輯"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "您是否願意進行評審而言。"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "如您將進行評審，請參閱以下評審員指引。"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "點選想下載的與此投稿相關的檔案及進行評審（在電腦或列印出來）。"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"申報您與此研究會否有利益衝突（見<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">利益衝突聲明</a>）。"
+
+msgid "reviewer.competingInterests"
+msgstr "利益衝突"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "點選圖示進入（或貼上）您為此投稿撰寫的評審。"
+
+msgid "reviewer.article.uploadFile"
+msgstr "另外，您可上載檔案供編輯及／或作者作諮詢用途。"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"選取一個建議及提交評審完成過程。您在選擇建議前，必須進入評審或上載一個檔案。"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "設置或調整評審員建議。"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "尚未選取任何建議。您必須選取一個建議才能提交。"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr ""
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr ""
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr ""
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr ""
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr ""
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr ""
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr ""
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr ""
+
+msgid "submission.copyedit.useFile"
+msgstr ""
+
+msgid "submission.copyedit.copyeditComments"
+msgstr ""
+
+msgid "submission.copyedit.instructions"
+msgstr ""
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "公開校對樣本認證已存在。"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "分配版面設計編輯"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "取代版面設計編輯"
+
+msgid "submission.layout.layoutComments"
+msgstr "版面意見"
+
+msgid "submission.layout.instructions"
+msgstr "版面指引"
+
+msgid "submission.layout.referenceLinking"
+msgstr "參考文獻連結"
+
+msgid "submission.proofreadingComments"
+msgstr "校對意見"
+
+msgid "submission.proofread.corrections"
+msgstr "校對修正"
+
+msgid "submission.proofread.instructions"
+msgstr ""
+
+msgid "submission.logType.article"
+msgstr "文章"
+
+msgid "submission.logType.author"
+msgstr "作者"
+
+msgid "submission.logType.editor"
+msgstr "編輯"
+
+msgid "submission.logType.review"
+msgstr "評審"
+
+msgid "submission.logType.copyedit"
+msgstr "審稿"
+
+msgid "submission.logType.layout"
+msgstr "版面"
+
+msgid "submission.logType.proofread"
+msgstr "校對"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "編輯／作者通信"
+
+msgid "submission.comments.copyeditComments"
+msgstr "審稿意見"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"可以跟作者分享這些意見。<br />"
+"\n"
+"（儲存後，可增添其他意見。）"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "致作者及編輯"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "致編輯"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "發送後，提供一個可編輯的密件副本供發送給評審員。"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "致作者及編輯"
+
+msgid "submission.comments.forEditor"
+msgstr "致編輯"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "儲存及發送電郵給作者"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "儲存及發送電郵給編輯"
+
+msgid "user.register.selectContext"
+msgstr "選擇註冊的期刊："
+
+msgid "user.register.noJournals"
+msgstr "您在此網站沒有期刊可註冊。"
+
+msgid "user.register.privacyStatement"
+msgstr "隱私聲明"
+
+msgid "user.register.registrationDisabled"
+msgstr "此期刊現不接受任何用戶註冊。"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "您所輸入的密碼長度不足。"
+
+msgid "user.register.readerDescription"
+msgstr "期刊出版新一期時以電郵通知。"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "期刊一期變成開放取用時以電郵通知。"
+
+msgid "user.register.authorDescription"
+msgstr "可以提交項目給期刊。"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "願意為期刊投稿作同行評審。"
+
+msgid "user.register.reviewerDescription"
+msgstr "願意為網站投稿作同行評審。"
+
+msgid "user.register.reviewerInterests"
+msgstr "識別評審興趣（實質範圍及研究方法）："
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr "是，我希望會收到所有我已註冊期刊相關的新出版物及公告的通知。"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"是，我同意期刊按照<a href=\"{$privacyUrl}\" target=\"_blank\">隱私聲明</"
+"a>收集及儲存我的資料。"
+
+msgid "user.register.form.missingContextConsent"
+msgstr "無論您在任何一本期刊註冊，您必須同意其隱私聲明。"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "您必須同意此網站的隱私聲明。"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "我的訂閱"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "訂閱狀態"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"以下顯示現行及過期訂閱和相關過期日子。此外，以下狀態資訊也會在每一訂閱找到。"
+
+msgid "user.subscriptions.status"
+msgstr "狀態"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "說明"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "在訂閱激活前，需要提供額外資訊"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "在激活前必須檢視訂閱"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "已啟動手動付款，但尚未收到款項"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "一項網上付款已啟動，但已被取消或尚未完成"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "個體訂閱"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "院校訂閱"
+
+msgid "user.subscriptions.renew"
+msgstr "更新"
+
+msgid "user.subscriptions.purchase"
+msgstr "購買"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "購買新訂閱"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "購買個體訂閱"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "購買院校訂閱"
+
+msgid "user.subscriptions.expires"
+msgstr "到期日期：{$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "已過期：{$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "查看可供選擇訂閱種類"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "訂閱種類"
+
+msgid "user.subscriptions.form.membership"
+msgstr "會員資格"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "所選取的訂閱種類需要會員資格資訊。"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "請選擇一個有效的訂閱種類。"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "此用戶已有個體訂閱。"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "所選取的訂閱種類需要會員資格資訊。"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "院校名稱"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "必須提供院校名稱。"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "郵寄地址"
+
+msgid "user.subscriptions.form.domain"
+msgstr "網域"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"如在此輸入網域，IP範圍可選填。<br />"
+"有效值為網域名稱（例如lib.sfu.ca）。"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "所選擇的訂閱種類需要一個網域及／或IP範圍用作認證訂閱。"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "請輸入一個有效網域。"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP範圍"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr ""
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"如在此輸入IP範圍，網域可選填。<br />"
+"有效值為IP地址（例如142.58.103.1）、IP範圍（例如142.58.103.1 - 142.58.103."
+"4）、有通配符的IP範圍（例如142.58.*.*）及有CIDR的IP範圍（例如142.58.100.0/"
+"24）。"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "請輸入一個有效的IP範圍。"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "刪除"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "增添"
+
+msgid "search.browseAuthorIndex"
+msgstr "瀏覽作者索引"
+
+msgid "search.searchFor"
+msgstr "搜尋文章作"
+
+msgid "search.withinJournal"
+msgstr "當中"
+
+msgid "search.allJournals"
+msgstr "所有期刊"
+
+msgid "search.authorIndex"
+msgstr "瀏覽作者索引"
+
+msgid "search.authorDetails"
+msgstr "作者資訊"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+
+msgid "article.pageTitle"
+msgstr "查看{$title}"
+
+msgid "article.pdf.title"
+msgstr "可攜式文件格式(PDF)"
+
+msgid "article.download"
+msgstr "下載此PDF檔案"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>如您的瀏覽器有安裝PDF閱讀器插件（例如最近版本的<a href=\"https://get."
+"adobe.com/reader/\">Adobe Acrobat Reade</"
+"a>），您所選取的PDF檔案會在此顯示。</p>"
+
+msgid "article.nonpdf.title"
+msgstr "文章下載"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"您所選取的檔案應該會自動開始下載。如沒有開始，請點選以下連結。注意此檔案或需要"
+"特定的閱讀器或插件來讀取。<br />"
+"<br />"
+"如下載沒有自動開始，請<a href=\"{$url}\">按此</a>。"
+
+msgid "site.journalsHosted"
+msgstr "在此網站存放的期刊"
+
+msgid "site.journalView"
+msgstr "查看期刊"
+
+msgid "site.journalRegister"
+msgstr "註冊"
+
+msgid "site.journalCurrent"
+msgstr "當期期刊"
+
+msgid "site.noJournals"
+msgstr "現無期刊供閱覽。"
+
+msgid "current.current"
+msgstr "當期期刊"
+
+msgid "current.noCurrentIssue"
+msgstr "未有當期期刊"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "此期刊尚未出版任何一期。"
+
+msgid "archive.archives"
+msgstr "各期目錄"
+
+msgid "archive.archivesPageNumber"
+msgstr "各期目錄 - 頁碼{$pageNumber}"
+
+msgid "archive.browse"
+msgstr "瀏覽過往期刊"
+
+msgid "archive.issueUnavailable"
+msgstr "尚未開放"
+
+msgid "about.statistics"
+msgstr "數據"
+
+msgid "about.contact"
+msgstr "聯絡"
+
+msgid "about.aboutContext"
+msgstr "關於期刊"
+
+msgid "about.history"
+msgstr "期刊歷史"
+
+msgid "about.editorialTeam"
+msgstr "編輯委員會"
+
+msgid "about.editorialTeam.biography"
+msgstr "發展史"
+
+msgid "about.editorialPolicies"
+msgstr "編輯政策"
+
+msgid "about.focusAndScope"
+msgstr "重點及範圍"
+
+msgid "about.sectionPolicies"
+msgstr "分類政策"
+
+msgid "about.submissions"
+msgstr "投稿"
+
+msgid "about.onlineSubmissions.login"
+msgstr "登入"
+
+msgid "about.onlineSubmissions.register"
+msgstr "註冊"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "投稿請先{$login}或{$register}。"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission}或{$viewSubmissions}。"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "投稿至<a href=\"{$url}\">{$name}</a>類別。"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "投稿"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "查看您的尚待處理投稿"
+
+msgid "about.authorGuidelines"
+msgstr "作者指引"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "投稿準備核對清單"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"作為投稿步驟之一，作者需要檢查投稿符合所有以下項目，如未能符合以下指引投稿會被"
+"退還。"
+
+msgid "about.copyrightNotice"
+msgstr "版權資訊"
+
+msgid "about.privacyStatement"
+msgstr "隱私聲明"
+
+msgid "about.authorFees"
+msgstr "作者費用"
+
+msgid "about.authorFeesMessage"
+msgstr "此期刊將收取以下作者費用。"
+
+msgid "about.peerReviewProcess"
+msgstr "同行評審過程"
+
+msgid "about.publicationFrequency"
+msgstr "出版頻率"
+
+msgid "about.openAccessPolicy"
+msgstr "開放取用政策"
+
+msgid "about.delayedOpenAccess"
+msgstr "延遲開放取用"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "此期刊內容將為開放取用可供查閱"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr ""
+
+msgid "about.archiving"
+msgstr "典藏"
+
+msgid "about.subscriptions"
+msgstr "訂閱"
+
+msgid "about.subscriptions.individual"
+msgstr "個體訂閱"
+
+msgid "about.subscriptions.institutional"
+msgstr "院校訂閱"
+
+msgid "about.subscriptionsContact"
+msgstr "訂閱聯絡"
+
+msgid "about.subscriptionTypes.name"
+msgstr "姓名"
+
+msgid "about.subscriptionTypes.format"
+msgstr "格式"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "持續時間"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "價錢"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "訂閱種類"
+
+msgid "about.memberships"
+msgstr "會員資格"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "更多有關OJS/PKP出版系統、平台及工序的資訊。"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS編輯及出版過程"
+
+msgid "about.aboutSoftware"
+msgstr "關於Open Journal Systems"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"此期刊揾用Open Journal Systems{$ojsVersion}"
+"，一個在GNU通用公眾特許條款下由Public Knowledge "
+"Project開發、支援及免費發行的開源期刊管理及出版程式。請到PKP網站<a "
+"href=\"https://pkp.sfu.ca/\">了解更多此程式</"
+"a>。有關期刊及投稿相關問題，請直接<a href=\"{$contactUrl}\">聯絡此期刊</a>。"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"此期刊揾用Open Journal Systems{$ojsVersion}"
+"，一個在GNU通用公眾特許條款下由Public Knowledge "
+"Project開發、支援及免費發行的開源期刊管理及出版程式。請到PKP網站<a "
+"href=\"https://pkp.sfu.ca/\">了解更多此程式</"
+"a>。有關期刊及投稿相關問題，請直接聯絡此期刊。"
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems幫助"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS幫助"
+
+msgid "help.searchReturnResults"
+msgstr "返回搜尋結果"
+
+msgid "help.goToEditPage"
+msgstr "編輯{$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "感謝"
+
+msgid "donations.thankYouMessage"
+msgstr "非常感謝您的貢獻。"
+
+msgid "payment.loginRequired"
+msgstr "您必須登入才能付款。"
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"此項目需要訂閱或購買才可閱覽。如需認證訂閱、取用以前的購買項目或希望購買項目，"
+"請先登入期刊。"
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"此期需要訂閱或購買才可閱覽。如需認證訂閱、取用以前的購買項目或希望購買項目，請"
+"先登入期刊。"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "您必須先登入才可捐款。"
+
+msgid "payment.paid"
+msgstr "已付款"
+
+msgid "payment.unpaid"
+msgstr "尚未付款"
+
+msgid "payment.waived"
+msgstr "已免除"
+
+msgid "payment.payNow"
+msgstr "現在付款"
+
+msgid "payment.waive"
+msgstr "免除"
+
+msgid "payment.alreadyPaid"
+msgstr "已付款"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"如您已經向期刊繳付您的款項完成投稿過程，請點選此框。投稿將會在付款後才開始評審"
+"程序。按上方「現在付款」查看付款指引。"
+
+msgid "payment.paymentReceived"
+msgstr "已收到款項"
+
+msgid "payment.paymentSent"
+msgstr "付款已發送"
+
+msgid "payment.authorFees"
+msgstr "作者費用"
+
+msgid "payment.type.submission"
+msgstr "投稿費用"
+
+msgid "payment.type.publication"
+msgstr "出版費用"
+
+msgid "payment.type.publication.required"
+msgstr "出版費用到期付款。"
+
+msgid "payment.type.fastTrack"
+msgstr "快速評審費用"
+
+msgid "payment.type.membership"
+msgstr "個人會員資格費用"
+
+msgid "payment.type.purchaseArticle"
+msgstr "購買文章費用"
+
+msgid "payment.type.purchaseIssue"
+msgstr "購買期號費用"
+
+msgid "payment.type.subscription"
+msgstr "訂閱費用"
+
+msgid "payment.type.donation"
+msgstr "捐款"
+
+msgid "payment.requestPublicationFee"
+msgstr "要求出版費用（{$feeAmount}）"
+
+msgid "payment.notFound"
+msgstr "已提出付款請求，但請求已過期。詳情請聯絡期刊管理員。"
+
+msgid "payment.donation.makeDonation"
+msgstr "捐款"
+
+msgid "payment.submission.paySubmission"
+msgstr "支付投稿費用"
+
+msgid "payment.publication.payPublication"
+msgstr "付款出版"
+
+msgid "payment.publication.publicationPaid"
+msgstr "已支付出版費用"
+
+msgid "payment.membership.buyMembership"
+msgstr "購買個人會員資格"
+
+msgid "payment.membership.renewMembership"
+msgstr "更新個人會員資格"
+
+msgid "payment.membership.ends"
+msgstr "結束"
+
+msgid "payment.subscription.purchase"
+msgstr "付款訂閱"
+
+msgid "payment.subscription.renew"
+msgstr "更新訂閱"
+
+msgid "payment.subscription.expires"
+msgstr "過期"
+
+msgid "installer.appInstallation"
+msgstr "OJS安裝"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS升級"
+
+msgid "installer.updatingInstructions"
+msgstr "如您現正升級一個安裝中的OJS，<a href=\"{$upgradeUrl}\">按此</a>繼續。"
+
+msgid "installer.installationInstructions"
+msgstr ""
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+
+msgid "installer.allowFileUploads"
+msgstr "您的伺服器現准許上載檔案：<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"您的伺服器現准許上載檔案大小的上限：<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"此系統採用的優先語言。如您有意採用在此未有列出的語言，請諮詢OJS "
+"documentation。"
+
+msgid "installer.additionalLocalesInstructions"
+msgstr ""
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS需要能夠存取一個SQL資料庫以儲存資料。見以上系統要求所列出的支援資料庫列表。"
+"在以下欄位，提供所採用的設定連接至資料庫。"
+
+msgid "installer.installApplication"
+msgstr "安裝Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "升級Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>警告：</"
+"strong>如在安裝資料庫期間失敗，您或需移除您的OJS或資料庫表格才可重新安裝資料庫"
+"。"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>重要！</h4>"
+"\n"
+"<p>安裝程式未能自動覆蓋設置檔案。在試圖使用系統前，請在適當的文字編輯器開啟<t"
+"t>config.inc.php</tt>及以下方內容取代原先內容。</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>成功安裝OJS。</p>"
+"\n"
+"<p>請使用上一頁輸入的用戶名稱及密碼<a href=\"{$loginUrl}\">登入</"
+"a>，開始使用系統。</p>"
+"\n"
+"<p>如您想成為PKP社群的一部分，您可以：</p>"
+"\n"
+"<ol>\n"
+"<li>閱讀<a href=\"https://pkp.sfu.ca/category/news/\" "
+"target=\"_new\">PKP網誌</a>及追蹤<a href=\"https://pkp.sfu.ca/category/News/"
+"feed/\" target=\"_new\">RSS feed</a>跟進消息及更新。</li>"
+"\n"
+"<li>如您有任問題或意見，請到<a href=\"https://forum.pkp.sfu.ca\" "
+"target=\"_new\">support forum</a>。</li>"
+"\n"
+"</ol>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"現有新版本的OJS可供應用！您現正使用OJS版本{$currentVersion}。最新的版本為"
+"{$currentVersion}。請到<a href=\"https://pkp.sfu.ca/ojs_download\" "
+"target=\"_new\">此頁面</a>下載最新版本及查看升級指引。"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"現有新版本的OJS可供應用！您現正使用OJS版本{$currentVersion}。最新的版本為"
+"{$currentVersion}。請聯絡您的網站管理員（{$siteAdminName}，<a href=\"mailto:"
+"{$siteAdminEmail}\">{$siteAdminEmail}</a>），通知他們此版本。<a "
+"href=\"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\">在此</"
+"a>可找到更多資訊。"
+
+msgid "log.author.documentRevised"
+msgstr "{$authorName}已更新文章{$submissionId}。更新檔案ID為{$fileId}。"
+
+msgid "log.review.reviewerUnassigned"
+msgstr "已取消分配{$reviewerName}在第{$round}輪負責評審投稿{$submissionId}。"
+
+msgid "log.review.reviewInitiated"
+msgstr "{$reviewerName}已開始評審在第{$round}輪的投稿{$submissionId}。"
+
+msgid "log.review.reviewerRated"
+msgstr "已評價{$reviewerName}在第{$round}輪對投稿{$submissionId}的評審。"
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"已設定{$dueDate}為{$reviewerName}為第{$round} 輪投稿{$submissionId}"
+"評審的完成日期。"
+
+msgid "log.review.reviewRecommendationSet"
+msgstr "已設定建議{$reviewerName}為第{$round} 輪投稿{$submissionId}評審。"
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"編輯已代表評審員{$reviewerName}設定第{$round} 輪投稿{$submissionId}建議。"
+
+msgid "log.review.resubmit"
+msgstr "已重新提交投稿{$submissionId}予評審。"
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName}已拒絕第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName}已接受第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName}已代表{$reviewerName}拒絕第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName}已代表{$reviewerName}接受第{$round}輪評審的投稿{$submissionId}。"
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+
+msgid "log.review.reviewerFile"
+msgstr "已上載評審檔案。"
+
+msgid "log.editor.decision"
+msgstr ""
+
+msgid "log.editor.recommendation"
+msgstr ""
+
+msgid "log.copyedit.initiate"
+msgstr ""
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "已選擇默認審稿檔案。"
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "已上載經審稿版本的投稿。"
+
+msgid "log.copyedit.authorFile"
+msgstr "已上載經作者審稿版本的投稿。"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName}已修改此文章的元資料。"
+
+msgid "log.editor.editorFile"
+msgstr "已上載經編輯版本的投稿。"
+
+msgid "log.editor.archived"
+msgstr "已典藏投稿{$submissionId}。"
+
+msgid "log.editor.restored"
+msgstr "已恢復投稿{$submissionId}至佇列。"
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+
+msgid "log.proofread.assign"
+msgstr ""
+
+msgid "log.proofread.complete"
+msgstr ""
+
+msgid "log.imported"
+msgstr ""
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "同行評審文章"
+
+msgid "notification.type.editing"
+msgstr "編輯事件"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "新一篇文章「{$title}」已被提交。"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "有人留下有關「{$title}」編輯決定的意見。"
+
+msgid "notification.type.galleyModified"
+msgstr "「{$title}」的校對樣本已被修改。"
+
+msgid "notification.type.issuePublished"
+msgstr "新一期已出版。"
+
+msgid "notification.type.newAnnouncement"
+msgstr "已創建新公告。"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "「{$title}」的評審表格已被提交。"
+
+msgid "notification.type.reviewing"
+msgstr "評審事件"
+
+msgid "notification.type.site"
+msgstr "網站事件"
+
+msgid "notification.type.submissionComment"
+msgstr "編輯已留下有關「{$title}」的意見。"
+
+msgid "notification.type.submissions"
+msgstr "投稿事件"
+
+msgid "notification.type.userComment"
+msgstr "讀者已為「{$title}」留下意見。"
+
+msgid "notification.type.public"
+msgstr "致公眾的公告"
+
+msgid "notification.savedIssueMetadata"
+msgstr "已儲存期號的出版元資料。"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "收到新的文章投稿，需要分配一位編輯。"
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+
+msgid "notification.type.awaitingRepresentations"
+msgstr ""
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "拒絕存取！您未有被分配為此文章的審稿員。"
+
+msgid "user.authorization.noContext"
+msgstr "未能找符合您要求的期刊。"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "您現正嘗試取用一篇不屬於您的類別的文章。"
+
+msgid "user.authorization.invalidIssue"
+msgstr "讀取期號要求無效！"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "提交審稿要求無效或未有提交審稿！"
+
+msgid "grid.action.createContext"
+msgstr "創建新期刊"
+
+msgid "editor.navigation.issues"
+msgstr "期號"
+
+msgid "notification.type.approveSubmission"
+msgstr "此投稿尚待批准刊登在期號。"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "尚待批准。"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "在其他期刊註冊"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "隱藏其他期刊"
+
+msgid "article.view.interstitial"
+msgstr "請選取文章檔案下載。"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "已核准"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "尚待核准"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "校對樣本核准"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>核准此校對樣本作出版之用。</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>移除此校對樣本的核准。</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "加入「{$journalName}」至索引"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "此搜尋不允許逐本期刊重新加入索引。"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "提供的期刊路徑\"{$journalPath}\"未能引導至一期刊。"
+
+msgid "editor.issues.backIssues"
+msgstr "過往期號"
+
+msgid "editor.issues.futureIssues"
+msgstr "未來期號"
+
+msgid "navigation.subscriptions"
+msgstr "訂閱"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName}已負責文章{$submissionId}的編輯工序。"
+
+msgid "catalog.sortBy"
+msgstr "文章次序"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "選擇如何安排在此類別的文章次序。"

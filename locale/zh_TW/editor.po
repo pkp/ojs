@@ -1,0 +1,444 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/editor/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "editor.home"
+msgstr "編輯主頁"
+
+msgid "editor.reassign"
+msgstr ""
+
+msgid "editor.submissionsAndPublishing"
+msgstr "投稿與出版"
+
+msgid "editor.submissionQueue"
+msgstr "投稿佇列"
+
+msgid "editor.submissionArchive"
+msgstr "投稿典藏"
+
+msgid "editor.publishing"
+msgstr "出版"
+
+msgid "editor.publishedIssues"
+msgstr "已出版期號"
+
+msgid "editor.allSections"
+msgstr "所有分類"
+
+msgid "editor.allEditors"
+msgstr "所有編輯"
+
+msgid "editor.me"
+msgstr "我"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "現典藏庫無投稿。"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr "儲存已典藏投稿的更變？標誌要刪除的投稿將會從系統永遠刪除。"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "是否確認紀錄此決定？"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr "此投稿將會在發送通知作者的電郵或按跳過電郵按鈕後被典藏。"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"發送投稿去審稿前，請使用通知作者連結去通知作者期刊決定及選擇發送的版本。"
+
+msgid "editor.notifyUsers"
+msgstr "通知用戶"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "所有讀者 ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "所有出版作者 ({$count} users)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "所有個體訂閱用戶 ({$count} users)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "所有院校訂閱用戶 ({$count} users)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "通知用戶……"
+
+msgid "editor.usersNotified"
+msgstr "已通知用戶"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr "發送此訊息至所有與此期刊關聯的用戶 ({$count} users)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"發送此訊息至所有與此期刊關聯並指明希望收到最新資訊的用戶 ({$count} users)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "包括此期的目錄："
+
+msgid "editor.editorAdministration"
+msgstr "編輯管理"
+
+msgid "editor.issues.createIssue"
+msgstr "創建新一期"
+
+msgid "editor.issues.editIssue"
+msgstr "期號管理： {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "當期期刊"
+
+msgid "editor.issues.numArticles"
+msgstr "項目"
+
+msgid "editor.issues.noArticles"
+msgstr "現無項目被分配至此期。"
+
+msgid "editor.issues.confirmDelete"
+msgstr "是否確認永遠刪除此期？"
+
+msgid "editor.issues.published"
+msgstr "已出版"
+
+msgid "editor.issues.unpublished"
+msgstr "未出版"
+
+msgid "editor.issues.datePublished"
+msgstr "出版日期"
+
+msgid "editor.issues.volumeRequired"
+msgstr "卷號必須為正數。"
+
+msgid "editor.issues.numberRequired"
+msgstr "必須為一個正數。"
+
+msgid "editor.issues.yearRequired"
+msgstr "年份必須為正數。"
+
+msgid "editor.issues.titleRequired"
+msgstr "必須為此期提供標題。"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "必須認證每期。請選擇最少一個期號認證選項。"
+
+msgid "editor.issues.issueIdentification"
+msgstr "期號認證"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "公開期號識別碼"
+
+msgid "editor.issues.description"
+msgstr "說明"
+
+msgid "editor.issues.accessStatus"
+msgstr "取用狀態"
+
+msgid "editor.issues.accessDate"
+msgstr "開放取用日期"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "允許延遲開放取用"
+
+msgid "editor.issues.coverPage"
+msgstr "封面圖像"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "（允許檔案格式：.gif, .jpg, 或 .png）"
+
+msgid "editor.issues.uploaded"
+msgstr "已上載"
+
+msgid "editor.issues.remove"
+msgstr "移除"
+
+msgid "editor.issues.proofed"
+msgstr ""
+
+msgid "editor.issues.removeCoverPage"
+msgstr "移除封面圖像？"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr "您所要求刪除的封面圖像此期不符。請重刷頁面及重試。"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr "未能找到您所要求刪除的封面圖像。或者圖像已被刪除。請重刷頁面。"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "封面圖像格式無效。只接受檔案格式.gif, .jpg, 或.png。"
+
+msgid "editor.issues.styleFile"
+msgstr "樣式表(Stylesheet)"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"樣式表(stylesheet)"
+"格式。請確認所提交的檔案為有效的CSS。（備註：樣式表的開始如有注釋或會被拒。）"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "移除樣式表？"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "封面圖片說明"
+
+msgid "editor.issues.showCoverPage"
+msgstr "使用以下部分為此期創建一個封面。"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "顯示"
+
+msgid "editor.issues.openAccess"
+msgstr "開放取用(Open access)"
+
+msgid "editor.issues.subscription"
+msgstr "訂閱"
+
+msgid "editor.issues.identification"
+msgstr "認證"
+
+msgid "editor.issues.access"
+msgstr "取用"
+
+msgid "editor.issues.cover"
+msgstr "封面"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr "所有文章將回到編輯佇列及所有相關檔案將被永遠刪除。是否確認移除此期？"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"此期刊使用自訂期刊次序。<a href=\"{$url}\" class=\"action\">重置至默認</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"此期使用自訂分類次序。<a href=\"{$url}\" class=\"action\">重置至默認</a>"
+
+msgid "editor.issues.issueData"
+msgstr "每期數據"
+
+msgid "editor.issues.saveChanges"
+msgstr "儲存目錄更變？"
+
+msgid "editor.issues.default"
+msgstr "默認"
+
+msgid "editor.issues.order"
+msgstr "次序"
+
+msgid "editor.issues.publicId"
+msgstr "公開ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "出版此期"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "還原此期至未出版"
+
+msgid "editor.issues.previewIssue"
+msgstr "預覽此期"
+
+msgid "editor.issues.preview"
+msgstr "預覽"
+
+msgid "editor.issues.confirmPublish"
+msgstr "是否確認出版新一期？"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "是否確認還原此期至未出版狀態？"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "是否確認設定此期為當期期刊？"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "未能儲存此文章的公開id："
+
+msgid "editor.issues.noLiveIssues"
+msgstr "無現存期刊任何一期"
+
+msgid "editor.issues.open"
+msgstr "開放"
+
+msgid "editor.issues.pages"
+msgstr "頁"
+
+msgid "editor.issues.galleys"
+msgstr "此期校對樣本"
+
+msgid "editor.issues.galley"
+msgstr "此期校對樣本"
+
+msgid "editor.issues.viewingGalley"
+msgstr "查看此期校對樣本"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "出版校對樣本與全期內容。"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "沒有出版任何校對樣本。"
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "必須提供校對樣本標籤。"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "必須提供校對樣本區性。"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "此期校對樣本公開認證已存在。"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "回到此期校對樣本"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "是否確認刪除此期校對樣本？"
+
+msgid "editor.issues.identifiers"
+msgstr "識別碼"
+
+msgid "editor.navigation.futureIssues"
+msgstr "未來期號"
+
+msgid "grid.action.addGalley"
+msgstr "新增校對樣本"
+
+msgid "grid.action.publish"
+msgstr "出版此期"
+
+msgid "grid.action.addIssue"
+msgstr "創建新一期"
+
+msgid "grid.action.viewIssue"
+msgstr "查看"
+
+msgid "grid.action.previewIssue"
+msgstr "預覽"
+
+msgid "grid.action.addIssueGalley"
+msgstr "創建此期校對樣本"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "設定為當期期刊"
+
+msgid "editor.navigation.issueArchive"
+msgstr "過往期號"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "分配原先檔案為評審版本"
+
+msgid "editor.article.decision"
+msgstr "決定"
+
+msgid "editor.submissions.showBy"
+msgstr "按……顯示"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "提交月月-日日"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "現行工作"
+
+msgid "editor.submissions.invite"
+msgstr "邀請"
+
+msgid "editor.submissions.accept"
+msgstr "接受"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "無投稿"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "最新"
+
+msgid "editor.submissions.averageTime"
+msgstr "週數"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "最後完成"
+
+msgid "editor.submissions.assignedTo"
+msgstr "分配至編輯"
+
+msgid "issues.submissions.issueIds"
+msgstr "分配至一期"
+
+msgid "editor.submissions.inSection"
+msgstr "分類當中"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "顯示預定出版"
+
+msgid "editor.article.publishVersion"
+msgstr "出版版本"
+
+msgid "editor.article.viewMetadata"
+msgstr "查看元資料版本"
+
+msgid "editor.article.editMetadata"
+msgstr "編輯版本元資料"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "出版項目計劃"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "尚待分配"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr "未有繳付出版費用。如計劃出版項目，請通知作者付款或免除其費用。"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr "未能找到您所要求刪除的封面圖像。或者圖像已被刪除。請重刷頁面。"
+
+msgid "grid.action.removeArticle"
+msgstr "從此期移除文章"
+
+msgid "editor.article.remove"
+msgstr "移除"
+
+msgid "editor.article.remove.confirm"
+msgstr "是否確認從此期移除此文章？您將可在另一期預定出版此文章。"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "取用日期無效。"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "編輯此期校對樣本"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"版面設計編輯會為每個樣對樣本準備這些檔案，然後上載適當<span "
+"class=\"pkp_help_title\">版本</span>作校對之用。"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "選擇校對樣本檔案"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"在此列表最終稿件檔案將由審稿員編輯至另一版本，然後上載至<span "
+"class=\"pkp_help_title\">審稿</span>之下。"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"在所有投稿步驟中任何已上載檔案，也可透過剔選以下勾選框添加至校對列表及點選搜尋"
+"：所有可供選擇檔案將被列出及可選取。"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"公開識別碼'{$publicIdentifier}"
+"'已被另一同類項目使用。請為此期刊的這類項目提供獨一無二的識別碼。"
+
+msgid "editor.article.coverImage"
+msgstr "封面圖像"
