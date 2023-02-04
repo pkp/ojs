@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-13
+Git tag: 3_3_0-14
 
-Release date: October 4, 2022
-=============================
+Release date: February 3, 2023
+==============================
 
 Configuration Changes
 ---------------------
@@ -19,19 +19,57 @@ configuration parameters.
 - The db.persistent option for persistent database connections has been removed.
 - The db.collation option for configuring a database connection collation has
   been added (default: utf8_general_ci)
-
-New config.inc.php parameters added for OAuth-based SMTP authorization:
-(see https://github.com/PHPMailer/PHPMailer/wiki/Using-Gmail-with-XOAUTH2)
-- email.smtp_authtype: See PHPMailer's AuthType setting
-- email.smtp_oauth_provider
-- email.smtp_oauth_email
-- email.smtp_oauth_clientid
-- email.smtp_oauth_clientsecret
-- email.smtp_oauth_refreshtoken
-
+- New config.inc.php parameters added for OAuth-based SMTP authorization:
+  (see https://github.com/PHPMailer/PHPMailer/wiki/Using-Gmail-with-XOAUTH2)
+  - email.smtp_authtype: See PHPMailer's AuthType setting
+  - email.smtp_oauth_provider
+  - email.smtp_oauth_email
+  - email.smtp_oauth_clientid
+  - email.smtp_oauth_clientsecret
+  - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
-
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-14 Build
+--------------
+	#2135: Improve password reset to use one-use, time-limited hash
+	#4087: Make revision files available for selection at Copyediting stage
+	#5697: Permit "edit galley" form to be viewed after publication
+	#6340: Session/cookie management improvements
+	#6611: When importing Apache logs: "issue/view/xxx/yyy" will yield "invalid issue" error and break import process
+	#6875: Publishing / posting blocked for users with both Section editor assignment and a Journal Manager role
+	#7337: Accepting a review assignment can modify the submissions' active stage
+	#7369: Other languages required when they shouldn't be
+	#7496: Empty Email Variables on System Emails
+	#7635: Add CSV monograph report to OMP
+	#7642: upgrade to 3.3 from 3.0.2 fails because submission_galley_settings table already exists
+	#7690: Add PHP8.1 testing to Travis environment
+	#7709: [OPS] Editorial Activity statistics are inaccurate
+	#7783: Role settings page broken in OPS on PHP 8.1
+	#7836: Author who is also an editor can see reviewers' names in the discussion
+	#8193: Back-port PHP8.1 compatibility to stable-3_3_0
+	#8287: Web feed plugin doesn't send the right content-type
+	#8317: ThemePlugin: Unable to retrieve array options
+	#8318: Site-wide search returns results for journals that have publishing disabled
+	#8339: Announcement feed plugin fatal error with PHP 8.x
+	#8340: Indicate institutional subscription price on purchase form
+	#8372: Crossref: do not display empty element contributors
+	#8378: Resolve static call error message accessing reviewer one-click link
+	#8386: The stable branch isn't synchronizing the submodules
+	#8394: Translations do not respect the loading order of locale files
+	#8397: Cancelled reviews are included in a reviewer's "active" review count
+	#8399: OAI Error with full url query due to reference warning notice
+	#8411: Spell checker doesn't work at administrative pages
+	#8442: UI bug on editorial activity's date filter
+	#8455: [OJS 3.3.0.13] Reviewer cannot download file
+	#8466: Undefined constant error when downloading all files from submission file list
+	#8502: Stop reading text for search indexing in 4096 byte blocks
+	#8511: Controlled vocabularies are being URL decoded at input time
+	#8518: Update npm packages
+	#8527: error when trying to open tab New Review Round under Review stage
+	#8541: Bug in UPLOAD_MAX_FILESIZE calculation in stable-3_3_0
+	#8579: DataCite export error with PHP8.1
+	#8587: Consider new resourceType JournalArticle in DataCite XML
 
 3.3.0-13 Build
 --------------
