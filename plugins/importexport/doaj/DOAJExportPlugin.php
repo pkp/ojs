@@ -109,7 +109,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
      */
     public function getSettingsFormClassName()
     {
-        return '\APP\plugins\importexport\datacite\classes\form\DOAJSettingsForm';
+        return '\APP\plugins\importexport\doaj\classes\form\DOAJSettingsForm';
     }
 
     /**
