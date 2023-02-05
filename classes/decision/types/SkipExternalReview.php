@@ -13,12 +13,15 @@
 
 namespace APP\decision\types;
 
+use APP\core\Application;
 use APP\decision\Decision;
 use APP\decision\types\traits\RequestPayment;
 use APP\submission\Submission;
 use Illuminate\Validation\Validator;
 use PKP\context\Context;
+use PKP\decision\Steps;
 use PKP\decision\types\SkipExternalReview as PKPSkipExternalReview;
+use PKP\submission\reviewRound\ReviewRound;
 use PKP\user\User;
 
 class SkipExternalReview extends PKPSkipExternalReview
@@ -55,5 +58,18 @@ class SkipExternalReview extends PKPSkipExternalReview
                     break;
             }
         }
+    }
+
+    public function getSteps(Submission $submission, Context $context, User $editor, ?ReviewRound $reviewRound): Steps
+    {
+        $steps = parent::getSteps($submission, $context, $editor, $reviewRound);
+
+        // Request payment if configured
+        $paymentManager = Application::getPaymentManager($context);
+        if ($paymentManager->publicationEnabled()) {
+            $steps->addStep($this->getPaymentForm($context), true);
+        }
+
+        return $steps;
     }
 }
