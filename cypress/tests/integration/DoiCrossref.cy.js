@@ -10,7 +10,7 @@
 describe('Crossref tests', function () {
 	const submissionId = 17;
 
-	it('Check Crossref Configuration', function() {
+	it('Check Crossref Configuration', function () {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		cy.get('a:contains("Website")').click();
@@ -27,46 +27,47 @@ describe('Crossref tests', function () {
 		cy.get('button#dois-button').click();
 		cy.get('button#doisRegistration-button').click();
 
-		cy.get('select#doiRegistrationSettings-registrationAgency-control').select('crossrefplugin');
+		cy.get('select#doiRegistrationSettings-registrationAgency-control').select(
+			'crossrefplugin'
+		);
+		cy.get('input[name=depositorName]').focus().clear().type('admin');
+		cy.get('input[name=depositorEmail]')
+			.focus()
+			.clear()
+			.type('pkpadmin@mailinator.com');
 
 		// Save
 		cy.get('#doisRegistration button').contains('Save').click();
 		cy.get('#doisRegistration [role="status"]').contains('Saved');
-		cy.get('select#doiRegistrationSettings-registrationAgency-control').should('have.value', 'crossrefplugin');
-
-		// Configure Crossref settings
-		cy.get('a:contains("DOIs")').click();
-		cy.get('button#crossref-settings-button').click();
-
-		cy.get('input[name=depositorName]').focus().clear().type('admin');
-		cy.get('input[name=depositorEmail]').focus().clear().type('pkpadmin@mailinator.com');
-		cy.get('form#crossrefSettingsForm button:contains("Save")').click();
-		cy.get('div:contains("Your changes have been saved.")');
+		cy.get('select#doiRegistrationSettings-registrationAgency-control').should(
+			'have.value',
+			'crossrefplugin'
+		);
 	});
 
-	it('Check Crossref Export', function() {
+	it('Check Crossref Export', function () {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		// Submit export submission DOI XML request
 		cy.window()
-		.then((win) => {
-			const csrfToken = win.pkp.currentUser.csrfToken;
-			cy.request({
+			.then((win) => {
+				const csrfToken = win.pkp.currentUser.csrfToken;
+				cy.request({
 					url: '/index.php/publicknowledge/api/v1/dois/submissions/export',
 					method: 'POST',
 					headers: {
 						'X-Csrf-Token': csrfToken,
-						'X-Http-Method-Override': 'PUT'
+						'X-Http-Method-Override': 'PUT',
 					},
 					body: {
-						ids: [submissionId]
-					}
-				})
-		})
-		.then((response) => {
-			expect(response.status).to.equal(200);
-			expect(response.body).to.haveOwnProperty('temporaryFileId');
-			expect(response.body.temporaryFileId).to.be.a('number');
-		});
+						ids: [submissionId],
+					},
+				});
+			})
+			.then((response) => {
+				expect(response.status).to.equal(200);
+				expect(response.body).to.haveOwnProperty('temporaryFileId');
+				expect(response.body.temporaryFileId).to.be.a('number');
+			});
 	});
 });

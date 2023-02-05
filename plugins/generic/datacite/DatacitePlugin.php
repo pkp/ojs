@@ -15,19 +15,21 @@
 namespace APP\plugins\generic\datacite;
 
 use APP\core\Application;
+use APP\core\Services;
+use APP\plugins\generic\datacite\classes\DataciteSettings;
 use APP\plugins\IDoiRegistrationAgency;
+use Illuminate\Support\Collection;
 use PKP\context\Context;
-use PKP\core\JSONMessage;
-use PKP\form\Form;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxModal;
+use PKP\doi\RegistrationAgencySettings;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\services\PKPSchemaService;
 
 class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
 {
     private ?DataciteExportPlugin $_exportPlugin = null;
+    private DataciteSettings $settingsObject;
 
     /**
      * @see Plugin::getDisplayName()
@@ -87,29 +89,6 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
                 $contextDao->updateObject($context);
             }
         }
-    }
-
-    /**
-     * Extend the website settings tabs to include static pages
-     *
-     * @param $hookName string The name of the invoked hook
-     * @param $args array Hook parameters
-     *
-     * @return boolean Hook handling status
-     */
-    public function callBackShowDoiManagementTabs($hookName, $args)
-    {
-        $templateMgr = $args[1];
-        $output = & $args[2];
-        $request = Application::get()->getRequest();
-        $context = $request->getContext();
-
-        if ($context->getData('registrationAgency') === $this->getName()) {
-            $output .= $templateMgr->fetch($this->getTemplateResource('dataciteSettingsTab.tpl'));
-        }
-
-        // Permit other plugins to continue interacting with this hook
-        return false;
     }
 
     /**
@@ -198,11 +177,9 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function addAsRegistrationAgencyOption(string $hookName, array $args)
     {
+        /** @var Collection<IDoiRegistrationAgency> $enabledRegistrationAgencies */
         $enabledRegistrationAgencies = &$args[0];
-        $enabledRegistrationAgencies[] = [
-            'value' => $this->getName(),
-            'label' => 'Datacite'
-        ];
+        $enabledRegistrationAgencies->add($this);
     }
 
     /**
@@ -211,10 +188,21 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function isPluginConfigured(\PKP\context\Context $context): bool
     {
-        $form = new classes\form\DataciteSettingsForm($this->_getExportPlugin(), $context->getId());
-        $configurationErrors = $this->_getConfigurationErrors($context, $form);
+        $settingsObject = $this->getSettingsObject();
 
-        if (!empty($configurationErrors)) {
+        /** @var PKPSchemaService $schemaService */
+        $schemaService = Services::get('schema');
+        $requiredProps = $schemaService->getRequiredProps($settingsObject::class);
+
+        foreach ($requiredProps as $requiredProp) {
+            $settingValue = $this->getSetting($context->getId(), $requiredProp);
+            if (empty($settingValue)) {
+                return false;
+            }
+        }
+
+        $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
+        if (empty($doiPrefix)) {
             return false;
         }
 
@@ -265,67 +253,14 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     }
 
     /**
-     * @copydoc Plugin::getActions()
-     */
-    public function getActions($request, $verb)
-    {
-        $router = $request->getRouter();
-        return array_merge(
-            $this->getEnabled() ? [
-                new LinkAction(
-                    'settings',
-                    new AjaxModal(
-                        $router->url($request, null, null, 'manage', null, ['verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic']),
-                        $this->getDisplayName()
-                    ),
-                    __('manager.plugins.settings'),
-                    null
-                ),
-            ] : [],
-            parent::getActions($request, $verb)
-        );
-    }
-
-    /**
      * Helper to register hooks that are used in normal plugin setup and in CLI tool usage.
      */
     private function _pluginInitialization()
     {
-        PluginRegistry::register('importexport', new DataciteExportPlugin(), $this->getPluginPath());
+        PluginRegistry::register('importexport', new DataciteExportPlugin($this), $this->getPluginPath());
 
-        Hook::add('Template::doiManagement', [$this, 'callbackShowDoiManagementTabs']);
         Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
         Hook::add('DoiListPanel::setConfig', [$this, 'addRegistrationAgencyName']);
-    }
-
-    /**
-     * @copydoc Plugin::manage()
-     */
-    public function manage($args, $request)
-    {
-        switch ($request->getUserVar('verb')) {
-
-            // Return a JSON response containing the
-            // settings form
-            case 'settings':
-                $context = $request->getContext();
-
-                $form = new classes\form\DataciteSettingsForm($this->_getExportPlugin(), $context->getId());
-                $form->initData();
-
-                // Check for configuration errors
-                $configurationErrors = $this->_getConfigurationErrors($context, $form);
-
-                $templateMgr = \APP\template\TemplateManager::getManager($request);
-                $templateMgr->assign(
-                    [
-                        'configurationErrors' => $configurationErrors
-                    ]
-                );
-
-                return new JSONMessage(true, $form->fetch($request));
-        }
-        return parent::manage($args, $request);
     }
 
     /**
@@ -345,28 +280,12 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         return HOOK::CONTINUE;
     }
 
-    /**
-     * Helper to determine whether plugin has been properly configured
-     */
-    private function _getConfigurationErrors(Context $context, Form $form = null): array
+    public function getSettingsObject(): RegistrationAgencySettings
     {
-        $configurationErrors = [];
-
-        foreach ($form->getFormFields() as $fieldName => $fieldType) {
-            if ($form->isOptional($fieldName)) {
-                continue;
-            }
-            $pluginSetting = $this->_getExportPlugin()->getSetting($context->getId(), $fieldName);
-            if (empty($pluginSetting)) {
-                $configurationErrors[] = EXPORT_CONFIG_ERROR_SETTINGS;
-                break;
-            }
-        }
-        $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
-        if (empty($doiPrefix)) {
-            $configurationErrors[] = DOI_EXPORT_CONFIG_ERROR_DOIPREFIX;
+        if (!isset($this->settingsObject)) {
+            $this->settingsObject = new DataciteSettings($this);
         }
 
-        return $configurationErrors;
+        return $this->settingsObject;
     }
 }
