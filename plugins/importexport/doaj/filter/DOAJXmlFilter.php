@@ -153,7 +153,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             }
             foreach ($articleTitles as $locale => $title) {
                 if (!empty($title)) {
-                    $recordNode->appendChild($node = $doc->createElement('title', htmlspecialchars($title, ENT_COMPAT, 'UTF-8')));
+                    $recordNode->appendChild($node = $doc->createElement('title', htmlspecialchars(strip_tags($title), ENT_COMPAT, 'UTF-8')));
                     $node->setAttribute('language', LocaleConversion::get3LetterIsoFromLocale($locale));
                 }
             }

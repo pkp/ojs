@@ -106,6 +106,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
                 null,
                 $cellProvider,
                 ['html' => true,
+                    'unescape_html' => true,
                     'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT]
             )
         );
