@@ -1,7 +1,7 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-15 16:52+0000\n"
+"PO-Revision-Date: 2023-02-06 12:48+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "bg_BG/>\n"
@@ -130,7 +130,6 @@ msgstr ""
 "свържете се с мен.</p><p>Благодарим ви, че смятате това списание за място за "
 "вашата работа.</p><p>Сърдечни поздрави,</p>{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Бяхте асоцииран като редактор за подаден ръкопис към {$contextName}"
 
@@ -701,3 +700,27 @@ msgstr ""
 
 #~ msgid "emails.editorDecisionBackToCopyediting.subject"
 #~ msgstr "Вашето подаване е изпратено обратно на етап стилова корекция"
+
+msgid "emails.editorAssignReview.body"
+msgstr ""
+"<p>Здравейте, {$recipientName},</p><p>Следното изпращане на материали е "
+"възложено на вас наблюдение на процеса на рецензиране.</p><p><a href=\""
+"{$submissionUrl}\"> {$submissionTitle}</a><br "
+"/>{$authors}</p><p><b>Резюме</b></p>{$submissionAbstract}<p>Моля, влезте на "
+"<a href=\" {$submissionUrl}\">, вижте подадените материали</a> и назначете "
+"квалифицирани рецензенти. Можете да назначите рецензент, като щракнете върху "
+"„Добавяне на рецензент“.</p><p>Благодарим ви предварително.</p><p>Сърдечни "
+"поздрави,</p>{$signature}"
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+"<p>Здравейте, {$recipientName},</p><p>Следните изпратени материали са ви е "
+"възложени, за да преминат през етапа на публикуване в списанието.</p><p><a "
+"href=\"{$submissionUrl}\">{ $submissionTitle}</a><br "
+"/>{$authors}</p><p><b>Резюме</b></p>{$submissionAbstract}<p>Моля, влезте на "
+"<a href=\"{ $submissionUrl}\">и вижте подадените материали</a>. След като "
+"готовите за публикуване файлове са налични, качете ги в секцията "
+"<strong>Публикация > Типографии</strong>. След това насрочете работата за "
+"публикуване, като щракнете върху бутона <strong>График за "
+"публикуване</strong>.</p><p>Благодарим ви предварително.</p><p>Сърдечни "
+"поздрави,</p>{$signature }"
