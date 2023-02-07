@@ -43,7 +43,9 @@ class TemporaryTotalsDAO extends PKPTemporaryTotalsDAO
      */
     public function compileIssueMetrics(string $loadId): void
     {
-        DB::table('metrics_issue')->where('load_id', '=', $loadId)->delete();
+        $date = substr($loadId, -12, 8);
+        DB::table('metrics_issue')->where('load_id', '=', $loadId)->orWhere('date', '=', DB::raw("DATE({$date})"))->delete();
+
         $selectIssueMetrics = DB::table($this->table)
             ->select(DB::raw('load_id, context_id, issue_id, DATE(date) as date, count(*) as metric'))
             ->where('load_id', '=', $loadId)
