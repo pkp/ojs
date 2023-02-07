@@ -3,7 +3,6 @@
 namespace APP\issue\maps;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalleyDAO;
@@ -169,24 +168,16 @@ class Schema extends \PKP\core\maps\Schema
                 case 'sections':
                     $data = [];
                     $sections = Repo::section()->getByIssueId($issue->getId());
-                    //$sectionProperties = Repo::section()->getSchemaMap()->summarizeMany($sections);
-                    //$output[$prop] = $sectionProperties;
-
-                    $request = Application::get()->getRequest();
                     if (!empty($sections)) {
                         $seq = 1;
                         foreach ($sections as $section) {
-                            $sectionProperties = Services::get('section')->getSummaryProperties($section, [
-                                'request' => $request
-                            ]);
-                            // Repo::section()->getByIssueId($issue->getId()) considers custom section order
+                            $sectionProperties = Repo::section()->getSchemaMap()->summarize($section);
                             $sectionProperties['seq'] = $seq;
                             $seq++;
                             $data[] = $sectionProperties;
                         }
                     }
                     $output[$prop] = $data;
-
                     break;
                 case 'identification':
                     $output[$prop] = $issue->getIssueIdentification();

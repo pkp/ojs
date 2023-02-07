@@ -1,0 +1,68 @@
+{
+	"title": "Section",
+	"description": "A journal or server section, or press series.",
+	"required": [
+		"contextId",
+		"title"
+	],
+	"properties": {
+		"abbrev": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"abstractsNotRequired": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"hideAuthor": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"hideTitle": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"identifyType": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"metaIndexed": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"metaReviewed": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"policy": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"reviewFormId": {
+			"type": "integer",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"wordCount": {
+			"type": "integer",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		}
+	}
+}

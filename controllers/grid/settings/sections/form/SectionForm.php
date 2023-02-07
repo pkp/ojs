@@ -89,7 +89,7 @@ class SectionForm extends PKPSectionForm
             $context = $request->getContext();
             $sectionId = $this->getSectionId();
 
-            $activeSections = Repo::section()->getCollector()->filterByContextIds([$context->getId()])->activeOnly()->getMany();
+            $activeSections = Repo::section()->getCollector()->filterByContextIds([$context->getId()])->excludeInactive()->getMany();
             $otherActiveSections = $activeSections->filter(function ($activeSection) use ($sectionId) {
                 return $activeSection->getId() != $sectionId;
             });

@@ -21,13 +21,10 @@ use APP\facades\Repo;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
-use PKP\core\traits\EntityWithParent;
 use PKP\services\PKPSchemaService;
 
 class DAO extends \PKP\section\DAO
 {
-    use EntityWithParent;
-
     /** @copydoc EntityDAO::$schema */
     public $schema = PKPSchemaService::SCHEMA_SECTION;
 
@@ -116,7 +113,7 @@ class DAO extends \PKP\section\DAO
     }
 
     /**
-     * Get the custom section order of a section.
+     * Get the custom order for sections in an issue.
      */
     public function getCustomSectionOrder(int $issueId, int $sectionId): ?int
     {
@@ -127,7 +124,7 @@ class DAO extends \PKP\section\DAO
     }
 
     /**
-     * Delete a section from the custom section order table.
+     * Delete a custom order for sections in an issue
      */
     public function deleteCustomSectionOrder(int $issueId, int $sectionId): void
     {
@@ -146,7 +143,7 @@ class DAO extends \PKP\section\DAO
     }
 
     /**
-     * Insert or update a custom section ordering
+     * Insert or update a custom order for sections in an issue
      */
     public function upsertCustomSectionOrder(int $issueId, int $sectionId, int $seq): void
     {

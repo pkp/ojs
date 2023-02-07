@@ -258,12 +258,12 @@ class SectionGridHandler extends SetupGridHandler
         }
 
         // Validate if it can be deleted
-        $sectionEmpty = Repo::section()->isEmpty($request->getUserVar('sectionId'), $journal->getId());
+        $sectionEmpty = Repo::section()->isEmpty($section->getId(), $journal->getId());
         if (!$sectionEmpty) {
             return new JSONMessage(false, __('manager.sections.alertDelete'));
         }
 
-        $activeSectionsCount = Repo::section()->getCollector()->filterByContextIds([$journal->getId()])->activeOnly()->getCount();
+        $activeSectionsCount = Repo::section()->getCollector()->filterByContextIds([$journal->getId()])->excludeInactive()->getCount();
         $activeSectionsCount = (!$section->getIsInactive()) ? $activeSectionsCount - 1 : $activeSectionsCount;
         if ($activeSectionsCount < 1) {
             return new JSONMessage(false, __('manager.sections.confirmDeactivateSection.error'));
@@ -290,7 +290,7 @@ class SectionGridHandler extends SetupGridHandler
         $context = $request->getContext();
 
         // Validate if it can be inactive
-        $activeSectionsCount = Repo::section()->getCollector()->filterByContextIds([$context->getId()])->activeOnly()->getCount();
+        $activeSectionsCount = Repo::section()->getCollector()->filterByContextIds([$context->getId()])->excludeInactive()->getCount();
         if ($activeSectionsCount > 1) {
             $section = Repo::section()->get($sectionId, $context->getId());
 

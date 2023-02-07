@@ -17,44 +17,31 @@ use Illuminate\Support\LazyCollection;
 
 class Repository extends \PKP\section\Repository
 {
-    public string $schemaMap = maps\Schema::class;
-
-    /**
-     * Retrieve all sections in which articles are currently published in
-     * the given issue.
-     */
+    /** @copydoc DAO::getByIssueId() */
     public function getByIssueId(int $issueId): LazyCollection
     {
         return $this->dao->getByIssueId($issueId);
     }
 
-    /**
-     * Delete the custom ordering of an issue's sections.
-     */
+    /** @copydoc DAO::deleteCustomSectionOrdering() */
     public function deleteCustomSectionOrdering(int $issueId): void
     {
         $this->dao->deleteCustomSectionOrdering($issueId);
     }
 
-    /**
-     * Get the custom section order of a section.
-     */
+    /** @copydoc DAO::getCustomSectionOrder() */
     public function getCustomSectionOrder(int $issueId, int $sectionId): ?int
     {
         return $this->dao->getCustomSectionOrder($issueId, $sectionId);
     }
 
-    /**
-     * Delete a section from the custom section order table.
-     */
+    /** @copydoc DAO::deleteCustomSectionOrder() */
     public function deleteCustomSectionOrder(int $issueId, int $sectionId): void
     {
         $this->dao->deleteCustomSectionOrder($issueId, $sectionId);
     }
 
-    /**
-     * Insert or update a custom section ordering
-     */
+    /** @copydoc DAO::upsertCustomSectionOrder() */
     public function upsertCustomSectionOrder(int $issueId, int $sectionId, int $seq): void
     {
         $this->dao->upsertCustomSectionOrder($issueId, $sectionId, $seq);
