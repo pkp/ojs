@@ -340,7 +340,10 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $titles = $galleyFile->getData('name');
                 break;
             case isset($publication):
-                $titles = $publication->getData('title');
+                $titles = array_map(
+                    fn ($pubTitle) => htmlspecialchars($pubTitle, ENT_QUOTES, 'UTF-8'),
+                    $publication->getTitles('html')
+                );
                 break;
             case isset($issue):
                 $titles = $this->getIssueInformation($issue);
