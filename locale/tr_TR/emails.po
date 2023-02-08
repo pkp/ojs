@@ -1,10 +1,10 @@
-# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022.
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-10-07 17:01+0000\n"
+"PO-Revision-Date: 2023-02-06 12:48+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "tr_TR/>\n"
@@ -133,7 +133,6 @@ msgstr ""
 "iletişime geçin.</p><p>Dergimizi tercih ettiğiniz için teşekkür ederiz.</"
 "p><p>Saygılarımla,</p>{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 "{$contextName} için gönderilen bir aday makaleye editör olarak atandınız"

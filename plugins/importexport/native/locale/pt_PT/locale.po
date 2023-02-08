@@ -1,10 +1,10 @@
-# José Carvalho <jcarvalho@keep.pt>, 2022.
+# José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
-"PO-Revision-Date: 2022-10-31 09:02+0000\n"
+"PO-Revision-Date: 2023-02-06 12:48+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/importexport-native/pt_PT/>\n"
@@ -78,9 +78,10 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Secção desconhecida {$param}"
 
-#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "O utilizador especificado, \"{$userName}\", não existe."
+msgstr ""
+"Um utilizador deve ser fornecido usando o parâmetro de comando --user_name "
+"ou -u."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""

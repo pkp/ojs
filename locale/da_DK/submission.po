@@ -1,13 +1,13 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023.
 # Jesper B. Thestrup <jbt@kb.dk>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2023-01-10 08:02+0000\n"
-"Last-Translator: Jesper B. Thestrup <jbt@kb.dk>\n"
+"PO-Revision-Date: 2023-02-04 04:48+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "da_DK/>\n"
 "Language: da_DK\n"
@@ -411,11 +411,11 @@ msgstr ""
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
 "{$contextName} accepterer ikke indsendelser til sektionen {$section}. Hvis "
-"du har brug for hjælp til at gendanne din indsendelse, bedes du kontakte <a "
-"href='mailto:{$email}'>{$name}</a>."
+"du har brug for hjælp til at få din indsendelse tilbage, bedes du kontakte "
+"<a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr "Denne indsendelses sektion kunne ikke findes."
+msgstr "Denne indsendelsessektion kunne ikke findes."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr "Kun redaktionen kan indsende et manuskript til denne sektion."
