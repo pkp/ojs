@@ -159,7 +159,7 @@ class StatsHandler extends PKPStatsHandler
         if (is_null($filters)) {
             $filters = [];
         }
-        $sections = \Services::get('section')->getSectionList($context->getId());
+        $sections = Repo::section()->getSectionList($context->getId());
         $filters[] = [
             'heading' => __('section.sections'),
             'filters' => array_map(function ($section) {

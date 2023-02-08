@@ -42,12 +42,11 @@ class Repository extends \PKP\publication\Repository
 
         $allowedLocales = $context->getSupportedSubmissionLocales();
         $primaryLocale = $submission->getLocale();
-        $sectionDao = Application::get()->getSectionDAO(); /** @var SectionDAO $sectionDao */
 
         // Ensure that the specified section exists
         $section = null;
         if (isset($props['sectionId'])) {
-            $section = $sectionDao->getById($props['sectionId']);
+            $section = Repo::section()->get($props['sectionId'], $context->getId());
             if (!$section) {
                 $errors['sectionId'] = [__('publication.invalidSection')];
             }
@@ -55,7 +54,7 @@ class Repository extends \PKP\publication\Repository
 
         // Get the section so we can validate section abstract requirements
         if (!$section && !is_null($publication)) {
-            $section = $sectionDao->getById($publication->getData('sectionId'));
+            $section = Repo::section()->get($publication->getData('sectionId'), $context->getId());
         }
 
         // Only validate section settings for completed submissions

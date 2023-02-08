@@ -233,11 +233,10 @@ class ArticleHandler extends Handler
             'firstPublication' => $firstPublication,
         ]);
 
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $templateMgr->assign([
             'ccLicenseBadge' => Application::get()->getCCLicenseBadge($publication->getData('licenseUrl')),
             'publication' => $publication,
-            'section' => $sectionDao->getById($publication->getData('sectionId')),
+            'section' => Repo::section()->get($publication->getData('sectionId')),
         ]);
 
         if ($this->galley && !$this->userCanViewGalley($request, $article->getId(), $this->galley->getId())) {

@@ -2,7 +2,7 @@
 
 /**
  * @defgroup submission Submission
- * Articles, OMP's extension of the generic Submission class in lib-pkp, are
+ * Articles, OJS's extension of the generic Submission class in lib-pkp, are
  * implemented here.
  */
 

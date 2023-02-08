@@ -17,7 +17,6 @@ namespace APP\services;
 
 use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 
 use APP\file\PublicFileManager;
@@ -62,11 +61,9 @@ class ContextService extends \PKP\services\PKPContextService
     public function afterAddContext($hookName, $args)
     {
         $context = $args[0];
-        $request = $args[1];
 
         // Create a default section
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); // constants
-        $section = $sectionDao->newDataObject();
+        $section = Repo::section()->newDataObject();
         $section->setTitle(__('section.default.title'), $context->getPrimaryLocale());
         $section->setAbbrev(__('section.default.abbrev'), $context->getPrimaryLocale());
         $section->setMetaIndexed(true);
@@ -74,8 +71,8 @@ class ContextService extends \PKP\services\PKPContextService
         $section->setPolicy(__('section.default.policy'), $context->getPrimaryLocale());
         $section->setEditorRestricted(false);
         $section->setHideTitle(false);
-
-        Services::get('section')->addSection($section, $context);
+        $section->setContextId($context->getId());
+        Repo::section()->add($section);
     }
 
     /**
@@ -165,8 +162,7 @@ class ContextService extends \PKP\services\PKPContextService
     {
         $context = $args[0];
 
-        $sectionDao = DAORegistry::getDAO('SectionDAO');
-        $sectionDao->deleteByJournalId($context->getId());
+        Repo::section()->deleteByContextId($context->getId());
 
         Repo::issue()->deleteByContextId($context->getId());
 

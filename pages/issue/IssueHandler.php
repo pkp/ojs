@@ -354,7 +354,7 @@ class IssueHandler extends Handler
             ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
             ->getMany();
 
-        $sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
+        $sections = Repo::section()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];
         foreach ($sections as $section) {
             $issueSubmissionsInSection[$section->getId()] = [

@@ -19,14 +19,13 @@ use APP\core\Application;
 use APP\core\Services;
 use APP\decision\types\Accept;
 use APP\decision\types\SkipExternalReview;
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
-use APP\journal\SectionDAO;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\components\forms\publication\TitleAbstractForm;
 use PKP\context\Context;
-use PKP\db\DAORegistry;
 use PKP\decision\types\BackFromCopyediting;
 use PKP\decision\types\BackFromProduction;
 use PKP\decision\types\CancelReviewRound;
@@ -100,9 +99,8 @@ class WorkflowHandler extends PKPWorkflowHandler
         $issueEntryForm = new \APP\components\forms\publication\IssueEntryForm($latestPublicationApiUrl, $locales, $latestPublication, $submissionContext, $baseUrl, $temporaryFileApiUrl);
 
         $sectionWordLimits = [];
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-        $sectionIterator = $sectionDao->getByContextId($submissionContext->getId());
-        while ($section = $sectionIterator->next()) {
+        $sections = Repo::section()->getCollector()->filterByContextIds([$submissionContext->getId()])->getMany();
+        foreach ($sections as $section) {
             $sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
         }
 
@@ -306,10 +304,7 @@ class WorkflowHandler extends PKPWorkflowHandler
 
     protected function getTitleAbstractForm(string $latestPublicationApiUrl, array $locales, Publication $latestPublication, Context $context): TitleAbstractForm
     {
-        /** @var SectionDAO $sectionDao */
-        $sectionDao = DAORegistry::getDAO('SectionDAO');
-        $section = $sectionDao->getById($latestPublication->getData('sectionId'), $context->getId());
-
+        $section = Repo::section()->get($latestPublication->getData('sectionId'), $context->getId());
         return new TitleAbstractForm(
             $latestPublicationApiUrl,
             $locales,

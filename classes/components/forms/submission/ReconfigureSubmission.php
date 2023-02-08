@@ -15,8 +15,8 @@
 
 namespace APP\components\forms\submission;
 
-use APP\journal\Section;
 use APP\publication\Publication;
+use APP\section\Section;
 use APP\submission\Submission;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FieldOptions;

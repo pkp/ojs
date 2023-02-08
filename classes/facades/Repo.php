@@ -19,6 +19,7 @@ use APP\doi\Repository as DoiRepository;
 use APP\issue\Repository as IssueRepository;
 use APP\mail\Repository as MailRepository;
 use APP\publication\Repository as PublicationRepository;
+use APP\section\Repository as SectionRepository;
 use APP\submission\Repository as SubmissionRepository;
 use APP\submissionFile\Repository as SubmissionFileRepository;
 use APP\user\Repository as UserRepository;
@@ -50,6 +51,11 @@ class Repo extends BaseRepo
     public static function publication(): PublicationRepository
     {
         return app(PublicationRepository::class);
+    }
+
+    public static function section(): SectionRepository
+    {
+        return app(SectionRepository::class);
     }
 
     public static function submission(): SubmissionRepository

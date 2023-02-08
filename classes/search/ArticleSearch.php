@@ -252,7 +252,6 @@ class ArticleSearch extends SubmissionSearch
     public function formatResults($results, $user = null)
     {
         $contextDao = Application::getContextDAO();
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
 
         $publishedSubmissionCache = [];
         $articleCache = [];
@@ -275,7 +274,7 @@ class ArticleSearch extends SubmissionSearch
             if ($publishedSubmission && $article) {
                 $sectionId = $article->getSectionId();
                 if (!isset($sectionCache[$sectionId])) {
-                    $sectionCache[$sectionId] = $sectionDao->getById($sectionId);
+                    $sectionCache[$sectionId] = Repo::section()->get($sectionId, $article->getData('contextId'));
                 }
 
                 // Get the context, storing in cache if necessary.

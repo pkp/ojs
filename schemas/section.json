@@ -1,22 +1,68 @@
 {
 	"title": "Section",
-	"description": "A journal section. Typically a section within an issue, such as Articles or Reviews.",
+	"description": "A journal or server section, or press series.",
+	"required": [
+		"contextId",
+		"title"
+	],
 	"properties": {
-		"id": {
-			"type": "integer",
-			"apiSummary": true
-		},
 		"abbrev": {
-			"$ref": "#/definitions/LocaleObject",
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"abstractsNotRequired": {
+			"type": "boolean",
 			"apiSummary": true
 		},
-		"title": {
-			"$ref": "#/definitions/LocaleObject",
+		"hideAuthor": {
+			"type": "boolean",
 			"apiSummary": true
 		},
-		"seq": {
+		"hideTitle": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"identifyType": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"metaIndexed": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"metaReviewed": {
+			"type": "boolean",
+			"apiSummary": true
+		},
+		"policy": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"reviewFormId": {
 			"type": "integer",
-			"apiSummary": true
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"wordCount": {
+			"type": "integer",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
 		}
 	}
 }

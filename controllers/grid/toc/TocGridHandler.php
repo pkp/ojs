@@ -15,7 +15,6 @@
 
 namespace APP\controllers\grid\toc;
 
-use APP\core\Application;
 use APP\facades\Repo;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
@@ -24,7 +23,6 @@ use PKP\controllers\grid\feature\OrderCategoryGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\core\JSONMessage;
 use PKP\db\DAO;
-use PKP\db\DAORegistry;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
@@ -172,7 +170,9 @@ class TocGridHandler extends CategoryGridHandler
                 $this->submissionsBySectionId[$sectionId][$article->getId()] = $article;
             }
         }
-        $sections = Application::get()->getSectionDao()->getByIssueId($issue->getId());
+
+        $sections = Repo::section()->getByIssueId($issue->getId());
+
         $arrayKeySections = [];
         foreach ($sections as $section) {
             $arrayKeySections[$section->getId()] = $section;
@@ -191,8 +191,7 @@ class TocGridHandler extends CategoryGridHandler
             return $object->getCurrentPublication()->getData('seq');
         } else { // section
             $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-            $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-            $customOrdering = $sectionDao->getCustomSectionOrder($issue->getId(), $object->getId());
+            $customOrdering = Repo::section()->getCustomSectionOrder($issue->getId(), $object->getId());
             if ($customOrdering === null) { // No custom ordering specified; use default section ordering
                 return $object->getSequence();
             } else { // Custom ordering specified.
@@ -206,16 +205,8 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function setDataElementSequence($request, $sectionId, $gridDataElement, $newSequence)
     {
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
         $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        if (!$sectionDao->customSectionOrderingExists($issue->getId())) {
-            $sectionDao->setDefaultCustomSectionOrders($issue->getId());
-        }
-        if ($sectionDao->getCustomSectionOrder($issue->getId(), $sectionId)) {
-            $sectionDao->updateCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
-        } else {
-            $sectionDao->insertCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
-        }
+        Repo::section()->upsertCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
     }
 
     /**
@@ -272,8 +263,7 @@ class TocGridHandler extends CategoryGridHandler
             $sectionId = $submission->getCurrentPublication()->getData('sectionId');
             $submissionsInSections = Repo::submission()->getInSections($issue->getId(), $issue->getJournalId());
             if (!empty($submissionsInSections[$sectionId]) && count($submissionsInSections[$sectionId]) === 1) {
-                $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-                $sectionDao->deleteCustomSection($issue->getId(), $sectionId);
+                Repo::section()->deleteCustomSectionOrder($issue->getId(), $sectionId);
             }
             return DAO::getDataChangedEvent();
         }

@@ -16,7 +16,6 @@
 namespace APP\plugins\importexport\native\filter;
 
 use APP\facades\Repo;
-use PKP\db\DAORegistry;
 use PKP\plugins\importexport\PKPImportExportFilter;
 use PKP\plugins\PluginRegistry;
 
@@ -321,8 +320,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $context = $deployment->getContext();
 
         // Create the data object
-        $sectionDao = DAORegistry::getDAO('SectionDAO'); /** @var SectionDAO $sectionDao */
-        $section = $sectionDao->newDataObject();
+        $section = Repo::section()->newDataObject();
         $section->setContextId($context->getId());
         $reviewFormId = $node->getAttribute('review_form_id');
         $section->setReviewFormId($reviewFormId ? (int) $reviewFormId : null);
@@ -372,7 +370,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         }
 
         if (!$this->_sectionExist($section)) {
-            $sectionId = $sectionDao->insertObject($section);
+            $sectionId = Repo::section()->add($section);
             if (count($unknownNodes)) {
                 foreach ($unknownNodes as $tagName) {
                     $deployment->addWarning(ASSOC_TYPE_SECTION, $sectionId, __('plugins.importexport.common.error.unknownElement', ['param' => $tagName]));
@@ -507,14 +505,13 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         // title and, optionally, abbrev contain information that can
         // be used to locate an existing section. If title and abbrev each match an
         // existing section, but not the same section, throw an error.
-        $sectionDao = DAORegistry::getDAO('SectionDAO');
         $contextId = $importSection->getContextId();
         $section = null;
         $foundSectionId = $foundSectionTitle = null;
         $index = 0;
         $titles = $importSection->getTitle(null);
         foreach ($titles as $locale => $title) {
-            $section = $sectionDao->getByTitle($title, $contextId);
+            $section = Repo::section()->getCollector()->filterByContextIds([$contextId])->filterByTitles([$title])->getMany()->first();
             if ($section) {
                 $sectionId = $section->getId();
                 if ($foundSectionId) {
@@ -542,7 +539,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $index = 0;
         $abbrevs = $importSection->getAbbrev(null);
         foreach ($abbrevs as $locale => $abbrev) {
-            $abbrevSection = $sectionDao->getByAbbrev($abbrev, $contextId);
+            $section = Repo::section()->getCollector()->filterByContextIds([$contextId])->filterByAbbrevs([$abbrev])->getMany()->first();
             if ($abbrevSection) {
                 $sectionId = $abbrevSection->getId();
                 if ($foundSectionId) {

@@ -14,14 +14,11 @@
 namespace APP\submission;
 
 use APP\article\ArticleTombstoneManager;
-use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
-use APP\journal\Section;
-use APP\journal\SectionDAO;
+use APP\section\Section;
 use PKP\context\Context;
-use PKP\context\PKPSection;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiActionException;
@@ -49,7 +46,7 @@ class Repository extends \PKP\submission\Repository
         foreach ($submissions as $submission) {
             $sectionId = $submission->getCurrentPublication()->getData('sectionId');
             if (empty($bySections[$sectionId])) {
-                $section = Application::get()->getSectionDao()->getById($sectionId);
+                $section = Repo::section()->get($sectionId);
                 $bySections[$sectionId] = [
                     'articles' => [],
                     'title' => $section->getData('hideTitle') ? '' : $section->getLocalizedData('title'),
@@ -70,9 +67,7 @@ class Repository extends \PKP\submission\Repository
         $locale = $submission->getData('locale');
         $publication = $submission->getCurrentPublication();
 
-        /** @var SectionDAO $sectionDao */
-        $sectionDao = DAORegistry::getDAO('SectionDAO');
-        $section = $sectionDao->getById($submission->getCurrentPublication()->getData('sectionId'));
+        $section = Repo::section()->get($submission->getCurrentPublication()->getData('sectionId'), $context->getId());
 
         // Required abstract
         if (!$section->getAbstractsNotRequired() && !$publication->getData('abstract', $locale)) {
@@ -108,7 +103,7 @@ class Repository extends \PKP\submission\Repository
         return $errors;
     }
 
-    public function updateStatus(Submission $submission, ?int $newStatus = null, ?PKPSection $section = null)
+    public function updateStatus(Submission $submission, ?int $newStatus = null, ?Section $section = null)
     {
         $oldStatus = $submission->getData('status');
         parent::updateStatus($submission, $newStatus, $section);
@@ -127,8 +122,7 @@ class Repository extends \PKP\submission\Repository
             }
             $articleTombstoneManager = new ArticleTombstoneManager();
             if (!$section) {
-                $sectionDao = Application::get()->getSectionDAO();
-                $section = $sectionDao->getById($submission->getSectionId());
+                $section = Repo::section()->get($submission->getCurrentPublication()->getData('sectionId'), $submission->getData('contextId'));
             }
             $articleTombstoneManager->insertArticleTombstone($submission, $context, $section);
         }
