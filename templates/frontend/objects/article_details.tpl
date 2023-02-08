@@ -88,12 +88,12 @@
 	{/if}
 
 	<h1 class="page_title">
-		{$publication->getLocalizedTitle()|escape|unescape:'html'}
+		{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 	</h1>
 
 	{if $publication->getLocalizedData('subtitle')}
 		<h2 class="subtitle">
-			{$publication->getLocalizedData('subtitle')|escape}
+			{$publication->getLocalizedSubTitle(null, 'html')|strip_unsafe_html}
 		</h2>
 	{/if}
 
