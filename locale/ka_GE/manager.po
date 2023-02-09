@@ -2186,6 +2186,7 @@ msgstr "ჟურნალის მთავარი გვერდის მ
 msgid "emailTemplate.variable.context.contactName"
 msgstr "ჟურნალის ძირითადი კონტაქტი"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -2227,15 +2228,19 @@ msgstr "გამოწერის ტიპის, დასახელებ
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "ინფორმაცია აბონენტის წევრობის შესახებ"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr ""
 

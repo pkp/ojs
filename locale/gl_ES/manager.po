@@ -2228,6 +2228,7 @@ msgstr "URL da páxina de inicio da revista"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "O nome do contacto principal da revista"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -2267,15 +2268,19 @@ msgstr ""
 msgid "emailTemplate.variable.subscription.membership"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr ""
 

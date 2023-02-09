@@ -1929,6 +1929,7 @@ msgstr "期刊主頁網址"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "期刊優先聯絡人姓名"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "期刊起首字母簡稱"
 
@@ -1968,15 +1969,19 @@ msgstr "訂閱種類、名稱、期限及價錢的概要"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "訂閱人會員資格資訊"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "院校名稱"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "院校郵寄地址"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "網域"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "訂閱認證的IP範圍"
 

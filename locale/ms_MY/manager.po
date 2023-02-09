@@ -2191,6 +2191,7 @@ msgstr "URL ke halaman utama jurnal"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Nama kenalan utama jurnal"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Inisial jurnal"
 
@@ -2230,15 +2231,19 @@ msgstr "Ringkasan jenis, nama, tempoh dan kos langganan"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Maklumat tentang keahlian pelanggan"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Nama institusi"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Alamat surat menyurat institusi"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domain"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Lingkungan IP untuk pengesahan langganan"
 

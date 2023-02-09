@@ -2177,6 +2177,7 @@ msgstr "Adresa URL domovské stránky časopisu"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Jméno hlavního kontaktu časopisu"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Iniciály časopisu"
 
@@ -2216,15 +2217,19 @@ msgstr "Shrnutí typu, názvu, doby trvání a ceny předplatného"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informace o členství předplatitele"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Jméno instituce"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "E-mailová adresa instituce"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Doména"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Rozsahy IP adres pro autentizaci předplatného"
 

@@ -2174,6 +2174,7 @@ msgstr "Derginin ana sayfasının URL'si"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Derginin birincil irtibat kişisinin adı"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Dergi baş harfleri"
 
@@ -2213,15 +2214,19 @@ msgstr "Aboneliğin türü, adı, süresi ve maliyetinin bir özeti"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Abonenin üyeliği hakkında bilgi"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Kurum adı"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Kurum adresi"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Alan adı"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Abonelik kimlik doğrulaması için IP aralıkları"
 

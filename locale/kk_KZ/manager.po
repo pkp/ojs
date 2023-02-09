@@ -2211,6 +2211,7 @@ msgstr "Журналдың басты бетіне сілтеме"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Журналдың негізгі байланыс тұлғасының аты"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -2252,15 +2253,19 @@ msgstr "Жазылым түрі, атауы, ұзақтығы және құны 
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Абоненттің мүшелігі туралы мәліметтер"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr ""
 

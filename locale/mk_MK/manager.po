@@ -2207,6 +2207,7 @@ msgstr "УРЛ на страницата од списание"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Име на примарен контакт од списание"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -2246,15 +2247,19 @@ msgstr ""
 msgid "emailTemplate.variable.subscription.membership"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr ""
 

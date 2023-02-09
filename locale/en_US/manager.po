@@ -1798,7 +1798,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "The name of the journal's primary contact"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "The journal initials"
+msgstr "The journal's initials"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "The journal's email signature for automated emails"
@@ -1837,16 +1837,16 @@ msgid "emailTemplate.variable.subscription.membership"
 msgstr "Information about the subscriber's membership"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "The name of the institution"
+msgstr "The name of the subscribing institution"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "The mailing address of the institution"
+msgstr "The mailing address of the subscribing institution"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domain"
+msgstr "The domain name of the valid IP address(es) for this subscription"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "IP ranges for subscription authentication"
+msgstr "The valid IP ranges for this subscription"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr "URL to the page where the author can make payment"

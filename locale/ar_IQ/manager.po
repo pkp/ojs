@@ -2102,6 +2102,7 @@ msgstr "الرابط المؤدي إلى الصفحة الرئيسية للمج�
 msgid "emailTemplate.variable.context.contactName"
 msgstr "اسم جهة الاتصال الرئيسية في المجلة"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "الحروف الأولى للمجلة"
 
@@ -2141,15 +2142,19 @@ msgstr "موجز عن نوع الاشتراك، اسمه، مدته وكلفته
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "معلومات عن عضوية المشترك"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "اسم المؤسسة"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "عنوان المراسلة للمؤسسة"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "النطاق"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "نطاق عناوين IP للمصادقة على الاشتراكات"
 
