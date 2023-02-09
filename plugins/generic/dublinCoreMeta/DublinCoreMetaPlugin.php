@@ -73,6 +73,8 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $publication = $article->getCurrentPublication();
         $publicationLocale = $publication->getData('locale');
         $articleBestId = $publication->getData('urlPath') ?? $article->getId();
+        $templateMgr = TemplateManager::getManager($request);
+        $section = $templateMgr->getTemplateVars('section');
 
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->addHeader('dublinCoreSchema', '<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />');
@@ -87,16 +89,15 @@ class DublinCoreMetaPlugin extends GenericPlugin
 
         if ($coverages = $publication->getData('coverage')) {
             foreach ($coverages as $locale => $coverage) {
-                if (!empty($coverage)) {
+                if ($coverage != '') {
                     $templateMgr->addHeader('dublinCoreCoverage' . $locale, '<meta name="DC.Coverage" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($coverage)) . '"/>');
                 }
             }
         }
 
-        if ($authors = $publication->getData('authors')) {
-            foreach ($authors as $i => $author) {
-                $templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
-            }
+        $authors = $publication->getData('authors');
+        foreach ($authors as $i => $author) {
+            $templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
         }
 
         if ($datePublished = $publication->getData('datePublished')) {
@@ -110,19 +111,18 @@ class DublinCoreMetaPlugin extends GenericPlugin
             $templateMgr->addHeader('dublinCoreDateModified', '<meta name="DC.Date.modified" scheme="ISO8601" content="' . date('Y-m-d', strtotime($dateModified)) . '"/>');
         }
 
-        if ($abstracts = $publication->getData('abstract')) {
-            foreach ($abstracts as $locale => $abstract) {
-                if (!empty($abstract)) {
-                    $templateMgr->addHeader('dublinCoreAbstract' . $locale, '<meta name="DC.Description" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($abstract)) . '"/>');
-                }
+        $abstracts = $publication->getData('abstract');
+        foreach ($abstracts as $locale => $abstract) {
+            if ($abstract != '') {
+                $templateMgr->addHeader('dublinCoreAbstract' . $locale, '<meta name="DC.Description" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($abstract)) . '"/>');
             }
         }
 
-        if ($galleys = $publication->getData('galleys')) {
-            foreach ($galleys as $i => $galley) {
-                if ($submissionFile = Repo::submissionFile()->get($galley->getData('submissionFileId'))) {
-                    $templateMgr->addHeader('dublinCoreFormat' . $i++, '<meta name="DC.Format" scheme="IMT" content="' . htmlspecialchars($submissionFile->getData('mimetype')) . '"/>');
-                }
+        $galleys = $publication->getData('galleys');
+        foreach ($galleys as $i => $galley) {
+            $submissionFileId = $galley->getData('submissionFileId');
+            if ($submissionFileId && $submissionFile = Repo::submissionFile()->get($submissionFileId)) {
+                $templateMgr->addHeader('dublinCoreFormat' . $i++, '<meta name="DC.Format" scheme="IMT" content="' . htmlspecialchars($submissionFile->getData('mimetype')) . '"/>');
             }
         }
 
@@ -168,7 +168,6 @@ class DublinCoreMetaPlugin extends GenericPlugin
         }
         $templateMgr->addHeader('dublinCoreSourceUri', '<meta name="DC.Source.URI" content="' . $request->url($journal->getPath()) . '"/>');
 
-
         if ($subjects = $publication->getData('subjects')) {
             foreach ($subjects as $locale => $localeSubjects) {
                 foreach ($localeSubjects as $i => $subject) {
@@ -186,7 +185,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
 
         $templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($publication->getLocalizedFullTitle($publicationLocale)) . '"/>');
         foreach ($publication->getFullTitles() as $locale => $title) {
-            if (!empty($title) && $locale != $publicationLocale) {
+            if ($title != '' && $locale != $publicationLocale) {
                 $templateMgr->addHeader('dublinCoreAltTitle' . $locale, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($title) . '"/>');
             }
         }
@@ -194,13 +193,12 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $templateMgr->addHeader('dublinCoreType', '<meta name="DC.Type" content="Text.Serial.Journal"/>');
         if ($types = $publication->getData('type')) {
             foreach ($types as $locale => $type) {
-                if (!empty($type)) {
+                if ($type != '') {
                     $templateMgr->addHeader('dublinCoreType' . $locale, '<meta name="DC.Type" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($type)) . '"/>');
                 }
             }
         }
 
-        $section = Repo::section()->get($publication->getData('sectionId'));
         $templateMgr->addHeader('dublinCoreArticleType', '<meta name="DC.Type.articleType" content="' . htmlspecialchars($section->getTitle($journal->getPrimaryLocale())) . '"/>');
 
         return false;
