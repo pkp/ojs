@@ -2075,6 +2075,7 @@ msgstr ""
 "arquivo <tt>config.inc.php</tt> nun editor de textos axeitado e substitúa os "
 "contidos polos datos que aparecen no campo de texto seguinte.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>A instalación de OJS completouse correctamente.</p>\n"
@@ -2090,6 +2091,7 @@ msgstr ""
 "soporte</a> se ten preguntas ou comentarios.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>A actualización de OJS para a versión {$version} completouse "

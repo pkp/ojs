@@ -2128,6 +2128,7 @@ msgstr ""
 "<tt>config.inc.php</tt> într-un editor de text adecvat și înlocuiți "
 "conținutul său cu conținutul câmpului de text de mai jos.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Instalarea OJS s-a finalizat cu succes.</p>\n"
@@ -2143,6 +2144,7 @@ msgstr ""
 "\">support forum</a> dacă aveți întrebări sau comentarii.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Actualizarea OJS la versiunea {$version} a fost finalizată cu succes.</"

@@ -2093,6 +2093,7 @@ msgstr ""
 "php </tt> ашыңыз және оның мазмұнын төмендегі мәтін жолағының мазмұнымен "
 "ауыстырыңыз. </p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p> OJS орнату сәтті аяқталды. </p>\n"
@@ -2107,6 +2108,7 @@ msgstr ""
 "pkp.sfu.ca\" target=\"_new\"> қолдау форумына </a> кіріңіз. </li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p> OJS -ті {$version} нұсқасына жаңарту сәтті аяқталды. </p>\n"

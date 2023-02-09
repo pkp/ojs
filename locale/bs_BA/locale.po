@@ -2132,6 +2132,7 @@ msgstr ""
 "php</tt> u odgovarajućem uređivaču teksta i zamijenite njegov sadržaj sa "
 "sadržajem teksta koji se nalazi u polju ispod.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Instalacija OJS-a je dovršena uspješno.</p>\n"
@@ -2142,6 +2143,7 @@ msgstr ""
 "ojs/register</a>.</strong> Ako imate pitanja ili komentare, molimo posjetite "
 "<a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">forum podrške</a>.</p>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Nadogradnja OJS-a na verziju {$version} je uspješno završena.</p>\n"

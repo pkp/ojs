@@ -2116,6 +2116,7 @@ msgstr ""
 "usar o sistema, edite o documento <tt>config.inc.php</tt> num editor de "
 "texto e substitua todo o conteúdo pelo texto no campo abaixo.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Instalação do sistema concluída com sucesso.</p>\n"
@@ -2130,6 +2131,7 @@ msgstr ""
 "ajuda</a> se tiver questões ou comentários.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Atualização para a versão {$version} concluída com sucesso.</p>\n"

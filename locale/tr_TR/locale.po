@@ -2099,6 +2099,7 @@ msgstr ""
 "editöründe açınız ve içeriklerini aşağıdaki metin alanının içeriklerine "
 "uygun olarak değiştirin.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>ADS yüklemesi başarıyla tamamlandı.</p>\n"
@@ -2119,6 +2120,7 @@ msgstr ""
 "<p>Soru ve yorumlarınız için lütfen <a href=\"http://pkp.sfu.ca/support/forum"
 "\" target=\"_new\">destek forumunu</a> kullanınız.</p>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>ADS'nin sürüm {$version}  güncellenmesi başarıyla tamamlandı.</p>\n"

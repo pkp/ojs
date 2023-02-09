@@ -2097,6 +2097,7 @@ msgstr ""
 "tt> у одговарајућем едитору текста и замените његов садржај са садржајем "
 "текста који се налази у пољу испод.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Инсталација ОЈС-а је успешно довршена.</p>\n"
@@ -2109,6 +2110,7 @@ msgstr ""
 "коментаре, посетите <a href=\"http://forum.pkp.sfu.ca\" target=\"_new"
 "\">форум подршке</a>.</p>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Надоградња OJS-а на верзију {$version} је успешно завршенa.</p>\n"

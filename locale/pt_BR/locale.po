@@ -2132,6 +2132,7 @@ msgstr ""
 "em um editor de texto adequado e substitua seu conteúdo pelo conteúdo do "
 "campo de texto abaixo.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>A instalação do OJS foi concluída com êxito.</p>\n"
@@ -2146,6 +2147,7 @@ msgstr ""
 "suporte</a> se você tiver perguntas ou comentários.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>A atualização do OJS para a versão {$version} foi concluída com êxito.</"

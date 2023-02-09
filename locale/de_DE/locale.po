@@ -2175,6 +2175,7 @@ msgstr ""
 "öffnen Sie bitte <tt>config.inc.php</tt> in einem geeigneten Text-Editor und "
 "ersetzen Sie den Dateiinhalt durch den Inhalt des folgenden Textfeldes.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Die Installation von OJS wurde erfolgreich abgeschlossen.</p>\n"
@@ -2191,6 +2192,7 @@ msgstr ""
 "a> besuchen, wenn Sie Fragen oder Kommentare haben.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Die Aktualisierung von OJS auf Version {$version} wurde erfolgreich "

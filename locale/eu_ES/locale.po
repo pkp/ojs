@@ -2122,6 +2122,7 @@ msgstr ""
 "tt> testu-editore egoki batekin eta ordeztu bertako edukia beheko testu-"
 "eremuaren edukiarekin.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>OJS ondo instalatu da.</p>\n"
@@ -2136,6 +2137,7 @@ msgstr ""
 "teknikoko foroa</a> galderarik edo oharrik egin nahi baduzu.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Ondo berritu da OJS {$version} bertsiora.</p>\n"

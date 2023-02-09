@@ -1749,6 +1749,7 @@ msgstr ""
 "<p>安裝程式未能自動覆蓋設置檔案。在試圖使用系統前，請在適當的文字編輯器開啟"
 "<tt>config.inc.php</tt>及以下方內容取代原先內容。</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>成功安裝OJS。</p>\n"
@@ -1763,6 +1764,7 @@ msgstr ""
 "\"_new\">support forum</a>。</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 

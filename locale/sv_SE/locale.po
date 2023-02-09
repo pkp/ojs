@@ -2099,6 +2099,7 @@ msgstr ""
 "Innan du försöker använda systemet, öppna <tt>config.inc.php</tt> i en "
 "lämplig textredigerare och ersätt innehållet med texten nedan.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Installationen av OJS genomfördes utan problem.</p>\n"
@@ -2113,6 +2114,7 @@ msgstr ""
 "\">supportforumet</a> om du har frågor eller kommentarer.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Uppgraderingen av OJS till version {$version} genomfördes utan problem.</"

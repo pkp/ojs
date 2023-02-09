@@ -2086,6 +2086,7 @@ msgstr ""
 "teksta redaktorā un nomainiet tā saturu ar turpmāk norādītā teksta lauka "
 "saturu.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>OJS instalēšana ir veiksmīgi pabeigta.</p>\n"
@@ -2100,6 +2101,7 @@ msgstr ""
 "forumu</a>, ja jums ir jautājumi vai komentāri.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>OJS atjaunināšana uz versiju {$version} ir veiksmīgi pabeigta.</p>\n"

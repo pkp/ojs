@@ -2252,6 +2252,7 @@ msgstr ""
 "का प्रयास करने से पहले, कृपया उपयुक्त टेक्स्ट एडिटर में <tt> config.inc.php </ tt> खोलें "
 "और इसकी सामग्री को नीचे दिए गए टेक्स्ट फ़ील्ड की सामग्री से बदलें। </ p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p> OJS की स्थापना सफलतापूर्वक पूर्ण हो गई है। </ p>\n"
@@ -2266,6 +2267,7 @@ msgstr ""
 "\"_new\"> समर्थन मंच </a> पर जाएं। </ li>\n"
 "</ Ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p> OJS के संस्करण {$ संस्करण} का उन्नयन सफलतापूर्वक पूरा हो गया है। </ p>\n"

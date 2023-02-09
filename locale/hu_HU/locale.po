@@ -2109,6 +2109,7 @@ msgstr ""
 "fájlt egy alkalmas karakteres szerkesztőben és cserélje le a tartalmát az "
 "alábbira.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Az OJS telepítése sikeresen megtörtént.</p>\n"
@@ -2123,6 +2124,7 @@ msgstr ""
 "\">támogatói fórumot</a> ha kérdése vagy észrevétele lenne.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Az OJS frissítése a következő verzióra {$version} sikeresen lezajlott.</"

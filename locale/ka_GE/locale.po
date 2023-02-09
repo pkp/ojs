@@ -2096,6 +2096,7 @@ msgstr ""
 "tt> შესაფერისი ტექსტურ რედაქტორში და შეცვალეთ მისი შინაარსი ქვემოთ მოცემული "
 "ტექსტის ველის შინაარსით.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p> OJS- ის ინსტალაცია წარმატებით დასრულდა. </p>\n"
@@ -2110,6 +2111,7 @@ msgstr ""
 "ფორუმს </a>, თუ კითხვები ან კომენტარები გაქვთ. </li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p> OJS- ის განახლება ვერსიაზე {$version} წარმატებით დასრულდა. </p>\n"

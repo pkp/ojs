@@ -2142,6 +2142,7 @@ msgstr ""
 "tt> в подходящ текстов редактор и заменете съдържанието му със съдържанието "
 "на текстовото поле по -долу.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Инсталацията на OJS приключи успешно.</p>\n"
@@ -2157,6 +2158,7 @@ msgstr ""
 "за поддръжка</a> ако имате въпроси или коментари.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Надстройката на OJS до версия {$version} приключи успешно.</p>\n"

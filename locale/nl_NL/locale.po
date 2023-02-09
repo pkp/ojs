@@ -2109,6 +2109,7 @@ msgstr ""
 "geschikte teksteditor en vervang de inhoud ervan door de inhoud van het "
 "tekstveld hieronder.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Installatie van OJS is succesvol afgerond.</p>\n"
@@ -2119,6 +2120,7 @@ msgstr ""
 "ojs/register</a>.</strong> Als u vragen of opmerkingen heeft, bezoek dan het "
 "<a href=\"http://forum.pkp.sfu.ca\" target=\"_new\">support forum</a>.</p>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Opwaarderen van OJS naar versie {$version} is succesvol afgerond.</p>\n"

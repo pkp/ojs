@@ -2108,6 +2108,7 @@ msgstr ""
 "tekstieditorissa ja korvaa sen sisältö alla olevan tekstikentän sisällöllä.</"
 "p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>OJS on asennettu onnistuneesti.</p>\n"
@@ -2123,6 +2124,7 @@ msgstr ""
 "sivulla</a>, jos sinulla on kysymyksiä tai kommentteja.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>OJS on päivitetty onnistuneesti versioon {$version}.</p>\n"

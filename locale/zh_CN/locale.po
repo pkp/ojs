@@ -1935,6 +1935,7 @@ msgstr ""
 "<p>安装器无法自动覆盖配置文件。在尝试使用本系统之前，请以合适的编辑器开启"
 "<tt>config.inc.php</tt>并且变更其内容为下列字段中的内容。</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>OJS已经成功安装！</p>\n"
@@ -1949,6 +1950,7 @@ msgstr ""
 "持论坛</a>。</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>成功升级 OJS 到 {$version} 版本。</p>\n"

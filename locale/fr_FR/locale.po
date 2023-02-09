@@ -2141,6 +2141,7 @@ msgstr ""
 "<tt>config.inc.php</tt> dans un éditeur de texte approprié et remplacer son "
 "contenu par le contenu de la zone de texte ci-dessous.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Installation d'OJS réussie.</p>\n"
@@ -2157,6 +2158,7 @@ msgstr ""
 "de soutien</a> si vous avez des questions ou des commentaires.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>La mise à jour d'OJS à la version {$version} s'est complétée avec succès."

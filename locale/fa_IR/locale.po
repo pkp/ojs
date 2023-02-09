@@ -2003,6 +2003,7 @@ msgstr ""
 "tt> را در یک ویرایشگر مناسب متنی باز کرده و محتوای آن را با محتوای جعبه متن "
 "زیر عوض کنید..</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>نصب OJS با موفقیت پایان یافت.</p>\t  <p>برای شروع کار با سیستم ، با "
@@ -2013,6 +2014,7 @@ msgstr ""
 "چنانچه سؤال یا نظری دارید لطفاً از  <a href=\"http://forum.pkp.sfu.ca\" "
 "target=\"_new\">انجمن پشتیبانی</a> بازدید کنید.</p>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>به‌روزرسانی  OJS به نسخه {$version} با موفقیت پایان یافت.</p>\t  <p>فراموش "

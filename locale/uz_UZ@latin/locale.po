@@ -2117,6 +2117,7 @@ msgstr ""
 "<tt> config.inc.php </tt> ni oching va uning tarkibini quyidagi matn "
 "maydonining tarkibiga almashtiring. </p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p> OJSni o'rnatish muvaffaqiyatli yakunlandi. </p>\n"
@@ -2134,6 +2135,7 @@ msgstr ""
 "li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p> OJSni {$ version} versiyasiga yangilash muvaffaqiyatli yakunlandi. </p>\n"

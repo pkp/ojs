@@ -2096,6 +2096,7 @@ msgstr ""
 "textovom editore a nahraďte jeho obsah obsahom nižšie uvedeného textového "
 "poľa.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Inštalácia OJS bola úspešne dokončená.</p>\n"
@@ -2111,6 +2112,7 @@ msgstr ""
 "podpory</a> s vašimi dotazy a komentármi.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Upgrade OJS na verziu {$version} bol úspešne dokončený.</p>\n"

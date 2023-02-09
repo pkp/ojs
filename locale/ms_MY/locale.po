@@ -2099,6 +2099,7 @@ msgstr ""
 "yang sesuai dan gantikan kandungannya dengan kandungan medan teks di bawah.</"
 "p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Pemasangan OJS telah selesai dengan jayanya.</p>\n"
@@ -2115,6 +2116,7 @@ msgstr ""
 "sokongan </a> jika ada pertanyaan atau komen. </li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Naik taraf OJS ke versi {$version} telah berjaya diselesaikan. </p>\n"

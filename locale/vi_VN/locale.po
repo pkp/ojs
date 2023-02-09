@@ -2092,6 +2092,7 @@ msgstr ""
 "bản phù hợp và thay thế nội dung của nó bằng nội dung của trường văn bản bên "
 "dưới.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Quá trình cài đặt OJS đã hoàn tất thành công.</p>\n"
@@ -2106,6 +2107,7 @@ msgstr ""
 "forum</a> nếu bạn có câu hỏi hoặc nhận xét.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Nâng cấp OJS lên phiên bản {$version} đã hoàn tất thành công.</p>\n"

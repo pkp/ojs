@@ -2131,6 +2131,7 @@ msgstr ""
 "php</tt> в подходящем текстовом редакторе и замените его содержимое "
 "содержимым текстового поля ниже.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Установка OJS была успешно завершена.</p>\n"
@@ -2146,6 +2147,7 @@ msgstr ""
 "поддержки</a>, если у Вас есть вопросы или комментарии.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Обновление OJS до версии {$version} было успешно завершено.</p>\n"

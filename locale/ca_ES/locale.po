@@ -2097,6 +2097,7 @@ msgstr ""
 "adequat i reemplaceu-ne els continguts amb les dades que apareixen en el "
 "quadre de text següent.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>La instal·lació d’OJS s’ha completat correctament.</p>\n"
@@ -2112,6 +2113,7 @@ msgstr ""
 "de suport</a> si teniu preguntes o comentaris.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>L’actualització de l’OJS a la versió {$version} s’ha completat "

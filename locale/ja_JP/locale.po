@@ -2050,6 +2050,7 @@ msgstr ""
 "用を試みる前に、適切なテキストエディターで <tt>config.inc.php</tt> を開き、そ"
 "の中身を以下のテキストフィールドの内容で置き換えてください。</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>OJSのインストールが正常に完了しました。</p>\n"
@@ -2064,6 +2065,7 @@ msgstr ""
 "\"_new\">サポートフォーラム</a>にアクセスしてください。</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>OJSのバージョン{$version}へのアップグレードが正常に完了しました。</p>\n"

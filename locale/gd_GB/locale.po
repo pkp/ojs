@@ -2206,6 +2206,7 @@ msgstr ""
 "teacsa iomchaidh agus cuir na tha san raon teacsa gu h-ìosal an àite na "
 "susbaint ann.</p>"
 
+#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Chaidh OJS a stàladh.</p>\n"
@@ -2222,6 +2223,7 @@ msgstr ""
 "\">fhòram taice</a> ma tha ceist no beachd sam bith agad.</li>\n"
 "</ol>"
 
+#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Chaidh tionndadh {$version} de OJS a stàladh.</p>\n"
