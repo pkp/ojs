@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "ユーザー名『{$contextName}』で査読者として登録されました"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "突然のメールをお許しください。<br />\n"
@@ -260,6 +261,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "査読依頼取消のお願い"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -395,6 +397,7 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr "ゲラ作成のお願い"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -693,6 +696,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "改訂版アップロード"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "編集部 御中:<br />\n"

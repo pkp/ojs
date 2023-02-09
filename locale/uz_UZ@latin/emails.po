@@ -84,6 +84,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} bilan sharhlovchi sifatida ro'yxatdan o'tish"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Tajribangizdan kelib chiqib, biz sizning ismingizni {$contextName} uchun "
@@ -111,6 +112,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Yangi son nashr qilindi: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Hurmatli o'quvchi,</p><p>{$contextName} so‘nggi sonimiz nashr etilganini "
@@ -153,6 +155,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Ko'rib chiqish uchun taklif"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Hurmatli {$recipientName},</p><p>O‘ylaymanki, siz {$contextName} ga "
@@ -193,6 +196,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Qayta ko'rib chiqilgan arizani ko'rib chiqishni so'rash"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Hurmatli {$recipientName},</p><p><a href="
@@ -216,6 +220,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Tekshirish so'rovi bekor qilindi"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}: <br />\n"
@@ -230,6 +235,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "{$contextName} uchun biror narsani koʻrib chiqa olasizmi?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Hurmatli {$recipientName},</p><p>Biz yaqinda sizdan {$contextName} uchun "
@@ -285,6 +291,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Tekshiruvni yakunlash uchun eslatma"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Hurmatli {$recipientName}:</p><p>Ushbu xat {$contextName} tomonidan "
@@ -346,6 +353,7 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "{$submissionId} taqdimoti {$contextAcronym} orqali ishlab chiqarishga tayyor"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Hurmatli {$recipientName},</p><p>Yangi taqdimnoma tartibni tahrirlashga "
@@ -617,6 +625,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Yangilangan versiya yuklandi"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Tahrirlovchilar: <br />\n"

@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registratie als Reviewer bij {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Met het oog op uw expertise hebben wij de vrijheid genomen om uw naam op te "
@@ -263,6 +264,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Reviewverzoek ingetrokken"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -672,6 +674,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Herziene versie geladen"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"

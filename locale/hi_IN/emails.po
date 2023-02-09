@@ -104,6 +104,7 @@ msgstr "{$contextName}के साथ समीक्षक के रूप �
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "आपकी विशेषज्ञता के प्रकाश में, हमने {$contextName} के लिए समीक्षक डेटाबेस में आपका नाम "
@@ -344,6 +345,7 @@ msgstr "समीक्षा रद्द करने का अनुरो�
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -872,6 +874,7 @@ msgid "emails.revisedVersionNotify.subject"
 msgstr "संशोधित संस्करण अपलोड किया गया"
 
 # (pofilter) endpunc: Different punctuation at the end
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "संपादकों:<br />\n"

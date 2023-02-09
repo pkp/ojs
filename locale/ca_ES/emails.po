@@ -77,6 +77,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registre com a revisor a {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Després d'avaluar el vostre perfil, ens hem pres la llibertat de registrar "
@@ -262,6 +263,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Sol·licitud de revisió cancel·lada"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Benvolgut/uda {$recipientName},<br />\n"
@@ -683,6 +685,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versió revisada carregada"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors/ores:<br />\n"

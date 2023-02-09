@@ -82,6 +82,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "რეცენზენტად რეგისტრაცია ჟურნალში {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "თქვენი გამოცდილების გათვალისწინებით, ჩვენ თავს უფლება მივეცით თქვენი "
@@ -260,6 +261,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "სტატიის რეცენზირების მოთხოვნა"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -684,6 +686,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "ატვირთულია ჩასწორებული ვერსია"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors:<br />\n"

@@ -83,6 +83,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Đăng ký làm Người phản biện cho {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Dựa theo chuyên môn của bạn, chúng tôi đã tự đăng ký tên của bạn trong cơ sở "
@@ -266,6 +267,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Hủy yêu cầu đánh giá bài báo"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Kính gửi {$recipientName},<br />\n"
@@ -674,6 +676,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Tải lên bản sửa chữa"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Kính gửi Biên tập viên,<br />\n"

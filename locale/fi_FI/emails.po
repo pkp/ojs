@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Rekisteröinti arvioijaksi julkaisuun {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Asiantuntemuksenne perusteella olemme ottaneet vapauden rekisteröidä teidät "
@@ -266,6 +267,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Arviointipyynnön peruminen"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Hyvä {$recipientName},<br />\n"
@@ -688,6 +690,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Korjattu versio on ladattu"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Hyvät toimittajat,<br />\n"

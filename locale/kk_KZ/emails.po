@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "\"{$ContextName}\"журналында рецензент ретінде тіркелу"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Сіздің тәжірибеңізге сүйене отырып, біз сізді «{$contextName}» журналының "
@@ -271,6 +272,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Қарау сұрауы тоқтатылды"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Сәлем {$recipientName}!<br />\n"
@@ -702,6 +704,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Түзетілген нұсқасы жүктелді"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Құрметті редакторлар!<br />\n"

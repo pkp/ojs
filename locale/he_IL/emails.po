@@ -71,6 +71,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "הרשמה כסוקר עם {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "לאור המומחיות שלך, רשמנו את שמך במאגר הסוקרים עבור {$contextName}. זה לא "
@@ -234,6 +235,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "ביטול בקשה לסקירה"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:\n"
@@ -308,6 +310,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "תזכורת הגשת ביקורת אוטומטית"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 
@@ -333,6 +336,7 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 
@@ -414,6 +418,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 

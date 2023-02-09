@@ -73,6 +73,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "{$contextName} aldizkarian Ebaluatzaile gisa erregistratzea"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "{$contextName} aldizkarian lantzen dugun jakintza-arloan aditua zarenez, "
@@ -249,6 +250,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Ebaluazio-eskaera bertan behera uztea"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -264,6 +266,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -655,6 +658,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Bertsio errebisatua gora kargatu da"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"

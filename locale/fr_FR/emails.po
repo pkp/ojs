@@ -76,6 +76,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Inscription en tant que rapporteur de {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire "
@@ -268,6 +269,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Annulation de la demande d'évaluation"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -693,6 +695,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Version révisée téléversée"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Rédacteurs, rédactrices,<br />\n"

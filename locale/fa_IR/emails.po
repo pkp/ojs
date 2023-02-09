@@ -70,6 +70,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "ثبت نام به عنوان کارشناس {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "با توجه با تجارب جنابعالی, {$contextName} فرصت را مغتنم شمرده و نام شما را "
@@ -245,6 +246,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "درخواست لغو کارشناسی"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -259,6 +261,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -649,6 +652,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "آپلود نسخه اصلاح شده"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "دبیر محترم:<br />\n"

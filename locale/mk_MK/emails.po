@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрација како рецензент со {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Со оглед на вашето познавање, си земавме за слобода да го регистрираме "
@@ -111,6 +112,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Објавено е ново издание: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Читатели:</p><p>{$contextName} само што го објави најновото издание на "
@@ -236,6 +238,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Барањето за рецензија е откажано"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -667,6 +670,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Прикачена корегирана верзија"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Уредници:<br />\n"

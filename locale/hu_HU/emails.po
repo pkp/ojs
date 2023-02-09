@@ -78,6 +78,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Regisztráció szakmai lektorként a(z) {$contextName} folyóirathoz"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Tisztelt Szakértő!<br />\n"
@@ -263,6 +264,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Lektori felkérés visszavonása"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Tisztelt {$recipientName}!<br />\n"
@@ -684,6 +686,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Átdolgozott változat feltöltve"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Tisztelt Szerkesztő!<br />\n"

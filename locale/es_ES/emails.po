@@ -76,6 +76,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Revisor para {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "A la vista de su trayectoria profesional, su nombre ha sido propuesto para "
@@ -261,6 +262,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Petición de revisión cancelada"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -276,6 +278,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Solicitud de revisión restablecida"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -679,6 +682,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versión revisada cargada"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editores/as:<br />\n"

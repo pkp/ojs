@@ -77,6 +77,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrierung als Gutachter/in bei {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Angesichts Ihrer Erfahrung haben wir uns erlaubt, Ihren Namen der Gutachter/"
@@ -273,6 +274,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Rücknahme einer Bitte um ein Gutachten"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -289,6 +291,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Anfrage nach einem Gutachten wiederhergestellt."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -698,6 +701,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Überarbeitete Version hochgeladen"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Sehr geehrte Redaktion,<br />\n"

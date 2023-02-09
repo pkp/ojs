@@ -73,6 +73,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrovaný na pozícii recenzenta pre {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "S ohľadom na Vašu odbornosť sme si Vás dovolili zaregistrovať do databázy "
@@ -259,6 +260,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Žiadosť o zrušenie recenzie"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -673,6 +675,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Nahraná opravená verzia príspevku"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editori:<br />\n"

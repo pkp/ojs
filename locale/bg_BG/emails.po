@@ -82,6 +82,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрация като рецензент с {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "С оглед на вашия опит, ние си позволихме да регистрираме вашето име в базата "
@@ -108,6 +109,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Публикуван е нов брой: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Уважаеми читателю,</p><p>{$contextName} има удоволствието да обяви "
@@ -148,6 +150,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Покана за рецензиране"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Уважаеми {$recipientName},</p><p>Вярвам, че бихте били отличен рецензент "
@@ -187,6 +190,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Молба за преглед на преработено подаване на ръкопис"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Уважаеми {$recipientName},</p><p>Благодарим ви за рецензията на <a href="
@@ -207,6 +211,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Заявката за рецензиране на статия е отменена"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -222,6 +227,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Можете ли все още да прегледате материала към {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Уважаема/и, {$recipientName},</p><p>Наскоро анулирахме молбата си да "
@@ -277,6 +283,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Напомняне с молба за завършване на вашата рецензия"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Уважаема/и {$recipientName}:</p><p>Този имейл е автоматично напомняне от "
@@ -338,6 +345,7 @@ msgstr ""
 "Изпратените материали {$submissionId} са подготвени за публикуване в "
 "{$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Уважаема/и, {$recipientName},</p><p>Ново изпращане е готово за "
@@ -615,6 +623,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Качена е коригирана версия"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "До редакторите:<br />\n"

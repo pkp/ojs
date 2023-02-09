@@ -32,12 +32,14 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 
 msgid "emails.issuePublishNotify.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 
@@ -57,6 +59,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 
@@ -69,18 +72,21 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -105,6 +111,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 
@@ -123,6 +130,7 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 
@@ -204,6 +212,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 

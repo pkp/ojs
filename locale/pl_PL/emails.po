@@ -86,6 +86,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Rejestracja recenzenta na stronie czasopisma {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Dodaliśmy Panią/ Pana do bazy recenzentów czasopisma \"{$contextName}\". "
@@ -111,6 +112,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nowy numer czasopisma"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Szanowni Państwo,</p><p>Ukazał się nowy numer czasopisma {$contextName}. "
@@ -260,6 +262,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Anulowanie prośby o wykonanie recenzji"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie,<br />\n"
@@ -274,6 +277,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Czy możesz wciąż recenzować dla {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Drogi {$recipientName},</p><p>Niedawno anulowaliśmy naszą prośbę o "
@@ -395,6 +399,7 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Zgłoszenie {$submissionId} jest gotowe do etapu produkcji w {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Drogi {$recipientName},</p><p>Nowe zgłoszenie jest gotowe do edycji "
@@ -666,6 +671,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Poprawiona wersja przesłana do systemu"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Szanowna Pani/ Szanowny Panie,<br />\n"

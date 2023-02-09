@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Înregistrarea ca evaluator pentru {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Având în vedere expertiza dvs., ne-am luat libertatea de a vă înregistra "
@@ -268,6 +269,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Cerere de revizuire anulată"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -674,6 +676,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versiunea revizuită a fost încărcată"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Pentru editori:<br />\n"

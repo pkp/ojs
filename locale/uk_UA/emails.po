@@ -76,6 +76,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Реєстрація рецензента видання {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "З огляду на Ваш досвід, ми взяли на себе сміливість внести Ваше ім'я до бази "
@@ -264,6 +265,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Запит на рецензування скасвано"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -684,6 +686,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Перероблена версія вивантажена"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"

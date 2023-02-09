@@ -74,6 +74,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Clàradh mar lèirmheasaiche aig {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Leis na tha de dh’eòlas agad, bha sinn cho dàna ’s gun do chlàraich sinn d’ "
@@ -264,6 +265,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Iarrtas airson lèirmheas air a chur gu neoini"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -699,6 +701,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Chaidh tionndadh lèirmheaste a luchdadh suas"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Deasaichean:<br />\n"

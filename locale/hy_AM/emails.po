@@ -82,6 +82,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Գրանցվել որպես գրախոս {$contextName} -ով"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Հաշվի առնելով ձեր փորձառությունը, մենք գրանցել ենք ձեր անունը {$contextName} "
@@ -106,6 +107,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Այժմ հասանելի է նոր թողարկում՝ {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Հարգելի ընթերցող,</p><p>{$contextName} -ը ուրախ է տեղեկացնել մեր վերջին "
@@ -147,6 +149,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Գրախոսման հրավեր"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},</p><p>Կարծում եմ, որ դուք հանդես կգաք որպես "
@@ -187,6 +190,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Գրախոսված ներկայացումը վերանայելու խնդրանք"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},</p><p>Շնորհակալություն այս գրախոսման համար <a "
@@ -209,6 +213,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Գրախոսման հարցումը չեղարկվել է"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -224,6 +229,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Դեռ կարո՞ղ եք ինչ-որ բան գրախոսել {$contextName} -ի համար:"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},</p><p>Մենք վերջերս չեղարկեցինք մեր խնդրանքը, "
@@ -279,6 +285,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Հիշեցում, խնդրում ենք լրացնել ձեր գրախոսությունը"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Հարգելի {$recipientName}:</p><p>Այս նամակը ինքնաշխատ հիշեցում է "
@@ -340,6 +347,7 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Ներկայացումը {$submissionId} պատրաստ է արտադրության {$contextAcronym} -ից"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},</p><p>Նոր ներկայացումը պատրաստ է դասավորության "
@@ -618,6 +626,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Վերանայված տարբերակը վերբեռնվեց"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Խմբագիրներ:<br />\n"

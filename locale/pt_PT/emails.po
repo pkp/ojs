@@ -84,6 +84,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registo como Revisor na revista {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Tendo em consideração o conhecimento excecional na sua área de investigação/"
@@ -110,6 +111,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Novo volume publicado: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Caro leitor,</p><p>A {$contextName} acaba de publicar o seu número mais "
@@ -150,6 +152,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Convite para revisão de artigo"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Caro(a) {$recipientName},</p><p>Acreditamos que o seu conhecimento será "
@@ -187,6 +190,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Pedido de revisão de uma submissão revista"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Caro(a) {$recipientName},</p><p>Obrigado pela sua revisão de <a href="
@@ -208,6 +212,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Pedido de revisão cancelado"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -222,6 +227,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Ainda está disponível para rever trabalhos para {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Caro(a) {$recipientName}, </p><p>Gostaríamos de convidá-lo(a) novamente "
@@ -274,6 +280,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Lembrete para conclusão de revisão"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Caro(a){$recipientName}:</p><p>Este email é um lembrete automático da "
@@ -331,6 +338,7 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "A submissão {$submissionId} está pronta para produção em {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Caro(a) {$recipientName},</p><p>Uma nova submissão está disponível para "
@@ -600,6 +608,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versão revista enviada"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Cara(o) Editor:<br />\n"
