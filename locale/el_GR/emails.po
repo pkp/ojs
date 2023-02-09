@@ -129,23 +129,6 @@ msgstr ""
 "Σας ευχαριστούμε για το ενδιαφέρον σας σχετικά με τις εκδόσεις μας,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Επιβεβαίωση υποβολής"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Αγαπητέ/η<br />\n"
-"<br />\n"
-"Ο/Η {$submitterName} έχει υποβάλει την εργασία &quot;{$submissionTitle}"
-"&quot; στο περιοδικό {$contextName}. <br />\n"
-"<br />\n"
-"Εάν έχετε ερωτήσεις, παρακαλούμε επικοινωνήστε μαζί μας. Σας ευχαριστούμε "
-"που θεωρήσατε το περιοδικό μας κατάλληλο για δημοσίευση της εργασίας σας."
-"<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Ανάθεση επιμέλειας"

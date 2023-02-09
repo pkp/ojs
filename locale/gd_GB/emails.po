@@ -114,22 +114,6 @@ msgstr ""
 "Mòran taing airson sìor ùidh a nochdadh nar n-obair,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Dearbhadh air tagradh"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Shin thu,<br />\n"
-"<br />\n"
-"Chuir {$submitterName} an sgrìobhainn “{$submissionTitle}” gu "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Ma tha ceist sam bith agad, cuir fios thugam. Mòran taing airson an t-iris-"
-"leabhar seo a thaghadh mar dhòigh foillseachaidh dha d’ obair.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Iomruineadh deasachaidh"

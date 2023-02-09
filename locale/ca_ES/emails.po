@@ -115,22 +115,6 @@ msgstr ""
 "Us agraïm l'interès per la nostra revista,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Confirmació de tramesa"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Hola,<br />\n"
-"<br />\n"
-"{$submitterName} ha tramès el manuscrit «{$submissionTitle}» a "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Si teniu cap pregunta, contacteu amb mi. Gràcies per tenir en compte aquesta "
-"publicació per desenvolupar la vostra feina.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Heu estat assignats com a editor/a en una tramesa per a {$contextName}"

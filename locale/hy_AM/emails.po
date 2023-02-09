@@ -117,19 +117,6 @@ msgstr ""
 "աշխատանքում իրենց արժեքավոր ներդրման համար, և մեր ընթերցողներին ձեր "
 "շարունակական հետաքրքրության համար:</p><p>Հարգանքով,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Ներկայացման հաստատում"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Հարգելի {$recipientName},</p><p>Դուք նշվել եք որպես {$contextName} -ի "
-"համահեղինակ։ Ներկայացնողը՝ {$submitterName}, տրամադրել է հետևյալ "
-"մանրամասները:</p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</"
-"p><p>Եթե այս մանրամասներից որևէ մեկը սխալ է, կամ չեք ցանկանում, որ ձեր "
-"անունը նշվի այս ներկայացման մեջ, խնդրում եմ կապվեք ինձ հետ:</"
-"p><p>Շնորհակալություն այս ամսագիրը որպես ձեր աշխատանքի վայր ընտրելու համար:</"
-"p><p>Հարգանքով,</p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Դուք նշանակվել եք որպես խմբագիր {$contextName} -ի ներկայացման համար"

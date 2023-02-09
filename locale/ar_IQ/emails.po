@@ -119,18 +119,6 @@ msgstr ""
 "المحكمين، والمحررين للإسهامهم القيم في هذا العمل، ولقرائنا لاهتمامهم المستمر "
 "بأعمالنا.</p><p>مع الاعتزاز،</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "تأكيد طلب التقديم"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>عزيزنا {$recipientName}،</p><p>لقد تمت تسميتك بمثابة مؤلف مشارك في طلب "
-"تقديم إلى {$contextName}. مقدم الطلب، {$submitterName}، أعطانا التفاصيل "
-"الآتية:</p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</p><p>إن كان "
-"أي من تلك التفاصل غير صحيح، أو ليست لديك الرغبة في تسميتك كمؤلف مشارك في هذا "
-"العمل، يرجى التواصل معي.</p><p>شكرًا لاعتبارك هذه المجلة مضمارًا لعملك.</"
-"p><p>أطيب التحايا،</p>{$contextSignature}"
-
 msgid "emails.editorAssign.subject"
 msgstr "لقد تم تعيينك كمحرر لطلب التقديم الموجه إلى {$contextName}"
 

@@ -122,22 +122,6 @@ msgstr ""
 "нашата работа,</p>\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Потврда за поднесување"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Почитувани,<br />\n"
-"<br />\n"
-"{$submitterName} го поднесе ракописот, &quot;{$submissionTitle}&quot; до "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Доколку имате било какви прашања, ве молам да ме контактирате. Ви "
-"благодариме што го земавте во предвид ова списание како место за вашата "
-"работа.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Бевте назначени како уредник на поднесок во {$contextName}"

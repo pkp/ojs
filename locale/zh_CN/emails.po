@@ -102,21 +102,6 @@ msgstr ""
 "感谢您持续地关注我们的作品，<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "投稿致谢函"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"您好,<br />\n"
-"<br />\n"
-"{$submitterName} 已将稿件 &quot;{$submissionTitle}&quot; 投稿给 "
-"{$contextName}. <br />\n"
-"<br />\n"
-"如果您有任何问题，请立即与我们联系。 感谢您考虑在本杂志出版您的作品。<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "指派编辑任务"

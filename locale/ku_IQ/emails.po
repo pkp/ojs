@@ -109,22 +109,6 @@ msgstr ""
 "سوپاس بۆ گرنگیدان بە کارەکانمان،<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "دانپێدانانی پێشکەشکردن"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"سڵاو،<br />\n"
-"<br />\n"
-"{$submitterName} ڕەشنوسی توێژینەوەکەی پێشکەش کرد, &quot;{$submissionTitle}"
-"&quot; بۆ{$contextName}. <br />\n"
-"<br />\n"
-"ئەگەر هەر پرسیارێکت هەیە، تکایە پەیوەندیم پێوە بکە. سوپاس بۆ هەڵبژاردنی "
-"گۆڤارەکەمان.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "ئەرکدارکردنی سەرنوسەر"

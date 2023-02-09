@@ -134,20 +134,6 @@ msgstr ""
 "<p>Grazie per l'interesse dimostratoci,</p>\n"
 "<p>{$signature}</p>"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Conferma di ricezione della proposta"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Gentilissimo {$recipientName}</p>\n"
-"<p>{$submitterName} ha aggiunto il suo nominativo in qualità di co-author "
-"del manoscritto \"{$submissionTitle}\" inviato per la pubblicazione alla "
-"rivista {$contextName}. </p>\n"
-"<p>questi sono i dettagli forniti: {$authorsWithAffiliation}</p>\n"
-"<p>Se non fossero corretti la prego di contattarci. Siamo a disposizione per "
-"qualsiasi chiarimento e la ringraziamo per la sua collaborazione.</p>\n"
-"<p>{$contextSignature}</p>"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""

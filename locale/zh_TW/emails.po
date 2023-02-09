@@ -50,12 +50,6 @@ msgstr ""
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "投稿確認"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "您被分配為投稿{$contextName}的編輯"

@@ -115,22 +115,6 @@ msgstr ""
 "Дякуємо, що продовжуєте цікавитись нашою роботою,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Подяка за подання рукопису"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Вітаємо,<br />\n"
-"<br />\n"
-"Користувач {$submitterName} подав рукопис, &quot;{$submissionTitle}&quot; "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Якщо у вас є якісь питання, будь ласка, зв'яжіться зі мною. Дякуємо, що "
-"розглянули цей журнал як місце для публікації вашої роботи.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Редакційне призначення"

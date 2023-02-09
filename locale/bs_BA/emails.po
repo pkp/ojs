@@ -115,12 +115,6 @@ msgstr ""
 "Hvala vam na interesu za naš rad,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr ""
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Dodjela uredničkog zaduženja"

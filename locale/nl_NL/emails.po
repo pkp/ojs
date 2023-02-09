@@ -112,22 +112,6 @@ msgstr ""
 "Dank voor uw interesse in ons werk,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Bevestiging van inzending"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Beste,<br />\n"
-"<br />\n"
-"{$submitterName} heeft het manuscript &quot;{$submissionTitle}&quot; "
-"ingezonden voor {$contextName}. <br />\n"
-"<br />\n"
-"Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen "
-"van dit tijdschrift als podium voor u werk.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Redactietaak"

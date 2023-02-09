@@ -111,12 +111,6 @@ msgstr ""
 "Eskerrik asko gure lana interesez jarraitzeagatik,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr ""
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Editore-lana esleitzea"

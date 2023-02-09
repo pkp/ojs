@@ -113,22 +113,6 @@ msgstr ""
 "Agradecemos o seu interese  pola nosa revista,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Xustificante de recepción do envío"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Ola,<br />\n"
-"<br />\n"
-"{$submitterName} enviou o manuscrito &quot;{$submissionTitle}&quot; a "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Se ten calquera pregunta, non dubide en contactar connosco. Agradecémoslle "
-"que pensase nesta revista para dar a coñecer o seu traballo.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Asignación editorial"

@@ -118,21 +118,6 @@ msgstr ""
 "njihov dragoc prispevek pri tem delu. </p><p>Hvala za zanimanje za naše delo,"
 "</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Potrditev oddaje prispevka"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Spoštovani {$recipientName},<br />\n"
-"<br />\n"
-"{$submitterName} je oddal rokopis &quot;{$submissionTitle}&quot; v revijo "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Če imate kakršnokoli vprašanje, se lahko obrnete name. Hvala, da ste izbrali "
-"našo revijo za objavo vašega dela.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 msgid "emails.editorAssign.subject"
 msgstr "Kot urednik ste bili dodeljeni na prispevek {$contextName}"
 

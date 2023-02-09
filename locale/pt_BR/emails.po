@@ -122,21 +122,6 @@ msgstr ""
 "trabalho, e aos nossos leitores por seu interesse contínuo.</"
 "p><p>{$contextUrl}</p><p>Atenciosamente,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Confirmação de submissão"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p>\n"
-"<br />\n"
-"<p>Você foi designado coautor em uma submissão ao periódico {$contextName}. "
-"O remetente, {$submitterName}, forneceu os seguintes detalhes:</"
-"p><p>{$submissionTitle}<br />{$authorsWithAffiliation}</p><p>Se algum desses "
-"detalhes estiver incorreto ou você não deseja ser designado nesta submissão, "
-"entre em contato conosco.</p><p>Agradecemos por considerar este periódico "
-"para publicar o seu trabalho.</p><br /><p>Atenciosamente,</"
-"p>{$contextSignature}"
-
 msgid "emails.editorAssign.subject"
 msgstr "Você foi designado como editor em uma submissão para {$contextName}"
 

@@ -127,17 +127,6 @@ msgstr ""
 "cet ouvrage, ainsi que nos lecteur.trice.s pour leur intérêt constant.</"
 "p><p>Cordialement,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Accusé de réception de la soumission"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Bonjour,</p><p>Le manuscrit intitulé , « {$submissionTitle} » , a été "
-"soumis par {$submitterName} à la revue {$contextName}.</p><p>Si vous avez "
-"des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions "
-"d'avoir pensé à la revue {$contextName} pour la publication de vos travaux.</"
-"p><p>Cordialement,</p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""

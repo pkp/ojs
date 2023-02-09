@@ -118,19 +118,6 @@ msgstr ""
 "autorům, recenzentům a redaktorům za jejich cenné příspěvky k tomuto dílu a "
 "našim čtenářům za váš trvalý zájem.</p><p>S pozdravem,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Potvrzení příspěvku"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Vážený/á {$recipientName}, byl/a jste uveden/a jako spoluautor/spoluautorka "
-"v příspěvku zaslaném do {$contextName}. Předkladatel, {$submitterName}, "
-"poskytl následující údaje:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>. Pokud jsou některé z těchto údajů "
-"nesprávné nebo si nepřejete být v tomto příspěvku uvedeni, kontaktujte mě "
-"prosím.</p><p>Děkuji, že zvažujete náš časopis jako místo pro publikaci své "
-"práce.</p><p>S pozdravem,</p>{$contextSignature}"
-
 msgid "emails.editorAssign.subject"
 msgstr "Byl /a jste přiřazen jako editor příspěvku pro {$contextName}"
 

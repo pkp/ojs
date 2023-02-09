@@ -124,19 +124,6 @@ msgstr ""
 "неоценимый вклад в эту работу, а наших читателей — за постоянный интерес к "
 "нашей работе.</p><p>С уважением,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Подтверждение отправки"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Здравствуйте, {$recipientName}!</p><p>Вы были указаны в качестве соавтора "
-"материала, направленного в журнал «{$contextName}». Отправитель, "
-"{$submitterName}, указал следующую информацию:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Если что-то в этой информации "
-"неправильно или Вы не хотите, чтобы Вас указывали в этом материале, "
-"пожалуйста, свяжитесь со мной.</p><p>Спасибо за выбор нашего журнала для "
-"публикации Вашей работы.</p><p>С уважением,</p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Вы были назначены редактором материала в журнале « {$contextName}»"

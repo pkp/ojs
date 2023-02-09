@@ -108,22 +108,6 @@ msgstr ""
 "از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "قدردانی برای ارسال مقاله"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"با سلام,<br />\n"
-"<br />\n"
-"مقاله {$submitterName} مقاله &quot;{$submissionTitle}&quot; را به مجله "
-"{$contextName} ارسال نمودند <br />\n"
-"<br />\n"
-"در صورت داشتن هر گونه سوالی با من تماس حاصل فرمایید. از اینکه نتیجه پژوهش "
-"خود را برای این مجله ارسال نمودید، سپاسگذاریم<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "تعیین کارشناس مسئول"

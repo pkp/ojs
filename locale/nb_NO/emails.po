@@ -121,20 +121,6 @@ msgstr ""
 "Takk for interessen du viser for arbeidet vårt.</p><p>Med vennlig hilsen</"
 "p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Bekreftelse på innlevering"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Kjære {$recipientName}</p><p>Du er angitt som medforfatter på et "
-"manuskript innsendt til {$contextName}. Innsenderen, {$submitterName}, har "
-"oppgitt følgende information:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Hvis noen av disse opplysningene er "
-"feil, eller du ikke ønsker å være angitt som medforfatter på dette "
-"manuskript, vær vennlig å kontakte mig.</p><p>Takk for at du vurderer dette "
-"tidsskrift til for arbeidet ditt.</p><p>Med vennlig hilsen</"
-"p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Du er oppnevnt til redaktør for en innlevering til {$contextName}"

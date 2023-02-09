@@ -121,18 +121,6 @@ msgstr ""
 "tak ternilai bernilai atas terbitan ini, dan kepada pembaca atau minatnya.</"
 "p><p>Salam hormat,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Konfirmasi pengiriman naskah"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Yth {$recipientName},</p><p>Nama Anda ditulis sebagai co-author pada "
-"nasakah {$contextName}. Pengirim, {$submitterName}, memberikan rincian "
-"berikut:</p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</p><p>Jika "
-"ada kekeliruan, atau tidak ingin nama Anda tercantum dalam naskah, silakan "
-"hubungi saya.</p><p>Terima kasih atas pertimbangannya memilih jurnal ini "
-"untuk menerbitkan karya Anda.</p><p>Salam Hormat,</p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Anda telah ditugaskan sebagai editor naskah pada {$contextName}"

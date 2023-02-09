@@ -119,22 +119,6 @@ msgstr ""
 "გმადლობთ, რომ დაინტერესდით ჩვენი ჟურნალით,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "გაგზავნის დადასტურება"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Hello,<br />\n"
-"<br />\n"
-"{$submitterName} has submitted the manuscript, &quot;{$submissionTitle}"
-"&quot; to {$contextName}. <br />\n"
-"<br />\n"
-"If you have any questions, please contact me. Thank you for considering this "
-"journal as a venue for your work..<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "რედაქტორის მიერ დანიშნული {$contextName}"

@@ -125,22 +125,6 @@ msgstr ""
 "Біздің жұмысқа қызығушылығыңыз үшін рахмет, <br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Жіберуді растау"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Сәлем!<br />\n"
-"<br />\n"
-"{$submitterName} пайдаланушысы «{$submissionTitle}» материалын "
-"«{$contextName}» журналына жіберді.<br />\n"
-"<br />\n"
-"Егер сізде сұрақтар туындаса, маған хабарласыңыз. Шығармаңызды жариялау үшін "
-"біздің журналды таңдағаныңызға рахмет.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Сіз {$contextName} жіберген кезде редактор болып тағайындалдыңыз"

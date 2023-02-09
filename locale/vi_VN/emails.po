@@ -121,22 +121,6 @@ msgstr ""
 "với các ấn phẩm của chúng tôi,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Xác nhận gửi bài"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Xin chào,<br />\n"
-"<br />\n"
-"{$submitterName} đã nộp bản thảo, &quot;{$submissionTitle}&quot; tới "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Nếu bạn có bất kỳ câu hỏi, xin vui lòng liên hệ với chúng tôi. Cảm ơn bạn đã "
-"coi tạp chí này là công bố nghiên cứu của bạn.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Bạn đã được chỉ định là người biên tập cho bài gửi {$contextName}"

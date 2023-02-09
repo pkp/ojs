@@ -120,21 +120,6 @@ msgstr ""
 "godnymi zainteresowania, które znajdziecie na naszej stronie. </"
 "p><p>Dziękujemy za zainteresowanie działalnością czasopisma.</p> {$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Potwierdzenie zgłoszenia tekstu"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Szanowny Panie/Szanowna Pani,<br />\n"
-"<br />\n"
-"użytkownik o nazwie {$submitterName} zgłosił tekst \"{$submissionTitle}\" do "
-"czasopisma \"{$contextName}\". <br />\n"
-"<br />\n"
-"W razie dodatkowych pytań proszę o kontakt. Dziękujemy za zgłoszenie.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Zostałeś przypisany jako redaktor do zgłoszenia w {$contextName}"

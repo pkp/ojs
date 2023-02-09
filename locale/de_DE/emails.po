@@ -117,22 +117,6 @@ msgstr ""
 "Danke für das andauernde Interesse an unserer Arbeit,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Eingangsbestätigung"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Liebe/r Autor/in,<br />\n"
-"<br />\n"
-"{$submitterName} hat das Manuskript &quot;{$submissionTitle}&quot; bei "
-"{$contextName} eingereicht. <br />\n"
-"<br />\n"
-"Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr "
-"Interesse an einer Veröffentlichung in unserer Zeitschrift.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Zuweisung an Rubrikredakteur/in"

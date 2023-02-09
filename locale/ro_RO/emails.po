@@ -122,23 +122,6 @@ msgstr ""
 "contribuțiile lor valoroase la acest număr, precum și cititorilor noștri "
 "pentru interesul dvs. constant.</p><p>Cu stimă,</p>{$semnatura}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Confirmarea înregistrării manuscrisului"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Buna ziua,<br />\n"
-"<br />\n"
-"{$submitterName} a depus manuscrisul, &quot;{$submissionTitle}&quot; la "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Dacă aveți întrebări, vă rugăm să ne contactați. Vă mulțumim pentru că ați "
-"considerat acest jurnal un loc de desfășurare a activității dumneavoastră."
-"<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Ai fost desemnat ca editor pentru un manuscris către {$contextName}"

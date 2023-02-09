@@ -117,22 +117,6 @@ msgstr ""
 "引き続きよろしくお願いいたします。<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "投稿のお礼"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"拝啓<br />\n"
-"<br />\n"
-"{$submitterName}が雑誌『{$journalName}』に原稿「{$contextName}」をご投稿され"
-"ました。 <br />\n"
-"<br />\n"
-"何かご不明な点がございましたら、ご連絡ください。研究成果の発表の場として、本"
-"誌をご検討いただき、誠にありがとうございました。<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "セクション編集者任命のお知らせ"

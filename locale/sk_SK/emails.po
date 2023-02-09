@@ -111,22 +111,6 @@ msgstr ""
 "Ďakujeme za Váš dlhodobý záujem o našu prácu,<br />\n"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Poďakovanie za príspevok"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Dobrý deň,<br />\n"
-"<br />\n"
-"{$submitterName} nahral rukopis, &quot;{$submissionTitle}&quot; do časopisu "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Ak máte nejaké otázky, kontaktujte ma, prosím. Ďakujeme vám za využívanie "
-"nášho príspevku pre vaše práce.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Editorská úloha"

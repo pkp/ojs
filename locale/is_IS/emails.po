@@ -116,19 +116,6 @@ msgstr ""
 "fyrir þinn áhuga á að fylgjast með tímaritinu. </p><p>Með kærri kveðju,</"
 "p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Staðfesting á innsendingu"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Komdu sæl(l/t) {$recipientName},</p><p>Þú hefur verið tilgreind(ur/t) sem "
-"meðhöfundur á innsendingu greinar/efnis í {$contextName}.  Sendandinn, "
-"{$submitterName}, skráði eftirfarandi upplýsingar:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Vinsamlega hafðu samband ef eitthvað af "
-"þessu er rangt, eða ef þú vilt ekki vera tilgreind(ur/t) á þessari "
-"innsendingu.</p><p> Annars þökkum við fyrir áhuga ykkar á að birta verk "
-"ykkar í tímaritinu okkar.</p><p>Kærar kveðjur,</p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Þér hefur verið úthlutað sem ritstjóra á innsendingu í  {$contextName}"

@@ -99,21 +99,6 @@ msgstr ""
 "<p>Sincerely,</p>"
 "{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Submission confirmation"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Dear {$recipientName},</p>"
-"<p>You have been named as a co-author on a submission to {$contextName}. The submitter, {$submitterName}, provided the "
-"following details:</p>"
-"<p>{$submissionTitle}<br>"
-"{$authorsWithAffiliation}</p>"
-"<p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p>"
-"<p>Thank you for considering this journal as a venue for your work.</p>"
-"<p>Kind regards,</p>"
-"{$contextSignature}"
-
 msgid "emails.editorAssign.subject"
 msgstr "You have been assigned as an editor on a submission to {$contextName}"
 

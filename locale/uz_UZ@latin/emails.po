@@ -122,20 +122,6 @@ msgstr ""
 "asarga qo'shgan qimmatli hissalari uchun va doimiy qiziqish uchun "
 "o'quvchilarimizga katta rahmat.</p><p>Hurmat bilan,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Taqdim etishni tasdiqlash"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Hurmatli {$recipientName},</p><p>Siz {$contextName} ga yuborilgan xabarda "
-"hammuallif sifatida nom oldingiz. Yuboruvchi {$submitterName} quyidagi "
-"ma’lumotlarni taqdim etdi:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Agar bu ma’lumotlardan birortasi "
-"noto‘g‘ri bo‘lsa yoki siz noto‘g‘ri bo‘lsangiz ushbu arizada o‘z nomini "
-"qo‘shishni istasangiz, men bilan bog‘laning.</p><p>Ushbu jurnalni ish "
-"joyingiz sifatida ko‘rganingiz uchun tashakkur.</p><p>Hurmat bilan,</"
-"p>{$contextSignature}"
-
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "Siz {$contextName} ga yuborilgan muharrir sifatida tayinlangansiz"

@@ -119,19 +119,6 @@ msgstr ""
 "ценен принос към тази работа, както и на нашите читатели за продължаващия ви "
 "интерес.</p><p>С уважение,</p>{$signature}"
 
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Потвърждение за подаване"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Уважаеми {$recipientName},</p><p>Вие сте посочени като съавтор на "
-"изпратени материали до {$contextName}. Подателят, {$submitterName}, "
-"предостави следните подробности:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Ако някоя от тези подробности е "
-"неправилна или вие не желаете да бъдете посочен в тези материали, моля, "
-"свържете се с мен.</p><p>Благодарим ви, че смятате това списание за място за "
-"вашата работа.</p><p>Сърдечни поздрави,</p>{$contextSignature}"
-
 msgid "emails.editorAssign.subject"
 msgstr "Бяхте асоцииран като редактор за подаден ръкопис към {$contextName}"
 
