@@ -204,9 +204,17 @@ class ManualPaymentPlugin extends PaymethodPlugin
     /**
      * Add mailable to the list of mailables in the application
      */
-    public function addMailable(string $hookName, array &$args): void
+    public function addMailable(string $hookName, array $args): void
     {
-        $args[0][] = ManualPaymentNotify::class;
+        $args[0]->push(ManualPaymentNotify::class);
+    }
+
+    /**
+     * @copydoc Plugin::getInstallMigration()
+     */
+    public function getInstallMigration()
+    {
+        return new ManualPaymentEmailDataMigration($this);
     }
 }
 
