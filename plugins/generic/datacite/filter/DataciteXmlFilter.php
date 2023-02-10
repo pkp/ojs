@@ -340,10 +340,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $titles = $galleyFile->getData('name');
                 break;
             case isset($publication):
-                $titles = array_map(
-                    fn ($pubTitle) => htmlspecialchars($pubTitle, ENT_QUOTES, 'UTF-8'),
-                    $publication->getTitles('html')
-                );
+                $titles = $publication->getTitles();
                 break;
             case isset($issue):
                 $titles = $this->getIssueInformation($issue);
@@ -919,10 +916,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             ->getMany();
 
         $toc = '';
-        foreach ($submissions as $submissionInIssue) {
-            $currentEntry = $this->getPrimaryTranslation($submissionInIssue->getTitle(null), $objectLocalePrecedence);
+        foreach ($submissions as $submissionInIssue) { /** @var Submission $submissionInIssue */
+            $currentEntry = $this->getPrimaryTranslation(
+                $submissionInIssue->getCurrentPublication()?->getLocalizedTitle(null) ?? '',
+                $objectLocalePrecedence
+            );
             assert(!empty($currentEntry));
-            $pages = $submissionInIssue->getPages();
+            $pages = $submissionInIssue?->getCurrentPublication()?->getData('pages') ?? '';
             if (!empty($pages)) {
                 $currentEntry .= '...' . $pages;
             }
