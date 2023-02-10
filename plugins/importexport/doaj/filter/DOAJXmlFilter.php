@@ -16,6 +16,8 @@ namespace APP\plugins\importexport\doaj\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\publication\Publication;
+use APP\submission\Submission;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\i18n\LocaleConversion;
@@ -69,8 +71,8 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
         $rootNode = $this->createRootNode($doc);
         $doc->appendChild($rootNode);
 
-        foreach ($pubObjects as $pubObject) {
-            $publication = $pubObject->getCurrentPublication();
+        foreach ($pubObjects as $pubObject) { /** @var Submission $pubObject */
+            $publication = $pubObject->getCurrentPublication(); /** @var Publication $publication */
             $issueId = $publication->getData('issueId');
             if ($cache->isCached('issues', $issueId)) {
                 $issue = $cache->get('issues', $issueId);
@@ -145,7 +147,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 $recordNode->appendChild($node = $doc->createElement('documentType', htmlspecialchars($type, ENT_COMPAT, 'UTF-8')));
             }
             // Article title
-            $articleTitles = (array) $publication->getData('title');
+            $articleTitles = $publication->getTitles();
             if (array_key_exists($publication->getData('locale'), $articleTitles)) {
                 $titleInArticleLocale = $articleTitles[$publication->getData('locale')];
                 unset($articleTitles[$publication->getData('locale')]);
