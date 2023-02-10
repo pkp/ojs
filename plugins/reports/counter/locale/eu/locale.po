@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2020-06-18 16:39+0000\n"
+"Last-Translator: Aitor Cuartango Berrendo <aitor.cuartango@ehu.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/eu/>\n"
+"Language: eu_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"COUNTER pluginak webgunearen jarduera erregistratzen du eta <a href=\"http://"
+"www.projectcounter.org\">COUNTER</a> moduko txostena ematen du. Txosten "
+"hauek ez dute aldizkaria COUNTER estandarrekin ados egiten. COUNTER "
+"estandarrak jarraitzeko begiratu COUNTER web horrian."
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER estatistikak"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER bertsioa"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Txostenaren parametroak ez ziren baliozkoak."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Txosten eskaria ez da bailozkoa."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Ez dira aurkitu txosten horren emaitzak."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Emaitzak ezin dira XML-ra formateatu."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr ""
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr ""
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr ""
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr ""
+
+#~ msgid "plugins.reports.counter.migrate"
+#~ msgstr "Migratu log-fitxategia"

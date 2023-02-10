@@ -1,0 +1,171 @@
+# Gints Buda <gints.buda@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-30 10:01+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv_LV/"
+">\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Izvietotie Žurnāli"
+
+msgid "admin.settings.redirect"
+msgstr "Žurnāla pāradresēšana"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Atzīmētās lokalizācijas var būt nepilnīgas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Vai esat drošs, ka vēlaties noņemt šo lokalizāciju? Tas var ietekmēt visus "
+"izvietotos žurnālus, kas pašlaik izmanto šo lokalizāciju."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+
+msgid "admin.systemVersion"
+msgstr "OJS Versija"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS Konfigurācija"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS konfigurācijas iestatījumi no <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Jūs automātiski tiksiet reģistrēts kā šī žurnāla pārvaldnieks. Pēc jauna "
+"žurnāla izveides jūs tiksiet novirzīts uz tā iestatījumu vedni, lai pabeigtu "
+"sākotnējo žurnāla iestatīšanu."
+
+msgid "admin.journals.journalSettings"
+msgstr "Žurnāla Iestatījumi"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nav neviena izveidota žurnāla."
+
+msgid "admin.contexts.create"
+msgstr "Izveidot Žurnālu"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+
+msgid "admin.contexts.form.titleRequired"
+msgstr ""
+
+msgid "admin.contexts.form.pathRequired"
+msgstr ""
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr ""
+
+msgid "admin.contexts.contextDescription"
+msgstr "Žurnāla apraksts"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+
+msgid "admin.journals.importSubscriptions"
+msgstr ""
+
+msgid "admin.journals.transcode"
+msgstr ""
+
+msgid "admin.journals.redirect"
+msgstr ""
+
+msgid "admin.journals.form.importPathRequired"
+msgstr ""
+
+msgid "admin.journals.importErrors"
+msgstr ""
+
+msgid "admin.mergeUsers"
+msgstr "Apvienot lietotājus"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Pievienot lietotāju"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Visi reģistrētie lietotāji"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nav reģistrēto lietotāju."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr ""
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr ""
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr ""
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
+msgid "admin.siteManagement.description"
+msgstr ""
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""

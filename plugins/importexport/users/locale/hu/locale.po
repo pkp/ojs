@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-21 11:36+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/hu/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "XML Plugin Felhasználókhoz"
+
+msgid "plugins.importexport.users.description"
+msgstr "Felhasználók importálása és exportálása"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Használata: {$scriptName} {$pluginName} [command] ...\n"
+"Parancsok:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Példák:\n"
+"\tFelhasználók importálása ide myJournal innen myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tMinden felhasználó exportálása innen myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tFelhasználók exportálása ID segítségével:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Felhasználók importálása"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Válasszon ki egy - ebbe a folyóiratba importálandó - XML adatfájlt, amely felhasználóinformációkat tartalmaz. Nézze meg a folyóiratsúgót a részletekért, e fájl formátumával kapcsolatban.<br /><br />Ne feledje, hogy ha az importált fájl tartalmazza a rendszerben már létező felhasználóneveket vagy e-mail címeket, akkor a felhasználók felhasználói adatai nem kerülnek importálásra, és a meglévő felhasználókhoz semmilyen új szerepkört nem hoznak létre."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Felhasználói adatfájl"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Küldjön értesítési e-mailt minden importált felhasználónak, amely tartalmazza a felhasználó felhasználónevét és jelszavát."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Folytassa a többi felhasználó importálását akkor is, ha hiba történik."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "A következő felhasználók lettek sikeresen importálva a rendszerbe"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Hiba történt az import során"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Erősítse meg, hogy valóban ezeket a felhasználókat szeretné importálni a rendszerbe"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Figyelmeztetés"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Nem használhatóak jelszavak ezzel a hash-sel {$importHash}; az OJS ezt a hasht használja {$ojsHash}. Ha folytatja, akkor az importált felhasználók jelszavát újra meg kell határozni."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Ismeretlen folyóiratútvonal \"{$journalPath}\" lett megadva."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Felhasználók exportálása"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Export szerepkör alapján"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Az összes exportálása"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Hiba történt az exportálás során"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "Az import sikeresen megtörtént. Felhasználók olyan felhasználónévvel és e-mail címmel, amelyek nincsenek használatban exportálva lettek, a kapcsolódó felhasználói csoportokkal együtt."
+
+msgid "plugins.importexport.users.results"
+msgstr "Eredmények"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Kérjük, töltsön fel egy fájlt az \"Import\" alatt, a folytatáshoz."

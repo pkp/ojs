@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-11 13:21+0000\n"
+"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"recommendBySimilarity/da/>\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Anbefal lignende artikler"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Denne plugin tilføjer en liste med artikler, der svarer til artiklens "
+"resuméside."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Tilsvarende artikler"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Du kan også {$advancedSearchLink} til denne artikel."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "start en avanceret lighedssøgning"

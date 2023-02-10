@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-09 18:14+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/themes-"
+"default/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.name"
+msgstr "მოდული „ნაგულისხმევი თემა“"
+
+msgid "plugins.themes.default.description"
+msgstr "უზრუნველყოფს ნაგულისხმევ გაფორმებას."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "ტიპოგრაფიკა"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "აირჩიეთ შრიფტების კომბინაცია, რომელიც მოუხდება ამ ჟურნალს."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: ეკრანული შრიფტი, შექმნილია Google-ის მიერ, ენების ფართო სპექტრის "
+"მხარდასაჭერად."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: ანიტკვა, Google-ის ეკრანული შრიფტი სერიფით."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: შრიფტების ურთიერთშემავსებელი წყვილი ანიტკვა სათაურებით "
+"და გროტესკით აკრეფილი ტექსტით."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: შრიფტების ურთიერთშემავსებელი წყვილი გროტესკი "
+"სათაურებით და ანიკვათი აკრეფილი ტექსტით."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: პოპულარული, თანამედროვე გროტესკი."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: ფართო ანტიკვა, მოსახერხებელია ეკრანიდან საკითხავად."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: შრიფტების ურთიერთშემავსებელი წყვილი ანიტკვა სათაურებით და "
+"გროტესკით აკრეფილი ტექსტით."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "ფერი"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "აირჩიეთ ფერი ზედა კოლონტიტულისათვის."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "ჟურნალის შესახებ მოკლე ინფორმაციის ჩვენება მთავარ გვერდზე."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "ზედა კოლონტიტულის ფონური სურათი"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"მთავარი გვერდის სურათის ატვირთვის შემდგომ, ეს სურათი გამოჩნდეს, როგორც ზედა "
+"კოლონტიტულის ფონი და არა უბრალოდ სურათი მთავარ გვერდზე."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "მთავარი გვერდის სურათის ზედა კოლონტიტულის ფონად ჩვენება."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr ""

@@ -1,0 +1,43 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-09 11:05+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"subscription/uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Obuna blokirovkasi"
+
+msgid "plugins.block.subscription.description"
+msgstr "Bu plagin yon paneldagi obuna ma'lumotlarini beradi."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Obuna"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Muddati tugaydi"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Kirish: {$ institutName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Kirish: {$ ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Obunalar"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Faqat abonent resurslariga kirish uchun tizimga kiring."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Ba'zi manbalarga kirish uchun obuna kerak."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Batafsil ma'lumot"

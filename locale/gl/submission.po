@@ -1,0 +1,396 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-06-18 10:03+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Enviar na meu rol de..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecione o compoñente do artigo"
+
+msgid "submission.title"
+msgstr "Título do artigo"
+
+msgid "submission.title.tip"
+msgstr ""
+"O tipo de envío adoita ser de \"imaxe\", \"texto\" ou outros tipos "
+"multimedia, incluído \"software\" ou \"interactivo\". Escolla o máis "
+"relevante para a súa presentación. Pódense atopar exemplos en <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/12/04/2001/usageguide/"
+"generic.shtml # type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Comezar un novo envío en"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Novo envío"
+
+msgid "grid.action.workflow"
+msgstr "Fluxo de traballo do envío"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "O resumo deberá ter un máximo de {$wordCount} palabras."
+
+msgid "submission.submit.noContext"
+msgstr "Non se puido atopar este envío."
+
+msgid "submission.issueEntry"
+msgstr "Metadatos"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"A revista recibiu unha notificación do teu envío e recibiches por correo "
+"electrónico unha confirmación dos teus rexistros. Unha vez que o editor "
+"revise o envío, porase en contacto contigo."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "A galerada aparece na entrada do número"
+
+msgid "grid.action.issueEntry"
+msgstr "Ver os metadatos deste envío"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "A galerada do artigo \"{$galleyFormatName}\" xa está dispoñibel."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "A galerada do artigo \"{$galleyFormatName}\" xa non está dispoñibel."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Actualizáronse os identificadores públicos do envío."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formato aprobado"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>Esta galerada <em>xa non estará dispoñible</em> para os lectores. </p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Esta galerada <em>estará dispoñible</em> para os lectores.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Fai esta galerada dispoñible"
+
+msgid "submission.galleyFiles"
+msgstr "Arquivos da galerada"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"O maquetador/a carga aquí os arquivos de produción que se prepararon para a "
+"súa publicación. Use <em>Asignar auditor/a</em> para designar autores/as e "
+"outros/as que revisen as galeradas, cos ficheiros corrixidos cargados para a "
+"súa aprobación antes da publicación."
+
+msgid "grid.action.approveProof"
+msgstr "Aceptar esta proba para a súa inclusión na galerada."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Esta proba aceptouse para a súa inclusión na galerada."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Título e resumo"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Cargue os arquivos asociados a este envío, incluído o artigo, elementos "
+"multimedia, conxuntos de datos, ilustracións, etc."
+
+msgid "submission.pageProofs"
+msgstr "Correción de probas"
+
+msgid "workflow.review.externalReview"
+msgstr "Revisión"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Actualizáronse os metadatos do número."
+
+msgid "submission.upload.fileContents"
+msgstr "Compoñente do artigo"
+
+msgid "submission.complete"
+msgstr "Aprobado"
+
+msgid "submission.incomplete"
+msgstr "Agardando aprobación"
+
+#, fuzzy
+msgid "submission.submit.submissionChecklist"
+msgstr "Lista de verificación do envío"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaración de privacidade"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rol de colaborador"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Non se puido recuperar o formato de cita solicitado."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Estas especificacións están baseadas no conxunto de metadatos Dublin Core, "
+"un estándar internacional usado para describir o contido da revista."
+
+msgid "section.any"
+msgstr "Calquera sección"
+
+msgid "submission.sectionOptions"
+msgstr "Opcións da sección"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} elementos"
+
+msgid "catalog.category.heading"
+msgstr "Tódolos elementos"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"As galeradas desta publicación non se poden editar porque xa se publicou."
+
+msgid "galley.publicationNotFound"
+msgstr "Non se puido atopar a publicación desta galerada."
+
+msgid "publication.assignToissue"
+msgstr "Asignar ao número"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Isto foi asignado a <a href=\"{$issueUrl}\">{$issueName}</a> pero non foi "
+"programado para a súa publicación."
+
+msgid "publication.changeIssue"
+msgstr "Cambiar número"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"A data de publicación establecerase automaticamente cando se publique o "
+"número. Non introduza unha data de publicación a menos que o artigo se "
+"publicase previamente noutro lugar e necesite actualizalo."
+
+msgid "publication.invalidSection"
+msgstr "Non se puido atopar a sección desta publicación."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactiva)"
+
+msgid "publication.invalidIssue"
+msgstr "Non se puido atopar o número desta publicación."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Cumpríronse todos os requisitos de publicación. Seguro que queres publicar "
+"isto?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Cumpríronse todos os requisitos de publicación. Isto publicarase cando se "
+"publique {$issue}. Seguro/a que queres programar esta publicación?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Cumpríronse todos os requisitos de publicación. Isto publicarase "
+"inmediatamente en {$issue}. Seguro que queres publicar isto?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Cumpríronse todos os requisitos de publicación. Isto publicarase "
+"inmediatamente porque a data de publicación estableceuse en "
+"{$datePublished}. Seguro que queres publicar isto?"
+
+msgid "publication.required.issue"
+msgstr ""
+"A publicación debe asignarse a un número antes de que poida ser publicada."
+
+msgid "publication.publishedIn"
+msgstr "Publicado en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Programado para a súa publicación en <a href=\"{$issueUrl}\">{$issueName}</"
+"a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Non se programou a publicación nun número."
+
+msgid "publication.selectIssue"
+msgstr "Selecciona un número para programar a súa publicación"
+
+msgid "submission.publication"
+msgstr "Publicación"
+
+msgid "publication.status.published"
+msgstr "Publicado"
+
+msgid "submission.status.scheduled"
+msgstr "Programado"
+
+msgid "publication.status.unscheduled"
+msgstr "Non programado"
+
+msgid "submission.publications"
+msgstr "Publicacións"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"O ano dos dereitos de autor establecerase automaticamente cando se publique "
+"nun número."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"O ano de copyright establecerase automaticamente en función da data de "
+"publicación."
+
+msgid "publication.datePublished"
+msgstr "Data de publicación"
+
+msgid "publication.editDisabled"
+msgstr "Esta versión xa publicouse e non se pode editar."
+
+msgid "publication.event.published"
+msgstr "O envío foi publicado."
+
+msgid "publication.event.scheduled"
+msgstr "O envío foi programado para a súa publicación."
+
+msgid "publication.event.unpublished"
+msgstr "O envío foi retirado da publicación."
+
+msgid "publication.event.versionPublished"
+msgstr "Publicouse unha nova versión."
+
+msgid "publication.event.versionScheduled"
+msgstr "Unha nova versión foi programada para a súa publicación."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Eliminouse unha versión de publicación."
+
+msgid "publication.invalidSubmission"
+msgstr "Non se puido atopar o envío desta publicación."
+
+msgid "publication.publish"
+msgstr "Publicar"
+
+msgid "publication.publish.requirements"
+msgstr "Para poder publicar isto débense cumprir os seguintes requisitos."
+
+msgid "publication.required.declined"
+msgstr "Non se pode publicar un envío rexeitado."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"O envío debe estar nas fases de redacción ou produción antes de que poida "
+"ser publicado."
+
+msgid "submission.license.description"
+msgstr ""
+"A licenza establecerase automaticamente en <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> cando se publique."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"O copyright asignarase automaticamente a {$copyright} cando se publique."
+
+msgid "submission.copyrightOther.description"
+msgstr "Asigna dereitos de autor para os envíos publicados á seguinte parte."
+
+msgid "publication.unpublish"
+msgstr "Anular a publicación"
+
+msgid "publication.unpublish.confirm"
+msgstr "Seguro/a que non queres que se publique?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Estás seguro/a de que non queres que isto se publique?"
+
+msgid "publication.version.details"
+msgstr "Detalles da publicación da versión {$version}"
+
+msgid "submission.queries.production"
+msgstr "Discusións de produción"
+
+msgid "editor.submission.decision.backToReview"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Requírese polo menos un autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Insira o título do seu artigo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Introduza o resumo do seu artigo."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"O teu resumo é demasiado longo. Axústao por debaixo do límite de palabras "
+"indicado para esta sección."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecciona o rol do colaborador."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Enviar a revisión"

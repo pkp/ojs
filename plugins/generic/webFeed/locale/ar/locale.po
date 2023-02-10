@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:32+00:00\n"
+"PO-Revision-Date: 2020-06-14 15:53+0000\n"
+"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-webFeed/ar_IQ/>\n"
+"Language: ar_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "إضافة مغذي الإنترنت"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "هذه الإضافة تولد مغذيات الإنترنت RSS/Atom الخاصة بالعدد الحالي من المجلة."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "الإعدادات"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "إعرض روابط المغذي فقط على صفحات العدد."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr "إعرض روابط المغذي فقط على الصفحة الرئيسية وعلى صفحات العدد."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "إعرض روابط المغذي في جميع صفحات المجلة."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "إعرض فقرات الإصدار الحالي من المجلة."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "إعرض عدداً محدداً من الفقرات الأكثر حداثة."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "عدد الفقرات المراد عرضها"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "لطفاً، أدخل رقماً صحيحاً موجباً يمثل عدد الفقرات المنشورة الأخيرة."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "شعار Atom"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "شعار RSS1"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "شعار RSS2"

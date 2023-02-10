@@ -1,0 +1,483 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-07-15 20:43+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"hy_AM/>\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.4.2\n"
+
+msgid "editor.home"
+msgstr "Խմբագրի տուն"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Ներկայացումներ և հրապարակում"
+
+msgid "editor.submissionQueue"
+msgstr "Ներկայացման հերթ"
+
+msgid "editor.submissionArchive"
+msgstr "Ներկայացման արխիվ"
+
+msgid "editor.publishing"
+msgstr "Հրատարակություն"
+
+msgid "editor.publishedIssues"
+msgstr "Հրատարակված թողարկում"
+
+msgid "editor.allSections"
+msgstr "Բոլոր բաժինները"
+
+msgid "editor.allEditors"
+msgstr "ոլոր խմբագիրները"
+
+msgid "editor.me"
+msgstr "Ես"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"'{$publicIdentifier}' հանրային նույնացուցիչն արդեն գոյություն ունի մեկ այլ "
+"օբյեկտի համար (թողարկում, հոդված, շարվածք կամ նիշք): Խնդրում ենք ընտրել "
+"եզակի նույնացուցիչներ ձեր օրագրում:"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Արխիվում ներկայացումներ չկան:"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Պահե՞լ փոփոխությունները արխիվացված հայտերում: Ջնջման համար նշված հայտերը "
+"ընդմիշտ կջնջվեն համակարգից:"
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Վստա՞հ եք, որ ցանկանում եք արձանագրել այս որոշումը:"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Այս ներկայացումը կարխիվացվի այն բանից հետո, երբ կուղարկվի «Ծանուցել "
+"հեղինակին» էլ. նամակը, կա՛մ երբ սեղմված է «Չուղարկել էլ․ նամակը» կոճակը:"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Նախքան գրական խմբագրությանը ներկայացում ուղարկելը, օգտագործեք \"Տեղեկացնել "
+"հեղինակին\" հղումը՝ որոշման մասին տեղեկացնելու հեղինակին և ընտրեք ուղարկվող "
+"տարբերակը:"
+
+msgid "editor.notifyUsers"
+msgstr "Տեղեկացնել օգտատերերին"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Բոլոր ընթերցողները ({$count} օգտվող)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Բոլոր հրապարակված հեղինակները ({$count} օգտվող)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Բոլոր անհատական բաժանորդները ({$count} օգտվող)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Բոլոր ինստիտուցիոնալ բաժանորդները ({$count} օգտվողներ)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Օգտատերերի ծանուցում..."
+
+msgid "editor.usersNotified"
+msgstr "Օգտվողները ծանուցված են"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Ուղարկեք այս հաղորդագրությունը այս ամսագրի հետ կապված բոլոր օգտվողներին "
+"({$count} օգտվող)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Ուղարկեք այս հաղորդագրությունը այս ամսագրի հետ կապված օգտվողներին, ովքեր "
+"նշել են, որ ցանկանում են ստանալ թարմացումները ({$count} օգտվող)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Ներառեք այս թողարկման համար բովանդակությունը:"
+
+msgid "editor.editorAdministration"
+msgstr "Խմբագրի ադմինիստրացիա"
+
+msgid "editor.issues.createIssue"
+msgstr "Ստեղծել թողարկում"
+
+msgid "editor.issues.editIssue"
+msgstr "Թողարկման կառավարում. {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Ընթացիկ թողարկումը"
+
+msgid "editor.issues.numArticles"
+msgstr "Նյութեր"
+
+msgid "editor.issues.noArticles"
+msgstr "Այս թողարկման համար ոչ մի նյութ ներկայումս նախատեսված չէ:"
+
+msgid "editor.issues.confirmDelete"
+msgstr "Իսկապե՞ս ուզում եք ընդմիշտ ջնջել այս թողարկումը:"
+
+msgid "editor.issues.published"
+msgstr "Հրապարակված"
+
+msgid "editor.issues.unpublished"
+msgstr "Չհրապարակված"
+
+msgid "editor.issues.datePublished"
+msgstr "Հրապարակման ամսաթիվ"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Հատորը պարտադիր է և պետք է լինի դրական, թվային արժեք:"
+
+msgid "editor.issues.numberRequired"
+msgstr "Համարը պարտադիր է և պետք է լինի դրական, թվային արժեք:"
+
+msgid "editor.issues.yearRequired"
+msgstr "Տարին պարտադիր է և պետք է լինի դրական, թվային արժեք:"
+
+msgid "editor.issues.titleRequired"
+msgstr "Թողարկման համար անհրաժեշտ է վերնագիր:"
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Թողարկման նույնականացում է պահանջվում: Խնդրում ենք ընտրել թողարկման "
+"նույնականացման տարբերակներից առնվազն մեկը:"
+
+msgid "editor.issues.issueIdentification"
+msgstr "Թողարկման նույնականացում"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Թողարկման հանրային նույնացուցիչ"
+
+msgid "editor.issues.description"
+msgstr "Նկարագրություն"
+
+msgid "editor.issues.accessStatus"
+msgstr "Մուտքի կարգավիճակը"
+
+msgid "editor.issues.accessDate"
+msgstr "Բաց մատչելիության ամսաթիվը"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Միացնել հետաձգված բաց մատչելիությունը"
+
+msgid "editor.issues.coverPage"
+msgstr "Կազմի պատկեր"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Թույլատրված ձևաչափեր: .gif, .jpg, կամ .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Վերբեռնել"
+
+msgid "editor.issues.remove"
+msgstr "Հեռացնել"
+
+msgid "editor.issues.proofed"
+msgstr "Ստուգված"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Հեռացնե՞լ շապիկի պատկերը:"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Շապիկի պատկերը, որը դուք խնդրել եք ջնջել, համընկնում է մեկ այլ ամսագրի "
+"համարի հետ: Խնդրում ենք համոզվել, որ աշխատում եք ճիշտ ամսագրի հետ, "
+"օգտագործում եք ճիշտ թողարկման ID և նորից փորձեք:"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Շապիկի պատկերը, որը դուք խնդրել եք ջնջել, չի համընկնում այս համարի շապիկի "
+"պատկերին: Խնդրում ենք վերաբեռնել էջը և նորից փորձել:"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Շապիկի պատկերը, որը դուք խնդրել եք ջնջել, չի գտնվել: Հնարավոր է՝ այն արդեն "
+"ջնջված է։ Փորձեք վերաբեռնել էջը:"
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Շապիկի էջի անվավեր ձևաչափ: Ընդունված ձևաչափերն են .gif, .jpg կամ .png:"
+
+msgid "editor.issues.styleFile"
+msgstr "Ոճաթերթ"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Անվավեր ոճի ձևաչափ: Համոզվեք, որ ներկայացված նիշքը վավեր CSS է: (Նկատի "
+"ունեցեք, որ սկզբում մեկնաբանություններ ունեցող ոճաթերթերը կարող են մերժվել):"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Հեռացնե՞լ ոճաթերթը:"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Շապիկի վրա գրություն"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Ստեղծեք կազմ այս թողարկման համար հետևյալ տարրերով."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Արտածել"
+
+msgid "editor.issues.openAccess"
+msgstr "Բաց մատչելիություն"
+
+msgid "editor.issues.subscription"
+msgstr "Բաժանորդագրություն"
+
+msgid "editor.issues.identification"
+msgstr "Նույնականացում"
+
+msgid "editor.issues.access"
+msgstr "Մատչելիություն"
+
+msgid "editor.issues.cover"
+msgstr "Կազմ"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Բոլոր հոդվածները կվերադարձվեն խմբագրման հերթ, և բոլոր հարակից նիշքերը "
+"ընդմիշտ կհեռացվեն: Իսկապե՞ս ուզում եք հեռացնել այս թողարկումը:"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Այս ամսագիրը օգտագործում է թողարկումների պատվերով տեսակավորում. <a href="
+"\"{$url}\" class=\"action\">երականգնել լռելյայները</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Այս թողարկումը օգտագործում է բաժինների պատվերով տեսակավորում. <a href="
+"\"{$url}\" class=\"action\">Վերականգնել լռելյայները</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Թողարկման տվյալները"
+
+msgid "editor.issues.saveChanges"
+msgstr "Պահե՞լ փոփոխությունները բովանդակությունում:"
+
+msgid "editor.issues.default"
+msgstr "Լռելյայն"
+
+msgid "editor.issues.order"
+msgstr "Տեսակավորում"
+
+msgid "editor.issues.publicId"
+msgstr "Հանրային Id"
+
+msgid "editor.issues.publishIssue"
+msgstr "Հրատարակել թողարկումը"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Չեղարկել թողարկման հրատարակումը"
+
+msgid "editor.issues.previewIssue"
+msgstr "Նախադիտել թողարկումը"
+
+msgid "editor.issues.preview"
+msgstr "Նախադիտում"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Իսկապե՞ս ուզում եք հրապարակել նոր համարը:"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Իսկապե՞ս ուզում եք չեղարկել այս հրապարակված համարը:"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Վստա՞հ եք, որ ցանկանում եք այս թողարկումը դնել որպես ընթացիկ:"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Հնարավոր չէ պահպանել հրապարակային ID-ն հոդվածի համար:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Չկան հրատարակված թողարկումներ"
+
+msgid "editor.issues.open"
+msgstr "Բացել"
+
+msgid "editor.issues.pages"
+msgstr "Էջեր"
+
+msgid "editor.issues.galleys"
+msgstr "Թողարկման շարվածքներ"
+
+msgid "editor.issues.galley"
+msgstr "Թողարկման շարվածք"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Թողարկման շարվածքի դիտում"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Հրապարակեք շարվածքները թողարկման ողջ բովանդակությամբ:"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Չեն տպագրվել ոչ մի համարի շարվածք:"
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Պահանջվում է թողարկման շարվածքի պիտակ:"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Պահանջվում է թողարկման շարվածքի տեղայինը:"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Հանրային թողարկման շարվածքի նույնականացումն արդեն գոյություն ունի:"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Վերադարձ թողարկման շարվածքներին"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Իսկապե՞ս ուզում եք ջնջել այս թողարկումը:"
+
+msgid "editor.issues.identifiers"
+msgstr "Նույնացուցիչներ"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Ապագա համարներ"
+
+msgid "grid.action.addGalley"
+msgstr "Ավելացրու շարվածք"
+
+msgid "grid.action.publish"
+msgstr "Հրատարակել թողարկումը"
+
+msgid "grid.action.addIssue"
+msgstr "Ստեղծել թողարկում"
+
+msgid "grid.action.viewIssue"
+msgstr "Դիտել"
+
+msgid "grid.action.previewIssue"
+msgstr "Նախադիտում"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Ստեղծել թողարկման շարվածք"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Սահմանել ընթացիկ թողարկումը"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Հին համարները"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Նշեք բնօրինակ նիշքը որպես վերանայման տարբերակ"
+
+msgid "editor.article.decision"
+msgstr "Որոշում"
+
+msgid "editor.submissions.showBy"
+msgstr "Ցույց տալ ըստ"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Ներկայացրեք ԱԱ-ՕՕ"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Ակտիվ Առաջադրանքներ"
+
+msgid "editor.submissions.invite"
+msgstr "Հրավիրել"
+
+msgid "editor.submissions.accept"
+msgstr "Ընդունել"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Ներկայացումներ չկան"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Ամենավերջինը"
+
+msgid "editor.submissions.averageTime"
+msgstr "Շաբաթներ"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Վերջին ավարտվածը"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Հանձնարարվել է խմբագրին"
+
+msgid "issues.submissions.issueIds"
+msgstr "Հանձնարարվել է թողարկմանը"
+
+msgid "editor.submissions.inSection"
+msgstr "Բաժնում"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Ցույց տալ պլանավորված հրապարակումը"
+
+msgid "editor.article.publishVersion"
+msgstr "Հրապարակել տարբերակը"
+
+msgid "editor.article.viewMetadata"
+msgstr "Դիտեք տարբերակի մետատվյալները"
+
+msgid "editor.article.editMetadata"
+msgstr "Խմբագրեք տարբերակի մետատվյալները"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Հրապարակման ժամանակացույցը"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Նշանակվել"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Հրապարակման գումարը չի վճարվել: Նյութը հրապարակման պլանավորելու համար "
+"ծանուցեք հեղինակին վճարելու գումարը կամ վճարից հրաժարվելու համար:"
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Պահանջել վճարում"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Շապիկի պատկերը, որը դուք խնդրել եք ջնջել, չի գտնվել: Հնարավոր է՝ այն արդեն "
+"ջնջված է։ Փորձեք վերբեռնել էջը:"
+
+msgid "grid.action.removeArticle"
+msgstr "Հեռացնել հոդվածը թողարկումից"
+
+msgid "editor.article.remove"
+msgstr "Հեռացնել"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Իսկապե՞ս ուզում եք հեռացնել այս հոդվածը թողարկումից: Հոդվածը ժամանակացույցի "
+"համար հասանելի կլինի մեկ այլ համարում։"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Մուտքի ամսաթիվը վավեր չէ:"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Խմբագրել թողարկման շարվածքը"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Դասավորության խմբագրիչը պատրաստում է այս նիշքերը յուրաքանչյուր շարվածքի "
+"համար և այնուհետև վերբեռնում է համապատասխան <span class=\"pkp_help_title"
+"\">Սրբագրիչում</span> ՝ սրբագրման համար:"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Ընտրեք շարվածքի նիշքերը"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Այս ցանկի նախնական նիշքերը գրական խմբագրի կողմից տեղափոխվել են գրական "
+"խմբագրման տարբերակների, որոնք վերբեռնվում են<span class=\"pkp_help_title"
+"\">Գրական խմբագրում</span> բաժնում:"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Ցանկացած նիշք, որն արդեն վերբեռնվել է ներկայացման ցանկացած փու, կարող է "
+"ավելացվել Սրբագրման ցանկին՝ նշելով \"Ներառել\" վանդակը ստորև և սեղմելով "
+"Որոնել. բոլոր հասանելի նիշքերը կցուցադրվեն և կարող են ընտրվել ներառման համար:"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"'{$publicIdentifier}' հանրային նույնացուցիչն արդեն գոյություն ունի նույն "
+"տիպի մեկ այլ օբյեկտի համար: Խնդրում ենք ձեր ամսագրում ընտրել եզակի "
+"նույնացուցիչներ նույն տիպի օբյեկտների համար:"
+
+msgid "editor.article.coverImage"
+msgstr "Շապիկի պատկեր"

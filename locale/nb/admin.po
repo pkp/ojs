@@ -1,0 +1,279 @@
+# Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
+"PO-Revision-Date: 2022-10-18 21:01+0000\n"
+"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"admin/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Nettstedets tidsskrift"
+
+msgid "admin.settings.redirect"
+msgstr "Tidsskriftomdirigering"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. "
+"Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Er du sikker på at du vil skru av denne språkpakken? Dette kan gå ut over "
+"tidsskrifter som bruker den."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Dette vil bli standardspråket for nettstedet og alle tilknyttede "
+"tidsskrifter."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Velg alle lokalinnstillinger som nettstedet skal støtte. De valgte "
+"lokalinnstillingene vil bli tilgjengelig til bruk for alle tidsskrift "
+"nettstedet er vert for, og de vil også bli vist i en språkvalgmeny som vil "
+"vises på hver nettstedside (men som kan overstyres på tidsskriftspesifikke "
+"sider). Hvis multiple lokalinnstillinger ikke er valgt, vil "
+"språkvekslingsmenyen ikke bli vist og utvidete språkinnstillinger vil ikke "
+"være tilgjengelig for tidsskriftet."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Merkede lokaliseringsfiler kan være ukomplette."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Er du sikker på at du vil avinstallere denne lokalinnstillingen? Dette kan "
+"påvirke alle lokale tidsskrift som for tiden bruker lokalinnstillingen."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Velg øvrige lokalinnstillinger å installere støtte for i dette systemet. "
+"Lokalinnstillinger må være installert før de kan brukes av lokale "
+"tidsskrift. Konsulter OJS-dokumentasjonen for informasjon om å legge til "
+"støtte for flere språk."
+
+msgid "admin.systemVersion"
+msgstr "OJS-versjon"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-konfigurasjon"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS-konfigurasjonsinnstillinger fra <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Du vil automatisk bli lagt til som redaksjonsleder. Etter at du har "
+"opprettet et nytt tidsskrift, vil du bli omdirigert til "
+"innstillingsveiviseren for å fullføre første steget i opprettelsen av "
+"tidsskriftet."
+
+msgid "admin.journals.journalSettings"
+msgstr "Tidsskriftinnstillinger"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ingen tidsskrift er opprettet."
+
+msgid "admin.contexts.create"
+msgstr "Opprett tidsskrift"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Dette bør være ett enkelt kort ord eller akronym som identifiserer "
+"tidsskriftet. Tidsskriftets URL vil bli {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "En tittel er påkrevet."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "En filsti er påkrevet."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Filstien kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og "
+"må begynne og slutte med et alfanumerisk tegn."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Den valgte filstien er allerede tatt i bruk av et annet tidsskrift."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Standardspråket må være et av tidsskriftet sine støttede språk."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Tillat at dette tidsskriftet vises offentlig på nettstedet"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Tidsskriftbeskrivelse"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Eksisterende tidsskriftfilsti, eller filsti som skal opprettes (for eks. "
+"\"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importer abonnement"
+
+msgid "admin.journals.transcode"
+msgstr "Artikkelens Transcode-metadata fra ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generer kode for å oversette OJS 1 URLs to OJS 2 URLs"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Filsti for import er påkrevet."
+
+msgid "admin.journals.importErrors"
+msgstr "Importeringen var ikke vellykket"
+
+msgid "admin.mergeUsers"
+msgstr "Slå sammen brukere"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Slå sammen bruker"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Velg en bruker som du vil overføre den forrige brukerens oppgaver til: "
+"forfatterskap, redaktøroppgaver m.m."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Velg en bruker du vil slå sammen med en annen brukerkonto (for eks. når noen "
+"har to brukerkontoer). Den brukeren du velger først slettes, og elementer og "
+"oppgaver føres over til den andre brukeren."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Alle vervete brukere"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Er du sikker på at du vil slå sammen brukerkontoen med navnet "
+"\"{$oldUsername}\" med kontoen med brukernavnet \"{$newUsername}\"? Etterpå "
+"finnes ikke brukerkontoen med navnet \"{$oldUsername}\" lenger. Denne "
+"handlingen kan ikke omgjøres."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ingen vervete brukere."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Påminnelse om at abonnementet løper ut"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Melding om Open Access"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Påminnelse om fagfellevurdering"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Nummerets ID er ikke et heltall."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Nummerets oppsett ID er ikke et heltall."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Nummerets ID stemmer ikke med det tilhørende ID."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Velg tidsskriftene som skal ha tilgang til å sende masse-epost. Når denne "
+"funksjonen er aktivert, kan en redaksjonsleder sende e-post til alle "
+"registrerte brukere i tidsskriftet. <br><br>Misbruk av denne funksjonen til "
+"å sende uoppfordrede e-poster kan være i strid med anti-spam-lover i noen "
+"jurisdiksjoner og kan resultere i at e-poster sendt fra din server blir "
+"blokkert som spam. Søk tekniske råd før du aktiverer denne funksjonen og "
+"vurder å konsultere redaksjonsledere for å sikre at den brukes korrekt. "
+"<br><br>Ytterligere begrensninger av denne funksjonen kan aktiveres for "
+"hvert tidsskrift ved å gå til innstillingsveilederen i listen over <a href ="
+"\"{$hostedContextsUrl}\">Nettstedets tidsskrift</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"En redaksjonsleder kan ikke sende masse-epost til de rollene som er valgt "
+"nedenfor. Bruk denne innstillingen til å begrense misbruk av e-"
+"postvarslingsfunksjonen. Det kan for eksempel være sikrere å slå av masse-"
+"epost til lesere, forfattere eller andre store brukergrupper som ikke har "
+"samtykket til å motta slike e-poster.<br><br>Masse-epostfunksjonen kan bli "
+"fullstendig avslått for dette tidsskriftet i <a href="
+"\"{$siteSettingsUrl}\">Admin > Nettstedets innstillinger</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Masse-epostfunskjonen er blitt slått av for dette tidsskriftet. Funksjonen "
+"kan slås på under <a href=\"{$siteSettingsUrl}\" > Admin> Nettstedets "
+"innstillinger</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Legg til, rediger eller fjern tidsskrifter fra dette nettstedet og rediger "
+"innstillinger for hele nettstedet ."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Velg hvilken type geografisk bruksstatistikk som kan samles inn av "
+"tidsskrifter på denne nettsiden. Mer detaljert geografisk statistikk kan øke "
+"størrelsen på databasen din betydelig, og i noen sjeldne tilfeller kan den "
+"undergrave anonymiteten til de besøkende. Hvert tidsskrift kan konfigurere "
+"denne innstillingen forskjellig, men et tidsskrift kan aldri samle mer "
+"detaljerte poster enn det som er konfigurert her. For eksempel, hvis "
+"nettstedet kun støtter land og region, kan tidsskriftet velge land og region "
+"eller kun land. Tidsskriftet vil ikke kunne spore land, region og by."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Aktiver institusjonsstatistikk dersom du ønsker at tidsskrifter på denne "
+"nettsiden skal kunne samle inn bruksstatistikk per institusjon. Tidsskriftet "
+"må da legge til institusjoner og deres IP-områder for å kunne bruke denne "
+"funksjonen. Aktivering av institusjonell statistikk kan øke "
+"databasestørrelsen betydelig."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Om SUSHI API-endepunktene skal gjøres offentlig tilgjengelige for alle "
+"tidsskrifter på dette nettstedet. Hvis du aktiverer den offentlige API-en, "
+"kan enhvert tidsskrift overstyre denne innstillingen for å gjøre "
+"statistikken privat. Men hvis du deaktiverer den offentlige API-en, kan ikke "
+"utgivere gjøre sin egen API offentlig."
+
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr ""
+#~ "Er du sikker på at du vil slette dette tidsskriftet for alltid, også alt "
+#~ "innhold?"
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Innstillingene for nettstedets utseende har blitt oppdatert."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Nettstedets innstillinger har blitt oppdatert."
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "{$name} har blitt redigert."
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} har blitt opprettet."
+
+#~ msgid "admin.languages.downloadUnavailable"
+#~ msgstr ""
+#~ "<p>For øyeblikket er det dessverre ikke mulig å laste ned språkpakkene "
+#~ "fra webserveren hos Public Knowledge Project, fordi:</p>\n"
+#~ "\t<ul>\n"
+#~ "\t\t<li>Din server har ikke eller tillater ikke bruk av GNU tar-"
+#~ "funksjonen</li>\n"
+#~ "\t\t<li>OJS klarer ikke å modifisere registerfilen for språkpakken, som "
+#~ "vanligvis heter «registry/locales.xml».</li>\n"
+#~ "\t</ul>\n"
+#~ "<p>Språkpakkene kan lastes ned manuelt fra <a href=\"http://pkp.sfu.ca"
+#~ "\">PKP-nettstedet</a>.</p>"
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Nettstedsinformasjonen er oppdatert."

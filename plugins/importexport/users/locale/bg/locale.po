@@ -1,0 +1,111 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-31 08:02+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Плъгин за импорт/експорт на потребители в XML"
+
+msgid "plugins.importexport.users.description"
+msgstr "Импорт/експорт на потребители"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Употреба: {$scriptName} {$pluginName} [command] ...\n"
+"Команди:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Примери:\n"
+"\tИмпорт на потребители в myJournal от myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tЕкспорт на всички потребители от myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tЕкспорт на потребители указани чрез тяхното ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Импорт на потребители"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Изберете XML файл с данни, съдържащ потребителска информация, за да "
+"импортирате в това списание. Вижте помощта за списанието за подробности "
+"относно формата на този файл. <br /> <br /> Обърнете внимание, че ако "
+"импортираният файл съдържа потребителски имена или имейл адреси, които вече "
+"съществуват в системата, потребителските данни за тези потребители няма да "
+"бъдат импортирани и всички нови роли, които ще бъдат създадени, ще бъдат "
+"присвоени на съществуващите потребители."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Файл с потребителски данни"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Изпратете имейл с известие до всеки импортиран потребител, съдържащ "
+"съответното потребителско име и парола."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr ""
+"Ако възникне грешка импортирането продължава със следващите потребители."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Следните потребители бяха успешно импортирани в системата"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Възникнаха грешки по време на импортирането"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Потвърдете, че това са потребителите, които искате да импортирате в системата"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Предупреждение"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Не можете да използвате пароли хеширани с {$importHash}; OJS е конфигуриран "
+"да използва {$ojsHash}. Ако продължите, ще трябва да нулирате паролите на "
+"импортираните потребители."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Посочен е неизвестен път на списанието \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Експорт на потребители"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Експорт според ролята"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Експорт на всички"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Възникнаха грешки по време на експортирането"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Импортирането завърши успешно. Потребителите с потребителски имена и имейл "
+"адреси, които все още не се използват, са импортирани заедно с "
+"придружаващите ги групи потребители."
+
+msgid "plugins.importexport.users.results"
+msgstr "Резултати"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Моля, качете файл в „Импорт“ за да продължите."

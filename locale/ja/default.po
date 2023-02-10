@@ -1,0 +1,184 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-12-12 11:15+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "section.default.title"
+msgstr "論文"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "セクションデフォルトポリシー"
+
+msgid "default.genres.article"
+msgstr "投稿原本"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>本誌サイトに入力された名前およびメールアドレスは、本誌で述べた目的にのみ使"
+"用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。</"
+"p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"本誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにす"
+"るという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"読者には、この雑誌の出版通知サービスへの登録をお薦めします。雑誌ホームページ"
+"の上部にある<a href=\"{$indexUrl}/{$contextPath}/user/register\">登録</a>リン"
+"クをクリックして登録してください。このサービスは、登録した雑誌に新しい巻号が"
+"出版されるたびに、目次情報をメールでお知らせするものです。登録者リストは、こ"
+"の雑誌のサポートや読者数のレベルを主張することを可能にします。登録読者の名前"
+"とメールアドレスは、その他の目的では使用いたしません。この雑誌の<a href="
+"\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">個人情報の"
+"取り扱いについて</a>を参照してください。"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"この雑誌に論文を投稿することに興味はありませんか。この雑誌のセクションポリ"
+"シーを示す<a href=\"{$indexUrl}/{$contextPath}/about\">この雑誌について</a>お"
+"よび<a href=\"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines"
+"\">執筆要項</a>をご覧になることをお薦めします。論文を投稿するにはあらかじめこ"
+"の雑誌に<a href=\"{$indexUrl}/{$contextPath}/user/register\">登録</a>する必要"
+"があります。登録済みの方は<a href=\"{$indexUrl}/index/login\">ログイン</a>し"
+"て、5ステップの投稿処理を開始するだけです。"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"研究図書館の方には、この雑誌を電子ジャーナルリストに追加することをお薦めしま"
+"す。また、この雑誌が使用しているオープンソースの出版システムが、図書館が所属"
+"の教員が編集委員をしている雑誌を運用するために提供するシステムとしてふさわし"
+"いことも注目に値するでしょう（<a href=\"http://pkp.sfu.ca/ojs\">オープン･"
+"ジャーナル･システム</a>のホームページを参照してください）。"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステム"
+"を使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑"
+"誌の恒久的アーカイブを作成することを許可します。<a href=\"http://www.lockss."
+"org/\">さらなる情報</a>はここを参照してください。"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"この雑誌は、参加図書館による分散型アーカイブシステムを構築するCLOCKSSシステム"
+"を使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑"
+"誌の恒久的アーカイブを作成することを許可します。<a href=\"http://www.clockss."
+"org/\">さらなる情報</a>はここを参照してください。"
+
+msgid "default.groups.name.manager"
+msgstr "雑誌管理者"
+
+msgid "default.groups.plural.manager"
+msgstr "雑誌管理者"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "雑誌編集者"
+
+msgid "default.groups.plural.editor"
+msgstr "雑誌編集者"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "ゲスト編集者"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "ゲスト編集者"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "セクション編集者"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "セクション編集者"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "購読担当者"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "購読担当者"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "研究装置"
+
+msgid "default.genres.researchMaterials"
+msgstr "研究材料"
+
+msgid "default.genres.researchResults"
+msgstr "研究結果"
+
+msgid "default.genres.transcripts"
+msgstr "筆記録"
+
+msgid "default.genres.dataAnalysis"
+msgstr "データ分析"
+
+msgid "default.genres.dataSet"
+msgstr "データセット"
+
+msgid "default.genres.sourceTexts"
+msgstr "ソーステキスト"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "査読者"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "査読者"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "テキストは、執筆要項で示された書式要件および書誌記述要件を順守している。"
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用"
+#~ "しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、す"
+#~ "べてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場"
+#~ "所に埋め込んでいる。"
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr "可能な場合、参考文献のURLが提供されている。"
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "投稿ファイルは、OpenOffice、Microsoft Word、またはRTF文書ファイルフォー"
+#~ "マットのいずれかである。"
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（ま"
+#~ "たは、編集者へのコメント欄で事情を説明している）。"

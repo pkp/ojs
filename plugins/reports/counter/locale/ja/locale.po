@@ -1,0 +1,62 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
+"PO-Revision-Date: 2021-12-10 01:07+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"COUNTERプラグインを使用すると、 <a href=\"http://www.projectcounter.org"
+"\">COUNTER標準</a>を使用してジャーナル・アクティビティのレポートを作成できま"
+"す。これらのレポートだけでは、ジャーナルがCOUNTERに準拠することにはなりませ"
+"ん。COUNTERコンプライアンスを提供するには、Project COUNTERのウェブサイトで要"
+"件を確認してください。"
+
+msgid "plugins.reports.counter"
+msgstr "COUNTER統計"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTERバージョン"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "レポートのパラメーターが無効です。"
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "レポートのリクエストが無効です。"
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "レポート内に条件に一致する結果が見つかりませんでした。"
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "結果をXML形式に整形できませんでした。"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTERレポートJR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTERジャーナルレポート1 (R3): 月別およびジャーナル別のフルテキスト論文リク"
+"エスト"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "全顧客"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "論文レポート１ (AR1)"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "ジャーナルレポート１ (JR1)"
+
+#~ msgid "plugins.reports.counter.migrate"
+#~ msgstr "ログファイルを移行する。"

@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.description"
+msgstr ""
+
+msgid "plugins.paymethod.paypal"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr ""
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""

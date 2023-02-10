@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:50+00:00\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"subscription/vi/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Khối đăng ký thuê bao"
+
+msgid "plugins.block.subscription.description"
+msgstr "Plugin này cung cấp thông tin thuê bao về đặt tạp chí ở cột bên."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Đăng ký thuê bao"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Hết hạn"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Cung cấp truy cập: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Truy cập từ : {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Đăng ký thuê bao"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Đăng nhập để truy cập tài nguyên đối với thuê bao."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Đăng ký thuê bao là cần thiết để truy cập một số tài nguyên."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "\bTìm hiểu thêm"
+
+#~ msgid "plugins.block.subscription.providedByInstitution"
+#~ msgstr "Bạn được cơ quan cấp quyền truy cập"

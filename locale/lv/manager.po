@@ -1,0 +1,2570 @@
+# Ieva Tiltina <pastala@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-11-14 08:02+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"lv_LV/>\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "manager.distribution.access"
+msgstr "Piekļuve"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Izvēlieties, kā rakstam tiek atlasīts noklusējuma autortiesību datums. Šo "
+"noklusējumu var ignorēt katrā gadījumā atsevišķi. Ja publicējat, "
+"nebāzējoties izdevuma numurā (\"publish as you go\"), neizmantojiet izdevuma "
+"publicēšanas datumu."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Izmantojiet numura publicēšanas datumu"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Izmantojiet raksta publicēšanas datumu"
+
+msgid "manager.distribution.publication"
+msgstr "Publikācija"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Publicēšanas režīms"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS netiks izmantota, lai publicētu žurnāla saturu tiešsaistē."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Žurnāls nodrošinās atvērtu piekļuvi tā saturam."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Lai piekļūtu žurnāla saturam, būs nepieciešams abonements."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Piešķirt digitālo objektu identifikatorus (DOI) rakstiem, numuriem un "
+"saliktņiem."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Izvēlieties, kuriem vienumiem tiks piešķirts DOI. Vairums žurnālu piešķir "
+"DOI rakstiem, bet jūs varat iestatīt DOI visiem publicētajiem elementiem."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Izmantot noklusējuma šablonus.<br />%j.v%vi%i numuriem<br />%j.v%vi%i.%a "
+"rakstiem<br />%j.v%vi%i.%a.g%g saliktņiem."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Teksta rediģēšanas posmā"
+
+msgid "manager.website.archiving"
+msgstr "Arhivēšana"
+
+msgid "manager.files.note"
+msgstr ""
+"Piezīme: Failu pārlūks ir uzlabota funkcija, kas ļauj tieši skatīt un "
+"apstrādāt ar žurnālu saistītos failus un direktorijus."
+
+msgid "manager.journalManagement"
+msgstr "Žurnāla pārvaldība"
+
+msgid "manager.language.ui"
+msgstr "Lietotāja saskarne (UI)"
+
+msgid "manager.language.submissions"
+msgstr "Materiālu iesniegšana"
+
+msgid "manager.language.forms"
+msgstr "Formas"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Ar šo tiks aizstāti visi žurnāla lokalizācijas specifiskie iestatījumi, kas "
+"tika veikti šai lokalizācijai"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS var būt pieejama lietotājiem jebkurā no vairākām atbalstītajām valodām. "
+"Tāpat OJS var darboties kā daudzvalodu sistēma, nodrošinot lietotājiem "
+"iespēju katrā lapā pārslēgties starp valodām un ļaujot dažus datus ievadīt "
+"vairākās papildu valodās.<br /><br/>Ja valoda, ko atbalsta OJS, nav norādīta "
+"sarakstā, lūdziet vietnes administratoram instalēt valodu no vietnes "
+"administrēšanas saskarnes. Norādījumus par jaunu valodu atbalsta "
+"pievienošanu skatiet OJS dokumentācijā."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Atvainojiet, papildu valodas nav pieejamas. Ja vēlaties izmantot papildu "
+"valodas šajā žurnālā, sazinieties ar vietnes administratoru."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Šī būs žurnāla vietnes noklusējuma valoda."
+
+msgid "manager.managementPages"
+msgstr "Pārvaldības lapas"
+
+msgid "manager.payment.action"
+msgstr "Rīcība"
+
+msgid "manager.payment.addPayment"
+msgstr "Pievienot maksājumu"
+
+msgid "manager.payment.amount"
+msgstr "Summa"
+
+msgid "manager.payment.authorFees"
+msgstr "Autora maksa"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Tālāk ievadiet maksas summas, lai autoram varētu piemērot apstrādes maksu."
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS neveic valūtas konvertēšanu. Ja tiek pieņemti maksājumi par "
+"abonementiem, ir jānodrošina, lai abonementa valūta atbilstu šeit "
+"norādītajam."
+
+msgid "manager.payment.description"
+msgstr "Apraksts"
+
+msgid "manager.payment.details"
+msgstr "Sīkāka informācija"
+
+msgid "manager.payment.editSubscription"
+msgstr "Rediģēt abonementu"
+
+msgid "manager.payment.enable"
+msgstr "Iespējot"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Maksāšanas iespējas"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Visām izmaksām jābūt pozitīvām skaitliskām vērtībām (ir atļauti "
+"decimālskaitļi)"
+
+msgid "manager.payment.generalFees"
+msgstr "Vispārējās maksas"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "Asociācijas dalība būs redzama sadaļā Par žurnālu, sadaļā Politika."
+
+msgid "manager.payment.generalOptions"
+msgstr "Vispārējās iespējas"
+
+msgid "manager.payment.noPayments"
+msgstr "Maksājumu nav"
+
+msgid "manager.payment.notFound"
+msgstr "Nav atrasts"
+
+msgid "manager.payment.options"
+msgstr "Iespējas"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Tas aktivizēs maksājumus par abonementiem, kuru veidus, izmaksas, ilgumu un "
+"abonementus pārvalda žurnāla (abonementu) pārvaldnieks."
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst šo abonementu?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Šajā žurnālā būs iespējoti maksājumi. Ņemiet vērā, ka lietotājiem būs "
+"jāpierakstās, lai veiktu maksājumus."
+
+msgid "manager.payment.options.fee"
+msgstr "Maksa"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Maksas apraksts"
+
+msgid "manager.payment.options.feeName"
+msgstr "Maksas nosaukums"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Dalība asociācijā"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Numuru un rakstu PDF versijām tikai ierobežota piekļuve"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Rakstu apstrādes maksa"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Iegādāties rakstu"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Iegādāties žurnāla numuru"
+
+msgid "manager.payment.options.text"
+msgstr "Maksājuma veida apraksts"
+
+msgid "manager.payment.paymentId"
+msgstr "Maksājuma ID"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Maksājuma veids"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Šajā ekrānā varat konfigurēt jebkuru no šādiem Maksājuma veida spraudņiem."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Maksas maksāšanas veidi"
+
+msgid "manager.payment.paymentType"
+msgstr "Maksājuma tips"
+
+msgid "manager.payment.readerFees"
+msgstr "Lasītāju maksas"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Izvēlētās iespējas kopā ar to aprakstiem un maksām (kuras var rediģēt zemāk) "
+"būs redzamas sadaļā Par žurnālu, sadaļā Politika, kā arī vietās, kur ir "
+"jāveic maksājums."
+
+msgid "manager.payment.records"
+msgstr "Ieraksti"
+
+msgid "manager.paymentTypes"
+msgstr "Maksājumu tipi"
+
+msgid "manager.payment.userName"
+msgstr "Maksājuma ID"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Šajā žurnālā reģistrētie lietotāji"
+
+msgid "manager.people.allJournals"
+msgstr "Visi žurnāli"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Reģistrēt šīs vietnes lietotāju šajā žurnālā"
+
+msgid "manager.people.showNoRole"
+msgstr "Rādīt lietotājus bez lomas"
+
+msgid "manager.people.allUsers"
+msgstr "Visi reģistrētie lietotāji"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Noņemt šo lietotāju no šī žurnāla? Veicot šo darbību, lietotājs tiks noņemts "
+"no visām lomām šajā žurnālā."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Atlasiet veidni"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Esoša lietotāja reģistrācija"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Ar žurnālu"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Izvēlieties lietotāju (vai vairākus lietotājus), kurus vēlaties apvienot ar "
+"citu lietotāja kontu (piemēram, ja kādam ir divi lietotāja konti). Pirmais(-"
+"ie) izvēlētais(-ie) konts(-i) tiks dzēsts(-i), un visi iesniegtie darbi, "
+"uzdevumi utt. tiks attiecināti uz otro kontu."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Izvēlieties lietotāju, kuram piešķirt iepriekšējo lietotāju autorības, "
+"redakcijas uzdevumus u. c."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Reģistrācija"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Reģistrācijas sinhronizācija reģistrēs visus lietotājus norādītajā lomā "
+"norādītajā žurnālā vienā un tajā pašā lomā šajā žurnālā. Šī funkcija ļauj "
+"sinhronizēt žurnālus ar kopēju lietotāju kopu (piem., recenzenti)."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Kopsavilkumi nav nepieciešami"
+
+msgid "manager.sections.assigned"
+msgstr "Šīs sadaļas redaktori"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Vai tiešām vēlaties neatgriezeniski dzēst šo sadaļu?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Lai šo sadaļu varētu dzēst, tajā iesniegtie raksti ir jāpārvieto uz citām "
+"sadaļām."
+
+msgid "manager.sections.create"
+msgstr "Izveidot sadaļu"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Pievienojiet Sadaļas redaktoru šai sadaļai, lai manuskripti tiktu "
+"automātiski piešķirti Sadaļas redaktoram. (Citādi Sadaļas redaktorus var "
+"piešķirt manuāli pēc manuskripta saņemšanas.) Sadaļas redaktoram pēc "
+"pievienošanas var automātiski piešķirt iespēju pārraudzīt šajā sadaļā "
+"iesniegto darbu RECENZĒŠANU (zinātnisko recenzēšana) un/vai REDIĢĒŠANU "
+"(teksta liteārā rediģēšana, maketēšana un korektūra). Sadaļas redaktorus "
+"izveido, žurnāla pārvaldības sadaļā Roles (Lomas) noklikšķinot uz Section "
+"Editors (Sadaļas redaktori)."
+
+msgid "manager.sections.editorRestriction"
+msgstr "Ziņas var iesniegt tikai redaktori un sadaļu redaktori."
+
+msgid "manager.sections.editors"
+msgstr "Sadaļas redaktori"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Vismaz vienai sadaļai jābūt aktīvai. Apmeklējiet darba plūsmas iestatījumus, "
+"lai atspējotu visus iesniegumus šim žurnālam."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Sadaļai jānorāda saīsināts nosaukums"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Lūdzu, pārliecinieties, ka katram sadaļas redaktora uzdevumam ir atzīmēta "
+"vismaz viena izvēles rūtiņa."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Lūdzu, pārliecinieties, ka esat izvēlējies derīgu recenzijas veidlapu."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Sadaļai ir nepieciešams nosaukums."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Neiekļaut autoru vārdus no izdevumu satura rādītājiem sadaļu vienībās."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Neiekļaut šīs sadaļas virsrakstu izdevumu satura rādītājos."
+
+msgid "manager.sections.identifyType"
+msgstr "Identificēt šajā sadaļā publicētos elementus kā a(n)"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Piemēram, \"recenzēts raksts\", \" nerecenzēts grāmatas apskats\", \" "
+"uzaicināts komentārs\" u. c.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indeksēts"
+
+msgid "manager.sections.noneCreated"
+msgstr "Neviena sadaļa nav izveidota."
+
+msgid "manager.sections.open"
+msgstr "Materiālu iesniegšana atvērta"
+
+msgid "manager.sections.policy"
+msgstr "Sadaļas politika"
+
+msgid "manager.sections.readingTools"
+msgstr "Lasīšanas rīki"
+
+msgid "manager.sections.reviewed"
+msgstr "Zinātniski recenzēts"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Netiks iekļauts žurnāla indeksācijā"
+
+msgid "manager.sections.submissionReview"
+msgstr "Netiks zinātniski recenzēts"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Šajā žurnāla sadaļā iesniegtie materiāli"
+
+msgid "manager.sections.unassigned"
+msgstr "Pieejamie sadaļas redaktori"
+
+msgid "manager.sections.wordCount"
+msgstr "Vārdu skaits"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Kopsavilkuma vārdu skaita ierobežojums šajā sadaļā (0 – bez ierobežojuma)"
+
+msgid "manager.setup"
+msgstr "Žurnāla uzstādījumi"
+
+msgid "manager.setup.masthead"
+msgstr "Galvenā lapa"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Redkolēģija"
+
+msgid "manager.setup.homepageContent"
+msgstr "Žurnāla mājaslapas saturs"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Žurnāla sākumlapā pēc noklusējuma ir navigācijas saites. Papildu saturu "
+"sākumlapai var pievienot, izmantojot vienu vai visas turpmāk minētās "
+"opcijas, kas parādīsies norādītajā secībā."
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Žurnāla stila lapa"
+
+msgid "manager.setup.contextName"
+msgstr "Žurnāla nosaukums"
+
+msgid "manager.setup.pageHeader"
+msgstr "Žurnāla lapas galvene"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Saturs"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Pievienot informāciju"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Pievienot kontrolsaraksta elementu"
+
+msgid "manager.setup.addItem"
+msgstr "Pievienot elementu"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Pievienot elementu, kas parādās sadaļā \"Par žurnālu\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Pievienot elementu"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Pievienot jaunu datubāzes saiti"
+
+msgid "manager.setup.addSponsor"
+msgstr "Pievienot sponsorējošo organizāciju"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternatīvā galvene"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Nosaukuma un logotipa vietā teksta lodziņā zemāk var ievietot galvenes HTML "
+"versiju. Ja tas nav nepieciešams, atstājiet teksta lodziņu tukšu."
+
+msgid "manager.setup.announcements"
+msgstr "Paziņojumi"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Ievads"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Ievadiet jebkuru informāciju, ko vēlētos parādīt paziņojumu lapā."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Tiks publicēts sadaļā Par žurnālu) "
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"Prasība autoriem kopā ar manuskriptu iesniegt apliecinājumu par interešu "
+"konflikta neesamību."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Prasība recenzentiem kopā ar recenziju iesniegt apliecinājumu par interešu "
+"konflikta neesamību."
+
+msgid "manager.setup.history"
+msgstr "Žurnāla vēsture"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Šis teksts parādīsies žurnāla tīmekļa vietnes sadaļā \"Par\", un to var "
+"izmantot, lai aprakstītu izmaiņas nosaukumos, redkolēģijā un citos ar "
+"žurnāla publicēšanas vēsturi saistītos elementos."
+
+msgid "manager.setup.currentIssue"
+msgstr "Jaunākais numurs"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5. solis. Izskata pielāgošana"
+
+msgid "manager.setup.details"
+msgstr "Sīkāka informācija"
+
+msgid "manager.setup.details.description"
+msgstr "Žurnāla nosaukums, ISSN, kontakti, sponsori un meklētājprogrammas."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Žurnālu pārvaldnieks reģistrēs visus lietotāju kontus. Redaktori vai sadaļu "
+"redaktori var reģistrēt lietotāju kontus recenzentiem."
+
+msgid "manager.setup.discipline"
+msgstr "Akadēmiskā nozare un apakšnozares"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Noderīgi, ja žurnāls pārsniedz nozaru robežas un/vai autori iesniedz "
+"starpnozaru darbus."
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(piemēram, vēsture, izglītība, socioloģija, psiholoģija, kultūras studijas, "
+"jurisprudence)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Sniedziet šim žurnālam atbilstošu akadēmisko nozaru piemērus"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Pievienojiet jaunākā numura satura rādītāju (ja iespējams)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Redaktora lēmums"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Atlēciena (bounce) adrese"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Jebkuri nepiegādātie e-pasta ziņojumi ar kļūdas ziņojumu tiks nosūtīti uz šo "
+"adresi."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Lai nosūtītu nepiegādātos e-pasta ziņojumus uz atlēciena (bounce) adresi, "
+"vietnes administratoram ir jāaktivizē opcija <code>allow_envelope_sender</"
+"code> vietnes konfigurācijas failā. Iespējams, būs nepieciešama servera "
+"konfigurācija, kā norādīts OJS dokumentācijā."
+
+msgid "manager.setup.emails"
+msgstr "E-pasta identifikācija"
+
+msgid "manager.setup.emailSignature"
+msgstr "Paraksts"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Sagatavotajiem e-pasta ziņojumiem, kurus sistēma nosūta žurnāla vārdā, "
+"beigās tiks pievienots šāds paraksts."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Ieslēgt paziņojumus"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Lai informētu lasītājus par žurnāla jaunumiem un notikumiem, var publicēt "
+"paziņojumus. Publicētie paziņojumi būs redzami Paziņojumu lapā."
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Rādīt mājaslapā"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Cik daudz paziņojumu parādīt sākumlapā. Atstājiet tukšu, lai nerādītu "
+"nevienu."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Apmeklētāji žurnālā var reģistrēt lietotāja profilu."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Mērķis un darbības joma"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Aprakstiet autoriem, lasītājiem un bibliotekāriem rakstu un citu materiālu "
+"klāstu, ko žurnāls publicēs."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Autoriem savu darbu indeksēšanai"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS ievēro <a href=\"https://www.openarchives.org/\" target=\"_blank"
+"\">Atvērto arhīvu iniciatīvas</a> metadatu ievākšanas protokolu, kas ir "
+"jauns standarts labi indeksētas piekļuves nodrošināšanai elektroniskajiem "
+"pētniecības resursiem pasaules mērogā. Autori izmantos līdzīgu veidni, lai "
+"sniegtu metadatus saviem manuskriptiem. Žurnāla pārvaldniekam jāizvēlas "
+"indeksēšanas kategorijas un jāiesniedz autoriem attiecīgie piemēri, lai "
+"palīdzētu viņiem indeksēt savu darbu."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Norādītais ISSN nav derīgs."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Nepieciešams norādīt primāro kontaktinformācijas e-pasta adresi."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Nepieciešams norādīt primāro kontaktpersonas vārdu."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Nepieciešams norādīt žurnāla iniciāļus."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Nepieciešams norādīt žurnāla nosaukumu."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Nepieciešams recenzentu skaits uz vienu iesniegto materiālu."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Jānorāda atbalsta e-pasta adrese."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Jānorāda atbalsta personas vārds."
+
+msgid "manager.setup.generalInformation"
+msgstr "Pamatinformācija"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "1. solis. Sīkāka informācijas apkopošana"
+
+msgid "manager.setup.guidelines"
+msgstr "Vadlīnijas"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "3. solis. Iesniegšanas vadlīnijas"
+
+msgid "manager.setup.identity"
+msgstr "Žurnāla identitāte"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Žurnāliem, kas piedāvā tūlītēju vai kavētu atvērto piekļuvi, pievienojiet "
+"Creative Commons licenci visiem publicētajiem darbiem atbilstošā laikā."
+
+msgid "manager.setup.information"
+msgstr "Informācija"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Īss žurnāla apraksts bibliotekāriem un topošajiem autoriem un lasītājiem. "
+"Tas pieejams vietnes sānu joslā, kad pievienots informācijas bloks."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Autoriem"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Bibliotekāriem"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Lasītājiem"
+
+msgid "manager.setup.initialIssue"
+msgstr "Pirmreizējs izdevums"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Atkarībā no izvēlētā formāta norādiet OJS publicējamā pirmā izdevuma numuru, "
+"sējumu un/vai gadu:"
+
+msgid "manager.setup.institution"
+msgstr "Institūcija"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Navigācijas joslas elementus var pievienot esošai kopai (Sākums, Par, "
+"Lietotāja sākumlapa u. c.), kas parādās lapas augšpusē."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Vienības lapā"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Ierobežojiet elementu (piemēram, manuskriptu, lietotāju vai rediģēšanas "
+"uzdevumu) skaitu, kas tiks parādīti sarakstā pirms nākamo elementu "
+"parādīšanas citā lapā."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Žurnāla saīsinājums"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Žurnāla arhivēšana"
+
+msgid "manager.setup.contextSummary"
+msgstr "Žurnāla kopsavilkums"
+
+msgid "manager.setup.contextAbout"
+msgstr "Par žurnālu"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Iekļaut jebkādu informāciju par žurnālu, kas varētu interesēt lasītājus, "
+"autorus vai recenzentus. Tā varētu ietvert atvērtās piekļuves politiku, "
+"žurnāla mērķi un darbības jomu, paziņojumu par autortiesībām, informāciju "
+"par sponsoriem, žurnāla vēsturi, privātuma atrunu un iekļaušanu jebkurā "
+"LOCKSS vai CLOCKSS arhīvu sistēmā."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Žurnāla mājaslapas saturs"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Pēc noklusējuma mājaslapu veido navigācijas saites. Papildu sākumlapas "
+"saturu var pievienot, izmantojot vienu vai visas turpmāk norādītās opcijas, "
+"kas tiks parādītas norādītajā secībā. Ņemiet vērā, ka pašreizējais izdevums "
+"vienmēr ir pieejams, izmantojot saiti Current (Jaunākais) navigācijas joslā."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Žurnāla mājaslapas galvene"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Žurnāla mājaslapas galvene"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Sākumlapā var augšupielādēt žurnāla nosaukuma un logotipa grafisko versiju "
+"(kā .gif, .jpg vai .png failu), kas aizstās teksta versiju."
+
+msgid "manager.setup.contextInitials"
+msgstr "Žurnāla iniciāļi"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Izvēlieties valsti, kurā atrodas šis žurnāls, vai valsti, kurā ir žurnāla "
+"vai izdevēja pasta adrese."
+
+msgid "manager.setup.journalLayout"
+msgstr "Žurnāla izkārtojums"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Šeit izvēlieties žurnāla tēmu un izkārtojuma sastāvdaļas. Var augšupielādēt "
+"arī žurnāla stilu lapu, ko var izmantot, lai aizstātu stila datus sistēmas "
+"stilu lapās un tēmas stilu lapā (ja ir izvēlēta tēma)."
+
+msgid "manager.setup.journalLogo"
+msgstr "Žurnāla logo"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Žurnāla logo"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Žurnāla lapas apakšējā daļa"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Šī ir jūsu žurnāla apakšējā daļa. Lai to mainītu vai atjauninātu, "
+"ievietojiet HTML kodu zemāk esošajā teksta lodziņā. Kā piemēru var minēt "
+"citu navigācijas joslu, skaitītāju utt. Šis laukums būs redzams katrā lapā."
+
+msgid "manager.setup.journalPolicies"
+msgstr "2. solis. Žurnāla politika"
+
+msgid "manager.setup.journalSetup"
+msgstr "Žurnāla iestatījumi"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Jūsu žurnāla iestatījumi ir atjaunināti."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Nederīgs žurnāla stila lapas formāts. Pieņemtais formāts ir .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Žurnāla noformējums"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Žurnāla sīktēls"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Neliels logotips vai žurnāla attēls, ko var izmantot žurnālu uzskaitījumā."
+
+msgid "manager.setup.contextTitle"
+msgstr "Žurnāla nosaukums"
+
+msgid "manager.setup.keyInfo"
+msgstr "Galvenā informācija"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"Sniedziet īsu sava žurnāla aprakstu un norādiet redaktorus, atbildīgos "
+"redaktorus un citus redakcijas komandas locekļus."
+
+msgid "manager.setup.labelName"
+msgstr "Marķējuma vārds"
+
+msgid "manager.setup.lists"
+msgstr "Saraksti"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Iespējot PKP PN spraudni"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Uzturēšanas tīkls (Preservation Network - PN) sniedz bezmaksas "
+"glabāšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst pamatkritērijiem."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Skatiet <button>spraudņa iestatījumi</button>, lai piekristu PKP PN "
+"lietošanas noteikumiem."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Uzturēšanas tīkls (Preservation Network - PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Uzturēšanas tīkls (PN - Preservation network) sniedz bezmaksas "
+"uzturēšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst vairākiem "
+"pamatkritērijiem. Lai arhivētu savu žurnālu PN, lūdziet administratoram "
+"instalēt PKP|PN spraudni no spraudņu galerijas."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS un CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Ļauj LOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās bibliotēkās, "
+"izmantojot LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a> lapu."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
+"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
+"\">LOCKSS Licence</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS licences apraksts"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Nosakiet 6–10 bibliotēkas, kas reģistrēs un kešos žurnālu. Piemēram, "
+"vērsieties pie iestādēm, kurās strādā redaktori un redkolēģijas locekļu un/"
+"vai iestādēm, kuras jau piedalās LOCKSS. Skatīt <a href=\"https://www.lockss."
+"org/join-lockss/partner-communities\" target=\"_blank\">LOCKSS kopienu</a>."
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Ļauj CLOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās bibliotēkās, "
+"izmantojot CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
+"Manifest</a> lapu."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
+"\"https://clockss.org\" target=\"_blank\">CLOCKSS Licence</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS licences apraksts"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Reģistrējieties CLOCKSS pakalpojumam, apmeklējot <a href=\"https://clockss."
+"org\" target=\"_blank\">CLOCKSS tīmekļa vietni</a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Izskats"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Mājaslapas galvene, saturs, žurnāla galvene, kājene, navigācijas josla un "
+"stila lapa."
+
+msgid "manager.setup.management"
+msgstr "Pārvaldība"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Piekļuve un drošība, plānošana, paziņojumi, literārā rediģēšana, maketēšana "
+"un korektūra."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Pamata redakcijas posmu pārvaldība"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Pārvaldības un publicēšanas iestatīšana"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4. solis. Žurnāla pārvaldība"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigācijas josla"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Pievienojiet vai noņemiet papildu navigācijas joslas elementus."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL ir absolūtais URL (piemēram, \"http://www.example.com\"), nevis "
+"relatīvais ceļš uz vietni (piemēram, \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Marķējuma vērtība ir burtiska virkne (piemēram, \"Journal Setup\"), nevis "
+"lokalizācijas ziņojuma atslēga (piemēram, \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nav augšupielādēts neviens attēla fails."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Nav augšupielādēta neviena stila lapa."
+
+msgid "manager.setup.note"
+msgstr "Piezīme"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Iesniegšanas apstiprinājuma e-pasts pašlaik ir "
+"atspējots. Lai izmantotu šo funkciju, iespējojiet \"Iesniegšanas "
+"apstiprinājuma\" e-pastu sadaļā E-pasti."
+
+msgid "manager.setup.numPageLinks"
+msgstr "Lapas saites"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ierobežojiet sarakstā uz nākamajām lapām rādāmo saišu skaitu."
+
+msgid "manager.setup.onlineIssn"
+msgstr "Tiešsaistes ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Lapas numura iespēja"
+
+msgid "manager.setup.policies"
+msgstr "Noteikumi"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Mērķis, recenzēšana, sadaļas, privātums, drošība un papildu informācija par "
+"elementiem."
+
+msgid "manager.setup.printIssn"
+msgstr "Drukāta izdevuma ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Pārbaudes instrukcijas"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Korektūras instrukcijas būs pieejamas korektoriem, autoriem, maketētājiem un "
+"sadaļu redaktoriem iesniegtā manuskripta rediģēšanas posmā. Zemāk ir sniegts "
+"noklusējuma norādījumu kopums HTML formātā, ko žurnāla pārvaldnieks jebkurā "
+"brīdī var rediģēt vai aizstāt (HTML vai teksta formātā)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Publicēšanas grafiks"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Žurnāla materiālus var publicēt kopīgi, kā daļu no izdevuma ar savu satura "
+"rādītāju. Var arī publicēt atsevišķus materiālus, tiklīdz tie ir gatavi, "
+"pievienojot tos \"pašreizējā\" sējuma satura rādītājam. Sadaļā Par žurnālu "
+"sniedziet lasītājiem paziņojumu par sistēmu, ko izmantos šis žurnāls, un "
+"paredzamo publicēšanas biežumu."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Publikāciju plānošana"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Žurnāla satura identificēšana"
+
+msgid "manager.setup.publisher"
+msgstr "Izdevējs"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Atsauces sasaiste"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Lietotājiem jābūt reģistrētiem un jāpieslēdzas, lai skatītu brīvpieejas "
+"saturu."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Lietotājiem jābūt reģistrētiem un jāpieslēdzas, lai skatītu žurnāla vietni."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Recenzēšanas vadlīnijas"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Recenzēšanas iespējas"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automatizēti e-pasta atgādinājumi"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"Lai nosūtītu automātiskus e-pasta atgādinājumus, vietnes administratoram ir "
+"jāaktivizē opcija <tt>scheduled_tasks</tt> OJS konfigurācijas failā. Var būt "
+"nepieciešama papildu servera konfigurācija, kā norādīts OJS dokumentācijā."
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Recenzēšanas pabeigšanai atvēlētās nedēļas"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Pēc katras recenzijas redaktori vērtēs recenzentus pēc piecu ballu skalas."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Failu piekļuves ierobežošana"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Recenzentiem piekļuve iesniegtajai datnei tiks piešķirta tikai pēc tam, kad "
+"viņi būs piekrituši to pārskatīt."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Recenzenta piekļuve"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Recenzenta viena klikšķa piekļuve"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Recenzentiem e-pasta uzaicinājumā var nosūtīt drošu saiti, kas nodrošinās "
+"automātisku pieslēgšanos pēc uzklikšķināšanas uz saites."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Iekļaut drošu saiti e-pasta uzaicinājumā recenzentiem."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Recenzentu reitingi"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Recenzentu atgādinājumi"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Recenzēšanas politika"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Meklēšanas indeksēšana"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Palīdziet meklētājprogrammām, piemēram, Google, atklāt un parādīt jūsu "
+"vietni. Aicinām iesniegt savu <a href=\"{$sitemapUrl}\" target=\"_blank"
+"\">vietni</a>."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Sniedziet īsu žurnāla aprakstu (50-300 rakstzīmju), ko meklētājprogrammas "
+"var parādīt, iekļaujot žurnālu meklēšanas rezultātos."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Sadaļas un sadaļu redaktori"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ja sadaļas nav pievienotas, materiāli pēc noklusējuma tiek iesniegti sadaļā "
+"Raksti.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Lai izveidotu vai mainītu žurnāla sadaļas (piemēram, Raksti, Grāmatu "
+"recenzijas u. c.), dodieties uz sadaļu pārvaldību.<br /><br />Autori, "
+"iesniedzot materiālus žurnālam, norādīs..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Žurnāla redaktors, kas nodrošinās žurnāla rediģēšanas procesu."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Žurnāla sadaļa, kurā tiks izskatīts šis materiāls."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Vienmēr rādīt saliktņa saites un norādi par ierobežotu piekļuvi."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Piekļuve vietnei"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Skatīt raksta saturu"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Pieci soļi žurnāla tīmekļa vietnes izveidei"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(piem., fotosintēze; melnie caurumi; četru krāsu kartes problēma; Beiesa "
+"teorēma)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Atslēgvārdi"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Sniedziet atslēgvārdu vai tēmu piemērus kā vadlīnijas autoriem"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Iesniegšanas vadlīnijas"
+
+msgid "manager.setup.submissions"
+msgstr "Iesniegtie materiāli"
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Vadlīnijas autoriem, autortiesības un indeksēšana (tostarp reģistrācija)."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Aizliegt lietotājiem iesniegt žurnālam jaunus rakstus. Iesniegšanu "
+"atsevišķām žurnālu sadaļām var atspējot <a href=\"{$url}\">žurnāla sadaļu</"
+"a> iestatījumu lapā."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Šis žurnāls pašlaik nepieņem manuskriptus. Apmeklējiet darba plūsmas "
+"iestatījumus, lai atļautu manuskriptu iesniegšanu."
+
+msgid "manager.setup.enableOai"
+msgstr "Iespējot OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Nodrošināt metadatus trešo pušu indeksēšanas pakalpojumiem, izmantojot <a "
+"href=\"https://www.openarchives.org/\">Atvērto arhīvu iniciatīvu (OAI)</a>."
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(piem., vēsturiskais pētījums; kvazieksperiments; literatūras analīze; "
+"aptauja/intervija)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Veids (metode/pieeja)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Sniedziet piemērus par attiecīgajiem pētījumu veidiem, metodēm un pieejām "
+"šajā jomā"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Unikālais identifikators"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Rakstus un izdevumus var marķēt ar identifikācijas numuru vai virkni, "
+"izmantojot reģistrācijas sistēmu, piemēram, digitālo objektu identifikatoru "
+"sistēmu (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Žurnāls izmantos redakcijas/recenzēšanas komisiju."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Sīktēls"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Titulattēls"
+
+msgid "manager.setup.userRegistration"
+msgstr "Lietotāja reģistrācija"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Nosaukuma teksts"
+
+msgid "manager.statistics.statistics"
+msgstr "Žurnāla statistika"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Raksta skatījumu skaits (tikai autoriem)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Akceptēšana"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Noraidīšana"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Atkārtota iesniegšana"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Dienas līdz recenzentu pārskatam"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Dienas līdz publicēšanai"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS aprēķina šādu statistiku katram žurnālam. \"Dienas līdz recenzenta "
+"pārskatam\" tiek aprēķinātas no manuskripta iesniegšanas datuma (vai "
+"manuskripta recenzēšanas versijas iesniegšanas brīža) līdz sākotnējam "
+"redaktora lēmumam, savukārt \"dienas līdz publicēšanai\" tiek mērītas "
+"pieņemtajiem manuskriptiem no to sākotnējās augšupielādes līdz publicēšanai."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Publicētie materiāli"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "Pārbaudiet materiālus, kas būs pieejami lasītājiem sadaļā Par žurnālu."
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Piezīme: Iesniegto recenzēto darbu procentuālais īpatsvars var nesasniegt "
+"100 %, jo atkārtoti iesniegtie darbi ir vai nu pieņemti, vai noraidīti, vai "
+"joprojām tiek apstrādāti."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Publicētie numuri"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Kopējais iesniegto darbu skaits"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Zinātniski recenzēti"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Reģistrētie lasītāji"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Nr. piešķirts"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Recenzenti"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Redaktora novērtējums"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Recenziju skaits"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Izvēlieties sadaļas šī žurnāla recenzēto darbu statistikas aprēķināšanai."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Raksta failu lejupielādes"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Raksta anotācijas lapas skatījumi"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Raksta anotācijas lapas skatījumi un lejupielādes"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Žurnāla galvenās lapas skatījumi"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Izdevuma satura lapas skatījumi"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Abonēšanas noteikumi"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Aizkavēta atvērta piekļuve"
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Lūdzu, izmantojiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Abonēšanas termiņa beigas"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Beidzoties abonēšanas termiņam, lasītājiem var tikt liegta piekļuve visam "
+"abonētajam saturam vai arī viņi var saglabāt piekļuvi abonētajam saturam, "
+"kas publicēts pirms abonēšanas termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Pilnīga abonēšanas termiņa izbeigšanās"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Pēc abonēšanas termiņa beigām lasītājiem tiek liegta piekļuve visam "
+"abonētajam saturam."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Daļēja abonēšanas termiņa izbeigšanās"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Lasītājiem tiek liegta piekļuve nesen publicētajam abonēšanas saturam, taču "
+"tiek saglabāta piekļuve abonēšanas saturam, kas publicēts pirms abonēšanas "
+"termiņa beigām."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mēneši"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} nedēļas"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Paziņot abonentiem e-pastā par abonēšanas termiņa beigām"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Paziņot abonentiem e-pastā par abonēšanas termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Paziņot abonentiem e-pastā pirms abonēšanas termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Paziņot abonentiem e-pastā pirms abonēšanas termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Abonēšanas termiņa beigu atgādinājumi"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Automatizētus e-pasta atgādinājumus (tos var rediģēt žurnālu pārvaldnieki "
+"OJS sadaļā E-pasti) abonentiem var nosūtīt gan pirms, gan pēc abonēšanas "
+"termiņa beigām."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Lai aktivizētu šīs opcijas, vietnes pārvaldniekam "
+"jāaktivizē opcija <tt>scheduled_tasks</tt> OJS konfigurācijas failā. Šīs "
+"funkcijas atbalstam var būt nepieciešama papildu servera konfigurācija (kas "
+"var nebūt iespējama visos serveros), kā norādīts OJS dokumentācijā."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Izvēlieties vienu no šādām iespējām:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML var izmantot teksta laukumā (fonta izmēram, krāsai utt.), \"enter\" "
+"izmantošana tiek pielīdzināta rindas lauzumam <tt>&lt;br&gt;</tt>; HTML "
+"redaktors darbojas ar Firefox pārlūkpogrammām."
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību mēnešu skaitam pēc abonementa termiņa "
+"beigām."
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību mēnešu skaitam pirms abonementa termiņa "
+"beigām."
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību nedēļu skaitam pēc abonementa termiņa "
+"beigām."
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Lūdzu, izvēlieties derīgu vērtību nedēļu skaitam pirms abonementa termiņa "
+"beigām."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Reģistrētiem lasītājiem būs iespēja saņemt satura rādītāju pa e-pastu, kad "
+"izdevums būs publicēts atvērtā piekļuvē."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Lai aktivizētu šo opciju, vietnes administratoram "
+"jāaktivizē <tt>scheduled_tasks</tt> opcija OJS konfigurācijas failā. Šīs "
+"funkcijas atbalstam var būt nepieciešama papildu servera konfigurācija (kas "
+"var nebūt iespējama visos serveros), kā norādīts OJS dokumentācijā."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Tiešsaistes maksājumu paziņojumi"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Pēc abonēšanas tiešsaistes maksājumu veikšanas abonēšanas pārvaldniekam var "
+"nosūtīt automatizētus e-pasta paziņojumus (žurnālu pārvaldniekiem tie "
+"pieejami rediģēšanai OJS sadaļā E-pasti)."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Paziņot abonēšanas pārvaldniekam pa e-pastu par individuālā abonementa "
+"iegādi tiešsaistē."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Pēc iestādes abonementa iegādes tiešsaistē (ieteicams) pa e-pastu paziņot "
+"par to abonēšanas pārvaldniekam."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Paziņot abonēšanas pārvaldniekam pa e-pastu pēc individuālās abonēšanas "
+"atjaunošanas tiešsaistē."
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Pēc institucionālā abonementa atjaunošanas tiešsaistē paziņot par to "
+"abonēšanas pārvaldniekam pa e-pastu."
+
+msgid ""
+"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Piezīme:</strong> Tiešsaistē iegādātajiem iestāžu abonementiem ir "
+"nepieciešams apstiprināt sniegto domēna un IP diapazonu un aktivizēt "
+"abonementu ar abonēšanas pārvaldnieka palīdzību."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Piezīme:</strong> Lai iespējotu šīs opcijas, žurnāla pārvaldniekam "
+"jāiedarbina tiešsaistes maksājumu modulis, tostarp tiešsaistes maksājumi par "
+"abonementiem, sadaļā Lasītāju maksas."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Abonēto žurnālu atvērtās piekļuves iespējas"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Abonētajos žurnālos var nodrošināt \"aizkavētu atvērto piekļuvi\" "
+"publicētajam saturam, kā arī atļaut \"autora pašarhivēšanu\" (abi šie "
+"faktori palielina lasītāju skaitu un satura citējamību)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informācija par abonēšanu"
+
+msgid ""
+"manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Abonēšanas veidi un maksas struktūra tiks parādīti abonēšanas lapā kopā ar "
+"abonēšanas pārvaldnieka vārdu un kontaktinformāciju. Šeit var pievienot "
+"papildu informāciju par abonementiem, piemēram, maksāšanas metodes vai "
+"atbalstu abonentiem jaunattīstības valstīs."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Abonēšanas pārvaldnieks"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Šī kontaktinformācija tiks norādīta abonēšanas lapā, lai klienti varētu "
+"saņemt ar abonēšanu saistītus pieprasījumus."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Lūdzu, ievadiet derīgu e-pasta adresi."
+
+msgid "manager.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individuālie abonementi"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Iestāžu abonementi"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Vai tiešām vēlaties atjaunot šo abonementu?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Vai tiešām vēlaties dzēst šo abonementu?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Abonēšanas kopsavilkums"
+
+msgid "manager.subscriptions.create"
+msgstr "Izveidot jaunu abonementu"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Izveidot"
+
+msgid "manager.subscriptions.renew"
+msgstr "Atjaunot"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Izbeigt"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Beigu datums"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Sākt"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Sākuma datums"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domēns"
+
+msgid "manager.subscriptions.edit"
+msgstr "Rediģēt abonementu"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Rediģēt"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Ar statusu"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Viss"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Statuss"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Ir nepieciešams abonēšanas statuss."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas statusu."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Abonēšanas veids"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Ir nepieciešams abonēšanas veids."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas veidu."
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Iestāde"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Lūdzu, izvēlieties derīgu iestādi."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Sākuma datums"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Ir jānorāda abonēšanas sākuma datums."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas sākuma datumu."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Beigu datums"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Ir jānorāda abonēšanas beigu datums."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Šis ir beztermiņa abonēšanas veids; lūdzu, nenorādiet sākuma datumu."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Šis ir beztermiņa abonēšanas veids; lūdzu, nenorādiet beigu datumu."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas beigu datumu."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Piezīme: Visas turpmāk minētās izmaiņas attiecas uz lietotāja sistēmas "
+"profilu."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Lietotājs"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontaktinformācija"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Ir nepieciešams lietotājs."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Lūdzu, izvēlieties derīgu lietotāju."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Lūdzu, izvēlieties derīgu valsti."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Nosūtīt lietotājam e-pastu ar lietotājvārdu un abonēšanas informāciju."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Lūdzu, atzīmējiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Dalība"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Identifikācijas numurs"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Ievadiet informāciju par dalību, ja abonēšanas veids paredz, ka abonentiem "
+"jābūt kādas asociācijas vai organizācijas biedriem."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Izvēlētajam abonēšanas veidam ir nepieciešama dalības informācija."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Piezīmes"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domēns"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Jānorāda iestādes nosaukums."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Pasta adrese"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Ja šeit tiek ievadīts domēns, IP diapazoni nav obligāti.<br />Pareizās "
+"vērtības ir domēna vārdi (piemēram, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Izvēlētā abonēšanas veida abonementa autentifikācijai ir nepieciešams domēns "
+"un/vai IP diapazons."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Lūdzu, ievadiet derīgu domēnu."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP diapazoni"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ja šeit tiek ievadīti IP diapazoni, domēna norādīšana nav obligāta.<br /"
+">Derīgas vērtības ir IP adrese (piemēram, 142.58.103.1), IP diapazons "
+"(piemēram, 142.58.103.1 – 142.58.103.4), IP diapazons ar aizstājējzīmi "
+"'*' (piemēram, 142.58.*.*) un IP diapazons ar CIDR (piemēram, "
+"142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Lūdzu, ievadiet derīgu IP diapazonu."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Dzēst"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Pievienot"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Saglabāt un izveidot citu"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Lai lietotājam varētu nosūtīt paziņojumu pa e-pastu, žurnāla iestatījumos "
+"jānorāda abonēšanas kontaktpersonas vārds un e-pasta adrese."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Šis lietotājs jau ir abonējis šo žurnālu."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Pirms jaunu abonementu izveides ir jāizveido abonēšanas veids."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Pirms jaunu abonementu veikšanas ir jāizveido iestāde."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP diapazons"
+
+msgid "manager.subscriptions.membership"
+msgstr "Dalība"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Identifikācijas numurs"
+
+msgid "manager.subscriptions.notes"
+msgstr "Piezīmes"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Nav abonementu"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Izvēlieties Abonēšanas kontaktpersonu"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Atlasiet lietotāju"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Abonēšanas piekļuves tiesības automātiski tiek piešķirtas žurnāla "
+"pārvaldniekiem, redaktoriem, sadaļu redaktoriem, maketētājiem, teksta "
+"redaktoriem un korektoriem."
+
+msgid "manager.subscriptions.select"
+msgstr "Atlasīt"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Abonements izveidots veiksmīgi."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Abonēšanas veids"
+
+msgid "manager.subscriptions.user"
+msgstr "Lietotājs"
+
+msgid "manager.subscriptions.contact"
+msgstr "Kontaktpersonas vārds"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "manager.subscriptionTypes"
+msgstr "Abonēšanas veidi"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Brīdinājums! Visi abonementi ar šo abonēšanas veidu arī tiks dzēsti. Vai "
+"esat pārliecināts, ka vēlaties turpināt un dzēst šo abonēšanas veidu?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Izmaksas"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individuāls"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucionāls"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Izveidot jaunu abonēšanas veidu"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Izveidot"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Ilgums"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Labot abonēšanas veidu"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Labot"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Izmaksas"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Ievadiet skaitlisku vērtību (piemēram, 40 vai 40,00) bez simbola (piemēram, "
+"€)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Izmaksām jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Nepieciešams norādīt izmaksas."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valūta"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Ir nepieciešama valūta."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Lūdzu, izvēlieties derīgu valūtu."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Apraksts"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Darbības termiņš beidzas pēc"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "mēneši (piemēram, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Darbības termiņš nekad nebeidzas"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Lūdzu, izmantojiet piedāvātās iespējas."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Ilgums"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Abonēšanas mēnešu skaits (piemēram, 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Ilgumam jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Nepieciešams norādīt ilgumu."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formāts"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Ir nepieciešams abonēšanas veida formāts."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Lūdzu, izvēlieties derīgu abonēšanas veida formātu."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Abonementi"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuāli (lietotāji tiek apstiprināti, izmantojot autorizāciju)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Institucionālā (lietotāji tiek apstiprināti, izmantojot domēnu vai IP adresi)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Lūdzu, izmantojiet piedāvātās iespējas."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Abonementiem nepieciešama informācija par dalību (piemēram, asociācijā, "
+"organizācijā, konsorcijā utt.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Lūdzu, atzīmējiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Iespējas"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Nepadarīt šo abonēšanas veidu publiski pieejamu vai redzamu tīmekļa vietnē."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Lūdzu, atzīmējiet attiecīgo izvēles rūtiņu."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Saglabāt un izveidot citu"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Veida nosaukums"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Abonēšanas veids ar šo nosaukumu jau pastāv."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Ir jānorāda abonēšanas veida nosaukums."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Abonēšanas veids"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nav izveidoti nekādi abonēšanas veidi."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Abonēšanas veids izveidots veiksmīgi."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Saite uz lapu, kurā aprakstīti jūsu piedāvātie abonementi."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Saite uz lapu, kurā aprakstīti apmeklētāja pašreizējie un iepriekšējie "
+"abonementi."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Šī saite tiks rādīta tikai tad, ja apmeklētājs ir autorizējies."
+
+msgid "manager.setup.categories"
+msgstr "Kategorijas"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Izvēlieties vispiemērotākās kategorijas no augstāk minētā saraksta. Lasītāji "
+"varēs pārlūkot pilnu žurnālu komplektu pa kategorijām."
+
+msgid "grid.category.path"
+msgstr "Ceļš"
+
+msgid "grid.action.addSection"
+msgstr "Pievienot sadaļu"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Raksti publicētajos žurnāla numuros ir sakārtoti sadaļās, parasti pēc tēmas "
+"vai satura veida (piemēram, pārskata raksti, pētījumi utt.)."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Lomas ir žurnāla lietotāju grupas, kurām žurnālā ir piešķirta piekļuve "
+"dažādiem tiesību līmeņiem un ar tiem saistītajām darbplūsmām. Ir pieci "
+"dažādi tiesību līmeņi: Žurnāla pārvaldniekiem ir piekļuve visam žurnālam "
+"(visam saturam un iestatījumiem); sadaļu redaktoriem ir pilnīga piekļuve "
+"visam piešķirtajam saturam; žurnāla asistentiem ir ierobežota piekļuve "
+"visiem materiāliem, kurus viņiem ir skaidri piešķīris redaktors; recenzenti "
+"var redzēt un veikt to materiālu izskatīšanu, kuru izskatīšana viņiem ir "
+"uzticēta; autori var redzēt un mijiedarboties ar ierobežotu informācijas "
+"apjomu par saviem materiāliem. Turklāt ir pieci dažādi posmu uzdevumi, "
+"kuriem lomām var piešķirt piekļuvi: Iesniegšana, Iekšējā recenzēšana, "
+"Recenzēšana, Rediģēšana un Izstrāde."
+
+msgid "manager.publication.library"
+msgstr "Izdevēja bibliotēka"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Jaunā raksta autortiesību gadu balstīt uz"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Raksts: noklusējuma gads tiks ņemts no raksta publicēšanas datuma, līdzīgi "
+"kā \"public-as-you-go\" gadījumā."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"Izdevums: noklusējuma gads tiks skaitīts no izdevuma publicēšanas datuma."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Atiestatīt raksta tiesības"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Vai esat pārliecināts, ka vēlaties atiestatīt visu rakstu tiesību datus? Šo "
+"darbību nevar atcelt."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Noņemt autortiesību paziņojumu un licences informāciju katram publicētajam "
+"rakstam, atgriežot tos pie žurnāla pašreizējiem noklusējuma iestatījumiem. "
+"Tas uz visiem laikiem noņems visu iepriekš rakstiem pievienoto autortiesību "
+"un licencēšanas informāciju. Dažos gadījumos jums var nebūt juridiski "
+"atļauts atkārtoti licencēt darbu, kas publicēts ar citu licenci. Lūdzu, "
+"esiet piesardzīgi, izmantojot šo rīku, un konsultējieties ar juristu, ja "
+"neesat pārliecināts, kādas tiesības jums pieder uz žurnālā publicētajiem "
+"rakstiem."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Raksta tiesības ir veiksmīgi atiestatītas."
+
+msgid "grid.genres.title.short"
+msgstr "Sastāvdaļas"
+
+msgid "grid.genres.title"
+msgstr "Raksta sastāvdaļas"
+
+msgid "grid.genres.description"
+msgstr ""
+"Šīs sastāvdaļas tiek izmantotas failu nosaukumu piešķiršanai un tiek "
+"parādītas lejupejošā izvēlnē, augšupielādējot failus. Ar ## apzīmētie "
+"paveidi ļauj lietotājam saistīt failu vai nu ar visu iesniegumu 99Z, vai ar "
+"konkrētu sastāvdaļu ar numuru (piemēram, 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Iestatījumi"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI spraudņa iestatījumi"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Raksti"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Numuri"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Saliktņi"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Spraudņa prasības nav izpildītas"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Lai izmantotu šo spraudni, dodieties uz spraudņa kategoriju \"Publiskais "
+"identifikators\", iespējojiet un konfigurējiet DOI spraudni un norādiet "
+"derīgu DOI prefiksu."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Spraudnis nav pilnībā iestatīts."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI publiskā identifikatora spraudnī nav atlasīts neviens publicēšanas "
+"objekts DOI piešķiršanai, tāpēc šajā spraudnī nav depozīta vai eksportēšanas "
+"iespējas."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Parole"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Lūdzu, ņemiet vērā, ka parole tiks saglabāta kā vienkāršs teksts, t. i., "
+"netiks šifrēta."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Jebkurš izdevums"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Jebkurš statuss"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Nav noguldīts"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Atzīmēts kā reģistrēts"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Reģistrēts"
+
+msgid "plugins.importexport.common.action"
+msgstr "Rīcība"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Eksportēt"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Reģistrēta atzīme"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Reģistrēties"
+
+msgid "plugins.importexport.common.validation"
+msgstr "XML validācija pirms eksportēšanas un reģistrācijas."
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Objekti nav atlasīti."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Neizdevās konvertēt atlasītos objektus."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Nederīgs XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Izvades fails {$param} nav rakstāms."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Ievades fails {$param} nav nolasāms."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Reģistrācija nebija veiksmīga! DOI reģistrācijas serveris ir atgriezis "
+"kļūdu: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Reģistrācija veiksmīga!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Apstiprināšana ir veiksmīga!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Apstiprināšana neizdevās."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Žurnālam trūkst DOI prefiksa ar ceļu {$path}."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Norādītos objektus neizdevās atrast."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Nosūtīt kopiju galvenajai kontaktpersonai, kas norādīta žurnāla iestatījumos."
+
+msgid "stats.contextStats"
+msgstr "Žurnāla statistika"
+
+msgid "stats.context.tooltip.text"
+msgstr "Apmeklētāju skaits, kas aplūko žurnāla sākumlapu."
+
+msgid "stats.context.tooltip.label"
+msgstr "Par žurnāla statistiku"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Lejupielādējiet CSV/Excel izklājlapu ar šī žurnāla lietošanas statistiku, "
+"kas atbilst šādiem parametriem."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Žurnāla sākumlapas skatījumu skaits."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Lejupielādēt žurnālu"
+
+msgid "stats.issueStats"
+msgstr "Izdevuma statistika"
+
+msgid "stats.issues.details"
+msgstr "Skatījumi un lejupielādes"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Meklēt izdevuma nosaukumu, sējumu un numuru"
+
+msgid "stats.issues.none"
+msgstr ""
+"Netika konstatētas problēmas ar lietošanas statistiku, kas atbilstu šiem "
+"parametriem."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Lejupielādējiet CSV/Excel izklājlapu ar izmantošanas statistiku par "
+"jautājumiem, kas atbilst šādiem parametriem."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "Katra numura TOC skatījumu un izdevuma saliktņa lejupielādes skaits."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Lejupielādēt izdevumus"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} no {$total} izdevumiem"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Par izdevuma statistiku"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Skatījumi</strong>: Apmeklētāju skaits, kas skatījuši izdevuma "
+"satura rādītāju.<br><strong>lejupielādes</strong>: Izdevuma saliktņa "
+"lejupielādes skaits, ja tāds ir."
+
+msgid "stats.publicationStats"
+msgstr "Rakstu statistika"
+
+msgid "stats.publications.details"
+msgstr "Rakstu informācija"
+
+msgid "stats.publications.none"
+msgstr ""
+"Raksti, kuru lietošanas statistika atbilstu šiem parametriem, netika atrasti."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Kopējais kopsavilkumu skatījumu skaits pa datumiem"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Kopējais failu skatījumu skaits pa datumiem"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} no {$total} rakstiem"
+
+msgid "stats.publications.abstracts"
+msgstr "Kopsavilkumi"
+
+msgid "stats.publications.galleys"
+msgstr "Datnes"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Lejupielādēt CSV/Excel izklājlapu ar lietošanas statistiku rakstiem, kas "
+"atbilst šādiem parametriem."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Lejupielādēt rakstus"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Katra raksta kopsavilkumu skatījumu un lejupielādēto failu skaits."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Nosūtīt materiāla iesniegšanas apstiprinājuma e-pasta kopiju šī žurnāla "
+"galvenajai kontaktpersonai."
+
+msgid ""
+"manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
+"description"
+msgstr ""
+"Šim žurnālam nav noteikta galvenā kontaktpersona. Jūs varat ievadīt galveno "
+"kontaktpersonu <a href=\"{$url}\">žurnāla iestatījumos</a>."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Izdevumu eksporta rezultāti"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" – \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Procesam neizdevās parsēt izdevuma saliktņus"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Žurnāla nosaukums"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Žurnāla mājaslapas URL"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Žurnāla galvenās kontaktpersonas vārds un uzvārds"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "žurnāla iniciāļi"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Žurnāla e-pasta paraksts automātiskajiem e-pastiem"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Žurnāla galvenās kontaktpersonas e-pasta adrese"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Maksājuma veida nosaukums"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Maksājuma summa"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Maksājuma summas valūta, piemēram, EUR"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Tīmekļa vietnes nosaukums, ja tiek izvietots vairāk nekā viens žurnāls"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Abonenta vārds, uzvārds, piederība, tālruņa numurs un e-pasta adrese"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Abonēšanas pārvaldnieka kontaktinformācija"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Abonēšanas lapas URL"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Datums, kad beidzas abonēšanas termiņš"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Kopsavilkums par abonementa veidu, nosaukumu, ilgumu un izmaksām"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Informācija par abonenta dalību"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Iestādes nosaukums"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Iestādes pasta adrese"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domēns"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "IP diapazoni abonēšanas autentificēšanai"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "E-pasta apstiprināšana (žurnāla reģistrācija)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Šo e-pastu automātiski nosūta jaunam lietotājam, kad viņš reģistrējas "
+"žurnālā, ja iestatījumos ir prasīts apstiprināt e-pasta adresi."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Šis spraudnis OJS sistēmā ļauj piešķirt digitālo objektu identifikatorus "
+"žurnālu numuriem, rakstiem un saliktņiem."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Lūdzu, konfigurējiet DOI spraudni, lai varētu pārvaldīt un izmantot DOI OJS:"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Lūdzu, atlasiet publicēšanas objektus, kuriem tiks piešķirti digitālo "
+"objektu identifikatori (DOI):"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Rakstu saliktņi"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Rakstu saliktņi, piemēram, publicēts PDF dokuments"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI prefikss"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI prefikss ir obligāts, un tam jābūt 10.xxxx formā."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Ievadiet pielāgotu sufiksa formu katram publikācijas veidam. Pielāgotā "
+"sufiksa veidnē var izmantot šādus simbolus, lai ģenerētu sufiksu:<br><br> "
+"<code>%j</code> Žurnāla iniciāļi<br> <code>%v</code> Izdevuma sējums<br> "
+"<code>%i</code> Izdevuma numurs<br> <code>%Y</code> Izdevuma gads<br> <code>"
+"%a</code> Raksta ID<br> <code>%g</code> Saliktņa ID<br> <code>%f</code> "
+"Datnes ID<br> <code>%p</code>Lapas numurs<br> <code>%x</code> Pielāgots "
+"identifikators<br><br> Jāievēro, ka pielāgotie sufiksu modeļi bieži rada "
+"problēmas ar DOI ģenerēšanu un deponēšanu. Ja izmantojat pielāgotu sufiksa "
+"modeli, rūpīgi pārbaudiet, vai redaktori var ģenerēt DOI un deponēt tos "
+"reģistrācijas aģentūrā, piemēram, Crossref. "
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Piemēram, vol%viss%ipp%p izveidos tādu DOI kā 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "izdevumiem"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "rakstiem"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "saliktņiem"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli izdevumiem."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli rakstiem."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli saliktņiem."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI atkārtota piešķiršana"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Ja mainīsiet DOI konfigurāciju, tas neietekmēs jau piešķirtos DOI. Kad DOI "
+"konfigurācija ir saglabāta, izmantojiet šo pogu, lai dzēstu visus esošos DOI "
+"un jaunie iestatījumi stātos spēkā esošajiem objektiem."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst visus esošos DOI?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Piešķirt DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Piešķirt DOI visiem publicētajiem žurnāla objektiem, kuriem nav piešķirts "
+"DOI. Šo darbību nevar izmantot kopā ar individuālo sufiksu konfigurāciju. Ja "
+"iepriekš esat mainījis DOI konfigurāciju, pirms šīs darbības uzsākšanas "
+"saglabājiet izmaiņas. DOI piešķiršana var aizņemt ilgu laiku atkarībā no "
+"žurnālā publicēto objektu skaita."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Vai esat pārliecināts, ka vēlaties piešķirt DOI visiem publicētajiem "
+"objektiem, kuriem nav piešķirts DOI?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Reģistrācijas aģentūra"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Lūdzu, izvēlieties reģistrācijas aģentūru, kuru vēlaties izmantot, deponējot "
+"DOI."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Nav"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI jāsākas ar {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Piešķirt"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "izdevums"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "raksts"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "saliktnis"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI nevar piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "doi.editor.missingIssue"
+msgstr "Jūs nevarat ģenerēt DOI, kamēr šī publikācija nav piešķirta izdevumam."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"Jūs nevarat ģenerēt DOI, jo vienā vai vairākās DOI modeļa daļās trūkst datu. "
+"Iespējams, jums būs jāpiešķir publikācija izdevumam, jānosaka izdevēja ID "
+"vai jāievada lappušu numuri."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI nevar piešķirt, jo tajā ir neatrisināms modelis."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Tas, ko redzat, ir DOI priekšskatījums. Atlasiet izvēles rūtiņu un "
+"saglabājiet veidlapu, lai piešķirtu DOI."
+
+msgid "doi.editor.assigned"
+msgstr "DOI tiek piešķirts šim {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Dotais DOI sufikss jau tiek izmantots citam publicētam elementam. Lūdzu, "
+"ievadiet unikālu DOI sufiksu katrai vienībai."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Notīrīt"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst esošo DOI?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Notīrīt izdevuma objektu DOI"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Vai esat pārliecināts, ka vēlaties dzēst esošos izdevuma objektu DOI?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Izmantojiet šādu opciju, lai dzēstu DOI visiem objektiem (rakstiem un "
+"saliktņiem), kas pašlaik plānoti šim izdevumam."
+
+msgid "doi.editor.assignDoi"
+msgstr "Piešķirt DOI {$pubId} šim {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI nevar piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} nevar piešķirt, jo tas satur neatrisinātu modeli."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} piešķirts. Lai rediģētu DOI, apmeklējiet <a href="
+"\"{$doiManagementLink}\">DOI pārvaldības lapu</a>."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} tiks piešķirts pēc publicēšanas."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI jāsākas ar {$doiPrefix}."
+
+msgid "doi.editor.preview.publication"
+msgstr "Šīs publikācijas DOI būs {$doi}."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI šai publikācijai nav piešķirts."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Saliktnis: {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "Vienība"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Jūsu pieprasītais saliktnis nav daļa no šīs publikācijas."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Pēc publikācijas/saliktņa publicēšanas var rediģēt tikai DOI"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Iesniegtais DOI nav derīgs"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Pēc publikācijas publicēšanas var rediģēt tikai DOI"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Jūsu pieprasītie izdevumi netika atrasti"
+
+msgid "doi.manager.submissionDois"
+msgstr "Rakstu DOI"
+
+msgid "doi.manager.issueDois"
+msgstr "Izdevumu DOI"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Šajā e-pasta vēstulē autors tiek informēts, ka viņa iesniegtais materiāls "
+"tiek noraidīts pirms recenzēšanas posma, jo tas neatbilst publicēšanas "
+"prasībām žurnālā."
+
+msgid "manager.institutions.noContext"
+msgstr "Šīs iestādes žurnālu neizdevās atrast."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Abonēšanas paziņojums"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Ar šo e-pasta vēstuli reģistrētajam lasītājam tiek paziņots, ka pārvaldnieks "
+"viņam ir izveidojis abonementu. Tajā ir norādīts žurnāla URL kopā ar "
+"piekļuves norādījumiem."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abonēšanas termiņš drīz beigsies"
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abonēšanas termiņš beidzies"
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abonementa derīgums beidzies pēdējo reizi"
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Iegādāties individuālo abonementu"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Šī e-pasta vēstule informē abonēšanas pārvaldnieku par to, ka tiešsaistē ir "
+"iegādāts individuāls abonements. Tajā ir sniegta kopsavilkuma informācija "
+"par abonementu un ātras piekļuves saite uz iegādāto abonementu."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Iegādāties iestāžu abonementu"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Šī e-pasta vēstule informē abonēšanas pārvaldnieku par to, ka tiešsaistē ir "
+"iegādāts iestāžu abonements. Tajā ir sniegta kopsavilkuma informācija par "
+"abonementu un ātras piekļuves saite uz iegādāto abonementu."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Atjaunot individuālo abonementu"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Šī e-pasta vēstule informē abonementa pārvaldnieku, ka individuālais "
+"abonements atjaunots tiešsaistē. Tajā ir sniegta kopsavilkuma informācija "
+"par abonementu un ātras piekļuves saite uz atjaunoto abonementu."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Atjaunot iestāžu abonementu"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Šī e-pasta vēstule paziņo abonēšanas pārvaldniekam, ka iestāžu abonēšana "
+"atjaunota tiešsaistē. Tajā ir sniegta kopsavilkuma informācija par "
+"abonementu un ātras piekļuves saite uz atjaunoto abonementu."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Paziņojums par atvērto piekļuvi"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Šis e-pasts tiek nosūtīts reģistrētiem lasītājiem, kuri ir pieprasījuši "
+"saņemt paziņojumu e-pastu, kad izdevums kļūst brīvpieejams."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Paziņojums par izdevuma publicēšanu"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Šis e-pasts tiek automātiski nosūtīts reģistrētajiem lietotājiem, kad tiek "
+"publicēts jauns izdevums."
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+#~ msgid "manager.setup.submissionPreparationChecklistDescription"
+#~ msgstr ""
+#~ "Iesniedzot manuskriptu žurnālam, autori vispirms tiek aicināti pārbaudīt, "
+#~ "vai katrs kontrolsaraksta punkts ir izpildīts, un tikai pēc tam turpināt "
+#~ "darba iesniegšanu. Šis kontrolsaraksts ir iekļauts arī Vadlīnijās "
+#~ "autoriem, sadaļā Par žurnālu. Sarakstu var rediģēt zemāk. Pirms autori "
+#~ "var turpināt darba iesniegšanu, visiem saraksta punktiem ir jābūt "
+#~ "atzīmētiem."
+
+#~ msgid "manager.setup.submissionPreparationChecklist"
+#~ msgstr "Kontrolsaraksts iesniedzamā materiāla sagatavošanai"

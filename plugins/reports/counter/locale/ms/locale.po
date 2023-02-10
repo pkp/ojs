@@ -1,0 +1,55 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Plugin COUNTER membenarkan melaporkan aktiviti jurnal, menggunakan <a href="
+"\"http://www.projectcounter.org\"> standard COUNTER </a>. Laporan ini sahaja "
+"tidak menjadikan COUNTER jurnal mematuhi. Untuk menawarkan kepatuhan "
+"COUNTER, tinjau syarat di laman web Project COUNTER."
+
+msgid "plugins.reports.counter"
+msgstr "Laporan COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "Pelepasan COUNTER"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Parameter laporan tidak sah."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Permintaan laporan tidak sah."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Tidak ada hasil untuk laporan ini."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Hasilnya tidak dapat diformat sebagai XML."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Laporan COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"Laporan Jurnal COUNTER 1 (R3): Permintaan Artikel Teks Penuh mengikut Bulan "
+"dan Jurnal"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Semua Pelanggan"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Laporan Artikel 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Laporan Jurnal 1"

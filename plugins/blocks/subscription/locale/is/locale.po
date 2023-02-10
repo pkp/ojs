@@ -1,0 +1,43 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-21 19:44+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"subscription/is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Áskriftarblokk"
+
+msgid "plugins.block.subscription.description"
+msgstr "Þessi viðbót er með hliðarstiku með upplýsingum um áskrift."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Áskrift"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Rennur út"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Aðgangur í boði: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Aðgangur frá: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Áskriftir"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Innskráning til að fara í efni bara fyrir áskrifendur."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Það þarf að vera í áskrift til að fá aðgang að ákveðnu efni."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Frekari upplýsingar"

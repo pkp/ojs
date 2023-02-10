@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-30T06:56:44-07:00\n"
+"PO-Revision-Date: 2020-01-31 16:21+0000\n"
+"Last-Translator: Heike Riegler <heike.riegler@julius-kuehn.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/de/>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ-Export-Plugin"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Zeitschrift für DOAJ exportieren."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Kontaktieren Sie DOAJ zur Aufnahme"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Wenn Sie Artikel aus OJS heraus registrieren möchten, geben Sie bitte Ihren DOAJ-API-Key ein. Ansonsten können Sie immer noch Metadaten in das DOAJ-XML-Format exportieren, aber keine Artikel aus OJS bei DOAJ registrieren."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ-API-Key"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Sie finden Ihren API-Key auf Ihrer DOAJ-Nutzerseite."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS wird Artikel automatisch an DOAJ abliefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach allen unregistrierten Artikeln suchen."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Die DOAJ-Test-API (Testumgebung) für die Registrierung nutzen. Bitte vergessen Sie nicht, diese Option für den Produktivbetrieb wieder abzuwählen."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ automatische Registrierung"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Ablieferung war nicht erfolgreich! Die DOAJ-API hat einen Fehler zurückgemeldet: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Verwendung:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

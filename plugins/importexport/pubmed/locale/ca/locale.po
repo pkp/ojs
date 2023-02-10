@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2020-04-17 18:57+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/ca/>\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "Connector d'exportació a XML de PubMed"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "Exporta les metadades de l'article en format XML de PubMed per a la indexació a MEDLINE."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Exporta les dades"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Exporta els números"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Seleccioneu el número que vulgueu exportar."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Exporta els articles"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Seleccioneu els articles que vulgueu exportar."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Ús: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles "
+"[articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] número [issueId]\n"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "ERROR:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "No hi ha cap número que coincideixi amb l'id. de número indicat, \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "No hi ha cap article que coincideixi amb l'id. d'article indicat, \"{$articleId}\"."

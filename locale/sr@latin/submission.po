@@ -1,0 +1,365 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
+"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sr_RS@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Predaj u mojoj ulozi kao..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Odaberite sastavni deo rada"
+
+msgid "submission.title"
+msgstr "Naslov rada"
+
+msgid "submission.title.tip"
+msgstr ""
+"Vrsta rada je obično \"slika\", \"tekst\" ili neki drua vrsta multimedije, "
+"uključujući i 'softver' ili 'interaktivni rad'. Odaberite najrelevantniju za "
+"vaš rad. Primere možete videti na sledećoj stranici <a target=\"_blank\" "
+"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Započnite predaju novog rada u"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Predaja novog rada"
+
+msgid "grid.action.workflow"
+msgstr "Proces predaje"
+
+msgid "submission.abstract.wordCount.description"
+msgstr ""
+
+msgid "submission.submit.noContext"
+msgstr ""
+
+msgid "submission.issueEntry"
+msgstr "Metapodaci"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Časopis je obavešten o vašoj predaju i poslata vam je imejl poruka sa "
+"potvrdom vaših podataka. Kada urednik pregleda predaju kontaktiraće vas."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Ova kopija se pojavljuje u broju časopisa"
+
+msgid "grid.action.issueEntry"
+msgstr "Pogledaj metapodatke predaje"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Probna kopija članka \"{$galleyFormatName}\" je dostupna."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Probna kopija članka \"{$galleyFormatName}\" više nije dostupna."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Javni identifikatori predaje su ažurirani."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Odobrenje formata"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Ova probna kopija više <em>neće biti dostupna</em> za čitaoce.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Ova probna kopija će <em>biti dostupna</em> za čitaoce.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Omogući ovaj fajl prikaza"
+
+msgid "submission.galleyFiles"
+msgstr "Fajlovi prikaza"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Grafički urednik postavlja na server fajlove koji su spremni za produkciju i "
+"koji su pripremljeni za objavljivanje. Koristi <em>Dodeli revizora</em> da "
+"dodelite autora i druge za finalnu proveru probnih kopija,sa ispravljenim "
+"fajlovima postavljenim na server za odobrenje pre objavljivanja."
+
+msgid "grid.action.approveProof"
+msgstr "Odobri prtobnu kopiju za uključivanje u prikaz."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Ova probna kopija je odobrena za uključivanje u prikaz."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Naslov i apstrakt"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Postavite na server fajlove u vezi ovog članka uključujući sam članak, "
+"multimedijalne fajlove, setove podataka, umetnički rad i sl."
+
+msgid "submission.pageProofs"
+msgstr "Lektura"
+
+msgid "workflow.review.externalReview"
+msgstr "Recenzija"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metapodaci predaje su ažurirani."
+
+msgid "submission.upload.fileContents"
+msgstr "Delovi rada"
+
+msgid "submission.complete"
+msgstr "Odobreno"
+
+msgid "submission.incomplete"
+msgstr "Čekam odobrenje"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Kontrolna lista predaje"
+
+#, fuzzy
+msgid "submission.submit.privacyStatement"
+msgstr "Izjava o privatnosti"
+
+msgid "submission.submit.contributorRole"
+msgstr "Uloge saradnika"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Zahtevani format citata nije moguće preuzeti."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Ove specifikacije su bazirane na Dublin Core setu metapodataka, međunarodnom "
+"standardu koji se koristi za opisivanje sadržaja časopisa."
+
+msgid "section.any"
+msgstr ""
+
+msgid "submission.sectionOptions"
+msgstr ""
+
+msgid "catalog.browseTitles"
+msgstr ""
+
+msgid "catalog.category.heading"
+msgstr ""
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+
+msgid "galley.publicationNotFound"
+msgstr ""
+
+msgid "publication.assignToissue"
+msgstr ""
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
+
+msgid "publication.datePublished.description"
+msgstr ""
+
+msgid "publication.invalidSection"
+msgstr ""
+
+msgid "publication.inactiveSection"
+msgstr ""
+
+msgid "publication.invalidIssue"
+msgstr ""
+
+msgid "publication.publish.confirmation"
+msgstr ""
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+
+msgid "publication.required.issue"
+msgstr ""
+
+msgid "publication.publishedIn"
+msgstr ""
+
+msgid "publication.scheduledIn"
+msgstr ""
+
+msgid "publication.unscheduledIn"
+msgstr ""
+
+msgid "publication.selectIssue"
+msgstr ""
+
+msgid "submission.publication"
+msgstr "Publikacije"
+
+msgid "publication.status.published"
+msgstr ""
+
+msgid "submission.status.scheduled"
+msgstr ""
+
+msgid "publication.status.unscheduled"
+msgstr ""
+
+msgid "submission.publications"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+
+msgid "publication.datePublished"
+msgstr ""
+
+msgid "publication.editDisabled"
+msgstr ""
+
+msgid "publication.event.published"
+msgstr ""
+
+msgid "publication.event.scheduled"
+msgstr ""
+
+msgid "publication.event.unpublished"
+msgstr ""
+
+msgid "publication.event.versionPublished"
+msgstr ""
+
+msgid "publication.event.versionScheduled"
+msgstr ""
+
+msgid "publication.event.versionUnpublished"
+msgstr ""
+
+msgid "publication.invalidSubmission"
+msgstr ""
+
+msgid "publication.publish"
+msgstr ""
+
+msgid "publication.publish.requirements"
+msgstr ""
+
+msgid "publication.required.declined"
+msgstr ""
+
+msgid "publication.required.reviewStage"
+msgstr ""
+
+msgid "submission.license.description"
+msgstr ""
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+
+msgid "publication.unpublish"
+msgstr ""
+
+msgid "publication.unpublish.confirm"
+msgstr ""
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+
+msgid "publication.version.details"
+msgstr ""
+
+msgid "submission.queries.production"
+msgstr "Produkcione diskusije"
+
+msgid "editor.submission.decision.backToReview"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Potreban je barem jedan autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Unesite naslov rada"
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Unesite apstrakt rada."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Odaberite ulogu saradnika."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Pošalji na recenziju"

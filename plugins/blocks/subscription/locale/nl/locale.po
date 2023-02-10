@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:49+00:00\n"
+"PO-Revision-Date: 2020-10-22 11:46+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/nl/>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Abonnement-blok"
+
+msgid "plugins.block.subscription.description"
+msgstr "Deze plugin levert informatie over het abonnement in de sidebar."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Abonnement"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Verloopt"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Toegang verzorgd door: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Komend van IP: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Abonnementen"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr ""
+"Log in om toegang te krijgen tot materiaal dat alleen toegankelijk is voor "
+"abonnees."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Een abonnement is vereist om sommige inhoud te kunnen bekijken."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Meer informatie"

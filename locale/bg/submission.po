@@ -1,0 +1,438 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Albena Vassileva <albena.ava@gmail.com>, 2022.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-28 18:02+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Изпращане в ролята ми на..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Изберете компонент от статията"
+
+msgid "submission.title"
+msgstr "Заглавие на статията"
+
+msgid "submission.title.tip"
+msgstr ""
+"Типът на подаване на материалите обикновено е един вид -  „изображения“, "
+"„текст“ или други типове мултимедия, включително „софтуер“ или "
+"„интерактивен“. Моля, изберете този, който е най-подходящ за вашето подаване "
+"на материали за статия. Примери могат да бъдат намерени на <a target=\"_blank"
+"\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type\"> http://dublincore.org/documents/ 2001/04/12/useguide/generic."
+"shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Започване на ново изпращане на материали в"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Ново изпращане на материали"
+
+msgid "grid.action.workflow"
+msgstr "Процес на изпращане на материали"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Резюмето трябва да съдържа {$wordCount} думи или по -малко."
+
+msgid "submission.submit.noContext"
+msgstr "Изпратените материали се отнасят към списание, което не е намерено."
+
+msgid "submission.issueEntry"
+msgstr "Метаданни"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Списанието е уведомено за вашето подаване на материали и сте получили "
+"потвърждение за получаването по имейл. След като редакторът прегледа "
+"изпратеното, той ще се свърже с вас."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Типография се появява в изданието"
+
+msgid "grid.action.issueEntry"
+msgstr "Вижте метаданните на тези изпратени материали"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Типографията за статии \"{$galleyFormatName}\" е достъпна."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Типографията за статии \"{$galleyFormatName}\" е недостъпна."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Публичните идентификатори на подаването на материали са актуализирани."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Одобрение на формата"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p> Тази типография <em>вече няма да бъде достъпна</em> за читателите. </p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p> Тази типография <em>вече ще бъде достъпна</em> за читателите. </p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Направете тази типография достъпна"
+
+msgid "submission.galleyFiles"
+msgstr "Типографски файлове"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Редакторът на оформлението качва готовите за публикуване файлове, които са "
+"подготвени за публикуване тук. Използвайте <em>Присвояване на одитор</em>, "
+"за да посочите автори и други за корекция на типографиите, като коригираните "
+"файлове се качват за одобрение преди публикуването."
+
+msgid "grid.action.approveProof"
+msgstr "Одобрете тази чернова за включване в типография."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Тази чернова е одобрена за включване в типография."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Заглавие и резюме"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Качете файлове, свързани с това изпращане на материали, включително "
+"статията, мултимедията, наборите от данни, произведения на изкуството и др."
+
+msgid "submission.pageProofs"
+msgstr "Коректура"
+
+msgid "workflow.review.externalReview"
+msgstr "Рецензия"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метаданните за изданието са актуализирани."
+
+msgid "submission.upload.fileContents"
+msgstr "Компонент на статия"
+
+msgid "submission.complete"
+msgstr "Одобрено"
+
+msgid "submission.incomplete"
+msgstr "Чака одобрение"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Контролен списък за изпращаните материали"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Декларация за поверителност на списанието"
+
+msgid "submission.submit.contributorRole"
+msgstr "Роля на изпращача"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Заявеният формат на цитиране не може да бъде извлечен."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Тези спецификации се основават на набора от метаданни Dublin Core, "
+"международен стандарт, използван за описание на съдържанието на списанието."
+
+msgid "section.any"
+msgstr "Произволен раздел"
+
+msgid "submission.sectionOptions"
+msgstr "Параметри на раздела"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} елемента"
+
+msgid "catalog.category.heading"
+msgstr "Всички елементи"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Типографиите на тази публикация не могат да се редактират, тъй като тя вече "
+"е публикувана."
+
+msgid "galley.publicationNotFound"
+msgstr "Публикацията за тази типография не можа да бъде намерена."
+
+msgid "publication.assignToissue"
+msgstr "Присвояване към брой"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Този материал е предвиден за <a href=\"{$issueUrl}\">{$issueName}</a>, но не "
+"е насрочен за публикуване."
+
+msgid "publication.changeIssue"
+msgstr "Промени броя"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Датата на публикуване ще бъде зададена автоматично, когато броят бъде "
+"публикуван. Не въвеждайте дата на публикуване, освен ако статията не е "
+"публикувана преди това на друго място и трябва да я актуализирате."
+
+msgid "publication.invalidSection"
+msgstr "Разделът за тази публикация не може да бъде намерен."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (неактивен)"
+
+msgid "publication.invalidIssue"
+msgstr "Броят за тази публикация не можа да бъде намерен."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Всички изисквания за публикуване са изпълнени. Сигурни ли сте, че искате да "
+"публикувате това?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Всички изисквания за публикуване са изпълнени. Това ще бъде публикувано, "
+"когато бъде публикуван {$issue}. Наистина ли искате да насрочите това за "
+"публикуване?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Всички изисквания за публикуване са изпълнени. Това ще бъде публикувано "
+"незабавно в {$issue}. Сигурни ли сте, че искате да публикувате това?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Всички изисквания за публикуване са изпълнени. Това ще бъде публикувано "
+"незабавно, тъй като датата на публикуване е зададена на {$datePublished}. "
+"Сигурни ли сте, че искате да публикувате това?"
+
+msgid "publication.required.issue"
+msgstr ""
+"Публикацията трябва да бъде отнесена към съответен брой, преди да може да "
+"бъде публикувана."
+
+msgid "publication.publishedIn"
+msgstr "Публикувано в <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Насрочено за публикуване в <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Това не е насрочено за публикуване в брой."
+
+msgid "publication.selectIssue"
+msgstr "Изберете брой, в който да планирате за публикуване"
+
+msgid "submission.publication"
+msgstr "Публикация"
+
+msgid "publication.status.published"
+msgstr "Публикувано"
+
+msgid "submission.status.scheduled"
+msgstr "Насрочено"
+
+msgid "publication.status.unscheduled"
+msgstr "Премахнато насрочване"
+
+msgid "submission.publications"
+msgstr "Публикации"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Годината на авторските права ще бъде зададена автоматично, когато тя бъде "
+"публикувана в брой."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Годината на авторските права ще бъде зададена автоматично въз основа на "
+"датата на публикуване."
+
+msgid "publication.datePublished"
+msgstr "Дата на публикуване"
+
+msgid "publication.editDisabled"
+msgstr "Тази версия е публикувана и не може да бъде редактирана."
+
+msgid "publication.event.published"
+msgstr "Изпратеният материал беше публикуван."
+
+msgid "publication.event.scheduled"
+msgstr "Изпратеният материал беше насрочен за публикуване."
+
+msgid "publication.event.unpublished"
+msgstr "Изпратеният материал беше снет от публикуване."
+
+msgid "publication.event.versionPublished"
+msgstr "Нова версия беше публикувана."
+
+msgid "publication.event.versionScheduled"
+msgstr "Нова версия беше насрочена за публикуване."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Версията беше снета от публикуване."
+
+msgid "publication.invalidSubmission"
+msgstr "Изпратените материали за тази публикация не могат да бъдат намерени."
+
+msgid "publication.publish"
+msgstr "Публикувай"
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Следните изисквания трябва да бъдат изпълнени, преди това да може да бъде "
+"публикувано."
+
+msgid "publication.required.declined"
+msgstr ""
+"Изпратен е отказ за публикуване и материалът не може да бъде публикуван."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Подадените материали трябва да преминат през етапите на коректура или "
+"производство, преди да могат да бъдат публикувани."
+
+msgid "submission.license.description"
+msgstr ""
+"Лицензът автоматично ще бъде настроен на <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> когато това се публикува."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Авторските права ще бъдат присвоени автоматично на {$copyright}, когато това "
+"бъде публикувано."
+
+msgid "submission.copyrightOther.description"
+msgstr "Предайте авторски права за публикувани материали на следната страна."
+
+msgid "publication.unpublish"
+msgstr "Снемане от публикация"
+
+msgid "publication.unpublish.confirm"
+msgstr "Сигурни ли сте, че не искате това да бъде публикувано?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Сигурни ли сте, че не сте съгласен/а с този график на публикуване?"
+
+msgid "publication.version.details"
+msgstr "Подробности за публикацията за версия {$version}"
+
+msgid "submission.queries.production"
+msgstr "Продукционни дискусии"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Обратно към етап на рецензиране"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Отмяна на решението за приемане на това подаване на материали и изпращане "
+"обратно към етапа на рецензиране."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} отмени решението да приеме тези материали и ги изпрати обратно "
+"на етап за рецензиране."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Изпратено обратно към етап на рецензиране"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+"Подадените материали {$title} бяха изпратени обратно към етап на рецензиране."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Изпратете имейл до авторите, за да ги уведомите, че тяхното подаване на "
+"материали се изпраща обратно към етапа на рецензиране. Обяснете защо е взето "
+"това решение и уведомете автора какъв по-нататъшен преглед ще бъде предприет."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Изпратете имейл до авторите, за да ги уведомите, че това подаване на "
+"материали ще бъде изпратено за рецензиране. Ако е възможно, дайте на "
+"авторите някаква индикация за това колко време може да отнеме процесът на "
+"рецензиране и кога трябва да очакват известие от редакторите. Този имейл "
+"няма да бъде изпратен, докато решението не бъде записано."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Изберете файлове, които трябва да бъдат изпратени на етап рецензиране."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Не можа да се създаде DOI за следното подаване на материали: "
+"{$pubObjectTitle}. Подадените материали трябва да бъдат присвоени към брой, "
+"преди да може да се генерира DOI."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Не можа да се създаде DOI за типографията {$pubObjectTitle} на следното "
+"подаване на материали: {$itemTitle}. Подадените материали трябва да бъдат "
+"присвоени към брой, преди да може да се генерира DOI."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Не можа да се създаде DOI за следното подаване на материали: "
+"{$pubObjectTitle}. Подадените материали не са присвоени към брой на списание."
+
+msgid "submission.layout.viewGalley"
+msgstr "Преглед на типографията"
+
+msgid "galley.cantEditPublished"
+msgstr "Тази типография не може да се редактира, защото вече е публикувана."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Моля, прочетете и разберете условията за авторските права при изпращане на "
+"материали към това списание."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Нямате право да изпращате материали към това списание, защото авторите "
+"трябва да бъдат регистрирани от редакцията на списанието. Ако смятате, че "
+"това е грешка, моля, свържете се с <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Не ви е разрешено да изпращате материали към това списание, защото "
+"изпращанията във всички раздели на това списание са деактивирани или "
+"ограничени. Ако смятате, че това е грешка, моля, свържете се с <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} не приема изпращания в секцията {$section}. Ако имате нужда "
+"от помощ за възстановяване на изпратеното от вас, моля, свържете се с <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Разделът за това изпращане на материали не можа да бъде намерен."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+"Само на редакционния екип е разрешено да изпраща материали в този раздел."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Изисква се да е отбелязан поне един автор."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Моля, въведете заглавието на вашата статия."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Моля, въведете резюмето на вашата статия."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Резюмето ви е твърде дълго. Моля, съкратете го под ограничението на думите, "
+"посочено за този раздел."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Моля, изберете ролята на изпращача/сътрудниците."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Пращане за рецензия"

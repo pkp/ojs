@@ -1,0 +1,431 @@
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2022-12-21 16:02+0000\n"
+"Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"cs_CZ/>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Vložit v rámci mé následující role..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Zvolte komponentu článku"
+
+msgid "submission.title"
+msgstr "Název článku"
+
+msgid "submission.title.tip"
+msgstr ""
+"Typ odesílání je obvykle jeden z následujících 'obrázek', 'text' nebo "
+"některý jiný multimediální typ, včetně 'software' nebo 'interaktivní'. "
+"Zvolte prosím ten, který je pro váš příspěvek nejrelevantnější. Příklady lze "
+"nalézt na adrese <a target=\"_blank\" href=\"http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type\">http://dublincore.org/"
+"documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Začít nový příspěvek v"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nový příspěvek"
+
+msgid "grid.action.workflow"
+msgstr "Workflow příspěvku"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Abstrakt musí obsahovat maximálně {$wordCount} slov."
+
+msgid "submission.submit.noContext"
+msgstr "Časopis tohoto příspěvku nebyl nalezen."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Redakce časopisu byla informována o vašem příspěvku a byl vám zaslán email s "
+"potvrzením. Jakmile redaktor zkontroluje příspěvek, bude vás kontaktovat."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Ve vstupu do čísla je sazebnice"
+
+msgid "grid.action.issueEntry"
+msgstr "Prohlédněte si metadata tohoto příspěvku"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Sazebnice článku \"{$galleyFormatName}\" byla zpřístupněna."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Sazebnice článku \"{$galleyFormatName}\" byla znepřístupněna."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Veřejné identifikátory příspěvku byly aktualizovány."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Schválen formátu"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Tato sazebnice <em>již nebude dostupná čtenářům</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Tato sazebnice <em>bude dostupná čtenářům</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Zpřístupnit tuto sazebnici"
+
+msgid "submission.galleyFiles"
+msgstr "Soubory sazebnice"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Editor layoutu zde načte soubory připravené k vydání. Pomocí <em> Přiřadit "
+"auditora </em> určíte autory a další, aby provedli korekturu sazebnice a "
+"opravené soubory nahráli ke schválení před vydáním."
+
+msgid "grid.action.approveProof"
+msgstr "Schválit tuto korekturu k vložení do sazebnice."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Korektura byla schválena k vložení do sazebnice."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Název a abstrakt"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Nahrajte soubory spojené s tímto příspěvkem, včetně článku, multimédií, "
+"datových sad, kreseb atd."
+
+msgid "submission.pageProofs"
+msgstr "Korektury"
+
+msgid "workflow.review.externalReview"
+msgstr "Recenze"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Metadata tohoto příspěvku byla aktualizována."
+
+msgid "submission.upload.fileContents"
+msgstr "Komponenta článku"
+
+msgid "submission.complete"
+msgstr "Schváleno"
+
+msgid "submission.incomplete"
+msgstr "Čeká se na schválení"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Kontrolní seznam pro příspěvek"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Prohlášení o ochraně osobních údajů"
+
+msgid "submission.submit.contributorRole"
+msgstr "Role přispěvatele"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Požadovaný citační formát nelze načíst."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Tyto specifikace vycházejí z množiny metadat Dublin Core, což je mezinárodní "
+"standard používaný k popisu obsahu časopisu."
+
+msgid "section.any"
+msgstr "Libovolná sekce"
+
+msgid "submission.sectionOptions"
+msgstr "Možnosti sekce"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} položek"
+
+msgid "catalog.category.heading"
+msgstr "Všechny položky"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Sazebnice tohoto příspěvku nelze upravovat, protože již byl publikován."
+
+msgid "galley.publicationNotFound"
+msgstr "Příspěvek pro tuto sazebnici nebyl nalezen."
+
+msgid "publication.assignToissue"
+msgstr "Přiřadit do čísla"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Tento příspěvek byl přidán do <a href=\"{$issueUrl}\">{$issueName}</a>, ale "
+"zatím nebylo stanoveno datum jeho publikování."
+
+msgid "publication.changeIssue"
+msgstr "Změnit číslo"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Datum vydání bude stanoveno automaticky při zveřejnění čísla. Nezadávejte "
+"datum vydání, pokud nebyl článek dříve publikován jinde a potřebujete jej "
+"antidatovat."
+
+msgid "publication.invalidSection"
+msgstr "Sekce pro tento příspěvek nebyla nalezena."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Neaktivní)"
+
+msgid "publication.invalidIssue"
+msgstr "Číslo pro tento příspěvek nelze nalézt."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Všechny požadavky na zveřejnění byly splněny. Opravdu si přejete publikovat?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Všechny požadavky na zveřejnění byly splněny. Při publikování bude "
+"zveřejněno: {$issue}. Opravdu si přejete naplánovat toto vydání?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Všechny požadavky na zveřejnění byly splněny. Toto bude okamžitě zveřejněno "
+"v čísle {$issue}. Opravdu si to přejete publikovat?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Všechny požadavky pro publikování byly splněny. Příspěvek bude publikován "
+"okamžitě, protože datum publikování bylo nastaveno na {$datePublished}. Jste "
+"si jisti, že má být příspěvek publikován?"
+
+msgid "publication.required.issue"
+msgstr "Před zveřejněním musí být příspěvek přiřazen číslu."
+
+msgid "publication.publishedIn"
+msgstr "Publikováno v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Naplánováno vydání v <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Pro tuto položku nebylo dosud naplánováno publikování v čísle."
+
+msgid "publication.selectIssue"
+msgstr "K naplánování publikování je třeba zvolit číslo"
+
+msgid "submission.publication"
+msgstr "Zveřejnění"
+
+msgid "publication.status.published"
+msgstr "Publikováno"
+
+msgid "submission.status.scheduled"
+msgstr "Naplánováno"
+
+msgid "publication.status.unscheduled"
+msgstr "Není naplánováno vydání"
+
+msgid "submission.publications"
+msgstr "Vydání"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Rok vydání u autorských práv bude nastaven automaticky, jakmile bude toto "
+"číslo zveřejněno."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Rok autorských práv bude nastaven automaticky na základě data zveřejnění."
+
+msgid "publication.datePublished"
+msgstr "Datum publikace"
+
+msgid "publication.editDisabled"
+msgstr "Tato verze byla publikována a nelze ji upravovat."
+
+msgid "publication.event.published"
+msgstr "Příspěvek byl publikován."
+
+msgid "publication.event.scheduled"
+msgstr "Příspěvek byl naplánován k publikaci."
+
+msgid "publication.event.unpublished"
+msgstr "Zveřejnění tohoto příspěvku bylo ukončeno."
+
+msgid "publication.event.versionPublished"
+msgstr "Byla vydána nová verze."
+
+msgid "publication.event.versionScheduled"
+msgstr "Vydání nové verze bylo naplánováno."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Verze byla odstraněna z publikace."
+
+msgid "publication.invalidSubmission"
+msgstr "Příspěvek pro tuto publikaci nebyl nalezen."
+
+msgid "publication.publish"
+msgstr "Publikovat"
+
+msgid "publication.publish.requirements"
+msgstr "Před zveřejněním musí být splněny následující požadavky."
+
+msgid "publication.required.declined"
+msgstr "Odmítnutý příspěvek nelze zveřejnit."
+
+msgid "publication.required.reviewStage"
+msgstr "Před zveřejněním musí být příspěvek ve fázi Copyediting nebo Produkce."
+
+msgid "submission.license.description"
+msgstr ""
+"Jakmile bude tento článek zveřejněn, bude licence automaticky nastavena na "
+"<a href='{$licenseUrl}' target='_blank'> {$licenseName} </a>."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Po jeho zveřejnění bude autorské právo automaticky přiděleno {$copyright}."
+
+msgid "submission.copyrightOther.description"
+msgstr "Přiřaďte autorská práva k publikovaným příspěvkům následující straně."
+
+msgid "publication.unpublish"
+msgstr "Ukončit zveřejnění"
+
+msgid "publication.unpublish.confirm"
+msgstr "Opravdu chcete ukončit zveřejnění?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Opravdu si nepřejete, aby to bylo naplánováno na zveřejnění?"
+
+msgid "publication.version.details"
+msgstr "Podrobnosti o zveřejnění pro verzi {$version}"
+
+msgid "submission.queries.production"
+msgstr "Diskuse během produkčního procesu"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Zpět do recenzní fáze"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Vrátit rozhodnutí o přijetí tohoto podání a vrátit jej do recenzní fáze."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} zrušil rozhodnutí o přijetí tohoto příspěvku a vrátil ho zpět "
+"do recenzní fáze."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Posláno zpět to recenzní fáze"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Příspěvek {$title} byl poslán zpět do recenzní fáze."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Pošlete autorům e-mail, ve kterém jim oznámíte, že jejich příspěvky byly "
+"vráceny do fáze recenzního řízení. Vysvětlete, proč bylo toto rozhodnutí "
+"učiněno, a informujte autora o tom, jaké další recenze budou prováděny."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Pošlete autorům e-mail s informací, že tento příspěvek bude odeslán k "
+"recenznímu řízení. Pokud je to možné, naznačte autorům, jak dlouho může "
+"recenzní řízení trvat a kdy mají očekávat, že se jim redakce znovu ozve. "
+"Tento e-mail bude odeslán až po zaznamenání rozhodnutí."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Vyberte soubory, které mají být odeslány do recenzní fáze."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Nepodařilo se vytvořit DOI pro následující příspěvek: {$pubObjectTitle}. "
+"Před vytvořením DOI musí být příspěvek přiřazen vydání."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Nepodařilo se vytvořit DOI pro sazebnici {$pubObjectTitle} pro následující "
+"příspěvek: {$itemTitle}. Před vytvořením DOI musí být příspěvek přiřazen "
+"vydání."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Nepodařilo se vytvořit DOI pro následující přihlášení: {$pubObjectTitle}. V "
+"aktuálním kontextu časopisu neexistuje."
+
+msgid "submission.layout.viewGalley"
+msgstr "Zobrazit sazebnici"
+
+msgid "galley.cantEditPublished"
+msgstr "Sazebnici nelze editovat protože už byla zveřejněna."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Přečtěte si, prosím, podmínky autorských práv pro zasílání příspěvků do "
+"tohoto časopisu a seznamte se s nimi."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Do tohoto časopisu nelze zasílat příspěvky, protože autoři musí být "
+"registrováni redakcí. Pokud se domníváte, že se jedná o chybu, kontaktujte "
+"prosím <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Do tohoto časopisu nemůžete zasílat příspěvky, protože zasílání příspěvků do "
+"všech sekcí tohoto časopisu bylo deaktivováno nebo omezeno. Pokud se "
+"domníváte, že se jedná o chybu, kontaktujte prosím <a href='mailto:"
+"{$email}'>{$name}</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} nepřijímá příspěvky do sekce {$section}. Pokud potřebujete "
+"pomoc s obnovou svého příspěvku, obraťte se na <a href='mailto:"
+"{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Sekci pro tento příspěvek se nepodařilo najít."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Do této sekce mohou přispívat pouze redaktoři."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Je vyžadován minimálně jeden autor."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vložte, prosím, název vašeho článku."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vložte, prosím, abstrakt vašeho článku."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Váš abstrakt je příliš dlouhý. Zkraťte ho, prosím na počet slov podle limitu "
+"stanoveného pro tuto sekci."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zvolte, prosím, roli autora."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Odeslat k recenzi"
+
+#~ msgid "submission.submit.submissionChecklistDescription"
+#~ msgstr ""
+#~ "Před pokračováním musíte přečíst a potvrdit, že jste splnili níže uvedené "
+#~ "požadavky."
+
+#~ msgid "submission.submit.form.authorRequiredFields"
+#~ msgstr ""
+#~ "Křestní jméno, příjmení a emailová adresa jsou vyžadovány pro každého "
+#~ "autora."
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Podrobnosti o problému publikací byly aktualizovány."

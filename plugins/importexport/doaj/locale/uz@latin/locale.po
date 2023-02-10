@@ -1,0 +1,61 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-10 08:46+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/importexport-"
+"doaj/uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ eksport plagini"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "DOAJ uchun eksport jurnali."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Qo'shish uchun DOAJ bilan bog'laning"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Agar siz OJS ichidagi maqolalarni ro'yxatdan o'tkazmoqchi bo'lsangiz, DOAJ "
+"API kalitini kiriting. Aks holda, siz hali ham DOAJ XML formatiga eksport "
+"qila olasiz, lekin maqolalaringizni DOJda OJS ichida ro'yxatdan o'tkaza "
+"olmaysiz."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API kaliti"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Siz API kalitingizni DOAJ foydalanuvchi sahifasida topasiz."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS maqolalarni DOAJga avtomatik tarzda joylashtiradi. Shuni esda tutingki, "
+"bu nashrdan so'ng uni qayta ishlashga biroz vaqt ketishi mumkin (masalan, "
+"cronjob konfiguratsiyangizga bog'liq). Siz ro'yxatdan o'tmagan barcha "
+"maqolalarni tekshirishingiz mumkin."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Ro'yxatdan o'tish uchun DOAJ test API (sinov muhiti) dan foydalaning. "
+"Iltimos, ishlab chiqarish uchun ushbu variantni olib tashlashni unutmang."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ avtomatik ro'yxatga olish vazifasi"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr ""
+"Depozit muvaffaqiyatli bo'lmadi! DOAJ API xatoni qaytardi: '{$ param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Foydalanish:\n"
+"{$ scriptName} {$ pluginName} eksport qilish [xmlFileName] [journal_path] "
+"maqolalar objectId1 [objectId2] ...\n"

@@ -1,0 +1,23 @@
+# Ieva Tiltina <pastala@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-06-21 08:42+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"information/lv_LV/>\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.information.displayName"
+msgstr "Informatīvais bloks"
+
+msgid "plugins.block.information.description"
+msgstr "Šis spraudnis nodrošina sānjoslas informatīvo saiti."
+
+msgid "plugins.block.information.link"
+msgstr "Informācija"

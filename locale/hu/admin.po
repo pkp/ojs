@@ -1,0 +1,326 @@
+# Molnár Tamás <molnart@bibl.u-szeged.hu>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
+"PO-Revision-Date: 2022-09-28 14:01+0000\n"
+"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"hu_HU/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Az oldalon elérhető folyóiratok"
+
+msgid "admin.settings.redirect"
+msgstr "Folyóirat átirányítás"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"A főoldal ehhez a folyóirathoz irányít át. A funkció akkor lehet praktikus, "
+"ha az oldalon csak egy folyóirat érhető el."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Biztosan letiltja ezt a nyelvi környezetet? Ez hatással lehet bármelyik "
+"tárolt folyóiratra, amely jelenleg használja ezt a nyelvi környezetet."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Ez lesz az alapértelmezett nyelv az oldalon és valamennyi tárolt "
+"folyóiratnál."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Válassza ki azokat a nyelvi környezeteket, amelyeket használna az oldal. A "
+"kiválasztott nyelvi környezetek alkalmazhatóak lesznek az oldal egészén, "
+"valamennyi tárolt folyóirat oldalon, valamint megjennek a nyelvválasztó "
+"legördülő menüben és minden oldalon (amelyeken felül lehet bírálni a "
+"folyóirat-specifikus oldalakat). Ha nincs engedélyezve a többféle nyelvi "
+"környezet, akkor nem jelenik meg a nyelvválasztó legördülő menü és a "
+"bővített nyelvi beállítások nem lesznek elérhetőek."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "A jelölt nyelvi környezetek hiányosak lehetnek."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Biztosan törölni szeretné ezt a nyelvi környezetet? Ez hatással lehet "
+"bármelyik tárolt folyóiratra, amely jelenleg használja ezt a nyelvi "
+"környezetet."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Telepítse bármelyiket az alábbi támogatott nyelvi környezetek közül. A "
+"nyelvi környezeteket telepíteni kell mielőtt a tárolt folyóiratok oldalain "
+"használni kezdené. Lásd az OJS dokumentációt a további támogatott nyelvi "
+"környezetek használatához."
+
+msgid "admin.systemVersion"
+msgstr "OJS verzió"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfiguráció"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS konfiguráció beállítások a <tt>config.inc.php</tt> fájlból."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Automatikusan hozzáadásra kerül ehhez a folyóirathoz, mint folyóirat "
+"menedzser. Miután létrehoz egy új folyóiratot, menedzserként folytathatja "
+"annak a beállításait és felhasználói beiratkoztatásait."
+
+msgid "admin.journals.journalSettings"
+msgstr "Folyóirat beállítások"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nincs létrehozott folyóirat."
+
+msgid "admin.contexts.create"
+msgstr "Folyóirat létrehozása"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Ez egy rövid szó vagy rövidítés legyen, ami azonosítja a folyóiratot. A "
+"folyóirat URL címe ez lesz: {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "A cím kötelező."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Az elérési útvonal kötelező."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Az elérési útvonal csak betűket, számokat, alulvonást és kötőjelet "
+"tartalmazhat, és kezdő és zárókarakter csak betű vagy szám lehet."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "A kiválasztott útvonalat már használja egy másik folyóirat."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Az elsődleges nyelv legyen az egyike a folyóirat oldalán választható "
+"nyelveknek."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "A folyóirat publikus megjelenésének engedélyezése az oldalon"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Folyóirat leírás"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Meglévő folyóirat elérési útvonal, vagy útvonal készítése (pl. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Előfizetések importálása"
+
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1 kódolású metaadatok átkonvertálása"
+
+msgid "admin.journals.redirect"
+msgstr ""
+"Kódgenerálás az OJS 1 rendszer URL-jeinek OJS2 rendszerbe való URL "
+"migrálásához"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Az import útvonal megadása kötelező."
+
+msgid "admin.journals.importErrors"
+msgstr "Az importálás nem sikerült."
+
+msgid "admin.mergeUsers"
+msgstr "Felhasználók összevonása"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Felhasználók összevonása"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Válassza ki a felhasználót, akire örökölteti egy korábbi felhasználó "
+"szerzőségét, szerkesztési feladatait, stb."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Válasszon egy felhasználót (vagy többet) más felhasználói fiókokkal való "
+"összevonáshoz (pl. ha valakinek két felhasználói fiókja van). Az először "
+"kiválasztott fiók(ok) törlésre kerülnek és az összes beadott anyaga, "
+"feladatai, stb. átöröklődnek a másik felhasználóra."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Minden beiratkozott felhasználó"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Biztos benne, hogy a kiválasztott felhasználó(ka)t {$oldAccountCount} össze "
+"akarja vonni a \"{$newUsername}\" néven? A kiválasztott felhasználók "
+"{$oldAccountCount} a későbbiekben már nem lesznek elérhetőek. A művelet nem "
+"visszavonható."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nem beiratkozott felhasználók."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Előfizetés lejárati emlékeztető"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open Access Értesítés"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Lektori emlékeztető"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "A folyóiratszám azonosító nem egész szám."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "A kézirat kefelenyomat azonosító nem egész szám."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Válassza ki azokat a hosztolt folyóiratokat, amelyeknek engedélyezni kell a "
+"tömeges e-mailek küldését. Ha ez a funkció engedélyezve van, a folyóirat "
+"menedzser képes lesz e-mailt küldeni a folyóiratához regisztrált összes "
+"felhasználónak.  \n"
+"\n"
+"Ha ezzel a funkcióval visszaélve kéretlen e-maileket küld, azzal az egyes "
+"hatóságoknál megsértheti a spamellenes törvényeket, és a szerver e-mailjeit "
+"spamként blokkolhatják. Mielőtt engedélyezné ezt a funkciót, kérjen műszaki "
+"tanácsot, és fontolja meg a folyóirat menedzserekkel való konzultációt a "
+"funkció megfelelő használatának biztosítása érdekében.  \n"
+"\n"
+"A funkció további korlátozásai az egyes folyóiratok esetében engedélyezhetők "
+"a beállítások varázslójának a <a href=\"{$hostedContextsUrl}\">Tárolt "
+"folyóiratok</a> listájában található beállítási varázslóval."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"A folyóirat menedzser nem tud tömeges e-maileket küldeni az alább "
+"kiválasztott szerepkörök egyikének sem. Ezzel a beállítással korlátozhatja "
+"az e-mailes értesítési funkcióval való visszaélést. Biztonságosabb lehet "
+"például letiltani a tömeges e-maileket az olvasók, szerzők vagy más nagy "
+"felhasználói csoportok számára, amelyek nem járultak hozzá az ilyen e-mailek "
+"fogadásához.<br><br>A tömeges e-mailek funkció teljesen letiltható a "
+"folyóirat számára a következő menüpontban  <a href="
+"\"{$siteSettingsUrl}\">Adminisztráció> Oldal beállítások</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"A tömeges e-mail küldési lehetőség le van tiltva ennél a folyóiratnál. Itt "
+"engedélyezheti ezt a funkciót <a href=\"{$siteSettingsUrl}\">Adminisztráció "
+"> Oldal beállítások</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+
+#~ msgid "admin.hostedJournals"
+#~ msgstr "Tárolt folyóiratok"
+
+#~ msgid "admin.settings.journalRedirect"
+#~ msgstr "Folyóirat átirányítás"
+
+#~ msgid "admin.settings.options"
+#~ msgstr "Lehetőségek"
+
+#~ msgid "admin.settings.usePaging"
+#~ msgstr ""
+#~ "A több folyóirattal rendelkező weboldalon több oldalra töri a folyóiratok "
+#~ "listáját."
+
+#~ msgid "admin.settings.journalRedirectInstructions"
+#~ msgstr ""
+#~ "Engedélyezésével a főoldal a kiválasztott folyóiratra lesz átirányítva. "
+#~ "Ez például akkor lehet hasznos, ha az oldal csak egy folyóiratot tárol."
+
+#~ msgid "admin.settings.noJournalRedirect"
+#~ msgstr "Nincs átirányítás"
+
+#~ msgid "admin.settings.journalsList"
+#~ msgstr "Folyóirat elemek"
+
+#~ msgid "admin.settings.journalsList.description"
+#~ msgstr ""
+#~ "Kérem, válassza ki azokat a folyóirat elemeket, amelyek valamennyi "
+#~ "folyóirat oldalon meg fognak jelenni."
+
+#~ msgid "admin.settings.journalsList.showThumbnail"
+#~ msgstr "Folyóirat bélyegkép"
+
+#~ msgid "admin.settings.journalsList.showTitle"
+#~ msgstr "Folyóirat cím"
+
+#~ msgid "admin.settings.journalsList.showDescription"
+#~ msgstr "Folyóirat leírás"
+
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr ""
+#~ "Biztos benne, hogy törölni akarja a folyóiratot és minden kapcsolódó "
+#~ "elemét?"
+
+#~ msgid "admin.journals.journalDescription"
+#~ msgstr "A folyóirat leírása"
+
+#~ msgid "admin.categories"
+#~ msgstr "Kategóriák"
+
+#~ msgid "admin.categories.enable.description"
+#~ msgstr ""
+#~ "Az oldal adminisztrátora létrehozhat kategóriákat, amelyek a nagyobb "
+#~ "mennyiségű folyóirat rendszerezésében segíthetnek. A folyóirat menedzser "
+#~ "minden folyóiratát hozzárendelheti a kategóriákhoz, az olvasók pedig "
+#~ "böngészhetnek a kategóriák szerinti folyóiratgyűjteményekben."
+
+#~ msgid "admin.categories.disableCategories"
+#~ msgstr "Ne szervezze a folyóiratokat kategóriákba."
+
+#~ msgid "admin.categories.enableCategories"
+#~ msgstr ""
+#~ "Engedélyezi a folyóirat menedzsereknek a folyóiratokat kategóriákba "
+#~ "szervezni."
+
+#~ msgid "admin.categories.editTitle"
+#~ msgstr "Kategória szerkesztése"
+
+#~ msgid "admin.categories.createTitle"
+#~ msgstr "Kategória létrehozása"
+
+#~ msgid "admin.categories.create"
+#~ msgstr "Új kategória létrehozása"
+
+#~ msgid "admin.categories.noneCreated"
+#~ msgstr "Nincs létrehozott kategória."
+
+#~ msgid "admin.categories.confirmDelete"
+#~ msgstr "Biztosan törölni akarja ezt a kategóriát?"
+
+#~ msgid "admin.categories.name"
+#~ msgstr "Név"
+
+#~ msgid "admin.categories.nameRequired"
+#~ msgstr "Egy kategória név kötelező."
+
+#~ msgid "admin.presses.createInstructions"
+#~ msgstr ""
+#~ "\">Automatikusan hozzáadásra kerül ehhez a folyóirathoz, mint folyóirat "
+#~ "menedzser. Miután létrehoz egy új folyóiratot, átkerül annak beállítási "
+#~ "oldalára, hogy befejezze a folyóirat beállításait."

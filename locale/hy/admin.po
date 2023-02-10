@@ -1,0 +1,281 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-21 05:38+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"hy_AM/>\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Կայքում թողարկվող ամսագրեր"
+
+msgid "admin.settings.redirect"
+msgstr "Ամսագրի վերաուղորդում"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Հիմնական կայքի հարցումները կուղղորդվեն այս ամսագիր: Սա կարող է օգտակար "
+"լինել, եթե կայքը, օրինակ, պարունակում է միայն մեկ ամսագիր:"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Դուք վստա՞հ եք, որ ցանկանում եք ապաակտիվացնել այս լեզուն: Սա կարող է ազդել "
+"կայքի ցանկացած ամսագրի վրա, որն այժմ օգտագործում է լեզուն:"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Սա կլինի լռելյայն լեզուն կայքի և ընդգրկված բոլոր ամսագրերի համար:"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Ընտրեք կայքի բոլոր աջակցվող լեզուները։ Ընտրված լեզուները հասանելի կլինեն "
+"կայքի բոլոր ամսագրերի համար, ինչպես նաև կհայտնվեն կայքի բոլոր էջերի "
+"լեզուների ընտրության վահանակում (այս կարգաբերումը կարող է փոփոխվել կոնկրետ "
+"ամսագրի էջում)։ Եթե ընտրված է միայն մեկ լեզու, ապա լեզուների փոփոխման մասը "
+"չի ցուցադրվի, ամսագրի համար լեզուների լրացուցիչ կարգաբերումները ևս հասանելի "
+"չեն լինի։"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Նշված լեզուները հնարավոր է թերի են:"
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Վստա՞հ եք, որ ցանկանում եք հեռացնել այս լեզուն:Սա կարող է անդրադառնալ "
+"ցանկացած ամսագրի վրա, որոնք այս պահին օգտագործում են այս լեզուն:"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Ընտրեք որևէ լրացուցիչ լեզու այս համակարգում աջակցություն տեղադրելու համար: "
+"Լեզուները պետք է տեղադրվեն նախքան դրանք ամսագրերի համար օգտագործելը: Տես OJS "
+"փաստաթղթերը նոր լեզվի համար աջակցություն ավելացնելու համար:"
+
+msgid "admin.systemVersion"
+msgstr "OJS տարբերակ"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS կարգավորում"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS կարգաբերման կարգավորում <tt>config.inc.php</tt>-ից:"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Դուք ավտոմատ կավելացվեք որպես այս պարբերականի մենեջեր: Նոր պարբերական "
+"ստեղծելուց հետո, Դուք կուղորդվեք դեպքի կարգաբերումներ ամսագրի նախնական "
+"տեղադրումը կատարելու համար:"
+
+msgid "admin.journals.journalSettings"
+msgstr "Ամսագրի կարգաբերումներ"
+
+msgid "admin.journals.noneCreated"
+msgstr "Որևէ ամսագիր չի ստեղծվել:"
+
+msgid "admin.contexts.create"
+msgstr "Ստեղծել ամսագիր"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Սա պետք է լինի մեկ կարճ բառ կամ հապավում, որը նույնականացնում է ամսագիրը: "
+"Ամսագրի URL-ը հետևյալն է՝ {$sampleUrl}:"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Վերնագիրը պարտադիր է։"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Ճանապարհը պարտադիր է։"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Ճանապարհը կարող է ընդգրկել միայն տառեր, թվեր և — և - նշաններ։ Դա պետք է "
+"սկսվի և ավարտվի թվով կամ տառով։"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Ձեր տրամադրած ճանապարհը արդեն օգտագործված է այլ ամսագրի կողմից։"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Հիմնական լեզուն պետք է լինի ամսագրի կողմից աջակցվող լեզուներից մեկը։"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Թույլ տալ, որ այս ամսագիրը հանրային կերպով երևա կայքում"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Ամսագրի նկարագրություն"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Գոյություն ունեցող ամսագրի ճանապարհ կամ ստեղծել նորը (օրինակ՝ \"ojs\" )։"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Ներմուծել հայտերը"
+
+msgid "admin.journals.transcode"
+msgstr "Վերակոդավորել հոդվածների մետատվյալները ISO8859-1֊ից"
+
+msgid "admin.journals.redirect"
+msgstr "Գեներացնել կոդ` OJS 1 հասցեները OJS 2 հասցեներին վերանշանակելու համար"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Ներբեռնման ճանապարհը պարտադիր է։"
+
+msgid "admin.journals.importErrors"
+msgstr "Ներմուծումը ձախողվել է"
+
+msgid "admin.mergeUsers"
+msgstr "Միացնել օգտագործողներին"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Միավորել օգտագործողին"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Ընտրել օգտատեր, որին կփոխանցվեն նախորդ օգտատիրոջ իրավունքները, "
+"առաջադրանքները և այլն։"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Ընտրեք մեկ (կամ մի քանի) օգտագործող միավորելու համար այլ օգտատիրոջ հաշվի հետ "
+"(օրինակ՝ երբ ինչ-որ մեկը ունի երկու հաշիվ)։ Առաջինը ընտրված հաշիվը "
+"(հաշիվները) կջնջվեն և բոլոր հայտերը, նշանակումնորը և այլն կկցվեն երկրորդ "
+"հաշվին։"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Բոլոր կցված օգտագործողները"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Դուք վստա՞հ եք, որ ցանկանում եք ընտրված {$oldAccountCount} հաշիվ(ներ)ը "
+"միավորել \"$newUsername}\" անվամբ հաշվի հետ։ Ընտրված {$oldAccountCount} "
+"հաշիվները այլևս գոյություն չեն ունենա։ Այս գործողությունը չեղարկել հնարավոր "
+"չէ։"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Չկան կցված օգտագործողներ։"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Բաժանորդագրության ժամկետի լրացման հիշեցում"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Ազատ մուտքի ծանուցում"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Գրախոսման հիշեցում"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Թողարկման ID-ն ամբողջ թիվ չէ:"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Թողարկման շարվածքի ID-ն ամբողջ թիվ չէ:"
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Թողարկման ID-ն չի համընկնում իր ասոցիացված ID-ի հետ:"
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Ընտրեք ամսագիր, որի համար պետք է թույլատրեք մասսայական նամակաների "
+"ուղարկումը։ Երբ այս ֆունկցիան միացված է, ամսագրի մենեջերը կկարողանա ուղարկել "
+"նամակ ամսագրում գրանցված բոլոր օգտատերերին։ <br><br>Այս ֆունկցիայի "
+"օգտագործումը մասսայական էլ․ նամակների ուղարկման համար որոշ երկրներում կարող "
+"է համարվել օրենքի խախտում սպամերի դեմ պայքարի մասով, և Ձեր սերվերի նամակները "
+"հնարավոր է արգելափակվեն որպես սպամ։ Այս ֆունկցիաիան միացնելուց առաջ "
+"խորհրդակցեք ամսագրի մենեջերի հետ, որպեսզի համոզվեք, որ դա կիրառվում է պատշաճ "
+"կերպով։ <br><br>Այս ֆունկցիայի այլ սահմանափակումներ կարող են միացվել "
+"ցանկացած ամսագրի համար կարգաբերումների ցուցակից <a href="
+"\"{$hostedContextsUrl}\">«Журналы на сайте»</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Ամսագրի մենեջերը չի կարողանա ուղարկել զանգվածային նամակներ ներքևում նշված "
+"դերերով օգտատերերին։ Օգտագործեք այս կարգաբերումը, որպեսզի սահմանափակեք "
+"ֆունկցիայի չափից շատ օգտագործումը։ Օրինակ՝ հնարավոր է անջատել նամակների "
+"զանգվածային տարածումը կարդացողների, հոդվածագիրների կամ այլ օգտագործողների "
+"խմբերի շրջանակներում, որոնք չեն տվել համաձայնություն այդպիսի նամակներ "
+"ստանալու համար։<br><br> Նամակների զանգվածային ուղարկումը չի կարող ամբողջովին "
+"անջատվել այս ամսագրի <a href=\"{$siteSettingsUrl}\">Admin > Կայքի "
+"կարգաբերումներ</a> բաժնում։"
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Մասսայական նամակների ֆունկցիան այս ամսագրի համար ապաակտիվացված է։ Միացրեք "
+"այս ֆունկցիան այստեղ․ <a href=\"{$siteSettingsUrl}\">Ադմին > Կայքի "
+"կարգաբերումներ</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Ավելացրեք, խմբագրեք կամ հեռացրեք ամսագրերը այս կայքից և կառավարեք կայքի "
+"կարգավորումները:"
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Ընտրեք աշխարհագրական օգտագործման վիճակագրության տեսակը, որը կարող է հավաքվել "
+"այս կայքի ամսագրերի կողմից: Ավելի մանրամասն աշխարհագրական վիճակագրությունը "
+"կարող է զգալիորեն մեծացնել ձեր տվյալների շտեմարանի չափը և, որոշ հազվադեպ "
+"դեպքերում, կարող է խաթարել ձեր այցելուների անանունությունը: Յուրաքանչյուր "
+"ամսագիր կարող է տարբեր կերպ կարգավորել այս պարամետրը, սակայն ամսագիրը երբեք "
+"չի կարող հավաքել ավելի մանրամասն գրառումներ, քան այն, ինչ կազմաձևված է "
+"այստեղ: Օրինակ, եթե կայքը աջակցում է միայն երկիրը և տարածաշրջանը, ամսագիրը "
+"կարող է ընտրել երկիրը և տարածաշրջանը կամ միայն երկիրը: Ամսագիրը չի կարողանա "
+"հետևել երկրին, տարածաշրջանին և քաղաքին:"
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Միացրեք ինստիտուցիոնալ վիճակագրությունը, եթե ցանկանում եք, որ այս կայքի "
+"ամսագրերը կարողանան հավաքել օգտագործման վիճակագրությունը ըստ հաստատության: "
+"Այս հատկությունն օգտագործելու համար ամսագրերը պետք է ավելացնեն "
+"հաստատությունը և դրա IP միջակայքերը: Ինստիտուցիոնալ վիճակագրության "
+"ակտիվացումը կարող է զգալիորեն մեծացնել ձեր տվյալների շտեմարանի չափը:"
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Անկախ նրանից, թե արդյոք պետք է SUSHI API-ի վերջնակետերը հանրությանը հասանելի "
+"դարձնել այս կայքի բոլոր ամսագրերի համար: Եթե միացնեք հանրային API-ն, "
+"յուրաքանչյուր ամսագիր կարող է չեղարկել այս պարամետրը՝ իր վիճակագրությունը "
+"մասնավոր դարձնելու համար: Այնուամենայնիվ, եթե անջատեք հանրային API-ն, "
+"ամսագրերը չեն կարող իրենց սեփական API-ն դարձնել հանրային:"
+
+#~ msgid "admin.languages.download.cannotModifyRegistry"
+#~ msgstr ""
+#~ "Հնարավոր չէ ավելացնել նոր լեզուն լեզվի գրանցման ֆայլի մեջ, հիմնակնում  "
+#~ "\"registry/locales.xml\"-ում:"
+
+#~ msgid "admin.languages.download.cannotOpen"
+#~ msgstr "Հնարավոր չէ բացել լեզվի նկարագիրը PKP կայքի համար:"
+
+#~ msgid "admin.languages.download"
+#~ msgstr "Ներբեռնել լեզուն"
+
+#~ msgid "admin.languages.localeInstalled"
+#~ msgstr "\"{$locale}\" լեզուն տեղակայվել է:"
+
+#~ msgid "admin.languages.downloadFailed"
+#~ msgstr ""
+#~ "Լեզվի տեղադրումը ձախողվեց: Սխալի մասին տեղեկատվությունը նկարագրում է "
+#~ "ձախողումը:"
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Կայիք տեղեկատվությունը հաջողությամբ թարմացվել է:"
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Կայքի Կայքի Ձևավորման կարգավորումները հաջողությամբ թարմացվել են:"
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Կայքի արտաքին տեսքի կարգաբերումները հաջողությամբ թարմացվել են:"
+
+#~ msgid "admin.settings.defaultMetricDescription"
+#~ msgstr ""
+#~ "\n"
+#~ "\t\tՁեր OJS-ի տեղադրումը կազմաձևված է մեկից ավելի օգտագործման չափանիշ "
+#~ "գրանցելու համար: Օգտագործման վիճակագրությունը կցուցադրվի մի քանի "
+#~ "համատեքստում:\n"
+#~ "\t\tԿան դեպքեր, երբ պետք է օգտագործվի մեկ օգտագործման վիճակագրություն, "
+#~ "օրինակ. ցուցադրելու ամենաշատ օգտագործվող հոդվածների պատվիրված ցանկը կամ "
+#~ "դասակարգելու համար\n"
+#~ "\t\tՈրոնման արդյունքները. Խնդրում ենք որպես կանխադրված ընտրել կազմաձևված "
+#~ "չափորոշիչներից մեկը:\n"
+#~ "\t"

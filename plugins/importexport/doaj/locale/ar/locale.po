@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:39+00:00\n"
+"PO-Revision-Date: 2020-06-14 15:53+0000\n"
+"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/ar_IQ/>\n"
+"Language: ar_IQ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "إضافة التصدير DOAJ"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "تصدير المجلة إلى DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "عنوان اتصال DOAJ لأغراض التضمين"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "إذا رغبت بتسجيل المقالات من داخل نظام المجلات المفتوحة، لطفاً، أدخل مفتاح واجهة التطبيق لـ DOAJ. بخلاف ذلك، لا يزال بإمكانك التصدير بصيغة DOAJ XML ولكن بدون تسجيل مقالاتك في DOAJ مباشرة من نظام المجلات المفتوحة."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "مفتاح واجهة تطبيق DOAJ"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "ستجد مفتاح واجهة التطبيق على صفحة المستخدم لموقع DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "نظام المجلات المفتوحة سيقوم بإيداع المقالات تلقائياً في DOAJ. لطفاً، خذ بنظر الاعتبار أن هذه العملية قد تستغرق وقتاً قصيراً بُعيد النشر لأغراض المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك دوماً التحقق من وجود مقالات غير مسجلة فيه."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "استعمل واجهة التطبيق الاختبارية لـ DOAJ (بيئة إختبارية) لغرض التسجيل. لطفاً، إحرص على إزالة هذا الخيار عند مرحلة الإنتاج الفعلي."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "وظيفة التسجيل التلقائي في DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "تعذر الإيداع! أعادت واجهة التطبيق DOAJ الخطأ الآتي: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"صيغة الاستعمال:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

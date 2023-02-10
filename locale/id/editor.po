@@ -1,0 +1,493 @@
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
+"PO-Revision-Date: 2022-05-13 01:58+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"id_ID/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.home"
+msgstr "Beranda Editor"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Penyerahan Naskah dan Penerbitan"
+
+msgid "editor.submissionQueue"
+msgstr "Antrian Naskah"
+
+msgid "editor.submissionArchive"
+msgstr "Arsip Naskah"
+
+msgid "editor.publishing"
+msgstr "Penerbitan"
+
+msgid "editor.publishedIssues"
+msgstr "Terbitan Terdahulu"
+
+msgid "editor.allSections"
+msgstr "Semua Bagian"
+
+msgid "editor.allEditors"
+msgstr "Semua Editor"
+
+msgid "editor.me"
+msgstr "Saya"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Identifier publik '{$publicIdentifier}' sudah digunakan objek lain "
+"(terbitan, artikel, galley atau file). Silakan pilih identifier unik di "
+"jurnal Anda."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Tidak ada naskah dalam arsip."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Simpan perubahan pada arsip penyerahan naskah? Naskah yang mau dihapus akan "
+"terhapus dari sistem secara permanen."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Apakah Anda ingin merekam keputusan ini?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Penyerahan naskah ini akan diarsipkan setelah email Beritahu Penulis telah "
+"dikirimkan atau tombol Lewati Email ditekan."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Sebelum mengirimkan naskah ke Copyediting, gunakan tautan Beritahu Penulis "
+"untuk memberitahukan keputusan kepada penulis dan pilih versi yang akan "
+"dikirim."
+
+msgid "editor.notifyUsers"
+msgstr "Beritahu Pengguna"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Semua Pembaca ({$count} pembaca)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Semua penulis yang telah terbit naskahnya ({$count} penulis)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Semua pelanggan individu ({$count} pelanggan)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Semua pelanggan institusi ({$count} institusi)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Memberitahu para pengguna..."
+
+msgid "editor.usersNotified"
+msgstr "Para Pengguna telah Diberitahu"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini "
+"({$count} pengguna)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Kirimkan pesan ini ke seluruh pengguna yang terkait dengan jurnal ini yang "
+"telah meminta dikirimi berita terbaru ({$count} pengguna)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Sertakan daftar isi dari terbitan ini:"
+
+msgid "editor.editorAdministration"
+msgstr "Administrasi Editor"
+
+msgid "editor.issues.createIssue"
+msgstr "Buat Terbitan"
+
+msgid "editor.issues.editIssue"
+msgstr "Pengelolaan Terbitan: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Terbitan Terkini"
+
+msgid "editor.issues.numArticles"
+msgstr "Butir"
+
+msgid "editor.issues.noArticles"
+msgstr "Saat ini tidak ada yang dijadwalkan untuk terbitan ini."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Apakah Anda yakin ingin menghapus terbitan ini secara permanen?"
+
+msgid "editor.issues.published"
+msgstr "Terpublikasi"
+
+msgid "editor.issues.unpublished"
+msgstr "Sudah Ditarik"
+
+msgid "editor.issues.datePublished"
+msgstr "Tanggal Terbit"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Masukkan angka numerik positif untuk Volume."
+
+msgid "editor.issues.numberRequired"
+msgstr "Masukkan angka numerik positif untuk Nomor."
+
+msgid "editor.issues.yearRequired"
+msgstr "Masukkan angka numerik positif untuk Tahun."
+
+msgid "editor.issues.titleRequired"
+msgstr "Masukkan Judul untuk terbitan ini."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Dibutuhkan identifikasi terbitan. Silakan pilih setidaknya satu dari opsi "
+"identifikasi terbitan."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identifikasi Terbitan"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Pengidentifikasi terbitan umum"
+
+msgid "editor.issues.description"
+msgstr "Deskripsi"
+
+msgid "editor.issues.accessStatus"
+msgstr "Status Akses"
+
+msgid "editor.issues.accessDate"
+msgstr "Tanggal akses terbuka"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Mengaktifkan penundaan akses terbuka"
+
+msgid "editor.issues.coverPage"
+msgstr "Gambar Sampul"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(format yang diterima: .gif, .jpg, atau .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Sudah diunggah"
+
+msgid "editor.issues.remove"
+msgstr "Hapus"
+
+msgid "editor.issues.proofed"
+msgstr "Sudah Diperiksa"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Hapus gambar sampul?"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Gambar sampul yang ingin dihapus digunakan pada nomor terbitan oleh jurnal "
+"lain. Pastikan Anda mengelola jurnal yang benar, menggunakan ID terbitan "
+"yang benar, dan silakan ulangi."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Gambar sampul yang hendak Anda hapus tidak sesuai dengan gambar sampul untuk "
+"terbitan ini. Mohon muat ulang halaman ini dan coba lagi."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin "
+"telah dihapus. Coba muat ulang halaman."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Format halaman depan tidak valid. Format yang diterima adalah .gif, .jpg, "
+"atau .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Lembargaya"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Format lembargaya tidak berlaku. Pastikan file yang diserahkan adalah CSS. "
+"(Komentar dalam lembargaya akan diabaikan.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Hapus lembargaya?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Judul gambar sampul"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Buat sampul untuk terbitan ini dengan elemen-elemen berikut."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Tampilkan"
+
+msgid "editor.issues.openAccess"
+msgstr "Akses terbuka"
+
+msgid "editor.issues.subscription"
+msgstr "Langganan"
+
+msgid "editor.issues.identification"
+msgstr "Identifikasi"
+
+msgid "editor.issues.access"
+msgstr "Akses"
+
+msgid "editor.issues.cover"
+msgstr "Sampul"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Semua artikel akan kembali pada antrian pengeditan dan file-file yang "
+"terkait akan dihapus secara permanen. Apakah Anda yakin ingin menghapus "
+"terbitan ini?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Jurnal ini menggunakan pengaturan terbitan kustom. <a href=\"{$url}\" class="
+"\"action\">Kembali ke default</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Jurnal ini menggunakan pengaturan bagian custom. <a href=\"{$url}\" class="
+"\"action\">Kembali ke default</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Data Terbitan"
+
+msgid "editor.issues.saveChanges"
+msgstr "Simpan perubahan daftar isi?"
+
+msgid "editor.issues.default"
+msgstr "Default"
+
+msgid "editor.issues.order"
+msgstr "Urutan"
+
+msgid "editor.issues.publicId"
+msgstr "ID Publik"
+
+msgid "editor.issues.publishIssue"
+msgstr "Terbitkan"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Tarik terbitan"
+
+msgid "editor.issues.previewIssue"
+msgstr "Pratinjau Terbitan"
+
+msgid "editor.issues.preview"
+msgstr "Pratinjau"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Apakah Anda yakin ingin menerbitkan terbitan baru?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Apakah Anda yakin ingin menarik terbitan yang telah terbit ini?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Anda yakin ingin mengatur nomor ini sebagai terbitan terkini?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Tidak bisa menyimpan ID publik untuk artikel:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Tidak Ada Terbitan Terbaru"
+
+msgid "editor.issues.open"
+msgstr "Buka"
+
+msgid "editor.issues.pages"
+msgstr "Halaman"
+
+msgid "editor.issues.galleys"
+msgstr "Galai Terbitan"
+
+msgid "editor.issues.galley"
+msgstr "Galai Terbitan"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Melihat Galai Terbitan"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Terbitkan galai dengan seluruh isi terbitan utuh."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Tidak ada galai yang diterbitkan."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Label galai terbitan harus ada."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Bahasa galai terbitan harus ada."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Identifikasi galai terbitan publik sudah ada."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Kembali ke galai terbitan"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Anda yakin hendak menghapus galai terbitan ini?"
+
+msgid "editor.issues.identifiers"
+msgstr "Pengidentifikasi"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Terbitan Akan Datang"
+
+msgid "grid.action.addGalley"
+msgstr "Tambah galai"
+
+msgid "grid.action.publish"
+msgstr "Terbitkan"
+
+msgid "grid.action.addIssue"
+msgstr "Buat Terbitan"
+
+msgid "grid.action.viewIssue"
+msgstr "Lihat"
+
+msgid "grid.action.previewIssue"
+msgstr "Pratinjau"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Buat Galai Terbitan"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Tetapkan Nomor Terbitan Terkini"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Terbitan Terdahulu"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Jadikan file asli sebagai file Versi Review"
+
+msgid "editor.article.decision"
+msgstr "Keputusan"
+
+msgid "editor.submissions.showBy"
+msgstr "Tampilkan berdasarkan"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Serahkan MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Tugas Aktif"
+
+msgid "editor.submissions.invite"
+msgstr "Undang"
+
+msgid "editor.submissions.accept"
+msgstr "Terima"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Tidak Ada Penyerahan"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Terbaru"
+
+msgid "editor.submissions.averageTime"
+msgstr "Minggu"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Terakhir Lengkap"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Ditugaskan ke Editor"
+
+msgid "issues.submissions.issueIds"
+msgstr "Dimasukkan ke Terbitan"
+
+msgid "editor.submissions.inSection"
+msgstr "Di Bagian"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Tampilkan Terbitan Terjadwal"
+
+msgid "editor.article.publishVersion"
+msgstr "Terbitkan Versi"
+
+msgid "editor.article.viewMetadata"
+msgstr "Lihat Versi Metadata"
+
+msgid "editor.article.editMetadata"
+msgstr "Edit Versi Metadata"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Jadwalkan untuk publikasi di"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Untuk Ditugaskan"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Biaya publikasi tidak dibayar. Untuk menjadwalkan item untuk dipublikasi "
+"beritahu penulis untuk membayar biaya atau mengajukan dispensasi."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Minta Pembayaran"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Gambar sampul yang hendak Anda hapus tidak ditemukan. File tersebut mungkin "
+"telah dihapus. Coba muat ulang halaman."
+
+msgid "grid.action.removeArticle"
+msgstr "Hapus Naskah dari Terbitan"
+
+msgid "editor.article.remove"
+msgstr "Hapus"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Anda yakin hendak menghapus naskah ini dari terbitan? Naskah tersebut dapat "
+"dijadwalkan pada terbitan lain."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Tanggal akses tidak valid."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Edit Galai Terbitan"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Editor tata letak mempersiapkan file untuk setiap galai dan mengunggah <span "
+"class=\"pkp_help_title\">proof</span> untuk proofreading."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Pilih File Galai"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"File draf final di daftar ini telah diubah oleh Copyeditor menjadi versi "
+"pasca-copyedit, diunggah di bawah ini <span class=\"pkp_help_title"
+"\">Copyediting</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahkan ke "
+"daftar Proofreading dengan menandai kotak centang Sertaan di bawah ini dan "
+"klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk "
+"diikutsertakan."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Pengidentifikasi publik '{$publicIdentifier}' sudah ada untuk objek lain "
+"dengan tipe yang sama. Silakan pilih pengidentifikasi unik untuk objek "
+"dengan tipe yang sama dalam jurnal Anda."
+
+msgid "editor.article.coverImage"
+msgstr "Gambar sampul"
+
+#~ msgid "editor.issues.invalidCoverPageFormat"
+#~ msgstr ""
+#~ "Format gambar sampul invalid. Format yang diterima adalah .gif, .jpg, "
+#~ "atau .png."

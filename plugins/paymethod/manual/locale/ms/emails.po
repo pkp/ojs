@@ -1,0 +1,35 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+# Mohamad Shabilullah <shabilhamid91@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-30 07:02+0000\n"
+"Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/paymethod-"
+"manual-emails/ms_MY/>\n"
+"Language: ms_MY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "emails.manualPaymentNotification.subject"
+msgstr "Pemakluman Pembayaran Manual"
+
+msgid "emails.manualPaymentNotification.body"
+msgstr ""
+"Pembayaran manual perlu diproses untuk jurnal {$contextName} dan pengguna "
+"{$senderName} (nama pengguna &quot;{$senderUsername} &quot;).<br />\n"
+"<br />\n"
+"Item yang dibayar adalah &quot;{$paymentName}&quot;.<br />\n"
+"Kosnya adalah {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
+"<br />\n"
+"E-mel ini dihasilkan oleh plugin Pembayaran Manual Open Journal Systems."
+
+msgid "emails.manualPaymentNotification.description"
+msgstr ""
+"Templat e-mel ini digunakan untuk memaklumkan kenalan pengurus jurnal bahawa "
+"pembayaran manual diminta."
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr "Nama pengguna yang membuat pembayaran"

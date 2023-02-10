@@ -1,0 +1,80 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "plugins.themes.default.name"
+msgstr ""
+
+msgid "plugins.themes.default.description"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr ""
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr ""
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr ""
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr ""
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr ""
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr ""

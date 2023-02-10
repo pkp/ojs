@@ -1,0 +1,395 @@
+# Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2021-07-02 12:29+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/submission/nl/"
+">\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Stuur in als..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Selecteer een onderdeel"
+
+msgid "submission.title"
+msgstr "Titel van het artikel"
+
+msgid "submission.title.tip"
+msgstr ""
+"De inzending is doorgaans een 'afbeelding', 'tekst' of ander multimediatype, "
+"zoals 'software' of 'interactief'. Kies het meest relevante type voor uw "
+"inzending. Voorbeelden kunnen worden gevonden op <a target=\"_blank\" href="
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type"
+"\">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</"
+"a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Begin een nieuwe inzending in"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nieuwe inzending"
+
+msgid "grid.action.workflow"
+msgstr "Stappen voor inzending"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "De samenvatting mag maximaal {$wordCount} bevatten."
+
+msgid "submission.submit.noContext"
+msgstr "Het tijdschrift van deze inzending kan niet gevonden worden."
+
+msgid "submission.issueEntry"
+msgstr "Metadata"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Uw inzending heeft het tijdschrift goed bereikt; daarvan werd u via e-mail "
+"een bevestiging gestuurd. Zodra de redacteur de inzending heeft beoordeeld, "
+"wordt u gecontacteerd."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Proef wordt getoond in het nummer"
+
+msgid "grid.action.issueEntry"
+msgstr "Bekijk de metadata voor deze inzending"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "De proef voor dit artikel \"{$galleyFormatName}\" is nu beschikbaar."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr ""
+"De proef voor dit artikel \"{$galleyFormatName}\" is niet meer beschikbaar."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "De publieke identificatie van de inzending is bijgewerkt."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Goedkeuring formaat"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>Deze proef zal <em>niet langer beschikbaar</em> zijn voor lezers.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Deze proef zal <em>beschikbaar</em> zijn voor lezers.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Maak deze proef beschikbaar"
+
+msgid "submission.galleyFiles"
+msgstr "Proefbestanden"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Hier plaatst de opmaakredacteur de afgewerkte bestanden die werden "
+"voorbereid voor publicatie. Gebruik <em>Wijs corrector toe</em> om auteurs "
+"en andere proeflezers aan te wijzen die de finale versie moeten lezen en "
+"goedkeuren voor publicatie."
+
+msgid "grid.action.approveProof"
+msgstr "Accepteer deze proef."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Deze proef werd geaccepteerd."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Titel en Samenvatting"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Laad bestanden op die geassocieerd zijn met deze inzending: het artikel "
+"zelf, multimedia, dataverzamelingen, illustraties, enz."
+
+msgid "submission.pageProofs"
+msgstr "Proeflezing"
+
+msgid "workflow.review.externalReview"
+msgstr "Review"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "De metadata voor de inzending is bijgewerkt."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikel onderdeel"
+
+msgid "submission.complete"
+msgstr "Geaccepteerd"
+
+msgid "submission.incomplete"
+msgstr "In afwachting van goedkeuring"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Checklist voor inzendingen"
+
+#, fuzzy
+msgid "submission.submit.privacyStatement"
+msgstr "Privacyverklaring"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rol"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Het gevraagde citatieformaat kon niet worden gevonden."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Deze bepalingen zijn gebaseerd op de Dublin Core metadata specificatie, een "
+"internationale standaard voor de beschrijving van de inhoud van "
+"tijdschriften."
+
+msgid "section.any"
+msgstr "Alle secties"
+
+msgid "submission.sectionOptions"
+msgstr "Sectie opties"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Onderdelen"
+
+msgid "catalog.category.heading"
+msgstr "Alle onderdelen"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"De proeven van deze publicatie kunnen niet worden bewerkt omdat deze al is "
+"gepubliceerd."
+
+msgid "galley.publicationNotFound"
+msgstr "De publicatie voor deze proef kan niet gevonden worden."
+
+msgid "publication.assignToissue"
+msgstr "Toewijzen aan nummer"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
+
+msgid "publication.datePublished.description"
+msgstr ""
+"De publicatiedatum wordt automatisch ingesteld wanneer het nummer "
+"gepubliceerd is. Voer geen publicatiedatum in, tenzij het artikel eerder "
+"elders is gepubliceerd en u het moet antidateren."
+
+msgid "publication.invalidSection"
+msgstr "De sectie voor deze publicatie is niet gevonden."
+
+msgid "publication.inactiveSection"
+msgstr ""
+
+msgid "publication.invalidIssue"
+msgstr "Het nummer voor deze publicatie is niet gevonden."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Weet u zeker dat u dit wilt "
+"publiceren?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Dit wordt gepubliceerd wanneer "
+"{$issue} wordt gepubliceerd. Weet u zeker dat u dit wilt inplannen voor "
+"publicatie?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Dit wordt onmiddellijk gepubliceerd "
+"in {$issue}. Weet u zeker dat u dit wilt publiceren?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Aan alle publicatievereisten is voldaan. Dit wordt onmiddellijk gepubliceerd "
+"omdat de publicatiedatum is ingesteld op {$datePublished}. Weet u zeker dat "
+"u dit wilt publiceren?"
+
+msgid "publication.required.issue"
+msgstr ""
+"De publicatie moet aan een nummer worden toegewezen voordat deze kan worden "
+"gepubliceerd."
+
+msgid "publication.publishedIn"
+msgstr "Gepubliceerd in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Gepland voor publicatie in <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Dit is niet gepland voor publicatie in een nummer."
+
+msgid "publication.selectIssue"
+msgstr "Selecteer een nummer om in te plannen voor publicatie"
+
+msgid "submission.publication"
+msgstr "Publicatie"
+
+msgid "publication.status.published"
+msgstr ""
+
+msgid "submission.status.scheduled"
+msgstr ""
+
+msgid "publication.status.unscheduled"
+msgstr ""
+
+msgid "submission.publications"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+
+msgid "publication.datePublished"
+msgstr ""
+
+msgid "publication.editDisabled"
+msgstr ""
+
+msgid "publication.event.published"
+msgstr ""
+
+msgid "publication.event.scheduled"
+msgstr ""
+
+msgid "publication.event.unpublished"
+msgstr ""
+
+msgid "publication.event.versionPublished"
+msgstr ""
+
+msgid "publication.event.versionScheduled"
+msgstr ""
+
+msgid "publication.event.versionUnpublished"
+msgstr ""
+
+msgid "publication.invalidSubmission"
+msgstr ""
+
+msgid "publication.publish"
+msgstr ""
+
+msgid "publication.publish.requirements"
+msgstr ""
+
+msgid "publication.required.declined"
+msgstr ""
+
+msgid "publication.required.reviewStage"
+msgstr ""
+
+msgid "submission.license.description"
+msgstr ""
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+
+msgid "publication.unpublish"
+msgstr ""
+
+msgid "publication.unpublish.confirm"
+msgstr ""
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+
+msgid "publication.version.details"
+msgstr ""
+
+msgid "submission.queries.production"
+msgstr "Productie-discussies"
+
+msgid "editor.submission.decision.backToReview"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Er is minimaal één auteur vereist."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Vul de titel van uw artikel in."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Vul de samenvatting van uw artikel in."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"De samenvatting is te lang. Verkort het tot de maximumlengte voor dit "
+"onderdeel."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Selecteer de rol van de bijdrager."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Stuur naar reviewer"
+
+#~ msgid "publication.issue.success"
+#~ msgstr "De details van het nummer van de publicatie zijn bijgewerkt."

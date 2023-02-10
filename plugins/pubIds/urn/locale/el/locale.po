@@ -1,0 +1,259 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-31 10:47+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Αυτό το πρόσθετο επιτρέπει την αντιστοίχιση των ονομάτων ενιαίων πόρων στα "
+"τεύχη, τα άρθρα και τις γκαλερί στο OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Διαμορφώστε την προσθήκη URN ώστε να μπορείτε να διαχειρίζεστε και να "
+"χρησιμοποιείτε URN στο OJS:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Περιεχόμενο περιοδικού"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Επιλέξτε τα αντικείμενα στα οποία πρέπει να εκχωρηθούν τα URN."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Επιλέξτε τα αντικείμενα δημοσίευσης στα οποία θα έχουν εκχωρηθεί Uniform "
+"Resource Names (URN):"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Τεύχη"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Άρθρα"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Τυπογραφικά δοκίμια"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "Πρόθεμα URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"Το πρόθεμα URN είναι η επιδιόρθωση, που δεν αλλάζει ποτέ μέρος του URN (e.g. "
+"\"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+"Το μοτίβο του προθέματος URN πρέπει να έχει τη μορφή \"urn:\"&lt;NID&gt;"
+"\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN Επίθημα"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"Ένα επίθημα URN μπορεί να πάρει οποιαδήποτε μορφή, αλλά πρέπει να είναι "
+"μοναδικό μεταξύ όλων των αντικειμένων δημοσίευσης με το ίδιο πρόθεμα URN "
+"εκχωρημένο:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Χρησιμοποιήστε το μοτίβο που εισάγεται παρακάτω για να δημιουργήσετε "
+"επιθήματα URN. Χρησιμοποιήστε %j για τα αρχικά ημερολογίου, %v για τον "
+"αριθμό τόμου, %i για τον αριθμό έκδοσης, %Y για το έτος, %a για το "
+"αναγνωριστικό άρθρου OJS, %g για το αναγνωριστικό της συλλογής OJS, %f για "
+"το αναγνωριστικό αρχείου OJS , %p για τον αριθμό σελίδας και %x για "
+"\"Προσαρμοσμένο αναγνωριστικό\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+"Για παράδειγμα, vol%viss%ipp%p θα μπορούσε να δημιουργήσει το επίθημα URN "
+"\"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "για τεύχη"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "για άρθρα"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "για Τυπογραφικά δοκίμια"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Εισαγάγετε το μοτίβο επιθήματος URN για τεύχη."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Εισαγάγετε το μοτίβο επιθήματος URN για άρθρα."
+
+msgid ""
+"plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Εισαγάγετε το μοτίβο επιθήματος URN για Τυπογραφικά δοκίμια."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Χρησιμοποιήστε προεπιλεγμένα μοτίβα."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i για τεύχη<br />"
+"%j.v%vi%i.%a για άρθρα<br />"
+"%j.v%vi%i.%a.g%g for Τυπογραφικά δοκίμια."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Εισαγάγετε ένα μεμονωμένο επίθημα URN για κάθε δημοσιευμένο στοιχείο. Θα "
+"βρείτε ένα πρόσθετο πεδίο εισαγωγής URN στη σελίδα μεταδεδομένων κάθε "
+"στοιχείου."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Ελέγξτε τον αριθμό"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Ο αριθμός ελέγχου θα υπολογιστεί αυτόματα και θα προστεθεί στο τέλος, ως το "
+"τελευταίο ψηφίο ενός URN."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Namespace"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Επιλογή"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Ο χώρος ονομάτων μόνιμου αναγνωριστικού που απαιτείται συνήθως για την "
+"εγγραφή (π.χ. at the Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Διεύθυνση URL επίλυσης"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(π.χ. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Εισαγάγετε τη διεύθυνση URL του επιλυτή."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Εκ νέου εκχώρηση URNs"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Εάν αλλάξετε τη διαμόρφωση URN, τα URN που έχουν ήδη εκχωρηθεί δεν θα "
+"επηρεαστούν. Μόλις αποθηκευτεί η διαμόρφωση URN, χρησιμοποιήστε αυτό το "
+"κουμπί για να διαγράψετε όλα τα υπάρχοντα URN, έτσι ώστε οι νέες ρυθμίσεις "
+"να εφαρμοστούν με υπάρχοντα αντικείμενα."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε όλα τα υπάρχοντα URNs?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "τεύχος"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "άρθρο"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "Τυπογραφικό δοκίμιο"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "Το URN δεν μπορεί να εκχωρηθεί επειδή λείπει το προσαρμοσμένο επίθημα."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr ""
+"Το URN δεν μπορεί να εκχωρηθεί επειδή περιέχει ένα μοτίβο που δεν έχει "
+"επιλυθεί."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Αυτό που βλέπετε είναι μια προεπισκόπηση του URN. Επιλέξτε το πλαίσιο "
+"ελέγχου και αποθηκεύστε τη φόρμα για να εκχωρήσετε το URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "Το URN εκχωρείται σε αυτό {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Το δεδομένο επίθημα URN χρησιμοποιείται ήδη για άλλο δημοσιευμένο "
+"αντικείμενο. Εισαγάγετε ένα μοναδικό επίθημα URN για κάθε στοιχείο."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Καθαρισμός"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε το υπάρχον URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Εκκαθάριση URN αντικειμένων τεύχους"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε το υπάρχον URN τεύχους?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Χρησιμοποιήστε την ακόλουθη επιλογή για να διαγράψετε τα URN από όλα τα "
+"αντικείμενα (άρθρα και τυπογραφικά δοκίμια) που έχουν προγραμματιστεί αυτήν "
+"τη στιγμή για αυτό το τεύχος."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Προσθήκη αριθμού ελέγχου"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Εκχωρήστε το URN {$pubId} σε αυτό{$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "Το URN δεν μπορεί να εκχωρηθεί επειδή λείπει το προσαρμοσμένο επίθημα."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"Το URN {$pubId} δεν μπορεί να εκχωρηθεί επειδή περιέχει ένα μοτίβο που δεν "
+"έχει επιλυθεί."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "Το URN {$pubId} έχει εκχωρηθεί."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Ο αριθμός check λείπει."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "Το URN πρέπει να ξεκινά με {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Ανάθεση"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Δεν μπορείτε να δημιουργήσετε ένα URN έως ότου αυτή η δημοσίευση έχει "
+"αντιστοιχιστεί σε ένα τεύχος."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Δεν μπορείτε να δημιουργήσετε ένα URN επειδή λείπουν δεδομένα σε ένα ή "
+"περισσότερα μέρη του μοτίβου URN. Ίσως χρειαστεί να αντιστοιχίσετε τη "
+"δημοσίευση σε ένα τεύχος, να ορίσετε ένα αναγνωριστικό εκδότη ή να "
+"εισαγάγετε αριθμούς σελίδων."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "Το URN πρέπει να ξεκινά με {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Το URN για αυτήν τη δημοσίευση θα είναι {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Δεν έχει εκχωρηθεί URN σε αυτή τη δημοσίευση."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Galley: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Item"

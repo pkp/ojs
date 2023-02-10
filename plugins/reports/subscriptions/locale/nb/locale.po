@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-16 10:53+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Abonnementsrapport"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Dette programtillegget genererer en CSV-rapport med en liste over "
+"abonnementer med tilhørende informasjon."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Institusjonens postadresse"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP-områder"

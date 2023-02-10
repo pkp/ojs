@@ -1,0 +1,503 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-11 20:06+0000\n"
+"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "editor.home"
+msgstr "Редактор - Начало"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Получени материали и публикуване"
+
+msgid "editor.submissionQueue"
+msgstr "Подадени материали - списък и опашка"
+
+msgid "editor.submissionArchive"
+msgstr "Архив на подадените материали"
+
+msgid "editor.publishing"
+msgstr "Публикуване"
+
+msgid "editor.publishedIssues"
+msgstr "Публикувани броеве"
+
+msgid "editor.allSections"
+msgstr "Всички раздели"
+
+msgid "editor.allEditors"
+msgstr "Всички редактори"
+
+msgid "editor.me"
+msgstr "Аз"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Публичният идентификатор '{$publicIdentifier}' вече съществува в системата "
+"за друг обект (брой, статия или файл). Моля изберете друг и уникален "
+"идентификатор в рамките на списанието."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Няма материали в архива."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Да се запазят ли промените в архивираните материали? Материалите, маркирани "
+"за изтриване, ще бъдат премахнати от системата."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Сигурни ли сте, че искате да запишете това решение?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Този материал ще бъде архивиран, след като имейла за уведомяване на автора "
+"бъде изпратено съобщение. Можете да пропуснете уведомяването чрез бутона "
+"Skip Email."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Преди изпращане на материал за преглед преди публикация, използвайте "
+"връзката за уведомяване на автора за да го информирате за решението си и "
+"изберете версията, която да бъде изпратена."
+
+msgid "editor.notifyUsers"
+msgstr "Известяване на потребителите"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Всички читатели ({$count} потребители)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Всички автори с публикации ({$count} потребители)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Всички индивидуални абонати ({$count} потребители)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Всички институционални абонати ({$count} потребители)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Известяване на потребителите..."
+
+msgid "editor.usersNotified"
+msgstr "Потребителите са известени"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Изпрати съобщение до всички потребители, свързани с това списание ({$count} "
+"потребители)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Изпрати съобщение единствено до потребителите, свързани с това списание, "
+"които са посочили, че желаят да получават известия ({$count} потребители)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr ""
+"Включване на таблица със съдържанието (заглавията на статиите) от този брой "
+"на списанието:"
+
+msgid "editor.editorAdministration"
+msgstr "Редактор - Администрация"
+
+msgid "editor.issues.createIssue"
+msgstr "Създаване на нов брой на списанието"
+
+msgid "editor.issues.editIssue"
+msgstr "Управление на броевете: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Текущ (последен) брой на списанието"
+
+msgid "editor.issues.numArticles"
+msgstr "Статии"
+
+msgid "editor.issues.noArticles"
+msgstr "Няма статии, предвидени за публикация в този брой на списанието."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Сигурни ли сте, че желаете да изтриете този брой на списанието?"
+
+msgid "editor.issues.published"
+msgstr "Публикувани броеве"
+
+msgid "editor.issues.unpublished"
+msgstr "Непубликувани броеве"
+
+msgid "editor.issues.datePublished"
+msgstr "Дата на публикуване"
+
+msgid "editor.issues.volumeRequired"
+msgstr ""
+"Полето том на изданието е задължително. Следва да е цяло число (Цифри, без "
+"букви и интервали)."
+
+msgid "editor.issues.numberRequired"
+msgstr ""
+"Полето брой е задължително. Следва да бъде цяло число (Цифра, без интервали "
+"и букви)."
+
+msgid "editor.issues.yearRequired"
+msgstr ""
+"Полето година е задължително. Следва да бъде цяло число (Цифра, без "
+"интервали и букви)."
+
+msgid "editor.issues.titleRequired"
+msgstr "Полето заглавие е задължително."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Полето за идентификация на този брой от списанието е задължително. Моля, "
+"изберете една от възможностите."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Идентификация на броя на това списание"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Публична идентификация на броя на списанието"
+
+msgid "editor.issues.description"
+msgstr "Описание"
+
+msgid "editor.issues.accessStatus"
+msgstr "Достъп"
+
+msgid "editor.issues.accessDate"
+msgstr "Отворен достъп - дата"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Позволява Отворен достъп със закъснение"
+
+msgid "editor.issues.coverPage"
+msgstr "Изображение на корицата на броя"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Позволени графични формати файлове: .gif, .jpg, или .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Качено"
+
+msgid "editor.issues.remove"
+msgstr "Премахни (изтрий)"
+
+msgid "editor.issues.proofed"
+msgstr "Проверено"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Да бъде ли премахнато изображението на корицата?"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Изображението на корицата на корицата, което поискахте да изтриете, "
+"съответства на издание за различно списание. Моля, уверете се, че работите с "
+"правилното списание и използвате правилния идентификационен номер на броя и "
+"опитайте отново."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Изображението на корицата, което поискахте да изтриете, не съвпада с "
+"изображението на корицата за този брой на списанието. Моля, презаредете "
+"страницата и опитайте отново."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Изображението на корицата, което поискахте да изтриете, не може да бъде "
+"открито или вече е изтрито. Моля, презаредете страницата и опитайте отново."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Неразпознат формат на графичния файл за корицата. Възможните формати файлове "
+"за качване са .gif, .jpg, или .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Стилове"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Стилове (CSS). Невалиден формат на файлът със стилове. Уверете се, че "
+"изпратеният файл е валиден CSS. (Имайте предвид, CSS файлове с коментари в "
+"началото може да бъдат отхвърлени.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Да бъде ли премахнат CSS файла?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Надпис на корицата"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Създаване на корица за броя на списанието със следните елементи."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Покажи"
+
+msgid "editor.issues.openAccess"
+msgstr "Отворен достъп"
+
+msgid "editor.issues.subscription"
+msgstr "Абонамент"
+
+msgid "editor.issues.identification"
+msgstr "Идентификация"
+
+msgid "editor.issues.access"
+msgstr "Достъп"
+
+msgid "editor.issues.cover"
+msgstr "Корица"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Всички статии ще бъдат върнати в опашката за редактиране и всички свързани "
+"файлове ще бъдат премахнати. Наистина ли искате да премахнете този брой на "
+"списанието?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Това списание използва специфична настройка на показване на поредността на "
+"броевете. <a href=\"{$url}\" class=\"action\">Върни към стандартна подредба</"
+"a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Този брой използва специфична настройка на показване на разделите. <a href="
+"\"{$url}\" class=\"action\">Върни към стандартна подредба</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Данни за броя"
+
+msgid "editor.issues.saveChanges"
+msgstr "Да се запишат ли промените в таблицата на съдържанието?"
+
+msgid "editor.issues.default"
+msgstr "По подразбиране"
+
+msgid "editor.issues.order"
+msgstr "Подредба"
+
+msgid "editor.issues.publicId"
+msgstr "Публичен идентификатор"
+
+msgid "editor.issues.publishIssue"
+msgstr "Публикуване на броя на списанието"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Скриване (сваляне от публичната част на сайта) на броя"
+
+msgid "editor.issues.previewIssue"
+msgstr "Предварителен преглед на броя"
+
+msgid "editor.issues.preview"
+msgstr "Предварителен преглед"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Сигурни ли сте, че искате да публикувате новия брой?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr ""
+"Наистина ли искате да отмените публикуването (скриете от публичната част на "
+"сайта) този публикуван брой?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Наистина ли искате да зададете този брой като последен (текущ)?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Не може да се запази публичния идентификатор за статия:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Няма публикувани броеве"
+
+msgid "editor.issues.open"
+msgstr "Отвори"
+
+msgid "editor.issues.pages"
+msgstr "Страници"
+
+msgid "editor.issues.galleys"
+msgstr "Типографии на броевете"
+
+msgid "editor.issues.galley"
+msgstr "Типография на броя"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Преглеждане на типографията на броя"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Публикуване на типографията с цялото съдържание на броя."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Няма публикувани типографии за броя."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Полето Заглавие на типографията на броя е задължително."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Полето Локализация на типографията на броя е задължително."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Полето за идентификация на типографията на броя вече съществува."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Обратно към типографиите на броя"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Сигурни ли сте, че искате да изтриете тази типографията на брой?"
+
+msgid "editor.issues.identifiers"
+msgstr "Идентификатори"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Следващи издания"
+
+msgid "grid.action.addGalley"
+msgstr "Добави типография"
+
+msgid "grid.action.publish"
+msgstr "Публикуване на броя"
+
+msgid "grid.action.addIssue"
+msgstr "Създаване на нов брой"
+
+msgid "grid.action.viewIssue"
+msgstr "Преглед на броя"
+
+msgid "grid.action.previewIssue"
+msgstr "Предварителен преглед"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Създаване на типография на броя"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Отбележи актуален (текущ) брой"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Предишни броеве"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Определете оригиналния файл като версия за преглед"
+
+msgid "editor.article.decision"
+msgstr "Решение"
+
+msgid "editor.submissions.showBy"
+msgstr "Покажи по"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Изпрати ММ-ДД"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Активни задачи"
+
+msgid "editor.submissions.invite"
+msgstr "Покани"
+
+msgid "editor.submissions.accept"
+msgstr "Приеми"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Няма изпратени материали"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Последно (най-ново)"
+
+msgid "editor.submissions.averageTime"
+msgstr "Седмици"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Последно завършени"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Асоциирано към Редактор"
+
+msgid "issues.submissions.issueIds"
+msgstr "Асоцииирано към Брой"
+
+msgid "editor.submissions.inSection"
+msgstr "В раздел"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Покажи насрочените публикации"
+
+msgid "editor.article.publishVersion"
+msgstr "Версия на публикацията"
+
+msgid "editor.article.viewMetadata"
+msgstr "Преглед на метаданните за версията"
+
+msgid "editor.article.editMetadata"
+msgstr "Редакция на метаданните за версията"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Насрочи публикация на"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Да бъде асоциирано"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Таксата за публикуване не е платена. За да насрочите статията за "
+"публикуване, уведомете автора да заплати такса или откажете налагането на "
+"такса за тази статия."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Искане за плащане"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Изображението на корицата, което поискахте да изтриете, не можа да бъде "
+"намерено. Възможно е вече да е изтрито. Опитайте да презаредите страницата."
+
+msgid "grid.action.removeArticle"
+msgstr "Премахване на статия от броя"
+
+msgid "editor.article.remove"
+msgstr "Премахни"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Наистина ли искате да премахнете тази статия от броя? Статията ще остане "
+"достъпна за публикуване в друг брой."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Датата на дотъп е невалидна или в некоректен формат."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Редакция на типографията на броя"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Редакторът на оформлението (типографията) подготвя тези файлове за всяка "
+"типография и след това ги качва в съответните <span class = \"pkp_help_title"
+"\"> Указанията </span> за коректура."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Изберете типографските файлове"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Окончателните чернови (работни) файлове в този списък се трансформират от "
+"Коректор (Copyeditor) в копирани версии, качени по-долу под <span class = "
+"\"pkp_help_title\"> Коректура</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Всички файлове, които вече са качени на всеки етап на изпращане на "
+"материали, могат да бъдат добавени към списъка за корекция, като поставите "
+"отметка в квадратчето Включване по -долу и щракнете върху Търсене: всички "
+"налични файлове ще бъдат изброени и могат да бъдат избрани за включване."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Публичният идентификатор '{$publicIdentifier}' вече съществува за друг обект "
+"от същия тип. Моля, изберете уникален идентификатор за обектите от същия тип "
+"в рабките на вашето списание."
+
+msgid "editor.article.coverImage"
+msgstr "Изображение на корицата"

@@ -1,0 +1,57 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-11 20:01+0000\n"
+"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Плъгинът COUNTER позволява отчитане на дейността на списанието, използвайки "
+"<a href=\"http://www.projectcounter.org\">стандарта COUNTER</a>. Само тези "
+"доклади не правят списанието съвместимо с COUNTER. За да предложите "
+"съответствие с COUNTER, прегледайте изискванията на уебсайта на Project "
+"COUNTER."
+
+msgid "plugins.reports.counter"
+msgstr "Отчет COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER Версия"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Параметрите на отчета бяха невалидни."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Заявката за отчет е невалидна."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Не бяха намерени резултати за този отчет."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Резултатите не могат да бъдат форматирани като XML."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER Отчет JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER Journal Report 1 (R3): Пълнотекстови заявки за статии по месец и "
+"списание"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Всички клиенти"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Отчет по статии 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Отчет по списания 1"

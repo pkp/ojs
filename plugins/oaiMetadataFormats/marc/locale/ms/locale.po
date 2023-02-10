@@ -1,0 +1,19 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/"
+"oaiMetadataFormats-marc/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.OAIMetadata.marc.displayName"
+msgstr "Format Metadata MARC"
+
+msgid "plugins.OAIMetadata.marc.description"
+msgstr "Menstrukturkan metadata dengan cara yang selaras dengan format MARC."

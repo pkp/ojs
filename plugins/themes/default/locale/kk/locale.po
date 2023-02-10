@@ -1,0 +1,93 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-14 06:04+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/themes-"
+"default/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.default.name"
+msgstr "\"Негізгі безендіру\" модулі"
+
+msgid "plugins.themes.default.description"
+msgstr "Негізгі дизайн безендірілуі."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Типографика"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Осы журналға сәйкес келетін қаріптерді таңдаңыз."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr "Noto Sans: бірнеше тілдерді қамтитын Google экран шрифті."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Google сандық шрифтінің серифтік нұсқасы."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: антиква тақырыбы мен гротескте терілген негізгі мәтіні "
+"бар стиль."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Serif/Noto Sans: антиква тақырыбы мен гротескте терілген негізгі мәтіні "
+"бар стиль."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: жаңа стильдегі қаріп."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: экраннан оқуға ыңғайлы кең қаріп."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: антиква тақырыптары мен гротескпен терілген негізгі мәтіннен "
+"тұратын стиль."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Түс"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Жоғарғы колонтитулдың түсін орнату."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Негізгі бетте журнал туралы қысқаша ақпаратты көрсету."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Жоғарғы колонтитулдың фондық суреті"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Басты беттің суретін жүктегеннен кейін оны басты беттің әдеттегі орнына "
+"емес, үстіңгі колонтитул ретінде көрсетіңіз."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Басты беттің суретін үстіңгі колонтитулдың фоны ретінде көрсету."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr ""
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr ""

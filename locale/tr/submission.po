@@ -1,0 +1,423 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022, 2023.
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
+"PO-Revision-Date: 2023-01-09 16:02+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"tr_TR/>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "... olarak gönder."
+
+msgid "submission.upload.selectComponent"
+msgstr "Makale bileşeni seç"
+
+msgid "submission.title"
+msgstr "Makale Başlığı"
+
+msgid "submission.title.tip"
+msgstr ""
+"Gönderi türü genellikle 'görüntü', 'metin' veya 'yazılım' veya 'interaktif' "
+"dahil olmak üzere diğer çoklu ortam türlerinden biridir. Lütfen gönderinizle "
+"ilgili olanı seçin. Örnekler şu adreste bulunabilir: <a target=\"_blank\" "
+"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Yeni Makale Gönder"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Yeni Gönderi"
+
+msgid "grid.action.workflow"
+msgstr "Gönderi Süreç Akışı"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Öz, {$wordCount} kelime veya daha az olmalıdır."
+
+msgid "submission.submit.noContext"
+msgstr "Gönderinin bulunduğu dergi bulunamadı."
+
+msgid "submission.issueEntry"
+msgstr "Üst Veri"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Gönderiniz dergi yöneticilerine bildirildi, size de kayıtlarınızı "
+"doğrulamanız için bir e-posta gönderildi. Editör başvuruyu inceledikten "
+"sonra sizinle iletişime geçilecek."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Sayı içeriğinde görünen dizgi"
+
+msgid "grid.action.issueEntry"
+msgstr "Bu gönderinin üst verilerini görüntüle"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Makale dizgisi \"{$galleyFormatName}\" erişilebilir hale getirildi."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Makale dizgisi \"{$galleyFormatName}\" erişimden kaldırıldı."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Gönderinin genel tanımlayıcıları güncellendi."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Format Onayı"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Bu dizgiye, okuyucular tarafından <em>erişilemez</em> .</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Bu dizgi, okuyucular için <em>erişilebilir olacak</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Bu dizgiyi erişilebilir yap"
+
+msgid "submission.galleyFiles"
+msgstr "Dizgi Dosyaları"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Sayfa düzenleyici, burada yayınlanmak üzere hazırlanmış olan biçimli "
+"dosyaları yükler. Yayından önce onay için yüklenen düzeltilmiş dosyalar ile, "
+"dizgiyi prova etmek için yazarları ve diğer kişileri atamak için <em>Atama "
+"Denetçisi</em>ni kullanın."
+
+msgid "grid.action.approveProof"
+msgstr "Dizgiye dahil edilmek için bu düzenlemeyi onayla."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Bu düzenleme, dizgiye dahil edilmek üzere onaylandı."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Başlık ve Özet"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Makale, multimedya, veri setleri, sanat eseri vb. dahil olmak üzere bu "
+"gönderiyle ilişkili dosyaları yükleyin."
+
+msgid "submission.pageProofs"
+msgstr "Düzeltme"
+
+msgid "workflow.review.externalReview"
+msgstr "Değerlendir"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Gönderinin konu üst verileri güncellendi."
+
+msgid "submission.upload.fileContents"
+msgstr "Aday Makale Bileşeni"
+
+msgid "submission.complete"
+msgstr "Onaylandı"
+
+msgid "submission.incomplete"
+msgstr "Bekleyen Onay"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Yazar Onay Butonları"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Gizlilik Beyanı"
+
+msgid "submission.submit.contributorRole"
+msgstr "Katkı verenin rolü"
+
+msgid "submission.citationFormat.notFound"
+msgstr "İstenen alıntı formatı alınamadı."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Bu özellikler, dergi içeriğini tanımlamak için kullanılan uluslararası bir "
+"standart olan Dublin Core üst veri kümesine dayanmaktadır."
+
+msgid "section.any"
+msgstr "Herhangi Bir Bölüm"
+
+msgid "submission.sectionOptions"
+msgstr "Bölüm Seçenekleri"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Öge"
+
+msgid "catalog.category.heading"
+msgstr "Tüm Öğeler"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Bu makale yayımlandığı için dizgi biçimi düzenlenemez."
+
+msgid "galley.publicationNotFound"
+msgstr "Bu dizgi için yayın bulunamadı."
+
+msgid "publication.assignToissue"
+msgstr "Sayıya Ata"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Bu makale, <a href=\"{$issueUrl}\">{$issueName}</a>'e atandı, ancak "
+"yayınlanması planlanmadı."
+
+msgid "publication.changeIssue"
+msgstr "Sayı Değiştir"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Sayı yayınlandığında yayın tarihi otomatik olarak ayarlanacaktır. Makale "
+"daha önce başka bir yerde yayınlanmadıysa ve onu geri yüklemeniz gerekmediği "
+"sürece bir yayın tarihi girmeyin."
+
+msgid "publication.invalidSection"
+msgstr "Bu yayının bölümü bulunamadı."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Pasif)"
+
+msgid "publication.invalidIssue"
+msgstr "Bu yayının sayısı bulunamadı."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Tüm yayın gereksinimleri karşılanmıştır. Bunu yayınlamak istediğinizden emin "
+"misiniz?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Tüm yayın gereksinimleri karşılanmıştır. Bu, {$issue} yayınlandığında "
+"yayınlanacak. Bunu yayınlanmak üzere planlamak istediğinizden emin misiniz?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Tüm yayın gereksinimleri karşılanmıştır. Bu derhal {$issue} dergisinde "
+"yayınlanacak. Bunu yayınlamak istediğinizden emin misiniz?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Tüm yayın gereklilikleri karşılanmıştır. Yayın tarihi {$datePublished} "
+"olarak ayarlandığı için bu hemen yayınlanacaktır. Bunu yayınlamak "
+"istediğinizden emin misiniz?"
+
+msgid "publication.required.issue"
+msgstr "Yayının yayınlanabilmesi için bir sayıya atanması gerekir."
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> içinde yayınlandı."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a> içinde yayınlanmak üzere planlandı."
+
+msgid "publication.unscheduledIn"
+msgstr "Henüz bir sayıda yayınlanmak üzere planlanmadı."
+
+msgid "publication.selectIssue"
+msgstr "Yayın için sayı seç ve planla"
+
+msgid "submission.publication"
+msgstr "Yayın"
+
+msgid "publication.status.published"
+msgstr "Yayınlandı"
+
+msgid "submission.status.scheduled"
+msgstr "Programlanmış"
+
+msgid "publication.status.unscheduled"
+msgstr "Planlanmamış"
+
+msgid "submission.publications"
+msgstr "Yayınlar"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Telif hakkı yılı, bir sayıda yayınlandığında otomatik olarak ayarlanır."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Telif hakkı yılı, yayın tarihine göre otomatik olarak ayarlanır."
+
+msgid "publication.datePublished"
+msgstr "Yayın Tarihi"
+
+msgid "publication.editDisabled"
+msgstr "Bu sürüm yayınlandı ve düzenlenemez."
+
+msgid "publication.event.published"
+msgstr "Gönderi yayınlandı."
+
+msgid "publication.event.scheduled"
+msgstr "Gönderi yayın için planlandı."
+
+msgid "publication.event.unpublished"
+msgstr "Gönderi yayınlandı."
+
+msgid "publication.event.versionPublished"
+msgstr "Yeni bir sürüm yayınlandı."
+
+msgid "publication.event.versionScheduled"
+msgstr "Yayınlanmak üzere yeni bir sürüm planlandı."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Bir sürüm yayından kaldırıldı."
+
+msgid "publication.invalidSubmission"
+msgstr "Bu yayının için gönderi bulunamadı."
+
+msgid "publication.publish"
+msgstr "Yayınla"
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Bunun yayınlanabilmesi için aşağıdaki gereksinimlerin karşılanması gerekir."
+
+msgid "publication.required.declined"
+msgstr "Reddedilen bir gönderi yayınlanamaz."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Gönderinin yayınlanabilmesi için önce Kopyalama veya Üretim aşamalarında "
+"olması gerekir."
+
+msgid "submission.license.description"
+msgstr ""
+"Lisans yayınlandığında otomatik <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> olarak ayarlanacaktır."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Telif hakkı, yayınlandığında {$copyright} adresine otomatik olarak "
+"atanacaktır."
+
+msgid "submission.copyrightOther.description"
+msgstr "Yayınlanan gönderilerin telif hakkını aşağıdaki kısma atayın."
+
+msgid "publication.unpublish"
+msgstr "Yayından Kaldır"
+
+msgid "publication.unpublish.confirm"
+msgstr "Bunun yayınlanmasını istemediğinizden emin misiniz?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Bunun yayınlanmak üzere zamanlanmasını istemediğinizden emin misiniz?"
+
+msgid "publication.version.details"
+msgstr "{$version} sürümü için yayın ayrıntıları"
+
+msgid "submission.queries.production"
+msgstr "Basım Tartışmaları"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Değerlendirmeye Dön"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Kabul kararını geri alın ve değerlendirme aşamasına geri gönderin."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName}, aday makalenin kabul kararını geri aldı ve değerlendirme "
+"aşamasına geri gönderdi."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Değerlendirme için Geri Gönder"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} başlıklı aday makale değerlendirme aşamasına geri gönderildi."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Aday makalenin değerlendirme aşamasına geri gönderildiğini bildirmek için "
+"yazarlara bir e-posta gönderin. Bu kararın neden verildiğini açıklayın ve "
+"yeniden değerlendirme yapılacağı konusunda yazara bilgi verin."
+
+#, fuzzy
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Yazarlara, bu aday makalenin hakem değerlendirmesine gönderileceğini "
+"bildirmek için bir e-posta gönderin. Mümkünse yazarlara, hakem değerlendirme "
+"sürecinin ne kadar sürebileceği ve editörlerden ne zaman haber almayı "
+"beklemeleri gerektiği konusunda bilgi verin."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Değerlendirme aşamasına gönderilmesi gereken dosyaları seçin."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Gönderi için DOI oluşturulamadı: {$pubObjectTitle}. DOI oluşturulabilmesi "
+"için gönderinin bir sayıya atanması gereklidir."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Gönderi dizgisi için DOI oluşturulamadı: {$itemTitle}. DOI oluşturulabilmesi "
+"için gönderinin bir sayıya atanması gereklidir."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Gönderi için DOI oluşturulamadı: {$pubObjectTitle}. Gönderi bu dergide yer "
+"almıyor."
+
+msgid "submission.layout.viewGalley"
+msgstr "Dizgiyi Gör"
+
+msgid "galley.cantEditPublished"
+msgstr "Bu dizgi daha önce yayımlandığı için düzenlenemez."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Lütfen bu dergiye gönderilen aday makaleler için telif hakkı şartlarını "
+"okuyun ve anlayın."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Bu dergiye makale göndermenize izin verilmiyor çünkü yazarların editör "
+"kadrosu tarafından kaydedilmesi gerekiyor. Bunun bir hata olduğunu "
+"düşünüyorsanız, lütfen <a href='mailto:{$email}'>{$name}</a> ile iletişime "
+"geçin."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+
+msgid "submission.submit.form.authorRequired"
+msgstr "En az bir yazar gerekli."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Lütfen makalenizin başlığını giriniz."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Lütfen makalenizin özetini giriniz."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Özetiniz çok uzun. Lütfen bu bölüm için belirtilen kelime limitinin uygun "
+"düzenleyin."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Lütfen katkıda bulunanın rolünü seçin."
+
+#~ msgid "submission.issueEntry.submissionMetadata"
+#~ msgstr "Yazı Girişi"
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Değerlendirmeye Gönder"
+
+#~ msgid "publication.issue.success"
+#~ msgstr "Yayının sayı ayrıntıları güncellendi."

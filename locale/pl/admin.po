@@ -1,0 +1,271 @@
+# Dariusz Lis <Dariusz@Lis.PL>, 2021.
+# rl <biuro@fimagis.pl>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
+"PO-Revision-Date: 2022-09-26 13:01+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/admin/pl_PL/"
+">\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Obsługiwane czasopisma"
+
+msgid "admin.settings.redirect"
+msgstr "Przekieruj na czasopismo"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Zamiast strony z listą obsługiwanych czasopism wyświetl stronę tego "
+"czasopisma (przykład: obsługiwane jest tylko jedno czasopismo)."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Czy na pewno wyłączyć ten język? Ta decyzja może mieć wpływ na już utworzone "
+"czasopisma, jeśli z niego korzystają."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"To będzie domyślny język witryny internetowej tego OJS oraz wszelkich "
+"obsługiwanych przez niego czasopism."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Wybierz języki domyślnie dostępne dla witryny internetowej tego OJS i "
+"obsługiwanych przez niego czasopism (każdemu czasopismu można wybrać własne "
+"języki, ale spomiędzy domyślnych). Wybór tylko jedngo języka, spowoduje "
+"usunięcie przełącznika do wyboru języka oraz wyłączy możliwość wybierania "
+"języków dla obsługiwanych czasopism."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Tłumaczenia zaznaczonych języków mogą być niekompletne."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Czy na pewno chcesz usunąć ten język? Może to mieć wpływ na czasopisma "
+"używającye tego języka."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Wybierz dodatkowe języki, by zostały zainstalowane i były dostępne w tym "
+"OJS. Dopiero wtedy będzie można obsługiwane czasopisma konfigurować do ich "
+"użycia. Informacje o dodawaniu wsparcia dla nowych języków w OJS są podane w "
+"jego dokumentacji."
+
+msgid "admin.systemVersion"
+msgstr "Wersja systemu OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfiguracja systemu OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Konfiguracyjne ustawienia systemu OJS z pliku <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Zostaniesz automatycznie przydzielony jako administrator tego czasopisma. Po "
+"utworzeniu czasopisma włączy się kreator ustawień, by wprowadzić wstępne "
+"ustawienia czasopisma."
+
+msgid "admin.journals.journalSettings"
+msgstr "Ustawienia czasopisma"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nie utworzono żadnych czasopism."
+
+msgid "admin.contexts.create"
+msgstr "Utwórz czasopismo"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Krótkie, pojedyńcze słowo lub akronim identyfikujące czasopismo. Adres "
+"czasopisma będzie miał postać {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Tytuł jest wymagany."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Wymagane jest wskazanie położenia w systemie plików."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Położenie w systemie plików (ścieżka) może składać się z liter, cyfr, "
+"podkreśleń (_) i myślników (-). Musi zaczynać i kończyć się literą lub cyfrą."
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+"Wybrane położenie w systemie plików (ścieżka) jest już używane przez inne "
+"czasopismo."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Podstawowa lokalizacja musi być jedną z lokalizacji obsługiwanych przez "
+"czasopismo."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Umieść to czasopismo na stronie listy obsługiwanych czasopism"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Opis czasopisma"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Położenie w systemie plików (ścieżka) na utrzymywanie plików dla tego "
+"czasopisma. Jeśli położenie nie istnieje, to zostanie utworzone."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importuj subskrypcje"
+
+msgid "admin.journals.transcode"
+msgstr "Zmień kodowanie ISO8859-1 metadanych artykułu na inne"
+
+msgid "admin.journals.redirect"
+msgstr ""
+"Adresy URL systemu OJS stosowane w jego wersji 1 zmień na stosowane w wersji "
+"2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr ""
+"Wymagane jest wskazanie położenia w systemie plików (ścieżki) do którego "
+"odbędzie się import."
+
+msgid "admin.journals.importErrors"
+msgstr "Z powodu błędów nie wszystko się zaimportowało"
+
+msgid "admin.mergeUsers"
+msgstr "Scal użytkowników"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Scal użytkownika"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Wybierz użytkownika scalającego, któremu mają zostać przydzielone atrybuty "
+"użytkownika scalanego."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Wybierz jedno lub więcej kont użytkowników, które zostaną scalone (tj. "
+"usunięte z jednoczesnym przekazaniem ustawień) z innym, scalającym kontem "
+"użytkownika (przykład: ktoś posiadał dwa konta a chce mieć jedno)."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Wszyskie scalane konta użytkowników"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Czy jesteś pewien, że wybrane konta użytkowników ({$oldAccountCount}) chcesz "
+"scalić z kontem użytkownika ({$newUsername})? Miej świadomość, że konta "
+"scalane ({$oldAccountCount}) zostaną nieodwracalnie usunięte a zostanie "
+"tylko scalające konto użytkownika ({$newUsername})."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nie wybrano scalanych kont użytkowników."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Przypomnienie o końcu subskrypcji"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Powiadomienie o otwartym dostępie"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Przypomnienie o recenzji"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "ID wydania nie jest daną integer."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "ID pliku wydania nie jest daną Integer."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Issue ID nie pasuje do Assoc ID."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Wskaż obsługiwane czasopisma, którym zezwolono na masowe wysyłanie "
+"wiadomości e-mail. Włączenie tej funkcjonalności pozwoli administratorowi "
+"czasopisma wysyłać wiadomości e-mail do wszystkich jego zarejestrowanych "
+"użytkowników.<br><br>Pamiętaj, że nadużywanie tej funkcjonalności może być "
+"interpretowane przez innych jako wysyłanie niechcianych wiadomości (SPAMu) i "
+"może doprowadzić w internetowym systemie poczty elektronicznej do blokowania "
+"wiadomości wychodzących z Twego serwera. Dlatego zanim włączysz tę "
+"funkcjonalność, to zasięgnij profesjonalnej porady i rozważ uzgodnienie tego "
+"ruchu z administratorem czasopisma.<br><br>Funkcjonalność ta jest ustawiana "
+"niezależnie dla każdego <a href=\"{$hostedContextsUrl}\">obsługiwanego "
+"czasopisma</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Administrator czasopisma nie będzie mógł masowo wysyłać wiadomości e-mail do "
+"ról niżej wskazanych. Użyj tego ustawienia, by zmniejszyć ryzyko "
+"interpretowania przez innych funkcjonalności masowego wysyłania jako źródła "
+"niechcianej poczty. Najlepiej jak odbiorcami takiej metody wysyłania będą "
+"ci, którzy są jej świadomi i się na to zgodzili.<br><br>Masowe wysyłanie w "
+"ramach czasopisma może być całkowicie wyłączone w <a href="
+"\"{$siteSettingsUrl}\">Administracja > Ustawienia systemu</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Funkcja masowej poczty e-mail została wyłączona dla tego czasopisma. Włącz "
+"tę funkcję w <a href=\"{$siteSettingsUrl}\">Administrator > Ustawienia "
+"strony internetowej</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Dodaj, edytuj lub usuń tytuły czasopism, zarządzaj ustawieniami instalacji."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Wybierz typ statystyk użytkowania geograficznego, które mogą być gromadzone "
+"przez czasopisma w tej witrynie. Bardziej szczegółowe statystyki "
+"geograficzne mogą znacznie zwiększyć rozmiar bazy danych, a w niektórych "
+"rzadkich przypadkach mogą podważyć anonimowość odwiedzających. Każdy "
+"dziennik może inaczej skonfigurować to ustawienie, ale dziennik nigdy nie "
+"może gromadzić bardziej szczegółowych rekordów niż to, co zostało tutaj "
+"skonfigurowane. Na przykład, jeśli witryna obsługuje tylko kraj i region, "
+"czasopismo może wybrać kraj i region lub tylko kraj. Czasopismo nie będzie w "
+"stanie śledzić kraju, regionu i miasta."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Włącz statystyki instytucjonalne, jeśli chcesz, aby czasopisma w tej "
+"witrynie mogły zbierać statystyki użytkowania według instytucji. Aby "
+"korzystać z tej funkcji, czasopisma będą musiały dodać instytucję i jej "
+"zakresy adresów IP. Włączenie statystyk instytucjonalnych może znacznie "
+"zwiększyć rozmiar bazy danych."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Określa, czy punkty końcowe API SUSHI mają być publicznie dostępne dla "
+"wszystkich czasopism w tej witrynie. Jeśli włączysz publiczny interfejs API, "
+"każdy dziennik może zastąpić to ustawienie, aby ich statystyki stały się "
+"prywatne. Jeśli jednak wyłączysz publiczny interfejs API, czasopisma nie "
+"będą mogły upublicznić własnego interfejsu API."
+
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr "Czy na pewno usunąć czasopismo wraz z całą jego zawartością?"
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "Pomyślnie  edytowano {$name}."
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} utworzono pomyślnie."
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Informacje o stronie zostały pomyślnie zaktualizowane."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Ustawienia konfiguracji strony zostały pomyślnie zaktualizowane."
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."

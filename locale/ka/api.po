@@ -1,0 +1,80 @@
+# Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-04-22 07:58+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/api/ka_GE/"
+">\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "მოთხოვნილი განცხადება არ არის ამ ჟურნალის ნაწილი."
+
+msgid "api.emails.403.disabled"
+msgstr "ელფოსტით შეტყობინების ფუნქცია არ არის ჩართული ამ ჟურნალისათვის."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "თქვენ მიერ მოთხოვნილი წარდგენა არ არის ამ ჟურნალში."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "არ შეგიძლიათ ჟურნალის შეცვლა ამ შენატანისათვის."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "არ გაქვთ ნახვის უფლება გამოუქვეყნებელი გამოცემისათვის."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "თქვენ შეგიძლიათ ნახოთ მხოლოდ ჟურნალები, რომლებზეც გაქვთ წვდომა."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "არ გაქვთ ამ ჟურნალის ნახვის უფლება."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"არ შეგიძლიათ ნახოთ, ან ჩაასწოროთ ეს ჟურნალი, API მოთხოვნის, ან საიტის სრული "
+"API მოთხოვნის გარეშე."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "არ შეგიძლიათ ამ ჟურნალის ჩასწორება საიტის API-ს გამოყენებით."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "არ გაქვთ ამ ჟურნალის ჩასწორების უფლება."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "არ გაქვთ ამ ჟურნალის წაშლის უფლება."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "მოთხოვნილი ჟურნალი ვერ მოიძებნა."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "თქვენ მიერ მოთხოვნილი DOI არ არის ამ ჟურნალის ნაწილი."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "DOI რეგისტრაციის სააგენტო არ არის კონფიგურირებული ამ ჟურნალისთვის."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"ზოგიერთი ელემენტი წარმატებით არ განთავსდა. გთხოვთ, შეამოწმოთ ცალკეული "
+"ელემენტები მათი კონკრეტული შეცდომის შეტყობინებებისთვის."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "არ გაქვთ წერილის ამ შაბლონის სხვა ჟურნალში გადატანის უფლება."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "თქვენს მიერ არჩეული გადახდის მეთოდი მხარდაჭერილი არ არის."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "თქვენს მიერ მოთხოვნილი პუბლიკაცია არ არის ამ ჟურნალის ნაწილი."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "თქვენს მიერ მოთხოვნილი პუბლიკაცია არ არის ამ შენატანის ნაწილი."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "არ შეგიძლიათ ფაილის ამ ეტაპიდან დაკავშირება გალერეასთან."
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

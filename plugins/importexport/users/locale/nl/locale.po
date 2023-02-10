@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:47+00:00\n"
+"PO-Revision-Date: 2020-10-22 11:46+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/nl/>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Gebruikers XML plugin"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importeer en exporteer gebruikers"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Gebruik: {$scriptName} {$pluginName} [commando] ...\n"
+"Commando's:\n"
+"\timport [xmlBestandsNaam] [tijdschriftPad]\n"
+"\texport [xmlBestandsNaam] [tijdschriftPad]\n"
+"\texport [xmlBestandsNaam] [tijdschriftPad] [gebruikersId1] [gebruikersId2] ...\n"
+""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Voorbeelden:\n"
+"\tImporteer gebruikers in mijnTijdschrift van mijnImporteerBestand.xml:\n"
+"\t{$scriptName} {$pluginName} import mijnImporteerBestand.xml "
+"mijnTijdschrift\n"
+"\n"
+"\tExporteer alle gebruikers van mijnTijdschrift:\n"
+"\t{$scriptName} {$pluginName} export mijnExporteerBestand.xml "
+"mijnTijdschrift\n"
+"\n"
+"\tExporteer gebruikers met een specifieke ID:\n"
+"\t{$scriptName} {$pluginName} export mijnExporteerBestand.xml "
+"mijnTijdschrift 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importeer gebruikers"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr "Selecteer een XML bestand met gebruikergegevevens om in dit tijdschrift te importeren. Raadpleeg het hulpsysteem van het tijdschrift voor details over het formaat van dit bestand.<br /><br />Merk op dat als het geïmporteerde bestand reeds bestaande gebruikersnamen of e-mailadressen bevat, de gegevens voor die gebruikers niet zullen worden geïmporteerd, en alle nieuwe rollen zullen worden toegekend aan de reeds bestaande gebruikers."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Gebruikers gegevensbestand"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "Verstuur een verwittigings-e-mail aan alle geïmporteerde gebruikers, met hun gebruikersnaam en wachtwoord."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Ga door met importeren als het proces mislukt voor een gebruiker."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Volgende gebruikers werden met succes geïmporteerd in het systeem"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Er waren fouten tijdens het importeren"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Bevestig dat u deze gebruikers wilt importeren in het systeem"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Waarschuwing"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr "Wachtwoorden die met {$importHash} werden versleuteld, kunnen niet worden gebruikt. OJS is geconfigureerd om {$ojsHash} te gebruiken. Als u doorgaat, zal u de wachtwoorden voor de geïmporteerde gebruikers moeten vernieuwen."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Er werd een onbekend tijdschriftpad \"{$journalPath}\" opgegeven."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Exporteer gebruikers"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Exporteer volgens rol"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Exporteer alle"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Er waren fouten tijdens het exporteren"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr "De gebruikers werden met succes geïmporteerd: gebruikers met gebruikersnamen en e-mailadressen die nog niet in gebruik waren zijn geïmporteerd, met overeenkomstige gebruikersgroepen."
+
+msgid "plugins.importexport.users.results"
+msgstr "Resultaten"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Laad eerst een bestand op onder \"Importeer\"."

@@ -1,0 +1,25 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-06-29 18:50+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"articles/hy_AM/>\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Հոդվածների հաշվետվություններ"
+
+msgid "plugins.reports.articles.description"
+msgstr ""
+"Այս փլագինը իրականացնում է CSV զեկույց, որը պարունակում է հոդվածների ցանկը և "
+"դրանց մասին տեղեկությունները:"
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Ոչ մի որոշում"

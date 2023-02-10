@@ -1,0 +1,109 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-14 06:03+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/importexport-"
+"users/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "\"XML-дегі қолданушылар\" модулі"
+
+msgid "plugins.importexport.users.description"
+msgstr "Қолданушыларды импорттайды және экспорттайды"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Қолдану реті: {$scriptName} {$pluginName} [command] ...\n"
+"Commands:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Мысалы:\n"
+"\tImport users into myJournal from myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tExport all users from myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tExport users specified by their ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Қолданушыларды импорттау"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Осы журналға импорттау үшін қолданушылар туралы ақпаратты қамтитын XML "
+"деректер файлын таңдаңыз. Осы файлдың пішімі туралы мәліметтерді журналдың "
+"көмегіне қараңыз.<br/><br/>егер импортталған файлда жүйеде бұрыннан бар "
+"қолданушы есімдері немесе электрондық пошта мекенжайлары болса, онда бұл "
+"қолданушылар үшін деректер импортталмайды және барлық жаңа рөлдер бұрыннан "
+"бар пайдаланушыларға тағайындалады."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Қолданушы деректері бар файл"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Әрбір импортталған қолданушыға оның аты мен құпия сөзін көрсететін "
+"электрондық пошта арқылы хабарлама жіберіңіз."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr ""
+"Қате жағдай орын алған кезде қалған қолданушыларды импорттауды жалғастырыңыз."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Келесі қолданушылар жүйеге сәтті импортталды"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Импорттау кезінде қателер орын алды"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Бұл жүйеге импорттағыңыз келетін қолданушылар екенін растаңыз"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Ескерту"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Сіз {$importHash} алгоритмімен хэшталған парольдерді пайдалана алмайсыз; OJS "
+"қазір {$ojsHash} пайдалануға конфигурацияланған. Егер сіз жалғастырсаңыз, "
+"импортталған қолданушылардың құпия сөздерін қалпына келтіру қажет болады."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "\"{$journalPath}\" журналының белгісіз жолы көрсетілді."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Қолданушыларды экспорттау"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Рөлдер бойынша экспорттау"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Барлығын экспорттау"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Экспорттау кезінде қателер орын алды"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Импорт сәтті орындалды. Қолданушы есімімен әлі қолданылмаған электрондық "
+"пошта мекенжайлары бар қолданушылар тиісті қолданушы топтарымен бірге "
+"импортталды."
+
+msgid "plugins.importexport.users.results"
+msgstr "Нәтижелер"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Жалғастыру үшін файлды \"қолданушыларды импорттау\" бөліміне жүктеңіз."

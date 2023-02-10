@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:55+00:00\n"
+"PO-Revision-Date: 2020-02-25 19:36+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/tr/>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Duyuru Besleme Eklentisi"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Bu eklenti, dergi duyuruları için RSS/Atom web akış beslemeleri üretir."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Ayarlar"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Besleme bağlantılarını tüm dergi sayfalarında göster."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Besleme bağlantılarını yalnızca anasayfa ve duyuru sayfasında göster."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Besleme bağlantılarını yalnızca duyuru sayfasında göster."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Gösterilecek besleme bağlantısı sayısı"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "en son duyurular."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Lütfen en son duyurular için pozitif bir tamsayı giriniz."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logo"

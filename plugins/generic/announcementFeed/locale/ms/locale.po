@@ -1,0 +1,51 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"announcementFeed/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin Suapan Pengumuman"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Plugin ini menghasilkan suapan sindikasi web RSS/Atom untuk pengumuman "
+"jurnal."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Tetapan"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Paparkan pautan suapan di semua halaman jurnal."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Paparkan pautan suapan hanya di laman utama dan halaman pengumuman."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Paparkan pautan suapan hanya di halaman pengumuman."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Hadkan suapan kepada"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "pengumuman terkini."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Sila masukkan nombor bulat positif untuk pengumuman terkini ini."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Logo Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Logo RSS2"

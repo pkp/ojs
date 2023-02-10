@@ -1,0 +1,218 @@
+# Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
+# Beibarys <beibarys_sultan@mail.ru>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-03 16:29+0000\n"
+"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/admin/kk_KZ/"
+">\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Сайттағы журналдар"
+
+msgid "admin.settings.redirect"
+msgstr "Журнал бойынша қайта бағыттау"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Негізгі сайтқа сұраулар осы журналға жіберіледі. Егер сайтта бір ғана журнал "
+"болса бұл пайдалы болуы мүмкін, мысалы."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Бұл тілді өшіргіңіз келетініне сенімдісіз бе? Бұл қазір қолданып отырған кез "
+"келген журналға әсер етуі мүмкін."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Бұл сайт және кез келген журнал үшін қалыпты, өзгеріссіз тіл болмақ."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Сайтқа қолдау көрсету үшін барлық тілдерді таңдаңыз. Таңдалған тілдерді "
+"сайтта орналастырылған барлық журналдар қолдана алады, сонымен қатар сайттың "
+"әр бетінде тіл таңдау мәзірі болады (журналға арналған беттерде оларды "
+"ауыстыруға болады). Егер басқа тіл таңдалмаса, тілді ауыстыру мәзірі пайда "
+"болмайды және кеңейтілген тіл параметрлері журналдарда қол жетімді болмайды."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Белгіленген тілдер толық болмауы мүмкін."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Бұл тілді өшіргіңіз келетініне сенімдісіз бе? Бұл қазір қолданып отырған кез "
+"келген журналға әсер етуі мүмкін."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Осы жүйеге қолдау орнату үшін кез-келген қосымша тілдерді таңдаңыз. "
+"Орналастырылған журналдарда қолданар алдында жергілікті тілдер орнатылуы "
+"керек. Жаңа тілдерге қолдау көрсету туралы ақпаратты OJS құжаттамасынан "
+"қараңыз."
+
+msgid "admin.systemVersion"
+msgstr "OJS нұсқасы"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурациясы"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt> OJS конфигурациясының параметрлері."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Сіз автоматты түрде осы журналдың менеджері ретінде тіркелесіз. Жаңа журнал "
+"жасағаннан кейін, сіз журналды бастапқы орнатуды аяқтау үшін оның шеберіне "
+"қайта бағытталасыз."
+
+msgid "admin.journals.journalSettings"
+msgstr "Журнал параметрлері"
+
+msgid "admin.journals.noneCreated"
+msgstr "Жүктелетін журнал табылмады."
+
+msgid "admin.contexts.create"
+msgstr "Журнал құру"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Бұл журналды анықтайтын бір қысқа сөз немесе аббревиатура болуы керек. "
+"Журналдың URL мекенжайы {$sample Url} болады."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Тақырып қажет."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Жол қажет."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Жолға тек әріптер, сандар, \"_\" және \"-\" таңбалары кіруі мүмкін. Ол "
+"әріппен немесе цифрмен басталып, аяқталуы керек."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Сіз көрсеткен жолды басқа журнал қолданады."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Негізгі тіл журналдың қолдау көрсетілетін тілдерінің бірі болуы керек."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Веб-сайтқа жариялау үшін осы журналды қосыңыз"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Журнал сипаттамасы"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Қолданыстағы журнал жолы немесе құру жолы (мысалы, «ojs»)."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Жазылымдарды импорттау"
+
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1 стандартындағы метадеректердің кодын түрлендіріңіз"
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URL-ді OJS 2 URL-ге салыстыру үшін код жасаңыз"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Импорттау жолы қажет."
+
+msgid "admin.journals.importErrors"
+msgstr "Импорт сәтсіз аяқталды"
+
+msgid "admin.mergeUsers"
+msgstr "Пайдаланушыларды біріктіру"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Пайдаланушыны біріктіру"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Алдыңғы пайдаланушының авторлығын, тағайындауды және т.б. жатқызатын "
+"пайдаланушыны таңдаңыз."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Басқа пайдаланушы тіркелгісіне қосылу үшін пайдаланушыны (немесе бірнеше) "
+"таңдаңыз (мысалы, біреудің екі есептік жазбасы болған кезде). Алдымен "
+"таңдалған есептік жазбалар жойылады және кез келген жіберулер, тапсырмалар "
+"және т.б. екінші есептік жазбаға жатқызылады."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Барлық тіркелген қолданушылар"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Таңдалған {$ oldAccountCount} есептік жазбаларын «{$ newUsername}» "
+"пайдаланушы атымен біріктіргіңіз келетініне сенімдісіз бе? Таңдалған {$ "
+"oldAccountCount} есептік жазбалары кейін болмайды. Бұл әрекет қайтымды емес."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Тіркелген пайдаланушылар жоқ."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Жазылу мерзімі туралы еске салғыш"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Access хабарламасын ашыңыз"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Шолу туралы еске салу"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr ""
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Жаппай электрондық хаттарды жіберуге рұқсат етілген орналастырылған "
+"журналдарды таңдаңыз. Бұл мүмкіндік қосылған кезде журнал менеджері өз "
+"журналында тіркелген барлық қолданушыларға электрондық пошта жібере алады. "
+"<br> <br> Бұл мүмкіндікті қажетсіз электрондық пошта хабарларын жіберу "
+"кейбір юрисдикциялардағы спамға қарсы заңдарды бұзуы мүмкін. сіздің "
+"серверіңіздің спам ретінде бұғатталған электрондық поштаңызда. Бұл "
+"мүмкіндікті қоспас бұрын техникалық кеңес сұраңыз және журналдың "
+"менеджерлерімен ақылдасып, оның дұрыс қолданылуын қамтамасыз етіңіз. <br> "
+"<br> Бұл функцияға одан әрі шектеулер әр журнал үшін <a href = «{$ "
+"hostedContextsUrl}»> Журналдар </a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Журнал менеджері төменде таңдалған рөлдердің кез-келгеніне электрондық "
+"хаттарды жібере алмайды. Бұл параметрді электрондық пошта арқылы "
+"хабарландыру мүмкіндігін теріс пайдалануды шектеу үшін пайдаланыңыз. Мысалы, "
+"оқырмандарға, авторларға немесе басқа электрондық пошта хабарламаларын алуға "
+"келіспеген басқа үлкен пайдаланушылар тобына электрондық хаттарды өшіру "
+"қауіпсізірек болуы мүмкін. <br> <br> Электрондық пошта функциясын <a "
+"»журналына толықтай өшіруге болады. href = «{$ siteSettingsUrl}»> Әкімші> "
+"Сайт параметрлері </a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Электрондық пошта мүмкіндігі бұл журнал үшін өшірілген. Бұл мүмкіндікті <a "
+"href=\"{$siteSettingsUrl}\"> Admin> Site Settings </a> ішінен қосыңыз."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Бұл сайт арқылы журналдарды қосу, өңдеу немесе жою және бүкіл сайт "
+"параметрлерін басқару."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""

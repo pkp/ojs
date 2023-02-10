@@ -1,0 +1,368 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-05 12:44+0000\n"
+"Last-Translator: Сьянов Дмитрий <Dmitrijsyanov@gmail.com>\n"
+"Language-Team: Belarusian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/be/>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Адправіць з выкарыстаннем маёй ролі ..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Выбраць кампанент артыкула"
+
+msgid "submission.title"
+msgstr "Загаловак артыкула"
+
+msgid "submission.title.tip"
+msgstr ""
+"Тып матэрыялу – гэта звычайна «выява», «тэкст» або іншыя тыпы мультымедыя, у "
+"тым ліку «праграмнае забеспячэнне» або «інтэрактыў». Калі ласка, выберыце "
+"адзін найбольш адпаведны тып для вашага матэрыялу. Прыклады можна знайсці на "
+"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Пачаць адпраўку новага матэрыялу ў"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Новы матэрыял"
+
+msgid "grid.action.workflow"
+msgstr "Працэс адпраўкі"
+
+msgid "submission.abstract.wordCount.description"
+msgstr ""
+
+msgid "submission.submit.noContext"
+msgstr ""
+
+msgid "submission.issueEntry"
+msgstr "Метаданыя"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Часопіс быў апавешчаны пра адпраўку Вамі матэрыялу, пацвярджэнне запісу было "
+"даслана на Вашу электронную пошту. Як толькі рэдактар паглядзіць Ваш "
+"матэрыял, мы звяжамся з Вамі."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Гранка з'явілася ў выпуску"
+
+msgid "grid.action.issueEntry"
+msgstr "Паказаць метаданыя гэтага матэрыялу"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Гранка артыкула «{$galleyFormatName}» зроблена даступнай."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Гранка артыкула «{$galleyFormatName}» зроблена недаступнай."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Адкрытыя ідэнтыфікатары адпраўленага матэрыялу абноўлены."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Адабрэнне фармату"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Гэту гранку <em>больш нельга рабіць даступнай</em> чытачам.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Гэту гранку <em>можна зрабіць даступнай</em> чытачам.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Зрабіць гэту гранку даступнай"
+
+msgid "submission.galleyFiles"
+msgstr "Файлы гранак"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Вярстальшчык загружае сюды цалкам гатовыя файлы, якія падрыхтаваны для "
+"публікацыі. Выкарыстоўвайце <em>Назначыць аўдытара</em>, каб назначыць "
+"аўтараў і/ці іншых карыстальнікаў для карэкцыі гранак, загрузкі "
+"адкарэктаваных файлаў і іх адабрэння перад публікацыяй."
+
+msgid "grid.action.approveProof"
+msgstr "Адобрыць гэты чарнавік для ўключэння ў гранку."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Гэты чарнавік быў адобраны для ўключэння ў гранку."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Назва і анатацыя"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Загрузіць файлы, звязаныя з гэтым матэрыялам: артыкул, мультымедыя, наборы "
+"даных, выявы твораў мастацтва і г. д."
+
+msgid "submission.pageProofs"
+msgstr "Карэктура"
+
+msgid "workflow.review.externalReview"
+msgstr "Рэцэнзаванне"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Метаданыя выпуску для матэрыялу былі абноўлены."
+
+msgid "submission.upload.fileContents"
+msgstr "Кампанент артыкула"
+
+msgid "submission.complete"
+msgstr "Адобраны"
+
+msgid "submission.incomplete"
+msgstr "Чакае адабрэння"
+
+#, fuzzy
+msgid "submission.submit.submissionChecklist"
+msgstr "Кантрольны спіс падрыхтоўкі матэрыялу для адпраўкі"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Заява аб канфідэнцыяльнасці"
+
+msgid "submission.submit.contributorRole"
+msgstr "Роля адпраўніка"
+
+msgid "submission.citationFormat.notFound"
+msgstr ""
+"Запытаны фармат афармлення бібліяграфічных спасылак не можа быць атрыманы."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Гэтыя спецыфікацыі заснаваны на наборы метаданых Dublin Core — міжнародным "
+"стандарце, які выкарыстоўваецца для апісання кантэнту часопіса."
+
+msgid "section.any"
+msgstr "Любы раздзел"
+
+msgid "submission.sectionOptions"
+msgstr ""
+
+msgid "catalog.browseTitles"
+msgstr ""
+
+msgid "catalog.category.heading"
+msgstr ""
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+
+msgid "galley.publicationNotFound"
+msgstr ""
+
+msgid "publication.assignToissue"
+msgstr ""
+
+msgid "publication.assignedToIssue"
+msgstr ""
+
+msgid "publication.changeIssue"
+msgstr ""
+
+msgid "publication.datePublished.description"
+msgstr ""
+
+msgid "publication.invalidSection"
+msgstr ""
+
+msgid "publication.inactiveSection"
+msgstr ""
+
+msgid "publication.invalidIssue"
+msgstr ""
+
+msgid "publication.publish.confirmation"
+msgstr ""
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+
+msgid "publication.required.issue"
+msgstr ""
+
+msgid "publication.publishedIn"
+msgstr ""
+
+msgid "publication.scheduledIn"
+msgstr ""
+
+msgid "publication.unscheduledIn"
+msgstr ""
+
+msgid "publication.selectIssue"
+msgstr ""
+
+msgid "submission.publication"
+msgstr ""
+
+msgid "publication.status.published"
+msgstr ""
+
+msgid "submission.status.scheduled"
+msgstr ""
+
+msgid "publication.status.unscheduled"
+msgstr ""
+
+msgid "submission.publications"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+
+msgid "publication.datePublished"
+msgstr ""
+
+msgid "publication.editDisabled"
+msgstr ""
+
+msgid "publication.event.published"
+msgstr ""
+
+msgid "publication.event.scheduled"
+msgstr ""
+
+msgid "publication.event.unpublished"
+msgstr ""
+
+msgid "publication.event.versionPublished"
+msgstr ""
+
+msgid "publication.event.versionScheduled"
+msgstr ""
+
+msgid "publication.event.versionUnpublished"
+msgstr ""
+
+msgid "publication.invalidSubmission"
+msgstr ""
+
+msgid "publication.publish"
+msgstr ""
+
+msgid "publication.publish.requirements"
+msgstr ""
+
+msgid "publication.required.declined"
+msgstr ""
+
+msgid "publication.required.reviewStage"
+msgstr ""
+
+msgid "submission.license.description"
+msgstr ""
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+
+msgid "publication.unpublish"
+msgstr ""
+
+msgid "publication.unpublish.confirm"
+msgstr ""
+
+msgid "publication.unschedule.confirm"
+msgstr ""
+
+msgid "publication.version.details"
+msgstr ""
+
+msgid "submission.queries.production"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr ""
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr ""
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+
+msgid "submission.layout.viewGalley"
+msgstr ""
+
+msgid "galley.cantEditPublished"
+msgstr ""
+
+msgid "submission.copyright.description"
+msgstr ""
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+
+msgid "submission.sectionNotFound"
+msgstr ""
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Патрабуецца як мінімум адзін аўтар."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Калі ласка, увядзіце назву Вашага артыкула."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Калі ласка, увядзіце анатацыю Вашага артыкула."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Калі ласка, выберыце ролю адпраўніка."
+
+#~ msgid "editor.submission.decision.sendExternalReview"
+#~ msgstr "Адправіць на рэцэнзію"

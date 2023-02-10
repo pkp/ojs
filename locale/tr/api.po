@@ -1,0 +1,84 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
+"PO-Revision-Date: 2022-04-22 07:57+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/api/tr_TR/"
+">\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Talep ettiğiniz duyuru bu dergide yer almamaktadır."
+
+msgid "api.emails.403.disabled"
+msgstr "E-posta bildirim özelliği bu dergi için etkinleştirilmedi."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "İstediğiniz gönderi bu dergide değil."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Bir gönderinin dergisini değiştiremezsiniz."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Yayımlanmamış konuları görüntüleme izniniz yok."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Yalnızca izin verilen dergileri görüntüleyebilirsiniz."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Bu dergiyi görüntüleme yetkiniz bulunmuyor."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Derginin API bağlantısına veya site-geneli API bağlantısına bir sorgu "
+"yapmadan bu dergiyi görüntüleyemez veya düzenleyemezsiniz."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Bu dergiyi site-geneli API ile düzenleyemezsiniz."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Bu dergiyi düzenleme yetkisine sahip değilsiniz."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Bu dergiyi silme yetkisine sahip değilsiniz."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Sorguladığınız dergi bulunamadı."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "İstediğiniz DOI bu dergide değil."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Bu dergi için herhangi bir DOI ayarı yapılandırılmamış."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Bazı ögeler için DOI alınamadı. Lütfen spesifik hata mesajlarını tek tek "
+"kontrol edin."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Bu e-posta şablonunu başka bir dergiye taşıma yetkisine sahip değilsiniz."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Seçtiğiniz ödeme yöntemi desteklenmiyor."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Sorguladığınız yayın bu dergiye ait değil."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Sorguladığınız yayın bu gönderiye ait değil."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Bu dosyayı dizgi aşamasındaki bir dosya ile ilişkilendiremezsiniz."
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

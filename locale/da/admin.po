@@ -1,0 +1,243 @@
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
+"PO-Revision-Date: 2022-09-29 07:01+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/admin/da_DK/"
+">\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Tilknyttede tidsskrifter"
+
+msgid "admin.settings.redirect"
+msgstr "Omdirigering af tidsskrift"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Forespørgsler til hovedwebstedet omdirigeres til dette tidsskrift. Dette kan "
+"f.eks. være nyttigt, hvis webstedet kun er vært for et enkelt tidsskrift."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Er du sikker på, at du vil deaktivere dette sprog? Det kan påvirke de "
+"hostede tidsskrifter, der måtte anvende sproget."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Dette er standardsproget for webstedet og alle tilknyttede tidsskrifter."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Vælg alle de sprog, der skal understøttes på webstedet. De valgte sprog kan "
+"benyttes af alle de tidsskrifter, der er tilknyttet webstedet, og vises også "
+"i en sprogvalgsmenu, der vises på hver enkelt side på webstedet (kan "
+"tilsidesættes på tidsskriftsspecifikke sider). Hvis der ikke vælges flere "
+"sprog, vises sprogvalgsmenuen ikke, og udvidede sprogindstillinger vil ikke "
+"være tilgængelige for tidsskrifter."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "De markerede sprog kan være ufuldstændige."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Er du sikker på, at du vil fjerne dette sprog? Denne handling kan påvirke "
+"alle tilknyttede tidsskrifter, der i øjeblikket benytter sproget."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Vælg yderligere sprog, du vil installere til understøttelse af i dette "
+"system. Sprog skal installeres, inden de kan benyttes af tilknyttede "
+"tidsskrifter. Se dokumentationen til OJS for at få oplysninger om "
+"understøttelse af nye sprog."
+
+msgid "admin.systemVersion"
+msgstr "OJS-version"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS-konfiguration"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS-konfigurationsindstillinger fra <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Du vil automatisk blive registreret som chef for dette tidsskrift. Når du "
+"har oprettet et nyt tidsskrift, skal du som chef registrere det for at kunne "
+"fortsætte med dets konfiguration og brugertilmelding."
+
+msgid "admin.journals.journalSettings"
+msgstr "Tidsskriftsindstillinger"
+
+msgid "admin.journals.noneCreated"
+msgstr "Der er ikke oprettet nogen tidsskrifter."
+
+msgid "admin.contexts.create"
+msgstr "Opret tidsskrift"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Dette bør være et enkelt kort ord eller akronym, der identificerer "
+"tidsskriftet. Tidsskriftets URL-adresse er {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Titel mangler."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "En sti er påkrævet."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Stien må kun indeholde alfanumeriske tegn, understregningstegn og "
+"bindestreger og skal begynde og slutte med et alfanumerisk tegn."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Den valgte sti bruges allerede af et andet tidsskrift."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Det primære sprog skal være et af tidsskriftets understøttede sprog."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Offentliggør dette tidsskrift på webstedet"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Tidsskriftsbeskrivelse"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Eksisterende tidsskriftssti eller sti, der skal oprettes (f.eks. \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importér abonnementer"
+
+msgid "admin.journals.transcode"
+msgstr "Omsæt kode for artikelmetadata fra ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Gererér kode for at mappe OJS 1 URL's til OJS 2 URL's"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Importstien er påkrævet."
+
+msgid "admin.journals.importErrors"
+msgstr "Importen mislykkedes"
+
+msgid "admin.mergeUsers"
+msgstr "Flet brugere"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Flet bruger"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Vælg en bruger, som skal tilskrives den tidligere brugers forfatterskab, "
+"redigeringsopgaver osv."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Vælg en bruger, som skal flettes til en anden brugerkonto (f.eks. hvis en "
+"person har to brugerkonti). Den først valgte konto slettes, og dens "
+"manuskripter, tildelinger osv. tilskrives den anden konto."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Alle tilmeldte brugere"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Er du sikker på, at du vil flette kontoen med brugernavnet "
+"{$oldAccountCount} til kontoen med brugernavnet \"{$newUsername}\"? Kontoen "
+"med brugernavnet {$oldAccountCount} vil derefter ophøre med at eksistere. "
+"Denne handling kan ikke fortrydes."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ingen tilmeldte brugere."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Påmindelse om abonnementes udløb"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open Access meddelelse"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Påmindelse om bedømmelse"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Nummerets ID er ikke et heltal."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Nummerets publiceringsversions ID er ikke et heltal."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Nummerets ID matcher ikke det tilhørende ID."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Vælg de hostede tidsskrifter, der skal have ret til at sende masse-e-mails. "
+"Når denne funktion er aktiveret, kan en tidsskriftschef sende en e-mail til "
+"alle brugere, der er registreret hos tidsskriftet.<br><br>Misbrug af denne "
+"funktion hvor uopfordrede e-mail udsendes kan være i strid med anti-spam-"
+"love i nogle retskredse og kan resultere i, at din servers e-mails blokeres "
+"som spam. Søg teknisk rådgivning, før du aktiverer denne funktion, og "
+"overvej at konsultere tidsskriftschefer for at sikre, at den bruges korrekt."
+"<br><br>Yderligere begrænsninger af denne funktion kan aktiveres for hvert "
+"tidsskrift ved at gå til indstillingsguiden under listen over <a href ="
+"\"{$hostedContextsUrl}\">Hostede tidsskrifter</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"En tidsskriftschef kan ikke sende masse-e-mails til de roller, der er valgt "
+"nedenfor. Brug denne indstilling til at begrænse misbrug af e-mail-"
+"notifikationsfunktionen. Det kan for eksempel være mere sikkert at "
+"deaktivere masse-e-mails til læsere, forfattere eller andre store "
+"brugergrupper, der ikke har givet samtykke til at modtage sådanne e-mails."
+"<br><br>Masse-e-mail-funktionen kan deaktiveres fuldstændigt i forbindelse "
+"med dette tidsskrift under <a href =\"{$siteSettingsUrl}\" > Admin > "
+"Webstedsindstillinger</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Masse-e-mail-funktionen er blevet deaktiveret i forbindelse med dette "
+"tidsskrift. Aktivér denne funktion under <a href=\"{$siteSettingsUrl}\" > "
+"Admin> Webstedsindstillinger</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Tilføj, rediger eller fjern tidsskrifter fra dette site og rediger site-wide "
+"indstillinger."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Vælg typen af geografisk brugsstatistik, der kan indsamles af tidsskrifter "
+"på denne hjemmeside. Mere detaljerede geografiske statistikker kan øge din "
+"databases størrelse betydeligt og kan i nogle sjældne tilfælde underminere "
+"dine besøgendes anonymitet. Hvert tidsskrift kan konfigurere denne "
+"indstilling forskelligt, men et tidsskrift kan aldrig indsamle mere "
+"detaljerede poster end hvad der er konfigureret her. For eksempel, hvis "
+"webstedet kun understøtter land og region, kan tidsskriftet vælge land og "
+"region eller kun land. Tidsskriftet vil ikke være i stand til at spore land, "
+"region og by."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Aktiver institutionel statistik, hvis du ønsker, at tidsskrifter på denne "
+"hjemmeside skal have mulighed for at indsamle brugsstatistik per "
+"institution. Tidsskriftet skal da tilføje institutioner og deres IP-områder "
+"for at kunne bruge denne funktion. Aktivering af institutionel statistik kan "
+"øge din databasestørrelse betydeligt."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Hvorvidt SUSHI API-endepunkterne skal gøres offentligt tilgængelige for alle "
+"tidsskrifter på dette websted. Hvis du aktiverer den offentlige API, kan "
+"ethvert tidsskrift tilsidesætte denne indstilling for at gøre deres "
+"statistik privat. Men hvis du deaktiverer den offentlige API, kan udgivere "
+"ikke gøre deres egen API offentlig."

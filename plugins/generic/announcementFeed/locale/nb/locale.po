@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:54+00:00\n"
+"PO-Revision-Date: 2020-10-19 15:22+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Programutvidelse for feed av Oppslag"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Denne programutvidelsen produserer RSS/Atom feed av tidsskriftets oppslag."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Innstillinger"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Vis feed-lenker på alle tidsskriftsider."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Vis feed-lenker bare på hjemmesiden og oppslagssiden."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Vis feed-lenker bare på oppslagssiden."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Begrens feeden til"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "nyeste oppslag."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr ""
+"Vennligst oppgi et tall for hvor mange av de nyeste oppslagene som skal "
+"vises."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logo"

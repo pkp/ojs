@@ -1,0 +1,30 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-07-02 03:43+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"recommendBySimilarity/hy_AM/>\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Առաջարկեք նմանատիպ հոդվածներ"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Այս փլագինը հոդվածների ամփոփագրի էջում ավելացնում է նմանատիպ հոդվածների ցանկ։"
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Նմանատիպ հոդվածներ"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Դուք կարող եք նաև {$advancedSearchLink} այս հոդվածի համար:"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "սկսել նմանության խորացված որոնումը"

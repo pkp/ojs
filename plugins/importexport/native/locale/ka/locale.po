@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-30 07:17+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "მოდული „საკუთარი XML“"
+
+msgid "plugins.importexport.native.description"
+msgstr ""
+"აიმპორტებს და აესპორტებს სტატიებსა და გამოცემებს OJS-ის საკუთარ XML-ფორმატში."
+
+msgid "plugins.importexport.native.import"
+msgstr "იმპორტი"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "იმპორტის XML ფაილის ატვირთვა"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "საექსპორტო სტატიის არჩევა"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "სტატიების ექსპორტი"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "გამოცემების ექსპორტი"
+
+msgid "plugins.importexport.native.results"
+msgstr "შედეგების იმპორტი"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "გასაგრძელებლად, გთხოვთ ატვირთოთ ფაილი სექციაში „იმპორტი“."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "იმპორტი წარმატებით დასრულდა. მოხდა შემდეგი ელემენტების იმპორტი:"
+
+#, fuzzy
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"გამოძახება: {$scriptName} {$pluginName} [command] ...\n"
+"ბრძანებები:\n"
+"\timport [xmlFileName] [journal_path] [user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] "
+"[articleId2] ...\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"დამატებითი პარამეტრები საჭიროა მონაცემების იმპორტისათვის, XML-დოკუმენტის\n"
+"ძირეული კვანძის მიხედვით.\n"
+"\n"
+"თუ ძირეული კვანძი არის <article> ან <articles>, საჭირო იქნება დამატებითი "
+"პარამეტრები.\n"
+"მხარდაჭერილია შემდეგი ფორმატები:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "უცნობი განყოფილება {$param}"
+
+#, fuzzy
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "მითითებული მომხმარებელი, „{$userName}“, არ არსებობს."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"განყოფილებების „{$section1Title}“ და „{$section2Title}“ გამოცემაში "
+"„{$issueTitle}“ ემთხვევა ჟურნალის სხვადასხვა არსებულ განყოფილებებს."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"განყოფილების „{$sectionTitle}“ გამოცემაში „{$sectionTitle}“  ემთხვევა "
+"ჟურნალის არსებულ განყოფილებას, მაგრამ ამ განყოფილების სხვა დასახელება არ "
+"ემთხვევა არსებული განყოფილების სხვა დასახელებას."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"განყოფილებების „{$section1Abbrev}“ და „{$section2Abbrev}“ გამოცემაში "
+"„{$issueTitle}“ ემთხვევა ჟურნალის სხვადასხვა არსებულ განყოფილებებს."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"განყოფილების „{$sectionAbbrev}“ გამოცემაში „{$issueTitle}“ ემთხვევა ჟურნალის "
+"არსებულ განყოფილებას, მაგრამ ამ განყოფილების სხვა აბრევიატურა არ ემთხვევა "
+"არსებული განყოფილების სხვა აბრევიატურას."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"არცერთი, ან ერთი გამოცემა ემთხვევა გამოცემის იდენტიფიკატორს "
+"„{$issueIdentification}“."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"არსებული გამოცემა იდენტიფიკატორით {$issueId} ემთხვევა "
+"„{$issueIdentification}“ გამოცემის იდენტიფიკაციას. ეს გამოცემა არ შეიცვლება, "
+"მაგრამ სტატიები დაემატება."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr ""
+"გამოცემის იდენტიფიკაციის ელემენტი არ არის მოწოდებული სტატიისათვის "
+"„{$articleTitle}“."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"სტატია „{$articleTitle}“ არის გამოცემაში, მაგრამ მისთვის არ არის მითითებული "
+"გამოქვეყნების თარიღი."

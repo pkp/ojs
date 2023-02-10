@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:53+00:00\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
+"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/da/>\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Meddelelses-feed-plugin"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Dette plugin genererer RSS/Atom web syndication feeds i forbindelse med "
+"tidsskriftsmeddelelser."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Indstillinger"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Vis feed-links på alle sider i tidsskriftet."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Vis kun feed-links på startside og meddelelsessiden."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Vis kun feed-links på meddelelsessiden."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Begræns feed til"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "seneste meddelelser."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Indtast et positivt heltal for seneste meddelelser."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom-logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1-logo"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2-logo"

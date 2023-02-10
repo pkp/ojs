@@ -1,0 +1,19 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-02-10 14:07+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"htmlArticleGalley/is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.htmlArticleGalley.displayName"
+msgstr "Galley fyrir HTML greinar"
+
+msgid "plugins.generic.htmlArticleGalley.description"
+msgstr "Þessi viðbót styður við myndsetingu á galley fyrir HTML greinar."

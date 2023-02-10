@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-23 23:04+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"information/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.information.displayName"
+msgstr "Bloque de información"
+
+msgid "plugins.block.information.description"
+msgstr ""
+"Este complemento proporciona un enlace de Información na barra lateral."
+
+msgid "plugins.block.information.link"
+msgstr "Información"

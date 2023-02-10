@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-13 18:05+0000\n"
+"Last-Translator: Michael Bauer <fios@igaidhlig.net>\n"
+"Language-Team: Gaelic <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/gd_GB/>\n"
+"Language: gd_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Bloca an fho-sgrìobhaidh"
+
+msgid "plugins.block.subscription.description"
+msgstr ""
+"Tha am plugan seo a’ cur fiosrachadh mun fho-sgrìobhadh ri làimh air a’ bhàr-"
+"taobh."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Fo-sgrìobhadh"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Falbhaidh an ùine air"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "An t-inntrigeadh ga sholarachadh le: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Air inntrigeadh o: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Fo-sgrìobhaidhean"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr ""
+"Clàraich a-steach a dh’fhaighinn cothrom air goireasan nach fhaighear ach le "
+"fo-sgrìobhadh."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Tha feum air fo-sgrìobhadh mus fhaighear cothrom air cuid a ghoireasan."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Barrachd fiosrachaidh"

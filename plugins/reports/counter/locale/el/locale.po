@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2020-11-17 18:56+0000\n"
+"Last-Translator: Evangelos Papakirykou <vpapakir@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/el_GR/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Το πρόσθετο COUNTER επιτρέπει την καταγραφή και την σύνταξη αναφορών "
+"συμβατών με το <a href=\"http://www.projectcounter.org/\">πρότυπο COUNTER</"
+"a>. Αυτές οι αναφορές από μόνες τους δεν επαρκούν για να είναι το περιοδικό "
+"συμβατό με το πρότυπο COUNTER. Για πλήρη συμβατότητα, ελέγξτε τις απαιτήσεις "
+"στον ιστότοπο του Project COUNTER."
+
+msgid "plugins.reports.counter"
+msgstr "Στατιστικά COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "Έκδοση COUNTER"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Οι παράμετροι της αναφοράς δεν ήταν έγκυρες."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Το αίτημα δημιουργίας αναφοράς δεν είναι έγκυρο."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Δεν βρέθηκαν αποτελέσματα για αυτήν την αναφορά."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Δεν ήταν δυνατή η μορφοποίηση των αποτελεσμάτων ως XML."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Αναφορά COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER JR1 (R3): Αιτήματα για Πλήρες Κείμενο Άρθρων κατά Μήνα και Περιοδικό"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Πελάτες"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Αναφορά άρθρου 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Αναφορά περιοδικού 1"

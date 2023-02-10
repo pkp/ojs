@@ -1,0 +1,235 @@
+# TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-12-11 08:32+0000\n"
+"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"ja_JP/>\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "ホストされているジャーナル"
+
+msgid "admin.settings.redirect"
+msgstr "ジャーナルリダイレクト"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"メインサイトへのリクエストを以下のジャーナルに転送されます。単一のジャーナル"
+"がホストされている場合に有効です。"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"この言語を無効にしてよろしいですか？これは、現在その言語を使用しているホスト"
+"されたジャーナルに影響を与える可能性があります。"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"この言語は、サイトおよびホストされているジャーナルのデフォルト言語となりま"
+"す。"
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"サイトでサポートするすべての言語を選択します。選択された言語は、サイトでホス"
+"トされているすべてのジャーナルで使用可能となり、各サイトページに表示される言"
+"語選択メニューにも表示されます（ジャーナル固有のページでは上書きできます）。"
+"複数のロケールが選択されていない場合、言語選択メニューは表示されず、拡張言語"
+"設定はジャーナルで利用できません。"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "マークの付いた言語は不完全な場合があります。"
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"本当にこの言語をアンインストールしますか？ この言語を使用しているホストした"
+"ジャーナルに影響を与える可能性があります。"
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"このシステムにサポートをインストールする追加の言語を選択します。言語は、ホス"
+"トされたジャーナルを使用する前にインストールする必要があります。新しい言語の"
+"サポートを追加するには、OJS のドキュメントを参照してください。"
+
+msgid "admin.systemVersion"
+msgstr "OJSバージョン"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS設定"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt>のOJS設定です。"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"あなたは自動的にこのジャーナルの管理者として登録されます。新しいジャーナルを"
+"作成すると、設定ウィザードのリダイレクトを経て、ジャーナルの初期設定が完了し"
+"ます。"
+
+msgid "admin.journals.journalSettings"
+msgstr "ジャーナル設定"
+
+msgid "admin.journals.noneCreated"
+msgstr "ジャーナルはまだ作成されていません。"
+
+msgid "admin.contexts.create"
+msgstr "ジャーナル作成"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"ジャーナルを識別する短い単語または頭字語を半角英数字で入力してください。"
+"ジャーナルのURLは{$sampleUrl}となります。"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "タイトルは必須です。"
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "パスは必須です。"
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"パスに使用できる文字列は半角英数字・ハイフン（-）・アンダーバー（_）のみで"
+"す。先頭および末尾文字は必ず半角英数字を使用してください。"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "入力したパスは既に使用されています。"
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"主な言語は、ジャーナルでサポートされている言語のいずれかでなければなりませ"
+"ん。"
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "このジャーナルをサイト上で公開する"
+
+msgid "admin.contexts.contextDescription"
+msgstr "ジャーナルの説明"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "既存のジャーナル・パスまたは作成するパス (例えば \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "購読情報のインポート"
+
+msgid "admin.journals.transcode"
+msgstr "記事のメタデータを ISO8859-1 から変換します"
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 の URL から OJS 2 の URL にマッピングするコードの生成"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "インポートパスは必須です。"
+
+msgid "admin.journals.importErrors"
+msgstr "インポートに失敗しました"
+
+msgid "admin.mergeUsers"
+msgstr "ユーザーをマージ"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "ユーザーをマージ"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"前のユーザーの著者権限や査読者アサインなどを割り当てるユーザーを選択します。"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"別のユーザーアカウントに統合するユーザー（複数可）を選択します（例：誰かが2つ"
+"のユーザーアカウントを持っている場合など）。最初に選択したアカウントは削除さ"
+"れ、投稿や査読割り当てなどはすべて2番目のアカウントに帰属します。"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "全ての登録ユーザー"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"選択された{$oldAccountCount}アカウントを、ユーザー名\"{$newUsername}\"のアカ"
+"ウントに統合してよろしいですか？選択した{$oldAccountCount}アカウントは、その"
+"後存在しなくなります。この操作は元に戻すことはできません。"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "登録ユーザーがいない。"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "購読期間終了のお知らせ"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "オープンアクセスのお知らせ"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "査読リマインダー"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr ""
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"一括メールの送信を許可するホストされたジャーナルを選択します。この機能を有効"
+"にすると、ジャーナル管理者はジャーナルに登録されているすべてのユーザーにメー"
+"ルを送信することができます。<br><br>この機能を悪用して迷惑メールを送信する"
+"と、一部の国ではスパム防止法に違反し、お客様のサーバーのメールがスパムとして"
+"ブロックされる可能性があります。この機能を有効にする前に技術的なアドバイスを"
+"求め、適切に使用するためにジャーナルマネージャーと相談することを検討してくだ"
+"さい。<br><br>この機能を制限する別の方法として、<a href="
+"\"{$hostedContextsUrl}\">ホストジャーナル</a>のリストにある設定ウィザードか"
+"ら、ジャーナルごとに有効にすることができます。"
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"ジャーナル管理者は、以下で選択した役割に一括してメールを送信することができま"
+"せん。本設定は、電子メール通知機能の悪用を制限するために使用します。例えば、"
+"読者や著者、電子メールの受信に同意していない大規模なユーザー・グループなど、"
+"一括メールを無効にした方が安全な場合があります。<br><br>このジャーナルの一括"
+"メール機能は、<a href=\"{$siteSettingsUrl}\">管理者 >サイト設定</a>で完全に無"
+"効にすることができます。"
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"このジャーナルでは一括メール機能が無効になっています。<a href="
+"\"{$siteSettingsUrl}\"> 管理者 > サイト設定</a>でこの機能を有効にしてくださ"
+"い。"
+
+msgid "admin.siteManagement.description"
+msgstr ""
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+
+#~ msgid "admin.languages.installLocale"
+#~ msgstr "言語のインストール"
+
+#~ msgid "admin.languages.availableLocales"
+#~ msgstr "有効な言語"
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "{$name}がが正常に変更されました。"
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name}が正常に作成されました。"
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "サイト情報が正常に変更されました。"
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "サイト設定が正常に変更されました。"
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "外観設定が正常に変更されました。"

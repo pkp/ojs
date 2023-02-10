@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:14+00:00\n"
+"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/es_ES/>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Informe de suscripciones"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr "Este módulo implementa un informe CSV que contiene una lista de suscripciones y su información."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Dirección postal de la institución"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "Rangos de IP"

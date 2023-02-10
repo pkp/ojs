@@ -1,0 +1,29 @@
+# Muhd Muaz <muazhero61@yahoo.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-19 21:41+0000\n"
+"Last-Translator: Muhd Muaz <muazhero61@yahoo.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/gateways-"
+"resolver/ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.gateways.resolver.displayName"
+msgstr "Plugin Penyelesaian"
+
+msgid "plugins.gateways.resolver.description"
+msgstr ""
+"Plugin ini menyelesaikan terbitan dan artikel berdasarkan petikan maklumat ."
+
+msgid "plugins.gateways.resolver.errors.errorMessage"
+msgstr ""
+"Tidak dapat menyelesaikan satu entiti menggunakan petikan maklumat yang "
+"ditentukan. Pastikan petikan maklumat adalah lengkap dan merujuk kepada "
+"entiti dalam penggunaan OJS ini."
+
+msgid "plugins.gateways.resolver.exportHoldings"
+msgstr "Eksport Pegangan"

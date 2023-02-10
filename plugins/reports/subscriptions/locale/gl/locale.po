@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-06-18 10:03+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"subscriptions/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Informe de subscricións"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Este complemento implementa un informe CSV que contén unha lista de "
+"subscricións e a súa información."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Enderezo postal da institución"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "Rangos de IP"

@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:50+00:00\n"
+"PO-Revision-Date: 2020-04-21 11:52+0000\n"
+"Last-Translator: Sönmez Çelik <snmzclk@gmail.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/tr/>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Abone Bloğu"
+
+msgid "plugins.block.subscription.description"
+msgstr "Bu eklenti yan sütuna abone bilgileri ekler."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Abone"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Bitiş"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Erişimi sağlayan kurum: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Erişim adresi: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Aboneler"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Yalnızca aboneler için olan içeriği görüntüleyebilmek için giriş yapın."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Bazı kaynaklara erişm için bir abonelik gereklidir."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Daha Fazla"

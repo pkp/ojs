@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-05 18:02+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"recommendByAuthor/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "მოდული „ავტორის რეკომენდებული სტატიები“"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"სვამს ამავე ავტორის სტატიების სიას მიმდინარე სტატიის ანოტაციის გვერდზე."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "ამ ავტორ(ებ)ის ყველაზე წაკითხვადი სტატიები"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"თვისება: ეს მოდული მოითხოვს, რომ ჩართული იყოს სტატისტიკის/ანგარიშგების "
+"თუნდაც ერთი მოდული. თუ სტატისტიკის თქვენი მოდულები ერთზე მეტ მეტრიკას "
+"აბრუნებენ, გთხოვთ აირჩიოთ მთავარი მეტრიკა საიტის მორგების გვერდზე."

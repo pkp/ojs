@@ -1,0 +1,244 @@
+# Pavel Pisklakov <ppv1979@mail.ru>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
+"PO-Revision-Date: 2022-11-04 09:02+0000\n"
+"Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/admin/ru_RU/"
+">\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Журналы на сайте"
+
+msgid "admin.settings.redirect"
+msgstr "Перенаправление журнала"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Основной страницей сайта станет главная страница этого журнала. Это полезно, "
+"например, если на сайте размещается только один журнал."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Вы уверены, что хотите отключить этот язык? Это может повлиять на все "
+"размещенные журналы, которые сейчас используют его."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Это будет язык по умолчанию для сайта и всех размещенных на нем журналов."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Выберите все языки для поддержки на сайте. Выбранные языки будут доступны "
+"для всех журналов, расположенных на этом сайте, а также появятся в меню "
+"выбора языков на каждой странице сайта (эта настройка может быть изменена на "
+"страницах конкретного журнала). Если выбран только один язык, меню "
+"переключения языков не будет показываться, дополнительные языковые настройки "
+"для журналов также не будут доступны."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Поддержка отмеченных языков может быть неполной."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Вы уверены, что хотите удалить этот язык? Это может повлиять на все "
+"размещенные журналы, которые сейчас используют его."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Выберите дополнительные языки для установки их поддержки в этой системе. "
+"Языки должны быть установлены до того, как их можно будет использовать в "
+"размещенных журналах. Смотрите в документации OJS информацию о том, как "
+"добавить поддержку новых языков."
+
+msgid "admin.systemVersion"
+msgstr "Версия OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Конфигурация OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Параметры конфигурации OJS из <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Вы будете автоматически записаны управляющим этого журнала. После создания "
+"нового журнала вы будете перенаправлены на мастер настройки журнала для "
+"завершения первоначальной настройки журнала."
+
+msgid "admin.journals.journalSettings"
+msgstr "Настройки журнала"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ни один журнал не был создан."
+
+msgid "admin.contexts.create"
+msgstr "Создать журнал"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Это должно быть одно короткое слово или аббревиатура, которая идентифицирует "
+"журнал. URL-адрес журнала будет {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Название обязательно."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Путь обязателен."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Путь может содержать только буквы, цифры и символы _ и -. Путь должен "
+"начинаться и заканчиваться буквой или цифрой."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Указанный Вами путь уже используется другим журналом."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Основной язык должен быть одним из языков, поддерживаемых журналом."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Включить показ этого журнала для всех на сайте"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Описание журнала"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Существующий путь журнала или новый путь для создания (например, «ojs»)."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Импортировать подписки"
+
+msgid "admin.journals.transcode"
+msgstr "Перекодировать метаданные статей из ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Генерировать код для переназначения адресов OJS 1 в адреса OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Путь импорта обязателен."
+
+msgid "admin.journals.importErrors"
+msgstr "Импортирование завершилось неудачей"
+
+msgid "admin.mergeUsers"
+msgstr "Объединение пользователей"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Объединить"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Выберите пользователя, которому будут переданы авторство предыдущего "
+"пользователя, его редакционные задания и т. д."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Выберите пользователя (или нескольких) для слияния в другую учетную запись "
+"пользователя (например, когда кто-то завел себе две учетные записи). Учетная "
+"запись (записи), выбранная первой, будет удалена, а все связанные с ней "
+"статьи, редакционные задания и т. д. будут присоединены к второй учетной "
+"записи."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Все записанные пользователи"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Вы уверены, что хотите объединить выбранные {$oldAccountCount} учетных "
+"записей в учетную запись с именем пользователя «{$newUsername}»? Выбранные "
+"{$oldAccountCount} учетные записи после этого перестанут существовать. Это "
+"действие нельзя отменить."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Нет записанных пользователей."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Напоминание об окончании подписки"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Уведомление об открытом доступе"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Напоминание рецензенту"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "ID выпуска не является целым числом."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "ID гранки выпуска не является целым числом."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "ID выпуска не соответствует связанному с ним ID."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Выберите журналы, которые нужно разрешить массовую рассылку электронной "
+"почты. Когда эта функция включена, менеджер журнала сможет отправлять "
+"электронные письма всем пользователям, зарегистрированным в журнале."
+"<br><br>Использование этой функции для рассылки нежелательной почты в "
+"некоторых странах может попадать под нарушение законов о борьбе со спамом, и "
+"письма вашего сервера могут быть заблокированы как спам. Перед включением "
+"этой функции проконсультируйтесь с менеджерами журналов, чтобы убедиться, "
+"что она используется должным образом.<br><br>Другие ограничения этой функции "
+"могут быть включены для каждого журнала с помощью мастера настроек в списке "
+"<a href=\"{$hostedContextsUrl}\">«Журналы на сайте»</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Менеджер журнала не сможет делать массовую рассылку по электронной почте "
+"любой из ролей, выбранных ниже. Используйте эту настройку, чтобы ограничить "
+"злоупотребление функцией уведомления по электронной почте. Например, может "
+"быть безопаснее отключить массовую рассылку писем читателям, авторам или "
+"другим большим группам пользователей, которые не давали согласия на "
+"получение таких писем.<br><br>Функция массовой рассылки писем может быть "
+"полностью отключена для этого журнала в разделе <a href="
+"\"{$siteSettingsUrl}\">Администрирование > Настройки сайта</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Для этого журнала отключена функция массовой рассылки электронной почты. "
+"Включите эту возможность в разделе <a href="
+"\"{$siteSettingsUrl}\">Администрирование > Настройки сайта</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Добавление, редактирование и удаление журналов с этого сайта, а также "
+"управление настройками всего сайта."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Выберите тип статистики по географии пользователей, которую могут собирать "
+"журналы на этом сайте. Более подробная географическая статистика может "
+"значительно увеличить размер базы данных и, в редких случаях, может нарушить "
+"анонимность ваших посетителей. Каждый журнал может настроить этот параметр "
+"отдельно, но журнал никогда не может собирать более подробные записи, чем "
+"будет настроено здесь. Например, если сайт поддерживает только страну и "
+"регион, журнал может выбрать страну и регион или только страну. Журнал не "
+"сможет отслеживать страну, регион и город."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Включите институциональную статистику, если Вы хотите, чтобы журналы на этом "
+"сайте могли собирать статистику использования по учреждениям. Журналы должны "
+"будут добавить учреждение и диапазоны его IP-адресов, чтобы использовать эту "
+"функцию. Включение институциональной статистики может значительно увеличить "
+"размер базы данных."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Делать ли конечные точки SUSHI API общедоступными для всех журналов на этом "
+"сайте. Если вы включите публичный API, каждый журнал сможет переопределить "
+"эту настройку и сделать свою статистику приватной. Однако, если вы отключите "
+"публичный API, журналы не смогут сделать свой собственный API публичным."

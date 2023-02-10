@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-07 10:53+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "მოდული „ექსპორტი DOAJ-ში“"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "ახდენს ჟურნალის ექსპორტს DOAJ-ში."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "DOAJ-თან დაკავშირება ჟურნალის დასამატებლად"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"თუ გსურთ სტატიის რეგისტრაცია უშუალოდ OJS-იდან, გთხოვთ შეიტანეთ API DOAJ "
+"გასაღები. თუ არ გაქვთ ეს გასაღები, მაინც შეძლებთ სტატიის ექსპორტს DOAJ XML-"
+"ში, მაგრამ ვერ შეძლებთ სტატიის რეგისტრაციას DOAJ-ში უშუალოდ OJS-იდან."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API გასაღები"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "API გასაღებს ნახავთ DOAJ-ის მომხმარებლის გვერდზე."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS ავტომატურად განათავსებს სტატიას DOAJ-ში. გთხოვთ მიაქციოთ ყურადღება, რომ "
+"ამას შესაძლოა დასჭირდეს გარკვეული დრო დამუშავებაზე (მაგალითად, თქვენი cron-"
+"ის პარამეტრებზე). თქვენ შეგიძლიათ შეამოწმოთ ყველა დაურეგისტრირებელი სტატია."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"ტექსტური API DOAJ-ის გამოყენება (ტესტირების გარემო) რეგისტრაციისათვის. "
+"გთხოვთ, არ დაგავიწყდეთ ამ პარამეტრის გათიშვა რეალური მუშაობისას."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ-ის ავტომატური რეგისტრაციის ამოცანა"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "განტავსება ვერ მოხერხდა! API DOAJ-მა დააბრუნა შეცდომა: „{$param}“."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"გამოძახება:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"

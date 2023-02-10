@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:11+00:00\n"
+"PO-Revision-Date: 2020-04-18 20:21+0000\n"
+"Last-Translator: Fylypovych Georgii <red.ukr@gmail.com>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/uk/>\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"Плагін COUNTER дозволяє запис та створення звітів щодо активності на сайті "
+"за стандартом <a href=\"http://www.projectcounter.org/about.html\""
+">COUNTER</a>. Проте наявність цих звітів не забезпечить відповідність "
+"журналу вимогам COUNTER. Щоб забезпечити відповідність вимогам COUNTER, "
+"перегляньте вимоги на веб-сайті проекту COUNTER."
+
+msgid "plugins.reports.counter"
+msgstr "Статистика COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "Версія COUNTER"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Неправильні параметри звіту."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "Неправильний запит звіту."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "Не знайдено результати для цього звіту."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Не можливо сформувати результати в XML."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Звіт COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "COUNTER Журнальний звіт 1 (R3): Запити повних текстів статей за місяцями та журналами"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Усі клієнти"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Звіт за статтями 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Звіт за журналами 1"

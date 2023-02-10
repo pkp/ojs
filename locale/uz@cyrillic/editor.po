@@ -1,0 +1,426 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "editor.home"
+msgstr ""
+
+msgid "editor.submissionsAndPublishing"
+msgstr ""
+
+msgid "editor.submissionQueue"
+msgstr ""
+
+msgid "editor.submissionArchive"
+msgstr ""
+
+msgid "editor.publishing"
+msgstr ""
+
+msgid "editor.publishedIssues"
+msgstr ""
+
+msgid "editor.allSections"
+msgstr ""
+
+msgid "editor.allEditors"
+msgstr ""
+
+msgid "editor.me"
+msgstr ""
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr ""
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr ""
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+
+msgid "editor.notifyUsers"
+msgstr ""
+
+msgid "editor.notifyUsers.allReaders"
+msgstr ""
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr ""
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr ""
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr ""
+
+msgid "editor.notifyUsers.inProgress"
+msgstr ""
+
+msgid "editor.usersNotified"
+msgstr ""
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+
+msgid "editor.notifyUsers.includeToc"
+msgstr ""
+
+msgid "editor.editorAdministration"
+msgstr ""
+
+msgid "editor.issues.createIssue"
+msgstr ""
+
+msgid "editor.issues.editIssue"
+msgstr ""
+
+msgid "editor.issues.currentIssue"
+msgstr ""
+
+msgid "editor.issues.numArticles"
+msgstr ""
+
+msgid "editor.issues.noArticles"
+msgstr ""
+
+msgid "editor.issues.confirmDelete"
+msgstr ""
+
+msgid "editor.issues.published"
+msgstr ""
+
+msgid "editor.issues.unpublished"
+msgstr ""
+
+msgid "editor.issues.datePublished"
+msgstr ""
+
+msgid "editor.issues.volumeRequired"
+msgstr ""
+
+msgid "editor.issues.numberRequired"
+msgstr ""
+
+msgid "editor.issues.yearRequired"
+msgstr ""
+
+msgid "editor.issues.titleRequired"
+msgstr ""
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+
+msgid "editor.issues.issueIdentification"
+msgstr ""
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr ""
+
+msgid "editor.issues.description"
+msgstr ""
+
+msgid "editor.issues.accessStatus"
+msgstr ""
+
+msgid "editor.issues.accessDate"
+msgstr ""
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr ""
+
+msgid "editor.issues.coverPage"
+msgstr ""
+
+msgid "editor.issues.coverPageInstructions"
+msgstr ""
+
+msgid "editor.issues.uploaded"
+msgstr ""
+
+msgid "editor.issues.remove"
+msgstr ""
+
+msgid "editor.issues.proofed"
+msgstr ""
+
+msgid "editor.issues.removeCoverPage"
+msgstr ""
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+
+msgid "editor.issues.styleFile"
+msgstr ""
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+
+msgid "editor.issues.removeStyleFile"
+msgstr ""
+
+msgid "editor.issues.coverPageCaption"
+msgstr ""
+
+msgid "editor.issues.showCoverPage"
+msgstr ""
+
+msgid "editor.issues.coverPageDisplay"
+msgstr ""
+
+msgid "editor.issues.openAccess"
+msgstr ""
+
+msgid "editor.issues.subscription"
+msgstr ""
+
+msgid "editor.issues.identification"
+msgstr ""
+
+msgid "editor.issues.access"
+msgstr ""
+
+msgid "editor.issues.cover"
+msgstr ""
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+
+msgid "editor.issues.issueData"
+msgstr ""
+
+msgid "editor.issues.saveChanges"
+msgstr ""
+
+msgid "editor.issues.default"
+msgstr ""
+
+msgid "editor.issues.order"
+msgstr ""
+
+msgid "editor.issues.publicId"
+msgstr ""
+
+msgid "editor.issues.publishIssue"
+msgstr ""
+
+msgid "editor.issues.unpublishIssue"
+msgstr ""
+
+msgid "editor.issues.previewIssue"
+msgstr ""
+
+msgid "editor.issues.preview"
+msgstr ""
+
+msgid "editor.issues.confirmPublish"
+msgstr ""
+
+msgid "editor.issues.confirmUnpublish"
+msgstr ""
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr ""
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr ""
+
+msgid "editor.issues.noLiveIssues"
+msgstr ""
+
+msgid "editor.issues.open"
+msgstr ""
+
+msgid "editor.issues.pages"
+msgstr ""
+
+msgid "editor.issues.galleys"
+msgstr ""
+
+msgid "editor.issues.galley"
+msgstr ""
+
+msgid "editor.issues.viewingGalley"
+msgstr ""
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr ""
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr ""
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr ""
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr ""
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr ""
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr ""
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr ""
+
+msgid "editor.issues.identifiers"
+msgstr ""
+
+msgid "editor.navigation.futureIssues"
+msgstr ""
+
+msgid "grid.action.addGalley"
+msgstr ""
+
+msgid "grid.action.publish"
+msgstr ""
+
+msgid "grid.action.addIssue"
+msgstr ""
+
+msgid "grid.action.viewIssue"
+msgstr ""
+
+msgid "grid.action.previewIssue"
+msgstr ""
+
+msgid "grid.action.addIssueGalley"
+msgstr ""
+
+msgid "grid.action.setCurrentIssue"
+msgstr ""
+
+msgid "editor.navigation.issueArchive"
+msgstr ""
+
+msgid "editor.article.designateReviewVersion"
+msgstr ""
+
+msgid "editor.article.decision"
+msgstr ""
+
+msgid "editor.submissions.showBy"
+msgstr ""
+
+msgid "editor.submissions.submitMMDD"
+msgstr ""
+
+msgid "editor.submissions.activeAssignments"
+msgstr ""
+
+msgid "editor.submissions.invite"
+msgstr ""
+
+msgid "editor.submissions.accept"
+msgstr ""
+
+msgid "editor.submissions.noSubmissions"
+msgstr ""
+
+msgid "editor.submissions.lastAssigned"
+msgstr ""
+
+msgid "editor.submissions.averageTime"
+msgstr ""
+
+msgid "editor.submissions.lastCompleted"
+msgstr ""
+
+msgid "editor.submissions.assignedTo"
+msgstr ""
+
+msgid "issues.submissions.issueIds"
+msgstr ""
+
+msgid "editor.submissions.inSection"
+msgstr ""
+
+msgid "editor.article.showPublicationVersion"
+msgstr ""
+
+msgid "editor.article.publishVersion"
+msgstr ""
+
+msgid "editor.article.viewMetadata"
+msgstr ""
+
+msgid "editor.article.editMetadata"
+msgstr ""
+
+msgid "editor.article.scheduleForPublication"
+msgstr ""
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr ""
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+
+msgid "editor.article.payment.requestPayment"
+msgstr ""
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+
+msgid "grid.action.removeArticle"
+msgstr ""
+
+msgid "editor.article.remove"
+msgstr ""
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+
+msgid "editor.issues.invalidAccessDate"
+msgstr ""
+
+msgid "editor.issues.editIssueGalley"
+msgstr ""
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr ""
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+
+msgid "editor.article.coverImage"
+msgstr ""

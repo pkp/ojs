@@ -1,0 +1,22 @@
+# Madi <nmdbzk@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-07-12 13:40+0000\n"
+"Last-Translator: Madi <nmdbzk@gmail.com>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"information/kk_KZ/>\n"
+"Language: kk_KZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.information.displayName"
+msgstr "«Ақпарат» Блогы"
+
+msgid "plugins.block.information.description"
+msgstr "Сайт бөліміндегі ақпаратқа сілтеме енгізеді."
+
+msgid "plugins.block.information.link"
+msgstr "Ақпарат"

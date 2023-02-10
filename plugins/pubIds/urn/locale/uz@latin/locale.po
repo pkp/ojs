@@ -1,0 +1,253 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-24 13:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Bu plagin OJSdagi muammolar, maqolalar va galeylarga yagona manba nomlarini "
+"tayinlash imkonini beradi."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Iltimos, URN plaginini OJSda URNlarni boshqarish va ulardan foydalanish "
+"imkoniyatiga ega qilib sozlang:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Jurnal tarkibi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Iltimos, URNlar tayinlanishi kerak bo'lgan ob'ektlarni tanlang."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Iltimos, yagona resurs nomlari (URN) tayinlanadigan nashr ob'ektlarini "
+"tanlang:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Muammolar"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Maqolalar"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Galleylar"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN prefiksi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"URN prefiksi-bu URNning hech qachon o'zgarmaydigan qismi (masalan, \"urn: "
+"nbn: de: 0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+"URN prefiksi namunasi \"urn:\" & lt; NID & gt; \":\" & lt; NSS & gt; "
+"shaklida bo'lishi kerak."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN qo'shimchasi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"URN qo'shimchasi har qanday shaklga ega bo'lishi mumkin, lekin bir xil URN "
+"prefiksi tayinlangan barcha nashriyot ob'ektlari orasida yagona bo'lishi "
+"kerak:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"URN qo'shimchalarini yaratish uchun quyida ko'rsatilgan naqshdan "
+"foydalaning. Jurnal bosh harflari uchun %j, jild soni uchun %v, nashr raqami "
+"uchun %i, yil uchun %Y, OJS maqola identifikatori uchun %a, OJS gadjet "
+"identifikatori uchun %g, OJS fayl identifikatori uchun %f dan foydalaning. , "
+"sahifa raqami uchun %p va \"Maxsus identifikator\" uchun %x."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+"Masalan, vol%viss%ipp%p URN \"vol3iss2pp230\" qo'shimchasini yaratishi "
+"mumkin."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "masalalar uchun"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "maqolalar uchun"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "oshxonalar uchun"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Muammolar uchun URN qo'shimchasini kiriting."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Maqolalar uchun URN qo'shimchasini kiriting."
+
+msgid ""
+"plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Galereyalar uchun URN qo'shimchasini kiriting."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Standart naqshlardan foydalaning."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i masalalar uchun <br />%j.v%vi%i.%a maqolalar uchun <br />%j.v%vi%i."
+"%a.g%g."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Har bir e'lon qilingan element uchun individual URN qo'shimchasini kiriting. "
+"Har bir elementning metadata sahifasida qo'shimcha URN kiritish maydonini "
+"topasiz."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Tekshirish raqami"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Chek raqami avtomatik ravishda hisoblab chiqiladi va oxirida URNning oxirgi "
+"raqami sifatida qo'shiladi."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Ismlar maydoni"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Tanlang"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Odatda ro'yxatdan o'tish uchun zarur bo'lgan doimiy identifikator nomlari "
+"maydoni (masalan, Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Ruxsat beruvchi URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(masalan, http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Iltimos, hal qiluvchi URL manzilini kiriting."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "URN -larni qayta tayinlash"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Agar siz URN konfiguratsiyasini o'zgartirsangiz, allaqachon tayinlangan "
+"URNlar ta'sir qilmaydi. URN konfiguratsiyasi saqlanganidan so'ng, ushbu "
+"tugma yordamida barcha mavjud URN -lar o'chiriladi, shunda yangi sozlamalar "
+"mavjud ob'ektlar bilan kuchga kiradi."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Haqiqatan ham barcha mavjud URN -larni o'chirmoqchimisiz?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "nashr"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "maqola"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "oshxona"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN tayinlanmaydi, chunki maxsus qo'shimchasi yo'q."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN tayinlanmaydi, chunki unda hal qilinmagan naqsh mavjud."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Siz ko'rgan narsa - URN -ning oldindan ko'rilishi. URNni belgilash uchun "
+"katakchani belgilang va shaklni saqlang."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN bu {$ pubObjectType} ga tayinlangan."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Berilgan URN qo'shimchasi boshqa nashr qilingan element uchun allaqachon "
+"ishlatilgan. Iltimos, har bir element uchun yagona URN qo'shimchasini "
+"kiriting."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Ochiq"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Haqiqatan ham mavjud URNni o'chirmoqchimisiz?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Muammo ob'ektlarining URN -larini tozalash"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Haqiqatan ham mavjud URN ob'ektlarini o'chirib tashlamoqchimisiz?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Ushbu son uchun rejalashtirilgan barcha ob'ektlar (maqolalar va galereyalar) "
+"ning URN -larini tozalash uchun quyidagi variantdan foydalaning."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Tekshirish raqamini qo'shing"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "{$ PubIb} URN -ni bu {$ pubObjectType} ga belgilang"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN tayinlanmaydi, chunki maxsus qo'shimchasi yo'q."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$ pubId} tayinlanmaydi, chunki unda hal qilinmagan naqsh mavjud."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$ pubId} tayinlandi."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Chek raqami yo'q."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN {$ prefiks} bilan boshlanishi kerak."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Belgilang"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr "Bu nashr muammoga qo'yilmaguncha URN yaratib bo'lmaydi."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Siz URN yaratolmaysiz, chunki URN naqshining bir yoki bir nechta qismida "
+"ma'lumotlar yo'q. Nashrni muammoga qo'yishingiz, nashriyot identifikatorini "
+"o'rnatishingiz yoki sahifa raqamlarini kiritishingiz kerak bo'lishi mumkin."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN {$ urnPrefix} bilan boshlanishi kerak."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Bu nashrning URN qiymati {$ urn} bo'ladi."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN bu nashrga tayinlanmagan."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Oshxona: {$ galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Element"

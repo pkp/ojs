@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:49+00:00\n"
+"PO-Revision-Date: 2021-04-03 20:34+0000\n"
+"Last-Translator: Jašo Vrdoljak <jasovrdoljak@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"subscription/hr/>\n"
+"Language: hr_HR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Pretplatnički blok"
+
+msgid "plugins.block.subscription.description"
+msgstr "Ovaj dodatak u rubni izbornik dodaje informacije o pretplati."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Pretplata"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Ističe"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Osnova pristupa: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Sa IP adrese: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Pretplate"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Prijavite se kako bi pristupili resursima samo za pretplatnike."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Za pristup nekim resursima potrebna je pretplata."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Saznajte više"
+
+#~ msgid "plugins.block.subscription.providedByInstitution"
+#~ msgstr "Pretplata vaše institucije"

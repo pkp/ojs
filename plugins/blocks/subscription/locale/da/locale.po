@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:48+00:00\n"
+"PO-Revision-Date: 2020-02-08 03:27+0000\n"
+"Last-Translator: Niels Erik Frederiksen <nef@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/da/>\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Abonnementsblok"
+
+msgid "plugins.block.subscription.description"
+msgstr "Denne plugin indsætter information om abonnement i sidemenuen."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Abonnement"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Udløber"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Adgang givet af: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Kommer fra IP: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Abonnementer"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Login for at få adgang til ressourcer, der kun er for abonnenter."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Til nogle af ressourcerne kræves der abonnement for at få adgang."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Læs mere"

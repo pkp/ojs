@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2020-06-18 16:39+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/es_ES/>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"El módulo COUNTER permite generar informes sobre la actividad de la revista "
+"mediante el <a href=\"http://www.projectcounter.org\">estándar COUNTER</a>. "
+"Estos informes por sí solos no hacen que la revista sea conforme a COUNTER. "
+"Para ofrecer conformidad con COUNTER, revise los requisitos en el sitio web "
+"de Project COUNTER."
+
+msgid "plugins.reports.counter"
+msgstr "Informe COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "Versión COUNTER"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "Los parámetros del informe no eran válidos."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "La petición de informe no es válida."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "No se han encontrado resultados para este informe."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "Los resultados no se han podido formatear como XML."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "Informe COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"Informe de revista COUNTER 1 (R3): solicitudes de artículos completos por "
+"mes y revista"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "Todos los clientes/as"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Informe de artículo 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Informe de revista 1"

@@ -1,0 +1,100 @@
+# rl <biuro@fimagis.pl>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
+"PO-Revision-Date: 2022-09-15 07:50+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/themes-"
+"default/pl_PL/>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.default.name"
+msgstr "Domyślny motyw"
+
+msgid "plugins.themes.default.description"
+msgstr "Motyw domyślny OJS3."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Typografia"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr ""
+"Wybierz ustawienia krojów pisma które najlepiej pasują do Twojego czasopisma."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Krój projektowany z myślą o wyświetlaniu na ekranach, "
+"zaprojektowany przez Google z dużym wsparciem dla języków."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Wersja szeryfowa kroju Noto Sans."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Kombinacja kroju szeryfowego dla nagłówków oraz "
+"bezszeryfowego dla tekstu głównego."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Kombinacja kroju bezszeryfowego dla nagłówków oraz "
+"szeryfowego dla tekstu głównego."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Popularny krój bezszeryfowy polskiego autorstwa."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Szeroki font szeryfowy dobry do czytania z ekranu."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Kombinacja kroju szeryfowego dla nagłówków oraz "
+"bezszeryfowego dla tekstu głównego."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Kolor"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Wybierz kolor nagłówka."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Pokaż opis czasopisma na stronie głównej."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Obraz tła w nagłówku"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Jeśli będzie załadowany obraz dla strony głównej, pokaż go w tle nagłówka "
+"zamiast zwyczajowego miejsca na froncie strony startowej."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Pokaż obraz strony głównej jako tło nagłówka."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opcje wyświetlania statystyk"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Nie wyświetlaj wyświetleń zgłoszenia czytelnikowi."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Pokaż statystyki w stylu słupków."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Pokaż statystki w formie linii."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Sty Lut Mar Kwi Maj Cze Lip Sie Wrz Paz Lis Gru"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Pobrania"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Statystyki pobrań niedostępne."

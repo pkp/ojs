@@ -1,0 +1,258 @@
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
+"PO-Revision-Date: 2022-09-21 05:38+0000\n"
+"Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/admin/cs_CZ/"
+">\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Hostované časopisy"
+
+msgid "admin.settings.redirect"
+msgstr "Přesměrování časopisu"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Požadavky na hlavní stránku budou přeměrovány na tento časopis. To může být "
+"užitečné například pokud stránka hostuje pouze jeden časopis."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na "
+"všechny časopisy, které tuto lokalizaci využívají."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Toto bude výchozí jazyk pro stránku a všechny hostované časopisy."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Vyberte všechny jazykové lokalizace, které mají být podporovány na této "
+"stránce. Vybrané lokalizace budou dostupné pro použití ve všech časopisech "
+"hostovaných na této stránce a objeví se také v menu pro výběr jazyka na "
+"všech stránkách (toto nastavení může být přepsáno na stránkách specifických "
+"stránkách daného časopisu). Pokud není vybráno více jazykových lokalizací, "
+"menu pro výběr jazyka se na stránkách neobjeví a rozšířené jazykové "
+"nastavení nebude pro časopisy dostupné."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Označené soubory lokalizace mohou být nekompletní."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Jste si jistý, že chcete odinstalovat tuto jazykovou lokalizaci? Může to "
+"ovlivnit všechny časopisy zde hostované, které aktuálně tuto jazykovou "
+"lokalizaci používají."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Vyberte další jazykové lokalizace, pro které má být do systému nainstalována "
+"podpora. Aby mohly být lokalizace využity hostovanými časopisy, musí být "
+"nejprve nainstalovány. Pro informace o přidání nových jazyků viz dokumentaci "
+"k OJS."
+
+msgid "admin.systemVersion"
+msgstr "Verze OJS"
+
+msgid "admin.systemConfiguration"
+msgstr "Konfigurace OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Nastavení konfigurace OJS z <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co "
+"vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho "
+"nastavení a zápisu uživatelů."
+
+msgid "admin.journals.journalSettings"
+msgstr "Nastavení časopisu"
+
+msgid "admin.journals.noneCreated"
+msgstr "Žádné časopisy nebyly vytvořeny."
+
+msgid "admin.contexts.create"
+msgstr "Vytvořit časopis"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Zde má být krátké slovo nebo akronym, které identifikuje časopis. URL "
+"časopisu bude {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Je třeba zadat název."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Je vyžadována cesta."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Cesta může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí "
+"začínat a končit alfanumerickým znakem."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Zvolená cesta již je využívána jiným časopisem."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Primární lokalizace musí být vybrána z lokalizací, podporovaných časopisem."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr ""
+"Povolte pro tento časopis, aby byl na těchto stránkách veřejně zobrazen"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Popis časopisu"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Existující cesta k časopisu nebo cesta, která má být vytvořena (např. \"ojs"
+"\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importovat předplatné"
+
+msgid "admin.journals.transcode"
+msgstr "Překódovat metadata článků z ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Generovat kód pro přesměrování adres URL OJS 1 na adresy URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Je vyžadována cesta importu."
+
+msgid "admin.journals.importErrors"
+msgstr "Úspěšné dokončení importu selhalo"
+
+msgid "admin.mergeUsers"
+msgstr "Sloučit uživatele"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Sloučit uživatele"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Vyberte uživatele, kterému mají být přiřazena autorství, přidělené úlohy "
+"atd. předchozího uživatele."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Vyberte uživatele, který má být sloučen s jiným uživatelským účtem (např., "
+"pokud má někdo dva uživatelské účty). Prvně zvolený účet bude vymazán a jeho "
+"příspěvky, úlohy atd. budou přiřazeny ke druhému účtu."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Všichni zaregistrovaní uživatelé"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Jste si jistý, že chcete sloučit vybraný účet/účty \"{$oldAccountCount}\" do "
+"účtu s uživatelským jménem \"{$newUsername}\"? Vybraný účet/účty "
+"\"{$oldAccounCount}\" poté přestane/přestanou existovat. Tato akce je "
+"nevratná."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Žádní zapsaní uživatelé."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Připomenutí vypršení předplatného"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Upozornění na otevřený přístup (Open Access)"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Připomínka recenze"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "ID čísla není celé číslo."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "ID sazebnice čísla není celé číslo."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "ID čísla se neshoduje s ID přiřazení."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Vyberte hostované časopisy, kterým by mělo být povoleno odesílat hromadné e-"
+"maily. Pokud je tato funkce povolena, správce časopisu bude moci posílat e-"
+"maily všem uživatelům registrovaným v jejich časopisu. <br><br> Zneužití "
+"této funkce k odesílání nevyžádaných e-mailů může v některých jurisdikcích "
+"porušovat zákony proti spamu a může vést k tomu, že e-maily vašeho serveru "
+"budou blokovány jako spam. Než povolíte tuto funkci, vyhledejte technickou "
+"radu a zvažte konzultaci s manažery časopisů, abyste se ujistili, že je "
+"správně používána. <br><br> Další omezení této funkce lze povolit pro každý "
+"deník jednotlivě nastavením v seznamu <a href = \"{$hostedContextsUrl}\"> "
+"hostovaných časopisů </a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Správce časopisu nebude moci posílat hromadné e-maily na žádnou z níže "
+"vybraných rolí. Toto nastavení použijte k omezení zneužití funkce e-"
+"mailových oznámení. Může být například bezpečnější deaktivovat hromadné e-"
+"maily čtenářům, autorům nebo jiným velkým skupinám uživatelů, kteří "
+"nesouhlasili s přijímáním těchto e-mailů.<br><br> Funkci hromadného e-mailu "
+"lze pro tento deník úplně deaktivovat v <a href = \"{$siteSettingsUrl}\"> "
+"Správce> Nastavení webu </a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Funkce hromadného e-mailu byla pro tento deník deaktivována. Tuto funkci "
+"povolte v části <a href=\"{$siteSettingsUrl}\"> Správce> Nastavení webu </a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Přidávání, úpravy nebo odebírání časopisů z tohoto webu a správa nastavení "
+"celého webu."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Vyberte typ statistik geografického využití, které mohou být shromažďovány "
+"časopisy na této stránce. Podrobnější geografické statistiky mohou značně "
+"zvětšit velikost databáze a v některých vzácných případech mohou narušit "
+"anonymitu návštěvníků. Každý časopis může toto nastavení nakonfigurovat "
+"jinak, ale časopis nikdy nemůže shromažďovat podrobnější záznamy, než jaké "
+"jsou zde nakonfigurovány. Pokud například web podporuje pouze zemi a region, "
+"může časopis vybrat zemi a region nebo pouze zemi. Časopis nebude moci "
+"sledovat zemi, region a město."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Povolte institucionální statistiky, pokud chcete, aby časopisy na těchto "
+"stránkách mohly shromažďovat statistiky o používání podle institucí. "
+"Časopisy budou muset přidat instituci a její IP rozsahy, aby mohly tuto "
+"funkci používat. Povolení institucionálních statistik může značně zvýšit "
+"velikost databáze."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Rozhodněte, zda mají být koncové body rozhraní SUSHI API veřejně přístupné "
+"pro všechny časopisy na tomto webu. Pokud povolíte veřejné API, každý "
+"časopis může toto nastavení přepsat, aby byly jeho statistiky soukromé. "
+"Pokud však veřejné API zakážete, časopisy nemohou své vlastní API zveřejnit."
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "{$name} byl úspěšně upraven."
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} byl úspěšně vytvořen."
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Informace o webu byly úspěšně aktualizovány."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Nastavení konfigurace webu byla úspěšně aktualizována."
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Nastavení vzhledu webu byla úspěšně aktualizována."

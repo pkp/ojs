@@ -1,0 +1,243 @@
+# Jovan Jonovski <jonovski@hotmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-27 23:01+0000\n"
+"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/admin/"
+"mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Хостирани списанија"
+
+msgid "admin.settings.redirect"
+msgstr "Пренасочување на списание"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Барањето за главниот сајт ќе бидат пренасочени кон тоа списание. Ова може да "
+"биде корисно, на пример, ако списанието се хостира самостојно."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Сигурен сте дека сакате да ја оневозможите оваа локализација? Ова може да "
+"влијае врз било кое хостирано списание кое користи ваква локализација."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Ова ќе биде претпоставен јазик за сајтот и за било кое хостирано списание."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Избери ги сите локализации кои го поддржуваат овој сајт. Избраните "
+"локализации ќе бидат користени за сите списанија хостирани на овој сајт и и "
+"ќе се појават на секоја страница (што може да биде препокриено на "
+"специфичните страници од списанието). Доколку не се избрани повеќекратни "
+"локализации, менито за јазици нем ада се појавува и подесувањата за додатни "
+"јазици нема да биде достапно за списанијата."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Означените локализации може да не се комплетни."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Сигурни сте дека сакате да ја одинсталирате локализацијата? Ова може да "
+"влијае врз било кое соисание кое во моментов користи локализација."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Избери било која дополнителна локализација за инсталињае поддршка во овој "
+"систем. ЛОкализацијата мора да биде инсталирана пред да се користи во "
+"хостираното списание. Види ја OJS документацијата за информациите околу "
+"додавање нови јазици."
+
+msgid "admin.systemVersion"
+msgstr "OJS верзија"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурација"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS подесување на конфигурацијата од <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Автометаски ќе бидете назначен како менаџер на ова списание. После "
+"креирањето ново списание, ќе бидете пренасочени кон волшебникот за "
+"подасувања, за да го завршите започнатото подесување на списанието."
+
+msgid "admin.journals.journalSettings"
+msgstr "Подесувања на  списание"
+
+msgid "admin.journals.noneCreated"
+msgstr "Не се создадени списанија."
+
+msgid "admin.contexts.create"
+msgstr "Создади списание"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Ова треба да биде еден краток збор или акроним кој ќе го идентифицира "
+"списанието. URL на списанието ќе биде  {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Потребен е наслов."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Потребна е патека."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Патеката може да вклучи само букви, бројки и карактерите _ и -. Таа мора да "
+"почне и да заврши со буква или број."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Внесената патека веќе се користи за друго списание."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Основниот локал мора да биде еден од поддржаните локали на списанието."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Овозможи списание јавно да се појави на сајтот"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Опис на списание"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Постоечка патека за списание или патека за креирање (на пример, \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Внеси претплатници"
+
+msgid "admin.journals.transcode"
+msgstr "Транскодирај труд од метаподатоци во ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Создади код за мапирање OJS 1 URL кон OJS 2 URL"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Потребна е патека за импортирање."
+
+msgid "admin.journals.importErrors"
+msgstr "Импортирањето не успеа целосно"
+
+msgid "admin.mergeUsers"
+msgstr "Спои корисници"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Спои корисник"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Избери корисник кон кого се однесува претходното авторство, назначени "
+"уредувања и слично."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Избери корисник (или неколку) за да ги споиш во друг кориснички акаунт (не "
+"пример, кога некој има две кориснички имиша). Првоизбраните акаунти на "
+"корисниците ќе бидат избришани од било кој поднесок, назначување и случно и "
+"ќе му бидат доделени на второизбраниот акаунт."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Сите внесени корисници"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Сугурен ли сте дека сакате да ги споите избраните {$oldAccountCount} акаунти "
+"во акаунт со корисничко име \"{$newUsername}\"? Избраните {$oldAccountCount} "
+"акаунти нем ада постојат после тоа. Оваа постапка е неповратна."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Нема внесени корисници."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Потсетник за истечување претплата"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Нотификација за Отворен пристап"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Потсетување на рецензентот"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Идентификацискиот број не е цел број."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Идентификацискиот број на прегледот не е цел број."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Идентификацискиот број не се совпаѓа со придружениот ИД."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Изберете ги хостираните списанија на кои треба да им биде дозволено да "
+"испраќаат и-меил во големи количини. Кога е овозможена оваа функција, "
+"менаџерот на списанието ќе може да испраќа и-меил до сите корисници "
+"регистрирани на нивното списание.<br><br>Злоупотреба на оваа функција како "
+"би се испраќале непосакувани и-меилови може да ги прекрши анти-спам законите "
+"во некои подрачја и може да доведе до блокирање на и-меиловите од вашиот "
+"сервер како спам. Побарајте техничко мислење пред да ја овозможите оваа "
+"функција и размислете за консултација до менџери на списанија за да се "
+"уверите дека е правилно користена. <br><br>Дополнителни ограничувања на оваа "
+"функција може да бидат овозможени за секое списание со посета на неговиот "
+"волшебник за поставки во листата со <a href="
+"\"{$hostedContextsUrl}\">Хостирани списанија</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Менаџерот на списанието нема да може да испраќа и-меил во големи количини до "
+"било која од избраните улоги подолу. Користете ја оваа поставка за да ја "
+"ограничите злоупотребата на функцијата за известувања преку и-меил. На "
+"пример, можно е да биде побезбедно да оневозможите испраќање на и-меил во "
+"големи количини до читатели, автори, или други големи групи на корисници кои "
+"не се согласиле да примаат такви и-меилови.<br><br>Функцијата за испраќање и-"
+"меил во големи количини за ова списание може да биде целосно оневозможена "
+"преку <a href=\"{$siteSettingsUrl}\">Администратор > Поставки на веб-"
+"страницата</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Функцијата за испраќање и-меил во големи количини е оневозможена за ова "
+"списание. Овозможете ја оваа функција преку <a href="
+"\"{$siteSettingsUrl}\">Администратор > Поставки на веб-страницата</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Додавај, уредувај или отстранувај списанија од оваа локација и управувај со "
+"поставките на целата локација."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Изберете го типот на статистика за географска употреба што може да ја "
+"соберат списанијата на оваа страница. Подеталната географска статистика може "
+"значително да ја зголеми големината на вашата база на податоци и, во некои "
+"ретки случаи, може да ја поткопа анонимноста на вашите посетители. Секое "
+"списание може да ја конфигурира оваа поставка поинаку, но списанието никогаш "
+"не може да собере подетални записи од она што е конфигурирано овде. На "
+"пример, ако страницата поддржува само земја и регион, списанието може да "
+"избере земја и регион или само земја. Списанието нема да може да следи "
+"земја, регион и град."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Овозможете институционална статистика ако сакате списанијата на оваа "
+"страница да можат да собираат статистика за користење по институција. "
+"Списанијата ќе треба да ја додадат институцијата и нејзиниот опсег на IP за "
+"да ја користат оваа функција. Овозможувањето институционална статистика може "
+"значително да ја зголеми големината на вашата база на податоци."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Дали да се направат или не крајните точки на SUSHI API јавно достапни за "
+"сите списанија на оваа страница. Ако го овозможите јавното API, секое "
+"списание може да ја отфрли оваа поставка за да ја направи нивната статистика "
+"приватна. Меѓутоа, ако го оневозможите јавното API, списанијата не можат да "
+"го направат своето сопствено API јавно."

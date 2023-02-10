@@ -1,0 +1,219 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-16 07:02+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"hy_AM/>\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "section.default.title"
+msgstr "Հոդվածներ"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "Բաժնի լռելյայն քաղաքականություն"
+
+msgid "default.genres.article"
+msgstr "Հոդվածի Տեքստ"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Հեղինակները հրավիրվում են ներկայացնելու հոդվածներ այս ամսագրին: Բոլոր "
+"ներկայացումները կգնահատվեն խմբագրի կողմից՝ որոշելու, թե արդյոք դրանք "
+"համապատասխանում են այս ամսագրի նպատակներին և շրջանակին: Նրանք, ովքեր "
+"համարվում են պիտանի, կուղարկվեն գործընկերների գրախոսման՝ նախքան որոշելու՝ "
+"դրանք կընդունվեն թե կմերժվեն:</p><p>Նախքան ներկայացումը, հեղինակները "
+"պատասխանատու են ներկայացման մեջ ներառված ցանկացած նյութ հրապարակելու "
+"թույլտվություն ստանալու համար, ինչպիսիք են լուսանկարները, փաստաթղթերը և "
+"տվյալների հավաքածուները: Ներկայացման մեջ նշված բոլոր հեղինակները պետք է "
+"համաձայնեն ճանաչվեն որպես հեղինակ: Անհրաժեշտության դեպքում հետազոտությունը "
+"պետք է հաստատվի համապատասխան էթիկայի հանձնաժողովի կողմից՝ համաձայն "
+"ուսումնասիրության երկրի իրավական պահանջների:</p><p>Խմբագիրը կարող է մերժել "
+"ներկայացումը, եթե այն չի համապատասխանում որակի նվազագույն չափանիշներին: "
+"Նախքան ներկայացնելը, խնդրում ենք համոզվել, որ ուսումնասիրության նախագծումը և "
+"հետազոտության փաստարկը ճիշտ են կառուցված և ձևակերպված: Վերնագիրը պետք է լինի "
+"հակիրճ, և համառոտագրությունը պետք է լինի առանձին մաս: Սա կմեծացնի այն "
+"հավանականությունը, որ գրախոսները համաձայնեն գրախոսել հոդվածը: Երբ դուք գոհ "
+"եք, որ ձեր ներկայացումը համապատասխանում է այս ստանդարտին, խնդրում ենք հետևել "
+"ստորև ներկայացված ստուգաթերթին՝ ձեր ներկայացումը պատրաստելու համար:</p>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Բոլոր ներկայացումները պետք է համապատասխանեն հետևյալ պահանջներին:</"
+"p><ul><li>Այս ներկայացումը համապատասխանում է <a href="
+"\"{$submissionGuidelinesUrl}\">Հեղինակային ուղեցույցներում</a> նշված "
+"պահանջներին:</li ><li>Այս ներկայացումը նախկինում չի հրապարակվել, ոչ էլ "
+"դիտարկման համար ուղարկվել է այլ ամսագիր:</li><li>Բոլոր հղումները ստուգվել են "
+"ճշտության և ամբողջականության համար:</li><li>Բոլոր աղյուսակներն ու նկարները "
+"թվագրված և պիտակավորված են:</li><li>Թույլտվություն է ստացվել հրապարակելու "
+"բոլոր լուսանկարները, տվյալների հավաքածուները և այս ներկայացմանը կից "
+"տրամադրված այլ նյութերը:</li></ul>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Այս ամսագրի կայքում մուտքագրված անուններն ու էլ. հասցեները կօգտագործվեն "
+"բացառապես այս ամսագրի նշված նպատակների համար և հասանելի չեն լինի որևէ այլ "
+"նպատակի կամ որևէ այլ կողմի:</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Այս ամսագիրը անհապաղ բաց հասանելիություն է տրամադրում իր բովանդակությանը այն "
+"սկզբունքով, որ հետազոտությունները հանրությանը ազատորեն հասանելի դարձնելն "
+"աջակցում է գիտելիքների ավելի համընդգրկուն փոխանակմանը:"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Մենք խրախուսում ենք ընթերցողներին գրանցվել այս ամսագրի հրատարակչական "
+"ծանուցումների ծառայության համար: Օգտագործեք ամսագրի գլխավոր էջի վերևի <a "
+"href=\"{$indexUrl}/{$contextPath}/user/register\">Գրանցվել</a> հղումը: Այս "
+"գրանցումը կհանգեցնի նրան, որ ընթերցողը էլեկտրոնային փոստով կստանա "
+"բովանդակության աղյուսակը ամսագրի յուրաքանչյուր նոր թողարկման համար: Այս "
+"ցանկը նաև թույլ է տալիս ամսագրին պահանջել որոշակի մակարդակի աջակցություն կամ "
+"ընթերցողների քանակ: Տե՛ս ամսագրի <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#privacyStatement\">Գաղտնիության հայտարարությունը</a>, որը "
+"վստահեցնում է ընթերցողներին, որ իրենց անունը և էլ. հասցեները չեն օգտագործվի "
+"այլ նպատակների համար:"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Ցանկանու՞մ եք ներկայացնել այս ամսագրին: Խորհուրդ ենք տալիս դիտել <a href="
+"\"{$indexUrl}/{$contextPath}/about\">Ամսագրի մասին</a> էջը ամսագրի բաժնի "
+"կանոնների համար, ինչպես նաև <a href=\"{$indexUrl }/{$contextPath}/about/"
+"submissions#authorGuidelines\">Հեղինակի ուղեցույցներ</a>: Հեղինակները պետք է "
+"<a href=\"{$indexUrl}/{$contextPath}/user/register\">գրանցվեն</a> ամսագրում "
+"նախքան ուղարկելը կամ, եթե արդեն գրանցված են, կարող են պարզապես <a href="
+"\"{$indexUrl }/index/login\">մուտք գործել</a> և սկսեք հինգ քայլից բաղկացած "
+"գործընթացը:"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Մենք խրախուսում ենք հետազոտող գրադարանավարներին ներառել այս ամսագիրը իրենց "
+"գրադարանի էլեկտրոնային ամսագրերի պահուստների շարքում: Նաև, հարկ է նշել, որ "
+"այս ամսագրի բաց կոդով հրատարակչական համակարգը հարմար է գրադարանների համար՝ "
+"իրենց պրոֆեսորադասախոսական կազմի անդամների համար օգտագործելու այն ամսագրերի "
+"հետ, որոնց խմբագրմամբ նրանք զբաղվում են (տես <a href=\"https://pkp.sfu.ca /"
+"ojs\">Բաց ամսագրի համակարգեր</a>):"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Այս ամսագիրը օգտագործում է LOCKSS համակարգը՝ մասնակից գրադարանների միջև "
+"բաշխված արխիվացման համակարգ ստեղծելու նպատակով և թույլ է տալիս այդ "
+"գրադարաններին ստեղծել ամսագրի մշտական արխիվներ պահպանման և վերականգնման "
+"համար: <a href=\"https://www.lockss.org\">Ավելին...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Այս ամսագիրը օգտագործում է CLOCKSS համակարգը՝ մասնակից գրադարանների միջև "
+"բաշխված արխիվացման համակարգ ստեղծելու նպատակով և թույլ է տալիս այդ "
+"գրադարաններին ստեղծել ամսագրի մշտական արխիվներ պահպանման և վերականգնման "
+"համար: <a href=\"https://clockss.org\">Ավելին...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Ամսագրի կառավարիչ"
+
+msgid "default.groups.plural.manager"
+msgstr "Ամսագրի կառավարիչներ"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Ամսագրի խմբագիր"
+
+msgid "default.groups.plural.editor"
+msgstr "Ամսագրի խմբագիրներ"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Հրավիրված խմբագիր"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Հրավիրված խմբագիրներ"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Բաժնի խմբագիր"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Բաժնի խմբագիրներ"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Բաժանորդագրության կառավարիչ"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Բաժանորդագրության կառավարիչներ"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "Հետազոտական գործիք"
+
+msgid "default.genres.researchMaterials"
+msgstr "Հետազոտական նյութեր"
+
+msgid "default.genres.researchResults"
+msgstr "Հետազոտության արդյունքներ"
+
+msgid "default.genres.transcripts"
+msgstr "Սղագրություններ"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Տվյալների վերլուծություն"
+
+msgid "default.genres.dataSet"
+msgstr "Տվյալների բազմություն"
+
+msgid "default.genres.sourceTexts"
+msgstr "Սկզբնական տեքստ"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Գրախոս"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Գրախոսներ"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "Տեքստը համապատասխանում է \"Հեղինակի ուղեցույցներում\" նշված ոճական և "
+#~ "մատենագիտական պահանջներին:"
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "Տեքստը մեկ բացատով է. օգտագործում է 12 կետանոց տառատեսակ; շեղատառերով, և "
+#~ "ոչ թե ընդգծում (բացառությամբ URL հասցեների); և բոլոր նկարազարդումները, "
+#~ "նկարները և աղյուսակները տեղադրվում են տեքստի մեջ համապատասխան տեղերում, "
+#~ "այլ ոչ թե վերջում:"
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr "Որտեղ հնարավոր է, տրամադրվել են հղումների հասցեները:"
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "Ներկայացման նիշքը OpenOffice, Microsoft Word կամ RTF փաստաթղթի նիշքի "
+#~ "ձևաչափով է:"
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "Ներկայացումը նախկինում չի հրապարակվել, ոչ էլ այն գտնվում է մեկ այլ "
+#~ "ամսագրում՝ քննարկման համար (կամ բացատրությունը տրվել է խմբագրին "
+#~ "մեկնաբանություններում):"

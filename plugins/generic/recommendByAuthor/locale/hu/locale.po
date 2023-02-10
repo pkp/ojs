@@ -1,0 +1,32 @@
+# Molnár Tamás <molnart@bibl.u-szeged.hu>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2022-09-28 14:01+0000\n"
+"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/hu_HU/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Ajánlott cikkek szerző szerint"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "Ez a bővítmény beszúr egy cikklistát a szerzőtől, a cikk absztrakt oldalára."
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Ugyanannak a szerző(k)nek a legtöbbet olvasott cikkei"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"Megj.: Ez a plugin legalább egy statisztikai/jelentési plugin bekapcsolt "
+"állapotát igényli. Ha statisztikai bővítményei több mint egy metrikát "
+"tartalmaznak, kérjük, válasszon egy fő metrikát is az admin webhelyének "
+"beállítási oldalán és / vagy a naplókezelő beállításai oldalain."

@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-19 14:27+0000\n"
+"Last-Translator: Mironshoh Sattorov <mironshohsattorov23091997@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"subscriptions/uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Obuna bo'yicha hisobot moduli"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Obuna ro'yxati va ular haqidagi ma'lumotlarni o'z ichiga olgan CSV "
+"hisobotini amalga oshiradi."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Tashkilotning pochta manzili"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP-manzillar oralig'i"

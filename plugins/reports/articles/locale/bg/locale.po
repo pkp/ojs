@@ -1,0 +1,24 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-25 15:30+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"articles/bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Отчет за статии"
+
+msgid "plugins.reports.articles.description"
+msgstr ""
+"Тази добавка (плъгин) реализира CSV отчет, съдържащ списък на статии и "
+"тяхната информация."
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Без решение"

@@ -1,0 +1,190 @@
+# Ieva Tiltina <pastala@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-29 12:01+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"lv_LV/>\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "section.default.title"
+msgstr "Raksti"
+
+msgid "section.default.abbrev"
+msgstr "RAK"
+
+msgid "section.default.policy"
+msgstr "Sadaļas noklusējuma politika"
+
+msgid "default.genres.article"
+msgstr "Raksta teksts"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Šajā žurnāla vietnē ievadītie vārdi un e-pasta adreses tiks izmantotas "
+"tikai šajā žurnālā norādītajiem mērķiem un nebūs pieejamas citiem mērķiem "
+"vai citām personām.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Šis žurnāls nodrošina tūlītēju atvērtu piekļuvi tā saturam, pamatojoties uz "
+"principu, ka, padarot pētniecību brīvi pieejamu sabiedrībai, tiek veicināta "
+"plašāka zināšanu apmaiņa."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Aicinām lasītājus reģistrēties šī žurnāla izdošanas paziņojumu pakalpojumam. "
+"Izmantojiet saiti <a href=\"{$indexUrl}/{$contextPath}/user/register"
+"\">Reģistrēties</a> žurnāla sākumlapas augšpusē. Šīs reģistrācijas rezultātā "
+"lasītājs e-pastā saņems katra jauna žurnāla numura satura rādītāju. Šis "
+"uzskaitījums arī ļauj žurnālam pretendēt uz noteiktu atbalstu vai lasītāju "
+"loku. Skatiet žurnāla <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#privacyStatement\">Privātuma atrunu</a>, kas apliecina "
+"lasītājiem, ka viņu vārds un e-pasta adrese netiks izmantoti citiem mērķiem."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Vēlaties publicēties šajā žurnālā? Iesakām pārlūkot lapu <a href="
+"\"{$indexUrl}/{$contextPath}/about\">Par žurnālu</a>, lai uzzinātu par "
+"žurnāla sadaļu politikām, kā arī izpētīt <a href=\"{$indexUrl}/"
+"{$contextPath}/about/submissions#authorGuidelines\">Vadlīnijas autoriem</a>. "
+"Pirms materiāla iesniegšanas autoram <a href=\"{$indexUrl}/{$contextPath}/"
+"user/register\">jāpiereģistrējas</a> žurnālā, vai arī, ja reģistrācija jau "
+"veikta, <a href=\"{$indexUrl}/index/login\">jāpieslēdzas</a>, lai uzsāktu "
+"piecu soļu materiāla iesniegšanas procesu."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Aicinām pētniecisko bibliotēku darbiniekus iekļaut šo žurnālu savas "
+"bibliotēkas elektronisko žurnālu krājumā. Tāpat ir vērts atzīmēt, ka šī "
+"žurnāla atvērtā pirmkoda publicēšanas sistēma ir piemērota bibliotēkām, lai "
+"tās varētu nodrošināt mācībspēkiem iespēju izmantot žurnālus, kuru "
+"rediģēšanā viņi ir iesaistīti (sk. <a href=\"https://pkp.sfu.ca/ojs\">Open "
+"Journal Systems)</a>."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Šis žurnāls izmanto LOCKSS sistēmu, lai izveidotu dalītas arhivēšanas "
+"sistēmu starp iesaistītajām bibliotēkām un ļautu šīm bibliotēkām izveidot "
+"pastāvīgus žurnāla arhīvus saglabāšanas un atjaunošanas vajadzībām. <a href="
+"\"https://www.lockss.org/\">Vairāk...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Šis žurnāls izmanto CLOCKSS sistēmu, lai izveidotu dalītas arhivēšanas "
+"sistēmu starp iesaistītajām bibliotēkām, un ļauj šīm bibliotēkām izveidot "
+"pastāvīgus žurnāla arhīvus saglabāšanas un atjaunošanas nolūkā. <a href="
+"\"https://clockss.org/\">Vairāk...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Žurnāla pārvaldnieks"
+
+msgid "default.groups.plural.manager"
+msgstr "Žurnāla pārvaldnieki"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Žurnāla redaktors"
+
+msgid "default.groups.plural.editor"
+msgstr "Žurnāla redaktori"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Viesredaktors"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Viesredaktori"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Sadaļas redaktors"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Sadaļas redaktori"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abonēšanas pārzinis"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abonēšanas pārziņi"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "Pētniecības instruments"
+
+msgid "default.genres.researchMaterials"
+msgstr "Pētniecības materiāli"
+
+msgid "default.genres.researchResults"
+msgstr "Pētījumu rezultāti"
+
+msgid "default.genres.transcripts"
+msgstr "Transkripti"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Datu analīze"
+
+msgid "default.genres.dataSet"
+msgstr "Datu kopa"
+
+msgid "default.genres.sourceTexts"
+msgstr "Avotu teksti"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzents"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzenti"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "Iesniedzamais materiāls ir OpenOffice, Microsoft Word vai RTF dokumenta "
+#~ "formātā."
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "Iesniegtais materiāls nav iepriekš publicēts, kā arī nav iesniegts "
+#~ "apsvēršanai citā žurnālā (vai arī komentāru sadaļā tiek sniegts "
+#~ "paskaidrojums redaktoram)."
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "Starp teksta rindām viena intervāla atstarpe, burtu lielums - 12 punkti, "
+#~ "pasvītrojumu vietā tiek izmantots slīpraksts (izņemot vietņu adreses "
+#~ "(URL)), un visas ilustrācijas, attēli un tabulas ir ievietotas tekstā "
+#~ "attiecīgajās vietās, nevis teksta beigās."
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr "Kur vien iespējams, atsaucēs ir norādītas saites (URL)."
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "Tekstā ir ievērotas stilistiskās un bibliogrāfiskās prasības, kas "
+#~ "izklāstītas vadlīnijās autoriem ."

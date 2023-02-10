@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:50+00:00\n"
+"PO-Revision-Date: 2020-02-24 16:56+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/blocks-"
+"subscription/sv/>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Prenumerationsblock"
+
+msgid "plugins.block.subscription.description"
+msgstr "Det här tillägget placerar prenumerationsinformation i sidomenyn."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Prenumeration"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Löper ut"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Tillgång tillhandahålls av {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "från {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Prenumerationer"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Logga in för att bekräfta prenumerationen."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "En prenumeration krävs för att få tillgång till vissa resurser."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Läs mer"

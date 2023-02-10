@@ -1,0 +1,243 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022.
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
+"PO-Revision-Date: 2022-09-28 12:01+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/admin/tr_TR/"
+">\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Yayınlanan Dergiler"
+
+msgid "admin.settings.redirect"
+msgstr "Dergi Yönlendirmesi"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Siteye yapılan girişler doğrudan derginin ana sayfasına yönlendirilir. OJS "
+"sadece üzerinde tek bir dergi yayınlanıyorsa bu seçenek kullanışlıdır."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Bu dili devre dışı bırakmak istediğinizden emin misiniz? Bu, yayınlanan "
+"dergiler arasında şu anda bu dili kullananları etkileyebilir."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Bu dil, site ve yayınlanan dergiler için varsayılan dil olacaktır."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Sitenin destekleyeceği tüm dilleri seçiniz. Seçilen diller sitede yayınlanan "
+"tüm dergiler için kullanılabilir olacak ve özel dergi sayfaları dışında, "
+"seçtiğiniz dillerden oluşan bir dil seçme aracı tüm sayfalarda okuyucuların "
+"hizmetine sunulacaktır (dergiye özgü sayfalarda devre dışı bırakılabilir). "
+"Eğer birden çok dil seçilmemiş ise, dil seçim aracı gösterilmeyecek ve "
+"dergiler için genişletilmiş dil olanakları çalışmayacaktır."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "İşaretlenmiş diller tamamlanmamış olabilir."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Bu dili kulanımdan kaldırmak istediğinizden emin misiniz? Dil kaldırılınca "
+"bu dili kullanan dergilerde sorun olabilir."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Sistemin destekleyeceği ek bir bir dil seçin. Sitedeki dergiler kullanmaya "
+"başlamadan önce, diller sisteme yüklenmelidir. Yeni dil eklenmesi konusunda "
+"OJS yardım dokümanlarında daha fazla bilgi bulabilirsiniz."
+
+msgid "admin.systemVersion"
+msgstr "OJS Sürümü"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS Yapılandırması"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt> dosyasında yer alan OJS yapılandırma ayarları."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Otomatik olarak bu derginin yöneticisi olarak kaydedileceksiniz. Yeni bir "
+"dergi oluşturduktan sonra, derginin başlangıç ayarlarını tamamlamak üzere bu "
+"derginin ayar sayfasına yönlendirileceksiniz."
+
+msgid "admin.journals.journalSettings"
+msgstr "Dergi Ayarları"
+
+msgid "admin.journals.noneCreated"
+msgstr "Henüz bir dergi oluşturulmadı."
+
+msgid "admin.contexts.create"
+msgstr "Dergi Oluştur"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Bu, dergiyi tanımlayan kısa bir kelime ya da kısaltma olmalıdır. Derginin "
+"URL adresi {$sampleUrl} şeklinde olacaktır."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Bir başlık girilmesi zorunludur."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Bir yol girilmesi zorunludur."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Yol, yalnızca harf, rakam ve alt çizgi (_) ile tire (-) karakterlerini "
+"içerebilir. Başında ve sonunda yalnızca harf veya rakam olabilir."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Eklediğiniz yol bir başka dergi tarafından kullanılmaktadır."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Birincil yerel ayar, derginin desteklediği yerel ayarlardan biri olmalıdır."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Bu dergiyi sitede herkese açık şekilde görülebilir yap"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Dergi açıklaması"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Varolan dergi yolu veya oluşturulacak yol (Ör., \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Abonelikleri içe aktar"
+
+msgid "admin.journals.transcode"
+msgstr "Makale üst verisini ISO8859-1'den dönüştür"
+
+msgid "admin.journals.redirect"
+msgstr ""
+"OJS 1 URL adreslerinin OJS 2 URL adresleri ile eşleşmesi için kod oluştur"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Veri alma yolu zorunludur."
+
+msgid "admin.journals.importErrors"
+msgstr "İçe aktarma işlemi başarısız oldu"
+
+msgid "admin.mergeUsers"
+msgstr "Kullanıcıları Birleştir"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Kullanıcı Birleştir"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Önceki kullanıcının yazarlıkları, editörlük atamaları vb. özelliklerin "
+"ilişkilendirileceği bir kullanıcı seçin."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Başka bir kullanıcı hesabıyla birleştirmek için bir kullanıcı (veya "
+"kullanıcılar) seçin (ör. bir kişinin iki kullanıcı hesabı varsa). İlk "
+"seçilen kullanıcı(lar) silinecek ve gönderiler, atamalar vb. özellikler "
+"ikinci seçilen kullanıcı hesabına aktarılacaktır."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Tüm Yetkilendirilmiş Kullanıcılar"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Seçilen {$oldAccountCount} isimli kullanıcı hesabını (hesaplarını), "
+"\"{$newUsername}\" isimli kullanıcı hesabında birleştirmek istediğinizden "
+"emin misiniz? Seçilen {$oldAccountCount} hesap(lar) kaldırılacak ve daha "
+"sonra kullanılamayacaktır. Bu işlem geri alınamaz."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Yetkilendirilmiş kullanıcı bulunmuyor."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Abonelik Sona Erme Hatırlatıcısı"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Açık Erişim Bildirimi"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Değerlendirme Hatırlatıcısı"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Sayı numarası bir tamsayı değil."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Sayı dizgisi ID numarası bir tamsayı değil."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Sayı ID numarası kayıt günlüğündeki ID ile eşleşmiyor."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Toplu e-posta göndermesine izin verilmesi gereken barındırılan dergileri "
+"seçin. Bu özellik etkinleştirildiğinde, bir dergi yöneticisi dergisine "
+"kayıtlı tüm kullanıcılara bir e-posta gönderebilir. <br> <br> Bu özelliğin "
+"istenmeyen e-posta göndermek için kötüye kullanılması bazı yargı alanlarında "
+"istenmeyen posta önleme yasalarını ihlal edebilir ve sonuçlanabilir "
+"sunucunuzun e-postalarında spam olarak engelleniyor. Bu özelliği "
+"etkinleştirmeden önce teknik tavsiye alın ve uygun şekilde kullanıldığından "
+"emin olmak için dergi yöneticilerine danışmayı düşünün. <br> <br> <a href="
+"\"{$hostedContextsUrl}\">Barındırılan Dergiler</a> listesindeki ayarlar "
+"sihirbazını ziyaret ederek her dergi için bu özelliğe ilişkin daha fazla "
+"kısıtlama etkinleştirilebilir."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Bir dergi yöneticisi, aşağıda seçilen rollerin hiçbirine toplu e-posta "
+"gönderemez. E-posta bildirim özelliğinin kötüye kullanımını sınırlamak için "
+"bu ayarı kullanın. Örneğin, bu tür e-postaları almaya izin vermeyen "
+"okuyuculara, yazarlara veya diğer büyük kullanıcı gruplarına toplu e-"
+"postaları devre dışı bırakmak daha güvenlidir. <br> <br> Toplu e-posta "
+"özelliği bu dergi için <a href=\"{$siteSettingsUrl}\">Yönetici > Site "
+"Ayarları</a> bölümünden tamamen devre dışı bırakılabilir."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Bu günlük için toplu e-posta özelliği devre dışı bırakıldı. Bu özelliği <a "
+"href=\"{$siteSettingsUrl}\">Yönetici> Site Ayarları<a href="
+"\"{$siteSettingsUrl}\"> kısmından etkinleştirin."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Bu siteye yen dergi ekleyin, düzenleyin veya silin ve site genelindeki "
+"ayarları yönetin."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Bu sitedeki dergiler tarafından toplanabilecek coğrafi konum "
+"istatistiklerinin türünü seçin. Daha ayrıntılı coğrafi istatistikler, "
+"veritabanı boyutunuzu önemli ölçüde artırabilir ve bazı nadir durumlarda "
+"ziyaretçilerinizin anonimliğini zayıflatabilir. Her dergi bu ayarı farklı "
+"şekilde yapılandırabilir, ancak bir dergi hiçbir zaman burada "
+"yapılandırılandan daha ayrıntılı kayıtlar toplayamaz. Örneğin, site yalnızca "
+"ülke ve bölgeyi destekliyorsa, dergi ülke ve bölge veya yalnızca ülke "
+"seçebilir. Dergi ülke, bölge ve şehir seçimi yapamaz."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Bu sitedeki dergilerin kurumlara göre kullanım istatistiklerinin toplamasını "
+"istiyorsanız kurumsal istatistikleri etkinleştirin. Dergilerin bu özelliği "
+"kullanabilmeleri için kurumu ve IP aralıklarını eklemeleri gerekecektir. "
+"Kurumsal istatistikleri etkinleştirmek, veritabanı boyutunuzu önemli ölçüde "
+"artırabilir."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"SUSHI API uç noktalarının bu sitedeki tüm dergiler için herkese açık hale "
+"getirilip getirilmeyeceği, Genel API'yi etkinleştirirseniz, her dergi "
+"istatistiklerini gizli yapmak için bu ayarı geçersiz kılabilir. Ancak, genel "
+"API'yi devre dışı bırakırsanız, dergiler kendi API'lerini herkese açık hale "
+"getiremez."

@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:40+00:00\n"
+"PO-Revision-Date: 2020-10-22 11:46+0000\n"
+"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/nl/>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ Export Plugin"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Exporteer  het tijdschrift voor DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Neem contact op met de DOAJ voor opname"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Registreer uw DOAJ API sleutel om artikels te registreren via OJS. Zoniet kan u nog steeds exporteren naar het DOAJ XML formaat, maar kan u de DOI's niet via OJS registreren bij DOAJ."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API sleutel"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "U vindt uw API sleutel op uw DOAJ gebruikerspagina."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "OJS zal artikels na publicatie automatisch deponeren bij DOAJ. Dit kan even duren (bv. afhankelijk van uw cronjob instellingen). U kan alle ongeregistreerde artikels bekijken."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr "Gebruik de DOAJ test API (testomgeving) voor de registratie. Vergeet deze test-optie niet te verwijderen voor de uiteindelijke publicatie."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "Automatische registratie bij DOAJ"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Deposit is niet geslaagd! De DOAJ API meldde een fout: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Gebruik:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

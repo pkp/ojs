@@ -1,0 +1,483 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-22 15:12+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "editor.home"
+msgstr "Ritstjóri - Upphafssíða"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Innsendingar og útgáfa"
+
+msgid "editor.submissionQueue"
+msgstr "Innsendingaröð"
+
+msgid "editor.submissionArchive"
+msgstr "Safn innsendinga"
+
+msgid "editor.publishing"
+msgstr "Útgáfa"
+
+msgid "editor.publishedIssues"
+msgstr "Útgefin tölublöð"
+
+msgid "editor.allSections"
+msgstr "Allir kaflar"
+
+msgid "editor.allEditors"
+msgstr "Allir ritstjórar"
+
+msgid "editor.me"
+msgstr "Ég"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Kennið '{$publicIdentifier}' er þegar til fyrir annan hlut (tölublað, grein, "
+"galley eða skrá). Vinsamlega veldur einkvæmt kenni innan tímaritsins."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Engar innsendingar í safninu."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Á að vista breytingar á geymdri innsendingu?  Innsendingar sem eru merktar "
+"til að eyða verður eytt varanlega úr kerfinu."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ert þú viss um að þú viljir skrá þessa ákvörðun?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Innsendingin verður geymd í safni, eftir að búið er að senda tilkynningu á "
+"höfund, eða smellt er á hnappinn \"Sleppa tölvupósti\"."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Áður en handrit er sent til yfirferðar, notaðu tengilinn \"Tilkynning til "
+"höfundar\" til að upplýsa höfund um ákvörðunina, og veldu þá útgáfu sem á að "
+"senda."
+
+msgid "editor.notifyUsers"
+msgstr "Tilkynning til notenda"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Allir lesendur ({$count} notendur)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Allir birtir höfundar ({$count} notendur)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Allir einstaklingsáskrifendur ({$count} notendur)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Allir stofnanaáskrifendur ({$count} notendur)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Tilkynning til notenda í gangi..."
+
+msgid "editor.usersNotified"
+msgstr "Búið að senda tilkynningu á notendur"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Senda þessi skilaboð á alla notendur sem eru tengdir við tímaritið ({$count} "
+"notendur)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Senda þessi skilaboð á notendur sem eru tengdir við tímaritið og hafa látið "
+"vita að þeir vilji fá tilkynningar ({$count} notendur)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Taka með efnisyfirlit frá þessu tölublaði:"
+
+msgid "editor.editorAdministration"
+msgstr "Stýring ritstjóra"
+
+msgid "editor.issues.createIssue"
+msgstr "Stofna tölublað"
+
+msgid "editor.issues.editIssue"
+msgstr "Stýring á tölublaði: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Nýjasta tölublað"
+
+msgid "editor.issues.numArticles"
+msgstr "Atriði"
+
+msgid "editor.issues.noArticles"
+msgstr "Engin atriði eru á áætlun fyrir þetta tölublað."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ertu viss um að þú viljir eyða þessu tölublaði varanlega?"
+
+msgid "editor.issues.published"
+msgstr "Útgefið"
+
+msgid "editor.issues.unpublished"
+msgstr "Óútgefið"
+
+msgid "editor.issues.datePublished"
+msgstr "Dagsetning útgáfu"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Bindi er áskilið og þarf að vera tölustafur stærri en núll."
+
+msgid "editor.issues.numberRequired"
+msgstr "Númer er áskilið og þarf að vera tölustafur stærri en núll."
+
+msgid "editor.issues.yearRequired"
+msgstr "Ár er áskilið og þarf að vera tölustafir stærra en núll."
+
+msgid "editor.issues.titleRequired"
+msgstr "Titill er áskilinn fyrir tölublaðið."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Auðkenni tölublaðs er áskilið. Vinsamlega veldu a.m.k. einn af "
+"valmöguleikunum fyrir auðkenni."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Auðkenning tölublaðs"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Auðkenni tölublaðs"
+
+msgid "editor.issues.description"
+msgstr "Lýsing"
+
+msgid "editor.issues.accessStatus"
+msgstr "Aðgangsstaða"
+
+msgid "editor.issues.accessDate"
+msgstr "Opinn aðgangur dagsetning"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Virkja síðkominn opinn aðgang"
+
+msgid "editor.issues.coverPage"
+msgstr "Forsíðumynd"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Leyfð snið: .gif, .jpg, or .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Upphlaðið"
+
+msgid "editor.issues.remove"
+msgstr "Fjarlægja"
+
+msgid "editor.issues.proofed"
+msgstr "Prófarkalesið"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Fjarlægja forsíðumynd?"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Forsíðumyndi sem þú vilt eyða, er á tölublaði annars tímarits. Vinsamlega "
+"gakktu úr skugga um að þú sért að vinna með rétt tímarit og rétt kenni "
+"tölublaðs, og reyndu aftur."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Forsíðumyndin sem þú vilt eyða passar ekki við forsíðumyndina fyrir þetta "
+"tölublað. Vinsamlega endurhladdu skjámyndina og reyndu aftur."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Forsíðumyndin sem þú vilt eyða fannst ekki.  Mögulega er búið að eyða henni. "
+"Prófaðu að endurhlaða skjámyndina."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Ógilt skrásnið á forsíðumynd. Leyfð snið eru .gif, .jpg, eða .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stílblað"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Ógilt skrásnið á stílblaðinu. Gakktu úr skugga um að innsend skrá sé gild "
+"CSS. (Athugaðu að stílblaði sem hefst með athugasemd (komment) gæti verið "
+"hafnað.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Fjarlægja stílblað?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Forsíðufyrirsögn"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Búa til forsíðu fyrir þetta tölublað með eftirfarandi atriðum."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Sýna"
+
+msgid "editor.issues.openAccess"
+msgstr "Opinn aðgangur"
+
+msgid "editor.issues.subscription"
+msgstr "Áskrift"
+
+msgid "editor.issues.identification"
+msgstr "Auðkenni"
+
+msgid "editor.issues.access"
+msgstr "Aðgangur"
+
+msgid "editor.issues.cover"
+msgstr "Forsíða"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Allar greinar verða settar aftur í ritstjórnaröð og öllum tengdum skrám "
+"veður eytt varanlega.  Ertu viss um að þú viljir fjarlægja þetta tölublað?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Þetta tímarit notar sérsniðna röðun á tölublöðum. <a href=\"{$url}\" class="
+"\"action\">Endurstilla í sjálfgefið</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Þetta tímarit notar sérsniðna röðun á köflum. <a href=\"{$url}\" class="
+"\"action\">Endurstilla í sjálfgefið</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Gögn tölublaðs"
+
+msgid "editor.issues.saveChanges"
+msgstr "Vista breytingar á efnisyfirliti?"
+
+msgid "editor.issues.default"
+msgstr "Sjálfgefið"
+
+msgid "editor.issues.order"
+msgstr "Röð"
+
+msgid "editor.issues.publicId"
+msgstr "Almennt kenni"
+
+msgid "editor.issues.publishIssue"
+msgstr "Gefa út tölublað"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Taka tölublað úr birtingu"
+
+msgid "editor.issues.previewIssue"
+msgstr "Forskoða tölublað"
+
+msgid "editor.issues.preview"
+msgstr "Forskoða"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ertu vis um að þú viljir gefa út þetta nýja tölublað?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ertu viss um að þú viljir taka þetta tölublað úr birtingu?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ertu viss um að þú viljir stilla þetta tölublað sem það nýjasta?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Ekki er hægt að vista kenni greinar:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Engin birt tölublöð"
+
+msgid "editor.issues.open"
+msgstr "Opið"
+
+msgid "editor.issues.pages"
+msgstr "Síður"
+
+msgid "editor.issues.galleys"
+msgstr "Tölublaðagalley - Lokaprófarkir"
+
+msgid "editor.issues.galley"
+msgstr "Tölublaðsgalley - Lokaprófarkir"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Skoða tölublaðsgalley"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Gefa út galley (lokapróförk) með öllu innihaldi tölublaðs."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Engar lokaprófarkir(galleys) tölublaðs hafa verið  gefin út."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Merkimiði/heiti á útgáfugalley er áskilið."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Tungumál útgáfugalley er áskilið."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Auðkenni galleys þessa tölublaðs er þegar til."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Til baka í tölublaðsgalley"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ertu viss um að þú viljir eyða galley þessa tölublaðs?"
+
+msgid "editor.issues.identifiers"
+msgstr "Auðkenni"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Næstu tölublöð"
+
+msgid "grid.action.addGalley"
+msgstr "Bæta við galley"
+
+msgid "grid.action.publish"
+msgstr "Gefa út tölublað"
+
+msgid "grid.action.addIssue"
+msgstr "Stofna tölublað"
+
+msgid "grid.action.viewIssue"
+msgstr "Skoða"
+
+msgid "grid.action.previewIssue"
+msgstr "Forskoða"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Stofna tölublaðsgalley"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Velja nýjasta tölublað"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Eldri tölublöð"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Merkja upphaflega skrá sem ritrýniútgáfu"
+
+msgid "editor.article.decision"
+msgstr "Ákvörðun"
+
+msgid "editor.submissions.showBy"
+msgstr "Sýnt af"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Sent inn MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Virkar úthlutanir"
+
+msgid "editor.submissions.invite"
+msgstr "Bjóða"
+
+msgid "editor.submissions.accept"
+msgstr "Samþykkja"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Engar innsendingar"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Nýjast"
+
+msgid "editor.submissions.averageTime"
+msgstr "Vikur"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Síðast lokið"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Úthlutað til ritstjóra"
+
+msgid "issues.submissions.issueIds"
+msgstr "Úthlutað í tölublað"
+
+msgid "editor.submissions.inSection"
+msgstr "Í Kafla"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Sýna útgáfuáætlun"
+
+msgid "editor.article.publishVersion"
+msgstr "Gefa út útgáfu (version)"
+
+msgid "editor.article.viewMetadata"
+msgstr "Skoða lýsigögn útgáfu (version)"
+
+msgid "editor.article.editMetadata"
+msgstr "Breyta lýsigögnum útgáfu (version)"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Setja í útgáfuáætlun í"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Til úthlutunar"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Birtingargjald er ógreitt.  Til að setja greinina í útgáfuáætlun láttu "
+"höfund vita að það eigi eftir að greiða eða fella niður gjald."
+
+msgid "editor.article.payment.requestPayment"
+msgstr ""
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Forsíðumyndin sem þú vilt eyða finnst ekki. Mögulega er búið að eyða henni.  "
+"Prófaðu að endurhlaða skjámyndina."
+
+msgid "grid.action.removeArticle"
+msgstr "Fjarlægja grein úr tölublaði"
+
+msgid "editor.article.remove"
+msgstr "Fjarlægja"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Ertu viss um að þú viljir fjarlægja þessa grein úr tölublaðinu?  Það verður "
+"mögulegt að birta greinina í öðru tölublaði."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Ógild aðgangsdagsetning."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Breyta tölublaðsgalley"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Setjari undirbýr þessar skrár fyrir hvert galley og hleður síðan upp "
+"viðeigandi  <span class=\"pkp_help_title\">próförkum</span> fyrir "
+"prófarkalestur."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Veldu galleyskrár"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Lokadrög á þessum lista hafa verið lagfærð af textatækni og sett í "
+"yfirfarnar útgáfur sem hlaðið hefur verið upp undir <span class="
+"\"pkp_help_title\"> Í yfirferð</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Öllum skrám sem búið er að hlaða upp, á hvaða innsendingarþrepi sem er, er "
+"hægt að bæta á lista fyrir prófarkalestur með því að haka í taka með "
+"gátboxið fyrir neðan og velja \"Leita\": allar aðgengilegar skrár eru "
+"listaðar upp og hægt að velja til að taka með."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Auðkennið '{$publicIdentifier}' er nú þegar til fyrir annan hlut af sömu "
+"tegund.  Vinsamlega veldu einkvæm auðkenni fyrir hluti af sömu tegund innan "
+"tímaritsins."
+
+msgid "editor.article.coverImage"
+msgstr "Forsíðumynd"

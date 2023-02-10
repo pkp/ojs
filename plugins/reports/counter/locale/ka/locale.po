@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-09 18:14+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/reports-"
+"counter/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"პლაგინი „ COUNTER“ საშუალებას გაძლევთ შექმნათ ანგარიშგებები ჟურნალის "
+"აქტივობის შესახებ, <a href=\"http://www.projectcounter.org\">სტანდარული "
+"COUNTER</a>-ის გამოყენებით. მარტო ეს ანგარიშგებები არ ხდიან ჟურნალს COUNTER-"
+"ის სტანდარტის შესაბამისს. იმისათვის, რომ ჟურნალი შეესაბამებოდეს ამ "
+"სტანდარტს, იხილეთ COUNTER-ის მოთხოვნები."
+
+msgid "plugins.reports.counter"
+msgstr "პლაგინი „COUNTER-ანგარიშგებები“"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER Release-ის ვერსია"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "ანგარიშგების არასწორი პარამეტრები."
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "ანგარიშგების არასწორი მოთხოვნა."
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "ამ ანგარიშგების შედეგები ვერ მოიძებნა."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "ვერ ხერხდება შედეგების დაფორმატება XML-ში."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER JR1 ანაგრიშგება (R3)"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"COUNTER Journal ანაგრიშგება 1 (R3): სტატიების სრული ტექსტების მოთხოვნა "
+"თვეებისა და ჟურნალების მიხედვით"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "ყველა მომხმარებელი"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "Article 1-ის ანგარიშგება"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "Journal 1-ის ანგარიშგება"

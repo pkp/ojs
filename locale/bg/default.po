@@ -1,0 +1,221 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Pencho Toncgev <ptonchev@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-15 18:02+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "section.default.title"
+msgstr "Статии"
+
+msgid "section.default.abbrev"
+msgstr "АБРЕВ"
+
+msgid "section.default.policy"
+msgstr "Политика за раздела по подразбиране"
+
+msgid "default.genres.article"
+msgstr "Текст на статията"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Авторите са поканени да подадат материали в това списание. Всички "
+"предложения ще бъдат оценени от редактор, за да се определи дали отговарят "
+"на целите и обхвата на списанието. Онези, които се считат за подходящи, ще "
+"бъдат изпратени за рецензия, преди да се определи дали ще бъдат приети или "
+"отхвърлени.</p><p>Преди да направят изпращането, авторите носят отговорност "
+"за получаване на разрешение за публикуване на всеки материал, включен в "
+"подаването, като снимки, документи и масиви от данни. Всички автори, "
+"посочени в подаването, трябва да дадат съгласието си да бъдат идентифицирани "
+"като автори. Когато е уместно, изследването трябва да бъде одобрено от "
+"съответна комисия по етика в съответствие със законовите изисквания на "
+"държавата на изследването.</p><p>Редакторът може да отхвърли подаването, ако "
+"то не отговаря на минималните стандарти за качество. Преди да изпратите, "
+"моля, уверете се, че дизайнът на изследването и изследователският аргумент "
+"са структурирани и формулирани правилно. Заглавието трябва да е кратко и "
+"резюмето трябва да може да стои самостоятелно. Това ще увеличи вероятността "
+"рецензентите да се съгласят да прегледат документа. Когато сте доволни, че "
+"подаването ви отговаря на този стандарт, моля, следвайте контролния списък "
+"по-долу, за да подготвите подаването си.</p>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Всички изпратени материали трябва да отговарят на следните изисквания.</"
+"p><ul><li>Тези изпратени материали отговарят на изискванията, посочени в <a "
+"href=\"{$submissionGuidelinesUrl}\">Указанията за авторите</a>.</li "
+"><li>Това представяне не е публикувано преди това, нито е представяно в "
+"друго списание за разглеждане.</li><li>Всички препратки са проверени за "
+"точност и пълнота.</li><li>Всички таблици и фигури са номерирани и "
+"етикетирани.</li><li>Получено е разрешение за публикуване на всички снимки, "
+"набори от данни и други материали, предоставени с това изпращане.</li></ul>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Имената и имейл адресите вписани в това списание ще се използват "
+"изключително за посочените цели на това списание и няма да бъдат на "
+"разположение за други цели.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Това списание осигурява незабавен отворен достъп до съдържанието му на "
+"принципа, че прави изследванията свободно достъпни за обществеността, като "
+"подкрепя глобалния обмен на знания."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Ние насърчаваме читателите да се регистрират за услугата за уведомяване от "
+"страна на издателството на това списание. Използвайте връзката <a href="
+"\"{$indexUrl}/{$contextPath}/user/register\">Регистрация</a> в горната част "
+"на началната страница за списанието. Тази регистрация ще позволи на читателя "
+"да получава резюме със съдържанието (заглавията на статиите) по електронна "
+"поща, при публикуване на всеки нов брой на списанието. Този списък също така "
+"позволява на списанието, за да претендира за определено ниво на подкрепа или "
+"читатели. Прегледайте сайответната <a href=\"{$indexUrl}/{$contextPath}/"
+"about/submissions#privacyStatement\">Декларация за поверителност</a>, която "
+"потвърждава ангажиментът че данните за читателите (тяхното име и имейл "
+"адрес) няма да бъдат използвана за други цели."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Заинтересовани сте да направите ваша публикация в това списание? "
+"Препоръчваме ви да разгледате раздел <a href=\"{$indexUrl}/{$contextPath}/"
+"about\">За списанието</a>относно обхватът и политиките на издателството на "
+"това списание, както и e <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\">Насоки за Автора</a>. Авторите трябва да <a "
+"href=\"{$indexUrl}/{$contextPath}/user/register\">се регистрират</a> преди "
+"да изпратят предложение за публикуване. Ако вече сте регистрирани, може "
+"просто да <a href=\"{$indexUrl}/index/login\">влезете в системата</a> и да "
+"започне процеса на публикуване в пет стъпки."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Ние насърчаваме библиотекарите да включат това списание в каталозите с "
+"електронни списания в библиотеките. Това списание е подходящо за библиотеки, "
+"които осигуряват за техните членове достъп до информационни ресурси, като "
+"ние насърчававаме и библиотекарите да се включват като редактори в тази "
+"инициатива (виж повече на <a href=\"https://pkp.sfu.ca/ojs\">Open Journal "
+"Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Това списание използва системата LOCKSS за създаване на разпределени системи "
+"за архивиране и позволява на библиотеките да създадат постоянни архиви на "
+"списанието с цел опазване и възстановяване. <a href=\"https://www.lockss.org/"
+"\">Виж повече...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Това списание използва системата CLOCKSS за създаване на разпределени "
+"системи за архивиране и позволява на библиотеките да създадат постоянни "
+"архиви на списанието с цел опазване и възстановяване. <a href=\"https://"
+"clockss.org\"> Виж повече...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Списание - мениджър/директор"
+
+msgid "default.groups.plural.manager"
+msgstr "Списание - мениджъри/директори"
+
+msgid "default.groups.abbrev.manager"
+msgstr "Упр."
+
+msgid "default.groups.name.editor"
+msgstr "Редактор на списанието"
+
+msgid "default.groups.plural.editor"
+msgstr "Редактори на списанието"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ред."
+
+msgid "default.groups.name.guestEditor"
+msgstr "Гост-редактор"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Гост-редактори"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "гост ред."
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Редактор за раздела"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Редактори за раздела"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ред. за раздела"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Отговорник за абонаменти"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Отговорници за абонаменти"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "отг. абон."
+
+msgid "default.genres.researchInstrument"
+msgstr "Инструмент за научни изследвания"
+
+msgid "default.genres.researchMaterials"
+msgstr "Изследователски материали"
+
+msgid "default.genres.researchResults"
+msgstr "Изследователски резултати"
+
+msgid "default.genres.transcripts"
+msgstr "Преписи"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Анализ на данни"
+
+msgid "default.genres.dataSet"
+msgstr "Набор от данни"
+
+msgid "default.genres.sourceTexts"
+msgstr "Източници"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецензенти"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рец."
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "Текстът се придържа към стилистичните и библиографски изисквания, "
+#~ "посочени в Насоките за автори."
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "Текстът е единично междуредие; използва 12-точков шрифт (12 пункта); "
+#~ "използва се курсив, а не подчертаване (освен за URL адреси); и всички "
+#~ "илюстрации, фигури и таблици са поставени в текста на съответните им "
+#~ "места, а не в края."
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr ""
+#~ "Където е възможно са предвидени и поставени URL адреси за препратките."
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "Файловете с материали са във формат OpenOffice, Microsoft Word или RTF "
+#~ "документ."
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "Предоставеният материал не е била публикуван по-рано, нито е прдоставен "
+#~ "на друго списание за разглеждане (или обяснение е предоставено в "
+#~ "Коментари до редактора)."

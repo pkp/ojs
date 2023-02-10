@@ -1,0 +1,100 @@
+# OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
+# Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-24 12:01+0000\n"
+"Last-Translator: Bobir Bobayev <bobayevbobirnasrullayevich1986@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/themes-"
+"default/uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.default.name"
+msgstr "Standart holat"
+
+msgid "plugins.themes.default.description"
+msgstr "Bu holat standart holatga o‘tkazadi."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Tipografiya"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Ushbu jurnalga mos keladigan shrift kombinatsiyasini tanlang."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Google tomonidan keng tilni qo'llab-quvvatlash uchun yaratilgan "
+"raqamli mahalliy shrift."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Google raqamli shriftining serif talqini."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif / Noto Sans: serif sarlavhalari va sans-serif asosiy matni bilan "
+"qo'shimcha juftlik."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans / Noto Serif: sans-serif sarlavhalari va serif asosiy matni bilan "
+"qo'shimcha juftlik."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Mashhur zamonaviy sans-serif shrifti."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Internetda o'qish uchun yaxshi serif shrifti."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora / Open Sans: serif sarlavhalari va sans-serif asosiy matni bilan bepul "
+"qo‘shimcha juftlik."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Rang"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Sarlavha uchun rangni tanlang."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Bosh sahifada jurnal xulosasini ko'rsating."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Sarlavha fon rasmi"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Bosh sahifa tasvirini yuklanganda, uni bosh sahifadagi odatiy holat o'rniga "
+"sarlavha fonida ko'rsating."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Bosh sahifa rasmini sarlavha fonida ko'rsating."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Foydalanish statistikasini ko'rsatish imkoniyatlari"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "O'quvchi uchun foydalanish statistikasi jadvalini ko'rsatmang."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+"Foydalanish statistikasini ko'rsatish uchun diagrammaning bar turidan "
+"foydalaning."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+"Foydalanish statistikasini ko'rsatish uchun diagrammaning chiziqli turidan "
+"foydalaning."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Yanvar Fevral Mart Aprel May Iyun Avgust Sentyabr Oktyabr Dekabr"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Yuklashlar"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Yuklab olish maʼlumotlari hali mavjud emas."

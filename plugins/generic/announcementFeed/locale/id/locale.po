@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:54+00:00\n"
+"PO-Revision-Date: 2020-02-05 23:35+0000\n"
+"Last-Translator: Fransisca H <sisca.ojs@gmail.com>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/id/>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Plugin Umpan Pengumuman"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Plugin ini menghasilkan umpan sindikasi web RSS/Atom untuk pengumuman jurnal."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Pengaturan"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Tampilkan tautan umpan di seluruh halaman jurnal."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Tampilkan tautan umpan di beranda dan halaman pengumuman saja."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Tampilkan tautan umpan di halaman pengumuman saja."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Batasi umpan ke"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "pengumuman terbaru."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Silakan masukkan bilangan bulat positif untuk pengumuman terbaru."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Logo Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "Logo RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "Logo RSS2"

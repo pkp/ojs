@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:34+00:00\n"
+"PO-Revision-Date: 2020-02-25 19:36+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"webFeed/tr/>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Web Besleme Eklentisi"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Bu eklenti son sayı için RSS/Atom web akış beslemeleri üretir."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Ayarlar"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Web besleme bağlantılarını yalnızca sayı sayfalarında göster."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Web besleme bağlantılarını sadece anasayfa ve sayı sayfalarında göster."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Web besleme bağlantılarını tüm dergi sayfalarında göster."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Son yayımlanan sayının bütün öğelerini göster."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Son öğeleri belli bir sayıda göster."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Gösterilecek öğe sayısı"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Lütfen son yayımlanan öğeler için pozitif bir tamsayı giriniz."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2 logo"

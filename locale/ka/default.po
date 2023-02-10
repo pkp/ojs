@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-07 10:53+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "section.default.title"
+msgstr "სტატიები"
+
+msgid "section.default.abbrev"
+msgstr "სტ"
+
+msgid "section.default.policy"
+msgstr "განყოფილების ნაგულისხმევი პოლიტიკა"
+
+msgid "default.genres.article"
+msgstr "სტატიის ტექსტი"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>ელექტრონული ფოსტის სახელები და მისამართები, რომლებსაც შეიტანთ ამ საიტზე, "
+"გამოყენებული იქნება მხოლოდ ამ ჟურნალის საჭიროებისათვის და არ იქნება "
+"გამოყენებული სხვა მიზნებისათვის, ან არ გადაეცემა სხვა პირებისა და "
+"ორგანიზაციებს.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"ეს ჟურნალი უზრუნველყოფს უშუალო ღია წვდომას შიგთავსზე, გამომდინარე შემდეგი "
+"პრინციპიდან: თავისუფალი, ღია წვდომა კვლევების შედეგებზე უზრუნველყოფს ცოდნის "
+"გლობალურ გაცვლას."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"ჩვენ ვურჩევთ მკითხველებს გამოიწერონ შეტყობინებები ამ ჟურნალის ახალი ნომრების "
+"გამოსვლის შესახებ. გამოიყენეთ ბმული <a href=\"{$indexUrl}/{$contextPath}/"
+"user/register\">რეგისტრაცია</a> ჟურნალის მთავარი გვერდის ზედა ნაწილში. "
+"რეგისტრაცია საშუალებას მოგცემთ ელფოსტაზე მიიღოთ ყოველი ახალი ნომრის "
+"შიგთავსი. ეს სია ასევე ჟურნალს საშუალებას აძლევს განიხილოს მხარდაჭერის დონე "
+"და მკითხველთა რაოდენობა. აგრეთვე იხილეთ <a href=\"{$indexUrl}/{$contextPath}/"
+"about/submissions#privacyStatement\">კონფიდენციალურობის განაცხადი</a>, "
+"რომელიც მკითხველებს დაარწმუნებს იმაში, რომ მათი ელფოსტა არ იქნება "
+"გამოყენებული სხვა მიზნებისათვის."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"გსურთ ამ ჟურნალში სტატიის გამოგზავნა? ჩვენ გირჩევთ ნახოთ ეს განყოფილება <a "
+"href=\"{$indexUrl}/{$contextPath}/about\">ამ ჟურნალის შესახებ</a>, სადაც "
+"შეძლებთ გაეცნოთ ჟურნალის წესებს, აგრეთვე გთხოვთ ნახოთ <a href=\"{$indexUrl}/"
+"{$contextPath}/about/submissions#authorGuidelines\">წესები ავტორებისათვის</"
+"a>. ავტორებმა უნდა გაიარონ <a href=\"{$indexUrl}/{$contextPath}/user/register"
+"\">რეგისტრაცია</a> მასალების გამოგზავნამდე, თუ უკვე გაიარეთ რეგისტრაცია, "
+"შეგიძლიათ განახორციელოთ სისტემაში <a href=\"{$indexUrl}/index/login"
+"\">შემოსვლა</a> და დაიწყოთ გამოგზავნის პროცესი, რომელიც ხუთი ბიჯისაგან "
+"შედგება."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"ჩვენ იმედს ვიტოვებთ, რომ ბიბლიოთეკების თანამშრომლები შეიტანენ ამ ჟურნალს "
+"ბიბლიოთეკის ელექტრონული ჟურნალების სიაში. უნდა აღინიშნოს, რომ ამ ჟურნალის "
+"ღია საგამომცემლო სისტემა ასევე მოსახერხებელია ბიბლიოთეკებისათვის საკუთარი "
+"ელექტრონული ჟურნალების განსათავსებლად, რომელთა რედაქტირებაში მონაწილეობენ "
+"მასწავლებლები და სამეცნიერო მუშაკები (დეტალურად იხილეთ  <a href=\"http://pkp."
+"sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"ეს ჟურნალი იყენებს LOCKSS განაწილებული საარქივო სისტემის შექმნისათვის "
+"სისტემაში მონაწილე ბიბლიოთეკებისათვის და ამ ბიბლიოთეკებს საშუალებას აძლევს "
+"შექმნან ჟურნალის მუდმივი არქივები შენახვისა და აღდგენისათვის. <a href="
+"\"http://www.lockss.org/\">დამატებით...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"ეს ჟურნალი იყენებს CLOCKSS განაწილებული საარქივო სისტემის შექმნისათვის "
+"სისტემაში მონაწილე ბიბლიოთეკებისათვის და ამ ბიბლიოთეკებს საშუალებას აძლევს "
+"შექმნან ჟურნალის მუდმივი არქივები შენახვისა და აღდგენისათვის. <a href="
+"\"http://clockss.org/\">დამატებით...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "ჟურნალის მმართველი"
+
+msgid "default.groups.plural.manager"
+msgstr "ჟურნალის მმართველები"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ჟმ"
+
+msgid "default.groups.name.editor"
+msgstr "ჟურნალის რედაქტორი"
+
+msgid "default.groups.plural.editor"
+msgstr "ჟურნალის რედაქტორები"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ჟრ"
+
+msgid "default.groups.name.guestEditor"
+msgstr "მოწვეული რედაქტორი"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "მოწვეული რედაქტორები"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "მრ"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "განყოფილების რედაქტორი"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "განყოფილებების რედაქტორები"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "გრ"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "ხელმოწერის მმართველი"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "ხელმოწერის მმართველები"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ხმ"
+
+msgid "default.genres.researchInstrument"
+msgstr "კვლევის ხელსაწყო"
+
+msgid "default.genres.researchMaterials"
+msgstr "კვლევის მასალები"
+
+msgid "default.genres.researchResults"
+msgstr "კვლევის შედეგები"
+
+msgid "default.genres.transcripts"
+msgstr "ტრანსკრიპტები"
+
+msgid "default.genres.dataAnalysis"
+msgstr "მონაცემთა ანალიზი"
+
+msgid "default.genres.dataSet"
+msgstr "მონაცემთა ნაკრები"
+
+msgid "default.genres.sourceTexts"
+msgstr "საწყისი ტექსტები"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "რეცენზენტი"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "რეცენზენტები"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "რეც"
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr ""
+#~ "სადაც ეს შესაძლებელია, მოწოდებულია სრული ინტერნეტ მისამართების (URL) "
+#~ "ბმულები."
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "მასალის ფაილი მოწოდებულია OpenOffice, Microsoft Word ან RTF დოკუმენტის "
+#~ "ფორმატში."
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "ეს მასალა ადრე არ იყო გამოქვეყნებული, ასევე არ იყო წარმოდგენილი "
+#~ "განსახილვევლად და გამოქვეყნებისათვის სხვა ჟურნალში (ან მოწოდებულია ახსნა "
+#~ "რედაქტორისათვის კომენტარებში)."
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "ტექსტი შეესაბამება სტილისტურ და ბიბლიოგრაფიულ მოთხოვნებს, რომლებიც "
+#~ "აღწერილია წესებში."
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "ტექსტი აკრეფილია ერთმაგი სტრიქონთშორისი დაშორებით; გამოყენებულია შრიფტის "
+#~ "კეგლი 12 პუნქტი; მონიშვნისათვის გამოიყენება დახრილი სტილი და არა ხაზგასმა "
+#~ "(URL-მისამართების გარდა); ყველა ილისუსტრაცია, გრაფიკები და ცხრილები "
+#~ "განთავსებულია ტექსტის შესაბამის ადგილებში და არა დოკუმენტის ბოლოში."

@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
+"PO-Revision-Date: 2020-04-08 11:27+0000\n"
+"Last-Translator: Michal Jelínek <jelinek@synetix.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/cs/>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "Plugin exportu XML pro PubMed"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "Export metadat článku ve formátu PubMed XML pro indexaci v MEDLINE."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Export dat"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Export čísel"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Zvolte číslo pro export."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Export článků"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Zvolte články pro export."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Použití: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles "
+"[articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "CHYBA:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Žádné číslo neodpovídá uvedenému ID čísla \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Žádný článek neodpovídá uvedenému ID článku \"{$articleId}\"."

@@ -1,0 +1,52 @@
+# Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-09 11:05+0000\n"
+"Last-Translator: Ruslan Shodmonov <belovedspy1209@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/generic-"
+"announcementFeed/uz_UZ@latin/>\n"
+"Language: uz_UZ@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "E'lonlar uchun plagin"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Ushbu plagin jurnal e'lonlari uchun RSS/Atom veb -sindikatsiyalari "
+"kanallarini ishlab chiqaradi."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Sozlamalar"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Barcha jurnal sahifalarida tasma havolalarini ko'rsatish."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Tasma havolalarini faqat bosh sahifada va e'lonlar sahifasida ko'rsatish."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Tasma havolalarini faqat e'lonlar sahifasida ko'rsatish."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Oziqlantirishni cheklang"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "eng so'nggi e'lonlar."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "So'nggi e'lonlar uchun musbat tamsayı kiriting."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logotipi"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logotipi"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logotipi"

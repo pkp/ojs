@@ -1,0 +1,84 @@
+# Eirik Hanssen <eirikh@oslomet.no>, 2022.
+# Tormod Strømme <tormod.stromme@uib.no>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-08-19 13:09+0000\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"api/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Oppslaget du søkte etter finnes ikke i dette tidsskriftet."
+
+msgid "api.emails.403.disabled"
+msgstr "E-postvarsler er ikke slått på for dette tidsskriftet."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Innleveringen som du etterspurte finnes ikke i dette tidsskriftet."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Du kan ikke bytte tidsskrift for en innlevering."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Du har ikke tillatelse til å se upubliserte utgaver."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Du kan bare se tidsskrift som har blitt aktivert."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Du har ikke rettigheter til å se dette tidsskriftet."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Du kan ikke se eller redigere dette tidsskriftet hvis du ikke sender en "
+"forespørsel til tidsskriftets API eller nettstedets API."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Du kan ikke redigere dette tidsskriftet via nettstedets API."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Du har ikke rettigheter til å redigere dette tidsskriftet."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Du har ikke rettigheter til å slette dette tidsskriftet."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Tidsskriftet du sendte forespørsel om etter ble ikke funnet."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "DOI-en du spurte etter tilhører ikke dette tidsskriftet."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Ingen DOI-registrreringsorganisasjon har blitt konfigurert for dette "
+"tidsskriftet."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Deponering av noen elementer var ikke vellykket. Vennligst sjekk "
+"individuelle elementer for spesifikke feilmeldinger."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Du har ikke tillatelse til å flytte denne epostmalen til et annet tidsskrift."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Betalingsmetoden du valgte støttes ikke."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Publikasjonen du forespurte finnes ikke i dette tidsskriftet."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Publikasjonen som du forespurte er ikke del av denne innleveringen."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Du kan ikke knytte en fil fra dette steget til et oppsett."
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

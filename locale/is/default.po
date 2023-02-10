@@ -1,0 +1,186 @@
+# Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-23 15:56+0000\n"
+"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"is_IS/>\n"
+"Language: is_IS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "section.default.title"
+msgstr "Greinar"
+
+msgid "section.default.abbrev"
+msgstr "GRE"
+
+msgid "section.default.policy"
+msgstr "Stefna varðandi kafla"
+
+msgid "default.genres.article"
+msgstr "Texti greinar"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Nöfn og netföng verða ekki notuð í öðrum tilgangi en að miðla upplýsingum "
+"er varða tímaritið. Upplýsingar verða ekki afhentar þriðja aðila.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Þetta tímarit birtir allt efni í opnum aðgangi samkvæmt þeirri "
+"grundvallarskoðun að aukið aðgengi almennings að rannsóknum styðji almennt "
+"við útbreiðslu þekkingar."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Við hvetjum lesendur til að skrá sig til að fá sendar tilkynningar frá "
+"tímaritinu.  Skráning fer fram um tengilinn <a href=\"{$indexUrl}/"
+"{$contextPath}/user/register\">Nýskráning</a> efst á forsíðunni.  Skráðir "
+"lesendur fá sent yfirlit í tölvupósti yfir innihald hvers tölublaðs.  "
+"Listinn yfir áskrifendur styður einnig við tímartið.  Um meðferð "
+"persónuupplýsinga má sjá hér: 's <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#privacyStatement\">Persónuvernd</a>, sem sýnir að lesendur geta "
+"verið vissir um að nöfn þeirra og netföng verða aldrei notuð í öðrum "
+"tilgangi."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Hefur þú áhuga á að birtingu í þessu tímariti? Við mælum með að þú skoðir <a "
+"href=\"{$indexUrl}/{$contextPath}/about\">Um tímaritið</a>  og kynnir þér "
+"stefnu tímaritsins, ásamt <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\">Leiðbeiningum til höfunda</a>.  Höfundar "
+"þurfa að skrá sig hér: <a href=\"{$indexUrl}/{$contextPath}/user/register"
+"\">Nýskráning</a> áður en hægt er að senda inn grein. Ef þú ert nú þegar "
+"skráð(ur) getur þú farið í <a href=\"{$indexUrl}/index/login\">Innskráning</"
+"a>  og hafið 5 skefa innsendingarferlið."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Við hvetjum bóksafnsfræðinga til að lista þetta tímarit á meðal rafrænna "
+"tímarita.  Við vekjum einnig athygli á því að tímaritið birtist í opnum "
+"aðgangi sem er hentugt fyrir bókasöfn til að vista tímarit sem fræðimenn "
+"viðkomandi stofnana eiga aðkomu að (sjá <a href=\"http://pkp.sfu.ca/ojs"
+"\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Þetta tímariti notar LOCKSS kerfið til að búa til dreift safn til bókasafna "
+"sem eru þátttakendur þar og leyfir þeim að búa til varanlegt safn af "
+"tímaritinu í þeim tilgangi að varðveita og endurheimta tímaritið. <a href="
+"\"http://www.lockss.org/\">Nánar...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Þetta tímariti notar CLOCKSS kerfið til að búa til dreift safn til bókasafna "
+"sem eru þátttakendur þar og leyfir þeim að búa til varanlegt safn af "
+"tímaritinu í þeim tilgangi að varðveita og endurheimta tímaritið. <a href="
+"\"http://clockss.org/\">Nánar...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Framkvæmdastjóri"
+
+msgid "default.groups.plural.manager"
+msgstr "Stjórnendur"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ST"
+
+msgid "default.groups.name.editor"
+msgstr "Ritstjóri"
+
+msgid "default.groups.plural.editor"
+msgstr "Ritstjórar"
+
+msgid "default.groups.abbrev.editor"
+msgstr "Rstj"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Gestaritstjóri"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Gestaritstjórar"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GR"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Kaflaritstjóri"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Kaflaritstjórar"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "Kaf.Rstj"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Stýring áskrifta"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Stýring áskrifta"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "Áskr"
+
+msgid "default.genres.researchInstrument"
+msgstr "Rannsóknartól"
+
+msgid "default.genres.researchMaterials"
+msgstr "Rannsóknarefni"
+
+msgid "default.genres.researchResults"
+msgstr "Rannsóknarniðurstöður"
+
+msgid "default.genres.transcripts"
+msgstr "Handrit"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Gagnagreining"
+
+msgid "default.genres.dataSet"
+msgstr "Gagnasett"
+
+msgid "default.genres.sourceTexts"
+msgstr "Upprunalegur texti"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Ritrýnir"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Ritrýnar"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "Textinn er í samræmi við kröfur um frágang greina og uppsetningu heimilda "
+#~ "eins og lýst er í leiðbeiningum til höfunda."
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "Textinn er með einu línubili; notar 12 punkta letur; notar fremur ítalskt "
+#~ "letur en undistrikanir (nema í vefslóðum); og allar myndir, tölur og "
+#~ "töflur eru felldar inn í textann á viðeigandi stöðum í stað greinarloka."
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr "Vefslóðir heimilda hafa verið settar inn þar sem það var mögulegt."
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "Innsend skrá er skrifuð í OpenOffice, Microsoft Word, eða á  RTF "
+#~ "skjalasniði."
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "Þessi grein hefur ekki verið birt áður, né er hún til athugunar hjá öðrum "
+#~ "tímaritum (eða útskýring til ritstjóra er í athugasemdasvæði)."

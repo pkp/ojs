@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:06:07+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:06:07+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"افزونه COUNTER امکان گزارش‌گیری از فعالیت‌های مجله  را بر اساس   <a href="
+"\"http://www.projectcounter.org\"> استاندارد COUNTER </a>  فراهم می‌سازد. این "
+"گزارش باعث نمی‌شود که مجله با استانداردهای COUNTER سازگار گردد. برای ایجاد "
+"این سازگاری نیازمندی‌های آن را در سایت این استاندارد مطالعه نمایید."
+
+msgid "plugins.reports.counter"
+msgstr "گزارشگر COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "COUNTER Release"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "پارامترهای گزارش نامعتبر است"
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "درخواست گزارش نامعتبر است"
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "هیچ نتیجه‌ای برای این گزارش یافت نشد."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "مجله امکان اراده به فرمت XML را پشتیبانی نمی‌کند"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "گزارش COUNTER"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr "گزارش مجله COUNTER: متن کامل مقالات بر حس ماه و مجله مورد نیاز است."
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "تمامی مشتریان"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "گزارش مقاله 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "گزارش مجله 1"

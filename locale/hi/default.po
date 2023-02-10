@@ -1,0 +1,252 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-15 09:20-0700\n"
+"PO-Revision-Date: 2020-04-27 23:09+0000\n"
+"Last-Translator: Dr. Tina Porwal <editor@granthaalayah.com>\n"
+"Language-Team: Hindi <http://translate.pkp.sfu.ca/projects/ojs/default/hi/>\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "section.default.title"
+msgstr "लेख"
+
+msgid "section.default.abbrev"
+msgstr "कला"
+
+msgid "section.default.policy"
+msgstr "खंड डिफ़ॉल्ट नीति"
+
+msgid "default.genres.article"
+msgstr "लेख पाठ"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+
+# (pofilter) xmltags: Added XML tags
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>इस जर्नल साइट में दर्ज किए गए नाम और ईमेल पते इस जर्नल के घोषित उद्देश्यों के लिए विशेष "
+"रूप से उपयोग किए जाएंगे और किसी अन्य उद्देश्य या किसी अन्य पार्टी के लिए उपलब्ध नहीं किए "
+"जाएंगे।.</p>"
+
+# (pofilter) endpunc: Different punctuation at the end
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"यह जर्नल सिद्धांत पर अपनी सामग्री के लिए तत्काल खुली पहुंच प्रदान करती है जो अनुसंधान को "
+"स्वतंत्र रूप से जनता के लिए उपलब्ध कराती है, ज्ञान के अधिक वैश्विक आदान-प्रदान का समर्थन "
+"करती है."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$indexUrl}, {$contextPath}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
+# (pofilter) xmltags: Added XML tags
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"हम पाठकों को इस जर्नल के लिए प्रकाशन अधिसूचना सेवा के लिए साइन अप करने के लिए "
+"प्रोत्साहित करते हैं। उपयोग <a href=\"{$indexUrl}/{$contextPath}/user/register"
+"\">Register</a> जर्नल के लिए मुख पृष्ठ के शीर्ष पर लिंक हैं। यह पंजीकरण पाठक को जर्नल के "
+"प्रत्येक नए अंक के लिए ईमेल द्वारा सामग्री तालिका प्राप्त करने का परिणाम देगा। यह सूची "
+"जर्नल को एक निश्चित स्तर के समर्थन या पाठक का दावा करने की भी अनुमति देती है। जर्नल को "
+"देखें <a href=\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement"
+"\">Privacy Statement</a>, जो पाठकों को आश्वस्त करता है कि उनके नाम और ईमेल पते का "
+"उपयोग अन्य उद्देश्यों के लिए नहीं किया जाएगा."
+
+# (pofilter) brackets: Added '{', '}'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$indexUrl}, {$contextPath}
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) xmltags: Added XML tags
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"इस जर्नल को प्रस्तुत करने के इच्छुक हैं? हम अनुशंसा करते हैं कि आप समीक्षा करें <a href="
+"\"{$indexUrl}/{$contextPath}/about\">About the Journal</a> जर्नल की अनुभाग "
+"नीतियों के लिए पेज, साथ ही <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\">Author Guidelines</a>. लेखकों की जरूरत है <a href="
+"\"{$indexUrl}/{$contextPath}/user/register\">register</a> with the journal "
+"prior to submitting or, if already registered, can simply <a href="
+"\"{$indexUrl}/index/login\">log in</a> और पांच-चरण की प्रक्रिया शुरू करें."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+# (pofilter) long: The translation is much longer than the original
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"हम अपने पुस्तकालय की इलेक्ट्रॉनिक जर्नल होल्डिंग्स के बीच इस जर्नल को सूचीबद्ध करने के लिए "
+"अनुसंधान पुस्तकालयों को प्रोत्साहित करते हैं। साथ ही, यह ध्यान देने योग्य हो सकता है कि इस "
+"जर्नल का ओपन सोर्स पब्लिशिंग सिस्टम पुस्तकालयों के लिए उपयुक्त है कि वे अपने संकाय सदस्यों के "
+"लिए उन जर्नलस के साथ होस्ट करें जो वे संपादन में शामिल हैं। (see <a href=\"http://pkp."
+"sfu.ca/ojs\">Open Journal Systems</a>)."
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"यह जर्नल प्रतिभागी पुस्तकालयों के बीच वितरित संग्रह प्रणाली बनाने के लिए LOCKSS प्रणाली "
+"का उपयोग करती है और उन पुस्तकालयों को संरक्षण और बहाली के प्रयोजनों के लिए जर्नल के "
+"स्थायी अभिलेखागार बनाने की अनुमति देती है।. <a href=\"http://www.lockss.org/"
+"\">More...</a>"
+
+# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
+# (pofilter) urls: Different URLs
+# (pofilter) xmltags: Added XML tags
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"यह जर्नल प्रतिभागी पुस्तकालयों के बीच वितरित संग्रह प्रणाली बनाने के लिए CLOCKSS प्रणाली "
+"का उपयोग करती है और उन पुस्तकालयों को संरक्षण और बहाली के प्रयोजनों के लिए जर्नल के "
+"स्थायी अभिलेखागार बनाने की अनुमति देती है।. <a href=\"http://clockss.org/\">More..."
+"</a>"
+
+msgid "default.groups.name.manager"
+msgstr "जर्नल प्रबंधक"
+
+# (pofilter) endwhitespace: Different whitespace at the end
+msgid "default.groups.plural.manager"
+msgstr "जर्नल प्रबंधकों"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "default.groups.name.editor"
+msgstr "जर्नल के संपादक"
+
+msgid "default.groups.plural.editor"
+msgstr "जर्नल के संपादकों"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.name.guestEditor"
+msgstr "अतिथि संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.plural.guestEditor"
+msgstr "अतिथि संपादक"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.name.sectionEditor"
+msgstr "अनुभाग संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.plural.sectionEditor"
+msgstr "अनुभाग संपादक"
+
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.name.subscriptionManager"
+msgstr "सदस्यता प्रबंधक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.plural.subscriptionManager"
+msgstr "सदस्यता प्रबंधकों"
+
+# (pofilter) short: The translation is much shorter than the original
+# (pofilter) simplecaps: Different capitalization
+# (pofilter) startcaps: Different capitalization at the start
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.genres.researchInstrument"
+msgstr "शोध उपकरण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.genres.researchMaterials"
+msgstr "शोध सामग्री"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.genres.researchResults"
+msgstr "शोध परिणाम"
+
+msgid "default.genres.transcripts"
+msgstr "प्रतिलिपि"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.genres.dataAnalysis"
+msgstr "डेटा विश्लेषण"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.genres.dataSet"
+msgstr "डाटा सेट"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.genres.sourceTexts"
+msgstr "स्रोत पाठ"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.name.externalReviewer"
+msgstr "समीक्षक"
+
+# (pofilter) simplecaps: Different capitalization
+msgid "default.groups.plural.externalReviewer"
+msgstr "समीक्षको"
+
+# (pofilter) short: The translation is much shorter than the original
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "प्रस्तुत पहले प्रकाशित नहीं किया गया है, और न ही विचार के लिए एक अन्य जर्नल से पहले है "
+#~ "(या संपादक को टिप्पणियाँ में एक स्पष्टीकरण प्रदान किया गया है)."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr "सबमिशन फ़ाइल ओपन ऑफिस, माइक्रोसॉफ्ट  वर्ड या RTF डॉक्यूमेंट फाइल फॉर्मेट में है."
+
+# (pofilter) doublespacing: Different use of double spaces
+# (pofilter) endpunc: Different punctuation at the end
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr "जहां उपलब्ध है, संदर्भ के लिए यूआरएल  प्रदान किए गए हैं."
+
+# (pofilter) brackets: Added '(', ')'
+# (pofilter) endpunc: Different punctuation at the end
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "पाठ एकल-स्थान है; 12-बिंदु फ़ॉन्ट का उपयोग करता है;; employs italics, rather "
+#~ "than underlining (URL पते को छोड़कर) ; और सभी चित्र, आंकड़े और तालिकाओं को अंत के "
+#~ "बजाय उपयुक्त बिंदुओं पर पाठ के भीतर रखा गया है."
+
+# (pofilter) endpunc: Different punctuation at the end
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "यह लेख लेखक के दिशानिर्देशों में उल्लिखित शैलीगत और ग्रंथ सूची संबंधी आवश्यकताओं का पालन "
+#~ "करता है."

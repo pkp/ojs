@@ -1,0 +1,217 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
+"PO-Revision-Date: 2021-03-08 12:03+0000\n"
+"Last-Translator: Aitor Renobales <aitor.renobales@ehu.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/admin/eu/>\n"
+"Language: eu_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "admin.hostedContexts"
+msgstr "Aldizkari ostatatuak"
+
+msgid "admin.settings.redirect"
+msgstr "Aldizkarira birbideratu"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Gune nagusira egindako eskaerak aldizkari honetara birbideratuko dira. "
+"Praktikoa da guneak aldizkari bakarra ostatatzen badu, esate baterako."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Ziur zaude hizkuntza hau kendu nahi duzula? Gerta daiteke aldizkari bat "
+"erabiltzen duela."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Hau izango da gunearen eta bertan ostatatutako aldizkarien hizkuntza "
+"lehenetsia."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Hautatu gunean onartu nahi dituzun hizkuntza-pakete guztiak. Hautatutako "
+"hizkuntza-paketeak erabilgarri egongo dira gunean ostatatutako aldizkari "
+"guztietan erabiltzeko eta guneko orri guztietan azalduko dira, hizkuntza "
+"aukeratzeko menuan (nahi izanez gero, orri batzuetatik ken daiteke). "
+"Hizkuntza bakarra hautatzen bada, hizkuntza aldatzeko menua ez da azalduko "
+"eta hizkuntza-ezarpen hedatuak ere ez dira erabilgarri egongo aldizkarietan."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Markatutako localeak osatu gabe egon daitezke."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ziur zaude hizkuntza hau desinstalatu nahi duzula? Eragina izango du "
+"hizkuntza hau erabiltzen duten aldizkari ostatatu guztietan."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Hauta itzazu locale osagarriak sistema horretarako laguntzailea "
+"instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu "
+"behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak "
+"gehitzeari buruzko informazioa eskuratzeko."
+
+msgid "admin.systemVersion"
+msgstr "OJS bertsioa"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfigurazioa"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt> OJS konfigurazio-ezarpenak."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari "
+"berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta "
+"erabiltzailearen izen-ematearekin jarraitzeko."
+
+msgid "admin.journals.journalSettings"
+msgstr "Aldizkariaren ezarpenak"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ez da aldizkaririk sortu."
+
+msgid "admin.contexts.create"
+msgstr "Sortu aldizkaria"
+
+msgid "admin.journals.urlWillBe"
+msgstr "Aldizkariaren URLa {$sampleUrl} izango da."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Titulu bat behar da."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Bidea zehaztu behar da."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Bide-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik "
+"onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar "
+"dira."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Hautatutako bidea beste aldizkari batek erabiltzen du."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Gaitu aldizkari hau publikoki agertzeko gunean."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Aldizkariaren azalpena"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Lehendik dagoen aldizkariaren kokalekua edo berria (adib., \"ojs\")"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Inportatu harpidetzak"
+
+msgid "admin.journals.transcode"
+msgstr "Bihurtu artikuluen metadatuak ISO8859-1etik."
+
+msgid "admin.journals.redirect"
+msgstr "Sortu kodea OJS1 URLak OJS 2 URLetara mapatzeko"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Inportatzeko bidea zehaztu behar da."
+
+msgid "admin.journals.importErrors"
+msgstr "Inportazioak huts egin du."
+
+msgid "admin.mergeUsers"
+msgstr "Batu erabiltzaileak"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Batu erabiltzailea"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Hautatu erabiltzaile bat lehengo erabiltzailearen egiletasuna, edizio-"
+"esleipenak, etab. egozteko."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Hautatu erabiltzaile bat beste erabiltzaile-kontu batekin batzeko (adib., bi "
+"kontu dituen erabiltzaile bat denean). Lehenengo hautatutako kontua ezabatu "
+"egingo da, eta dituen bidalketak, esleipenak, etab. bigarren kontuari "
+"egotziko zaizkio."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Inskribatutako erabiltzaile guztiak"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Ziur zaude \"{$oldUsername}\" erabiltzaile-izena duen kontua ezabatu eta "
+"\"{$newUsername}\" erabiltzaile-izena duen kontuarekin batu nahi duzula? "
+"\"{$oldUsername}\" kontua galdu egingo da. Ekintza hau ezingo da desegin."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Inskribatutako erabiltzailerik ez."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Harpidetza iraungitze abisua"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr ""
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr ""
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr ""
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr ""
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+
+msgid "admin.siteManagement.description"
+msgstr ""
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+
+#~ msgid "admin.contexts.confirmDelete"
+#~ msgstr ""
+#~ "Ziur zaude betiko ezabatu nahi dituzula aldizkari hau eta bere eduki osoa?"
+
+#~ msgid "admin.contexts.form.edit.success"
+#~ msgstr "{$name} ondo editatu egin da."
+
+#~ msgid "admin.contexts.form.create.success"
+#~ msgstr "{$name} ondo sortu egin da."
+
+#~ msgid "admin.settings.info.success"
+#~ msgstr "Guneko informazioa ondo eguneratu egin da."
+
+#~ msgid "admin.settings.config.success"
+#~ msgstr "Konfigurazioa ondo eguneratu egin da."
+
+#~ msgid "admin.settings.appearance.success"
+#~ msgstr "Itxura konfigurazioa ondo eguneratu egin da."

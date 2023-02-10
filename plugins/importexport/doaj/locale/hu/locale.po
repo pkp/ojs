@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-21 11:36+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/hu/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ Export Plugin"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Folyóirat exportálása DOAJ-ba."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Lépjen kapcsolatba a DOAJ a bekerülés érdekében"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr "Ha cikkeket szeretne regisztrálni a OJS-en belülről, kérjük, írja be a DOAJ API kulcsát. Egyébként Ön továbbra is képes lesz exportálni a DOAJ XML formátumba, de nem tud regisztrálni cikkeket a DOAJ-ba az OJS-en belülről."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API Kulcs"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Az API kulcsát a saját DOAJ felhasználói oldalán találja."
+
+msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr "Az OJS automatikusan betölti a cikkeket a DOAJ-ba. Felhívjuk figyelmét, hogy a közzététel után a feldolgozáshoz rövid idő szükséges. Ellenőrizheti az összes nem regisztrált cikket."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Használja a DOAJ teszt API-t (teszt környezet) a regisztrációhoz. Kérjük, ne "
+"felejtse el eltávolítani ezt az opciót megjelentetéskor."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ automatikus regisztrációs feladat"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "A beküldés nem volt sikeres! A DOAJ API hibát adott vissza: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Használat:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...\n"
+""

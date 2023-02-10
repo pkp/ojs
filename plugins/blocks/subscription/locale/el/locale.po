@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19T11:04:48+00:00\n"
+"PO-Revision-Date: 2020-07-15 12:45+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/el/>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "Δομική Μονάδα Συνδρομών"
+
+msgid "plugins.block.subscription.description"
+msgstr "Το πρόσθετο αυτό παρέχει πληροφορίες συνδρομών στην πλαϊνή μπάρα."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Συνδρομή"
+
+msgid "plugins.block.subscription.expires"
+msgstr "Λήγει"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Η πρόσβαση παρέχεται από το: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "Πρόσβαση από το: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Συνδρομές"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Συνδεθείτε για να αποκτήσετε πρόσβαση σε υλικό μόνο για συνδρομητές."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr ""
+"Είναι απαραίτητη η εγγραφή για να αποκτήσετε πρόσβαση σε ορισμένες πηγές."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Μάθετε περισσότερα"

@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-13T21:07:39+00:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.generic.webfeed.displayName"
+msgstr "Webes Hírfolyam Plugin"
+
+msgid "plugins.generic.webfeed.description"
+msgstr "Ez a plugin RSS/Atom web hírfolyamot hoz létre a legfrissebb számhoz."
+
+msgid "plugins.generic.webfeed.settings"
+msgstr "Beállítások"
+
+msgid "plugins.generic.webfeed.settings.issue"
+msgstr "Webes hírfolyam linkek megjelenítése csak a folyóiratszám oldalain."
+
+msgid "plugins.generic.webfeed.settings.homepage"
+msgstr ""
+"Webes hírfolyam linkek megjelenítése a honlapon és a a folyóiratszám "
+"oldalain."
+
+msgid "plugins.generic.webfeed.settings.all"
+msgstr "Webes hírfolyam linkek megjelenítése minden folyóirat oldalon."
+
+msgid "plugins.generic.webfeed.settings.currentIssue"
+msgstr "Elemek megjelenítése a legfrissebb megjelent számban."
+
+msgid "plugins.generic.webfeed.settings.recent"
+msgstr "Egy adott számú legfrissebb elem megjelenítése."
+
+msgid "plugins.generic.webfeed.settings.recentArticles"
+msgstr "Megjelenítendő elemek száma"
+
+msgid "plugins.generic.webfeed.settings.recentItemsRequired"
+msgstr "Adjon meg egy pozitív egész számot a legfrissebb megjelent elemhez."
+
+msgid "plugins.generic.webfeed.atom.altText"
+msgstr "Atom logo"
+
+msgid "plugins.generic.webfeed.rss1.altText"
+msgstr "RSS1 logo"
+
+msgid "plugins.generic.webfeed.rss2.altText"
+msgstr "RSS2 logo"
