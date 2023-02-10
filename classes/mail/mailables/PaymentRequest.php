@@ -17,11 +17,13 @@ namespace APP\mail\mailables;
 
 use APP\core\Application;
 use APP\journal\Journal;
+use APP\mail\variables\ContextEmailVariable;
 use APP\submission\Submission;
 use PKP\core\PKPApplication;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
 use PKP\mail\traits\Recipient;
+use PKP\mail\variables\ContextEmailVariable as PKPContextEmailVariable;
 use PKP\payment\QueuedPayment;
 use PKP\security\Role;
 
@@ -38,6 +40,7 @@ class PaymentRequest extends Mailable
     protected static array $toRoleIds = [Role::ROLE_ID_AUTHOR];
 
     protected static string $queuedPaymentUrl = 'queuedPaymentUrl';
+    protected static string $submissionGuidelinesUrl = 'submissionGuidelinesUrl';
 
     public function __construct(Journal $context, Submission $submission, QueuedPayment $queuedPayment)
     {
@@ -47,14 +50,23 @@ class PaymentRequest extends Mailable
 
     protected function setupPaymentUrlVariable(Journal $context, QueuedPayment $queuedPayment)
     {
+        $request = Application::get()->getRequest();
+        $dispatcher = $request->getDispatcher();
         $this->addData([
-            static::$queuedPaymentUrl => Application::get()->getDispatcher()->url(
-                Application::get()->getRequest(),
+            static::$queuedPaymentUrl => $dispatcher->url(
+                $request,
                 PKPApplication::ROUTE_PAGE,
                 $context->getPath(),
                 'payment',
                 'pay',
                 [$queuedPayment->getId()]
+            ),
+            static::$submissionGuidelinesUrl => $dispatcher->url(
+                $request,
+                Application::ROUTE_PAGE,
+                $context->getPath(),
+                'about',
+                'submissions'
             ),
         ]);
     }
@@ -65,7 +77,30 @@ class PaymentRequest extends Mailable
             parent::getDataDescriptions(),
             [
                 static::$queuedPaymentUrl => __('emailTemplate.variable.queuedPaymentUrl'),
+                static::$submissionGuidelinesUrl => __('emailTemplate.variable.submissionGuidelinesUrl'),
             ]
         );
+    }
+
+    protected function addFooter(string $locale): self
+    {
+        $this->footer = $this->renameContextVariables(
+            __('emails.paymentRequestNotification.footer', [], $locale)
+        );
+        return $this;
+    }
+
+    /**
+     * Replace email template variables in the locale string, so they correspond to the application,
+     * e.g., contextName => journalName/pressName/serverName
+     */
+    protected function renameContextVariables(string $footer): string
+    {
+        $map = [
+            '{$' . PKPContextEmailVariable::CONTEXT_NAME . '}' => '{$' . ContextEmailVariable::CONTEXT_NAME . '}',
+            '{$' . PKPContextEmailVariable::CONTEXT_URL . '}' => '{$' . ContextEmailVariable::CONTEXT_URL . '}',
+        ];
+
+        return str_replace(array_keys($map), array_values($map), $footer);
     }
 }

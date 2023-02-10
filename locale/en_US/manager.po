@@ -1849,7 +1849,10 @@ msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP ranges for subscription authentication"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "URL to the payment page"
+msgstr "URL to the page where the author can make payment"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL to the submission guidelines"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validate Email (Journal Registration)"
@@ -2142,4 +2145,4 @@ msgid "mailable.paymentRequest.name"
 msgstr "Payment Request"
 
 msgid "mailable.paymentRequest.description"
-msgstr "This email automatically notifies authors of the submission about the required payment."
+msgstr "This automated email is sent to the author to request payment of the publication fee when their submission is accepted."
