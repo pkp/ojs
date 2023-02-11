@@ -45,7 +45,7 @@
 			{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 			{if $publication->getLocalizedSubtitle()}
 				<span class="subtitle">
-					{$article->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
+					{$publication->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
 				</span>
 			{/if}
 		</a>
