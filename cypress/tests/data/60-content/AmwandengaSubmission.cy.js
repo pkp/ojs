@@ -282,15 +282,17 @@ describe('Data suite: Amwandenga', function() {
 		submission.title = 'Signalling Theory Dividends';
 		submission.subtitle = 'A Review Of The Literature And Empirical Evidence';
 		cy.get('#titleAbstract input[name=prefix-en_US]').type(submission.prefix, {delay: 0});
-		cy.get('#titleAbstract input[name=subtitle-en_US]').type(submission.subtitle, {delay: 0});
+		// cy.get('#titleAbstract input[name=subtitle-en_US]').type(submission.subtitle, {delay: 0});
+		cy.setTinyMceContent('#titleAbstract-subtitle-control-en_US', submission.subtitle);
 		cy.setTinyMceContent('titleAbstract-title-control-en_US', '');
 		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract.repeat(10));
 		cy.get('#titleAbstract-title-control-en_US').click({force:true}); // Ensure blur event is fired
-		cy.get('#titleAbstract input[name=subtitle-en_US]').click();
+		// cy.get('#titleAbstract input[name=subtitle-en_US]').click();
+		cy.get('#titleAbstract-subtitle-control-en_US').click({force: true});
 		cy.get('#titleAbstract button').contains('Save').click();
 
 		cy.get('#titleAbstract [id*=title-error-en_US]').find('span').contains('This field is required.');
-		cy.setTinyMceContent('titleAbstract-title-control-en_US', submission.title);
+		cy.setTinyMceContent('#titleAbstract-title-control-en_US', submission.title);
 		cy.get('#titleAbstract button').contains('Save').click();
 
 		cy.get('#titleAbstract [id*=abstract-error-en_US]').find('span').contains('The abstract is too long.');
