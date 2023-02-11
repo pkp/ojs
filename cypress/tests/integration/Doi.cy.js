@@ -27,7 +27,11 @@ describe('DOI tests', function() {
 	};
 
 	const clearFilter = (itemType = 'submission') => {
-		cy.get(`#${itemType}-doi-management button:contains("Clear filter")`).click();
+		cy.get(`#${itemType}-doi-management button:contains("Clear filter")`).each(
+			($el, index, $list) => {
+				cy.wrap($el).click();
+			}
+		);
 	};
 
 	it('Check DOI Configuration', function() {
@@ -72,7 +76,13 @@ describe('DOI tests', function() {
 		loginAndGoToDoiPage('issue');
 
 		cy.checkDoiFilterResults('Needs DOI', 'Vol. 2 No. 1 (2015)', 1, 'issue');
-		cy.checkDoiFilterResults('Unpublished', 'No items found.', 0, 'issue');
+		cy.checkDoiFilterResults('Unpublished', 'Vol. 2 No. 1 (2015)', 1, 'issue');
+		clearFilter('issue');
+		cy.checkDoiFilterResults('Unpublished', 'Vol. 2 No. 1 (2015)', 1, 'issue');
+		cy.checkDoiFilterResults('DOI Assigned', 'No items found.', 0, 'issue');
+		clearFilter('issue');
+		cy.checkDoiFilterResults('DOI Assigned', 'Vol. 1 No. 2 (2014)', 1, 'issue');
+		clearFilter('issue');
 		cy.checkDoiFilterResults('Unregistered', 'Vol. 1 No. 2 (2014)', 1, 'issue');
 		clearFilter('issue');
 
@@ -87,7 +97,11 @@ describe('DOI tests', function() {
 		goToDoiPage();
 
 		cy.checkDoiFilterResults('Needs DOI', 'Woods — Finocchiaro: Arguments About Arguments', 7);
+		cy.checkDoiFilterResults('Unpublished', 'Woods — Finocchiaro: Arguments About Arguments', 6);
+		clearFilter();
+		cy.checkDoiFilterResults('DOI Assigned', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
 		cy.checkDoiFilterResults('Unpublished', 'No items found.', 0);
+		clearFilter();
 		cy.checkDoiFilterResults('Unregistered', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
 		clearFilter();
 
