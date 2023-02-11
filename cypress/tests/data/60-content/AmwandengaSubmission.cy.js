@@ -284,8 +284,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#titleAbstract input[name=prefix-en_US]').type(submission.prefix, {delay: 0});
 		// cy.get('#titleAbstract input[name=subtitle-en_US]').type(submission.subtitle, {delay: 0});
 		cy.setTinyMceContent('#titleAbstract-subtitle-control-en_US', submission.subtitle);
-		cy.setTinyMceContent('titleAbstract-title-control-en_US', '');
-		cy.setTinyMceContent('titleAbstract-abstract-control-en_US', submission.abstract.repeat(10));
+		cy.setTinyMceContent('#titleAbstract-title-control-en_US', '');
+		cy.setTinyMceContent('#titleAbstract-abstract-control-en_US', submission.abstract.repeat(10));
 		cy.get('#titleAbstract-title-control-en_US').click({force:true}); // Ensure blur event is fired
 		// cy.get('#titleAbstract input[name=subtitle-en_US]').click();
 		cy.get('#titleAbstract-subtitle-control-en_US').click({force: true});
