@@ -125,7 +125,9 @@
 							{/if}
 							{if $author->getData('orcid')}
 								<span class="orcid">
-									{$orcidIcon}
+									{if $author->getData('orcidAccessToken')}
+										{$orcidIcon}
+									{/if}
 									<a href="{$author->getData('orcid')|escape}" target="_blank">
 										{$author->getData('orcid')|escape}
 									</a>
