@@ -395,14 +395,14 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('div#titleAbstract button').contains('French').click();
 
 		cy.get('#titleAbstract input[name=prefix-en_US]').type(submission.prefix, {delay: 0});
-		cy.get('#titleAbstract input[name=subtitle-en_US]').type(submission.subtitle, {delay: 0});
+		cy.setTinyMceContent('titleAbstract-subtitle-control-en_US', submission.subtitle);
 
-		cy.get('#titleAbstract input[name=title-fr_CA]').type(submission.localeTitles.fr_CA.title, {delay: 0});
+		cy.setTinyMceContent('titleAbstract-title-control-fr_CA', submission.localeTitles.fr_CA.title);
 		cy.get('#titleAbstract input[name=prefix-fr_CA]').type(submission.localeTitles.fr_CA.prefix, {delay: 0});
-		cy.get('#titleAbstract input[name=subtitle-fr_CA]').type(submission.localeTitles.fr_CA.subtitle, {delay: 0});
+		cy.setTinyMceContent('titleAbstract-subtitle-control-fr_CA', submission.localeTitles.fr_CA.subtitle);
 		cy.setTinyMceContent('titleAbstract-abstract-control-fr_CA', submission.localeTitles.fr_CA.abstract);
-		cy.get('#titleAbstract-title-control-fr_CA').click(); // Ensure blur event is fired
-		cy.get('#titleAbstract input[name=subtitle-fr_CA]').click();
+		cy.get('#titleAbstract-title-control-fr_CA').click({force:true}); // Ensure blur event is fired
+		cy.get('#titleAbstract-subtitle-control-fr_CA').click({force:true});
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
