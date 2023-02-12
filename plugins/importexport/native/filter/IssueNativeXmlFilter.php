@@ -157,6 +157,13 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
         foreach ($pubIdPlugins as $pubIdPlugin) {
             $this->addPubIdentifier($doc, $issueNode, $issue, $pubIdPlugin);
         }
+
+        // Add DOI
+        if ($doi = $issue->getStoredPubId('doi')) {
+            $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
+            $node->setAttribute('type', 'doi');
+            $node->setAttribute('advice', 'update');
+        }
     }
 
     /**

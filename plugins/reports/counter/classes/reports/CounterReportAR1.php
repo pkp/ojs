@@ -16,6 +16,7 @@ use APP\core\Application;
 use App\core\Services;
 use APP\facades\Repo;
 use APP\statistics\StatisticsHelper;
+use Exception;
 use PKP\db\DAORegistry;
 use PKP\plugins\PluginRegistry;
 
@@ -41,7 +42,7 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
      *
      * @see ReportPlugin::getMetrics for more details
      *
-     * @return array COUNTER\ReportItem
+     * @return array \COUNTER\ReportItem
      */
     public function getReportItems($columns = [], $filters = [], $orderBy = [], $range = null)
     {
@@ -133,7 +134,7 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
                         $metrics = [];
                     }
                 }
-                $metrics[] = $this->createMetricByMonth($rs->{StatisticsHelper::STATISTICS_DIMENSION_MONTH}, [new COUNTER\PerformanceCounter('ft_total', $rs->{StatisticsHelper::STATISTICS_METRIC})]);
+                $metrics[] = $this->createMetricByMonth($rs->{StatisticsHelper::STATISTICS_DIMENSION_MONTH}, [new \COUNTER\PerformanceCounter('ft_total', $rs->{StatisticsHelper::STATISTICS_METRIC})]);
                 $lastArticle = $rs->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
             }
             // Capture the last unprocessed ItemPerformance and ReportItem entries, if applicable
@@ -152,12 +153,12 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
     }
 
     /**
-     * Given a submissionId and an array of COUNTER\Metrics, return a COUNTER\ReportItems
+     * Given a submissionId and an array of \COUNTER\Metrics, return a \COUNTER\ReportItems
      *
      * @param int $submissionId
-     * @param array $metrics COUNTER\Metric array
+     * @param array $metrics \COUNTER\Metric array
      *
-     * @return mixed COUNTER\ReportItems or false
+     * @return mixed \COUNTER\ReportItems or false
      */
     private function _createReportItem($submissionId, $metrics)
     {
@@ -177,39 +178,31 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
         foreach (['print', 'online'] as $issnType) {
             if ($journal->getData($issnType . 'Issn')) {
                 try {
-                    $journalPubIds[] = new COUNTER\Identifier(ucfirst($issnType) . '_ISSN', $journal->getData($issnType . 'Issn'));
+                    $journalPubIds[] = new \COUNTER\Identifier(ucfirst($issnType) . '_ISSN', $journal->getData($issnType . 'Issn'));
                 } catch (Exception $ex) {
                     // Just ignore it
                 }
             }
         }
-        $journalPubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
+        $journalPubIds[] = new \COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
         $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journalId);
         $articlePubIds = [];
-        $articlePubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, (string) $submissionId);
-        foreach ($pubIdPlugins as $pubIdPlugin) {
-            $pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType(), true);
-            if ($pubId) {
-                switch ($pubIdPlugin->getPubIdType()) {
-                    case 'doi':
-                        try {
-                            $articlePubIds[] = new COUNTER\Identifier(strtoupper($pubIdPlugin->getPubIdType()), $pubId);
-                        } catch (Exception $ex) {
-                            // Just ignore it
-                        }
-                        break;
-                    default:
-                    }
+        $articlePubIds[] = new \COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, (string) $submissionId);
+        if ($doi = $article->getStoredPubId('doi')) {
+            try {
+                $articlePubIds[] = new \COUNTER\Identifier(strtoupper('doi'), $doi);
+            } catch (Exception $ex) {
+                // Just ignore it
             }
         }
         $reportItem = [];
         try {
-            $reportItem = new COUNTER\ReportItems(
+            $reportItem = new \COUNTER\ReportItems(
                 __('common.software'),
                 $title,
                 COUNTER_LITERAL_ARTICLE,
                 $metrics,
-                new COUNTER\ParentItem($journalName, COUNTER_LITERAL_JOURNAL, $journalPubIds),
+                new \COUNTER\ParentItem($journalName, COUNTER_LITERAL_JOURNAL, $journalPubIds),
                 $articlePubIds
             );
         } catch (Exception $e) {
