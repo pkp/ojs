@@ -24,11 +24,13 @@ use PKP\statistics\PKPStatisticsHelper;
 
 class StatsPublicationQueryBuilder extends PKPStatsPublicationQueryBuilder
 {
-    /** The name of the section column */
-    public string $sectionColumn = 'section_id';
-
     /** Include records for these issues */
     protected array $issueIds = [];
+
+    public function getSectionColumn(): string
+    {
+        return 'section_id';
+    }
 
     /**
      * Set the issues to get records for
