@@ -490,9 +490,11 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#representations-grid .show_extras').click();
 		cy.get('[id*="editGalley-button"]').click();
 		cy.waitJQuery(); // Wait for the form initialization
-		cy.get('#editArticleGalleyMetadataTabs [name="label"]').type(' Version 2');
-		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
-		cy.get('#articleGalleyForm button').contains('Save').click();
+		cy.get('#articleGalleyForm').within(() => {
+			cy.get('[name="label"]').type(' Version 2');
+			cy.get('[name="urlPath"]').type('pdf');
+			cy.get('button').contains('Save').click();
+		});
 		cy.wait(3000);
 		cy.get('#representations-grid [id*="downloadFile-button"]:contains("PDF Version 2")');
 
