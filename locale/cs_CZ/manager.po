@@ -2177,7 +2177,6 @@ msgstr "Adresa URL domovské stránky časopisu"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Jméno hlavního kontaktu časopisu"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Iniciály časopisu"
 
@@ -2217,19 +2216,15 @@ msgstr "Shrnutí typu, názvu, doby trvání a ceny předplatného"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informace o členství předplatitele"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Jméno instituce"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "E-mailová adresa instituce"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Doména"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Rozsahy IP adres pro autentizaci předplatného"
 
@@ -2582,6 +2577,20 @@ msgstr "Požadavek na archiv"
 
 msgid "mailable.lockssNewArchive.name"
 msgstr "Požadavek na archiv (nový)"
+
+msgid "mailable.paymentRequest.name"
+msgstr "Žádost o platbu"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL adresa pokynů pro předkládání příspěvků"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Tento automatický e-mail je zaslán autorovi s žádostí o zaplacení "
+"publikačního poplatku po přijetí jeho příspěvku."
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL na stránku, kde může autor provést platbu"
 
 #~ msgid "manager.setup.copyrightNotice"
 #~ msgstr "Oznámení o copyrightu"
