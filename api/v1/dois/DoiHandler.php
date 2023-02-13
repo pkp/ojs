@@ -21,7 +21,7 @@ use APP\jobs\doi\DepositIssue;
 use PKP\context\Context;
 use PKP\core\APIResponse;
 use PKP\doi\Doi;
-use PKP\doi\exceptions\DoiActionException;
+use PKP\doi\exceptions\DoiException;
 use PKP\security\Role;
 
 use Slim\Http\Request as SlimRequest;
@@ -188,13 +188,13 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         if (count($invalidIds)) {
             $failedDoiActions = array_map(function (int $id) {
                 $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
-                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::ISSUE_NOT_PUBLISHED);
+                return new DoiException(DoiException::ISSUE_NOT_PUBLISHED, $issueTitle, $issueTitle);
             }, $invalidIds);
 
             return $response->withJson(
                 [
                     'failedDoiActions' => array_map(
-                        function (DoiActionException $item) {
+                        function (DoiException $item) {
                             return $item->getMessage();
                         },
                         $failedDoiActions
@@ -237,13 +237,13 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         if (count($invalidIds)) {
             $failedDoiActions = array_map(function (int $id) {
                 $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
-                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_ISSUE_CONTEXT);
+                return new DoiException(DoiException::INCORRECT_ISSUE_CONTEXT, $issueTitle, $issueTitle);
             }, $invalidIds);
 
             return $response->withJson(
                 [
                     'failedDoiActions' => array_map(
-                        function (DoiActionException $item) {
+                        function (DoiException $item) {
                             return $item->getMessage();
                         },
                         $failedDoiActions
@@ -289,13 +289,13 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         if (count($invalidIds)) {
             $failedDoiActions = array_map(function (int $id) {
                 $issueTitle = Repo::issue()->get($id)?->getIssueIdentification() ?? 'Issue not found';
-                return new DoiActionException($issueTitle, $issueTitle, DoiActionException::INCORRECT_STALE_STATUS);
+                return new DoiException(DoiException::INCORRECT_STALE_STATUS, $issueTitle, $issueTitle);
             }, $invalidIds);
 
             return $response->withJson(
                 [
                     'failedDoiActions' => array_map(
-                        function (DoiActionException $item) {
+                        function (DoiException $item) {
                             return $item->getMessage();
                         },
                         $failedDoiActions
@@ -345,7 +345,7 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             return $response->withJson(
                 [
                     'failedDoiActions' => array_map(
-                        function (DoiActionException $item) {
+                        function (DoiException $item) {
                             return $item->getMessage();
                         },
                         $failedDoiActions
