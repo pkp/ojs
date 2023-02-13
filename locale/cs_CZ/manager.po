@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2022-12-15 05:02+0000\n"
+"PO-Revision-Date: 2023-02-13 14:04+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs_CZ/"
 ">\n"
@@ -2217,16 +2217,16 @@ msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informace o členství předplatitele"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Jméno instituce"
+msgstr "Název předplácející instituce"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "E-mailová adresa instituce"
+msgstr "E-mailová adresa předplácející instituce"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Doména"
+msgstr "Název domény platných IP adres pro toto předplatné"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Rozsahy IP adres pro autentizaci předplatného"
+msgstr "Platné rozsahy IP pro toto předplatné"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validace emailu (Registrace časopisu)"
@@ -2712,3 +2712,14 @@ msgstr "URL na stránku, kde může autor provést platbu"
 #~ msgstr ""
 #~ "Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně "
 #~ "jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role."
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Poštovní adresa časopisu"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Odkaz na stránku se statistikami publikovaných článků"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Tento e-mail je každý měsíc automaticky zasílán redaktorům a správcům "
+"časopisů, aby jim poskytl přehled o stavu systému."
