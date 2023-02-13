@@ -131,6 +131,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 

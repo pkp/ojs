@@ -387,6 +387,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galleys се завршени"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"

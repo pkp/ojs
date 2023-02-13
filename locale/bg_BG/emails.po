@@ -351,6 +351,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Типографското оформление е завършено"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Уважаема/и {$recipientName},<p><p>Галерите вече са подготвени за следното "

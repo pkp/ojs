@@ -363,6 +363,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galley Selesai"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Yang terhormat {$recipientName},<p><p>Galai sedang dipersiapkan untuk "

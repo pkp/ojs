@@ -364,6 +364,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversion færdiggjort"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Der er nu færdiggjort en publiceringsklar fil "

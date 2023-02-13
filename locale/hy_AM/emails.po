@@ -352,6 +352,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Շարվածքները ամբողջական են"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Հարգելի {$recipientName},<p><p>Շարվածքներն այժմ պատրաստվել են հետևյալ "

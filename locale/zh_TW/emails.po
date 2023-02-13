@@ -138,6 +138,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "校對樣本完成"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 

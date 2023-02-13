@@ -347,7 +347,7 @@ msgstr ""
 "{$contextName}</p>"
 "<p>If you have any questions, please contact me.</p>"
 "<p>Kind regards,</p>"
-"<p>{$senderName}</p>"
+"<p>{$signature}</p>"
 
 msgid "emails.emailLink.subject"
 msgstr "Article of Possible Interest"

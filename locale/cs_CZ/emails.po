@@ -347,6 +347,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Sazebnice dokončeny"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br /><br />Nyní jsou vytvořeny sazebnicové verze souborů "

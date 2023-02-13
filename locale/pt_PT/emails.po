@@ -342,6 +342,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Composições concluídas"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Caro(a) {$recipientName},</p><p>As provas tipográficas já foram "

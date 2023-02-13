@@ -357,6 +357,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galleylar tugadi"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Hurmatli {$recipientName},<p><p>Galleylar keyingi yuborish uchun "

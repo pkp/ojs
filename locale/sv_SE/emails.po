@@ -346,6 +346,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversioner klara"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Hej {$recipientName},<p><p>Publiceringsformat har nu färdigställts för "

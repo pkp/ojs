@@ -343,6 +343,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Oppsett ferdigstilt"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Kjære {$recipientName}</p><p>Et publiseringsklart oppsett er nå ferdig "
