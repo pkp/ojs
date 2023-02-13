@@ -2053,6 +2053,7 @@ msgstr ""
 msgid "emailTemplate.variable.context.contactName"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -2092,15 +2093,19 @@ msgstr ""
 msgid "emailTemplate.variable.subscription.membership"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr ""
 

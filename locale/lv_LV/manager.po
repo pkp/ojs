@@ -2171,6 +2171,7 @@ msgstr "Žurnāla mājaslapas URL"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Žurnāla galvenās kontaktpersonas vārds un uzvārds"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "žurnāla iniciāļi"
 
@@ -2210,15 +2211,19 @@ msgstr "Kopsavilkums par abonementa veidu, nosaukumu, ilgumu un izmaksām"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informācija par abonenta dalību"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Iestādes nosaukums"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Iestādes pasta adrese"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domēns"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP diapazoni abonēšanas autentificēšanai"
 

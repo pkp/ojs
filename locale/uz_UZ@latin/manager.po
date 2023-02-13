@@ -2214,6 +2214,7 @@ msgstr "Jurnal bosh sahifasining URL manzili"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Jurnal asosiy kontaktining nomi"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "jurnalning bosh harflari"
 
@@ -2254,15 +2255,19 @@ msgstr "Obuna turi, nomi, muddati va narxi haqida qisqacha ma'lumot"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Abonentning a'zoligi haqida ma'lumot"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Tashkilot nomi"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Tashkilotning pochta manzili"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domen"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Obunani autentifikatsiya qilish uchun IP diapazonlari"
 

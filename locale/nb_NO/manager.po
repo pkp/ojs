@@ -2177,6 +2177,7 @@ msgstr "URL til tidsskriftets hjemmeside"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Navnet på tidsskriftets kontaktperson"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "tidsskriftets initialer"
 
@@ -2217,15 +2218,19 @@ msgstr "En oversikt over abbonementstype, navn, varighet og pris"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informasjon om abbonentens medlemsskap"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Navn på institusjon"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Postadressen til institusjonen"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domene"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP-intervall for autentisering av abbonenter"
 

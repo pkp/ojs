@@ -2237,6 +2237,7 @@ msgstr "URL домашньої сторінки дурналу"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Ім'я основної контактної особи журналу"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "ініціали журналу"
 
@@ -2277,15 +2278,19 @@ msgstr "Короткий опис типу, назви, тривалості т�
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Інформація про членство передплатника"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Назва установи"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Поштова адреса установи"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Домен"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Діапазони IP-адрес для аутентифікації за підпискою"
 

@@ -2153,6 +2153,7 @@ msgstr "URL do domače strani revije"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Ime glavnega kontakta revije"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "začetnice revije"
 
@@ -2192,15 +2193,19 @@ msgstr "A summary of the subscription's type, name, duration and cost"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Information about the subscriber's membership"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Ime institucije"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Poštni naslov institucije"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domena"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP razponi za avtentikacijo naročnine"
 

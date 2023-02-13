@@ -2236,6 +2236,7 @@ msgstr "URL da página da revista"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Nome do contato principal da revista"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "as iniciais da revista"
 
@@ -2276,15 +2277,19 @@ msgstr "Um resumo do tipo, nome, duração e custo da assinatura"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informações sobre a adesão do assinante"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "O nome da instituição"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "O endereço de correspondência da instituição"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domínio"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Intervalos de IP para autenticação de assinatura"
 

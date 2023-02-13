@@ -2215,6 +2215,7 @@ msgstr "URL адресът на началната страница на спи�
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Име на основния контакт на списанието"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "инициали на списанието"
 
@@ -2255,15 +2256,19 @@ msgstr "Резюме на типа, името, продължителностт
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Информация за членството на абоната"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Име на институцията"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Пощенски адрес на институцията"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Домейн"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP диапазон за удостоверяване на абонамент"
 

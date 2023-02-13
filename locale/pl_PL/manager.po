@@ -2131,6 +2131,7 @@ msgstr "Adres URL strony czasopisma"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Nazwa głównego kontaktu"
 
+#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Inicjały czasopisma"
 
@@ -2170,15 +2171,19 @@ msgstr "Podsumowanie nazwy, czasu, kosztu typu subskrypcji"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informacja o członkostwie subskrybenta"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Nazwa instytucji"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Adres pocztowy instytucji"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domena"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Zakres IP do autoryzacji subskrybentów"
 
