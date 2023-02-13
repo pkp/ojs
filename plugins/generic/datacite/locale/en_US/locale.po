@@ -72,6 +72,12 @@ msgstr "Test Password"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test DOI Prefix"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr "A test DOI prefix is required when the \"use test prefix for DOI registration\" is selected."
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr "A test username is required when a production username is supplied."
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatic registration task"
 

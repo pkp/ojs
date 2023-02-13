@@ -5659,6 +5659,72 @@
 					}
 				}
 			}
+		},
+	  	"/contexts/editDoiRegistrationAgencyPlugin" : {
+			"put": {
+				"tags": [
+					"Backend"
+				],
+				"summary": "Edit registration agency plugin settings",
+				"description": "This endpoint is for directly editing DOI registration agency plugin settings. It is used as part of the unified DOI management settings options in the UI.",
+				"parameters": [
+					{
+						"description": "Parameters in addition to those listed will be specific to the plugin and its settings.",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"enabledRegistrationAgency": {
+									"type": "string"
+								},
+								"automaticDeposit": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": true
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the DOI registration settings and updated plugin settings.",
+						"schema":{
+							"type": "object",
+							"properties": {
+								"enabledRegistrationAgency": {
+									"type": "string"
+								},
+								"automaticDeposit": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": true
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "The error indicates one of the following:\n*You are not allowed to edit one context from a different context's endpoint\n* You are not allowed to edit a context-specific plugin from the site-wide endpoint. You must use a context (journal/press/server) endpoint.\n* You do not have permission to edit this context (journal/press/server).",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The context could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
 		}
 	}
 }

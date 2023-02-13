@@ -17,6 +17,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\plugins\DOIPubIdExportPlugin;
+use APP\plugins\IDoiRegistrationAgency;
 use APP\submission\Submission;
 use PKP\config\Config;
 use PKP\context\Context;
@@ -40,6 +41,15 @@ define('DATACITE_EXPORT_FILE_TAR', 0x02);
 
 class DataciteExportPlugin extends DOIPubIdExportPlugin
 {
+    protected IDoiRegistrationAgency $agencyPlugin;
+
+    public function __construct(IDoiRegistrationAgency $agencyPlugin)
+    {
+        parent::__construct();
+
+        $this->agencyPlugin = $agencyPlugin;
+    }
+
     /**
      * @see Plugin::getName()
      */
@@ -101,7 +111,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function getSettingsFormClassName()
     {
-        return '\APP\plugins\generic\datacite\classes\form\DataciteSettingsForm';
+        throw new \Exception('DOI settings no longer managed via plugin settings form.');
     }
 
     /**
@@ -110,6 +120,12 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     public function getExportDeploymentClassName()
     {
         return '\APP\plugins\generic\datacite\DataciteExportDeployment';
+    }
+
+    /** Proxy to main plugin class's `getSetting` method */
+    public function getSetting($contextId, $name)
+    {
+        return $this->agencyPlugin->getSetting($contextId, $name);
     }
 
     /**
