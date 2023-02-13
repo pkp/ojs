@@ -32,7 +32,7 @@ class I6895_Institutions extends Migration
             $table->bigInteger('institution_id');
         });
 
-        // pkp/pkp-lib#6895 Migrate all institutions form institutional subscriptions into new databases
+        // pkp/pkp-lib#6895 Migrate all institutions from institutional subscriptions into new databases
         $institutionalSubscriptions = DB::table('institutional_subscriptions AS i')
             ->select('i.institutional_subscription_id', 'i.subscription_id', 'i.institution_name', 's.journal_id', 'j.primary_locale')
             ->join('subscriptions AS s', 's.subscription_id', '=', 'i.subscription_id')

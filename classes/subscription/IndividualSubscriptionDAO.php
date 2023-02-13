@@ -405,14 +405,16 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      */
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
-        $params = [(int) $journalId];
+        $params = array_merge($this->getFetchParameters(), [(int) $journalId]);
         $result = $this->retrieveRange(
-            $sql = 'SELECT	s.*
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN users u ON (s.user_id = u.user_id)
-			WHERE	st.institutional = 0
-				AND s.journal_id = ? ' .
+            $sql = 'SELECT s.*, ' . $this->getFetchColumns() . '
+                    FROM subscriptions s
+                        JOIN subscription_types st ON (s.type_id = st.type_id)
+                        JOIN users u ON (s.user_id = u.user_id)
+                        ' . $this->getFetchJoins() . '
+                    WHERE
+                        st.institutional = 0
+                        AND s.journal_id = ? ' .
             parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) . ' ' .
             'ORDER BY u.user_id, s.subscription_id',
             $params,

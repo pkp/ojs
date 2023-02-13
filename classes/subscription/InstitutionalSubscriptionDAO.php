@@ -390,7 +390,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      */
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
-        $params = array_merge($this->getInstitutionNameFetchParameters(), [(int) $journalId]);
+        $params = array_merge($this->getInstitutionNameFetchParameters(), $this->getFetchParameters(), [(int) $journalId]);
         $institutionFetch = $ipRangeFetch = '';
         $searchSql = $this->_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
 
@@ -439,7 +439,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
         $result = $this->retrieveRange(
             $sql = 'SELECT DISTINCT s.*, iss.institution_id, iss.mailing_address, iss.domain,
-                ' . $this->getInstitutionNameFetchColumns() . '
+                ' . $this->getInstitutionNameFetchColumns() . ',
+                ' . $this->getFetchColumns() . '
                 FROM	subscriptions s
                     JOIN subscription_types st ON (s.type_id = st.type_id)
                     JOIN users u ON (s.user_id = u.user_id)
@@ -447,6 +448,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
                     ' . $institutionFetch . '
                     ' . $ipRangeFetch . '
                     ' . $this->getInstitutionNameFetchJoins() . '
+                    ' . $this->getFetchJoins() . '
                 WHERE	st.institutional = 1 AND s.journal_id = ?
                 ' . $searchSql . ' ORDER BY institution_name ASC, s.subscription_id',
             $params,

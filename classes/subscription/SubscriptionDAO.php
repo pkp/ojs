@@ -17,16 +17,18 @@
 
 namespace APP\subscription;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\identity\Identity;
 use PKP\plugins\Hook;
 
 abstract class SubscriptionDAO extends \PKP\db\DAO
 {
-    public const SUBSCRIPTION_MEMBERSHIP = 0x02;
-    public const SUBSCRIPTION_REFERENCE_NUMBER = 0x03;
-    public const SUBSCRIPTION_NOTES = 0x04;
+    public const SUBSCRIPTION_MEMBERSHIP = 2;
+    public const SUBSCRIPTION_REFERENCE_NUMBER = 3;
+    public const SUBSCRIPTION_NOTES = 4;
 
     /**
      * Retrieve subscription by subscription ID.
@@ -339,6 +341,50 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
         }
 
         return $searchSql;
+    }
+
+    /**
+     * Return a list of extra parameters to bind to the user fetch queries.
+     *
+     * @return array
+     */
+    public function getFetchParameters()
+    {
+        $locale = Locale::getLocale();
+        // the users register for the site, thus
+        // the site primary locale should be the default locale
+        $site = Application::get()->getRequest()->getSite();
+        $primaryLocale = $site->getPrimaryLocale();
+        return [
+            Identity::IDENTITY_SETTING_GIVENNAME, $locale,
+            Identity::IDENTITY_SETTING_GIVENNAME, $primaryLocale,
+            Identity::IDENTITY_SETTING_FAMILYNAME, $locale,
+            Identity::IDENTITY_SETTING_FAMILYNAME, $primaryLocale,
+        ];
+    }
+
+    /**
+     * Return a SQL snippet of extra columns to fetch during user fetch queries.
+     *
+     * @return string
+     */
+    public function getFetchColumns()
+    {
+        return 'COALESCE(ugl.setting_value, ugpl.setting_value) AS user_given,
+            CASE WHEN ugl.setting_value <> \'\' THEN ufl.setting_value ELSE ufpl.setting_value END AS user_family';
+    }
+
+    /**
+     * Return a SQL snippet of extra joins to include during user fetch queries.
+     *
+     * @return string
+     */
+    public function getFetchJoins()
+    {
+        return 'LEFT JOIN user_settings ugl ON (u.user_id = ugl.user_id AND ugl.setting_name = ? AND ugl.locale = ?)
+            LEFT JOIN user_settings ugpl ON (u.user_id = ugpl.user_id AND ugpl.setting_name = ? AND ugpl.locale = ?)
+            LEFT JOIN user_settings ufl ON (u.user_id = ufl.user_id AND ufl.setting_name = ? AND ufl.locale = ?)
+            LEFT JOIN user_settings ufpl ON (u.user_id = ufpl.user_id AND ufpl.setting_name = ? AND ufpl.locale = ?)';
     }
 
     /**
