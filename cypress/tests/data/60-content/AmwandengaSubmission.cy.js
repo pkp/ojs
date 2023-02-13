@@ -469,10 +469,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('This version has been published and can not be edited.').should('not.exist');
 
 		// Edit unpublished version's title
-		cy.setTinyMceContent(
-			'titleAbstract-title-control-en_US', 
-			cy.getTinyMceContent('titleAbstract-title-control-en_US') + ' Version 2'
-		);
+		cy.setTinyMceContent('titleAbstract-title-control-en_US', 'The Signalling Theory Dividends Version 2');
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
 
